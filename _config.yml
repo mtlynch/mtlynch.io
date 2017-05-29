@@ -1,0 +1,195 @@
+---
+title: Silly Bits
+timezone: America/New_York
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: single
+    author_profile: true
+    read_time: true
+    comments: true
+    share: true
+    related: true
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: single
+    author_profile: true
+locale: en-US
+title_separator: "-"
+name: Michael Lynch
+description: An amazing website.
+url: https://mtlynch.io
+theme: minimal-mistakes-jekyll
+baseurl: 
+repository: 
+teaser: 
+words_per_minute: 200
+comments:
+  provider: disqus
+  disqus:
+    shortname: silly-bits
+  discourse:
+    server: 
+  facebook:
+    appid: 
+    num_posts: 
+    colorscheme: 
+staticman:
+  allowedFields:
+  - name
+  - email
+  - url
+  - message
+  branch: 
+  commitMessage: New comment.
+  filename: comment-{@timestamp}
+  format: yml
+  moderation: true
+  path: _data/comments/{options.slug}
+  requiredFields:
+  - name
+  - email
+  - message
+  transforms:
+    email: md5
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: iso8601
+atom_feed:
+  path: 
+google_site_verification: 
+bing_site_verification: 
+alexa_site_verification: 
+yandex_site_verification: 
+twitter:
+  username: 
+facebook:
+  username: 
+  app_id: 
+  publisher: 
+og_image: 
+social:
+  type: 
+  name: 
+  links: 
+analytics:
+  provider: google-universal
+  google:
+    tracking_id: UA-78473158-1
+author:
+  name: Michael Lynch
+  avatar: images/bio-photo.jpg
+  bio: By day, a simple software engineer. By night, also a software engineer.
+  location: New York, NY
+  email: 
+  uri: 
+  bitbucket: 
+  codepen: 
+  dribbble: 
+  flickr: 
+  facebook: 
+  foursquare: 
+  github: mtlynch
+  google_plus: 
+  keybase: 
+  instagram: 
+  lastfm: 
+  linkedin: 
+  pinterest: 
+  soundcloud: 
+  stackoverflow: 
+  steam: 
+  tumblr: taylorswift
+  twitter: 
+  vine: 
+  weibo: 
+  xing: 
+  youtube: 
+include:
+- ".htaccess"
+- _pages
+exclude:
+- "*.sublime-project"
+- "*.sublime-workspace"
+- vendor
+- ".asset-cache"
+- ".bundle"
+- ".jekyll-assets-cache"
+- ".sass-cache"
+- assets/js/plugins
+- assets/js/_main.js
+- assets/js/vendor
+- Capfile
+- CHANGELOG
+- config
+- Gemfile
+- Gruntfile.js
+- gulpfile.js
+- LICENSE
+- log
+- node_modules
+- package.json
+- Rakefile
+- README
+- tmp
+keep_files:
+- ".git"
+- ".svn"
+encoding: utf-8
+markdown_ext: markdown,mkdown,mkdn,mkd,md
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: "/:categories/:title/"
+paginate: 5
+paginate_path: "/page:num/"
+future: true
+gems:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-gist
+- jekyll-feed
+- jemoji
+whitelist:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-gist
+- jekyll-feed
+- jemoji
+category_archive:
+  type: liquid
+  path: "/categories/"
+tag_archive:
+  type: liquid
+  path: "/tags/"
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

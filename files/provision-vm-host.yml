@@ -1,0 +1,93 @@
+- hosts: all
+  gather_facts: no
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    # Ubuntu 16.04 does not have Python2, but we need it for Ansible to run.
+    - name: install python 2
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+- hosts: all
+  become: True
+  become_method: sudo
+  vars:
+    cifs_share: //diskstation/VMs    # Change to your NFS share
+    cifs_username: your-nfs-username # Change to your NFS username
+    cifs_password: your-nfs-password # Change to your NFS password
+    media_mount: /media/VMs
+    kernel_version:
+      number: "4.10.12"
+      number_stripped: "041012"
+      timestamp: "201704210512"
+  roles:
+    - { role: ansible-role-common }
+  tasks:
+    - name: update kernel
+      apt:
+        deb: "http://kernel.ubuntu.com/~kernel-ppa/mainline/v{{ item }}"
+      with_items:
+        - "{{ kernel_version.number }}/linux-headers-{{ kernel_version.number }}-{{ kernel_version.number_stripped }}_{{ kernel_version.number }}-{{ kernel_version.number_stripped }}.{{ kernel_version.timestamp }}_all.deb"
+        - "{{ kernel_version.number }}/linux-headers-{{ kernel_version.number }}-{{ kernel_version.number_stripped }}-generic_{{ kernel_version.number }}-{{ kernel_version.number_stripped }}.{{ kernel_version.timestamp }}_amd64.deb"
+        - "{{ kernel_version.number }}/linux-image-{{ kernel_version.number }}-{{ kernel_version.number_stripped }}-generic_{{ kernel_version.number }}-{{ kernel_version.number_stripped }}.{{ kernel_version.timestamp }}_amd64.deb"
+      when: "ansible_kernel.split('-')[0] | version_compare(kernel_version.number, '<')"
+
+    - name: install packages
+      apt:
+        name: "{{ item }}"
+        state: installed
+      with_items:
+        - cifs-utils
+        - qemu-kvm
+        - libvirt-bin
+        - ubuntu-vm-builder
+        - bridge-utils
+
+    - name: install kimchi and dependencies
+      apt:
+        deb: "{{ item }}"
+      with_items:
+        - http://kimchi-project.github.io/wok/downloads/latest/wok.noarch.deb
+        - http://kimchi-project.github.io/gingerbase/downloads/latest/ginger-base.noarch.deb
+        - http://kimchi-project.github.io/kimchi/downloads/latest/kimchi.noarch.deb
+      notify: restart wok
+
+    - name: enable nfs services
+      service:
+        name: "{{ item }}"
+        enabled: yes
+      with_items:
+        - rpcbind
+      register: service_enabled
+
+    - name: restart rpcbind service
+      service:
+        name: rpcbind
+        state: restarted
+      when: service_enabled.changed
+
+    - name: create mount point
+      file:
+        name: "{{ media_mount }}"
+        state: directory
+
+    - name: mount NFS share
+      mount:
+        name: "{{ media_mount }}"
+        src: "{{ cifs_share }}"
+        fstype: cifs
+        state: mounted
+        opts: "username={{ cifs_username }},password={{ cifs_password }}"
+
+    - name: set wok timeout
+      lineinfile:
+        path: /etc/wok/wok.conf
+        line: "session_timeout = {{ 60 * 24 * 7 }}"
+        regexp: "session_timeout = "
+        state: present
+      notify: restart wok
+  handlers:
+    - name: restart wok
+      service:
+        name: wokd
+        state: restarted

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+# Execute Markdown Linter
+mdl _posts _pages --style _linter/markdown-linter-style.rb
+
+# Skips validation checks that take a long time
+htmlproofer_args_extra=""
+if [ "$1" = "--quick" ]; then
+  htmlproofer_args_extra="--disable-external"
+fi
+
+# Run HTMLProofer
+BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
+  --config _config.yml,_config_dev.yml
+bundle exec htmlproofer ./_site \
+  --only-4xx \
+  --check-html \
+  --allow-hash-href \
+  "$htmlproofer_args_extra"
