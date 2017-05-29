@@ -15,26 +15,26 @@ excerpt: Taking my development VMs to the next level
 
 I do the bulk of my home development work in virtual machines (VMs). My main desktop PC is a Windows 10 machine, so I had always run my VMs from within VirtualBox.
 
-This setup worked fine, but I was starting to become aware of its increasing pain points. I searched around and found [a post](https://blog.brianmoses.net/2016/07/building-a-homelab-server.html) by Brian Moses where he describes building a dedicated "homelab" server for running VMs. I really liked this idea, and I was inspired to do the same.
+This setup worked fine, but I was starting to become aware of the increasing pain points. I searched and found [a post](https://blog.brianmoses.net/2016/07/building-a-homelab-server.html) by Brian Moses where he describes building a dedicated "homelab" server for running VMs. I really liked this idea and was inspired to do the same.
 
 # Why VMs?
 
 ## Clean Environments
 
-All the software I write depends on a particular software environment. For example, development on my project [ProsperBot]({{ base_path }}/prosperbot/) depends on the Go toolchain, nginx, and Redis. If I kept installing dependencies for each of my projects all on my main desktop PC, it would become a mess of different web servers, database servers, and competing versions of the same libraries.
+All the software I write depends on a particular software environment. For example, development on my project [ProsperBot]({{ base_path }}/prosperbot/) depends on the Go toolchain, nginx, and Redis. If I keep installing dependencies for each of my projects all on my main desktop PC, it becomes a mess of different web servers, database servers, and competing versions of the same libraries.
 
 ## Security: VM Isolation
 
-VMs also provide security by keeping software isolated from my main system. I like to experiment with a lot of new tools and apps, but it's always possible that an app I install could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, Github, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
+VMs also provide security by keeping software isolated from my main system. I like to experiment with new tools and apps, but it's always possible that an app could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, Github, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
 
 Malware running in a VM is much more limited in the damage it can cause. If I install software in a VM and it covertly installs a keylogger, it can only record my keystrokes in that VM, not my main desktop machine. VMs are not a complete defense, as advanced malware could [escape the VM](https://arstechnica.com/security/2017/03/hack-that-escapes-vm-by-exploiting-edge-browser-fetches-105000-at-pwn2own/), but they still provide a large degree of protection.
 
 # Why a Whole VM Server?
 
-I've been running virtual machines within my main Windows desktop with VirtualBox, but I have a few issues with it:
+I've been running virtual machines within my main Windows desktop with VirtualBox, there a few issues:
 
-* Any time I restart my main PC, I also have to one-by-one shut down or suspend every VM I'm running, then one-by-one start each up again after the reboot.
-* My main PC crashes about once a month and VirtualBox is really bad at recovering from crashes. On reboot, it tends to think that the VM image files are locked and I have to futz around with the filesystem to fix it.
+* When I restart my main PC, I also have to laboriously shut down or suspend every VM I'm running, then start each up again after the reboot.
+* My main PC crashes about once a month and VirtualBox is really bad at recovering from crashes. On reboot, thinks that the VM image files are locked and I have to futz around with the filesystem to fix it.
 
 With a dedicated VM server, I can run a barebones Linux server OS on it. The less software running on a machine, the less frequently it requires reboots and the less likely it is to crash.
 
@@ -78,21 +78,21 @@ Like Brian, [I have a NAS]({{ base_path }}/sia-via-docker/) with plenty of space
 
 [![Rosewill Micro ATX SRM-01](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00ZPWOA6I&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mtlynch-20){: .align-right}](https://www.amazon.com/gp/product/B00ZPWOA6I/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li3&tag=mtlynch-20&linkId=341a186e437bfbe9700d3298042dc564)
 
-For the case, I was primarily looking for something very small. I plan to tuck the server away out of sight, so it didn't need to be anything pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) is a nice, small, inexpensive, and functional.
+For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) is a nice, small, inexpensive, and functional.
 
 ## Graphics
 
 I'm mainly going to run this system headless and just manage it over SSH/Ansible, but I need a display occasionally (e.g. during initial install or when I accidentally break the network configuration). I initially *thought* I could use the motherboard's integrated graphics support, but I could not (see the [parts review](#review-motherboard) below).
 
-Because my requirements for the GPU were so flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](http://amzn.to/2qmwmHO).
+Because my requirements for the GPU were flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](http://amzn.to/2qmwmHO).
 
 It didn't make sense to buy a dedicated monitor for this system because 99.99% of the time, I'd be managing it headless. The remaining .01% of the time, I can just crawl under my desk and move my main monitor's HDMI cable from my primary desktop to my VM server.
 
 ## Network Adapter
 
-I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would completely fail to detect the NIC...
+I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would fail to detect the NIC...
 
-At this point, I got tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
+At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
 
 Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadcom NIC *was* compatible.
 
@@ -122,7 +122,7 @@ These are all the components pre-assembly. The NIC and GPU are missing from this
 
 This is the server with all the parts assembled. There's not much to it because there aren't many components. It was particularly nice to not have to deal with power or SATA cables for disk drives because the only disk is the M.2 SSD connected directly to the motherboard.
 
-Because of my apartment's limited space, I wanted a server I could hide away somewhere out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view:
+Because of my apartment's limited space, I wanted a server I could hide out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view:
 
 <figure class="half">
     <a href="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-front.jpg"><img alt="Assembled server - front view" src="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-front.jpg"></a>
@@ -209,7 +209,7 @@ My one regret is that I didn't read the onboard video support carefully enough. 
 
 So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics *only if* you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them, so no onboard graphics for me.
 
-If I were to do this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](http://www.dpbolvw.net/click-8329872-11892368?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16813145002%26nm_mc%3DAFC-C8Junction-Components%26cm_mmc%3DAFC-C8Junction-Components-_-Motherboards%2B-%2BAMD-_-GIGABYTE-_-13145002&cjsku=N82E16813145002) just for the simplicity of having an onboard GPU.
+If I did this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](http://www.dpbolvw.net/click-8329872-11892368?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16813145002%26nm_mc%3DAFC-C8Junction-Components%26cm_mmc%3DAFC-C8Junction-Components-_-Motherboards%2B-%2BAMD-_-GIGABYTE-_-13145002&cjsku=N82E16813145002) just for the simplicity of having an onboard GPU.
 
 ## Review: RAM
 
@@ -219,13 +219,13 @@ If I were to do this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](http:/
 
 The power supply has sufficient wattage for the system, and it's pretty quiet. It's also a good value for $30.
 
-The one downside is that it uses non-modular cabling. My system is so bare bones that I only need the 24-pin motherboard cable and the 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's 5.25" bay for an optical disc reader (obviously empty in my case).
+The one downside is that it uses non-modular cabling. My system is so bare bones that I only need the 24-pin motherboard cable and 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's 5.25" bay for an optical disc reader (obviously empty in my case).
 
 If I were to do it over, I'd consider a semi-modular or full-modular PSU so I could get rid of the extraneous PSU cables.
 
 # Conclusion
 
-This homelab VM server is working out very well. It's very convenient to be able to know that my VMs are running all the time, so I can just SSH in or view them in the browser without having to spin anything up in VirtualBox.
+This homelab VM server is working very well. It's very convenient to be able to know that my VMs are running all the time, so I can just SSH in or view them in the browser without having to spin anything up in VirtualBox.
 
 One unexpected benefit is that I no longer have to be conservative about provisioning CPU/RAM resources to guest OSes. My main desktop is an 8-core i7 with 32 GB of RAM. I didn't want my VMs to starve my main OS for resources, so I'd typically provision guest OSes with 1 CPU + 1 GB RAM and only increase when I saw it hitting resource constraints. With the homelab VM server, there are enough resources for everyone! My standard guest OS template uses 4 cores and 4 GB CPU, a sufficient upper limit for most of my environments. This means that I waste less of my time managing guest OS resources manually.
 
