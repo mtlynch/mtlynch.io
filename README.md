@@ -1,9 +1,9 @@
 # mtlynch.io
 
 [![Build
-Status](https://travis-ci.org/mtlynch/mtlynch.github.io.svg?branch=master)](https://travis-ci.org/mtlynch/mtlynch.github.io)
+Status](https://travis-ci.org/mtlynch/mtlynch.io.svg?branch=master)](https://travis-ci.org/mtlynch/mtlynch.io)
 
 ## Overview
 
-This is the source for http://mtlynch.io/.
+This is the source for https://mtlynch.io/.
 
