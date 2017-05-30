@@ -5,9 +5,14 @@ rvm:
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+install:
+  - npm install -g firebase-tools@3.9.0
 script:
   - ./_tests/build
 deploy:
   provider: firebase
   token:
     secure: "V4DLcH9gl2Zrpl0dlGM+4TDVRcJX5QuWDWj4dRfQLDpVCCweyWdDyoN9ZywP7RruiOAS82+w1prBagGw67IqxIXSgYijqU29iyGThSCbH0xOFH6p3WQGk+eDqaSM7xyHmcHVuUc4aZhA9hWz8GFnwS136+npTBQfPbjbd8wFB7NVCH5AmV8fTzRX1g0IKMyKYvYX8VpxDDtDLHj6lUXWorHRQlEW9RY5cM8/hXJ40Y1VBwObRdYcoW0sPsui5O1jJBVYJAewGmBv8URIZFHmbmuAkHnNpwWXpQeRLqMIpeDH40MVCvtTeu/4qhxyDlRR/HrYRxZkmMrprHDgT7tN/CoXpWIRyOUNt0a7Pimd9S6QwliJg6J/qOZX40ZE8Qu6JBbe0zJ/4E9bPtWeLSRg+M/b0xybjXkKSPAaSH6FAs0YihZOPa7LYGitvjpFL7opM/O6djCB8RPc1X0jd5LxxrVadjbS0UiH1lGXfKRYZixdigpC90bjuaeMdm7iJE1DmMsl0M3D9K8UYMSGxcpJrTilQ3iu849Kpx8jIhqnvqQv0YLw//THtU+2EdYTPbFHYheXAIaN+7j3QIwdCphDhzKQb5Tn38EcP5ahblRgKYSZEtiPx+pnjhSh4vCM0RJpbb0loKTZVVrvBr3zqEWhR4XL/Qte81Q9rOviyDuKG+w="
+
+after_success:
+  11    - firebase deploy --token $FIREBASE_TOKEN
