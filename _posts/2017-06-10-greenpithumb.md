@@ -104,29 +104,34 @@ To provision GreenPiThumb on our Pi device, we created a [custom configuration](
 
 The tables below show the equipment we used to build GreenPiThumb. Many of these are commodity parts, so you can swap in a different item that does the same thing.
 
-## GreenPiThumb Essentials
+## GreenPiThumb essentials
 
 | Item | Cost |
 |------|------|
 | [Raspberry Pi 3 Model B](http://amzn.to/2nTReZk) | $36.00 |
-| [Seaflo 12V Water Pump](http://amzn.to/2p90wk8) | $29.99 |
+| [12V Water Pump](http://amzn.to/2p90wk8) | $29.99 |
 | [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw) | $28.89 |
-| [Coolerguys 100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC) | $15.00 |
-| [Silicone Tubing](http://amzn.to/2oho2aL) | $10.99 |
-| [DHT11 Temperature and Humidity Sensor](http://amzn.to/2rDgFie) | $6.99 |
-| [Adafruit MCP3008 ADC](http://amzn.to/2poV4tn) | $6.22 |
-| [MicroSD Card (16 GB)](http://amzn.to/2nTHVZs) | $5.99 |
-| [Solderable PC Breadboard (400 Tie-Point)](http://amzn.to/2nTDOfF) | $5.90 |
-| [Soil Moisture Sensor](https://www.sparkfun.com/products/13322) | $4.99 |
-| [Molex to SATA Power Cable Adapter](http://amzn.to/2ohoJ3O) | $2.75 |
-| [Light Dependent Photoresistor](http://amzn.to/2oCFlUO) | $1.72 |
+| [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC) | $15.00 |
+| [Silicone tubing](http://amzn.to/2oho2aL) | $10.99 |
+| [DHT11 temperature and humidity sensor](http://amzn.to/2rDgFie) | $6.99 |
+| [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) | $6.22 |
+| [MicroSD card (16 GB)](http://amzn.to/2nTHVZs) | $5.99 |
+| [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF) | $5.90 |
+| [Soil moisture sensor](https://www.sparkfun.com/products/13322) | $4.99 |
+| [Rubber glove](http://amzn.to/2rQVES9) (it makes sense; you'll see) | $4.94 |
+| [Molex to SATA power cable adapter](http://amzn.to/2ohoJ3O) | $2.75 |
+| [Light dependent photoresistor](http://amzn.to/2oCFlUO) | $1.72 |
+| 1 gallon water jug (for reservoir) | - |
+| Safety pin | - |
+| Rubber bands | - |
 
-## Plant stuff
+## Gardening supplies
 
-* Planter
-* Rubber glove (for water spray)
-* Soil
-* Seeds
+| Item | Cost |
+|-------|-------|
+| [10" planter pot](http://amzn.to/2qMosHd) |  $20.24 |
+| [Potting mix](http://amzn.to/2sCQwNK) (soil) | $13.69 |
+| [Kentucky Wonder bush bean seeds](http://amzn.to/2srEHuH) | $4.09 |
 
 ## Common electronics components
 
@@ -134,31 +139,29 @@ The items below are generic electronics tools and components that last multiple 
 
 | Item | Cost |
 |------|------|
-| [Soldering stand](http://amzn.to/2qLx2Gc) | $7.04 |
+| ~~Netflix and chill wire~~ [Hook up wire](http://amzn.to/2rELX8y) | $20.00 |
 | [Soldering Iron](http://amzn.to/2qLi3wa) | $16.99 |
-
-* Wiring
-* Pack of Resistors
-* Wire strippers
-* Solder sealant things (TODO: look up real name)
-* Solder
-* Jumper wires (male-male, male-female, female-female)
-* [Solderless breadboard, 830 tie-points](http://amzn.to/2rQH4dh) (for prototyping)
-* Long wire (TODO: Look up real name of this)
+| [Assorted resistors](http://amzn.to/2sCUINF) | $12.98 |
+| [Wire stripper](http://amzn.to/2sqt5bw) | $8.92 |
+| [Soldering stand](http://amzn.to/2qLx2Gc) | $7.04 |
+| [Jumper wires](http://amzn.to/2rF93Mc) | $6.95 |
+| [Heat shrink tubing](http://amzn.to/2rSdLXV) (to cover solder joints) | $6.38 |
+| [Wire cutters](http://amzn.to/2srCW0s) | $4.97 |
+| [Solderless breadboard, 830 tie-points](http://amzn.to/2rQH4dh) (for testing) | $2.60 |
 
 ## Optional Components
 
 The components below are not strictly necessary and have cheaper alternatives, but we found they made the process much easier, so they were worth their cost to us.
 
-| Item | Cost | Notes |
+| Item | Notes | Cost |
 |------|------|-------|
-| [AstroAI Digital Multimeter](http://amzn.to/2s4VNkw) |  $12.99 | We *highly* recommend you buy a basic multimeter (there's nothing special about this particular one). We waited far too long to purchase a multimeter. Once we got one, we could debug electronics issues much more quickly and systematically. |
-| [SharkBite U701 PEX Tubing Cutter](http://amzn.to/2olsG6N) | $20.99 | Makes it far easier to make clean cuts to the water tubing. |
-| [MFX2 Bendy Camera Mount](http://amzn.to/2oCsaD8) | $29.95 | Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and distance. |
-| [Pi Camera Mount](http://amzn.to/2rDwLbY) | $8.45 | Allows you to attach the Pi camera to a standard 1/4" camera mount, such as the MFX2 mount above. |
-| [Pi Camera Extension Cable (1m)](http://amzn.to/2rQMEfR) | $8.44 | Necessary for attaching the Pi camera to larger mounts, such as the MFX 2 mount above. |
-| [Helping Hands Third Hand Soldering Tool](http://amzn.to/2rDucqm) | $44.95 | - |
-
+| [Third hand soldering tool](http://amzn.to/2rDucqm) | TODO: explain | $44.95 |
+| [Bendy camera mount](http://amzn.to/2oCsaD8) | Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and distance. | $29.95 |
+| [PEX tubing cutter](http://amzn.to/2olsG6N) | Makes it far easier to make clean cuts to the water tubing. | $20.99 |
+| [Digital Multimeter](http://amzn.to/2s4VNkw) | We *highly* recommend you buy a basic multimeter (there's nothing special about this particular one). We waited far too long to purchase a multimeter. Once we got one, we could debug electronics issues much more quickly and systematically. |  $12.99 |
+| [Pi camera mount](http://amzn.to/2rDwLbY) | Allows you to attach the Pi camera to a standard 1/4" camera mount, such as the bendy mount above. | $8.45 |
+| [Pi camera extension cable (1m)](http://amzn.to/2rQMEfR) | Necessary for attaching the Pi camera to larger mounts, such as the bendy mount above. | $8.44 |
+| [Zip ties](http://amzn.to/2qMoxe5) | Useful for fastening tubing or wiring in place. | $5.19 |
 
 # Bumps along the way
 
@@ -176,7 +179,7 @@ I haven't seen any of the other Pi plant build tutorials discuss distributing th
 
 The solution we finally settled on is "spray and pray." It is a solution borne out of looking around my apartment for items that might solve this problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the underside of the glove rubber using both a sewing needle and fingernail clippers. We turned the pump on and the severed finger of the glove immediately launched off the water tube, spraying my wall in the process. We reattached everything, but this time, we drove a safety pin through the water tube just in front of the rubber bands so that they can't slide forward.
 
-It's not the most *elegant* solution, but it works.
+It's not the most *elegant* solution, but it mostly works.
 
 <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/s/xjqmj/wfilnx" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
 
@@ -221,7 +224,7 @@ Nothing. It produces nothing because that is a terrible strategy. It introduced 
 
 We mentioned the multimeter, but our experience got significantly better as we invested in better tooling.
 
-For long time, we were very resistant to buy electronics equipment that we might not use beyond this project.
+For a long time, we were very resistant to buy electronics equipment that we might not use beyond this project.
 
 An inexpensive multimeter (todo: link) proved to be a very valuable tool in testing assumptions about the wiring when components failed.
 
