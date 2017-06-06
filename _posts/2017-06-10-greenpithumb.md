@@ -16,6 +16,7 @@ tags:
 {% include base_path %}
 
 # Introducing GreenPiThumb
+
 GreenPiThumb is a gardening bot that waters a houseplant and monitors its growth.
 
 TODO: Photo of system
@@ -55,6 +56,7 @@ In particular, GreenPiThumb's code features:
 * [An installer tool](https://github.com/JeetShetty/ansible-role-greenpithumb)
 
 # The nuts 'n bolts
+
 ## Hardware
 
 GreenPiThumb's wiring diagram is shown below:
