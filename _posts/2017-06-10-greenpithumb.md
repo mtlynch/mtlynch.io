@@ -128,6 +128,8 @@ The tables below show the equipment we used to build GreenPiThumb. Many of these
 | Safety pin | - |
 | Rubber bands | - |
 
+TODO: Switch to Pi Zero W and add Pi power cable
+
 ## Common electronics components
 
 The items below are generic electronics tools and components that last multiple projects, but we had to buy them because we had zero electronics equipment, so we're including them here for completeness:
@@ -172,7 +174,7 @@ This project took over a year to complete because we ran into a lot of roadblock
 
 ## Electronics: how do they work?
 
-My only knowledge of electronics is based on faint memories of physics in high school. Jeet studied electrical engineering, so I figured he would just know everything, but his focus of study wasn't quite hobbyist electronics and his memory is hazy as well.
+My only knowledge of electronics is based on faint memories from high school physics. Jeet studied electrical engineering in college, so I figured he would just know everything, but his focus of study surprisingly was *not* hobbyist electronics, and his memory is hazy as well.
 
 I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to get an understanding of electonics basics. I really enjoyed these and found them helpful for understanding beginner concepts.
 
