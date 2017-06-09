@@ -164,7 +164,7 @@ As discussed in the introduction, there are not many restaurant delivery options
 
 This experience made me realize that I find cooking very exciting when I don't have to do it.
 
-I have friends who become enhtusiastic just from reading recipes, and I've never been able to relate to that. I just think about how all the work of cooking isn't worth the effort for me. But now that I've separated choosing a recipe from the effort of cooking, I find it really fun. I'll scroll through recipes and think, "Wow, I can't wait to schedule Leah so I can eat that!"
+I have friends who become enthusiastic just from reading recipes, and I've never been able to relate to that. I just think about how all the work of cooking isn't worth the effort for me. But now that I've separated choosing a recipe from the effort of cooking, I find it really fun. I'll scroll through recipes and think, "Wow, I can't wait to schedule Leah so I can eat that!"
 
 # What's next?
 
