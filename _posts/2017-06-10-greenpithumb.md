@@ -45,6 +45,8 @@ We decided to build our own because a) it's fun to make our own stuff and b) we 
 
 The majority of Pi hardware projects are from enthusiasts who are great with electronics, but don't have professional software development experience. We wanted to be the opposite - great software, but the hardware barely works and sometimes gets so hot that it melts our breadboard.
 
+TODO: Add melted breadboard picture.
+
 In particular, GreenPiThumb's code features:
 
 * Full unit tests
@@ -90,7 +92,9 @@ The [backend](https://github.com/JeetShetty/Greenpithumb) does the real heavy li
 
 ### GreenPiThumb web API
 
-The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It is a thin wrapper over GreenPiThumb's database and translates everything into JSON to make it easier to consume by web applications. The web dashboard (below) uses this API to retrieve all the information about GreenPiThumb's state so that it can present it in a human-friendly way in the browser.
+The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It's a thin wrapper over GreenPiThumb's database and translates everything into JSON to make it easier to consume by web applications.
+
+The web dashboard (below) uses this API to retrieve all the information about GreenPiThumb's state so that it can present it in a human-friendly way in the browser.
 
 ### GreenPiThumb web dashboard
 
@@ -153,7 +157,7 @@ The items below are generic electronics tools and components that last multiple 
 | Item | Cost |
 |-------|-------|
 | [10" planter pot](http://amzn.to/2qMosHd) |  $20.24 |
-| [Potting mix](http://amzn.to/2sCQwNK) (soil) | $13.69 |
+| [Potting mix](http://amzn.to/2rgOtxX) (soil) | $14.69 |
 | [Kentucky Wonder bush bean seeds](http://amzn.to/2srEHuH) | $4.09 |
 
 ## Optional Components
@@ -172,44 +176,75 @@ The components below are not strictly necessary and have cheaper alternatives, b
 
 # Bumps along the way
 
-This project took over a year to complete because we ran into a lot of roadblocks that would get us stuck for weeks at a time.
+This project took over a year to complete. A lot of that time was due to roadblocks we ran into that would grind our progress to a halt for weeks at a time. I've included the major ones below.
 
 ## Electronics: how do they work?
 
-My only knowledge of electronics is based on faint memories from high school physics. Jeet studied electrical engineering in college, so I figured he would just know everything, but his focus of study surprisingly was *not* hobbyist electronics, and his memory is hazy as well.
+My only knowledge of electronics is based on faint memories from high school physics. Jeet studied electrical engineering in college, so I figured he would just know everything, but his focus of study surprisingly was *not* hobbyist electronics, so a lot of this was new territory for him as well.
 
-I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to get an understanding of electonics basics. I really enjoyed these and found them helpful for understanding beginner concepts.
+TODO: insert picture of Arduino starter kit
+
+I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation of electonics basics. These tutorials turned out to be really enjoyable and useful. They do a good job of starting off easy and incrementally building to more advanced topics.
 
 ## Distributing water
 
 I haven't seen any of the other Pi plant build tutorials discuss distributing the water to all of your soil. The first time we pumped water, it just dumped into one spot, completely soaking that area but leaving the rest of the soil dry. We considered coiling the rubber tubing around the circumference of the pot and poking holes distributed along the tubing, but we thought that would fail to reach the center. We also toyed with the idea of using a showerhead, but the we couldn't think of a way to fasten it to the tubing in a way that is both water-tight and gives us control of the direction.
 
-The solution we finally settled on is "spray and pray." It is a solution borne out of looking around my apartment for items that might solve this problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the underside of the glove rubber using both a sewing needle and fingernail clippers. We turned the pump on and the severed finger of the glove immediately launched off the water tube, spraying my wall in the process. We reattached everything, but this time, we drove a safety pin through the water tube just in front of the rubber bands so that they can't slide forward.
+The solution we finally settled on is "spray and pray." It is a solution borne out of looking around my apartment for items that might solve this problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the underside of the glove rubber using both a sewing needle and fingernail clippers.
+
+The first time we tested this,  the severed finger of the glove immediately launched off the water tube, spraying my wall with water in the process. We reattached everything, but this time, we drove a safety pin through the water tube just in front of the rubber bands so that they can't slide forward.
+
+TODO: Insert picture
 
 It's not the most *elegant* solution, but it mostly works.
 
 <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/s/xjqmj/wfilnx" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
 
-## I think my dirt is broken
-
-TODO: Talk about the dirt conundrum.
-
 ## The gardening part wasn't supposed to be hard
 
-TODO: Talk about how gardening is hard, led to confusion.
+The big challenge of this project for us was supposed to be electronics. Gardening didn't seem seem that har. Green beans, in particular, are frequently described as a hardy plant that require only basic gardening skills to grow.
 
-We accidentally made this plant snuff film.
+It turns out that we don't have basic gardening skills. GreenPiThumb is supposed to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little when we ourselves had no idea how much watering is correct. 
 
+Experienced gardeners probably can observe hints from the plant or the soil that the plant needs to be watered, but weren't sure what a healthy green bean plant looked like, which is how we ended up accidentally making this horticultural snuff film:
+
+<figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/4ds28/hlxbxg" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+  <figcaption>Green bean plants, batch one: you will be missed.</figcaption>
+</figure>
+
+## I think my dirt is broken
+
+Our most vexing problem was dirt.
+
+When we set out to build GreenPiThumb, we expected that soil moisture would follow a very simple pattern. When we watered the plant, the moisture level would go up. On days we didn't water the plant, the moisture level would decrease at a roughly constant rate as the water evaporated. GreenPiThumb's job would then be to add water when the moisture reading reaches a certain minimum threshold to keep the soil from drying further.
+
+Soil refused to cooperate with us. In our initial build, the soil moisture reading oscilatted about (TODO: put in numbers), then slowly converged to (TODO: put in number). We took out the soil sensor and tried testing it against different media: air, water, a wet paper towel, our hands, totally dry soil, mud. It could tell the difference between all of these things, but it could never distinguish between soil that was watered three hours ago and soil that was watered three weeks ago.
+
+So we tried a new sensor. We were originally using Dickson Chow's Plant Friends sensor (TODO: link), and we swapped it out for the soil sensor that SparkFun sells (TODO: link). Basically same result, but SparkFun's reading remained steady at ~835 instead of (TODO: old number).
+
+Maybe it was the dirt's fault. Our potting mix was this [pre-packaged mix](http://amzn.to/2rchhfH) from Miracle-Gro that featured an "easy to water formula." Clearly this was some sort of evil, genetically engineered dirt. That's why it never dries, and that's why our poor soil sensors are so confused.
+
+We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](http://amzn.to/2sCQwNK). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the conditions of soil in our GreenPiThumb planter. At the end of three days, we put the soil sensor in both and: exact same reading! 835 in each.
+
+Out of ideas, we revisited some of the projects that inspired GreenPiThumb . How did they solve this problem? Plant Friends doesn't pump water at all, and Pi Planter measures the soil moisture, but waters on a fixed schedule regardless of moisture level. Some Googling turned up a few Pi gardening projects that *claim* that they water solely based on soil moisture, but none of them publish their source code nor share result data. Therefore, we decided it's fair to assume that scheduling waterings based on moisture level is impossible and that GreenPiThumb is doing the best it possibly can, given certain inexorable limits of the physical world.
+
+We finally decided to switch GreenPiThumb to a hybrid system. GreenPiThumb waters either if the soil gets too dry *or*  seven days after the last watering, whichever comes first.
 
 # The final product
 
 * TODO: Add pictures
-* TODO: Add timelapse links
 
-The timelapses have been the most fun part of this process.
+The timelapses have been the most fun part of this process. This one is from our first batch of green beans (RIP). We didn't realize how quickly the plants would outgrow the angle. We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
+
+<figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/vq0gt/viuhfk" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+  <figcaption>Four days of growth.</figcaption>
+</figure>
+
+
+* TODO: Add timelapse link for batch two.
 
 # Lessons learned
 
@@ -245,5 +280,5 @@ Big thanks to those who helped us with this project:
   * His project, [PiPlanter 2](http://www.esologic.com/?page_id=1042) heavily inspired the hardware aspects of GreenPiThumb
 * [Dickson Chow](http://dicksonchow.com)
   * His project, [Plant Friends](http://dicksonchow.com/plant-friends-mkii/) was a helpful hardware reference as well, and he provided lots of encouragement throughout the project.
-* The [/r/raspberry_pi](https://www.reddit.com/r/raspberry_pi) reddit community
-  * For [their help](https://www.reddit.com/r/raspberry_pi/comments/5i856z/help_turning_on_a_12v_water_pump_with_a_pi/) when we got stuck with wiring issues
+* The [/r/raspberry_pi](https://www.reddit.com/r/raspberry_pi) reddit community.
+  * For [their help](https://www.reddit.com/r/raspberry_pi/comments/5i856z/help_turning_on_a_12v_water_pump_with_a_pi/) when we got stuck with wiring issues.
