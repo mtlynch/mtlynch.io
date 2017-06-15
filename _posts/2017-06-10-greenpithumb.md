@@ -17,42 +17,76 @@ tags:
 
 # Introducing GreenPiThumb
 
-GreenPiThumb is a gardening bot that waters a houseplant and monitors its growth.
+GreenPiThumb is a gardening bot for houseplants.
 
 TODO: Photo of system
 
-GreenPiThumb tracks the moisture level of the soil and adds water the plant needs it. GreenPiThumb also records the temperature and humidity in the air and the level of light the plant is receiving. As the plant grows, GreenPiThumb takes photos at regular intervals, which you can use to make cool timelapses (TODO: link).
+GreenPiThumb features:
+
+* Live monitoring for soil moisture, air temperature, humidity, and light levels
+* Cool [graphs]({{ base_path }}/images/2017-06-21-greenpithumb/ambient-light-1.png)
+* A web dashboard
+* Photos at regular intervals so you can make neat timelapses (TODO: link)
 
 # Powered by Raspberry Pi
 
-GreenPiThumb runs on a [Raspberry Pi](https://www.raspberrypi.org/products/), a small, inexpensive computer built for hobbyists. For the past few years, I've been playing with Pis as miniature servers. Not so much because they're a practical choice for what I want, but mainly because the idea of tiny servers is fun.
+GreenPiThumb runs on a [Raspberry Pi](https://www.raspberrypi.org/products/), a small, inexpensive computer built for hobbyists.
 
-I'm a software guy, so I never explored the Pi beyond using it to run applications. For most of the Pi enthusiast community, the main draw of the Pi is how well it integrates with hobbyist electronics. People use Pis to build futuristic smart mirrors (TODO: link), (TODO: mention cool stuff people have built).
+[![Raspberry Pi]({{ base_path }}/images/2017-06-21-greenpithumb/pi-in-hand.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/pi-in-hand.jpg)
+
+For the past few years, I've been playing with Pis and using them as miniature servers. Not so much because they're practical for my needs, but mainly because I find tiny little servers fun.
+
+I'm a software guy, so I never explored the Pi beyond running applications on it. For most of the enthusiast community, the Pi's main draw is how well the it integrates with hobbyist electronics. People have used Pis to [create futuristic smart mirrors](http://michaelteeuw.nl/post/84026273526/and-there-it-is-the-end-result-of-the-magic), [run old video games](https://retropie.org.uk/), and [drive electric skateboards](https://www.youtube.com/watch?v=2WLEur3M8Yk).
 
 # Why GreenPiThumb?
 
-My apartment could use a plant, but I'm lazy and didn't want to make the effort of watering a plant myself. I decided it would be much easier to spend several hundred hours building a gardening robot to do it for me. I think if the plant lives to be 80 years old, I come out slightly ahead.
+My apartment could use a plant, but I'm lazy and didn't want to take the time to water a plant myself. I decided it would be much easier to spend several hundred hours building a gardening robot to do it for me. If my plant lives to be 80 years old, I come out slightly ahead.
 
-TODO: Insert xkcd should I automate matrix with an arrow showing where GreenPiThumb falls
+Like many of my software projects, the main motivation was to learn new technologies. My previous project, [ProsperBot]({{ base_url }}/prosperbot/), was an opportunity for me to learn Go, Ansible, and Redis. I saw GreenPiThumb as a chance to learn frontend development, specifically JavaScript and AngularJS. It was also a good way to become familiar with the hardware side of Raspberry Pi and finally figure out what those "GPIO pins" actually do.
 
-Like many of my software projects, my main motivation was to learn new technologies. My previous project, ProsperBot, was an opportunity for me to learn Go, Ansible, and Redis. I saw GreenPiThumb as an opportunity for me to learn frontend development, specifically JavaScript and AngularJS. It was also a good way to learn more about the electronics side of Raspberry Pi and finally figure out what all the GPIO pins do (TODO: reword). My friend [Jeet](https://github.com/JeetShetty) had just started learning to program, so I proposed the project to him as an opportunity for him to learn about effective Python programming techniques and healthy software engineering practices like code reviews, unit tests, and continuous integration.
+{% capture fig_img %}
+[![MOSFET melting breadboard]({{ base_path }}/images/2017-06-21-greenpithumb/gpio-wha.png)]({{ base_path }}/images/2017-06-21-greenpithumb/gpio-wha.png)
+{% endcapture %}
+
+{% capture fig_caption %}
+Raspberry Pi and its mysterious GPIO pins.
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
+
+My friend [Jeet](https://github.com/JeetShetty) had just started learning to program, so I proposed the project to him as a vehicle for learning about effective Python programming techniques and healthy software engineering practices like code reviews, unit tests, and continuous integration. Jeet was up for it and we set off on what we *thought* would be a two or three month project.
 
 # Why make another Pi-powered gardening bot?
 
 We're certainly not the first people to think of building a Pi-powered gardening bot. Two cool projects that preceded us are [PiPlanter](http://www.esologic.com/?p=1112) and [Plant Friends](http://dicksonchow.com/plant-friends/), but there have been a handful of others as well.
 
-We decided to build our own because a) it's fun to make our own stuff and b) we wanted to make a project that treated the software portion as a first class citizen.
+We decided to build our own because a) it's fun to make our own stuff and b) we wanted to treat the bot's software as a first-class citizen.
 
 The majority of Pi hardware projects are from enthusiasts who are great with electronics, but don't have professional software development experience. We wanted to be the opposite - great software, but the hardware barely works and sometimes gets so hot that it melts our breadboard.
 
-TODO: Add melted breadboard picture.
 
-In particular, GreenPiThumb's code features:
+{% capture fig_img %}
+[![GPIO pins]({{ base_path }}/images/2017-06-21-greenpithumb/melty-breadboard.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/melty-breadboard.jpg)
+{% endcapture %}
+
+{% capture fig_caption %}
+GPIO pins, how do they work?
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
+
+The code for GreenPiThumb is completely open-source and features:
 
 * Full unit tests
 * Code coverage tracking
 * Continuous integration
-* Diagnostic logging
+* Debug logging
 * Thorough documentation (both READMEs and code comments)
 * Consistent adherence to [a defined style guide](https://google.github.io/styleguide/pyguide.html)
 * [An installer tool](https://github.com/JeetShetty/ansible-role-greenpithumb)
@@ -60,8 +94,6 @@ In particular, GreenPiThumb's code features:
 # The nuts 'n bolts
 
 ## Hardware
-
-GreenPiThumb's wiring diagram is shown below:
 
 {% capture fig_img %}
 [![GreenPiThumb wiring diagram](https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png)](https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png)
@@ -76,69 +108,87 @@ GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/G
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
-The Raspberry Pi is only capable of reading digital signals, so the [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) produces digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](http://amzn.to/2oCFlUO). The [DHT11](http://amzn.to/2rDgFie) detects temperature and humidity in the air. It produces a digital signal, so it can plug right in to the Pi. Lastly, we have a [12V water pump](http://amzn.to/2p90wk8), but the Pi can only output 5V, so we connect a [12V Power Adapter](http://amzn.to/2oET4vC)  to the pump in series with a [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4). The Pi uses the MOSFET as a digital switch, breaking or completing the circuit to turn the pump off or on.
+The Raspberry Pi can only read *digital* signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](http://amzn.to/2oCFlUO).
+
+The [DHT11 sensor](http://amzn.to/2rDgFie) detects temperature and humidity in the air. It produces a digital signal, so it can plug right in to the Pi.
+
+Lastly, we have a [12V water pump](http://amzn.to/2p90wk8), but the Pi can only output 5V, so we connect a [12V power adapter](http://amzn.to/2oET4vC)  to the pump in series with a [MOSFET](http://amzn.to/2rpHXZ4). The Pi uses the MOSFET as a digital switch, breaking or completing the circuit when it wants to turn the pump off or on.
 
 ## Software
 
-![GreenPiThumb Software Architecture](https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png)
+{% capture fig_img %}
+![GreenPiThumb software architecture](https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png)
+{% endcapture %}
+
+{% capture fig_caption %}
+GreenPiThumb software architecture
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
 
 ### GreenPiThumb backend
 
-The [backend](https://github.com/JeetShetty/Greenpithumb) does the real heavy lifting. It's responsible for:
+The [backend](https://github.com/JeetShetty/Greenpithumb) does the real heavy lifting of GreenPiThumb. It's responsible for:
 
-* Managing the physical sensors (soil moisture level, temperature, etc.)
+* Managing the physical sensors (soil moisture, temperature, etc.)
 * Turning the water pump on and off
 * Recording events and sensor readings in the database
 
 ### GreenPiThumb web API
 
-The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It's a thin wrapper over GreenPiThumb's database and translates everything into JSON to make it easier to consume by web applications.
+The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It's a thin wrapper over GreenPiThumb's database. It translates everything into JSON to make it easier for web applications to consume.
 
-The web dashboard (below) uses this API to retrieve all the information about GreenPiThumb's state so that it can present it in a human-friendly way in the browser.
+The web dashboard (below) uses this API to retrieve GreenPiThumb's state and present the information through the browser in a human-friendly way.
 
 ### GreenPiThumb web dashboard
 
-The [web dashboard](https://github.com/JeetShetty/GreenPiThumb_Frontend_static) is a client-side AngularJS web application that shows GreenPiThumb's current state and creates graphs of sensor readings over time.
+The [web dashboard](https://github.com/JeetShetty/GreenPiThumb_Frontend_static) shows GreenPiThumb's current state and creates graphs of sensor readings over time.
 
-TODO: Add picture of dashboard
+[![GPIO pins]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-dashboard.png)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-dashboard.png)
 
-Our Pi isn't quite up to the challenge of acting as an internet-facing web server, but here's a [a static mirror](http://greenpithumb.mtlynch.io) of the GreenPiThumb dashboard that's identical our local GreenPiThumb dashboard.
+Our Pi isn't quite up to the challenge of acting as an internet-facing web server, but here's a [a static mirror](http://greenpithumb.mtlynch.io) of the GreenPiThumb dashboard that's identical to our local one.
 
 ### Deployment
 
-[Ansible](https://www.ansible.com/how-ansible-works) is an open source IT automation tool. To provision GreenPiThumb on our Pi device, we created a [custom configuration](https://github.com/JeetShetty/ansible-role-greenpithumb) or "role" in Ansible terms. The Ansible role downloads and installs GreenPiThumb's backend and frontend components, as well as all of its dependencies. With just a few commands, you can use this tool on a Pi device with a bare OS and have all of GreenPiThumb's software up and running.
+To deploy GreenPiThumb to our Pi device, we use an open source IT automation tool called  [Ansible](https://www.ansible.com/how-ansible-works).
+
+We created a custom [GreenPiThumb Ansible configuration](https://github.com/JeetShetty/ansible-role-greenpithumb) (or "role" in Ansible terms) for deploying all of the software GreenPiThumb needs. The Ansible role downloads and installs GreenPiThumb's backend and frontend components, as well as the third-party software components that GreenPiThumb depends on.
+
+With just a few commands, you can use this tool on a fresh Pi device and have all of GreenPiThumb's software up and running within minutes.
 
 # Parts list
 
-The tables below show the equipment we used to build GreenPiThumb. Many of these are commodity components that you can swap out for something functionally identical, but we wanted to share the exact parts that we used.
+The tables below show the equipment we used to build GreenPiThumb. We're sharing the exact parts we used so that it's easy for you to follow our model, but many of these are commodity components that you can swap out for something functionally identical if you so choose.
 
 ## GreenPiThumb essentials
 
 | Item | Cost |
 |------|------|
-| [Raspberry Pi 3 Model B](http://amzn.to/2nTReZk) | $36.00 |
+| [Raspberry Pi 3 Model B](http://amzn.to/2nTReZk) | $35.81 |
 | [12V water pump](http://amzn.to/2p90wk8) | $29.99 |
-| [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw) | $28.89 |
+| [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw) | $29.88 |
 | [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC) | $15.00 |
+| [MicroSD card (32 GB)](http://amzn.to/2rgHcTC) | $12.99 |
 | [Silicone tubing](http://amzn.to/2oho2aL) | $10.99 |
 | [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4) | $10.99 |
+| [Pi power supply](http://amzn.to/2rlAMh2) | $9.99 |
 | [DHT11 temperature and humidity sensor](http://amzn.to/2rDgFie) | $6.99 |
 | [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) | $6.22 |
-| [MicroSD card (16 GB)](http://amzn.to/2nTHVZs) | $5.99 |
 | [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF) | $5.90 |
 | [Soil moisture sensor](https://www.sparkfun.com/products/13322) | $4.99 |
 | [Rubber glove](http://amzn.to/2rQVES9) (it makes sense; you'll see) | $4.94 |
 | [Molex to SATA power cable adapter](http://amzn.to/2ohoJ3O) | $2.75 |
 | [Light dependent photoresistor](http://amzn.to/2oCFlUO) | $1.72 |
-| 1 gallon water jug (for reservoir) | - |
+| 1 gallon platic water jug (for reservoir) | - |
 | Safety pin | - |
 | Rubber bands | - |
 
-TODO: Switch to Pi Zero W and add Pi power cable
-
 ## Common electronics components
 
-The items below are generic electronics tools and components that last multiple projects, but we had to buy them because we had zero electronics equipment, so we're including them here for completeness:
+The items below are generic electronics tools and components that you can use for many projects. We had to buy them because we had zero electronics equipment, so we include them here for completeness:
 
 | Item | Cost |
 |------|------|
@@ -162,39 +212,45 @@ The items below are generic electronics tools and components that last multiple 
 
 ## Optional Components
 
-The components below are not strictly necessary and have cheaper alternatives, but we found they made the process much easier, so they were worth their cost to us.
+The components below are not strictly necessary and have cheaper alternatives, but we found that they made the process of building GreenPiThumb much easier:
 
 | Item | Notes | Cost |
 |------|------|-------|
-| [Third hand soldering tool](http://amzn.to/2rDucqm) | We started out with [this very basic clamp stand](http://amzn.to/2rFZJrx), but it was awkward to position and adjust. The bendy model was several times more expensive, but it made the task of soldering much easier and more pleasant. | $44.95 |
-| [Bendy camera mount](http://amzn.to/2oCsaD8) | Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and distance. | $29.95 |
-| [PEX tubing cutter](http://amzn.to/2olsG6N) | Makes it far easier to make clean cuts to the water tubing. | $20.99 |
-| [Digital multimeter](http://amzn.to/2s4VNkw) | We *highly* recommend you buy a basic multimeter (there's nothing special about this particular one). We waited far too long to purchase a multimeter. Once we got one, we could debug electronics issues much more quickly and systematically. |  $12.99 |
+| [Third hand soldering tool](http://amzn.to/2rDucqm) | We started out with [this basic clamp stand](http://amzn.to/2rFZJrx), but it was awkward to position and adjust. The bendy model was several times more expensive, but it made the task of soldering much easier and more pleasant. | $44.95 |
+| [Bendy camera mount](http://amzn.to/2oCsaD8) | Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and range. | $29.95 |
+| [PEX tubing cutter](http://amzn.to/2olsG6N) | Makes nice clean cuts to the water tubing. | $20.99 |
+| [Digital multimeter](http://amzn.to/2s4VNkw) | We *highly* recommend you buy a basic multimeter. There's nothing special about this particular one, but it has served us well. |  $12.99 |
 | [Pi camera mount](http://amzn.to/2rDwLbY) | Allows you to attach the Pi camera to a standard 1/4" camera mount, such as the bendy mount above. | $8.45 |
 | [Pi camera extension cable (1m)](http://amzn.to/2rQMEfR) | Necessary for positioning the Pi camera far away from the Pi device itself. | $8.44 |
-| [Zip ties](http://amzn.to/2qMoxe5) | Useful for fastening tubing or wiring in place. | $5.19 |
+| [Zip ties](http://amzn.to/2qMoxe5) | For fastening tubing or wiring in place. | $5.19 |
 
 # Bumps along the way
 
-This project took over a year to complete. A lot of that time was due to roadblocks we ran into that would grind our progress to a halt for weeks at a time. I've included the major ones below.
+This project took over a year to complete. A lot of that time was due to roadblocks we ran into that would grind our progress to a halt for weeks at a time. I've included the major issues we ran into below.
 
-## Electronics: how do they work?
+## Water distribution
 
-My only knowledge of electronics is based on faint memories from high school physics. Jeet studied electrical engineering in college, so I figured he would just know everything, but his focus of study surprisingly was *not* hobbyist electronics, so a lot of this was new territory for him as well.
+We haven't seen any of the other Pi gardening projects talk about how they distribute water across the soil's surface. This is a shame because we still haven't really figured it out.
 
-TODO: insert picture of Arduino starter kit
+The first time we pumped water into our planter, the tube directed a small jet of water into one spot, completely soaking that area but leaving the rest of the soil dry. We considered coiling the rubber tubing around the inner wall of the planter and poking holes along the tube, but we weren't sure if the spray would reach far enough to cover the center area. We also toyed with the idea of using a showerhead, but the we couldn't think of a way to fasten it to the tubing in a way that is both water-tight and gave us control of the direction.
 
-I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation of electonics basics. These tutorials turned out to be really enjoyable and useful. They do a good job of starting off easy and incrementally building to more advanced topics.
+The solution we finally settled on was "spray and pray." It was a solution borne out of looking around my apartment for items that might solve this problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the underside of the rubber using both a sewing needle and nail clippers.
 
-## Distributing water
+The first time we tested this,  the severed finger of the glove immediately launched off the water tube, spraying water all over my wall in the process. We reattached everything, but this time, we drove a safety pin through the water tube just in front of the rubber bands so that they couldn't slide forward.
 
-I haven't seen any of the other Pi plant build tutorials discuss distributing the water to all of your soil. The first time we pumped water, it just dumped into one spot, completely soaking that area but leaving the rest of the soil dry. We considered coiling the rubber tubing around the circumference of the pot and poking holes distributed along the tubing, but we thought that would fail to reach the center. We also toyed with the idea of using a showerhead, but the we couldn't think of a way to fasten it to the tubing in a way that is both water-tight and gives us control of the direction.
+{% capture fig_img_a %}
+[![Water sprayer (front)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-front.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-front.jpg)
+{% endcapture %}
 
-The solution we finally settled on is "spray and pray." It is a solution borne out of looking around my apartment for items that might solve this problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the underside of the glove rubber using both a sewing needle and fingernail clippers.
+{% capture fig_img_b %}
+[![Water sprayer (side)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-side.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-side.jpg)
+{% endcapture %}
 
-The first time we tested this,  the severed finger of the glove immediately launched off the water tube, spraying my wall with water in the process. We reattached everything, but this time, we drove a safety pin through the water tube just in front of the rubber bands so that they can't slide forward.
-
-TODO: Insert picture
+<figure class="half">
+  {{ fig_img_a | markdownify | remove: "<p>" | remove: "</p>" }}
+	{{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>Kitchen glove turned water distributor.</figcaption>
+</figure>
 
 It's not the most *elegant* solution, but it mostly works.
 
@@ -202,11 +258,11 @@ It's not the most *elegant* solution, but it mostly works.
 
 ## The gardening part wasn't supposed to be hard
 
-The big challenge of this project for us was supposed to be electronics. Gardening didn't seem seem that har. Green beans, in particular, are frequently described as a hardy plant that require only basic gardening skills to grow.
+The big challenge of this project for us was supposed to be electronics. Gardening didn't seem seem that hard. Green beans, in particular, are frequently described as a hardy plant that require only basic gardening skills to grow.
 
-It turns out that we don't have basic gardening skills. GreenPiThumb is supposed to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little when we ourselves had no idea how much watering is correct. 
+It turns out that we don't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little when we ourselves had no idea how much water is correct. 
 
-Experienced gardeners probably can observe hints from the plant or the soil that the plant needs to be watered, but weren't sure what a healthy green bean plant looked like, which is how we ended up accidentally making this horticultural snuff film:
+Experienced gardeners probably can draw hints from the plant or the soil to adjust the amount of watering, but we weren't sure what a healthy green bean plant looked like. That's  how we ended up accidentally making this horticultural snuff film:
 
 <figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/4ds28/hlxbxg" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
@@ -217,32 +273,58 @@ Experienced gardeners probably can observe hints from the plant or the soil that
 
 Our most vexing problem was dirt.
 
-When we set out to build GreenPiThumb, we expected that soil moisture would follow a very simple pattern. When we watered the plant, the moisture level would go up. On days we didn't water the plant, the moisture level would decrease at a roughly constant rate as the water evaporated. GreenPiThumb's job would then be to add water when the moisture reading reaches a certain minimum threshold to keep the soil from drying further.
+When we set out to build GreenPiThumb, we expected that soil moisture would follow a simple pattern. When we watered the plant, the moisture level would go up. On days we didn't water the plant, the moisture level would go down. The moisture readings would decrease gradually each day as more water evaporated. GreenPiThumb's job would then be to maintain the correct soil moisture by adding water whenever the reading dropped to a certain threshold.
 
-Soil refused to cooperate with us. In our initial build, the soil moisture reading oscilatted about (TODO: put in numbers), then slowly converged to (TODO: put in number). We took out the soil sensor and tried testing it against different media: air, water, a wet paper towel, our hands, totally dry soil, mud. It could tell the difference between all of these things, but it could never distinguish between soil that was watered three hours ago and soil that was watered three weeks ago.
+### Bad readings
 
-So we tried a new sensor. We were originally using Dickson Chow's Plant Friends sensor (TODO: link), and we swapped it out for the soil sensor that SparkFun sells (TODO: link). Basically same result, but SparkFun's reading remained steady at ~835 instead of (TODO: old number).
+Soil refused to cooperate with us. In our initial build, the soil moisture reading oscilatted from 95% to 100%, then slowly converged to ~99.5%. We took out the soil sensor and tried testing it against different media: air, water, a wet paper towel, our hands, totally dry soil. All of these things seemed to get sensible readings, but soil with any kind of moisture made the sensor shoot to nearly 100%.
 
-Maybe it was the dirt's fault. Our potting mix was this [pre-packaged mix](http://amzn.to/2rchhfH) from Miracle-Gro that featured an "easy to water formula." Clearly this was some sort of evil, genetically engineered dirt. That's why it never dries, and that's why our poor soil sensors are so confused.
+{% capture fig_img %}
+[![Soil moisture level]({{ base_path }}/images/2017-06-21-greenpithumb/v1-soil-moisture.png)]({{ base_path }}/images/2017-06-21-greenpithumb/v1-soil-moisture.png)
+{% endcapture %}
 
-We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](http://amzn.to/2sCQwNK). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the conditions of soil in our GreenPiThumb planter. At the end of three days, we put the soil sensor in both and: exact same reading! 835 in each.
+{% capture fig_caption %}
+Soil moisture readings, original moisture sensor.
+{% endcapture %}
 
-Out of ideas, we revisited some of the projects that inspired GreenPiThumb . How did they solve this problem? Plant Friends doesn't pump water at all, and Pi Planter measures the soil moisture, but waters on a fixed schedule regardless of moisture level. Some Googling turned up a few Pi gardening projects that *claim* that they water solely based on soil moisture, but none of them publish their source code nor share result data. Therefore, we decided it's fair to assume that scheduling waterings based on moisture level is impossible and that GreenPiThumb is doing the best it possibly can, given certain inexorable limits of the physical world.
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
 
-We finally decided to switch GreenPiThumb to a hybrid system. GreenPiThumb waters either if the soil gets too dry *or*  seven days after the last watering, whichever comes first.
+So we tried a new sensor. We were originally using Dickson Chow's [Plant Friends soil probe](http://dickson.bigcartel.com/product/soil-probe-for-plant-friends), and we swapped it out for the [SparkFun soil sensor](https://www.sparkfun.com/products/13322). The new sensor got a reading of 82% for our damp soil, and it would jump up to 85% for a few hours after the soil was freshly watered. Sadly, the sensor couldn't tell the difference between soil that was watered three hours ago and soil that hadn't been watered for five days. It seemed that after a few hours of watering, the moisture readings would drop back down to 82% and never change.
+
+### Tricky dirt
+
+![Miracle-Gro soil]({{ base_path }}/images/2017-06-21-greenpithumb/miracle-gro.png){: .align-right}
+
+Maybe it was the dirt's fault. Our potting soil was this [pre-packaged mix](http://amzn.to/2rchhfH) from Miracle-Gro that featured an "easy to water formula." A bit suspicious, no? Clearly this was evil, genetically engineered dirt that never dries. That's why our poor soil sensors were so confused.
+
+We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](http://amzn.to/2sCQwNK). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the conditions of soil in our GreenPiThumb planter. At the end of three days, we tested the soil sensor in both types of soil.
+
+We got the exact same reading: 82% in each. So we couldn't blame the soil...
+
+### Giving up
+
+Out of ideas, we revisited the projects that inspired GreenPiThumb. How did they solve this problem?
+
+[Plant Friends](http://dicksonchow.com/plant-friends/) doesn't pump water at all. [PiPlanter](http://www.esologic.com/?p=1112) measures the soil moisture, but waters on a fixed schedule regardless of moisture level. Some Googling turned up a few Pi gardening projects that *claim* that they water solely based on soil moisture, but none of them publish their source code nor share result data. Therefore, we decided it was fair to assume that watering based on moisture level is **impossible** and that **GreenPiThumb is doing the best it possibly can**, given certain inexorable limits of the physical world.
+
+We finally decided to switch to a hybrid system. GreenPiThumb waters the plant either if the soil gets too dry *or*  if seven days have elapsed since the last watering.
 
 # The final product
 
 * TODO: Add pictures
 
-The timelapses have been the most fun part of this process. This one is from our first batch of green beans (RIP). We didn't realize how quickly the plants would outgrow the angle. We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
+The timelapses have been the most fun part of this process. This one is from our first batch (RIP) of green beans. We didn't realize how quickly the plants would outgrow the [close overhead angle]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
 
 <figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/vq0gt/viuhfk" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
-  <figcaption>Four days of growth.</figcaption>
+  <figcaption>Timelapse showing four days of green bean growth.</figcaption>
 </figure>
 
+For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 
 * TODO: Add timelapse link for batch two.
 
@@ -250,27 +332,27 @@ The timelapses have been the most fun part of this process. This one is from our
 
 ## Nothing is as simple as it seems
 
-I thought this would be a relatively straightforward 2-3 month project, but it took over a year to complete. It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/nothing-is-as-simple-as-it-seems/) from software essayist extraordinaire Joel Spolsky, and it's a lesson I expect that I'll learn again on many software projects to come.
+I thought this would be a relatively straightforward two to three month project, but it took us over a year to complete because nothing is as simple as it seems.
+
+It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/nothing-is-as-simple-as-it-seems/) from Joel Spolsky, software essayist extraordinaire, and it's a lesson that I expect to learn again and again on many software projects to come.
+
+## Electronics: start with the basics
+
+![Arduino starter kit]({{ base_path }}/images/2017-06-21-greenpithumb/arduino-starter-kit.jpg){: .align-left}
+
+At the start of the project, my only knowedge of electronics was based on faint memories of high school physics, so I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation of electonics basics.
+
+These tutorials turned out to be quite enjoyable and useful. They do a good job of starting off easy and incrementally building to more advanced topics. I recommend this kit to any beginners who are interested in electronics.
 
 ## Test hardware in isolation
 
-Hardware testing needs as much rigor as software testing
+Some who have worked with me on software projects have described me as "anal retentive" and "overly pedantic" when it comes to writing code. I prefer to think of my coding style as "rigorous." We implemented the software part of this project first, rigorously peer reviewing and testing each software component piece by piece.
 
-Many of the stalls in this project were due to problems in the physical hardware.
+When it came to the hardware, we were very un-rigorous. I dare say we were a bit cavalier and overly optimistic. Our original process for testing the hardware components was to get a basic version of the software working, wire up all the sensors on a test board, connect the Pi, run our software, and see what it produced.
 
-This was in large part due to our inexperience with electronics, but also because we didn't approach the hardware with the same rigor we approached the software.
+Nothing. It produced nothing. Because that was a terrible strategy for testing hardware. Each hardware component has the potential to be defective or incorrectly installed. By connecting everything at once, we had no way of figuring out which piece or pieces were broken.
 
-Our initial strategy for finding out if our physical sensors were working was to code up a basic version of the backend software that took readings from all sensors, then wire up all the sensors on a breadboard, then run the software and see what it produces.
-
-Nothing. It produces nothing because that is a terrible strategy. It introduced way too many variables into the experiment. Was the problem hardware or software? Which sensor had the problem? Over time, we learned to test our sensors in isolation. We created standalone [diagnostic scripts](https://github.com/JeetShetty/ansible-role-greenpithumb/tree/master/files) for each component. Every time we tweak the hardware now, the first thing we do is run through the diagnostic scripts to verify that we're getting sane readings.
-
-## Invest in good tools
-
-Our experience got significantly better as we invested in better tooling.
-
-For a long time, we were very resistant to buy electronics equipment that we might not use beyond this project.
-
-A [$13 multimeter](http://amzn.to/2s4VNkw) proved to be an invaluable resource for testing assumptions about the wiring when components failed.
+Over time, we learned to test our sensors in isolation. We created standalone [diagnostic scripts](https://github.com/JeetShetty/ansible-role-greenpithumb/tree/master/files) for each hardware component. Every time we tweak the hardware now, the first thing we do is run through the diagnostic scripts to verify that we're getting sane readings. When a new hardware piece is not working, we use our [multimeter](http://amzn.to/2s4VNkw) to systematically detect the root cause. We should have purchased the multimeter much earlier. It only cost $13, but could have saved us countless hours of frustration and headscratching.
 
 # Acknowledgments
 
@@ -279,6 +361,6 @@ Big thanks to those who helped us with this project:
 * [Devon Bray](https://twitter.com/eso_logic)
   * His project, [PiPlanter 2](http://www.esologic.com/?page_id=1042) heavily inspired the hardware aspects of GreenPiThumb
 * [Dickson Chow](http://dicksonchow.com)
-  * His project, [Plant Friends](http://dicksonchow.com/plant-friends-mkii/) was a helpful hardware reference as well, and he provided lots of encouragement throughout the project.
+  * Dickson's project, [Plant Friends](http://dicksonchow.com/plant-friends-mkii/) was a helpful hardware reference, and Dickson provided lots of encouragement throughout the project.
 * The [/r/raspberry_pi](https://www.reddit.com/r/raspberry_pi) reddit community.
   * For [their help](https://www.reddit.com/r/raspberry_pi/comments/5i856z/help_turning_on_a_12v_water_pump_with_a_pi/) when we got stuck with wiring issues.
