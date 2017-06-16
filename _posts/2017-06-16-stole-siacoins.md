@@ -6,6 +6,10 @@ read_time: true
 comments: true
 share: true
 related: true
+tags:
+- siacoin
+- cryptocurrency
+- security
 excerpt: A lesson in Sia wallet seed safety
 ---
 
