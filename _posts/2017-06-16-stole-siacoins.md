@@ -67,7 +67,7 @@ Indeed it was not. Browsing to Sia's [`wallet.go` file](https://github.com/Nebul
     ...
 ```
 
-The entropy dictionary only had ~1,600 words in it. My hope was that when the user was writing down the seed, they accidentally wrote down a word that wasn't in the dictionary at all. That way, if I found that one of 29 seed words they posted was missing from the dictionary, that would obviously the incorrect word. Then I could quickly figure out the seed just by looking for words in the dictionary similar to the absent word.
+The entropy dictionary only had ~1,600 words in it. My hope was that when the user was writing down the seed, they accidentally wrote down a word that wasn't in the dictionary at all. That way, if I found that one of 29 seed words they posted was missing from the dictionary, that would obviously be the incorrect word. Then I could quickly figure out the seed just by looking for words in the dictionary similar to the absent word.
 
 But alas, all 29 words in the incorrect seed appeared in the entropy dictionary, so eyeballing it wasn't going to work.
 
@@ -83,7 +83,7 @@ I first downloaded the dictionary locally and stripped out all characters except
 
 ```text
 $ wget -qO- https://raw.githubusercontent.com/NebulousLabs/entropy-mnemonics/master/english.go \
-  | egrep "^\s+\"(.+)\"," english.go \
+  | egrep "^\s+\"(.+)\"," \
   | egrep -o [a-z]+ \
   > dictionary.txt
 ```
@@ -223,7 +223,7 @@ At the time of my daring heist, Poloniex, the largest Siacoin exchange was [expe
 
 Maybe this user had *sent* €2,000 to the wallet, but the money was trapped in Poloniex limbo. That meant the €2,000 might still be up for grabs because it would still reach the wallet eventually.
 
-This was a new, interesting problem. How do I steal the money if it hasn't arrived in the wallet yet and I don't know when it will get there? I decided to just write a batch script to keep transferring money from the exposed wallet to my own wallet. Or rather, I decided to learn how to write a batch script because my easiest available Sia instance was a a Windows virtual machine and I don't know how to write batch scripts in Windows. Eventually, I churned out this fine piece of batch scripting:
+This was a new, interesting problem. How do I steal the money if it hasn't arrived in the wallet yet and I don't know when it will get there? I decided to just write a batch script to keep transferring money from the exposed wallet to my own wallet. Or rather, I decided to learn how to write a batch script because my easiest available Sia instance was a Windows virtual machine and I don't know how to write batch scripts in Windows. Eventually, I churned out this fine piece of batch scripting:
 
 ```bat
 for /l %%x in (1, 0, 100) do (
