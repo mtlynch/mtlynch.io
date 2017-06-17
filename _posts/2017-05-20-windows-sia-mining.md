@@ -396,3 +396,4 @@ If this guide was useful for you, and you'd like to support the blog, here are m
 * Siacoin: `b6e65384b896fc4b9f8a69c816422f188a418de48ec3dff2d25df7c01a16a66555cbf9d611f8`
 * Bitcoin: `12HLGffayPcBqXCC5iQHwX4f5YGjimbHT9`
 
+<script async id="_ck_226778" src="https://forms.convertkit.com/226778?v=6"></script>

@@ -289,3 +289,4 @@ If you're interested in getting started, check out my other guide, "[A Beginnerâ
 * 2017-05-23: Updated instructions for the Sia 1.2.2 release.
 * 2017-05-25: Revised a lot of the text, added instructions for version-to-version upgrades.
 
+<script async id="_ck_226778" src="https://forms.convertkit.com/226778?v=6"></script>

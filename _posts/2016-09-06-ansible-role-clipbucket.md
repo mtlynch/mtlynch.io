@@ -178,3 +178,4 @@ ansible-playbook install.yml
 When the `ansible-playbook` command completes, you can navigate to your ClipBucket server and log in with the username `admin` and the password you specified in `clipbucket_admin_password`.
 
 Try out the role and leave feedback, file bugs, or submit pull requests if you'd like to contribute.
+<script async id="_ck_226778" src="https://forms.convertkit.com/226778?v=6"></script>
