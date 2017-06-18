@@ -57,7 +57,7 @@ Raspberry Pi and its mysterious GPIO pins.
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
-My friend [Jeet](https://github.com/JeetShetty) had just started learning to program, so I proposed the project to him as a vehicle for learning about effective programming techniques and healthy software engineering practices like code reviews, unit tests, and continuous integration. Jeet was up for it, and we set off on what we *thought* would be a two or three month project.
+My friend [Jeet](https://github.com/JeetShetty) had just started learning to program, so I proposed the project to him as a vehicle for learning about effective programming techniques and healthy software engineering practices like code reviews, unit tests, and continuous integration. Jeet was up for it, and we set off on what we *thought* would be a two- or three-month project.
 
 # Why make another Pi-powered gardening bot?
 
@@ -142,7 +142,7 @@ The items below are generic electronics tools and components that you can use fo
 | [Potting mix](http://amzn.to/2rgOtxX) (soil) | $14.69 |
 | [Kentucky Wonder bush bean seeds](http://amzn.to/2srEHuH) | $4.09 |
 
-## Optional Components
+## Optional components
 
 The components below are not strictly necessary and have cheaper alternatives, but we found that they made the process of building GreenPiThumb much easier:
 
@@ -173,7 +173,7 @@ GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/G
 
 The Raspberry Pi can only read *digital* signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](http://amzn.to/2oCFlUO).
 
-The [DHT11 sensor](http://amzn.to/2rDgFie) detects temperature and humidity in the air. It produces a digital signal, so it can plug right in to the Pi.
+The [DHT11 sensor](http://amzn.to/2rDgFie) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Pi.
 
 Lastly, we have a [12V water pump](http://amzn.to/2p90wk8), but the Pi can only output 5V, so we connect a [12V power adapter](http://amzn.to/2oET4vC)  to the pump in series with a [MOSFET](http://amzn.to/2rpHXZ4). The Pi uses the MOSFET as a digital switch, breaking or completing the circuit when it wants to turn the pump off or on.
 
@@ -194,7 +194,7 @@ GreenPiThumb software architecture
 
 ## GreenPiThumb backend
 
-The [backend](https://github.com/JeetShetty/Greenpithumb) does the real heavy lifting of GreenPiThumb. It's responsible for:
+The [backend](https://github.com/JeetShetty/Greenpithumb) does the heavy lifting of GreenPiThumb. It's responsible for:
 
 * Managing the physical sensors (soil moisture, temperature, etc.)
 * Turning the water pump on and off
@@ -202,7 +202,7 @@ The [backend](https://github.com/JeetShetty/Greenpithumb) does the real heavy li
 
 ## GreenPiThumb web API
 
-The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It's a thin wrapper over GreenPiThumb's database. It translates everything into JSON to make it easier for web applications to consume.
+The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It's a thin wrapper over GreenPiThumb's database. It translates everything into JSON, which makes it easier for web applications to understand.
 
 The web dashboard (below) uses this API to retrieve GreenPiThumb's state and present the information through the browser in a human-friendly way.
 
@@ -256,7 +256,7 @@ It's not the most *elegant* solution, but it mostly works.
 
 ## The gardening part wasn't supposed to be hard
 
-Electronics were supposed to be the big challenge of this project. Gardening didn't seem seem that hard. Green beans, in particular, are frequently described as a hardy plant that require only basic gardening skills to grow.
+Electronics were supposed to be the big challenge of this project. Gardening didn't seem that hard. Green beans, in particular, are frequently described as a hardy plant that require only basic gardening skills to grow.
 
 It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little when we ourselves had no idea how much water was correct. 
 
