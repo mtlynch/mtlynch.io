@@ -214,3 +214,4 @@ The Selenium script correctly determines that all required modules are installed
 # Conclusion
 
 In this post, we combined Ansible with Selenium to verify that an Ansible role deployed a web app correctly and that the resulting deployment supported expected user behavior. Selenium offers a great deal of flexibility, so it's possible to test many different web UI flows in a variety of web applications.
+<script async id="_ck_226778" src="https://forms.convertkit.com/226778?v=6"></script>
