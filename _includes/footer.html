@@ -1,4 +1,6 @@
-<script async id="_ck_226778" src="https://forms.convertkit.com/226778?v=6"></script>
+{% unless page.layout == 'single' %}
+  {% include convert_kit_form.html %}
+{% endunless %}
 
 <div class="page__footer-follow">
   <ul class="social-icons">
