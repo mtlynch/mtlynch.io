@@ -16,6 +16,7 @@ tags:
 {% include base_path %}
 
 # Introducing GreenPiThumb
+
 A gardening bot for houseplants.
 
 [![GreenPiThumb full system]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full.jpg)
@@ -73,7 +74,7 @@ The majority of Raspberry Pi hardware projects are created by enthusiasts who ar
 {% capture fig_caption %}
 An early prototype that likely had a "catching on fire" problem
 {% endcapture %}
- 
+
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
@@ -179,7 +180,7 @@ When we tested this,  the severed finger of the glove shot off the water tube, s
 
 <figure class="half">
   {{ fig_img_a | markdownify | remove: "<p>" | remove: "</p>" }}
-	{{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
+  {{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
   <figcaption>Kitchen glove turned water distributor</figcaption>
 </figure>
 
@@ -191,7 +192,7 @@ It's not the most *elegant* solution, but it mostly works.
 
 Electronics were supposed to be the big challenge of GreenPiThumb. Gardening didn't seem that hard. Green beans, in particular, are frequently described as a hardy plant that require only basic gardening skills to grow.
 
-It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little because we ourselves had no idea how much water to use. 
+It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little because we ourselves had no idea how much water to use.
 
 Experienced gardeners probably can draw hints from the plant or the soil to adjust their watering, but we weren't sure what a healthy green bean plant looked like. That's  how we ended up accidentally making this horticultural snuff film:
 
@@ -248,6 +249,7 @@ Out of ideas, we revisited the projects that inspired GreenPiThumb. How did they
 We finally decided to switch to a hybrid system. GreenPiThumb will now water the plant if the soil gets too dry *or*  if seven days have elapsed since the last watering.
 
 # The final product
+
 Below are some images of our completed GreenPiThumb build:
 
 TODO: Arrange images in a nicer way
@@ -262,9 +264,8 @@ TODO: Arrange images in a nicer way
 
 <figure class="half">
   {{ fig_img_a | markdownify | remove: "<p>" | remove: "</p>" }}
-	{{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
+  {{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
 </figure>
-
 
 {% capture fig_img_a %}
 [![GreenPiThumb electronics]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-just-electronics-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-just-electronics.jpg)
@@ -280,12 +281,11 @@ TODO: Arrange images in a nicer way
 
 <figure class="third">
   {{ fig_img_a | markdownify | remove: "<p>" | remove: "</p>" }}
-	{{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
-	{{ fig_img_c | markdownify | remove: "<p>" | remove: "</p>" }}
+  {{ fig_img_b | markdownify | remove: "<p>" | remove: "</p>" }}
+  {{ fig_img_c | markdownify | remove: "<p>" | remove: "</p>" }}
 </figure>
 
 The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
-
 
 <figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/vq0gt/viuhfk" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
