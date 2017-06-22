@@ -105,7 +105,7 @@ There are a few different Siacoin miners to choose from, but they all offer simi
 
 To install Marlin, follow the steps below:
 
-1. Go to the [Marlin miner](https://siamine.com/marlin) download page.
+1. Go to the [Marlin miner](https://github.com/SiaMining/marlin/releases/latest) download page.
 1. Click the link for "Windows (64-bit)" to download the Marlin package.
 1. When the download completes, open it and unzip to `C:\marlin`
   ![Extract Marlin]({{ base_path }}/images/2017-05-20-windows-sia-mining/extract-to.png)
@@ -303,7 +303,7 @@ The SiaMining pool provides a dashboard that allows you to monitor your miner's 
 
 [![SiaMining screenshot]({{ base_path }}/images/2017-05-20-windows-sia-mining/siamining-pool.png)]({{ base_path }}/images/2017-05-20-windows-sia-mining/siamining-pool.png)
 
-When the unpaid balance for your wallet address reaches 1,000 Siacoin, the pool pays out your rewards. Within six hours, you will see a deposit in your wallet for a little over 1,000 Siacoin.
+When the unpaid balance for your wallet address reaches 500 Siacoin, the pool pays out your rewards. Within six hours, you will see a deposit in your wallet for a little over 500 Siacoin.
 
 My particular GPU reaches the payout threshold about once per week. Your experience will vary depending on the performance of your GPU, the percentage of time your miner is running, and the number of other active Siacoin miners.
 
@@ -377,6 +377,8 @@ I do **not** recommend buying a GPU for the express purpose of mining Siacoin. Y
 
 If you're buying a new GPU anyway, and you're interested in Siacoin mining performance as a factor in your decision, the tables above can help you decide.
 
+**Update (2017-06-22)**: On June 20th, 2017, Sia [announced](https://twitter.com/SiaTechHQ/status/877172219679563778) an upcoming ASIC miner for Siacoin, so investing in Siacoin GPU mining hardware at this point will almost certainly be unprofitable. Using your existing mining hardware may continue being profitable until ASICs ship, however.
+
 # Caveats
 
 Here are a few things to keep in mind as you begin Siacoin mining:
@@ -388,11 +390,4 @@ Here are a few things to keep in mind as you begin Siacoin mining:
 # Earning Siacoin by hosting
 
 Another way of earning Siacoin is by renting out your unused hard disk space. The Siacoin hosting economy hasn't  reached critical mass yet, and hosting is suited for more advanced users, but if you're interested, I wrote a [Guide to Hosting Sia on a Synology NAS]({{ base_path }}/sia-via-docker/).
-
-# Donation
-
-If this guide was useful for you, and you'd like to support the blog, here are my donation addresses:
-
-* Siacoin: `b6e65384b896fc4b9f8a69c816422f188a418de48ec3dff2d25df7c01a16a66555cbf9d611f8`
-* Bitcoin: `12HLGffayPcBqXCC5iQHwX4f5YGjimbHT9`
 

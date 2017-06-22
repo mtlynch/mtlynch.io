@@ -183,7 +183,7 @@ Encrypted, Unlocked
 Confirmed Balance:   594.8 SC
 ```
 
-That's weird. 594.8 SC at that time was worth about €10, a far cry from the €2,000 that the user claimed was in the wallet.
+That's weird. 594.8 SC (Siacoin) at that time was worth about €10, a far cry from the €2,000 that the user claimed was in the wallet.
 
 Was *I* the one being fleeced somehow? Did the user know they only had €10 but claim a much higher amount to entice someone to help them? Did a better cryptothief get to the wallet first and leave behind just €10 to taunt me?
 
@@ -273,3 +273,4 @@ They were delighted that I had recovered the seed because I had solved *their* m
 **Never post your Sia wallet seed online**. As we see from this tale, even an incorrect or partial version of the seed can completely compromise your wallet.
 
 This applies not only to Siacoin but to cryptocurrencies in general. Not all of them use a passphrase like Sia, but they all use some sort of private key you must keep secret if you don't want to lose your coins.
+
