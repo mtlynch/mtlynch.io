@@ -13,34 +13,28 @@ tags:
 - gardening
 ---
 
-{% include base_path %}
+# Introduction
 
-# Introducing GreenPiThumb
-
-A gardening bot for houseplants.
+This is the story of GreenPiThumb: a gardening bot that automatically waters houseplants, but also sometimes kills them.
 
 [![GreenPiThumb full system]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full.jpg)
 
-GreenPiThumb features:
+The story begins about a year ago, when I realized I wanted a plant in my apartment. Plants look nice, supply me with much needed oxygen, and imply to guests that I'm a grown-up, capable of caring for a living thing.
 
-* Live monitoring for soil moisture, air temperature, humidity, and light levels
-* Cool [graphs]({{ base_path }}/images/2017-06-21-greenpithumb/ambient-light-1.png)
-* A web dashboard
-* Timed photographs at regular intervals so you can make neat timelapses (TODO: link)
+But I'm a programmer, not a gardener. Plants require regular watering and observation. I decided it would be much easier to spend several hundred hours building a gardening robot to do all that for me. If my plant lives to be 80 years old, I come out slightly ahead.
 
 # Powered by Raspberry Pi
 
-GreenPiThumb runs on a [Raspberry Pi](https://www.raspberrypi.org/products/), a small, inexpensive computer built for hobbyists.
+I've been playing with [Raspberry Pis](https://vimeo.com/90103691) for the past few years. The Raspberry Pi is a small, inexpensive computer built for hobbyists.  I use them as miniature servers, not so much because they're practical for my needs, but because I find tiny servers fun.
 
 [![Raspberry Pi]({{ base_path }}/images/2017-06-21-greenpithumb/pi-in-hand.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/pi-in-hand.jpg)
 
-For the past few years, I've been playing with Raspberry Pis by using them as miniature servers. Not so much because they're practical for my needs, but mainly because I find tiny servers fun.
 
 I'm a software guy, so I never explored the Raspberry Pi beyond running applications on it. For most of the enthusiast community, the Raspberry Pi's main draw is how well it integrates with consumer electronics. People have used Raspberry Pis to [create futuristic smart mirrors](http://michaelteeuw.nl/post/84026273526/and-there-it-is-the-end-result-of-the-magic), [run old video games](https://retropie.org.uk/), and [drive electric skateboards](https://www.youtube.com/watch?v=2WLEur3M8Yk).
 
-# Why GreenPiThumb?
+TODO: Tie back to GreenPiThumb.
 
-My apartment could use a plant, but I'm lazy and didn't want to take the time to water it myself. So, I decided it would be much easier to spend several hundred hours building a gardening robot to do it for me. If my plant lives to be 80 years old, I come out slightly ahead.
+# Why GreenPiThumb?
 
 Like most software projects I take on, my main motivation was to learn new technologies. My previous app, [ProsperBot]({{ base_url }}/prosperbot/), was an opportunity for me to learn Go, Ansible, and Redis. I saw GreenPiThumb as a chance to learn front end development, specifically JavaScript and AngularJS. It was also a good way to become familiar with the hardware side of Raspberry Pi and finally figure out what those "GPIO pins" actually do.
 
