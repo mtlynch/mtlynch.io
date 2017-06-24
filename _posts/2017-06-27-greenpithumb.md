@@ -17,7 +17,7 @@ tags:
 
 This is the story of GreenPiThumb: a gardening bot that automatically waters houseplants, but also sometimes kills them.
 
-[![GreenPiThumb full system]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full.jpg)
+[![GreenPiThumb full system](/images/2017-06-27-greenpithumb/greenpithumb-side-full-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-side-full.jpg)
 
 The story begins about a year ago, when I was struck by a sudden desire to have a houseplant. A plant would look nice, supply me with much needed oxygen, and imply to guests that I'm a responsible grown-up, capable of caring for a living thing.
 
@@ -33,7 +33,7 @@ My friend [Jeet](https://github.com/JeetShetty) had just started learning to pro
 
 The [Raspberry Pi](https://vimeo.com/90103691) is a small, inexpensive computer built for hobbyists. People have used Raspberry Pis to [create futuristic smart mirrors](http://michaelteeuw.nl/post/84026273526/and-there-it-is-the-end-result-of-the-magic), [run old video games](https://retropie.org.uk/), and [drive electric skateboards](https://www.youtube.com/watch?v=2WLEur3M8Yk).
 
-[![Raspberry Pi]({{ base_path }}/images/2017-06-21-greenpithumb/pi-in-hand.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/pi-in-hand.jpg)
+[![Raspberry Pi](/images/2017-06-27-greenpithumb/pi-in-hand.jpg)](/images/2017-06-27-greenpithumb/pi-in-hand.jpg)
 
 I've been playing with Raspberry Pis for the past few years, but I'm a software guy, so I never experimented beyond using them as cheap toy servers.
 
@@ -42,7 +42,7 @@ For most of the enthusiast community, the Raspberry Pi's main draw is how well i
 With the number of sensors and integration guides available for it, the Raspberry Pi was a natural fit for GreenPiThumb. I figured using the Raspberry Pi in this way would also challenge me to learn its hardware capabilities and finally figure out what those "GPIO pins" actually do.
 
 {% capture fig_img %}
-[![MOSFET melting breadboard]({{ base_path }}/images/2017-06-21-greenpithumb/gpio-wha.png)]({{ base_path }}/images/2017-06-21-greenpithumb/gpio-wha.png)
+[![MOSFET melting breadboard](/images/2017-06-27-greenpithumb/gpio-wha.png)](/images/2017-06-27-greenpithumb/gpio-wha.png)
 {% endcapture %}
 
 {% capture fig_caption %}
@@ -63,7 +63,7 @@ We decided to build our own for two reasons: it's fun to make your own stuff, an
 The majority of Raspberry Pi projects are created by enthusiasts who are great with electronics but don't have professional software experience. We wanted to be the opposite – great software, but the hardware barely works and sometimes gets so hot that it melts our breadboard.
 
 {% capture fig_img %}
-[![GPIO pins]({{ base_path }}/images/2017-06-21-greenpithumb/melty-breadboard.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/melty-breadboard.jpg)
+[![GPIO pins](/images/2017-06-27-greenpithumb/melty-breadboard.jpg)](/images/2017-06-27-greenpithumb/melty-breadboard.jpg)
 {% endcapture %}
 
 {% capture fig_caption %}
@@ -139,7 +139,7 @@ The web dashboard (below) uses this API to retrieve GreenPiThumb's state and pre
 
 The [web dashboard](https://github.com/JeetShetty/GreenPiThumb_Frontend_static) shows GreenPiThumb's current state and creates graphs of sensor readings over time.
 
-[![GPIO pins]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-dashboard.png)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-dashboard.png)
+[![GPIO pins](/images/2017-06-27-greenpithumb/greenpithumb-dashboard.png)](/images/2017-06-27-greenpithumb/greenpithumb-dashboard.png)
 
 Our Raspberry Pi isn't quite up to the challenge of acting as an internet-facing web server, but here's a static mirror of the GreenPiThumb dashboard that's identical to our local one:
 
@@ -168,11 +168,11 @@ We ultimately settled on "spray and pray." It was a solution borne out of lookin
 We turned on the pump, and  the severed finger of the glove shot off the tubing, spraying water all over my apartment's wall. We reattached everything, but this time, stuck a safety pin through the water tube just in front of the rubber bands so that they couldn't slide forward.
 
 {% capture fig_img_a %}
-[![Water sprayer (front)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-front.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-front.jpg)
+[![Water sprayer (front)](/images/2017-06-27-greenpithumb/sprayer-front.jpg)](/images/2017-06-27-greenpithumb/sprayer-front.jpg)
 {% endcapture %}
 
 {% capture fig_img_b %}
-[![Water sprayer (side)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-side.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/sprayer-side.jpg)
+[![Water sprayer (side)](/images/2017-06-27-greenpithumb/sprayer-side.jpg)](/images/2017-06-27-greenpithumb/sprayer-side.jpg)
 {% endcapture %}
 
 <figure class="half">
@@ -205,7 +205,7 @@ When we set out to build GreenPiThumb, we expected that soil moisture would incr
 Below, we've used expensive and complex modeling software to visualize the soil moisture pattern we expected for GreenPiThumb:
 
 {% capture fig_img %}
-[![Soil moisture pattern](/images/2017-06-21-greenpithumb/imagined-graph.png)](/images/2017-06-21-greenpithumb/imagined-graph.png)
+[![Soil moisture pattern](/images/2017-06-27-greenpithumb/imagined-graph.png)](/images/2017-06-27-greenpithumb/imagined-graph.png)
 {% endcapture %}
 
 {% capture fig_caption %}
@@ -222,7 +222,7 @@ Soil moisture pattern, imagined
 Soil refused to cooperate with us. In our initial build, the soil moisture reading oscillated from 95% to 100%, then slowly converged to ~99.5%. We took out the soil sensor and tested it against different media: air, water, a wet paper towel, our hands, totally dry soil. All of these things seemed to get sensible readings, but soil with any kind of moisture made the sensor shoot up to nearly 100%.
 
 {% capture fig_img %}
-[![Soil moisture level](/images/2017-06-21-greenpithumb/v1-soil-moisture.png)](/images/2017-06-21-greenpithumb/v1-soil-moisture.png)
+[![Soil moisture level](/images/2017-06-27-greenpithumb/v1-soil-moisture.png)](/images/2017-06-27-greenpithumb/v1-soil-moisture.png)
 {% endcapture %}
 
 {% capture fig_caption %}
@@ -237,7 +237,7 @@ Soil moisture readings, original moisture sensor
 We originally used Dickson Chow's [Plant Friends soil probe](http://dickson.bigcartel.com/product/soil-probe-for-plant-friends), but we swapped it out for the [SparkFun soil sensor](https://www.sparkfun.com/products/13322). The new sensor got a reading of 82% in damp soil, and it would jump to 85% for a few hours after the soil was freshly watered. Within a few hours, however, it would sink back down to 82% and remain there for days. The sensor seemed unable to distinguish between soil that was watered three hours ago and soil that hadn't been watered for five days.
 
 {% capture fig_img %}
-[![Soil moisture level](/images/2017-06-21-greenpithumb/soil-moisture-sparkfun.png)](/images/2017-06-21-greenpithumb/soil-moisture-sparkfun.png)
+[![Soil moisture level](/images/2017-06-27-greenpithumb/soil-moisture-sparkfun.png)](/images/2017-06-27-greenpithumb/soil-moisture-sparkfun.png)
 {% endcapture %}
 
 {% capture fig_caption %}
@@ -251,7 +251,7 @@ Soil moisture readings, SparkFun moisture sensor
 
 ### I think my dirt is broken
 
-![Miracle-Gro soil]({{ base_path }}/images/2017-06-21-greenpithumb/miracle-gro.png){: .align-right}
+![Miracle-Gro soil](/images/2017-06-27-greenpithumb/miracle-gro.png){: .align-right}
 
 Maybe it was the dirt's fault. Our potting soil was this [pre-packaged mix](http://amzn.to/2rchhfH) from Miracle-Gro that featured an "easy to water formula." A bit suspicious, no? Clearly, this was evil, genetically engineered dirt that never dries. That's why our poor soil sensors were so confused.
 
@@ -272,11 +272,11 @@ We ultimately decided to switch to a hybrid system. GreenPiThumb now waters the 
 Below are some images of our completed GreenPiThumb build:
 
 {% capture fig_img_a %}
-[![GreenPiThumb full system]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-side-full.jpg)
+[![GreenPiThumb full system](/images/2017-06-27-greenpithumb/greenpithumb-side-full-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-side-full.jpg)
 {% endcapture %}
 
 {% capture fig_img_b %}
-[![GreenPiThumb full system]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-front-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-front.jpg)
+[![GreenPiThumb full system](/images/2017-06-27-greenpithumb/greenpithumb-front-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-front.jpg)
 {% endcapture %}
 
 <figure class="half">
@@ -285,15 +285,15 @@ Below are some images of our completed GreenPiThumb build:
 </figure>
 
 {% capture fig_img_a %}
-[![GreenPiThumb electronics]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-just-electronics-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-just-electronics.jpg)
+[![GreenPiThumb electronics](/images/2017-06-27-greenpithumb/greenpithumb-just-electronics-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-just-electronics.jpg)
 {% endcapture %}
 
 {% capture fig_img_b %}
-[![GreenPiThumb pump]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-pump-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-pump.jpg)
+[![GreenPiThumb pump](/images/2017-06-27-greenpithumb/greenpithumb-pump-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-pump.jpg)
 {% endcapture %}
 
 {% capture fig_img_c %}
-[![GreenPiThumb reservoir]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-reservoir-sm.jpg)]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-reservoir.jpg)
+[![GreenPiThumb reservoir](/images/2017-06-27-greenpithumb/greenpithumb-reservoir-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-reservoir.jpg)
 {% endcapture %}
 
 <figure class="third">
@@ -302,7 +302,7 @@ Below are some images of our completed GreenPiThumb build:
   {{ fig_img_c | markdownify | remove: "<p>" | remove: "</p>" }}
 </figure>
 
-The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle]({{ base_path }}/images/2017-06-21-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
+The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/images/2017-06-27-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
 <figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/vq0gt/viuhfk" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
@@ -326,7 +326,7 @@ It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/not
 
 ## Electronics: start with the basics
 
-[![Arduino starter kit]({{ base_path }}/images/2017-06-21-greenpithumb/arduino-starter-kit.jpg){: .align-left}](http://amzn.to/2rpRLCf)
+[![Arduino starter kit](/images/2017-06-27-greenpithumb/arduino-starter-kit.jpg){: .align-left}](http://amzn.to/2rpRLCf)
 
 At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation in electronics.
 
