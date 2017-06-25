@@ -11,6 +11,7 @@ tags:
 - raspberry pi
 - greenpithumb
 - gardening
+- home automation
 ---
 
 # Introduction
