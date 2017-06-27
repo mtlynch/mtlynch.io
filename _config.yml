@@ -86,7 +86,7 @@ social:
   name: 
   links: 
 analytics:
-  provider: google-universal
+  provider: custom
   google:
     tracking_id: UA-78473158-1
 author:
