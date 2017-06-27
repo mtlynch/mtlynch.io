@@ -20,7 +20,7 @@ This is the story of GreenPiThumb: a gardening bot that automatically waters hou
 
 [![GreenPiThumb full system](/images/2017-06-27-greenpithumb/greenpithumb-side-full-sm.jpg)](/images/2017-06-27-greenpithumb/greenpithumb-side-full.jpg)
 
-The story begins about a year ago, when I was struck by a sudden desire to have a houseplant. A plant would look nice, supply me with much needed oxygen, and imply to guests that I'm a responsible grown-up, capable of caring for a living thing.
+The story begins about a year ago, when I was struck by a sudden desire to own a houseplant. A plant would look nice, supply me with much needed oxygen, and imply to guests that I'm a responsible grown-up, capable of caring for a living thing.
 
 But I'm a programmer, not a gardener. If I had a plant, I'd have to water it and check the plant's health a few times per week. I decided it would be much easier if I just spent several hundred hours building a robot to do that for me. If the plant lives to be 80 years old, I come out slightly ahead.
 
@@ -36,11 +36,9 @@ The [Raspberry Pi](https://vimeo.com/90103691) is a small, inexpensive computer 
 
 [![Raspberry Pi](/images/2017-06-27-greenpithumb/pi-in-hand.jpg)](/images/2017-06-27-greenpithumb/pi-in-hand.jpg)
 
-I've been playing with Raspberry Pis for the past few years, but I'm a software guy, so I never experimented beyond using them as cheap toy servers.
+I've been playing with Raspberry Pis for the past few years, but I'm a software guy, so I had never used them for anything more than cheap toy servers. For most of the enthusiast community, the Raspberry Pi's main draw is how well it integrates with consumer electronics.
 
-For most of the enthusiast community, the Raspberry Pi's main draw is how well it integrates with consumer electronics.
-
-With the number of sensors and integration guides available for it, the Raspberry Pi was a natural fit for GreenPiThumb. I figured using the Raspberry Pi in this way would also challenge me to learn its hardware capabilities and finally figure out what those "GPIO pins" actually do.
+With the number of sensors and integration guides available for it, the Raspberry Pi was a natural fit for GreenPiThumb. I figured using the Raspberry Pi would also challenge me to learn its hardware capabilities and finally figure out what those "GPIO pins" actually do.
 
 {% capture fig_img %}
 [![MOSFET melting breadboard](/images/2017-06-27-greenpithumb/gpio-wha.png)](/images/2017-06-27-greenpithumb/gpio-wha.png)
@@ -124,7 +122,7 @@ GreenPiThumb software architecture
 
 ## GreenPiThumb back end
 
-The [back end](https://github.com/JeetShetty/Greenpithumb) does the heavy lifting of GreenPiThumb. It's responsible for:
+The [back end](https://github.com/JeetShetty/Greenpithumb) does the heavy lifting of GreenPiThumb. It's a Python app responsible for:
 
 * Managing the physical sensors (soil moisture, temperature, etc.)
 * Turning the water pump on and off
@@ -133,8 +131,6 @@ The [back end](https://github.com/JeetShetty/Greenpithumb) does the heavy liftin
 ## GreenPiThumb web API
 
 The [web API](https://github.com/JeetShetty/GreenPiThumb_Frontend) is an HTTP interface that serves information about GreenPiThumb's state and history. It's a thin wrapper over GreenPiThumb's database. It translates everything into JSON, which makes it easier for web applications to understand.
-
-The web dashboard (below) uses this API to retrieve GreenPiThumb's state and presents the information within the browser in a human-friendly way.
 
 ## GreenPiThumb web dashboard
 
@@ -152,7 +148,7 @@ To deploy GreenPiThumb to our Raspberry Pi device, we use [Ansible](https://www.
 
 We created a custom [GreenPiThumb Ansible configuration](https://github.com/JeetShetty/ansible-role-greenpithumb) (or "role" in Ansible terms) for deploying all of the software GreenPiThumb needs. The Ansible role downloads and installs GreenPiThumb's back end and front end code, as well as the third-party software components that GreenPiThumb depends on.
 
-With just a few commands, you can use this tool on a fresh Raspberry Pi device and have all of GreenPiThumb's software up and running within minutes.
+With just [a few commands](https://github.com/JeetShetty/GreenPiThumb#local-self-provision), you can use this tool on a fresh Raspberry Pi device and have all of GreenPiThumb's software up and running within minutes.
 
 # Bumps along the way
 
@@ -160,13 +156,13 @@ GreenPiThumb took over a year to complete, much longer than expected due to road
 
 ## Water distribution
 
-The other Raspberry Pi gardening projects don't talk about how they spread the water over the soil, which is a shame because we still haven't figured it out.
+The other Raspberry Pi gardening projects don't talk about how they spread water over the soil, which is a shame because we still haven't figured it out.
 
-The first time we pumped water into our planter, the tube directed a small jet of water into one spot, completely soaking that area but leaving the rest of the soil dry. We considered coiling the rubber tubing around the inner wall of the planter and poking holes in the tube, but we weren't sure if this would get enough water to the center part of the soil. We tried using a showerhead, but couldn't figure out how to fasten it water-tight to the tubing and still control the stream's direction.
+The first time we pumped water into our planter, the tube directed a small stream into one spot, completely soaking that area but leaving the rest of the soil dry. We considered coiling the rubber tubing around the inner wall of the planter and poking holes in the tube, but we weren't sure if this would get enough water to the center part of the soil. We tried using a showerhead, but couldn't figure out how to fasten it water-tight to the tubing and still control the stream's direction.
 
 We ultimately settled on "spray and pray." It was a solution borne out of looking around my apartment and randomly grabbing things that might solve our problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the glove using a sewing needle and nail clippers.
 
-We turned on the pump, and  the severed finger of the glove shot off the tubing, spraying water all over my apartment's wall. We reattached everything, but this time, stuck a safety pin through the water tube just in front of the rubber bands so that they couldn't slide forward.
+We turned on the pump, and  the severed finger of the glove immediately shot off the tubing, spraying water all over my apartment's wall. We reattached everything, but this time, stuck a safety pin just in front of the rubber bands so that they couldn't slide forward.
 
 {% capture fig_img_a %}
 [![Water sprayer (front)](/images/2017-06-27-greenpithumb/sprayer-front.jpg)](/images/2017-06-27-greenpithumb/sprayer-front.jpg)
@@ -201,7 +197,7 @@ It turned out that we didn't have basic gardening skills. GreenPiThumb is intend
 
 Our most vexing problem was dirt.
 
-When we set out to build GreenPiThumb, we expected that soil moisture would increase on days we watered the plant and decrease on days we didn’t. GreenPiThumb’s job would simply be to maintain the correct soil moisture by adding water whenever the reading dropped below a certain threshold.
+When we set out to build GreenPiThumb, we expected that soil moisture would increase on days we watered the plant and decrease on days we didn’t. GreenPiThumb’s job would simply be to maintain the correct moisture level by adding water whenever the reading dropped below a certain threshold.
 
 Below, we've used expensive and complex modeling software to visualize the soil moisture pattern we expected for GreenPiThumb:
 
@@ -235,7 +231,7 @@ Soil moisture readings, original moisture sensor
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
-We originally used Dickson Chow's [Plant Friends soil probe](http://dickson.bigcartel.com/product/soil-probe-for-plant-friends), but we swapped it out for the [SparkFun soil sensor](https://www.sparkfun.com/products/13322). The new sensor got a reading of 82% in damp soil, and it would jump to 85% for a few hours after the soil was freshly watered. Within a few hours, however, it would sink back down to 82% and remain there for days. The sensor seemed unable to distinguish between soil that was watered three hours ago and soil that hadn't been watered for five days.
+We originally used Dickson Chow's [Plant Friends soil probe](http://dickson.bigcartel.com/product/soil-probe-for-plant-friends), but we swapped it out for the [SparkFun soil sensor](https://www.sparkfun.com/products/13322). The new sensor got a reading of 82% in damp soil, and it would jump to 85% immediately after the soil was watered. Within a few hours, however, it would sink back down to 82% and remain there for days. The sensor seemed unable to distinguish between soil that was watered three hours ago and soil that hadn't been watered for five days.
 
 {% capture fig_img %}
 [![Soil moisture level](/images/2017-06-27-greenpithumb/soil-moisture-sparkfun.png)](/images/2017-06-27-greenpithumb/soil-moisture-sparkfun.png)
@@ -256,7 +252,7 @@ Soil moisture readings, SparkFun moisture sensor
 
 Maybe it was the dirt's fault. Our potting soil was this [pre-packaged mix](http://amzn.to/2rchhfH) from Miracle-Gro that featured an "easy to water formula." A bit suspicious, no? Clearly, this was evil, genetically engineered dirt that never dries. That's why our poor soil sensors were so confused.
 
-We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](http://amzn.to/2sCQwNK). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the conditions of soil in our GreenPiThumb planter. At the end of three days, we tested our sensor in both types of soil.
+We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](http://amzn.to/2sCQwNK). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the soil conditions in our GreenPiThumb planter. At the end of three days, we tested our sensor in both types of soil.
 
 We got the exact same reading: 82% in each. So, we couldn't blame the soil...
 
@@ -303,7 +299,7 @@ Below are some images of our completed GreenPiThumb build:
   {{ fig_img_c | markdownify | remove: "<p>" | remove: "</p>" }}
 </figure>
 
-The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/images/2017-06-27-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to the [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
+The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/images/2017-06-27-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
 <figure>
 <div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/vq0gt/viuhfk" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
@@ -314,7 +310,7 @@ For the second batch, we kept the camera in the exact same position throughout g
 
 <figure>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/6bvb2EvKQ58" frameborder="0" allowfullscreen></iframe>
-  <figcaption>17-day time-lapse of green bean plant growth</figcaption>
+  <figcaption>17-day timelapse of green bean plant growth</figcaption>
 </figure>
 
 # Lessons learned
@@ -339,7 +335,7 @@ Some who have worked with me on software projects have described me as "anal ret
 
 When it came to the hardware, we were very un-rigorous. I dare say we were a bit cavalier and laughably naïve. Our original process for testing the hardware components was to write a basic version of GreenPiThumb's software, wire up all the sensors on a test board, run it, and see what it produced.
 
-Nothing. It produced nothing. Because that was a terrible strategy for testing hardware. Every electronics component in a system has the potential to fail, either from defective hardware or incorrect installation. By connecting everything at once, we had no way of figuring out which piece or pieces were broken.
+Nothing. It produced nothing. Because that was a terrible strategy for testing hardware. Every electronics component in a system has the potential to fail, either because the component itself is defective or because it's been installed incorrectly. By connecting everything at once, we had no way of figuring out which piece or pieces were broken.
 
 Over time, we learned to test our sensors in isolation. We created standalone [diagnostic scripts](https://github.com/JeetShetty/ansible-role-greenpithumb/tree/master/files) for each hardware component. Every time we tweak the hardware now, the first thing we do is run through the diagnostic scripts to verify that we're getting sane readings. When a new hardware piece is not working, we use our [multimeter](http://amzn.to/2s4VNkw) to systematically detect the root cause. We should have purchased the multimeter much earlier. It only cost $13, but would have saved us countless hours of frustration and headscratching.
 
@@ -370,7 +366,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 | [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) | $6.22 |
 | [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF) | $5.90 |
 | [Soil moisture sensor](https://www.sparkfun.com/products/13322) | $4.99 |
-| [Rubber glove](http://amzn.to/2rQVES9) (it makes sense; you'll see) | $4.94 |
+| [Rubber glove](http://amzn.to/2rQVES9) | $4.94 |
 | [Molex to SATA power cable adapter](http://amzn.to/2ohoJ3O) | $2.75 |
 | [Light-dependent photoresistor](http://amzn.to/2oCFlUO) | $1.72 |
 | 1-gallon plastic water jug (for reservoir) | - |
@@ -384,7 +380,7 @@ The items below are generic electronics tools and components that you can use fo
 | Item | Cost |
 |------|------|
 | ~~Netflix and chill wire~~ [Hook up wire](http://amzn.to/2rELX8y) | $20.00 |
-| [Soldering Iron](http://amzn.to/2qLi3wa) | $16.99 |
+| [Soldering iron](http://amzn.to/2qLi3wa) | $16.99 |
 | [Assorted resistors](http://amzn.to/2sCUINF) | $12.98 |
 | [Wire stripper](http://amzn.to/2sqt5bw) | $8.92 |
 | [Soldering stand](http://amzn.to/2qLx2Gc) | $7.04 |
