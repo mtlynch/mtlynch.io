@@ -189,7 +189,7 @@ Electronics were supposed to be the big challenge of GreenPiThumb. Gardening did
 It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little because we ourselves had no idea how much water to use. That's  how we ended up accidentally making this horticultural snuff film:
 
 <figure>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/TYAdw6BwYyQ?rel=0&?enablejsapi=1&origin={{ base_path }}" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/TYAdw6BwYyQ?rel=0&?&origin=https://mtlynch.io" frameborder="0" allowfullscreen></iframe>
   <figcaption>Green bean plants, batch one: you will be missed.</figcaption>
 </figure>
 
@@ -309,7 +309,7 @@ The timelapses have been the most fun part of this process. This one is from our
 For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 
 <figure>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/6bvb2EvKQ58?rel=0?enablejsapi=1&origin={{ base_path }}" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/6bvb2EvKQ58?rel=0?&origin=https://mtlynch.io" frameborder="0" allowfullscreen></iframe>
   <figcaption>17-day timelapse of green bean plant growth</figcaption>
 </figure>
 
