@@ -188,10 +188,7 @@ Electronics were supposed to be the big challenge of GreenPiThumb. Gardening did
 
 It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little because we ourselves had no idea how much water to use. That's  how we ended up accidentally making this horticultural snuff film:
 
-<figure>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/TYAdw6BwYyQ?rel=0&html5=1&origin=https://mtlynch.io" frameborder="0" allowfullscreen></iframe>
-  <figcaption>Green bean plants, batch one: you will be missed.</figcaption>
-</figure>
 
 ## How hard can it be to measure moisture?
 
@@ -301,17 +298,11 @@ Below are some images of our completed GreenPiThumb build:
 
 The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/images/2017-06-27-greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
-<figure>
-<div style="width:100%;height:0px;position:relative;padding-bottom:75.000%;"><iframe src="https://streamable.com/s/vq0gt/viuhfk" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
-  <figcaption>Timelapse showing the first four days of green bean growth</figcaption>
-</figure>
+<div style="width: 100%; height: 0px; position: relative; padding-bottom: 75.000%;"><iframe src="https://streamable.com/s/vq0gt/wsplea" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;"></iframe></div>
 
 For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 
-<figure>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/6bvb2EvKQ58?rel=0&html5=1&origin=https://mtlynch.io" frameborder="0" allowfullscreen></iframe>
-  <figcaption>17-day timelapse of green bean plant growth</figcaption>
-</figure>
 
 # Lessons learned
 
