@@ -101,7 +101,7 @@ If you have an AMD GPU, you'll need OpenCL. It may be installed already, as it i
 
 # Install a Siacoin miner
 
-There are a few different Siacoin miners to choose from, but they all offer similar features and performance. This guide uses the Marlin miner because it is compatible with both CUDA and OpenCL, but you might want to check out [other mining options](https://www.reddit.com/r/siacoin/wiki/mining).
+There are a few different Siacoin miners to choose from, but they all offer similar features and performance. This guide uses the Marlin miner because it is compatible with both CUDA and OpenCL, but you might want to check out [other mining options](https://siawiki.tech/mining/software).
 
 To install Marlin, follow the steps below:
 
