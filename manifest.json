@@ -1,13 +1,25 @@
 {
-    "name": "",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "manifest_version": 1,
+  "name": "Silly Bits",
+  "default_locale": "en",
+  "description": "An amazing website.",
+  "short_name": "Silly Bits",
+  "author": "Michael Lynch",
+  "start_url": "/",
+  "display": "standalone",
+  "homepage_url": "https://mtlynch.io",
+  "background_color": "#1D2227",
+  "theme_color": "#1D2227",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }, {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
 }
