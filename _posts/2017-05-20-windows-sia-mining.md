@@ -379,7 +379,7 @@ I do **not** recommend buying a GPU for the express purpose of mining Siacoin. Y
 
 If you're buying a new GPU anyway, and you're interested in Siacoin mining performance as a factor in your decision, the tables above can help you decide.
 
-**Update (2017-06-30)**: On June 23rd, 2017, Sia [announced](https://www.reddit.com/r/siacoin/comments/6j1gyg/obelisks_sia_asics_full_details/) an upcoming Siacoin ASIC miner called the [Obelisk](https://obelisk.tech/), designed to be 100 times faster than GPU mining. The Obelisk is targeting a ship date between March and June 2018. When Obelisk customers begin using their devices, GPU mining for Siacoin will become unprofitable. If you plan to invest in GPU hardware, keep in mind that your Siacoin mining revenues will end soon after the Obelisk ships.
+**Update (2017-06-30)**: On June 23rd, 2017, Sia [announced](https://www.reddit.com/r/siacoin/comments/6j1gyg/obelisks_sia_asics_full_details/) an upcoming Siacoin ASIC miner called the [Obelisk](https://obelisk.tech/), expected to produce 100 times the hash rate of a GPU. The Obelisk is targeting a ship date between March and June 2018. When Obelisk customers begin using their devices, GPU mining for Siacoin will become unprofitable. If you plan to invest in GPU hardware, keep in mind that your Siacoin mining revenues will end soon after the Obelisk ships.
 
 # Caveats
 
