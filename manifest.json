@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "name": "Silly Bits",
   "default_locale": "en",
-  "description": "An amazing website.",
+  "description": "Michael Lynch's personal blog",
   "short_name": "Silly Bits",
   "author": "Michael Lynch",
   "start_url": "/",
