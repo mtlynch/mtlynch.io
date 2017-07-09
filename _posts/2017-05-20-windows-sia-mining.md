@@ -393,3 +393,42 @@ Here are a few things to keep in mind as you begin Siacoin mining:
 
 Another way of earning Siacoin is by renting out your unused hard disk space. The Siacoin hosting economy hasn't  reached critical mass yet, and hosting is suited for more advanced users, but if you're interested, I wrote a [Guide to Hosting Sia on a Synology NAS]({{ base_path }}/sia-via-docker/).
 
+# Troubleshooting
+
+Having trouble getting up and running? Here are some common issues readers have run into and how to fix them.
+
+## Miner crashes immediately
+
+**Symptoms**: When you run `marlin.bat` a command window pops up and immediately closes.
+
+This usually happens because the mining settings are too intense for your GPU. To fix this, follow the steps below
+
+1. Open Notepad
+1. Go to File > Open and enter `C:\marlin\marlin.bat`
+1. Under "Your Payout Address" change the address to your own Siacoin wallet address.
+  ![Marlin batch file](/images/2017-05-20-windows-sia-mining/lower-intensity.png)
+1. Go to File > Save and close Notepad.
+1. Try running `marlin.bat` again.
+
+If it succeeds, repeat these steps with increasing intensity until you find the highest intensity that is still stable.
+
+If it fails after you've lowered the intensity, try the following:
+
+1. Hit Win+R to open the Windows run dialog.
+1. Type `cmd` and hit Enter.<br>
+  ![Run cmd](/images/2017-05-20-windows-sia-mining/cmd.png)
+1. In the Command Prompt, type the following:
+
+    ```
+cd C:\marlin
+marlin.bat
+    ```
+
+This won't fix the issue, but the window will stay open so that you can see the error message Marlin is producing before it crashes.
+
+## Miner shows 0 MH/s
+
+**Symptoms**: The Marlin miner runs, but shows a hash rate of 0 MH/s.
+
+This can happen if the mining settings are too intense for your GPU. To fix this, follow the same steps for [Miner crashes immediately](#miner-crashes-immediately).
+
