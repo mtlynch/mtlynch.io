@@ -11,13 +11,11 @@ if [ "$1" = "--quick" ]; then
   htmlproofer_args_extra="--disable-external"
 fi
 
-# Add --check-html flag back in when minimal-mistakes bug is fixed:
-# https://github.com/mmistakes/minimal-mistakes/pull/1038
-
 # Run HTMLProofer
 BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
   --config _config.yml,_config_dev.yml
 bundle exec htmlproofer ./_site \
   --only-4xx \
+  --check-html \
   --allow-hash-href \
   "$htmlproofer_args_extra"
