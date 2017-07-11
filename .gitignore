@@ -13,3 +13,4 @@ npm-debug.log*
 _*preview*
 
 assets/js/main.min.js
+assets/js/script-compiled.js
