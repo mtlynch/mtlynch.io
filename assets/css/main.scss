@@ -6,6 +6,8 @@
 
 @import "minimal-mistakes";
 
+$screen-sm: 768px;
+
 @font-face {
   font-family: "anchor-icon";
   font-style: normal;
@@ -29,7 +31,9 @@
   line-height: inherit;
   position: absolute;
   margin-left: -20px;
-  font-size: 20px;
+  font-size: 24px;
+  top: 50%;
+  transform: translateY(-50%);
 
   &:after {
     content: attr(data-icon);
@@ -38,4 +42,41 @@
 
 *:hover  > .anchor-link {
   opacity: 1;
+}
+
+.archive__item {
+  .page__date {
+    margin: 10px 0;
+  }
+
+  .page__meta {
+    display: none
+  }
+}
+
+.page__inner-wrap {
+  header {
+    .page__meta {
+      margin: 10px 0;
+    }
+
+    .page__date {
+      margin: 0;
+    }
+  }
+
+  footer {
+    .page__date {
+      display: none;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+}
+
+@media screen and (max-width: $screen-sm) {
+  margin-left: -13px;
+  font-size: 18px;
 }
