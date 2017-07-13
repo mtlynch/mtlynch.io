@@ -1,6 +1,9 @@
 #!/bin/bash
 
+# Exit on first failing command.
 set -e
+# Echo commands to console.
+set -x
 
 # Execute Markdown Linter
 mdl _posts _pages --style _linter/markdown-linter-style.rb
