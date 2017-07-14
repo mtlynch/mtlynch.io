@@ -11,6 +11,7 @@ script:
   - ./_tests/build
 before_deploy:
   # Build production site.
+  - npm install
   - npm run build:js
   - BUNDLE_GEMFILE=Gemfile bundle exec jekyll build
 deploy:
