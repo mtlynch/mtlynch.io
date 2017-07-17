@@ -1,220 +1,361 @@
 <script src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
-<div class="ck_form_container ck_inline" data-ck-version="6">
-  <div class="ck_form ck_minimal" style="width: 100%; max-width: 100%;">
-  <div class="ck_form_fields">
-    <h3 class="ck_form_title">Be the first to know when I post cool stuff</h3>
-    <div class="ck_description">
-      <p>Subscribe to get my latest articles by email.</p>
-    </div>
+<div class="ck_form_container ck_slide_up ck_form_v6" data-ck-version="6">
+	<div class="ck_form ck_minimal">
+		<div class="ck_form_fields">
+			<h3 class="ck_form_title">Be the first to know when I post cool stuff</h3>
+			<div class="ck_description">
+				Subscribe to get my latest articles by email.
+			</div>
 
-    <div id="ck_success_msg"  style="display:none;">
-      <p>Success! Now check your email to confirm your subscription.</p>
-    </div>
+			<div id="ck_success_msg" style="display:none;">
+				<p>Success! Now check your email to confirm your subscription.</p>
+			</div>
 
-    <!--  Form starts here  -->
-    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/226778/subscribe" data-remote="true" style="position: relative;">
-      <input type="hidden" value="{&quot;form_style&quot;:&quot;minimal&quot;,&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;timing&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;1&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options">
-      <input type="hidden" name="id" value="226778" id="landing_page_id">
-      <input type="hidden" name="ck_form_recaptcha" value="" id="ck_form_recaptcha">
-      <div class="ck_errorArea">
-        <div id="ck_error_msg" style="display:none">
-          <p>There was an error submitting your subscription. Please try again.</p>
-        </div>
-      </div>
-      <div class="ck_control_group ck_email_field_group">
-        <label class="ck_label" for="ck_emailField" style="display: none">Email Address</label>
-        <input type="email" name="email" class="ck_email_address" id="ck_emailField" placeholder="Email Address" required>
-      </div>
-      <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
-        <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
-      </div>
+			<!--  Form starts here  -->
+			<form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/236896/subscribe" data-remote="true">
+				<input type="hidden" value="{&quot;form_style&quot;:&quot;minimal&quot;,&quot;embed_style&quot;:&quot;slideup&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}"
+								id="ck_form_options">
+					<input type="hidden" name="id" value="236896" id="landing_page_id">
+					<input type="hidden" name="ck_form_recaptcha" value="" id="ck_form_recaptcha">
+					<div class="ck_errorArea">
+						<div id="ck_error_msg" style="display:none">
+							<p>There was an error submitting your subscription. Please try again.</p>
+						</div>
+					</div>
+					<div class="ck_control_group ck_email_field_group">
+						<label class="ck_label" for="ck_emailField" style="display: none">Email Address</label>
+						<input type="email" name="email" class="ck_email_address" id="ck_emailField" placeholder="Email Address" required>
+					</div>
+					<div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+						<input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+					</div>
 
 
-      <button class="subscribe_button ck_subscribe_button btn fields" id="ck_subscribe_button">
+					<button class="subscribe_button ck_subscribe_button btn fields" id="ck_subscribe_button">
         Subscribe
       </button>
-    </form>
-  </div>
+					<span class="ck_guarantee">
+        We won&#x27;t send you spam. Unsubscribe at any time.
+          <a class="ck_powered_by" href="https://convertkit.com/?utm_campaign=poweredby">Powered by ConvertKit</a>
+      </span>
+			</form>
+		</div>
+
+	</div>
 
 </div>
 
-</div>
+<style>
+	.ck_slide_up.ck_form_v6 {
+		right: 0;
+	}
+
+	.ck_slide_up.ck_form_v6 .ck_close_link {
+		right: 30px;
+	}
+
+	@media all and (min-width: 600px) {
+		.ck_slide_up.ck_form_v6 {
+			padding-right: 25px;
+		}
+	}
+
+	@media all and (min-width: 600px) and (max-width: 800px) {
+		.ck_slide_up--lg.ck_form_v6 {
+			padding-right: 0;
+		}
+	}
+</style>
 
 
-<style type="text/css">/* Layout */
-  .ck_form.ck_minimal {
-  /* divider image */
-	background: #f9f9f9;
-	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-	line-height: 1.5em;
-	overflow: hidden;
-	color: #666;
-	font-size: 16px;
-	border: solid 1px #d1d1d1;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	clear: both;
-	margin: 20px 0px;
-	text-align: center;
-}
+<style type="text/css">
+	/* Layout */
 
+	.ck_form.ck_minimal {
+		/* divider image */
+		background: #f9f9f9;
+		font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+		line-height: 1.5em;
+		overflow: hidden;
+		color: #666;
+		font-size: 16px;
+		border: solid 1px #d1d1d1;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		clear: both;
+		margin: 20px 0px;
+		text-align: center;
+	}
 
-.ck_form.ck_minimal h3.ck_form_title {
-	text-align: center;
-	margin: 0px 0px 10px;
-	font-size: 28px;
-}
+	.ck_form.ck_minimal h3.ck_form_title {
+		text-align: center;
+		margin: 0px 0px 10px;
+		font-size: 28px;
+	}
 
-.ck_form.ck_minimal h4 {
-	text-align: center;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: normal;
-	padding-top: 0px;
-	margin-top: 0px;
-}
+	.ck_form.ck_minimal h4 {
+		text-align: center;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: normal;
+		padding-top: 0px;
+		margin-top: 0px;
+	}
 
-.ck_form.ck_minimal p {
-	padding: 0px;
-}
+	.ck_form.ck_minimal p {
+		padding: 0px;
+	}
 
-.ck_form, .ck_form * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
+	.ck_form,
+	.ck_form * {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 
-.ck_form.ck_minimal .ck_form_fields {
-	width: 100%;
-	float: left;
-	padding: 5%;
-}
-/* Form fields */
+	.ck_form.ck_minimal .ck_form_fields {
+		width: 100%;
+		float: left;
+		padding: 5%;
+	}
+	/* Form fields */
 
-.ck_errorArea {
-	display: none; /* temporary */
-}
+	.ck_errorArea {
+		display: none;
+		/* temporary */
+	}
 
-#ck_success_msg {
-	padding: 10px 10px 0px;
-	border: solid 1px #ddd;
-	background: #eee;
-}
+	#ck_success_msg {
+		padding: 10px 10px 0px;
+		border: solid 1px #ddd;
+		background: #eee;
+	}
 
-.ck_form.ck_minimal input[type="text"], .ck_form.ck_minimal input[type="email"] {
-	font-size: 18px;
-	padding: 10px 8px;
-	width: 68%;
-	border: 1px solid #d6d6d6; /* stroke */
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px; /* border radius */
-	background-color: #fff; /* layer fill content */
-	margin-bottom: 5px;
-	height: auto;
-	float: left;
-	margin: 0px;
-	margin-right: 2%;
-	height: 42px;
-}
+	.ck_form.ck_minimal input[type="text"],
+	.ck_form.ck_minimal input[type="email"] {
+		font-size: 18px;
+		padding: 10px 8px;
+		width: 68%;
+		border: 1px solid #d6d6d6;
+		/* stroke */
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		/* border radius */
+		background-color: #fff;
+		/* layer fill content */
+		margin-bottom: 5px;
+		height: auto;
+		float: left;
+		margin: 0px;
+		margin-right: 2%;
+		height: 42px;
+	}
 
-.ck_form input[type="text"]:focus, .ck_form input[type="email"]:focus {
-	outline: none;
-	border-color: #aaa;
-}
+	.ck_form input[type="text"]:focus,
+	.ck_form input[type="email"]:focus {
+		outline: none;
+		border-color: #aaa;
+	}
 
-.ck_form.ck_minimal .ck_subscribe_button {
-    width: 100%;
-    color: #fff;
-    margin: 0px;
-    padding:  11px 0px;
-    font-size: 18px;
-    background: #0d6db8;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px; /* border radius */
-    cursor: pointer;
-    border: none;
-    text-shadow: none;
-    width: 30%;
-    float: left;
-    height: 42px;
-  }
+	.ck_form.ck_minimal .ck_subscribe_button {
+		width: 100%;
+		color: #fff;
+		margin: 0px;
+		padding: 11px 0px;
+		font-size: 18px;
+		background: #0d6db8;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		/* border radius */
+		cursor: pointer;
+		border: none;
+		text-shadow: none;
+		width: 30%;
+		float: left;
+		height: 42px;
+	}
 
+	.ck_form.ck_minimal .ck_guarantee {
+		color: #626262;
+		font-size: 12px;
+		text-align: center;
+		padding: 15px 0px 0px;
+		display: block;
+		clear: both;
+	}
 
-.ck_form.ck_minimal .ck_guarantee {
-	color: #626262;
-	font-size: 12px;
-	text-align: center;
-	padding: 15px 0px 0px;
-	display: block;
-	clear: both;
-}
-.ck_form .ck_powered_by {
-	display: block;
-	color: #aaa;
-	font-size: 12px;
-}
+	.ck_form .ck_powered_by {
+		display: block;
+		color: #aaa;
+		font-size: 12px;
+	}
 
-.ck_form .ck_powered_by:hover {
-	display: block;
-	color: #444;
-}
+	.ck_form .ck_powered_by:hover {
+		display: block;
+		color: #444;
+	}
 
-.ck_converted_content {
-  display: none;
-	padding: 5%;
-	background: #fff;
-}
+	.ck_converted_content {
+		display: none;
+		padding: 5%;
+		background: #fff;
+	}
 
-.ck_form.ck_minimal.width400 .ck_subscribe_button, .ck_form.ck_minimal.width400 input[type="email"] {
+	.ck_form.ck_minimal.width400 .ck_subscribe_button,
+	.ck_form.ck_minimal.width400 input[type="email"] {
 		width: 100%;
 		float: none;
 		margin-top: 5px;
 	}
 
-.ck_slide_up, .ck_modal, .ck_slide_up .ck_minimal, .ck_modal .ck_minimal  {
-	min-width: 400px;
-}
+	.ck_slide_up,
+	.ck_modal,
+	.ck_slide_up .ck_minimal,
+	.ck_modal .ck_minimal {
+		min-width: 400px;
+	}
 
-.page .ck_form.ck_minimal {
-	margin: 50px auto;
-	width: 100% !important;
-}
+	.page .ck_form.ck_minimal {
+		margin: 50px auto;
+		max-width: 600px;
+	}
+	/* v6 */
 
+	.ck_slide_up.ck_form_v6,
+	.ck_modal.ck_form_v6,
+	.ck_slide_up.ck_form_v6 .ck_minimal,
+	.ck_modal.ck_form_v6 .ck_minimal {
+		min-width: 0 !important;
+	}
 
-/* v6 */
-.ck_slide_up.ck_form_v6, .ck_modal.ck_form_v6, .ck_slide_up.ck_form_v6 .ck_minimal, .ck_modal.ck_form_v6 .ck_minimal {
-  min-width: 0 !important;
-}
+	@media all and (min-width: 801px) {
+		.ck_modal.ck_form_v6 .ck_form.ck_minimal {
+			margin-left: -300px;
+			width: 600px;
+		}
+	}
 
-@media all and (min-width: 801px) {
-  .ck_modal.ck_form_v6 .ck_form.ck_minimal {
-    margin-left: -300px;
-    width: 600px;
-  }
-}
+	.ck_modal.ck_form_v6 .ck_minimal .ck_subscribe_form {
+		padding-top: 20px;
+	}
 
-.ck_modal.ck_form_v6 .ck_minimal .ck_subscribe_form {
-  padding-top: 20px;
-}
+	.ck_slide_up.ck_form_v6 .ck_minimal .ck_subscribe_form {
+		padding-top: 10px;
+	}
 
-.ck_slide_up.ck_form_v6 .ck_minimal .ck_subscribe_form {
-  padding-top: 10px;
-}
+	.ck_form_v6 #ck_success_msg {
+		margin-top: 15px;
+		padding: 0px 10px;
+	}
 
-.ck_form_v6 #ck_success_msg {
-  margin-top: 15px;
-  padding: 0px 10px;
-}
+	.ck_slide_up.ck_form_v6 .ck_minimal+.ck_close_link {
+		top: 5px;
+	}
 
-.ck_slide_up.ck_form_v6 .ck_minimal + .ck_close_link {
-  top: 5px;
-}
-.ck_slide_up.ck_form_v6 .ck_minimal h3.ck_form_title {
-  margin-top: 5px;
-}
+	.ck_slide_up.ck_form_v6 .ck_minimal h3.ck_form_title {
+		margin-top: 5px;
+	}
 
+	.ck_form_container.ck_slide_up {
+		position: fixed;
+		bottom: 0px;
+		margin-bottom: 0px;
+		z-index: 500;
+		display: none;
+		max-width: 400px;
+		min-width: 300px;
+	}
+
+	.ck_form_container.ck_slide_up.visible {
+		display: block;
+	}
+
+	.ck_form_container.ck_slide_up .ck_form {
+		margin: 0px;
+	}
+
+	.ck_close_link {
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		width: 30px;
+		height: 30px;
+		background: #fff;
+		color: #777;
+		-webkit-border-radius: 15x;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
+		-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
+		text-align: center;
+		line-height: 30px;
+		cursor: pointer;
+		display: none;
+	}
+	/* v5 overrides */
+
+	.ck_form_container.ck_slide_up.ck_form_v6 {
+		min-width: 0 !important;
+	}
+	/* v6 */
+
+	.ck_slide_up.ck_form_v6 {
+		max-width: 100% !important;
+		width: 360px;
+	}
+
+	.ck_slide_up.ck_form_v6 .ck_close_link {
+		background: transparent;
+		-webkit-box-shadow: 0 0 0;
+		box-shadow: 0 0 0;
+		top: 25px;
+		transition: all 200ms ease;
+		opacity: 0.5;
+	}
+
+	.ck_slide_up.ck_form_v6 .ck_close_link:hover {
+		border-color: rgba(0, 0, 0, .2);
+		opacity: 1;
+		transition: all 200ms ease;
+		transition: all 200ms ease;
+	}
+
+	.ck_slide_up--lg {
+		max-height: 100vh;
+		overflow: scroll;
+	}
+
+	@media all and (max-width: 599px) {
+		.ck_slide_up.ck_form_v6 .ck_close_link {
+			right: 5px;
+		}
+		.ck_slide_up--lg {
+			width: 100% !important;
+		}
+	}
+
+	@media all and (min-width: 600px) {
+		.ck_slide_up--lg {
+			width: 700px !important;
+			max-height: 100vh;
+			overflow: scroll;
+		}
+	}
+
+	@media all and (min-width: 600px) and (max-width: 800px) {
+		.ck_slide_up--lg .ck_close_link {
+			right: 5px !important;
+		}
+	}
+
+	@media all and (max-width: 600px) {
+		.ck_slide_up.ck_form_v6 .ck_close_link {
+			right: 5px;
+		}
+	}
 </style>
