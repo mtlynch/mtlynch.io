@@ -7,12 +7,12 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 before_install:
   - nvm install 7.10.0
+  - npm install
+  - npm run build:js
 script:
   - ./_tests/build
 before_deploy:
   # Build production site.
-  - npm install
-  - npm run build:js
   - BUNDLE_GEMFILE=Gemfile bundle exec jekyll build
 deploy:
   provider: firebase
