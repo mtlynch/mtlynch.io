@@ -2,6 +2,7 @@ Gemfile.*lock
 *.sublime-project
 *.sublime-workspace
 .DS_Store
+Thumbs.db
 .jekyll-metadata
 .sass-cache
 _asset_bundler_cache
