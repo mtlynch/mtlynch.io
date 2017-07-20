@@ -16,8 +16,6 @@ excerpt: A step-by-step guide from zero to mining automation
 
 {% include base_path %}
 
-[![Obelisk pre-sale](/images/2017-05-20-windows-sia-mining/obelisk.jpg){: .align-center}](https://obelisk.tech/)
-
 # Overview
 
 [Sia](https://sia.tech/) is a decentralized, peer-to-peer network for buying and
