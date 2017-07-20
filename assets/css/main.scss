@@ -91,12 +91,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.figure-right-aligned,
 .figure-left-aligned {
   flex-direction: column;
-  float: right;
   margin: 0 1em 0 0;
 
   a {
     z-index: 1;
   }
+}
+
+.figure-right-aligned {
+  float: right;
+}
+
+.figure-left-aligned {
+  float: left;
 }
