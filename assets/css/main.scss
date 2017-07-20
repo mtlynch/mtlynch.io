@@ -19,6 +19,10 @@ $screen-sm: 768px;
   p, li {
     font-size: 0.9em;
   }
+
+  div {
+    margin-bottom: 10px;
+  }
 }
 
 // Anchor Permalinks Component
@@ -28,15 +32,20 @@ $screen-sm: 768px;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: inherit;
   position: absolute;
   margin-left: -20px;
   font-size: 24px;
+  line-height: 100%;
   top: 50%;
   transform: translateY(-50%);
 
   &:after {
     content: attr(data-icon);
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    margin-left: -13px;
+    font-size: 18px;
   }
 }
 
@@ -76,7 +85,18 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-@media screen and (max-width: $screen-sm) {
-  margin-left: -13px;
-  font-size: 18px;
+.page__content {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0;
+  }
+}
+
+.figure-left-aligned {
+  flex-direction: column;
+  float: right;
+  margin: 0 1em 0 0;
+
+  a {
+    z-index: 1;
+  }
 }
