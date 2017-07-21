@@ -85,9 +85,30 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-
 .page__content {
   h1, h2, h3, h4, h5, h6 {
     margin: 0.5em 0;
+  }
+}
+
+figure {
+  &.align {
+    &-right,
+    &-left {
+      flex-direction: column;
+      margin: 0 1em 0 0;
+
+      a {
+        z-index: 1;
+      }
+    }
+
+    &-right {
+      float: right;
+    }
+
+    &-left {
+      float: left;
+    }
   }
 }
