@@ -20,14 +20,13 @@ New code should adhere to the appropriate Google Style guide for the given langu
 
 `.travis.yml` builds the site in production mode and pushes the static files to Firebase.
 
-Dev and prod configurations should be as close as possible. Any change in dev should also be made to prod and vice versa, except for features we deliberately make different for dev and prod (e.g. removing GA tag from dev, removing jekyll-admin from prod).
+Dev and prod configurations should be as similar as possible. Any change in dev should also be made to prod and vice versa, except for features we deliberately make different for dev and prod (e.g. removing GA tag from dev, removing jekyll-admin from prod).
 
-
-### Theme
+## Theme
 
 This blog uses the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme.
 
-Where possible, avoid duplicating code from the theme. Sometimes this will be unavoidable, and the blog duplicates theme code in several places, but we seek to minimize this duplication.
+Where possible, avoid duplicating code from the theme. Sometimes this will be unavoidable. The blog currently duplicates theme code in several places, but we seek to minimize this duplication.
 
 ## Pull Requests
 
