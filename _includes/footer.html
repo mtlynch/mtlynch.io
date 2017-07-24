@@ -1,6 +1,8 @@
-{% unless page.layout == 'single' %}
+{% if page.layout == 'single' %}
   {% include convert_kit_form.html %}
-{% endunless %}
+{% else %}
+  {% include convert_kit_article_form.html %}
+{% endif %}
 
 <div class="page__footer-follow">
   <ul class="social-icons">
