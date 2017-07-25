@@ -7,7 +7,7 @@ Status](https://travis-ci.org/mtlynch/mtlynch.io.svg?branch=master)](https://tra
 
 This is the source for https://mtlynch.io/.
 
-## Style Guides
+## Code Style Guides
 
 New code should adhere to the appropriate Google Style guide for the given language:
 
@@ -40,3 +40,33 @@ PRs should have a descriptive one-line summary to explain the change. The PR des
 
 If the PR fixes an issue, include the text "Fixes #XX" in the PR description, where `XX` is the [repo issue](https://github.com/mtlynch/mtlynch.io/issues) number. This allows Github to cross-reference between PRs and issues.
 
+## Prose Style Guide
+
+### Headings
+
+* Headings start with `<h1>` (single hash in Markdown).
+* Headings use sentence-style capitalization (only first word is capitalized).
+* Headings do not have trailing punctuation.
+
+### Point of View
+
+* Author is first-person singular (I).
+* Reader is second-person singular (you).
+
+### Readers
+
+* Readers of the blog are collectively referred ot as "readers" or "visitors."
+  * Readers are not referred to as "users" and should never be described as "traffic."
+
+### Numbers
+
+* For 1-9, spell out the number.
+* For all other numbers, use numerals.
+
+### Names
+
+* reddit is written all lowercase.
+
+### Oxford comma
+
+* Always use an Oxford comma.
