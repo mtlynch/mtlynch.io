@@ -8,7 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-  downloads:
+  files:
     output: true
     permalink: /:collection/:path:output_ext
 defaults:

@@ -120,7 +120,7 @@ wget \
 
 The `Dockerfile` contents are listed below:
 
-{% include downloads.html title="DockerFile" %}
+{% include files.html title="DockerFile" %}
 
 This `Dockerfile` does a few things:
 
