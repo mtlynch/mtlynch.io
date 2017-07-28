@@ -8,6 +8,9 @@ collections:
   uploads:
     title: Uploads
     output: true
+  downloads:
+    output: true
+    permalink: /:collection/:path:output_ext
 defaults:
 - scope:
     path: ''
@@ -174,13 +177,11 @@ future: true
 gems:
 - jekyll-paginate
 - jekyll-sitemap
-- jekyll-gist
 - jekyll-feed
 - jemoji
 whitelist:
 - jekyll-paginate
 - jekyll-sitemap
-- jekyll-gist
 - jekyll-feed
 - jemoji
 category_archive:
