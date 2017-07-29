@@ -1,0 +1,28 @@
+{% comment %}
+<!--
+  Files Embed Include
+
+  This include file makes it possible to easily embed a file from the
+  "files" collection within a page, post, or layout. The file will be
+  displayed inside a pre block and include a download link underneath.
+
+  @param {string} "title" - the yml meta field for title in the download file
+
+-->
+{% endcomment %}
+
+
+{% assign files = site.files | where: 'title', include.title %}
+{% for file in files %}
+
+  {% assign file_path = file.relative_path  | remove: '_files/' %}
+  {% assign link = site.baseurl | append: '/files/' | append: file_path %}
+
+```bash
+{{ file.content }}
+```
+<div class="wrapper">
+  <a href="{{ link }}" class="align-right">download raw</a>
+</div>
+
+{% endfor %}

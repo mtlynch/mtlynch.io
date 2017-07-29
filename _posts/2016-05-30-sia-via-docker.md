@@ -120,7 +120,7 @@ wget \
 
 The `Dockerfile` contents are listed below:
 
-{% gist mtlynch/54d71bff4c33270c1cd6c0ddf0218558 %}
+{% include files.html title="DockerFile" %}
 
 This `Dockerfile` does a few things:
 
