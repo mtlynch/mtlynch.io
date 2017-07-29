@@ -114,8 +114,7 @@ admin@DiskStation:/tmp/$
 Using the following command, download the Sia `Dockerfile` I created:
 
 ```bash
-wget \
-  https://gist.githubusercontent.com/mtlynch/54d71bff4c33270c1cd6c0ddf0218558/raw/9813068af84af6818cef77938fdc8cbe3b1ddf8d/Dockerfile
+wget {{ site.url }}/files/sia-via-docker/Dockerfile
 ```
 
 The `Dockerfile` contents are listed below:
