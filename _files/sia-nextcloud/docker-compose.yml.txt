@@ -1,5 +1,5 @@
 ---
-title: docker-compose.yml
+title: docker-compose.yml.txt
 ---
 version: '3'
 volumes:
@@ -9,6 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.sia
+    restart: on-failure
     ports:
       - "9980:9980"
     volumes:
