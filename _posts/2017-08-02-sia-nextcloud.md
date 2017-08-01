@@ -94,15 +94,34 @@ If you would prefer to wait 1-3 days for Sia to sync on its own, skip to the nex
 If you would like to reduce the sync time to 30-60 minutes, follow the steps in this section.
 
 1. Shut down the Docker containers.
-
-    ```bash
-    docker exec -it sianextcloud_sia_1 ./siac stop
-    # Give Sia a few seconds to shut down gracefully.
-    sleep 5
-    docker-compose down
+  ```bash
+  # Tell Sia to shut down gracefully.
+  docker exec -it sianextcloud_sia_1 ./siac stop
+  # Give Sia a few seconds to shut down gracefully.
+  sleep 5
+  # Stop the Docker containers.
+  docker-compose down
+  ```
+1. Download the Sia [consensus.db file](https://consensus.siahub.info/consensus.db) (this uses [SiaHub](https://siahub.info)'s mirror).
+1. Copy the `consensus.db` file to `sia-nextcloud/sia-data/consensus/consensus.db` (overwrite the existing file).
+1. Restart the Docker containers.
+  ```bash
+  docker-compose up -d
+  ```
+1. Check the container logs periodically until Sia has processed the new blockchain and finished loading:
+  ```bash
+  docker-compose logs
+  ```
+  When Sia finishes loading, you'll see a message in the logs similar to the following:
+    ```text
+    sia_1        | Finished loading in 0.7577895 seconds
     ```
-1. Download the Sia [consensus.db file](https://consensus.siahub.info/consensus.db) ([SiaHub](https://siahub.info)'s mirror).
-1. Copy the `consensus.db` file to 
+    In my tests, this process took 50 minutes on a solid-state drive (SSD). If you're running Sia on a hard-disk drive (HDD), it will take considerably longer.
 
-In my tests, this process took 50 minutes on a solid-state drive (SSD). If you're running Sia on a hard-disk drive (HDD), it will take considerably longer.
-# Configure Sia
+# Complete blockchain sync
+
+# Load wallet with Siacoin
+
+# Form renter contracts
+
+# Configure NextCloud
