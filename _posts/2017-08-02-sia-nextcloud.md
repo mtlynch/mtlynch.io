@@ -1,5 +1,5 @@
 ---
-title: Creating a Cheap Cloud Storage Web App with Sia and NextCloud
+title: Creating a Super Cheap Cloud Storage App with Sia and NextCloud
 layout: single
 author_profile: true
 read_time: true
@@ -24,23 +24,35 @@ I created a video that walks through the steps of this guide and demonstrates th
 
 ## Sia
 
-**Sia** is the real workhorse here. I've written [a few posts](/tags/#sia) about Sia previously, as it's a favorite technology of mine.
+I've written [a few posts](/tags/#sia) about Sia previously, as it's one of my favorite new technologies. Sia is a decentralized file storage network. Users can connect to Sia and [rent out their unused disk space](/sia-via-docker/) to earn money. Prices on this network are very low right now, which is why we're able to 
+
+We use Sia in our solution to provide backend storage for our web application. Sia provides a graphical user interface, Sia-UI, but it's very limited in functionality, as Sia's real product is their API, the interface that other applications use to interact with the Sia network. In the video demo, I keep Sia-UI running to give more insight into how we're using Sia in this solution, but we don't need Sia-UI to run at all for this solution to work.
+
+## NextCloud
+
+If you're familiar with Sia, you might be aware that Sia has their own graphical user interface, called Sia-UI. This UI is *extremely* limited in functionality. Its main limitation is that it's a desktop application, so you can only access your files from a single computer. If you have content like photos, video, or documents, you can't view them within Sia-UI. You have to copy them to a separate folder on your computer and view the files there.
+
+NextCloud is an open-source cloud storage web application. It offers a web interface very similar to . You can try a free demo [here](https://demo.nextcloud.com/).
+
+## Docker
+
+Docker is a technology that allows developers to build applications in "containers." In Docker terms, a container is an isolated runtime environment where the running app has access to all the components that it needs to run and very little extra.
 
 # Pre-requisites
 
-This guide is aimed at **intermediate users**. Sia's integration with NextCloud is still very flaky as of this writing, so if you're not familiar with the concepts of containers or virtual machines or you're not comfortable using the command-line, it will be difficult for you to follow this guide.
+This guide is aimed at **intermediate users**. Sia's integration with NextCloud is still very flaky as of this writing, so if you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command-line, it will be difficult for you to follow this guide.
 
 This guide uses Windows for most examples, but all of the heavy lifting is happening within Docker, so this guide will work on any OS that supports Docker, which includes Windows, OS X, Linux, and even some [network storage devices](/sia-via-docker).
 
 To complete this guide, you will need:
 
 * At least 500 Siacoin (SC)
-	 *  You can either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/)
+	 *  You can either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
 * 6 GB of free disk space (preferably on an SSD)
 * [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free)
 
 # Time required
-The steps in this guide will take about **20 minutes** to complete. However, there are several points in the installation process where you must wait minutes to hours for Sia to complete processing, so the total time required for completing this guide is 3-4 hours.
+The steps in this guide requires about **20 minutes** of active time. However, there are several points in the installation process where you must wait minutes to hours for Sia to complete processing, so the total time required for completing this guide is 3-4 hours.
 
 # Create files and folders
 
@@ -79,7 +91,7 @@ You can check status with the `logs` command:
 docker-compose logs
 ```
 
-When Sia has finished loading, you will see 
+When Sia has finished loading, you will see  a sequence in the logs that looks like this:
 
 ```
 sia_1        | Loading...
@@ -97,12 +109,18 @@ If you run `siac` within the container, you will see that Sia is syncing its blo
 ```bash
 docker exec -it sianextcloud_sia_1 ./siac consensus
 ```
+
+```
+Synced: No
+Height: 730
+Progress (estimated): 0.6%
+```
 # Optional: Speed up blockchain sync
-Sia needs to download its full blockchain before you can begin using it, but this process can take 1-3 days to complete. There is a workaround to complete the blockchain sync in 30-60 minutes, but it is optional.
+Sia needs to download its full blockchain before you can begin using it, but this process can take 1-3 days to complete. This step provides a workaround so that you can complete the blockchain sync faster, but this step is **optional**.
 
-If you would prefer to wait 1-3 days for Sia to sync on its own, skip to the next section.
+If you would prefer to wait 1-3 days for Sia to sync on its own, skip to the [next section](#complete-blockchain-sync).
 
-If you would like to reduce the sync time to 30-60 minutes, follow the steps in this section.
+If you would like to reduce the sync time to 30-60 minutes, follow the steps below:
 
 1. Shut down the Docker containers.
   ```bash
@@ -130,8 +148,34 @@ If you would like to reduce the sync time to 30-60 minutes, follow the steps in 
     In my tests, this process took 50 minutes on a solid-state drive (SSD). If you're running Sia on a hard-disk drive (HDD), it will take considerably longer.
 
 # Complete blockchain sync
+Now, you need to wait for Sia to finish syncing its blockchain. You can check on status by running [Sia-UI](https://github.com/NebulousLabs/Sia-UI/releases/latest) on your host computer, as it will automatically connect to the siad instance running within the Docker container. You can also just check via the command line by periodically running this command:
+
+```
+docker exec -it sianextcloud_sia_1 ./siac consensus
+```
+
+When Sia is synced, you will see `Synced: Yes` in the output, like this:
+
+```
+Synced: Yes
+Block:      000000000000000fdd4d3b48b096e048ad78f8f4fb88d21a025cd5411950e57e
+Height:     117094
+Target:     [0 0 0 0 0 0 0 80 208 66 215 153 200 154 90 98 77 172 145 117 174 173 42 79 94 33 89 166 121 200 173 209]
+Difficulty: 228263093718558163
+```
 
 # Load wallet with Siacoin
+
+Next, you need to create a Siacoin wallet within the Docker container and fill it with some Siacoin.
+
+
+```
+docker exec -it sianextcloud_sia_1 ./siac wallet init
+```
+
+send Siacoin to the Sia instance in docker.  either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
+
+If you have an existing Sia wallet seed, do not re-use it in this new wallet, as [Sia has undefined behavior](https://support.sia.tech/knowledge_base/topics/where-are-my-coins-were-they-stolen) if you run two wallets simultaneously with the same seed.
 
 # Form renter contracts
 
