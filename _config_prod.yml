@@ -1,0 +1,11 @@
+# Config overrides for production.
+url: https://mtlynch.io
+analytics:
+  provider: custom
+  google:
+    tracking_id: UA-78473158-1
+comments:
+  provider: disqus
+  disqus:
+    shortname: silly-bits
+

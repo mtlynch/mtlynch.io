@@ -32,16 +32,16 @@ locale: en-US
 title_separator: "-"
 name: Michael Lynch
 description: An amazing website.
-url: https://mtlynch.io
+url:
 theme: minimal-mistakes-jekyll
 baseurl: 
 repository: 
 teaser: 
 words_per_minute: 200
 comments:
-  provider: disqus
+  provider:
   disqus:
-    shortname: silly-bits
+    shortname:
   discourse:
     server: 
   facebook:
@@ -89,9 +89,9 @@ social:
   name: 
   links: 
 analytics:
-  provider: custom
+  provider:
   google:
-    tracking_id: UA-78473158-1
+    tracking_id:
 author:
   name: Michael Lynch
   avatar: images/bio-photo.jpg
