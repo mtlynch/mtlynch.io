@@ -10,6 +10,7 @@ tags:
 - siacoin
 - cryptocurrency
 - security
+- sia
 excerpt: A lesson in Sia wallet seed safety
 ---
 
@@ -273,4 +274,3 @@ They were delighted that I had recovered the seed because I had solved *their* m
 **Never post your Sia wallet seed online**. As we see from this tale, even an incorrect or partial version of the seed can completely compromise your wallet.
 
 This applies not only to Siacoin but to cryptocurrencies in general. Not all of them use a passphrase like Sia, but they all use some sort of private key you must keep secret if you don't want to lose your coins.
-

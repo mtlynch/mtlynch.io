@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Configuring NextCloud with Sia'
+title: Creating a Cheap Cloud Storage Web App with Sia and NextCloud
 layout: single
 author_profile: true
 read_time: true
@@ -12,9 +12,20 @@ tags:
 - docker
 ---
 
+In today's post, I'm going to show you how to build a cloud storage web application, similar to Dropbox or Google Drive, but at substantially lower storage costs. This solution provides cloud storage at ~$0.60 per TB per month. For comparison, Dropbox charges $8.25 per month and Google Drive charges $10 per month.
+
+Don't cancel your Dropbox subscription yet, because this technology is still a bit flaky. In my tests, it crashes quite a bit and sometimes loses entire files, but the technology involved is very interesting, so I wanted to share this tutorial to make it easier for others to build this themselves.
+
 # Video tutorial
-I created a video that walks through the steps of this guide and demonstrates the final result.
-# Why NextCloud?
+
+I created a video that walks through the steps of this guide and demonstrates the final result. If you prefer video tutorials, I recommend you download the files below and watch the video to follow along with the steps of this blog.
+
+# Components of this solution
+
+## Sia
+
+**Sia** is the real workhorse here. I've written [a few posts](/tags/#sia) about Sia previously, as it's a favorite technology of mine.
+
 # Pre-requisites
 
 This guide is aimed at **intermediate users**. Sia's integration with NextCloud is still very flaky as of this writing, so if you're not familiar with the concepts of containers or virtual machines or you're not comfortable using the command-line, it will be difficult for you to follow this guide.
