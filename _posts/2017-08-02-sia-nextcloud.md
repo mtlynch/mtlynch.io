@@ -1,5 +1,5 @@
 ---
-title: Creating a Super Cheap Cloud Storage App with Sia and NextCloud
+title: Creating Your Own Low Cost Cloud Storage App with Sia and NextCloud
 layout: single
 author_profile: true
 read_time: true
@@ -22,17 +22,17 @@ I created a video that walks through the steps of this guide and demonstrates th
 
 The video differs slightly from this blog post in that the video does more by pointing and clicking on UI elements, whereas the blog post relies more on the command line. Both achieve the same result.
 
-# Pre-requisites
+# Requirements
 
 This guide is aimed at **intermediate users**. Sia's integration with NextCloud is still very flaky as of this writing, so if you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command-line, it will be difficult for you to follow this guide.
 
-I used Windows 10 in the video demo, but this post is completely system-agnostic. The steps I provide will work on any system that supports Docker, which includes Windows, OS X, Linux, and even some [network storage devices](/sia-via-docker).
+I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any operating system that supports Docker, which includes Windows, OS X, Linux, and even some [network storage devices](/sia-via-docker).
 
 To complete this guide, you will need:
 
 * At least 500 Siacoin (SC)
 	 *  You can either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
-* 6 GB of free disk space (preferably on an SSD)
+* 6 GB of free disk space, preferably on an solid-state drive (SSD)
 * [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
 
 # Time required
@@ -94,7 +94,7 @@ This configuration also sets up volumes so that the containers can store data th
 
 `Dockerfile.sia`
 
-{% include files.html title="Dockerfile.sia" %}
+{% include files.html title="Dockerfile.sia" language="bash" %}
 
 This is the Dockerfile for Sia. It creates a Docker container starting from the very barebones Debian Jessie build of Linux. It then downloads the latest release of Sia (which is 1.3.0 as of this writing), unzips it, and runs `siad`, the Sia server daemon. The `--modules gctwr` flag limits Sia's modules to only those needed for acting as a renter. The `--sia-directory /mnt/sia-data` flag ensures that Sia uses the persist volume that's specified in `docker-compose.yml`.
 
@@ -102,7 +102,7 @@ The confusing part of this Dockerfile is the presence of `socat` and the `--api-
 
 `Dockerfile.nextcloud`
 
-{% include files.html title="Dockerfile.nextcloud" %}
+{% include files.html title="Dockerfile.nextcloud" language="bash" %}
 
 This file is very straightforward because NextCloud publishes its own Dockerfile. The only thing I added was a line to listen on port 80.
 
@@ -145,13 +145,13 @@ Height: 730
 Progress (estimated): 0.6%
 ```
 
-At this point, you can run [Sia-UI](https://github.com/NebulousLabs/Sia-UI/releases/latest) on your local machine and it will automatically connect to the Sia instance within Docker. This will give you a graphical view of what Sia is doing, but it is not necessary.
+**Optional**: At this point, you can run [Sia-UI](https://github.com/NebulousLabs/Sia-UI/releases/latest) on your local machine to get a graphical display of what your Sia server is doing within the Docker container. Sia-UI normally runs its own Sia server instance, but if it detects an existing instance of Sia listening on port 9980, it will connect to the existing server. Sia-UI is useful in giving you a more visual representation of the actions Sia is performing, but it's not necessary that you run Sia-UI.
 
 # Configure Sia
 
 ## Optional: Speed up blockchain sync
 
-Sia needs to download its full blockchain before you can begin using it, but this process can take 1-3 days to complete. This step provides a workaround so that you can complete the blockchain sync faster, but this step is **optional**.
+Sia needs to download its full blockchain before you can begin using it, but this process can take 1-3 days to complete. This step provides a workaround so that you can complete the blockchain sync faster.
 
 If you would prefer to wait 1-3 days for Sia to sync on its own, skip to the [next section](#complete-blockchain-sync).
 
@@ -180,11 +180,11 @@ If you would like to reduce the sync time to 30-60 minutes, follow the steps bel
     ```text
     sia_1        | Finished loading in 0.7577895 seconds
     ```
-    In my tests, this process took 50 minutes on a solid-state drive (SSD). If you're running Sia on a hard-disk drive (HDD), it will take considerably longer.
+    In my tests, this process took 50 minutes on an SSD. If you're running Sia on a hard-disk drive (HDD), it will take several hours.
 
 ## Complete blockchain sync
 
-Now, you need to wait for Sia to finish syncing its blockchain. You can check on status by running [Sia-UI](https://github.com/NebulousLabs/Sia-UI/releases/latest) on your host computer, as it will automatically connect to the siad instance running within the Docker container. You can also just check via the command line by periodically running this command:
+Now, you need to wait for Sia to finish syncing its blockchain. You can check on status by periodically running this command:
 
 ```bash
 docker exec -it sianextcloud_sia_1 ./siac consensus
@@ -252,4 +252,20 @@ docker exec --user www-data -it sianextcloud_nextcloud_1 php occ files_external:
 
 # Limitations
 
-## Instability
+## Instability and data loss
+
+This is a big one. In my tests, the Sia NextCloud integration does not appear to be ready for real world use quite yet.
+
+When I try uploading a few ~100 MB files at a time, the Sia server instance crashes. When I restart it, it often has lost several files that it had previously uploaded to full 3x redundancy. It's not clear whether this is a bug in the Sia server itself or a bug that is limited to the Sia NextCloud app.
+
+## No subfolders
+
+While Sia natively allows users to create folders to organize their uploads, the Sia NextCloud app [does not support folder creation](https://github.com/NebulousLabs/Sia-Nextcloud/issues/13). The web app presents the option, but if you try adding a folder, it just says"Could not create folder."
+
+## No in-app text editing
+
+The NextCloud app includes a barebones text editor for editing plaintext files within your cloud storage folder. Unfortunately, this does not work on files within Sia.  If you try, NextCloud presents you with a barrage of angry error messages and does not save any of your attempted edits.
+
+# Conclusion
+
+I hope this tutorial will make it easier to use and test the Sia NextCloud integration for the Sia dev team and the community of contributors. A few days ago, [Sia announced](https://blog.sia.tech/introducing-s3-style-file-sharing-for-sia-through-the-new-minio-integration-bb880af2366a) a similar integration with the distributed object storage server Minio. I haven't tested this integration yet, but you should be able to create a similar solution using the techniques I described here.
