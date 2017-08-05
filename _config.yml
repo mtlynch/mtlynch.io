@@ -11,6 +11,9 @@ collections:
   files:
     output: true
     permalink: /:collection/:path:output_ext
+  ymls:
+    output: true
+    permalink: /files/:path.yml
 defaults:
 - scope:
     path: ''

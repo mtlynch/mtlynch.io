@@ -7,22 +7,44 @@
   displayed inside a pre block and include a download link underneath.
 
   @param {string} "title" - the yml meta field for title in the download file
+  @param {string} "language" - the coding language used for syntax highlighting
 
 -->
 {% endcomment %}
 
+{% comment %}
+<!-- determine correct collection based on language param -->
+{% endcomment %}
+{% if include.language == "yml" or include.language == "yaml" %}
+	{% assign files = site.ymls | where: 'title', include.title %}
+{% else %}
+	{% assign files = site.files | where: 'title', include.title %}
+{% endif %}
 
-{% assign files = site.files | where: 'title', include.title %}
+{% comment %}
+<!-- determine syntax highlighting language.  Defaults to null -->
+{% endcomment %}
+{% assign lang_highlight = "" %}
+{% if include.language %}
+	{% assign lang_highlight = include.language %}
+{% endif %}
+
 {% for file in files %}
 
-  {% assign file_path = file.relative_path  | remove: '_files/' %}
+  {% comment %}
+  <!-- determine correct collection based on language param -->
+  {% endcomment %}
+  {% assign file_path = file.relative_path  | remove: '_files/'  | remove: '_ymls/' %}
+  {% if include.language == "yml" or include.language == "yaml" %}
+    {% assign file_path = file_path | append: "." | append: include.language %}
+  {% endif %}
   {% assign link = site.baseurl | append: '/files/' | append: file_path %}
 
-```bash
+```{{ lang_highlight }}
 {{ file.content }}
 ```
 <div class="wrapper">
-  <a href="{{ link }}" class="align-right">download raw</a>
+  <a href="{{ link }}" download class="align-right">download raw</a>
 </div>
 
 {% endfor %}
