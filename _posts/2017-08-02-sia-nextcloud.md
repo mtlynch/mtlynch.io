@@ -84,7 +84,7 @@ Below, I've included the full text of each file as well as download links. I'll 
 
 `docker-compose.yml`
 
-{% include files.html title="docker-compose.yml.txt" %}
+{% include files.html title="docker-compose.yml" language="yml" %}
 
 This is the top-level file for our solution. It tells Docker how to load the Sia and NextCloud containers and specifies the configuration options the containers need to communicate with each other.
 
