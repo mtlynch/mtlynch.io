@@ -31,7 +31,7 @@ I used Windows 10 in the video demo, but this tutorial is completely system-agno
 To complete this guide, you will need:
 
 * At least 500 Siacoin (SC)
-	 *  You can either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
+  * You can either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
 * 6 GB of free disk space, preferably on an solid-state drive (SSD)
 * [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
 
@@ -58,6 +58,7 @@ If you want to try out NextCloud before you deploy your own solution with this b
 NextCloud is pretty tricky to install because it requires a database server, a web server, and several software libraries. Rather than explain to you how to go through all those installation or configuration steps, we'll be using **Docker** to take care of all of that for us. Docker is a technology that allows developers to build applications in "containers." In Docker terms, a container is an isolated environment where the app has access to all the components that it needs to run and nothing extra. We'll be creating containers for Sia and NextCloud and using a feature called `docker-compose` to join the two containers together so they can communicate with each other.
 
 # Set up Docker containers
+
 ## Create files and folders for Docker
 
 To begin, you'll create a directory for all the Docker files and download the configuration files for your containers.
@@ -65,13 +66,13 @@ To begin, you'll create a directory for all the Docker files and download the co
 1. Create a directory called `sia-nextcloud`. You'll be downloading the full blockchain within this folder, so make sure it's on a drive with at least 6 GB of free space.
 1. Within `sia-nextcloud` create two directories: `sia-data` and `sia-uploads`.
 1. Download the three files below into `sia-nextcloud`:
-   1. [`docker-compose.yml`](/files/sia-nextcloud/docker-compose.yml)
-   1. [`Dockerfile.nextcloud`](/files/sia-nextcloud/Dockerfile.nextcloud)
-   1. [`Dockerfile.sia`](/files/sia-nextcloud/Dockerfile.sia)
+  * [`docker-compose.yml`](/files/sia-nextcloud/docker-compose.yml)
+  * [`Dockerfile.nextcloud`](/files/sia-nextcloud/Dockerfile.nextcloud)
+  * [`Dockerfile.sia`](/files/sia-nextcloud/Dockerfile.sia)
 
 After downloading these files and creating the appropriate folders, your directory should look like this:
 
-```
+```text
 sia-nextcloud/
   sia-data/
   sia-uploads/
@@ -122,7 +123,7 @@ docker-compose logs
 
 When Sia has finished loading, you will see  a sequence in the logs that looks like this:
 
-```
+```text
 sia_1        | Loading...
 sia_1        | (0/5) Loading siad...
 sia_1        | (1/5) Loading gateway...
@@ -139,7 +140,7 @@ If you run `siac` within the container, you will see that Sia is syncing its blo
 docker exec -it sianextcloud_sia_1 ./siac consensus
 ```
 
-```
+```text
 Synced: No
 Height: 730
 Progress (estimated): 0.6%
@@ -158,6 +159,7 @@ If you would prefer to wait 1-3 days for Sia to sync on its own, skip to the [ne
 If you would like to reduce the sync time to 30-60 minutes, follow the steps below:
 
 1. Shut down the Docker containers.
+
   ```bash
   # Tell Sia to shut down gracefully.
   docker exec -it sianextcloud_sia_1 ./siac stop
@@ -166,20 +168,27 @@ If you would like to reduce the sync time to 30-60 minutes, follow the steps bel
   # Stop the Docker containers.
   docker-compose down
   ```
+
 1. Download the Sia [consensus.db file](https://consensus.siahub.info/consensus.db) (this uses [SiaHub](https://siahub.info)'s mirror).
 1. Copy the `consensus.db` file to `sia-nextcloud/sia-data/consensus/consensus.db` (overwrite the existing file).
 1. Restart the Docker containers.
+
   ```bash
   docker-compose up -d
   ```
+
 1. Check the container logs periodically until Sia has processed the new blockchain and finished loading:
+
   ```bash
   docker-compose logs
   ```
+
   When Sia finishes loading, you'll see a message in the logs similar to the following:
+
     ```text
     sia_1        | Finished loading in 0.7577895 seconds
     ```
+
     In my tests, this process took 50 minutes on an SSD. If you're running Sia on a hard-disk drive (HDD), it will take several hours.
 
 ## Complete blockchain sync
@@ -192,7 +201,7 @@ docker exec -it sianextcloud_sia_1 ./siac consensus
 
 When Sia is synced, you will see `Synced: Yes` in the output, like this:
 
-```
+```text
 Synced: Yes
 Block:      000000000000000fdd4d3b48b096e048ad78f8f4fb88d21a025cd5411950e57e
 Height:     117094
@@ -205,20 +214,24 @@ Difficulty: 228263093718558163
 Next, you need to create a Siacoin wallet within the Docker container and send it at least 500 SC.
 
 1. Create a new Sia wallet:
+
   ```bash
   docker exec -it sianextcloud_sia_1 ./siac wallet init
   ```
-	
-	Sia will generate a 29-word passphrase called a "wallet seed." This seed controls access to your Siacoin, so copy it to a safe place and be sure never to post it online. Sia confusingly displays a seed, followed by the password, which is identical. This surprises many users, but it is expected behavior.
+
+  Sia will generate a 29-word passphrase called a "wallet seed." This seed controls access to your Siacoin, so copy it to a safe place and be sure never to post it online. Sia confusingly displays a seed, followed by the password, which is identical. This surprises many users, but it is expected behavior.
 1. After you create the wallet, you need to unlock it with your seed passphrase. Enter the command below, then paste in your seed.
+
 ```bash
 docker exec -it sianextcloud_sia_1 ./siac wallet unlock
 ```
+
 1. Finally,
+send Siacoin to the Sia instance in docker.  either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
+
 ```bash
 docker exec -it sianextcloud_sia_1 ./siac wallet address
 ```
-send Siacoin to the Sia instance in docker.  either [buy them](http://www.buyingsiacoin.com/) or [mine them](/windows-sia-mining/).
 
 If you have an existing Sia wallet seed, do not re-use it in the Sia wallet within your Docker container. [Sia has undefined behavior](https://support.sia.tech/knowledge_base/topics/where-are-my-coins-were-they-stolen) if you run two wallets simultaneously with the same seed.
 {: .notice--danger}
