@@ -6,8 +6,6 @@
 
 @import "minimal-mistakes";
 
-$screen-sm: 768px;
-
 @font-face {
   font-family: "anchor-icon";
   font-style: normal;
@@ -32,21 +30,21 @@ $screen-sm: 768px;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  margin-left: -20px;
-  font-size: 24px;
+  float: left;
+  margin-left: -16px;
   line-height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
 
   &:after {
     content: attr(data-icon);
   }
 
-  @media screen and (max-width: $screen-sm) {
-    margin-left: -13px;
-    font-size: 18px;
+  @include breakpoint($large) {
+    margin-left: -25px;
   }
+}
+
+.page__content a.anchor-link {
+  text-decoration: none;
 }
 
 *:hover  > .anchor-link {
