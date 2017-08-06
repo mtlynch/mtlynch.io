@@ -59,13 +59,15 @@ If you want to try out Nextcloud before you deploy your own solution with this b
 
 ## Docker
 
-Nextcloud is pretty tricky to install because it requires a database server, a web server, and several software libraries. Rather than explain to you how to go through all those installation or configuration steps, we'll be using **Docker** to take care of all of that for us. Docker is a technology that allows developers to build applications in "containers." In Docker terms, a container is an isolated environment where the app has access to all the components that it needs to run and nothing extra. We'll be creating containers for Sia and Nextcloud and using a feature called `docker-compose` to join the two containers together so they can communicate with each other.
+Nextcloud is pretty tricky to install because it requires a database server, a web server, and several software libraries. Rather than explain to you how to go through all those installation or configuration steps, we'll be using **Docker** to take care of all of that for us.
+
+Docker allows developers to build applications in "containers." In Docker terms, a container is an isolated environment where the app has access to all the components that it needs to run and nothing extra. We'll be creating containers for Sia and Nextcloud and using a feature called `docker-compose` to join the two containers together so they can communicate with each other.
 
 # Set up Docker containers
 
 ## Create files and folders for Docker
 
-To begin, you'll create a directory for all the Docker files and download the configuration files for your containers.
+To begin, create a directory for all the Docker files and download the configuration files for your containers.
 
 1. Create a directory called `sia-nextcloud`. You'll be downloading the full blockchain within this folder, so make sure it's on a drive with at least 6 GB of free space.
 1. Within `sia-nextcloud` create two directories: `sia-data` and `sia-uploads`.
@@ -256,7 +258,7 @@ docker exec -it sianextcloud_sia_1 ./siac renter setallowance 500SC 12w
 
 In my tests, 500 SC was enough to purchase ~2 TB of storage space, but prices will change over time as the network evolves.
 
-**Note**: There is a fixed cost to creating rental contracts, so for small rental contracts, the costs don't quite scale linearly with the amount of storage you can buy. In other words, you can't simply divide by 10 and try to spend 50 SC on 200 GB because the cost of creating the contracts themselves is ~130 SC.
+**Note**: There is a fixed cost to creating rental contracts, so for small rental contracts, the costs don't quite scale linearly with the amount of storage you purchase. In other words, you can't simply divide by 10 and try to spend 50 SC on 200 GB because the cost of creating the contracts themselves is ~130 SC.
 {: .notice--info}
 
 After you create an allowance, Sia will begin forming storage contracts. This process takes 20-30 minutes to complete. You can check on the number of contracts formed by running the following command:
@@ -269,9 +271,9 @@ Proceed to the next step when Sia has created at least twenty contracts.
 
 # Configure Nextcloud
 
-Sia is now all set to begin storing data, so it's time to configure our Nextcloud container.
+Sia is now all set to begin storing data, so it's time to configure your Nextcloud container.
 
-If you prefer, you can visit http://localhost:8080 and configure Nextcloud via the web UI based on the steps in the video tutorial, starting at 13:44. But, since this tutorial is mainly command-line based, I've included the steps to perform this configuration mostly via command-line.
+If you prefer, you can visit [http://localhost:8080](http://localhost:8080) and configure Nextcloud via the web UI based on the steps in the video tutorial, [starting at 13:44](https://youtu.be/i3G5RIXJCLk?t=13m44s). But, since this tutorial is mainly command-line based, I've included the steps to perform this configuration mostly via command-line.
 
 ## Install Nextcloud
 
@@ -293,7 +295,7 @@ Nextcloud was successfully installed
 
 Sia is an external storage provider in Nextcloud, so enter the following command to enable support for external providers.
 
-```
+```bash
 docker exec --user www-data -it sianextcloud_nextcloud_1 php occ app:enable files_external
 ```
 
@@ -310,18 +312,51 @@ Unfortunately, it is not possible to install a Nextcloud app through the command
   [![Nextcloud apps button](/images/sia-nextcloud/nextcloud-tools.png)](/images/sia-nextcloud/nextcloud-tools.png)
 1. Scroll down to the app "Sia storage report" and click the "Enable" button below it.
   [![Nextcloud apps button](/images/sia-nextcloud/nextcloud-enable-sia.png)](/images/sia-nextcloud/nextcloud-enable-sia.png)
+	
+Nextcloud [recently added support](https://github.com/nextcloud/server/pull/5644) for performing app installs on the command line, but it looks like the feature won't be included in a Nextcloud release until version 13.0.
 
 ## Configure Sia support
 
+The last step is to connect the Sia Nextcloud app to your Sia server instance. To do this, enter the commands below:
+
 ```bash
 docker exec --user www-data -it sianextcloud_nextcloud_1 php occ files_external:create Sia sia null::null
-
 docker exec --user www-data -it sianextcloud_nextcloud_1 php occ files_external:config 1 apiaddr siad_container:9980
-
 docker exec --user www-data -it sianextcloud_nextcloud_1 php occ files_external:config 1 datadir /mnt/sia-uploads
 ```
 
+Your integration is now complete. If you navigate to the Files tab of Nextcloud, you will see a Sia folder available.
+
 [![Nextcloud Sia folder](/images/sia-nextcloud/nextcloud-sia-folder.png)](/images/sia-nextcloud/nextcloud-sia-folder.png)
+
+# Using your Sia folder
+When you upload a file to the Sia folder in Nextcloud, the app copies it to the `sia-uploads` folder you created earlier in the tutorial. It then uses this copy to upload the file to the Sia network.
+
+To save space locally, you can delete files that have been uploaded to Sia with 3x redundancy. You can check this with the following command:
+
+```bash
+docker exec -it sianextcloud_sia_1 ./siac renter -v
+```
+
+```
+Renter info:
+        Storage Spending:  1.449 SC
+        Upload Spending:   48.65 mS
+        Download Spending: 3.887 mS
+        Unspent Funds:     217.7 SC
+        Total Allocated:   219.2 SC
+
+Tracking 8 files:
+File size  Available  Progress  Redundancy  Renewing  Sia path
+  5.60 MB  Yes          86.67%        2.60  Yes       08 Hospital Beds.mp3
+143.12 MB  Yes         101.67%        3.00  Yes       Futurama - s01e08 - A Big Piece Of Garbage.mp4
+175.37 MB  Yes         100.67%        3.00  Yes       Futurama - s01e09 - Hell Is Other Robots.mp4
+  3.72 MB  Yes          56.67%        1.70  Yes       IMG_20170725_204611.jpg
+  3.37 MB  Yes         100.00%        3.00  Yes       IMG_20170725_204704.jpg
+  3.39 MB  Yes         100.00%        3.00  Yes       IMG_20170725_204727.jpg
+  3.64 MB  Yes          96.67%        2.90  Yes       IMG_20170725_204928.jpg
+  3.25 MB  Yes          63.33%        1.90  Yes       IMG_20170725_204944.jpg
+```
 # Limitations
 
 ## Instability and data loss
@@ -339,5 +374,6 @@ While Sia natively allows users to create folders to organize their uploads, the
 The Nextcloud app includes a barebones text editor for editing plaintext files within your cloud storage folder. Unfortunately, this does not work on files within Sia.  If you try, Nextcloud presents you with a barrage of angry error messages and does not save any of your attempted edits.
 
 # Conclusion
+
 
 I hope this tutorial will make it easier to use and test the Sia Nextcloud integration for the Sia dev team and the community of contributors. A few days ago, [Sia announced](https://blog.sia.tech/introducing-s3-style-file-sharing-for-sia-through-the-new-minio-integration-bb880af2366a) a similar integration with the distributed object storage server Minio. I haven't tested this integration yet, but you should be able to create a similar solution using the techniques I described here.
