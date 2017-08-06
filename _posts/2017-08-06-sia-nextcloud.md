@@ -397,7 +397,7 @@ When I tried uploading a few ~100 MB files simultaneously, the Sia server instan
 
 I've filed a bug for this issue in the Sia-Nextcloud Github repo, so you can check the latest status there:
 
- * [#14: Sia-Nextcloud crashes siad, loses files](https://github.com/NebulousLabs/Sia-Nextcloud/issues/14)
+* [#14: Sia-Nextcloud crashes siad, loses files](https://github.com/NebulousLabs/Sia-Nextcloud/issues/14)
 
 ### No subfolders
 
