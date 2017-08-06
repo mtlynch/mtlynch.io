@@ -10,6 +10,10 @@ exclude_rule 'MD033'
 ## MD026 - Trailing punctuation in header
 exclude_rule 'MD026'
 
+# There's no other way I know of for embedding fenced code blocks in lists.
+## MD031 Fenced code blocks should be surrounded by blank lines
+exclude_rule 'MD031'
+
 ## MD032 - Lists should be surrounded by blank lines
 exclude_rule 'MD032'
 
