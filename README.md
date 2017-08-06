@@ -71,26 +71,34 @@ If the PR fixes an issue, include the text "Fixes #XX" in the PR description, wh
 
 * Always use an Oxford comma.
 
-## Including code samples in posts
+## Including downloadable file content in posts
 
 ### For non-yml files
-1. Place the code sample file into the `_files` directory
-2. Edit the code sample file and add yml frontmatter with a title key, for example: 
-   ```
+
+1. Place the file into the `_files` directory.
+1. Add yaml frontmatter to the file with a title key, for example: 
+   ```yaml
    ---
    title: "filename.extension"
    ---
    ```
-3. In the post, use the below syntax to include the code sample.  The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is *optional* signifying what syntax highlighting language should be used.
-   `{% include files.html title="filename.extension" language="bash" %}`
+1. In the post, use the below syntax to include the code sample.
+    ```
+   {% include files.html title="filename.extension" language="bash" %}
+    ```
+   The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is *optional* and indicates the syntax highlighting language to use for the file.
 
 ### For yml files
-1. Place the yml file into the `_ymls` directory
-2. Edit the yml file and add yml frontmatter with a title key, for example: 
-    ```
+
+1. Place the yml file into the `_ymls` directory with no file extension.
+2. Add yaml frontmatter to the file with a title key, for example: 
+    ```yaml
     ---
     title: "filename.yml"
     ---
    ```
-3. In the post, use the below syntax to include the yml file.  The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is also *required* and must be set to "yml"
-   `{% include files.html title="filename.yml" language="yml" %}`
+3. In the post, use the below syntax to include the yml file.
+    ```
+    {% include files.html title="filename.yml" language="yml" %}
+    ```
+    The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is also *required* and must be set to "yml".

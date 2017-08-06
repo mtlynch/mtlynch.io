@@ -11,6 +11,7 @@ tags:
 - siacoin
 - cryptocurrency
 - mining
+- sia
 excerpt: A step-by-step guide from zero to mining automation
 ---
 
@@ -429,4 +430,3 @@ This won't fix the issue, but the window will stay open so that you can see the 
 **Symptoms**: The Marlin miner runs, but shows a hash rate of 0 MH/s.
 
 This can happen if the mining settings are too intense for your GPU. To fix this, follow the same steps for [Miner crashes immediately](#miner-crashes-immediately).
-

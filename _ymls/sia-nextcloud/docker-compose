@@ -9,6 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.sia
+    restart: on-failure
     ports:
       - "9980:9980"
     volumes:
