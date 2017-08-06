@@ -395,6 +395,10 @@ This is a big one. In my tests, the Sia Nextcloud integration does not appear to
 
 When I tried uploading a few ~100 MB files simultaneously, the Sia server instance crashed. I restarted to find that Sia had lost several files that it had previously uploaded to full 3x redundancy. I was able to reproduce this behavior consistently. It's not clear whether this is a bug in the Sia server itself or a bug that is limited to the Sia Nextcloud app.
 
+I've filed a bug for this issue in the Sia-Nextcloud Github repo, so you can check the latest status there:
+
+ * [#14: Sia-Nextcloud crashes siad, loses files](https://github.com/NebulousLabs/Sia-Nextcloud/issues/14)
+
 ### No subfolders
 
 While Sia natively allows users to create folders to organize their uploads, the Sia Nextcloud app [does not support folder creation](https://github.com/NebulousLabs/Sia-Nextcloud/issues/13). The web app presents the option, but if you try adding a folder, it just says, "Could not create folder."
