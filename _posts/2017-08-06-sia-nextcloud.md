@@ -12,7 +12,7 @@ tags:
 - docker
 ---
 
-In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB per month. For comparison, Dropbox charges $8.25 per month and Google Drive charges $10 per month.
+In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB per month. This is a very low cost for storage, considering Dropbox charges $8.25 per month for 1 TB, and Google Drive charges $10 per month.
 
 [![Completed Nextcloud install](/images/sia-nextcloud/nextcloud-complete.png)](/images/sia-nextcloud/nextcloud-complete.png){: .align-center}
 
@@ -22,7 +22,7 @@ Don't cancel your Dropbox subscription yet because this technology is still a bi
 
 I created a screencast that walks through the steps of this guide and demonstrates the final result. It achieves an identical result to this blog post, but performs more configuration in GUIs, whereas this blog post uses the command line whenever possible.
 
-If you prefer video tutorials, I recommend you download the files in the ["Create files and folders for Docker"](#create-files-and-folders-for-docker) section below and follow along with the video.
+If you prefer video tutorials, I recommend you download the files in the ["Create files and folders for Docker"](#create-files-and-folders-for-docker) section below and then follow along with the video.
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/i3G5RIXJCLk?rel=0&html5=1&origin={{ site.url }}" frameborder="0" allowfullscreen></iframe>
 
