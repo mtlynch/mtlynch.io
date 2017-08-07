@@ -12,7 +12,7 @@ tags:
 - docker
 ---
 
-In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB per month. This is a very low cost for storage, considering Dropbox charges $8.25 per month for 1 TB, and Google Drive charges $10 per month.
+In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB per month. This is a very competitive price, considering the same storage would cost $8.25 per month on Dropbox and $10 per month on Google Drive.
 
 [![Completed Nextcloud install](/images/sia-nextcloud/nextcloud-complete.png)](/images/sia-nextcloud/nextcloud-complete.png){: .align-center}
 
@@ -32,7 +32,7 @@ This guide is aimed at **intermediate users**. Sia's integration with Nextcloud 
 
 ![You're gonna have a bad time](/images/sia-nextcloud/bad-time.png){: .align-center}
 
-I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any operating system that supports Docker, which includes Windows, Mac OS X, Linux, and even some [network storage devices](/sia-via-docker).
+I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any 64-bit operating system that supports Docker, which includes Windows, Mac OS X, Linux, and even some [network storage devices](/sia-via-docker).
 
 To complete this guide, you will need:
 
@@ -63,7 +63,7 @@ If you're familiar with Sia, you might be aware that Sia has its own graphical u
 
 ![Nextcloud logo](/images/sia-nextcloud/nextcloud-logo.png){: .align-right}
 
-To overcome Sia-UI's limitations in this tutorial, I use **Nextcloud**. [Nextcloud](https://www.nextcloud.com) is an open-source cloud storage web app. It offers a web interface similar to Dropbox or Google Drive. Nextcloud is designed for compatibility with many different storage providers, including Amazon S3, Dropbox, and OpenStack. In February 2017, the Sia team wrote [a custom plugin](https://github.com/NebulousLabs/Sia-Nextcloud) for Nextcloud, which I will use to connect Nextcloud with Sia.
+To overcome Sia-UI's limitations, I use **Nextcloud** in this tutorial. [Nextcloud](https://www.nextcloud.com) is an open-source cloud storage web app. It offers a web interface similar to Dropbox or Google Drive. Nextcloud is designed for compatibility with many different storage providers, including Amazon S3, Dropbox, and OpenStack. In February 2017, the Sia team wrote [a custom plugin](https://github.com/NebulousLabs/Sia-Nextcloud) for Nextcloud, which I will use to connect Nextcloud with Sia.
 
 If you're interested in testing out Nextcloud before you proceed further you can try a [free, instant demo](https://demo.nextcloud.com/) on the Nextcloud website.
 
