@@ -4,47 +4,48 @@
  * main.min.js
  */
 
-// Adding IIFE for variables scoping
-(() => {
-  const _anchors = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+(function() {
+  const _anchors = $('h1, h2, h3, h4, h5, h6');
 
-  // Add anchor permalinks to any Header tag that has an id
-  // Iterate over each header in array
-  [..._anchors].forEach(anchor => {
-
-    // If this header has an 'ID' attribute
-    if (anchor.id) {
-
-      // Create new link element, add attributes, and append it to the header.
-      const link = document.createElement('a');
-      link.dataset.icon = '';
-      link.classList.add('anchor-link');
-      link.href = `#${anchor.id}`;
-      anchor.insertBefore(link, anchor.firstChild);
+  //adds anchor permalinks to any Header tag that has an id
+  $(_anchors).each(function (i, el) {
+    var $el, id, permalink;
+    $el = $(el);
+    id = $el.attr('id');
+    if (id) {
+      if ( $('#blog-nav-page').length ) {
+        permalink = $('.blog-entry').attr('id') + "#" + id;
+      } else {
+        permalink = "#" + id
+      }
+      return $el.prepend($("<a />").addClass("anchor-link")
+        .attr("href", permalink).attr("data-icon", ""));
     }
   });
 })();
 
 // enables hashtag relocation on in-page anchor links
-$(window).bind('hashchange', event => {
+$(window).bind('hashchange', function(event) {
   $.smoothScroll({
-    // Replace '#/' with '#' to go to the correct target and after scrolling
+    // Replace '#/' with '#' to go to the correct target and after scrollin
     scrollTarget: location.hash.replace(/^\#\/?/, '#'),
-    afterScroll(options) {
+    afterScroll: function() {
       location.hash = location.hash.replace(/^\#\/?/, '#');
     }
   });
 });
 
-$('a[href*="#"]').bind('click', function(event) {
+$('a[href*="#"]')
+.bind('click', function(event) {
   // Remove '#' from the hash.
-  let hash = this.hash.replace(/^#/, '');
+  var hash = this.hash.replace(/^#/, '')
 
   if (this.pathname === location.pathname && hash) {
     event.preventDefault();
 
-    // Change '#' (removed above) to '#/' so it doesn't jump without the smooth scrolling
-    location.hash = `#/${hash}`;
+    // Change '#' (removed above) to '#/' so it doesn't jump without the smooth
+    // scrolling
+    location.hash = '#/' + hash;
   }
 });
 
