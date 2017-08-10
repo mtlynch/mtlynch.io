@@ -1,6 +1,6 @@
 {
   "name": "minimal-mistakes",
-  "version": "3.4.4",
+  "version": "4.5.0",
   "description": "Minimal Mistakes Jekyll theme npm build scripts",
   "repository": {
     "type": "git",
@@ -21,16 +21,13 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
     "npm-run-all": "^1.7.0",
     "onchange": "^2.2.0",
     "uglify-js": "^2.6.1"
   },
   "scripts": {
-    "babel": "babel assets/js/_main.js --out-file assets/js/script-compiled.js",
-    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/script-compiled.js -c -m -o assets/js/main.min.js",
+    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/_main.js assets/js/_anchors.js -c -m -o assets/js/main.min.js",
     "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
-    "build:js": "npm run babel && npm run uglify"
+    "build:js": "npm run uglify"
   }
 }
