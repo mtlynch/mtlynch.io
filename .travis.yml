@@ -10,7 +10,7 @@ before_install:
   - npm install
   - npm run build:js
   # Remove Jekyll Admin from Travis builds.
-  - awk '!/jekyll-admin/' Gemfile > Gemfile.temp && mv Gemfile.temp Gemfile
+  - sed -i '/jekyll-admin/d' Gemfile
 script:
   - ./_tests/build
 before_deploy:
