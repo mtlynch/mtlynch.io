@@ -119,7 +119,7 @@ wget {{ site.url }}/files/sia-via-docker/Dockerfile
 
 The `Dockerfile` contents are listed below:
 
-{% include files.html title="DockerFile" %}
+{% include files.html title="Dockerfile" %}
 
 This `Dockerfile` does a few things:
 
@@ -288,4 +288,3 @@ If you're interested in getting started, check out my other guide, "[A Beginnerâ
 * 2017-05-23: Updated instructions for the Sia 1.2.2 release.
 * 2017-05-25: Revised a lot of the text, added instructions for version-to-version upgrades.
 * 2017-07-25: Updated instructions for the Sia 1.3.0 release.
-

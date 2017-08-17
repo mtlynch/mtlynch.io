@@ -1,5 +1,5 @@
 ---
-title: DockerFile
+title: Dockerfile
 ---
 
 FROM debian:jessie-slim
