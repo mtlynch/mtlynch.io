@@ -1,0 +1,58 @@
+{% comment %}
+<!--
+  Responsive Image Include
+
+  This partial is used with the responsive image plugin.  In the _config file,
+  this template is used as the default for responsive images to configure a
+  srcset value for images to ensure the best option for an image is used for a
+  specific user's browser.
+
+  @param {string} "path" - Required. Path to image file relative to the root
+  @param {string} "alt" - Required. Alt tag for image
+  @param {boolean} "img_link" - Optional, default is false. If img should have
+    popover link
+  @param {boolean} "fig" - Optional, default is false. If image should be
+    inside a figure tag
+  @param {string} "fig_caption" - Optional. Caption to be used with figure tag
+  @param {string} "rendition" - Optional.  If image should have sizes options.
+
+-->
+{% endcomment %}
+
+{% comment %}
+<!-- determine all image options for srcset -->
+{% endcomment %}
+{% capture srcset %}
+    {% for i in resized %}
+        {{ site.url }}/{{ i.path }} {{ i.width }}w,
+    {% endfor %}
+     {{ site.url }}/{{ original.path }} {{ original.width }}w
+{% endcapture %}
+
+{% comment %}
+<!-- determine sizes configurations for image -->
+{% endcomment %}
+{% assign rendition= site.media_renditions.[media_rendition] %}
+{% if rendition != nil %}
+  {% assign sizes = rendition.sizes | join: ', ' %}
+{%endif%}
+
+{% if fig %}
+<figure>
+{% endif %}
+
+{% if img_link %}
+  <a href="{{ site.url }}/{{ original.path }}">
+    <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
+  </a>
+{% else %}
+  <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
+{% endif %}
+
+{% if fig_caption %}
+  <figcaption>{{ fig_caption }}</figcaption>
+{% endif %}
+
+{% if fig %}
+</figure>
+{% endif %}
