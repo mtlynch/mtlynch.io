@@ -15,10 +15,12 @@ if [ "$1" = "--quick" ]; then
 fi
 
 # Run HTMLProofer
+# Ignore vimeo URLs because they get 403 errors from Travis intermittently.
 BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
   --config _config.yml,_config_dev.yml
 bundle exec htmlproofer ./_site \
   --only-4xx \
   --check-html \
   --allow-hash-href \
+  --url-ignore vimeo.com \
   "$htmlproofer_args_extra"
