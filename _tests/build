@@ -22,5 +22,5 @@ bundle exec htmlproofer ./_site \
   --only-4xx \
   --check-html \
   --allow-hash-href \
-  --url-ignore vimeo.com \
+  --url-ignore "/vimeo.com/" \
   "$htmlproofer_args_extra"
