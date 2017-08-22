@@ -7,14 +7,15 @@
   srcset value for images to ensure the best option for an image is used for a
   specific user's browser.
 
-  @param {string} "path" - Required. Path to image file relative to the root
-  @param {string} "alt" - Required. Alt tag for image
+  @param {string} "path" - Required. Path to image file relative to the root.
+  @param {string} "alt" - Required. Alt attribute for image tag.
   @param {boolean} "img_link" - Optional, default is false. If img should have
-    popover link
-  @param {boolean} "fig" - Optional, default is false. If image should be
-    inside a figure tag
-  @param {string} "fig_caption" - Optional. Caption to be used with figure tag
-  @param {string} "rendition" - Optional.  If image should have sizes options.
+    the image overlay functionality that the theme provides.
+  @param {string} "fig_caption" - Optional. Caption to be used with figure tag.
+  @param {string} "media_rendition" - Optional.  The title for the array of 
+    media queries to include for the "sizes" attribute on image tag that is 
+    listed in the global _config file. Currently, the only possible value is: 
+    "article", however, other arrays of sizes could be added in the future.
 
 -->
 {% endcomment %}
@@ -37,7 +38,7 @@
   {% assign sizes = rendition.sizes | join: ', ' %}
 {%endif%}
 
-{% if fig %}
+{% if fig_caption %}
 <figure>
 {% endif %}
 
@@ -53,6 +54,6 @@
   <figcaption>{{ fig_caption }}</figcaption>
 {% endif %}
 
-{% if fig %}
+{% if fig_caption %}
 </figure>
 {% endif %}
