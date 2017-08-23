@@ -12,6 +12,6 @@ node_modules
 npm-debug.log*
 *.swp
 _*preview*
-
 assets/js/main.min.js
 assets/js/script-compiled.js
+images/resized/
