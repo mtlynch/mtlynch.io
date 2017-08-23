@@ -25,7 +25,7 @@
 {% endcomment %}
 {% assign post_slug =  page.path | replace:'.html','' | replace: '.md','' | replace: '_posts/', '' %}
 {% assign img_basepath = site.responsive_image.base_path | append: "/" | append: post_slug %}
-{% assign img_path = img_basepath | append: "/" | append: "full-traffic-graph.png" %}
+{% assign img_path = img_basepath | append: "/" | append: include.file %}
 
 {% comment %}
 <!-- default media_rendition to "article" if not included in parmaters -->
