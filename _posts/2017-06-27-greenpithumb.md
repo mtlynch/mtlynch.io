@@ -350,7 +350,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 | [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw) | $29.88 |
 | [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC) | $15.00 |
 | [MicroSD card (32 GB)](http://amzn.to/2rgHcTC) | $12.99 |
-| [Silicone tubing](http://amzn.to/2oho2aL) | $10.99 |
+| [Silicone tubing](http://amzn.to/2v73JUM) | $10.99 |
 | [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4) | $10.99 |
 | [Raspberry Pi power supply](http://amzn.to/2rlAMh2) | $9.99 |
 | [DHT11 temperature and humidity sensor](http://amzn.to/2rDgFie) | $6.99 |
