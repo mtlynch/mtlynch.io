@@ -12,10 +12,10 @@
   @param {boolean} "img_link" - Optional, default is false. If img should have
     the image overlay functionality that the theme provides.
   @param {string} "fig_caption" - Optional. Caption to be used with figure tag.
-  @param {string} "media_rendition" - Optional.  The title for the array of 
-    media queries to include for the "sizes" attribute on image tag that is 
-    listed in the global _config file. Currently, the only possible value is: 
-    "article", however, other arrays of sizes could be added in the future.
+  @param {string} "media_rendition" - Optional.  The title for the array of
+    media queries to include for the "sizes" attribute on image tag that is
+    listed in the global _config file. If it's not included then defaults to
+    "article".
 
 -->
 {% endcomment %}
@@ -27,10 +27,18 @@
 {% assign img_basepath = site.responsive_image.base_path | append: "/" | append: post_slug %}
 {% assign img_path = img_basepath | append: "/" | append: "full-traffic-graph.png" %}
 
+{% comment %}
+<!-- default media_rendition to "article" if not included in parmaters -->
+{% endcomment %}
+{% assign media_rendition = "article" %}
+{% if include.media_rendition %}
+  {% assign media_rendition = include.media_rendition %}
+{% endif %}
+
 {% responsive_image_block %}
     path: {{ img_path }}
     alt: {{ include.alt }}
     img_link: {{ include.img_link }}
     fig_caption: {{ include.fig_caption }}
-    media_rendition: {{ include.media_rendition }}
+    media_rendition: {{ media_rendition }}
 {% endresponsive_image_block %}
