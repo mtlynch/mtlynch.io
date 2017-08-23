@@ -40,6 +40,16 @@ PRs should have a descriptive one-line summary to explain the change. The PR des
 
 If the PR fixes an issue, include the text "Fixes #XX" in the PR description, where `XX` is the [repo issue](https://github.com/mtlynch/mtlynch.io/issues) number. This allows Github to cross-reference between PRs and issues.
 
+## Build Failures
+
+### HTMLProofer
+
+If HTMLProofer fails on a broken link, we have three options: suppress the error, fix the link, or remove the link.
+
+You should suppress the error if the link works fine in a browser, but fails in Travis occasionally. To do this, open `_tests/build`, update the `--url-ignore` flag for the `htmlproofer` command. Add a comment above the command to explain why we're adding this suppression. Be especially conservative about suppressing warnings on affiliate links (links to products that can be purchased) because we care when these die.
+
+If the link is just permanently broken and does not load, even in a browser, either replace the link with another that achieves the same effect or remove the link entirely.
+
 ## Prose style guide
 
 ### Headings
