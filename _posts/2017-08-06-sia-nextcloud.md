@@ -14,7 +14,7 @@ tags:
 
 In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB per month. This is a very competitive price, considering the same storage would cost $8.25 per month on Dropbox and $10 per month on Google Drive.
 
-[![Completed Nextcloud install](/images/sia-nextcloud/nextcloud-complete.png)](/images/sia-nextcloud/nextcloud-complete.png){: .align-center}
+{% include image.html file="nextcloud-complete.png" alt="Completed Nextcloud install" img_link=true %}
 
 Don't cancel your Dropbox subscription yet because this technology is still a bit flaky. In my tests, the app crashes quite a bit and sometimes loses entire files. But the technology is cool, so I wanted to share this tutorial to make it easy for you to try this out yourself.
 
@@ -30,7 +30,7 @@ If you prefer video tutorials, I recommend you download the files in the ["Creat
 
 This guide is aimed at **intermediate users**. Sia's integration with Nextcloud is still very flaky as of this writing, so if you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command line, it will be difficult for you to follow this guide.
 
-![You're gonna have a bad time](/images/sia-nextcloud/bad-time.png){: .align-center}
+{% include image.html file="bad-time.png" alt="You're gonna have a bad time" max_width="597px" class="align-center" %}
 
 I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any 64-bit operating system that supports Docker, which includes Windows, Mac OS X, Linux, and even some [network storage devices](/sia-via-docker).
 
@@ -53,7 +53,7 @@ The steps in this guide require about **20 minutes** of active time. However, th
 
 ## Sia
 
-![Sia logo](/images/sia-nextcloud/sia-logo.png){: .align-left}
+{% include image.html file="sia-logo.png" alt="Sia logo" max_width="260px" class="align-left" %}
 
 I use **Sia** in this solution to provide backend storage for the web app. I've written [a few posts](/tags/#sia) about Sia previously, as it's one of my favorite new technologies. [Sia](https://sia.tech) is a decentralized file storage network. Users can connect to Sia and [rent out their unused disk space](/sia-via-docker/) to earn money. Prices on the Sia network are very low right now, which is how you can build a cloud storage solution and pay so little for disk space.
 
@@ -61,7 +61,7 @@ I use **Sia** in this solution to provide backend storage for the web app. I've 
 
 If you're familiar with Sia, you might be aware that Sia has its own graphical user interface, called [Sia-UI](https://github.com/NebulousLabs/Sia-UI). This UI is limited in functionality. Its main weakness is that it's a desktop app, so you can only access your files from a single computer. It also lacks support for viewing files, so if you have content like photos, video, or documents, you can't display them within Sia-UI. You have to copy them to a separate folder on your computer and view the files there.
 
-![Nextcloud logo](/images/sia-nextcloud/nextcloud-logo.png){: .align-right}
+{% include image.html file="nextcloud-logo.png" alt="Nextcloud logo" max_width="260px" class="align-right" %}
 
 To overcome Sia-UI's limitations, I use **Nextcloud** in this tutorial. [Nextcloud](https://www.nextcloud.com) is an open-source cloud storage web app. It offers a web interface similar to Dropbox or Google Drive. Nextcloud is designed for compatibility with many different storage providers, including Amazon S3, Dropbox, and OpenStack. In February 2017, the Sia team wrote [a custom plugin](https://github.com/NebulousLabs/Sia-Nextcloud) for Nextcloud, which I will use to connect Nextcloud with Sia.
 
@@ -69,7 +69,7 @@ If you're interested in testing out Nextcloud before you proceed further you can
 
 ## Docker
 
-![Docker logo](/images/sia-nextcloud/docker-logo.png){: .align-right}
+{% include image.html file="docker-logo.png" alt="Docker logo" max_width="260px" class="align-right" %}
 
 Nextcloud is tricky to install because it requires a database, a web server, and several third-party software libraries. Rather than go through the tedium of Nextcloud's installation process, I use **Docker** to handle the entire setup.
 
@@ -327,13 +327,16 @@ It's time to install Nextcloud's Sia app. Unfortunately, it is not possible to i
 
 1. Open [http://localhost:8080](http://localhost:8080) in your browser to access the NextCloud web app.
 1. Enter the Nextcloud web app credentials you selected in the ["Install Nextcloud'](#install-nextcloud) step above. If you used the default credentials, this will be `admin`/`admin`.
-  [![Nextcloud login](/images/sia-nextcloud/nextcloud-login.png)](/images/sia-nextcloud/nextcloud-login.png)
+  {% include image.html file="nextcloud-login.png" alt="Nextcloud login" img_link=true %}
+{:start="3"}
 1. At the Nextcloud home screen, click the gear icon in the upper right, then click "Apps".
-  [![Nextcloud apps button](/images/sia-nextcloud/nextcloud-apps.png)](/images/sia-nextcloud/nextcloud-apps.png)
+  {% include image.html file="nextcloud-apps.png" alt="Nextcloud apps button" img_link=true %}
+{:start="4"}
 1. Click the "Tools" category in the left-hand menu.
-  [![Nextcloud apps button](/images/sia-nextcloud/nextcloud-tools.png)](/images/sia-nextcloud/nextcloud-tools.png)
+  {% include image.html file="nextcloud-tools.png" alt="Nextcloud apps button" img_link=true %}
+{:start="5"}
 1. Scroll down to the "Sia storage report" app and click the "Enable" button below it.
-  [![Nextcloud apps button](/images/sia-nextcloud/nextcloud-enable-sia.png)](/images/sia-nextcloud/nextcloud-enable-sia.png)
+  {% include image.html file="nextcloud-enable-sia.png" alt="Nextcloud apps button" img_link=true %}
 
 ## Configure Sia support
 
@@ -349,7 +352,7 @@ Your Sia Nextcloud integration is complete!
 
 If you open the Files tab of Nextcloud in your browser, you will see a Sia folder. Nextcloud will automatically back up all files in this folder to the Sia network.
 
-[![Nextcloud Sia folder](/images/sia-nextcloud/nextcloud-sia-folder.png)](/images/sia-nextcloud/nextcloud-sia-folder.png)
+{% include image.html file="nextcloud-sia-folder.png" alt="Nextcloud Sia folder" img_link=true %}
 
 # Using Sia with Nextcloud
 

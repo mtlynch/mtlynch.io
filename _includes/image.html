@@ -16,7 +16,10 @@
     media queries to include for the "sizes" attribute on image tag that is
     listed in the global _config file. If it's not included then defaults to
     "article".
-
+  @param {string} "max_width" - Optional.  Overrides the media_rendition
+    parameter.  This will set a max width for the image by setting the sizes
+    attribute equal to the max_width value.
+  @param {string} "class" - Optional.  The CSS class attribute for the image
 -->
 {% endcomment %}
 
@@ -41,4 +44,6 @@
     img_link: {{ include.img_link }}
     fig_caption: {{ include.fig_caption }}
     media_rendition: {{ media_rendition }}
+    max_width: {{ include.max_width }}
+    class: {{ include.class }}
 {% endresponsive_image_block %}
