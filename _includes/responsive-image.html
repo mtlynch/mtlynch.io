@@ -16,7 +16,10 @@
     media queries to include for the "sizes" attribute on image tag that is 
     listed in the global _config file. Currently, the only possible value is: 
     "article", however, other arrays of sizes could be added in the future.
-
+  @param {string} "max_width" - Optional.  Overrides the media_rendition
+    parameter.  This will set a max width for the image by setting the sizes
+    attribute equal to the max_width value.
+  @param {string} "class" - Optional.  The CSS class attribute for the image
 -->
 {% endcomment %}
 
@@ -33,10 +36,14 @@
 {% comment %}
 <!-- determine sizes configurations for image -->
 {% endcomment %}
-{% assign rendition = site.media_renditions.[media_rendition] %}
-{% if rendition != nil %}
-  {% assign sizes = rendition.sizes | join: ', ' %}
-{%endif%}
+{% if max_width %}
+  {% assign sizes = max_width %}
+{% else %}
+  {% assign rendition = site.media_renditions.[media_rendition] %}
+  {% if rendition %}
+    {% assign sizes = rendition.sizes | join: ', ' %}
+  {% endif %}
+{% endif %}
 
 {% if fig_caption %}
 <figure>

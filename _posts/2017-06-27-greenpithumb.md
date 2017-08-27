@@ -358,7 +358,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 | [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF) | $5.90 |
 | [Soil moisture sensor](https://www.sparkfun.com/products/13322) | $4.99 |
 | [Rubber glove](http://amzn.to/2rQVES9) | $4.94 |
-| [Molex to SATA power cable adapter](http://amzn.to/2ohoJ3O) | $2.75 |
+| [Molex to SATA power cable adapter](http://amzn.to/2wRo943) | $8.99 |
 | [Light-dependent photoresistor](http://amzn.to/2oCFlUO) | $1.72 |
 | 1-gallon plastic water jug (for reservoir) | - |
 | Safety pin | - |
