@@ -177,7 +177,7 @@ permalink: "/:categories/:title/"
 paginate: 5
 paginate_path: "/page:num/"
 future: true
-gems:
+plugins:
 - jekyll-paginate
 - jekyll-sitemap
 - jekyll-feed
