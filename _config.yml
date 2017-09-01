@@ -216,3 +216,11 @@ media_renditions:
     sizes:
       - "(min-width: 64em) 83vw" 
       - "100vw"
+  half:
+    sizes:
+      - "(min-width: 64em) calc(50% - 0.5em)vw" 
+      - "100vw"
+  third:
+    sizes:
+      - "(min-width: 64em) calc(33.3333% - 0.5em)"
+      - "100vw"

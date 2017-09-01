@@ -9,8 +9,11 @@
 
   @param {string} "file" - Required. filename of the image.
   @param {string} "alt" - Required. Alt attribute for image tag.
-  @param {boolean} "img_link" - Optional, default is false. If img should have
-    the image overlay functionality that the theme provides.
+  @param {string} "img_link" - Optional. The link when an image is clicked.
+    Possible values for img_link are:
+    - default is false or null. Means no link for the image.
+    - true. Means image will have overlay functionality that theme provides.
+    - an actual url.  Provides a page link to go to when image is clicked.
   @param {string} "fig_caption" - Optional. Caption to be used with figure tag.
   @param {string} "media_rendition" - Optional.  The title for the array of
     media queries to include for the "sizes" attribute on image tag that is
