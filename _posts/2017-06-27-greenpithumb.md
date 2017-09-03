@@ -64,9 +64,18 @@ The code for GreenPiThumb is open-source and features:
 
 # Hardware architecture
 
-{% assign fig_caption = "GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))" | markdownify | remove: "<p>" | remove: "</p>" %}
+{% capture fig_img %}
+[![GreenPiThumb wiring diagram](https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png)](https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png)
+{% endcapture %}
 
-{% include image.html file="greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" img_link="true" fig_caption=fig_caption %}
+{% capture fig_caption %}
+GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
 
 The Raspberry Pi reads *digital* signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](http://amzn.to/2oCFlUO).
 
@@ -76,7 +85,18 @@ Lastly, we have a [12V water pump](http://amzn.to/2p90wk8), but the Raspberry Pi
 
 # Software architecture
 
-{% include image.html file="greenpithumb_diagram.png" alt="GreenPiThumb software architecture" fig_caption="GreenPiThumb software architecture" %}
+{% capture fig_img %}
+![GreenPiThumb software architecture](https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png)
+{% endcapture %}
+
+{% capture fig_caption %}
+GreenPiThumb software architecture
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
 
 ## GreenPiThumb back end
 
@@ -211,7 +231,7 @@ It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/not
 
 ## Electronics: start with the basics
 
-{% include image.html file="arduino-starter-kit.jpg" alt="Arduino starter kit" max_width="300px" class="align-left" img_link="<http://amzn.to/2rpRLCf>" %}
+{% include image.html file="arduino-starter-kit.jpg" alt="Arduino starter kit" max_width="300px" class="align-left" link_url="<http://amzn.to/2rpRLCf>" %}
 
 At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation in electronics.
 

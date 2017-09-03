@@ -9,11 +9,11 @@
 
   @param {string} "path" - Required. Path to image file relative to the root.
   @param {string} "alt" - Required. Alt attribute for image tag.
-  @param {string} "img_link" - Optional. The link when an image is clicked.
-    Possible values for img_link are:
-    - default is false or null. Means no link for the image.
-    - true. Means image will have overlay functionality that theme provides.
-    - an actual url.  Provides a page link to go to when image is clicked.
+  @param {boolean} "img_link" - Optional, default is false. If img should have
+    the image overlay functionality that the theme provides.
+  @param {string} "link_url" - Optional. The page url that a user is taken to
+    when clicking the image.  This will override the img_link parameter if both
+    are included.
   @param {string} "fig_caption" - Optional. Caption to be used with figure tag.
   @param {string} "media_rendition" - Required.  The title for the array of 
     media queries to include for the "sizes" attribute on image tag that is 
@@ -51,16 +51,21 @@
   {% endif %}
 {% endif %}
 
+{% comment %}
+<!-- determine image link url - either page link or image overlay -->
+{% endcomment %}
+{% if link_url %}
+  {% assign img_url = link_url | remove: "<" | remove: ">" %}
+{% elsif img_link %}
+  {% assign img_url = site.url | append: "/" | append: original.path %}
+{% endif %}
+
 {% if fig_caption %}
 <figure class="{{ class }}">
   {% assign class = "" %}
 {% endif %}
 
-{% if img_link %}
-  {% assign img_url = site.url | append: "/" | append: original.path %}
-  {% if img_link != true %}
-    {% assign img_url = img_link | remove: "<" | remove: ">" %}
-  {% endif %}
+{% if img_url %}
   <a href="{{ img_url }}">
     <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
   </a>
