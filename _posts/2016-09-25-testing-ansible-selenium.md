@@ -65,13 +65,13 @@ index 8542ffc..e9d42c0 100644
 
 If we deploy using this modified playbook, then browse to the target server, everything appears to be normal:
 
-[![ClipBucket no error]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-no-error.png)]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-no-error.png)
+{% include image.html file="clipbucket-no-error.png" alt="ClipBucket no error" img_link="true" %}
 
 All installation tasks succeed and we see the ClipBucket landing page. What's the problem?
 
 Let's try uploading a video. Everything works until we try to view it:
 
-[![Video error screenshot]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/bunny-film-error.png)]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/bunny-film-error.png)
+{% include image.html file="bunny-film-error.png" alt="Video error screenshot" img_link="true" %}
 
 Because we deleted the task in our playbook that creates a symlink to ffmpeg, ClipBucket fails to transcode videos into a streamable format.
 
@@ -102,7 +102,7 @@ For ClipBucket, I'm particularly interested in making sure videos upload correct
 
 As an alternative, we'll use the ClipBucket modules diagnostic page. It displays ClipBucket's installed modules and displays an error message when any of the modules are not installed properly:
 
-[![ClipBucket modules view]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-module-view.png)]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-module-view.png)
+{% include image.html file="clipbucket-module-view.png" alt="ClipBucket modules view" img_link="true" %}
 
 We can use this page in lieu of a video upload flow to verify that all modules are installed properly.
 
@@ -126,7 +126,7 @@ To automate browser actions in Selenium, we need to tell Selenium which URL to l
 
 To log in, we need to find the credential fields on the login page, enter our username and password, then push the "Login" button. Fortunately, the username and password fields have an `id` attribute, making it very easy to identify them on the page. The "Login" button does not have an `id` attribute, but it does have a `name` attribute of `login` which is unique on the page, allowing us to use that as a unique identifier:
 
-[![ClipBucket login fields]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-login-fields.png)]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-login-fields.png)
+{% include image.html file="clipbucket-login-fields.png" alt="ClipBucket login fields" img_link="true" %}
 
 We locate these fields and enter the login credentials in the following [code snippet](https://github.com/mtlynch/ansible-role-clipbucket/blob/3afec13b7b68eb38d4ffe930f73116278fdcf455/tests/clipbucket_driver/clipbucket_driver.py#L40...L53):
 
@@ -152,7 +152,7 @@ This is tricky because none of the elements we're interested in (or their parent
 
 After we find the boxes, we need to determine whether the box indicates a successful module install or a problem. We can do this by either looking for indicators of success or verifying that the elements lack indicators of failure. The former is a bit more rigorous, but the latter is simpler to code. Boxes with error messages always contain an element with `class="alert"` attribute, so we can identify successful boxes if they do not have any child elements with this class.
 
-[![ClipBucket module error]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-module-error.png)]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-module-error.png)
+{% include image.html file="clipbucket-module-error.png" alt="ClipBucket module error" img_link="true" %}
 
 We can do this with the following [code snippet](https://github.com/mtlynch/ansible-role-clipbucket/blob/3afec13b7b68eb38d4ffe930f73116278fdcf455/tests/clipbucket_driver/clipbucket_driver.py#L55...L71).
 
