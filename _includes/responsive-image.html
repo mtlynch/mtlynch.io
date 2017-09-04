@@ -55,7 +55,7 @@
 <!-- determine image link url - either page link or image overlay -->
 {% endcomment %}
 {% if link_url %}
-  {% assign img_url = link_url | remove: "<" | remove: ">" %}
+  {% assign img_url = link_url %}
 {% elsif img_link %}
   {% assign img_url = site.url | append: "/" | append: original.path %}
 {% endif %}

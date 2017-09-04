@@ -231,7 +231,7 @@ It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/not
 
 ## Electronics: start with the basics
 
-{% include image.html file="arduino-starter-kit.jpg" alt="Arduino starter kit" max_width="300px" class="align-left" link_url="<http://amzn.to/2rpRLCf>" %}
+{% include image.html file="arduino-starter-kit.jpg" alt="Arduino starter kit" max_width="300px" class="align-left" link_url="http://amzn.to/2rpRLCf" %}
 
 At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation in electronics.
 
