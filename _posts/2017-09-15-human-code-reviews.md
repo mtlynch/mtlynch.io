@@ -21,9 +21,6 @@ You're not there to catch them out on errors. You're there to make the code exce
 
 I don't start thinking about correctness until I feel the code is easy to reason about
 
-I'm a good code reviewer because I'm bad at reading code. Can't keep that much context in my head.
-
-
 * TOC
 {:toc}
 
@@ -60,6 +57,7 @@ Before we go any further, let's make some assumptions explicit. This advice appl
 Programmers tend to overestimate the quality of the code they write. If a programmer sends you a changelist that they think is awesome, and you write them back with list of reasons why it's not, that's a sensitive message to get across.
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br>-Philip Greenspun, co-founder of ArsDigita
+
 # Techniques
 
 ## Let robots do the boring parts
@@ -87,9 +85,11 @@ Your job as code reviewer is to ensure that the code is easy to read and reason 
 
 If you focus on helping the author make their code easy to understand, correctness will naturally follow. Instead of trying to think of edge cases that would break their code, read their unit tests. If you can think of edge cases that are not covered in the author's unit tests, don't waste mental energy testing the code in your head to see if your edge case would break their code. Just ask them to write the unit test. Did the *author* think of all the edge cases? If it's hard to write unit tests for the edge cases, that's an indication that they need to refactor their code to make their changes easier to test. My code reviews often expose bugs, but I am generally not the one to find them. I'll push the author to either write additional test cases or break up their code to make it easier to test and then they find the bugs themselves.
 
+**Don't be embarrassed to admit you have trouble understanding the code.**
+
 If you find yourself struggling to understand the code you're reviewing, that's a big red flag. Develeopers, especially junior developers, can be reluctant to admit they don't understand the code. Don't just think to yourself, "It's my fault for not understanding this because I'm not a very strong programmer." All source code should be intelligible to the most junior developer responsible for maintaining it. If the code breaks and the original author has left your team or they're on vacation that day, you, as the code reviewer, are first in line to fix the issue.  Never just give the benefit of the doubt and sign off on unintelligible code with the assumption that they know what they were doing.
 
-The exception is if the struggle is from a lack of familiarity with the language or the underlying libraries. In this case, you should take the time to understand the libraries. You can also consider asking the author to pull in an additional reviewer more familiar with the technologies involved, but make sure to keep learning about these technologies so that you can eventually handle these reviews on your own.
+The exception is if the struggle is from a lack of familiarity with the language or the underlying libraries. In this case, you should take the time to understand the libraries. You can also consider asking the author to pull in an additional co-reviewer more familiar with the technologies involved, but make sure to keep learning about these technologies so that you can eventually handle these reviews on your own.
 
 ## Never use the word 'you'
 
@@ -117,8 +117,8 @@ When you say, "we" you reinforce the idea of a collective responsibility for the
 
 | With "you" | Without "you" |
 |---|----|
-| You didn't test for when the | There aren't any tests |
-| You misspelled successfully | Misspelling on "successfully" (missing an 's') |
+| You didn't test for when the database is empty. | There aren't any tests for when the database is empty. |
+| You misspelled 'successfully'. | Misspelling on "successfully" (missing an 's') |
 
 TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other person saying something like "**we** should do X" (e.g. "**we** should dig a hole").
 
@@ -146,7 +146,7 @@ See how ~~easy it is to validate your argument with imaginary scenarios~~ much m
 
 You should have arguments about where to put the braces exactly once. If your team or organization doesn't have . Religious arguments about tabs vs. spaces or where to put curly braces are unpleasant time wasters. You should have these arguments exactly once, then codify the decision in your style guide.
 
-If your team or organization doesn't have a style guide, just start one. Google has some excellent [style guides](https://google.github.io/styleguide/) that are public and freely licensed. You can either create your style guide using a published style guide as the base, then defining team-specific deviations on top of it. Or you can just start from scratch in a wiki or Google Doc. I like to define my style guides as a Markdown file under source control. When I make changes, I designate a specific person to review, but I cc my whole team so that they're aware of the style decision and they have an opportunity to object if they don't like the new rule.
+If your team or organization doesn't have a style guide, just start one. Google has some excellent [style guides](https://google.github.io/styleguide/) that are public and freely licensed. You can either create your style guide using a published style guide as the base, then defining team-specific deviations on top of it. Or you can just start from scratch in a wiki or Google Doc. I like to define my style guides as a Markdown file under source control. When I make changes, I designate an individual person to review, but I send the review as an FYI to my whole team so that they're aware of the style decision and they have an opportunity to object if they don't like the new rule.
 
 ## Start high level and work your way down
 
@@ -158,7 +158,7 @@ Low level notes might become moot once they
 
 ## Limit feedback on repeated patterns
 
-If there's a repeated pattern, don't flag it every single time. It's trickier 
+If there's a repeated pattern, don't flag it every single time. As discussed in the [previous section](#start-high-level and-work-your-way-down), there is a cost
 
 ## Give notes based on principles, not opinion
 
