@@ -29,8 +29,10 @@ I'm a good code reviewer because I'm bad at reading code. Can't keep that much c
 
 # Assumptions
 
-Before we go any further, here are some assumptions:
+Before we go any further, let's make some assumptions explicit. This advice applies to code reviews generally, but it will work best in an environment where the following conditions hold true:
 
+* Your co-workers are humans
+  * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
 * You are in an organization that agrees code reviews are a good idea.
   * These suggestions will work best on a team where no code is checked in until a reviewer approves it, but they should still work in any code review.
 * Code reviews are written and asynchronous.
@@ -120,10 +122,6 @@ When you say, "we" you reinforce the idea of a collective responsibility for the
 
 TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other person saying something like "**we** should do X" (e.g. "**we** should dig a hole").
 
-## Give code reviews high priority
-
-If a teammate sends you a code review, it likely means that they are blocked
-
 ## Frame feedback as requests, not commands
 
 People tend to reduce politeness in code reviews, whereas you actually want to increase it. Err on the side of being annoyingly gentle. Most people would never say out loud to a co-worker, "You have to bring me that stapler," but a lot of code reviewers don't think twice about saying, "You have to move this class to a separate file."
@@ -152,7 +150,11 @@ If your team or organization doesn't have a style guide, just start one. Google 
 
 ## Start high level and work your way down
 
-In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here").
+In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and refer your lower-level notes.
+
+The first reason is that there's a cost to every note. There's a time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. For the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their writing. But we agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive approaches the number of lines they wrote.
+
+Low level notes might become moot once they 
 
 ## Limit feedback on repeated patterns
 
@@ -191,6 +193,16 @@ If you can pick a self-contained 75-line piece out of a 400, start out by asking
 
 Ideally you should request a split at the beginning of the code review, but if you find yourself arguing endlessly about part of the code review, asking the author to split off an uncontroversial part of the changelist can be a way to ease tensions. Part of what's frustrating from the author's perspective if you're going back and forth about code review notes is that they feel like you're obstructing their progress. They probably have deadlines they're trying to hit and they might see you as obstructing those goals. If you split off a piece they can check in, you're making them feel good by showing that you can make tangible progress together.
 
+## Give code reviews high priority
+
+If a teammate sends you a code review, it likely means that they are blocked on other work until your review is done. Sometimes  If they know to expect turnaround times of a few hours from you, they'll plan their work differently.
+
+I aim to start a code review within minutes of receiving it. One business day is the absolute longest turnaround time I will give a code review. If I expect it to take longer than that, I email the author letting them know and give them the option to reassign to a different reviewer.
+
+When you start code reviews immediately, you create a virtuous cycle, because the length of time the author has to wait for comments is purely a function of the size and complexity of the changes. This incentivizes authors to send small, narrowly scoped changelists. These types of changelists are easier and more pleasant for you to review, so you complete your reviews more quickly and the cycle continues.
+
+In contrast, if you sit on code review for a day or two regardless of review size or complexity, you incentivize the author to send you larger, more complex code reviews because otherwise it's going to take them forever to get all of their code through review.
+
 ## Be extremely tolerant in pure housekeeping reviews
 
 One of the kindest things your teammates can do is a pure housekeeping code change. By "pure housekeeping," I mean a change that does not affect the software's production functionality, but makes the code easier to maintain. This includes:
@@ -222,7 +234,7 @@ This doesn't always go perfectly. I'd say that 5% of the time, the author either
 Some indications that you're headed for a stalemate:
 
 * The tone of discussion is becoming hostile
-* Your notes per review are not decreasing
+* Your notes per review are not trending downward
   * In a normal review, the 
 
 It may mean that you need  a design review.
