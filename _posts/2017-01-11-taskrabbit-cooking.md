@@ -30,7 +30,7 @@ I thought this would be a good opportunity to experiment with outsourcing &mdash
 
 [TaskRabbit](https://www.taskrabbit.com/r/aig0/try) is a service that allows you to hire people for small tasks. They specialize in handyman type tasks, like home repair or furniture assembly, but the range of possible tasks is pretty broad. You can hire someone to stand in line for you, run your errands, or [attend birthday parties on your behalf](http://abcnews.go.com/Lifestyle/woman-hires-impersonator-attend-friends-birthday-party/story?id=29277677).
 
-[![TaskRabbit homepage]({{ base_path }}/images/2017-01-11-taskrabbit-cooking/taskrabbit-homepage.png)]({{ base_path }}/images/2017-01-11-taskrabbit-cooking/taskrabbit-homepage.png)
+{% include image.html file="taskrabbit-homepage.png" alt="TaskRabbit homepage" img_link="true" %}
 
 I've used TaskRabbit to find apartment cleaners and a handyman to wall-mount my TV. These were generally positive experiences, so TaskRabbit seemed like a good fit for outsourcing my home cooking.
 
@@ -73,9 +73,9 @@ The process went very smoothly. She cooked for a little over two hours. I took a
 When she was done, she told me I could take the pork tenderloin out of the oven in ten minutes, the pepper and broccoli were finished on the stove, and that the neapolitan fat bombs were in the freezer. She had wiped down my countertops and cleaned my dishes. When the tenderloin was ready, I took it out and was delighted. It looked great and tasted fantastic.
 
 <figure class="half">
-    <a href="{{ base_path }}/images/2017-01-11-taskrabbit-cooking/IMG_20161115_212108.jpg"><img alt="Finished pork tenderloin and side" src="{{ base_path }}/images/2017-01-11-taskrabbit-cooking/IMG_20161115_212108.jpg"></a>
-    <a href="{{ base_path }}/images/2017-01-11-taskrabbit-cooking/IMG_20161115_212144.jpg"><img alt="Finished pork tenderloin on baking sheet" src="{{ base_path }}/images/2017-01-11-taskrabbit-cooking/IMG_20161115_212144.jpg"></a>
-    <figcaption>Bacon Wrapped Stuffed Pork Tenderloin: finished product.</figcaption>
+  {% include image.html file="IMG_20161115_212108.jpg" alt="Finished pork tenderloin and side" img_link="true" %}
+  {% include image.html file="IMG_20161115_212144.jpg" alt="Finished pork tenderloin on baking sheet" img_link="true" %}
+  <figcaption>Bacon Wrapped Stuffed Pork Tenderloin: finished product.</figcaption>
 </figure>
 
 The experience went pretty much exactly as I had wanted it to. I've hired Leah to cook three more times since then, and I've been pleased with the results every time.
@@ -136,7 +136,7 @@ The tables below show my full costs for each cooking session. I bought all the i
 | Labor (2 hours) | $55.90 |
 | **Total**                                          | **$109.89** |
 
-[<img alt="ProsperBot screenshot" src="{{ base_path }}/images/2017-01-11-taskrabbit-cooking/cooking-costs.png" width="750" style="border:1px solid grey; display: block; margin-left: auto; margin-right: auto;" />]({{ base_path }}/images/2017-01-11-taskrabbit-cooking/cooking-costs.png)
+{% include image.html file="cooking-costs.png" alt="ProsperBot screenshot" img_link="true" max_width="750px" class="align-center img-border" %}
 
 ## How does this compare to restaurant delivery?
 
