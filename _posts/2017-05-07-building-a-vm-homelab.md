@@ -54,7 +54,7 @@ I ended up going with the [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI). It's 8 cor
 
 ## Motherboard
 
-[![ASRock AB350M-HDV]({{ base_path }}/images/2017-05-07-building-a-vm-homelab/motherboard.png){: .align-left}](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765)
+{% include image.html file="motherboard.png" alt="ASRock AB350M-HDV" max_width="250px" class="align-left" link_url="https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765" %}
 
 I live in a pretty small 1 BR apartment in Manhattan, so physical space is at a premium. My requirements also obviated a lot of components that typically requires a lot of physical space in a PC, such as disk drives, GPUs, or premium CPU fans.
 
@@ -64,7 +64,7 @@ In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the
 
 ## Memory
 
-[![G.SKILL Flare X Series 32GB]({{ base_path }}/images/2017-05-07-building-a-vm-homelab/gskill-ram.png){: .align-right}](http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536)
+{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536" %}
 
 My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536) because these were the fastest RAM sticks tested compatible with my motherboard.
 
@@ -114,20 +114,20 @@ Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadc
 
 With all my parts, it was time to start the build!
 
-[![Server PC parts]({{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-parts.jpg)]({{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-parts.jpg)
+{% include image.html file="vm-server-parts.jpg" alt="Server PC parts" img_link="true" %}
 
 These are all the components pre-assembly. The NIC and GPU are missing from this picture because I didn't realize I needed them until I actually tried running the system.
 
-[![Server after assembly]({{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-assembled.jpg)]({{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-assembled.jpg)
+{% include image.html file="vm-server-assembled.jpg" alt="Server after assembly" img_link="true" %}
 
 This is the server with all the parts assembled. There's not much to it because there aren't many components. It was particularly nice to not have to deal with power or SATA cables for disk drives because the only disk is the M.2 SSD connected directly to the motherboard.
 
 Because of my apartment's limited space, I wanted a server I could hide out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view:
 
 <figure class="half">
-    <a href="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-front.jpg"><img alt="Assembled server - front view" src="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-front.jpg"></a>
-    <a href="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-above.jpg"><img alt="Assembled server - overhead view" src="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/vm-server-above.jpg"></a>
-    <figcaption>Completed build</figcaption>
+  {% include image.html file="vm-server-front.jpg" alt="Assembled server - front view" img_link="true" %}
+  {% include image.html file="vm-server-above.jpg" alt="Assembled server - overhead view" img_link="true" %}
+  <figcaption>Completed build</figcaption>
 </figure>
 
 # Installing a Host OS
@@ -149,9 +149,9 @@ I enjoy being able to manage my infrastructure through a web UI, so I installed 
 I'd describe Kimchi as "okay." Some of the dashboards are pretty slick:
 
 <figure class="half">
-    <a href="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/kimchi-host-utilization.png"><img alt="Kimchi host utilization dashboard" src="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/kimchi-host-utilization.png"></a>
-    <a href="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/kimchi-guests.png"><img alt="Kimchi guest view" src="{{ base_path }}/images/2017-05-07-building-a-vm-homelab/kimchi-guests.png"></a>
-    <figcaption>Kimchi web UI screenshots</figcaption>
+  {% include image.html file="kimchi-host-utilization.png" alt="Kimchi host utilization dashboard" img_link="true" %}
+  {% include image.html file="kimchi-guests.png" alt="Kimchi guest view" img_link="true" %}
+  <figcaption>Kimchi web UI screenshots</figcaption>
 </figure>
 
 It also does certain things really well, like creating a bridged network adapter (which is kind of a pain to figure out on the command line).
