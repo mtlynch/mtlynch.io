@@ -8,7 +8,7 @@ share: true
 related: true
 ---
 
-I love code reviews. They are my favorite part of writing software with others.
+I love code reviews. They are my favorite part of working on a team with other developers.
 
 
 A lot of articles appear to be written in the future where your co-workers are robots and pointing out errors warms their cold robot hearts. Or they assume that your co-workers are idiots and you have to constantly be on them to prevent their next idiot mistake. It's like reading a guide to a healthy marriage that's all about how to identify your spouse's flaws.
@@ -20,6 +20,7 @@ At its heart, source code is a way of expressing ideas to other developers. When
 You're not there to catch them out on errors. You're there to make the code excellent and help them.
 
 I don't start thinking about correctness until I feel the code is easy to reason about
+
 
 * TOC
 {:toc}
@@ -33,11 +34,11 @@ Before we go any further, let's make some assumptions explicit. This advice appl
 * You are in an organization that agrees code reviews are a good idea.
   * These suggestions will work best on a team where no code is checked in until a reviewer approves it, but they should still work in any code review.
 * Code reviews are written and asynchronous.
-* Code reviews are not complete until a reviewer signs off.
+* Code reviews are not complete until a reviewer explicitly grants approval.
 * You have a non-bad relationship with the author
   * These techniques will work with teammates you have no history with and will work especially well with teammates whom you get along with well. If you're reviewing code for someone who hates you, you have team dynamics problems that code review techniques can't fix.
   * If the reviewer doesn't respect the author, it will probably come across in the tone of review notes and they'll be too quick to assume that the author made a coding decision because they're a bad programmer. If the author doesn't respect the reviewer, they'll want to fight against all of their notes.
- * Your team has unit tests and a cultural expectation that all functional changes to the code be accompanied by corresponding unit tests.
+ * Your team has unit tests and a cultural expectation that functional changes to the code be accompanied by corresponding unit tests.
 
 ## Terms
 
@@ -66,10 +67,10 @@ Developer time is limited and developer mental stamina even moreso. Don't squand
 
 | Task | Automated solution |
 |-------|--------------------------|
-| Verify the code builds | Continuous integration solution such as Travis or CircleCI. |
-| Verify automated tests pass | Continuous integration solution such as Travis or CircleCI. |
-| Verify code whitespace matches team style | Code formatter, such as YAPF (Python formatter) or gofmt (golang formatter) |
-| Identify unused imports or unused variables | Code linters, such as pyflakes (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
+| Verify the code builds | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
+| Verify automated tests pass | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
+| Verify code whitespace matches team style | Code formatter, such as [YAPF](https://github.com/google/yapf) (Python formatter) or [gofmt](https://golang.org/cmd/gofmt/) (golang formatter) |
+| Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
 
 Structure your code reviews so that the requests for review don't even go out until all the build checks pass. Code reviews are mentally taxing. Don't squander the limited mental stamina you have with mechanical checks like whether the line breaks are in the right place.
 
@@ -91,15 +92,37 @@ If you find yourself struggling to understand the code you're reviewing, that's 
 
 The exception is if the struggle is from a lack of familiarity with the language or the underlying libraries. In this case, you should take the time to understand the libraries. You can also consider asking the author to pull in an additional co-reviewer more familiar with the technologies involved, but make sure to keep learning about these technologies so that you can eventually handle these reviews on your own.
 
+## Give code reviews high priority
+
+If a teammate sends you a code review, it likely means that they are blocked on other work until your review is done. Sometimes  If they know to expect turnaround times of a few hours from you, they'll plan their work differently.
+
+I aim to start a code review within minutes of receiving it. One business day is the absolute longest turnaround time I will give a code review. If I expect it to take longer than that, I email the author letting them know and give them the option to reassign to a different reviewer.
+
+When you start code reviews immediately, you create a virtuous cycle, because the length of time the author has to wait for comments is purely a function of the size and complexity of the changes. This incentivizes authors to send small, narrowly scoped changelists. These types of changelists are easier and more pleasant for you to review, so you complete your reviews more quickly and the cycle continues.
+
+In contrast, if you sit on code review for a day or two regardless of review size or complexity, you incentivize the author to send you larger, more complex code reviews because otherwise it's going to take them forever to get all of their code through review.
+
 ## Never use the word 'you'
 
 This one is going to sound weird, but hear me out.
 
 Give  feedback about the code, not the coder.
 
-Don't address feedback to the author using the word "you" (you're only allowed to do it in blog posts *about* code reviews).
+Don't address feedback to the author using the word "you" (it is, however, okay to do this in blog posts).
+
+Good developers take pride in their work. It's great to find teammates who can detach their feelings from their work and graciously accept criticism as opportunity for growth, but it's rare to find developers who truly behave like that. Because the natural human reaction when someone criticises something you're proud of is to be protective and defensive.
+
+Even if you make a harmless comment like this can be interpreted in two ways:
 
 >You misspelled successfully
+
+"[Hey, good buddy,] you misspelled successfully [but I think you're still smart and it was probably just a typo.]"
+
+Of it could be:
+
+"You misspelled successfully, dumbass!"
+
+Think about an actor in a play. They get a lot of choice in how they interpret lines in a script. An actor could read the line, "You misspelled successfully," in a casual, non-judgmental way or they can read it in a harsh, accusatory way, where they all but punctuate the sentence with "dumbass." There's an actor in the author's head reading your feedback and if the author feels defensive, every line will be read in the meanest way the actor can muster.
 
 This sounds very accusatory.
 
@@ -117,7 +140,7 @@ When you say, "we" you reinforce the idea of a collective responsibility for the
 
 | With "you" | Without "you" |
 |---|----|
-| You didn't test for when the database is empty. | There aren't any tests for when the database is empty. |
+| You didn't test for when the database is empty. | We should add tests for the case where the database is empty. |
 | You misspelled 'successfully'. | Misspelling on "successfully" (missing an 's') |
 
 TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other person saying something like "**we** should do X" (e.g. "**we** should dig a hole").
@@ -126,7 +149,7 @@ TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other
 
 People tend to reduce politeness in code reviews, whereas you actually want to increase it. Err on the side of being annoyingly gentle. Most people would never say out loud to a co-worker, "You have to bring me that stapler," but a lot of code reviewers don't think twice about saying, "You have to move this class to a separate file."
 
-Instead, frame your feedback as requests. Compare these two commands:
+Instead, frame your feedback as requests. Compare this comment framed in two different ways:
 
 | Command | Request |
 |----|---|
@@ -148,9 +171,11 @@ You should have arguments about where to put the braces exactly once. If your te
 
 If your team or organization doesn't have a style guide, just start one. Google has some excellent [style guides](https://google.github.io/styleguide/) that are public and freely licensed. You can either create your style guide using a published style guide as the base, then defining team-specific deviations on top of it. Or you can just start from scratch in a wiki or Google Doc. I like to define my style guides as a Markdown file under source control. When I make changes, I designate an individual person to review, but I send the review as an FYI to my whole team so that they're aware of the style decision and they have an opportunity to object if they don't like the new rule.
 
+It saves time for both authors and reviewers if there's a defined style. It minimizes unpleasant style fights.
+
 ## Start high level and work your way down
 
-In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and refer your lower-level notes.
+In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
 
 The first reason is that there's a cost to every note. There's a time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. For the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their writing. But we agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive approaches the number of lines they wrote.
 
@@ -192,16 +217,6 @@ You should especially try to find ways to split up the changelist if the code is
 If you can pick a self-contained 75-line piece out of a 400, start out by asking the author if they'd mind splitting that out. This is good for two reasons. It lets you divide and conquer. You'd much rather review two 250-line code reviews than a 500 line CL, especially if the code is bad. Second, it gives the author positive momentum
 
 Ideally you should request a split at the beginning of the code review, but if you find yourself arguing endlessly about part of the code review, asking the author to split off an uncontroversial part of the changelist can be a way to ease tensions. Part of what's frustrating from the author's perspective if you're going back and forth about code review notes is that they feel like you're obstructing their progress. They probably have deadlines they're trying to hit and they might see you as obstructing those goals. If you split off a piece they can check in, you're making them feel good by showing that you can make tangible progress together.
-
-## Give code reviews high priority
-
-If a teammate sends you a code review, it likely means that they are blocked on other work until your review is done. Sometimes  If they know to expect turnaround times of a few hours from you, they'll plan their work differently.
-
-I aim to start a code review within minutes of receiving it. One business day is the absolute longest turnaround time I will give a code review. If I expect it to take longer than that, I email the author letting them know and give them the option to reassign to a different reviewer.
-
-When you start code reviews immediately, you create a virtuous cycle, because the length of time the author has to wait for comments is purely a function of the size and complexity of the changes. This incentivizes authors to send small, narrowly scoped changelists. These types of changelists are easier and more pleasant for you to review, so you complete your reviews more quickly and the cycle continues.
-
-In contrast, if you sit on code review for a day or two regardless of review size or complexity, you incentivize the author to send you larger, more complex code reviews because otherwise it's going to take them forever to get all of their code through review.
 
 ## Be extremely tolerant in pure housekeeping reviews
 
