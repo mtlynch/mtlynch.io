@@ -95,6 +95,7 @@ figure {
     &-left {
       flex-direction: column;
       margin: 0 1em 0 0;
+      display: table;
 
       a {
         z-index: 1;
@@ -111,6 +112,11 @@ figure {
       margin-right: 1em;
     }
   }
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
 }
 
 // More robust clearfix class than what is in theme
