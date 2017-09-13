@@ -12,11 +12,9 @@ tags:
 - docker
 ---
 
-In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB per month. This is a very competitive price, considering the same storage would cost $8.25 per month on Dropbox and $10 per month on Google Drive.
+In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB/month. By comparison, the same storage would cost $8.25 per month on Dropbox or $10 per month on Google Drive.
 
 {% include image.html file="nextcloud-complete.png" alt="Completed Nextcloud install" img_link=true %}
-
-Don't cancel your Dropbox subscription yet because this technology is still a bit flaky. In my tests, the app crashes quite a bit and sometimes loses entire files. But the technology is cool, so I wanted to share this tutorial to make it easy for you to try this out yourself.
 
 # Video tutorial
 
@@ -28,7 +26,7 @@ If you prefer video tutorials, I recommend you download the files in the ["Creat
 
 # Requirements
 
-This guide is aimed at **intermediate users**. Sia's integration with Nextcloud is still very flaky as of this writing, so if you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command line, it will be difficult for you to follow this guide.
+This guide is aimed at **intermediate users**. If you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command line, it will be difficult for you to follow this guide.
 
 {% include image.html file="bad-time.png" alt="You're gonna have a bad time" max_width="597px" class="align-center" %}
 
@@ -59,7 +57,7 @@ I use **Sia** in this solution to provide backend storage for the web app. I've 
 
 ## Nextcloud
 
-If you're familiar with Sia, you might be aware that Sia has its own graphical user interface, called [Sia-UI](https://github.com/NebulousLabs/Sia-UI). This UI is limited in functionality. Its main weakness is that it's a desktop app, so you can only access your files from a single computer. It also lacks support for viewing files, so if you have content like photos, video, or documents, you can't display them within Sia-UI. You have to copy them to a separate folder on your computer and view the files there.
+If you're familiar with Sia, you might be aware that Sia has its own graphical user interface, called [Sia-UI](https://github.com/NebulousLabs/Sia-UI). This UI is limited in functionality. Its main weakness is that it's a desktop app, so you can only access your files from a single computer. It doesn't support any media viewing, so if you want to view photos or video within your cloud storage, you have to copy the file to a folder on your local machine and open the copy.
 
 {% include image.html file="nextcloud-logo.png" alt="Nextcloud logo" max_width="260px" class="align-right" %}
 
@@ -121,7 +119,7 @@ Finally, `nextcloud-data:/var/www/html` allows Nextcloud to persist its configur
 
 This is the Dockerfile for Sia. It creates a Docker container starting from the barebones Debian Jessie build of Linux. It then downloads the latest release of Sia (which is 1.3.0 as of this writing), unzips it, and runs `siad`, the Sia server daemon. The `--modules gctwr` flag loads only the Sia modules you need for renting Sia storage. The `--sia-directory /mnt/sia-data` flag ensures that Sia uses the persistent volume specified in `docker-compose.yml`.
 
-The confusing part of this Dockerfile is the presence of `socat` and the `--api-addr localhost:8000` flag. [Despite my best efforts](https://github.com/NebulousLabs/Sia/issues/1386), the Sia developers refuse to allow `siad` to bind to non-localhost ports, even though this breaks Docker scenarios. As a workaround, this tutorial configures Sia to bind to `localhost:8000`. The `socat` then binds to the non-localhost 9980 port and forward traffic to `localhost:8000`. It's a bit clunky, but it works.
+The confusing part of this Dockerfile is the presence of `socat` and the `--api-addr localhost:8000` flag. [Despite my best efforts](https://github.com/NebulousLabs/Sia/issues/1386), the Sia developers refuse to allow `siad` to bind to non-localhost ports, even though this breaks Docker scenarios. As a workaround, this tutorial configures Sia to bind to `localhost:8000`. `socat` then binds to the non-localhost 9980 port and forward traffic to `localhost:8000`. It's a bit clunky, but it works.
 
 ### Dockerfile.nextcloud
 
@@ -392,16 +390,6 @@ If you try to download or view a file that you deleted from `sia-uploads`, the S
 
 ## Limitations
 
-### Instability and data loss
-
-This is a big one. In my tests, the Sia Nextcloud integration does not appear to be ready for real world use quite yet.
-
-When I tried uploading a few ~100 MB files simultaneously, the Sia server instance crashed. I restarted to find that Sia had lost several files that it had previously uploaded to full 3x redundancy. I was able to reproduce this behavior consistently. It's not clear whether this is a bug in the Sia server itself or a bug that is limited to the Sia Nextcloud app.
-
-I've filed a bug for this issue in the Sia-Nextcloud Github repo, so you can check the latest status there:
-
-* [#14: Sia-Nextcloud crashes siad, loses files](https://github.com/NebulousLabs/Sia-Nextcloud/issues/14)
-
 ### No subfolders
 
 While Sia natively allows users to create folders to organize their uploads, the Sia Nextcloud app [does not support folder creation](https://github.com/NebulousLabs/Sia-Nextcloud/issues/13). The web app presents the option, but if you try adding a folder, it just says, "Could not create folder."
@@ -414,6 +402,6 @@ The Nextcloud app includes a barebones text editor for editing plaintext files w
 
 This tutorial showed you how to deploy your own instance of Nextcloud and add low-cost file backup with Sia.
 
-As I demonstrated, the software is not yet stable. I suspect that the installation complexity limited the attention that the Sia Nextcloud app received from the community. I hope that this tutorial makes it easier for people to begin using Sia with Nextcloud and to continue improving its stability. It is very close to being an excellent solution.
-
 I expect more and more apps to integrate with Sia in the coming months. A few days ago, [Sia announced](https://blog.sia.tech/introducing-s3-style-file-sharing-for-sia-through-the-new-minio-integration-bb880af2366a) a new integration with [Minio](https://www.minio.io/), a distributed object storage server. The techniques you used in this tutorial will help you deploy other apps and integrate them with Sia.
+
+* **Update** (2017-09-13): The Minio integration is [almost complete](https://github.com/minio/minio/pull/4802).
