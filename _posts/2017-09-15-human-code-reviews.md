@@ -31,6 +31,8 @@ Before we go any further, let's make some assumptions explicit. This advice appl
 
 * Your co-workers are humans
   * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
+* You are reviewing code for people you will work with regularly
+  * A lot of these suggestions are based on the assumption that you're working with your teammates on a regular basis. If you work on a project with a lot of drive-by submissions, this might not work the same.
 * You are in an organization that agrees code reviews are a good idea.
   * These suggestions will work best on a team where no code is checked in until a reviewer approves it, but they should still work in any code review.
 * Code reviews are written and asynchronous.
