@@ -1,0 +1,11 @@
+// Utility classes
+
+// More robust clearfix class than what is in theme
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}

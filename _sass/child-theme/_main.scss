@@ -1,0 +1,21 @@
+/*!
+ * Child theme for mtlynch.io 
+ * Includes the custom classes developed outside of the parent theme
+ */
+
+// Core variables and mixins
+@import "helpers/mixins";
+@import "helpers/util";
+
+// Including base scss eleemnts
+@import 'base/typography';
+@import 'base/base';
+
+// Including layouts
+@import 'layouts/article';
+
+// Including individual components
+@import 'components/anchors';
+@import 'components/code-block';
+@import 'components/figures';
+@import 'components/subscription';

@@ -1,0 +1,35 @@
+// Figure tag classes
+
+figure {
+  &.align {
+    &-right,
+    &-left {
+      flex-direction: column;
+      margin: 0 1em 0 0;
+      display: table;
+
+      a {
+        z-index: 1;
+      }
+    }
+
+    &-right {
+      float: right;
+      margin-left: 1em;
+    }
+
+    &-left {
+      float: left;
+      margin-right: 1em;
+    }
+  }
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
+.img-border {
+  @include border(1px, solid, grey);
+}

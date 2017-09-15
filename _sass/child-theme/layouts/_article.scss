@@ -1,0 +1,43 @@
+// Blog article layout classes
+
+.page__content {
+  p, li {
+    font-size: 0.9em;
+  }
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0;
+  }
+}
+
+.archive__item {
+  .page__date {
+    margin: 10px 0;
+  }
+
+  .page__meta {
+    display: none
+  }
+}
+
+.page__inner-wrap {
+  header {
+    .page__meta {
+      margin: 10px 0;
+    }
+
+    .page__date {
+      margin: 0;
+    }
+  }
+
+  footer {
+    .page__date {
+      display: none;
+    }
+  }
+}
