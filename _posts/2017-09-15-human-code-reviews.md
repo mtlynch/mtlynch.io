@@ -8,34 +8,30 @@ share: true
 related: true
 ---
 
-I love code reviews. They are my favorite part of working on a team with other developers.
+I love code reviews. They are my favorite part of working with other developers. Unfortunately, there are not many books or articles about how to do code reviews well. The articles that do exist tend to be wrongheaded, based on the premise that code reviews ae a way of finding bugs.
 
+TODO: Is it that code reviews aren't about finding bugs or is it that articles are focusing on the wrong thing?
 
-A lot of articles appear to be written in the future where your co-workers are robots and pointing out errors warms their cold robot hearts. Or they assume that your co-workers are idiots and you have to constantly be on them to prevent their next idiot mistake. It's like reading a guide to a healthy marriage that's all about how to identify your spouse's flaws.
+It's wonderful to identify bugs as early as possible, but **code reviews are not about finding bugs**.  At its heart, source code is a way of expressing ideas to other developers (TODO: rewrite). When you review code, you are assessing how well it expresses its ideas to you. If you approach your code reviews as a way of catching the most bugs, you're missing out on most of the value. As the code reviewer, you not there to catch them out on errors; you're there to help them make their code excellent.
 
-I think most articles about code reviews miss the point because **code reviews are not about finding bugs**. If you approach a code review trying to catch the most bugs, you will lose out on most of the value and fun of code reviews.
+A lot of articles appear to be written in the future where your co-workers are robots and pointing out errors warms their cold robot hearts. It would be just as ridiculous to read a guide to a healthy marriage that's all about how to identify your spouse's flaws.
 
-At its heart, source code is a way of expressing ideas to other developers. When you review code, you are assessing how well it expresses its ideas to you.
-
-You're not there to catch them out on errors. You're there to make the code excellent and help them.
-
-I don't start thinking about correctness until I feel the code is easy to reason about
-
+In this article, I'll discuss some techniques for reviewing in a way that takes into account the fact that you're all humans.
 
 * TOC
 {:toc}
 
 # Assumptions
 
-Before we go any further, let's make some assumptions explicit. This advice applies to code reviews generally, but it will work best in an environment where the following conditions hold true:
+The techniques I describe below will apply to code reviews generally, but it will work *best* in an environment where the following conditions are true:
 
 * Your co-workers are humans
   * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
 * You are reviewing code for people you will work with regularly
-  * A lot of these suggestions are based on the assumption that you're working with your teammates on a regular basis. If you work on a project with a lot of drive-by submissions, this might not work the same.
-* You are in an organization that agrees code reviews are a good idea.
-  * These suggestions will work best on a team where no code is checked in until a reviewer approves it, but they should still work in any code review.
-* Code reviews are written and asynchronous.
+  * Your relationship with your teammate is a big component of a code review. Some of these techniques assume you're interested in preserving or strengthening these relationships. For a one-off review (e.g. a drive-by patch to an open source project), the relationship-preservation aspects of these techniques will not be as relevant.
+* You are on a team that requires code review approval before checking in any code.
+* You review code privately, at your own pace.
+  * For some people, a "code review" is where the author and their reviewers get together in person to all read the code together and argue about it. In this article, I'm using the term "code review" to refer to a process where the author sends their code to the reviewer, the reviewer reads it on their own, at their own pace, then sends their notes back to the author. This loop continues until the reviewer approves the change. You can use whatever code review tools you want, even something as simple as emails. The important part is that each participant is working at their own pace.
 * Code reviews are not complete until a reviewer explicitly grants approval.
 * You have a non-bad relationship with the author
   * These techniques will work with teammates you have no history with and will work especially well with teammates whom you get along with well. If you're reviewing code for someone who hates you, you have team dynamics problems that code review techniques can't fix.
@@ -80,11 +76,21 @@ This saves time because the author can identify simple issues before they even i
 
 It's obviously not possible to build a comprehensive "checklist" of every possible issue the reviewer is checking for, but if you hypothetically had one, you could probably eliminate 30% of the potential issues.
 
+## Settle petty style arguments with a style guide
+
+You should have arguments about where to put the braces exactly once. If your team or organization doesn't have . Religious arguments about tabs vs. spaces or where to put curly braces are unpleasant time wasters. You should have these arguments exactly once, then codify the decision in your style guide.
+
+If your team or organization doesn't have a style guide, just start one. Google has some excellent [style guides](https://google.github.io/styleguide/) that are public and freely licensed. You can either create your style guide using a published style guide as the base, then defining team-specific deviations on top of it. Or you can just start from scratch in a wiki or Google Doc. I like to define my style guides as a Markdown file under source control. When I make changes, I designate an individual person to review, but I send the review as an FYI to my whole team so that they're aware of the style decision and they have an opportunity to object if they don't like the new rule.
+
+It saves time for both authors and reviewers if there's a defined style. It minimizes unpleasant style fights.
+
 ## Focus on readability, not correctness
 
 Your job as code reviewer is to ensure that the code is easy to read and reason about. When I review code, the following quote often comes to mind:
 
 >There are two ways of constructing a software design: One way is to make it so simple that there are *obviously* no deficiencies, and the other way is to make it so complicated that there are no *obvious* deficiencies. <br>-Tony Hoare
+
+Readability is not the same thing as style. You can automate checks on most style conventions. You can't automate assessments of readability.
 
 If you focus on helping the author make their code easy to understand, correctness will naturally follow. Instead of trying to think of edge cases that would break their code, read their unit tests. If you can think of edge cases that are not covered in the author's unit tests, don't waste mental energy testing the code in your head to see if your edge case would break their code. Just ask them to write the unit test. Did the *author* think of all the edge cases? If it's hard to write unit tests for the edge cases, that's an indication that they need to refactor their code to make their changes easier to test. My code reviews often expose bugs, but I am generally not the one to find them. I'll push the author to either write additional test cases or break up their code to make it easier to test and then they find the bugs themselves.
 
@@ -103,6 +109,14 @@ I aim to start a code review within minutes of receiving it. One business day is
 When you start code reviews immediately, you create a virtuous cycle, because the length of time the author has to wait for comments is purely a function of the size and complexity of the changes. This incentivizes authors to send small, narrowly scoped changelists. These types of changelists are easier and more pleasant for you to review, so you complete your reviews more quickly and the cycle continues.
 
 In contrast, if you sit on code review for a day or two regardless of review size or complexity, you incentivize the author to send you larger, more complex code reviews because otherwise it's going to take them forever to get all of their code through review.
+
+## Start high level and work your way down
+
+In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
+
+The first reason is that there's a cost to every note. There's a time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. For the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their writing. But we agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive approaches the number of lines they wrote.
+
+Low level notes might become moot once they 
 
 ## Never use the word 'you'
 
@@ -167,22 +181,6 @@ If the author has to push back, compare how combative the conversation seems dep
 
 See how ~~easy it is to validate your argument with imaginary scenarios~~ much more civil the conversation becomes when code review notes are framed as requests?
 
-## Use a style guide
-
-You should have arguments about where to put the braces exactly once. If your team or organization doesn't have . Religious arguments about tabs vs. spaces or where to put curly braces are unpleasant time wasters. You should have these arguments exactly once, then codify the decision in your style guide.
-
-If your team or organization doesn't have a style guide, just start one. Google has some excellent [style guides](https://google.github.io/styleguide/) that are public and freely licensed. You can either create your style guide using a published style guide as the base, then defining team-specific deviations on top of it. Or you can just start from scratch in a wiki or Google Doc. I like to define my style guides as a Markdown file under source control. When I make changes, I designate an individual person to review, but I send the review as an FYI to my whole team so that they're aware of the style decision and they have an opportunity to object if they don't like the new rule.
-
-It saves time for both authors and reviewers if there's a defined style. It minimizes unpleasant style fights.
-
-## Start high level and work your way down
-
-In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
-
-The first reason is that there's a cost to every note. There's a time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. For the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their writing. But we agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive approaches the number of lines they wrote.
-
-Low level notes might become moot once they 
-
 ## Limit feedback on repeated patterns
 
 If there's a repeated pattern, don't flag it every single time. As discussed in the [previous section](#start-high-level and-work-your-way-down), there is a cost
@@ -237,6 +235,10 @@ You know the expression, "Don't look a gift horse in the mouth?" This is worse t
 
 When you receive a pure housekeeping change to review, ask yourself, "Does this change make the code better than it was before?" If the answer is yes, give immediate approval. Add some notes, but make it clear that they are optional. If you really care about further improvements, you can write them yourself after your teammate has checked in their code. If you are nitpicky or demanding in your review for pure housekeeping changes, you will leave your teammate feeling like no good deed goes unpunished and it will discourage them from making these types of contributions in the future.
 
+## Offer both praise and critiques
+
+This looks much better!
+
 ## Give approval when remaining fixes are trivial
 
 Some reviewers have the misconception that they should not approve a code review until they've witnessed fixes for every last issue they've raised. This is poor practice and wastes time for both the reviewer and the author. Giving approval means that you trust them to fix the remaining issues. Withholding LGTM wastes time for both the author and the reviewer. If your only remaining note is that they're missing a period at the end of a comment, you're a jerk if you withold your LGTM over that.
@@ -246,7 +248,9 @@ Some reviewers have the misconception that they should not approve a code review
 
 This doesn't always go perfectly. I'd say that 5% of the time, the author either misinterprets or completely misses a note I gave alongside my approval. To defend against this, I simply look at the changes the author makes after my approval notes. In the rare case that something needs fixing, I either follow up with them and let them know they missed the note or I just fix it myself and send it to them for review.
 
-## When you feel a stalemate coming, eject
+## Look for early warnings of a stalemate
+
+In my entire software development career, I've only ever had one code review reach stalemate. It's kind of like being involved in a fistfight at the office. Even if you weren't the aggressor, it looks bad that you were involved at all.
 
 Some indications that you're headed for a stalemate:
 
@@ -256,4 +260,6 @@ Some indications that you're headed for a stalemate:
 
 It may mean that you need  a design review.
 
-This should be exceedingly rare. In my entire software development career, I've only ever had one code review reach stalemate.
+This should be exceedingly rare.
+
+## In case of stalemate, eject
