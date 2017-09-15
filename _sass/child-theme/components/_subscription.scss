@@ -1,0 +1,87 @@
+// Mailing List Form Classes
+
+.sbscrb_cont {
+  background: #f9f9f9;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  line-height: 1.5em;
+  overflow: hidden;
+  color: #666;
+  font-size: 16px;
+  @include border(1px, solid, #d1d1d1);
+  @include box-shadow(none);
+  clear: both;
+  margin: 20px 0px;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+
+  h3 {
+    text-align: center;
+    margin: 0px 0px 10px;
+    font-size: 28px;
+  }
+}
+
+.sbscrb_cont, .sbscrb_cont * {
+  @include border-box();
+}
+
+.sbscrb_cont .sbscrb_cont_inner {
+  width: 100%;
+  float: left;
+  padding: 5%;
+}
+
+.ck_errorArea {
+  display: none; /* not used, but may need for inline form validation */
+}
+
+.sbscrb_cont input[type="text"], .sbscrb_cont input[type="email"] {
+  width: 100%;
+  float: none;
+  margin-top: 5px;
+  font-size: 18px;
+  padding: 10px 8px;
+  @include border(1px, solid, #d6d6d6); /* stroke */
+  @include border-radius(3px);
+  background-color: #fff; /* layer fill content */
+  margin-bottom: 5px;
+  height: 42px;
+
+  @include breakpoint($small) {
+    float: left;
+    margin: 0 2% 0 0;
+    width: 68%;
+  }
+}
+
+.sbscrb_cont input[type="text"]:focus, .sbscrb_cont input[type="email"]:focus {
+  outline: none;
+  border-color: #aaa;
+}
+
+.sbscrb_cont .subscribe_btn {
+  width: 100%;
+  float: none;
+  margin-top: 5px;
+  color: #fff;
+  padding:  11px 0px;
+  font-size: 18px;
+  background: #0d6db8;
+  @include border-radius(3px);
+  cursor: pointer;
+  border: none;
+  text-shadow: none;
+  height: 42px;
+
+  @include breakpoint($small) {
+    float: left;
+    margin: 0px;
+    width: 30%;
+  }
+}
+
+.honeypot {
+  position: absolute;
+  left: -5000px;
+}
