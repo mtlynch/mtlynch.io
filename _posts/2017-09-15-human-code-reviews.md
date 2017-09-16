@@ -118,6 +118,10 @@ The first reason is that there's a cost to every note. There's a time cost of yo
 
 Low level notes might become moot once they 
 
+## Write code for them
+
+Especially as you develop a relationship with a teammate, you need to offer something to make them happy they used you for a code review.
+
 ## Never use the word 'you'
 
 This one is going to sound weird, but hear me out.
