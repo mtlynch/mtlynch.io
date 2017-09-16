@@ -12,6 +12,8 @@ mdl _posts _pages --style _linter/markdown-linter-style.rb
 htmlproofer_args_extra=""
 if [ "$1" = "--quick" ]; then
   htmlproofer_args_extra="--disable-external"
+else
+  htmlproofer_args_extra="--check-external-hash"
 fi
 
 # Run HTMLProofer
@@ -21,6 +23,8 @@ BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
 bundle exec htmlproofer ./_site \
   --only-4xx \
   --check-html \
+  --check-opengraph \
   --allow-hash-href \
+  --empty-alt-ignore \
   --url-ignore "/vimeo.com/" \
   "$htmlproofer_args_extra"
