@@ -1,6 +1,8 @@
 ---
 title: Building a Homelab VM Server
 date: '2017-05-07 00:00:00 -04:00'
+header:
+  teaser: images/resized/2017-05-07-building-a-vm-homelab/480/vm-server-parts.jpg
 tags:
 - virtualization
 - homelab

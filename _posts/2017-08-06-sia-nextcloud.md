@@ -6,6 +6,8 @@ read_time: true
 comments: true
 share: true
 related: true
+header:
+  teaser: images/resized/2017-08-06-sia-nextcloud/480/nextcloud-complete.png
 tags:
 - sia
 - nextcloud
