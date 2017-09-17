@@ -8,13 +8,13 @@ share: true
 related: true
 ---
 
-I love code reviews. They are my favorite part of working with other developers. Unfortunately, there are not many books or articles about how to do code reviews well. The articles that do exist tend to be wrongheaded, based on the premise that code reviews ae a way of finding bugs.
+I love code reviews. They are my favorite part of working with other developers. Unfortunately, most of the articles about code reviews focus solely on the easy part of code reviews: finding bugs.
 
-TODO: Is it that code reviews aren't about finding bugs or is it that articles are focusing on the wrong thing?
+I can only assume these articles were written in the future, where your teammates are robots. In that world, your teammates send you code that they believe is high quality, and you give them a long list of reasons why it's not. This list warms their cold, robot hearts, as it brings them one step closer to eliminating the need for you as the sole human on the team.
 
-It's wonderful to identify bugs as early as possible, but **code reviews are not about finding bugs**.  At its heart, source code is a way of expressing ideas to other developers (TODO: rewrite). When you review code, you are assessing how well it expresses its ideas to you. If you approach your code reviews as a way of catching the most bugs, you're missing out on most of the value. As the code reviewer, you not there to catch them out on errors; you're there to help them make their code excellent.
+If, however, you work on a development team composed of humans, code reviews are more complicated than simply finding flaws in your co-workers' code and dutifully reporting them. and you want to improve your code review skills when reviewing their code, this article is for you. I'll discuss practical techniques for improving the code review process. Some of these are mechanical, such. Some of these are more touchy-feely, like delivering tough criticism in a way that minimizes tension between you and your teammate.
 
-A lot of articles appear to be written in the future where your co-workers are robots and pointing out errors warms their cold robot hearts. It would be just as ridiculous to read a guide to a healthy marriage that's all about how to identify your spouse's flaws.
+In this world, you design your code reviews to maximize the number of "defects" you identify through code review. That's A lot of articles appear to be written in the future where your co-workers are robots and pointing out errors warms their cold robot hearts. It would be just as ridiculous to read a guide to a healthy marriage that's all about how to identify your spouse's flaws.
 
 In this article, I'll discuss some techniques for reviewing in a way that takes into account the fact that you're all humans.
 
@@ -50,25 +50,48 @@ The techniques I describe below will apply to code reviews generally, but it wil
 * Team produces high quality code
 * Minimize dev cost
 
-
 # Why is this hard?
 
 Programmers tend to overestimate the quality of the code they write. If a programmer sends you a changelist that they think is awesome, and you write them back with list of reasons why it's not, that's a sensitive message to get across.
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br>-Philip Greenspun, co-founder of ArsDigita
 
+# tl;dr: Show Empathy
+
+The only article I could find that I think gets code reviews right was, "Humanizing Peer Reviews," by Karl Wiegers. The "reviewer should have compassion and sensitivity for [their] colleagues."
+
+The overarching theme behind all the techniques I describe below is about empathizing with the author. If you were in their position, how would you like to receive feedback? What sort of review process helps you do your best work?
+
 # Techniques
 
 ## Let robots do the boring parts
 
-Developer time is limited and developer mental stamina even moreso. Don't squander these precious resources on code review tasks that you can automate.
+Your time as a developer is scarce. Your mental stamina is scarcer still. Reading code someone else wrote is mentally taxing and requires a high degree of focus. Don't waste any of your mental energy in a code review doing things that you can automate, especially when the automation generally outperforms humans.
+
+A code review comment like, "This should be indented two more spaces," is a huge waste of time and mental effort. Let's compare the effort required for a human to point out whitespace errors as opposed to automating it:
+
+With a human reviewer:
+
+1. Reviewer searches for whitespace issues and finds incorrect indenting.
+1. Reviewer writes a note calling out the incorrect indentation.
+1. Reviewer re-reads their note to make sure that it's worded in a clear, non-accusatory way.
+1. Author reads the note.
+1. Author corrects the code indentation.
+
+With a formatting tool:
+
+1. N/A.
+
+The list is empty because the author uses a code editor that automatically formats the whitespace in their code every time they save a file. At worst, the author sends their code out for review and the continuous integration solution reports that the whitespace is incorrect, and the author fixes the issue without the reviewer ever having to notice.
 
 | Task | Automated solution |
 |-------|--------------------------|
 | Verify the code builds | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
 | Verify automated tests pass | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
-| Verify code whitespace matches team style | Code formatter, such as [YAPF](https://github.com/google/yapf) (Python formatter) or [gofmt](https://golang.org/cmd/gofmt/) (golang formatter) |
+| Verify code whitespace matches team style | Code formatter, such as [YAPF](https://github.com/google/yapf) (Python formatter) or [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) |
 | Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
+
+As the reviewer, you're able to delivery a better review because you can just completely stop thinking about the classes of issues that your tools are checking. You limit your search to things that actually matter, like weakness in the code's readability or flaws in its functionality.
 
 Structure your code reviews so that the requests for review don't even go out until all the build checks pass. Code reviews are mentally taxing. Don't squander the limited mental stamina you have with mechanical checks like whether the line breaks are in the right place.
 
@@ -84,23 +107,7 @@ If your team or organization doesn't have a style guide, just start one. Google 
 
 It saves time for both authors and reviewers if there's a defined style. It minimizes unpleasant style fights.
 
-## Focus on readability, not correctness
-
-Your job as code reviewer is to ensure that the code is easy to read and reason about. When I review code, the following quote often comes to mind:
-
->There are two ways of constructing a software design: One way is to make it so simple that there are *obviously* no deficiencies, and the other way is to make it so complicated that there are no *obvious* deficiencies. <br>-Tony Hoare
-
-Readability is not the same thing as style. You can automate checks on most style conventions. You can't automate assessments of readability.
-
-If you focus on helping the author make their code easy to understand, correctness will naturally follow. Instead of trying to think of edge cases that would break their code, read their unit tests. If you can think of edge cases that are not covered in the author's unit tests, don't waste mental energy testing the code in your head to see if your edge case would break their code. Just ask them to write the unit test. Did the *author* think of all the edge cases? If it's hard to write unit tests for the edge cases, that's an indication that they need to refactor their code to make their changes easier to test. My code reviews often expose bugs, but I am generally not the one to find them. I'll push the author to either write additional test cases or break up their code to make it easier to test and then they find the bugs themselves.
-
-**Don't be embarrassed to admit you have trouble understanding the code.**
-
-If you find yourself struggling to understand the code you're reviewing, that's a big red flag. Develeopers, especially junior developers, can be reluctant to admit they don't understand the code. Don't just think to yourself, "It's my fault for not understanding this because I'm not a very strong programmer." All source code should be intelligible to the most junior developer responsible for maintaining it. If the code breaks and the original author has left your team or they're on vacation that day, you, as the code reviewer, are first in line to fix the issue.  Never just give the benefit of the doubt and sign off on unintelligible code with the assumption that they know what they were doing.
-
-The exception is if the struggle is from a lack of familiarity with the language or the underlying libraries. In this case, you should take the time to understand the libraries. You can also consider asking the author to pull in an additional co-reviewer more familiar with the technologies involved, but make sure to keep learning about these technologies so that you can eventually handle these reviews on your own.
-
-## Give code reviews high priority
+## Start reviewing immediately
 
 If a teammate sends you a code review, it likely means that they are blocked on other work until your review is done. Sometimes  If they know to expect turnaround times of a few hours from you, they'll plan their work differently.
 
@@ -134,13 +141,12 @@ Good developers take pride in their work. It's great to find teammates who can d
 
 Even if you make a harmless comment like this can be interpreted in two ways:
 
->You misspelled successfully
+>You misspelled "successfully"
 
-"[Hey, good buddy,] you misspelled successfully [but I think you're still smart and it was probably just a typo.]"
+There are a couple ways the reader could interpret this:
 
-Of it could be:
+| "[Hey, good buddy,] you misspelled successfully [but I think you're still smart and it was probably just a typo.]" | "You misspelled successfully[, dumbass]" | 
 
-"You misspelled successfully, dumbass!"
 
 Think about an actor in a play. They get a lot of choice in how they interpret lines in a script. An actor could read the line, "You misspelled successfully," in a casual, non-judgmental way or they can read it in a harsh, accusatory way, where they all but punctuate the sentence with "dumbass." There's an actor in the author's head reading your feedback and if the author feels defensive, every line will be read in the meanest way the actor can muster.
 
@@ -160,7 +166,7 @@ When you say, "we" you reinforce the idea of a collective responsibility for the
 
 | With "you" | Without "you" |
 |---|----|
-| You didn't test for when the database is empty. | We should add tests for the case where the database is empty. |
+| You didn't test for correctness when the database is empty. | We should add tests for the case where the database is empty. |
 | You misspelled 'successfully'. | Misspelling on "successfully" (missing an 's') |
 
 TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other person saying something like "**we** should do X" (e.g. "**we** should dig a hole").
