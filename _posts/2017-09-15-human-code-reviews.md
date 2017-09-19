@@ -10,7 +10,7 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
-I love code reviews. They are my favorite part of working with other developers. Unfortunately, most of the articles about code reviews focus solely on the easy part of code reviews: finding bugs.
+If you Google "code reviews", you'll find article after article describing code reviews from the perspective of finding bugs.
 
 I can only assume these articles were written in the future, where your teammates are robots. In that world, your teammates send you code that they believe is high quality, and you give them a long list of reasons why it's not. This list warms their cold, robot hearts, as it brings them one step closer to eliminating the need for you as the sole human on the team.
 
@@ -27,24 +27,27 @@ In this article, I'll discuss some techniques for reviewing in a way that takes 
 
 The techniques I describe below will apply to code reviews generally, but it will work *best* in an environment where the following conditions are true:
 
-* Your co-workers are humans
+* Your teammates are humans
   * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
 * You are reviewing code for people you will work with regularly
-  * Your relationship with your teammate is a big component of a code review. Some of these techniques assume you're interested in preserving or strengthening these relationships. For a one-off review (e.g. a drive-by patch to an open source project), the relationship-preservation aspects of these techniques will not be as relevant.
+  * You can't do an effective code review with someone who hates you, and a code review affords you many opportunities to make your teammate hate you in the future. Many of these techniques optimize for preserving good relationships with your teammates. For a one-off review (e.g. a drive-by patch to an open source project), the relationship-preservation aspects of these techniques will not be as relevant.
 * You are on a team that requires code review approval before checking in any code.
-  * If code reviews are optional or do not require explicit signoff, these techniques will still work, but you'll want to apply an even lighter touch to ensure that the author doesn't simply skip review or ignore your notes because they find them overwhelming.
-* You have a non-bad relationship with the author
-  * These techniques will work with teammates you have no history with and will work especially well with teammates whom you get along with well. If you're reviewing code for someone who hates you, you have team dynamics problems that code review techniques can't fix.
-  * If the reviewer doesn't respect the author, it will probably come across in the tone of review notes and they'll be too quick to assume that the author made a coding decision because they're a bad programmer. If the author doesn't respect the reviewer, they'll want to fight against all of their notes.
+  * If code reviews are optional or do not require explicit signoff, these techniques will still work, but you'll want to apply an even lighter touch to ensure that the author doesn't simply skip review or ignore your notes because they find them overwhelming or obstructive.
 * Your team uses unit tests
-  * There is a cultural expectation that functional changes to the code be accompanied by corresponding unit tests.
-  * You can do code reviews without unit tests, but it requires the reviewer to do a lot more mental work, so these techniques assume that the reviewer can gain confidence in the code's correctness by reading the unit tests or suggesting additional test cases.
+  * There is a cultural expectation on your team that functional changes to the code be accompanied by corresponding unit tests.
+  * You can do code reviews without unit tests, but it requires the reviewer to do a lot more mental work. These techniques assume that the reviewer can gain confidence in the code's correctness by reading the unit tests or suggesting additional test cases.
 
-## What is a code review?
+# What is a code review?
 
-**Changelist**. Github has popularized the idea of a "pull request" or which is a proposal for a series of changelists to be merged into a source repository.
+The term "code review" can mean different things in different oragnizations, so I'm going to define what I mean in this article by "code review."
 
-A code review consists of an **author**, the person writing the code and sending it for review, and a **reviewer**, the person who reads the code and decides when it is ready to be checked into the team's codebase. There can be more than one reviewer, but, for simplicity, we assume that you are the sole reviewer. The code review ends when the author gives **approval** on the changelist (commonly referred to as "LGTM" meaning "looks good to me").
+The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked into the team's codebase. There can be more than one reviewer, but, for simplicity, we assume in this article that you are the sole reviewer.
+
+Before the code review begins, the author must create a **changelist**. A changelist is a set of changes to source code that the author wants to check in to the team's shared code repository. In Github terms, a "pull request" is simply a UI to represent an author's request to check in a given changelist.
+
+A code review begins when the author sends their changelist to the reviewer requesting feedback. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer. The  author sends changes and the reviewer responds with feedback on those changes. Every code review has one or more rounds.
+
+The code review ends when the reviewer grants **approval** on the changes. This is also known as giving "LGTM", a shorthand for "looks good to me."
 
 1. Author creates a changelist.
 1. Author runs the change through continuous integration to verify it builds and passes all tests and linters.
@@ -53,18 +56,15 @@ A code review consists of an **author**, the person writing the code and sending
    1. If the reviewer gave check-in approval, author checks in their code.
    1. If the author did not give check-in approval, author goes back to step 2. This loop continues until the reviewer gives check-in approval.
 
-A code review happens in **rounds**. A "round" is one complete round-trip between the author and reviewer. This corresponds to steps 2-4 of the review process above. A round of review is the sequence of the reviewer giving the author notes and the reviewer responding with changes based on those notes. Every code review has one or more rounds. The final round occurs when the reviewer gives their approval on the changes.
-
-In this article, I'm using the term "code review" to refer to a process where the author sends their code to the reviewer, the reviewer reads it on their own, at their own pace, then sends their notes back to the author. This loop continues until the reviewer approves the change. You can use whatever code review tools you want, even something as simple as emails. The important part is that each participant is working at their own pace.
-
-For some people, a "code review" is where the author and their reviewers get together in person to all read the code at the same time so they can argue about it in person. This is a different style of code review than I'll be talking about in this article.
-{: .notice--info}
+TODO: Replace this with a diagram showing back and forth between author and reviewer.
 
 # Why is this hard?
 
 Programmers tend to overestimate the quality of the code they write. If a programmer sends you a changelist that they think is awesome, and you write them back with list of reasons why it's not, that's a sensitive message to get across.
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br>-Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2wzrjpa).
+
+You also have the drawback of communicating in text, which is prone to misinterpretation.
 
 # tl;dr: Show Empathy
 
@@ -101,13 +101,11 @@ The list is empty because the author uses a code editor that automatically forma
 | Verify code whitespace matches team style | Code formatter, such as [YAPF](https://github.com/google/yapf) (Python formatter) or [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) |
 | Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
 
-As the reviewer, you're able to delivery a better review because you can just completely stop thinking about the classes of issues that your tools are checking. You limit your search to things that actually matter, like weakness in the code's readability or flaws in its functionality.
+You have a finite amount of focus. When you reduce the classes of errors you have to be on the lookout for, it makes it easier to identify issues that are in scope. You limit your search to things that actually matter, like weakness in the code's readability or flaws in its functionality.
 
 Structure your code reviews so that the requests for review don't even go out until all the build checks pass. Code reviews are mentally taxing. Don't squander the limited mental stamina you have with mechanical checks like whether the line breaks are in the right place.
 
-This saves time because the author can identify simple issues before they even involve a second person for review. It also leads to better reviews because it narrows the universe of possibilities of issues that the reviewer is looking for.
-
-It's obviously not possible to build a comprehensive "checklist" of every possible issue the reviewer is checking for, but if you hypothetically had one, you could probably eliminate 30% of the potential issues.
+This also benefits the author because automated tests offer a faster feedback loop than a human reviewer. The faster the feedback loop, the easier it is to fix issues.
 
 ## Settle petty style arguments with a style guide
 
@@ -124,6 +122,8 @@ If a teammate sends you a code review, it likely means that they are blocked on 
 I aim to start a code review within minutes of receiving it. One business day is the absolute longest turnaround time I will give a code review. If I expect it to take longer than that, I email the author letting them know and give them the option to reassign to a different reviewer.
 
 When you start code reviews immediately, you create a virtuous cycle, because the length of time the author has to wait for comments is purely a function of the size and complexity of the changes. This incentivizes authors to send small, narrowly scoped changelists. These types of changelists are easier and more pleasant for you to review, so you complete your reviews more quickly and the cycle continues.
+
+Imagine if you implemented a new feature in 1000 lines of code. If your your reviewer can review a 200 line changelist in about 2 hours, you can break your feature into changelists of about 200 lines and get the whole feature checked in within a day or two. If, however, your teammate takes a day to review your code regardless of size, now it takes a week to get that feature checked in. You don't have a week to sit around, so you're incentivized to send code reviews closer to 500-600 lines so you can have a turnaround of around a day or two.
 
 In contrast, if you sit on code review for a day or two regardless of review size or complexity, you incentivize the author to send you larger, more complex code reviews because otherwise it's going to take them forever to get all of their code through review.
 
@@ -152,32 +152,32 @@ Volunteering code is especially useful if you and the author haven't reviewed co
 For example, imagine that you have a colleague who is not familiar with the [list comprehensions](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/) feature of Python. They send you a code review that included these lines:
 
 ```python
-absolute_urls = []
-for relative_url in relative_urls:
-  absolute_url = 'https://'
-	absolute_url += domain
-	absolute_url += relative_url
-  absolute_urls.append(absolute_url)
+urls = []
+for path in paths:
+  url = 'https://'
+  url += domain
+  url += path
+  urls.append(url)
 ```
 
-If your note is simply, "Can we simplify this with a list comprehension?" now they're annoyed because they have to spend 20 minutes looking up what a list comprehension is and understanding how to apply it to their code. The following note is much more palatable:
+If your note is simply, "Can we simplify this with a list comprehension?" now they're annoyed because they have to spend 20 minutes looking up list comprehensions figuring out how to apply them to their code. The following note is much more palatable:
 
 > Consider simplifying with a list comprehension like this:
 >```python
-absolute_urls = ['https://' + domain + x for x in relative_urls]
+urls = ['https://' + domain + path for path in paths]
 ```
 
-Reserve this technique for obvious, uncontroversial improvements. In the list comprehension example above, few Python developers would object to an 83% savings in code lines by using a built-in language feature. In contrast, if you write a lengthy code example to demonstrate a change "better" as a matter of taste (e.g. style changes), code examples can make you look pushy instead of generous.
+Reserve this technique for clear, uncontroversial improvements. In the list comprehension example above, few Python developers would object to an 83% reduction in lines of code. In contrast, if you write a lengthy code example to demonstrate a change that is "better" based on your own personal taste (e.g. style changes), code examples can make you look pushy instead of generous.
 
 Limit yourself to two or three code examples per review round. If you start writing their whole changelist for them, it can signal that you don't think they're capable of writing their own code.
 
 Code gifts can include:
 
 * Using a language or library feature to reduce code compelxity
- * This only works for libraries that are built-in or already part of the project. If your note is, "We can save 25 lines of code if we add a dependency on this library I found," that stops being a gift.
-* Adding unit test case they neglected to cover
+  * This only works for libraries that are already included in the project. If your note is, "We can save 25 lines of code if we add a dependency on this library I found," that's not a gift, but an argument about reducing dependencies vs. reducing lines of code.
+* Adding a unit test case the author neglected to cover
 * Refactoring a class or function to make it simpler
- * Use caution here, as simplicity can be subjective.
+  * Use caution here, as simplicity can be subjective.
 
 ## Never use the word 'you'
 
@@ -189,30 +189,25 @@ Don't address feedback to the author using the word "you."
 
 Good developers take pride in their work. It's great to find teammates who can detach their feelings from their work and graciously accept criticism as opportunity for growth, but it's rare to find developers who truly behave like that. Because the natural human reaction when someone criticises something you're proud of is to be protective and defensive.
 
-Even if you make a harmless comment like this can be interpreted in two ways:
+Even if you make a harmless comment like, "You misspelled 'successfully'," the author might interpret that note in two very different ways:
 
->You misspelled "successfully"
-
-There are a couple ways the reader could interpret this:
-
-| "[Hey, good buddy,] you misspelled successfully [but I think you're still smart and it was probably just a typo.]" | "You misspelled successfully[, dumbass]" | 
-
-
-Think about an actor in a play. They get a lot of choice in how they interpret lines in a script. An actor could read the line, "You misspelled successfully," in a casual, non-judgmental way or they can read it in a harsh, accusatory way, where they all but punctuate the sentence with "dumbass." There's an actor in the author's head reading your feedback and if the author feels defensive, every line will be read in the meanest way the actor can muster.
+* **Interpretation 1**: "[Hey, good buddy,] you misspelled successfully [but I think you're still smart and it was probably just a typo.]"
+* **Interpretation 2**: "You misspelled successfully[, dumbass]"
 
 This sounds very accusatory.
 
 >Can you change this variable name to something more descriptive, like `seconds_remaining`?
-
-One way I get around this is by using a shorthand that omits a specific subject from the sentence:
-
->Suggest renaming to something more descriptive, like `seconds_remaining`.
 
 Another way around "you" is to replace it with "we"
 
 >Can **we** change this variable name to something more descriptive, like `seconds_remaining`?
 
 When you say, "we" you reinforce the idea of a collective responsibility for the code. The author may move on to a different team or organization, but code sticks around for years and needs maintainers. I admit that in some cases, it sounds ridiculous.
+
+One way I get around this is by using a shorthand that drops pronouns from the sentence:
+
+>Suggest renaming to something more descriptive, like `seconds_remaining`.
+
 
 | With "you" | Without "you" |
 |---|----|
@@ -223,7 +218,7 @@ TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other
 
 ## Frame feedback as requests, not commands
 
-People tend to reduce politeness in code reviews, whereas you actually want to increase it. Err on the side of being annoyingly gentle. Most people would never say out loud to a co-worker, "You have to bring me that stapler," but a lot of code reviewers don't think twice about saying, "You have to move this class to a separate file."
+People tend to reduce politeness in code reviews, whereas you actually want to increase it. Err on the side of being annoyingly gentle. Most people would never say out loud to a co-worker, "Hand me that stapler then fetch me a soda," but I've seen numerous code reviewers frame feedback as similarly pushy commands during code reviews, "Move this class to a separate file."
 
 Instead, frame your feedback as requests. Compare this comment framed in two different ways:
 
@@ -243,7 +238,9 @@ See how much more civil the conversation becomes when ~~you validate your argume
 
 ## Limit feedback on repeated patterns
 
-If there's a repeated pattern, don't flag it every single time. As discussed in the [previous section](#start-high-level and-work-your-way-down), there is a cost to every note you give. You don't want to spend your time writing the same note 25 times and the author certainly doesn't want to read 25 duplicate notes. If you see a pattern repeat two or three times, it's fine to call that out each time. Anything more than that, just trust the author to understand they need to fix the pattern.
+If there's a repeated pattern, don't flag it every single time. As discussed in the [previous section](#start-high-level and-work-your-way-down), there is a cost to every note you give. You don't want to spend your time writing the same note 25 times, and the author certainly doesn't want to read 25 duplicate notes.
+
+If you see a pattern repeat two or three times, it's fine to call out each instance. Anything more than that, just ask the author to fix the pattern rather than flagging each individual instance.
 
 For exmple:
 
@@ -255,11 +252,15 @@ For exmple:
 
 ## Give notes based on principles, not opinion
 
+For example, instead of saying, "We should split this class into two," it is much better to say, "We should split this class into two, otherwise we're breaking the single responsibility [principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
+
+Grounding your notes in principles frames the discussion in a constructive way. If you cited a specific reason, like "We should make this function private to minimize the class' public interface," the author can't simply respond, "No, I prefer it my way," because you've provided a specific reason and they haven't.
+
 Try to give objective notes. If you say, "Refactor, this is ugly," you can't really have a discussion about this.  Things like "we can avoid duplicating logic if X."
 
-Software development is partly an art form, so sometimes it is hard to articulate exactly what's wrong with it in terms of established principles. In these cases, still try to keep it as objective as possible.  If you say, "I found this hard to understand," that's at least an objective statement.
+Software development is partly an art form, so sometimes it is hard to articulate exactly what's wrong with it in terms of established principles. In these cases, still try to keep it as objective as possible.  If you say, "I found this hard to understand," that's at least an objective statement, as opposed to "this is confusing," which is a value judgment and varies by person.
 
-Provide supporting evidence where possible in the form of links. The best thing to link to is your style guide. Top-voted StackOverflow answers can work too.
+Provide supporting evidence where possible in the form of links.  The best thing to link to is your style guide. You can also link to documentation or articles from the language or library authors that support your note. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you get from clearly authoritative documentation, the shakier your evidence becomes.
 
 ## Respect the scope of the review
 
@@ -272,10 +273,10 @@ The exception to this is when the change
 ```c++
 bool Document::ValidateAndSerialize(Handle* output_handle) {
   ValidationResult validation_result = validator_->Validate(&contents_);
-	if (ValidationResult == ValidationResult::Failure) {
-	  return false;
-	}
-	return serializer_->Serialize(&contents_);
+  if (ValidationResult == ValidationResult::Failure) {
+    return false;
+  }
+  return serializer_->Serialize(&contents_);
 }
 ```
 
@@ -331,7 +332,7 @@ Correspondingly, one of my biggest pet peeves is when I send out a pure refactor
 
 You know the expression, "Don't look a gift horse in the mouth?" This is worse than looking a gift horse in the mouth. This is receiving a gift horse, looking it in the mouth for *an hour*, then refusing to accept it until you receive a gift saddle as well.
 
-When you receive a pure housekeeping change to review, ask yourself, "Does this change make the code better than it was before?" If the answer is yes, give immediate approval. Add some notes, but make it clear that they are optional. If you really care about further improvements, you can write them yourself after your teammate has checked in their code. If you are nitpicky or demanding in your review for pure housekeeping changes, you will leave your teammate feeling like no good deed goes unpunished and it will discourage them from making these types of contributions in the future.
+When you receive a pure housekeeping change to review, ask yourself, "Does this change make the code better than it was before?" If the answer is yes, give immediate approval. Add some notes, but make it clear that they are optional. If you really care about further improvements, you can write them yourself after your teammate has checked in their code. If you are nitpicky or demanding in your review for pure housekeeping changes, you will leave your teammate feeling like no good deed goes unpunished, and it will discourage them from making these types of contributions in the future.
 
 ## Offer sincere praise
 
@@ -343,7 +344,7 @@ If you sent someone a changelist to review, wouldn't you like to hear comments l
 * "This is a really elegant solution. I never would have thought of this."
 * "Breaking up this function was a really good idea. It's so much simpler now."
 
-If you gave the author a tough note that required them to rewrite a lot of their code, show appreciation that they put in the work. I'll sometimes say things like, "This looks much better!" If you've given them feedback in the past about something and you see that they've made an effort to improve it, call this out as well.
+If you gave the author a tough note that required them to rewrite a lot of their code, show appreciation that they put in the work. I'll sometimes say things like, "This looks much better!" If you've given them feedback in the past about something and you see that they've made an effort to improve it, call this out as well. For example, if I've given notes in the past about documentation that's hard to read, then in a subsequent changelist, they send me documentation that's very clear, I'll usually say something like, "I like this function comment. It's very clear and thorough."
 
 If you're reviewing code for a junior developer or someone who is new to the team, be especially cognizant of opportunities to offer praise. These are the people for whom a code review is the most stressful, so offering positive reinforcement is a good way of showing you value them as a teammate.
 
@@ -351,7 +352,7 @@ If you're reviewing code for a junior developer or someone who is new to the tea
 
 Some reviewers have the misconception that they should not approve a code review until they've witnessed fixes for every last issue they've raised. This is poor practice and wastes time for both the reviewer and the author.
 
-Granting approval means that you trust the author to fix the remaining issues. Withholding LGTM wastes time for both the author and the reviewer. If your only remaining note is that they're missing a period at the end of a comment, you're a jerk if you withold your LGTM over that.
+Granting approval means that you trust the author to fix the remaining issues. Withholding LGTM wastes time for both the author and the reviewer. If your only remaining note is that they're missing a period at the end of a comment, you're either a control freak or you have such a low opinion of your teammate that you can't trust them to add a period to sentence without screwing something else up.
 
 * The change is so trivial that it's not worth the cost of an additional round of review.
 * The note  is optional and your approval stands whether or not they act on your note
