@@ -107,13 +107,25 @@ Structure your code reviews so that the requests for review don't even go out un
 
 This also benefits the author because automated tests offer a faster feedback loop than a human reviewer. The faster the feedback loop, the easier it is to fix issues.
 
-## Settle petty style arguments with a style guide
+## Settle style arguments with a style guide
 
-You should have arguments about where to put the braces exactly once. If your team or organization doesn't have . Religious arguments about tabs vs. spaces or where to put curly braces are unpleasant time wasters. You should have these arguments exactly once, then codify the decision in your style guide.
+Arguments about style are a waste of time in code reviews, so you should minimize these as much as possible. The best way to do this is by using a style guide.
 
-If your team or organization doesn't have a style guide, just start one. Google has some excellent [style guides](https://google.github.io/styleguide/) that are public and freely licensed. You can either create your style guide using a published style guide as the base, then defining team-specific deviations on top of it. Or you can just start from scratch in a wiki or Google Doc. I like to define my style guides as a Markdown file under source control. When I make changes, I designate an individual person to review, but I send the review as an FYI to my whole team so that they're aware of the style decision and they have an opportunity to object if they don't like the new rule.
+There are a few ways to create a style guide for your team:
 
-It saves time for both authors and reviewers if there's a defined style. It minimizes unpleasant style fights.
+**Option 1: Adopt an existing style guide**
+
+If you search online, you can find style guides that individuals or organizations have published. [Google's style guides](https://google.github.io/styleguide/) are the most well-known and highly-regarded.
+
+The benefit of using an existing style guide is that style guides require a lot of thought and effort, so you save yourself a lot of work by using existing work. The downside is that a style guide is optimized for organization that created it. For example, Google has tens of thousands of developers, so they are conservative about using newer language features that are not well understood across the company. If you're a four-person startup, using cutting-edge language features might be fine for you.
+
+**Option 2: Create your own style guide incrementally**
+
+Every time a style argument arises during a code review, discuss with your team to figure out a convention you can all agree on, then codify that decision in your style guide. If the issue ever comes up in the future, use your style guide to settle the argument. I prefer to keep my team's style guide as Markdown under source control (e.g. [GitHub pages](https://pages.github.com/)). That way, any changes to the style guide go through the normal code review process - someone has to explicitly approve the change, and everyone on the team has a chance to raise concerns. Wikis and Google Docs are valid alternatives as well.
+
+**Option 3: The hybrid approach**
+
+Combining options 1 and 2, you can adopt an existing style guide as your base, then maintain a local copy to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses the [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as its base, but adds conventions for issues the base guide doesn't cover and makes changes to some of the conventions defined in the base guide.
 
 ## Start reviewing immediately
 
@@ -139,7 +151,7 @@ Low level notes might become moot once the author makes revisions based on your 
 
 ## Be generous with code examples
 
-One thing that's difficult about being a code reviewer is that you're essentially assigning the author extra work. If the author sent you code for review, they presumably thought they were about ready to check it in and make progress on whatever feature they're working on. A slew of code review notes can help the author grow in the long term, but in the short term, they have a feature to ship and rigorous code review notes can make you seem like an impediment to that goal.
+One source of tension in a code reviewer is that every note is essentially assigning the author more work to do. If the author sent you code for review, they presumably thought they were about ready to check it in and make progress on whatever feature they're working on. A slew of code review notes can help the author grow in the long term, but in the short term, they have a feature to ship and rigorous code review notes can make you seem like an impediment to that goal.
 
 To combat this, look for opportunities to show the author that you're helping them. One gift that many developers like to receive is code.
 
@@ -252,7 +264,7 @@ For exmple:
 
 ## Give notes based on principles, not opinion
 
-For example, instead of saying, "We should split this class into two," it is much better to say, "We should split this class into two, otherwise we're breaking the single responsibility [principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
+For example, instead of saying, "We should split this class into two," it is much better to say, "We should split this class into two so that we can observe the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
 
 Grounding your notes in principles frames the discussion in a constructive way. If you cited a specific reason, like "We should make this function private to minimize the class' public interface," the author can't simply respond, "No, I prefer it my way," because you've provided a specific reason and they haven't.
 
