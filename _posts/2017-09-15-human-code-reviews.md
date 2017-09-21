@@ -27,13 +27,14 @@ In this article, I'll discuss some techniques for reviewing in a way that takes 
 
 The techniques I describe below will apply to code reviews generally, but it will work *best* in an environment where the following conditions are true:
 
-* Your teammates are humans
+* Your teammates are humans.
   * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
-* You are reviewing code for people you will work with regularly
-  * You can't do an effective code review with someone who hates you, and a code review affords you many opportunities to make your teammate hate you in the future. Many of these techniques optimize for preserving good relationships with your teammates. For a one-off review (e.g. a drive-by patch to an open source project), the relationship-preservation aspects of these techniques will not be as relevant.
+* You work with your teammates regularly.
+  * You can't do an effective code review with someone who hates you, and a code review affords you many opportunities to make your teammate hate you in the future.
+  * Many of these techniques optimize for preserving good relationships with your teammates. For a one-off review (e.g. a drive-by patch to an open source project), the relationship-preservation aspects of these techniques will not be as relevant.
 * You are on a team that requires code review approval before checking in any code.
   * If code reviews are optional or do not require explicit signoff, these techniques will still work, but you'll want to apply an even lighter touch to ensure that the author doesn't simply skip review or ignore your notes because they find them overwhelming or obstructive.
-* Your team uses unit tests
+* Your team writes unit tests.
   * There is a cultural expectation on your team that functional changes to the code be accompanied by corresponding unit tests.
   * You can do code reviews without unit tests, but it requires the reviewer to do a lot more mental work. These techniques assume that the reviewer can gain confidence in the code's correctness by reading the unit tests or suggesting additional test cases.
 
@@ -41,11 +42,11 @@ The techniques I describe below will apply to code reviews generally, but it wil
 
 The term "code review" can mean different things in different oragnizations, so I'm going to define what I mean in this article by "code review."
 
-The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked into the team's codebase. There can be more than one reviewer, but, for simplicity, we assume in this article that you are the sole reviewer.
+The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked into the team's codebase. A code review can sometimes have multiple reviewers, but in this article, I assume for simplicity that you are the sole reviewer.
 
 Before the code review begins, the author must create a **changelist**. A changelist is a set of changes to source code that the author wants to check in to the team's shared code repository. In Github terms, a "pull request" is simply a UI to represent an author's request to check in a given changelist.
 
-A code review begins when the author sends their changelist to the reviewer requesting feedback. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer. The  author sends changes and the reviewer responds with feedback on those changes. Every code review has one or more rounds.
+A code review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer. The  author sends changes and the reviewer responds with feedback on those changes. Every code review has one or more rounds.
 
 The code review ends when the reviewer grants **approval** on the changes. This is also known as giving "LGTM", a shorthand for "looks good to me."
 
@@ -125,7 +126,7 @@ Every time a style argument arises during a code review, discuss with your team 
 
 **Option 3: The hybrid approach**
 
-Combining options 1 and 2, you can adopt an existing style guide as your base, then maintain a local copy to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses the [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as its base, but adds conventions for issues the base guide doesn't cover and makes changes to some of the conventions defined in the base guide.
+Combining options 1 and 2, you can adopt an existing style guide as your base, then maintain a local copy to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses the [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as its base, but makes its own changes and additions on top of the base guide.
 
 ## Start reviewing immediately
 
@@ -139,11 +140,13 @@ Imagine if you implemented a new feature in 1000 lines of code. If your your rev
 
 In contrast, if you sit on code review for a day or two regardless of review size or complexity, you incentivize the author to send you larger, more complex code reviews because otherwise it's going to take them forever to get all of their code through review.
 
+The absolute maximum turnaround on a code review should be 24 hours. If you're struggling with a higher priority issue and can't review it in under 24 hours, let your teammate know and give them the opportunity to reassign to someone else. You should flip reviews sparingly. If you're forced to do this more than about once per month, reassess your team's pace so that you have time to sustain quality.
+
 ## Start high level and work your way down
 
 In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
 
-There's a cost to every note. There's a time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. For the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their skills as a developer. We agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive increases.
+There's a cost to every note. First, there's the time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. Then for the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their skills as a developer. We agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive increases.
 
 As a reviewer, you want to minimize the cost you impose with your notes.
 
@@ -151,7 +154,7 @@ Low level notes might become moot once the author makes revisions based on your 
 
 ## Be generous with code examples
 
-One source of tension in a code reviewer is that every note is essentially assigning the author more work to do. If the author sent you code for review, they presumably thought they were about ready to check it in and make progress on whatever feature they're working on. A slew of code review notes can help the author grow in the long term, but in the short term, they have a feature to ship and rigorous code review notes can make you seem like an impediment to that goal.
+One source of tension in a code review is that every note is essentially assigning the author more work to do. If the author sent you code for review, they presumably thought they were about ready to check it in and make progress on whatever feature they're working on. A slew of code review notes can help the author grow in the long term, but in the short term, they have a feature to ship and rigorous code review notes can make you seem like an impediment to that goal.
 
 To combat this, look for opportunities to show the author that you're helping them. One gift that many developers like to receive is code.
 
@@ -161,7 +164,7 @@ Especially as you develop a relationship with a teammate, you need to offer some
 
 Volunteering code is especially useful if you and the author haven't reviewed code for each other much or if the author is not accustomed to having their code reviewed at all. Even if you and the author have built trust reviewing each other's code, sometimes just writing code is easier than describing the code you'd like them to write. The idea has to go from your brain to their brain to the code and it can be mistranslated at any step. A code example is unambiguous and easy to copy/paste.
 
-For example, imagine that you have a colleague who is not familiar with the [list comprehensions](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/) feature of Python. They send you a code review that included these lines:
+For example, imagine that you have a colleague who is not familiar with the [list comprehensions](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/) feature of Python. They send you a code review that includes these lines:
 
 ```python
 urls = []
@@ -172,7 +175,9 @@ for path in paths:
   urls.append(url)
 ```
 
-If your note is simply, "Can we simplify this with a list comprehension?" now they're annoyed because they have to spend 20 minutes looking up list comprehensions figuring out how to apply them to their code. The following note is much more palatable:
+If your note is simply, "Can we simplify this with a list comprehension?" now they're annoyed because they have to spend 20 minutes looking up list comprehensions figuring out how to apply them to their code.
+
+They'd likely be much happier to receive a note like the following:
 
 > Consider simplifying with a list comprehension like this:
 >```python
@@ -250,29 +255,29 @@ See how much more civil the conversation becomes when ~~you validate your argume
 
 ## Limit feedback on repeated patterns
 
-If there's a repeated pattern, don't flag it every single time. As discussed in the [previous section](#start-high-level and-work-your-way-down), there is a cost to every note you give. You don't want to spend your time writing the same note 25 times, and the author certainly doesn't want to read 25 duplicate notes.
+If there's a repeated pattern, don't flag it every single time. As discussed in a [previous section](#start-high-level and-work-your-way-down), there is a cost to every note you give. You don't want to spend your time writing the same note 25 times, and the author certainly doesn't want to read 25 duplicate notes.
 
 If you see a pattern repeat two or three times, it's fine to call out each instance. Anything more than that, just ask the author to fix the pattern rather than flagging each individual instance.
 
 For exmple:
 
 >Style guide forbids abbreviations in names, so we should change `net_name` to `network_name`
->(ditto for `ip_addr` -> `ip_address`)
+>(ditto for `ip_addr` -> `ip_address` and `client_af` -> `client_address_family`)
 
 >Function names should have a an underscore if they're not part of the module's public interface.
 >(ditto throughout)
 
 ## Give notes based on principles, not opinion
 
-For example, instead of saying, "We should split this class into two," it is much better to say, "We should split this class into two so that we can observe the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
+For example, instead of saying, "We should split this class into two," it is much better to say, "We should split this class into two so that we're in line with the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
 
 Grounding your notes in principles frames the discussion in a constructive way. If you cited a specific reason, like "We should make this function private to minimize the class' public interface," the author can't simply respond, "No, I prefer it my way," because you've provided a specific reason and they haven't.
 
 Try to give objective notes. If you say, "Refactor, this is ugly," you can't really have a discussion about this.  Things like "we can avoid duplicating logic if X."
 
-Software development is partly an art form, so sometimes it is hard to articulate exactly what's wrong with it in terms of established principles. In these cases, still try to keep it as objective as possible.  If you say, "I found this hard to understand," that's at least an objective statement, as opposed to "this is confusing," which is a value judgment and varies by person.
+Software development is both a science and an art, so it's not always possible to articulate exactly what's wrong with a piece of code in terms of established principles. Sometimes things are just ugly or unintuitive and it's hard to pin down exactly why. In these cases, try to keep it as objective as possible.  If you say, "**I** found this hard to understand," that's at least an objective statement, as opposed to "**this is** confusing," which is a value judgment and varies by person.
 
-Provide supporting evidence where possible in the form of links.  The best thing to link to is your style guide. You can also link to documentation or articles from the language or library authors that support your note. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you get from clearly authoritative documentation, the shakier your evidence becomes.
+Provide supporting evidence where possible in the form of links.  The best thing to link to is your style guide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you get from clearly authoritative documentation, the shakier your evidence becomes.
 
 ## Respect the scope of the review
 
@@ -320,12 +325,12 @@ An F is for code that is either functionlly incorrect or so convoluted that you 
 
 ## Look for opportunities to split up large reviews
 
-If you receive a changelist that's more than 300-400 lines of code, push back and ask the author to split up the changelist. You should push back exponentially harder as the size increases from 400 lines of code. I personally refuse to review changelists that are over 1,000 lines.
+If you receive a changelist that's more than 300-400 lines of code, push back and ask the author to split up the changelist. You should push back exponentially harder as the size increases above 400 lines of code. I personally refuse to review changelists that are over 1,000 lines.
 
-Depending on the author, they may gripe about being asked to split a changelist because splitting a changelist is tedious. Try to help them out by suggesting logical boundaries where they can split the code. The easiest case is if the changelist has changes to multiple modules. If this is the case. In harder cases, look for the lowest layer of the changelist - functions or classes that are at a lower abstraction layer than the rest of the changes and ask to split those changes into their own changelist, then circle back to the changes on top of those later.
+Depending on the author, they may gripe about being asked to split a changelist because it's a very tedious task. Try to help them out by suggesting logical boundaries where they can split the code. The easiest case is if the changelist has changes to multiple modules. If this is the case. In harder cases, look for the lowest layer of the changelist - functions or classes that are at a lower abstraction layer than the rest of the changes and ask to split those changes into their own changelist, then circle back to the changes on top of those later.
 
 You should especially try to find ways to split up the changelist if the code is bad, like what you'd grade a D or F.
-If you can pick a self-contained 75-line piece out of a 400, start out by asking the author if they'd mind splitting that out. This is good for two reasons. It lets you divide and conquer. You'd much rather review two 250-line code reviews than a 500 line CL, especially if the code is bad. Second, it gives the author positive momentum
+If you can pick a self-contained 75-line piece out of a 400, start out by asking the author if they'd mind splitting that out. This is good for two reasons. It lets you divide and conquer. Bad code gets exponentially harder as its size increases, so you're much better off reviewing two bad 250-line changelists than a single 500-line changelist. Second, it gives the author positive momentum
 
 Ideally you should request a split at the beginning of the code review, but if you find yourself arguing endlessly about part of the code review, asking the author to split off an uncontroversial part of the changelist can be a way to ease tensions. Part of what's frustrating from the author's perspective if you're going back and forth about code review notes is that they feel like you're obstructing their progress. They probably have deadlines they're trying to hit and they might see you as obstructing those goals. If you split off a piece they can check in, you're making them feel good by showing that you can make tangible progress together.
 
@@ -344,7 +349,7 @@ Correspondingly, one of my biggest pet peeves is when I send out a pure refactor
 
 You know the expression, "Don't look a gift horse in the mouth?" This is worse than looking a gift horse in the mouth. This is receiving a gift horse, looking it in the mouth for *an hour*, then refusing to accept it until you receive a gift saddle as well.
 
-When you receive a pure housekeeping change to review, ask yourself, "Does this change make the code better than it was before?" If the answer is yes, give immediate approval. Add some notes, but make it clear that they are optional. If you really care about further improvements, you can write them yourself after your teammate has checked in their code. If you are nitpicky or demanding in your review for pure housekeeping changes, you will leave your teammate feeling like no good deed goes unpunished, and it will discourage them from making these types of contributions in the future.
+When a teammate asks you to review a pure housekeeping change, ask yourself, "Does this change make the code better than it was before?" If the answer is yes, give immediate approval. Add some notes, but make it clear that they are optional. If you really care about further improvements, you can write them yourself after your teammate has checked in their code. If you are nitpicky or demanding when reviewing pure housekeeping changes, you will leave your teammate feeling like no good deed goes unpunished, and it will discourage them from making these types of contributions in the future.
 
 ## Offer sincere praise
 
@@ -356,7 +361,9 @@ If you sent someone a changelist to review, wouldn't you like to hear comments l
 * "This is a really elegant solution. I never would have thought of this."
 * "Breaking up this function was a really good idea. It's so much simpler now."
 
-If you gave the author a tough note that required them to rewrite a lot of their code, show appreciation that they put in the work. I'll sometimes say things like, "This looks much better!" If you've given them feedback in the past about something and you see that they've made an effort to improve it, call this out as well. For example, if I've given notes in the past about documentation that's hard to read, then in a subsequent changelist, they send me documentation that's very clear, I'll usually say something like, "I like this function comment. It's very clear and thorough."
+If you gave the author a tough note that required them to rewrite a lot of their code, show appreciation that they put in the work. I'll sometimes say things like, "This looks much better!"
+
+If you've given them feedback on previous reviews about bad coding habits and you see in a new review that they've made an effort to correct those habits, call this out as well. For example, if I've given notes in the past about documentation that's hard to read, then in a subsequent changelist, they send me documentation that's very clear, I'll usually say something like, "I like this function comment. It's very clear and thorough."
 
 If you're reviewing code for a junior developer or someone who is new to the team, be especially cognizant of opportunities to offer praise. These are the people for whom a code review is the most stressful, so offering positive reinforcement is a good way of showing you value them as a teammate.
 
@@ -373,18 +380,22 @@ This doesn't always go perfectly. I'd say that 5% of the time, the author either
 
 ## Make every effort to avoid a stalemate
 
-The worst possible outcome of a code review is a stalemate. You reach a point where you refuse to sign off on the changelist and the author refuses to make the changes required to meet your requirements for signoff.
+The worst possible outcome of a code review is a stalemate: the point at which you refuse to sign off on the changelist without further changes and the author refuses to make those changes.
 
-In my entire software development career, I've only ever had one code review reach stalemate. It's kind of like being involved in a fistfight at the office. Even if you weren't the aggressor, it looks bad that you were involved at all.
+In my entire software development career, I've only ever had one code review reach stalemate, and it was not a good experience. It was extremely unpleasant at the time, and I took a reputation hit for it afterwards. It's kind of like being involved in a fistfight at the office. Even if you weren't the aggressor, it looks bad that you were involved at all.
 
 Some indications that you're headed for a stalemate:
 
-* The tone of discussion is becoming hostile
-* Your notes per review are not trending downward
+* The tone of discussion is becoming hostile.
+* Your notes per review are not trending downward.
   * In a normal review, the 
 
 It may mean that you need  a design review.
 
 This should be exceedingly rare.
+
+Is there a chunk you can agree on that you can split off and check in?
+
+Meet and talk it out in person or over video chat. Something about text communication makes it really easy to hate your teammate and assume they're coming from a place of stubbornness or incompetence.
 
 In case of stalemate, eject early.
