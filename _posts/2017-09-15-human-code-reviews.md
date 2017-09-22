@@ -277,7 +277,7 @@ Try to give objective notes. If you say, "Refactor, this is ugly," you can't rea
 
 Software development is both a science and an art, so it's not always possible to articulate exactly what's wrong with a piece of code in terms of established principles. Sometimes things are just ugly or unintuitive and it's hard to pin down exactly why. In these cases, try to keep it as objective as possible.  If you say, "**I** found this hard to understand," that's at least an objective statement, as opposed to "**this is** confusing," which is a value judgment and varies by person.
 
-Provide supporting evidence where possible in the form of links.  The best thing to link to is your style guide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you get from clearly authoritative documentation, the shakier your evidence becomes.
+Provide supporting evidence where possible in the form of links.  The best thing to link to is your style guide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you get from authoritative documentation, the shakier your evidence becomes.
 
 ## Respect the scope of the review
 
@@ -353,9 +353,7 @@ When a teammate asks you to review a pure housekeeping change, ask yourself, "Do
 
 ## Offer sincere praise
 
-I talked earlier about giving the author the gift of code examples during the review. Another gift that developers like to receive is sincere praise.
-
-If you sent someone a changelist to review, wouldn't you like to hear comments like these in response?
+Remember that code review doesn't have to be all negative. Code reviews are an opportunity for positive reinforcement as well. If you sent someone a changelist to review, wouldn't you like to hear comments like these in response?
 
 * "I never knew about this API. That's really useful!"
 * "This is a really elegant solution. I never would have thought of this."
@@ -371,31 +369,43 @@ If you're reviewing code for a junior developer or someone who is new to the tea
 
 Some reviewers have the misconception that they should not approve a code review until they've witnessed fixes for every last issue they've raised. This is poor practice and wastes time for both the reviewer and the author.
 
-Granting approval means that you trust the author to fix the remaining issues. Withholding LGTM wastes time for both the author and the reviewer. If your only remaining note is that they're missing a period at the end of a comment, you're either a control freak or you have such a low opinion of your teammate that you can't trust them to add a period to sentence without screwing something else up.
+Granting approval when the following are true of your remaining notes:
 
-* The change is so trivial that it's not worth the cost of an additional round of review.
-* The note  is optional and your approval stands whether or not they act on your note
+* You have no more notes worth discussing.
+* The remaining changes you're suggesting are so trivial that it's not worth the cost of an additional round of review.
+* Your final round of notes consist of minor suggestions that you don't mind if the author rejects, so your approval stands whether or not they act on them.
+  * Explicitly mark optional notes as optional so that your teammate doesn't assume the approval is contingent on taking the notes.
 
-This doesn't always go perfectly. I'd say that 5% of the time, the author either misinterprets or completely misses a note I gave alongside my approval. To defend against this, I simply look at the changes the author makes after my approval notes. In the rare case that something needs fixing, I either follow up with them and let them know they missed the note or I just fix it myself and send it to them for review.
+If your only remaining note is that the author missed a period at the end of a comment, you're either a control freak or you have such a low opinion of your teammate that you can't trust them to add punctuation without screwing something else up.
 
-## Make every effort to avoid a stalemate
+This doesn't always go perfectly. I'd say that 5% of the time, the author either misinterprets or completely misses a note I gave alongside my approval. To mitigate this, I simply look at the changes the author makes after my approval. In the rare case of miscommunication, I either follow up with them to let them know or I just fix it myself and send it to them for review. Doing a small amount of work in the 5% case is much better than making my teammate needlessly wait a whole extra review round trip before they can check in their code in the 95% case.
 
-The worst possible outcome of a code review is a stalemate: the point at which you refuse to sign off on the changelist without further changes and the author refuses to make those changes.
+## Handle stalemates proactively
 
-In my entire software development career, I've only ever had one code review reach stalemate, and it was not a good experience. It was extremely unpleasant at the time, and I took a reputation hit for it afterwards. It's kind of like being involved in a fistfight at the office. Even if you weren't the aggressor, it looks bad that you were involved at all.
+The worst possible outcome of a code review is a stalemate: you refuse to sign off on the changelist without further changes and the author refuses to make those changes.
+
+In my entire software development career, I've only had one code review reach stalemate. It was not fun.  It was unpleasnt to participate in and my reputation took a hit for a while afterwards. It's kind of like being involved in a fistfight at the office. Even if you weren't the aggressor, it looks bad that you were involved at all.
 
 Some indications that you're headed for a stalemate:
 
 * The tone of discussion is becoming hostile.
 * Your notes per review are not trending downward.
   * In a normal review, the 
+* You're getting pushback on a very high number of your notes.
 
+What you can do:
+
+* Talk it out
+  *  Meet in person or over video chat to work through the issues you're stuck on. Something about text communication makes it really easy to hate your teammate and assume they're coming from a place of stubbornness or incompetence. Talking in person will break that for both you and your teammate.
+* Evaluate whether you need a design review
 It may mean that you need  a design review.
+* Escalate
 
-This should be exceedingly rare.
+You don't want to just sit on it or keep circling around. The longer you sit in stalemate, the more damaging it is to your relationship with your teammate
 
-Is there a chunk you can agree on that you can split off and check in?
+Arguments in code review tend to be less about the code and more about the relationship between the author and reviewer. If you reached stalemate or near-stalemate, it's probably going to happen again in the future if you don't address it.
 
-Meet and talk it out in person or over video chat. Something about text communication makes it really easy to hate your teammate and assume they're coming from a place of stubbornness or incompetence.
-
-In case of stalemate, eject early.
+* Take a break from each other
+* Read *Crucial Conversations*
+* Discuss the situation with your manager
+# Conclusion
