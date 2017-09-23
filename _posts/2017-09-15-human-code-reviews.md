@@ -10,6 +10,12 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
+If I told you I had a really good book or article for you about how to overcome your fear of flying and I talked about why flying is so great and how to work out the logistics of booking your ticket, but then I didn't say anything about how to 
+
+TODO: It has to be a guide to some practical task where we leave out the hard part
+
+So why is that the way we talk about code reviews?
+
 If you Google "code reviews", you'll find article after article describing code reviews from the perspective of finding bugs.
 
 I can only assume these articles were written in the future, where your teammates are robots. In that world, your teammates send you code that they believe is high quality, and you give them a long list of reasons why it's not. This list warms their cold, robot hearts, as it brings them one step closer to eliminating the need for you as the sole human on the team.
@@ -40,13 +46,13 @@ The techniques I describe below will apply to code reviews generally, but it wil
 
 # What is a code review?
 
-The term "code review" can mean different things in different oragnizations, so I'm going to define what I mean in this article by "code review."
+The term "code review" is very broad. It can refer to simply having a teammate read some code over your shoulder or to a 20-person review meeting, so let me clarify the type of review I'm describing in this article.
 
-The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked into the team's codebase. A code review can sometimes have multiple reviewers, but in this article, I assume for simplicity that you are the sole reviewer.
+The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked in to the team's codebase. A code review can have multiple reviewers, but in this article, I assume for simplicity that you are the sole reviewer.
 
-Before the code review begins, the author must create a **changelist**. A changelist is a set of changes to source code that the author wants to check in to the team's shared code repository. In Github terms, a "pull request" is simply a UI to represent an author's request to check in a given changelist.
+Before the code review begins, the author must create a **changelist**. A changelist is a set of changes to source code that the author wants to check in to the team's shared code repository. In Github terms, a "pull request" is simply a way to represent an author's request to check in a given changelist.
 
-A code review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer. The  author sends changes and the reviewer responds with feedback on those changes. Every code review has one or more rounds.
+A code review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer. The  author sends changes and the reviewer responds with written feedback on those changes. Every code review has one or more rounds.
 
 The code review ends when the reviewer grants **approval** on the changes. This is also known as giving "LGTM", a shorthand for "looks good to me."
 
@@ -59,17 +65,27 @@ The code review ends when the reviewer grants **approval** on the changes. This 
 
 TODO: Replace this with a diagram showing back and forth between author and reviewer.
 
+There are a variety of tools available to help you with code reviews: Reviewable, Github's code review feature, Gerrit (TODO: links), etc. The exact tool you use doesn't matter. When I worked at Microsoft in the late 2000s, authors just sent their changelists via email and reviewers emailed back with a list of line numbers and corresponding notes. It was *inconvenient*, but it still covered all the essentials of a code review.
+
 # Why is this hard?
 
 Programmers tend to overestimate the quality of the code they write. If a programmer sends you a changelist that they think is awesome, and you write them back with list of reasons why it's not, that's a sensitive message to get across.
 
->That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br>-Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2wzrjpa).
+>That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br><br>Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2wzrjpa).
 
-You also have the drawback of communicating in text, which is prone to misinterpretation.
+It's very easy for an author to interpret criticism of their code as criticism of their skill as a developer. Code reviews are an opportunity for sharing knowledge and making informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
+
+You also have to deal with the perils of communicating over text. The author has no voice tone or body language to add context to your comments. An innocuous note like, "You forgot to close the file handle," can be read as, "I can't believe you forgot to close the file handle. You're such an idiot."
+
+Because we agreed your teammates are humans, it's impossible to have a perfectly emotionless, objective discussion about any changelists. Similarly, all human communication is vulnerable to miscommunication or misinterpretation. But the techniques I describe below will help minimize these effects so that you can keep code reviews as objective and free of personal attacks.
 
 # tl;dr: Show Empathy
 
 The only article I could find that I think gets code reviews right was, ["Humanizing Peer Reviews"](http://www.processimpact.com/articles/humanizing_reviews.html) by Karl Wiegers. The "reviewer should have compassion and sensitivity for [their] colleagues." I completely agree with Dr. Wiegers.
+
+In his book, Peer Reviews in Software:
+
+>critical to have respect for each other
 
 The overarching theme behind all the techniques I describe below is about empathizing with the author. If you were in their position, how would you like to receive feedback? What sort of review process would help you do your best work?
 
@@ -77,23 +93,36 @@ The overarching theme behind all the techniques I describe below is about empath
 
 ## Let robots do the boring parts
 
-Your time as a developer is scarce. Your mental stamina is scarcer still. Reading code someone else wrote is mentally taxing and requires a high degree of focus. Don't waste any of your mental energy in a code review doing things that you can automate, especially when the automation generally outperforms humans.
+Your time as a developer is scarce. Your mental stamina is scarcer still. Reading code someone else wrote is mentally taxing and requires a high degree of focus. Don't waste any of your mental energy in a code review doing things that you can automate, especially when the automation generally outperforms humans. A code review comment like, "This should be indented two more spaces," is a huge waste of time and mental effort.
 
-A code review comment like, "This should be indented two more spaces," is a huge waste of time and mental effort. Let's compare the effort required for a human to point out whitespace errors as opposed to automating it:
+Let's compare the steps required for a human to point out a whitespace errors as opposed to using a formatting tool:
 
-With a human reviewer:
+<table>
+<thead>
+<tr>
+  <th>With a human reviewer</th>
+	<th>With a formatting tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<ol>
+<li>Reviewer searches for whitespace issues and finds incorrect indenting.</li>
+<li>Reviewer writes a note calling out the incorrect indentation.</li>
+<li>Reviewer re-reads their note to make sure that it's worded in a clear, non-accusatory way.</li>
+<li>Author reads the note.</li>
+<li>Author corrects the code indentation.</li>
+</ol>
+</td>
+<td>Nothing!</td>
+</tr>
+</tbody>
+</table>
 
-1. Reviewer searches for whitespace issues and finds incorrect indenting.
-1. Reviewer writes a note calling out the incorrect indentation.
-1. Reviewer re-reads their note to make sure that it's worded in a clear, non-accusatory way.
-1. Author reads the note.
-1. Author corrects the code indentation.
+The right side is empty because the author uses a code editor that automatically formats the whitespace in their code every time they save the file. At worst, the author sends their code out for review and the continuous integration solution reports that the whitespace is incorrect, so the author fixes the issue without the reviewer ever having to care.
 
-With a formatting tool:
-
-1. (none)
-
-The list is empty because the author uses a code editor that automatically formats the whitespace in their code every time they save a file. At worst, the author sends their code out for review and the continuous integration solution reports that the whitespace is incorrect, so the author fixes the issue without the reviewer ever having to care.
+Look for elements in your code reviews that you can automate away. Here are the common ones:
 
 | Task | Automated solution |
 |-------|--------------------------|
@@ -102,27 +131,29 @@ The list is empty because the author uses a code editor that automatically forma
 | Verify code whitespace matches team style | Code formatter, such as [YAPF](https://github.com/google/yapf) (Python formatter) or [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) |
 | Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
 
-You have a finite amount of focus. When you reduce the classes of errors you have to be on the lookout for, it makes it easier to identify issues that are in scope. You limit your search to things that actually matter, like weakness in the code's readability or flaws in its functionality.
+Automation helps the reviewer make more meaningful contributions to the review. When you can ignore a whole class of issues, such as the ordering of `imports` or correct naming of variables, it frees up mental capacity to focus on more interesting things like weaknesses in readability or flaws in functionality.
 
-Structure your code reviews so that the requests for review don't even go out until all the build checks pass. Code reviews are mentally taxing. Don't squander the limited mental stamina you have with mechanical checks like whether the line breaks are in the right place.
-
-This also benefits the author because automated tests offer a faster feedback loop than a human reviewer. The faster the feedback loop, the easier it is to fix issues.
+This also benefits the code author. Automation means instant feedback for large classes of errors instead of waiting minutes to hours for feedback from a human reviewer. The instant feedback makes it easier to learn (TODO: link to study) and cheaper to fix because the author still has all the context of the code in their head.
 
 ## Settle style arguments with a style guide
 
 Arguments about style are a waste of time in code reviews, so you should minimize these as much as possible. The best way to do this is by using a style guide.
 
+A style guide defines superficial conventions such as naming conventions or whitespace formatting rules, but it also specifies how you use a given language. Languages like JavaScript or Perl are packed with functionality, offering many different ways of implementing the same logic. A style guide can define The One True Way of doing things so that you don't end up in a situation where half of your team uses one set of language features while the other half uses a totally different set of features and your code looks like a mess.
+
 There are a few ways to create a style guide for your team:
 
 **Option 1: Adopt an existing style guide**
 
-If you search online, you can find style guides that individuals or organizations have published. [Google's style guides](https://google.github.io/styleguide/) are the most well-known and highly-regarded.
+If you search online, you can find published style guides. [Google's style guides](https://google.github.io/styleguide/) are the most well-known, but you can find others if Google's style doesn't suit you.
 
-The benefit of using an existing style guide is that style guides require a lot of thought and effort, so you save yourself a lot of work by using existing work. The downside is that a style guide is optimized for organization that created it. For example, Google has tens of thousands of developers, so they are conservative about using newer language features that are not well understood across the company. If you're a four-person startup, using cutting-edge language features might be fine for you.
+Creating a good style guide requires substantial effort. The benefit of adopting an existing guide is that you inherit the benefits of this effort without any work. The downside is that organizations optimize style guides for their particular needs.  For example, Google's style guides are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on anything from a home router to an iPhone. If you're a four-person startup with a single product, you can afford to be more aggressive about using cutting-edge language features or extensions.
 
 **Option 2: Create your own style guide incrementally**
 
-Every time a style argument arises during a code review, discuss with your team to figure out a convention you can all agree on, then codify that decision in your style guide. If the issue ever comes up in the future, use your style guide to settle the argument. I prefer to keep my team's style guide as Markdown under source control (e.g. [GitHub pages](https://pages.github.com/)). That way, any changes to the style guide go through the normal code review process - someone has to explicitly approve the change, and everyone on the team has a chance to raise concerns. Wikis and Google Docs are valid alternatives as well.
+If you don't want to adopt an existing guide, you can create your own. Every time a style argument arises during a code review, raise the question to your whole team to decide what the official convention should be, then codify that decision in your style guide. If the issue ever comes up in the future, use your style guide to settle the argument.
+
+I prefer to keep my team's style guide as Markdown under source control (e.g. [GitHub pages](https://pages.github.com/)). That way, any changes to the style guide go through the normal code review process - someone has to explicitly approve the change, and everyone on the team has a chance to raise concerns. Wikis and Google Docs are valid alternatives as well.
 
 **Option 3: The hybrid approach**
 
@@ -408,4 +439,5 @@ Arguments in code review tend to be less about the code and more about the relat
 * Take a break from each other
 * Read *Crucial Conversations*
 * Discuss the situation with your manager
+
 # Conclusion
