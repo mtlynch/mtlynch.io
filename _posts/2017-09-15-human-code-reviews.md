@@ -33,12 +33,12 @@ In this article, I'll discuss some techniques for reviewing in a way that takes 
 
 The techniques I describe below will apply to code reviews generally, but it will work *best* in an environment where the following conditions are true:
 
-* Your teammates are humans.
+* Your teammate are humans.
   * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
-* You work with your teammates regularly.
+* Your code reviews are with developers you work with regularly.
   * You can't do an effective code review with someone who hates you, and a code review affords you many opportunities to make your teammate hate you in the future.
-  * Many of these techniques optimize for preserving good relationships with your teammates. For a one-off review (e.g. a drive-by patch to an open source project), the relationship-preservation aspects of these techniques will not be as relevant.
-* You are on a team that requires code review approval before checking in any code.
+  * If you're a maintainer for an open source project and you receive lots of "drive-by" patches from people who submit once and then never contribute again, the relationship-preservation aspects of these techniques will still work, but you can safely ignore the tips designed to improve your long-term relationship with this person.
+* Your team requires code review approval before checking in any code.
   * If code reviews are optional or do not require explicit signoff, these techniques will still work, but you'll want to apply an even lighter touch to ensure that the author doesn't simply skip review or ignore your notes because they find them overwhelming or obstructive.
 * Your team writes unit tests.
   * There is a cultural expectation on your team that functional changes to the code be accompanied by corresponding unit tests.
@@ -83,7 +83,7 @@ Because we agreed your teammates are humans, it's impossible to have a perfectly
 
 The only article I could find that I think gets code reviews right was, ["Humanizing Peer Reviews"](http://www.processimpact.com/articles/humanizing_reviews.html) by Karl Wiegers. The "reviewer should have compassion and sensitivity for [their] colleagues." I completely agree with Dr. Wiegers.
 
-In his book, Peer Reviews in Software:
+In his book, [*Peer Reviews in Software: A Practical Guide*](http://amzn.to/2xw6AWV)
 
 >critical to have respect for each other
 
