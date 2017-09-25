@@ -10,21 +10,31 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
-If I told you I had a really good book or article for you about how to overcome your fear of flying and I talked about why flying is so great and how to work out the logistics of booking your ticket, but then I didn't say anything about how to 
+I've just written an excellent E-Book to help my blog readers with their romantic relationships!  My guide will help you:
 
-TODO: It has to be a guide to some practical task where we leave out the hard part
+* Think objectively about your romantic partner so you can **identify all of their flaws**.
+*  Use **cutting-edge software tools** so you can record your partner's flaws and track metrics over time.
+
+The guide **does not** cover:
+
+* Communicating issues to your partner in a gentle and empathetic way.
+* Helping your partner address their weaknesses.
+
+Those parts of a relationship are **obvious** and **not worth discussing**!
+
+Does this sound like a good relationship E-Book to you? I'm assuming you just exclaimed, "Sweet jalisco, no!" (exact quote).
 
 So why is that the way we talk about code reviews?
 
-If you Google "code reviews", you'll find article after article describing code reviews from the perspective of finding bugs.
+If you Google "code reviews," you'll find article after article describing code reviews focused myopically on **bugs**: 
 
-I can only assume these articles were written in the future, where your teammates are robots. In that world, your teammates send you code that they believe is high quality, and you give them a long list of reasons why it's not. This list warms their cold, robot hearts, as it brings them one step closer to eliminating the need for you as the sole human on the team.
+* Arrange logistics so you can find the most **bugs**!
+* Keep checklists so you know what **bugs** to expect on future reviews.
+* Judge review effectiveness purely in terms of **bugs** discovered.
 
-If, however, you work on a development team composed of humans, code reviews are more complicated than simply finding flaws in your co-workers' code and dutifully reporting them. and you want to improve your code review skills when reviewing their code, this article is for you. I'll discuss practical techniques for improving the code review process. Some of these are mechanical, such. Some of these are more touchy-feely, like delivering tough criticism in a way that minimizes tension between you and your teammate.
+I can only assume these articles were written in the future, where all developers are robots, and hearing a list of criticisms about code they've worked hard warms their cold, robot hearts.
 
-In this world, you design your code reviews to maximize the number of "defects" you identify through code review. That's A lot of articles appear to be written in the future where your co-workers are robots and pointing out errors warms their cold robot hearts. It would be just as ridiculous to read a guide to a healthy marriage that's all about how to identify your spouse's flaws.
-
-In this article, I'll discuss some techniques for reviewing in a way that takes into account the fact that you're all humans.
+Let's assume for a moment that we want to improve code reviews in the present, where our teammates are humans. In this article, I'll discuss some code review techniques that take into account the fact that you and your teammates are all humans and that a code review is as much a social process as a technical one.
 
 * TOC
 {:toc}
@@ -69,7 +79,7 @@ There are a variety of tools available to help you with code reviews: Reviewable
 
 # Why is this hard?
 
-Programmers tend to overestimate the quality of the code they write. If a programmer sends you a changelist that they think is awesome, and you write them back with list of reasons why it's not, that's a sensitive message to get across.
+Programmers tend to overestimate the quality of the code they write. If a programmer sends you a changelist that they think is awesome, and you write them back with a list of reasons why it's not, that's a sensitive message to get across.
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br><br>Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2wzrjpa).
 
@@ -128,7 +138,7 @@ Look for elements in your code reviews that you can automate away. Here are the 
 |-------|--------------------------|
 | Verify the code builds | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
 | Verify automated tests pass | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
-| Verify code whitespace matches team style | Code formatter, such as [YAPF](https://github.com/google/yapf) (Python formatter) or [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) |
+| Verify code whitespace matches team style | Code formatter, such as [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) or [gofmt](https://golang.org/cmd/gofmt/) (Go formatter) |
 | Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
 
 Automation helps the reviewer make more meaningful contributions to the review. When you can ignore a whole class of issues, such as the ordering of `imports` or correct naming of variables, it frees up mental capacity to focus on more interesting things like weaknesses in readability or flaws in functionality.
