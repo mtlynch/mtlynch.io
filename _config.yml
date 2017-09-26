@@ -25,12 +25,16 @@ defaults:
     comments: true
     share: true
     related: true
+    sidebar:
+       nav: "main"
 - scope:
     path: ''
     type: pages
   values:
     layout: single
     author_profile: true
+    sidebar:
+       nav: "main"
 locale: en-US
 title_separator: "-"
 name: Michael Lynch

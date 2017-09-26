@@ -1,4 +1,10 @@
 # main links links
 main:
-  - title: "Blog"
-    url: /
+  - title: 
+    children:
+    - title: "Blog"
+      url: /
+    - title: "About"
+      url: /about/
+    - title: "Projects"
+      url: /projects/
