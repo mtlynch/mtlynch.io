@@ -22,6 +22,6 @@ ProsperBot is a peer-to-peer lending robot. It subscribes to the Prosper API to 
 
 # [AllYourTexts](http://allyourtexts.com) (2011-2015)
 
-AllYourTexts is a Windows desktop application that allows iPhone users to view, search, and visualize their text messages (SMS/MMS/iMessage). It's no longer compatible with modern versions of iOS, but it still works for old phones. It used to be a paid application, but it is now and free and [open-source](https://github.com/AllYourTexts/AllYourTexts).
+AllYourTexts is a Windows desktop application that allows iPhone users to view, search, and visualize their text messages (SMS/MMS/iMessage). It's no longer compatible with modern versions of iOS, but it still works for old phones. It used to be a paid application, but it is now and free and [open-source](https://github.com/AllYourTexts/AllYourTexts). During its paid lifetime, it sold 919 license keys and earned over $4,500 in revenue.
 
 **Technologies**: C#, WPF, PayPal API, iOS internals
