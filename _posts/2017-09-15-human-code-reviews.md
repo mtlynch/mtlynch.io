@@ -193,13 +193,11 @@ The absolute maximum turnaround on a code review should be 24 hours. If you're s
 
 ## Start high level and work your way down
 
-In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
+There's a nontrivial cost to every note. You have to spend writing it, then even more time giving extra care to your words to avoid ambiguity or insult. Then the author has to spend time reading and understanding your note. There's also a psychological cost to every note. Even if you word your notes kindly and objectively, if the author is a human, they're going to be bummed out if the first round of review yields 50 notes.
 
-There's a cost to every note. First, there's the time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. Then for the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their skills as a developer. We agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive increases.
+You can avoid overwhelming the author with notes by using the first round our two to hash out high level notes (e.g. "can we break this into two classes"), then defer your lower level notes (e.g. "can we choose a more descriptive name for this variable?") to a later round.
 
-As a reviewer, you want to minimize the cost you impose with your notes.
-
-Low level notes might become moot once the author makes revisions based on your high-level notes.
+Your low level notes might become moot once the author integrates your high level notes, so by deferring, you're potentially avoiding the nontrivial costs of a note. Even if the issue remains after the author makes the change, splitting up the high and the low is helpful in keeping you both in sync in thinking about the code with the light level of abstraction.
 
 ## Be generous with code examples
 
