@@ -10,10 +10,12 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
-I've just written an excellent E-Book to help my blog readers with their romantic relationships!  My guide will help you:
+I've just written an excellent E-Book to help my blog readers with their romantic relationships.  My guide will help you:
+
+{% include image.html file="book-cover.png" alt="EBook cover" fig_caption="Placeholder image, replace with illustration" max_width="260px" class="align-right" %}
 
 * Think objectively about your romantic partner so you can **identify all of their flaws**.
-*  Use **cutting-edge software tools** so you can record your partner's flaws and track metrics over time.
+*  Use **cutting-edge software tools** so you can track metrics on your partner's shortcomings over time.
 
 The guide **does not** cover:
 
@@ -56,7 +58,7 @@ The techniques I describe below will apply to code reviews generally, but it wil
 
 # What is a code review?
 
-The term "code review" is very broad. It can refer to simply having a teammate read some code over your shoulder or to a 20-person review meeting, so let me clarify the type of review I'm describing in this article.
+The term "code review" is very broad. It can refer to simply having a teammate read some code over your shoulder or to a 20-person line-by-line meeting, so let me clarify the type of review I'm describing in this article.
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked in to the team's codebase. A code review can have multiple reviewers, but in this article, I assume for simplicity that you are the sole reviewer.
 
