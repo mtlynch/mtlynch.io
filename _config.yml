@@ -26,7 +26,7 @@ defaults:
     share: true
     related: true
     sidebar:
-       nav: "custom_sidebar"
+       nav: "main"
 - scope:
     path: ''
     type: pages
@@ -34,7 +34,7 @@ defaults:
     layout: single
     author_profile: true
     sidebar:
-       nav: "custom_sidebar"
+       nav: "main"
 locale: en-US
 title_separator: "-"
 name: Michael Lynch

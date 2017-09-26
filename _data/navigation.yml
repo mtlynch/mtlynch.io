@@ -1,14 +1,10 @@
 # main links links
 main:
-  - title: "Blog"
-    url: /
-
-custom_sidebar:
   - title: 
     children:
     - title: "Blog"
       url: /
-    - title: "About Me"
+    - title: "About"
       url: /about/
     - title: "Projects"
       url: /projects/
