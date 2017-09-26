@@ -58,7 +58,7 @@ The techniques I describe below will apply to code reviews generally, but it wil
 
 # What is a code review?
 
-The term "code review" is very broad. It can refer to simply having a teammate read some code over your shoulder or to a 20-person line-by-line meeting, so let me clarify the type of review I'm describing in this article.
+The term "code review" is very broad. It can refer to simply having a teammate read some code over your shoulder or to a 20-person line-by-line meeting, so let me clarify the type of review I'm describing in this article (TODO: reword).
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked in to the team's codebase. A code review can have multiple reviewers, but in this article, I assume for simplicity that you are the sole reviewer.
 
@@ -77,7 +77,13 @@ The code review ends when the reviewer grants **approval** on the changes. This 
 
 TODO: Replace this with a diagram showing back and forth between author and reviewer.
 
-There are a variety of tools available to help you with code reviews: Reviewable, Github's code review feature, Gerrit (TODO: links), etc. The exact tool you use doesn't matter. When I worked at Microsoft in the late 2000s, authors just sent their changelists via email and reviewers emailed back with a list of line numbers and corresponding notes. It was *inconvenient*, but it still covered all the essentials of a code review.
+There are a variety of tools available to help you with code reviews. A few examples:
+
+* [Reviewable](https://reviewable.io)
+* Github's [code review feature](https://github.com/features/code-review)
+* [Gerrit](https://www.gerritcodereview.com/)
+
+The exact tool you use doesn't matter. When I worked at Microsoft in the late 2000s, authors just sent their changelists via email and reviewers emailed back with a list of line numbers and corresponding notes. It wasn't *convenient*, but it still covered all the essentials of a code review.
 
 # Why is this hard?
 
@@ -85,9 +91,9 @@ Programmers tend to overestimate the quality of the code they write. If a progra
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br><br>Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2wzrjpa).
 
-It's very easy for an author to interpret criticism of their code as criticism of their skill as a developer. Code reviews are an opportunity for sharing knowledge and making informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
+It's very easy for an author to interpret criticism of their code as criticism of them as a person. Code reviews are an opportunity to share knowledge and make informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
 
-You also have to deal with the perils of communicating over text. The author has no voice tone or body language to add context to your comments. An innocuous note like, "You forgot to close the file handle," can be read as, "I can't believe you forgot to close the file handle. You're such an idiot."
+You also have to deal with the perils of communicating over text. The author has no voice tone or body language to add context to your comments. An innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
 
 Because we agreed your teammates are humans, it's impossible to have a perfectly emotionless, objective discussion about any changelists. Similarly, all human communication is vulnerable to miscommunication or misinterpretation. But the techniques I describe below will help minimize these effects so that you can keep code reviews as objective and free of personal attacks.
 
@@ -187,7 +193,7 @@ The absolute maximum turnaround on a code review should be 24 hours. If you're s
 
 ## Start high level and work your way down
 
-In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this class into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
+In most reviews, you'll generally have a mix of notes that are high level (e.g. "can we break this into two classes?") and notes that are low level (e.g. "'success' is misspelled here"). If you have broad, high level notes, start with those and defer your lower-level notes to a later review round.
 
 There's a cost to every note. First, there's the time cost of you writing it, especially if you are giving extra care to your words to avoid ambiguity or insult. Then for the author, there is both a time cost to reading and understanding your note and a psychological cost for each note. In theory, if the author writes a 100-line change and gets back 100 separate notes, they should be happy to receive 100 different ways to improve their skills as a developer. We agreed previously that your co-workers are humans with normal human emotions and egos of varying degrees of fragility. Most human developers get sadder as the number of code review notes they receive increases.
 
@@ -218,7 +224,7 @@ for path in paths:
   urls.append(url)
 ```
 
-If your note is simply, "Can we simplify this with a list comprehension?" now they're annoyed because they have to spend 20 minutes looking up list comprehensions figuring out how to apply them to their code.
+If your note is simply, "Can we simplify this with a list comprehension?" now they're annoyed because they have to spend 20 minutes researching something they've never used before.
 
 They'd likely be much happier to receive a note like the following:
 
@@ -310,7 +316,7 @@ For exmple:
 >Function names should have a an underscore if they're not part of the module's public interface.
 >(ditto throughout)
 
-## Give notes based on principles, not opinion
+## Tie notes to principles, not opinions
 
 For example, instead of saying, "We should split this class into two," it is much better to say, "We should split this class into two so that we're in line with the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
 
@@ -396,7 +402,7 @@ When a teammate asks you to review a pure housekeeping change, ask yourself, "Do
 
 ## Offer sincere praise
 
-Remember that code review doesn't have to be all negative. Code reviews are an opportunity for positive reinforcement as well. If you sent someone a changelist to review, wouldn't you like to hear comments like these in response?
+Code reviews don't need to be all negative. They are an opportunity for positive reinforcement as well. If you sent someone a changelist to review, wouldn't you like to hear comments like these in response?
 
 * "I never knew about this API. That's really useful!"
 * "This is a really elegant solution. I never would have thought of this."
@@ -408,20 +414,20 @@ If you've given them feedback on previous reviews about bad coding habits and yo
 
 If you're reviewing code for a junior developer or someone who is new to the team, be especially cognizant of opportunities to offer praise. These are the people for whom a code review is the most stressful, so offering positive reinforcement is a good way of showing you value them as a teammate.
 
-## Give approval when remaining fixes are trivial
+## Grant approval when remaining fixes are trivial
 
-Some reviewers have the misconception that they should not approve a code review until they've witnessed fixes for every last issue they've raised. This is poor practice and wastes time for both the reviewer and the author.
+Some reviewers have the misconception that they should not approve a code review until they've witnessed fixes for every last issue. This is poor practice and wastes time for both the reviewer and the author.
 
 Granting approval when the following are true of your remaining notes:
 
 * You have no more notes worth discussing.
-* The remaining changes you're suggesting are so trivial that it's not worth the cost of an additional round of review.
+* The remaining changes you're suggesting are so trivial that it's not worth the cost of an additional round of review (e.g. renaming a variable, fixing a typo).
 * Your final round of notes consist of minor suggestions that you don't mind if the author rejects, so your approval stands whether or not they act on them.
-  * Explicitly mark optional notes as optional so that your teammate doesn't assume the approval is contingent on taking the notes.
+  * Explicitly mark optional notes as optional so that your teammate doesn't assume the approval is contingent on accepting the notes.
 
-If your only remaining note is that the author missed a period at the end of a comment, you're either a control freak or you have such a low opinion of your teammate that you can't trust them to add punctuation without screwing something else up.
+If your only remaining note is that the author missed a period at the end of a comment and you *don't* grant approval, you're either a control freak or you have such a low opinion of your teammate that you can't trust them to add punctuation without screwing something else up.
 
-This doesn't always go perfectly. I'd say that 5% of the time, the author either misinterprets or completely misses a note I gave alongside my approval. To mitigate this, I simply look at the changes the author makes after my approval. In the rare case of miscommunication, I either follow up with them to let them know or I just fix it myself and send it to them for review. Doing a small amount of work in the 5% case is much better than making my teammate needlessly wait a whole extra review round trip before they can check in their code in the 95% case.
+This doesn't always go perfectly. I'd say that 5% of the time, the author either misinterprets or completely misses a note I gave alongside my approval. To mitigate this, I simply look at the changes the author makes after my approval. In the rare case of miscommunication, I either follow up with them to let them know or just fix it myself and send it to them for review. Doing a small amount of work in the 5% case is much better than adding unnecessary effort and delay in the 95% case.
 
 ## Handle stalemates proactively
 
@@ -449,7 +455,7 @@ You don't want to just sit on it or keep circling around. The longer you sit in 
 Arguments in code review tend to be less about the code and more about the relationship between the author and reviewer. If you reached stalemate or near-stalemate, it's probably going to happen again in the future if you don't address it.
 
 * Take a break from each other
-* Read *Crucial Conversations*
+* Read [*Crucial Conversations*](http://amzn.to/2hvUbsP).
 * Discuss the situation with your manager
 
 # Conclusion
