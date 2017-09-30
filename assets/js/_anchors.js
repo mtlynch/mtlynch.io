@@ -25,13 +25,15 @@
 })();
 
 // enables hashtag relocation on in-page anchor links
-$(window).bind('hashchange', function(event) {
-  $.smoothScroll({
-    // Replace '#/' with '#' to go to the correct target and after scrollin
-    scrollTarget: location.hash.replace(/^\#\/?/, '#'),
-    afterScroll: function() {
-      location.hash = location.hash.replace(/^\#\/?/, '#');
-    }
+$(window).bind('load', function(event) {
+  $(window).bind('hashchange', function(event) {
+    $.smoothScroll({
+      // Replace '#/' with '#' to go to the correct target and after scrollin
+      scrollTarget: location.hash.replace(/^\#\/?/, '#'),
+      afterScroll: function() {
+        location.hash = location.hash.replace(/^\#\/?/, '#');
+      }
+    });
   });
 });
 
