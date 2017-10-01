@@ -1,18 +1,24 @@
 // Figure tag classes
 
-figure {
-  &.align {
-    &-right,
-    &-left {
-      flex-direction: column;
-      margin: 0 1em 0 0;
-      display: table;
+figure.align {
+  &-right,
+  &-left {
 
-      a {
-        z-index: 1;
-      }
+    flex-direction: column;
+    margin: 0 auto;
+    display: table;
+    float: none;
+
+    @include breakpoint($small) {
+      margin: 0 1em 0 0;
     }
 
+    a {
+      z-index: 1;
+    }
+  }
+
+  @include breakpoint($small) {
     &-right {
       float: right;
       margin-left: 1em;
