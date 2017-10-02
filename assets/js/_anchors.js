@@ -22,6 +22,24 @@
         .attr("href", permalink).attr("data-icon", ""));
     }
   });
+
+  // If page includes an anchor hash, then store it and remove it to wait for page
+  // load to trigger hashchange event
+  if (location.hash) {
+    var target = window.location.hash,
+        target = target.replace('#', '');
+
+    window.location.hash = "";
+  }
+
+  $(window).load(function() {
+    // if page had an anchor link, now we are ready to trigger the hashchange
+    // event to scroll.
+    if (target) {
+      location.hash = '#/' + target;
+    }
+  });
+
 })();
 
 // enables hashtag relocation on in-page anchor links
@@ -48,8 +66,3 @@ $('a[href*="#"]')
     location.hash = '#/' + hash;
   }
 });
-
-// Trigger hashchange event on page load if there is a hash in the URL.
-if (location.hash) {
-  $(window).trigger('hashchange');
-}
