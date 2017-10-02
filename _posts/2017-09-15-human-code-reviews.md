@@ -6,6 +6,8 @@ read_time: true
 comments: true
 share: true
 related: true
+sidebar:
+  nav: main
 excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s not
   finding bugs.'
 ---
@@ -36,7 +38,7 @@ If you Google "code reviews," you'll find article after article describing code 
 * Keep checklists so you know what **bugs** to expect on future reviews.
 * Judge review effectiveness purely in terms of **bugs** discovered.
 
-I can only assume these articles are from the future, where all developers are robots, and hearing a list of criticisms about code they've worked hard warms their cold, robot hearts.
+I can only assume these articles are from the future, where all developers are robots, and hearing a list of criticisms about code they've worked hard on warms their cold, robot hearts.
 
 Let's assume for a moment that we want to improve code reviews in the present, where our teammates are humans. In this article, I'll discuss some code review techniques that take into account the fact that a code review is not only a technical process, but a social one as well.
 
@@ -57,7 +59,7 @@ The techniques I describe below will apply to code reviews generally, but it wil
 
 # What is a code review?
 
-The term "code review" is very broad. It can refer to simply having a teammate read some code over your shoulder or to a 20-person meeting to dissect the code line by line. When I say "code review" in this article, I'm describing a process that is asynchronous and written.
+The term "code review" is very broad. It can mean a teammate simply reading some code over your shoulder or to a 20-person meeting to dissect the code line by line. When I say "code review" in this article, I'm describing a process that is asynchronous and written.
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it is ready to be checked in to the team's codebase. A code review can have multiple reviewers, but in this article, I assume for simplicity that you are the sole reviewer.
 
@@ -84,9 +86,9 @@ Programmers tend to overestimate the quality of the code they write. If a progra
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br><br>Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2wzrjpa).
 
-It's very easy for an author to interpret criticism of their code as criticism of them as a person. Code reviews are an opportunity to share knowledge and make informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
+It's very easy for an author to interpret criticism of their code as criticism of them personally. Code reviews are an opportunity to share knowledge and make informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
 
-This is doubly hard because you're communicating in writing. The author has no voice tone or body language to add context to your comments. A note meant to be innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
+This is doubly hard because you're communicating in writing. Your comments are missing voice tone or body language that would otherwise add context. An innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
 
 # tl;dr: Show Empathy
 
@@ -107,8 +109,8 @@ A simple example is a review note about a whitepsace error, such as, "This line 
 <table>
 <thead>
 <tr>
-  <th>With a human reviewer</th>
-	<th>With a formatting tool</th>
+  <th>Effort required with a human reviewer</th>
+	<th>Effort required with a formatting tool</th>
 </tr>
 </thead>
 <tbody>
@@ -188,9 +190,9 @@ Your low level notes might become moot once the author integrates your high leve
 
 ## Be generous with code examples
 
-With every note, you are essentially assigning the author work. A slew of code review notes can help the author grow in the long term, but it's easy for an author to grow resentful of you piling on lots more tasks for them to do. To combat these feelings, look for opportunities to show the author that you're helping them.
+With every note, you are essentially assigning the author work. A slew of code review notes can help the author grow in the long term, but it's easy for an author to grow resentful of you piling on lots of tasks for them in the short term.
 
-An excellent way to help the developer is by shouldering some of the load of writing code. This shows them that you are generous with your time as a reviewer.
+To combat this resentment, look for opportunities to show the author that you're helping them. An excellent way to help the developer is by shouldering some of the load of writing code. This shows them that you are generous with your time as a reviewer.
 
 Volunteering code is especially useful if you and the author haven't reviewed code for each other much or if the author is not accustomed to having their code reviewed at all. Even if you and the author have built trust reviewing each other's code, sometimes just writing code is easier than describing the code you'd like them to write.
 
@@ -370,7 +372,7 @@ Ideally you should request a split at the beginning of the code review, but if y
 
 One of the kindest things your teammates can do is a pure housekeeping code change. By "pure housekeeping," I mean a change that does not affect the software's production functionality, but makes the code easier to maintain. This includes:
 
-* Refactoring code (*pure* refactoring that does not change behavior)
+* Refactoring code (*pure* refactoring that does not change behavior) (TODO: Refactoring can be very large and require scrutiny, clarify that these should be narrowly scoped and systematic).
 * Deleting dead code
 * Adding test cases
 * Improving documentation
