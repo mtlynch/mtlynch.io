@@ -92,23 +92,23 @@ Programmers tend to overestimate the quality of the code they write. If a progra
 
 It's very easy for an author to interpret criticism of their code as criticism of them personally. Code reviews are an opportunity to share knowledge and make informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
 
-As if this wasn't hard enough, you also have the challenge of communicating your criticism in writing, where there are myriad opportunities for disastrous miscommunication. The author can't hear your voice or read your body language, so it's even more important to be careful and purposeful in how you articulate your feedback. To an author that's feeling defensive, an innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
+As if this wasn't hard enough, you also have the challenge of communicating your criticism in writing, where there are myriad opportunities for miscommunication. The author can't hear your voice or see your body language, so it's even more important to be careful and purposeful in how you articulate your feedback. To an author who's feeling defensive, an innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
 
 # tl;dr: Show Empathy
 
-I was only able to find one author who recognized the importance of social and cultural elements of code reviews, Karl E. Wiegers. One passage from his book, [*Peer Reviews in Software: A Practical Guide*](http://amzn.to/2xw6AWV), puts this eloquently:
+I was only able to find one author who recognized how important social and cultural factors are in code reviews. In his book, [*Peer Reviews in Software: A Practical Guide*](http://amzn.to/2xw6AWV), author Karl E. Wiegers illustrates this factor eloquently:
 
 >The dynamics between the work product's author and its reviewers are critical. The author must trust and respect the reviewers enough to be receptive to their comments. Similarly, the reviewers must show respect for the author's talent and hard work.
 
-The overarching theme behind all the techniques I describe below is to empathize with the author. If you were in their position, how would you like to receive feedback? What sort of review process would help you do your best work?
+The overarching theme behind all the techniques I describe below is: empathize with the author. If you were in their position, how would you like to receive feedback? What sort of review process would help you do your best work?
 
 # Techniques
 
 ## Let computers do the boring parts
 
-Your time as a developer is scarce. Your mental stamina is scarcer still. Reading code someone else wrote is mentally taxing and requires a high degree of focus. Don't waste any of your mental energy in a code review doing things a computer can do instead, especially when a computer can do it better.
+As a developer, the time you can spend focused on code is scarce. Your mental stamina is scarcer still. Reading a teammate's code someone is cognitively taxing and requires a high level of concentration. Don't squander these resources on tasks a computer can do, especially when a computer can do it better.
 
-A simple example is a review note about a whitepsace error, such as, "This line should be indented two more spaces." Compare the steps required for a human to find this error as opposed to using an automatic formatting tool:
+Whitespace errors are an obvious example. Compare how much effort it takes for a human reviewer to find an indenting mistake and work with the author to correct it as opposed to just using an automated formatting tool:
 
 <table>
 <thead>
@@ -133,9 +133,9 @@ A simple example is a review note about a whitepsace error, such as, "This line 
 </tbody>
 </table>
 
-The right side is empty because the author uses a code editor that automatically formats the whitespace in their code every time they save the file. At worst, the author sends their code out for review and the continuous integration solution reports that the whitespace is incorrect, so the author fixes the issue without the reviewer ever having to care.
+The right side is empty because the author uses a code editor that automatically formats their whitespace every time they hit "Save." At worst, the author sends their code out for review and the continuous integration solution reports that the whitespace is incorrect, so the author fixes the issue without the reviewer ever having to care.
 
-Look for elements in your code reviews that you can automate away. Here are the common ones:
+Look for mechanical tasks in your code reviews that you can automate away. Here are the common ones:
 
 | Task | Automated solution |
 |-------|--------------------------|
@@ -144,23 +144,23 @@ Look for elements in your code reviews that you can automate away. Here are the 
 | Verify code whitespace matches team style | Code formatter, such as [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) or [gofmt](https://golang.org/cmd/gofmt/) (Go formatter) |
 | Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
 
-Automation helps the reviewer make more meaningful contributions to the review. When you can ignore a whole class of issues, such as the ordering of `imports` or naming conventions for source filenames, it frees up mental capacity to focus on more interesting things like weaknesses in readability or flaws in functionality.
+Automation helps you make more meaningful contributions as a reviewer. When you can ignore a whole class of issues, such as the ordering of `imports` or naming conventions for source filenames, it frees your focus for more interesting things like weaknesses in readability or functional errors.
 
-This also benefits the code author. Automation means instant feedback for large classes of errors instead of waiting minutes to hours for feedback from a human reviewer. The instant feedback makes it easier to learn (TODO: link to study) and cheaper to fix because the author still has all the context of the code in their head.
+Automation benefits the author as well. It allows them to discover careless mistakes in seconds instead of hours. The instant feedback makes it easier to learn from (TODO: link to study) and cheaper to fix because the author still has the relevant context in their head. Plus, if someone's going to tell you about a dumb mistake you made, wouldn't you rather hear it from an automated tool than your human teammate?
 
 ## Settle style arguments with a style guide
 
-Arguments about style are a waste of time in code reviews, so you should minimize these as much as possible. The best way to do this is by keeping a style guide.
+Arguments about style are a waste of time in code reviews. If you're not careful, you can waste hours clashing over months about whether to use tabs or spaces. The best way to minimize style debates is by keeping a style guide.
 
-Some of what a style guide defines is superficial, such as naming conventions or whitespace formatting rules. A good style guide also specifies how you use a given language. Languages like JavaScript or Perl are packed with functionality, offering many different ways of implementing the same logic. A style guide can define The One True Way of doing things so that you don't end up in a situation where half of your team uses one set of language features while the other half uses a totally different set of features and your code looks like a mess.
+A good style guide defines not only superficial elements like naming conventions or whitespace rules, but also specifies how you use the features of your programming language. Languages like JavaScript and Perl are packed with functionality, offering many different ways of implementing the same logic. A style guide can define The One True Way of doing things so that you don't end up in a situation where half of your team uses one set of language features while the other half uses a totally different set of features, turning your code into a collective mess.
 
 There are a few ways to create a style guide for your team:
 
 ***Option 1: Adopt an existing style guide***
 
-If you search online, you can find published style guides. [Google's style guides](https://google.github.io/styleguide/) are the most well-known, but you can find others if Google's style doesn't suit you.
+If you search online, you can find published style guides. [Google's style guides](https://google.github.io/styleguide/) are the most well-known, but you can find others if Google's style doesn't suit you. By adopting an existing guide, you inherit the benefits of a ready-made style guide, but you skip the substantial effort it takes to create one.
 
-Creating a good style guide requires substantial effort. The benefit of adopting an existing guide is that you inherit the benefits of this effort without any work. The downside is that organizations optimize style guides for their particular needs.  For example, Google's style guides are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on anything from a home router to an iPhone. If you're a four-person startup with a single product, you can afford to be more aggressive about using cutting-edge language features or extensions.
+The downside is that organizations optimize their style guides for their own particular needs.  Google's style guides, for example, are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on anything from a home router to the latest iPhone. If you're a four-person startup with a single product, you can afford to be more aggressive about using cutting-edge language features or extensions.
 
 ***Option 2: Create your own style guide incrementally***
 
@@ -170,21 +170,23 @@ I prefer to keep my team's style guide as Markdown under source control (e.g. [G
 
 ***Option 3: The hybrid approach***
 
-Combining options 1 and 2, you can adopt an existing style guide as your base, then maintain a local copy to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses the [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as its base, but makes its own changes and additions on top of the base guide.
+Combining options 1 and 2, you can adopt an existing style guide as your base, then maintain a local copy to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as a base, but makes its own changes and additions on top of the base guide.
 
 ## Start reviewing immediately
 
-Treat code reviews as very high priority. Don't rush through the review itself, but start it immediately— within minutes.
+Treat code reviews as a high priority task. When you're actually reading the code and giving feedback, take your time, but *start* your review immediately — ideally, within minutes.
 
-If a teammate sends you a code review, it likely means that they are blocked on other work until your review is done. In theory, there are tools that let them branch, continue working, then merge back together at the end of the review, but there are like four people total who know how to do that without wasting a lot of time fighting with conflicts from three-way diffs.
+If a teammate sends you a code review, it likely means that they are blocked on other work until your review is done. In theory, most source control systems allow the author to branch, continue working, then forward-merge changes from the review to their new branch. In reality, there are like four people total who know how to do that without wasting a lot of time fighting with conflicts from three-way diffs.
 
-When you start code reviews immediately, you create a virtuous cycle with your teammates. The length of time the author has to wait for comments becomes is purely a function of the size and complexity of their changelist. This incentivizes authors to send small, narrowly-scoped changelists. These are easier and more pleasant for you to review, so you can turn them around quicker and the cycle continues.
+When you start code reviews immediately, you create a virtuous cycle. Your review turnaround becomes purely a function of the size and complexity of the author's changelist. This incentivizes authors to send small, narrowly-scoped changelists. These are easier and more pleasant for you to review, which allows you to review faster, and the cycle continues.
 
-Imagine that the author implemented a new feature in 1000 lines of code. If they know you can review a 200-line changelist in about 2 hours, they can break their feature into changelists of about 200 lines and get the whole feature checked in within a day or two. If, however, you take a day to review your code regardless of size, now it takes a week to get that feature checked in. Your teammate doesn't want to sit around for a week, so they're incentivized to send code reviews closer to 500-600 lines so they can have a turnaround of around a day or two.
+Imagine that your teammate implemented a new feature that required 1000 lines of code changes. If they know you can review a 200-line changelist in about 2 hours, they can break their feature into changelists of about 200 lines each and get the whole feature checked in within a day or two. If, however, you take a day to do your code reviews, regardless of size, now it takes a week to get that feature checked in. Your teammate doesn't want to sit around for a week, so they're incentivized to send much larger code reviews, like 500-600 lines each.
 
-The absolute maximum turnaround on a code review should be one business day. If you're struggling with a higher priority issue and can't complete a round of review in under a day, let your teammate know and give them the opportunity to reassign to someone else. You should flip reviews sparingly. If you're forced to do this more than about once per month, it likely means that your team needs to reduce its pace or scope so that you can maintain sane working conditions.
+The absolute maximum turnaround on a code review should be one business day. If you're struggling with a higher priority issue and can't complete a round of review in under a day, let your teammate know and give them the opportunity to reassign to someone else. If you're forced to decline reviews more than about once per month, it likely means that your team needs to reduce its pace or scope so that you can maintain sane development practices.
 
 ## Start high level and work your way down
+
+TODO: Continue editing from here.
 
 There's a nontrivial cost to every note. You have to spend time writing it, then re-writing it to avoid ambiguity or insult. Then the author has to spend time reading and understanding your note. There's also a psychological cost to every note. Even if you word your notes kindly and objectively, if the author is going to be bummed out if every round of review yields 50 notes.
 
@@ -236,8 +238,8 @@ As the reviewer, you want to avoid triggering these defenses. Be clear that you'
 
 Even if you make a harmless comment like, "You misspelled 'successfully'," the author might interpret that note in two very different ways:
 
-* **Interpretation 1**: "[Hey, good buddy,] you misspelled successfully [but I think you're still smart and it was probably just a typo.]"
-* **Interpretation 2**: "You misspelled successfully[, dumbass]"
+* **Interpretation 1**: "Hey, good buddy! You misspelled 'successfully,' but I still think you're smart, and it was probably just a typo."
+* **Interpretation 2**: "You misspelled 'successfully,' dumbass."
 
 There are a few easy ways to avoid using the word "you" in your code review notes.
 
@@ -245,7 +247,7 @@ There are a few easy ways to avoid using the word "you" in your code review note
 
 For example:
 
->Can** you** change this variable name to something more descriptive, like `seconds_remaining`?
+>Can **you** change this variable name to something more descriptive, like `seconds_remaining`?
 
 becomes:
 
@@ -301,4 +303,4 @@ I'll be publishing the second half of this article in a week or two. Stay tuned 
 * Recognizing the scope of a review and staying within it
 * Mitigating stalemates
 
-*Thanks to [@global4g](https://twitter.com/global4g), who read an early draft of this post and provided valuable feedback.*
+*Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post.*
