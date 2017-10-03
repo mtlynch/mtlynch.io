@@ -12,14 +12,14 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
-I've just written an excellent E-Book to help my blog readers with their romantic relationships. 
+I've just written an excellent E-Book to help my blog readers with their romantic relationships.
 
 {% include image.html file="book-cover.png" alt="EBook cover" fig_caption="Placeholder image, replace with illustration" max_width="260px" class="align-right" %}
 
 Here are just a few things you'll learn from my book:
 
 * Think objectively about your romantic partner so you can **identify all of their flaws**.
-*  Use **cutting-edge software tools** so you can track metrics on your partner's shortcomings over time.
+* Use **cutting-edge software tools** so you can track metrics on your partner's shortcomings over time.
 
 The guide **does not** cover:
 
@@ -32,7 +32,7 @@ Does this sound like a good relationship E-Book to you? I'm assuming you just ex
 
 So why is that the way we talk about code reviews?
 
-If you Google "code reviews," you'll find article after article describing code reviews focused myopically on **bugs**: 
+If you Google "code reviews," you'll find article after article describing code reviews focused myopically on **bugs**:
 
 * Arrange logistics so you can find the most **bugs**!
 * Keep checklists so you know what **bugs** to expect on future reviews.
@@ -67,7 +67,7 @@ TODO: Re-create better chart. Text is as follows:
 
 1. Author creates a changelist.
 1. Author runs the change through continuous integration
-1. Reviewer reviews changelist 
+1. Reviewer reviews changelist
 1. Reviewer sends notes to Author
 1. Author makes changes based on Reviewer's notes
 1. Reviewer grants approval
@@ -114,7 +114,7 @@ Whitespace errors are an obvious example. Compare how much effort it takes for a
 <thead>
 <tr>
   <th>Effort required with a human reviewer</th>
-	<th>Effort required with a formatting tool</th>
+  <th>Effort required with a formatting tool</th>
 </tr>
 </thead>
 <tbody>
