@@ -12,50 +12,42 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
-I've just written an excellent E-Book to help my blog readers with their romantic relationships.
+Recently, I've been reading up on best practices for code reviews. I realized all the tips apply equally well to managing romantic relationships, so I'm announcing my new ebook on the subject:
 
-{% include image.html file="book-cover.png" alt="EBook cover" fig_caption="Placeholder image, replace with illustration" max_width="260px" class="align-right" %}
+<div align="center">
+{% include image.html file="book-cover.png" alt="EBook cover" max_width="350px"  img_link=true %}
+</div>
 
-Here are just a few things you'll learn from my book:
-
-* Think objectively about your romantic partner so you can **identify all of their flaws**.
-* Use **cutting-edge software tools** so you can track metrics on your partner's shortcomings over time.
-
-The guide **does not** cover:
+My revolutionary ebook will teach you proven techniques for maximizing the deficiencies you find in your partner. The ebook does **not** cover:
 
 * Communicating issues to your partner in a gentle and empathetic way.
 * Helping your partner address their weaknesses.
 
-Those parts of a relationship are **obvious** and **not worth discussing**!
+Based on my reading of code review literature, those parts of a relationship are *obvious* and **not** worth discussing.
 
-Does this sound like a good relationship E-Book to you? I'm assuming you just exclaimed, "Sweet jalisco, no!" (exact quote).
+Does this sound like a good ebook to you? I'm assuming you just yelped "Nonononono!"
 
-So why is that the way we talk about code reviews?
+Then why is this the way we talk about code reviews?
 
-If you Google "code reviews," you'll find article after article describing code reviews focused myopically on **bugs**:
+# Bug obsession
 
-* Arrange logistics so you can find the most **bugs**!
-* Keep checklists so you know what **bugs** to expect on future reviews.
-* Judge review effectiveness purely in terms of **bugs** discovered.
+If you Google "code reviews," you'll find article after article describing code reviews focused myopically on bugs: 
+
+* Get a full night's rest before a code review so you can find the most **bugs**.
+* Never stare directly at the code otherwise it may strain your eyes before you find all the **bugs**.
+* If you eat 17 apples before every code review, the additional fructose will help you find 6% more **bugs**.
 
 I can only assume these articles are from the future, where all developers are robots, and hearing a list of criticisms about code they've worked hard on warms their cold, robot hearts.
 
-Let's assume for a moment that we want to improve code reviews in the present, where our teammates are humans. In this article, I'll discuss some code review techniques that take into account the fact that a code review is not only a technical process, but a social one as well.
+# What if we review code for humans?
 
-* TOC
-{:toc}
+Let's assume for a moment that we want to improve code reviews in the present, where our teammates are humans. Let's assume that a positive relationship with your colleagues is an end in itself and not simply an incidental component in minimizing the cost per bug discovery.
 
-# Assumptions
+I was only able to find one author who recognized how important social and cultural factors are in code reviews. In his book, [*Peer Reviews in Software: A Practical Guide*](http://amzn.to/2xw6AWV), author Karl E. Wiegers illustrates this factor eloquently:
 
-The techniques I describe below will apply to code reviews generally, but it will work *best* in an environment where the following conditions are true:
+>The dynamics between the work product's author and its reviewers are critical. The author must trust and respect the reviewers enough to be receptive to their comments. Similarly, the reviewers must show respect for the author's talent and hard work.
 
-* Your teammates are humans.
-  * Their reactions to criticism and their ability to learn from this criticism fall within the range of behavior one would expect of humans.
-* Your code reviews are with developers you work with regularly.
-  * You can't do an effective code review with someone who hates you, and a code review affords you many opportunities to make your teammate hate you in the future. It's unpleasant to work with people who hate you, so you have a vested interest in avoiding mistakes in code reviews that may lead your teammates to hate you.
-  * If you're a maintainer for an open source project and you receive lots of "drive-by" patches from people who submit once and then never contribute again, these techniques will still work, but you may choose to focus less on the tips that improve your long-term working relationships.
-* Your team writes unit tests.
-  * You can do code reviews without unit tests, but it requires the reviewer to do a lot more mental work. These techniques assume that the reviewer can gain confidence in the code's correctness by reading the unit tests or by suggesting additional test cases.
+In this article, I'll discuss some code review techniques that take into account the fact that a code review is not only a technical process, but a social one as well.
 
 # What is a code review?
 
@@ -78,11 +70,11 @@ The participants in a code review are the **author**, who writes the code and se
 
 Before the code review begins, the author must create a **changelist**. A changelist is a set of changes to source code that the author wants to check in.
 
-A code review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer: the  author sends changes and the reviewer responds with written feedback on those changes. Every code review has one or more rounds.
+A code review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer: the  author sends changes, and the reviewer responds with written feedback on those changes. Every code review has one or more rounds.
 
-The code review ends when the reviewer grants **approval** on the changes. This is also known as giving "LGTM", a shorthand for "looks good to me."
+The code review ends when the reviewer grants **approval** on the changes. This is also known as giving "LGTM," a shorthand for "looks good to me."
 
-In this article, I don't assume any particular developer tools. You can apply these techniques in any development environment as long as your tools support the general style of code reviews that I described above.
+In this article, I don't assume any particular tools to support the code review. You can apply these techniques in any development environment as long as your process follows the general style of code reviews that I just described.
 
 # Why is this hard?
 
@@ -94,19 +86,20 @@ It's very easy for an author to interpret criticism of their code as criticism o
 
 As if this wasn't hard enough, you also have the challenge of communicating your criticism in writing, where there are myriad opportunities for miscommunication. The author can't hear your voice or see your body language, so it's even more important to be careful and purposeful in how you articulate your feedback. To an author who's feeling defensive, an innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
 
-# tl;dr: Show Empathy
-
-I was only able to find one author who recognized how important social and cultural factors are in code reviews. In his book, [*Peer Reviews in Software: A Practical Guide*](http://amzn.to/2xw6AWV), author Karl E. Wiegers illustrates this factor eloquently:
-
->The dynamics between the work product's author and its reviewers are critical. The author must trust and respect the reviewers enough to be receptive to their comments. Similarly, the reviewers must show respect for the author's talent and hard work.
-
-The overarching theme behind all the techniques I describe below is: empathize with the author. If you were in their position, how would you like to receive feedback? What sort of review process would help you do your best work?
-
 # Techniques
+
+1. [Let computers do the boring parts](#let-computers-do-the-boring-parts)
+1. [Settle style arguments with a style guide](#settle-style-arguments-with-a-style-guide)
+1.  [Start reviewing immediately](#start-reviewing-immediately)
+1. [Start high level and work your way down](#start-high-level-and-work-your-way-down)
+1. [Be generous with code examples](#be-generous-with-code-examples)
+1. [There’s no “you” in code review](#theres-no-you-in-code-review)
+1. [Frame feedback as requests, not commands](#frame-feedback-as-requests-not-commands)
+1. [Tie notes to principles, not opinions](#tie-notes-to-principles-not-opinions)
 
 ## Let computers do the boring parts
 
-As a developer, the time you can spend focused on code is scarce. Your mental stamina is scarcer still. Reading a teammate's code someone is cognitively taxing and requires a high level of concentration. Don't squander these resources on tasks a computer can do, especially when a computer can do it better.
+As a developer, the time you can spend focused on code is scarce. Your mental stamina is scarcer still. Reading a teammate's code is cognitively taxing and requires a high level of concentration. Don't squander these resources on tasks a computer can do, especially when a computer can do it better.
 
 Whitespace errors are an obvious example. Compare how much effort it takes for a human reviewer to find an indenting mistake and work with the author to correct it as opposed to just using an automated formatting tool:
 
@@ -152,9 +145,11 @@ Automation benefits the author as well. It allows them to discover careless mist
 
 Arguments about style are a waste of time in code reviews. If you're not careful, you can waste hours clashing over months about whether to use tabs or spaces. The best way to minimize style debates is by keeping a style guide.
 
-A good style guide defines not only superficial elements like naming conventions or whitespace rules, but also specifies how you use the features of your programming language. Languages like JavaScript and Perl are packed with functionality, offering many different ways of implementing the same logic. A style guide can define The One True Way of doing things so that you don't end up in a situation where half of your team uses one set of language features while the other half uses a totally different set of features, turning your code into a collective mess.
+{% include image.html file="style-argument.jpg" alt="A typical style argument" max_width="700px" img_link=true %}
 
-There are a few ways to create a style guide for your team:
+**Note to Loraine**: I'd like this one to be a cartoon of the cat and dog choking each other because they're arguing. In the first panel, the cat is yelling "Tabs!" and the dog is yelling "Spaces!" In the second one, the cat is yelling, "Performance!" and the dog is yelling, "Simplicity!" They've stopped arguing about style because there's a style guide on the wall labeled "STYLE GUIDE" and the first rule is "Use spaces." There are more rules but they're indistinct text. Feel free to play around with it, especially how characters, text bubbles, etc are placed, but that's the idea I have in mind.
+
+A good style guide defines not only superficial elements like naming conventions or whitespace rules, but also specifies how you use the features of your programming language. Languages like JavaScript and Perl are packed with functionality, offering many different ways of implementing the same logic. A style guide can define The One True Way of doing things so that you don't end up in a situation where half of your team uses one set of language features while the other half uses a totally different set of features, turning your code into a collective mess.
 
 ***Option 1: Adopt an existing style guide***
 
@@ -186,17 +181,19 @@ The absolute maximum turnaround on a code review should be one business day. If 
 
 ## Start high level and work your way down
 
-TODO: Continue editing from here.
+In a good code review, the author recognizes that the reviewer's notes are helpful for the author's growth and for improving the codebase. As you write more notes, you also increase the risk of making the author feel overwhelmed in a sea of notes. The limit will vary by person, but most developers will begin feeling overwhelmed somewhere between 20-50 notes in a single round of review.
 
-There's a nontrivial cost to every note. You have to spend time writing it, then re-writing it to avoid ambiguity or insult. Then the author has to spend time reading and understanding your note. There's also a psychological cost to every note. Even if you word your notes kindly and objectively, if the author is going to be bummed out if every round of review yields 50 notes.
+If you find yourself writing a potentially suffocating volume of notes in the first couple rounds of a review, trim your feedback to just high-level issues.
 
-You can avoid overwhelming the author with notes by using the first round our two to hash out high level notes (e.g. "can we break this into two classes"), then defer your lower level notes (e.g. "can we choose a more descriptive name for this variable?") to later rounds.
+Avoid overwhelming the author with notes by using the first round or two to hash out high level notes (e.g. "can we break this into two classes"), then defer your lower level notes (e.g. "can we choose a more descriptive name for this variable?") to later rounds.
 
-Your low level notes might become moot once the author integrates your high level notes, so by deferring, you're potentially avoiding the nontrivial costs of each note. Beyond this, keeping the review to at one layer of abstraction at a time helps you and the author work through the changelist in a clear, systematic way.
+Your low level notes might become moot once the author integrates your high level notes. By deferring, you save yourself from doing unnecessary work and you . Beyond this, keeping the review to at one layer of abstraction at a time helps you and the author work through the changelist in a clear, systematic way.
+
+You really only need this on changelists that start off in a pretty bad place.  If you only have a handful of notes total, mixing high level and low level is fine and expedient.
 
 ## Be generous with code examples
 
-With every note, you are essentially assigning the author work. A slew of code review notes can help the author grow in the long term, but it's easy for an author to grow resentful of you piling on lots of tasks for them in the short term.
+With every note, you are essentially assigning the author work. A slew of code review notes can help the author grow in the long term, but in the short term, it's easy for an author to grow resentful of you and feel that you are hampering their progress on whatever their goals are.
 
 To combat this resentment, look for opportunities to show the author that you're helping them. An excellent way to help the developer is by shouldering some of the load of writing code. This shows them that you are generous with your time as a reviewer.
 
@@ -228,9 +225,9 @@ Reserve this technique for clear, uncontroversial improvements. In the list comp
 
 Limit yourself to two or three code examples per review round. If you start writing their whole changelist for them, it can signal that you don't think they're capable of writing their own code.
 
-## Never use the word 'you'
+## There's no "you" in code review
 
-This one is going to sound weird, but hear me out.
+This one is going to sound weird, but hear me out: never use the word "you" in a code review.
 
 Good developers take pride in their work. It's great to find teammates who can completely detach emotion from their work and accept criticism graciously, but it's rare to find people who are going to be consistently excited about hearing their work criticized. The natural human reaction to criticism is to be protective and defensive.
 
@@ -255,13 +252,19 @@ becomes:
 
 When you say, "we," you reinforce the idea of a collective responsibility for the code. The author may move on to a different team or organization, but code sticks around for years and needs maintainers. In some cases, it does sound silly to say "we" when you're clearly referring to the author, but I'd rather my notes sound silly than accusatory.
 
-TODO: Cartoon of one person doing hard labor (e.g. digging a hole) and the other person saying something like "**we** should do X" (e.g. "**we** should dig a hole").
+{% include image.html file="move-couch1.png" alt="Moving couch cartoon" max_width="500px" img_link=true %}
 
 ***Option 2: Remove the subject from the sentence***
 
 Another way to get around this is to use a shorthand that omits the subject from the sentence:
 
 >Suggest renaming to something more descriptive, like `seconds_remaining`.
+
+**Beyond just 'you'**
+
+Even if you avoid writing "you" that doesn't guarantee your notes sound respectful. If you leave a note like, "This is completely out of line with best practices for JavaScript," you didn't say "you" but the note still reads as very judgmental. It's very easy to fall into this when you're disappointed with the quality in a changelist and you feel the author should know better.
+
+Does it sound like judgment? How would I write this comment to a developer who I respect highly?
 
 ## Frame feedback as requests, not commands
 
@@ -303,4 +306,4 @@ I'll be publishing the second half of this article in a week or two. Stay tuned 
 * Recognizing the scope of a review and staying within it
 * Mitigating stalemates
 
-*Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post.*
+*Illustrations by Loraine Yow. Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post.*
