@@ -30,7 +30,7 @@ If you prefer video tutorials, I recommend you download the files in the ["Creat
 
 This guide is aimed at **intermediate users**. If you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command line, it will be difficult for you to follow this guide.
 
-{% include image.html file="bad-time.png" alt="You're gonna have a bad time" max_width="597px" class="align-center" %}
+{% include image.html file="bad-time.png" alt="You're gonna have a bad time" max_width="597px" %}
 
 I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any 64-bit operating system that supports Docker, which includes Windows, Mac OS X, Linux, and even some [network storage devices](/sia-via-docker).
 

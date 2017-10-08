@@ -138,7 +138,7 @@ The tables below show my full costs for each cooking session. I bought all the i
 | Labor (2 hours) | $55.90 |
 | **Total**                                          | **$109.89** |
 
-{% include image.html file="cooking-costs.png" alt="ProsperBot screenshot" img_link="true" max_width="750px" class="align-center img-border" %}
+{% include image.html file="cooking-costs.png" alt="ProsperBot screenshot" img_link="true" max_width="750px" class="img-border" %}
 
 ## How does this compare to restaurant delivery?
 
