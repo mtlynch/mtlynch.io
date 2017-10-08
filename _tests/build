@@ -17,7 +17,8 @@ else
 fi
 
 # Run HTMLProofer
-# Ignore vimeo URLs because they get 403 errors from Travis intermittently.
+# Ignore vimeo and upwork URLs because they get 403 errors from Travis
+# intermittently.
 BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
   --config _config.yml,_config_dev.yml
 bundle exec htmlproofer ./_site \
@@ -27,5 +28,5 @@ bundle exec htmlproofer ./_site \
   --check-opengraph \
   --allow-hash-href \
   --empty-alt-ignore \
-  --url-ignore "/vimeo.com/" \
+  --url-ignore "/vimeo.com/,/upwork.com/" \
   "$htmlproofer_args_extra"

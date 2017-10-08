@@ -36,7 +36,7 @@ To invest in peer to peer loans with Prosper, investors can use Prosper's web si
 
 I chose the API route and developed ProsperBot, a lending bot that continuously searches for new loans on Prosper and invests in them when they meet certain criteria. It also includes a web dashboard, which shows ProsperBot's current status and my Prosper account activity over time:
 
-{% include image.html file="prosperbot-frontend.png" alt="ProsperBot screenshot" img_link="true" max_width="700px" class="align-center img-border" %}
+{% include image.html file="prosperbot-frontend.png" alt="ProsperBot screenshot" img_link="true" max_width="700px" class="img-border" %}
 
 As you can see in the graph, my account has been steadily increasing in value since April, as ProsperBot receives repayments on loans and reinvests the cash in new loans. My total account value begins to decline in October, as I have begun withdrawing money from my Prosper account.
 

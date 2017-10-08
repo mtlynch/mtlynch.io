@@ -1,12 +1,15 @@
 // Figure tag classes
 
+figure.half, figure.third {
+  display: flex;
+}
+
 figure.align {
   &-right,
   &-left {
 
     flex-direction: column;
     margin: 0 auto;
-    display: table;
     float: none;
 
     @include breakpoint($small) {
