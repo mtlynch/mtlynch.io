@@ -12,13 +12,11 @@ excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s no
   finding bugs.'
 ---
 
-I've been reading articles about best practices for code reviews lately. I notice that they focus myopically on finding bugs. Communicating those issues in a constructive and professional way? Irrelevant! Just identify all the bugs and the rest will take care of itself.
+Lately, I've been reading articles about best practices for code reviews. I notice that these articles focus on finding bugs to the exclusion of every other component of a code review. Communicating issues you discover in a constructive and professional way? Irrelevant! Just identify all the bugs and the rest will take care of itself.
 
 This gave me a revelation: if this works for code, why not romance? With that, I'm announcing my new ebook to help developers with their love lives:
 
-<div align="center">
 {% include image.html file="book-cover.png" alt="EBook cover" max_width="400px"  img_link=true %}
-</div>
 
 My revolutionary ebook will teach you **proven techniques** for maximizing the number of deficiencies you find in your partner. The ebook does **not** cover:
 
