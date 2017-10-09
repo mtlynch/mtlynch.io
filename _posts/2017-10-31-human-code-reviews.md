@@ -25,7 +25,7 @@ If a code review comes to you as a D, the only way you're getting it up to an A+
 
 If I get a D code review now, I try to help the author get it to a C or a B-. Usually, I find that the next code review they send me will start at a C.
 
-An F is for code that is either functionlly incorrect or so convoluted that you don't have confidence of its correctness. The only reason you should withhold approval is if you can't raise the code above an F (see the section on stalemates, below).
+An F is for code that is either functionally incorrect or so convoluted that you don't have confidence of its correctness. The only reason you should withhold approval is if you can't raise the code above an F (see the section on stalemates, below).
 
 ## Limit feedback on repeated patterns
 
@@ -92,7 +92,7 @@ If you can pick a self-contained 75-line piece out of a 400, start out by asking
 
 Ideally you should request a split at the beginning of the code review, but if you find yourself arguing endlessly about part of the code review, asking the author to split off an uncontroversial part of the changelist can be a way to ease tensions. Part of what's frustrating from the author's perspective if you're going back and forth about code review notes is that they feel like you're obstructing their progress. They probably have deadlines they're trying to hit and they might see you as obstructing those goals. If you split off a piece they can check in, you're making them feel good by showing that you can make tangible progress together.
 
-## Be extremely tolerant in pure housekeeping reviews
+## Welcome housekeeping changelists enthusiastically
 
 One of the kindest things your teammates can do is a pure housekeeping code change. By "pure housekeeping," I mean a change that does not affect the software's production functionality, but makes the code easier to maintain. This includes:
 
