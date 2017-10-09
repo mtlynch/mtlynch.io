@@ -6,6 +6,8 @@ read_time: true
 comments: true
 share: true
 related: true
+sidebar:
+  nav: main
 date: '2017-05-20 00:00:00'
 header:
   related: images/resized/2017-05-20-windows-sia-mining/480/siamining-pool.png
@@ -155,33 +157,35 @@ This verifies that your GPU library is installed correctly and your miner is abl
 
 In order to mine, you'll need a Siacoin wallet to store the coins you earn. There are currently two main options for Siacoin wallets, which I describe below.
 
-## Poloniex - The quick 'n dirty way
+## Bittrex - The quick 'n dirty way
 
-The fastest way to create a Siacoin wallet is to use [Poloniex](https://www.poloniex.com/), a cryptocurrency exchange. Poloniex provides a web wallet, so you can create an account and generate a Siacoin wallet instantly.
+The fastest way to create a Siacoin wallet is to use [Bittrex](https://www.bittrex.com/), a cryptocurrency exchange. Bittrex provides a web wallet, so you can create an account and generate a Siacoin wallet instantly.
 
-The downside is that you have to trust Poloniex to keep your Siacoin secure. There have not been any major security breaches at Poloniex that cost their customers money, but many other exchanges have had issues with this, and Poloniex is by no means immune.
+The downside is that you have to trust Bittrex to keep your Siacoin secure. There have not been any major security breaches at Bittrex that cost their customers money, but many other exchanges have had issues with this, and Bittrex is by no means immune.
 
-I recommend *starting* with Poloniex as you build familiarity with Siacoin and mining. Once you become comfortable, create a wallet with Sia-UI, move your Siacoin from Poloniex to your Sia-UI wallet, and set your Sia-UI address as your new mining address.
+I recommend *starting* with Bittrex as you build familiarity with Siacoin and mining. Once you become comfortable, create a wallet with Sia-UI, move your Siacoin from Bittrex to your Sia-UI wallet, and set your Sia-UI address as your new mining address.
 
-To create a wallet with Poloniex, follow the steps below:
+To create a wallet with Bittrex, follow the steps below:
 
-1. Go to [Poloniex](https://www.poloniex.com/).
+1. Go to [Bittrex](https://www.bittrex.com/).
 1. Create a new account and log in.
-1. From the upper right menu, click Balances > Deposits & Withdrawals.
-  {% include image.html file="poloniex-balances.png" alt="Poloniex balances button" %}
+1. From the upper right menu, click Wallets.
+  {% include image.html file="bittrex-wallet-button.png" alt="Bittrex wallet button" max_width="800px" img_link=true %}
 {:start="4"}
-1. Find "**SC** - Siacoin" in the list of cryptocurrencies and click the "Deposit" link on that row
-  {% include image.html file="siacoin-deposit.png" alt="Poloniex deposit button" %}
-
-You will see a long series of letters and numbers. This is your Siacoin wallet address.
-
-{% include image.html file="poloniex-address.png" alt="Poloniex deposit address" %}
-
-Save this address and proceed to the [Start mining](#start-mining) step.
+1. Type `siacoin` in the search bar.
+  {% include image.html file="bittrex-search.png" alt="Bittrex search bar" max_width="800px" img_link=true %}
+{:start="5"}
+1. In the "Siacoin" row that appears, click the + sign.
+  {% include image.html file="siacoin-deposit.png" alt="Bittrex deposit button" max_width="800px" img_link=true %}
+{:start="6"}
+1. You will see a pop-up window showing a long series of letters and numbers. This is your Siacoin wallet address.
+{% include image.html file="bittrex-address.png" alt="Bittrex deposit address" max_width="500px" img_link=true %}
+{:start="7"}
+1. Save this address and proceed to the [Start mining](#start-mining) step.
 
 ## Sia-UI - The better, but slower way
 
-*If you created a wallet with Poloniex, you can skip this section.*
+*If you created a wallet with Bittrex, you can skip this section.*
 
 Sia-UI is Sia's official Windows app. Developed and maintained by the Sia developers, it is the most secure and powerful Sia wallet available (though this is somewhat by virtue of it being the *only* Windows wallet available).
 
@@ -338,9 +342,10 @@ That said, the future of cryptocurrencies is highly unpredictable. In a year or 
 
 There are a few options for converting your Siacoin to Bitcoin:
 
-* [ShapeShift](https://shapeshift.io): (*recommended*) ShapeShift is simple and fast because there's no signup required. Just give them your Bitcoin address, and they'll give you a Siacoin deposit address. You send Siacoin and receive your Bitcoins. Boom. Done.
-* [Poloniex](https://poloniex.com): Poloniex is the other major exchange that supports Siacoin. It's more complicated than ShapeShift, and they sometimes hold up your transactions for hours, but they usually get the job done.
-* [BitSquare](https://bitsquare.io): (*for advanced users*) BitSquare is a decentralized, peer-to-peer exchange. Trading is slower and involves more steps, but can give you better rates than traditional exchanges. BitSquare also supports converting Siacoin directly to fiat, but you're relying on another person not to rip you off. If you choose this option, take steps protect yourself from fraud.
+* [Bittrex](https://bittrex.com): (*recommended*) Bittrex has historically provided the most solid support for Siacoin.
+* [ShapeShift](https://shapeshift.io): ShapeShift is simple and fast because there's no signup required. Just give them your Bitcoin address, and they'll give you a Siacoin deposit address. Unfortunately, their support for Siacoin is rather erratic and they only offer Siacoin exchanges intermittently.
+* [Bisq](https://bisq.io): (*for advanced users*) Bisq (formerly BitSquare) is a decentralized, peer-to-peer exchange. Trading is slower and involves more steps, but can give you better rates than traditional exchanges. Bisq also supports converting Siacoin directly to fiat, but you're relying on another person not to rip you off. If you choose this option, take steps protect yourself from fraud.
+* ~~Poloniex~~: Poloniex was once the leading exchange for Siacoin, but their support and platform has been awful for most of 2017, frequently freezing users' funds for weeks without any communication. I recommend avoiding Poloniex if you have any other exchange option.
 
 ## Converting Bitcoin to fiat currency (regular money)
 
