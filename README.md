@@ -73,6 +73,10 @@ If the link is just permanently broken and does not load, even in a browser, eit
 * For 1-9, spell out the number.
 * For all other numbers, use numerals.
 
+### Pronouns
+
+* When referring to non-specific people (e.g. "the user", "the client"), use "they."
+
 ### Names
 
 * reddit is written all lowercase.
@@ -80,6 +84,10 @@ If the link is just permanently broken and does not load, even in a browser, eit
 ### Oxford comma
 
 * Always use an Oxford comma.
+
+### Spelling conventions
+
+* ebook (not e-book)
 
 ## Including downloadable file content in posts
 

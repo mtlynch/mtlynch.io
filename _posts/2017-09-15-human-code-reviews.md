@@ -16,11 +16,11 @@ Lately, I've been reading articles about best practices for code reviews. I noti
 
 This gave me a revelation: if this works for code, why not romance? With that, I'm announcing my new ebook to help developers with their love lives:
 
-{% include image.html file="book-cover.png" alt="EBook cover" max_width="400px"  img_link=true %}
+{% include image.html file="book-cover.png" alt="ebook cover" max_width="400px"  img_link=true %}
 
-My revolutionary ebook will teach you **proven techniques** for maximizing the number of deficiencies you find in your partner. The ebook does **not** cover:
+My revolutionary ebook teaches you **proven techniques** for maximizing the number of deficiencies you find in your partner. The ebook does **not** cover:
 
-* Communicating issues to your partner with empathy or understanding.
+* Communicating issues to your partner with empathy and understanding.
 * Helping your partner address their weaknesses.
 
 Based on my reading of code review literature, those parts of a relationship are *obvious* and *not worth discussing*.
@@ -29,7 +29,7 @@ Does this sound like a good ebook to you? I'm assuming you just yipped "Nononono
 
 So why is that the way we talk about code reviews?
 
-I can only assume the articles I've read are actually from the future, where all developers are robots, and receiving a laundry list of mistakes they've made warms their cold, robot hearts.
+I can only assume the articles I've read are from the future, where all developers are robots, and receiving a laundry list of mistakes they've made warms their cold, robot hearts.
 
 # What if we review code for humans?
 
@@ -43,17 +43,17 @@ In this article, I discuss code review techniques that treat a code review as no
 
 # What is a code review?
 
-The term "code review" can refer to a range of activities, from simply reading some code over your teammate's shoulder to a 20-person meeting to dissect their code line by line. In this article, I use the term "code review" to refer to a process that's formal and written, but not so heavyweight as a series of in-person code inspection meetings.
+The term "code review" can refer to a range of activities, from simply reading some code over your teammate's shoulder to a 20-person meeting where you dissect code line by line. In this article, I use this term to refer to a process that's formal and written, but not so heavyweight as a series of in-person code inspection meetings.
 
 {% include image.html file="flowchart.png" alt="Code review flow" max_width="600px" img_link=true %}
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it's ready to be checked in to the team's codebase. A code review can have multiple reviewers, but I assume for simplicity that you are the sole reviewer.
 
-Before the code review begins, the author must create a **changelist**. A changelist is a set of changes to source code that the author wants to check in to the team's code repository.
+Before the code review begins, the author must create a **changelist**. This is a set of changes to source code that the author wants to check in to the team's code repository.
 
 A code review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer: the  author sends changes, and the reviewer responds with written feedback on those changes. Every code review has one or more rounds.
 
-The code review ends when the reviewer grants **approval** on the changes. This commonly referred to as giving "LGTM," a shorthand for "looks good to me."
+The code review ends when the reviewer **approves** the changes. This is commonly referred to as giving LGTM, shorthand for "looks good to me."
 
 # Why is this hard?
 
@@ -63,7 +63,7 @@ If a programmer sends you a changelist that they think is awesome, and you write
 
 It's easy for an author to interpret criticism of their code as an implication that they are an incompetent programmer. Code reviews are an opportunity to share knowledge and make informed engineering decisions, but that can't happen if the author perceives the discussion as a personal attack.
 
-As if this wasn't difficult enough, you also have the challenge of conveying your thoughts in writing, where the risk of miscommunication is much higher. The author can't hear your tone of voice or see your body language, so it's even more important to articulate your feedback carefully. To an author who's feeling defensive, an innocuous note like, "You forgot to close the file handle," can be read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
+As if this wasn't difficult enough, you also have the challenge of conveying your thoughts in writing, where the risk of miscommunication is much higher. The author can't hear your tone of voice or see your body language, so it's even more important to articulate your feedback carefully. To an author who's feeling defensive, an innocuous note like, "You forgot to close the file handle," can read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
 
 # Techniques
 
@@ -95,7 +95,7 @@ Whitespace errors are an obvious example. Compare how much effort it takes for a
 <ol>
 <li>Reviewer searches for whitespace issues and finds incorrect indenting.</li>
 <li>Reviewer writes a note calling out the incorrect indentation.</li>
-<li>Reviewer re-reads their note to make sure that it's worded in a clear, non-accusatory way.</li>
+<li>Reviewer rereads their note to make sure that it's worded in a clear, non-accusatory way.</li>
 <li>Author reads the note.</li>
 <li>Author corrects the code indentation.</li>
 <li>Reviewer verifies that the author addressed their note properly.</li>
@@ -106,20 +106,20 @@ Whitespace errors are an obvious example. Compare how much effort it takes for a
 </tbody>
 </table>
 
-The right side is empty because the author uses a code editor that automatically formats their whitespace every time they hit "Save." At worst, the author sends their code out for review and the [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) solution reports that the whitespace is incorrect, so the author fixes the issue without the reviewer ever having to care.
+The right side is empty because the author uses a code editor that automatically formats the whitespace every time they hit "Save." At worst, the author sends their code out for review and the [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) solution reports that the whitespace is incorrect, so the author fixes the issue without the reviewer ever having to care.
 
-Look for mechanical tasks in your code reviews that you can automate away. Here are the common ones:
+Look for mechanical tasks in your code reviews that you can automate. Here are the common ones:
 
 | Task | Automated solution |
 |-------|--------------------------|
-| Verify the code builds | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
-| Verify automated tests pass | Continuous integration solution such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
-| Verify code whitespace matches team style | Code formatter, such as [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) or [gofmt](https://golang.org/cmd/gofmt/) (Go formatter) |
-| Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter)
+| Verify the code builds | Continuous integration solution, such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
+| Verify automated tests pass | Continuous integration solution, such as [Travis](https://travis-ci.com) or [CircleCI](https://circleci.com/). |
+| Verify code whitespace matches team style | Code formatter, such as [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (C/C++ formatter) or [gofmt](https://golang.org/cmd/gofmt/) (Go formatter). |
+| Identify unused imports or unused variables | Code linters, such as [pyflakes](https://pypi.python.org/pypi/pyflakes) (Python linter) or [JSLint](http://jslint.com/help.html) (JavaScript linter).
 
-Automation helps you make more meaningful contributions as a reviewer. When you can ignore a whole class of issues, such as the ordering of `imports` or naming conventions for source filenames, it frees your focus for more interesting things like weaknesses in readability or functional errors.
+Automation helps you make more meaningful contributions as a reviewer. When you can ignore a whole class of issues, such as the ordering of `imports` or naming conventions for source filenames, it allows you to focus on more interesting things like functional errors or weaknesses in readability.
 
-Automation benefits the author as well. It allows them to discover careless mistakes in seconds instead of hours. The instant feedback makes it easier to learn from and cheaper to fix because the author still has the relevant context in their head. Plus, if someone's going to tell you about a dumb mistake you made, wouldn't you rather hear it from an automated tool than your human teammate?
+Automation benefits the author as well. It allows them to discover careless mistakes in seconds instead of hours. The instant feedback makes it easier to learn from and cheaper to fix because the author still has the relevant context in their head. Plus, if someone's going to tell you about a dumb mistake you made, wouldn't you rather hear it from an automated tool rather than your human teammate?
 
 ## Settle style arguments with a style guide
 
@@ -127,23 +127,23 @@ Arguments about style are a waste of time in code reviews. Consistent style is c
 
 {% include image.html file="style-argument.png" alt="A typical style argument" max_width="800px" img_link=true %}
 
-A good style guide defines not only superficial elements like naming conventions or whitespace rules, but also how to use the features of the given programming language. Languages like JavaScript and Perl are packed with functionality, offering many ways to implement the same logic. A style guide defines The One True Way of doing things so that you don't end up with half your team using one set of language features while the other half is using a totally different set of features.
+A good style guide defines not only superficial elements like naming conventions or whitespace rules, but also how to use the features of the given programming language. Languages like JavaScript and Perl are packed with functionality, offering many ways to implement the same logic. A style guide defines The One True Way of doing things so that you don't end up with half your team using one set of language features while the other half uses a totally different set of features.
 
 ***Option 1: Adopt an existing style guide***
 
-If you search online, you can find published style guides ripe for the taking. [Google's style guides](https://google.github.io/styleguide/) are the most well-known, but you can find others if Google's style doesn't suit you. By adopting an existing guide, you inherit the benefits of a style guide without the substantial costs of creating one from scratch.
+If you search online, you can find published style guides ripe for the taking. [Google's style guides](https://google.github.io/styleguide/) are the most well-known, but you can find others if this style doesn't suit you. By adopting an existing guide, you inherit the benefits of a style guide without the substantial costs of creating one from scratch.
 
-The downside is that organizations optimize their style guides for their own particular needs.  For example, Google's style guides are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on everything from a home router to the latest iPhone. If you're a four-person startup with a single product, you may choose to be more aggressive in using cutting-edge language features or extensions.
+The downside is that organizations optimize their style guides for their particular needs.  For example, Google's style guides are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on everything from a home router to the latest iPhone. If you're a four-person startup with a single product, you may choose to be more aggressive in using cutting-edge language features or extensions.
 
 ***Option 2: Create your own style guide incrementally***
 
-If you don't want to adopt an existing guide, you can create your own. Every time a style argument arises during a code review, raise the question to your whole team to decide what the official convention should be. When you reach agreement, codify that decision in your style guide. If the issue ever comes up in the future, use your style guide to settle the argument.
+If you don't want to adopt an existing guide, you can create your own. Every time a style argument arises during a code review, raise the question to your whole team to decide what the official convention should be. When you reach agreement, codify that decision in your style guide. When the issue comes up again, use your style guide to settle the argument.
 
 I prefer to keep my team's style guide as Markdown under source control (e.g. [GitHub pages](https://pages.github.com/)). That way, any changes to the style guide go through the normal code review process — someone has to explicitly approve the change, and everyone on the team has a chance to raise concerns. Wikis and Google Docs are acceptable options as well.
 
 ***Option 3: The hybrid approach***
 
-Combining options 1 and 2, you can adopt an existing style guide as your base, then maintain a local style guide to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as a base, but makes its own changes and additions on top of it.
+By combining options 1 and 2, you can adopt an existing style guide as your base, and then maintain a local style guide to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as a base, but makes its own changes and additions on top of it.
 
 ## Start reviewing immediately
 
@@ -289,6 +289,7 @@ Provide supporting evidence where possible in the form of links.  The relevant s
 I'll be publishing the second half of this article in a few weeks. Stay tuned for additional tips including:
 
 * Handling excessively large code reviews
+* Recognizing opportunities to give praise
 * Respecting the scope of a review
 * Mitigating stalemates
 
