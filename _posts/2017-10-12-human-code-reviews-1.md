@@ -6,6 +6,12 @@ read_time: true
 comments: true
 share: true
 related: true
+header:
+  teaser: images/2017-10-12-human-code-reviews-1/book-cover.png
+tags:
+- code review
+- culture
+- code style
 sidebar:
   nav: main
 ---
