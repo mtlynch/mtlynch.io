@@ -72,14 +72,28 @@ If the link is just permanently broken and does not load, even in a browser, eit
 
 * For 1-9, spell out the number.
 * For all other numbers, use numerals.
+* For numbers 1,000 or over, write commas to separate thousands.
+* For number ranges, use a regular hyphen and no space (200-300).
+
+### Pronouns
+
+* When referring to non-specific people (e.g. "the user", "the client"), use "they."
 
 ### Names
 
 * reddit is written all lowercase.
 
+### e.g. / i.e.
+
+* Put e.g. or i.e. within parentheses (e.g. like this).
+
 ### Oxford comma
 
 * Always use an Oxford comma.
+
+### Spelling conventions
+
+* ebook (not e-book)
 
 ## Including downloadable file content in posts
 
