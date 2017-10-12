@@ -27,7 +27,7 @@ Does this sound like a good ebook to you? I'm assuming you just yipped "Nononono
 
 So, why is that the way we talk about code reviews?
 
-I can only assume the articles I've read are from the future, where all developers are robots. In that world,  your teammtes enthusiastically welcome thoughtlessly-worded lists of their mistakes because processing such information warms their cold, robot hearts.
+I can only assume the articles I've read are from the future, where all developers are robots. In that world,  your teammtes welcome thoughtlessly-worded critiques of their code because processing such information warms their cold, robot hearts.
 
 I'm going to make the bold assumption that you want to improve code reviews in the present, where your teammates are humans. I'll make the even bolder assumption that a positive relationship with your colleagues is an end in itself and not simply a variable you adjust to minimize your cost-per-defect. How would your review practices change under these circumstances?
 
@@ -85,7 +85,7 @@ Whitespace errors are an obvious example. Compare how much effort it takes for a
 <tr>
 <td>
 <ol>
-<li>Reviewer searches for whitespace issues and finds incorrect indenting.</li>
+<li>Reviewer searches for whitespace issues and finds incorrect indentation.</li>
 <li>Reviewer writes a note calling out the incorrect indentation.</li>
 <li>Reviewer rereads their note to make sure that it's worded in a clear, non-accusatory way.</li>
 <li>Author reads the note.</li>
@@ -100,7 +100,7 @@ Whitespace errors are an obvious example. Compare how much effort it takes for a
 
 The right side is empty because the author uses a code editor that automatically formats the whitespace every time they hit "Save." At worst, the author sends their code out for review, and the [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) solution reports that the whitespace is incorrect. The author fixes the issue without the reviewer ever having to care.
 
-Look for mechanical tasks in your code reviews that you can automate. Here are the common ones:
+Look for mechanical tasks in your code reviews that you can automate away. Here are the common ones:
 
 | Task | Automated solution |
 |-------|--------------------------|
@@ -113,7 +113,7 @@ Automation helps you make more meaningful contributions as a reviewer. When you 
 
 Automation benefits the author as well. It allows them to discover careless mistakes in seconds instead of hours. The instant feedback makes it easier to learn from and cheaper to fix because the author still has the relevant context in their head. Plus, if they have to hear about a dumb mistake they made, it's much easier on their ego if they hear it from a computer instead of from you.
 
-Work with your team to build these automated checks directly into the code review workflow (e.g. [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in Git or [webhooks](https://developer.github.com/webhooks/) in Github). If authors are expected to run these checks manually, you lose most of the benefit of having them. The author will invariably forget on occasion which forces you to continue reviewing for the simple issues that automation is meant to handle instead.
+Work with your team to build these automated checks directly into the code review workflow (e.g., [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in Git or [webhooks](https://developer.github.com/webhooks/) in Github). If the review process requires the author to run these checks manually, you forfeit most of the benefit. The author will invariably forget on occasion which forces you to continue reviewing for the simple issues that automation is meant to handle instead.
 
 ## Settle style arguments with a style guide
 
@@ -123,13 +123,13 @@ Arguments about style are a waste of time in reviews. Consistent style is certai
 
 A good style guide defines not only superficial elements like naming conventions or whitespace rules but also how to use the features of the given programming language. JavaScript and Perl, for example, are packed with functionality — they offer many ways to implement the same logic. A style guide defines The One True Way of doing things so that you don't end up with half your team using one set of language features while the other half uses a totally different set of features.
 
-Once you have a style guide, you don't have to waste review cycles arguing with the author about whose naming conventions are best. Just defer to the style guide and move on. If your style guide doesn't specify a convention about a particular issue, it's generally not worth arguing about. If you encounter a style issue your guide doesn't cover and it's important enough to discuss, add the ultimate decision to your style guide so you never have to have that discussion again.
+Once you have a style guide, you don't have to waste review cycles arguing with the author about whose naming conventions are best. Just defer to the style guide and move on. If your style guide doesn't specify a convention about a particular issue, it's generally not worth arguing about. If you encounter a style issue your guide doesn't cover and it's important enough to discuss, hash it out with your team. Then, record the decision in your style guide so you never have to have that discussion again.
 
 ***Option 1: Adopt an existing style guide***
 
 If you search online, you can find published style guides ripe for the taking. [Google's style guides](https://google.github.io/styleguide/) are the most well-known, but you can find others if this style doesn't suit you. By adopting an existing guide, you inherit the benefits of a style guide without the substantial costs of creating one from scratch.
 
-The downside is that organizations optimize their style guides for their particular needs.  For example, Google's style guides are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on everything from a home router to the latest iPhone. If you're a four-person startup with a single product, you may choose to be more aggressive in using cutting-edge language features or extensions.
+The downside is that organizations optimize their style guides for their own particular needs.  For example, Google's style guides are conservative about [using new language features](https://google.github.io/styleguide/cppguide.html#C++11) because they have an enormous codebase with code that has to run on everything from a home router to the latest iPhone. If you're a four-person startup with a single product, you may choose to be more aggressive in using cutting-edge language features or extensions.
 
 ***Option 2: Create your own style guide incrementally***
 
@@ -147,7 +147,7 @@ Treat code reviews as a high priority. When you're actually reading the code and
 
 {% include image.html file="relay.png" alt="A code review relay race" max_width="600px" img_link=true %}
 
-If a teammate sends you a changelist, it likely means that they are blocked on other work until your review is done. In theory, source control systems allow the author to branch, continue working, and then forward-merge changes from the review into their new branch. In reality, there are about four developers total who can do that efficiently. It takes everyone else so long to untangle three-way diffs that it can cancel out any progress made waiting for the review to come back.
+If a teammate sends you a changelist, it likely means that they are blocked on other work until your review is complete. In theory, source control systems allow the author to branch, continue working, and then forward-merge changes from the review into their new branch. In reality, there are about four developers total who can do that efficiently. It takes everyone else so long to untangle three-way diffs that it can cancel out any progress made waiting for the review to come back.
 
 When you start reviews immediately, you create a virtuous cycle. Your review turnaround becomes purely a function of the size and complexity of the author's changelist. This incentivizes authors to send small, narrowly-scoped changelists. These are easier and more pleasant for you to review, so you review them faster, and the cycle continues.
 
@@ -280,7 +280,7 @@ When you give the author a note, explain both your suggested change and the *rea
 
 Grounding your notes in principles frames the discussion in a constructive way. When you cite a specific reason, like, "We should make this function private to minimize the class' public interface," the author can't simply respond, "No, I prefer it my way." Or rather, they *can*, but it would look silly because you demonstrated how the change satisfies a goal, and they just stated a preference.
 
-Software development is both an art and science. You can't always articulate exactly what is wrong with the code in terms of established principles. Sometimes code is just ugly or unintuitive, and it's hard to pin down why. In these cases, explain what you can, but keep it objective.  If you say, "**I** found this hard to understand," that's at least an objective statement, as opposed to, "**this is** confusing," which is a value judgment and may not be true for every person.
+Software development is both an art and science. You can't always articulate exactly what is wrong with a piece of code in terms of established principles. Sometimes code is just ugly or unintuitive, and it's hard to pin down why. In these cases, explain what you can, but keep it objective.  If you say, "**I** found this hard to understand," that's at least an objective statement, as opposed to, "**this is** confusing," which is a value judgment and may not be true for every person.
 
 Provide supporting evidence where possible in the form of links.  The relevant section of your team's style guide is the best link you can provide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you stray from authoritative documentation, the shakier your evidence becomes.
 
