@@ -6,14 +6,14 @@ read_time: true
 comments: true
 share: true
 related: true
+sidebar:
+  nav: main
 header:
   teaser: images/2017-10-12-human-code-reviews-1/book-cover.png
 tags:
 - code review
 - culture
 - code style
-sidebar:
-  nav: main
 ---
 
 Lately, I've been reading articles about best practices for code reviews. I notice that these articles focus on finding bugs to the exclusion of almost every other component of a review. Communicating issues you discover in a constructive and professional way? Irrelevant! Just identify all the bugs, and the rest will take care of itself.
@@ -33,7 +33,7 @@ Does this sound like a good ebook to you? I'm assuming you just yipped "Nononono
 
 So, why is that the way we talk about code reviews?
 
-I can only assume the articles I've read are from the future, where all developers are robots. In that world,  your teammtes welcome thoughtlessly-worded critiques of their code because processing such information warms their cold, robot hearts.
+I can only assume the articles I've read are from the future, where all developers are robots. In that world,  your teammates welcome thoughtlessly-worded critiques of their code because processing such information warms their cold, robot hearts.
 
 I'm going to make the bold assumption that you want to improve code reviews in the present, where your teammates are humans. I'll make the even bolder assumption that a positive relationship with your colleagues is an end in itself and not simply a variable you adjust to minimize your cost-per-defect. How would your review practices change under these circumstances?
 
@@ -45,9 +45,9 @@ The term "code review" can refer to a range of activities, from simply reading s
 
 {% include image.html file="flowchart.png" alt="Code review flow" max_width="600px" img_link=true %}
 
-The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it's ready to be checked in to the team's codebase. A review can have multiple reviewers, but I assume for simplicity that you are the sole reviewer.
+The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it's ready to be merged in to the team's codebase. A review can have multiple reviewers, but I assume for simplicity that you are the sole reviewer.
 
-Before the code review begins, the author must create a **changelist**. This is a set of changes to source code that the author wants to check in to the team's code repository.
+Before the code review begins, the author must create a **changelist**. This is a set of changes to source code that the author wants to merge in to the team's codebase.
 
 A review begins when the author sends their changelist to the reviewer. Code reviews happen in **rounds**.  Each round is one complete round-trip between the author and reviewer: the  author sends changes, and the reviewer responds with written feedback on those changes. Every code review has one or more rounds.
 
