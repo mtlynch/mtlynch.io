@@ -1,5 +1,5 @@
 ---
-title: How to Do Code Reviews Like a Human
+title: How to Do Code Reviews Like a Human (Part Two)
 layout: single
 author_profile: true
 read_time: true
@@ -8,8 +8,6 @@ share: true
 related: true
 sidebar:
   nav: main
-excerpt: 'Let''s talk about the interesting part of code reviews. Hint: It''s not
-  finding bugs.'
 ---
 
 # Techniques
