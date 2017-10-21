@@ -290,9 +290,9 @@ Software development is both an art and science. You can't always articulate exa
 
 Provide supporting evidence where possible in the form of links.  The relevant section of your team's style guide is the best link you can provide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you stray from authoritative documentation, the shakier your evidence becomes.
 
-# Part two: coming soon
+# Part two
 
-I will publish the second half of this article in a few weeks. Stay tuned for additional tips including:
+ [The second half of this article](/human-code-reviews-2/) is now available. Read on for additional techniques, including:
 
 * Handling excessively large code reviews,
 * Recognizing opportunities to give praise,
