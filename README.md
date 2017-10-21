@@ -71,6 +71,7 @@ If the link is just permanently broken and does not load, even in a browser, eit
 ### Numbers
 
 * For 1-9, spell out the number.
+  * *Except*: When the number is a multiplier (2x, 9x).
 * For all other numbers, use numerals.
 * For numbers 1,000 or over, write commas to separate thousands.
 * For number ranges, use a regular hyphen and no space (200-300).
