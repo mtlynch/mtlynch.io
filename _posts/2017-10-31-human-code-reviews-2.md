@@ -40,7 +40,7 @@ Then we'd do the exact same thing the next day. The code barely changed. This we
 
 What finally broke this cycle, was our most senior teammate, who I'll call Bob. He had been on vacation, but when he returned, he immediately recognized that we were effectively in a stalemate, and someone had to intervene.
 
-I agreed to let Bob take over the review. The first thing he did was ask Mallory to create new changelists by spliitting off two small pieces of code that we had never really fought about, each about 30-50 lines. Once Mallory did that, Bob instantly approved those changelists without any notes 
+I agreed to let Bob take over the review. The first thing he did was ask Mallory to create new changelists by splitting off two small pieces of code that we had never really fought about, each about 30-50 lines. Once Mallory did that, Bob instantly approved those changelists without any notes 
 
 Then Bob came back to the main changelist, which was now down to about 200 lines of code. He made some small suggestions, which Mallory addressed, then he approved.
 
@@ -58,6 +58,15 @@ I describe techniques  below that will reduce your chances of running into a sim
 
 {:start="9"}
 1. [Aim to bring the code up a letter grade or two](#aim-to-bring-the-code-up-a-letter-grade-or-two)
+1. Limit feedback on repeated patterns
+1. Respect the scope of the review
+1. Look for opportunities to split up large reviews
+1. Welcome housekeeping changelists enthusiastically
+1. Offer sincere praise
+1. Grant approval when remaining fixes are trivial
+1. Handle stalemates proactively
+
+TODO: Link each technique to its heading.
 
 ## Aim to bring the code up a letter grade or two
 
@@ -248,17 +257,15 @@ I acted emotionally as well. I had taken time to write suggestions I felt were t
 
 The biggest problem was that I didn't adjust my techniques to take into account that it was Mallory's first review on the team. Ths was most problematic in the volume of notes I gave. I should have [started out with only high-level notes](/human-code-reviews-1/#start-high-level-and-work-your-way-down) so that she didn't feel ambushed by 59 notes.
 
-I should have done more to demonstrate that I wasn't there to obstruct the work, but rather help it move forward by providing [code examples](/human-code-reviews-1/#be-generous-with-code-examples) and [sincere praise](#offer-sincere-praise).
+I should have done more to demonstrate that I wasn't there to obstruct the work, but rather help it move forward by providing [code examples](/human-code-reviews-1/#be-generous-with-code-examples) and [calling out what was good](#offer-sincere-praise) about the changelist.
 
-* Allowed stalemate to drag on too long
-  * After a few rounds, it should have been clear to me that we were not making meaningful progress in the review. I should have taken the initiative to make a drastic change, such as meeting in person to address the deeper conflict or escalating to our manager.
-  *  Related techniques:["Handle stalemates proactively"](#handle-stalemates-proactively)
+I also allowed stalemate to drag on too long. After a few rounds, it should have been clear to me that we were not making meaningful progress in the review. I should have  [taken the initiative](#handle-stalemates-proactively) to make a drastic change, such as meeting in person to address the deeper conflict or escalating to our manager.
 
 ## What Bob did right
 
 Bob's first move of [splitting up the review](#look-for-opportunities-to-split-up-large-reviews) was very effective. Here was a review that had been painfully stalled for three weeks. Suddenly, two pieces of it are now checked in. Now both Mallory and Bob feel good because there's tangible progress. There are still issues with the remaining chunk, but now it's a smaller, easier to manage changelist.
 
-Bob also [didn't try to strangle the review to perfection](#aim-to-bring-the-code-up-a-letter-grade-or-two). He likely could recognize the same issues that I was screaming about, but he also realized Mallory would be on the team awhile, and that it
+Bob also [didn't try to strangle the review to perfection](#aim-to-bring-the-code-up-a-letter-grade-or-two). He likely could recognize the same issues that I was screaming about, but he also realized Mallory would be on the team awhile, and that if he was not so rigid in the short term, quality would go up in the long term.
 
 # Conclusion
 
