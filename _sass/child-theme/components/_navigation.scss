@@ -8,18 +8,28 @@
   }
 }
 
-.sidebar nav {
-	display: none;
+.sidebar {
+  @include breakpoint($x-large) {
+    width: span(2 of 12);
+    padding-right: 0;
+  }
 
-	@include breakpoint($large) {
-		display: block;
-	}
+  nav {
+    display: none;
 
-	a {
-		font-size: 18px;
-	}
+    @include breakpoint($large) {
+      display: block;
+    }
+
+    a {
+      font-size: 18px;
+    }
+  }
+
 }
 
+
+
 .nav__sub-title {
-	margin: 0.5rem 0 1.5rem
+  margin: 0.5rem 0 1.5rem
 }
