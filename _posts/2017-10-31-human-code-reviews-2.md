@@ -14,33 +14,35 @@ header:
 
 {% include image.html file="cover-part-two.png" alt=""  img_link=true %}
 
-This is the second half of an article on how to do code reviews like a human. If you haven't read [part one](/human-code-reviews-1/), I suggest you start there. The short version: Your effectiveness as a code reviewer is determined not only by your ability to find bugs but also by the way that you interact with your teammates.
+This is the second half of my article about how to avoid pitfalls and communicate well in code reviews. If you haven't read [part one](/human-code-reviews-1/), you might want to read that first. The short version: your effectiveness as a code reviewer is based not only on your ability to find bugs but also by the way that you interact with your teammates.
 
-In this second half, I discuss additional techniques for working with your teammate during a code review, this time focusing more on bringing the review to a successful close and avoiding ugly conflict.
+In this half, I focus on techniques that will help you bring your code reviews to a successful close and avoid ugly conflict.
 
 # My worst code review
 
-The worst code review of my life was for a former teammate I'll call Mallory. She had been at the company several years longer than I had, but had only recently joined my team. Her first task was to add a feature to a data pipeline that I maintained.
+The worst code review of my life was for a former teammate I'll call Mallory. At the time of this review, she had just transferred to my team, though she had been at the company for several years. Her first assignment was to add a feature to a data pipeline that I maintained.
 
-### Round after round
+### The dreaded stalemate
 
-Mallory began implementing the feature by sending me about 300 lines of Python code. I found a lot of issues with the code. My first round of feedback contained 59 notes, about 2-3x my normal rate for a changelist of that size. Mallory had never written Python before and didn't have any hands-on experience with the pipeline she was integrating with.
+After a few weeks, I received a changelist of about 300 lines of Python code. I reviewed it, and the code had a lot of issues. I expected it to be a bit rough around the edges because any new teammate has to spend some time ramping up to find the team's rhythm. These issues were beyond simple ramp-up friction. The code quality was what I'd expect from a college intern, not from a developer with 10+ years of industry experience.
 
-A few days later, she sent me an updated changelist with responses to my notes. She had only fixed about half of the issues I pointed out. She rejected some of my notes with dismissive explanations that it wasn't worth her time to do the refactoring I suggested. She marked other notes resolved without actually implementing the change I requested.
+I sent my first round of notes back to Mallory. I had written 59 notes. That was my first big mistake.
 
-I sent a new round of notes, angry and frustrated, my notes taking on a much more passive aggressive tone. "Can you explain *why* we need this import?" And to no one's surprise, my passive aggressive notes yielded even more contemptuous note responses from Mallory.
+A few days later, Mallory sent me an updated changelist and responses to my notes. She had fixed the simple issues. Typos, renaming variables, and such. But she wouldn't fix higher level problems I identified, such as undefined behavior for malformed input or my request to refactor a function that was nested six levels deep in `for` loops and `if` statements. Instead, she brushed these off with dismissive explanations that they weren't worth the engineering time to fix.
+
+I sent a new round of notes, angry and frustrated. My tone was professional, but meandering into the passive aggressive realm of professional. "Can you explain *why* we want undefined behavior for malformed input?" As you might guess, Mallory's responses became even more obstinate and contemptuous.
 
 {% include image.html file="boulder.png" alt="Pushing the code review boulder back and forth" max_width="800px"  img_link=true %}
 
-We fell into a normal routine around this horrible code review. Every day it was the same. All morning, I felt this ball at the pit of my stomach, dreading the response she was going to send me. I would come back from lunch to find a new round of changes in my inbox. As I read the review, I could feel my heart thumping in my chest as I became more infuriated by her responses. And then I'd write more angry notes asking why she had neither accepted my note nor provided a valid explanation
+This cycle became a torturous daily routine. It was the same each day. All morning, I would feel a heavy weight at the pit of my stomach, dreading the response she was going to send me. I would come back from lunch to find a new round of changes in my inbox. As I read the updates, I could feel my heart thumping in my chest as I became infuriated by her responses. And then I'd write more angry notes passive-aggressively pointing out that she had neither made the changes I suggested nor provided an explanation of why I should grant approval without them.
 
 Then we'd do the exact same thing the next day. The code barely changed. This went on for three weeks.
 
-### The intervention
+### Intervention
 
-What finally broke this cycle, was our most senior teammate, who I'll call Bob. He had been on vacation, but when he returned, he immediately recognized that we were effectively in a stalemate, and someone had to intervene.
+Our most senior teammate, who I'll call Bob, thankfully broke this cycle. He returned from a long vacation to find us bitterly flinging code review notes at each other. He immediately recognized the situation for what it was: a stalemate. He requested to take over the review, and we all agreed.
 
-I agreed to let Bob take over the review. The first thing he did was ask Mallory to create new changelists by splitting off two small pieces of code that we had never really fought about, each about 30-50 lines. Once Mallory did that, Bob instantly approved those changelists without any notes 
+Bob's began his review by asking Mallory to create new changelists by splitting off two small pieces of code that we had never really fought about, each about 30-50 lines. Once Mallory did that, Bob instantly approved those changelists without any notes 
 
 Then Bob came back to the main changelist, which was now down to about 200 lines of code. He made some small suggestions, which Mallory addressed, then he approved.
 
@@ -50,9 +52,9 @@ Bob's whole review was done in two days.
 
 You may have figured out that this conflict wasn't really about the code. The code had legitimate issues, but they weren't so severe that two teammates with a good working relationship couldn't solve them.
 
-The code review was terrible to experience, but it forced me to reevaluate my approach to code reviews in many ways, and improve my techniques for the better.
+It was an unpleasant experience, but it caused me to reevaluate my approach. My reviews are now better for it.
 
-I describe techniques  below that will reduce your chances of running into a similarly unpleasant outcome in your code reviews. Then, I'll dig into what was wrong with my approach in the terrible review and describe what made Bob's review better.
+Below, I share techniques that will reduce your chances of running into a similarly unpleasant outcome in your code reviews. I'll return to Mallory at the end and explain why my original approach with Mallory was completely backwards and why Bob's was quietly brilliant.
 
 # Techniques
 
@@ -61,7 +63,6 @@ I describe techniques  below that will reduce your chances of running into a sim
 1. Limit feedback on repeated patterns
 1. Respect the scope of the review
 1. Look for opportunities to split up large reviews
-1. Welcome housekeeping changelists enthusiastically
 1. Offer sincere praise
 1. Grant approval when remaining fixes are trivial
 1. Handle stalemates proactively
@@ -72,7 +73,7 @@ TODO: Link each technique to its heading.
 
 Early in my career, my bar for approval of a code review was, "This code is as good as if I had written it myself." It only seemed sensible. My name was forever forged in the source history as the person who approved the change, so if I know of ways to make the code better than it is, why not fix them?
 
-The problem with this strategy is that people have a limited amount of patience. While your teammate might like the *idea* of making the changelist the best it can possibly be, they'll quickly grow frustrated if you make them go round after round of review, continually telling them that their code is not yet good enough. After my code review with Mallory, I decided the strain on the working relationship wasn't worth it, and set a new goal in my reviews: make the code about 10-20% better, or about the difference between two letter grades in school.
+The problem with this strategy is that people have a limited amount of patience. While your teammate might like the *idea* of making the changelist the best it can possibly be, they'll quickly grow frustrated if you make them go round after round of review, continually telling them that their code is not yet good enough. After my code review with Mallory, I decided the strain on the working relationship wasn't worth it, and set a new goal in my reviews: make the code about 10-20% better - roughly the difference between two letter grades on a school paper.
 
 If a code review comes to you as a D, the only way you're getting it up to an A+ is if you go eight or more rounds of review. By the end of it, the author will hate you and will never want to send you a code review ever again.
 
@@ -90,7 +91,7 @@ If there's a repeated pattern, don't flag it every single time. You don't want t
 
 If you see a pattern repeat two or three times, it's fine to call out each instance. Anything more than that, just ask the author to fix the pattern rather than flagging each individual instance.
 
-For exmple:
+For example:
 
 >Style guide forbids abbreviations in names, so we should change `net_name` to `network_name`
 >(ditto for `ip_addr` -> `ip_address` and `client_af` -> `client_address_family`)
@@ -131,11 +132,9 @@ TODO: show a diff of this
 
 In this case, you should point out that the function name `ValidateAndSerialize` needs to change even though they're not actually touching that line. This is especially common for things like naming or code comments where the change causes it to go out of date.
 
-I'll also softly break this rule if the the changelist is already pretty solid and I have very few notes, but I notice something nearby that would be an easy fix. In these cases, I make it clear that they can ignore the note.
+I will softly break this rule if the the changelist is solid right off the bat and I have very few notes, but I notice something nearby that would be an easy fix. In these cases, I make it clear that they can ignore the note.
 
->(out of scope, optional) We can pull the variable assignment out of the `if` / `else`.
-
-TODO: show a diff of this
+{% include image.html file="out-of-scope-note.png" alt="Pointing out an issue that's out of scope" max_width="790px"  img_link=true %}
 
 ## Look for opportunities to split up large reviews
 
@@ -147,30 +146,6 @@ The author may gripe about splitting the changelist because it's a very tedious 
 
 You should especially try to find ways to split up the changelist if the code is low quality, like what you'd grade a D or F.
 Bad code gets exponentially harder as its size increases. Divide and conquer. You're much better off reviewing two sloppy 250-line changelists than a single 500-line abomination.
-
-## Welcome housekeeping changelists enthusiastically
-
-One of the kindest things your teammates can do is to create a housekeeping change. By "housekeeping," I mean a change that does not affect the software's production functionality, but makes the code easier to maintain.
-
-Housekeeping changes include:
-
-* Refactoring code
-  * Refactoring here is as Martin Fowler described it in his book, *Refactoring*. These should be narrowly-scoped, systematic changes to the code, not a massive, cavalier (TODO: synonym) rewrite.
-* Deleting dead code
-* Adding test cases
-* Improving documentation
-
-When my teammates send me these changelists, I am SOOOO happy. They're a gift. They help everyone on the team by making the code easier to maintain and easier to build on top of.
-
-{% include image.html file="chimneysweep.png" alt="Author cleans out the chimney" max_width="600px"  img_link=true %}
-
-Correspondingly, one of my biggest pet peeves is when I send out a pure refactoring change, and my reviewer refuses to sign off until I improve it *more*.
-
-You know the expression, "Don't look a gift horse in the mouth." This is receiving a gift horse, looking it in the mouth for *an hour*, then refusing to accept it until you receive a gift saddle as well.
-
-When a teammate asks you to review a housekeeping change, ask yourself, "Does this change make the code better than it was before?" If the answer is yes, give immediate approval. Add some notes, but make it clear that they are optional. If you really care about further improvements, you can write them yourself after your teammate has merged in their changelist.
-
-If you are nitpicky or demanding when reviewing housekeeping changes, you will leave your teammate feeling like no good deed goes unpunished, and it will discourage them from making these types of contributions in the future.
 
 ## Offer sincere praise
 
@@ -184,9 +159,9 @@ If you gave the author a tough note that required them to rewrite a lot of their
 
 {% include image.html file="mma.png" alt="Sincere praise at an MMA match" max_width="650px"  img_link=true %}
 
-If you've given them feedback on previous reviews about bad coding habits and you see in a new review that they've made an effort to correct those habits, call this out as well. For example, if I've given notes in the past about documentation that's hard to read, then in a subsequent changelist, they send me documentation that's very clear, I'll usually say something like, "I like this function comment. It's very clear and thorough."
+If you've given them feedback on previous reviews about bad coding habits and you see in a new review that they've made an effort to correct those habits, call this out.
 
-If you're reviewing code for a junior developer or someone who is new to the team, be especially cognizant of opportunities to offer praise. These are the people for whom a code review is the most stressful, so offering positive reinforcement is a good way of showing you value them as a teammate.
+When you review code for a junior developer or someone who is new to the team, be especially cognizant of opportunities to offer praise. These are the people for whom a code review is the most stressful, so offering positive reinforcement is a good way of showing you value them as a teammate.
 
 ## Grant approval when remaining fixes are trivial
 
@@ -226,11 +201,11 @@ If you're really arguing about a high-level design issue that affects your whole
 
 ***Talk it out***
 
-Meet in person or over video chat to work through the issues you're stuck on. Something about text communication makes it really easy to hate your teammate and assume they're coming from a place of stubbornness or incompetence. Talking in person will break that for both you and your teammate.
+Meet in person or over video chat to work through the issues you're stuck on. Text communication makes it really easy to hate your teammate and assume they're coming from a place of stubbornness or incompetence. Talking in person will break that for both you and your teammate.
 
 ***Concede or Escalate***
 
-You don't want to just sit on it or keep circling around. The longer you sit in stalemate, the more damaging it is to your relationship with your teammate. If the previous steps haven't gotten you unstuck, your options are to either concede or escalate.
+You don't want to just sit on it or keep circling around. The longer you sit in stalemate, the more damaging it is to your relationship with your teammate. If alternatives haven't gotten you unstuck, your options are to either concede or escalate.
 
 Talk to the author about escalating the discussion to your team's manager or tech lead. Offer to allow the author to reassign to a different reviewer. Whether the escalation goes in your favor or the new reviewer agrees with your notes, it's critical that you accept the decisions and move on. Continuing to fight it will drag out a bad situation and make you look unprofessional.
 
@@ -257,7 +232,7 @@ I acted emotionally as well. I had taken time to write suggestions I felt were t
 
 The biggest problem was that I didn't adjust my techniques to take into account that it was Mallory's first review on the team. Ths was most problematic in the volume of notes I gave. I should have [started out with only high-level notes](/human-code-reviews-1/#start-high-level-and-work-your-way-down) so that she didn't feel ambushed by 59 notes.
 
-I should have done more to demonstrate that I wasn't there to obstruct the work, but rather help it move forward by providing [code examples](/human-code-reviews-1/#be-generous-with-code-examples) and [calling out what was good](#offer-sincere-praise) about the changelist.
+I should have done more to demonstrate that I wasn't there to obstruct the work, but rather help it move forward by providing [code examples](/human-code-reviews-1/#be-generous-with-code-examples) and [calling out what was good](#offer-sincere-praise) about her changelist.
 
 I also allowed stalemate to drag on too long. After a few rounds, it should have been clear to me that we were not making meaningful progress in the review. I should have  [taken the initiative](#handle-stalemates-proactively) to make a drastic change, such as meeting in person to address the deeper conflict or escalating to our manager.
 
@@ -274,5 +249,9 @@ After I published the first half of this articles, several readers commented tha
 What I hope you take away from this article is that with every action you take during a code review, you are making choices, whether or not you're conscious of them.  It's not important that you make *my* choices. It's important you recognize there *are* choices. The techniques I describe in the article are meant to get you to think critically about how you approach your code reviews.
 
 Good luck, and may your code reviews be human-like.
+
+# Further Reading
+
+
 
 *Edited by [Samantha Mason](https://www.upwork.com/fl/samanthamason). Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post.*
