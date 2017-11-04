@@ -16,7 +16,7 @@ header:
 
 This is the second half of my article about how to communicate well and avoid pitfalls in code reviews. In this half, I focus on techniques to bring your code review to a successful close while avoiding ugly conflict.
 
-I've laid some groundwork in [part one](/human-code-reviews-1/), so I recommend starting there. If you're impatient, here's the short version: a good code reviewer not only finds bugs but conscienciously crafts their critiques to help their teammates improve.
+I've laid some groundwork in [part one](/human-code-reviews-1/), so I recommend starting there. If you're impatient, here's the short version: a good code reviewer not only finds bugs but conscientiously crafts their critiques to help their teammates improve.
 
 # My worst code review
 
@@ -28,7 +28,7 @@ When Mallory sent me her first changelist for review, the code was a bit rough. 
 
 I dutifully recorded all of the issues I found, 59 in total. According to the code review literature I've [discussed previously](/human-code-reviews-1/), I had done a great job. I found SO many mistakes, therefore I must be a good reviewer.
 
-A few days later, Mallory sent me the updated changelist and her responses to my notes. She had fixed the simple issues: typos, renaming variables, etc. But she refused to address higher-level problems, such as the fact that her code had undefined behavior for malformed input or that one of her functions nested control-flow structues six layers deep. Instead, she explained dismissively that these issues were not worth the engineering time to fix.
+A few days later, Mallory sent me the updated changelist and her responses to my notes. She had fixed the simple issues: typos, renaming variables, etc. But she refused to address higher-level problems, such as the fact that her code had undefined behavior for malformed input or that one of her functions nested control-flow structures six layers deep. Instead, she explained dismissively that these issues were not worth the engineering time to fix.
 
 I sent a new round of notes, angry and frustrated. My tone was professional, but meandering into the realm of passive-aggressive. "Can you explain *why* we want undefined behavior for malformed input?" As you might guess, Mallory's replies became even more obstinate.
 
@@ -199,7 +199,7 @@ Here are some indicators that you're headed for a stalemate:
 
 ### Talk it out
 
-Meet in person or over video chat. Text communication has a way of causing you to forget there's a real human at the other end of the converation. It becomes too easy to imagine your teammate is coming from a place of stubbornness or incompetence. An in-person conversation will break that spell for both you and the author.
+Meet in person or over video chat. Text communication has a way of causing you to forget there's a real human at the other end of the conversation. It becomes too easy to imagine your teammate is coming from a place of stubbornness or incompetence. An in-person conversation will break that spell for both you and the author.
 
 ### Consider a design review
 
@@ -254,7 +254,7 @@ After I published the first half of this article, several readers took issue wit
 
 That feedback is reasonable and expected. One person may find a terse review comment to be brusque or rude. Another may judge the same comment as concise and efficient.
 
-No one can hand you a recipe for a perfect code review. The technniques that work best will depend on the author's personality, your relationship to them, and your team's culture. You can hone your techniques by paying attention to your results and thinking critically about them. When you encounter tension in a review, take a step back to evaluate why it happened. Also pay attention to the quality of your reviews. If you feel unable to bring code to the standard you want, think about what aspects of the review process are hindering you.
+No one can hand you a recipe for a perfect code review. The techniques that work best will depend on the author's personality, your relationship with them, and your team's culture. You can hone your techniques by paying attention to your results and thinking critically about them. When you encounter tension in a review, take a step back to evaluate why it happened. Also pay attention to the quality of your reviews. If you feel unable to bring code to the standard you want, think about what aspects of the review process are hindering you.
 
 Good luck, and may your code reviews be human-like.
 
