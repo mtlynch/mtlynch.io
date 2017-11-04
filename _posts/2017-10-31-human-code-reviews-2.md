@@ -234,13 +234,15 @@ Remember the code review with Mallory? Why did mine turn into a three-week slog 
 
 ## What I did wrong
 
-The biggest problem was that I didn't adjust my techniques to take into account that it was Mallory's first review on the team. Ths was most problematic in the volume of notes I gave. I should have [started out with only high-level notes](/human-code-reviews-1/#start-high-level-and-work-your-way-down) so that she didn't feel ambushed by finding a critique from me every five lines of code.
+This was Mallory's first review on the team, and I failed to account for the fact that receiving code review notes from a new person would make her feel judged. I should have [started out with only high-level notes](/human-code-reviews-1/#start-high-level-and-work-your-way-down) so that she didn't feel ambushed by critiques from me after every five lines of code.
 
-I should have done more to demonstrate that I wasn't there to obstruct the work, but rather help it move forward. I could have provided [code examples](/human-code-reviews-1/#be-generous-with-code-examples) or [called out the positives](#offer-sincere-praise) in her changelist.
+I should have done more to demonstrate that I wasn't there to obstruct her work, but rather help it move forward. I could have provided [code examples](/human-code-reviews-1/#be-generous-with-code-examples) or [called out the positives](#offer-sincere-praise) in her changelist.
 
-I let [my ego](/human-code-reviews-1/#never-say-you) get tied up in the review. I had spent the past year nursing this old pipeline back to health. Suddenly Mallory starts futzing with it and can't be bothered to take my concerns seriously? A good author doesn't take confuse code review notes as personal criticism. A good reviewer is similarly responsible for detaching their emotions from the review.
+I allowed [my ego](/human-code-reviews-1/#never-say-you) negatively affected the in the review. I had spent the past year nursing this old pipeline back to health. Suddenly Mallory starts futzing with it and can't be bothered to take my concerns seriously? A good author doesn't take confuse code review notes as personal criticism. A good reviewer is similarly responsible for detaching their emotions from the review.
 
-Finally, I allowed the stalemate to drag on too long. After a few rounds, it should have been clear to me that we were not making meaningful progress. I should have  [taken the initiative](#handle-stalemates-proactively) to make a drastic change, such as meeting in person to address the deeper conflict or escalating to our manager.
+Finally, I allowed the stalemate to drag on too long. After a few rounds, it should have been clear to me that we were not making meaningful progress. I should have [taken the initiative](#handle-stalemates-proactively) to make a drastic change, such as meeting in person to address the deeper conflict or escalating to our manager.
+
+*(**Note to Samantha**: I feel like there's too much "I" in this section, but I'm not sure how to get rid of it. Suggestions?)*
 
 ## What Bob did right
 
