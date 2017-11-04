@@ -66,11 +66,11 @@
 {% endif %}
 
 {% if img_url %}
-  <a href="{{ img_url }}">
-    <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
-  </a>
-{% else %}
+<a href="{{ img_url }}">
   <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
+</a>
+{% else %}
+<img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
 {% endif %}
 
 {% if fig_caption %}
