@@ -30,14 +30,6 @@ Users pay for transactions within Sia using a cryptocurrency called Siacoin. Lik
 
 In this guide, I'll show you how to generate money when you're not using your Windows PC by setting it up to mine Siacoin.
 
-# Why mine Siacoin?
-
-If  your PC supports high-end gaming or graphic design, your graphics card may have the potential to generate extra income through Siacoin mining.
-
-Even if you don't have top of the line graphics hardware, you still may be able to earn a significant amount of money mining Siacoin. I mine with an [NVIDIA GTX 970](http://amzn.to/2r1RPJw), which was released almost three years ago. It generates ~2,000 Siacoin per week. At current Siacoin prices ($6.72 USD per thousand Siacoin), this is equivalent to a weekly revenue of ~$13 USD. This is not bad, considering I don't need to put in any work after the initial setup. You can estimate your own profit from mining by using the [minings earning calculator](http://siapulse.com/page/tools) on SiaPulse.
-
-If you're not looking for extra income, maybe you're interested in playing with cryptocurrency. Siacoin mining provides an easy, low-risk way to get your feet wet.
-
 # Time Required
 
 This guide looks long, but it's just because there are lots of screenshots. I estimate that it only takes about **20 minutes** to get started with mining.
@@ -53,7 +45,7 @@ This guide looks long, but it's just because there are lots of screenshots. I es
 
 This guide uses the latest version of each software component at the time of writing:
 
-* Sia-UI v.1.2.1
+* Sia-UI v.1.3.0
 * CUDA v.8.0.61
 * OpenCL 2.0
 * Marlin v.1.0.0
@@ -333,10 +325,6 @@ There are cryptocurrency exchanges that allow you to sell Siacoin, but they don'
 
 1. Convert Siacoin to Bitcoin.
 1. Convert Bitcoin to fiat currency.
-
-You may also consider holding your Siacoin as an investment. Over the past year, Siacoin's value has increased 35-fold (e.g. $100 of Siacoin purchased a year ago would be worth ~$3,500 today). Siacoin has been trading for less than two years. By comparison, when Bitcoin was this age, its price was ~$5 per coin. Today, Bitcoin is worth almost $2,000 per coin.
-
-That said, the future of cryptocurrencies is highly unpredictable. In a year or two, Siacoin may be worthless. Consider your tolerance for risk when deciding to hold or sell your Siacoin.
 
 ## Converting Siacoin to Bitcoin
 
