@@ -93,10 +93,7 @@ When you notice that several of the author's mistakes fit the same pattern, don'
 
 It's fine to call out individual occurrences when the pattern only recurs two or three times. For anything more than that, just ask the author to fix the pattern rather than every particular instance.
 
->Function names should have an underscore if they're not part of the module's public interface.
->(ditto throughout)
-
-TODO: Make this a screenshot.
+{% include image.html file="instance-variables.png" alt="Example of pointing out repeated pattern" max_width="787px" %}
 
 ## Respect the scope of the review
 
@@ -112,32 +109,15 @@ The rule of thumb is: if the changelist doesn't touch the line, it's out of scop
 
 Here's an example:
 
-```diff
-eight = 9
--SaveFile()
-+SaveFile(encoding.ASCII)
-SeekToPosition(eight)
-```
-
-TODO: Show a diff of this. Highlight the first line as out of scope.
+{% include image.html file="out-of-scope-1.png" alt="Example out of scope line" max_width="611px" %}
 
 Even if you'll be kept awake all night, haunted by the [magic number](https://en.wikipedia.org/wiki/Magic_number_(programming)) and ridiculous variable name in your codebase, it's out of scope. Even if the author is the same person who wrote those nearby lines,  it's still out of scope. If it's egregiously bad, file a bug or submit your own fix. Don't force it onto the author's plate in this review.
 
 The exception is when the changelist affects the surrounding code without actually touching it.
 
-```diff
-bool Document::ValidateAndSerialize(Handle* output_handle) {
--  ValidationResult validation_result = validator_->Validate(&contents_);
--  if (validation_result == ValidationResult::Failure) {
--    return false;
--  }
-  return serializer_->Serialize(&contents_);
-}
-```
+{% include image.html file="in-scope.png" alt="Example of in-scope line" max_width="637px" %}
 
-TODO: show a diff of this
-
-In this case, point out that the author needs to rename the function from `ValidateAndSerialize` to just `Serialize`. They haven't touched the line containing the function signature, but they still caused the line to become incorrect.
+In this case, point out that the author needs to rename the function from `ValidateAndSerialize` to just `Serialize`. They haven't touched the line containing the function signature, but they still caused it to become incorrect.
 
 I softly break this rule if I don't have many notes, but I notice an easy fix just out of scope. In these cases, I make it clear that the author can ignore the note if they please.
 
