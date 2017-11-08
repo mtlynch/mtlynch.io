@@ -1,6 +1,9 @@
 #  Include all rules by default
 all
 
+## MD001 Header levels should only increment by one level at a time
+exclude_rule 'MD001'
+
 ## MD013 - Line length.
 exclude_rule 'MD013'
 
