@@ -10,7 +10,7 @@ sidebar:
   nav: main
 date: '2017-05-20 00:00:00'
 header:
-  related: images/resized/2017-05-20-windows-sia-mining/480/siamining-pool.png
+  related: images/resized/2017-05-20-windows-sia-mining/480/luxor-mining-pool.png
 tags:
 - siacoin
 - cryptocurrency
@@ -238,9 +238,20 @@ You're ready to start mining! To begin, follow the steps below:
 
 1. Open Notepad
 1. Go to File > Open and enter `C:\marlin\marlin.bat`
-1. Under "Your Payout Address" change the address to your own Siacoin wallet address.
-  {% include image.html file="marlin-bat.png" alt="Marlin batch file" %}
+1. Replace the file contents with the following:
+
+```text
+SET payout_address=YOUR SIACOIN WALLET ADDRESS
+SET intensity=18
+SET pool_server=us-east.luxor.tech:3333
+
+marlin.exe --user %payout_address% --intensity %intensity% --host %pool_server%
+```
+
 {:start="4"}
+1. Change `YOUR SIACOIN WALLET ADDRESS` to your own wallet address. The file should look like the following:
+  {% include image.html file="marlin-bat.png" alt="Marlin batch file" %}
+{:start="5"}
 1. Go to File > Save and close Notepad.
 1. Go to `C:\marlin` in Windows Explorer.
 1. Double-click on `marlin.bat`.
@@ -252,30 +263,30 @@ You're ready to start mining! To begin, follow the steps below:
 You're mining! You should see output like the following:
 
 ```text
-2017/05/19 22:55:17 Starting marlin 1.0.0
-2017/05/19 22:55:18 CUDA (driver version 8.0)
-2017/05/19 22:55:18  [0] GeForce GTX 970 (CC 5.2)
-2017/05/19 22:55:18 OpenCL: NVIDIA CUDA
-2017/05/19 22:55:18  [1] GPU: GeForce GTX 970
-2017/05/19 22:55:18 [0] Initializing GeForce GTX 970
-2017/05/19 22:55:18 Connecting to siamining.com:3333...
-2017/05/19 22:55:18 Difficulty set to 17G
-2017/05/19 22:55:18 New block ...fa4d65e6 detected, difficulty 43P
-2017/05/19 22:55:18 Authentication successful
-2017/05/19 22:55:18 [0] Initialized, work size 268435456
-2017/05/19 22:55:18 [0] Accepted 2b5b471d D: 42G/17G  965.8 MH/s
-2017/05/19 22:55:18 [0] Accepted 0c1e4a1f D: 23G/17G  965.8 MH/s
-2017/05/19 22:55:20 [0] Accepted 727c0e70 D: 50G/17G  967.5 MH/s
-2017/05/19 22:55:23 [0] Accepted f1eede1e D: 46G/17G  966.2 MH/s
+2017/11/08 11:59:15 Starting marlin 1.0.0
+2017/11/08 11:59:15 CUDA (driver version 9.1)
+2017/11/08 11:59:15  [0] GeForce GTX 970 (CC 5.2)
+2017/11/08 11:59:15 OpenCL: NVIDIA CUDA
+2017/11/08 11:59:15  [1] GPU: GeForce GTX 970
+2017/11/08 11:59:15 Connecting to us-east.luxor.tech:3333...
+2017/11/08 11:59:15 [0] Initializing GeForce GTX 970
+2017/11/08 11:59:15 Difficulty set to 107G
+2017/11/08 11:59:15 New block ...72226449 detected, difficulty 147P
+2017/11/08 11:59:15 Authentication successful
+2017/11/08 11:59:16 [0] Initialized, work size 262144
+2017/11/08 11:59:16 [0] Accepted 2b5b471d D: 42G/17G  965.8 MH/s
+2017/11/08 11:59:18 [0] Accepted 0c1e4a1f D: 23G/17G  965.8 MH/s
+2017/11/08 11:59:18 [0] Accepted 727c0e70 D: 50G/17G  967.5 MH/s
+2017/11/08 11:59:21 [0] Accepted f1eede1e D: 46G/17G  966.2 MH/s
 ```
 
 Close the window to stop mining.
 
-If you configured your Siacoin wallet address correctly in Marlin's settings, you will see your mining activity in the SiaMining dashboard:
+If you configured your Siacoin wallet address correctly in Marlin's settings, you will see your mining activity in the Luxor dashboard:
 
-* `https://siamining.com/addresses/[your siacoin address]`
+* `https://mining.luxor.tech/miners/your siacoin address`
 
-I'll go into more details about the SiaMining pool [below](#using-the-mining-pool).
+I'll go into more details about the Luxor mining pool [below](#using-the-mining-pool).
 
 You'll notice that your system responds sluggishly while you're running the miner. This is because mining consumes all available graphics resources, which makes it difficult for you to use your computer normally. Don't worry. We'll address this in the next section.
 
@@ -305,17 +316,17 @@ With this task created, your PC will mine Siacoin automatically any time you lea
 
 Mining is a game of chance. Your machine is doing repeated calculations with random numbers hoping to discover a solution to an equation that the Siacoin network needs at the given moment. The computer that finds a solution receives a miner's reward. The reward is currently ~200,000 Siacoin (~$1,300 USD). A solution is found roughly once every ten minutes, but due to the number of miners active, it is possible for your miner to go months without getting lucky and stumbling on a solution.
 
-This guide configures your miner to participate in the SiaMining *pool* to give you a more regular and predictable mining income stream. With a mining pool, all participants implicitly agree to share effort and share rewards proportionally. The SiaMining pool takes a 3% fee for administering this system.
+This guide configures your miner to participate in the Luxor mining *pool* to give you a more regular and predictable mining income stream. With a mining pool, all participants implicitly agree to share effort and share rewards proportionally. The Luxor mining pool takes a 0.3% fee for administering this system. This fee is unusually low for a mining pool and will likely increase to 2-3% by next 2018.
 
-The SiaMining pool provides a dashboard that allows you to monitor your miner's activity:
+The Luxor mining pool provides a dashboard that allows you to monitor your miner's activity:
 
-* `https://siamining.com/addresses/[your siacoin address]`
+* `https://mining.luxor.tech/miners/your siacoin address`
 
-{% include image.html file="siamining-pool.png" alt="SiaMining screenshot" img_link="true" %}
+{% include image.html file="luxor-mining-pool.png" alt="Luxor screenshot" img_link="true" %}
 
 When the unpaid balance for your wallet address reaches 500 Siacoin, the pool pays out your rewards. Within six hours, you will see a deposit in your wallet for a little over 500 Siacoin.
 
-My particular GPU reaches the payout threshold about once per week. Your experience will vary depending on the performance of your GPU, the percentage of time your miner is running, and the number of other active Siacoin miners.
+My particular GPU reaches the payout threshold about once every two weeks (as of November 2017). Your experience will vary depending on the performance of your GPU, the percentage of time your miner is running, and the number of other active Siacoin miners.
 
 # Cashing out your Siacoin
 
@@ -410,7 +421,7 @@ This usually happens because the mining settings are too intense for your GPU. T
 
 1. Open Notepad
 1. Go to File > Open and enter `C:\marlin\marlin.bat`
-1. Under "Your Payout Address" change the address to your own Siacoin wallet address.
+1. Change the `intensity` value to `1`.
   {% include image.html file="lower-intensity.png" alt="Marlin batch file" %}
 {:start="4"}
 1. Go to File > Save and close Notepad.
