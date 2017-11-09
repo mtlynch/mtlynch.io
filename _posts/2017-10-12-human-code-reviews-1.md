@@ -57,7 +57,9 @@ The review ends when the reviewer **approves** the changes. This is commonly ref
 
 If a programmer sends you a changelist that they think is awesome, and you write them an extensive list of reasons why it's not, that's a sensitive message to get across.
 
->That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.<br><br>Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2g6oTsV).
+>That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.
+>
+>-Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2g6oTsV)
 
 It's easy for an author to interpret criticism of their code as an implication that they are an incompetent programmer. Code reviews are an opportunity to share knowledge and make informed engineering decisions. But that can't happen if the author perceives the discussion as a personal attack.
 
@@ -290,9 +292,9 @@ Software development is both an art and science. You can't always articulate exa
 
 Provide supporting evidence where possible in the form of links.  The relevant section of your team's style guide is the best link you can provide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you stray from authoritative documentation, the shakier your evidence becomes.
 
-# Part two: coming soon
+# Part two
 
-I will publish the second half of this article in a few weeks. Stay tuned for additional tips including:
+If you enjoyed this post, check out [the second half of this article](/human-code-reviews-2/), which focuses on bringing reviews to a successful close without ugly conflict. It includes techniques for:
 
 * Handling excessively large code reviews,
 * Recognizing opportunities to give praise,
