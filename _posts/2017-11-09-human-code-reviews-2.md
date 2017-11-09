@@ -11,9 +11,9 @@ sidebar:
 header:
   teaser: images/2017-11-09-human-code-reviews-2/cover-part-two.png
 tags:
-  - code review
-  - culture
-  - conflict resolution
+- code review
+- culture
+- conflict resolution
 excerpt: The worst code review of my life and how you can avoid a similar fate.
 ---
 
