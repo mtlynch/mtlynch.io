@@ -9,7 +9,12 @@ related: true
 sidebar:
   nav: main
 header:
-  teaser: images/2017-10-31-human-code-reviews-2/cover-part-two.png
+  teaser: images/2017-11-09-human-code-reviews-2/cover-part-two.png
+tags:
+- code review
+- culture
+- conflict resolution
+excerpt: The worst code review of my life and how you can avoid a similar fate.
 ---
 
 {% include image.html file="cover-part-two.png" alt=""  img_link=true %}
