@@ -28,7 +28,7 @@ When Mallory sent me her first changelist for review, the code was a bit rough. 
 
 I dutifully recorded all of the issues I spotted, 59 in total. According to the review literature I'd read, I had done a great job. I found SO many mistakes. Therefore, I must be a good reviewer.
 
-A few days later, Mallory sent me the updated changelist and her responses to my notes. She had fixed the simple issues: typos, renaming variables, etc. But she refused to address the higher-level problems, such as the fact that her code had undefined behavior for malformed input or that one of her functions nested control-flow structures six layers deep. Instead, she explained dismissively that these issues were not worth the engineering time to fix.
+A few days later, Mallory sent me the updated changelist and her responses to my notes. She had fixed the simple issues: typos, variable renames, etc. But she refused to address the higher-level problems, such as the fact that her code had undefined behavior for malformed input or that one of her functions nested control-flow structures six layers deep. Instead, she explained dismissively that these issues were not worth the engineering time to fix.
 
 Angry and frustrated, I sent a new round of notes. My tone was professional but meandering into the realm of passive-aggressive. "Can you explain *why* we want undefined behavior for malformed input?" As you might guess, Mallory's replies became even more obstinate.
 
@@ -60,7 +60,7 @@ You may have deduced that this conflict wasn't really about the code. It had leg
 
 It was an unpleasant experience, but one I'm glad for in retrospect. It caused me to reevaluate my approach to reviews and identify areas for improvement.
 
-Below, I share techniques that will reduce your risk of a similarly undesirable outcome in code reviews. I'll return to Mallory later and explain why my original approach was backward and why Bob's was quietly brilliant.
+Below, I share techniques that will reduce your risk of a similarly undesirable outcome. I'll return to Mallory later and explain why my original approach was backward and why Bob's was quietly brilliant.
 
 # Techniques
 
@@ -77,7 +77,7 @@ Below, I share techniques that will reduce your risk of a similarly undesirable 
 
 While your teammate might, in *theory*, want to explore every opportunity to improve their code, their patience is finite. They'll quickly grow frustrated if you withhold approval round after round because you keep thinking of new and brilliant ways for them to polish their changelist.
 
-I privately think of the code in letter grades, from A to F. When I receive a changelist that starts at a D, I try to help the author bring it to a C or a B-. Not perfect, but good enough.
+I privately think of the code in terms of letter grades, from A to F. When I receive a changelist that starts at a D, I try to help the author bring it to a C or a B-. Not perfect, but good enough.
 
 It's possible, in theory, to bring a D up to an A+, but it will probably take upwards of eight rounds of review. By the end, the author will hate you and never want to send you code again.
 
@@ -97,7 +97,7 @@ It's fine to call out two or three separate instances of a pattern. For anything
 
 ## Respect the scope of the review
 
-There's an anti-pattern I see frequently where the reviewer identifies something *near* code in the changelist and asks the author to fix it. Once the author complies, the reviewer usually realizes that the code is better but inconsistent, so it needs a few more minor changes. And then a few more. And on and on until a narrowly-scoped changelist has expanded to include lots of unrelated changes.
+There's an anti-pattern I see frequently where the reviewer identifies something *near* code in the changelist and asks the author to fix it. Once the author complies, the reviewer usually realizes that the code is better but inconsistent, so it needs a few more minor changes. And then a few more. And on and on until a narrowly-scoped changelist has expanded to include lots of unrelated churn.
 
 {% include image.html file="if-you-give-a-mouse-a-cookie.jpg" alt="If You Give a Mouse a Cookie" max_width="240px" fig_caption=fig_caption class="align-right" img_link=true %}
 
@@ -111,9 +111,9 @@ Here's an example:
 
 {% include image.html file="out-of-scope-1.png" alt="Example out of scope line" max_width="611px" %}
 
-Even if you'll be kept awake all night, haunted by the [magic number](https://en.wikipedia.org/wiki/Magic_number_(programming)) and ridiculous variable name in your codebase, it's out of scope. Even if the author is the same person who wrote the nearby lines,  it's still out of scope. If it's egregiously bad, file a bug or submit your own fix. Don't force it onto the author's plate in this review.
+Even if you'll be kept awake all night, haunted by the [magic number](https://en.wikipedia.org/wiki/Magic_number_(programming)) and ridiculous variable name in your codebase, it's out of scope. Even if the author is the same person who wrote the nearby lines,  it's still out of scope. If it's egregiously bad, file a bug or submit your own fix, but don't force it onto the author's plate in this review.
 
-The exception is when the changelist affects the surrounding code without actually touching it:
+The exception is when the changelist affects the surrounding code without actually touching it, for example:
 
 {% include image.html file="in-scope.png" alt="Example of in-scope line" max_width="637px" %}
 
@@ -131,7 +131,7 @@ If you receive a changelist that's more than ~400 lines of code, encourage the a
 
 The author may gripe about splitting the changelist because it's a tedious task. Ease their burden by identifying logical boundaries for the split. The easiest case is when the changelist touches multiple files independently. In that case, they can just split the changelist into smaller sets of files. In harder cases, find the functions or classes at the lowest layer of abstraction. Ask the author to move these to a separate changelist, then circle back to the rest of the code after the first changelist is merged in.
 
-When the code quality is low,  request a split *emphatically*. The difficulty of reviewing bad code grows exponentially with size. You're much better off auditing a couple of sloppy 300-line changelists than a single 600-line abomination.
+When the code quality is low,  *emphatically* request a split. The difficulty of reviewing bad code grows exponentially with size. You're much better off auditing a couple of sloppy 300-line changelists than a single 600-line abomination.
 
 ## Offer sincere praise
 
@@ -144,7 +144,7 @@ For example, imagine you're reviewing for an author who struggles to write docum
 You don't need to have a specific goal in mind to offer praise. Any time I see something in the changelist that delights me, I tell the author about it:
 
 * "I wasn't aware of this API. That's really useful!"
-* "This is an elegant solution. I never would have thought of this."
+* "This is an elegant solution. I never would have thought of that."
 * "Breaking up this function was a great idea. It's so much simpler now."
 
 If the author is a junior developer or joined the team recently, they're likely to feel nervous or defensive during a review. Sincere compliments ease this tension by demonstrating that you are their supportive teammate and not the cruel gatekeeper.
@@ -185,7 +185,7 @@ Meet in person or over video chat. Text communication has a way of causing you t
 
 A contentious code review may indicate weaknesses earlier in the process. Are you arguing about things that should have been covered during the design review? *Was* there a design review?
 
-If the root of the disagreement traces back to a high-level design choice, that decision should happen at the team level rather than leaving it in the hands of the two people who happen to be in the code review. Talk to the author about opening up the discussion to the rest of your team in the form of a design review.
+If the root of the disagreement traces back to a high-level design choice, the broader team should weigh in rather than leave it in the hands of the two people who happen to be in the code review. Talk to the author about opening up the discussion to the rest of your team in the form of a design review.
 
 ### Concede or Escalate
 
@@ -204,7 +204,7 @@ Messy review arguments tend to be less about the code and more about the relatio
 * Take a break from each other.
   * If possible, avoid sending each other code reviews for a few weeks until things cool down.
 * Study conflict resolution.
-  * I found the book [*Crucial Conversations*](http://amzn.to/2hvUbsP) to be helpful. Its advice may sound common-sense, but there's tremendous value in thinking critically about your approach to conflict while you're not in the heat of an argument.
+  * I found the book [*Crucial Conversations*](http://amzn.to/2hvUbsP) to be helpful. Its advice may sound common-sense, but there's tremendous value in analyzing your approach to conflict while you're not in the heat of an argument.
 
 # My worst code review: revisited
 
@@ -232,14 +232,14 @@ After I published the first half of this article, several readers took issue wit
 
 That feedback is reasonable and expected. One person may find a terse review comment to be brusque or rude. Another may judge the same comment as concise and efficient.
 
-There are many choices available to you during a code review. It's not important that you make my choices, just that you recognize that there *are* choices. (todo: rewrite)
+In reviewing code, you make many choices: what to focus on, how to frame feedback, when to approve. It's not important that you choose *my* options. Just recognize that there *are* options.
 
-No one can hand you a recipe for a perfect review. The techniques that work best will depend on the author's personality, your relationship with them, and your team's culture. Hone your approach by paying attention to your results and thinking critically about them. When you encounter tension in a review, take a step back to evaluate why it happened. Also, take notice of the quality of your reviews. If you feel unable to bring code up to your quality standards, think about what aspects of the review process are hindering you and how you can address them.
+No one can hand you a recipe for a perfect review. The techniques that work best will depend on the code author's personality, your relationship with them, and your team's culture. Hone your approach by thinking critically about the outcomes of your code reviews. When you encounter tension, take a step back to evaluate why it happened. Pay attention to the quality of your reviews. If you feel unable to bring code up to your quality standards, think about what aspects of the review process are hindering you and how you can address them.
 
 Good luck, and may your code reviews be human-like.
 
 # Further Reading
 
-Dr. Karl Wiegers is the only author I found who wrote about the social factors of code reviews. He summarizes his views nicely in his article, ["Humanizing Peer Reviews."](http://www.processimpact.com/articles/humanizing_reviews.html) Written in 2002, its continued relevance demonstrates the long-term value of effective communication.
+Dr. Karl Wiegers is the only author I found who gave the social factors of code reviews their due attention. He summarizes his views nicely in his article, ["Humanizing Peer Reviews."](http://www.processimpact.com/articles/humanizing_reviews.html) Written in 2002, its continued relevance demonstrates the long-term value of effective communication.
 
 *This article was edited by [Samantha Mason](https://www.upwork.com/fl/samanthamason). Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post.*
