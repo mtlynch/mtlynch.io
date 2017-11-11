@@ -2,7 +2,7 @@
 
 .page {
   @include breakpoint($large) {
-  width: span(10 of 12);
+  width: span(9.5 of 12);
   padding-left: gutter(0.5 of 12);
   padding-right: gutter(2 of 12);
 }
