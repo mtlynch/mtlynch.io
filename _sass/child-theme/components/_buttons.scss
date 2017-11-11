@@ -1,0 +1,32 @@
+// Buttons Component
+
+.btn-discuss {
+  background-color: #3b5998;
+  color: #fff;
+  text-transform: capitalize;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:visited {
+    color: #fff;
+  }
+}
+
+.btn--reddit {
+  background-color: #ff5700;
+  text-transform: lowercase;
+
+  &:hover {
+    background-color: #e54e00;
+  }
+}
+
+.btn--hacker_news {
+  background-color: #ff6500;
+
+  &:hover {
+    background-color: #e55b00;
+  }
+}

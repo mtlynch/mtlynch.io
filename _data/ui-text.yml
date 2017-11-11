@@ -13,6 +13,7 @@ en: &DEFAULT_EN
   less_than                  : "less than"
   minute_read                : "minute read"
   share_on_label             : "Share on"
+  discuss_on_label           : "Discuss on"
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
