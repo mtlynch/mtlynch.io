@@ -14,6 +14,9 @@ tags:
 - greenpithumb
 - gardening
 - home automation
+discuss_urls:
+  reddit: "https://www.reddit.com/r/programming/comments/6jujfi/greenpithumb_a_raspberry_pi_gardening_bot/"
+  hacker_news: "https://news.ycombinator.com/item?id=14644539"
 ---
 
 # Introduction
