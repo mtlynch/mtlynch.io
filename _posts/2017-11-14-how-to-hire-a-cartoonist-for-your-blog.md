@@ -30,6 +30,7 @@ I received submissions from male cartoonists, but t
 {% include image.html file="sample-loraine.png" max_width="600px" alt="Sample submission from Loraine" img_link=true %}
 {% include image.html file="sample-maria.jpg" max_width="600px" alt="Sample submission from Maria" img_link=true %}
 {% include image.html file="sample-manel.jpg" max_width="600px" alt="Sample submission from Manel" img_link=true %}
+
 # Working with a cartoonist
 
 
@@ -39,7 +40,11 @@ It's fun! I get to pretend to be a cartoonist. I learned with my TaskRabbit chef
 * [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
 * [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
 
-# Tips for hiring a cartoonist
+# Cost
+
+Compare it to searching for and paying for a stock image. Compare it to the time it takes you to promote the article.
+
+# Tips
 Below, I've compiled tips for hiring and working with cartoonists based on my own experience and interviews with the cartoonists I worked with.
 
 ## Attract quality artists
