@@ -1,12 +1,21 @@
 ---
 title: Projects
-permalink: "/projects/"
 layout: single
+author_profile: true
+sidebar:
+  nav: main
+permalink: "/projects/"
 excerpt: My projects
 hide_signup: true
 ---
 
 I frequently take on software hobby projects to help myself learn new technologies. This page tracks all of the projects I have published.
+
+# [KetoHub](https://ketohub.io) (2017-present)
+
+KetoHub is an aggregator for Keto recipes. It allows you to search recipes across different keto recipes and filter by meal type.
+
+**Technologies**: Angular, Bootstrap, Python, Ansible, scrapy
 
 # [GreenPiThumb](/greenpithumb/) (2017)
 
