@@ -10,22 +10,22 @@ sidebar:
   nav: main
 ---
 
+I had an idea for a new web site, but who has time to build their own web sites? I mean aside from basically everyone who isn't me who's seemingly able to put out a sleek-looking web site in about an hour.
+
+It was a busy time at my day job, so I decided to practice my outsourcing skills by hiring a freelancer to build it. This didn't go quite according to plan, as I somehow ended up as my freelancer's freelancer.
+
 # The idea
 
-I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto), but I've always found it a pain to find new recipes. There are plenty of good keto recipes online, but they're split across many different blogs, each with a different structure. Most keto blogs are just WordPress blogs being run by people without technical expertise, so they're really slow and hard to navigate or search.
+I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto), but I've always found it a pain to find new recipes. There are plenty of good keto recipes online, but they're split across many different blogs, each with a different structure. Most people who write keto blogs specialize in cooking, not running web sites, so their sites tend to be slow and hard to navigate.
 
-I could build a keto recipe directory. It would put everything into a common format so that the user can browse all the ingredients at once. Expedia does it with hotels. I could do it for keto recipes. The site would be called KetoHub.
+TODO: Screenshots of different keto blogs
 
-It would need to scrape other web sites to get information about the recipes.
+My idea was KetoHub, a keto recipe directory. It would put everything into a common format so that the user can browse recipes from any keto site. Expedia, but for keto recipes.
 
-The minimum viable product (MVP) is the most basic version of an application meant to prove that there's actual demand for what you're building.
-
-I accidentally ended up becoming my freelancer's freelancer.
+A minimum viable product (MVP) is the smallest possible version of a software project. It tests whether there are actual users who will really use your product.
 
 # Finding a freelancer
 
- At the time of the idea, I was in a busy period at work with little free time for a side project. But I love [outsourcing things](https://mtlynch.io/taskrabbit-cooking/), so why not outsource this? 
- 
 Most of KetoHub's heavy lifting was just web scraping - writing software to load web sites and pull out the relevant data. That kind of work is relatively inexpensive and straightforward to outsource. I planned to wait until I had some free time, then use a freelancing site to hire someone to implement the scraping.
 
 Oh wait! This would be a perfect job for my friend Ferngully (who agreed to let me write about her under the condition that I assign her a silly pseudonym). She quit her job a few months prior to travel but was due back to the US in a few weeks to look for full-time work. We had worked together in the past, so I knew she was a solid developer and that we work well together.
@@ -34,7 +34,7 @@ Ferngully was into the idea. She was much further along with her job search than
 
 # Work begins
 
-I wrote a mockup and a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf).
+I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) so that Ferngully and I would have the project specified in a central location. I also used pen and paper to sketch out the user interface:
 
 {% include image.html file="wireframe-v1.jpg" alt="Mockup of KetoHub v1" max_width="600px" img_link=true %}
 
