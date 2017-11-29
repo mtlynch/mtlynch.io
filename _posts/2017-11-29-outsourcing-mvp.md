@@ -10,37 +10,45 @@ sidebar:
   nav: main
 ---
 
-I had an idea for a new web site, but who has time to build their own web sites? I mean aside from basically everyone who isn't me who's seemingly able to put out a sleek-looking web site in about an hour.
+Over the summer, I had a brilliant idea for a website. But who has time to build their own website? Actually, it seems like every developer on the Internet who *isn't* me can spend an hour and come up with a really advanced website. So I guess the answer to my question is everyone can build their own website but me.
 
-It was a busy time at my day job, so I decided to practice my outsourcing skills by hiring a freelancer to build it. This didn't go quite according to plan, as I somehow ended up as my freelancer's freelancer.
+I just wanted to build the simplest possible version of the idea. In software, this is known as the minimum viable product, or MVP. It's a test version of your product to see if actual users are interested in using it. But it was a busy time at my day job, so I wouldn't have time to work on a side project.
+
+Then I had an even better idea. I'd *outsource* the task to a freelancer. Then they'd just build up the site on their own, then when I was ready, they'd hand me a thriving site with thousands of passionate users demanding that I find a way to monetize the site.
+
+This wasn't quite how it worked out. I completed the project, but I somehow ended up becoming my freelancer's freelancer.
 
 # The idea
 
-I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto), but I've always found it a pain to find new recipes. There are plenty of good keto recipes online, but they're split across many different blogs, each with a different structure. Most people who write keto blogs specialize in cooking, not running web sites, so their sites tend to be slow and hard to navigate.
+I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto), but I find it exasperating searching for new recipes. There are plenty of good keto recipes online, but they're split across dozens of blogs, each with a different structure. Most people who run keto blogs specialize in cooking, not running websites, so their sites tend to be slow and hard to navigate.
 
 TODO: Screenshots of different keto blogs
 
-My idea was KetoHub, a keto recipe directory. It would put everything into a common format so that the user can browse recipes from any keto site. Expedia, but for keto recipes.
-
-A minimum viable product (MVP) is the smallest possible version of a software project. It tests whether there are actual users who will really use your product.
-
-# Finding a freelancer
-
-Most of KetoHub's heavy lifting was just web scraping - writing software to load web sites and pull out the relevant data. That kind of work is relatively inexpensive and straightforward to outsource. I planned to wait until I had some free time, then use a freelancing site to hire someone to implement the scraping.
-
-Oh wait! This would be a perfect job for my friend Ferngully (who agreed to let me write about her under the condition that I assign her a silly pseudonym). She quit her job a few months prior to travel but was due back to the US in a few weeks to look for full-time work. We had worked together in the past, so I knew she was a solid developer and that we work well together.
-
-Ferngully was into the idea. She was much further along with her job search than I expected. She had already started interviewing and almost had some offers in-hand, but I figured the job would only take a few weeks. She didn't have experience with web development, but the web app portion wasn't that complicated. I could do it with my limited AngularJS knowledge.
-
-# Work begins
-
-I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) so that Ferngully and I would have the project specified in a central location. I also used pen and paper to sketch out the user interface:
+My idea was KetoHub, a keto recipe directory. It would aggregate meals options from all the different blogs so that you could browse them from one easy-to-use website. Like Expedia, but for keto recipes.
 
 {% include image.html file="wireframe-v1.jpg" alt="Mockup of KetoHub v1" max_width="600px" img_link=true %}
 
-I felt like it would be discouraging if she delivered the backend only to sit for months waiting for me to do anything with it, so I rushed to put together a frontend using data I scraped by hand.
+# Finding a freelancer
+
+Most of KetoHub's heavy lifting was web scraping - the logic to scan the recipe blogs and pull out the relevant data. That kind of work is relatively inexpensive and straightforward to outsource. I could wait until I had some free time, then use a freelancing site to hire someone to do the scraping.
+
+Oh wait! This would be a perfect job for my friend Ferngully (who agreed to let me write about her under the condition that I assign her a silly pseudonym). She quit her job to travel a few months prior. She was due back to the US in a few weeks to look for full-time work. We had worked together in the past, so I knew she was a solid developer and that we work well together. She didn't have experience with web development, but that part was small enough that I could do myself with my limited web programming knowledge.
+
+Ferngully was into the idea. I'd never hired someone outside a freelancing site before, so that was a new experience. How do I pay her? How does she legally transfer her intellectual property to me? We agreed on an hourly rate, I wrote up a contract based on [this template](https://www.docracy.com/0nyy4jzmvg8/odesk-short-agreement), and we were off to the races.
+
+# Time crunch
+
+The first blip in the process was that Ferngully was much further along with her job search than I expected. She had already started interviewing and almost had some offers in-hand. Still, I told myself it was only a 1-2 week job, so she'd be done before she started working full-time. 
+
+I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) so that Ferngully and I would have the project specified in a central location.
+
+TODO: Show picture of design doc.
+
+I felt like it would be discouraging if she delivered the backend only to sit for months waiting for me to do anything with it, so I spent a week of evenings putting together a basic frontend using data I scraped by hand.
 
 {% include image.html file="ketohub-mvp.png" alt="Basic KetoHub site with dummy data" max_width="600px" img_link=true %}
+
+Now, KetoHub was ready to go as soon as Ferngully delivered the pieces I needed for generating data.
 
 # Why aren't we live?
 
@@ -68,9 +76,15 @@ Her next PR, I just accepted with no notes. In the time I would have spent writi
 
 Ferngully was surprised by this and asked if I could write notes anyway. I explained that I was trying to publish the MVP ASAP so if  I spent the extra time writing notes, it kind of defeats the purpose of hiring a freelancer. Ferngully was disappointed because the main reason she was interested in the work at all was for the technical growth from getting code review feedback.
 
+# Implementing it myself
+
 We agreed that it no longer made sense for her to work on it. A few days later, I resolved to just work on KetoHub until it was done. I stayed up until 2am and published the first version. It was ugly, but it was done. And I learned that I would never outsource my MVP again.
 
+TODO: Show picture of finished product.
+
 # Reasons to implement your own MVP
+
+Even though this was a pretty bumpy ride, it was a great learning experience. I got to experience building an MVP both with a freelancer and without. I realized that building the MVP myself made a lot more sense, so I'll be sure to do that on future projects.
 
 ## Only you know which corners to cut
 
