@@ -46,27 +46,28 @@ I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) th
 
 When I was initially discussing the project with Ferngully, she asked if I had any deadlines. I told her, "No deadlines. Just focus on writing good code." It's the same thing I tell any developer working with me for a side project. I'd rather get good code on Thursday than have a developer stress and cut corners to get it to me by Monday. I estimated that her portion would take about 30-50 hours to implement, so if she worked something like a normal working week, she'd be done in a week or two.
 
-At the time, I thought it would be months before I had time to build the frontend. I thought certainly I'd be the bottleneck. But after I finished the design document, I thought about how anticlimactic it would be if Ferngully delivered her scraping code only to have it sit in a drawer for months. I spent a few evenings putting together a basic website frontend using data I scraped by hand. Now we were ready to go as soon as Fernanda's data scraping code was ready.
+At the time, it seemed like it would be months before I had time to build the frontend. Certainly, I'd be the bottleneck. But after I finished the design document, I thought about how anticlimactic it would be if Ferngully delivered her scraping code only to have it sit in a drawer for months. I spent a few evenings putting together a basic website frontend using data I scraped by hand. Now we were ready to go as soon as Ferngully's code was ready.
 
 {% include image.html file="ketohub-mvp.png" alt="Basic KetoHub site with dummy data" max_width="700px" fig_caption="Screenshot of KetoHub's MVP, populated with data scraped by hand" img_link=true %}
 
 That's when I started getting anxious.
 
-Before I built the frontend, the project still seemed very abstract and distant.
+A week had gone by, and I still didn't have any code from Ferngully. Before I built the frontend, the project still seemed very abstract and distant. Now, it felt like every day I my frontend code was withering into obsolecence. I just wanted to show KetoHub to the world so that Mark Zuckerberg could buy me out and take me on his data-collection superyacht.
 
-I could feel my frontend code withering into obsolecence.
+# Working under low bandwidth
 
-# Low bandwidth
+During the second week of the project, Ferngully sent me the first piece of code for review. It was the first part of the first backend component (of three components total). She had put in 29 hours total in the first two weeks, but she was starting her first time job on Monday, so I expected her availability to go down.
 
-People report starting a new job as one of the most stressful events of their lives, so I didn't want to add more stress to my friend's life by pestering her to put more hours into my toy side project.
+I revisited the design document to see if I could trim anything out. Originally I planned for Ferngully to write code that makes API calls to upload data to cloud storage. I realized I could reduce her work if I asked her to just write data to local disk and I'd use command-line utilities to upload it to the cloud.
 
+Maybe this was a good thing. Anything I can trim out of the MVP means it wasn't really in its most minimal form, so that simplification was a win.
 
+We still didn't actually have any backend code actually checked in yet because the code review was still in progress, but I thought optimistically if she still has 10 hours of spare time per week, we could wrap this up in a few more weeks.
 
-After she accepted her offer, they wanted her to start in 10 days. Okay, still doable. It forced me to revisit the design document and look for what else I could trim out. Originally I planned for Ferngully to write code that uploads directly to Firebase's database. I could easily cut that out because it's much easier if she just writes to the local disk and then I use Firebase utilities to upload to the the Firebase database.
-
-Okay maybe this was good. It was forcing me to trim down the MVP even more. I wanted it to be as minimal as possible.
 
 # Becoming my freelancer's freelancer
+
+Starting a new job is stressful enough. I didn't want to put more on Ferngully's plate by pestering her to put more hours into my toy side project.
 
 A week went by and I didn't have any code. Ferngully told me that she had family visiting, so she didn't have time to work on KetoHub. She averaged 14 hours per week in the two weeks before her job started, but then in the two weeks after she started, it dropped to just 2 hours per week. We got up to about 5 hours per week, but she estimated that the remaining work would take about 40 hours.
 
@@ -90,7 +91,7 @@ TODO: Show picture of finished product.
 
 # Lessons
 
-## Just build your own MVP
+## Build your own MVP
 
 Even though this was a pretty bumpy ride, I learned a lot from it. I got to experience building an MVP both with a freelancer and without. I knew from the beginning that there would be frictional costs to working with a freelancer. It obviously takes longer to communicate with another person and review their work. I found there were more subtle drawbacks that I hadn't anticipated, and these only became clear to me after I took over the work myself.
 
