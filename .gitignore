@@ -12,6 +12,7 @@ node_modules
 npm-debug.log*
 *.swp
 _*preview*
+_update_date.py
 assets/js/main.min.js
 assets/js/script-compiled.js
 images/resized/
