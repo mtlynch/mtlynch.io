@@ -76,6 +76,10 @@ If the link is just permanently broken and does not load, even in a browser, eit
 * For numbers 1,000 or over, write commas to separate thousands.
 * For number ranges, use a regular hyphen and no space (200-300).
 
+### Time of day
+
+* Use AM/PM, separated by a space (2 AM, 4:30 PM).
+
 ### Pronouns
 
 * When referring to non-specific people (e.g. "the user", "the client"), use "they."
