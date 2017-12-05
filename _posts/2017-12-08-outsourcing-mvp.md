@@ -10,18 +10,18 @@ sidebar:
   nav: main
 ---
 
-A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: build the website based on my idea, but outsource all the work.
+A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: implement the idea, but outsource all the work.
 
 To keep costs in check, I'd only build the minimum viable product (MVP). An MVP is the most basic version of a website. It's a low-cost test to see if anyone is actually interested in what you created.
 
 The plan was simple:
 
 1. Write a quick design specification.
-1. Find a superstar freelance developer with 10 years' experience in whatever was the trendy, bleeding-edge web framework.
+1. Find a superstar freelance developer with 10 years' experience in the trendiest, most bleeding-edge web framework.
 1. Offer said freelancer $4/hr so I can maximize site profits.
 1. Watch the freelancer build the site into a thriving web property frequented by thousands of passionate users demanding that I take their money.
 
-You may be surprised to learn that this plan did *not* work. I'm not writing this from my luxurious $200 million Silicon Valley two-bedroom apartment after getting a headline-grabbing buyout from Facebook. Instead, I'm writing this from my regular one-bedroom apartment after receiving a half-finished product and somehow becoming my freelancer's freelancer.
+You may be surprised to learn that this plan did *not* work. I'm not writing this from my luxurious $200 million Silicon Valley two-bedroom apartment. I didn't grab headlines with an outrageous buyout from Facebook. Instead, I'm writing this from my regular one-bedroom apartment after receiving a half-finished product and somehow becoming my freelancer's freelancer.
 
 # The idea
 
@@ -29,7 +29,7 @@ I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto) and like tryi
 
 {% include image.html file="keto-sites.png" alt="Existing keto sites" max_width="700px" img_link=true %}
 
-My idea was KetoHub, a keto recipe directory. It would aggregate recipes from all the keto blogs so that you could browse them from one easy-to-use website.
+My idea was KetoHub, a keto recipe directory. It would aggregate recipes from across the web into one easy-to-use website.
 
 It would be like Expedia but for keto recipes.
 
@@ -37,11 +37,11 @@ It would be like Expedia but for keto recipes.
 
 # Finding a freelancer
 
-Most of KetoHub's heavy lifting was web scraping -- crawling recipe blogs and pulling out the relevant data. I expected it to be straightforward to hire an inexpensive web scraping specialist from Upwork, my usual freelance marketplace.
+Most of KetoHub's heavy lifting was web scraping -- crawling recipe blogs and pulling out the relevant data. This is a common job type on Upwork, my usual frelancer marketplace. I could probably find someone for a low price, but I might end up with code that crumbles to pieces as soon as I try to iterate beyond the MVP.
 
-Oh, wait! This would be a perfect job for my friend Ferngully (who agreed to let me write about her under the condition that I assign her a silly pseudonym). She had quit her job to travel a few months prior but had recently returned to look for full-time work. She would probably have time to freelance in the meantime. We had worked together in the past, so I knew she was a solid developer and that we work well together.
+Oh, wait! This would be a perfect job for my friend Ferngully (who agreed to let me write about her under the condition that I assign her a silly pseudonym). She recently quit her job to travel but was due back in a few days to look for full-time work. She would probably have time to freelance in the meantime. We had worked together in the past, so I knew she was a solid developer and that we work well together.
 
-Ferngully was immediately on board. She knew from our past work that my code reviews are ~~pedantic and whiny~~ rigorous. She told me she was excited for the challenge of meeting my tough standards.
+I reached out to her, and she was immediately on board. She knew from our past work that my code reviews are ~~pedantic and whiny~~ rigorous. She told me she was excited for the challenge of meeting my tough standards.
 
 I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) that laid out the components of the website at a high level. Ferngully would handle the backend scraping tasks, while I would build a simple web frontend to display the recipes.
 
@@ -51,11 +51,11 @@ I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) th
 
 When I was initially discussing the project with Ferngully, she asked if I had any deadlines. "No deadlines. Just focus on writing good code."
 
-It's the same thing I tell any developer working with me on a side project. I'd rather receive high-quality code on Thursday than hastily slapped-together code on Monday. I estimated that Ferngully's portion would take about 30-50 hours to implement. We'd be done in about a week. Maybe two or three if my estimates were off or if she worked fewer than 40 hours per week.
+It's the same thing I tell any developer working on a side project with me. I'd rather receive high-quality code on Thursday than hastily slapped-together code on Monday. I estimated that Ferngully's portion would take about 30-50 hours to implement. We'd be done in about a week. Maybe two or three if my estimates were off or if she worked fewer than 40 hours per week.
 
-At the time, I was in a busy period with my day job. It looked like months before I'd have time to build the frontend. Certainly, I'd be the bottleneck.
+At the time, I was in a busy period with my day job. It could be months before I'd have time to build the frontend. Certainly, I'd be the bottleneck.
 
-After I finished the design document, I thought about how anticlimactic it would be if Ferngully delivered the scraping code only to have it sit in a drawer for months. I spent a few evenings putting together a basic frontend. It displayed some sample recipes I scraped by hand, but it would be trivial to point it to Ferngully's data and launch once her work was complete.
+After I finished the design document, I thought about how anticlimactic it would be if Ferngully delivered the scraping code only to have it sit in a drawer for months. I spent a few evenings putting together a basic frontend. It displayed some sample recipes I scraped by hand. We'd be ready to launch as soon as Ferngully completed her work.
 
 {% include image.html file="ketohub-mvp.png" alt="Basic KetoHub site with dummy data" max_width="700px" fig_caption="Screenshot of KetoHub's MVP, populated with data scraped by hand" img_link=true %}
 
