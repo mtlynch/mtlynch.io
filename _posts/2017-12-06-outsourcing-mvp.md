@@ -12,6 +12,8 @@ sidebar:
 
 A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: build the website, but outsource all the work.
 
+Every great website starts with an MVP: the minimum viable product. It demonstrates the idea in its simplest form to test whether anyone is interested. When Twitter launched their MVP, you could only tweet pictures of Russet potatoes. Slack's MVP famously only allowed you to chat in pig latin. Healthcare.gov's MVP was healthcare.gov. Google's only allowed you to search for the URL of AskJeeves. People forget that when Netflix first launched, there was no streaming. Reed Hoffman personally visited people's living rooms and reenacted the films they ordered.
+
 To keep costs in check, I'd only build the minimum viable product (MVP), which is the most basic version of a website. It's a low-cost test to see if anyone is actually interested in what you created.
 
 The plan was simple:
@@ -31,7 +33,7 @@ I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto) and like tryi
 
 My idea was KetoHub, a keto recipe directory. It would aggregate recipes from across the web into one easy-to-use website.
 
-It would be like Expedia but for keto recipes.
+It would be like Yelp but for keto recipes.
 
 {% include image.html file="wireframe-v1.jpg" alt="Mockup of KetoHub v1" fig_caption="Initial sketch of KetoHub" max_width="600px" img_link=true %}
 
@@ -63,7 +65,7 @@ That's when I started getting anxious.
 
 It took me a week to complete the web portion, but I still hadn't seen any code from Ferngully. What was she doing?
 
-Before I built the frontend, the project was stress-free. The live site with dummy data made it feel like we had a living thing that we were keeping trapped in a box. With each passing day, my frontend code was withering into obsolescence. I just wanted to show KetoHub to the world so I could get to the part of this process where Mark Zuckerberg  invites me for champagne on his personal information-collecting superyacht.
+Before I built the frontend, the project was stress-free. The live site with dummy data made it feel like we had a living thing that we were keeping trapped in a box. With each passing day, my code was withering into obsolescence. I just wanted to show KetoHub to the world so I could get to the part of this process where Mark Zuckerberg  invites me for champagne on his personal information-collecting superyacht.
 
 # Working under low bandwidth
 
