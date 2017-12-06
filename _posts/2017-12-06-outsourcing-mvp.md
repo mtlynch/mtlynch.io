@@ -10,6 +10,11 @@ sidebar:
   nav: main
 header:
   teaser: images/resized/2017-12-06-outsourcing-mvp/768/wireframe-v1.jpg
+tags:
+- mvp
+- outsourcing
+- startups
+- web scraping
 ---
 
 A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: build the website, but outsource all the work.
