@@ -15,6 +15,8 @@ tags:
 - outsourcing
 - startups
 - web scraping
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=15861032
 ---
 
 A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: build the website, but outsource all the work.
