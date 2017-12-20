@@ -45,7 +45,7 @@ This guide looks long, but it's just because there are lots of screenshots. I es
 
 This guide uses the latest version of each software component at the time of writing:
 
-* Sia-UI v.1.3.0
+* Sia-UI v.1.3.1
 * CUDA v.8.0.61
 * OpenCL 2.0
 * Marlin v.1.0.0
@@ -229,8 +229,6 @@ You will see a long series of letters and numbers. This is your Siacoin wallet a
 {% include image.html file="sia-ui-address.png" alt="Sia-UI address" %}
 
 Save this address and proceed to the [Start mining](#start-mining) step.
-
-*Note*: Every time you click the "Receive Siacoin" button, Sia will generate a new wallet address for you. This is normal. You will still receive payments sent to any of your previously generated addresses. If you want to see a full list of your wallet addresses, go to the "Terminal" view and type `wallet addresses`.
 
 # Start mining
 

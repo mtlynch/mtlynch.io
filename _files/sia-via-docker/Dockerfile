@@ -4,7 +4,7 @@ title: Dockerfile
 
 FROM debian:jessie-slim
 
-ENV SIA_VERSION 1.3.0
+ENV SIA_VERSION 1.3.1
 ENV SIA_PACKAGE Sia-v$SIA_VERSION-linux-amd64
 ENV SIA_ZIP ${SIA_PACKAGE}.zip
 # Choose a binary release of Sia.
