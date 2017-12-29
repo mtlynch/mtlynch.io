@@ -12,7 +12,7 @@ sidebar:
 
 I had about 8,000 words of text. There were a few tables (ooh, exciting tables!) and screenshots to break it up, but mostly it was a giant wall of text.
 
-I had recently seen an illustrated guide to logical fallacies called [The Book of Bad Arguments](http://amzn.to/2jy2vND). I loved it. It presented dry, academic ideas in a fun, engaging way. I wanted to use cartoons in a similar way to liven up my article.
+I had recently seen an illustrated guide to logical fallacies called [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND). I loved it. It presented dry, academic ideas in a fun, engaging way. I wanted to use cartoons in a similar way to liven up my article.
 
 * TOC
 {:toc}
@@ -23,26 +23,59 @@ This article is based on my experience of hiring and working with a cartoonist.
 * [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
 * [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
 * Manel
-* Anonymous
+* Sofia
 
 # Writing the job posting
 
+# Hiring Round 1: Choosing cartoonists to shortlist
+
 I received 13 submissions. There were eight men, five women, but 100% of the . I was surprised that it worked out that way, but the pattern I saw was that men's portfolios were like anime, like an X-Men comic book, political cartoons, or a bit gross-out adult, similar to [The Oatmeal](http://theoatmeal.com), who I really like, but is not the style I wanted.
 
-# Choosing cartoonists for samples
+# Hiring Round 2: Choosing the final cartoonist
 
-I received submissions from male cartoonists, but t
+## Sofia's submission
 
-# Choosing a cartoonist to hire
+{% assign fig_caption = "Cartoon submission from Sofia" | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="sample-christine.jpg" max_width="600px" alt="Sample submission from Chrstine" img_link=true %}
-{% include image.html file="sample-loraine.png" max_width="600px" alt="Sample submission from Loraine" img_link=true %}
-{% include image.html file="sample-maria.jpg" max_width="600px" alt="Sample submission from Maria" img_link=true %}
-{% include image.html file="sample-manel.jpg" max_width="600px" alt="Sample submission from Manel" img_link=true %}
+{% include image.html file="sample-sofia.jpg" max_width="500px" alt="Sample submission from Sofia" img_link=true fig_caption=fig_caption %}
+
+Sofia was the first artist to submit her sample. I didn't fall in love with it, but I felt like if it was the best I got, I'd be okay working with her for the full article.
+
+The animals were anthropomorphized *just* enough to be funny, while still being fun and playful. I think she nailed the expressions. The cat looks kind of snobby, which is fitting for the article because it kind of represents me. The dog is clearly struggling, but not so much that the reader feels bad for him.
+
+## Manel's submission
+
+{% include image.html file="sample-manel.jpg" max_width="500px" alt="Sample submission from Manel" img_link=true %}
+
+Manel's submission was impressive in how *closely* it matched the style of *The Book of Bad Arguments*. Her first sketch was actually even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were egregiously copying that artist.
+
+{% assign fig_caption = "'Appeal to Ignorance', from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" max_width="400px" fig_caption=fig_caption %}
+
+It also had the problem of the bear looking too pitiful.
+
+## Christine's submission
+
+{% assign fig_caption = "Cartoon submission from [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="sample-christine.jpg" max_width="500px" alt="Sample submission from Chrstine" img_link=true fig_caption=fig_caption %}
+
+Christine's was the most elaborate. There's so much detail, so we learn a lot about the two characters and their pre-existing relationship in this one image. It felt a bit like a New Yorker cartoon, which was maybe a bit more mature than I had in mind. It had the same issue as Manel's in that I kind of felt bad for the frog carrying the couch.
+
+## Winner: Loraine's submission
+
+{% assign fig_caption = "Cartoon submission from [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="sample-loraine.png" max_width="500px" alt="Sample submission from Loraine" img_link=true fig_caption=fig_caption %}
+
+Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time.
+
+I didn't want intricate; I wanted simplicity. I had led the artists astray by referencing *The Book of Bad Arguments* because in that book, the cartoons are the star of the show. In my blog post, I wanted the cartoons to support the text, not the other way around.
+
+It was by far the simplest of the lot, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
 
 # Working with the cartoonist
-
-TODO: Change maria to Sofia.
 
 ## Thinking up cartoons
 
@@ -53,6 +86,8 @@ Loraine said that that would be XX% more per cartoon. I was expecting to spend a
 It turned out to be really fun! I got to pretend to be a cartoonist. When I outsourced my cooking to a chef, I realized that I enjoy cooking when I don't have to cook. With this job, I discovered that I enjoy making cartoons when I don't have to draw.
 
 ## Describing cartoons is hard
+
+You know that common expression, "A picture's worth is roughly equal to the worth of one thousand words." It turns out to be true. Especially when the thing you're describing is a picture.
 
 ## Behind the scenes: The MMA cartoon
 
