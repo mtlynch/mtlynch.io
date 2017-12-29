@@ -22,14 +22,14 @@ This article is based on my experience of hiring and working with a cartoonist.
 
 * [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
 * [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
-* Manel
+* [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
 * Sofia
 
 # Writing the job posting
 
 # Hiring Round 1: Choosing cartoonists to shortlist
 
-I received 13 submissions. There were eight men, five women, but 100% of the . I was surprised that it worked out that way, but the pattern I saw was that men's portfolios were like anime, like an X-Men comic book, political cartoons, or a bit gross-out adult, similar to [The Oatmeal](http://theoatmeal.com), who I really like, but is not the style I wanted.
+I received 13 submissions. There were eight men, five women, but 100% of the cartoonists I shortlisted were female. I was surprised that it worked out that way, but the pattern I saw was that men's portfolios were like anime, like an X-Men comic book, political cartoons, or a bit gross-out adult, similar to [The Oatmeal](http://theoatmeal.com), who I really like, but is not the style I wanted.
 
 # Hiring Round 2: Choosing the final cartoonist
 
@@ -45,11 +45,13 @@ The animals were anthropomorphized *just* enough to be funny, while still being 
 
 ## Manel's submission
 
-{% include image.html file="sample-manel.jpg" max_width="500px" alt="Sample submission from Manel" img_link=true %}
+{% assign fig_caption = "Cartoon submission from [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="sample-manel.jpg" max_width="500px" alt="Sample submission from Manel" img_link=true fig_caption=fig_caption %}
 
 Manel's submission was impressive in how *closely* it matched the style of *The Book of Bad Arguments*. Her first sketch was actually even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were egregiously copying that artist.
 
-{% assign fig_caption = "'Appeal to Ignorance', from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)" | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = "'Appeal to Ignorance,' from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" max_width="400px" fig_caption=fig_caption %}
 
@@ -117,7 +119,7 @@ Right off the bat, the sketch was pretty close to what I wanted. She sent me a m
 
 Compare it to searching for and paying for a stock image. Compare it to the time it takes you to promote the article.
 
-# Tips
+# Tips for hiring cartoonists
 
 I couldn't find any guides to doing this, so I was just making it up as I went along. Afterwards, I reached out to the four cartoonists who I hired for samples, and they all agreed to let me interview them about their experiences working as freelance cartoonists.
 
