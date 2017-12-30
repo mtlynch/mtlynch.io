@@ -213,7 +213,10 @@ You'll see a progress bar in the upper right corner that represents Sia-UI's pro
   {% include image.html file="sia-seed.png" alt="Sia-UI seed" %}
 {:start="4"}
 1. Click the button that says "I have written these down in a safe place."
-1. Because Sia-UI maintains a healthy skepticism of its users, the next screen challenges you to enter the wallet seed you just saved. Type in the seed you saved in step 3 and click "Unlock."
+1. Because Sia-UI maintains a healthy skepticism of its users, the next screen challenges you to enter the wallet seed you just saved. Type in the seed you saved in step 3 and click "Confirm."
+  {% include image.html file="sia-password-and-seed.png" alt="Sia-UI enter seed and password" %}
+{:start="6"}
+1. [Bizzarely](https://github.com/NebulousLabs/Sia/issues/2592), Sia-UI then asks you to confirm the seed *again*, so paste it one final time and click "Unlock."
   {% include image.html file="sia-unlock.png" alt="Sia-UI enter seed" %}
 
 At this point, Sia-UI will likely still be synchronizing with the rest of the network. Unfortunately, you can't use your wallet until this process completes.
@@ -222,13 +225,15 @@ First-time synchronization is *sloooooow*. It can take hours to days to get sync
 
 When you're finally synchronized, click the "Receive Siacoin" button in the wallet screen:
 
-  {% include image.html file="sia-ui-receive-siacoin.png" alt="Sia-UI receive siacoin" %}
+  {% include image.html file="sia-ui-receive-siacoin.png" alt="Sia-UI save address" %}
 
-You will see a long series of letters and numbers. This is your Siacoin wallet address.
+You will see a "Receiving Address" field and a "Description" field. In the Description, type `Mining revenues` (or whatever label you prefer):
 
-{% include image.html file="sia-ui-address.png" alt="Sia-UI address" %}
+{% include image.html file="sia-ui-address.png" alt="Sia-UI receive siacoin" %}
 
-Save this address and proceed to the [Start mining](#start-mining) step.
+Sia will now show your Siacoin receiving address labeled `Mining revenues`. You can access it at any time by hitting the "Receive Siacoin" button.
+
+{% include image.html file="sia-ui-address2.png" alt="Sia-UI address" %}
 
 # Start mining
 
