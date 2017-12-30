@@ -1,5 +1,5 @@
 ---
-title: How to Hire a Cartoonist for Your Blog
+title: How to Hire a Cartoonist to Make Your Blog Less Boring
 layout: single
 author_profile: true
 read_time: true
@@ -20,18 +20,31 @@ I had recently seen an illustrated guide to logical fallacies called [*An Illust
 # Process
 This article is based on my experience of hiring and working with a cartoonist. 
 
-* [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
-* [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
-* [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
-* Sofia
-
 # Writing the job posting
+
+I posted [a job listing](https://www.upwork.com/jobs/~01069b65ac37524889) on Upwork, a site I use frequently for hiring freelancers:
+
 
 # Hiring Round 1: Choosing cartoonists to shortlist
 
-I received 13 submissions. There were eight men, five women, but 100% of the cartoonists I shortlisted were female. I was surprised that it worked out that way, but the pattern I saw was that men's portfolios were like anime, like an X-Men comic book, political cartoons, or a bit gross-out adult, similar to [The Oatmeal](http://theoatmeal.com), who I really like, but is not the style I wanted.
+I received 13 submissions and reduced it to a shortlist of four.
+
+Interestingly, all four applicants in the shortlist were women, even though only 5/13 applicants were female. I'm not sure about cartoonists in general, but within my applicant pool, female cartoonists had a style more consistent with children's books. Male cartoonists had a style aimed at adults, such as graphic novels or webcomics.
+
+The four
+
+* [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
+* [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
+* [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
+* Sofia (she preferred I not link to her profile for this article)
 
 # Hiring Round 2: Choosing the final cartoonist
+
+Once I had a shortlist, I commissioned each of them to draw a cartoon based on the same description.
+
+>I would like an illustration of two animals. One of the characters is straining to move a couch, carrying it on their back. The other is watching the first character and not helping, but the character says, "We should really move this couch."
+
+I also linked to the [relevant section](https://mtlynch.io/human-code-reviews/#never-use-the-word-you) of the blog post to give the cartoonists additional context into the idea.
 
 ## Sofia's submission
 
@@ -77,13 +90,13 @@ I didn't want intricate; I wanted simplicity. I had led the artists astray by re
 
 It was by far the simplest of the lot, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
 
-# Working with the cartoonist
+# Working with a cartoonist
 
-## Thinking up cartoons
+## Thinking up concepts
 
-When I had the idea of hiring a cartoonist, I thought maybe they would just read my article and make up their own cartoons. That seemed like a win-win because they get creative freedom, I don't have to think up cartoons, and both of us save on communication because I don't have to explain the idea in my head.
+When I got the idea to hire a cartoonist, I thought maybe they would just read my article and make up their own cartoons. That seemed like a win-win because they get creative freedom, I don't have to think up cartoons, and both of us save on communication time.
 
-Loraine said that that would be XX% more per cartoon. I was expecting to spend about $350 on illustrations for the post. That already felt high, so $XX was out of my budget. I'd just come up with my own ideas.
+I asked Loraine if she'd be open to coming up with the concepts herself. said that that would be XX% more per cartoon. I was expecting to spend about $350 on illustrations for the post. That already felt high, so $XX was out of my budget. I'd just come up with my own ideas.
 
 It turned out to be really fun! I got to pretend to be a cartoonist. When I outsourced my cooking to a chef, I realized that I enjoy cooking when I don't have to cook. With this job, I discovered that I enjoy making cartoons when I don't have to draw.
 
@@ -154,6 +167,10 @@ What size do you need? Do you want just the final images or do you want the raw 
 If you have a very firm
 
 If it's loose, pay by the hour.
+
+## Sketch your ideas first
+
+Context didn't matter.
 
 ## Give attribution when appropriate
 
