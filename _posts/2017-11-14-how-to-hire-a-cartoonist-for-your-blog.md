@@ -10,22 +10,26 @@ sidebar:
   nav: main
 ---
 
-I had about 8,000 words of text. There were a few tables (ooh, exciting tables!) and screenshots to break it up, but mostly it was a giant wall of text.
+I had just finished a blog post on a topic I was passionate about. Too passionate, maybe, as I had written over 8,000 words of text, which is about 1,000 times longer than they average *Buzzfeed* article. Worse, it was mostly a giant wall of text with nary a visual element to break it up aside from some screenshots and tables (ooh, exciting tables!).
 
-I had recently seen an illustrated guide to logical fallacies called [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND). I loved it. It presented dry, academic ideas in a fun, engaging way. I wanted to use cartoons in a similar way to liven up my article.
+I had recently read [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND), which explained different types of logical fallacies in simple terms. I loved it. It used cartoons to present dry, academic ideas in a fun, engaging way. 
+
+My behemoth article needed some cartoons, so I set about to hire one, having no idea how to hire or work with cartoonists.
 
 * TOC
 {:toc}
 
-# Process
-This article is based on my experience of hiring and working with a cartoonist. 
+# How I hired a cartoonist
 
-# Writing the job posting
+## Writing the job posting
 
-I posted [a job listing](https://www.upwork.com/jobs/~01069b65ac37524889) on Upwork, a site I use frequently for hiring freelancers:
+I posted [a job](https://www.upwork.com/jobs/~01069b65ac37524889) on Upwork, a site I use frequently for hiring freelancers.
 
+{% include image.html file="upwork-posting.png" max_width="200px" alt="Screenshot of job posting on Upwork" img_link=true class="align-left" %}
 
-# Hiring Round 1: Choosing cartoonists to shortlist
+I decided I'd need about 10-12 cartoons total for this article.
+
+## Hiring Round 1: Choosing cartoonists to shortlist
 
 I received 13 submissions and reduced it to a shortlist of four.
 
@@ -38,7 +42,7 @@ The four
 * [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
 * Sofia (she preferred I not link to her profile for this article)
 
-# Hiring Round 2: Choosing the final cartoonist
+## Hiring Round 2: Choosing the final cartoonist
 
 Once I had a shortlist, I commissioned each of them to draw a cartoon based on the same description.
 
@@ -46,7 +50,7 @@ Once I had a shortlist, I commissioned each of them to draw a cartoon based on t
 
 I also linked to the [relevant section](https://mtlynch.io/human-code-reviews/#never-use-the-word-you) of the blog post to give the cartoonists additional context into the idea.
 
-## Sofia's submission
+### Sofia's submission
 
 {% assign fig_caption = "Cartoon submission from Sofia" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -56,7 +60,7 @@ Sofia was the first artist to submit her sample. I didn't fall in love with it, 
 
 The animals were anthropomorphized *just* enough to be funny, while still being fun and playful. I think she nailed the expressions. The cat looks kind of snobby, which is fitting for the article because it kind of represents me. The dog is clearly struggling, but not so much that the reader feels bad for him.
 
-## Manel's submission
+### Manel's submission
 
 {% assign fig_caption = "Cartoon submission from [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -66,19 +70,19 @@ Manel's submission was impressive in how *closely* it matched the style of *The 
 
 {% assign fig_caption = "'Appeal to Ignorance,' from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" max_width="400px" fig_caption=fig_caption %}
+{% include image.html file="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" max_width="400px" img_link=true fig_caption=fig_caption %}
 
 It also had the problem of the bear looking too pitiful.
 
-## Christine's submission
+### Christine's submission
 
 {% assign fig_caption = "Cartoon submission from [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="sample-christine.jpg" max_width="500px" alt="Sample submission from Chrstine" img_link=true fig_caption=fig_caption %}
 
-Christine's was the most elaborate. There's so much detail, so we learn a lot about the two characters and their pre-existing relationship in this one image. It felt a bit like a New Yorker cartoon, which was maybe a bit more mature than I had in mind. It had the same issue as Manel's in that I kind of felt bad for the frog carrying the couch.
+Christine's was the most elaborate. There's so much detail, so we learn a lot about the two characters and their pre-existing relationship in this one image. It felt a bit like a *New Yorker* cartoon, which was maybe a bit more mature than I had in mind. It had the same issue as Manel's in that I kind of felt bad for the frog carrying the couch.
 
-## Winner: Loraine's submission
+### Winner: Loraine's submission
 
 {% assign fig_caption = "Cartoon submission from [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -90,7 +94,7 @@ I didn't want intricate; I wanted simplicity. I had led the artists astray by re
 
 It was by far the simplest of the lot, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
 
-# Working with a cartoonist
+# How I worked with my cartoonist
 
 ## Thinking up concepts
 
@@ -136,15 +140,15 @@ Compare it to searching for and paying for a stock image. Compare it to the time
 
 I couldn't find any guides to doing this, so I was just making it up as I went along. Afterwards, I reached out to the four cartoonists who I hired for samples, and they all agreed to let me interview them about their experiences working as freelance cartoonists.
 
-Below, I've compiled tips for hiring and working with cartoonists based on the feedback from the cartoonists and from my own experience on that blog post.
+Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experience working with Loraine to create the XX cartoons for my blog post.
 
-## Start with a small job
+## 1. Start with a small job
 
 It's difficult to choose a cartoonist based on only on their portfolios and a brief interview. Instead of investing a lot of time into careful screening, I instead am liberal about screening, but I start off with a very small job that I make clear is a trial job.
 
 A small job also makes it economical to work with several cartoonists redundantly, as I did. I wasn't sure exactly what style I wanted, so this allowed me to see several different options realized fully.
 
-## Attract quality artists
+## 2. Attract quality artists
 
 Bad ratings are very damaging to any freelancer's business. The artists are looking for clients who have reasonable expectations and will treat them with respect.
 
@@ -154,25 +158,34 @@ First, you should pay just because it's respectful.
 
 When you expect free samples, you drive away quality artists.
 
-## Write a clear, thorough job description
+## 3. Write a clear, thorough job description
 
 What size do you need? Do you want just the final images or do you want the raw files as well in case you need to make edits later?
 
+## 4. Consider total cost
 
-## Consider total cost
+As with any hourly job, look beyond the hourly rate and consider the total cost. You'll likely receive bids from low-cost contractors that have low hourly rates, but will actually cost you more. I also assume that your time is expensive, so things that save you a small amount of money at the expense of large amounts of your time should be bad.
 
+1. **Weak communication skills**: Communication is *very* important on these jobs. Even with someone who speaks your language fluently, it's difficult to describe a picture you want someone to draw. A person who communicates poorly can burn a lot of your time. Look for red flags during the interview phase and on the first, short job you hire for.
+1. **Shoddy work**:  If they're not giving attention to detail, you'll have to spend more time calling out issues.
 
-## Choose the right contract type for the job
+## 5. Choose the right contract type for the job
 
 If you have a very firm
 
 If it's loose, pay by the hour.
 
-## Sketch your ideas first
+## 6. Sketch your ideas first
 
 Context didn't matter.
 
-## Give attribution when appropriate
+## 7. Maintain reasonable expectations for revisions
+
+If your idea changes, offer to compensate.
+
+Answers varied.
+
+## 8. Give attribution when appropriate
 
 * A published book: Always
 * Blog post: It's expected, but not strictly required
@@ -180,6 +193,6 @@ Context didn't matter.
 
 While none of the artists I spoke with said they strictly require it, they all agreed that it was standard to give attribution
 
-## No backsies
+## 9. No backsies
 
 Once you accept the work, that's it. The job is over once you approve. If you later notice something wrong or you change your mind, don't expect to get those changes for free.
