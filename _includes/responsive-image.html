@@ -67,10 +67,10 @@
 
 {% if img_url %}
 <a href="{{ img_url }}">
-  <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
+  <img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}"{% if max_width %} style="max-width:{{ sizes }}"{% endif %}>
 </a>
 {% else %}
-<img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}">
+<img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" sizes="{{ sizes }}" class="{{ class }}"{% if max_width %} style="max-width:{{ sizes }}"{% endif %}>
 {% endif %}
 
 {% if fig_caption %}
