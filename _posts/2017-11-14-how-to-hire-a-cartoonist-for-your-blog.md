@@ -106,9 +106,21 @@ It turned out to be really fun! I got to pretend to be a cartoonist. When I outs
 
 ## Describing cartoons is hard
 
-You know that common expression, "A picture's worth is roughly equal to the worth of one thousand words." It turns out to be true. Especially when the thing you're describing is a picture.
+Everyone's heard the expression, "The value of a picture, when converted to units of words, is equal to one thousand of them." It turns out that's true. Especially when the thing you're describing is a picture.
 
-## Behind the scenes: The MMA cartoon
+After I hired Loraine to do the full set of cartoons, I tried to describe the next cartoon to her in an email. I had the image in my mind, but describing it in an email immediately felt awkward and inefficient. For some reason, I felt like drawing was Loraine's job, words were my job, so I had to stay in my lane and not do any drawing. Then I realized that made no sense and it would be way easier if I sent her a basic sketch to convey my idea.
+
+## But drawing stick figures is easy
+
+My favorite cartoon from the blog post was this one, which accompanied a section about giving compliments:
+
+{% include image.html file="mma-v3.png" max_width="500px" alt="Final version of MMA cartoon" img_link=true %}
+
+It's also a good demonstration of the process Loraine and I followed for creating all the cartoons. It began with this beautiful stick figure drawing:
+
+{% include image.html file="mma-stick-figures.jpg" max_width="600px" alt="My initial stick figure cartoon" img_link=true %}
+
+I accompanied the stick figure sketch with this text description:
 
 >The dog has just finished fighting a shoe in an UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg), [example](https://smhttp-ssl-55701.nexcesscdn.net/media/catalog/category/MMAMatCover.jpg)).
 
@@ -117,10 +129,6 @@ You know that common expression, "A picture's worth is roughly equal to the wort
 >So the dog has won, but he has a black eye and some welts as if the shoe hit him back. The shoe is lying on its side on the ground, torn up.
 
 >The cat is in the audience, cheering, "Beautiful grappling! You soundly defeated that shoe." The audience is full but it's just a faceless crowd aside from the cat
-
-I attached this beautiful stick figure drawing:
-
-{% include image.html file="mma-stick-figures.jpg" max_width="600px" alt="My initial stick figure cartoon" img_link=true %}
 
 And Loraine sent me this initial sketch:
 
@@ -140,7 +148,7 @@ Compare it to searching for and paying for a stock image. Compare it to the time
 
 I couldn't find any guides to doing this, so I was just making it up as I went along. Afterwards, I reached out to the four cartoonists who I hired for samples, and they all agreed to let me interview them about their experiences working as freelance cartoonists.
 
-Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experience working with Loraine to create the XX cartoons for my blog post.
+Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experience working with Loraine to create the 12 cartoons for my blog post.
 
 ## 1. Start with a small job
 
