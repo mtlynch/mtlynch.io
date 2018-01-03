@@ -68,7 +68,7 @@ The animals were anthropomorphized *just* enough to be funny, while still being 
 
 Manel's submission was impressive in how *closely* it matched the style of *The Book of Bad Arguments*. Her first sketch was actually even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were egregiously copying that artist.
 
-{% assign fig_caption = "'Appeal to Ignorance,' from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)" | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = '"Appeal to Ignorance," from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)' | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" max_width="400px" img_link=true fig_caption=fig_caption %}
 
