@@ -142,33 +142,80 @@ Right off the bat, the sketch was pretty close to what I wanted. She sent me a m
 
 # Cost
 
-Compare it to searching for and paying for a stock image. Compare it to the time it takes you to promote the article.
+The bad news is that this was expensive:
+
+| Expense | Cost |
+|------------|-------|
+| Four samples @ $30 | $120 |
+| Block of 10 cartoons from Loraine | $280 |
+| Additional cartoons from Loraine | $XX |
+| **Total** | **$XX** |
+| ***Average*** | ***$XX per cartoon*** |
+
+The good news is that it was primarily expensive because I used a lot of cartoons in that blog article. Recall that it was 8,000 words, split into two posts, so there was a lot of text to break up. If I average it out to a per-cartoon basis, $XX is not that steep.
+
+It's more than I expected to spend at the outset, but here's how I rationalized the cost to myself:
+
+I had to break up the text somehow. If I didn't hire a cartoonists, I'd have used stock photos. I actually started out searching for stock photos, but I felt like I was wasting a lot of time searching through images. I'd find images that *kind of* matched the sentiment I was trying to convey, but not perfectly.
+
+TODO: Insert bad stock photo.
+
+See? It's something to look at, but it's not quite right.
 
 # Tips for hiring cartoonists
 
-I couldn't find any guides to doing this, so I was just making it up as I went along. Afterwards, I reached out to the four cartoonists who I hired for samples, and they all agreed to let me interview them about their experiences working as freelance cartoonists.
+I couldn't find any guides for hiring a cartoonist, so I was just making it up as I went along. I ran into a lot of decisions where I just didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? Does a three-panel cartoon still count as one cartoon?
+
+After I published the article with all of Loraine's cartoons, I reached out to the four cartoonists who I hired for samples, and they all agreed to let me interview them about their experiences working as freelance cartoonists.
 
 Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experience working with Loraine to create the 12 cartoons for my blog post.
 
-## 1. Start with a small job
+## 1. Demonstrate that you're a good client
 
-It's difficult to choose a cartoonist based on only on their portfolios and a brief interview. Instead of investing a lot of time into careful screening, I instead am liberal about screening, but I start off with a very small job that I make clear is a trial job.
+Every cartoonist I interviewed emphasized how unpleasant it is to work with a bad client.
+
+On a site like Upwork, as soon as the job begins, the client holds tremendous power over the freelancer. At the end of a job, the client rates the freelancer, and negative ratings can be hugely damaging to a freelancer's future job prospects.
+
+Nobody wants to jump through ridiculous hoops to satisfy an unreasonable client, so quality artists will simply decline jobs that have clients with red flags. Before they accept the job, the freelancers are screening you more than you're screening them.
+
+So show that you're a good client by being mindful of what quality artists look for. The cartoonists I spoke to generally agreed that they look for clients who:
+
+* Treat their freelancer with professionalism
+* Respect the freelancer's craft
+  * The client should understand that what they're doing is art, and therefore takes time and skill
+* Have a clear vision of what they want
+
+## 2. Start with a small job
+
+It's difficult to choose a cartoonist based on only on their portfolios and a brief interview. Instead of investing a lot of time into careful screening, hire for a small job.
 
 A small job also makes it economical to work with several cartoonists redundantly, as I did. I wasn't sure exactly what style I wanted, so this allowed me to see several different options realized fully.
 
-## 2. Attract quality artists
+## 3. Don't ask for free work
 
-Bad ratings are very damaging to any freelancer's business. The artists are looking for clients who have reasonable expectations and will treat them with respect.
-
-Christine mentioned that a client once began an invitation to apply to a job with, "HEY, YOU. YES, YOU!" If a software recruiter contacted me with a message that began that way, I'd delete their email immediately.
-
-First, you should pay just because it's respectful.
-
-When you expect free samples, you drive away quality artists.
+Resist the temptation to ask freelancers to draw you a custom sample cartoon for free as part of the interview process. Like any profession, the people who are good don't give away their work for free. By insisting on free samples, all you're really doing is filtering out the artists who are talented enough to be choosy about the jobs they take on.
 
 ## 3. Write a clear, thorough job description
 
 What size do you need? Do you want just the final images or do you want the raw files as well in case you need to make edits later?
+
+## 5. Choose the right contract type for the job
+
+You can either pay freelancers by the hour or hire them on a fixed-cost basis. A freelancer doesn't want to sign on for a $30 fixed-cost job only to be forced to re-do the work in 20 different ways until you decide what you want the cartoon to look like.
+
+Hire on a fixed-cost basis if you have a clear vision of what you want.  Put this vision in the job description so that the freelancer knows that you know what you want.
+
+It's fine to hire an artist if you don't quite know what you want and you'd like them to help you explore different ideas. In this case, you should pay by the hour.
+
+## 2. Write personalized interview invitations
+
+You'll likely find good candidates if you simply post the job and wait for candidates to contact you. But you can increase your chances of finding a good match by proactively checking out portfolios of available freelancers on the platform and personally inviting the ones you like.
+
+Christine mentioned that a client once began an invitation to apply to a job with, "HEY, YOU. YES, YOU!" If a software recruiter contacted me with a message that began that way, I'd delete their email immediately.
+
+On most freelancer platforms, it will populate the invitation with something generic, like, "I'd like to invite you to apply for my job." If you took the time to seek out this freelancer and look at their portfolio, take an extra minute or two to personalize the message and explain what you like about their work and why you think they might be a good match for your job.
+
+This shows the freelancer that you have respect for their work and reduces the risk that you're going to turn out to be a jerk who expects them to churn out artwork as if they're working on a factory line.
 
 ## 4. Consider total cost
 
@@ -177,11 +224,7 @@ As with any hourly job, look beyond the hourly rate and consider the total cost.
 1. **Weak communication skills**: Communication is *very* important on these jobs. Even with someone who speaks your language fluently, it's difficult to describe a picture you want someone to draw. A person who communicates poorly can burn a lot of your time. Look for red flags during the interview phase and on the first, short job you hire for.
 1. **Shoddy work**:  If they're not giving attention to detail, you'll have to spend more time calling out issues.
 
-## 5. Choose the right contract type for the job
 
-If you have a very firm
-
-If it's loose, pay by the hour.
 
 ## 6. Sketch your ideas first
 
