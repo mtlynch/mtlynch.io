@@ -287,7 +287,7 @@ Close the window to stop mining.
 
 If you configured your Siacoin wallet address correctly in Marlin's settings, you will see your mining activity in the Luxor dashboard:
 
-* `https://mining.luxor.tech/miners/your siacoin address`
+* `https://sia.luxor.tech/miners/your siacoin address`
 
 I'll go into more details about the Luxor mining pool [below](#using-the-mining-pool).
 
@@ -323,7 +323,7 @@ This guide configures your miner to participate in the Luxor mining *pool* to gi
 
 The Luxor mining pool provides a dashboard that allows you to monitor your miner's activity:
 
-* `https://mining.luxor.tech/miners/your siacoin address`
+* `https://sia.luxor.tech/miners/your siacoin address`
 
 {% include image.html file="luxor-mining-pool.png" alt="Luxor screenshot" img_link="true" %}
 
