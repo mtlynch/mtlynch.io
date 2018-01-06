@@ -22,7 +22,7 @@ The most visible change to KetoHub is that it now has a logo. Behold!
 
 I primarily market KetoHub via Facebook groups (more on that [below](#finding-users-on-facebook)), and I was embarrassed by how ugly the sharing link looks with no logo:
 
-{% include image.html file="ugly-fb-links.png" alt="Facebook sharing with no logo" fig_caption="Sharing KetoHub on facebook with no site logo" max_width="493px" img_link=true %}
+{% include image.html file="ugly-fb-links.png" alt="Facebook sharing with no logo" fig_caption="Sharing KetoHub on Facebook with no site logo" max_width="493px" img_link=true %}
 
 I figured I'd need a logo eventually, so I commissioned. Then as soon as I paid for the contest, I got buyer's remorse because I realized I probably could have spent $75 to commission an inexpensive freelance illustrator to make a logo instead of splurging on a $400 design contest just so I could see lots of different options. Even a mediocre logo would have mostly solved the problem of having ugly Facebook links.
 
