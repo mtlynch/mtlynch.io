@@ -24,7 +24,7 @@ I primarily market KetoHub via Facebook groups (more on that [below](#finding-us
 
 {% include image.html file="ugly-fb-links.png" alt="Facebook sharing with no logo" fig_caption="Sharing KetoHub on Facebook with no site logo" max_width="493px" img_link=true %}
 
-I figured I'd need a logo eventually, so I commissioned. Then as soon as I paid for the contest, I got buyer's remorse because I realized I probably could have spent $75 to commission an inexpensive freelance illustrator to make a logo instead of splurging on a $400 design contest just so I could see lots of different options. Even a mediocre logo would have mostly solved the problem of having ugly Facebook links.
+I figured I'd need a logo eventually, so I commissioned. Then as soon as I paid for the contest, I got buyer's remorse because I realized I probably could have spent $75 to commission an inexpensive freelance illustrator to make a logo instead of splurging on a $400 [design contest](http://ninetyninedesigns.7eer.net/c/1189252/272257/3172) just so I could see lots of different options. Even a mediocre logo would have mostly solved the problem of having ugly Facebook links.
 
 Oh well! Now I have a logo and I like it. I probably would have liked having $325 more, but let's account it as a $325 lesson in building a new website.
 
