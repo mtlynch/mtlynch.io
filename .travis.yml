@@ -13,9 +13,6 @@ before_install:
   - sed -i '/jekyll-admin/d' Gemfile
 script:
   - ./_tests/build
-before_deploy:
-  # Build production site.
-  - BUNDLE_GEMFILE=Gemfile bundle exec jekyll build --config _config.yml,_config_prod.yml
 deploy:
   provider: firebase
   token:

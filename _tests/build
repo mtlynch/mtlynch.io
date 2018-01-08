@@ -30,3 +30,14 @@ bundle exec htmlproofer ./_site \
   --empty-alt-ignore \
   --url-ignore "/vimeo.com/,/upwork.com/" \
   "$htmlproofer_args_extra"
+
+# Build production site.
+BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
+  --config _config.yml,_config_prod.yml
+
+# Make sure the Google Analytics token appears in the prod build.
+UA_TOKEN="UA-78473158-1"
+if ! grep "${UA_TOKEN}" _site/ -R; then
+  echo "ERROR: Google Analytics token didn't appear in prod build!";
+  exit 1;
+fi
