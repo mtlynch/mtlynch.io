@@ -32,7 +32,7 @@ bundle exec htmlproofer ./_site \
   "$htmlproofer_args_extra"
 
 # Build production site.
-BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
+BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
   --config _config.yml,_config_prod.yml
 
 # Make sure the Google Analytics token appears in the prod build.
