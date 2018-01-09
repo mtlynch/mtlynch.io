@@ -215,6 +215,10 @@ Hire on a fixed-cost basis if you have a clear vision of what you want.  Put thi
 
 It's fine to hire an artist if you don't quite know what you want and you'd like them to help you explore different ideas. In this case, you should pay by the hour.
 
+## 5. Specify usage rights
+
+TODO: Talk about copyright.
+
 ## 5. Write personalized interview invitations
 
 You'll likely find good candidates if you simply post the job and wait for candidates to contact you. But you can increase your chances of finding a good match by proactively checking out portfolios of available freelancers on the platform and personally inviting the ones you like.
@@ -242,7 +246,7 @@ If your idea changes, offer to compensate.
 
 Answers varied.
 
-Once you accept the work, that's it. The job is over once you approve. If you later notice something wrong or you change your mind, don't expect to get those changes for free
+Once you accept the work, that's it. The job is over once you approve. If you later notice something wrong or you change your mind, don't expect to get those changes for free.
 
 ## 9. Give attribution
 
