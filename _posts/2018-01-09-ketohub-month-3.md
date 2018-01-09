@@ -15,9 +15,11 @@ tags:
 - keto
 - retention
 - growth
+excerpt: I'm building a website. Here’s what was good, bad, and learnable about it
+  last month.
 ---
 
-In early October, I launched a new website, KetoHub, a recipe aggregator for keto meals. Each month, I've evaluated the site's progress to decide how it's doing and where to focus on improvement.
+In early October, I launched a new website, KetoHub, a recipe aggregator for keto meals. Each month, I've evaluated the site's progress to decide how it's doing and what areas need improvement.
 
 I'm doing my evaluation of December publicly. Here's what was good, bad, and learnable about KetoHub last month.
 
@@ -25,7 +27,7 @@ I'm doing my evaluation of December publicly. Here's what was good, bad, and lea
 
 ## New logo
 
-The most visible change to KetoHub is that it now has a logo. Behold!
+The most visible change is that KetoHub now has a logo. Behold!
 
 {% include image.html file="ketohub-logo.png" alt="KetoHub logo" fig_caption="KetoHub logo" max_width="400px" img_link=true %}
 
@@ -33,9 +35,9 @@ I primarily market KetoHub via Facebook groups (more on that [below](#finding-us
 
 {% include image.html file="ugly-fb-links.png" alt="Facebook sharing with no logo" fig_caption="Sharing KetoHub on Facebook with no site logo" max_width="493px" img_link=true %}
 
-I'd need a logo eventually, so I decided to try [99designs](https://ninetyninedesigns.7eer.net/c/1189252/185967/3172) for the first time. They run "design contests," so you describe a design you want, assign a prize value, then dozens or hundreds of designers submit designs hoping to be selected. The full prize money goes to the designer with the winning logo.
+I'd need a logo eventually, so I decided to try [99designs](https://ninetyninedesigns.7eer.net/c/1189252/185967/3172) for the first time. It's a "design contest" site, so you describe a design you want, assign a prize value, then dozens or hundreds of designers submit options. The full prize money goes to the designer whose logo you select.
 
-99design's lowest tier design contest cost $400. I justified the cost to myself in various ways, but then I woke up the next morning and realized I could have commissioned a freelance illustrator to make a logo for about $75. The problem I was trying to solve was ugly Facebook links, but even a mediocre logo would have been sufficient. A $400 design contest was a bit overkill.
+99design's lowest tier design contest cost $400. I justified the cost to myself in various ways, but then I woke up the next morning and realized I could have commissioned a freelance illustrator to make a logo for about $75. I was trying to de-ugly my Facebook links, but even a mediocre logo would have been sufficient. A $400 design contest was a bit overkill.
 
 Oh well! Now I have a logo, and I like it. I probably would have preferred having an extra $325, but let's consider it a $325 lesson in website building.
 
@@ -55,7 +57,7 @@ The book gave me good ideas for improving KetoHub's look. Here's the before and 
 	<figcaption>KetoHub redesign on desktop: before (left) and after (right)</figcaption>
 </figure>
 
-And here's the before and after on mobile:
+And here's comparison on mobile:
 
 <figure class="half">
   {% include image.html file="ketohub-screenshot-mobile-before.png" alt="KetoHub before redesign (mobile)" max_width="344px" img_link=true %}
@@ -63,7 +65,7 @@ And here's the before and after on mobile:
 	<figcaption>KetoHub redesign on mobile: before (left) and after (right)</figcaption>
 </figure>
 
-As I write this and look at the mobile screenshot, the "after" shot looks worse. The logo and category buttons take up more than half of the screen's vertical space to the point where you can't even see even one recipe card.
+Actually, as I write this and look at the mobile screenshot, the "after" shot looks worse. The logo and category buttons take up more than half of the screen's vertical space to the point where you can't even see even one recipe card.
 
 Looks like I've got a bit more work to do...
 
@@ -81,7 +83,7 @@ Compared to November, it received almost 8x as many unique users and 4.5x as man
 
 ## Finding users on Facebook
 
-Facebook was, by far, the largest single source of new users. Of 1,372 new users that discovered the site in December, 717 of them came from Facebook. I promoted the site on Facebook in two distinct ways.
+Facebook was, by far, the largest single source of new users. Of 1,372 visitors that discovered the site in December, 717 of them came from Facebook. I promoted the site on Facebook in two distinct ways.
 
 ### Sharing in medium-sized groups
 
@@ -103,7 +105,7 @@ People frequently posted in these groups searching for recipes that met particul
 
 {% include image.html file="ketohub-fb-response2.png" alt="Existing keto sites" max_width="415px" img_link=true %}
 
-For each post I responded to like this, only 10-20 people clicked the link. The benefit is that it's easier to find these types of posts than to constantly find new medium-sized keto groups to join. When I spent an hour scrolling through posts from different keto groups, I usually found between two and six opportunities to answer someone's question by linking to KetoHub. This translated to 60-100 clicks.
+For each post I responded to like this, only 10-20 people clicked the link. However, it's easier to find these types of posts than to constantly find new medium-sized keto groups to join. When I spent an hour scrolling through posts from different keto groups, I usually found between two and six opportunities to answer someone's question by linking to KetoHub. This translated to a total of 60-100 new clicks.
 
 # Biggest challenge: Retention
 
@@ -117,7 +119,7 @@ The numbers are abysmal.
 
 A small percentage of users will stick around the week after they discover the site, but the percentage decreases each week. After four weeks, the percentage shrinks to zero.
 
-From what I've heard, a good website will bring back at least 10% of its users the week after they discover the site. I'm far below 10%, so my focus in January will be increasing retention.
+From what I've heard, a good website will bring back at least 10% of its users the week after they discover it. I'm far below 10%, so my focus in January will be increasing retention.
 
 # Next steps
 
