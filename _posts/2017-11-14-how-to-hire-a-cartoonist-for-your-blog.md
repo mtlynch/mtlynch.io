@@ -10,11 +10,13 @@ sidebar:
   nav: main
 ---
 
-I had just written a passionate blog post. Too passionate, maybe, as I had written over 8,000 words of text, which is about 1,000 times longer than they average *Buzzfeed* article. Worse, it was mostly a giant wall of text with nary a visual element to break it up aside from some screenshots and tables (ooh, exciting tables!).
+I had just completed a passionate blog post. Too passionate, maybe, as I had written over 8,000 words of text. That's about 1,000 times longer than they average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and tables (ooh, exciting tables!).
 
-Then [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND) popped into my mind. It's a beautifully illustrated book that explained logical fallacies in simple terms. I loved it. It used cartoons to present dry, academic ideas in a fun, engaging way. 
+Then [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND) popped into my mind. It's a beautifully illustrated book that explains logical fallacies. It uses cartoons to present dry, academic ideas in a fun, engaging way. 
 
-It seemed clear that my behemoth tome of a blog article needed some cartoons to help the reader through it. I set about to hire a cartoonist, having no idea how to hire or work with one.
+Maybe if my massive tome of a blog article had some cartoons, one or two readers would get through the entire thing. I set about to hire a cartoonist, having no idea how to hire or work with one.
+
+TODO: Add excerpt and related image.
 
 * TOC
 {:toc}
@@ -23,24 +25,24 @@ It seemed clear that my behemoth tome of a blog article needed some cartoons to 
 
 ## Writing the job posting
 
-I hire freelancers regularly, and I always start with a small job to see how we work together. With this project, I wanted to do it a little differently. I wanted to see several illustrators draw one cartoon each so that I'd have a variety of concepts to choose from. I didn't necessarily want the best person, but rather the best *idea* for the style of cartoon for this article.
+I didn't really know what I these cartoons would look like. It seemed like the best way to figure it out was to hire a few different cartoonists so that I could see options. I didn't necessarily want the best person, but rather the best *idea* for the right style.
 
 {% include image.html file="upwork-posting.png" max_width="400px" alt="Screenshot of job posting on Upwork" fig_caption="Job posting on Upwork" img_link=true %}
 
-I posted [a job](https://www.upwork.com/jobs/~01069b65ac37524889) on Upwork, a site I use frequently for hiring freelancers. The description explained that it was effectively a paid design contest, where I would compensate them for submitting a single cartoon, but I'd pick my favorite to do all of the illustrations in the article.
+I posted a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) on Upwork, a site I use frequently for hiring freelancers. It was effectively a paid design contest -- the freelancers were applying to be included in a shortlist, where they would each receive compensation for submitting a single cartoon. From the shortlist, one cartoonist would continue on to work with me on 8-10 more cartoons for the full blog post.
 
 ## Hiring Round 1: Choosing cartoonists to shortlist
 
-I received 13 submissions and reduced it to a shortlist of four.
-
-Interestingly, all four applicants in the shortlist were women, even though only 5/13 applicants were female. I'm not sure about cartoonists in general, but within my applicant pool, female cartoonists had a style more consistent with children's books. Male cartoonists had a style aimed at adults, such as graphic novels or webcomics.
-
-The four
+Within XX hours, I received 13 submissions. I hired four of these applicants for the shortlist:
 
 * [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
 * [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
 * [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
 * Sofia (she preferred I not link to her profile for this article)
+
+I was surprised that all applicants who made it to the shortlist were women, even though only five of the thirteen applicants were female. Within the applicant pool, the men's portfolios were generally filled with illustrations in the style of political cartoons or graphic novels, which wasn't what I was looking for. The women's portfolio's contained more cartoons for advertisements or children's books. The latter was most similar to the style I had in mind.
+
+TODO: Check
 
 ## Hiring Round 2: Choosing the final cartoonist
 
@@ -48,7 +50,7 @@ Once I had a shortlist, I commissioned each cartoonist to draw a cartoon based o
 
 >I would like an illustration of two animals. One of the characters is straining to move a couch, carrying it on their back. The other is watching the first character and not helping, but the character says, "We should really move this couch."
 
-I also linked to the [relevant section](https://mtlynch.io/human-code-reviews/#never-use-the-word-you) of the blog post to give the cartoonists additional context into the idea.
+For additional context, I linked to the [section](https://mtlynch.io/human-code-reviews/#never-use-the-word-you) of my blog post where the cartoon would appear.
 
 ### Sofia's submission
 
@@ -58,7 +60,7 @@ I also linked to the [relevant section](https://mtlynch.io/human-code-reviews/#n
 
 Sofia was the first artist to submit her sample. I didn't fall in love with it, but I felt like if it was the best I got, I'd be okay working with her for the full article.
 
-The animals were anthropomorphized *just* enough to be funny, while still being fun and playful. I think she nailed the expressions. The cat looks kind of snobby, which is fitting for the article because it kind of represents me. The dog is clearly struggling, but not so much that the reader feels bad for him.
+The animals were anthropomorphized *just* enough to be funny, while still being fun and playful. I think she nailed the expressions. The cat looks kind of snobby, which is fitting for the article because it represents me. The dog is clearly struggling, but not so much that the reader feels bad for him.
 
 ### Manel's submission
 
@@ -86,11 +88,13 @@ Christine's was the most elaborate. We learn so much about the two characters an
 
 {% include image.html file="sample-loraine.png" max_width="500px" alt="Sample submission from Loraine" img_link=true fig_caption=fig_caption %}
 
-Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time. I didn't want intricate; I wanted simple.
+Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time.
 
 I had led the artists astray by referencing *The Book of Bad Arguments* because in that book, the cartoons are the star of the show. In my blog post, I wanted the cartoons to support the text, not the other way around.
 
-It was by far the simplest of the lot, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
+Loraine's cartoon was by far the simplest, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
+
+I offered Loraine the job, and she quickly agreed.
 
 # How I worked with my cartoonist
 
@@ -98,27 +102,31 @@ It was by far the simplest of the lot, but it was also the most efficient. Like 
 
 When I got the idea to hire a cartoonist, I thought maybe they would just read my article and make up their own cartoons. That seemed like a win-win because they get creative freedom, I don't have to think up cartoons, and both of us save on communication time.
 
-I asked Loraine if she'd be open to coming up with the concepts herself. said that that would be XX% more per cartoon. I was expecting to spend about $350 on illustrations for the post. That already felt high, so $XX was out of my budget. I'd just come up with my own ideas.
+I asked Loraine if she'd be open to coming up with the concepts herself. said that that would be XX% more per cartoon. I was on track to spend ~$400 for illustrations. I was already questioning whether that was a ridiculous amount to spend on a blog post that nobody might read. $XX would cause me to raise a lot more questions with myself, so I resolved to just come up with my own cartoon ideas.
 
-It turned out to be really fun! I got to pretend to be a cartoonist. When I outsourced my cooking to a chef, I realized that I enjoy cooking when I don't have to cook. With this job, I discovered that I enjoy making cartoons when I don't have to draw.
+Thinking up cartoons turned out to be really fun! It let me pretend to be a cartoonist.
+
+When I [outsourced my cooking](/taskrabbit-cooking/) to a task service, I realized that I enjoy cooking when I don't have to cook. With this project, I discovered that I enjoy making cartoons when I don't have to draw.
 
 ## Describing cartoons is hard
 
-Everyone's heard the expression, "The value of a picture, when converted to units of words, is equal to one thousand of them." It turns out that's true. Especially when the thing you're describing is a picture.
+Everyone's heard the expression, "The value of a picture, when converted to units of words, is equal to one thousand of them." It turns out that's true. Especially when those words are trying to describe a picture.
 
-After I hired Loraine to do the full set of cartoons, I tried to describe the next cartoon to her in an email. I had the image in my mind, but describing it in an email immediately felt awkward and inefficient. For some reason, I felt like drawing was Loraine's job, words were my job, so I had to stay in my lane and not do any drawing. Then I realized that made no sense and it would be way easier if I sent her a basic sketch to convey my idea.
+After I hired Loraine to do the full set of cartoons, I tried to explain the next cartoon to her in prose. It immediately felt awkward and inefficient.
+
+I felt like drawing was Loraine's job, words were my job, so I had to stay in my lane and not do any drawing. Then I realized that made no sense and it would be way easier if I sent her a basic sketch to convey my idea.
 
 ## But drawing stick figures is easy
 
-My favorite cartoon from the blog post was this one, which accompanied a section about giving compliments:
+It's easier if you can just see what this process looked like, so I'll demonstrate with my favorite cartoon from the blog post. It accompanied a [section about giving compliments](/human-code-reviews-2/#offer-sincere-praise):
 
 {% include image.html file="mma-v3.png" max_width="500px" alt="Final version of MMA cartoon" img_link=true %}
 
-It's also a good demonstration of the process Loraine and I followed for creating all the cartoons. It began with this beautiful stick figure drawing:
+That excellent cartoon began with this horrendous stick figure sketch I drew and gave to Loraine:
 
 {% include image.html file="mma-stick-figures.jpg" max_width="600px" alt="My initial stick figure cartoon" img_link=true %}
 
-I accompanied the stick figure sketch with this text description:
+I accompanied the drawing with this text description to Loraine:
 
 >The dog has just finished fighting a shoe in an UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg), [example](https://smhttp-ssl-55701.nexcesscdn.net/media/catalog/category/MMAMatCover.jpg)).
 
@@ -132,7 +140,7 @@ And Loraine sent me this initial sketch:
 
 {% include image.html file="mma-sketch.png" max_width="600px" alt="Sketch of MMA cartoon" img_link=true %}
 
-Right off the bat, the sketch was pretty close to what I wanted. She sent me a more detailed version and we went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
+Right off the bat, the sketch was pretty close to what I wanted. I asked her to proceed with that sketch, and she sent me a more detailed version. We went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
 
 <figure class="third">
   {% include image.html file="mma-v1.png" alt="MMA cartoon v1" img_link=true %}
@@ -140,6 +148,20 @@ Right off the bat, the sketch was pretty close to what I wanted. She sent me a m
   {% include image.html file="mma-v3.png" alt="Final version of MMA cartoon" img_link=true %}
 	<figcaption>Evolution of "Offer sincere praise" cartoon from <a href="https://mtlynch.io/human-code-reviews-2/#offer-sincere-praise">"How to do Code Reviews Like a Human"</a></figcaption>
 </figure>
+
+# Results
+
+The article ended up getting a very positive response. It was the most widely reshared article I've ever written.
+
+TODO: Add visitor numbers, retweet numbers.
+
+Many commenters specifically cited the cartoons.
+
+TODO: Show reddit comment
+
+The biggest exposure of the article was getting tweeted by the twitter account for the Java programming language. They used one of Loraine's cartoons to liven up the tweet.
+
+TODO: Screenshot of Java tweet.
 
 # Cost
 
@@ -155,11 +177,11 @@ The bad news is that this was expensive:
 
 The good news is that it was primarily expensive because I used a lot of cartoons in that blog article. Recall that it was 8,000 words, split into two posts, so there was a lot of text to break up. If I average it out to a per-cartoon basis, $XX is not that steep.
 
-It's more than I expected to spend at the outset, but here's how I rationalized the cost to myself:
+It's more than I expected to spend at the outset, but here's how I rationalized the cost to myself: I had to break up the text somehow. It was either going to cost me money to hire someone or it would cost me hours and hours of my own time scouring the Internet for good stock photos.
 
-I had to break up the text somehow. If I didn't hire a cartoonists, I'd have used stock photos. I actually started out searching for stock photos, but I felt like I was wasting a lot of time searching through images. I'd find images that *kind of* matched the sentiment I was trying to convey, but not perfectly.
+Before I hired Loraine, I did try stock photos. The problem was I could only find images that *kind of* matched the sentiment I was trying to convey. They were never be quite right.
 
-Searching through all the stock photos felt a bit like this:
+Let me give you an example. Searching through all the stock photos felt a bit like this:
 
 {% assign fig_caption = "Photo by [Pawel Janiak](https://unsplash.com/photos/dxFi8Ea670E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -169,9 +191,9 @@ See? It's something to look at, but it's not quite right.
 
 # Tips for hiring cartoonists
 
-I couldn't find any guides for hiring a cartoonist, so I was just making it up as I went along. I ran into a lot of decisions where I just didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? Do we renegotiate rates if I asked for 10 cartoons, but later decide I want some of them to have multiple panels?
+I couldn't find any guides for hiring a cartoonist, so I was just making it up as I went along. I ran into a lot of decisions where I just didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? Do we renegotiate rates if I asked for 10 cartoons but later decide I want some of them to have multiple panels?
 
-After I published the article with all of Loraine's cartoons, I reached out to the four cartoonists who I hired for samples, and they all agreed to let me interview them about their experiences working as freelance cartoonists.
+After I published the article with all of Loraine's cartoons, I asked the four cartoonists who I hired for samples if they'd let me interview them for this article. They all agreed.
 
 Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experience working with them.
 
@@ -217,7 +239,13 @@ It's fine to hire an artist if you don't quite know what you want and you'd like
 
 ## 5. Specify usage rights
 
-TODO: Talk about copyright.
+Specify in the contract the type of usage rights you want for the picture. The freelancer may charge a different price depending on if you want to  just want to use the cartoon once in one place or if you want the full copyright so you can use the images whenever and wherever you want.
+
+With Upwork, the default contract terms give the client full rights to all intellectual property generated as part of the contract. Make sure whatever platform you use, you're specifying the usage rights you want.
+
+TODO: Rewrite.
+
+TODO: Maybe include section from Upwork.
 
 ## 5. Write personalized interview invitations
 
