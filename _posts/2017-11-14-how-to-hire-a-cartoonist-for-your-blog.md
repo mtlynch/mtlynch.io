@@ -33,14 +33,14 @@ I posted a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) on Upw
 
 ## Hiring Round 1: Choosing cartoonists to shortlist
 
-Within XX hours, I received 13 submissions. I hired four of these applicants for the shortlist:
+Within XX hours, I received 13 submissions. I hired four for the shortlist:
 
 * [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
 * [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
 * [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
 * Sofia (she preferred I not link to her profile for this article)
 
-I was surprised that all applicants who made it to the shortlist were women, even though only five of the thirteen applicants were female. Within the applicant pool, the men's portfolios were generally filled with illustrations in the style of political cartoons or graphic novels, which wasn't what I was looking for. The women's portfolio's contained more cartoons for advertisements or children's books. The latter was most similar to the style I had in mind.
+Given that I only had five female applicants, I was surprised that all four who made it to the shortlist were women. Within the applicant pool, the men's portfolios were generally filled with illustrations in the style of political cartoons or graphic novels, which wasn't what I was looking for. The women's portfolio's contained more cartoons for advertisements or children's books. The latter was most similar to the style I had in mind.
 
 TODO: Check
 
@@ -50,7 +50,7 @@ Once I had a shortlist, I commissioned each cartoonist to draw a cartoon based o
 
 >I would like an illustration of two animals. One of the characters is straining to move a couch, carrying it on their back. The other is watching the first character and not helping, but the character says, "We should really move this couch."
 
-For additional context, I linked to the [section](https://mtlynch.io/human-code-reviews/#never-use-the-word-you) of my blog post where the cartoon would appear.
+For additional context, I linked to the [section](https://mtlynch.io/human-code-reviews-1/#never-say-you) of my blog post where the cartoon would appear.
 
 ### Sofia's submission
 
@@ -90,7 +90,7 @@ Christine's was the most elaborate. We learn so much about the two characters an
 
 Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time.
 
-I had led the artists astray by referencing *The Book of Bad Arguments* because in that book, the cartoons are the star of the show. In my blog post, I wanted the cartoons to support the text, not the other way around.
+I had led the artists astray by referencing *An Illustrated Book of Bad Arguments* . In that book, the cartoons are the star of the show. In my blog post, I wanted the cartoons to support the text, not the other way around.
 
 Loraine's cartoon was by far the simplest, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
 
@@ -104,7 +104,7 @@ When I got the idea to hire a cartoonist, I thought maybe they would just read m
 
 I asked Loraine if she'd be open to coming up with the concepts herself. said that that would be XX% more per cartoon. I was on track to spend ~$400 for illustrations. I was already questioning whether that was a ridiculous amount to spend on a blog post that nobody might read. $XX would cause me to raise a lot more questions with myself, so I resolved to just come up with my own cartoon ideas.
 
-Thinking up cartoons turned out to be really fun! It let me pretend to be a cartoonist.
+Thinking up cartoons turned out to be really fun! It got to pretend to be a cartoonist.
 
 When I [outsourced my cooking](/taskrabbit-cooking/) to a task service, I realized that I enjoy cooking when I don't have to cook. With this project, I discovered that I enjoy making cartoons when I don't have to draw.
 
@@ -165,8 +165,6 @@ TODO: Screenshot of Java tweet.
 
 # Cost
 
-The bad news is that this was expensive:
-
 | Expense | Cost |
 |------------|-------|
 | Four samples @ $30 | $120 |
@@ -175,11 +173,9 @@ The bad news is that this was expensive:
 | **Total** | **$XX** |
 | ***Average*** | ***$XX per cartoon*** |
 
-The good news is that it was primarily expensive because I used a lot of cartoons in that blog article. Recall that it was 8,000 words, split into two posts, so there was a lot of text to break up. If I average it out to a per-cartoon basis, $XX is not that steep.
-
 It's more than I expected to spend at the outset, but here's how I rationalized the cost to myself: I had to break up the text somehow. It was either going to cost me money to hire someone or it would cost me hours and hours of my own time scouring the Internet for good stock photos.
 
-Before I hired Loraine, I did try stock photos. The problem was I could only find images that *kind of* matched the sentiment I was trying to convey. They were never be quite right.
+Before I hired Loraine, I did try stock photos. The problem was I could only find images that *kind of* matched the sentiment I was trying to convey.
 
 Let me give you an example. Searching through all the stock photos felt a bit like this:
 
@@ -191,7 +187,7 @@ See? It's something to look at, but it's not quite right.
 
 # Tips for hiring cartoonists
 
-I couldn't find any guides for hiring a cartoonist, so I was just making it up as I went along. I ran into a lot of decisions where I just didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? Do we renegotiate rates if I asked for 10 cartoons but later decide I want some of them to have multiple panels?
+I couldn't find any guides for hiring a cartoonist, so I was just making it up as I went along. I ran into a lot of decisions where I just didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? Do we renegotiate rates if I asked for 10 cartoons but later wanted some of them to have multiple panels?
 
 After I published the article with all of Loraine's cartoons, I asked the four cartoonists who I hired for samples if they'd let me interview them for this article. They all agreed.
 
@@ -213,49 +209,42 @@ A good client:
 
 ## 1. Start with a small job
 
-It's difficult to choose a cartoonist based on only on their portfolios and a brief interview. Instead of investing a lot of time into careful screening, hire for a small job.
+It's difficult to choose a cartoonist based solely on their portfolios and a brief interview. Instead of investing a lot of time into careful screening, hire for a small job.
 
-A small job also makes it economical to work with several cartoonists redundantly, as I did. I wasn't sure exactly what style I wanted, so this allowed me to see several different options realized fully.
+A small job also makes it economical to work with several cartoonists in parallel, as I did. I wasn't sure exactly what style I wanted, so this allowed me to see several different options realized fully.
 
 ## 2. Don't ask for free work
 
-Resist the temptation to ask freelancers to draw you a custom sample cartoon for free as part of the interview process. Like any profession, the people who are good don't just give away their work.
+Resist the temptation to ask freelancers to draw you a free, custom sample cartoon as part of the interview process. Like any profession, the people who are good don't simply give away their work. Clients who insist on free samples are effectively filtering out the artists who are talented enough to be choosy about the jobs they take on.
 
-By insisting on free samples, all you're really doing is filtering out the artists who are talented enough to be choosy about the jobs they take on.
-
-## 3. Write a clear, thorough job description
-
-What size do you need? Do you want just the final images or do you want the raw files as well in case you need to make edits later?
-
-TODO: Cut?
-
-## 4. Choose the right contract type for the job
+## 3. Choose the right contract type for the job
 
 You can either pay freelancers by the hour or hire them on a fixed-cost basis. A freelancer doesn't want to sign on for a $30 fixed-cost job only to be forced to re-do the work in 20 different ways until you decide what you want the cartoon to look like.
 
-Hire on a fixed-cost basis if you have a clear vision of what you want.  Put this vision in the job description so that the freelancer knows that you know what you want.
+* Hire on a **fixed-cost basis** if you have a clear vision of what you want.  Define vision in the job description so that the freelancer knows that you know what you want.
+* Hire on an **hourly basis** if you don't quite know what you want and you'd like the artist to help you explore different ideas.
 
-It's fine to hire an artist if you don't quite know what you want and you'd like them to help you explore different ideas. In this case, you should pay by the hour.
+## 4. Write a clear, thorough job description
 
-## 5. Specify usage rights
+Recall earlier when I said freelance cartoonists want to be treated with professionalism? A well-written and comprehensive job posting shows that you're a professional and you've done your due diligence. It gives them confidence that you're not going to waste their time by dribbling out little bits of information only after they produce work for you.
 
-Specify in the contract the type of usage rights you want for the picture. The freelancer may charge a different price depending on if you want to  just want to use the cartoon once in one place or if you want the full copyright so you can use the images whenever and wherever you want.
+Even if you don't know the style that you want, you probably can decide on the technical details, such as:
 
-With Upwork, the default contract terms give the client full rights to all intellectual property generated as part of the contract. Make sure whatever platform you use, you're specifying the usage rights you want.
-
-TODO: Rewrite.
-
-TODO: Maybe include section from Upwork.
+* Image dimensions (in pixels)
+* Color or black and white
+* Usage rights
+  * Do you need the full copyright or just the right to use it once?
+  * If you're using a freelancer site like check the standard contract terms, as they may automatically give the client full rights to intellectual property (Upwork does).
+* Image format
+  * Do you just want rendered images (JPEG/PNG)? If you might have to edit the files later, you'll want the raw files as well?
 
 ## 5. Write personalized interview invitations
 
 You'll likely find good candidates if you simply post the job and wait for candidates to contact you. But you can increase your chances of finding a good match by proactively checking out portfolios of available freelancers on the platform and personally inviting the ones you like.
 
-Christine mentioned that a client once began an invitation to apply to a job with, "HEY, YOU. YES, YOU!" If a software recruiter contacted me with a message that began that way, I'd delete their email immediately.
+Once you take the time to seek out this freelancer and look at their portfolio; take an extra minute or two to personalize the message and explain what you like about their work and why you think they might be a good match for your job.
 
-On most freelancer platforms, it will populate the invitation with something generic, like, "I'd like to invite you to apply for my job." If you took the time to seek out this freelancer and look at their portfolio, take an extra minute or two to personalize the message and explain what you like about their work and why you think they might be a good match for your job.
-
-This shows the freelancer that you have respect for their work and reduces the risk that you're going to turn out to be a jerk who expects them to churn out artwork as if they're working on a factory line.
+This shows the freelancer that you have respect for their work. It reduces the risk that you're going to turn out to be a jerk who expects them to churn out artwork as if they're working on a factory line.
 
 ## 6. Consider total cost
 
@@ -266,20 +255,34 @@ As with any hourly job, look beyond the hourly rate and consider the total cost.
 
 ## 7. Sketch your ideas first
 
-Context didn't matter.
+The most efficient way I found to communicate my ideas was with a simple sketch. A simple stick figure drawing communicates a lot.
 
-## 8. Maintain reasonable expectations for revisions
+Start by sending your cartoonist a simple sketch of your own. Accompany it with a description of how you want them to develop it.
 
-If your idea changes, offer to compensate.
+## 8. Include reference images
 
-Answers varied.
+Imagine you want a cartoon that features a car. Well, there are lots of different types of cars. Is it a sports car or an SUV?
+
+Think about the elements in your cartoon that could be drawn in a variety of ways, then use Google Image Search to find an image that matches what you have in mind.
+
+## 9. Maintain reasonable expectations for revisions
+
+The thing that gave me the most angst during this process was asking for revisions. I didn't know how many revisions was "normal." If I asked for five tweaks, was I a really demanding client exploiting my cartoonists time? Or do cartoonists expect lots of revisions just from the nature of the work?
+
+I asked each of the cartoonists what they considered a normal range of revisions to ask for:
+
+TODO: Cite each person's answers.
+
+On an hourly contract, this matters less because you're compensating them for each revision.
+
+If your idea changes, offer to compensate. If you started by saying you wanted a single image, but now you want an elaborate three-panel cartoon, that's more work for the cartoonist. This isn't a problem on an hourly contract, but on a fixed-price contract, you should adjust the contract price if you've had a change of heart that drastically changes the scope of work.
 
 Once you accept the work, that's it. The job is over once you approve. If you later notice something wrong or you change your mind, don't expect to get those changes for free.
 
-## 9. Give attribution
+## 10. Give attribution
 
-* A published book: Always
-* Blog post: It's expected, but not strictly required
-* Logos / advertisements: Attribution is not expected
+* Blog post: Expected, but not strictly required
+* A published book: Required
+* Logos / advertisements: Not expected
 
 While none of the artists I spoke with said they strictly require it, they all agreed that it was standard to give attribution
