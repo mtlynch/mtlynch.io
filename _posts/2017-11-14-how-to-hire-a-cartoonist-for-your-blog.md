@@ -10,16 +10,15 @@ sidebar:
   nav: main
 ---
 
-I had just completed a passionate blog post. Too passionate, maybe, as I had written over 8,000 words of text. That's about 1,000 times longer than they average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and tables (ooh, exciting tables!).
+I had just completed a passionate blog post. Too passionate, maybe, as I had written over 8,000 words of text. That's about 1,000 times longer than they average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables (ooh, exciting tables!).
 
 Then [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND) popped into my mind. It's a beautifully illustrated book that explains logical fallacies. It uses cartoons to present dry, academic ideas in a fun, engaging way. 
+
+TODO: Add book cover.
 
 Maybe if my massive tome of a blog article had some cartoons, one or two readers would get through the entire thing. I set about to hire a cartoonist, having no idea how to hire or work with one.
 
 TODO: Add excerpt and related image.
-
-* TOC
-{:toc}
 
 # How I hired a cartoonist
 
@@ -197,9 +196,7 @@ Below, I've compiled tips for hiring and working with cartoonists based on those
 
 Every cartoonist I interviewed emphasized how unpleasant it is to work with a bad client.
 
-On a site like Upwork, as soon as the job begins, the client holds tremendous power over the freelancer. The client gets to rate the freelancer when the work is complete, and negative ratings can be hugely damaging to a freelancer's future job prospects.
-
-Illustrators want to avoid clients who fill force them to jump through ridiculous hoops under threat of a bad rating, so quality artists will simply decline jobs when the clients give off red flags. I didn't realize when I was hiring that the freelancers were probably screening me even more carefully than I was screening them.
+Illustrators avoid clients who force them to jump through ridiculous hoops under threat of a bad rating. They look for red flags in the job posting and interview process.
 
 A good client:
 
@@ -209,55 +206,69 @@ A good client:
 
 ## 1. Start with a small job
 
-It's difficult to choose a cartoonist based solely on their portfolios and a brief interview. Instead of investing a lot of time into careful screening, hire for a small job.
+It's difficult to choose a cartoonist based solely on their portfolios and a brief interview. Instead of investing hours into lengthy interviews, hire for a small job.
 
-A small job also makes it economical to work with several cartoonists in parallel, as I did. I wasn't sure exactly what style I wanted, so this allowed me to see several different options realized fully.
+Hiring this way also makes it economical to work with several cartoonists in parallel, as I did. I wasn't sure exactly what style I wanted, so this allowed me to see several different options realized fully.
 
 ## 2. Don't ask for free work
 
-Resist the temptation to ask freelancers to draw you a free, custom sample cartoon as part of the interview process. Like any profession, the people who are good don't simply give away their work. Clients who insist on free samples are effectively filtering out the artists who are talented enough to be choosy about the jobs they take on.
+Resist the temptation to ask freelancers to draw you a free, custom sample cartoon as part of the interview process. Like any profession, the people who are good don't simply give away their work.
+
+Clients who insist on free samples are effectively filtering out the artists who are talented enough to be choosy about the jobs they take on. Don't drive away your best applicants. Pay the cartoonists for their work.
 
 ## 3. Choose the right contract type for the job
 
-You can either pay freelancers by the hour or hire them on a fixed-cost basis. A freelancer doesn't want to sign on for a $30 fixed-cost job only to be forced to re-do the work in 20 different ways until you decide what you want the cartoon to look like.
+You can either pay freelancers by the hour or agree to a fixed cost per cartoon.
 
-* Hire on a **fixed-cost basis** if you have a clear vision of what you want.  Define vision in the job description so that the freelancer knows that you know what you want.
+* Hire on a **fixed-cost basis** if you have a clear vision of what you want. Define vision in the job description so that the freelancer knows that you know what you want.
 * Hire on an **hourly basis** if you don't quite know what you want and you'd like the artist to help you explore different ideas.
+
+If you don't know what you want, a fixed-cost contract sounds more appealing because it doesn't cost you more to ask for many diffreent options. This is the exact reason good cartoonists will turn down your job if they sense that you're expecting them to absorb all the risk of your indecisiveness.
 
 ## 4. Write a clear, thorough job description
 
-Recall earlier when I said freelance cartoonists want to be treated with professionalism? A well-written and comprehensive job posting shows that you're a professional and you've done your due diligence. It gives them confidence that you're not going to waste their time by dribbling out little bits of information only after they produce work for you.
+Invest time into writing your job posting. Think carefully about your job to figure out what details are relevant to a potential cartoonist and anticipate what questions they might have.
 
-Even if you don't know the style that you want, you probably can decide on the technical details, such as:
+A well-written and comprehensive job posting shows that freelancers that you're a professional and will treat the people who work with you in a capable, respectful way.
 
+If your listing is basically, "Looking for cartoonist who draws good," it sends the message that you view artists as interchangeable cogs that crank out work on demand. This will only attract the most desperate, lowest quality cartoonists.
+
+Even if you don't know the style that you want, you probably can decide on the technical details of the artwork, such as:
+
+* Purpose
+  * Will it be interspersed in a blog article? A new logo? In a book?
 * Image dimensions (in pixels)
 * Color or black and white
 * Usage rights
   * Do you need the full copyright or just the right to use it once?
   * If you're using a freelancer site like check the standard contract terms, as they may automatically give the client full rights to intellectual property (Upwork does).
 * Image format
-  * Do you just want rendered images (JPEG/PNG)? If you might have to edit the files later, you'll want the raw files as well?
+  * Do you just want rendered images (jpeg/png)? If you might edit the files later, you'll want the raw files as well.
 
 ## 5. Write personalized interview invitations
 
-You'll likely find good candidates if you simply post the job and wait for candidates to contact you. But you can increase your chances of finding a good match by proactively checking out portfolios of available freelancers on the platform and personally inviting the ones you like.
+Platforms like Upwork allow you to search for available freelancers and invite them to apply to your job. Take advantage of this to increase the quality of your applicant pool. Check potential applicants' portfolios. If you like a particular freelancer, take a few minutes to write them a personalized note explaining what you like about their work and why you think they might be a good match for your job.
 
-Once you take the time to seek out this freelancer and look at their portfolio; take an extra minute or two to personalize the message and explain what you like about their work and why you think they might be a good match for your job.
-
-This shows the freelancer that you have respect for their work. It reduces the risk that you're going to turn out to be a jerk who expects them to churn out artwork as if they're working on a factory line.
+This demonstrates to the freelancer that you have respect for their craft. You're not the jerk who will expect them to churn out artwork as if they're on a factory line.
 
 ## 6. Consider total cost
 
-As with any hourly job, look beyond the hourly rate and consider the total cost. You'll likely receive bids from low-cost contractors that have low hourly rates, but will actually cost you more. I also assume that your time is expensive, so things that save you a small amount of money at the expense of large amounts of your time should be bad.
+Artists will send bids for the rate they'll charge you if hired. Look beyond that number, and consider the total cost of the work, which is based on four variables:
 
-1. **Weak communication skills**: Communication is *very* important on these jobs. Even with someone who speaks your language fluently, it's difficult to describe a picture you want someone to draw. A person who communicates poorly can burn a lot of your time. Look for red flags during the interview phase and on the first, short job you hire for.
-1. **Shoddy work**:  If they're not giving attention to detail, you'll have to spend more time calling out issues.
+1. Freelancer's bid rate
+1. Number of hours freelancer will require to complete the work (if contract is hourly)
+1. Number of hours you will spend managing the work
+1. The rate at which you value your own time
+
+(1) you know exactly. (4) you know as well, but it's hard to come up with a precise number. (2) and (3) you have to estimate based on the complexity of the work and the applicant's skill level. A low-skilled applicant may compensate with a cheap bid, but consider how many more hours it will take them to get the work right and how much more actively you'll need to manage them.
+
+Avoid hiring a freelancer who doesn't speak your language fluently, as this will drive up (2) and (3). Even between two people who speak the same language fluently, it's surprisingly difficult to describe a cartoon. If you're working with someone whose language ability is weak, you're going to waste excessive cycles on communication alone.
 
 ## 7. Sketch your ideas first
 
-The most efficient way I found to communicate my ideas was with a simple sketch. A simple stick figure drawing communicates a lot.
+I found the quickest way to start describing a cartoon idea was with a simple sketch. You don't need a graphics tablet or Photoshop. Just draw on a piece of paper and take a picture of it. You're trying to capture the broad ideas, not the specifics.
 
-Start by sending your cartoonist a simple sketch of your own. Accompany it with a description of how you want them to develop it.
+You should still send your cartoonist a text description of the concept. But the sketch will save you from trying to describe ideas better expressed in pictures.
 
 ## 8. Include reference images
 
