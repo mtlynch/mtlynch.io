@@ -25,13 +25,11 @@ TODO: Add book cover.
 
 Maybe if my massive tome of a blog article had some cartoons, a handful of readers would get through the entire thing. I set about to hire a cartoonist, having no idea how to hire or work with one.
 
-# How I hired a cartoonist
+# Choosing cartoonists to shortlist
 
-## Hiring Round 1: Choosing cartoonists to shortlist
+I didn't really know what these cartoons would look like. It seemed like the best way to figure it out was to hire a few different cartoonists so that I could choose from different options.
 
-I didn't really know what these cartoons would look like. It seemed like the best way to figure it out was to hire a few different cartoonists so that I could see options. I didn't necessarily want the best person, but rather the best *idea*.
-
-It seemed gauche to ask for free samples, so I created a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) where anyone I selected for a sample would be paid for their work
+I created a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) explaining that I was hiring multiple people for a single cartoon, but I'd be hiring my favorite for 8-10 more.
 
 {% include image.html file="upwork-posting.png" max_width="400px" alt="Screenshot of job posting on Upwork" fig_caption="Job posting on Upwork" img_link=true %}
 
@@ -46,7 +44,7 @@ Given that I only had five female applicants, I was surprised that all four who 
 
 Within the applicant pool, the men's portfolios were generally filled with illustrations in the style of political cartoons or graphic novels. The women's portfolio's contained more cartoons for advertisements or children's books. The latter was most similar to the style I had in mind.
 
-## Hiring Round 2: Choosing the final cartoonist
+# Choosing the final cartoonist
 
 Once I had a shortlist, I commissioned each cartoonist to draw a cartoon based on the same description:
 
@@ -54,7 +52,7 @@ Once I had a shortlist, I commissioned each cartoonist to draw a cartoon based o
 
 For additional context, I linked to the [section](https://mtlynch.io/human-code-reviews-1/#never-say-you) of my blog post where the cartoon would appear.
 
-### Sofia's submission
+## Sofia's submission
 
 {% assign fig_caption = "Cartoon submission from Sofia" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -64,7 +62,7 @@ Sofia was the first artist to submit her sample. I didn't fall in love with it, 
 
 The animals were anthropomorphized *just* enough to be funny, while still being fun and playful. I think she nailed the expressions. The cat looks kind of snobby, which is fitting for the article because it represents me. The dog is clearly struggling, but not so much that the reader feels bad for him.
 
-### Manel's submission
+## Manel's submission
 
 {% assign fig_caption = "Cartoon submission from [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -76,7 +74,7 @@ Manel's submission was impressive in how *closely* it matched the style of *The 
 
 {% include image.html file="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" max_width="400px" img_link=true fig_caption=fig_caption %}
 
-### Christine's submission
+## Christine's submission
 
 {% assign fig_caption = "Cartoon submission from [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -84,7 +82,7 @@ Manel's submission was impressive in how *closely* it matched the style of *The 
 
 Christine's was the most elaborate. We learn so much about the two characters and their relationship just from the little details about how they're dressed, their expressions, and what items appear in the background. It felt a bit like a *New Yorker* cartoon, which was maybe a bit more mature in style than what I had in mind.
 
-### Winner: Loraine's submission
+## Winner: Loraine's submission
 
 {% assign fig_caption = "Cartoon submission from [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -98,17 +96,7 @@ Loraine's cartoon was by far the simplest, but it was also the most efficient. L
 
 I offered Loraine the job, and she promptly agreed.
 
-# How I worked with my cartoonist
-
-## Thinking up concepts
-
-TODO: Transition
-
-Thinking up cartoons turned out to be really fun! It got to pretend to be a cartoonist.
-
-When I [outsourced my cooking](/taskrabbit-cooking/) to a task service, I realized that I enjoy cooking when I don't have to cook. With this project, I discovered that I enjoy making cartoons when I don't have to draw.
-
-## Describing cartoons is hard
+# Describing cartoons is hard
 
 Everyone's heard the expression, "The value of a picture, when converted to units of words, is equal to one thousand of them." It turns out that's true. Especially when those words are trying to describe a picture.
 
@@ -116,7 +104,7 @@ After I hired Loraine to do the full set of cartoons, I tried to explain the nex
 
 I felt like drawing was Loraine's job, words were my job, so I had to stay in my lane and not do any drawing. Then I realized that made no sense and it would be way easier if I sent her a basic sketch to convey my idea.
 
-## But drawing stick figures is easy
+# But drawing stick figures is easy
 
 It's easier if you can just see what this process looked like, so I'll demonstrate with my favorite cartoon from the blog post. It accompanied a [section about giving compliments](/human-code-reviews-2/#offer-sincere-praise):
 
@@ -151,13 +139,21 @@ Right off the bat, the sketch was pretty close to what I wanted. I asked her to 
 
 # Results
 
-The article ended up getting a very positive response. It was the most widely reshared article I've ever written. My articles are generally not very popular on Twitter, but this one received hundreds of likes and retweets. The biggest exposure of the article was getting [tweeted by the Java programming language](https://twitter.com/java/status/918934115558313984). They used one of Loraine's cartoons to liven up the tweet.
+The article ended up getting a very positive response.
 
-{% include image.html file="java-tweet.png" max_width="600px" alt="Java tweeting my article" link_url="https://twitter.com/java/status/918934115558313984" %}
+My articles are generally not very popular on Twitter, but this one received hundreds of likes and retweets. [@java](https://twitter.com/java/) shared it with their 371,000 followers, using one of the cartoons as the photo.
+
+{% include image.html file="java-tweet.png" max_width="500px" alt="Java tweeting my article" link_url="https://twitter.com/java/status/918934115558313984" %}
 
 On reddit, one of the [top comments](https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/) specifically cited the cartoons.
 
 {% include image.html file="reddit-comment.png" max_width="520px" alt="Reddit comment about cartoons" link_url="https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/" %}
+
+# Pretending to be a cartoonist
+
+I'm a terrible artist. I could never be a cartoonist in real life, but working with Loraine let me pretend to be one.
+
+When I [outsourced my cooking](/taskrabbit-cooking/) to a task service, I realized that I enjoy cooking when I don't have to cook. With this project, I discovered how much fun it is to make cartoons when I don't have to draw.
 
 # Cost
 
@@ -169,11 +165,11 @@ On reddit, one of the [top comments](https://www.reddit.com/r/programming/commen
 | **Total** | **$525** |
 | ***Average*** | ***~$40 per cartoon*** |
 
-It's more than I expected to spend at the outset, but here's how I rationalized the cost to myself: I had to break up the text somehow. It was either going to cost me money to hire someone or it would cost me hours and hours of my own time scouring the Internet for good stock photos.
+I know! It's a lot. Especially for a blog like mine that doesn't really make money.
 
-Before I hired Loraine, I did try stock photos. The problem was I could only find images that *kind of* matched the sentiment I was trying to convey.
+But I had to break up the text *somehow*. It was either this, pay for stock photos, or spend hours searching through free stock photos that *kind of* fit.
 
-Let me give you an example. Searching through all the stock photos felt a bit like this:
+I did initially try searching for stock photos, but it felt a bit like this:
 
 {% assign fig_caption = "Photo by [Pawel Janiak](https://unsplash.com/photos/dxFi8Ea670E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -238,8 +234,7 @@ Even if you don't know the style that you want, you probably can decide on the t
   * Do you need the full copyright or just the right to use it once?
   * If you're using a freelancer site, check the standard contract terms, as they may automatically give the client full intellectual property rights (Upwork does).
 * Image format
-  * Do you just want the finished images (jpeg/png)?
-  * If you might edit the files later, you'll want the raw files as well.
+  * Do you just want the finished images (jpeg/png) or the raw files as well?
 
 ## 5. Write personalized interview invitations
 
@@ -247,7 +242,7 @@ Platforms like Upwork allow you to search for available freelancers and invite t
 
 Browse the portfolios of available artists. If you like a particular freelancer, take a few minutes to write them a personalized note explaining what you like about their work and why you think they might be a good match for your job.
 
-If you shotgun out a bunch of generic, spam invitations, expect to receive boring, low-effort applications in response. Personalized invitations incentivize the applicants to take the time to understand your project and articulate how they can help you.
+If you shotgun out a litany of generic spam invitations, expect terse, low-effort applications in response. If you invest time in the invitations, you incentivize applicants to take the time to understand your project and articulate how they can help you.
 
 ## 6. Consider total cost
 
@@ -258,25 +253,29 @@ Artists will send bids for the rate they'll charge you if hired. Look beyond tha
 1. Number of hours you will spend managing the work
 1. The rate at which you value your own time
 
-(1) you know exactly.
+You know item (1) exactly because the freelancer specifies it in their bid.
 
-(4) you know as well, but it's hard to come up with a precise number.
+You know item (4), though it's difficult for you to quantify it precisely.
 
-(2) and (3) you have to estimate based on the complexity of the work and the applicant's skill level. A low-skilled applicant may compensate with a cheap bid, but consider how many more hours it will take them to get the work right and how much more actively you'll need to manage them.
+Items (2) and (3) you have to estimate based on the complexity of the work and the applicant's skill level. A low-skilled applicant may tempt you with a cheap bid. Before you're taken in by the low number, estimate how many additional hours you will spend managing them and how much longer it will take them to produce work that meets your standards.
 
-Avoid hiring a freelancer who doesn't speak your language fluently, as this will drive up (2) and (3). Even between two people who speak comfortably in the same language, it's surprisingly difficult to describe a cartoon. If you're working with someone whose language ability is weak, you're going to waste cycles to communication failures.
+Candidates who communicate poorly drive up items (2) and (3). This includes people who are not fluent in your language as well as people who are just bad at expressing themselves in any language. Pay attention to red flags in the early stages of hiring:
+
+* Loud spelling or grammatical mistakes
+* Improper or incomplete answers to your screening questions
+* Vague questions to you that reqiure clarification
 
 ## 7. Sketch your ideas first
 
 I found the quickest way to start describing a cartoon idea was with a simple sketch. You don't need a graphics tablet or Photoshop. Just draw on a piece of paper and take a picture of it. You're trying to capture the broad ideas, not the specifics.
 
-You should still send your cartoonist a text description of the concept. But the sketch creates a shared foundation from which to build.
+You still need to send your cartoonist a text description of the concept, but the sketch creates a shared foundation from which to build.
 
 ## 8. Provide reference images
 
 Imagine you want a cartoon that features a car. Well, there are lots of different types of cars. Is it a sports car? An SUV? A sedan?
 
-If there are elements in your cartoon that could be drawn in a variety of ways, use Google Image Search to find an image that matches what you have in mind. Send links to your cartoonist so they understand what you're thinking.
+Use Google Image Search to find examples of what you have in mind, and share the links with your cartoonist.
 
 ## 9. Maintain reasonable expectations for revisions
 
@@ -288,7 +287,7 @@ I asked a few of the cartoonists what they considered a normal range of revision
 * Manel: Hard limit at three revisions
 * Sofia: Around two or three, but she accepts unlimited revisions because she is still a beginner
 
-On an hourly contract, revision limits matter less because you're paying for the time. For a fixed-cost contract, you should stay within a reasonable number of revisions.
+On an hourly contract, revision limits matter less because you're paying for the time. For a fixed-cost contract, stay within a reasonable number of revisions.
 
 ## 10. Compensate when scope expands
 
