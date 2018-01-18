@@ -10,7 +10,7 @@ sidebar:
   nav: main
 excerpt: How I hired a cartoonist even though I had no idea how
 header:
-  teaser: images/resized/2017-11-14-how-to-hire-a-cartoonist-for-your-blog/768/mma-sketch.png
+  teaser: images/resized/2018-01-18-how-to-hire-a-cartoonist/768/mma-sketch.png
 tags:
 - cartoonist
 - blogging
