@@ -8,7 +8,8 @@ share: true
 related: true
 sidebar:
   nav: main
-excerpt: How I hired a cartoonist even though I had no idea how
+excerpt: With no idea what I was doing, I hired a cartoonist to illustrate my blog.
+  The results were surprisingly positive.
 header:
   teaser: images/resized/2018-01-18-how-to-hire-a-cartoonist/768/mma-sketch.png
 tags:
@@ -27,19 +28,19 @@ I had recently read [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2
 
 Maybe cartoons could have the same effect on my massive tome of a blog article.
 
-I couldn't draw cartoons myself, as I'm a terrible artist, so I set out to find help.
+I couldn't draw cartoons myself, as I'm a terrible artist, so I set out to find someone who could help me.
 
 # Choosing cartoonists to shortlist
 
 Having never hired a cartoonist before or even worked with one, I didn't know where to begin. I frequently outsource work through [Upwork](https://www.upwork.com), a freelancing platform, so I decided to start there. 
 
-But how was I supposed to choose an artist when I had no idea what I even wanted? I created a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) explaining that I'd hire multiple cartoonists to submit a single cartoon as a trial job for 8-10 more.
+But how was I supposed to choose an artist when I had no idea what I even wanted? I created a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) explaining that I'd hire multiple cartoonists to submit one cartoon each as a trial job for 8-10 more.
 
 {% include image.html file="upwork-posting.png" max_width="400px" alt="Screenshot of job posting on Upwork" fig_caption="Job posting on Upwork" img_link=true %}
 
 Within two days, I received 13 submissions.
 
-Some of the applicants' portfolios were clearly bad, like sketches you'd see in a bored high schooler's math notebook. Others were good but had the style of a graphic novel or political cartoon, which wasn't what I wanted.
+Some of the applicants' portfolios were clearly bad, like doodles you'd see in the margins of a high schooler's Calculus textbook. Others were good but had the style of a graphic novel or political cartoon, which wasn't what I wanted.
 
 Four of the portfolios had the lighthearted, playful style reminiscent of *An Illustrated Book of Bad Arguments*, so I selected those artists for my shortlist:
 
@@ -62,7 +63,7 @@ For additional context, I linked to the [section](https://mtlynch.io/human-code-
 
 {% include image.html file="sample-sofia.jpg" max_width="500px" alt="Sample submission from Sofia" img_link=true fig_caption=fig_caption %}
 
-Sofia was the first artist to submit her sample. I didn't fall in love with it, but I liked it enough that I'd be happy to work with her for the full article.
+Sofia was the first artist to submit her sample. I liked it.
 
 The animals were *just* human enough to be funny, while still being cute and whimsical. She nailed the expressions. The cat looked kind of snobby, which was fitting because it represented me.
 
@@ -72,7 +73,7 @@ The animals were *just* human enough to be funny, while still being cute and whi
 
 {% include image.html file="sample-manel.jpg" max_width="500px" alt="Sample submission from Manel" img_link=true fig_caption=fig_caption %}
 
-Manel's submission was impressive in how *closely* it matched the style of *The Book of Bad Arguments*. Her first sketch was even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were blatantly ripping off the book.
+Manel's submission was impressive in how *closely* it matched the style of *An Illustrated Book of Bad Arguments*. Her first sketch was even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were blatantly ripping off the book.
 
 {% assign fig_caption = '"Appeal to Ignorance," from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)' | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -114,11 +115,11 @@ My favorite of Loraine's cartoons for the article was this one [about giving com
 
 {% include image.html file="mma-v3.png" max_width="600px" alt="Final version of MMA cartoon" img_link=true %}
 
-That excellent illustration began with my horrendous stick figure sketch:
+That excellent illustration began with my horrendous stick figure drawing:
 
 {% include image.html file="mma-stick-figures.jpg" max_width="600px" alt="My initial stick figure cartoon" img_link=true %}
 
-I accompanied the drawing with this text description to Loraine:
+I accompanied the sketch with this text description to Loraine:
 
 >The dog has just finished fighting a shoe in a UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg), [example](https://smhttp-ssl-55701.nexcesscdn.net/media/catalog/category/MMAMatCover.jpg)).
 
@@ -128,11 +129,11 @@ I accompanied the drawing with this text description to Loraine:
 
 >The cat is in the audience, cheering, "Beautiful grappling! You soundly defeated that shoe." The audience is full but it's just a faceless crowd aside from the cat
 
-And Loraine sent me this initial sketch:
+And Loraine sent me this initial draft:
 
 {% include image.html file="mma-sketch.png" max_width="600px" alt="Sketch of MMA cartoon" img_link=true %}
 
-Right off the bat, the sketch was pretty close to what I wanted. I asked her to proceed with that sketch, and she sent me a more detailed version. We went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
+Right off the bat, it was pretty close to what I wanted. I asked her to proceed with that sketch, and she sent me a more detailed version. We went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
 
 <figure class="third">
   {% include image.html file="mma-v1.png" alt="MMA cartoon v1" img_link=true %}
@@ -176,17 +177,17 @@ See? It's something to look at, but it's not quite right.
 
 # Tips for hiring cartoonists
 
-There were many instances throughout this process where I didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution?
+There were many instances throughout this process where I didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? What's the standard way of describing a cartoon?
 
-After I published my article, I reached out to the four cartoonists I worked with to ask if they'd let me interview them for an article about the process of working with cartoonists. They all seemed intrigued by the unusual request and agreed to speak with me. 
+After I published my article, I reached out to the four cartoonists I worked with to ask if they'd let me interview them for this article. They all seemed intrigued by the unusual request and agreed to speak with me. 
 
 Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experiences as a client.
 
 ## Background: Nobody wants to work for a bad client
 
-Every cartoonist I interviewed emphasized how unpleasant it is to work with clients who make unreasonable demands and threaten poor ratings. Low ratings make it hard for freelancers to win future jobs. Therefore, cartoonists screen their clients carefully during the interview process to avoid putting themselves at the mercy of a bad client.
+Every cartoonist I interviewed emphasized how unpleasant it is to work with clients who make unreasonable demands and threaten poor ratings. Therefore, cartoonists screen their clients carefully during the interview process to avoid putting themselves at the mercy of a bad client.
 
-The cartoonists I interviewed all described similar qualities they look for when deciding whether to accept work.
+The cartoonists I interviewed all described similar qualities they look for in a client when deciding whether to accept work.
 
 A good client:
 
@@ -194,8 +195,8 @@ A good client:
   * Alternatively, recognizes the project as open-ended, and grants creative freedom to their cartoonist
 * Respects the freelancer's craft
   * Understands that the work takes time and skill
-* Is respectful even when rejecting work
-  * Provides constructive criticism instead of simply bashing the piece
+* Provides constructive feedback
+  * Doesn't simply bash the artist's work
 
 ## 1. Start with a small job
 
@@ -241,12 +242,12 @@ Each artist's application specifies their compensation rate. Look beyond that nu
 1. Number of hours you will spend managing the freelancer
 1. The rate at which you value your time
 
-A low-quality applicant may tempt you with a cheap bid. Before you're taken in by the low number, estimate how many additional hours you will spend managing them and how much longer it will take them to produce work that meets your standards.
+A low-quality applicant may tempt you with a cheap bid. Before you're taken in by the low number, estimate how many additional hours you'll spend managing them and how much longer it will take them to produce work that meets your standards.
 
 Pay attention to red flags in the early stages of hiring:
 
 * Improper or incomplete answers to your screening questions
-* Vague questions to you that require clarification
+* Vague questions they ask you that you can't answer without clarification
 
 ## 7. Sketch your ideas first
 
@@ -254,7 +255,7 @@ Just draw stick figures on a piece of paper and take a picture of it. You're try
 
 ## 8. Provide reference images
 
-Imagine you want a cartoon that features a car. Well, there are lots of different types of cars. Is it a sports car? An SUV? A sedan?
+Imagine you want a cartoon that features a car. Well, there are many types of cars. Is it a sports car? An SUV? A sedan?
 
 Use Google Image Search to find examples of what you have in mind, and share the links with your cartoonist.
 
@@ -262,11 +263,11 @@ Use Google Image Search to find examples of what you have in mind, and share the
 
 On an hourly contract, revision limits matter less because you're paying for the time.
 
-For a fixed-cost contract, stay within a reasonable number of revisions. The cartoonists I interviewed varied in how many late-stage edits they considered fair. The upper limit was between three and six.
+For a fixed-cost contract, stay within a reasonable number of revisions. The cartoonists I interviewed varied in how many edits they considered fair, but the upper limit was between three and six.
 
 ## 10. Give attribution
 
-While none of the artists I spoke with said they strictly require it, they all agreed that if you're hiring them to create a cartoon for a blog post, it's standard practice to credit the artist.
+While none of the artists I spoke with said they strictly require it, they all agreed that it's standard practice to credit the artist when you hire them to create illustrations for a blog post.
 
 ---
 
