@@ -16,6 +16,8 @@ tags:
 - cartoonist
 - blogging
 - cartoons
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=16186049
 ---
 
 I had just completed a passionate blog post.
