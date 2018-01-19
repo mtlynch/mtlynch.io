@@ -18,7 +18,9 @@ tags:
 - cartoons
 ---
 
-I had just completed a passionate blog post. Too passionate, maybe, as I had written over 8,000 words of text. That's 1000x longer than the average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
+I had just completed a passionate blog post.
+
+Too passionate, maybe, as I had written over 8,000 words. That's 1000x longer than the average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
 
 {% assign fig_caption = "[*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND) by Ali Almossawi" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -32,7 +34,7 @@ I couldn't draw cartoons myself, as I'm a terrible artist, so I set out to find 
 
 # Choosing cartoonists to shortlist
 
-Having never hired a cartoonist before or even worked with one, I didn't know where to begin. I frequently outsource work through [Upwork](https://www.upwork.com), a freelancing platform, so I decided to start there. 
+Having never hired a cartoonist before or even worked with one, I didn't know where to begin. I frequently outsource work through [Upwork](https://www.upwork.com), a freelancing platform, so I decided to start there.
 
 But how was I supposed to choose an artist when I had no idea what I even wanted? I created a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) explaining that I'd hire multiple cartoonists to submit one cartoon each as a trial job for 8-10 more.
 
@@ -63,9 +65,7 @@ For additional context, I linked to the [section](https://mtlynch.io/human-code-
 
 {% include image.html file="sample-sofia.jpg" max_width="500px" alt="Sample submission from Sofia" img_link=true fig_caption=fig_caption %}
 
-Sofia was the first artist to submit her sample. I liked it.
-
-The animals were *just* human enough to be funny, while still being cute and whimsical. She nailed the expressions. The cat looked kind of snobby, which was fitting because it represented me.
+Sofia was the first artist to submit her sample. I liked it. The animals were *just* human enough to be funny, while still being cute and whimsical. She nailed the expressions. The cat looked kind of snobby, which was fitting because it represented me.
 
 ## Manel's submission
 
@@ -107,7 +107,7 @@ Everyone's heard the expression, "The value of a picture, when converted to unit
 
 After I hired Loraine to do the full set of cartoons, I tried to explain the next cartoon to her in prose. It felt awkward and inefficient.
 
-I realized I had a misguided notion that I had to stay in my lane. Loraine's job was drawing; my job was writing. But I was obeying this imaginary rule too strictly. I sent her a basic sketch to convey my idea, and it immediately made the process much easier.
+I realized I had a misguided notion about separation of duties. Loraine's job was drawing; my job was writing. But I was obeying this imaginary rule too strictly. I sent her a basic sketch to convey my idea, and it immediately made the process much easier.
 
 # The process, end-to-end
 
@@ -122,11 +122,11 @@ That excellent illustration began with my horrendous stick figure drawing:
 I accompanied the sketch with this text description to Loraine:
 
 >The dog has just finished fighting a shoe in a UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg), [example](https://smhttp-ssl-55701.nexcesscdn.net/media/catalog/category/MMAMatCover.jpg)).
-
+>
 >A human referee is holding the dog's paw up in victory. UFC referees wear black pants, black polo shirts, and gloves ([example](http://media.ufc.tv/200/UFC200feature_johnmccarthy/GettyImages-115727257.jpg), [example](http://mmatitan.com/wp-content/uploads/2017/02/32214_the_usa_today_8412900.0.jpg)).
-
+>
 >So the dog has won, but he has a black eye and some welts as if the shoe hit him back. The shoe is lying on its side on the ground, torn up.
-
+>
 >The cat is in the audience, cheering, "Beautiful grappling! You soundly defeated that shoe." The audience is full but it's just a faceless crowd aside from the cat
 
 And Loraine sent me this initial draft:
@@ -139,7 +139,7 @@ Right off the bat, it was pretty close to what I wanted. I asked her to proceed 
   {% include image.html file="mma-v1.png" alt="MMA cartoon v1" img_link=true %}
   {% include image.html file="mma-v2.png" alt="MMA cartoon v2" img_link=true %}
   {% include image.html file="mma-v3.png" alt="Final version of MMA cartoon" img_link=true %}
-	<figcaption>Evolution of "Offer sincere praise" cartoon from <a href="https://mtlynch.io/human-code-reviews-2/#offer-sincere-praise">"How to do Code Reviews Like a Human"</a></figcaption>
+  <figcaption>Evolution of "Offer sincere praise" cartoon from <a href="https://mtlynch.io/human-code-reviews-2/#offer-sincere-praise">"How to do Code Reviews Like a Human"</a></figcaption>
 </figure>
 
 # Results
@@ -177,9 +177,9 @@ See? It's something to look at, but it's not quite right.
 
 # Tips for hiring cartoonists
 
-There were many instances throughout this process where I didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? What's the standard way of describing a cartoon?
+There were many instances throughout this process where I didn't know what the standard procedure was. How many revisions could I ask for? Do I need to give attribution? What's the right way to describe cartoons?
 
-After I published my article, I reached out to the four cartoonists I worked with to ask if they'd let me interview them for this article. They all seemed intrigued by the unusual request and agreed to speak with me. 
+After I published the blog post, I reached out to the four cartoonists I worked with to ask if they'd let me interview them for this article. They all seemed intrigued by the unusual request and agreed to speak with me.
 
 Below, I've compiled tips for hiring and working with cartoonists based on those interviews and my experiences as a client.
 
@@ -187,7 +187,7 @@ Below, I've compiled tips for hiring and working with cartoonists based on those
 
 Every cartoonist I interviewed emphasized how unpleasant it is to work with clients who make unreasonable demands and threaten poor ratings. Therefore, cartoonists screen their clients carefully during the interview process to avoid putting themselves at the mercy of a bad client.
 
-The cartoonists I interviewed all described similar qualities they look for in a client when deciding whether to accept work.
+The cartoonists all described similar qualities they look for in a client when deciding whether to accept work.
 
 A good client:
 
@@ -242,7 +242,7 @@ Each artist's application specifies their compensation rate. Look beyond that nu
 1. Number of hours you will spend managing the freelancer
 1. The rate at which you value your time
 
-A low-quality applicant may tempt you with a cheap bid. Before you're taken in by the low number, estimate how many additional hours you'll spend managing them and how much longer it will take them to produce work that meets your standards.
+A low-quality applicant may tempt you with a cheap bid. Before you're taken in by the cheap rate, estimate how many additional hours you'll spend managing them and how much longer it will take them to produce work that meets your standards.
 
 Pay attention to red flags in the early stages of hiring:
 
@@ -267,7 +267,7 @@ For a fixed-cost contract, stay within a reasonable number of revisions. The car
 
 ## 10. Give attribution
 
-While none of the artists I spoke with said they strictly require it, they all agreed that it's standard practice to credit the artist when you hire them to create illustrations for a blog post.
+While none of the artists I spoke with said they strictly require it, they all agreed that it's standard practice to credit the artist when you hire them for a blog post.
 
 ---
 
