@@ -33,26 +33,51 @@ On its face, these criteria sound very sensible.
 
 ## Fixing a bug
 
-You can get promoted by *closing* bugs. Find some component that's old and has hundreds of bugs assigned to it, then totally rewrite a new, shiny version with *zero* known bugs. Then you can show it to the promotion committee and say, "Look! I closed *hundreds* of bugs!" This is not exclusive to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) of bug hygiene.
+You can get promoted by *closing* bugs. Find some component that's old and has hundreds of bugs assigned to it, then totally rewrite a new, shiny version with *zero* known bugs. Then you can show it to the promotion committee and say, "Look! I closed *hundreds* of bugs!"
 
-## Maintenance work
+This is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) of bug hygiene.
 
-Given Google's incentives for from-scratch rewrites, it probably isn't surprising that Google does a lot of from scratch rewrites. So every few months, your team will receive an email like this one:
+## Maintenance
 
->We're emailing you because you're a client of CruftySystem.
+Given Google's incentives for from-scratch rewrites, it probably isn't surprising that Google does a lot of from scratch rewrites.
+
+Some variation on the following happened to me several times at Google.
+
+I received an email like this one:
+
+>Good news! We're shutting down CruftyLogs so that all of its clients can move to ShinyLogs.
 >
->Good news! We're shutting down CruftySystem so that all of its clients can move to ShinySystem. You'll be much happier on ShinySystem because it does 80% of what CruftySystem does, but better!
->
->If you depended on that last 20% of features, don't worry! Some of that functionality is available in DeprecatedSystem and some is available in UndocumentedSystem. There's an open bug right now that prevents you from using those two systems at the same time, but we're confident that someone will choose to assign it to themselves any day now.
+> You'll be much happier on ShinySystem! It does 80% of what CruftySystem does, but *better*.
 
-You spent 6 weeks on this, but it means nothing to the promotion committee. The work doesn't seem hard because hundreds of teams did the same migration. There's no measurable impact because all you did was keep things running the same as they were before. To the promotion committee, this work has the same value as if you took a six week vacation and left one of your teammates to do the same work.
+Unfortunately, while CruftyLogs automatically generated graphs of the number of errors logged each day, ShinyLogs doesn't support this. But my team *needs* this feature because all the directors love these graphs. So I 
 
-## Service to your team
+And because nobody has been incentivized to fix bugs or write documentation, you run into a litany of issues just trying to use a new tool for its exact purpose.
 
-# Following the promo process incentives
+When it comes time to write your case for promotion, none of this work is admissable as evidence of your career growth. Hundreds of people did the same migration, so it doesn't look hard. There's no measurable impact because all you did was keep things running the same as they were before. To the promotion committee, this is about as impressive to them as a six week vacation.
+
+## Improving team efficiency
+
+I joined a new team in mid-2016. Within a few months, I noticed something strange about our design review process.
+
+It went like this:
+
+1. Write design document
+2. Send design document out for review
+3. Write code
+
+We were a missing a step between (2) and (3) where the developer resolves the issues that arose during the design review. There was nothing stopping a developer from just saying, "Thanks for your notes. I'll take them into consideration," and then ignoring the feedback completely.
+
+This is also not surprising, as it follows from Google's incentives. If you want a promotion, you don't want to answer design questions like, "How are we going to support monitoring and alerts for this new system?" You just want to launch ASAP, get your promotion, and worry about setting up outage alerts later.
+
+I felt like this strategy was too wasteful. If we treated all design review feedback as optional, we were wasting everyone's time and squandering the benefits of review. So I defined a process we could follow to reach "design approval." Changelists at Google can't be merged in until someone explicitly reviews and approves it. We were holding design documents to the same standard.
+
+This was a nontrivial amount of work. I wrote the process, got people's feedback, addressed their concerns. We eventually reached consensus that this was a good idea. We followed that process after, and in my performance reviews, my teammates consistently gave feedback that they were pleased with how the process was designed and the positive impact it had on the team's product quality.
+
+I included this work when I applied for promotion last fall. The promotion committee specifically called it out to say that while they think it's nice that I did that, it didn't demonstrate an ability to handle technical complexity and thus was not useful to my case for promotion.
+
 # The holiday gift wake up call
 
-Google made headlines in 2016 for their holiday gifts. They had a long-running tradition of giving their employees lavish holiday gifts, such as premium Android phones or $1000 cash. In 2016, they announced that instead of giving us gifts, they were instead giving the equivalent value in Chromebooks to underprivileged schoolchildren.
+Google [made headlines](http://fortune.com/2016/12/09/alphabet-donated-its-employees-holiday-gifts-to-charity/) in 2016 for their holiday gifts. They had a long-running tradition of giving their employees lavish holiday gifts, such as premium Android phones or $1000 cash. In 2016, they announced that instead of giving us gifts, they were instead giving the equivalent value in Chromebooks to underprivileged schoolchildren.
 
 This created controversy within Google. Some were upset to lose their gift, others were upset that people felt entitled to a gift. Some felt that gift or not, it represented a cut of ~$500-1000 in annual benefits.
 
@@ -69,6 +94,10 @@ Google does a lot to build a sense of community in employees. To make us feel th
 This conversation made me realize that I'm *not* Google. I provide Google a service for which I am paid money.
 
 I know it sounds really obvious, but it was a huge realization for me. There were all these things I did because I thought, "This isn't good for me, but it's the right thing for Google."
+
+I imagined that instead of drawing a salary from Google, I was paid by the hour. And they said to me, "We won't pay you for the time you spend fixing bugs, but it's good for Google if you fix bugs, so can you please fix bugs?"
+
+# Optimizing for promotion
 
 # Prospects
 
