@@ -25,19 +25,15 @@ Before I go any further, I have to explain the Google promotion process. Promoti
 * Evidence that you can manage complexity
 * Evidence that your work has had a positive impact on Google
 
-# That's great, except...
+On its face, these criteria sound very sensible. But it also creates perverse incentives where a lot of work that benefits Google doesn't get you promoted.
 
-On its face, these criteria sound very sensible.
-
-# Work that won't get you promoted
-
-## Fixing a bug
+# Fixing bugs doesn't get you promoted
 
 You can get promoted by *closing* bugs. Find some component that's old and has hundreds of bugs assigned to it, then totally rewrite a new, shiny version with *zero* known bugs. Then you can show it to the promotion committee and say, "Look! I closed *hundreds* of bugs!"
 
 This is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) of bug hygiene.
 
-## Maintenance
+# Maintenance doesn't get you promoted
 
 Given Google's incentives for from-scratch rewrites, it probably isn't surprising that Google does a lot of from scratch rewrites.
 
@@ -55,7 +51,7 @@ And because nobody has been incentivized to fix bugs or write documentation, you
 
 When it comes time to write your case for promotion, none of this work is admissable as evidence of your career growth. Hundreds of people did the same migration, so it doesn't look hard. There's no measurable impact because all you did was keep things running the same as they were before. To the promotion committee, this is about as impressive to them as a six week vacation.
 
-## Improving team efficiency
+# Improving team efficiency doesn't get you promoted
 
 I joined a new team in mid-2016. Within a few months, I noticed something strange about our design review process.
 
@@ -77,7 +73,7 @@ I included this work when I applied for promotion last fall. The promotion commi
 
 # The holiday gift wake up call
 
-Google [made headlines](http://fortune.com/2016/12/09/alphabet-donated-its-employees-holiday-gifts-to-charity/) in 2016 for their holiday gifts. They had a long-running tradition of giving their employees lavish holiday gifts, such as premium Android phones or $1000 cash. In 2016, they announced that instead of giving us gifts, they were instead giving the equivalent value in Chromebooks to underprivileged schoolchildren.
+Google [made headlines](http://fortune.com/2016/12/09/alphabet-donated-its-employees-holiday-gifts-to-charity/) in 2016 for their holiday gifts. They announced that instead of their long-standing tradition of giving employees lavish gifts, they would instead spend that money on ~~advertising disguised as charity~~ Chromebooks for underprivileged schoolchildren.
 
 This created controversy within Google. Some were upset to lose their gift, others were upset that people felt entitled to a gift. Some felt that gift or not, it represented a cut of ~$500-1000 in annual benefits.
 
@@ -98,6 +94,16 @@ I know it sounds really obvious, but it was a huge realization for me. There wer
 I imagined that instead of drawing a salary from Google, I was paid by the hour. And they said to me, "We won't pay you for the time you spend fixing bugs, but it's good for Google if you fix bugs, so can you please fix bugs?"
 
 # Optimizing for promotion
+
+There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
+
+I ignored all team emails that weren't directly related to my project. I didn't help with any of that.
+
+Normally I would document how I did this because dozens of teams will come by. But documenting other teams' work wouldn't get me promoted. It would only take away time I could spend on launch-critical things.
+
+My calibration rating was Superb. The highest possible rating. Only ~5% of employees get this rating. The promotion committee agreed that my past six months demonstrated an ability to perform at the level of a senior software engineer. But the past six months was the *only* time they thought I showed this, so it wasn't long enough to get promoted. This was despite calibration ratings of "Exceeds Expectations" or "Strongly Exceeds Expectations" for the past two years.
+
+But it didn't matter. I had decided to leave regardless of the promotion decision. Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
 
 # Prospects
 
