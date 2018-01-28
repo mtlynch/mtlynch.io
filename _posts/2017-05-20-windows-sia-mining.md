@@ -21,6 +21,10 @@ excerpt: A step-by-step guide from zero to mining automation
 
 {% include base_path %}
 
+**This guide is out of date.** <br/> <br/>
+This post describes mining Sia with a desktop graphics card (GPU), but [custom mining hardware](http://theminersunion.com/2018/01/17/obelisk-tech-clients-breathe-sia-of-exasperation-as-bitmain-releases-a3s/) is now available for Sia. The custom hardware has made Sia GPU mining non-viable. This guide will still work, but you may never reach payout, even with a high-end GPU.
+{: .notice--warning}
+
 # Overview
 
 [Sia](https://sia.tech/) is a decentralized, peer-to-peer network for buying and
@@ -397,8 +401,6 @@ R9 295x2 | 2,250 | [Sapphire Radeon R9 295X2](http://amzn.to/2q2Xtqs)
 I do **not** recommend buying a GPU for the express purpose of mining Siacoin. Your profits are determined by Siacoin's market price and the number of other active miners on the network. These variables can change drastically at any time.
 
 If you're buying a new GPU anyway, and you're interested in Siacoin mining performance as a factor in your decision, the tables above can help you decide.
-
-**Update (2017-06-30)**: On June 23rd, 2017, Sia [announced](https://www.reddit.com/r/siacoin/comments/6j1gyg/obelisks_sia_asics_full_details/) an upcoming Siacoin ASIC miner called the [Obelisk](https://obelisk.tech/), expected to produce 100 times the hash rate of a GPU. The Obelisk is targeting a ship date between March and June 2018. When Obelisk customers begin using their devices, GPU mining for Siacoin will become unprofitable. If you plan to invest in GPU hardware, keep in mind that your Siacoin mining revenues will end soon after the Obelisk ships.
 
 # Caveats
 
