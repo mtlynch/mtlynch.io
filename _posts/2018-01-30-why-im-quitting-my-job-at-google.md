@@ -10,7 +10,7 @@ sidebar:
   nav: main
 ---
 
-I started working at Google in 2014. For two years, I loved the job
+I started working at Google in early 2014. For the first two years, I loved the job. Then I applied for a promotion.
 
 # The honeymoon period
 
@@ -20,16 +20,26 @@ I'll skip the usual stuff like free food and massages.
 
 # The promo process
 
-Before I go any further, I have to explain the Google promotion process. Promotions are decided by committees. There's a lot of complexity to how these committees operate, but for the sake of brevity, I'll say that these committees award promotions to software engineers based on:
+Employees at Google spend a lot of time talking about promotion. So much so, that when we started using the shorthand "promo", overall company efficiency went up 30% due to all the time we were spending on that last syllable.
+
+Promo decisions are made by dozens of small committees made up of senior-level software engineers and managers. The exact details of how they operate are complicated and boring, so for the sake of brevity, I'll say that these committees award promotions based on:
 
 * Evidence that you can manage complexity
 * Evidence that your work has had a positive impact on Google
 
 On its face, these criteria sound very sensible. But it also creates perverse incentives where a lot of work that benefits Google doesn't get you promoted.
 
+For example...
+
 # Fixing bugs doesn't get you promoted
 
-You can get promoted by *closing* bugs. Find some component that's old and has hundreds of bugs assigned to it, then totally rewrite a new, shiny version with *zero* known bugs. Then you can show it to the promotion committee and say, "Look! I closed *hundreds* of bugs!"
+It's hard to prove that fixing a bug had a measurable impact. Generally the impact is implied. "It would have 
+
+So if you see that your daily pipeline crashes every 10th run or that an alert is firing even though your service is still serving, you don't have any incentive to investigate the bug, much less fix it. Sit back and wait for it to become an emergency, and hope that you're not the on-call developer when it happens.
+
+You can, however, get promoted by *closing* bugs.
+
+Find some legacy component with hundreds of ignored bugs. Then rewrite it from scratch. Then you can show it to the promo committee and say, "Look! I got rid of that terrible old system with hundreds of bugs and replaced it with my own, which has ZERO (known) bugs!"
 
 This is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) of bug hygiene.
 
@@ -37,14 +47,15 @@ This is not unique to Google. Famed Netscape developer jwz refers to this as the
 
 Given Google's incentives for from-scratch rewrites, it probably isn't surprising that Google does a lot of from scratch rewrites.
 
-Some variation on the following happened to me several times at Google.
-
-I received an email like this one:
+Every few months, you'll receive an email like this:
 
 >Good news! We're shutting down CruftyLogs so that all of its clients can move to ShinyLogs.
 >
-> You'll be much happier on ShinySystem! It does 80% of what CruftySystem does, but *better*.
+> You'll be much happier on ShinyLogs! It does 80% of what CruftyLogs does, but *better*.
 
+You're instantly responsible for migrating your team to ShinyLogs because eight months ago, you fixed a typo in a comment near the CrufyLogs call, making you the de facto team expert on CruftyLogs.
+
+Okay, that's not so bad
 Unfortunately, while CruftyLogs automatically generated graphs of the number of errors logged each day, ShinyLogs doesn't support this. But my team *needs* this feature because all the directors love these graphs. So I 
 
 And because nobody has been incentivized to fix bugs or write documentation, you run into a litany of issues just trying to use a new tool for its exact purpose.
@@ -81,19 +92,19 @@ At this time, I witnessed a conversation between two employees that was eye-open
 
 >**Employee A**: You effectively are still getting the gift. You still receive compensation in stock awards. Cuts like this increase the value of Google's stock. You can sell your shares and buy any present you choose.
 >
->**Employee B**: If I told my wift that I wasn't buying her a Christmas gift, but it was okay because the money was available in our bank account to buy whatever present she wanted, that wouldn't go over well.
+>**Employee B**: If I told my wife that I wasn't buying her a Christmas gift, but she could use the money in our shared bank account to buy whatever she wanted, that wouldn't go over well.
 >
->**Employee A**: You're in a *business relationship* with Google. If you're disappointed that Google isn't "romancing" you enough as an employee, you have a misguided notion of the relationship.
+>**Employee A**: You're in a *business relationship* with Google. If you're disappointed that Google isn't "romancing" you with gifts akin to those you buy your wife, you have a misguided notion of the relationship.
 
 Google does a lot to build a sense of community in employees. To make us feel that we're not just employees, but that we *are* Google.
 
-This conversation made me realize that I'm *not* Google. I provide Google a service for which I am paid money.
+That conversation made me realize that I'm *not* Google. I provide Google a service for which I am paid money.
 
-I know it sounds really obvious, but it was a huge realization for me. There were all these things I did because I thought, "This isn't good for me, but it's the right thing for Google."
-
-I imagined that instead of drawing a salary from Google, I was paid by the hour. And they said to me, "We won't pay you for the time you spend fixing bugs, but it's good for Google if you fix bugs, so can you please fix bugs?"
+If Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests but couldn't get me promoted?
 
 # Optimizing for promotion
+
+The timing was also right. Through some weird horse-trading, my team ended up with some . I know, I'll do a from-scratch rewrite!
 
 There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
 
@@ -101,16 +112,31 @@ I ignored all team emails that weren't directly related to my project. I didn't 
 
 Normally I would document how I did this because dozens of teams will come by. But documenting other teams' work wouldn't get me promoted. It would only take away time I could spend on launch-critical things.
 
-My calibration rating was Superb. The highest possible rating. Only ~5% of employees get this rating. The promotion committee agreed that my past six months demonstrated an ability to perform at the level of a senior software engineer. But the past six months was the *only* time they thought I showed this, so it wasn't long enough to get promoted. This was despite calibration ratings of "Exceeds Expectations" or "Strongly Exceeds Expectations" for the past two years.
+# Moment of truth
 
-But it didn't matter. I had decided to leave regardless of the promotion decision. Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
+"I'm afraid it's bad news," my manager told me at our meeting for revealing the promotion committee's decision.
+
+My calibration rating was "Superb," the highest possible rating. Only ~5% of employees get this rating. The promotion committee agreed that my past six months demonstrated an ability to perform at the level of a senior software engineer. But the past six months was the *only* time they thought I showed this, so it wasn't long enough to get promoted. This was despite performance ratings of "Exceeds Expectations" or "Strongly Exceeds Expectations" for the past two years straight.
+
+I had decided to leave before I found out the decision. People say that every promotion level becomes exponentially harder. I wasn't looking forward to 
+
+I don't mean to imply that the only people who get promoted at Google are conniving ladder climbers. A common way to get promoted at Google is by just being a genius. You can also get promoted by just chugging along and doing good work, but you'll probably get promoted 1-5 years later than you would have if you had optimized your work to further your own career. It's not 1-5 years depending on how good you are; The 1-5 years can be delayed due to a variety of events not within your control:
+
+* You get assigned a project that's time-consuming, but whose benefits are not measurable (e.g., taking ownership of legacy code)
+* Management cancels your project due to changes in priority
+* Your senior teammate leaves the company, leaving you with fewer supporters whose word carries weight with promotion committees
+
+Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
 
 # Prospects
 
-My coworkers keep asking me if I'm scared, but I'm not really sure why. Let me just think of a few people at random who I know left Google for other jobs:
+My coworkers keep asking me if I'm scared, but I'm not really sure why. I selected a few names at random of people who have left jobs at Google, and I looked up what they're doing now:
 
-Marissa Mayer
+* [Marissa Mayer](https://en.wikipedia.org/wiki/Marissa_Mayer): CEO of Yahoo!
+* [Dick Costolo](https://en.wikipedia.org/wiki/Dick_Costolo): CEO of Twitter
+* [Sheryl Sandberg](https://en.wikipedia.org/wiki/Sheryl_Sandberg): COO of Facebook
+* [Chris Sacca](https://en.wikipedia.org/wiki/Chris_Sacca): Founder of successful Lowercase Capital
 
-On average, these people now earn 120M per year. That's almost double what I make now!
+It worked out great for all of them! The least successful person on the list still earns over $20M per year, which is almost double what I was earning at Google.
 
-# Indie Hackers
+# What's next?
