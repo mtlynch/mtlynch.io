@@ -17,6 +17,7 @@ tags:
 - synology
 - nas
 excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
+last_modified_at: '2017-12-20T17:44:00-05:00'
 ---
 
 {% include base_path %}

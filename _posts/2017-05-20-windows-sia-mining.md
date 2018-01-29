@@ -17,6 +17,7 @@ tags:
 - mining
 - sia
 excerpt: A step-by-step guide from zero to mining automation
+last_modified_at: '2018-01-27T21:47:00-05:00'
 ---
 
 {% include base_path %}

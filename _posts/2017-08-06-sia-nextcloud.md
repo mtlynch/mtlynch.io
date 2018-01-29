@@ -17,6 +17,7 @@ tags:
 discuss_urls:
   reddit: https://www.reddit.com/r/siacoin/comments/6s02z5/tutorial_setting_up_sia_with_nextcloud/
   hacker_news: https://news.ycombinator.com/item?id=15243866
+last_modified_at: '2017-12-20T17:44:00-05:00'
 ---
 
 In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB/month. By comparison, the same storage would cost $8.25 per month on Dropbox or $10 per month on Google Drive.
