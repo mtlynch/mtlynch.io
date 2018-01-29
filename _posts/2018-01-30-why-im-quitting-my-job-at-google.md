@@ -106,6 +106,8 @@ If Google and I have a business relationship that exists to serve each side's in
 
 The timing was also right. Through some weird horse-trading, my team ended up with some . I know, I'll do a from-scratch rewrite!
 
+Conducting interviews? Helping with recruiting? I went from 1-2 interviews a week and recruiting visits to my alma mater to 0 interviews a week and deleting all emails from the campus recruiter.
+
 There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
 
 I ignored all team emails that weren't directly related to my project. I didn't help with any of that.
@@ -120,23 +122,28 @@ My calibration rating was "Superb," the highest possible rating. Only ~5% of emp
 
 I had decided to leave before I found out the decision. People say that every promotion level becomes exponentially harder. I wasn't looking forward to 
 
-I don't mean to imply that the only people who get promoted at Google are conniving ladder climbers. A common way to get promoted at Google is by just being a genius. You can also get promoted by just chugging along and doing good work, but you'll probably get promoted 1-5 years later than you would have if you had optimized your work to further your own career. It's not 1-5 years depending on how good you are; The 1-5 years can be delayed due to a variety of events not within your control:
+Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
+
+# Getting promoted eventually
+
+I don't mean to imply that the only people who get promoted at Google are conniving ladder climbers. 
+
+After my first failed attempt at promotion, my manager told me that, "eventually, people get the promotions they deserve." I think that's true, but it depends on your tolerance for "eventually." 
+
+You can get promoted by just chugging along and doing good work, but you'll probably get promoted 1-5 years later than you would have if you had optimized your work to further your own career. The exact delay can be extended by a variety of events outside of your control:
 
 * You get assigned a project that's time-consuming, but whose benefits are not measurable (e.g., taking ownership of legacy code)
 * Management cancels your project due to changes in priority
 * Your senior teammate leaves the company, leaving you with fewer supporters whose word carries weight with promotion committees
 
-Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
+# What's next?
 
 # Prospects
 
 My coworkers keep asking me if I'm scared, but I'm not really sure why. I selected a few names at random of people who have left jobs at Google, and I looked up what they're doing now:
 
-* [Marissa Mayer](https://en.wikipedia.org/wiki/Marissa_Mayer): CEO of Yahoo!
+* [Marissa Mayer](https://en.wikipedia.org/wiki/Marissa_Mayer): CEO of Yahoo
 * [Dick Costolo](https://en.wikipedia.org/wiki/Dick_Costolo): CEO of Twitter
 * [Sheryl Sandberg](https://en.wikipedia.org/wiki/Sheryl_Sandberg): COO of Facebook
-* [Chris Sacca](https://en.wikipedia.org/wiki/Chris_Sacca): Founder of successful Lowercase Capital
 
-It worked out great for all of them! The least successful person on the list still earns over $20M per year, which is almost double what I was earning at Google.
-
-# What's next?
+Wow, it looks like they're all doing great! The least successful person on the list still earns over $20M per year, which is almost double what I was earning at Google.
