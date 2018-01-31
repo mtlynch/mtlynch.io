@@ -1,4 +1,7 @@
-sudo: false
+sudo: required
+services:
+  - docker
+dist: trusty
 script: pushd _tests && ./docker_build && popd
 deploy:
   provider: firebase
