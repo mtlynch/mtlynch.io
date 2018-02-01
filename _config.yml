@@ -38,7 +38,7 @@ defaults:
 locale: en-US
 title_separator: "-"
 name: Michael Lynch
-description: An amazing website.
+description: Michael Lynch's tech blog.
 url:
 theme: minimal-mistakes-jekyll
 baseurl: 
