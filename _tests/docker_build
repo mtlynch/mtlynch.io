@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Exit on first failing command.
+set -e
+# Echo commands to console.
+set -x
+
+IMAGE_VERSION=$(git rev-parse HEAD)
+IMAGE_NAME="mtlynch-io:${IMAGE_VERSION}"
+CONTAINER_NAME="mtlynch-io-container"
+
+docker build -t "$IMAGE_NAME" _tests/
+
+docker run --tty --detach --volume "${PWD}:/app" --name "$CONTAINER_NAME" "$IMAGE_NAME"
+
+docker exec "$CONTAINER_NAME" npm install
+
+docker exec "$CONTAINER_NAME" npm run build:js
+
+# Remove Jekyll Admin from prod build.
+docker exec "$CONTAINER_NAME" sed -i '/jekyll-admin/d' Gemfile
+
+docker exec "$CONTAINER_NAME" bundle install
+
+docker exec "$CONTAINER_NAME" _tests/build
+
