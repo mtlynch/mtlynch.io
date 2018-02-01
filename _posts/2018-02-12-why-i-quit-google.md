@@ -1,5 +1,5 @@
 ---
-title: Why I'm Quitting My Job at Google
+title: Why I Quit Google to Work For Myself
 layout: single
 author_profile: true
 read_time: true
@@ -18,11 +18,11 @@ If you had asked me 18 months ago how long I planned to work for Google, I'd hav
 
 I'll skip the usual stuff like free food and massages.
 
-# The promo process
+# Promotion by committee
 
-Employees at Google spend a lot of time talking about promotion. So much so, that when we started using the shorthand "promo", overall company efficiency went up 30% due to all the time we were spending on that last syllable.
+Promotion decisions are made by dozens of small committees made up of senior-level software engineers and managers. None of these people know you, but they make their decision based on written feedback from people who do.
 
-Promo decisions are made by dozens of small committees made up of senior-level software engineers and managers. The exact details of how they operate are complicated and boring, so for the sake of brevity, I'll say that these committees award promotions based on:
+The exact details of how they operate are complicated and boring, so for the sake of brevity, these committees award promotions based on:
 
 * Evidence that you can manage complexity
 * Evidence that your work has had a positive impact on Google
@@ -33,19 +33,21 @@ For example...
 
 # Fixing bugs doesn't get you promoted
 
-It's hard to prove that fixing a bug had a measurable impact. Generally the impact is implied. "It would have 
+It's hard to make bugfixing look sexy to the promotion committee.
 
-So if you see that your daily pipeline crashes every 10th run or that an alert is firing even though your service is still serving, you don't have any incentive to investigate the bug, much less fix it. Sit back and wait for it to become an emergency, and hope that you're not the on-call developer when it happens.
+There's a small class of bugs that end up being impressive. Some smart person tried unsuccessfully to fix it before you, but you dug deep into the disgusting innards of some legacy code you don't even own and figured out a clever fix. Those can impress promotion committees, especially if you have a few that you can package up.
 
-You can, however, get promoted by *closing* bugs.
+But most bugs are not sexy. Imagine a bug that causes your pipeline to fail 15% of the time and send an email alert to the team. It runs frequently enough that it's not critical to fix, but it's not hard to make the case that it's worth fixing a bug that causes everyone on your team to read and delete alert emails several times per week.
 
-Find some legacy component with hundreds of ignored bugs. Then rewrite it from scratch. Then you can show it to the promo committee and say, "Look! I got rid of that terrible old system with hundreds of bugs and replaced it with my own, which has ZERO (known) bugs!"
+If you fix an unsexy bug, or even 50 unsexy bugs, promotion committee doesn't care. "So what?" they'll say. "It doesn't require a top-performing engineer to fix some simple bugs." And because *anyone* could have done it, nobody does.
 
-This is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) of bug hygiene.
+This continues until your system has hundreds or even thousands of bugs per developer. One of your teammates gets management's blessing to spend two quarters totally rewriting the system. When they're done, they are promptly promoted and showered with praise for replacing an evil, buggy system with a new, happy one with ZERO (known) bugs.
+
+This problem is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) style of development.
 
 # Maintenance doesn't get you promoted
 
-Given Google's incentives for from-scratch rewrites, it probably isn't surprising that Google does a lot of from scratch rewrites.
+Given Google's incentives for from-scratch rewrites, it shouldn't surprise you to hear that Google does a lot of from-scratch rewrites.
 
 Every few months, you'll receive an email like this:
 
@@ -110,7 +112,7 @@ Conducting interviews? Helping with recruiting? I went from 1-2 interviews a wee
 
 There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
 
-I ignored all team emails that weren't directly related to my project. I didn't help with any of that.
+I ignored all team emails that weren't directly related to my project. Halfway through my project, they decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, so I didn't help with any of it.
 
 Normally I would document how I did this because dozens of teams will come by. But documenting other teams' work wouldn't get me promoted. It would only take away time I could spend on launch-critical things.
 
