@@ -12,22 +12,42 @@ sidebar:
 
 I started working at Google in early 2014. For the first two years, I loved the job. Then I applied for a promotion.
 
+My last day was Feb. 1, 2018.
+
 # The honeymoon period
 
-If you had asked me 18 months ago how long I planned to work for Google, I'd have said I'd be there at least another five years. Two years is the longest I've loved any job. There was a lot to love.
+I'll go back to mid-2016. I had been at Google for about two years, and I still loved the company. 
 
-I'll skip the usual stuff like free food and massages.
+A question on the annual employee survey read:
 
-# Promotion by committee
+>I expect to be working for Google five years from today.
 
-Promotion decisions are made by dozens of small committees made up of senior-level software engineers and managers. None of these people know you, but they make their decision based on written feedback from people who do.
+Strongly agree!
 
-The exact details of how they operate are complicated and boring, so for the sake of brevity, these committees award promotions based on:
+Of *course* I'd still be at Google in five years. I was surrounded by some of the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
+
+On my last performane review, I was rated "exceeds expectations," so if I just kept going, I'd be promoted to the next level, Senior Software Engineer.
+
+# How promotions work at Google
+
+At Google, promotions don't come from your manager or even your manager's manager. Instead, promotion decisions are made by dozens of small committees. These committees include senior-level software engineers and managers, none of whom have ever heard of you before the day they decide whether to grant you a promotion.
+
+How do these people decide whether to promote you if they know nothing about you? Packets!
+
+When you apply for a promotion, you put together your "promo packet" which contains:
+
+* Mini-essays about your most significant projects
+* Reviewable artifacts from these projects (e.g., design documents, changelists, bug histories)
+* Feedback from people who have worked with you
+
+The promotion committees are primarily looking for evidence of two things:
 
 * Evidence that you can manage complexity
 * Evidence that your work has had a positive impact on Google
 
-On its face, these criteria sound very sensible. But it also creates perverse incentives where a lot of work that benefits Google doesn't get you promoted.
+Sensible, right? Those sound like fair, objective criteria by which to measure ability.
+
+Except there's some subtlety to these criteria that creates perverse incenvites. It's not long before you realize much of the work you can do to benefit Google doesn't get you promoted.
 
 For example...
 
@@ -35,13 +55,19 @@ For example...
 
 It's hard to make bugfixing look sexy to the promotion committee.
 
-There's a small class of bugs that end up being impressive. Some smart person tried unsuccessfully to fix it before you, but you dug deep into the disgusting innards of some legacy code you don't even own and figured out a clever fix. Those can impress promotion committees, especially if you have a few that you can package up.
+There's a small class of bugs that end up being impressive. Some smart person tried unsuccessfully to fix it before you, but you dug deep into the disgusting innards of some legacy code you don't even own and figured out a clever fix. Those can impress promotion committees, especially if you have a few that you can package up together as a "project" in your promo packet.
 
-But most bugs are not sexy. Imagine a bug that causes your pipeline to fail 15% of the time and send an email alert to the team. It runs frequently enough that it's not critical to fix, but it's not hard to make the case that it's worth fixing a bug that causes everyone on your team to read and delete alert emails several times per week.
+But most bugs are not sexy.
 
-If you fix an unsexy bug, or even 50 unsexy bugs, promotion committee doesn't care. "So what?" they'll say. "It doesn't require a top-performing engineer to fix some simple bugs." And because *anyone* could have done it, nobody does.
+Imagine a bug that causes a frequent background job to fail 15% of the time. Every time it fails, it generates an email alert to your entire team. The job runs ever six hours, so if it fails once, it probably will suceed sometime soon.
 
-This continues until your system has hundreds or even thousands of bugs per developer. One of your teammates gets management's blessing to spend two quarters totally rewriting the system. When they're done, they are promptly promoted and showered with praise for replacing an evil, buggy system with a new, happy one with ZERO (known) bugs.
+But fixing this bug will never get you promoted.
+
+If you fix an unsexy bug, or even 50 unsexy bugs, promotion committee doesn't care. "So what?" they'll say. "It doesn't require a top-performing engineer to fix some simple bugs." 
+
+Anyone could have fixed it, so nobody does.
+
+Instead of fixing bugs, your team just writes more code until your system has hundreds or even thousands of bugs per developer. One of your teammates gets management's blessing to spend two quarters totally rewriting the system. When they're done, they are promptly promoted and showered with praise for replacing an evil, buggy system with a new, happy one with ZERO (known) bugs.
 
 This problem is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) style of development.
 
@@ -108,11 +134,11 @@ If Google and I have a business relationship that exists to serve each side's in
 
 The timing was also right. Through some weird horse-trading, my team ended up with some . I know, I'll do a from-scratch rewrite!
 
-Conducting interviews? Helping with recruiting? I went from 1-2 interviews a week and recruiting visits to my alma mater to 0 interviews a week and deleting all emails from the campus recruiter.
+Conducting interviews? Helping with recruiting? I went from 1-2 interviews a week and recruiting visits to my alma mater to 0 interviews a week and deleting all emails from the Google recruiter for my college.
 
 There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
 
-I ignored all team emails that weren't directly related to my project. Halfway through my project, they decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, so I didn't help with any of it.
+I ignored all team emails that weren't directly related to my project. Halfway through my project, they decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, and I didn't help with any of it.
 
 Normally I would document how I did this because dozens of teams will come by. But documenting other teams' work wouldn't get me promoted. It would only take away time I could spend on launch-critical things.
 
@@ -138,7 +164,13 @@ You can get promoted by just chugging along and doing good work, but you'll prob
 * Management cancels your project due to changes in priority
 * Your senior teammate leaves the company, leaving you with fewer supporters whose word carries weight with promotion committees
 
-# What's next?
+# Working for myself
+
+I always envisioned myself starting my own software company at some point. I wasn't sure how to get there though. It seemed to involve pitching to venture capitalists, which I wasn't excited to do. And it seemed to involve constant ambitious bets for growth, which I also wasn't that interested in.
+
+In late 2016, I discovered Indie Hackers. It's a podcast and community for people who are interested in starting small software businesses, so they just... start them. No VCs or funding. Generally using savings or as a side project.
+
+
 
 # Prospects
 
@@ -148,4 +180,4 @@ My coworkers keep asking me if I'm scared, but I'm not really sure why. I select
 * [Dick Costolo](https://en.wikipedia.org/wiki/Dick_Costolo): CEO of Twitter
 * [Sheryl Sandberg](https://en.wikipedia.org/wiki/Sheryl_Sandberg): COO of Facebook
 
-Wow, it looks like they're all doing great! The least successful person on the list still earns over $20M per year, which is almost double what I was earning at Google.
+Wow, it looks like they're all doing great! The least successful person on the list still earns over $20M per year, which is more than double what I was earning at Google.
