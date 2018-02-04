@@ -14,38 +14,42 @@ I started working at Google in early 2014. For the first two years, I loved the 
 
 My last day was Feb. 1, 2018.
 
-# The honeymoon period
+# The first two years
 
 I'll go back to mid-2016. I had been at Google for about two years, and I still loved the company. 
 
 A question on the annual employee survey read:
 
->I expect to be working for Google five years from today.
+>I expect to be working at Google five years from today.
 
 Strongly agree!
 
 Of *course* I'd still be at Google in five years. I was surrounded by some of the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
 
-On my last performane review, I was rated "exceeds expectations," so if I just kept going, I'd be promoted to the next level, Senior Software Engineer.
+On my last performane review, I was rated "exceeds expectations," so if I just kept going, I'd be promoted to the next level, Senior Software Engineer. What a great title! If I got that, forever after in my career, I'd be able to say, "Yes, I was a *Senior* Software Engineer. At *Google*." People would be so impressed with me.
 
-# How promotions work at Google
+# Promotion by committee
 
-At Google, promotions don't come from your manager or even your manager's manager. Instead, promotion decisions are made by dozens of small committees. These committees include senior-level software engineers and managers, none of whom have ever heard of you before the day they decide whether to grant you a promotion.
+Before I go further, I'll explain how promotions work at Google, because it's an unusual system.
+
+At Google, promotions don't come from your manager or even your manager's manager. Instead, promotion decisions are made by dozens of small committees. They're made up of senior-level software engineers and managers, none of whom have ever heard of you until the day they decide whether to grant you a promotion.
 
 How do these people decide whether to promote you if they know nothing about you? Packets!
+
+# Promotion by packet
 
 When you apply for a promotion, you put together your "promo packet" which contains:
 
 * Mini-essays about your most significant projects
-* Reviewable artifacts from these projects (e.g., design documents, changelists, bug histories)
+* Artifacts from these projects (e.g., design documents, changelists, bug histories)
 * Feedback from people who have worked with you
 
-The promotion committees are primarily looking for evidence of two things:
+The promotion committees are primarily looking for evidence that:
 
-* Evidence that you can manage complexity
-* Evidence that your work has had a positive impact on Google
+* You can manage complexity
+* Your work has had a positive impact on Google
 
-Sensible, right? Those sound like fair, objective criteria by which to measure ability.
+Sensible, right? On its face, these are fair, objective criteria by which to decide whether someone is capable of performing at the next level.
 
 Except there's some subtlety to these criteria that creates perverse incenvites. It's not long before you realize much of the work you can do to benefit Google doesn't get you promoted.
 
@@ -55,29 +59,27 @@ For example...
 
 It's hard to make bugfixing look sexy to the promotion committee.
 
-There's a small class of bugs that end up being impressive. Some smart person tried unsuccessfully to fix it before you, but you dug deep into the disgusting innards of some legacy code you don't even own and figured out a clever fix. Those can impress promotion committees, especially if you have a few that you can package up together as a "project" in your promo packet.
+Imagine a bug that causes a frequent background job to fail 15% of the time. Every time it fails, it generates an email alert to your entire team. The job runs every six hours, so if it fails once, it probably will suceed sometime soon.
 
-But most bugs are not sexy.
+Everyone can live with this bug, but it chips away at your team's time. It generates four or five email alerts per week, which means that seven people get distracted by a false alarm four or five times per week. This contributes to "alarm fatigue," which reduces people's ability to distinguish between false alarms and actual problems.
 
-Imagine a bug that causes a frequent background job to fail 15% of the time. Every time it fails, it generates an email alert to your entire team. The job runs ever six hours, so if it fails once, it probably will suceed sometime soon.
+It sounds like a bug worth fixing, but fixing this bug will never get you promoted.
 
-But fixing this bug will never get you promoted.
-
-If you fix an unsexy bug, or even 50 unsexy bugs, promotion committee doesn't care. "So what?" they'll say. "It doesn't require a top-performing engineer to fix some simple bugs." 
+The promotion committee doesn't care that you fixed this bug. The promotion committee doesn't care if you fixed *fifty* of these bugs. "So what?" they'll say. "It doesn't require a top-performing engineer to fix some simple bugs." 
 
 Anyone could have fixed it, so nobody does.
 
-Instead of fixing bugs, your team just writes more code until your system has hundreds or even thousands of bugs per developer. One of your teammates gets management's blessing to spend two quarters totally rewriting the system. When they're done, they are promptly promoted and showered with praise for replacing an evil, buggy system with a new, happy one with ZERO (known) bugs.
+This continues until your system has hundreds or even thousands of bugs per developer. One of your teammates gets management's blessing to spend two quarters totally rewriting the system. When they're done, they are promptly promoted and showered with praise for replacing an evil, buggy system with a new, happy one with ZERO (known) bugs.
 
 This problem is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) style of development.
 
 # Maintenance doesn't get you promoted
 
-Given Google's incentives for from-scratch rewrites, it shouldn't surprise you to hear that Google does a lot of from-scratch rewrites.
+Given Google's incentives to encourage from-scratch rewrites, it shouldn't surprise you to hear that Google does a lot of from-scratch rewrites.
 
 Every few months, you'll receive an email like this:
 
->Good news! We're shutting down CruftyLogs so that all of its clients can move to ShinyLogs.
+>Good news! We're shutting down the CruftyLogs logging system so that all of its clients can have the distinct privilege of migrating to ShinyLogs.
 >
 > You'll be much happier on ShinyLogs! It does 80% of what CruftyLogs does, but *better*.
 
@@ -92,31 +94,23 @@ When it comes time to write your case for promotion, none of this work is admiss
 
 # Improving team efficiency doesn't get you promoted
 
-I joined a new team in mid-2016. Within a few months, I noticed something strange about our design review process.
+Google has very formal processes for reviewing code, but doesn't define anything for design documents. There's nothing saying that you have to write a design document at all or who has to review it.
 
-It went like this:
+So people write design documents, mainly because they've heard promotion committees are impressed by design documents. And they send their design documents out for review, mainly because they've heard that the promotion committees are impressed by seeing document comments from senior people. But there's nothing incentivizing anyone to actually *act* on feedback they receive about their design document.
 
-1. Write design document
-2. Send design document out for review
-3. Write code
+TODO: Add design doc where all the commenters are saying "You'll kill us all!", "This design must be stopped!" and speech bubble from the side saying, "Wow, look at all the passionate discussion from senior people. This must be a very good design."
 
-We were a missing a step between (2) and (3) where the developer resolves the issues that arose during the design review. There was nothing stopping a developer from just saying, "Thanks for your notes. I'll take them into consideration," and then ignoring the feedback completely.
+This always felt strange to me, so I led an effort within my team to define a process for reviewing design documents. We agreed that the author shouldn't begin sending out code for review until their design document was explicitly approved. I defined what that approval process looked like.
 
-This is also not surprising, as it follows from Google's incentives. If you want a promotion, you don't want to answer design questions like, "How are we going to support monitoring and alerts for this new system?" You just want to launch ASAP, get your promotion, and worry about setting up outage alerts later.
+It was difficult work because I was new to the team. Developers in general don't love writing design documents or additional process. In the end, I came up with a process that everyone agreed to. I held a check-in meeting six months after we adopted this process to gather feedback and course correct.
 
-I felt like this strategy was too wasteful. If we treated all design review feedback as optional, we were wasting everyone's time and squandering the benefits of review. So I defined a process we could follow to reach "design approval." Changelists at Google can't be merged in until someone explicitly reviews and approves it. We were holding design documents to the same standard.
-
-This was a nontrivial amount of work. I wrote the process, got people's feedback, addressed their concerns. We eventually reached consensus that this was a good idea. We followed that process after, and in my performance reviews, my teammates consistently gave feedback that they were pleased with how the process was designed and the positive impact it had on the team's product quality.
-
-I included this work when I applied for promotion last fall. The promotion committee specifically called it out to say that while they think it's nice that I did that, it didn't demonstrate an ability to handle technical complexity and thus was not useful to my case for promotion.
+I included this work when I applied for promotion last fall. The promotion committee specifically called it out to say that while they think it's nice that I did that, it didn't demonstrate an ability to handle technical complexity and thus was not relevant to my case for promotion.
 
 # The holiday gift wake up call
 
 Google [made headlines](http://fortune.com/2016/12/09/alphabet-donated-its-employees-holiday-gifts-to-charity/) in 2016 for their holiday gifts. They announced that instead of their long-standing tradition of giving employees lavish gifts, they would instead spend that money on ~~advertising disguised as charity~~ Chromebooks for underprivileged schoolchildren.
 
-This created controversy within Google. Some were upset to lose their gift, others were upset that people felt entitled to a gift. Some felt that gift or not, it represented a cut of ~$500-1000 in annual benefits.
-
-At this time, I witnessed a conversation between two employees that was eye-opening for me:
+I witnessed the following conversation between two employees:
 
 >**Employee A**: You effectively are still getting the gift. You still receive compensation in stock awards. Cuts like this increase the value of Google's stock. You can sell your shares and buy any present you choose.
 >
@@ -128,7 +122,7 @@ Google does a lot to build a sense of community in employees. To make us feel th
 
 That conversation made me realize that I'm *not* Google. I provide Google a service for which I am paid money.
 
-If Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests but couldn't get me promoted?
+If Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own?
 
 # Optimizing for promotion
 
