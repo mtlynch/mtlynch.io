@@ -92,20 +92,18 @@ And because nobody has been incentivized to fix bugs or write documentation, you
 
 When it comes time to write your case for promotion, none of this work is admissable as evidence of your career growth. Hundreds of people did the same migration, so it doesn't look hard. There's no measurable impact because all you did was keep things running the same as they were before. To the promotion committee, this is about as impressive to them as a six week vacation.
 
-# I love work that doesn't get me promoted
+# But I love work that doesn't get me promoted
 
-After a few years at Google, it slowly began to dawn on me that the work I find most fulfilling has zero value to the promotion committee.
+After a few years at Google, it slowly began to dawn on me that the work I find most fulfilling has zero value to the promotion committee. Here are a few imaginary conversations I had with them that I feel illustrate this.
 
->**Me**: We depend on this undocumented legacy system. When my work forces me to learn part of it, I should document what I learned and add tests to enforce it.<br />
->**Promotion committee**: Anyone can write documentation. Where are the metrics proving this documentation helped Google?
->
-> **Me**: Ugh, I just made a change that caused a buld break in a system we don't even use anymore. I'm going to spend a couple days turning that system down and deleting the dead code.<br />
->**Promotion committee**: Why? Anyone can delete code. Only the promotion-worthy can write it.
->
->**Me**: I spend 2-3x as long as my teammates on code reviews because I like thinking deeply about opportunities to simplify the design. When Dave was building his new system, I found several opportunities to reduce its dependencies and make it cheaper to maintain.<br />
->**Promotion committee**: Did you say Dave launched a new system? Let's give him a promotion!
+**Me**: We depend on this undocumented legacy system. When my work forces me to learn part of it, I should document what I learned and add tests to enforce it.<br />
+**Promotion committee**: Anyone can write documentation. Where are the metrics proving this documentation helped Google?
 
-The most glaring example of the divide between what I value and what the promotion committees value was in my quest for better design reviews.
+ **Me**: Our build just broke because of a system we don't even use anymore. I'm going to spend a couple days deleting the dead code.<br />
+**Promotion committee**: Anyone can delete code. Only those truly worthy of promotion can write it.
+
+**Me**: Everyone was afraid to touch that new feature Dave launched because it didn't have any end-to-end tests, so I wrote some.<br />
+**Promotion committee**: Did you say Dave launched a new feature? Let's give him a promotion!
 
 # My crusade for design reviews
 
@@ -127,41 +125,54 @@ Google [made headlines](http://fortune.com/2016/12/09/alphabet-donated-its-emplo
 
 Shortly after this, I witnessed the following conversation between two employees:
 
->**Employee A**: You effectively are still getting the gift. You still receive compensation in stock awards. Cuts like this increase the value of Google's stock. You can sell your shares and buy any present you choose.
+>**Employee A**: You effectively are still getting the gift. Cuts like this increase the value of Google's stock. You can sell your stock grants and buy any present you choose.
 >
 >**Employee B**: If I told my wife that I wasn't buying her a Christmas gift, but she could use the money in our shared bank account to buy whatever she wanted, that wouldn't go over well.
 >
->**Employee A**: You're in a *business relationship* with Google. If you're disappointed that Google isn't "romancing" you with gifts akin to those you buy your wife, you have a misguided notion of the relationship.
+>**Employee A**: You're in a **business** relationship with Google. If you're disappointed that Google isn't "romancing" you with gifts akin to those you buy your wife, you have a misguided notion of the relationship.
 
 Google does a lot to build a sense of community in employees. To make us feel that we're not just employees, but that we *are* Google.
 
-That conversation made me realize that I'm *not* Google. I provide Google a service for which I am paid money.
+That conversation made me realize that I'm *not* Google. I provide a service for Google in exchange for money.
 
 If Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own?
 
 # Optimizing for promotion
 
-The timing was also right. Through some weird horse-trading, my team ended up with some . I know, I'll do a from-scratch rewrite!
+The holiday gift awakening made me change strategy. If Google was offering incentives to do work, then that's just what I'd do. Or rather, that's *exclusively* what I'd do.
 
-Conducting interviews? Helping with recruiting? I went from 1-2 interviews a week and recruiting visits to my alma mater to 0 interviews a week and deleting all emails from the Google recruiter for my college.
+In early 2017, I was assigned to take over a legacy component from our sister team in India. But the system was a maintenance nightmare because it was largely undocumented and tightly coupled with a bunch of other systems that the other team still owned.
+
+I'll do a from-scratch rewrite!
+
+The system originally took a team of three a year to write. I only had six months until the next performance review, so I decided to 
+
+My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can I keep this running until performance reviews are finalized?"
+
+I went from 1-2 interviews a week to zero. I used to regularly return to my alma mater for recruiting visits, but now I just deleted all emails from the campus recruiter for my school.
 
 There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
 
-I ignored all team emails that weren't directly related to my project. Halfway through my project, they decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, and I didn't help with any of it.
+I ignored all team emails that weren't directly related to my project. Halfway through my project, management decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, and I didn't help with any of it.
 
-Normally I would document how I did this because dozens of teams will come by. But documenting other teams' work wouldn't get me promoted. It would only take away time I could spend on launch-critical things.
+But it worked. We delivered the project on schedule, just before performance reviews began. Time to receive my promotion!
 
 # Moment of truth
 
-"I'm afraid it's bad news," my manager told me at our meeting for revealing the promotion committee's decision.
+"I'm afraid it's bad news," my manager told me.
 
-My calibration rating was "Superb," the highest possible rating. Only ~5% of employees get this rating. The promotion committee agreed that my past six months demonstrated an ability to perform at the level of a senior software engineer. But the past six months was the *only* time they thought I showed this, so it wasn't long enough to get promoted. This was despite performance ratings of "Exceeds Expectations" or "Strongly Exceeds Expectations" for the past two years straight.
+During every performance cycle, the managers within each division have to get together to agree on "calibration ratings" for their direct reports. Mine was "Superb," the highest possible rating, given to only ~5% of employees each cycle.
 
-I had decided to leave before I found out the decision. People say that every promotion level becomes exponentially harder. I wasn't looking forward to 
+The promotion committee agreed that my past six months demonstrated that I could do work at the caliber of a Google Senior Software Engineer. But it was the *only* time in my Google career that I showed this, so they didn't think it was enough of a track record to merit a promotion. This was despite ratings of "Exceeds Expectations" or "Strongly Exceeds Expectations" for the past two years straight.
+
+# Time to leave
+
+Before I found out my promotion decision, I had already decided to leave.  People say that every promotion level becomes exponentially harder. I wasn't looking forward to 
 
 Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
 
 # Getting promoted eventually
+TODO: Cut this section?
 
 I don't mean to imply that the only people who get promoted at Google are conniving ladder climbers. 
 
@@ -178,8 +189,6 @@ You can get promoted by just chugging along and doing good work, but you'll prob
 I always liked the idea of starting my own software company at some point, but I didn't know how to do it. I didn't like the idea of pitching to venture capital firms. I really didn't like the thought of constantly being under pressure from my investors to constantly pump out new features to drive growth.
 
 In late 2016, I discovered Indie Hackers. It's a podcast and community for people who are interested in starting small software businesses, so they just... start them. No VCs or funding. Generally using savings or as a side project.
-
-
 
 # So what am I going to work on?
 
