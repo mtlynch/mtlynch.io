@@ -28,21 +28,15 @@ Of *course* I'd still be at Google in five years. I was surrounded by some of th
 
 On my last performane review, I was rated "exceeds expectations," so if I just kept going, I'd be promoted to the next level, Senior Software Engineer. What a great title! If I got that, forever after in my career, I'd be able to say, "Yes, I was a *Senior* Software Engineer. At *Google*." People would be so impressed with me.
 
-# Promotion by committee
+My manager assured me that I was close to a promotion. He felt that I was already capable of senior-level work. I just needed a good project that would make the promotion committee see how capable I was.
 
-Before I go further, I'll explain how promotions work at Google, because it's an unusual system.
+# Your manager doesn't promote you?
 
-At Google, promotions don't come from your manager or even your manager's manager. Instead, promotion decisions are made by dozens of small committees. They're made up of senior-level software engineers and managers, none of whom have ever heard of you until the day they decide whether to grant you a promotion.
+No, managers at Google can't promote their direct reports. They don't even get a vote.
 
-How do these people decide whether to promote you if they know nothing about you? Packets!
+Instead, promotion decisions come from small committees. They're made up of senior-level software engineers and other managers, none of whom have ever heard of you until the day they decide whether or not to promote you.
 
-# Promotion by packet
-
-When you apply for a promotion, you put together your "promo packet" which contains:
-
-* Mini-essays about your most significant projects
-* Artifacts from these projects (e.g., design documents, changelists, bug histories)
-* Feedback from people who have worked with you
+As the promotion candidate, you're responsible for putting together your "promo packet." A collection of mini-essays you write, links to your design documents, and recommendations from teammates.
 
 The promotion committees are primarily looking for evidence that:
 
@@ -61,21 +55,15 @@ It's hard to make bugfixing look sexy to the promotion committee.
 
 Imagine a bug that causes a frequent background job to fail 15% of the time. Every time it fails, it generates an email alert to your entire team. The job runs every six hours, so if it fails once, it probably will suceed sometime soon.
 
-Everyone can live with this bug, but it chips away at your team's time. It generates four or five email alerts per week, which means that seven people get distracted by a false alarm four or five times per week. This contributes to "alarm fatigue," which reduces people's ability to distinguish between false alarms and actual problems.
+Everyone can live with this bug, but it chips away at your team's time. It means that your seven teammates get distracted by a false alarm four or five times per week. That's a time loss in itself, but the frequent false alarms cause "alarm fatigue," which reduces the team's ability to distinguish between false alarms and actual problems.
 
-It sounds like a bug worth fixing, but fixing this bug will never get you promoted.
-
-The promotion committee doesn't care that you fixed this bug. The promotion committee doesn't care if you fixed *fifty* of these bugs. "So what?" they'll say. "It doesn't require a top-performing engineer to fix some simple bugs." 
+It sounds like a bug worth fixing, but fixing this bug will never get you promoted. Fixing *fifty* of these bugs will never get you promoted. "So what?" the promotion committee will say. "It doesn't require a top-performing engineer to fix some simple bugs." 
 
 Anyone could have fixed it, so nobody does.
 
-This continues until your system has hundreds or even thousands of bugs per developer. One of your teammates gets management's blessing to spend two quarters totally rewriting the system. When they're done, they are promptly promoted and showered with praise for replacing an evil, buggy system with a new, happy one with ZERO (known) bugs.
-
-This problem is not unique to Google. Famed Netscape developer jwz refers to this as the ["Cascade of Attention-Deficit Teenagers" model](https://www.jwz.org/doc/cadt.html) style of development.
-
 # Maintenance doesn't get you promoted
 
-Given Google's incentives to encourage from-scratch rewrites, it shouldn't surprise you to hear that Google does a lot of from-scratch rewrites.
+Given Google's lack of incentives for fixing bugs, it shouldn't surprise you to hear that Google does a lot of from-scratch rewrites.
 
 Every few months, you'll receive an email like this:
 
@@ -83,41 +71,44 @@ Every few months, you'll receive an email like this:
 >
 > You'll be much happier on ShinyLogs! It does 80% of what CruftyLogs does, but *better*.
 
-You're instantly responsible for migrating your team to ShinyLogs because eight months ago, you fixed a typo in a comment near the CrufyLogs call, making you the de facto team expert on CruftyLogs.
+You draw the short straw and you're now responsible for migrating your team to ShinyLogs. And because nobody has been incentivized to fix bugs or write documentation, you run into a litany of issues just trying to use this new system for its exact purpose.
 
-Okay, that's not so bad
-Unfortunately, while CruftyLogs automatically generated graphs of the number of errors logged each day, ShinyLogs doesn't support this. But my team *needs* this feature because all the directors love these graphs. So I 
-
-And because nobody has been incentivized to fix bugs or write documentation, you run into a litany of issues just trying to use a new tool for its exact purpose.
-
-When it comes time to write your case for promotion, none of this work is admissable as evidence of your career growth. Hundreds of people did the same migration, so it doesn't look hard. There's no measurable impact because all you did was keep things running the same as they were before. To the promotion committee, this is about as impressive to them as a six week vacation.
+When it comes time to write your case for promotion, none of this work looks impressive. Hundreds of people did the same migration, so it obviously isn't hard. There's no measurable impact because all you did was keep things running the same as they were before. To the promotion committee, this is about as impressive to them as a six week vacation.
 
 # But I love work that doesn't get me promoted
 
-After a few years at Google, it slowly began to dawn on me that the work I find most fulfilling has zero value to the promotion committee. Here are a few imaginary conversations I had with them that I feel illustrate this.
+After a few years at Google, it slowly began to dawn on me that the work I find most fulfilling has zero value to the promotion committee.
 
-**Me**: We depend on this undocumented legacy system. When my work forces me to learn part of it, I should document what I learned and add tests to enforce it.<br />
-**Promotion committee**: Anyone can write documentation. Where are the metrics proving this documentation helped Google?
+TODO: Cartoon:
 
- **Me**: Our build just broke because of a system we don't even use anymore. I'm going to spend a couple days deleting the dead code.<br />
+Frame 1
+**Me**: I documented this component nobody understood.<br />
+**Promotion committee**: Anyone can write documentation. Where are the metrics proving this helped Google?
+
+Frame 2
+ **Me**: This unnecessary pipeline stage kept breaking our build. I spent two weeks removing it.<br />
 **Promotion committee**: Anyone can delete code. Only those truly worthy of promotion can write it.
 
+Frame 3
 **Me**: Everyone was afraid to touch that new feature Dave launched because it didn't have any end-to-end tests, so I wrote some.<br />
-**Promotion committee**: Did you say Dave launched a new feature? Let's give him a promotion!
+**Promotion committee**: That sounds promotion-worthy!
 
-# My crusade for design reviews
+Frame 4
+Dave
+Stamped: Promoted!
+For boldly launching a new feature without any end-to-end tests.
 
-Google has very formal processes for code reviews, but is oddly silent about design reviews. There's nothing that says you have to write a design document at all, and certainly no company-wide rules about how teams should review designs.
-
-People write design documents because they've heard promotion committees are impressed by design documents. And they send their design documents out for review, mainly because they've heard that the promotion committees are impressed when they see comments on the document from senior people. But there's nothing incentivizing anyone to actually *act* on feedback they receive about their design document.
+One of the projects I was most proud of was convincing my team to adopt a defined process for design reviews. We had a very strict process for code reviews, but our design review policy was very haphazard. People wrote design documents because they heard promotion committees were impressed by design documents. And they sent their design documents out for review, mainly because they've heard that the promotion committees are impressed when they see comments on the document from senior people. But there was nothing incentivizing anyone to actually *act* on feedback they receive about their design document.
 
 TODO: Add design doc titled "Machine learning system for  launching nuclear missiles" where all the commenters are saying "You'll kill us all!", "This design must be stopped!" and speech bubble from the side saying, "Wow, look at all the passionate discussion from senior people. This must be a very good design."
+
+
 
 This always felt strange to me, so I led an effort within my team to define a process for reviewing design documents. We agreed that the author shouldn't begin sending out code for review until their design document was explicitly approved. I defined what that approval process looked like.
 
 It was difficult work because I was new to the team. Developers in general don't love writing design documents or additional process. In the end, I came up with a process that everyone agreed to. I held a check-in meeting six months after we adopted this process to gather feedback and course correct.
 
-At my next attempt at promotion, the committee specifically called it out to say that while they think it's nice that I did that, it didn't demonstrate an ability to handle technical complexity and thus was not relevant to my case for promotion.
+At my next attempt at promotion, the committee specifically called it out to say that while they think it sure was swell that I did that, it didn't demonstrate technical complexity and thus was not relevant to my case for promotion.
 
 # The holiday gift wake up call
 
@@ -131,31 +122,33 @@ Shortly after this, I witnessed the following conversation between two employees
 >
 >**Employee A**: You're in a **business** relationship with Google. If you're disappointed that Google isn't "romancing" you with gifts akin to those you buy your wife, you have a misguided notion of the relationship.
 
-Google does a lot to build a sense of community in employees. To make us feel that we're not just employees, but that we *are* Google.
-
-That conversation made me realize that I'm *not* Google. I provide a service for Google in exchange for money.
+Google does a lot to build a sense of community in employees. To make us feel that we're not just employees, but that we *are* Google. That conversation made me realize that I'm *not* Google. I provide a service for Google in exchange for money.
 
 If Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own?
 
 # Optimizing for promotion
 
-The holiday gift awakening made me change strategy. If Google was offering incentives to do work, then that's just what I'd do. Or rather, that's *exclusively* what I'd do.
+If Google was offering incentives to do work that was measurable and visible, then that's what I'd do.
 
-In early 2017, I was assigned to take over a legacy component from our sister team in India. But the system was a maintenance nightmare because it was largely undocumented and tightly coupled with a bunch of other systems that the other team still owned.
+Shortly after the holiday gift discussion, I was assigned to take over a legacy component from our sister team in India. It was a maintenance nightmare because it was largely undocumented and tightly coupled with a bunch of other systems that the other team still owned.
 
-I'll do a from-scratch rewrite!
+The path to promotion was clear: I needed to do a from-scratch rewrite.
 
-The system originally took a team of three a year to write. I only had six months until the next performance review, so I decided to 
+The system originally took a team of three a year to write. I was leading two other developers, but we only had six months until the next performance review, so I stopped doing anything except for trying to get this rewrite launched before the next promotion cycle.
 
-My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can I keep this running until performance reviews are finalized?"
+My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can I prevent this from blowing up until performance reviews are finalized?"
 
-I went from 1-2 interviews a week to zero. I used to regularly return to my alma mater for recruiting visits, but now I just deleted all emails from the campus recruiter for my school.
+I stopped helping with hiring and recruiting, both of which were time-consuming activities that had zero value for promotion. I went from conducting one or two interviews a week to zero. I deleted all emails from the Google recruiter for my alma mater.
 
-There were two bright interns on my team who wanted to integrate their summer project with my my work. No, absolutely not.
+In fact, I stopped reading all emails unless I was explicitly on the To or CC line.
 
-I ignored all team emails that weren't directly related to my project. Halfway through my project, management decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, and I didn't help with any of it.
+There were two bright interns on my team who thought their summer project might improve the efficiency of the system we were launching. But I knew we could hit our the minimum accuracy requirements for launch without their help, so I refused to work with them. No, absolutely not.
 
-But it worked. We delivered the project on schedule, just before performance reviews began. Time to receive my promotion!
+Halfway through my project, management decided to do a big handoff of our legacy components to another team. It was tedious, unsexy work, and I didn't help with any of it.
+
+I didn't like doing this. I've worked with teammates that I could tell were optimizing for their promotion and I thought they were terrible. But I felt like I had spent three years making decisions that put my team or the company first, so it was my turn.
+
+We delivered the project on schedule, just before performance reviews began. Time to receive my promotion!
 
 # Moment of truth
 
@@ -170,19 +163,6 @@ The promotion committee agreed that my past six months demonstrated that I could
 Before I found out my promotion decision, I had already decided to leave.  People say that every promotion level becomes exponentially harder. I wasn't looking forward to 
 
 Everyone was telling me that I did great work, but I wasn't proud of any of it. I didn't consider it good engineering and I don't think it best served Google.
-
-# Getting promoted eventually
-TODO: Cut this section?
-
-I don't mean to imply that the only people who get promoted at Google are conniving ladder climbers. 
-
-After my first failed attempt at promotion, my manager told me that, "eventually, people get the promotions they deserve." I think that's true, but it depends on your tolerance for "eventually." 
-
-You can get promoted by just chugging along and doing good work, but you'll probably get promoted 1-5 years later than you would have if you had optimized your work to further your own career. The exact delay can be extended by a variety of events outside of your control:
-
-* You get assigned a project that's time-consuming, but whose benefits are not measurable (e.g., taking ownership of legacy code)
-* Management cancels your project due to changes in priority
-* Your senior teammate leaves the company, leaving you with fewer supporters whose word carries weight with promotion committees
 
 # Working for myself
 
@@ -199,14 +179,3 @@ My rough plan is to try different projects for a few months each to see if any o
 * Continue working on KetoHub (TODO: link) and see if I can make it profitable
 * I've been writing about Sia, a distributed storage network  for several years. I can build some business on top of that technology.
 * I can put more energy into blogging and look for ways to earn money from that
-
-
-# Prospects
-
-My coworkers keep asking me if I'm scared, but I'm not really sure why. I selected a few names at random of people who have left jobs at Google, and I looked up what they're doing now:
-
-* [Marissa Mayer](https://en.wikipedia.org/wiki/Marissa_Mayer): CEO of Yahoo
-* [Dick Costolo](https://en.wikipedia.org/wiki/Dick_Costolo): CEO of Twitter
-* [Sheryl Sandberg](https://en.wikipedia.org/wiki/Sheryl_Sandberg): COO of Facebook
-
-Wow, it looks like they're all doing great! The least successful person on the list still earns over $20M per year, which is more than double what I was earning at Google.
