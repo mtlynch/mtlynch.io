@@ -130,37 +130,39 @@ My career was being dictated by a shifting, anonymous committee who thought abou
 
 Worst of all, I wasn't proud of my work. Instead of asking myself, "How can I solve this challenging problem?" I was asking, "How can I make this problem *look* challenging for promotion?" I hated that.
 
-Even if I got the promotion, what then? Popular wisdom said that each promotion was exponentially harder to achieve. To continue advancing my career, I'd need projects that were even larger in scope and involved collaboration with more partner teams. But that just meant the project could fail due to even more factors outside my control, wasting months or years of my time.
+Even if I got the promotion, what then? Popular wisdom said that each promotion was exponentially harder. To continue advancing my career, I'd need projects that were even larger in scope and involved collaboration with more partner teams. But that just meant the project could fail due to even more factors outside my control, wasting months or years.
 
 # What's the alternative?
 
 Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/). It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that could pay their bills.
 
-I had always been interested in starting my own software company, but I thought that meant venture capitalists, aggressive hiring, and ruthless gambits for user growth. None of that appealed to me.
+I had always been interested in starting my own software company, but I only knew of the Silicon Valley startup path. I thought founding my own software business meant spending most of my time fundraising. I thought it meant fighting ruthlessly to expand until the company was worth a billion dollars.
 
-Indie Hackers presented an attractive alternative. Most of the founders on Indie Hackers built their businesses as side projects while they worked full-time jobs. Others started their business with enough savings to cover a few months of living costs.
+Indie Hackers presented an attractive alternative. Most members built their businesses using their own savings or as side projects as they worked full-time jobs. They didn't have to answer to investors, and they certainly didn't have to prove themselves to anonymous committees.
 
-TODO: Better transition.
+There were downsides, of course. With your own business, there's less security, the stakes are higher, more things can go catastrophically wrong. If I ever made a mistake at Google that cost the company $10 million, I would suffer no consequences. I'd be asked to write a post-mortem, and everyone would celebrate the learning opportunity. If I made a $10 million mistake in a business I owned, I'd be in debt for ten lifetimes.
 
-I wanted to do it. I wanted to be an Indie Hacker.
+I realized what appealed to me so strongly about these founders was that they were in control. Whether their business became a runaway success or stagnated for years, they were calling the shots. At Google, I didn't feel like I was in control of my own projects, much less my career growth or my team's direction.
 
-# My final year at Google
+I thought about it for months and finally decided. I wanted to be an Indie Hacker.
 
-I stuck around until the end of the performance cycle to see if I could take one last shot at the promotion so that after four years at Google, I'd get to leave with a fancy title.
+# One last thing before I leave
 
-Then my project was canceled. Again.
+I still had some unfinished business at Google. I invested almost three years into this promotion, and I hated the idea of leaving with nothing to show for it. I decided to stay a few more months to give it one last shot.
+
+Six weeks before the performance period ended, my project was canceled. Again.
 
 Actually, my whole team was canceled. This is a common enough occurence at Google that there's a name for it: a defrag. Management transferred my team's projects to our sister team in India. My teammates and I all had to start over on new teams.
 
-I applied for the promotion anyway. My performance rating was "Superb," the highest possible rating, given to only ~5% of employees each cycle. The promotion committee noted that the six months when I was optimizing for a promotion clearly demonstrated senior-level work... but six months wasn't long enough of a track record so, better luck next time.
+I applied for the promotion anyway. My performance rating was "Superb," the highest possible rating, given to around 5% of employees each cycle. The promotion committee noted that the six months when I was optimizing for a promotion clearly demonstrated senior-level work. BUT they added that six months wasn't long enough of a track record so, better luck next time.
 
-I really wanted that promotion and worked hard for it, but I had already decided to leave regardless of the decision. The committee said that I was on track to be promoted if I did the same quality work for another six months, but starting fresh on a new team meant I'd spend the next few months ramping up and being assigned unglamorous tasks.
+My manager told me I could get the promotion if I did the same quality work for another six months. I was tempted. But by that point, I'd been hearing, "really great shot at promotion in six months," for the past two years. It was time to go.
 
 # What's next?
 
-When I tell people I left Google, they assume I must have some brilliant startup idea. Only an idiot would leave a cushy job as a Google Software Engineer.
+When I tell people I left Google, they assume I must have some brilliant startup idea. Only an idiot would leave a cushy job as a developer at Google.
 
-But I am indeed an idiot with no million dollar startup ideas.
+But I am indeed an idiot with no idea.
 
 My plan is to try different projects for a few months each to see if any of them catch on, for example:
 
@@ -168,4 +170,6 @@ My plan is to try different projects for a few months each to see if any of them
 * Build a business on top of Sia, a distributed storage technology I've [written about frequently](/tags/#sia)
 * Spend more time writing, and look for ways to earn money from it
 
-Google was a great place to work, and I learned a lot in my time there. TODO: More conclusion.
+Google was a great place to work, and I learned a lot in my time there. I know I would regret it if I never tried to start a business of my own. I have the opportunity to do it now, and I don't know if I'll ever have it again, so here goes.
+
+TODO: rewrite last paragraph
