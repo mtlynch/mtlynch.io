@@ -36,7 +36,7 @@ My manager assured me that my promotion was close. He felt that I was already ca
 
 No, managers at Google can't promote their direct reports. They don't even get a vote.
 
-Instead, promotion decisions come from small committees of upper-level software engineers and managers, none of whom have ever heard of you until the day they decide on your promotion.
+Instead, promotion decisions come from small committees of upper-level software engineers and managers who have never heard of you until the day they decide on your promotion.
 
 You apply for promotion by assembling a "promo packet": a collection of written recommendations from your teammates, design documents you've created, and mini-essays you write to explain why your work merits a promotion.
 
@@ -54,7 +54,7 @@ Unsurprisingly, it doesn't work like that. It took me two years to figure that o
 
 # Working naïvely
 
-My main responsibility until that point was a legacy data pipeline. It had been in maintenance mode for years, but load had increased, and the pipeline was buckling under the pressure. It frequently died silently or produced incorrect output. Its failures could take days to diagnose because nobody had written documentation for it since its original design spec.
+My main responsibility until that point was a legacy data pipeline. It had been in maintenance mode for years, but load had increased, and the pipeline was buckling under the pressure. It frequently died silently or produced incorrect output. Its failures took days to diagnose because nobody wrote documentation for it since its original design spec.
 
 I proudly and lovingly nursed the pipeline back to health. I fixed dozens of bugs and wrote automated tests to make sure they wouldn't reappear. I deleted thousands of lines of code that were either dead or could be replaced by modern libraries. I documented the pipeline as I learned it so that the institutional knowledge was available to my teammates instead of siloed in my head.
 
@@ -62,23 +62,23 @@ The problem, as I discovered at promotion time, was that none of this was quanti
 
 # Metrics or it didn't happen
 
-The pipeline had very few recorded metrics. The ones it did have made it look like things had gotten worse. My bug discoveries caused the overall bug count to increase. The pipeline's failures increased because I made it fail fast on anomalies instead of silently passing along bad data. I drastically reduced the time developers spent repairing those failures, but there were no metrics that tracked developer time.
+The pipeline didn't record many metrics. The ones it did have made it look like things had gotten worse. My bug discoveries caused the overall bug count to increase. The pipeline's failures increased because I made it fail fast on anomalies instead of silently passing along bad data. I drastically reduced the time developers spent repairing those failures, but there were no metrics that tracked developer time.
 
-My other work didn't look so good on paper either. On several occasions, I had put my projects on hold for weeks or even months at a time so that I could help a teammate whose launch was at risk. It was the right decision for the team, but it looked very unimpressive in a promo packet. To the promotion committee, my teammate's project was the big, important work that demanded coordination from multiple developers. If I volunteered to help, it must mean my teammate "exercises influence within the team." I was just the mindless peon whose work was so irrelevant that it could be pre-empted at a moment's notice.
+My other work didn't look so good on paper either. On several occasions, I put my projects on hold for weeks or even months at a time to help a teammate whose launch was at risk. It was the right decision for the team, but it looked unimpressive in a promo packet. To the promotion committee, my teammate's project was the big, important work that demanded coordination from multiple developers. If they hornswoggled me into helping them, it's evidence of their strong leadership qualities. I was just the mindless peon whose work was so irrelevant that it could be pre-empted at a moment's notice.
 
 I submitted my first promo packet, and the results were what I feared: the promotion committee said that I hadn't proven I could handle technical complexity, and they couldn't see the impact I had on Google.
 
-{% include image.html file="promo-committee.png" alt="Arguing my case to the promotion committee" max_width="750px" img_link=true %}
+{% include image.html file="promo-committee.png" alt="Arguing my case to the promotion committee" max_width="800px" img_link=true %}
 
 # Learning from rejection
 
 The rejection was a difficult blow, but I wasn't discouraged. I felt I was performing above my level, but the promotion committee couldn't see it. That was solvable.
 
-I decided that I had been too naïve in my first couple years. I didn't do enough planning up front to make sure the work I was doing would leave a paper trail. Now that I understood how the process worked, I could keep doing the same good work, just with better record-keeping.
+I decided that I had been too naïve in my first couple years. I didn't do enough planning up front to make sure the work I was doing left a paper trail. Now that I understood how the process worked, I could keep doing the same good work, just with better record-keeping.
 
-For example, my team was getting tons of distracting email alerts due to false alarms. Old me would have just fixed these alerts. But now I knew that for this work to appear in my promo packet, I should first set up metrics so that we'd have historical records of alert frequency. At promotion time, I'd have an impressive-looking graph of the alerts trending downward.
+For example, my team was receiving tons of distracting email alerts due to false alarms. Old me would have just fixed these alerts. But now I knew that for this work to appear in my promo packet, I should first set up metrics so that we'd have historical records of alert frequency. At promotion time, I'd have an impressive-looking graph of the alerts trending downward.
 
-Shortly after, I was assigned a project that seemed destined for promotion. It was a machine-learning project, which was and still is the hot thing at Google. It would automate a task that hundreds of human operators were doing manually, so there would be a clear, objective impact on Google. It also required me to lead a junior developer throughout the project, which generally won points with promotion committees.
+Shortly after, I was assigned a project that seemed destined for promotion. It was a machine-learning project, which was and still is the hot thing at Google. It would automate a task that hundreds of human operators were doing manually, so it had a clear, objective impact on Google. It also required me to lead a junior developer throughout the project, which generally won points with promotion committees.
 
 # The holiday gift wake up call
 
@@ -90,13 +90,13 @@ Shortly after this, I witnessed the following conversation between two employees
 >
 >**Employee B**: What if I told my wife that I wasn't buying her a Christmas gift, but she could use the money in our bank account to buy any present she wants?
 >
->**Employee A**: You're in a **business** relationship with Google. If you're disappointed that Google isn't "romancing" you with gifts like a spouse would, you have a misguided notion of the relationship.
+>**Employee A**: You're in a **business** relationship with Google. If you're disappointed that Google isn't "romancing" you with gifts like you do for your wife, you have a misguided notion of the relationship.
 
 Wait a second. *I* was in a business relationship with Google.
 
-It may sound strange that it took me two and a half years to realize it, but Google does a very good job of building a sense of community among its employees. To make us feel that we're not just employees, but that we *are* Google.
+It may sound strange that it took me two and a half years to realize it, but Google does a good job of building a sense of community among its employees. To make us feel that we're not just employees, but that we *are* Google.
 
-That conversation made me realize that I'm *not* Google. I provide a service for Google in exchange for money.
+That conversation made me realize that I'm *not* Google. I provide a service to Google in exchange for money.
 
 So if Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own? If the promotion committee sees no value in bugfixing or team support work, why was I doing that?
 
@@ -104,23 +104,23 @@ So if Google and I have a business relationship that exists to serve each side's
 
 I realized that my first denied promotion taught me the wrong lesson.
 
-I thought I could keep doing the same work but package it to look good for the promotion committee. I should have done the opposite: figure out what the promotion committee wants, and do only that work.
+I thought I could keep doing the same work but package it to look good for the promotion committee. I should have done the opposite: figure out what the promotion committee wants, and exclusively do that work.
 
-Before starting any task, I asked myself whether it would help my case for promotion. If the answer was no, I didn't do it.
+From then on, I asked myself before starting any task whether it would help my case for promotion. If the answer was no, I didn't do it.
 
-My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can this last until I get promoted?" I didn't file or fix any bugs unless they risked my project's launch. I wriggled out of all responsibilities for maintenance work. I stopped volunteering for campus recruiting events. I went from conducting one or two interviews per week to zero.
+My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can this last until I'm promoted?" I didn't file or fix any bugs unless they risked my project's launch. I wriggled out of all responsibilities for maintenance work. I stopped volunteering for campus recruiting events. I went from conducting one or two interviews per week to zero.
 
 # Then my project was canceled
 
-Priorities shifted. Management traded my project away to our sister team in India. In exchange, that team gave us one of their projects. It was an undocumented system, built on deprecated infrastructure, but it was nevertheless a critical component in production. I was assigned to untangle it from our sister team's other systems and migrate it to a new framework, all while keeping it running in production and hitting its performance metrics.
+Priorities shifted. Management traded my project away to our sister team in India. In exchange, that team gave us one of their projects. It was an undocumented system, built on deprecated infrastructure, but it was nevertheless a critical component in production. I was assigned to untangle it from our sister team's other code and migrate it to a new framework, all while keeping it running in production and hitting its performance metrics.
 
 As far as my promotion was concerned, this was a setback of several months. Because I hadn't released anything for my canceled project, the two months I spent on it were worthless. It would take me weeks just to get up to speed on the system I was inheriting, and I was liable to lose several more in the gruntwork of keeping it running.
 
 # What am I even doing?
 
-It  was the third time in six months that my manager had reassigned me midway through a project. Each time, he assured me it had nothing to do with the quality of my work, but rather some shift in upper management strategy or team headcount.
+It  was the third time in six months that my manager had reassigned me midway through a project. Each time, he assured me that it had nothing to do with the quality of my work, but rather some shift in upper management strategy or team headcount.
 
-At this point, I took a step back to assess what was happening from a high level.  Forget my manager, forget the promotion committee, forget my teammates. What if I boiled it down to just me and just Google? What was happening in our "business relationship?"
+At this point, I took a step back to assess what was happening from a high level.  Forget my manager, forget his managers, forget the promotion committee. What if I boiled it down to just me and just Google? What was happening in our "business relationship?"
 
 Well, Google kept telling me that it couldn't judge my work until it saw me complete a project. Meanwhile, I couldn't complete any projects because Google kept interrupting them midway through and assigning me new ones.
 
@@ -141,13 +141,13 @@ Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
 
 {% include image.html file="indie-hackers.png" max_width="750px" alt="Screenshot of Indie Hackers website" img_link=true %}
 
-It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that could pay their bills.
+It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that pay their bills.
 
 I had always been interested in starting my own software company, but I only knew of the Silicon Valley startup path. I thought being a software founder meant spending most of my time fundraising and the rest of it worrying about how to attract my next million users.
 
 Indie Hackers presented an attractive alternative. Most members built their businesses with their own savings or as side projects to their full-time jobs. They didn't have to answer to investors, and they certainly didn't have to prove themselves to anonymous committees.
 
-There were downsides, of course. They had less steady income and faced a wider array of catastrophic risks. If I ever made a mistake at Google that cost the company $10 million, I would suffer no consequences. I'd be asked to write a post-mortem, and everyone would celebrate the learning opportunity. For most of these founders, a $10 million mistake would mean the end of their business and several lifetimes of debt.
+There were downsides, of course. Their income was less steady, and they faced greater catastrophic risks. If I ever made a mistake at Google that cost the company $10 million, I would suffer no consequences. I'd be asked to write a post-mortem, and everyone would celebrate the learning opportunity. For most of these founders, a $10 million mistake would mean the end of their business and several lifetimes of debt.
 
 Founders on Indie Hackers captivated me because they were in control. Whether their business became a runaway success or stagnated for years, they were calling the shots. At Google, I didn't feel in control of my own projects, much less my career growth or my team's direction.
 
@@ -155,17 +155,17 @@ I thought about it for months and finally decided. I wanted to be an Indie Hacke
 
 # One last thing before I leave
 
-I still had some unfinished business at Google. I invested three years into my promotion, and I hated the idea of leaving with nothing to show for it. I only had a few months left until I could reapply for promotion, so I decided to give it one last shot.
+I still had unfinished business at Google. After investing three years into my promotion, I hated the idea of leaving with nothing to show for it. There were only a few months left until I could reapply for promotion, so I decided to give it one last shot.
 
 Six weeks before the performance period ended, my project was canceled. Again.
 
 Actually, my whole team was canceled. This was a common enough occurrence at Google that there was a euphemism for it: a defrag. Management transferred my team's projects to our sister team in India. My teammates and I all had to start over in different areas of the company.
 
-I applied for the promotion anyway. Six weeks later, my manager read me the results. My performance rating was "Superb," the highest possible score, given to around 5% of employees each cycle. The promotion committee noted that the past six months clearly demonstrated senior-level work. These were, uncoincidentally, the months I was optimizing for promotion.
+I applied for the promotion anyway. Weeks later, my manager read me the results. My performance rating was "Superb," the highest possible score, given to around 5% of employees each cycle. The promotion committee noted that in the past six months, I clearly demonstrated senior-level work. These were, uncoincidentally, the months when I was optimizing for promotion.
 
 *But* they felt that six months wasn't a long enough track record, so... better luck next time.
 
-My manager told me I could get the promotion if I did the same quality work for another six months. I can't say I wasn't tempted, but by that point, I'd been hearing, "great shot at promotion in six months," for the past two years.
+My manager told me I had a strong chance at promotion if I did the same quality work for another six months. I can't say I wasn't tempted, but by that point, I'd been hearing, "great shot at promotion in six months," for the past two years.
 
 It was time to go.
 
@@ -181,4 +181,4 @@ My plan is to try different projects for a few months each to see if any of them
 * Build a business on top of Sia, a distributed storage technology I've [written about frequently](/tags/#sia)
 * Spend more time writing, and look for ways to earn money from it
 
-Google was a great place to work, and I learned a lot from my time there. Leaving was difficult because I had more to learn, but there will always be employers like Google. I won't always have the freedom to take the risk of starting my own company, so I look forward to seeing where this takes me.
+Google was a great place to work, and I learned valuable skills during my time there. Leaving was difficult because I had more to learn, but there will always be employers like Google. I won't always have the freedom to start my own company, so I look forward to seeing where this takes me.
