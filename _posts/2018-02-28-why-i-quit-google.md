@@ -10,6 +10,7 @@ sidebar:
   nav: main
 header:
   teaser: images/resized/2018-02-28-why-i-quit-google/768/spoiled-coder.png
+  og_image: images/resized/2018-02-28-why-i-quit-google/768/spoiled-coder.png
 excerpt: For the past four years, I've worked as a software developer at Google. On
   February 1st, I quit. It was because they refused to buy me a Christmas present.
 ---
