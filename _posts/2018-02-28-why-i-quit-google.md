@@ -22,7 +22,7 @@ Well, I guess it's a little more complicated than that.
 
 Two years in, I loved Google.
 
-The annual employee survey asked me whether I expected to be at Google in five years. It was a no-brainer.
+When the annual employee survey asked me whether I expected to be at Google in five years, it was a no-brainer.
 
 Of *course* I'd still be at Google in five years. I was surrounded by the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
 
@@ -54,7 +54,7 @@ Unsurprisingly, it doesn't work like that. It took me two years to figure that o
 
 # Working naïvely
 
-My main responsibility until that point was a legacy data pipeline. It had been in maintenance mode for years, but load had increased, and the pipeline was buckling under the pressure. It frequently died silently or produced incorrect output. Its failures took days to diagnose because nobody wrote documentation for it since its original design spec.
+My main responsibility until that point was a legacy data pipeline. It had been in maintenance mode for years, but load had increased, and the pipeline was buckling under the pressure. It frequently died silently or produced incorrect output. Its failures took days to diagnose because nobody had written documentation for it since its original design spec.
 
 I proudly and lovingly nursed the pipeline back to health. I fixed dozens of bugs and wrote automated tests to make sure they wouldn't reappear. I deleted thousands of lines of code that were either dead or could be replaced by modern libraries. I documented the pipeline as I learned it so that the institutional knowledge was available to my teammates instead of siloed in my head.
 
@@ -78,7 +78,7 @@ I decided that I had been too naïve in my first couple years. I didn't do enoug
 
 For example, my team was receiving tons of distracting email alerts due to false alarms. Old me would have just fixed these alerts. But now I knew that for this work to appear in my promo packet, I should first set up metrics so that we'd have historical records of alert frequency. At promotion time, I'd have an impressive-looking graph of the alerts trending downward.
 
-Shortly after, I was assigned a project that seemed destined for promotion. It was a machine-learning project, which was and still is the hot thing at Google. It would automate a task that hundreds of human operators were doing manually, so it had a clear, objective impact on Google. It also required me to lead a junior developer throughout the project, which generally won points with promotion committees.
+Shortly after, I was assigned a project that seemed destined for promotion. It depended heavily on machine-learning, which was and still is the hot thing at Google. It would automate a task that hundreds of human operators were doing manually, so it had a clear, objective impact on Google. It also required me to lead a junior developer throughout the project, which generally won points with promotion committees.
 
 # The holiday gift wake up call
 
@@ -94,27 +94,25 @@ Shortly after this, I witnessed the following conversation between two employees
 
 Wait a second. *I* was in a business relationship with Google.
 
-It may sound strange that it took me two and a half years to realize it, but Google does a good job of building a sense of community among its employees. To make us feel that we're not just employees, but that we *are* Google.
+It may sound strange that it took me two and a half years to realize it, but Google does a good job of building a sense of community within the organization. To make us feel that we're not just employees, but that we *are* Google.
 
 That conversation made me realize that I'm *not* Google. I provide a service to Google in exchange for money.
 
-So if Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own? If the promotion committee sees no value in bugfixing or team support work, why was I doing that?
+So if Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own? If the promotion committee doesn't reward bugfixing or team support work, why was I doing that?
 
 # Optimizing for promotion
 
-I realized that my first denied promotion taught me the wrong lesson.
+My first denied promotion taught me the wrong lesson. I thought I could keep doing the same work but package it to look good for the promotion committee. I should have done the opposite: figure out what the promotion committee wants, and do that work exclusively.
 
-I thought I could keep doing the same work but package it to look good for the promotion committee. I should have done the opposite: figure out what the promotion committee wants, and exclusively do that work.
-
-From then on, I asked myself before starting any task whether it would help my case for promotion. If the answer was no, I didn't do it.
+I adopted a new strategy. Before starting any task, I asked myself whether it would help my case for promotion. If the answer was no, I didn't do it.
 
 My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can this last until I'm promoted?" I didn't file or fix any bugs unless they risked my project's launch. I wriggled out of all responsibilities for maintenance work. I stopped volunteering for campus recruiting events. I went from conducting one or two interviews per week to zero.
 
 # Then my project was canceled
 
-Priorities shifted. Management traded my project away to our sister team in India. In exchange, that team gave us one of their projects. It was an undocumented system, built on deprecated infrastructure, but it was nevertheless a critical component in production. I was assigned to untangle it from our sister team's other code and migrate it to a new framework, all while keeping it running in production and hitting its performance metrics.
+Priorities shifted. Management traded my project away to our sister team in India. In exchange, that team gave us one of their projects. It was an undocumented system, built on deprecated infrastructure, but it was nevertheless a critical component in production. I was assigned to untangle it from our sister team's code and migrate it to a new framework, all while keeping it running in production and hitting its performance metrics.
 
-As far as my promotion was concerned, this was a setback of several months. Because I hadn't released anything for my canceled project, the two months I spent on it were worthless. It would take me weeks just to get up to speed on the system I was inheriting, and I was liable to lose several more in the gruntwork of keeping it running.
+As far as my promotion was concerned, this was a setback of several months. Because I hadn't released anything for my canceled project, the two months I spent on it were worthless. It would take me weeks just to get up to speed on the system I was inheriting, and I was liable to lose several more in the gruntwork of keeping it operational.
 
 # What am I even doing?
 
@@ -145,9 +143,9 @@ It's an online community for founders of small software businesses. Emphasis on 
 
 I had always been interested in starting my own software company, but I only knew of the Silicon Valley startup path. I thought being a software founder meant spending most of my time fundraising and the rest of it worrying about how to attract my next million users.
 
-Indie Hackers presented an attractive alternative. Most members built their businesses with their own savings or as side projects to their full-time jobs. They didn't have to answer to investors, and they certainly didn't have to prove themselves to anonymous committees.
+Indie Hackers presented an attractive alternative. Most members built their businesses with their own savings or as side projects to their full-time jobs. They didn't answer to investors, and they certainly didn't have to prove themselves to anonymous committees.
 
-There were downsides, of course. Their income was less steady, and they faced greater catastrophic risks. If I ever made a mistake at Google that cost the company $10 million, I would suffer no consequences. I'd be asked to write a post-mortem, and everyone would celebrate the learning opportunity. For most of these founders, a $10 million mistake would mean the end of their business and several lifetimes of debt.
+There were downsides, of course. Their income was less steady, and they faced more numerous catastrophic risks. If I ever made a mistake at Google that cost the company $10 million, I would suffer no consequences. I'd be asked to write a post-mortem, and everyone would celebrate the learning opportunity. For most of these founders, a $10 million mistake would mean the end of their business and several lifetimes of debt.
 
 Founders on Indie Hackers captivated me because they were in control. Whether their business became a runaway success or stagnated for years, they were calling the shots. At Google, I didn't feel in control of my own projects, much less my career growth or my team's direction.
 
@@ -171,7 +169,7 @@ It was time to go.
 
 # What's next?
 
-When I tell people I left Google, they assume I must have some brilliant startup idea. Only an *idiot* would leave a job as cushy Google Software Engineer.
+When I tell people I left Google, they assume I must have some brilliant startup idea. Only an *idiot* would leave a job as cushy as Google Software Engineer.
 
 But I am indeed an idiot with no idea.
 
@@ -182,3 +180,7 @@ My plan is to try different projects for a few months each to see if any of them
 * Spend more time writing, and look for ways to earn money from it
 
 Google was a great place to work, and I learned valuable skills during my time there. Leaving was difficult because I had more to learn, but there will always be employers like Google. I won't always have the freedom to start my own company, so I look forward to seeing where this takes me.
+
+---
+
+*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
