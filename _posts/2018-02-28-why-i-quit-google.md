@@ -13,6 +13,9 @@ header:
   og_image: images/resized/2018-02-28-why-i-quit-google/768/spoiled-coder.png
 excerpt: For the past four years, I've worked as a software developer at Google. On
   February 1st, I quit. It was because they refused to buy me a Christmas present.
+discuss_urls:
+  reddit: "https://redd.it/80whkc"
+  hacker_news: "https://news.ycombinator.com/item?id=16483241"
 ---
 
 For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.
