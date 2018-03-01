@@ -8,6 +8,7 @@ share: true
 related: true
 sidebar:
   nav: main
+excerpt: A thank you and a follow-up about my plans.
 ---
 
 The response to [yesterday's post](/why-i-quit-google/) about leaving Google has been unexpected and overwhelming.
