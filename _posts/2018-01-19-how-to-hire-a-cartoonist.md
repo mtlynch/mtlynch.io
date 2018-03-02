@@ -13,9 +13,8 @@ excerpt: With no idea what I was doing, I hired a cartoonist to illustrate my bl
 header:
   teaser: images/resized/2018-01-19-how-to-hire-a-cartoonist/768/mma-sketch.png
 tags:
-- cartoonist
-- blogging
 - cartoons
+- blogging
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=16186049
 ---
