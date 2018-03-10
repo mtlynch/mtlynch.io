@@ -60,8 +60,10 @@
   {% assign img_url = site.url | append: "/" | append: original.path %}
 {% endif %}
 
+{% if fig_caption %}
 <figure class="{{ class }}">
-{% assign class = "" %}
+  {% assign class = "" %}
+{% endif %}
 
 {% if img_url %}
 <a href="{{ img_url }}">
@@ -75,4 +77,6 @@
   <figcaption>{{ fig_caption }}</figcaption>
 {% endif %}
 
+{% if fig_caption %}
 </figure>
+{% endif %}
