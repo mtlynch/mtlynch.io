@@ -10,13 +10,14 @@ sidebar:
   nav: main
 header:
   teaser: images/2017-10-12-human-code-reviews-1/book-cover.png
+  og_image: images/2017-10-12-human-code-reviews-1/code-reviews-cover1.png
 tags:
 - code review
 - culture
 - code style
 discuss_urls:
-  reddit: "https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/"
-  hacker_news: "https://news.ycombinator.com/item?id=15475902"
+  reddit: https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/
+  hacker_news: https://news.ycombinator.com/item?id=15475902
 ---
 
 Lately, I've been reading articles about best practices for code reviews. I notice that these articles focus on finding bugs to the exclusion of almost every other component of a review. Communicating issues you discover in a constructive and professional way? Irrelevant! Just identify all the bugs, and the rest will take care of itself.
