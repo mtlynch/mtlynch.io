@@ -9,15 +9,15 @@ related: true
 sidebar:
   nav: main
 header:
-  teaser: images/2017-11-09-human-code-reviews-2/cover-part-two.png
+  og_image: images/2017-11-09-human-code-reviews-2/cover-part-two.png
 tags:
 - code review
 - culture
 - conflict resolution
 excerpt: The worst code review of my life and how you can avoid a similar fate.
 discuss_urls:
-  reddit: "https://www.reddit.com/r/programming/comments/7bum18/how_to_do_code_reviews_like_a_human_part_two/"
-  hacker_news: "https://news.ycombinator.com/item?id=15663966"
+  reddit: https://www.reddit.com/r/programming/comments/7bum18/how_to_do_code_reviews_like_a_human_part_two/
+  hacker_news: https://news.ycombinator.com/item?id=15663966
 ---
 
 {% include image.html file="cover-part-two.png" alt=""  img_link=true %}
