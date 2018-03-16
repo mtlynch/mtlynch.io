@@ -17,7 +17,7 @@ tags:
 - synology
 - nas
 excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
-last_modified_at: '2017-12-20T17:44:00-05:00'
+last_modified_at: '2018-03-15T17:44:00-05:00'
 ---
 
 {% include base_path %}
@@ -64,7 +64,7 @@ This guide uses the latest version of each software component at the time of wri
 </figure>
 
 * DiskStation Manager (DSM) 6.1.2-15132
-* Sia v.1.3.1
+* Sia v.1.3.2
 * Docker v.1.11.2
 
 Though this guide is written specifically for the Synology DSM system, the steps relating to Docker should be applicable on any platform that supports Docker.
@@ -128,7 +128,7 @@ The `Dockerfile` contents are listed below:
 
 This `Dockerfile` does a few things:
 
-* Downloads Sia v.1.3.1, the latest stable release as of this writing, and installs it to the `/opt/sia` directory.
+* Downloads Sia v.1.3.2, the latest stable release as of this writing, and installs it to the `/opt/sia` directory.
 * Configures the image to run `siad`, the Sia daemon process, when the container launches.
 * Uses `socat` to forward the container's external port 8000 to the container's localhost:9980 port (the `siad` API port). Otherwise, no `siac` client outside the container could execute commands against the container's `siad` server.
 * Instructs `siad` to use `/mnt/sia` as its folder for Sia state information. In the next step, you'll link `/mnt/sia` to the Synology Shared Folder "sia" created earlier so that the files `siad` generates are visible on the NAS.
@@ -294,3 +294,4 @@ If you're interested in getting started, check out my other guide, "[A Beginnerâ
 * 2017-05-25: Revised a lot of the text, added instructions for version-to-version upgrades.
 * 2017-07-25: Updated instructions for the Sia 1.3.0 release.
 * 2017-12-20: Updated instructions for the Sia 1.3.1 release.
+* 2018-03-15: Updated instructions for the Sia 1.3.2 release.

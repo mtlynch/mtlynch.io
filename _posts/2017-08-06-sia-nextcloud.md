@@ -17,7 +17,7 @@ tags:
 discuss_urls:
   reddit: https://www.reddit.com/r/siacoin/comments/6s02z5/tutorial_setting_up_sia_with_nextcloud/
   hacker_news: https://news.ycombinator.com/item?id=15243866
-last_modified_at: '2017-12-20T17:44:00-05:00'
+last_modified_at: '2018-03-15T17:44:00-05:00'
 ---
 
 In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB/month. By comparison, the same storage would cost $8.25 per month on Dropbox or $10 per month on Google Drive.
@@ -125,7 +125,7 @@ Finally, `nextcloud-data:/var/www/html` allows Nextcloud to persist its configur
 
 {% include files.html title="Dockerfile.sia" language="bash" %}
 
-This is the Dockerfile for Sia. It creates a Docker container starting from the barebones Debian Jessie build of Linux. It then downloads the latest release of Sia (which is 1.3.1 as of this writing), unzips it, and runs `siad`, the Sia server daemon. The `--modules gctwr` flag loads only the Sia modules you need for renting Sia storage. The `--sia-directory /mnt/sia-data` flag ensures that Sia uses the persistent volume specified in `docker-compose.yml`.
+This is the Dockerfile for Sia. It creates a Docker container starting from the barebones Debian Jessie build of Linux. It then downloads the latest release of Sia (which is 1.3.2 as of this writing), unzips it, and runs `siad`, the Sia server daemon. The `--modules gctwr` flag loads only the Sia modules you need for renting Sia storage. The `--sia-directory /mnt/sia-data` flag ensures that Sia uses the persistent volume specified in `docker-compose.yml`.
 
 The confusing part of this Dockerfile is the presence of `socat` and the `--api-addr localhost:8000` flag. [Despite my best efforts](https://github.com/NebulousLabs/Sia/issues/1386), the Sia developers refuse to allow `siad` to bind to non-localhost ports, even though this breaks Docker scenarios. As a workaround, this tutorial configures Sia to bind to `localhost:8000`. `socat` then binds to the non-localhost 9980 port and forward traffic to `localhost:8000`. It's a bit clunky, but it works.
 
