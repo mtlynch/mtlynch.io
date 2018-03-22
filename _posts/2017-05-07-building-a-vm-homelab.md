@@ -1,5 +1,13 @@
 ---
 title: Building a Homelab VM Server
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+sidebar:
+  nav: main
 date: '2017-05-07 00:00:00 -04:00'
 header:
   teaser: images/resized/2017-05-07-building-a-vm-homelab/480/vm-server-parts.jpg
@@ -100,17 +108,17 @@ Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadc
 
 ## Final Parts List
 
-| Category | Component |  Price |
+| Category | Component |
 |------|-------|
-| CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) | $323.66 |
-| Motherboard | [ASRock AB350M-HDV](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765) | $69.99 |
-| Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) | $99.99 |
-| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536) | $224.99 |
-| Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](http://amzn.to/2oVMo9u) | $29.99 |
-| Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](http://amzn.to/2qmwmHO) | $29.99 |
-| Network | [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH) | $22.95 |
-| Case | [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) | $21.99 |
-| **Total** | | **$823.55** |
+| CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) |
+| Motherboard | [ASRock AB350M-HDV](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765) |
+| Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) |
+| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536) |
+| Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](http://amzn.to/2oVMo9u) |
+| Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](http://amzn.to/2qmwmHO) |
+| Network | [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH) |
+| Case | [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) |
+| **Total Cost** | **$823.55** |
 
 # Build
 
@@ -232,4 +240,3 @@ This homelab VM server is working very well. It's very convenient to be able to 
 One unexpected benefit is that I no longer have to be conservative about provisioning CPU/RAM resources to guest OSes. My main desktop is an 8-core i7 with 32 GB of RAM. I didn't want my VMs to starve my main OS for resources, so I'd typically provision guest OSes with 1 CPU + 1 GB RAM and only increase when I saw it hitting resource constraints. With the homelab VM server, there are enough resources for everyone! My standard guest OS template uses 4 cores and 4 GB CPU, a sufficient upper limit for most of my environments. This means that I waste less of my time managing guest OS resources manually.
 
 If you work on software projects that require a variety of development or staging environments, I highly recommend working in VMs and using a dedicated VM server machine.
-
