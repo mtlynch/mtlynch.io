@@ -6,6 +6,8 @@ read_time: true
 comments: true
 share: true
 related: true
+sidebar:
+  nav: main
 excerpt: Using the Raspberry Pi to water plants automatically
 header:
   teaser: images/resized/2017-06-27-greenpithumb/480/greenpithumb-side-full.jpg
@@ -15,8 +17,8 @@ tags:
 - gardening
 - home automation
 discuss_urls:
-  reddit: "https://www.reddit.com/r/programming/comments/6jujfi/greenpithumb_a_raspberry_pi_gardening_bot/"
-  hacker_news: "https://news.ycombinator.com/item?id=14644539"
+  reddit: https://www.reddit.com/r/programming/comments/6jujfi/greenpithumb_a_raspberry_pi_gardening_bot/
+  hacker_news: https://news.ycombinator.com/item?id=14644539
 ---
 
 # Introduction
@@ -265,62 +267,61 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 
 ## GreenPiThumb essentials
 
-| Item | Cost |
-|------|------|
-| [Raspberry Pi 3 Model B](http://amzn.to/2nTReZk) | $35.81 |
-| [12V water pump](http://amzn.to/2p90wk8) | $29.99 |
-| [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw) | $29.88 |
-| [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC) | $15.00 |
-| [MicroSD card (32 GB)](http://amzn.to/2rgHcTC) | $12.99 |
-| [Silicone tubing](http://amzn.to/2v73JUM) | $10.99 |
-| [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4) | $10.99 |
-| [Raspberry Pi power supply](http://amzn.to/2rlAMh2) | $9.99 |
-| [DHT11 temperature and humidity sensor](http://amzn.to/2rDgFie) | $6.99 |
-| [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) | $6.22 |
-| [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF) | $5.90 |
-| [Soil moisture sensor](https://www.sparkfun.com/products/13322) | $4.99 |
-| [Rubber glove](http://amzn.to/2rQVES9) | $4.94 |
-| [Molex to SATA power cable adapter](http://amzn.to/2wgDg4o) | $6.99 |
-| [Light-dependent photoresistor](http://amzn.to/2oCFlUO) | $1.72 |
-| 1-gallon plastic water jug (for reservoir) | - |
-| Safety pin | - |
-| Rubber bands | - |
+* [Raspberry Pi 3 Model B](http://amzn.to/2nTReZk)
+* [12V water pump](http://amzn.to/2p90wk8)
+* [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw)
+* [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC)
+* [MicroSD card (32 GB)](http://amzn.to/2rgHcTC)
+* [Silicone tubing](http://amzn.to/2v73JUM)
+* [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4)
+* [Raspberry Pi power supply](http://amzn.to/2rlAMh2)
+* [DHT11 temperature and humidity sensor](http://amzn.to/2rDgFie)
+* [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn)
+* [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF)
+* [Soil moisture sensor](https://www.sparkfun.com/products/13322)
+* [Rubber glove](http://amzn.to/2rQVES9)
+* [Molex to SATA power cable adapter](http://amzn.to/2wgDg4o)
+* [Light-dependent photoresistor](http://amzn.to/2oCFlUO)
+* 1-gallon plastic water jug (for reservoir)
+* Safety pin
+* Rubber bands
 
 ## Common electronics components
 
 The items below are generic electronics tools and components that you can use for many projects. We bought them because we had zero electronics equipment, so we include them for completeness:
 
-| Item | Cost |
-|------|------|
-| ~~Netflix and chill wire~~ [Hook up wire](http://amzn.to/2rELX8y) | $20.00 |
-| [Soldering iron](http://amzn.to/2qLi3wa) | $16.99 |
-| [Assorted resistors](http://amzn.to/2sCUINF) | $12.98 |
-| [Wire stripper](http://amzn.to/2sqt5bw) | $8.92 |
-| [Soldering stand](http://amzn.to/2qLx2Gc) | $7.04 |
-| [Jumper wires](http://amzn.to/2rF93Mc) | $6.95 |
-| [Heat shrink tubing](http://amzn.to/2rSdLXV) (to cover solder joints) | $6.38 |
-| [Wire cutters](http://amzn.to/2srCW0s) | $4.97 |
-| [Solderless breadboard, 830 tie-points](http://amzn.to/2rQH4dh) (for testing) | $2.60 |
+* ~~Netflix and chill wire~~ [Hook up wire](http://amzn.to/2rELX8y)
+* [Soldering iron](http://amzn.to/2qLi3wa)
+* [Assorted resistors](http://amzn.to/2sCUINF)
+* [Wire stripper](http://amzn.to/2sqt5bw)
+* [Soldering stand](http://amzn.to/2qLx2Gc)
+* [Jumper wires](http://amzn.to/2rF93Mc)
+* [Heat shrink tubing](http://amzn.to/2rSdLXV) (to cover solder joints)
+* [Wire cutters](http://amzn.to/2srCW0s)
+* [Solderless breadboard, 830 tie-points](http://amzn.to/2rQH4dh) (for testing)
 
 ## Gardening supplies
 
-| Item | Cost |
-|-------|-------|
-| [10" planter pot](http://amzn.to/2qMosHd) |  $20.24 |
-| [Potting mix](http://amzn.to/2rgOtxX) (soil) | $14.69 |
-| [Kentucky Wonder bush bean seeds](http://amzn.to/2srEHuH) | $4.09 |
+* [10" planter pot](http://amzn.to/2qMosHd)
+* [Potting mix](http://amzn.to/2rgOtxX) (soil)
+* [Kentucky Wonder bush bean seeds](http://amzn.to/2srEHuH)
 
 ## Optional components
 
-| Item | Notes | Cost |
-|------|------|-------|
-| [Third hand soldering tool](http://amzn.to/2rDucqm) | We started with [this basic clamp stand](http://amzn.to/2rFZJrx), but it was awkward to position and adjust. The bendy model was several times more expensive, but it made the task of soldering simpler and more pleasant. | $44.95 |
-| [Bendy camera mount](http://amzn.to/2oCsaD8) | Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and range. | $29.95 |
-| [PEX tubing cutter](http://amzn.to/2olsG6N) | Makes nice clean cuts to the water tubing. | $20.99 |
-| [Digital multimeter](http://amzn.to/2s4VNkw) | We *highly* recommend you buy a basic multimeter. There's nothing special about this particular one, but it served us well. |  $12.99 |
-| [Pi camera mount](http://amzn.to/2rDwLbY) | Allows you to attach the Raspberry Pi camera to a standard 1/4" camera mount, such as the bendy mount above. | $8.45 |
-| [Pi camera extension cable (1m)](http://amzn.to/2rQMEfR) | Necessary for positioning the Raspberry Pi camera far away from the Raspberry Pi device itself. | $8.44 |
-| [Zip ties](http://amzn.to/2qMoxe5) | For fastening tubing or wiring in place. | $5.19 |
+* [Third hand soldering tool](http://amzn.to/2rDucqm)
+  * We started with [this basic clamp stand](http://amzn.to/2rFZJrx), but it was awkward to position and adjust. The bendy model was several times more expensive, but it made the task of soldering simpler and more pleasant.
+* [Bendy camera mount](http://amzn.to/2oCsaD8)
+  * Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and range.
+* [PEX tubing cutter](http://amzn.to/2olsG6N)
+  * Makes nice clean cuts to the water tubing.
+* [Digital multimeter](http://amzn.to/2s4VNkw)
+  * We *highly* recommend you buy a basic multimeter. There's nothing special about this particular one, but it served us well.
+* [Pi camera mount](http://amzn.to/2rDwLbY)
+  * Allows you to attach the Raspberry Pi camera to a standard 1/4" camera mount, such as the bendy mount above.
+* [Pi camera extension cable (1m)](http://amzn.to/2rQMEfR)
+  * Necessary for positioning the Raspberry Pi camera far away from the Raspberry Pi device itself.
+* [Zip ties](http://amzn.to/2qMoxe5)
+  * For fastening tubing or wiring in place.
 
 # Acknowledgments
 
