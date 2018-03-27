@@ -54,7 +54,7 @@ There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](ht
 
 ## CPU
 
-[![AMD Ryzen 7 1700](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06WP5YCX6&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mtlynch-20){: .align-right}](https://www.amazon.com/dp/B06WP5YCX6/ref=as_li_ss_il?&linkCode=li3&tag=mtlynch-20&linkId=54dcc577d5c28eef7c3514b05b53b8be)
+{% include image.html file="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" max_width="390px" class="align-right" link_url="https://www.amazon.com/dp/B06WP5YCX6/ref=as_li_ss_il?&linkCode=li3&tag=mtlynch-20&linkId=54dcc577d5c28eef7c3514b05b53b8be" %}
 
 In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new, retail CPU.
 
@@ -80,14 +80,15 @@ My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (ev
 
 ## Disk
 
-[![Samsung 850 EVO](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00TGIVZTW&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mtlynch-20){: .align-left}](https://www.amazon.com/gp/product/B00TGIVZTW/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li2&tag=mtlynch-20&linkId=5406b1b2957a1e42f41c407ba8fd6559)
+{% include image.html file="samsung-850-evo.jpg" alt="Samsung 850 EVO" max_width="590px" class="align-left" link_url="https://www.amazon.com/gp/product/B00TGIVZTW/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li2&tag=mtlynch-20&linkId=5406b1b2957a1e42f41c407ba8fd6559" %}
 
 Like Brian, [I have a NAS]({{ base_path }}/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](http://amzn.to/2pyfArr) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
 
 ## Case
 
-[![Rosewill Micro ATX SRM-01](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00ZPWOA6I&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mtlynch-20){: .align-right}](https://www.amazon.com/gp/product/B00ZPWOA6I/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li3&tag=mtlynch-20&linkId=341a186e437bfbe9700d3298042dc564)
+{% include image.html file="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max_width="180px" class="align-right" link_url="https://www.amazon.com/gp/product/B00ZPWOA6I/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li3&tag=mtlynch-20&linkId=341a186e437bfbe9700d3298042dc564" %}
 
+{: .clearfix}
 For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) is a nice, small, inexpensive, and functional.
 
 ## Graphics
