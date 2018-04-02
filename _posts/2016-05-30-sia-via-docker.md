@@ -17,7 +17,7 @@ tags:
 - synology
 - nas
 excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
-last_modified_at: '2018-03-15T17:44:00-05:00'
+last_modified_at: '2018-04-02T14:49:00-05:00'
 ---
 
 {% include base_path %}
@@ -151,6 +151,7 @@ admin@DiskStation:/tmp/$ sudo docker run \
   --publish 9981:9981 \
   --publish 9982:9982 \
   --volume /volume1/sia:/mnt/sia \
+  --restart always \
   --name sia-container sia
 ```
 
@@ -260,6 +261,7 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
       --publish 9981:9981 \
       --publish 9982:9982 \
       --volume /volume1/sia:/mnt/sia \
+      --restart always \
       --name sia-container sia
     ```
 
