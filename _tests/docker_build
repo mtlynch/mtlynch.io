@@ -5,8 +5,11 @@ set -e
 # Echo commands to console.
 set -x
 
-IMAGE_NAME="mtlynch/jekyll"
+IMAGE_VERSION=$(git rev-parse HEAD)
+IMAGE_NAME="mtlynch-io:${IMAGE_VERSION}"
 CONTAINER_NAME="mtlynch-io-container"
+
+docker build -t "$IMAGE_NAME" _tests/
 
 docker run --tty --detach --volume "${PWD}:/app" --name "$CONTAINER_NAME" "$IMAGE_NAME"
 
