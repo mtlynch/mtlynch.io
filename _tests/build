@@ -41,3 +41,9 @@ if ! grep "${UA_TOKEN}" _site/ -R; then
   echo "ERROR: Google Analytics token didn't appear in prod build!";
   exit 1;
 fi
+
+# Make sure large twitter cards are being generated.
+if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
+  echo "ERROR: Large Twitter cards didn't appear in prod build!";
+  exit 1;
+fi
