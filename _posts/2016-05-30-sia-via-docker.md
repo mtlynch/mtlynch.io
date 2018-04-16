@@ -103,6 +103,11 @@ Connect to your NAS over SSH from another machine on the network. Linux and OS X
 
 ```bash
 ssh admin@diskstation
+```
+
+Once you connect to the NAS via SSH, run the following commands:
+
+```bash
 # NOTE: Replace 10.0.0.101 with the IP address of your Synology NAS on your
 # local network.
 admin@DiskStation:/$ LOCAL_IP=10.0.0.101
@@ -168,10 +173,10 @@ To create storage space to sell to other Sia users, create a dedicated subdirect
 Then, use `siac` to add that folder as a new Sia host storage folder:
 
 ```bash
-./siac --addr DISKSTATION:9980 host folder add /mnt/sia/host-storage 500GB
+./siac --addr DISKSTATION:9980 host folder add /sia-data/host-storage 500GB
 ```
 
-Note that `/mnt/sia/host-storage` is the path from the *daemon's* perspective from within the Docker container, not the perspective of `siac`.
+Note that `/sia-data/host-storage` is the path from the *daemon's* perspective from within the Docker container, not the perspective of `siac`.
 
 # Allow Sia through firewall
 
@@ -219,7 +224,6 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
     admin@DiskStation:/$ SIA_VERSION=1.3.1
 
     admin@DiskStation:/$ IMAGE_TAG="sia-image:${SIA_VERSION}"
-
     admin@DiskStation:/$ sudo docker build \
       --build-arg SIA_VERSION="$SIA_VERSION" \
       --tag "${IMAGE_TAG}" \
