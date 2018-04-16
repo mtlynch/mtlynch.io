@@ -17,7 +17,7 @@ tags:
 - synology
 - nas
 excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
-last_modified_at: '2018-04-02T14:49:00-05:00'
+last_modified_at: '2018-04-15T11:11:00-04:00'
 ---
 
 {% include base_path %}
@@ -103,62 +103,27 @@ Connect to your NAS over SSH from another machine on the network. Linux and OS X
 
 ```bash
 ssh admin@diskstation
-```
-
-*Note: The rest of the commands in this section assume that you are running as an admin user on the Synology NAS.*
-
-Now that you have a shell on the NAS, switch to the `/tmp/` directory:
-
-```bash
-admin@DiskStation:/$ cd /tmp
-
-admin@DiskStation:/tmp/$
-
-```
-
-Using the following command, download the Sia `Dockerfile` I created:
-
-```bash
-wget {{ site.url }}/files/sia-via-docker/Dockerfile
-```
-
-The `Dockerfile` contents are listed below:
-
-{% include files.html title="Dockerfile" %}
-
-This `Dockerfile` does a few things:
-
-* Downloads Sia v.1.3.2, the latest stable release as of this writing, and installs it to the `/opt/sia` directory.
-* Configures the image to run `siad`, the Sia daemon process, when the container launches.
-* Uses `socat` to forward the container's external port 8000 to the container's localhost:9980 port (the `siad` API port). Otherwise, no `siac` client outside the container could execute commands against the container's `siad` server.
-* Instructs `siad` to use `/mnt/sia` as its folder for Sia state information. In the next step, you'll link `/mnt/sia` to the Synology Shared Folder "sia" created earlier so that the files `siad` generates are visible on the NAS.
-
-With your `Dockerfile` complete, you are ready to build and run the container:
-
-```bash
-# Create a Docker image tagged with the label "sia"
-admin@DiskStation:/tmp/$ sudo docker build --tag sia .
-
 # NOTE: Replace 10.0.0.101 with the IP address of your Synology NAS on your
 # local network.
-admin@DiskStation:/tmp/$ LOCAL_IP=10.0.0.101
+admin@DiskStation:/$ LOCAL_IP=10.0.0.101
 
 # Create a Docker container based on the Sia image and start running it in the
 # background.
-admin@DiskStation:/tmp/$ sudo docker run \
+admin@DiskStation:$ sudo docker run \
   --detach \
-  --publish "${LOCAL_IP}:9980:8000" \
+  --volume /volume1/sia:/sia-data \
+  --publish "${LOCAL_IP}:9980:9980" \
   --publish 9981:9981 \
   --publish 9982:9982 \
-  --volume /volume1/sia:/mnt/sia \
   --restart always \
-  --name sia-container sia
+  --name sia-container \
+  mtlynch/sia
 ```
 
 The previous commands do the following:
 
-* Creates a Docker image from the `Dockerfile`.
-* Creates a Docker container for our image and starts running the container in the background.
+* Downloads my [unofficial Sia Docker image](https://github.com/mtlynch/docker-sia).
+* Creates a Docker container from the image and starts running the container in the background.
 * Forwards traffic to ports `9980`-`9982` on the NAS (the Docker host) to those same port numbers within the Sia container.
   * **Important**: Notice that for port `9980` you bind *only to the local network interface*, whereas for other ports you implicitly bind to all interfaces. This is a security measure. Anyone who communicates with `siad` on port `9980` has full control of our host and can, for example, empty our wallet. This measure is not strictly necessary if our network does not expose this port externally, but it is a useful precaution regardless.
   * My NAS has the IP address `10.0.0.101`. You can find your NAS's IP address with the command `dig diskstation +short` from another machine on your local network.
@@ -237,32 +202,39 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
     ssh admin@diskstation
     ```
 
-1. Edit your `Dockerfile` to change the `SIA_VERSION` variable to match the latest Sia version.
 1. Run the following commands:
 
     ```bash
-    # Rebuild the Docker image
-    admin@DiskStation:/tmp/$ sudo docker build --tag sia .
-
     # Remove the old container.
     # NOTE: If Docker says the container is still running, wait a few minutes to
-    # allow siad to finish shutting down gracefully and re-try this command. It may
-    # take up to 10 minutes.
-    admin@Diskstation:/tmp$ sudo docker rm sia-container
+    # allow siad to finish shutting down gracefully and re-try this command.
+    # It may take up to 10 minutes.
+    admin@Diskstation:/$ sudo docker rm sia-container
 
     # NOTE: Replace 10.0.0.101 with the IP address of the Synology NAS on your
     # local network.
-    admin@DiskStation:/tmp/$ LOCAL_IP=10.0.0.101
+    admin@DiskStation:/$ LOCAL_IP=10.0.0.101
+
+    # Change 1.3.1 to the version you'd like to upgrade to.
+    admin@DiskStation:/$ SIA_VERSION=1.3.1
+
+    admin@DiskStation:/$ IMAGE_TAG="sia-image:${SIA_VERSION}"
+
+    admin@DiskStation:/$ sudo docker build \
+      --build-arg SIA_VERSION="$SIA_VERSION" \
+      --tag "${IMAGE_TAG}" \
+      https://raw.githubusercontent.com/mtlynch/docker-sia/master/Dockerfile
 
     # Re-create the Docker container.
-    admin@DiskStation:/tmp/$ sudo docker run \
+    admin@DiskStation:/$ sudo docker run \
       --detach \
-      --publish "${LOCAL_IP}:9980:8000" \
+      --volume /volume1/sia:/sia-data \
+      --publish "${LOCAL_IP}:9980:9980" \
       --publish 9981:9981 \
       --publish 9982:9982 \
-      --volume /volume1/sia:/mnt/sia \
       --restart always \
-      --name sia-container sia
+      --name sia-container \
+      "$IMAGE_TAG"
     ```
 
 When you complete this process, you'll have a new Sia Docker container running the latest version of Sia.
@@ -271,7 +243,7 @@ When you complete this process, you'll have a new Sia Docker container running t
 
 You now have a working Sia node that stays online as long as your NAS is up and running.
 
-Because this configuration keeps all of Sia's persistent state outside of the container, it's very easy to modify your `Dockerfile` to upgrade Sia as new releases are published.
+Because this configuration keeps all of Sia's persistent state outside of the container, it's very easy to upgrade your Sia node as new releases are published.
 
 # Further reading
 
@@ -279,12 +251,6 @@ This guide showed you how to get your host up and running, but there's more you 
 
 * [How to Run a Host on Sia](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725): An in-depth walkthrough of configuring a Sia host.
 * [Host Profit Maximization Thread](https://forum.sia.tech/topic/1037/host-profit-maximization-thread): A guide to tweaking host settings to maximize profits.
-
-# Earning Siacoin by mining
-
-Another way of earning Siacoin is by using your computer's graphics processor to support the Sia network's computational needs. Compared to hosting, mining yields significantly higher revenues and pays out within hours or days instead of weeks. Mining also requires less specialized equipment.
-
-If you're interested in getting started, check out my other guide, "[A Beginnerâ€™s Guide to Mining Siacoin]({{ base_path }}/windows-sia-mining/)."
 
 # Updates
 
@@ -297,3 +263,4 @@ If you're interested in getting started, check out my other guide, "[A Beginnerâ
 * 2017-07-25: Updated instructions for the Sia 1.3.0 release.
 * 2017-12-20: Updated instructions for the Sia 1.3.1 release.
 * 2018-03-15: Updated instructions for the Sia 1.3.2 release.
+* 2018-04-15: Updated instructions to use pre-built Sia Docker image.
