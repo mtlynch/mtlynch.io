@@ -15,3 +15,6 @@ sidebar:
 * Reducing CI time by pre-building pandas
 * Getting it under e2e tests
 * Getting it under unit tests
+* Can't remove pandas because matchUp expects to iterate keys in a particular order.
+
+{% include image.html file="slow-build.png" alt="Screenshot of Travis build time" max_width="750px" img_link=true %}
