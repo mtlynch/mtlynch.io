@@ -1,5 +1,5 @@
 ---
-title: Resurrecting a dead library
+title: Restoring a Vintage Python Library
 layout: single
 author_profile: true
 read_time: true
@@ -9,6 +9,8 @@ related: true
 sidebar:
   nav: main
 ---
+It was from a time before unit tests. When functions were as tall as buildings. From... 2012?
+
 
 * Getting it to run under Docker
 * Getting it to run in CI
