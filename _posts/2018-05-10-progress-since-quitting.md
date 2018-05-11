@@ -1,5 +1,5 @@
 ---
-title: 'Life After Quitting My Job: The Three-Month Mark'
+title: 'What I've Been Doing Since Quitting'
 layout: single
 author_profile: true
 read_time: true
@@ -19,6 +19,10 @@ Here's what I've been working on.
 I'd been writing the post in my head for about nine months, then I spent two months writing it for real. It was by far the biggest response I've ever had for an article. People whose books I've read or whose blogs I follow were sharing my article.
 
 ## Commenting about blogging about quitting
+
+I had articles occasionally that did well on reddit or Hacker News, but usually just of them. The quitting post became popular in a lot of places at once.
+
+People outside of tech told me that what I wrote about wasn't just a Google thing or a tech thing, but a general big company thing.
 
 I spent the first three days doing nothing but responding to comments, emails, and private messages. I realized that I could probably continue doing that for two weeks and still not be done.
 
@@ -42,11 +46,16 @@ Maybe they don't really know what developers make, so they were going to offer m
 
 I figured I'd just do it for free and if he valued quality software, they'd see I wasn't just some random guy slapping together some awful junk code, but was producing code that was documented, tested, and well-factored.
 
+Several people reached out to know if I would be interested in consulting work. A Sia investor heard about my testing plans and offered to pay me for it.
+
+At first, that seemed like a great deal. But I started playing out the scenario and realizing it may not be so great. If I agreed to do it for money, I'm no longer doing it the way I want, but the way they're willing to sign off on. There are obviously perverse incentives collaborating on research with someone who stands to gain or lose a great deal of money depending on the outcome of the research.
+
 ## Stressing about deadlines
 
 I was more stressed about deadlines than when I actually had deadlines. I realized that I committed to too many things. I had this idea before I quit that once I didn't have day job, I'd have unlimited time.
 
 "Oh no! I have to finish that blog post while it still feels fresh and relevant!"
+"On no! I have to finish slides before my talk!"
 
 ## Figuring out what I want
 
@@ -63,10 +72,16 @@ I thought about whether I'd prefer to end the year with $80k in consulting earni
 * Gave my first conference talk
 * Made my first podcast appearance
 * Played a computer game from beginning to end for the first time in 15 years
-* Made an April Fool's Day video
+* Made an April Fool's Day video that was *really* funny for about four people.
 * Published a Docker image that has XX pulls
 * Went skiing on a Tuesday
 * Discovered a neat login bypass vulnerability and reported it to the vendor (public disclosure hopefully ready in a few weeks)
+
+As I write this, I'm sitting in Central Park writing out my blog post in a notebook. Although full disclosure, it was mostly just to say that I did it and I'm now actually finding it too distracting by everything in the park.
+
+The best part of quitting has been how much control I have over my time. If I decide to stop working for a day, I don't have to worry about missing an important meeting or holding up my teammates' work. Conversely, if I work in the evening or the weekend, I don't have to wait until business hours to get an answer or code review from a teammate (I didn't email outside business hours.
+
+As a general rule, I never emailed teammates outside working hours because I didn't want to contribute to a culture that expects people to always be available. I sort of work all the time now, but it's because I'm loving what I work on.
 
 ## Struggling to recall office work
 
