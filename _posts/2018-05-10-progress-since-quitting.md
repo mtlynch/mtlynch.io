@@ -1,5 +1,5 @@
 ---
-title: 'What I've Been Doing Since Quitting'
+title: What I've Been Doing Since Quitting
 layout: single
 author_profile: true
 read_time: true
@@ -16,39 +16,39 @@ Here's what I've been working on.
 
 ## Blogging about quitting
 
-I'd been writing the post in my head for about nine months, then I spent two months writing it for real. It was by far the biggest response I've ever had for an article. People whose books I've read or whose blogs I follow were sharing my article.
+For the last nine months of my job, I was mentally writing a blog post that detailed all the reasons I left Google. I started writing it for real about a month before I quit and spent several hours each week writing and rewriting it until I finally published it a month after I quit.
+
+I didn't really know what the response would be. I thought it would be interesting for people who knew me personally to understand why I left what seemed to be a very attractive position at Google. I 
+
+The response was far bigger than I imagined. That week, my blog had the biggest number of readers by a factor of XX. People whose books I've read or whose blogs I follow were sharing my article and reaching out to me. People were telling me they found my article through social media channels I had never even heard of.
 
 ## Commenting about blogging about quitting
 
-I had articles occasionally that did well on reddit or Hacker News, but usually just of them. The quitting post became popular in a lot of places at once.
+The day I published it, I spent the entire day just responding to emails and comments. It was great! It was like I 
 
-People outside of tech told me that what I wrote about wasn't just a Google thing or a tech thing, but a general big company thing.
+Then I spent the next day doing the same thing and it was a little less fun.
 
-I spent the first three days doing nothing but responding to comments, emails, and private messages. I realized that I could probably continue doing that for two weeks and still not be done.
+By the third day, I was just anxious. I realized I could probably spend the next two weeks doing nothing but responding to comments and private messages. I knew I could ignore them if I chose to, but that felt disrespectful to the people who had taken time out to write me.
 
-I love getting emails and comments about what I write, so I wanted to give everyone a thoughtful response. I also felt guilty about not responding because they had, after all, taken the time to write me.
-
-One piece of advice I found very helpful was from Stephanie Hurlburt, who . She reached out to me on Twitter after the article, and I asked her how she manages replying to
+One piece of advice I found very helpful was from Stephanie Hurlburt, who was one of the people I mentioned above who I followed on Twitter and then she surprised me by reaching out to me directly after the article. I asked her how she manages replying to the many messages she receives, and she gave me this excellent advice:
 
 >I think I'd say first consider that it is 100% okay to take a month or more to respond to someone, and expect a response back. It is even okay to take a year to respond to someone, but maybe don't expect a response back then (they've probably moved on to other things). So in other words, you don't need to tackle every message as it comes in, you can have a day a month where you just power through them.
 
-It's worth noting that she *says* this, but she came up with this very thoughtful, three-paragraph note to me a few minutes after I asked her the question.
+It sounds simple, but this was very freeing and relieved my anxiety.
 
-## Blogging about Sia
+Sidenote: Stephanie *says*  it's okay to delay responses for a month, but she came up with a very thoughtful, three-paragraph note to me a few minutes after I asked her my question about managing correspondence. It's very possible that she's tricking me so that she can maintain her position as the most helpful person on Twitter.
 
-The area I've spent the most time is Sia. I started a blog to talk about my experiemnts with Sia. When I started it, I was still exploring how I could make money with Sia. Maybe I build a service on top of Sia. Maybe I could make money by just doing experiments and writing about them.
+## Experimenting with Sia
 
-The first step was to write a load test for Sia. Nobody had ever done one before, but I needed to see concrete numbers before I built any sort of business on Sia. It seemed simple enough. I wrote upa  test plan and figured it would take about twoo weeks from start to finish.
+For the past two years, I've contributed to and written frequently (TODO: link) about a decentralized storage project called Sia. It was an obvious candidate for my focus after I quit. I thought that I could build an online service that capitalizes on Sia's lower costs. Or maybe I could just earn money by doing experiments with distributed storage and blogging about it. Or maybe I could do both and my blog posts would attract customers for whatever business I decided to build.
 
-An investor heard about it and offered to pay me to run these tests. Wow, lucky deal! Someone wants to pay me for somehting I was going to do anyway for free.
+It didn't really work out. My first major project was to do a rigorous test of Sia's capacity and costs. The project maintainers had claimed for years that the network could support storage at $2 per TB per month (this is roughly XX% of what Amazon charges), but nobody had ever demonstrated this in practice.
 
-Maybe they don't really know what developers make, so they were going to offer me $500/week. Maybe they have millions of dollars invested in this coind and wouldn't flinch at $20k/week.
+If I was going to build a business on top of Sia, I needed to know how much it cost in practice. I also needed to know how much it could store. People knew that there was a limit to how much data you could upload to Sia before the software falls over, but they didn't know if that was 1 TB or 50 TB.
 
-I figured I'd just do it for free and if he valued quality software, they'd see I wasn't just some random guy slapping together some awful junk code, but was producing code that was documented, tested, and well-factored.
+I decided to write a load test for Sia. It would attempt to maximize Sia's storage and track the total cost of doing this.
 
-Several people reached out to know if I would be interested in consulting work. A Sia investor heard about my testing plans and offered to pay me for it.
-
-At first, that seemed like a great deal. But I started playing out the scenario and realizing it may not be so great. If I agreed to do it for money, I'm no longer doing it the way I want, but the way they're willing to sign off on. There are obviously perverse incentives collaborating on research with someone who stands to gain or lose a great deal of money depending on the outcome of the research.
+The result of the test was that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). It was cheaper than Amazon or Google's cloud storage offerings, but also much buggier and difficult to use. There are low-cost storage providers like Backblaze B2 and Wasabi whose prices are on par or even cheaper than Sia, but with a lot less complexity, so I couldn't find a situation where building a business on Sia would give me an advantage over someone who built a business on top of a traditional cloud storage provider.
 
 ## Stressing about deadlines
 
@@ -77,7 +77,9 @@ I thought about whether I'd prefer to end the year with $80k in consulting earni
 * Went skiing on a Tuesday
 * Discovered a neat login bypass vulnerability and reported it to the vendor (public disclosure hopefully ready in a few weeks)
 
-As I write this, I'm sitting in Central Park writing out my blog post in a notebook. Although full disclosure, it was mostly just to say that I did it and I'm now actually finding it too distracting by everything in the park.
+As I write this, I'm sitting in Central Park writing out my blog post in a notebook. Although if I'm being honest, a big factor in why I'm here was so that I could write that previous sentence. Now that I'm here, I'm too distracted
+
+Okay, now I'm comfortably back in my darkened, cramped apartment. Much easier to write now!
 
 The best part of quitting has been how much control I have over my time. If I decide to stop working for a day, I don't have to worry about missing an important meeting or holding up my teammates' work. Conversely, if I work in the evening or the weekend, I don't have to wait until business hours to get an answer or code review from a teammate (I didn't email outside business hours.
 
@@ -96,6 +98,8 @@ I have really passionate fans of Space Duck, but the problem is that there are l
 But it's so fun... It's the subject I'm top 10 most knowledgeable in the world about. There are only like 30 people who *want* to beknowledgeable in it, but still.
 
 I keep thinking, "One more experiment..."
+
+## Parsing ingredients
 
 ## What's next?
 
