@@ -28,7 +28,7 @@ The day I published it, I spent the entire day just responding to emails and com
 
 Then I spent the next day doing the same thing and it was a little less fun.
 
-By the third day, I was just anxious. I realized I could probably spend the next two weeks doing nothing but responding to comments and private messages. I knew I could ignore them if I chose to, but that felt disrespectful to the people who had taken time out to write me.
+By the third day, I was just anxious. I realized I could probably spend the next two weeks doing nothing but responding to comments and private messages. I knew I could ignore them if I chose to, but people had taken the time to write me. I thought that the least I could do was just  felt disrespectful to the people who had taken time out to write me.
 
 One piece of advice I found very helpful was from Stephanie Hurlburt, who was one of the people I mentioned above who I followed on Twitter and then she surprised me by reaching out to me directly after the article. I asked her how she manages replying to the many messages she receives, and she gave me this excellent advice:
 
@@ -69,45 +69,41 @@ I thought about whether I'd prefer to end the year with $80k in consulting earni
 
 ## Having adventures
 
-* Gave my first conference talk
-* Made my first podcast appearance
-* Played a computer game from beginning to end for the first time in 15 years
-* Made an April Fool's Day video that was *really* funny for about four people.
-* Published a Docker image that has XX pulls
-* Went skiing on a Tuesday
-* Discovered a neat login bypass vulnerability and reported it to the vendor (public disclosure hopefully ready in a few weeks)
+The best part of quitting has been how much control I have over my time. At 3 o'clock in the afternoon, I can go for a run if I feel like it. Or just take a nap. I know I'm not going to miss a meeting or hold up anyone's work. One week in March, I wanted to go skiing, so I just went skiing. On a Tuesday!
 
 As I write this, I'm sitting in Central Park writing out my blog post in a notebook. Although if I'm being honest, a big factor in why I'm here was so that I could write that previous sentence. Now that I'm here, I'm too distracted
 
 Okay, now I'm comfortably back in my darkened, cramped apartment. Much easier to write now!
 
-The best part of quitting has been how much control I have over my time. If I decide to stop working for a day, I don't have to worry about missing an important meeting or holding up my teammates' work. Conversely, if I work in the evening or the weekend, I don't have to wait until business hours to get an answer or code review from a teammate (I didn't email outside business hours.
+I also applied to a bunch of conferences for the first time ever. I adapted my posts about code reviews for a conference talk. I got rejected from all of them, but I was accepted to NERD summit, so I gave my first conference talk. One of the attendees liked the talk and invited me to his podcast, so a few weeks later, I made my first ever appearance on a podcast.
 
-As a general rule, I never emailed teammates outside working hours because I didn't want to contribute to a culture that expects people to always be available. I sort of work all the time now, but it's because I'm loving what I work on.
+I played a computer game from beginning to end for the first time in 15 years. When I had a job, I'd want to switch off from my job and work on my own projects. I'd play computer games occasionally, but after about 20-30 hours on a single game, I'd start feeling guilty that I wasn't using my home time productively and stop playing. Now that I'm working on my own projects full-time, I decided that a good way to switch off is to play computer games. I played XCOM 2 from beginning to end. It was great! Next on my list is *Far Cry 5*.
 
-## Struggling to recall office work
+If I decide to stop working for a day, I don't have to worry about missing an important meeting or holding up my teammates' work. Conversely, if I work in the evening or the weekend, I don't have to wait until business hours to get an answer or code review from a teammate (I didn't email outside business hours.
 
-The first few days after I quit, I felt like, "Woohoo! I'm free!" But now it strangely just feels like the way my life has always been. 
+## What's it like not having a job?
+
+This is the most common question that people ask me now that I've quit. What's it like?
+
+For the first few days, I felt like, "Woohoo! I'm free!" But now it just feels normal. So normal, in fact, that it feels weird to me that I ever had a full-time job working for someone else. It's sort of like thinking back to being in high school. "I sat listening to people talk for 6 hours a day? And then I had to do go home and do more work?" I know that it happened, but it seems so foreign to me now.
 
 I know I like this lifestyle way more, and I'd like to do it forever. I'm determined to figure out a way to make this sustainable.
 
-## Narrowing my focus
-
-I have really passionate fans of Space Duck, but the problem is that there are like 30 of them total. It's the obvious cut. it has XX% of the newsletter subscribers, gets XX% of the visitors.
-
-But it's so fun... It's the subject I'm top 10 most knowledgeable in the world about. There are only like 30 people who *want* to beknowledgeable in it, but still.
-
-I keep thinking, "One more experiment..."
-
-## Parsing ingredients
-
 ## What's next?
 
-To make KetoHub searchable, I need a way to parse ingredients. KetoHub For example, if you were interested in recipes that used tabasco sauce and you started typing, `tab` and we showed you every recipe that includes "**tab**lespoon" somewhere in the recipe, that's a bad result. I currently try to prevent this with a [heinous bundle of regexes](http://regex.info/blog/2006-09-15/247), but I still don't quite get it right. If you search KetoHub today, the search yields a lot of false positives where I parsed the ingredient incorrectly.
+After my Sia ideas turned out to be a dead end, I turned my attention back to KetoHub, my keto recipe aggregator site.
+
+To make KetoHub searchable, I need a way to parse ingredients. For example, if you searched for recipes that used [Mrs. Dash seasoning](https://amzn.to/2Ks05bh), you probably don't want to see every recipe that includes "A **dash** of cinnamon." So, given an ingredient like, "A dash of cinnamon," KetoHub has to figure out that the relevant part for searching is "cinnamon."
+
+For KetoHub's first version, I just did this with hacky regular expressions. Over time, my regular expressions got more complicated and fragile, so I needed a more robust solution.
+
+I found two companies that offer ingredient parsing as a service. One doesn't parse very accurately. The other does, but they forbid clients from storing results for more than a few hours. This means that a site like KetoHub would have to reprocess the same exact data every day.
+
+sauce and you started typing, `tab` and we showed you every recipe that includes "**tab**lespoon" somewhere in the recipe, that's a bad result. I currently try to prevent this with a [heinous bundle of regexes](http://regex.info/blog/2006-09-15/247), but I still don't quite get it right. If you search KetoHub today, the search yields a lot of false positives where I parsed the ingredient incorrectly.
 
 There are hosted APIs that offer this, but I tried them and they weren't very accurate and they have very oppressive that force you to display the API provider's logo in your app and they forbid you from archiving results, so a site like KetoHub would have to re-parse the exact same data every day.
 
-A few months ago, someone showed me a *New York Times* [article](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) about how they parsed ingredients from their back catalogue of recipes. I started playing with that, and it seemed like a better solution, but it's still not quite accurate. I wrote a post a few months ago about struggling to work with a freelancer
+A few months ago, someone showed me a *New York Times* [article](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) about how they parsed ingredients from their back catalogue of recipes. I started playing with that, and it seemed like a better solution, but it's still not quite accurate.
 
 I was reminded of a blog post I liked by Jason Fried called, ["Sell Your By-products."](https://signalvnoise.com/posts/1620-sell-your-by-products):
 
