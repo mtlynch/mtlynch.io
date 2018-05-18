@@ -14,21 +14,23 @@ I worked as a software engineer for Google from 2014 to 2018. I quit my job (TOD
 
 ## What's it like not having a job?
 
-This is the most common question that people ask me now that I've quit. What's it like?
+That's the most common question people ask. What's it like?
 
-For the first few days, I felt like, "Woohoo! I'm free!" But now it just feels normal. So normal, in fact, that it feels weird to me that I ever had a full-time job working for someone else. It's sort of like thinking back to being in high school. "I sat listening to people talk for 6 hours a day? And then I had to do go home and do more work?" I know that it happened, but it seems so foreign to me now.
+For the first few days, I felt like, "Woohoo! I'm free!" It was like starting a long-awaited vacation, but one that would potentially last forever.
 
-## Blogging about quitting
+Now, it just feels normal. Enjoyable, but normal. It seems weird to me that I ever had a full-time job. The closest parallel I can think of is remembering being in high school. "I sat listening to people talk for *six hours a day*? And then I had to do go home and do more work?" I know that it happened, but it seems so foreign to me now.
 
-About nine months before I left Google, I started mentally writing a blog post about all the reasons I was going to quit.
+## My quitting blog post
 
-I sat down to write it for real a month before I left, but it was much harder to write it for real than in my head. I aimed to publish it before I even left, but for the next two months, I spent several hours each week writing the post and then rewriting it. I finally published it on Feb. 28th because I felt like it wouldn't feel as fresh if I wasn't talking about something that was at least the same month.
+About nine months before I left Google, I started mentally writing a blog post about all the reasons I was going to quit. It was a nice outlet. Every time something frustrated me, I thought, "That's absurd! I'm definitely writing about that in the blog post."
 
-I didn't really know what the response would be. I thought it would be interesting for people who knew me personally to understand why I left what seemed to be a very attractive position at Google. I thought maybe it would get traction on reddit or Hacker News from people who also worked at Google.
+I spent about two months writing it for real, starting a month before I left and finally publishing it the last day of the month I quit so it would still feel fresh and relevant.
 
-It ended up exceeding even my wildest expectations. That week, my blog had the biggest number of readers by a factor of XX. My blog post found its way to people whose books and essays I've read. They were sharing it and saying positive things about the post. My friends were telling me that they found my article through social media channels I had never even heard of.
+I didn't know what the response would be. I thought people who knew me personally would enjoy reading it to understand why I left what seemed to be a very attractive position at Google. I also thought it might appeal to people who have left Google or other big tech companies for similar reasons.
 
-## Commenting about blogging about quitting
+The response to the post exceeded even my wildest expectations. That week, my blog had the biggest number of readers by a factor of XX. My blog post found its way to people whose books and essays I've read. They were sharing it and saying positive things about the post. My friends were telling me that they found my article through social media channels I had never even heard of.
+
+## Responding to feedback
 
 The day I published it, I spent the entire day just responding to emails and comments. It was great! It was like I was a celebrity responding to fan mail. But better because the responses were thought provoking and forced me to think (TODO: redundant) about my blog post from different perspectives.
 
@@ -56,21 +58,42 @@ Sidenote: Stephanie *says*  it's okay to delay responses for a month, but she ca
 
 In her reply, Stephanie also said that it's okay and inevitable to not respond to everyone. You have to be selective about which messages to respond to. She mentioned that there are ways to respond to people other than email, like writing a blog post that addresses common questions you receive privately.
 
-## Experimenting with Sia
+## Experimenting with cryptocurrency
 
-For the past two years, I've contributed to and written frequently (TODO: link) about a decentralized storage project called Sia. It was an obvious candidate for my focus after I quit. I thought that I could build an online service that capitalizes on Sia's lower costs. Or maybe I could just earn money by doing experiments with distributed storage and blogging about it. Or maybe I could do both and my blog posts would attract customers for whatever business I decided to build.
+For the past two years, I've contributed to and written frequently (TODO: link) about a decentralized storage project called Sia.
 
-It didn't really work out. My first major project was to do a rigorous test of Sia's capacity and costs. The project maintainers had claimed for years that the network could support storage at $2 per TB per month (this is roughly XX% of what Amazon charges), but nobody had ever demonstrated this in practice.
+It was an obvious choice for my post-Google focus. One of its main value propositions is that it offers storage and data transfer at much cheaper rates than traditiona cloud storage providers like Amazon. If I could find a business whose main cost is storage or data transfer, . For example, I'd imagine that this is one of the biggest costs of a service like Vimeo, the video streaming platform. If I could offer a video streaming service where I'm paying 1/10th of Vimeo's costs, maybe I could win business from Vimeo.
+
+I also liked writing about Sia. I thought that could either continue blogging about Sia and use it to attract customers to whatever service I was building. Or maybe writing about Sia would be 
+
+TODO: Add space duck logo
+
+My first major project was to do a rigorous test of Sia's capacity and costs. Sia claimed that it could achieve very low costs, but measuring its true costs was surprisingly difficult. Nobody ever had the combination of time, motivation, and knowledge to do it. But as a Sia enthusiast who just quit his job, that person was me.
+
+Unfortunately, the results of the test were disappointing. I concluded that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). Worse, I encountered [so many bugs](https://github.com/NebulousLabs/Sia/issues?utf8=%E2%9C%93&q=is%3Aissue+author%3Amtlynch+) during basic usage. These got so little traction from the dev team that I realized this was not the horse I wanted to hitch my wagon to.
+
+If I was going to build a service that capitalized on Sia's low cost, I had to know just how low that cost really was.
+
+claimed for years that the network could support storage at $2 per TB per month (this is roughly XX% of what Amazon charges), but nobody had ever demonstrated this in practice.
+
+I had an engaged, passionate group of readers, but that group was about 40 people.
+
+ I spent more time on it than I should have. It was obvious to me halfways through my experiment that my business plans wouldn't work, but I wanted to finish what I pledged to finish. And while running the experiment, it was too easy to think, "Oh, I have an idea for a quick 
+
+I could build an online service that capitalizes on Sia's lower costs. Or maybe I could just earn money by doing experiments with distributed storage and blogging about it. Or maybe I could do both and my blog posts would attract customers for whatever business I decided to build.
+
 
 If I was going to build a business on top of Sia, I needed to know how much it cost in practice. I also needed to know how much it could store. People knew that there was a limit to how much data you could upload to Sia before the software falls over, but they didn't know if that was 1 TB or 50 TB.
 
 I decided to write a load test for Sia. It would attempt to maximize Sia's storage and track the total cost of doing this.
 
-The result of the test was that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). It was cheaper than Amazon or Google's cloud storage offerings, but also much buggier and difficult to use. There are low-cost storage providers like Backblaze B2 and Wasabi whose prices are on par or even cheaper than Sia, but with a lot less complexity, so I couldn't find a situation where building a business on Sia would give me an advantage over someone who built a business on top of a traditional cloud storage provider.
+The result of the test was that  It was cheaper than Amazon or Google's cloud storage offerings, but also much buggier and difficult to use. There are low-cost storage providers like Backblaze B2 and Wasabi whose prices are on par or even cheaper than Sia, but with a lot less complexity, so I couldn't find a situation where building a business on Sia would give me an advantage over someone who built a business on top of a traditional cloud storage provider.
 
 ## Managing stress
 
 Before I quit, I kept reading stories of people saying how founding even a small business comes with a lot of stress. I thought, "I'm sure that's true, but I'm going to be spending every day in my pajamas, so how stressed will I really be?"
+
+CARTOON: Me realizing I missed a delivery. "Oh no, I didn't buzz up a delivery. Now I have to go downstairs. I'll have to put on pants. I'm so stressed." Single tear.
 
 For the first two months, pretty stressed. And I wasn't even to the point where I had real things to stress about like product releases or sales figures. I was just stressing about goals and deadlines I set for myself that nobody else even cared about. I realized I felt more stressed about my consequenceless, self-imposed deadlines than I ever was about deadlines at my actual job.
 
@@ -96,7 +119,7 @@ I also applied to a bunch of conferences for the first time ever. I adapted my p
 
 I played a computer game from beginning to end for the first time in 15 years. When I had a job, I'd want to switch off from my job and work on my own projects. I'd play computer games occasionally, but after about 20-30 hours on a single game, I'd start feeling guilty that I wasn't using my home time productively and stop playing. Now that I'm working on my own projects full-time, I decided that a good way to switch off is to play computer games. I played XCOM 2 from beginning to end. It was great!
 
-## What's next?
+## Reading the ingredients
 
 I've been reading a lot of ingredients.
 
@@ -108,7 +131,7 @@ TODO: Graphic of \[quantity\] \[units\] \[thing you buy at the store\] \[what yo
 
 Humans can interpret ingredients easily. When you see, "2 tomatoes, diced," you know to go to the store, buy two tomatoes, then dice them. If you see, "2 tablespoons ground cinnamon," you're probably not going to buy cinnamon sticks and a cinnamon grinder. You'll buy a thing of ground cinnamon.
 
-It's much harder for computers to figure this out. This was a problem I had with KetoHub, my keto recipe aggregator site. When users enter ingredients into KetoHub, what they probably mean to search for is the thing itself. If you search KetoHub for "Dash" you probably want to see recipes that use [Mrs. Dash seasoning](https://amzn.to/2Ks05bh) and not every recipe ever that happpens to include "a **dash** of cinnamon.".
+It's much harder for computers to figure this out. This was a problem I had with KetoHub, my keto recipe aggregator site. When users enter ingredients into KetoHub, what they probably mean to search for is the thing they bought from the grocery store. If you search KetoHub for "Dash" you probably want to see recipes that use [Mrs. Dash seasoning](https://amzn.to/2Ks05bh) and not every recipe ever that happpens to include "a **dash** of cinnamon.".
 
 For the initial version of KetoHub, I just did this with regular expressions, a quick and dirty way of processing text programmatically.
 
