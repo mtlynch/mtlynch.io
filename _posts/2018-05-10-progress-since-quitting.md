@@ -10,7 +10,7 @@ sidebar:
   nav: main
 ---
 
-I worked as a software engineer for Google from 2014 to 2018. I quit my job (TODO: link) on Feb. 1st, so I've now been free for just over three months.
+I worked as a software engineer for Google from 2014 to 2018. I quit my job (TODO: link) on Feb. 1st, so I've now been working on my own for almost four months.
 
 ## What's it like not having a job?
 
@@ -18,83 +18,75 @@ That's the most common question people ask. What's it like?
 
 For the first few days, I felt like, "Woohoo! I'm free!" It was like starting a long-awaited vacation, but one that would potentially last forever.
 
-Now, it just feels normal. Enjoyable, but normal. It seems weird to me that I ever had a full-time job. The closest parallel I can think of is remembering being in high school. "I sat listening to people talk for *six hours a day*? And then I had to do go home and do more work?" I know that it happened, but it seems so foreign to me now.
+Now, it just feels normal. Enjoyable, but normal.
 
-## Adventures!
+It seems weird to me that I ever had an office job. It's similar to how I feel when I remember high school. "I sat listening to people talk for *six hours a day*? And then I had to do go home and do more work?" I know that it happened, but it seems so foreign to me now.
 
-The best part of quitting has been how much control I have over my time. At 3 o'clock in the afternoon, I can go for a run if I feel like it. Or just take a nap. I know I'm not going to miss a meeting or hold up anyone's work. A couple months ago, I wanted to go skiing, so I just... went skiing. On a Tuesday!
+## The gift of time
 
-As I write this, I'm sitting in Central Park writing this post in a notebook that I'll type up later. Although if I'm being honest, I mostly came here so I could write that last sentence. Now that I'm actually here, I'm finding it too distracting because I have the focus of a kitten trying to type up her doctoral dissertation while there's a feather on a string bouncing next to her.
+The best part of quitting has been how much control I have over my time. At 3 o'clock in the afternoon, I can just stop working and go for a run. I'm not going to miss a meeting or hold up anyone's work.
 
-Okay, now I'm comfortably back in my darkened, cramped apartment. Much easier to write now!
+A couple months ago, I thought it would be fun to go skiing, so I just... went skiing. On a *Tuesday*. I didn't have to ask anyone's permission, move things around, or re-sync with anyone when I got back. I just wanted to do something fun and then did it.
 
-I also applied to a bunch of conferences for the first time ever. I adapted my posts about code reviews (TODO: link) for a conference talk. I got rejected from all of them, but I was accepted to NERD summit, so I gave my first conference talk. One of the attendees liked the talk and invited me to his podcast, so a few weeks later, I made my first ever appearance on a podcast (TODO: link).
+## New opportunities
 
-I played a computer game from beginning to end for the first time in 15 years. When I had a job, I'd want to switch off from my job and work on my own projects. I'd play computer games occasionally, but after about 20-30 hours on a single game, I'd start feeling guilty that I wasn't using my home time productively and stop playing. Now that I'm working on my own projects full-time, I decided that a good way to switch off is to play computer games. I played XCOM 2 from beginning to end. It was great!
+One very nice consequence of my time flexibility is that it's given me flexibility to pursue opportunities that I wouldn't have pursued if I kept my office job.
+
+I gave my first ever conference presentation. I adapted my post about [code reviews](/human-code-reviews-1/) and presented it at NERD Summit, a very newcomer-friendly conference in Western Massachussets.
+
+A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He told me that he enjoyed my talk and wanted to know if I'd be interested in having a discussion about it on his podcast. We had a [fun, interesting discussion](http://www.talkingdrupal.com/166). I didn't tell Stephen until we stopped recording that it was the first time I'd ever been on a podcast.
+
+In the not-work space, I played a computer game from start to finish for the first time in 15 years. When I had an office job, I'd start two or three games per year but never finish them because I felt pressure to invest more time into either my job or my side projects.
 
 ## My quitting blog post
 
-The biggest thing I've achieved since quitting my job has been writing a blog post about quitting my job. If you're reading this post, chances are that you found me because of my February post, "Why I Quit Google to Work for Myself."
+Oddly, my biggest accomplishment since quitting my job has been writing a blog post about quitting my job. If you're reading this post, chances are that you found me because of my February blog post, "Why I Quit Google to Work for Myself."
 
-I started mentally writing it about nine months before I left the company. It was a nice outlet. Every time something frustrated me, I thought, "That's absurd! I'm definitely writing about that in the blog post."
-
-I spent about two months writing it for real, starting a month before I left. It was much harder to write for real than it was to imagine writing it. I wanted to get it right. I wanted it to be thorough but not whiny. Highlighting issues but not throwing people under the bus. I kept writing it and rewriting it and finally set a hard deadline for myself of Feb. 28th so that it was the same month I quit so that it would still feel fresh and relevant.
+It took me a long time to write. I wrote for 4-6 hours each week for two months. I kept writing parts and then throwing them away for one reason or another. I wanted it to be thorough but not whiny. Highlighting issues but not throwing people under the bus. I kept writing it and rewriting it and finally set a hard deadline for myself of Feb. 28th so that it was the same month I quit so that it would still feel fresh and relevant.
 
 I didn't know what the response would be. I thought people who knew me personally would enjoy reading it to understand why I left what seemed to be a very attractive position at Google. I also thought it might appeal to people who have left Google or other big tech companies for similar reasons.
 
-The response to the post exceeded even my wildest expectations. That week, my blog had the biggest number of readers by a factor of XX. My blog post found its way to people whose books and essays I've read. They were sharing it and saying positive things about the post. My friends were telling me that they found my article through social media channels I had never even heard of.
+The response to the post exceeded even my wildest expectations. That week, my blog had over 300,000 unique readers. That's five times as many as my previous most popular post and 600x more visitors than the average day for my blog.
+
+It was surreal not just in the number of visitors but in who was sharing it. David Hanselman-Heyer, whose books I read. Patrick McKenzie. Steven Sinofsky, who was president of It was a bit surreal. I saw people sharing it on Twitter whose books I'd read or whose essays I'd followed for years.
 
 ## Responding to feedback
 
-When the post went live, I spent the entire day just responding to emails and comments. It was great! It was like I was a celebrity responding to fan mail. But better because the responses were incisive and forced me to think about my experience from new perspectives.
+The day I published the quitting post, I spent the entire day just responding to emails and comments. It was great! I felt like a celebrity.
 
 The next day, I continued responding to messages. It was still fun, but I didn't feel the same level of euphoria that I felt on day one.
 
-By the third day, I started to feel overwhelmed. I could spend the next two weeks doing nothing but responding to feedback about my post. In many of the messages, people asked about what I had been working on post-Google. What was I going to say if I kept this up? "Well, I've been primarily focused on talking about quitting and relishing the dopamine hit of seeing new messages all the time about this post."
+By the third day, I started to feel overwhelmed. I realized that I could spend the next two weeks doing nothing but responding to feedback about my post.
 
-TODO: Cartoon. It's like the "More cake, Mr. Coder?" but the waiter is saying, "More messages, Mr. Coder?" The tray contains several envelopes. The coder is on the floor buried under a pile of envelopes and saying, "Yes, please. Keep 'em coming."
-
-I knew I could ignore the messages and comments I was receiving, but people had taken the time to write me. I thought that the least I could do was send them a quick note back.
-
-The problem was that I take a really long time to write anything (this sentence took four days). When I respoond to someone with a simple note like, "Thanks, I'm glad you liked the article," it took me 15 minutes to actually send it because I kept re-reading their message over and over again to make sure I wasn't ignoring anything that they'd expect me to address specifically. And then, if it was public comment, another 5 minutes checking my adjacent comments to make sure my response didn't look copy/pasted.
+{% include image.html file="more-messages.png" alt="Me, responding to feedback" max_width="750px" img_link=true %}
 
 ## Letting go
 
 One of the people who reached out after the blog post was Stephanie Hurlburt. She co-founded a successful graphics startup, and is well-known on Twitter for sharing useful advice for startup founders. I followed her on Twitter and was delighted and surprised that she sent me a message in response to my article, unpromptedly offering to help me with my plans if I needed it.
 
-I realized that with how prolific Stephanie is, she must constantly be in the state where she's receiving more feedback than she has time to respond. I asked her how she manages replying to the many messages she receives, and she gave me this excellent advice:
+I realized that Stephanie must deal with an oversupply of messages all the time. How did she deal with it? I asked her, and she gave me this excellent advice:
 
->it is 100% okay to take a month or more to respond to someone, and expect a response back. It is even okay to take a year to respond to someone, but maybe don't expect a response back then (they've probably moved on to other things). So in other words, you don't need to tackle every message as it comes in, you can have a day a month where you just power through them.
+>...it is 100% okay to take a month or more to respond to someone, and expect a response back. It is even okay to take a year to respond to someone, but maybe don't expect a response back then (they've probably moved on to other things). So in other words, you don't need to tackle every message as it comes in, you can have a day a month where you just power through them.
+>
+>-Stephanie Hurlburt ([@sehurlburt](https://twitter.com/sehurlburt))
 
-It sounds simple, but this was very freeing and relieved my anxiety. I had felt this need to get back to everyone in a timely manner. After I spoke to Stephanie, I felt like I had permission to take my time. I resumed the projects I was working on but would add an item to my daily to-do list: "Respond to five emails," or "Respond to 20 twitter DMs." Once I accepted that it was okay to not respond immediately, I also realized that it was okay not to respond to every single message.
+It sounds simple, but this was very freeing. I had felt this need to get back to everyone in a timely manner. After I spoke to Stephanie, I felt like I had permission to take my time. I resumed the projects I was working on but would add an item to my daily to-do list: "Respond to five emails," or "Respond to 20 twitter DMs."
 
-Sidenote: Stephanie *says*  it's okay to delay responses for a month, but she came up with a very thoughtful, three-paragraph note to me a few minutes after I asked her my question about managing correspondence. It's very possible that she's tricking me so that she can maintain her position as the most helpful person on Twitter.
+**Sidenote**: Stephanie *says*  it's okay to delay responses for a month, but she wrote me a very thoughtful three-paragraph reply a few minutes after I asked her my question. It's possible that she's tricking me with this advice so that she can maintain her position as the most helpful person on Twitter.
+{: .notice--info}
 
-## Experimenting with cryptocurrency
+Stephanie also recommended that I accept the fact that I can't respond to every message, so I need to define what criteria that determines . What I was doing was unsystematically looking at all my unanswered messages and deciding which to answer next. But that meant repeatedly looking at the same messages even if it was .
 
-For the past two years, I've contributed to and written frequently (TODO: link) about a decentralized storage project called Sia.
-
-It was an obvious choice for my post-Google focus. One of its main value propositions is that it allows users to store and transfer data at much cheaper rates than providers like Amazon or Google.
-
-Sia is still pretty obscure. Not many people understand how to use it, so nobody had built any real services on top of it yet. But I understood it. Maybe I could find a business whose main cost is storage or data transfer and just build the Sia-powered version of that. TODO: find an example of a company who spends a ton on bandwidth.
-
-I also liked writing about Sia. I thought that could either continue blogging about Sia and use it to attract customers to whatever service I was building. Or maybe writing about Sia and decentralized storage technology would be lucrative in itself.
-
-TODO: Add space duck logo
-
-I began with an exploratory project to measure Sia's capacity and costs. Sia claimed that it was 1/10th the cost of Amazon, but nobody had ever measured this in practice. With Amazon, you get a bill at the end of the month, and that's your cost. Because Sia is decentralized, there's no single company to send you a bill. Instead, the software automatically makes dozens of tiny contracts with anonymous hosts. It's difficult to untangle all the data to figure out what you actually paid. Nobody ever had the combination of time, motivation, and knowledge to do it. But as a Sia enthusiast who just quit his job, I realized that person was me.
-
-Unfortunately, the results of the test were disappointing. I concluded that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). Worse, I encountered [so many bugs](https://github.com/NebulousLabs/Sia/issues?utf8=%E2%9C%93&q=is%3Aissue+author%3Amtlynch+) during basic usage that received so little attention from the dev team that I realized this was not the horse I wanted to hitch my wagon to.
-
-The blogging part wasn't working out either. I attracted a dedicated following of passionate readers, but Sia is such a small niche that this was about 40 people.
+Will this lead to a conversation I'm interested in having?
+Is the person offering me something that I value?
 
 ## Managing stress
 
-Before I quit, I kept hearing stories about how founding even a small business comes with a lot of stress. I thought, "I'm sure that's true, but I'm going to be spending every day in my pajamas, so how stressed will I really be?"
+Before I quit, I kept hearing stories about how founding even a small business comes with a lot of stress. I thought, "I'm sure that's true but I'm going to be spending every day in my pajamas. How stressed will I really be?"
 
-CARTOON: Me realizing I missed a delivery. "Oh no, I didn't buzz up a delivery. Now I have to go downstairs. I'll have to put on pants. I'm so stressed." Single tear.
+{% include image.html file="so-stressed.png" alt="The stresses of my daily life after quitting my job" max_width="750px" img_link=true %}
 
-But they were right. I did feel stress. Not about things that I thought people stressed about like money or customers. I was just stressing about goals and deadlines I set for myself that nobody else even cared about. I felt more anxious about my self-imposed deadlines than I ever did about deadlines at my actual job.
+But they were right. I did feel stress. Not about things that I thought people stressed about like money or customers. I was just stressing about deadlines I set for myself that nobody else cared about or even knew existed. I felt more anxious about my self-imposed deadlines than I ever did about deadlines at my actual job.
 
 Before I quit, I had this vision of self-employment where I'd have unlimited time. The eight hours a day I was spending in the office felt like an eternity. If I could cut those out, I'd have eternal *free* time.
 
@@ -104,7 +96,25 @@ Since then, I've felt less stressed about deadlines, but I'm experiencing a diff
 
 I think I'm coming around to a solution for this as well. Meditation and to-do lists.
 
-## Reading the ingredients
+## Failed project: Space Duck
+
+For the past two years, I've contributed to and [written frequently](/tags/#sia) about a decentralized storage project called Sia.
+
+It was an obvious choice for my post-Google focus. One of its main value propositions is that it allows users to store and transfer data at much cheaper rates than providers like Amazon or Google.
+
+Sia is still pretty obscure. Not many people understand how to use it, so nobody had built any real services on top of it yet. But I understood it. Maybe I could find a business whose main cost is storage or data transfer and just build the Sia-powered version of that. TODO: find an example of a company who spends a ton on bandwidth.
+
+I also liked writing about Sia. I thought that could either continue blogging about Sia and use it to attract customers to whatever service I was building. Or maybe writing about Sia and decentralized storage technology would be lucrative in itself.
+
+{% include image.html file="space-duck-logo.png" alt="Space Duck logo" max_width="750px" link_url="https://blog.spaceduck.io" %}
+
+I began with an exploratory project to measure Sia's capacity and costs. Sia claimed that it was 1/10th the cost of Amazon, but nobody had ever measured this in practice. With Amazon, you get a bill at the end of the month, and that's your cost. Because Sia is decentralized, there's no single company to send you a bill. Instead, the software automatically makes dozens of tiny contracts with anonymous hosts. It's difficult to untangle all the data to figure out what you actually paid. Nobody ever had the combination of time, motivation, and knowledge to do it. But as a Sia enthusiast who just quit his job, I realized that person was me.
+
+Unfortunately, the results of the test were disappointing. I concluded that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). Worse, I encountered [so many bugs](https://github.com/NebulousLabs/Sia/issues?utf8=%E2%9C%93&q=is%3Aissue+author%3Amtlynch+) during basic usage that received so little attention from the core developers that I realized this wasn't the horse I should hitch my wagon to.
+
+The blogging part wasn't working out either. I probably had ~100% market share of people interested in technical blog posts about Sia. Unforutnately, that population is about 40 people.
+
+## Reading ingredients
 
 I've been reading a lot of ingredients.
 
@@ -126,7 +136,7 @@ Over time, my regular expressions got more complicated and fragile, so I needed 
 
 [heinous bundle of regexes](http://regex.info/blog/2006-09-15/247)
 
-A few months ago, a commenter on Indie Hackers showed me (TODO: link) a blog post about how *The New York Times* [parsed ingredients](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/)  from their back catalogue of recipes using machine learning. That sounded neat, but it would be overkill for my little recipe aggregator site.
+A few months ago, a commenter on Indie Hackers [showed me](https://www.indiehackers.com/forum/ketohub-month-2-report-1229ddb803?commentId=-L-clmWeoqUnFcAzTi5t) a blog post about how *The New York Times* [parsed ingredients](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/)  from their back catalogue of recipes using machine learning. That sounded neat, but it would be overkill for my little recipe aggregator site.
 
 ## Ingredient parsing as a service
 
