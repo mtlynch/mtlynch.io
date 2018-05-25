@@ -13,9 +13,9 @@ header:
   og_image: images/2018-05-10-progress-since-quitting/so-stressed.png
 ---
 
-I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit](/why-i-quit-google/) to form my own single-person software company.
+I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit](/why-i-quit-google/) my job and formed my own single-person software company.
 
-I've been doing that for about four months, so I thought I'd share an update about how things are going.
+I've been doing that for about four months, so I thought I'd share an update on how things are going.
 
 ## What's it like not having a job?
 
@@ -23,7 +23,7 @@ That's the most common question people ask. What's it like?
 
 For the first few days, I kept thinking, "Woohoo! I'm free!" It was like starting a long-awaited vacation and knowing that it could potentially last forever.
 
-Now, it just feels normal. Enjoyable, but normal. It seems weird to me that I ever had an office job. It's similar to how I feel when I remember high school. "I sat listening to people talk for *six hours a day*? And then I had to do go home and do more work?" I know that it happened, but it seems so foreign to me now.
+Now, it just feels normal. Enjoyable, but normal. It seems weird to me that I ever had an office job. It's similar to how I feel when I remember high school. "I sat listening to people talk for *six hours a day*? And then I had to go home and do more work?" I know that it happened, but it seems so foreign to me now.
 
 The best part of quitting has been how much control I have over my time. I structure my day however I want, and there's no friction if I change my schedule. If I feel like going for a run at 3 o'clock in the afternoon, I just go for a run. I'm not going to miss a meeting or hold up anyone's work.
 
@@ -37,11 +37,11 @@ In March, I gave my first ever conference presentation. I adapted my favorite po
 
 {% include image.html file="talking_drupal_logo.png" alt="Talking Drupal logo" max_width="230px" class="align-right" link_url="http://talkingdrupal.com" %}
 
-A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another big first for me: my first ever podcast appearance.
+A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
 
 ## My quitting blog post
 
-Oddly, my biggest accomplishment since quitting my job has been... writing a blog post about quitting my job. If you're reading this, chances are that you found my blog because of my February post, ["Why I Quit Google to Work for Myself."](/why-i-quit-google/) It attracted 300,000 readers in its first week, dwarfing the records of my previous popular posts by 6x.
+Oddly, my most notable accomplishment since quitting my job has been... writing a blog post about quitting my job. If you're reading this, chances are that you found my blog because of my February post, ["Why I Quit Google to Work for Myself."](/why-i-quit-google/) It attracted 300,000 readers in its first week, dwarfing the records of my previous popular posts by 6x.
 
 When the post went live, I spent the entire day just responding to emails, comments, and Twitter messages. It was great! I felt like a celebrity.
 
@@ -49,13 +49,13 @@ The next day, I continued responding to messages. It didn't bring quite the same
 
 By the third day, I started to feel overwhelmed. I realized that I could spend the next two weeks doing nothing but responding to feedback about my post. Many of my readers were asking what I was working on post-Google. What was I going to say? "Well, I've primarily been focused on the quick dopamine hits I get when I see notifications about this post."
 
-{% include image.html file="more-messages.png" alt="Me, responding to feedback" max_width="750px" img_link=true %}
+{% include image.html file="more-messages.jpg" alt="Me, responding to feedback" max_width="750px" img_link=true %}
 
 ## Managing feedback
 
 One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics startup](http://www.binomial.info/) and is well-known in the community for her insightful [blog posts](http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
 
-She sent me a nice message about the post and offered her availability if I ever wanted advice. I had been following Stephanie for months before she reached out to me, and I knew that she received a high volume of messages. I asked her how she manages it, and she shared this helpful suggestion:
+She sent me a kind message about the post and offered her availability if I ever wanted advice. I had been following Stephanie for months before she reached out to me, and I knew that she received a high volume of messages. I asked her how she manages it, and she shared this helpful suggestion:
 
 >...it is 100% okay to take a month or more to respond to someone, and expect a response back. It is even okay to take a year to respond to someone, but maybe don't expect a response back then (they've probably moved on to other things). So in other words, you don't need to tackle every message as it comes in, you can have a day a month where you just power through them.
 >
@@ -74,7 +74,7 @@ Stephanie also pointed out that it's not realistic to respond to every single me
 
 Before quitting, I kept hearing stories about how starting even a small business causes severe stress. I thought, "I'm sure that's true for *them*, but I'm going to be spending every day in my pajamas. How stressed will I really be?"
 
-{% include image.html file="so-stressed.png" alt="The stresses of my daily life after quitting my job" max_width="750px" img_link=true %}
+{% include image.html file="so-stressed.jpg" alt="The stresses of my daily life after quitting my job" max_width="750px" img_link=true %}
 
 But they were right. I did feel stress. Not about the things they warned me about like money or customers. I was stressing about self-imposed deadlines that nobody else cared about. They gave me more anxiety than any external deadline I ever had at Google.
 
