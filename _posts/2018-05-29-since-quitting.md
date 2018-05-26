@@ -13,7 +13,7 @@ header:
   og_image: images/2018-05-29-since-quitting/so-stressed.png
 ---
 
-I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit](/why-i-quit-google/) my job and formed my own single-person software company.
+I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit my job](/why-i-quit-google/) and formed my own single-person software company.
 
 I've been doing that for about four months, so I thought I'd share an update on how things are going.
 
@@ -49,7 +49,7 @@ The next day, I continued responding to messages. It didn't bring quite the same
 
 By the third day, I started to feel overwhelmed. I realized that I could spend the next two weeks doing nothing but responding to feedback about my post. Many of my readers were asking what I was working on post-Google. What was I going to say? "Well, I've primarily been focused on the quick dopamine hits I get when I see notifications about this post."
 
-{% include image.html file="more-messages.jpg" alt="Me, responding to feedback" max_width="750px" img_link=true %}
+{% include image.html file="more-messages.jpg" alt="Me, responding to feedback" max_width="800px" img_link=true %}
 
 ## Managing feedback
 
@@ -68,13 +68,13 @@ After I spoke to Stephanie, I felt like I had permission to take my time. I shif
 **Sidenote**: Stephanie *said*  it was okay to delay responses for a month, but she wrote me a thoughtful three-paragraph reply within minutes of my question. It's possible that she's tricking me so that she can maintain her position as the most helpful person on Twitter.
 {: .notice--info}
 
-Stephanie also pointed out that it's not realistic to respond to every single message. I still feel guilty ignoring an email, but I found that getting out of the mindset of prompt responses helped me detach a bit and make rational choices about which messages to answer. For example, if someone writes me with questions about [finding a blog cartoonist](/how-to-hire-a-cartoonist/), that's fun for me to talk about because not many bloggers work with cartoonists. I'll answer that email ahead of one that asks me more general questions about geting hired at Google.
+Stephanie also pointed out that it's not realistic to respond to every single message. I still feel guilty ignoring an email, but I found that getting out of the mindset of prompt responses helped me detach a bit and make rational choices about which messages to answer. For example, if someone writes me with questions about [finding a blog cartoonist](/how-to-hire-a-cartoonist/), that's fun for me to talk about because not many bloggers work with cartoonists. I'll answer that email ahead of one that asks me more general questions about getting hired at Google.
 
 ## Managing stress
 
 Before quitting, I kept hearing stories about how starting even a small business causes severe stress. I thought, "I'm sure that's true for *them*, but I'm going to be spending every day in my pajamas. How stressed will I really be?"
 
-{% include image.html file="so-stressed.jpg" alt="The stresses of my daily life after quitting my job" max_width="750px" img_link=true %}
+{% include image.html file="so-stressed.jpg" alt="The stresses of my daily life after quitting my job" max_width="800px" img_link=true %}
 
 But they were right. I did feel stress. Not about the things they warned me about like money or customers. I was stressing about self-imposed deadlines that nobody else cared about. They gave me more anxiety than any external deadline I ever had at Google.
 
@@ -82,7 +82,7 @@ The problem was that I took on too many projects. While I was an employee, eight
 
 I was disappointed to discover that even outside Google, people are still limited to the standard 24 hours per day. But I kept saying yes to new opportunities because each one seemed small in isolation. After a few weeks, I had taken on so many little tasks that I wasn't making progress on any of them.
 
-I'm now more conservative about taking on projects. Even if they seem small or require little effort from me, simply keeping context and communicating about them requires significant mental bandwidth. These days, I limit my focus to this blog and one software project (spoiler alert: they end up intertwining).
+I'm now more conservative about taking on projects. Even if they seem small or require little effort from me, merely keeping context and communicating about them requires significant mental bandwidth. These days, I limit my focus to this blog and one software project (spoiler alert: they end up intertwining).
 
 ## Failed project: Space Duck
 
@@ -90,9 +90,9 @@ My first business idea was to build a service on top of Sia, a decentralized sto
 
 Sia's goal is to make data storage a commodity that anyone can sell. It promises prices that are 1/10th of Amazon or Google rates. The technology is still under the radar because few people understand how to use it, much less how to build services on top of it.
 
-I was one of only a few dozen people who understood Sia at a deep enough level to build a business on the platform. If I built a product in a space that's typically limited by bandwidth or storage (e.g., file backup, video streaming), I'd have a huge advantage over competitors whose infrastructure costs were 10x higher.
+I was one of only a few dozen people who understood Sia at a deep enough level to build a business on the platform. If I developed a product in a space that's typically limited by bandwidth or storage (e.g., file backup, video streaming), I'd have a massive advantage over competitors whose infrastructure costs were 10x higher.
 
-I didn't know exactly what I wanted to build, but I wanted to attract users by blogging about Sia from angles nobody else was talking about. I created a blog called [Space Duck](https://blog.spaceduck.io/) and started writing about my exploratory tests on the platform.
+I didn't know exactly what I wanted to build, but I wanted to attract users by blogging about Sia from angles nobody else was discussing. I created a blog called [Space Duck](https://blog.spaceduck.io/) and started writing about my exploratory tests on the platform.
 
 {% include image.html file="space-duck-logo.png" alt="Space Duck logo" max_width="750px" link_url="https://blog.spaceduck.io" %}
 
@@ -108,9 +108,9 @@ KetoHub allows users to search by ingredient, so if you have ground beef you'd l
 
 The difficult part of implementing the search feature is discarding irrelevant information. In the screenshot above, the original ingredient was "1 pound of ground beef," but KetoHub reduced the search result snippet to "Ground beef."
 
-Throwing away junk words is harder than it looks. I originally solved this by writing lots of rules. One rule was, "remove units of measurement." If someone searches for "tab," then "**Tab**asco" is a good match, but they probably don't want to see every recipe that happens to have a "**tab**lespoon" of something.
+Throwing away junk words is harder than it looks. I initially solved this by writing lots of rules. One rule was, "remove units of measurement." If someone searches for "tab," then "**Tab**asco" is a good match, but they probably don't want to see every recipe that happens to have a "**tab**lespoon" of something.
 
-But what about "dash"? It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://amzn.to/2Ks05bh). Okay, I'll refine the rule to: throw away "dash" unless it's preceded by "Mrs."
+But what about "dash"? It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://amzn.to/2Ks05bh). Okay, I'll refine the rule to, "throw away 'dash' unless it's preceded by 'Mrs.'"
 
 Oh, wait. That rule doesn't always work because one recipe author perhaps felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "*Ms.* Dash."
 
@@ -130,11 +130,11 @@ Early in KetoHub's life, a commenter on Indie Hackers [showed me](https://www.in
 
 {% include image.html file="nyt-parser.png" alt="Visualization of New York Times results" max_width="509px" fig_caption=fig_caption %}
 
-That sounded neat, but felt like overkill for my little recipe aggregator site. It would be like founding a home cleaning service because your bathroom was dirty. It might solve the problem, but the solution would be bigger than the issue it addressed.
+That sounded neat but felt like overkill for my little recipe aggregator site. It would be like founding a home cleaning service because your bathroom was dirty. It might solve the problem, but the solution would be bigger than the issue it addressed.
 
 Then I had a realization: What if ingredient parsing *is* the business?
 
-KetoHub was a fun project, but I still hadn't found a good way to monetize it. If parsing ingredients was a problem for KetoHub, maybe it was a problem for other web and mobile apps. There were services that offered ingredient parsing, but each one I evaluated was either inaccurate or mandated prohibitively strict usage terms.
+KetoHub was a fun project, but I still hadn't found an effective way to monetize it. If parsing ingredients was a problem for KetoHub, maybe it was a problem for other web and mobile apps. There were existing services that offered ingredient parsing, but each one I evaluated was either inaccurate or mandated prohibitively strict usage terms.
 
 I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer) to begin experimenting with the *NY Times* technique for parsing ingredients. When she found it to be viable, we spent a few weeks together going down the rabbit hole of machine learning and natural language processing.
 
