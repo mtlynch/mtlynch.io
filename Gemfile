@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.7.0'
+gem 'jekyll', '~> 3.8.2'
 gem 'minimal-mistakes-jekyll', '4.9.0'
 gem 'jekyll-admin', group: :jekyll_plugins
 
