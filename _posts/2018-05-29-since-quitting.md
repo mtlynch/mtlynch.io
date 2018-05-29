@@ -27,7 +27,7 @@ Now, it just feels normal. Enjoyable, but normal.
 
 It seems weird to me that I ever had an office job. It's like remembering the experience of high school. "I sat listening to people talk for *six hours a day*? And then I had to go home and do more work?" I know that it happened, but it seems so foreign to me now.
 
-The best part of quitting has been how much control I have over my time. I structure my day however I want, and there's no friction if I change my schedule. If I feel like going for a run at 3 o'clock in the afternoon, I just go for a run. I'm not going to miss a meeting or hold up anyone's work.
+The best part of quitting has been how much control I have over my time. I structure my day however I want, and there's no friction when I change my schedule. If I feel like going for a run at 3 o'clock in the afternoon, I just go for a run. I'm not going to miss a meeting or hold up anyone's work.
 
 ## Doing things I wouldn't do otherwise
 
@@ -39,7 +39,7 @@ In March, I gave my first ever conference presentation. I adapted my post, ["How
 
 {% include image.html file="talking_drupal_logo.png" alt="Talking Drupal logo" max_width="230px" class="align-right" link_url="http://talkingdrupal.com" %}
 
-A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [iscuss it further on his podcast. We had a [fun conversation](http://www.talkingdrupal.com/166) and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
+A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
 
 ## My quitting blog post
 
@@ -49,13 +49,13 @@ When the post went live, I spent the entire day just responding to emails, comme
 
 The next day, I continued responding to messages. It didn't bring quite the same rush as the first day, but it still felt good to see all the encouragement and compliments.
 
-By the third day, I started to feel overwhelmed. I realized that I could spend the next two weeks doing nothing but responding to feedback about my post. Many of my readers were asking what I was working on post-Google. What was I going to say? "Well, I've primarily been focused on the quick dopamine hits I get when I see notifications about this post."
+By the third day, I started to feel overwhelmed. I realized that I could spend the next two weeks doing nothing but responding to feedback about my post. Many of my readers were asking what I was working on post-Google. What was I going to say? "Well, I've primarily been focused on the quick dopamine hits I get when I see notifications about that post."
 
 {% include image.html file="more-messages.jpg" alt="Me, responding to feedback" max_width="800px" img_link=true %}
 
 ## Managing feedback
 
-One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful computer graphics company](http://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
+One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics software company](http://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
 
 She sent me a kind message about the post and offered her availability if I ever wanted advice. I had been following Stephanie for months before she reached out to me, and I knew that she received a high volume of messages. I asked her how she managed them, and she shared this helpful suggestion:
 
@@ -84,17 +84,17 @@ The problem was that I took on too many projects. While I was an employee, eight
 
 Tragically, I found myself still limited to the standard 24 hours per day. But I kept saying yes to new opportunities because each one seemed small in isolation. After a few weeks, I had taken on so many little tasks that I wasn't making progress on any of them.
 
-I'm now more conservative about taking on projects. Even if it seems small or requires little effort from me, tracking projects takes time. These days, I limit my focus to this blog and one software project (spoiler alert: they end up intertwining).
+I'm now more conservative about taking on projects. Even if they seem small, it takes a lot of mental energy to simply track them. These days, I limit my focus to this blog and one software project (spoiler alert: they end up intertwining).
 
 ## Failed project: Space Duck
 
-My first business idea was to build a service on top of Sia, a decentralized storage platform I've contributed to and [written about frequently](/tags/#sia).
+My first business idea was to build a service on top of Sia, a decentralized storage platform I've [written about frequently](/tags/#sia).
 
 Sia's goal is to make data storage a commodity so that anyone can sell it. It promises prices that are 1/10th of Amazon's or Google's rates. Sia's technology is still under the radar because few people understand how to use it, much less how to build services on top of it.
 
-I was one of only a few dozen people who understood Sia at a deep enough level to build a business on the platform. If I developed a product in a space that's typically limited by bandwidth or storage (e.g., file backup, video streaming), I'd have a massive advantage over competitors whose infrastructure costs were 10x higher.
+I was one of only a few dozen people who understood Sia at a deep enough level to build a business on the platform. If I used that knowledge to enter a market typically limited by bandwidth or storage (e.g., file backup, video streaming), I'd have a massive advantage over competitors whose infrastructure costs were 10x higher.
 
-I didn't know exactly what I wanted to build, but I knew a unique way I could attract users. Few people were discussing Sia and nobody was writing about it from a developer's perspective. I knew there was a market for technical content because the Sia articles I had written on my personal blog had attracted thousands of readers. I created a blog called [Space Duck](https://blog.spaceduck.io/) and started writing about my exploratory tests on the platform.
+I didn't know exactly what I wanted to build, but I knew a unique way I could attract users. Few people were discussing Sia, and nobody was writing about it from a developer's perspective. I knew there was a market for technical content because the Sia articles I had written on my personal blog had attracted thousands of readers. I created a blog called [Space Duck](https://blog.spaceduck.io/) and started writing about my exploratory tests on the platform.
 
 {% include image.html file="space-duck-logo.png" alt="Space Duck logo" max_width="750px" link_url="https://blog.spaceduck.io" %}
 
@@ -104,19 +104,19 @@ Unfortunately, these tests revealed that Sia was [not as cheap as everyone thoug
 
 I turned my attention back to [KetoHub](https://mtlynch.io/outsourcing-mvp/), a website I created last year to help users find recipes for the keto diet.
 
-One of KetoHub's main features is finding recipes based on ingredients you have. For example, you can search for ["ground beef"](https://ketohub.io/?q=%22ground%20beef%22) and find 50 different keto-friendly recipes that use it.
+One of KetoHub's main features is finding recipes based on ingredients you have. For example, you can search for ["ground beef"](https://ketohub.io/?q=%22ground%20beef%22) and see 50 different keto-friendly recipes that use it.
 
 {% include image.html file="1-lb-ground-beef.png" alt="Screenshot of KetoHub results for ground beef" max_width="800px" img_link=true %}
 
 This type of search is difficult because it requires KetoHub to determine what part of an ingredient's text is relevant. In the screenshot above, the original ingredient was "1 pound of ground beef," but KetoHub reduced the search result snippet to "Ground beef."
 
-Throwing away junk words is harder than it looks. I initially solved this by writing lots of rules. One rule was, "remove units of measurement." If someone begins typing "tab..." then "**Tab**asco" is a good match, but "2 **tab**lespooons vinegar" is not. Nobody wants to see recipes based on the fact that they involve a tablespoon of something.
+Throwing away junk words is harder than it looks. I initially solved this by writing lots of rules. One rule was, "remove units of measurement." If someone begins typing "tab..." then "**Tab**asco" is a good match, but "2 **tab**lespoons vinegar" is not. Nobody wants to see recipes based on the fact that they involve a tablespoon of something.
 
-But what about "dash"? It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://amzn.to/2Ks05bh). Okay, I'll refine the rule to, "throw away units of measurement unless it's 'dash' preceded by 'Mrs.'"
+But what about "dash?" It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://amzn.to/2Ks05bh). Okay, I'll refine the rule to, "throw away units of measurement unless it's 'dash' preceded by 'Mrs.'"
 
-But that rule doesn't always work because one recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "*Ms.* Dash."
+That rule doesn't always work either. One recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "*Ms.* Dash."
 
-{% include image.html file="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash" max_width="726px" link_url="https://www.ruled.me/low-carb-corndogs/" %}
+{% include image.html file="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash." max_width="726px" link_url="https://www.ruled.me/low-carb-corndogs/" %}
 
 This is the nature of applying strict rules to random web data. They start out simple, but after enough variations and edge cases, the rules increase in complexity and conflict with each other.
 
@@ -132,15 +132,15 @@ Early in KetoHub's life, a commenter on Indie Hackers [showed me](https://www.in
 
 {% include image.html file="nyt-parser.png" alt="Visualization of New York Times results" max_width="509px" fig_caption=fig_caption %}
 
-That sounded neat but felt like overkill for my little recipe aggregator site. It would be like opening a home cleaning service because your bathroom was dirty. It might solve the problem, but the solution was bigger than the issue it addressed.
+That sounded neat but felt like overkill for my little recipe aggregator site. It would be like launching a home cleaning startup because your bathroom was dirty. It might solve the problem, but the solution was bigger than the issue it addressed.
 
-Then I had a realization: What if ingredient parsing *is* the business?
+Then I had a realization: what if ingredient parsing *is* the business?
 
 KetoHub was a fun project, but I still hadn't found a way to monetize it. If parsing ingredients was a problem for KetoHub, maybe it was a problem for other apps. There were existing services that offered ingredient parsing, but each one I evaluated was either inaccurate or mandated prohibitively strict usage terms.
 
 I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer), to begin experimenting with the *Times'* technique for parsing ingredients. Her initial results were promising, so we spent a few weeks going down the rabbit hole of machine learning and natural language processing.
 
-We now have a [working demo](https://ingredientparser.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break the ingredient down into its component parts:
+We now have a [working demo](https://ingredientparser.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break it down into structured components:
 
 {% include image.html file="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" max_width="800px" link_url="https://ingredientparser.com/" %}
 
