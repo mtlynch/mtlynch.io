@@ -11,6 +11,8 @@ sidebar:
 excerpt: An update on my progress since going off to work on my own.
 header:
   og_image: images/2018-05-29-since-quitting/so-stressed.jpg
+discuss_urls:
+  hacker_news: "https://news.ycombinator.com/item?id=17186865"
 ---
 
 I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit my job](/why-i-quit-google/) and formed my own single-person software company.
