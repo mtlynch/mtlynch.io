@@ -45,7 +45,7 @@
 {% if max_width %}
   {% assign sizes = max_width %}
 {% else %}
-  {% assign rendition = site.media_renditions.[media_rendition] %}
+  {% assign rendition = site.media_renditions[media_rendition] %}
   {% if rendition %}
     {% assign sizes = rendition.sizes | join: ', ' %}
   {% endif %}
