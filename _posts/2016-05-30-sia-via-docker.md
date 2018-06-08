@@ -17,7 +17,7 @@ tags:
 - synology
 - nas
 excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
-last_modified_at: '2018-04-15T11:11:00-04:00'
+last_modified_at: '2018-06-08T11:08:00-04:00'
 ---
 
 {% include base_path %}
@@ -64,7 +64,7 @@ This guide uses the latest version of each software component at the time of wri
 </figure>
 
 * DiskStation Manager (DSM) 6.1.2-15132
-* Sia v.1.3.2
+* Sia v.1.3.3
 * Docker v.1.11.2
 
 Though this guide is written specifically for the Synology DSM system, the steps relating to Docker should be applicable on any platform that supports Docker.
@@ -190,17 +190,10 @@ You should **not** expose port `9980` because that is Sia's port for API communi
 
 # How to upgrade Sia
 
-Sia is still a new technology and new important releases come out every month or so. Renters use the server's version to determine which host to purchase file contracts from, so it's in your best interest to upgrade soon after new releases.
+Sia is still a new technology and new important releases come out every few months. Renters use the server's version to determine which host to purchase file contracts from, so it's in your best interest to upgrade soon after new releases.
 
 If you've followed this guide, all of Sia's state is kept outside the Docker container, so you can safely upgrade without affecting your Sia wallet or storage contracts.
 
-1. From any machine on your network, gracefully shut down your `siad` server:
-
-    ```bash
-    ./siac --addr DISKSTATION:9980 stop
-    ```
-
-1. Get the version number of the [latest Sia release](https://github.com/NebulousLabs/Sia/releases/latest)
 1. SSH into your NAS as `admin`.
 
     ```bash
@@ -210,24 +203,21 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
 1. Run the following commands:
 
     ```bash
+    # Gracefully shut down Sia
+    admin@Diskstation:/$ sudo docker exec -it sia-container ./siac stop
+
     # Remove the old container.
     # NOTE: If Docker says the container is still running, wait a few minutes to
     # allow siad to finish shutting down gracefully and re-try this command.
     # It may take up to 10 minutes.
     admin@Diskstation:/$ sudo docker rm sia-container
 
+    # Upgrade to the latest Sia Docker image
+    admin@Diskstation:/$ sudo docker pull mtlynch/sia
+
     # NOTE: Replace 10.0.0.101 with the IP address of the Synology NAS on your
     # local network.
     admin@DiskStation:/$ LOCAL_IP=10.0.0.101
-
-    # Change 1.3.1 to the version you'd like to upgrade to.
-    admin@DiskStation:/$ SIA_VERSION=1.3.1
-
-    admin@DiskStation:/$ IMAGE_TAG="sia-image:${SIA_VERSION}"
-    admin@DiskStation:/$ sudo docker build \
-      --build-arg SIA_VERSION="$SIA_VERSION" \
-      --tag "${IMAGE_TAG}" \
-      https://raw.githubusercontent.com/mtlynch/docker-sia/master/Dockerfile
 
     # Re-create the Docker container.
     admin@DiskStation:/$ sudo docker run \
@@ -238,7 +228,7 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
       --publish 9982:9982 \
       --restart always \
       --name sia-container \
-      "$IMAGE_TAG"
+      mtlynch/sia
     ```
 
 When you complete this process, you'll have a new Sia Docker container running the latest version of Sia.
@@ -251,20 +241,6 @@ Because this configuration keeps all of Sia's persistent state outside of the co
 
 # Further reading
 
-This guide showed you how to get your host up and running, but there's more you need do to configure your host and optimize it to maximize your profits. The Sia developers have written some excellent guides to help you do that:
+This guide showed you how to get your host up and running, but there's more you need do to configure your host and optimize it to maximize your profits. Sia community member RBZL has written an excellent guide:
 
-* [How to Run a Host on Sia](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725): An in-depth walkthrough of configuring a Sia host.
-* [Host Profit Maximization Thread](https://forum.sia.tech/topic/1037/host-profit-maximization-thread): A guide to tweaking host settings to maximize profits.
-
-# Updates
-
-* 2016-05-30: Original publication.
-* 2016-07-08: Updated instructions for the Sia 1.0.0 release.
-* 2017-01-15: Updated instructions for the Sia 1.0.4 release.
-* 2017-05-07: Updated instructions for the Sia 1.2.1 release.
-* 2017-05-23: Updated instructions for the Sia 1.2.2 release.
-* 2017-05-25: Revised a lot of the text, added instructions for version-to-version upgrades.
-* 2017-07-25: Updated instructions for the Sia 1.3.0 release.
-* 2017-12-20: Updated instructions for the Sia 1.3.1 release.
-* 2018-03-15: Updated instructions for the Sia 1.3.2 release.
-* 2018-04-15: Updated instructions to use pre-built Sia Docker image.
+* [Sia Hosting Guide](https://siasetup.info/guides/hosting_on_sia)
