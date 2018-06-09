@@ -30,3 +30,20 @@
     background-color: #e55b00;
   }
 }
+
+.btn--indie_hacker {
+  background-color: #20374C;
+
+  &:hover {
+    background-color: #0E2538;
+  }
+
+  > .fa-indie-hacker {
+    background-image: url("/assets/img/icons/indie-hackers-logo__glyph--light.svg");
+    background-position: center center;
+
+    >g {
+      opacity: 0;
+    }
+  }
+}
