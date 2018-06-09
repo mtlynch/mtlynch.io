@@ -10,6 +10,7 @@ sidebar:
   nav: main
 header:
   teaser: images/resized/2018-01-09-ketohub-month-3/768/ketohub-ga-dec.png
+  og_image: ""
 tags:
 - ketohub
 - keto

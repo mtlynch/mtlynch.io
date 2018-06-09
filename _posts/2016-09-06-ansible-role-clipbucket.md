@@ -3,6 +3,7 @@ title: Automatically Deploying ClipBucket with Ansible
 date: 2016-09-06 00:00:00 -04:00
 header:
   teaser: images/resized/2016-09-06-ansible-role-clipbucket/480/clipbucket-install-complete.png
+  og_image: ""
 tags:
 - ansible
 - clipbucket

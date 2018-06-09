@@ -9,6 +9,7 @@ related: true
 date: '2017-01-11 00:00:00 -0500'
 header:
   teaser: images/resized/2017-01-11-taskrabbit-cooking/480/IMG_20161115_212108.jpg
+  og_image: ""
 tags:
 - outsourcing
 - cooking

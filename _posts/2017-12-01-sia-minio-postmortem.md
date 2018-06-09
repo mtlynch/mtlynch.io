@@ -15,6 +15,7 @@ tags:
 excerpt: An analysis of how Nebulous Labs can improve its bounty program for Sia
 header:
   teaser: images/resized/2017-12-01-sia-minio-postmortem/480/minio-postmortem.png
+  og_image: ""
 ---
 
 One of the best things I learned from working at Google is the practice of [blame-free postmortems](https://landing.google.com/sre/book/chapters/postmortem-culture.html). When something goes wrong, you wait until the dust settles, then write a report analyzing what happened. The report explains how the problem occurred and defines concrete steps the team can take to mitigate the problem in the future.
