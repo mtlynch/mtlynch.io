@@ -11,6 +11,12 @@ hide_signup: true
 
 I frequently take on software hobby projects to help myself learn new technologies. This page tracks all of the projects I have published.
 
+# [Ingredient Parser](https://ingredientparser.com) (2018-present)
+
+Ingredient Parser is a hosted API for pulling rich data out of recipe ingredients.
+
+**Technologies**: Machine Learning, Python, Angular
+
 # [KetoHub](https://ketohub.io) (2017-present)
 
 KetoHub is an aggregator for Keto recipes. It allows you to search recipes across different keto recipes and filter by meal type.
