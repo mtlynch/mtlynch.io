@@ -10,6 +10,7 @@ sidebar:
   nav: main
 header:
   teaser: images/resized/2017-12-06-outsourcing-mvp/768/wireframe-v1.jpg
+  og_image: ""
 tags:
 - mvp
 - outsourcing
@@ -18,6 +19,7 @@ tags:
 - ketohub
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=15861032
+excerpt: "A few months ago, I had a brilliant idea for a website. Then, I had an even brillianter idea: build the website, but outsource all the work."
 ---
 
 A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: build the website, but outsource all the work.

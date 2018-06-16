@@ -11,6 +11,7 @@ sidebar:
 date: '2017-05-20 00:00:00'
 header:
   teaser: images/resized/2017-05-20-windows-sia-mining/480/luxor-mining-pool.png
+  og_image: ""
 tags:
 - siacoin
 - cryptocurrency

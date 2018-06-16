@@ -12,6 +12,7 @@ excerpt: With no idea what I was doing, I hired a cartoonist to illustrate my bl
   The results were surprisingly positive.
 header:
   teaser: images/resized/2018-01-19-how-to-hire-a-cartoonist/768/mma-sketch.png
+  og_image: ""
 tags:
 - cartoons
 - blogging

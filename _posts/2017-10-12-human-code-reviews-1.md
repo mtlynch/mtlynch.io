@@ -18,6 +18,7 @@ tags:
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/
   hacker_news: https://news.ycombinator.com/item?id=15475902
+excerpt: "Lately, I’ve been reading articles about best practices for code reviews. I notice that these articles focus on finding bugs to the exclusion of almost every..."
 ---
 
 Lately, I've been reading articles about best practices for code reviews. I notice that these articles focus on finding bugs to the exclusion of almost every other component of a review. Communicating issues you discover in a constructive and professional way? Irrelevant! Just identify all the bugs, and the rest will take care of itself.
