@@ -4,159 +4,9 @@ end
 
 module FrontMatterTests
 
-  # Checks if key provided in schema is required
-  #
-  #
-  # @param {string} key  - key name
-  # @param {hash} schema - the hash-representation of a schema file
-  #
-  # Returns true or false depending on the success of the check.
-  def self.required?(key, schema)
-    is_required = true
-    is_primary = schema[key]
-    schema['config'] = schema['config'] || { 'optional': [] }
-    is_optional = schema['config']['optional'].include?(key)
-
-    if is_primary && !is_optional
-      is_required
-    elsif (is_primary && is_optional) || (!is_primary && is_optional)
-      !is_required
-    else
-      raise 'The key provided is not in the schema.'
-    end
-  end
-
-  # Processes a collection against a schema
-  #
-  # Opens each file in the collection's expected directory and checks the
-  # file's frontmatter for the expected keys and the expected format of the
-  # values.
-  #
-  # NOTE - As it iterates through files, subdirectories will be ignored
-  #
-  # @param {hash} schema - the hash-representation of a schema file
-  #
-  # Returns true or false depending on the success of the check.
-  def self.processCollection(schema)
-    dir = File.join(schema['config']['path'])
-    passfail = []
-    Dir.open(dir).each do |f|
-      next if File.directory?(File.join(dir, f))
-      file = File.open(File.join(dir, f))
-      next if schema['config']['ignore'].include?(f)
-      data = YAML.load_file(file)
-
-      passfail.push check_keys(data, schema.keys, f)
-      passfail.push check_types(data, schema, File.join(dir, f))
-    end
-    passfail.keep_if { |p| p == false }
-    if passfail.empty?
-      return true
-    else
-      puts "There were #{passfail.count} errors".red
-      return false
-    end
-  end
-
-  # Loads a schema from file.
-  #
-  # @param {string} file - a string containing a filename
-  #
-  # Returns a hash loaded from the YAML doc or exits 1 if no schema file
-  # exists.
-  def self.load_schema(file, config)
-    schema = File.join(Dir.pwd, config['path'], file)
-    if File.exist?(schema)
-      YAML.load_file(schema)
-    else
-      puts "No schema for #{file}"
-      exit 1
-    end
-  end
-
-  # Checks a hash for expected keys
-  #
-  # @param {string} target - the hash under test
-  # @param {string} keys   - an array of keys the data is expected to have, usually loaded from
-  #        a schema file by loadschema()
-  # @param {string} title  - A string representing `data`'s name
-  def self.check_keys(target, keys, title)
-    keys -= ['config']
-    unless target.respond_to?('keys')
-      puts "The file #{title} is missing all frontmatter.".red
-      return false
-    end
-    diff = keys - target.keys
-    if diff.empty?
-      return true
-    else
-      puts "\nThe file #{title} is missing the following keys:".red
-      for k in diff
-        puts "    * #{k}".red
-      end
-      return false
-    end
-  end
-
-  # Validates that the values match expected types
-  #
-  # @param {string} data - the hash under test
-  # @param {hash} schema - the hash-representation of a schema file
-  # @param {string} file - a string containing a filename
-  def self.check_types(data, schema, file)
-    return false unless data.respond_to?('keys')
-    schema.each do |s|
-      key = s[0]
-      value = s[1]
-      type = if value.class == Hash
-               value['type']
-             else
-               value
-             end
-
-      next unless required?(key, schema)
-      if key == 'config'
-        next
-      elsif value.class == Hash
-        dict_key = value.values[1]
-        dict_key_type = value.values[2]
-        if data[key].class == Hash
-          if dict_key_type == 'String' && data[key][dict_key].class == String
-            next
-          else
-            puts "\nThe file #{file} is missing the following keys:\n" \
-                 "    * #{dict_key}".red
-            puts "    * invalid value for '#{dict_key}' in #{file}. " \
-                 "Expected #{dict_key_type} but was #{data[dict_key].class}\n\n"
-            return false
-          end
-        else
-            puts "\nThe file #{file} is missing the following keys:".red
-            puts "    * #{key}".red
-            puts "    * invalid value for '#{key}' in #{file}. " \
-                 "Expected #{type} but was #{data[key].class}\n\n"
-          return false
-        end
-      elsif type == 'Array' && data[key].class == Array
-        next
-      elsif type == 'Boolean' && data[key].is_a?(Boolean)
-        next
-      elsif type == 'String' && data[key].class == String
-        next
-      elsif type == 'Date'
-        next
-      else
-        puts "    * invalid value for '#{key}' in #{file}. " \
-             "Expected #{type} but was #{data[key].class}\n\n"
-        return false
-      end
-    end
-  end
-
-
-  # Initial function that starts the frontmatter tests
-  #
-  # Returns true or false depending on the success of the checks.
+  # Validates frontmatter for a file to ensure it has:
+  #     - required keys.
+  #     - keys that have valid and expected data types.
   def self.process(site, payload)
     @processed = true
     config = Jekyll.configuration
@@ -176,4 +26,167 @@ module FrontMatterTests
       raise 'Frontmatter tests failed.'
     end
   end
+
+  # Processes a collection against a schema.
+  #
+  # Opens each file in the collection's expected directory and checks the
+  # file's frontmatter for the expected keys and the expected format of the
+  # values.
+  #
+  # NOTE - As it iterates through files, subdirectories will be ignored.
+  #
+  # @param {hash} schema - the hash-representation of a schema file.
+  #
+  # Returns true if all files pass the frontmatter checks defined in the
+  # schema.
+  private_class_method def self.processCollection(schema)
+    dir = File.join(schema['config']['path'])
+    invalid_files = []
+    Dir.open(dir).each do |f|
+      next if File.directory?(File.join(dir, f))
+      file = File.open(File.join(dir, f))
+      next if schema['config']['ignore'].include?(f)
+      data = YAML.load_file(file)
+
+      invalid_files.push check_keys(data, schema.keys, f)
+      invalid_files.push check_types(data, schema, File.join(dir, f))
+    end
+    invalid_files.keep_if { |p| p == false }
+    if invalid_files.empty?
+      return true
+    else
+      puts "There were #{passfail.count} errors".red
+      return false
+    end
+  end
+
+  # Checks if key is required in schema.
+  #
+  # @param {string} key  - key name.
+  # @param {hash} schema - the hash-representation of a schema file.
+  #
+  # Returns true if key is found and required.
+  private_class_method def self.required?(key, schema)
+    is_required = true
+    is_primary = schema[key]
+    schema['config'] = schema['config'] || { 'optional': [] }
+    is_optional = schema['config']['optional'].include?(key)
+
+    if is_primary && !is_optional
+      is_required
+    elsif (is_primary && is_optional) || (!is_primary && is_optional)
+      !is_required
+    else
+      raise 'The following key provided is not in the schema: #{key}'
+    end
+  end
+
+  # Loads a schema from file.
+  #
+  # @param {string} schema_filename - a string containing the schema filename.
+  # @param {object} config - an object containing configuration information.
+  #        Currently this only includes the schema's path, but it could
+  #        conceivably this could contain other configuration information in
+  #        the future.
+  #
+  # Returns a hash loaded from the YAML doc or exits 1 if no schema file
+  # exists.
+  private_class_method def self.load_schema(schema_filename, config)
+    schema = File.join(Dir.pwd, config['path'], schema_filename)
+    if File.exist?(schema)
+      YAML.load_file(schema)
+    else
+      puts "No schema for #{schema_filename}"
+      exit 1
+    end
+  end
+
+  # Checks a hash for expected keys.
+  #
+  # @param {hash} target - the hash being tested for valid keys.
+  # @param {array} keys - an array of keys the data is expected to have,
+  #        usually loaded from a schema file by load_schema().
+  # @param {string} filename  - A string representing the name of the file
+  #        being tested for expected frontmatter keys.
+  #
+  # Returns true if all required keys are found.
+  private_class_method def self.check_keys(target, keys, filename)
+    keys -= ['config']
+    unless target.respond_to?('keys')
+      puts "The file #{filename} is missing all frontmatter.".red
+      return false
+    end
+    diff = keys - target.keys
+    if diff.empty?
+      return true
+    else
+      puts "\nThe file #{filename} is missing the following keys:".red
+      for k in diff
+        puts "    * #{k}".red
+      end
+      return false
+    end
+  end
+
+  # Validates that the frontmatter keys match expected types in the schema.
+  #
+  # @param {hash} target - the hash being tested for valid keys.
+  # @param {hash} schema - the hash-representation of a schema file.
+  # @param {string} filename  - A string representing the name of the file
+  #        being tested for expected frontmatter keys.
+  #
+  # Returns true if all frontmatter keys are valid.
+  private_class_method def self.check_types(target, schema, filename)
+    return false unless target.respond_to?('keys')
+    schema.each do |s|
+      key = s[0]
+      value = s[1]
+      type = if value.class == Hash
+               value['type']
+             else
+               value
+             end
+
+      next unless required?(key, schema)
+      if key == 'config'
+        next
+      elsif value.class == Hash
+        dict_key = value.values[1]
+        dict_key_type = value.values[2]
+        if target[key].class == Hash
+          if dict_key_type == 'String' && target[key][dict_key].class == String
+            next
+          else
+            puts "\nThe file #{filename} has the following problems with" \
+                 " it's key:\n".red
+            puts "    * #{dict_key}".red
+            puts "    * invalid value for '#{dict_key}' in #{filename}. " \
+                 "Expected #{dict_key_type} but was " \
+                 "#{target[dict_key].class}\n\n"
+            return false
+          end
+        else
+            puts "\nThe file #{filename} has the following problems with" \
+                 " it's key:\n".red \
+            puts "    * #{key}".red
+            puts "    * invalid value for '#{key}' in #{filename}. " \
+                 "Expected #{type} but was #{target[key].class}\n\n"
+          return false
+        end
+      elsif type == 'Array' && target[key].class == Array
+        next
+      elsif type == 'Boolean' && target[key].is_a?(Boolean)
+        next
+      elsif type == 'String' && target[key].class == String
+        next
+      elsif type == 'Date'
+        next
+      else
+        puts "    * invalid value for '#{key}' in #{filename}. " \
+             "Expected #{type} but was #{target[key].class}\n\n"
+        return false
+      end
+    end
+  end
+
 end

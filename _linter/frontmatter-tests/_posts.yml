@@ -1,6 +1,6 @@
 ---
 excerpt: "String"
-header: 
+header:
   type: "Dictionary"
   key: "og_image"
   key-type: "String"
