@@ -8,26 +8,30 @@ share: true
 related: true
 sidebar:
   nav: main
+tags:
+- ferngully
+- zestful
+- refactoring
 ---
 
-I recently stumbled upon an open source Python library from a time long forgotten. I'm talking about a time when the earth was roamed by functions as big as buildings. From a time when everyone knew the words "unit" and "testing," but nobody had yet dared use them in the same sentence.
-
-It turned out that the software had some sort of primitive source control. Perhaps I could use modern tools to find its last commit and estimate its vintage that way:
+A few months ago, while working on KetoHub, I realized I needed a way of parsing recipe ingredients. Several people pointed me to an unmaintained open-source library from a time long forgotten. From a time when the earth was roamed by functions as big as buildings. A time when everyone knew the words "unit" and "testing," but nobody had yet dared use them in the same sentence. I'm talking of course, about... 2016?
 
 # What is it?
 
 This is a library that *The New York Times* published in order to parse their ingredients.
 
-At the time they published it, many, including famed Python developer D. John Trump:
+I wasn't the only one to notice these issues. At the time they published it, they received tough criticism from famed Python developer D. John Trump:
 
 Fake Trump tweet: Failing @nytimes doesn't even unit test their code before release! very DISRESPECTFUL to @kentbeck!
 
 
-# Getting it to run
+# Running it locally
+
+The first step was to see if it still ran at all and produced sane results. I asked my contractor [Ferngully](#/tags/ferngully) to 
+
+# Running it in continuous integration
 
 # Adding an end-to-end test
-
-Note: For the sake of brevity clarity, I took some creative liberties in the retelling of the changes. If you look at the commits, the files don't perfectly match up to what I presented here.
 
 This is curious. Between my local Docker container and the one that runs on Travis, I get different results
 
@@ -87,3 +91,8 @@ You can demo it on my site and you can use it in your apps.
 # A note about the code
 
 I don't think it's high-quality code, but even though a lot was klunky, it still did what it was supposed to do. I had enough information to understand how to use it and generally what everything did. Granted, I think automated tests and better documentation do this much better, but the original authors got me somewhere I might not have been able to get to on my own.
+
+---
+
+
+Note: For the sake of brevity clarity, I took some creative liberties in the retelling of the changes. If you look at the commits, they don't *perfectly* match up to what I presented here.
