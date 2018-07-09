@@ -87,10 +87,10 @@ Like Brian, [I have a NAS]({{ base_path }}/sia-via-docker/) with plenty of space
 
 ## Case
 
-{% include image.html file="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max_width="180px" class="align-right" link_url="https://www.amazon.com/gp/product/B00ZPWOA6I/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li3&tag=mtlynch-20&linkId=341a186e437bfbe9700d3298042dc564" %}
+{% include image.html file="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max_width="180px" class="align-right" link_url="http://www.anrdoezrs.net/links/8329872/type/dlg/https://www.newegg.com/Product/Product.aspx?Item=N82E16811147248&cm_re=Rosewill_Micro_ATX_SRM-01-_-11-147-248-_-Product" %}
 
 {: .clearfix}
-For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) is a nice, small, inexpensive, and functional.
+For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](http://www.anrdoezrs.net/links/8329872/type/dlg/https://www.newegg.com/Product/Product.aspx?Item=N82E16811147248&cm_re=Rosewill_Micro_ATX_SRM-01-_-11-147-248-_-Product) is a nice, small, inexpensive, and functional.
 
 ## Graphics
 
@@ -119,7 +119,7 @@ Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadc
 | Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](http://amzn.to/2oVMo9u) |
 | Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](http://amzn.to/2qmwmHO) |
 | Network | [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH) |
-| Case | [Rosewill Micro ATX SRM-01](http://amzn.to/2oYTvP6) |
+| Case | [Rosewill Micro ATX SRM-01](http://www.anrdoezrs.net/links/8329872/type/dlg/https://www.newegg.com/Product/Product.aspx?Item=N82E16811147248&cm_re=Rosewill_Micro_ATX_SRM-01-_-11-147-248-_-Product) |
 | **Total Cost** | **$823.55** |
 
 # Build
