@@ -14,9 +14,13 @@ header:
 excerpt: For the past four years, I've worked as a software developer at Google. On
   February 1st, I quit. It was because they refused to buy me a Christmas present.
 discuss_urls:
-  reddit: "https://redd.it/80whkc"
-  hacker_news: "https://news.ycombinator.com/item?id=16483241"
-  indie_hackers: "https://www.indiehackers.com/forum/why-i-quit-google-to-work-for-myself-284c36ec48"
+  reddit: https://redd.it/80whkc
+  hacker_news: https://news.ycombinator.com/item?id=16483241
+  indie_hackers: https://www.indiehackers.com/forum/why-i-quit-google-to-work-for-myself-284c36ec48
+tags:
+- entrepreneurship
+- google
+- sia
 ---
 
 For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.
