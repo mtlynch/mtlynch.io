@@ -8,6 +8,9 @@ set -x
 IMAGE_NAME="mtlynch/jekyll"
 CONTAINER_NAME="mtlynch-io-container"
 
+# Remove existing container.
+docker rm -f "$CONTAINER_NAME" || true
+
 docker run --tty --detach --volume "${PWD}:/app" --name "$CONTAINER_NAME" "$IMAGE_NAME"
 
 docker exec "$CONTAINER_NAME" npm install
