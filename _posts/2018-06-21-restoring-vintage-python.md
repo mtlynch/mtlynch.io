@@ -199,7 +199,7 @@ model_file  test_file  test_output  train_file
 
 Okay, now I could run it locally under Docker. I needed to build it on Travis:
 
-{% include files.html title="travis.yml" language="yml" %}
+{% include files.html title=".travis.yml" language="yml" %}
 
 {% include files.html title="Dockerfile" language="bash" %}
 
