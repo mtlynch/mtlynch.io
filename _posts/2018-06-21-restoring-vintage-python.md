@@ -12,8 +12,6 @@ tags:
 - ferngully
 - zestful
 - refactoring
-excerpt: "How I brought an unmaintained Python library back to life"
-header: null
 ---
 
 Recently, I stumbled upon an open-source library from a time long forgotten. From a time when the earth was roamed by functions as big as buildings. A time when everyone knew the words "unit" and "testing," but nobody had yet dared use them in the same sentence. Oh, wait, it's under source control, so I can just check the date right now:
