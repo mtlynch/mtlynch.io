@@ -11,7 +11,6 @@ sidebar:
 date: '2016-05-30 00:00:00 -0400'
 header:
   teaser: images/resized/2016-05-30-sia-via-docker/480/sia-running.png
-  og_image: ""
 tags:
 - docker
 - sia

@@ -4,8 +4,6 @@ layout: single
 author_profile: true
 read_time: true
 comments: true
-header:
-  og_image: ""
 share: true
 related: true
 sidebar:

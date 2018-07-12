@@ -11,7 +11,6 @@ sidebar:
 excerpt: Using the Raspberry Pi to water plants automatically
 header:
   teaser: images/resized/2017-06-27-greenpithumb/480/greenpithumb-side-full.jpg
-  og_image: ""
 tags:
 - raspberry pi
 - greenpithumb
