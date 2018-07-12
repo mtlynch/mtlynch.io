@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# End-to-end test for ingredient-phrase-tagger. Uses generate_data to generate
+# training and test data, then verifies that the generated files match up with
+# the golden version of pre-generated data.
+
+# Exit build script on first failure
+set -e
+
+# Echo commands to stdout.
+set -x
+
+LABELLED_DATA_FILE=nyt-ingredients-snapshot-2015.csv
+COUNT_TRAIN=20000
+COUNT_TEST=2000
+OUTPUT_DIR=$(mktemp -d)
+CRF_TRAINING_FILE="${OUTPUT_DIR}/training_data.crf"
+CRF_TESTING_FILE="${OUTPUT_DIR}/testing_data.crf"
+
+CRF_LEARN_TEMPLATE=template_file
+# This needs to be explicit so that there is consistent training between
+# different machines.
+CRF_TRAINING_THREADS=2
+CRF_MODEL_FILE="${OUTPUT_DIR}/crf_model"
+
+TESTING_OUTPUT_FILE="${OUTPUT_DIR}/testing_output"
+EVAL_OUTPUT_FILE="${OUTPUT_DIR}/eval_output"
+
+GOLDEN_DIR=tests/golden
+GOLDEN_CRF_TRAINING_FILE="${GOLDEN_DIR}/training_data.crf"
+GOLDEN_CRF_TESTING_FILE="${GOLDEN_DIR}/testing_data.crf"
+GOLDEN_EVAL_OUTPUT_FILE="${GOLDEN_DIR}/eval_output"
+
+bin/generate_data \
+  --data-path="$LABELLED_DATA_FILE" \
+  --count="$COUNT_TRAIN" \
+  --offset=0 > "$CRF_TRAINING_FILE"
+
+diff --context=2 "$GOLDEN_CRF_TRAINING_FILE" "$CRF_TRAINING_FILE"
+
+bin/generate_data \
+  --data-path="$LABELLED_DATA_FILE" \
+  --count="$COUNT_TEST" \
+  --offset=$COUNT_TRAIN > "$CRF_TESTING_FILE"
+
+diff --context=2 "$GOLDEN_CRF_TESTING_FILE" "$CRF_TESTING_FILE"
+
+crf_learn \
+  --thread="$CRF_TRAINING_THREADS" \
+  "$CRF_LEARN_TEMPLATE" "$CRF_TESTING_FILE" "$CRF_MODEL_FILE"
+
+crf_test \
+  --model="$CRF_MODEL_FILE" \
+  "$CRF_TESTING_FILE" > "$TESTING_OUTPUT_FILE"
+
+python bin/evaluate.py "$TESTING_OUTPUT_FILE" > "$EVAL_OUTPUT_FILE"
+cat "$EVAL_OUTPUT_FILE"
+
+diff "$GOLDEN_EVAL_OUTPUT_FILE" "$EVAL_OUTPUT_FILE"
+
+rm -rf $OUTPUT_DIR

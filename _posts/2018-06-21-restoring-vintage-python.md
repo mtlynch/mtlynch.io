@@ -12,6 +12,8 @@ tags:
 - ferngully
 - zestful
 - refactoring
+excerpt: "How I brought an unmaintained Python library back to life"
+header: null
 ---
 
 Recently, I stumbled upon an open-source library from a time long forgotten. From a time when the earth was roamed by functions as big as buildings. A time when everyone knew the words "unit" and "testing," but nobody had yet dared use them in the same sentence. Oh, wait, it's under source control, so I can just check the date right now:
@@ -168,12 +170,84 @@ As is so often the case in yak shaving adventures with software development, I g
 I removed the call to `visualize.rb` and ran `roundtrip.sh` and everything seemed to work end-to-end:
 
 ```bash
+# Delete ruby line.
+:/ingredient-phrase-tagger# sed -i '/ruby/d' roundtrip.sh
+
 :/ingredient-phrase-tagger# ./roundtrip.sh
+```
+
+It ran for about five minutes and produced this
+
+```text
+Sentence-Level Stats:
+        correct:  1487
+        total:  1999
+        % correct:  74.3871935968
+
+Word-Level Stats:
+        correct: 10391
+        total: 11450
+        % correct: 90.7510917031
+```
+
+I could also see that it produced a model file:
+
+```
+# ls tmp/
+model_file  test_file  test_output  train_file
 ```
 
 # Running it in continuous integration
 
+Okay, now I could run it locally under Docker. I needed to build it on Travis:
+
+begin include
+
+{% include files.html title=".travis.yml" language="yml" %}
+
+end include
+
+TODO: Make these file includes.
+
+```yaml
+---
+sudo: required
+services: docker
+script: docker build .
+```
+
+```
+FROM ubuntu:16.04
+LABEL maintainer="Michael Lynch <michael@mtlynch.io>"
+
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install -y build-essential git python2.7 python-pip
+
+RUN git clone https://github.com/mtlynch/crfpp.git && cd crfpp && ./configure && make && make install && cd ..
+RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/local.conf && ldconfig
+
+RUN git clone https://github.com/mtlynch/ingredient-phrase-tagger.git && cd ingredient-phrase-tagger && python setup.py install && cd ..
+
+# Clean up.
+RUN rm -rf /var/lib/apt/lists/* && \
+    rm -Rf /usr/share/doc && \
+    rm -Rf /usr/share/man && \
+    apt-get autoremove -y && \
+    apt-get clean
+
+WORKDIR /app
+```
+
+It built!
+
+https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282?utm_source=github_status&utm_medium=notification
+
+TODO: Show Travis screenshot.
+
 # Adding an end-to-end test
+
+{% include files.html title="test_e2e" language="bash" %}
 
 This is curious. Between my local Docker container and the one that runs on Travis, I get different results
 
