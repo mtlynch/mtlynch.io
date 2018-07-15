@@ -102,7 +102,9 @@ Most of the dependencies were just Python packages, so those installed trivially
 Darn!
 
 ```bash
-:/crfpp# git clone https://github.com/taku910/crfpp.git
+# apt-get update && apt-get install git -y
+...
+# git clone https://github.com/taku910/crfpp.git
 :/crfpp# cd crfpp
 :/crfpp# ./configure
 ...
@@ -202,6 +204,10 @@ I could also see that it produced a model file:
 # ls tmp/
 model_file  test_file  test_output  train_file
 ```
+
+# Putting it all together
+
+{% include files.html title="Dockerfile" language="bash" %}
 
 # Success
 

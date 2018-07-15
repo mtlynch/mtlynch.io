@@ -18,8 +18,6 @@ tags:
 
 Okay, now I could run it locally under Docker. I needed to build it on Travis:
 
-{% include files.html title="Dockerfile" language="bash" %}
-
 {% include files.html title=".travis.yml" language="yml" %}
 
 It built!
