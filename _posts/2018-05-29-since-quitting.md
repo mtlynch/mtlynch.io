@@ -152,9 +152,9 @@ We now have a [working demo](https://ingredientparser.com). If you give it a rec
 
 {% include image.html file="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" max_width="800px" link_url="https://ingredientparser.com/" %}
 
-For the next few weeks, I'm going to focus on reaching out to different app developers about how the Ingredient Parser API can be useful for them. By June, I hope to refine the API based on their feedback and publish it to marketplaces like [Mashape](https://market.mashape.com/) and [RapidAPI](https://rapidapi.com/).
+For the next few weeks, I'm going to focus on reaching out to different app developers about how the Ingredient Parser API can be useful for them. By June, I hope to refine the API based on their feedback and publish it to marketplaces like [Mashape](https://market.mashape.com/) and [RapidAPI](https://rapidapi.com/). **Update: (7/15)**: It's [now available](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis).
 
-If you're a developer with an app that handles recipe ingredients or you know of one that does, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io) or [sign up for Ingredient Parser API updates](http://eepurl.com/dvGy_b).
+If you're a developer with an app that handles recipe ingredients or you know of one that does, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
 
 ---
 
