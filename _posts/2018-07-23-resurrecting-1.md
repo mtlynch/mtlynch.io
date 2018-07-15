@@ -1,5 +1,5 @@
 ---
-title: Resurrecting a Dead Ingredient Parsing Library
+title: 'Resurrecting a Dead Library: Part One - Resuscitation'
 layout: single
 author_profile: true
 read_time: true
@@ -25,6 +25,8 @@ The library is the ingredient-phrase-tagger, published by the *The New York Time
 | input | quantity | unit | name | comment |
 |--------|------------|------|--------|-------------|
 | "2 1/2 cups of finely chopped red onions" | 2.5 | cup | red onions | finely chopped |
+
+TODO: More rows
 
 Eventually, they realized that they had enough data that they could train a machine learning model to do this automatically, so they wrote tools for that.
 
@@ -100,6 +102,10 @@ Most of the dependencies were just Python packages, so those installed trivially
 Darn!
 
 ```bash
+:/crfpp# git clone https://github.com/taku910/crfpp.git
+:/crfpp# cd crfpp
+:/crfpp# ./configure
+...
 :/crfpp# make
 ...
 g++ -DHAVE_CONFIG_H -I.     -O3 -Wall -c -o crf_learn.o crf_learn.cpp
@@ -107,7 +113,7 @@ crf_learn.cpp:9:21: fatal error: winmain.h: No such file or directory
 compilation terminated.
 ```
 
- Wait, is this library still maintained?
+Was this library still maintained?
  
 ```
 :/crfpp# git log -1
@@ -122,7 +128,9 @@ No! This repository is unmaintained too? I was already restoring one library. I 
 
 https://github.com/taku910/crfpp/pull/15
 
-I [forked the repo](https://github.com/mtlynch/crfpp), cherry picked @humem's change, and boom! It worked!
+I [forked the repo](https://github.com/mtlynch/crfpp), cherry-picked @humem's change, and boom! It worked!
+
+TODO: show how I did that.
 
 ```bash
 :/crfpp# make
@@ -195,173 +203,12 @@ I could also see that it produced a model file:
 model_file  test_file  test_output  train_file
 ```
 
-# Running it in continuous integration
+# Success
 
-Okay, now I could run it locally under Docker. I needed to build it on Travis:
+Next, I 
 
-{% include files.html title="Dockerfile" language="bash" %}
-
-{% include files.html title=".travis.yml" language="yml" %}
-
-It built!
-
-https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282?utm_source=github_status&utm_medium=notification
-
-TODO: Show Travis screenshot.
-
-# Adding an end-to-end test
-
-Now that I had it running under CI, but it was just building. I wanted a test that would fail if I did anything to change the library's behavior.
-
-The [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) script in the original repo looked like a good place to start. At that point, I didn't understand everything it was doing, but it looked like it was thoroughly exercising the library's functionality.
-
-Earlier, I showed that at the end of the script, it produces summary statistics about the model's performance:
-
-```text
-Sentence-Level Stats:
-        correct:  1487
-        total:  1999
-        % correct:  74.3871935968
-
-Word-Level Stats:
-        correct: 10391
-        total: 11450
-        % correct: 90.7510917031
-```
-
-That looked like 
-
-I wrote an [e2e script](https://github.com/mtlynch/ingredient-phrase-tagger/blob/a4cde8d26e21f345e5291093110a4fb246195619/test_e2e) that performed the same steps as `roundtrip.sh`, but at the end, it compared the output to the "known good" output (the output from above):
-
-```bash
-EVAL_OUTPUT_FILE="$(mktemp -d)/eval_output"
-python bin/evaluate.py "${OUTPUT_DIR}/testing_data.crf" > "$EVAL_OUTPUT_FILE"
-
-GOLDEN_EVAL_OUTPUT_FILE="tests/golden/eval_output"
-diff "$GOLDEN_EVAL_OUTPUT_FILE" "$EVAL_OUTPUT_FILE"
-```
-
-I ran this build script on my local machine several times, and it passed each time. Then I ran it on Travis and it failed:
-
-```diff
-+ diff tests/golden/eval_output /tmp/tmp.yVarTSxgRy/eval_output
-3c3
-<       correct:  1487
----
->       correct:  1482
-5c5
-<       % correct:  74.3871935968
----
->       % correct:  74.1370685342
-8c8
-<       correct: 10391
----
->       correct: 10326
-10c10
-<       % correct: 90.7510917031
----
->       % correct: 90.1834061135
-```
-
-The test was catching a change in behavior, which was good. But I was baffled because the test ran in a Docker container on both my local machine and on Travis. How could I be getting different results? The whole point of a Docker container is that the program should be hermetically contained and behave the same anywhere.
-
-I needed to expand the test to produce more actionable information.
-
-# Expanding the end-to-end test
-
-The build script did have other intermediate outputs before the summary statistics. The build script trained and evaluated a machine learning model, but before it did that, it ran a script called `generate_data` that took in a raw CSV and produced output files that would later get fed into ML training.
-
-The CSV just looked like a database dump of all of the NYT's data:
-
-```bash
-$ head -n 3 nyt-ingredients-snapshot-2015.csv
-index,input,name,qty,range_end,unit,comment
-0,"1 1/4 cups cooked and pureed fresh butternut squash, or 1 10-ounce package frozen squash, defrosted",butternut squash,1.25,0.0,cup,"cooked and pureed fresh, or 1 10-ounce package frozen squash, defrosted"
-1,"1 cup peeled and cooked fresh chestnuts (about 20), or 1 cup canned, unsweetened chestnuts",chestnuts,1.0,0.0,cup,"peeled and cooked fresh (about 20), or 1 cup canned, unsweetened"
-```
-
-Fortunately, the output files were plaintext files as well. They all looked a bit like this:
-
-```bash
-$ head -n 16 /tmp/tmp.yVarTSxgRy/testing_data.crf
-1       I1      L12     NoCAP   NoPAREN B-QTY
-boneless        I2      L12     NoCAP   NoPAREN I-COMMENT
-pork    I3      L12     NoCAP   NoPAREN B-NAME
-tenderloin      I4      L12     NoCAP   NoPAREN I-NAME
-,       I5      L12     NoCAP   NoPAREN B-COMMENT
-about   I6      L12     NoCAP   NoPAREN I-COMMENT
-1       I7      L12     NoCAP   NoPAREN B-QTY
-pound   I8      L12     NoCAP   NoPAREN I-COMMENT
-
-Salt    I1      L8      YesCAP  NoPAREN B-NAME
-and     I2      L8      NoCAP   NoPAREN I-NAME
-freshly I3      L8      NoCAP   NoPAREN B-COMMENT
-ground  I4      L8      NoCAP   NoPAREN I-COMMENT
-black   I5      L8      NoCAP   NoPAREN B-NAME
-pepper  I6      L8      NoCAP   NoPAREN I-NAME
-
-```
-
-I didn't know what these files did yet. I knew they were related to training the model or evaluating its performance, but I didn't understand hat all the data meant.
-
-I later discovered that this was due to the `--threads` flag in CRF++. It's automatically set to the number of CPUs available
-
-# Add in my build tools
-
-I have a standard set of dev tools I use for every Python project I work on:
-
-* Coveralls
-* YAPF
-* pyflakes
-* DocStringChecker
-
-# Speeding up the build
-
-# Trimming a heavy dependency
-
-This was curious. Between my local Docker container and the one that runs on Travis, I get different results
-
-```diff
-1       I1    L12  NoCAP  YesPAREN  B-QTY
-small   I2    L12  NoCAP  NoPAREN   OTHER
-bulb    I3    L12  NoCAP  NoPAREN   B-UNIT
-of      I4    L12  NoCAP  NoPAREN   OTHER
-jicama  I5    L12  NoCAP  YesPAREN  B-NAME
-(       I6    L12  NoCAP  YesPAREN  OTHER
--1/2     I7    L12  NoCAP  YesPAREN  OTHER
-+1/2     I7    L12  NoCAP  YesPAREN  B-COMMENT
-cup     I8    L12  NoCAP  YesPAREN  OTHER
-grated  I9    L12  NoCAP  YesPAREN  OTHER
-jicama  I10   L12  NoCAP  YesPAREN  B-NAME
-)       I11   L12  NoCAP  YesPAREN  OTHER
-```
-# Fixing the first bug
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/26/files
-# Delete the cruft
-
-At this point, I had a good feel for the code. Red flags I saw at the beginning, I was now more confident they were indeed extraneous. I had end-to-end tests to verify everything, so if I broke something, I'd find out.
-
-One thing that had gnawing at me throughout my work was seeing a folder called `tmp/` that was only there so that one of their shell scripts. I no longer needed their shell script because I was doing the same
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/32
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/33
-
-# Edit like nobody's watching
-
-Now that I had the code under decent amount of test, I could start making *functional* changes.
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/28/files
-
-# Refactor one to throw away
-
-I eventually decided I wanted a whole new design.
-
-You can demo it on my site and you can use it in your apps.
-
-# A note about the code
-
-I don't think it's high-quality code, but even though a lot was klunky, it still did what it was supposed to do. I had enough information to understand how to use it and generally what everything did. Granted, I think automated tests and better documentation do this much better, but the original authors got me somewhere I might not have been able to get to on my own.
+* Scaffolding:
+* Rehabilitation: In which I fix errors
 
 ---
 
