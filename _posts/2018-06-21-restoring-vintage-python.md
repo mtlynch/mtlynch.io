@@ -280,7 +280,7 @@ index,input,name,qty,range_end,unit,comment
 1,"1 cup peeled and cooked fresh chestnuts (about 20), or 1 cup canned, unsweetened chestnuts",chestnuts,1.0,0.0,cup,"peeled and cooked fresh (about 20), or 1 cup canned, unsweetened"
 ```
 
-Fortunately, the output files were plaintext files as well:
+Fortunately, the output files were plaintext files as well. They all looked a bit like this:
 
 ```bash
 $ head -n 16 /tmp/tmp.yVarTSxgRy/testing_data.crf
@@ -302,40 +302,10 @@ pepper  I6      L8      NoCAP   NoPAREN I-NAME
 
 ```
 
-Keep in mind, I didn't know what these files did yet. I knew they were related to training the model or evaluating its performance, but I didn't understand hat all the data meant.
-
-```bash
-OUTPUT_DIR=$(mktemp -d)
-CRF_TRAINING_FILE="${OUTPUT_DIR}/training_data.crf"
-CRF_TESTING_FILE="${OUTPUT_DIR}/testing_data.crf"
-
-CRF_LEARN_TEMPLATE=template_file
-CRF_MODEL_FILE="${OUTPUT_DIR}/crf_model"
-
-TESTING_OUTPUT_FILE="${OUTPUT_DIR}/testing_output"
-EVAL_OUTPUT_FILE="${OUTPUT_DIR}/eval_output"
-
-GOLDEN_DIR=tests/golden
-GOLDEN_CRF_TRAINING_FILE="${GOLDEN_DIR}/training_data.crf"
-GOLDEN_CRF_TESTING_FILE="${GOLDEN_DIR}/testing_data.crf"
-GOLDEN_EVAL_OUTPUT_FILE="${GOLDEN_DIR}/eval_output"
-
-bin/generate_data \
-  --data-path="$LABELLED_DATA_FILE" \
-  --count="$COUNT_TRAIN" \
-  --offset=0 > "$CRF_TRAINING_FILE"
-
-diff --context=2 "$GOLDEN_CRF_TRAINING_FILE" "$CRF_TRAINING_FILE"
-
-bin/generate_data \
-  --data-path="$LABELLED_DATA_FILE" \
-  --count="$COUNT_TEST" \
-  --offset=$COUNT_TRAIN > "$CRF_TESTING_FILE"
-
-diff --context=2 "$GOLDEN_CRF_TESTING_FILE" "$CRF_TESTING_FILE"
-```
+I didn't know what these files did yet. I knew they were related to training the model or evaluating its performance, but I didn't understand hat all the data meant.
 
 I later discovered that this was due to the `--threads` flag in CRF++. It's automatically set to the number of CPUs available
+
 # Add in my build tools
 
 I have a standard set of dev tools I use for every Python project I work on:
