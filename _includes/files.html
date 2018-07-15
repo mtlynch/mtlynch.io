@@ -40,6 +40,14 @@
   {% endif %}
   {% assign link = site.baseurl | append: '/files/' | append: file_path %}
 
+  {% comment %}
+  <!-- determine file's subdirectory to compare to post subdirectory -->
+  {% endcomment %}
+  {% assign subdir_array = file.path | split: '/' %}
+  {% assign subdir = subdir_array[1] %}
+
+  {% if subdir == page.slug %}
+
 ```{{ lang_highlight }}
 {{ file.content -}}
 ```
@@ -48,5 +56,7 @@
 <div class="clearfix">
   <a href="{{ link }}" download class="btn--small code-tab">download raw</a>
 </div>
+
+  {% endif %}
 
 {% endfor %}
