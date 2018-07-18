@@ -19,8 +19,12 @@
   }
 }
 
-.page__content a.anchor-link {
+.page__content a.anchor-link, .page__content a.no-hover:not(.btn):not(#goog-wm-sb):hover {
   text-decoration: none;
+}
+
+.page__content a.no-hover:not(.btn):not(#goog-wm-sb):hover img {
+  box-shadow: none;
 }
 
 *:hover  > .anchor-link {

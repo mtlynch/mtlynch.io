@@ -14,6 +14,10 @@ collections:
   ymls:
     output: true
     permalink: /files/:path.yml
+  sections:
+    title: sections
+    output: false
+    permalink: /sections/:path/
 defaults:
 - scope:
     path: ''
