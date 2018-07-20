@@ -15,19 +15,12 @@
 {% for ad in ads %}
 
 <div class="adv_cont">
-  {% if ad.link %}
-  <a href="{{ ad.link }}" class="no-hover" target="_blank">
-  {% endif %}
-
     <div class="adv_cont_inner">
 
       {{ ad.content | markdownify }}
 
+      <div class="cf"></div>
     </div>
-
-  {% if ad.link %}
-  </a>
-  {% endif %}
 </div>
 
 {% endfor %}
