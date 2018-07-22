@@ -1,0 +1,26 @@
+{% comment %}
+<!--
+  Ads Include
+
+  This partial is used to add a native advertisement into a page's content
+  dynamically.
+
+  @param {string} "title" - Required. markdown filename of the ad found in
+    _sections/ads
+-->
+{% endcomment %}
+
+{% assign ads = site.sections|where:"type","ad"|where:"slug",include.title %}
+
+{% for ad in ads %}
+
+<div class="adv_cont">
+    <div class="adv_cont_inner">
+
+      {{ ad.content | markdownify }}
+
+      <div class="cf"></div>
+    </div>
+</div>
+
+{% endfor %}

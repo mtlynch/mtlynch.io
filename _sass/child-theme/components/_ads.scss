@@ -1,0 +1,66 @@
+// Ads Classes
+
+.adv_cont {
+  background: #f9f9f9;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  color: #666;
+  font-size: 0.8em;
+  @include border(1px, solid, #d1d1d1);
+  clear: both;
+  margin: 20px 0px;
+  text-align: left;
+  width: 100%;
+
+  h3 {
+    margin: 0px 0px 10px;
+    font-size: 1.5em;
+
+    @include breakpoint($small) {
+      font-size: 1.1em;
+    }
+
+    @include breakpoint($large) {
+      font-size: 1.3em;
+    }
+  }
+
+  .adv_cont_inner {
+    padding: 1%;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 100%;
+    margin-bottom: 0.5em;
+    min-width: 190px;
+    z-index: 10;
+    position: relative;
+
+    @include breakpoint($small) {
+      width: 30%;
+    }
+
+    @include breakpoint($medium) {
+      width: 22%;
+      margin-bottom: 0;
+    }
+  }
+
+  a.no-hover {
+    color: #fff;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1em;
+
+    @include breakpoint($large) {
+      font-size: 0.8em;
+    }
+  }
+
+  .cf {
+    margin: 0;
+    height: 0;
+  }
+}
