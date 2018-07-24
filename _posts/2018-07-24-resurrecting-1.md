@@ -363,3 +363,7 @@ Stay tuned later this week for **part two** of this blog series, where I will de
 * How I added end-to-end tests so that I wouldn't accidentally break anything
 * How I configured the tests to run automatically before applying any change to the code
 * How I added my standard toolset to the codebase to facilitate maintenance
+
+---
+
+*Cover illustration by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com).*
