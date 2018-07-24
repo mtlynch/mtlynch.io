@@ -22,21 +22,21 @@ excerpt: The story of how I got an old library up and running again and used it 
 
 When I arrived on the scene, it wasn't a pretty sight.
 
-I saw formerly active, cheerful Python classes in a sorry state of atrophy, having gone years without exercise. Functions of all levels of abstraction were crammed together inhumanely under the label `utils`. I tried to read the UI code but found something obstructing it. After a closer look, nausea overtook me. The obstructions were, in fact, gory chunks of business logic.
+I saw formerly active, cheerful Python classes in a sorry state of atrophy, having gone years without exercise. Functions at all levels of abstraction were crammed together inhumanely under the label `utils`. I tried to read the UI code but found something obstructing it. After a closer look, I was overcome with nausea. The obstructions in the view layer were, in fact, gory chunks of business logic.
 
 The code was dead.
 
 In this three-part series, I'll show you how I resurrected it and built a business with the result:
 
 * **Part One: Resuscitation (this post)** - In which I nurse the code back to health so that it runs on any modern system
-* Part Two: Stabilization (coming soon) - In which I prevent the code from breaking while I restore it
+* Part Two: Stabilization (coming soon) - In which I prevent functionality from regressing while I restore the code
 * Part Three: Rehabilitation (coming soon) - In which I fix the code's most egregious bugs and begin refactoring
 
 {% include image.html file="cover.jpg" alt="Bear doctors resuscitating python" max_width="800px" img_link=true %}
 
 # The library
 
-The library was [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), an open-source library that *The New York Times* published for parsing recipe ingredients into structured data.
+The library was [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), an open-source library that *The New York Times* published. It allowed users to parse recipe ingredients into structured data.
 
 A few years ago, the *Times* decided to digitize their extensive historical archive of cooking recipes. They hired data entry workers to look at raw ingredients from these recipes and tease apart the data they represented. The result was a database that looked like this:
 
@@ -46,11 +46,11 @@ A few years ago, the *Times* decided to digitize their extensive historical arch
 | 2 1/2 cups of finely chopped red onions | 2.5 | cup | red onions | finely chopped |
 | 2 dried pasilla chilies | 2.0 | | pasilla chilies | dried |
 
-After six years of this, they realized that they had enough data to [train a machine learning model](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) that could simulate the data entry decisions. They create a machine learning model that interpreted ingredients accurately enough that they no longer needed humans to perform this tedious task manually.
+After six years of adding to this database, they realized that they had enough data to [train a machine learning model](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) that could simulate the human workers' data entry decisions. The project was a success, so they published all of their source code and data.
 
 # What business was it of mine?
 
-I had the same problem as the *Times*. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Because most websites don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
+I had the same problem as the *Times*. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
 
 {% assign fig_caption = "Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -60,27 +60,29 @@ I had the same problem as the *Times*. My project [KetoHub](https://ketohub.io/)
 
 At the time I stumbled upon ingredient-phrase-tagger, I was parsing ingredients in an ugly, hacky way: with [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
 
-It wasn't sustainable. Every time I added a new recipe source to KetoHub, I had to modify my long sequence of regular expressions to handle new edge cases. Over time, the ingredient parsing code grew hellishly convoluted and frequently broke in confusing ways.
+It wasn't sustainable. Every time I added a new recipe site to KetoHub's index, I had to modify my long sequence of regular expressions to handle new edge cases. Over time, the ingredient parsing code grew hellishly convoluted and began breaking in confusing ways.
 
-My regular expressions were tedious to maintain and debug. I felt like I was chopping away at ingredients with a chainsaw blindfolded. The *Times'* library looked like it dissected ingredients with clean, surgical precision. I desperately wanted it. But first, I had to figure out how to make the code run.
+My regular expressions were tedious to maintain and debug. I felt like I was chopping away at ingredients with a chainsaw, blindfolded. The *Times'* library looked like it dissected ingredients with clean, surgical precision. I desperately wanted it.
+
+But first, I had to figure out how to make their code run.
 
 # Why was this hard?
 
-The *Times* built this library for a hack week event, so it lacks many features one expects of a professional software project, such as  automated tests or thorough documentation.  The README included instructions for installing the application's dependencies, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
+The *Times* built this library for a hack week event, so it lacked many features one expects of a professional software project, such as  automated tests or thorough documentation.  The README included instructions for installing the application, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
 
 {% assign fig_caption = "[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="osx-install.png" alt="OS X install instructions" max_width="756px" class="img-border" fig_caption=fig_caption %}
 
-Of course, I wasn't the only one to notice these issues. At the time they published it, the *Times* received tough criticism from famed Python developer D. John Trump:
+Of course, I wasn't the only one to notice these issues. At the time they published, the *Times* received tough criticism from famed Python developer D. John Trump:
 
 {% include image.html file="trump-tweet.png" alt="Trump tweet about code" max_width="628px" class="img-border" %}
 
 # Building it in Docker
 
-I do my development in Linux VMs. I work with contractors who use OS X. I wanted a way to build the library that ensured consistent behavior regardless of the OS. This seemed like a job for Docker. I could create a "container" for the library &mdash; a self-sufficient environment that runs anywhere.
+I wanted a way to build the library in a way that ensured consistent behavior regardless of the OS. This seemed like a job for Docker.
 
-Docker made it easy to spin up an Ubuntu base environment on which to build:
+Docker allows developers to build self-contained environments for an application that run anywhere. It only took a single command for me to spin up an Ubuntu base environment on which to build:
 
 ```bash
 $ docker run -it --rm ubuntu:16.04 /bin/bash
@@ -89,7 +91,7 @@ DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
 ```
 
-The library's first dependency was its machine learning engine: a C++ application called [CRF++](https://taku910.github.io/crfpp/).
+The ingredient parsing library's first dependency was its machine learning engine: a C++ application called [CRF++](https://taku910.github.io/crfpp/).
 
 {% assign fig_caption = "CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -113,7 +115,7 @@ compilation terminated.
 
 Whoops, `make` failed with an error about a missing Windows header file.
 
-Was this library still maintained?
+Was that code still maintained?
 
 {% assign fig_caption = "CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -195,7 +197,7 @@ Oh, wait. That wasn't really what I was trying to do.
 
 My [yak shaving](https://seths.blog/2005/03/dont_shave_that/) adventure sidetracked me so much that I forgot my original goal: run ingredient-phrase-tagger within a Docker container.
 
-Nevertheless, I was hopeful that the worst was over. The only other installation step was to run the library's [setuptools](https://pypi.org/project/setuptools/) installer, and I generally have good luck with setuptools:
+Nevertheless, I was hopeful that the worst was over. The only other installation step was to run the library's [setuptools](https://pypi.org/project/setuptools/) installer, and I generally had good luck with setuptools:
 
 ```bash
 $ apt-get install python python-pip -y
@@ -249,7 +251,7 @@ Oh, wait. What did it do?
 
 # Testing with my ingredients
 
-The library was doing *something*, but it didn't give me insight into what was going on. The documentation mentioned two scripts for parsing arbitrary ingredients, `parse-ingredients.py` and `convert-to-json.py`, so I tried those:
+The library was doing *something*, but it didn't give me insight into what was going on. The documentation mentioned two scripts for parsing arbitrary ingredients, [`parse-ingredients.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/parse-ingredients.py) and [`convert-to-json.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/convert-to-json.py), so I tried those:
 
 ```bash
 $ echo "1 pinch Garlic Powder" >> input.txt
@@ -287,7 +289,7 @@ $ python bin/convert-to-json.py results.txt
 
 It worked!
 
-Well, it mostly worked. The model failed to identify "Cup" as the unit of measurement in "1 Cup Mozzarella, shredded." The machine learning model apparently thought there was a product, "Cup Mozzarella," and the recipe calls for one of those.
+Well, it mostly worked. The model failed to identify "Cup" as the unit of measurement in "1 Cup Mozzarella, shredded." The machine learning model apparently thought there was a product called, "Cup Mozzarella," and the recipe needed one of those.
 
 {% assign fig_caption = "A product invented by the machine learning model" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -303,14 +305,14 @@ First, I made [my own fork](https://github.com/mtlynch/crfpp) of the CRF++ repos
 
 {% include files.html title="Dockerfile" language="bash" %}
 
-That file tells Docker how to build a custom container that includes all of ingredient-phrase-tagger's dependencies. If I want to install ingredient-phrase-tagger in the future, all I need to do is run these two commands in the directory with the `Dockerfile`:
+If I want an environment with this library in the future, all I need to do is run these two commands in the directory with the `Dockerfile`:
 
 ```bash
 docker build --tag phrase-tagger .
 docker run -it --rm phrase-tagger /bin/bash
 ```
 
-That creates a Docker container where all dependencies are satisfied, so I can simply run the `roundtrip.sh` script without any errors:
+Those commands create a Docker container that satisfies all of the ingredient parsing library's dependencies. Within that environment, I can run the `roundtrip.sh` script without any errors:
 
 ```bash
 $ ./roundtrip.sh
@@ -332,7 +334,7 @@ Word-Level Stats:
         % correct: 90.7510917031
 ```
 
-To make it even easier, I uploaded the container image to [Docker Hub](https://hub.docker.com/r/mtlynch/ingredient-phrase-tagger/) so that all of you at home can use my container with this command:
+To make it even easier, I uploaded the container image to [Docker Hub](https://hub.docker.com/r/mtlynch/ingredient-phrase-tagger/) so that all of you at home can use my container with this single command:
 
 ```bash
 docker run -it --rm mtlynch/ingredient-phrase-tagger:nyt-untouched /bin/bash
@@ -344,9 +346,9 @@ I recorded the demo below on an Ubuntu system with nothing installed except Dock
 
 # Onward
 
-The code ran successfully, and my work was reproducible on any system that supports Docker. What could I do next?
+The code ran successfully, and my work was reproducible on any system that supported Docker. What was next?
 
-I hadn't dug into the source yet, but I noticed odd things from running the scripts. Most notably, the usage scripts felt opaque and rigid &mdash; training data, file locations, and model parameters were all hard-coded and buried in shell scripts. I wanted the user to have the freedom to tune these and optimize the model's accuracy.
+I hadn't dug into the source yet, but I noticed odd things from running the scripts. Most notably, the usage scripts felt opaque and rigid &mdash; training data, file locations, and model parameters were all hard-coded and buried in shell scripts. I wanted the user to have the freedom to tune these values to optimize the model's accuracy.
 
 Also, did you catch this in the parsed output?
 
@@ -354,11 +356,11 @@ Also, did you catch this in the parsed output?
 "display": "<span class='qty'>2</span><span class='unit'>tablespoons</span><span class='name'>lemon juice</span>",
 ```
 
-Why is a machine learning model for parsing ingredients responsible for structuring ingredient data *and* generating HTML? That would be like putting a neurosurgeon in charge of brain surgery *and* assembling hospital furniture.
+Why is a machine learning model responsible for structuring ingredient data *and* generating HTML? That would be like putting a neurosurgeon in charge of brain surgery *and* assembling hospital furniture.
 
-I would have loved to dive right into the code to make sweeping functional changes, but first I had to perform a critical step: stabilization. I needed a way to lock in the current behavior so that any changes I made to functionality were deliberate.
+I would have loved to dive right into the code to make sweeping functional changes, but first I had to perform a critical step: stabilization. I needed to lock in the library's existing behavior so that any changes I made to its functionality were explicit and deliberate.
 
-Stay tuned later this week for **part two** of this blog series, where I will describe:
+Check back next week for **part two** of this series, where I will describe:
 
 * How I added end-to-end tests so that I wouldn't accidentally break anything
 * How I configured the tests to run automatically before applying any change to the code
