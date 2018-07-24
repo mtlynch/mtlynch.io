@@ -47,6 +47,7 @@ A few years ago, the *Times* decided to digitize their extensive historical arch
 | 2 dried pasilla chilies | 2.0 | | pasilla chilies | dried |
 
 After six years of this, they realized that they had enough data to [train a machine learning model](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) that could simulate the data entry decisions. They create a machine learning model that interpreted ingredients accurately enough that they no longer needed humans to perform this tedious task manually.
+
 # What business was it of mine?
 
 I had the same problem as the *Times*. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Because most websites don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
@@ -65,7 +66,7 @@ My regular expressions were tedious to maintain and debug. I felt like I was cho
 
 # Why was this hard?
 
-The *Times* built this library for a hack week event, so it lacks many features one expects of a professional software project, such as  automated tests or thorough documentation.  The README included instructions for installing the application's dependencies, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all. 
+The *Times* built this library for a hack week event, so it lacks many features one expects of a professional software project, such as  automated tests or thorough documentation.  The README included instructions for installing the application's dependencies, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
 
 {% assign fig_caption = "[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -122,7 +123,7 @@ Oh no! Another dead repository? I was already resurrecting one library. I didn't
 
 # Taking a small detour
 
-The CRF++ error message about `winmain.h` was a bad sign, but if the *Times* developers ran CRF++ on OS X, I knew it was possible to run it in a non-Windows environment. 
+The CRF++ error message about `winmain.h` was a bad sign, but if the *Times* developers ran CRF++ on OS X, I knew it was possible to run it in a non-Windows environment.
 
 Maybe someone had already fixed it, but the maintainers never merged in the change. I checked the repo's outstanding pull requests. [One, in particular](https://github.com/taku910/crfpp/pull/15), seemed promising:
 
@@ -305,8 +306,8 @@ First, I made [my own fork](https://github.com/mtlynch/crfpp) of the CRF++ repos
 That file tells Docker how to build a custom container that includes all of ingredient-phrase-tagger's dependencies. If I want to install ingredient-phrase-tagger in the future, all I need to do is run these two commands in the directory with the `Dockerfile`:
 
 ```bash
-$ docker build --tag phrase-tagger .
-$ docker run -it --rm phrase-tagger /bin/bash
+docker build --tag phrase-tagger .
+docker run -it --rm phrase-tagger /bin/bash
 ```
 
 That creates a Docker container where all dependencies are satisfied, so I can simply run the `roundtrip.sh` script without any errors:
@@ -334,7 +335,7 @@ Word-Level Stats:
 To make it even easier, I uploaded the container image to [Docker Hub](https://hub.docker.com/r/mtlynch/ingredient-phrase-tagger/) so that all of you at home can use my container with this command:
 
 ```bash
-$ docker run -it --rm mtlynch/ingredient-phrase-tagger:nyt-untouched /bin/bash
+docker run -it --rm mtlynch/ingredient-phrase-tagger:nyt-untouched /bin/bash
 ```
 
 I recorded the demo below on an Ubuntu system with nothing installed except Docker. I used it to pull down my custom image from Docker Hub, train a machine learning model, and parse a new ingredient:
