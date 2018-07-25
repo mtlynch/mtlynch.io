@@ -24,7 +24,7 @@ It built!
 
 https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282?utm_source=github_status&utm_medium=notification
 
-TODO: Show Travis screenshot.
+{% include image.html file="first-travis-build.png" alt="Screenshot of first successful build on Travis CI" max_width="800px" %}
 
 # Adding an end-to-end test
 
@@ -151,3 +151,7 @@ grated  I9    L12  NoCAP  YesPAREN  OTHER
 jicama  I10   L12  NoCAP  YesPAREN  B-NAME
 )       I11   L12  NoCAP  YesPAREN  OTHER
 ```
+
+---
+
+*Cover illustration by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com).*
