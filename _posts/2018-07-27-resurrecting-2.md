@@ -14,7 +14,17 @@ tags:
 - refactoring
 ---
 
+In this post, I will retrofit automated tests onto a library that was built without tests in mind.
+
+This is part two of a three-part series about resurrecting a library that its maintainers abandoned two years ago. It's a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data.
+
+* [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
+* **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
+* Part Three: Rehabilitation (coming soon) - In which I fix the code's most egregious bugs and begin refactoring
+
 # Running it in continuous integration
+
+At the end of part one, I created a Docker container that would allow the library to run on any system.
 
 Okay, now I could run it locally under Docker. I needed to build it on Travis:
 
@@ -24,7 +34,7 @@ It built!
 
 https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282?utm_source=github_status&utm_medium=notification
 
-{% include image.html file="first-travis-build.png" alt="Screenshot of first successful build on Travis CI" max_width="800px" %}
+{% include image.html file="first-travis-build.png" class="img-border" alt="Screenshot of first successful build on Travis CI" max_width="800px" %}
 
 # Adding an end-to-end test
 
@@ -45,6 +55,8 @@ Word-Level Stats:
         total: 11450
         % correct: 90.7510917031
 ```
+
+It also produced output files in the `tmp/` directory:
 
 That looked like 
 
