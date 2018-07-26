@@ -1,5 +1,5 @@
 ---
-title: "Resurrecting a Dead Library: Part Three - Rehabilitation"
+title: 'Resurrecting a Dead Library: Part Three - Rehabilitation'
 layout: single
 author_profile: true
 read_time: true
@@ -9,14 +9,25 @@ related: true
 sidebar:
   nav: main
 tags:
-- ferngully
 - zestful
 - refactoring
+- ingredient-phrase-tagger
+- ingredient parsing
+header:
+  teaser: images/2018-07-31-resurrecting-3/cover.jpg
+  og_image: images/2018-07-31-resurrecting-3/cover.jpg
 ---
+
+* [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
+* [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
+* **Part Three: Rehabilitation (this post)** - In which I fix the code's most egregious bugs and begin refactoring
+
+{% include image.html file="cover.jpg" alt="Hermit crab being pulled from shell" max_width="800px" img_link=true %}
 
 # Fixing the first bug
 
 https://github.com/mtlynch/ingredient-phrase-tagger/pull/26/files
+
 # Delete the cruft
 
 At this point, I had a good feel for the code. Red flags I saw at the beginning, I was now more confident they were indeed extraneous. I had end-to-end tests to verify everything, so if I broke something, I'd find out.
@@ -44,5 +55,4 @@ I don't think it's high-quality code, but even though a lot was klunky, it still
 
 ---
 
-
-Note: For the sake of brevity clarity, I took some creative liberties in the retelling of the changes. If you look at the commits, they don't *perfectly* match up to what I presented here.
+*Cover illustration by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com).*
