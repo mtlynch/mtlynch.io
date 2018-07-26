@@ -87,7 +87,7 @@ GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/G
 
 The Raspberry Pi reads *digital* signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](http://amzn.to/2oCFlUO).
 
-The [DHT11 sensor](http://amzn.to/2rDgFie) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Raspberry Pi.
+The [DHT11 sensor](https://amzn.to/2mK0s7d) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Raspberry Pi.
 
 Lastly, we have a [12V water pump](http://amzn.to/2p90wk8), but the Raspberry Pi can only output 5V, so we connect a [12V power adapter](http://amzn.to/2oET4vC)  to the pump in series with a [MOSFET](http://amzn.to/2rpHXZ4). The Raspberry Pi uses the MOSFET as a digital switch, breaking or completing the circuit when it wants to turn its pump off or on.
 
@@ -276,7 +276,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 * [Silicone tubing](http://amzn.to/2v73JUM)
 * [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4)
 * [Raspberry Pi power supply](http://amzn.to/2rlAMh2)
-* [DHT11 temperature and humidity sensor](http://amzn.to/2rDgFie)
+* [DHT11 temperature and humidity sensor](https://amzn.to/2mK0s7d)
 * [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn)
 * [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF)
 * [Soil moisture sensor](https://www.sparkfun.com/products/13322)
