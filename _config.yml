@@ -149,16 +149,20 @@ exclude:
 - assets/js/vendor
 - Capfile
 - CHANGELOG
+- CNAME
 - config
+- COPYRIGHT
 - Gemfile
+- Gemfile.lock
 - Gruntfile.js
 - gulpfile.js
 - LICENSE
 - log
 - node_modules
+- NOTICE
 - package.json
 - Rakefile
-- README
+- README.md
 - tmp
 keep_files:
 - ".git"

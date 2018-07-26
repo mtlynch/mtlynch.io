@@ -7,4 +7,7 @@ set -e
 npm run build:js
 
 # Start jekyll server
-bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch
+bundle exec jekyll serve \
+  --config _config.yml,_config_dev.yml \
+  --watch \
+  --incremental
