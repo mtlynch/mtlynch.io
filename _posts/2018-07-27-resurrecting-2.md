@@ -41,11 +41,11 @@ It [built](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/3628182
 
 # Adding an end-to-end test
 
-Now that I had it running under CI, but it was just building. I wanted a test that would fail if I did anything to change the library's behavior.
+Now that I had it running under CI, but it was just building the Docker image to satisfy the library's requirements. To get enough confidence to start changing the library, I needed a test that would exercise the library's functionality thoroughly.
 
 The [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) script in the original repo looked like a good place to start. At that point, I didn't understand everything it was doing, but it looked like it was thoroughly exercising the library's functionality.
 
-Earlier, I showed that at the end of the script, it produces summary statistics about the model's performance:
+Earlier, I showed that at the end of the script, it produced summary statistics about the model's performance:
 
 ```text
 Sentence-Level Stats:
@@ -61,43 +61,106 @@ Word-Level Stats:
 
 It also produced output files in the `tmp/` directory:
 
+```bash
+$ file tmp/*
+tmp/model_file:  data
+tmp/output.html: HTML document, ASCII text, with very long lines
+tmp/test_file:   ASCII text
+tmp/test_output: ASCII text
+tmp/train_file:  ASCII text
+```
+
+That was good. I had output files to compare against. `test_output` was just the same performance statistics that `roundtrip.sh` printed to the console.
+
+`test_file` and `train_file` 
+
+```bash
+$  head -n 16 tmp/test_file
+1       I1      L12     NoCAP   NoPAREN B-QTY
+boneless        I2      L12     NoCAP   NoPAREN I-COMMENT
+pork    I3      L12     NoCAP   NoPAREN B-NAME
+tenderloin      I4      L12     NoCAP   NoPAREN I-NAME
+,       I5      L12     NoCAP   NoPAREN B-COMMENT
+about   I6      L12     NoCAP   NoPAREN I-COMMENT
+1       I7      L12     NoCAP   NoPAREN B-QTY
+pound   I8      L12     NoCAP   NoPAREN I-COMMENT
+
+Salt    I1      L8      YesCAP  NoPAREN B-NAME
+and     I2      L8      NoCAP   NoPAREN I-NAME
+freshly I3      L8      NoCAP   NoPAREN B-COMMENT
+ground  I4      L8      NoCAP   NoPAREN I-COMMENT
+black   I5      L8      NoCAP   NoPAREN B-NAME
+pepper  I6      L8      NoCAP   NoPAREN I-NAME
+```
+
 That looked like 
+
+{% include files.html title="build.sh" language="bash" %}
 
 I wrote an [e2e script](https://github.com/mtlynch/ingredient-phrase-tagger/blob/a4cde8d26e21f345e5291093110a4fb246195619/test_e2e) that performed the same steps as `roundtrip.sh`, but at the end, it compared the output to the "known good" output (the output from above):
 
-```bash
-EVAL_OUTPUT_FILE="$(mktemp -d)/eval_output"
-python bin/evaluate.py "${OUTPUT_DIR}/testing_data.crf" > "$EVAL_OUTPUT_FILE"
-
-GOLDEN_EVAL_OUTPUT_FILE="tests/golden/eval_output"
-diff "$GOLDEN_EVAL_OUTPUT_FILE" "$EVAL_OUTPUT_FILE"
-```
-
 I ran this build script on my local machine several times, and it passed each time. Then I ran it on Travis and it failed:
 
-```diff
-+ diff tests/golden/eval_output /tmp/tmp.yVarTSxgRy/eval_output
-3c3
-<       correct:  1487
----
->       correct:  1482
-5c5
-<       % correct:  74.3871935968
----
->       % correct:  74.1370685342
-8c8
-<       correct: 10391
----
->       correct: 10326
-10c10
-<       % correct: 90.7510917031
----
->       % correct: 90.1834061135
+https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408775714
+
+The build failed, which was obviously bad. But the end-to-end tests caught something, which was very good.
+
+The whole point of a Docker container is that the program should be hermetically contained and behave the same anywhere.
+
+Was CRF++ non-deterministic? No, that couldn't be because I could run the end-to-end test on my local machine and see consistent results. I could also see consistent results if I restarted the Travis build. So Travis and my local machine were both internally consistent across executions, but were inconsisntent between one another.
+
+I didn't like where this was pointing. It suggested that CRF++'s behavior depended on the hardware infrastructure. Maybe an Intel CPU yields different results than an AMD CPU. That would be a big pain because Travis doesn't guarantee anything about the hardware that it builds on. Furthermore, if results are different on different hardware, it defeats the purpose of a Docker container.
+
+
+```text
+$ crf_learn --help
+CRF++: Yet Another CRF Tool Kit
+Copyright (C) 2005-2013 Taku Kudo, All rights reserved.
+
+Usage: crf_learn [options] files
+ -f, --freq=INT              use features that occuer no less than INT(default 1)
+ -m, --maxiter=INT           set INT for max iterations in LBFGS routine(default 10k)
+ -c, --cost=FLOAT            set FLOAT for cost parameter(default 1.0)
+ -e, --eta=FLOAT             set FLOAT for termination criterion(default 0.0001)
+ -C, --convert               convert text model to binary model
+ -t, --textmodel             build also text model file for debugging
+ -a, --algorithm=(CRF|MIRA)  select training algorithm
+ -p, --thread=INT            number of threads (default auto-detect)
+ -H, --shrinking-size=INT    set INT for number of iterations variable needs to  be optimal before considered for shrinking. (default 20)
+ -v, --version               show the version and exit
+ -h, --help                  show this help and exit
 ```
 
-The test was catching a change in behavior, which was good. But I was baffled because the test ran in a Docker container on both my local machine and on Travis. How could I be getting different results? The whole point of a Docker container is that the program should be hermetically contained and behave the same anywhere.
+The `--thread` parameter looked interesting. I checked 
 
-I needed to expand the test to produce more actionable information.
+```text
+Number of thread(s): 2
+```
+
+And then I checked the output from my local machine:
+
+```text
+Number of thread(s): 4
+```
+
+Ah ha! CRF++ produced different output depending on the number of threads.
+
+Because I left the `--thread` flag unspecified, CRF++ set it automatically based on the number of CPU cores available. On Travis, there were 2 cores, and my local machine had 4.
+
+I tweaked my `build.sh` script to set the thread count explicitly:
+
+```diff
+-crf_learn template_file "$ACTUAL_CRF_TRAINING_FILE" "$ACTUAL_CRF_MODEL_FILE"
++crf_learn \
++  --thread=2 \
++  template_file "$ACTUAL_CRF_TRAINING_FILE" "$ACTUAL_CRF_MODEL_FILE"
+```
+
+Then I saved the output files to `tests/golden` as the [new expected end-to-end output](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7).
+
+{% include image.html file="e2e-fix.png" alt="Success after fixing end-to-end test" max_width="800px" img_link=true class="img-border" %}
+
+https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692
 
 # Expanding the end-to-end test
 
@@ -138,17 +201,16 @@ I didn't know what these files did yet. I knew they were related to training the
 
 I later discovered that this was due to the `--threads` flag in CRF++. It's automatically set to the number of CPUs available
 
-# Add in my build tools
+# Enforcing whitespace conventions
 
-I have a standard set of dev tools I use for every Python project I work on:
+YAPF - [#11](https://github.com/mtlynch/ingredient-phrase-tagger/pull/11)
 
-* Coveralls
-* YAPF
-* pyflakes
-* DocStringChecker
+# Adding static analysis
+
+pyflakes - [#12](https://github.com/mtlynch/ingredient-phrase-tagger/pull/12/files)
 
 # Speeding up the build
-
+{% include image.html file="build-time.png" alt="Travis screenshot showing 20 minute build time" max_width="800px" img_link=true class="img-border" %}
 # Trimming a heavy dependency
 
 

@@ -24,6 +24,10 @@ header:
 
 {% include image.html file="cover.jpg" alt="Hermit crab being pulled from shell" max_width="800px" img_link=true %}
 
+# Adding code coverage
+
+https://github.com/mtlynch/ingredient-phrase-tagger/pull/19
+
 # Fixing the first bug
 
 https://github.com/mtlynch/ingredient-phrase-tagger/pull/26/files

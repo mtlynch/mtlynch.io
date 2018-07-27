@@ -16,8 +16,6 @@ RUN git clone https://github.com/mtlynch/crfpp.git && \
     cd ..
 
 # Install ingredient-phrase-tagger.
-RUN git clone https://github.com/NYTimes/ingredient-phrase-tagger && \
-    cd ingredient-phrase-tagger && \
-    python setup.py install
-
+ADD . /ingredient-phrase-tagger
 WORKDIR /ingredient-phrase-tagger
+RUN python setup.py install
