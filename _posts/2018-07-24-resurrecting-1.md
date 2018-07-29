@@ -84,7 +84,7 @@ Of course, I wasn't the only one to notice these issues. At the time they publis
 
 # Building it in Docker
 
-I wanted a way to build the library in a way that ensured consistent behavior regardless of the OS. This seemed like a job for Docker.
+I wanted to build the library in a way that ensured consistent behavior regardless of the OS. This seemed like a job for Docker.
 
 Docker allows developers to build self-contained environments for an application that run anywhere. It only took a single command for me to spin up an Ubuntu base environment on which to build:
 
