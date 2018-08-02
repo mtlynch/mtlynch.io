@@ -1,11 +1,10 @@
 ---
 title: build.sh
 ---
-#!/bin/sh
+#!/bin/bash
 
 # Exit build script on first failure
 set -e
-
 # Echo commands to stdout.
 set -x
 

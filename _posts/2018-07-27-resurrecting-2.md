@@ -58,11 +58,17 @@ It was great that the Docker container built on Travis, but the build wasn't ver
 
 The [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) script in the original repo looked like a good place to start. I didn't understand everything it was doing, but I could see from the output that it heavily exercised the library.
 
-# Finding the golden output
+# Creating golden output
 
-An end-to-end test typically involves comparison to a "golden output": the output that the developer has 
+An end-to-end test typically involves comparison to a "golden output": the output that the developer has verified as correct for the given input.
 
-Earlier, I showed that at the end of the script, it produced summary statistics about the model's performance:
+1. Feed 
+
+Not all outputs are useful to validate. For example, the `roundtrip.sh` prints the time it took to train a model. Since I only cared about preserving functionality, it didn't matter that much to me if this process took 401.2 seconds or 399.8 seconds, so I needed to separate the meaningful outputs from the noise.
+
+# A very basic end-to-end test
+
+In part one, I showed that the `roundtrip.sh` script ultimately produced summary statistics about the model's performance:
 
 ```text
 Sentence-Level Stats:
@@ -76,22 +82,13 @@ Word-Level Stats:
         % correct: 90.7510917031
 ```
 
-It also wrote output files to the `tmp/` subdirectory:
+That gave me enough for a simple end-to-end test. I re-ran the final step of the script, but redirected the console output to a file called `tests/golden/eval_output`:
 
 ```bash
-$ file tmp/*
-tmp/model_file:  data
-tmp/output.html: HTML document, ASCII text, with very long lines
-tmp/test_file:   ASCII text
-tmp/test_output: ASCII text
-tmp/train_file:  ASCII text
+python bin/evaluate.py tmp/test_output > tests/golden/eval_output
 ```
 
-These outputs provided a good foundation for the end-to-end test. I decided to capture the output from a successful, save that as the gold standard, then compare all future runs against my golden copy with a simple plaintext `diff`.
-
-# The art of diffing
-
-I knew I wanted the test to compare output to a golden output, but "compare" is a bit hand-wavey. The naive approach would be to just run the `diff` utility to compare the current output with the golden output. But if it's a binary file, that doesn't work so well.
+Now that I had known-good output, I had a 
 
 Working backwards, the summary statistics were very easy to compare. I could save the output and just `diff` against my known good stats. If I broke anything and caused the stats to change,  I'd see it in the output like this:
 
@@ -107,7 +104,25 @@ python bin/evaluate.py tmp/test_output > tmp/eval_output
 diff tests/golden/eval_output tmp/eval_output
 ```
 
+# The art of diffing
+
+I knew I wanted the test to compare output to a golden output, but "compare" is a bit hand-wavey. The naive approach would be to just run the `diff` utility to compare the current output with the golden output. But if it's a binary file, that doesn't work so well.
+
 That alone would be a decent end-to-end test, but it has the weakness that it doesn't show which part broke. The end-to-end process is actually a multi-stage pipeline that involves reading the input CSV, training a model, testing a model, and producing summary statistics. If I broke something in the first stage of the pipeline, I'd want my end-to-end test to point me to that stage.
+
+It also wrote output files to the `tmp/` subdirectory:
+
+```bash
+$ file tmp/*
+tmp/model_file:  data
+tmp/output.html: HTML document, ASCII text, with very long lines
+tmp/test_file:   ASCII text
+tmp/test_output: ASCII text
+tmp/train_file:  ASCII text
+```
+
+These outputs provided a good foundation for the end-to-end test. I decided to capture the output from a successful, save that as the gold standard, then compare all future runs against my golden copy with a simple plaintext `diff`.
+
 
 I applied a similar strategy to the other output files. `test_file`, `test_output`, and `train_file` were all plaintext files that looked a bit like this:
 
@@ -139,6 +154,17 @@ Most of the output was just plaintext. `model_file` was an exception because it 
 I wrote an [e2e script](https://github.com/mtlynch/ingredient-phrase-tagger/blob/a4cde8d26e21f345e5291093110a4fb246195619/test_e2e) that performed the same steps as `roundtrip.sh`, but at the end, it compared the output to the "known good" output (the output from above):
 
 {% include files.html title="build.sh" language="bash" %}
+
+And then a simple wrapper around that:
+
+{% include files.html title="docker_build" language="bash" %}
+
+And then updated my Travis configuration file to run the entire `docker_build` script instead of simply building the container:
+
+```diff
+-script: docker build .
++script: ./docker_build
+```
 
 # What I'm not diffing
 
