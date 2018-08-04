@@ -40,7 +40,7 @@ Continuous integration is a controlled environment that tests source code on eac
 
 {% include image.html file="travis-ci-logo.png" class="align-right" alt="Travis CI logo" max_width="300px" link_url="https://travis-ci.org/" %}
 
-My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are simple and intuitive, and they offer unlimited free builds for open-source projects.
+My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are intuitive, and they offer unlimited free builds for open-source projects.
 
 To get Travis to start building, I just added my fork of ingredient-phrase-tagger to Travis:
 
@@ -58,15 +58,15 @@ I pushed my commit to Github, created a [pull request](https://github.com/mtlync
 
 It was great that Travis could build my Docker container, but the build wasn't meaningful. It only built the library's dependencies &mdash; it didn't exercise any of the library's functionality. I wanted a build that told me if I broke the library's functionality. To do that, I needed an end-to-end test.
 
-The [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) script in the original repo looked like a good place to start. I didn't understand everything it was doing, but I could see from the output that it exercised the library heavily.
+An end-to-end test verifies that a complete scenario works as expected. It runs an scenario that a user would use in the real world from start to finish.
 
-# Creating golden output
+End-to-end tests generally follow a simple structure:
 
-An end-to-end test typically involves comparison to a "golden output": the output that the developer has verified as correct for the given input.
+1. Pre-generate input and its expected output
+1. Use automation tools to feed the input to the library
+1. Compare the library's output to the golden output
 
-1. Feed 
-
-Not all outputs are useful to validate. For example, the `roundtrip.sh` prints the time it took to train a model. Since I only cared about preserving functionality, it didn't matter that much to me if this process took 401.2 seconds or 399.8 seconds, so I needed to separate the meaningful outputs from the noise.
+The [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) script was already very close to an end-to-end test. It provided pre-generated input to the library to train a new model and then use that model for classification. The only thing missing was step 3 because there was no golden output to compare it to.
 
 # A very basic end-to-end test
 
@@ -100,19 +100,23 @@ python bin/evaluate.py tmp/test_output > tmp/eval_output
 diff tests/golden/eval_output tmp/eval_output
 ```
 
-Now, let me try simulating a breaking change to see if the end-to-end test catches it. In [cli.py](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/ingredient_phrase_tagger/training/cli.py#L57), there's a line with a regular expression to match sequences of numbers (e.g. `"834"`):
+# Does my test know when code breaks?
+
+An end-to-end test is only useful if it catches bugs, so the next step was simulate a breaking change to see if the end-to-end test would catch it.
+
+In [cli.py](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/ingredient_phrase_tagger/training/cli.py#L57), there was a line with a regular expression to match sequences of numbers (e.g. `"834"`):
 
 ```python
 m3 = re.match('^\d+$', ss)
 ```
 
-Then I fiddled with it so that it fails to recognize `9` as a number:
+I tampered with the regular expressoin with it so that it only covered digits 0-8, meaning that it would fail to recognize any number that included a 9:
 
 ```python
 m3 = re.match('^[0-8]+$', ss)
 ```
 
-When I ran my modified `roundtrip.sh` script, it successfully identified that the results had deviated from their expected output:
+I then re-ran my modified `roundtrip.sh` script:
 
 ```diff
 3c3
@@ -125,11 +129,11 @@ When I ran my modified `roundtrip.sh` script, it successfully identified that th
 >       % correct:  74.33716858429
 ```
 
-It worked! When I told the code that `9` was no longer considered a number, the library's accuracy fell.
+It worked! When I told the code that 9 was no longer considered a number, the library's accuracy fell and the script terminated with a failing exit code.
 
 # Expanding the end-to-end test
 
-The basic end-to-end test above was good, but `roundtrip.sh` consists of many separate stages. It would be convenient to know which particular stage broke, so I looked for more outputs to diff.
+The basic end-to-end test above was good, but `roundtrip.sh` consists of many separate stages. It would be convenient to know which particular stage broke, so I looked for more outputs to check.
 
 In addition to printing output to the console, the script also wrote files to a subdirectory called `tmp/`:
 
@@ -142,16 +146,10 @@ tmp/test_output: ASCII text
 tmp/train_file:  ASCII text
 ```
 
-`model_file` was just binary data. It would be good to know when it changed, but it wouldn't be useful to diff because it was just an opaque binary blob. I decided to ignore it in my end-to-end tests because breaking changes to the model should manifest in later stages of the pipeline when the script uses the model.
-
-`output.html` wasn't that interesting.
-
-These outputs provided a good foundation for the end-to-end test. I decided to capture the output from a successful, save that as the gold standard, then compare all future runs against my golden copy with a simple plaintext `diff`.
-
-I applied a similar strategy to the other output files. `test_file`, `test_output`, and `train_file` were all plaintext files that looked a bit like this:
+`test_file`, `test_output`, and `train_file` were all plaintext files that looked a bit like this:
 
 ```bash
-$  head -n 16 tmp/test_file
+$ head -n 16 tmp/test_file
 1       I1      L12     NoCAP   NoPAREN B-QTY
 boneless        I2      L12     NoCAP   NoPAREN I-COMMENT
 pork    I3      L12     NoCAP   NoPAREN B-NAME
@@ -169,21 +167,17 @@ black   I5      L8      NoCAP   NoPAREN B-NAME
 pepper  I6      L8      NoCAP   NoPAREN I-NAME
 ```
 
-I didn't understand the file format yet, but I didn't have to. All I had to do was add a way to detect when my changes to the Python code caused these outputs to change.
+I didn't understand the file format yet, but I didn't have to. All I had to do was add a way to detect when the files changed. I copied these files to `tests/golden` so that they served as my golden outputs. Then, I updated the build script to add `diff`s to detect when any changes to the Python code caused these output files to change.
 
-Most of the output was just plaintext. `model_file` was an exception because it was a binary file, which wouldn't be so interesting to `diff`. But that was okay because I didn't need to `diff` it directly. If something changed in the model, I would hopefully see it in the `test_file` or `test_output` because those both depended on the model.
+I ignored two of the outputs in my end-to-end tests. `model_file` was a binary file, which wouldn't be so interesting to `diff`. But that was okay because if the model changed in a meaningful way, the results should manifest themselves in `test_file` and `test_output`, which are derived from the model.
 
-Note that two outputs are missing from my diffs the binary model file and the generated HTML.
-
-I excluded the model file because it's binary data, so it doesn't produce interesting diff output. I do want to know when it changes, but I skipped diffing it directly because I assumed that if I caused it to change, I'd so effects of those changes in the data that the subsequent pipeline stages generate using the model.
-
-I also ignored the generated HTML. I decided that the output visualization script was extraneous to the library and I planned to delete it, so it wasn't worth getting under test.
+I also ignored `output.html`. I decided that the output visualization script was extraneous to the library. I planned to delete it later, so it wasn't worth getting under test.
 
 {% include ads.html title="zestful" %}
 
 # The complete build script
 
-After I modified `roundtrip.sh` to convert it to an end-to-end test called `build.sh`, which looked like this:
+After all my modifications to `roundtrip.sh`, I saved it as a new file called called `build.sh`, which looked like this:
 
 {% include files.html title="build.sh" language="bash" %}
 
@@ -213,22 +207,22 @@ docker run \
 docker exec "$CONTAINER_NAME" ./build.sh
 ```
 
-The `docker_build` made it possible for anyone to verify the library's correctness regardless of their development environment. The obvious next step was configuring my continuous integration setup to run these tests on every pull request into the source repository.
+With the `docker_build` script, I could run the end-to-end test on any system as long as it supported Docker. Naturally, I wanted to run them in my continuous integration environment.
 
 # Running my end-to-end tests in continuous integration
 
-My earlier Travis configuration built the Docker container, but didn't exercise the library at all. I updated my `.travis.yml` file to run my `docker_build` script instead:
+My earlier Travis configuration built the Docker image, but didn't exercise the library at all. Now that I had my more thorough `docker_build` script, I updated my `.travis.yml` file to run that instead:
 
 ```diff
 -script: docker build .
 +script: ./docker_build
 ```
 
-I [pushed my changes](https://github.com/mtlynch/ingredient-phrase-tagger/pull/47/commits/5876e039a6e5dd36373c94bd793c83d7457034a6), and the Travis build promptly failed:
+I [pushed my changes](https://github.com/mtlynch/ingredient-phrase-tagger/pull/47/commits/5876e039a6e5dd36373c94bd793c83d7457034a6), ready to witness the splendor of my brilliant script that runs consistently on any system. Instead, it failed:
 
-{% include image.html file="e2e-failing.png" alt="End-to-end test failing on Travis" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end passes locally, but fails on Travis" %}
+{% include image.html file="e2e-failing.png" alt="End-to-end test failing on Travis" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end test passes locally but fails on Travis" %}
 
-The build failure was bad, but the upside was that my end-to-end tests caught something. Now, I just had to figure out what it was.
+Obviously, I wasn't happy to see a build break, but I was glad to see that my end-to-end test caught something. Now, I just had to figure out what it was.
 
 # Debugging the discrepancy
 
@@ -267,9 +261,9 @@ crf_test \
   "$ACTUAL_CRF_TESTING_FILE" > "$ACTUAL_TESTING_OUTPUT_FILE"
 ```
 
-`crf_learn` and `crf_test` were both command-line utilities for [CRF++](https://taku910.github.io/crfpp/), the engine that powered ingredient-phrase-tagger's machine learning work. Without knowing much about these utilities, I could deduce from the syntax that `crf_learn` created a machine learning model and `crf_test` used that model to classify data.
+`crf_learn` and `crf_test` were both command-line utilities for [CRF++](https://taku910.github.io/crfpp/), the engine that powered ingredient-phrase-tagger's machine learning logic. Without knowing much about these utilities, I could deduce from the syntax that `crf_learn` created a machine learning model and `crf_test` used that model to classify data.
 
-The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched the golden copies. This meant that `crf_learn` and `crf_test` took in exactly the same inputs, but produced different outputs depending on if I ran the tests locally or in a continuous integration environment.
+The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched my golden versions. This meant that `crf_learn` and `crf_test` took in exactly the same inputs, but produced different outputs depending on if I ran the tests locally or in a continuous integration environment.
 
 # A deeper dive into CRF++
 
@@ -293,7 +287,7 @@ The `--thread` flag looked interesting. I checked the [full documentation](https
 
 This sounded promising...
 
-I compared the CRF++ output on Travis to my local environment:
+I compared the CRF++ output on Travis to the same output lines in my local environment:
 
 {% include image.html file="thread-delta.png" alt="Difference in crf_learn thread count between local machine and Travis" max_width="800px" img_link=true fig_caption="crf_learn runs with two threads on Travis, but eight in my local environment" %}
 
@@ -312,13 +306,13 @@ I tweaked my `build.sh` script to set the thread count explicitly:
 
 Then, I saved the output files to `tests/golden` as the [new expected end-to-end output](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7). I pushed my changes to Github and was greeted with a pleasant sight: [my end-to-end tests passed](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692):
 
-{% include image.html file="e2e-fix.png" alt="Success after fixing end-to-end test" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end passing on Travis" %}
+{% include image.html file="e2e-fix.png" alt="Success after fixing end-to-end test" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end test passing on Travis" %}
 
 # Now for the fun part
 
 I now had an end-to-end test that told me if I broke any of the library's behavior. This meant that it was time for my favorite part of a software project: refactoring.
 
-With the confidence from my tests, I could begin making large scale changes to the code without low probability of introducing regressions.
+With the confidence from my tests, I could make large-scale changes to the code knowing that I was unlikely to break any critical pieces.
 
 Stay tuned for **part three** of this series, where I will describe:
 
