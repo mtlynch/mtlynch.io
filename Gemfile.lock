@@ -1,3 +1,8 @@
+PATH
+  remote: _plugins
+  specs:
+    jekyll-frontmatter-test (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -156,6 +161,7 @@ DEPENDENCIES
   html-proofer (= 3.9.1)
   jekyll (~> 3.8.2)
   jekyll-admin
+  jekyll-frontmatter-test (= 0.0.1)!
   jekyll-responsive-image (= 1.2.0)
   mdl (= 0.4.0)
   minimal-mistakes-jekyll (= 4.9.0)

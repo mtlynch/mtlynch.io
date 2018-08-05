@@ -5,6 +5,9 @@ set -e
 # Echo commands to console.
 set -x
 
+# Execute Frontmatter Tests
+BUNDLE_GEMFILE=Gemfile bundle exec jekyll yml-test
+
 # Execute Markdown Linter
 mdl _posts _pages --style _linter/markdown-linter-style.rb
 
