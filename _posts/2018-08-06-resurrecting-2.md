@@ -18,6 +18,9 @@ header:
   og_image: images/2018-08-06-resurrecting-2/cover.jpg
   teaser: images/2018-08-06-resurrecting-2/cover.jpg
 excerpt: Using Docker to get a legacy library under test in continuous integration
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=17698145
+  reddit: https://www.reddit.com/r/programming/comments/95219m/resurrecting_a_dead_library_stabilization/
 ---
 
 In this post, I demonstrate how to retrofit automated tests onto an untested legacy library.
