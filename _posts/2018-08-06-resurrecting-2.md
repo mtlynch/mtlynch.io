@@ -10,7 +10,6 @@ sidebar:
   nav: main
 tags:
 - zestful
-- refactoring
 - docker
 - testing
 - ingredient-phrase-tagger
@@ -18,9 +17,10 @@ tags:
 header:
   og_image: images/2018-08-06-resurrecting-2/cover.jpg
   teaser: images/2018-08-06-resurrecting-2/cover.jpg
+excerpt: Using Docker to get a legacy library under test in continuous integration
 ---
 
-In this post, I demonstrate how to retrofit automated tests onto a legacy untested library.
+In this post, I demonstrate how to retrofit automated tests onto an untested, legacy library.
 
 This is part two of a three-part series about how I resurrected the [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger) repository. It's a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data. The longer story is in [part one](/resurrecting-1/), but the short version is that I discovered an abandoned library and brought it back to life to power a new SaaS business:
 
@@ -38,11 +38,11 @@ At the end of part one, I created a Docker container that allowed the library to
 
 Continuous integration is a controlled environment that tests software on each change to the code. My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are intuitive, and they offer unlimited free builds for open-source projects.
 
-To get Travis to start building, I added [my fork of ingredient-phrase-tagger](https://github.com/mtlynch/ingredient-phrase-tagger) to Travis:
+To integrate with Travis, I added [my fork of ingredient-phrase-tagger](https://github.com/mtlynch/ingredient-phrase-tagger) and enabled builds:
 
 {% include image.html file="enable-travis.png" class="img-border" alt="Screenshot of enabling Travis" fig_caption="Enabling Travis builds for ingredient-phrase-tagger library" max_width="677px" %}
 
-Then I added a file called `.travis.yml`, which tells Travis how to build the library:
+Then, I created a file called `.travis.yml`, which told Travis how to build the library:
 
 {% include files.html title="travis.yml" language="yml" %}
 
@@ -54,17 +54,17 @@ I pushed my commit to Github, created a [pull request](https://github.com/mtlync
 
 Travis was building my Docker container, but the build wasn't meaningful yet. It only built the library's dependencies &mdash; it didn't exercise any of its behavior. I wanted a build that could alert me if I broke the library's functionality. To do that, I needed an end-to-end test.
 
-An end-to-end test verifies that the library executes a complete, real-world scenario works as expected. It generally follows a simple structure:
+An end-to-end test verifies that a complete, real-world scenario works as expected. It generally matches the following structure:
 
-1. Supply pre-generated input and its expected output (also known as the "golden output")
-1. Use automation tools to feed the input to the library
-1. Compare the library's output to the golden output
+1. Supply pre-generated input and its expected output (also known as the "golden output").
+1. Use automation tools to feed the input to the library.
+1. Compare the library's output to the golden output.
 
-The original repository contained a script called [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) that resembled an end-to-end test. It provided pre-generated input to the library, used a portion of the input to train a new machine learning model, then used that model to classify other portions of the input. The only piece missing was the step to compare results to the known-good output.
+The original repository contained a script called [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) that resembled an end-to-end test. It provided pre-generated input to the library, used a portion of the input to train a new machine learning model, then used that model to classify other portions of the input. The only piece missing was that it never compared results to a known-good output.
 
-# A very basic end-to-end test
+# A basic end-to-end test
 
-In part one, I showed that the `roundtrip.sh` script's final result was a set of summary statistics about the model's performance:
+In [part one](/resurrecting-1/), I showed that the `roundtrip.sh` script's final result was a set of summary statistics about the model's performance:
 
 ```text
 Sentence-Level Stats:
@@ -96,7 +96,7 @@ diff tests/golden/eval_output tmp/eval_output
 
 An end-to-end test is only useful if it catches bugs, so my next step was to simulate a breaking change and check if my end-to-end test caught it.
 
-In [cli.py](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/ingredient_phrase_tagger/training/cli.py#L57), there was a regular expression that matched sequences of numbers (e.g. `"83625"`):
+In [cli.py](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/ingredient_phrase_tagger/training/cli.py#L57), there was a regular expression that matched sequences of numbers (e.g., `"83625"`):
 
 ```python
 m3 = re.match('^\d+$', ss)
@@ -121,7 +121,9 @@ I then re-ran my modified `roundtrip.sh` script:
 >       % correct:  74.33716858429
 ```
 
-It worked! When I told the code that 9 was no longer considered a number, the library's accuracy fell, and the script terminated with a failing exit code.
+It worked!
+
+When I told the code that 9 was no longer considered a number, the library's accuracy fell, and the script terminated with a failing exit code.
 
 # Expanding the end-to-end test
 
@@ -161,13 +163,13 @@ pepper  I6      L8      NoCAP   NoPAREN I-NAME
 
 I didn't understand the file format yet, but I didn't have to. All I needed was a way to detect when the files changed.
 
-I copied these files to `tests/golden` so that they served as my golden outputs. Then, I updated the build script to add `diff`s to detect when any changes to the Python code caused these output files to change.
+After copying these files to `tests/golden`, I saved them to source control as additional golden outputs. Then, I added `diff`s to my build script so that it would detect when any changes to the library's logic caused these output files to change.
 
 {% include ads.html title="zestful" %}
 
 # The complete build script
 
-After all my modifications to `roundtrip.sh`, I saved it as a new file called called `build.sh`, which looked like this:
+After all my modifications to `roundtrip.sh`, I saved it as a new file called `build.sh`, which looked like this:
 
 {% include files.html title="build.sh" language="bash" %}
 
@@ -175,11 +177,11 @@ I then added a simple wrapper around that script called `docker_build` that ran 
 
 {% include files.html title="docker_build" language="bash" %}
 
-With the `docker_build` script, I could run my end-to-end test on any system that supported Docker. Naturally, I wanted to run it in my continuous integration environment.
+With the `docker_build` script, my end-to-end test could run on any system that supported Docker. Naturally, I wanted to run it in my continuous integration environment.
 
 # Running my end-to-end tests in continuous integration
 
-My earlier Travis configuration built the Docker image, but didn't exercise the library. Now that I had a thorough test script, I updated my `.travis.yml` file to run it:
+My earlier Travis configuration built the Docker image but didn't exercise the library. Now that I had a thorough test script, I updated my `.travis.yml` file to run it:
 
 ```diff
 -script: docker build .
@@ -190,13 +192,13 @@ I [pushed my changes](https://github.com/mtlynch/ingredient-phrase-tagger/pull/4
 
 {% include image.html file="e2e-failing.png" alt="End-to-end test failing on Travis" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end test fails on Travis after passing on my local machine" %}
 
-Obviously, I wasn't happy to see a build break, but I was glad that my end-to-end test caught something. Now, I just had to figure out what it was.
+I wasn't happy to see a build break, but I was glad that my end-to-end test caught something. I just had to figure out what it was.
 
 # Debugging the discrepancy
 
-The whole point of a Docker container is that the program should behave the same anywhere, so how could I run the same container in two places and get different outputs?
+The whole point of a Docker container is that the program should behave the same anywhere, so how could I run the same container in two places and see different outputs?
 
-I read the [Travis build log](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408775714) and found that it was failing on the diff of the `testing_output` file:
+The [Travis build log](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408775714) showed that the test failed on the diff of the `testing_output` file:
 
 ```diff
 + diff --context=2 tests/golden/testing_output /tmp/tmp.W5S3C5T4if/testing_output
@@ -231,11 +233,11 @@ crf_test \
 
 `crf_learn` and `crf_test` were both command-line utilities for [CRF++](https://taku910.github.io/crfpp/), the engine that powered ingredient-phrase-tagger's machine learning logic. Without knowing much about these utilities, I could deduce from the syntax that `crf_learn` created a machine learning model and `crf_test` used that model to classify data.
 
-The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched my golden versions. This meant that `crf_learn` and `crf_test` took in exactly the same inputs, but produced different outputs depending on if I ran the tests locally or in a continuous integration environment.
+The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched my golden versions. This meant that `crf_learn` and `crf_test` took in inputs that were identical in both environments, but they produced different outputs.
 
 # A deeper dive into CRF++
 
-Was CRF++ non-deterministic? I tried running the test again locally. It passed. I re-ran the test on Travis, and it failed in the exact same way. This told me that CRF++ was consistent across executions in the same environment, but was inconsistent across environments.
+Was CRF++ non-deterministic? I tried running the test again locally. It passed. I re-ran the test on Travis, and it failed in the same way. This told me that CRF++ was consistent across executions in the same environment, but was inconsistent across environments.
 
 I didn't like where this was pointing. It suggested that CRF++'s behavior depended on the system's underlying hardware. Maybe an Intel CPU yielded different results than an AMD CPU. That would be a pain because Travis doesn't guarantee anything about its hardware environment. Furthermore, if different hardware yielded different results, that would defeat the purpose of a Docker container.
 
@@ -253,7 +255,7 @@ The `--thread` flag looked interesting. I checked the [full documentation](https
 >
 >If the PC has multiple CPUs, you can make the training faster by using multi-threading. NUM is the number of threads.
 
-This sounded promising...
+This sounded promising.
 
 I compared the CRF++ output on Travis to the same output lines in my local environment:
 
@@ -280,7 +282,7 @@ Then, I saved the newly generated output files to as my golden copies. I pushed 
 
 I now had an end-to-end test that told me if I broke any of the library's behavior. This meant that it was time for my favorite part of a software project: refactoring.
 
-With the confidence from my tests, I could make large-scale changes to the code knowing that I was unlikely to break any critical pieces.
+With the confidence from my tests, I was free to make large-scale changes to the code knowing that I was unlikely to break any critical pieces.
 
 Stay tuned for **part three** of this series, where I will describe how I:
 
