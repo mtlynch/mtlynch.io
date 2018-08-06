@@ -202,22 +202,22 @@ The [Travis build log](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/bu
 
 ```diff
 + diff --context=2 tests/golden/testing_output /tmp/tmp.W5S3C5T4if/testing_output
-*** tests/golden/testing_output	Fri Jul 27 02:44:20 2018
---- /tmp/tmp.W5S3C5T4if/testing_output	Fri Jul 27 03:03:56 2018
+*** tests/golden/testing_output  Fri Jul 27 02:44:20 2018
+--- /tmp/tmp.W5S3C5T4if/testing_output  Fri Jul 27 03:03:56 2018
 ***************
 *** 173,178 ****
-  1	I1	L8	NoCAP	NoPAREN	B-QTY	B-QTY
-  tablespoon	I2	L8	NoCAP	NoPAREN	B-UNIT	B-UNIT
-! dark	I3	L8	NoCAP	NoPAREN	B-COMMENT	B-COMMENT
-! corn	I4	L8	NoCAP	NoPAREN	B-NAME	B-NAME
-  syrup	I5	L8	NoCAP	NoPAREN	I-NAME	I-NAME
-  
+  1  I1  L8  NoCAP  NoPAREN  B-QTY  B-QTY
+  tablespoon  I2  L8  NoCAP  NoPAREN  B-UNIT  B-UNIT
+! dark  I3  L8  NoCAP  NoPAREN  B-COMMENT  B-COMMENT
+! corn  I4  L8  NoCAP  NoPAREN  B-NAME  B-NAME
+  syrup  I5  L8  NoCAP  NoPAREN  I-NAME  I-NAME
+
 --- 173,178 ----
-  1	I1	L8	NoCAP	NoPAREN	B-QTY	B-QTY
-  tablespoon	I2	L8	NoCAP	NoPAREN	B-UNIT	B-UNIT
-! dark	I3	L8	NoCAP	NoPAREN	B-COMMENT	B-NAME
-! corn	I4	L8	NoCAP	NoPAREN	B-NAME	I-NAME
-  syrup	I5	L8	NoCAP	NoPAREN	I-NAME	I-NAME
+  1  I1  L8  NoCAP  NoPAREN  B-QTY  B-QTY
+  tablespoon  I2  L8  NoCAP  NoPAREN  B-UNIT  B-UNIT
+! dark  I3  L8  NoCAP  NoPAREN  B-COMMENT  B-NAME
+! corn  I4  L8  NoCAP  NoPAREN  B-NAME  I-NAME
+  syrup  I5  L8  NoCAP  NoPAREN  I-NAME  I-NAME
 ```
 
 The `testing_output` file was the result of these two lines in my `build.sh` script:
