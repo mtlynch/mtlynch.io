@@ -1,0 +1,6 @@
+---
+title: travis.yml
+---
+sudo: required
+services: docker
+script: docker build .

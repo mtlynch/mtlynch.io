@@ -33,7 +33,7 @@ The code was dead.
 In this three-part series, I'll show you how I resurrected it and built a business with the result:
 
 * **Part One: Resuscitation (this post)** - In which I nurse the code back to health so that it runs on any modern system
-* Part Two: Stabilization (coming soon) - In which I prevent functionality from regressing while I restore the code
+* [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
 * Part Three: Rehabilitation (coming soon) - In which I fix the code's most egregious bugs and begin refactoring
 
 {% include image.html file="cover.jpg" alt="Bear doctors resuscitating python" max_width="800px" img_link=true %}
@@ -364,7 +364,7 @@ Why is a machine learning model responsible for structuring ingredient data *and
 
 I would have loved to dive right into the code to make sweeping functional changes, but first I had to perform a critical step: stabilization. I needed to lock in the library's existing behavior so that any changes I made to its functionality were explicit and deliberate.
 
-Check back next week for **part two** of this series, where I will describe:
+I cover that in [part two of this series](/resurrecting-2/), which describes:
 
 * How I added end-to-end tests so that I wouldn't accidentally break anything
 * How I configured the tests to run automatically before applying any change to the code
