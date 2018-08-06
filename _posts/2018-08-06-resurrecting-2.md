@@ -20,9 +20,9 @@ header:
 excerpt: Using Docker to get a legacy library under test in continuous integration
 ---
 
-In this post, I demonstrate how to retrofit automated tests onto an untested, legacy library.
+In this post, I demonstrate how to retrofit automated tests onto an untested legacy library.
 
-This is part two of a three-part series about how I resurrected the [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger) repository. It's a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data. The longer story is in [part one](/resurrecting-1/), but the short version is that I discovered an abandoned library and brought it back to life to power a new SaaS business:
+This is part two of a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
 
 * [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
 * **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
@@ -32,13 +32,13 @@ This is part two of a three-part series about how I resurrected the [ingredient-
 
 # Running it in continuous integration
 
-At the end of part one, I created a Docker container that allowed the library to run on any system. The next step was to run the library in continuous integration.
+At the end of part one, I created a Docker image that allowed the library to run on any system. The next step was to run the library in continuous integration.
 
 {% include image.html file="travis-ci-logo.png" class="align-right" alt="Travis CI logo" max_width="300px" link_url="https://travis-ci.org/" %}
 
-Continuous integration is a controlled environment that tests software on each change to the code. My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are intuitive, and they offer unlimited free builds for open-source projects.
+Continuous integration is the practice of using an indepedent, controlled environment to test software on each change to the code. My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are intuitive, and they offer unlimited free builds for open-source projects.
 
-To integrate with Travis, I added [my fork of ingredient-phrase-tagger](https://github.com/mtlynch/ingredient-phrase-tagger) and enabled builds:
+To integrate with Travis, I added [my fork of ingredient-phrase-tagger](https://github.com/mtlynch/ingredient-phrase-tagger) on Travis' configuration page and then enabled builds:
 
 {% include image.html file="enable-travis.png" class="img-border" alt="Screenshot of enabling Travis" fig_caption="Enabling Travis builds for ingredient-phrase-tagger library" max_width="677px" %}
 
@@ -52,7 +52,7 @@ I pushed my commit to Github, created a [pull request](https://github.com/mtlync
 
 # Adding an end-to-end test
 
-Travis was building my Docker container, but the build wasn't meaningful yet. It only built the library's dependencies &mdash; it didn't exercise any of its behavior. I wanted a build that could alert me if I broke the library's functionality. To do that, I needed an end-to-end test.
+Travis was building my Docker image, but the build wasn't meaningful yet. It only built the library's dependencies &mdash; it didn't exercise any of its behavior. I wanted a build that could alert me when I broke the library's functionality. To do that, I needed an end-to-end test.
 
 An end-to-end test verifies that a complete, real-world scenario works as expected. It generally matches the following structure:
 
@@ -60,7 +60,7 @@ An end-to-end test verifies that a complete, real-world scenario works as expect
 1. Use automation tools to feed the input to the library.
 1. Compare the library's output to the golden output.
 
-The original repository contained a script called [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) that resembled an end-to-end test. It provided pre-generated input to the library, used a portion of the input to train a new machine learning model, then used that model to classify other portions of the input. The only piece missing was that it never compared results to a known-good output.
+The original repository contained a script called [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) that resembled an end-to-end test. It provided pre-generated input to the library, used a portion of the input to train a new machine learning model, then used that model to parse other portions of the input. The only piece missing was that it never compared results to a known-good output.
 
 # A basic end-to-end test
 
@@ -78,11 +78,10 @@ Word-Level Stats:
         % correct: 90.7510917031
 ```
 
-That gave me enough for a simple end-to-end test. I re-ran the final step of the `roundtrip.sh` script, but redirected the console output to a file called `tests/golden/eval_output` and added it to source control:
+That gave me enough for a simple end-to-end test. I re-ran the final step of the `roundtrip.sh` script, but redirected the console output to a new file called `tests/golden/eval_output` and added it to source control:
 
 ```bash
 python bin/evaluate.py tmp/test_output > tests/golden/eval_output
-git add tests/golden/eval_output
 ```
 
 Now that I had known-good output, I modified the end of `roundtrip.sh` so that it would compare all future outputs against this saved output:
@@ -163,7 +162,7 @@ pepper  I6      L8      NoCAP   NoPAREN I-NAME
 
 I didn't understand the file format yet, but I didn't have to. All I needed was a way to detect when the files changed.
 
-After copying these files to `tests/golden`, I saved them to source control as additional golden outputs. Then, I added `diff`s to my build script so that it would detect when any changes to the library's logic caused these output files to change.
+After copying these files to `tests/golden`, I saved them to source control as additional golden outputs. Then, I added `diff`s to my build script to detect when these output files changed.
 
 {% include ads.html title="zestful" %}
 
@@ -184,6 +183,8 @@ With the `docker_build` script, my end-to-end test could run on any system that 
 My earlier Travis configuration built the Docker image but didn't exercise the library. Now that I had a thorough test script, I updated my `.travis.yml` file to run it:
 
 ```diff
+sudo: required
+services: docker
 -script: docker build .
 +script: ./docker_build
 ```
@@ -233,7 +234,7 @@ crf_test \
 
 `crf_learn` and `crf_test` were both command-line utilities for [CRF++](https://taku910.github.io/crfpp/), the engine that powered ingredient-phrase-tagger's machine learning logic. Without knowing much about these utilities, I could deduce from the syntax that `crf_learn` created a machine learning model and `crf_test` used that model to classify data.
 
-The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched my golden versions. This meant that `crf_learn` and `crf_test` took in inputs that were identical in both environments, but they produced different outputs.
+The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched my golden versions. This meant that `crf_learn` and `crf_test` took in inputs that were identical on my local system as well as in continuous integration, but they produced different outputs depending on the environment.
 
 # A deeper dive into CRF++
 
@@ -274,15 +275,19 @@ I tweaked my `build.sh` script to set the thread count explicitly:
 +  template_file "$ACTUAL_CRF_TRAINING_FILE" "$ACTUAL_CRF_MODEL_FILE"
 ```
 
-Then, I saved the newly generated output files to as my golden copies. I pushed [the changes](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7) to Github and was greeted with a pleasant sight: [my end-to-end tests passed](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692):
+Then, I saved the newly generated output files as my golden copies. I pushed [the changes](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7) to Github and was greeted with a pleasant sight: [my end-to-end tests passed](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692):
 
 {% include image.html file="e2e-fix.png" alt="Success after fixing end-to-end test" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end test passing on Travis" %}
 
+# The value of good tests
+
+The end-to-end test proved its value very quickly. While it was tedious to dive into the documentation for one of the library's dependencies, the test exposed that the library produced inconsistent results depending on its environment. This is something the library's original authors likely never realized.
+
+With the end-to-end test in place and continuous integration running, I had an authoritative environment that demonstrated the library's expected functionality. The test provided a valuable safeguard in case I made any changes that unintentionally changed the library's behavior.
+
 # What's next?
 
-I now had an end-to-end test that told me if I broke any of the library's behavior. This meant that it was time for my favorite part of a software project: refactoring.
-
-With the confidence from my tests, I was free to make large-scale changes to the code knowing that I was unlikely to break any critical pieces.
+With the confidence from my test, it was time for my favorite part of a software project: refactoring. I was free to make large-scale changes to the code because I knew the build would break loudly if I did anything too stupid.
 
 Stay tuned for **part three** of this series, where I will describe how I:
 
