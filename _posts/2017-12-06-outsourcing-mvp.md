@@ -138,6 +138,6 @@ If you choose to work with a freelancer:
 
 ---
 
-*This article was edited by [Samantha Mason](https://www.upwork.com/fl/samanthamason).*
+*This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com).*
 
 *If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article.*
