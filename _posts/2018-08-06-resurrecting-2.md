@@ -127,6 +127,8 @@ It worked!
 
 When I told the code that 9 was no longer considered a number, the library's accuracy fell, and the script terminated with a failing exit code.
 
+{% include ads.html title="zestful" %}
+
 # Expanding the end-to-end test
 
 The basic end-to-end test above was useful, but `roundtrip.sh` executes a data pipeline with several stages. It would be convenient to know which particular stage broke, so I looked for more outputs to include in the end-to-end test.
@@ -297,6 +299,8 @@ Stay tuned for **part three** of this series, where I will describe how I:
 * reduced the build time from 20 minutes to 90 seconds
 * applied style conventions to the code automatically
 * added static analysis to the build
+
+{% include ads.html title="zestful" %}
 
 ---
 

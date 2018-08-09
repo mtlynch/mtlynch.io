@@ -195,6 +195,8 @@ CRF++ of 0.59
 
 Woohoo! It worked!
 
+{% include ads.html title="zestful" %}
+
 # *Actually* building it in Docker
 
 Oh, wait. That wasn't really what I was trying to do.
@@ -369,6 +371,8 @@ I cover that in [part two of this series](/resurrecting-2/), which describes:
 * How I added end-to-end tests so that I wouldn't accidentally break anything
 * How I configured the tests to run automatically before applying any change to the code
 * How I added my standard toolset to the codebase to facilitate maintenance
+
+{% include ads.html title="zestful" %}
 
 ---
 
