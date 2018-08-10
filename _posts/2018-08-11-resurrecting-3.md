@@ -24,7 +24,6 @@ header:
 
 {% include image.html file="cover.jpg" alt="Hermit crab being pulled from shell" max_width="800px" img_link=true %}
 
-
 # Enforcing whitespace conventions
 
 My end-to-end tests gave me confidence that if I refactored the code, I wouldn't accidentally break anything. I decided to add one of my favorite Python tools, [YAPF](https://github.com/google/yapf). It's a formatter for Python. I add it to all of my Python projects so that it forces me to use consistent code conventions for whitespace without having to think about it.
@@ -48,9 +47,46 @@ $ pyflakes bin/ ingredient_phrase_tagger/
 ingredient_phrase_tagger/training/utils.py:3: 'string' imported but unused
 ```
 
+# Maybe I should read the code
+
+You may have noticed that throughout this process, I have avoided trying to understand the code. I've managed to skate by without really understanding what any of it is doing except at a very high level.
+
+Now that my end-to-end test was in place and I had automated development tools in place, maybe I should, y'know, read the code.
+
+I have a hard time just reading code straight through. When I read code, I'm constantly thinking of things to change, so I like to refactor to bake in my understanding. Martin Fowler describes this best:
+
+>TODO: Fowler quote
+>
+>-Martin Fowler, *Refactoring*
+
+# Starting top-down
+
+The code wasn't well-factored. Almost all of the library's logic was in just two files: `cli.py` and `utils.py`. So, basically, the code was divided into two modules: "command-line interface" and "everything else." But this division wasn't even very accurate, as most of `cli.py` had nothing to do with reading or writing from the command line.
+
+Here are the `Cli` class' methods:
+
+* `run`
+* `generate_data`
+* `parseNumbers`
+* `matchUp`
+* `addPrefixes`
+* `bestTag`
+* `_parse_args`
+
+The only two that make sense as logical parts of a command-line interface class are `run` and `_parse_args`. This code was in need of a refactoring.
+
+# Finding a seam
+
+In his book *Working with Legacy Code*, Michael Feathers suggests looking for "seams":
+
+>TODO: Add seams definition.
+
+
+https://github.com/mtlynch/ingredient-phrase-tagger/pull/19
+
 # Speeding up the build
 
-Adding the build tools should have been simple, but one thing was getting in my way. Each build took almost 20 minutes:
+Adding the build tools should have been simple, but one thing was getting in my way. Each build took almost 20 minutes to complete:
 
 {% include image.html file="build-time.png" alt="Travis screenshot showing 20 minute build time" max_width="800px" img_link=true class="img-border" %}
 
@@ -272,29 +308,6 @@ And then it worked!
 
 That reduced the running time to just 1 minute, 38 seconds:
 
-# Adding code coverage
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/19
-
-# Fixing the first bug
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/26/files
-
-# Delete the cruft
-
-At this point, I had a good feel for the code. Red flags I saw at the beginning, I was now more confident they were indeed extraneous. I had end-to-end tests to verify everything, so if I broke something, I'd find out.
-
-One thing that had gnawing at me throughout my work was seeing a folder called `tmp/` that was only there so that one of their shell scripts. I no longer needed their shell script because I was doing the same
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/32
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/33
-
-# Edit like nobody's watching
-
-Now that I had the code under decent amount of test, I could start making *functional* changes.
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/28/files
-
 # Refactor one to throw away
 
 I eventually decided I wanted a whole new design.
@@ -305,9 +318,8 @@ I eventually decided I wanted a whole new design.
 
 You can demo it on my site and you can use it in your apps.
 
-# A note about the code
 
-I don't think it's high-quality code, but even though a lot was klunky, it still did what it was supposed to do. I had enough information to understand how to use it and generally what everything did. Granted, I think automated tests and better documentation do this much better, but the original authors got me somewhere I might not have been able to get to on my own.
+{% include ads.html title="zestful" %}
 
 ---
 

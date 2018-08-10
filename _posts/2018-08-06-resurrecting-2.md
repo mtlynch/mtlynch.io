@@ -29,7 +29,7 @@ This is part two of a three-part series about how I resurrected [ingredient-phra
 
 * [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
 * **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
-* Part Three: Rehabilitation (coming soon) - In which I fix the code's most egregious bugs and begin refactoring
+* [Part Three: Rehabilitation](/resurrecting-3/) - In which I fix the code's most egregious bugs and begin refactoring
 
 {% include image.html file="cover.jpg" alt="Beavers stabilizing shaky house" max_width="800px" img_link=true %}
 
@@ -294,7 +294,7 @@ With the end-to-end test in place and continuous integration running, I had an a
 
 With the confidence from my test, it was time for my favorite part of a software project: refactoring. I was free to make large-scale changes to the code because I knew the build would break loudly if I did anything too stupid.
 
-Stay tuned for **part three** of this series, where I will describe how I:
+Read on for [part three](/resurrecting-3/)  of this series, where I describe how I:
 
 * reduced the build time from 20 minutes to 90 seconds
 * applied style conventions to the code automatically
