@@ -7,18 +7,19 @@ module Jekyll
     # @param {string} msg - A string representing the actual verbage to display
     #        in the console.
     # @param {string} type = A string representing the type of error to raise
-    #        in the console.  The default is "warn" to display a warning
-    #        message that would NOT stop the build, just alert the user.
-    #        Alternatively, "err" can be used for critical errors shown in red
-    #        that halts the build.
-    def raise_exception(msg, type = "warn")
+    #        in the console.  This can either be:
+    #          - "warning" - Displays a warning message that does NOT stop the
+    #                        build, simply used to alert the user.
+    #          - "error"   - Used for critical erros and halts the build on
+    #                        first occurence fo the problem.
+    def raise_exception(msg, type)
     	
     	bad_file = @context.registers[:page]['path']
     	err_msg = "In #{bad_file}: #{msg}"
 
-    	if type == "err"
+    	if type == "error"
       	raise err_msg
-      else
+      elsif type == "warning"
      		warn err_msg.yellow 
       end
 

@@ -68,11 +68,11 @@
 
 {% comment %}
 <!-- if there has been more than 1 file with the same title found, then 
-     raise a warning as this is likely not intentional -->
+     raise an error as this is likely not intentional -->
 {% endcomment %}
 {% if file_count > 1 %}
   {{ "Multiple file includes with the same title, " 
     | append: include.title 
     | append: ", have been found." 
-    | raise_exception }}
+    | raise_exception: "error" }}
 {% endif %}
