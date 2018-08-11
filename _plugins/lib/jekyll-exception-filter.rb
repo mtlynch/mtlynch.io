@@ -17,10 +17,10 @@ module Jekyll
     	bad_file = @context.registers[:page]['path']
     	err_msg = "In #{bad_file}: #{msg}"
 
-    	if type == "error"
-      	raise err_msg
-      elsif type == "warning"
-     		warn err_msg.yellow 
+    	if type == "warning"
+      	warn err_msg.yellow 
+      else
+     		raise err_msg
       end
 
     end
