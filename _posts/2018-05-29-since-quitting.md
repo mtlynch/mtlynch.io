@@ -28,7 +28,7 @@ That was four months ago, so I thought I'd share an update on how things are goi
 
 # What's it like not having a job?
 
-That's the most common question people ask. What's it like? Is it like candy? Or butterscotch?
+That's the most common question people ask. What's it like?
 
 For the first few days, I kept thinking, "Woohoo! I'm free!" It was like starting a long-awaited vacation and knowing that it could potentially last forever.
 
