@@ -55,9 +55,9 @@ Now that my end-to-end test was in place and I had automated development tools i
 
 I have a hard time just reading code straight through. When I read code, I'm constantly thinking of things to change, so I like to refactor to bake in my understanding. Martin Fowler describes this best:
 
->TODO: Fowler quote
+>When I look at unfamiliar code, I have to try to understand what it does. I look at a couple of lines and say to myself, oh yes, that’s what this bit of code is doing. With refactoring I don’t stop at the mental note. I actually change the code to better reflect my understanding, and then I test that understanding by rerunning the code to see if it still works.
 >
->-Martin Fowler, *Refactoring*
+>-Martin Fowler, [*Refactoring: Improving the Design of Existing Code*](https://amzn.to/2nuHVfv)
 
 # Starting top-down
 
@@ -75,12 +75,44 @@ Here are the `Cli` class' methods:
 
 The only two that make sense as logical parts of a command-line interface class are `run` and `_parse_args`. This code was in need of a refactoring.
 
-# Finding a seam
+# Dissecting the CLI class
 
-In his book *Working with Legacy Code*, Michael Feathers suggests looking for "seams":
+Clearly, I wanted to break up the `Cli` class, but I had to find a starting point. `generate_data` sure doesn't seem to belong there, but I can't move it to a different module because it calls several other member functions.
 
->TODO: Add seams definition.
+Does it actually share state? I went back to `Cli`'s constructor:
 
+```python
+def __init__(self, argv):
+      self.opts = self._parse_args(argv)
+      self._upstream_cursor = None
+```
+
+The constructor assigns a value to `self._upstream_cursor`, but the class never references it. It's dead code, so that was an easy delete.
+
+The other member variable, `self.opts` wasn't dead, but only two methods referenced it: `run` and `generate_data`. That meant that none of the other methods needed to be attached to the class itself. They could all live happily as free functions at the module level because they never needed access to any of `Cli`'s instance variables. Or, better yet, I could move them to a completely new module so that these functions that have nothing to do with the command-line aren't living in a module called `cli`.
+
+# My first unit test
+
+It didn't have to be perfect, just *better*. Refactoring is an iterative process, so as long as the code was getting less tangled, that was good.
+
+```python
+def test_translates_row_with_simple_phrase(self):
+    row = {
+        'index': 162,
+        'input': '2 cups flour',
+        'name': 'flour',
+        'qty': 2.0,
+        'range_end': 0.0,
+        'unit': 'cup',
+        'comment': '',
+    }
+     self.assertMultiLineEqual("""
+2\tI1\tL4\tNoCAP\tNoPAREN\tB-QTY
+cups\tI2\tL4\tNoCAP\tNoPAREN\tB-UNIT
+flour\tI3\tL4\tNoCAP\tNoPAREN\tB-NAME
+""".strip(),
+                              translator.translate_row(row).strip())
+```
 
 https://github.com/mtlynch/ingredient-phrase-tagger/pull/19
 
@@ -169,12 +201,14 @@ cayenne I3      L8      NoCAP   NoPAREN B-NAME
 pepper  I4      L8      NoCAP   NoPAREN I-NAME
 ```
 
+And then I added simple print statements to shed light on what the data looked like after the CSV parser read it:
+
 ```python
 for k, v in row.iteritems():
     print '[%s] (%s) -> [%s] (%s)' % (k, type(k), v, type(v))
 ```
 
-I ran it under the pandas implementation:
+I ran the modified code under the pandas implementation:
 
 ```bash
 $ bin/generate_data --data-path=/tmp/debug.csv --count=1 --offset=0
@@ -200,9 +234,13 @@ $ bin/generate_data --data-path=/tmp/debug.csv --count=1 --offset=0
 [unit] (<type 'str'>) -> [pinch] (<type 'str'>)
 ```
 
-That was it! The data types were different. It looked like pandas automatically interpreted numbers as number types whereas the `csv` library let them remain as strings. If the cell contained the string `1.0`, then the csv library read it as the string `'1.0'` whereas pandas read it as a floating-point number of `1.0`.
+Did you catch it?
+
+The values were the same, but *data types* were different. Pandas automatically cast numbers in the CSV to number data types like `int` and `float` whereas the `csv` library left them as strings. If a CSV file entry contained the string `1.0`, then the csv library read it as the string `'1.0'` whereas pandas read it as a floating-point number of `1.0`.
 
 # Surely that's sorted
+
+Confident that I'd solved all of my problems and could forever say goodbye to Pandas, I re-ran the `docker_build` script:
 
 ```bash
 $ ./docker_build
@@ -227,7 +265,9 @@ diff --context=2 tests/golden/training_data.crf /tmp/tmp.3jATNKzDTl/training_dat
 ...
 ```
 
-So I again repeated it to just one of the troublesome lines:
+Darn, failing again. This one looked a bit more subtle because there were only a few lines that had different output.
+
+I repeated my debugging strategy of reducing the input file to just one of the troublesome CSV rows:
 
 ```bash
 $ cat /tmp/debug.csv
@@ -312,9 +352,9 @@ That reduced the running time to just 1 minute, 38 seconds:
 
 I eventually decided I wanted a whole new design.
 
->Hence plan to throw one away; you will, anyhow.
+>...plan to throw one away; you will, anyhow.
 >
->-Fred Brooks, *The Mythical Man Month*
+>-Fred Brooks, [*The Mythical Man Month: Essays on Software Engineering*](https://amzn.to/2OTNCQK)
 
 You can demo it on my site and you can use it in your apps.
 
