@@ -32,9 +32,9 @@
 {% comment %}
 <!-- determine the full path of the image -->
 {% endcomment %}
-{% assign post_slug =  page.path | replace:'.html','' | replace: '.md','' | replace: '_posts/', '' %}
-{% assign img_basepath = site.responsive_image.base_path | append: "/" | append: post_slug %}
-{% assign img_path = img_basepath | append: "/" | append: include.file %}
+{% assign img_path = site.responsive_image.base_path 
+   | append: page.url 
+   | append: include.file %}
 
 {% comment %}
 <!-- default media_rendition to "article" if not included in parmaters -->
