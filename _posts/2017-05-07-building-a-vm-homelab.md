@@ -10,7 +10,7 @@ sidebar:
   nav: main
 date: '2017-05-07 00:00:00 -04:00'
 header:
-  teaser: images/resized/2017-05-07-building-a-vm-homelab/480/vm-server-parts.jpg
+  teaser: images/building-a-vm-homelab/vm-server-parts.jpg
   og_image: ""
 tags:
 - virtualization

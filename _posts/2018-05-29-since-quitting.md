@@ -10,8 +10,8 @@ sidebar:
   nav: main
 excerpt: An update on my progress since going off to work on my own.
 header:
-  og_image: images/2018-05-29-since-quitting/so-stressed.jpg
-  teaser: images/2018-05-29-since-quitting/so-stressed.jpg
+  og_image: images/since-quitting/so-stressed.jpg
+  teaser: images/since-quitting/so-stressed.jpg
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17186865
   indie_hackers: https://www.indiehackers.com/forum/i-quit-google-to-become-a-full-time-indie-hacker-four-months-later-2341bcb1f6

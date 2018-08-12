@@ -11,8 +11,8 @@ sidebar:
 excerpt: With no idea what I was doing, I hired a cartoonist to illustrate my blog.
   The results were surprisingly positive.
 header:
-  teaser: images/resized/2018-01-19-how-to-hire-a-cartoonist/768/mma-sketch.png
-  og_image: images/resized/2018-01-19-how-to-hire-a-cartoonist/768/mma-sketch.png
+  teaser: images/how-to-hire-a-cartoonist/mma-sketch.png
+  og_image: images/how-to-hire-a-cartoonist/mma-sketch.png
 tags:
 - cartoons
 - blogging

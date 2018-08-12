@@ -15,8 +15,8 @@ tags:
 - ingredient-phrase-tagger
 - ingredient parsing
 header:
-  og_image: images/2018-07-24-resurrecting-1/cover.jpg
-  teaser: images/2018-07-24-resurrecting-1/cover.jpg
+  og_image: images/resurrecting-1/cover.jpg
+  teaser: images/resurrecting-1/cover.jpg
 excerpt: The story of how I got an old library up and running again and used it to
   build a new business
 discuss_urls:
