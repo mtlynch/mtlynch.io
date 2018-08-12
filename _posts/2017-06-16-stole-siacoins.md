@@ -7,7 +7,7 @@ comments: true
 share: true
 related: true
 header:
-  teaser: images/resized/2017-06-16-stole-siacoins/480/american-psycho.jpg
+  teaser: images/stole-siacoins/american-psycho.jpg
   og_image: ""
 tags:
 - siacoin

@@ -9,8 +9,8 @@ related: true
 sidebar:
   nav: main
 header:
-  teaser: images/2017-10-12-human-code-reviews-1/book-cover.png
-  og_image: images/2017-10-12-human-code-reviews-1/code-reviews-cover1.png
+  teaser: images/human-code-reviews-1/book-cover.png
+  og_image: images/human-code-reviews-1/code-reviews-cover1.png
 tags:
 - code review
 - culture

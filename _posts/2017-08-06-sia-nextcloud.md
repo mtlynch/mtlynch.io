@@ -9,7 +9,7 @@ related: true
 sidebar:
   nav: main
 header:
-  teaser: images/resized/2017-08-06-sia-nextcloud/480/nextcloud-complete.png
+  teaser: images/sia-nextcloud/nextcloud-complete.png
   og_image: ""
 tags:
 - sia

@@ -14,7 +14,7 @@ tags:
 - sia
 excerpt: An analysis of how Nebulous Labs can improve its bounty program for Sia
 header:
-  teaser: images/resized/2017-12-01-sia-minio-postmortem/480/minio-postmortem.png
+  teaser: images/sia-minio-postmortem/minio-postmortem.png
   og_image: ""
 ---
 

@@ -9,7 +9,7 @@ related: true
 sidebar:
   nav: main
 header:
-  teaser: images/resized/2017-12-06-outsourcing-mvp/768/wireframe-v1.jpg
+  teaser: images/outsourcing-mvp/wireframe-v1.jpg
   og_image: ""
 tags:
 - mvp

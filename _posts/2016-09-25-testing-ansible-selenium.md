@@ -2,7 +2,7 @@
 title: Testing Ansible Web App Roles with Selenium
 date: 2016-09-25 00:00:00 -04:00
 header:
-  teaser: images/resized/2016-09-25-testing-ansible-selenium/480/bunny-film-error.png
+  teaser: images/testing-ansible-selenium/bunny-film-error.png
   og_image: ""
 tags:
 - ansible

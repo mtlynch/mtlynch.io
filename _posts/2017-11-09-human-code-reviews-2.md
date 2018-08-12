@@ -9,7 +9,8 @@ related: true
 sidebar:
   nav: main
 header:
-  og_image: images/2017-11-09-human-code-reviews-2/cover-part-two.png
+  og_image: images/human-code-reviews-2/cover-part-two.png
+  teaser: images/human-code-reviews-2/cover-part-two.png
 tags:
 - code review
 - culture
