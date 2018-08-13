@@ -9,5 +9,6 @@ npm run build:js
 # Start jekyll server
 bundle exec jekyll serve \
   --config _config.yml,_config_dev.yml \
+  --livereload \
   --watch \
   --incremental
