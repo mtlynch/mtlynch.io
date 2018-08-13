@@ -14,8 +14,8 @@ tags:
 - ingredient-phrase-tagger
 - ingredient parsing
 header:
-  teaser: images/2018-08-11-resurrecting-3/cover.jpg
-  og_image: images/2018-08-11-resurrecting-3/cover.jpg
+  teaser: images/resurrecting-3/cover.jpg
+  og_image: images/resurrecting-3/cover.jpg
 ---
 
 * [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
