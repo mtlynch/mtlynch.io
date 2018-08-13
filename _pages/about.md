@@ -7,7 +7,7 @@ sidebar:
 permalink: "/about/"
 excerpt: About the author
 header:
-  teaser: images/_pages/about/author-photo.jpg
+  teaser: images/about/author-photo.jpg
 hide_signup: true
 ---
 
