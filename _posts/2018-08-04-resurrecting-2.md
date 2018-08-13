@@ -16,8 +16,8 @@ tags:
 - ingredient-phrase-tagger
 - ingredient parsing
 header:
-  og_image: images/2018-08-04-resurrecting-2/cover.jpg
-  teaser: images/2018-08-04-resurrecting-2/cover.jpg
+  og_image: images/resurrecting-2/cover.jpg
+  teaser: images/resurrecting-2/cover.jpg
 ---
 
 In this post, I will demonstrate how to use Docker to retrofit tests onto a library that was built without any tests at all.

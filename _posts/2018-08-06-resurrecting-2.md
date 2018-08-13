@@ -296,9 +296,9 @@ With the confidence from my test, it was time for my favorite part of a software
 
 Read on for [part three](/resurrecting-3/)  of this series, where I describe how I:
 
-* reduced the build time from 20 minutes to 90 seconds
+* added unit tests
 * applied style conventions to the code automatically
-* added static analysis to the build
+* integrated static analysis into the build
 
 {% include ads.html title="zestful" %}
 

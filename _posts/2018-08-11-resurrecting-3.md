@@ -18,6 +18,10 @@ header:
   og_image: images/resurrecting-3/cover.jpg
 ---
 
+In this post, I show how to make it safe to modify the low-level logic of a legacy Python library. And I'll address the strange issues that arise when you combine Docker with code coverage tools.
+
+This is the final post in a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
+
 * [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
 * [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
 * **Part Three: Rehabilitation (this post)** - In which I fix the code's most egregious bugs and begin refactoring
@@ -97,11 +101,13 @@ Now that I had discovered that most of `Cli`'s methods could live in another mod
 
 I realized that they were all within `generate_data`'s loop body. If I extracted the body of the loop to a single function, `Cli` could call it with just one function.
 
-TODO: Screenshot of function diff.
+{% include image.html file="function-diff.png" alt="Diff from YAPF changes" fig_caption="Extracting function body from generate_data to a separate function" max_width="616px" img_link=true class="img-border" %}
 
 It didn't have to be perfect, just *better*. Refactoring is an iterative process, so as long as the code was getting less tangled, that was good.
 
 My end-to-end test passed, which told me I didn't break anything major in the move, but my work wasn't over yet. I was adding a new function, which meant that I was also responsible for adding a new unit test to exercise it.
+
+{% include ads.html title="zestful" %}
 
 # My first unit test
 
@@ -153,6 +159,52 @@ Integrating unit tests into the build was good, but it was also showing me what 
 
 I'm most familiar with Coveralls, but there was a problem. Docker makes this a bit tricky.
 
+I then added an `after_success` key to my Travis configuration so that Travis would upload my code coverage information to Coveralls.
+
+```yaml
+after_success:
+  - pip install pyyaml coveralls
+  - coveralls
+```
+
+I checked the Coveralls dashboard eager to see my code coverage stats, and...
+
+{% include image.html file="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" fig_caption="Coveralls shows no code coverage information" max_width="699px" img_link=true class="img-border" %}
+
+Nothing.
+
+# Making Coveralls play with Docker
+
+I had used Coveralls without issue on other projects, so I didn't understand why this didn't work. It was just a simple Python project.
+
+Oh, that was it! The `coveralls` binary ran in the standard Travis environment, but my `.coverage` file was hiding within my Docker container.
+
+That was an easy fix. I just had to add a command to pull the `.coverage` file back out from the Docker container into the normal Travis environment:
+
+```yaml
+after_success:
+  - pip install pyyaml coveralls
+  - docker cp ingredient-phrase-tagger-container:/ingredient-phrase-tagger/.coverage ./
+  - coveralls
+```
+
+{% include image.html file="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" fig_caption="Coveralls *still* shows no code coverage information" max_width="699px" img_link=true class="img-border" %}
+
+But this time, the Travis build printed more output that wasn't there before:
+
+```text
+coveralls
+Submitting coverage to coveralls.io...
+No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/__init__.py
+No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/__init__.py
+No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/cli.py
+No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/translator.py
+No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/utils.py
+Coverage submitted!
+Job #177.1
+https://coveralls.io/jobs/39259674
+```
+
 The `coverage` binary stores code coverage in a directory called `.coverage`. The way Coveralls is supposed to work is that the Coveralls client binary uploads this directory to the Coveralls server and the Coveralls server processes it to show
 
 Two problems:
@@ -164,26 +216,39 @@ But I ran my build in a Docker container, so
 
 The Coveralls client binary uploads the `.coverage` folder up to the Coveralls server for processing. But Python's `coverage`
 
-```yaml
-after_success:
-  - pip install pyyaml coveralls
-  - docker cp ingredient-phrase-tagger-container:/ingredient-phrase-tagger/.coverage ./
-  # Fix paths in .coverage so they match Coveralls' expectations of Travis'
-  # paths.
-  - sed -i "s@\"/ingredient-phrase-tagger/@\"${PWD}/@g" .coverage
-  - coveralls
-```
+# Canonicalizing paths
+
+https://coveralls.io/jobs/39262596
+
+# A review of improvements
+
+At this point, I'd like to take a step back and recognize what all these changes accomplished. When I started editing this code, it wasn't even possible to build it outside of the OS X operating system. There were no tests and no mechanism for adding them. There were no consistent style conventions.
+
+In editing it, I put it on the path to a production grade project.
+
+* I defined a Docker image to let the code build on any system
+* I added end-to-end tests to prevent code changes from breaking high-level functionality
+* I added unit tests to verify behavior in low level logic
+* I added automatic code formatting to enforce consistent style conventions
+* I added static analysis tools to catch careless errors
+
+I'm not going to claim that I made this the best library in the world, but these changes put it well on a path to production-grade code. The project was healthy enough that if I brought in a developer without previous context, they could run and edit the code without a lot of time wasted figuring out the code or determining if their changes broke functionality.
 
 # Refactor one to throw away
 
-I eventually decided I wanted a whole new design.
+Given how proud I was of the changes, it may surprise you to learn that after a few more weeks of improving the code, I decided to stop working on it in favor of a total rewrite.
+
+I refactored enough to develop a good understanding of the library's logic. Once that was done, I thought about what would be a more intuitive way to architect the library myself.
 
 >...plan to throw one away; you will, anyhow.
 >
 >-Fred Brooks, [*The Mythical Man Month: Essays on Software Engineering*](https://amzn.to/2OTNCQK)
 
-You can demo it on my site and you can use it in your apps.
+With the result, I created a business called [Zestful](https://zestfuldata.com). It offers the functionality on the ingredient-phrase-tagger, but in a hosted API, so that clients don't have to worry about gathering training data or setting anything up. To try out the live demo, click the link below:
 
+TODO: Screenshot + demo
+
+If you're a developer with an app that handles recipe ingredients or you know of one that does, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
 
 {% include ads.html title="zestful" %}
 
