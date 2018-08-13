@@ -29,6 +29,11 @@
 	{% assign lang_highlight = include.language %}
 {% endif %}
 
+{% comment %}
+<!-- initialize file count -->
+{% endcomment %}
+{% assign file_count = 0 %}
+
 {% for file in files %}
 
   {% comment %}
@@ -56,7 +61,27 @@
 <div class="clearfix">
   <a href="{{ link }}" download class="btn--small code-tab">download raw</a>
 </div>
-
+    {% assign file_count = file_count | plus: 1 %}
   {% endif %}
 
 {% endfor %}
+
+{% if file_count > 1 %}
+  {% comment %}
+  <!-- if there has been more than 1 file with the same title found, then 
+       raise an error as this is likely not intentional -->
+  {% endcomment %}
+  {{ "Multiple file includes with the same title, " 
+    | append: include.title 
+    | append: ", have been found." 
+    | raise_exception: "error" }}
+{% elsif file_count == 0 %}
+  {% comment %}
+  <!-- if there has been NO files found in the subdirectory that match the
+       title, then raise an error -->
+  {% endcomment %}
+  {{ "Zero file includes matched the title, " 
+    | append: include.title 
+    | append: ".  Please check the file include's title and directory again." 
+    | raise_exception: "error" }}
+{% endif %}
