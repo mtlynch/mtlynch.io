@@ -74,7 +74,7 @@
   {{ "Multiple file includes with the same title, " 
     | append: include.title 
     | append: ", have been found." 
-    | raise_exception: "error" }}
+    | raise_exception: "warning" }}
 {% elsif file_count == 0 %}
   {% comment %}
   <!-- if there has been NO files found in the subdirectory that match the
@@ -83,5 +83,5 @@
   {{ "Zero file includes matched the title, " 
     | append: include.title 
     | append: ".  Please check the file include's title and directory again." 
-    | raise_exception: "error" }}
+    | raise_exception: "warning" }}
 {% endif %}
