@@ -13,12 +13,15 @@ tags:
 - refactoring
 - ingredient-phrase-tagger
 - ingredient parsing
+- docker
+- coveralls
+- coverage
 header:
   teaser: images/resurrecting-3/cover.jpg
   og_image: images/resurrecting-3/cover.jpg
 ---
 
-In this post, I show how to make it safe to modify the low-level logic of a legacy Python library. And I'll address the strange issues that arise when you combine Docker with code coverage tools.
+In this post, I show how I began refactoring a legacy Python library. As I refactored, I added unit tests to lock in my understanding of the code and to prevent regressions in behavior. Below, I'll also show how I overcame the strange issues that arose when I ran code coverage tools within a custom Docker container.
 
 This is the final post in a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
 
@@ -28,23 +31,71 @@ This is the final post in a three-part series about how I resurrected [ingredien
 
 {% include image.html file="cover.jpg" alt="Hermit crab being pulled from shell" max_width="800px" img_link=true %}
 
+# Where are we?
+
+It was time to start refactoring.
+As a refresher, at the end of [part two](/resurrecting-2/), the library:
+
+* Had an end-to-end test
+* Continuous integration ran the end-to-end test on every code change
+
+These two mechanisms gave me sufficient confidence that I wouldn't break any critical functionality in the code.
+
+It was time to start cleaning up the code.
+
 # Enforcing whitespace conventions
 
-My end-to-end tests gave me confidence that if I refactored the code, I wouldn't accidentally break anything. I decided to add one of my favorite Python tools, [YAPF](https://github.com/google/yapf). It's a formatter for Python. I add it to all of my Python projects so that it forces me to use consistent code conventions for whitespace without having to think about it.
+Scanning through the Python code, it didn't seem to have clear code style conventions. It mixed camelCase with snake_case naming. Line breaks sometimes occurred at column 80, but sometimes didn't.
 
-I used YAPF to reformat all of the Python files according to my preferred style conventions, then I [added YAPF to my build script](https://github.com/mtlynch/ingredient-phrase-tagger/pull/11) to make sure that these conventions held for every code change.
+Some of these I had to fix manually, but a simple, easy solution was available for fixing whitespace issues. [YAPF](https://github.com/google/yapf) is a whitespace formatter for Python. It's a standard feature in all of my Python projects. Instead of devoting mental energy to figuring out the right whitespace conventions, I simply run YAPF to apply the right conventions for me.
+
+Adding YAPF was simple. I created a `dev_requirements.txt` file specifying the version of YAPF I wanted:
+
+TODO: include file
+
+Then I added a YAPF command to my build script to apply whitespace conventions according to [Google's Python Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md):
+
+```bash
+yapf \
+  --diff \
+  --recursive \
+  --style google \
+  ./ \
+  --exclude="third_party/*" \
+  --exclude="build/*"
+```
+
+Finally, I ran almost the same command, except with the `--in-place` flag instead of `--diff`. This told YAPF to fix whitespace violations within the files themselves rather than simply displaying the changes it wants to make:
+
+```bash
+yapf \
+  --in-place \
+  --recursive \
+  --style google \
+  ./ \
+  --exclude="third_party/*" \
+  --exclude="build/*"
+```
+
+Note that I don't allow YAPF to modify code automatically within the build process. I think that's dangerous practice, and I instead allow YAPF to just display style violations and give the developer the responsibility of fixing them.
+
+according to my preferred style conventions, then I [added YAPF to my build script](https://github.com/mtlynch/ingredient-phrase-tagger/pull/11) to make sure that these conventions held for every code change.
 
 This created a bit of noise in my source:
 
 {% include image.html file="yapf-diff.png" alt="Diff from YAPF changes" max_width="700px" img_link=true class="img-border" fig_caption="Diff after adding automatic whitespace enforcement" %}
 
-I isolated whitespace changes to a single pull request. Anyone reviewing this change later can quickly scan through and see that these are purely whitespace changes that don't affect the logic.
+Another key thing to notice is that I isolated my whitespace changes from any other changes. A common anti-pattern is to mix large-scale whitespace changes with other refactoring. This is poor practice because it makes it more difficult for reviewers (including the author themselves) from verifying that the changes are safe. Whitespace changes are pretty easy to scan through, but if there are other refactorings buried amongst a sea of whitespace changes, it forces the reviewer to carefully read through everything and decide whether it's a pure-whitespace change or another type of refactoring.
+
+Whitespace changes are easy to verify as safe Anyone reviewing this change later can quickly scan through and see that these are purely whitespace changes that don't affect the logic.
 
 Still, it's possible sometimes to introduce a logic change even when it just looks like whitespace refactoring. I was confident that I wasn't doing this because I had end-to-end tests ensuring that my code produced the same output as before its refactoring.
 
 # Adding static analysis
 
-[pyflakes](https://github.com/PyCQA/pyflakes) is another tool I keep in all of my Python projects. It catches errors using static analysis like unused variables or unused imports. It was easy to [add to my build](https://github.com/mtlynch/ingredient-phrase-tagger/pull/12) and it immediately caught an unused import:
+Another great bang-for-your-buck tool is [pyflakes](https://github.com/PyCQA/pyflakes). It uses static analysis to identify careless errors such as unitialized variables or unused imports.
+
+It's very easy to set up, cheap to run, and its findings are often valuable. I [added it to my build](https://github.com/mtlynch/ingredient-phrase-tagger/pull/12), and it immediately caught an unused import:
 
 ```bash
 $ pyflakes bin/ ingredient_phrase_tagger/
@@ -186,7 +237,6 @@ after_success:
   - coveralls
 ```
 
-
 Again, I pulled up the Coveralls data for the build and found:
 
 {% assign fig_caption = "Coveralls *still* shows no code coverage information" | markdownify | remove: "<p>" | remove: "</p>" %}
@@ -210,29 +260,42 @@ Job #177.1
 https://coveralls.io/jobs/39259674
 ```
 
-Ohhhh, that made me realize what was going on.
+Thinking about this a bit, I realized what was going on.
 
-Within the Docker container, all of the library's code is in a folder called `/app`. When I ran the `coverage` command, it stored the absolute paths of all of the source files, but the Travis environment had a different view of the filesystem with different source paths. The `coveralls` command was trying to reconcile the paths in the Travis environment, but it was getting confused because the paths in the `.coverage` file didn't match the paths on the local filesystem.
+The `coverage` command generated a `.coverage` file with code coverage information, but it encodes file information into the file using absolute paths. Because I ran `coverage` within the Docker container, it has a different view of the filesystem than the `coveralls` command, which runs in the normal Travis environment.
 
-It would be great if `coverage` supported an option for saving relative paths instead of absolute paths, but alas, it did not. I had to get creative.
+For example, here is where the `cli.py` file is located in both environments:
 
-# A roundabout way of canonicalizing paths
+* Docker container: `/app/ingredient_phrase_tagger/training/cli.py`
+* Travis environment: `/home/travis/ingredient_phrase_tagger/training/cli.py`
 
-While `coverage` doesn't support relative paths, I did notice in its documentation that it did support a `paths` option:
+I ran the `coverage` command within Docker, so it generated a `.coverage` file with the first path. I ran `coveralls` directly in Travis, so it couldn't find any of the paths referenced in the `.coverage` file, as it has a conflicting view of the filesystem.
 
-Then there was a `coverage merge` option that merged together coverage output that used different views of the filesystem
+At this point, I had three options:
 
-```text
-; Run in parallel mode so that coverage can canonicalize the source paths
-; regardless of whether it runs locally or within a Docker container.
-parallel = True
- [paths]
-source =
-  ingredient_phrase_tagger/       ; local path
-  /app/ingredient_phrase_tagger/  ; path within Docker container
-```
+1. Configure `coverage` to store relative paths instead of absolute paths.
+2. Configure `coveralls` to recognize `.coverage` paths with a particular path prefix.
+3. Convert the `.coverage` file's paths from the Docker paths to the Travis paths.
 
-I copied it out:
+(1) and (2) were out because those tools didn't support such options.
+
+I needed a way to convert paths in the `.coverage` file. I originally did this in a very hacky way by simply using [find and replace](https://github.com/mtlynch/ingredient-phrase-tagger/blob/6a6011341de1995aac0afc403bb6a6067641f342/.travis.yml#L12-L14) within the `.coverage` file. This was a flaky solution, however, as future changes to the `.coverage` format could easily break my strategy.
+
+Fortunately, I found a way to convert paths using supported features of the `coverage` tool, but it was a bit convoluted.
+
+# A roundabout way to convert paths
+
+I noticed in the documentation for `coverage` that supported a `paths` option:
+
+Using this option, rather than a file called `.coverage`, the `coverage` application produces a file with a random suffix, like (TODO). The `coverage merge` feature is meant to consolidate several files with these suffixes back to a single, standard `.coverage` file.
+
+To use these options, I created the following `.coveragerc` file:
+
+TODO: Include .coveragerc
+
+I had to run the `coverage` command within the Docker container, then run `coverage merge` in the Travis environment, which converted the paths and converted the file back to `.coverage` (no suffix).
+
+This was the updated `after_success` section of my [Travis configuration](https://github.com/mtlynch/ingredient-phrase-tagger/blob/9e66f28b07de290b77b1ec0b84baf14f3e7330a0/.travis.yml):
 
 ```yaml
 after_success:
@@ -245,27 +308,39 @@ after_success:
   - coveralls
 ```
 
-Finally, the upload to coveralls [succeeded](https://coveralls.io/jobs/39262596):
+I put my solution to the test, and, finally, the upload to coveralls [succeeded](https://coveralls.io/jobs/39262596):
 
 {% include image.html file="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" fig_caption="Coveralls finally shows code coverage information" max_width="697px" img_link=true class="img-border" %}
 
-By unit testing a single function, I achieved 56% code coverage. Not bad!
-
-https://github.com/mtlynch/ingredient-phrase-tagger/compare/master...mtlynch:fix-coverage?expand=1
+I finally had code coverage information. I was impressed that by unit testing a single function, I achieved 56% code coverage. Not bad!
 
 # A review of improvements
 
-At this point, I'd like to take a step back and recognize what all these changes accomplished. When I started editing this code, it wasn't even possible to build it outside of the OS X operating system. There were no tests and no mechanism for adding them. There were no consistent style conventions.
+Throughout this series of blog posts, I've been incrementally improving the code and its accompanying development tools. I'd like to take a step back and recognize the high-level changes that occurred by this point:
 
-In editing it, I put it on the path to a production grade project.
+Before my changes:
 
-* I defined a Docker image to let the code build on any system
-* I added end-to-end tests to prevent code changes from breaking high-level functionality
-* I added unit tests to verify behavior in low level logic
-* I added automatic code formatting to enforce consistent style conventions
-* I added static analysis tools to catch careless errors
+* Built only on OS X
+* No end-to-end tests
+* No unit tests
+* No code coverage information
+* No automated builds
+* Inconsistent code style
 
-I'm not going to claim that I made this the best library in the world, but these changes put it well on a path to production-grade code. The project was healthy enough that if I brought in a developer without previous context, they could run and edit the code without a lot of time wasted figuring out the code or determining if their changes broke functionality.
+After my changes:
+
+* Builds in any environment that supports Docker
+* Has a thorough end-to-end test
+* Has a small number of unit test and an easy mechanism for adding more
+* Builds and tests code automatically on every change
+* Measures code coverage on every commit and maintains coverage history over time
+* Enforces consistent style conventions automatically
+
+TODO (link all of these)
+
+I don't claim that I made this the world's best software library, but I believe I put it on a healthy path toward being production-grade code.
+
+A good test for this is thinking about how much time a new developer would have to spend getting ramped up on the project. In the original version of the library, the cost of ramping up a new developer was very high. They had to figure out how to install all the library's dependencies, and they had no mechanisms telling them if they broke functionality or style conventions. With the improved code a new developer could get up and running quickly because automated tools were in place to guide them.
 
 # Refactor one to throw away
 

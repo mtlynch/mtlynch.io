@@ -34,7 +34,7 @@ In this three-part series, I'll show you how I resurrected it and built a busine
 
 * **Part One: Resuscitation (this post)** - In which I nurse the code back to health so that it runs on any modern system
 * [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
-* Part Three: Rehabilitation (coming soon) - In which I fix the code's most egregious bugs and begin refactoring
+* [Part Three: Rehabilitation](/resurrecting-3/) - In which I fix the code's most egregious bugs and begin refactoring
 
 {% include image.html file="cover.jpg" alt="Bear doctors resuscitating python" max_width="800px" img_link=true %}
 
