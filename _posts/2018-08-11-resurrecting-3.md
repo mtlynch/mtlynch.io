@@ -49,11 +49,7 @@ Scanning through the Python code, it didn't seem to have clear code style conven
 
 Some of these I had to fix manually, but a simple, easy solution was available for fixing whitespace issues. [YAPF](https://github.com/google/yapf) is a whitespace formatter for Python. It's a standard feature in all of my Python projects. Instead of devoting mental energy to figuring out the right whitespace conventions, I simply run YAPF to apply the right conventions for me.
 
-Adding YAPF was simple. I created a `dev_requirements.txt` file specifying the version of YAPF I wanted:
-
-TODO: include file
-
-Then I added a YAPF command to my build script to apply whitespace conventions according to [Google's Python Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md):
+I added a YAPF command to my build script to apply whitespace conventions according to [Google's Python Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md):
 
 ```bash
 yapf \
@@ -83,7 +79,7 @@ according to my preferred style conventions, then I [added YAPF to my build scri
 
 This created a bit of noise in my source:
 
-{% include image.html file="yapf-diff.png" alt="Diff from YAPF changes" max_width="700px" img_link=true class="img-border" fig_caption="Diff after adding automatic whitespace enforcement" %}
+{% include image.html file="yapf-diff.png" alt="Diff from YAPF changes" max_width="700px" class="img-border" fig_caption="Diff after adding automatic whitespace enforcement" %}
 
 Another key thing to notice is that I isolated my whitespace changes from any other changes. A common anti-pattern is to mix large-scale whitespace changes with other refactoring. This is poor practice because it makes it more difficult for reviewers (including the author themselves) from verifying that the changes are safe. Whitespace changes are pretty easy to scan through, but if there are other refactorings buried amongst a sea of whitespace changes, it forces the reviewer to carefully read through everything and decide whether it's a pure-whitespace change or another type of refactoring.
 
@@ -93,34 +89,38 @@ Still, it's possible sometimes to introduce a logic change even when it just loo
 
 # Adding static analysis
 
-Another great bang-for-your-buck tool is [pyflakes](https://github.com/PyCQA/pyflakes). It uses static analysis to identify careless errors such as unitialized variables or unused imports.
+I added [pyflakes](https://github.com/PyCQA/pyflakes) for another quick win. It uses static analysis to identify careless errors such as unitialized variables or unused imports.
 
-It's very easy to set up, cheap to run, and its findings are often valuable. I [added it to my build](https://github.com/mtlynch/ingredient-phrase-tagger/pull/12), and it immediately caught an unused import:
+It was very easy to set up and produces valuable findings. I [added it to my build](https://github.com/mtlynch/ingredient-phrase-tagger/pull/12), and it immediately caught an unused import:
 
 ```bash
-$ pyflakes bin/ ingredient_phrase_tagger/
+$ pyflakes \
+    bin/ \
+    ingredient_phrase_tagger/
 ingredient_phrase_tagger/training/utils.py:3: 'string' imported but unused
 ```
 
-# Maybe I should read the code
+# Time to read the code
 
-You may have noticed that throughout this process, I have avoided trying to understand the code. I've managed to skate by without really understanding what any of it is doing except at a very high level.
+You may have noticed that throughout this process, I've avoided any attempts to understand the code. I skated by without understanding what the library does except at a very high level.
 
-Now that my end-to-end test was in place and I had automated development tools in place, maybe I should, y'know, read the code.
+Confession: I'm bad at reading code.
 
-I have a hard time just reading code straight through. When I read code, I'm constantly thinking of things to change, so I like to refactor to bake in my understanding.
+Whenever I read someone else's code, I have to fit it into my own mental model. Often that process distracts me by sending me on a path thinking of how I would organize the code differently.
 
-Martin Fowler describes this best:
+get distracted thinking about all the ways I want to change it to make the code clearer or simpler. I always felt bad about this until I found out that Martin Fowler, champion of the practice of refactoring, has a similar tendency but harnesses it in a productive way:
 
 >When I look at unfamiliar code, I have to try to understand what it does. I look at a couple of lines and say to myself, oh yes, that’s what this bit of code is doing. With refactoring I don’t stop at the mental note. I actually change the code to better reflect my understanding, and then I test that understanding by rerunning the code to see if it still works.
 >
 >-Martin Fowler, [*Refactoring: Improving the Design of Existing Code*](https://amzn.to/2nuHVfv)
 
+All the changes I made prior to this point were primarily to support me making modifications to the code. Now that these mechanisms were in place, I could take advantage of them and begin understanding the library by refactoring it.
+
 # Starting top-down
 
-The code wasn't well-factored. Almost all of the library's logic was in just two files: `cli.py` and `utils.py`. So, basically, the code was divided into two modules: "command-line interface" and "everything else." But this division wasn't even very accurate, as most of `cli.py` had nothing to do with reading or writing from the command line.
+Immediately, I noticed that the code wasn't well-factored. Almost all of the library's logic was in just two files: `cli.py` and `utils.py`. In other words, the authors logically divided the code into two buckets: "user interface" and "everything else."
 
-Here are the `Cli` class' methods:
+When I read the files, I discovered that even that simple bucketing scheme wasn't accurate. Most of the code in `cli.py` had nothing to do with reading or writing from the command line. It consisted of a single class, `Cli`, with the following methods:
 
 * `run`
 * `generate_data`
@@ -130,7 +130,7 @@ Here are the `Cli` class' methods:
 * `bestTag`
 * `_parse_args`
 
-The only two that make sense as logical parts of a command-line interface class are `run` and `_parse_args`. This code was in need of a refactoring.
+Only two of these methods fit into a logical abstraction of a command-line interface: `run` and `_parse_args`. This module code was in desperate need of a refactoring.
 
 {% include ads.html title="zestful" %}
 
@@ -287,13 +287,13 @@ Fortunately, I found a way to convert paths using supported features of the `cov
 
 I noticed in the documentation for `coverage` that supported a `paths` option:
 
-Using this option, rather than a file called `.coverage`, the `coverage` application produces a file with a random suffix, like (TODO). The `coverage merge` feature is meant to consolidate several files with these suffixes back to a single, standard `.coverage` file.
+Using this option, rather than a file called `.coverage`, the `coverage` application produces a file with a random suffix, like `.coverage.5afba973bf29.38.599120`. The [`coverage combine` feature](https://coverage.readthedocs.io/en/coverage-4.5.1a/cmd.html#cmd-combining) consolidates several files with these suffixes into a single, standard `.coverage` file.
 
 To use these options, I created the following `.coveragerc` file:
 
-TODO: Include .coveragerc
+{% include files.html title="coveragerc" language="ini" %}
 
-I had to run the `coverage` command within the Docker container, then run `coverage merge` in the Travis environment, which converted the paths and converted the file back to `.coverage` (no suffix).
+I had to run the `coverage` command within the Docker container, then run `coverage combine` in the Travis environment, which converted the paths and converted the file back to `.coverage` (no suffix).
 
 This was the updated `after_success` section of my [Travis configuration](https://github.com/mtlynch/ingredient-phrase-tagger/blob/9e66f28b07de290b77b1ec0b84baf14f3e7330a0/.travis.yml):
 
