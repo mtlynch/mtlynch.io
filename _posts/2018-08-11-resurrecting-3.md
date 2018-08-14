@@ -36,7 +36,7 @@ I used YAPF to reformat all of the Python files according to my preferred style 
 
 This created a bit of noise in my source:
 
-{% include image.html file="yapf-diff.png" alt="Diff from YAPF changes" max_width="702px" img_link=true class="img-border" %}
+{% include image.html file="yapf-diff.png" alt="Diff from YAPF changes" max_width="700px" img_link=true class="img-border" fig_caption="Diff after adding automatic whitespace enforcement" %}
 
 I isolated whitespace changes to a single pull request. Anyone reviewing this change later can quickly scan through and see that these are purely whitespace changes that don't affect the logic.
 
@@ -57,7 +57,9 @@ You may have noticed that throughout this process, I have avoided trying to unde
 
 Now that my end-to-end test was in place and I had automated development tools in place, maybe I should, y'know, read the code.
 
-I have a hard time just reading code straight through. When I read code, I'm constantly thinking of things to change, so I like to refactor to bake in my understanding. Martin Fowler describes this best:
+I have a hard time just reading code straight through. When I read code, I'm constantly thinking of things to change, so I like to refactor to bake in my understanding.
+
+Martin Fowler describes this best:
 
 >When I look at unfamiliar code, I have to try to understand what it does. I look at a couple of lines and say to myself, oh yes, that’s what this bit of code is doing. With refactoring I don’t stop at the mental note. I actually change the code to better reflect my understanding, and then I test that understanding by rerunning the code to see if it still works.
 >
@@ -78,6 +80,8 @@ Here are the `Cli` class' methods:
 * `_parse_args`
 
 The only two that make sense as logical parts of a command-line interface class are `run` and `_parse_args`. This code was in need of a refactoring.
+
+{% include ads.html title="zestful" %}
 
 # Dissecting the CLI class
 
@@ -101,7 +105,9 @@ Now that I had discovered that most of `Cli`'s methods could live in another mod
 
 I realized that they were all within `generate_data`'s loop body. If I extracted the body of the loop to a single function, `Cli` could call it with just one function.
 
-{% include image.html file="function-diff.png" alt="Diff from YAPF changes" fig_caption="Extracting function body from generate_data to a separate function" max_width="616px" img_link=true class="img-border" %}
+{% assign fig_caption = "Extracting loop body from `generate_data` into a new function called `translate_row`" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="function-diff.png" alt="Diff from YAPF changes" fig_caption=fig_caption max_width="614px" img_link=true class="img-border" %}
 
 It didn't have to be perfect, just *better*. Refactoring is an iterative process, so as long as the code was getting less tangled, that was good.
 
@@ -134,14 +140,6 @@ flour\tI3\tL4\tNoCAP\tNoPAREN\tB-NAME
 
 I *still* didn't understand exactly what this function did. I understood that it translated values from the input CSV of training data into a format that CRF++ (the machine learning engine) could use. But I was understanding more and more as I refactored. The more I refactored and tested, the more I would understand. And the more unit tests I had, the more aggressively I could refactor because I had more confidence that I was preserving behavior.
 
-I added a few more unit tests for different edge cases:
-
-* `1/2 cup yellow cornmeal` (includes simple fraction)
-* `1 1/2 teaspoons salt` (includes mixed fraction)
-* `Half a vanilla bean, split lengthwise, seeds scraped` (includes preparation instructions)
-
-https://github.com/mtlynch/ingredient-phrase-tagger/pull/19
-
 # Integrating unit tests into the build
 
 Unit tests aren't much fun unless they're integrated into the build process. I updated my build script to 
@@ -153,7 +151,7 @@ coverage run \
   -m unittest discover
 ```
 
-# Tracking code coverage
+# Adding code coverage
 
 Integrating unit tests into the build was good, but it was also showing me what percentage of my code I was exercising with my unit tests. I wanted to capture that as well. A big motivation for me in writing unit tests is the knowledge that I'll get to see my code coverage percentages climb ever higher.
 
@@ -169,11 +167,11 @@ after_success:
 
 I checked the Coveralls dashboard eager to see my code coverage stats, and...
 
-{% include image.html file="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" fig_caption="Coveralls shows no code coverage information" max_width="699px" img_link=true class="img-border" %}
+{% include image.html file="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" fig_caption="Coveralls shows no code coverage information" max_width="697px" img_link=true class="img-border" %}
 
 Nothing.
 
-# Making Coveralls play with Docker
+# Where did my code coverage go?
 
 I had used Coveralls without issue on other projects, so I didn't understand why this didn't work. It was just a simple Python project.
 
@@ -184,41 +182,76 @@ That was an easy fix. I just had to add a command to pull the `.coverage` file b
 ```yaml
 after_success:
   - pip install pyyaml coveralls
-  - docker cp ingredient-phrase-tagger-container:/ingredient-phrase-tagger/.coverage ./
+  - docker cp ingredient-phrase-tagger-container:/app/.coverage ./
   - coveralls
 ```
 
-{% include image.html file="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" fig_caption="Coveralls *still* shows no code coverage information" max_width="699px" img_link=true class="img-border" %}
 
-But this time, the Travis build printed more output that wasn't there before:
+Again, I pulled up the Coveralls data for the build and found:
+
+{% assign fig_caption = "Coveralls *still* shows no code coverage information" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" fig_caption=fig_caption max_width="697px" img_link=true class="img-border" %}
+
+Still nothing.
+
+But this time, [the Travis build](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/415474978) printed output that wasn't there before:
 
 ```text
-coveralls
+$ coveralls
 Submitting coverage to coveralls.io...
-No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/__init__.py
-No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/__init__.py
-No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/cli.py
-No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/translator.py
-No source for /ingredient-phrase-tagger/ingredient_phrase_tagger/training/utils.py
+No source for /app/ingredient_phrase_tagger/__init__.py
+No source for /app/ingredient_phrase_tagger/training/__init__.py
+No source for /app/ingredient_phrase_tagger/training/cli.py
+No source for /app/ingredient_phrase_tagger/training/translator.py
+No source for /app/ingredient_phrase_tagger/training/utils.py
 Coverage submitted!
 Job #177.1
 https://coveralls.io/jobs/39259674
 ```
 
-The `coverage` binary stores code coverage in a directory called `.coverage`. The way Coveralls is supposed to work is that the Coveralls client binary uploads this directory to the Coveralls server and the Coveralls server processes it to show
+Ohhhh, that made me realize what was going on.
 
-Two problems:
+Within the Docker container, all of the library's code is in a folder called `/app`. When I ran the `coverage` command, it stored the absolute paths of all of the source files, but the Travis environment had a different view of the filesystem with different source paths. The `coveralls` command was trying to reconcile the paths in the Travis environment, but it was getting confused because the paths in the `.coverage` file didn't match the paths on the local filesystem.
 
-1. The `coverage` refers to source paths as absolute paths instead of relative paths
-2. The Coveralls server-side processing expects source paths to be within `/home/travis`
+It would be great if `coverage` supported an option for saving relative paths instead of absolute paths, but alas, it did not. I had to get creative.
 
-But I ran my build in a Docker container, so 
+# A roundabout way of canonicalizing paths
 
-The Coveralls client binary uploads the `.coverage` folder up to the Coveralls server for processing. But Python's `coverage`
+While `coverage` doesn't support relative paths, I did notice in its documentation that it did support a `paths` option:
 
-# Canonicalizing paths
+Then there was a `coverage merge` option that merged together coverage output that used different views of the filesystem
 
-https://coveralls.io/jobs/39262596
+```text
+; Run in parallel mode so that coverage can canonicalize the source paths
+; regardless of whether it runs locally or within a Docker container.
+parallel = True
+ [paths]
+source =
+  ingredient_phrase_tagger/       ; local path
+  /app/ingredient_phrase_tagger/  ; path within Docker container
+```
+
+I copied it out:
+
+```yaml
+after_success:
+  - pip install pyyaml coveralls
+  # Copy the .coverage.* file from the Docker container to the local filesystem.
+  - docker cp ingredient-phrase-tagger-container:/app/$(docker exec -it ingredient-phrase-tagger-container bash -c "ls -a .coverage.*" | tr -d '\r') ./
+  # Use coverage combine to canonicalize the source paths.
+  - coverage combine
+  # Upload coverage information to Coveralls.
+  - coveralls
+```
+
+Finally, the upload to coveralls [succeeded](https://coveralls.io/jobs/39262596):
+
+{% include image.html file="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" fig_caption="Coveralls finally shows code coverage information" max_width="697px" img_link=true class="img-border" %}
+
+By unit testing a single function, I achieved 56% code coverage. Not bad!
+
+https://github.com/mtlynch/ingredient-phrase-tagger/compare/master...mtlynch:fix-coverage?expand=1
 
 # A review of improvements
 
@@ -246,7 +279,7 @@ I refactored enough to develop a good understanding of the library's logic. Once
 
 With the result, I created a business called [Zestful](https://zestfuldata.com). It offers the functionality on the ingredient-phrase-tagger, but in a hosted API, so that clients don't have to worry about gathering training data or setting anything up. To try out the live demo, click the link below:
 
-TODO: Screenshot + demo
+{% include image.html file="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max_width="800px" link_url="https://zestfuldata.com/demo" class="img-border" %}
 
 If you're a developer with an app that handles recipe ingredients or you know of one that does, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
 

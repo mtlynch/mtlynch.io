@@ -24,7 +24,7 @@ tags:
 
 I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit my job](/why-i-quit-google/) and formed my own single-person software company.
 
-That was four months ago, so I thought I'd share an update on how things are going.
+That was four months ago, so I thought I'd share an update on how things are going. hi
 
 # What's it like not having a job?
 
