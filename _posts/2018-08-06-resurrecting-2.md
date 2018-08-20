@@ -25,11 +25,11 @@ discuss_urls:
 
 In this post, I demonstrate how to retrofit automated tests onto an untested legacy library.
 
-This is part two of a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse raw recipe ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
+This is part two of a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse cooking ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
 
 * [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
 * **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
-* Part Three: Rehabilitation (coming soon) - In which I fix the code's most egregious bugs and begin refactoring
+* [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
 
 {% include image.html file="cover.jpg" alt="Beavers stabilizing shaky house" max_width="800px" img_link=true %}
 
@@ -294,11 +294,11 @@ With the end-to-end test in place and continuous integration running, I had an a
 
 With the confidence from my test, it was time for my favorite part of a software project: refactoring. I was free to make large-scale changes to the code because I knew the build would break loudly if I did anything too stupid.
 
-Stay tuned for **part three** of this series, where I will describe how I:
+Read on for [part three](/resurrecting-3/)  of this series, where I describe how I:
 
-* reduced the build time from 20 minutes to 90 seconds
+* added unit tests
 * applied style conventions to the code automatically
-* added static analysis to the build
+* integrated static analysis into the build
 
 {% include ads.html title="zestful" %}
 
