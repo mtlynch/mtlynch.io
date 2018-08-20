@@ -136,7 +136,7 @@ def __init__(self, argv):
 
 The constructor assigned a value to `self._upstream_cursor`, but nothing ever referenced that variable. It was dead code, so that was an easy deletion.
 
-The other member variable, `self.opts` wasn't dead, but only two methods referenced it: `run` and `generate_data`. 
+The other member variable, `self.opts` wasn't dead, but only two methods referenced it: `run` and `generate_data`.
 
 With no shared state, there was no reason for any of `Cli`'s other public methods to be methods at all. They could all live happily as module-level free functions. Better yet, I could move them to an entirely new module that described their purpose better than `cli`.
 
@@ -281,7 +281,7 @@ Travis and Docker had conflicting views of the filesystem. For example, here is 
 
 Given that, the error message that `coveralls` printed in Travis made more sense:
 
-```
+```text
 No source for /app/ingredient_phrase_tagger/training/cli.py
 ```
 
@@ -292,7 +292,6 @@ How could I bridge the gap between these two different environments with incompa
 # A roundabout way to convert paths
 
 In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/coverage-4.5.1a/config.html#paths) that discussed combining paths from multiple filesystems:
-
 
 {% assign fig_caption = "Documentation for [`paths` option](https://coverage.readthedocs.io/en/coverage-4.5.1a/config.html#paths) of `coverage` command" | markdownify | remove: "<p>" | remove: "</p>" %}
 
