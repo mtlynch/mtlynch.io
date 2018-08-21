@@ -150,7 +150,7 @@ I realized that `Cli` called all of the other functions within the loop body of 
 
 {% include image.html file="function-diff.png" alt="Diff from YAPF changes" fig_caption=fig_caption max_width="614px" img_link=true class="img-border" %}
 
-Thie change made the `Cli` class slimmer and more logically cohesive. It now consisted of just two public methods and one private one:
+This change made the `Cli` class slimmer and more logically cohesive. It now consisted of just two public methods and one private one:
 
 * `run`
 * `generate_data`
