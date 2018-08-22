@@ -116,6 +116,8 @@ While I was in my six months of limbo between being "done" and being "launched,"
 
 When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
 
+When I explained what my product did to friends, it was easy to be hand wavey about the details. "It's useful for cooking apps because it makes search better. If users enter a search query, they don't want to ever match on 'tablespoon.'" Writing an email to a recipe app developer, I had to come up with a compelling reason why using my product is going to be worth not only the cost I'm charging them, but the nontrivial dev time. My tablespoon example, but what could a customer possibly type where they'd get an incorrect match on tablespoon?
+
 # When should I have launched?
 
 Looking back, I think I should have launched once I had a working MVP. My website is nice in that it offers a low-friction way for users to test out the functionality, but RapidAPI already kind of has that functionality. With RapidAPI, customers have to enter a credit card to even test out my service, but it's possible that's actually a positive. It filters out people who had no interest in ever paying for the service.
