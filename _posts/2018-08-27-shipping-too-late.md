@@ -20,73 +20,79 @@ I always thought, "Well, that's silly. I just *won't* do that." How hard could i
 
 The idea for this project was a spinoff from an earlier project, KetoHub. KetoHub allows users to search for recipes for the keto diet by their ingredients. It does this by scraping keto cooking blogs.
 
-I initially solved this with simple rules. For example, "Ignore units of measurement." I soon discovered that recipe ingredients can be formatted in so many different ways that the rules get out of control. The New York Times had written about successfully parsing ingredients using machine learning, so I decided to try that.
+I initially solved this with simple rules. For example, "Ignore units of measurement." I soon discovered that recipe ingredients can be formatted in so many different ways that the rules get out of control. *The New York Times* had written about successfully parsing ingredients using machine learning, so I decided to try that.
 
 I felt like that could be the business. If I wanted this, others would too.
 
-# The justification
-
-Other services existed that did the same thing, and I could see . The difference was that they either weren't very accurate or they had very demanding licensing terms that required API consumers to display the service's branding in all user interfaces associated with the API results. Also, their terms of use forbid clients from storing results for more than two hours. For a site like KetoHub, this restriction was a dealbreaker. I had to parse every ingredient in the KetoHub recipe corpus to build my search index. If I was forced to rebuild my entire search index from scratch every two hours (paying every time), I'd burn thousands of dollars per month just on ingredient parsing. And there's no reason to do it. If I parse "2 cups sugar" on Monday, I'm probably going to get the same result on Wednesday, so it makes no sense for me to keep asking the same question every two hours.
-
-I felt like there must be other sites or apps like mine that would be willing to pay $20 per month to avoid rolling their own ingredient parsers, but didn't want the burdensome licensing terms of the competitors.
-
-If nothing else, I could use it on KetoHub. At the time, every time I added a new site to KetoHub's index, I had to spend a few hours tediously fiddling with the ingredient parsing rules so that it could handle the new site and preserve correct behavior on the old sites.
-
-# The justifications in hindsight
-
-Looking back, I can see several flaws with my reasoning:
-
-**Existing providers do the same thing and have hundreds of thousands of customers**
-
-Existing providers offer a variety of services that *include* ingredient parsing. I have no information about how many users are consuming their ingredient parsing APIs vs. their other services. I also have no information about how many of their users are paid vs. free.
-
-**Even if nobody buys it, it will be useful to me on KetoHub**
-
-This is true, but it ignores the important context that KetoHub was still at zero revenue and had minimal users. It assumed KetoHub was *worth* investing more effort into, and further, that ingredient parsing was the area that required the most investment. Both of these assumptions were probably untrue.
-
 # The MVP that wasn't
 
-The minimum viable product (MVP) is a common.
+The minimum viable product (MVP) is a common thing in the lean startup world. Build the smallest possible product that you can show to customers, then continue building based on feedback from customers willing to pay. One of the most common stories of shipping too late is *not* building an MVP and instead investing months or years of effort into.
 
-I hired a freelancer and together we got basic ingredient parsing working with about 80 hours of combined dev time. It looked like this:
+But I *did* build an MVP. I hired a freelancer and together we got basic ingredient parsing working with about 80 hours of combined dev time. I defined an acceptance criteria, which said the point that we'd be done and ready to show the product to customers:
 
 TODO: Screenshot of acceptance criteria
 
 https://docs.google.com/document/d/1GJB2whfpdYlWMkZaFeSU6zZHHwdHWKaKE_B41Mdx_TY/edit
 
-I accomplished this on May 17th, 2018. But I didn't officially "launch" (as in, accept payment) for the next six weeks. Instead, I spent the next six weeks writing more code.
+We accomplished all of the goals of the acceptance criteria on May 17th, 2018. But I didn't officially "launch" (as in, accept payment) for the next six weeks. Instead, I spent the next six weeks writing more code.
 
 # It's okay because it's *sales* coding
 
+To understand why I kept on writing, I'll walk you through my thought process for those six weeks.
+
 I had the API working at a basic level. It looked like this:
 
-But it's so *ugly*! How can I make my customers suffer the indignity of writing `curl` commands? I have to create a simple HTML front end API so that users can just interact with it in the browser.
+>How can I subject my customers to the indignity of writing `curl` commands? I have to create a simple HTML front end API so that users can just interact with it in the browser.
 
 *5 days later*
 
-Okay, I have a basic HTML form, but now it looks weird that there's nothing else that explains what this is. I need to build a website around this. But it'll be simple, like just a day of work.
+>The basic HTML form works, but it looks weird because there's nothing else on the page that explains what this is. I need to build a website around this. But it'll be simple, like just a day of work.
 
-*3 days later*
+*4 days later*
 
-Okay, I have the website. Oh, but I don't have documentation that explains what all the fields mean. I'll add that.
+>Okay, I have the website. Oh, but I don't have documentation to explain what all the fields mean. I'll add that.
 
 *2 days later*
 
-Now I have so many pages that my navigation bar doesn't display correctly on mobile devices. I need to make my navigation bar responsive. But that's such a basic thing. I'm sure that will only take me about an hour with Angular.
+>Now I have so many pages that my navigation bar doesn't display correctly on mobile devices. I need to make my navigation bar responsive. But that's such a basic thing. I'm sure that will only take me about an hour with Angular.
 
 *8 days later*
 
-Oh, wait. If I had a demo server, what stops someone from using my demo server for their production work and never paying me? I need to build a rate limiter so that users can only parse 30 ingredients per day.
+>Oh, wait. If I show people this demo, what stops everyone from using my demo server for their production work and never paying me? I need to build a rate limiter so that users can only parse 30 ingredients per day.
 
-*3 days later*
-
-I did define. I wrote out the API interface and I 
-
-
-
-So I thought,
+And it just continued like that for six weeks. Every time I thought I just needed one more simple thing before I launched, that simple thing added complexity, forcing me to add another thing. And then whatever I added to support the original thing led to its own extra things. Until it was six weeks later and I was baffled at how I hadn't shipped anything when I had declared code complete a month and a half ago.
 
 # But I'm the exception
+
+The other thing that delayed my launch was my belief that what I was building was somewhat special, so the normal rules didn't apply. The mantra of "launch and iterate" makes sense for a web app or mobile app, but my product was an API (application programming interface), not an app.
+
+In other words, I was selling customers the ability to send me an ingredient, formatted like this:
+
+```javascript
+{
+  "ingredients": [
+    "2 tablespoons butter"
+  ]
+}
+```
+
+Then my API would respond with a result, formatted like this:
+
+```javascript
+{
+  "results": [
+    {
+      "ingredientRaw": "2 tablespoons butter",
+      "ingredientParsed": {
+        "quantity": 2.0,
+        "unit": "tablespoon",
+        "product": "butter",
+        "preparationNotes": null
+      },
+      "error": null
+    }
+}
+```
 
 Well for a normal web app, that makes sense, but I'm making an API. The API interface is much less flexible than a web app. I'm asking customers to write code that depends on my interface. If I change the interface and break their code, they will be very unhappy.
 
@@ -94,32 +100,30 @@ There were ways around this, but I didn't want to do them. I could have a versio
 
 Part of this was just laziness. I didn't want to maintain two versions of the same thing. Partly this was out of laziness/pickiness because that's a boring thing to do. Partly, this was out of for stability. If I'm running a deprecated version alongside a current version, it increases complexity and increases the chances for me to make a mistake that messes something up.
 
-# If you give a mouse a cookie
+# How writing broke the spell
 
-I have the API, but I should have an HTML frontend that makes it easier to use
-But if I have an HTML frontend, I really need a website around it to explain what it is
-And if I have a website, I need to roll my own rate-limiting mechanism to prevent users from using the demo version for production purposes
-And then I need to figure out how to make the website responsive
-And then I need to figure out how to make a navbar in Angular, because that's surprisingly hard
+What finally broke my spell was writing about the project on Indie Hackers, a forum for founders bootstrapped software startups. I used to write monthly updates about my projects, but I'd fallen out of the habit. I decided to write a summary of my progress on Zestful and I realized .
 
-By the time I got everything done, it was a month later. Looking back at what I would have had if I just started with RapidAPI's tools, I should have done that. It's not as good, but it's also not worth a month of development effort and an extra month of delay.
+Part of the benefit of writing, especially on the Internet where people can be eager to find fault, is that it forces you to provide justification and explanations for what you say. When I wrote this update explaining why I hadn't yet launched, I realized that I couldn't provide reasonable justifications for it. I was trying to pre-answer the obvious question, "Why haven't you launched yet?" and I realized that I couldn't. All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
 
-I didn't like the fact that other APIs required you to submit a credit card to even see how well the API worked. I wanted users to have a low-friction way to test out my API.
+I ended the update by saying that I would launch ASAP. At the time I made the decision, I still felt like it would take me a few days to launch. But once I started working toward shipping ASAP, I realized how many tasks in my head weren't actually critical for launch. From the time of my writing it to launching was only a day.
 
-It's hard to say whether the frictionless trial eve helps. It is good to give users an opportunity to see how it works instantly, but there's also value in getting.
+It turned out that when I defined my goal as "ship ASAP" a lot of tasks that seemed necessary then fell away.
 
-# Yes is meaningless but no is not
+# I'm not scared of rejection, just of people saying no
 
-# The virtue of writing
+While I was in my six months of limbo between being "done" and being "launched," a friend asked me if I was perhaps finding excuses to delay the launch because subconsciously I feared rejection. The thought had occurred to me, but I wrote it off. I worked for six months as a salesman, where I heard "no" 50 times per day. I became numb to it, so why would I fear it now?
 
-What finally broke my spell was writing about the project on Indie Hackers. I was writing a monthly update and trying to justify why I hadn't launched yet, and I realized I really couldn't justify it. It was clear that I should just stop polishing the website and focus on launching ASAP.
+When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
 
-At the time I made the decision, I still felt like it would take me a few days to launch. But once I started working toward shipping ASAP, I realized how many tasks in my head weren't actually critical for launch. From the time of my writing it to launching was only a day.
+# When should I have launched?
+
+Looking back, I think I should have launched once I had a working MVP. My website is nice in that it offers a low-friction way for users to test out the functionality, but RapidAPI already kind of has that functionality. With RapidAPI, customers have to enter a credit card to even test out my service, but it's possible that's actually a positive. It filters out people who had no interest in ever paying for the service.
 
 # Lessons learned
 
-One of the biggest lessons was apparently that I can't learn from other people's mistakes. According to this, you'll read these and think you're learning something, but you'll make the same mistakes. So try to act surprised.
+One of the biggest lessons was apparently that I can't learn from other people's mistakes. According to this, you'll read these and think you're learning something, but you'll make the same mistakes. So when you make the same mistakes, try to act surprised.
 
-* Talk to potential customers before building. Take "yes" with a grain of salt, but take "no" seriously.
-* Explicitly define the MVP up front and 
+* When you define the MVP, include everything you'll need to get to the point of asking for customers to pay
+* Blogging about a product is not the same as cold approaching potential customers. The former is useful, but the latter is necessary.
 * Re-evaluate your strategy. Write down what you did and what you'll do next. Show it to someone who is willing to challenge your assumptions and conclusions.
