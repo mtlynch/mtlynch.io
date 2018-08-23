@@ -32,7 +32,7 @@ The minimum viable product (MVP) is a common thing in the lean startup world. Bu
 
 But I *did* build an MVP. I hired a freelancer and together we got basic ingredient parsing working with about 80 hours of combined development time. I defined an acceptance criteria, which said the point that we'd be done and ready to show the product to customers.
 
-{% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="350px" img_link=true class="img-border" %}
+{% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="250px" img_link=true class="img-border align-right" %}
 
 We accomplished all of the goals of the acceptance criteria in early May. But I didn't officially "launch" (as in, begin accepting payments) until July. Instead, I spent the next six weeks writing more code.
 
