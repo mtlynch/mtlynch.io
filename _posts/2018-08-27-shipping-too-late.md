@@ -10,13 +10,17 @@ sidebar:
   nav: main
 ---
 
-A common mantra in software is to ship as soon as possible.
+I've heard dozens of stories of software founders paying the price for shipping too late. They spend months or years developing a product in a vacuum only to see it crumble miserably the first time a real user touches it.
 
-I'm a big fan of the Indie Hackers podcast. One thing the host, Courtland Allen, has lamented frequently is that you can't teach people things. No matter how much you tell them the right thing to do, they won't learn until they make their own mistakes.
+The [Indie Hackers podcast](https://www.indiehackers.com/podcast) features many such stories. The show's stated mission is to learn from the mistakes of small startup founders, but host Courtland Allen frequently expresses existential angst about whether this is even possible:
 
-I always thought, "Well, that's silly. I just *won't* do that." How hard could it be to learn from other people's mistakes?
+>...there are things you can tell people over and over again until you’re blue in the face, and they still won’t listen to you or really understand what you’re saying until they go out and discover what you mean the hard way by making their own mistakes
+>
+>-Courtland Allen, [*Indie Hackers Podcast*](https://www.indiehackers.com/podcast/049-josh-kaufman-of-the-personal-mba)
 
-Turns out, harder than I thought.
+I always thought, "No, Courtland. That sounds inefficient. I'll take the free lessons and not make the costly mistakes, thank you."
+
+From the title of this post, you've probably figured out that my plan didn't quite work.
 
 # The idea
 
@@ -32,35 +36,41 @@ The minimum viable product (MVP) is a common thing in the lean startup world. Bu
 
 But I *did* build an MVP. I hired a freelancer and together we got basic ingredient parsing working with about 80 hours of combined development time. I defined an acceptance criteria, which said the point that we'd be done and ready to show the product to customers.
 
-{% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="350px" img_link=true class="img-border" %}
+{% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="300px" img_link=true class="img-border" %}
 
 We accomplished all of the goals of the acceptance criteria in early May. But I didn't officially "launch" (as in, begin accepting payments) until July. Instead, I spent the next six weeks writing more code.
 
 # It's okay because it's *sales* coding
 
-To understand why I kept on writing, I'll walk you through my thought process for those six weeks.
+The best way to understand how I wrote code for two months after I was "done" is to peek inside my thought process during that time:
 
->The service works, but customers can only interact with it by writing complex expressions on the command line? How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1? I have to create a simple HTML frontend so that users can just interact with it in the browser.
+*Day 1: Acceptance criteria is accomplished*
+
+>The service works, but customers can only try it out by writing complex expressions on the command line. How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1?
+>
+>I have to create a simple HTML frontend so that users can just interact with it in the browser.
 
 *5 days later*
 
->The basic HTML form works, but it looks weird because there's nothing else on the page that explains what this is. I need to build a website around this. But it'll be simple, like just a day of work.
+>The basic HTML form works, but it's strange to have this orphaned HTML form without any surrounding context to explain what it is. I need to build a website around this. But it'll be simple, like just a day of work.
 
 *4 days later*
 
->Okay, I have the website. Oh, but I don't have documentation to explain what all the fields mean. I'll add that.
+>Okay, great! The service has its own website.
+>
+>Oh, but I don't have documentation to explain what all the fields mean. I'll add that real quick.
 
 *2 days later*
 
->Now I have so many pages that my navigation bar doesn't display correctly on mobile devices. I need to make my navigation bar responsive. But that's such a basic thing. I'm sure that will only take me about an hour with Angular. (TODO: link to twitter thread)
+>Now I have so many pages that my navigation bar doesn't display correctly on mobile devices. I need to make my navigation bar responsive. But that's such a basic thing. I'm sure that will only take me about an hour with Angular.
 
-*8 days later*
+[*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
->Oh, wait. If I show people this demo, what stops everyone from using my demo server for their production work and never paying me? I need to build a rate limiter so that users can only parse 30 ingredients per day.
+>Uh oh! What if everyone just uses my free demo server instead of paying me? I need to add logic to limit each user to 30 requests per day.
 
-And it just continued like that.
+And on and on.
 
-Every time I thought I just needed "one more simple thing" before I launched, that simple thing added complexity, forcing me to add another thing. And then whatever I added to support the original thing led to its own extra things.
+Every time I thought I just needed one more simple thing, it added new complexity and forced me to add something else to support it.
 
 And then I was baffled at how I hadn't shipped anything when I had declared code complete two months earlier.
 
@@ -98,7 +108,9 @@ Looking back, I think I should have launched once the service met my acceptance 
 
 The Zestful website is nice in that it offers a low-friction way for users to test out the functionality, but RapidAPI already kind of has that functionality. RapidAPI's version is not as user-friendly because it just shows the user a tree of data they have to click through, but my target customers are developers, and they understand how to do this, even if they'd recognize that it's inconvenient.
 
-The other big difference is the amount of friction to test it out. On the Zestful website, users can test out ingredients with no sign-up whatsoever. With RapidAPI, customers have to create an account and enter a credit card to even test out my service. I think the low-friction path is better overall, but RapidAPI's solution does have the benefit of filtering out users who aren't serious about becoming paying customers.
+TODO: Screenshot showing the comparison
+
+The other big difference is the amount of friction to test it out. On the Zestful website, users can test out ingredients with no sign-up whatsoever. With RapidAPI, customers have to register an account and enter a credit card before they can even even test out my service. I think the low-friction path is better overall, but RapidAPI's solution does have the benefit of filtering out users who aren't serious about becoming paying customers.
 
 # Lessons learned
 
@@ -111,13 +123,14 @@ I think I did, in fact, learn from people's mistakes. I just didn't learn how to
 * Using an API marketplace instead of rolling my own billing solution
   * It was tempting to build a system for accepting payments
 * Defining acceptance criteria up front
-  * Without this, it would have been easy to spin my wheels forever trying to increase accuracy or handle more edge cases.
+  * Without this, it would have been easy to spin my wheels forever trying to increase accuracy or handle more edge cases of oddly-formatted ingredients.
 
 **What I learned**
 
 * When you define the MVP, define up front all the steps needed to begin accepting payment from customers.
   * Otherwise, it creates a loophole where pre-launch tasks can continue forever as long as they're not really part of "the product."
 * Rejection is scarier when you're selling your own creation.
+* A task can simultaneously be critical and permissable to defer to post-launch.
 * Re-evaluate your strategy regularly, in writing.
   * Write down what you did and what you'll do next.
   * Show it to someone who is willing to challenge your assumptions and conclusions.
