@@ -72,41 +72,53 @@ And on and on.
 
 Every time I thought I just needed one more simple thing, it added new complexity and forced me to add something else to support it.
 
-And then I was baffled at how I hadn't shipped anything when I had declared code complete two months earlier.
+And then it was two months later and I was baffled at how I hadn't shipped anything so long after I had declared code complete.
 
-# Shut up and launch
+# Breaking the cycle
 
 I used to write monthly updates
 
-What finally broke my spell was writing about the project on Indie Hackers, a forum for founders bootstrapped software startups. I used to write monthly updates about my projects, but I'd fallen out of the habit. I decided to write a summary of my progress on Zestful and I realized .
+I decided to write a summary of my progress on Zestful and I realized
 
-Part of the benefit of writing, especially on the Internet where people can be eager to find fault, is that it [forces you to provide justification](https://medium.learningbyshipping.com/writing-is-thinking-an-annotated-twitter-thread-2a75fe07fade) and explanations for what you say.
+Part of the benefit of writing, especially on the Internet where people can be eager to find fault, is that it forces you to [justify what you say](https://medium.learningbyshipping.com/writing-is-thinking-an-annotated-twitter-thread-2a75fe07fade).
 
 >Writing is thinking. To write well is to think clearly. That's why it's so hard.
 >
 >-David McCullough
 
-When I wrote this update explaining why I hadn't yet launched, I realized that I couldn't provide reasonable justifications for it. I was trying to pre-answer the obvious question, "Why haven't you launched yet?" and I realized that I couldn't. All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
+When I wrote the forum post, I tried to pre-emptively answer the obvious question, "Why haven't you launched yet?" I couldn't answer it.
 
-I ended the update by saying that I would launch ASAP. At the time I made the decision, I still felt like it would take me a few days to launch. But once I started working toward shipping ASAP, I realized how many tasks in my head weren't actually critical for launch.
+All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
 
-Within a day of realizing that shipping was my top priority, I had shipped. I published my service to RapidAPI, an API marketplace and began accepting payment for using it.
+# Shut up and launch
+
+A strange thing happened once I decided that launching was my top priority.
+
+I estimated that it would take me about five days to complete all the tasks necessary for launch. The next day, I launched.
+
+I published my service to RapidAPI, the web's largest API marketplace, and I was ready to accept payments from customers.
+
+{% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
 
 # This is critical, but it can wait
 
 When I recognized my goal was "ship ASAP," many of the tasks that seemed necessary turned out to be things I could do post-launch.
 
-One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? In the event of a legal dispute, perhaps I'd be in poor position, but how likely was it for a customer to take legal action against me within days of launch? I launched my service with no explicit terms of service, then added them a few days later. It worked out fine; I garnered no lawsuits before or after.
+One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? I'd perhaps be in poor position in the event of a legal dispute, what were the odds of me being sued within a few days of launch? The service handled recipe ingredients, so it wasn't a domain where I'd expect high-stakes lawsuits.
+
+I launched my service with no explicit terms of service, then added them a few days later. It worked out fine; I garnered no lawsuits before or after.
 
 # The difference between "no" and rejection
 
-While I was in my six months of limbo between being "done" and being "launched," a friend asked me if I was perhaps finding excuses to delay the launch because subconsciously I feared rejection. The thought had occurred to me, but I wrote it off. I worked for six months as a salesman, where I heard "no" 50 times per day. I became numb to it, so why would I fear it now?
+While I was in my two months of limbo between being "done" and being "launched," a friend asked me if I was perhaps finding excuses to delay the launch because subconsciously I feared rejection. The thought had occurred to me, but I wrote it off. I worked for six months as a salesman, where I heard "no" 50 times per day. I became numb to it, so why would I fear it now?
 
 When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
 
-TODO(mtlynch): insert cartoon about rejection.
+Writing software is so tied up with my identity. It's the skill that I'm most proud of and that I do best.
 
-When I explained what my product did to friends, it was easy to be hand wavey about the details. "It's useful for cooking apps because it makes search better. If users enter a search query, they don't want to ever match on 'tablespoon.'" Writing an email to a recipe app developer, I had to come up with a compelling reason why using my product is going to be worth not only the cost I'm charging them, but the nontrivial dev time. My tablespoon example, but what could a customer possibly type where they'd get an incorrect match on tablespoon?
+TODO(mtlynch): insert cartoon about rejection.
 
 # When *should* I have launched?
 
@@ -114,22 +126,16 @@ Looking back, I think I should have launched once the service met my acceptance 
 
 The Zestful website is nice in that it offers a low-friction way for users to test out the functionality, but RapidAPI already kind of has that functionality. RapidAPI's version is not as user-friendly because it just shows the user a tree of data they have to click through, but my target customers are developers, and they understand how to do this, even if they'd recognize that it's inconvenient.
 
-TODO: Screenshot showing the comparison
 
-The other big difference is the amount of friction to test it out. On the Zestful website, users can test out ingredients with no sign-up whatsoever. With RapidAPI, customers have to register an account and enter a credit card before they can even even test out my service. I think the low-friction path is better overall, but RapidAPI's solution does have the benefit of filtering out users who aren't serious about becoming paying customers.
+{% assign fig_caption = "[Zestful's custom demo](https://zestfuldata.com/demo) (left) vs. [RapidAPI's generic demo interface](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) (right)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="zestful-vs-rapidapi.png" alt="Comparison of Zestful website vs. RapidAPI interface" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
+
+The other big difference is the amount of friction to test it out. On the Zestful website, users can test out ingredients with no sign-up whatsoever. With RapidAPI, customers have to register an account and enter a credit card before they can even even test out my service. I think the low-friction path is better, but I can't discount the fact that RapidAPI's solution filters out users who aren't serious about becoming paying customers.
 
 # Lessons learned
 
 One of the biggest lessons was apparently that I can't learn from other people's mistakes. According to this, you'll read these and think you're learning something, but you'll make the same mistakes. So when you make the same mistakes, try to act surprised.
-
-I think I did, in fact, learn from people's mistakes. I just didn't learn how to apply it perfectly to my situation, but I also did successfully avoid pitfalls.
-
-**What I did right**
-
-* Using an API marketplace instead of rolling my own billing solution
-  * It was tempting to build a system for accepting payments
-* Defining acceptance criteria up front
-  * Without this, it would have been easy to spin my wheels forever trying to increase accuracy or handle more edge cases of oddly-formatted ingredients.
 
 **What I learned**
 
