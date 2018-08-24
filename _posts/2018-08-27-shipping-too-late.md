@@ -80,7 +80,13 @@ I used to write monthly updates
 
 What finally broke my spell was writing about the project on Indie Hackers, a forum for founders bootstrapped software startups. I used to write monthly updates about my projects, but I'd fallen out of the habit. I decided to write a summary of my progress on Zestful and I realized .
 
-Part of the benefit of writing, especially on the Internet where people can be eager to find fault, is that it forces you to provide justification and explanations for what you say (TODO: link to sinofsky thing on writing). When I wrote this update explaining why I hadn't yet launched, I realized that I couldn't provide reasonable justifications for it. I was trying to pre-answer the obvious question, "Why haven't you launched yet?" and I realized that I couldn't. All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
+Part of the benefit of writing, especially on the Internet where people can be eager to find fault, is that it [forces you to provide justification](https://medium.learningbyshipping.com/writing-is-thinking-an-annotated-twitter-thread-2a75fe07fade) and explanations for what you say.
+
+>Writing is thinking. To write well is to think clearly. That's why it's so hard.
+>
+>-David McCullough
+
+When I wrote this update explaining why I hadn't yet launched, I realized that I couldn't provide reasonable justifications for it. I was trying to pre-answer the obvious question, "Why haven't you launched yet?" and I realized that I couldn't. All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
 
 I ended the update by saying that I would launch ASAP. At the time I made the decision, I still felt like it would take me a few days to launch. But once I started working toward shipping ASAP, I realized how many tasks in my head weren't actually critical for launch.
 
