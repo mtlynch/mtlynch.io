@@ -10,7 +10,7 @@ sidebar:
   nav: main
 ---
 
-I've heard dozens of stories of software founders paying the price for shipping too late. They spend months or years developing a product in a vacuum only to see it crumble miserably the first time a real user touches it.
+I've heard dozens of stories of software founders paying the price for shipping too late. They spend months or years developing a product in a vacuum only to watch it crumble miserably the first time a real customer touches it.
 
 The [Indie Hackers podcast](https://www.indiehackers.com/podcast) features many such stories. The show's stated mission is to learn from the mistakes of small startup founders, but host Courtland Allen frequently expresses existential angst about whether this is even possible:
 
@@ -20,67 +20,73 @@ The [Indie Hackers podcast](https://www.indiehackers.com/podcast) features many 
 
 I always thought, "No, Courtland. That sounds inefficient. I'll take the free lessons and not make the costly mistakes, thank you."
 
-From the title of this post, you've probably figured out that my plan didn't quite work.
+From the title of this post, you've probably figured out that my plan didn't work.
 
 # The idea
 
-The idea for this project was a spinoff from an earlier project, KetoHub. KetoHub allows users to search for recipes for the keto diet by their ingredients. It does this by scraping keto cooking blogs.
+The idea for this project was a spinoff from one of my earlier projects, a recipe aggregator called [KetoHub](https://ketohub.io/). It allows users to search recipes by ingredient.
 
-I initially solved this with simple rules. For example, "Ignore units of measurement." I soon discovered that recipe ingredients can be formatted in so many different ways that the rules get out of control. *The New York Times* had written about successfully parsing ingredients using machine learning, so I decided to try that.
+To make this possible, KetoHub had to reduce ingredients to their essential words for search matching. For example, KetoHub reduced an ingredient such as "½ cup shredded mozzarella cheese" to simply "mozzarella cheese." My thinking was that if a user typed "cup," they expect to see results like "cupcakes" or "pudding cups" instead of every recipe that contains a "cup" of any ingredient.
 
-I felt like that could be the business. If I wanted this, others would too.
+I initially solved this with regular expressions, but that quickly [grew unsustainable](/resurrecting-1/#what-business-was-it-of-mine). I realized I could instead solve this with machine learning. If I needed something like this, others probably did too, so maybe that could be a business.
+
+Thus, the idea for [Zestful](https://zestfuldata.com/), the ingredient-parsing service, was born.
 
 # The MVP that wasn't
 
-The minimum viable product (MVP) is a common thing in the lean startup world. Build the smallest possible product that you can show to customers, then continue building based on feedback from customers willing to pay. One of the most common stories of shipping too late is *not* building an MVP and instead investing months or years of effort into.
+In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the smallest possible product that you can show to customers to demonstrate your idea. You're supposed to build it as soon as possible, get it into potential customers' hands, and their reaction should tell you if your idea is viable.
 
-But I *did* build an MVP. I hired a freelancer and together we got basic ingredient parsing working with about 80 hours of combined development time. I defined an acceptance criteria, which said the point that we'd be done and ready to show the product to customers.
+One of the most common stories of failure is of the founder so confident in their idea that they neglect to build an MVP and instead invest years into a fully-featured product that nobody wants.
+
+But I *did* build an MVP. I even defined the acceptance criteria up front to prevent myself from trying to improve the service's accuracy forever. I decided that my MVP would be ready to show customers once it gave correct answers for a few common ingredient formats and achieved at least 80% accuracy on a set of 200 ingredients from the web that it had never seen before.
 
 {% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="300px" img_link=true class="img-border" %}
 
-We accomplished all of the goals of the acceptance criteria in early May. But I didn't officially "launch" (as in, begin accepting payments) until July. Instead, I spent the next six weeks writing more code.
+I got Zestful to satisfy the acceptance criteria in early May, after about 80 hours of development work. But I didn't officially "launch" (as in, begin accepting payments) until July. Instead, I spent another two months writing code.
 
 # It's okay because it's *sales* coding
 
-The best way to understand how I wrote code for two months after I was "done" is to peek inside my thought process during that time:
+The best way for me to explain how I continued writing code for two months after I was "done" is to share my thought process:
 
 *Day 1: Acceptance criteria is accomplished*
 
->The service works, but customers can only try it out by writing complex expressions on the command line. How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1?
+>The service works! But customers can only use it if they write complex expressions on the command line...
 >
->I have to create a simple HTML frontend so that users can just interact with it in the browser.
+>How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1? I have to create a simple HTML frontend so that customers can test it right from the browser.
 
 *5 days later*
 
->The basic HTML form works, but it's strange to have this orphaned HTML form without any surrounding context to explain what it is. I need to build a website around this. But it'll be simple, like just a day of work.
+>The basic frontend works, but it's strange to have this orphaned HTML form sitting there without any explanation. I need to build a website around the form that explains what it is. But it'll be a dead-simple site, like just a day of work.
 
 *4 days later*
 
 >Okay, great! The service has its own website.
 >
->Oh, but I don't have documentation to explain what all the fields mean. I'll add that real quick.
+>...but I don't have documentation to explain what all the fields mean. I'll add that real quick.
 
 *2 days later*
 
->Now I have so many pages that my navigation bar doesn't display correctly on mobile devices. I need to make my navigation bar responsive. But that's such a basic thing. I'm sure that will only take me about an hour with Angular.
+>Now I have so many pages that my navigation bar doesn't display correctly on mobile devices.
+>
+>I need to make my navigation bar responsive. I'm sure that will only take me about an hour with Angular, my web framework.
 
 [*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
+>Now that my website works on mobile, I'm ready to show off my product demo!
+>
 >Uh oh! What if everyone just uses my free demo server instead of paying me? I need to add logic to limit each user to 30 requests per day.
 
 And on and on.
 
 Every time I thought I just needed one more simple thing, it added new complexity and forced me to add something else to support it.
 
-And then it was two months later and I was baffled at how I hadn't shipped anything so long after I had declared code complete.
+Finally, it was two months later, and I was baffled that I hadn't shipped anything despite declaring code complete so long ago.
 
 # Breaking the cycle
 
-I used to write monthly updates
-
 I decided to write a summary of my progress on Zestful and I realized
 
-Part of the benefit of writing, especially on the Internet where people can be eager to find fault, is that it forces you to [justify what you say](https://medium.learningbyshipping.com/writing-is-thinking-an-annotated-twitter-thread-2a75fe07fade).
+Part of the benefit of writing, especially on the Internet, where people can be eager to find fault, is that it forces you to [justify what you say](https://medium.learningbyshipping.com/writing-is-thinking-an-annotated-twitter-thread-2a75fe07fade). This defensive writing also forces you to organize your thoughts.
 
 >Writing is thinking. To write well is to think clearly. That's why it's so hard.
 >
@@ -106,19 +112,22 @@ I published my service to RapidAPI, the web's largest API marketplace, and I was
 
 When I recognized my goal was "ship ASAP," many of the tasks that seemed necessary turned out to be things I could do post-launch.
 
-One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? I'd perhaps be in poor position in the event of a legal dispute, what were the odds of me being sued within a few days of launch? The service handled recipe ingredients, so it wasn't a domain where I'd expect high-stakes lawsuits.
+I kept a written list of all the tasks I had left before launch. When I made the decision to launch, I estimated that those tasks would take five days. But then I revisited them with the mindset of "ship ASAP." For each task, I asked myself whether it was absolutely critical for launch. I realized that I had several items that were "critical" for launch, but would also probably be okay if I completed them a day or two after launch.
+
+One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? I'd perhaps be in poor position in the event of a legal dispute, what were the odds of me being sued within a few days of launch? The service handled recipe ingredients, so I couldn't imagine a situation where the stakes would be high enough that it would be worth someone's time to sue me.
 
 I launched my service with no explicit terms of service, then added them a few days later. It worked out fine; I garnered no lawsuits before or after.
 
-# The difference between "no" and rejection
+# The fear I didn't know was there
 
 While I was in my two months of limbo between being "done" and being "launched," a friend asked me if I was perhaps finding excuses to delay the launch because subconsciously I feared rejection. The thought had occurred to me, but I wrote it off. I worked for six months as a salesman, where I heard "no" 50 times per day. I became numb to it, so why would I fear it now?
 
 When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
 
+TODO(mtlynch): insert cartoon about rejection.
+
 Writing software is so tied up with my identity. It's the skill that I'm most proud of and that I do best.
 
-TODO(mtlynch): insert cartoon about rejection.
 
 # When *should* I have launched?
 
