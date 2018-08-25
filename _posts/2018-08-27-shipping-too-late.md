@@ -124,7 +124,7 @@ While I was in my two months of limbo between being "done" and being "launched,"
 
 When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
 
-TODO(mtlynch): insert cartoon about rejection.
+{% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
 Writing software is so tied up with my identity. It's the skill that I'm most proud of and that I do best.
 
@@ -145,8 +145,6 @@ The other big difference is the amount of friction to test it out. On the Zestfu
 # Lessons learned
 
 One of the biggest lessons was apparently that I can't learn from other people's mistakes. According to this, you'll read these and think you're learning something, but you'll make the same mistakes. So when you make the same mistakes, try to act surprised.
-
-**What I learned**
 
 * When you define the MVP, define up front all the steps needed to begin accepting payment from customers.
   * Otherwise, it creates a loophole where pre-launch tasks can continue forever as long as they're not really part of "the product."
