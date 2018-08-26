@@ -72,9 +72,7 @@ The best way for me to explain how I continued writing code for two months after
 
 [*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
->Now that my website works on mobile, I'm ready to show off my product demo!
->
->Uh oh! What if everyone just uses my free demo server instead of paying me? I need to add logic to limit each user to 30 requests per day.
+>The site looks weird without a logo. I'll hire someone to make a simple logo.
 
 And on and on.
 
@@ -96,31 +94,46 @@ When I wrote the forum post, I tried to pre-emptively answer the obvious questio
 
 All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
 
+# This is critical, but it can wait
+
+I knew that launching was my top priority, and I had a list of tasks I needed to complete in order to ship. I estimated that I could launch in five days at the earliest.
+
+Then, a funny thing happened. Once I decided that my goal was "ship ASAP," many of the tasks that seemed necessary turned out to be things I could do post-launch.
+
+When I made the decision to launch, I estimated that those tasks would take five days. But then I revisited them with the mindset of "ship ASAP." For each task, I asked myself whether it was absolutely critical for launch. I realized that I had several items that were "critical," but would be okay if I completed them a day or two after launch.
+
+One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? I'd perhaps be in poor position in the event of a legal dispute, what were the odds of me being sued within a few days of launch? The service handled recipe ingredients, so I couldn't imagine a situation where the stakes would be high enough that it would be worth someone's time to sue me.
+
 # Shut up and launch
 
-A strange thing happened once I decided that launching was my top priority.
+When I decided to launch, I estimated that I had about five days of critical tasks left to complete. Then, I revisited my task list and treated everything with the same ruthless skepticism as I had with my terms of use document. For each task, I asked myself, "What would happen if I launched without this?"
 
-I estimated that it would take me about five days to complete all the tasks necessary for launch. The next day, I launched.
-
-I published my service to RapidAPI, the web's largest API marketplace, and I was ready to accept payments from customers.
+With this strategy, I completed my five-day task list in just a day. The next day, I published my service to RapidAPI, the web's largest API marketplace and began accepting payment from customers.
 
 {% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
 
-# This is critical, but it can wait
+# Stalling to avoid rejection
 
-When I recognized my goal was "ship ASAP," many of the tasks that seemed necessary turned out to be things I could do post-launch.
+While I was in my two months of limbo between "done" and "launched," a friend asked me if I was stalling subconsciously. "Do you think you're putting off the launch because it's scary to show the product to people?"
 
-I kept a written list of all the tasks I had left before launch. When I made the decision to launch, I estimated that those tasks would take five days. But then I revisited them with the mindset of "ship ASAP." For each task, I asked myself whether it was absolutely critical for launch. I realized that I had several items that were "critical" for launch, but would also probably be okay if I completed them a day or two after launch.
+The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times per day. I wasn't afraid of rejection. If I learned anything from that job, it was to not take "no" personally and remain persistent.
 
-One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? I'd perhaps be in poor position in the event of a legal dispute, what were the odds of me being sued within a few days of launch? The service handled recipe ingredients, so I couldn't imagine a situation where the stakes would be high enough that it would be worth someone's time to sue me.
+Besides, I was already talking to customers. Prior to launch, I wrote about the project [on this blog](/since-quitting/#new-project-ingredient-parsing-as-a-service) and on Twitter. Why would I do that if I was afraid of showing off my work?
 
-I launched my service with no explicit terms of service, then added them a few days later. It worked out fine; I garnered no lawsuits before or after.
+The day I launched, I sat down to write my first cold pitch: an email to a recipe app developer I'd never spoken with before telling them about my service and making the case that they should integrate it into their app.
 
-# The fear I didn't know was there
+I sat staring at a blank email for half an hour struggling to think of what to write. I had explained what my service did dozens of times at this point, but none of those explanations seemed appropriate in this case. Every time I thought of a line to write, I imagined the customer replying, "Why is that worth what you're charging?" and froze up.
 
-While I was in my two months of limbo between being "done" and being "launched," a friend asked me if I was perhaps finding excuses to delay the launch because subconsciously I feared rejection. The thought had occurred to me, but I wrote it off. I worked for six months as a salesman, where I heard "no" 50 times per day. I became numb to it, so why would I fear it now?
+Uh oh. This *was* scary.
+
+# A different type of rejection
+
+I thought I was already talking to customers, but everyone I was talking to were people who were already warm to me. They were people who were already interested in my work from the blog or Twitter and were interested enough to reach out to me.
+
+Reaching out to customers was really where the rubber met the road. If my service doesn't clearly increase their profits, it's not useful.
+
 
 When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
 
