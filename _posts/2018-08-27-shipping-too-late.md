@@ -167,3 +167,7 @@ Responding to inbound inquiries isn't just easier than pitching to people who ha
 **Writing is thinking**
 
 I stopped spinning my wheels after I wrote out my thoughts and showed it to an audience that I expected to challenge my thinking. Writing is difficult but is immensely valuable at organizing thoughts.
+
+**You can't trust a "yes," but you can trust a "no"**
+
+Foo.
