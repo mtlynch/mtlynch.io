@@ -120,49 +120,50 @@ While I was in my two months of limbo between "done" and "launched," a friend as
 
 The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times per day. I wasn't afraid of rejection. If I learned anything from that job, it was to not take "no" personally and remain persistent.
 
-Besides, I was already talking to customers. Prior to launch, I wrote about the project [on this blog](/since-quitting/#new-project-ingredient-parsing-as-a-service) and on Twitter. Why would I do that if I was afraid of showing off my work?
+Besides, I was already talking to customers. Prior to launch, I wrote about the project [on my blog](/since-quitting/#new-project-ingredient-parsing-as-a-service) and on Twitter. Why would I do that if I was afraid to show off my work?
 
 The day I launched, I sat down to write my first cold pitch: an email to a recipe app developer I'd never spoken with before telling them about my service and making the case that they should integrate it into their app.
 
-I sat staring at a blank email for half an hour struggling to think of what to write. I had explained what my service did dozens of times at this point, but none of those explanations seemed appropriate in this case. Every time I thought of a line to write, I imagined the customer replying, "Why is that worth what you're charging?" and froze up.
+I sat staring at a blank email for half an hour struggling to think of what to write. I had explained what my service did dozens of times at this point, but none of those explanations seemed appropriate in this case. Every time I thought of a line to write, I imagined the customer replying, "Why is that worth what you're charging? How would my business make more money if I used this?" I froze up.
 
-Uh oh. This *was* scary.
+Uh oh. I *was* afraid of rejection.
 
 # A different type of rejection
 
-I thought I was already talking to customers, but everyone I was talking to were people who were already warm to me. They were people who were already interested in my work from the blog or Twitter and were interested enough to reach out to me.
+This wasn't at all like when I worked in sales. In that job, I was selling fiber internet to businesses. It was very easy to let rejection roll off my back because I wasn't at all responsible for the product.
 
-Reaching out to customers was really where the rubber met the road. If my service doesn't clearly increase their profits, it's not useful.
+Now, I was selling something I created. What's more, I was selling *software* that I created.  Writing software is so tied up with my identity. It's the skill that I'm most proud of and that I do best.
 
-
-When I sat down to write my first cold email to a potential customer, I realized I *was* scared. It wasn't at all like when I was a salesman. I was selling my own product rather than something I was hired by someone else to sell. I wasn't afraid of hearing "no," but I was afraid of the customer thinking, "Is that the best you can do?" Because I want to say, "If you think the website looks stupid, it's just because it's a prototype and it will look better once you give me money and justify the product's existence!" But that's not something I imagine customers are excited to read.
+If I sent my product to a customer, then they might think, "This isn't very good. You're trying to sell it, so you must think it's good. Therefore, you are not very good."
 
 {% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
-Writing software is so tied up with my identity. It's the skill that I'm most proud of and that I do best.
+It was also different than the conversations I was already having with customers. They were indeed customers and some of them were serious about buying, but they were the easiest customers to talk to because they reached out to me. They were already interested in me from reading my blog or Twitter, so these were my warmest, friendliest, least scary to talk to customers.
 
+# I did it backwards
 
-# When *should* I have launched?
+Looking back, I realized that I did the whole thing backwards. I cold pitched to customers as a last step, but it really should have been my first step before writing a line of code.
 
-Looking back, I think I should have launched once the service met my acceptance criteria.
+There are certain products where you do need something to show customers. If I was building my own accounting software, I'd need something to show customers to explain why my accounting software is better. But an ingredient parser is pretty easy to explain. "It takes a raw string that looks like X and turns it into structured data that looks like Y."
 
-The Zestful website is nice in that it offers a low-friction way for users to test out the functionality, but RapidAPI already kind of has that functionality. RapidAPI's version is not as user-friendly because it just shows the user a tree of data they have to click through, but my target customers are developers, and they understand how to do this, even if they'd recognize that it's inconvenient.
-
-
-{% assign fig_caption = "[Zestful's custom demo](https://zestfuldata.com/demo) (left) vs. [RapidAPI's generic demo interface](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) (right)" | markdownify | remove: "<p>" | remove: "</p>" %}
-
-{% include image.html file="zestful-vs-rapidapi.png" alt="Comparison of Zestful website vs. RapidAPI interface" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
-
-The other big difference is the amount of friction to test it out. On the Zestful website, users can test out ingredients with no sign-up whatsoever. With RapidAPI, customers have to register an account and enter a credit card before they can even even test out my service. I think the low-friction path is better, but I can't discount the fact that RapidAPI's solution filters out users who aren't serious about becoming paying customers.
+I had considered this but talked myself out of it by rationalizing that customers could say yes to the idea but then never buy the product. And that's true. The sale isn't real until the customer hands over their credit card. But I didn't consider the useful information I'd gain from the opposite case. A "no" is a strong signal. So while "yes, in theory" has to be taken with a grain of salt, "no" does not. It's easy for a customer to agree to the idea in theory, but then never buy the product. The reverse is unlikely. If the customer said no at the concept stage, they're probably not going to change their mind and buy it once it's been built.
 
 # Lessons learned
 
-One of the biggest lessons was apparently that I can't learn from other people's mistakes. According to this, you'll read these and think you're learning something, but you'll make the same mistakes. So when you make the same mistakes, try to act surprised.
+**Define up front the full path to launch**
 
-* When you define the MVP, define up front all the steps needed to begin accepting payment from customers.
-  * Otherwise, it creates a loophole where pre-launch tasks can continue forever as long as they're not really part of "the product."
-* Rejection is scarier when you're selling your own creation.
-* A task can simultaneously be critical and permissable to defer to post-launch.
-* Re-evaluate your strategy regularly, in writing.
-  * Write down what you did and what you'll do next.
-  * Show it to someone who is willing to challenge your assumptions and conclusions.
+I made the mistake of defining only a piece of my initial product, then continuing to spin my wheels for months on tasks on top of it.
+
+**Selling your own product is scarier than selling someone else's**
+
+Foo.
+
+**Inbound interest doesn't validate the idea**
+
+I let myself get comfortable because people were approaching to me. I assumed that if people were interested enough to approach me, then I'd have a good chance of approaching people who never heard of me.
+
+Responding to inbound inquiries isn't just easier than pitching to people who have never heard of you, it's a different experience. People reaching out to me already have some idea of how my service could fit into their product. With cold pitching, I had to find that integration myself and convince them that it was worth their time and money to integrate with my service.
+
+**Writing is thinking**
+
+I stopped spinning my wheels after I wrote out my thoughts and showed it to an audience that I expected to challenge my thinking. Writing is difficult but is immensely valuable at organizing thoughts.
