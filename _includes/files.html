@@ -30,11 +30,18 @@
 {% endif %}
 
 {% comment %}
-<!-- initialize file count & array -->
+<!-- initialize file count -->
 {% endcomment %}
 {% assign file_count = 0 %}
+
+{% comment %}
+<!-- create an empty array to store UNIQUE file paths that match the correct
+  file path and title.  Unfortunately due to Jekyll Admin bug, this array of 
+  UNIQUE files is part of the workaround to ensure no false positives are
+  thrown for duplicate title error catching. -->
+{% endcomment %}
 {% assign found_file_array = " " | split: ',' %}
-{% assign found_file_array =  found_file_array | shift %}
+{% assign found_file_array = found_file_array | shift %}
 
 {% for file in files %}
 
@@ -54,8 +61,15 @@
   {% assign subdir = subdir_array[1] %}
 
   {% if subdir == page.slug %}
+
+    {% comment %}
+    <!-- check to see if any files have been stored in the UNIQUE array of
+      files.  If not, then push the file_path into the array.  This is only
+      needed as part of a workaround to ensure the same file is counted twice
+      for duplicate title error trapping. -->
+    {% endcomment %}
     {% if found_file_array.size == 0 %}
-      {% assign found_file_array =  found_file_array | push: file_path %}
+      {% assign found_file_array = found_file_array | push: file_path %}
 
 ```{{ lang_highlight }}
 {{ file.content -}}
@@ -68,9 +82,17 @@
     
     {% else %}
     
+      {% comment %}
+      <!-- iterate through found_file_array and check if the same file_path
+        already exists.  If the same file_path already exists, do nothing.
+        Otherwise, add the new file_path to the array so that the duplicate
+        file title error check will trigger below.  This is only needed as part
+        of a workaround to ensure the same file is counted twice for duplicate
+        title error trapping. -->
+      {% endcomment %}
       {% for found_file in found_file_array %}
         {% if found_file != file_path %}
-          {% assign found_file_array =  found_file_array | push: file_path %}
+          {% assign found_file_array = found_file_array | push: file_path %}
         {% endif %}
       {% endfor %}
 
@@ -79,26 +101,32 @@
 
 {% endfor %}
 
+{% comment %}
+<!-- get the size of the array for error trapping below.  A count of 1 is good.
+  A count of 0 obviously means no files were found and to raise an exception.
+  Any other value should be raised as an exception as that means duplicate
+  titles were found for a file in the same directory. -->
+{% endcomment %}
 {% assign file_count = found_file_array | size %}
 
 {% unless file_count == 1 %}
   {% if file_count == 0 %}
     {% comment %}
-    <!-- if there has been NO files found in the subdirectory that match the
+    <!-- if there have been NO files found in the subdirectory that match the
          title, then raise an error -->
     {% endcomment %}
     {{ "Zero file includes matched the title, "
       | append: include.title
       | append: ".  Please check the file include's title and directory again."
-      | raise_exception: "error" }}
+      | raise_exception: "warning" }}
   {% else %}
     {% comment %}
-    <!-- if there has been more than 1 file with the same title found, then 
+    <!-- if there have been more than 1 file with the same title found, then 
          raise an error as this is likely not intentional -->
     {% endcomment %}
     {{ "Multiple file includes with the same title, "
       | append: include.title
       | append: ", have been found."
-      | raise_exception: "error" }}
+      | raise_exception: "warning" }}
   {% endif %}
 {% endunless %}

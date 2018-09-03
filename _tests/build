@@ -32,7 +32,7 @@ bundle exec htmlproofer ./_site \
   --allow-hash-href \
   --empty-alt-ignore \
   --url-swap "http\://localhost\:4000/:/" \
-  --url-ignore "/vimeo.com/,/upwork.com/,http://amzn.to/2rBvkbA" \
+  --url-ignore "/vimeo.com/,/upwork.com/" \
   "$htmlproofer_args_extra"
 
 # Build production site.
