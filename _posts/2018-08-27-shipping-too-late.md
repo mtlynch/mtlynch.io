@@ -72,7 +72,7 @@ The best way for me to explain how I continued writing code for two months after
 
 [*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
->The site looks weird without a logo. I'll hire someone to make a simple logo.
+>The site looks weird without a logo. I'd better hire someone to make a simple logo.
 
 And on and on.
 
