@@ -383,7 +383,7 @@ GTX 970 | 895 | [EVGA GeForce GTX 970](http://amzn.to/2r25sIO)
 GTX 980 | 1,290 | [GIGABYTE GeForce GTX 980](http://amzn.to/2qDGgY5)
 GTX Titan X | 1,300 | [EVGA GeForce GTX TITAN X](http://amzn.to/2q2Rulz)
 GTX 980 Ti | 1,540 | [GIGABYTE GeForce GTX 980Ti](http://amzn.to/2qH6bvP)
-GTX 980 Ti Hybrid | 1,725 | [EVGA GeForce GTX 980 Ti](http://amzn.to/2rBvkbA)
+GTX 980 Ti Hybrid | 1,725 | [EVGA GeForce GTX 980 Ti](https://amzn.to/2MNRd5L)
 GTX 1080 FE | 2,190 | [EVGA GeForce GTX 1080 Founders Edition](https://amzn.to/2GyHpW0)
 
 ## AMD GPUs
