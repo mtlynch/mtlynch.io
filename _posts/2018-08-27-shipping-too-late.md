@@ -68,7 +68,7 @@ The best way for me to explain how I continued writing code for two months after
 
 >Now I have so many pages that my navigation bar doesn't display correctly on mobile devices.
 >
->I need to make my navigation bar responsive. I'm sure that will only take me about an hour with Angular, my web framework.
+>I need to make my navigation bar responsive. I'm sure that will only take me about an hour with my web framework, Angular.
 
 [*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
