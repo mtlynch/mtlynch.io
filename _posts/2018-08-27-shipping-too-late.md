@@ -138,6 +138,8 @@ If I show my product to a customer, they might think, "This isn't very good. You
 
 # The harsh reality
 
+The people who needed it had already rolled their own in-house solution. Everyone else didn't think it was worth their time.
+
 Yeah it's a fraction of a cent per ingredient plus the cost of development time to integrate my service plus the cost of an additional external dependency in their application. Let's say that they value those costs at around $2,000 and they make $3 per sale of their app. Were they going to attract hundreds of new customers by using my ingredient parsing service?
 
 # I did it backwards
