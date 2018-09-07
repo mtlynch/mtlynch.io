@@ -76,43 +76,37 @@ You might be wondering how I ended up writing code for so long after my MVP was 
 >
 >I'll make my navigation bar responsive. I'm sure that will only take an hour with my web framework, Angular.
 
-[*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
-
->The site looks weird without a logo. I'd better hire someone to make one.
+[*8 days later...*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
 And on and on.
 
-Every time I thought I just needed one more thing, complexity increased, and I had to add even more code to manage it.
+It was a hydra. Every time I finished adding "one more simple thing," I realized I needed three more things to support it.
 
-Eventually, it was two months later, and I was baffled that I hadn't shipped anything despite declaring code complete so long ago.
+Eventually, two months had gone by since I declared code complete, and I was baffled that I hadn't shipped anything.
 
 # This is critical, but it can wait
 
-TODO: Rewrite
+I needed to launch.
 
-At this point, I made a [forum post](https://www.indiehackers.com/forum/zestful-data-month-4-shipping-too-late-94ac777256) describing my strategy and progress. Writing out my strategy forced me to recognize one thing: I had to ship ASAP.
-
-I still had a list of critical tasks to complete. I estimated that I could launch in five days at the earliest.
+But I still had a list of critical tasks to complete. I estimated that they would take a minimum of five days to complete.
 
 Then, a funny thing happened. Once I decided that my goal was to ship as soon as possible, I realized that I had several items that were "critical," but would be okay if I completed them a day or two after launch.
 
-One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. I knew I needed to have one, but what would happen if I launched without it? I'd be in poor position in the event of a legal dispute, but what were the odds of someone suing me within a few days of launch?
+One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. What would happen if I launched without it? I'd be in poor position in the event of a legal dispute, but what were the odds of someone suing me within a few days of launch?
 
 # Shut up and launch
 
 I revisited my task list and treated everything with the same ruthless skepticism as my terms of use document. For each task, I asked myself, "What would happen if I launched without this?"
 
-With this strategy, I sped through my "five-day" task list and launched the very next day. I [published my service to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), the web's largest API marketplace. My service was ready to accept payment from real customers.
+With this strategy, I sped through my "five-day" task list and launched the following day. I [published my service to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace. My service was ready to accept payment from real customers.
 
 {% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
 
-# Stalling to avoid rejection
+# Did I delay launch to avoid rejection?
 
-While I was in my two-month limbo between "done" and "launched," a friend asked me if I was stalling subconsciously.
-
->Do you think you're putting off the launch because it's scary to show the product to people?
+While I was in my two-month limbo between "done" and "launched," a friend asked me if I was stalling subconsciously because I was afraid to show my product to customers.
 
 The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times a day. I wasn't afraid of rejection. If I learned anything from that job, it was to let "no" roll off my back.
 
@@ -122,7 +116,7 @@ For half an hour, I stared at the blank screen struggling to write anything. I h
 
 >Why is that worth what you're charging?
 
->How does that earn my business more money?
+>How does that increase my profits?
 
 >Why do I need you?
 
@@ -140,9 +134,9 @@ If I showed my product to a customer, they might think, "This isn't very good. Y
 
 # The harsh reality
 
-After dozens of emails and zero sales, it began to dawn on me that I was the developer who invested months into something that customers didn't really want.
+After dozens of sales attempts and zero purchases, it began to dawn on me that I was the developer who invested months into a product that customers didn't really want.
 
-There were businesses that could use a service like mine, but but the ones who really needed it had already rolled their own solution in-house. The rest agreed that it was a neat service, but couldn't justify the cost, even though I only charged $20/month.
+There were businesses that could use a service like mine. The ones who really needed it had already rolled their own solution. The rest agreed that it was a neat service but couldn't justify the cost, even though I only charged $20/month.
 
 And that's where I discovered the fatal flaw in my strategy. The largest cost for my customers wasn't my monthly fee, but rather the cost of modifying their app to integrate my service.
 
@@ -152,15 +146,15 @@ On top of that, they have to weigh the cost of an additional external dependency
 
 Looking back, I realize that I did the whole thing backwards. I cold-pitched to customers as a last step, but I should have done it before writing a line of code.
 
-I considered this early on, but I rationalized my decision to build the product first. I told myself that customers could say yes to the idea but then never buy the product. And that's true. The sale isn't real until the customer hands over their credit card.
+Early on, I rationalized my decision to build the product first. I told myself that customers could say yes to the idea but then never buy the product. I wanted "yes" to be a real sale, where the customer agrees by purchasing the service.
 
-I didn't consider the useful information I'd gain from the opposite case. If the customer says no at the concept stage, they're not going to change their mind after I build it.
+While I still agree with that logic, I failed to consider the value of hearing "no." If the customer rejects the product at the concept stage, they're not going to change their mind after I build it. If everyone says no, it's not worth building.
 
 # Lessons learned
 
 **Define the full path to launch**
 
-I defined only a piece of my initial product, then spun my wheels for on additional tasks that I didn't consider "official" parts of the MVP. The MVP should include everything needed for customers to buy the product, including sales and marketing effort.
+The MVP should include everything needed for customers to buy the product, including sales and marketing tasks.
 
 **Selling your own product is scarier than selling someone else's**
 
@@ -168,4 +162,6 @@ Experience as a sales employee isn't a substitute for the experience of selling 
 
 **Be skeptical of a theoretical yes. Pay heed to a theoretical no**
 
-If customers say they'd buy your product before you create it, it's a weakly positive sign, but don't bank on it until they've actually given you money. If customers say they *wouldn't* buy your product, they're unlikely to change their mind after you build it.
+If customers say they'd buy your product before you create it, it's a weakly positive sign, but don't bank on it until they've actually given you money. If customers say they *wouldn't* buy your product, that's a strong negative sign.
+
+*Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
