@@ -26,13 +26,16 @@ From the title of this post, you've probably figured out that my plan didn't wor
 
 My product idea came from my earlier project, [KetoHub](https://ketohub.io/), which allows users to search keto recipes by ingredient.
 
-To support this functionality, KetoHub reduces ingredients to their essential words for search matching. For example, an ingredient such as "½ cup mozzarella cheese, shredded" simplifies to "mozzarella cheese." That way, if a user begins typing "cup..." they see matches for recipes related to "cupcakes" rather than any recipe that includes a "cup" of some ingredient.
+To support this functionality, KetoHub simplifies ingredients for intelligent matching. For example, an ingredient such as "½ cup mozzarella cheese, shredded" reduces to "mozzarella cheese." That way, if a user begins typing "cup..." they see matches for recipes related to "cupcakes" rather than recipes that includes a "cup" of some ingredient.
 
-I initially solved this with regular expressions, but that quickly [grew unmanageable](/resurrecting-1/#what-business-was-it-of-mine). I discovered a way to achieve better results with machine learning, but it would require a substantial up-front investment.
+I initially solved this with regular expressions, but that quickly [grew unmanageable](/resurrecting-1/#what-business-was-it-of-mine). I could achieve better results using machine learning, but it would require a substantial up-front investment.
 
-If I needed something like this, others probably did too. Maybe ingredient parsing could be its own business. Thus, the idea for [Zestful](https://zestfuldata.com/), my ingredient-parsing service, was born.
+{% assign fig_caption = "[Zestful](https://zestfuldata.com/), a recipe ingredient parsing service" | markdownify | remove: "<p>" | remove: "</p>" %}
 
-TODO: Logo for Zestful
+{% include image.html file="zestful-logo.png" alt="Zestful logo" fig_caption=fig_caption max_width="370px" class="align-right img-border" link_url="https://zestfuldata.com/" %}
+
+Maybe other developers struggled with the same problem. If I offered a service that solved this specific issue, I could make ingredient parsing into its own business. Thus, the idea for [Zestful](https://zestfuldata.com/), my ingredient-parsing service, was born.
+
 
 # The MVP that wasn't
 
