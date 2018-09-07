@@ -10,43 +10,47 @@ sidebar:
   nav: main
 ---
 
-I've heard dozens of stories of software founders failing for a single reason: they shipped too late. They spent months or years developing a product in a vacuum only to watch it crumble miserably the first time a real customer touches it.
+Many software founders fail for a simple reason: they ship too late. They spend years developing a product in a vacuum only to watch it crumble miserably the first time a real customer touches it.
 
 The [Indie Hackers podcast](https://www.indiehackers.com/podcast) features many such stories. The show's stated mission is to help listeners learn from the mistakes of startup founders, but host Courtland Allen frequently expresses existential angst about whether this is even possible:
 
->...there are things you can tell people over and over again until you’re blue in the face, and they still won’t listen to you or really understand what you’re saying until they go out and discover what you mean the hard way by making their own mistakes
+>...there are things you can tell people over and over again until you’re blue in the face, and they still won’t listen to you or really understand what you’re saying until they go out and discover what you mean the hard way by making their own mistakes.
 >
 >-Courtland Allen, [*Indie Hackers Podcast*](https://www.indiehackers.com/podcast/049-josh-kaufman-of-the-personal-mba)
 
-I always thought, "No, Courtland. That sounds inefficient. I'll take the free lessons and not make the costly mistakes, thank you."
+I always thought, "No, Courtland. That sounds inefficient. I'll take the free lessons and *not* make the costly mistakes, thank you."
 
 From the title of this post, you've probably figured out that my plan didn't work.
 
-# The idea
+# The product idea
 
-The idea for this project was a spinoff from one of my earlier projects, a recipe aggregator called [KetoHub](https://ketohub.io/). It allows users to search recipes by ingredient.
+My product idea came from my earlier project, [KetoHub](https://ketohub.io/), which allows users to search keto recipes by ingredient.
 
-To make this possible, KetoHub had to reduce ingredients to their essential words for search matching. For example, KetoHub reduced an ingredient such as "½ cup shredded mozzarella cheese" to simply "mozzarella cheese." My thinking was that if a user typed "cup," they expect to see results like "cupcakes" or "pudding cups" instead of every recipe that contains a "cup" of any ingredient.
+To support this functionality, KetoHub reduces ingredients to their essential words for search matching. For example, an ingredient such as "½ cup mozzarella cheese, shredded" simplifies to "mozzarella cheese." That way, if a user begins typing "cup..." they see matches for recipes related to "cupcakes" rather than any recipe that includes a "cup" of some ingredient.
 
-I initially solved this with regular expressions, but that quickly [grew unmanageable](/resurrecting-1/#what-business-was-it-of-mine). I realized I could instead solve this with machine learning. If I needed something like this, others probably did too, so maybe that could be a business.
+I initially solved this with regular expressions, but that quickly [grew unmanageable](/resurrecting-1/#what-business-was-it-of-mine). I discovered a way to achieve better results with machine learning, but it would require a substantial up-front investment.
 
-Thus, the idea for [Zestful](https://zestfuldata.com/), my ingredient-parsing service, was born.
+If I needed something like this, others probably did too. Maybe ingredient parsing could be its own business. Thus, the idea for [Zestful](https://zestfuldata.com/), my ingredient-parsing service, was born.
+
+TODO: Logo for Zestful
 
 # The MVP that wasn't
 
-In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the smallest possible product that you can show to customers to demonstrate your idea. You're supposed to build it as soon as possible, get it into potential customers' hands, and judge from their reaction whether your idea is viable.
+In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the smallest possible product that demonstrates your idea. You're supposed to build it as soon as possible, get it into potential customers' hands, and judge from their reaction whether your idea is viable.
 
 One of the most common stories of failure is of the founder so confident in their idea that they neglect to build an MVP and instead invest years into a full-fledged product that nobody wants.
 
-But I *did* build an MVP. I even defined the acceptance criteria up-front to prevent myself from trying to improve the service's accuracy forever. I decided that my MVP would be ready to show customers once it gave correct answers for a few common ingredient formats and achieved at least 80% accuracy on a random set of 200 ingredients from the web.
+With Zestful,  I *did* build an MVP. I even defined the acceptance criteria up-front to prevent myself from disappearing down a rabbit hole after I got the product working. I committed to show my service to customers once it gave correct results for a few common ingredient formats and achieved at least 80% accuracy on a random set of 200 ingredients from the web.
 
 {% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="300px" img_link=true class="img-border" %}
 
-After about 80 hours of development work, Zestful satisfied the acceptance criteria. But I didn't officially "launch" (as in, begin accepting payments) for another two months. Instead, I spent that time writing more code.
+After about 120 hours of development work, Zestful satisfied my acceptance criteria.
+
+Nevertheless, I didn't officially launch for another two months. Instead, I spent that time writing more code.
 
 # It's okay because it's *sales* coding
 
-Below, I share the thought process that led me to keep coding so long after I was "done":
+You might be wondering how I ended up writing code for so long after my MVP was "done." Well, here's a summary of my thought process throughout those two months:
 
 *Day 1: Acceptance criteria is accomplished*
 
@@ -58,7 +62,7 @@ Below, I share the thought process that led me to keep coding so long after I wa
 
 >The basic frontend works, but it's strange to have this orphaned HTML form sitting there without any explanation.
 >
->I need to build a website around the form that explains what it is. But it'll be a dead-simple site, like just a day of work.
+>I need to build a website around the form to explain it. But it'll be a dead-simple site, like just a day of work.
 
 *4 days later*
 
@@ -70,33 +74,25 @@ Below, I share the thought process that led me to keep coding so long after I wa
 
 >Now I have so many pages that my navigation bar doesn't display correctly on mobile devices.
 >
->I need to make my navigation bar responsive. I'm sure that will only take me about an hour with my web framework, Angular.
+>I'll make my navigation bar responsive. I'm sure that will only take an hour with my web framework, Angular.
 
 [*8 days later*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
->The site looks weird without a logo. I'd better hire someone to make a simple logo.
+>The site looks weird without a logo. I'd better hire someone to make one.
 
 And on and on.
 
-Every time I thought I just needed one more simple thing, it increased complexity and forced me to add something else to support it.
+Every time I thought I just needed one more thing, complexity increased, and I had to add even more code to manage it.
 
-Finally, it was two months later, and I was baffled that I hadn't shipped anything despite declaring code complete so long ago.
-
-# Breaking the cycle
-
-I probably would have kept finding new things to do had I not forced myself to reevaluate my strategy publicly. I [made a post](https://www.indiehackers.com/forum/zestful-data-month-4-shipping-too-late-94ac777256) on a forum for small startup developers explaining my progress and future plans.
-
-Knowing other forum posters would ask the obvious question, "Why haven't you launched yet?" I tried to answer it pre-emptively. I realized I couldn't. All signs were telling me it was time to launch, but until I sat down to write out my thinking, I never had to confront it.
-
-Part of the benefit of writing, especially on the Internet, is that it forces you to [justify what you say](https://medium.learningbyshipping.com/writing-is-thinking-an-annotated-twitter-thread-2a75fe07fade). This type of writing forces you to organize your thoughts.
-
->Writing is thinking. To write well is to think clearly. That's why it's so hard.
->
->-David McCullough
+Eventually, it was two months later, and I was baffled that I hadn't shipped anything despite declaring code complete so long ago.
 
 # This is critical, but it can wait
 
-I knew that launching was my top priority, and I had a list of tasks I needed to complete in order to ship. I estimated that I could launch in five days at the earliest.
+TODO: Rewrite
+
+At this point, I made a [forum post](https://www.indiehackers.com/forum/zestful-data-month-4-shipping-too-late-94ac777256) describing my strategy and progress. Writing out my strategy forced me to recognize one thing: I had to ship ASAP.
+
+I still had a list of critical tasks to complete. I estimated that I could launch in five days at the earliest.
 
 Then, a funny thing happened. Once I decided that my goal was to ship as soon as possible, I realized that I had several items that were "critical," but would be okay if I completed them a day or two after launch.
 
@@ -106,7 +102,7 @@ One example was my [terms of use](https://zestfuldata.com/terms-of-service) docu
 
 I revisited my task list and treated everything with the same ruthless skepticism as my terms of use document. For each task, I asked myself, "What would happen if I launched without this?"
 
-With this strategy, I sped through my "five-day" task list and launched the very next day. I published my service to RapidAPI, the web's largest API marketplace and began accepting payment from customers.
+With this strategy, I sped through my "five-day" task list and launched the very next day. I [published my service to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), the web's largest API marketplace. My service was ready to accept payment from real customers.
 
 {% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -114,41 +110,51 @@ With this strategy, I sped through my "five-day" task list and launched the very
 
 # Stalling to avoid rejection
 
-While I was in my two months of limbo between "done" and "launched," a friend asked me if I was stalling subconsciously.
+While I was in my two-month limbo between "done" and "launched," a friend asked me if I was stalling subconsciously.
 
 >Do you think you're putting off the launch because it's scary to show the product to people?
 
-The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times per day. I wasn't afraid of rejection. If I learned anything from that job, it was to let "no" roll off my back.
+The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times a day. I wasn't afraid of rejection. If I learned anything from that job, it was to let "no" roll off my back.
 
-The day I launched, I sat down to write my first cold pitch: an email to a recipe app developer who didn't know me. I had to explain why their app should integrate with my ingredient parsing service.
+The day I launched, I sat down to write my first cold pitch: an email to a recipe app developer who didn't know me. I had to explain why their app should integrate with my ingredient service.
 
-For half an hour, I stared at the blank email struggling to write anything. I had explained my service to friends dozens of times, but this was different. Every time I thought of a benefit of my service, I imagined the customer replying, "Why is that worth what you're charging? How would my business make more money if I used this?" I froze up.
+For half an hour, I stared at the blank screen struggling to write anything. I had explained my service to friends dozens of times, but this was different. Every time I wrote down a benefit of my service, I imagined the customer's responses:
+
+>Why is that worth what you're charging?
+
+>How does that earn my business more money?
+
+>Why do I need you?
 
 Uh oh. I *was* afraid of rejection.
 
 # A different type of rejection
 
-This wasn't at all like when I worked in sales. In that job, I was selling fiber Internet. It was very easy to let rejection roll off my back because I wasn't at all responsible for the product.
+This wasn't at all like when I worked in sales. In that job, I was selling fiber Internet, but I didn't lay the fiber or design the network. It was easy to take rejection in stride.
 
-Now, I was selling something I created. What's more, I was selling *software* that I created.  Writing software is tied so tightly to my identity. It's the skill that I'm most proud of and what I believe I do best.
+Now, I was selling something I created. What's more, I was selling *software* that I created.  Writing software is so tightly tied to my identity. It's the skill that I'm most proud of and what I believe I do best.
 
 {% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
-If I show my product to a customer, they might think, "This isn't very good. You're trying to sell it, so you must think it's good. Therefore, **you** are not very good."
+If I showed my product to a customer, they might think, "This isn't very good. You're trying to sell it, so you must think it's good. Therefore, **you** are not very good."
 
 # The harsh reality
 
-The people who needed it had already rolled their own in-house solution. Everyone else didn't think it was worth their time.
+After dozens of emails and zero sales, it began to dawn on me that I was the developer who invested months into something that customers didn't really want.
 
-Yeah it's a fraction of a cent per ingredient plus the cost of development time to integrate my service plus the cost of an additional external dependency in their application. Let's say that they value those costs at around $2,000 and they make $3 per sale of their app. Were they going to attract hundreds of new customers by using my ingredient parsing service?
+There were businesses that could use a service like mine, but but the ones who really needed it had already rolled their own solution in-house. The rest agreed that it was a neat service, but couldn't justify the cost, even though I only charged $20/month.
+
+And that's where I discovered the fatal flaw in my strategy. The largest cost for my customers wasn't my monthly fee, but rather the cost of modifying their app to integrate my service.
+
+On top of that, they have to weigh the cost of an additional external dependency. What happens if my service has an outage? Does their app simply stop working? Or do they need to build a whole secondary mode of operation for when my service fails?
 
 # I did it backwards
 
 Looking back, I realize that I did the whole thing backwards. I cold-pitched to customers as a last step, but I should have done it before writing a line of code.
 
-I considered reaching out to customers early in development, but I talked myself out of it. I rationalized that customers could say yes to the idea but then never buy the product. And that's true. The sale isn't real until the customer hands over their credit card. But I didn't consider the useful information I'd gain from the opposite case.
+I considered this early on, but I rationalized my decision to build the product first. I told myself that customers could say yes to the idea but then never buy the product. And that's true. The sale isn't real until the customer hands over their credit card.
 
-It's easy for a customer to agree to the idea in theory and never buy the product. The reverse is unlikely. If the customer said no at the concept stage, they're not going to change their mind after I build it.
+I didn't consider the useful information I'd gain from the opposite case. If the customer says no at the concept stage, they're not going to change their mind after I build it.
 
 # Lessons learned
 
@@ -159,10 +165,6 @@ I defined only a piece of my initial product, then spun my wheels for on additio
 **Selling your own product is scarier than selling someone else's**
 
 Experience as a sales employee isn't a substitute for the experience of selling something you created.
-
-**Writing is thinking**
-
-I stopped spinning my wheels after I wrote out my thoughts and showed it to an audience that I expected to challenge my thinking. Writing is difficult but is immensely valuable at organizing thoughts.
 
 **Be skeptical of a theoretical yes. Pay heed to a theoretical no**
 
