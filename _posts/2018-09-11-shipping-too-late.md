@@ -80,7 +80,7 @@ You might be wondering how I ended up writing code for so long after my MVP was 
 
 And on and on.
 
-It was a hydra. Every time I finished adding "one more simple thing," I realized I needed three more things to support it.
+It was a hydra. Every time I finished adding "one more simple thing," I discovered two more things that were necessary as a result.
 
 Eventually, two months had gone by since I declared code complete, and I was baffled that I hadn't shipped anything.
 
@@ -88,25 +88,27 @@ Eventually, two months had gone by since I declared code complete, and I was baf
 
 I needed to launch.
 
-But I still had a list of critical tasks to complete. I estimated that they would take a minimum of five days to complete.
+But I still had an unfinished list of critical tasks. I estimated that they would take five days to complete.
 
-Then, a funny thing happened. Once I decided that my goal was to ship as soon as possible, I realized that I had several items that were "critical," but would be okay if I completed them a day or two after launch.
+Then, a funny thing happened. Once I decided that my goal was to ship as soon as possible, I realized there was a difference between "critical to have" and "critical for launch." There were things I needed but could add a day or two after launch without issue.
 
-One example was my [terms of use](https://zestfuldata.com/terms-of-service) document. What would happen if I launched without it? I'd be in poor position in the event of a legal dispute, but what were the odds of someone suing me within a few days of launch?
+One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). What would happen if I launched without it? I'd be in poor position in the event of a legal dispute, but what were the odds of someone suing me within a few days of launch?
 
 # Shut up and launch
 
-I revisited my task list and treated everything with the same ruthless skepticism as my terms of use document. For each task, I asked myself, "What would happen if I launched without this?"
+I revisited my task list and treated everything with the same ruthless skepticism as my Terms of Use. For each task, I asked myself, "What would happen if I launched without this?"
 
-With this strategy, I sped through my "five-day" task list and launched the following day. I [published my service to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace. My service was ready to accept payment from real customers.
+With this strategy, I sped through my "five-day" task list and launched the following day. I [published my service to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace.
 
 {% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
 
+ Now was the critical moment. My service was ready to accept payment from real customers. I just needed to reach out to them and explain why they should buy it.
+
 # Did I delay launch to avoid rejection?
 
-While I was in my two-month limbo between "done" and "launched," a friend asked me if I was stalling subconsciously because I was afraid to show my product to customers.
+While I was in my two-month limbo between "done" and "launched," a friend asked me if I was stalling because I was afraid to show my product to customers.
 
 The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times a day. I wasn't afraid of rejection. If I learned anything from that job, it was to let "no" roll off my back.
 
