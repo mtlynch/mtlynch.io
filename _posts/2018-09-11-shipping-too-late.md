@@ -33,22 +33,29 @@ From the title of this post, you probably figured out that my plan didn't work.
 
 # The product idea
 
-My idea was an offshoot from my website, [KetoHub](https://ketohub.io/), which allows users to search keto recipes by ingredient.
+It came to me while staring at the ugliest code I had ever written. It was a maddening labyrinth of regular expressions &mdash; powerful instructions for text processing, famously onerous to maintain. The code was dedicated to a task I never realized could be so complicated: parsing recipe ingredients.
 
-To support this functionality, KetoHub simplifies ingredients when it executes a search. For example, an ingredient such as "½ cup mozzarella cheese, shredded" reduces to "mozzarella cheese." That way, if a user begins typing "cup..." they see matches for recipes related to "cupcakes" rather than every recipe that includes a "cup" of some ingredient.
+{% include image.html file="regex.png" alt="Screenshot of regex implementation" fig_caption="Excerpt from my regular expression code" max_width="400px" class="img-border" img_link=true %}
 
-I initially solved this with regular expressions, but that quickly [grew unmanageable](/resurrecting-1/#what-business-was-it-of-mine). I knew machine learning could achieve better results, but it required a substantial up-front investment.
+Given a string such as `"2 1/2 cups finely chopped red onions"`, the code had to determine the quantity, the units, the product, and the preparation instructions.
+
+{% include image.html file="parse-example.png" alt="Visualization of ingredient parse result" fig_caption="Breaking an ingredient into its component parts" max_width="700px" class="img-border" img_link=true %}
+
+The code came from a [recipe search tool](http://ketohub.io) I created last year. The site never caught on, but I occasionally worked on it for fun. But the fun ended any time I had to modify any of my regular expressions.
+
+They all were 
+
+Machine learning could achieve better results, but it required a substantial up-front investment. Was it worth it?
 
 {% assign fig_caption = "[Zestful](https://zestfuldata.com/), a recipe ingredient parsing service" | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="zestful-logo.png" alt="Zestful logo" fig_caption=fig_caption max_width="370px" class="align-right img-border" link_url="https://zestfuldata.com/" %}
+Ingredient parsing wasn't a big enough problem for my recipe search tool, but what if the parsing was the business? If I struggled with this problem, surely other developers did as well. Thus, the idea was born for [Zestful](https://zestfuldata.com/), my ingredient-parsing service.
 
-Maybe other developers struggled with the same problem. If I offered a service that solved this specific issue, ingredient parsing could be its own business. Thus, the idea was born for [Zestful](https://zestfuldata.com/), my ingredient-parsing service.
-
+{% include image.html file="zestful-logo.png" alt="Zestful logo" fig_caption=fig_caption max_width="500px" class="img-border" link_url="https://zestfuldata.com/" %}
 
 # The MVP that wasn't
 
-In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the simplest version of an idea. You're supposed to build it as soon as possible, put it into potential customers' hands, and judge from their reaction whether your idea is viable.
+In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the simplest version of an idea. You're supposed to build it as soon as possible, put it into potential customers' hands, and judge from their reaction whether you're onto something.
 
 One of the most familiar stories of failure is of the founder so confident in their idea that they neglect to build an MVP and instead invest years into a full-fledged product that nobody wants.
 
@@ -68,7 +75,7 @@ You might be wondering how I ended up spinning my wheels for so long after my MV
 
 >The service works! But customers can only use it if they write complex expressions on the command line.
 >
->How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1? I have to create a simple HTML frontend so that customers can test it right from the browser.
+>How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1? I have to create a simple HTML frontend so that customers can test it directly from the browser.
 
 *5 days later*
 
@@ -80,7 +87,7 @@ You might be wondering how I ended up spinning my wheels for so long after my MV
 
 >Okay, great! The service has a website.
 >
->...but I don't have documentation to explain what all the fields mean. I'll add that real quick.
+>...but I don't have any documentation to explain what all the fields mean. I'll add that real quick.
 
 *2 days later*
 
@@ -94,7 +101,7 @@ And on and on.
 
 It was a hydra. Every time I finished adding "one more simple thing," I discovered two more things that were necessary as a result.
 
-Eventually, two months had gone by since I declared code complete, and I was baffled that I hadn't shipped anything.
+Eventually, two months had passed since declaring code complete, and I was baffled that I hadn't shipped anything.
 
 # This is critical, but it can wait
 
@@ -122,7 +129,7 @@ With this strategy, I sped through my "five-day" task list and launched the foll
 
 While I was in my two-month limbo between "done" and "launched," a friend asked me if I was afraid to show my product to customers. Were all these tasks I was thinking up just a way to avoid the possibility of rejection?
 
-The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold calling customers and hearing "no" 40 times a day. I wasn't afraid of rejection.
+The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold-calling customers and hearing "no" 40 times a day. I wasn't afraid of rejection.
 
 On launch day, I sat down to write my first cold pitch: an email to a recipe app developer who didn't know me. I had to explain why they should integrate my ingredient service into their app.
 
@@ -144,7 +151,7 @@ Now, I was selling something I created. What's more, I was selling *software* th
 
 {% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
-If I showed my product to a customer, they might think, "This isn't very good. You're trying to sell it, so you must think it's good. Therefore, **you** are not very good."
+If I showed Zestful to a customer, they might think, "This isn't very good. You're trying to sell it, so you must think it's good. Therefore, **you** are not very good."
 
 # The harsh reality
 
@@ -154,7 +161,7 @@ Some businesses could use a service like mine, but the ones who needed it most h
 
 And that's where I discovered the fatal flaw in my strategy. The most significant cost for my customers wasn't my monthly fee, but rather the cost of modifying their app to integrate my service.
 
-On top of that, they had to weigh the cost of an additional external dependency. What happens if my service has an outage? Does their app stop working? Or do they need to build a whole secondary mode of operation for when my service fails?
+On top of that, they had to weigh the cost of an additional external dependency. What happens if my service has an outage? Does their app stop working? Or, do they need to build an entire secondary mode of operation for when my service fails?
 
 # I did it backward
 
