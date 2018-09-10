@@ -33,21 +33,21 @@ From the title of this post, you probably figured out that my plan didn't work.
 
 # The product idea
 
-The idea came to me while I was staring at the ugliest code I had ever written. It was in a recipe search tool I created last year. It never took off, but I worked on it for fun sometimes. There was one corner of the codebase I always dreaded: ingredient parsing.
+The idea came to me while I was staring at the ugliest code I had ever written. It was in a [recipe search tool](https://ketohub.io) I created last year. That app never took off but was fun to work on occasionally. There was one corner of the codebase that always plagued me: ingredient parsing.
 
-Given a string such as `"2 cups finely chopped red onions"`, the app had to figure out that "2" was the quantity, "cups" was the unit of measure, and so on:
+Given a string such as `"2 cups finely chopped red onions"`, the app had to figure out that `2` was the quantity, `cups` was the unit of measure, and so on:
 
-{% include image.html file="parse-example.png" alt="Visualization of ingredient parse result" fig_caption="Breaking an ingredient into its component parts" max_width="700px" class="img-border" img_link=true %}
+{% include image.html file="parse-example.png" alt="Visualization of ingredient parse result" fig_caption="Breaking an ingredient into its component parts" max_width="600px" class="img-border" img_link=true %}
 
-Like most bad code code that haunts my memories, the code started out simple, but grew more warts and knots as I discovered additional input formats and edge cases. It had become a madden labyrinth of regular expressions. &mdash; symbolic instructions for processing text that are both powerful and famously difficult to read.
+Parsing was simple at first but grew more fragile and complex as new edge cases arose. The logic eroded into a maddening labyrinth of regular expressions &mdash; instructions for processing text that are both powerful and famously difficult to read.
 
 {% include image.html file="regex.png" alt="Screenshot of regex implementation" fig_caption="Excerpt from my regular expression code" max_width="450px" class="img-border" img_link=true %}
 
-Machine learning could achieve better results, but it required a substantial up-front investment. Was it worth it?
+It was very tempting to scrap everything in favor of a machine learning solution, but that would be an enormous undertaking. I couldn't invest months of development time into a minor feature on a website that made no money.
+
+Then, it struck me: what if ingredient parsing *was* the business? If this was a problem for me, then surely other developers struggled with it as well. Hopefully, some of them made money and would give some of said money to me if I solved their problem. Thus, the idea was born for [Zestful](https://zestfuldata.com/), my ingredient-parsing service.
 
 {% assign fig_caption = "[Zestful](https://zestfuldata.com/), a recipe ingredient parsing service" | markdownify | remove: "<p>" | remove: "</p>" %}
-
-Ingredient parsing wasn't a big enough problem for my recipe search tool, but what if the parsing was the business? If I struggled with this problem, surely other developers did as well. Thus, the idea was born for [Zestful](https://zestfuldata.com/), my ingredient-parsing service.
 
 {% include image.html file="zestful-logo.png" alt="Zestful logo" fig_caption=fig_caption max_width="500px" class="img-border" link_url="https://zestfuldata.com/" %}
 
@@ -61,7 +61,7 @@ With Zestful,  I *did* build an MVP. I even defined the acceptance criteria up-f
 
 {% include image.html file="acceptance-criteria.png" alt="Acceptance criteria document" fig_caption="Ingredient parser acceptance criteria" max_width="300px" img_link=true class="img-border" %}
 
-After about 120 hours of development work, I completed a working prototype that satisfied my acceptance criteria.
+After about 120 hours of development work, my working prototype satisfied the acceptance criteria.
 
 I didn't officially launch for another two months. Instead, I spent that time writing more code.
 
@@ -73,7 +73,7 @@ You might be wondering how I ended up spinning my wheels for so long after my MV
 
 >The service works! But customers can only use it if they write complex expressions on the command line.
 >
->How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1? I have to create a simple HTML frontend so that customers can test it directly from the browser.
+>How can I subject my customers to the indignity of writing `curl` commands in the age of Web 3.1? Adding a simple HTML frontend would allow my customers to test the service directly from the browser.
 
 *5 days later*
 
@@ -85,37 +85,29 @@ You might be wondering how I ended up spinning my wheels for so long after my MV
 
 >Okay, great! The service has a website.
 >
->...but I don't have any documentation explaining all the fields. I can knock that out this afternoon.
+>...but the site doesn't have a documentation page explaining all the fields. I can knock that out this afternoon.
 
 *2 days later*
 
->Now, I have so many pages that my navigation bar overflows on mobile devices.
+>Now, there are so many pages that my navigation bar overflows on mobile devices.
 >
->I'll make my navigation bar responsive. I'm sure that will only take an hour with my web framework, Angular.
+>I'll make my navigation bar responsive. Surely, that will only take an hour with my web framework, Angular.
 
 [*8 days later...*](https://twitter.com/deliberatecoder/status/1011358706108456960)
 
-And on and on.
-
-It was a hydra. Every time I finished adding "one more simple thing," I discovered two more things that were necessary as a result.
-
-Eventually, two months had passed since declaring code complete, and I was baffled that I hadn't shipped anything.
+It was a hydra. Every time I finished adding "one more simple thing," two more things popped up that were necessary as a result. Eventually, two months had passed since declaring code complete, and I was baffled that I hadn't shipped anything.
 
 # This is critical, but it can wait
 
-I needed to launch.
+I **needed** to launch. However, my list of critical tasks was still incomplete. I estimated that they would take five days to complete.
 
-However, I still had an incomplete list of critical tasks. I estimated that they would take five days to complete.
+Then, a funny thing happened. After committing to ship as soon as possible, I realized there was a difference between "critical to have" and "critical for launch."
 
-Then, a funny thing happened. Once I decided that my goal was to ship as soon as possible, I realized there was a difference between "critical to have" and "critical for launch."
-
-One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). What would happen if I launched without it and wrote it a few days later? At worst, I'd have a weak position in the event of a legal dispute, but what were the odds of someone suing me within a few days of launch?
+One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). What would happen if I launched without it and wrote it a few days later? At worst, I'd have a weak position in a legal dispute, but what were the odds of someone suing me within a few days of launch?
 
 # Shut up and launch
 
-I revisited my task list and treated everything with the same ruthless skepticism as my Terms of Use. For each work item, I asked myself, "What would happen if I launched without this?"
-
-With this strategy, I sped through my "five-day" task list and launched the following day. I [published my service to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace.
+For each work item on my task list, I asked myself, "What happens if I launch without this?" By treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace. My service was live and ready to accept payments!
 
 {% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -125,15 +117,15 @@ With this strategy, I sped through my "five-day" task list and launched the foll
 
 # Did I delay my launch to avoid rejection?
 
-While I was in my two-month limbo between "done" and "launched," a friend asked me if I was afraid to show my product to customers. Were all these tasks I was thinking up just a way to avoid the possibility of rejection?
+During my two-month limbo between "done" and "launched," a friend asked me if I was afraid to show my product to customers. Were all these tasks delaying my launch just a way to avoid the possibility of rejection?
 
-The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold-calling customers and hearing "no" 40 times a day. I wasn't afraid of rejection.
+The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold-calling customers and hearing "no" 40 times a day. Rejection didn't scare me.
 
 On launch day, I sat down to write my first cold pitch: an email to a recipe app developer who didn't know me. I had to explain why they should integrate my ingredient service into their app.
 
-For half an hour, I stared at the blank screen, struggling to write anything. I had explained my service to friends dozens of times, but this was different. Each time I began describing the benefits of my service, I imagined the customer's responses:
+For half an hour, I stared at the blank screen, struggling to write anything. I had explained my service to friends dozens of times, but this was different. There was an imaginary conversation in my head where the customer brushed aside any benefit of my service:
 
->Why is that worth what you're charging?
+>Why is that worth the price you're charging?
 
 >How does that increase my profits?
 
@@ -143,17 +135,15 @@ Uh oh. I *was* afraid of rejection.
 
 # A different type of rejection
 
-This wasn't at all like when I worked in sales. In that job, I was selling fiber Internet. But I didn't lay the fiber or design the network. It was easy to take rejection in stride.
+This wasn't at all like working in sales. That job required me to sell fiber Internet to businesses, but I didn't lay the fiber or design the network. It was easy to take rejection in stride.
 
-Now, I was selling something I created. What's more, I was selling *software* that I created.  Writing software is so tightly tied to my identity. It's the skill that I'm most proud of and what I believe I do best. I [quit my job](/why-i-quit-google/) in February, and I already had one failed project under my belt. What if this was evidence that I couldn't make it on my own?
+Now, I was selling something I created. What's more, it was *software* that I created. Writing software is such a strong part of my identity. There's nothing else I do better or take more pride in. If I showed my product to a customer, they might think, “This isn’t very good. You’re trying to sell it, so you must think it’s good. Therefore, **you** are not very good.”
 
 {% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
-If I showed Zestful to a customer, they might think, "This isn't very good. You're trying to sell it, so you must think it's good. Therefore, **you** are not very good."
-
 # The harsh reality
 
-After dozens of sales attempts and zero purchases, it dawned on me that I had become the developer who invested months into a product that customers didn't want.
+After dozens of pitches, a few conversations, and zero purchases, it dawned on me that I had become the developer who invested months into a product that customers didn't want.
 
 Some businesses could use a service like mine, but the ones who needed it most had already rolled their own. The rest agreed that it was a neat service but couldn't justify the expense, even though the service only cost $20/month.
 
@@ -163,11 +153,11 @@ On top of that, they had to weigh the cost of an additional external dependency.
 
 # I did it backward
 
-Looking back, I realize that I did everything backward. I cold-pitched to customers as the last step, but I should have done it before writing a line of code.
+Looking back, my process was backward. Cold-pitching to customers was my last step, but I should have done it before writing a line of code.
 
-Early on, I rationalized my decision to build the product first. I told myself that customers could say yes to the idea but then never buy the product. I wanted "yes" to be a real sale, where the customer agrees by purchasing the service.
+Early on, I rationalized my decision to build the product first. Customers could say yes to the idea but then never buy the product. I wanted "yes" to be a real sale, where the customer agreed by purchasing the service.
 
-While I stand by that logic, I failed to consider the value of "no." If the customer rejects the product at the concept stage, they're not going to change their mind after I build it. If *everyone* says no, it's probably a dead end.
+While that logic still feels valid, I failed to consider the value of "no." If the customer rejects the product at the concept stage, they're not going to change their mind after I build it. If *everyone* says no, it's probably a dead end.
 
 ---
 
