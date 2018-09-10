@@ -33,17 +33,15 @@ From the title of this post, you probably figured out that my plan didn't work.
 
 # The product idea
 
-It came to me while staring at the ugliest code I had ever written. It was a maddening labyrinth of regular expressions &mdash; powerful instructions for text processing, famously onerous to maintain. The code was dedicated to a task I never realized could be so complicated: parsing recipe ingredients.
+The idea came to me while I was staring at the ugliest code I had ever written. It was in a recipe search tool I created last year. It never took off, but I worked on it for fun sometimes. There was one corner of the codebase I always dreaded: ingredient parsing.
 
-{% include image.html file="regex.png" alt="Screenshot of regex implementation" fig_caption="Excerpt from my regular expression code" max_width="400px" class="img-border" img_link=true %}
-
-Given a string such as `"2 1/2 cups finely chopped red onions"`, the code had to determine the quantity, the units, the product, and the preparation instructions.
+Given a string such as `"2 cups finely chopped red onions"`, the app had to figure out that "2" was the quantity, "cups" was the unit of measure, and so on:
 
 {% include image.html file="parse-example.png" alt="Visualization of ingredient parse result" fig_caption="Breaking an ingredient into its component parts" max_width="700px" class="img-border" img_link=true %}
 
-The code came from a [recipe search tool](http://ketohub.io) I created last year. The site never caught on, but I occasionally worked on it for fun. But the fun ended any time I had to modify any of my regular expressions.
+Like most bad code code that haunts my memories, the code started out simple, but grew more warts and knots as I discovered additional input formats and edge cases. It had become a madden labyrinth of regular expressions. &mdash; symbolic instructions for processing text that are both powerful and famously difficult to read.
 
-They all were 
+{% include image.html file="regex.png" alt="Screenshot of regex implementation" fig_caption="Excerpt from my regular expression code" max_width="450px" class="img-border" img_link=true %}
 
 Machine learning could achieve better results, but it required a substantial up-front investment. Was it worth it?
 
@@ -55,7 +53,7 @@ Ingredient parsing wasn't a big enough problem for my recipe search tool, but wh
 
 # The MVP that wasn't
 
-In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the simplest version of an idea. You're supposed to build it as soon as possible, put it into potential customers' hands, and judge from their reaction whether you're onto something.
+In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the simplest version of an idea. You're supposed to build it as soon as possible, put it into potential customers' hands, and judge from their reaction whether it solves a real problem.
 
 One of the most familiar stories of failure is of the founder so confident in their idea that they neglect to build an MVP and instead invest years into a full-fledged product that nobody wants.
 
@@ -87,7 +85,7 @@ You might be wondering how I ended up spinning my wheels for so long after my MV
 
 >Okay, great! The service has a website.
 >
->...but I don't have any documentation to explain what all the fields mean. I'll add that real quick.
+>...but I don't have any documentation explaining all the fields. I can knock that out this afternoon.
 
 *2 days later*
 
@@ -147,7 +145,7 @@ Uh oh. I *was* afraid of rejection.
 
 This wasn't at all like when I worked in sales. In that job, I was selling fiber Internet. But I didn't lay the fiber or design the network. It was easy to take rejection in stride.
 
-Now, I was selling something I created. What's more, I was selling *software* that I created.  Writing software is so tightly tied to my identity. It's the skill that I'm most proud of and what I believe I do best.
+Now, I was selling something I created. What's more, I was selling *software* that I created.  Writing software is so tightly tied to my identity. It's the skill that I'm most proud of and what I believe I do best. I [quit my job](/why-i-quit-google/) in February, and I already had one failed project under my belt. What if this was evidence that I couldn't make it on my own?
 
 {% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
