@@ -63,7 +63,7 @@ With Zestful,  I *did* build an MVP. I even defined the acceptance criteria up-f
 
 After about 120 hours of development work, my working prototype satisfied the acceptance criteria.
 
-However, I didn't officially launch for another two months. Instead, I spent that that time writing more code.
+However, I didn't officially launch for another two months. Instead, I spent that time writing more code.
 
 # It's okay because it's *sales* coding
 
