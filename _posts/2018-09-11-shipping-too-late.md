@@ -107,7 +107,7 @@ One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). Wha
 
 # Shut up and launch
 
-For each work item on my task list, I asked myself, "What happens if I launch without this?" After treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace. My service was live!
+For each item on my task list, I asked myself, "What happens if I launch without this?" After treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace. My service was live!
 
 {% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -117,7 +117,7 @@ For each work item on my task list, I asked myself, "What happens if I launch wi
 
 # Did I delay my launch to avoid rejection?
 
-During my two-month limbo between "done" and "launched," a friend asked if I was afraid to show my product to customers. Were all these tasks delaying my launch just a way to avoid the possibility of rejection?
+During my two-month limbo between "done" and "launched," a friend asked if I was afraid to show my product to customers. Were all these tasks delaying my launch just a way of avoiding rejection?
 
 The thought had occurred to me, but I quickly dismissed it. I used to work in sales, cold-calling customers and hearing "no" 40 times a day. Rejection didn't scare me.
 
