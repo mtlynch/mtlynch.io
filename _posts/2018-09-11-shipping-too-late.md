@@ -126,9 +126,9 @@ On launch day, I sat down to write my first cold pitch: an email to a recipe app
 For half an hour, I stared at the blank screen, struggling to write anything. I had explained my service to friends dozens of times, but this was different. Each time a potential selling point occurred to me, I imagined the customer's harsh rebuttals:
 
 >Why is that worth the price you're charging?
-
+>
 >How does that increase my profits?
-
+>
 >Why do I need you?
 
 Uh oh. I *was* afraid of rejection.
