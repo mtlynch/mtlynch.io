@@ -17,6 +17,10 @@ tags:
 - startups
 excerpt: I've heard dozens of stories of founders failing because they shipped too
   late. It seemed like an easy fate to avoid until I made the same mistake.
+discuss_urls:
+  reddit: https://redd.it/9eyaq1
+  hacker_news: https://news.ycombinator.com/item?id=17960274
+  indie_hackers: https://www.indiehackers.com/forum/how-i-tricked-myself-into-shipping-too-late-ae24d5e356
 ---
 
 Many software founders fail for a simple reason: they ship too late. They spend years developing a product in a vacuum only to see it crumble the first time a real customer touches it.
