@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 sidebar:
   nav: main
-permalink: "/books/deep-work"
+permalink: "/book-reports/deep-work"
 hide_signup: true
 ---
 
