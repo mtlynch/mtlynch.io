@@ -13,6 +13,19 @@ hide_signup: true
 * My rating: **8** / 10
 * [Amazon link](https://amzn.to/2Pt86Qy)
 
+A fascinating read about breaking away from the always-on, always-connected culture so that we can increase productivity.
+
+<div style="clear: both;"></div>
+
+---
+# What I Liked
+
+* TODO
+
+# What I Disliked
+
+* TODO
+
 # Key Takeaways
 
 * "Deep work" is work accomplished under heavy focus and without distraction.

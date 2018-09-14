@@ -14,6 +14,10 @@ permalink: "/book-reports/fooled-by-randomness"
 
 This is probably a book that was groundbreaking in 2004, but its ideas have permeated into the mainstream now. In 2018, the ideas don't feel novel or original. [*Thinking Fast and Slow*](https://amzn.to/2oXDdaZ) covers the same material with more depth and better writing.
 
+<div style="clear: both;"></div>
+
+---
+
 # What I Liked
 
 * Contains many interesting examples of ways people typically derive meaning from random noise or misapply statistics:

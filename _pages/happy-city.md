@@ -8,10 +8,16 @@ permalink: "/book-reports/happy-city"
 hide_signup: true
 ---
 
+{% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="https://amzn.to/2PGxPoU" max_width="250px" class="align-left" %}
+
 * My rating: **8** / 10
 * [Amazon link](https://amzn.to/2PGxPoU)
 
 Given how much urban design affects our lives, it's surprising how little we think about it and how little input we have into it. This book was eye-opening in terms of the way I think about cities and how its citizens interact with them. I took for granted the idea that cities should be friendly to car-travel, but the book highlights many ways in which a focus on making cities car-friendly makes them worse for everyone. It was interesting to see how many benefits come from designing cities to prioritize pedestrian and bicycle transit over cars.
+
+<div style="clear: both;"></div>
+
+---
 
 # What I Liked
 

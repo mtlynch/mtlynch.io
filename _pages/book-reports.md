@@ -8,9 +8,13 @@ permalink: "/book-reports/"
 hide_signup: true
 ---
 
+I try to read as much as possible. When I saw that Derek Sivers [keeps public notes](https://sivers.org/book) of all his reading, it inspired me to do the same.
+
+---
+
 {% include image.html file="deep-work.jpg" alt="Deep Work by Cal Newport"  link_url="/book-reports/deep-work" max_width="175px" class="align-left" %}
 
-### *Deep Work: Rules for Focused Success in a Distracted World* by Cal Newport
+### [*Deep Work: Rules for Focused Success in a Distracted World* by Cal Newport](/book-reports/deep-work)
 
 * My rating: **8** / 10
 * [Amazon link](https://amzn.to/2Pt86Qy)
@@ -20,9 +24,11 @@ A fascinating read about breaking away from the always-on, always-connected cult
 
 <div style="clear: both;"></div>
 
+---
+
 {% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="/book-reports/happy-city" max_width="175px" class="align-left" %}
 
-### *Happy City* by Charles Montgomery
+### [*Happy City* by Charles Montgomery](/book-reports/happy-city)
 
 * My rating: **8** / 10
 * [Amazon link](https://amzn.to/2PGxPoU)
@@ -32,9 +38,11 @@ Given how much urban design affects our lives, it's surprising how little we thi
 
 <div style="clear: both;"></div>
 
+---
+
 {% include image.html file="fooled-by-randomness.jpg" alt="Fooled by Randomness by Nassim Nicholas Taleb"  link_url="/book-reports/fooled-by-randomness" max_width="175px" class="align-left" %}
 
-### *Fooled by Randomness* by Nassim Nicholas Taleb
+### [*Fooled by Randomness* by Nassim Nicholas Taleb](/book-reports/fooled-by-randomness)
 
 * My rating: **5** / 10
 * [Amazon link](https://amzn.to/2x2sPT3)
