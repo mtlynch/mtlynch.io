@@ -50,6 +50,27 @@ You should suppress the error if the link works fine in a browser, but fails in 
 
 If the link is just permanently broken and does not load, even in a browser, either replace the link with another that achieves the same effect or remove the link entirely.
 
+## Compatibility targets
+
+The site should render properly on all of the following operating systems (latest stable releases):
+
+* Android
+* iOS
+* Windows
+* OS X
+* Linux (any flavor)
+
+
+The site should render properly on all the following browsers:
+
+* Chrome
+* Firefox
+* Safari
+
+### Compatibility testing
+
+Developers need not verify every change on every possible OS/browser combination. Developers should test CSS or layout changes on at least one desktop OS and one mobile OS (preferably not the same browser for both). For more complex changes to CSS or layout, developers should test more than two OS+browser combinations, but it's at the developer's discretion how exhaustively to test.
+
 ## Prose style guide
 
 ### Headings
