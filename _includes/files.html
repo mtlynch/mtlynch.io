@@ -1,19 +1,16 @@
 {% comment %}
-<!--
   Files Embed Include
 
-  This include file makes it possible to easily embed a file from the
-  "files" collection within a page, post, or layout. The file will be
-  displayed inside a pre block and include a download link underneath.
+  This include file makes it possible to easily embed a file from the "files"
+  collection within a page, post, or layout. The file will be displayed inside
+  a pre block and include a download link underneath.
 
   @param {string} "title" - the yml meta field for title in the download file
   @param {string} "language" - the coding language used for syntax highlighting
-
--->
 {% endcomment %}
 
 {% comment %}
-<!-- determine correct collection based on language param -->
+  Determine correct collection based on language param.
 {% endcomment %}
 {% if include.language == "yml" or include.language == "yaml" %}
 	{% assign files = site.ymls | where: 'title', include.title %}
@@ -22,22 +19,20 @@
 {% endif %}
 
 {% comment %}
-<!-- determine syntax highlighting language.  Defaults to null -->
+  Determine syntax highlighting language (defaults to null).
 {% endcomment %}
 {% assign lang_highlight = "" %}
 {% if include.language %}
 	{% assign lang_highlight = include.language %}
 {% endif %}
 
-{% comment %}
-<!-- initialize file count -->
-{% endcomment %}
+{% comment %}  Initialize file count. {% endcomment %}
 {% assign file_count = 0 %}
 
 {% for file in files %}
 
   {% comment %}
-  <!-- determine correct collection based on language param -->
+    Determine correct collection based on language param.
   {% endcomment %}
   {% assign file_path = file.relative_path  | remove: '_files/'  | remove: '_ymls/' %}
   {% if include.language == "yml" or include.language == "yaml" %}
@@ -46,7 +41,7 @@
   {% assign link = site.baseurl | append: '/files/' | append: file_path %}
 
   {% comment %}
-  <!-- determine file's subdirectory to compare to post subdirectory -->
+    Determine file's subdirectory to compare to post subdirectory.
   {% endcomment %}
   {% assign subdir_array = file.path | split: '/' %}
   {% assign subdir = subdir_array[1] %}
@@ -68,20 +63,20 @@
 
 {% if file_count > 1 %}
   {% comment %}
-  <!-- if there has been more than 1 file with the same title found, then 
-       raise an error as this is likely not intentional -->
+    If there has been more than 1 file with the same title found, then raise an
+    error as this is likely not intentional.
   {% endcomment %}
-  {{ "Multiple file includes with the same title, " 
-    | append: include.title 
-    | append: ", have been found." 
+  {{ "Multiple file includes with the same title, "
+    | append: include.title
+    | append: ", have been found."
     | raise_exception: "warning" }}
 {% elsif file_count == 0 %}
   {% comment %}
-  <!-- if there has been NO files found in the subdirectory that match the
-       title, then raise an error -->
+    If there have been NO files found in the subdirectory that match the title,
+    then raise an error.
   {% endcomment %}
-  {{ "Zero file includes matched the title, " 
-    | append: include.title 
-    | append: ".  Please check the file include's title and directory again." 
+  {{ "Zero file includes matched the title, "
+    | append: include.title
+    | append: ".  Please check the file include's title and directory again."
     | raise_exception: "warning" }}
 {% endif %}

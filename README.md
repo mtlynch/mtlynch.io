@@ -14,6 +14,42 @@ New code should adhere to the appropriate Google Style guide for the given langu
 * [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
 * [JavaScript](https://google.github.io/styleguide/jsguide.html)
 
+### Liquid
+
+#### Line length
+
+* Limit lines to a maximum of 80 columns in length.
+  * It is acceptable to exceed 80 columns if there is no way to break up the line, but developers should observe the 80 column limit where possible.
+
+#### Comments
+
+* Write comments in full sentences using standard Englisth capitalization and punctuation.
+
+##### Inline comments
+
+When the comment and tags can fit within 80 columns, use inline syntax:
+
+```markdown
+{% comment %} Store all files that match the pattern. {% endcomment %}
+{% assign matching_files = ... %}
+```
+
+Inline comments should leave a single space after the opening tag and before the closing tag.
+
+##### Block comments
+
+For longer comments, use block syntax:
+
+```markdown
+{% comment %}
+  Store all files whose parent no longer exists. This can be due to a variety of
+  circumstances, such as purging or filesystem errors.
+{% endcomment %}
+{% assign orphaned_files = ... %}
+```
+
+The body of a block comment should be indented by two spaces from its opening and closing tags.
+
 ## Dev / prod consistency
 
 `script/_serve_dev.sh` builds the site in dev mode and starts a web server on http://localhost:4000.
