@@ -48,7 +48,7 @@ For longer comments, use block syntax:
 {% assign orphaned_files = ... %}
 ```
 
-The body of a block comment should be indented by two spaces from its opening and closing tags.
+Indent the body of a block comment by two spaces from its opening and closing tags.
 
 ## Dev / prod consistency
 
