@@ -35,13 +35,10 @@
 {% assign file_count = 0 %}
 
 {% comment %}
-<!-- create an empty array to store UNIQUE file paths that match the correct
-  file path and title.  Unfortunately due to Jekyll Admin bug, this array of 
-  UNIQUE files is part of the workaround to ensure no false positives are
-  thrown for duplicate title error catching. -->
+<!-- initialize an empty string to store unique file paths that match the
+  correct file path and title. -->
 {% endcomment %}
-{% assign found_file_array = " " | split: ',' %}
-{% assign found_file_array = found_file_array | shift %}
+{% assign found_files = "" %}
 
 {% for file in files %}
 
@@ -63,13 +60,11 @@
   {% if subdir == page.slug %}
 
     {% comment %}
-    <!-- check to see if any files have been stored in the UNIQUE array of
-      files.  If not, then push the file_path into the array.  This is only
-      needed as part of a workaround to ensure the same file is counted twice
-      for duplicate title error trapping. -->
+    <!-- check to see if any files have been stored (or found) yet.  If string
+      is empty, set it to the current file's path. -->
     {% endcomment %}
-    {% if found_file_array.size == 0 %}
-      {% assign found_file_array = found_file_array | push: file_path %}
+    {% if found_files == "" %}
+      {% assign found_files = file_path %}
 
 ```{{ lang_highlight }}
 {{ file.content -}}
@@ -83,18 +78,21 @@
     {% else %}
     
       {% comment %}
-      <!-- iterate through found_file_array and check if the same file_path
-        already exists.  If the same file_path already exists, do nothing.
-        Otherwise, add the new file_path to the array so that the duplicate
-        file title error check will trigger below.  This is only needed as part
-        of a workaround to ensure the same file is counted twice for duplicate
-        title error trapping. -->
+      <!-- split the found files string into an array and check each entry to
+        see if it is a duplicate of current file.  If it is not a duplicate,
+        then append to the found_files string.  If it is a dupilcate (due to
+        Jekyll admin bug or a different reason) then ignore. -->
       {% endcomment %}
+      {% assign already_found = "" %}
+      {% assign found_file_array = found_files | split: ',' %}
       {% for found_file in found_file_array %}
         {% if found_file != file_path %}
-          {% assign found_file_array = found_file_array | push: file_path %}
+          {% assign already_found = file_path %}
         {% endif %}
       {% endfor %}
+      {% if already_found != "" %}
+        {% assign found_files = found_files | append: "," | append: already_found %}
+      {% endif %}
 
     {% endif %}
   {% endif %}
@@ -107,7 +105,7 @@
   Any other value should be raised as an exception as that means duplicate
   titles were found for a file in the same directory. -->
 {% endcomment %}
-{% assign file_count = found_file_array | size %}
+{% assign file_count = found_files | split: ',' | size %}
 
 {% unless file_count == 1 %}
   {% if file_count == 0 %}
