@@ -21,26 +21,34 @@ New code should adhere to the appropriate Google Style guide for the given langu
 * Limit lines to a maximum of 80 columns in length.
   * It is acceptable to exceed 80 columns if there is no way to break up the line, but developers should observe the 80 column limit where possible.
 
-#### Comments
 
-* Write comments in full sentences using standard Englisth capitalization and punctuation.
+#### Whitespace
 
-##### Inline comments
+##### Tags
 
-When the comment and tags can fit within 80 columns, use inline syntax:
+Tags should contain a single space after the opening `{%` and before the closing `%}`:
 
-```markdown
-{% comment %} Store all files that match the pattern. {% endcomment %}
-{% assign matching_files = ... %}
+```liquid
+{% assign my_variable = "tomato" %}
 ```
 
-Inline comments should leave a single space after the opening tag and before the closing tag.
+###### Inline vs. block
 
-##### Block comments
+For tags that have a start and end, write them on a single line if the start tag, end tag, and body all fit within the line limit:
 
-For longer comments, use block syntax:
+```liquid
+{% comment %} Store all files that match the pattern. {% endcomment %}
+```
 
-```markdown
+```liquid
+{% if page.title == 'Bio' %} Here's my bio! {% endif %}
+```
+
+When using inline syntax, there must be a single space after the opening tag and a single space preceding the closing tag.
+
+When the tags and body do not fit on a single line, use block syntax:
+
+```liquid
 {% comment %}
   Store all files whose parent no longer exists. This can be due to a variety of
   circumstances, such as purging or filesystem errors.
@@ -48,7 +56,24 @@ For longer comments, use block syntax:
 {% assign orphaned_files = ... %}
 ```
 
-Indent the body of a block comment by two spaces from its opening and closing tags.
+Indent the body of a block by two spaces from its opening and closing tags.
+
+##### Variables
+
+* Variables should have a single space before the opening `{{` and closing `}}:
+
+```liquid
+{% assign filename = "links.csv" %}
+{{ filename }}
+```
+
+#### Naming
+
+* Variable names should use snake case (`image_size`, `background_color`).
+
+#### Comments
+
+* Write comments in full sentences using standard English capitalization and punctuation.
 
 ## Dev / prod consistency
 
