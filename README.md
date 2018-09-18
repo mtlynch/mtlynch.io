@@ -67,6 +67,24 @@ Indent the body of a block by two spaces from its opening and closing tags.
 {{ filename }}
 ```
 
+##### Filters
+
+* Filters should have a single space on either side of the pipe character.
+* For filters that take arguments, the filter name should be immediately followed by a colon and a single space.
+* For filters with multiple arguments, each argument should be preceded by a single space.
+
+```liquid
+{{ "Have you read 'James & the Giant Peach'?" | escape }}
+```
+
+```liquid
+{{ 4 | plus: 2 }}
+```
+
+```liquid
+{{ "Take my protein pills and put my helmet on" | replace: "my", "your" }}
+```
+
 #### Naming
 
 * Variable names should use snake case (`image_size`, `background_color`).
