@@ -60,7 +60,7 @@ Indent the body of a block by two spaces from its opening and closing tags.
 
 ##### Variables
 
-* Variables should have a single space before the opening `{{` and closing `}}:
+* Variables should have a single space before the opening `{{` and closing `}}`:
 
 ```liquid
 {% assign filename = "links.csv" %}
