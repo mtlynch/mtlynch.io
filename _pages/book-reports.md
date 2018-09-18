@@ -8,7 +8,7 @@ permalink: "/book-reports/"
 hide_signup: true
 ---
 
-I try to read as much as possible. When I saw that Derek Sivers [keeps public notes](https://sivers.org/book) of all his reading, it inspired me to do the same.
+I try to read as much as possible. This is a way for me to share what I've been reading and forces me to think more deliberately about what I take from each book. Derek Sivers' [keeps public book notes](https://sivers.org/book) provided strong inspiration for these reports.
 
 ---
 
@@ -34,7 +34,9 @@ A fascinating read about breaking away from the always-on, always-connected cult
 * [Amazon link](https://amzn.to/2PGxPoU)
 * [Full notes](/book-reports/happy-city)
 
-Given how much urban design affects our lives, it's surprising how little we think about it and how little input we have into it. This book was eye-opening in terms of the way I think about cities and how its citizens interact with them. I took for granted the idea that cities should be friendly to car-travel, but the book highlights many ways in which a focus on making cities car-friendly makes them worse for everyone. It was interesting to see how many benefits come from designing cities to prioritize pedestrian and bicycle transit over cars.
+Given how much urban design affects our lives, it's surprising how little we think about and participate in it. This book was eye-opening in terms of the way I look at cities and how its inhabitants interact with them.
+
+I took for granted the idea that cities should be friendly to car-travel, but the book highlights many ways in which a focus on car-friendliness makes cities worse overall. It was interesting to see examples of how cities can flourish when they prioritize the needs of pedestrians, bicyclists, and public transit.
 
 <div style="clear: both;"></div>
 

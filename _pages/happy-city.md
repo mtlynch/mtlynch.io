@@ -13,7 +13,9 @@ hide_signup: true
 * My rating: **8** / 10
 * [Amazon link](https://amzn.to/2PGxPoU)
 
-Given how much urban design affects our lives, it's surprising how little we think about it and how little input we have into it. This book was eye-opening in terms of the way I think about cities and how its citizens interact with them. I took for granted the idea that cities should be friendly to car-travel, but the book highlights many ways in which a focus on making cities car-friendly makes them worse for everyone. It was interesting to see how many benefits come from designing cities to prioritize pedestrian and bicycle transit over cars.
+Given how much urban design affects our lives, it's surprising how little we think about and participate in it. This book was eye-opening in terms of the way I look at cities and how its inhabitants interact with them.
+
+I took for granted the idea that cities should be friendly to car-travel, but the book highlights many ways in which a focus on car-friendliness makes cities worse overall. It was interesting to see examples of how cities can flourish when they prioritize the needs of pedestrians, bicyclists, and public transit.
 
 <div style="clear: both;"></div>
 
@@ -42,12 +44,14 @@ Given how much urban design affects our lives, it's surprising how little we thi
   * This is codified in rigid zoning laws that prevent cities from growing organically based on what people need in particular areas.
   * This leads to sprawl and suburbanization, forcing people to rely on driving to get around.
 * Greater sprawl makes it harder for cities to offer public services.
-  * Communities more widely spread makes it more expensive to run buses, maintain roads, offer police/fire protection.
-  * People expect to be happiest in big houses with big yards and lots of space from neighbors, but a community of houses designed that way is very spread out. More dense communities lead to more positive relationships with neighbors and easier lifestyle because it puts more shops and services within walking distance.
+  * People expect to be happiest in big houses with big yards and lots of space from neighbors, but this leads to sparsely-occupied towns and cities. 
+  * When communities occupy a large, sparse area, it's more expensive to run buses, maintain roads, offer police/fire protection.
+  * Denser communities lead to more positive relationships with neighbors and easier lifestyle because it puts more shops and services within walking distance.
 * Private cars impose many external costs that are borne by the community as a whole rather than the drivers themselves.
   * [Take up more space per person](http://www.880cities.org/doablecity/wp-content/uploads/2014/11/space-needed-transport-perp.jpg) than almost all other modes of transportation, cause faster road wear, pollute the air, create noise pollution, limit places where pedestrians can walk.
 * There is a common notion that for an area of the city to attract people, it needs lots of road and parking access, but there have been several examples where banning cars has revitalized an area
   * e.g., [Times Square Plaza](http://www.landezine.com/index.php/2017/04/times-square-redesign-by-snohetta-opens-today/) in New York, [Strøget](https://en.wikipedia.org/wiki/Str%C3%B8get) in Copenhagen
-* Density and crowding are different
- * Crowding is a feeling and it can be reduced depending on design of a living space
- * People feel crowded and stressed when they aren't in control of their interaction (e.g., don't have a private room, have to interact with strangers to use bathroom).
+* There's an important distinction between "crowding" and "population density."
+  * *Crowding* is a feeling. The design of a living space can increase or reduce this feeling.
+  * People feel crowded and stressed when they aren't in control of their interaction (e.g., don't have a private room, have to interact with strangers to use bathroom).
+  * It's possible to design a space well so that it achieves high density without crowding.
