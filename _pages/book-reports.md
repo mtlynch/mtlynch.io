@@ -12,20 +12,6 @@ I try to read as much as possible. This is a way for me to share what I've been 
 
 ---
 
-{% include image.html file="deep-work.jpg" alt="Deep Work by Cal Newport"  link_url="/book-reports/deep-work" max_width="175px" class="align-left" %}
-
-### [*Deep Work: Rules for Focused Success in a Distracted World* by Cal Newport](/book-reports/deep-work)
-
-* My rating: **8** / 10
-* [Amazon link](https://amzn.to/2Pt86Qy)
-* [Full notes](/book-reports/deep-work)
-
-A fascinating read about breaking away from the always-on, always-connected culture so that we can increase productivity.
-
-<div style="clear: both;"></div>
-
----
-
 {% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="/book-reports/happy-city" max_width="175px" class="align-left" %}
 
 ### [*Happy City* by Charles Montgomery](/book-reports/happy-city)
