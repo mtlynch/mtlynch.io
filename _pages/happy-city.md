@@ -44,7 +44,7 @@ I took for granted the idea that cities should be friendly to car-travel, but th
   * This is codified in rigid zoning laws that prevent cities from growing organically based on what people need in particular areas.
   * This leads to sprawl and suburbanization, forcing people to rely on driving to get around.
 * Greater sprawl makes it harder for cities to offer public services.
-  * People expect to be happiest in big houses with big yards and lots of space from neighbors, but this leads to sparsely-occupied towns and cities. 
+  * People expect to be happiest in big houses with big yards and lots of space from neighbors, but this leads to sparsely-occupied towns and cities.
   * When communities occupy a large, sparse area, it's more expensive to run buses, maintain roads, offer police/fire protection.
   * Denser communities lead to more positive relationships with neighbors and easier lifestyle because it puts more shops and services within walking distance.
 * Private cars impose many external costs that are borne by the community as a whole rather than the drivers themselves.

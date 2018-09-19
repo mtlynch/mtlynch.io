@@ -28,7 +28,7 @@ The book contains many interesting examples of common biases and logical fallaci
 
 * The most smug book I've ever read.
   * Wastes so many pages mocking financial authors and TV personalities.
-* The author makes a specific point in the preface about how he eschewed advice of editors and felt validated by the sales of his book, but I noticed many instances that could be improved with editing. 
+* The author makes a specific point in the preface about how he eschewed advice of editors and felt validated by the sales of his book, but I noticed many instances that could be improved with editing.
   * I felt like the book succeeded despite editing.
 * The author puts far too much faith into Monte Carlo simulations
   * There are several instances where the author builds his own Monte Carlo simulation of the market, then concludes that a certain trading style is more profitable than another.
@@ -60,7 +60,7 @@ The book contains many interesting examples of common biases and logical fallaci
     * Scenario 1: A massive flood somewhere in North America next year, in which more than 1,000 people drown
     * Scenario 2: An earthquake in California sometime next year, causing a flood in which more than 1,000 people drown
 * News media is biased toward *stories*
-  *  News outlets often create stories when none exists because nobody will read/watch if they attribute events to random noise.
+  * News outlets often create stories when none exists because nobody will read/watch if they attribute events to random noise.
 * ["The Median is Not The Message"](https://people.umass.edu/biep540w/pdf/Stephen%20Jay%20Gould.pdf)
   * People put too much faith in means or medians without considering the probability distribution of an event
     * e.g., a person diagnosed with mesothelioma has a median life expectancy of eight months, but a review of the probability distribution reveals that eight months doesn't mean much &mdash; many people die soon after a diagnosis, but many also live for decades

@@ -14,7 +14,7 @@ I try to read as much as possible. This is a way for me to share what I've been 
 
 {% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="/book-reports/happy-city" max_width="175px" class="align-left" %}
 
-### [*Happy City* by Charles Montgomery](/book-reports/happy-city)
+# [*Happy City* by Charles Montgomery](/book-reports/happy-city)
 
 * My rating: **8** / 10
 * [Amazon link](https://amzn.to/2PGxPoU)
@@ -30,7 +30,7 @@ I took for granted the idea that cities should be friendly to car-travel, but th
 
 {% include image.html file="fooled-by-randomness.jpg" alt="Fooled by Randomness by Nassim Nicholas Taleb"  link_url="/book-reports/fooled-by-randomness" max_width="175px" class="align-left" %}
 
-### [*Fooled by Randomness* by Nassim Nicholas Taleb](/book-reports/fooled-by-randomness)
+# [*Fooled by Randomness* by Nassim Nicholas Taleb](/book-reports/fooled-by-randomness)
 
 * My rating: **5** / 10
 * [Amazon link](https://amzn.to/2x2sPT3)
