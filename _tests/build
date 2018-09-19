@@ -11,6 +11,10 @@ BUNDLE_GEMFILE=Gemfile bundle exec jekyll yml-test
 # Execute Markdown Linter
 mdl _posts _pages --style _linter/markdown-linter-style.rb
 
+# Build production site.
+BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
+  --config _config.yml,_config_prod.yml
+
 # Skips validation checks that take a long time
 htmlproofer_args_extra=""
 if [ "$1" = "--quick" ]; then
@@ -22,8 +26,6 @@ fi
 # Run HTMLProofer
 # Ignore vimeo and upwork URLs because they get 403 errors from Travis
 # intermittently.
-BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
-  --config _config.yml,_config_dev.yml
 bundle exec htmlproofer ./_site \
   --only-4xx \
   --check-favicon \
@@ -31,13 +33,8 @@ bundle exec htmlproofer ./_site \
   --check-opengraph \
   --allow-hash-href \
   --empty-alt-ignore \
-  --url-swap "http\://localhost\:4000/:/" \
   --url-ignore "/vimeo.com/,/upwork.com/" \
   "$htmlproofer_args_extra"
-
-# Build production site.
-BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
-  --config _config.yml,_config_prod.yml
 
 # Make sure the Google Analytics token appears in the prod build.
 UA_TOKEN="UA-78473158-1"
