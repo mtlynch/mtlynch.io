@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 sidebar:
   nav: main
-permalink: "/book-reports/fooled-by-randomness"
+permalink: "/book-reports/fooled-by-randomness/"
 ---
 
 {% include image.html file="fooled-by-randomness.jpg" alt="Fooled by Randomness by Nassim Nicholas Taleb"  link_url="https://amzn.to/2x2sPT3" max_width="250px" class="align-left" %}

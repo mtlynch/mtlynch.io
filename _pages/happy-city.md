@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 sidebar:
   nav: main
-permalink: "/book-reports/happy-city"
+permalink: "/book-reports/happy-city/"
 hide_signup: true
 ---
 
