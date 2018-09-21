@@ -24,9 +24,14 @@ else
 fi
 
 # Run HTMLProofer
-# Swap https://mtlynch.io/ for / to make URLs relative vs. absolute.
-# Ignore vimeo and upwork URLs because they get 403 errors from Travis
-# intermittently.
+#
+# * Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local
+#   build rather than the production URLs. At the time this check runs, the site
+#   has not yet deployed, so htmlproofer shouldn't try to hit the real
+#   mtlynch.io server to verify that URLs are present.
+#
+# * Ignore vimeo and upwork URLs because they get 403 errors from Travis
+#   intermittently.
 bundle exec htmlproofer ./_site \
   --only-4xx \
   --check-favicon \
