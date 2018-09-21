@@ -24,6 +24,7 @@ else
 fi
 
 # Run HTMLProofer
+# Swap https://mtlynch.io/ for / to make URLs relative vs. absolute.
 # Ignore vimeo and upwork URLs because they get 403 errors from Travis
 # intermittently.
 bundle exec htmlproofer ./_site \
@@ -33,6 +34,7 @@ bundle exec htmlproofer ./_site \
   --check-opengraph \
   --allow-hash-href \
   --empty-alt-ignore \
+  --url-swap "https\://mtlynch.io/:/" \
   --url-ignore "/vimeo.com/,/upwork.com/" \
   "$htmlproofer_args_extra"
 
