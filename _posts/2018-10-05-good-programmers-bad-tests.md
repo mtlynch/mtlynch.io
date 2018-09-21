@@ -16,6 +16,8 @@ One of the most common problems that otherwise good developers have is that they
 
 For years, I fell into this trap. I thought I was doing a good job writing tidy test code. In reality, I was writing mediocre test code because I never considered how the goals of test code differ from the goals of production code.
 
+TODO: Cartoon of a row of three beach houses. The two on the side are normal and have nice patios. The middle one looks like a mini skyscraper. It has a revolving door, very small windows, and a spire.
+
 # Unit test basics
 
 To clarify the semantics, when I say "production code," I'm referring to code that runs in production, when real users interact with your software. For the purposes of this article "test code" refers to unit test code. There are many types of test code beyond unit tests, but forget about them for simplicity. The "system under test" is the component that a unit test exercises.
@@ -62,55 +64,58 @@ The fundamental point that I and many other well-meaning developers miss is that
 
 In what situation do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
-# Readers should understand your test in isolation
+# A good developer's bad test
 
-What does this test do?
+Here's a style of test I see very often from good developers:
 
 ```python
-def test_initial_balance(self):
-  initial_balance = self.account_manager.get_balance(account_name='Timothy')
-  self.assertEqual(150.0, initial_balance)
+def test_initial_score(self):
+  initial_score = self.account_manager.get_score(username='joe123')
+  self.assertEqual(150.0, initial_score)
 ```
 
-Here are some questions you might ask
+What does that test do? You can tell that it retrieves a "score" for a user with the name `joe123`. It then verifies that the user's score is 150.
 
-* Where did this `Timothy` account come from?
-* Why do we expect Timothy's account balance to be 150?
+With no other knowledge of this code, you should be asking:
 
-So you probably assume that it's in `create_test_database` and lo and behold:
+* Where did this `joe123` account come from?
+* Why do I expect the score to be 150?
+
+In Python, the standard unit test framework calls a method called `setUp` before executing any test function, so perhaps the answers are there:
 
 ```python
 def setUp():
   database = MockDatabase()
-  database.add_row(account_name='Timothy', account_balance=150.0)
+  database.add_row({
+      'username': 'joe123',
+      'score': 150.0
+    })
   self.account_manager = AccountManager(database)
 ```
 
-So now the magic number has an explanation and all is well with the world, right? No! This test is a failure because you, the reader, were forced to stray outside the function definition to understand why it passed.
+Ah ha! The `setUp` function created the `joe123` account with a score of 150, so now you understand why `test_initial_score` expected those values. Now, all is well with the world, right?
+
+No! This test is a failure because it forced you, the reader, outside the test function to understand its correctness.
+
+# Keep the reader in your test function
 
 **The reader should be able to understand your test without looking at any helper methods.**
 {: .notice--info}
-
-That applies to functions that the test framework calls automatically. This isn't any beter:
-
-```python
-def test_initial_balance(self):
-  account_manager = get_test_account_manager() # WRONG: Forces reading outside the test.
-  initial_balance = account_manager.get_balance(account_name='Timothy')
-  self.assertEqual(150.0, initial_balance)
-```
 
 My preferred way to write.
 
 ```python
 def test_initial_balance(self):
   database = MockDatabase()
-  database.add_row(account_name='Timothy', account_balance=150.0)
+  database.add_row({
+      'username': 'joe123',
+      'score': 150.0
+    })
   account_manager = AccountManager(database)
 	
-  initial_balance = account_manager.get_balance(account_name='Timothy')
+  initial_score = account_manager.get_score(username='joe123')
 	
-  self.assertEqual(150.0, initial_balance)
+  self.assertEqual(150.0, initial_score)
 ```
 
 I didn't include `MockDatabase` in the test function, but I chose not to. Why? The implementation details are not necessary to understanding the test. The reader can assume that it's some sort of lightweight database that supports testing. They don't need to read `MockDatabase`'s implementation to understand any claims the test makes.
@@ -159,12 +164,13 @@ Most developers would appreciate the descriptiveness of the above code, but it's
 
 Unit tests have no callers. Therefore, brevity matters less. It definitely matters &mdash; don't turn your function names into a novel just because you can, but know that the calculus is a little different because many of the factors pushing you toward shorter names don't apply when writing unit test code.
 
-If you find yourself wanting a lot of helper code, it's a sign that you could need a refactoring. The function under test should interact with its dependencies through simple interactions.
-
-If it takes your tests 20 lines of boilerplate code to get the module into a usable state, it will also take that long at production callsites.
 
 ### Garbage
 
+
+If you find yourself wanting a lot of helper code, it's a sign that you could need a refactoring. The function under test should interact with its dependencies through simple interactions.
+
+If it takes your tests 20 lines of boilerplate code to get the module into a usable state, it will also take that long at production callsites.
 
 When I discovered unit tests, it was love at first sight. They made so much sense. I wanted to treat unit tests with the same respect as production code. I was aghast at developers who put lots of effort into making their production code clean and maintainable, only to phone it in on their test code.
 
