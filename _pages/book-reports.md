@@ -12,6 +12,18 @@ I try to read as much as possible. This is a way for me to share what I've been 
 
 ---
 
+{% include image.html file="deep-work.jpg" alt="Deep Work by Cal Newport"  link_url="/books/deep-work" max_width="175px" class="align-left" %}
+
+# [*Deep Work: Rules for Focused Success in a Distracted World* by Cal Newport](/book-reports/deep-work/)
+
+* My rating: **8** / 10
+* [Amazon link](https://amzn.to/2Pt86Qy)
+* [Full notes](/book-reports/deep-work)
+
+<div style="clear: both;"></div>
+
+---
+
 {% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="/book-reports/happy-city/" max_width="175px" class="align-left" %}
 
 # [*Happy City* by Charles Montgomery](/book-reports/happy-city/)
@@ -38,10 +50,3 @@ I took for granted the idea that cities should be friendly to car-travel, but th
 
 The book contains many interesting examples of common biases and logical fallacies but it's buried in a lot of bluster and fluff about how smart the author is. While it was likely groundbreaking when it was published in 2004, its ideas have since permeated into the mainstream. Reading it in 2018, the ideas don't feel novel or original. [*Thinking Fast and Slow*](https://amzn.to/2oXDdaZ) covers the same material with more depth and better writing.
 
-{% include image.html file="deep-work.jpg" alt="Deep Work by Cal Newport"  link_url="/books/deep-work" max_width="175px" class="align-left" %}
-
-### *Deep Work: Rules for Focused Success in a Distracted World* by Cal Newport
-
-* My rating: **8** / 10
-* [Amazon link](https://amzn.to/2Pt86Qy)
->>>>>>> Adding Deep Work book report
