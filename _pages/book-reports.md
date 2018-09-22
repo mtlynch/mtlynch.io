@@ -36,4 +36,5 @@ I took for granted the idea that cities should be friendly to car-travel, but th
 * [Amazon link](https://amzn.to/2x2sPT3)
 * [Full notes](/book-reports/fooled-by-randomness/)
 
-This is probably a book that was groundbreaking in 2004, but its ideas have permeated into the mainstream now. In 2018, the ideas don't feel novel or original. [*Thinking Fast and Slow*](https://amzn.to/2oXDdaZ) covers the same material with more depth and better writing.
+The book contains many interesting examples of common biases and logical fallacies but it's buried in a lot of bluster and fluff about how smart the author is. While it was likely groundbreaking when it was published in 2004, its ideas have since permeated into the mainstream. Reading it in 2018, the ideas don't feel novel or original. [*Thinking Fast and Slow*](https://amzn.to/2oXDdaZ) covers the same material with more depth and better writing.
+
