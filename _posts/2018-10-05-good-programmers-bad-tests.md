@@ -43,7 +43,9 @@ When do you read or edit production code? When you're fixing a bug or extending 
 
 In what situation do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
-**Test code has different goals from production code. Good production code is *maintainable*; good test code is *obvious*.**
+Test code has different goals from production code. 
+
+**Good production code is *maintainable*; good test code is *obvious*.**
 {: .notice--info}
 
 Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction.
@@ -81,7 +83,7 @@ With no other knowledge of this code, you should be asking:
 * Where did this `joe123` account come from?
 * Why do I expect the score to be 150?
 
-In Python, the standard unit test framework calls a method called `setUp` before executing any test function, so perhaps the answers are there:
+In Python, the standard unit test framework calls the `setUp` method before executing any test function, so perhaps the answers are there:
 
 ```python
 def setUp():
@@ -93,9 +95,9 @@ def setUp():
   self.account_manager = AccountManager(database)
 ```
 
-Ah ha! The `setUp` function created the `joe123` account with a score of 150, so now you understand why `test_initial_score` expected those values. Now, all is well with the world, right?
+Ah ha! The `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
-No! This test is a failure because it forced you, the reader, outside the test function to understand its correctness.
+Of course not. This test is a failure because it forced you, the reader, outside the test function to understand its correctness.
 
 # Keep the reader in your test function
 
@@ -105,7 +107,7 @@ No! This test is a failure because it forced you, the reader, outside the test f
 My preferred way to write.
 
 ```python
-def test_initial_balance(self):
+def test_initial_score(self):
   database = MockDatabase()
   database.add_row({
       'username': 'joe123',
@@ -118,7 +120,80 @@ def test_initial_balance(self):
   self.assertEqual(150.0, initial_score)
 ```
 
+My experienced readers may be thinking, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
+
+Yes, I will! Here's another test from that same file:
+
+```python
+def test_increase_score(self):
+  database = MockDatabase()
+  database.add_row({
+      'username': 'joe123',
+      'score': 150.0
+    })
+  account_manager = AccountManager(database)
+	
+  account_manager.adjust_score(username='joe123',
+	                       adjustment=25.0)
+
+  self.assertEqual(175.0,
+	           account_manager.get_score(username='joe123'))
+```
+
+Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines
+
+```python
+def test_initial_score(self): # BAD: Don't do this.
+  initial_score = account_manager.get_score(username='joe123')
+  self.assertEqual(150.0, initial_score)
+
+def test_increase_score(self): # BAD: Don't do this.
+  account_manager.adjust_score(username='joe123',
+	                       adjustment=25.0)
+  self.assertEqual(175.0,
+	           account_manager.get_score(username='joe123'))
+```
+
+# The DRY rule for testing: *Do* repeat yourself
+
+Why does this rule exist? Because there's risk to making changes to production code. This risk exists in test code, but the worst bug you can introduce in test code is a false positive. You can't break anything in production because of a bug in test code (not directly anyway). There's also a risk that code will go out of sync.
+
+# Hide implementation details the reader can ignore
+
 I didn't include `MockDatabase` in the test function, but I chose not to. Why? The implementation details are not necessary to understanding the test. The reader can assume that it's some sort of lightweight database that supports testing. They don't need to read `MockDatabase`'s implementation to understand any claims the test makes.
+
+
+
+First, consider whether your production code is in need of refactoring. A class that's difficult to test is often a symptom of weak design. Then, consider adding a factory or builder pattern (TODO: check this) to your production code to make it easier to instantiate your class in both production and test. If none of those work, add helper methods, but be careful never to let them swallow details critical to the test.
+
+# Use test helper methods sparingly
+
+The more helper methods you add, the more you obscure usage of the thing you're testing.
+
+**Option 1: Refactor the code you're testing**
+
+A class that's difficult to test is often a symptom of weak design. Consider whether you can refactor that class so that clients (both test and production) can access it more easily.
+
+**Option 2: Create a factory or builder class**
+
+
+# Responsible test helpers
+
+Avoid burying calls to the class you're testing in helper methods. Use helper methods to create objects that you pass in to the system you're testing.
+
+```python
+mock_database = create_test_database_with_single_user(username='joe123', score=150.0))
+account_manager = AccountManager(mock_database)
+```
+
+This is not okay:
+
+```python
+# BAD: Hides instantiation of AccountManager class.
+account_manager = (
+  create_test_account_manager_with_single_user(
+    username='joe123', score=150.0)))
+```
 
 # In tests, magic numbers are your friends
 
@@ -164,13 +239,14 @@ Most developers would appreciate the descriptiveness of the above code, but it's
 
 Unit tests have no callers. Therefore, brevity matters less. It definitely matters &mdash; don't turn your function names into a novel just because you can, but know that the calculus is a little different because many of the factors pushing you toward shorter names don't apply when writing unit test code.
 
+# Summary
+
+* Optimize test code for obviousness and simplicity
+* Use test helper functions sparingly
+* Prefer literal values to named constants in tests.
+* Use more verbose function names for test methods than you would for production methods
 
 ### Garbage
-
-
-If you find yourself wanting a lot of helper code, it's a sign that you could need a refactoring. The function under test should interact with its dependencies through simple interactions.
-
-If it takes your tests 20 lines of boilerplate code to get the module into a usable state, it will also take that long at production callsites.
 
 When I discovered unit tests, it was love at first sight. They made so much sense. I wanted to treat unit tests with the same respect as production code. I was aghast at developers who put lots of effort into making their production code clean and maintainable, only to phone it in on their test code.
 
