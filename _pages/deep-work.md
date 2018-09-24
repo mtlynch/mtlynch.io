@@ -20,7 +20,8 @@ This book had a profound impact on the way I approach my work and organize my ti
 ---
 # What I Liked
 
-* TODO
+* The author's arguments in favor of deep work are logical and compelling.
+* The recommended techniques for achieving deep work are simple and pragmatic.
 
 # What I Disliked
 
