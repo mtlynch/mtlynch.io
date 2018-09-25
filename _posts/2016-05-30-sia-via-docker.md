@@ -18,7 +18,7 @@ tags:
 - synology
 - nas
 excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
-last_modified_at: '2018-06-08T11:08:00-04:00'
+last_modified_at: '2018-09-24T19:08:00-04:00'
 ---
 
 {% include base_path %}
@@ -65,7 +65,7 @@ This guide uses the latest version of each software component at the time of wri
 </figure>
 
 * DiskStation Manager (DSM) 6.1.2-15132
-* Sia v.1.3.3
+* Sia v.1.3.4
 * Docker v.1.11.2
 
 Though this guide is written specifically for the Synology DSM system, the steps relating to Docker should be applicable on any platform that supports Docker.
