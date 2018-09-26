@@ -1,5 +1,5 @@
 ---
-title: Why Good Programmers Write Bad Unit Tests
+title: Why Good Developers Write Bad Unit Tests
 layout: single
 author_profile: true
 read_time: true
