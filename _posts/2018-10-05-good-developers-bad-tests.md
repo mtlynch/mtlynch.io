@@ -18,53 +18,20 @@ For years, I fell into this trap. I thought I was doing a good job writing tidy 
 
 TODO: Cartoon of a row of three beach houses. The two on the side are normal and have nice patios. The middle one looks like a mini skyscraper. It has a revolving door, very small windows, and a spire.
 
-# Unit test basics
-
-To clarify the semantics, when I say "production code," I'm referring to code that runs in production, when real users interact with your software. For the purposes of this article "test code" refers to unit test code. There are many types of test code beyond unit tests, but forget about them for simplicity. The "system under test" is the component that a unit test exercises.
-
-If you have a function like this:
-
-```python
-def is_palindrome(word):
-  ...
-```
-
-Then your unit tests mght look like this:
-
-```python
-def test_is_palindrome(self):
-  self.assertTrue(is_palindrome('tacocat'))
-```
-
 # Test code is not like other code
 
+Software development is engineering. This means that it's the developer's job to consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. But test code and production code have different goals.
 
 When do you read or edit production code? When you're fixing a bug or extending the feature of your application. In all of these cases, you generally read or at least skim an entire class or module.
 
 In what situation do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
-Test code has different goals from production code. 
-
 **Good production code is *maintainable*; good test code is *obvious*.**
 {: .notice--info}
 
-Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction.
+Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
 
-| Production code | Unit tests |
-|----------------------|-------------|
-| Changes involve **risk**. Changes may affect external clients of the code or downstream dependencies. | Changes are very **low-risk**. No production code calls unit tests. |
-| A component can have many callers and dependencies. | Never has callers. |
-
-Programming is engineering. The programmer's job is to weigh competing interests and develop a solution that satisfies them. Think back to the skyscraper architect on the beach. Both skyscrapers and beach houses need windows, but the owner of the beach house probably wants much larger windows so that they can enjoy their view of the ocean. Both need need doorways, but the skyscraper will have tenants moving furniture and other large pieces in and out much more frequently, so they need larger doorways. The architect needs to 
-
-The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
-
-DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
-
-
-The fundamental point that I and many other well-meaning developers miss is that developers use unit tests differently than production code. In what situation do you read or edit production code? Generally, it's when you're debugging a code, fixing a bug, or extending its features. In all of these cases, you 
-
-In what situation do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
+Think back to the skyscraper architect on the beach. Both owners value having windows and lowering energy costs, but the degree to which they value these things is different. The beach house owner cares much more about having large windows at the expense of increased energy costs. The office building owner wants enough windows so that their tenants don't feel like the building is a prison, but they care more about energy costs than the beach bum.
 
 # A good developer's bad test
 
@@ -158,23 +125,27 @@ def test_increase_score(self): # BAD: Don't do this.
 
 Why does this rule exist? Because there's risk to making changes to production code. This risk exists in test code, but the worst bug you can introduce in test code is a false positive. You can't break anything in production because of a bug in test code (not directly anyway). There's also a risk that code will go out of sync.
 
+DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
+
 # Hide implementation details the reader can ignore
 
 I didn't include `MockDatabase` in the test function, but I chose not to. Why? The implementation details are not necessary to understanding the test. The reader can assume that it's some sort of lightweight database that supports testing. They don't need to read `MockDatabase`'s implementation to understand any claims the test makes.
 
-
-
-First, consider whether your production code is in need of refactoring. A class that's difficult to test is often a symptom of weak design. Then, consider adding a factory or builder pattern (TODO: check this) to your production code to make it easier to instantiate your class in both production and test. If none of those work, add helper methods, but be careful never to let them swallow details critical to the test.
+First, consider whether your production code is in need of refactoring. A class that's difficult to test is often a symptom of weak design. Then, consider adding a factory or builder pattern (TODO: link) to your production code to make it easier to instantiate your class in both production and test. If none of those work, add helper methods, but be careful never to let them swallow details critical to the test.
 
 # Use test helper methods sparingly
 
 The more helper methods you add, the more you obscure usage of the thing you're testing.
 
-**Option 1: Refactor the code you're testing**
+**Best option: Refactor the code you're testing**
+
+If the thing you're testing is so hard to exercise the code that you need a lot of boilerplate just to call it, consider refactoring it.
 
 A class that's difficult to test is often a symptom of weak design. Consider whether you can refactor that class so that clients (both test and production) can access it more easily.
 
-**Option 2: Create a factory or builder class**
+**Good option: Create a factory or builder class**
+
+**Last option: Use a test helper method**
 
 
 # Responsible test helpers
@@ -233,21 +204,27 @@ Good developers write function names that are concise. The names should be descr
   }
 ```
 
-**When a test fails, its name should be so descriptive that the developer can fix the failure without reading the test implementation.**
 
 Most developers would appreciate the descriptiveness of the above code, but it's overly verbose and it's a pain to write out such long function names. (Unless you're a Java developer, in which case you're wondering why the function names are so terse).
 
 Unit tests have no callers. Therefore, brevity matters less. It definitely matters &mdash; don't turn your function names into a novel just because you can, but know that the calculus is a little different because many of the factors pushing you toward shorter names don't apply when writing unit test code.
 
+```python
+def test_when_user_has_not_selected_podcasts_get_episodes_returns_empty_list(
+    self):
+  mock_user = MockUser()
+  podcast_manager = PodcastManager(mock_user)
+
+  new_episodes	= podcast_manager.get_episodes()
+	
+  self.assertEqual([], new_episodes)
+```
+
+**When a developer causes a test to fail, the test name should be so descriptive that the developer can fix the failure without reading the test code.**
+{: .notice--info}
 # Summary
 
 * Optimize test code for obviousness and simplicity
 * Use test helper functions sparingly
 * Prefer literal values to named constants in tests.
 * Use more verbose function names for test methods than you would for production methods
-
-### Garbage
-
-When I discovered unit tests, it was love at first sight. They made so much sense. I wanted to treat unit tests with the same respect as production code. I was aghast at developers who put lots of effort into making their production code clean and maintainable, only to phone it in on their test code.
-
-I attacked test code with the same fervor as my production code. To my horror, I learned later that this approach was wrong. I had been making my unit tests worse for years and teaching others to do the same. Here I hope to undo some of the bad lessons I accidentally propagated.
