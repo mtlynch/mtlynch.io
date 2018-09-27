@@ -47,7 +47,7 @@ What does that test do? You can tell that it retrieves a "score" for a user with
 
 With no other knowledge of this code, you should be asking:
 
-* Where did this `joe123` account come from?
+* Where did the `joe123` account come from?
 * Why do I expect the score to be 150?
 
 In Python, the standard unit test framework calls the `setUp` method before executing any test function, so perhaps the answers are there:
@@ -64,12 +64,9 @@ def setUp():
 
 Ah ha! The `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
-Of course not. This test is a failure because it forced you, the reader, outside the test function to understand its correctness.
+Of course not. This test is a failure because it forced you, the reader, to search outside the test function to understand its correctness.
 
 # Keep the reader in your test function
-
-**The reader should be able to understand your test without looking at any helper methods.**
-{: .notice--info}
 
 My preferred way to write.
 
@@ -107,19 +104,32 @@ def test_increase_score(self):
 	           account_manager.get_score(username='joe123'))
 ```
 
-Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines
+Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines to produce tests that look like this:
 
 ```python
-def test_initial_score(self): # BAD: Don't do this.
+def setUp():
+  database = MockDatabase()
+  database.add_row({
+      'username': 'joe123', # BAD: Hides critical value in setUp
+      'score': 150.0        # BAD: Hides critical value in setUp
+    })
+  self.account_manager = AccountManager(database)
+
+def test_initial_score(self):
   initial_score = account_manager.get_score(username='joe123')
   self.assertEqual(150.0, initial_score)
 
-def test_increase_score(self): # BAD: Don't do this.
+def test_increase_score(self):
   account_manager.adjust_score(username='joe123',
 	                       adjustment=25.0)
   self.assertEqual(175.0,
 	           account_manager.get_score(username='joe123'))
 ```
+
+This may reduce duplicated code, but it makes the tests harder to reason about.
+
+**The reader should be able to understand your test without looking at any helper methods.**
+{: .notice--info}
 
 # The DRY rule for testing: *Do* repeat yourself
 
@@ -127,28 +137,82 @@ Why does this rule exist? Because there's risk to making changes to production c
 
 DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
 
-# Hide implementation details the reader can ignore
-
-I didn't include `MockDatabase` in the test function, but I chose not to. Why? The implementation details are not necessary to understanding the test. The reader can assume that it's some sort of lightweight database that supports testing. They don't need to read `MockDatabase`'s implementation to understand any claims the test makes.
-
-First, consider whether your production code is in need of refactoring. A class that's difficult to test is often a symptom of weak design. Then, consider adding a factory or builder pattern (TODO: link) to your production code to make it easier to instantiate your class in both production and test. If none of those work, add helper methods, but be careful never to let them swallow details critical to the test.
-
 # Use test helper methods sparingly
 
-The more helper methods you add, the more you obscure usage of the thing you're testing.
+Maybe you can live with copy/pasting the same five lines in every test. What if the `AccountManager` example above was more difficult to instantiate?
 
-**Best option: Refactor the code you're testing**
+```python
+def test_increase_score(self):
+  # Beginning of boilerplate code
+  user_database = MockDatabase()
+  user_database.add_row({
+      'username': 'joe123',
+      'score': 150.0
+    })
+  privilege_database = MockDatabase()
+  privilege_database.add_row({
+      'privilege': 'upvote',
+      'minimum_score': 200.0
+    })
+  privilege_manager = PrivilegeManager(privilege_database)
+  url_downloader = UrlDownloader()
+  account_manager = AccountManager(user_database,
+	                           privilege_manager,
+	                           url_downloader)
+  # End of boilerplate code
 
-If the thing you're testing is so hard to exercise the code that you need a lot of boilerplate just to call it, consider refactoring it.
+  account_manager.adjust_score(username='joe123',
+	                       adjustment=25.0)
 
-A class that's difficult to test is often a symptom of weak design. Consider whether you can refactor that class so that clients (both test and production) can access it more easily.
+  self.assertEqual(175.0,
+	           account_manager.get_score(username='joe123'))
+```
+
+That's 15 lines just to get an instance of `AccountManager` so that you can test it. This is where the "do repeat yourself" rule begins to get crazy. 15 lines of boilerplate in every test function will obscure the logic that you're trying to test. Your natural inclindation might be to refactor your test code to eliminate the duplicate code, which you can do, but it should be your last option:
+
+**Best option: Refactor the system you're testing**
+
+If you need a lot of boilerplate code simply to call the system you're testing, that may indicate a flaw in your design. This is the case with the `AccountManager` example above. Why does it manipulate one database directly, but it needs access to another database indirectly through the `PrivilegeManager` class? And what is it doing with a URL downloader, which seems logically distant from its contructor's other two parameters? In this case, the best thing to do. You'll not only make the class easier to test, you'll make the code easier for production clients to use.
 
 **Good option: Create a factory or builder class**
 
+Sometimes you don't have the freedom to go tearing apart a class. In these cases, you can simplify your test code by creating a factory or builder for the class you're testing.
+
+```python
+def setUp(self):
+  self.builder = AccountManagerBuilder()
+
+def test_increase_score(self):
+  self.builder.
+  user_database = AccountManagerBuilder()
+  user_database.add_row({
+      'username': 'joe123',
+      'score': 150.0
+    })
+  privilege_database = MockDatabase()
+  privilege_database.add_row({
+      'privilege': 'upvote',
+      'minimum_score': 200.0
+    })
+  privilege_manager = PrivilegeManager(privilege_database)
+  url_downloader = UrlDownloader()
+  account_manager = AccountManager(user_database,
+	                           privilege_manager,
+	                           url_downloader)
+  # End of boilerplate code
+
+  account_manager.adjust_score(username='joe123',
+	                       adjustment=25.0)
+
+  self.assertEqual(175.0,
+	           account_manager.get_score(username='joe123'))
+```
+
 **Last option: Use a test helper method**
 
+The more helper methods you add, the more you obscure usage of the thing you're testing.
 
-# Responsible test helpers
+# Write test helper methods responsibly
 
 Avoid burying calls to the class you're testing in helper methods. Use helper methods to create objects that you pass in to the system you're testing.
 
@@ -166,28 +230,55 @@ account_manager = (
     username='joe123', score=150.0)))
 ```
 
+## Hide implementation details the reader can ignore
+
+I didn't include `MockDatabase` in the test function, but I chose not to. Why? The implementation details are not necessary to understanding the test. The reader can assume that it's some sort of lightweight database that supports testing. They don't need to read `MockDatabase`'s implementation to understand any claims the test makes.
+
+First, consider whether your production code is in need of refactoring. A class that's difficult to test is often a symptom of weak design. Then, consider adding a factory or builder pattern (TODO: link) to your production code to make it easier to instantiate your class in both production and test. If none of those work, add helper methods, but be careful never to let them swallow details critical to the test.
+
+## Show the reader all interaction with the system under test
+
+TODO
+
 # In tests, magic numbers are your friends
 
-Like "Don't talk to strangers," you've been told that magic numbers are not your friends and you should stay away from them. As a result, I see developers write tests like the following:
+"Don't use magic numbers." It's the "don't talk to strangers" of the programming world. New developers constantly hear this lesson repeated, so they learn to always use named constants instead of committing the sin of magic numbers.
+
+This is a good rule to apply to production code, but it's not what you should do in tests. I often see good developers write tests like the following:
 
 ```python
-def test_withdrawal(self):
-  TEST_STARTING_BALANCE = 100.0
-  TEST_WITHDRAWAL_AMOUNT = 5.0
-  account = create_test_account(balance=TEST_STARTING_BALANCE)
-  account.withdraw(TEST_WITHDRAWAL_AMOUNT)
-  expected_balance = TEST_STARTING_BALANCE - TEST_WITHDRAWAL_AMOUNT
-  self.assertEqual(expected_balance, account.balance())
+def test_add_hours(self):
+  TEST_STARTING_HOURS = 72.0
+  TEST_HOURS_INCREASE = 8.0
+  hours_tracker = BillableHoursTracker(initial_hours=TEST_STARTING_HOURS)
+  hours_tracker.add_hours(TEST_HOURS_INCREASE)
+  expected_billable_hours = TEST_STARTING_HOURS + TEST_HOURS_INCREASE
+  self.assertEqual(expected_billable_hours, hours_tracker.billable_hours())
 ```
 
-Compare that to the following:
+Compare that to the version below that replaces named constants with the forbidden fruit of magic numbers:
 
 ```python
-def test_withdrawal(self):
-  account = create_test_account(balance=50.0)
-  account.withdraw(5.0)
-  self.assertEqual(45.0, account.balance())
+def test_add_hours(self):
+  hours_tracker = BillableHoursTracker(initial_hours=72.0)
+  hours_tracker.add_hours(8.0)
+  self.assertEqual(80.0, hours_tracker.billable_hours())
 ```
+
+The second example is simpler, with only half as many lines. And it's more obvious. The reader doesn't have to jump around the function tracking names of constants. Magic numbers made this test better.
+
+Why is it okay to break rules about magic numbers in tests? Recall why the rule exists. One big reason is that you don't want the reader to wonder where a value came from. This is what you don't want to do in production code:
+
+```python
+total_time = total_days * 86400 # BAD: Magic numbers don't belong in production code
+```
+
+The reader will wonder what 86,400 means (it's the total number of seconds in a standard day). But the reader shouldn't ever wonder about that in tests because the answer is always, "It's a number I pulled out of thin air  value chosen to exercise the code." Naming the value of `72.0` a name doesn't change the fact that it's just an arbitrary number and it doesn't make the number any more clear.
+
+The other big reason for the "don't use magic numbers" rule is that you never want to be in a situation where multiple parts of the code rely on the value and you don't want to update one part and forget to update another. This is less of a concern in test code, where the scope of a variable is just a small, tightly scoped test function. But even if you do have multiple parts that rely on the same value, you don't have to worry much about remembering to update all of them because if you forget, your test will remind you by failing.
+
+**Use magic numbers instead of named constants in test code.**
+{: .notice--info}
 
 # Good test names are more descriptive than other functions
 
@@ -224,7 +315,11 @@ def test_when_user_has_not_selected_podcasts_get_episodes_returns_empty_list(
 {: .notice--info}
 # Summary
 
+Remember the "engineering" part of software engineering. When you write test code, you still have the same concerns as production code, but they hae different weights. You need to think about how the different weights of those concerns affects the way you're accustomed to writing production code.
+
+If you're a good developer and want to avoid writing bad tests, here are some guidelines to follow:
+
 * Optimize test code for obviousness and simplicity
-* Use test helper functions sparingly
-* Prefer literal values to named constants in tests.
+* Avoid test helper methods
+* Prefer literal values (magic numbers) to named constants in tests.
 * Use more verbose function names for test methods than you would for production methods
