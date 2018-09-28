@@ -227,42 +227,58 @@ The other big reason for the "don't use magic numbers" rule is that you never wa
 
 # Go crazy with test names
 
-Good developers write function names that are concise. Given the option between the names `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid` or `accountIsValid`, most developers would choose the latter (exception: Java developers would reject both names for being outrageously short). The first name conveys more information, but the second name conveys a similar idea and doesn't clutter up the screen or burden callers with typing a  The names should be descriptive and clear, but the programmer still has to weigh a verbose name against the cost of writing it out every single time
+Good developers write function names that are concise. Imagine the following two names:
 
-```c
-  if (userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid(user_id)) {
-    for (int i = 0;
-         i < numberOfPodcastsToWhichTheUserHasRequestedRegularUpdates(
-           user_id);
-         i++) {
-      retrieveLatestEpisodeOfPodcastForUser(user_id, i);
-    }
-  }
+* `accountIsActive`
+* `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
+
+Most developers would choose the first option (except for Java developers, for whom both names are shocking terse). The second name conveys more information, but the first name conveys a similar idea and doesn't clutter up the screen or burden callers with typing a 57-character name on every invocation.
+
+Circumstances are different for test functions. Developers never write *calls* to test functions, so that consideration is gone. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions. Therefore.
+
+Imagine that you're testing a function that looks like this:
+
+```c++
+class PodcastManager {
+ public:
+  void add_podcast(Podcast* podcast);
+  void clear_subscriptions();
+  int subscription_count();
+}
 ```
 
+Now imagine the following test name:
 
-Most developers would appreciate the descriptiveness of the above code, but it's overly verbose and it's a pain to write out such long function names. (Unless you're a Java developer, in which case you're wondering why the function names are so terse).
+* `test_subscription_count`
 
-Unit tests have no callers. Therefore, brevity matters less. It definitely matters &mdash; don't turn your function names into a novel just because you can, but know that the calculus is a little different because many of the factors pushing you toward shorter names don't apply when writing unit test code.
+What does that test do? If you modified `PodcastManager`, ran the unit test suite, and saw that test fail, would you know what you broke? Probably not. You would have to go read the implelementation for `test_subscription_count` to figure out what happened.
 
-```python
-def test_get_episodes_returns_empty_list_when_user_has_not_selected_podcasts(
-    self):
-  user = MockUser()
-  podcast_manager = PodcastManager(user)
+Imagine instead that the developer recognized that test functions don't need terse names, so they instead called the test:
 
-  new_episodes	= podcast_manager.get_episodes()
-	
-  self.assertEqual([], new_episodes)
+* `test_clear_subscriptions_resets_subscription_count_to_zero`
+
+You can guess what the test implementation looks like pretty accurately just from the name. If you're reading through the test code to understand, you don't have to expend mental effort figuring out what the test is really doing. If you modified `PodcastManager`, ran your test suite, and saw this:
+
+TODO: Match gtest output
+
+```text
+[ RUN      ] Fixture.foo
+/home/imk/dev/so/gtest/main.cpp:19: Failure
+      Expected: 1
+To be equal to: 0
+Fixture::TearDown sees failures
+[  FAILED  ] Fixture.foo (0 sec)
 ```
 
-**When a developer causes a test to fail, the test name should be so descriptive that the developer can fix the failure without reading the test code.**
+You could probably fix the break without ever reading that test's implementation. That's the mark of a good test name.
+
+**A test name should be so descriptive that the developer can diagnose failures of that test without reading its implementation.**
 {: .notice--info}
 # Summary
 
-Remember the "engineering" part of software engineering. When you write test code, you still have the same concerns as production code, but they hae different weights. You need to think about how the different weights of those concerns affects the way you're accustomed to writing production code.
+Remember the "engineering" part of software engineering. When you write test code, you still have the same concerns as production code, but they have different weights. You need to think about how the different weights of those concerns affects the way you're accustomed to writing production code.
 
-If you're a good developer and want to avoid writing bad tests, here are some guidelines to follow:
+If you're a good developer and want to avoid writing bad tests, here are some guidelines to follow in test code:
 
 * Optimize for obviousness over maintainability.
 * Avoid helper methods outside of your test functions.
