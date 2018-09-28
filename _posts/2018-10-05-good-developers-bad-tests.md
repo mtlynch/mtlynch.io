@@ -22,9 +22,9 @@ TODO: Cartoon of a row of three beach houses. The two on the side are normal and
 
 Software development is engineering. This means that it's the developer's job to consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. But test code and production code have different goals.
 
-When do you read or edit production code? When you're fixing a bug or extending the feature of your application. In all of these cases, you generally read or at least skim an entire class or module.
+When do you read production code? When you're fixing a bug or extending existing functionality in your application. In all of these cases, you generally read or at least skim an entire class or module.
 
-In what situation do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
+When do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
 **Good production code is *maintainable*; good test code is *obvious*.**
 {: .notice--info}
@@ -35,7 +35,7 @@ Think back to the skyscraper architect on the beach. Both owners value having wi
 
 # A good developer's bad test
 
-Here's a style of test I see very often from good developers:
+Here's a style of test I see very often from otherwise talented developers:
 
 ```python
 def test_initial_score(self):
@@ -45,12 +45,12 @@ def test_initial_score(self):
 
 What does that test do? You can tell that it retrieves a "score" for a user with the name `joe123`. It then verifies that the user's score is 150.
 
-With no other knowledge of this code, you should be asking:
+With no other knowledge of this code, you should have the following two questions:
 
 * Where did the `joe123` account come from?
 * Why do I expect the score to be 150?
 
-In Python, the standard unit test framework calls the `setUp` method before executing any test function, so perhaps the answers are there:
+In Python, the native unit test framework calls the `setUp` method before executing any test function, so perhaps the answers are there:
 
 ```python
 def setUp():
@@ -62,13 +62,18 @@ def setUp():
   self.account_manager = AccountManager(database)
 ```
 
-Ah ha! The `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
+Okay, the `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
-Of course not. This test is a failure because it forced you, the reader, to search outside the test function to understand its correctness.
+Of course not. This is a bad test. It forced you, the reader, to search outside the test function to understand its correctness.
 
 # Keep the reader in your test function
 
-My preferred way to write.
+
+
+**The reader should be able to understand a test function without reading any code outside the function body.**
+{: .notice--info}
+
+Here is a better way to write the above test that conveys the meaning to the reader straightforwardly:
 
 ```python
 def test_initial_score(self):
@@ -86,7 +91,7 @@ def test_initial_score(self):
 
 My experienced readers may be thinking, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
 
-Yes, I will! Here's another test from that same file:
+Yes, I will! Here another test of the same class:
 
 ```python
 def test_increase_score(self):
@@ -104,32 +109,7 @@ def test_increase_score(self):
 	           account_manager.get_score(username='joe123'))
 ```
 
-Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines to produce tests that look like this:
-
-```python
-def setUp():
-  database = MockDatabase()
-  database.add_row({
-      'username': 'joe123', # BAD: Hides critical value in setUp
-      'score': 150.0        # BAD: Hides critical value in setUp
-    })
-  self.account_manager = AccountManager(database)
-
-def test_initial_score(self):
-  initial_score = account_manager.get_score(username='joe123')
-  self.assertEqual(150.0, initial_score)
-
-def test_increase_score(self):
-  account_manager.adjust_score(username='joe123',
-	                       adjustment=25.0)
-  self.assertEqual(175.0,
-	           account_manager.get_score(username='joe123'))
-```
-
-This may reduce duplicated code, but it makes the tests harder to reason about.
-
-**The reader should be able to understand your test without looking at any helper methods.**
-{: .notice--info}
+Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines, degrading the code back to where it was at the start of this post where the reader was left to wonder where `joe123` and `150` came from.
 
 # The DRY rule for testing: *Do* repeat yourself
 
@@ -178,46 +158,21 @@ If you need a lot of boilerplate code simply to call the system you're testing, 
 
 Sometimes you don't have the freedom to go tearing apart a class. In these cases, you can simplify your test code by creating a factory or builder for the class you're testing.
 
-```python
-def setUp(self):
-  self.builder = AccountManagerBuilder()
-
-def test_increase_score(self):
-  self.builder.
-  user_database = AccountManagerBuilder()
-  user_database.add_row({
-      'username': 'joe123',
-      'score': 150.0
-    })
-  privilege_database = MockDatabase()
-  privilege_database.add_row({
-      'privilege': 'upvote',
-      'minimum_score': 200.0
-    })
-  privilege_manager = PrivilegeManager(privilege_database)
-  url_downloader = UrlDownloader()
-  account_manager = AccountManager(user_database,
-	                           privilege_manager,
-	                           url_downloader)
-  # End of boilerplate code
-
-  account_manager.adjust_score(username='joe123',
-	                       adjustment=25.0)
-
-  self.assertEqual(175.0,
-	           account_manager.get_score(username='joe123'))
-```
-
 **Last option: Use a test helper method**
 
-The more helper methods you add, the more you obscure usage of the thing you're testing.
+The more helper methods you add, the more you obscure usage of the thing you're testing. If you choose this route, be careful:
 
-# Write test helper methods responsibly
+* Never put values in the helper methods that readers need to know to understand your test
+* Avoid 
 
-Avoid burying calls to the class you're testing in helper methods. Use helper methods to create objects that you pass in to the system you're testing.
+Test helper methods are best used to prepare inputs to the system you're testing or to verify its output. When you start burying calls to the system you're testing in helper methods, you make it difficult for the reader to understand how the test interacts with the system under test.
+
+For example, this is a reasonable use of a helper method:
 
 ```python
-mock_database = create_test_database_with_single_user(username='joe123', score=150.0))
+# OK: Uses a helper method to create an input to AccountManager.
+mock_database = create_test_database_with_single_user(
+  username='joe123', score=150.0))
 account_manager = AccountManager(mock_database)
 ```
 
@@ -229,16 +184,6 @@ account_manager = (
   create_test_account_manager_with_single_user(
     username='joe123', score=150.0)))
 ```
-
-## Hide implementation details the reader can ignore
-
-I didn't include `MockDatabase` in the test function, but I chose not to. Why? The implementation details are not necessary to understanding the test. The reader can assume that it's some sort of lightweight database that supports testing. They don't need to read `MockDatabase`'s implementation to understand any claims the test makes.
-
-First, consider whether your production code is in need of refactoring. A class that's difficult to test is often a symptom of weak design. Then, consider adding a factory or builder pattern (TODO: link) to your production code to make it easier to instantiate your class in both production and test. If none of those work, add helper methods, but be careful never to let them swallow details critical to the test.
-
-## Show the reader all interaction with the system under test
-
-TODO
 
 # In tests, magic numbers are your friends
 
@@ -280,9 +225,9 @@ The other big reason for the "don't use magic numbers" rule is that you never wa
 **Use magic numbers instead of named constants in test code.**
 {: .notice--info}
 
-# Good test names are more descriptive than other functions
+# Go crazy with test names
 
-Good developers write function names that are concise. The names should be descriptive and clear, but the programmer still has to weigh a verbose name against the cost of writing it out every single time
+Good developers write function names that are concise. Given the option between the names `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid` or `accountIsValid`, most developers would choose the latter (exception: Java developers would reject both names for being outrageously short). The first name conveys more information, but the second name conveys a similar idea and doesn't clutter up the screen or burden callers with typing a  The names should be descriptive and clear, but the programmer still has to weigh a verbose name against the cost of writing it out every single time
 
 ```c
   if (userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid(user_id)) {
@@ -301,10 +246,10 @@ Most developers would appreciate the descriptiveness of the above code, but it's
 Unit tests have no callers. Therefore, brevity matters less. It definitely matters &mdash; don't turn your function names into a novel just because you can, but know that the calculus is a little different because many of the factors pushing you toward shorter names don't apply when writing unit test code.
 
 ```python
-def test_when_user_has_not_selected_podcasts_get_episodes_returns_empty_list(
+def test_get_episodes_returns_empty_list_when_user_has_not_selected_podcasts(
     self):
-  mock_user = MockUser()
-  podcast_manager = PodcastManager(mock_user)
+  user = MockUser()
+  podcast_manager = PodcastManager(user)
 
   new_episodes	= podcast_manager.get_episodes()
 	
@@ -319,7 +264,7 @@ Remember the "engineering" part of software engineering. When you write test cod
 
 If you're a good developer and want to avoid writing bad tests, here are some guidelines to follow:
 
-* Optimize test code for obviousness and simplicity
-* Avoid test helper methods
-* Prefer literal values (magic numbers) to named constants in tests.
-* Use more verbose function names for test methods than you would for production methods
+* Optimize for obviousness over maintainability.
+* Avoid helper methods outside of your test functions.
+* Prefer literal values (magic numbers) to named constants.
+* Use more verbose names for test methods than you would in production code.
