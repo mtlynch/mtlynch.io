@@ -10,21 +10,23 @@ sidebar:
   nav: main
 ---
 
-Imagine that you're hiring an architect to build your beach house. You commission a famous architect in your city by the name of Peter Keating. He's famous for building skyscrapers, and he tells you he's going to . You arrive at your finished beach house and find that the walls are 2 feet thick, there's a service elevator big enough to fit a truck, and your living room is just a reception desk. He technically built a beach house, but he didn't change his techniques at all to match how your use of a beach house differs from 
+Imagine that Facebook acquires your tech startup, netting you enough money to build your own beach house. You commission an-up-and-coming architect named Peter Keating. He's famous for his skyscrapers but has brilliant plans for your beach house.
 
-One of the most common problems that otherwise good developers have is that they build skyscrapers at the beach.
+Months later, you arrive at your finished beach house to find that the walls are made of three-foot-thick concrete. Your foyer is a reception desk backed by a bank of elevators to ferry people among the house's three stories. You take the elevator upstairs and discover that your master bedroom and three guest bedrooms are just four adjoining cubicles.
 
-For years, I fell into this trap. I thought I was doing a good job writing tidy test code. In reality, I was writing mediocre test code because I never considered how the goals of test code differ from the goals of production code.
+What happened? Your architect robotically applied all of his usual office building elements to your vacation home. Now, your "beach house" is just a skyscraper at the beach.
+
+Many software developers make the same mistake when writing unit test code. They learn all the best practices for writing production code, then blindly apply the exact same techniques to test code. They build skyscrapers at the beach.
 
 TODO: Cartoon of a row of three beach houses. The two on the side are normal and have nice patios. The middle one looks like a mini skyscraper. It has a revolving door, very small windows, and a spire.
 
 # Test code is not like other code
 
-Software development is engineering. This means that it's the developer's job to consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. But test code and production code have different goals.
+Software development is engineering. The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. Production code and test code have different engineering tradeoffs because they have different goals.
 
-When do you read production code? When you're fixing a bug or extending existing functionality in your application. In all of these cases, you generally read or at least skim an entire class or module.
+When do you read production code? Usually, you're fixing a bug or extending existing functionality in your application. When this happens, you generally read or at least skim an entire class or module.
 
-When do you read test code? The most common one is when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
+When do you read test code? Most commonly, when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
 **Good production code is *maintainable*; good test code is *obvious*.**
 {: .notice--info}
@@ -33,9 +35,11 @@ Production code is optimized for maintainability. Test code is optimized for rea
 
 Think back to the skyscraper architect on the beach. Both owners value having windows and lowering energy costs, but the degree to which they value these things is different. The beach house owner cares much more about having large windows at the expense of increased energy costs. The office building owner wants enough windows so that their tenants don't feel like the building is a prison, but they care more about energy costs than the beach bum.
 
+For the rest of this post, I'm going to demonstrate several pitfalls that good developers fall into when they try to bring the lessons of production code to unit tests.
+
 # A good developer's bad test
 
-Here's a style of test I see very often from otherwise talented developers:
+I often see otherwise talented developers write tests that look like the following:
 
 ```python
 def test_initial_score(self):
@@ -43,14 +47,12 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-What does that test do? You can tell that it retrieves a "score" for a user with the name `joe123`. It then verifies that the user's score is 150.
+What does that test do? It retrieves a "score" for a user with the name `joe123` and verifies that the user's score is 150. With no other knowledge of this code, you should have the following questions:
 
-With no other knowledge of this code, you should have the following two questions:
+1. Where did the `joe123` account come from?
+1. Why do I expect `joe123`'s score to be 150?
 
-* Where did the `joe123` account come from?
-* Why do I expect the score to be 150?
-
-In Python, the native unit test framework calls the `setUp` method before executing any test function, so perhaps the answers are there:
+This is Python code, so perhaps the answers are in `setUp`, the method that Python's native unit test framework calls before executing each test method:
 
 ```python
 def setUp():
@@ -64,13 +66,11 @@ def setUp():
 
 Okay, the `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
-Of course not. This is a bad test. It forced you, the reader, to search outside the test function to understand its correctness.
+No, this is a **bad test**. The reader can't understand why this test works unless they search outside the test itself.
 
 # Keep the reader in your test function
 
-
-
-**The reader should be able to understand a test function without reading any code outside the function body.**
+**The reader should understand a test function without reading any code outside the function body.**
 {: .notice--info}
 
 Here is a better way to write the above test that conveys the meaning to the reader straightforwardly:
@@ -89,18 +89,18 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-My experienced readers may be thinking, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
+My experienced readers may think, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
 
-Yes, I will! Here another test of the same class:
+Yes, I'm going to commit the sin of copy/pasting a block of code many times. Here's another test of the same class:
 
 ```python
 def test_increase_score(self):
-  database = MockDatabase()
-  database.add_row({
-      'username': 'joe123',
-      'score': 150.0
-    })
-  account_manager = AccountManager(database)
+  database = MockDatabase()                  # <
+  database.add_row({                         # <
+      'username': 'joe123',                  # <--- Copy/pasted from
+      'score': 150.0                         # <--- previous test
+    })                                       # <
+  account_manager = AccountManager(database) # <
 	
   account_manager.adjust_score(username='joe123',
 	                       adjustment=25.0)
@@ -111,9 +111,14 @@ def test_increase_score(self):
 
 Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines, degrading the code back to where it was at the start of this post where the reader was left to wonder where `joe123` and `150` came from.
 
-# The DRY rule for testing: *Do* repeat yourself
+# How dare you violate the DRY principle!
 
-Why does this rule exist? Because there's risk to making changes to production code. This risk exists in test code, but the worst bug you can introduce in test code is a false positive. You can't break anything in production because of a bug in test code (not directly anyway). There's also a risk that code will go out of sync.
+One of the most commonly accepted software principles is the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). It means "don't repeat yourself." Why does this rule exist?
+
+* You don't want to update one place and forget to update others
+* You don't want to increase work when you have to change the repeated work
+* 
+Because there's risk to making changes to production code. This risk exists in test code, but the worst bug you can introduce in test code is a false positive. You can't break anything in production because of a bug in test code (not directly anyway). There's also a risk that code will go out of sync.
 
 DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
 
@@ -187,7 +192,9 @@ account_manager = (
 
 # In tests, magic numbers are your friends
 
-"Don't use magic numbers." It's the "don't talk to strangers" of the programming world. New developers constantly hear this lesson repeated, so they learn to always use named constants instead of committing the sin of magic numbers.
+"Don't use magic numbers."
+
+It's the "don't talk to strangers" of the programming world. New developers constantly hear this lesson repeated, so they learn to always use named constants instead of committing the sin of magic numbers.
 
 This is a good rule to apply to production code, but it's not what you should do in tests. I often see good developers write tests like the following:
 
@@ -227,12 +234,12 @@ The other big reason for the "don't use magic numbers" rule is that you never wa
 
 # Go crazy with test names
 
-Good developers write function names that are concise. Imagine the following two names:
+Good developers write function names that are concise. Imagine that you're naming a function and deciding between the following two names:
 
-* `accountIsActive`
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
+* `isAccountActive`
 
-Most developers would choose the first option (except for Java developers, for whom both names are shocking terse). The second name conveys more information, but the first name conveys a similar idea and doesn't clutter up the screen or burden callers with typing a 57-character name on every invocation.
+Most developers would choose the second option (except for Java developers, for whom both names are offensively terse). The first name conveys more information, but the second name conveys a similar idea and doesn't clutter up the screen or burden callers with typing a 57-character name on every invocation.
 
 Circumstances are different for test functions. Developers never write *calls* to test functions, so that consideration is gone. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions. Therefore.
 
