@@ -190,48 +190,6 @@ account_manager = (
     username='joe123', score=150.0)))
 ```
 
-# In tests, magic numbers are your friends
-
-"Don't use magic numbers."
-
-It's the "don't talk to strangers" of the programming world. New developers constantly hear this lesson repeated, so they learn to always use named constants instead of committing the sin of magic numbers.
-
-This is a good rule to apply to production code, but it's not what you should do in tests. I often see good developers write tests like the following:
-
-```python
-def test_add_hours(self):
-  TEST_STARTING_HOURS = 72.0
-  TEST_HOURS_INCREASE = 8.0
-  hours_tracker = BillableHoursTracker(initial_hours=TEST_STARTING_HOURS)
-  hours_tracker.add_hours(TEST_HOURS_INCREASE)
-  expected_billable_hours = TEST_STARTING_HOURS + TEST_HOURS_INCREASE
-  self.assertEqual(expected_billable_hours, hours_tracker.billable_hours())
-```
-
-Compare that to the version below that replaces named constants with the forbidden fruit of magic numbers:
-
-```python
-def test_add_hours(self):
-  hours_tracker = BillableHoursTracker(initial_hours=72.0)
-  hours_tracker.add_hours(8.0)
-  self.assertEqual(80.0, hours_tracker.billable_hours())
-```
-
-The second example is simpler, with only half as many lines. And it's more obvious. The reader doesn't have to jump around the function tracking names of constants. Magic numbers made this test better.
-
-Why is it okay to break rules about magic numbers in tests? Recall why the rule exists. One big reason is that you don't want the reader to wonder where a value came from. This is what you don't want to do in production code:
-
-```python
-total_time = total_days * 86400 # BAD: Magic numbers don't belong in production code
-```
-
-The reader will wonder what 86,400 means (it's the total number of seconds in a standard day). But the reader shouldn't ever wonder about that in tests because the answer is always, "It's a number I pulled out of thin air  value chosen to exercise the code." Naming the value of `72.0` a name doesn't change the fact that it's just an arbitrary number and it doesn't make the number any more clear.
-
-The other big reason for the "don't use magic numbers" rule is that you never want to be in a situation where multiple parts of the code rely on the value and you don't want to update one part and forget to update another. This is less of a concern in test code, where the scope of a variable is just a small, tightly scoped test function. But even if you do have multiple parts that rely on the same value, you don't have to worry much about remembering to update all of them because if you forget, your test will remind you by failing.
-
-**Use magic numbers instead of named constants in test code.**
-{: .notice--info}
-
 # Go crazy with test names
 
 Good developers write function names that are concise. Imagine that you're naming a function and deciding between the following two names:
@@ -279,8 +237,72 @@ Fixture::TearDown sees failures
 
 You could probably fix the break without ever reading that test's implementation. That's the mark of a good test name.
 
-**A test name should be so descriptive that the developer can diagnose failures of that test without reading its implementation.**
+**A test name should be so descriptive that a developer can diagnose the test failure from the name alone.**
 {: .notice--info}
+
+# In tests, magic numbers are your friends
+
+"Don't use magic numbers."
+
+It's the "don't talk to strangers" of the programming world. It becomes so ingrained in many talented developers that they never even consider when a magic number might improve their code. In unit tests, magic numbers almost always make the code better.
+
+Consider the following test, which uses named constants instead of magic numbers:
+
+```python
+def test_add_hours(self):
+  TEST_STARTING_HOURS = 72.0
+  TEST_HOURS_INCREASE = 8.0
+  hours_tracker = BillableHoursTracker(initial_hours=TEST_STARTING_HOURS)
+  hours_tracker.add_hours(TEST_HOURS_INCREASE)
+  expected_billable_hours = TEST_STARTING_HOURS + TEST_HOURS_INCREASE
+  self.assertEqual(expected_billable_hours, hours_tracker.billable_hours())
+```
+
+If you believe you should never see magic numbers in code, the above test looks correct to you. `72.0` and `8.0` have named constants, so nobody can accuse the test of using magic numbers.
+
+Now, taste the forbidden fruit of magic numbers:
+
+```python
+def test_add_hours(self):
+  hours_tracker = BillableHoursTracker(initial_hours=72.0)
+  hours_tracker.add_hours(8.0)
+  self.assertEqual(80.0, hours_tracker.billable_hours())
+```
+
+The second example is simpler, with only half as many lines. And it's more obvious. The reader doesn't have to jump around the function tracking names of constants. Magic numbers made this test better.
+
+There are good reasons that magic numbers were added to developers' bad lists, but I'll examine them and decide whether these reasons apply in unit test code:
+
+* **Expressiveness**: Named constants provide more context for the intent or concept better than a literal value like `8`.
+* **Consistency**: If you need to change the value, it's easier and safer to change it in a single place.
+* **Disambiguation**: Named constants allow the reader to distinguish between two instances of a value that must be equal and two instances that are equal by coincidence.
+
+Expressiveness doesn't apply to unit test code because the test *name* should convey the intent of the test. When the reader sees a magic number in your unit test code and wonders why you selected that value, the answer should either be in the test name itself or simply "it's an arbitrary value."
+
+Consistency doesn't apply because nothing should depend on constants in a unit test. If you have a situation both a test helper method and the unit test body need to share access to a constant, it likely means that you're abusing helper methods.
+
+Disambiguation does apply to unit tests, but you can usually write around it.
+
+The first major reason is that the reader shouldn't wonder what a magic number means. If there's an `8` in your code, the reader should know why you chose `8` and which other instances of the number `8` they have to change if they ever adjust your `8`. This doesn't matter much in unit test code. The answer should always be, "I pulled it out of thin air  value to exercise the code." Assigning the value of `72.0` a name doesn't change the fact that it's just an arbitrary number and it doesn't make the number any more clear.
+
+The other big reason for the "don't use magic numbers" rule is for consistency. Suppose you have some sort of low-level CPU intensive code. It's designed to run on 8 cores, so the number `8` appears frequently in the code. But it also does bit-to-byte conversion, so `8` appears a lot in the code because there are 8 bits in a byte. If you ever changed that you never want to be in a situation where multiple parts of the code rely on the value and you don't want to update one part and forget to update another. This is less of a concern in test code, where the scope of a variable is just a small, tightly scoped test function. But even if you do have multiple parts that rely on the same value, you don't have to worry much about remembering to update all of them because if you forget, your test will remind you by failing.
+
+**Use magic numbers instead of defining named constants in test code.**
+{: .notice--info}
+
+Note that I'm advocating using magic numbers instead of *defining* named constants.
+
+```python
+def test_buffered_reader_reads_twice_when_read_is_just_over_buffer_size(self):
+  mock_file = mock.Mock()
+  buffered_reader = BufferedReader(mock_file)
+
+  buffered_reader.read(
+    BufferedReader.BUFFER_SIZE + 1)  # OK: Named constant is defined in production code
+
+  self.assertEqual(2, mock_file.read.call_count)
+```
+
 # Summary
 
 Remember the "engineering" part of software engineering. When you write test code, you still have the same concerns as production code, but they have different weights. You need to think about how the different weights of those concerns affects the way you're accustomed to writing production code.
@@ -289,5 +311,5 @@ If you're a good developer and want to avoid writing bad tests, here are some gu
 
 * Optimize for obviousness over maintainability.
 * Avoid helper methods outside of your test functions.
-* Prefer literal values (magic numbers) to named constants.
+* Prefer literal values (magic numbers) to defining named constants.
 * Use more verbose names for test methods than you would in production code.
