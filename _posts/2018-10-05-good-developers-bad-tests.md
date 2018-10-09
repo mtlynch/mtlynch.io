@@ -15,7 +15,7 @@ header:
 
 Imagine that Facebook acquires your tech startup, netting you enough money to build your own beach house. You commission an-up-and-coming architect named Peter Keating. He's famous for his skyscrapers but has brilliant plans for your beach house.
 
-Months later, you arrive at your finished beach house to find that the walls are made of three-foot-thick concrete. Your foyer is a reception desk backed by a bank of elevators to ferry people among the house's three stories. You take the elevator upstairs and discover that your master bedroom and three guest bedrooms are just four adjoining cubicles.
+Months later, you arrive at your finished beach house to find that the walls are made of concrete and steel three feet thick. Your foyer is a reception desk backed by a bank of elevators to ferry people among the house's three stories. The master bedroom and three guest bedrooms are just four adjoining cubicles.
 
 What happened? Your architect robotically applied all of his usual office building elements to your vacation home. Now, your "beach house" is just a skyscraper at the beach.
 
@@ -36,7 +36,9 @@ When do you read test code? Most commonly, when a test fails. How do you optimiz
 
 Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
 
-Think back to the skyscraper architect on the beach. Both owners value having windows and lowering energy costs, but the degree to which they value these things is different. The beach house owner cares much more about having large windows at the expense of increased energy costs. The office building owner wants enough windows so that their tenants don't feel like the building is a prison, but they care more about energy costs than the beach bum.
+They have the same goals but with different weights.
+
+Think back to the skyscraper architect on the beach. Structural integrity is important for both beach houses and skyscrapers. Your architect might claim that it needed steel and concrete walls because that provides structural integrity, and skyscrapers and beach houses both need structural integrity. While that's true, you probably recognize that your beach house walls don't need to support 200 tons of building on top of them, and you would have traded away some of that wall strength in favor of floor-to-ceiling windows to give you nice views of the water.
 
 For the rest of this post, I'm going to demonstrate several pitfalls that good developers fall into when they try to bring the lessons of production code to unit tests.
 
