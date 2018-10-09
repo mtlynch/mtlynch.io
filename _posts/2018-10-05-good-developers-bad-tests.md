@@ -8,6 +8,9 @@ share: true
 related: true
 sidebar:
   nav: main
+header:
+  teaser: images/good-developers-bad-tests/cover.jpg
+  og_image: images/good-developers-bad-tests/cover.jpg
 ---
 
 Imagine that Facebook acquires your tech startup, netting you enough money to build your own beach house. You commission an-up-and-coming architect named Peter Keating. He's famous for his skyscrapers but has brilliant plans for your beach house.
@@ -18,7 +21,7 @@ What happened? Your architect robotically applied all of his usual office buildi
 
 Many software developers make the same mistake when writing unit test code. They learn all the best practices for writing production code, then blindly apply the exact same techniques to test code. They build skyscrapers at the beach.
 
-TODO: Cartoon of a row of three beach houses. The two on the side are normal and have nice patios. The middle one looks like a mini skyscraper. It has a revolving door, very small windows, and a spire.
+{% include image.html file="cover.jpg" alt="Architect presenting skyscraper on the beach" max_width="800px" img_link=true %}
 
 # Test code is not like other code
 
@@ -70,9 +73,6 @@ No, this is a **bad test**. The reader can't understand why this test works unle
 
 # Keep the reader in your test function
 
-**The reader should understand a test function without reading any code outside the function body.**
-{: .notice--info}
-
 Here is a better way to write the above test that conveys the meaning to the reader straightforwardly:
 
 ```python
@@ -88,6 +88,11 @@ def test_initial_score(self):
 	
   self.assertEqual(150.0, initial_score)
 ```
+
+A reader can understand 
+
+**The reader should understand a test function without reading any code outside the function body.**
+{: .notice--info}
 
 My experienced readers may think, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
 
@@ -111,7 +116,7 @@ def test_increase_score(self):
 
 Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines, degrading the code back to where it was at the start of this post where the reader was left to wonder where `joe123` and `150` came from.
 
-# How dare you violate the DRY principle!
+# Dare to violate DRY
 
 One of the most commonly accepted software principles is the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). It means "don't repeat yourself." Why does this rule exist?
 
@@ -197,7 +202,7 @@ Good developers write function names that are concise. Imagine that you're namin
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
 * `isAccountActive`
 
-Most developers would choose the second option (except for Java developers, for whom both names are offensively terse). The first name conveys more information, but the second name conveys a similar idea and doesn't clutter up the screen or burden callers with typing a 57-character name on every invocation.
+Most developers would choose the second option (except for Java developers, for whom both names are offensively terse). The first name conveys more information, but the second name conveys a similar idea and doesn't clutter up the screen or burden callers with a 57-character name on every invocation.
 
 Circumstances are different for test functions. Developers never write *calls* to test functions, so that consideration is gone. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions. Therefore.
 
@@ -206,41 +211,40 @@ Imagine that you're testing a function that looks like this:
 ```c++
 class PodcastManager {
  public:
-  void add_podcast(Podcast* podcast);
-  void clear_subscriptions();
-  int subscription_count();
+  void AddPodcast(Podcast* podcast);
+  void ClearSubscriptions();
+  int SubscriptionCount();
 }
 ```
 
 Now imagine the following test name:
 
-* `test_subscription_count`
+* `PodcastManagerTest.SubscriptionCount`
 
-What does that test do? If you modified `PodcastManager`, ran the unit test suite, and saw that test fail, would you know what you broke? Probably not. You would have to go read the implelementation for `test_subscription_count` to figure out what happened.
+What does that test do? If you modified `PodcastManager`, ran the unit test suite, and saw that test fail, would you know what you broke? Probably not. You would have to go read the implelementation for `PodcastManagerTest.SubscriptionCount` to figure out what happened.
 
 Imagine instead that the developer recognized that test functions don't need terse names, so they instead called the test:
 
-* `test_clear_subscriptions_resets_subscription_count_to_zero`
+* `PodcastManagerTest.ClearSubscriptionsResetsSubscriptionCountToZero`
 
 You can guess what the test implementation looks like pretty accurately just from the name. If you're reading through the test code to understand, you don't have to expend mental effort figuring out what the test is really doing. If you modified `PodcastManager`, ran your test suite, and saw this:
 
-TODO: Match gtest output
-
 ```text
-[ RUN      ] Fixture.foo
-/home/imk/dev/so/gtest/main.cpp:19: Failure
-      Expected: 1
+[----------] 1 test from PodcastManagerTests
+[ RUN      ] PodcastManagerTests.ClearSubscriptionsResetsSubscriptionCountToZero
+PodcastManagerTests.cpp(50): : error:       Expected: SubscriptionCount()
+      Which is: 1
 To be equal to: 0
-Fixture::TearDown sees failures
-[  FAILED  ] Fixture.foo (0 sec)
+[  FAILED  ] PodcastManagerTests.ClearSubscriptionsResetsSubscriptionCountToZero (4 ms)
+[----------] 1 test from PodcastManagerTests (4 ms total)
 ```
 
 You could probably fix the break without ever reading that test's implementation. That's the mark of a good test name.
 
-**A test name should be so descriptive that a developer can diagnose the test failure from the name alone.**
+**Test names should be so descriptive that a developer can diagnose a test failure from the name alone.**
 {: .notice--info}
 
-# In tests, magic numbers are your friends
+# Embrace magic numbers
 
 "Don't use magic numbers."
 
@@ -273,35 +277,16 @@ The second example is simpler, with only half as many lines. And it's more obvio
 
 There are good reasons that magic numbers were added to developers' bad lists, but I'll examine them and decide whether these reasons apply in unit test code:
 
-* **Expressiveness**: Named constants provide more context for the intent or concept better than a literal value like `8`.
-* **Consistency**: If you need to change the value, it's easier and safer to change it in a single place.
-* **Disambiguation**: Named constants allow the reader to distinguish between two instances of a value that must be equal and two instances that are equal by coincidence.
-
-Expressiveness doesn't apply to unit test code because the test *name* should convey the intent of the test. When the reader sees a magic number in your unit test code and wonders why you selected that value, the answer should either be in the test name itself or simply "it's an arbitrary value."
-
-Consistency doesn't apply because nothing should depend on constants in a unit test. If you have a situation both a test helper method and the unit test body need to share access to a constant, it likely means that you're abusing helper methods.
-
-Disambiguation does apply to unit tests, but you can usually write around it.
-
-The first major reason is that the reader shouldn't wonder what a magic number means. If there's an `8` in your code, the reader should know why you chose `8` and which other instances of the number `8` they have to change if they ever adjust your `8`. This doesn't matter much in unit test code. The answer should always be, "I pulled it out of thin air  value to exercise the code." Assigning the value of `72.0` a name doesn't change the fact that it's just an arbitrary number and it doesn't make the number any more clear.
-
-The other big reason for the "don't use magic numbers" rule is for consistency. Suppose you have some sort of low-level CPU intensive code. It's designed to run on 8 cores, so the number `8` appears frequently in the code. But it also does bit-to-byte conversion, so `8` appears a lot in the code because there are 8 bits in a byte. If you ever changed that you never want to be in a situation where multiple parts of the code rely on the value and you don't want to update one part and forget to update another. This is less of a concern in test code, where the scope of a variable is just a small, tightly scoped test function. But even if you do have multiple parts that rely on the same value, you don't have to worry much about remembering to update all of them because if you forget, your test will remind you by failing.
+| Goal | Reasoning | Why it's different in test code |
+|-------|----------------|--------------------------------------|
+| ***Expressiveness*** | Named constants provide more context for the intent or concept better than a literal value like `8`. | The *test name* should convey the intent of the test. When the reader sees a magic number in your unit test code and wonders why you selected that value, the answer should either be in the test name itself or simply "it's an arbitrary value." | 
+| ***Consistency*** | If you need to change the value, it's easier and safer to change it in a single place. | Nothing should depend on constants in a unit test. If you have a situation both a test helper method and the unit test body need to share access to a constant, it likely means that you're abusing helper methods. |
+| ***Disambiguation*** | Named constants allow the reader to distinguish between two instances of a value that must be equal and two instances that are equal by coincidence. | You can usually write around it. If you're choosing values arbitrarily, avoid numbers that seem related. |
 
 **Use magic numbers instead of defining named constants in test code.**
 {: .notice--info}
 
 Note that I'm advocating using magic numbers instead of *defining* named constants.
-
-```python
-def test_buffered_reader_reads_twice_when_read_is_just_over_buffer_size(self):
-  mock_file = mock.Mock()
-  buffered_reader = BufferedReader(mock_file)
-
-  buffered_reader.read(
-    BufferedReader.BUFFER_SIZE + 1)  # OK: Named constant is defined in production code
-
-  self.assertEqual(2, mock_file.read.call_count)
-```
 
 # Summary
 
