@@ -13,19 +13,27 @@ header:
   og_image: images/good-developers-bad-tests/cover.jpg
 ---
 
-Imagine that Facebook acquires your tech startup, netting you enough money to build your own beach house. You commission an-up-and-coming architect named Peter Keating. He's famous for his skyscrapers but has brilliant plans for your beach house.
+Congratulations! You've finally written enough lines of code that you can afford your very own beach house. Money is no object, so you hire Peter Keating, world famous architect. He's known mainly for his skyscrapers, but he assures you that he has brilliant plans for your beachfront property.
 
-Months later, you arrive at your finished beach house to find that the walls are made of concrete and steel three feet thick. Your foyer is a reception desk backed by a bank of elevators to ferry people among the house's three stories. The master bedroom and three guest bedrooms are just four adjoining cubicles.
-
-What happened? Your architect robotically applied all of his usual office building elements to your vacation home. Now, your "beach house" is just a skyscraper at the beach.
-
-Many software developers make the same mistake when writing unit test code. They learn all the best practices for writing production code, then blindly apply the exact same techniques to test code. They build skyscrapers at the beach.
+Months later, you arrive at the grand unveiling. Your new home is an imposing 5-story behemoth of steel, concrete, and reflective glass. You enter the revolving doors to find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest bedrooms are just four adjoining office cubicles.
 
 {% include image.html file="cover.jpg" alt="Architect presenting skyscraper on the beach" max_width="800px" img_link=true %}
 
+Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because structural integrity is important to a building. Therefore, your home is *better* than the breezy, light-filled homes neighboring it. You may not have large oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
+
+Too often, software developers take the same flawed approach to unit test code. They mechanically apply all the "rules" they've learned in production code and fail to examine whether the same techniques apply to tests. As a result, they build skyscrapers at the beach.
+
 # Test code is not like other code
 
-Software development is engineering. The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. Production code and test code have different engineering tradeoffs because they have different goals.
+Software development is engineering. The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. 
+
+Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
+
+Your architect might defend his decision to build steel and concrete walls by reassuring you that strong walls are important for any building. While that's true, it neglects the fact that strong walls are much more important to skyscrapers than vacation homes.
+
+Think back to the skyscraper architect on the beach. Structural integrity is important for both beach houses and skyscrapers. Your architect might claim that it needed steel and concrete walls because that provides structural integrity, and skyscrapers and beach houses both need structural integrity. While that's true, you probably recognize that your beach house walls don't need to support 200 tons of building on top of them, and you would have traded away some of that wall strength in favor of floor-to-ceiling windows to give you nice views of the water.
+
+Production code and test code have different engineering tradeoffs because they have different goals.
 
 When do you read production code? Usually, you're fixing a bug or extending existing functionality in your application. When this happens, you generally read or at least skim an entire class or module.
 
@@ -33,12 +41,6 @@ When do you read test code? Most commonly, when a test fails. How do you optimiz
 
 **Good production code is *maintainable*; good test code is *obvious*.**
 {: .notice--info}
-
-Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
-
-They have the same goals but with different weights.
-
-Think back to the skyscraper architect on the beach. Structural integrity is important for both beach houses and skyscrapers. Your architect might claim that it needed steel and concrete walls because that provides structural integrity, and skyscrapers and beach houses both need structural integrity. While that's true, you probably recognize that your beach house walls don't need to support 200 tons of building on top of them, and you would have traded away some of that wall strength in favor of floor-to-ceiling windows to give you nice views of the water.
 
 For the rest of this post, I'm going to demonstrate several pitfalls that good developers fall into when they try to bring the lessons of production code to unit tests.
 
@@ -127,6 +129,10 @@ One of the most commonly accepted software principles is the [DRY principle](htt
 * 
 Because there's risk to making changes to production code. This risk exists in test code, but the worst bug you can introduce in test code is a false positive. You can't break anything in production because of a bug in test code (not directly anyway). There's also a risk that code will go out of sync.
 
+| Goal | Reasoning | Why it's different in test code |
+|-------|----------------|--------------------------------------|
+| ***Limit code churn*** | Every change to production code. | Cost of bugs is lower in test code for the simple reason that it never affects production systems. Most test bugs will reveal themselves in the form of test failures. The worst bugs are those that reduce test coverage, but 1000 lines of test code churn is generally favorable to 100 lines of production code churn. |
+
 DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
 
 # Use test helper methods sparingly
@@ -208,40 +214,36 @@ Most developers would choose the second option (except for Java developers, for 
 
 Circumstances are different for test functions. Developers never write *calls* to test functions, so that consideration is gone. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions. Therefore.
 
-Imagine that you're testing a function that looks like this:
+Imagine that you're testing a class that looks like this:
 
 ```c++
-class PodcastManager {
+class Tokenizer {
  public:
-  void AddPodcast(Podcast* podcast);
-  void ClearSubscriptions();
-  int SubscriptionCount();
-}
+  Tokenizer(std::unique_ptr<TextStream> stream);
+  std::unique_ptr<Token> NextToken();
+ private:
+  std::unique_ptr<TextStream> stream_;
+};
 ```
 
-Now imagine the following test name:
+Now imagine that you modified `Tokenizer`, ran your tests, and discovered that the following test failed:
 
-* `PodcastManagerTest.SubscriptionCount`
+* ` TokenizerTest.TestNextToken`
 
-What does that test do? If you modified `PodcastManager`, ran the unit test suite, and saw that test fail, would you know what you broke? Probably not. You would have to go read the implelementation for `PodcastManagerTest.SubscriptionCount` to figure out what happened.
+Would you know what you broke in the production code that caused the test to fail? Probably not. Before diagnosing the problem, you'd first have to read the test itself to understand the problem.
 
-Imagine instead that the developer recognized that test functions don't need terse names, so they instead called the test:
-
-* `PodcastManagerTest.ClearSubscriptionsResetsSubscriptionCountToZero`
-
-You can guess what the test implementation looks like pretty accurately just from the name. If you're reading through the test code to understand, you don't have to expend mental effort figuring out what the test is really doing. If you modified `PodcastManager`, ran your test suite, and saw this:
+Imagine instead that you modified `Tokenizer`, ran your test suite, and saw this:
 
 ```text
-[----------] 1 test from PodcastManagerTests
-[ RUN      ] PodcastManagerTests.ClearSubscriptionsResetsSubscriptionCountToZero
-PodcastManagerTests.cpp(50): : error:       Expected: SubscriptionCount()
-      Which is: 1
-To be equal to: 0
-[  FAILED  ] PodcastManagerTests.ClearSubscriptionsResetsSubscriptionCountToZero (4 ms)
-[----------] 1 test from PodcastManagerTests (4 ms total)
+[ RUN      ] TokenizerTests.ReturnsNullptrWhenStreamIsEmpty
+c:\projects\archiver\archivertests\tokenizertests.cpp(8): error:       Expected: nullptr
+      Which is: 4-byte object <00-00 00-00>
+To be equal to: tokenizer.NextToken()
+      Which is: 4-byte object <48-2A 83-01>
+[  FAILED  ] TokenizerTests.ReturnsNullptrWhenStreamIsEmpty (6 ms)
 ```
 
-You could probably fix the break without ever reading that test's implementation. That's the mark of a good test name.
+A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. It tells the reader exactly what it is asserting about the production code. A developer could likely fix a break like this without ever reading that test's implementation. That's the mark of a good test name.
 
 **Test names should be so descriptive that a developer can diagnose a test failure from the name alone.**
 {: .notice--info}
@@ -266,7 +268,7 @@ def test_add_hours(self):
 
 If you believe you should never see magic numbers in code, the above test looks correct to you. `72.0` and `8.0` have named constants, so nobody can accuse the test of using magic numbers.
 
-Now, taste the forbidden fruit of magic numbers:
+Taste the forbidden fruit of magic numbers:
 
 ```python
 def test_add_hours(self):
