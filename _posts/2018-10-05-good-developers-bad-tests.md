@@ -13,15 +13,15 @@ header:
   og_image: images/good-developers-bad-tests/cover.jpg
 ---
 
-Congratulations! You've finally written enough lines of code that you can afford your very own beach house. Money is no object, so you hire Peter Keating, world famous architect. He's known mainly for his skyscrapers, but he assures you that he has brilliant plans for your beachfront property.
+Congratulations! You've finally written so many lines of code that you can afford your very own beach house. Money is no object, so you hire Peter Keating, world famous architect. He's known mainly for his skyscrapers, but he assures you that he has brilliant plans for your beachfront property.
 
-Months later, you arrive at the grand unveiling. Your new home is an imposing 5-story behemoth of steel, concrete, and reflective glass. You enter the revolving doors to find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest bedrooms are just four adjoining office cubicles.
+Months later, you arrive at the grand unveiling. Your new home is an imposing five-story behemoth of steel, concrete, and reflective glass. You enter the revolving doors to find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest rooms are just four adjoining office cubicles.
 
 {% include image.html file="cover.jpg" alt="Architect presenting skyscraper on the beach" max_width="800px" img_link=true %}
 
 Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because structural integrity is important to a building. Therefore, your home is *better* than the breezy, light-filled homes neighboring it. You may not have large oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
 
-Too often, software developers take the same flawed approach to unit test code. They mechanically apply all the "rules" they've learned in production code and fail to examine whether the same techniques apply to tests. As a result, they build skyscrapers at the beach.
+Too often, software developers approach unit testing with the same flawed thinking. They mechanically apply all the "rules" they learned in production code and fail to examine whether the same techniques apply to tests. As a result, they build skyscrapers at the beach.
 
 # Test code is not like other code
 
@@ -73,11 +73,11 @@ def setUp():
 
 Okay, the `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
-No, this is a **bad test**. The reader can't understand why this test works unless they search outside the test itself.
+No, this is a **bad test**. The reader can't understand why this test is correct unless they search outside the test itself.
 
 # Keep the reader in your test function
 
-Here is a better way to write the above test that conveys the meaning to the reader straightforwardly:
+Here is a better way to write the test:
 
 ```python
 def test_initial_score(self):
@@ -100,7 +100,11 @@ A reader can understand
 
 My experienced readers may think, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
 
-Yes, I'm going to commit the sin of copy/pasting a block of code many times. Here's another test of the same class:
+Prepare yourself for the horrifying answer. I'm about to advocate copy/pasting code snippets.
+
+# Dare to violate DRY
+
+Here's another test of the `get_score` function I tested above:
 
 ```python
 def test_increase_score(self):
@@ -118,11 +122,9 @@ def test_increase_score(self):
 	           account_manager.get_score(username='joe123'))
 ```
 
-Many good developers are strict adherents to the "DRY" principle: don't repeat yourself. To them, the above code is horrifying because I repeated six lines verbatim between two functions. A naive but well-meaning developer might come upon this code and refactor out the common lines, degrading the code back to where it was at the start of this post where the reader was left to wonder where `joe123` and `150` came from.
+To some, the above code is horrifying. The first six lines of the functions are an exact copy from the previous test.
 
-# Dare to violate DRY
-
-One of the most commonly accepted software principles is the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). It means "don't repeat yourself." Why does this rule exist?
+Good developers are strict adherents to the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): don't repeat yourself. The tests I'm writing violate DRY, so how can I claim that they're good tests? What's more, I'm claiming that refactoring the common lines into a helper function makes the code worse.
 
 * You don't want to update one place and forget to update others
 * You don't want to increase work when you have to change the repeated work
