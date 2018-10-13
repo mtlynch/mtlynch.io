@@ -4,8 +4,8 @@ layout: single
 author_profile: true
 sidebar:
   nav: main
-permalink: "/book-reports/happy-city/"
 hide_signup: true
+read_date: 2018-08-06
 ---
 
 {% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="https://amzn.to/2PGxPoU" max_width="250px" class="align-left" %}
@@ -18,6 +18,8 @@ Given how much urban design affects our lives, it's surprising how little we thi
 I took for granted the idea that cities should be friendly to car-travel, but the book highlights many ways in which a focus on car-friendliness makes cities worse overall. It was interesting to see examples of how cities can flourish when they prioritize the needs of pedestrians, bicyclists, and public transit.
 
 <div style="clear: both;"></div>
+
+<!--more-->
 
 ---
 

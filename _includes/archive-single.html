@@ -18,16 +18,16 @@
           {% if teaser contains "://" %}
             "{{ teaser }}"
           {% else %}
-            "{{ teaser | absolute_url }}"
+            "{{ teaser | relative_url }}"
           {% endif %}
            alt="">
       </div>
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | absolute_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ post.url | absolute_url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
     {% if post.date %}
@@ -36,6 +36,23 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    {% if post.collection == "book_reports" %}
+      <hr />
+      
+      {% comment %}
+        Split the post's excerpt into two parts using the unordered list
+        element in order to insert the link to the full notes as the last list
+        item inside the unordered list.
+      {% endcomment %}
+      {% assign contentArray = post.excerpt | split: '</ul>' %}
+      {{ contentArray.first }}
+      <li><a href="{{ post.url }}" class="full-notes">Full notes</a></li>
+      {{ contentArray.last | prepend: '</ul>' }}
+
+    {% elsif post.excerpt %}
+      <p class="archive__item-excerpt" itemprop="description">
+        {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
+      </p>
+    {% endif %}
   </article>
 </div>

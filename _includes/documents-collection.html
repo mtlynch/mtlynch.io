@@ -1,0 +1,22 @@
+{% comment %}
+  This Jekyll partial is forked and customized from the parent theme.  The
+  partial is used in displaying custom collection index pages and determines
+  what field to sort the collection on and in what direction.
+
+  ***NOTE: The parent theme explicitly allows for sorting on either date or
+  title.  The customization of this partial includes the ability to sort on
+  additional post fields.  If this customization is accepted upstream in the
+  parent theme, then this file can be removed.
+{% endcomment %}
+
+{% assign entries = site[include.collection] %}
+
+{% if include.sort_order == 'reverse' %}
+  {% assign entries = entries | sort: include.sort_by | reverse %}
+{% else %}
+  {% assign entries = entries | sort: include.sort_by %}
+{% endif %}
+
+{%- for post in entries -%}
+  {% include archive-single.html %}
+{%- endfor -%}

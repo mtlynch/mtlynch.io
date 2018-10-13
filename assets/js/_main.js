@@ -69,4 +69,12 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // Change links on Book-reports Index page from amazon link to post url
+  $('.list__item').each(function(i, obj) {
+    var postURL = $(this).find('.full-notes').attr('href');
+    if (postURL) {
+      $(this).find("a:has(img)").attr('href', postURL);
+    }
+  });
+
 });
