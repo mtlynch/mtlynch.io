@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mtlynchio:
+    image: mtlynch/jekyll
+    container_name: mtlynch-io-container
+    command: bash /app/script/_install.sh
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - ./:/app
