@@ -13,9 +13,9 @@ header:
   og_image: images/good-developers-bad-tests/cover.jpg
 ---
 
-Congratulations! You've finally written so many lines of code that you can afford your very own beach house. Money is no object, so you hire Peter Keating, world famous architect. He's known mainly for his skyscrapers, but he assures you that he has brilliant plans for your beachfront property.
+Congratulations! You've finally written so many lines of code that you can afford your very own beach house. Money is no object, so you hire Peter Keating, world famous architect. He gained his reputation with skyscrapers, but he assures you that he has brilliant plans for your beachfront property.
 
-Months later, you arrive at the grand unveiling. Your new home is an imposing five-story behemoth of steel, concrete, and reflective glass. You enter the revolving doors to find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest rooms are just four adjoining office cubicles.
+Months later, you arrive at the grand unveiling. Your new home is an imposing five-story behemoth of steel, concrete, and reflective glass. You enter your vacation home through a set of revolving doors and find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest rooms are just four adjoining office cubicles.
 
 {% include image.html file="cover.jpg" alt="Architect presenting skyscraper on the beach" max_width="800px" img_link=true %}
 
@@ -29,9 +29,7 @@ Software development is engineering. The developer must consider competing inter
 
 Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
 
-Your architect might defend his decision to build steel and concrete walls by reassuring you that strong walls are important for any building. While that's true, it neglects the fact that strong walls are much more important to skyscrapers than vacation homes.
-
-Think back to the skyscraper architect on the beach. Structural integrity is important for both beach houses and skyscrapers. Your architect might claim that it needed steel and concrete walls because that provides structural integrity, and skyscrapers and beach houses both need structural integrity. While that's true, you probably recognize that your beach house walls don't need to support 200 tons of building on top of them, and you would have traded away some of that wall strength in favor of floor-to-ceiling windows to give you nice views of the water.
+While that's true, you probably recognize that your beach house walls don't need to support 200 tons of building on top of them, and you would have traded away some of that wall strength in favor of floor-to-ceiling windows to give you nice views of the water.
 
 Production code and test code have different engineering tradeoffs because they have different goals.
 
@@ -247,7 +245,7 @@ To be equal to: tokenizer.NextToken()
 
 A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. It tells the reader exactly what it is asserting about the production code. A developer could likely fix a break like this without ever reading that test's implementation. That's the mark of a good test name.
 
-**Test names should be so descriptive that a developer can diagnose a test failure from the name alone.**
+**Write test names descriptive enough for a developer to diagnose a test failure from the name alone.**
 {: .notice--info}
 
 # Embrace magic numbers
@@ -256,7 +254,7 @@ A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in
 
 It's the "don't talk to strangers" of the programming world. It becomes so ingrained in many talented developers that they never even consider when a magic number might improve their code. In unit tests, magic numbers almost always make the code better.
 
-Consider the following test, which uses named constants instead of magic numbers:
+Consider the following test, which defines named constants to avoid magic numbers:
 
 ```python
 def test_add_hours(self):
