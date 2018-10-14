@@ -295,7 +295,7 @@ In the documentation for `coverage`, I noticed that it supported a [`paths` opti
 
 {% assign fig_caption = "Documentation for [`paths` option](https://coverage.readthedocs.io/en/coverage-4.5.1/config.html#paths) of `coverage` command" | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="paths-param.png" alt="Screenshot of paths documentation" fig_caption=fig_caption max_width="712px" link_url="https://coverage.readthedocs.io/en/coverage-4.5.1a/config.html#paths" class="img-border" %}
+{% include image.html file="paths-param.png" alt="Screenshot of paths documentation" fig_caption=fig_caption max_width="712px" link_url="https://coverage.readthedocs.io/en/coverage-4.5.1/config.html#paths" class="img-border" %}
 
 To use these options, I created the following `.coveragerc` file:
 
