@@ -4,6 +4,8 @@ services:
     image: mtlynch/jekyll
     container_name: mtlynch-io-container
     command: bash /app/script/_install.sh
+    environment:
+      - JEKYLL_ENV=docker
     ports:
       - "4000:4000"
       - "35729:35729"
