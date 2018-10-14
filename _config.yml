@@ -18,6 +18,10 @@ collections:
     title: sections
     output: false
     permalink: /sections/:path/
+  book_reports:
+    title: book_reports
+    output: true
+    permalink: /book-reports/:path/
 defaults:
 - scope:
     path: ''
@@ -31,6 +35,7 @@ defaults:
     related: true
     sidebar:
        nav: "main"
+    classes: wide
 - scope:
     path: ''
     type: pages
@@ -39,6 +44,16 @@ defaults:
     author_profile: true
     sidebar:
        nav: "main"
+    classes: wide
+- scope:
+    path: ''
+    type: book_reports
+  values:
+    layout: single
+    author_profile: true
+    sidebar:
+       nav: "main"
+    classes: wide
 locale: en-US
 title_separator: "-"
 name: Michael Lynch
@@ -172,7 +187,7 @@ markdown_ext: markdown,mkdown,mkdn,mkd,md
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "<!--more-->"
 incremental: false
 kramdown:
   input: GFM

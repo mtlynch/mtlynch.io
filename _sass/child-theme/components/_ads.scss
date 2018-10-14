@@ -57,6 +57,10 @@
     @include breakpoint($large) {
       font-size: 0.8em;
     }
+
+    @include breakpoint($x-large) {
+      font-size: 0.7em;
+    }
   }
 
   .cf {
