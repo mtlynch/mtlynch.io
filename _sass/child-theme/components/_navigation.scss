@@ -8,6 +8,10 @@
   }
 }
 
+.greedy-nav a {
+  margin: 0 .5rem;
+}
+
 .sidebar {
   @include breakpoint($x-large) {
     width: span(2 of 12);
