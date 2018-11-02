@@ -26,11 +26,11 @@ Too often, software developers approach unit testing with the same flawed thinki
 
 # Test code is not like other code
 
-Software development is engineering. The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. 
+Software development is engineering. A good engineer does more than just memorize a list of rules and apply them universally. Engineering is about understanding fundamental principles and the ability to weigh the benefits and drawbacks of different decisions.
+
+The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. 
 
 Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
-
-While that's true, you probably recognize that your beach house walls don't need to support 200 tons of building on top of them, and you would have traded away some of that wall strength in favor of floor-to-ceiling windows to give you nice views of the water.
 
 Production code and test code have different engineering tradeoffs because they have different goals.
 
@@ -38,10 +38,11 @@ When do you read production code? Usually, you're fixing a bug or extending exis
 
 When do you read test code? Most commonly, when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
+
+Good production code abstracts complexity away. Good test code should be simple and obvious. When a test break and you're trying to diagnose the cause, abstraction makes things harder. You don't want the problem hidden behind layers of abstraction; you want to know in the simplest terms what the test is doing.
+
 **Good production code is *maintainable*; good test code is *obvious*.**
 {: .notice--info}
-
-For the rest of this post, I'm going to demonstrate several pitfalls that good developers fall into when they try to bring the lessons of production code to unit tests.
 
 # A good developer's bad test
 
@@ -58,10 +59,10 @@ What does that test do? It retrieves a "score" for a user with the name `joe123`
 1. Where did the `joe123` account come from?
 1. Why do I expect `joe123`'s score to be 150?
 
-This is Python code, so perhaps the answers are in the `setUp` method. Python's native unit test framework invokes `setUp` before each test method:
+Perhaps the answers are in the `setUp` method, which the test framework calls before executing each test function:
 
 ```python
-def setUp():
+def setUp(self):
   database = MockDatabase()
   database.add_row({
       'username': 'joe123',
@@ -70,13 +71,13 @@ def setUp():
   self.account_manager = AccountManager(database)
 ```
 
-Okay, the `setUp` function created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
+Okay, the `setUp` method created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
 No, this is a **bad test**. The reader can't understand why this test is correct unless they search outside the test itself.
 
 # Keep the reader in your test function
 
-The reader should be able to read a test from top to bottom with no jumping around. If the reader needs to search outside the test to understand why it's correct, the test has not done its job.
+The reader should be able to read a test in a straight line from top to bottom. If they have to jump out of the test in the middle to read another function, the test has not done its job.
 
 Here's a better way to write `test_initial_score` from [the previous section](#a-good-developers-bad-test):
 
@@ -94,7 +95,7 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-Everything the reader needs is right there in the test.
+All I did was inline the code that was previously in `setUp` but the code is now immensely easier to read. Everything the reader needs is right there in the test, and it now has a clear structure of [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert).
 
 **The reader should understand a test function without reading any code outside the function body.**
 {: .notice--info}
@@ -221,18 +222,21 @@ If the test is exercising `AccountManager`, you should instantiate it in the met
 
 **Look for opportunities to refactor production code to eliminate the need for test helper methods.**
 {: .notice--info}
-# Go crazy with test names
 
-Good developers write function names that are concise. Imagine naming a function in production code and you had a choice between the following two names:
+# Go crazy with long test names
+
+Good developers write function names that are concise. If you had to name a function in production code using one of the two following options, which would you choose?
 
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
 * `isAccountActive`
 
-Most developers would choose the second option because it's much shorter and conveys roughly the same information (caveat: Java developers likely find both names offensively terse). 
+For most developers, the extra precision of the first option isn't worth the burden of a typing a 57-character name on every invocation, so they'd choose the latter option (except for Java developers, for whom both names are offensively terse). 
 
-Circumstances are different for test functions. Developers never write *calls* to test functions, so that consideration is gone. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions. Therefore.
+Circumstances are different for test functions. Developers never write *calls* to test functions, so that consideration is gone. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions.
 
-Suppose you have a class that looks like this:
+In addition, precision matters much more for function names in test code. Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible.
+
+Suppose you have a production class that looks like this:
 
 ```c++
 class Tokenizer {
@@ -244,13 +248,13 @@ class Tokenizer {
 };
 ```
 
-Now, imagine that you modified `Tokenizer`, ran your tests, and discovered that the following test failed:
+What if you modified `Tokenizer`, ran your tests, and discovered that the following test failed:
 
 * ` TokenizerTest.TestNextToken`
 
-Would you know what you broke in the production code that caused the test to fail? Probably not. `TestNextToken` tells you that you broke functionality related to the `NextToken()` method, but that doesn't mean much. To diagnose the failure, you'd  have to read the test itself to understand the problem.
+Would you know what you broke that caused the test to fail? Probably not. A failure in `TestNextToken` tells you that you screwed up the `NextToken()` method, but that doesn't mean much. To diagnose the failure, you'd  have to read the test itself to understand the problem.
 
-What if you modified `Tokenizer`, ran your test suite, and saw this:
+Instead, what if you saw this:
 
 ```text
 [ RUN      ] TokenizerTests.ReturnsNullptrWhenStreamIsEmpty
@@ -261,23 +265,32 @@ To be equal to: tokenizer.NextToken()
 [  FAILED  ] TokenizerTests.ReturnsNullptrWhenStreamIsEmpty (6 ms)
 ```
 
-A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. It tells the reader exactly what it is asserting about the production code. A developer could likely fix this break without ever reading the test's implementation. That's the mark of a good test name.
+A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. It tells the reader exactly what it is asserting about the production code. A developer could fix this break without ever reading the test's implementation. That's the mark of a good test name.
 
-**A good test name is so descriptive that a developer can diagnose a failure from the test name alone.**
+**A good test name is so descriptive that a developer can diagnose failures of that test from the name alone.**
 {: .notice--info}
 
 # Embrace magic numbers
 
 "Don't use magic numbers."
 
-It's the "don't talk to strangers" of the programming world. A "magic number" is a value in .
+It's the "don't talk to strangers" of the programming world. It becomes so ingrained in many talented developers that they never consider when a magic number might improve their code. In unit tests, magic numbers almost always make the code better.
+
+As a refresher, a magic number is a number or string that appears in code without information about what it represents or how it relates to other values. Here's a simple example of one:
 
 ```python
-# BAD: Magic numbers in production code.
-image_converter.set_brightness_threshold(27.39, 8)
+calculate_pay(hours=80) # <-- magic number
 ```
 
-It becomes so ingrained in many talented developers that they never consider when a magic number might improve their code. In unit tests, magic numbers almost always make the code better.
+Programmers generally agree that magic numbers in production code are A Bad Thing, so they replace them with defined constants like this:
+
+```python
+HOURS_PER_WEEK = 40
+WEEKS_PER_PAY_PERIOD = 2
+calculate_pay(hours=HOURS_PER_WEEK * WEEKS_PER_PAY_PERIOD)
+```
+
+Unfortunately, there's a misconception that magic numbers are a no-no in test code as well, when the opposite is actually true.
 
 Consider the following test:
 
@@ -291,9 +304,9 @@ def test_add_hours(self):
   self.assertEqual(expected_billable_hours, hours_tracker.billable_hours())
 ```
 
-If you believe magic numbers are universally evil, the above test looks correct to you. `72.0` and `8.0` have named constants, so nobody can accuse the test of using magic numbers.
+If you believe magic numbers are universally evil, the above test looks correct to you. `72.0` and `8.0` have named constants, so nobody can accuse the test of magic numbers.
 
-Now, imagine if you wrote the same test, but you indulged the forbidden fruit of magic numbers:
+Now, imagine writing the same test while indulging in the forbidden fruit of magic numbers:
 
 ```python
 def test_add_hours(self):
@@ -304,13 +317,13 @@ def test_add_hours(self):
 
 The second example is simpler, with only half as many lines. And it's more obvious. The reader doesn't have to jump around the function tracking names of constants. Magic numbers made this test better.
 
-There are good reasons that magic numbers were added to developers' bad lists, but I'll examine them and decide whether these reasons apply in unit test code:
+There are good reasons that magic numbers were added to developers' bad lists, but these reasons generally don't apply to test code:
 
 | Goal | Reasoning | Why it's different in test code |
 |-------|----------------|--------------------------------------|
 | ***Expressiveness*** | Named constants explain intent better more clearly than a literal value like `8`. | The *test name* should convey the intent of the test. When the reader sees a magic number in your unit test code and wonders why chose it, the answer should be in the test name. | 
 | ***Consistency*** | If you need to change the value, it's easier and safer to change it in a single place. | Nothing should depend on constants in a unit test. If you want to share a constant between a test helper method and the unit test body, you're probably [abusing helper methods](#use-test-helper-methods-sparingly). |
-| ***Disambiguation*** | Named constants allow the reader to distinguish between two instances of a value that must be equal and two instances that are equal by coincidence. | Still a concern in tests, but you can usually write around it. If you're choosing values arbitrarily, avoid numbers that seem related. |
+| ***Disambiguation*** | Named constants allow the reader to distinguish between values that are equal by coincidence and equal by necessity. | Still a concern in tests, but you can usually write around it. If you're choosing values arbitrarily, avoid numbers that seem related. |
 
 **Avoid creating named constants in test code. Use magic numbers instead.**
 {: .notice--info}
@@ -322,6 +335,6 @@ Remember the "engineering" part of software engineering. When you write test cod
 If you're a good developer and want to avoid writing bad tests, here are some guidelines to follow in test code:
 
 * Optimize for obviousness over maintainability.
-* Avoid helper methods outside of your test functions.
+* Avoid helper methods.
 * Use literal values (magic numbers) instead of defining named constants.
-* Use more verbose names for test methods than you would in production code.
+* Use more verbose function names than you would in production code.
