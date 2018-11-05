@@ -30,6 +30,10 @@ The reason so many developers get confused about how to practice good engineerin
 
 You typically read production code when fixing a bug or extending functionality in your application. When this happens, you generally read or at least skim an entire class or module. The most common scenario for reading test code is when a test fails. Most commonly, when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
 
+Production code is all about abstractions. Good production hides complexity in functions and other classes. Test codes are a whole other ball game. You want as little abstraction as possible in test code. Tests are a diagnostic tool, so it should be as simple and obvious as possible.
+
+What if your ruler didn't measure in inches or centimeters but in abstract "ruler units", then you looked at a chart to map ruler units to the unit of measure you want?
+
 Tests are a diagnostic tool and act as living documentation. When you're diagnosing a problem, you want as little abstraction as possible.
 
 The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. 
@@ -79,7 +83,7 @@ No, this is a **bad test**. The reader can't understand why this test is correct
 
 # Keep the reader in your test function
 
-The reader should be able to read a test in a straight line from top to bottom. If they have to jump out of the test in the middle to read another function, the test has not done its job.
+The reader should be able to read a test in a straight line from top to bottom. If they have to jump out of the test to read another function, the test has not done its job.
 
 Here's a better way to write the test from the previous section:
 
@@ -126,7 +130,7 @@ def test_increase_score(self):
              account_manager.get_score(username='joe123'))
 ```
 
-To some, the above code is horrifying. The first six lines of the functions are an exact copy from the previous test.
+To some, the above code is horrifying. The first six lines are an exact copy from the previous test.
 
 Good developers are strict adherents to the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): don't repeat yourself. The tests I'm writing violate DRY, so how can I claim that they're good tests? Worse, I'm arguing that my DRY-violating tests are **better** than tests that have been refactored to eliminate repeated code.
 
@@ -141,7 +145,7 @@ Because there's risk to making changes to production code. This risk exists in t
 
 DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
 
-# Use test helper methods sparingly
+# Resist the temptation of test helper methods
 
 Maybe you can live with copy/pasting the same five lines in every test. What if the `AccountManager` example above was more difficult to instantiate?
 
@@ -161,8 +165,8 @@ def test_increase_score(self):
   privilege_manager = PrivilegeManager(privilege_database)
   url_downloader = UrlDownloader()
   account_manager = AccountManager(user_database,
-                             privilege_manager,
-                             url_downloader)
+                                   privilege_manager,
+                                   url_downloader)
   # ^^^^^^^^^^^^^^^^^^^^^ End of boilerplate code ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   account_manager.adjust_score(username='joe123',
@@ -197,22 +201,8 @@ Sometimes you don't have the freedom to go tearing apart a class. In these cases
 ```python
 def test_increase_score(self):
   account_manager = AccountManagerBuilder()
-    .with_user_database(
-      MockDatabaseBuilder()
-        .with_row({
-          'username': 'joe123',
-          'score': 150.0
-        })
-        .build()
-    )
-    .with_privilege_database(
-      MockDatabaseBuilder().
-        .with_row({
-          'privilege': 'upvote',
-          'minimum_score': 200.0
-        })
-        .build()
-    )
+    .with_user(username='joe123', score=150.0)
+    .with_privilege(privilege='upvote', minimum_score=200.0)
     .build()
 
   account_manager.adjust_score(username='joe123',
@@ -260,14 +250,14 @@ If the test is exercising `AccountManager`, you should instantiate it in the met
 
 # Go crazy with long test names
 
-Good developers write concise function names. For example, which of the following two function names do you prefer?
+Which of the following function names do you prefer?
 
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
 * `isAccountActive`
 
 The first is more precise, but the burden of typing a 57-character name on every invocation outweighs the benefit of extra precision for most developers (except for Java developers, for whom both names are offensively terse). 
 
-For test functions, there's a key factor that changes the equation: nobody writes *calls* to test functions. A developer only has to type out a test name once: in the function signature. Given this, brevity matters, but it matters much less than for other functions.
+For test functions, there's a key factor that changes the equation: nobody writes *calls* to test functions. A developer only has to type out a test name once in the function signature. Given this, brevity matters, but it matters less than for other functions.
 
 In addition, precise function names have higher value in test code. Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible. For example, imagine modifying this production class:
 
