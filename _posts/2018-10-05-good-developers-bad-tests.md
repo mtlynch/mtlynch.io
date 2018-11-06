@@ -26,29 +26,16 @@ Too often, software developers approach unit testing with the same flawed thinki
 
 # Test code is not like other code
 
-The reason so many developers get confused about how to practice good engineering on test code is that the design goals *seem* the same as production code, but there are important differences. To understand them, think about the circumstances in which you read each type of code.
+Production code is all about abstractions. Good production code hides complexity in well-scoped functions and beautiful class hierarchies. It allows the reader to navigate a large system with ease, diving down into the details or jumping up to a higher level of abstraction.
 
-You typically read production code when fixing a bug or extending functionality in your application. When this happens, you generally read or at least skim an entire class or module. The most common scenario for reading test code is when a test fails. Most commonly, when a test fails. How do you optimize for this case. Write your tests to make it as easy and fast as possible for the developer to understand why the test failed.
+Test code is a different beast. Tests should have as little abstraction as possible. Tests are a diagnostic tool, so it should be as simple and obvious as possible.
 
-Production code is all about abstractions. Good production hides complexity in functions and other classes. Test codes are a whole other ball game. You want as little abstraction as possible in test code. Tests are a diagnostic tool, so it should be as simple and obvious as possible.
-
-What if your ruler didn't measure in inches or centimeters but in abstract "ruler units", then you looked at a chart to map ruler units to the unit of measure you want?
-
-Tests are a diagnostic tool and act as living documentation. When you're diagnosing a problem, you want as little abstraction as possible.
-
-The developer must consider competing interests and weigh tradeoffs to build a solution that best satisfies the goal. 
-
-Production code is optimized for maintainability. Test code is optimized for readability. They're overlapping qualities, but there's a subtle distinction. The reason it's so easy for good developers to fail to adjust their techniques is that the design goals *seem* the same.
-
-Production code and test code have different engineering tradeoffs because they have different goals.
-
-
-
-
-Good production code abstracts complexity away. Good test code should be simple and obvious. When a test break and you're trying to diagnose the cause, abstraction makes things harder. You don't want the problem hidden behind layers of abstraction; you want to know in the simplest terms what the test is doing.
-
-**Good production code is maintainable; good test code is *obvious*.**
+**Good production code is well-factored; good test code is *obvious*.**
 {: .notice--info}
+
+Think of a ruler. It's been around in roughly the same form for hundreds of years because it's simple and easy to interpret. What if I told a carpenter that I invented a new ruler that measured in "abstract ruler units" which they could convert to inches using a separate a chart? They'd smack me in the face with it. When they use a ruler, they want the simplest answer and minimal layers of abstraction.
+
+Good test code is the same way. It should minimize the reader's cognitive load.
 
 # A good developer's bad test
 
@@ -79,13 +66,15 @@ def setUp(self):
 
 Okay, the `setUp` method created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
-No, this is a **bad test**. The reader can't understand why this test is correct unless they search outside the test itself.
+No, this is a **bad test**.
 
 # Keep the reader in your test function
 
-The reader should be able to read a test in a straight line from top to bottom. If they have to jump out of the test to read another function, the test has not done its job.
+When you write your tests, think about the experience of the next developer to see the test break. They don't want to read your entire test suite, and they certainly don't want to read any kind of inheritance tree of test classes.
 
-Here's a better way to write the test from the previous section:
+If a test breaks, the reader should be able to diagnose the problem by reading the body of the test function in a straight line from top to bottom. If they have to jump out of the test to read another function, the test has not done its job.
+
+With this in mind, here's a rewrite of the test from the previous section:
 
 ```python
 def test_initial_score(self):
@@ -101,18 +90,18 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-All I did was inline the code that was previously in `setUp` but it made a world of difference. Now, everything the reader needs is right there in the test. It also has a clear structure of [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert), making it easier for anyone familiar with that pattern to understand.
+All I did was inline the code from the `setUp` method, but it made a world of difference. Now, everything the reader needs is right there in the test. It also has a clear structure of [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert), making it easier for anyone familiar with that pattern to understand.
 
 **The reader should understand a test function without reading any code outside the function body.**
 {: .notice--info}
 
-My experienced readers may think, "That's all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating the setup code?"
+# Dare to violate DRY
+
+My experienced readers may think, "Inlining the setup code is all well and good for a single test. But what happens if you have many tests? Won't you end up duplicating that code every time?"
 
 Prepare yourself, because you'll likely find my answer shocking: I'm about to advocate [copy/paste programming](https://en.wikipedia.org/wiki/Copy_and_paste_programming).
 
-# Dare to violate DRY
-
-Here's another test of the `get_score` function I tested above:
+Here's another test of the `AccountManager` class I tested above:
 
 ```python
 def test_increase_score(self):
@@ -130,24 +119,16 @@ def test_increase_score(self):
              account_manager.get_score(username='joe123'))
 ```
 
-To some, the above code is horrifying. The first six lines are an exact copy from the previous test.
+For strict adherents of the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself. Worse, I'm arguing that my DRY-violating tests are **better** than tests that are free of repeated code. How can this be?
 
-Good developers are strict adherents to the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): don't repeat yourself. The tests I'm writing violate DRY, so how can I claim that they're good tests? Worse, I'm arguing that my DRY-violating tests are **better** than tests that have been refactored to eliminate repeated code.
+Recall that the goal of tests is simplicity. If you can achieve simplicity without repeating code, that's ideal, but it's okay to repeat code if doing so creates a test that's dead simple. Focus on the developer who has to diagnose the problem when this test fails.
 
-* You don't want to update one place and forget to update others
-* You don't want to increase work when you have to change the repeated work
-* 
-Because there's risk to making changes to production code. This risk exists in test code, but the worst bug you can introduce in test code is a false positive. You can't break anything in production because of a bug in test code (not directly anyway). There's also a risk that code will go out of sync.
+**The reader should understand a test function without reading any code outside the function body.**
+{: .notice--info}
 
-| Goal | Reasoning | Why it's different in test code |
-|-------|----------------|--------------------------------------|
-| ***Limit code churn*** | Every change to production code. | Cost of bugs is lower in test code for the simple reason that it never affects production systems. Most test bugs will reveal themselves in the form of test failures. The worst bugs are those that reduce test coverage, but 1000 lines of test code churn is generally favorable to 100 lines of production code churn. |
+# Think twice before adding helper methods
 
-DRY. Don't repeat yourself. Why not? Because if you copy/pasted a snippet of code to nine different places and then you have to change it, now you or some future developer has to track down all nine occurrences and change them. What happens if you copy/paste the same code in nine different tests? They're all in the same file and there's very low risk of breaking anything by changing them all. You ideally want to avoid repeating code in general, but the penalty for doing it in test code is much lower, and thus you should write your test code with that in mind.
-
-# Resist the temptation of test helper methods
-
-Maybe you can live with copy/pasting the same five lines in every test. What if the `AccountManager` example above was more difficult to instantiate?
+Maybe you can live with copy/pasting the same five lines in every test, but what if `AccountManager` required more setup code?
 
 ```python
 def test_increase_score(self):
@@ -178,11 +159,9 @@ def test_increase_score(self):
 
 That's 15 lines just to get an instance of `AccountManager` and begin testing it. At that level, there's so much boilerplate that it distracts from whatever behavior you're trying to test.
 
-Your natural inclindation might be to refactor your test code to eliminate the uninteresting code. Sometimes it's your only choice, but it should be your last option.
+Your natural inclination might be to bury all the uninteresting code in test helper methods, but you should first ask a more vital question: why is the system so difficult to test?
 
-**Best option: Refactor the system you're testing**
-
-If you need a lot of boilerplate code simply to call the system you're testing, that may indicate a flaw in your design. Take another look at the line in the test above that instantiates the object under test:
+If you need a lot of boilerplate code simply to call the system you're testing, that may indicate a flaw in your design. Take another look at the object instantiation line my example test above:
 
 ```python
 account_manager = AccountManager(user_database,
@@ -190,19 +169,23 @@ account_manager = AccountManager(user_database,
                                  url_downloader)
 ```
 
-Upon closer inspection, there are some design smells here. It takes one database object(`user_database`) directly, but its next parameter is `privilege_manager`, which wraps the `privilege_database`. And what is it doing with a "URL downloader?" That certainly seems pretty distant conceptually from its other two parameters?
+Upon closer inspection, there are some design smells here. It accesses the `user_database` directly but its next parameter is `privilege_manager`, which is a wrapper for `privilege_database`. Why is `AccountManager` operating on two different layers of abstraction? And what is it doing with a "URL downloader?" That certainly seems distant conceptually from its other two parameters.
 
-In this case, the best thing to do is refactor `AccountManager`. This will not only make the class easier to test but it will make the code easier for production clients to use as well.
+In this case, refactoring `AccountManager` solves the root problem whereas helper methods would simply bury the symptoms. Refactoring not only makes the class easier to test but also facilitates usage for production clients.
 
-**Good option: Create a factory or builder class**
+**Before writing test helper methods, look for opportunities to solve the problem by refactoring production code.**
+{: .notice--info}
 
-Sometimes you don't have the freedom to go tearing apart a class. In these cases, you can simplify your test code by creating a factory or builder for the class you're testing.
+# If you need helper methods, write them responsibly
+
+You don't always have the freedom to tear apart a production class for testability. Sometimes, your best option is to write helper methods, but if you do so, it's important to write good ones.
+
+The builder pattern is often helpful
 
 ```python
 def test_increase_score(self):
   account_manager = AccountManagerBuilder()
     .with_user(username='joe123', score=150.0)
-    .with_privilege(privilege='upvote', minimum_score=200.0)
     .build()
 
   account_manager.adjust_score(username='joe123',
@@ -212,41 +195,35 @@ def test_increase_score(self):
                    account_manager.get_score(username='joe123'))
 ```
 
-So, it's now 18 lines instead of 15 lines, but it's a single *statement*.
+This achieves the arrange, act, assert structure. I cut out details about `PrivilegeManager` and `UrlDownloader` because they're not relevant to this test, so the builder class can use default values. Critically, I didn't use default values to populate the `joe123` user because that value is critical to understanding the test.
 
-**Last option: Use a test helper method**
+As a counterexample, this is a poor use of 
 
-The more helper methods you add, the more you obscure usage of the thing you're testing. If you choose this route, be careful:
-
-* Never put values in the helper methods that readers need to know to understand your test
-* Avoid 
-
-Test helper methods are best used to prepare inputs to the system you're testing or to verify its output. When you start burying calls to the system you're testing in helper methods, you make it difficult for the reader to understand how the test interacts with the system under test.
-
-For example, this is a reasonable use of a helper method:
 
 ```python
-# OK: Uses a helper method to create an input to AccountManager.
-mock_database = create_test_database_with_single_user(
-  username='joe123', score=150.0))
-account_manager = AccountManager(mock_database)
+def adjust_score_by_dummy_amount(self, username): # <- Helper method
+  self.account_manager.adjust_score(username,
+                                    adjustment=25.0)
+
+...
+
+def test_increase_score(self):
+  self.account_manager = AccountManagerBuilder()
+    .with_user(username='joe123', score=150.0)
+    .build()
+
+  self.adjust_score_by_dummy_amount(username='joe123')
+
+  self.assertEqual(175.0,  # BAD: Test relies on a value set in the helper method.
+                   account_manager.get_score(username='joe123'))
 ```
 
-It hides boilerplate code, but the reader can still see all ther interactions with `AccountManager`, the class you're testing.
+* Never rely on values set in helper methods
+* Avoid interacting with the system under test in helper methods
 
-In contrast, this is a weaker use of a test helper method:
-
-```python
-# BAD: Hides instantiation of AccountManager class.
-account_manager = (
-  create_test_account_manager_with_single_user(
-    username='joe123', score=150.0)))
-```
+Use helper methods to prepare inputs
 
 If the test is exercising `AccountManager`, you should instantiate it in the method itself.
-
-**Look for opportunities to refactor production code to eliminate the need for test helper methods.**
-{: .notice--info}
 
 # Go crazy with long test names
 
@@ -279,7 +256,7 @@ What if you ran your test suite and saw this:
 
 Would you know what caused the test to fail? Probably not.
 
-A failure in `TestNextToken` tells you that you screwed up the `NextToken()` method, but that doesn't mean much. To diagnose the failure, you'd  have to read the test itself to understand the problem.
+A failure in a test named `TestNextToken` tells you that you screwed up the `NextToken()` method, but that doesn't mean much. To diagnose the failure, you'd  have to read the test itself to understand the problem.
 
 Instead, what if you saw this:
 
@@ -339,14 +316,6 @@ The second example is simpler, with only half as many lines. And it's more obvio
 
 **Avoid creating named constants in test code. Use magic numbers instead.**
 {: .notice--info}
-
-There are good reasons that magic numbers were added to developers' bad lists, but these reasons generally don't apply to test code:
-
-| Goal | Reasoning | Why it's different in test code |
-|-------|----------------|--------------------------------------|
-| ***Expressiveness*** | Named constants explain intent better more clearly than a literal value like `8`. | The *test name* should convey the intent of the test. When the reader sees a magic number in your unit test code and wonders why you chose it, the answer should be in the test name. | 
-| ***Consistency*** | If you need to change the value, it's better to change it in a single place. | Nothing should depend on constants a unit test defines. If you want to share a constant between a test helper method and the unit test body, you're probably [abusing helper methods](#use-test-helper-methods-sparingly). |
-| ***Disambiguation*** | Named constants allow the reader to distinguish between values that are equal by coincidence vs. equal by necessity. | Still a concern in tests, but you can usually write around it by choosing test values that are unequal to other values that appear in the test. |
 
 # Conclusion
 
