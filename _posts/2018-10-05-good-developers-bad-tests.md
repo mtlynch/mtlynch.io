@@ -28,12 +28,14 @@ Too often, software developers approach unit testing with the same flawed thinki
 
 Production code is all about abstractions. Good production code hides complexity in well-scoped functions and beautiful class hierarchies. It allows the reader to navigate a large system with ease, diving down into the details or jumping up to a higher level of abstraction.
 
-Test code is a different beast. Tests should have as little abstraction as possible. Tests are a diagnostic tool, so it should be as simple and obvious as possible.
+Test code is a different beast. Tests should have as little abstraction as possible. Every layer of indirection makes it more difficult to understand exactly what a test is doing. Tests are a diagnostic tool, so it should be as simple and obvious as possible.
 
 **Good production code is well-factored; good test code is *obvious*.**
 {: .notice--info}
 
-Think of a ruler. It's been around in roughly the same form for hundreds of years because it's simple and easy to interpret. What if I told a carpenter that I invented a new ruler that measured in "abstract ruler units" which they could convert to inches using a separate a chart? They'd smack me in the face with it. When they use a ruler, they want the simplest answer and minimal layers of abstraction.
+{% include image.html file="dane-deaner-272363-unsplash-cropped.jpg" alt="Image of a ruler" img_link=true max_width="325px" class="align-right" link_url="https://unsplash.com/photos/JNpmCYZID68" %}
+
+Think of a ruler. It's been around in roughly the same form for hundreds of years because it's simple and easy to interpret. Suppose I invented a new ruler that measured in "abstract ruler units." Users could convert from "ruler units" to inches or centimeters with a conversion chart. If I offered such a ruler to a carpenter, they'd smack me in the face with it. When they use a ruler, they want the simplest answer and minimal layers of abstraction.
 
 Good test code is the same way. It should minimize the reader's cognitive load.
 
@@ -173,14 +175,19 @@ Upon closer inspection, there are some design smells here. It accesses the `user
 
 In this case, refactoring `AccountManager` solves the root problem whereas helper methods would simply bury the symptoms. Refactoring not only makes the class easier to test but also facilitates usage for production clients.
 
-**Before writing test helper methods, look for opportunities to solve the problem by refactoring production code.**
+**Eliminate repetitive test code through clean interfaces rather than test helper methods.**
 {: .notice--info}
 
 # If you need helper methods, write them responsibly
 
 You don't always have the freedom to tear apart a production class for testability. Sometimes, your best option is to write helper methods, but if you do so, it's important to write good ones.
 
-The builder pattern is often helpful
+* Never rely on values set in helper methods
+* Avoid interacting with the system under test in helper methods
+
+These are logical extensions of the "keep the reader in your test function" principle.
+
+The builder pattern (TODO: link) often provides an elegant way of eliminating boring boilerplate while exposing values that are critical to understanding the test:
 
 ```python
 def test_increase_score(self):
@@ -195,14 +202,13 @@ def test_increase_score(self):
                    account_manager.get_score(username='joe123'))
 ```
 
-This achieves the arrange, act, assert structure. I cut out details about `PrivilegeManager` and `UrlDownloader` because they're not relevant to this test, so the builder class can use default values. Critically, I didn't use default values to populate the `joe123` user because that value is critical to understanding the test.
+It exposes all of the values the reader needs in order to understand the test, and it maintains the tidy arrange, act, assert structure. Even if `AccountManager`'s constructor takes more parameters, it's okay for `AccountManagerBuilder` to use hidden, default values because they're not relevant to the test.
 
-As a counterexample, this is a poor use of 
-
+As a counterexample, here is a poor use of a helper method:
 
 ```python
 def adjust_score_by_dummy_amount(self, username): # <- Helper method
-  self.account_manager.adjust_score(username,
+  self.account_manager.adjust_score(username, # BAD: Hides interaction with system under test.
                                     adjustment=25.0)
 
 ...
@@ -218,25 +224,20 @@ def test_increase_score(self):
                    account_manager.get_score(username='joe123'))
 ```
 
-* Never rely on values set in helper methods
-* Avoid interacting with the system under test in helper methods
-
-Use helper methods to prepare inputs
-
-If the test is exercising `AccountManager`, you should instantiate it in the method itself.
+It buries the `25.0` value in the helper method, which prevents a reader from understanding `test_increase_score` on its own. Further, it hides the call to `adjust_score`, which makes it more difficult for the reader to understand interactions with the class under test.
 
 # Go crazy with long test names
 
-Which of the following function names do you prefer?
+Which of the following function names would you prefer to see in production code?
 
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
 * `isAccountActive`
 
-The first is more precise, but the burden of typing a 57-character name on every invocation outweighs the benefit of extra precision for most developers (except for Java developers, for whom both names are offensively terse). 
+The first is more precise, but comes with the burden of typing a 57-character name on every invocation. Most developers are willing to sacrifice a bit of precision in favor of for a concise, almost-as-good name like `isAccountActive` (except for Java developers, for whom both names are offensively terse). 
 
-For test functions, there's a key factor that changes the equation: nobody writes *calls* to test functions. A developer only has to type out a test name once in the function signature. Given this, brevity matters, but it matters less than for other functions.
+For test functions, there's a key factor that changes the equation: you never write *calls* to test functions. A developer types out a test name exactly once in the function signature. Given this, brevity still matters, but it matters less than in production code.
 
-In addition, precise function names have higher value in test code. Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible. For example, imagine modifying this production class:
+Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible. For example, imagine modifying this production class:
 
 ```c++
 class Tokenizer {
@@ -248,7 +249,7 @@ class Tokenizer {
 };
 ```
 
-What if you ran your test suite and saw this:
+Suppose you ran your test suite and this line appeared in the output:
 
 ```text
 [  FAILED  ] TokenizerTests.TestNextToken (6 ms)
@@ -256,7 +257,7 @@ What if you ran your test suite and saw this:
 
 Would you know what caused the test to fail? Probably not.
 
-A failure in a test named `TestNextToken` tells you that you screwed up the `NextToken()` method, but that doesn't mean much. To diagnose the failure, you'd  have to read the test itself to understand the problem.
+A failure in a test named `TestNextToken` tells you that you screwed up the `NextToken()` method, but that's meaningless in a class with a single public method. To diagnose the failure, you'd  have to read the test itself to understand the problem.
 
 Instead, what if you saw this:
 
@@ -273,15 +274,15 @@ A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in
 
 "Don't use magic numbers."
 
-It's the "don't talk to strangers" of the programming world. It becomes so ingrained in many talented developers that they never consider when a magic number might improve their code. But, here's the secret: magic numbers make unit tests better.
+It's the "don't talk to strangers" of the programming world. It becomes so ingrained in many talented developers that they never consider when a magic number might improve their code. But, here's a secret: magic numbers make unit tests better.
 
-As a refresher, a "magic number" is a numeric value or string that appears in code without information about what it represents or how it relates to other values. Here's an example:
+As a refresher, a "magic number" is a numeric value or string that appears in code without information about what it represents. Here's an example:
 
 ```python
-calculate_pay(hours=80) # <-- magic number
+calculate_pay(80) # <-- magic number
 ```
 
-Programmers generally agree that magic numbers in production code are A Bad Thing, so they replace them with named constants like this:
+Programmers agree that magic numbers in production code are A Very Bad Thing, so they replace them with named constants like this:
 
 ```python
 HOURS_PER_WEEK = 40
@@ -312,7 +313,9 @@ def test_add_hours(self):
   self.assertEqual(80.0, hours_tracker.billable_hours())
 ```
 
-The second example is simpler, with only half as many lines. And it's more obvious. The reader doesn't have to jump around the function tracking names of constants. Magic numbers made this test better.
+The second example is simpler, with only half as many lines. And it's more obvious. The reader doesn't have to jump around to track the constants' names.
+
+Magic numbers made this test better, just as they make all tests better. If you find yourself yearning to define a constant in your test, it likely indicates a flaw in your test, such as [abuse of helper methods](#if-you-need-helper-methods-write-them-responsibly).
 
 **Avoid creating named constants in test code. Use magic numbers instead.**
 {: .notice--info}
@@ -321,4 +324,4 @@ The second example is simpler, with only half as many lines. And it's more obvio
 
 Software development is engineering. A good engineer does more than just memorize a list of rules and apply them universally. Engineering requires one to understand fundamental principles and to weigh the benefits and drawbacks of different decisions. 
 
-To write excellent tests, you must recognize how the goals of test code differ from production code and adjust your engineering decisions accordingly. Most importantly, tests should be obvious and minimize complexity.
+To write excellent tests, recognize how the goals of test code differ from those of production code and adjust your engineering decisions accordingly. Most importantly, tests should maximize a reader's understanding of the system under test while minimizing complexity.
