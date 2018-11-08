@@ -74,9 +74,9 @@ No, this is a **bad test**.
 
 # Keep the reader in your test function
 
-When you write a test, think about the next developer who will see the test break. They don't want to read your entire test suite, and they certainly don't want to read any kind of inheritance tree of test classes.
+When you write a test, think about the next developer who will see the test break. They don't want to read your entire test suite, and they certainly don't want to read an inheritance tree of test classes.
 
-If a test breaks, the reader should be able to diagnose the problem by reading the body of the test function in a straight line from top to bottom. If they have to jump out of the test to read ancillary code, the test has not done its job.
+If a test breaks, the reader should be able to diagnose the problem quickly by reading the body of the test function in a straight line from top to bottom. If they have to jump out of the test to read ancillary code, the test has not done its job.
 
 With this in mind, here's a rewrite of the test from the previous section:
 
@@ -94,18 +94,16 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-All I did was inline the code from the `setUp` method, but it made a world of difference. Now, everything the reader needs is right there in the test. It also has a clear structure of [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert), making it easier for anyone familiar with that pattern to understand.
+All I did was inline the code from the `setUp` method, but it made a world of difference. Now, everything the reader needs is right there in the test. It also has a clear structure of [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert), so the structure itself aids in the reader's comprehension.
 
 **The reader should understand a test function without reading any code outside the function body.**
 {: .notice--info}
 
 # Dare to violate DRY
 
-Inlining the setup code is all well and good for a single test. But what happens if I have many tests? Won't I duplicate that code every time?
+Inlining the setup code is all well and good for a single test. But what happens if I have many tests? Won't I duplicate that code every time? Prepare yourself, because you'll likely find my answer shocking: I'm about to advocate [copy/paste programming](https://en.wikipedia.org/wiki/Copy_and_paste_programming).
 
-Prepare yourself, because you'll likely find my answer shocking: I'm about to advocate [copy/paste programming](https://en.wikipedia.org/wiki/Copy_and_paste_programming).
-
-Here's another test of the `AccountManager` class I tested above:
+Here's another test of the same class:
 
 ```python
 def test_increase_score(self):
@@ -123,9 +121,9 @@ def test_increase_score(self):
              account_manager.get_score(username='joe123'))
 ```
 
-For strict adherents of the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself. Worse, I'm arguing that my DRY-violating tests are **better** than tests that are free of repeated code. How can this be?
+For strict adherents to the [principle of DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself. Worse, I'm arguing that my DRY-violating tests are **better** than tests that are free of repeated code. How can this be?
 
-Recall that the goal of tests is simplicity. If you can achieve simplicity without repeating code, that's ideal, but it's okay to repeat code if doing so creates a test that's dead simple. Instead of blindly obeying DRY, think about what will make the next developer understand the problem quickly when this test fails.
+If you can achieve clear tests without repeating code, that's ideal, but remember that nonredundant code is the means, not the goal. Tests should strive to be as clear and obvious as possible. Instead of blindly obeying DRY, think about what will make the next developer understand the problem quickly when this test fails.
 
 **The reader should understand a test function without reading any code outside the function body.**
 {: .notice--info}
@@ -161,11 +159,11 @@ def test_increase_score(self):
              account_manager.get_score(username='joe123'))
 ```
 
-That's 15 lines just to get an instance of `AccountManager` and begin testing it. At that level, there's so much boilerplate that it distracts from whatever behavior you're testing.
+That's 15 lines just to get an instance of `AccountManager` and begin testing it. At that level, there's so much boilerplate that it distracts from the behavior you're testing.
 
 Your natural inclination might be to bury all the uninteresting code in test helper methods, but you should first ask a more vital question: why is the system so difficult to test?
 
-If you need a lot of boilerplate simply to call the system you're testing, that may indicate a flaw in your design. Take another look at the object instantiation line my example test above:
+If your system requires excessive boilerplate code, that may indicate a flaw in your design. For example, take another look at how I created the `AccountManager` object in the test above:
 
 ```python
 account_manager = AccountManager(user_database,
@@ -173,60 +171,71 @@ account_manager = AccountManager(user_database,
                                  url_downloader)
 ```
 
-Upon closer inspection, there are some design smells here. It accesses the `user_database` directly but its next parameter is `privilege_manager`, which is a wrapper for `privilege_database`. Why is `AccountManager` operating on two different layers of abstraction? And what is it doing with a "URL downloader?" That certainly seems distant conceptually from its other two parameters.
+There are design smells here. It accesses the `user_database` directly but its next parameter is `privilege_manager`, a wrapper for `privilege_database`. Why is `AccountManager` operating on two different layers of abstraction? And what is it doing with a "URL downloader?" That's certain seems conceptually distant from its other two parameters.
 
-In this case, refactoring `AccountManager` solves the root problem whereas helper methods would simply bury the symptoms. Refactoring not only makes the class easier to test but also facilitates usage for production clients.
+In this case, refactoring `AccountManager` solves the root problem whereas helper methods would simply bury the symptoms. A more cohesive interface makes the class easier to use in both test and production code.
 
 **When there's repetitive test code, eliminate it with clean interfaces before adding test helper methods.**
 {: .notice--info}
 
 # If you need helper methods, write them responsibly
 
-You don't always have the freedom to tear apart a production class for testability. Sometimes, your best option is to write helper methods, but if you do so, it's important to write good ones.
+You don't always have the freedom to tear apart a production class for testability. Sometimes, helper methods are your only choice, so when you need them, write them well.
 
-* Never rely on values set in helper methods
-* Avoid interacting with the system under test in helper methods
+A good helper method
 
-These are logical extensions of the "keep the reader in your test function" principle.
+There are two guidelines that are logical extensions of "keep the reader in your test function"
 
-The builder pattern (TODO: link) often provides an elegant way of eliminating boring boilerplate while exposing values that are critical to understanding the test:
+It's "boring" if:
+
+* It doesn't set a value that's critical to the main test
+* It doesn't call methods of the object you're testing
+
+For example, here's an example of a helper method that obscures interesting information:
 
 ```python
+def add_dummy_account(self, account_manager): # <- Helper method
+  dummy_account = Account(username='joe123',
+                          name='Joe Bloggs',
+                          email='joe123@example.com',
+                          score=150.0)
+  account_manager.add_account(dummy_account) # BAD: Helper method hides an interesting call
+
 def test_increase_score(self):
-  account_manager = AccountManagerBuilder()
-    .with_user(username='joe123', score=150.0)
-    .build()
+  account_manager = AccountManager()
+  self.add_dummy_account(account_manager)
 
   account_manager.adjust_score(username='joe123',
                                adjustment=25.0)
+  
+  self.assertEqual(175.0, # BAD: Relies on value set in helper method
+                   account_manager.get_score(username='joe123'))
+```
 
+
+
+
+
+```python
+def make_dummy_account(self, username, score):
+  return Account(username=username,
+                 name='Dummy User',
+                 email='dummy@example.com',
+                 score=score)
+
+def test_increase_score(self):
+  account_manager = AccountManager()
+  account_manager.add_account(
+    make_dummy_account(username='joe123', score=150.0)) # GOOD: Relevant values stay in the test
+
+  account_manager.adjust_score(username='joe123',
+                               adjustment=25.0)
+  
   self.assertEqual(175.0,
                    account_manager.get_score(username='joe123'))
 ```
 
-It exposes all of the values the reader needs in order to understand the test, and it maintains the tidy arrange, act, assert structure. Even if `AccountManager`'s constructor takes more parameters, it's okay for `AccountManagerBuilder` to use hidden, default values because they're not relevant to the test.
-
-As a counterexample, here is a poor use of a helper method:
-
-```python
-def adjust_score_by_dummy_amount(self, username): # <- Helper method
-  self.account_manager.adjust_score(username, # BAD: Hides interaction with system under test.
-                                    adjustment=25.0)
-
-...
-
-def test_increase_score(self):
-  self.account_manager = AccountManagerBuilder()
-    .with_user(username='joe123', score=150.0)
-    .build()
-
-  self.adjust_score_by_dummy_amount(username='joe123')
-
-  self.assertEqual(175.0,  # BAD: Test relies on a value set in the helper method.
-                   account_manager.get_score(username='joe123'))
-```
-
-It buries the `25.0` value in the helper method, which prevents a reader from understanding `test_increase_score` on its own. Further, it hides the call to `adjust_score`, which makes it more difficult for the reader to understand interactions with the class under test.
+It buries some values in the helper method, but the reader doesn't need them to understand the test. The reader gets to see all calls to `account_manager`.
 
 # Go crazy with long test names
 
@@ -324,6 +333,6 @@ Magic numbers made this test better, just as they make all tests better. If you 
 
 # Conclusion
 
-Software development is engineering. A good engineer does more than just memorize a list of rules and apply them universally. Engineering requires one to understand fundamental principles and to weigh the benefits and drawbacks of different decisions. 
+Software development is engineering. A skilled engineer does more than just memorize a list of rules and apply them universally. Engineering requires one to understand the fundamental principles of their craft and to weigh the benefits and drawbacks of different decisions. 
 
 To write excellent tests, a developer must recognize how the goals of test code differ from those of production code and adjust their engineering decisions accordingly. Most importantly, tests should maximize simplicity and minimize abstraction.
