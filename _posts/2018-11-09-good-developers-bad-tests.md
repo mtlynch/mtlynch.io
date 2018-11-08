@@ -9,7 +9,8 @@ related: true
 sidebar:
   nav: main
 classes: wide
-excerpt: The standard techniques of good development can lead you astray if you don't adjust them for unit tests.
+excerpt: The standard techniques of good development can lead you astray if you don't
+  adjust them for unit tests.
 header:
   teaser: images/good-developers-bad-tests/cover.jpg
   og_image: images/good-developers-bad-tests/cover.jpg
@@ -338,3 +339,7 @@ It's simpler, with only half as many lines of code. And it's more obvious &mdash
 Software development is engineering. A skilled engineer does more than memorize a list of rules and apply them universally. Engineering requires one to understand the fundamental principles of their craft and to weigh the benefits and drawbacks of different decisions.
 
 To write excellent tests, a developer must adjust their decisions to accommodate how the goals of test code differ from those of production code. Most importantly, tests should maximize simplicity while minimizing abstraction.
+
+---
+
+*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
