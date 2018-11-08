@@ -9,6 +9,7 @@ related: true
 sidebar:
   nav: main
 classes: wide
+excerpt: The standard techniques of good development can lead you astray if you don't adjust them for unit tests.
 header:
   teaser: images/good-developers-bad-tests/cover.jpg
   og_image: images/good-developers-bad-tests/cover.jpg
