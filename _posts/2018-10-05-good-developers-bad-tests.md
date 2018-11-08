@@ -88,9 +88,9 @@ def test_initial_score(self):
       'score': 150.0
     })
   account_manager = AccountManager(database)
-  
+
   initial_score = account_manager.get_score(username='joe123')
-  
+
   self.assertEqual(150.0, initial_score)
 ```
 
@@ -113,7 +113,7 @@ def test_increase_score(self):
       'score': 150.0                         # <--- previous test
     })                                       # <
   account_manager = AccountManager(database) # <
-  
+
   account_manager.adjust_score(username='joe123',
                          adjustment=25.0)
 
@@ -182,60 +182,60 @@ In this case, refactoring `AccountManager` solves the root problem whereas helpe
 
 You don't always have the freedom to tear apart a production class for testability. Sometimes, helper methods are your only choice, so when you need them, write them well.
 
-A good helper method
+A good helper method supports the principle of "keep the reader in your test function." It's okay to extract boilerplate code into a helper as long as the reader can ignore that code without losing understanding of the test.
 
-There are two guidelines that are logical extensions of "keep the reader in your test function"
+Specifically, helper methods should **not**:
 
-It's "boring" if:
+* bury critical values
+* interact with the object under test
 
-* It doesn't set a value that's critical to the main test
-* It doesn't call methods of the object you're testing
-
-For example, here's an example of a helper method that obscures interesting information:
+Here's an example of a helper method that violates these guidelines:
 
 ```python
-def add_dummy_account(self, account_manager): # <- Helper method
+def add_dummy_account(self): # <- Helper method
   dummy_account = Account(username='joe123',
                           name='Joe Bloggs',
                           email='joe123@example.com',
                           score=150.0)
-  account_manager.add_account(dummy_account) # BAD: Helper method hides an interesting call
+  self.account_manager.add_account(dummy_account) # BAD: Helper method hides an interesting call
 
 def test_increase_score(self):
-  account_manager = AccountManager()
-  self.add_dummy_account(account_manager)
+  self.account_manager = AccountManager()
+  self.add_dummy_account()
 
   account_manager.adjust_score(username='joe123',
                                adjustment=25.0)
-  
+
   self.assertEqual(175.0, # BAD: Relies on value set in helper method
                    account_manager.get_score(username='joe123'))
 ```
 
+The reader can't understand why the final score should be `175.0` unless they search out the `150.0` hidden in the helper method. The helper also obscures `account_manager`'s behavior by hiding a call to `add_account` instead of keeping all interactions in the test function itself.
 
-
-
+Here's a rewrite that addresses those issues:
 
 ```python
 def make_dummy_account(self, username, score):
   return Account(username=username,
-                 name='Dummy User',
-                 email='dummy@example.com',
+                 name='Dummy User',         # <- OK: Buries values but they're
+                 email='dummy@example.com', # <-     irrelevant to the test
                  score=score)
 
 def test_increase_score(self):
   account_manager = AccountManager()
   account_manager.add_account(
-    make_dummy_account(username='joe123', score=150.0)) # GOOD: Relevant values stay in the test
+    make_dummy_account(
+      username='joe123',  # <- GOOD: Relevant values stay
+      score=150.0))       # <-       in the test
 
   account_manager.adjust_score(username='joe123',
                                adjustment=25.0)
-  
+
   self.assertEqual(175.0,
                    account_manager.get_score(username='joe123'))
 ```
 
-It buries some values in the helper method, but the reader doesn't need them to understand the test. The reader gets to see all calls to `account_manager`.
+It still buries values in the helper method, but they're not relevant to the test, so the reader doesn't have to care about them. It also pulls the `add_account` call back into the test so that the reader can trivially trace everything that happens to `account_manager`.
 
 # Go crazy with long test names
 
@@ -244,11 +244,11 @@ Which of the following function names would you prefer to see in production code
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
 * `isAccountActive`
 
-The first is more precise, but comes with the burden of a 57-character name. Most developers are willing to sacrifice a bit of precision in favor of for a concise, almost-as-good name like `isAccountActive` (except for Java developers, for whom both names are offensively terse). 
+The first conveys more information, but comes with the burden of a 57-character name. Most developers are willing to sacrifice a bit of precision in favor of for a concise, almost-as-good name like `isAccountActive` (except for Java developers, for whom both names are offensively terse).
 
-For test functions, there's a key factor that changes the equation: you never write *calls* to test functions. A developer types out a test name exactly once in the function signature. Given this, brevity still matters, but it matters less than in production code.
+For test functions, there's a key factor that changes the equation: you never write *calls* to test functions. A developer types out a test name exactly once &ndash; in the function signature. Given this, brevity still matters, but it matters less than in production code.
 
-Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible. For example, imagine modifying this production class:
+Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible. For example, consider this production class:
 
 ```c++
 class Tokenizer {
@@ -333,6 +333,6 @@ Magic numbers made this test better, just as they make all tests better. If you 
 
 # Conclusion
 
-Software development is engineering. A skilled engineer does more than just memorize a list of rules and apply them universally. Engineering requires one to understand the fundamental principles of their craft and to weigh the benefits and drawbacks of different decisions. 
+Software development is engineering. A skilled engineer does more than just memorize a list of rules and apply them universally. Engineering requires one to understand the fundamental principles of their craft and to weigh the benefits and drawbacks of different decisions.
 
 To write excellent tests, a developer must recognize how the goals of test code differ from those of production code and adjust their engineering decisions accordingly. Most importantly, tests should maximize simplicity and minimize abstraction.
