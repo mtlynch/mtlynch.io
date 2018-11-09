@@ -16,19 +16,19 @@ header:
   og_image: images/good-developers-bad-tests/cover.jpg
 ---
 
-Congratulations! You've finally written so many lines of code that you can afford your very own beach house. Money is no object, so you hire Peter Keating, world-famous architect. He gained his reputation with skyscrapers, but he assures you that he has brilliant plans for your beachfront property.
+Congratulations! You've finally written so many lines of code that you can afford a beach house. You hire Peter Keating, an architect world-famous for his skyscrapers, who assures you that he has brilliant plans for your beachfront property.
 
-Months later, you arrive at the grand unveiling. Your new home is an imposing five-story behemoth of steel, concrete, and reflective glass. As you pass through the revolving doors, you track sand onto the marble floor. Inside, you're greeted by a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest rooms are just four adjoining office cubicles.
+Months later, you arrive at the grand unveiling. Your new home is an imposing five-story behemoth of steel, concrete, and reflective glass. As you pass through the revolving doors, you track sand onto the opulent marble floor. Inside, you find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest rooms are just four adjoining office cubicles.
 
 {% include image.html file="cover.jpg" alt="Architect presenting skyscraper on the beach" max_width="800px" img_link=true %}
 
-Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because a building's structural integrity is vital. Therefore, your home is *better* than the breezy, light-filled homes neighboring it. You may not have large, oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
+Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because structural integrity is vital. Therefore, your home is *better* than the breezy, light-filled homes neighboring it. You may not have large, oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
 
 Too often, software developers approach unit testing with the same flawed thinking. They mechanically apply all the "rules" they learned in production code without examining whether they're appropriate for tests. As a result, they build skyscrapers at the beach.
 
 # Test code is not like other code
 
-Production code is all about abstractions. Good production code hides complexity in well-scoped functions and elegant class hierarchies. It allows the reader to navigate a large system with ease, diving down into the details or jumping up to a higher level of abstraction, as needed.
+Production code is all about abstractions. Good production code hides complexity in well-scoped functions and elegant class hierarchies. It allows the reader to navigate large systems with ease, diving down into the details or rising to a higher level of abstraction, as needed.
 
 Test code is a different beast. Every layer of abstraction in a unit test makes it harder to understand. Tests are a diagnostic tool, so they should be as simple and obvious as possible.
 
@@ -37,15 +37,15 @@ Test code is a different beast. Every layer of abstraction in a unit test makes 
 
 {% include image.html file="dane-deaner-272363-unsplash-cropped.jpg" alt="Image of a ruler" img_link=true max_width="325px" class="align-right" link_url="https://unsplash.com/photos/JNpmCYZID68" %}
 
-Think of a ruler. It's existed in the same form for hundreds of years because it's simple and easy to interpret. Suppose I invented a new ruler that measured in "abstract ruler units." To convert from "ruler units" to inches or centimeters, you'd use a separate conversion chart.
+Think of a ruler. It has existed in the same form for hundreds of years because it's uncomplicated and easy to interpret. Suppose I invented a new ruler that measured in "abstract ruler units." To convert from "ruler units" to inches or centimeters, you'd use a separate conversion chart.
 
 If I offered such a ruler to a carpenter, they'd smack me in the face with it. It would be absurd to add a layer of abstraction to a tool that gives clear, unambiguous information.
 
-Good test code is no different. It should produce clear results without forcing the reader to jump through multiple levels of indirection.
+Good test code is no different. It should produce clear results without forcing the reader to jump through multiple levels of indirection. Developers often lose sight of this because it differs from how they learned to write production code.
 
 # A good developer's bad test
 
-I often see otherwise talented developers write tests that look like the following:
+I often see otherwise talented developers write tests like the following:
 
 ```python
 def test_initial_score(self):
@@ -53,7 +53,7 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-What does that test do? It retrieves a "score" for a user with the name `joe123` and verifies that the user's score is 150. At this point, you should have the following questions:
+What does that test do? It retrieves a "score" for a user with the name `joe123` and verifies that the score is 150. At this point, you should have the following questions:
 
 1. Where did the `joe123` account come from?
 1. Why do I expect `joe123`'s score to be 150?
@@ -70,13 +70,13 @@ def setUp(self):
   self.account_manager = AccountManager(database)
 ```
 
-Okay, the `setUp` method created the `joe123` account with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
+Okay, the `setUp` method created the `joe123` user with a score of 150, which explains why `test_initial_score` expected those values. Now, all is well with the world, right?
 
 No, this is a **bad test**.
 
 # Keep the reader in your test function
 
-When you write a test, think about the next developer who will see the test break. They don't want to read your entire test suite, and they certainly don't want to read an inheritance tree of test classes.
+When you write a test, think about the next developer who will see the test break. They don't want to read your entire test suite, and they certainly don't want to read a whole inheritance tree of test utilities.
 
 If a test breaks, the reader should be able to diagnose the problem by reading the test function in a straight line from top to bottom. If they have to jump out of the test to read ancillary code, the test has not done its job.
 
@@ -96,14 +96,14 @@ def test_initial_score(self):
   self.assertEqual(150.0, initial_score)
 ```
 
-All I did was inline the code from the `setUp` method, but it made a world of difference. Now, everything the reader needs is right there in the test. It also follows the [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert) structure, which makes different phases of the test distinct and obvious.
+All I did was inline the code from the `setUp` method, but it made a world of difference. Now, everything the reader needs is right there in the test. It also follows the [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert) structure, which makes each phase of the test distinct and obvious.
 
-**The reader should understand a test function without reading any code outside the function body.**
+**The reader should understand a test without seeing any code outside of the test function.**
 {: .notice--info}
 
 # Dare to violate DRY
 
-Inlining the setup code is all well and good for a single test. What happens if I have many tests? Won't I duplicate that code every time? Prepare yourself, because you'll likely find my answer shocking: I'm about to advocate [copy/paste programming](https://en.wikipedia.org/wiki/Copy_and_paste_programming).
+Inlining the setup code is all well and good for a single test, but what happens if I have many tests? Won't I duplicate that code every time? Prepare yourself, because I'm about to advocate [copy/paste programming](https://en.wikipedia.org/wiki/Copy_and_paste_programming).
 
 Here's another test of the same class:
 
@@ -123,11 +123,13 @@ def test_increase_score(self):
              account_manager.get_score(username='joe123'))
 ```
 
-For strict adherents to the [principle of DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself. Worse, I'm arguing that my DRY-violating tests are **better** than tests that are free of repeated code. How can this be?
+For strict adherents to the [principle of DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself; I copied six lines from the previous test verbatim. Worse, I'm arguing that my DRY-violating tests are *better* than tests that are free of repeated code. How can this be?
 
-If you can achieve clear tests without repeating code, that's ideal, but remember that nonredundant code is the means, not the ends. The end goal is clear, simple tests. Before blindly applying DRY to your tests, think about what will make the next developer understand the problem quickly when a test fails.
+If you can achieve clear tests without duplicating code, that's ideal, but remember that nonredundant code is the means, not the ends. The end goal is clear, simple tests.
 
-**Accept a degree of redundant code if it keeps tests simple and obvious.**
+Before blindly applying DRY to your tests, think about what will make the problem obvious when a test fails. Refactoring may reduce duplication, but it also increases complexity and potentially obscures information when things break.
+
+**Accept a degree of code redundancy if it preserves the test's simpilicty.**
 {: .notice--info}
 
 # Think twice before adding helper methods
@@ -165,7 +167,7 @@ That's 15 lines just to get an instance of `AccountManager` and begin testing it
 
 Your natural inclination might be to delegate all the uninteresting code to test helper methods, but you should first ask a more vital question: why is the system so difficult to test?
 
-Excessive boilerplate code is often a symptom of weak architecture. For example, take another look at how I created the `AccountManager` object in the test above:
+Excessive boilerplate code is often a symptom of weak architecture. For example, the test above reveals several [design smells](https://en.wikipedia.org/wiki/Design_smell):
 
 ```python
 account_manager = AccountManager(user_database,
@@ -173,18 +175,18 @@ account_manager = AccountManager(user_database,
                                  url_downloader)
 ```
 
-There are design smells here. It accesses the `user_database` directly, but its next parameter is `privilege_manager`, a wrapper for `privilege_database`. Why is `AccountManager` operating on two different layers of abstraction? And what is it doing with a "URL downloader?" That certainly seems conceptually distant from its other two parameters.
+`AccountManager` accesses the `user_database` directly, but its next parameter is `privilege_manager`, a wrapper for `privilege_database`. Why is it operating on two different layers of abstraction? And what is it doing with a "URL downloader?" That certainly seems conceptually distant from its other two parameters.
 
-In this case, refactoring `AccountManager` solves the root problem whereas helper methods would merely bury the symptoms. A more cohesive interface makes the class more straightforward to use in both test and production code.
+In this case, refactoring `AccountManager` solves the root problem whereas adding helper methods would merely bury the symptoms.
 
-**When there's repetitive test code, eliminate it with clean interfaces before adding test helper methods.**
+**When tempted to write test helper methods, try refactoring your production code instead.**
 {: .notice--info}
 
 # If you need helper methods, write them responsibly
 
 You don't always have the freedom to tear apart a production class for testability. Sometimes, helper methods are your only choice, so when you need them, write them well.
 
-An effective helper method supports the principle of "keep the reader in your test function." It's okay to extract boilerplate code into a helper function as long as the reader can ignore it without losing understanding of the test.
+An effective helper method supports the principle of "keep the reader in your test function." It's okay to extract boilerplate code into a helper function as long as it doesn't degrade the reader's understanding of the test.
 
 Specifically, helper methods should **not**:
 
@@ -199,7 +201,8 @@ def add_dummy_account(self): # <- Helper method
                           name='Joe Bloggs',
                           email='joe123@example.com',
                           score=150.0)
-  self.account_manager.add_account(dummy_account) # BAD: Helper method hides an interesting call
+  # BAD: Helper method hides a call to the object under test
+  self.account_manager.add_account(dummy_account)
 
 def test_increase_score(self):
   self.account_manager = AccountManager()
@@ -237,9 +240,9 @@ def test_increase_score(self):
                    account_manager.get_score(username='joe123'))
 ```
 
-It still buries values in the helper method, but they're not relevant to the test, so the reader doesn't have to care about them. It also pulls the `add_account` call back into the test so that the reader can trivially trace everything that happens to `account_manager`.
+It still buries values in the helper method, but they're irrelevant to the test. It also pulls the `add_account` call back into the test so that the reader can trivially trace everything that happens to `account_manager`.
 
-**Never put anything in a helper method that's critical to understanding the test.**
+**Keep helper methods free of any information the reader needs to understand the test.**
 {: .notice--info}
 
 # Go crazy with long test names
@@ -249,11 +252,11 @@ Which of the following function names would you prefer to see in production code
 * `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
 * `isAccountActive`
 
-The first conveys more information but comes with the burden of a 57-character name. Most developers are willing to sacrifice a bit of precision in favor of for a concise, almost-as-good name like `isAccountActive` (except for Java developers, for whom both names are offensively terse).
+The first conveys more information but imposes the burden of a 57-character name. Most developers are willing to sacrifice a bit of precision in favor of for a concise, almost-as-good name like `isAccountActive` (except for Java developers, for whom both names are offensively terse).
 
 For test functions, there's a crucial factor that changes the equation: you never write *calls* to test functions. A developer types out a test name exactly once &ndash; in the function signature. Given this, brevity still matters, but it matters less than in production code.
 
-Whenever a test breaks, the test name is the first thing you see, so it should convey as much information as possible. For example, consider this production class:
+Whenever a test breaks, the test name is the first thing you see, so it should communicate as much as possible. For example, consider this production class:
 
 ```c++
 class Tokenizer {
@@ -281,16 +284,16 @@ Instead, what if you saw this:
 [  FAILED  ] TokenizerTests.ReturnsNullptrWhenStreamIsEmpty (6 ms)
 ```
 
-A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. If you see it break, you'd immediately know you caused a regression in behavior when the tokenizer's internal stream is empty. You could likely fix the bug without ever reading the test's implementation. That's the mark of a good test name.
+A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. If you saw it break, you'd immediately know the class was mishandling empty data streams. You could likely fix the bug without ever reading the test's implementation. That's the mark of a good test name.
 
-**A good test name is so descriptive that a developer can diagnose failures of that test from the name alone.**
+**A good test name is so descriptive that a developer can diagnose failures from the name alone.**
 {: .notice--info}
 
 # Embrace magic numbers
 
 "Don't use magic numbers."
 
-It's the "don't talk to strangers" of the programming world. It becomes so ingrained in many talented developers that they never consider when a magic number might improve their code.
+It's the "don't talk to strangers" of the programming world. Many skilled developers internalize this lesson so profoundly that they never consider when a magic number might improve their code.
 
 As a refresher, a "magic number" is a numeric value or string that appears in code without information about what it represents. Here's an example:
 
@@ -320,7 +323,9 @@ def test_add_hours(self):
   self.assertEqual(expected_billable_hours, hours_tracker.billable_hours())
 ```
 
-If you believe magic numbers are universally evil, the above test looks correct to you. `72.0` and `8.0` have named constants, so nobody can accuse the test of magic numbers. But, for a moment, suspend your religious beliefs and indulge in the forbidden fruit of magic numbers:
+If you believe magic numbers are universally evil, the above test looks correct to you. `72.0` and `8.0` have named constants, so nobody can accuse the test of magic numbers.
+
+But, just for a moment, suspend your religious beliefs and indulge in the forbidden fruit of magic numbers:
 
 ```python
 def test_add_hours(self):
@@ -329,17 +334,20 @@ def test_add_hours(self):
   self.assertEqual(80.0, hours_tracker.billable_hours())
 ```
 
-It's simpler, with only half as many lines of code. And it's more obvious &mdash; the reader doesn't have to jump around to track names of constants.
+It's simpler, with only half as many lines of code. And it's more obvious &mdash; the reader doesn't have to bounce around the function tracking names of constants.
+
+When I see developers define constants in test code, it's usually due to a misguided adherence to DRY or because they're afraid to use magic numbers. However, it's rarely necessary for tests to declare constants, and doing so makes them harder to understand.
 
 **Avoid creating named constants in test code. Use magic numbers instead.**
 {: .notice--info}
 
+**Note**: It's okay for unit tests to *reference* constants that the production code exposes. They just shouldn't define their own.
+{: .notice--warning}
+
 # Conclusion
 
-Software development is engineering. A skilled engineer does more than memorize a list of rules and apply them universally. Engineering requires one to understand the fundamental principles of their craft and to weigh the benefits and drawbacks of different decisions.
-
-To write excellent tests, a developer must adjust their decisions to accommodate how the goals of test code differ from those of production code. Most importantly, tests should maximize simplicity while minimizing abstraction.
+To write excellent tests, a developer must align their engineering decisions with the goals of test code. Most importantly, tests should maximize simplicity while minimizing abstraction. A good test allows the reader to understand intended behavior and diagnose issues without ever leaving the test function.
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)*
