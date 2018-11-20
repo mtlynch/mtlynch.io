@@ -35,14 +35,31 @@ Install Docker.
 
 * [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
 
+
+# Dockerizing an app
+
+Show how to dockerize the toy Python app.
+
 # Creating components
 
 * Create the new project
 * Create the service account
 
+Create a new GCP project:
+
 ```bash
-PROJECT_ID=your-project-id
-SERVICE_ACCOUNT_NAME=docker-launcher
+PROJECT_NAME="flask-upload-demo"
+PROJECT_ID="${PROJECT_NAME}-$(date +%Y%m%d)"
+
+gcloud projects create "$PROJECT_ID" \
+  --name "$PROJECT_NAME" \
+  --set-as-default
+```
+
+Create a service account to run the container (it must have read/write access to Google Cloud Storage):
+
+```bash
+SERVICE_ACCOUNT_NAME=container-deployer
 
 gcloud iam service-accounts create "$SERVICE_ACCOUNT_NAME"
 gcloud projects add-iam-policy-binding "$PROJECT_ID" \
@@ -50,9 +67,23 @@ gcloud projects add-iam-policy-binding "$PROJECT_ID" \
   --role roles/storage.objectAdmin
 ```
 
-# Dockerizing an app
+Enable the Container Registry API:
 
-Show how to dockerize the toy Python app.
+```bash
+gcloud services enable containerregistry.googleapis.com
+# Enable gcloud to provide credentials to Docker.
+gcloud auth configure-docker --quiet
+
+LOCAL_IMAGE_NAME="flask-upload-demo-image"
+docker build --tag "$LOCAL_IMAGE_NAME" .
+
+GCR_HOSTNAME="gcr.io" # Change hostname to host images in a different location
+GCR_IMAGE_PATH="${GCR_HOSTNAME}/${PROJECT_ID}/flask-demo-app"
+docker tag "$LOCAL_IMAGE_NAME" "$GCR_IMAGE_PATH"
+docker push "$GCR_IMAGE_PATH"
+```
+
+TODO: Looks like it needs to be a service account and not a normal user auth.
 
 # Deploying the Docker container
 
