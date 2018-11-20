@@ -15,9 +15,25 @@ I've fallen in love with Docker over the past few years. It makes it easy to dep
 
 TODO: Diagram of what it looks like.
 
+# But why?
+
+If you're not sold on Docker, I'm not going to try to convince you here, but I think containerization is the best thing to happen in software in the last ten years.
+
+* Separates storage from the app itself.
+* Trivial to patch the server
+* Trivial to push new releases. Releases
+
+The downside is that Docker makes you pay some more costs up front because you're working through another layer of abstraction. If you want to install your app to a traditional Linux server, it's trivial to access GCS. To deploy from within a Docker container, it's a bit more complicated.
+
+TODO: Logging in StackDriver?
+
 # Prerequisites
 
 To start, you'll need to [install the Google Cloud SDK](https://cloud.google.com/sdk/install) and [authorize access](https://cloud.google.com/sdk/docs/authorizing).
+
+Install Docker.
+
+* [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
 
 # Creating components
 
@@ -33,3 +49,15 @@ gcloud projects add-iam-policy-binding "$PROJECT_ID" \
   --member "serviceAccount:${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com" \
   --role roles/storage.objectAdmin
 ```
+
+# Dockerizing an app
+
+Show how to dockerize the toy Python app.
+
+# Deploying the Docker container
+
+# Giving the Docker container access to GCS
+
+# Limitations
+
+There are
