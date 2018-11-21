@@ -48,23 +48,45 @@ Show how to dockerize the toy Python app.
 Create a new GCP project:
 
 ```bash
+
+gcloud auth login
+gcloud auth application-default login
+
 PROJECT_NAME="flask-upload-demo"
 PROJECT_ID="${PROJECT_NAME}-$(date +%Y%m%d)"
 
 gcloud projects create "$PROJECT_ID" \
   --name "$PROJECT_NAME" \
   --set-as-default
+
+gcloud config set project "$PROJECT_ID"
 ```
 
 Create a service account to run the container (it must have read/write access to Google Cloud Storage):
 
 ```bash
-SERVICE_ACCOUNT_NAME=container-deployer
+SERVICE_ACCOUNT_NAME=container-service
 
 gcloud iam service-accounts create "$SERVICE_ACCOUNT_NAME"
 gcloud projects add-iam-policy-binding "$PROJECT_ID" \
   --member "serviceAccount:${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com" \
   --role roles/storage.objectAdmin
+
+SERVICE_ACCOUNT_NAME=container-deployer2
+
+gcloud iam service-accounts create "$SERVICE_ACCOUNT_NAME"
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+  --member "serviceAccount:${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com" \
+  --role roles/container.clusterAdmin
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+  --member "serviceAccount:${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com" \
+  --role roles/container.storage.admin
+
+KEY_FILE="${HOME}/key.json"
+gcloud iam service-accounts keys create "$KEY_FILE" \
+  --iam-account "${SERVICE_ACCOUNT_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
+	
+gcloud auth activate-service-account --key-file="${HOME}/key.json"
 ```
 
 Enable the Container Registry API:
@@ -83,12 +105,54 @@ docker tag "$LOCAL_IMAGE_NAME" "$GCR_IMAGE_PATH"
 docker push "$GCR_IMAGE_PATH"
 ```
 
-TODO: Looks like it needs to be a service account and not a normal user auth.
+TODO: Figure out why this doesn't work
 
 # Deploying the Docker container
+
+```bash
+gcloud services enable compute.googleapis.com
+```
+
+```bash
+VM_NAME="flask-demo-app-vm"
+VM_IMAGE="cos-stable-70-11021-67-0"
+VM_TAGS="basic-flask"
+MACHINE_TYPE="n1-standard-1"
+ZONE=us-east1-b
+gcloud beta compute \
+  --project="$PROJECT_ID" \
+  instances create-with-container "$VM_NAME" \
+  --zone="$ZONE" \
+  --machine-type="$MACHINE_TYPE" \
+  --network-tier=STANDARD \
+  --metadata=google-logging-enabled=true \
+  --maintenance-policy=MIGRATE \
+  --scopes=https://www.googleapis.com/auth/cloud-platform \
+  --tags="$VM_TAGS" \
+  --image="$VM_IMAGE" \
+  --image-project=cos-cloud \
+  --boot-disk-size=10GB \
+  --boot-disk-type=pd-standard \
+  --boot-disk-device-name="$VM_NAME" \
+  --container-image="$GCR_IMAGE_PATH" \
+  --container-restart-policy=on-failure
+```
+
+```bash
+FLASK_PORT=5000
+gcloud compute \
+  --project="$PROJECT_ID" \
+  firewall-rules create allow-flask \
+  --direction=INGRESS \
+  --action=ALLOW \
+  --rules="tcp:${FLASK_PORT}" \
+  --target-tags="$VM_TAGS"
+```
 
 # Giving the Docker container access to GCS
 
 # Limitations
 
 There are
+
+* Can't run applications that expect file locking like a normal filesystem (e.g. sqlite).
