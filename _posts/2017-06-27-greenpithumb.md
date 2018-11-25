@@ -8,10 +8,11 @@ share: true
 related: true
 sidebar:
   nav: main
+classes: wide
 excerpt: Using the Raspberry Pi to water plants automatically
 header:
   teaser: images/greenpithumb/greenpithumb-side-full.jpg
-  og_image: ""
+  og_image: ''
 tags:
 - raspberry pi
 - greenpithumb
@@ -158,7 +159,7 @@ We turned on the pump, and  the severed finger of the glove immediately shot off
 
 It's not the most *elegant* solution, but it mostly works.
 
-<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/s/xjqmj/wfilnx" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bI6UaJjYZ00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## The gardening part wasn't supposed to be hard
 
