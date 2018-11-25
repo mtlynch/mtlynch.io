@@ -107,7 +107,6 @@ gcloud compute \
 
 ```bash
 VM_NAME="flask-demo-app-vm"
-VM_IMAGE="cos-stable-70-11021-67-0"
 MACHINE_TYPE="n1-standard-1"
 ZONE=us-east1-b
 gcloud compute \
@@ -120,7 +119,7 @@ gcloud compute \
   --maintenance-policy=MIGRATE \
   --scopes=https://www.googleapis.com/auth/cloud-platform \
   --tags="$VM_TAGS" \
-  --image="$VM_IMAGE" \
+  --image-family=cos-stable \
   --image-project=cos-cloud \
   --boot-disk-size=10GB \
   --boot-disk-type=pd-standard \
@@ -162,11 +161,13 @@ gcloud iam service-accounts create "$SERVICE_ACCOUNT_NAME"
 gcloud projects add-iam-policy-binding "$PROJECT_ID" \
   --member "serviceAccount:${SERVICE_ACCOUNT_EMAIL}" \
   --role roles/storage.objectAdmin
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+  --member "serviceAccount:${SERVICE_ACCOUNT_EMAIL}" \
+  --role roles/logging.logWriter
 ```
 
 ```bash
 VM_NAME="flask-demo-app-vm-gcsfuse"
-VM_IMAGE="cos-stable-70-11021-67-0"
 MACHINE_TYPE="n1-standard-1"
 ZONE=us-east1-b
 gcloud compute \
@@ -180,7 +181,7 @@ gcloud compute \
   --scopes=https://www.googleapis.com/auth/cloud-platform \
   --service-account="$SERVICE_ACCOUNT_EMAIL" \
   --tags="$VM_TAGS" \
-  --image="$VM_IMAGE" \
+  --image-family=cos-stable \
   --image-project=cos-cloud \
   --boot-disk-size=10GB \
   --boot-disk-type=pd-standard \
@@ -219,3 +220,5 @@ There are
 TODO: Show MediaGoblin
 
 Everything is the same except that MediaGoblin uses sqlite by default, which doesn't play nice with GCS. To work around this, I applied something hacky but works well enough. It writes to the VM filesystem and then asynchonously copies the file to GCS.
+
+I used `sub_filter` to rewrite GCS URLs.
