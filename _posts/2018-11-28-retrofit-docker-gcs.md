@@ -11,11 +11,15 @@ sidebar:
 classes: wide
 ---
 
-I was recently searching for a way to share videos privately with my family. [MediaGoblin](https://mediagoblin.org/) seemed like a nice solution, but I quickly encountered an issue. It allows users to upload and share videos, images, and documents. Internally, MediaGoblin stores these files on the local filesystem. This meant that if I ever needed to blow away my server and start over, I'd lose all the uploaded files. I wanted a way to separate the application code from the uploaded data.
+I recently had to deploy a web app that kept large amounts of user data on the filesystem. I've fallen into this trap before where the app is easy to deploy initially, but then maintenance is a nightmare because any time I have to rebuild the server, I have to copy around a bunch of user-generated files manually.
 
-MediaGoblin has no awareness of cloud storage system. It just stores all of its files on the local filesystem. It's open-source, so I could fork it and modify the code to write persistent data to cloud storage, but that could take weeks, and it would be a maintenance nightmare. I needed a way to take MediaGoblin in its original state and trick it into using cloud storage instead of the local filesystem. After lots of trial and error, I achieved this using Docker and Google Cloud Storage.
+I solved this problem with Docker and Google Cloud Storage.
 
-There were a ton of "gotchas" throughout this process, so I decided to write a tutorial showing how to do this. To keep things simple, I'm using a simplified app instead of MediaGoblin, but the concepts are largely the same. If there's interest, I'll write a follow-up post explaining a few extra steps I used to get MediaGoblin to work.
+Docker makes it easy for me to maintain the app because it simplifies state on the server. Whenever I want to push a new release, I can just build a Docker image locally and push it out to my server.
+
+Google Cloud Storage separates my app's code from its user-generated files. I can blow away my app server completely and deploy a new version and all of the data will remain. To the app, it's as if the files are all on the local filesystem.
+
+I couldn't find a good guide about how to do this properly, and there were a ton of "gotchas" throughout this process, so I decided to write my own tutorial in the hopes that it spares others from the headaches I went through.
 
 TODO: Diagram of what it looks like.
 
@@ -45,7 +49,8 @@ TODO: Logging in StackDriver?
 To start, you'll need the following free tools installed on your system:
 
 * [Google Cloud SDK](https://cloud.google.com/sdk/install)
-* [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition)
+* [Docker](https://www.docker.com/)
+  * The free [Community Edition](https://store.docker.com/search?offering=community&type=edition) is fine
 
 # My example app
 
@@ -219,23 +224,36 @@ The `location /uploads` is typical for Nginx configurations. Web servers (such a
 
 # Preparing your GCP Project
 
-**Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io will fail if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`. To work around this, you must create a service account through the GCP web console.
-{: .notice--warning}
-
 Set your project in `gcloud`:
 
 ```bash
 PROJECT_ID="ENTER-YOUR-PROJECT-ID-HERE"
 gcloud config set project "$PROJECT_ID"
-
 ```
 
-Next, run some commands to prepare your project for the rest of the tutorial:
+Next, you must use the GCP web console to [create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts) with the owner role:
+
+{% include image.html file="service-account-1.png" alt="Screenshot of service account creation screen" max_width="797px" class="img-border" img_link="true" %}
+
+{% include image.html file="service-account-2.png" alt="Screenshot of service account role selection screen" max_width="797px" class="img-border" img_link="true" %}
+
+Download the private key as `key.json`:
+
+{% include image.html file="service-account-3.png" alt="Screenshot of service account private key download" max_width="797px" class="img-border" img_link="true" %}
+
+Use gcloud to authenticate as that service account:
 
 ```bash
 # Activate the service account you created.
 gcloud auth activate-service-account --key-file key.json
+```
 
+**Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io will fail if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`.
+{: .notice--warning}
+
+Next, run some commands to prepare your project for the rest of the tutorial:
+
+```bash
 # Enable APIs you'll need for this workflow.
 gcloud services enable \
   cloudresourcemanager.googleapis.com \
@@ -248,14 +266,11 @@ gcloud auth configure-docker --quiet
 ```
 # Uploading image to Google Container Registry
 
-Before you can deploy a Docker image to GCE, you need to deploy it to Google Container Registry (GCR). To do that, first clone my example repo:
+Before you can deploy a Docker image to GCE, you need to deploy it to a Docker image hosting service. Google Container Registry (GCR) is the image hosting service integrated with GCP, so that's the easiest option. To do that, check out the `nginx` branch of my example repo:
 
 ```bash
-cd ~
-git clone \
-  https://github.com/mtlynch/docker-flask-upload-demo.git \
-  --branch nginx
-cd docker-flask-upload-demo
+cd ~/docker-flask-upload-demo
+git checkout nginx
 ```
 
 Now, build the Docker image locally, and upload it to GCR:
@@ -272,7 +287,11 @@ docker push "$GCR_IMAGE_PATH"
 
 # Deploying the Docker container
 
-GCE VMs do not allow inbound HTTP traffic by default. To allow it, I created a firewall rule and set it to apply to any VM deployed with the tag `http-server`.
+Deploying the container requires a bit of indirection. GCP doesn't allow you to deploy a Docker image directly. Instead, you use GCE to spin up a full virtual machine (VM), run Docker on that VM, and then run your Docker image in a container in that VM. Fortunately, GCP offers tools to make this process pretty easy.
+
+GCE VMs do not allow inbound HTTP traffic by default. To allow it, you must create a firewall rule that accepts TCP connections on port 80 (the standard port for plaintext HTTP traffic).
+
+An easy way to do this is to apply the rule to any VM with the tag `http-server` and then add that tag to any GCE VMs you want to receive HTTP traffic:
 
 ```bash
 VM_TAGS="http-server"
@@ -285,7 +304,7 @@ gcloud compute \
   --target-tags="$VM_TAGS"
 ```
 
-Then, I created a GCE VM
+Then, deploy a GCE VM with the `http-server` tag:
 
 ```bash
 VM_NAME="flask-demo-app-vm"
@@ -331,6 +350,28 @@ These flags tell GCE to run the container under the [Container-Optimized OS](htt
 
 The flag above tells GCE which Docker image to run within the GCE VM. This must be a GCR address, so the command specifies the GCR path you created earlier.
 
+When the command completes, you will see output like the following:
+
+```text
+Created [https://www.googleapis.com/compute/v1/projects/flask-upload-demo-2018-11-26/zones/us-east1-b/instances/flask-demo-app-vm].
+NAME               ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS
+flask-demo-app-vm  us-east1-b  n1-standard-1               10.142.0.2   35.211.106.214  RUNNING
+```
+
+It works just like the local version of the app:
+
+{% include image.html file="gce-app-1.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
+
+{% include image.html file="gce-app-2.png" alt="Screenshot of service account role selection screen" max_width="667px" img_link="true" %}
+
+The problem is that if you kill that VM and launch a new one with the same Docker image, the file you uploaded is no longer there:
+
+{% include image.html file="gce-app-3.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
+
+This is, of course, because Docker stored the file within the container. When you terminate the host VM, you lose all files in its Docker containers.
+
+To address this, you need to configure the Docker container to store all persistent data in a Google Cloud Storage (GCS) bucket.
+
 # Creating a GCS bucket (optional)
 
 If you don't have a GCS bucket yet, you can create one using `gcloud` with the following command:
@@ -344,11 +385,13 @@ gsutil mb \
   "gs://${GCS_BUCKET}"
 ```
 
+Otherwise, simply set the `GCS_BUCKET` environment variable to the name of your GCS bucket.
+
 # Giving the Docker container access to GCS
 
-Next, you'll need to modify the `Dockerfile` so that the Docker image includes a utility called `gcsfuse`, which allows you to mount GCS buckets to the filesystem.
+Next, you'll need to modify the `Dockerfile` so that the Docker image includes a utility called [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse), which allows you to mount GCS buckets to the filesystem.
 
-The complete `Dockerfile` is [available on Github](https://github.com/mtlynch/docker-flask-upload-demo/blob/gcsfuse/Dockerfile), but here are the main changes:
+The complete `Dockerfile` is available on the [`gcsfuse` branch of my Github repo](https://github.com/mtlynch/docker-flask-upload-demo/blob/gcsfuse/Dockerfile), but here are the main changes:
 
 ```bash
 # Install gcsfuse.
@@ -417,6 +460,8 @@ CMD set -x && \
       --log-level info
 ```
 
+Once again, breaking this down by interesting snippets:
+
 ```bash
 gcsfuse \
   -o nonempty \
@@ -457,6 +502,13 @@ docker push "$GCR_IMAGE_PATH"
 ```
 
 By default, GCE instances run under the context of the GCE service account. It has read access to GCS, but not write access. For the app to write the GCS, you need to create a service account with GCS write privileges. It's also convenient if the GCE VM can write log messages to StackDriver, so I've included that role as well:
+
+It needs two roles to function correctly:
+
+* `storage.objectAdmin`: So that processes in the VM can read and write objects to GCS.
+* `logging.logWriter`: So that log output from the VM appears in GCP's StackDriver log interfaces.
+
+The following commands create a service account and provision it with the necessary privileges:
 
 ```bash
 SERVICE_ACCOUNT_NAME=flask-demo-app-service-account
@@ -506,6 +558,33 @@ Explain `--container-privileged` and  `--container-env`.
 **Gotcha Warning**: `gcsfuse` will fail to mount the GCS bucket on GCE unless you deploy the VM with the `--container-privileged` flag.
 {: .notice--warning}
 
+
+{% include image.html file="gcsfuse-1.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
+
+Excet now, if I check the GCS bucket, I see that the uploaded file is there:
+
+{% include image.html file="gcsfuse-2.png" alt="Screenshot of service account role selection screen" max_width="800px" class="img-border" img_link="true" %}
+
+If I kill the VM and re-launch it, I can continue to access the uploaded image:
+
+{% include image.html file="gcsfuse-3.png" alt="Screenshot of service account role selection screen" max_width="667px" class="img-border" img_link="true" %}
+
+# Viewing logs
+
+```bash
+$ docker logs klt-flask-demo-app-vm-gcsfuse-qnnf
+...
+[2018-11-26 21:28:54 +0000] [33] [INFO] Starting gunicorn 19.9.0
+[2018-11-26 21:28:54 +0000] [33] [INFO] Listening at: http://127.0.0.1:5000 (33)
+[2018-11-26 21:28:54 +0000] [33] [INFO] Using worker: sync
+[2018-11-26 21:28:54 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-11-26 21:32:59 +0000] [37] [INFO] Saving uploaded file "zestful-logo.png" to "/srv/demo-app/demo/uploads/zestful-logo.png"
+```
+
+But this is also available in GCP's logging interface:
+
+
+{% include image.html file="gcsfuse-logs.png" alt="Screenshot of service account role selection screen" max_width="800px" class="img-border" img_link="true" %}
 # Updating container
 
 ```bash
@@ -520,6 +599,8 @@ gcloud compute \
   instances update-container "$VM_NAME" \
   --container-image="$GCR_IMAGE_PATH"
 ```
+
+Note that unless you've assigned the VM a static IP, the VM's external IP address will change after this command completes.
 	
 # Limitations
 
