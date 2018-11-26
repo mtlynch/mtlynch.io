@@ -11,7 +11,11 @@ sidebar:
 classes: wide
 ---
 
-I've fallen in love with Docker over the past few years. It makes it easy to deploy apps to any environment you want.  I recently wanted a Dockerized app to write to Google Cloud Storage (GCS) but I couldn't find any instructions on how to do this short of completely rewriting the app to be GCS-aware. Through lots of trial and error, I got it to work.
+I was recently searching for a way to share videos privately with my family. [MediaGoblin](https://mediagoblin.org/) seemed like a nice solution, but I quickly encountered an issue. It allows users to upload and share videos, images, and documents. Internally, MediaGoblin stores these files on the local filesystem. This meant that if I ever needed to blow away my server and start over, I'd lose all the uploaded files. I wanted a way to separate the application code from the uploaded data.
+
+MediaGoblin has no awareness of cloud storage system. It just stores all of its files on the local filesystem. It's open-source, so I could fork it and modify the code to write persistent data to cloud storage, but that could take weeks, and it would be a maintenance nightmare. I needed a way to take MediaGoblin in its original state and trick it into using cloud storage instead of the local filesystem. After lots of trial and error, I achieved this using Docker and Google Cloud Storage.
+
+There were a ton of "gotchas" throughout this process, so I decided to write a tutorial showing how to do this. To keep things simple, I'm using a simplified app instead of MediaGoblin, but the concepts are largely the same. If there's interest, I'll write a follow-up post explaining a few extra steps I used to get MediaGoblin to work.
 
 TODO: Diagram of what it looks like.
 
@@ -27,25 +31,46 @@ The downside is that Docker makes you pay some more costs up front because you'r
 
 TODO: Logging in StackDriver?
 
+# Some abbreviations
+
+| Abbreviation | Stands for | What is it? | Similar to |
+|------------------|--------------|--------------|-------------|
+| **GCS** | Google Cloud Storage | Google's cloud storage service | Amazon S3 |
+| **GCE** | Google Compute Engine | Google's on-demand virtual machine service | Amazon EC2 |
+| **GCR** | Google Container Registry | Google's hosting service for Docker images | Docker Hub |
+| **GCP** | Google Cloud Platform | Google's cloud computing platform (GCS, GCE, and GCR are all parts of GCP) | Amazon Web Services or Microsoft Azure |
+
 # Prerequisites
 
-To start, you'll need to [install the Google Cloud SDK](https://cloud.google.com/sdk/install).
+To start, you'll need the following free tools installed on your system:
 
-Install Docker.
-
-* [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
-
+* [Google Cloud SDK](https://cloud.google.com/sdk/install)
+* [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition)
 
 # My example app
 
-I created a toy app to demonstrate this process.
+I created a [toy example](https://github.com/mtlynch/flask_upload_demo) to demonstrate this process. It's a dead simple web application based on the Flask framework's [upload example app](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
 
-{% include image.html file="flask-app1.png" alt="Screenshot of demo app landing page" max_width="597px" %}
+If you'd like to try it at home, it's simple to run:
 
+```bash
+git clone https://github.com/mtlynch/flask_upload_demo.git
+cd flask_upload_demo
+sudo pip install -r requirements.txt
+gunicorn \
+  demo.app:app \
+  --bind 0.0.0.0:5000
+```
 
-{% include image.html file="flask-app2.png" alt="Screenshot of demo app upload result" max_width="597px" %}
+It allows the user to choose a file and upload it:
 
-And now I can see that the app saved a copy of the uploaded file to the server under `demo/uploads`:
+{% include image.html file="flask-app1.png" alt="Screenshot of demo app landing page" max_width="685px" img_link="true" %}
+
+Then it serves the file permanently at the URL `http://[server address]:5000/uploads/[filename]`:
+
+{% include image.html file="flask-app2.png" alt="Screenshot of demo app upload result" max_width="685px" img_link="true" %}
+
+If I ssh into the server, I can see that the app saved the uploaded file to the local filesystem in the `demo/uploads` folder:
 
 ```bash
 $ ls -l demo/uploads/
@@ -54,22 +79,147 @@ total 228
 ```
 
 
-**Note**: The example is a bit contrived because for an app as simple as [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo), it would make more sense to rewrite the app itself to be GCS-aware. For the purposes of this article, flask-upload-demo represents an app whose code is impractical to modify.
+**Note**: If your app was really as simple as [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo), it would make more sense to rewrite the app itself to be GCS-aware. For the purposes of this tutorial, pretend that flask-upload-demo is a black box whose source you can't modify.
 {: .notice--info}
+
+# Dockerizing the example app
 
 TODO: Show how to dockerize the toy Python app.
 
-# Making it more realistic
+**`Dockerfile`**
 
-Most web applications don't accept traffic directly from the browser. Instead, most applications use an HTTP server like nginx or Apache to handle the gruntwork, so I'll modify the Dockerfile slightly to add in nginx:
+```bash
+FROM debian:stretch
+
+RUN apt-get update
+RUN apt-get install --yes \
+      git-core \
+      python \
+      python-pip \
+      python-virtualenv
+
+# Create demo user system account.
+ARG APP_USER="demo-user"
+ARG APP_GROUP="demo-user"
+ARG APP_HOME_DIR="/home/demo-user"
+RUN set -x && \
+    groupadd "$APP_GROUP" && \
+    useradd \
+      --comment "Demo app system account" \
+      --home-dir "$APP_HOME_DIR" \
+      --create-home \
+      --system \
+      --gid "$APP_GROUP" \
+      "$APP_USER"
+
+# Create directory for app source code.
+ARG APP_ROOT="/srv/demo-app"
+RUN mkdir --parents "$APP_ROOT" && \
+    chown \
+      --no-dereference \
+      --recursive \
+      "${APP_USER}:${APP_GROUP}" "$APP_ROOT"
+
+USER "$APP_USER"
+WORKDIR "$APP_ROOT"
+
+# Install demo app.
+ARG DEMO_APP_REPO="https://github.com/mtlynch/flask_upload_demo"
+RUN set -x && \
+    git clone "$DEMO_APP_REPO" . && \
+    virtualenv VIRTUAL && \
+    . VIRTUAL/bin/activate && \
+    pip install --requirement requirements.txt
+
+EXPOSE 5000
+
+# Run demo app.
+ENV FLASK_APP "demo/app.py"
+CMD virtualenv VIRTUAL && \
+    . VIRTUAL/bin/activate && \
+    gunicorn \
+      demo.app:app \
+      --bind 0.0.0.0:5000 \
+      --log-level info
+```
+
+There's a lot there, so to summarize, the `Dockerfile` does the following:
+
+1. Installs Git, Python and associated packages.
+1. Creates a system account (`demo-user`) under which the demo app will run.
+1. Clones the [app source repo](https://github.com/mtlynch/flask_upload_demo) locally.
+1. Adds a `CMD` to run when the container boots that starts the demo app on port 5000.
+
+You can test this `Dockerfile` by [cloning my repo](https://github.com/mtlynch/docker-flask-upload-demo) and building the Docker container locally:
+
+```bash
+cd ~
+git clone https://github.com/mtlynch/docker-flask-upload-demo.git
+cd docker-flask-upload-demo
+
+docker build \
+  --tag demo-app-image \
+  .
+
+docker run \
+  --detach \
+  --publish 80:5000 \
+  --name demo-app \
+  demo-app-image
+```
+
+If you visit [http://localhost/](http://localhost/) in a browser, you should see the demo app.
+
+# A more realistic Docker container
+
+Most web applications don't accept traffic directly from the browser. Instead, they use an HTTP server like Nginx or Apache to handle the gruntwork of HTTP. I'll modify the Dockerfile slightly to add in Nginx:
 
 The complete code is available in the [`nginx` branch of my docker-flask-upload-demo repo](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx).
 
-TODO: Show how to add nginx.
+There are a few changes
+
+```bash
+# Install nginx.
+ARG NGINX_GROUP="www-data"
+COPY nginx.conf /etc/nginx/sites-enabled/nginx.conf
+RUN set -x && \
+    apt-get install --yes \
+      nginx \
+      sudo && \
+    rm /etc/nginx/sites-enabled/default && \
+    usermod --append --groups "$NGINX_GROUP" "$APP_USER" && \
+    echo "$APP_USER ALL=(ALL:ALL) NOPASSWD: /usr/sbin/nginx" >> /etc/sudoers
+```
+
+Nginx typically runs as root so that it can listen on privileged HTTP ports 80 and 443. Therefore, the `Dockerfile` uses `sudo` to allow the demo app user to launch nginx as `root` while still performing all other activities as a service account with limited privileges.
+
+Lastly, it copies an Nginx configuration file into the container, which appears below:
+
+**`nginx.conf`**
+
+```text
+server {
+    listen       80;
+    server_name  example.org; # Replace with your server's domain name
+    client_max_body_size 20m;
+
+    # Serve static resources directly (bypass backend).
+    location /uploads/ {
+        alias /srv/demo-app/demo/uploads/;
+    }
+
+    # Forward all other requests to the application backend.
+    location / {
+        proxy_pass http://127.0.0.1:5000;
+    }
+}
+```
+
+The `location /uploads` is typical for Nginx configurations. Web servers (such as Nginx) are cheaper and more performant than application servers, so applications shouldn't use application servers for things that the web server can do. The files in the `uploads/` directory are static images. They don't require any action from the application server, so Nginx can just handle it itself.
 
 # Preparing your GCP Project
 
-**Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io will fail if you use your root GCP account (e.g. your @gmail.com account) or a service account you create through `gcloud`. To work around this, you must create a service account through the GCP web console.
+**Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io will fail if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`. To work around this, you must create a service account through the GCP web console.
 {: .notice--warning}
 
 Set your project in `gcloud`:
@@ -101,6 +251,7 @@ gcloud auth configure-docker --quiet
 Before you can deploy a Docker image to GCE, you need to deploy it to Google Container Registry (GCR). To do that, first clone my example repo:
 
 ```bash
+cd ~
 git clone \
   https://github.com/mtlynch/docker-flask-upload-demo.git \
   --branch nginx
@@ -120,7 +271,6 @@ docker push "$GCR_IMAGE_PATH"
 ```
 
 # Deploying the Docker container
-
 
 GCE VMs do not allow inbound HTTP traffic by default. To allow it, I created a firewall rule and set it to apply to any VM deployed with the tag `http-server`.
 
@@ -228,7 +378,7 @@ There are a two interesting elements here worth discussing:
 echo 'user_allow_other' > /etc/fuse.conf
 ```
 
-The above line makes it possible to use `gcsfuse`'s `-o allow_other` option. This is necessary because both the app system account and the nginx system account need access to the GCS folder. Without the `user_allow_other` line in the configuration file, only a single system account could access the GCS folder.
+The above line makes it possible to use `gcsfuse`'s `-o allow_other` option. This is necessary because both the app system account and the Nginx system account need access to the GCS folder. Without the `user_allow_other` line in the configuration file, only a single system account could access the GCS folder.
 
 **Gotcha Warning**: If more than one system account will access the GCS bucket, the `/etc/fuse.conf` file must include the line `user_allow_other`.
 {: .notice--warning}
@@ -240,7 +390,7 @@ chown \
   "${APP_USER}:${NGINX_GROUP}" "$GCS_MOUNT_ROOT"
 ```
 
-`gcsfuse` requires an existing directory that the launching user can write to. Standard users don't have write access to the `/mnt` directory, so the `Dockerfile` creates the `/mnt/gcsfuse` directory as the `root` user and `chown`s it so that the demo app system account and the nginx system account can both write to it.
+`gcsfuse` requires an existing directory that the launching user can write to. Standard users don't have write access to the `/mnt` directory, so the `Dockerfile` creates the `/mnt/gcsfuse` directory as the `root` user and `chown`s it so that the demo app system account and the Nginx system account can both write to it.
 
 There are some more interesting changes to the `CMD` portion of the `Dockerfile` which defines what the Docker container does at runtime (after the image is built):
 
@@ -263,14 +413,38 @@ CMD set -x && \
     . VIRTUAL/bin/activate && \
     gunicorn \
       demo.app:app \
-      --bind 0.0.0.0:5000 \
       --bind 127.0.0.1:5000 \
       --log-level info
 ```
 
+```bash
+gcsfuse \
+  -o nonempty \
+  -o allow_other \
+  --implicit-dirs \
+  "$GCS_BUCKET" "$GCS_MOUNT_ROOT"
+```
+
+**Gotcha Warning**: `-o allow_other`
+{: .notice--warning}
+
+**Gotcha Warning**: `--implicit-dirs`
+{: .notice--warning}
+
+```bash
+if [ ! -d "$APP_UPLOADS_DIR" ]; then \
+  ln --symbolic "$GCS_MOUNT_ROOT" "$APP_UPLOADS_DIR"; \
+fi
+```
+
 # Deploying the GCS-aware container
 
-First, you need to rebuild and push the Docker image:
+```bash
+cd ~/docker-flask-upload-demo
+git checkout gcsfuse
+```
+
+First, you need to build a new version of the Docker image and push it to GCR:
 
 ```bash
 LOCAL_IMAGE_NAME="flask-upload-demo-image"
@@ -297,7 +471,7 @@ gcloud projects add-iam-policy-binding "$PROJECT_ID" \
   --role roles/logging.logWriter
 ```
 
-**Gotcha Warning**: GCE instances will fail to write to GCS buckets unless you create special a special service account for them.
+**Gotcha Warning**: GCE instances will fail to write to GCS buckets unless you launch them under a custom service account.
 {: .notice--warning}
 
 ```bash
@@ -329,7 +503,7 @@ gcloud compute \
 Explain `--container-privileged` and  `--container-env`.
 
 
-**Gotcha Warning**: `gcsfuse` will fail on GCE unless you deploy the VM with the `--container-privileged` flag.
+**Gotcha Warning**: `gcsfuse` will fail to mount the GCS bucket on GCE unless you deploy the VM with the `--container-privileged` flag.
 {: .notice--warning}
 
 # Updating container
@@ -352,11 +526,3 @@ gcloud compute \
 There are
 
 * Can't run applications that expect file locking like a normal filesystem (e.g. sqlite).
-
-# A Real-World Example
-
-TODO: Show MediaGoblin
-
-Everything is the same except that MediaGoblin uses sqlite by default, which doesn't play nice with GCS. To work around this, I applied something hacky but works well enough. It writes to the VM filesystem and then asynchonously copies the file to GCS.
-
-I used `sub_filter` to rewrite GCS URLs.
