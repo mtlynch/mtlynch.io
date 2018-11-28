@@ -11,15 +11,19 @@ sidebar:
 classes: wide
 ---
 
-I recently had to deploy a web app that kept large amounts of user data on the filesystem. I've fallen into this trap before where the app is easy to deploy initially, but then maintenance is a nightmare because any time I have to rebuild the server, I have to copy around a bunch of user-generated files manually.
+I recently had to deploy a web app that kept large amounts of user data on the filesystem. I've fallen into this trap before where the app is easy to deploy initially, but then maintenance is a nightmare because any time I have to rebuild the server, I have to copy around a bunch of user-generated files manually. I wanted a way to keep the application on the server but keep its state in a separate, independent location.
 
-I solved this problem with Docker and Google Cloud Storage.
+{% include image.html file="naive-vs-desired.png" alt="Naive architecture vs desired architecture" max_width="771px" img_link="true" %}
+
+You might look at that diagram and think, "Duh, that's the separation between an app and a database," but what if the application's state is mostly files? There's cloud storage, but that usually requires the app to be designed for cloud storage.
+
+I solved this problem using Docker, Google Cloud Storage, and the gcsfuse utility. I couldn't find a good guide about how to do this properly, and there were a ton of "gotchas" throughout this process, so I decided to write my own tutorial in the hopes that it spares others from the headaches I went through.
+
+# But why?
 
 Docker makes it easy for me to maintain the app because it simplifies state on the server. Whenever I want to push a new release, I can just build a Docker image locally and push it out to my server.
 
 Google Cloud Storage separates my app's code from its user-generated files. I can blow away my app server completely and deploy a new version and all of the data will remain. To the app, it's as if the files are all on the local filesystem.
-
-I couldn't find a good guide about how to do this properly, and there were a ton of "gotchas" throughout this process, so I decided to write my own tutorial in the hopes that it spares others from the headaches I went through.
 
 TODO: Diagram of what it looks like.
 
@@ -46,7 +50,7 @@ TODO: Logging in StackDriver?
 
 # Prerequisites
 
-To start, you'll need the following free tools installed on your system:
+To start, you'll need the following:
 
 * [Google Cloud SDK](https://cloud.google.com/sdk/install)
 * [Docker](https://www.docker.com/)
@@ -75,11 +79,10 @@ Then it serves the file permanently at the URL `http://[server address]:5000/upl
 
 {% include image.html file="flask-app2.png" alt="Screenshot of demo app upload result" max_width="685px" img_link="true" %}
 
-If I ssh into the server, I can see that the app saved the uploaded file to the local filesystem in the `demo/uploads` folder:
+From within the server, I can see that the app saved the uploaded file to the `demo/uploads` folder of the local filesystem:
 
 ```bash
 $ ls -l demo/uploads/
-total 228
 -rw-rw-r-- 1 mike mike 230720 Nov 24 21:45 Space_Duck_Desktop_RGB_PNG.png
 ```
 
@@ -233,13 +236,13 @@ gcloud config set project "$PROJECT_ID"
 
 Next, you must use the GCP web console to [create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts) with the owner role:
 
-{% include image.html file="service-account-1.png" alt="Screenshot of service account creation screen" max_width="797px" class="img-border" img_link="true" %}
+{% include image.html file="service-account-1.png" alt="Screenshot of service account creation screen" max_width="799px" class="img-border" img_link="true" %}
 
-{% include image.html file="service-account-2.png" alt="Screenshot of service account role selection screen" max_width="797px" class="img-border" img_link="true" %}
+{% include image.html file="service-account-2.png" alt="Screenshot of service account role selection screen" max_width="799px" class="img-border" img_link="true" %}
 
 Download the private key as `key.json`:
 
-{% include image.html file="service-account-3.png" alt="Screenshot of service account private key download" max_width="797px" class="img-border" img_link="true" %}
+{% include image.html file="service-account-3.png" alt="Screenshot of service account private key download" max_width="799px" class="img-border" img_link="true" %}
 
 Use gcloud to authenticate as that service account:
 
@@ -291,7 +294,7 @@ Deploying the container requires a bit of indirection. GCP doesn't allow you to 
 
 GCE VMs do not allow inbound HTTP traffic by default. To allow it, you must create a firewall rule that accepts TCP connections on port 80 (the standard port for plaintext HTTP traffic).
 
-An easy way to do this is to apply the rule to any VM with the tag `http-server` and then add that tag to any GCE VMs you want to receive HTTP traffic:
+An easy way to do this is to apply the rule to any VM with the tag `http-server`:
 
 ```bash
 VM_TAGS="http-server"
@@ -335,20 +338,20 @@ Here are the interesting flags:
   --tags="$VM_TAGS" \
 ```
 
-The `--tags` flag launches the VM using the tags you created for the firewall rules. This flag ensures that the firewall rules apply to this VM so that it can receive HTTP traffic on port 80.
+The `--tags` flag launches the VM using the tags you created for the firewall rules. This flag ensures that it can receive HTTP traffic on port 80.
 
 ```bash
   --image-family=cos-stable \
   --image-project=cos-cloud \
 ```
 
-These flags tell GCE to run the container under the [Container-Optimized OS](https://cloud.google.com/container-optimized-os/docs/how-to/create-configure-instance), a special OS that Google developed. It's a stripped down Linux OS that runs only the components necessary for hosting Docker containers. The `--image-family=cos-stable` tells `gcloud` to use the latest stable version of the Container-Optimized OS.
+These flags tell GCE to run the container under the [Container-Optimized OS](https://cloud.google.com/container-optimized-os/docs/how-to/create-configure-instance), a stripped-down Linux OS that Google created to run Docker containers. The `--image-family=cos-stable` tells `gcloud` to use the latest stable version of the Container-Optimized OS.
 
 ```bash
 --container-image="$GCR_IMAGE_PATH" \
 ```
 
-The flag above tells GCE which Docker image to run within the GCE VM. This must be a GCR address, so the command specifies the GCR path you created earlier.
+The flag above tells GCE which Docker image to run within the GCE VM, using the GCR URL you created earlier.
 
 When the command completes, you will see output like the following:
 
@@ -358,7 +361,7 @@ NAME               ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL
 flask-demo-app-vm  us-east1-b  n1-standard-1               10.142.0.2   35.211.106.214  RUNNING
 ```
 
-It works just like the local version of the app:
+If you type the address from `EXTERNAL_IP` into your browser, you will see it work just like the local version of the app:
 
 {% include image.html file="gce-app-1.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
 
@@ -368,13 +371,21 @@ The problem is that if you kill that VM and launch a new one with the same Docke
 
 {% include image.html file="gce-app-3.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
 
-This is, of course, because Docker stored the file within the container. When you terminate the host VM, you lose all files in its Docker containers.
+This is, of course, because the container stores the file on its own internal filesystem. When you terminate the host VM, you lose all files in its Docker containers.
 
 To address this, you need to configure the Docker container to store all persistent data in a Google Cloud Storage (GCS) bucket.
 
+# A GCS-aware architecture
+
+Here is the architecture you'll be creating:
+
+{% include image.html file="full-architecture.png" alt="flask-demo-app architecture diagram" max_width="718px" img_link="true" %}
+
+The web browser only talks to the web server, Nginx, which acts as the orchestrator for all front-end requests. If the web browser is requesting a file, nginx can fetch it from GCS via the gcsfuse utility. For all other requests, Nginx forwards the request to the flask-upload-demo app. The app can write new files to GCS, also via the gcsfuse utility. Everything in the VM is disposable because GCS stores all the permanent state.
+
 # Creating a GCS bucket (optional)
 
-If you don't have a GCS bucket yet, you can create one using `gcloud` with the following command:
+If you don't have a GCS bucket yet, you can create one with the following `gcloud` command:
 
 ```bash
 STORAGE_LOCATION="us-east1"
@@ -389,7 +400,7 @@ Otherwise, simply set the `GCS_BUCKET` environment variable to the name of your 
 
 # Giving the Docker container access to GCS
 
-Next, you'll need to modify the `Dockerfile` so that the Docker image includes a utility called [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse), which allows you to mount GCS buckets to the filesystem.
+This branch modifies the `Dockerfile` so that the Docker image includes a utility called [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse), which mounts GCS buckets as folders on the filesystem.
 
 The complete `Dockerfile` is available on the [`gcsfuse` branch of my Github repo](https://github.com/mtlynch/docker-flask-upload-demo/blob/gcsfuse/Dockerfile), but here are the main changes:
 
@@ -433,9 +444,9 @@ chown \
   "${APP_USER}:${NGINX_GROUP}" "$GCS_MOUNT_ROOT"
 ```
 
-`gcsfuse` requires an existing directory that the launching user can write to. Standard users don't have write access to the `/mnt` directory, so the `Dockerfile` creates the `/mnt/gcsfuse` directory as the `root` user and `chown`s it so that the demo app system account and the Nginx system account can both write to it.
+`gcsfuse` requires an existing directory that the launching user can write to. Standard users don't have write access to the `/mnt` directory, so the `Dockerfile` creates the `/mnt/gcsfuse` directory as the `root` user and uses `chown` to assign ownership to the Nginx and demo app system accounts.
 
-There are some more interesting changes to the `CMD` portion of the `Dockerfile` which defines what the Docker container does at runtime (after the image is built):
+The other interesting changes are in the `CMD` portion of the `Dockerfile`, which defines the container's runtime behavior:
 
 ```bash
 ENV GCS_BUCKET "REPLACE-WITH-YOUR-GCS-BUCKET-NAME"
@@ -470,10 +481,14 @@ gcsfuse \
   "$GCS_BUCKET" "$GCS_MOUNT_ROOT"
 ```
 
-**Gotcha Warning**: `-o allow_other`
+As with the `user_allow_other` option above, the `-o allow_other` makes it possible for multiple users to access the mounted folder, as both nginx (running as the `www-data` user) and the demo app (running as `demo-user`) need access.
+
+**Gotcha Warning**: gcsfuse needs the `-o allow_other` flag if multiple user accounts will access files in the GCS mount.
 {: .notice--warning}
 
-**Gotcha Warning**: `--implicit-dirs`
+Without the [`--implicit-dirs` flag](https://github.com/GoogleCloudPlatform/gcsfuse/blob/6ab0a79f97b7481b23c3724cd0c4b323f0627d69/docs/semantics.md#implicit-directories), gcsfuse will not be able to access files located in subfolders of the GCS bucket.
+
+**Gotcha Warning**: gcsfuse needs the `--implicit-dirs` flag if the GCS bucket contains subfolders.
 {: .notice--warning}
 
 ```bash
@@ -482,31 +497,19 @@ if [ ! -d "$APP_UPLOADS_DIR" ]; then \
 fi
 ```
 
-# Deploying the GCS-aware container
+Because you know that the app writes its uploaded files to the `demo/uploads` directory, this creates a symbolic link so that these files instead go to `/mnt/gcsfuse`. This way, the files actually get read and written to GCS. The `if`/`then` block protects it from performing this step more than once, in the event of a container restart.
 
-```bash
-cd ~/docker-flask-upload-demo
-git checkout gcsfuse
-```
+# Creating a service account with GCS access
 
-First, you need to build a new version of the Docker image and push it to GCR:
+There's one extra step before you deploy this image to GCE. By default, GCE instances run under the context of the standard GCE service account. That account has read-only access to GCS, so the app will fail to write new files to GCS.
 
-```bash
-LOCAL_IMAGE_NAME="flask-upload-demo-image"
-docker build --tag "$LOCAL_IMAGE_NAME" .
-
-GCR_HOSTNAME="gcr.io" # Change hostname to host images in a different location
-GCR_IMAGE_PATH="${GCR_HOSTNAME}/${PROJECT_ID}/flask-demo-app"
-docker tag "$LOCAL_IMAGE_NAME" "$GCR_IMAGE_PATH"
-docker push "$GCR_IMAGE_PATH"
-```
-
-By default, GCE instances run under the context of the GCE service account. It has read access to GCS, but not write access. For the app to write the GCS, you need to create a service account with GCS write privileges. It's also convenient if the GCE VM can write log messages to StackDriver, so I've included that role as well:
-
-It needs two roles to function correctly:
+To address this, create a custom service account with the following two roles:
 
 * `storage.objectAdmin`: So that processes in the VM can read and write objects to GCS.
 * `logging.logWriter`: So that log output from the VM appears in GCP's StackDriver log interfaces.
+
+**Gotcha Warning**: GCE instances will fail to write to GCS buckets unless you launch them under a custom service account.
+{: .notice--warning}
 
 The following commands create a service account and provision it with the necessary privileges:
 
@@ -523,8 +526,30 @@ gcloud projects add-iam-policy-binding "$PROJECT_ID" \
   --role roles/logging.logWriter
 ```
 
-**Gotcha Warning**: GCE instances will fail to write to GCS buckets unless you launch them under a custom service account.
-{: .notice--warning}
+
+# Deploying the GCS-aware container
+
+Return to your clone of the [docker-flask-upload-demo](https://github.com/mtlynch/docker-flask-upload-demo) repository and check out the `gcsfuse` branch:
+
+```bash
+cd ~/docker-flask-upload-demo
+git checkout gcsfuse
+```
+
+Now, rebuild the Docker image and push it to GCR:
+
+```bash
+LOCAL_IMAGE_NAME="flask-upload-demo-image"
+docker build --tag "$LOCAL_IMAGE_NAME" .
+
+GCR_HOSTNAME="gcr.io" # Change hostname to host images in a different location
+GCR_IMAGE_PATH="${GCR_HOSTNAME}/${PROJECT_ID}/flask-demo-app"
+docker tag "$LOCAL_IMAGE_NAME" "$GCR_IMAGE_PATH"
+docker push "$GCR_IMAGE_PATH"
+```
+
+
+With your new, custom GCE service account, you're ready to deploy the GCS-aware container:
 
 ```bash
 VM_NAME="flask-demo-app-vm-gcsfuse"
@@ -549,27 +574,43 @@ gcloud compute \
   --container-image="$GCR_IMAGE_PATH" \
   --container-restart-policy=on-failure \
   --container-privileged \
-  --container-env "GCS_BUCKET=$GCS_BUCKET"
+  --container-env="GCS_BUCKET=$GCS_BUCKET"
 ```
 
-Explain `--container-privileged` and  `--container-env`.
+This command is the same as the [previous deploy command](http://localhost:4000/retrofit-docker-gcs/#deploying-the-docker-container), but with two additional flags:
 
+```bash
+  --container-privileged \
+```
+
+The `--container-privileged` flag is necessary to allow the Docker container to mount a FUSE filesystem (Docker offers [more fine-grained ways of achieving this](https://stackoverflow.com/a/49021109/90388), but GCE does not yet support them).
 
 **Gotcha Warning**: `gcsfuse` will fail to mount the GCS bucket on GCE unless you deploy the VM with the `--container-privileged` flag.
 {: .notice--warning}
 
+```bash
+  --container-env="GCS_BUCKET=$GCS_BUCKET"
+```
+
+I purposely designed the Docker image to be agnostic to the name of the bucket until runtime. That way, you can use the same Docker image and specify different GCS buckets in different deployments. The `--container-env` flag lets you specify the `GCS_BUCKET` environment variable at deploy time.
+
+# Persistence pays off... with persistence
+
+You finally have a Docker container that will persist its state in GCS. You can test this by uploading a file to the deployed app:
 
 {% include image.html file="gcsfuse-1.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
 
-Excet now, if I check the GCS bucket, I see that the uploaded file is there:
+If you check your GCS bucket, you will see the file you just uploaded:
 
 {% include image.html file="gcsfuse-2.png" alt="Screenshot of service account role selection screen" max_width="800px" class="img-border" img_link="true" %}
 
-If I kill the VM and re-launch it, I can continue to access the uploaded image:
+The real test is whether this state persists across different VMs. You can verify this by killing your VM entirely and redeploying it. The image URL from your previous VM will be accessible on your new server:
 
 {% include image.html file="gcsfuse-3.png" alt="Screenshot of service account role selection screen" max_width="667px" class="img-border" img_link="true" %}
 
-# Viewing logs
+# Bonus: Logging interface
+
+A nice side-benefit of this solution is that GCP provides a nice web interface to view your application's logs. The manual way of doing this is to ssh into your VM, then run `docker logs`:
 
 ```bash
 $ docker logs klt-flask-demo-app-vm-gcsfuse-qnnf
@@ -581,17 +622,21 @@ $ docker logs klt-flask-demo-app-vm-gcsfuse-qnnf
 [2018-11-26 21:32:59 +0000] [37] [INFO] Saving uploaded file "zestful-logo.png" to "/srv/demo-app/demo/uploads/zestful-logo.png"
 ```
 
-But this is also available in GCP's logging interface:
-
+The easier way is to open the [StackDriver logging interface](https://console.cloud.google.com/logs/viewer) from the GCP console. There, you will find all of your logs in a slick web interface:
 
 {% include image.html file="gcsfuse-logs.png" alt="Screenshot of service account role selection screen" max_width="800px" class="img-border" img_link="true" %}
-# Updating container
+
+# Pushing new releases
+
+This solution makes it very easy to push new releases. Any time you want to update the app or its dependencies, you can simply build a new image and push it to GCR:
 
 ```bash
 docker build --tag "$LOCAL_IMAGE_NAME" .
 docker tag "$LOCAL_IMAGE_NAME" "$GCR_IMAGE_PATH"
 docker push "$GCR_IMAGE_PATH"
 ```
+
+Then, use the `update-container` command to update the Docker image on a running GCE instance:
 
 ```bash
 gcloud compute \
@@ -600,10 +645,29 @@ gcloud compute \
   --container-image="$GCR_IMAGE_PATH"
 ```
 
-Note that unless you've assigned the VM a static IP, the VM's external IP address will change after this command completes.
-	
+**Gotcha Warning**: The VM's external IP address will change after this command completes unless you assigned a static IP.
+{: .notice--warning}
+
+If you ever push a bad release, you can use the `update-container` command to roll back to a previous, known-good image.
+
 # Limitations
 
-There are
+This solution suffers from the same limitations as the gcsfuse utility and GCS itself. gcsfuse does as much as possible to make GCS look like a normal filesystem, but there's only so much it can do to make a remote REST API behave like a local disk.
 
-* Can't run applications that expect file locking like a normal filesystem (e.g. sqlite).
+The two main ways this can bite you are:
+
+* GCS doesn't support locks, so things will get wonky if an application tries to acquire exclusive locks on a file.
+* Latency is very high, especially when doing small, random reads or writes on large files.
+
+In particular, I've found that [sqlite](https://www.sqlite.org/index.html) will quickly fail if you point it at a database located on a gcsfuse mount.
+
+# Conclusion
+
+flask-upload-demo was not aware of GCS and I never had to change any of its source code to support this scenario.
+# Source Code
+
+* [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo): A demo app that keeps state on the local filesystem. 
+* [docker-flask-upload-demo](https://github.com/mtlynch/docker-flask-upload-demo): The Docker configuration for flask-upload-demo, in three varieties:
+  * [master branch](https://github.com/mtlynch/docker-flask-upload-demo) - Shows basic packaging of the app
+  * [nginx branch](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx) - Shows a more realistic real-world architecture where nginx proxies traffic for the app
+  * [gcsfuse branch](https://github.com/mtlynch/docker-flask-upload-demo/tree/gcsfuse) - Shows how to mount a Google Cloud Storage bucket from within the Docker container (assumes the container runs in a Google Compute Engine VM with read/write permissions to Google Cloud Storage).
