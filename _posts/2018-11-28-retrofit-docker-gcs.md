@@ -21,21 +21,9 @@ I solved this problem using Docker, Google Cloud Storage, and the gcsfuse utilit
 
 # But why?
 
-Docker makes it easy for me to maintain the app because it simplifies state on the server. Whenever I want to push a new release, I can just build a Docker image locally and push it out to my server.
+Docker simplifies maintenance and app updates. You update your app and all of its dependencies as one atomic unit. In the event of a bad release, it's trivial to roll back to a previous Docker image.
 
-Google Cloud Storage separates my app's code from its user-generated files. I can blow away my app server completely and deploy a new version and all of the data will remain. To the app, it's as if the files are all on the local filesystem.
-
-# But why?
-
-If you're not sold on Docker, I'm not going to try to convince you here, but I think containerization is the best thing to happen in software in the last ten years.
-
-* Separates storage from the app itself.
-* Trivial to patch the server
-* Trivial to push new releases. Releases
-
-The downside is that Docker makes you pay some more costs up front because you're working through another layer of abstraction. If you want to install your app to a traditional Linux server, it's trivial to access GCS. To deploy from within a Docker container, it's a bit more complicated.
-
-TODO: Logging in StackDriver?
+Google Cloud Storage separates the app's code from its user-generated files. You can blow away your server completely and deploy a new version. All of the data will remain intact.
 
 # Some abbreviations
 
@@ -51,12 +39,11 @@ TODO: Logging in StackDriver?
 To start, you'll need the following:
 
 * [Google Cloud SDK](https://cloud.google.com/sdk/install)
-* [Docker](https://www.docker.com/)
-  * The free [Community Edition](https://store.docker.com/search?offering=community&type=edition) is fine
+* [Docker](https://www.docker.com/) (the free [Community Edition](https://store.docker.com/search?offering=community&type=edition) is fine)
 
 # My example app
 
-I created a [toy example](https://github.com/mtlynch/flask_upload_demo) to demonstrate this process. It's a dead simple web application based on the Flask framework's [upload example app](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
+I created an [example app](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web application based on the Flask framework's [upload example app](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
 
 It's simple to run:
 
@@ -90,7 +77,7 @@ $ ls -l demo/uploads/
 
 # Dockerizing the example app
 
-TODO: Show how to dockerize the toy Python app.
+Because this app has few, simple dependencies, it's easy to create a Docker image for it:
 
 **`Dockerfile`**
 
