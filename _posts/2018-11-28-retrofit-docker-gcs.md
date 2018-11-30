@@ -1,5 +1,5 @@
 ---
-title: Retrofitting Apps for Google Cloud Storage without Changing a Line of Code
+title: Retrofitting Apps for Cloud Storage with Zero Code Changes
 layout: single
 author_profile: true
 read_time: true
@@ -9,23 +9,25 @@ related: true
 sidebar:
   nav: main
 classes: wide
+tags:
+- docker
+- google cloud storage
+- gcsfuse
+- google compute engine
+- google container registry
 ---
 
-I recently had to deploy a web app that kept large amounts of user data on the local filesystem. This was a clear maintenance trap. If I ever had to rebuild the server from scratch, there would be lots of clunky manual effort to back up and restore all of its data files. I wanted a way to keep the application on the server but keep its state in a separate, independent location.
+I recently installed a media sharing app to one of my servers. Its simple, straightforward installation masked a dastardly trap for long-term maintenance. Every time a user uploaded a file, the app saved it to the local filesystem. If I ever blew away the server and rebuilt it, I'd have to backup and restore its files manually. The more desirable architecture is one where an independent service handles data storage, but rearchitecting this app could take months of development work.
 
 {% include image.html file="naive-vs-desired.png" alt="Naive architecture vs desired architecture" max_width="771px" img_link="true" %}
 
-You might look at that diagram and think, "Duh! That's the separation between an app and a database," but what if the application's state is mostly files? There's cloud storage, of course, but that works best when the app natively understands requires the app to be designed for cloud storage.
+I solved this problem using Docker, Google Cloud Storage, and the [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) utility. I never changed a single line of the app's code.
 
-I solved this problem using Docker, Google Cloud Storage, and the gcsfuse utility. I couldn't find a good guide about how to do this properly, and there were a ton of "gotchas" throughout this process. I decided to write my own tutorial in the hopes that it spares others from the many land mines involved.
+In this tutorial, I'll show you how to retrofit your apps for Google Cloud Storage while also achieving easy deployment with Docker.
 
-# But why?
+# Defining some terms
 
-Docker simplifies maintenance and app updates. You update your app and all of its dependencies as one atomic unit. In the event of a bad release, it's trivial to roll back to a previous Docker image.
-
-Google Cloud Storage separates the app's code from its user-generated files. You can blow away your server completely and deploy a new version. All of the data will remain intact.
-
-# Some abbreviations
+If you're unfamiliar with Google Cloud Platform, here are a few abbreviations to know for this tutorial:
 
 | Abbreviation | Stands for | What is it? | Similar to |
 |------------------|--------------|--------------|-------------|
@@ -34,9 +36,11 @@ Google Cloud Storage separates the app's code from its user-generated files. You
 | **GCR** | Google Container Registry | Google's hosting service for Docker images | Docker Hub |
 | **GCP** | Google Cloud Platform | Google's cloud computing platform (GCS, GCE, and GCR are all parts of GCP) | Amazon Web Services or Microsoft Azure |
 
+**Docker** allows developers to build self-contained environments for an application that run anywhere. A **Docker image** defines the app. A **Docker container** is the app while it's running. For the purposes of this tutorial, you can think of Docker containers as lightweight virtual machines, even though [they're not](https://blog.docker.com/2016/03/containers-are-not-vms/).
+
 # Prerequisites
 
-To start, you'll need the following:
+To follow along with my examples, you'll need the following:
 
 * [Google Cloud SDK](https://cloud.google.com/sdk/install)
 * [Docker](https://www.docker.com/) (the free [Community Edition](https://store.docker.com/search?offering=community&type=edition) is fine)
@@ -56,7 +60,7 @@ gunicorn \
   --bind 0.0.0.0:5000
 ```
 
-It allows the user to choose a file and upload it:
+The app lets you choose a file and upload it:
 
 {% include image.html file="flask-app1.png" alt="Screenshot of demo app landing page" max_width="685px" img_link="true" %}
 
@@ -64,7 +68,7 @@ Then, it serves the file permanently at the URL `http://[server address]:5000/up
 
 {% include image.html file="flask-app2.png" alt="Screenshot of demo app upload result" max_width="685px" img_link="true" %}
 
-From within the server, I can see that the app saved the uploaded file to the `demo/uploads` folder of the local filesystem:
+From within the server, you can see that the app saved the file to the `demo/uploads` folder of its local filesystem:
 
 ```bash
 $ ls -l demo/uploads/
@@ -72,7 +76,7 @@ $ ls -l demo/uploads/
 ```
 
 
-**Note**: If your app was really as simple as [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo), it would make more sense to rewrite the app itself to use GCS APIs natively. For the purposes of this tutorial, pretend that flask-upload-demo is a black box whose source you can't modify.
+**Note**: If your app was really as simple as [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo), it would make more sense to rewrite the app to use GCS APIs natively. For the purposes of this tutorial, pretend that flask-upload-demo is a black box whose source you can't modify.
 {: .notice--info}
 
 # Dockerizing the example app
@@ -136,7 +140,7 @@ CMD virtualenv VIRTUAL && \
       --log-level info
 ```
 
-There's a lot there, so to summarize, the `Dockerfile` does the following:
+The above `Dockerfile` performs a few high-level tasks to prepare the image:
 
 1. Installs Git, Python and associated packages.
 1. Creates a system account (`demo-user`) under which the demo app will run.
