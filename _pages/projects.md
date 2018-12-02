@@ -4,6 +4,7 @@ layout: single
 author_profile: true
 sidebar:
   nav: main
+classes: wide
 permalink: "/projects/"
 excerpt: My projects
 hide_signup: true
@@ -11,13 +12,17 @@ hide_signup: true
 
 # Businesses
 
-## [Zestful](https://zestfuldata.com) (2018-present)
+## [Is It Keto?](https://isitketo.org) (2018-present)
+
+Is It Keto allows provides a simple way for users to discover whether particular foods are compatible with the keto diet.
+
+## [Zestful](https://zestfuldata.com) (2018)
 
 Zestful is a collection of APIs to help recipe app developers better understand their recipes.
 
 ## [KetoHub](https://ketohub.io) (2017-present)
 
-KetoHub is an aggregator for Keto recipes. It allows you to search recipes across different keto recipes and filter by meal type.
+KetoHub is an aggregator for keto recipes. It allows you to search recipes across different keto recipes and filter by meal type.
 
 ## [AllYourTexts](http://allyourtexts.com) (2011-2015)
 
@@ -38,5 +43,3 @@ GreenPiThumb is a system for automatically watering a plant and monitoring it vi
 ProsperBot is a peer-to-peer lending robot. It subscribes to the Prosper API to discover new, available loans to invest in, then purchases those loans and monitors their status over time in a web dashboard.
 
 **Technologies**: Go, Redis, D3.js, Ansible, [Prosper API](https://developers.prosper.com/), AngularJS, nginx
-
-
