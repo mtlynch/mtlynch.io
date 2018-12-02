@@ -242,6 +242,9 @@ gcloud config set project "$PROJECT_ID"
 
 Next, you must use the GCP web console to [create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts) with the owner role:
 
+**Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io (see the following section) will fail if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`.
+{: .notice--warning}
+
 {% include image.html file="service-account-1.png" alt="Screenshot of service account creation screen" max_width="799px" class="img-border" img_link="true" %}
 
 {% include image.html file="service-account-2.png" alt="Screenshot of service account role selection screen" max_width="799px" class="img-border" img_link="true" %}
@@ -256,9 +259,6 @@ Use gcloud to authenticate as that service account:
 # Activate the service account you created.
 gcloud auth activate-service-account --key-file key.json
 ```
-
-**Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io (see the following section) will fail if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`.
-{: .notice--warning}
 
 Next, run some commands to prepare your project for the rest of the tutorial:
 
