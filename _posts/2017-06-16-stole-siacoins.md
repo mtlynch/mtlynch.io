@@ -6,9 +6,12 @@ read_time: true
 comments: true
 share: true
 related: true
+sidebar:
+  nav: main
+classes: wide
 header:
   teaser: images/stole-siacoins/american-psycho.jpg
-  og_image: ""
+  og_image: ''
 tags:
 - siacoin
 - cryptocurrency
@@ -16,8 +19,8 @@ tags:
 - sia
 excerpt: A lesson in Sia wallet seed safety
 discuss_urls:
-  reddit: "https://www.reddit.com/r/CryptoCurrency/comments/6hm4w0/how_i_stole_your_siacoin/"
-  hacker_news: "https://news.ycombinator.com/item?id=14568558"
+  reddit: https://www.reddit.com/r/CryptoCurrency/comments/6hm4w0/how_i_stole_your_siacoin/
+  hacker_news: https://news.ycombinator.com/item?id=14568558
 ---
 
 # A seedy reddit post
@@ -202,7 +205,7 @@ While I would have loved to sit and ponder the strange balance I was seeing, tim
 >**Riley Poole**: Of course someone else is after it. It's the axiom of treasure hunting.<br>
 -*National Treasure: Book of Secrets*
 
-I quickly [sent the full balance](http://explore.sia.tech/hash.html?hash=2304da26d61bd2cb7fcac5c7b38a553d788d8dfc386ae4eb47772e36e4a9269d) to my own Sia wallet. That way, even if someone else discovered the correct seed after I had, they couldn't recover the money.
+I quickly [sent the full balance](https://siastats.info/navigator?search=2304da26d61bd2cb7fcac5c7b38a553d788d8dfc386ae4eb47772e36e4a9269d) to my own Sia wallet. That way, even if someone else discovered the correct seed after I had, they couldn't recover the money.
 
 # Back to the mystery
 
