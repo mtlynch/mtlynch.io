@@ -21,7 +21,7 @@ I recently installed a media sharing app to one of my servers. It was simple to 
 
 Every time a user uploaded a file, the app saved it to the local filesystem. If I ever blew away the server and rebuilt it, I'd have to backup and restore its files manually. If the app wrote its files to a separate storage server, this wouldn't be a problem, but I didn't want to spend months decoupling the data from the application logic.
 
-{% include image.html file="naive-vs-desired.png" alt="Naive architecture vs desired architecture" max_width="771px" img_link="true" %}
+{% include image.html file="naive-vs-desired.jpg" alt="Naive architecture vs desired architecture" max_width="800px" img_link="true" %}
 
 Using Docker, Google Cloud Storage, and the [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) utility, I achieved this separation without changing a single line of the app's code.
 
@@ -394,7 +394,7 @@ To address this, you need to configure the Docker container to store all persist
 
 Here is the architecture you'll be creating:
 
-{% include image.html file="full-architecture.png" alt="flask-demo-app architecture diagram" max_width="718px" img_link="true" %}
+{% include image.html file="full-architecture.jpg" alt="flask-demo-app architecture diagram" max_width="800px" class="img-border" img_link="true" fig_caption="Architecture for deploying a Flask app to Google Cloud Platform" %}
 
 * The web browser only talks to the web server, Nginx, which acts as the orchestrator for all front-end requests.
 * If the web browser requests a file, nginx can fetch it from GCS via the gcsfuse utility.
