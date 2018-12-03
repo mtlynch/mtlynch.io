@@ -17,13 +17,15 @@ tags:
 - google container registry
 ---
 
-I recently installed a media sharing app to one of my servers. Its simple, straightforward installation masked a dastardly trap for long-term maintenance. Every time a user uploaded a file, the app saved it to the local filesystem. If I ever blew away the server and rebuilt it, I'd have to backup and restore its files manually. The more desirable architecture is one where an independent service handles data storage, but rearchitecting this app could take months of development work.
+I recently installed a media sharing app to one of my servers. It was simple to install, but it hid a dastardly trap for long-term maintenance.
+
+Every time a user uploaded a file, the app saved it to the local filesystem. If I ever blew away the server and rebuilt it, I'd have to backup and restore its files manually. If the app wrote its files to a separate storage server, this wouldn't be a problem, but I didn't want to spend months decoupling the data from the application logic.
 
 {% include image.html file="naive-vs-desired.png" alt="Naive architecture vs desired architecture" max_width="771px" img_link="true" %}
 
-I solved this problem using Docker, Google Cloud Storage, and the [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) utility. I never changed a single line of the app's code.
+Using Docker, Google Cloud Storage, and the [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) utility, I achieved this separation without changing a single line of the app's code.
 
-In this tutorial, I'll show you how to retrofit your apps for Google Cloud Storage while also achieving easy deployment with Docker.
+In this tutorial, I'll show you how to retrofit legacy apps for Google Cloud Storage with minimal source changes.
 
 # Defining some terms
 
@@ -36,7 +38,14 @@ If you're unfamiliar with Google Cloud Platform, here are a few abbreviations to
 | **GCR** | Google Container Registry | Google's hosting service for Docker images | Docker Hub |
 | **GCP** | Google Cloud Platform | Google's cloud computing platform (GCS, GCE, and GCR are all parts of GCP) | Amazon Web Services or Microsoft Azure |
 
-**Docker** allows developers to build self-contained environments for an application that run anywhere. A **Docker image** defines the app. A **Docker container** is the app while it's running. For the purposes of this tutorial, you can think of Docker containers as lightweight virtual machines, even though [they're not](https://blog.docker.com/2016/03/containers-are-not-vms/).
+{% include image.html file="docker-logo.png" alt="Docker logo" max_width="260px" %}
+
+**Docker** allows developers to build self-contained environments for an application that run anywhere:
+
+* A **Docker image** is the set of all files needed to run an app, including the operating system and all third-party dependencies.
+* A **Docker container** is the live environment in which a Docker image executes (similar to how you can have a static VM image, then boot it as a running system).
+
+For the purposes of this tutorial, you can think of Docker containers as lightweight virtual machines, though that's technically [not what they are](https://blog.docker.com/2016/03/containers-are-not-vms/).
 
 # Prerequisites
 
@@ -47,7 +56,7 @@ To follow along with my examples, you'll need the following:
 
 # My example app
 
-I created an [example app](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web application based on the Flask framework's [upload example app](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
+I created an [example app](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web app based on the Flask framework's [upload example app](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
 
 It's simple to run:
 
@@ -62,11 +71,11 @@ gunicorn \
 
 The app lets you choose a file and upload it:
 
-{% include image.html file="flask-app1.png" alt="Screenshot of demo app landing page" max_width="685px" img_link="true" %}
+{% include image.html file="flask-app1.png" alt="Screenshot of demo app landing page" max_width="685px" img_link="true" fig_caption="Upload page of flask-upload-demo" %}
 
 Then, it serves the file permanently at the URL `http://[server address]:5000/uploads/[filename]`:
 
-{% include image.html file="flask-app2.png" alt="Screenshot of demo app upload result" max_width="685px" img_link="true" %}
+{% include image.html file="flask-app2.png" alt="Screenshot of demo app upload result" max_width="685px" img_link="true" fig_caption="flask-upload-demo serving an uploaded image" %}
 
 From within the server, you can see that the app saved the file to the `demo/uploads` folder of its local filesystem:
 
@@ -169,7 +178,7 @@ If you visit [http://localhost/](http://localhost/) in a browser, you should see
 
 # A more realistic Docker container
 
-Most web applications don't accept traffic directly from the browser. Instead, they use an HTTP server like Nginx or Apache to handle the gruntwork of HTTP.
+Most web apps don't accept traffic directly from the browser. Instead, they use an HTTP server like Nginx or Apache to handle the gruntwork of HTTP.
 
 To mimc this in my example, I'll modify the Dockerfile to integrate Nginx. The complete code is available in the [`nginx` branch of my docker-flask-upload-demo repo](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx), but the interesting changes are below:
 
@@ -210,7 +219,9 @@ server {
 }
 ```
 
-The `location /uploads { ... }` block is typical for Nginx configurations. Web servers (such as Nginx) are cheaper and more performant than application servers, so applications shouldn't use application servers for things that the web server can do. The files in the `uploads/` directory are static images. They don't require any action from the application server, so Nginx can just handle it itself.
+The `location /uploads { ... }` block is typical for Nginx configurations. Web servers (such as Nginx) are cheaper and more performant than app servers, so you shouldn't use app servers for things that the web server can do.
+
+The files in the `uploads/` directory are static images. They don't require any action from the app server, so Nginx can just handle it itself.
 
 ```bash
 cd ~/docker-flask-upload-demo
@@ -245,22 +256,22 @@ Next, you must use the GCP web console to [create a service account](https://con
 **Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io (see the following section) will fail if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`.
 {: .notice--warning}
 
-{% include image.html file="service-account-1.png" alt="Screenshot of service account creation screen" max_width="799px" class="img-border" img_link="true" %}
+{% include image.html file="service-account-1.png" alt="Screenshot of service account creation screen" max_width="799px" class="img-border" img_link="true" fig_caption="Creating a new service account from the GCP web console" %}
 
-{% include image.html file="service-account-2.png" alt="Screenshot of service account role selection screen" max_width="799px" class="img-border" img_link="true" %}
+{% include image.html file="service-account-2.png" alt="Screenshot of service account role selection screen" max_width="799px" class="img-border" img_link="true" fig_caption="Assigning a role to the service account" %}
 
 Download the private key as `key.json`:
 
-{% include image.html file="service-account-3.png" alt="Screenshot of service account private key download" max_width="799px" class="img-border" img_link="true" %}
+{% include image.html file="service-account-3.png" alt="Screenshot of service account private key download" max_width="799px" class="img-border" img_link="true" fig_caption="Downloading private keys for the service account" %}
 
-Use gcloud to authenticate as that service account:
+Finally, use gcloud to authenticate as that service account:
 
 ```bash
 # Activate the service account you created.
 gcloud auth activate-service-account --key-file key.json
 ```
 
-Next, run some commands to prepare your project for the rest of the tutorial:
+Now that you've authenticated, you'll need to run a few commands to prepare your project for the rest of the tutorial:
 
 ```bash
 # Enable APIs you'll need for this workflow.
@@ -369,13 +380,13 @@ flask-demo-app-vm  us-east1-b  n1-standard-1               10.142.0.2   35.211.1
 
 If you type the address from `EXTERNAL_IP` into your browser, you will see it work just like the local version of the app:
 
-{% include image.html file="gce-app-1.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
+{% include image.html file="gce-app-1.png" alt="Screenshot of flask-upload-demo on GCE" max_width="667px" img_link="true" fig_caption="flask-upload-demo running on GCE" %}
 
-{% include image.html file="gce-app-2.png" alt="Screenshot of service account role selection screen" max_width="667px" img_link="true" %}
+{% include image.html file="gce-app-2.png" alt="Screenshot of file uploaded to flask-upload-demo on GCE" max_width="667px" img_link="true" fig_caption="flask-upload-demo serving image file from GCE" %}
 
 The problem is that if you kill that VM and launch a new one with the same Docker image, the file you uploaded is no longer there:
 
-{% include image.html file="gce-app-3.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
+{% include image.html file="gce-app-3.png" alt="Screenshot of 404 for previously uploaded file" max_width="667px" img_link="true" fig_caption="The new GCE VM can't serve the file because it was stored on the previous VM" %}
 
 This is, of course, because the container stores the file on its own internal filesystem. When you terminate the host VM, you lose all the files.
 
@@ -392,7 +403,7 @@ Here is the architecture you'll be creating:
 * For all other requests, Nginx forwards the request to the flask-upload-demo app.
 * flask-upload-demo can write new files to GCS, also via the gcsfuse utility.
 
-This architecture satisfies the goals I defined at the top of the post. Everything in the VM is disposable because GCS stores all the permanent state. All application code is in a Docker container, which makes deployments simple and atomic.
+This architecture satisfies the goals I defined at the top of the post. Everything in the VM is disposable because GCS stores all the permanent state. All app code is in a Docker container, which makes deployments simple and atomic.
 
 # Creating a GCS bucket (optional)
 
@@ -608,19 +619,21 @@ I purposely designed the Docker image to be agnostic to the name of the bucket u
 
 You finally have a Docker container that will persist its state in GCS. You can test this by uploading a file to the deployed app:
 
-{% include image.html file="gcsfuse-1.png" alt="Screenshot of service account creation screen" max_width="667px" img_link="true" %}
+{% include image.html file="gcsfuse-1.png" alt="Screenshot of flask-upload-demo serving file" max_width="667px" img_link="true" fig_caption="flask-upload-demo serves the file from permanent storage on GCS" %}
 
 If you check your GCS bucket, you will see the file you just uploaded:
 
-{% include image.html file="gcsfuse-2.png" alt="Screenshot of service account role selection screen" max_width="800px" class="img-border" img_link="true" %}
+{% include image.html file="gcsfuse-2.png" alt="Screenshot GCS bucket showing uploaded file" max_width="800px" class="img-border" img_link="true" fig_caption="Image file in GCS bucket" %}
 
 The real test is whether this state persists across different VMs. You can verify this by killing your VM entirely and redeploying it. The image URL from your previous VM will be accessible on your new server:
 
-{% include image.html file="gcsfuse-3.png" alt="Screenshot of service account role selection screen" max_width="667px" class="img-border" img_link="true" %}
+{% include image.html file="gcsfuse-3.png" alt="Screenshot of flask-upload-demo serving file from different IP" max_width="667px" class="img-border" img_link="true" fig_caption="flask-upload-demo continues serving file even after the VM has been destroyed and rebuilt" %}
 
 # Bonus: Logging interface
 
-A nice side-benefit of this solution is that GCP provides a nice web interface to view your application's logs. The manual way of doing this is to ssh into your VM, then run `docker logs`:
+A nice side-benefit of this solution is that GCP provides a nice web interface to view your app's logs.
+
+You can always check the logs manually by ssh'ing into your VM, then running `docker logs`:
 
 ```bash
 $ docker logs klt-flask-demo-app-vm-gcsfuse-qnnf
@@ -632,13 +645,13 @@ $ docker logs klt-flask-demo-app-vm-gcsfuse-qnnf
 [2018-11-26 21:32:59 +0000] [37] [INFO] Saving uploaded file "zestful-logo.png" to "/srv/demo-app/demo/uploads/zestful-logo.png"
 ```
 
-The easier way is to open the [StackDriver logging interface](https://console.cloud.google.com/logs/viewer) from the GCP console. There, you will find all of your logs in a slick web interface:
+The easier way is to open the [StackDriver logging interface](https://console.cloud.google.com/logs/viewer) from the GCP console. There, you will find all of your logs in a slick web interface with built-in tools for searching and filtering:
 
-{% include image.html file="gcsfuse-logs.png" alt="Application logs in GCP's StackDriver interface" max_width="800px" class="img-border" img_link="true" fig_caption="GCP's StackDriver interface shows log output from the application." %}
+{% include image.html file="gcsfuse-logs.png" alt="App logs in GCP's StackDriver interface" max_width="800px" class="img-border" img_link="true" fig_caption="GCP's StackDriver interface shows log output from the app." %}
 
 # Pushing new releases
 
-This solution makes it very easy to push new releases. Any time you want to update the app or its dependencies, you can simply build a new image and push it to GCR:
+This architecture makes it very easy to push new releases. Any time you want to update the app or its dependencies, you can simply build a new image and push it to GCR:
 
 ```bash
 docker build --tag "$LOCAL_IMAGE_NAME" .
@@ -666,14 +679,15 @@ This solution suffers from the same limitations as the gcsfuse utility and GCS i
 
 The two main ways this can bite you are:
 
-* GCS doesn't support locks, so things will get wonky if an application tries to acquire exclusive locks on a file.
+* GCS doesn't support locks, so things will get wonky if your app tries to acquire file locks.
 * Latency is very high, especially when doing small, random reads or writes on large files.
 
 In particular, I've found that [sqlite](https://www.sqlite.org/index.html) will quickly fail if you point it at a database located on a gcsfuse mount.
 
 # Conclusion
 
-flask-upload-demo was not aware of GCS and I never had to change any of its source code to support this scenario.
+In this tutorial, you learned to redirect an app's to cloud storage without making changes to the app itself. The example app had no awareness of Google Cloud Platform, yet you deployed it to Google Compute Engine and redirected its persistent data to Google Cloud Storage.
+
 # Source Code
 
 * [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo): A demo app that keeps state on the local filesystem. 
@@ -681,3 +695,8 @@ flask-upload-demo was not aware of GCS and I never had to change any of its sour
   * [master branch](https://github.com/mtlynch/docker-flask-upload-demo) - Shows basic packaging of the app
   * [nginx branch](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx) - Shows a more realistic real-world architecture where nginx proxies traffic for the app
   * [gcsfuse branch](https://github.com/mtlynch/docker-flask-upload-demo/tree/gcsfuse) - Shows how to mount a Google Cloud Storage bucket from within the Docker container (assumes the container runs in a Google Compute Engine VM with read/write permissions to Google Cloud Storage).
+* [mediagoblin-docker (gcsfuse branch)](https://github.com/mtlynch/mediagoblin-docker/tree/gcsfuse) - Docker configuration for a real-world media sharing app where I used these same techniques to redirect the app's permanent data to Google Cloud Storage.
+
+---
+
+*Diagrams by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)*
