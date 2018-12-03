@@ -56,9 +56,9 @@ To follow along with my examples, you'll need the following:
 
 # My example app
 
-I created an [example app](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web app based on the Flask framework's [upload example app](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
+I created an [example project](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web app based on the Flask framework's [upload documentation](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
 
-It's simple to run:
+To run it, enter the following:
 
 ```bash
 git clone https://github.com/mtlynch/flask_upload_demo.git
@@ -84,13 +84,9 @@ $ ls -l demo/uploads/
 -rw-rw-r-- 1 mike mike 230720 Nov 24 21:45 Space_Duck_Desktop_RGB_PNG.png
 ```
 
-
-**Note**: If your app was really as simple as [flask-upload-demo](https://github.com/mtlynch/flask_upload_demo), it would make more sense to rewrite the app to use GCS APIs natively. For the purposes of this tutorial, pretend that flask-upload-demo is a black box whose source you can't modify.
-{: .notice--info}
-
 # Dockerizing the example app
 
-Because this app has few, simple dependencies, it's easy to create a Docker image for it:
+Because this app only has a few simple dependencies, it's easy to create a Docker image for it:
 
 **`Dockerfile`**
 
@@ -152,9 +148,9 @@ CMD virtualenv VIRTUAL && \
 The above `Dockerfile` performs a few high-level tasks to prepare the image:
 
 1. Installs Git, Python and associated packages.
-1. Creates a system account (`demo-user`) under which the demo app will run.
+1. Creates a system account (`demo-user`) to run the app with limited privileges.
 1. Clones the [app source repo](https://github.com/mtlynch/flask_upload_demo) locally.
-1. Adds a `CMD` to run when the container boots that starts the demo app on port 5000.
+1. Adds a `CMD` to startt the demo app on port 5000.
 
 You can test this `Dockerfile` by cloning [my repo](https://github.com/mtlynch/docker-flask-upload-demo) and building the Docker container locally:
 
@@ -176,11 +172,11 @@ docker run \
 
 If you visit [http://localhost/](http://localhost/) in a browser, you should see the demo app.
 
-# A more realistic Docker container
+# A more realistic Docker image
 
-Most web apps don't accept traffic directly from the browser. Instead, they use an HTTP server like Nginx or Apache to handle the gruntwork of HTTP.
+Most web apps don't accept traffic directly from the browser. Instead, they use an HTTP server like Nginx or Apache to handle generic tasks (e.g., load-balancing, serving static files) while the backend handles the app-specific logic.
 
-To mimc this in my example, I'll modify the Dockerfile to integrate Nginx. The complete code is available in the [`nginx` branch of my docker-flask-upload-demo repo](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx), but the interesting changes are below:
+I added the [`nginx` branch to my docker-flask-upload-demo repo](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx) to demonstrate a Docker image that's closer to what you'd use in a real-world app. The interesting differences are below:
 
 ```bash
 # Install nginx.
@@ -219,9 +215,9 @@ server {
 }
 ```
 
-The `location /uploads { ... }` block is typical for Nginx configurations. Web servers (such as Nginx) are cheaper and more performant than app servers, so you shouldn't use app servers for things that the web server can do.
+When users request static files from the `/uploads` path, the `location /uploads { ... }` block allows Nginx to serve the files itself instead of forwarding the request to the flask-upload-demo backend. This is a common configuration, as Nginx can handle static files faster and more efficiently than the app backend.
 
-The files in the `uploads/` directory are static images. They don't require any action from the app server, so Nginx can just handle it itself.
+You can run the Nninx version of flask-upload-demo with the commands below:
 
 ```bash
 cd ~/docker-flask-upload-demo
@@ -242,9 +238,9 @@ The app will once again appear at [http://localhost/](http://localhost/). The be
 
 # Preparing your GCP Project
 
-Deploying your app locally is neat, but 
+Deploying your app locally is neat, but it's much more exciting if you can deploy it to the cloud where all users can access it. You'll need to take a few steps to set up GCP.
 
-Set your project in `gcloud`:
+First, specify your GCP project's name in `gcloud`:
 
 ```bash
 PROJECT_ID="ENTER-YOUR-PROJECT-ID-HERE"
@@ -264,7 +260,7 @@ Download the private key as `key.json`:
 
 {% include image.html file="service-account-3.png" alt="Screenshot of service account private key download" max_width="799px" class="img-border" img_link="true" fig_caption="Downloading private keys for the service account" %}
 
-Finally, use gcloud to authenticate as that service account:
+Finally, use gcloud to authenticate as the service account you just created:
 
 ```bash
 # Activate the service account you created.
@@ -286,14 +282,16 @@ gcloud auth configure-docker --quiet
 ```
 # Uploading image to Google Container Registry
 
-Before you can deploy a Docker image to GCE, you need to deploy it to a Docker image hosting service. Google Container Registry (GCR) is GCP's preferred service, so that's the easiest option. To do that, check out the `nginx` branch of my example repo:
+Before you can deploy a Docker image to GCE, you need to deploy it to a Docker image hosting service. GCR is Google Cloud's integrated Docker image hosting service, so that's the easiest option.
+
+To upload your Docker image to GCR, check out the `nginx` branch of my example repo:
 
 ```bash
 cd ~/docker-flask-upload-demo
 git checkout nginx
 ```
 
-Now, build the Docker image locally, and upload it to GCR:
+Now, build the Docker image locally, and push the image to GCR:
 
 ```bash
 LOCAL_IMAGE_NAME="flask-upload-demo-image"
