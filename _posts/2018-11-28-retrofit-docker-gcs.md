@@ -390,7 +390,7 @@ The problem is that if you kill that VM and launch a new one with the same Docke
 
 {% include image.html file="gce-app-3.png" alt="Screenshot of 404 for previously uploaded file" max_width="667px" img_link="true" fig_caption="The new GCE VM can't serve the file because it was stored on the previous VM" %}
 
-This is, of course, the problem that inspired this whole tutorial. The container stores the file on its own internal filesystem. When you terminate the host VM, you lose all the files.
+This is, of course, the problem that inspired this whole tutorial. The container stores the file on its internal filesystem. When you terminate the host VM, you lose all the files.
 
 To address this, you need to configure the Docker container to store all persistent data in a Google Cloud Storage (GCS) bucket.
 
