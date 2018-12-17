@@ -1,5 +1,5 @@
 ---
-title: The Most Obvious Upwork Scammer
+title: What a Bumbling Scammer Reveals about Upwork
 layout: single
 author_profile: true
 read_time: true
@@ -11,41 +11,43 @@ sidebar:
 classes: wide
 ---
 
-I recently hired writers for a business I'm working on. To find freelance writers, I used Upwork, a site I frequently use to hire freelancers.
+For years, I've hired software developers, graphic designers, and virtual assistants through a freelancing marketplace called Upwork. Some of my hires turned out to be excellent people that I've worked with for years. Some are completely unqualified for the job they apply for and I drop them instantly. Until a few weeks ago, nobody had attempted to scam me through Upwork, but when I did, I realized how poorly Upwork protects against it.
 
-Most of the bids I received were in the $30-40 range. One was for $10: [Lizzie R.](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/).
+# The suspiciously cheap writer
+
+I needed writers for a nutrition site I'm working on called [Is It Keto](https://isitketo.org). Most of the freelance content writers on Upwork who claim English fluency charge in the $30-50. The high-end writers charge in the $80-150 range. That's why I was so surprised to find, [Lizzie](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/), a young American woman charging only $10/hr. She had only a small reputation history on Upwork, but she had 100% perfect reviews. Unlike other low-cost writers, her profile was clear, concise, and free of loud grammatical errors.
 
 {% include image.html file="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Lizzie R.&quot;" %}
 
-I know what you're thinking. Too good to be true. But I've hired a lot on Upwork and sometimes I do find people who seem vastly underpriced. Sometimes I value different qualities than other clients, so I get people who seem undervalued. Sometimes a freelancer is just starting out and sets a low rate to build their reputation.
+I know what you're thinking: too good to be true. But I've had several experiences hiring freelancers for surprisingly low rates because they want to build their reputation.
 
-If I'm wrong, I lose $50. If I'm right, I find a great freelancer for a low price.
+I decided to hire Lizzie for 5 hours of work. If she's terrible, I lose $50. If she's good, I find a great freelancer for a low price.
 
-# Too good to be true
+# Exchanging $50 for a blank document
 
-I told Lizzie to limit her time to five hours. If she wasn't done at the 4.5 hour mark, spend the last 30 minutes collecting what she had so far to share with me. She billed five hours. The shared document was untouched, and I hadn't received any messages from her.
+I offered Lizzie the job and she was excited to begin. I assigned her three reports for Is It Keto, linked her to the instructions, and linked her to a shared Google Doc for her to write the results.
+
+I confirmed the five hour limit with Lizzie and said that if she wasn't done at the 4.5 hour mark, spend the last 30 minutes collecting what she had so far to share with me.
+
+The next day, I saw that Lizzie billed the full five hours, but I hadn't received any messages from her. That was strange. I opened the shared document where she was supposed to write her results and found it untouched.
 
 # Intrusive surveillance to the rescue
 
-Upwork offers a . Lizzie had let Work Diary monitor her computer for the five hours she was supposedly working for me. Here's what it looks like for my contract with Lizzie:
+When I checked the hours, I realized that Lizzie had logged her time using Upwork's Work Diary. Work Diary is creepy spyware that some clients force their freelancers to install, which records the freelancer's screen and tracks their time. I never require it because I find it creepy, but Lizzie had chosen to use it. So I now had a bunch of monitoring for what Lizzie was doing in the five hours she was supposedly working for me.
 
 {% include image.html file="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" max_width="800px" class="img-border" img_link="true" fig_caption="Overview of Lizzie's activities in Work Diary" %}
 
 It even collects information about how many keystrokes and mouse clicks the freelancer executed:
 
-{% include image.html file="workdiary-7.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" class="img-border" img_link="true" fig_caption="First Work Diary screenshot" %}
+{% include image.html file="workdiary-1.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" class="img-border" img_link="true" fig_caption="First Work Diary screenshot" %}
 
-Here's the first screenshot:
-
-{% include image.html file="workdiary-1.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
-
-Okay, that seems fine. She's off to a good start! She's checking how much space is left on her hard drive. She doesn't want to run out of space halfway through writing my document and leave me empty-handed.
-
-The next several screenshots show Lizzie writing an article about mantras in Hinduism. Definitely nothing to do with my project, but she was billing the work to me.
+I could see from the thumbnails that she was editing a Word document, so I opened one up:
 
 {% include image.html file="workdiary-2.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
 
-It's important to note that the freelancers are aware that Upwork records their screen. One of the screenshots shows Lizzie looking at the Upwork app displaying the latest screenshot it logged.
+Okay, that's a document about mantras in Hinduism. Definitely nothing to do with my project, but she was billing the work to me.
+
+As creepy as Work Diary is, it's up front with the freelancer that it's recording their screen. There's even a screen capture of Lizzie viewing the time tracker as it shows her the last screen capture:
 
 {% include image.html file="workdiary-3.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
 
@@ -104,7 +106,7 @@ Upwork forces the freelancer to install such invasive spyware, yet it fails to p
 * Two users are using the same computer and IP but claim to be in cities 2,000 miles apart.
 * Two users have exactly identical profiles.
 * Large sections of a new user's profile are plagiarized from a more established user on the same platform.
-* Both users claim to live in the US but have their time zones set to Nairobi and likely have Kenyan IP addresses.
+* Both users claim to live in the US but have their clocks set to Nairobi time and likely have Kenyan IP addresses.
 
 I'll reserve a bit of judgment because I used to work on a fraud-detection team at Google, so I'm familiar with outsiders saying, "Why can't you just look for X," when the true reason is that there are non-obvious cases where X is a false positive. That said, it *really* seems like there were tons of clues here that Upwork should have caught.
 
