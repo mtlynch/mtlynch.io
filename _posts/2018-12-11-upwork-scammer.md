@@ -1,5 +1,5 @@
 ---
-title: What a Bumbling Scammer Reveals about Upwork
+title: What I Learned About Upwork from a  Bumbling Scammer
 layout: single
 author_profile: true
 read_time: true
@@ -11,29 +11,35 @@ sidebar:
 classes: wide
 ---
 
-For years, I've hired software developers, graphic designers, and virtual assistants through a freelancing marketplace called Upwork. Some of my hires turned out to be excellent people that I've worked with for years. Some are completely unqualified for the job they apply for and I drop them instantly. Until a few weeks ago, nobody had attempted to scam me through Upwork, but when I did, I realized how poorly Upwork protects against it.
+For years, I've hired software developers, graphic designers, and virtual assistants through a freelancing marketplace called Upwork. Some of my hires turned out to be superstars while others were completely unqualified.
+
+Until a few weeks ago,I never encountered an outright scammer. When I finally did, I realized how poorly Upwork protects clients from fraudulent freelancers.
 
 # The suspiciously cheap writer
 
-I needed writers for a nutrition site I'm working on called [Is It Keto](https://isitketo.org). Most of the freelance content writers on Upwork who claim English fluency charge in the $30-50. The high-end writers charge in the $80-150 range. That's why I was so surprised to find, [Lizzie](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/), a young American woman charging only $10/hr. She had only a small reputation history on Upwork, but she had 100% perfect reviews. Unlike other low-cost writers, her profile was clear, concise, and free of loud grammatical errors.
+I needed writers for a nutrition site I'm working on called [Is It Keto](https://isitketo.org). Most writers on Upwork who claim fluency in English charge $30-50/hr. The high-end writers charge in the $80-150 range.
+
+Imagine my surprise to [Lizzie](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/), a young American woman charging the low, low price of $10/hr. She had only a small reputation history on Upwork, but she had 100% perfect reviews. Unlike other low-cost writers, her profile was clear, concise, and free of loud grammatical errors.
 
 {% include image.html file="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Lizzie R.&quot;" %}
 
-I know what you're thinking: too good to be true. But I've had several experiences hiring freelancers for surprisingly low rates because they want to build their reputation.
+The cheap price was a red flag but it wasn't conclusive. I've worked with a few Upwork freelancers who charge low rates to build up their reputation on the site.
 
-I decided to hire Lizzie for 5 hours of work. If she's terrible, I lose $50. If she's good, I find a great freelancer for a low price.
+At the very least, I was curious to see what would happen.
 
 # Exchanging $50 for a blank document
 
-I offered Lizzie the job and she was excited to begin. I assigned her three reports for Is It Keto, linked her to the instructions, and linked her to a shared Google Doc for her to write the results.
+I offered the job to Lizzie, and she excitedly accepted a few hours later. I assigned her three reports, showed her [the instructions](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing), and linked her to a shared Google Doc for her to write the results.
 
 I confirmed the five hour limit with Lizzie and said that if she wasn't done at the 4.5 hour mark, spend the last 30 minutes collecting what she had so far to share with me.
 
-The next day, I saw that Lizzie billed the full five hours, but I hadn't received any messages from her. That was strange. I opened the shared document where she was supposed to write her results and found it untouched.
+The next day, I saw that Lizzie billed the full five hours hadn't sent me any messages. The Google Doc of results was empty.
 
 # Intrusive surveillance to the rescue
 
-When I checked the hours, I realized that Lizzie had logged her time using Upwork's Work Diary. Work Diary is creepy spyware that some clients force their freelancers to install, which records the freelancer's screen and tracks their time. I never require it because I find it creepy, but Lizzie had chosen to use it. So I now had a bunch of monitoring for what Lizzie was doing in the five hours she was supposedly working for me.
+When I checked the hours, I realized that Lizzie had logged her time using Upwork's Work Diary, the creepy spyware that some clients force their freelancers to install. It records the freelancer's screen and tracks their time.
+
+I never require it because I find it creepy, but Lizzie had elected to use it. I didn't have the work I paid for, but I now had  a bunch of monitoring for what Lizzie was doing in the five hours she was supposedly working for me.
 
 {% include image.html file="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" max_width="800px" class="img-border" img_link="true" fig_caption="Overview of Lizzie's activities in Work Diary" %}
 
@@ -53,6 +59,8 @@ As creepy as Work Diary is, it's up front with the freelancer that it's recordin
 
 {% include image.html file="workdiary-4.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
 
+# Wait, these are clues!
+
 It got really interesting when I saw a screenshot of Lizzie using Upwork's messaging interface to talk to her other clients:
 
 {% include image.html file="workdiary-5.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
@@ -69,7 +77,7 @@ One of the screenshots shows Lizzie's Documents folder:
 
 {% include image.html file="workdiary-6.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
 
-It shows several files with the name "Grace" in the title: "Grace Application Letter", "Grace CV", "Grace Intenship[sic] letter." There was a PDF whose filename was Grace followed by what looked like a last name. It was a unique enough last name that when I Googled the full name, there was only a single result. A Facebook profile:
+It shows several files with the name "Grace" in the title: "Grace Application Letter", "Grace CV", "Grace Intenship[sic] letter." There was a PDF whose filename was Grace followed by what looked like a last name. It was a unique enough last name that when I Googled the full name, there was only a single result: a Facebook profile:
 
 {% include image.html file="grace-facebook.png" alt="Screenshot of Lizzie R's WorkDiary history" max_width="504px" img_link="true" fig_caption="Lizzie's true identity, potentially" %}
 
@@ -81,7 +89,7 @@ I realized there was another hint in the screenshots. Upwork showed this screens
 
 {% include image.html file="time-comparison.jpg" alt="Screenshot of Abi H's Upwork profile" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot;, with identical text to &quot;Lizzie R.&quot;" %}
 
-I didn't know what time zone that was offhand, but I was sure it wasn't Nevada. I checked a time zone converter to find out how 6:15 PM translates to the time in Kenya. Sure enough...
+I didn't know what time zone that was offhand, but I was sure it wasn't Nevada, where Lizzie claimed that she lived. I checked a time zone converter to find out how 6:15 PM translates to the time in Kenya. Sure enough...
 
 {% include image.html file="utc-to-nairobi.png" alt="Screenshot of Abi H's Upwork profile" max_width="758px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot;, with identical text to &quot;Lizzie R.&quot;" %}
 
@@ -119,6 +127,18 @@ I closed the contract and reported the fraud to Upwork. Two days later, I receiv
 >Based on your report, I have examined the account and taken action as defined in our Terms of Service. In order to protect the confidentiality of all of our members’ accounts, I won’t be able to report back with the outcome of our investigation.
 
 It has been two weeks since I reported the fraud, and Upwork still shows both profiles as active. The "Abi H" profile switched to private a few days after I filed the report, but both profiles still accept job offers.
+
+I warned other clients about Lizzie in the post-job feedback. I kept it objective and factual. I said that Work Diary revealed that Lizzie billed me for unrelated work and that she was operating multiple Upwork profiles. Curiously, Upwork shows my feedback as "No feedback given":
+
+TODO: Screenshot of "No feedback given"
+
+# Warning Lizzie's other clients
+
+Talk about reporting to other clients.
+
+# Results, finally
+
+A day after I closed 
 
 # Upwork's cross-contamination problem
 
