@@ -11,51 +11,51 @@ sidebar:
 classes: wide
 ---
 
-For years, I've hired software developers, graphic designers, and virtual assistants through a freelancing marketplace called Upwork. Some of my hires turned out to be superstars while others were completely unqualified.
+For years, I've hired freelancers through a marketplace called Upwork. I used the site to find cartoonists, software developers, editors, and virtual assistants. Some were great, some were disastrous, but I'd never had someone who was outright trying to scam me.
 
-Until a few weeks ago,I never encountered an outright scammer. When I finally did, I realized how poorly Upwork protects clients from fraudulent freelancers.
+That is, until I met Lizzie.
 
-# The suspiciously cheap writer
+{% include image.html file="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" max_width="450px" img_link="true" fig_caption="Lizzie's freelancer profile on Upwork" %}
 
-I needed writers for a nutrition site I'm working on called [Is It Keto](https://isitketo.org). Most writers on Upwork who claim fluency in English charge $30-50/hr. The high-end writers charge in the $80-150 range.
+I needed writers for [a nutrition website](https://isitketo.org) I'm working on. Lizzie seemed like a potential match. She was a young American writer &mdash; a native English speaker. Her [bio](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/) was free of loud grammar errors, an alarmingly rare quality among freelance writers. And best of all, she only charged $10/hr. For comparison, a mid-range writer on Upwork typically charges $30-60/hr.
 
-Imagine my surprise to [Lizzie](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/), a young American woman charging the low, low price of $10/hr. She had only a small reputation history on Upwork, but she had 100% perfect reviews. Unlike other low-cost writers, her profile was clear, concise, and free of loud grammatical errors.
+Okay, I know what you're thinking: for $10/hr, she's *obviously* a scammer. Or, at the very least, a terrible writer.
 
-{% include image.html file="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Lizzie R.&quot;" %}
+But that's part of the adventure of Upwork. Some of the best people I've worked with charged a suspiciously low rate because they wanted to build a good rating history. Lizzie had only worked a few jobs, but she had perfect reviews on all of them.
 
-The cheap price was a red flag but it wasn't conclusive. I've worked with a few Upwork freelancers who charge low rates to build up their reputation on the site.
+If she turned out to be talented, I'd have a great writer at a phenomenal price. If she was terrible, I'd at least get to see what $10/hr writing looked like.
 
-At the very least, I was curious to see what would happen.
+# Hiring
+
+The only way Lizzie could really burn me would be if I just let her go nuts: unlimited hours and send me the bill later. She could churn out garbage and claim she worked on it for 50 hours and 
+
+Lizzie's cheap rate set off some alarm bells for me, but there was little risk in offering her the job. I could just limit her to five hours per week and see how she did with that time. If she turned out to be terrible, I'm only out 50 bucks.
+
+If nothing else, I was curious to see what $10/hr writing looked like.
+
+I offered Lizzie the job, and the next morning, I saw that she accepted. I assigned her three reports to write and gave her [instructions](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing) on how to write them. I linked her to a Google Doc where she could write the reports.
+
+Not wanting to take any chances on the five hour cap, I told her that if she wasn't done with the three reports at the 4.5 hour mark, she should spend the last 30 minutes putting all of her progress in our shared Google Doc.
 
 # Exchanging $50 for a blank document
 
-I offered the job to Lizzie, and she excitedly accepted a few hours later. I assigned her three reports, showed her [the instructions](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing), and linked her to a shared Google Doc for her to write the results.
-
-I confirmed the five hour limit with Lizzie and said that if she wasn't done at the 4.5 hour mark, spend the last 30 minutes collecting what she had so far to share with me.
-
-The next day, I saw that Lizzie billed the full five hours hadn't sent me any messages. The Google Doc of results was empty.
+The next day, I saw that Lizzie billed the full five hours but hadn't sent me any messages. The Google Doc I gave her was empty.
 
 # Intrusive surveillance to the rescue
 
-When I checked the hours, I realized that Lizzie had logged her time using Upwork's Work Diary, the creepy spyware that some clients force their freelancers to install. It records the freelancer's screen and tracks their time.
+When I checked the hours, I realized that Lizzie had logged her time using Work Diary, Upwork's official spyware tool. It records the freelancer's screen, tracks their time, and sends all the information to both Upwork and the client.
 
-I never require it because I find it creepy, but Lizzie had elected to use it. I didn't have the work I paid for, but I now had  a bunch of monitoring for what Lizzie was doing in the five hours she was supposedly working for me.
+I find this tool extremely creepy, so I never require freelancers to use it, but Lizzie had elected to use it. This meant that I didn't have the work I paid for, but I did have screenshots showing what Lizzie was doing in the five hours she was supposedly working for me.
 
 {% include image.html file="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" max_width="800px" class="img-border" img_link="true" fig_caption="Overview of Lizzie's activities in Work Diary" %}
 
-It even collects information about how many keystrokes and mouse clicks the freelancer executed:
-
-{% include image.html file="workdiary-1.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" class="img-border" img_link="true" fig_caption="First Work Diary screenshot" %}
-
-I could see from the thumbnails that she was editing a Word document, so I opened one up:
+I checked one of the screenshots from when she began billing to me:
 
 {% include image.html file="workdiary-2.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
 
-Okay, that's a document about mantras in Hinduism. Definitely nothing to do with my project, but she was billing the work to me.
+It was a document about mantras in Hinduism. It definitely had nothing to do with my project, but she was billing the work to me.
 
-As creepy as Work Diary is, it's up front with the freelancer that it's recording their screen. There's even a screen capture of Lizzie viewing the time tracker as it shows her the last screen capture:
-
-{% include image.html file="workdiary-3.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
+Later, she switched gears and started writing an article about tarot cards:
 
 {% include image.html file="workdiary-4.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption="First Work Diary screenshot" %}
 
@@ -70,6 +70,10 @@ This one confused me a bit because it was a conversation with Upwork, but neithe
 I searched the name on Upwork and found [Abi's profile](https://www.upwork.com/o/profiles/users/_~012951f3927669080e). Sure enough, it had the exact same profile text and hourly rate as Lizzie:
 
 {% include image.html file="abi-h-profile.png" alt="Screenshot of Abi H's Upwork profile" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot;, with identical text to &quot;Lizzie R.&quot;" %}
+
+That explained why she had four different web browsers pinned to her taskbar. She probably used a separate browser for each of her Upwork identities.
+
+{% include image.html file="many-browsers.jpg" alt="Screenshot of Lizzie's desktop showing Firefox, Chrome, IE, and Opera" max_width="800px" class="img-border" img_link="true" fig_caption="Screenshot of Lizzie's desktop showing four different web browsers installed" %}
 
 # Who is Grace?
 
@@ -89,44 +93,41 @@ I realized there was another hint in the screenshots. Upwork showed this screens
 
 {% include image.html file="time-comparison.jpg" alt="Screenshot of Abi H's Upwork profile" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot;, with identical text to &quot;Lizzie R.&quot;" %}
 
-I didn't know what time zone that was offhand, but I was sure it wasn't Nevada, where Lizzie claimed that she lived. I checked a time zone converter to find out how 6:15 PM translates to the time in Kenya. Sure enough...
+What time zone could that be? Perhaps, Kenya. Sure enough...
 
-{% include image.html file="utc-to-nairobi.png" alt="Screenshot of Abi H's Upwork profile" max_width="758px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot;, with identical text to &quot;Lizzie R.&quot;" %}
-
-# Why even do this?
-
-The strangest part is that Lizzie/Grace uploaded. She even watched it upload screenshots of her work.
-
-I actually don't like Work Diary. I don't require it for freelancers I hire on Upwork. She could have just entered her hours and I wouldn't have known the difference. I don't require Work Diary.
-
-I would have recognized that she wasn't a native English speaker but I would have probably just paid the $50 because I couldn't prove it.
+{% include image.html file="utc-to-nairobi.png" alt="6:15 PM UTC matching 9:15 PM in Nairobi, Kenya" max_width="758px" img_link="true" %}
 
 # How did she write a good profile?
 
-How did she write her profile so well? I Googled the text and realized she stitched together the content from two different Australian writers. Most of the text comes from this [woman's LinkedIn](https://www.linkedin.com/in/laraflanagan/) and the intro comes from [another freelancer](https://www.upwork.com/o/profiles/users/_~017434da88fc78860a/) right from Upwork.
+How did she write her profile so well? I Googled the text and realized she stitched together the content from two different Australian writers. One was [a profile on LinkedIn](https://www.linkedin.com/in/laraflanagan/). She stole the other one from [another freelancer](https://www.upwork.com/o/profiles/users/_~017434da88fc78860a/) right from Upwork.
 
 {% include image.html file="profile-stitching.png" alt="Screenshot of demo app landing page" max_width="800px" class="img-border" img_link="true" fig_caption="" %}
 
+# Is this a trick?
+
+The fraud seemed so bumbling and obvious that I feared I was falling for a deeper trick. In movies with con-men, there's always a part where they let the victim *think* that they've uncovered the fraud. But in so doing, the victim lets their guard down and leaves themselves vulnerable to the *actual* con. Was Lizzie trying to get caught so that she could trick me at another level?
+
+
+{% include image.html file="oceans-eleven.jpg" alt="Screenshot of demo app landing page" max_width="800px" class="img-border" img_link="true" %}
+
 # How did Upwork miss this?
 
-Upwork forces the freelancer to install such invasive spyware, yet it fails to pick up on many signals that should be
+Upwork forces freelancers to install invasive spyware, yet it fails to pick up on many signals that should have been be huge red flags:
 
 * Two users are using the same computer and IP but claim to be in cities 2,000 miles apart.
 * Two users have exactly identical profiles.
 * Large sections of a new user's profile are plagiarized from a more established user on the same platform.
 * Both users claim to live in the US but have their clocks set to Nairobi time and likely have Kenyan IP addresses.
 
-I'll reserve a bit of judgment because I used to work on a fraud-detection team at Google, so I'm familiar with outsiders saying, "Why can't you just look for X," when the true reason is that there are non-obvious cases where X is a false positive. That said, it *really* seems like there were tons of clues here that Upwork should have caught.
-
-But the more likely solution is that Upwork cares more about empowering micromanagers to ding their freelancers for not typing enough keystrokes.
-
 # Reporting the fraud to Upwork
 
-I closed the contract and reported the fraud to Upwork. Two days later, I received this response:
+I closed the contract and reported the fraud to Upwork. Two days later, Upwork customer support responded:
 
 >Based on your report, I have examined the account and taken action as defined in our Terms of Service. In order to protect the confidentiality of all of our members’ accounts, I won’t be able to report back with the outcome of our investigation.
 
 It has been two weeks since I reported the fraud, and Upwork still shows both profiles as active. The "Abi H" profile switched to private a few days after I filed the report, but both profiles still accept job offers.
+
+I disputed the hours, so Upwork refunded me the $50 that she tried to bill me.
 
 I warned other clients about Lizzie in the post-job feedback. I kept it objective and factual. I said that Work Diary revealed that Lizzie billed me for unrelated work and that she was operating multiple Upwork profiles. Curiously, Upwork shows my feedback as "No feedback given":
 
@@ -138,7 +139,23 @@ Talk about reporting to other clients.
 
 # Results, finally
 
-A day after I closed 
+Lizzie can't see the feedback immediately. All she knew was that I closed the contract. A day after I closed it, Lizzie messaged me asking what the issue was. She attached the work I had asked for as a Word document. It was actually better than I expected:
+
+>**Coca-Cola**
+>
+>***Short Description***
+>
+>Coca Cola is not keto because it contains high sugar content and not fats.
+>
+>***Detailed Description***
+>
+>According to the nutritional value of Coca Cola, it is not keto-friendly. It has 10.6 g of net carbs
+for every serving. In addition, it has no fat and protein content. Perhaps, you can consider other
+variations of Coca Cola like Coke Zero or the Diet Coke.
+
+The grammar is decent, but there are some dead giveaways that Lizzie was not a native English speaker. Americans never say, "I'd love a refreshing can of **the** Diet Coke."
+
+{% include image.html file="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" max_width="270px" fig_caption="Three glasses of the Diet Coke, please." %}
 
 # Upwork's cross-contamination problem
 
@@ -146,6 +163,29 @@ If you raised an eyebrow when you read that I contacted one of the freelancer's 
 
 Which leads to another problem with Work Diary: cross-contamination.
 
-If a freelancer said, "By the way, I run software on my computer that sends screenshots of what I do to undisclosed third-parties, some of whom might be your competitors." And you can't even turn it off. The most you can do is allow the freelancer to disable the screenshots when billing you for work, but it doesn't stop the freelancer from billing other clients and exposing your documents to them.
+Imagine if a freelancer applied to work for you and ended their cover letter with this caveat:
+
+>Oh, also! I routinely run software that sends captures of my entire screen to undisclosed third-parties. Hope that doesn't bother you!
+
+You'd probably reject this candidate immediately. But that's implicitly what every Upwork is saying if they take hourly jobs on Upwork.
+
+As the client, there's nothing you can do to prevent this. You can allow the freelancer to bill you by entering their time manually, but the problem is not with the hours they bill to you, but to their other clients.
+
+Picture this scenario: while working for another client, your freelancer sees that they received a new email. Like most modern information workers, they can't resist an unread email burning a hole in their inbox, so they decide to quickly check it and get back to their billable work. It's an email from you containing a username and password you gave them to access your site. Whoops! Work Diary took a snapshot of it, so now their other client has the credentials, too.
+
+Oh, you know who else has access to it? Upwork, of course. Any Upwork employee with access to Work Diary screenshots now gets your credentials.
+
+Oh, and Upwork's [privacy policy](https://www.upwork.com/legal#informationsharing) says that they can share your private information with third parties. Maybe some of those vendors have access to your credentials now.
+
+
+{% include image.html file="upwork-privacy-policy.png" alt="Screenshot of Upwork's privacy policy" max_width="800px" class="img-border" img_link="true" %}
+
+Oh, and by the way, Upwork stores Work Diary screenshots unencrypted on Amazon S3, so add Amazon to the list of extra people who maybe have access to your data.
+
+Wow, that was fast! Your private credentials proliferated across several different organizations in seconds, but you have no way of detecting that it happened.
+
+# Final thoughts
+
+I'll continue to use Upwork. I think it's the worst freelancing platform, except for all the other freelancing platforms. I'll certainly think twice before sending sensitive information to anyone who takes hourly contracts on Upwork.
 
 {% include ads.html title="isitketo_writers" %}
