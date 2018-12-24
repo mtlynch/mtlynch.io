@@ -17,9 +17,9 @@ That is, until I met Lizzie.
 
 {% include image.html file="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" max_width="450px" img_link="true" fig_caption="Lizzie's freelancer profile on Upwork" %}
 
-I needed writers for [a nutrition website](https://isitketo.org) I'm working on. Lizzie seemed like a potential match. She was a young American writer &mdash; a native English speaker. Her [bio](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/) was free of loud grammar errors, an alarmingly rare quality among freelance writers. And best of all, she only charged $10/hr. For comparison, a mid-range writer on Upwork typically charges $30-60/hr.
+I needed writers for [a nutrition website](https://isitketo.org) I'm working on. Lizzie seemed like a potential match. She was a young American writer &mdash; a native English speaker. Her [bio](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/) was free of loud grammar errors, an alarmingly rare quality among freelance writers. And best of all, she only charged $10/hr.
 
-Okay, I know what you're thinking: for $10/hr, she's *obviously* a scammer. Or, at the very least, a terrible writer.
+Okay, I know what you're thinking: for $10/hr, she's *obviously* a scammer. Or, at the very least, a terrible writer. A mid-range writer on Upwork typically charges $30-60/hr.
 
 But that's part of the adventure of Upwork. Some of the best people I've worked with charged a suspiciously low rate because they wanted to build a good rating history. Lizzie had only worked a few jobs, but she had perfect reviews on all of them.
 
@@ -29,9 +29,9 @@ If she turned out to be talented, I'd have a great writer at a phenomenal price.
 
 I offered Lizzie the job, and she accepted overnight. I assigned her three reports to write and gave her [instructions](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing) on how to write them. I linked her to a Google Doc where she could write the reports.
 
-I set a limit of 5 hours per week and told her that if she wasn't done with the three reports at the 4.5 hour mark, she should spend the last 30 minutes putting all of her progress in our shared Google Doc.
+I set a limit of five hours and told her that if she wasn't done with the three reports at the 4.5 hour mark, she should spend the last 30 minutes putting all of her progress in our shared Google Doc.
 
-The next day, I saw that Lizzie billed me the full five hours but hadn't sent me any messages. The Google Doc I gave her was empty.
+The next day, I saw that Lizzie billed me the full five hours but the Google Doc I gave her was empty. She hadn't sent me any messages, either.
 
 # Intrusive surveillance to the rescue
 
@@ -63,7 +63,7 @@ It  confused me at first because it showed two people talking but neither of the
 
 I searched the name on Upwork and found [Abi's profile](https://www.upwork.com/o/profiles/users/_~012951f3927669080e). Sure enough, it had the exact same profile text and hourly rate as Lizzie:
 
-{% include image.html file="abi-h-profile.png" alt="Screenshot of Abi H's Upwork profile" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot;, with identical text to &quot;Lizzie R.&quot;" %}
+{% include image.html file="abi-h-profile.png" alt="Screenshot of Abi H's Upwork profile" max_width="715px" img_link="true" fig_caption="Upwork profile for &quot;Abi H.&quot; with identical text to &quot;Lizzie R.&quot;" %}
 
 That explained why she had four different web browsers pinned to her taskbar. She probably used a separate browser for each of her Upwork identities.
 
@@ -91,7 +91,7 @@ What time zone could that be? Perhaps, Kenya. Sure enough...
 
 {% include image.html file="utc-to-nairobi.png" alt="6:15 PM UTC matching 9:15 PM in Nairobi, Kenya" max_width="758px" img_link="true" %}
 
-Not to sound like a [birther](https://en.wikipedia.org/wiki/Barack_Obama_citizenship_conspiracy_theories), but between the Kenyan name and the Kenyan time zone, my guess was that this freelancer lived in Kenya.
+Not to sound like a [birther](https://en.wikipedia.org/wiki/Barack_Obama_citizenship_conspiracy_theories), but between the Kenyan name and the Kenyan time zone, it seemed like "Lizzie" might, in fact, be Kenyan.
 
 # What about that profile?
 
@@ -101,24 +101,28 @@ How did she write her profile so well? I Googled the text and realized she stitc
 
 # Is this a trick?
 
-The fraud seemed so bumbling and obvious that I feared I was falling for a deeper trick. In movies with con-men, there's always a part where they let the victim *think* that they've uncovered the fraud. But in so doing, the victim lets their guard down and leaves themselves vulnerable to the *actual* con. Was Lizzie trying to get caught so that she could trick me at another level? Why upload screenshots proving she didn't do the work when she could have just claimed the hours? Why bill and then give me nothing, giving me a reason to examine the screenshots?
+The scam seemed so bumbling and obvious that I feared I was falling for a more complex trick.
 
-{% include image.html file="oceans-eleven.jpg" alt="Screenshot of demo app landing page" max_width="800px" class="img-border" img_link="true" %}
+In movies, the con-man always lets their victim *think* that they've uncovered the fraud. In truth, the victim successfully exposing the dummy fraud is all part of the *actual* fraud. The victim walks right into it because they think they've gained the upper hand.
+
+{% assign fig_caption = '"' | append: "I've locked Danny Ocean in a room next to my vault and paid his friend to guard him. Now he can *never* heist me!" | append: '"' | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="oceans-eleven.jpg" alt="Screenshot of demo app landing page" max_width="800px" fig_caption=fig_caption img_link="true" %}
+
+Was Lizzie trying to get caught so that she could trick me at another level? Why upload screenshots proving she didn't do the work when she could have just sent me a regular invoice for $50? And then why bill me and give me zero results? If she had just sent me the reports, I would have never checked the screenshots.
 
 # How did Upwork miss this?
 
-Upwork forces freelancers to install invasive spyware, yet it fails to pick up on many signals that should have been be huge red flags:
+Upwork forces freelancers to install invasive spyware, yet it ignores many signals that should have been be huge red flags:
 
 * Two users are using the same computer and IP but claim to be in cities 2,000 miles apart.
 * Two users have exactly identical profiles.
-* Large sections of a new user's profile are plagiarized from a more established user on the same platform.
+* A user plagiarized large sections their profile from a more established user on the same site.
 * Both users claim to live in the US but have their clocks set to Nairobi time and likely have Kenyan IP addresses.
 
-# Reporting the fraud to Upwork
+# Results, finally
 
 I closed the contract and reported the fraud to Upwork. 
-
-# Results, finally
 
 Lizzie can't see the feedback immediately. All she knew was that I closed the contract. A day after I closed it, Lizzie messaged me asking what the issue was. She attached the work I had asked for as a Word document. Here's her report on whether Coca-Cola is compatible with the keto diet:
 
@@ -134,9 +138,11 @@ Lizzie can't see the feedback immediately. All she knew was that I closed the co
 for every serving. In addition, it has no fat and protein content. Perhaps, you can consider other
 variations of Coca Cola like Coke Zero or the Diet Coke.
 
-The grammar is decent, but there are some dead giveaways that Lizzie was not a native English speaker. Americans never say, "I'd love a refreshing can of **the** Diet Coke."
+The grammar was decent, but there are some dead giveaways that Lizzie was not a native English speaker, like the definite article before "Diet Coke." Americans never say, "I'd love a refreshing glass of **the** Diet Coke."
 
-{% include image.html file="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" max_width="270px" fig_caption="Three glasses of the Diet Coke, please." %}
+{% assign fig_caption = '"' | append: "Three glasses of the Diet Coke, please." | append: '"' | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" max_width="270px" img_link="true" fig_caption=fig_caption %}
 
 # How Upwork handles fraud
 
@@ -170,24 +176,6 @@ What if a freelancer applied to work for you and ended their cover letter includ
 You'd probably reject this candidate immediately. But that's what every Upwork user says implicitly if they use Work Diary to track their time.
 
 As the client, there's nothing you can do to prevent this. You can allow the freelancer to enter their hours manually, but this risk still exists if .
-
-# A cross-contamination thought experiment
-
-Imagine this scenario: you email your freelancer a username and password to access your site. They check their e-mail, but whoops! They happened to check their email while they were working hourly for another client. Work Diary snapped a picture of the email you sent, credentials and all. You meant to send the information to just your freelancer, but now this other client has it as well.
-
-You know who else has access to the screenshot? Upwork, of course. Any Upwork employee with access to Work Diary screenshots has these private credentials.
-
-Oh, and Upwork's [privacy policy](https://www.upwork.com/legal#informationsharing) allows them to share your information with third parties. Maybe some of those vendors have access to your credentials now.
-
-{% assign fig_caption = "Excerpt from Upwork's [privacy policy](https://www.upwork.com/legal#informationsharing)" | markdownify | remove: "<p>" | remove: "</p>" %}
-
-{% include image.html file="upwork-privacy-policy.png" alt="Screenshot of Upwork's privacy policy" max_width="792px" img_link="true" fig_caption=fig_caption %}
-
-Oh, and by the way, Upwork stores Work Diary screenshots unencrypted on Amazon S3, so add Amazon to the list of extra people who have access to your data now.
-
-Wow, that was fast! Your private credentials proliferated across several different organizations in seconds, but you have no way of detecting that it happened.
-
-If you're sad about how little control you have over your data, think of how happy you're making all of the fastidious micromanagers who want to ensure that their freelancers are constantly at their keyboards, constantly producing tangible work. If Upwork didn't give them such invasive tools, how would they manage their workers?
 
 # Final thoughts
 
