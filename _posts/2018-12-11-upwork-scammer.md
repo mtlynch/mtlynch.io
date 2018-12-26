@@ -9,6 +9,14 @@ related: true
 sidebar:
   nav: main
 classes: wide
+tags:
+- upwork
+- isitketo
+- outsourcing
+excerpt: How I solved the mystery of the worst scammer I've ever encountered.
+header:
+  teaser: images/upwork-scammer/profile-stitching.png
+  og_image: images/upwork-scammer/profile-stitching.png
 ---
 
 For years, I've hired freelancers through a site called Upwork. The site attracts all kinds of freelancers, so I've used it to find evertyhing from [cartoonists](https://mtlynch.io/how-to-hire-a-cartoonist/) to software developers to [copy editors](https://mtlynch.io/editor/). Some were great, some were disastrous, but none of them had ever tried to scam me outright.
@@ -189,7 +197,7 @@ What if a freelancer applied to work for you and ended their cover letter with t
 
 You'd probably reject this candidate immediately. But that's what every Upwork user says implicitly if they track their time with Work Diary.
 
-As the client, there's nothing you can do to prevent this. Clients can either require their freelancers to use Work Diary or make it optional, but there's no option to forbid it. Even if you could, other clients can still require it.
+As the client, there's nothing you can do to prevent this. Clients can either require their freelancers to use Work Diary or make it optional, but there's no option to forbid it. Even if you could, other clients might still require it.
 
 If a freelancer you hired ever happens to check messages from you while billing for another client or leave open a window containing your work, Work Diary will leak your private information to several additional parties. These kinds of leaks are unavoidable with automatic, whole-screen captures.
 
