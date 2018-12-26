@@ -19,7 +19,7 @@ header:
   og_image: images/upwork-scammer/profile-stitching.png
 ---
 
-For years, I've hired freelancers through a site called Upwork. The site attracts all kinds of freelancers, so I've used it to find evertyhing from [cartoonists](https://mtlynch.io/how-to-hire-a-cartoonist/) to software developers to [copy editors](https://mtlynch.io/editor/). Some were great, some were disastrous, but none of them had ever tried to scam me outright.
+For years, I've hired freelancers through a site called Upwork. The site attracts all kinds of freelancers, so I've used it to find everything from [cartoonists](https://mtlynch.io/how-to-hire-a-cartoonist/) to software developers to [copy editors](https://mtlynch.io/editor/). Some were great, some were disastrous, but none of them had ever tried to scam me outright.
 
 That is, until I met Lizzie.
 
@@ -31,13 +31,13 @@ Okay, I know what you're thinking: for $10/hr, she's *obviously* a scammer. Or a
 
 But that's part of the adventure of Upwork. Some of the best people I've worked with charged a suspiciously low rate at first because they wanted to build a good rating history. Lizzie had only worked a few jobs, but she had perfect reviews on all of them.
 
-If she turned out to be talented, I'd have a great writer at a phenomenal price. If she was terrible, I'd at least get to see what $10/hr writing looked like.
+If she turned out to be talented, I'd have a great writer at a phenomenal price. If she delivered something terrible, I'd at least get to see what $10/hr writing looked like.
 
 # Exchanging $50 for a blank document
 
 Upon receiving my job offer, Lizzie readily accepted. I assigned her three reports and provided [instructions](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing) on how to write them.
 
-I set a limit of five hours and told her that if she wasn't done at the 4.5 hour mark, she should spend the last 30 minutes putting all of her progress in our shared Google Doc.
+I set a limit of five hours and told her that if she wasn't done at the 4.5-hour mark, she should spend the last 30 minutes putting all of her progress in our shared Google Doc.
 
 The next day, Upwork showed that Lizzie billed me the full five hours, but the Google Doc was empty. She hadn't sent me any messages, either.
 
@@ -51,7 +51,7 @@ Work Diary creeps me out. I never require freelancers to run it, but Lizzie chos
 
 In early screenshots, she was writing a document about mantras in Hinduism. It definitely had nothing to do with my project, but she was billing the work to me.
 
-{% assign fig_caption = 'Lizzie bills me work for time writing an article on mantras for another client' %}
+{% assign fig_caption = 'Lizzie bills me for time writing an article on mantras for another client' %}
 
 {% include image.html file="workdiary-2.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="800px" img_link="true" fig_caption=fig_caption %}
 
@@ -79,7 +79,7 @@ That explained why she had four different web browsers pinned to her taskbar. Sh
 
 One of the screenshots showed Lizzie's Documents folder:
 
-{% include image.html file="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" max_width="800px" class="img-border" img_link="true" fig_caption="Work Diary screenshot reveals contents of Lizzie's Documents folder" %}
+{% include image.html file="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" max_width="800px" class="img-border" img_link="true" fig_caption="Work Diary screenshot shows Lizzie's Documents folder" %}
 
 It revealed several files with the name "Grace" in the title: 
 
@@ -109,17 +109,17 @@ Not to sound like a [birther](https://en.wikipedia.org/wiki/Barack_Obama_citizen
 
 A few Google searches showed that Lizzie had plagiarized her profile &mdash; it was a mashup of a [LinkedIn profile](https://www.linkedin.com/in/laraflanagan/) and another [profile right from Upwork](https://www.upwork.com/o/profiles/users/_~017434da88fc78860a/).
 
-{% include image.html file="profile-stitching.png" alt="Screenshot of demo app landing page" max_width="800px" class="img-border" img_link="true" fig_caption="Lizzie created her profile by stitching together two others" %}
+{% include image.html file="profile-stitching.png" alt="Sources from which Lizzie stole her profile" max_width="800px" class="img-border" img_link="true" fig_caption="Lizzie created her profile by stitching together two others" %}
 
 # Is this a trick?
 
 The scam seemed so clumsy and obvious that I feared it was step one of a more elaborate con. Why upload screenshots proving she didn't do the work when she could have just sent me a regular invoice for $50? And then why bill me and withhold the reports? Naturally, that would prompt me to check the screenshot history.
 
-In movies, the con-man always lets their victim *think* that they've uncovered the fraud, but letting the victim expose the dummy fraud is all part of the *actual* fraud. Then, just as they think they've gained the upper hand, the victim falls face-first into the real scam. Was there another layer of deceit here?
+In movies, the con-man always lets their victim *think* that they've uncovered the scam, but allowing the victim to expose the dummy fraud is all part of the *actual* fraud. Then, just as they believe they've gained the upper hand, the victim falls face-first into the real scam. Was there another layer of deceit here?
 
 {% assign fig_caption = '"' | append: "I've locked Danny Ocean in a room next to my vault and paid his friend to guard him. Now he can *never* heist me!" | append: '"' | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="oceans-eleven.jpg" alt="Screenshot of demo app landing page" max_width="800px" fig_caption=fig_caption img_link="true" %}
+{% include image.html file="oceans-eleven.jpg" alt="Still of George Clooney in Ocean's Eleven" max_width="800px" fig_caption=fig_caption img_link="true" %}
 
 # How did Upwork miss this?
 
@@ -173,7 +173,7 @@ They did refund my $50, which was nice.
 
 # Why isn't my feedback showing up?
 
-In my post-job feedback for Lizzie, I called out her profile as fraudulent. I was careful to avoid any accusations based on speculation. My review focused on objective facts: Lizzie billed me for unrelated work and her Work Diary revealed that she was operating duplicate Upwork profiles.
+In my post-job feedback for Lizzie, I called out her profile as fraudulent. I was careful to avoid any accusations based on speculation. My review focused on objective facts: Lizzie billed me for unrelated work, and her Work Diary revealed that she was operating duplicate Upwork profiles.
 
 Curiously, Upwork translated this into, "No feedback given":
 
@@ -195,7 +195,7 @@ What if a freelancer applied to work for you and ended their cover letter with t
 
 >By the way, I routinely run software that sends captures of my entire screen to undisclosed third-parties. Hope you're cool with that!
 
-You'd probably reject this candidate immediately. But that's what every Upwork user says implicitly if they track their time with Work Diary.
+You'd probably reject this candidate immediately. But that's what every Upwork user implicitly says if they track their time with Work Diary.
 
 As the client, there's nothing you can do to prevent this. Clients can either require their freelancers to use Work Diary or make it optional, but there's no option to forbid it. Even if you could, other clients might still require it.
 
@@ -203,7 +203,7 @@ If a freelancer you hired ever happens to check messages from you while billing 
 
 # Final thoughts
 
-This expeience has shown me some of Upwork's warts. On one hand, they missed many red flags that I expect them to catch and did little to prevent continued abuse. On the other hand, it does say something that this is the first time I've hired a fraudster in all my years hiring through Upwork.
+This experience has shown me some of Upwork's warts. On the one hand, they missed many red flags that I expect them to catch and did little to prevent continued abuse. On the other hand, it does say something that this is the first time I've hired a fraudster in all my years hiring through Upwork.
 
 While I've never been in love with Upwork, my experience has been even worse on alternatives like Fiverr or Freelancer.com. I'll continue using Upwork, but this experience has given me another reason to be conservative about granting freelancers access to private data.
 
