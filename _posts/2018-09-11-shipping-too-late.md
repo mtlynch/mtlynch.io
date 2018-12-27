@@ -111,9 +111,9 @@ One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). Wha
 
 # Shut up and launch
 
-For each item on my task list, I asked myself, "What happens if I launch without this?" After treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis), an API marketplace. My service was live!
+For each item on my task list, I asked myself, "What happens if I launch without this?" After treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis), an API marketplace. My service was live!
 
-{% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/Recipe%20and%20Ingredient%20Analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = "[Zestful listing](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis) on the RapidAPI marketplace" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" fig_caption=fig_caption max_width="800px" img_link=true class="img-border" %}
 
