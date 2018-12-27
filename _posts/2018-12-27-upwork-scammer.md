@@ -81,7 +81,7 @@ One of the screenshots showed Lizzie's Documents folder:
 
 {% include image.html file="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" max_width="800px" class="img-border" img_link="true" fig_caption="Work Diary screenshot shows Lizzie's Documents folder" %}
 
-It revealed several files with the name "Grace" in the title: 
+It revealed several files with the name "Grace" in the title:
 
 * "Grace Application Letter"
 * "Grace CV"
