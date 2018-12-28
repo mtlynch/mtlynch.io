@@ -179,6 +179,8 @@ Curiously, Upwork translated this into, "No feedback given":
 
 {% include image.html file="lizzie-feedback.jpg" alt="Upwork shows I left no feedback for Lizzie" max_width="697px" img_link="true" fig_caption="Upwork hides my comments about Lizzie's fraudulent account in her Upwork profile." %}
 
+**Update**: [Commenters on reddit](https://www.reddit.com/r/Upwork/comments/a9zsj6/what_i_learned_about_upwork_from_a_bumbling/eco5p6y/?st=jq7drkdw&sh=85d5b50b) pointed out that Upwork always hides client feedback after approving a refund for the job.
+
 # Warning other clients
 
 The day I discovered Lizzie's shenanigans, I contacted one of her other clients. He had hired Lizzie through her "Abi" profile to write sales copy. He responded that he was still awaiting work from her but followed up with me a few days later to say he terminated her contract as well.
