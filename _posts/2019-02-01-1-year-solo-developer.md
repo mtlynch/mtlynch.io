@@ -25,12 +25,6 @@ I believe I'm the first person to ever make this observation, but it's hard to n
 
 Weird not to have money coming in. Didn't really feel weird until I got rid of cash. Had lots of cash from selling investments Google bonus payout. Got weird when I have to sell investments to cover my costs because the more investments I sell, the less money I earn from investments.
 
-# Why I'm not consulting
-
-People keep offering me consulting jobs. The only way I'd do it is if it were $10k per week. Even though I'm not making money from my businesses, I'm hopefully gaining skills to make me better at launching businesses.
-
-TODO: link to bare metrics guy's spreadsheet of failed businesses
-
 # Buying my first house
 
 At the end of the summer, I moved. I was 
@@ -49,6 +43,21 @@ So I bought a house. It was $200k, which was roughly the cost of a down payment 
 
 Infographic of what I did month by month.
 
+# Why I'm not consulting
+
+When I talk to other developers about what I'm doing, they often assume that I'm taking on consulting work to make money. But I'm not. And that surprises and confuses them. Do I want consulting work? Why not do consulting work? It's a guaranteed cash inflow as I build my business.
+
+I think what's unique about my position is that I have more in savings than the typical entrepreneur. Based on my current spending, my cost of living roughly matches my returns from savings, so I could do this forever and not run out of money.
+
+So if I don't need the money from consulting, should I still do it? A common theme in stories of successful startups is that they were consulting to pay the bills, but then they recognized some unmet need in their consulting that they could make into a business. And that part of it seems appealing, but my thinking is that even though my businesses are not earning money, I'm hopefully gaining skills at running a business. I don't think anyone is guaranteed to be successful at starting a business. But I hope that by focusing only on my businesses, I'm increasing my chances of being successful.
+
+The wrinkle is that I would take consulting work if the money was absurdly good. But the problem is that from what I understand about consulting, you only talk money after demonstrating to the client how well you can solve the problem. The things I'm known for are code reviews and quitting jobs, neither of which are very easy to translate into ROI for clients. "If your employees stop being obnoxious to each other on code reviews, it will increase your revenues by 30%!" I'm sure in some cases, that statement is true, but it's very hard to prove, and thus very difficult to put my value in dollar terms.
+
+It seems like a nice benefit is that it keeps you connected to real clients and helps you think about what kind of services to offer.
+
+
+TODO: link to bare metrics guy's spreadsheet of failed businesses
+
 # Doubts
 
 Best at working in teams
@@ -57,7 +66,9 @@ Is this ambitious enough?
 
 Shame about working on something that sounds so basic.
 
-I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that just tells you whether certain foods are keto or not. It's one of the least technically complex things I've ever worked on. I do miss the days of Google where anything I was doing sounded impressive. While I was a developer at Google, I didn't even have to say what I did exactly and it sounded impressive. "What do you do at Google?" "I work on Google Maps." "No way! I *use* Google Maps!" It didn't matter that everything I worked on was thrown away due to reorgs.
+I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that just tells you whether certain foods are keto or not. It's one of the least technically complex things I've ever worked on. 
+
+I do miss the days of Google where anything I was doing sounded impressive. There was a period of almost a year where all of my projects kept getting paused indefinitely or thrown away, so my effect on the company was no different than if I showed up to the office and played Tetris all day. But when people outside asked me what I worked on, I'd say Google Maps and it was still impressive. "No way! I *use* Google Maps!"
 
 I made my first dollar of revenue within a week of picking the project up again, so I think there's potential in it, but it's also . It does tick all my boxes of a project. I am growing its traffic measurably month over month, I'm growing its revenue month over month,
 
@@ -90,18 +101,29 @@ Hasn't been a problem. Biggest problem is knowing when to quit or pivot.
 
 A lot of people have said to me, "Oh, I couldn't work for myself. I'd just watch TV all day." I didn't think that was going to happen, and it hasn't. I do love programming, so that's the thing I do when I'm bored.
 
+A few months in, I did feel not so much unmotivated, but unproductive. And that's when I started writing Snippets. Snippets are a Google thing where, at the end of each week, you write down what you accomplished. It's very free-form. Some people wrote a sentence or two. I wrote bulleted lists. At first I did it to keep my manager informed. Then, I switched managers and my new manager didn't read my snippets, but I realized that they were valuable to me. They were a good way to close out the week.
+
+It's very easy to go a week and feel like nothing got done. That was discouraging. But when I write my snippets, it forces me to look back on my week and recognize how I spent my time. It often turns out that I don't give myself enough credit for what I did. On weeks I feel unproductive, it's often because my memory is lying to me and telling me that interesting accomplishments happened in other weeks.
+
 Writing snippets.
 
 Other habits have gotten better. I'm much better about not checking my phone, email, and social media constantly.
 
-The habit that I was surprised died was exercise. While I had a job, I kept thinking, "Oh boy, once I quit my job, I'm going to be in peak physical form!" While I had a job, I lifted weights and went running 2-5 times per week. Since quitting, I'm lucky if I do that in a month. I underestimated how much going to the office broke the surface tension of being at home. Because before, I had to leave the house anyway, so I might as well get some exercise. Now, with my schedule so unstructured and with so much comfort at home, it's so easy to put it off.
-
-10am: I'm really focused in the morning. I'll go in the afternoon.
-1pm: I feel full from lunch. I'll go in an hour.
-2pm: Now I'm back in the zone! I'll work for an hour.
-3:30pm: Okay, I'm going now. Let me just finish a few things first.
-4:15pm: Oh no! Now my workout will extend past 5pm and that's when the gym is super crowded. I'll just go tomorrow.
+The habit that I was surprised died was exercise. I thought that once I quit, I'd exercise every day and be in peak physical condition. Instead, it turns out that having to go to my office was the thing that broke the surface tension of staying in my house. Now I exercise *way* less. But I have to do a lot more yardwork than I did in Manhattan, so I tell myself it evens out (it doesn't).
 
 # I still love it
 
 I dread going back
+
+People ask me if I regret quitting and I definitely do not. Even when I do stress about money, I'd gladly take that over the stress of having to spend my day according to other people's schedules, carrying out tasks that other people choose for me. I really want this to be how I spend the rest of my life.
+
+I love waking up whenever I want. I love that some days I can spontaneously decide it's a vacation day. It's how I want to spend the rest of my life.
+
+# Goals for year two
+
+I've been following another solo developer named Cory Zue. He's fun to watch because he's doing something very similar to what I want. His business is also. But something he did which I'll steal is setting yearly goals.
+
+My goals for 2019:
+
+* Earn $500/month in revenue from my businesses.
+* Attract XXk readers to my blog (or just number of articles?)
