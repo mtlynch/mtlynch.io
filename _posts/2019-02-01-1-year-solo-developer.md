@@ -19,13 +19,9 @@ Money is one of the biggest motivators and obstacles to starting your own busine
 
 Table of what I spent money on and what I earned money from.
 
-# Not having money is stressful
-
-I believe I'm the first person to ever make this observation, but it's hard to not have much money.
-
-Weird not to have money coming in. Didn't really feel weird until I got rid of cash. Had lots of cash from selling investments Google bonus payout. Got weird when I have to sell investments to cover my costs because the more investments I sell, the less money I earn from investments.
-
 # Buying my first house
+
+It turns out, the thing to do if you're stressing about money is to just buy a house.
 
 At the end of the summer, I moved. I was 
 
@@ -42,6 +38,14 @@ So I bought a house. It was $200k, which was roughly the cost of a down payment 
 # How I spent my time
 
 Infographic of what I did month by month.
+
+# Not having money is stressful
+
+I believe I'm the first person to ever make this observation, but it's hard to not have much money. Another big secret: tech companies pay really well. So for a long time, I was earning enough money that I never had to think about money. I could spend a few thousand dollars on a big screen TV or a top-end computer and it wouldn't have a noticeable effect on my finances. I generally don't throw around money, but even when I had big expenses, I still had enough money left at the end of the month to put into savings.
+
+That mentality lasted for about nine months after I quit my job. It didn't change until I ran out of money in my checking account. I was keeping my spending low but for most of 2018, I had a large sum of money in my checking account in anticipation of buying a house. After I purchased the house and moved my money back into investments and my checking account held only a couple thousand dollars, that's when the money stress hit again.
+
+Because that forced money decisions to feel more real. When I had a bunch of money in checking, it just felt like I was drawing from this endless supply of money. Once the money was in investments, it forced me to make more explicit choices: I'm taking a thousand dollars out of my savings to pay myself. And the other thing I never considered was that earnings from my invesmtents are my primary income now. So every time I withdraw from savings, I reduce my income.
 
 # Why I'm not consulting
 
@@ -62,15 +66,9 @@ TODO: link to bare metrics guy's spreadsheet of failed businesses
 
 Best at working in teams
 
-Is this ambitious enough?
+I worry about whether I chose a path that makes the worst of my skills. I think my best qualities as a developer was how I think about teams and process. I'm a very thorough code reviewer. I like making sure processes are documented and repeatable. I like writing and reviewing design plans. None of those things are useful as a one-man development team.
 
-Shame about working on something that sounds so basic.
-
-I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that just tells you whether certain foods are keto or not. It's one of the least technically complex things I've ever worked on. 
-
-I do miss the days of Google where anything I was doing sounded impressive. There was a period of almost a year where all of my projects kept getting paused indefinitely or thrown away, so my effect on the company was no different than if I showed up to the office and played Tetris all day. But when people outside asked me what I worked on, I'd say Google Maps and it was still impressive. "No way! I *use* Google Maps!"
-
-I made my first dollar of revenue within a week of picking the project up again, so I think there's potential in it, but it's also . It does tick all my boxes of a project. I am growing its traffic measurably month over month, I'm growing its revenue month over month,
+I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that tells you whether certain foods are compatible with the keto diet. It's one of the least technically complex things I've ever worked on. I have fun working on it, and it's exactly the kind of project I envisioned working on. Each month, I'm attracting more active users and growing revenue. I'm learning new skills in web development and search engine optimization. But I admit that it's embarrassing when people ask me what kind of business I run, and I say it's a directory where people look up whether foods are keto or not.
 
 >**Employee**: My last company was genius. You ever been lost in a parking lot before? ... You would just type in - like what section of the parking lot you're in.<br>
 >**Employee**: Right, but this is for your phone
@@ -78,6 +76,13 @@ I made my first dollar of revenue within a week of picking the project up again,
 >**Employee**: Right, but this is for your phone
 >**Richard**: So, this is kind of like Notepad?
 >Exactly! See you get it!
+>
+>-*Silicon Valley*
+
+I also worry about whether I'm taking enough risk. One of my realizations about Zestful was that I was spinning my wheels on busywork to avoid the scary part where I cold pitch to businesses. Is It Keto notably is a business-to-consumer website, which means I don't have to pitch to anyone. I don't have to convince anyone that using it will make the money.
+
+I made my first dollar of revenue within a week of picking the project up again, so I think there's potential in it, but it's also . It does tick all my boxes of a project. I am growing its traffic measurably month over month, I'm growing its revenue month over month,
+
 
 # What I miss about employment
 
