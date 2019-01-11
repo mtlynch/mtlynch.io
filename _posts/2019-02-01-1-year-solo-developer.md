@@ -13,15 +13,75 @@ classes: wide
 
 Today marks a full year of working for myself after quitting my job as a software engineer at Google.
 
+# I bought a house
+
+I'll go into more details later in the post, but I bought a house this year. It's has a big impact on how I spent time and money, so getting that out of the way.
+
 # How I made and spent money
 
-Money is one of the biggest motivators and obstacles to starting your own business. It's the thing most people are interested in, so I'll start there.
+Money is one of the biggest motivators and obstacles to starting a business. It's the thing most people are interested in, so I'll start there.
 
 Table of what I spent money on and what I earned money from.
 
-# Buying my first house
+Screenshot via Bench (TODO: link).
 
-It turns out, the thing to do if you're stressing about money is to just buy a house.
+In one sense, I lost $20k over a year. But also, I grew profits by almost $1k each month! Just kidding. I basically just
+
+I turned a profit in November, but for silly reasons. Freelancers are my biggest expense, and in November, I didn't work with any of them, so I made $XX from my blog and spent $XX on hosting for a cool profit of $XX.
+
+# Project by project
+
+mtlynch.io (this blog)
+
+My biggest source of revenue in 2018 was this blog. I deliberately avoid monetizing this blog. I'd rather this blog be a place where I can talk credibly about things I'm interested in and get people interested in my projects. But, despite my best efforts, this blog earned the most money of my projects.
+
+In 2018, this blog receied 568k unique visitors and earned $1.2k in affiliate revenue, which I think is on the low side.
+
+Affiliate revenue: $1243.74
+Editing: $XX
+Illustrations: $XX
+Development: $XX
+Hosting: $XX
+Net profit: $XX
+
+Is It Keto
+
+Is It Keto is my current focus. For followers of the keto diet, this website gives clear, simple answers about whether particular foods are compatible with the diet.
+
+Affiliate revenue: $1.20
+Development: $XX
+Hosting: $XX
+Net profit: $XX
+
+Space Duck
+
+Space Duck was a project for me to build something on top of Sia. After running some experiments, I decided that Sia was not yet ready to support anything I had in mind, so I moved on.
+
+Income: $0
+Logo design: $XX
+Development: $XX
+Net profit: $XX
+
+Zestful
+
+Zestful was a project to parse 
+
+Income: $0
+Logo design: $XX
+Development: $XX
+Hosting: $XX
+Net profit: $XX
+
+KetoHub
+
+KetoHub is a project I started last year. It's an aggregator / search engine for keto recipes. I couldn't find any ways to monetize or grow it without investing a large amount of time, so it's in maintenance mode and I occasionally add features for fun.
+
+Income: $0
+User research: $XX
+Development: $XX
+
+
+# Buying my first house
 
 At the end of the summer, I moved. I was 
 
@@ -62,9 +122,7 @@ It seems like a nice benefit is that it keeps you connected to real clients and 
 
 TODO: link to bare metrics guy's spreadsheet of failed businesses
 
-# Doubts
-
-Best at working in teams
+# Having doubts about my skills
 
 I worry about whether I chose a path that makes the worst of my skills. I think my best qualities as a developer was how I think about teams and process. I'm a very thorough code reviewer. I like making sure processes are documented and repeatable. I like writing and reviewing design plans. None of those things are useful as a one-man development team.
 
@@ -79,10 +137,15 @@ I also have doubts about what I'm working on. My current projects is Is It Keto.
 >
 >-*Silicon Valley*
 
+# Having doubts about my work
+
 I also worry about whether I'm taking enough risk. One of my realizations about Zestful was that I was spinning my wheels on busywork to avoid the scary part where I cold pitch to businesses. Is It Keto notably is a business-to-consumer website, which means I don't have to pitch to anyone. I don't have to convince anyone that using it will make the money.
 
 I made my first dollar of revenue within a week of picking the project up again, so I think there's potential in it, but it's also . It does tick all my boxes of a project. I am growing its traffic measurably month over month, I'm growing its revenue month over month,
 
+I am going to stick with Is It Keto for the time being because it does match a lot of what I find fun about starting a small business:
+
+* I'm making changes that have measurable effect on growth
 
 # What I miss about employment
 
@@ -93,8 +156,6 @@ I mean that both in the sense that it's good to have smart teammates. One thing 
 Now that I'm on my own, I'm trying to learn about web development on my own. I want to learn what the industry standard practices are, but I can't because . For a while, I was hiring tutors to teach me web technologies, but that was hard too. If I don't know a subject, how do I know that they know what they're talking about? I know Python so I can identify people who are good at Python. I don't know Angular, so it's hard for me to figure out who's good at Angular.
 
 For example, I've spent the last 
-
-Smart people
 
 Oh, is the pixel not aligned correctly? Just recompile TypeScript from source and change this line.
 
