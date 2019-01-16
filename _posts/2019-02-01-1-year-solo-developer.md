@@ -15,7 +15,7 @@ Today marks a full year of working for myself after quitting my job as a softwar
 
 # How I made and spent money
 
-I'll start with the thing most people are interest in: money. It is both the biggest motivator and obstacle to starting a business.
+I'll start with the thing most people are interest in: money. It is both the strongest motivator and the largest obstacle to starting a business.
 
 Table of what I spent money on and what I earned money from.
 
@@ -29,64 +29,68 @@ This of course only reflects my business income and expenses. I'll get to my per
 
 # Project by project
 
-mtlynch.io (this blog)
+## mtlynch.io *(this blog)*
 
 My biggest source of revenue in 2018 was this blog. I deliberately avoid monetizing this blog. I'd rather this blog be a place where I can talk credibly about things I'm interested in and get people interested in my projects. But, despite my best efforts, this blog earned the most money of my projects.
 
 In 2018, this blog receied 568k unique visitors and earned $1.2k in affiliate revenue, which I think is on the low side.
 
-Affiliate revenue: $1243.74
-Editing: $XX
-Illustrations: $XX
-Development: $XX
-Hosting: $XX
-Net profit: $XX
+| Income/Expense | Amount |
+|---------|----------------------|
+| Affiliate revenue | $1,244 |
+| Editing | $XX |
+| Illustrations | $XX |
+| Development | $XX |
+| Hosting | $XX |
+| **Net profit** | **$XX** |
 
-Is It Keto
+## Is It Keto
 
 Is It Keto is my current focus. For followers of the keto diet, this website gives clear, simple answers about whether particular foods are compatible with the diet.
 
-Affiliate revenue: $1.20
-Development: $XX
-Hosting: $XX
-Net profit: $XX
+| Income/Expense | Amount |
+|---------|----------------------|
+| Affiliate revenue | $1.20 |
+| Development | $XX |
+| Hosting | $XX |
+| Logo Design | -$211 |
+| **Net profit** | **$XX** |
 
-Space Duck
+## Space Duck
 
 Space Duck was a project for me to build something on top of Sia. After running some experiments, I decided that Sia was not yet ready to support anything I had in mind, so I moved on.
 
-Income: $0
-Logo design: $XX
-Development: $XX
-Net profit: $XX
+| Income/Expense | Amount |
+|---------|----------------------|
+| Logo design | -$250 |
+| Website development | -$1,373 |
+| **Net profit** | -**$1,623** |
 
-Zestful
+## Zestful
 
 Zestful was my foray into machine learning. It allowed app developers to take an ingredients like, "1.5 cups finely chopped red onions," and interpret it as structured data: quantity is, "1.5," unit is, "cups," etc. I put the project in maintenance mode in September after several months failing to convince any app developers to use it. Interestingly, several people have approached me in the past few months with plans for using it on new projects, so maybe I can't convince existing apps to switch over, but it appeals to people writing totally new code.
 
-Income: $0
-Logo design: $XX
-Development: $XX
-Hosting: $XX
-Net profit: $XX
+| Income/Expense | Amount |
+|---------|----------------------|
+| Client payments | $0\* |
+| Development | $XX |
+| Logo design | -$200 |
+| Hosting | $XX |
+| **Net profit** | **$XX** |
 
-KetoHub
+\* It *technically* earned about $1 but my payment processor won't pay out amounts less than $2.
+
+## KetoHub
 
 KetoHub is a project I started last year. It's aggregates keto recipes from different sites and makes them searchable by ingredient. I couldn't find any ways to monetize or grow it without investing a large amount of time, so it's in maintenance mode for now. I occasionally add new features or recipe sources for fun.
 
-Income: $0
-User research: $XX
-Development: $XX
-
-# How I spent my time
-
-Infographic of what I did month by month.
-
-December
-
-mtlynch.io: 20%
-IsItKeto: 75%
-KetoHub/Zestful: 5%
+| Income/Expense | Amount |
+|---------|----------------------|
+| Development | -$1,502 |
+| User research| -$220 |
+| Logo Design | -$211 |
+| Hosting | $XX |
+| **Net profit** | **$XX** |
 
 # I bought a house
 
@@ -96,45 +100,58 @@ Without a stream of income, my time felt constantly metered. Between rent, healt
 
 One day, I texted my sister jooking that I should buy a cheap house near her in Western Massachussetts. She immediately called me: "Were you joking? Because you should do that for real." The more I thought about it, the more sense it made. It was close to my family, I liked the area, and the cost of living was tiny compared to New York.
 
-So in August, I bought a modest two bedroom house in South Hadley, Massachusetts, population XX.
+So in August, I bought a modest two bedroom house in South Hadley, Massachusetts, population 17,500.
 
 TODO: House pictures
 
 My living expenses here are $XX per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate that from the equation and think about whether I'm meeting my goals for Is It Keto in terms of user growth and revenue growth.
 
+# Staying motivated
+
+When I tell people what I do, they often say, "Oh, I couldn't do that. I'd just watch TV all day." I didn't think that was going to happen, and it hasn't. I like watching TV, but I *love* programming, so the thing that I do when I'm bored is just more programming.
+
+But programming all the time isn't as good a quality as I'm making it out to be. Very few businesses are profitable just by churning out a lot of code. It requires hard work in non-coding areas too like marketing, sales, and strategy. I
+
+I've started writing monthly retrospectives where I take a step back to evaluate what I did and what I need to accomplish next:
+
+* [Zestful: Month 4 - Shipping Too Late](https://www.indiehackers.com/forum/zestful-data-month-4-shipping-too-late-94ac777256)
+* [Zestful: Month 5: Launched, but Still No Customers](https://www.indiehackers.com/forum/zestful-data-month-5-launched-but-still-no-customers-32d221561d)
+* [Is It Keto: Month 3 - Returning to a Site that Grew without Me](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52)
+* [Is It Keto: Month 4 - My First Dollar of Revenue](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)
+
+Outside of work, it's been interesting seeing how my habits have changed now that I have much more control over my time. I've gotten way better at unshackling myself from my phone/email/social media. I've gotten way worse at going to the gym, but I tell myself that all of my yardwork evens it out (it doesn't).
+
+To avoid burnout, I don't work evenings or weekends. I begin working when I wake up, but I almost always stop after I 
+
 # Why I'm not consulting
 
-When I talk to other developers about what I'm doing, they often assume that I'm taking on consulting work to make money. But I'm not. And that surprises and confuses them. Do I want consulting work? Why not do consulting work? It's a guaranteed cash inflow as I build my business.
+People are often surprised to learn that I'm not doing any freelance or consulting work.
 
-I think what's unique about my position is that I have more in savings than the typical entrepreneur. Based on my current spending, my cost of living roughly matches my returns from savings, so I could do this forever and not run out of money.
+The main reason is that I don't need to. Because I purchased a house in an area with a low cost of living, I can sustain myself for several more years just from my savings.
 
-So if I don't need the money from consulting, should I still do it? A common theme in stories of successful startups is that they were consulting to pay the bills, but then they recognized some unmet need in their consulting that they could make into a business. And that part of it seems appealing, but my thinking is that even though my businesses are not earning money, I'm hopefully gaining skills at running a business. I don't think anyone is guaranteed to be successful at starting a business. But I hope that by focusing only on my businesses, I'm increasing my chances of being successful.
-
-The wrinkle is that I would take consulting work if the money was absurdly good. But the problem is that from what I understand about consulting, you only talk money after demonstrating to the client how well you can solve the problem. The things I'm known for are code reviews and quitting jobs, neither of which are very easy to translate into ROI for clients. "If your employees stop being obnoxious to each other on code reviews, it will increase your revenues by 30%!" I'm sure in some cases, that statement is true, but it's very hard to prove, and thus very difficult to put my value in dollar terms.
-
-It seems like a nice benefit is that it keeps you connected to real clients and helps you think about what kind of services to offer.
-
-
-TODO: link to bare metrics guy's spreadsheet of failed businesses
+One of my big realizations a few weeks after quitting was that I was [saying yes too much](/since-quitting/#managing-stress). It was hard to make progress on anything when I had several projects running simultaneously. That's my biggest fear with consulting. Because I hear about people who do consulting for one or two months out of the year to cover their expenses, and that sounds nice. But in reality, it's a lot more work to arrange consulting gigs, manage clients, etc. that it's full-time focus a few months out of the year, but it's a constant part time commitment.
 
 # Having doubts about my skills
 
 I worry about whether I chose a path that makes the worst of my skills. I think my best qualities as a developer was how I think about teams and process. I'm a very thorough code reviewer. I like making sure processes are documented and repeatable. I like writing and reviewing design plans. None of those things are useful as a one-man development team.
 
+Money is a pretty strong indicator that you're doing the right thing. But it's also a . One thing I keep thinking back to is [this thing](https://twitter.com/shpigford/status/1033032915175858176?lang=en) Josh Pigford posted last year. He now runs BareMetrics, a site that earns over $100k per month in revenue, but he spent 15 years before that on projects that failed,
+
 # Having doubts about my work
 
-I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that tells you whether certain foods are compatible with the keto diet. It's one of the least technically complex things I've ever worked on. I have fun working on it, and it's exactly the kind of project I envisioned working on. Each month, I'm attracting more active users and growing revenue. I'm learning new skills in web development and search engine optimization. But I admit that it's embarrassing when people ask me what kind of business I run, and I say it's a directory where people look up whether foods are keto or not.
+I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that tells you whether certain foods are compatible with the keto diet. It's one of the least technically complex things I've ever worked on. I have fun working on it, but I admit that it's embarrassing when people ask me what exciting app I quit Google to work on and my answer is, "Um... You type a food and it tells you whether or not it's keto..."
 
->**Employee**: My last company was genius. You ever been lost in a parking lot before? ... You would just type in - like what section of the parking lot you're in.<br>
->**Employee**: Right, but this is for your phone
->**Richard**: So, why can't you just write it on a piece of paper?
->**Employee**: Right, but this is for your phone
->**Richard**: So, this is kind of like Notepad?
->Exactly! See you get it!
+>**Employee**: My last company was genius. You ever been lost in a parking lot before? ... You would just type in - like what section of the parking lot you're in, like P3 or Ground 7.<br>
+>**Richard**: So you just write down what section of the parking lot you're in? I mean - why do you need an app for that?<br>
+>**Employee**: So you can remember where you parked.<br>
+>**Richard**: Right, but why don't you just write it down on a piece of paper?<br>
+>**Employee**: Well, yeah, but this is for your phone.<br>
+>**Richard**: Okay, so it's just sort of like Notepad?<br>
+>**Employee**: Exactly! See, you get it.
 >
->-*Silicon Valley*
+>-*Silicon Valley*, Season 1, Episode 3: "Articles of Incorporation"
 
-I  worry about whether I'm taking enough risk. One of my realizations about Zestful was that I was spinning my wheels on busywork to avoid the scary part (TODO: link) where I cold pitch to businesses. Is It Keto notably is a business-to-consumer website, which means I don't have to pitch to anyone. I don't have to convince anyone that using it will make the money.
+I  worry about whether I'm taking enough risk. One of my realizations about Zestful was that I was [spinning my wheels on busywork to avoid the scary part](/shipping-too-late/#did-i-delay-my-launch-to-avoid-rejection) where I cold pitch to businesses. Is It Keto notably is a business-to-consumer website, which means I don't have to pitch to anyone. I don't have to convince anyone that using it will make the money.
 
 I made my first dollar of revenue within a week of picking the project up again, so I think there's potential in it, but it's also . It does tick all my boxes of a project. I am growing its traffic measurably month over month, I'm growing its revenue month over month,
 
@@ -142,23 +159,13 @@ I am going to stick with Is It Keto for the time being because it does match a l
 
 * I'm making changes that have measurable effect on growth
 
-# Staying motivated
-
-Hasn't been a problem. Biggest problem is knowing when to quit or pivot.
-
-A lot of people have said to me, "Oh, I couldn't work for myself. I'd just watch TV all day." I didn't think that was going to happen, and it hasn't. I do love programming, so that's the thing I do when I'm bored.
-
-A few months in, I did feel not so much unmotivated, but unproductive. And that's when I started writing Snippets. Snippets are a Google thing where, at the end of each week, you write down what you accomplished. It's very free-form. Some people wrote a sentence or two. I wrote bulleted lists. At first I did it to keep my manager informed. Then, I switched managers and my new manager didn't read my snippets, but I realized that they were valuable to me. They were a good way to close out the week.
-
-It's very easy to go a week and feel like nothing got done. That was discouraging. But when I write my snippets, it forces me to look back on my week and recognize how I spent my time. It often turns out that I don't give myself enough credit for what I did. On weeks I feel unproductive, it's often because my memory is lying to me and telling me that interesting accomplishments happened in other weeks.
-
-Other habits have gotten better. I'm much better about not checking my phone, email, and social media constantly.
-
 # I still love it
 
 I dread going back
 
 People ask me if I regret quitting and I definitely do not. Even when I do stress about money, I'd gladly take that over the stress of having to spend my day according to other people's schedules, carrying out tasks that other people choose for me. I really want this to be how I spend the rest of my life.
+
+I remember reading books about startups and thinking how fun it would be to make decisions about what part to focus on. Do I focus on user growth or new features? Do I focus on social media or search engine optimization? Now, I'm doing that and it's exactly as fun as I hoped.
 
 I love waking up whenever I want. I love that some days I can spontaneously decide it's a vacation day. It's how I want to spend the rest of my life.
 
