@@ -15,15 +15,19 @@ Today marks a full year of working for myself after quitting my job as a softwar
 
 # How I made and spent money
 
-I'll start with the thing most people are interest in: money. It is both the strongest motivator and the largest obstacle to starting a business.
+I'll start with money. It's the thing most people are interested in because it's both the strongest motivator and the largest obstacle to starting a business.
 
-Table of what I spent money on and what I earned money from.
+{% assign fig_caption = 'Lizzie bills me for time writing an article on mantras for another client' %}
 
-Screenshot via Bench (TODO: link).
+{% include image.html file="bench-2018.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
-In one sense, I lost $20k over a year. But also, I grew profits by almost $1k each month! Just kidding. I basically just
+In one sense, I lost $20k over a year. But also, I grew profits by almost $1k each month! If trends continue, by the end of 2019, I should be fabulously wealthy.
 
-I turned a profit in November, but for silly reasons. Freelancers are my biggest expense, and in November, I didn't work with any of them, so I made $XX from my blog and spent $XX on hosting for a cool profit of $XX.
+{% assign fig_caption = 'Lizzie bills me for time writing an article on mantras for another client' %}
+
+{% include image.html file="2019-projected.jpg" alt="Screenshot of Lizzie R's WorkDiary history" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
+
+Just kidding. I basically just
 
 This of course only reflects my business income and expenses. I'll get to my personal expenses a bit later.
 
