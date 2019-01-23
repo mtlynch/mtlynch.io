@@ -45,7 +45,7 @@ I used Windows 10 in the video demo, but this tutorial is completely system-agno
 To complete this guide, you will need:
 
 * At least 500 Siacoin (SC)
-  * You can either [buy it](http://www.buyingsiacoin.com/) or [mine it](/windows-sia-mining/).
+  * You can either [buy it](https://siasetup.info/guides/buying_siacoins) or [mine it](/windows-sia-mining/).
 * 6 GB of free disk space, preferably on a solid-state drive (SSD)
 * [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
 
@@ -271,7 +271,7 @@ Finally, generate a new Siacoin wallet address:
 docker exec -it sianextcloud_sia_1 ./siac wallet address
 ```
 
-Send at least 500 SC to the wallet you generated. If you don't have Siacoin available, you can either [buy it](http://www.buyingsiacoin.com/) or [mine it](/windows-sia-mining/).
+Send at least 500 SC to the wallet you generated. If you don't have Siacoin available, you can either [buy it](https://siasetup.info/guides/buying_siacoins) or [mine it](/windows-sia-mining/).
 
 ## Create renter contracts
 
