@@ -62,9 +62,12 @@
     becomes:
 
       /files/sia-nextcloud/docker-compose.yml
+
+    Note that we must normalize the extension to .yml, even if the language is
+    set to "yaml" because the embed will fail if it's "yaml".
   {% endcomment %}
   {% if include.language == 'yml' or include.language == 'yaml' %}
-    {% assign file_relative_url = file_relative_url | append: '.' | append: include.language %}
+    {% assign file_relative_url = file_relative_url | append: '.yml' %}
   {% endif %}
 
 ```{{ lang_highlight }}
