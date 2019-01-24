@@ -11,23 +11,25 @@ sidebar:
 classes: wide
 ---
 
-Today marks a full year of working for myself after quitting my job as a software engineer at Google.
+On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start a company by myself. Today marks the completion of my first year as a solo developer, so I thought it would be a good time to reflect on how the decision has affected my money, lifestyle, and happiness.
 
 # How I made and spent money
 
-I'll start with money. It's the thing most people are interested in because it's both the strongest motivator and the largest obstacle to starting a business.
+I'll start with money. It's the thing most people are interested in because it's one the strongest motivators to starting a business and the largest obstacle to doing so.
+
+Here is a high-level overview of all my business revenues and expenses for 2018:
 
 {% assign fig_caption = 'Profit and Loss chart via [Bench](http://refer.bench.co/pPrqq).' | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="bench-2018.jpg" alt="Profit and loss for 2018" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
-One way of looking at this chart is that I lost $21k in a single year. A more charitable interpretation is that I grew profits by almost $1k each month.  If this trend continues, I should be fabulously wealthy quite soon.
+One way of looking at this chart is that I lost $21k in a single year. Alternate interpretation: I grew profits by almost $1k each month!  If this trend continues, I should be fabulously wealthy quite soon.
 
 {% assign fig_caption = 'Profit and loss through 2019, projected' %}
 
 {% include image.html file="2019-projected.jpg" alt="Projected earnings for 2019" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
-Okay, I should have said a more "fanciful" interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending. In April, I had four different part-time developers working for me simultaneously, which was way too much.
+Okay, that's a bit of a "fanciful" interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending. In April, I had four different part-time developers working for me simultaneously, which was way too much.
 
 The change in my spending also resulted from a significant change in my personal life, which I'll cover a bit later in the post.
 
@@ -42,26 +44,28 @@ In 2018, this blog receied 981k pageviews and earned $1.2k in affiliate revenue,
 | Income/Expense | Amount |
 |---------|----------------------|
 | Affiliate revenue | $1,244 |
-| Editing | $XX |
-| Illustrations | $XX |
-| Development | $XX |
+| [Editing](/editor/) | -$XX |
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$XX |
+| Development | -$XX |
 | [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | 
 | Hosting | -$XX |
 | Domain | -$60 |
-| **Net profit** | **$XX** |
+| **Net profit** | **-$XX** |
 
 ## [Is It Keto](https://isitketo.org)
 
-Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with the keto diet. If the food is keto-approved, the site displays links where the reader can purchase it online, and the site receives affiliate revenue for the sale. I only began monetizing it at the end of the year, so revenues are small, but I'm hopeful that I can grow them quickly.
+Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with the keto diet. If the food is keto-approved, the site displays links where the reader can purchase it online, and the site receives affiliate revenue for the sale. I only began monetizing it at the end of November, so revenues are small, but I'm hopeful that I can grow them quickly.
 
 | Income/Expense | Amount |
 |---------|----------------------|
 | Affiliate revenue | $1.20 |
 | Development | -$1,660 |
-| Hosting | $XX |
+| Hosting | -$0\* |
 | Logo Design | -$211 |
 | Domain | -$12 |
-| **Net profit** | **$XX** |
+| **Net profit** | **-$1,882** |
+
+\* Is It Keto runs on AppEngine, and traffic is currently low enough to fit into their free tier.
 
 ## [Space Duck](https://spaceduck.io)
 
@@ -114,25 +118,33 @@ Many of my expenses are for general development or running my business, so they 
 | Expense | Amount | Note |
 |------------|-----------|-------|
 | [Bench](http://refer.bench.co/pPrqq) | -$1,610 | Pricy, but worth it. My bookkeepers file everything automatically. I tried free bookkeeping services and they required me to spend hours manually categorizing everything. |
-| Travis CI Pro | -$1,419 | I wish this were cheaper, but continuous integration catches so many of my mistakes. |
+| Travis CI | -$1,419 | I wish this were cheaper, but continuous integration catches so many of my mistakes. I might try switching to a free or cheaper tier of CircleCI when my subscription is up. |
 | Coveralls | -$270 | Another one I wish were cheaper, but I love testing. |
 | GitHub Pro | -$91 | Bought this just for the private repos, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I can stop paying this in 2019. |
 | Dev tooling | -$1,400 | I paid freelance developers to add general-purpose tooling during development. |
 | Travel, conferences, events, books | -$634 | - |
 
-# I bought a house
+# Personal expenses
 
-While working for Google, I rented an apartment in downtown Manhattan so that I'd be close enough to walk to work. It was $3,300/month, but I didn't care that much because Google paid well and it was worth the quality of life improvement from eliminating a stressful daily commute. After I quit, those factors changed drastically.
+There was one enormous hidden expense that my profit and loss chart didn't show: me.
 
-Without a stream of income, my time felt constantly metered. Between rent, health insurance, food, and other regular living expenses, my living expenses were $6-7k per month. I was very conscious of the fact that any project I attempted was implicitly a huge investment. Suppose I have a business idea and it takes me three months of work to know whether it's viable. Spending three months working on it would be equivalent to investing $20k in the idea.
+I'm my own largest expense. My business expenses don't reflect it because I pay my living costs by drawing from my personal savings. But my living costs were quite high after I quit Google. lived in a Manhattan apartment that was walking distance from the Google office, so rent alone was $3,300/month. After private health insurance, food, and utilities, it cost $6-7k per month just to sustain myself.
 
-One day, I texted my sister jooking that I should buy a cheap house near her in Western Massachussetts. She immediately called me: "Were you joking? Because you should do that for real." The more I thought about it, the more sense it made. It was close to my family, I liked the area, and the cost of living was tiny compared to New York.
+Those costs had a dramatic impact on my business decisions. If I expected a task to take me two weeks, that translates to an implicit cost of ~$3k. If I could hire a freelancer to perform the task for less than $3k, I'd be saving money overall. Actually, I'd save money even if it was higher than $3k because I can deduct a freelancer's pay from my taxable income.
+
+I'm a huge fan of outsourcing, and I think that people underuse it, but I was basically in a mindset of *frantic outsourcing*.
+
+My living expenses also made me constantly feel like my time was metered. Any project I attempted was implicitly a huge investment. Suppose I have a business idea, and it takes me three months of work to know whether it's viable. Spending three months working on it would be equivalent to investing $20k in the idea. I like the idea of a project that grows slowly over time, like it makes $50 one month, then $100, then $175. But when you're spending $7k a month, it feels absurd to pursue those opportunities because even with slow, consistent growth, it would take decades to see a positive return on your investment.
+
+# So, I bought a house
+
+One day in June, I jokingly texted my sister that I should buy a cheap house near her in Western Massachussetts. She immediately called me: "Were you joking? Because you should do that for real." The more I thought about it, the more sense it made. It was close to my family, I liked the area, and the cost of living was tiny compared to New York.
 
 So in August, I bought a modest two bedroom house in South Hadley, Massachusetts, population 17,500.
 
 TODO: House pictures
 
-My living expenses here are $XX per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate that from the equation and think about whether I'm meeting my goals for Is It Keto in terms of user growth and revenue growth.
+My living expenses here are $XX per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate my own expenses from the equation and think about whether I'm meeting my goals in terms of growing revenues and users.
 
 # Staying motivated
 
@@ -147,7 +159,7 @@ I've started writing monthly retrospectives where I take a step back to evaluate
 * [Is It Keto: Month 3 - Returning to a Site that Grew without Me](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52)
 * [Is It Keto: Month 4 - My First Dollar of Revenue](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)
 
-Outside of work, it's been interesting seeing how my habits have changed now that I have much more control over my time. I've gotten way better at unshackling myself from my phone/email/social media. I've gotten way worse at going to the gym, but I tell myself that all of my yardwork evens it out (it doesn't).
+Outside of work, it's been interesting to see how my habits have changed now that I have total control over my time. I've gotten way better at unshackling myself from my phone/email/social media. I've gotten way worse at going to the gym, but I tell myself that all of my yardwork evens it out (it doesn't).
 
 To avoid burnout, I don't work evenings or weekends. I begin working when I wake up, but I almost always stop for the day once I decide to start dinner.
 
