@@ -32,21 +32,43 @@
 {% for file in files %}
 
   {% comment %}
-    Determine correct collection based on language param.
+    Determine which page includes this file. It will match the name of the
+    folder that contains the file, for example:
+
+      _files/sia-nextcloud/Dockerfile.sia
+             ^^^^^^^^^^^^^
+             Matching page slug
   {% endcomment %}
-  {% assign file_path = file.relative_path  | remove: '_files/'  | remove: '_ymls/' %}
-  {% if include.language == "yml" or include.language == "yaml" %}
-    {% assign file_path = file_path | append: "." | append: include.language %}
-  {% endif %}
-  {% assign link = site.baseurl | append: '/files/' | append: file_path %}
+  {% assign file_path_parts = file.relative_path | split: '/' %}
+  {% assign matching_page_slug = file_path_parts[1] %}
 
   {% comment %}
-    Determine file's subdirectory to compare to post subdirectory.
+    If we're not in the page that includes this file, skip it.
   {% endcomment %}
-  {% assign subdir_array = file.path | split: '/' %}
-  {% assign subdir = subdir_array[1] %}
+  {% if matching_page_slug != page.slug %}
+    {% continue %}
+  {% endif %}
 
-  {% if subdir == page.slug %}
+  {% comment %}
+    Determine the relative URL of the file as it will appear on the site.
+  {% endcomment %}
+  {% assign file_relative_url = file.relative_path | replace: '_files/', '/files/' | replace: '_ymls/', '/files/' %}
+  {% comment %}
+    YAML files are a special case because the files are not stored with their
+    extensions. We need to add the extensions back, so a URL like:
+
+      /files/sia-nextcloud/docker-compose
+
+    becomes:
+
+      /files/sia-nextcloud/docker-compose.yml
+
+    Note that we must normalize the extension to .yml, even if the language is
+    set to "yaml" because the embed will fail if it's "yaml".
+  {% endcomment %}
+  {% if include.language == 'yml' or include.language == 'yaml' %}
+    {% assign file_relative_url = file_relative_url | append: '.yml' %}
+  {% endif %}
 
 ```{{ lang_highlight }}
 {{ file.content -}}
@@ -54,10 +76,9 @@
 {:.code-block-tab}
 
 <div class="clearfix">
-  <a href="{{ link }}" download class="btn--small code-tab">download raw</a>
+  <a href="{{ file_relative_url }}" download class="btn--small code-tab">download raw</a>
 </div>
-    {% assign file_count = file_count | plus: 1 %}
-  {% endif %}
+  {% assign file_count = file_count | plus: 1 %}
 
 {% endfor %}
 
