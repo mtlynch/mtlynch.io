@@ -11,7 +11,7 @@ sidebar:
 classes: wide
 ---
 
-On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start a company by myself. Today marks the completion of my first year as a solo developer, so I thought it would be a good time to reflect on how the decision has affected my money, lifestyle, and happiness.
+On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. Today marks my first full year as a solo developer, so I thought it would be a good time to reflect on how the decision has affected my money, lifestyle, and happiness.
 
 # How I made and spent money
 
@@ -115,53 +115,42 @@ KetoHub is a project I started last year. It's aggregates keto recipes from diff
 
 Many of my expenses are for general development or running my business, so they don't fit into a single project.
 
-| Expense | Amount | Note |
-|------------|-----------|-------|
-| [Bench](http://refer.bench.co/pPrqq) | -$1,610 | Pricy, but worth it. My bookkeepers file everything automatically. I tried free bookkeeping services and they required me to spend hours manually categorizing everything. |
-| Travis CI | -$1,419 | I wish this were cheaper, but continuous integration catches so many of my mistakes. I might try switching to a free or cheaper tier of CircleCI when my subscription is up. |
-| Coveralls | -$270 | Another one I wish were cheaper, but I love testing. |
-| GitHub Pro | -$91 | Bought this just for the private repos, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I can stop paying this in 2019. |
-| Dev tooling | -$1,400 | I paid freelance developers to add general-purpose tooling during development. |
-| Travel, conferences, events, books | -$634 | - |
+| Expense | Purpose | Amount | Note |
+|------------|-----------|-----------|-------|
+| [Bench](http://refer.bench.co/pPrqq) | Bookkeeping | -$1,610 | Pricy, but I've been it's one of the few services I've used that just solves a problem so thoroughly that I don't have to think about it for more than a few hours per year. |
+| [Travis CI](https://travis-ci.com) | Continuous integration | -$1,419 | I wish this were cheaper, but I absolutely need continuous integration. I've heard that [CircleCI](https://circleci.com/) is now the better offering and costs less, so I'll likely switch when my subscription expires. |
+| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 | Another one I wish were cheaper, but I love testing. |
+| [GitHub Pro](https://github.com/) | Source code storage | -$91 | Bought this just for the private repos, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I can stop paying this in 2019. |
+| Dev tooling | Misc | -$1,400 | I paid freelance developers to add general-purpose tooling during development. |
+| Travel, conferences, events, books | | -$634 | |
 
-# Personal expenses
+# Bleeding dry from personal expenses
 
 There was one enormous hidden expense that my profit and loss chart didn't show: me.
 
-I'm my own largest expense. My business expenses don't reflect it because I pay my living costs by drawing from my personal savings. But my living costs were quite high after I quit Google. lived in a Manhattan apartment that was walking distance from the Google office, so rent alone was $3,300/month. After private health insurance, food, and utilities, it cost $6-7k per month just to sustain myself.
+I'm my own largest expense. I paid my living costs by drawing from my personal savings. But my cost of living was quite high after I quit Google. My Manhattan apartment, located walking distance from Google, cost $3,300 per month. After private health insurance, food, and utilities, it cost $6-7k per month just to sustain myself.
 
-Those costs had a dramatic impact on my business decisions. If I expected a task to take me two weeks, that translates to an implicit cost of ~$3k. If I could hire a freelancer to perform the task for less than $3k, I'd be saving money overall. Actually, I'd save money even if it was higher than $3k because I can deduct a freelancer's pay from my taxable income.
+Those costs had a dramatic impact on my business decisions. If I expected a task to take me two weeks, that translated to an implicit cost of ~$3k. If I could hire a freelancer to perform the task for less than $3k, I'd be saving money overall. Paying a freelancer was even more attractive because I can deduct it from my taxable income.
 
-I'm a huge fan of outsourcing, and I think that people underuse it, but I was basically in a mindset of *frantic outsourcing*.
+I'm a huge fan of outsourcing, and I think that people underuse it, but I was basically in a mindset of *frantic outsourcing*. At one point, I was working with four different freelance developer simultaneously on three different projects.
 
-My living expenses also made me constantly feel like my time was metered. Any project I attempted was implicitly a huge investment. Suppose I have a business idea, and it takes me three months of work to know whether it's viable. Spending three months working on it would be equivalent to investing $20k in the idea. I like the idea of a project that grows slowly over time, like it makes $50 one month, then $100, then $175. But when you're spending $7k a month, it feels absurd to pursue those opportunities because even with slow, consistent growth, it would take decades to see a positive return on your investment.
+My living expenses also made me constantly feel like my time was metered. When I imagined starting a business, I did have this romantic idea about starting it from a small seedling earning only $50 a month and slowly growing it to $100 then $175. But it felt ridiculous and foolhardy to do that while burning $7k a month in expenses.
 
 # So, I bought a house
 
-One day in June, I jokingly texted my sister that I should buy a cheap house near her in Western Massachussetts. She immediately called me: "Were you joking? Because you should do that for real." The more I thought about it, the more sense it made. It was close to my family, I liked the area, and the cost of living was tiny compared to New York.
+One day in June, I texted my sister joking that I should cut my spending by moving into a cheap house near her in Western Massachussetts. She immediately called me. "Were you kidding? Because you should do that for real."
+
+The more I thought about it, the more sense it made. It was close to my family, I liked the area, and the cost of living was tiny compared to New York.
 
 So in August, I bought a modest two bedroom house in South Hadley, Massachusetts, population 17,500.
 
-TODO: House pictures
+<figure class="half">
+  {% include image.html file="house-front.jpg" alt="My house, front view" img_link=true %}
+  {% include image.html file="house-angle.jpg" alt="My house, side view" img_link=true %}
+  <figcaption>My first house.</figcaption>
+</figure>
 
-My living expenses here are $XX per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate my own expenses from the equation and think about whether I'm meeting my goals in terms of growing revenues and users.
-
-# Staying motivated
-
-When I tell people what I do, they often say, "Oh, I couldn't do that. I'd just watch TV all day." I didn't think that was going to happen, and it hasn't. I like watching TV, but I *love* programming, so the thing that I do when I'm bored is just more programming.
-
-But programming all the time isn't as good a quality as I'm making it out to be. Very few businesses are profitable just by churning out a lot of code. It requires hard work in non-coding areas too like marketing, sales, and strategy. I
-
-I've started writing monthly retrospectives where I take a step back to evaluate what I did and what I need to accomplish next:
-
-* [Zestful: Month 4 - Shipping Too Late](https://www.indiehackers.com/forum/zestful-data-month-4-shipping-too-late-94ac777256)
-* [Zestful: Month 5: Launched, but Still No Customers](https://www.indiehackers.com/forum/zestful-data-month-5-launched-but-still-no-customers-32d221561d)
-* [Is It Keto: Month 3 - Returning to a Site that Grew without Me](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52)
-* [Is It Keto: Month 4 - My First Dollar of Revenue](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)
-
-Outside of work, it's been interesting to see how my habits have changed now that I have total control over my time. I've gotten way better at unshackling myself from my phone/email/social media. I've gotten way worse at going to the gym, but I tell myself that all of my yardwork evens it out (it doesn't).
-
-To avoid burnout, I don't work evenings or weekends. I begin working when I wake up, but I almost always stop for the day once I decide to start dinner.
+My living expenses here are ~$2k per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate my own expenses from the equation and think about whether I'm meeting my goals in terms of growing revenues and users.
 
 # Why I'm not consulting
 
@@ -169,37 +158,19 @@ People are often surprised to learn that I'm not doing any freelance or consulti
 
 The main reason is that I don't need to. Because I purchased a house in an area with a low cost of living, I can sustain myself for several more years just from my savings.
 
-One of my big realizations a few weeks after quitting was that I was [saying yes too much](/since-quitting/#managing-stress). It was hard to make progress on anything when I had several projects running simultaneously. That's my biggest fear with consulting. Because I hear about people who do consulting for one or two months out of the year to cover their expenses, and that sounds nice. But in reality, it's a lot more work to arrange consulting gigs, manage clients, etc. that it's full-time focus a few months out of the year, but it's a constant part time commitment.
+One of my biggest mistakes after quitting was [saying yes too much](/since-quitting/#managing-stress). It was hard to make progress on anything when I had several projects running simultaneously. I know consultants that comfortably support themselves working only a couple months per year, but they had to do much more work to get to that point. Instead, I'd rather put all my focus into building a sustainable business.
 
-# Doubts about my skills
+# Day to day routines
 
-I worry about whether I chose a path that makes the worst of my skills. I think my best qualities as a developer was how I think about teams and process. I'm a very thorough code reviewer. I like making sure processes are documented and repeatable. I like writing and reviewing design plans. None of those things are useful as a one-man development team.
 
-Money is a pretty strong indicator that you're doing the right thing. But it's also a . One thing I keep thinking back to is [this thing](https://twitter.com/shpigford/status/1033032915175858176?lang=en) Josh Pigford posted last year. He now runs BareMetrics, a site that earns over $100k per month in revenue, but he spent 15 years before that on projects that failed,
 
-# Doubts about my work
+# What's it like?
 
-I also have doubts about what I'm working on. My current projects is Is It Keto. It's a website that tells you whether certain foods are compatible with the keto diet. It's one of the least technically complex things I've ever worked on. I have fun working on it, but I admit that it's embarrassing when people ask me what exciting app I quit Google to work on and my answer is, "Um... You type a food and it tells you whether or not it's keto..."
+Before quitting, I could tell people that my job was to endlessly move bits from one database to another, and they'd be impressed because it was Google (sidenote: that was my job). I love working on Is It Keto. It's exactly what I imagined in that I can make changes and see tangible results in things like user visits, revenue, and search engine rank. It's fun to work on something where I have such control and there are so many different possibilities for growth. But I must admit that I can't help but feel embarrassed when people ask me what exciting app I quit Google to work on and my response is, "Um... It's a website where you put in a food and it tells you whether or not it's keto..."
 
->**Employee**: My last company was genius. You ever been lost in a parking lot before? ... You would just type in - like what section of the parking lot you're in, like P3 or Ground 7.<br>
->**Richard**: So you just write down what section of the parking lot you're in? I mean - why do you need an app for that?<br>
->**Employee**: So you can remember where you parked.<br>
->**Richard**: Right, but why don't you just write it down on a piece of paper?<br>
->**Employee**: Well, yeah, but this is for your phone.<br>
->**Richard**: Okay, so it's just sort of like Notepad?<br>
->**Employee**: Exactly! See, you get it.
->
->-*Silicon Valley*, Season 1, Episode 3: "Articles of Incorporation"
+Zestful was fun to work on. It was interesting learning more about machine learning, but it felt like there was no payoff. Probably because I lieterally did not get paid, since I never found customers.
 
-I  worry about whether I'm taking enough risk. One of my realizations about Zestful was that I was [spinning my wheels on busywork to avoid the scary part](/shipping-too-late/#did-i-delay-my-launch-to-avoid-rejection) where I cold pitch to businesses. Is It Keto notably is a business-to-consumer website, which means I don't have to pitch to anyone. I don't have to convince anyone that using it will make the money.
-
-I made my first dollar of revenue within a week of picking the project up again, so I think there's potential in it, but it's also . It does tick all my boxes of a project. I am growing its traffic measurably month over month, I'm growing its revenue month over month,
-
-I am going to stick with Is It Keto for the time being because it does match a lot of what I find fun about starting a small business:
-
-* I'm making changes that have measurable effect on growth
-
-# I still love it
+# I want this to be forever
 
 I dread going back
 
@@ -209,6 +180,20 @@ I remember reading books about startups and thinking how fun it would be to make
 
 I love waking up whenever I want. I love that some days I can spontaneously decide it's a vacation day. It's how I want to spend the rest of my life.
 
+# What I've learned
+
+**Limit focus**
+
+When I first started, I thought that I had so much free time that I could talk to people about consulting opportunities, oversee developers on multiple projects, do coding of my own, and write consistent blog posts. I've been more productive when I reduced it to just my blog and one project.
+
+**Regularly reflect**
+
+I reflect on my progress weekly, monthly, and, as of this blog post, annually. To close out every work week, I write a shortform bulleted list of everything I accomplished that week. It's a nice way to close out the week, and I'm almost always surprised at how much I accomplished even in weeks I thought were slow. Every month, I post a retrospective on the Indie Hackers forums (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)). It helps me take a step back and reassess my strategy at a high level and set goals for the next month. And starting with this post, every year I write a riveting blog post about my reflections on the year.
+
+**Set goals**
+
+Setting specific, objective goals for the month has helped keep me focused and is a check on my natural tendency to clean up code forever. If my goal is to reach $50 in revenue for the month, and I'm not there yet, then I know that I don't have time to clean up some ugly code that's bothering me because it won't help me achieve my goal.
+
 # Goals for year two
 
 I've been following another solo developer named Cory Zue. He's fun to watch because he's doing something very similar to what I want. His business is also. But something he did which I'll steal is setting yearly goals.
@@ -216,4 +201,6 @@ I've been following another solo developer named Cory Zue. He's fun to watch bec
 My goals for 2019:
 
 * Earn $500/month in revenue from my businesses (averaged over the fourth quarter).
-* Attract XXk readers to my blog (or just number of articles?)
+* Present talks at three software conferences.
+* Publish 12 blog posts.
+* Gain comfort with a JavaScript framework (e.g., Vue, Angular, React).
