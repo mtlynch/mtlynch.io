@@ -11,35 +11,42 @@ sidebar:
 classes: wide
 ---
 
-On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. Today marks my first full year as a solo developer, so I thought it would be a good time to reflect on how the decision has affected my money, lifestyle, and happiness.
+On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. Today marks my first full year as a solo developer, so I thought it would be a good time to reflect on how the decision has affected my finances, lifestyle, and happiness.
 
 # How I made and spent money
-
-I'll start with money. It's the thing most people are interested in because it's one the strongest motivators to starting a business and the largest obstacle to doing so.
-
-Here is a high-level overview of all my business revenues and expenses for 2018:
+Here's a high-level overview of all my business revenues and expenses for 2018:
 
 {% assign fig_caption = 'Profit and Loss chart via [Bench](http://refer.bench.co/pPrqq).' | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="bench-2018.jpg" alt="Profit and loss for 2018" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
-One way of looking at this chart is that I lost $21k in a single year. Alternate interpretation: I grew profits by almost $1k each month!  If this trend continues, I should be fabulously wealthy quite soon.
+One way of looking at this chart is that I lost $21k in a single year. Alternate interpretation: I *grew profits* by almost $1k each month!  If this trend continues, I should be fabulously wealthy quite soon.
 
 {% assign fig_caption = 'Profit and loss through 2019, projected' %}
 
 {% include image.html file="2019-projected.jpg" alt="Projected earnings for 2019" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
-Okay, that's a bit of a "fanciful" interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending. In April, I had four different part-time developers working for me simultaneously, which was way too much.
+Okay, that's a bit of a "fanciful" interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending.
 
-The change in my spending also resulted from a significant change in my personal life, which I'll cover a bit later in the post.
+# Costly lessons in outsourcing
+
+When I first started, I had a very *Four Hour Work Week* mentality. My job was not to *do* work but to *manage* work, so I hired freelancers to do everything.
+
+I figured that outsourcing a task would the time I have to spend on it by about 80%. That is, if I expected to spend 20 hours doing something myself, it would take me about 4 hours to manage a freelancer to do it. And that's true, but it takes a few months with that freelancer to reach that point. For the first few weeks, I often spent more time managing the freelancer than it would have taken to do the task myself.
+
+The other issue was task coordination. If I could reduce my workload by 80% with outsourcing, it would only take one day of my week to manage a full week of a freelancer's work. By that logic, I could hire five freelancers and spend one day a week reviewing each of their work. But it doesn't work so cleanly in practice. Freelancers often submitted work at the same time. And you can't just tell them to sit around for a week until you get back to them. They can't have clients that expect them to work two hours one week, then 40 hours the next.
+
+So I trimmed down and became much more conservative about hiring freelancers.
+
+The change in my spending also resulted from a significant change in my personal life, which I'll cover a bit later in this post.
 
 # Project by project
 
 ## mtlynch.io *(this blog)*
 
-My biggest source of revenue in 2018 was this blog. I deliberately avoid monetizing this blog because I want readers to feel like they're getting high-quality information about topics I care about. I don't want people to wonder if I'm just baiting them to my site so that they can click ads and earn me money. Despite my best efforts, this blog earned more than any of my other projects.
+My biggest source of revenue in 2018 was this blog. I deliberately avoid monetizing it because I don't want ad money to influence what I write. The only exception is that if I'm going to link to a product anyway, I use an affiliate link so that the blog earns referral money.
 
-In 2018, this blog receied 981k pageviews and earned $1.2k in affiliate revenue, which I think is on the low side.
+Despite my best efforts, this blog earned more than any of my other projects. In 2018, this blog received 981k pageviews and earned $1.2k in affiliate revenue, which I think most professional bloggers would consider laughably under-monetized.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -54,7 +61,9 @@ In 2018, this blog receied 981k pageviews and earned $1.2k in affiliate revenue,
 
 ## [Is It Keto](https://isitketo.org)
 
-Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with the keto diet. If the food is keto-approved, the site displays links where the reader can purchase it online, and the site receives affiliate revenue for the sale. I only began monetizing it at the end of November, so revenues are small, but I'm hopeful that I can grow them quickly.
+Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with the keto diet. If the food is keto-approved, the site displays links where the reader can purchase it online, and the site receives affiliate revenue for the sale.
+
+I only began monetizing it at the end of November, so revenues are small, but I'm hopeful that I can grow them quickly.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -69,7 +78,7 @@ Is It Keto is my current focus. It gives readers clear, simple answers about whi
 
 ## [Space Duck](https://spaceduck.io)
 
-Space Duck was a project for me to build something on top of Sia. After running some experiments, I decided that Sia was not yet ready to support anything I had in mind, so I moved on. I never got to the point of monetizing it.
+Space Duck was a project for me to build something on top of Sia, a decentralized storage technology. After running some experiments, I decided that Sia [was not yet ready](/since-quitting/#failed-project-space-duck) to support anything I had in mind, so I moved on.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -81,11 +90,9 @@ Space Duck was a project for me to build something on top of Sia. After running 
 
 ## [Zestful](https://zestfuldata.com)
 
-Zestful was my foray into machine learning. It allows app developers to take an ingredients like, "1.5 cups finely chopped red onions," and interpret it as structured data: quantity is, "1.5," unit is, "cups," etc. I put the project in maintenance mode in September after several months of [failing to convince any app developers to use it](/shipping-too-late/).
+Zestful was my first attempt at software-as-a-service (SaaS). It allowed developers to programmatically infer structure from text representing a recipe ingredient. So, given an ingredient like `"1.5 cups finely chopped red onions"`, Zestful tells the application that `1.5` is the quantity, `cups` is the unit of measure, etc. I put the project in maintenance mode in September after several months of [unsuccessful sales attempts](/shipping-too-late/).
 
 Interestingly, several people have reached out to me in the past few months with plans for using it on new projects, so maybe it will come back to life in 2019.
-
-This was, by far, my most expensive project
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -96,7 +103,7 @@ This was, by far, my most expensive project
 | Domains | -$50 |
 | **Net profit** | **-$7,854** |
 
-\* It *technically* earned about $1 but my payment processor won't pay out amounts less than $2.
+\* It *technically* earned about $1 but my payment processor won't pay out balances under $2.
 
 ## [KetoHub](https://ketohub.io)
 
@@ -112,8 +119,6 @@ KetoHub is a project I started last year. It's aggregates keto recipes from diff
 | **Net profit** | **$XX** |
 
 ## Everything Else
-
-Many of my expenses are for general development or running my business, so they don't fit into a single project.
 
 | Expense | Purpose | Amount | Note |
 |------------|-----------|-----------|-------|
@@ -147,40 +152,29 @@ So in August, I bought a modest two bedroom house in South Hadley, Massachusetts
 <figure class="half">
   {% include image.html file="house-front.jpg" alt="My house, front view" img_link=true %}
   {% include image.html file="house-angle.jpg" alt="My house, side view" img_link=true %}
-  <figcaption>My first house.</figcaption>
+  <figcaption>My first house, purchased, in part, to slow down expenses</figcaption>
 </figure>
 
 My living expenses here are ~$2k per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate my own expenses from the equation and think about whether I'm meeting my goals in terms of growing revenues and users.
 
-# Why I'm not consulting
+# I want to do this forever
 
-People are often surprised to learn that I'm not doing any freelance or consulting work.
+As someone who's always been independent, I love being a solo developer. It makes a world of difference when I can wake up whenever I want and make my own choices about how to spend every hour of the day. I want this to be how I spend the rest of my life.
 
-The main reason is that I don't need to. Because I purchased a house in an area with a low cost of living, I can sustain myself for several more years just from my savings.
+When I was still an employee, I read books about startups, and the part that seemed most exciting was how many different knobs and levers there are when you run a small business. At any given point, you can think about high-level questions like whether you want to increase revenues or decrease costs. Or you can think about very low-level things like whether to use your engineering resources to add a new feature or to automate a manual task.
 
-One of my biggest mistakes after quitting was [saying yes too much](/since-quitting/#managing-stress). It was hard to make progress on anything when I had several projects running simultaneously. I know consultants that comfortably support themselves working only a couple months per year, but they had to do much more work to get to that point. Instead, I'd rather put all my focus into building a sustainable business.
+Now that I'm making those decisions, it's exactly as fun as I imagined. I love it when I can make a change and see tangible results in user growth or search engine rankings. I like weighing different options for 
 
-# Day to day routines
+It is! For Is It Keto, there are so many possible ways to grow it. Should I try to find users through Facebook? Twitter? Should I focus on improving my search rankings? Should I figure out a way to partner with keto bloggers?
 
+# Doubts
 
+* The things you're best at are [code reviews](/human-code-reviews-1/), [unit tests](/good-developers-bad-tests/), and generally refining processes for a team of developers. You can't afford to hire a team of full-time developers, so aren't you wasting your best skills?
+* One of your fatal flaws with Zestful was you were [too afraid of sales](/shipping-too-late/#a-different-type-of-rejection). Does your new project, Is It Keto, really have good potential? Or are you just choosing to believe that because it doesn't involve sales?
+* Your job at Google used to impress people. Now when people ask you what your job is, you tell them, "Um... it's a website where you type a food and it tells you whether it's keto." Shouldn't you be doing something that sounds more impressive?
+* What if this doesn't work out and you have to go back and get a job, but it'll be so much worse because you know how great your life could have been as a successful entrpreneur *and* you'll feel like you wasted several years of career growth as an employee?
 
-# What's it like?
-
-Before quitting, I could tell people that my job was to endlessly move bits from one database to another, and they'd be impressed because it was Google (sidenote: that was my job). I love working on Is It Keto. It's exactly what I imagined in that I can make changes and see tangible results in things like user visits, revenue, and search engine rank. It's fun to work on something where I have such control and there are so many different possibilities for growth. But I must admit that I can't help but feel embarrassed when people ask me what exciting app I quit Google to work on and my response is, "Um... It's a website where you put in a food and it tells you whether or not it's keto..."
-
-Zestful was fun to work on. It was interesting learning more about machine learning, but it felt like there was no payoff. Probably because I lieterally did not get paid, since I never found customers.
-
-# I want this to be forever
-
-I dread going back
-
-People ask me if I regret quitting and I definitely do not. Even when I do stress about money, I'd gladly take that over the stress of having to spend my day according to other people's schedules, carrying out tasks that other people choose for me. I really want this to be how I spend the rest of my life.
-
-I remember reading books about startups and thinking how fun it would be to make decisions about what part to focus on. Do I focus on user growth or new features? Do I focus on social media or search engine optimization? Now, I'm doing that and it's exactly as fun as I hoped.
-
-I love waking up whenever I want. I love that some days I can spontaneously decide it's a vacation day. It's how I want to spend the rest of my life.
-
-# What I've learned
+# Lessons learned
 
 **Limit focus**
 
@@ -188,19 +182,21 @@ When I first started, I thought that I had so much free time that I could talk t
 
 **Regularly reflect**
 
-I reflect on my progress weekly, monthly, and, as of this blog post, annually. To close out every work week, I write a shortform bulleted list of everything I accomplished that week. It's a nice way to close out the week, and I'm almost always surprised at how much I accomplished even in weeks I thought were slow. Every month, I post a retrospective on the Indie Hackers forums (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)). It helps me take a step back and reassess my strategy at a high level and set goals for the next month. And starting with this post, every year I write a riveting blog post about my reflections on the year.
+I find it very easy to forget . In a given week or month, it's easy for me to forget what I've accomplished. And I'll get so far down into the rabbit hole of some task that I forget to question why I'm doing it or whether it's still worth doing.
+
+My way of combating these traps is to regularly reflect. To close out every work week, I write a shortform bulleted list of everything I accomplished that week. It's a nice way to close out the week, and I'm almost always surprised at how much I accomplished even in weeks I thought were slow. Every month, I post a retrospective on the Indie Hackers forums (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)). And, starting with this post, every year I write a riveting blog post about my reflections on the year.
 
 **Set goals**
 
-Setting specific, objective goals for the month has helped keep me focused and is a check on my natural tendency to clean up code forever. If my goal is to reach $50 in revenue for the month, and I'm not there yet, then I know that I don't have time to clean up some ugly code that's bothering me because it won't help me achieve my goal.
+Setting specific, objective goals for the month has kept me focused. Before I decided to do this, I would just do what I thought was important, but it was very undirected. It was easy for me to waste time on something and then invent rationalizations for why I did it.
+
+If I set a specific goal like, "Achieve $50 in revenue for the month," it becomes easier to choose tasks because I can ask myself more straightforward questions: Will this task help me achieve that goal? Are there alternative ways I could spend my time that would achieve it more effectively?
 
 # Goals for year two
 
-I've been following another solo developer named Cory Zue. He's fun to watch because he's doing something very similar to what I want. His business is also. But something he did which I'll steal is setting yearly goals.
+Speaking of goals, I should set some for the current year. Here are my goals for year two of being a solo developer:
 
-My goals for 2019:
-
-* Earn $500/month in revenue from my businesses (averaged over the fourth quarter).
+* Earn $500/month in revenue from my businesses, collectively (averaged over the fourth quarter).
 * Present talks at three software conferences.
 * Publish 12 blog posts.
-* Gain comfort with a JavaScript framework (e.g., Vue, Angular, React).
+* Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
