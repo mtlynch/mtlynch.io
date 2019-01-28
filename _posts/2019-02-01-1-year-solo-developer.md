@@ -42,6 +42,10 @@ The change in my spending also resulted from a significant change in my personal
 
 # Project by project
 
+{% assign fig_caption = 'Profit and loss through 2019, projected' %}
+
+{% include image.html file="project-finances-2018.png" alt="Projected earnings for 2019" max_width="800px" class="img-border" img_link="true" fig_caption=fig_caption %}
+
 ## mtlynch.io *(this blog)*
 
 My biggest source of revenue in 2018 was this blog. I deliberately avoid monetizing it because I don't want ad money to influence what I write. The only exception is that if I'm going to link to a product anyway, I use an affiliate link so that the blog earns referral money.
@@ -51,13 +55,15 @@ Despite my best efforts, this blog earned more than any of my other projects. In
 | Income/Expense | Amount |
 |---------|----------------------|
 | Affiliate revenue | $1,244 |
-| [Editing](/editor/) | -$XX |
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$XX |
-| Development | -$XX |
+| [Editing](/editor/) | -$75 |
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$599 |
+| Development\* | -$3,896 |
 | [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | 
-| Hosting | -$XX |
+| Hosting | -$309 |
 | Domain | -$60 |
-| **Net profit** | **-$XX** |
+| **Net profit** | **-$3,835** |
+
+\* When I work on this blog, I want to focus only on writing, so I work with an [excellent developer](https://www.andrewwnewhouse.com/) who handles all the coding and web design.
 
 ## [Is It Keto](https://isitketo.org)
 
@@ -84,9 +90,9 @@ Space Duck was a project for me to build something on top of Sia, a decentralize
 |---------|----------------------|
 | Logo design | -$250 |
 | Website development | -$1,373 |
-| Hosting | -$25 |
+| Hosting | -$196 |
 | Domain | -$60 |
-| **Net profit** | -**$1,708** |
+| **Net profit** | -**$1,879** |
 
 ## [Zestful](https://zestfuldata.com)
 
@@ -114,9 +120,9 @@ KetoHub is a project I started last year. It's aggregates keto recipes from diff
 | Development | -$1,502 |
 | User research| -$220 |
 | Logo Design | -$211 |
-| Hosting | $XX |
+| Hosting | -$46 |
 | Domain | -$60 |
-| **Net profit** | **$XX** |
+| **Net profit** | **-$2,039** |
 
 ## Everything Else
 
