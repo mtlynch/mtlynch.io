@@ -96,6 +96,11 @@
 {% endfor %}
 
 {% comment %}
+  Determine the number of unique matching files found.
+{% endcomment %}
+{% assign file_count = found_files | split: "," | uniq | size %}
+
+{% comment %}
   Sanity check the file_count. If the file count is:
 
   1: This is the expected case. We found a single file match for the file
@@ -108,12 +113,6 @@
   >1: Multiple files matched. This can happen when more than 1 file in the
      page's folder has identical "title:" yml frontmatter values.
 {% endcomment %}
-
-{% comment %}
-  Determine the number of unique matching files found.
-{% endcomment %}
-{% assign file_count = found_files | split: "," | uniq | size %}
-
 {% if file_count == 0 %}
   {% comment %}
     If zero files were found in the page's folder that match the file embed
