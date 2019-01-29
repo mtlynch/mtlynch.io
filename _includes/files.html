@@ -26,9 +26,6 @@
 	{% assign lang_highlight = include.language %}
 {% endif %}
 
-{% comment %} Initialize file count. {% endcomment %}
-{% assign file_count = 0 %}
-
 {% comment %} 
   Initialize an empty string to store unique file paths that match the correct
   file path and title.
@@ -78,10 +75,9 @@
 
   {% comment %}
     Check to see if any files have been stored (or found) yet.  If string is
-    empty, set it to the current file's path.
+    empty, that means we can embed the file.  Otherwise, it's a duplicate.
   {% endcomment %}
   {% if found_files == "" %}
-    {% assign found_files = file_relative_url %}
 
 ```{{ lang_highlight }}
 {{ file.content -}}
@@ -91,61 +87,49 @@
 <div class="clearfix">
   <a href="{{ file_relative_url }}" download class="btn--small code-tab">download raw</a>
 </div>
-
-  {% else %}
-    {% comment %}
-      Split the found files string into an array and check each entry to
-      see if it is a duplicate of current file.  If it is not a duplicate,
-      then append to the found_files string.  If it is a dupilcate (due to
-      Jekyll admin bug or a different reason) then ignore.
-    {% endcomment %}
-    {% assign already_found = "" %}
-    {% assign found_file_array = found_files | split: ',' %}
-    {% for found_file in found_file_array %}
-      {% if found_file != file_relative_url %}
-        {% assign already_found = file_relative_url %}
-      {% endif %}
-    {% endfor %}
-    {% if already_found != "" %}
-      {% assign found_files = found_files | append: "," | append: already_found %}
-    {% endif %}
   {% endif %}
 
+  {% comment %}
+    Concatenate the relative URL to the string for use in error trapping below.
+  {% endcomment %}
+  {% assign found_files = found_files | append: file_relative_url | append: "," %}
 {% endfor %}
 
 {% comment %}
-  Determine how many unique files were found for the file embed.  The below
-  table describes the possible scenarios based on the size of the "found_files"
-  string after it is split into an array:
+  Sanity check the file_count. If the file count is:
 
-  Size of Array | Error Thrown? | Description
-  -------------------------------------------
-        0       |     Yes       | No matching files were found to embed.
-        1       |     No        | Exactly 1 file was found which is expected.
-        >1      |     Yes       | Duplicate titles found.
+  1: This is the expected case. We found a single file match for the file
+     specified in the markdown. Do nothing because we've already rendered the
+     file embed.
+  0: We didn't find a matching file. Raise a warning to indicate that the file
+     include didn't match any files. This could indicate that the markdown
+     specified the wrong file or that the file hasn't been uploaded to the
+     server yet.
+  >1: Multiple files matched. This can happen when more than 1 file in the
+     page's folder has identical "title:" yml frontmatter values.
 {% endcomment %}
 
-{% comment %} Break string into array for error trapping. {% endcomment %}
-{% assign file_count = found_files | split: ',' | size %}
+{% comment %}
+  Determine the number of unique matching files found.
+{% endcomment %}
+{% assign file_count = found_files | split: "," | uniq | size %}
 
-{% unless file_count == 1 %}
-  {% if file_count == 0 %}
-    {% comment %}
-      If zero files were found in the page's folder that match the file embed
-      title, then raise an error.
-    {% endcomment %}
-    {{ "Zero file includes matched the title, "
-      | append: include.title
-      | append: ".  Please check the file include's title and directory again."
-      | raise_exception: "warning" }}
-  {% else %}
-    {% comment %}
-      If more than 1 file were found in the page's folder that match the file
-      embed title, then raise an error as this is likely not intentional.
-    {% endcomment %}
-    {{ "Multiple file includes with the same title, "
-      | append: include.title
-      | append: ", have been found."
-      | raise_exception: "warning" }}
-  {% endif %}
-{% endunless %}
+{% if file_count == 0 %}
+  {% comment %}
+    If zero files were found in the page's folder that match the file embed
+    title, then raise an error.
+  {% endcomment %}
+  {{ "Zero file includes matched the title, "
+    | append: include.title
+    | append: ".  Please check the file include's title and directory again."
+    | raise_exception: "warning" }}
+{% elsif file_count > 1 %}
+  {% comment %}
+    If more than 1 file were found in the page's folder that match the file
+    embed title, then raise an error as this is likely not intentional.
+  {% endcomment %}
+  {{ "Multiple file includes with the same title, "
+    | append: include.title
+    | append: ", have been found."
+    | raise_exception: "warning" }}
+{% endif %}
