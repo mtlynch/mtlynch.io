@@ -30,27 +30,27 @@ Okay, that's a bit of a "fanciful" interpretation. The reason that my profits in
 
 # Costly lessons in outsourcing
 
-When I first started, I had a very *Four Hour Work Week* mentality. My job was not to *do* work but to *manage* work, so I hired freelancers to do everything.
+When I first started, I had a very [*Four Hour Work Week*](https://amzn.to/2WrjMXD) mentality. My job was not to *do* work but to *manage* work, so I hired freelancers to do everything. But I quickly realized there were two big problems:
 
-I figured that outsourcing a task would the time I have to spend on it by about 80%. That is, if I expected to spend 20 hours doing something myself, it would take me about 4 hours to manage a freelancer to do it. And that's true, but it takes a few months with that freelancer to reach that point. For the first few weeks, I often spent more time managing the freelancer than it would have taken to do the task myself.
+* Outsourcing tasks doesn't save time initially.
+  * There are upfront costs: specifying the task, hiring a freelancer, training them.
+  * In my experience, it takes weeks to save time outsourcing even a simple task. For complex tasks like software development, it often takes months to reach a point where managing a freelancer takes less time than doing it yourself.
+* Outsourcing requires careful time coordination.
+  * If I'm only doing 20% of the work, I should be able to manage five freelancers in a full work week, right? But what if all five freelancers submit their work on the same day? It's impossible to review everything adequately at the same time, and the freelancers don't want to just sit idle for a week until I catch up.
 
-The other issue was task coordination. If I could reduce my workload by 80% with outsourcing, it would only take one day of my week to manage a full week of a freelancer's work. By that logic, I could hire five freelancers and spend one day a week reviewing each of their work. But it doesn't work so cleanly in practice. Freelancers often submitted work at the same time. And you can't just tell them to sit around for a week until you get back to them. They can't have clients that expect them to work two hours one week, then 40 hours the next.
+As a result, work was falling on the floor. Quality was dropping because I didn't have time to review work thoroughly, and several times, by the time a freelancer delivered results, I realized I no longer needed the work.
 
-So I trimmed down and became much more conservative about hiring freelancers.
-
-The change in my spending also resulted from a significant change in my personal life, which I'll cover a bit later in this post.
+I began outsourcing more conservatively. It reduced my spending and it made my job feel much less chaotic. I also made a big change in my personal life that affected how I spent money, but I'll cover that a bit later in the post.
 
 # Project by project
 
-{% assign fig_caption = 'Profit and loss through 2019, projected' %}
-
-{% include image.html file="project-finances-2018.png" alt="Projected earnings for 2019" max_width="800px" class="img-border" img_link="true" fig_caption=fig_caption %}
+{% include image.html file="project-finances-2018.png" alt="Graph of income and expenses on a per-project basis" max_width="800px" class="img-border" img_link="true" fig_caption="Income and expenses for each of my projects in 2018" %}
 
 ## mtlynch.io *(this blog)*
 
-My biggest source of revenue in 2018 was this blog. I deliberately avoid monetizing it because I don't want ad money to influence what I write. The only exception is that if I'm going to link to a product anyway, I use an affiliate link so that the blog earns referral money.
+My biggest source of revenue in 2018 was this blog. I deliberately avoid efforts to monetize it because I don't want ad money to influence what I write. The only exception is that if I'm going to link to a product anyway, I use an affiliate link so that the blog earns referral money.
 
-Despite my best efforts, this blog earned more than any of my other projects. In 2018, this blog received 981k pageviews and earned $1.2k in affiliate revenue, which I think most professional bloggers would consider laughably under-monetized.
+Despite my best efforts, this blog earned more than any of my other projects. It had its biggest year, earning $1.2k in affiliate revenue. That happened in a year where the blog received 981k pageviews, which I think most professional bloggers would consider laughably under-monetized.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -82,23 +82,11 @@ I only began monetizing it at the end of November, so revenues are small, but I'
 
 \* Is It Keto runs on AppEngine, and traffic is currently low enough to fit into their free tier.
 
-## [Space Duck](https://spaceduck.io)
-
-Space Duck was a project for me to build something on top of Sia, a decentralized storage technology. After running some experiments, I decided that Sia [was not yet ready](/since-quitting/#failed-project-space-duck) to support anything I had in mind, so I moved on.
-
-| Income/Expense | Amount |
-|---------|----------------------|
-| Logo design | -$250 |
-| Website development | -$1,373 |
-| Hosting | -$196 |
-| Domain | -$60 |
-| **Net profit** | -**$1,879** |
-
 ## [Zestful](https://zestfuldata.com)
 
-Zestful was my first attempt at software-as-a-service (SaaS). It allowed developers to programmatically infer structure from text representing a recipe ingredient. So, given an ingredient like `"1.5 cups finely chopped red onions"`, Zestful tells the application that `1.5` is the quantity, `cups` is the unit of measure, etc. I put the project in maintenance mode in September after several months of [unsuccessful sales attempts](/shipping-too-late/).
+Zestful was my first attempt at software-as-a-service (SaaS). It allows developers to programmatically infer structure from text representing a recipe ingredient. So, given an ingredient like `"1.5 cups finely chopped red onions"`, Zestful tells the application that `1.5` is the quantity, `cups` is the unit of measure, etc.
 
-Interestingly, several people have reached out to me in the past few months with plans for using it on new projects, so maybe it will come back to life in 2019.
+I put the project in maintenance mode in September after several months of [unsuccessful sales attempts](/shipping-too-late/). Interestingly, several people have reached out to me in the past few months with plans for using it on new projects, so maybe it will come back to life in 2019.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -110,6 +98,18 @@ Interestingly, several people have reached out to me in the past few months with
 | **Net profit** | **-$7,854** |
 
 \* It *technically* earned about $1 but my payment processor won't pay out balances under $2.
+
+## [Space Duck](https://spaceduck.io)
+
+Space Duck was a project for me to build something on top of Sia, a decentralized storage technology. After running some [experiments](https://blog.spaceduck.io/load-test-wrapup/), I decided that Sia [was not yet ready](/since-quitting/#failed-project-space-duck) to support anything I had in mind, so I moved on.
+
+| Income/Expense | Amount |
+|---------|----------------------|
+| Logo design | -$250 |
+| Website development | -$1,373 |
+| Hosting | -$196 |
+| Domain | -$60 |
+| **Net profit** | -**$1,879** |
 
 ## [KetoHub](https://ketohub.io)
 
@@ -128,10 +128,10 @@ KetoHub is a project I started last year. It's aggregates keto recipes from diff
 
 | Expense | Purpose | Amount | Note |
 |------------|-----------|-----------|-------|
-| [Bench](http://refer.bench.co/pPrqq) | Bookkeeping | -$1,610 | Pricy, but I've been it's one of the few services I've used that just solves a problem so thoroughly that I don't have to think about it for more than a few hours per year. |
+| [Bench](http://refer.bench.co/pPrqq) | Bookkeeping | -$1,610 | Pricey, but it's one of the few services I've used that just solves a problem so thoroughly that I don't have to think about it for more than a few hours per year. |
 | [Travis CI](https://travis-ci.com) | Continuous integration | -$1,419 | I wish this were cheaper, but I absolutely need continuous integration. I've heard that [CircleCI](https://circleci.com/) is now the better offering and costs less, so I'll likely switch when my subscription expires. |
-| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 | Another one I wish were cheaper, but I love testing. |
-| [GitHub Pro](https://github.com/) | Source code storage | -$91 | Bought this just for the private repos, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I can stop paying this in 2019. |
+| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 | Another one I wish was cheaper, but I love testing, so I'm willing to pay for anything that improves my tests. |
+| [GitHub Pro](https://github.com/) | Source code storage | -$91 | I bought this just for the private repos, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I can stop paying this in 2019. |
 | Dev tooling | Misc | -$1,400 | I paid freelance developers to add general-purpose tooling during development. |
 | Travel, conferences, events, books | | -$634 | |
 
@@ -139,13 +139,11 @@ KetoHub is a project I started last year. It's aggregates keto recipes from diff
 
 There was one enormous hidden expense that my profit and loss chart didn't show: me.
 
-I'm my own largest expense. I paid my living costs by drawing from my personal savings. But my cost of living was quite high after I quit Google. My Manhattan apartment, located walking distance from Google, cost $3,300 per month. After private health insurance, food, and utilities, it cost $6-7k per month just to sustain myself.
+My living expenses were coming out of my personal savings, and they were rapidly eating away at them. Between my $3.3k/month apartment, private health insurance, food, and utilities, it cost $6-7k per month just to sustain myself.
 
-Those costs had a dramatic impact on my business decisions. If I expected a task to take me two weeks, that translated to an implicit cost of ~$3k. If I could hire a freelancer to perform the task for less than $3k, I'd be saving money overall. Paying a freelancer was even more attractive because I can deduct it from my taxable income.
+Those costs had a dramatic impact on my business decisions. If I had an idea for a business that would take me three months to get off the ground, that was the equivalent of investing about $20k into the idea. If I expected a task to take me two weeks, that translated to an implicit cost of ~$3k. That led me to frantically over-outsource and contributed to the [outsourcing pains](#costly-lessons-in-outsourcing) I described above. It felt crazy to spend my time doing anything because most top-tier freelancers charge less than $3k for two weeks of work.
 
-I'm a huge fan of outsourcing, and I think that people underuse it, but I was basically in a mindset of *frantic outsourcing*. At one point, I was working with four different freelance developer simultaneously on three different projects.
-
-My living expenses also made me constantly feel like my time was metered. When I imagined starting a business, I did have this romantic idea about starting it from a small seedling earning only $50 a month and slowly growing it to $100 then $175. But it felt ridiculous and foolhardy to do that while burning $7k a month in expenses.
+My living costs also made me feel discouraged about almost any project idea. When I imagined starting a business, I was charmed by the idea of starting it from a small seedling earning only $50 a month and slowly growing it to $100 then $175. But working at such small scales of revenue felt ridiculous when I was burning $7k a month in expenses.
 
 # So, I bought a house
 
@@ -158,12 +156,14 @@ So in August, I bought a modest two bedroom house in South Hadley, Massachusetts
 <figure class="half">
   {% include image.html file="house-front.jpg" alt="My house, front view" img_link=true %}
   {% include image.html file="house-angle.jpg" alt="My house, side view" img_link=true %}
-  <figcaption>My first house, purchased, in part, to slow down expenses</figcaption>
+  <figcaption>If you're worried about money, just buy a house.</figcaption>
 </figure>
 
 My living expenses here are ~$2k per month, which is low enough that I don't have to stress about them too much. It gives me the freedom to try projects like Is It Keto, which has made $1 so far. It will be a long time before it makes enough to cover my expenses, but it's cheap enough to sustain myself that I can basically eliminate my own expenses from the equation and think about whether I'm meeting my goals in terms of growing revenues and users.
 
 # I want to do this forever
+
+People have asked me if I'm still happy with my decision to quit and start my own company. The answer is definitely yes.
 
 As someone who's always been independent, I love being a solo developer. It makes a world of difference when I can wake up whenever I want and make my own choices about how to spend every hour of the day. I want this to be how I spend the rest of my life.
 
@@ -190,11 +190,11 @@ When I first started, I thought that I had so much free time that I could talk t
 
 I find it very easy to forget . In a given week or month, it's easy for me to forget what I've accomplished. And I'll get so far down into the rabbit hole of some task that I forget to question why I'm doing it or whether it's still worth doing.
 
-My way of combating these traps is to regularly reflect. To close out every work week, I write a shortform bulleted list of everything I accomplished that week. It's a nice way to close out the week, and I'm almost always surprised at how much I accomplished even in weeks I thought were slow. Every month, I post a retrospective on the Indie Hackers forums (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)). And, starting with this post, every year I write a riveting blog post about my reflections on the year.
+My way of combating these traps is to regularly reflect. To close out every work week, I write a shortform bulleted list of everything I accomplished that week. It's a nice way to close out the week, and I'm almost always surprised at how much I accomplished even in weeks I thought were slow. Every month, I post a retrospective on the Indie Hackers forums (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)) to set goals and reasses strategy. And, starting with this post, every year I write a riveting, wildly popular blog post about my reflections on the year.
 
 **Set goals**
 
-Setting specific, objective goals for the month has kept me focused. Before I decided to do this, I would just do what I thought was important, but it was very undirected. It was easy for me to waste time on something and then invent rationalizations for why I did it.
+Setting specific, objective goals has kept me focused. Before I decided to do this, I would just do what I thought was important, but it was very undirected. It was easy for me to waste time on something and then invent rationalizations for why I did it.
 
 If I set a specific goal like, "Achieve $50 in revenue for the month," it becomes easier to choose tasks because I can ask myself more straightforward questions: Will this task help me achieve that goal? Are there alternative ways I could spend my time that would achieve it more effectively?
 
@@ -202,7 +202,7 @@ If I set a specific goal like, "Achieve $50 in revenue for the month," it become
 
 Speaking of goals, I should set some for the current year. Here are my goals for year two of being a solo developer:
 
-* Earn $500/month in revenue from my businesses, collectively (averaged over the fourth quarter).
+* Achieve $500/month in revenue across my businesses.
 * Present talks at three software conferences.
 * Publish 12 blog posts.
 * Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
