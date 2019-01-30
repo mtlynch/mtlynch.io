@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 sidebar:
   nav: main
-read_date: '2018-11-15'
+read_date: 2018-11-15
 ---
 
 {% include image.html file="start-small-stay-small.jpg" alt="Start Small, Stay Small by Rob Walling"  link_url="https://amzn.to/2Se9uef" max_width="250px" class="align-left" %}
