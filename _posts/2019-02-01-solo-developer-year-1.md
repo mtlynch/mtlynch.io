@@ -25,7 +25,10 @@ excerpt: Exactly one year ago, I quit my job at Google, so it's time to reflect 
 
 On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. Today marks my first full year as a solo developer, so it's an apt time to reflect on how the decision has affected my finances, lifestyle, and happiness.
 
+{% include image.html file="cover.jpg" alt="My first year as a solo developer (cover image)" max_width="800px" img_link=true %}
+
 # How I made and spent money
+
 Here's a high-level overview of all my business revenues and expenses for 2018:
 
 {% assign fig_caption = 'Profit and loss chart via [Bench](http://refer.bench.co/pPrqq).' | markdownify | remove: "<p>" | remove: "</p>" %}
