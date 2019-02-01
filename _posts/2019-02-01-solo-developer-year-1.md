@@ -21,6 +21,9 @@ tags:
 - money
 excerpt: Exactly one year ago, I quit my job at Google, so it's time to reflect on
   how the decision has affected my finances, lifestyle, and happiness.
+header:
+  teaser: images/solo-developer-year-1/cover.jpg
+  og_image: images/solo-developer-year-1/cover.jpg
 ---
 
 On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. Today marks my first full year as a solo developer, so it's an apt time to reflect on how the decision has affected my finances, lifestyle, and happiness.
@@ -74,7 +77,7 @@ Despite my best efforts, this blog earned more than any of my other projects. It
 | Development\* | -$3,896 |
 | [Illustrations](/how-to-hire-a-cartoonist/) | -$599 |
 | [Editing](/editor/) | -$75 |
-| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | 
+| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 |
 | Hosting | -$309 |
 | Domain | -$60 |
 | **Net profit** | **-$3,835** |
