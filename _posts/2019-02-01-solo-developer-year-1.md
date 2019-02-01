@@ -26,13 +26,11 @@ header:
   og_image: images/solo-developer-year-1/cover.jpg
 ---
 
-On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. Today marks my first full year as a solo developer, so it's an apt time to reflect on how the decision has affected my finances, lifestyle, and happiness.
+{% include image.html file="cover.jpg" alt="My first year as a solo developer (cover image)" max_width="1000px" img_link=true %}
 
-{% include image.html file="cover.jpg" alt="My first year as a solo developer (cover image)" max_width="800px" img_link=true %}
+On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. It's exactly one year later, so it feels like an apt time to reflect on how that decision affected my finances, lifestyle, and happiness.
 
 # How I made and spent money
-
-Here's a high-level overview of all my business revenues and expenses for 2018:
 
 {% assign fig_caption = 'Profit and loss chart via [Bench](http://refer.bench.co/pPrqq).' | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -44,7 +42,7 @@ One way of looking at the chart is that I lost $21k in a single year. Alternate 
 
 {% include image.html file="2019-projected.jpg" alt="Projected earnings for 2019" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
-Okay, that's a bit of a "fanciful" interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending.
+Okay, that's a bit of a fanciful interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending.
 
 # Costly lessons in outsourcing
 
@@ -53,11 +51,11 @@ At first, I had a very [*Four Hour Work Week*](https://amzn.to/2WrjMXD) mentalit
 Two problems quickly arose:
 
 * It takes weeks or months until outsourcing saves time.
-  * There are upfront costs: specifying the task, hiring a freelancer, training them. These costs are higher the more complex the task.
+  * There are upfront costs to specify a task, hire a freelancer, train them, etc.
 * Outsourcing requires careful coordination.
-  * If managing work requires only 20% as much time as doing it directly, I should be able to manage five freelancers in a full work week, right? But, what if all five freelancers submit their work on the same day? It's impossible to review everything at the same time, and the freelancers don't want to sit idle for a week until I catch up.
+  * If managing work requires only 20% as much time as doing it directly, I should be able to manage five freelancers in a full work week, right? But, what if all of them submit their work on the same day? It's impossible to review everything at the same time, and the freelancers don't want to sit idle for a week until I catch up.
 
-Work quality declined because I couldn't review everything thoroughly. Sometimes I even had to throw work away because I planned poorly.
+In my struggle to give everything proper attention, there was a decline in the quality of work I accepted, and sometimes I had to throw things out entirely because of my poor planning.
 
 To address this, I reduced my outsourcing and handled more work myself. This change decreased my spending and made my business feel less chaotic. There was also a significant change in my personal life that affected my finances, but I'll cover that a bit later in this post.
 
@@ -69,7 +67,7 @@ To address this, I reduced my outsourcing and handled more work myself. This cha
 
 My most significant source of revenue in 2018 was this blog. I deliberately avoid monetizing it because I don't want ad money to influence my writing. The sole exception is that if the blog links to a product, I use an affiliate link so that the site earns referral money.
 
-Despite my best efforts, this blog earned more than any of my other projects. It had its biggest revenue year, realizing $1.2k in affiliate payments. That was the result of 981k pageviews, which most professional bloggers probably consider laughably under-monetized.
+Despite my best efforts, the blog earned more than all of my other projects combined. It had its biggest revenue year, realizing $1.2k in affiliate payments. That was the result of 981k pageviews, which most professional bloggers probably consider laughably under-monetized.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -88,7 +86,7 @@ Despite my best efforts, this blog earned more than any of my other projects. It
 
 {% include image.html file="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto website" max_width="600px" class="img-border" img_link="true" %}
 
-Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). If the food is keto-friendly, the site displays links to purchase it online and receives commission from any sales.
+Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). If the food is keto-friendly, the site displays a purchase link and receives commission from any sales.
 
 Revenues are small because I just added monetization at the end of November, but I'm hopeful that they will increase rapidly.
 
@@ -126,9 +124,9 @@ I put the project in maintenance mode in September after several months of [unsu
 
 {% include image.html file="spaceduck-screenshot.jpg" alt="Screenshot of Space Duck website" max_width="600px" class="img-border" img_link="true" %}
 
-Space Duck was my exploratory quest to build something on top of Sia, a decentralized storage technology I've [written about frequently](/tags/#ketohub).
+Space Duck was my exploratory quest to build something on top of Sia, [a decentralized storage technology](/tags/#sia).
 
-After running a [series of experiments](https://blog.spaceduck.io/load-test-wrapup/), I realized Sia [was not yet ready](/since-quitting/#failed-project-space-duck) to support any of my business ideas, so I shelved it in April.
+After running a [series of experiments](https://blog.spaceduck.io/load-test-wrapup/), I realized Sia [was not yet ready](/since-quitting/#failed-project-space-duck) to support any of my business ideas, so I shelved Space Duck in April.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -144,7 +142,7 @@ After running a [series of experiments](https://blog.spaceduck.io/load-test-wrap
 
 KetoHub is a project I [started last year](/tags/#ketohub). It aggregates keto recipes from popular blogs and makes them searchable by ingredient.
 
-I developed it on and off at the beginning of the year but put it in maintenance mode when I realized I was managing too many projects. I still have ideas for monetizing it, but each requires a considerable time investment and has a low probability of success, so it's now mainly a complement to Is It Keto.
+I developed it on and off at the beginning of the year but put it in maintenance mode when I realized I was managing too many projects. I still have ideas for monetizing it, but each requires a considerable time investment and has a low probability of success. Now, it's mainly a complement to Is It Keto.
 
 | Income/Expense | Amount |
 |---------|----------------------|
@@ -175,11 +173,11 @@ My living expenses were rapidly eating away at my personal savings. Between my $
 
 Those costs had a dramatic impact on my business decisions. Spending three months implementing a new product idea was the equivalent of investing $20k into the concept. A simple one-week task had an implicit cost of $1.5k. This led me to frantically over-outsource my work and contributed to the [contractor pains](#costly-lessons-in-outsourcing), described above.
 
-My living costs also made me feel discouraged about my project ideas. Before quitting my job, I had a charming fantasy of growing a business from a small seedling that made $50/month and slowly nurturing it to $100 then $175. Working at such small scales of revenue felt ridiculous when I was burning $7k a month in expenses.
+My living costs also made me feel discouraged about every project idea. Before quitting my job, I had a quaint fantasy of growing a business from a small seedling that made $50/month and slowly nurturing it to $100 then $175. Working at such small scales of revenue felt ridiculous when I was burning $7k a month in expenses.
 
 # So, I bought a house
 
-One day in June, I jokingly texted that I should cut my spending by moving into a cheap house near her in Western Massachusetts. She immediately called me. "Were you kidding? Because you should do that for real."
+One day in June, I jokingly texted my sister that I should cut my spending by moving into a cheap house near her in Western Massachusetts. She immediately called me. "Were you kidding? Because you should do that for real."
 
 The more I thought about it, the more sense it made. It was close to my family, I enjoyed spending time there, and the cost of living was tiny compared to New York.
 
@@ -191,7 +189,7 @@ So in August, I bought a modest two-bedroom home in South Hadley, Massachusetts.
   <figcaption>If you're worried about money, just buy a house.</figcaption>
 </figure>
 
-My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium. I no longer feel a sense of panic that everything has to happen NOW NOW NOW because my money is burning up so quickly. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
+My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium. I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
 
 # I want to do this forever
 
@@ -204,10 +202,10 @@ As someone who has always valued independence, I love being a solo developer. It
 
 # Doubts
 
-Despite this, I do still have doubts about my work. Here are the questions I frequently ask myself:
+Despite this, I do still experience doubts about my work. Here are the questions I frequently ask myself:
 
 * The things you're best at are [code reviews](/human-code-reviews-1/), [unit tests](/good-developers-bad-tests/), and refining processes for a team of developers. Aren't you wasting your best skills working by yourself?
-* One of your fatal flaws with Zestful was that you were [too afraid of sales](/shipping-too-late/#a-different-type-of-rejection). Does your new business *really* have potential? Or did you just pick a project where you don't have to do sales?
+* One of your fatal flaws with Zestful was that you were [too afraid of sales](/shipping-too-late/#a-different-type-of-rejection). Does your new business *really* have potential? Or did you just pick a project where you didn't have to do sales?
 * Your job at Google used to impress people. Now, when people ask about your work, you awkwardly tell them, "Um, it's a website where you type a food, and it tells you whether it's keto..." Shouldn't you do something that sounds more impressive?
 
 At the root of these doubts is the fact that my businesses haven't yet succeeded. However, it's comforting to remember that most successful entrepreneurs [spent years flailing around before they found something that worked](https://twitter.com/shpigford/status/1033032915175858176?lang=en).
@@ -222,9 +220,9 @@ I now limit my focus to one business venture at a time and one blog post per mon
 
 **Regularly reflect**
 
-At the end of each week, I spend 30-60 minutes writing down everything I accomplished. This exercise always makes me realize that I'm more than I feel. Often, I'll reach Friday afternoon thinking that I burned an entire week chasing down a single bug only to realize the bugfix took just two days. And then I'll remember that I shipped several new features but forgot about them because they felt like ages ago.
+At the end of each week, I spend 30-60 minutes writing down everything I accomplished. This exercise always makes me realize that I'm more productive than I feel. Often, I'll reach Friday afternoon thinking that I burned an entire week chasing down a single bug only to realize the bugfix took just two days. And then I'll remember that I shipped several new features but forgot about them because they felt like ages ago.
 
-This works on a monthly level as well. At the beginning of each month, I publish retrospectives in which I reassess my strategy and set objectives (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)).
+This works on a monthly level as well. At the beginning of each month, I publish retrospectives in which I reassess my strategy and set objectives for the coming month (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)).
 
 Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (***Note**: wild popularity still pending*).
 
