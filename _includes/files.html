@@ -113,7 +113,9 @@
   >1: Multiple files matched. This can happen when more than 1 file in the
      page's folder has identical "title:" yml frontmatter values.
 {% endcomment %}
-{% if file_count == 0 %}
+{% if file_count == 1 %}
+  {% comment %} Found exactly one file. No exception. {% endcomment %}
+{% elsif file_count == 0 %}
   {% comment %}
     If zero files were found in the page's folder that match the file embed
     title, then raise an error.
@@ -130,5 +132,10 @@
   {{ "Multiple file includes with the same title, "
     | append: include.title
     | append: ", have been found."
+    | raise_exception: "warning" }}
+{% else %}
+  {% comment %} An unknown exception occurred. {% endcomment %}
+  {{ "An unknown exception has occurred on, "
+    | append: include.title
     | raise_exception: "warning" }}
 {% endif %}
