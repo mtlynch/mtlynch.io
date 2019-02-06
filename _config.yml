@@ -22,6 +22,10 @@ collections:
     title: book_reports
     output: true
     permalink: /book-reports/:path/
+  retrospectives:
+    title: retrospectives
+    output: true
+    permalink: /retrospectives/:year/:month/
 defaults:
 - scope:
     path: ''
