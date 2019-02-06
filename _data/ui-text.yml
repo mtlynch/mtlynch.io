@@ -44,6 +44,8 @@ en: &DEFAULT_EN
   email_form_subheader       : "Subscribe to get my latest articles by email."
   email_form_email_label     : "Email address"
   email_form_btn_submit      : "Subscribe"
+  book_report_rating         : "My rating:"
+  book_report_rating_limit   : "10"
 en-US:
   <<: *DEFAULT_EN
 en-CA:

@@ -1,0 +1,14 @@
+---
+header:
+  type: "Dictionary"
+  key: "teaser"
+  key-type: "String"
+config:
+  path: _book_reports
+  ignore:
+  - README.md
+  - ..
+  - .
+  - .DS_Store
+  optional: ['']
+---

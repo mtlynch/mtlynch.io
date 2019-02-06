@@ -37,6 +37,26 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% comment %}
+          If the page is a book report, then add the book report intro section.
+        {% endcomment %}
+        {% if page.collection == "book_reports" %}
+          {% comment %}
+            If the page's og_image frontmatter value exists use that for the
+            report image, otherwise fallback to the teaser value.
+          {% endcomment %}
+          {%- assign book_report_image = page.header.og_image | default: page.header.teaser -%}
+          <p class="book-report-intro">
+            <a href="{{ page.report_intro.link_url }}">
+              <img src="{{ book_report_image }}" alt="{{ page.title }}" class="align-left">
+            </a>
+          </p>
+          <ul>
+            <li>{{ site.data.ui-text[site.locale].book_report_rating | default: "My rating:" }} <strong>{{ page.report_intro.score }}</strong> / {{ site.data.ui-text[site.locale].book_report_rating_limit | default: "My rating:" }}</li>
+            <li><a href="{{ page.report_intro.link_url }}">{{ page.report_intro.link_title }}</a></li>
+          </ul>
+        {% endif %}
+
         {{ content }}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
