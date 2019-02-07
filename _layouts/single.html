@@ -37,6 +37,13 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% comment %}
+          If the page is a book report, then add the book report intro section.
+        {% endcomment %}
+        {% if page.collection == "book_reports" %}
+          {% include book-report-introduction.html %}
+        {% endif %}
+
         {{ content }}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
