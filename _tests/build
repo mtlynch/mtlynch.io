@@ -75,5 +75,5 @@ if [ "${1-}" = "--quick" ]; then
   echo "Skipping Amazon link check..."
 else
   echo "Checking Amazon links..."
-  ./check_amazon_links
+  ./_tests/check_amazon_links
 fi
