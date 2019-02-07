@@ -60,7 +60,7 @@ Revenues and clicks increased, but my experience with Amazon is that it's bursty
 
 ## Visitor Stats
 
-{% include image.html file="ga-2019-01-trailing-12.jpg" alt="Google Analytics - Jan. 2019"  max_width="800px" img_link="true" fig_caption="User sessions - January, 2019" %}
+{% include image.html file="ga-2019-01-trailing-12.jpg" alt="Google Analytics - Jan. 2019"  max_width="800px" img_link="true" fig_caption="User sessions - February 2018 through January 2019" %}
 
 
 | Metric         | December 2018 | January 2019 | Change |
@@ -104,25 +104,29 @@ When I created the site, I expected to be able to get costs down to $5-10 per ar
 
 # My Twitter Revelation
 
-I had a flash of insight about Is It Keto on social media this week: people will follow Is It Keto on Twitter just to see which new foods we're writing about.
+My biggest flash of insight this month was that people will follow Is It Keto on Twitter just to see which new foods we're writing about.
 
-It sounds obvious because that's how almost every business uses Twitter. But I was locked in a narrow view because I had previously found almost all of my users in keto Facebook groups where just posting arbitrary articles would be considered spam. Instead, I had to search around for people asking whether a food is keto and I'd respond by linking them to Is It Keto (or, commonly, quickly writing the article and then sharing the link).
+It sounds obvious because that's how almost every business uses Twitter. But I was locked in a narrow view because I had previously found almost all of my users in keto Facebook groups where just posting arbitrary articles would be considered spam. Instead, I had to search around for people asking whether a food is keto and I'd respond by linking them to Is It Keto (or, more commonly, quickly writing the article and then sharing the link).
 
 But on Twitter, users will follow Is It Keto just to see what new foods I post. That opens up a whole world of possibility because I can guide users toward more profitable pages. For example, [lettuce is keto](https://isitketo.org/lettuce) but Is It Keto can't show a relevant affiliate link on that page because nobody buys their lettuce from Amazon (except for [a few dissatisfied customers](https://amzn.to/2t6Fvqv)). So even if I can answer someone's question about lettuce by linking them to Is It Keto, they'd have to visit the lettuce page, then visit *another* page that has an affiliate link, *then* click the affiliate link, *then* buy something. It's too long and tenuous a chain. Now Is It Keto mostly tweets to share analysis of keto-friendly products that users can buy through Amazon.
 
-What's more, if a product is keto-friendly and I @mention the brand in my tweet, they'll often amplify it by retweeting or liking it. One of the biggest tweets of the month was this one about Sparkling Ice, which the company retweeted to their 38,000 followers:
+What's more, if a product is keto-friendly and I @mention the brand in my tweet, that company often amplifies it by retweeting or liking it. One of the biggest tweets of the month was this one about Sparkling Ice, which the company retweeted to their 38,000 followers:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Drinks by <a href="https://twitter.com/SparklingIce?ref_src=twsrc%5Etfw">@SparklingIce</a> contain no sugars or carbs, but are they keto-friendly? <a href="https://twitter.com/hashtag/keto?src=hash&amp;ref_src=twsrc%5Etfw">#keto</a> <a href="https://t.co/xdC9f2dpO0">https://t.co/xdC9f2dpO0</a> <a href="https://t.co/ZfkZsG8ue9">pic.twitter.com/ZfkZsG8ue9</a></p>&mdash; Is It Keto? (@HeyIsItKeto) <a href="https://twitter.com/HeyIsItKeto/status/1087772703791202306?ref_src=twsrc%5Etfw">January 22, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Outsourcing Twitter
 
-Once I realized that people would engage with Is It Keto's tweets, I needed followers. And for that, people needed to notice the account. So, I did the normal Twitter thing and followed people who were following other Twitter accounts and engaged in discussions with the `#keto` hashtag. The discussion isn't very in-depth because most people are just sharing weight-loss progress or pictures of food, so I'd respond with some positive encouragement.
+Once I realized that people would engage with Is It Keto's tweets, I needed followers. And for that, people needed to notice the account.
+
+I did the normal Twitter thing and followed people who were following other keto Twitter accounts and engaged in discussions with the `#keto` hashtag. The discussions weren't very in-depth because most people are just sharing weight-loss progress or pictures of food, so I'd respond with some positive encouragement.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Congratulations, Josh! That’s awesome progress</p>&mdash; Is It Keto? (@HeyIsItKeto) <a href="https://twitter.com/HeyIsItKeto/status/1093207465389363200?ref_src=twsrc%5Etfw">February 6, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I soon realized that all the stuff I was doing was pretty easy, so I wrote a guide that just described exactly what I was doing to find followers (i.e., searching for the hashtag, complimenting people on their progress). I posted the job on Upwork and within a day found someone who took it over for $4/hr. There were some mistakes at first, but now it's on auto-pilot. The Twitter contractor attracts about 35 followers per week for a cost of only $30-35 in weekly billing.
+I soon realized that all the stuff I was doing was pretty easy, so I wrote a guide that just described exactly what I was doing to find followers (i.e., searching for the hashtag, complimenting people on their progress).
+
+I posted the job on Upwork and, within a day, found someone who took it over for $4/hr. There were some mistakes at first, but now it's on auto-pilot. The Twitter contractor attracts about 35 followers per week for a cost of only $30-35 in weekly billing.
 
 # Wrap Up
 
