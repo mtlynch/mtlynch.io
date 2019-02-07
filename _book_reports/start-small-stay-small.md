@@ -11,7 +11,7 @@ header:
 report_intro: 
   score: 6
   link_title: Amazon link
-  link_url: https://amzn.to/2Se9uef
+  link_url: https://amzn.to/2HZT8lA
 ---
 
 I wish that I had found this book nine years ago. It taught me a great deal about choosing the right product to build and the advantages of targeting small niches. The author makes compelling points about the importance of marketing and small founders' common pitfall of treating it as an afterthought.
