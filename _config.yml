@@ -64,27 +64,27 @@ name: Michael Lynch
 description: Michael Lynch's tech blog.
 url:
 theme: minimal-mistakes-jekyll
-baseurl: 
-repository: 
-teaser: 
+baseurl:
+repository:
+teaser:
 words_per_minute: 200
 comments:
   provider:
   disqus:
     shortname:
   discourse:
-    server: 
+    server:
   facebook:
-    appid: 
-    num_posts: 
-    colorscheme: 
+    appid:
+    num_posts:
+    colorscheme:
 staticman:
   allowedFields:
   - name
   - email
   - url
   - message
-  branch: 
+  branch:
   commitMessage: New comment.
   filename: comment-{@timestamp}
   format: yml
@@ -102,22 +102,22 @@ staticman:
       options:
         format: iso8601
 atom_feed:
-  path: 
-google_site_verification: 
-bing_site_verification: 
-alexa_site_verification: 
-yandex_site_verification: 
+  path:
+google_site_verification:
+bing_site_verification:
+alexa_site_verification:
+yandex_site_verification:
 twitter:
   username: deliberatecoder
 facebook:
-  username: 
-  app_id: 
-  publisher: 
-og_image: 
+  username:
+  app_id:
+  publisher:
+og_image:
 social:
-  type: 
-  name: 
-  links: 
+  type:
+  name:
+  links:
 analytics:
   provider:
   google:
@@ -128,30 +128,30 @@ author:
   bio: By day, a simple software engineer. By night, also a software engineer.
   location: South Hadley, MA
   home: /
-  email: 
-  uri: 
-  bitbucket: 
-  codepen: 
-  dribbble: 
-  flickr: 
-  facebook: 
-  foursquare: 
+  email:
+  uri:
+  bitbucket:
+  codepen:
+  dribbble:
+  flickr:
+  facebook:
+  foursquare:
   github: mtlynch
-  google_plus: 
-  keybase: 
-  instagram: 
-  lastfm: 
-  linkedin: 
-  pinterest: 
-  soundcloud: 
-  stackoverflow: 
-  steam: 
+  google_plus:
+  keybase:
+  instagram:
+  lastfm:
+  linkedin:
+  pinterest:
+  soundcloud:
+  stackoverflow:
+  steam:
   tumblr:
   twitter: deliberatecoder
-  vine: 
-  weibo: 
-  xing: 
-  youtube: 
+  vine:
+  weibo:
+  xing:
+  youtube:
 include:
 - ".htaccess"
 - _pages
@@ -250,11 +250,11 @@ responsive_image:
 media_renditions:
   article:
     sizes:
-      - "(min-width: 64em) 83vw" 
+      - "(min-width: 64em) 83vw"
       - "100vw"
   half:
     sizes:
-      - "(min-width: 64em) calc(50% - 0.5em)vw" 
+      - "(min-width: 64em) calc(50% - 0.5em)vw"
       - "100vw"
   third:
     sizes:

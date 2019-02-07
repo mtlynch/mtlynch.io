@@ -11,6 +11,19 @@ BUNDLE_GEMFILE=Gemfile bundle exec jekyll yml-test
 # Execute Markdown Linter
 mdl _posts _pages --style _linter/markdown-linter-style.rb
 
+# Check for trailing whitespace
+if egrep \
+  "\s$" \
+  --line-number \
+  --binary-files=without-match \
+  --dereference-recursive \
+  --exclude-dir={.git,_plugins,_site,assets,node_modules} \
+  ./ ; then
+  echo "ERROR: Found trailing whitespace";
+  exit 1;
+fi
+
+
 # Build production site.
 BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
   --config _config.yml,_config_prod.yml
