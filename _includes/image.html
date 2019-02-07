@@ -32,8 +32,8 @@
 {% comment %}
 <!-- determine the full path of the image -->
 {% endcomment %}
-{% assign img_path = site.responsive_image.base_path 
-   | append: page.url 
+{% assign img_path = site.responsive_image.base_path
+   | append: page.url
    | append: include.file %}
 
 {% comment %}

@@ -205,7 +205,7 @@ Developers need not verify every change on every possible OS/browser combination
 ### For non-yml files
 
 1. Place the file into the `_files` directory.
-1. Add yaml frontmatter to the file with a title key, for example: 
+1. Add yaml frontmatter to the file with a title key, for example:
    ```yaml
    ---
    title: "filename.extension"
@@ -220,7 +220,7 @@ Developers need not verify every change on every possible OS/browser combination
 ### For yml files
 
 1. Place the yml file into the `_ymls` directory with no file extension.
-2. Add yaml frontmatter to the file with a title key, for example: 
+2. Add yaml frontmatter to the file with a title key, for example:
     ```yaml
     ---
     title: "filename.yml"

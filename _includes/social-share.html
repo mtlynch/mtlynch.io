@@ -15,9 +15,9 @@
     <h4 class="page__share-title">{{ site.data.ui-text[site.locale].discuss_on_label | default: "Discuss on" }}</h4>
 
     {% for discuss in page.discuss_urls %}
-    
+
       <a href="{{ discuss[1] }}" class="btn btn-discuss btn--{{ discuss[0] | downcase }}" title="{{ site.data.ui-text[site.locale].discuss_on_label | default: 'Discuss on' }} {{ discuss[0] | capitalize }}"><i class="fab fa-fw fa-{{ discuss[0] | replace: '_', '-' | downcase }}" aria-hidden="true"></i><span> {{ discuss[0] | replace: '_', ' ' }}</span></a>
-    
+
     {% endfor %}
   {% endif %}
 
