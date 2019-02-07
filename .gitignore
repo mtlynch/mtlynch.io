@@ -10,6 +10,7 @@ codekit-config.json
 node_modules
 npm-debug.log*
 *.swp
+*.swo
 _*preview*
 _update_date.py
 assets/js/main.min.js

@@ -4,6 +4,8 @@
 set -e
 # Echo commands to console.
 set -x
+# Exit on unset variable.
+set -u
 
 # Execute Frontmatter Tests
 BUNDLE_GEMFILE=Gemfile bundle exec jekyll yml-test
@@ -29,7 +31,7 @@ BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
 
 # Skips validation checks that take a long time
 htmlproofer_args_extra=""
-if [ "$1" = "--quick" ]; then
+if [ "${1-}" = "--quick" ]; then
   htmlproofer_args_extra="--disable-external"
 else
   htmlproofer_args_extra="--check-external-hash"
@@ -66,4 +68,12 @@ fi
 if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
   echo "ERROR: Large Twitter cards didn't appear in prod build!";
   exit 1;
+fi
+
+# Check that Amazon links have the right affiliate ID.
+if [ "${1-}" = "--quick" ]; then
+  echo "Skipping Amazon link check..."
+else
+  echo "Checking Amazon links..."
+  ./_tests/check_amazon_links
 fi
