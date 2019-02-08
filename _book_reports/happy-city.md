@@ -8,10 +8,8 @@ hide_signup: true
 read_date: 2018-08-06
 header:
   teaser: /images/book-reports/happy-city/happy-city.jpg
-  og_image: ""
-report_intro: 
+report_intro:
   score: 8
-  link_title: Amazon link
   link_url: https://amzn.to/2PGxPoU
 ---
 

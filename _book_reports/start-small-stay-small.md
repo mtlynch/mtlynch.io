@@ -7,10 +7,8 @@ sidebar:
 read_date: 2018-11-15
 header:
   teaser: "/images/book-reports/start-small-stay-small/start-small-stay-small.jpg"
-  og_image: ""
-report_intro: 
+report_intro:
   score: 6
-  link_title: Amazon link
   link_url: https://amzn.to/2HZT8lA
 ---
 

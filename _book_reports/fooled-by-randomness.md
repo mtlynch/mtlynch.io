@@ -7,10 +7,8 @@ sidebar:
 read_date: 2018-09-04
 header:
   teaser: /images/book-reports/fooled-by-randomness/fooled-by-randomness.jpg
-  og_image: ""
-report_intro: 
+report_intro:
   score: 5
-  link_title: Amazon link
   link_url: https://amzn.to/2x2sPT3
 ---
 
