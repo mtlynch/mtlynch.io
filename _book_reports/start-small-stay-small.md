@@ -5,12 +5,12 @@ author_profile: true
 sidebar:
   nav: main
 read_date: 2018-11-15
+header:
+  teaser: "/images/book-reports/start-small-stay-small/start-small-stay-small.jpg"
+report_intro:
+  score: 6
+  link_url: https://amzn.to/2HZT8lA
 ---
-
-{% include image.html file="start-small-stay-small.jpg" alt="Start Small, Stay Small by Rob Walling"  link_url="https://amzn.to/2HZT8lA" max_width="250px" class="align-left" %}
-
-* My rating: **6** / 10
-* [Amazon link](https://amzn.to/2HZT8lA)
 
 I wish that I had found this book nine years ago. It taught me a great deal about choosing the right product to build and the advantages of targeting small niches. The author makes compelling points about the importance of marketing and small founders' common pitfall of treating it as an afterthought.
 

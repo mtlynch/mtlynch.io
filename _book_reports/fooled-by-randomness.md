@@ -5,12 +5,12 @@ author_profile: true
 sidebar:
   nav: main
 read_date: 2018-09-04
+header:
+  teaser: /images/book-reports/fooled-by-randomness/fooled-by-randomness.jpg
+report_intro:
+  score: 5
+  link_url: https://amzn.to/2x2sPT3
 ---
-
-{% include image.html file="fooled-by-randomness.jpg" alt="Fooled by Randomness by Nassim Nicholas Taleb"  link_url="https://amzn.to/2x2sPT3" max_width="250px" class="align-left" %}
-
-* My rating: **5** / 10
-* [Amazon link](https://amzn.to/2x2sPT3)
 
 The book contains many interesting examples of common biases and logical fallacies, but it's buried in a lot of bluster and fluff about how smart the author is. While it was likely groundbreaking when it was published in 2004, its ideas have since permeated into the mainstream. Reading it in 2018, the ideas feel neither novel nor original. [*Thinking Fast and Slow*](https://amzn.to/2oXDdaZ) covers the same material with more depth and better writing.
 

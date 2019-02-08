@@ -6,12 +6,12 @@ sidebar:
   nav: main
 hide_signup: true
 read_date: 2018-08-06
+header:
+  teaser: /images/book-reports/happy-city/happy-city.jpg
+report_intro:
+  score: 8
+  link_url: https://amzn.to/2PGxPoU
 ---
-
-{% include image.html file="happy-city.jpg" alt="Happy City by Charles Montgomery"  link_url="https://amzn.to/2PGxPoU" max_width="250px" class="align-left" %}
-
-* My rating: **8** / 10
-* [Amazon link](https://amzn.to/2PGxPoU)
 
 Given how much urban design affects our lives, it's surprising how little we think about and participate in it. This book was eye-opening in terms of the way I look at cities and how its inhabitants interact with them.
 
