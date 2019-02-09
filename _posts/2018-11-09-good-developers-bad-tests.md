@@ -9,6 +9,8 @@ related: true
 sidebar:
   nav: main
 classes: wide
+tags:
+- testing
 excerpt: The standard techniques of good development can lead you astray if you don't
   adjust them for unit tests.
 header:
