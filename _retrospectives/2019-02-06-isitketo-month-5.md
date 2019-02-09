@@ -1,12 +1,12 @@
 ---
 title: 'Is It Keto: Month 5'
-subtitle: High Growth but Not Enough
 layout: single
 author_profile: true
 sidebar:
   nav: main
 hide_signup: true
 classes: wide
+excerpt: It's working, but not well enough
 ---
 
 # One-Line Summary
