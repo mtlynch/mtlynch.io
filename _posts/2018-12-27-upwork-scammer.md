@@ -208,5 +208,3 @@ If a freelancer you hired ever happens to check messages from you while billing 
 This experience has shown me some of Upwork's warts. On the one hand, they missed many red flags that I expect them to catch and did little to prevent continued abuse. On the other hand, it does say something that this is the first time I've hired a fraudster in all my years on Upwork.
 
 While I've never been in love with Upwork, alternative platforms like Fiverr or Freelancer.com have been even worse for me. I'll continue using Upwork, but this episode has given me another reason to be conservative about granting freelancers access to private data.
-
-{% include ads.html title="isitketo_writers" %}
