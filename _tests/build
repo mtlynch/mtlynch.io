@@ -56,12 +56,7 @@ bundle exec htmlproofer ./_site \
   --url-ignore "/vimeo.com/,/upwork.com/" \
   "$htmlproofer_args_extra"
 
-# Make sure the Google Analytics token appears in the prod build.
-UA_TOKEN="UA-78473158-1"
-if ! grep "${UA_TOKEN}" _site/ -R; then
-  echo "ERROR: Google Analytics token didn't appear in prod build!";
-  exit 1;
-fi
+_tests/check-google-analytics-token
 
 # Make sure large twitter cards are being generated.
 if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
