@@ -10,8 +10,7 @@ set -u
 # Execute Frontmatter Tests
 BUNDLE_GEMFILE=Gemfile bundle exec jekyll yml-test
 
-# Execute Markdown Linter
-mdl _posts _pages --style _linter/markdown-linter-style.rb
+_tests/lint-markdown
 
 # Check for trailing whitespace
 if egrep \
