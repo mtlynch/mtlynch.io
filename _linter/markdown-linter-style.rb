@@ -28,3 +28,7 @@ exclude_rule 'MD041'
 
 ## MD034 - Bare URLs without angle brackets or inside fenced code block
 exclude_rule 'MD034'
+
+# Conflicts with code blocks embedded in lists.
+## MD046 Code block style
+exclude_rule 'MD046'
