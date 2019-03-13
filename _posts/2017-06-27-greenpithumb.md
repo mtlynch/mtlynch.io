@@ -269,7 +269,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 
 ## GreenPiThumb essentials
 
-* [Raspberry Pi 3 Model B](http://amzn.to/2nTReZk)
+* [Raspberry Pi 3 Model B](https://amzn.to/2Tz27iW)
 * [12V water pump](http://amzn.to/2p90wk8)
 * [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw)
 * [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC)
