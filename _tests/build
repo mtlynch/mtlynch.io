@@ -11,9 +11,7 @@ _tests/lint-frontmatter
 _tests/lint-markdown
 _tests/check-trailing-whitespace
 
-# Build production site.
-BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
-  --config _config.yml,_config_prod.yml
+./_build_prod_site
 
 _tests/check-google-analytics-token
 _tests/check-twitter-cards
