@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Uses Markdown Linter to find issues in markdown files.
+
 # Echo commands to console.
 set -x
 # Exit on first failing command.
@@ -7,8 +9,9 @@ set -e
 # Exit on unset variable.
 set -u
 
-# Execute Markdown Linter
-mdl \
-  _posts \
-  _pages \
+bundler exec mdl \
+  $(find -name "*.md" \
+      -not -path "./_vendor/*" \
+      -not -path "./node_modules/*" \
+      -not -path "./_sections/ads/*") \
   --style _linter/markdown-linter-style.rb

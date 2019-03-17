@@ -36,10 +36,10 @@ Unfortunately, much of the content aged poorly. Published in 2010, Walling inten
   * e.g., a site that drop-ships beach towels
   * There's nothing wrong with creating sites just because they'll make a little money, but the strategy of building a product to the bare minimum of functionality and then collecting revenue didn't really resonate with me.
 * Advice about outsourcing didn't match my experience
-   * I felt like the author exaggerates how much time you save from freelance developers / virtual assistants.
-   * The book doesn't address how difficult and time-consuming it is to spin up a new freelancer and teach them the work.
-   * At one point, the book suggests you can pay $3k to have an overseas developer create an entire web application ("200 hours @ $15/hr for a Senior PHP Developer").
-     * This felt *extremely* unrealistic. I feel like a more plausible wage for a real senior-level PHP developer is at least $70/hr.
+  * I felt like the author exaggerates how much time you save from freelance developers / virtual assistants.
+  * The book doesn't address how difficult and time-consuming it is to spin up a new freelancer and teach them the work.
+  * At one point, the book suggests you can pay $3k to have an overseas developer create an entire web application ("200 hours @ $15/hr for a Senior PHP Developer").
+    * This felt *extremely* unrealistic. I feel like a more plausible wage for a real senior-level PHP developer is at least $70/hr.
 
 # Key Takeaways
 

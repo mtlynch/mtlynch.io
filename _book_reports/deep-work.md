@@ -35,7 +35,7 @@ This was my favorite book of 2018. It profoundly impacted the way I approach my 
 # Key Takeaways
 
 > Deep Work: Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
-
+>
 > Shallow Work: Noncognitively demanding, logistical-style tasks, often performed while distracted. These efforts tend to not create much new value in the world and are easy to replicate.
 
 * Emails are a common form of shallow work.

@@ -21,7 +21,6 @@ New code should adhere to the appropriate Google Style guide for the given langu
 * Limit lines to a maximum of 80 columns in length.
   * It is acceptable to exceed 80 columns if there is no way to break up the line, but developers should observe the 80 column limit where possible.
 
-
 #### Whitespace
 
 ##### Tags
@@ -139,7 +138,6 @@ The site should render properly on all of the following operating systems (lates
 * OS X
 * Linux (any flavor)
 
-
 The site should render properly on all the following browsers:
 
 * Chrome
@@ -220,13 +218,13 @@ Developers need not verify every change on every possible OS/browser combination
 ### For yml files
 
 1. Place the yml file into the `_ymls` directory with no file extension.
-2. Add yaml frontmatter to the file with a title key, for example:
+1. Add yaml frontmatter to the file with a title key, for example:
     ```yaml
     ---
     title: "filename.yml"
     ---
    ```
-3. In the post, use the below syntax to include the yml file.
+1. In the post, use the below syntax to include the yml file.
     ```
     {% include files.html title="filename.yml" language="yml" %}
     ```

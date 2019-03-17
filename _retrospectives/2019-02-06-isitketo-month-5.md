@@ -62,7 +62,6 @@ Revenues and clicks increased, but my experience with Amazon is that it's bursty
 
 {% include image.html file="ga-2019-01-trailing-12.jpg" alt="Google Analytics - Jan. 2019"  max_width="800px" img_link="true" fig_caption="User sessions - February 2018 through January 2019" %}
 
-
 | Metric         | December 2018 | January 2019 | Change |
 |----------------|---------------|--------------|--------|
 | Unique Visitors               | 1,100         | 2,608  | <font color="green">+1,508 (+137%)</font> |
