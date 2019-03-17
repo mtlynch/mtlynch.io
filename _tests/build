@@ -17,33 +17,8 @@ _tests/check-trailing-whitespace
 BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
   --config _config.yml,_config_prod.yml
 
-# Skips validation checks that take a long time
-htmlproofer_args_extra=""
-if [ "${1-}" = "--quick" ]; then
-  htmlproofer_args_extra="--disable-external"
-else
-  htmlproofer_args_extra="--check-external-hash"
-fi
-
-# Run HTMLProofer
-bundle exec htmlproofer ./_site \
-  --only-4xx \
-  --check-favicon \
-  --check-html \
-  --check-opengraph \
-  --allow-hash-href \
-  --empty-alt-ignore \
-  `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
-  `# build rather than the production URLs. At the time this check runs, the` \
-  `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
-  `# mtlynch.io server to verify that URLs are present.` \
-  --url-swap "https\://mtlynch.io/:/" \
-  `# Ignore vimeo and upwork URLs because they get 403 errors from Travis` \
-  `# intermittently.` \
-  --url-ignore "/vimeo.com/,/upwork.com/" \
-  "$htmlproofer_args_extra"
-
 _tests/check-google-analytics-token
+_tests/lint-html "$@"
 
 # Make sure large twitter cards are being generated.
 if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
