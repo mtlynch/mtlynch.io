@@ -16,11 +16,4 @@ _tests/check-trailing-whitespace
 _tests/check-google-analytics-token
 _tests/check-twitter-cards
 _tests/lint-html "$@"
-
-# Check that Amazon links have the right affiliate ID.
-if [ "${1-}" = "--quick" ]; then
-  echo "Skipping Amazon link check..."
-else
-  echo "Checking Amazon links..."
-  ./_tests/check_amazon_links
-fi
+_tests/check_amazon_links "$@"
