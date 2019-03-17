@@ -1,0 +1,127 @@
+defaults: &defaults
+  working_directory: ~/repo
+version: 2.1
+jobs:
+  check-whitespace:
+    <<: *defaults
+    docker:
+      - image: debian:jessie-20190228-slim
+    steps:
+      - checkout
+      - run:
+          name: Check for trailing whitespace
+          command: _tests/check-trailing-whitespace
+  build:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.4.4
+    environment:
+      # Keep in sync with save_cache path.
+      BUNDLE_PATH: ~/repo/_vendor/bundle
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
+            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - run:
+          name: Lint frontmatter
+          command: _tests/lint-frontmatter
+      - run:
+          name: Lint Markdown
+          command: _tests/lint-markdown
+      - save_cache:
+          key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            # Keep in sync with BUNDLE_PATH.
+            - ~/repo/_vendor/bundle
+      - run:
+          name: Build prod site
+          command: ./_build_prod_site
+      - run:
+          name: Lint HTML
+          command: _tests/lint-html
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _tests
+            - _site
+            - firebase.json
+            - .firebaserc
+  check-google-analytics-token:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.4.4
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check presence of Google Analytics token
+          command: _tests/check-google-analytics-token
+  check-twitter-cards:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.4.4
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check presence of Twitter cards in production build
+          command: _tests/check-twitter-cards
+  check-amazon-links:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.4.4
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check Amazon links
+          command: _tests/check-amazon-links
+  deploy:
+    <<: *defaults
+    docker:
+      - image: circleci/node:8.12
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install firebase-tools
+          command: npm install firebase-tools
+      - run:
+          name: Deploy to firebase
+          command: |
+            ./node_modules/.bin/firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - check-whitespace
+      - build
+      - check-google-analytics-token:
+          requires:
+            - build
+      - check-twitter-cards:
+          requires:
+            - build
+      - check-amazon-links:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - build
+            - check-google-analytics-token
+            - check-twitter-cards
+            - check-amazon-links
+          filters:
+            branches:
+              only: master
