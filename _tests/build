@@ -7,9 +7,7 @@ set -x
 # Exit on unset variable.
 set -u
 
-# Execute Frontmatter Tests
-BUNDLE_GEMFILE=Gemfile bundle exec jekyll yml-test
-
+_tests/lint-frontmatter
 _tests/lint-markdown
 _tests/check-trailing-whitespace
 
