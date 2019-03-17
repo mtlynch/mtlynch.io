@@ -16,4 +16,4 @@ _tests/check-trailing-whitespace
 _tests/check-google-analytics-token
 _tests/check-twitter-cards
 _tests/lint-html "$@"
-_tests/check_amazon_links "$@"
+_tests/check-amazon-links "$@"
