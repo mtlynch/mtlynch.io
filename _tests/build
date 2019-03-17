@@ -16,13 +16,8 @@ BUNDLE_GEMFILE=Gemfile JEKYLL_ENV=production bundle exec jekyll build \
   --config _config.yml,_config_prod.yml
 
 _tests/check-google-analytics-token
+_tests/check-twitter-cards
 _tests/lint-html "$@"
-
-# Make sure large twitter cards are being generated.
-if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
-  echo "ERROR: Large Twitter cards didn't appear in prod build!";
-  exit 1;
-fi
 
 # Check that Amazon links have the right affiliate ID.
 if [ "${1-}" = "--quick" ]; then
