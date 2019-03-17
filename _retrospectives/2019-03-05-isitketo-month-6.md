@@ -72,7 +72,6 @@ In any case, even an optimistic revenue of $30 is still far below my target of $
 
 {% include image.html file="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot"  max_width="800px" img_link="true" fig_caption="User sessions - March 2018 through February 2019" %}
 
-
 | Metric         | January 2019 | February 2019 | Change |
 |----------------|---------------|--------------|--------|
 | Unique Visitors               | 2,608 | 2,687          | <font color="green">+79 (+3%)</font> |
@@ -193,8 +192,9 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 
 * After taking into account the time I spend editing and communicating with writers, I'm not saving time by outsourcing content writing.
   * I likely still am saving mental energy, which is always a precious resource.
+
 * I can outsource Twitter promotion tasks cleanly and efficiently.
-	 * Still, Twitter's not earning me a return on investment, so I'm going to scale down.
+  * Still, Twitter's not earning me a return on investment, so I'm going to scale down.
 
 ## Goals for March
 
