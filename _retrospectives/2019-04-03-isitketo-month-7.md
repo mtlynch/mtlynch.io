@@ -170,7 +170,7 @@ These are my takeaways from March, but I'll probably do a full-length blog post 
 
 * When it comes to data visualization, start simple.
   * It's easier to generate something common like a line chart or bar graph than something exotic like a bubble cloud.
-  * Simple charts prevent you from getting mired too deeply in the implementation itself.
+  * Simple charts prevent you from going too far down the rabbit hole of fiddling with visualization code.
 * [D3.js](https://d3js.org/) is a powerful visualization library, but it's too complex for quick, experimental visualizations.
   * I had a good experience with NVD3, but their fork situation is confusing. [nvd3/nvd3](https://github.com/nvd3/nvd3) is the most stable repo, but their [documentation page is broken](https://github.com/nvd3/nvd3/issues/6). The nvd3-community fork is out of date, but [their documentation works](https://nvd3-community.github.io/nvd3/).
   * I've heard good things about the more actively maintained [Vega library](https://vega.github.io/vega/), but haven't tried it.
