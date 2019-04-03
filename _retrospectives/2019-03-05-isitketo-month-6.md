@@ -94,7 +94,7 @@ Referrals from Facebook shrank to almost nothing, as I stopped promoting the sit
 
 ## SEO Stats
 
-{% include image.html file="google-search-console.jpg" alt="Google Search Console screenshot"  max_width="800px" img_link="true" fig_caption="Google Search Console - January 2019" %}
+{% include image.html file="google-search-console.jpg" alt="Google Search Console screenshot"  max_width="800px" img_link="true" fig_caption="Google Search Console - Dec. 2018 to Feb. 2019" %}
 
 | Metric         | January 2019 | February 2019 | Change |
 |----------------|---------------|--------------|--------|
