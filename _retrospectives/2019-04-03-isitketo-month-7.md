@@ -15,8 +15,8 @@ A record month, but it's time to give up.
 
 # Highlights
 
-* [Is It Keto](https://isitketo.org)'s visits reached a record high at 11k pageviews.
-* Revenues reached a record high at $40.84 in affiliate income.
+* [Is It Keto](https://isitketo.org)'s visits reached a record high of 11k pageviews.
+* Revenues reached a record high of $40.84 in affiliate income.
 * Despite this, Is It Keto didn't satisfy its critical goals, so I'm putting it on the backburner.
 
 # Goal Grades
@@ -37,14 +37,14 @@ That said, $40 is small potatoes. It doesn't even meet the goal I was trying to 
 * **Result**: Got zero new links except for random spam domains  (<font color="red">100% below target</font>)
 * **Grade**: F
 
-I made a longshot bet that other keto sites would link to me if I created interesting visualizations about keto recipes. Sadly, it didn't pan out. Most sites didn't respond and the ones that did felt that the visualizations weren't interesting to their readers.
+I made a longshot bet that other keto sites would link to me if I created interesting visualizations about keto recipes. Sadly, it didn't pan out. Most sites didn't respond to my inquiries, and the ones that did felt that their readers wouldn't be interested.
 
 **Add 10 new pages for different foods**
 
 * **Result**: Added 12 new food pages (<font color="green">20% above target</font>)
 * **Grade**: A
 
-In January and February, I set more aggressive goals for publishing new food articles (75 and 30, respectively). March's target was deliberately more conservative so that I could focus on strategies for increasing incoming links. This was a nice, easy goal, so I beat the target by a small amount.
+In January and February, I set more aggressive goals for publishing new food articles (75 and 30, respectively). March's target was deliberately conservative so that I could focus on strategies for increasing incoming links. This was a nice, easy goal, so I beat the target by a small amount.
 
 # Stats and Metrics
 
@@ -58,7 +58,7 @@ In January and February, I set more aggressive goals for publishing new food art
 | Clicks         |  371           | 236       | <font color="red">-135 (-36%)</font>        |
 | Conversion     |  ???           | 19.07%    | ??? |
 
-Conversion rates are promisingly high. I don't have numbers for February [due to my link tag screwup](/retrospectives/2019/03/#amazon-affiliate-stats), but my January conversions were 23%. Both of these are substantially higher than on this blog, where conversion is around 3%. It seems like if users click the "Where to Buy" link on Is It Keto, they're typically ready to make a purchase.
+Conversion rates have been promisingly high. I don't have numbers for February [due to my link tag screwup](/retrospectives/2019/03/#amazon-affiliate-stats), but my January conversions were 23%. Both of these are substantially higher than on this blog, where conversion is around 3%. It seems like if users click the "Where to Buy" link on Is It Keto, they're typically ready to make a purchase.
 
 There was a precipitous drop in affiliate link clicks relative to February, but I suspect February's numbers were not accurate. I tried to correct for the link confusion in February by correlating clicks against my Google Analytics data, but now I'm skeptical that Google Analytics recorded every click. It seems too suspicious that clicks dropped by 36% while pageviews increased by 34%.
 
@@ -135,21 +135,21 @@ My subsequent blog post was about [artificial sweeteners](https://isitketo.org/b
 
 {% include image.html file="sweetener-usage.jpg" max_width="675px" img_link="true" alt="Stacked area chart of artificial sweetener usage over time" %}
 
-This time, I used [NVD3](https://github.com/nvd3/nvd3), a more user-friendly interface to D3 that [my friend](https://oky.moe/) suggested. It was still a clunky process, but substantially easier than raw D3. I also decided to stick with more traditional visualizations like pie charts and line graphs. This sped up the process because sticking with common scenarios means there are plenty of  examples.
+This time, I used [NVD3](https://github.com/nvd3/nvd3), a more user-friendly interface to D3 that [my friend](https://oky.moe/) suggested. It was still a clunky process, but substantially easier than raw D3. I also decided to stick with more traditional visualizations like pie charts and line graphs. This sped up the process because staying within common scenarios meant there were plenty of  examples.
 
 With both blog posts published, I reached out to the remaining keto sites with a softer pitch. I offered to create visualizations that they could include on their website, but I left it vague about what I wanted from the deal.
 
-The results were no better than my first wave of pitches. Most sites never responded. A couple sent noncommittal responses. Some of them misunderstood and thought I was just offering to create custom visualizations for them to enjoy privately and never publish on their site.
+The results were no better than my first wave of pitches. Most sites never answered. A couple sent noncommittal responses. Some of them misunderstood and thought I was just offering to create custom visualizations for them to enjoy privately and never publish on their site.
 
-In the end, I wasn't able to get any other sites to use the visualizations I created or to link to Is It Keto.
+In the end, I wasn't able to get any new links to Is It Keto.
 
 # Calling it quits
 
 Now, I'm shelving the site. It's a difficult decision because it has been growing consistently, and I'm sure I could get it to turn a profit if I kept working on it for another year. But of everything I could invest a year of effort into, I suspect this is not the one with the highest potential profit.
 
-Fortunately, the site can run fine on its own without anyone managing it. It just runs on AppEngine, so it will just chug along, and I never have to update any packages or reboot any servers.
+Fortunately, the site can run fine on its own, [as it did for most of 2018](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52). It just runs on AppEngine, so it will just chug along, and I never have to update any packages or reboot any servers.
 
-My hope is that the site will grow organically as people click Is It Keto links in Google search results. If the site makes it to the #1 spot on Google for more keywords, traffic could be 10-100x what it is today. If revenues grow to $500+ per month, then I'll maybe pick it back up because that's the point where I can hire people to expand it and still turn a profit.
+My hope is that the site will grow organically as people click Is It Keto links in Google results. If the site makes it to the #1 spot on Google for more keywords, traffic could be 10-100x what it is today. If revenues grow to $500+ per month, then I'll maybe pick it back up because that's the point where I can hire people to expand it and still turn a profit.
 
 In total, I spent about $4,500 on the site and earned only $76 in revenue so far. I doubt I'll earn back my investment, but it could happen if growth continues at its current rate.
 
@@ -160,7 +160,7 @@ In total, I spent about $4,500 on the site and earned only $76 in revenue so far
 * Published [two blog posts](https://isitketo.org/blog) experimenting with keto recipes and visualization
 * Reached out to eight major keto sites to see if they'd be interested in using my visualizations in exchange for attribution
   * No dice.
-* Wrote a tool to identify missing crosslinks
+* Wrote a tool to identify missing crosslinks in my pages
   * For example, it notifies me if an Is It Keto article mentions "lima beans" but doesn't link to the dedicated [lima beans article](https://isitketo.org/lima-beans).
 * Added 12 new food pages
 
@@ -170,7 +170,7 @@ These are my takeaways from March, but I'll probably do a full-length blog post 
 
 * When it comes to data visualization, start simple.
   * It's easier to generate something common like a line chart or bar graph than something exotic like a bubble cloud.
-  * Simple prevents you from getting mired too deeply in the implementation itself.
+  * Simple charts prevent you from getting mired too deeply in the implementation itself.
 * [D3.js](https://d3js.org/) is a powerful visualization library, but it's too complex for quick, experimental visualizations.
   * I had a good experience with NVD3, but their fork situation is confusing. [nvd3/nvd3](https://github.com/nvd3/nvd3) is the most stable repo, but their [documentation page is broken](https://github.com/nvd3/nvd3/issues/6). The nvd3-community fork is out of date, but [their documentation works](https://nvd3-community.github.io/nvd3/).
   * I've heard good things about the more actively maintained [Vega library](https://vega.github.io/vega/), but haven't tried it.
