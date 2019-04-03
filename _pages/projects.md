@@ -12,7 +12,7 @@ hide_signup: true
 
 # Businesses
 
-## [Is It Keto?](https://isitketo.org) (2018-present)
+## [Is It Keto?](https://isitketo.org) (2018-2019)
 
 Is It Keto allows provides a simple way for users to discover whether particular foods are compatible with the keto diet.
 
@@ -20,7 +20,7 @@ Is It Keto allows provides a simple way for users to discover whether particular
 
 Zestful is a collection of APIs to help recipe app developers better understand their recipes.
 
-## [KetoHub](https://ketohub.io) (2017-present)
+## [KetoHub](https://ketohub.io) (2017)
 
 KetoHub is an aggregator for keto recipes. It allows you to search recipes across different keto recipes and filter by meal type.
 
