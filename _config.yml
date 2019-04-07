@@ -171,6 +171,9 @@ exclude:
 - CNAME
 - config
 - COPYRIGHT
+- docker-compose.yml
+- Dockerfile
+- Dockerfile.watchntouch
 - Gemfile
 - Gemfile.lock
 - Gruntfile.js

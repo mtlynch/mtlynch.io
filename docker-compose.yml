@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  blog:
+    build: .
+    container_name: mtlynch.io
+    volumes:
+      - ./:/app
+    ports:
+      - "127.0.0.1:4000:4001"
+      - "127.0.0.1:35729:35730"
+  watchntouch:
+    build:
+      context: .
+      dockerfile: Dockerfile.watchntouch
+    container_name: watchntouch
+    volumes:
+      - ./:/app

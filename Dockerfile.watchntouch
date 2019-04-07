@@ -1,0 +1,12 @@
+FROM python:2.7.16-slim
+
+RUN apt-get update
+RUN apt-get install --yes git
+
+WORKDIR /watchntouch
+RUN git clone https://github.com/mtlynch/watchntouch.git . && \
+    pip install --requirement requirements.txt
+
+ENTRYPOINT ./watchntouch.py \
+  --watchdir /app \
+  --polling-interval 0.1
