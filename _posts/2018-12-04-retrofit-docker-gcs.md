@@ -20,6 +20,8 @@ header:
   teaser: images/retrofit-docker-gcs/naive-vs-desired.jpg
 excerpt: An exercise in integrating Docker, Google Cloud Storage, and the gcsfuse
   utility.
+discuss_urls:
+  reddit: https://redd.it/a3206o
 ---
 
 I recently installed a media sharing app to one of my servers. It was simple to install, but it hid a dastardly trap for long-term maintenance.

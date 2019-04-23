@@ -16,6 +16,9 @@ excerpt: The standard techniques of good development can lead you astray if you 
 header:
   teaser: images/good-developers-bad-tests/cover.jpg
   og_image: images/good-developers-bad-tests/cover.jpg
+discuss_urls:
+  reddit: https://redd.it/9vkri2
+  hacker_news: https://news.ycombinator.com/item?id=18427812
 ---
 
 Congratulations! You've finally written so many lines of code that you can afford a beach house. You hire Peter Keating, an architect world-famous for his skyscrapers, who assures you that he has brilliant plans for your beachfront property.
