@@ -11,6 +11,22 @@ jobs:
       - run:
           name: Check for trailing whitespace
           command: _tests/check-trailing-whitespace
+  build-js:
+    <<: *defaults
+    docker:
+      - image: circleci/node:10.15.3
+    steps:
+      - checkout
+      - run:
+          name: Install npm packages
+          command: npm install
+      - run:
+          name: Minify JavaScript
+          command: npm run build:js
+      - persist_to_workspace:
+          root: ./
+          paths:
+            -  assets/js/main.min.js
   build:
     <<: *defaults
     docker:
@@ -106,7 +122,10 @@ workflows:
   test-deploy:
     jobs:
       - check-whitespace
+      - build-js
       - build
+          requires:
+            - build
       - check-google-analytics-token:
           requires:
             - build
