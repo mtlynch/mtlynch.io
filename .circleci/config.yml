@@ -35,6 +35,8 @@ jobs:
       # Keep in sync with save_cache path.
       BUNDLE_PATH: ~/repo/_vendor/bundle
     steps:
+      - attach_workspace:
+          at: ./
       - checkout
       - restore_cache:
           keys:
