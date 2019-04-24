@@ -35,9 +35,9 @@ jobs:
       # Keep in sync with save_cache path.
       BUNDLE_PATH: ~/repo/_vendor/bundle
     steps:
+      - checkout
       - attach_workspace:
           at: ./
-      - checkout
       - restore_cache:
           keys:
             - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
