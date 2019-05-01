@@ -154,7 +154,7 @@ image: "mtlynch/cypress:3.2.0"
 
 In a [bizarre gotcha](https://github.com/cypress-io/cypress-docker-images/issues/82#issuecomment-477215146), Cypress' official Docker image [doesn't contain Cypress](https://github.com/cypress-io/cypress-docker-images/issues/41). `mtlynch/cypress` is [my custom Docker image](https://hub.docker.com/r/mtlynch/cypress/) that runs Cypress right out of the box. The `3.2.0` tag, as you might expect, contains the [3.2.0 release](https://github.com/cypress-io/cypress/releases/tag/v3.2.0) of Cypress.
 
-You're welcome to use my Cypress Docker image, [fork it](https://github.com/mtlynch/docker-cypress), or [nicely ask](https://github.com/cypress-io/cypress-docker-images/issues/41) the Cypress team to maintain an official Docker image that includes the Cypress binary.
+You're welcome to use my Cypress Docker image, [fork it](https://github.com/mtlynch/docker-cypress), or ~~[nicely ask](https://github.com/cypress-io/cypress-docker-images/issues/41) the Cypress team to maintain an official Docker image that includes the Cypress binary~~. (**Edit**: Looks like the Cypress folks are [considering an official image](https://twitter.com/bahmutov/status/1123597572877312000))
 
 ```yml
 depends_on:
