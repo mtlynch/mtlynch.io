@@ -18,6 +18,9 @@ tags:
 - cypress
 - docker
 - docker-compose
+discuss_urls:
+  reddit: https://redd.it/bjhlp1
+  hacker_news: https://news.ycombinator.com/item?id=19797185
 ---
 
 {% include image.html file="cover.jpg" alt="A reusable template for testing web apps (cover image)" max_width="1000px" img_link=true %}
