@@ -1,0 +1,18 @@
+---
+title: docker-compose.yml
+---
+version: '3.2'
+services:
+  sentimentalyzer:
+    build: ../
+    environment:
+      - PORT=8123
+  cypress:
+    image: "mtlynch/cypress:3.2.0"
+    depends_on:
+      - sentimentalyzer
+    environment:
+      - CYPRESS_baseUrl=http://sentimentalyzer:8123
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e

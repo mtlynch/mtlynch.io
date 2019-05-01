@@ -1,0 +1,7 @@
+---
+title: cypress.json
+---
+{
+  "pluginsFile": false,
+  "supportFile": false
+}
