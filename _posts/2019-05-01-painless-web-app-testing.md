@@ -21,6 +21,7 @@ tags:
 discuss_urls:
   reddit: https://redd.it/bjhlp1
   hacker_news: https://news.ycombinator.com/item?id=19797185
+last_modified_at: '2019-05-02T19:39:00-04:00'
 ---
 
 {% include image.html file="cover.jpg" alt="A reusable template for testing web apps (cover image)" max_width="1000px" img_link=true %}
@@ -149,12 +150,10 @@ This file defines a Docker container for Sentimentalyzer and a Docker container 
 A few lines are worth calling out:
 
 ```yml
-image: "mtlynch/cypress:3.2.0"
+image: "cypress/included:3.2.0"
 ```
 
-In a [bizarre gotcha](https://github.com/cypress-io/cypress-docker-images/issues/82#issuecomment-477215146), Cypress' official Docker image [doesn't contain Cypress](https://github.com/cypress-io/cypress-docker-images/issues/41). `mtlynch/cypress` is [my custom Docker image](https://hub.docker.com/r/mtlynch/cypress/) that runs Cypress right out of the box. The `3.2.0` tag, as you might expect, contains the [3.2.0 release](https://github.com/cypress-io/cypress/releases/tag/v3.2.0) of Cypress.
-
-You're welcome to use my Cypress Docker image, [fork it](https://github.com/mtlynch/docker-cypress), or ~~[nicely ask](https://github.com/cypress-io/cypress-docker-images/issues/41) the Cypress team to maintain an official Docker image that includes the Cypress binary~~. (**Edit**: Looks like the Cypress folks are [considering an official image](https://twitter.com/bahmutov/status/1123597572877312000))
+`cypress/included` is the family of [Cypress Docker images](https://github.com/cypress-io/cypress-docker-images) that have the Cypress pre-installed in the image itself. Other families such as `cypress/base` and `cypress/browsers` assume that the client will install Cypress at runtime. By using the `cypress/included` image, I ensure that Cypress executes tests as soon as its container starts up.
 
 ```yml
 depends_on:
@@ -302,6 +301,8 @@ This guide provided a basic introduction to Cypress. For more advanced functiona
 
 * [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html)
 * [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)
+
+**Update (2019-05-02)**: In response to this post, the Cypress team published [an official Docker image](https://hub.docker.com/r/cypress/included) that has Cypress pre-installed. I've revised this tutorial to integrate their new image. Check out [the Cypress blog post](https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/) for additional details about their images and more tricks for using Cypress and Docker together.
 
 ---
 
