@@ -1,14 +1,5 @@
 ---
 title: 'GreenPiThumb: A Raspberry Pi Gardening Bot'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-classes: wide
 excerpt: Using the Raspberry Pi to water plants automatically
 header:
   teaser: images/greenpithumb/greenpithumb-side-full.jpg

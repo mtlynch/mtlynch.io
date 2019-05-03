@@ -1,13 +1,5 @@
 ---
 title: How to Do Code Reviews Like a Human (Part One)
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 header:
   teaser: images/human-code-reviews-1/book-cover.png
   og_image: images/human-code-reviews-1/code-reviews-cover1.png

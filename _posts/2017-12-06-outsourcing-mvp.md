@@ -1,13 +1,5 @@
 ---
 title: The Perils of Outsourcing Your MVP
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 header:
   teaser: images/outsourcing-mvp/wireframe-v1.jpg
   og_image: ""

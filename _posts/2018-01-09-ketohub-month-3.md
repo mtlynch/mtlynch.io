@@ -1,13 +1,5 @@
 ---
 title: 'KetoHub Update: Month 3'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 header:
   teaser: images/ketohub-month-3/ketohub-ga-dec.png
   og_image: ""

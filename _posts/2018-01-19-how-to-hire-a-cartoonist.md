@@ -1,13 +1,5 @@
 ---
 title: How to Hire a Cartoonist to Make Your Blog Less Boring
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 excerpt: With no idea what I was doing, I hired a cartoonist to illustrate my blog.
   The results were surprisingly positive.
 header:

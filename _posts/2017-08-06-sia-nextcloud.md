@@ -1,13 +1,5 @@
 ---
 title: Create Your Own Low-Cost Cloud Storage App with Sia and Nextcloud
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 header:
   teaser: images/sia-nextcloud/nextcloud-complete.png
   og_image: ""

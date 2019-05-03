@@ -1,13 +1,5 @@
 ---
 title: How I Tricked Myself into Shipping Too Late
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 header:
   og_image: images/shipping-too-late/rejection.jpg
   teaser: images/shipping-too-late/rejection.jpg
