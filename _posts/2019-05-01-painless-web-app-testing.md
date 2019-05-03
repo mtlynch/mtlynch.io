@@ -153,7 +153,7 @@ A few lines are worth calling out:
 image: "cypress/included:3.2.0"
 ```
 
-`cypress/included` is the family of [Cypress Docker images](https://github.com/cypress-io/cypress-docker-images) that have the Cypress pre-installed in the image itself. Other families such as `cypress/base` and `cypress/browsers` assume that the client will install Cypress at runtime. By using the `cypress/included` image, I ensure that Cypress executes tests as soon as its container starts up.
+`cypress/included` is the family of [Cypress Docker images](https://github.com/cypress-io/cypress-docker-images) that have Cypress pre-installed in the image itself. Other families such as `cypress/base` and `cypress/browsers` assume that the client will install Cypress at runtime. By using the `cypress/included` image, I ensure that Cypress executes tests as soon as its container starts up.
 
 ```yml
 depends_on:
