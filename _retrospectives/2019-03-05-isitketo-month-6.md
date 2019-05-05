@@ -1,11 +1,5 @@
 ---
 title: 'Is It Keto: Month 6'
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
-classes: wide
 excerpt: Do or die time
 ---
 

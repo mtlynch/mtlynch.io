@@ -1,11 +1,5 @@
 ---
 title: 'Zestful: Month 5'
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
-classes: wide
 excerpt: Launched, but still no customers
 ---
 

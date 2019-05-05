@@ -1,11 +1,5 @@
 ---
 title: 'Zestful: Month 4'
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
-classes: wide
 excerpt: Shipping too late
 ---
 
