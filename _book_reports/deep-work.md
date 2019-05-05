@@ -1,9 +1,5 @@
 ---
 title: Deep Work by Cal Newport
-layout: single
-author_profile: true
-sidebar:
-  nav: main
 read_date: 2018-08-26
 header:
   teaser: "/images/book-reports/deep-work/deep-work.jpg"

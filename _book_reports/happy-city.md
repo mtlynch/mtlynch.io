@@ -1,10 +1,5 @@
 ---
 title: Happy City by Charles Montgomery
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
 read_date: 2018-08-06
 header:
   teaser: /images/book-reports/happy-city/happy-city.jpg

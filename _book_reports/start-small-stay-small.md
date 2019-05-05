@@ -1,9 +1,5 @@
 ---
 title: Start Small, Stay Small by Rob Walling
-layout: single
-author_profile: true
-sidebar:
-  nav: main
 read_date: 2018-11-15
 header:
   teaser: "/images/book-reports/start-small-stay-small/start-small-stay-small.jpg"

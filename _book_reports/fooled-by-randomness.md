@@ -1,9 +1,5 @@
 ---
 title: Fooled by Randomness by Nassim Nicholas Taleb
-layout: single
-author_profile: true
-sidebar:
-  nav: main
 read_date: 2018-09-04
 header:
   teaser: /images/book-reports/fooled-by-randomness/fooled-by-randomness.jpg
