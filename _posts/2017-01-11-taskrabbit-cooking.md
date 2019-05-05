@@ -1,12 +1,5 @@
 ---
 title: 'Adventures in Outsourcing: Cooking with TaskRabbit'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-date: '2017-01-11 00:00:00 -0500'
 header:
   teaser: images/taskrabbit-cooking/IMG_20161115_212108.jpg
   og_image: ""

@@ -1,14 +1,5 @@
 ---
 title: A Beginner's Guide to Mining Siacoin
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-date: '2017-05-20 00:00:00'
 header:
   teaser: images/windows-sia-mining/luxor-mining-pool.png
   og_image: ""

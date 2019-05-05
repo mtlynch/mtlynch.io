@@ -1,13 +1,5 @@
 ---
 title: Sia-Minio Integration Postmortem
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 tags:
 - siacoin
 - cryptocurrency

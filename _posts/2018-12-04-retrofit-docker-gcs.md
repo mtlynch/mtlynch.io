@@ -1,14 +1,5 @@
 ---
 title: Retrofitting Apps for Cloud Storage with Zero Code Changes
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-classes: wide
 tags:
 - docker
 - google cloud storage

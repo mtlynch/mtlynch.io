@@ -1,13 +1,5 @@
 ---
 title: What I've Been Doing Since Quitting My Job
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 excerpt: An update on my progress since going off to work on my own.
 header:
   og_image: images/since-quitting/so-stressed.jpg

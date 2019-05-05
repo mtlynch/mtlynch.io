@@ -1,14 +1,5 @@
 ---
 title: How I Stole Your Siacoin
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-classes: wide
 header:
   teaser: images/stole-siacoins/american-psycho.jpg
   og_image: ''

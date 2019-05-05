@@ -1,14 +1,5 @@
 ---
 title: Building a Homelab VM Server
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-date: '2017-05-07 00:00:00 -04:00'
 header:
   teaser: images/building-a-vm-homelab/vm-server-parts.jpg
   og_image: ""

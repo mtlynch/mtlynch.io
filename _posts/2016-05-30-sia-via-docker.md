@@ -1,14 +1,5 @@
 ---
 title: Running Sia on a Synology NAS via Docker
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-date: '2016-05-30 00:00:00 -0400'
 header:
   teaser: images/sia-via-docker/sia-running.png
   og_image: ""

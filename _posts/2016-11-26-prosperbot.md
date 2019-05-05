@@ -1,6 +1,5 @@
 ---
 title: Automated Prosper Investing with ProsperBot
-date: 2016-11-26 00:00:00 -05:00
 header:
   teaser: images/prosperbot/prosperbot-frontend.png
   og_image: ""

@@ -1,14 +1,5 @@
 ---
 title: My First Year as a Solo Developer
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-classes: wide
 tags:
 - retrospectives
 - blogging

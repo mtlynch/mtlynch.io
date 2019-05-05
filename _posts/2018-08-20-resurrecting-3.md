@@ -1,13 +1,5 @@
 ---
 title: 'Resurrecting a Dead Library: Part Three - Rehabilitation'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 tags:
 - zestful
 - refactoring

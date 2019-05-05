@@ -1,14 +1,5 @@
 ---
 title: Why Good Developers Write Bad Unit Tests
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
-classes: wide
 tags:
 - testing
 excerpt: The standard techniques of good development can lead you astray if you don't

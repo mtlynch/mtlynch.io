@@ -1,13 +1,5 @@
 ---
 title: Why I Quit Google to Work for Myself
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
-sidebar:
-  nav: main
 header:
   teaser: images/why-i-quit-google/spoiled-coder.png
   og_image: images/why-i-quit-google/spoiled-coder.png

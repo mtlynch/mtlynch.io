@@ -1,15 +1,7 @@
 ---
 title: A Follow-Up and Space Duck
-layout: single
-author_profile: true
-read_time: true
-comments: true
 header:
   og_image: ""
-share: true
-related: true
-sidebar:
-  nav: main
 excerpt: A thank you and a follow-up about my plans.
 tags:
 - space duck
