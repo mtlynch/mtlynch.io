@@ -1,11 +1,5 @@
 ---
 title: 'Is It Keto: Month 5'
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
-classes: wide
 excerpt: It's working, but not well enough
 ---
 

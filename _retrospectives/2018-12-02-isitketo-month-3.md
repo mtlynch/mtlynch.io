@@ -1,11 +1,5 @@
 ---
 title: 'Is It Keto: Month 3'
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
-classes: wide
 excerpt: Returning to a site that grew without me
 ---
 

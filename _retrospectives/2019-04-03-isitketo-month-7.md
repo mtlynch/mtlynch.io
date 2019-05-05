@@ -1,11 +1,5 @@
 ---
 title: 'Is It Keto: Month 7'
-layout: single
-author_profile: true
-sidebar:
-  nav: main
-hide_signup: true
-classes: wide
 excerpt: A record month, but it's time to give up.
 ---
 
