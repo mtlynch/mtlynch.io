@@ -56,8 +56,6 @@ Now that Is It Keto is on the backburner, I'm not going to dive as deeply into i
 | Domain Authority (Moz) | 9          | 9            | 0 |
 | Ranking Keywords (Moz) | 448        | 548          | <font color="green">+100 (+22%)</font> |
 
-
-
 # Money for nothing
 
 The nice thing about Is It Keto is that it grows on its own. It's all just content, so I don't have to perform any maintenance tasks to keep it running, and server costs are negligible ($1.48 for April).
@@ -72,8 +70,7 @@ It would be great if this growth keeps up. If revenue reaches $500/mo, I can hir
 
 I worked with freelance writers to create several articles for Is It Keto, but we always had a clunky process for drafts -> feedback -> revisions. We used Google Docs and margin comments, but Docs doesn't do a great job of highlighting what changed between drafts or keeping context of what comment led to which edit.
 
-If you're a professional developer, you're probably familiar with code review tools like [Github reviews](https://github.com/features/code-review/), [Reviewable](https://reviewable.io/), or [Phabricator](https://www.phacility.com/). 
-I suspect that content writers could benefit from similar tools, so I've been reaching out to writers and editors to ask them what kind of tool I could create for them to solve this problem.
+If you're a professional developer, you're probably familiar with code review tools like [Github reviews](https://github.com/features/code-review/), [Reviewable](https://reviewable.io/), or [Phabricator](https://www.phacility.com/). I suspect that content writers could benefit from similar tools, so I've been reaching out to writers and editors to ask them what kind of tool I could create for them to solve this problem.
 
 {% include image.html file="reviewable.jpg" alt="Screenshot of a code review on Reviewable.io"  max_width="950px" img_link="true" class="img-border" fig_caption="I want to make this but for content instead of code" %}
 
