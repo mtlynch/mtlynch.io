@@ -146,6 +146,8 @@ image: "cypress/included:3.2.0"
 
 `cypress/included` is the family of [Cypress Docker images](https://github.com/cypress-io/cypress-docker-images) that have Cypress pre-installed in the image itself. Other families such as `cypress/base` and `cypress/browsers` assume that the client will install Cypress at runtime. By using the `cypress/included` image, I ensure that Cypress executes tests as soon as its container starts up.
 
+The `3.2.0` is the version tag. It corresponds to the version of Cypress in the Docker image. [Cypress 3.2.0](https://github.com/cypress-io/cypress/releases/tag/v3.2.0) is the latest version at the time of this writing, but you can check Cypress' [latest releases](https://github.com/cypress-io/cypress/releases) to find the most up-to-date version.
+
 ```yml
 depends_on:
   - sentimentalyzer
