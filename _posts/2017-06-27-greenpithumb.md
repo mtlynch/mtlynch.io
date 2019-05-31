@@ -322,5 +322,5 @@ Big thanks to those who helped us with this project:
 
 * [Devon Bray](https://twitter.com/eso_logic), whose project, [PiPlanter 2](http://www.esologic.com/?page_id=1042), heavily inspired the hardware aspects of GreenPiThumb.
 * [Dickson Chow](http://dicksonchow.com), whose project, [Plant Friends](http://dicksonchow.com/plant-friends-mkii/), was a helpful hardware reference, and who provided us lots of encouragement throughout the project.
-* [Nicole Michaelis](http://www.essayedits.com), who volunteered her time to help edit this post.
+* Nicole Michaelis, who volunteered her time to help edit this post.
 * The [/r/raspberry_pi](https://www.reddit.com/r/raspberry_pi) reddit community for [their help](https://www.reddit.com/r/raspberry_pi/comments/5i856z/help_turning_on_a_12v_water_pump_with_a_pi/) when we got stuck with wiring issues.
