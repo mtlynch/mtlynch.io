@@ -15,7 +15,7 @@ Early last year, I launched a nutrition site called [Is It Keto](https://isitket
 
 There was only one pesky detail standing between me and tremendous profits: money. For every dollar I spent on the site, I earned back ten cents. For my non-business-savvy readers, a -90% return on investment is considered less-than-stellar. At the end of March, the site's financial future seemed bleak, so I shelved the project.
 
-This is my post-mortem for Is It Keto. I'll talk about where I succeeded, how I could have done better, and what I wish I knew from the start.
+This is my postmortem for Is It Keto. I'll talk about where I succeeded, how I could have done better, and what I wish I knew from the start.
 
 # How I made money
 
