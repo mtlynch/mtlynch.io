@@ -112,7 +112,8 @@ Is It Keto linked to food products. One of the top affiliate clicks is [Propel F
 
 To help prioritize future articles, Is It Keto tracks the most commonly-requested foods that lack a dedicated page. Here are the top five:
 
->1. Mushrooms
+>
+1. Mushrooms
 2. Beef
 3. Sausages
 4. Peppers
