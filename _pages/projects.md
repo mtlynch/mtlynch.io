@@ -10,7 +10,9 @@ excerpt: My projects
 hide_signup: true
 ---
 
-# Businesses
+## [What Got Done](https://whatgotdone.com) (2019-)
+
+What Got Done is a weekly task journaling site that lets users record their accomplishments and share them with teammates.
 
 ## [Is It Keto?](https://isitketo.org) (2018-2019)
 
