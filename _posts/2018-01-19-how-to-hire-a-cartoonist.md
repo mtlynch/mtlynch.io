@@ -265,4 +265,4 @@ While none of the artists I spoke with said they strictly require it, they all a
 
 ---
 
-*Thanks to all the artists who spoke with me for this article and to [Nicole Michaelis](http://www.essayedits.com) for volunteering her time to edit this piece.*
+*Thanks to all the artists who spoke with me for this article and to Nicole Michaelis for volunteering her time to edit this piece.*
