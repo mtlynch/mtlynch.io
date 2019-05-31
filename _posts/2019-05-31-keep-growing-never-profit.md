@@ -114,10 +114,10 @@ To help prioritize future articles, Is It Keto tracks the most commonly-requeste
 
 >
 1. Mushrooms
-2. Beef
-3. Sausages
-4. Peppers
-5. Beer
+1. Beef
+1. Sausages
+1. Peppers
+1. Beer
 
 See the problem?
 
