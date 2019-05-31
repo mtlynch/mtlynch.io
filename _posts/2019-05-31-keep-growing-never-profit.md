@@ -9,6 +9,7 @@ tags:
 - startups
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=20062264
+  indie_hackers: https://www.indiehackers.com/post/37ea42382d
 ---
 
 {% include image.html file="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" max_width="1000px" img_link=true %}
