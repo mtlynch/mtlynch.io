@@ -76,7 +76,7 @@ Declaring my goals publicly also protected me from wandering off into the weeds.
 >
 >**Me (Feature-happy)**: (deflated) Yes...
 
-Without explicit goals, the feature-happy version of me would have run rampant, building features that were fun but  irrelevant to the bottom line. 
+Without explicit goals, the feature-happy version of me would have run rampant, building features that were fun but irrelevant to the bottom line.
 
 # What needed improvement
 
