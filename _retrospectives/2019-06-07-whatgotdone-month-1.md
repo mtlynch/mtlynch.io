@@ -29,7 +29,7 @@ I launched What Got Done on [May 24th](https://whatgotdone.com/michael/2019-05-2
 * **Result**: Had five customer meetings (<font color="red">50% below target</font>)
 * **Grade**: C
 
-I got a bit sidetracked in adding post-launch features to What Got Done, so I had fewer customer interviews than I had hoped for. This is just a consequence of me not reaching out to enough people to request interviews.
+I got a bit sidetracked in adding post-launch features to What Got Done, so I had fewer customer interviews than I had hoped for. This is just me getting tempted by the fun and excitement of adding features to a public product instead of the unglamorous work of researching strangers and begging them for customer interviews.
 
 ### Publish a new blog post
 
@@ -60,9 +60,9 @@ It's exciting to see that the site is still growing even though I stopped workin
 
 The growth came almost entirely from a single user who needed Zestful for a one-time project, so it's unlikely to repeat for long, but it's fun to get a bit of money back on a project that [cost me ~$8k](/solo-developer-year-1/#zestful).
 
-# What Got Done: Business or Hobby?
+# What Got Done: business or hobby?
 
-TODO: Screenshot
+{% include image.html file="whatgotdone.jpg" alt="What Got Done screenshot"  max_width="800px" img_link="true" fig_caption="My What Got Done entry for last week" %}
 
 I'm not sure what to do with What Got Done. My main goal was to use it as a way to learn [Vue.js](https://vuejs.org/). And it's a tool that's useful for me because I like logging my tasks to close out the week. I have a list of business ideas in my head, and What Got Done wasn't the one I thought was most promising.
 
@@ -70,7 +70,7 @@ I'm not sure what to do with What Got Done. My main goal was to use it as a way 
 
 **Option B: Sell harder**: Approach more businesses directly and ask them to use it and find out what's stopping them.
 
-Option A is easier because it doesn't cost me any time. Option B seems unattractive but I can't tell if it's because I [fear rejection ](/shipping-too-late/#did-i-delay-my-launch-to-avoid-rejection) or because I'm rationally evaluating the low likelihood of success and the time it will take away from other projects more likely to succeed.
+Option A is easier because it doesn't cost me any time. Option B seems unattractive but I can't tell if it's because I [fear rejection](/shipping-too-late/#did-i-delay-my-launch-to-avoid-rejection) or because I'm rationally evaluating the low likelihood of success and the time it will take away from other projects more likely to succeed.
 
 # Leave no stone unturned
 
@@ -99,7 +99,7 @@ The conversation with Owner C was interesting but made it seem that software for
 
 The other idea I described [last month](/retrospectives/2019/05/#simplifying-the-editing-workflow) is a tool for writers that focuses on the editing and review process.
 
-My friend David Toth (TODO: link) had just attended MicroConf, a conference for small software businesses. He told me there were plenty of writers there who would probably talk to me, so I started reaching out to speakers from the event.
+My friend [David Toth](https://twitter.com/jupiterunknown) had just attended [MicroConf](https://www.microconf.com/), a conference for small software businesses. He told me there were plenty of writers there who would probably talk to me, so I started reaching out to speakers from the event.
 
 What I didn't realize was that the speakers at MicroConf are a special type of writer known as conversion experts. They specialize in sales copy for websites and emails.
 
