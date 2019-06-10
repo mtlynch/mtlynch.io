@@ -140,7 +140,7 @@ If you know an email copywriter who might be interested, please ask them to [ema
 * Reached out to seven content writers and copywriters for customer research (got four interviews)
 
 ## Lessons Learned
- 
+
 * It's easier to find customers and ask them what they need than to find customers who need your specific product.
   * Credit: This is the "market-first approach," described in [*Start Small, Stay Small*](/book-reports/start-small-stay-small/)
 * Copywriters are more open to cold outreach than quarry owners are.
