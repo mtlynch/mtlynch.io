@@ -79,3 +79,11 @@ An engaging read, but the narrator is painfully obnoxious.
 * "Chaos monkey" is an [open source tool](https://netflix.github.io/chaosmonkey/) from Netflix that tests a system's resiliency to random outages.
   * Imagine a monkey loose in a data center randomly disconnecting servers.
 * "the cap"
+
+* Paul Graham seems like a great guy
+  * Whan a larger company initiated a frivolous lawsuit against AdGrok, Graham used all of YC's resources and connections to force them to drop the suit.
+  * There's also this scene with Paul Graham and his wife / YC partner, Jessice Livingstone that I found cute for how it humanized these seemingly larger-than-life characters:
+    > Before we got too deep into the conspiring, Jessica, PG's wife and YC copartner, came out to discuss lunch. What ensued was a minor squabble over some leftover pasta, and why it was gone, and who had planned on eating it that afternoon. PG looked a little miffed.
+
+* >Don't be deceived by my withering treatment of Facebook in this book; inside every cynic lives a heartbroken idealist.
+  * As a [once-proud and later-bitter Googler](https://mtlynch.io/why-i-quit-google/), I related to this sentiment.
