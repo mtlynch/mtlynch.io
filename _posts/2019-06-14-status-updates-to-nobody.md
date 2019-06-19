@@ -12,9 +12,9 @@ header:
 
 At my last job, status meetings with my manager were outstandingly efficient. He never asked me to list off everything I did since our last meeting. Instead, we jumped right to the meaty discussions that required an in-person back-and-forth: career growth, team development, difficult technical problems.
 
-How did my manager have the right context to let me skip to the important stuff? He read my snippets.
+How did my manager have the right context to let me skip to the important stuff? He read my Snippets.
 
-# What are snippets?
+# What are Snippets?
 
 Snippets is the name of an internal tool at Google for sharing status with your teammates. It's just a text field where you write down your accomplishments for the week. At the beginning of the following week, your manager and teammates receive your Snippet in a weekly email digest.
 
