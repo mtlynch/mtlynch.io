@@ -36,7 +36,6 @@ An engaging read, but the narrator is painfully obnoxious.
 * Lots of "hustle worship."
   * He sneeringly declines a job offer from Twitter because they encourage their employees to go home at dinnertime, whereas Facebook encouraged all-night hackathons and weekend work.
 
-
 # Key Takeaways
 
 * You can understand credit default swaps by thinking of them in terms of car insurance
@@ -106,8 +105,8 @@ An engaging read, but the narrator is painfully obnoxious.
   * Startup ownership is typically structured so that founders split ownership but their stake is vested over time.
   * If each founder owned 30-40% of the company from day one, any founder could instantly kill the whole company by walking away with their share of the equity.
 * Facebook didn't monetize well until ~2013 (shortly after their IPO)
-  * >[Facebook's per-user revenue was] comparable to what you'd monetize your *Star Wars* blog at if you ran AdSense.
-* >a billion times any number is still a big fucking number.
+  * "[Facebook's per-user revenue was] comparable to what you'd monetize your *Star Wars* blog at if you ran AdSense."
+* > a billion times any number is still a big fucking number.
   * Despite poor monetization, Facebook had high revenue by virtue of its enormous user base
 * Pre-IPO, the Ads team didn't have much power and was forced to try to squeeze money from whatever the product teams built (without having any voice in the product direction)
 * Nobody on Facebook Ads had any real advertising experience except for some of the people poached from Google
