@@ -45,8 +45,9 @@ jobs:
       - run:
           name: Configure Bundler
           command: |
-            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' | tee --append $BASH_ENV
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
             source $BASH_ENV
+            echo "BUNDLER_VERSION=${BUNDLER_VERSION}"
             gem install bundler
       - run:
           name: Bundle Install
