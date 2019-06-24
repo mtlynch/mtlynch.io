@@ -24,7 +24,7 @@ At first, it seemed like a pointless idol in Google's cult of internal openness,
 
 Like most developers, I had always hated team sync meetings. Even if the meeting was only an hour, the interruption ruined my productivity for several more. I understood why they were necessary, but they were always painful to endure.
 
-At Google, something felt distinctly odd about our team meetings: they were actually engaging. Our discussions were lean and productive because everyone walked in with a shared context from reading each other's Snippets. Before Google, it never occurred to me that fact reporting was the boring part of meetings, and you could do that ahead of time.
+At Google, something felt distinctly odd about our team meetings: they were actually engaging. Our discussions were lean and productive because everyone walked in with a shared context from reading each others' Snippets. Before Google, it never occurred to me that fact-reporting was the boring part of meetings, and you could do that ahead of time.
 
 Setting aside time each week to write updates required discipline and focus, but it created a virtuous cycle. The more effort we put into our status updates, the less time we spent in tiresome meetings.
 
@@ -42,9 +42,9 @@ That didn't happen. Instead, I found myself writing Snippets again a few weeks l
 
 Friday afternoons are when my brain lies to me about my work. It often tells me that I wasted an entire week investigating a bug and have nothing to show for it.
 
-Writing status updates forced me to see my week objectively. I'd review my outgoing emails, my code check-ins, and my calendar. Invariably, this exercise reminded me that I accomplished far more than my bleak, never-gonna-solve-this-bug mindset suggested.
+Writing status updates forced me to see my week objectively. I'd review my code check-ins, outgoing emails, and calendar. Invariably, this exercise reminded me that I accomplished far more than my bleak, never-gonna-solve-this-bug mindset suggested.
 
-Sometimes I completely forgot about a cool feature I launched on Tuesday because of an unrelated issue that popped up on Wednesday. Even when a single bug truly did absorb my week, my investigation always produced useful artifacts like better documentation or new automated tests.
+Sometimes, I completely forgot about a cool feature I launched on Tuesday because of an unrelated issue that popped up on Wednesday. Even when a single bug truly did absorb my week, my investigation always produced useful artifacts like better documentation or new automated tests.
 
 Without Snippets, I forgot all that and remembered only what I hadn't accomplished.
 
