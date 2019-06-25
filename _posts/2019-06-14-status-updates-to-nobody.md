@@ -6,6 +6,7 @@ tags:
 header:
   teaser: images/status-updates-to-nobody/cover.jpg
   og_image: images/status-updates-to-nobody/cover.jpg
+excerpt: Writing short entries in a plain textbox bolstered my motivation and miraculously made status meetings interesting.
 ---
 
 {% include image.html file="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max_width="1000px" img_link=true %}
@@ -46,13 +47,13 @@ Writing status updates forced me to see my week objectively. I'd review my code 
 
 Sometimes, I completely forgot about a cool feature I launched on Tuesday because of an unrelated issue that popped up on Wednesday. Even when a single bug truly did absorb my week, my investigation always produced useful artifacts like better documentation or new automated tests.
 
-Without Snippets, I forgot all that and remembered only what I hadn't accomplished.
+Without Snippets, I forgot all that and remembered only what I *hadn't* accomplished.
 
 # Other tools don't get it
 
 In early 2018, [I left Google](/why-i-quit-google/). Without access to my beloved Google-internal tools, I searched for an external replacement for Snippets to no avail.
 
-There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for *managers*. They promise pretty graphs and dashboards so that managers feel like they have their finger on the pulse of the team.
+There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for *managers*. They promise pretty graphs and dashboards so that the manager feels like they have their finger on the pulse of the team.
 
 {% include image.html file="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" max_width="475px" img_link="true" class="img-border" fig_caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." %}
 
@@ -76,7 +77,7 @@ I recorded my status updates in that private Google Doc every week for a year. N
 
 After writing private updates for a year, it still gave me satisfaction, but I missed writing for an audience. I saw the myriad of benefits I gained by [publishing my monthly retrospectives](/keep-growing-never-profit/#i-published-monthly-goals-and-stuck-to-them) and wanted to do the same thing for weekly updates.
 
-One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a great excuse to create my own status sharing web app. It's called [What Got Done](https://whatgotdone.com):
+One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called [What Got Done](https://whatgotdone.com):
 
 {% assign fig_caption = "My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" | markdownify | remove: "<p>" | remove: "</p>" %}
 
