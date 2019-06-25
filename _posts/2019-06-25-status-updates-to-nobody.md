@@ -7,6 +7,8 @@ header:
   teaser: images/status-updates-to-nobody/cover.jpg
   og_image: images/status-updates-to-nobody/cover.jpg
 excerpt: Writing short entries in a plain textbox bolstered my motivation and miraculously made status meetings interesting.
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=20274079
 ---
 
 {% include image.html file="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max_width="1000px" img_link=true %}
