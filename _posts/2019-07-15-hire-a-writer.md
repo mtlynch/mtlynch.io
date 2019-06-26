@@ -75,7 +75,7 @@ Try not to phrase it in a scary "you're about to get fired way" but like:
 
 >For the issues we're running into, what would be helpful in reducing those?
 
-Here is a typical note:
+Here is a real letter I wrote to one of the writers that didn't work out:
 
 >Unfortunately, I need to end the contract here. Your writing is good, but we're on our eighth article, and the style is still fairly distant from what I'd like it to be.
 >
