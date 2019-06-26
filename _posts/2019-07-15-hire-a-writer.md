@@ -61,7 +61,19 @@ Pay writers to learn the style guide. If you show
 
 Instance where I would suggest an edit and she would make more edits.
 
+# The first few drafts
+
+This is where the interview really begins.
+
+* What parts take the most time?
+
+Bad if they make the same mistakes over and over.
+
 # Gracefully terminating bad hires
+
+Try not to phrase it in a scary "you're about to get fired way" but like:
+
+>For the issues we're running into, what would be helpful in reducing those?
 
 Here is a typical note:
 
