@@ -8,6 +8,18 @@ tags:
 Foo.
 * Not a guide to hiring a cheap person to pump out words.
 
+# A general strategy on hiring
+
+Good people have options
+
+You are trying to create a job that they want to do:
+
+* Micromanaging them to ensure that you approve of every second they're on the clock for you.
+
+One of my writers told me that she clocks out when she gets up to use the bathroom or get a drink of water and I told her that was crazy.  If someone is producing good work for me, I don't care if they spent an hour writing the article or they took a walk to clear their head for forty minutes, then wrote the article in twenty. In my experience, if you show people that you trust them to do good work and be honest, they'll do it.
+
+You're not trying to squeeze free work out of them
+You respect their craft
 
 # Create a detailed job description
 
@@ -40,6 +52,10 @@ https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/
 You can create this
 
 Some writers use the term "website" and some use "web site" then your site is messy.
+
+Iterate on the style guide as you go. Instead of just telling someone that they're making a style error, link to the style guide. Don't make it too long or it's hard for people to learn.
+
+Pay writers to learn the style guide. If you show
 
 # Agree on an editing workflow
 
