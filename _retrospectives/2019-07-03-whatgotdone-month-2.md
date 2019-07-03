@@ -1,6 +1,6 @@
 ---
 title: What Got Done - Month 2
-excerpt: The conversation should be about thousands of dollars not tens of dollars.
+excerpt: The conversation should be about thousands of dollars not, tens of dollars.
 header:
   og_image: /images/retrospectives/2019/07/whatgotdone-metrics.jpg
 ---
