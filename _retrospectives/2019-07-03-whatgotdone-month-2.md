@@ -70,7 +70,7 @@ This month, I had calls with four different customers considering Zestful for la
 
 * **Pros**
   * Service is already built and has paying customers
-  * Gaps between existing service and what the potential customers want seem small 
+  * Gaps between existing service and what the potential customers want seem small
     * I could probably complete them all in six weeks
 
 * **Cons**
