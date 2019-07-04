@@ -66,9 +66,9 @@ In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the
 
 ## Memory
 
-{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="https://amzn.to/2JaTsMM" %}
+{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="https://amzn.to/30f5KcW" %}
 
-My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://amzn.to/2JaTsMM) because these were the fastest RAM sticks tested compatible with my motherboard.
+My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://amzn.to/30f5KcW) because these were the fastest RAM sticks tested compatible with my motherboard.
 
 ## Disk
 
