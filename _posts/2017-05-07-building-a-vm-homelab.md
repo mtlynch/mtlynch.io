@@ -56,19 +56,19 @@ I ended up going with the [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI). It's 8 cor
 
 ## Motherboard
 
-{% include image.html file="motherboard.png" alt="ASRock AB350M-HDV" max_width="250px" class="align-left" link_url="https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765" %}
+{% include image.html file="motherboard.png" alt="ASRock AB350M-HDV" max_width="250px" class="align-left" link_url="https://amzn.to/30cTkCg" %}
 
 I live in a pretty small 1 BR apartment in Manhattan, so physical space is at a premium. My requirements also obviated a lot of components that typically requires a lot of physical space in a PC, such as disk drives, GPUs, or premium CPU fans.
 
-These requirements led me towards MicroATX motherboards and I ultimately chose the [ASRock AB350M-HDV](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765). I've had good success with ASRock boards in the past and this seemed to be a solid option. I was hesitant about its memory support, as it only has two RAM slots, which means I could install 2x16 GB sticks with no room for expansion. I figured if I ever run out of RAM, 2x32 GB sticks would probably be available by then and I'll just bite the bullet and replace both sticks.
+These requirements led me towards MicroATX motherboards and I ultimately chose the [ASRock AB350M-HDV](https://amzn.to/30cTkCg). I've had good success with ASRock boards in the past and this seemed to be a solid option. I was hesitant about its memory support, as it only has two RAM slots, which means I could install 2x16 GB sticks with no room for expansion. I figured if I ever run out of RAM, 2x32 GB sticks would probably be available by then and I'll just bite the bullet and replace both sticks.
 
 In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the [parts review](#review-motherboard) below).
 
 ## Memory
 
-{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536" %}
+{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="https://amzn.to/2JsJ1Dr" %}
 
-My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536) because these were the fastest RAM sticks tested compatible with my motherboard.
+My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://amzn.to/2JsJ1Dr) because these were the fastest RAM sticks tested compatible with my motherboard.
 
 ## Disk
 
@@ -78,10 +78,10 @@ Like Brian, [I have a NAS]({{ base_path }}/sia-via-docker/) with plenty of space
 
 ## Case
 
-{% include image.html file="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max_width="180px" class="align-right" link_url="http://www.anrdoezrs.net/links/8329872/type/dlg/https://www.newegg.com/Product/Product.aspx?Item=N82E16811147248&cm_re=Rosewill_Micro_ATX_SRM-01-_-11-147-248-_-Product" %}
+{% include image.html file="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max_width="180px" class="align-right" link_url="https://amzn.to/2JcxBEU" %}
 
 {: .clearfix}
-For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](http://www.anrdoezrs.net/links/8329872/type/dlg/https://www.newegg.com/Product/Product.aspx?Item=N82E16811147248&cm_re=Rosewill_Micro_ATX_SRM-01-_-11-147-248-_-Product) is a nice, small, inexpensive, and functional.
+For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](https://amzn.to/2JcxBEU) is a nice, small, inexpensive, and functional.
 
 ## Graphics
 
@@ -104,13 +104,13 @@ Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadc
 | Category | Component |
 |------|-------|
 | CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) |
-| Motherboard | [ASRock AB350M-HDV](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765) |
+| Motherboard | [ASRock AB350M-HDV](https://amzn.to/30cTkCg) |
 | Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) |
-| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](http://www.tkqlhce.com/38102iqzwqyDMHGNMLGDFFMNGHKK?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16820232536%26nm_mc%3DAFC-C8Junction-Storage%26cm_mmc%3DAFC-C8Junction-Storage-_-Memory%2B%28Desktop%2BMemory%29-_-G.SKILL-_-20232536&cjsku=N82E16820232536) |
+| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://amzn.to/2JsJ1Dr) |
 | Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](http://amzn.to/2oVMo9u) |
 | Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](http://amzn.to/2qmwmHO) |
 | Network | [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH) |
-| Case | [Rosewill Micro ATX SRM-01](http://www.anrdoezrs.net/links/8329872/type/dlg/https://www.newegg.com/Product/Product.aspx?Item=N82E16811147248&cm_re=Rosewill_Micro_ATX_SRM-01-_-11-147-248-_-Product) |
+| Case | [Rosewill Micro ATX SRM-01](https://amzn.to/2JcxBEU) |
 | **Total Cost** | **$823.55** |
 
 # Build
@@ -212,7 +212,7 @@ My one regret is that I didn't read the onboard video support carefully enough. 
 
 So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics *only if* you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them, so no onboard graphics for me.
 
-If I did this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](http://www.dpbolvw.net/click-8329872-11892368?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16813145002%26nm_mc%3DAFC-C8Junction-Components%26cm_mmc%3DAFC-C8Junction-Components-_-Motherboards%2B-%2BAMD-_-GIGABYTE-_-13145002&cjsku=N82E16813145002) just for the simplicity of having an onboard GPU.
+If I did this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](https://amzn.to/2Xoms7H) just for the simplicity of having an onboard GPU.
 
 ## Review: RAM
 
