@@ -38,7 +38,7 @@ for url in $shortlinks; do
    )
   if ! echo "$url_effective" | grep $AMAZON_AFFILIATE_ID; then
     echo "ERROR: Amazon URL missing expected" \
-         "affiliate ID (${AMAZON_AFFILIATE_ID}): $url_effective";
+         "affiliate ID (${AMAZON_AFFILIATE_ID}): $url -> $url_effective";
     exit 1;
   fi
 done
