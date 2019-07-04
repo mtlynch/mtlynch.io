@@ -66,9 +66,9 @@ In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the
 
 ## Memory
 
-{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="https://amzn.to/30f5KcW" %}
+{% include image.html file="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max_width="250px" class="align-right" link_url="https://amzn.to/2JsJ1Dr" %}
 
-My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://amzn.to/30f5KcW) because these were the fastest RAM sticks tested compatible with my motherboard.
+My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://amzn.to/2JsJ1Dr) because these were the fastest RAM sticks tested compatible with my motherboard.
 
 ## Disk
 
@@ -106,7 +106,7 @@ Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadc
 | CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) |
 | Motherboard | [ASRock AB350M-HDV](https://amzn.to/30cTkCg) |
 | Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) |
-| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://amzn.to/2Yx6ObF) |
+| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://amzn.to/2JsJ1Dr) |
 | Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](http://amzn.to/2oVMo9u) |
 | Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](http://amzn.to/2qmwmHO) |
 | Network | [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH) |
