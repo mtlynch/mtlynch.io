@@ -1,11 +1,11 @@
 ---
-title: How I Hired a Talented Content Writer (and Fired Twenty)
+title: Why I Fired 10 Content Writers (and Hired a Good One)
 tags:
 - is it keto
 - outsourcing
 ---
 
-For my last project, I interviewed XX writers, hired XX of them, and fired all but one. This process was far more difficult than I expected. Almost every adult can write, so how hard could it be to find someone to write simple articles?
+For my last project, I interviewed 30 writers, hired 10 of them, and fired all but one. This process was far more difficult than I expected. Almost every adult can write, so how hard could it be to find someone to write simple articles?
 
 This process has not made me an expert, but I'm much better than I was. In this post, I'll show you everything I did
 
@@ -15,30 +15,37 @@ This is not a guide for people who want to fill their site with cheap content so
 
 The underlying strategy that defines most of how I hire and work with writers:
 
-* **Good writers are selective about which jobs they take**
+* **Talented people are selective about which jobs they take**
 
-Therefore, you as the clients benefit by creating work conditions for the writer that are fair, pleasant, and interesting.
+When I see articles that recommend forcing writers through a rigorous screening process that includes doing lots of unpaid work, I think, "Sounds like a good way to filter out all the good writers."
 
-I see other people talk about making candidates jump through all these hoops to begin working. They demand that candidates produce unpaid custom content as part of the "interview process." I think all this does is filter out good writers. Think of it from the writer's perspective: why take a job from a client who will be trying to squeeze every ounce of work from you while paying you as little as possible?
-
-Instead, show the writers that you respect and value their craft. Demonstrate this from the first message you send them as part of the hiring process and continue throughout the working relationship.
+Create work conditions that are fair, pleasant, and interesting enough that good writers want to come work for you. Show candidates that you respect and value their craft. This starts from the first message you send and continues throughout the working relationship.
 
 # Create a detailed job description
+
+The first step in finding candidates is defining what kind of writer you want.
+
+Remember the golden rule. A good description shows candidates. It should be clear and organized so that candidates see that you're a professional. It shouldn't be so long and meticulously detailed that you seem like an insane control freak.
 
 * Overview
    * What kind of content will they write?
    * What is the goal of the content?
      * Is it to attract attention to a product? Is it to improve search engine rankings for a keyword? Is it to build a personal or business brand?
+* Requirements
+  * Do they require specialized knowledge?
+  * Should they have particular skills (e.g., writing for SEO, appealing to a certain demographic)?
+* Timing
+  * How many hours per week do you expect them to put in each week?
+  * How quickly must the writer complete assignments?
+* Payment
+  * What method of payment will you use and how quickly can writers expect to receive payment?
+  * Do you need to collect tax information from them? (in the US, you'll need to collect a 1099 from them if you pay them more than $600 per year)
 
 Show examples of what kind of content you want. This can be from your own site or from another site whose content is something you're using as inspiration.
 
 Caveat: When you show writers example articles, they will naturally take those to be the template for what you want. If there are aspects of the examples you don't like, call those out.
 
-* Timing
-  * How many hours per week do you expect them to put in each week?
-  * How quickly must the writer complete assignments?
-
-Remember that freelance writers generally have to juggle multiple clients at once. If you're more flexible about timing, it's easier to find good writers who can fit you into their schedule.
+Remember that freelance writers generally have to juggle multiple clients at once. If you're flexible about timing, it's easier to find good writers who can fit you into their schedule.
 
 * Examples of what you want or don't want (be careful what you wish for because they're going to use it as a template). Be real specific about what you don't like.
 
@@ -46,11 +53,28 @@ https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/
 
 # Finding writers
 
-* Upwork
-* /r/hireawriter
-* Professional referrals
 
-I also posted flyers at a local college, but it only got one response and it was a weak candidate.
+Create a contract.
+
+## Upwork
+
+The advantage to Upwork is that they have a contract built-in that assigns you rights to the work you hire for, so you don't need to create your own contract. They also handle all the billing and taxes, so you don't need to collect tax information from your hires.
+
+The downside is that if you find someone through Upwork, the Upwork Terms of Use requires you to work with them exclusively through Upwork and pay Upwork fees 
+
+The balance of power on Upwork is definitely skewed far in favor of the client. If you're unhappy with the work, you can demand a refund. This may sound good for you, but it also discourages good writers from using the platform because they don't want to be at the mercy of an unprofessional client who's empowered by the skewed platform.
+
+## Professional referrals
+
+
+
+## Flyers
+
+My town of South Hadley is nearby many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus. I received only one serious applicant, and their writing samples were just poorly-written school assignments, so I didn't have much success with this, but I also should have tried additional colleges.
+
+## /r/hireawriter
+
+There's a subreddit dedicated to hiring freelance writers, but I never found anyone
 
 # Pay per hour, pay per word, or pay per piece?
 
@@ -100,7 +124,7 @@ Bad if they make the same mistakes over and over.
 
 Try not to phrase it in a scary "you're about to get fired way" but like:
 
->For the issues we're running into, what would be helpful in reducing those?
+>What can I do to help us reduce these issues?
 
 Here is a real letter I wrote to one of the writers that didn't work out:
 
@@ -127,7 +151,9 @@ You have to work with a lot of writers to find one that you like. And with each 
 In my case, I noticed that I was burning a lot of time fixing grammatical errors for my writers. I thought it was a given that professional writers should use proper grammar, but in fairness, there are plenty of clients who don't care, so writers don't assume that they have to do it. Before seeking more applicants, I adjusted my job description to say that writers needed to use proper grammar. When I had subsequent writers submit content with grammatical errors, it was easier to say, "Hey, a lot of grammar errors are slipping though. Can you use a tool like Grammarly to check your writing before sending it to me?"
 
 * Revise your job description
+* Update your "example pieces"
 * Re-read your style guide
+  * Are there patterns of error that keep coming up that you can cover in your style guide?
 
 ---
 
