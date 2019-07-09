@@ -11,13 +11,15 @@ This process has not made me an expert, but I'm much better than I was. In this 
 
 This is not a guide for people who want to fill their site with cheap content so that they appear highly in search results for particular terms. This guide is for people who care about quality writing and want to work with writers who can produce it.
 
+Throughout, I'm going to show you real examples of what I did.
+
 # The golden rule of hiring
 
 The underlying strategy that defines most of how I hire and work with writers:
 
 * **Talented people are selective about which jobs they take**
 
-When I see articles that recommend forcing writers through a rigorous screening process that includes doing lots of unpaid work, I think, "Sounds like a good way to filter out all the good writers."
+When I see articles that recommend forcing writers through a rigorous screening process that includes demanding unpaid work, I think, "What a brilliant way to filter out all the good writers."
 
 Create work conditions that are fair, pleasant, and interesting enough that good writers want to come work for you. Show candidates that you respect and value their craft. This starts from the first message you send and continues throughout the working relationship.
 
@@ -25,20 +27,23 @@ Create work conditions that are fair, pleasant, and interesting enough that good
 
 The first step in finding candidates is defining what kind of writer you want.
 
-Remember the golden rule. A good description shows candidates. It should be clear and organized so that candidates see that you're a professional. It shouldn't be so long and meticulously detailed that you seem like an insane control freak.
+Remember the golden rule. A good description shows candidates that you're an organized professional who puts thought into what they want. Just be careful to avoid making it meticulously detailed that you come across as an insane control freak.
 
 * Overview
    * What kind of content will they write?
    * What is the goal of the content?
-     * Is it to attract attention to a product? Is it to improve search engine rankings for a keyword? Is it to build a personal or business brand?
+     * Attracting attention to a product?
+     * Improving search engine rankings?
+     * Building a brand?
 * Requirements
-  * Do they require specialized knowledge?
+  * Does the writer need specialized knowledge in a particular field of study (e.g., medical writing, financial writing)?
   * Should they have particular skills (e.g., writing for SEO, appealing to a certain demographic)?
 * Timing
   * How many hours per week do you expect them to put in each week?
-  * How quickly must the writer complete assignments?
+  * How quickly must the writer complete work after they receive an assignment?
 * Payment
-  * What method of payment will you use and how quickly can writers expect to receive payment?
+  * What method of payment will you use?
+  * How quickly can writers expect payment?
   * Do you need to collect tax information from them? (in the US, you'll need to collect a 1099 from them if you pay them more than $600 per year)
 
 Show examples of what kind of content you want. This can be from your own site or from another site whose content is something you're using as inspiration.
@@ -56,7 +61,7 @@ https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/
 
 Create a contract.
 
-## Upwork
+### Upwork
 
 The advantage to Upwork is that they have a contract built-in that assigns you rights to the work you hire for, so you don't need to create your own contract. They also handle all the billing and taxes, so you don't need to collect tax information from your hires.
 
@@ -64,15 +69,19 @@ The downside is that if you find someone through Upwork, the Upwork Terms of Use
 
 The balance of power on Upwork is definitely skewed far in favor of the client. If you're unhappy with the work, you can demand a refund. This may sound good for you, but it also discourages good writers from using the platform because they don't want to be at the mercy of an unprofessional client who's empowered by the skewed platform.
 
-## Professional referrals
+### Personal referrals
 
+Most of my friends from college have liberal arts degrees, so they know writers. I didn't want the perilous complexity of hiring personal friends, but I asked them if they knew of writers.
 
+Depending on who referred them, it can cause bad blood if you hire them and unceremoniously fire them after their first piece. If you just choose not to hire someone, that's not usually a big deal. If you hire someone and then immediately fire them because you don't like their work, that can cause bad blood between you and whoever referred them. You can get out of hiring something by saying something complimentary and vague, like, "Your writing is good, but it doesn't match the style I had in mind."
 
-## Flyers
+I only found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. However, I ran into issues with both of them because they missed deadlines and communicated poorly. Oddly, while most writers took a while to write according to my style guide, both the writers I hired through referrals matched the style guide closely on their first article. But then instead of getting better at it, they repeated the same mistakes or started making new ones. My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
+
+### Printed flyers
 
 My town of South Hadley is nearby many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus. I received only one serious applicant, and their writing samples were just poorly-written school assignments, so I didn't have much success with this, but I also should have tried additional colleges.
 
-## /r/hireawriter
+### /r/hireawriter
 
 There's a subreddit dedicated to hiring freelance writers, but I never found anyone
 
@@ -90,15 +99,42 @@ One of my writers told me that she clocks out when she gets up to use the bathro
 
 Invest time in screening. When you invite people to apply, mention specifics about their stuff.
 
-# Evaluating candidates
+# Choosing a candidate
 
 Don't hope that you can fix bad writers. They're going to stay the same.
+
+Red flags:
+
+* They ask questions that you've already answered
+* They send you a generic form letter
+* As you read their writing samples, you feel bored or struggle to pay attention
+
+Good signs:
+
+* They ask good probing questions
+* They express genuine in the job
+
+If it seems like the average college graduate could produce the article without any research or introspection, that's a bad sign.
+
+# Beware of fluff factories
+
+You'll recognize it if it sounds like you're reading a book report from a fifth grader who forgot to do the reading.
+
+To avoid picking on any candidate, I made up the example below, but it is alarmingly similar to many of the writing samples I saw during hiring:
+
+>Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
+>
+>But fitness won’t just happen. You have to work for it. The first step is making a commitment that will force you to keep a regular gym habit. It can be a pact with a friend or sessions with a personal trainer. Anything that will keep your butt off the couch!
+>
+>Don’t overdo it either! Many people start working out and push themselves past their limits and receive injury. Make sure to know your limits and always stay hydrated.
 
 # Use a style guide to enforce consistency
 
 https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.qwnjmopyhpr6
 
 Make it a Google Doc or a wiki where there's a single, authoritative copy of it. If the style guide is in an email or a Word Document, it's hard to update and ensure that everyone's working from the same copy.
+
+You shouldn't try to cover everything in the English language. Just the things that come up frequently for your site. For example, Is It Keto was about the keto diet, so my style guide had detailed instructions on how to format measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
 
 You can create this
 
@@ -110,9 +146,24 @@ Pay writers to learn the style guide. If you show
 
 # Agree on an editing workflow
 
+You've hired a writer and created a style guide. Now, they need to start writing for you. But a lot has to happen between them writing the first draft and you publishing their content.
+
+Here's the editing workflow I used with writers for Is It Keto:
+
+1. I create a Google Doc with the template of an article. (TODO: show example)
+1. I share the Google Doc with the writer and ask them to fill in the template.
+1. Writer emails me to let me know when they have a draft ready for me to review.
+1. I add margin comments to the Google Doc and make inline edits in "Suggesting" mode.
+1. I email the writer to let them know when my edits are complete.
+1. Repeat steps 3-5 until the article is ready to publish.
+
+There will be bumps. Every workflow is different. I ran into a recurring issue with one of my writers where I'd make an inline edit to improve her phrasing. She'd see it pop up as a suggestion and, rather than accepting the suggestion, she'd revise it to something else. This was frustrating because I was ready to publish the version I suggested and then she changed it to something else I didn't like. Finally, I asked her what she was doing and it turned out that she was afraid I'd think she was lazy if she just took my suggestion and did nothing else.
+
+Minimize the rounds of review. Look for patterns that are coming up and see if you can put these into 
+
 Instance where I would suggest an edit and she would make more edits.
 
-# The first few drafts
+# Evaluating their first few drafts
 
 This is where the interview really begins.
 
@@ -120,11 +171,15 @@ This is where the interview really begins.
 
 Bad if they make the same mistakes over and over.
 
+Start small and easy and work your way up to harder pieces.
+
+Try to put corrections in your style guide first. Then, send a link. In the likely even that you end up working with another writer, you don't have to go through this process again.
+
 # Gracefully terminating bad hires
 
 Try not to phrase it in a scary "you're about to get fired way" but like:
 
->What can I do to help us reduce these issues?
+>What can I do to help reduce these issues?
 
 Here is a real letter I wrote to one of the writers that didn't work out:
 
@@ -134,7 +189,7 @@ Here is a real letter I wrote to one of the writers that didn't work out:
 >
 >I appreciate all your work and wish you the best going forward.
 
-And then here is probably my harshest one:
+And this one is my harshest:
 
 >That's twice in a row that you promised work by a certain date and didn't deliver or give an update, so I'm afraid I need to end our relationship here.
 >
@@ -142,7 +197,13 @@ And then here is probably my harshest one:
 >
 >Best of luck in the future.
 
+* Stick to objective facts
+* Focus on the writing rather than the person
+* Avoid injecting insults or negative personal feelings about their work
+
 # Meet regularly in person or on video chat
+
+Morgan has a blind spot for passive voice and I have a high sensitivity for it. She would often submit work using the passive voice and it would frustrate me to no end. "Why doesn't she care enough to observe this rule?" But when we met over video chat, it was immediately obvious that she cared deeply about the quality of the work, and the passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, don't have, any idea what she's talking, about.
 
 # Do it all over again
 
