@@ -83,7 +83,44 @@ My town of South Hadley is nearby many liberal arts colleges. I thought maybe I 
 
 ### /r/hireawriter
 
-There's a subreddit dedicated to hiring freelance writers, but I never found anyone
+There's a subreddit dedicated to hiring freelance writers. I checked it a few times but never found anyone that seemed like a promising candidate.
+
+# Screening writers
+
+Obviously, you're not going to hire every writer you find. You need a way to evaluate candidates based on their profile. You don't have much information to go on.
+
+Some guides recommend asking writers to produce a custom sample for you where you buy it if you like it, but "let them keep it" and pay them nothing if it's not what you're looking for. I don't do this, because it violates the golden rule. I think top-tier writers are uninterested in spending hours on an assignment they'd only *maybe* receive payment for.
+
+### Bio
+
+In most places you find a writer.
+
+This is purely the writer talking. In their writing samples, they often don't have control over the topics they write about or their style. The bio is purely theirs, so it's the most pure sample you can get of their writing.
+
+For me, spelling or grammar errors in the bio are an automatic no-hire. If they can't get their grammar correct in their bio, they're never going to get it right in the work they do for me.
+
+Red flags:
+
+* Grammar errors
+* Spelling errors
+* Convoluted language
+* Confusing phrasing
+
+### Writing samples
+
+As with the bio, read the writing sample aloud.
+
+It's harder to judge quality in the writing samples. If they have a good piece, maybe it's because they wrote garbage and the publication's editor cleaned it up. Conversely, if the article feels boring and convoluted, it could be because the client asked for a 2,000 word article about a topic that should have taken 500 words.
+
+When I read the writing samples, I'm looking for writing that's extremely good or extremely bad. I can reject extremely bad writing. If the writing samples are so-so, I'll reach out to the candidate and say that I'm interested and ask if they have a writing sample that matches what I'm looking for.
+
+### Reviews
+
+Sites like Upwork keep reviews for each freelancer. I'm not sure if there's fraud happening or if everyone's just a much softer reviewer than I am, but reviews don't seem to correlate with quality. Several writers I hired had perfect five-star ratings from dozens of reviews, and then they turned in work
+
+ I haven't found these to be particularly valuable. There's an unfortunate trend on sites like Upwork where people generally give a perfect score to indicate There are too many low-quality blogs hiring people to produce any English, and they give five-star reviews for all work.
+
+Negative reviews are a stronger signal. If it's just one or two clients who are upset, but their reviews are otherwise good, it's not a big deal. Some clients are just jerks and have unreasonable expectations of freelancers.
 
 # Pay per hour, pay per word, or pay per piece?
 
