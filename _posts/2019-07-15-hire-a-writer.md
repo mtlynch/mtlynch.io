@@ -1,5 +1,5 @@
 ---
-title: Why I Fired 10 Content Writers (and Hired a Good One)
+title: "Hiring Content Writers: A Guide for Small Businesses"
 tags:
 - is it keto
 - outsourcing
@@ -76,7 +76,7 @@ One of my writers told me that she clocks out when she gets up to use the bathro
 
 # Finding writers
 
-
+Content writers vs. copywriters.
 
 ### Upwork
 
@@ -107,6 +107,8 @@ There's a subreddit dedicated to hiring freelance writers. I checked it a few ti
 Obviously, you're not going to hire every writer you find. You need a way to evaluate candidates based on their profile. You don't have much information to go on.
 
 Some guides recommend asking writers to produce a custom sample for you where you buy it if you like it, but "let them keep it" and pay them nothing if it's not what you're looking for. I don't do this, because it violates my fundamental hiring principle. I think top-tier writers are uninterested in spending hours on an assignment they'd only *maybe* receive payment for.
+
+Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
 
 ### Bio
 
@@ -139,38 +141,7 @@ Sites like Upwork keep reviews for each freelancer. In my experience, reviews ha
 
 Negative reviews are a stronger signal. If it's just one or two clients who are upset, but their reviews are otherwise good, it's not a big deal. Some clients are just jerks and have unreasonable expectations of freelancers.
 
-# Inviting freelancers to apply
-
-Invest time in screening. When you invite people to apply, mention specifics about their stuff.
-
-Be clear that you're not offering them a job right off the bat. You want to get a little bit more information from them before you make a formal offer.
-
-# Choosing a candidate
-
-One trap I fell into was thinking, "Oh, their writing is rough, but I can probably coach them to improve it." This never worked. Writing is a skill that improves slowly. If they're a professional writer, and they produce D-grade writing, they'll remain a D-grade writer for years to come.
-
-You don't need to hire Jane Austen to write for your blog. Unless you're willing to pay $150+ per hour, you're not going to get the cream of the crop no matter how picky you are.
-
-| Signs of a bad candidate | Signs of a good candidate |
-|--------------------------|---------------------------|
-| They ask questions that you already answered in your invitation letter or job description. | They demonstrate that they've spent time learning about your project. |
-| They respond to your personalized invitation with a generic form letter. | They express genuine interest and enthusiasm about your project. |
-|
-
-Red flags:
-
-* They ask questions that you've already answered
-* They send you a generic form letter
-* As you read their writing samples, you feel bored or struggle to pay attention
-
-Good signs:
-
-* They ask good probing questions
-* They express genuine in the job
-
-If it seems like the average college graduate could produce the article without any research or introspection, that's a bad sign.
-
-# Beware of fluff factories
+# Steer clear of fluff factories
 
 You'll recognize it if it sounds like you're reading a book report from a fifth grader who forgot to do the reading.
 
@@ -182,6 +153,37 @@ To avoid picking on any candidate, I made up the example below, but it is alarmi
 >
 >Don’t overdo it either! Many people start working out and push themselves past their limits and receive injury. Make sure to know your limits and always stay hydrated.
 
+Signs of a fluff factory:
+
+* The writing feels desperate to be interesting with lots of hyperbole, ALL CAPS, and exclamation points
+* There are entire paragraphs that have no information that the average person wouldn't already know
+
+# Inviting freelancers to apply
+
+Invest time in screening. When you invite people to apply, mention specifics about their stuff.
+
+Be clear that you're not offering them a job right off the bat. You want to get a little bit more information from them before you make a formal offer.
+
+# Interviewing candidates
+
+The *real* interview begins I hire the writer. I can't really tell how well we work together and how accurately the freelancer can produce the writing I want until we've worked together on two or three pieces.
+
+When I interview candidates
+
+| Signs of a <font color="red">bad</font> candidate | Signs of a <font color="green">good</font> candidate |
+|--------------------------|---------------------------|
+| They ask questions that you already answered in your invitation letter or job description. | They demonstrate that they've spent time learning about your project. |
+| They respond to your personalized invitation with a generic form letter. | They express genuine interest and enthusiasm about your project. |
+| Their questions to you are ambiguous or poorly-worded.
+
+# Choosing a candidate
+
+One trap I fell into was thinking, "Oh, their writing is rough, but I can probably coach them to improve it." This never worked. Writing is a skill that improves slowly. If they're a professional writer, and they produce D-grade writing, they'll remain a D-grade writer for years to come.
+
+You don't need to hire Jane Austen to write for your blog. Unless you're willing to pay $150+ per hour, you're not going to get the cream of the crop no matter how picky you are.
+
+You can hire multiple candidates at once.
+
 # Create a contract
 
 When you hire a writer to create content for you, there are several types of agreements you can have. You might license content from them, so they can still use it elsewhere but you have the right to publish it yourself.
@@ -190,10 +192,9 @@ Here's a [good template](https://medium.com/@jyssicaschwartz/have-a-free-freelan
 
 If you're using a freelancing service, they likely have a default contract. For example, Upwork's [default contract](https://www.upwork.com/legal#optional-service-contract-terms) assigns all intellectual property rights to the client.
 
-
 # Use a style guide to enforce consistency
 
-https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.qwnjmopyhpr6
+[TODO: Link to image](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.qwnjmopyhpr6)
 
 Make it a Google Doc or a wiki where there's a single, authoritative copy of it. If the style guide is in an email or a Word Document, it's hard to update and ensure that everyone's working from the same copy.
 
@@ -225,6 +226,12 @@ There will be bumps. Every workflow is different. I ran into a recurring issue w
 Minimize the rounds of review. Look for patterns that are coming up and see if you can put these into 
 
 Instance where I would suggest an edit and she would make more edits.
+
+# Start small and easy
+
+When I began hiring freelancers, I assigned them to write three different articles and email me when they were done. And then every time, they made the same mistakes on each article.
+
+Instead, start with just one. The freelancer's first attempts will be bad. You want to pay for that once and not three times.
 
 # Evaluating their first few drafts
 
@@ -264,11 +271,13 @@ And this one is my harshest:
 * Focus on the writing rather than the person
 * Avoid injecting insults or negative personal feelings about their work
 
+If you're on a platform like Upwork, you especially want to avoid acrimonious terminations because then the client will write you a review that says you're an unreasonable client and you'll make it harder on yourself to hire freelancers in the future.
+
 # Meet regularly in person or on video chat
 
 Morgan has a blind spot for passive voice and I have a high sensitivity for it. She would often submit work using the passive voice and it would frustrate me to no end. "Why doesn't she care enough to observe this rule?" But when we met over video chat, it was immediately obvious that she cared deeply about the quality of the work, and the passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, don't have, any idea what she's talking, about.
 
-Be open. Ask if there's anything about the workflow that makes it harder for them to do their best work. Is there anything you can do. The worst thing is for 
+Be open. Ask if there's anything about the workflow that makes it harder for them to do their best work. Is there anything you can do. The worst thing is for your freelancer doing unnecessary work because they mistakenly thought you wanted it that way.
 
 # Invest in good writers
 
