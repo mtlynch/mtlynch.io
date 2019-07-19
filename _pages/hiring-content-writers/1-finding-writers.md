@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part 1 - Finding Writers"
+title: "Hiring a Content Writer: Part One - Finding and Evaluating Writers"
 layout: single
 author_profile: true
 sidebar:
@@ -10,7 +10,50 @@ read_time: true
 hide_signup: false
 ---
 
-# Understand what kind of a writer you want
+* [Overview: Hiring Content Writers: A Small Business Guide](/hiring-content-writers/)
+* Part One: Finding and Evaluating Writers (this section)
+* [Part Two: Working with Writers](/hiring-content-writers/2-working-with-writers/)
+* [Part Three: Terminating Writers](/hiring-content-writers/3-terminating-writers/)
+
+---
+
+The first step in hiring a writer is finding and interviewing them. In this section, I cover:
+
+* Creating a clear job description
+* Places to find professional writers
+* Screening writers to avoid bad hires
+
+# Where to look
+
+### Upwork
+
+The advantage to Upwork is that they have a contract built-in that assigns you rights to the work you hire for, so you don't need to create your own contract. They also handle all the billing and taxes, so you don't need to collect tax information from your hires.
+
+The downside is that if you find someone through Upwork, the Upwork Terms of Use requires you to work with them exclusively through Upwork and pay Upwork fees 
+
+The balance of power on Upwork is definitely skewed far in favor of the client. If you're unhappy with the work, you can demand a refund. This may sound good for you, but it also discourages good writers from using the platform because they don't want to be at the mercy of an unprofessional client who's empowered by the skewed platform.
+
+### Personal referrals
+
+Most of my friends from college have liberal arts degrees, so they know writers. I didn't want the perilous complexity of hiring personal friends in case things go south, but I felt comfortable hiring friends of friends.
+
+With personal referrals, it's important to screen more heavily before you hire them. Depending on who referred them, it can cause bad blood if you hire them and unceremoniously fire them after their first piece. If you just choose not to hire someone, that's not usually a big deal. If you hire someone and then immediately fire them because you don't like their work, that can cause bad blood between you and whoever referred them. You can get out of hiring something by saying something complimentary and vague, like, "Your writing is good, but it doesn't match the style I had in mind."
+
+I only found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among the most expensive hires: one charged $50/hr and the other charged $60/hr. However, I ran into issues with both of them because they missed deadlines and communicated poorly. Oddly, while most writers took a while to write according to my style guide, both the writers I hired through referrals matched the style guide closely on their first article. But then instead of getting better at it, they repeated the same mistakes or started making new ones. My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
+
+### Printed flyers
+
+I live in South Hadley, MA, which is nearby many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus.
+
+{% include image.html file="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" max_width="400px" class="img-border" img_link=true fig_caption="Job flyer I made for Is It Keto using a template from Canva" %}
+
+I received only one serious applicant, and their writing samples were just poorly-written school assignments, so I didn't have much success with this, but I also should have tried additional colleges.
+
+### /r/hireawriter
+
+There's a subreddit dedicated to hiring freelance writers. I checked it a few times but never found anyone that seemed like a promising candidate. I get the sense that it's geared more toward people who want to hire cheap writers to power their spam blogs.
+
+# Copywriters vs. content writers
 
 When you begin searching for writers, you'll find that there are two main categories of writers: **content writers** and **copywriters**.
 
@@ -52,7 +95,7 @@ Here are the important things to cover in the job description:
   * Link to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
   * You can also link to counter-examples of writing you don't like.
-    * Again, say what you dislike about it.
+    * What aspects of the counter-examples should writers avoid?
 
 Here's the job description I used for Is It Keto:
 
@@ -82,41 +125,17 @@ One very bad reason to avoid paying people per hour is that it's "too expensive.
 
 Another big reason I avoid paying per word is that I wanted concise writing. If I'm paying per word, it encourages writers to include a lot of fluff content that doesn't teach the reader anything.
 
+Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They get paid more if the piece takes longer and requires more revisions, so why would they bother doing a good job? I think this is silly. In my experience, talented people do good work if you allow them to. If you start imposing financial penalties like withholding their pay until they do an unbounded number of unpaid revisions for you, it creates an adversarial relationship between you and your writer.
+
 There are several 
 
 Good writers want to produce good writing
 
-Assumes that writers are lazy, so you need to impose financial penalties on them to prevent that (i.e., withhold their pay until the article is completed to your satisfaction).
-
 One of my writers told me that she clocks out when she gets up to use the bathroom or get a drink of water and I told her that was crazy.  If someone is producing good work for me, I don't care if they spent an hour writing the article or they took a walk to clear their head for forty minutes, then wrote the article in twenty. In my experience, if you show people that you trust them to do good work and be honest, they'll do it.
 
-# Finding writers
-
-### Upwork
-
-The advantage to Upwork is that they have a contract built-in that assigns you rights to the work you hire for, so you don't need to create your own contract. They also handle all the billing and taxes, so you don't need to collect tax information from your hires.
-
-The downside is that if you find someone through Upwork, the Upwork Terms of Use requires you to work with them exclusively through Upwork and pay Upwork fees 
-
-The balance of power on Upwork is definitely skewed far in favor of the client. If you're unhappy with the work, you can demand a refund. This may sound good for you, but it also discourages good writers from using the platform because they don't want to be at the mercy of an unprofessional client who's empowered by the skewed platform.
-
-### Personal referrals
-
-Most of my friends from college have liberal arts degrees, so they know writers. I didn't want the perilous complexity of hiring personal friends in case things go south, but I felt comfortable hiring friends of friends.
-
-With personal referrals, it's important to screen more heavily before you hire them. Depending on who referred them, it can cause bad blood if you hire them and unceremoniously fire them after their first piece. If you just choose not to hire someone, that's not usually a big deal. If you hire someone and then immediately fire them because you don't like their work, that can cause bad blood between you and whoever referred them. You can get out of hiring something by saying something complimentary and vague, like, "Your writing is good, but it doesn't match the style I had in mind."
-
-I only found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among the most expensive hires: one charged $50/hr and the other charged $60/hr. However, I ran into issues with both of them because they missed deadlines and communicated poorly. Oddly, while most writers took a while to write according to my style guide, both the writers I hired through referrals matched the style guide closely on their first article. But then instead of getting better at it, they repeated the same mistakes or started making new ones. My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
-
-### Printed flyers
-
-I live in South Hadley, which is nearby many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus. I received only one serious applicant, and their writing samples were just poorly-written school assignments, so I didn't have much success with this, but I also should have tried additional colleges.
-
-### /r/hireawriter
-
-There's a subreddit dedicated to hiring freelance writers. I checked it a few times but never found anyone that seemed like a promising candidate. I get the sense that it's geared more toward people who want to hire cheap writers to power their spam blogs.
-
 # Selecting writers to invite
+
+TODO: Show Morgan Province's profile
 
 Obviously, you're not going to hire every writer you find. You need a way to evaluate candidates based on their profile. You don't have much information to go on.
 
@@ -172,7 +191,15 @@ Signs of a fluff factory:
 * The writing feels desperate to be interesting with lots of hyperbole, ALL CAPS, and exclamation points
 * There are entire paragraphs that have no information that the average person wouldn't already know
 
+# Resist the temptation to "fix" bad writers
+
+One trap I fell into was, "Oh, their writing is rough, but I can probably coach them to improve it." This never worked. 
+
+Writing improves slowly. If they're a professional writer, and they produce D-grade writing, they'll remain a D-grade writer for years to come. Remember that when you see an enthusiastic but mediocre writer offering to work at bargain basement rates.
+
 # Inviting freelancers to apply
+
+Why does the writer want to work for you?
 
 Invest time in screening. When you invite people to apply, mention specifics about their stuff.
 
@@ -192,8 +219,6 @@ When I interview candidates
 
 # Choosing a candidate
 
-One trap I fell into was thinking, "Oh, their writing is rough, but I can probably coach them to improve it." This never worked. Writing is a skill that improves slowly. If they're a professional writer, and they produce D-grade writing, they'll remain a D-grade writer for years to come.
-
 You don't need to hire Jane Austen to write for your blog. Unless you're willing to pay $150+ per hour, you're not going to get the cream of the crop no matter how picky you are.
 
 You can hire multiple candidates at once.
@@ -202,4 +227,4 @@ You can hire multiple candidates at once.
 
 Now that you've chosen a candidate:
 
-* [Hiring a Content Writer: Part 2 - Working with Writers](/hiring-content-writers/2-working-with-writers/)
+* [Part Two - Working with Writers](/hiring-content-writers/2-working-with-writers/)

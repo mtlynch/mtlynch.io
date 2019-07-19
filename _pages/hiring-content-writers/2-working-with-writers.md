@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part 2 - Working with Writers"
+title: "Hiring a Content Writer: Part Two - Working with Writers"
 layout: single
 author_profile: true
 sidebar:
@@ -61,6 +61,8 @@ When I began hiring freelancers, I assigned them to write three different articl
 
 Instead, start with just one. The freelancer's first attempts will be bad. You want to pay for that once and not three times.
 
+# Timebox
+
 # Evaluating their first few drafts
 
 This is where the interview really begins.
@@ -72,6 +74,10 @@ Bad if they make the same mistakes over and over.
 Start small and easy and work your way up to harder pieces.
 
 Try to put corrections in your style guide first. Then, send a link. In the likely even that you end up working with another writer, you don't have to go through this process again.
+
+# Giving tactful feedback
+
+You stand out as a client simply by not being a jerk.
 
 # Decide to stick or bail
 
@@ -95,4 +101,4 @@ If you made it this far, congratulations! It's difficult to find good writers. U
 
 Now that you've chosen a candidate:
 
-* [Part 3 - Terminating Writers](/hiring-content-writers/3-terminating-writers/)
+* [Part Three - Terminating Writers](/hiring-content-writers/3-terminating-writers/)
