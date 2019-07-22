@@ -10,7 +10,7 @@ read_time: true
 hide_signup: false
 ---
 
-* [Overview: Hiring Content Writers: A Small Business Guide](/hiring-content-writers/)
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
 * Part One: Finding and Evaluating Writers (this section)
 * [Part Two: Working with Writers](/hiring-content-writers/2-working-with-writers/)
 * [Part Three: Terminating Writers](/hiring-content-writers/3-terminating-writers/)
@@ -19,55 +19,75 @@ hide_signup: false
 
 The first step in hiring a writer is finding and interviewing them. In this section, I cover:
 
+* Locating freelance writers
 * Creating a clear job description
-* Places to find professional writers
 * Screening writers to avoid bad hires
 
 # Where to look
 
+There are thousands of working freelance writers in the world, but if you've never hired one before, you don't know where to find them. In this section, I describe the places where I sought writers with varying levels of success.
+
 ### Upwork
 
-The advantage to Upwork is that they have a contract built-in that assigns you rights to the work you hire for, so you don't need to create your own contract. They also handle all the billing and taxes, so you don't need to collect tax information from your hires.
+Upwork is a marketplace for freelancers that I've written about before (TODO: link). It's always been a klunky, unstable site, and they recently instituted a ridiculous fee hike.
 
-The downside is that if you find someone through Upwork, the Upwork Terms of Use requires you to work with them exclusively through Upwork and pay Upwork fees 
+Still, I think Upwork is your best option if you're hiring writers for the first time.
 
-The balance of power on Upwork is definitely skewed far in favor of the client. If you're unhappy with the work, you can demand a refund. This may sound good for you, but it also discourages good writers from using the platform because they don't want to be at the mercy of an unprofessional client who's empowered by the skewed platform.
+**Advantages**
+
+* There are many writers in one place, so you have to do less searching around.
+* Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
+* Upwork has a built-in escrow service so you're protected from getting ripped off.
+  * Their escrow system also notoriously skewed to favor clients over freelancers.
+* Upwork handles all tax reporting, so you don't need to collect tax information from your freelancer.
+* Upwork's default contract assigns the client the rights to all intellectual property created during the contract.
+
+**Disadvantages**
+
+* Upwork collects fees from both the client and freelancer, effectively making it XX% more expensive to hire someone.
+* Once you begin working with someone through Upwork, you're contractually bound to pay them exclusively through Upwork (including Upwork fees) for two years.
+* Too many clients abuse the escrow system, which has driven many talented writers away from the platform.
+* Upwork [fails to eliminate phony freelancers](/upwork-scammer/) from its platform.
+
+Upwork was where I found my best writer, but I did paid trials with seven others before I found her.
 
 ### Personal referrals
 
-Most of my friends from college have liberal arts degrees, so they know writers. I didn't want the perilous complexity of hiring personal friends in case things go south, but I felt comfortable hiring friends of friends.
+The nice thing about writers is that their work is highly visible, so people tend to be aware of the writers in their social or professional networks. Careful to avoid the pitfalls of hiring a personal friend, I asked my writer friends for recommendations of freelance writers available for work.
 
-With personal referrals, it's important to screen more heavily before you hire them. Depending on who referred them, it can cause bad blood if you hire them and unceremoniously fire them after their first piece. If you just choose not to hire someone, that's not usually a big deal. If you hire someone and then immediately fire them because you don't like their work, that can cause bad blood between you and whoever referred them. You can get out of hiring something by saying something complimentary and vague, like, "Your writing is good, but it doesn't match the style I had in mind."
+I only found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among my most expensive hires at $50/hr and $60/hr.
 
-I only found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among the most expensive hires: one charged $50/hr and the other charged $60/hr. However, I ran into issues with both of them because they missed deadlines and communicated poorly. Oddly, while most writers took a while to write according to my style guide, both the writers I hired through referrals matched the style guide closely on their first article. But then instead of getting better at it, they repeated the same mistakes or started making new ones. My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
+Oddly, they were also the writers that created the most logistical problems. With both of them, there were a high number of miscommunications and missed deadlines. They also seemed to be less flexible than other writers in general. They were good at matching my style guide in their first draft, but any mistakes they made, they kept repeating in future drafts and revisions.
+
+My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
 
 ### Printed flyers
 
-I live in South Hadley, MA, which is nearby many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus.
+I live in South Hadley, MA, which is located close to many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus.
 
 {% include image.html file="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" max_width="400px" class="img-border" img_link=true fig_caption="Job flyer I made for Is It Keto using a template from Canva" %}
 
-I received only one serious applicant, and their writing samples were just poorly-written school assignments, so I didn't have much success with this, but I also should have tried additional colleges.
+I received only one serious applicant, and their writing samples were just poorly-written school assignments, so we never even got to the point of a paid trial.
 
-### /r/hireawriter
+Despite the poor results, I feel like I should have put more effort in here and tried additional colleges. It's impractical for most clients to physically put up fliers at high-quality liberal arts schools, so it might provide access to high-quality writers that nobody else is reaching.
 
-There's a subreddit dedicated to hiring freelance writers. I checked it a few times but never found anyone that seemed like a promising candidate. I get the sense that it's geared more toward people who want to hire cheap writers to power their spam blogs.
+### /r/HireaWriter/
+
+A few times throughout my project, I checked the [/r/HireaWriter/](https://www.reddit.com/r/HireaWriter/) for possible candidates. None of the writers seeking work seemed promising enough to even invite to an interview. The subreddit seems geared toward clients with cheap spam blogs.
 
 # Copywriters vs. content writers
 
 When you begin searching for writers, you'll find that there are two main categories of writers: **content writers** and **copywriters**.
 
-Copywriters write content that aims to compel the reader to perform an action. For example, if you're selling a subscription to your business and you want content on your site that explains why the visitor should buy it, you want a copywriter. Copywriters create text for a sales site and promotional emails.
+**Copywriters** write text that compels the reader to perform some action, such as buying a product or subscribing to a newsletter. They write copy for advertisements, product pages, and promotional emails.
 
-Content writers create content that's meant to inform or entertain. Content writers write articles, blog posts, and books.
+**Content writers** write text that informs or entertains. Content writers write articles, blog posts, and books.
 
 For It It Keto, I needed a content writer, so that's why this guide focuses on content writers.
 
 # Create a detailed job description
 
-I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. That way, I don't have to worry about where I posted what version of my job description.
-
-A good description shows candidates that you're an organized professional who puts thought into what they want. Just be careful to avoid making it meticulously detailed that you come across as an insane control freak.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also helps applicants decide if they're a good fit for the job so they can . Lastly, it helps you select candidates. If you write a thorough job description and they ask you questions that make it obvious they haven't read it, that's a good way to filter out bad candidates.
 
 Here are the important things to cover in the job description:
 
@@ -96,6 +116,8 @@ Here are the important things to cover in the job description:
     * Be specific about what you like about the examples.
   * You can also link to counter-examples of writing you don't like.
     * What aspects of the counter-examples should writers avoid?
+
+I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without ever worrying about who has which version of my document.
 
 Here's the job description I used for Is It Keto:
 
@@ -142,6 +164,10 @@ Obviously, you're not going to hire every writer you find. You need a way to eva
 Some guides recommend asking writers to produce a custom sample for you where you buy it if you like it, but "let them keep it" and pay them nothing if it's not what you're looking for. I don't do this, because it violates my fundamental hiring principle. I think top-tier writers are uninterested in spending hours on an assignment they'd only *maybe* receive payment for.
 
 Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
+
+### Hourly rate
+
+It's natural to assume that a $60/hr writer is substantially better than a $30/hr writer, but I found this not to be the case. The rate that writers billed seemed unrelated to the quality of their writing. In particular, the best writer I found was also the one who charged the lowest rate ($20/hr).
 
 ### Bio
 
@@ -228,3 +254,7 @@ You can hire multiple candidates at once.
 Now that you've chosen a candidate:
 
 * [Part Two - Working with Writers](/hiring-content-writers/2-working-with-writers/)
+
+---
+
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to Morgan Province for providing feedback for this article.*
