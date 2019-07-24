@@ -1,11 +1,11 @@
 ---
-title: "Hiring a Content Writer: Part Two - Working with Writers"
+title: "Hiring a Content Writer: Part Three - Working with Writers"
 layout: single
 author_profile: true
 sidebar:
   nav: main
 classes: wide
-permalink: "/hiring-content-writers/2-working-with-writers/"
+permalink: "/hiring-content-writers/3-working-with-writers/"
 read_time: true
 hide_signup: false
 ---
@@ -97,8 +97,12 @@ If you made it this far, congratulations! It's difficult to find good writers. U
 
 * I sent *The Elements of Style* (aka *Strunk and White*)
 
+# Pay promptly
+
+See whopayswriters.com. One of the biggest factors in writers' experience with clients is promptness of pay.
+
 # Terminating writers
 
 Now that you've chosen a candidate:
 
-* [Part Three - Terminating Writers](/hiring-content-writers/3-terminating-writers/)
+* [Part Four - Terminating Writers](/hiring-content-writers/4-terminating-writers/)

@@ -31,17 +31,21 @@ When I see articles that recommend forcing writers through a rigorous and unpaid
 
 Create work conditions that are fair, pleasant, and interesting enough that good writers want to come work for you. Show candidates that you respect and value their craft. This starts from the first message you send and continues throughout the working relationship.
 
-# Part 1: Finding Writers
+# Part One: Finding Writers
 
 [Read more](/hiring-content-writers/1-finding-writers/)
 
-# Part 2: Working with Writers
+# Part Two: Screening Writing Candidates
 
-[Read more](/hiring-content-writers/2-working-with-writers/)
+[Read more](/hiring-content-writers/2-screening-writers/)
 
-# Part 3: Terminating Writers
+# Part Three: Working with Writers
 
-[Read more](/hiring-content-writers/3-terminating-writers/)
+[Read more](/hiring-content-writers/3-working-with-writers/)
+
+# Part Four: Terminating Writers
+
+[Read more](/hiring-content-writers/4-terminating-writers/)
 
 
 ---
