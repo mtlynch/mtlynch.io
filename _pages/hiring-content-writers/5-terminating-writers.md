@@ -1,11 +1,11 @@
 ---
-title: "Hiring a Content Writer: Part Four - Terminating Writers"
+title: "Hiring a Content Writer: Part Five - Terminating Writers"
 layout: single
 author_profile: true
 sidebar:
   nav: main
 classes: wide
-permalink: "/hiring-content-writers/4-terminating-writers/"
+permalink: "/hiring-content-writers/5-terminating-writers/"
 read_time: true
 hide_signup: false
 ---

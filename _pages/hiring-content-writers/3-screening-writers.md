@@ -1,11 +1,11 @@
 ---
-title: "Hiring a Content Writer: Part Two - Screening Writing Candidates"
+title: "Hiring a Content Writer: Part Three - Screening Writing Candidates"
 layout: single
 author_profile: true
 sidebar:
   nav: main
 classes: wide
-permalink: "/hiring-content-writers/2-screening-writers/"
+permalink: "/hiring-content-writers/3-screening-writers/"
 read_time: true
 hide_signup: false
 ---

@@ -35,17 +35,21 @@ Create work conditions that are fair, pleasant, and interesting enough that good
 
 [Read more](/hiring-content-writers/1-finding-writers/)
 
-# Part Two: Screening Writing Candidates
+# Part Two: Creating a Detailed Job Description
 
-[Read more](/hiring-content-writers/2-screening-writers/)
+[Read more](/hiring-content-writers/2-creating-a-job-description/)
 
-# Part Three: Working with Writers
+# Part Three: Screening Writing Candidates
 
-[Read more](/hiring-content-writers/3-working-with-writers/)
+[Read more](/hiring-content-writers/3-screening-writers/)
 
-# Part Four: Terminating Writers
+# Part Four: Working with Writers
 
-[Read more](/hiring-content-writers/4-terminating-writers/)
+[Read more](/hiring-content-writers/4-working-with-writers/)
+
+# Part Five: Terminating Writers
+
+[Read more](/hiring-content-writers/5-terminating-writers/)
 
 
 ---

@@ -1,11 +1,11 @@
 ---
-title: "Hiring a Content Writer: Part Three - Working with Writers"
+title: "Hiring a Content Writer: Part Four - Working with Writers"
 layout: single
 author_profile: true
 sidebar:
   nav: main
 classes: wide
-permalink: "/hiring-content-writers/3-working-with-writers/"
+permalink: "/hiring-content-writers/4-working-with-writers/"
 read_time: true
 hide_signup: false
 ---
