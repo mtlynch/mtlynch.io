@@ -28,7 +28,7 @@ That's it! You can test a Ruby app, a React app, an Enterprise Java Beans app, o
 
 This tutorial uses free, open-source tools, and you can run them without registering an account anywhere. When it comes time to run your tests in a continuous integration environment like Circle or Travis, you don't need to do anything special &mdash; you'll run your tests with the same one-line command you use on your development machine.
 
-# Cypress, the star of the show
+## Cypress, the star of the show
 
 The tool that makes this testing possible is [Cypress](https://cypress.io/), a recent entrant to the field of browser automation. It's an [open-source](https://github.com/cypress-io/cypress) end-to-end testing framework with a [full-time team](https://www.cypress.io/about/#our-team) actively developing it. Their business model is similar to [Docker's](https://www.docker.com/) in that both companies publish free-open source tools and fund development by selling managed services for those tools.
 
@@ -48,7 +48,7 @@ I eagerly read [the Cypress docs](https://docs.cypress.io/guides/getting-started
 
 Still, Cypress seemed to have a promising future. A year later, I checked in on their progress and discovered [a new sample application](https://github.com/cypress-io/cypress-example-docker-compose) that combined Cypress with Docker Compose. Suddenly, everything clicked. Once I saw Cypress working under Docker Compose, it was clear how to adapt that pattern to any web app. Today, I'm showing you that pattern and how to use it in your apps.
 
-# A reusable pattern for end-to-end tests
+## A reusable pattern for end-to-end tests
 
 Combining Cypress with Docker Compose yields a test pattern that's flexible enough to apply to almost any web app. Unlike other testing tools that make assumptions about your app's implementation, this solution wholly decouples your test framework from the app you're testing.
 
@@ -56,7 +56,7 @@ Combining Cypress with Docker Compose yields a test pattern that's flexible enou
 
 Docker Compose allows you to run Cypress in one container and your app in another. Your app doesn't need to know anything about Cypress, and the only thing Cypress needs to know about your app is the network port to send HTTP requests.
 
-# A simple web app to test
+## A simple web app to test
 
 As an example web app to test, I present Sentimentalyzer: the world's dumbest text sentiment analyzer. It tries to guess the user's mood from a sample of their writing.
 
@@ -78,7 +78,7 @@ If you enter the text `Who ate ALL MY WAFFLES?`, Sentimentalyzer assumes that yo
 
 The algorithm is simple: if more than 50% of the characters are uppercase, the user is yelling, so they must be mad. Otherwise, Sentimentalyzer assumes the user feels okay.
 
-# Project layout
+## Project layout
 
 Here's the file layout for [my example project](https://github.com/mtlynch/hello-world-cypress):
 
@@ -94,7 +94,7 @@ e2e/                  <- folder that contains all the files for my end-to-end te
 
 All of the production logic is in the root folder, while all the end-to-end testing code is in the `e2e` folder.
 
-# Run Sentimentalyzer locally
+## Run Sentimentalyzer locally
 
 I'm deliberately not showing the app's source code here to emphasize the fact that you can write Cypress tests without ever seeing the implementation of the app itself. Sentimentalyzer happens to be a Go app, but the tests would be the same had I implemented it in Python or Angular. If you're curious, the source code is [on Github](https://github.com/mtlynch/hello-world-cypress).
 
@@ -116,7 +116,7 @@ The above command spawns a Sentimentalyzer server on your local machine at [http
 
 Now that I can run my app in a Docker container, I'm ready to use Cypress to create an end-to-end test for it.
 
-# Creating an end-to-end test
+## Creating an end-to-end test
 
 To write your first Cypress end-to-end test, you only need three files:
 
@@ -124,7 +124,7 @@ To write your first Cypress end-to-end test, you only need three files:
 * [`docker-compose.yml`](#docker-composeyml)
 * [`integration/spec.js`](#integrationspecjs)
 
-## `cypress.json`
+### `cypress.json`
 
 This file specifies Cypress' [configuration options](https://docs.cypress.io/guides/references/configuration.html):
 
@@ -132,7 +132,7 @@ This file specifies Cypress' [configuration options](https://docs.cypress.io/gui
 
 These settings aren't terribly interesting, but I set them to `false` to prevent Cypress from auto-generating unnecessary helper files.
 
-## `docker-compose.yml`
+### `docker-compose.yml`
 
 This file defines a Docker container for Sentimentalyzer and a Docker container for Cypress and allows them to talk to each other:
 
@@ -172,7 +172,7 @@ Everything in the host machine's `./e2e` directory appears in the Docker contain
 
 The `working_dir` line ensures that Cypress treats the `/e2e` directory as its current folder in the filesystem.
 
-## `integration/spec.js`
+### `integration/spec.js`
 
 Now that the configuration is out of the way, it's time for the fun part: writing tests.
 
@@ -224,7 +224,7 @@ cy.get('.results p')
 
 The [`contain` assertion](https://docs.cypress.io/guides/references/assertions.html#Chai-jQuery) verifies that the `<p>` tag contains the text I expect.
 
-# Running my tests
+## Running my tests
 
 Now that everything is in place, it's time to see Cypress in action. I run my tests with a simple command:
 
@@ -251,7 +251,7 @@ Cypress creates a video recording of every test run. This is my favorite feature
   <figcaption>Cypress recording of end-to-end tests (slowed down to 1/4 speed)</figcaption>
 </figure>
 
-# Test failure screenshots
+## Test failure screenshots
 
 Above, I showed you a test that passed. What happens when a Cypress test fails? It still generates a video of the test run, but it also outputs a screenshot showing the assertion that failed:
 
@@ -263,7 +263,7 @@ This solves a major pain point I experienced with other tools. Selenium supports
 
 Cypress avoids this problem because its screenshots happen concurrently with its assertions. If a test fails, the screenshot shows you precisely what Cypress saw at the time of the failure.
 
-# Adapting this for your web app
+## Adapting this for your web app
 
 Those three files are all you need to start end-to-end testing your web app. Here are the steps:
 
@@ -271,7 +271,7 @@ Those three files are all you need to start end-to-end testing your web app. Her
 1. Replace the `sentimentalyzer` section in [`docker-compose.yml`](#docker-composeyml) with a Docker container for your app.
 1. Rewrite [`integration/spec.js`](#integrationspecjs) based on your app's UI flow.
 
-# Source code and additional examples
+## Source code and additional examples
 
 The full source for this demo is available on Github:
 
@@ -286,7 +286,7 @@ I also created several branches to demonstrate other common Cypress scenarios:
 **Note**: Cypress currently supports only Chrome and Electron as browser options, but cross-browser testing is one of the dev team's [top priorities](https://github.com/cypress-io/cypress/issues/310).
 {: .notice--info}
 
-# Further reading
+## Further reading
 
 This guide provided a basic introduction to Cypress. For more advanced functionality, check out the official Cypress docs:
 

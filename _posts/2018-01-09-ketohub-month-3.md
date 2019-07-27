@@ -16,9 +16,9 @@ In early October, I launched a new website, KetoHub, a recipe aggregator for ket
 
 I'm doing my evaluation of December publicly. Here's what was good, bad, and learnable about KetoHub last month.
 
-# Improvements in December
+## Improvements in December
 
-## New logo
+### New logo
 
 The most visible change is that KetoHub now has a logo. Behold!
 
@@ -34,7 +34,7 @@ I'd need a logo eventually, so I decided to try [99designs](https://ninetyninede
 
 Oh well! Now I have a logo, and I like it. I probably would have preferred having an extra $325, but let's consider it a $325 lesson in website building.
 
-## Site redesign
+### Site redesign
 
 I'm not a web developer, and I don't have a good eye for design. When I built the first version of KetoHub, the design was utilitarian with little attention to aesthetics.
 
@@ -62,11 +62,11 @@ Actually, as I write this and look at the mobile screenshot, the "after" shot lo
 
 Looks like I've got a bit more work to do...
 
-## 50% increase in recipes
+### 50% increase in recipes
 
 I added the popular recipe site [Low Carb Yum]( https://lowcarbyum.com/) to KetoHub's recipe index. This added over 500 new recipes to the site, bringing the total to 1,500. This was the largest increase in KetoHub recipes from any single keto site.
 
-# Visitor growth
+## Visitor growth
 
 KetoHub's visit stats are still small, but it saw exciting growth in December.
 
@@ -74,11 +74,11 @@ Compared to November, it received almost 8x as many unique users and 4.5x as man
 
 {% include image.html file="ketohub-ga-dec.png" alt="Existing keto sites" max_width="700px" img_link=true %}
 
-## Finding users on Facebook
+### Finding users on Facebook
 
 Facebook was, by far, the largest single source of new users. Of 1,372 visitors that discovered the site in December, 717 of them came from Facebook. I promoted the site on Facebook in two distinct ways.
 
-### Sharing in medium-sized groups
+#### Sharing in medium-sized groups
 
 Facebook has hundreds of different keto groups. Some have close to a million members; others have as few as 20-30.
 
@@ -90,7 +90,7 @@ The post above brought over 100 new users to KetoHub the day it was posted and c
 
 Unfortunately, this doesn't seem to work in bigger groups. The larger the community, the more sensitive their administrators are to self-promotion. I tried making similar posts to groups with 100k+ members and found myself booted within minutes.
 
-### KetoHub as the answer to your question
+#### KetoHub as the answer to your question
 
 I also found success in using KetoHub as the answer to people's questions.
 
@@ -100,7 +100,7 @@ People frequently posted in these groups searching for recipes that met particul
 
 For each post I responded to like this, only 10-20 people clicked the link. However, it's easier to find these types of posts than to constantly find new medium-sized keto groups to join. When I spent an hour scrolling through posts from different keto groups, I usually found between two and six opportunities to answer someone's question by linking to KetoHub. This translated to a total of 60-100 new clicks.
 
-# Biggest challenge: Retention
+## Biggest challenge: Retention
 
 If the cost of 100 new users is an hour of ~~shilling~~ promoting on Facebook, that's a great deal. Well, at least to someone like me who has yet to break 200 daily visitors. I'd gladly do that every day except for one problem: I'm losing users as quickly as I gain them.
 
@@ -114,7 +114,7 @@ A small percentage of users will stick around the week after they discover the s
 
 From what I've heard, a good website will bring back at least 10% of its users the week after they discover it. I'm far below 10%, so my focus in January will be increasing retention.
 
-# Next steps
+## Next steps
 
 * Conduct more user interviews
   * When I initially launched, I had keto-dieting friends speak to me on the phone as they tried the site for the first time. I used their feedback to improve the site, but now I want to focus less on first impressions and more on sustained usage.

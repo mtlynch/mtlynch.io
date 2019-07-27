@@ -27,7 +27,7 @@ I always thought, "No, Courtland. That sounds inefficient. I'll take the free le
 
 From the title of this post, you probably figured out that my plan didn't work.
 
-# The product idea
+## The product idea
 
 The idea came to me while I was staring at the ugliest code I had ever written. It was in a [recipe search tool](https://ketohub.io) I created last year. That app never took off but was fun to work on occasionally. There was one corner of the codebase that always plagued me: ingredient parsing.
 
@@ -47,7 +47,7 @@ Then, it struck me: what if ingredient parsing *was* the business? If this was a
 
 {% include image.html file="zestful-logo.png" alt="Zestful logo" fig_caption=fig_caption max_width="500px" class="img-border" link_url="https://zestfuldata.com/" %}
 
-# The MVP that wasn't
+## The MVP that wasn't
 
 In the lean startup world, people frequently talk about the "MVP," the minimum viable product. The MVP is the simplest version of an idea. You're supposed to build it as soon as possible, put it into potential customers' hands, and judge from their reaction whether it solves a real problem.
 
@@ -61,7 +61,7 @@ After about 120 hours of development work, my working prototype satisfied the ac
 
 However, I didn't officially launch for another two months. Instead, I spent that time writing more code.
 
-# It's okay because it's *sales* coding
+## It's okay because it's *sales* coding
 
 You might be wondering how I ended up spinning my wheels for so long after my MVP was "done." Well, here's a summary of my thought process throughout those two months:
 
@@ -93,7 +93,7 @@ You might be wondering how I ended up spinning my wheels for so long after my MV
 
 It was a hydra. Every time I finished adding "one more simple thing," two more things popped up that were necessary as a result. Eventually, two months had passed since declaring code complete, and I was baffled that I hadn't shipped anything.
 
-# This is critical, but it can wait
+## This is critical, but it can wait
 
 I **needed** to launch. However, my list of critical tasks was still incomplete. I estimated that they would take five days to finish.
 
@@ -101,7 +101,7 @@ Then, a funny thing happened. After committing to ship as soon as possible, I re
 
 One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). What would happen if I launched without it and wrote it a few days later? At worst, I'd have a weak position if a legal dispute arose, but what were the odds of someone suing me within a few days of launch?
 
-# Shut up and launch
+## Shut up and launch
 
 For each item on my task list, I asked myself, "What happens if I launch without this?" After treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis), an API marketplace. My service was live!
 
@@ -111,7 +111,7 @@ For each item on my task list, I asked myself, "What happens if I launch without
 
  Now was the moment of truth. My service was ready to accept payment from real customers. I just needed to convince them to buy it.
 
-# Did I delay my launch to avoid rejection?
+## Did I delay my launch to avoid rejection?
 
 During my two-month limbo between "done" and "launched," a friend asked if I was afraid to show my product to customers. Were all these tasks delaying my launch just a way of avoiding rejection?
 
@@ -129,7 +129,7 @@ For half an hour, I stared at the blank screen, struggling to write anything. I 
 
 Uh oh. I *was* afraid of rejection.
 
-# A different type of rejection
+## A different type of rejection
 
 This wasn't at all like working in sales. That job required me to sell fiber Internet to businesses, but I didn't lay the fiber or design the network. It was easy to take that rejection in stride.
 
@@ -137,7 +137,7 @@ Now, I was selling something I created. What's more, it was *software* I created
 
 {% include image.html file="rejection.jpg" alt="Fear of rejection cartoon" max_width="800px" img_link=true %}
 
-# The harsh reality
+## The harsh reality
 
 After dozens of pitches, a few conversations, and zero purchases, it dawned on me that I had become the developer who invested months into a product that customers didn't want.
 
@@ -147,7 +147,7 @@ And that's where I discovered the fatal flaw in my strategy. The most significan
 
 On top of that, they had to weigh the cost of an additional external dependency. What happens if my service has an outage? Does their app stop working? Or, do they need to build an entire secondary mode of operation for when my service fails?
 
-# I did it backward
+## I did it backward
 
 Looking back, my process was backward. Cold-pitching to customers was my last step, but I should have done it before writing a line of code.
 

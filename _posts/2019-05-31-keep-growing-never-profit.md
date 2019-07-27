@@ -21,7 +21,7 @@ There was only one pesky detail standing between me and tremendous profits: mone
 
 This is my postmortem for Is It Keto. I'll talk about where I succeeded, how I could have done better, and what I wish I knew from the start.
 
-# How I made money
+## How I made money
 
 Is It Keto had a simple business model. Every article explained why a food did or did not fit [the keto diet](https://www.ruled.me/guide-keto-diet/). If a food was keto-friendly, the site displayed an affiliate link for the reader to purchase it from Amazon. I received a commission on every order.
 
@@ -29,7 +29,7 @@ Is It Keto had a simple business model. Every article explained why a food did o
 
 {% include image.html file="revenues.jpg" alt="Google Analytics screenshot"  max_width="763px" class="img-border" img_link="true" fig_caption="Is It Keto monthly revenue" %}
 
-# How I lost money
+## How I lost money
 
 My most significant ongoing cost was content. Early on, I wrote every article myself, but I hired writers to help scale the site. It got complicated, but I'll say more about that [below](#good-writing-is-expensive).
 
@@ -37,9 +37,9 @@ The only other cost worth mentioning is development. I wrote almost all the code
 
 {% include image.html file="costs.jpg" alt="Donut chart of expenses"  max_width="600px" img_link="true" fig_caption="Is It Keto expenses" %}
 
-# What went well
+## What went well
 
-### I chose "done" over "perfect"
+#### I chose "done" over "perfect"
 
 Design is not my strong suit. I've wasted hours moving buttons five pixels back and forth, wondering which version looks better.
 
@@ -47,7 +47,7 @@ To avoid this with Is It Keto, I budgeted fixed-time blocks for design polish. F
 
 The same logic applied to code. It pains me to ship code that's likely to create maintenance headaches later, but for an experimental project, there might not be a "later." Code sins were forgivable, so I committed many of them. When they came back to bite me, I paused development to clean things up, but that was seldom necessary and never catastrophic.
 
-### I worked with familiar tools
+#### I worked with familiar tools
 
 My project before Is It Keto was a recipe search tool called [KetoHub](https://ketohub.io). Envious of the cool kids with their hip frontend frameworks, I built the site using [Angular](https://angular.io) and [Firebase](https://firebase.google.com). At first, this was fun because those technologies do seemingly magical things. My progress slowed to a crawl, however, when I ventured beyond basic examples. The magicalness of the tech stack prevented me from understanding how my app worked.
 
@@ -55,7 +55,7 @@ Reeling from this pain, I wrote Is It Keto using Python 2.7, App Engine Standard
 
 This wasn't a pure win, as many of the web libraries that I wanted weren't available for my environment. Nevertheless, I understood my tech stack, so there was always a way forward, even if it was inefficient or hacky. Contrast this with Angular, which routinely blocked me for days as I struggled to achieve something simple through its countless layers of abstraction.
 
-### I published monthly goals and stuck to them
+#### I published monthly goals and stuck to them
 
 At the end of each month, I wrote a [retrospective](/retrospectives/) detailing the work I did on Is It Keto. I also declared concrete, measurable goals for the following month and graded myself on my goals from the previous month. This practice was tremendously valuable for both course-correction and maintaining focus.
 
@@ -82,9 +82,9 @@ Declaring my goals publicly also protected me from wandering off into the weeds.
 
 Without explicit goals, the feature-happy version of me would have run rampant, building features that were fun but irrelevant to the bottom line.
 
-# What needed improvement
+## What needed improvement
 
-### I obsessed over metrics
+#### I obsessed over metrics
 
 It was easy for me to rationalize the many daily visits I paid to my traffic and revenue dashboards. "Of *course* I have to check my metrics. They're critical to understanding the health of my site." Many founders fall into the same trap.
 
@@ -102,7 +102,7 @@ Starting in February, I limited my metric checking to one thirty-minute session 
 
 Until I broke the habit of constant stat-checking, I never realized how much space it occupied in my brain. Without it, I'm far more focused and less dependent on short-term results.
 
-### I forgot that food is cheap
+#### I forgot that food is cheap
 
 My first experiment with affiliate links was on this blog. I don't write to make money, but many of my articles already linked to Amazon, so I figured Jeff Bezos might as well throw some money my way.
 
@@ -112,7 +112,7 @@ My fatal flaw was in neglecting prices. The affiliate links on my blog were for 
 
 Is It Keto linked to food products. One of the top affiliate clicks is [Propel Fitness Water](https://isitketo.org/propel), which sells for as little as $6 per case, so it requires far more users to match the revenues from my blog.
 
-### I didn't think through my monetization strategy
+#### I didn't think through my monetization strategy
 
 To help prioritize future articles, Is It Keto tracks the most commonly-requested foods that lack a dedicated page. Here are the top five:
 
@@ -133,9 +133,9 @@ In evaluating business ideas now, I think about revenue from start to finish. Fo
 
 {% include image.html file="amazon-lettuce.jpg" alt="Google Analytics screenshot" class="img-border" max_width="800px" img_link="true" fig_caption=fig_caption %}
 
-# What I wish I had known
+## What I wish I had known
 
-### Search engines have a substantial lag
+#### Search engines have a substantial lag
 
 Today, if you ask Google ["are cheese whisps keto?"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)  it responds with a list of results that all fail to answer the question.
 
@@ -151,7 +151,7 @@ Having this knowledge up front would have made me more cautious about pursuing a
 
 One way to accelerate this process is to earn links from other highly-ranked pages. If [*Men's Health Magazine*](https://www.menshealth.com/) linked to Is It Keto, search engines would consider my site more relevant and deserving of higher search rankings. In a strategic misstep on my part, I never created content that incentivized other sites to link to Is It Keto, save for a few [desperate blog posts](https://isitketo.org/blog) near the end that failed to win any attention.
 
-### Good writing is expensive
+#### Good writing is expensive
 
 The typical Is It Keto article took me 15-30 minutes to write. However, writing is mentally taxing, so it burned me out quickly.
 
@@ -163,7 +163,7 @@ I received applications from over 30 writers, did paid trials with about 10 of t
 
 There was a *ton* I didn't know about hiring writers. Expect a full-length post in the next few months that goes into more detail about what I learned.
 
-# Going forward
+## Going forward
 
 Fortunately, Is It Keto costs almost nothing to run in the background. It fits in App Engine's free tier and requires no maintenance. Its only ongoing cost is $12 per year for the domain name.
 

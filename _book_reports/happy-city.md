@@ -18,17 +18,17 @@ I took for granted the idea that cities should be friendly to car-travel, but th
 
 ---
 
-# What I Liked
+## What I Liked
 
 * Lively style made for an engaging read
 * Interesting case studies examining different angles of cities in a variety of cities around the globe.
 * Good mix of scientific studies, interviews, and personal research
 
-# What I Disliked
+## What I Disliked
 
 * Some of the concept felt as though the author overgeneralized based on limited academic studies or anecdotal data.
 
-# Key Takeaways
+## Key Takeaways
 
 * People are [bad at predicting](http://www.people.virginia.edu/~tdw/dunn.location.pspb.2003.pdf) which factors will make them happy with their living space
   * Aesthetics matter much less than how the living space facilitates interaction between members of the community.

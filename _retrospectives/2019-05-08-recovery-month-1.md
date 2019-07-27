@@ -5,17 +5,17 @@ header:
   og_image: images/retrospectives/2019/05/amazon-earnings.jpg
 ---
 
-# One-Line Summary
+## One-Line Summary
 
 How I doubled revenues by doing absolutely nothing.
 
-# Highlights
+## Highlights
 
 * Is It Keto's revenue doubled to $82.44 with zero effort on my part.
 * My task journaling app is almost ready for publication.
 * I've begun setting up meetings with potential customers about my next project ideas.
 
-# Goal Grades
+## Goal Grades
 
 At the start of the month, I [gave up on Is It Keto](/retrospectives/2019/04/#calling-it-quits) and set goals to help me pursue other projects. Here's how I did against those goals.
 
@@ -40,7 +40,7 @@ I reached out to eight publishers and writers. Most ignored me but some of those
 
 I generally try to publish a new blog post each month, but I hadn't published anything since February because I got busy preparing talks for software conferences. My new blog post described a testing technique that works with almost any web app. It reached ~14,000 readers in its first two days, which is on the medium-high side for me.
 
-# Is It Keto Stats
+## Is It Keto Stats
 
 Now that Is It Keto is on the backburner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
@@ -56,7 +56,7 @@ Now that Is It Keto is on the backburner, I'm not going to dive as deeply into i
 | Domain Authority (Moz) | 9          | 9            | 0 |
 | Ranking Keywords (Moz) | 448        | 548          | <font color="green">+100 (+22%)</font> |
 
-# Money for nothing
+## Money for nothing
 
 The nice thing about Is It Keto is that it grows on its own. It's all just content, so I don't have to perform any maintenance tasks to keep it running, and server costs are negligible ($1.48 for April).
 
@@ -66,7 +66,7 @@ Now, Is It Keto has 174 food articles, but only 25 of them receive >= 500 search
 
 It would be great if this growth keeps up. If revenue reaches $500/mo, I can hire back my writer and continue adding content instead of relying on my fixed corpus of articles to grow more popular.
 
-# Simplifying the editing workflow
+## Simplifying the editing workflow
 
 I worked with freelance writers to create several articles for Is It Keto, but we always had a clunky process for drafts -> feedback -> revisions. We used Google Docs and margin comments, but Docs doesn't do a great job of highlighting what changed between drafts or keeping context of what comment led to which edit.
 
@@ -79,7 +79,7 @@ I started by emailing software publications because I thought they'd have financ
 If you know a writer or copy editor who might be interested, please ask them to [email me](/about/). I'd love to speak with them.
 {: .notice--info}
 
-# An app for rocks
+## An app for rocks
 
 One idea I liked from the book [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) was the "market-first approach." Instead of picking a product and trying to sell it to a particular market, you pick an underserved market, find out what they need, then build that.
 
@@ -92,7 +92,7 @@ The challenge is getting quarry owners to talk to me. They're used to their curr
 If you know a stone quarry operator, please [email me](/about/) because I'd love an introduction.
 {: .notice--info}
 
-# The What Got Done app
+## The What Got Done app
 
 I have a ritual to end each week where I write down short-form notes on everything I accomplished. For the past year, I did this in a giant Google Doc, but I always wished that I had a tool that was more purpose-built for the task and more easily shareable.
 
@@ -109,9 +109,9 @@ User registration isn't ready yet, but keep an eye out for a Twitter announcemen
 If you'd like to be a beta tester for What Got Done, [email me](/about/).
 {: .notice--info}
 
-# Wrap Up
+## Wrap Up
 
-## What Got Done?
+### What Got Done?
 
 * [Presented a talk](/retrospectives/pytexas-2019-notes/) at PyTexas
 * Published a new [blog post](https://mtlynch.io/painless-web-app-testing/) about end-to-end testing
@@ -119,7 +119,7 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 * Got a prototype of [What Got Done app](https://whatgotdone.com) almost working
 * Reached out to 11 potential customers for future projects
 
-## Lessons Learned
+### Lessons Learned
 
 * Vue.js is a better match for me than Angular
   * Angular has complex features that probably benefit large development teams but which impede solo developers and small teams.
@@ -127,7 +127,7 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 * Even if you're offering someone a no-risk custom solution for their business, you still need to sell them on it.
   * Business owners are busy and don't have time to take pitches from anyone who wants to sell them something, even if you promise something tailor-made for that business. You still need to give them a compelling reason to take a 30-minute meeting with you.
 
-## Goals for May
+### Goals for May
 
 * Publish a minimum viable product version of What Got Done and see if anyone wants to buy premium features.
 * Meet with 10 potential customers for my next product.

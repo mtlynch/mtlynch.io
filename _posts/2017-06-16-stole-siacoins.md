@@ -14,7 +14,7 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=14568558
 ---
 
-# A seedy reddit post
+## A seedy reddit post
 
 The night was June 9th, 2017. It was a typical Friday night for me. I was ~~watching Netflix and checking reddit~~ partying with cool kids.
 
@@ -26,7 +26,7 @@ If you're not familiar with Siacoin, it's a cryptocurrency that allows you to re
 
 This reddit user had just done something very dangerous. They posted their Sia wallet seed online. The Sia "seed" is a passphrase that gives anyone who holds it full control of the cryptocurrency in that person's wallet. For this user, that means control of €2,000 worth of Siacoin because that's the amount they transferred into that wallet. In the screenshot, you can see that the user believes this is safe because they have confirmed that the passphrase doesn't work.
 
-# Almost doesn't count (except in horseshoes and Sia seeds)
+## Almost doesn't count (except in horseshoes and Sia seeds)
 
 What immediately interested me about the post was that the user had written their seed by hand:
 
@@ -36,7 +36,7 @@ I was pretty sure they *did* make a mistake writing it down. But I was hoping th
 
 I needed to do this quickly. I'm not the only one who can recognize a leaked seed when they see it, so I had to crack the seed and grab the money fast before anyone else could.
 
-# Hacking by hand
+## Hacking by hand
 
 I began by examining the words in the incorrect seed:
 
@@ -72,7 +72,7 @@ The entropy dictionary only had ~1,600 words in it. My hope was that when the us
 
 But alas, all 29 words in the incorrect seed appeared in the entropy dictionary, so eyeballing it wasn't going to work.
 
-# Brute force
+## Brute force
 
 It was time to break out the big guns (I refer to the two fingers I use to type code as "guns"). I needed a way of finding all the words in that dictionary that were one copying error off from the seed that got posted to reddit.
 
@@ -108,7 +108,7 @@ for seed_word in seed.split():
 
 *Confession: In real life, the script was much hackier and involved copy/pasting the 1,600 lines from the dictionary directly into my Python script. This code is better for demonstration.*
 
-# Opening the safe
+## Opening the safe
 
 I was worried that there would be hundreds of possibilities and I'd have to script the process of trying each seed. Fortunately, my script reported that there were only 12 seeds that had a Levenshtein distance of 1 from the incorrect seed:
 
@@ -188,7 +188,7 @@ That's weird. 594.8 SC (Siacoin) at that time was worth about €10, a far cry f
 
 Was *I* the one being fleeced somehow? Did the user know they only had €10 but claim a much higher amount to entice someone to help them? Did a better cryptothief get to the wallet first and leave behind just €10 to taunt me?
 
-# Securing the loot
+## Securing the loot
 
 While I would have loved to sit and ponder the strange balance I was seeing, time was of the essence. I didn't know who else saw that post and was about to unlock the wallet like I just had. It was time to steal the Siacoin.
 
@@ -198,7 +198,7 @@ While I would have loved to sit and ponder the strange balance I was seeing, tim
 
 I quickly [sent the full balance](https://siastats.info/navigator?search=2304da26d61bd2cb7fcac5c7b38a553d788d8dfc386ae4eb47772e36e4a9269d) to my own Sia wallet. That way, even if someone else discovered the correct seed after I had, they couldn't recover the money.
 
-# Back to the mystery
+## Back to the mystery
 
 Now that the coins were secured, it was time to figure out just what was going on here. I checked the wallet's transaction history:
 
@@ -218,7 +218,7 @@ I was interested in the first transaction in the list. That line showed that thi
 
 Why would the user claim that they had put  €2,000 in the wallet when they had only deposited  €10?
 
-# Transactions in limbo
+## Transactions in limbo
 
 At the time of my daring heist, Poloniex, the largest Siacoin exchange was [experiencing problems](https://www.reddit.com/r/siacoin/comments/6er35v/what_we_are_doing_about_poloniex_withdrawals/?st=j3z7orst&sh=c0afe15e) transferring Siacoin to users' wallets. They weren't losing user funds, but it was common for transactions to get stuck in limbo, where the user sent money from their exchange account to their personal Sia wallet, but Poloniex got backed up on delivering it for days or weeks.
 
@@ -240,7 +240,7 @@ I chose 2,000 SC because a relatively low transfer was safer. I was effectively 
 
 There was no real penalty for guessing too low except that I'd pay more in transaction fees. 2,000 SC was about €35, so my batch script would have emptied the wallet in a couple minutes if a deposit of ~125,000 SC (€2,000) came through.
 
-# Informing the victim
+## Informing the victim
 
 I admit that I did entertain quite a few fantasies about what I could spend the €10 on if I kept it for myself: private jets, Rolexes, a mansion with one of those Scrooge McDuck swimming pools of money. But in the end, I decided I had to do the right thing and return the Siacoin to the user who posted their seed.
 
@@ -252,13 +252,13 @@ About two hours after the user's original post, I sent them a private message on
 
 Hours passed, then days, and I heard nothing back.  I noticed they had deleted the post to reddit exposing their seed. Who loses €2,000, posts online asking for help, then seems to completely forget about it a few hours later?
 
-# Mystery solved
+## Mystery solved
 
 Finally, on Monday morning, the victim of my heinous crime got back to me. They explained that shortly after making their post, they realized that their money was still on the exchange and had never reached their wallet (I knew it!). They were able to move the money to a separate wallet whose seed was secure. When they realized they hadn't actually lost the money, they didn't think to check back to reddit.
 
 They were delighted that I had recovered the seed because I had solved *their* mystery of what went wrong with the passphrase. They had correctly written down `ionic` but they kept mistakenly reading it back as `tonic` because that was the more familiar word to them. The user even offered to let me keep the full amount, but I felt ~~I would come off better in this blog post~~ the coins rightfully belonged to the user who lost them. I insisted, and they finally relented and sent me an address so I could return the 594.8 SC.
 
-# Takeaways
+## Takeaways
 
 **Never post your Sia wallet seed online**. As we see from this tale, even an incorrect or partial version of the seed can completely compromise your wallet.
 

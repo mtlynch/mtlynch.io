@@ -3,17 +3,17 @@ title: 'Is It Keto: Month 6'
 excerpt: Do or die time
 ---
 
-# One-Line Summary
+## One-Line Summary
 
 It's do or die time.
 
-# Highlights
+## Highlights
 
 * [Is It Keto](https://isitketo.org)'s user visits plateaued in February, but that still represents progress.
 * Revenues fell substantially and missed targets for the month.
 * I'm going to shelve the project unless I achieve my targets for March.
 
-# Goal Grades
+## Goal Grades
 
 At the start of the month, I laid out some high-level goals. Here's how I did against those goals.
 
@@ -38,9 +38,9 @@ I hit the target, but just barely, and I didn't keep quality as high as I wanted
 
 It's hard to say because I wasn't collecting fine-grained metrics in January, but I estimated that I was spending about $65/article. In February, I got costs down to $46/article for one of my writers but spent $300 trying to train another writer who only produced one article.
 
-# Stats and Metrics
+## Stats and Metrics
 
-## Amazon Affiliate Stats
+### Amazon Affiliate Stats
 
 {% include image.html file="amazon-earnings-2019-02.jpg" alt="Amazon Earnings - Feb. 2019"  max_width="800px" img_link="true" fig_caption="Amazon affiliate earnings - February 2019" %}
 
@@ -62,7 +62,7 @@ I've since added a [build check](https://github.com/mtlynch/mtlynch.io/pull/368)
 
 In any case, even an optimistic revenue of $30 is still far below my target of $60. Is It Keto needs more revenue quickly if it's going to be a viable business.
 
-## Visitor Stats
+### Visitor Stats
 
 {% include image.html file="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot"  max_width="800px" img_link="true" fig_caption="User sessions - March 2018 through February 2019" %}
 
@@ -86,7 +86,7 @@ I consider it a win that February's traffic roughly matched the previous month d
 
 Referrals from Facebook shrank to almost nothing, as I stopped promoting the site there in January. Referrals from Twitter shrank as well, which is surprising given that I increased investment there (more on that [below](#twitter-on-auto-pilot-but-its-not-scaling)).
 
-## SEO Stats
+### SEO Stats
 
 {% include image.html file="google-search-console.jpg" alt="Google Search Console screenshot"  max_width="800px" img_link="true" fig_caption="Google Search Console - Dec. 2018 to Feb. 2019" %}
 
@@ -100,7 +100,7 @@ Referrals from Facebook shrank to almost nothing, as I stopped promoting the sit
 
 The growth in indexed pages and ranking keywords are encouraging. The big problems are in my domain authority and linking domains. 10 is a pathetically low domain authority, which means that Google will deprioritize me in search results until I can get other sites to link to me.
 
-## Finances
+### Finances
 
 | Income/Expense | January 2019 | February 2019 |
 |----------|----------|--------------|
@@ -111,7 +111,7 @@ The growth in indexed pages and ranking keywords are encouraging. The big proble
 
 I'm still losing a lot of money, but I'm losing slightly less than I did in January, so... yay?
 
-## Diving into my content costs
+### Diving into my content costs
 
 Content is still my biggest cost. I recognized the same thing in January, so in February, I put more effort into tracking costs at a more granular level:
 
@@ -135,7 +135,7 @@ On the other hand, I find writing the articles mentally draining. 1-2 hours of w
 
 Editing is easier than writing original articles, so I'm saving mental energy by hiring writers, but I'm also paying mental energy in the complexities of managing a writer. It's tough to say whether outsourcing is the right move here. I'm going to scale down investment in content in March so that I can focus on building backlinks.
 
-## Twitter on auto-pilot, but it's not scaling
+### Twitter on auto-pilot, but it's not scaling
 
 In January, I [hired a low-cost social media manager](/retrospectives/2019/02/#outsourcing-twitter) to reply with stock responses from the [Is It Keto Twitter](https://twitter.com/HeyIsItKeto) when other Twitter users use the \#keto hashtag. That continues to attract new followers, but it didn't scale the way that I expected. The site had 217 Twitter followers at the start of the month and ended with 368: a 70% increase in followers. However, my visits from Twitter dropped by 18% in the same period. I was hoping for visitors to grow linearly with my number of followers, but that seems not to be the case.
 
@@ -148,7 +148,7 @@ In February, I asked my main writer to take over the task of writing per-article
 
 Now, I've delegated away all of my Twitter work, but it doesn't seem to be the right channel to invest in. I paid $144 to my Twitter manager, $40 to my writer, and received 307 clicks, so I'm running at $1.67 per click. This doesn't seem worth it, given that I'm earning far less than that per visit. In March, I'm going to scale down my Twitter investment by 50% and see how it affects follower growth and referrals.
 
-## Increasing pages per session (maybe)
+### Increasing pages per session (maybe)
 
 Is It Keto doesn't make it easy for users to browse around the full list of articles. Initially, this was by design. When I launched the site, I wanted to hide how small the food database was.
 
@@ -162,7 +162,7 @@ I can't tell if this made any real difference. I implemented the change on Feb. 
 
 {% include image.html file="pages-per-session.jpg" alt="Google Analytics pages per session"  max_width="783px" img_link="true" fig_caption="Pages per session before and after 'Other Foods' section" %}
 
-## My hail mary: data visualizations
+### My hail mary: data visualizations
 
 Is It Keto's biggest limiting factor is its domain authority, which continues to hover at a paltry score of 10 (out of a log scale of 100). With so much of the site's traffic depending on search engine rank, I need more high-ranking sites linking to Is It Keto. The problem now is that none of the content appeals to other sites. A popular nutrition or keto website would never link to [IsItKeto's apples](https://isitketo.org/apples) page, for example, because it's nothing sensational or surprising.
 
@@ -172,9 +172,9 @@ My plan is to write blog posts on Is It Keto using recipe data from [KetoHub](ht
 
 It's a longshot because keto websites don't often link to other keto sites, but it's the best idea I can come up with that I can complete in under one month. If I can produce interesting visualizations and get other high-ranking sites to link to my blog posts, then I'll increase the site's domain authority and drastically increase site traffic.
 
-# Wrap Up
+## Wrap Up
 
-## What Got Done?
+### What Got Done?
 
 * Added an "Other Foods" section to the article pages so that users can easily discover new articles
 * Added an admin tool that lets me add redirects for alternative spellings of foods (e.g., [mayo](https://isitketo.org/mayo) -> [mayonnaise](https://isitketo.org/mayonnaise))
@@ -182,7 +182,7 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 * Wrote tools to collect keto recipe data for upcoming data visualization blog posts
 * Published 30 new food pages
 
-## Lessons Learned
+### Lessons Learned
 
 * After taking into account the time I spend editing and communicating with writers, I'm not saving time by outsourcing content writing.
   * I likely still am saving mental energy, which is always a precious resource.
@@ -190,7 +190,7 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 * I can outsource Twitter promotion tasks cleanly and efficiently.
   * Still, Twitter's not earning me a return on investment, so I'm going to scale down.
 
-## Goals for March
+### Goals for March
 
 February was my third month of monetizing Is It Keto and giving it my full-time focus. It wasn't earning big money out of the gate, but its growth in December and January gave me hope that it was on the path to a viable business. The slowdown in February was a big red flag and might be an indication that I should shelve this project so that I can focus on something new.
 

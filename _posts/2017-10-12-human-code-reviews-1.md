@@ -36,7 +36,7 @@ I'm going to make the bold assumption that you want to improve code reviews in t
 
 In this article, I discuss techniques that treat the code review as not only a technical process but a social one as well.
 
-# What is a code review?
+## What is a code review?
 
 The term "code review" can refer to a range of activities, from simply reading some code over your teammate's shoulder to a 20-person meeting where you dissect code line by line. I use the term to refer to a process that's formal and written, but not so heavyweight as a series of in-person code inspection meetings.
 
@@ -50,7 +50,7 @@ A review begins when the author sends their changelist to the reviewer. Code rev
 
 The review ends when the reviewer **approves** the changes. This is commonly referred to as giving LGTM, shorthand for "looks good to me."
 
-# Why is this hard?
+## Why is this hard?
 
 If a programmer sends you a changelist that they think is awesome, and you write them an extensive list of reasons why it's not, that's a sensitive message to get across.
 
@@ -62,7 +62,7 @@ It's easy for an author to interpret criticism of their code as an implication t
 
 As if this wasn't difficult enough, you also have the challenge of conveying your thoughts in writing, where the risk of miscommunication is higher. The author can't hear your tone of voice or see your body language, so it's even more important to articulate your feedback carefully. To an author who's feeling defensive, an innocuous note like, "You forgot to close the file handle," can read as, "I can't *believe* you forgot to close the file handle! You're such an idiot."
 
-# Techniques
+## Techniques
 
 1. [Let computers do the boring parts](#let-computers-do-the-boring-parts)
 1. [Settle style arguments with a style guide](#settle-style-arguments-with-a-style-guide)
@@ -73,7 +73,7 @@ As if this wasn't difficult enough, you also have the challenge of conveying you
 1. [Frame feedback as requests, not commands](#frame-feedback-as-requests-not-commands)
 1. [Tie notes to principles, not opinions](#tie-notes-to-principles-not-opinions)
 
-## Let computers do the boring parts
+### Let computers do the boring parts
 
 Between interruptions like meetings and emails, the time you have available to focus on code is scarce. Your mental stamina is in even shorter supply. Reading a teammate's code is cognitively taxing and requires a high level of concentration. Don't squander these resources on tasks a computer can do, especially when a computer can do them better.
 
@@ -120,7 +120,7 @@ Automation benefits the author as well. It allows them to discover careless mist
 
 Work with your team to build these automated checks directly into the code review workflow (e.g., [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in Git or [webhooks](https://developer.github.com/webhooks/) in Github). If the review process requires the author to run these checks manually, you forfeit most of the benefit. The author will invariably forget on occasion which forces you to continue reviewing for the simple issues that automation is meant to handle instead.
 
-## Settle style arguments with a style guide
+### Settle style arguments with a style guide
 
 Arguments about style are a waste of time in reviews. Consistent style is certainly important, but a code review is not the time to bicker about where to put the curly braces. The best way to excise style debates from your reviews is by keeping a style guide.
 
@@ -146,7 +146,7 @@ I prefer to keep my team's style guide as Markdown under source control (e.g., [
 
 By combining options 1 and 2, you can adopt an existing style guide as your base, and then maintain a local style guide to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as a base, but makes its own changes and additions on top of it.
 
-## Start reviewing immediately
+### Start reviewing immediately
 
 Treat code reviews as a high priority. When you're actually reading the code and giving feedback, take your time, but *start* your review immediately — ideally, within minutes.
 
@@ -160,7 +160,7 @@ Imagine that your teammate implements a new feature that requires 1,000 lines of
 
 The absolute maximum turnaround on a review round should be one business day. If you're struggling with a higher-priority issue and can't complete a round of review in under a day, let your teammate know and give them the opportunity to reassign it to someone else. If you're forced to decline reviews more than about once per month, it likely means that your team needs to reduce its pace so that you can maintain sane development practices.
 
-## Start high level and work your way down
+### Start high level and work your way down
 
 The more notes  you write in a given review round, the more you risk making the author feel overwhelmed.  The exact limit varies by developer, but the danger zone generally begins in the range of 20-50 notes in a single round of review.
 
@@ -168,7 +168,7 @@ If you're worried about drowning the author in a sea of notes, restrict yourself
 
 Your low-level notes might become moot once the author integrates your high-level notes. By deferring them to a later round, you save yourself the nontrivial work of writing carefully-worded comments calling out the issues, and you spare the author from processing unnecessary notes. This technique also segments the layers of abstraction you focus on during the review, helping you and the author work through the changelist in a clear, systematic way.
 
-## Be generous with code examples
+### Be generous with code examples
 
 In an ideal world, the code author would be thankful for every review they receive. It's an opportunity for them to learn, and it protects them from mistakes. In reality, there are a number of external factors that could cause the author to perceive the review negatively and resent you for giving them notes. Maybe they're under pressure to meet a deadline, so anything other than your instant, rubber-stamp approval feels like obstruction. Maybe you haven't worked together much, so they don't trust that your feedback is well-intentioned.
 
@@ -204,7 +204,7 @@ Reserve this technique for clear, uncontroversial improvements. In the list comp
 
 Limit yourself to two or three code examples per review round. If you start writing the author's whole changelist for them, it signals that you don't think they're capable of writing their own code.
 
-## Never say "you"
+### Never say "you"
 
 This one is going to sound weird, but hear me out: never use the word "you" in a code review.
 
@@ -255,7 +255,7 @@ An additional option is to phrase it as a question, beginning with "what about..
 
 >**What about renaming** this variable to something more descriptive, like `seconds_remaining`?
 
-## Frame feedback as requests, not commands
+### Frame feedback as requests, not commands
 
 Code reviews require more tact and care than usual communication because there's a high risk of derailing the discussion into a personal argument. You would expect reviewers to dial up their politeness in reviews, but bizarrely I've found them to go the opposite direction.  Most people never say to a co-worker, "Hand me that stapler, then fetch me a soda." But I've seen numerous reviewers frame feedback with similarly pushy commands, such as, "Move this class to a separate file."
 
@@ -279,7 +279,7 @@ Compare how combative the conversation seems depending on how the reviewer frame
 
 See how much more civil the conversation becomes when you ~~construct imaginary dialog to prove your point~~ frame your notes as requests instead of commands?
 
-## Tie notes to principles, not opinions
+### Tie notes to principles, not opinions
 
 When you give the author a note, explain both your suggested change and the *reason* for the change. Instead of saying, "We should split this class into two," it's better to say, "Right now, this class is responsible for both downloading the file and parsing it. We should split it up into a downloader class and parsing class per the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)."
 
@@ -289,7 +289,7 @@ Software development is both an art and science. You can't always articulate exa
 
 Provide supporting evidence where possible in the form of links.  The relevant section of your team's style guide is the best link you can provide. You can also link to documentation for the language or library. Highly-upvoted [StackOverflow](https://stackoverflow.com) answers can work as well, but the farther you stray from authoritative documentation, the shakier your evidence becomes.
 
-# Part two
+## Part two
 
 If you enjoyed this post, check out [the second half of this article](/human-code-reviews-2/), which focuses on bringing reviews to a successful close without ugly conflict. It includes techniques for:
 

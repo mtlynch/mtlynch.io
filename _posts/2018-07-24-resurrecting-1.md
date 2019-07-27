@@ -30,7 +30,7 @@ In this three-part series, I'll show you how I resurrected it and built a busine
 
 {% include image.html file="cover.jpg" alt="Bear doctors resuscitating python" max_width="800px" img_link=true %}
 
-# The library
+## The library
 
 The library was [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), an open-source library that *The New York Times* published. It allowed users to parse recipe ingredients into structured data.
 
@@ -44,7 +44,7 @@ A few years ago, the *Times* decided to digitize their extensive historical arch
 
 After six years of adding to this database, they realized that they had enough data to [train a machine learning model](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) that could simulate the human workers' data entry decisions. The project was a success, so they published all of their source code and data.
 
-# What business was it of mine?
+## What business was it of mine?
 
 I had the same problem as the *Times*. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
 
@@ -62,7 +62,7 @@ My regular expressions were tedious to maintain and debug. I felt like I was cho
 
 But first, I had to figure out how to make their code run.
 
-# Why was this hard?
+## Why was this hard?
 
 The *Times* built this library for a hack week event, so it lacked many features one expects of a professional software project, such as  automated tests or thorough documentation.  The README included instructions for installing the application, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
 
@@ -74,7 +74,7 @@ Of course, I wasn't the only one to notice these issues. At the time they publis
 
 {% include image.html file="trump-tweet.png" alt="Trump tweet about code" max_width="628px" class="img-border" %}
 
-# Building it in Docker
+## Building it in Docker
 
 I wanted to build the library in a way that ensured consistent behavior regardless of the OS. This seemed like a job for Docker.
 
@@ -119,7 +119,7 @@ Was that code still maintained?
 
 Oh no! Another dead repository? I was already resurrecting one library. I didn't want to take on another.
 
-# Taking a small detour
+## Taking a small detour
 
 The CRF++ error message about `winmain.h` was a bad sign, but if the *Times* developers ran CRF++ on OS X, I knew it was possible to run it in a non-Windows environment.
 
@@ -189,7 +189,7 @@ Woohoo! It worked!
 
 {% include ads.html title="zestful" %}
 
-# *Actually* building it in Docker
+## *Actually* building it in Docker
 
 Oh, wait. That wasn't really what I was trying to do.
 
@@ -210,7 +210,7 @@ Finished processing dependencies for ingredient-phrase-tagger==0.0.0.dev0
 
 Whew! No problems there. It looked like I had everything installed.
 
-# Taking it out for a spin
+## Taking it out for a spin
 
 The repository's "Quick Start" instructions referred to a shell script called [`roundtrip.sh`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) that exercised the library's functionality end-to-end:
 
@@ -247,7 +247,7 @@ Success!
 
 Oh, wait. What did it do?
 
-# Testing with my ingredients
+## Testing with my ingredients
 
 The library was doing *something*, but it didn't give me insight into what was going on. The documentation mentioned two scripts for parsing arbitrary ingredients, [`parse-ingredients.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/parse-ingredients.py) and [`convert-to-json.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/convert-to-json.py), so I tried those:
 
@@ -295,7 +295,7 @@ Well, it mostly worked. The model failed to identify "Cup" as the unit of measur
 
 {% include ads.html title="zestful" %}
 
-# Making it easier
+## Making it easier
 
 I didn't want to go through all of those steps every time I ran the library, so I needed a way to speed up the installation process.
 
@@ -342,7 +342,7 @@ I recorded the demo below on an Ubuntu system with nothing installed except Dock
 
 <script src="https://asciinema.org/a/CEHqACV35S4UglTvwke0q6DxB.js" id="asciicast-CEHqACV35S4UglTvwke0q6DxB" async></script>
 
-# Onward
+## Onward
 
 The code ran successfully, and my work was reproducible on any system that supported Docker. What was next?
 

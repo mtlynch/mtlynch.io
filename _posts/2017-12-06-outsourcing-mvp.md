@@ -27,7 +27,7 @@ I had a simple plan to build my MVP:
 
 You may be surprised to learn that this plan did *not* work. I'm not writing this from my luxurious $200 million Silicon Valley two-bedroom apartment. I didn't grab headlines with an outrageous buyout from Facebook. Instead, I'm writing this from my regular one-bedroom apartment after receiving a half-finished product and somehow becoming my freelancer's freelancer.
 
-# The idea
+## The idea
 
 I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto) and like trying new recipes. There are plenty of good ones online, but they're spread across dozens of blogs, each with a different structure. These blogs tend to be slow and hard to navigate because keto bloggers rarely have experience with web development.
 
@@ -37,7 +37,7 @@ My idea was KetoHub, a keto recipe directory. It would aggregate recipes from ac
 
 {% include image.html file="wireframe-v1.jpg" alt="Mockup of KetoHub v1" fig_caption="Initial sketch of KetoHub" max_width="600px" img_link=true %}
 
-# Finding a freelancer
+## Finding a freelancer
 
 Most of KetoHub's heavy lifting was web scraping -- crawling recipe blogs and pulling out the relevant data. This is a common job on freelance developer sites like Upwork or Fiverr. I could probably find someone for a low price, but I might end up with code that crumbles to pieces if I try to iterate beyond the MVP.
 
@@ -49,7 +49,7 @@ I wrote a [design document](/files/outsourcing-mvp/ketohub-v1-design-doc.pdf) th
 
 {% include image.html file="ketohub-architecture.png" alt="KetoHub architecture diagram" fig_caption="KetoHub architecture diagram" max_width="800px" img_link=true %}
 
-# Why aren't we live?
+## Why aren't we live?
 
 When I was initially discussing the project with Ferngully, she asked if I had any deadlines. "No deadlines. Just focus on writing good code."
 
@@ -67,7 +67,7 @@ It took me a week to complete the web portion, but I still hadn't seen any code 
 
 Before I built the frontend, the project was stress-free. Now that we had a site ready with dummy data, it felt like we had a living thing that we were keeping caged. With each passing day, my code was withering into obsolescence. I just wanted to show KetoHub to the world so that I could get to the part of this process where Mark Zuckerberg  invites me for champagne on his personal-information-collecting superyacht.
 
-# Working under low bandwidth
+## Working under low bandwidth
 
 Ferngully sent me her first code review at the end of the second week. It was a partial implementation of the first backend component. She had averaged 15 hours per week, but she was starting her full-time job the following Monday. Her hours were sure to go down after that.
 
@@ -77,7 +77,7 @@ Okay, maybe the limited time was a good thing. If I could trim elements out of t
 
 I was optimistic that we could wrap this up in a few more weeks.
 
-# Becoming my freelancer's freelancer
+## Becoming my freelancer's freelancer
 
 Unfortunately, Ferngully's job reduced her availability even more than I had anticipated. Over the next month, she averaged less than five hours per week on KetoHub. At this rate, it would take us months to finish.
 
@@ -87,7 +87,7 @@ Maybe I could reassign some of her work to me. No, I'd be annoyed if someone hir
 
 Wait a second. What was going on? I outsourced KetoHub to save myself time, but now I was restructuring the project to optimize for Ferngully's time in place of my own. How did I become my freelancer's freelancer?
 
-# Simplifying code reviews
+## Simplifying code reviews
 
 Regardless of who was freelancing for whom, I wanted us to complete the project, and quickly. The biggest time expense I could cut was my famously picky code reviews.
 
@@ -95,7 +95,7 @@ The reviews were expensive for both of us. I put [a lot of thought into my code 
 
 To save time, I decided to stop giving Ferngully notes. When she sent me her next changelist for review, I merged it in, tweaked it a bit to match my standards, and boom -- we had our first complete backend component. Only two left!
 
-# This doesn't make sense
+## This doesn't make sense
 
 Ferngully was less enthused about my clever new time-saving technique. The tough reviews gave her technical growth. Without those, KetoHub was just work, and she had enough of that at work.
 
@@ -103,7 +103,7 @@ I debated whether I could keep doing notes. Even when I was skipping them, I was
 
 We talked it over and decided it no longer made sense for Ferngully to work on KetoHub. With the first component completed, it was a convenient time for her to transition off the project.
 
-# Implementing it myself
+## Implementing it myself
 
 The Saturday night after I wrapped up with Ferngully, I continued where she left off and resolved to keep going until the MVP was live. By 2 AM, the first version was complete. I was embarrassed by how plain it looked, but it was done.
 
@@ -117,7 +117,7 @@ Building it myself also made it so much easier to fix weaknesses in the design. 
 
 Finally, by outsourcing the backend, I was obscuring a core part of the business from myself. When I got my hands dirty with web scraping, it sparked ideas for recipe data I could use in future iterations of KetoHub and gave me better insight into the site's design constraints.
 
-# Takeaways
+## Takeaways
 
 Despite the issues, this process taught me important lessons about creating new websites and working with freelancers. The biggest lesson was: if you're a developer, **build your own MVP**.
 

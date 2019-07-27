@@ -22,7 +22,7 @@ Peter Keating, expert architect, can't understand why you're disappointed. "I fo
 
 Too often, software developers approach unit testing with the same flawed thinking. They mechanically apply all the "rules" they learned in production code without examining whether they're appropriate for tests. As a result, they build skyscrapers at the beach.
 
-# Test code is not like other code
+## Test code is not like other code
 
 Production code is all about abstractions. Good production code hides complexity in well-scoped functions and elegant class hierarchies. It allows the reader to navigate large systems with ease, diving down into the details or rising to a higher level of abstraction, as needed.
 
@@ -39,7 +39,7 @@ If I offered such a ruler to a carpenter, they'd smack me in the face with it. I
 
 Good test code is no different. It should produce clear results without forcing the reader to jump through multiple levels of indirection. Developers often lose sight of this because it differs from how they learned to write production code.
 
-# A good developer's bad test
+## A good developer's bad test
 
 I often see otherwise talented developers write tests like the following:
 
@@ -70,7 +70,7 @@ Okay, the `setUp` method created the `joe123` user with a score of 150, which ex
 
 No, this is a **bad test**.
 
-# Keep the reader in your test function
+## Keep the reader in your test function
 
 When you write a test, think about the next developer who will see the test break. They don't want to read your entire test suite, and they certainly don't want to read a whole inheritance tree of test utilities.
 
@@ -97,7 +97,7 @@ All I did was inline the code from the `setUp` method, but it made a world of di
 **The reader should understand a test without seeing any code outside of the test function.**
 {: .notice--info}
 
-# Dare to violate DRY
+## Dare to violate DRY
 
 Inlining the setup code is all well and good for a single test, but what happens if I have many tests? Won't I duplicate that code every time? Prepare yourself, because I'm about to advocate [copy/paste programming](https://en.wikipedia.org/wiki/Copy_and_paste_programming).
 
@@ -128,7 +128,7 @@ Before blindly applying DRY to your tests, think about what will make the proble
 **Accept a degree of code redundancy if it preserves the test's simpilicty.**
 {: .notice--info}
 
-# Think twice before adding helper methods
+## Think twice before adding helper methods
 
 Maybe you can live with copy/pasting six lines in every test, but what if `AccountManager` required more setup code?
 
@@ -178,7 +178,7 @@ In this case, refactoring `AccountManager` solves the root problem whereas addin
 **When tempted to write test helper methods, try refactoring your production code instead.**
 {: .notice--info}
 
-# If you need helper methods, write them responsibly
+## If you need helper methods, write them responsibly
 
 You don't always have the freedom to tear apart a production class for testability. Sometimes, helper methods are your only choice, so when you need them, write them well.
 
@@ -241,7 +241,7 @@ It still buries values in the helper method, but they're irrelevant to the test.
 **Keep helper methods free of any information the reader needs to understand the test.**
 {: .notice--info}
 
-# Go crazy with long test names
+## Go crazy with long test names
 
 Which of the following function names would you prefer to see in production code?
 
@@ -285,7 +285,7 @@ A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in
 **A good test name is so descriptive that a developer can diagnose failures from the name alone.**
 {: .notice--info}
 
-# Embrace magic numbers
+## Embrace magic numbers
 
 "Don't use magic numbers."
 
@@ -340,7 +340,7 @@ When I see developers define constants in test code, it's usually due to a misgu
 **Note**: It's okay for unit tests to *reference* constants that the production code exposes. They just shouldn't define their own.
 {: .notice--warning}
 
-# Conclusion
+## Conclusion
 
 To write excellent tests, a developer must align their engineering decisions with the goals of test code. Most importantly, tests should maximize simplicity while minimizing abstraction. A good test allows the reader to understand intended behavior and diagnose issues without ever leaving the test function.
 

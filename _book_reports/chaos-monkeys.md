@@ -18,13 +18,13 @@ An engaging read, but the narrator is painfully obnoxious.
 
 ---
 
-# What I Liked
+## What I Liked
 
 * Story is well-written and engaging
 * Interesting to see such a revealing view inside Facebook
 * Does an excellent job of explaining technology and finance terms that are approachable to the layperson
 
-# What I Disliked
+## What I Disliked
 
 * I found the author pretentious and abrasive
   * He boasts about getting out of a ticket after being pulled over for drunk driving.
@@ -36,7 +36,7 @@ An engaging read, but the narrator is painfully obnoxious.
 * Lots of "hustle worship."
   * He sneeringly declines a job offer from Twitter because they encourage their employees to go home at dinnertime, whereas Facebook encouraged all-night hackathons and weekend work.
 
-# Key Takeaways
+## Key Takeaways
 
 * You can understand credit default swaps by thinking of them in terms of car insurance
   * Credit default swaps are insurance against someone failing to pay you money they owe. If you buy a bond from someone and it defaults, the seller of a credit default swap will reimburse your losses. Similar to how if your car gets damaged, the insurer will pay for you to get it back to normal state.

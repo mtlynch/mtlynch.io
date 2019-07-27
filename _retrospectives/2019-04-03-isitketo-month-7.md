@@ -3,17 +3,17 @@ title: 'Is It Keto: Month 7'
 excerpt: A record month, but it's time to give up.
 ---
 
-# One-Line Summary
+## One-Line Summary
 
 A record month, but it's time to give up.
 
-# Highlights
+## Highlights
 
 * [Is It Keto](https://isitketo.org)'s visits reached a record high of 11k pageviews.
 * Revenues reached a record high of $40.84 in affiliate income.
 * Despite this, Is It Keto didn't satisfy its critical goals, so I'm putting it on the backburner.
 
-# Goal Grades
+## Goal Grades
 
 At the start of the month, I laid out some high-level goals. Because of Is It Keto's slow growth, I declared these to be goals the site **must** meet or else I'd stop working on it.
 
@@ -40,9 +40,9 @@ I made a longshot bet that other keto sites would link to me if I created intere
 
 In January and February, I set more aggressive goals for publishing new food articles (75 and 30, respectively). March's target was deliberately conservative so that I could focus on strategies for increasing incoming links. This was a nice, easy goal, so I beat the target by a small amount.
 
-# Stats and Metrics
+## Stats and Metrics
 
-## Amazon Affiliate Stats
+### Amazon Affiliate Stats
 
 {% include image.html file="amazon-earnings-2019-03.jpg" alt="Amazon Earnings - March 2019"  max_width="800px" img_link="true" fig_caption="Amazon affiliate earnings - March 2019" %}
 
@@ -56,7 +56,7 @@ Conversion rates have been promisingly high. I don't have numbers for February [
 
 There was a precipitous drop in affiliate link clicks relative to February, but I suspect February's numbers were not accurate. I tried to correct for the link confusion in February by correlating clicks against my Google Analytics data, but now I'm skeptical that Google Analytics recorded every click. It seems too suspicious that clicks dropped by 36% while pageviews increased by 34%.
 
-## Visitor Stats
+### Visitor Stats
 
 {% include image.html file="ga-2019-03-trailing-12.jpg" alt="Google Analytics screenshot"  max_width="800px" img_link="true" fig_caption="User sessions - April 2018 through March 2019" %}
 
@@ -72,7 +72,7 @@ This was a great month for user visits in every category, but the growth came al
 
 So much of Is It Keto's success depends on how Google ranks me for a query like ["is Metamucil keto?"](https://google.com/search?q=is+metamucil+keto%3F) If [my article](https://isitketo.org/metamucil) is the #1 result, that one page can bring in 1,000 visitors per month. If the article is in the #15 spot, I'll only receive a handful of visitors.
 
-## SEO Stats
+### SEO Stats
 
 {% include image.html file="google-search-console.jpg" alt="Google Search Console screenshot"  max_width="800px" img_link="true" fig_caption="Google Search Console - March 2019" %}
 
@@ -90,7 +90,7 @@ In February, there were only two Is It Keto pages that appeared more than 500 ti
 
 I'm not sure why there was such a dramatic boost this month. It could be that there's an age component to it, so my links are bubbling to the top of results as more users click. Or it could be that Google is ranking me more favorably as the breadth of my site has grown, so I'm a more trustworthy authority on the keto diet now that I've reached 173 articles.
 
-## Finances
+### Finances
 
 | Income/Expense | February 2019 | March 2019 |
 |----------|----------|--------------|
@@ -103,7 +103,7 @@ In winding down the site, I reduced the hours of my content writers and my Twitt
 
 Despite March being my highest revenue month, the costs highlight the tininess of my revenue. One of my writers charged $50/hr, so my entire month of income wouldn't be enough to pay for a single hour of her time.
 
-# Biggest challenge: link building
+## Biggest challenge: link building
 
 Over the past few months, it's become clear that Is It Keto's primary source of growth is organic search. And for the site to rank well in search results, other reputable sites need to link to Is It Keto.
 
@@ -113,7 +113,7 @@ I tried to think of what unique advantages I had over other keto sites. My one s
 
 {% include image.html file="ketohub-data.jpg" max_width="800px" img_link="true" fig_caption="Structured keto recipe data from KetoHub" %}
 
-# My failed attempt at link building
+## My failed attempt at link building
 
 My idea was to create compelling visualizations from my KeotHub data. And then once I had some examples, approach major keto sites and ask if they want to republish my charts. Or I could even create custom visualizations about the recipes on their specific site. In exchange, they just had to provide attribution in the form of a link back to Is It Keto.
 
@@ -137,7 +137,7 @@ The results were no better than my first wave of pitches. Most sites never answe
 
 In the end, I wasn't able to get any new links to Is It Keto.
 
-# Calling it quits
+## Calling it quits
 
 Now, I'm shelving the site. It's a difficult decision because it has been growing consistently, and I'm sure I could get it to turn a profit if I kept working on it for another year. But of everything I could invest a year of effort into, I suspect this is not the one with the highest potential profit.
 
@@ -147,9 +147,9 @@ My hope is that the site will grow organically as people click Is It Keto links 
 
 In total, I spent about $4,500 on the site and earned only $76 in revenue so far. I doubt I'll earn back my investment, but it could happen if growth continues at its current rate.
 
-# Wrap Up
+## Wrap Up
 
-## What Got Done?
+### What Got Done?
 
 * Published [two blog posts](https://isitketo.org/blog) experimenting with keto recipes and visualization
 * Reached out to eight major keto sites to see if they'd be interested in using my visualizations in exchange for attribution
@@ -158,7 +158,7 @@ In total, I spent about $4,500 on the site and earned only $76 in revenue so far
   * For example, it notifies me if an Is It Keto article mentions "lima beans" but doesn't link to the dedicated [lima beans article](https://isitketo.org/lima-beans).
 * Added 12 new food pages
 
-## Lessons Learned
+### Lessons Learned
 
 These are my takeaways from March, but I'll probably do a full-length blog post about what high-level lessons I've learned from this project.
 
@@ -169,7 +169,7 @@ These are my takeaways from March, but I'll probably do a full-length blog post 
   * I had a good experience with NVD3, but their fork situation is confusing. [nvd3/nvd3](https://github.com/nvd3/nvd3) is the most stable repo, but their [documentation page is broken](https://github.com/nvd3/nvd3/issues/6). The nvd3-community fork is out of date, but [their documentation works](https://nvd3-community.github.io/nvd3/).
   * I've heard good things about the more actively maintained [Vega library](https://vega.github.io/vega/), but haven't tried it.
 
-## Goals for April
+### Goals for April
 
 Is It Keto is on hold, so my top goal is to resist the temptation to continue working on it or monitoring it closely. In addition, here are a couple other things I'd like to achieve in April:
 

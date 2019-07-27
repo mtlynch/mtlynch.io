@@ -18,12 +18,12 @@ Unfortunately, much of the content aged poorly. Published in 2010, Walling inten
 
 ---
 
-# What I Liked
+## What I Liked
 
 * Pragmatic approach to developing product ideas and marketing
 * Does an excellent job of highlighting the many advantages of small niches
 
-# What I Disliked
+## What I Disliked
 
 * Much of it feels dated in 2019
   * It's meant to be specific and practical, but that means many of the websites it mentions are no longer acive or relevant. For example, it refers to MySpace as the second most relevant social networking site.
@@ -37,7 +37,7 @@ Unfortunately, much of the content aged poorly. Published in 2010, Walling inten
   * At one point, the book suggests you can pay $3k to have an overseas developer create an entire web application ("200 hours @ $15/hr for a Senior PHP Developer").
     * This felt *extremely* unrealistic. I feel like a more plausible wage for a real senior-level PHP developer is at least $70/hr.
 
-# Key Takeaways
+## Key Takeaways
 
 * A product needs a market before it can succeed.
   * "Without a market, a software application is just a project."

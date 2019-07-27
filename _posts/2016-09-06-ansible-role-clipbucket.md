@@ -12,11 +12,11 @@ excerpt: An Ansible role love story
 
 {% include base_path %}
 
-# Overview
+## Overview
 
 [ClipBucket](http://www.clipbucket.com/) is an open source video hosting platform, similar in functionality to YouTube or Vimeo. In this guide, we'll walk through how to deploy ClipBucket to a server using the configuration management tool, Ansible.
 
-# tl; dr - Just Install ClipBucket<a id="just-install-clipbucket"></a>
+## tl; dr - Just Install ClipBucket<a id="just-install-clipbucket"></a>
 
 > I don't care about Ansible or any of your thoughts and feelings about using
 it to install ClipBucket. Just tell me how to install ClipBucket!
@@ -28,7 +28,7 @@ server with just a few commands:
 ```bash
 sudo apt-get update
 
-# Install Ansible and dependencies
+## Install Ansible and dependencies
 sudo apt-get install -y \
   libffi-dev \
   libyaml-dev \
@@ -38,15 +38,15 @@ sudo apt-get install -y \
   python2.7-dev
 sudo pip install ansible paramiko PyYAML Jinja2 httplib2 six
 
-# Install the Ansible ClipBucket role
+## Install the Ansible ClipBucket role
 sudo ansible-galaxy install mtlynch.clipbucket
 
-# Create a minimal Ansible playbook to install ClipBucket
+## Create a minimal Ansible playbook to install ClipBucket
 echo "- hosts: localhost
   roles:
     - { role: mtlynch.clipbucket }" > install.yml
 
-# Run the ClipBucket playbook locally
+## Run the ClipBucket playbook locally
 sudo ansible-playbook install.yml \
   --extra-vars "mysql_root_password=root" \
   --extra-vars "clipbucket_mysql_password=clipbucketpw" \
@@ -60,7 +60,7 @@ Admin credentials of:
 * **Username**: `admin`
 * **Password**: `admin` (*change this password after logging in*)
 
-# Why Automate ClipBucket Deployment?
+## Why Automate ClipBucket Deployment?
 
 ClipBucket doesn't provide much documentation about deployment. All I could find as far as official documentation was this [instructional video](https://clipbucket.com/docs/knowledgebase/clipbucket-how-to-install-clipbucket/), but it assumes that the user has already installed many of ClipBucket's dependencies.
 
@@ -72,7 +72,7 @@ Even after installing ClipBucket and all of its dependencies, a new deployment o
 
 A web UI is probably nice for new users, but it's not the kind of thing you'd want to go through over and over every time you have to deploy a new server.
 
-# Automating Installation
+## Automating Installation
 
 ClipBucket's major dependencies are Linux, Apache, MySQL, and PHP (a "LAMP stack"). Fortunately, Ansible has a concept called "roles" that allow users to package automation logic for a component and allow others to re-use this logic, even composing multiple roles together to create new roles.
 
@@ -84,7 +84,7 @@ We can avoid duplicating effort with [Ansible Galaxy](https://galaxy.ansible.com
 
 ClipBucket has some smaller dependencies, such as ImageMagick and FFMpeg, which are straightforward to install with a a command or two within our Ansible playbook (see all installation steps [here](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tasks/main.yml)).
 
-# Automating Post-Install Steps
+## Automating Post-Install Steps
 
 As mentioned earlier, ClipBucket expects the user to walk through a web UI to complete the installation. We'd like to eliminate this manual step, but this is a challenge. Ansible is designed to automate command line tasks, but is not well suited for automating user actions in a web UI.
 
@@ -110,7 +110,7 @@ clipbucket                : ok=77   changed=48   unreachable=0    failed=0
 
 {% include image.html file="clipbucket-install-complete.png" alt="Complete ClipBucket installation" img_link=true %}
 
-# Automating Playbook Testing
+## Automating Playbook Testing
 
 Once I created a working playbook, I still had some work to do in refactoring my Ansible role to make the logic cleaner and more reusable. I quickly realized that it was easy to accidentally break my role this way (e.g. by accidentally deleting a necessary command). I tested for this by repeatedly running my role against a bare VM and then testing that the installation was successful, but this became a very manual and tedious process. Given that the goal of this whole endeavor is automation, I sought a way to automate the process of verifying that my Ansible role still created a working ClipBucket server.
 
@@ -127,14 +127,14 @@ I'm considering expanding the testing by writing more sophisticated web flows, s
 
 **Update (2016-09-25)**: New post about integrating Selenium is up [here]({{ base_url }}/testing-ansible-selenium/).
 
-# Final Product
+## Final Product
 
 My ClipBucket Ansible Role is available:
 
 * [On Github](https://github.com/mtlynch/ansible-role-clipbucket)
 * [On Ansible Galaxy](https://galaxy.ansible.com/mtlynch/clipbucket)
 
-# Using the ClipBucket Ansible Role
+## Using the ClipBucket Ansible Role
 
 *Note: If you're not familiar with Ansible and not interested in learning, see the ["Just Install Clipbucket"](#just-install-clipbucket) section at the top of this post.*
 
@@ -158,7 +158,7 @@ It's easy to use the ClipBucket Ansible role. To get started, you'll need to [in
 
 ```yaml
 ---
-# Change these passwords to secure, strong passphrases of your choosing.
+## Change these passwords to secure, strong passphrases of your choosing.
 mysql_root_password: rootpw321
 clipbucket_mysql_password: dbpw123
 clipbucket_admin_password: password123

@@ -14,7 +14,7 @@ excerpt: An automated peer to peer lending bot
 
 {% include base_path %}
 
-# Overview
+## Overview
 
 I started investing in peer to peer lending in 2014 through a site called [Prosper](https://www.prosper.com/). I thought peer to peer lending was a neat idea and could potentially earn lucrative returns.
 
@@ -22,7 +22,7 @@ When I began, I chose each of my loan investments manually, but over time, I hav
 
 In this blog post, I'll give a brief overview of peer to peer lending and walk through the process of building ProsperBot.
 
-# What is Peer to Peer Lending?
+## What is Peer to Peer Lending?
 
 Imagine that Alice wants to borrow $3,000 to pay back over the next 5 years. Traditionally, Alice's best option would be to apply for a loan at a bank. The bank gives her the $3,000 and if Alice pays back the loan as scheduled, the bank earns money through interest and fees on her loan. If she fails to pay back the loan, the bank absorbs the loss.
 
@@ -30,7 +30,7 @@ With peer to peer lending, Alice visits a peer to peer intermediary (such as Len
 
 The theory is that by cutting out the bank as the middleman, borrowers can get better rates than from traditional lenders and investors (lenders) can earn better interest than depositing their money in a bank through a savings account or CD. For more in-depth discussion of peer-to-peer lending, sites like [Lend Academy](http://www.lendacademy.com/) are an excellent resource.
 
-# What is ProsperBot
+## What is ProsperBot
 
 To invest in peer to peer loans with Prosper, investors can use Prosper's web site to choose loans manually, but Prosper also offers a [public API](https://developers.prosper.com/) for developers to invest automatically.
 
@@ -40,13 +40,13 @@ I chose the API route and developed ProsperBot, a lending bot that continuously 
 
 As you can see in the graph, my account has been steadily increasing in value since April, as ProsperBot receives repayments on loans and reinvests the cash in new loans. My total account value begins to decline in October, as I have begun withdrawing money from my Prosper account.
 
-# Piece by Piece
+## Piece by Piece
 
 There are several different pieces to ProsperBot, which I've diagrammed below:
 
 ![ProsperBot Architecture](https://docs.google.com/drawings/d/1QMUzdufLQ5Ks3TOvmNd0ScuRk0U4QfxewHvXcQtSfnI/pub?w=1056&amp;h=784)
 
-## gofn-prosper (Go Forth 'n Prosper)
+### gofn-prosper (Go Forth 'n Prosper)
 
 **[gofn-prosper](https://github.com/mtlynch/gofn-prosper)** is a set of Go bindings for the public Prosper API. It abstracts away the details of Prosper's API from the rest of the application, so that to do something like purchase a Prosper note, the application can do so like this:
 
@@ -59,7 +59,7 @@ client.PlaceBid(prosper.BidRequest{
 
 This is probably the most interesting part of the project for others, as it is completely independent of ProsperBot. Anyone interested in writing a Go application to interact with the Prosper API can re-use this library in their application.
 
-## ProsperBot
+### ProsperBot
 
 **[ProsperBot](https://github.com/mtlynch/prosperbot)** is the application built on top of gofn-prosper to actually perform actions on Prosper. ProsperBot continually polls Prosper servers to:
 
@@ -72,11 +72,11 @@ ProsperBot stores all of its state in a **Redis** database.
 
 This part is not as polished as I'd like (code has some hacks, is not well documented), but I'm publishing it mainly as an example usage of gofn-prosper.
 
-## ProsperBot Frontend
+### ProsperBot Frontend
 
 The **[ProsperBot Frontend](https://github.com/mtlynch/prosperbot-frontend)** is an AngularJS web application that shows ProsperBot's status (as seen in the screenshot above). It uses **nginx** to handle requests for static resources (e.g. HTML files, images) and uses a custom Go server to handle requests for dynamic content. The Go server uses the same **Redis** data store as ProsperBot to serve these dynamic requests.
 
-# Deploying ProsperBot
+## Deploying ProsperBot
 
 ProsperBot includes several different pieces and imposes some dependencies on the host system (Go, nginx, etc.). To simplify the process of deploying ProsperBot, I've written a couple of [Ansible roles](https://www.ansible.com/):
 
@@ -85,7 +85,7 @@ ProsperBot includes several different pieces and imposes some dependencies on th
 
 Splitting it this way makes it possible for someone to deploy ProsperBot, ProsperBot Frontend, and Redis each on a separate machine. I personally install all the components on a single server (example Ansible playbook for this is shown in the Github [README example](https://github.com/mtlynch/ansible-role-prosperbot-frontend#example-playbook)).
 
-# Thoughts on Prosper
+## Thoughts on Prosper
 
 Overall, ProsperBot was a good learning experience for me, but I don't recommend Prosper as an investment strategy. A few reasons:
 

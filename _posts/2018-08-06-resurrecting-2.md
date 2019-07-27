@@ -25,7 +25,7 @@ This is part two of a three-part series about how I resurrected [ingredient-phra
 
 {% include image.html file="cover.jpg" alt="Beavers stabilizing shaky house" max_width="800px" img_link=true %}
 
-# Running it in continuous integration
+## Running it in continuous integration
 
 At the end of part one, I created a Docker image that allowed the library to run on any system. The next step was to run the library in continuous integration.
 
@@ -45,7 +45,7 @@ I pushed my commit to Github, created a [pull request](https://github.com/mtlync
 
 {% include image.html file="first-travis-build.png" class="img-border" alt="Screenshot of first successful build on Travis CI" fig_caption="First successful build on Travis" max_width="792px" %}
 
-# Adding an end-to-end test
+## Adding an end-to-end test
 
 Travis was building my Docker image, but the build wasn't meaningful yet. It only built the library's dependencies &mdash; it didn't exercise any of its behavior. I wanted a build that could alert me when I broke the library's functionality. To do that, I needed an end-to-end test.
 
@@ -57,7 +57,7 @@ An end-to-end test verifies that a complete, real-world scenario works as expect
 
 The original repository contained a script called [roundtrip.sh](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/roundtrip.sh) that resembled an end-to-end test. It provided pre-generated input to the library, used a portion of the input to train a new machine learning model, then used that model to parse other portions of the input. The only piece missing was that it never compared results to a known-good output.
 
-# A basic end-to-end test
+## A basic end-to-end test
 
 In [part one](/resurrecting-1/), I showed that the `roundtrip.sh` script's final result was a set of summary statistics about the model's performance:
 
@@ -86,7 +86,7 @@ python bin/evaluate.py tmp/test_output > tmp/eval_output
 diff tests/golden/eval_output tmp/eval_output
 ```
 
-# Does my test know when code breaks?
+## Does my test know when code breaks?
 
 An end-to-end test is only useful if it catches bugs, so my next step was to simulate a breaking change and check if my end-to-end test caught it.
 
@@ -121,7 +121,7 @@ When I told the code that 9 was no longer considered a number, the library's acc
 
 {% include ads.html title="zestful" %}
 
-# Expanding the end-to-end test
+## Expanding the end-to-end test
 
 The basic end-to-end test above was useful, but `roundtrip.sh` executes a data pipeline with several stages. It would be convenient to know which particular stage broke, so I looked for more outputs to include in the end-to-end test.
 
@@ -163,7 +163,7 @@ After copying these files to `tests/golden`, I saved them to source control as a
 
 {% include ads.html title="zestful" %}
 
-# The complete build script
+## The complete build script
 
 After all my modifications to `roundtrip.sh`, I saved it as a new file called `build.sh`, which looked like this:
 
@@ -175,7 +175,7 @@ I then added a simple wrapper around that script called `docker_build` that ran 
 
 With the `docker_build` script, my end-to-end test could run on any system that supported Docker. Naturally, I wanted to run it in my continuous integration environment.
 
-# Running my end-to-end tests in continuous integration
+## Running my end-to-end tests in continuous integration
 
 My earlier Travis configuration built the Docker image but didn't exercise the library. Now that I had a thorough test script, I updated my `.travis.yml` file to run it:
 
@@ -192,7 +192,7 @@ I [pushed my changes](https://github.com/mtlynch/ingredient-phrase-tagger/pull/4
 
 I wasn't happy to see a build break, but I was glad that my end-to-end test caught something. I just had to figure out what it was.
 
-# Debugging the discrepancy
+## Debugging the discrepancy
 
 The whole point of a Docker container is that the program should behave the same anywhere, so how could I run the same container in two places and see different outputs?
 
@@ -233,7 +233,7 @@ crf_test \
 
 The end-to-end test had verified that the contents of `$ACTUAL_CRF_TRAINING_FILE` and `$ACTUAL_CRF_TESTING_FILE` matched my golden versions. This meant that `crf_learn` and `crf_test` took in inputs that were identical on my local system as well as in continuous integration, but they produced different outputs depending on the environment.
 
-# A deeper dive into CRF++
+## A deeper dive into CRF++
 
 Was CRF++ non-deterministic? I tried running the test again locally. It passed. I re-ran the test on Travis, and it failed in the same way. This told me that CRF++ was consistent across executions in the same environment, but was inconsistent across environments.
 
@@ -276,13 +276,13 @@ Then, I saved the newly generated output files as my golden copies. I pushed [th
 
 {% include image.html file="e2e-fix.png" alt="Success after fixing end-to-end test" max_width="800px" img_link=true class="img-border" fig_caption="End-to-end test passing on Travis" %}
 
-# The value of good tests
+## The value of good tests
 
 The end-to-end test proved its value very quickly. While it was tedious to dive into the documentation for one of the library's dependencies, the test exposed that the library produced inconsistent results depending on its environment. This is something the library's original authors likely never realized.
 
 With the end-to-end test in place and continuous integration running, I had an authoritative environment that demonstrated the library's expected functionality. The test provided a valuable safeguard in case I made any changes that unintentionally changed the library's behavior.
 
-# What's next?
+## What's next?
 
 With the confidence from my test, it was time for my favorite part of a software project: refactoring. I was free to make large-scale changes to the code because I knew the build would break loudly if I did anything too stupid.
 

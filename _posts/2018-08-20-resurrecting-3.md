@@ -29,13 +29,13 @@ This is the final post in a three-part series about how I resurrected [ingredien
 
 {% include image.html file="cover.jpg" alt="Hermit crab being pulled from shell" max_width="800px" img_link=true %}
 
-# Where are we?
+## Where are we?
 
 In the previous two blog posts, I [created a custom Docker image](/resurrecting-1/#making-it-easier) so that I could use this library anywhere and [added an end-to-end test](/resurrecting-2/#the-complete-build-script) to preserve high-level behavior. Upon every change to the codebase, [Travis continuous integration](https://travis-ci.org/) built all dependencies and [executed the test in a controlled environment](/resurrecting-2/#running-it-in-continuous-integration).
 
 Until this point, I hadn't modified the code itself. I only added tools and scripts on top of existing code to verify its behavior. Now that I had all the mechanisms in place to modify the code safely, I could finally begin refactoring.
 
-# Enforcing whitespace conventions
+## Enforcing whitespace conventions
 
 Developers should never [waste mental energy on whitespace](/human-code-reviews-1/#let-computers-do-the-boring-parts). Whenever I start a new software project, I automate the whitespace formatting as early as possible.
 
@@ -71,7 +71,7 @@ yapf \
 
 It's the same as the earlier command, but with a `--diff` flag instead of the `--in-place` flag.  If YAPF detects whitespace violations, it will print them out, then emit a failing exit code, causing the build script to terminate in failure.
 
-# Adding static analysis
+## Adding static analysis
 
 [pyflakes](https://github.com/PyCQA/pyflakes) is another handy component I always add to my Python toolchain. It uses static analysis to identify careless errors such as uninitialized variables or unused imports.
 
@@ -84,7 +84,7 @@ $ pyflakes \
 ingredient_phrase_tagger/training/utils.py:3: 'string' imported but unused
 ```
 
-# Time to read the code
+## Time to read the code
 
 You may have noticed that throughout this process, I've avoided any attempts to understand the code. I skated by with only a cursory understanding of the library's behavior.
 
@@ -94,7 +94,7 @@ The best way I've found for reading code is to refactor and test as I go. Famed 
 >
 >-Martin Fowler, [*Refactoring: Improving the Design of Existing Code*](https://amzn.to/2nuHVfv)
 
-# Addressing poor code organization
+## Addressing poor code organization
 
 80% of all code in the library was in just two of its files: `cli.py` (command-line interface) and `utils.py` (utilities). In other words, the authors split the code into two buckets: "user interface" and "everything else." But even this wasn't a clean separation.
 
@@ -112,7 +112,7 @@ My first order of business was to slim down the `Cli` class so that it formed a 
 
 {% include ads.html title="zestful" %}
 
-# Dissecting the `Cli` class
+## Dissecting the `Cli` class
 
 To break up the `Cli` class, I needed a starting point. `generate_data` sure didn't seem to belong in a class responsible for managing a user interface, but I couldn't immediately move it. `generate_data` called `Cli`'s other methods through its `self` parameter, meaning it shared state with the rest of the class.
 
@@ -132,7 +132,7 @@ The other member variable, `self.opts` wasn't dead, but only two methods referen
 
 With no shared state, there was no reason for any of `Cli`'s other public methods to be methods at all. They could all live happily as module-level free functions. Better yet, I could move them to an entirely new module that described their purpose better than `cli`.
 
-# Forming a clean abstraction
+## Forming a clean abstraction
 
 Once I discovered that most of `Cli`'s methods could live in another module, I had to design that new module. I could, of course, move every function there and make them all public, but I wanted to find a minimal interface between the `Cli` class and this new module.
 
@@ -156,7 +156,7 @@ My end-to-end test passed, which told me I didn't break anything significant in 
 
 {% include ads.html title="zestful" %}
 
-# My first unit test
+## My first unit test
 
 Creating the unit test was easy. I temporarily added debug log statements at the beginning and end of `translator.translate_row` to print the inputs and outputs. Those values became the input and expected output of my first unit test:
 
@@ -189,7 +189,7 @@ It returned a set of tab-separated values that the library's machine learning en
 
 I [added a few more unit tests](https://github.com/mtlynch/ingredient-phrase-tagger/pull/50/files#diff-6d949259dd4883a10ce9b073d36c7860) to cover different types of ingredients: an ingredient with fractions (`"1 1/2 teaspoons salt"`) and an ingredient with a comment attached (`"Half a vanilla bean, split lengthwise, seeds scraped"`).
 
-# Integrating unit tests into the build
+## Integrating unit tests into the build
 
 Unit tests aren't much fun unless they're integrated into the build process, so I [updated my build script](https://github.com/mtlynch/ingredient-phrase-tagger/pull/50) to include them:
 
@@ -201,7 +201,7 @@ Because Travis continuous integration was already running my build script on eve
 
 {% include image.html file="travis-unit-tests.png" alt="Unit test logging output" fig_caption=fig_caption max_width="715px" img_link=true %}
 
-# Adding code coverage
+## Adding code coverage
 
 While refactoring, I love watching the code coverage percentages climb as I bring more code under test. In Python projects, I use the [`coverage` module](https://pypi.org/project/coverage/) to collect coverage information and [Coveralls](http://coveralls.io) to make the results available in a web dashboard.
 
@@ -226,7 +226,7 @@ I checked Coveralls, eager to see my code coverage stats, and...
 
 Nothing.
 
-# Where did my code coverage go?
+## Where did my code coverage go?
 
 I had used Coveralls in dozens of projects in the past, so I didn't understand why it wasn't displaying anything. It was just a simple Python project. The `coverage` command was supposed to create a file called `.coverage` with the code coverage information, and the `coveralls` command was supposed to upload it to the Coveralls dashboard.
 
@@ -281,7 +281,7 @@ Coveralls couldn't find the file because the paths in `.coverage` were based on 
 
 How could I bridge the gap between these two different environments with incompatible views of the same files? I found a solution, but it was a bit convoluted.
 
-# A roundabout way to convert paths
+## A roundabout way to convert paths
 
 In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/v4.5.x/config.html#paths) that discussed combining paths from multiple filesystems:
 
@@ -308,13 +308,13 @@ after_success:
   - coveralls
 ```
 
-# Code coverage at last
+## Code coverage at last
 
 I put [my full solution](https://github.com/mtlynch/ingredient-phrase-tagger/pull/51) to the test. Finally, Coveralls received the results and [displayed my code coverage numbers](https://coveralls.io/jobs/39262596):
 
 {% include image.html file="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" fig_caption="Coveralls finally shows code coverage information." max_width="697px" link_url="https://coveralls.io/jobs/39262596" class="img-border" %}
 
-# I pronounce this library resurrected
+## I pronounce this library resurrected
 
 After integrating code coverage tracking, I felt like this library was alive again. It wasn't going to win any awards for quality, but the infrastructure was in place for me or any other developer to continue iterating on the code with high confidence.
 
@@ -330,7 +330,7 @@ Throughout this series of blog posts, I described how I improved the library in 
 | Inconsistent code style | [Enforces style conventions](/resurrecting-3/#enforcing-whitespace-conventions) via automated tools |
 | Developers must identify unused imports and uninitialized variables manually | [Applies static analysis](/resurrecting-3/#adding-static-analysis) to catch careless errors automatically |
 
-# Refactor one to throw away
+## Refactor one to throw away
 
 Given how proud I was of these changes, it may surprise you to learn that after a few more weeks of improving the code, I abandoned it in favor of a total rewrite.
 

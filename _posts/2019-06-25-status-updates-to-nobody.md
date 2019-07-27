@@ -17,13 +17,13 @@ At my last job, status meetings with my manager were outstandingly efficient. He
 
 How did my manager have the right context so that we could skip to the good stuff? He read my Snippets.
 
-# What are Snippets?
+## What are Snippets?
 
 Snippets is the name of an internal tool at Google for sharing status with your teammates. It's just a plain text field where you write down your accomplishments for the week. The following week, your manager and teammates receive your update in an email digest.
 
 At first, it seemed like a pointless idol in Google's cult of internal openness, but it soon became clear to me that a surprising amount of value came from something that was basically just a textbox.
 
-# I don't hate meetings &mdash; I hate *bad* meetings
+## I don't hate meetings &mdash; I hate *bad* meetings
 
 Like most developers, I had always hated team sync meetings. Even if the meeting was only an hour, the interruption ruined my productivity for several more. I understood why they were necessary, but they were always painful to endure.
 
@@ -41,7 +41,7 @@ Few people on the new team bothered to write Snippets. If we had to re-explain e
 
 That didn't happen. Instead, I found myself writing Snippets again a few weeks later, knowing full well that my manager would never read them.
 
-# The joy of sending status updates to nobody
+## The joy of sending status updates to nobody
 
 Friday afternoons are when my brain lies to me about my work. It often tells me that I wasted an entire week investigating a bug and have nothing to show for it.
 
@@ -51,7 +51,7 @@ Sometimes, I completely forgot about a cool feature I launched on Tuesday becaus
 
 Without Snippets, I forgot all that and remembered only what I *hadn't* accomplished.
 
-# Other tools don't get it
+## Other tools don't get it
 
 In early 2018, [I left Google](/why-i-quit-google/). Without access to my beloved Google-internal tools, I searched for an external replacement for Snippets to no avail.
 
@@ -63,7 +63,7 @@ Everyone enjoys cool visualizations, but generating them requires the employees 
 
 Snippets was *just* a textbox. Employees had full autonomy over how they described their work without any overhead.
 
-# I'm blocked because I don't have a textbox?
+## I'm blocked because I don't have a textbox?
 
 Without a ritual to end each week on a positive note, my work just felt like a series of thankless tasks. My morale dwindled, and I kept fruitlessly searching for a status tool that matched the simplicity of Snippets.
 
@@ -75,7 +75,7 @@ I immediately created a new Google Doc and wrote my update for the week:
 
 I recorded my status updates in that private Google Doc every week for a year. Nobody else saw it, but that was fine. It gave me back the habit I was missing. Each week ended with a reminder of how much I accomplished, and it felt great.
 
-# Creating yet another status update tool
+## Creating yet another status update tool
 
 After writing private updates for a year, it still gave me satisfaction, but I missed writing for an audience. I saw the myriad of benefits I gained by [publishing my monthly retrospectives](/keep-growing-never-profit/#i-published-monthly-goals-and-stuck-to-them) and wanted to do the same thing for weekly updates.
 
