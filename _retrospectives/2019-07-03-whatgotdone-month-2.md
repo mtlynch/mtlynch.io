@@ -17,7 +17,7 @@ The conversation should be about thousands of dollars, not tens of dollars.
 
 ## Goal Grades
 
-#### Publish a new blog post that explains why I built What Got Done
+### Publish a new blog post that explains why I built What Got Done
 
 * **Result**: I published ["Staying Motivated by Sending Status Updates to Nobody"](/status-updates-to-nobody/)
 * **Grade**: A
@@ -26,14 +26,14 @@ Last month, it felt like I was scrambling to get a new blog post out the door by
 
 The post didn't attract a large number of readers, but it did seem to jumpstart sign-ups to What Got Done (more on that [below](#a-jumpstart-for-what-got-done)).
 
-#### Interview six email copywriters about their workflow and pain points
+### Interview six email copywriters about their workflow and pain points
 
 * **Result**: Interviewed 0 copywriters because I was distracted by Zestful
 * **Grade**: F
 
 I got some unexpected customer interest in Zestful, so I put the email copy project on hold and tried to pursue Zestful business.
 
-#### Create a landing page to begin collecting customer emails for my next product
+### Create a landing page to begin collecting customer emails for my next product
 
 * **Result**: Cut this, as I was distracted by Zestful
 * **Grade**: F
@@ -42,7 +42,7 @@ Same as above.
 
 ## Inactive projects
 
-#### Is It Keto
+### Is It Keto
 
 Now that Is It Keto is on the back burner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 

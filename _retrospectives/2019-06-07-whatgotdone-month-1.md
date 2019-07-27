@@ -17,21 +17,21 @@ While figuring out my next project, I launched a different product.
 
 ## Goal Grades
 
-#### Publish a minimum viable product version of What Got Done
+### Publish a minimum viable product version of What Got Done
 
 * **Result**: What Got Done is now [live](https://whatgotdone.com).
 * **Grade**: A
 
 I launched What Got Done on [May 24th](https://whatgotdone.com/michael/2019-05-24). It hasn't gained much traction, so I'm debating whether to stick with it or focus on other ideas.
 
-#### Meet with 10 potential customers for my next product
+### Meet with 10 potential customers for my next product
 
 * **Result**: Had five customer meetings (<font color="red">50% below target</font>)
 * **Grade**: C
 
 I got a bit sidetracked in adding post-launch features to What Got Done, so I had fewer customer interviews than I intended. It's hard to motivate myself to do the necessary-but-unglamorous work of user research when it's so enticing to add features to a fresh product.
 
-#### Publish a new blog post
+### Publish a new blog post
 
 * **Result**: Published ["How to Grow Quickly and Never Turn a Profit"](/keep-growing-never-profit/) on the last day of the month
 * **Grade**: B+
@@ -40,7 +40,7 @@ I did publish the blog post, but I had to scramble a bit to get it in under the 
 
 ## Inactive projects
 
-#### Is It Keto
+### Is It Keto
 
 Now that Is It Keto is on the backburner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
@@ -54,7 +54,7 @@ Now that Is It Keto is on the backburner, I'm not going to dive as deeply into i
 
 It's exciting to see that the site is still growing even though I stopped working on it in March. The growth comes entirely from [delayed gains](/keep-growing-never-profit/#search-engines-have-a-substantial-lag) in search engine rankings.
 
-#### Zestful
+### Zestful
 
 [Zestful](https://zestfuldata.com), the ingredient parsing service I built last year, earned $123.85 of revenue in May. That's the first time its monthly earnings have been more than a couple of dollars.
 

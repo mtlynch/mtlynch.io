@@ -86,7 +86,7 @@ $ ls -l demo/uploads/
 
 Because this app only has a few simple dependencies, it's easy to create a Docker image for it:
 
-**`Dockerfile`**
+### `Dockerfile`
 
 ```bash
 FROM debian:stretch
@@ -98,7 +98,7 @@ RUN apt-get install --yes \
       python-pip \
       python-virtualenv
 
-## Create demo user system account.
+# Create demo user system account.
 ARG APP_USER="demo-user"
 ARG APP_GROUP="demo-user"
 ARG APP_HOME_DIR="/home/demo-user"
@@ -112,7 +112,7 @@ RUN set -x && \
       --gid "$APP_GROUP" \
       "$APP_USER"
 
-## Create directory for app source code.
+# Create directory for app source code.
 ARG APP_ROOT="/srv/demo-app"
 RUN mkdir --parents "$APP_ROOT" && \
     chown \
@@ -123,7 +123,7 @@ RUN mkdir --parents "$APP_ROOT" && \
 USER "$APP_USER"
 WORKDIR "$APP_ROOT"
 
-## Install demo app.
+# Install demo app.
 ARG DEMO_APP_REPO="https://github.com/mtlynch/flask_upload_demo"
 RUN set -x && \
     git clone "$DEMO_APP_REPO" . && \
@@ -133,7 +133,7 @@ RUN set -x && \
 
 EXPOSE 5000
 
-## Run demo app.
+# Run demo app.
 ENV FLASK_APP "demo/app.py"
 CMD virtualenv VIRTUAL && \
     . VIRTUAL/bin/activate && \
@@ -177,7 +177,7 @@ Most web apps don't accept traffic directly from the browser. Instead, they use 
 I added the [`nginx` branch to my Docker repo](https://github.com/mtlynch/docker-flask-upload-demo/tree/nginx) to demonstrate a Docker image that's closer to what you'd use in a real-world app. The relevant changes are below:
 
 ```bash
-## Install nginx.
+# Install nginx.
 ARG NGINX_GROUP="www-data"
 COPY nginx.conf /etc/nginx/sites-enabled/nginx.conf
 RUN set -x && \
@@ -193,7 +193,7 @@ Nginx typically runs as root so that it can listen on privileged HTTP ports 80 a
 
 Lastly, it copies an Nginx configuration file into the container:
 
-**`nginx.conf`**
+### `nginx.conf`
 
 ```text
 server {
@@ -267,14 +267,14 @@ gcloud auth activate-service-account --key-file key.json
 Now that you've authenticated, you'll need to run a few commands to prepare your project for the rest of the tutorial:
 
 ```bash
-## Enable APIs you'll need for this workflow.
+# Enable APIs you'll need for this workflow.
 gcloud services enable \
   cloudresourcemanager.googleapis.com \
   compute.googleapis.com \
   containerregistry.googleapis.com \
   iam.googleapis.com
 
-## Enable gcloud to provide credentials for Docker image pushes.
+# Enable gcloud to provide credentials for Docker image pushes.
 gcloud auth configure-docker --quiet
 ```
 ## Uploading image to Google Container Registry

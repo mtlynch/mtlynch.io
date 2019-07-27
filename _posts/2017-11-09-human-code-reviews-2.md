@@ -23,7 +23,7 @@ I laid the groundwork in [Part One](/human-code-reviews-1/), so I recommend star
 
 The worst code review of my life was for a former teammate I'll call Mallory. She started at the company several years before I joined but had only recently transferred to my team.
 
-#### The review
+### The review
 
 When Mallory sent me her first changelist for review, the code was a bit rough. She had never written Python before, and she was building on top of a clunky, legacy system that I maintained.
 
@@ -35,7 +35,7 @@ Angry and frustrated, I sent a new round of notes. My tone was professional but 
 
 {% include image.html file="boulder.png" alt="Pushing the code review boulder back and forth" img_link=true %}
 
-#### A bitter cycle
+### A bitter cycle
 
 It was Tuesday, a week later. Mallory and I were still going back and forth on the same review. I had sent her my latest notes the evening before. I purposely withheld them until she left for the day because I didn't want to be in the same room when she read them.
 
@@ -45,7 +45,7 @@ My heart began pounding in my chest as I grew more infuriated by each of her res
 
 We repeated this routine every day for three weeks. The code barely changed.
 
-#### Intervention
+### Intervention
 
 Our most senior teammate, Bob, thankfully broke this cycle. He returned from a long vacation, alarmed to find us bitterly flinging code review notes back and forth. He immediately recognized the situation for what it was: a stalemate. He requested to take over the review, and we both agreed.
 
@@ -55,7 +55,7 @@ Then, Bob came back to the main changelist, which was trimmed down to about 200 
 
 Bob's entire review was done in two days.
 
-#### Communication matters
+### Communication matters
 
 You may have deduced that this conflict wasn't really about the code. It had legitimate issues, but they were clearly solvable by teammates who could communicate effectively.
 
@@ -178,17 +178,17 @@ Here are some indicators that you're headed for a stalemate:
 
 {% include image.html file="pilots.png" alt="Tension during code review" max_width="850px"  img_link=true %}
 
-#### Talk it out
+### Talk it out
 
 Meet in person or over video chat. Text communication has a way of causing you to forget there's a real human at the other end of the conversation. It becomes too easy to imagine your teammate is coming from a place of stubbornness or incompetence. A meeting will break that spell for both you and the author.
 
-#### Consider a design review
+### Consider a design review
 
 A contentious code review may indicate weaknesses earlier in the process. Are you arguing about things that should have been covered during the design review? *Was* there a design review?
 
 If the root of the disagreement traces back to a high-level design choice, the broader team should weigh in rather than leave it in the hands of the two people who happen to be in the code review. Talk to the author about opening up the discussion to the rest of your team in the form of a design review.
 
-#### Concede or Escalate
+### Concede or Escalate
 
 The longer you and your teammate stew in stalemate, the more damaging it is to your relationship. If alternatives haven't gotten you unstuck, your options are to either concede or escalate.
 
@@ -196,7 +196,7 @@ Weigh the cost of just approving the changes. You can't build quality software i
 
 If concession is not an option, talk to the author about escalating the discussion to your team's manager or tech lead. Offer to  reassign to a different reviewer. If the escalation goes against you, accept the decision and move on. Continuing to fight it will drag out a bad situation and make you look unprofessional.
 
-#### Recovering from a stalemate
+### Recovering from a stalemate
 
 Messy review arguments tend to be less about the code and more about the relationship between the people involved. If you reached stalemate or near-stalemate, this pattern will repeat if you don't address the underlying conflict.
 

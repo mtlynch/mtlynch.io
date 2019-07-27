@@ -140,7 +140,7 @@ My ClipBucket Ansible Role is available:
 
 It's easy to use the ClipBucket Ansible role. To get started, you'll need to [install Ansible](https://docs.ansible.com/ansible/intro_installation.html). Then create the following files:
 
-**`install.yml`**
+### `install.yml`
 
 ```yaml
 ---
@@ -154,7 +154,7 @@ It's easy to use the ClipBucket Ansible role. To get started, you'll need to [in
     - { role: mtlynch.clipbucket }
 ```
 
-**`secrets.yml`**
+### `secrets.yml`
 
 ```yaml
 ---
@@ -164,7 +164,7 @@ clipbucket_mysql_password: dbpw123
 clipbucket_admin_password: password123
 ```
 
-**`hosts`**
+### `hosts`
 
 ```text
 clipbucket     ansible_host=1.2.3.4 # change to your server's IP or hostname

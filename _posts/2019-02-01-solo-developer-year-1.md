@@ -207,13 +207,13 @@ At the root of these doubts is the fact that my businesses haven't yet succeeded
 
 ## Lessons learned
 
-**Limit focus**
+### Limit focus
 
 After quitting, it seemed like I had such an abundance of time that I could take on several projects in parallel. It turned out that [I didn't have as much time as I thought](/since-quitting/#managing-stress). Attempting to do everything prevented me from making meaningful progress on anything.
 
 I now limit my focus to one business venture at a time and one blog post per month. The change has helped me stress less and accomplish more.
 
-**Regularly reflect**
+### Regularly reflect
 
 At the end of each week, I spend 30-60 minutes writing down everything I accomplished. This exercise always makes me realize that I'm more productive than I feel. Often, I'll reach Friday afternoon thinking that I burned an entire week chasing down a single bug only to realize the bugfix took just two days. And then I'll remember that I shipped several new features but forgot about them because they felt like ages ago.
 
@@ -221,7 +221,7 @@ This works on a monthly level as well. At the beginning of each month, I publish
 
 Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (***Note**: wild popularity still pending*).
 
-**Set goals**
+### Set goals
 
 Specific, measurable goals keep me focused. Before I developed a habit of declaring explicit goals, it was too easy for me to waste time on something and then invent post-hoc rationalizations for why it helped the business.
 
