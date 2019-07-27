@@ -28,7 +28,7 @@ server with just a few commands:
 ```bash
 sudo apt-get update
 
-## Install Ansible and dependencies
+# Install Ansible and dependencies
 sudo apt-get install -y \
   libffi-dev \
   libyaml-dev \
@@ -38,15 +38,15 @@ sudo apt-get install -y \
   python2.7-dev
 sudo pip install ansible paramiko PyYAML Jinja2 httplib2 six
 
-## Install the Ansible ClipBucket role
+# Install the Ansible ClipBucket role
 sudo ansible-galaxy install mtlynch.clipbucket
 
-## Create a minimal Ansible playbook to install ClipBucket
+# Create a minimal Ansible playbook to install ClipBucket
 echo "- hosts: localhost
   roles:
     - { role: mtlynch.clipbucket }" > install.yml
 
-## Run the ClipBucket playbook locally
+# Run the ClipBucket playbook locally
 sudo ansible-playbook install.yml \
   --extra-vars "mysql_root_password=root" \
   --extra-vars "clipbucket_mysql_password=clipbucketpw" \
@@ -158,7 +158,7 @@ It's easy to use the ClipBucket Ansible role. To get started, you'll need to [in
 
 ```yaml
 ---
-## Change these passwords to secure, strong passphrases of your choosing.
+# Change these passwords to secure, strong passphrases of your choosing.
 mysql_root_password: rootpw321
 clipbucket_mysql_password: dbpw123
 clipbucket_admin_password: password123

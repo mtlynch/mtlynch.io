@@ -184,7 +184,7 @@ VM_SERVER=vmaster # Replace with your VM server's hostname
 echo "${VM_SERVER}" > hosts
 wget {{ base_path }}/files/provision-vm-host.yml
 
-## Replace the extra-vars with the values for your NFS share
+# Replace the extra-vars with the values for your NFS share
 ansible-playbook provision-vm-host.yml \
   --extra-vars "cifs_share=/nas-hostname/VMs" \
   --extra-vars "cifs_username=foo" \

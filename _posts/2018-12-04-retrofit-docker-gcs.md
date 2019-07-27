@@ -420,7 +420,7 @@ Otherwise, set the `GCS_BUCKET` environment variable to the name of GCS bucket.
 You need to modify your Docker image to integrate the gcsfuse utility. Fortunately, I've done it for you. The complete `Dockerfile` is available on the [`gcsfuse` branch of my Github repo](https://github.com/mtlynch/docker-flask-upload-demo/blob/gcsfuse/Dockerfile), but here are the main changes:
 
 ```bash
-## Install gcsfuse.
+# Install gcsfuse.
 ARG GCSFUSE_REPO="gcsfuse-stretch"
 ARG GCS_MOUNT_ROOT="/mnt/gcsfuse"
 RUN set -x && \
