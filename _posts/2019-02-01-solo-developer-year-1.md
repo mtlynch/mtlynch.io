@@ -25,7 +25,7 @@ discuss_urls:
 
 On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. It's exactly one year later, so it feels like an apt time to reflect on how that decision affected my finances, lifestyle, and happiness.
 
-# How I made and spent money
+## How I made and spent money
 
 {% assign fig_caption = 'Profit and loss chart via [Bench](http://refer.bench.co/pPrqq).' | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -39,7 +39,7 @@ One way of looking at the chart is that I lost $21k in a single year. Alternate 
 
 Okay, that's a bit of a fanciful interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending.
 
-# Costly lessons in outsourcing
+## Costly lessons in outsourcing
 
 At first, I had a very [*Four Hour Work Week*](https://amzn.to/2t8r2Ks) mentality:  my job was not to *do* work but rather to *manage* work, so I hired freelancers to do everything.
 
@@ -54,11 +54,11 @@ In my struggle to give everything proper attention, there was a decline in the q
 
 To address this, I reduced my outsourcing and handled more work myself. This change decreased my spending and made my business feel less chaotic. There was also a significant change in my personal life that affected my finances, but I'll cover that a bit later in this post.
 
-# Project by project
+## Project by project
 
 {% include image.html file="project-finances-2018.png" alt="Graph of income and expenses on a per-project basis" max_width="800px" class="img-border" img_link="true" fig_caption="Income and expenses for each of my projects in 2018" %}
 
-## mtlynch.io *(this blog)*
+### mtlynch.io *(this blog)*
 
 My most significant source of revenue in 2018 was this blog. I deliberately avoid monetizing it because I don't want ad money to influence my writing. The sole exception is that if the blog links to a product, I use an affiliate link so that the site earns referral money.
 
@@ -77,7 +77,7 @@ Despite my best efforts, the blog earned more than all of my other projects comb
 
 \* I work with an [excellent developer](https://www.andrewwnewhouse.com/) who handles all the coding and web design so that I can just write.
 
-## [Is It Keto](https://isitketo.org)
+### [Is It Keto](https://isitketo.org)
 
 {% include image.html file="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto website" max_width="600px" class="img-border" img_link="true" %}
 
@@ -96,7 +96,7 @@ Revenues are small because I just added monetization at the end of November, but
 
 \* Is It Keto runs on AppEngine, and traffic is currently low enough to fit into their free tier.
 
-## [Zestful](https://zestfuldata.com)
+### [Zestful](https://zestfuldata.com)
 
 {% include image.html file="zestful-screenshot.jpg" alt="Screenshot of Zestful website" max_width="800px" class="img-border" img_link="true" %}
 
@@ -115,7 +115,7 @@ I put the project in maintenance mode in September after several months of [unsu
 
 \* It *technically* earned about $1, but my payment processor won't pay out balances under $2.
 
-## [Space Duck](https://spaceduck.io)
+### [Space Duck](https://spaceduck.io)
 
 {% include image.html file="spaceduck-screenshot.jpg" alt="Screenshot of Space Duck website" max_width="600px" class="img-border" img_link="true" %}
 
@@ -131,7 +131,7 @@ After running a [series of experiments](https://blog.spaceduck.io/load-test-wrap
 | Domain | -$60 |
 | **Net profit** | -**$1,879** |
 
-## [KetoHub](https://ketohub.io)
+### [KetoHub](https://ketohub.io)
 
 {% include image.html file="ketohub-screenshot.jpg" alt="Screenshot of KetoHub website" max_width="700px" class="img-border" img_link="true" %}
 
@@ -148,7 +148,7 @@ I developed it on and off at the beginning of the year but put it in maintenance
 | Domain | -$60 |
 | **Net profit** | **-$2,039** |
 
-## Everything Else
+### Everything Else
 
 | Expense | Purpose | Amount | Note |
 |------------|-----------|-----------|-------|
@@ -160,7 +160,7 @@ I developed it on and off at the beginning of the year but put it in maintenance
 | Travel, conferences, events, books | | -$634 | |
 | Banking and credit card rewards | | ~$1,000 | Embarrassingly, my second largest source of income for the year was in cash rewards for opening business checking and credit accounts. |
 
-# Bleeding dry from personal expenses
+## Bleeding dry from personal expenses
 
 There was one enormous hidden expense that my profit and loss chart didn't show: me.
 
@@ -170,7 +170,7 @@ Those costs had a dramatic impact on my business decisions. Spending three month
 
 My living costs also made me feel discouraged about every project idea. Before quitting my job, I had a quaint fantasy of growing a business from a small seedling that made $50/month and slowly nurturing it to $100 then $175. Working at such small scales of revenue felt ridiculous when I was burning $7k a month in expenses.
 
-# So, I bought a house
+## So, I bought a house
 
 One day in June, I jokingly texted my sister that I should cut my spending by moving into a cheap house near her in Western Massachusetts. She immediately called me. "Were you kidding? Because you should do that for real."
 
@@ -186,7 +186,7 @@ So in August, I bought a modest two-bedroom home in South Hadley, Massachusetts.
 
 My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium. I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
 
-# I want to do this forever
+## I want to do this forever
 
 People have asked me if I'm still happy with my decision to quit and start my own company. The answer is definitely yes.
 
@@ -195,7 +195,7 @@ As someone who has always valued independence, I love being a solo developer. It
 ***Sidenote**: My friends with children tell me that kids won't complicate this at all.*
 {: .notice--info}
 
-# Doubts
+## Doubts
 
 Despite this, I do still experience doubts about my work. Here are the questions I frequently ask myself:
 
@@ -205,15 +205,15 @@ Despite this, I do still experience doubts about my work. Here are the questions
 
 At the root of these doubts is the fact that my businesses haven't yet succeeded. However, it's comforting to remember that most successful entrepreneurs [spent years flailing around before they found something that worked](https://twitter.com/shpigford/status/1033032915175858176?lang=en).
 
-# Lessons learned
+## Lessons learned
 
-**Limit focus**
+### Limit focus
 
 After quitting, it seemed like I had such an abundance of time that I could take on several projects in parallel. It turned out that [I didn't have as much time as I thought](/since-quitting/#managing-stress). Attempting to do everything prevented me from making meaningful progress on anything.
 
 I now limit my focus to one business venture at a time and one blog post per month. The change has helped me stress less and accomplish more.
 
-**Regularly reflect**
+### Regularly reflect
 
 At the end of each week, I spend 30-60 minutes writing down everything I accomplished. This exercise always makes me realize that I'm more productive than I feel. Often, I'll reach Friday afternoon thinking that I burned an entire week chasing down a single bug only to realize the bugfix took just two days. And then I'll remember that I shipped several new features but forgot about them because they felt like ages ago.
 
@@ -221,13 +221,13 @@ This works on a monthly level as well. At the beginning of each month, I publish
 
 Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (***Note**: wild popularity still pending*).
 
-**Set goals**
+### Set goals
 
 Specific, measurable goals keep me focused. Before I developed a habit of declaring explicit goals, it was too easy for me to waste time on something and then invent post-hoc rationalizations for why it helped the business.
 
 A clear objective like, "Achieve $50 in revenue for the month," forces me to prioritize ruthlessly and eliminate tasks that don't serve the goal.
 
-# Goals for year two
+## Goals for year two
 
 Speaking of goals, here's what I hope to accomplish in my second year as a solo developer:
 

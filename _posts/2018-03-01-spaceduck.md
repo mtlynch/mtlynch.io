@@ -15,7 +15,7 @@ At the same time, it's unfortunate to hear how widespread this problem is. I hop
 
 Thanks to everyone who read the post and who reached out via email and comments. I'm reading them all and responding to as many as I can.
 
-# Introducing Space Duck
+## Introducing Space Duck
 
 In yesterday's post, I mentioned that one of my post-Google ideas was to build on top of [Sia](/tags/#sia), a decentralized storage network. I haven't started any software projects yet, but as I research the technology, I've been keeping my thoughts in an additional blog called [Space Duck](https://blog.spaceduck.io/). So far, I've only written about Sia, but I will ultimately cover all of its competitors as well.
 

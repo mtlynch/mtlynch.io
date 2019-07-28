@@ -18,7 +18,7 @@ I worked as a software engineer for Google from 2014 to 2018. On February 1st, I
 
 That was four months ago, so I thought I'd share an update on how things are going.
 
-# What's it like not having a job?
+## What's it like not having a job?
 
 That's the most common question people ask. What's it like?
 
@@ -30,7 +30,7 @@ It seems weird to me that I ever had an office job. It's like remembering the ex
 
 The best part of quitting has been how much control I have over my time. I structure my day however I want, and there's no friction when I change my schedule. If I feel like going for a run at 3 o'clock in the afternoon, I just go for a run. I'm not going to miss a meeting or hold up anyone's work.
 
-# Doing things I wouldn't do otherwise
+## Doing things I wouldn't do otherwise
 
 With so much time that's my own, I find myself more willing to experiment and pursue opportunities that wouldn't have appealed to me when I was an employee.
 
@@ -42,7 +42,7 @@ In March, I gave my first ever conference presentation. I adapted my post, ["How
 
 A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
 
-# My quitting blog post
+## My quitting blog post
 
 Oddly, my most notable accomplishment since quitting my job has been... writing a blog post about quitting my job. If you're reading this, chances are that you found my blog because of my February post, ["Why I Quit Google to Work for Myself."](/why-i-quit-google/) It attracted 300,000 readers in its first week, dwarfing the record of my previous top post by 6x.
 
@@ -54,7 +54,7 @@ By the third day, I started to feel overwhelmed. I realized that I could spend t
 
 {% include image.html file="more-messages.jpg" alt="Me, responding to feedback" max_width="800px" img_link=true %}
 
-# Managing feedback
+## Managing feedback
 
 One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics software company](http://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
 
@@ -73,7 +73,7 @@ After I spoke to Stephanie, I felt like I had permission to take my time. I shif
 
 Stephanie also pointed out that it's not realistic to respond to every single message. I still feel guilty when I ignore an email, but I found that getting out of the mindset of prompt responses helped me detach a bit and make rational choices about which messages to answer. For example, if someone writes me with questions about [finding a blog cartoonist](/how-to-hire-a-cartoonist/), that's fun for me to talk about because not many bloggers work with cartoonists. I'll answer that email ahead of one that asks me more general questions about getting hired at Google.
 
-# Managing stress
+## Managing stress
 
 Before quitting, I kept hearing stories about how starting even a small business causes severe stress. I thought, "I'm sure that's true for *them*, but I'm going to be spending every day in my pajamas. How stressed will I really be?"
 
@@ -87,7 +87,7 @@ Tragically, I found myself still limited to the standard 24 hours per day. But I
 
 I'm now more conservative about taking on projects. Even if they seem small, it takes a lot of mental energy to simply track them. These days, I limit my focus to this blog and one software project (spoiler alert: they end up intertwining).
 
-# Failed project: Space Duck
+## Failed project: Space Duck
 
 My first business idea was to build a service on top of Sia, a decentralized storage platform I've [written about frequently](/tags/#sia).
 
@@ -101,7 +101,7 @@ I didn't know exactly what I wanted to build, but I knew a unique way I could at
 
 Unfortunately, these tests revealed that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). At Sia's true price point, there were providers with more stable, feature-rich offerings. Without any practical advantages over other storage providers, Sia was a dead end.
 
-# KetoHub's ingredient problem
+## KetoHub's ingredient problem
 
 I turned my attention back to [KetoHub](https://mtlynch.io/outsourcing-mvp/), a website I created last year to help users find recipes for the keto diet.
 
@@ -125,7 +125,7 @@ Every time I added a new recipe source to KetoHub, I had to spend several hours 
 
 I needed a more flexible way for KetoHub to process ingredients.
 
-# New project: Ingredient parsing as a service
+## New project: Ingredient parsing as a service
 
 Early in KetoHub's life, a commenter on Indie Hackers [showed me](https://www.indiehackers.com/forum/ketohub-month-2-report-1229ddb803?commentId=-L-clmWeoqUnFcAzTi5t) a blog post describing how *The New York Times* [used machine learning](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) to parse ingredients from the *Times'* historical archive of recipes.
 

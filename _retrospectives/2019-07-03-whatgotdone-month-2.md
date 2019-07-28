@@ -5,17 +5,17 @@ header:
   og_image: /images/retrospectives/2019/07/whatgotdone-metrics.jpg
 ---
 
-# One-Line Summary
+## One-Line Summary
 
 The conversation should be about thousands of dollars, not tens of dollars.
 
-# Highlights
+## Highlights
 
 * [What Got Done](https://whatgotdone.com) received 32 new user sign-ups (growth of about 5x since May)
 * [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
 * [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
 
-# Goal Grades
+## Goal Grades
 
 ### Publish a new blog post that explains why I built What Got Done
 
@@ -40,7 +40,7 @@ I got some unexpected customer interest in Zestful, so I put the email copy proj
 
 Same as above.
 
-# Inactive projects
+## Inactive projects
 
 ### Is It Keto
 
@@ -56,13 +56,13 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 
 After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/category/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
 
-# Bouncing around too much
+## Bouncing around too much
 
 My biggest problem this month has been a lack of focus. I don't mean, "I wish I could concentrate better." I mean when I sit down to rationally figure out where to focus, I can't decide.
 
 Several of my active projects are going "okay," but none of them is strong enough to merits focusing on it to the exclusion of all others. But each one feels urgent in a way, so I'm worried about shelving any of them. The result is that I'm jumping around a lot and not making great progress on anything.
 
-## Suddenly, everyone wants to parse ingredients
+### Suddenly, everyone wants to parse ingredients
 
 I'll start with [Zestful](https://zestfuldata.com). It's the ingredient parsing service I created last year that [failed to attract any customers](/shipping-too-late/).
 
@@ -85,7 +85,7 @@ In short, if I'm going to have serious discussions with customers about using Ze
 
 At the end of the month, I changed my price from 0.3 cents per ingredient to 2 cents per ingredient (an increase of 566%). To avoid price gouging early adopters, my existing customers will continue with their old pricing.
 
-## A jumpstart for What Got Done
+### A jumpstart for What Got Done
 
 Next is [What Got Done](https://whatgotdone.com), the weekly team status app I launched last month. I promoted it on [Twitter](https://twitter.com/deliberatecoder/status/1131998623531700225), [Indie Hackers](https://www.indiehackers.com/product/what-got-done/-LffBEPNwHYU02oXu2vM), and [Hacker News](https://news.ycombinator.com/item?id=20124288), but it didn't achieve much traction. Then, I published [a blog post about it](/status-updates-to-nobody/), and it jolted life into the product.
 
@@ -107,7 +107,7 @@ Right now, I'm not sure whether to keep trying to encourage organic growth from 
   * The current growth could be a temporary bump that will be gone in a month regardless of what I do.
   * I have no evidence that a large number of free users will ever lead to any paying users.
 
-## Slowing down on the email tool for copywriters
+### Slowing down on the email tool for copywriters
 
 Lastly, there's the email tool for copywriters.
 
@@ -125,7 +125,7 @@ I had several exploratory calls with copywriters in May, but progress froze enti
     * The email copywriters I've spoken with all know each other, so I'm not sure if it's just a consequence of the network where I found them or if there really are only a few dozen people who have this job.
   * The amount of work to create an MVP is higher than for other ideas I've had.
 
-# A brief experiment with display ads on Is It Keto
+## A brief experiment with display ads on Is It Keto
 
 Since [December](/retrospectives/2019/01/), the only way I've monetized Is It Keto has been through Amazon Affiliate ads. This month, Ezoic approached me about putting display ads on Is It Keto. Is It Keto barely met their minimum audience requirement of 10k unique users per month, so I decided to check it out.
 
@@ -147,22 +147,22 @@ I immediately turned off Ezoic and have no plans to return.
 
 For the 11 days it ran, Ezoic generated $45.49 in revenue from 5,452 unique visitors. That's ~$8 per 1,000 visitors, nearly double the revenue I would have earned from Amazon alone. Still, it wasn't enough for me to reduce the quality of the site so drastically.
 
-# Wrap Up
+## Wrap Up
 
-## What Got Done?
+### What Got Done?
 
 * Published a new blog post: ["Staying Motivated by Sending Status Updates to Nobody"](https://mtlynch.io/status-updates-to-nobody/)
 * Increased pricing on Zestful by 566%
 * Created an [internal web app](https://i.imgur.com/a5KKab5.png) that lets me quickly generate training data for Zestful (and fix the legacy data from my starting dataset)
 * Added a ["Save Draft" feature](https://i.imgur.com/s2lChnk.gif) to What Got Done
 
-## Lessons Learned
+### Lessons Learned
 
 * Even when your sales are negligible, there are benefits to raising prices.
   * Raising prices eliminates distractions from customers who can't spend enough to make the service viable.
 * Ezoic pays pretty well, but they make sites look like garbage and screw up SEO.
 
-## Goals for May
+### Goals for May
 
 * Conduct five calls with new customers (either for What Got Done, Zestful, or the email tool)
 * Implement two commonly-requested Zestful features (matching ingredients to USDA entries and support for multi-ingredient strings)

@@ -21,7 +21,7 @@ There was only one pesky detail standing between me and tremendous profits: mone
 
 This is my postmortem for Is It Keto. I'll talk about where I succeeded, how I could have done better, and what I wish I knew from the start.
 
-# How I made money
+## How I made money
 
 Is It Keto had a simple business model. Every article explained why a food did or did not fit [the keto diet](https://www.ruled.me/guide-keto-diet/). If a food was keto-friendly, the site displayed an affiliate link for the reader to purchase it from Amazon. I received a commission on every order.
 
@@ -29,7 +29,7 @@ Is It Keto had a simple business model. Every article explained why a food did o
 
 {% include image.html file="revenues.jpg" alt="Google Analytics screenshot"  max_width="763px" class="img-border" img_link="true" fig_caption="Is It Keto monthly revenue" %}
 
-# How I lost money
+## How I lost money
 
 My most significant ongoing cost was content. Early on, I wrote every article myself, but I hired writers to help scale the site. It got complicated, but I'll say more about that [below](#good-writing-is-expensive).
 
@@ -37,7 +37,7 @@ The only other cost worth mentioning is development. I wrote almost all the code
 
 {% include image.html file="costs.jpg" alt="Donut chart of expenses"  max_width="600px" img_link="true" fig_caption="Is It Keto expenses" %}
 
-# What went well
+## What went well
 
 ### I chose "done" over "perfect"
 
@@ -82,7 +82,7 @@ Declaring my goals publicly also protected me from wandering off into the weeds.
 
 Without explicit goals, the feature-happy version of me would have run rampant, building features that were fun but irrelevant to the bottom line.
 
-# What needed improvement
+## What needed improvement
 
 ### I obsessed over metrics
 
@@ -133,7 +133,7 @@ In evaluating business ideas now, I think about revenue from start to finish. Fo
 
 {% include image.html file="amazon-lettuce.jpg" alt="Google Analytics screenshot" class="img-border" max_width="800px" img_link="true" fig_caption=fig_caption %}
 
-# What I wish I had known
+## What I wish I had known
 
 ### Search engines have a substantial lag
 
@@ -163,7 +163,7 @@ I received applications from over 30 writers, did paid trials with about 10 of t
 
 There was a *ton* I didn't know about hiring writers. Expect a full-length post in the next few months that goes into more detail about what I learned.
 
-# Going forward
+## Going forward
 
 Fortunately, Is It Keto costs almost nothing to run in the background. It fits in App Engine's free tier and requires no maintenance. Its only ongoing cost is $12 per year for the domain name.
 

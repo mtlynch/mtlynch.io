@@ -19,7 +19,7 @@ For the past four years, I've worked as a software developer at Google. On Febru
 
 Well, I guess it's a little more complicated than that.
 
-# The first two years
+## The first two years
 
 Two years in, I loved Google.
 
@@ -33,7 +33,7 @@ My most recent performance rating was "Strongly Exceeds Expectations." If I just
 
 My manager assured me that my promotion was close. He felt that I was already capable of senior-level work. I just needed the right project to prove it to the promotion committee.
 
-# Your manager doesn't promote you?
+## Your manager doesn't promote you?
 
 No, managers at Google can't promote their direct reports. They don't even get a vote.
 
@@ -45,7 +45,7 @@ A promotion committee then reviews your packet with a handful of others, and the
 
 During my two-year honeymoon phase, this system sounded great to me. Of *course* my fate should be in the hands of a mysterious committee who's never met me. They wouldn't be tainted by any sort of favoritism or politics. They'd see past all that and recognize me for my high-quality code and shrewd engineering decisions.
 
-# That's not really how it works
+## That's not really how it works
 
 Before I put together my first promo packet, I never thought about the logistics of how it all worked.
 
@@ -53,7 +53,7 @@ In my head, the promotion committee was this omniscient and fair entity. If I sp
 
 Unsurprisingly, it doesn't work like that. It took me two years to figure that out.
 
-# Working naïvely
+## Working naïvely
 
 My main responsibility until that point was a legacy data pipeline. It had been in maintenance mode for years, but load had increased, and the pipeline was buckling under the pressure. It frequently died silently or produced incorrect output. Its failures took days to diagnose because nobody had written documentation for it since its original design spec.
 
@@ -61,7 +61,7 @@ I proudly and lovingly nursed the pipeline back to health. I fixed dozens of bug
 
 The problem, as I discovered at promotion time, was that none of this was quantifiable. I couldn't prove that anything I did had a positive impact on Google.
 
-# Metrics or it didn't happen
+## Metrics or it didn't happen
 
 The pipeline didn't record many metrics. The ones it did have made it look like things had gotten worse. My bug discoveries caused the overall bug count to increase. The pipeline's failures increased because I made it fail fast on anomalies instead of silently passing along bad data. I drastically reduced the time developers spent repairing those failures, but there were no metrics that tracked developer time.
 
@@ -71,7 +71,7 @@ I submitted my first promo packet, and the results were what I feared: the promo
 
 {% include image.html file="promo-committee.png" alt="Arguing my case to the promotion committee" max_width="800px" img_link=true %}
 
-# Learning from rejection
+## Learning from rejection
 
 The rejection was a difficult blow, but I wasn't discouraged. I felt I was performing above my level, but the promotion committee couldn't see it. That was solvable.
 
@@ -81,7 +81,7 @@ For example, my team was receiving tons of distracting email alerts due to false
 
 Shortly after, I was assigned a project that seemed destined for promotion. It depended heavily on machine-learning, which was and still is the hot thing at Google. It would automate a task that hundreds of human operators were doing manually, so it had a clear, objective impact on Google. It also required me to lead a junior developer throughout the project, which generally won points with promotion committees.
 
-# The holiday gift wake up call
+## The holiday gift wake up call
 
 A few months later, Google [made headlines](http://fortune.com/2016/12/09/alphabet-donated-its-employees-holiday-gifts-to-charity/) when they ended their long-standing tradition of giving lavish holiday gifts to all of their employees. Instead, they used the gift budget to buy ~~advertising disguised as charity~~ Chromebooks for underprivileged schoolchildren.
 
@@ -101,7 +101,7 @@ That conversation made me realize that I'm *not* Google. I provide a service to 
 
 So if Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own? If the promotion committee doesn't reward bugfixing or team support work, why was I doing that?
 
-# Optimizing for promotion
+## Optimizing for promotion
 
 My first denied promotion taught me the wrong lesson. I thought I could keep doing the same work but package it to look good for the promotion committee. I should have done the opposite: figure out what the promotion committee wants, and do that work exclusively.
 
@@ -109,13 +109,13 @@ I adopted a new strategy. Before starting any task, I asked myself whether it wo
 
 My quality bar for code dropped from, "Will we be able to maintain this for the next 5 years?" to, "Can this last until I'm promoted?" I didn't file or fix any bugs unless they risked my project's launch. I wriggled out of all responsibilities for maintenance work. I stopped volunteering for campus recruiting events. I went from conducting one or two interviews per week to zero.
 
-# Then my project was canceled
+## Then my project was canceled
 
 Priorities shifted. Management traded my project away to our sister team in India. In exchange, that team gave us one of their projects. It was an undocumented system, built on deprecated infrastructure, but it was nevertheless a critical component in production. I was assigned to untangle it from our sister team's code and migrate it to a new framework, all while keeping it running in production and hitting its performance metrics.
 
 As far as my promotion was concerned, this was a setback of several months. Because I hadn't released anything for my canceled project, the two months I spent on it were worthless. It would take me weeks just to get up to speed on the system I was inheriting, and I was liable to lose several more in the gruntwork of keeping it operational.
 
-# What am I even doing?
+## What am I even doing?
 
 It  was the third time in six months that my manager had reassigned me midway through a project. Each time, he assured me that it had nothing to do with the quality of my work, but rather some shift in upper management strategy or team headcount.
 
@@ -133,7 +133,7 @@ Worst of all, I wasn't proud of my work. Instead of asking myself, "How can I so
 
 Even if I got the promotion, what then? Popular wisdom said that each promotion was exponentially harder than the last. To continue advancing my career, I'd need projects that were even larger in scope and involved collaboration with more partner teams. But that just meant the project could fail due to even more factors outside my control, wasting months or years of my life.
 
-# What's the alternative?
+## What's the alternative?
 
 Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
 
@@ -151,7 +151,7 @@ Founders on Indie Hackers captivated me because they were in control. Whether th
 
 I thought about it for months and finally decided. I wanted to be an Indie Hacker.
 
-# One last thing before I leave
+## One last thing before I leave
 
 I still had unfinished business at Google. After investing three years into my promotion, I hated the idea of leaving with nothing to show for it. There were only a few months left until I could reapply for promotion, so I decided to give it one last shot.
 
@@ -167,7 +167,7 @@ My manager told me I had a strong chance at promotion if I did the same quality 
 
 It was time to go.
 
-# What's next?
+## What's next?
 
 When I tell people I left Google, they assume I must have some brilliant startup idea. Only an *idiot* would leave a job as cushy as Google Software Engineer.
 

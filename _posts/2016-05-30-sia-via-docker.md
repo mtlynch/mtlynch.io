@@ -14,7 +14,7 @@ last_modified_at: '2018-09-24T19:08:00-04:00'
 
 {% include base_path %}
 
-# Overview
+## Overview
 
 [Sia](https://sia.tech/) is a decentralized, peer-to-peer network for buying and selling computer storage space. If you have extra storage space, Sia allows you to sell it to others who want to store their files on the Sia cloud network.
 
@@ -24,7 +24,7 @@ A convenient solution is to run Sia on a network attached storage ([NAS](https:/
 
 In this guide, I'll show you how to set up a Sia server on a NAS device using [Docker](https://www.docker.com/).
 
-# Why host?
+## Why host?
 
 Many newcomers to Sia ask, "Will I make a lot of money hosting on Sia?" The honest answer is that **hosting storage on Sia is NOT lucrative**.... yet.
 
@@ -36,17 +36,17 @@ SiaPulse has a nice [host earnings calculator](http://siapulse.com/page/tools) t
 
 So the money's not rolling in quite yet, but here are a couple reasons you might want to participate anyway:
 
-## Advantageous position if rental market succeeds
+### Advantageous position if rental market succeeds
 
 Unlike competitors such as [Storj](https://storj.io/), Sia is aimed at selling storage to enterprise customers rather than home users. To date, no large company is relying heavily on Sia, but if even one medium to large business begins using Sia as a storage backend, that could completely kickstart the market.
 
 When users purchase storage on Sia, the host selection algorithm gives strong preference to hosts that have participated in the network longer. This means that if a buying frenzy comes about, a host with months of solid history will have a strong advantage over hosts that are newly joining the network.
 
-## It's fun
+### It's fun
 
 I personally host just to experiment with something new. I find it fun to tweak my host pricing and see how it affects the number of storage contracts I receive.  Sia has also connected me with an [enthusiastic community](https://reddit.com/r/siacoin) of other Sia users.
 
-# Software versions
+## Software versions
 
 This guide uses the latest version of each software component at the time of writing:
 
@@ -63,9 +63,9 @@ Though this guide is written specifically for the Synology DSM system, the steps
 
 I successfully tested this on a [Synology DS412+](http://amzn.to/2pf3unf), but these steps should work on any Synology NAS with the latest DSM and sufficient CPU/RAM. It should also be straightforward to adapt these instructions to work for another full featured consumer NAS, such as a [QNAP NAS](https://www.qnap.com/en-us/).
 
-# Configuring the NAS
+## Configuring the NAS
 
-## Install Docker
+### Install Docker
 
 First, install Docker.
 
@@ -73,7 +73,7 @@ Docker is one of the few Synology-published, official packages available for DSM
 
 {% include image.html file="package-docker.png" alt="Install Docker package" %}
 
-## Create Sia directory
+### Create Sia directory
 
 Next, create a dedicated Shared Folder for Sia. This is the folder where Sia will store all of its state information, including encrypted wallet files and the blockchain database.
 
@@ -81,7 +81,7 @@ From File Station, create a new Shared Folder and name it "sia":
 
 {% include image.html file="new-shared-folder.png" alt="Create new shared folder" max_width="547px" %}
 
-## Enable SSH access to DiskStation
+### Enable SSH access to DiskStation
 
 There are no pre-packaged Docker images for Sia, so you'll create a `Dockerfile` to define the Docker image. Because the DSM Docker app does not support creation of images from a `Dockerfile`, you'll do this through the command line.
 
@@ -89,7 +89,7 @@ To enable this functionality, open Control Panel > Terminal & SNMP and check the
 
 {% include image.html file="enable-ssh.png" alt="Install Docker package" %}
 
-# Creating the Docker image
+## Creating the Docker image
 
 Connect to your NAS over SSH from another machine on the network. Linux and OS X users can run the following command from the terminal. Windows users need an SSH client, such as [Cygwin](https://www.cygwin.com).
 
@@ -125,7 +125,7 @@ The previous commands do the following:
   * **Important**: Notice that for port `9980` you bind *only to the local network interface*, whereas for other ports you implicitly bind to all interfaces. This is a security measure. Anyone who communicates with `siad` on port `9980` has full control of our host and can, for example, empty our wallet. This measure is not strictly necessary if our network does not expose this port externally, but it is a useful precaution regardless.
   * My NAS has the IP address `10.0.0.101`. You can find your NAS's IP address with the command `dig diskstation +short` from another machine on your local network.
 
-## Checking for success
+### Checking for success
 
 From DSM, open the Docker app and view the "Container" panel. You should see something similar to the following:
 
@@ -135,9 +135,9 @@ If you open the "sia" Shared Folder we created earlier, you'll see that `siad` h
 
 {% include image.html file="sia-folder-populated.png" alt="Sia generated folders" %}
 
-# Configuring Sia
+## Configuring Sia
 
-## Checking status
+### Checking status
 
 Let's connect to our Sia daemon using the command-line client, `siac`.
 
@@ -156,7 +156,7 @@ Height: 727
 Target: [0 0 0 0 12 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204]
 ```
 
-## Adding host storage
+### Adding host storage
 
 To create storage space to sell to other Sia users, create a dedicated subdirectory called `host-storage` in your "sia" shared folder:
 
@@ -170,7 +170,7 @@ Then, use `siac` to add that folder as a new Sia host storage folder:
 
 Note that `/sia-data/host-storage` is the path from the *daemon's* perspective from within the Docker container, not the perspective of `siac`.
 
-# Allow Sia through firewall
+## Allow Sia through firewall
 
 Sia needs to communicate with remote peers over ports `9981` and `9982`. When using a  home router, configure it to forward these ports to the Synology NAS. The exact process will vary by router, but it should look something like the following:
 
@@ -180,7 +180,7 @@ Sia needs to communicate with remote peers over ports `9981` and `9982`. When us
 
 You should **not** expose port `9980` because that is Sia's port for API communications. Exposing it to the public Internet would leave your Sia host vulnerable to compromise.
 
-# How to upgrade Sia
+## How to upgrade Sia
 
 Sia is still a new technology and new important releases come out every few months. Renters use the server's version to determine which host to purchase file contracts from, so it's in your best interest to upgrade soon after new releases.
 
@@ -225,13 +225,13 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
 
 When you complete this process, you'll have a new Sia Docker container running the latest version of Sia.
 
-# Conclusion
+## Conclusion
 
 You now have a working Sia node that stays online as long as your NAS is up and running.
 
 Because this configuration keeps all of Sia's persistent state outside of the container, it's very easy to upgrade your Sia node as new releases are published.
 
-# Further reading
+## Further reading
 
 This guide showed you how to get your host up and running, but there's more you need do to configure your host and optimize it to maximize your profits. Sia community member RBZL has written an excellent guide:
 

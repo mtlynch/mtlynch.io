@@ -5,17 +5,17 @@ header:
   og_image: /images/retrospectives/2019/06/email-diff.png
 ---
 
-# One-Line Summary
+## One-Line Summary
 
 While figuring out my next project, I launched a different product.
 
-# Highlights
+## Highlights
 
 * I launched my [task journaling app](https://whatgotdone.com), but it hasn't attracted many users.
 * Interviewing potential customers gave me a good idea for my next project.
 * I earned $107 from [Is It Keto](https://isitketo.org) and $123 from [Zestful](https://zestfuldata.com) without working on either.
 
-# Goal Grades
+## Goal Grades
 
 ### Publish a minimum viable product version of What Got Done
 
@@ -38,7 +38,7 @@ I got a bit sidetracked in adding post-launch features to What Got Done, so I ha
 
 I did publish the blog post, but I had to scramble a bit to get it in under the deadline I set for myself. I'm still trying to strike a balance between rushing posts out the door and spending 40 hours editing and re-editing a single post.
 
-# Inactive projects
+## Inactive projects
 
 ### Is It Keto
 
@@ -60,7 +60,7 @@ It's exciting to see that the site is still growing even though I stopped workin
 
 Almost the full amount comes from a single customer who needed Zestful for a one-time project, so it's unlikely to repeat for long, but it's fun to get a bit of money back on a project that [cost me ~$8k](/solo-developer-year-1/#zestful).
 
-# What Got Done: business or hobby?
+## What Got Done: business or hobby?
 
 {% assign fig_caption = "My [What Got Done entry](https://whatgotdone.com/michael/2019-06-07) for last week" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -76,7 +76,7 @@ Now that I've launched it and found that nobody is interested in paying for prem
 
 Option A is undoubtedly easier. Option B seems unattractive, but I can't tell if it's because I [fear rejection](/shipping-too-late/#did-i-delay-my-launch-to-avoid-rejection) or because I'm rationally evaluating the low likelihood of success and the time it will take away from other projects that I consider more promising.
 
-# Leave no stone unturned
+## Leave no stone unturned
 
 The last retrospective mentioned my idea to write [software for stone quarry operators](/retrospectives/2019/05/#an-app-for-rocks). I was struggling to convince any of the quarries I approached to even speak with me because they didn't understand what I wanted.
 
@@ -101,7 +101,7 @@ The conversation with Owner C was interesting but made it seem that software for
 
 The owner was open to the idea of automation, and I tried my darndest to find opportunities to integrate software into her business, but we couldn't find anything that would make sense.
 
-# Taking on Google Docs
+## Taking on Google Docs
 
 Last month, I also [described](/retrospectives/2019/05/#simplifying-the-editing-workflow) an idea for a writing tool that focuses on the editing and review process.
 
@@ -130,23 +130,23 @@ I plan to pursue this idea further this month. The reasons I like it are:
 If you know an email copywriter who might be interested, please ask them to [email me](/about/). I'd love to speak with them.
 {: .notice--info}
 
-# Wrap Up
+## Wrap Up
 
-## What Got Done?
+### What Got Done?
 
 * Launched [What Got Done](https://whatgotdone.com)
 * Published a new blog post: ["How to Grow Quickly and Never Turn a Profit"](/keep-growing-never-profit/)
 * Paid in-person visits to three stone quarries for customer research (got one interview)
 * Reached out to seven content writers and copywriters for customer research (got four interviews)
 
-## Lessons Learned
+### Lessons Learned
 
 * It's easier to find customers and ask them what they need than to find customers who need your specific product.
   * Credit: This is the "market-first approach," described in [*Start Small, Stay Small*](/book-reports/start-small-stay-small/)
 * Copywriters are more open to cold outreach than quarry owners are.
   * Too small a sample size to generalize much, but I suspect that people in tech-focused jobs are more open to new technology offerings.
 
-## Goals for May
+### Goals for May
 
 * Publish a new blog post that explains why I built What Got Done
 * Interview six email copywriters about their workflow and pain points
