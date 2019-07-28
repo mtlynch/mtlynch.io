@@ -20,11 +20,11 @@ exclude_rule 'MD031'
 # MD032 - Lists should be surrounded by blank lines
 exclude_rule 'MD032'
 
-# MD036 - Emphasis used instead of a header
-exclude_rule 'MD033'
-
 # MD034 - Bare URLs without angle brackets or inside fenced code block
 exclude_rule 'MD034'
+
+# MD036 - Emphasis used instead of a header
+exclude_rule 'MD036'
 
 # MD041 First line in file should be a top level header
 exclude_rule 'MD041'
