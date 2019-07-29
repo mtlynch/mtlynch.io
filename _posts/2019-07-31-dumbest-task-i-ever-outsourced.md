@@ -15,6 +15,8 @@ Eventually, I recognized this as just another procrastination technique and forc
 
 Still, I felt like there was something there. When did I buy this keyboard? Five years ago? Six? I had never cleaned it seriously, so who knows what gross stuff was building inside. I could just throw it out and buy a new one for $30, but that seemed egregiously wasteful way of solving the problem. The keyboard still functioned fine, so I shuddered at the thought of adding it to a landfill just because it had gotten a little grimy over the years.
 
+## This seems like a job for outsourcing
+
 At the time, I was also really into the idea of outsourcing. My job paid a lot, so I had lots of money but frequently found myself pressed for time. Outsourcing seemed like a brilliant way to trade my excess money to address my shortage of time.
 
 I was using a home cleaning app called XXX. I should just hire someone from the app to sit down and clean it. But the minimum you could book was one hour. How long would it take someone to clean my keyboard. Twenty minutes? Forty?
@@ -22,6 +24,8 @@ I was using a home cleaning app called XXX. I should just hire someone from the 
 I decided to list the job as cleaning dishes *plus* cleaning a keyboard. That way, I wouldn't be wasting any excess time in the hour.
 
 I posted the job and people seemed confused. They told me that they had dish cleaning experience but no keyboard cleaning experience, so was that okay? One woman said she was interested, but was pregnant, so how heavy was this keyboard? I told them it was fine and that all they really needed to do was take out the keys, scrub them with rubbing alcohol, dry them, and put them back.
+
+## The job
 
 Jaclyn S. agreed to take my job. She was scheduled to arrive Saturday at 3pm. She messaged me around 1pm saying that her morning job exploded into a 10-hour task, so she wouldn't be able to make it by 3pm and wanted to know if we could reschedule for the following day. I asked if she had any availability later in the day and she . She said she could come at 9pm if that worked, or we'd have to rebook for another day. I already planned work to do on my laptop while she was there, so I didn't want to reschedule. I decided to just let her come at 9pm.
 
@@ -33,9 +37,11 @@ Giving her privacy, I went back to work in my bedroom. I heard her start on the 
 
 At around 10pm, I began preparing to hear her come out and declare victory. By 10:15pm, I figured she'd be done any minute now. I continued feeling that way until 10:45pm.
 
+## Is everything going okay?
+
 I'm not sure if I'm just projecting, but the sounds coming from the kitchen sounded panicked, like someone who screwed up and didn't want to ask for help. Was she having trouble putting the keys back in? Did she break something and was scrambling to fix it?
 
-As someone who also doesn't like asking for help when I've screwed up, I sympathized with her plight and left her to figure it out on her own. I considered going in and asking how things were going, but I didn't want to micromanage her or rush her. I also felt extreme guilt at even having her there at all. It was 
+As someone who also doesn't like asking for help when I've screwed up, I sympathized with her plight and left her to figure it out on her own. I considered going in and asking how things were going, but I didn't want to micromanage her or rush her. I also felt extreme guilt at even having her there at all. She had already gotten suckered into working much longer than she expected, and I was now here she was approaching hour 13 of her workday because some idiot expected her to reconstruct his keyboard.
 
 At 11pm, I walked by the kitchen to go to the bathroom and tried to subtly peek in to see what was going on. Most of the keys were still outside the keyboard, but Jaclyn S.'s back was to me blocking the keyboard, so I couldn't see much.
 
