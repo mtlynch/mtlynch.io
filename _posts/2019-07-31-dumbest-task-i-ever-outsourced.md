@@ -5,27 +5,42 @@ tags:
 - taskrabbit
 ---
 
-The shameful secret about my writing is that I hate writing. When it's time for me to write something, every task that is not writing seems infinitely more interesting than writing.
+I once traded a dirty keyboard and $95 cash so that I could get $0 and an identical but slightly cleaner keyboard. Looking back, it wasn't my best trade.
 
-As a way to procrastinate writing (under the guise of thinking), I used to pace around my apartment. Invariably, I'd find something else to do instead of writing. My solution was to restrict myself to my desk. When it was time to write, I forced myself to sit at my computer and only get up to get a drink or use the bathroom. I wasn't allowed to check my phone or social media.
+## It all started with a writing class
 
-But I still found ways to procrastinate at my desk. The cleanliness of my keyboard, usually not a concern, but when the alternative was writing, I became *highly* concerned with the cleanliness of my keyboard. I'd run a folded up piece of paper between the keys and be aghast at all the gunk that it pulled up.
+Back in 2016, I lived in a small studio apartment in Manhattan. It was a Monday night, and I was sitting in front of my computer trying to write a short story. I hadn't written fiction since graduating high school a decade earlier, but I missed it, so I signed up for a class nearby in Brooklyn.
 
-Eventually, I recognized this as just another procrastination technique and forced myself to stop cleaning my keyboard when I had to write.
+At least, I *thought* I missed writing. The story was due at 9 AM the next day. All of my story ideas felt terrible. I was cursing my decision to take this class and looking for any distraction from my assignment.
 
-Still, I felt like there was something there. When did I buy this keyboard? Five years ago? Six? I had never cleaned it seriously, so who knows what gross stuff was building inside. I could just throw it out and buy a new one for $30, but that seemed egregiously wasteful way of solving the problem. The keyboard still functioned fine, so I shuddered at the thought of adding it to a landfill just because it had gotten a little grimy over the years.
+I became fixated on my keyboard. It was so dusty and grimy. How had I not noticed this before? I had the same keyboard for five or six years, typing on it 20-30 hours per week, eating all my meals in front of it. Growing up, my parents (both programmers) routinely popped all the keys off of our keyboards to deep clean them in rubbing alcohol. Did people still do that?
 
-## This seems like a job for outsourcing
+I should do that!
 
-At the time, I was also really into the idea of outsourcing. My job paid a lot, so I had lots of money but frequently found myself pressed for time. Outsourcing seemed like a brilliant way to trade my excess money to address my shortage of time.
+No, I couldn't do that. I'd never finish my story.
 
-I was using a home cleaning app called XXX. I should just hire someone from the app to sit down and clean it. But the minimum you could book was one hour. How long would it take someone to clean my keyboard. Twenty minutes? Forty?
+I admitted to myself that I was simply procrastinating, but the only way I was able to stop obsessing about my dirty keyboard was to make a deal with myself that I'd clean it for real once the story was done.
 
-I decided to list the job as cleaning dishes *plus* cleaning a keyboard. That way, I wouldn't be wasting any excess time in the hour.
+## Gig economy to the rescue
 
-I posted the job and people seemed confused. They told me that they had dish cleaning experience but no keyboard cleaning experience, so was that okay? One woman said she was interested, but was pregnant, so how heavy was this keyboard? I told them it was fine and that all they really needed to do was take out the keys, scrub them with rubbing alcohol, dry them, and put them back.
+At the time, I was making good money working for Google, but I felt constantly short on time. Outsourcing seemed like the solution. If there was a task that would bring me no pleasure to do myself, and it would take more than an hour, I'd try to hire someone to do it instead.
 
-## The job
+[TaskRabbit](https://www.taskrabbit.com) is one of the popular apps for the gig economy. It allows users to book one-off tasks like cleaning an apartment or mounting a TV. "Keyboard deep cleaning" didn't seem to be one of their pre-defined jobs, so I booked the job as "Small cleaning" and explained in the description that I wanted someone to clean my keyboard. TaskRabbit has a one-hour minimum, and I was afraid my keyboard task wouldn't take the full hour, so I also said I wanted the person to clean some dishes I had piled up in the sink.
+
+
+TODO: TaskRabbit screenshot
+
+## A minimum of 15 years keyboard cleaning experience
+
+Many of the people who responded to my TaskRabbit job were confused.
+
+One applicant told me that they wanted to be up front in that they have no keyboard cleaning experience. I told them it was fine. All they really needed to do was take out the keys, swab them with rubbing alcohol, and put them back.
+
+Another told me that they were pregnant and wanted to make sure cleaning the keyboard didn't require heavy lifting. I assured her that I had one of those fancy, modern keyboards that weighs less than 35 pounds.
+
+Finally, Jaclyn S. contacted me with supreme confidence in her ability to clean the keyboard. Within 20 minutes, I hired her and booked her for the following day.
+
+## Cleaning day
 
 Jaclyn S. agreed to take my job. She was scheduled to arrive Saturday at 3pm. She messaged me around 1pm saying that her morning job exploded into a 10-hour task, so she wouldn't be able to make it by 3pm and wanted to know if we could reschedule for the following day. I asked if she had any availability later in the day and she . She said she could come at 9pm if that worked, or we'd have to rebook for another day. I already planned work to do on my laptop while she was there, so I didn't want to reschedule. I decided to just let her come at 9pm.
 
@@ -53,16 +68,16 @@ I checked the receipt. Out of curiosity, I checked the cost of buying that same 
 
 {% include image.html file="taskrabbit-receipt.jpg" alt="$95.55 receipt for my TaskRabbit task" max_width="800px" img_link=true fig_caption="TaskRabbit receipt from my keyboard cleaning task" %}
 
-## Not as dumb as it seems
+## It's not *that* dumb
 
-This is a story that I jokingly told to family and friends for years. And when I talk to them about outsourcing, they jokingly say, "Oh, tell me again about how I should spend $100 to clean a $40 keyboard."
+This is a story that I jokingly told to family and friends for years. And they dutifully bring it up any time I give them financial advice.
 
-But I maintain that this story is not as dumb as it seems. Sure, I could have just bought a new keyboard instead of cleaning the old one, but that wouldn't have solved my problem. One of my constraints is that I didn't want to throw away a perfectly good keyboard. If my time was worth more than $26/hr, and I'm no more skilled at cleaning keyboards than Jaclyn S., then it was the right decision to hire her, even though the cost was ridiculous relative to the cost of the keyboard itself.
+But it's not as dumb as it might seem. People ask why I didn't just clean the keyboard myself instead of spending almost $100. Assuming that my time is worth more than $26/hr, it still "costs" me ~$100 to do it myself, even though no money is changing hands.
 
-If I were to do it over, I would have just bought the new keyboard and listed the old one in the criagslist free section. I left NYC about a year ago, and I now live in a small town where craigslist isn't so popular, but there is an active [buy nothing](https://buynothingproject.org) group, where people will often take unwanted but still functional items. The problem with both of these is that the people who accept stuff are generally flaky and kind of waste time by failing to show up or demanding I hand deliver the item to their house.
+There's also the obvious solution of buying a brand new keyboard and throwing the dirty one in the trash. But I just don't want to be so wasteful to throw out perfectly functional items just because they're dirty.
+
+If I had to do this again, I'd post the old keyboard for free on craigslist or my local [buy nothing](https://buynothingproject.org) group. It's not as time efficient as throwing the item away because people who reply to those listings tend to be flaky, so it's a pain to arrange pickups, but it's better than just adding working electronics to a landfill.
 
 ## Outsourcing doesn't scale down
 
-The lesson I took from this is that outsourcing doesn't scale down very well. I saved myself the three hours of cleaning my keyboard, but I also lost an hour or two in scheduling the task and stressing about what was going on while she was working.
-
-Outsourcing small tasks works fine if they're repeated. Like my house cleaner takes only about 90 minutes to clean my house, but it's a regular pattern now, so I have to do very little in terms of management.
+The lesson I took from this is that outsourcing works poorly for small, one-off tasks. If I had to clean my keyboard every three days, then it would make sense to outsource it all to Jaclyn S. As a one time job, I saved myself three hours of cleaning my keyboard, but I lost a few hours arranging it and stressing about what was going on while she worked.
