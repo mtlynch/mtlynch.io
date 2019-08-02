@@ -11,8 +11,8 @@ Ending the What Got Done experiment.
 
 ## Highlights
 
-* I'm shelving [What Got Done](https://whatgotdone.com), as customers did not seem interested in the idea.
-* [Zestful](https://zestfuldata.com) is a great challenge to my tendency to sweat the small stuff.
+* I'm shelving [What Got Done](https://whatgotdone.com), as customers seem uninterested in the idea.
+* [Zestful](https://zestfuldata.com) has become my greatest challenge in not sweating the small stuff.
 * [Is It Keto](https://isitketo.org) continues growing in the background, with a 22% increase in revenue and a 35% rise in traffic.
 
 ## Goal Grades
@@ -31,7 +31,7 @@ I got almost twice as many interviews as I thought I would and gained valuable i
 
 I successfully added a feature to Zestful that allows it to match user-supplied ingredients to entries in the [USDA's Food Database](https://fdc.nal.usda.gov/index.html), but coverage isn't as high as I hoped (I set out for 80% and achieved 73%).
 
-USDA matching took longer than I expected, so I only had time to implement a minor improvement, which is to handle ingredient strings with either/or options. Given an ingredient like "2 cups chicken stock or low-sodium broth", Zestful will pick a single ingredient, whereas its previous behavior was to return a nonsensical mashup like "chicken stock low-sodium."
+USDA matching took longer than I expected, so I only had time to implement a minor improvement, which is to handle ingredient strings with either/or options. Given an ingredient like "2 cups chicken stock or low-sodium broth," Zestful will pick a single ingredient, whereas its previous behavior was to return a nonsensical mashup like "chicken stock low-sodium."
 
 ### Add two engagement-encouraging features to What Got Done
 
@@ -56,7 +56,7 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 | Domain Authority (Moz) | 6         | 6         | 0 |
 | Ranking Keywords (Moz) | 862       | 1,442     | <font color="green">+580 (+67%)</font> |
 
-It feels strange to keep ignoring Is It Keto, given that it's grown at least 30-50% in traffic and revenue every month this year.
+It feels strange to keep ignoring Is It Keto, given that it's grown at least 30-50% in traffic and revenue every month this year. I'm torn between resuming focus on my most profitable project and my desire to stop splitting my focus among too many separate projects.
 
 ## Why use What Got Done when we have Slack?
 
@@ -64,13 +64,13 @@ In July, I conducted five customer interviews for What Got Done:
 
 * Three were interviews with ex-Google founders who I found through cold outreach.
 * One was an inbound inquiry from someone who read [my blog post about the joy of Snippets](/status-updates-to-nobody/).
-* One was a tech startup owner near my house.
+* One was a tech startup owner near where I live.
 
-Four other founders responded to my emails to politely decline a meeting.
+Four other founders responded to my emails and politely declined meeting.
 
-With the exception of the person who reached out to me, the consistent feedback I heard was that everyone is currently solving this with Slack and standup meetings. Nobody raved about their solution, but everyone agreed it solved the problem adequately enough that it wasn't worth exploring alternatives.
+With the exception of the person who reached out to me, the consistent feedback I heard was that everyone is currently sharing team statups updates through Slack and standup meetings. Nobody raved about their solution, but everyone agreed it solved the problem adequately enough that it wasn't worth exploring alternatives.
 
-One other path that seemed viable in June was organic growth. If more people began using the free version, maybe it would gain momentum and people would push for their employers to adopt it. Unfortunately growth tapered off this month:
+One other path that seemed viable in June was organic growth. If more people began using the free version, maybe it would gain momentum and people would push for their employers to adopt it. Unfortunately, organic growth tapered off in July:
 
 <figure class="half">
   {% include image.html file="whatgotdone-new-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" max_width="600px" class="img-border" media_rendition="half" img_link="true" %}
@@ -78,19 +78,19 @@ One other path that seemed viable in June was organic growth. If more people beg
   <figcaption>Daily signups and user actives for What Got Done - July 2019</figcaption>
 </figure>
 
-Based on July, I'm going to shelve What Got Done as a business idea and keep it as a personal tool. My primary motivation in building it was to teach myself [Vue.js](https://vuejs.org/). It wasn't my strongest business idea, but I thought it was worth exploring if I was going to build it anyway. The result is that it doesn't seem viable, so I'm going to focus on other ideas that I think have stronger potential.
+I'm going to shelve What Got Done as a business idea and keep it as a personal tool. My primary motivation in building it was [to teach myself Vue.js](/retrospectives/2019/05/#the-what-got-done-app). It wasn't my strongest business idea, but I figured I'd try selling it if I was going to build the app either way. It turned out to not be too weak as a business product, so I'm going to focus on other ideas that I think have greater potential.
 
 ## Zestful and resisting the urge to fix everything
 
-This month, I realized that [Zestful](https://zestfuldata.com), my unprofitable ingredient parsing service, is the perfect project to tempt my perfectionist tendencies. It's built on a machine learning system, so the whole thing has so many imperfect parts that it's a challenge to resist fixing lots of little things.
+This month, I realized that [Zestful](https://zestfuldata.com), my unprofitable ingredient parsing service, is the perfect project to tempt my perfectionist tendencies. It's built on a machine learning system, so the whole thing has so many small, imperfect parts that it's a constant challenge to resist fixing lots of little things. Unfortunately, July was a month where I succumbed to this temptation more often than not.
 
-Unfortunately, I often succumb to this temptation. For example, this month I realized that Zestful was incorrectly parsing the ingredient "ground cinnamon." It considered "cinnamon" the product and "ground" to be a preparation step for the ingredient, but realistically, few people grind their own cinnamon sticks, so the product should just be "ground cinnamon." I dug into the error and realized that many of the examples in my training dataset marked "ground" as a preparation step so the model got confused.
+For example, I realized that Zestful was incorrectly parsing the ingredient "ground cinnamon." It considered "cinnamon" the product and "ground" to be a preparation step for the ingredient. Few people grind their own cinnamon sticks, so the product should just be "ground cinnamon." I investigated the cause and discovered that many of the "ground cinnamon" examples in my training dataset incorrectly marked "ground" as a preparation step so the model got confused.
 
-It seemed like a quick fix, but I probably spent 45 minutes hunting down all the bad "ground cinnamon" examples. I finally finished, proud to have eliminated an error case, and I realized that only 0.3% of Zestful's requests include "ground cinnamon." And the previous behavior to just return "cinnamon" was probably fine because everyone assumes "cinnamon" means ground cinnamon anyway.
+It seemed like a quick fix, but I probably spent 45 minutes hunting down all the bad "ground cinnamon" examples. I finally finished, proud to have eliminated an error case, but I didn't really make improve anything meaningful. Only 0.3% of Zestful's requests include "ground cinnamon." What's more, the previous behavior of returning "cinnamon" was fine because everyone assumes "cinnamon" means "ground cinnamon" anyway.
 
 {% include image.html file="ground-cinnamon.jpg" alt="Screenshot of parsing ground cinnamon on Zestful"  max_width="796px" class="img-border" img_link="true" fig_caption="Boy, did it take way too long to make this work" %}
 
-Fixing these things is satisfying in the moment because it's fun to make my parser more accurate. The problem is that it's so easy to go down the rabbit hole and wake up days later realizing that overall accuracy has barely changed. The parser will never be 100% accurate, and I could spend an eternity chasing ever decreasing gains in accuracy.
+Fixing these things is satisfying in the moment because it's fun to make my parser more accurate. The problem is that it's so easy to go down the rabbit hole chasing lots of minor error cases and wake up days later only to realize that overall accuracy has barely changed. The parser will never be 100% accurate, and I could spend an eternity pursuing ever decreasing gains in accuracy.
 
 My goal going forward is to resist the urge to fix issues on Zestful unless a paying customer asks for it.
 
@@ -104,8 +104,11 @@ Relying on Amazon Affiliate ads meant that most Is It Keto pages earned nothing 
 
 So, I signed up for Google AdSense and have had a great experience so far. The key differences are:
 
-* I control placement of the ads, unlike the previous ad partner who automatically crammed ads into any open space they could find.
-* I can review ads to ensure that my users never see ads that are spammy or masquerade as features of my site (e.g., ads that [insert a fake "Print" button](/images/retrospectives/2019/07/isitketo-ads.png)).
+* I control placement of the ads
+  * The previous ad partner automatically crammed ads into any open space they could find.
+  * By choosing placement manually, I prevent the ads from ruining the user experience.
+* I can review ads to ensure that my users never see ads that are spammy or masquerade as features of my site.
+  * e.g., ads that [insert a fake "Print" button](/images/retrospectives/2019/07/isitketo-ads.png)
 
 {% include image.html file="adsense-ads.jpg" alt="Screenshot of Is It Keto after adding AdSense ads"  max_width="600px" class="img-border" img_link="true" fig_caption="Is It Keto with ads from Google AdSense and Amazon Affiliate Program" %}
 
@@ -115,11 +118,11 @@ So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured i
 
 ### What Got Done?
 
+* Conducted nine customer interviews
 * Implemented a "reactions" feature for What Got Done
 * Added USDA matching to Zestful
 * Added support for "either/or" ingredients in Zestful
 * Added Google AdSense to Is It Keto
-* Conducted nine customer interviews
 
 ### Lessons Learned
 
@@ -128,12 +131,13 @@ So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured i
   * I emailed 15 founders
   * I received 7 responses (47% response rate)
   * I arranged 3 meetings (20% conversion rate)
+* I need to stop tinkering with Zestful unless I can tie the need directly to a paying customer's request.
 
 ### Goals for May
 
-* Publish a new blog post on mtlynch.io.
+* Publish a new blog post on [mtlynch.io](https://mtlynch.io).
 * Publish an MVP for my [email copywriter tool idea](/retrospectives/2019/07/#slowing-down-on-the-email-tool-for-copywriters).
 * Prep What Got Done for the backburner.
-  * Fix a few small bugs.
+  * Fix a few small outstanding bugs.
   * Document everything that I'll undoubtedly forget if I return to it in six months.
   * *Maybe* open-source it.
