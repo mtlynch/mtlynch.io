@@ -8,7 +8,9 @@ report_intro:
   link_url: https://amzn.to/2ZshKrl
 ---
 
-The high level summary is...
+A quick, practical guide to interviewing customers during the early stages of a new product idea.
+
+I expected basic advice about how you shouldn't ask customers leading questions, but Fitzpatrick goes much more in-depth. The book made me recognize weaknesses in my approach to interviewing users and provided interesting perspectives about obtaining unbiased, actionable feedback from customers.
 
 <div style="clear: both;"></div>
 
@@ -29,16 +31,18 @@ The high level summary is...
 
 * At a time when inclusiveness in tech is front-of-mind, this book feels tone-deaf when it comes to gender.
   * The book's title relies on stereotypes about mothers being too kind to give their children honest, critical feedback.
-  * There are 60+ people mentioned in this book between real-life business leaders (e.g., Elon Musk, Steve Blank), hypothetical customers and entreprenuers, and associates from the author's personal history. Of these, only four are women:
+  * There are 60+ people mentioned in this book between real-life business leaders (e.g., Elon Musk, Steve Blank), hypothetical customers and entrepreneurs, and associates from the author's personal history. Of these, only four are women:
     1. The titular mom of a hypothetical entrepreneur who is featured heavily in example conversations
     1. A woman the author met at a party (she speaks half a sentence)
-    1. An entrepreneur who sold nutritional supplements but never speaks in the book
-    1. A waitress who does not speak in the book and only appears so that the author can order her to summon her (male) manager
+    1. A non-speaking entrepreneur character who sells nutritional supplements
+    1. A non-speaking waitress who appears only so the author can order her to summon her (male) manager
   * In every example conversation, the author refers to the speakers as either "he" or "they," never "she."
+* There feels like a gap between the author's ban on pitching your product and the author's recommendation that you end meetings by demanding a commitment.
+  * How can customers commit if you never pitched your idea?
 * Some of the techniques feel hard or awkward to put into practice when working with real customers.
   * To be fair, sales sometimes feels awkward and unnatural to me, so maybe I'm reacting to that.
 * Feels a bit Silicon Valley-centric in that it assumes it's easy to meet your customers in person or run into them coincidentally during your daily routine
-* Recommends arranging customer interviews under false pretenses, such as pretending that you're writing a book or PhD thesis
+* Recommends arranging customer interviews under false pretenses, such as pretending that you're writing a book or Ph.D. thesis
 
 ## Key Takeaways
 
@@ -55,7 +59,8 @@ The high level summary is...
   * **Do** ask how they currently address the problem your product solves.
   * **Do** ask what alternative solutions they've investigated.
     * >If they haven't looked for ways of solving it already, they're not going to look for (or buy) yours.
-  * People are often overly optimistic about paying for a product in the abstract, when they're much less likely to purchase it in practice.
+  * People are often overly optimistic about paying for a product when it's hypothetical.
+    * In practice, they're less likely to follow through.
 * **Don't** ask the customer how much they'd pay for a product that solves problem X.
   * **Do** ask how much problem X currently costs them.
 * Other good questions:
@@ -84,3 +89,81 @@ The high level summary is...
   * >If you get an unexpected answer to a question and it doesn't affect what you're doing, it probably wasn't a terribly important question to begin with.
 * Negative feedback is valuable.
   * It protects you from investing too deeply in a product that customers are not excited about.
+* **Don't** make assumptions about what customers value
+  * Example: Customer says they never go to the gym
+    * If you begin asking them what obstacles make it difficult to work out, the customer will contrive reasons, but the deeper issue might just be that the customer doesn't care about going to the gym.
+  * Before diving into the details of a problem, first establish whether it's a problem the customer cares about solving.
+* "Product risk" vs. "customer risk"
+  * Product risk: you might not succeed due to an inability to deliver the product you promised
+    * e.g., you want to sell a solar-powered electric car but find you're unable to build one
+  * Customer risk: even if you successfully build your product, customers may not be interested in buying
+  * The more product risk your product has, the less you'll be able to validate your idea entirely through customer conversations
+* Outcome of customer meetings should be **commitment** and **advancement**
+  * >Commitment &mdash; they are showing they're serious by giving up something they value such as time, reputation, or money.
+  * >Advancement &mdash; They are moving to the next step of your real-world funnel and getting closer [to] purchasing.
+  * Types of commitment
+    * Time
+      * Clear next meeting with known goals
+      * Sitting down to give feedback on wireframes
+      * Using a trial of the product for a non-trivial period
+    * Reputation
+      * Intro to peers or team
+      * Intro to a decision-maker (boss, spouse, lawyer)
+      * Giving a public testimonial or case study
+    * Financial
+      * [Letter of intent](https://en.wikipedia.org/wiki/Letter_of_intent)
+      * Pre-order
+      * Deposit
+  * > The more they're giving up, the more seriously you can take what they're saying.
+  * If you asked for a commitment and were rejected, it's still good information.
+  * The only way to fail is by not asking for any commitment from the customer.
+  * >If you don't know what happens next after a product or sales meeting, the meeting was pointless.
+* Framing a meeting to the customer
+  * Bad examples
+    * "Can I interview you?" -> Sounds boring
+    * "Can I get your opinion on what we're doing?" -> Sounds needy
+    * "Do you have time for a quick chat?" -> Provides no information, sounds like you'll waste their time.
+  * Proper framing has five components
+    1. **Vision**: You're an entrepreneur trying to solve a problem (don't mention your idea).
+    1. **Framing**: Disclose where are you in the process of building your product.
+    1. **Weakness**: Show how they can help with a specific question you have.
+    1. **Pedestal**: Flatter them by explaining how they're uniquely qualified to help.
+    1. **Ask**: Explicitly ask for help.
+* Kicking off the meeting
+  * Take control of the meeting right off the bat. Otherwise, the customer may focus on your idea instead of their problem.
+  * Reiterate what you said in your pre-meeting email, then move into the first question.
+* Prefer in-person meetings to Skype or phone meetings
+  * Phone calls hide too many subtle social cues.
+  * In-person meetings over coffee tend to be less time-constrained than a call in a 30-minute calendar slot.
+  * >...nobody becomes friends over the phone.
+* Adopt the mindset of seeking advisors
+  * If you go into the meeting thinking of it as an *almost* sales meeting, you'll learn less.
+  * Instead, privately maintain the mindset that you're looking for an advisor with industry-specific expertise, not a customer.
+* How many meetings to conduct?
+  * Keep meeting with customers until you stop learning new things.
+  * Sometimes three to five meetings are enough.
+  * If 10 customers all say totally different things, you probably have to focus on a more narrow customer segment.
+* **Don't** create "customer feedback bottlenecks."
+  * Common anti-pattern: the founding team's "businessperson" does 100% of customer interviews and reports the takeaways to the team.
+    * This creates an imbalance of power because the businessperson can win any product argument by saying, "it's what the customer wants."
+    * Customer conversations are subject to interpretation, so it's undesirable to have a single person interpreting everything for the team.
+* Prepping for a customer interview
+  * Decide with your founding team what your top three questions are.
+  * Decide what commitments you want from the customer.
+  * Eliminate any questions that you can answer yourself with desk research.
+  * Review interviewee's profile on LinkedIn
+* Holding the customer interview
+  * Everyone involved in big decisions should attend at least some customer interviews
+    * Ideal is to have two people from your company at each meeting.
+      * The lead focuses on asking questions.
+      * The notetaker records important details and acts as a backup if the lead misses important questions.
+      * Three or more interviewers is overwhelming.
+  * Write notes in a paper notebook or on notecards
+    * Typing during a meeting can come across as rude.
+    * Capture key quotes when possible
+* Post-interview review
+  * Transcribe the notes from the meeting into a place where everyone on the founding team can read them (e.g., Google Docs, internal wiki)
+  * Talk through the key quotes and takeaways
+  * Review conversations at the meta-level
+    * Which questions worked?
+    * How can we improve interviews in the future?
