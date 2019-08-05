@@ -5,7 +5,7 @@ tags:
 - taskrabbit
 ---
 
-I once traded a dirty keyboard and $95 cash so that I could get $0 and an identical but slightly cleaner keyboard. Looking back, it wasn't my best trade.
+I once gave someone a dirty keyboard and $95 cash in exchange for $0 and an identical but slightly cleaner keyboard. Looking back, it wasn't my best trade.
 
 ## It all started with a writing class
 
@@ -19,7 +19,7 @@ I should do that!
 
 No, I couldn't do that. I'd never finish my story.
 
-I admitted to myself that I was simply procrastinating, but the only way I was able to stop obsessing about my dirty keyboard was to make a deal with myself that I'd clean it for real once the story was done.
+I admitted to myself that I was simply procrastinating, but the only way I could stop was to make a deal with myself that I'd deal with it for real after submitting the story.
 
 ## Gig economy to the rescue
 
@@ -30,7 +30,7 @@ At the time, I was making good money working for Google, but I felt constantly s
 
 TODO: TaskRabbit screenshot
 
-## A minimum of 15 years keyboard cleaning experience
+## Must have at least 15 years of keyboard cleaning experience
 
 Many of the people who responded to my TaskRabbit job were confused.
 
@@ -70,14 +70,31 @@ I checked the receipt. Out of curiosity, I checked the cost of buying that same 
 
 ## It's not *that* dumb
 
-This is a story that I jokingly told to family and friends for years. And they dutifully bring it up any time I give them financial advice.
+The reaction from many people when they hear this story is that they'd never waste so much money hiring a keyboard cleaner because they'd just clean it themselves. They're missing the point.
 
-But it's not as dumb as it might seem. People ask why I didn't just clean the keyboard myself instead of spending almost $100. Assuming that my time is worth more than $26/hr, it still "costs" me ~$100 to do it myself, even though no money is changing hands.
+A helpful way of evaluating whether to outsource something is to ask yourself how much someone would have to pay *you* to do the task. At the time, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. So it would be illogical for me to clean my keyboard when others are willing to do it for far less.
 
-There's also the obvious solution of buying a brand new keyboard and throwing the dirty one in the trash. But I just don't want to be so wasteful to throw out perfectly functional items just because they're dirty.
+That said, spending $95 to clean a $40 keyboard means that something is amiss, so what went wrong here?
 
-If I had to do this again, I'd post the old keyboard for free on craigslist or my local [buy nothing](https://buynothingproject.org) group. It's not as time efficient as throwing the item away because people who reply to those listings tend to be flaky, so it's a pain to arrange pickups, but it's better than just adding working electronics to a landfill.
+## Lessons learned
 
-## Outsourcing doesn't scale down
+### Outsourcing doesn't scale down
 
-The lesson I took from this is that outsourcing works poorly for small, one-off tasks. If I had to clean my keyboard every three days, then it would make sense to outsource it all to Jaclyn S. As a one time job, I saved myself three hours of cleaning my keyboard, but I lost a few hours arranging it and stressing about what was going on while she worked.
+Between the time I spent arranging the job and feeling distracted by the poor woman stuck in my kitchen for three hours, it cost me more time to outsource this task than to do it myself. For any outsourced task, there's some frictional cost of defining the job and finding a candidate. For small, one-time tasks, the frictional costs can occupy more time than the job itself.
+
+Now, my minimum is around five hours unless it's a task I really hate. Recurring tasks work much better, especially if you create a process that minimizes friction if a new person takes over.
+
+### Invest more in training
+
+It shouldn't really take three hours to clean a keyboard. It was dirty, but not three hours is like the time it would take to clean it if I accidentally dropped my keyboard into a vat of molasses.
+
+I suspect that my cleaner was cleaning each key way more thoroughly than I needed and/or she got stuck trying to put the keyboard back together and was afraid to ask for help. I could have prevented both by giving her more instructions up front and letting her know it's okay to watch YouTube videos or ask me for guidance.
+
+### There's always craigslist
+
+I knew up front that the cost of cleaning the keyboard might exceed its value, but the only alternative I considered was throwing away a perfectly good keyboard, and I didn't want to do that.
+
+If I had to do this again, I'd post the old keyboard for free on craigslist or my local [buy nothing](https://buynothingproject.org) group.
+
+People have suggested donating items like this to The Salvation Army, but I prefer directly finding people who want the item. I suspect that it's a net negative to send a low-value item through The Salvation Army's whole receiving, processing, displaying, and selling process.
+{: .notice--info}
