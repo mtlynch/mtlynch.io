@@ -5,7 +5,7 @@ tags:
 - taskrabbit
 ---
 
-I once gave someone a dirty keyboard and $95 cash in exchange for $0 and an identical but slightly cleaner keyboard. Looking back, it wasn't my best trade.
+I once gave someone a cheap, dirty keyboard and $96 cash in exchange for $0 and an identical but slightly cleaner keyboard. Looking back, it wasn't my best trade.
 
 ## It all started with a writing class
 
@@ -27,7 +27,6 @@ At the time, I was making good money working for Google, but I felt constantly s
 
 [TaskRabbit](https://www.taskrabbit.com) is one of the popular apps for the gig economy. It allows users to book one-off tasks like cleaning an apartment or mounting a TV. "Keyboard deep cleaning" didn't seem to be one of their pre-defined jobs, so I booked the job as "Small cleaning" and explained in the description that I wanted someone to clean my keyboard. TaskRabbit has a one-hour minimum, and I was afraid my keyboard task wouldn't take the full hour, so I also said I wanted the person to clean some dishes I had piled up in the sink.
 
-
 TODO: TaskRabbit screenshot
 
 ## Must have at least 15 years of keyboard cleaning experience
@@ -36,37 +35,79 @@ Many of the people who responded to my TaskRabbit job were confused.
 
 One applicant told me that they wanted to be up front in that they have no keyboard cleaning experience. I told them it was fine. All they really needed to do was take out the keys, swab them with rubbing alcohol, and put them back.
 
-Another told me that they were pregnant and wanted to make sure cleaning the keyboard didn't require heavy lifting. I assured her that I had one of those fancy, modern keyboards that weighs less than 35 pounds.
+Another told me she was pregnant and wanted to make sure cleaning the keyboard didn't require heavy lifting. I assured her that I had one of those fancy, modern keyboards that weighs less than 35 pounds.
 
-Finally, Jaclyn S. contacted me with supreme confidence in her ability to clean the keyboard. Within 20 minutes, I hired her and booked her for the following day.
+Finally, I received an offer from Jaclyn S. She had supreme confidence in her ability to clean the keyboard and wanted to know only what supplies to bring with her. Within 20 minutes, I booked her for 3pm the following day.
+
+{% include image.html file="jaclyn-s-1.jpg" alt="Screenshot of conversation with Jaclyn S" max_width="500px" img_link=true class="img-border" fig_caption="Jaclyn S is ready to clean some keyboards" %}
 
 ## Cleaning day
 
-Jaclyn S. agreed to take my job. She was scheduled to arrive Saturday at 3pm. She messaged me around 1pm saying that her morning job exploded into a 10-hour task, so she wouldn't be able to make it by 3pm and wanted to know if we could reschedule for the following day. I asked if she had any availability later in the day and she . She said she could come at 9pm if that worked, or we'd have to rebook for another day. I already planned work to do on my laptop while she was there, so I didn't want to reschedule. I decided to just let her come at 9pm.
+The next day, Jaclyn S. messaged me around 1pm saying that her morning job exploded into a 10-hour task. She wouldn't be able to make our 3pm appointment and wanted to know if we could reschedule for the following day. I asked if she had any availability later in the day and she . She said she could come at 9pm if that worked, or we'd have to rebook for another day. I already planned work to do on my laptop while she was there, so I didn't want to reschedule. I decided to just let her come at 9pm.
 
-Jaclyn S. arrived a little after 9pm. At the time, I lived in a small studio apartment in Manhattan. If she cleaned the keyboard in my living room / bedroom, it would feel awkward just sitting three feet away from her and pretending to ignore her while I worked. I figured it would give us both privacy if she worked in the kitchen, which was separated from the bedroom by a wall.
+{% include image.html file="jaclyn-s-2.jpg" alt="Screenshot of conversation with Jaclyn S" max_width="500px" img_link=true class="img-border" fig_caption="Jaclyn S is ready to clean some keyboards" %}
+
+I was annoyed, but only because the reschedule forced me to admit to myself and to Jaclyn S that I, a 31-year-old guy living in Manhattan, had nothing better to do on a Saturday night than watch someone clean my keyboard.
+
+Jaclyn S. arrived just after 8:30pm. At the time, I lived in a small studio apartment in Manhattan. If she cleaned the keyboard in my living room / bedroom, it would feel awkward just sitting three feet away from her and pretending to ignore her while I worked. I figured it would give us both privacy if she worked in the kitchen, which was separated from the bedroom by a wall.
+
+## Timeline
+
+Here's how the events played out.
+
+### 8:35pm, 5 minutes elapsed
 
 I put the keyboard in the kitchen along with a few days' worth of dirty dishes. I gave her Q-Tips, paper towels, and a bottle of rubbing alcohol for the keyboard. I showed her how to pop the plastic keys out of the keyboard. I rolled a spare office chair into the kitchen so that she could sit comfortably in front of my cabinets as she worked.
 
-Giving her privacy, I went back to work in my bedroom. I heard her start on the dishes. So far so good. A half hour later, I heard the sink turn off and began hearing the sounds of keys being popped off my keyboard. Great! Everything was going according to schedule.
+Giving her privacy, I went back to work in my bedroom. I heard her start on the dishes. So far so good.
 
-At around 10pm, I began preparing to hear her come out and declare victory. By 10:15pm, I figured she'd be done any minute now. I continued feeling that way until 10:45pm.
+### 9pm: 0.5 hours elapsed
 
-## Is everything going okay?
+I hear the sink turn off and the sounds of keys being popped off my keyboard. Great! Everything's on schedule.
 
-I'm not sure if I'm just projecting, but the sounds coming from the kitchen sounded panicked, like someone who screwed up and didn't want to ask for help. Was she having trouble putting the keys back in? Did she break something and was scrambling to fix it?
+### 9:30pm: 1 hour elapsed
+
+Okay, she's been on the keyboard for half an hour. She'll probably be done any minute now.
+
+### 10:00pm, 1.5 hours elapsed
+
+*Any* minute now.
+
+### 10:15pm: 1.75 hours elapsed
+
+The sounds coming from the kitchen sound panicked, like someone who screwed up and didn't want to ask for help.  Was she having trouble putting the keys back in? Did she break something and was scrambling to fix it? Maybe I'm just projecting.
 
 As someone who also doesn't like asking for help when I've screwed up, I sympathized with her plight and left her to figure it out on her own. I considered going in and asking how things were going, but I didn't want to micromanage her or rush her. I also felt extreme guilt at even having her there at all. She had already gotten suckered into working much longer than she expected, and I was now here she was approaching hour 13 of her workday because some idiot expected her to reconstruct his keyboard.
 
-At 11pm, I walked by the kitchen to go to the bathroom and tried to subtly peek in to see what was going on. Most of the keys were still outside the keyboard, but Jaclyn S.'s back was to me blocking the keyboard, so I couldn't see much.
+### 11pm: 2.5 hours elapsed
 
-She had to finish eventually, so I just waited. 11:30pm, she's still working. The sounds of the work still sound anxious.
+I walk by the kitchen on my way to the bathroom and try to subtly peek in to see what was going on. Most of the keys were still outside the keyboard, but Jaclyn S.'s back is to me blocking the keyboard, so I couldn't see much.
 
-By 11:45pm, she had been there almost three hours. The work sounded like it was wrapping up. Just before midnight, she came out carrying my keyboard. It was spic 'n span and all put back together. I thanked her for her work and plugged my keyboard back in. Everything worked fine.
+She had to finish eventually, so I just wait. I feel like I should ask her if she needs help, but I'm also feeling tremendously guilty about making this poor woman sit in my kitchen at 11pm on a Saturday night scrubbing a keyboard.
 
-I checked the receipt. Out of curiosity, I checked the cost of buying that same keyboard brand new. About $40. So I had spent $90 cleaning a $40 keyboard.
+### 11:30pm: 3 hours elapsed
 
-{% include image.html file="taskrabbit-receipt.jpg" alt="$95.55 receipt for my TaskRabbit task" max_width="800px" img_link=true fig_caption="TaskRabbit receipt from my keyboard cleaning task" %}
+She's still working. The sounds of the work still sound anxious.
+
+### 11:45pm, 3.25 hours elapsed
+
+There's something victorious in the sounds of her work now. Surely, it's almost over.
+
+### 12am: 3.5 hours elapsed
+
+Jaclyn S. came out carrying my keyboard. It was spic 'n span and all put back together. I thank her for her work and plug my keyboard back in. Everything works fine.
+
+## The bill
+
+I checked the receipt. 
+
+{% include image.html file="taskrabbit-receipt.jpg" alt="$95.55 receipt for my TaskRabbit task" max_width="600px" img_link=true fig_caption="TaskRabbit receipt from my keyboard cleaning task" %}
+
+Out of curiosity, I checked the cost of buying that same keyboard brand new: $38.89. 
+
+{% include image.html file="keyboard-order.jpg" alt="$38.89 receipt for purchasing my keyboard brand new" max_width="750px" img_link=true fig_caption="TaskRabbit receipt from my keyboard cleaning task" %}
+
+I spent $96 to clean a $39 keyboard.
 
 ## It's not *that* dumb
 
@@ -74,7 +115,7 @@ The reaction from many people when they hear this story is that they'd never was
 
 A helpful way of evaluating whether to outsource something is to ask yourself how much someone would have to pay *you* to do the task. At the time, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. So it would be illogical for me to clean my keyboard when others are willing to do it for far less.
 
-That said, spending $95 to clean a $40 keyboard means that something is amiss, so what went wrong here?
+That said, there's obviously something hinky with spending almost a hundred dollars to clean a keyboard worth a fraction of that amount, so what went wrong here?
 
 ## Lessons learned
 
@@ -86,15 +127,19 @@ Now, my minimum is around five hours unless it's a task I really hate. Recurring
 
 ### Invest more in training
 
-It shouldn't really take three hours to clean a keyboard. It was dirty, but not three hours is like the time it would take to clean it if I accidentally dropped my keyboard into a vat of molasses.
+It shouldn't really take three hours to clean a keyboard. It was dirty, but not three hours dirty. Three hours is like the time it would take to clean it if I accidentally dropped my keyboard into a vat of molasses.
 
 I suspect that my cleaner was cleaning each key way more thoroughly than I needed and/or she got stuck trying to put the keyboard back together and was afraid to ask for help. I could have prevented both by giving her more instructions up front and letting her know it's okay to watch YouTube videos or ask me for guidance.
 
 ### There's always craigslist
 
-I knew up front that the cost of cleaning the keyboard might exceed its value, but the only alternative I considered was throwing away a perfectly good keyboard, and I didn't want to do that.
+I knew up front that the cost of cleaning the keyboard might exceed its value, but the only alternative I considered was throwing away a perfectly good keyboard.
 
-If I had to do this again, I'd post the old keyboard for free on craigslist or my local [buy nothing](https://buynothingproject.org) group.
+If I had to do this again, I'd buy a new keyboard and post the old one for free on craigslist or my local [buy nothing group](https://buynothingproject.org).
 
-People have suggested donating items like this to The Salvation Army, but I prefer directly finding people who want the item. I suspect that it's a net negative to send a low-value item through The Salvation Army's whole receiving, processing, displaying, and selling process.
+**Sidenote**: People have suggested donating items like this to The Salvation Army, but I prefer directly finding people who want the item. I suspect that sending a low-value item through The Salvation Army's whole receiving, processing, displaying, and selling process is a net negative.
 {: .notice--info}
+
+---
+
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
