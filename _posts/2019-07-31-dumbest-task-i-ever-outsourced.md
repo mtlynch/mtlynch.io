@@ -52,7 +52,9 @@ The next day, Jaclyn S. messaged me around 1pm saying that her morning job explo
 
 {% include image.html file="jaclyn-s-2.jpg" alt="Screenshot of conversation with Jaclyn S" max_width="500px" img_link=true class="img-border" fig_caption="Jaclyn S is ready to clean some keyboards" %}
 
-This was irritating. Was Jaclyn S. implying that I, a young man living in one of the trendiest neighborhoods of Manhattan, had nothing better to do on a Saturday night than watch someone clean my keyboard? Well, it was irritating because it was true. I told her 9pm was fine and awaited her arrival.
+This was irritating. Was Jaclyn S. implying that I, a young man in one of Manhattan's trendiest neighborhoods, had nothing better to do on a Saturday night than watch someone clean my keyboard?
+
+It was irritating because it was true. I told her 9pm was fine and awaited her arrival.
 
 ## Timeline
 
@@ -68,7 +70,7 @@ Returning to the desk in my bedroom / living room, I hear my sink turn on and th
 
 ### 9pm: 0.5 hours elapsed
 
-The sink turns off and I hear the distinct noise of keys popping off a keyboard. Great! Everything's on schedule.
+The sink turns off, and I hear the distinct noise of keys popping off a keyboard. Everything is on schedule.
 
 ### 9:30pm: 1 hour elapsed
 
@@ -80,17 +82,17 @@ Okay, she's been on the keyboard for half an hour. She'll probably be done any m
 
 ### 10:15pm: 1.75 hours elapsed
 
-The sounds coming from the kitchen sound panicked, like someone who screwed up and didn't want to ask for help.  Is she having trouble putting the keys back in? Has she broken something and is scrambling to fix it? Maybe I'm just projecting.
+The sounds coming from the kitchen sound panicked, like someone who screwed up and didn't want to ask for help.  Is she having trouble putting the keys back in? Has something broken, and she's scrambling to fix it? Maybe I'm just projecting.
 
 ### 10:30pm, 2 hours elapsed
 
-Should I go in and ask her what's taking so long? I want to, but the situation makes me feel tremendously guilty. Because of me, she's now entering hour 13 of her workday and she's stuck scrubbing a keyboard late into the night for some idiot.
+Should I go in and ask her what's taking so long? I want to, but the situation makes me feel tremendously guilty. Because of me, she's now entering hour 13 of her workday and she's stuck scrubbing a keyboard late into the night because some idiot was too lazy to do it himself.
 
 ### 11pm: 2.5 hours elapsed
 
-On my way to the bathroom, I sneak a peek into the kitchen to see what's going on. Most of the keys are still outside the keyboard, but Jaclyn S. is sitting between me and the table, so I don't see much.
+On my way to the bathroom, I sneak a peek into the kitchen to see what's going on. Most of the keys are still outside the keyboard, but Jaclyn S. is sitting between me and the table, so I can't see much.
 
-This has to end eventually, so let's just see what happens.
+This has to end eventually, so I'll see what happens.
 
 ### 11:30pm: 3 hours elapsed
 
@@ -118,11 +120,11 @@ I spent $96 to clean a $39 keyboard.
 
 ## It's not *that* dumb
 
-The reaction from many people when they hear this story is that they'd never waste so much money hiring a keyboard cleaner because they'd just clean it themselves. They're missing the point.
+My friends smugly remarked, "Oh, *I'd* never spend $100 to clean a keyboard. I'd just do it myself." They're missing the point.
 
-A helpful way of evaluating whether to outsource something is to ask yourself how much someone would have to pay *you* to do the task. At the time, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. So it would be illogical for me to clean my keyboard when others are willing to do it for far less.
+A helpful way of evaluating whether to outsource something is to ask yourself how much someone would have to pay *you* to do the task. At the time, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. It would be illogical for me to clean my keyboard when others are willing to do it for far less.
 
-That said, there's obviously something hinky going on when the cost of routine maintenance far exceeds the item's value, so what went wrong here?
+That said, there's obviously something hinky going on when an item's routine maintenance costs far exceed its value, so what went wrong here?
 
 ## Lessons learned
 
