@@ -3,14 +3,14 @@ title: The Dumbest Task I Ever Outsourced
 tags:
 - outsourcing
 - taskrabbit
+header:
+  teaser: images/dumbest-task-i-ever-outsourced/cover.jpg
+  og_image: images/dumbest-task-i-ever-outsourced/cover.jpg
 ---
 
-I once made the following trade:
+{% include image.html file="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" max_width="1000px" img_link=true %}
 
-* **I gave**: a cheap, dirty keyboard and $96 cash
-* **I received**: an identical but slightly cleaner keyboard and $0 cash
-
-Looking back, it wasn't my smartest financial decision.
+I'm constantly trying to convince my friends to outsource. Many of them work high-paying jobs and find themselves with too little free time, but they won't listen to me sing the praises of outsourcing. I think it's because they know about the time I paid someone $96 to clean a $39 to keyboard.
 
 ## It all started with a writing class
 
