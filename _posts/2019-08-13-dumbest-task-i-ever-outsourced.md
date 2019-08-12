@@ -118,9 +118,9 @@ I spent $96 to clean a $39 keyboard.
 
 ## It's not *that* dumb
 
-When I told friends about my , they'd often smugly remark, "Oh, I'd *never* waste $100 to clean a keyboard. I'd just clean it myself." They, in fact, are wasting $100 but they don't realize it.
+When I told friends about my , they'd often smugly remark, "Oh, I'd *never* waste $100 to clean a keyboard. I'd just clean it myself." They logic error is that they are, in fact, wasting $100 or more, but they don't realize it.
 
-There's an implicit cost to everything that you do. You probably can't calculate the value of your time down to the penny, but you can estimate it by asking yourself how much someone would have to pay you to do the task for them. If someone is unwilling to clean keyboards for $30/hr, then it's irrational to clean a keyboard to save $30/hr.
+There's an implicit cost to everything that you do. You probably can't calculate the value of your time down to the penny, but you can estimate it by asking yourself how much you'd demand to do the same task for someone else. If you're unwilling to clean keyboards for $30/hr, then it's irrational to clean your own keyboard to save $30/hr.
 
 At the time of my fateful keyboard cleaning, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. That said, there's obviously something hinky going on when the cost of an item's routine maintenance far exceeds its value, so what went wrong here?
 
