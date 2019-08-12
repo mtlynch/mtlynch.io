@@ -6,11 +6,12 @@ tags:
 header:
   teaser: images/dumbest-task-i-ever-outsourced/cover.jpg
   og_image: images/dumbest-task-i-ever-outsourced/cover.jpg
+excerpt: I derive immense satisfaction from outsourcing parts of my life, even when it sometimes causes me to pay $96 to clean a $39 keyboard.
 ---
 
 {% include image.html file="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" max_width="1000px" img_link=true %}
 
-I derive immense satisfaction from outsourcing parts of my life. All of my friends have heard me argue that they're undervaluing their time and they should pay to delegate some of their chores. Very few of them heed my advice, and it's probably because they know about the time I paid someone $96 to clean a $39 to keyboard.
+I derive immense satisfaction from outsourcing parts of my life. All of my friends have heard me argue that they're undervaluing their time and they should pay to delegate some of their chores. Very few of them heed my advice, and it's probably because they know about the time I paid someone $96 to clean a $39 keyboard.
 
 ## It all started with a writing class
 
@@ -142,7 +143,7 @@ It's possible that my cleaner washed each key more thoroughly than was necessary
 
 I knew up front that the cost of cleaning the keyboard might exceed its value, but the only alternative I considered was throwing away a perfectly good keyboard and buying the same model brand new.
 
-A les wasteful solution would be to buy a new keyboard and offer the old one for free to an online community like [craigslist](https://craigslist.org) or my local [buy nothing group](https://buynothingproject.org).
+A less wasteful solution would be to buy a new keyboard and offer the old one for free to an online community like [craigslist](https://craigslist.org) or my local [buy nothing group](https://buynothingproject.org).
 
 **Sidenote**: People have suggested donating the keyboard to [The Salvation Army](https://www.salvationarmyusa.org), but I don't think it makes sense. For higher-value items, I happily donate. Below a certain price threshold, I suspect that sending it through The Salvation Army's whole receiving, processing, displaying, and selling process is a net negative.
 {: .notice--info}
