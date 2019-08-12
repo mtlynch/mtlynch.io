@@ -10,29 +10,29 @@ header:
 
 {% include image.html file="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" max_width="1000px" img_link=true %}
 
-I'm constantly trying to convince my friends to outsource. Many of them work high-paying jobs and find themselves with too little free time, but they won't listen to me sing the praises of outsourcing. I think it's because they know about the time I paid someone $96 to clean a $39 to keyboard.
+I derive immense satisfaction from outsourcing parts of my life. All of my friends have heard me argue that they're undervaluing their time and they should pay to delegate some of their chores. Very few of them heed my advice, and it's probably because they know about the time I paid someone $96 to clean a $39 to keyboard.
 
 ## It all started with a writing class
 
-Back in 2016, I lived in a small studio apartment in Manhattan. It was a Monday night, and I was sitting in front of my computer trying to write a short story. I hadn't written fiction since high school, but I had signed up for a writing class. My first story was due at 9 AM the next day.
+Back in 2016, I lived in a small studio apartment in Manhattan. It was a Monday night, and I was staring at my computer trying to write a short story. I hadn't written fiction since high school, but I had recently signed up for a writing class. My first assignment was due at 9 AM the next day.
 
-Desperate for any distraction, I became fixated on my keyboard. It was so dusty and grimy. How had I not noticed this before? I had the same keyboard for five or six years, typing on it 20-30 hours per week, eating all my meals in front of it.
+Desperate for any distraction, I became fixated on my keyboard. It was so dusty and grimy. How had I not noticed this before? I had owned the same keyboard for five or six years, typed on it 20-30 hours per week, and eaten all my meals in front of it.
 
-TOOD: Picture of my keyboard
+{% include image.html file="keyboard.jpg" alt="My keyboard on my desk" max_width="600px" img_link="true" %}
 
 Growing up, my parents routinely popped all the keys off of our keyboards to deep clean them in rubbing alcohol. Did people still do that?
 
 I should do that!
 
-No, I'd never finish my story. I recognized my procrastination for what it was, but the only way I could focus was to promise myself that I'd address the dirty keyboard later that week.
+No, couldn't do that or I'd never finish my story. I recognized my newfound cleanliness obsession as the procrastination method that it was, and my only way of moving past it was to promise myself that I'd handle the dirty keyboard later that week.
 
 ## Outsource all the things
 
-At the time, I was making good money working for Google, but I felt constantly short on time. A few friends had told me they had used an app called [TaskRabbit](https://www.taskrabbit.com) to book workers for short, one-off tasks like mounting a TV or waiting in a long line.
+At the time, I was making good money working for Google, but I constantly felt short on time. A few friends had told me they had used an app called [TaskRabbit](https://www.taskrabbit.com) to book workers for short, one-off tasks like mounting a TV or picking something up from the store.
 
-TODO: TaskRabbit screenshot
+{% include image.html file="taskrabbit.jpg" alt="TaskRabbit homepage" max_width="600px" class="img-border" img_link="true" %}
 
-This seemed like the ideal time to try out for this service, so I signed up. To my surprise, their pre-defined job templates had no entry for "keyboard deep cleaning," so I booked the job as "Small cleaning" and explained in the description that I wanted someone to clean my keyboard. I wasn't sure if cleaning the keyboard would fill up TaskRabbit's one hour minimum, so I requested that the cleaner also take care of some dishes that had piled up in my sink.
+I signed up and browsed the app. To my surprise, TaskRabbit had no job template for "keyboard deep cleaning," so I booked the job as "Small cleaning" and explained in the description that I wanted someone to clean my keyboard. I wasn't sure if cleaning the keyboard would fill up TaskRabbit's one hour minimum, so I requested that the cleaner also take care of some dishes that had piled up in my sink.
 
 ## Must have at least 15 years of keyboard cleaning experience
 
@@ -42,19 +42,19 @@ One applicant told me that she wanted to be up front in that she had "zero keybo
 
 Another candidate was pregnant and needed to know whether the job required heavy lifting. I promised her that mine was one of those fancy, modern keyboards that weighs less than 35 pounds.
 
-Finally, I received an offer from Jaclyn S. She approached the job with supreme confidence and had no questions except for what supplies to bring. Within 20 minutes, we had booked the job for 3pm the following day.
+Finally, I received an offer from Jaclyn S. She approached the job with supreme confidence and had no questions except for what supplies to bring. Within 20 minutes, we booked the job for 3pm the following day.
 
 {% include image.html file="jaclyn-s-1.jpg" alt="Screenshot of conversation with Jaclyn S" max_width="500px" img_link=true class="img-border" fig_caption="Jaclyn S is ready to clean some keyboards" %}
 
 ## The first hiccup
 
-The next day, Jaclyn S. messaged me around 1pm saying that her morning job exploded into a 10-hour task. She wouldn't be able to make our 3pm appointment and said we could either reschedule for 9pm that evening or 3pm the following day.
+Jaclyn S. messaged me a few hours before the appointment saying that her morning job exploded into a 10-hour task. She wouldn't be able to make it to my place by 3pm. We could either reschedule for 9pm that evening or 3pm the following day.
 
 {% include image.html file="jaclyn-s-2.jpg" alt="Screenshot of conversation with Jaclyn S" max_width="500px" img_link=true class="img-border" fig_caption="Jaclyn S is ready to clean some keyboards" %}
 
-This was irritating. Was Jaclyn S. implying that I, a young man in one of Manhattan's trendiest neighborhoods, had nothing better to do on a Saturday night than watch someone clean my keyboard?
+This offended me. Was Jaclyn S. implying that I, a young man in one of Manhattan's trendiest neighborhoods, had nothing better to do on a Saturday night than watch someone clean a keyboard?
 
-It was irritating because it was true. I told her 9pm was fine and awaited her arrival.
+It was offensive because it was true. I told her 9pm was fine and awaited her arrival.
 
 ## Timeline
 
@@ -66,7 +66,7 @@ I show Jaclyn S. to the kitchen, where there are a few days' worth of dirty dish
 
 ### 8:36pm, 6 minutes elapsed
 
-Returning to the desk in my bedroom / living room, I hear my sink turn on and the sound of dish scrubbing.
+Returning to the desk in my bedroom / living room, I hear my sink turn on and the sound of dishes being scrubbed. We're off to a good start.
 
 ### 9pm: 0.5 hours elapsed
 
@@ -98,13 +98,11 @@ This has to end eventually, so I'll see what happens.
 
 What if this *never* ends?
 
-What if I have to go to sleep with Jaclyn S. still cleaning my keyboard? What if years go by? I'll get married and have children, then have to explain to them this woman who lives in my kitchen, eternally cleaning my precious Microsoft Natural Ergonomic Keyboard 4000.
-
-Hmm, this might be my sleepiness talking.
+What if I have to go to sleep with Jaclyn S. still cleaning my keyboard? What if years go by? I'll get married and have children, then have to explain why there's a woman who lives in my kitchen, eternally cleaning my precious Microsoft Natural Ergonomic Keyboard 4000.
 
 ### 12am: 3.5 hours elapsed
 
-Jaclyn S. emerges from my kitchen, triumphantly carrying my keyboard. It is sparkling clean. I thank her for her work and plug my keyboard back in. Everything works fine.
+Jaclyn S. emerges from my kitchen, triumphantly carrying my keyboard, now sparkling clean. I thank her for her work and show her out. After plugging my keyboard back in, everything works fine.
 
 ## The bill
 
@@ -120,11 +118,11 @@ I spent $96 to clean a $39 keyboard.
 
 ## It's not *that* dumb
 
-My friends smugly remarked, "Oh, *I'd* never spend $100 to clean a keyboard. I'd just do it myself." They're missing the point.
+When I told friends about my , they'd often smugly remark, "Oh, I'd *never* waste $100 to clean a keyboard. I'd just clean it myself." They, in fact, are wasting $100 but they don't realize it.
 
-A helpful way of evaluating whether to outsource something is to ask yourself how much someone would have to pay *you* to do the task. At the time, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. It would be illogical for me to clean my keyboard when others are willing to do it for far less.
+There's an implicit cost to everything that you do. You probably can't calculate the value of your time down to the penny, but you can estimate it by asking yourself how much someone would have to pay you to do the task for them. If someone is unwilling to clean keyboards for $30/hr, then it's irrational to clean a keyboard to save $30/hr.
 
-That said, there's obviously something hinky going on when an item's routine maintenance costs far exceed its value, so what went wrong here?
+At the time of my fateful keyboard cleaning, I was rolling in money from my cushy Google job but desperate for free time. For me to sacrifice my limited personal time to clean someone's keyboard, they'd have to pay me well above $100/hr. That said, there's obviously something hinky going on when the cost of an item's routine maintenance far exceeds its value, so what went wrong here?
 
 ## Lessons learned
 
@@ -144,9 +142,9 @@ It's possible that my cleaner washed each key more thoroughly than was necessary
 
 I knew up front that the cost of cleaning the keyboard might exceed its value, but the only alternative I considered was throwing away a perfectly good keyboard and buying the same model brand new.
 
-If I had to do this again, I'd buy a new keyboard and offer the old one for free to an online community like [craigslist](https://craigslist.org) or my local [buy nothing group](https://buynothingproject.org).
+A les wasteful solution would be to buy a new keyboard and offer the old one for free to an online community like [craigslist](https://craigslist.org) or my local [buy nothing group](https://buynothingproject.org).
 
-**Sidenote**: People have suggested donating it to The Salvation Army, but I don't think it makes sense for such a cheap item. For higher-value items, I happily donate. For low-value items, I suspect that sending it through The Salvation Army's whole receiving, processing, displaying, and selling process is a net negative.
+**Sidenote**: People have suggested donating the keyboard to [The Salvation Army](https://www.salvationarmyusa.org), but I don't think it makes sense. For higher-value items, I happily donate. Below a certain price threshold, I suspect that sending it through The Salvation Army's whole receiving, processing, displaying, and selling process is a net negative.
 {: .notice--info}
 
 ---
