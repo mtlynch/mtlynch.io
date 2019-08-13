@@ -111,7 +111,7 @@ The final cost for Jaclyn's three and a half hours of keyboard cleaning: $95.55.
 
 {% include image.html file="taskrabbit-receipt.jpg" alt="$95.55 receipt for my TaskRabbit task" max_width="600px" img_link=true fig_caption="TaskRabbit receipt from my keyboard cleaning task" %}
 
-Out of curiosity, I checked what I paid for that keyboard brand new: $38.89. 
+Out of curiosity, I checked what I paid for that keyboard brand new: $38.89.
 
 {% include image.html file="keyboard-order.jpg" alt="$38.89 receipt for purchasing my keyboard brand new" max_width="500px" class="img-border" img_link=true fig_caption="Amazon receipt for my keyboard" %}
 
