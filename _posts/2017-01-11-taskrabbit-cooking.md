@@ -24,7 +24,7 @@ I thought this would be a good opportunity to experiment with outsourcing &mdash
 
 ## Enter TaskRabbit
 
-[TaskRabbit](https://www.taskrabbit.com/r/aig0/try) is a service that allows you to hire people for small tasks. They specialize in handyman type tasks, like home repair or furniture assembly, but the range of possible tasks is pretty broad. You can hire someone to stand in line for you, run your errands, or [attend birthday parties on your behalf](http://abcnews.go.com/Lifestyle/woman-hires-impersonator-attend-friends-birthday-party/story?id=29277677).
+[TaskRabbit](https://www.taskrabbit.com) is a service that allows you to hire people for small tasks. They specialize in handyman type tasks, like home repair or furniture assembly, but the range of possible tasks is pretty broad. You can hire someone to stand in line for you, run your errands, or [attend birthday parties on your behalf](http://abcnews.go.com/Lifestyle/woman-hires-impersonator-attend-friends-birthday-party/story?id=29277677).
 
 {% include image.html file="taskrabbit-homepage.png" alt="TaskRabbit homepage" img_link="true" %}
 
