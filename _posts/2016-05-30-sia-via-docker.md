@@ -89,7 +89,7 @@ To enable this functionality, open Control Panel > Terminal & SNMP and check the
 
 {% include image.html file="enable-ssh.png" alt="Install Docker package" %}
 
-## Creating the Docker image
+## Creating the Docker container
 
 Connect to your NAS over SSH from another machine on the network. Linux and OS X users can run the following command from the terminal. Windows users need an SSH client, such as [Cygwin](https://www.cygwin.com).
 
