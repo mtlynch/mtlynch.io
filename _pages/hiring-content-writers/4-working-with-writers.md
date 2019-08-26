@@ -64,15 +64,17 @@ Minimize the rounds of review. Look for patterns that are coming up and see if y
 
 Instance where I would suggest an edit and she would make more edits.
 
-# Start small and easy
+## Start small and easy
 
 When I began hiring freelancers, I assigned them to write three different articles and email me when they were done. And then every time, they made the same mistakes on each article.
 
 Instead, start with just one. The freelancer's first attempts will be bad. You want to pay for that once and not three times.
 
-# Timebox
+## Timebox
 
-# Evaluating their first few drafts
+Limit their time on the first assignment.
+
+## Evaluating their first few drafts
 
 This is where the interview really begins.
 
@@ -84,15 +86,15 @@ Start small and easy and work your way up to harder pieces.
 
 Try to put corrections in your style guide first. Then, send a link. In the likely even that you end up working with another writer, you don't have to go through this process again.
 
-# Giving tactful feedback
+## Giving tactful feedback
 
 You stand out as a client simply by not being a jerk.
 
-# Decide to stick or bail
+## Decide to stick or bail
 
 Jump to the section on [terminating writers](/hiring-content-writers/3-terminating-writers/).
 
-# Meet regularly in person or on video chat
+## Meet regularly in person or on video chat
 
 Morgan has a blind spot for passive voice and I have a high sensitivity for it. She would often submit work using the passive voice and it would frustrate me to no end. "Why doesn't she care enough to observe this rule?" But when we met over video chat, it was immediately obvious that she cared deeply about the quality of the work, and the passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, don't have, any idea what she's talking, about.
 
@@ -100,17 +102,17 @@ Be open. Ask if there's anything about the workflow that makes it harder for the
 
 Pay for their time meeting with you.
 
-# Invest in good writers
+## Invest in good writers
 
 If you made it this far, congratulations! It's difficult to find good writers. Unless you got extremely lucky, it probably took a lot of time to find them. Now, make sure they'll stick with you.
 
 * I sent *The Elements of Style* (aka *Strunk and White*)
 
-# Pay promptly
+## Pay promptly
 
 See whopayswriters.com. One of the biggest factors in writers' experience with clients is promptness of pay.
 
-# Terminating writers
+## Terminating writers
 
 Now that you've chosen a candidate:
 

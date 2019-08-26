@@ -21,13 +21,13 @@ hide_signup: false
 
 If you've followed this guide, you've hired writers on a trial basis, which means that many of them won't work out.
 
-# Avoiding a termination
+## Avoiding a termination
 
 Try not to phrase it in a scary "you're about to get fired way" but like:
 
 >What can I do to help reduce these issues?
 
-# Example termination notes
+## Example termination notes
 
 Here's a real letter I wrote to one of the writers that didn't work out:
 
@@ -45,6 +45,8 @@ And this one is my harshest:
 >
 >Best of luck in the future.
 
+## Keys to a good termination
+
 * Stick to objective facts
 * Focus on the writing rather than the person
 * Avoid injecting insults or negative personal feelings about their work
@@ -52,7 +54,7 @@ And this one is my harshest:
 If you're on a platform like Upwork, you especially want to avoid acrimonious terminations because then the client will write you a review that says you're an unreasonable client and you'll make it harder on yourself to hire freelancers in the future.
 
 
-# Do it all over again
+## Do it all over again
 
 You have to work with a lot of writers to find one that you like. And with each writer you work with, you should get a better sense of what you're looking for and what you want to avoid. Before you begin interviewing again, revise your job description. Think about patterns of error with your last writer. Are there things
 
