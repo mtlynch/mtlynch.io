@@ -10,6 +10,15 @@ read_time: true
 hide_signup: false
 ---
 
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
+* [Part Three: Screening Writing Candidates](/hiring-content-writers/3-screening-writers/)
+* **Part Four - Working with Writers** (this section)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+
+---
+
 You can't judge how well a writer writes for you until they write for you. When they write their first few pieces for you, you're effectively still interviewing them. Pay attention to how well the two of you communicate and how much coaching or editing they need before they produce content that matches what you want.
 
 # Create a contract

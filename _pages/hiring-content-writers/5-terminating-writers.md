@@ -10,6 +10,15 @@ read_time: true
 hide_signup: false
 ---
 
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
+* [Part Three: Screening Writing Candidates](/hiring-content-writers/3-screening-writers/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* **Part Five - Terminating Writers** (this section)
+
+---
+
 If you've followed this guide, you've hired writers on a trial basis, which means that many of them won't work out.
 
 # Avoiding a termination
@@ -18,9 +27,9 @@ Try not to phrase it in a scary "you're about to get fired way" but like:
 
 >What can I do to help reduce these issues?
 
-# Gracefully terminating bad hires
+# Example termination notes
 
-Here is a real letter I wrote to one of the writers that didn't work out:
+Here's a real letter I wrote to one of the writers that didn't work out:
 
 >Unfortunately, I need to end the contract here. Your writing is good, but we're on our eighth article, and the style is still fairly distant from what I'd like it to be.
 >

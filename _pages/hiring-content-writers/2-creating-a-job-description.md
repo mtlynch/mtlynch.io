@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part Two - Create a Detailed Job Description"
+title: "Hiring a Content Writer: Part Two - Creating a Detailed Job Description"
 layout: single
 author_profile: true
 sidebar:
@@ -11,9 +11,11 @@ hide_signup: false
 ---
 
 * [Overview: Hiring Content Writers](/hiring-content-writers/)
-* Part One: Finding and Evaluating Writers (this section)
-* [Part Two: Working with Writers](/hiring-content-writers/2-working-with-writers/)
-* [Part Three: Terminating Writers](/hiring-content-writers/3-terminating-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* **Part Two - Creating a Detailed Job Description** (this section)
+* [Part Three: Screening Writing Candidates](/hiring-content-writers/3-screening-writers/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 

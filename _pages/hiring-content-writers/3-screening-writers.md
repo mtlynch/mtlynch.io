@@ -10,7 +10,14 @@ read_time: true
 hide_signup: false
 ---
 
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
+* **Part Three: Screening Writing Candidates** (this section)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
+---
 
 TODO: Show Morgan Province's profile
 

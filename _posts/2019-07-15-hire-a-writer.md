@@ -27,15 +27,19 @@ The underlying strategy that defines most of how I hire and work with writers:
 
 * **Talented people are selective about which jobs they take**
 
-When I see articles that recommend forcing writers through a rigorous and unpaid screening process, I think, "What a brilliant way to filter out all the good writers."
+When I see articles that recommend forcing writers to jump through lots of hoops without pay just for the privilege of working for you, I think, "What a brilliant way to filter out all the good writers."
 
 Create work conditions that are fair, pleasant, and interesting enough that good writers want to come work for you. Show candidates that you respect and value their craft. This starts from the first message you send and continues throughout the working relationship.
 
 # Part One: Finding Writers
 
+The first step in hiring a writer is to find writers who want to be hired. This section outlines all the methods I used to find writers and which ones were successful.
+
 [Read more](/hiring-content-writers/1-finding-writers/)
 
 # Part Two: Creating a Detailed Job Description
+
+Once you've found a writer, you need to explain to them what you need them to writer. This section explains how to create a job description that minimizes repeat explanation you need to do.
 
 [Read more](/hiring-content-writers/2-creating-a-job-description/)
 

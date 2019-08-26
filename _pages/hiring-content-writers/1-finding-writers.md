@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part One - Finding and Evaluating Writers"
+title: "Hiring a Content Writer: Part One - Finding Writers"
 layout: single
 author_profile: true
 sidebar:
@@ -11,17 +11,22 @@ hide_signup: false
 ---
 
 * [Overview: Hiring Content Writers](/hiring-content-writers/)
-* Part One: Finding and Evaluating Writers (this section)
-* [Part Two: Working with Writers](/hiring-content-writers/2-working-with-writers/)
-* [Part Three: Terminating Writers](/hiring-content-writers/3-terminating-writers/)
+* **Part One: Finding Writers** (this section)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
+* [Part Three: Screening Writing Candidates](/hiring-content-writers/3-screening-writers/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-The first step in hiring a writer is finding and interviewing them. In this section, I cover:
+## Copywriters vs. content writers
 
-* Locating freelance writers
-* Creating a clear job description
-* Screening writers to avoid bad hires
+When you begin searching for writers, you'll find that there are two main categories of writers: content writers and copywriters.
+
+* **Copywriters** write text that compels the reader to perform some action, such as buying a product or subscribing to a newsletter. They write copy for advertisements, product pages, and promotional emails.
+* **Content writers** write text that informs or entertains. Content writers write articles, blog posts, and books.
+
+For It It Keto, I exclusively needed informative articles, so this guide focuses on content writers.
 
 ## Where to look
 
@@ -33,7 +38,7 @@ Upwork is a marketplace for freelancers that I've written about before (TODO: li
 
 Still, I think Upwork is your best option if you're hiring writers for the first time.
 
-**Advantages**
+#### Advantages
 
 * There are many writers in one place, so you have to do less searching around.
 * Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
@@ -42,7 +47,7 @@ Still, I think Upwork is your best option if you're hiring writers for the first
 * Upwork handles all tax reporting, so you don't need to collect tax information from your freelancer.
 * Upwork's default contract assigns the client the rights to all intellectual property created during the contract.
 
-**Disadvantages**
+#### Disadvantages
 
 * Upwork collects fees from both the client and freelancer, effectively making it XX% more expensive to hire someone.
 * Once you begin working with someone through Upwork, you're contractually bound to pay them exclusively through Upwork (including Upwork fees) for two years.
@@ -79,22 +84,15 @@ TODO: Screenshot of previous post
 
 This strategy generated two applications, but neither one was strong enough for me to start a paid trial.
 
-### /r/HireaWriter/
+### /r/HireaWriter
 
-A few times throughout my project, I checked the [/r/HireaWriter/](https://www.reddit.com/r/HireaWriter/) for possible candidates. None of the writers seeking work seemed promising enough to even invite to an interview. The subreddit seems geared toward clients with cheap spam blogs.
+A few times throughout my project, I checked the [/r/HireaWriter](https://www.reddit.com/r/HireaWriter/) for possible candidates. None of the writers seeking work seemed promising enough to even invite to an interview. The subreddit seems geared toward clients with cheap spam blogs.
 
-## Copywriters vs. content writers
+## Next step: the job description
 
-When you begin searching for writers, you'll find that there are two main categories of writers: content writers and copywriters.
+Once you've found a place to reach out to writing candidates, it's time to write a description of the job that lets candidates know what you expect and screens out bad candidates.
 
-* **Copywriters** write text that compels the reader to perform some action, such as buying a product or subscribing to a newsletter. They write copy for advertisements, product pages, and promotional emails.
-* **Content writers** write text that informs or entertains. Content writers write articles, blog posts, and books.
-
-For It It Keto, I exclusively needed informative articles, so this guide focuses on content writers.
-
-## Screening writers
-
-* [Part Two - Create a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
 
 ---
 
