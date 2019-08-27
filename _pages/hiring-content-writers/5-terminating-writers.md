@@ -47,9 +47,12 @@ And this one is my harshest:
 
 ## Keys to a good termination
 
-* Stick to objective facts
+* Remain objective
+* Stick to facts
 * Focus on the writing rather than the person
 * Avoid injecting insults or negative personal feelings about their work
+
+So don't ever say, "Your writing is terrible, and I hate you." Instead, "Your writing unfortunately doesn't match the style I'm looking for, and I don't feel that we communicate well."
 
 If you're on a platform like Upwork, you especially want to avoid acrimonious terminations because then the client will write you a review that says you're an unreasonable client and you'll make it harder on yourself to hire freelancers in the future.
 
