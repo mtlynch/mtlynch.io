@@ -13,7 +13,7 @@ hide_signup: false
 * [Overview: Hiring Content Writers](/hiring-content-writers/)
 * [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
 * **Part Two - Creating a Detailed Job Description** (this section)
-* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-writers/)
+* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
 * [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
 * [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
@@ -74,7 +74,7 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per word**
   * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically $0.XX to $0.XX).
 * **Pay per piece**
-  * Writer earns a fixed price for each assignment they complete, regardless of length or how long it took to writer.
+  * Writer earns a fixed price for each assignment they complete, regardless of length or how long it took to write.
 
 My philosophy is that I want to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour. I know people 
 
@@ -90,7 +90,7 @@ In my experience, talented people deliver quality work if you empower them to do
 
 By this point, you've hopefully found some sources of writing. Now, it's time to decide which writers to reach out to and how to screen the candidates who apply for your job:
 
-* [Part Three - Screening Writers](/hiring-content-writers/3-screening-writers/)
+* [Part Three - Screening Writers](/hiring-content-writers/3-screening-candidates/)
 
 ---
 

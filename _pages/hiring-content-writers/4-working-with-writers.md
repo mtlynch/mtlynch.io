@@ -13,7 +13,7 @@ hide_signup: false
 * [Overview: Hiring Content Writers](/hiring-content-writers/)
 * [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
 * [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
-* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-writers/)
+* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
 * **Part Four - Working with Writers** (this section)
 * [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 

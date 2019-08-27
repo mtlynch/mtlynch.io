@@ -43,7 +43,7 @@ Now that you've found available writers, you need to tell them what you want. Th
 
 Once you receive applications from candidates, you need to decide who to hire and who to reject. This section covers the signals that can help you identify good candidates and how you can figure out who's a good match for your project.
 
-[Read more](/hiring-content-writers/3-screening-writers/)
+[Read more](/hiring-content-writers/3-screening-candidates/)
 
 ## Part Four: Working with Writers
 
