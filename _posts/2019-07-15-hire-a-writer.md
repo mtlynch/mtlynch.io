@@ -5,53 +5,55 @@ tags:
 - outsourcing
 ---
 
-For my last project, I interviewed 30 writers, hired 10 of them, and fired all but one. This process was far more difficult than I expected. Almost every adult can write, so how hard could it be to find someone to write simple articles?
+For my last project, I interviewed 30 writers, hired 10 of them, and fired all but one. This process was far more difficult than I expected, but I learned a great deal. I'm by no means an expert at hiring writers, but I've written this guide to share what I learned.
 
-This process has not made me an expert, but I'm much better than I was. In this post, I'll show you everything I did
+## Who should read this guide
 
-Throughout, I'm going to show you real examples of what I did. My site was called Is It Keto. It was a resource for people on the keto diet. Every article on the site explained why a particular food did or did not fit into the keto diet.
+This guide is for people like me: small business owners who want to outsource writing to a professional. Your monthly budget for writers should be in the hundreds to thousands of dollars.
 
-# About me
+If you need a dirt cheap writer to churn out content for your spam blog, this guide isn't for you. Similarly, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
 
-If you're a Fortune 500 company who can spend millions of dollars on content without noticing, your strategy will be different from a small business for whom $5k is a significant expense.
+## What's a content writer?
 
-Everything in this guide is something I did myself. None of this is theoretical.
+One of the critical parts of hiring a content writer is knowing what a content writer is. Content writers write pieces that inform or entertain your readers (think articles, blog posts, and ebooks). They differ from *copywriters* in that copywriters write text that compels the user to perform some action, such as buy a product or subscribe to an email list. And if you're looking for someone to write technical documentation or a whitepaper, you'd likely do better to hire a *technical writer*, not a content writer.
 
-# Optimize for talent instead of cost
+## The fundamental principle of hiring talented people
 
-This is not a guide for people who want to fill their site with cheap content so that they appear highly in search results for particular terms. This guide is for people who care about quality writing and want to work with writers who can produce it.
-
-# The fundamental principle of hiring talented people
-
-The underlying strategy that defines most of how I hire and work with writers:
+Most of this guide is very pragmatic and based on what concrete steps I took, but there's one underlying idea that governs my philosophy for hiring for any skilled position:
 
 * **Talented people are selective about which jobs they take**
 
-When I see articles that recommend forcing writers to jump through lots of hoops without pay just for the privilege of working for you, I think, "What a brilliant way to filter out all the good writers."
+I've read other guides that encourage clients to force writers through tedious and time-consuming hoops without pay just for the privilege of being considered for a job. The idea is that writers are so desperate for work that you can demand anything you want from them. And there certainly are writers desperate for work who will jump through all of your hoops, but they're not the writers you want. The good writers will run for the hills as soon as they hear "unpaid trial job."
 
-Create work conditions that are fair, pleasant, and interesting enough that good writers want to come work for you. Show candidates that you respect and value their craft. This starts from the first message you send and continues throughout the working relationship.
+If you want good writers, create work conditions that are fair, pleasant, and interesting. Show candidates that you respect and value their craft. This starts from the first message you send inviting them to apply and continues throughout your working relationship.
 
-# Part One: Finding Writers
+## Part One: Finding Writers
 
-The first step in hiring a writer is to find writers who want to be hired. This section outlines all the methods I used to find writers and which ones were successful.
+The first step in hiring a writer is locating the ones who are looking for work. This section outlines all the methods I used to find writers and which ones were successful.
 
 [Read more](/hiring-content-writers/1-finding-writers/)
 
-# Part Two: Creating a Detailed Job Description
+## Part Two: Creating a Detailed Job Description
 
-Once you've found a writer, you need to explain to them what you need them to writer. This section explains how to create a job description that minimizes repeat explanation you need to do.
+Now that you've found available writers, you need to tell them what you want. This section explains how to create a job description that minimizes ramp-up time and demonstrates to prospective candidates that you're an organized professional.
 
 [Read more](/hiring-content-writers/2-creating-a-job-description/)
 
-# Part Three: Screening Writing Candidates
+## Part Three: Screening Candidates
+
+Once you receive applications from candidates, you need to decide who to hire and who to reject. This section covers the signals that can help you identify good candidates and how you can figure out who's a good match for your project.
 
 [Read more](/hiring-content-writers/3-screening-writers/)
 
-# Part Four: Working with Writers
+## Part Four: Working with Writers
+
+Once you've hired a writer, you need to work closely with them so that they learn about the style of writing you want. This section explains how 
 
 [Read more](/hiring-content-writers/4-working-with-writers/)
 
-# Part Five: Terminating Writers
+## Part Five: Terminating Writers
+
+Many writing relationships won't work out in the long term. This section explains how to gracefully terminate a freelance relationship and integrate the experience into your future hiring.
 
 [Read more](/hiring-content-writers/5-terminating-writers/)
 
