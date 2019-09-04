@@ -172,9 +172,9 @@ My plan is to write blog posts on Is It Keto using recipe data from [KetoHub](ht
 
 It's a longshot because keto websites don't often link to other keto sites, but it's the best idea I can come up with that I can complete in under one month. If I can produce interesting visualizations and get other high-ranking sites to link to my blog posts, then I'll increase the site's domain authority and drastically increase site traffic.
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * Added an "Other Foods" section to the article pages so that users can easily discover new articles
 * Added an admin tool that lets me add redirects for alternative spellings of foods (e.g., [mayo](https://isitketo.org/mayo) -> [mayonnaise](https://isitketo.org/mayonnaise))
@@ -182,7 +182,7 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 * Wrote tools to collect keto recipe data for upcoming data visualization blog posts
 * Published 30 new food pages
 
-### Lessons Learned
+### Lessons learned
 
 * After taking into account the time I spend editing and communicating with writers, I'm not saving time by outsourcing content writing.
   * I likely still am saving mental energy, which is always a precious resource.
@@ -190,7 +190,7 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 * I can outsource Twitter promotion tasks cleanly and efficiently.
   * Still, Twitter's not earning me a return on investment, so I'm going to scale down.
 
-### Goals for March
+### Goals for next month
 
 February was my third month of monetizing Is It Keto and giving it my full-time focus. It wasn't earning big money out of the gate, but its growth in December and January gave me hope that it was on the path to a viable business. The slowdown in February was a big red flag and might be an indication that I should shelve this project so that I can focus on something new.
 

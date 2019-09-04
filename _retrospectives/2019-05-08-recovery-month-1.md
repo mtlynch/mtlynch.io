@@ -109,9 +109,9 @@ User registration isn't ready yet, but keep an eye out for a Twitter announcemen
 If you'd like to be a beta tester for What Got Done, [email me](/about/).
 {: .notice--info}
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * [Presented a talk](/retrospectives/pytexas-2019-notes/) at PyTexas
 * Published a new [blog post](https://mtlynch.io/painless-web-app-testing/) about end-to-end testing
@@ -119,7 +119,7 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 * Got a prototype of [What Got Done app](https://whatgotdone.com) almost working
 * Reached out to 11 potential customers for future projects
 
-### Lessons Learned
+### Lessons learned
 
 * Vue.js is a better match for me than Angular
   * Angular has complex features that probably benefit large development teams but which impede solo developers and small teams.
@@ -127,7 +127,7 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 * Even if you're offering someone a no-risk custom solution for their business, you still need to sell them on it.
   * Business owners are busy and don't have time to take pitches from anyone who wants to sell them something, even if you promise something tailor-made for that business. You still need to give them a compelling reason to take a 30-minute meeting with you.
 
-### Goals for May
+### Goals for next month
 
 * Publish a minimum viable product version of What Got Done and see if anyone wants to buy premium features.
 * Meet with 10 potential customers for my next product.

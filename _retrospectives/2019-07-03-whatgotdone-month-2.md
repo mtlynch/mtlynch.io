@@ -147,22 +147,22 @@ I immediately turned off Ezoic and have no plans to return.
 
 For the 11 days it ran, Ezoic generated $45.49 in revenue from 5,452 unique visitors. That's ~$8 per 1,000 visitors, nearly double the revenue I would have earned from Amazon alone. Still, it wasn't enough for me to reduce the quality of the site so drastically.
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * Published a new blog post: ["Staying Motivated by Sending Status Updates to Nobody"](https://mtlynch.io/status-updates-to-nobody/)
 * Increased pricing on Zestful by 566%
 * Created an [internal web app](https://i.imgur.com/a5KKab5.png) that lets me quickly generate training data for Zestful (and fix the legacy data from my starting dataset)
 * Added a ["Save Draft" feature](https://i.imgur.com/s2lChnk.gif) to What Got Done
 
-### Lessons Learned
+### Lessons learned
 
 * Even when your sales are negligible, there are benefits to raising prices.
   * Raising prices eliminates distractions from customers who can't spend enough to make the service viable.
 * Ezoic pays pretty well, but they make sites look like garbage and screw up SEO.
 
-### Goals for May
+### Goals for next month
 
 * Conduct five calls with new customers (either for What Got Done, Zestful, or the email tool)
 * Implement two commonly-requested Zestful features (matching ingredients to USDA entries and support for multi-ingredient strings)
