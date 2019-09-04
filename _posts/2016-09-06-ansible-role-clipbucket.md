@@ -62,7 +62,7 @@ Admin credentials of:
 
 ## Why Automate ClipBucket Deployment?
 
-ClipBucket doesn't provide much documentation about deployment. All I could find as far as official documentation was this [instructional video](https://clipbucket.com/docs/knowledgebase/clipbucket-how-to-install-clipbucket/), but it assumes that the user has already installed many of ClipBucket's dependencies.
+ClipBucket doesn't provide much documentation about deployment. All I could find as far as official documentation was this [guide](https://clipbucket.com/docs/clipbucket-installation/), but it assumes that the user has already installed many of ClipBucket's dependencies.
 
 I found [this excellent and very thorough guide](http://linoxide.com/linux-how-to/setup-clipbucket-video-sharing-website-linux/), but it's still a very manual process. The user is forced to copy/paste many different commands and it's difficult for the user to customize for their particular system.
 
