@@ -147,9 +147,9 @@ My hope is that the site will grow organically as people click Is It Keto links 
 
 In total, I spent about $4,500 on the site and earned only $76 in revenue so far. I doubt I'll earn back my investment, but it could happen if growth continues at its current rate.
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * Published [two blog posts](https://isitketo.org/blog) experimenting with keto recipes and visualization
 * Reached out to eight major keto sites to see if they'd be interested in using my visualizations in exchange for attribution
@@ -158,7 +158,7 @@ In total, I spent about $4,500 on the site and earned only $76 in revenue so far
   * For example, it notifies me if an Is It Keto article mentions "lima beans" but doesn't link to the dedicated [lima beans article](https://isitketo.org/lima-beans).
 * Added 12 new food pages
 
-### Lessons Learned
+### Lessons learned
 
 These are my takeaways from March, but I'll probably do a full-length blog post about what high-level lessons I've learned from this project.
 
@@ -169,7 +169,7 @@ These are my takeaways from March, but I'll probably do a full-length blog post 
   * I had a good experience with NVD3, but their fork situation is confusing. [nvd3/nvd3](https://github.com/nvd3/nvd3) is the most stable repo, but their [documentation page is broken](https://github.com/nvd3/nvd3/issues/6). The nvd3-community fork is out of date, but [their documentation works](https://nvd3-community.github.io/nvd3/).
   * I've heard good things about the more actively maintained [Vega library](https://vega.github.io/vega/), but haven't tried it.
 
-### Goals for April
+### Goals for next month
 
 Is It Keto is on hold, so my top goal is to resist the temptation to continue working on it or monitoring it closely. In addition, here are a couple other things I'd like to achieve in April:
 

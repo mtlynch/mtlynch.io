@@ -121,9 +121,9 @@ I soon realized that all the stuff I was doing was pretty easy, so I wrote a gui
 
 I posted the job on Upwork and, within a day, found someone who took it over for $4/hr. There were some mistakes at first, but now it's on auto-pilot. The Twitter contractor attracts about 35 followers per week for a cost of only $30-35 in weekly billing.
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * Successfully outsourced Twitter management
   * Gained 210 Twitter followers and 374 clicks
@@ -133,7 +133,7 @@ I posted the job on Upwork and, within a day, found someone who took it over for
 * Wrote a tool to parse the logs so that I can get more insight into user behavior
   * e.g., Do users tend to leave after hitting a 404? What does it look like when a single user visits many pages?
 
-### Lessons Learned
+### Lessons learned
 
 * Organic search is outperforming everything else by orders of magnitude, so I should focus my efforts there.
 * People find Is It Keto relevant even when they don't have a particular question in mind about whether a food is keto.
@@ -142,7 +142,7 @@ I posted the job on Upwork and, within a day, found someone who took it over for
   * If a writer can't produce content that's very close to what you want by the second or third try, they likely will not be able to get there without months of instruction and feedback.
   * It's better to hold out for someone who can quickly learn to write what you want than to burn time trying to train someone who's below expectations.
 
-### Goals for February
+### Goals for next month
 
 * Achieve $60 in revenue
 * Add 30 new pages for different foods

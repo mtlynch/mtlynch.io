@@ -115,9 +115,9 @@ So, I signed up for Google AdSense and have had a positive experience so far. Th
 
 So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured in terms of unique visitors, so in those terms, I'm earning about ~$5 per 1,000 sessions. It's slightly less than the ~$8 I made from the previous ad partner, but I'm happy with the current tradeoff of ad intrusiveness vs. revenue generation.
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * Conducted nine customer interviews
 * Implemented a "reactions" feature for What Got Done
@@ -125,7 +125,7 @@ So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured i
 * Added support for "either/or" ingredients in Zestful
 * Added Google AdSense to Is It Keto
 
-### Lessons Learned
+### Lessons learned
 
 * I don't mind banner ads so much when I control how they appear on my site.
 * I can get a good reply rate by sending personalized, cold emails to founders who are ex-Google:
@@ -134,7 +134,7 @@ So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured i
   * I arranged 3 meetings (20% conversion rate)
 * I need to stop tinkering with Zestful unless I can tie the need directly to a paying customer's request.
 
-### Goals for May
+### Goals for next month
 
 * Publish a new blog post on [mtlynch.io](https://mtlynch.io).
 * Publish an MVP for my [email copywriter tool idea](/retrospectives/2019/07/#slowing-down-on-the-email-tool-for-copywriters).

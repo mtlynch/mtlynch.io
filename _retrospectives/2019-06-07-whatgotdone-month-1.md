@@ -130,23 +130,23 @@ I plan to pursue this idea further this month. The reasons I like it are:
 If you know an email copywriter who might be interested, please ask them to [email me](/about/). I'd love to speak with them.
 {: .notice--info}
 
-## Wrap Up
+## Wrap up
 
-### What Got Done?
+### What got done?
 
 * Launched [What Got Done](https://whatgotdone.com)
 * Published a new blog post: ["How to Grow Quickly and Never Turn a Profit"](/keep-growing-never-profit/)
 * Paid in-person visits to three stone quarries for customer research (got one interview)
 * Reached out to seven content writers and copywriters for customer research (got four interviews)
 
-### Lessons Learned
+### Lessons learned
 
 * It's easier to find customers and ask them what they need than to find customers who need your specific product.
   * Credit: This is the "market-first approach," described in [*Start Small, Stay Small*](/book-reports/start-small-stay-small/)
 * Copywriters are more open to cold outreach than quarry owners are.
   * Too small a sample size to generalize much, but I suspect that people in tech-focused jobs are more open to new technology offerings.
 
-### Goals for May
+### Goals for next month
 
 * Publish a new blog post that explains why I built What Got Done
 * Interview six email copywriters about their workflow and pain points
