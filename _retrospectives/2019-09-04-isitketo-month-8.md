@@ -52,49 +52,89 @@ August was Zestful's best month, though literally 99% of the revenue from a sing
 
 ## Taking affiliate revenue advice from Reddit
 
-When I used to focus on Is It Keto, I wanted to share my montly retrospectives on reddit, but I never found an appropriate subreddit. In the meantime, I discovered [/r/juststart](https://www.reddit.com/r/juststart/), which is a subreddit dedicated to affiliate revenue businesses.
+I recently discovered [/r/juststart](https://www.reddit.com/r/juststart/), a subreddit dedicated to affiliate revenue businesses. Reddit's tough for advice, though, because I feel like it attracts both knowledgeable experts and random people who have no idea what they're talking about, and it can be tricky figuring out which kind of person is giving you advice.
 
-After several years of posting on Reddit, my feeling is that Reddit has lots of useful advice. The problem is that Reddit also has lots of poor advice from people who imagine themselves to be experts but have no practical experience with the thing they're describing. And in both cases, the advice is often served with a large helping of condescension. So a lot of the responses I got were along the lines of, "You're doing great given that you don't know what you're doing!"
+I [posted a thread](https://redd.it/cmslmx) about Is It Keto, and here were my key takeaways:
 
-Reddit does have useful advice. But they also sometimes give bad advice
+* I should focus on getting other sites to link to Is It Keto
+  * This is something I had heard before. I [tried for a month](/retrospectives/2019/04/#biggest-challenge-link-building) to get links from other keto sites, but they weren't interested. The reddit posters suggested instead approaching non-keto sites that have some connection to health or lifestyle.
+  * **Result**: I got one new site to link to me, but more on that [below](#finally-a-backlink-for-is-it-keto).
+* Is It Keto's page titles should better match common search terms.
+  * **Result**: I changed my page titles from the format of "\[Food\] - Is It Keto" to "Is \[Food\] Keto? - Is It Keto"
+
+{% include image.html file="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" max_width="800px" img_link="true" class="img-border" fig_caption="Changing Is It Keto page titles to better match search queries" %}
+
+* Is It Keto should have dropdowns navigation menus so that it's easier for users to browse different food categories.
+  * **Result**: I added dropdown menus to the navigation bar.
+
+{% include image.html file="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" max_width="600px" img_link="true" class="img-border" fig_caption="Redesigned navbar on Is It Keto" %}
+
+* I should promote Is It Keto on Pinterest.
+  * **Result**: I created a [Pinterest page](https://pinterest.com/isitketo/) and added 14 pins, but it's time-consuming to create the graphics, and my referrals from Pinterest remain at nearly zero. I feel like I need help from someone who actually understands Pinterest, but I can't afford a Pinterest consultant at the moment.
+
+{% include image.html file="pinterest.jpg" alt="Screenshot of Is It Keto's Pinterest page" max_width="500px" img_link="true" fig_caption="Is It Keto's unsuccessful Pinterest page" %}
 
 ## Finally a backlink for Is It Keto
 
-Really hard and I hated it.
+I've known for a long time that Is It Keto would be much stronger if other sites linked to it. I spent most of [March](/retrospectives/2019/04/#biggest-challenge-link-building) unsuccessfully trying to get other keto blogs to link to me. In the [/r/juststart thread](#taking-affiliate-revenue-advice-from-reddit), someone suggested approaching keto-adjacent sites like motherhood blogs or general fitness blogs and offering to write a post for them.
+
+This seemed sensible, but I had a tough time approaching it. The really well-known sites like Men's Health probably wouldn't be interested in guest posts from an unknown author. I needed to find sites that were big enough that they'd improve Is It Keto's search ranking but small enough that they accept guest posts. But how do you find sites that are "middle-tier?"
+
+I thought I'd have an edge with fitness bloggers who lived near me in Western Massachusetts, so I used search terms like "fitness western mass." One of the sites I found was the local blog for a gym chain called [Fitness Together](https://fitnesstogether.com). I had a 55/100 score from [Ahrefs](https://ahrefs.com/backlink-checker), so I reached out and... nothing. Coincidentally, my sister had a contact there, so I reached out to him and he ended up agreeing to the idea and eventually publishing my article, ["Five Benefits of Strength Training"](https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training).
+
+{% include image.html file="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" max_width="600px" img_link="true" fig_caption="My guest post on the Fitness Together Northampton blog" %}
+
+It's unclear if that new link makes any difference. The Fitness Together root domain is valuable, but Google may recognize that their [blog for a city-specific location](https://fitnesstogether.com/northampton/blog) is not as significant as the site's [global blog](https://fitnesstogether.com/blog).
+
+My main takeaway from the experience is that I find it unpleasant to write guest posts. I write a lot on my own blog, but that feels different because I get to write what I'm passionate about. With guests posts, especially for health and fitness, I don't have any love for the writing.
+
+The other big bummer is the immense challenge of writing honestly about health and fitness and how rare it is to find anyone doing it. When I researched similar articles, most blogs made health claims about strength training that were either entirely unsourced or sourced from meaningless studies on a tiny group of people. Writers are stuck in the position of either making sensational claims about health to drive clicks or doing five times as much research to discuss health in an informed way. Sadly, most bloggers choose the former and readers can't seem to tell the difference.
+
+My plan now is to stop writing my own guest posts. Instead, I'll hire a writer who can write new articles for Is It Keto and seek out opportunities for guest posts on Is It Keto's behalf.
 
 ## College job boards might be a treasure trove
 
 When I was hiring writers for Is It Keto, one of the methods I tried was putting up printed flyers at a local college. I only received one inquiry and it quickly became clear that the candidate was not a good match. I didn't invest much more effort into recruiting at colleges, though I did always feel like I *should* be able to find a talented writer by recruiting a student.
 
-In August, I posted job listings on online job boards for two local colleges. It's only been about a week, and I've already received 22 inquiries from students. Quality seems to be on par with the candidate pool on Upwork, though writers on that site generally charge $30-80/hr, whereas I listed the job to students at $13/hr. That wage might sound low, but it's competitive with other jobs on the job boards, and it's appealing to students because it offers more flexibility and convenience than the other jobs (babysitting, secretarial work).
+In August, I posted job listings on online job boards for two local colleges. It's only been about a week, and I've already received 22 inquiries from students. Quality seems to be on par with the candidate pool on Upwork, though writers on that site generally charge $30-80/hr, whereas I listed the job to students at $13/hr. That wage might sound low, but it's competitive with other jobs on the job boards since cost of living in my area is relatively low. The job appeals to students because it offers more flexibility and convenience than the other jobs on the board like babysitting or secretarial work. I've hired a few people on a trial basis, so I'll see how it plays out.
 
 ## Cool discoveries this month
 
-Stealing a page from [Cory Zue](https://coryzue.com), I'm going to try adding recommendations of interesting things I found this month:
+One of my favorite bloggers recently added [recommendations](https://www.coryzue.com/writing/jul-2019/#recommendations) to his monthly retrospectives. It seems fun, so I'm trying it as well.
+
+Here are the cool things I discovered this month.
 
 ### [Victor Zhou's Software and Machine Learning Blog](https://victorzhou.com/)
 
 Victor Zhou is a Facebook engineer who only began blogging in 2019 and already writes better than 90% of tech bloggers. He writes with clarity, conciseness and a keen ability to explain his thought process.
 
-My favorite of his posts is ["Minify Your SVGs"](https://victorzhou.com/blog/minify-svgs/). It does a great job of explaining the context of the problem and the tradeoffs of different solutions.
+My favorite of his posts is ["Minify Your SVGs"](https://victorzhou.com/blog/minify-svgs/). It does a great job of explaining the context of the problem and the tradeoffs of different solutions he considered.
+
+{% include image.html file="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" max_width="450px" link_url="https://victorzhou.com/blog/minify-svgs/" fig_caption="Victor is a talented software blogger with an emphasis on machine learning" %}
 
 ### [Cory Zue's Solopreneur Side Project Dashboard](http://www.coryzue.com/open/)
 
-Cory Zue is a solo developer who writes publicly and transparently about his business projects. In August, he unveiled a dashboard that shows his earnings and time investment for his different projects.
+Cory Zue is a solo developer who writes publicly and transparently about his business projects. In August, he unveiled a dashboard that shows earnings and time investment for his different projects.
 
-Particularly interesting is his effective wage for each project. It shows how his projects required substantial up-front investment, but eventually generate increasing amounts of revenue while demanding decreasing levels of maintenance.
+{% include image.html file="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" max_width="450px" link_url="http://www.coryzue.com/open/" fig_caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" %}
+
+Particularly interesting is his effective wage for each project. It shows how his projects required substantial up-front investment but, over time, generated increasing amounts of revenue and demanded decreasing levels of maintenance.
 
 ### [Jimmy Lipham's Website Teardown Video](https://youtu.be/J_jGnGH3YsU)
 
-As an exercise, Jimmy Lipham made a [live demo](https://youtu.be/J_jGnGH3YsU) of UI tweaks he made to a website in response to a [post on Indie Hackers](https://www.indiehackers.com/post/01a9c08e6b) requesting design help. It's useful because there are so many little techniques in the video that anyone can reuse on their own sites:
+As an exercise, Jimmy Lipham made a [live demo](https://youtu.be/J_jGnGH3YsU) of UI tweaks he made to a website in response to a [post on Indie Hackers](https://www.indiehackers.com/post/01a9c08e6b) requesting design help.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J_jGnGH3YsU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+ It's useful because there are so many little techniques in the video that anyone can reuse on their own sites (I applied lots of them to Is It Keto):
 
 * He adds [box shadows](https://css-tricks.com/snippets/css/css-box-shadow/) to draw attention to certain elements on the page
 * He changes the site's backgrounds to a slightly off-white color to create contrast with page elements that have a pure white background.
-* He changes the navbar background from a fixed color to a color gradient.
+* He changes the navbar background from a fixed color to a color gradient for a more interesting visual.
 * He adds a bottom border to the navbar so that it transitions more gently into the main page.
 * He shows how to use the [Google Fonts browser](https://fonts.google.com/) to pick out new fonts.
 
-I highly recommend watching this video because I can't convey the full experience in writing. So much of the utility is just watching Jimmy work on the page in real time and hear him think out loud about why he's making the changes he does.
+I highly recommend watching this video because I can't convey the full experience in writing. So much of the value is just watching Jimmy work on the page in real time and hearing him explain his rationale for each change.
 
 ## Wrap up
 
@@ -102,7 +142,7 @@ I highly recommend watching this video because I can't convey the full experienc
 
 * Published ["The Dumbest Task I Ever Outsourced"](/dumbest-task-i-ever-outsourced/) on [mtlynch.io](https://mtlynch.io).
 * Earned a backlink for Is It Keto from a website with a high domain ranking.
-* I added XX new articles to Is It Keto.
+* Added 10 new articles to Is It Keto.
 * Made various tweaks to Is It Keto's UI to improve usability and SEO.
 * Mostly completed prep for an open source release of What Got Done:
   * Added [CSRF](https://portswigger.net/web-security/csrf) mitigation
