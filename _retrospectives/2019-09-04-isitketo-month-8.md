@@ -9,7 +9,9 @@ My abandoned project is now profitable.
 
 ## Highlights
 
-* [Is It Keto](https://isitketo.org) continues growing in the background, with a 22% increase in revenue and a 35% rise in traffic.
+* [Is It Keto](https://isitketo.org) continued its streak of growth, with a 72% increase in revenue and a 48% rise in traffic.
+* I returned my focus to Is It Keto to see how I can accelerate its profits.
+* I finally got a high-ranking domain to link to Is It Keto, but the experience soured me on guest posts.
 
 ## Goal Grades
 
@@ -18,15 +20,23 @@ My abandoned project is now profitable.
 * **Result**: I published ["The Dumbest Task I Ever Outsourced"](/dumbest-task-i-ever-outsourced/)
 * **Grade**: A
 
+The blog post was a mostly-for-fun story about one of my early blunders with outsourcing. I like the way it came out, but it didn't attract many readers. I find myself chasing the high a bit in wanting another hit article, as none of my blog posts have garnered much of a response since, ["My First Year as a Solo Developer,"](https://mtlynch.io/solo-developer-year-1/) published 7 months ago.
+
 ### Publish an MVP for my [email copywriter tool idea](/retrospectives/2019/07/#slowing-down-on-the-email-tool-for-copywriters)
 
-* **Result**: 
+* **Result**: I abandoned this goal and focused instead on expanding Is It Keto.
 * **Grade**: F
+
+As I was writing my July retrospective, I [questioned my decision](/retrospectives/2019/08/#is-it-keto) to keep ignoring Is It Keto, given that it's my only profitable project. I ended up pursuing that thought further and decided to postpone starting a new product in favor of returning my focus to Is It Keto for a while.
+
+I'm still interested in pursuing the email tool idea, but I've postponed it to October at the earliest.
 
 ### Prep What Got Done for the backburner
 
-* **Result**: 
+* **Result**: I've wrapped up the loose ends so it can run with minimal maintenance, but I still want to open source it.
 * **Grade**: B
+
+This took significantly longer than I expected. I underestimated how difficult it would be to implement CSRF mitigation given that What Got Done runs on a strange mix of Golang and Vue2, but that's finally complete. I also forgot how many little hacks I've put in to faciliate development on my main machine, so it took some effort to get everything working again in from a clean VM.
 
 ## Stats
 
@@ -56,7 +66,7 @@ I recently discovered [/r/juststart](https://www.reddit.com/r/juststart/), a sub
 
 I [posted a thread](https://redd.it/cmslmx) about Is It Keto, and here were my key takeaways:
 
-* I should focus on getting other sites to link to Is It Keto
+* I should focus on getting other sites to link to Is It Keto.
   * This is something I had heard before. I [tried for a month](/retrospectives/2019/04/#biggest-challenge-link-building) to get links from other keto sites, but they weren't interested. The reddit posters suggested instead approaching non-keto sites that have some connection to health or lifestyle.
   * **Result**: I got one new site to link to me, but more on that [below](#finally-a-backlink-for-is-it-keto).
 * Is It Keto's page titles should better match common search terms.
@@ -84,19 +94,21 @@ I thought I'd have an edge with fitness bloggers who lived near me in Western Ma
 
 {% include image.html file="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" max_width="600px" img_link="true" fig_caption="My guest post on the Fitness Together Northampton blog" %}
 
-It's unclear if that new link makes any difference. The Fitness Together root domain is valuable, but Google may recognize that their [blog for a city-specific location](https://fitnesstogether.com/northampton/blog) is not as significant as the site's [global blog](https://fitnesstogether.com/blog).
+It's unclear if that new link makes any difference. The Fitness Together root domain is valuable, but Google may recognize that the [blog for a city-specific location](https://fitnesstogether.com/northampton/blog) is not as significant as Fitness Together's [main blog](https://fitnesstogether.com/blog).
 
-My main takeaway from the experience is that I find it unpleasant to write guest posts. I write a lot on my own blog, but that feels different because I get to write what I'm passionate about. With guests posts, especially for health and fitness, I don't have any love for the writing.
+My main takeaway from the experience is that I find it unpleasant to write guest posts. I write a lot on my own blog, but that feels different because I'm writing about topics in which I feel especially passionate or able to contribute something unique. With guests posts about health and fitness, I don't have a passion for the writing.
 
-The other big bummer is the immense challenge of writing honestly about health and fitness and how rare it is to find anyone doing it. When I researched similar articles, most blogs made health claims about strength training that were either entirely unsourced or sourced from meaningless studies on a tiny group of people. Writers are stuck in the position of either making sensational claims about health to drive clicks or doing five times as much research to discuss health in an informed way. Sadly, most bloggers choose the former and readers can't seem to tell the difference.
+The other motivation-killer is the immense challenge of writing honestly about health and fitness amid a sea of clickbait. While researching my article, almost every similar blog post I found made health claims about strength training that were either entirely unsourced or sourced from meaningless studies on tiny groups of people. Writers are stuck in the position of either making sensational claims about health to drive clicks or doing five times as much research to discuss health in an informed way. Sadly, most bloggers choose the former and readers can't seem to tell the difference.
 
-My plan now is to stop writing my own guest posts. Instead, I'll hire a writer who can write new articles for Is It Keto and seek out opportunities for guest posts on Is It Keto's behalf.
+My plan now is to stop writing guest posts. Instead, I'll hire a writer who can seek out opportunities for guest posts on external sites while also adding content to Is It Keto.
 
 ## College job boards might be a treasure trove
 
 When I was hiring writers for Is It Keto, one of the methods I tried was putting up printed flyers at a local college. I only received one inquiry and it quickly became clear that the candidate was not a good match. I didn't invest much more effort into recruiting at colleges, though I did always feel like I *should* be able to find a talented writer by recruiting a student.
 
-In August, I posted job listings on online job boards for two local colleges. It's only been about a week, and I've already received 22 inquiries from students. Quality seems to be on par with the candidate pool on Upwork, though writers on that site generally charge $30-80/hr, whereas I listed the job to students at $13/hr. That wage might sound low, but it's competitive with other jobs on the job boards since cost of living in my area is relatively low. The job appeals to students because it offers more flexibility and convenience than the other jobs on the board like babysitting or secretarial work. I've hired a few people on a trial basis, so I'll see how it plays out.
+In August, I posted job listings on online job boards for two local colleges. It's only been about a week, and I've already received 22 inquiries from students. The quality seems to be on par with the candidate pool on Upwork. The difference is that normal pay for a college student in my area is $11-15, whereas similarly skilled Upwork freelancers charge $20-80/hr.
+
+I've hired a few studnets on a trial basis, so I'll see how it plays out.
 
 ## Cool discoveries this month
 
@@ -154,7 +166,10 @@ I highly recommend watching this video because I can't convey the full experienc
 
 ### Lessons learned
 
-* 
+* Earning backlinks for Is It Keto is more viable than I previously thought, but I hate the process.
+* Don't try to tinker with Bootstrap components too much.
+  * I reazlied that a lot of issues I've experienced with Bootstrap result from me trying to add my own custom CSS tweaks instead of learning to use Bootstrap's native classes.
+* College job boards potentially yield a similar caliber of writers to freelance marketplaces but with significantly lower costs.
 
 ### Goals for next month
 
