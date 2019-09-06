@@ -1,6 +1,8 @@
 ---
 title: Is It Keto - Month 8
 excerpt: Perhaps I should pay more attention to my only successful project.
+header:
+  og_image: /images/retrospectives/2019/09/amazon-affiliates.jpg
 ---
 
 ## One-Line Summary
@@ -46,6 +48,8 @@ This took significantly longer than I expected. I underestimated how difficult i
 ## Stats
 
 ### [Is It Keto](https://isitketo.org)
+
+{% include image.html file="amazon-affiliates.jpg" alt="Screenshot of Amazon Affiliate earnings" max_width="950px" img_link="true" fig_caption="Amazon Affiliate Earnings - August 2019" %}
 
 | Metric                 | July 2019 | August 2019 | Change |
 |------------------------|-----------|-------------|--------|
