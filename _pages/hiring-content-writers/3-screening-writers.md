@@ -23,9 +23,8 @@ TODO: Show Morgan Province's profile
 
 Obviously, you're not going to hire every writer you find. You need a way to evaluate candidates based on their profile. You don't have much information to go on.
 
-Some guides recommend asking writers to produce a custom sample for you where you buy it if you like it, but "let them keep it" and pay them nothing if it's not what you're looking for. I don't do this, because it violates my fundamental hiring principle. I think top-tier writers are uninterested in spending hours on an assignment they'd only *maybe* receive payment for.
+Some guides recommend asking writers to produce a custom sample for you where you buy it if you like it, but "let them keep it" and pay them nothing if it's not what you're looking for. I don't do this, because it violates [my fundamental hiring principle](/hiring-content-writers/#the-fundamental-principle-of-hiring-talented-people). Top-tier writers have no interest in spending hours on an assignment that will only *maybe* pay them.
 
-Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
 
 ## Evaluation criteria
 
@@ -64,7 +63,13 @@ Sites like Upwork keep reviews for each freelancer. In my experience, reviews ha
 
 Negative reviews are a stronger signal. If it's just one or two clients who are upset, but their reviews are otherwise good, it's not a big deal. Some clients are just jerks and have unreasonable expectations of freelancers.
 
-## Steer clear of fluff factories
+## Pitfalls to avoid
+
+### Beware the jack  of all trades
+
+Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
+
+### Steer clear of fluff factories
 
 You'll recognize it if it sounds like you're reading a book report from a fifth grader who forgot to do the reading.
 
@@ -81,7 +86,7 @@ Signs of a fluff factory:
 * The writing feels desperate to be interesting with lots of hyperbole, ALL CAPS, and exclamation points
 * There are long sequences of text devoid of useful information or analysis
 
-## Resist the temptation to "fix" bad writers
+### Resist the temptation to "fix" bad writers
 
 One trap I fell into was, "Oh, their writing is rough, but I can probably coach them to improve it." This never worked. 
 
@@ -117,4 +122,4 @@ I try to avoid words that imply like "probationary period." Let's see if it's a 
 
 ## Working with writers
 
-* [Part Three - Working with Writers](/hiring-content-writers/3-working-with-writers/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)

@@ -50,15 +50,14 @@ The critical things that are happening in this email:
 * It clarifies that their work must be **under contract**.
 * It provides a **style guide** and lays out my expectations around it.
 * It **timeboxes** the assignment so that there are no billing surprises.
+* It explains **how they bill their hours**.
 * It explains **how I will pay them**.
 
 I describe each of these elements in detail below.
 
 ## Create a contract
 
-When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Some contracts allow writers to republish work they create for you on other websites. To eliminate misunderstandings, you need a contract that defines the nature of their work for you and what 
-
- to create content for you, there are several types of agreements you can have. You might license content from them, so they can still use it elsewhere but you have the right to publish it yourself.
+When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell the content they give you to other sites or do you have full rights to their work?  To eliminate misunderstandings or legal disputes later on, create a contract that defines the tems of the work.
 
 This is easier than it sounds, as there are freelance writing contracts available online for free. I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to send the contract to my writers and collect their e-signatures.
 
@@ -69,28 +68,29 @@ If you hire through a freelancing marketplace, they likely have a default contra
 
 ## Use a style guide to enforce consistency
 
-Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly. Your writers won't know what type of writing you want unless you tell them. And you want all your writers, or else you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
+Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly. Your writers won't know what type of writing you want unless you tell them. Just as importantly, you need content on your site to maintain consistency, even if it includes content from multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
 
 Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the style guide for Is It Keto:
 
 [TODO: Add screenshot of style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.qwnjmopyhpr6)
 
-Avoid the temptation to create rules for every situation you can imagine. Limit the style guide to issues that come up frequently for your site. For example, Is It Keto was about the keto diet, so my style guide had detailed instructions on how to format measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
+Avoid the temptation to create rules for every situation you can imagine. Limit the style guide to issues that come up frequently for your site. For example, Is It Keto focuses on the keto diet, so my style guide had detailed instructions on how to format food measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
 
-Make it a Google Doc or a wiki where there's a single, authoritative copy of it that's easy to update. If the style guide is trapped in an email or a Word Document, it becomes difficult to ensure that everyone's working from the latest version.
+Make it a Google Doc or a wiki where there's a single, authoritative copy of it that's easy to update. If the style guide is trapped in an email or PDF, it's difficult to ensure that everyone's working from the latest version.
 
-Keep the style guide a living document and continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, resist the temptation to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section. Be judicious about what you add to the style guide, however. The longer it is, the harder it is for people to learn and stick to.
+Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, resist the temptation to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section. Be judicious about what you add to the style guide, however. The longer the guide, the harder it is for people to learn it.
 
-I pay my writers to learn the style guide. I find it's helpful for the relationship because it shows them right out of the gate that I respect their time and I'm not a client who's going to pressure them into unpaid work for me.
+I pay my writers to learn the style guide. I find it's helpful for the relationship because it shows them right out of the gate that I respect their time and I'm not a client who's going to pressure them into giving me unpaid work.
 
 ## Keep your first assigment small and easy
 
-No matter how good your writer is, there will be a learning period as they figure out how to write content that matches what you want. You can accelerate their learning by keeping a tight feedback loop. Start them out with small, simple assignments, and gradually progress to larger and more complicated articles.
+No matter how good your writer is, there's always a learning curve as they figure out how to write content that matches what you want. You can accelerate their learning by keeping a tight feedback loop. Start them out with small, simple assignments. As they master the easy stuff, gradually progress to larger and more complicated projects.
 
 ## Timebox early assignments
 
 If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them something that you assume will take only 30 minutes, and they come to you two days later with an invoice for 15 hours of work.
-Limit their time on the first assignment.
+
+Set an explicit limit on the time they should spend on their first assignment. Here's the instruction I give to my new writers:
 
 >Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours and still have work remaining, take the last half hour to organize what you have so far and share your progress with me.
 

@@ -19,9 +19,9 @@ hide_signup: false
 
 ---
 
-A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also helps applicants filter themselves from the applicant pool if they're not interested in the writing you want. Lastly, it aids in candidate screening. If you write a thorough job description and they ask you questions that make it obvious they haven't read it, that's a good way to filter out bad candidates.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also helps applicants filter themselves from the applicant pool if they're not interested in the work you're offering. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job descripion, that's a significant red flag.
 
-## What to cover
+## Elements of a good job description
 
 Here are the important things to cover in the job description:
 
@@ -44,7 +44,7 @@ Here are the important things to cover in the job description:
   * What method of payment will you use?
   * How quickly can writers expect payment?
   * Do you need to collect tax information from them?
-    * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year.
+    * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year, though this might not be necessary if you're paying them through a marketplace like Upwork.
 * Examples
   * Link to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
@@ -57,13 +57,13 @@ I used a Google Doc because it's useful to have a single, authoritative copy tha
 
 ## Save money by offering flexibility
 
-Resist the temptation to be overly rigid about timing. It might sound great to have your writers complete assignments within one business day, but that requirement limits the pool of writers and drives rates up.
+Resist the temptation to be overly rigid about timing. It might sound great to have your writers complete assignments within one business day, but that requirement limits the pool of writers and drives up their rates.
 
 Think about it from the writers' perspective. If they're juggling several clients at once, what if they receive several assignments that require a one-day turnaround? They either have to pass on jobs that require this or take those jobs only when the pay is extremely high.
 
-Instead, offer writers as much flexibility as you can. You probably can't wait a year, but think about your real timing requirements, not just what sounds ideal. It'll save you money and bring you better candidates.
+Instead, offer writers as much flexibility as you can. You probably can't wait a year, but think about your real timing requirements, not just what sounds ideal. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
 
-For Is It Keto, I explained in the job description that timing was flexible. I expected freelancers to communicate to me when they'd complete assignments, but I was fine waiting a few days until they could fit me in.
+The job description for Is It Keto told candidates that timing was flexible, but that they should communicate clearly about when they would deliver work.
 
 ## Pay per hour, per word, or per piece?
 
@@ -72,13 +72,15 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per hour**
   * Writer earns an hourly rate regardless of how much content they produce.
 * **Pay per word**
-  * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically $0.XX to $0.XX).
+  * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.50 per word](http://whopayswriters.com)).
 * **Pay per piece**
   * Writer earns a fixed price for each assignment they complete, regardless of length or how long it took to write.
 
 My philosophy is that I want to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour. I know people 
 
-One very bad reason to avoid paying people per hour is that it's "too expensive." I see a lot of guides tell people to save money by avoiding hourly pay. This is plainly illogical. If you want work of a particular quality, it's going to cost you roughly the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
+Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a particular quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
+
+If you're hiring a writer for a one-off job, this makes sense. But if you're looking for someone with whom you can form an ongoing professional relationship, they're not going to work for cheaper because you structure the pay in a different way.
 
 Another big reason I avoid paying per word is that I wanted concise writing. If I'm paying per word, it encourages writers to include a lot of fluff content that doesn't teach the reader anything.
 
@@ -88,7 +90,7 @@ In my experience, talented people deliver quality work if you empower them to do
 
 ## Screening writers
 
-By this point, you've hopefully found some sources of writing. Now, it's time to decide which writers to reach out to and how to screen the candidates who apply for your job:
+By this point, you've created a job description and shown it to potential writers. Now, it's time to decide how to screen the candidates who apply for your job:
 
 * [Part Three - Screening Writers](/hiring-content-writers/3-screening-candidates/)
 

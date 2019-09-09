@@ -54,7 +54,7 @@ And this one is my harshest:
 
 So don't ever say, "Your writing is terrible, and I hate you." Instead, "Your writing unfortunately doesn't match the style I'm looking for, and I don't feel that we communicate well."
 
-If you're on a platform like Upwork, you especially want to avoid acrimonious terminations because then the client will write you a review that says you're an unreasonable client and you'll make it harder on yourself to hire freelancers in the future.
+If you're on a platform like Upwork, you especially want to avoid acrimonious terminations because the writer will write a review that says you're an unreasonable client, making it harder for you to hire other freelancers.
 
 
 ## Do it all over again

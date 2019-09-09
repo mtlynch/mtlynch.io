@@ -13,9 +13,9 @@ This guide is for people like me: small business owners who want to outsource wr
 
 If you need a dirt cheap writer to churn out content for your spam blog, this guide isn't for you. Similarly, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
 
-## What's a content writer?
+## What is a content writer?
 
-One of the critical parts of hiring a content writer is knowing what a content writer is. Content writers write pieces that inform or entertain your readers (think articles, blog posts, and ebooks). They differ from *copywriters* in that copywriters write text that compels the user to perform some action, such as buy a product or subscribe to an email list. And if you're looking for someone to write technical documentation or a whitepaper, you'd likely do better to hire a *technical writer*, not a content writer.
+Content writers write pieces that inform or entertain your readers. Think articles, blog posts, and ebooks. They differ from *copywriters* in that copywriters write text that compels the user to perform some action, such as buy a product or subscribe to an email list. And if you're looking for someone to write technical documentation or a whitepaper, you'd likely do better to hire a *technical writer*, not a content writer.
 
 ## The fundamental principle of hiring talented people
 

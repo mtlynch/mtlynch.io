@@ -55,6 +55,10 @@ Oddly, they were also the writers that created the most logistical problems. Wit
 
 My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
 
+## College job boards
+
+
+
 ## Printed flyers
 
 I live in South Hadley, MA, close to many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus.
@@ -62,8 +66,6 @@ I live in South Hadley, MA, close to many liberal arts colleges. I thought maybe
 {% include image.html file="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" max_width="400px" class="img-border" img_link=true fig_caption="Job flyer I made for Is It Keto using a template from Canva" %}
 
 I received only one serious applicant, and their writing samples were just poorly-written school assignments, so we never even got to the point of a paid trial.
-
-Despite the poor results, I feel like I should have put more effort in here and tried additional colleges. It's impractical for most clients to physically put up fliers at top-tier colleges, so it might provide access to high-quality writers that nobody else is reaching.
 
 ## Soliciting from my blog
 
@@ -81,7 +83,7 @@ None of the writers seeking work seemed promising enough to even invite to an in
 
 ## Next step: the job description
 
-Once you've found a place to reach out to writing candidates, it's time to write a description of the job that lets candidates know what you expect and screens out bad candidates.
+Once you've found a place to reach out to writing candidates, it's time to write a description of the job that tells candidates what you expect.
 
 * [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
 
