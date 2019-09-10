@@ -54,12 +54,11 @@ And this one is my harshest:
 
 So don't ever say, "Your writing is terrible, and I hate you." Instead, "Your writing unfortunately doesn't match the style I'm looking for, and I don't feel that we communicate well."
 
-If you're on a platform like Upwork, you especially want to avoid acrimonious terminations because the writer will write a review that says you're an unreasonable client, making it harder for you to hire other freelancers.
-
+On a platform like Upwork, it's especially important to avoid acrimonious terminations because writers leave feedback for their clients. If you receive feedback saying that you're an unreasonable client, it's harder to hire future freelancers.
 
 ## Do it all over again
 
-You have to work with a lot of writers to find one that you like. And with each writer you work with, you should get a better sense of what you're looking for and what you want to avoid. Before you begin interviewing again, revise your job description. Think about patterns of error with your last writer. Are there things
+You have to work with a lot of writers to find one that you like. And with each writer you work with, you should get a better sense of what you're looking for and what you want to avoid. Before you begin interviewing again, review your job description and style guide. Think about patterns of error with your last writer. Are there things
 
 In my case, I noticed that I was burning a lot of time fixing grammatical errors for my writers. I thought it was a given that professional writers should use proper grammar, but in fairness, there are plenty of clients who don't care, so writers don't assume that they have to do it. Before seeking more applicants, I adjusted my job description to say that writers needed to use proper grammar. When I had subsequent writers submit content with grammatical errors, it was easier to say, "Hey, a lot of grammar errors are slipping though. Can you use a tool like Grammarly to check your writing before sending it to me?"
 
@@ -67,3 +66,4 @@ In my case, I noticed that I was burning a lot of time fixing grammatical errors
 * Update your "example pieces"
 * Re-read your style guide
   * Are there patterns of error that keep coming up that you can cover in your style guide?
+

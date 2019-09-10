@@ -57,9 +57,9 @@ I describe each of these elements in detail below.
 
 ## Create a contract
 
-When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell the content they give you to other sites or do you have full rights to their work?  To eliminate misunderstandings or legal disputes later on, create a contract that defines the tems of the work.
+When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites or do you have full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
 
-This is easier than it sounds, as there are freelance writing contracts available online for free. I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to send the contract to my writers and collect their e-signatures.
+Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford that, a contract from an online template is infinitely better than no contract at all. I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to collect e-signatures from my writers.
 
 **Sidenote**: I find the Docracy interface buggy and unintuitive. I only mention it because it's the service I used, but if you find a better service, choose that (and tell me about it).
 {: .notice--info}
@@ -68,7 +68,7 @@ If you hire through a freelancing marketplace, they likely have a default contra
 
 ## Use a style guide to enforce consistency
 
-Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly. Your writers won't know what type of writing you want unless you tell them. Just as importantly, you need content on your site to maintain consistency, even if it includes content from multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
+Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly. Your writers won't know what type of writing you want unless you tell them. Your site must also maintain consistency, even if it includes content from multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
 
 Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the style guide for Is It Keto:
 
@@ -88,13 +88,13 @@ No matter how good your writer is, there's always a learning curve as they figur
 
 ## Timebox early assignments
 
-If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them something that you assume will take only 30 minutes, and they come to you two days later with an invoice for 15 hours of work.
+If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task, and they come back days later with an invoice for 15 hours of work. This doesn't mean they're trying to take advantage of you. You just need to set clear expectations about the amount of time you expect them to invest.
 
-Set an explicit limit on the time they should spend on their first assignment. Here's the instruction I give to my new writers:
+Set an explicit hours cap on their first assignment. Here's the instruction I give to my new writers:
 
 >Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours and still have work remaining, take the last half hour to organize what you have so far and share your progress with me.
 
-As you work together more, you can increase or eliminate this cap on their hours.
+As you work together more, you can increase these limits or eliminate them entirely.
 
 ## Agree on an editing workflow
 
@@ -104,7 +104,7 @@ Here's the editing workflow I used with writers for Is It Keto:
 
 1. I create a Google Doc with the template of an article. (TODO: show example)
 1. I share the Google Doc with the writer and ask them to fill in the template.
-1. Writer emails me to let me know when they have a draft ready for me to review.
+1. The writer emails me to let me know when they have a draft ready for me to review.
 1. I add margin comments to the Google Doc and make inline edits in "Suggesting" mode.
 1. I email the writer to let them know when my edits are complete.
 1. Repeat steps 3-5 until the article is ready to publish.
@@ -113,33 +113,39 @@ There will be bumps. Every workflow is different. I ran into a recurring issue w
 
 Minimize the rounds of review. Look for patterns that are coming up and see if you can put these into 
 
-Instance where I would suggest an edit and she would make more edits.
-
 ## Evaluating their first few drafts
 
-This is where the interview really begins.
+If you've hired the writer on a trial basis, the real interview begins when they send you the first few drafts they've produced for you. Now is the time to pay close attention to their work.
 
-* What parts take the most time?
+Look out for signs that you should terminate the relationship:
 
-Bad if they make the same mistakes over and over.
+* Their writing includes careless errors such as grammar or spelling mistakes.
+* They repeatedly violate your style guide.
+* They miss deadlines.
+* They bill a higher number of hours than you can afford long-term (if you're paying hourly).
 
-Start small and easy and work your way up to harder pieces.
+At this point, you'll likely discover gaps in your style guide. For example, the writer used explicit language in their piece, but you want G-rated content. Instead of simply telling the writer, update your style guide and send the writer a link to the new section. That way, you don't have to go through this process with every writer.
 
-Try to put corrections in your style guide first. Then, send a link. In the likely even that you end up working with another writer, you don't have to go through this process again.
+TODO: Screenshots showing how to link to a section in Google Docs.
+
+It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft. I'll end the relationship if the piece has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be pretty close to what I feel comfortable publishing, but it's okay if they're still trying to match the tone I want.
+
+Remember that [it's hopeless to fix a bad writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). It's okay if it takes them a little while to learn the particulars of your style guide as long as they're improving over time. If their writing is illogical, boring, or difficult to understand, it's likely to remain that way for years, so you want to drop those writers quickly.
 
 ## Giving tactful feedback
 
 You stand out as a client simply by not being a jerk.
+
+## Decide to stick or bail
+
+
+Jump to the section on [terminating writers](/hiring-content-writers/5-terminating-writers/).
 
 ## Pay promptly
 
 See whopayswriters.com. One of the biggest factors in writers' experience with clients is promptness of pay.
 
 TODO: Timesheet example.
-
-## Decide to stick or bail
-
-Jump to the section on [terminating writers](/hiring-content-writers/3-terminating-writers/).
 
 ## Meet regularly in person or on video chat
 
