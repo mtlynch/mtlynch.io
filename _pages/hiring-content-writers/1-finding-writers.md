@@ -23,9 +23,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 ## Upwork
 
-Upwork is a marketplace for freelancers that I've written about before (TODO: link). It's always been a klunky, unstable site, and they recently instituted a ridiculous fee hike.
-
-Still, I think Upwork is your best option if you're hiring writers for the first time.
+Upwork is a marketplace for freelancers (TODO: link). It's always been a klunky, unstable site, and they recently instituted a ridiculous fee hike (TODO: link), but it's the best option if you're hiring writers for the first time.
 
 ### Advantages
 

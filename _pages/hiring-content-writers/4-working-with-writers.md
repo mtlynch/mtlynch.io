@@ -113,7 +113,7 @@ There will be bumps. Every workflow is different. I ran into a recurring issue w
 
 Minimize the rounds of review. Look for patterns that are coming up and see if you can put these into 
 
-## Evaluating their first few drafts
+## Deciding whether to terminate a writer
 
 If you've hired the writer on a trial basis, the real interview begins when they send you the first few drafts they've produced for you. Now is the time to pay close attention to their work.
 
@@ -124,22 +124,31 @@ Look out for signs that you should terminate the relationship:
 * They miss deadlines.
 * They bill a higher number of hours than you can afford long-term (if you're paying hourly).
 
-At this point, you'll likely discover gaps in your style guide. For example, the writer used explicit language in their piece, but you want G-rated content. Instead of simply telling the writer, update your style guide and send the writer a link to the new section. That way, you don't have to go through this process with every writer.
+It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; I'll end the relationship if it has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be pretty close to publication-quality, but they're usually still learning the nuances of my desired style.
 
-TODO: Screenshots showing how to link to a section in Google Docs.
+Remember that [it's hopeless to fix a bad writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). If their writing is illogical, boring, difficult to understand, or syntactically incorrect, it'll stay that way for years.
 
-It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft. I'll end the relationship if the piece has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be pretty close to what I feel comfortable publishing, but it's okay if they're still trying to match the tone I want.
-
-Remember that [it's hopeless to fix a bad writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). It's okay if it takes them a little while to learn the particulars of your style guide as long as they're improving over time. If their writing is illogical, boring, or difficult to understand, it's likely to remain that way for years, so you want to drop those writers quickly.
+If a writer fails to meet your standards, see the section on [terminating writers](/hiring-content-writers/5-terminating-writers/).
 
 ## Giving tactful feedback
 
-You stand out as a client simply by not being a jerk.
+Good freelancers take pride in their work, so keep that in mind if you give them feedback. If your feedback is rude or insulting, you make the freelancer's job less pleasant and decrease the time they'll want to spend working with you. This is not to say that you should withhold criticism, but you should provide it in a way that's tactful and helpful.
 
-## Decide to stick or bail
+When you give feedback:
 
+* Be specific
+* Focus on the writing not the writer
+* Accept the possibility that the problem may be in your instructions
 
-Jump to the section on [terminating writers](/hiring-content-writers/5-terminating-writers/).
+Freelancers consistently tell me that the key factor that distinguishes clients they want to keep working with from bad clients is the way they give feedback. Surprisingly, rude feedback seems to be the norm rather than the exception. This means that you can stand out as an exceptionally pleasant client by just providing basic courtesy that you'd provide if you were interacting with someone face to face.
+
+>**<font color="red">Bad</font>**: You did a terrible job on the first paragraph. Rewrite it.
+
+This is poor feedback because it's vague. It also frames the feedback as a personal attack instead of focusing on the writing.
+
+>**<font color="green">Good</font>**: I had difficulty following the first paragraph. The sentence structure is repetitive, and it uses the passive voice too heavily.
+
+This is a more tactful rewrite of the feedback above. It calls out specific problems with the writing, and it avoids using the term "you" so that the writer doesn't feel that this is a personal attack.
 
 ## Pay promptly
 
@@ -151,18 +160,20 @@ TODO: Timesheet example.
 
 Morgan has a blind spot for passive voice and I have a high sensitivity for it. She would often submit work using the passive voice and it would frustrate me to no end. "Why doesn't she care enough to observe this rule?" But when we met over video chat, it was immediately obvious that she cared deeply about the quality of the work, and the passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, don't have, any idea what she's talking, about.
 
-Be open. Ask if there's anything about the workflow that makes it harder for them to do their best work. Is there anything you can do. The worst thing is for your freelancer doing unnecessary work because they mistakenly thought you wanted it that way.
+Be open. Ask if there's anything about the workflow that makes it harder for them to do their best work. Is there anything you can do to make the work more pleasant or efficient? The worst thing is for your freelancer doing unnecessary work because they mistakenly thought you wanted it that way.
 
-Pay for their time meeting with you.
+Recognize that meeting with you is work for your freelancer, so make it clear that you'll pay them for their time.
 
-## Invest in good writers
+## When you find a good writer, invest in the relationship
 
 If you made it this far, congratulations! It's difficult to find good writers. Unless you got extremely lucky, it probably took a lot of time to find them. Now, make sure they'll stick with you.
 
-* I sent *The Elements of Style* (aka *Strunk and White*)
+Allow them to share in the mission. If your business is growing thanks to their writing, share those victories with your writer. It's much more motivating for them to see the impact of their work than for them to just feel like they're trading articles for a paycheck every few weeks.
+
+With one of my freelancers, I found that many of my suggestions parroted lessons I had learned form *The Elements of Style* (aka *Strunk and White*). I asked her if it would be okay if I sent her a copy and she happily agreed. Later on, she called that out specifically as something that made her value the job because it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 
 ## Terminating writers
 
-Now that you've chosen a candidate:
+If you've found a good writer, congratulations, you're done! If you've paid them for some trial work and they're not up to snuff, you have to face the unpleasant business of terminating the relationship. The next section explains how to do this cordially and professionally:
 
 * [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)

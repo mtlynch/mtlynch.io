@@ -21,19 +21,13 @@ hide_signup: false
 
 If you've followed this guide, you've hired writers on a trial basis, which means that many of them won't work out.
 
-## Avoiding a termination
-
-Try not to phrase it in a scary "you're about to get fired way" but like:
-
->What can I do to help reduce these issues?
-
 ## Example termination notes
 
-Here's a real letter I wrote to one of the writers that didn't work out:
+Here's an email I wrote to one of the writers that didn't work out:
 
->Unfortunately, I need to end the contract here. Your writing is good, but we're on our eighth article, and the style is still fairly distant from what I'd like it to be.
+>Unfortunately, I need to end the contract here. Your writing is good, but we're on our third article, and the style is still fairly distant from what I'd like it to be.
 >
->From reading the shrimp and celery articles, it looks like it would require 2-3 rounds of review before I'd feel comfortable publishing it. At that point, it's faster for me to write the reports myself.
+>From reading the celery article, it looks like it would require 2-3 rounds of review before I'd feel comfortable publishing it. At that point, it's faster for me to write the reports myself.
 >
 >I appreciate all your work and wish you the best going forward.
 
@@ -45,16 +39,22 @@ And this one is my harshest:
 >
 >Best of luck in the future.
 
-## Keys to a good termination
+I don't claim to be an expert at firing people, but I can say that all of my terminations have gone smoothly. The writers accept my reasons for ending the relationship and have never accused me of acting unfairly.
+
+## Keys to a graceful termination
+
+The rules for artfully ending a relationship are similar to the [rules for giving feedback](/hiring-content-writers/4-working-with-writers/#giving-tactful-feedback):
 
 * Remain objective
 * Stick to facts
 * Focus on the writing rather than the person
 * Avoid injecting insults or negative personal feelings about their work
 
-So don't ever say, "Your writing is terrible, and I hate you." Instead, "Your writing unfortunately doesn't match the style I'm looking for, and I don't feel that we communicate well."
+>**<font color="red">Bad</font>**: Your writing is terrible, and I hate you.
 
-On a platform like Upwork, it's especially important to avoid acrimonious terminations because writers leave feedback for their clients. If you receive feedback saying that you're an unreasonable client, it's harder to hire future freelancers.
+>**<font color="green">Good</font>**: Your writing unfortunately doesn't match the style I'm looking for, and I don't feel that we communicate well.
+
+On a platform like Upwork, it's especially important to avoid acrimonious terminations because writers leave feedback for their clients. If they give you a low rating and accuse you of being an unreasonable client, you'll have a harder time attracting talent in the future.
 
 ## Do it all over again
 
