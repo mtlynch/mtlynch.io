@@ -19,8 +19,6 @@ hide_signup: false
 
 ---
 
-TODO: Show Morgan Province's profile
-
 Obviously, you're not going to hire every writer you find. You need a way to evaluate candidates based on their profile. You don't have much information to go on.
 
 Some guides recommend asking writers to produce a custom sample for you where you buy it if you like it, but "let them keep it" and pay them nothing if it's not what you're looking for. I don't do this, because it violates [my fundamental hiring principle](/hiring-content-writers/#the-fundamental-principle-of-hiring-talented-people). Top-tier writers have no interest in spending hours on an assignment that will only *maybe* pay them.
@@ -65,26 +63,26 @@ Negative reviews are a stronger signal. If it's just one or two clients who are 
 
 ## Pitfalls to avoid
 
-### Beware the jack  of all trades
-
-Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
-
 ### Steer clear of fluff factories
 
-You'll recognize it if it sounds like you're reading a book report from a fifth grader who forgot to do the reading.
+There Internet is experiencing an epidemic of fluff writing. Site owners [think that Google will place their pages higher](https://moz.com/blog/blog-post-length-frequency) in results if they have a higher word count. And writers who get paid by the word try to make their content longer to earn more money per assignment. As a result, instead of learning to write well, many writers have learned to write fluff.
 
-This is what fluff writing looks like:
+You can recognize fluff if it sounds like you're reading a book report from a fifth grader who forgot to do the reading. Here's an example:
 
 >Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
 >
 >But fitness won’t just happen. You have to work for it. The first step is making a commitment that will force you to keep a regular gym habit. It can be a pact with a friend or sessions with a personal trainer. Anything that will keep your butt off the couch!
 >
->Don’t overdo it either! Many people start working out and push themselves past their limits and receive injury. Make sure to know your limits and always stay hydrated.
+>Don’t overdo it either! Many people start working out and push themselves past their limits and injure themselves. Make sure to know your limits and always stay hydrated.
 
-Signs of a fluff factory:
+When you're hiring, avoid "fluff factories," writers who can only write in the form of fluff. Signs of a fluff factory include:
 
-* The writing feels desperate to be interesting with lots of hyperbole, ALL CAPS, and exclamation points
-* There are long sequences of text devoid of useful information or analysis
+* The writing feels desperate to be interesting with lots of hyperbole, ALL CAPS, and exclamation points.
+* There are long stretches of text devoid of useful information or analysis.
+
+### Beware the jack  of all trades
+
+Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
 
 ### Resist the temptation to "fix" bad writers
 

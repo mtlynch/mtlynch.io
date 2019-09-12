@@ -19,7 +19,13 @@ hide_signup: false
 
 ---
 
-A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also helps applicants filter themselves from the applicant pool if they're not interested in the work you're offering. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job descripion, that's a significant red flag.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job descripion, that suggests a desperate writer who's blasting out generic applications to any job they see.
+
+## Example job description
+
+I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without worrying about who has which version of my document:
+
+[TODO: Link from image](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)
 
 ## Elements of a good job description
 
@@ -51,19 +57,13 @@ Here are the important things to cover in the job description:
   * You can also link to counter-examples of writing you don't like.
     * What aspects of the counter-examples should writers avoid?
 
-I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without worrying about who has which version of my document:
-
-[TODO: Link from image](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)
-
 ## Save money by offering flexibility
 
-Resist the temptation to be overly rigid about timing. It might sound great to have your writers complete assignments within one business day, but that requirement limits the pool of writers and drives up their rates.
+Resist the temptation to demand constant availability and quick turnaround. Sure, it sounds great to have a writer at your beck and call that completes assignments within one business day, but that requirement limits the pool of writers and drives up their rates.
 
-Think about it from the writers' perspective. If they're juggling several clients at once, what if they receive several assignments that require a one-day turnaround? They either have to pass on jobs that require this or take those jobs only when the pay is extremely high.
+Think about it from the writers' perspective. Freelancers juggle several clients at once. It's impossible to provide constant availability to all of them, so they either have to pass on jobs that require this or take those jobs only when the pay is extremely high.
 
-Instead, offer writers as much flexibility as you can. You probably can't wait a year, but think about your real timing requirements, not just what sounds ideal. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
-
-The job description for Is It Keto told candidates that timing was flexible, but that they should communicate clearly about when they would deliver work.
+Instead, offer writers as much flexibility as you can. Instead of imagining your ideal timing requirements, think about what you can live with. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
 
 ## Pay per hour, per word, or per piece?
 
@@ -74,7 +74,7 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per word**
   * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.50 per word](http://whopayswriters.com)).
 * **Pay per piece**
-  * Writer earns a fixed price for each assignment they complete, regardless of length or how long it took to write.
+  * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
 
 My philosophy is that I want to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour. I know people 
 

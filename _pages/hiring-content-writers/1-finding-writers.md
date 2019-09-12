@@ -43,19 +43,26 @@ Upwork is a marketplace for freelancers (TODO: link). It's always been a klunky,
 
 Upwork was where I found my best writer, but I did paid trials with seven others before I found her.
 
-## Personal referrals
-
-The nice thing about writers is that their work is highly visible, so people tend to be aware of the writers in their social or professional networks. At the same time, this channel is a bit more fraught. Many freelance writing relationships don't last, and you might generate bad blood if you abruptly fire someone's friend, or worse, your own friend.
-
-I only found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among my most expensive hires at $50/hr and $60/hr.
-
-Oddly, they were also the writers that created the most logistical problems. With both of them, there were a high number of miscommunications and missed deadlines. They also seemed to have a more rigid style than other writers. They were good at matching my style guide in their first draft, but any mistakes they made, they kept repeating, whereas Upwork writers tended to fix mistakes after I pointed them out.
-
-My sample size is only two people, so patterns aren't very meaningful, but I can imagine that more experienced writers tend to be juggling more clients at once, which might explain missing deadlines and them finding it hard to keep matching my particular style guide.
-
 ## College job boards
 
+College job boards are a hidden gem for hiring content writers. I posted a job listing on the online student job boards for two of my local colleges and here were my results:
 
+| School             | Applications | Trial hires | Permanent hires |
+|--------------------|--------------|-------------|-----------------|
+| Large state school | 17           | 3           | TBD             |
+| Small liberal arts school | 8     | 1           | TBD             |
+
+The quality of candidates is on par with what I've found on Upwork, but the rates are much lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-15/hr for things like babysitting or secretarial work. I listed the writing position for Is It Keto at $13/hr, and it's especially appealing to students because it's work they can do from anywhere and set their own hours.
+
+The best candidates had experience writing for college publications. In the future, I may try reviewing college newspapers and reach out to student journalists whose writing I like.
+
+## Personal referrals
+
+The nice thing about writers is that their work is highly visible, so people tend to be aware of the writers in their social and professional networks. The downside is that freelance writing relationships don't often last, so you might generate bad blood if you abruptly fire someone's friend, or worse, your own friend.
+
+I found two writers through personal referrals, but they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among my most expensive hires at $50/hr and $60/hr.
+
+Oddly, they were also the writers that created the most logistical problems. With both of them, there were a high number of miscommunications and missed deadlines. They also seemed to have a more rigid style than other writers. They wrote content that mostly adhered to my style guide, but any mistakes they made, they kept repeating. Upwork writers were better at fixing bad habits after I pointed them out.
 
 ## Printed flyers
 
