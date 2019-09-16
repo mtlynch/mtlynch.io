@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part Three - Screening Candidates"
+title: "Hiring Content Writers: Part Three - Screening Candidates"
 layout: single
 author_profile: true
 sidebar:

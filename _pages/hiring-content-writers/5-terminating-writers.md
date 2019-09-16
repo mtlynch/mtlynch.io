@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part Five - Terminating Writers"
+title: "Hiring Content Writers: Part Five - Terminating Writers"
 layout: single
 author_profile: true
 sidebar:

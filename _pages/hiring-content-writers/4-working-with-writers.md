@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part Four - Working with Writers"
+title: "Hiring Content Writers: Part Four - Working with Writers"
 layout: single
 author_profile: true
 sidebar:

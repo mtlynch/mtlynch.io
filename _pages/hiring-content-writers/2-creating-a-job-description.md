@@ -1,5 +1,5 @@
 ---
-title: "Hiring a Content Writer: Part Two - Creating a Detailed Job Description"
+title: "Hiring Content Writers: Part Two - Creating a Detailed Job Description"
 layout: single
 author_profile: true
 sidebar:
@@ -76,7 +76,7 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per piece**
   * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
 
-My philosophy is that I want to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour. I know people 
+My strategy is to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour.
 
 Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a particular quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
 
