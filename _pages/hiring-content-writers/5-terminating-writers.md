@@ -60,10 +60,13 @@ On a platform like Upwork, it's especially important to avoid acrimonious termin
 
 You have to work with a lot of writers to find one that you like. And with each writer you work with, you should get a better sense of what you're looking for and what you want to avoid. Before you begin interviewing again, review your job description and style guide. Think about patterns of error with your last writer. Are there things
 
-In my case, I noticed that I was burning a lot of time fixing grammatical errors for my writers. I thought it was a given that professional writers should use proper grammar, but in fairness, there are plenty of clients who don't care, so writers don't assume that they have to do it. Before seeking more applicants, I adjusted my job description to say that writers needed to use proper grammar. When I had subsequent writers submit content with grammatical errors, it was easier to say, "Hey, a lot of grammar errors are slipping though. Can you use a tool like Grammarly to check your writing before sending it to me?"
+As an example from Is It Keto, I was burning a lot of time fixing grammatical errors for my writers. I thought it was a given that professional writers should use proper grammar, but in fairness, there are plenty of clients who don't care, so writers don't assume that they have to do it. Before seeking more applicants, I adjusted my job description to make proper grammar an explicit requirement of the job.
 
 * Revise your job description
-* Update your "example pieces"
+  * Are there misunderstandings about the work that you can clarify at this stage?
+* Update your example articles
+  * Do you have any new articles that can serve as the better model of what you want?
 * Re-read your style guide
   * Are there patterns of error that keep coming up that you can cover in your style guide?
 
+It's frustrating to invest hours into a writer only to have to throw it away. On the plus side, each iteration gives you a better sense of what you want, helps you more quickly distinguish between good and bad candidates, and improves your skills as a manager. When you find the writer that matches what you need, it can be a tremendous partnership, but expect to put in a lot of work to find them.

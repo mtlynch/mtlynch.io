@@ -5,17 +5,19 @@ tags:
 - outsourcing
 ---
 
-For my last project, I interviewed 30 writers, hired 10 of them, and fired all but one. This process was far more difficult than I expected, but I learned a great deal. I'm by no means an expert at hiring writers, but I've written this guide to share what I learned.
+As one of my businesses, I run a content website. One of the most challenging aspects of the business is hiring writers to produce high-quality content for the site. I've found online guides for hiring content writers, but they're all either too vague or apply a wildly wrongheaded philosophy to working with writers
+
+I'm by no means an expert at hiring writers, but I've written this guide to share what I learned from my own experience.
 
 ## Who should read this guide
 
-This guide is for people like me: small business owners who want to outsource writing to a professional. Your monthly budget for writers should be in the hundreds to thousands of dollars.
+This guide is for people like me: small business owners who want to outsource writing to a professional. I'm writing for people whose monthly budget for writers is in the hundreds to thousands of dollars.
 
 If you need a dirt cheap writer to churn out content for your spam blog, this guide isn't for you. Similarly, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
 
 ## What is a content writer?
 
-Content writers write pieces that inform or entertain your readers. Think articles, blog posts, and ebooks. They differ from *copywriters* in that copywriters write text that compels the user to perform some action, such as buy a product or subscribe to an email list. And if you're looking for someone to write technical documentation or a whitepaper, you'd likely do better to hire a *technical writer*, not a content writer.
+Content writers write pieces that inform or entertain your readers &mdash; think articles, blog posts, and ebooks. They differ from *copywriters* in that copywriters write text that compels the user to perform some action, such as buy a product or subscribe to an email list. And if you're looking for someone to write technical documentation or a whitepaper, you'd likely do better to hire a *technical writer*, not a content writer.
 
 ## The fundamental principle of hiring talented people
 
@@ -26,6 +28,18 @@ Most of this guide is very pragmatic and based on what concrete steps I took, bu
 I've read other guides that encourage clients to force writers through tedious and time-consuming hoops without pay just for the privilege of being considered for a job. The idea is that writers are so desperate for work that you can demand anything you want from them. And there certainly are writers desperate for work who will jump through all of your hoops, but they're not the writers you want. The good writers will run for the hills as soon as they hear "unpaid trial job."
 
 If you want good writers, create work conditions that are fair, pleasant, and interesting. Show candidates that you respect and value their craft. This starts from the first message you send inviting them to apply and continues throughout your working relationship.
+
+## My practical experience
+
+Everything in this guide is based on my real experiences of hiring and working with writers over several months.
+
+The project for which I hired these writers was a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether a food does or does not fit the keto diet.
+
+TODO: Add screenshot of an Is It Keto article
+
+At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), the site is still relatively small, but its audience has grown by 30-50% every month this year. I believe much of this success is due to the quality of writing that makes the content clear and accessible.
+
+Throughout this guide, I'll share examples of the actual job postings, style guides, and email templates I used to hire and work with writers on Is It Keto.
 
 ## Part One: Finding Writers
 
@@ -47,7 +61,7 @@ Once you receive applications from candidates, you need to decide who to hire an
 
 ## Part Four: Working with Writers
 
-Once you've hired a writer, you need to work closely with them so that they learn about the style of writing you want. This section explains how 
+Once you've hired a writer, you need to work closely with them so that they learn about the style of writing you want. This section explains how to help writers learn to write well for you and how to ensure that your best writers stick with you.
 
 [Read more](/hiring-content-writers/4-working-with-writers/)
 
@@ -57,7 +71,6 @@ Many writing relationships won't work out in the long term. This section explain
 
 [Read more](/hiring-content-writers/5-terminating-writers/)
 
-
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article.*

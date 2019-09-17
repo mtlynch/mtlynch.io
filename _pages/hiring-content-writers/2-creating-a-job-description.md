@@ -19,13 +19,13 @@ hide_signup: false
 
 ---
 
-A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job descripion, that suggests a desperate writer who's blasting out generic applications to any job they see.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job descripion, they're usually a desperate writer blasting out generic applications to any job they see.
 
 ## Example job description
 
 I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without worrying about who has which version of my document:
 
-[TODO: Link from image](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)
+[TODO: Add screenshot of Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)
 
 ## Elements of a good job description
 
@@ -59,9 +59,9 @@ Here are the important things to cover in the job description:
 
 ## Save money by offering flexibility
 
-Resist the temptation to demand constant availability and quick turnaround. Sure, it sounds great to have a writer at your beck and call that completes assignments within one business day, but that requirement limits the pool of writers and drives up their rates.
+Resist the temptation to demand constant availability and quick turnaround. Sure, it sounds great to have a writer at your beck and call, but that requirement limits the pool of writers and drives up their rates.
 
-Think about it from the writers' perspective. Freelancers juggle several clients at once. It's impossible to provide constant availability to all of them, so they either have to pass on jobs that require this or take those jobs only when the pay is extremely high.
+Think about it from the writers' perspective. Freelancers juggle several clients at once. It's impossible to provide constant availability to all of them, so they either have to pass on jobs that require quick turnaround or take those jobs only when the pay is extremely high.
 
 Instead, offer writers as much flexibility as you can. Instead of imagining your ideal timing requirements, think about what you can live with. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
 
@@ -72,7 +72,7 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per hour**
   * Writer earns an hourly rate regardless of how much content they produce.
 * **Pay per word**
-  * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.50 per word](http://whopayswriters.com)).
+  * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.75 per word](http://whopayswriters.com)).
 * **Pay per piece**
   * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
 
@@ -80,9 +80,7 @@ My strategy is to attract talented people and pay them for their time. It's my r
 
 Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a particular quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
 
-If you're hiring a writer for a one-off job, this makes sense. But if you're looking for someone with whom you can form an ongoing professional relationship, they're not going to work for cheaper because you structure the pay in a different way.
-
-Another big reason I avoid paying per word is that I wanted concise writing. If I'm paying per word, it encourages writers to include a lot of fluff content that doesn't teach the reader anything.
+Another big reason I avoid paying per word is that I want concise writing. If I'm paying per word, it incentivizes writers to include a lot of fluff content that doesn't teach the reader anything.
 
 Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They get paid more if the piece takes longer and requires more revisions, so why would they bother doing a good job?
 
@@ -96,4 +94,4 @@ By this point, you've created a job description and shown it to potential writer
 
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to Morgan Province for providing feedback for this article.*
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article.*
