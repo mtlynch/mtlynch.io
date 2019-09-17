@@ -55,19 +55,15 @@ When I read the writing samples, I'm looking for writing that's extremely good o
 
 Sites like Upwork keep reviews for each freelancer. In my experience, reviews have been the least meaningful indicators of quality. Some of the writers I've hired had dozens of perfect five-star reviews, and then they turned in work that was barely intelligible and riddled with syntax errors.
 
- I'm not sure if there's fraud happening or if everyone's just a much softer reviewer than I am, but reviews don't seem to correlate with quality. Several writers I hired had perfect five-star ratings from dozens of reviews, and then they turned in work
-
- I haven't found these to be particularly valuable. There's an unfortunate trend on sites like Upwork where people generally give a perfect score to indicate There are too many low-quality blogs hiring people to produce any English, and they give five-star reviews for all work.
-
 Negative reviews are a stronger signal. If it's just one or two clients who are upset, but their reviews are otherwise good, it's not a big deal. Some clients are just jerks and have unreasonable expectations of freelancers.
 
 ## Pitfalls to avoid
 
 ### Steer clear of fluff factories
 
-There Internet is experiencing an epidemic of fluff writing. Site owners [think that Google will place their pages higher](https://moz.com/blog/blog-post-length-frequency) in results if they have a higher word count. And writers who get paid by the word try to make their content longer to earn more money per assignment. As a result, instead of learning to write well, many writers have learned to write fluff.
+The Internet is experiencing an epidemic of fluff writing. Site owners [think that Google will place their pages higher](https://moz.com/blog/blog-post-length-frequency) in results if they have a higher word count. And writers who get paid by the word try to make their content longer to earn more money per assignment. As a result, instead of learning to write well, many writers have learned to write fluff.
 
-You can recognize fluff if it sounds like you're reading a book report from a fifth grader who forgot to do the reading. Here's an example:
+You can recognize fluff if it sounds like you're reading a book report from a fifth grader who forgot to do the reading. Below, I've included an example of fluff writing. To avoid picking on any particular writer, I wrote the passage myself, but it's not too different from some writing samples I've received:
 
 >Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
 >
@@ -82,7 +78,7 @@ When you're hiring, avoid "fluff factories," writers who can only write in the f
 
 ### Beware the jack  of all trades
 
-Writing is really hard. The ones who are good at it focus on it exclusively. People who are expert copywriters and WordPress designers are generally not very good at either. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon and an expert auto mechanic."
+Writing is really hard. The ones who are good at it focus on it exclusively. People who are "amazing" copywriters and "expert" WordPress designers are generally weak in both skills. If you were searching for someone to perform your brain surgery, how would you feel about a doctor who said, "I'm an expert neurosurgeon **and** an accomplished auto mechanic."
 
 ### Resist the temptation to "fix" bad writers
 

@@ -39,7 +39,7 @@ Once I decide to hire a writer on a trial basis, I send them a kickoff email. Be
 >
 >You can enter your hours in this spreadsheet:
 >
->TODO: Link to template timesheet
+>https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing
 >
 >Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours and you’re not finished, take the last half hour to organize the work you have so far and let me know what your progress is. There’s not a ton of urgency on this, but if you could let me know what day to expect the work, that would be helpful.
 >

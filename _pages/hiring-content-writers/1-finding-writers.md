@@ -30,7 +30,7 @@ Upwork is a marketplace for freelancers (TODO: link). It's always been a klunky,
 * There are many writers in one place, so you have to do less searching around.
 * Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
 * Upwork has a built-in escrow service so you're protected from getting ripped off.
-  * Their escrow system also notoriously skewed to favor clients over freelancers.
+  * Their escrow system also notoriously biases to favor clients over freelancers.
 * Upwork handles all tax reporting, so you don't need to collect tax information from your freelancer.
 * Upwork's default contract assigns the client the rights to all intellectual property created during the contract.
 
