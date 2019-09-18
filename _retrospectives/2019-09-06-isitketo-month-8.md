@@ -55,7 +55,7 @@ This took significantly longer than I expected. I underestimated how difficult i
 |------------------------|-----------|-------------|--------|
 | Total Earnings         | $225.47   | $388.92   | <font color="green">+$163.45 (+72%)</font> |
 | Unique Visitors        | 19,526    | 28,921    | <font color="green">+9,395 (+48%)</font> |
-| Total Pageviews        | 53,467    | 73.469    | <font color="green">+20,002 (+37%)</font> |
+| Total Pageviews        | 53,467    | 73,469    | <font color="green">+20,002 (+37%)</font> |
 | Domain Authority (Moz) | 6         | 7         | <font color="green">+1 (+17%)</font> |
 | Ranking Keywords (Moz) | 1,442     | 2,205     | <font color="green">+763 (+67%)</font> |
 
