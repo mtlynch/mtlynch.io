@@ -84,7 +84,7 @@ Your style guide is a living document, and you should continue updating it as yo
 
 I pay my writers to learn the style guide. I find it's helpful for the relationship because it shows them right out of the gate that I respect their time and I'm not a client who's going to pressure them into giving me unpaid work.
 
-## Keep your first assigment small and easy
+## Keep your first assignment small and easy
 
 No matter how good your writer is, there's always a learning curve as they figure out how to write content that matches what you want. You can accelerate their learning by keeping a tight feedback loop. Start them out with small, simple assignments. As they master the easy stuff, gradually progress to larger and more complicated projects.
 
@@ -172,7 +172,7 @@ If the writer seems like someone you'd stick with beyond a paid trial, start sch
 
 It's difficult to have an ongoing working relationship with someone purely over email. In my experience, I find myself getting more frustrated with teammates if we only ever communicate in writing.
 
-I remember a specific instance with Morgan, one of Is It Keto's early writers. She often submitted work that used the [passive voice](https://www.grammarly.com/blog/passive-voice/), even though it violated the site's style guide. Annoyed, I'd often ask myself, "Why doesn't she care enough to catch these errors hereself?"
+I remember a specific instance with Morgan, one of Is It Keto's early writers. She often submitted work that used the [passive voice](https://www.grammarly.com/blog/passive-voice/), even though it violated the site's style guide. Annoyed, I'd often ask myself, "Why doesn't she care enough to catch these errors herself?"
 
 When Morgan and I began meeting over video chat, it became immediately obvious that she cared deeply about the quality of the work. Passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, don't have, any idea what she's talking, about.
 
@@ -186,7 +186,7 @@ It's difficult to find good writers. Unless you got extremely lucky, it probably
 
 Allow them to share in the mission. If your business is growing thanks to their writing, share those victories with your writer. It's much more motivating for them to see the impact of their work than for them to just feel like they're trading articles for a paycheck every few weeks.
 
-With one of my freelancers, I found that many of my suggestions parroted lessons I had learned form *The Elements of Style* (aka *Strunk and White*). I asked her if it would be okay if I sent her a copy and she happily agreed. Later on, she called that out specifically as something that made her value the job because it demonstrated that I was interested in and supportive of her long-term growth as a writer.
+With one of my freelancers, I found that many of my suggestions parroted lessons I learned from *The Elements of Style* (aka *Strunk and White*). I asked her if it would be okay if I sent her a copy and she happily agreed. Later on, she called that out specifically as something that made her value the job because it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 
 ## Terminating writers
 

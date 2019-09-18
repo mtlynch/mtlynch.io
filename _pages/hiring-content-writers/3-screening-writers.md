@@ -53,6 +53,12 @@ Sites like Upwork keep reviews for each freelancer. In my experience, reviews ha
 
 Negative reviews are a stronger signal. It's not a big deal if they have a couple blemishes on an otherwise solid track record. Some clients are just jerks and have unreasonable expectations of freelancers. But if you see repeated patterns in their bad reviews, pay attention.
 
+### Publication credits
+
+Some writers have fancy credits to their name, such as a previous article published on a well-known website like Forbes or The Huffington Post.
+
+In my experience, fancy writing credits were not a meaningful signal. It's a good sign if another publisher liked their work enough to publish it, but I've seen several writers with . Articles in these publications are something of a confusing signal, because those publications generally have good editors, so if you see a writer who published a well-written article in a major publication, it might only be that good because the editor dragged it across the finish line.
+
 ## Pitfalls to avoid
 
 ### Steer clear of fluff factories

@@ -23,7 +23,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 ## Upwork
 
-[Upwork](https://www.upwork.com/) is a marketplace for freelancers. It's always been a klunky, unstable site, and they recently instituted a [ridiculous fee hike](https://twitter.com/deliberatecoder/status/1140821210906943488), but it's the best option if you're hiring writers for the first time.
+[Upwork](https://www.upwork.com/) is a marketplace for freelancers. It's always been a clunky, unstable site, and they recently instituted a [ridiculous fee hike](https://twitter.com/deliberatecoder/status/1140821210906943488), but it's the best option if you're hiring writers for the first time.
 
 ### Advantages
 
@@ -80,7 +80,7 @@ This strategy generated two applications, but neither one was strong enough for 
 
 ## /r/HireaWriter
 
-A few times throughout my project, I checked [/r/HireaWriter](https://www.reddit.com/r/HireaWriter/). It's a subreddit (community) on the social networking site, Reddit.
+A few times throughout my project, I checked [/r/HireaWriter](https://www.reddit.com/r/HireaWriter/). It's a community on the social networking site, Reddit.
 
 None of the writers seeking work seemed promising enough to even invite to an interview. The posts seemed geared toward clients with cheap spam blogs who are looking to pay bottom-of-the-barrel rates for barely-intelligible content.
 

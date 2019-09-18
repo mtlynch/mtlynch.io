@@ -19,7 +19,7 @@ hide_signup: false
 
 ---
 
-A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job descripion, they're usually a desperate writer blasting out generic applications to any job they see.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job description, they're usually a desperate writer blasting out generic applications to any job they see.
 
 ## Example job description
 
@@ -57,6 +57,17 @@ Here are the important things to cover in the job description:
   * You can also link to counter-examples of writing you don't like.
     * What aspects of the counter-examples should writers avoid?
 
+TODO: Add these:
+
+Length of post / how many words
+Paying per article -- this is more common in the industry, might be worth going into the pros / cons 
+What revisions / editor collaboration does it include? 
+Kill fee?
+Do they own the rights or do you?
+How do you expect to work with them? Google Docs? Word? (Not all writers are familiar with GDocs)
+Do they pitch ideas or will you assign topics?
+Do you allow writers to link to their site in the story or bio?
+
 ## Save money by offering flexibility
 
 Resist the temptation to demand constant availability and quick turnaround. Sure, it sounds great to have a writer at your beck and call, but that requirement limits the pool of writers and drives up their rates.
@@ -85,6 +96,33 @@ Another big reason I avoid paying per word is that I want concise writing. If I'
 Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They get paid more if the piece takes longer and requires more revisions, so why would they bother doing a good job?
 
 In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial, and the work suffers.
+
+## How much should you pay?
+
+**Quiz**: Which writer costs more in the long run: a $30/hr writer or a $40/hr writer?
+
+**Answer**: Not enough information.
+
+Writers vary widely in their speed and quality of writing. Maybe the $40/hr writer is 33% more expensive, but they work 40% faster, so they cost less overall.
+
+It's easiest to think about cost per article, which is determined by this formula:
+
+```text
+Cost per article = (Freelancer's time writing the article * freelancer's wage) +
+                   (Your time editing article * value of your time)
+```
+
+For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write took me around 37.5 minutes to edit. I paid the writer $20/hr and I valued my own time at $30/hr, so o the total cost for each article would be:
+
+```text
+Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75
+```
+
+| Candidate source   | What I paid |
+|--------------------|-------------|
+| [College job boards](/hiring-content-writers/1-finding-writers/#college-job-boards) | $13-$15/hr  |
+| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr  |
+| [Personal referrals](/hiring-content-writers/1-finding-writers/#personal-referrals) | $50-60/hr   |
 
 ## Screening writers
 
