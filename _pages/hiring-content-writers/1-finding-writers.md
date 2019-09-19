@@ -60,7 +60,6 @@ College job boards are a hidden gem for hiring content writers. Students in my a
 
 The quality of candidates is on par with what I've found on Upwork, but the rates are much lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr. I listed my job at $13/hr but it's still competitive with other wages when you take into account its flexibility. Students can write articles for me whenever they want from wherever they want, whereas most student employment is babysitting or administrative work, which requires them to appear in a specific place on a rigid schedule.
 
-
 {% include image.html file="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" max_width="600px" class="img-border" img_link=true fig_caption="Is It Keto's job listing on a local college job board" %}
 
 The best candidates had experience writing for college publications. In the future, I may try reviewing college newspapers and reach out to student journalists whose writing I like.
@@ -83,13 +82,19 @@ I received only one serious applicant, and their writing samples were just poorl
 
 In December, I published an article about [encountering a phony writer on Upwork](/upwork-scammer/). I thought the piece might attract the attention of other freelance writers, so I included little self-advertisements in the post asking people to email me if they were looking for writing work.
 
-TODO: Screenshot of previous post
+{% assign fig_caption = "Mini job announcement in my [blog post about a phony freelance writer](/upwork-scammer/)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="blog-job-listing.jpg" alt="Screenshot of job posting in previous article" max_width="600px" class="img-border" img_link=true fig_caption=fig_caption %}
 
 This strategy generated two applications, but neither one was strong enough for me to start a paid trial.
 
 ## /r/HireaWriter
 
 A few times throughout my project, I checked [/r/HireaWriter](https://www.reddit.com/r/HireaWriter/). It's a community on the social networking site, Reddit.
+
+{% assign fig_caption = "[/r/HireaWriter](https://www.reddit.com/r/HireaWriter/), a Reddit community for hiring freelance writers" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="hireawriter.jpg" alt="Screenshot of the HireaWriter subreddit" max_width="600px" class="img-border" img_link=true fig_caption=fig_caption %}
 
 None of the writers seeking work seemed promising enough to even invite to an interview. The posts seemed geared toward clients with cheap spam blogs who are looking to pay bottom-of-the-barrel rates for barely-intelligible content.
 

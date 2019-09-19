@@ -37,7 +37,11 @@ It's natural to assume that a $60/hr writer is substantially better than a $30/h
 
 If the writer has a profile on a freelancing site or, better yet, their own website, they'll have a bio that explains a little about themselves and the work that they do.
 
-This tends to be the best glimpse you have into a writer's talent. A writers published samples often go through a layer of editing that the writer can't control. But the writer has the final say on the writing in their own profile, so it's the purest sample you can get of their writing.
+{% assign fig_caption = "[Morgan Provice](https://www.morganprovince.com)'s [profile on Upwork](https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/) is simple, clear, and to the point." | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="morgan-province-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" max_width="715px" class="img-border" link_url="https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/" fig_caption=fig_caption %}
+
+This tends to be the best glimpse you have into a writer's talent. Their published samples often go through a layer of editing that the writer can't control. But the writer has the final say on the writing in their own profile, so it's the purest sample you can get of their writing.
 
 If they have spelling or grammar errors in their profile, that's an automatic no-hire. If they can't get their grammar correct in their bio, they're never going to get it right in the work they do for you. Similarly, look for writing that's convoluted or unclear. The writing on their profile is likely the best that they can do, so if it doesn't meet your standards, move on.
 
@@ -50,6 +54,8 @@ When I read writing samples, I'm looking for writing that's either extremely goo
 ### Ratings and reviews
 
 Sites like Upwork keep reviews for each freelancer. In my experience, reviews have been the least meaningful indicators of quality. Some of the writers I've hired had dozens of perfect five-star reviews, and then they turned in work that was barely intelligible and riddled with syntax errors.
+
+{% include image.html file="upwork-reviews.jpg" alt="Screenshot of Morgan Province's Upwork profile" max_width="705px" class="img-border" img_link=true fig_caption="Example freelance writer reviews on Upwork" %}
 
 Negative reviews are a stronger signal. It's not a big deal if they have a couple blemishes on an otherwise solid track record. Some clients are just jerks and have unreasonable expectations of freelancers. But if you see repeated patterns in their bad reviews, pay attention.
 
@@ -84,6 +90,8 @@ When you're hiring, avoid "fluff factories" &mdash; writers who only produce flu
 ### Beware the jack  of all trades
 
 Good writers tend to focus exclusively on their craft. People who are "amazing" content writers and "expert" WordPress designers, in reality, tend to be weak in both.
+
+{% include image.html file="many-skills-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" max_width="705px" class="img-border" img_link=true fig_caption="Upwork freelancer with a suspicious number of non-writing skills" %}
 
 If you were searching for someone to perform your brain surgery, you'd probably avoid the doctor who says, "I'm an expert neurosurgeon **and** an accomplished auto mechanic."
 

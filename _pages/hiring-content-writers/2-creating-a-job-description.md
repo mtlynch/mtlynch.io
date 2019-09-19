@@ -23,9 +23,11 @@ A clear, concise job description shows candidates that you're an organized profe
 
 ## Example job description
 
-I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without worrying about who has which version of my document:
+Below, I've included the job description I use to hire writers for Is It Keto. I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without worrying about who has which version of my document:
 
-[TODO: Add screenshot of Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)
+{% assign fig_caption = "Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="job-description.jpg" alt="Screenshot of Is It Keto's job description" max_width="825px" class="img-border" link_url="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#" fig_caption=fig_caption %}
 
 ## Elements of a good job description
 
@@ -46,7 +48,7 @@ Here are the important things to cover in the job description:
   * What is the typical word count for your assignments?
   * Are they required to revise the piece based on your feedback?
   * How will they collaborate with you?
-    * Google Docs? Word? A custom system?
+    * Google Docs? Word?
   * Will you assign article topics or does the writer pitch ideas to you?
 * Attribution and rights
   * Do you keep full rights to the articles or can the writer republish them on other sites?
@@ -54,7 +56,7 @@ Here are the important things to cover in the job description:
     * e.g., "by Michael Lynch"
   * Is the author allowed to link to their own website?
 * Timing
-  * How many hours per week do you expect them to work each week?
+  * How many hours per week do you expect the writer to work each week?
   * How quickly must the writer complete work after they receive an assignment?
   * Is it important that their working hours overlap with yours?
 * Payment
@@ -66,7 +68,7 @@ Here are the important things to cover in the job description:
     * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year, though this might not be necessary if you're paying them through a marketplace like Upwork.
   * Will you pay a kill fee if you decide not to publish the writer's work?
     * Publishers sometimes pay a "kill fee" if a writer completes an assignment but the publisher doesn't use it.
-* Examples
+* Example articles
   * Link to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
   * You can also link to counter-examples of writing you don't like.
