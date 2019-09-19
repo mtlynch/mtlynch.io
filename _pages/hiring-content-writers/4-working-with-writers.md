@@ -196,4 +196,4 @@ If you've found a good writer, congratulations, you're done! In the more common 
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article.*
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*

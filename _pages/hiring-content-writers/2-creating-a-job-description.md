@@ -42,31 +42,35 @@ Here are the important things to cover in the job description:
     * e.g., medical writing, financial writing
   * Should they have particular skills?
     * e.g., writing for search engine optimization, appealing to young professionals
+* Assignment details
+  * What is the typical word count for your assignments?
+  * Are they required to revise the piece based on your feedback?
+  * How will they collaborate with you?
+    * Google Docs? Word? A custom system?
+  * Will you assign article topics or does the writer pitch ideas to you?
+* Attribution and rights
+  * Do you keep full rights to the articles or can the writer republish them on other sites?
+  * Does the writer receive a byline?
+    * e.g., "by Michael Lynch"
+  * Is the author allowed to link to their own website?
 * Timing
   * How many hours per week do you expect them to work each week?
   * How quickly must the writer complete work after they receive an assignment?
   * Is it important that their working hours overlap with yours?
 * Payment
+  * How do you [structure payment](#pay-per-hour-per-word-or-per-piece)?
   * What method of payment will you use?
+    * Check? PayPal? Venmo?
   * How quickly can writers expect payment?
   * Do you need to collect tax information from them?
     * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year, though this might not be necessary if you're paying them through a marketplace like Upwork.
+  * Will you pay a kill fee if you decide not to publish the writer's work?
+    * Publishers sometimes pay a "kill fee" if a writer completes an assignment but the publisher doesn't use it.
 * Examples
   * Link to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
   * You can also link to counter-examples of writing you don't like.
     * What aspects of the counter-examples should writers avoid?
-
-TODO: Add these:
-
-Length of post / how many words
-Paying per article -- this is more common in the industry, might be worth going into the pros / cons 
-What revisions / editor collaboration does it include? 
-Kill fee?
-Do they own the rights or do you?
-How do you expect to work with them? Google Docs? Word? (Not all writers are familiar with GDocs)
-Do they pitch ideas or will you assign topics?
-Do you allow writers to link to their site in the story or bio?
 
 ## Save money by offering flexibility
 
@@ -76,7 +80,7 @@ Think about it from the writers' perspective. Freelancers juggle several clients
 
 Instead, offer writers as much flexibility as you can. Instead of imagining your ideal timing requirements, think about what you can live with. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
 
-## Pay per hour, per word, or per piece?
+## Pay per hour, per word, or per article?
 
 When it comes to pay structure for your freelancers, you have several options:
 
@@ -84,8 +88,10 @@ When it comes to pay structure for your freelancers, you have several options:
   * Writer earns an hourly rate regardless of how much content they produce.
 * **Pay per word**
   * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.75 per word](http://whopayswriters.com)).
-* **Pay per piece**
+* **Pay per article**
   * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
+
+TODO: Talk about how pay per article is most common.
 
 My strategy is to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour.
 
@@ -103,9 +109,7 @@ In my experience, talented people deliver quality work if you empower them to do
 
 **Answer**: Not enough information.
 
-Writers vary widely in their speed and quality of writing. Maybe the $40/hr writer is 33% more expensive, but they work 40% faster, so they cost less overall.
-
-It's easiest to think about cost per article, which is determined by this formula:
+To understand why, you have to consider the total cost of producing an article, which is given by the formula below:
 
 ```text
 Cost per article = (Freelancer's time writing the article * freelancer's wage) +
@@ -117,6 +121,8 @@ For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my
 ```text
 Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75
 ```
+
+There are two major variables in this equation that you 
 
 | Candidate source   | What I paid |
 |--------------------|-------------|
@@ -132,4 +138,4 @@ By this point, you've created a job description and shown it to potential writer
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article.*
+*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*

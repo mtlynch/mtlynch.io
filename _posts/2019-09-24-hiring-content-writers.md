@@ -5,15 +5,17 @@ tags:
 - outsourcing
 ---
 
-As one of my businesses, I run a content website. One of the most challenging aspects of the business is hiring writers to produce high-quality content for the site. I've found online guides for hiring content writers, but they're all either too vague or apply a wildly wrongheaded philosophy to working with writers
+If you run a business that depends on content, you realize how quickly it can drain you. Writing is mentally draining, especially if you're writing with quality in mind. You may have considered outsourcing writing, but it's daunting if you've never done it before. Where do you find writers? How can you uphold your standards of quality?
 
-I'm by no means an expert at hiring writers, but I've written this guide to share what I learned from my own experience.
+One of my businesses is a content website, and outsourcing the writing has been one of the most challenging aspects of it. The guides I found online telling clients how to find writers were either too vague or applied a wildly wrongheaded philosophy to working with writers.
+
+I'm by no means an expert at hiring writers, but I've written this guide to share what I learned from my experience.
 
 ## Who should read this guide
 
-This guide is for people like me: small business owners who want to outsource writing to a professional. I'm writing for people whose monthly budget for writers is in the hundreds to thousands of dollars.
+This guide is for people like me: small business owners who want to outsource writing to a professional. The techniques I describe are for people whose monthly budget for writers is in the hundreds to thousands of dollars.
 
-If you need a dirt cheap writer to churn out content for your spam blog, this guide isn't for you. Similarly, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
+If you need a dirt cheap writer to churn out content for your spam blog, this guide isn't for you. Conversely, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
 
 ## What is a content writer?
 
@@ -21,23 +23,23 @@ Content writers write pieces that inform or entertain your readers &mdash; think
 
 ## The fundamental principle of hiring talented people
 
-Most of this guide is very pragmatic and based on what concrete steps I took, but there's one underlying idea that governs my philosophy for hiring for any skilled position:
+There's one underlying idea that governs my philosophy for hiring for any skilled position:
 
 * **Talented people are selective about which jobs they take**
 
 I've read other guides that encourage clients to force writers through tedious and time-consuming hoops without pay just for the privilege of being considered for a job. The idea is that writers are so desperate for work that you can demand anything you want from them. And there certainly are writers desperate for work who will jump through all of your hoops, but they're not the writers you want. The good writers will run for the hills as soon as they hear "unpaid trial job."
 
-If you want good writers, create work conditions that are fair, pleasant, and interesting. Show candidates that you respect and value their craft. This starts from the first message you send inviting them to apply and continues throughout your working relationship.
+If you want good writers, create work conditions that are fair, pleasant, and interesting. Show candidates that you respect and value their craft. This starts from the first message you send them and continues throughout your working relationship.
 
 ## My practical experience
 
 Everything in this guide is based on my real experiences of hiring and working with writers over several months.
 
-The project for which I hired these writers was a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether a food does or does not fit the keto diet.
+The project for which I hired these writers is a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether a food does or does not fit the keto diet.
 
 TODO: Add screenshot of an Is It Keto article
 
-At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), the site is still relatively small, but its audience has grown by 30-50% every month this year. I believe much of this success is due to the quality of writing that makes the content clear and accessible.
+At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), the site is still relatively small, but its audience has grown by 30-50% every month this year. I believe much of this success results from its succinct, informative, and clear writing.
 
 Throughout this guide, I'll share examples of the actual job postings, style guides, and email templates I used to hire and work with writers on Is It Keto.
 
@@ -73,4 +75,4 @@ Many writing relationships won't work out in the long term. This section explain
 
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article.*
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*

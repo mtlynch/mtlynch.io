@@ -70,3 +70,7 @@ As an example from Is It Keto, I was burning a lot of time fixing grammatical er
   * Are there patterns of error that keep coming up that you can cover in your style guide?
 
 It's frustrating to invest hours into a writer only to have to throw it away. On the plus side, each iteration gives you a better sense of what you want, helps you more quickly distinguish between good and bad candidates, and improves your skills as a manager. When you find the writer that matches what you need, it can be a tremendous partnership, but expect to put in a lot of work to find them.
+
+---
+
+*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*

@@ -25,46 +25,55 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 [Upwork](https://www.upwork.com/) is a marketplace for freelancers. It's always been a clunky, unstable site, and they recently instituted a [ridiculous fee hike](https://twitter.com/deliberatecoder/status/1140821210906943488), but it's the best option if you're hiring writers for the first time.
 
+
+{% assign fig_caption = "Is It Keto's [job listing on Upwork](https://www.upwork.com/jobs/~01be2860be57096ab2)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="upwork-posting.jpg" alt="Screenshot of Is It Keto posting on Upwork" max_width="450px" img_link=true class="img-border" fig_caption=fig_caption %}
+
 ### Advantages
 
 * There are many writers in one place, so you have to do less searching around.
 * Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
 * Upwork has a built-in escrow service so you're protected from getting ripped off.
   * In disputes, Upwork generally sides with clients, much to the chagrin of honest freelancers who get stuck with bad clients.
+* Upwork manages time-tracking and invoicing, making it simple to pay your freelancer.
 * Upwork handles all tax reporting, so you don't need to collect tax information from your freelancer.
-* Upwork's default contract assigns the client the rights to all intellectual property created during the contract.
+* Upwork provides a default contract, so you don't need to draft your own freelancing agreement.
 
 ### Disadvantages
 
 * Upwork collects fees from both the client and freelancer, effectively making it ~XX% (TODO: calculate this) more expensive to hire someone.
 * Once you begin working with someone through Upwork, you're contractually bound to pay them exclusively through Upwork (including Upwork fees) for two years.
-* Too many clients abuse the escrow system, which has driven many talented writers away from the platform.
-* Upwork [fails to eliminate phony freelancers](/upwork-scammer/) from its platform.
+* Upwork attracts cheap, abusive clients, which has caused many talented writers to abandon the platform.
+* Upwork [fails to eliminate phony freelancers](/upwork-scammer/) from its system.
 
 Upwork was where I found my best writer, but I did paid trials with seven others before I found her.
 
 ## College job boards
 
-College job boards are a hidden gem for hiring content writers. I posted a job listing on the online student job boards for two of my local colleges and here were my results:
+College job boards are a hidden gem for hiring content writers. Students in my area return to campus at the end of August, so last month, I posted job listings on the online student job boards for two of my local colleges. Here were my results:
 
 | School             | Applications | Trial hires | Permanent hires |
 |--------------------|--------------|-------------|-----------------|
 | Large state school | 17           | 3           | TBD             |
 | Small liberal arts school | 8     | 1           | TBD             |
 
-The quality of candidates is on par with what I've found on Upwork, but the rates are much lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr for things like babysitting or secretarial work. I listed the writing position for Is It Keto at $13/hr. It's especially appealing to students because it's work they can do from anywhere and set their own hours.
+The quality of candidates is on par with what I've found on Upwork, but the rates are much lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr. I listed my job at $13/hr but it's still competitive with other wages when you take into account its flexibility. Students can write articles for me whenever they want from wherever they want, whereas most student employment is babysitting or administrative work, which requires them to appear in a specific place on a rigid schedule.
+
+
+{% include image.html file="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" max_width="600px" class="img-border" img_link=true fig_caption="Is It Keto's job listing on a local college job board" %}
 
 The best candidates had experience writing for college publications. In the future, I may try reviewing college newspapers and reach out to student journalists whose writing I like.
 
 ## Personal referrals
 
-I found two writers through personal referrals, and they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among my most expensive hires at $50/hr and $60/hr.
+One technique I used was just asking my friends if they knew any freelance writers. I found two writers this way, and they were among the top in terms of quality. They made the fewest grammatical errors and produced writing that was lively and interesting. They were also among my most expensive hires at $50/hr and $60/hr.
 
-Oddly, they were also the writers that created the most logistical problems. With both of them, there were a high number of miscommunications and missed deadlines. They also seemed to have a more rigid style than other writers. They wrote content that mostly adhered to my style guide, but any mistakes they made, they kept repeating. Upwork writers were better at fixing bad habits after I pointed them out.
+Oddly, they were also the writers that created the most logistical problems. With both of them, there were a high number of miscommunications and missed deadlines. They also fared worse at fixing their errors. They wrote content that mostly adhered to my style guide, but any mistakes they made, they kept repeating. Other writers were better at fixing bad habits after I pointed them out.
 
 ## Printed flyers
 
-I live in South Hadley, MA, close to many liberal arts colleges. I thought maybe I could find a talented college student, so I put up flyers in my town and on Mt. Holyoke's campus.
+I live in South Hadley, MA, close to many liberal arts colleges. Before I discovered [college job boards](#college-job-boards), I tried putting up flyers on a college campus and around my town.
 
 {% include image.html file="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" max_width="400px" class="img-border" img_link=true fig_caption="Job flyer I made for Is It Keto using a template from Canva" %}
 
@@ -92,4 +101,4 @@ Once you've found a place to reach out to writing candidates, it's time to write
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article.*
+*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
