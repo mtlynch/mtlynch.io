@@ -12,7 +12,7 @@ hide_signup: false
 
 * [Overview: Hiring Content Writers](/hiring-content-writers/)
 * [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
 * **Part Three: Screening Candidates** (this section)
 * [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
 * [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
@@ -91,7 +91,7 @@ When you're hiring, avoid "fluff factories" &mdash; writers who only produce flu
 
 Good writers tend to focus exclusively on their craft. People who are "amazing" content writers and "expert" WordPress designers, in reality, tend to be weak in both.
 
-{% include image.html file="many-skills-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" max_width="705px" class="img-border" img_link=true fig_caption="Upwork freelancer with a suspicious number of non-writing skills" %}
+{% include image.html file="many-skills-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" max_width="705px" class="img-border" img_link=true fig_caption="Upwork freelancer with a suspiciously high number of non-writing skills" %}
 
 If you were searching for someone to perform your brain surgery, you'd probably avoid the doctor who says, "I'm an expert neurosurgeon **and** an accomplished auto mechanic."
 
@@ -113,7 +113,7 @@ Be clear that you're not offering them a job right off the bat. You should have 
 
 ## Interview candidates
 
-When hiring writers, I care most about most is the quality of their published content. It's difficult to learn this by interviewing from an interview. Instead of a lengthy interview process, I keep my interviews short and quickly hire the writer for a paid trial (see [below](#start-a-paid-trial)).
+When hiring writers, I care most about most the quality of their published content. It's difficult to learn this from a traditional interview. Instead of a lengthy interview process, I keep my interviews short and quickly hire the writer for a paid trial (see [below](#start-a-paid-trial)).
 
 Still, the interview does give you a glimpse into what it's like working with this person. Do the two of you communicate well or does it take several back and forths before a question is sufficiently stated and answered?
 
@@ -123,17 +123,13 @@ Still, the interview does give you a glimpse into what it's like working with th
 | They respond to your personalized invitation with a generic form letter. | They express genuine interest and enthusiasm about the work. |
 | Their questions to you are ambiguous or poorly-worded. | Their questions are thoughtful and relevant. |
 
-If I like someone's profile and writing samples, I'll generally hire them even if our interview is mediocre. Interviews are mainly useful for identifying egregiously bad candidates who communicate poorly.
+If I like someone's profile and writing samples, I'll generally hire them even if our interview is mediocre. Interviews are mainly useful for candidates with egregiously poor communication skills.
 
 ## Start a paid trial
 
-I think the best way to evaluate writing candidates is by hiring them on a trial basis. Talented writers can be put off by a lengthy, unpaid screening process. If you show that you're willing to begin paying them for their work right away, it attracts stronger writers.
+In my experience, the best way to evaluate writing candidates is to hire them on a trial basis. Talented writers can be put off by a lengthy, unpaid screening process. If you show that you're willing to begin paying them for their work right away, it attracts stronger writers.
 
-Here's an example invitation to a paid trial:
-
->I don’t do a lengthy interview process because I feel like the best way to see if it’s a good match is to just do a paid trial for a few articles. If that sounds good to you, I’ll send you a freelance contract to e-sign and give you your first article assignment. I’ll send payment via check every two weeks for any hours you’ve worked.
-
-I specifically avoid terms like "probationary period" because it sounds like I'm waiting for the writer to screw up. This is a trial for both of us. It's an opportunity for me to see how the writer produces content for me, and it's a chance for the writer to see what I'm like as a paying client.
+When offering a paid trial, I specifically avoid terms like "probationary period" because it sounds like I'm waiting for the writer to screw up. This is a trial for both of us &mdash; it's an opportunity for me to see how the writer produces content for me, and it's a chance for the writer to see what I'm like as a paying client.
 
 A paid trial is part of the candidate search. Many of your trial hires won't last, so you can hire multiple writers in parallel even if you ultimately want only one writer long-term.
 

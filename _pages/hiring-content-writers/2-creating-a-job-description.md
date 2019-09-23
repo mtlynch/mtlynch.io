@@ -107,7 +107,10 @@ In my experience, talented people deliver quality work if you empower them to do
 
 ## How much should you pay?
 
-**Quiz**: Which writer costs more in the long run: a $30/hr writer or a $40/hr writer?
+Which writer costs more in the long run?
+
+* A writer who charges $30/hr
+* A writer who charges $40/hr
 
 **Answer**: Not enough information.
 

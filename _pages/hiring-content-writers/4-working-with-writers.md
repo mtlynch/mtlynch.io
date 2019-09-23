@@ -12,14 +12,14 @@ hide_signup: false
 
 * [Overview: Hiring Content Writers](/hiring-content-writers/)
 * [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-working-with-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
 * [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
 * **Part Four - Working with Writers** (this section)
 * [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-You can't judge how well a writer writes for you until they write for you. When they write their first few pieces for you, you're effectively still interviewing them. Pay attention to how well the two of you communicate and how much coaching or editing they need before they produce content that matches what you want.
+You can't judge how well a writer writes for you until you see them do it. The paid trial is where the evaluation process truly begins. Use the time to observe how well the two of you communicate and how much coaching or editing they need before they produce content that matches what you want.
 
 ## Send a kickoff email
 
@@ -57,7 +57,7 @@ I describe each of these elements in detail below.
 
 ## Create a contract
 
-When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites? Or do you have full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
+When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites? Or do you require full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
 
 Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, using an online template is infinitely better than no contract at all. 
 
@@ -66,23 +66,7 @@ I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelan
 **Sidenote**: I find the Docracy interface buggy and unintuitive. I only mention it because it's the service I used, but if you find a better service, choose that (and tell me about it).
 {: .notice--info}
 
-If you hire through a freelancing marketplace, they likely have a default contract that does what you want. For example, Upwork's [default contract](https://www.upwork.com/legal#optional-service-contract-terms) assigns all intellectual property rights to the client, so you wouldn't have to create your own contract.
-
-## Use a style guide to enforce consistency
-
-Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly. Your writers won't know what type of writing you want unless you tell them. Your site must also maintain consistency, even if it includes content from multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
-
-Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the style guide for Is It Keto:
-
-[TODO: Add screenshot of style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.qwnjmopyhpr6)
-
-Avoid the temptation to create rules for every imaginable scenario. Limit the style guide to issues that come up frequently for your site. For example, Is It Keto focuses on the keto diet, so my style guide had detailed instructions on how to format food measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
-
-Make it a Google Doc or a wiki so that there's a single, authoritative copy of it that's easy to update. If the style guide is trapped in an email or PDF, it's difficult to ensure that everyone's working from the latest version.
-
-Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, resist the temptation to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section of the style guide. Be judicious about what you add to the style guide, however. The longer the guide, the harder it is for people to learn it.
-
-I pay my writers to learn the style guide. I find it's helpful for the relationship because it shows them right out of the gate that I respect their time and I'm not a client who's going to pressure them into giving me unpaid work.
+If you hire through a freelancing marketplace, they likely have a default contract that does what you want. For example, Upwork's [default contract](https://www.upwork.com/legal#optional-service-contract-terms) assigns all intellectual property rights to the client, so you likely don't need to create an additional contract.
 
 ## Keep your first assignment small and easy
 
@@ -90,13 +74,31 @@ No matter how good your writer is, there's always a learning curve as they figur
 
 ## Timebox early assignments
 
-If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task, and they come back days later with an invoice for 15 hours of work. They're not trying to rip you off. There's a wide range of thoroughness when it comes to writing, so it's easy for miscommunications to occur over time investments.
+If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task and then feel your eyes pop out of your head when you receive an invoice for 15 hours of work. They're not trying to rip you off. Writing assignments vary widely in thoroughness, so it's important to make time limits explicit.
 
-Set an explicit hours cap on their first assignment. Here's the instruction I give to my new writers:
+Here's the instruction I give to my new writers:
 
 >Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours and still have work remaining, take the last half hour to organize what you have so far and share your progress with me.
 
-As you work together more, you can increase these limits or eliminate them entirely.
+As you work together more, you can increase these hours caps or eliminate them entirely.
+
+## Use a style guide to enforce consistency
+
+Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly. Your writers won't know what type of writing you want unless you tell them. This is even more important if you're working with multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
+
+Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the [style guide for Is It Keto](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky):
+
+{% assign fig_caption = "Is It Keto's [style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="style-guide.jpg" alt="Screenshot of Is It Keto's style guide" max_width="825px" class="img-border" link_url="https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky" fig_caption=fig_caption %}
+
+Avoid the temptation to create rules for every imaginable scenario. Limit the style guide to issues that come up frequently for your site. For example, Is It Keto focuses on the keto diet, so its style explains how to format food measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
+
+Make it a Google Doc or a wiki so that there's a single, authoritative copy of it that's easy to update. If the style guide is trapped in an email or PDF, it's difficult to ensure that everyone's working from the latest version.
+
+Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, resist the temptation to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section of the style guide. Be judicious about what you add to the style guide, however. The longer the guide, the harder it is for people to learn it.
+
+I pay my writers to learn the style guide. I find it's helpful for the relationship because it shows them right out of the gate that I respect their time and I'm not a client who's going to pressure them into giving me unpaid work.
 
 ## Agree on an editing workflow
 
@@ -186,7 +188,7 @@ It's difficult to find good writers. Unless you got extremely lucky, it probably
 
 Allow them to share in the mission. If your business is growing thanks to their writing, share those victories with your writer. It's much more motivating for them to see the impact of their work than for them to just feel like they're trading articles for a paycheck every few weeks.
 
-With one of my freelancers, I found that many of my suggestions parroted lessons I learned from *The Elements of Style* (aka *Strunk and White*). I asked her if it would be okay if I sent her a copy and she happily agreed. Later on, she called that out specifically as something that made her value the job because it demonstrated that I was interested in and supportive of her long-term growth as a writer.
+With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [*The Elements of Style*](https://amzn.to/30cUr8y) (aka [*Strunk and White*](https://amzn.to/30cUr8y)). I asked her if it would be okay if I sent her a copy and she happily agreed. Later on, she called that out specifically as something that made her value the job because it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 
 ## Terminating writers
 
