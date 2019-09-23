@@ -129,7 +129,7 @@ Freelancers consistently tell me that clear, empathetic feedback is the key fact
 
 >**<font color="red">Bad</font>**: You did a terrible job on the first paragraph. Rewrite it.
 
-This is poor feedback because it's vague and bossy. It also frames the feedback as a personal attack instead of focusing on the writing.
+This is poor feedback because it's vague and pushy. It also frames the feedback as a personal attack instead of focusing on the work itself.
 
 >**<font color="green">Good</font>**: I had difficulty following the first paragraph. The sentence structure is repetitive, and it uses the passive voice too heavily.
 
@@ -147,6 +147,8 @@ Look out for signs that you should terminate the relationship:
 * They bill a higher number of hours than you can afford long-term (if you're paying hourly).
 
 It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; I'll end the relationship if it has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be pretty close to publication-quality, but they're usually still learning the nuances of my desired style.
+
+TODO: Table of my progress
 
 Remember that [it's hopeless to fix a bad writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). If their writing is illogical, boring, difficult to understand, or syntactically incorrect, it'll stay that way for years.
 

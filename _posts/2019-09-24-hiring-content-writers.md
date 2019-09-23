@@ -3,7 +3,12 @@ title: "Hiring Content Writers: A Guide for Small Businesses"
 tags:
 - is it keto
 - outsourcing
+header:
+  teaser: images/hiring-content-writers/cover.jpg
+  og_image: images/hiring-content-writers/cover.jpg
 ---
+
+{% include image.html file="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max_width="1000px" img_link=true %}
 
 If you run a business that depends on content, you realize how quickly it can drain you. Writing is mentally draining, especially if you're writing with quality in mind. You may have considered outsourcing writing, but it's daunting if you've never done it before. Where do you find writers? How can you uphold your standards of quality?
 
@@ -37,7 +42,9 @@ Everything in this guide is based on my real experiences of hiring and working w
 
 The project for which I hired these writers is a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether a food does or does not fit the keto diet.
 
-TODO: Add screenshot of an Is It Keto article
+{% assign fig_caption = "An Is It Keto article on [broccoli](https://isitketo.org/broccoli)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
 
 At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), the site is still relatively small, but its audience has grown by 30-50% every month this year. I believe much of this success results from its succinct, informative, and clear writing.
 
