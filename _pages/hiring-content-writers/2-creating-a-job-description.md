@@ -139,8 +139,15 @@ There are two major variables in this equation that you
 
 By this point, you've created a job description and shown it to potential writers. Now, it's time to decide how to screen the candidates who apply for your job:
 
-* [Part Three - Screening Writers](/hiring-content-writers/3-screening-candidates/)
+---
+
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* **Part Two - Creating a Detailed Job Description** (this section)
+* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*

@@ -61,9 +61,11 @@ Negative reviews are a stronger signal. It's not a big deal if they have a coupl
 
 ### Publication credits
 
-Some writers have fancy credits to their name, such as a previous article published on a well-known website like Forbes or The Huffington Post.
+Some writers have fancy credits to their name, such as previous publications on a well-known website like Forbes or The Huffington Post.
 
-In my experience, fancy writing credits were not a meaningful signal. It's a good sign if another publisher liked their work enough to publish it, but I've seen several writers with . Articles in these publications are something of a confusing signal, because those publications generally have good editors, so if you see a writer who published a well-written article in a major publication, it might only be that good because the editor dragged it across the finish line.
+In my experience, prestigious writing credits were not a meaningful signal. It's a good sign if another publisher liked their work enough to publish it, but I've seen several writers with impressive credits but no ability to write.
+
+It's especially challenging if the candidate provides writing samples from respected publications because you can assume they had a good editor. If a writing candidate has a well-written article in a famous publication, it might only be that good because a talented editor dragged it across the finish line.
 
 ## Pitfalls to avoid
 
@@ -137,8 +139,15 @@ A paid trial is part of the candidate search. Many of your trial hires won't las
 
 Now that you've hired a writer on a trial basis, it's time to begin working with them and evaluate whether they're the right long-term match for your business.
 
+---
+
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+* **Part Three: Screening Candidates** (this section)
 * [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*

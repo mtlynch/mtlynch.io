@@ -25,7 +25,6 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 [Upwork](https://www.upwork.com/) is a marketplace for freelancers. It's always been a clunky, unstable site, and they recently instituted a [ridiculous fee hike](https://twitter.com/deliberatecoder/status/1140821210906943488), but it's the best option if you're hiring writers for the first time.
 
-
 {% assign fig_caption = "Is It Keto's [job listing on Upwork](https://www.upwork.com/jobs/~01be2860be57096ab2)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="upwork-posting.jpg" alt="Screenshot of Is It Keto posting on Upwork" max_width="450px" img_link=true class="img-border" fig_caption=fig_caption %}
@@ -102,8 +101,15 @@ None of the writers seeking work seemed promising enough to even invite to an in
 
 Once you've found a place to reach out to writing candidates, it's time to write a description of the job that tells candidates what you expect.
 
+---
+
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* **Part One: Finding Writers** (this section)
 * [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*

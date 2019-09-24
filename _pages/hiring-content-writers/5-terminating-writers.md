@@ -19,7 +19,7 @@ hide_signup: false
 
 ---
 
-If you've followed this guide, you've hired writers on a trial basis, which means that many of them won't work out.
+If you've followed this guide, you've hired writers on a trial basis, which means that many of them won't work out. This section explains how to gracefully end those relationships and refine your search for future candidates.
 
 ## Example termination notes
 
@@ -39,7 +39,7 @@ And this one is my harshest:
 >
 >Best of luck in the future.
 
-I don't claim to be an expert at firing people, but I can say that all of my terminations have gone smoothly. The writers accept my reasons for ending the relationship and have never accused me of acting unfairly.
+I don't claim to be an expert at firing people, but all of my terminations have gone smoothly. The writers accept my reasons for ending the relationship and have never accused me of acting unfairly.
 
 ## Keys to a graceful termination
 
@@ -48,7 +48,7 @@ The rules for artfully ending a relationship are similar to the [rules for givin
 * Remain objective
 * Stick to facts
 * Focus on the writing rather than the person
-* Avoid injecting insults or negative personal feelings about their work
+* Avoid insults or negative editorializing about their work
 
 >**<font color="red">Bad</font>**: Your writing is terrible, and I hate you.
 
@@ -56,21 +56,36 @@ The rules for artfully ending a relationship are similar to the [rules for givin
 
 On a platform like Upwork, it's especially important to avoid acrimonious terminations because writers leave feedback for their clients. If they give you a low rating and accuse you of being an unreasonable client, you'll have a harder time attracting talent in the future.
 
-## Do it all over again
+## Learning from your mistakes
 
-You have to work with a lot of writers to find one that you like. And with each writer you work with, you should get a better sense of what you're looking for and what you want to avoid. Before you begin interviewing again, review your job description and style guide. Think about patterns of error with your last writer. Are there things
-
-As an example from Is It Keto, I was burning a lot of time fixing grammatical errors for my writers. I thought it was a given that professional writers should use proper grammar, but in fairness, there are plenty of clients who don't care, so writers don't assume that they have to do it. Before seeking more applicants, I adjusted my job description to make proper grammar an explicit requirement of the job.
+Before you begin interviewing again, review your job description and style guide. Think about patterns of error with your last writer and whether you can make changes earlier in the process to avoid them.
 
 * Revise your job description
-  * Are there misunderstandings about the work that you can clarify at this stage?
+  * Can you prevent misunderstandings about the work by clarifying the job description?
 * Update your example articles
   * Do you have any new articles that can serve as the better model of what you want?
 * Re-read your style guide
-  * Are there patterns of error that keep coming up that you can cover in your style guide?
+  * Are there recurring patterns of error that you can warn about in your style guide?
 
-It's frustrating to invest hours into a writer only to have to throw it away. On the plus side, each iteration gives you a better sense of what you want, helps you more quickly distinguish between good and bad candidates, and improves your skills as a manager. When you find the writer that matches what you need, it can be a tremendous partnership, but expect to put in a lot of work to find them.
+For example, with Is It Keto, I noticed myself burning too much time fixing grammar errors for my writers. Reviewing my job description, I realized that I never called out proper grammar as a requirement. I revised the job posting to make proper grammar an explicit requirement and paid closer attention to syntax when [evaluating writing samples](/hiring-content-writers/3-screening-candidates/#writing-samples). This drastically reduced the frequency of grammar errors because candidates proofread their work more thoroughly, and I learned to bail fast on writers with poor grammar.
+
+## Termination is part of the process
+
+After a termination, it's easy to feel discouraged. You've invested hours into screening and training a writer only to throw it all away and start from scratch. Depending on how you structured compensation, you may have even paid them for an article that's too shoddy to publish. That's never a good feeling.
+
+Instead of allowing the termination to bring you down, recognize the positives. Each iteration of this process gives you a better sense of what you want, helps you more quickly distinguish between good and bad candidates, and improves your skills as a manager.
+
+When you find the writer that matches your needs, it's a tremendous partnership, but you need to put in the work to find them.
 
 ---
 
-*Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+* **Part Five - Terminating Writers** (this section)
+
+---
+
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*

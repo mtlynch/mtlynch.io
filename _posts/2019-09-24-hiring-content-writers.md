@@ -24,15 +24,23 @@ If you need a dirt cheap writer to churn out content for your spam blog, this gu
 
 ## What is a content writer?
 
-Content writers write pieces that inform or entertain your readers &mdash; think articles, blog posts, and ebooks. They differ from *copywriters* in that copywriters write text that compels the user to perform some action, such as buy a product or subscribe to an email list. And if you're looking for someone to write technical documentation or a whitepaper, you'd likely do better to hire a *technical writer*, not a content writer.
+There are three main types of freelance writers. To understand how to hire a content writer, you should understand how they differ from other types of writers:
+
+| Type of writer | What they write | Examples |
+|----------------|-----------------|----------|
+| Content writer | Content that informs or entertains your audience. | Magazine articles, blog posts, ebooks, newsletters |
+| Copywriter     | Text that compels the reader to perform some action, such as buy a product or subscribe to a mailing list. | Product descriptions, landing pages |
+| Technical writer | Highly technical content for an audience with special skills or knowledge | Software documentation, whitepapers |
 
 ## The fundamental principle of hiring talented people
 
-There's one underlying idea that governs my philosophy for hiring for any skilled position:
+There's one underlying maxim that governs my philosophy for hiring for any skilled position:
 
-* **Talented people are selective about which jobs they take**
+* **Talented people choose their employers selectively**
 
-I've read other guides that encourage clients to force writers through tedious and time-consuming hoops without pay just for the privilege of being considered for a job. The idea is that writers are so desperate for work that you can demand anything you want from them. And there certainly are writers desperate for work who will jump through all of your hoops, but they're not the writers you want. The good writers will run for the hills as soon as they hear "unpaid trial job."
+I've read other guides that encourage clients to force writers through tedious and time-consuming hoops without pay just for the privilege of being considered for a job. They assume that writers are so desperate for work that you can demand anything you want from them.
+
+There certainly are writers desperate for work who will jump through all of your hoops, but they're not the writers you want. The good writers will run for the hills as soon as they hear "unpaid trial job."
 
 If you want good writers, create work conditions that are fair, pleasant, and interesting. Show candidates that you respect and value their craft. This starts from the first message you send them and continues throughout your working relationship.
 
@@ -40,9 +48,9 @@ If you want good writers, create work conditions that are fair, pleasant, and in
 
 Everything in this guide is based on my real experiences of hiring and working with writers over several months.
 
-The project for which I hired these writers is a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether a food does or does not fit the keto diet.
+The project for which I hired these writers is a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether a particular food fits the keto diet.
 
-{% assign fig_caption = "An Is It Keto article on [broccoli](https://isitketo.org/broccoli)" | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = "Is It Keto article on [broccoli](https://isitketo.org/broccoli)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
 
@@ -64,7 +72,7 @@ Now that you've found available writers, you need to tell them what you want. Th
 
 ## Part Three: Screening Candidates
 
-Once you receive applications from candidates, you need to decide who to hire and who to reject. This section covers the signals that can help you identify good candidates and how you can figure out who's a good match for your project.
+Once you receive applications from candidates, you need to decide who to hire and who to reject. This section explains which signals help you make this decision and which ones you should ignore.
 
 [Read more](/hiring-content-writers/3-screening-candidates/)
 
@@ -82,4 +90,4 @@ Many writing relationships won't work out in the long term. This section explain
 
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*

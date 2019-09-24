@@ -148,27 +148,29 @@ Look out for signs that you should terminate the relationship:
 
 It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; I'll end the relationship if it has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be pretty close to publication-quality, but they're usually still learning the nuances of my desired style.
 
-TODO: Table of my progress
-
 Remember that [it's hopeless to fix a bad writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). If their writing is illogical, boring, difficult to understand, or syntactically incorrect, it'll stay that way for years.
 
 If a writer fails to meet your standards, see the section on [terminating writers](/hiring-content-writers/5-terminating-writers/).
 
 ## Pay promptly
 
-[Who Pays Writers](http://whopayswriters.com) is a crowdsourced collection of freelancers' working experiences. An obvious pattern in the reviews is that one of the most important factors that affect how much a freelancer would recommend an employer is how quickly that employer paid them for their work.
+[Who Pays Writers](http://whopayswriters.com) is a crowdsourced collection of freelancers' working experiences. Promptness of payment is one of the strongest factors in these reviews. Writers value clients who pay their total fee soon after they deliver their work.
 
-If you want to maintain a healthy relationship with your freelancers, be clear about when they should expect payment, and ensure that you meet those expectations. On freelancing platforms like Upwork, this is straightforward, as you simply need to approve hours when the platform prompts you. If you're working with a writer directly, you'll have to apply more diligence.
+If you want to maintain a healthy relationship with your freelancers, be clear about when they should expect payment, and ensure that you meet those expectations. On freelancing platforms like Upwork, this is straightforward, as you simply need to approve hours when prompted. If you're working with a writer directly, you'll have to apply more diligence.
 
-When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [ Google Sheets spreadsheet ](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
+When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [ Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
 
-TODO: Add screenshots demonstrating how to use my timesheet.
+
+<figure class="half">
+  {% include image.html file="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet" img_link="true" media_rendition="half" %}
+  {% include image.html file="spreadsheet-2.jpg" alt="Freelancer payment spreadsheet" img_link="true" media_rendition="half" %}
+  <figcaption>Simple timesheets and invoicing with <a href="https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing">Google Sheets</a>.</figcaption>
+</figure>
 
 On alternating Mondays, I mail them a check for the hours they've accrued in the pay period.
 
-Check whether your bank offers this as a free service. I use Chase Business Checking, which allows me to use their web app to mail anyone a check without any fee.
-
-TODO: Add screenshots of payment interface of Chase Business Checking.
+**Tip**: Check whether your bank offers check mailing as a free service. I use Chase Business Checking, which allows me to use their Bill Payment web app to send anyone a physical check without any fee.
+{: .notice--info}
 
 ## Meet regularly in person or on video chat
 
@@ -194,10 +196,19 @@ With one of my freelancers, I found that many of my suggestions parroted lessons
 
 ## Terminating writers
 
-If you've found a good writer, congratulations, you're done! In the more common case, you have to face the unpleasant business of terminating the relationship. The next section explains how to do this cordially and professionally:
+If you've found a good writer, congratulations, you're done!
 
+More commonly with writers you've hired on a trial basis, you have to face the unpleasant business of terminating the relationship. The next section explains how to do this cordially and professionally:
+
+---
+
+* [Overview: Hiring Content Writers](/hiring-content-writers/)
+* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+* **Part Four - Working with Writers** (this section)
 * [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for providing feedback for this article. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide feedback for this article.*
+*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*
