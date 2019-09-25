@@ -13,14 +13,14 @@ module Jekyll
     #          - "error"   - Used for critical erros and halts the build on
     #                        first occurence fo the problem.
     def raise_exception(msg, type)
-    	
-    	bad_file = @context.registers[:page]['path']
-    	err_msg = "In #{bad_file}: #{msg}"
 
-    	if type == "warning"
-      	warn err_msg.yellow 
+      bad_file = @context.registers[:page]['path']
+      err_msg = "In #{bad_file}: #{msg}"
+
+      if type == "warning"
+        warn err_msg.yellow
       else
-     		raise err_msg
+         raise err_msg
       end
 
     end
