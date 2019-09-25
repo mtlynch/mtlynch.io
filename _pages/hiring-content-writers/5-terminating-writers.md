@@ -58,7 +58,7 @@ On a platform like Upwork, it's especially important to avoid acrimonious termin
 
 ## Learning from your mistakes
 
-Before you begin interviewing again, review your job description and style guide. Think about patterns of error with your last writer and whether you can make changes earlier in the process to avoid them.
+Before you begin interviewing again, review your job description and style guide. Think about patterns of error with your last writer and what changes earlier in the process might prevent them.
 
 * Revise your job description
   * Can you prevent misunderstandings about the work by clarifying the job description?

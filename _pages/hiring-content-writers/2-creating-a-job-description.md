@@ -99,9 +99,9 @@ My strategy is to attract talented people and pay them for their time. It's my r
 
 Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a particular quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
 
-Another big reason I avoid paying per word is that I want concise writing. If I'm paying per word, it incentivizes writers to include a lot of fluff content that doesn't teach the reader anything.
+Another big reason I avoid paying per word is that I want concise writing. If I'm paying per word, it incentivizes writers to include [fluff content](/hiring-content-writers/3-screening-candidates/#steer-clear-of-fluff-factories) that doesn't teach the reader anything.
 
-Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They get paid more if the piece takes longer and requires more revisions, so why would they bother doing a good job?
+Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They earn more if the piece takes longer and requires more revisions, so why would they bother doing a good job?
 
 In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial, and the work suffers.
 
@@ -121,13 +121,17 @@ Cost per article = (Freelancer's time writing the article * freelancer's wage) +
                    (Your time editing article * value of your time)
 ```
 
-For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write took me around 37.5 minutes to edit. I paid the writer $20/hr and I valued my own time at $30/hr, so o the total cost for each article would be:
+TODO: Replace with prettier formula
+
+For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write took me around 37.5 minutes to edit. I paid the writer $20/hr and I valued my own time at $30/hr, so the total cost for each article would be:
 
 ```text
 Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75
 ```
 
-There are two major variables in this equation that you 
+There are two major variables in this equation that you
+
+TODO: Finish this thought
 
 | Candidate source   | What I paid |
 |--------------------|-------------|

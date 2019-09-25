@@ -19,7 +19,7 @@ hide_signup: false
 
 ---
 
-You can't judge how well a writer writes for you until you see them do it. The paid trial is where the evaluation process truly begins. Use the time to observe how well the two of you communicate and how much coaching or editing they need before they produce content that matches what you want.
+You can't judge how well a writer writes for you until you see them do it. The paid trial is where the evaluation process truly begins. Use this time to observe how well the two of you communicate and how much coaching or editing they need before they produce content that matches what you want.
 
 ## Send a kickoff email
 
@@ -57,9 +57,9 @@ I describe each of these elements in detail below.
 
 ## Create a contract
 
-When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites? Or do you require full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
+When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites or do you require full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
 
-Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, using an online template is infinitely better than no contract at all. 
+Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, using an online template is infinitely better than no contract at all.
 
 I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to collect e-signatures from my writers.
 
@@ -125,7 +125,7 @@ When you give feedback:
 * Focus on the writing not the writer
 * Consider the possibility that the problem may be in your instructions
 
-Freelancers consistently tell me that clear, empathetic feedback is the key factor that separates good clients from bad. Surprisingly, rude feedback seems to be the norm rather than the exception. This means that you can stand out as an exceptionally pleasant client by just providing basic courtesy that you'd provide if you were interacting with someone face to face.
+Freelancers consistently tell me that clear, empathetic feedback is the key factor that separates good clients from bad. Surprisingly, rude feedback seems to be the norm rather than the exception. This means that you stand out as an exceptionally pleasant client by just providing basic courtesy that you'd provide if you were interacting with someone face to face.
 
 >**<font color="red">Bad</font>**: You did a terrible job on the first paragraph. Rewrite it.
 
@@ -146,7 +146,7 @@ Look out for signs that you should terminate the relationship:
 * They miss deadlines.
 * They bill a higher number of hours than you can afford long-term (if you're paying hourly).
 
-It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; I'll end the relationship if it has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be pretty close to publication-quality, but they're usually still learning the nuances of my desired style.
+It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; I'll end the relationship if it has egregious spelling or grammatical issues, but it's okay if they're still struggling to learn my style guide. By draft two or three, I expect the writing to be close to publication-quality, but they're usually still learning the nuances of my desired style.
 
 Remember that [it's hopeless to fix a bad writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). If their writing is illogical, boring, difficult to understand, or syntactically incorrect, it'll stay that way for years.
 
@@ -188,9 +188,9 @@ Recognize that meeting with you is work for your freelancer, so make it clear th
 
 ## When you find a good writer, invest in the relationship
 
-It's difficult to find good writers. Unless you got extremely lucky, it probably took a lot of time to find them. Now, it's time to nurture the relationship so that it lasts as long as possible.
+It's difficult to find good writers. Unless you got extremely lucky, it probably took a long time to find them. Now, it's time to nurture the relationship so that it lasts as long as possible.
 
-Allow them to share in the mission. If your business is growing thanks to their writing, share those victories with your writer. It's much more motivating for them to see the impact of their work than for them to just feel like they're trading articles for a paycheck every few weeks.
+Allow them to share in the mission. If your business is growing thanks to their writing, share those victories with your writer. It's motivating for them to see the impact of their work instead of feeling like they're trading articles for a paycheck every few weeks.
 
 With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [*The Elements of Style*](https://amzn.to/30cUr8y) (aka [*Strunk and White*](https://amzn.to/30cUr8y)). I asked her if it would be okay if I sent her a copy and she happily agreed. Later on, she called that out specifically as something that made her value the job because it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 

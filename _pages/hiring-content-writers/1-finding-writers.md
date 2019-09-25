@@ -41,7 +41,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 ### Disadvantages
 
-* Upwork collects fees from both the client and freelancer, effectively making it ~XX% (TODO: calculate this) more expensive to hire someone.
+* Upwork [collects fees](https://www.upwork.com/legal#fees) from both the client and freelancer, effectively making it ~13-23% more expensive to hire someone.
 * Once you begin working with someone through Upwork, you're contractually bound to pay them exclusively through Upwork (including Upwork fees) for two years.
 * Upwork attracts cheap, abusive clients, which has caused many talented writers to abandon the platform.
 * Upwork [fails to eliminate phony freelancers](/upwork-scammer/) from its system.
@@ -57,7 +57,7 @@ College job boards are a hidden gem for hiring content writers. Students in my a
 | Large state school | 17           | 3           | TBD             |
 | Small liberal arts school | 8     | 1           | TBD             |
 
-The quality of candidates is on par with what I've found on Upwork, but the rates are much lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr. I listed my job at $13/hr but it's still competitive with other wages when you take into account its flexibility. Students can write articles for me whenever they want from wherever they want, whereas most student employment is babysitting or administrative work, which requires them to appear in a specific place on a rigid schedule.
+The quality of candidates is on par with what I've found on Upwork, but the wages are far lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr. I listed my job at $13/hr but it's still competitive with other wages when you take into account its flexibility. Students can write articles for me whenever they want from wherever they want, whereas most student employment is babysitting or administrative work, which requires them to appear in a specific place on a rigid schedule.
 
 {% include image.html file="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" max_width="600px" class="img-border" img_link=true fig_caption="Is It Keto's job listing on a local college job board" %}
 
@@ -75,7 +75,7 @@ I live in South Hadley, MA, close to many liberal arts colleges. Before I discov
 
 {% include image.html file="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" max_width="400px" class="img-border" img_link=true fig_caption="Job flyer I made for Is It Keto using a template from Canva" %}
 
-I received only one serious applicant, and their writing samples were just poorly-written school assignments, so we never even got to the point of a paid trial.
+I received only one serious applicant, and their writing samples were just poorly-written school assignments, so we never even reached a [paid trial](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial).
 
 ## Soliciting from my blog (content marketing)
 
