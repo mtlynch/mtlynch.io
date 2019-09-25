@@ -198,7 +198,7 @@ With one of my freelancers, I found that many of my suggestions parroted lessons
 
 If you've found a good writer, congratulations, you're done!
 
-More commonly with writers you've hired on a trial basis, you have to face the unpleasant business of terminating the relationship. The next section explains how to do this cordially and professionally:
+More commonly with writers you've hired on a trial basis, you have to face the unpleasant business of terminating the relationship. The next section explains how to do this cordially and professionally.
 
 ---
 

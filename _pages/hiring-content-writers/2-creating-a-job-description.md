@@ -19,11 +19,11 @@ hide_signup: false
 
 ---
 
-A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job description, they're usually a desperate writer blasting out generic applications to any job they see.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job description, you know they're blasting out generic applications to every job they see.
 
 ## Example job description
 
-Below, I've included the job description I use to hire writers for Is It Keto. I used a Google Doc because it's useful to have a single, authoritative copy that I can update over time. When I found mistakes or wanted to clarify something in the job description, I did in a single place without worrying about who has which version of my document:
+Below, I've included the job description I use to hire writers for Is It Keto. I used a Google Doc and always linked candidates directly to it so that there'd be a single, authoritative version. When I fixed mistakes or clarified the wording, I never had to worry about who had which draft of my document:
 
 {% assign fig_caption = "Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -31,7 +31,7 @@ Below, I've included the job description I use to hire writers for Is It Keto. I
 
 ## Elements of a good job description
 
-Here are the important things to cover in the job description:
+Here are the essential elements to cover in the job description:
 
 * Overview
    * What kind of content will they write?
@@ -49,23 +49,23 @@ Here are the important things to cover in the job description:
   * Are they required to revise the piece based on your feedback?
   * How will they collaborate with you?
     * Google Docs? Word?
-  * Will you assign article topics or does the writer pitch ideas to you?
+  * Will you assign article topics, or does the writer pitch ideas to you?
 * Attribution and rights
-  * Do you keep full rights to the articles or can the writer republish them on other sites?
+  * Do you keep full rights to the articles, or can the writer republish them on other sites?
   * Does the writer receive a byline?
     * e.g., "by Michael Lynch"
   * Is the author allowed to link to their own website?
 * Timing
   * How many hours per week do you expect the writer to work each week?
   * How quickly must the writer complete work after they receive an assignment?
-  * Is it important that their working hours overlap with yours?
+  * Is it critical for their working hours to overlap with yours?
 * Payment
   * How do you [structure payment](#pay-per-hour-per-word-or-per-piece)?
   * What method of payment will you use?
     * Check? PayPal? Venmo?
   * How quickly can writers expect payment?
   * Do you need to collect tax information from them?
-    * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year, though this might not be necessary if you're paying them through a marketplace like Upwork.
+    * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year. This is often unnecessary if you pay them through a marketplace like Upwork.
   * Will you pay a kill fee if you decide not to publish the writer's work?
     * Publishers sometimes pay a "kill fee" if a writer completes an assignment but the publisher doesn't use it.
 * Example articles
@@ -97,7 +97,7 @@ TODO: Talk about how pay per article is most common.
 
 My strategy is to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour.
 
-Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a particular quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
+Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a certain quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
 
 Another big reason I avoid paying per word is that I want concise writing. If I'm paying per word, it incentivizes writers to include [fluff content](/hiring-content-writers/3-screening-candidates/#steer-clear-of-fluff-factories) that doesn't teach the reader anything.
 
@@ -141,7 +141,7 @@ TODO: Finish this thought
 
 ## Screening writers
 
-By this point, you've created a job description and shown it to potential writers. Now, it's time to decide how to screen the candidates who apply for your job:
+By this point, you've created a job description and shown it to potential writers. Now, it's time to decide how to screen the candidates who apply for your job.
 
 ---
 

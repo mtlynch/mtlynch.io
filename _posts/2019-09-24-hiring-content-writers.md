@@ -23,11 +23,11 @@ I'm by no means an expert at hiring writers, but I'm better than when I started.
 
 This guide is for people like me: small business owners who want to outsource writing to a professional. You can follow this guide with a monthly writing budget that's as low as $150, but it will work even for mid-range budgets up to $2,000-$3,000 per month.
 
-If you need a dirt cheap writer to churn out content for your spam blog, this guide isn't for you. Conversely, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
+If you need a dirt-cheap writer to churn out content for your spam blog, this guide isn't for you. Conversely, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
 
 ## What is a content writer?
 
-There are three main types of freelance writers. To understand how to hire a content writer, you should understand how they differ from other types of writers:
+There are three main types of freelance writers. Before hiring a content writer, you should understand how they differ from other types of writers:
 
 | Type of writer | What they write | Examples |
 |----------------|-----------------|----------|
@@ -57,7 +57,7 @@ The project for which I hired these writers is a content site called [Is It Keto
 
 {% include image.html file="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
 
-At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe the site's success results from its succinct, informative, and clear writing.
+At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe the site's success results from its succinct, clear writing.
 
 Throughout this guide, I'll share examples of the actual job postings, style guides, and email templates I used to hire and work with writers on Is It Keto.
 

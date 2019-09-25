@@ -23,7 +23,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 ## Upwork
 
-[Upwork](https://www.upwork.com/) is a marketplace for freelancers. It's always been a clunky, unstable site, and they recently instituted a [ridiculous fee hike](https://twitter.com/deliberatecoder/status/1140821210906943488), but it's the best option if you're hiring writers for the first time.
+[Upwork](https://www.upwork.com/) is a marketplace for freelancers. I don't love it, but it's the best platform I've found for hiring freelancers. It's probably your safest bet if you're hiring writers for the first time.
 
 {% assign fig_caption = "Is It Keto's [job listing on Upwork](https://www.upwork.com/jobs/~01be2860be57096ab2)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -33,7 +33,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 * There are many writers in one place, so you have to do less searching around.
 * Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
-* Upwork has a built-in escrow service so you're protected from getting ripped off.
+* Upwork has a built-in escrow service, so you're protected from getting ripped off.
   * In disputes, Upwork generally sides with clients, much to the chagrin of honest freelancers who get stuck with bad clients.
 * Upwork manages time-tracking and invoicing, making it simple to pay your freelancer.
 * Upwork handles all tax reporting, so you don't need to collect tax information from your freelancer.
@@ -46,18 +46,16 @@ There are thousands of working freelance writers in the world, but if you've nev
 * Upwork attracts cheap, abusive clients, which has caused many talented writers to abandon the platform.
 * Upwork [fails to eliminate phony freelancers](/upwork-scammer/) from its system.
 
-Upwork was where I found my best writer, but I did paid trials with seven others before I found her.
-
 ## College job boards
 
-College job boards are a hidden gem for hiring content writers. Students in my area return to campus at the end of August, so last month, I posted job listings on the online student job boards for two of my local colleges. Here were my results:
+College job boards are a hidden gem for hiring content writers. At the start of the school year, I posted job listings on the online student job boards for two of my local colleges. Here were my results after three weeks:
 
 | School             | Applications | Trial hires | Permanent hires |
 |--------------------|--------------|-------------|-----------------|
 | Large state school | 17           | 3           | TBD             |
 | Small liberal arts school | 8     | 1           | TBD             |
 
-The quality of candidates is on par with what I've found on Upwork, but the wages are far lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr. I listed my job at $13/hr but it's still competitive with other wages when you take into account its flexibility. Students can write articles for me whenever they want from wherever they want, whereas most student employment is babysitting or administrative work, which requires them to appear in a specific place on a rigid schedule.
+The quality of candidates is on par with what I've found on Upwork, but the wages are far lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr. I offered at $13/hr, which is still competitive, given the job's flexibility. Students can write articles for me whenever they want from wherever they want. Most student employment is babysitting or administrative work, which requires the employee to appear in a specific place on a rigid schedule.
 
 {% include image.html file="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" max_width="600px" class="img-border" img_link=true fig_caption="Is It Keto's job listing on a local college job board" %}
 
@@ -79,7 +77,7 @@ I received only one serious applicant, and their writing samples were just poorl
 
 ## Soliciting from my blog (content marketing)
 
-In December, I published an article about [encountering a phony writer on Upwork](/upwork-scammer/). I thought the piece might attract the attention of other freelance writers, so I included little self-advertisements in the post asking people to email me if they were looking for writing work.
+In December, I published an article about [encountering a phony writer on Upwork](/upwork-scammer/). I thought the piece might attract the attention of other freelance writers, so I included a little self-advertisements in the footer. It encouraged readers to email me if they were looking for writing work.
 
 {% assign fig_caption = "Mini job announcement in my [blog post about a phony freelance writer](/upwork-scammer/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
