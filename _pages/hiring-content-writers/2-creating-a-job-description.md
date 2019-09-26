@@ -67,7 +67,7 @@ Here are the essential elements to cover in the job description:
   * Do you need to collect tax information from them?
     * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year. This is often unnecessary if you pay them through a marketplace like Upwork.
   * Will you pay a kill fee if you decide not to publish the writer's work?
-    * Publishers sometimes pay a "kill fee" if a writer completes an assignment but the publisher doesn't use it.
+    * Publishers sometimes pay a "kill fee" if a writer completes an assignment, but the publisher doesn't use it.
 * Example articles
   * Link to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
@@ -93,7 +93,10 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per article**
   * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
 
-TODO: Talk about how pay per article is most common.
+Pay per article is the most common arrangement for experienced freelance writers, but I chose pay per hour for Is It Keto for two reasons:
+
+1. Is It Keto articles vary widely in length and difficulty, so it's difficult to assign fair per-article rates.
+1. It allows me to request non-writing work from my freelancers (e.g., studying my [style guide](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency), meeting me for [periodic check-ins](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat)) without effectively asking them to volunteer their time for free.
 
 My strategy is to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour.
 
@@ -114,7 +117,7 @@ Which writer costs more in the long run?
 
 **Answer**: Not enough information.
 
-To understand why, you have to consider the total cost of producing an article, which is given by the formula below:
+To understand why, consider the total cost of producing an article, given by the formula below:
 
 ```text
 Cost per article = (Freelancer's time writing the article * freelancer's wage) +
@@ -123,21 +126,40 @@ Cost per article = (Freelancer's time writing the article * freelancer's wage) +
 
 TODO: Replace with prettier formula
 
-For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write took me around 37.5 minutes to edit. I paid the writer $20/hr and I valued my own time at $30/hr, so the total cost for each article would be:
+For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write and required 37.5 minutes of my time to edit. I paid the writer $20/hr and I valued my own time at $30/hr, so the total cost for each article was:
 
 ```text
-Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75
+Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article
 ```
 
+**Note**: This applies specifically to [pay per hour structure](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article). If you're paying per word or per article, check [Who Pays Writers](http://whopayswriters.com) to get a sense of market rates for publications similar to yours.
+{: .notice--info}
+
+
+A writer's hourly rate is meaningless unless you know how quickly they work and how much editing they require. I paid writers their asking rate, then used a [trial hire](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial) to evaluate whether they're worth the money.
+
+There are limits, of course. I never paid more than $65/hr because 
+
+There are limits. I skipped writers 
+
+TODO: Finish
+
+Asking what the right pay for a writer is like asking the weight of a box of bricks. It depends on the size of the box.
+
 There are two major variables in this equation that you
+
+That said
 
 TODO: Finish this thought
 
 | Candidate source   | What I paid |
 |--------------------|-------------|
 | [College job boards](/hiring-content-writers/1-finding-writers/#college-job-boards) | $13-$15/hr  |
-| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr  |
+| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr*  |
 | [Personal referrals](/hiring-content-writers/1-finding-writers/#personal-referrals) | $50-60/hr   |
+
+\* The $65/hr writer was one of my first hires, and it was far too expensive given their writing quality. Today, I wouldn't offer hire somoene at $65/hr unless I was supremely confident in their writing.
+
 
 ## Screening writers
 
