@@ -19,11 +19,11 @@ hide_signup: false
 
 ---
 
-A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job description, you know they're blasting out generic applications to every job they see.
+A clear, concise job description shows candidates that you're an organized professional who puts thought into what they want. It also allows the writers to skip applying if they recognize they're a poor match for the work you need. Lastly, it aids you in screening out poor candidates. If an applicant asks you questions that you answered clearly in your job description, you know they're desperately blasting out generic applications to every job they see.
 
 ## Example job description
 
-Below, I've included the job description I use to hire writers for Is It Keto. I used a Google Doc and always linked candidates directly to it so that there'd be a single, authoritative version. When I fixed mistakes or clarified the wording, I never had to worry about who had which draft of my document:
+Below, I've included the job description I use to hire writers for Is It Keto. It's a Google Doc, and I always link candidates directly to it to ensure a single, authoritative version. When I fix mistakes or clarify the wording, I never worry about who has which draft of my document:
 
 {% assign fig_caption = "Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -54,24 +54,24 @@ Here are the essential elements to cover in the job description:
   * Do you keep full rights to the articles, or can the writer republish them on other sites?
   * Does the writer receive a byline?
     * e.g., "by Michael Lynch"
-  * Is the author allowed to link to their own website?
+    * Is the author allowed to link to their own website in the byline?
 * Timing
-  * How many hours per week do you expect the writer to work each week?
+  * How many hours do you expect the writer to work each week?
   * How quickly must the writer complete work after they receive an assignment?
-  * Is it critical for their working hours to overlap with yours?
+  * Is it critical for the writer's working hours to overlap with yours?
 * Payment
   * How do you [structure payment](#pay-per-hour-per-word-or-per-piece)?
   * What method of payment will you use?
     * Check? PayPal? Venmo?
   * How quickly can writers expect payment?
-  * Do you need to collect tax information from them?
+  * Do you need to collect tax information from the writer?
     * In the US, you'll need to [collect a 1099](https://www.irs.gov/forms-pubs/about-form-1099-misc) from any freelancer that you pay more than $600 per year. This is often unnecessary if you pay them through a marketplace like Upwork.
   * Will you pay a kill fee if you decide not to publish the writer's work?
     * Publishers sometimes pay a "kill fee" if a writer completes an assignment, but the publisher doesn't use it.
 * Example articles
   * Link to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
-  * You can also link to counter-examples of writing you don't like.
+  * You can also link to counter-examples of writing you dislike.
     * What aspects of the counter-examples should writers avoid?
 
 ## Save money by offering flexibility
@@ -96,17 +96,15 @@ When it comes to pay structure for your freelancers, you have several options:
 Pay per article is the most common arrangement for experienced freelance writers, but I chose pay per hour for Is It Keto for two reasons:
 
 1. Is It Keto articles vary widely in length and difficulty, so it's difficult to assign fair per-article rates.
-1. It allows me to request non-writing work from my freelancers (e.g., studying my [style guide](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency), meeting me for [periodic check-ins](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat)) without effectively asking them to volunteer their time for free.
+1. It allows me to request non-writing work from my freelancers (e.g., studying my [style guide](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency), meeting me for [periodic check-ins](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat)) without pressuring them to volunteer their time for free.
 
-My strategy is to attract talented people and pay them for their time. It's my responsibility to use their time most efficiently, so I always choose to pay per hour.
+Other hiring guides discourage clients from paying per hour because it's "too expensive." This is plainly illogical. If you want work of a certain quality, it costs the same amount regardless of how you structure the pay. You can't trick a writer into producing the same quality work for lower costs.
 
-Other hiring guides discourage clients from paying people per hour because it's "too expensive." This is plainly illogical. If you want work of a certain quality, it costs the same amount regardless of how you structure the pay. You're not going to trick a writer into producing the same quality work for lower costs.
+I especially avoid paying per word because I want concise writing. Paying by the word incentivizes writers to include [fluff content](/hiring-content-writers/3-screening-candidates/#steer-clear-of-fluff-factories) that adds nothing to the article.
 
-Another big reason I avoid paying per word is that I want concise writing. If I'm paying per word, it incentivizes writers to include [fluff content](/hiring-content-writers/3-screening-candidates/#steer-clear-of-fluff-factories) that doesn't teach the reader anything.
+Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They earn more if the piece takes longer and requires more revisions, so why bother doing a good job?
 
-Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They earn more if the piece takes longer and requires more revisions, so why would they bother doing a good job?
-
-In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial rather than collaborative.
+In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial, and the work suffers.
 
 ## How much should you pay?
 
@@ -119,11 +117,11 @@ Which writer costs more in the long run?
 
 To understand why, consider the total cost of producing an article, given by the formula below:
 
-{% include image.html file="cost-formula.svg" alt="Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)" max_width="800px" %}
+{% include image.html file="cost-formula.svg" alt="Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)" max_width="900px" %}
 
 For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write and required 37.5 minutes of my time to edit. I paid the writer $20/hr, and I valued my own time at $30/hr, so the total cost for each article was:
 
-{% include image.html file="cost-example.svg" alt="Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article" max_width="800px" %}
+{% include image.html file="cost-example.svg" alt="Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article" max_width="700px" %}
 
 **Note**: This applies specifically to [pay per hour structure](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article). If you're paying per word or per article, check [Who Pays Writers](http://whopayswriters.com) to get a sense of market rates for publications similar to yours.
 {: .notice--info}

@@ -11,23 +11,23 @@ excerpt: A complete walkthrough of how I find freelance writers, screen them, an
 
 {% include image.html file="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" max_width="1000px" img_link=true %}
 
-If you write original content as part of your business, you know how quickly it drains your time and mental energy. It's extremely challenging to write articles or blog posts that readers find engaging, clear, and eloquent.
+If you write original content for your business, you know how quickly it drains your time and mental energy. It's extremely challenging to write articles or blog posts that readers find engaging, clear, and eloquent.
 
 You may have considered hiring a freelance writer, but it's daunting if you've never done it before. Where do you find writers? How much does it cost? How do you ensure the writing meets your standards?
 
-One of my businesses is a content website, and outsourcing the writing has been one of the most challenging aspects of it. The guides I found online were either uselessly vague or applied a wildly wrongheaded philosophy to working with freelancers.
+One of my businesses is a content website, and outsourcing the writing has been one of my toughest problems. The guides I found online were either uselessly vague or applied a wildly wrongheaded philosophy to working with freelancers.
 
-I'm by no means an expert at hiring writers, but I'm better than when I started. I've written this guide to help others understand the process and what pitfalls to avoid.
+I'm by no means an expert at hiring writers, but I'm better than I was at the outset. I've written this guide to help others understand the process and what pitfalls to avoid.
 
 ## Who should read this guide
 
-This guide is for people like me: small business owners who want to outsource writing to a professional. You can follow this guide with a monthly writing budget that's as low as $150, but it will work even for mid-range budgets up to $2,000-$3,000 per month.
+This guide is for people like me: small business owners who want to outsource writing to a professional. You can follow this guide with a monthly writing budget as low as $150, but it will work even for mid-range budgets up to $2,000-$3,000 per month.
 
 If you need a dirt-cheap writer to churn out content for your spam blog, this guide isn't for you. Conversely, if you're a Fortune 500 company who can blow $50k on a writing project without noticing, most of the strategies I describe won't apply.
 
 ## What is a content writer?
 
-There are three main types of freelance writers. Before hiring a content writer, you should understand how they differ from other types of writers:
+There are three main types of freelance writers. Before hiring a content writer, you should understand how they differ from others:
 
 | Type of writer | What they write | Examples |
 |----------------|-----------------|----------|
@@ -41,29 +41,27 @@ There's one underlying maxim that governs my hiring philosophy for any skilled p
 
 * **Talented people choose their employers selectively**
 
-I've read other guides that recommend forcing writers through tedious and time-consuming hoops without pay for mere the privilege of a *potential* job. They assume that writers are so desperate for work that you can demand anything you want from them.
+Other guides recommend forcing writers through tedious and time-consuming hoops without pay for mere the privilege of a *potential* job. They assume that writers are so desperate for work that you can demand anything you want from them.
 
-There certainly are desperate writers who will jump through all of your hoops, but they're not the writers you want. The exceptional writers will run for the hills as soon as they hear "unpaid trial job."
+There certainly are desperate writers who will jump through all of your hoops, but they're not the writers you want. Exceptional writers run for the hills as soon as they hear "unpaid trial job."
 
 If you want talented writers, create work conditions that are fair, pleasant, and interesting. Show candidates that you respect and value their craft. This starts from the first message you send and continues throughout your working relationship with them.
 
 ## My practical experience
 
-Everything in this guide is based on my real experiences of hiring and working with writers over several months.
-
-The project for which I hired these writers is a content site called [Is It Keto](https://isitketo.org). Every article on the site explains whether or not a particular food fits the keto diet.
+Everything in this guide is based on my real experiences of hiring and working with writers over several months. My project is a site called [Is It Keto](https://isitketo.org), which explains whether or not popular foods fit the keto diet.
 
 {% assign fig_caption = "Is It Keto article on [broccoli](https://isitketo.org/broccoli)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
 
-At [~73,000 monthly pageviews](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe the site's success results from its succinct, clear writing.
+At [~73,000 pageviews per month](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe its success results from its succinct, clear writing.
 
 Throughout this guide, I'll share examples of the actual job postings, style guides, and email templates I used to hire and work with writers on Is It Keto.
 
 ## Part One: Finding Writers
 
-The first step in hiring a writer is locating the ones that are available for work. This section outlines all the methods I used to find writers and which ones were successful.
+The first step in hiring a writer is locating the ones who are available for work. This section outlines all the methods I used to find writers and my results for each.
 
 [Read more](/hiring-content-writers/1-finding-writers/)
 
@@ -75,7 +73,7 @@ Now that you've found available writers, you need to tell them what you want. Th
 
 ## Part Three: Screening Candidates
 
-Once you receive applications from candidates, it's time to decide who to hire and who to reject. This section explains which signals help you make this decision and which ones you should ignore.
+Once you receive applications from candidates, it's time to decide whom to hire and whom to reject. This section explains the signals that help you make this decision and which ones you should ignore.
 
 [Read more](/hiring-content-writers/3-screening-candidates/)
 

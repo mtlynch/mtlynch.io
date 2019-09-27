@@ -19,15 +19,15 @@ hide_signup: false
 
 ---
 
-Screening writing candidates is challenging, as you need to make decisions with limited, imperfect information. This section explains what qualities to look for, which red flags to avoid, and how to contain the damage when you accidentally make a poor hire.
+Screening writing candidates requires you to make decisions with limited, imperfect information. This section explains what qualities to look for, which red flags to avoid, and how to contain the damage when you accidentally make a poor hire.
 
 ## Evaluation criteria
 
-Before you hire a writer, you can't tell how they'll write for you. You have a limited set of signals about the writer based on their profile and portfolio.  Below, I've outlined standard hiring criteria for writers and to evaluate them in your hiring decisions.
+Until you hire a writer, you can't tell how well they'll write for you. Their profile and portfolio provide a limited set of signals, none of them perfect. Below, I've outlined standard hiring criteria for writers and how to evaluate them in your hiring decisions.
 
 ### Hourly rate
 
-If you found one writer who charges $60/hr and another who charges only $30/hr, you naturally might assume that the $60/hr writer is better. How else could they command a wage that's twice as high as their competitor?
+If you find a writer who charges $60/hr and another who charges only $30/hr, you might naturally assume that the $60/hr writer is better. How else could they command a wage that's twice as high as their competitor?
 
 Surprisingly, I found this to be untrue. In my experience, a writer's asking rate was almost wholly unrelated to their skill level. In fact, the best writer I found on Upwork was also the one who billed the lowest rate, at $20/hr.
 
@@ -45,7 +45,7 @@ A profile with spelling or grammar errors is an automatic no-hire. If they can't
 
 ### Writing samples
 
-All professional writers should be able to provide you with writing samples, but they're not always an accurate reflection of their ability. A strong published piece might the result of adept editing rather than proficient writing. Conversely, an article might be dull and convoluted because the client demanded a 2,000-word article about a 500-word topic.
+All professional writers should provide you with writing samples, but they're not always an accurate reflection of their ability. A strong published piece might the result of an adept editor rather than a proficient writer. Conversely, an article might be dull and convoluted because the client demanded a 2,000-word article about a 500-word topic.
 
 When I read writing samples, I look for writing that's either extremely good or extremely bad. I reject when their samples are especially weak. If the writing samples in their public portfolio are so-so, I ask if they have a sample that's closer to [my site's style](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency).
 
@@ -53,13 +53,13 @@ When I read writing samples, I look for writing that's either extremely good or 
 
 Sites like Upwork publish reviews for freelancers. In my experience, reviews have been the least meaningful indicators of quality. Some of my worst hires had dozens of perfect five-star reviews.
 
-Negative reviews are a stronger signal. It's not a big deal if the candidate has a couple blemishes on an otherwise solid track record. Many clients are just jerks and have unreasonable expectations of freelancers. But if you see repeated patterns in their bad reviews, pay attention.
+Negative reviews are a stronger signal. It's not a big deal if the candidate has a couple blemishes on an otherwise solid track record. Many clients are just jerks and have unreasonable expectations of freelancers. But if you see consistent patterns in their bad reviews, pay attention.
 
 {% include image.html file="upwork-reviews.jpg" alt="Screenshot of Morgan Province's Upwork profile" max_width="705px" class="img-border" img_link=true fig_caption="Example reviews on Upwork" %}
 
 ### Publication credits
 
-Sometimes, a writer has fancy credits to their name, such as previous publications on well-known websites like [Forbes](https://www.forbes.com) or [The Huffington Post](https://www.huffpost.com).
+Sometimes, a writer has fancy credits to their name, such as publications on well-known websites like [Forbes](https://www.forbes.com) or [The Huffington Post](https://www.huffpost.com).
 
 In my experience, prestigious writing credits were not a meaningful signal. It never hurts to see that another publisher liked their work, but I've seen several writers with impressive credits but no ability to write.
 
@@ -67,9 +67,9 @@ In my experience, prestigious writing credits were not a meaningful signal. It n
 
 ### Steer clear of fluff factories
 
-The Internet is experiencing an epidemic of fluff writing. Site owners [think that Google will place their pages higher](https://moz.com/blog/blog-post-length-frequency) in results if their articles have a higher word count. Further, many clients pay by the word, so long-winded pieces earn more money. As a result, instead of learning to write well, many writers have learned to write fluff.
+The Internet is experiencing an epidemic of fluff writing. Site owners [think that Google will place their pages higher](https://moz.com/blog/blog-post-length-frequency) in results if their articles have a higher word count. Further, many clients [pay by the word](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article), so long-winded pieces earn more money. As a result, instead of learning to write well, many writers have learned to write fluff.
 
-Fluff writing sounds like a book report by a fifth grader who forgot to do the reading. Below, I've included an example of fluff writing. I wrote the passage myself, but it's depressingly similar to writing samples I received:
+Fluff writing sounds like a book report by a fifth grader who forgot to do the reading. Below, I've included an example of fluff writing. I wrote the passage myself, but it's depressingly similar to writing samples I've received:
 
 >Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
 >
@@ -77,7 +77,7 @@ Fluff writing sounds like a book report by a fifth grader who forgot to do the r
 >
 >Don’t overdo it either! Many people start working out and push themselves past their limits and injure themselves. Make sure to know your limits and always stay hydrated.
 
-When you're hiring, avoid "fluff factories" &mdash; writers who only produce fluff. Signs of a fluff factory include:
+When hiring, avoid "fluff factories" &mdash; writers who produce only fluff. Signs of a fluff factory include:
 
 * Desperate grabs at the reader's attention
   * Hyperbole
@@ -104,7 +104,7 @@ Writing improves slowly &mdash; at the scale of years. If a professional writer 
 
 You can find higher quality candidates if you reach out to them proactively instead of waiting for them to apply. The best candidates are generally too busy with their existing clients to check job boards aggressively for new postings.
 
-Writers receive generic spam job solicitations all the time, so a personalized invitation instantly makes you stand out as a client who respects their work. Mention specifics about what you liked about their writing and why they seem like a good match for the job.
+Writers receive generic spam job solicitations all the time, so a personalized invitation instantly makes you stand out as a client who respects their work. Mention specifics about their writing and why they seem like a good match for the job.
 
 Make it clear that you're not offering them a job right off the bat. You should exchange a few messages to gauge your chemistry together before making a formal offer.
 
@@ -112,7 +112,7 @@ Make it clear that you're not offering them a job right off the bat. You should 
 
 When hiring writers, my top priority is evaluating their published content. It's impossible to learn this by asking them lots of questions, so I keep my interviews short and quickly hire the writer for a paid trial (see [below](#start-a-paid-trial)).
 
-Still, the interview does give you a glimpse into what it's like working with this person. Do the two of you communicate well, or does it take several back and forths before a question is sufficiently stated and answered?
+Still, the interview does give you a glimpse into what it's like working with this person. Do the two of you communicate well, or does it take several back and forths before a question is sufficiently stated and answered? Are their personality and working style compatible with yours?
 
 | Signs of a <font color="red">bad</font> candidate | Signs of a <font color="green">good</font> candidate |
 |--------------------------|---------------------------|
@@ -124,7 +124,7 @@ Still, the interview does give you a glimpse into what it's like working with th
 
 In my experience, the best way to evaluate writing candidates is to hire them on a trial basis. A lengthy, unpaid screening process drives away top writers who have plenty of options.
 
-When offering a paid trial, I specifically avoid terms like "probationary period" because it sounds like I'm waiting for the writer to screw up. The trial period serves both of us. I get to see how the writer produces content for me, and the writer has the opportunity to see what I'm like as a paying client.
+When offering a paid trial, I specifically avoid terms like "probationary period" because it sounds like I'm waiting for the writer to screw up. The trial period serves both of us: I get to see how the writer produces content for me, and the writer has the opportunity to see what I'm like as a paying client.
 
 A paid trial is part of the candidate search. Many of your trial hires won't last, so you can hire multiple writers in parallel even if you want only one writer long-term.
 
