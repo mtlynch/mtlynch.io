@@ -35,7 +35,7 @@ Once I decide to hire a writer on a trial basis, I send them a kickoff email. Be
 >
 >[https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing)
 >
->Please bill for time that it takes you to learn the style guide and research the basics of the keto diet. I know there’s a lot in the style guide, so I’m not expecting you to get it perfect on your first try, but do your best to adhere to it.
+>Please bill for the time that it takes you to learn the style guide and research the basics of the keto diet. I know there’s a lot in the style guide, so I’m not expecting you to get it perfect on your first try, but do your best to adhere to it.
 >
 >You can enter your hours in this spreadsheet:
 >
@@ -43,7 +43,7 @@ Once I decide to hire a writer on a trial basis, I send them a kickoff email. Be
 >
 >Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours and you’re not finished, take the last half hour to organize the work you have so far and let me know what your progress is. There’s not a ton of urgency on this, but if you could let me know what day to expect the work, that would be helpful.
 >
->Can you also send me a mailing address where I should send your checks? I'll send the first one out on Saturday, September 7th for any hours you've worked through 9/6.
+>Can you also send me a mailing address where I should send your checks? I'll mail the first one on Saturday, September 7th for any hours you've worked through 9/6.
 
 Several critical things that are happening in this email:
 
@@ -59,22 +59,22 @@ I describe each of these elements in detail below.
 
 When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites or do you require full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
 
-Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, using an online template is infinitely better than no contract at all.
+Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, an online template is infinitely better than no contract at all.
 
 I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelance-writing-master-agreement) with some modifications and then used [Docracy](https://www.docracy.com) to collect e-signatures from my writers.
 
 **Sidenote**: I find the Docracy interface buggy and unintuitive. I only mention it because it's the service I used, but if you find a better service, choose that (and tell me about it).
 {: .notice--info}
 
-If you hire through a freelancing marketplace, they likely have a default contract that does what you want. For example, Upwork's [default contract](https://www.upwork.com/legal#optional-service-contract-terms) assigns all intellectual property rights to the client, so you likely don't need to create an additional contract.
+If you hire through a freelancing marketplace, they likely have a default contract that does what you want. For example, Upwork's [default contract](https://www.upwork.com/legal#optional-service-contract-terms) assigns all intellectual property rights to the client, so you probably don't need an additional contract.
 
 ## Keep your first assignment small and easy
 
-No matter how good your writer is, there's always a learning curve as they figure out how to write content that matches what you want. You can accelerate their learning by keeping a tight feedback loop. Start them out with small, simple assignments. As they master the easy stuff, gradually progress to larger and more complicated projects.
+No matter how good your writer is, there's always a learning curve as they figure out how to write content that matches what you want. You can accelerate their learning by keeping a tight feedback loop. Start them out with small, simple assignments. As they master the easy stuff, gradually progress to more complicated and substantial projects.
 
 ## Timebox early assignments
 
-If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task and then feel your eyes pop out of your head when you receive an invoice for 15 hours of work. They're not trying to rip you off. Writing assignments vary widely in thoroughness, so it's important to make time limits explicit.
+If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task and then feel your eyes pop out of your head when you receive an invoice for 15 hours of work. They're not trying to rip you off. Writing assignments vary widely in thoroughness, so it's crucial to make time limits explicit.
 
 Here's the instruction I give to my new writers:
 
@@ -96,7 +96,7 @@ Avoid the temptation to create rules for every imaginable scenario. Limit the st
 
 Make it a Google Doc or a wiki so that there's a single, authoritative copy of it that's easy to update. If the style guide is trapped in an email or PDF, it's difficult to ensure that everyone's working from the latest version.
 
-Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, resist the temptation to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section of the style guide. Be judicious about what you add to the style guide, however. The longer the guide, the harder it is for people to learn it.
+Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, resist the temptation to simply correct the mistake directly. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section of the style guide. Be judicious about what you add to the style guide, however. The longer the guide, the harder it is for people to learn it.
 
 I pay my writers to learn the style guide. I find it's helpful for the relationship because it shows them right out of the gate that I respect their time and I'm not a client who's going to pressure them into giving me unpaid work.
 
@@ -129,7 +129,7 @@ Freelancers consistently tell me that clear, empathetic feedback is the key fact
 
 >**<font color="red">Bad</font>**: You did a terrible job on the first paragraph. Rewrite it.
 
-This is poor feedback because it's vague and pushy. It also frames the feedback as a personal attack instead of focusing on the work itself.
+This is poor feedback because it's vague and pushy. It also frames the criticism as a personal attack instead of focusing on the work itself.
 
 >**<font color="green">Good</font>**: I had difficulty following the first paragraph. The sentence structure is repetitive, and it uses the passive voice too heavily.
 

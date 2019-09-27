@@ -78,7 +78,7 @@ Here are the essential elements to cover in the job description:
 
 Resist the temptation to demand constant availability and quick turnaround. Sure, it sounds great to have a writer at your beck and call, but that requirement limits the pool of writers and drives up their rates.
 
-Think about it from the writers' perspective. Freelancers juggle several clients at once. It's impossible to provide constant availability to all of them, so they either have to pass on jobs that require quick turnaround or take those jobs only when the pay is extremely high.
+Think about it from the writers' perspective. Freelancers juggle several clients at once, and it's impossible to provide constant availability to all of them. They either have to pass on jobs that require quick turnaround or take those jobs only when the pay is extremely high.
 
 Instead, offer writers as much flexibility as you can. Instead of imagining your ideal timing requirements, think about what you can live with. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
 
@@ -89,7 +89,7 @@ When it comes to pay structure for your freelancers, you have several options:
 * **Pay per hour**
   * Writer earns an hourly rate regardless of how much content they produce.
 * **Pay per word**
-  * Writer's pay is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.75 per word](http://whopayswriters.com)).
+  * Writer's fee is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.75 per word](http://whopayswriters.com)).
 * **Pay per article**
   * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
 
@@ -106,7 +106,7 @@ Another big reason I avoid paying per word is that I want concise writing. If I'
 
 Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They earn more if the piece takes longer and requires more revisions, so why would they bother doing a good job?
 
-In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial, and the work suffers.
+In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial rather than collaborative.
 
 ## How much should you pay?
 
@@ -119,18 +119,11 @@ Which writer costs more in the long run?
 
 To understand why, consider the total cost of producing an article, given by the formula below:
 
-```text
-Cost per article = (Freelancer's time writing the article * freelancer's wage) +
-                   (Your time editing article * value of your time)
-```
+{% include image.html file="cost-formula.svg" alt="Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)" max_width="800px" %}
 
-TODO: Replace with prettier formula
+For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write and required 37.5 minutes of my time to edit. I paid the writer $20/hr, and I valued my own time at $30/hr, so the total cost for each article was:
 
-For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write and required 37.5 minutes of my time to edit. I paid the writer $20/hr and I valued my own time at $30/hr, so the total cost for each article was:
-
-```text
-Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article
-```
+{% include image.html file="cost-example.svg" alt="Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article" max_width="800px" %}
 
 **Note**: This applies specifically to [pay per hour structure](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article). If you're paying per word or per article, check [Who Pays Writers](http://whopayswriters.com) to get a sense of market rates for publications similar to yours.
 {: .notice--info}

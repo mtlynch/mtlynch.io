@@ -52,7 +52,7 @@ The rules for artfully ending a relationship are similar to the [rules for givin
 
 >**<font color="red">Bad</font>**: Your writing is terrible, and I hate you.
 
->**<font color="green">Good</font>**: Your writing unfortunately doesn't match the style I'm looking for, and I don't feel that we communicate well.
+>**<font color="green">Good</font>**: Unfortunately, your writing doesn't match the style I'm looking for, and I don't feel that we communicate well.
 
 On a platform like Upwork, it's especially important to avoid acrimonious terminations because writers leave feedback for their clients. If they give you a low rating and accuse you of being an unreasonable client, you'll have a harder time attracting talent in the future.
 
@@ -71,7 +71,7 @@ For example, with Is It Keto, I noticed myself burning too much time fixing gram
 
 ## Termination is part of the process
 
-After a termination, it's easy to feel discouraged. You've invested hours into screening and training a writer only to throw it all away and start from scratch. Depending on how you structured compensation, you may have even paid them for an article that's too shoddy to publish. That's never a good feeling.
+After letting a writer go, it's easy to feel discouraged. You've invested hours into screening and training a writer only to throw it all away and start from scratch. Depending on how you structured compensation, you may have even paid them for an article that's too shoddy to publish. That's never a good feeling.
 
 Instead of allowing the termination to bring you down, recognize the positives. Each iteration of this process gives you a better sense of what you want, helps you more quickly distinguish between good and bad candidates, and improves your skills as a manager.
 
