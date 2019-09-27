@@ -31,7 +31,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 ### Advantages
 
-* There are many writers in one place.
+* Provides many writers in a unified platform.
 * Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
 * Upwork has a built-in escrow service, so freelancers are unlikely to defraud you.
   * In disputes, Upwork generally sides with clients, much to the chagrin of honest freelancers who get stuck with bad clients.

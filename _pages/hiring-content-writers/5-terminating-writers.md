@@ -63,17 +63,17 @@ Before you begin interviewing again, review your job description and style guide
 * Revise your job description
   * Can you prevent misunderstandings about the work by clarifying the job description?
 * Update your example articles
-  * Do you have any new articles that can serve as the better model of what you want?
+  * Do you have any new articles that can serve as better models of what you want?
 * Re-read your style guide
   * Are there recurring patterns of error that you can warn about in your style guide?
 
-For example, with Is It Keto, I noticed myself burning too much time fixing grammar errors for my writers. Reviewing my job description, I realized that I never called out proper grammar as a requirement. I revised the job posting to make grammar expertise an explicit requirement and paid closer attention to syntax when [evaluating writing samples](/hiring-content-writers/3-screening-candidates/#writing-samples). This drastically reduced my time fixing grammar errors &mdash; it caused candidates to proofread their work more thoroughly, and I learned to bail fast on writers with poor grammar.
+For example, with Is It Keto, I noticed myself burning too much time fixing grammar errors for my writers. I revised the job posting to make grammar proficiency an explicit requirement and paid closer attention to syntax when [evaluating writing samples](/hiring-content-writers/3-screening-candidates/#writing-samples). This drastically reduced the time I spent fixing grammar errors. The requirement caused candidates to proofread their work more thoroughly, and I learned to bail fast on writers with poor grammar.
 
 ## Termination is part of the process
 
 After letting a writer go, it's easy to feel discouraged. You've invested hours into screening and training a writer only to throw it all away and start from scratch. Depending on how you structured compensation, you may have even paid them for an article that's too shoddy to publish. That's never a good feeling.
 
-Instead of allowing the termination to bring you down, recognize the positives. Each iteration of this process gives you a better sense of what you want, helps you more quickly distinguish between good and bad candidates, and improves your skill as a manager.
+Instead of allowing the termination to bring you down, recognize the positives. Each iteration of this process gives you a better sense of what you want, helps you more quickly eliminate weak candidates, and improves your skill as a manager.
 
 When you find the writer that matches your needs, it's a tremendous partnership, but you need to put in the work to find them.
 

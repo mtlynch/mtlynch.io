@@ -69,7 +69,7 @@ In my experience, prestigious writing credits were not a meaningful signal. It n
 
 The Internet is experiencing an epidemic of fluff writing. Site owners [think that Google will place their pages higher](https://moz.com/blog/blog-post-length-frequency) in results if their articles have a higher word count. Further, many clients [pay by the word](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article), so long-winded pieces earn more money. As a result, instead of learning to write well, many writers have learned to write fluff.
 
-Fluff writing sounds like a book report by a fifth grader who forgot to do the reading. Below, I've included an example of fluff writing. I wrote the passage myself, but it's depressingly similar to writing samples I've received:
+Fluff writing sounds like a book report by a fifth-grader who forgot to do the reading. Below, I've included an example of fluff writing. I wrote the passage myself, but it's depressingly similar to writing samples I've received:
 
 >Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
 >
@@ -98,11 +98,11 @@ If you were searching for someone to perform brain surgery, you'd probably avoid
 
 It takes weeks or months to find a writer that produces content you want. During that time, it's easy for desperation to set in. Several times, I found mediocre writers and thought to myself, "Their writing is rough, but I can coach them to improve it." This never worked.
 
-Writing improves slowly &mdash; at the scale of years. If a professional writer produces D-grade writing, they'll remain a D-grade writer for years to come. Remember that when you see an enthusiastic but mediocre writer offering to work at bargain basement rates.
+Writing improves slowly &mdash; at the scale of years. If a professional writer produces D-grade writing, they'll remain a D-grade writer for years to come. Remember that when you see an enthusiastic but mediocre writer offering to work at bargain-basement rates.
 
 ## Proactively invite freelancers to apply
 
-You can find higher quality candidates if you reach out to them proactively instead of waiting for them to apply. The best candidates are generally too busy with their existing clients to check job boards aggressively for new postings.
+You can find higher-quality candidates if you reach out to them proactively instead of waiting for them to apply. The best candidates are generally too busy with their existing clients to check job boards aggressively for new postings.
 
 Writers receive generic spam job solicitations all the time, so a personalized invitation instantly makes you stand out as a client who respects their work. Mention specifics about their writing and why they seem like a good match for the job.
 
