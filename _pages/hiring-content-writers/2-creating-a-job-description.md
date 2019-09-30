@@ -23,7 +23,7 @@ A clear, concise job description shows candidates that you're an organized profe
 
 ## Example job description
 
-Below, I've included the job description I use to hire writers for Is It Keto. It's a Google Doc, and I always link candidates directly to it to ensure a single, authoritative version. When I fix mistakes or clarify the wording, I never worry about who has which draft of my document:
+Below, I've included the job description I use to hire writers for Is It Keto. It's a Google Doc, and I always link candidates directly to it to ensure a single, authoritative version. When I fix mistakes or clarify the wording, I never worry about who has which draft of my document.
 
 {% assign fig_caption = "Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -117,40 +117,28 @@ Which writer costs more in the long run?
 
 To understand why, consider the total cost of producing an article, given by the formula below:
 
-{% include image.html file="cost-formula.svg" alt="Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)" max_width="900px" %}
+![Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)](/images/hiring-content-writers/2-creating-a-job-description/cost-formula.svg "Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)")
 
 For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write and required 37.5 minutes of my time to edit. I paid the writer $20/hr, and I valued my own time at $30/hr, so the total cost for each article was:
 
-{% include image.html file="cost-example.svg" alt="Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article" max_width="700px" %}
+![Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article](/images/hiring-content-writers/2-creating-a-job-description/cost-example.svg "Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article")
 
 **Note**: This applies specifically to [pay per hour structure](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article). If you're paying per word or per article, check [Who Pays Writers](http://whopayswriters.com) to get a sense of market rates for publications similar to yours.
 {: .notice--info}
 
-
 A writer's hourly rate is meaningless unless you know how quickly they work and how much editing they require. I paid writers their asking rate, then used a [trial hire](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial) to evaluate whether they're worth the money.
 
-There are limits, of course. I never paid more than $65/hr because 
+There are limits, of course. I never pay more than $60/hr because it's simply too expensive to run trial hires at that rate, given how few of them work out.
 
-There are limits. I skipped writers 
-
-TODO: Finish
-
-Asking what the right pay for a writer is like asking the weight of a box of bricks. It depends on the size of the box.
-
-There are two major variables in this equation that you
-
-That said
-
-TODO: Finish this thought
+The table below shows the rates I paid depending on the channel where I found the writer:
 
 | Candidate source   | What I paid |
 |--------------------|-------------|
 | [College job boards](/hiring-content-writers/1-finding-writers/#college-job-boards) | $13-$15/hr  |
-| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr*  |
+| [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr <sup>1</sup>  |
 | [Personal referrals](/hiring-content-writers/1-finding-writers/#personal-referrals) | $50-60/hr   |
 
-\* The $65/hr writer was one of my first hires, and it was far too expensive given their writing quality. Today, I wouldn't offer hire somoene at $65/hr unless I was supremely confident in their writing.
-
+<small><sup>1</sup> The $65/hr writer was one of my first hires, and that rate was far too expensive given their writing quality. Today, I wouldn't offer hire somoene at $65/hr unless I was supremely confident in their writing.</small>
 
 ## Screening writers
 

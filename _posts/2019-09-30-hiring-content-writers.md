@@ -13,9 +13,9 @@ excerpt: A complete walkthrough of how I find freelance writers, screen them, an
 
 If you write original content for your business, you know how quickly it drains your time and mental energy. It's extremely challenging to write articles or blog posts that readers find engaging, clear, and eloquent.
 
-You may have considered hiring a freelance writer, but it's daunting if you've never done it before. Where do you find writers? How much does it cost? How do you ensure the writing meets your standards?
+You may have considered hiring a freelance writer, but it's daunting if you've never done it before. Where do you find writers? How much does it cost? How do you ensure quality?
 
-One of my businesses is a content website, and outsourcing the writing has been one of my toughest problems. The guides I found online were either uselessly vague or applied a wildly wrongheaded philosophy to working with freelancers.
+One of my businesses is a content website, and outsourcing the writing has been one of my toughest challenges. The guides I found online were either uselessly vague or applied a wildly wrongheaded philosophy to working with freelancers.
 
 I'm by no means an expert at hiring writers, but I'm better than I was at the outset. I've written this guide to help others understand the process and what pitfalls to avoid.
 
@@ -41,7 +41,7 @@ There's one underlying maxim that governs my hiring philosophy for any skilled p
 
 * **Talented people choose their employers selectively**
 
-Other guides recommend forcing writers through tedious and time-consuming hoops without pay for mere the privilege of a *potential* job. They assume that writers are so desperate for work that you can demand anything you want from them.
+Other guides recommend forcing writers through tedious and time-consuming hoops without pay. They assume that writers are so desperate for work that you can demand anything you want from them by dangling the mere *potential* for a job.
 
 There certainly are desperate writers who will jump through all of your hoops, but they're not the writers you want. Exceptional writers run for the hills as soon as they hear "unpaid trial job."
 
@@ -49,7 +49,7 @@ If you want talented writers, create work conditions that are fair, pleasant, an
 
 ## My practical experience
 
-Everything in this guide is based on my real experiences of hiring and working with writers over several months. My project is a site called [Is It Keto](https://isitketo.org), which explains whether or not popular foods fit the keto diet.
+Everything in this guide is based on my real experiences of hiring and working with writers over several months. My business is a website called [Is It Keto](https://isitketo.org), which explains whether or not popular foods fit the keto diet.
 
 {% assign fig_caption = "Is It Keto article on [broccoli](https://isitketo.org/broccoli)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -61,7 +61,7 @@ Throughout this guide, I'll share examples of the actual job postings, style gui
 
 ## Part One: Finding Writers
 
-The first step in hiring a writer is locating the ones who are available for work. This section outlines all the methods I used to find writers and my results for each.
+The first step in hiring writers is locating the ones who are available for work. This section outlines all the methods I used to find writers and my results for each.
 
 [Read more](/hiring-content-writers/1-finding-writers/)
 
@@ -79,7 +79,7 @@ Once you receive applications from candidates, it's time to decide whom to hire 
 
 ## Part Four: Working with Writers
 
-After hiring a writer, your next step is teaching them the style of writing you want. This section explains how to help writers learn to write well for you and how to ensure that your best writers stick with you.
+After hiring a writer, your next step is teaching them the style of writing you want. This section explains how to help writers learn to write well for you and how to ensure that your best writers stick around.
 
 [Read more](/hiring-content-writers/4-working-with-writers/)
 

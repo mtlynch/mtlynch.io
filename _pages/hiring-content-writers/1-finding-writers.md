@@ -31,8 +31,8 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 ### Advantages
 
-* Provides many writers in a unified platform.
-* Everyone's hourly rate is displayed publicly, so there's less work for the client in price discovery and negotiation.
+* Upwork provides many writers in a unified platform.
+* Upwork publicly displays everyone's hourly rate, so there's less work for the client in price discovery and negotiation.
 * Upwork has a built-in escrow service, so freelancers are unlikely to defraud you.
   * In disputes, Upwork generally sides with clients, much to the chagrin of honest freelancers who get stuck with bad clients.
 * Upwork manages time-tracking and invoicing, making it simple to pay your freelancer.
@@ -42,7 +42,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 ### Disadvantages
 
 * Upwork [collects fees](https://www.upwork.com/legal#fees) from both the client and the freelancer, effectively making it ~13-23% more expensive to hire someone.
-* Once you begin working with someone through Upwork, you're contractually bound to pay them exclusively through Upwork (including Upwork fees) for two years.
+* Once you begin working with someone through Upwork, you're contractually bound to pay them exclusively through Upwork for two years.
 * Upwork attracts cheap, abusive clients, which has caused many talented writers to abandon the platform.
 * Upwork [fails to eliminate phony freelancers](/upwork-scammer/) from its system.
 
@@ -55,13 +55,13 @@ College job boards are a hidden gem for hiring content writers. At the start of 
 | Large state school | 17           | 3           | TBD             |
 | Small liberal arts school | 8     | 1           | TBD             |
 
-The quality of candidates is on par with what I've found on Upwork, but the wages are far lower. On Upwork, writers typically charge between $30-75/hr. In my area, typical wages for student jobs are $11-$15/hr.
+The quality of candidates is on par with Upwork, but the wages are far lower. On Upwork, writers typically charge between $30-$75/hr. In my area, typical wages for student jobs are $11-$15/hr.
 
-I offered $13/hr, which is still competitive, given the job's flexibility. Students can write articles for me whenever they want from wherever they want. Most student employment is babysitting or administrative work, which requires the employee to appear in a specific place on a rigid schedule. The freedom of a writing gig makes a substantial difference.
+I offered $13/hr, which is competitive, given the job's flexibility. Students can write articles for me whenever they want from wherever they want. Most student employment is babysitting or administrative work, which requires the employee to appear in a specific place on a rigid schedule. The freedom of a writing gig makes a substantial difference.
 
 {% include image.html file="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" max_width="600px" class="img-border" img_link=true fig_caption="Is It Keto's job listing on a local college job board" %}
 
-The best candidates had experience writing for college publications. In the future, I may try reviewing college newspapers and reach out to student journalists whose writing I like.
+The best candidates had experience writing for college publications. In the future, I may try reviewing college newspapers and reaching out to student journalists whose writing I like.
 
 ## Personal referrals
 
@@ -81,7 +81,7 @@ I received only one serious applicant, and their writing samples were just poorl
 
 In December, I published an article about [encountering a phony writer on Upwork](/upwork-scammer/). I thought the piece might attract the attention of other freelance writers, so I included a little self-advertisement in the article's footer. It encouraged readers to email me if they were looking for writing work.
 
-This strategy generated two applications, but neither one was strong enough for me to start a paid trial.
+This strategy generated two applications, but neither one was strong enough to initiate a paid trial.
 
 {% assign fig_caption = "Mini job announcement in my [blog post about a phony freelance writer](/upwork-scammer/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
