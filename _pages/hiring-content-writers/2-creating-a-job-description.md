@@ -69,7 +69,7 @@ Here are the essential elements to cover in the job description:
   * Will you pay a kill fee if you decide not to publish the writer's work?
     * Publishers sometimes pay a "kill fee" if a writer completes an assignment, but the publisher doesn't use it.
 * Example articles
-  * Provide links to content to serve as the inspiration for what you want.
+  * Provide links to content that provides inspiration for what you want.
     * Be specific about what you like about the examples.
   * You can also link to counter-examples of writing you dislike.
     * What aspects of the counter-examples should writers avoid?
@@ -78,33 +78,32 @@ Here are the essential elements to cover in the job description:
 
 Resist the temptation to demand constant availability and quick turnaround. Sure, it sounds great to have a writer at your beck and call, but that requirement limits the pool of writers and drives up their rates.
 
-Think about it from the writers' perspective. Freelancers juggle several clients at once, and it's impossible to provide constant availability to all of them. They either have to pass on jobs that require quick turnaround or take those jobs only when the pay is extremely high.
+Think about it from the writer's perspective. Freelancers juggle several clients at once, and it's impossible to provide constant availability to all of them. They either have to pass on jobs that require quick turnaround or take those jobs only when the pay is extremely high.
 
-Instead, offer writers as much flexibility as you can. Instead of imagining your ideal timing requirements, think about what you can live with. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates if you offer this flexibility.
+Instead, offer writers as much flexibility as you can. Instead of imagining your ideal timing requirements, think about what you can live with. Can you tolerate a turnaround time of a week or more on assignments? If so, you'll save money and attract better candidates by providing this flexibility.
 
 ## Pay per hour, per word, or per article?
 
 When it comes to pay structure for your freelancers, you have several options:
 
-* **Pay per hour**
-  * Writer earns an hourly rate regardless of how much content they produce.
-* **Pay per word**
-  * Writer's fee is the final word count of the piece multiplied by an agreed price per word (typically [$0.10 to $0.75 per word](http://whopayswriters.com)).
-* **Pay per article**
-  * Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested.
+| Pay structure | Description |
+|---------------|-------------|
+| Pay per hour  | Writer earns an hourly rate regardless of how much content they produce. |
+| Pay per word  | Writer's fee is the final word count of the piece multiplied by an agreed price per word.<br>*(typically [$0.10 to $0.75 per word](http://whopayswriters.com))* |
+| Pay per article | Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested. |
 
-Pay per article is the most common arrangement for experienced freelance writers, but I chose pay per hour for Is It Keto for two reasons:
+**Pay per article** is the most common arrangement for experienced freelance writers, but I chose **pay per hour** for Is It Keto for two reasons:
 
 1. Is It Keto articles vary widely in length and difficulty, so it's difficult to assign fair per-article rates.
-1. It allows me to request non-writing work from my freelancers (e.g., studying my [style guide](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency), meeting me for [periodic check-ins](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat)) without pressuring them to volunteer their time for free.
+1. Hourly pay lets me request non-writing work from my freelancers (e.g., studying my [style guide](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency), meeting me for [periodic check-ins](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat)) without pressuring them to volunteer their time for free.
 
 Other hiring guides discourage clients from paying per hour because it's "too expensive." This is plainly illogical. If you want work of a certain quality, it costs the same amount regardless of how you structure the pay. You can't trick a writer into producing the same quality work for lower costs.
 
-I especially avoid paying per word because I want concise writing. Paying by the word incentivizes writers to include [fluff content](/hiring-content-writers/3-screening-candidates/#steer-clear-of-fluff-factories) that adds nothing to the article.
+I pointedly avoid paying per word because I want concise writing. Paying by the word incentivizes writers to include [fluff content](/hiring-content-writers/3-screening-candidates/#steer-clear-of-fluff-factories) that adds nothing to the article.
 
 Other guides criticize hourly wages for the same perverse incentives. They claim that if you pay writers by the hour, they have no incentive to work quickly or produce quality writing. They earn more if the piece takes longer and requires more revisions, so why bother doing a good job?
 
-In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create a system that shifts all financial penalties onto them, the relationship becomes adversarial, and the work suffers.
+In my experience, talented people deliver quality work if you empower them to do so. If you start micromanaging them or create systems that shift all financial penalties onto them, the relationship becomes adversarial, and the work suffers.
 
 ## How much should you pay?
 
@@ -126,11 +125,11 @@ For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my
 **Note**: This applies specifically to [pay per hour structure](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article). If you're paying per word or per article, check [Who Pays Writers](http://whopayswriters.com) to get a sense of market rates for publications similar to yours.
 {: .notice--info}
 
-A writer's hourly rate is meaningless unless you know how quickly they work and how much editing they require. I paid writers their asking rate, then used a [trial hire](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial) to evaluate whether they're worth the money.
+A writer's hourly rate is meaningless unless you know how quickly they work and how much editing they require. I typically pay writers their asking rate, then use a [trial hire](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial) to evaluate whether they're worth the money.
 
 There are limits, of course. I never pay more than $60/hr because it's simply too expensive to run trial hires at that rate, given how few of them work out.
 
-The table below shows the rates I paid depending on the channel where I found the writer:
+The table below shows the rates I paid depending on how I foud the candidate:
 
 | Candidate source   | What I paid |
 |--------------------|-------------|
@@ -138,7 +137,7 @@ The table below shows the rates I paid depending on the channel where I found th
 | [Upwork](/hiring-content-writers/1-finding-writers/#upwork)             | $20-$65/hr <sup>1</sup>  |
 | [Personal referrals](/hiring-content-writers/1-finding-writers/#personal-referrals) | $50-60/hr   |
 
-<small><sup>1</sup> The $65/hr writer was one of my first hires, and that rate was far too expensive given their writing quality. Today, I wouldn't offer hire somoene at $65/hr unless I was supremely confident in their writing.</small>
+<small><sup>1</sup> The $65/hr writer was one of my first hires, and that rate was far too expensive given their writing quality. Today, I wouldn't hire someone at $65/hr unless I was supremely confident in their writing.</small>
 
 ## Screening writers
 

@@ -19,11 +19,11 @@ hide_signup: false
 
 ---
 
-You can't judge how well a writer writes for you until you see them do it. The paid trial is where the evaluation process truly begins. Use this time to observe how well the two of you communicate and how much coaching or editing they need before they produce content that matches what you want.
+You can't judge a writer's skill accurately until they produce content for you. The paid trial is where the evaluation process truly begins. Use this time to observe how well the two of you communicate and how much coaching or editing they need before their writing matches what you want.
 
 ## Send a kickoff email
 
-Once I decide to hire a writer on a trial basis, I send them a kickoff email. Below, I've included an actual kickoff email I sent to one of my writers:
+Once I decide to hire a writer, I send them a kickoff email. Below, I've included an actual kickoff email I sent to one of my writers:
 
 >I’ve just sent over the contract for you to sign. Let me know if you have any questions.
 >
@@ -74,7 +74,7 @@ No matter how good your writer is, there's always a learning curve as they figur
 
 ## Timebox early assignments
 
-If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task only to be gobsmacked by a 15-hour invoice. . Unexpectedly high hours are not necessarily an indicator that the writer's trying to rip you off. Writing assignments vary widely in thoroughness, so it's crucial to make time limits explicit.
+If you're paying by the hour, it's critical to timebox your freelancer's work. Otherwise, you might assign them what you think is a 30-minute task only to be gobsmacked by a 15-hour invoice. Unexpectedly high hours are not necessarily an indicator that the writer's trying to rip you off. Writing assignments vary widely in thoroughness, so it's crucial to align everyone's expectations.
 
 Here's the instruction I give to my new writers:
 
@@ -84,7 +84,7 @@ As you work together more, give the writer more autonomy by increasing these hou
 
 ## Use a style guide to enforce consistency
 
-Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly? Your writers won't know what type of writing you want unless you tell them. This is even more important if you're working with multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with slang and animated gifs.
+Do you want the content on your site to be formal and serious? Or do you want it to be irreverent and a little bit silly? Your writers won't know what type of writing you want unless you tell them. This is even more important if you're working with multiple writers. Otherwise, you end up with one article on your site that's sterile and highly scientific, while another is filled with teen slang and animated gifs.
 
 Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the [style guide for Is It Keto](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky):
 
@@ -96,17 +96,19 @@ Resist the temptation to create rules for every imaginable scenario. Limit the s
 
 Make it a Google Doc or a wiki so that there's a single, authoritative version that's easy to update. If the style guide is trapped in an email or PDF, it's difficult to ensure that everyone's working from the latest version.
 
-Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, it's short-sighted to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section. Add to the style guide judiciously. The longer the guide, the harder it is for people to learn it.
+Your style guide is a living document, and you should continue updating it as you work with your writers. For example, if you see a writer omitting the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma), but you're an ardent supporter, it's short-sighted to simply correct the mistake. Instead, update your style guide to mention that writers should use the Oxford comma, and point the writer to this new section.
+
+Add to your style guide judiciously. The longer the guide, the harder it is for people to learn it.
 
 I pay my writers to learn the style guide. It's helpful for the relationship because it shows them right out of the gate that I respect their time. It distinguishes me from clients who disrespect the business relationship by demanding unpaid work.
 
 ## Agree on an editing workflow
 
-Your writer's first draft will likely require editing, guidance, and feedback. A clearly defined workflow for revisions minimizes pain and wasted effort during the editing process.
+Your writer's first draft will likely require editing, guidance, and feedback. A clearly defined workflow for revisions minimizes pain and wasted effort during this process.
 
-Here's the editing workflow I use with writers for Is It Keto:
+Here's the editing workflow I use for Is It Keto:
 
-1. I create a Google Doc with the [an article template](https://docs.google.com/document/d/1C3uLqvOhqPDuLftkgSad8ZT6PdFBTDWk3hGn4c0c1vw/edit?usp=sharing).
+1. I create a Google Doc with [an article template](https://docs.google.com/document/d/1C3uLqvOhqPDuLftkgSad8ZT6PdFBTDWk3hGn4c0c1vw/edit?usp=sharing).
 1. I share the Google Doc with the writer and ask them to fill in the template.
 1. The writer emails me to let me know when they have a draft ready for me to review.
 1. I add margin comments to the Google Doc and make inline edits in "Suggesting" mode.
@@ -133,20 +135,18 @@ This is poor feedback because it's vague and pushy. It also frames the criticism
 
 >**<font color="green">Good</font>**: I had difficulty following the first paragraph. The sentence structure is repetitive, and it uses the passive voice too heavily.
 
-This is a more tactful rewrite of the feedback above. It calls out specific problems with the writing, and it avoids using the term "you" so that the writer doesn't feel that this is a personal attack.
+This is a more tactful rewrite of the feedback above. It calls out specific problems with the writing, and it avoids the word "you" so that the writer doesn't feel that this is a personal attack.
 
 ## Decide whether to terminate a writer
 
-If you've hired the writer on a trial basis, the real interview begins when they send you their first few drafts. Now is the time to pay close attention to their work.
-
-Look out for signs that you should terminate the relationship:
+As you review the writer's first few drafts, look out for signs that you should terminate the relationship:
 
 * Their writing includes careless errors such as grammar or spelling mistakes.
 * They repeatedly violate your style guide.
 * They miss deadlines.
 * They bill a higher number of hours than you can afford long-term (if you're paying hourly).
 
-It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft, &mdash; it's okay if they're still struggling to learn my style guide, but I'll end the relationship if it has egregious spelling or grammatical issues. By draft two or three, I expect the writing to be close to publication-quality, but they're usually still learning the nuances of my desired style.
+It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; it's okay if they're still struggling to learn my style guide, but I'll end the relationship over egregious spelling or grammatical errors. By draft two or three, I expect the writing to be close to publication-quality, but they're usually still learning the nuances of my desired style.
 
 Remember that [it's hopeless to fix an unskilled writer](/hiring-content-writers/3-screening-candidates/#resist-the-temptation-to-fix-bad-writers). If their writing is illogical, boring, difficult to understand, or syntactically incorrect, it'll stay that way for years.
 
@@ -154,9 +154,9 @@ If a writer fails to meet your standards, see the section on [terminating writer
 
 ## Pay promptly
 
-[Who Pays Writers](http://whopayswriters.com) is a crowdsourced collection of freelancers' working experiences. Promptness of payment is one of the strongest factors in these reviews. Writers value clients who pay the freelancer their total fee soon after they deliver the work.
+[Who Pays Writers](http://whopayswriters.com) is a crowdsourced collection of freelancers' working experiences. Promptness of payment is one of the strongest factors in these reviews. Writers value clients who pay the freelancer in full soon after the work completes.
 
-To maintain a healthy relationship with your freelancers, be clear about when they should expect payment, and ensure that you meet those expectations. On freelancing platforms like Upwork, this is straightforward, as you simply need to approve hours when prompted. If you're working with a writer directly, you'll have to apply more diligence.
+To maintain a healthy relationship with your freelancers, define when they should expect payment, and meet those expectations. On freelancing platforms like Upwork, this is straightforward, as you simply need to approve hours when prompted. If you're working with a writer directly, you'll have to apply more diligence.
 
 When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
 
@@ -168,7 +168,7 @@ When I pay writers directly (rather than through a freelancing platform), I ask 
 
 On alternating Mondays, I mail them a check for the hours they've accrued in the pay period.
 
-**Tip**: Check whether your bank offers check mailing as a free service. I use Chase Business Checking, which allows me to use their Bill Payment web app to send anyone a physical check for free.
+**Tip**: See if your bank offers check mailing as a free service. I use Chase Business Checking, which allows me to use their Bill Payment service to send anyone a physical check for free.
 {: .notice--info}
 
 ## Meet regularly in person or on video chat
@@ -179,17 +179,17 @@ It's tough to maintain a healthy working relationship with someone exclusively t
 
 I remember a specific instance with Morgan, one of Is It Keto's early writers. She often submitted work that used the [passive voice](https://www.grammarly.com/blog/passive-voice/), even though it violated the site's style guide. Annoyed, I'd often ask myself, "Why doesn't she care enough to catch these errors herself?"
 
-When Morgan and I began meeting over video chat, it became immediately apparent that she cared deeply about the quality of her work. Passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, don't have, any idea what she's talking, about.
+When Morgan and I began meeting over video chat, it immediately became apparent that she cared deeply about the quality of her work. Passive voice was just her blind spot. And we all have blind spots for errors in our writing. My [editor](/editor) always criticizes my comma usage but I, have no, idea what she's talking, about.
 
 Use these meetings as an opportunity to grow as a manager. Be open. Ask if there's anything about the workflow that makes it harder for them to do their best work. Is there anything you can do, as the client, to make the job more pleasant or efficient? Your freelancer might be doing unnecessary work because they mistakenly thought you wanted it that way.
 
-Recognize that meeting with you is work for your freelancer, so make it clear that you'll pay them for their time.
+Recognize that meeting with you is work for your freelancer, so let them know that you'll pay them for their time.
 
 ## When you find a good writer, invest in the relationship
 
 It probably took a long time to find a writer that matches your needs. Now, it's time to nurture the relationship so that it lasts as long as possible.
 
-Allow them to share in your mission. If the business is growing thanks to their writing, share those victories with your writer. It's motivating for them to see the impact of their work instead of feeling like they're trading articles for a paycheck every few weeks.
+Allow them to share in your mission. If the business is growing thanks to their writing, share those victories with your writer. It's motivating for them to see the impact of their work instead of feeling like they're cranking out thousands of words for a paycheck every few weeks.
 
 With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [*The Elements of Style*](https://amzn.to/30cUr8y) (aka [*Strunk and White*](https://amzn.to/30cUr8y)). I asked her if it would be okay if I sent her a copy, and she happily agreed. Later on, she specifically mentioned that gift as something that made her value the job &mdash; it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 

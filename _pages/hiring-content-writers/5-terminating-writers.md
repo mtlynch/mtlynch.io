@@ -23,13 +23,13 @@ If you've followed this guide, you've hired writers on a trial basis, which mean
 
 ## Example termination notes
 
-Here's an email I wrote to one of the writers that didn't work out:
+Here's an email I wrote to one of my writers that didn't work out:
 
->Unfortunately, I need to end the contract here. Your writing is good, but we're on our third article, and the style is still fairly distant from what I'd like it to be.
+>I appreciate the work you put into these, but the content is pretty distant from what I'm looking for, so I'm afraid this is not a good match.
 >
->From reading the celery article, it looks like it would require 2-3 rounds of review before I'd feel comfortable publishing it. At that point, it's faster for me to write the reports myself.
+>I've you mailed a check for the hours you worked. It's scheduled to arrive by 9/16.
 >
->I appreciate all your work and wish you the best going forward.
+>Thanks again for your work, and best of luck in your future projects.
 
 And this one is my harshest:
 
