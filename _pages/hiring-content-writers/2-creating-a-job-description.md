@@ -34,11 +34,11 @@ Below, I've included the job description I use to hire writers for Is It Keto. I
 Here are the essential elements to cover in the job description:
 
 * Overview
-   * What kind of content will they write?
-   * What is the goal of the content?
-     * Attracting attention to a product?
-     * Improving search engine rankings?
-     * Building a brand?
+  * What kind of content will they write?
+  * What is the goal of the content?
+    * Attracting attention to a product?
+    * Improving search engine rankings?
+    * Building a brand?
 * Requirements
   * Does the writer need specialized knowledge in a particular field of study?
     * e.g., medical writing, financial writing

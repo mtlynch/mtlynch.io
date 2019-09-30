@@ -158,7 +158,7 @@ If a writer fails to meet your standards, see the section on [terminating writer
 
 To maintain a healthy relationship with your freelancers, be clear about when they should expect payment, and ensure that you meet those expectations. On freelancing platforms like Upwork, this is straightforward, as you simply need to approve hours when prompted. If you're working with a writer directly, you'll have to apply more diligence.
 
-When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [ Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
+When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
 
 <figure class="half">
   {% include image.html file="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet" img_link="true" media_rendition="half" %}
