@@ -43,7 +43,7 @@ I don't claim to be an expert at firing people, but all of my terminations have 
 
 ## Keys to a graceful termination
 
-The rules for artfully ending a relationship are similar to the [rules for giving feedback](/hiring-content-writers/4-working-with-writers/#giving-tactful-feedback):
+The rules for artfully ending a relationship are similar to the [rules for giving feedback](/hiring-content-writers/4-working-with-writers/#give-tactful-feedback):
 
 * Remain objective
 * Stick to facts

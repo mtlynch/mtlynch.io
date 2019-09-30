@@ -60,7 +60,7 @@ Here are the essential elements to cover in the job description:
   * How quickly must the writer complete work after they receive an assignment?
   * Is it critical for the writer's working hours to overlap with yours?
 * Payment
-  * How do you [structure payment](#pay-per-hour-per-word-or-per-piece)?
+  * How do you [structure payment](#pay-per-hour-per-word-or-per-article)?
   * What method of payment will you use?
     * Check? PayPal? Venmo?
   * How quickly can writers expect payment?
@@ -69,7 +69,7 @@ Here are the essential elements to cover in the job description:
   * Will you pay a kill fee if you decide not to publish the writer's work?
     * Publishers sometimes pay a "kill fee" if a writer completes an assignment, but the publisher doesn't use it.
 * Example articles
-  * Link to content to serve as the inspiration for what you want.
+  * Provide links to content to serve as the inspiration for what you want.
     * Be specific about what you like about the examples.
   * You can also link to counter-examples of writing you dislike.
     * What aspects of the counter-examples should writers avoid?
