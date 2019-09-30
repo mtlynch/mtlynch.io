@@ -52,6 +52,7 @@ The rules for artfully ending a relationship are similar to the [rules for givin
 
 >**<font color="red">Bad</font>**: Your writing is terrible, and I hate you.
 
+<!-- separate blockquotes -->
 
 >**<font color="green">Good</font>**: Unfortunately, your writing doesn't match the style I'm looking for, and I don't feel that we communicate well.
 

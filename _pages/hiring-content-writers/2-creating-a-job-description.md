@@ -42,7 +42,7 @@ Here are the essential elements to cover in the job description:
 * Requirements
   * Does the writer need specialized knowledge in a particular field of study?
     * e.g., medical writing, financial writing
-  * Should they have particular skills?
+  * Should they have specific skills?
     * e.g., writing for search engine optimization, appealing to young professionals
 * Assignment details
   * What is the typical word count for your assignments?
