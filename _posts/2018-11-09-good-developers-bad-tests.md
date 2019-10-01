@@ -10,6 +10,7 @@ header:
 discuss_urls:
   reddit: https://redd.it/9vkri2
   hacker_news: https://news.ycombinator.com/item?id=18427812
+last_modified_at: '2019-10-01T19:00:00-04:00'
 ---
 
 Congratulations! You've finally written so many lines of code that you can afford a beach house. You hire Peter Keating, an architect world-famous for his skyscrapers, who assures you that he has brilliant plans for your beachfront property.
@@ -24,9 +25,11 @@ Too often, software developers approach unit testing with the same flawed thinki
 
 ## Test code is not like other code
 
-Production code is all about abstractions. Good production code hides complexity in well-scoped functions and elegant class hierarchies. It allows the reader to navigate large systems with ease, diving down into the details or rising to a higher level of abstraction, as needed.
+Production applications typically involve thousands to millions of lines of code. It's too large for humans to conceptualize all at once. To manage the complexity, language designers have provided mechanisms like functions and class hierarchies that allow developers to think in abstractions.
 
-Test code is a different beast. Every layer of abstraction in a unit test makes it harder to understand. Tests are a diagnostic tool, so they should be as simple and obvious as possible.
+Good production code achieves encapsulation. It allows the reader to navigate large systems with ease, diving down into the details or rising to a higher level of abstraction, as needed.
+
+Test code is a different beast. A good unit tests is often small enough that a developer can conceptualize all the logic at once. In that case, adding layers of abstraction increases the code's complexity. Tests are a diagnostic tool, so they should be as simple and obvious as possible.
 
 **Good production code is well-factored; good test code is *obvious*.**
 {: .notice--info}
@@ -94,7 +97,7 @@ def test_initial_score(self):
 
 All I did was inline the code from the `setUp` method, but it made a world of difference. Now, everything the reader needs is right there in the test. It also follows the [arrange, act, assert](http://wiki.c2.com/?ArrangeActAssert) structure, which makes each phase of the test distinct and obvious.
 
-**The reader should understand a test without seeing any code outside of the test function.**
+**The reader should understand your test without reading any other code.**
 {: .notice--info}
 
 ## Dare to violate DRY
@@ -125,7 +128,7 @@ If you can achieve clear tests without duplicating code, that's ideal, but remem
 
 Before blindly applying DRY to your tests, think about what will make the problem obvious when a test fails. Refactoring may reduce duplication, but it also increases complexity and potentially obscures information when things break.
 
-**Accept a degree of code redundancy if it preserves the test's simpilicty.**
+**Accept redundancy if it supports simplicity.**
 {: .notice--info}
 
 ## Think twice before adding helper methods
@@ -282,7 +285,7 @@ Instead, what if you saw this:
 
 A function called `ReturnsNullptrWhenStreamIsEmpty` would feel overly verbose in other contexts, but it's a good test name. If you saw it break, you'd immediately know the class was mishandling empty data streams. You could likely fix the bug without ever reading the test's implementation. That's the mark of a good test name.
 
-**A good test name is so descriptive that a developer can diagnose failures from the name alone.**
+**Name your tests so well that others can diagnose failures from the name alone.**
 {: .notice--info}
 
 ## Embrace magic numbers
@@ -334,7 +337,7 @@ It's simpler, with only half as many lines of code. And it's more obvious &mdash
 
 When I see developers define constants in test code, it's usually due to a misguided adherence to DRY or because they're afraid to use magic numbers. However, it's rarely necessary for tests to declare constants, and doing so makes them harder to understand.
 
-**Avoid creating named constants in test code. Use magic numbers instead.**
+**Prefer magic numbers to named constants in test code.**
 {: .notice--info}
 
 **Note**: It's okay for unit tests to *reference* constants that the production code exposes. They just shouldn't define their own.
