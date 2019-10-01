@@ -25,11 +25,11 @@ Too often, software developers approach unit testing with the same flawed thinki
 
 ## Test code is not like other code
 
-Production applications typically involve thousands to millions of lines of code. It's too large for humans to conceptualize all at once. To manage the complexity, language designers have provided mechanisms like functions and class hierarchies that allow developers to think in abstractions.
+Production applications typically involve thousands to millions of lines of code. They're too large for humans to conceptualize all at once. To manage the complexity, language designers have provided mechanisms like functions and class hierarchies that allow developers to think in abstractions.
 
 Good production code achieves encapsulation. It allows the reader to navigate large systems with ease, diving down into the details or rising to a higher level of abstraction, as needed.
 
-Test code is a different beast. A good unit tests is often small enough that a developer can conceptualize all the logic at once. In that case, adding layers of abstraction increases the code's complexity. Tests are a diagnostic tool, so they should be as simple and obvious as possible.
+Test code is a different beast. A good unit test is often small enough that a developer can conceptualize all the logic at once. Adding layers of abstraction to test code increases its complexity. Tests are a diagnostic tool, so they should be as simple and obvious as possible.
 
 **Good production code is well-factored; good test code is *obvious*.**
 {: .notice--info}
