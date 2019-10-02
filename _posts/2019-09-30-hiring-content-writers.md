@@ -85,7 +85,7 @@ After hiring a writer, your next step is teaching them the style of writing you 
 
 ## Part Five: Terminating Writers
 
-Many writing relationships won't work out in the long term. This section explains how to gracefully terminate a freelance relationship and integrate the experience into your future hiring.
+If a writer consistently fails to meet your expectations, you need to cut your losses by ending their contract. This section explains how to gracefully terminate a freelance relationship and integrate the experience into your future hiring.
 
 [Read more](/hiring-content-writers/5-terminating-writers/)
 
