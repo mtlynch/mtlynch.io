@@ -8,9 +8,8 @@ title: Is It Keto - Month 9
 
 ## Highlights
 
-* After six months of 30+% growth, Is It Keto finally flattened out.
+* After six months of consistent 30% growth, Is It Keto finally flattened out.
 * I'm preparing to sell premium meal plans on Is It Keto.
-* I hired a 
 
 ## Goal Grades
 
@@ -28,7 +27,7 @@ In September, I received 25 new applications from freelance writers. I did paid 
 * **Result**: It hasn't happened yet, but I'm pretty close.
 * **Grade**: C
 
-In September, I explored several affiliate partnerships, but wasn't excited about them. I paused on affiliate deals to focus on a different type of partnership.
+In September, I explored several affiliate partnerships, but wasn't excited about them. I paused on affiliate deals to focus on a different type of partnership that I hope to launch in early October.
 
 ### Publish a guide to hiring freelance content writers
 
@@ -37,7 +36,7 @@ In September, I explored several affiliate partnerships, but wasn't excited abou
 
 This was my longest article ever, at around 7,200 words. I've been writing it on and off since March, so it felt good to finally publish it.
 
-One thing I'm struggling with is finding an audience for my less technical posts. For posts about programming, it's easy to just share it on reddit and Hacker News, and if people like it, it gets attention. With posts about hiring [content writers](/hiring-content-writers/), [editors](/editor/), or [cartoonists](/how-to-hire-a-cartoonist/), I don't know of channels with an audience that's interested.
+One thing I'm struggling with is finding an audience for my less technical posts. For posts about programming, it's easy to just share it on reddit and Hacker News, and if people like it, it gets attention. With posts about hiring [content writers](/hiring-content-writers/), [editors](/editor/), or [cartoonists](/how-to-hire-a-cartoonist/), I don't know where to share them.
 
 ### Finish open sourcing What Got Done
 
@@ -64,6 +63,8 @@ I published What Got Done's source on Github and released it under the [Apache 2
 
 So, it finally happened. Is It Keto has grown by about 30% in revenue and traffic every month this year. I knew that couldn't continue forever, and I was waiting for the day when it would level off, and it finally did.
 
+Everything stayed relatively flat except for AdSense earnings. I'm not sure if this is due to changes I made or if it's just natural fluctuations in AdSense.
+
 ### [Zestful](https://zestfuldata.com)
 
 | Metric                 | August 2019 | September 2019 | Change |
@@ -74,11 +75,33 @@ No surprises here. I knew my spike in revenue last month was an anomaly, and now
 
 ## Creating premium meal plans for Is It Keto
 
+In September, I tested an affiliate partnership with a company that claimed to offer keto meal plans. They charge customers $15/mo and give affiliates 30% of subscription fees from their referrals (i.e., $5/mo per referred customer). I ran the link for a few weeks, but none of my readers signed up for their service.
+
+I tried testing the service myself, and I quickly realized why nobody wanted to use it: it was terrible.
+
+<figure class="half">
+  {% include image.html file="meal-planner.jpg" alt="Meal planner screenshot" img_link="true" media_rendition="half" %}
+  {% include image.html file="grocery-list.jpg" alt="Grocery list screenshot" img_link="true" media_rendition="half" %}
+  <figcaption>My former meal plan service expects users to buy 102 different grocery store items and spend 12 hours per day cooking.</figcaption>
+</figure>
+
+It didn't really create meal "plans." It randomly assigned enough breakfast, lunch, and dinner meals to call it a full week. But to cook all the meals would take you hours. Ridiculously, the grocery list called for the user to purchase **102 different items**. Remember, this is to feed a single person for a single week. The items include things like 1/8th of a cucumber and 1/2 of a jicama, which is clearly impractical.
+
+I took down the referral link and thought of a better solution: sell my own meal plans. I don't need a heavyweight, customizable meal platform, just some PDFs to sell. I reached out to someone with experience creating popular meal plans, and we're working on a partnership where I license their keto meal plans and sell them on my site under the Is It Keto brand.
+
+I put up a [crude landing page](http://isitketo.org/meal-plans/) with a "Buy" button. The button currently just brings you to a message saying that the meal plans are coming, but the page has had 254 unique visitors and 10 unique clicks on the Buy button, which implies a conversion rate of ~4%. That's an optimistic estimate, because some of those users probably would not have completed the checkout process, but it's promising nonetheless that such a basic page would convince anyone to click at all.
+
 {% include image.html file="buy-button.jpg" alt="Screenshot of Buy button on sales page" max_width="823px" class="img-border" img_link="true" fig_caption="Testing sales for Is It Keto's meal plans" %}
 
-## The unpleasant business of affiliate partnerships
+I'm excited to start selling these plans. It feels much better to sell a product where you're in direct contact with the creator as opposed to just throwing users to a faceless affiliate partner and hoping for the best. The meal plans will focus on optimizing for our readers' time and budget, so instead of a grocery list of 102 items, it will be more like 20. And the recipes make multiple servings that you can refrigerate and eat later instead of expecting the reader to cook entire meals from scratch 21 times per week.
 
 ## I'm noticeably better at hiring writers
+
+When I was hiring writers for Is It Keto [at the beginning of the year](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661), I ran paid trials with several writers, and it took me a long time to decide whether each candidate would be a good permanent hire. In one case, I worked with a writer for eight articles, paying her $65/hr for a total cost of $400. This was a substantial amount of time and money to spend on someone who ultimately didn't work out.
+
+In August and September, I was able to hire much more efficiently because I've gotten better at identifying bad matches early. I'm more selective in who I hire for paid trials because I can better predict people's paid work based on their writing samples. And I can generally eliminate a poor hire in three or fewer drafts of their first article.
+
+One of the most valuable skill I've learned the ability to distinguish between weaknesses that are fixable and those that are permanent. If a writer's first draft has poor grammar or is incoherent, that's an easy no-hire because I know they can't fix that in the short term. If the writing is clear and engaging but violates my [style guide](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency), that's fixable. But if we get to draft two or three, and they're repeating mistakes, or they communicate poorly, that's a no-hire as well.
 
 ## Thinking bigger
 
