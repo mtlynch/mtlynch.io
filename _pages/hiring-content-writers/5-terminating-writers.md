@@ -27,7 +27,7 @@ Here's an email I wrote to one of my writers that didn't work out:
 
 >I appreciate the work you put into these, but the content is pretty distant from what I'm looking for, so I'm afraid this is not a good match.
 >
->I've you mailed a check for the hours you worked. It's scheduled to arrive by 9/16.
+>I've mailed you a check for the hours you worked. It's scheduled to arrive by 9/16.
 >
 >Thanks again for your work, and best of luck in your future projects.
 
