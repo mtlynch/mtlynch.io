@@ -20,7 +20,7 @@ I derive immense satisfaction from outsourcing my chores. All of my friends have
 
 Back in 2016, I lived in a small studio apartment in Manhattan. It was a Monday night, and I was staring at my computer trying to write a short story. I hadn't written fiction since high school, but I had recently signed up for a writing class. My first assignment was due at 9am the next day.
 
-Desperate for any distraction, I became fixated on my keyboard. It was so dusty and grimy. How had I not noticed this before? I used the same keyboard for six years, typed on it 20-30 hours per week, and eaten all my meals in front of it.
+Desperate for any distraction, I became fixated on my keyboard. It was so dusty and grimy. How had I not noticed this before? I used the same keyboard for six years, typed on it 20-30 hours per week, and ate all my meals in front of it.
 
 {% include image.html file="keyboard.jpg" alt="My keyboard on my desk" max_width="600px" fig_caption="My keyboard, in need of cleaning" img_link="true" %}
 
