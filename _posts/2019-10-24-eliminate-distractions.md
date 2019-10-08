@@ -30,9 +30,9 @@ Block celebrities and politicians.
 ## Hide StackOverflow / StackExchange: ignore "hot" questions
 
 Joke StackOverflow questions:
-  One of my co-workers has no reflection and is constantly drinking blood. Is It Elizabeth Holmes?
-  My (married) manager is currently having a heart attack. Is it inappropriate for me to perform CPR?
-  Accidentally proved P=NP
+  * One of my co-workers has no reflection and is constantly drinking blood. Is It Elizabeth Holmes?
+  * My (married) manager is currently having a heart attack. Is it inappropriate for me to perform CPR?
+  * Accidentally proved P=NP
 
 ## Hide your Gmail inbox
 
@@ -95,6 +95,10 @@ Technique I stole from my friend [David Toth](https://twitter.com/jupiterunknown
 ## Starting is the hardest part
 
 When I first started waiting until after noon
+
+## If you backslide, just start over
+
+Some days, I'm obsessively checking texts and email. It feeds on itself.
 
 ---
 
