@@ -45,7 +45,7 @@ A profile with spelling or grammatical errors is an automatic no-hire. If they c
 
 ### Writing samples
 
-All professional writers should provide you with writing samples, but they're not always an accurate reflection of their ability. A strong published piece might the result of an adept editor rather than a proficient writer. Conversely, a dull, convoluted article might be that way because their client demanded a 2,000-word essay on a 500-word topic.
+All professional writers should provide you with writing samples, but they're not always an accurate reflection of their ability. A strong published piece might be the result of an adept editor rather than a proficient writer. Conversely, a dull, convoluted article might be that way because their client demanded a 2,000-word essay on a 500-word topic.
 
 When I read writing samples, I look for writing that's either extremely good or extremely bad. I reject when their samples are especially weak. If the writing samples in their public portfolio are so-so, I ask if they have a sample that's closer to [my site's style](/hiring-content-writers/4-working-with-writers/#use-a-style-guide-to-enforce-consistency).
 
