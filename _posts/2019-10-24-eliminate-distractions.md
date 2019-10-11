@@ -2,14 +2,15 @@
 title: "Tricks for Reducing Distractions from Gmail, Social Media, and StackOverflow"
 ---
 
+This isn't another "you should quit social media" blog post. You can use email and social media in healthy ways. The challenge is that they actively struggle with you to induce you to use them in unhealthy ways. This post is about techniques that help you manage these tools instead of allowing them to manage you. Some are simple technical tricks. Others are personal habits.
+
 ## Avoid "drag"
 
 Apps that when you use them, they drag you into other stuff.
 
-* Facebook notifications
-* New email
-* Facebook feed
-* You check the time on your phone and see that you have a new email
+* You decide to respond to a recent email, but you open Gmail and see four new emails.
+* You take out your phone to check the time and see that you have six notifications from four different apps.
+* You check your Twitter feed for interesting blog posts and instead spend three hours reading about the latest trending controversy that everyone will forget about in a week.
 
 ## You don't have to quit social media
 
