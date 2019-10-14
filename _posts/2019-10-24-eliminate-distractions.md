@@ -12,19 +12,39 @@ Apps that when you use them, they drag you into other stuff.
 * You take out your phone to check the time and see that you have six notifications from four different apps.
 * You check your Twitter feed for interesting blog posts and instead spend three hours reading about the latest trending controversy that everyone will forget about in a week.
 
-## You don't have to quit social media
+## Decide what you want from social media
 
 You can manage the cost of social media.
 
+People talk about social media as if it's always a negative thing and you need to eliminate it. But social media can be a useful thing. I like to see when my Facebook friends get married or have babies. I don't want to use Facebook for mindlessly watching videos or getting into political arguments. I like to see when interesting people I follow on Twitter post useful blog articles or advice.
+
+Think about what you want out of social media and if there's a way to get it. I can use Twitter for my stated purpose by checking it once a day in a 5-15 minute block. Same with Facebook.
+
 ## Make Twitter's trending hashtags boring
+
+{% include image.html file="twitter-trending.jpg" alt="Twitter's trending topics" max_width="800px" img_link=true class="img-border" fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
 Set Twitter's trending news to a location where you don't speak the language and you're not interested in their news. Mine is set to Abu Dhabi.
 
+https://twitter.com/settings/trends
+
+{% include image.html file="twitter-settings.jpg" alt="Twitter's trending topics" max_width="600px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
+
+TODO: Replace with better Abu Dhabi.
+
+{% include image.html file="abu-dhabi-trends.jpg" alt="Twitter's trending topics" max_width="352px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
+
 ## Mute, block, and unfollow your way to a tidy Twitter feed
 
-Review your the list of accounts you follow on Twitter. Eliminate ones that post a low proportion of relevant content or that you don't care that much about.
+I enjoyed following celebrities and comedians because they were entertaining, but I realized they were distracting me from my intended purpose on Twitter, which is to maintain professional connections and see when people post interesting technical content.
 
-Use mute words to avoid current events.
+Review your the list of accounts you follow on Twitter. Eliminate ones that post a low proportion of relevant content.
+
+{% assign fig_caption = "Use [muted words](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="twitter-muted.jpg" alt="Twitter's trending topics" max_width="600px" img_link=true fig_caption=fig_caption %}
+
+I think the news is important, but Twitter is not an effective way for me to consume it.
 
 Block celebrities and politicians.
 
@@ -34,6 +54,15 @@ Joke StackOverflow questions:
   * One of my co-workers has no reflection and is constantly drinking blood. Is It Elizabeth Holmes?
   * My (married) manager is currently having a heart attack. Is it inappropriate for me to perform CPR?
   * Accidentally proved P=NP
+
+
+
+Only in writing this article did I realize StackExchange offers a setting so you can disable this natively. In Site Settings > Preferences, you can check "Hide Hot Network Questions":
+
+
+{% assign fig_caption = 'Disable "Hot Network Questions" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions.' | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
 
 ## Hide your Gmail inbox
 
@@ -96,6 +125,10 @@ Technique I stole from my friend [David Toth](https://twitter.com/jupiterunknown
 ## Starting is the hardest part
 
 When I first started waiting until after noon
+
+## Be vigilant
+
+Notice apps that drag you back in. Put obstacles in front of them.
 
 ## If you backslide, just start over
 
