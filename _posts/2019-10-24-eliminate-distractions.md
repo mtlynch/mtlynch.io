@@ -50,8 +50,6 @@ https://twitter.com/settings/trends
 
 {% include image.html file="twitter-settings.jpg" alt="Twitter's trending topics" max_width="600px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
-TODO: Replace with better Abu Dhabi.
-
 {% include image.html file="abu-dhabi-trends.jpg" alt="Twitter's trending topics" max_width="352px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
 ### Mute, block, and unfollow your way to a tidy Twitter feed
