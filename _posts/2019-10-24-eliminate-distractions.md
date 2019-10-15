@@ -20,7 +20,27 @@ People talk about social media as if it's always a negative thing and you need t
 
 Think about what you want out of social media and if there's a way to get it. I can use Twitter for my stated purpose by checking it once a day in a 5-15 minute block. Same with Facebook.
 
-## Make Twitter's trending hashtags boring
+## Schedule time for email, texts, and social media
+
+If you've taken some time to reflect on what you want from social media, hopefully your answer isn't, "Email and social media are my taskmasters, so I must check in with them every 15 minutes to decide on my next task." No, once you decide what you want from those tools and how much time you need to invest to get that benefit, schedule it.
+
+This is easiest with social media because there's rarely urgent, critical tasks that result from you checking your Facebook feed.
+
+I'm more present in social situations. I was always a firm believer in "don't interrupt a real life interaction to check your phone." But if my friend went to the bathroom or they had to take a call or something, I'd check my email and texts. I didn't think anything of it, but I realized a huge difference once I committed to not doing that.
+
+Checked Twitter and was in a bad mood because someone said something I found really obnoxious.
+
+I check once I get home.
+
+I schedule
+
+Social media becomes less interesting
+
+Don't check your texts in social situations or during brief breaks.
+
+## Twitter
+
+### Make Twitter's trending hashtags boring
 
 {% include image.html file="twitter-trending.jpg" alt="Twitter's trending topics" max_width="800px" img_link=true class="img-border" fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
@@ -34,7 +54,7 @@ TODO: Replace with better Abu Dhabi.
 
 {% include image.html file="abu-dhabi-trends.jpg" alt="Twitter's trending topics" max_width="352px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
-## Mute, block, and unfollow your way to a tidy Twitter feed
+### Mute, block, and unfollow your way to a tidy Twitter feed
 
 I enjoyed following celebrities and comedians because they were entertaining, but I realized they were distracting me from my intended purpose on Twitter, which is to maintain professional connections and see when people post interesting technical content.
 
@@ -48,45 +68,36 @@ I think the news is important, but Twitter is not an effective way for me to con
 
 Block celebrities and politicians.
 
-## Hide StackOverflow / StackExchange: ignore "hot" questions
+## StackOverflow / StackExchange
+
+### Ignore "hot questions"
 
 Joke StackOverflow questions:
   * One of my co-workers has no reflection and is constantly drinking blood. Is It Elizabeth Holmes?
   * My (married) manager is currently having a heart attack. Is it inappropriate for me to perform CPR?
   * Accidentally proved P=NP
 
-
-
 Only in writing this article did I realize StackExchange offers a setting so you can disable this natively. In Site Settings > Preferences, you can check "Hide Hot Network Questions":
-
 
 {% assign fig_caption = 'Disable "Hot Network Questions" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions.' | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
 
-## Hide your Gmail inbox
+## Email
 
-Inbox when ready
+### Hide your Gmail inbox
+
+A frequent source
+
+[Inbox When Ready](https://inboxwhenready.org/).
+
+If you use a mail client like Outlook or Thunderbird, you can replicate this by disabling automatic e-mail checking.
 
 Haven't solved this on the phone
 
 You can still allow through high-priority emails. You can still check on high-priority threads with search.
 
-## Unbundle Hangouts from Gmail
-
-{% include image.html file="hangouts-in-gmail.jpg" alt="Chat settings in Gmail" max_width="800px" img_link=true class="img-border" fig_caption="By default, Gmail embeds Hangouts into your inbox." %}
-
-{% assign fig_caption = "Disabling chat in [Gmail settings](https://mail.google.com/mail/u/0/#settings/chat)" | markdownify | remove: "<p>" | remove: "</p>" %}
-
-{% include image.html file="gmail-disable-chat.jpg" alt="Chat settings in Gmail" max_width="821px" img_link=true class="img-border" fig_caption=fig_caption %}
-
-## Break your bad habits with obstacles
-
-* Uninstall social media apps from your phone
-* Move social media into separate browser profiles
-* Lock down social media from the browser to limit tracking
-
-## Move your to-do list out of your inbox
+### Move your to-do list out of your inbox
 
 At this point, "don't use your inbox as a to-do list" is pretty cliche advice, but I'll say it anyway. The biggest problem is that if your inbox and your to-do list are the same thing, it's impossible for you to check your to-do list without seeing new emails come in.
 
@@ -96,11 +107,19 @@ Data remanence.
 
 It's bad at prioritizing
 
-## Schedule time for social media
+### Unbundle Hangouts from Gmail
 
-I schedule
+{% include image.html file="hangouts-in-gmail.jpg" alt="Chat settings in Gmail" max_width="800px" img_link=true class="img-border" fig_caption="By default, Gmail embeds Hangouts into your inbox." %}
 
-Social media becomes less interesting
+{% assign fig_caption = "Disabling chat in [Gmail settings](https://mail.google.com/mail/u/0/#settings/chat)" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="gmail-disable-chat.jpg" alt="Chat settings in Gmail" max_width="821px" img_link=true class="img-border" fig_caption=fig_caption %}
+
+## Browse social media with a dedicated browser profile
+
+* Uninstall social media apps from your phone
+* Move social media into separate browser profiles
+* Lock down social media from the browser to limit tracking
 
 ## Set your phone to "Do Not Disturb" forever
 
@@ -108,7 +127,7 @@ My phone has been continuously on "Do Not Disturb" mode for the last 18 months. 
 
 Did this by mistake.
 
-Tried to whitelist callers but it didn't work
+Tried to whitelist callers but it didn't work.
 
 ## Replace texts with phone calls
 
@@ -120,19 +139,23 @@ Technique I stole from my friend [David Toth](https://twitter.com/jupiterunknown
 
 ## Accept boredom
 
-* Talk about *Deep Work*
+* Talk about *Deep Work* ([my notes](/book-reports/deep-work/))
 
 ## Starting is the hardest part
 
-When I first started waiting until after noon
+The hardest part is starting these habits, but once I did them for a few days, they become exponentially easier. One of the earliest things I did was to defer checking my email until 10 am instead of right when I woke up. It felt so difficult, and I kept feeling compelled to check my email to satisfy my curiosity about what's there.
 
-## Be vigilant
+After a week, I no longer felt the temptation when I woke up. By two weeks, I almost dreaded checking my email. My mornings had become so peaceful and productive. Once I checked my email, I was opening the door to whatever stresses awaited me there.
 
-Notice apps that drag you back in. Put obstacles in front of them.
+Today, I don't check my email until after I eat lunch.
 
 ## If you backslide, just start over
 
 Some days, I'm obsessively checking texts and email. It feeds on itself.
+
+## Be vigilant
+
+Notice apps that drag you back in. Eliminate distractions and put obstacles in front of them.
 
 ---
 
