@@ -133,7 +133,13 @@ Texts are hard because there's no equivalent of Inbox When Ready for texting.
 
 ## Replace online communities with real-life meetups
 
-Technique I stole from my friend [David Toth](https://twitter.com/jupiterunknown).
+I met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hackers meetup in Manhattan. David lives in Western Massachusetts. I later asked him why 
+
+There's something so different about meeting someone in person. There are people I met at meetups one time more than a year ago and we still keep in touch and help each other out. Meanwhile, there are people who I've probably spent 10x that time engaging.
+
+It's there and you're done. On reddit or a online forum, you're constantly pulled back in.
+
+David and I now organize the Indie Hackers meetup for Western Mass. We weren't sure if anyone would come, but worst case scenario, it's just us hanging out together. We generally draw a crowd of 6-10 people.
 
 ## Accept boredom
 
