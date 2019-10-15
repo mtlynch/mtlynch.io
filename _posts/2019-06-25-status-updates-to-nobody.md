@@ -89,9 +89,6 @@ I record my status updates in it every week. In the last month, the site has att
 
 If you'd like to experience the joy of reviewing your accomplishments each week, come [take it for a spin](https://whatgotdone.com). It's free.
 
-**Shameless plug**: If you're interested in a private version of this tool for your company or team, [shoot me an email](/about/).
-{: .notice--info}
-
 ---
 
 *Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
