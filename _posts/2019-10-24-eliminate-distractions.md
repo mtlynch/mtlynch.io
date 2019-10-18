@@ -44,7 +44,11 @@ For a long time, I thought I was managing my email and social media well. I wasn
 
 The first problem is that the scenario is a fantasy. If I checked Twitter while I waited for a two minute process to finish, I'd often end up closing Twitter 5-15 minutes later.
 
-The second problem is something I'd never heard of until last year, but when I read about it, it made complete sense: data remanence. TODO: link to Deep Work.
+The second problem is something I'd never heard of until last year: attention residue. I learned about it in [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). TODO: look up studies.
+
+The last problem is that it trains your brain to expect constant stimulation.
+
+It's okay to be bored! Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're solving a difficult problem.
 
 ## Twitter
 
@@ -94,7 +98,15 @@ As a programmer, StackOverflow often has highly valuable answers to problems I r
 
 The "hot questions" are never relevant to the problem I came to StackOverflow to solve, but if I'm on StackOverflow, chances are that I'm frustrated debugging something and easily tempted by distractions.
 
-I avoid this with a browser extension called uBlock Origin. Its primary purpose is to block ads, which is also helpful for reducing distractions. But one of its lesser-known features is its "element picker." It allows you to permanently delete any HTML element on the page you're browsing. It creates a (TODO: find out what kind of selector) selector rule that permanently blocks it when you revisit the page.
+I avoid this with a browser extension called [uBlock Origin](https://github.com/gorhill/uBlock). Its primary purpose is to block ads, which is also helpful for reducing distractions. But one of its lesser-known features is its "element picker." It allows you to permanently delete any HTML element on the page you're browsing. It creates a (TODO: find out what kind of selector) selector rule that permanently blocks it when you revisit the page.
+
+<figure>
+  <video style="max-width:100%" controls>
+    <source src="/files/eliminate-distractions/cleaning-stackoverflow.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Removing all sidebar distractions from StackOverflow using uBlock Origin</figcaption>
+</figure>
 
 This is an effective technique in general. It's not entirely robust, as it breaks when sites make changes to their UI. And some sites like Twitter use UI frameworks that have so much dynamically generated layout that uBlock Origin's selectors don't work when you revisit the site. But this is a technique that usually works.
 
@@ -136,7 +148,7 @@ It's very tempting to use your inbox to manage your tasks, but it's a terrible s
 * It makes it impossible to order your to-do list by priority.
 * It couples reviewing your to-do list with seeing new emails.
 
-All of this is Very Bad and fosters an unhealthy addiction to your inbox. Instead, I process each email using the following workflow that David Allen popularized in *Getting Things Done*:
+All of this is Very Bad and fosters an unhealthy addiction to your inbox. Instead, I process each email using the following workflow that David Allen popularized in [*Getting Things Done*](https://amzn.to/2J3GIY1):
 
 1. If the email requires no reply, I archive it
 1. If the email requires a reply I can write in under two minutes, I reply immediately.
@@ -164,15 +176,17 @@ Fortunately, this is a pretty easy one to solve. Go to the [chat settings in Gma
 
 When you want to access Hangouts, just go to [https://hangouts.google.com](https://hangouts.google.com).
 
-## Browse social media with a dedicated browser profile
+## Use social media with a dedicated browser profile
 
 One way I've found to curb my bad habits is to put obstacles in front of them. For example, if I keep lots of junk food in the house, I'll eat it when I get the craving. I'll sometimes crave it badly enough that I'll drive to the store and buy it, but 99% of the time, I decide I'd rather just eat something less exciting that's already in my house.
 
-I do the same thing with my social media. It's too easy to get bored, hit Ctrl+T to open a new tab, then go to Facebook / Twitter / Reddit. Instead, I block social media in my main browser and create a dedicated browser profile for it.
+I do the same thing with my social media. It's too easy to get bored, hit Ctrl+T to open a new tab, then go to Facebook / Twitter / Reddit.
 
 {% assign fig_caption = '"Typewriter" by [xkcd](https://xkcd.com/477/)' | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="typewriter.png" alt="Chat settings in Gmail" max_width="443px" img_link=true fig_caption=fig_caption %}
+
+ Instead, I block social media in my main browser and create a dedicated browser profile for it.
 
 It makes it hard to mindlessly pop open a new tab and visit a time-waster site. To visit Facebook, you have to consciously think about it. It also means that if you visit Facebook unintentionally, like a business' main web presence is their Facebook page, you can get the relevant information without seeing your tantalizing Facebook notifications in the corner.
 
@@ -189,15 +203,13 @@ This has a few added benefits for security and privacy:
 
 My phone has been continuously on "Do Not Disturb" mode for the last 18 months. Incoming phone calls will set off my ringer, but other than that, my phone can't interrupt my focus. I don't see notifications for emails, texts, or from any other apps. I read messages when I choose to open them.
 
+{% include image.html file="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" max_width="350px" class="img-border" img_link=true fig_caption="I permanently set my phone to Do Not Disturb." %}
+
 I discovered this solution by mistake. I initially downloaded this app whose name I don't recall, but it claimed to allow you to set up low-level rules to control your phone. I wanted to configure this app to set my phone to Do Not Disturb whenever I placed it face-down on my desk. That way, I could flip it upside down while working, then have it behave normally the rest of the time.
 
 The app didn't work. Instead, my phone would randomly flip back and forth between normal notifications and Do Not Disturb. At one point, I realized that my phone had been on Do Not Disturb for days, and that was fine. If I wanted to check my texts, I just checked my texts.
 
 There's lots of things that I'd like to do on my phone without getting dragged into some app. I often look at my phone just to check the time, but if I see that I have new texts, it tempts me to check them. With Do Not Disturb, I just don't see anything until I decide to check.
-
-### Uninstall timewaster apps from your phone
-
-Remove apps like Facebook, Twitter. It's too easy to just become a robot and check these apps at the slightest twinge of boredom or social anxiety.
 
 ### Replace texts with phone calls
 
@@ -211,7 +223,7 @@ There was an adjustment period at first because people were used to me providing
 
 I met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hackers meetup in Manhattan. David lives in Western Massachusetts. I later asked him why he'd spend 3 hours traveling to New York City just for a meetup.
 
-He later told me that it's a very deliberate strategy. He spends almost no time engaging on social media and instead reallocates that time to real-life meetups.
+He later told me that it's a very deliberate strategy. He loves engaging with other people in the startup world, but he has only finite time to allocate to this. He finds that he gets a bigger bang for his buck from in-person meetups, so of the time he allocates to participating in professional communities, he dedicates nearly 100% to in-person meetups and conferences.
 
 Once I heard this, it made a lot of sense to me. There are people I met at meetups that I talked to for 30 minutes and am still in touch with today. That's not true of anyone I engage with on Twitter or reddit. There are multiple instances where I spent an hour or more engaging with someone on the Indie Hackers forum, but now I have no memory of the conversation and am not in touch with the person at all.
 
@@ -219,17 +231,13 @@ Once I heard this, it made a lot of sense to me. There are people I met at meetu
 
 {% include image.html file="indiehackers-feedback.jpg" alt="Chat settings in Gmail" max_width="450px" img_link=true fig_caption=fig_caption %}
 
-With in-person meetups, it's much more common for me to form lasting bonds. I'm not saying that we become best friends, but I reach out to them months later when I need their advice and vice-versa. The same thing does happen sometimes from my interactions on social media, but it's exceedingly rare.
+With in-person meetups, it's much more common for me to form lasting bonds. I'm not saying that we become best friends, but I reach out to them months later when I need their advice and vice-versa. That's exceedingly rare in the relationships I build purely online.
 
 There's something so different about meeting someone in person. There are people I met at meetups one time more than a year ago and we still keep in touch and help each other out. Meanwhile, there are people who I've probably spent 10x that time engaging.
 
-David and I now organize the Indie Hackers meetup for Western Mass. We weren't sure if anyone would come, but worst case scenario, it's just us hanging out together. We generally draw a crowd of 6-10 people.
+David and I now organize the Indie Hackers meetup for Western Mass. We weren't sure if anyone would come, but worst case scenario, it's just us hanging out together. We generally draw a crowd of 6-10 people. Western Massachusetts is certainly not a tech hub, but we draw a crowd of 6-10 people. And the advice is highly personalized. Wide variety of people, some have hundreds of dollars in capital while others have hundreds of thousands. Some people are earning enough to hire employees and some are just starting out.
 
-## Accept boredom
-
-* Talk about *Deep Work* ([my notes](/book-reports/deep-work/))
-
-## Starting is the hardest part
+## The hardest part of changing habits is the beginning
 
 The hardest part is starting these habits, but once I did them for a few days, they become exponentially easier. One of the earliest things I did was to defer checking my email until 10 am instead of right when I woke up. It felt so difficult, and I kept feeling compelled to check my email to satisfy my curiosity about what's there.
 
@@ -248,9 +256,7 @@ Think about how you can change your usage of the app to prevent this.
 
 ## If you backslide, just start over
 
-Some days, I'm obsessively checking texts and email. It feeds on itself. It usually happens when I'm feelign frustrated or lonely. I open up email or social media to distract me, and it usually doesn't, and then that.
-
-When that happens, I just recognize that it was a bad day and I start over the next day.
+Some days, I'm obsessively checking texts and email. It feeds on itself. It usually happens when I'm feelign frustrated or lonely. I open up email or social media to distract me; it usually doesn't, and then that creates an even greater desperation for stimulation. I find that on these cases, I resign myself to the bad day and focus on doing better the following day. It works.
 
 Another frequent breaker of my good habits is travel. Sitting around in airports or train stations, it feels like a perfect time to turn off your brain and check social media. But I find this bleeds into my habits back home. Now, when I travel, I plan ahead so that I have a book to read or podcasts to listen to. Sometimes, I just accept the boredom and enjoy looking out the window and taking in unfamiliar scenery.
 
