@@ -97,7 +97,7 @@ Indent the body of a block by two spaces from its opening and closing tags.
 
 `.travis.yml` builds the site in production mode and pushes the static files to Firebase.
 
-Dev and prod configurations should be as similar as possible. Any change in dev should also be made to prod and vice versa, except for features we deliberately make different for dev and prod (e.g. removing GA tag from dev, removing jekyll-admin from prod).
+Dev and prod configurations should be as similar as possible. Any change in dev should also be made to prod and vice versa, except for features we deliberately make different for dev and prod (e.g., removing GA tag from dev).
 
 ## Theme
 

@@ -14,7 +14,6 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    backports (3.15.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.5)
     em-websocket (0.5.1)
@@ -55,10 +54,6 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
-    jekyll-admin (0.9.0)
-      jekyll (>= 3.3, < 5.0)
-      sinatra (~> 1.4)
-      sinatra-contrib (~> 1.4)
     jekyll-data (1.1.0)
       jekyll (>= 3.3, < 5.0.0)
     jekyll-feed (0.12.1)
@@ -102,7 +97,6 @@ GEM
     mixlib-cli (1.7.0)
     mixlib-config (2.2.18)
       tomlrb
-    multi_json (1.14.1)
     multipart-post (2.1.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
@@ -112,11 +106,6 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.1)
-    rack (1.6.11)
-    rack-protection (1.5.5)
-      rack
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -132,19 +121,7 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sinatra (1.4.8)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    sinatra-contrib (1.4.7)
-      backports (>= 2.0)
-      multi_json
-      rack-protection
-      rack-test
-      sinatra (~> 1.4.0)
-      tilt (>= 1.3, < 3)
     thread_safe (0.3.6)
-    tilt (2.0.10)
     tomlrb (1.2.8)
     typhoeus (1.3.1)
       ethon (>= 0.9.0)
@@ -159,7 +136,6 @@ PLATFORMS
 DEPENDENCIES
   html-proofer (= 3.13.0)
   jekyll (~> 3.8.2)
-  jekyll-admin
   jekyll-frontmatter-test (= 0.0.1)!
   jekyll-responsive-image (= 1.2.0)
   mdl (= 0.5.0)
