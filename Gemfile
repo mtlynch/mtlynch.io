@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 3.8.2'
-gem 'minimal-mistakes-jekyll', '4.13.0'
+gem 'minimal-mistakes-jekyll', '4.17.1'
+gem 'jemoji', '0.11.1'
 
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 gem 'html-proofer', '3.13.0'
