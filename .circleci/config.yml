@@ -30,7 +30,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.4.4
+      - image: circleci/ruby:2.6.5
     environment:
       # Keep in sync with save_cache path.
       BUNDLE_PATH: ~/repo/_vendor/bundle
@@ -79,7 +79,7 @@ jobs:
   check-google-analytics-token:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.4.4
+      - image: circleci/ruby:2.6.5
     steps:
       - attach_workspace:
           at: ./
@@ -89,7 +89,7 @@ jobs:
   check-twitter-cards:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.4.4
+      - image: circleci/ruby:2.6.5
     steps:
       - attach_workspace:
           at: ./
@@ -99,7 +99,7 @@ jobs:
   check-amazon-links:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.4.4
+      - image: circleci/ruby:2.6.5
     steps:
       - attach_workspace:
           at: ./
