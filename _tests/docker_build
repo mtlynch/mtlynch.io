@@ -24,9 +24,6 @@ docker exec "$CONTAINER_NAME" npm install
 
 docker exec "$CONTAINER_NAME" npm run build:js
 
-# Remove Jekyll Admin from prod build.
-docker exec "$CONTAINER_NAME" sed -i '/jekyll-admin/d' Gemfile
-
 docker exec "$CONTAINER_NAME" bundle install
 
 docker exec "$CONTAINER_NAME" _tests/build
