@@ -98,7 +98,7 @@ As a programmer, StackOverflow often has highly valuable answers to problems I r
 
 The "hot questions" are never relevant to the problem I came to StackOverflow to solve, but if I'm on StackOverflow, chances are that I'm frustrated debugging something and easily tempted by distractions.
 
-I avoid this with a browser extension called [uBlock Origin](https://github.com/gorhill/uBlock). Its primary purpose is to block ads, which is also helpful for reducing distractions. But one of its lesser-known features is its "element picker." It allows you to permanently delete any HTML element on the page you're browsing. It creates a (TODO: find out what kind of selector) selector rule that permanently blocks it when you revisit the page.
+I avoid this with a browser extension called [uBlock Origin](https://github.com/gorhill/uBlock). Its primary purpose is to block ads, but one of its lesser-known features is its "element picker." It allows you to hide any page element permanently with a few mouse clicks. Selecting a page element with the "element picker" tool adds a CSS selector rule to uBlock Origin so that it knows to always hide that element.
 
 <figure>
   <video style="max-width:100%" controls>
@@ -108,15 +108,13 @@ I avoid this with a browser extension called [uBlock Origin](https://github.com/
   <figcaption>Removing all sidebar distractions from StackOverflow using uBlock Origin</figcaption>
 </figure>
 
-This is an effective technique in general. It's not entirely robust, as it breaks when sites make changes to their UI. And some sites like Twitter use UI frameworks that have so much dynamically generated layout that uBlock Origin's selectors don't work when you revisit the site. But this is a technique that usually works.
+This technique works on many sites, but it's a bit flaky given that it depends on CSS rules that may change when sites update their design. You also need to watch out for sites like Twitter that use UI frameworks that have so generate so much of their UI dynamically that uBlock Origin's selectors don't work on subsequent visits.
 
-StackOverflow also offers a setting so you can disable this natively. In Site Settings > Preferences, you can check "Hide Hot Network Questions":
+You can also use StackOverflow settings to disable "Hot Questions" natively, though there's no option to hide the other distracting sidebar panels. To suppress "Hot Questions", go to [Site Settings > Preferences](https://stackoverflow.com/users/preferences/) and check the box for "Hide Hot Network Questions":
 
 {% assign fig_caption = 'Disable "Hot Network Questions" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions.' | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" max_width="800px" img_link=true class="img-border" fig_caption=fig_caption %}
-
-This is less powerful than using uBlock Origin because they'll still show you other distracting sidebar panels, but it also persists across site UI changes, whereas the uBlock Origin changes do not.
+{% include image.html file="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" max_width="600px" img_link=true class="img-border" fig_caption=fig_caption %}
 
 ## Email
 
@@ -138,29 +136,31 @@ If you use a desktop mail client like Outlook or Thunderbird, you can suppress t
 
 ### Move your to-do list out of your inbox
 
-At this point, "don't use your inbox as a to-do list" is pretty cliche advice, but I'll say it anyway:
+At this point, "don't use your inbox as a to-do list" is pretty cliché advice, but I'll say it anyway:
 
 * **Don't use your inbox as a to-do list**
 
-It's very tempting to use your inbox to manage your tasks, but it's a terrible solution:
+It's tempting to manage tasks with your email inbox because it *seems* so convenient, but it's a horrendous solution:
 
-* It cedes control of your to-do list to other people.
-* It makes it impossible to order your to-do list by priority.
-* It couples reviewing your to-do list with seeing new emails.
+* It grants power over your time to anyone who writes you an email.
+* It makes it impossible to order your tasks by priority.
+* It couples the act of reviewing your to-do list with the act of processing new emails.
 
-All of this is Very Bad and fosters an unhealthy addiction to your inbox. Instead, I process each email using the following workflow that David Allen popularized in [*Getting Things Done*](https://amzn.to/2J3GIY1):
+Instead, I process each email using the following workflow that David Allen popularized in [*Getting Things Done*](https://amzn.to/2J3GIY1):
 
 1. If the email requires no reply, I archive it
 1. If the email requires a reply I can write in under two minutes, I reply immediately.
-1. For any other case, I add "Respond to [person]" to my to-do list and then archive the email
+1. For all other emails, I add "Respond to [person]" to my to-do list and then archive the email
 
-If you're used to using your inbox to manage tasks, I know the prospect of managing a whole separate task list sounds tedious and annoying. I encourage you to just try it. Before I did it, I didn't realize the hold that emails had on me by sitting in my inbox. If I receive an email that doesn't require an immediate response, I just create a task and schedule it for a few days in the future. It's so mentally freeing to just not have to think about the email until I have time to reply.
+If you're used to using your inbox to manage tasks, I know the prospect of managing a whole separate task list sounds tedious and annoying. I encourage you to try it for a week.
+
+Before I did it, I didn't realize the hold that emails had on me by sitting in my inbox. Any time I checked my inbox, it was sitting there begging for my attention. Now, when I receive an email that doesn't require an immediate response, I just create a task and schedule it for a few days in the future. It gives me the freedom to forget about the email because I know my to-do list will remind me about it later.
 
 {% assign fig_caption = "When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="nirvana-tasks.jpg" alt="Chat settings in Gmail" max_width="785px" img_link=true class="img-border" fig_caption=fig_caption %}
 
-My to-do list app of choice is Nirvana. I think it's okay not great. I've heard good things about Todoist, but I'm too used to my Nirvana workflow to switch at this point.
+My to-do list app of choice is [Nirvana](https://nirvanahq.com/). I think it's okay not great. I've heard good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
 
 ### Unbundle Hangouts from Gmail
 
@@ -186,16 +186,23 @@ I do the same thing with my social media. It's too easy to get bored, hit Ctrl+T
 
 {% include image.html file="typewriter.png" alt="Chat settings in Gmail" max_width="443px" img_link=true fig_caption=fig_caption %}
 
- Instead, I block social media in my main browser and create a dedicated browser profile for it.
+Instead, I block social media in my main browser and create a dedicated browser profile for it.
 
 It makes it hard to mindlessly pop open a new tab and visit a time-waster site. To visit Facebook, you have to consciously think about it. It also means that if you visit Facebook unintentionally, like a business' main web presence is their Facebook page, you can get the relevant information without seeing your tantalizing Facebook notifications in the corner.
 
-You can take this a step further and disable JavaScript for social media. I have JavaScript disabled for Facebook and Google News.
+Then I sign out of the social media sites on my main browser and delete the cookies for those sites. This is sufficient for sites like Facebook or Twitter that are near useless when you're not signed in. For other sites like news site, you have to block it in your main browser so that you remember to use it in your timewaster browser.
 
-This has a few added benefits for security and privacy:
+I added news.google.com to uBlock Origin's filter rules. That way, any time I visit out of habit, I'm reminded that I need to visit it in my other browser profile.
 
-* It's harder for social media companies to track your behavior on the web because most of your browsing happens without their browser cookies or JavaScript.
-* You're less vulnerable to certain classes of cross-site scripting or phishing attacks because the browser profile where they originate from (your social media browser profile) is separate from your other things like banking and email.
+{% include image.html file="block-news3.jpg" alt="The browser blocks subsequent visits to uBlock Origin" img_link="true" max_width="650px" fig_caption="Blocking Google News" %}
+
+Here's how to set that up:
+
+<figure class="half">
+  {% include image.html file="block-news1.jpg" alt="Open uBlock Origin settings" img_link="true" media_rendition="half" %}
+  {% include image.html file="block-news2.jpg" alt="Adding Google News as a blocked site in uBlock Origin" img_link="true" media_rendition="half" %}
+  <figcaption>Using <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> rules to block Google News.</figcaption>
+</figure>
 
 ## Phone
 
@@ -205,9 +212,7 @@ My phone has been continuously on "Do Not Disturb" mode for the last 18 months. 
 
 {% include image.html file="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" max_width="350px" class="img-border" img_link=true fig_caption="I permanently set my phone to Do Not Disturb." %}
 
-I discovered this solution by mistake. I initially downloaded this app whose name I don't recall, but it claimed to allow you to set up low-level rules to control your phone. I wanted to configure this app to set my phone to Do Not Disturb whenever I placed it face-down on my desk. That way, I could flip it upside down while working, then have it behave normally the rest of the time.
-
-The app didn't work. Instead, my phone would randomly flip back and forth between normal notifications and Do Not Disturb. At one point, I realized that my phone had been on Do Not Disturb for days, and that was fine. If I wanted to check my texts, I just checked my texts.
+I discovered this solution by mistake. I initially downloaded an app that claimed to enable Do Not Disturb when I turned the phone facedown. The app didn't work and instead just always put my phone into Do Not Disturb. Then, I realized that was actually better. If I wanted to check my texts, I just checked my texts.
 
 There's lots of things that I'd like to do on my phone without getting dragged into some app. I often look at my phone just to check the time, but if I see that I have new texts, it tempts me to check them. With Do Not Disturb, I just don't see anything until I decide to check.
 
@@ -215,7 +220,7 @@ There's lots of things that I'd like to do on my phone without getting dragged i
 
 Unfortunately, there's no equivalent of Inbox When Ready for text messages. As soon as you open your texting app, you see all texts from all of your contacts. I've never seen any apps or tools that allow you to limit what you see.
 
-My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Catching up with a friend who lives far away is way easier with a phone call than sending 100 texts. And arranging logistics to meet a friend is way easier .
+My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Catching up with a friend who lives far away is way easier with a phone call than sending 100 texts. And arranging logistics to meet a friend is way easier over the phone.
 
 There was an adjustment period at first because people were used to me providing prompt responses over text. But people figure it out. When you don't respond for hours, they realize that you're no longer a good texter, so they shouldn't rely on texting to get your immediate attention. By now, my friends and family know to call me if there's anything that requires my immediate attention. And some people have anxiety about talking on the phone, but they also can see the benefits once they try it.
 
@@ -225,7 +230,7 @@ I met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hac
 
 He later told me that it's a very deliberate strategy. He loves engaging with other people in the startup world, but he has only finite time to allocate to this. He finds that he gets a bigger bang for his buck from in-person meetups, so of the time he allocates to participating in professional communities, he dedicates nearly 100% to in-person meetups and conferences.
 
-Once I heard this, it made a lot of sense to me. There are people I met at meetups that I talked to for 30 minutes and am still in touch with today. That's not true of anyone I engage with on Twitter or reddit. There are multiple instances where I spent an hour or more engaging with someone on the Indie Hackers forum, but now I have no memory of the conversation and am not in touch with the person at all.
+Once I heard this, it made a lot of sense to me. There are people I met at meetups that I talked to for 30 minutes and am still in touch with today. That's not true of anyone I engage with on Twitter or reddit. There are multiple instances where I spent an hour or more engaging with someone on an online forum, but now I have no memory of the conversation and am not in touch with the person at all.
 
 {% assign fig_caption = "I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -236,6 +241,8 @@ With in-person meetups, it's much more common for me to form lasting bonds. I'm 
 There's something so different about meeting someone in person. There are people I met at meetups one time more than a year ago and we still keep in touch and help each other out. Meanwhile, there are people who I've probably spent 10x that time engaging.
 
 David and I now organize the Indie Hackers meetup for Western Mass. We weren't sure if anyone would come, but worst case scenario, it's just us hanging out together. We generally draw a crowd of 6-10 people. Western Massachusetts is certainly not a tech hub, but we draw a crowd of 6-10 people. And the advice is highly personalized. Wide variety of people, some have hundreds of dollars in capital while others have hundreds of thousands. Some people are earning enough to hire employees and some are just starting out.
+
+{% include image.html file="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" max_width="650px" img_link=true fig_caption="Indie Hackers Western Mass August Meetup" %}
 
 ## The hardest part of changing habits is the beginning
 

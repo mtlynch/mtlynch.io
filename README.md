@@ -228,3 +228,17 @@ Developers need not verify every change on every possible OS/browser combination
     {% include files.html title="filename.yml" language="yml" %}
     ```
     The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is also *required* and must be set to "yml".
+
+## Encoding video for posts
+
+Use ffmpeg with these settings:
+
+```bash
+ffmpeg \
+  -i input.avi \
+  -shortest \
+  -vcodec libx264 \
+  -movflags +faststart \
+  -vf "format=yuv420p" \
+  output.mp4
+```
