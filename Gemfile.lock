@@ -79,9 +79,9 @@ GEM
     listen (3.2.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    mdl (0.5.0)
+    mdl (0.6.0)
       kramdown (~> 1.12, >= 1.12.0)
-      mixlib-cli (~> 1.7, >= 1.7.0)
+      mixlib-cli (~> 2.1, >= 2.1.1)
       mixlib-config (~> 2.2, >= 2.2.1)
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
@@ -94,7 +94,7 @@ GEM
       jekyll-sitemap (~> 1.2)
       jemoji (~> 0.10)
     minitest (5.12.2)
-    mixlib-cli (1.7.0)
+    mixlib-cli (2.1.1)
     mixlib-config (2.2.18)
       tomlrb
     multipart-post (2.1.1)
@@ -138,7 +138,7 @@ DEPENDENCIES
   jekyll (~> 3.8.2)
   jekyll-frontmatter-test (= 0.0.1)!
   jekyll-responsive-image (= 1.2.0)
-  mdl (= 0.5.0)
+  mdl (= 0.6.0)
   minimal-mistakes-jekyll (= 4.13.0)
 
 BUNDLED WITH
