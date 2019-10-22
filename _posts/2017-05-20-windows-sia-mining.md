@@ -90,7 +90,7 @@ If you have an NVIDIA GPU, you'll need to install CUDA. For AMD GPUs, skip to th
 
 If you have an AMD GPU, you'll need OpenCL. It may be installed already, as it is included with many AMD drivers, but to ensure you have the latest version, follow the steps below.
 
-1. Go to [https://support.amd.com/en-us/download](https://support.amd.com/en-us/download)
+1. Go to [https://www.amd.com/en/support](https://www.amd.com/en/support)
 1. Under "Automatically Detect and Install Your Driver" click "Download Now"
 1. Open the downloaded file and proceed through the installation using the default options.
 
