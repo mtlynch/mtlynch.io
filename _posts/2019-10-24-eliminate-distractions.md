@@ -102,7 +102,7 @@ I avoid this with a browser extension called [uBlock Origin](https://github.com/
 
 <figure>
   <video style="max-width:100%" controls>
-    <source src="/files/eliminate-distractions/cleaning-stackoverflow.mp4" type="video/mp4">
+    <source src="/files/eliminate-distractions/stackoverflow-cleaning.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <figcaption>Removing all sidebar distractions from StackOverflow using uBlock Origin</figcaption>
