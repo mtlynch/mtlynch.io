@@ -188,6 +188,14 @@ I do the same thing with my social media. It's too easy to get bored, hit Ctrl+T
 
 Instead, I block social media in my main browser and create a dedicated browser profile for it.
 
+<figure>
+  <video style="max-width:100%" controls>
+    <source src="/files/eliminate-distractions/browser-profiles.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Setting up separate browser profiles in Chrome</figcaption>
+</figure>
+
 It makes it hard to mindlessly pop open a new tab and visit a time-waster site. To visit Facebook, you have to consciously think about it. It also means that if you visit Facebook unintentionally, like a business' main web presence is their Facebook page, you can get the relevant information without seeing your tantalizing Facebook notifications in the corner.
 
 Then I sign out of the social media sites on my main browser and delete the cookies for those sites. This is sufficient for sites like Facebook or Twitter that are near useless when you're not signed in. For other sites like news site, you have to block it in your main browser so that you remember to use it in your timewaster browser.
