@@ -1,22 +1,12 @@
 {
-  "name": "minimal-mistakes",
-  "version": "4.9.0",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "name": "mtlynch.io",
+  "version": "1.0.0",
+  "description": "mtlynch.io npm build scripts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/mtlynch/mtlynch.io.git"
   },
-  "keywords": [
-    "jekyll",
-    "theme",
-    "minimal"
-  ],
-  "author": "Michael Rose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "author": "Michael Lynch",
   "engines": {
     "node": ">= 0.10.0"
   },
