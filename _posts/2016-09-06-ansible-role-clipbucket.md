@@ -10,8 +10,6 @@ tags:
 excerpt: An Ansible role love story
 ---
 
-{% include base_path %}
-
 ## Overview
 
 [ClipBucket](http://www.clipbucket.com/) is an open source video hosting platform, similar in functionality to YouTube or Vimeo. In this guide, we'll walk through how to deploy ClipBucket to a server using the configuration management tool, Ansible.

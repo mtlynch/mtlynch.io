@@ -22,7 +22,7 @@ Suddenly, I saw this post on the "New" tab of the [/r/siacoin](https://www.reddi
 
 {% include image.html file="posted-seed.png" alt="Reddit screenshot" img_link="true" %}
 
-If you're not familiar with Siacoin, it's a cryptocurrency that allows you to rent out your spare hard disk space or buy space from others. I've written about this technology a couple times previously ([mining guide]({{ base_path }}/windows-sia-mining/), [NAS guide]({{ base_path }}/sia-via-docker/)).
+If you're not familiar with Siacoin, it's a cryptocurrency that allows you to rent out your spare hard disk space or buy space from others. I've written about this technology a couple times previously ([mining guide](/windows-sia-mining/), [NAS guide](/sia-via-docker/)).
 
 This reddit user had just done something very dangerous. They posted their Sia wallet seed online. The Sia "seed" is a passphrase that gives anyone who holds it full control of the cryptocurrency in that person's wallet. For this user, that means control of €2,000 worth of Siacoin because that's the amount they transferred into that wallet. In the screenshot, you can see that the user believes this is safe because they have confirmed that the passphrase doesn't work.
 

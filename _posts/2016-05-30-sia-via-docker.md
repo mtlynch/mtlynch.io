@@ -12,8 +12,6 @@ excerpt: A walkthrough for setting up Sia in Docker in Synology DSM
 last_modified_at: '2018-09-24T19:08:00-04:00'
 ---
 
-{% include base_path %}
-
 ## Overview
 
 [Sia](https://sia.tech/) is a decentralized, peer-to-peer network for buying and selling computer storage space. If you have extra storage space, Sia allows you to sell it to others who want to store their files on the Sia cloud network.

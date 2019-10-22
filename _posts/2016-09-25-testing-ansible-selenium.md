@@ -10,8 +10,6 @@ tags:
 excerpt: A way to perform strong tests on Ansible web app roles
 ---
 
-{% include base_path %}
-
 ## Overview
 
 Ansible is an excellent tool for deploying web apps. Ansible allows us to define web apps in terms of the different "roles" that compose our web app (e.g. web server, database server, application server). As our roles and the interactions between them become more complex, we need appropriately stronger ways of testing our roles to verify we're deploying our web app correctly.

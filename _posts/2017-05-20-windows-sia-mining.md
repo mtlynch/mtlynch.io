@@ -12,8 +12,6 @@ excerpt: A step-by-step guide from zero to mining automation
 last_modified_at: '2018-01-27T21:47:00-05:00'
 ---
 
-{% include base_path %}
-
 **This guide is out of date.** <br/> <br/>
 This post describes mining Sia with a desktop graphics card (GPU), but [custom mining hardware](https://obelisk.tech) is now available for Sia. The custom hardware has made Sia GPU mining non-viable. This guide will still work, but you may never reach payout, even with a high-end GPU.
 {: .notice--warning}
@@ -300,7 +298,7 @@ Instead, you can use a handy feature built in to Windows called Task Scheduler. 
 
 Configuring a scheduled task is a bit tedious. To save you the trouble, I've created a task configuration file you can import into Task Scheduler through the steps below:
 
-1. Download my Sia Mining Task configuration file: [SiaMiningTask.xml]({{ base_path }}/files/SiaMiningTask.xml) (right-click and hit "Save link as...").
+1. Download my Sia Mining Task configuration file: [SiaMiningTask.xml](/files/SiaMiningTask.xml) (right-click and hit "Save link as...").
 1. Hit Win+R to open the Windows run dialog.
 1. Type `control schedtasks` and hit Enter.
   {% include image.html file="run-schedtasks.png" alt="Run Task Scheduler" max_width="399px" %}
@@ -405,7 +403,7 @@ Here are a few things to keep in mind as you begin Siacoin mining:
 
 ## Earning Siacoin by hosting
 
-Another way of earning Siacoin is by renting out your unused hard disk space. The Siacoin hosting economy hasn't  reached critical mass yet, and hosting is suited for more advanced users, but if you're interested, I wrote a [Guide to Hosting Sia on a Synology NAS]({{ base_path }}/sia-via-docker/).
+Another way of earning Siacoin is by renting out your unused hard disk space. The Siacoin hosting economy hasn't  reached critical mass yet, and hosting is suited for more advanced users, but if you're interested, I wrote a [Guide to Hosting Sia on a Synology NAS](/sia-via-docker/).
 
 ## Troubleshooting
 
