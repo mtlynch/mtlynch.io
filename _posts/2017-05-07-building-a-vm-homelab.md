@@ -11,8 +11,6 @@ tags:
 excerpt: Taking my development VMs to the next level
 ---
 
-{% include base_path %}
-
 ## Overview
 
 I do the bulk of my home development work in virtual machines (VMs). My main desktop PC is a Windows 10 machine, so I had always run my VMs from within VirtualBox.
@@ -23,7 +21,7 @@ This setup worked fine, but I was starting to become aware of the increasing pai
 
 ### Clean Environments
 
-All the software I write depends on a particular software environment. For example, development on my project [ProsperBot]({{ base_path }}/prosperbot/) depends on the Go toolchain, nginx, and Redis. If I keep installing dependencies for each of my projects all on my main desktop PC, it becomes a mess of different web servers, database servers, and competing versions of the same libraries.
+All the software I write depends on a particular software environment. For example, development on my project [ProsperBot](/prosperbot/) depends on the Go toolchain, nginx, and Redis. If I keep installing dependencies for each of my projects all on my main desktop PC, it becomes a mess of different web servers, database servers, and competing versions of the same libraries.
 
 ### Security: VM Isolation
 
@@ -74,7 +72,7 @@ My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (ev
 
 {% include image.html file="samsung-850-evo.jpg" alt="Samsung 850 EVO" max_width="590px" class="align-left" link_url="https://www.amazon.com/gp/product/B00TGIVZTW/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li2&tag=mtlynch-20&linkId=5406b1b2957a1e42f41c407ba8fd6559" %}
 
-Like Brian, [I have a NAS]({{ base_path }}/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](http://amzn.to/2pyfArr) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
+Like Brian, [I have a NAS](/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](http://amzn.to/2pyfArr) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
 
 ### Case
 
@@ -171,7 +169,7 @@ The dealbreaker for me was that on login, vSphere prominently displayed a warnin
 
 ## Automating Server Provisioning
 
-I'm a big fan of Ansible, so I wrote an  [Ansible playbook]({{ base_path }}/files/provision-vm-host.yml) to automatically provision my VM server. It does the following:
+I'm a big fan of Ansible, so I wrote an  [Ansible playbook](/files/provision-vm-host.yml) to automatically provision my VM server. It does the following:
 
 * Updates the kernel to a version compatible with Ryzen's SMT functionality
 * Installs KVM and Kimchi
@@ -182,7 +180,7 @@ You can use the same playbook to provision your server by [installing Ansible](h
 ```bash
 VM_SERVER=vmaster # Replace with your VM server's hostname
 echo "${VM_SERVER}" > hosts
-wget {{ base_path }}/files/provision-vm-host.yml
+wget /files/provision-vm-host.yml
 
 # Replace the extra-vars with the values for your NFS share
 ansible-playbook provision-vm-host.yml \

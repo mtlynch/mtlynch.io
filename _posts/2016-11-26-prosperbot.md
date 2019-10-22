@@ -12,8 +12,6 @@ tags:
 excerpt: An automated peer to peer lending bot
 ---
 
-{% include base_path %}
-
 ## Overview
 
 I started investing in peer to peer lending in 2014 through a site called [Prosper](https://www.prosper.com/). I thought peer to peer lending was a neat idea and could potentially earn lucrative returns.

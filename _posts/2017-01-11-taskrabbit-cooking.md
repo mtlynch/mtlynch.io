@@ -10,8 +10,6 @@ tags:
 excerpt: Hiring a personal chef on the cheap
 ---
 
-{% include base_path %}
-
 ## Overview
 
 For the past few years, I've been outsourcing tasks from my daily life whenever possible. I tend to be more limited in time than money, so if paying $30 can save me an hour, I consider that a good deal.
@@ -64,7 +62,7 @@ I offered Leah the job, and she accepted. Within a few minutes, we had scheduled
 
 Leah showed up right on time the evening she was scheduled. I showed her my kitchen, handed her the printed recipes, and she was off to work.
 
-The process went very smoothly. She cooked for a little over two hours. I took advantage of the extra free time she afforded me and worked on [my current software project]({{ base_path }}/prosperbot/). It's awkward having a stranger in my house , but the kitchen is isolated enough from the rest of the apartment that we both had a decent amount of privacy. At times, I forgot she was there.
+The process went very smoothly. She cooked for a little over two hours. I took advantage of the extra free time she afforded me and worked on [my current software project](/prosperbot/). It's awkward having a stranger in my house , but the kitchen is isolated enough from the rest of the apartment that we both had a decent amount of privacy. At times, I forgot she was there.
 
 When she was done, she told me I could take the pork tenderloin out of the oven in ten minutes, the pepper and broccoli were finished on the stove, and that the neapolitan fat bombs were in the freezer. She had wiped down my countertops and cleaned my dishes. When the tenderloin was ready, I took it out and was delighted. It looked great and tasted fantastic.
 
