@@ -72,9 +72,7 @@ The trends are mostly in Arabic, which I can can't read. Even the English hashta
 
 ### Mute, block, and unfollow your way to a tidy Twitter feed
 
-I initially joined Twitter to share my blog posts and find other interesting content relevant to my work. Over time, I started adding comedians and celebrities because their tweets were often entertaining. I realized that more and more, my Twitter feed was polluted with the same politics and shallow outrage I was trying to avoid, and most of it was coming from the celebrity accounts, so I trimmed down my follow list.
-
-I followed anyone who I thought was an interesting person.
+I initially joined Twitter to share my blog posts and find other interesting content relevant to my work. For fun, I added comedians and celebrities because their tweets were often entertaining. Over time, my Twitter filled with negative political rhetoric and shallow outrage. most of it was coming from celebrity accounts, so I trimmed down my follow list.
 
 This got me partway there, and I realized I could clear most of the remaining content by adding [muted words](https://twitter.com/settings/muted_keywords).
 
