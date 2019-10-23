@@ -1,24 +1,36 @@
 ---
-title: "Tricks for Reducing Distractions from Gmail, Social Media, and StackOverflow"
+title: "Tricks for Reducing Distractions from Social Media, Email, and StackOverflow"
 ---
 
-This isn't another "you should quit social media" blog post. You can use email and social media in healthy ways. The challenge is that they actively struggle with you to induce you to use them in unhealthy ways. This post is about techniques that help you manage these tools instead of allowing them to manage you. Some are simple technical tricks. Others are personal habits.
+There are a million blog posts telling you to quit social media. This isn't one of those. Instead, I'm sharing some tips to help you use all of these things in more thoughtful, productive ways. Some of these tips are technical - tinkering with settings or installing helpful extensions. Others are tips for adjusting your personal habits and mindset for social media and email. This post is about techniques that help you manage these tools instead of allowing them to manage you.
 
-## Avoid "drag"
+## Avoid the app rabbit holes
 
-Apps that when you use them, they drag you into other stuff.
+Everyone has had the experience of opening Gmail to compose a letter and then seeing six new emails. You can't just let those emails sit in your inbox, so you read through them. By the time you finished, you don't even remember that you were supposed to write an email because now you have six new problems to solve.
 
-* You decide to respond to a recent email, but you open Gmail and see four new emails.
-* You take out your phone to check the time and see that you have six notifications from four different apps.
-* You check your Twitter feed for interesting blog posts and instead spend three hours reading about the latest trending controversy that everyone will forget about in a week.
+You've fallen down a rabbit hole. Most major apps have them. Your device has them too. How often do you take out your phone to for some task but get sidetracked by three new notifications that pop up?
+
+The first step in reducing distractions from devices and apps is learning to identify these rabbit holes and thinking about how to avoid them.
 
 ## Decide what you want from social media
 
-You can manage the cost of social media.
+If you asked me to sit down and write a list of all the reasons I use Facebook, it would include things like:
 
-People talk about social media as if it's always a negative thing and you need to eliminate it. But social media can be a useful thing. I like to see when my Facebook friends get married or have babies. I don't want to use Facebook for mindlessly watching videos or getting into political arguments. I like to see when interesting people I follow on Twitter post useful blog articles or advice.
+* Seeing pictures of my friends as they raise their families
+* Hearing about my friends' big life changes
+* Remembering people's birthdays
 
-Think about what you want out of social media and if there's a way to get it. I can use Twitter for my stated purpose by checking it once a day in a 5-15 minute block. Same with Facebook.
+It would **not** include these things, even though I was using it for these reasons, too:
+
+* Engaging in heated political arguments
+* Reading glamourized life updates from people trying to attract envy
+* Escaping from being alone with my thoughts for more than three seconds
+
+Until a few years ago, I was checking Facebook 20-30 times per day. Any time I was bored, I'd open a new browser tab and check Facebook. If I was standing in line, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
+
+The problem was obviously that I was using Facebook in a way that served all of my Bad reasons for using Facebook. To use it for my stated reasons, I'd never have to check it 20-30 times per day. Once a day is fine. Once per week would probably be fine.
+
+Think about your Good Reasons for using social media. Then decide what usage is consistent with those costs.
 
 ## Schedule time for email, texts, and social media
 
@@ -26,51 +38,37 @@ If you've taken some time to reflect on what you want from social media, hopeful
 
 This is easiest with social media because there's rarely urgent, critical tasks that result from you checking your Facebook feed.
 
-I'm more present in social situations. I was always a firm believer in "don't interrupt a real life interaction to check your phone." But if my friend went to the bathroom or they had to take a call or something, I'd check my email and texts. I didn't think anything of it, but I realized a huge difference once I committed to not doing that.
-
-Checked Twitter and was in a bad mood because someone said something I found really obnoxious.
-
-I check once I get home.
-
-I schedule
-
-Social media becomes less interesting
-
-Don't check your texts in social situations or during brief breaks.
+I check social media once per day right after I eat dinner. I limit myself to half an hour for Reddit, Twitter, and Facebook. I find scheduling it and timeboxing it diminishes its temptation. The first few days I tried it, I was desperate to see what was going on on Facebook. Then, after dinner, I was so eager to check, and... nothing. I scrolled my feed for two or three minutes and it was all boring. Once I realized that social media isn't as exciting as it seemed in my head, it became much easier to resist the temptation to check it all the time.
 
 ## "What's the harm in checking email and social media during idle times?"
 
-For a long time, I thought I was managing my email and social media well. I wasn't one of those people that kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. When I was waiting for a page to load or a 2-minute test to run, what was the harm in using the time to check my email or Twitter instead of just sitting there being bored?
+For a long time, I thought I was managing my email and social media well. I wasn't one of those people that kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. Buuuuuuut, when I was waiting for a page to load or a 2-minute test to run, why not check my email or Twitter instead of sitting there being, bored?
 
-The first problem is that the scenario is a fantasy. If I checked Twitter while I waited for a two minute process to finish, I'd often end up closing Twitter 5-15 minutes later.
+The first problem is that the scenario is a fantasy. If I checked Twitter while I waited for a two-minute process to finish, I'd often return at least 15 minutes later.
 
-The second problem is something I'd never heard of until last year: attention residue. I learned about it in [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). TODO: look up studies.
+The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it in [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you switch tasks, even if you feel focused on the new tasks, there's still a "residue" from the previous task that occupies your mind and decreases performance on your new task. When you check email and then go back to your job, your mind is still processing the new emails you received and distracting you from your current task.
 
-The last problem is that it trains your brain to expect constant stimulation.
-
-It's okay to be bored! Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're solving a difficult problem.
+The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to be bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're solving a difficult problem.
 
 ## Twitter
 
 ### Make Twitter's trending hashtags boring
 
-Twitter tries to pull you into deeper engagement by showing you trending topics and hashtags.
+One of Twitter's flagship rabbit holes is its Trending Topics. Whenever you sign in, it shows you hashtags that are likely to attract your interest.
 
-{% include image.html file="twitter-trending.jpg" alt="Twitter's trending topics" max_width="800px" img_link=true class="img-border" fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
+{% include image.html file="twitter-trending.jpg" alt="Twitter settings for Trends panel" max_width="800px" img_link=true class="img-border" fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
-This plays on your natural sense of wanting to be involved, so you read about whatever the hashtag is. But these are almost always garbage. The majority is some outrage that everyone will forget in a month. Otherwise, it's a current event, and you're ready low-quality, reactionary responses to it.
+The Trending Topics play on your natural desire to feel involved, but they're almost always garbage. The majority are some outrage that everyone will forget in a month. Otherwise, it's just a stream of low-quality, reactionary responses to a newsworthy event.
 
-Set Twitter's trending news to a location where you don't speak the language and you're not interested in their news. Mine is set to Abu Dhabi.
+You can't disable the Trending Topics panel, but you can make it boring. Configure [your Trends locale](https://twitter.com/settings/trends) to a location whose language language you can't read and whose news you don't follow. Mine is set to Abu Dhabi.
 
-https://twitter.com/settings/trends
-
-{% include image.html file="twitter-settings.jpg" alt="Twitter's trending topics" max_width="600px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
+{% include image.html file="twitter-settings.jpg" alt="Twitter's trending topics for Abu Dhabi" max_width="600px" img_link=true fig_caption="Adjusting location for Twitter Trending Topics." %}
 
 Here's how my trends panel looks after I set it to Abu Dhabi.
 
-{% include image.html file="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" max_width="352px" img_link=true fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
+{% include image.html file="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" max_width="352px" img_link=true fig_caption="Twitter Trending Topics for Abu Dhabi, UAE" %}
 
-The trends are mostly in Arabic, which I can can't read. Even the English hashtag is fairly specific to the United Arab Emirates and not something that tempts me.
+The trends are mostly in Arabic, which I can can't read. Even the English hashtag is specific to the United Arab Emirates.
 
 ### Mute, block, and unfollow your way to a tidy Twitter feed
 
@@ -274,7 +272,3 @@ Think about how you can change your usage of the app to prevent this.
 Some days, I'm obsessively checking texts and email. It feeds on itself. It usually happens when I'm feelign frustrated or lonely. I open up email or social media to distract me; it usually doesn't, and then that creates an even greater desperation for stimulation. I find that on these cases, I resign myself to the bad day and focus on doing better the following day. It works.
 
 Another frequent breaker of my good habits is travel. Sitting around in airports or train stations, it feels like a perfect time to turn off your brain and check social media. But I find this bleeds into my habits back home. Now, when I travel, I plan ahead so that I have a book to read or podcasts to listen to. Sometimes, I just accept the boredom and enjoy looking out the window and taking in unfamiliar scenery.
-
----
-
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
