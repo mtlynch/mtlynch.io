@@ -1,66 +1,63 @@
 ---
 title: "Tricks for Reducing Distractions from Social Media, Email, and StackOverflow"
 ---
+You open Gmail to send your friend an email. Before composing the email, you notice that you've received six new messages. It pains you to leave emails unopened, so you quickly read all the emails. Two hours later, you realize that you forgot to ever write that email to your friend.
 
-There are a million blog posts telling you to quit social media. This isn't one of those. Instead, I'm sharing some tips to help you use all of these things in more thoughtful, productive ways. Some of these tips are technical - tinkering with settings or installing helpful extensions. Others are tips for adjusting your personal habits and mindset for social media and email. This post is about techniques that help you manage these tools instead of allowing them to manage you.
+I used to experience this constantly with minor variations for each of my apps. I'd check my phone for the time and realize I had 10 notifications. I'd open Facebook to look up someone's birthday and fall into a zombie state of mindlessly scrolling through my Newsfeed.
 
-## Avoid the app rabbit holes
+Instead of managing our apps, we allow them to manage us. We have a Pavlovian response to app notifications, and we've learned to mindlessly consume their content. It doesn't have to be that way.
 
-Everyone has had the experience of opening Gmail to compose a letter and then seeing six new emails. You can't just let those emails sit in your inbox, so you read through them. By the time you finished, you don't even remember that you were supposed to write an email because now you have six new problems to solve.
-
-You've fallen down a rabbit hole. Most major apps have them. Your device has them too. How often do you take out your phone to for some task but get sidetracked by three new notifications that pop up?
-
-The first step in reducing distractions from devices and apps is learning to identify these rabbit holes and thinking about how to avoid them.
+This article is a collection of techniques that have helped me use email and social media in more thoughtful, productive ways. Some are technical - tinkering with settings or installing helpful extensions. Others are adjustments to your personal habits and mindset to improve your relationship with social media.
 
 ## Decide what you want from social media
 
-If you asked me to sit down and write a list of all the reasons I use Facebook, it would include things like:
+If you asked me to sit down and write down what aspects of Facebook I find fulfilling, it would include things like:
 
-* Seeing pictures of my friends as they raise their families
-* Hearing about my friends' big life changes
+* Hearing about my friends' big life events, such as marriages or job changes
+* Seeing pictures of my friends as they raise their children
 * Remembering people's birthdays
 
-It would **not** include these things, even though I was using it for these reasons, too:
+If you observed my *actual* use of Facebook, you'd notice me spending time on aspects of it that were not so fulfulling, like:
 
 * Engaging in heated political arguments
-* Reading glamourized life updates from people trying to attract envy
-* Escaping from being alone with my thoughts for more than three seconds
+* Reading glamourized, envy-baiting updates from distant acquaintances
+* Escaping the experience of sitting alone with my thoughts for more than three seconds at a time
 
-Until a few years ago, I was checking Facebook 20-30 times per day. Any time I was bored, I'd open a new browser tab and check Facebook. If I was standing in line, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
+Until a few years ago, I was checking Facebook 20-30 times per day. Any time I was bored, I'd open a new browser tab and check Facebook. If I had a 30-second elevator ride, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
 
-The problem was obviously that I was using Facebook in a way that served all of my Bad reasons for using Facebook. To use it for my stated reasons, I'd never have to check it 20-30 times per day. Once a day is fine. Once per week would probably be fine.
+My usage patterns served all of my Bad Reasons for using Facebook. To satisfy my Good Reasons for using social media, I didn't have to check it nearly as often as I was. Once a day would be sufficient. Once per week would probably be fine.
 
-Think about your Good Reasons for using social media. Then decide what usage is consistent with those costs.
+The first step toward a healthy relationship with your apps is deciding what you want out of them and what you have to invest to get it. You'll probably find that you can retain the important benefits from your apps while investing substantially less time and attention.
 
 ## Schedule time for email, texts, and social media
 
-If you've taken some time to reflect on what you want from social media, hopefully your answer isn't, "Email and social media are my taskmasters, so I must check in with them every 15 minutes to decide on my next task." No, once you decide what you want from those tools and how much time you need to invest to get that benefit, schedule it.
+If you've taken some time to reflect on what you want from social media, hopefully your conclusion is not, "Email and social media are my taskmasters, so I must check in with them every 15 minutes to retrieve my next assignment." No, once you decide what you want from those tools and how much time you need to invest to get that benefit, schedule it.
 
-This is easiest with social media because there's rarely urgent, critical tasks that result from you checking your Facebook feed.
+The first day I tried scheduling my social media time, I felt a desperate craving all day to check Facebook. By 7pm, I felt like I'd been fasting all day and was about to eat an entire birthday cake. Finally, I opened Facebook, and... nothing. After scrolling through my feed for two or three minutes, I couldn't believe how boring it all was. I was so used to the habit of checking my feed that I never realized my satisfaction came from the ritual itself rather than anything fascinating about Facebook.
 
-I check social media once per day right after I eat dinner. I limit myself to half an hour for Reddit, Twitter, and Facebook. I find scheduling it and timeboxing it diminishes its temptation. The first few days I tried it, I was desperate to see what was going on on Facebook. Then, after dinner, I was so eager to check, and... nothing. I scrolled my feed for two or three minutes and it was all boring. Once I realized that social media isn't as exciting as it seemed in my head, it became much easier to resist the temptation to check it all the time.
+Once I realized that social media isn't as exciting as it seemed in my head, it became much easier to resist its temptations. My current habit is to check social media once per day right after dinner. I limit myself to half an hour combined for Reddit, Twitter, and Facebook.
 
 ## "What's the harm in checking email and social media during idle times?"
 
-For a long time, I thought I was managing my email and social media well. I wasn't one of those people that kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. Buuuuuuut, when I was waiting for a page to load or a 2-minute test to run, why not check my email or Twitter instead of sitting there being, bored?
+For a long time, I thought I was managing my email and social media well. I wasn't one of those people that kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. But, when I was waiting for a slow webpage to load or a two-minute test to complete, why not check my email or Twitter instead of sitting there being, bored?
 
-The first problem is that the scenario is a fantasy. If I checked Twitter while I waited for a two-minute process to finish, I'd often return at least 15 minutes later.
+The first problem is that the scenario is a fantasy. If I checked Twitter while I waited for a two-minute process to finish, it would take me at least 15 minutes to return to my original task.
 
-The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it in [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you switch tasks, even if you feel focused on the new tasks, there's still a "residue" from the previous task that occupies your mind and decreases performance on your new task. When you check email and then go back to your job, your mind is still processing the new emails you received and distracting you from your current task.
+The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it in [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the emails you read, and it distracts you even if you're not conscious of it.
 
-The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to be bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're solving a difficult problem.
+The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to be bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're facing a difficult challenge.
 
 ## Twitter
 
 ### Make Twitter's trending hashtags boring
 
-One of Twitter's flagship rabbit holes is its Trending Topics. Whenever you sign in, it shows you hashtags that are likely to attract your interest.
+Whenever you sign in to Twitter, it shows you hashtags that are likely to attract your interest and send you down a rabbit hole.
 
 {% include image.html file="twitter-trending.jpg" alt="Twitter settings for Trends panel" max_width="800px" img_link=true class="img-border" fig_caption="Twitter shows you trending topics to seduce you into spending more time in the app." %}
 
 The Trending Topics play on your natural desire to feel involved, but they're almost always garbage. The majority are some outrage that everyone will forget in a month. Otherwise, it's just a stream of low-quality, reactionary responses to a newsworthy event.
 
-You can't disable the Trending Topics panel, but you can make it boring. Configure [your Trends locale](https://twitter.com/settings/trends) to a location whose language language you can't read and whose news you don't follow. Mine is set to Abu Dhabi.
+You can't disable the Trending Topics panel, but you can make it boring. Configure [your Trends locale](https://twitter.com/settings/trends) to a location with a language language you can't read and whose news you don't follow. Mine is set to Abu Dhabi.
 
 {% include image.html file="twitter-settings.jpg" alt="Twitter's trending topics for Abu Dhabi" max_width="600px" img_link=true fig_caption="Adjusting location for Twitter Trending Topics." %}
 
@@ -72,11 +69,9 @@ The trends are mostly in Arabic, which I can can't read. Even the English hashta
 
 ### Mute, block, and unfollow your way to a tidy Twitter feed
 
-I initially joined Twitter to share my blog posts and find other interesting content relevant to my work. For fun, I added comedians and celebrities because their tweets were often entertaining. Over time, my Twitter filled with negative political rhetoric and shallow outrage. most of it was coming from celebrity accounts, so I trimmed down my follow list.
+I initially joined Twitter to share my blog posts and find other interesting content relevant to my work. For fun, I added comedians and celebrities because their tweets were often entertaining. Over time, my Twitter filled with negative political rhetoric and shallow outrage. Most of the negativity was coming from celebrity accounts, so I trimmed down my follow list.
 
-This got me partway there, and I realized I could clear most of the remaining content by adding [muted words](https://twitter.com/settings/muted_keywords).
-
-I enjoyed following celebrities and comedians because they were entertaining, but I realized they were distracting me from my intended purpose on Twitter, which is to maintain professional connections and see when people post interesting technical content.
+This got me partway there, and I realized I could clear most of the remaining low-quality content by adding [muted words](https://twitter.com/settings/muted_keywords):
 
 {% assign fig_caption = "Use [muted words](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -84,17 +79,17 @@ I enjoyed following celebrities and comedians because they were entertaining, bu
 
 You'll notice that this hides prominent politicians and current events topics. I think the news is important, but Twitter is not an effective way for me to consume it.
 
-Review your the list of accounts you follow on Twitter. Eliminate ones that post a low proportion of relevant content.
+Twitter evolves quickly, so this is a continuous process. When too much of my feed fills with uninteresting content, I review my follow list for accounts whose signal-to-noise ratio is poor, and I look for new muted words that can help me curate my feed.
 
 ## StackOverflow / StackExchange
 
 ### Ignore "hot questions"
 
-As a programmer, StackOverflow often has highly valuable answers to problems I run into during software development. But they're also playing games to distract me from my task at hand and drag me deeper into the app. Their sidebar is filled with distractions: "hot questions," blog posts, and job listings. The "hot questions" are especially pernicious because they're no doubt just displaying the questions most likely to attract clicks.
+As a programmer, StackOverflow often has valuable answers to software development roadblocks. The company unfortunately plays games to steal my focus and drag me deeper into their platform. Their sidebar is filled with distractions: "hot questions," blog posts, and job listings. The "hot questions" are especially pernicious because they're no doubt just displaying the questions most likely to attract clicks.
 
-The "hot questions" are never relevant to the problem I came to StackOverflow to solve, but if I'm on StackOverflow, chances are that I'm frustrated debugging something and easily tempted by distractions.
+The "hot questions" are never relevant to the problem I came to StackOverflow to solve, but if I'm on StackOverflow, chances are that I'm frustrated with a technical problem and easily tempted by distractions.
 
-I avoid this with a browser extension called [uBlock Origin](https://github.com/gorhill/uBlock). Its primary purpose is to block ads, but one of its lesser-known features is its "element picker." It allows you to hide any page element permanently with a few mouse clicks. Selecting a page element with the "element picker" tool adds a CSS selector rule to uBlock Origin so that it knows to always hide that element.
+A free browser extension mitigates this problem for me: [uBlock Origin](https://github.com/gorhill/uBlock). Its primary purpose is to block ads, but its lesser-known "element picker" feature allows you to hide any page element permanently with a few mouse clicks:
 
 <figure>
   <video style="max-width:100%" controls>
@@ -104,13 +99,13 @@ I avoid this with a browser extension called [uBlock Origin](https://github.com/
   <figcaption>Removing all sidebar distractions from StackOverflow using uBlock Origin</figcaption>
 </figure>
 
-This technique works on many sites, but it's a bit flaky given that it depends on CSS rules that may change when sites update their design. You also need to watch out for sites like Twitter that use UI frameworks that have so generate so much of their UI dynamically that uBlock Origin's selectors don't work on subsequent visits.
+This technique works on many sites, though it does break occasionally when sites adjust their design. It fails on sites like Twitter that generate so much of their UI dynamically that uBlock Origin's selectors become ineffective on subsequent visits.
 
-You can also use StackOverflow settings to disable "Hot Questions" natively, though there's no option to hide the other distracting sidebar panels. To suppress "Hot Questions", go to [Site Settings > Preferences](https://stackoverflow.com/users/preferences/) and check the box for "Hide Hot Network Questions":
+StackOverflow offers a native settings to disable "Hot Questions," though there's no option to hide the other distracting sidebar panels. To suppress "Hot Questions", go to [Site Settings > Preferences](https://stackoverflow.com/users/preferences/) and check the box for "Hide Hot Network Questions":
 
-{% assign fig_caption = 'Disable "Hot Network Questions" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions.' | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = 'Click "Hide Hot Network Questions" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions.' | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" max_width="600px" img_link=true class="img-border" fig_caption=fig_caption %}
+{% include image.html file="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" max_width="700px" img_link=true class="img-border" fig_caption=fig_caption %}
 
 ## Email
 
@@ -118,7 +113,7 @@ You can also use StackOverflow settings to disable "Hot Questions" natively, tho
 
 When I first started limiting my email checking, I often struggled with the fact that my email contained lots of useful information I needed. For example, I'd be trying to remember how to install some software package, remember that I emailed someone four months ago explaining how to do it, so I'd check my email archive to find it. But the problem with Gmail is that on the way to searching your mail archive, you have to see your inbox. I wanted a way to make it so that I could still search for old information in my archives without seeing anything new.
 
-Fortunately, I found out there's a tool that's exactly for that: [Inbox When Ready](https://inboxwhenready.org/).
+Fortunately, there's a tool for that exact purpose: [Inbox When Ready](https://inboxwhenready.org/).
 
 {% assign fig_caption = "When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -126,9 +121,9 @@ Fortunately, I found out there's a tool that's exactly for that: [Inbox When Rea
 
 The tool is flexible, so you can allow messages to show up in your inbox immediately when they match certain rules (e.g., mail from a particular sender or with a specific keyword in the subject). You can also configure it to limit the number of checks or the total time you spend in your inbox each day.
 
-Inbox When Ready works great on my desktop, but I haven't found a similar solution for my phone, unfortunately. I don't have to check my mail archive so much when I'm away from my desktop, but there are situations like event tickets in my mail history that require me to pull up the Gmail mobile app, which unhelpfully shows me my new emails on the way.
+Inbox When Ready works great on my desktop, but I haven't found a similar solution for my phone. I don't have to check my mail archive so much when I'm away from my desktop, but there are situations like event tickets in my mail history that require me to pull up the Gmail mobile app, which unhelpfully shows me my new emails on the way.
 
-If you use a desktop mail client like Outlook or Thunderbird, you can suppress the display of new emails by disabling automatic e-mail checking.
+If you use a desktop mail client like Outlook or Thunderbird, you can achieve the same effect as Inbox When Ready by disabling your client's automatic e-mail checking.
 
 ### Move your to-do list out of your inbox
 
@@ -144,13 +139,13 @@ It's tempting to manage tasks with your email inbox because it *seems* so conven
 
 Instead, I process each email using the following workflow that David Allen popularized in [*Getting Things Done*](https://amzn.to/2J3GIY1):
 
-1. If the email requires no reply, I archive it
+1. If the email does not require a reply, I archive it
 1. If the email requires a reply I can write in under two minutes, I reply immediately.
-1. For all other emails, I add "Respond to [person]" to my to-do list and then archive the email
+1. For all other emails, I add "Respond to [person]" to my to-do list and then archive the email.
 
-If you're used to using your inbox to manage tasks, I know the prospect of managing a whole separate task list sounds tedious and annoying. I encourage you to try it for a week.
+If you're in the habit of using your inbox to manage tasks, the prospect of managing a whole separate task list sounds tedious and annoying. Just try it for a week.
 
-Before I did it, I didn't realize the hold that emails had on me by sitting in my inbox. Any time I checked my inbox, it was sitting there begging for my attention. Now, when I receive an email that doesn't require an immediate response, I just create a task and schedule it for a few days in the future. It gives me the freedom to forget about the email because I know my to-do list will remind me about it later.
+Before I did it, I didn't realize the hold that emails had on me by sitting in my inbox. Any time I checked my inbox, it was sitting there begging for my attention. Now, when I receive an email that doesn't require an immediate response, I just create a task and schedule it for when I have time to reply. It gives me the freedom to forget about the email because I know my to-do list will remind me about it later.
 
 {% assign fig_caption = "When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -160,7 +155,7 @@ My to-do list app of choice is [Nirvana](https://nirvanahq.com/). I think it's o
 
 ### Unbundle Hangouts from Gmail
 
-By default, Gmail integrates Hangouts into your desktop. I use Hangouts to manage my SMS because I hate being forced to send all my SMS messages from my phone. The problem is that, again, this creates intrusive bundling. It means that I can't open my Gmail without seeing my Hangouts messages and vice-versa.
+I use Hangouts to manage my SMS because I hate typing on my phone when there's usually a full-size keyboard right in front of me. Unfortunately, Google integrates Hangouts into my Gmail inbox by default. This creates intrusive bundling, as opening my Gmail forces me to see my Hangouts messages and vice-versa.
 
 {% include image.html file="hangouts-in-gmail.jpg" alt="Chat settings in Gmail" max_width="800px" img_link=true class="img-border" fig_caption="By default, Gmail embeds Hangouts into your inbox." %}
 
@@ -170,7 +165,7 @@ Fortunately, this is a pretty easy one to solve. Go to the [chat settings in Gma
 
 {% include image.html file="gmail-disable-chat.jpg" alt="Chat settings in Gmail" max_width="821px" img_link=true class="img-border" fig_caption=fig_caption %}
 
-When you want to access Hangouts, just go to [https://hangouts.google.com](https://hangouts.google.com).
+You can still access Hangouts on a dedicated URL: [https://hangouts.google.com](https://hangouts.google.com).
 
 ## Use social media with a dedicated browser profile
 
@@ -192,11 +187,9 @@ Instead, I block social media in my main browser and create a dedicated browser 
   <figcaption>Setting up separate browser profiles in Chrome</figcaption>
 </figure>
 
-It makes it hard to mindlessly pop open a new tab and visit a time-waster site. To visit Facebook, you have to consciously think about it. It also means that if you visit Facebook unintentionally, like a business' main web presence is their Facebook page, you can get the relevant information without seeing your tantalizing Facebook notifications in the corner.
+It makes it hard to mindlessly pop open a new tab and visit a time-waster site. To visit Facebook, you have to consciously think about it. It also means that if you visit Facebook unintentionally, like a business' main web presence is their Facebook page, you can get the relevant information without seeing your tantalizing Facebook notifications in the corner. Then, I sign out of the social media sites on my main browser and delete the cookies for those sites.
 
-Then I sign out of the social media sites on my main browser and delete the cookies for those sites. This is sufficient for sites like Facebook or Twitter that are near useless when you're not signed in. For other sites like news site, you have to block it in your main browser so that you remember to use it in your timewaster browser.
-
-I added news.google.com to uBlock Origin's filter rules. That way, any time I visit out of habit, I'm reminded that I need to visit it in my other browser profile.
+This is sufficient for sites like Facebook or Twitter that are near useless when you're not signed in. For others, like news sites, I add it to uBlock Origin's filter rules. That way, any time I visit out of habit, I'm reminded that I need to visit it in my other browser profile.
 
 {% include image.html file="block-news3.jpg" alt="The browser blocks subsequent visits to uBlock Origin" img_link="true" max_width="650px" fig_caption="Blocking Google News" %}
 
@@ -216,17 +209,17 @@ My phone has been continuously on "Do Not Disturb" mode for the last 18 months. 
 
 {% include image.html file="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" max_width="350px" class="img-border" img_link=true fig_caption="I permanently set my phone to Do Not Disturb." %}
 
-I discovered this solution by mistake. I initially downloaded an app that claimed to enable Do Not Disturb when I turned the phone facedown. The app didn't work and instead just always put my phone into Do Not Disturb. Then, I realized that was actually better. If I wanted to check my texts, I just checked my texts.
+I discovered this solution by mistake. I initially downloaded an app that claimed to toggle Do Not Disturb based on whether my phone was facing up or down. The app didn't work and it instead always put my phone into Do Not Disturb. Then, I realized that was actually better. If I wanted to check my texts, I just checked my texts.
 
-There's lots of things that I'd like to do on my phone without getting dragged into some app. I often look at my phone just to check the time, but if I see that I have new texts, it tempts me to check them. With Do Not Disturb, I just don't see anything until I decide to check.
+There's lots of things that I'd like to do on my phone without getting dragged into some app. I often look at my phone just to check the time, but if I see that I have new texts, it tempts me to check them. With Do Not Disturb, I just don't see anything until I open the app I'm interested in.
 
 ### Replace texts with phone calls
 
-Unfortunately, there's no equivalent of Inbox When Ready for text messages. As soon as you open your texting app, you see all texts from all of your contacts. I've never seen any apps or tools that allow you to limit what you see.
+Unfortunately, there's no equivalent of Inbox When Ready for text messages. As soon as you open your texting app, you see all texts from all of your contacts. I've never seen any apps or tools that allow you to limit when incoming texts become visible.
 
-My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Catching up with a friend who lives far away is way easier with a phone call than sending 100 texts. And arranging logistics to meet a friend is way easier over the phone.
+My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Catching up with a friend who lives far away is way easier with a phone call than sending 100 texts. And a phone call is the far more efficient way to arrange logistics of things like meeting for lunch.
 
-There was an adjustment period at first because people were used to me providing prompt responses over text. But people figure it out. When you don't respond for hours, they realize that you're no longer a good texter, so they shouldn't rely on texting to get your immediate attention. By now, my friends and family know to call me if there's anything that requires my immediate attention. And some people have anxiety about talking on the phone, but they also can see the benefits once they try it.
+There was an adjustment period at first because people were used to me providing prompt responses over text. But people figure it out. When you don't respond for hours, people realize that you're no longer a good texter, so they shouldn't rely on texting to get your immediate attention. By now, my friends and family know to call me if there's anything that requires my immediate attention.
 
 ## Replace online communities with real-life meetups
 
@@ -234,7 +227,7 @@ I met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hac
 
 He later told me that it's a very deliberate strategy. He loves engaging with other people in the startup world, but he has only finite time to allocate to this. He finds that he gets a bigger bang for his buck from in-person meetups, so of the time he allocates to participating in professional communities, he dedicates nearly 100% to in-person meetups and conferences.
 
-Once I heard this, it made a lot of sense to me. There are people I met at meetups that I talked to for 30 minutes and am still in touch with today. That's not true of anyone I engage with on Twitter or reddit. There are multiple instances where I spent an hour or more engaging with someone on an online forum, but now I have no memory of the conversation and am not in touch with the person at all.
+Once I heard this, it made a lot of sense to me. There are people I met at meetups that I talked to for 30 minutes and am still in touch with today. That's not true of anyone I engage with on Twitter or reddit. Instead, there are countless instances where I spent an hour or more engaging with someone on an online forum, but now I have no memory of the conversation and am not in touch with the person at all.
 
 {% assign fig_caption = "I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." | markdownify | remove: "<p>" | remove: "</p>" %}
 
