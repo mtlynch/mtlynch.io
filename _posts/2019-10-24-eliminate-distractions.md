@@ -23,7 +23,9 @@ If you observed my *actual* use of Facebook, you'd notice me spending time on as
 * Reading glamourized, envy-baiting updates from distant acquaintances
 * Escaping the experience of sitting alone with my thoughts for more than three seconds at a time
 
-Until a few years ago, I was checking Facebook 20-30 times per day. Any time I was bored, I'd open a new browser tab and check Facebook. If I had a 30-second elevator ride, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
+{% include image.html file="ideal-facebook.jpg" alt="Ideal Facebook vs. Actual Facebook" max_width="900px" img_link=true %}
+
+Until a few years ago, I checked Facebook 20-30 times per day. Any time I was bored, I'd open a new browser tab and check Facebook. If I had a 30-second elevator ride, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
 
 My usage patterns served all of my Bad Reasons for using Facebook. To satisfy my Good Reasons for using social media, I didn't have to check it nearly as often as I was. Once a day would be sufficient. Once per week would probably be fine.
 
@@ -85,7 +87,7 @@ Twitter evolves quickly, so this is a continuous process. When too much of my fe
 
 ### Ignore "hot questions"
 
-As a programmer, StackOverflow often has valuable answers to software development roadblocks. The company unfortunately plays games to steal my focus and drag me deeper into their platform. Their sidebar is filled with distractions: "hot questions," blog posts, and job listings. The "hot questions" are especially pernicious because they're no doubt just displaying the questions most likely to attract clicks.
+StackOverflow often offers me valuable answers to software development roadblocks. The company unfortunately plays games to steal my focus and drag me deeper into their platform. Their sidebar is filled with distractions: "hot questions," blog posts, and job listings. The "hot questions" are especially pernicious because they're no doubt just displaying the questions most likely to attract clicks.
 
 The "hot questions" are never relevant to the problem I came to StackOverflow to solve, but if I'm on StackOverflow, chances are that I'm frustrated with a technical problem and easily tempted by distractions.
 
@@ -223,23 +225,19 @@ There was an adjustment period at first because people were used to me providing
 
 ## Replace online communities with real-life meetups
 
-I met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hackers meetup in Manhattan. David lives in Western Massachusetts. I later asked him why he'd spend 3 hours traveling to New York City just for a meetup.
+I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at an Indie Hackers meetup I organized in Manhattan. When he told me that he had traveled three hours from Western Massachusetts to attend, I thought he was nuts, but I later discovered that it's part of a strikingly sensible strategy.
 
-He later told me that it's a very deliberate strategy. He loves engaging with other people in the startup world, but he has only finite time to allocate to this. He finds that he gets a bigger bang for his buck from in-person meetups, so of the time he allocates to participating in professional communities, he dedicates nearly 100% to in-person meetups and conferences.
+David loves meeting other founders, but he only has finite time to do it. He found that his in-person interactions were almost always richer and longer-lasting than relationships he formed online, so he dedicates nearly all of his networking time to real life events.
 
-Once I heard this, it made a lot of sense to me. There are people I met at meetups that I talked to for 30 minutes and am still in touch with today. That's not true of anyone I engage with on Twitter or reddit. Instead, there are countless instances where I spent an hour or more engaging with someone on an online forum, but now I have no memory of the conversation and am not in touch with the person at all.
+{% assign fig_caption = "Photo from [Indie Hackers Western Mass Meetup](https://www.meetup.com/nerdsummit/events/266162598/), which David and now I co-organize" | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% include image.html file="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" max_width="650px" img_link=true fig_caption=fig_caption %}
+
+This made complete sense to me. I can think of several people I'm still in touch with today because I met them at a meetup or conference years ago for only 30 minutes. That's not true of anyone I interact with on Twitter or reddit. Reading through my social media history, I found countless instances where I spent an hour or more engaging with someone online, but now I have no memory of the conversation and am not in touch with the person at all.
 
 {% assign fig_caption = "I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="indiehackers-feedback.jpg" alt="Chat settings in Gmail" max_width="450px" img_link=true fig_caption=fig_caption %}
-
-With in-person meetups, it's much more common for me to form lasting bonds. I'm not saying that we become best friends, but I reach out to them months later when I need their advice and vice-versa. That's exceedingly rare in the relationships I build purely online.
-
-There's something so different about meeting someone in person. There are people I met at meetups one time more than a year ago and we still keep in touch and help each other out. Meanwhile, there are people who I've probably spent 10x that time engaging.
-
-David and I now organize the Indie Hackers meetup for Western Mass. We weren't sure if anyone would come, but worst case scenario, it's just us hanging out together. We generally draw a crowd of 6-10 people. Western Massachusetts is certainly not a tech hub, but we draw a crowd of 6-10 people. And the advice is highly personalized. Wide variety of people, some have hundreds of dollars in capital while others have hundreds of thousands. Some people are earning enough to hire employees and some are just starting out.
-
-{% include image.html file="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" max_width="650px" img_link=true fig_caption="Indie Hackers Western Mass August Meetup" %}
 
 ## The hardest part of changing habits is the beginning
 
@@ -263,3 +261,7 @@ Think about how you can change your usage of the app to prevent this.
 Some days, I'm obsessively checking texts and email. It feeds on itself. It usually happens when I'm feelign frustrated or lonely. I open up email or social media to distract me; it usually doesn't, and then that creates an even greater desperation for stimulation. I find that on these cases, I resign myself to the bad day and focus on doing better the following day. It works.
 
 Another frequent breaker of my good habits is travel. Sitting around in airports or train stations, it feels like a perfect time to turn off your brain and check social media. But I find this bleeds into my habits back home. Now, when I travel, I plan ahead so that I have a book to read or podcasts to listen to. Sometimes, I just accept the boredom and enjoy looking out the window and taking in unfamiliar scenery.
+
+---
+
+*Original artwork by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
