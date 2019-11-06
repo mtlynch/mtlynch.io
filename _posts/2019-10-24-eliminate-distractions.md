@@ -11,7 +11,7 @@ You open Gmail to write an email to your friend. Before you begin, you notice th
 
 This happened to me constantly. It repeated itself with minor variations for each of my apps. I'd look at my phone to check the time and realize I had 10 notifications. I'd open Facebook to look up someone's birthday and fall into a zombie state of scrolling through my Newsfeed.
 
-Instead of managing my apps, I allowed them to manage me. I developed a Pavlovian response to app notifications and learned to mindlessly consume their content. It doesn't have to be that way.
+Instead of managing my apps, I allowed them to manage me. I developed a Pavlovian response to app notifications and learned to mindlessly consume their content.
 
 This article is a collection of techniques that have helped me use email, social media, and other apps in more thoughtful, productive ways. Some are technical &mdash; tinkering with settings or installing helpful extensions. Others are adjustments to my personal habits and mindset that improved my relationship with social media.
 
@@ -31,7 +31,7 @@ If you observed my *actual* use of Facebook, you'd notice me spending time on de
 
 {% include image.html file="ideal-facebook.jpg" alt="Ideal Facebook vs. Actual Facebook" max_width="900px" img_link=true %}
 
-Until a few years ago, I checked Facebook 20-30 times per day. Any time I was bored, I'd open a new browser tab and check Facebook. If I had a 30-second elevator ride, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
+Until a few years ago, I checked Facebook 20-30 times per day. At the first hint of boredom, I'd open a new browser tab and check Facebook. During a 30-second elevator ride, I'd take out my phone and cycle through Facebook, Twitter, and reddit.
 
 My usage patterns served all of my negative reasons for using Facebook. To satisfy my positive reasons, I didn't have to check it that often. Once a day would be sufficient. Once per week would probably be fine.
 
@@ -55,19 +55,19 @@ Here's how my trends panel looks after I set it to Abu Dhabi.
 
 {% include image.html file="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" max_width="352px" img_link=true fig_caption="Twitter Trending Topics for Abu Dhabi, UAE" %}
 
-The trends are mostly in Arabic, which I can can't read. Even the English hashtag is specific to the United Arab Emirates.
+The trends are mostly in Arabic, which I can't read. Even the English hashtag is specific to the United Arab Emirates.
 
 ### Mute, block, and unfollow your way to a tidy Twitter feed
 
 I initially joined Twitter to share my blog posts and find other interesting content relevant to my work. It's not how I want to consume news or political opinions, but I started following a few comedians and celebrities for fun. Over time, negative political rhetoric and shallow outrage inundated my feed. Most of the negativity was coming from celebrity accounts, so I trimmed my follow list.
 
-This got me partway there, and I cleared most of the remaining low-quality content by adding [muted words](https://twitter.com/settings/muted_keywords):
+Curating my follow list cleared most of the low-quality content, and I cleared the remainder by adding [muted words](https://twitter.com/settings/muted_keywords):
 
 {% assign fig_caption = "Use [muted words](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="twitter-muted.jpg" alt="Twitter's trending topics" max_width="600px" img_link=true fig_caption=fig_caption %}
 
-Twitter evolves quickly, so this is a continuous process. When too much of my feed fills with uninteresting content, I review my follow list for accounts whose signal-to-noise ratio is poor, and I look for new muted words that can help me curate my feed.
+Twitter evolves quickly, so this is a continuous process. When too much of my feed fills with uninteresting content, I review my follow list for accounts whose signal-to-noise ratio is poor and look for new muted words that will improve my feed.
 
 ## StackOverflow / StackExchange
 
@@ -112,7 +112,7 @@ If you use a desktop mail client like Outlook or Thunderbird, you can achieve th
 
 ### Move your to-do list out of your inbox
 
-At this point, "don't use your inbox as a to-do list" is pretty cliché advice, but I'll say it anyway:
+At this point, "don't use your inbox as a to-do list" is cliché advice, but I'll say it anyway:
 
 * **Don't use your inbox as a to-do list**
 
@@ -124,24 +124,24 @@ It's tempting to manage tasks with your email inbox because it *seems* so conven
 
 Instead, I process each email using the following workflow that David Allen popularized in [*Getting Things Done*](https://amzn.to/2J3GIY1):
 
-1. If the email doesn't require a reply, I archive it.
-1. If the email requires a reply I can write in under two minutes, I reply immediately.
+1. If the email doesn't require a response, I archive it.
+1. If the email requires a response I can write in under two minutes, I reply immediately.
 1. For all other emails, I add "Respond to [person]" to my to-do list and then archive the email.
 
 If you currently manage tasks through your inbox, the prospect of maintaining a whole separate task list probably sounds tedious and annoying. Just try it for a week.
 
-Before I extracted my to-do list from my inbox, I never realized the power those emails held over me. Any time I checked my inbox, every message was sitting there begging for my attention. Now, when I receive an email that doesn't require an immediate response, I just create a task and schedule it for when I have time to reply. It gives me the freedom to forget about the email because I know my to-do list will remind me at the appropriate time.
+Before extracting my to-do list from my inbox, I never realized the power those emails held over me. Any time I checked my inbox, every message was sitting there begging for my attention. Now, when an email requires a non-urgent response, I just create a task and schedule my response for an appropriate time. It gives me the freedom to forget about the email because I know my to-do list will remind me at the appropriate time.
 
 {% assign fig_caption = "When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="nirvana-tasks.jpg" alt="Chat settings in Gmail" max_width="785px" img_link=true class="img-border" fig_caption=fig_caption %}
 
-My to-do list app of choice is [Nirvana](https://nirvanahq.com/). I think it's *okay*, not great. I've heard good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
+My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's *okay*, not great. People tell me good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
 {: .notice--info}
 
 ### Unbundle Hangouts from Gmail
 
-I send all of my texts through Hangouts because it allows me to type on my desktop keyboard instead of the tiny virtual keyboard on my phone. Unfortunately, Google integrates Hangouts into my Gmail inbox by default, creating intrusive bundling. Any time I check my email, I see my texts and vice-versa.
+I send all of my texts through Hangouts because it allows me to type on my desktop keyboard instead of the tiny virtual keyboard on my phone. Unfortunately, Google integrates Hangouts into my Gmail inbox by default, creating intrusive bundling. Checking my email means seeing my texts and vice-versa.
 
 {% include image.html file="hangouts-in-gmail.jpg" alt="Chat settings in Gmail" max_width="800px" img_link=true class="img-border" fig_caption="By default, Gmail embeds Hangouts into your inbox." %}
 
@@ -155,7 +155,7 @@ Now, Hangouts messages will not appear in your Gmail, but you can still access H
 
 ## Use social media with a dedicated browser profile
 
-One way I've found to curb my bad habits is to put obstacles in front of them. For example, I resist the temptation to eat junk food by not keeping any of it in my house. It doesn't completely protect me from poor eating because strong cravings can always drive me to the store, but 99% of the time, I choose to eat something healthier because it's already in my house.
+One way I've found to curb my bad habits is to put obstacles in front of them. For example, I resist the temptation to eat junk food by not keeping any of it in my house. It doesn't completely protect me from poor eating because strong cravings can always drive me to the store, but 99% of the time, laziness prevents me from making the unhealthy choice.
 
 Free of obstacles, it's painfully easy for me to indulge in social media on my computer. I get bored, hit Ctrl+T to open a new tab, then visit Facebook, Twitter, or Reddit.
 
@@ -163,7 +163,7 @@ Free of obstacles, it's painfully easy for me to indulge in social media on my c
 
 {% include image.html file="typewriter.png" alt="Chat settings in Gmail" max_width="443px" img_link=true fig_caption=fig_caption %}
 
-Instead, I add mildly annoying hurdles. I sign out of time-waster sites in my main browser and access them only through a separate, dedicated browser profile.
+To curb my social media usage, I add mildly annoying hurdles. I sign out of time-waster sites in my main browser and access them only through a separate, dedicated browser profile.
 
 <figure>
   <video style="max-width:100%" controls>
@@ -173,7 +173,7 @@ Instead, I add mildly annoying hurdles. I sign out of time-waster sites in my ma
   <figcaption>Setting up separate browser profiles in Chrome</figcaption>
 </figure>
 
-This seemingly minor speed bump prevents me from mindlessly popping open a new tab and visiting time-waster sites. To visit Facebook, I have to consciously choose it. It also means that if I visit Facebook for other reasons, such as finding information for a local business, I don't see any personal notifications because I'm not signed in.
+This seemingly minor speed bump prevents me from mindlessly popping open a new tab and visiting time-waster sites. To visit Facebook, I have to consciously choose it. It also means that when visiting Facebook for other reasons, such as finding information for a local business, Facebook can't show me personal notifications because I'm not signed in.
 
 This is sufficient for sites like Facebook or Twitter that are near useless when you're signed out. For others, like a news site, I add its URL to uBlock Origin's filter rules. That way, any time I visit out of habit, uBlock Origin reminds that I need to explicitly choose to visit the site in my time-waster browser.
 
@@ -195,7 +195,7 @@ My phone has been on "Do Not Disturb" mode continuously for the last 18 months. 
 
 {% include image.html file="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" max_width="350px" class="img-border" img_link=true fig_caption="I permanently set my phone to Do Not Disturb." %}
 
-I discovered this solution by mistake. My plan was to turn my phone to Do Not Disturb during periods of deep focus, but I'd often forget to re-enable notifications. It turned out that there was no need.
+I discovered this solution by mistake. My plan was to turn on "Do Not Disturb" during periods of deep focus, but I'd often forget to re-enable notifications afterward. It turned out that there was no need.
 
 My life was better without the notifications. If I want to check my texts, I check my texts. There's no need to see seven apps begging for my attention every time I take out my phone.
 
@@ -203,11 +203,11 @@ My life was better without the notifications. If I want to check my texts, I che
 
 Unfortunately, there's no equivalent of Inbox When Ready for text messages. As soon as you open your texting app, you see all texts from all of your contacts. I've never found any tools that limit when incoming texts become visible.
 
-My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Instead of maintaining an ongoing text conversation throughout the day, my girlfriend and I call each other in the evening. And catching up with a friend who lives across the country is easier with a single phone call than 100 texts.
+My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Instead of maintaining an ongoing text conversation throughout the day, my girlfriend and I call each other in the evening. Catching up with a friend who lives across the country is easier with a single phone call than 100 texts.
 
 ## Replace online communities with real-life meetups
 
-I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at an [Indie Hackers meetup](https://www.indiehackers.com/meetups) I organized in Manhattan. When he told me that he had traveled three hours from Western Massachusetts to attend, I thought he was nuts. I later discovered that his long trip fit into a strikingly sensible strategy.
+I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at an [Indie Hackers meetup](https://www.indiehackers.com/meetups) I organized in Manhattan. When he told me that he had traveled three hours from Western Massachusetts to attend, I thought he was nuts. Later, I discovered that his long trip fit into a strikingly sensible strategy.
 
 David loves meeting other tech founders, but he only has finite time to do it. He found that his in-person interactions were almost always richer and longer-lasting than relationships he formed online, so he dedicates nearly all of his networking time to real-life events.
 
@@ -215,7 +215,7 @@ David loves meeting other tech founders, but he only has finite time to do it. H
 
 {% include image.html file="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" max_width="650px" img_link=true fig_caption=fig_caption %}
 
-This made complete sense to me. I can think of several people I'm still in touch with today because I met them at a meetup or conference years ago for only 30 minutes. That's not true of anyone I interact with on Twitter or reddit. Reading through my social media history, I found countless instances where I spent an hour or more engaging with someone online, but now I have no memory of the conversation and am not in touch with the person at all.
+This made complete sense to me. I'm still in touch with several people today after meeting them at a meetup or conference years ago for only 30 minutes. That's not true of anyone I interact with on Twitter or reddit. Reading through my social media history, there are countless examples of me spending an hour or more to engage with someone online, but now I have no memory of the conversation and am not in touch with the person at all.
 
 {% assign fig_caption = "I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -231,9 +231,9 @@ Scheduling it forces me to make a decision ahead of time about how much the app 
 
 ## "What's the harm in checking email and social media during idle times?"
 
-For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. *Buuuut...* when I was waiting for a slow webpage to load or a two-minute test to complete, why not check my email or Twitter instead of sitting there being, bored?
+For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time a new email arrived or a Facebook like appeared. *Buuuut...* if a webpage was loading slowly or a two-minute automated test was running, why not check my email or Twitter instead of sitting there being, bored?
 
-The first problem is that the scenario is a fantasy. If I check Twitter while I wait for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
+The first problem is that the scenario is a fantasy. If I check Twitter while waiting for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
 
 The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
 
@@ -241,22 +241,24 @@ The last problem is that if you check social media any time you feel a twinge of
 
 ## The hardest part of changing habits is the beginning
 
-For the last 15 years, I've checked my email within minutes of waking up each morning. When I forced myself to defer my first email check to 10 am, the first few days felt like I was starving myself. I spent my early mornings obsessively checking the time and counting the minutes until I could open my inbox.
+For the last 15 years, I've checked my email within minutes of waking up each morning. Upon switching to scheduled email checks, my first few days felt like I was starving myself. I spent my mornings obsessively checking the time and counting the minutes until I could open my inbox.
 
-After a week, I no longer felt the call of my inbox when I woke up. By the two-week mark, I almost dreaded it. My mornings had become so peaceful and productive. Once I checked my email, I was opening the door to whatever stresses awaited me there. Today, I wait until after lunch to check my email, and that feels like the right balance.
+After a week, I no longer felt the call of my inbox when I woke up. By the two-week mark, I almost dreaded it. My mornings had become so peaceful and productive. Once I checked my email, I was opening the door to whatever stresses awaited me there. Today, my first email check happens after I eat lunch, and the practice continues to elevate my productivity and mood.
 
 I've noticed a similar pattern with every tech habit I break. I'm painfully conscious of the absence for the first few days, and then it quickly becomes normal and preferable.
 
 ## If you backslide, just start over
 
-Some days, I still find myself obsessively checking texts and email. When I'm feeling frustrated or lonely, I seek comfort from email and social media. Rarely do these apps improve my mood, so that creates an even greater desperation for distraction, and the cycle repeats. On these days, I resign myself to the bad day, avoid beating myself about it, and focus on doing better the following day. Going to sleep and waking up feels like a reset, so I find it easier to stick to my good habits the next morning.
+Some days, I still find myself obsessively checking texts and email. When I'm feeling frustrated or lonely, I seek comfort from email and social media. Rarely do these apps improve my mood, so that creates an even greater desperation for distraction, and the cycle repeats.
+
+On days of weakened willpower, I resign myself to the bad day, avoid beating myself about it, and focus on doing better the following day. Going to sleep and waking up feels like a reset, so I find it easier to stick to my good habits the next morning.
 
 ## Monitor yourself to prevent apps from managing you
 
 The techniques for eliminating distractions vary from app to app, but the underlying principles are the same:
 
 1. Decide what you want from the app.
-1. Evaluate what you must invest to get that benefit.
+1. Evaluate what you must invest to earn that benefit.
 1. Suppress mechanisms in the app that induce you to invest more than you intended.
 
 Apps will continue to evolve and find new ways to grab your attention. Nobody will defend your focus except for you. The only way to preserve control of your attention is to exercise vigilance and introspection over the apps you use.
