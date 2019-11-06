@@ -37,16 +37,6 @@ My usage patterns served all of my negative reasons for using Facebook. To satis
 
 The first step toward a healthy relationship with your apps is deciding what you want out of them and what you have to invest to get it. You'll probably find that you can retain the important benefits from your apps while investing substantially less time and attention.
 
-## "What's the harm in checking email and social media during idle times?"
-
-For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. *Buuuut...* when I was waiting for a slow webpage to load or a two-minute test to complete, why not check my email or Twitter instead of sitting there being, bored?
-
-The first problem is that the scenario is a fantasy. If I check Twitter while I wait for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
-
-The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
-
-The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to feel bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're facing a difficult challenge.
-
 ## Twitter
 
 ### Make Twitter's trending hashtags boring
@@ -230,6 +220,24 @@ This made complete sense to me. I can think of several people I'm still in touch
 {% assign fig_caption = "I probably spent 90+ minutes testing this user's app and giving him [feedback on Indie Hackers](https://www.indiehackers.com/product/libate/-L_2noyl2XS5xGWrIwTp?commentId=-L_QMW3ruNo_97Jevk4T). I barely remember the interaction and doubt that he remembers me." | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="indiehackers-feedback.jpg" alt="Chat settings in Gmail" max_width="450px" img_link=true fig_caption=fig_caption %}
+
+## Schedule time for email, texts, and social media
+
+The best way I've found to manage my apps is to schedule when I use them. When my goal was simply, "use social media less," I had no way to measure how well I was doing. It was easy to initially limit my time and then let my habits creep backward because I wasn't breaking any rule.
+
+My current habit is to check social media once per day right after dinner. I limit myself to half an hour combined for Reddit, Twitter, and Facebook.
+
+Scheduling it forces me to make a decision ahead of time about how much the app is worth to me.
+
+## "What's the harm in checking email and social media during idle times?"
+
+For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time I got a new email or Facebook like. *Buuuut...* when I was waiting for a slow webpage to load or a two-minute test to complete, why not check my email or Twitter instead of sitting there being, bored?
+
+The first problem is that the scenario is a fantasy. If I check Twitter while I wait for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
+
+The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
+
+The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to feel bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're facing a difficult challenge.
 
 ## The hardest part of changing habits is the beginning
 
