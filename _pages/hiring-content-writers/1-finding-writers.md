@@ -52,8 +52,8 @@ College job boards are a hidden gem for hiring content writers. At the start of 
 
 | School             | Applications | Trial hires | Permanent hires |
 |--------------------|--------------|-------------|-----------------|
-| Large state school | 17           | 3           | TBD             |
-| Small liberal arts school | 8     | 1           | TBD             |
+| Large state school | 17           | 3           | 1               |
+| Small liberal arts school | 8     | 1           | 0               |
 
 The quality of candidates is on par with Upwork, but the wages are far lower. On Upwork, writers typically charge between $30-$75/hr. In my area, typical wages for student jobs are $11-$15/hr.
 
