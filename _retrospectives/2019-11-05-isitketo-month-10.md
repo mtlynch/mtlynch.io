@@ -41,27 +41,50 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 | Ranking Keywords (Moz) | 2,330       | 1,574    | <font color="red">-756 (-32%)</font> |
 | AdSense Earnings       | $178.79     | $75.65        | <font color="red">-$103.14 (-58%)</font> |
 | Amazon Affiliate Earnings | $150.06  | $159.02        | <font color="green">+$8.96 (+6%)</font> |
-| Meal Plan Sales        | N/A         | $23.87   | - |
+| Meal Plan Sales        | N/A         | $23.87   | N/A |
 | **Total Earnings**         | **$328.85**     | **$258.54**   | **<font color="red">-$90.31 (-27%)</font>** |
-
 
 ### [Zestful](https://zestfuldata.com)
 
-| Metric                 | August 2019 | September 2019 | Change |
-|------------------------|-------------|----------------|--------|
-| Total Earnings         | $4.51     | $4.86          | <font color="green">+$0.35 (+8%)</font> |
+| Metric                 | September 2019 | October 2019   | Change |
+|------------------------|----------------|----------------|--------|
+| Total Earnings         | $4.51          | $4.86          | <font color="green">+$0.35 (+8%)</font> |
 
+RapidAPI is my payment processor, and they have a one-month lag before they even tell me how much customers have spent on my API. The revenue for October reflects activity in September.
 
-There's an 8x lag 
+Based on activity in October, there might be a substantial increase in revenue coming in November. There was an 8x increase in API calls from September to October, though that doesn't necessarily mean an 8x increase in revenue because not all API calls cost the same. I added better logging so that I can track my earnings in real time going forward instead of waiting a month for RapidAPI to reveal their numbers.
 
-## Creating premium meal plans for Is It Keto
+## My many attempts to sell meal plans
+
+### Drop prices
+
+### Reach out to individuals on Reddit
+
+### Offer discounts for feedback
+
+### Go back to square one
+
+### Split up sales pages
+
+### Experiment summary
+
+| Experiment                        | Unique visitors | Clicked "buy" button | Completed checkout |
+|-----------------------------------|-----------------|----------------------|--------------------|
+| Smoke test                        |                 |                      |                    |
+| List the first meal plan for sale | -               | -                    |                    |
+| Drop prices                       |                 |                      |                    |
+| Offer discounts via a survey      | -               |                      |                    |
+| Re-try the smoke test             |                 |                      |                    |
 
 
 ## Wrap up
 
 ### What got done?
 
+* Made my first sale of Is It Keto's [meal plan product](https://isitketo.org/meal-plans/).
+  * Drafted a licensing agreement with a third-party meal plan provider.
 * [Simplified the build process](https://twitter.com/deliberatecoder/status/1189529617947869184) on What Got Done to a single command.
+* Presented ["Why Good Developers Write Bad Tests" at PyGotham](/retrospectives/pygotham-2019-notes/).
 
 ### Lessons learned
 
