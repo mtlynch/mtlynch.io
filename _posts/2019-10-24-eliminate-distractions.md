@@ -223,15 +223,15 @@ David's philosophy made complete sense to me. I'm still in touch with several pe
 
 ## Schedule time for email, texts, and social media
 
-The best way I've found to manage my apps is to schedule when I use them. When my goal was simply, "use social media less," I had no way to measure how well I was doing. It was easy to initially limit my time and then let my habits creep backward because I wasn't breaking any rule.
+When I first noticed myself overusing social media, I set a vague objective to use it less. And I did at first. Then, my usage would slowly creep up again over time.
 
-My current habit is to check social media once per day right after dinner. I limit myself to half an hour combined for Reddit, Twitter, and Facebook.
+Scheduling explicit start and end times for different apps has been more effective. For example, I process my email and texts in three or four half-hour blocks each day, deferring the first check until after lunch. Twitter, reddit, and Facebook get a combined half-hour block after dinner.
 
-Scheduling it forces me to make a decision ahead of time about how much the app is worth to me. It also discourages me from getting drawn in. If I post something on Facebook, I'm not going to get drawn back in every time someone reacts to it. I've committed to waiting until the next day. The slower pace makes social media less alluring.
+This practice forces me to decide ahead of time how much time email and social media should occupy in my day. It also helps keep the less useful parts of social media appropriately dull. There's a 24-hour turnaround before I see responses to anything I post, so it's hard for pointless conversations to build too much momentum.
 
 ## "What's the harm in checking email and social media during idle times?"
 
-For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time a new email arrived or a Facebook like appeared. *Buuuut...* if a webpage was loading slowly or a two-minute automated test was running, why not check my email or Twitter instead of sitting there being, bored?
+For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time a new email arrived or a Facebook "like" appeared. *Buuuut...* if a webpage was loading slowly or a two-minute automated test was running, why not check my email or Twitter instead of sitting there being, bored?
 
 The first problem is that the scenario is a fantasy. If I check Twitter while waiting for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
 
@@ -241,17 +241,17 @@ The last problem is that if you check social media any time you feel a twinge of
 
 ## The hardest part of changing habits is the beginning
 
-For the last 15 years, I've checked my email within minutes of waking up each morning. Upon switching to scheduled email checks, my first few days felt like I was starving myself. I spent my mornings obsessively checking the time and counting the minutes until I could open my inbox.
+For the last 15 years, I've checked my email within minutes of waking up each morning. My first few days using scheduled email times felt like starving myself. I spent my mornings obsessively checking the time and counting the minutes until I could open my inbox.
 
-After a week, I no longer felt the call of my inbox when I woke up. By the two-week mark, I almost dreaded it. My mornings had become so peaceful and productive. Once I checked my email, I was opening the door to whatever stresses awaited me there. Today, my first email check happens after I eat lunch, and the practice continues to elevate my productivity and mood.
+After a week, I no longer felt the call of my inbox when I woke up. By the two-week mark, I almost dreaded it. My mornings had become so peaceful and productive. Once I checked my email, I was opening the door to whatever stresses awaited me there.
 
 I've noticed a similar pattern with every tech habit I break. I'm painfully conscious of the absence for the first few days, and then it quickly becomes normal and preferable.
 
 ## If you backslide, start over
 
-Some days, I still find myself obsessively checking texts and email. When I'm feeling frustrated or lonely, I seek comfort from email and social media. Rarely do these apps improve my mood, leaving me with even greater desperation for distraction, and the cycle repeats.
+Some days, I still find myself obsessively checking texts and email. When I'm feeling frustrated or lonely, I seek comfort from email and social media. Rarely do these apps improve my mood, so my desperation for distraction grows, and the cycle repeats.
 
-On days of weakened willpower, I resign myself to the bad day, avoid beating myself up about it, and focus on doing better the following day. Going to sleep and waking up feels like a reset, so I find it easier to stick to my good habits the next morning.
+On days of weakened willpower, I resign myself to the bad day, avoid beating myself up about it, and focus on doing better the following day. Going to sleep and waking up feels like a reset, so I find it easier to return to my good habits in the morning.
 
 ## Monitor yourself to prevent apps from managing you
 
