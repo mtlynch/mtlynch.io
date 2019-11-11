@@ -266,4 +266,4 @@ Apps will continue to evolve and find new ways to grab your attention. Nobody wi
 
 ---
 
-*Facebook cartoon by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*"Ideal Facebook" cartoon by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
