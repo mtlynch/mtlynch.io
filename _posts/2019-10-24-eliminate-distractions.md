@@ -1,5 +1,6 @@
 ---
 title: "Eliminating Distractions from Social Media, Email, and StackOverflow"
+excerpt: Simple tools and personal habits that help you manage your apps instead of allowing them to manage you.
 tags:
 - deep work
 - email
@@ -7,11 +8,11 @@ tags:
 - twitter
 - facebook
 ---
-You open Gmail to write an email to your friend. Before you begin, you notice that you've received six new messages. It pains you to leave emails unopened, so you quickly begin reading the emails. Two hours later, you realize that you never wrote that email to your friend.
+You open Gmail to write a message to your friend. Before you begin, you notice that you've received six new messages. It pains you to leave emails unopened, so you read them immediately. Two hours later, you realize that you never wrote that note to your friend.
 
-This happened to me constantly. It repeated itself with minor variations for each of my apps. I'd look at my phone to check the time and realize I had 10 notifications. I'd open Facebook to look up someone's birthday and fall into a zombie state of scrolling through my Newsfeed.
+This happened to me constantly. It wasn't just email. I'd look at my phone to check the time and realize I had 10 notifications to read. I'd open Facebook to look up someone's birthday and fall into a zombie state of scrolling through my News Feed.
 
-Instead of managing my apps, I allowed them to manage me. I developed a Pavlovian response to app notifications and learned to consume their content mindlessly.
+Instead of managing my apps, I allowed them to manage me. I developed a Pavlovian response to app notifications and was consuming their content mindlessly.
 
 This article is a collection of techniques that have helped me use email, social media, and other apps in more thoughtful, productive ways. Some are technical &mdash; tinkering with settings or installing helpful extensions. Others are adjustments to my habits and mindset that improved my relationship with social media.
 
@@ -35,7 +36,7 @@ Until a few years ago, I checked Facebook 20-30 times per day. At the first hint
 
 My usage patterns served all of my negative reasons for using Facebook. To satisfy my positive reasons, I didn't have to check it that often. Once a day would be sufficient. Once per week would probably be fine.
 
-The first step toward a healthy relationship with your apps is deciding what you want out of them and what you must invest to get it. You'll probably find that you can retain the important benefits from your apps while investing substantially less time and attention.
+The first step toward a healthy relationship with your apps is deciding what you want out of them and what you must invest to get it. You'll probably find that you can retain the essential benefits from your apps while investing substantially less time and attention.
 
 ## Twitter
 
@@ -61,13 +62,13 @@ The trends are mostly in Arabic, which I can't read. Even the English hashtag is
 
 I initially joined Twitter to share my blog posts and find other interesting content relevant to my work. It's not how I want to consume news or political opinions, but I started following a few comedians and celebrities for fun. Over time, negative political rhetoric and shallow outrage inundated my feed. Most of the negativity was coming from celebrity accounts, so I trimmed my follow list.
 
-Eliminating irrelevant accounts cleared most of the low-quality content, and I elimnated the remainder by adding [muted words](https://twitter.com/settings/muted_keywords):
+Eliminating irrelevant accounts cleared most of the low-quality content, and I elimnated the remainder by adding [muted keywords](https://twitter.com/settings/muted_keywords):
 
-{% assign fig_caption = "Use [muted words](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = "Use [muted keywords](https://twitter.com/settings/muted_keywords) to filter out current events and topics you're uninterested in engaging with on Twitter." | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="twitter-muted.jpg" alt="Twitter's trending topics" max_width="600px" img_link=true fig_caption=fig_caption %}
 
-Twitter evolves quickly, so this is a continuous process. When too much of my feed fills with uninteresting content, I review my follow list for accounts whose signal-to-noise ratio is poor and look for new muted words that will improve my feed.
+Twitter evolves quickly, so this is a continuous process. When too much of my feed fills with uninteresting content, I review my follow list for accounts whose signal-to-noise ratio is poor and look for new muted keywords that will improve my feed.
 
 ## StackOverflow / StackExchange
 
@@ -130,7 +131,7 @@ Instead, I process each email using the following workflow that David Allen popu
 
 If you currently manage tasks through your inbox, the prospect of maintaining a whole separate task list probably sounds tedious and annoying. Try it for a week.
 
-Before extracting my to-do list from my inbox, I never realized the power those emails held over me. Any time I checked my inbox, every message was sitting there, begging for my attention. Now, when an email requires a non-urgent response, I create a task and schedule my response for an appropriate time. It gives me the freedom to forget about the email because I know my to-do list will remind me at the appropriate time.
+Before extracting my to-do list from my inbox, I never realized the power those emails held over me. Any time I checked my inbox, every message was sitting there, begging for my attention. Now, when an email requires a non-urgent response, I create a task and schedule my reply for an appropriate time. It gives me the freedom to forget about the email because I know my to-do list will remind me when the time is right.
 
 {% assign fig_caption = "When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" | markdownify | remove: "<p>" | remove: "</p>" %}
 
@@ -195,7 +196,7 @@ My phone has been on "Do Not Disturb" mode continuously for the last 18 months. 
 
 {% include image.html file="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" max_width="350px" class="img-border" img_link=true fig_caption="I permanently set my phone to Do Not Disturb." %}
 
-I discovered this solution by mistake. My plan was to turn on "Do Not Disturb" during periods of deep focus, but I'd often forget to re-enable notifications afterward. It turned out that there was no need.
+I discovered this solution by mistake. Intending to turn on "Do Not Disturb" during periods of deep focus, I'd often forget to re-enable notifications afterward. It turned out that there was no need.
 
 My life was better without notifications. If I want to check my texts, I check my texts. There's no need to see seven apps begging for my attention every time I take out my phone.
 
@@ -203,7 +204,7 @@ My life was better without notifications. If I want to check my texts, I check m
 
 Unfortunately, there's no equivalent of Inbox When Ready for text messages. As soon as you open your texting app, you see all texts from all of your contacts. I've never found any tools that limit when incoming texts become visible.
 
-My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Instead of maintaining an ongoing text conversation throughout the day, my girlfriend and I call each other in the evening. Catching up with a friend who lives across the country is easier with a single phone call than 100 texts.
+My solution has been to text less. As much as possible, I try to move text conversations to phone calls. Instead of maintaining an ongoing text conversation throughout the day, my girlfriend and I call each other in the evening. Catching up with a friend who lives across the country is quicker with a single phone call than 100 texts.
 
 ## Replace online communities with real-life meetups
 
