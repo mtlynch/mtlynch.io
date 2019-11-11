@@ -7,6 +7,9 @@ tags:
 - stackoverflow
 - twitter
 - facebook
+header:
+  teaser: images/eliminate-distractions/ideal-facebook.jpg
+  og_image: images/eliminate-distractions/ideal-facebook.jpg
 ---
 You open Gmail to write a message to your friend. Before you begin, you notice that you've received six new messages. It pains you to leave emails unopened, so you read them immediately. Two hours later, you realize that you never wrote that note to your friend.
 
