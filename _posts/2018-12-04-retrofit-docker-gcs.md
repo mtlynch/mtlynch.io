@@ -449,7 +449,7 @@ echo 'user_allow_other' > /etc/fuse.conf
 
 The above line makes it possible to use `gcsfuse`'s `-o allow_other` option. This is necessary because both the app system account and the Nginx system account need access to the GCS folder. Without the `user_allow_other` line in the configuration file, only a single account could access the GCS folder.
 
-**Gotcha Warning**: If more than one system account need access to the GCS bucket, the `/etc/fuse.conf` file must include the line `user_allow_other`.
+**Gotcha Warning**: If more than one system account needs access to the GCS bucket, the `/etc/fuse.conf` file must include the line `user_allow_other`.
 {: .notice--warning}
 
 ```bash
