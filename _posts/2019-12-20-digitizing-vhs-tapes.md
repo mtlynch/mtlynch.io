@@ -12,7 +12,11 @@ If you're wondering why it took so long, I don't blame you. I thought it would b
 
 ## The result
 
-There are . It's 513 separate clips. Each clip shows the date, which tape it came from.
+There are . It's 513 separate clips. Each clip shows the title, a description, the recording date, which tape it came from, who's in it, a description of what's going on, and how old everyone is at the time of the recording.
+
+TODO: Show screenshot
+
+My only costs are for storage. Web hosting is free through an ephemeral Heroku instance that spins up on demand.
 
 ## Accepting this quest
 
@@ -38,6 +42,7 @@ The problem with home videos is that 90% of the footage is boring, 8% is enterta
 * First try of editing everything in Adobe Premiere Elements
   * Lose data, lots of starting and stopping.
 * python scene detect
+* When you're watching the videos, you 
 * I remembered that I'm a programmer
   * process-home-videos
 
@@ -46,7 +51,10 @@ The problem with home videos is that 90% of the footage is boring, 8% is enterta
 People also don't want to read through a bunch of video files.
 
 * Put the zips on Google Cloud Storage
-* Failure of ClipBucket
+* ClipBucket
+  * Created an Ansible role
+  * Realized it's a pain to install. It turns out that they make their money provisioning servers, so they weren't that interested in making it easy to self-host.
+  * https://clipbucket.com/2016/09/17/clipbucket-into-googles-doors/
 * MediaGoblin
   * Realized I can transcode ahead of time
   * Faster if the client can hit GCS directly
@@ -58,6 +66,11 @@ People also don't want to read through a bunch of video files.
   * I don't need a web server for anything except for user authentication
   * I'd just need something that can consume my YAML file, then generate pages for each video
 
+## Part 4: Hosting
+
+Started on GCE
+Switched to Heroku ephemeral image
+
 ## The final workflow
 
 
@@ -68,6 +81,14 @@ People also don't want to read through a bunch of video files.
 * Capture as much of the data in an application-agnostic format
   * Clip descriptions, time codes, dates, etc.
   * If you keep it in an application specific format (or worse, throw it away), it's difficult for you to reproduce the work if you decide on a different solution.
+  * When you watch the videos during editing, you're seeing lots of useful metadata. You'll lose it if you don't capture it.
+    * What's happening in the video?
+    * Who's in the video?
+    * When was it recorded?
+    * Is this video good? I tag my favorite clips "best of"
+* Make a montage!
+  * Slow show is great. I discovered this by mistake.
+  * Montages are all about the music. "Slow Show" by whoever is amazing for montages and nobody knows.
 
 ## Source code
 
