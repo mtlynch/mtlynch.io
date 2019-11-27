@@ -48,13 +48,15 @@ As with Zestful, I was short on time and couldn't implement the other feature I 
 
 Now that Is It Keto is on the back burner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
-| Metric                 | June 2019 | July 2019 | Change |
-|------------------------|-----------|-----------|--------|
-| Total Earnings         | $184.25   | $225.47   | <font color="green">+$41.22 (+22%)</font> |
-| Unique Visitors        | 14,419    | 19,526    | <font color="green">+5,107 (+35%)</font> |
-| Total Pageviews        | 39,405    | 53,467    | <font color="green">+14,062 (+36%)</font> |
-| Domain Authority (Moz) | 6         | 6         | 0 |
-| Ranking Keywords (Moz) | 862       | 1,442     | <font color="green">+580 (+67%)</font> |
+| Metric                    | June 2019   | July 2019   | Change                                        |
+| ------------------------- | ----------- | ----------- | --------------------------------------------- |
+| Unique Visitors           | 14,419      | 19,526      | <font color="green">+5,107 (+35%)</font>      |
+| Total Pageviews           | 39,405      | 53,467      | <font color="green">+14,062 (+36%)</font>     |
+| Domain Authority (Moz)    | 6           | 6           | 0                                             |
+| Ranking Keywords (Moz)    | 862         | 1,442       | <font color="green">+580 (+67%)</font>        |
+| AdSense Earnings          | N/A         | $71.49      | N/A                                           |
+| Amazon Affiliate Earnings | $138.76     | $153.98     | <font color="green">+$15.22 (+11%)</font>     |
+| **Total Earnings**        | **$138.76** | **$225.47** | **<font color="green">+$86.71 (+62%)</font>** |
 
 It feels strange to keep ignoring Is It Keto, given that it's grown at least 30-50% in traffic and revenue every month this year. I'm torn between my urge to focus more on my most profitable project and my desire to stop splitting my focus among many ideas.
 

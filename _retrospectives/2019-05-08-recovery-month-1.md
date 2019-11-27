@@ -48,13 +48,13 @@ Now that Is It Keto is on the backburner, I'm not going to dive as deeply into i
 
 {% include image.html file="google-analytics.jpg" alt="Google Analytics screenshot"  max_width="860px" img_link="true" fig_caption="User sessions - May 2018 through April 2019" %}
 
-| Metric                 | March 2019 | April 2019   | Change |
-|------------------------|------------|--------------|--------|
-| Total Earnings         | $40.84     | $82.44       | <font color="green">+$41.60 (+102%)</font> |
-| Unique Visitors        | 4,001      | 7,262        | <font color="green">+3,261 (+82%)</font> |
-| Total Pageviews        | 11,431     | 19,732       | <font color="green">+8,301 (+73%)</font> |
-| Domain Authority (Moz) | 9          | 9            | 0 |
-| Ranking Keywords (Moz) | 448        | 548          | <font color="green">+100 (+22%)</font> |
+| Metric                 | March 2019 | April 2019 | Change                                         |
+| ---------------------- | ---------- | ---------- | ---------------------------------------------- |
+| Unique Visitors        | 4,001      | 7,262      | <font color="green">+3,261 (+82%)</font>       |
+| Total Pageviews        | 11,431     | 19,732     | <font color="green">+8,301 (+73%)</font>       |
+| Domain Authority (Moz) | 9          | 9          | 0                                              |
+| Ranking Keywords (Moz) | 448        | 548        | <font color="green">+100 (+22%)</font>         |
+| **Total Earnings**     | **$40.84** | **$82.44** | **<font color="green">+$41.60 (+102%)</font>** |
 
 ## Money for nothing
 

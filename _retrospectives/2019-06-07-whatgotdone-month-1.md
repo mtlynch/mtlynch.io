@@ -44,13 +44,13 @@ I did publish the blog post, but I had to scramble a bit to get it in under the 
 
 Now that Is It Keto is on the backburner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
-| Metric                 | April 2019 | May 2019   | Change |
-|------------------------|------------|--------------|--------|
-| Total Earnings         | $82.44     | $107.25       | <font color="green">+$24.81 (+30%)</font> |
-| Unique Visitors        | 7,262      | 10,984        | <font color="green">+3,722 (+51%)</font> |
-| Total Pageviews        | 19,732     | 28,751       | <font color="green">+9,019 (+46%)</font> |
-| Domain Authority (Moz) | 9          | 6            | <font color="red">-3 (-33%)</font> |
-| Ranking Keywords (Moz) | 548        | 949          | <font color="green">+401 (+73%)</font> |
+| Metric                 | April 2019 | May 2019    | Change                                        |
+| ---------------------- | ---------- | ----------- | --------------------------------------------- |
+| Unique Visitors        | 7,262      | 10,984      | <font color="green">+3,722 (+51%)</font>      |
+| Total Pageviews        | 19,732     | 28,751      | <font color="green">+9,019 (+46%)</font>      |
+| Domain Authority (Moz) | 9          | 6           | <font color="red">-3 (-33%)</font>            |
+| Ranking Keywords (Moz) | 548        | 949         | <font color="green">+401 (+73%)</font>        |
+| **Total Earnings**     | **$82.44** | **$107.25** | **<font color="green">+$24.81 (+30%)</font>** |
 
 It's exciting to see that the site is still growing even though I stopped working on it in March. The growth comes entirely from [delayed gains](/keep-growing-never-profit/#search-engines-have-a-substantial-lag) in search engine rankings.
 

@@ -55,15 +55,15 @@ I published What Got Done's source on Github and released it under the [Apache 2
 
 {% include image.html file="adsense.jpg" alt="Screenshot of AdSense earnings" max_width="950px" img_link="true" fig_caption="Google AdSense Earnings - September 2019" %}
 
-| Metric                 | August 2019 | September 2019 | Change |
-|------------------------|-------------|----------------|--------|
-| AdSense Earnings       | $227.25     | $178.79        | <font color="red">-$48.46 (-21%)</font> |
-| Amazon Affiliate Earnings | $152.55  | $150.06        | <font color="red">-$2.49 (-2%)</font> |
-| Total Earnings         | $388.92     | $328.85   | <font color="red">-$60.07 (-15%)</font> |
-| Unique Visitors        | 28,921      | 28,768    | <font color="red">-153 (-<1%)</font> |
-| Total Pageviews        | 73,469      | 75,487    | <font color="green">+2,018 (+3%)</font> |
-| Domain Authority (Moz) | 7           | 10        | <font color="green">+3 (+43%)</font> |
-| Ranking Keywords (Moz) | 2,205       | 2,330     | <font color="green">+125 (+6%)</font> |
+| Metric                    | August 2019 | September 2019 | Change                                      |
+| ------------------------- | ----------- | -------------- | ------------------------------------------- |
+| Unique Visitors           | 28,921      | 28,768         | <font color="red">-153 (-1%)</font>         |
+| Total Pageviews           | 73,469      | 75,487         | <font color="green">+2,018 (+3%)</font>     |
+| Domain Authority (Moz)    | 7           | 10             | <font color="green">+3 (+43%)</font>        |
+| Ranking Keywords (Moz)    | 2,205       | 2,330          | <font color="green">+125 (+6%)</font>       |
+| AdSense Earnings          | $227.25     | $178.79        | <font color="red">-$48.46 (-21%)</font>     |
+| Amazon Affiliate Earnings | $152.55     | $150.06        | <font color="red">-$2.49 (-2%)</font>       |
+| **Total Earnings**        | **$379.80** | **$328.85**    | **<font color="red">-$50.95 (-13%)</font>** |
 
 So, it finally happened. Is It Keto has grown by about 30% in revenue and traffic every month this year. I knew that growth couldn't continue forever, and I was waiting for the time when it would level off. It finally did.
 
