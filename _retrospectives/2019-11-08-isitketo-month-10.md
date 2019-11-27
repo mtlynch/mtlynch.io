@@ -44,16 +44,16 @@ It still feels unfortunate that I can't connect my [guide to hiring writers](/hi
 
 ### [Is It Keto](https://isitketo.org)
 
-| Metric                 | September 2019 | October 2019 | Change |
-|------------------------|-------------|----------------|--------|
-| Unique Visitors        | 28,768      | 26,315    | <font color="red">-2,453 (-9%)</font> |
-| Total Pageviews        | 75,487      | 66,578    | <font color="red">-8,909 (-12%)</font> |
-| Domain Authority (Moz) | 10          | 13       | <font color="green">+3 (+33%)</font> |
-| Ranking Keywords (Moz) | 2,330       | 1,574    | <font color="red">-756 (-32%)</font> |
-| AdSense Earnings       | $178.79     | $75.65        | <font color="red">-$103.14 (-58%)</font> |
-| Amazon Affiliate Earnings | $150.06  | $159.02        | <font color="green">+$8.96 (+6%)</font> |
-| Meal Plan Sales        | N/A         | $23.87   | N/A |
-| **Total Earnings**         | **$328.85**     | **$258.54**   | **<font color="red">-$90.31 (-27%)</font>** |
+| Metric                    | September 2019 | October 2019 | Change                                      |
+| ------------------------- | -------------- | ------------ | ------------------------------------------- |
+| Unique Visitors           | 28,768         | 26,315       | <font color="red">-2,453 (-9%)</font>       |
+| Total Pageviews           | 75,487         | 66,578       | <font color="red">-8,909 (-12%)</font>      |
+| Domain Authority (Moz)    | 10             | 13           | <font color="green">+3 (+30%)</font>        |
+| Ranking Keywords (Moz)    | 2,330          | 1,574        | <font color="red">-756 (-32%)</font>        |
+| AdSense Earnings          | $178.79        | $75.65       | <font color="red">-$103.14 (-58%)</font>    |
+| Amazon Affiliate Earnings | $150.06        | $159.02      | <font color="green">+$8.96 (+6%)</font>     |
+| Meal Plan Sales           | N/A            | $23.87       | N/A                                         |
+| **Total Earnings**        | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
 
 Revenues are way down from my [August peak](/retrospectives/2019/09/#is-it-keto) of $389. The loss comes from reductions in AdSense earnings, which I believe have two causes:
 

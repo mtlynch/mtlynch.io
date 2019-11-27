@@ -46,13 +46,13 @@ Same as above.
 
 Now that Is It Keto is on the back burner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
-| Metric                 | May 2019   | June 2019   | Change |
-|------------------------|------------|-------------|--------|
-| Total Earnings         | $107.25    | $184.25     | <font color="green">+$77.00 (+72%)</font> |
-| Unique Visitors        | 10,984     | 14,419      | <font color="green">+3,435 (+31%)</font> |
-| Total Pageviews        | 28,751     | 39,405      | <font color="green">+10,654 (+37%)</font> |
-| Domain Authority (Moz) | 6          | 6           | 0 |
-| Ranking Keywords (Moz) | 949        | 862         | <font color="red">-87 (-9%)</font> |
+| Metric                 | May 2019    | June 2019   | Change                                        |
+| ---------------------- | ----------- | ----------- | --------------------------------------------- |
+| Unique Visitors        | 10,984      | 14,419      | <font color="green">+3,435 (+31%)</font>      |
+| Total Pageviews        | 28,751      | 39,405      | <font color="green">+10,654 (+37%)</font>     |
+| Domain Authority (Moz) | 6           | 6           | 0                                             |
+| Ranking Keywords (Moz) | 949         | 862         | <font color="red">-87 (-9%)</font>            |
+| **Total Earnings**     | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
 
 After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/category/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
 

@@ -51,13 +51,15 @@ This took significantly longer than I expected. I underestimated how difficult i
 
 {% include image.html file="amazon-affiliates.jpg" alt="Screenshot of Amazon Affiliate earnings" max_width="950px" img_link="true" fig_caption="Amazon Affiliate Earnings - August 2019" %}
 
-| Metric                 | July 2019 | August 2019 | Change |
-|------------------------|-----------|-------------|--------|
-| Total Earnings         | $225.47   | $388.92   | <font color="green">+$163.45 (+72%)</font> |
-| Unique Visitors        | 19,526    | 28,921    | <font color="green">+9,395 (+48%)</font> |
-| Total Pageviews        | 53,467    | 73,469    | <font color="green">+20,002 (+37%)</font> |
-| Domain Authority (Moz) | 6         | 7         | <font color="green">+1 (+17%)</font> |
-| Ranking Keywords (Moz) | 1,442     | 2,205     | <font color="green">+763 (+67%)</font> |
+| Metric                    | July 2019   | August 2019 | Change                                         |
+| ------------------------- | ----------- | ----------- | ---------------------------------------------- |
+| Unique Visitors           | 19,526      | 28,921      | <font color="green">+9,395 (+48%)</font>       |
+| Total Pageviews           | 53,467      | 73,469      | <font color="green">+20,002 (+37%)</font>      |
+| Domain Authority (Moz)    | 6           | 7           | <font color="green">+1 (+17%)</font>           |
+| Ranking Keywords (Moz)    | 1,442       | 2,205       | <font color="green">+763 (+53%)</font>         |
+| AdSense Earnings          | $71.49      | $227.25     | <font color="green">+$155.76 (+218%)</font>    |
+| Amazon Affiliate Earnings | $153.98     | $152.55     | <font color="red">-$1.43 (-1%)</font>          |
+| **Total Earnings**        | **$225.47** | **$379.80** | **<font color="green">+$154.33 (+68%)</font>** |
 
 Is It Keto continued to grow at a rapid rate. Amazon Affiliate earnings stayed flat, which is a bit worrying given that pageviews increased so rapidly, but Google AdSense bolstered revenues, as August was the first full month I ran AdSense ads.
 
