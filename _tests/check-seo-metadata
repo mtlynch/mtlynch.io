@@ -15,7 +15,7 @@ if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
   exit 1;
 fi
 
-if ! egrep '"og:title".*="October 2019 Retrospective: Is It Keto - Month 10"' _site/retrospectives/2019/12/index.html; then
+if ! egrep '"og:title".*="October 2019 Retrospective: Is It Keto - Month 10"' _site/retrospectives/2019/11/index.html; then
   echo "ERROR: Monthly retrospective does not have expected opengraph title";
   exit 1;
 fi
