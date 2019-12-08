@@ -86,7 +86,7 @@ jobs:
       - run:
           name: Check presence of Google Analytics token
           command: _tests/check-google-analytics-token
-  check-twitter-cards:
+  check-seo-metadata:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.6.5
