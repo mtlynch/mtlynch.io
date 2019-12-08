@@ -132,7 +132,7 @@ workflows:
       - check-google-analytics-token:
           requires:
             - build
-      - check-twitter-cards:
+      - check-seo-metadata:
           requires:
             - build
       - check-amazon-links:
@@ -142,7 +142,7 @@ workflows:
           requires:
             - build
             - check-google-analytics-token
-            - check-twitter-cards
+            - check-seo-metadata
             - check-amazon-links
           filters:
             branches:
