@@ -15,12 +15,12 @@ if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
   exit 1;
 fi
 
-if ! egrep "\"twitter:title.*November 2019 Retrospective: I'm Probably Procrastinating\"" _site/retrospectives/2019/12/index.html; then
-  echo "ERROR: Monthly retrospective does not have expected twitter title";
+if ! egrep '"og:title".*="November 2019 Retrospective: I\'m Probably Procrastinating"' _site/retrospectives/2019/12/index.html; then
+  echo "ERROR: Monthly retrospective does not have expected opengraph title";
   exit 1;
 fi
 
-if egrep "\"twitter:title" _site/retrospectives/pygotham-2019-notes/index.html; then
-  echo "ERROR: Non-monthly retrospective should not have custom twitter title";
+if ! egrep '"og:title".*="Notes from PyGotham 2019"' _site/retrospectives/pygotham-2019-notes/index.html; then
+  echo "ERROR: Non-monthly retrospective has incorrect title";
   exit 1;
 fi
