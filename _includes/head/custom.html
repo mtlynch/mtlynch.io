@@ -10,15 +10,4 @@
 <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
 <meta name="theme-color" content="#ffffff">
 
-{% comment %}
-Customize the twitter title for monthly retrospective posts
-{% endcomment %}
-{% if page.collection == "retrospectives" %}
-{% unless page.title contains "Notes from" %}
-{% assign one_month_in_seconds = 30 | times: 24 | times: 60 | times: 60 %}
-{% assign formatted_date = page.date | date: "%s" | minus: one_month_in_seconds | date: "%B %Y" %}
-<meta property="twitter:title" content="{{ formatted_date }} Retrospective: {{ page.title }}">
-{% endunless %}
-{% endif %}
-
 <!-- end custom head snippets -->

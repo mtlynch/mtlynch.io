@@ -86,7 +86,7 @@ jobs:
       - run:
           name: Check presence of Google Analytics token
           command: _tests/check-google-analytics-token
-  check-twitter-cards:
+  check-seo-metadata:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.6.5
@@ -94,8 +94,8 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          name: Check presence of Twitter cards in production build
-          command: _tests/check-twitter-cards
+          name: Check that SEO meta tags rendered properly
+          command: _tests/check-seo-metadata
   check-amazon-links:
     <<: *defaults
     docker:
@@ -132,7 +132,7 @@ workflows:
       - check-google-analytics-token:
           requires:
             - build
-      - check-twitter-cards:
+      - check-seo-metadata:
           requires:
             - build
       - check-amazon-links:
@@ -142,7 +142,7 @@ workflows:
           requires:
             - build
             - check-google-analytics-token
-            - check-twitter-cards
+            - check-seo-metadata
             - check-amazon-links
           filters:
             branches:
