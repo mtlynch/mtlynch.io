@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Makes sure large twitter cards appear in the site HTML.
+# Verifies that site is generating Twitter metadata properly.
 
 # Echo commands to console.
 set -x
@@ -9,7 +9,18 @@ set -e
 # Exit on unset variable.
 set -u
 
+# Make sure large twitter cards appear in the site HTML.
 if ! egrep "\"twitter:card.*summary_large_image\"" _site/ -R; then
   echo "ERROR: Large Twitter cards didn't appear in site build!";
+  exit 1;
+fi
+
+if ! egrep "\"twitter:title.*November 2019 Retrospective: I'm Probably Procrastinating\"" _site/retrospectives/2019/12/index.html; then
+  echo "ERROR: Monthly retrospective does not have expected twitter title";
+  exit 1;
+fi
+
+if egrep "\"twitter:title" _site/retrospectives/pygotham-2019-notes/index.html; then
+  echo "ERROR: Non-monthly retrospective should not have custom twitter title";
   exit 1;
 fi
