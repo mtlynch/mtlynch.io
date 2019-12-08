@@ -13,6 +13,7 @@
   "devDependencies": {
     "npm-run-all": "^1.8.0",
     "onchange": "^2.5.0",
+    "prettier": "1.19.1",
     "uglify-js": "^2.8.29"
   },
   "scripts": {
