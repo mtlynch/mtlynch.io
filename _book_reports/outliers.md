@@ -5,7 +5,7 @@ header:
   teaser: "/images/book-reports/outliers/outliers.jpg"
 report_intro:
   score: 3
-  link_url: https://amzn.to/36hL3ju
+  link_url: https://amzn.to/2LATHSa
 ---
 
 Blah blah
