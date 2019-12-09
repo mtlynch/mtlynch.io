@@ -18,8 +18,9 @@ Blah blah
 
 ## What I Liked
 
-* Many of the case studies are interesting.
 * Gladwell writes with an engaging, easy-to-read style.
+* Many of the case studies are interesting.
+  * Fascinating exploration of the connection between plane crashes and status differential between pilots and their first officers.
 
 ## What I Disliked
 
@@ -73,3 +74,20 @@ Blah blah
   * Two children that Terman rejected later went on to win Nobel prices.
 * Nobel laureates tend ot graduate from pretty good undergraduate colleges, but they don't come exclusively from top-tier schools like Harvard or MIT.
 
+### The rise of Jewish lawyers in the 1970s
+
+* Jewish lawyers achieved exceptional success in the 1970s because established law firms didn't handle hostile takeovers.
+* Prior to the 1970s and the rise of private equity, business leaders avoided hostile takeovers because they were considered "ungentlemanly."
+  * Business was an old boys' club, so executives didn't want to take over their friend's business.
+* Elite firms excluded Jews, so when someone needed laywers to handle hostile takeovers, they used Jewish law firms.
+* From mid-70s to late 80s, money involved in mergers and acquisitions deals increased 2,000% per year, peaking at $250B.
+* The lawyers who benefitted most from the rise in hostile takeovers were disproportionately Jewish because they had the most experience with hostile takeovers.
+
+### "Honor culture" of the South
+
+* Dov Cohen and Richard Nesbitt ran [a series of studies](https://www.ncbi.nlm.nih.gov/pubmed/8656339) on college students that found that when they insulted the test subjects, Southerners were more likely to suggest violent solutions to a hypothetical scenario, whereas Northerners were unaffected.
+* Gladwell suggests that this is related to the fact that Southerners historically raised more livestock, whereas Northerners grew more crops.
+  * Livestock is easier to steal, so livestock farmers need to build a reputation as vengeful and strong to discourage theft.
+  * Generally, this type of culture is called a "culture of honor."
+
+### Ethnic theory of plane crashes
