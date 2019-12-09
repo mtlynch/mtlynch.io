@@ -57,10 +57,17 @@ Customize the opengraph title for monthly retrospective posts
 {% unless og_title contains "Notes from" %}
 {% assign one_month_in_seconds = 30 | times: 24 | times: 60 | times: 60 %}
 {% assign formatted_date = page.date | date: "%s" | minus: one_month_in_seconds | date: "%B %Y" %}
-
 {%- assign og_title = formatted_date | append: " Retrospective: " | append: og_title -%}
-
 {% endunless %}
+{% endif %}
+
+
+{% comment %}
+Customize the opengraph title for book reports
+{% endcomment %}
+
+{% if page.collection == "book_reports" %}
+{%- assign og_title = " Book Report: " | append: og_title -%}
 {% endif %}
 
 
