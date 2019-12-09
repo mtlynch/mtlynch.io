@@ -25,7 +25,6 @@ if ! egrep '"og:title".*="Notes from PyGotham 2019"' _site/retrospectives/pygoth
   exit 1;
 fi
 
-
 if ! egrep '"og:title".*="Book Report: Happy City by Charles Montgomery"' _site/book-reports/happy-city/index.html; then
   echo "ERROR: Book report does not have expected opengraph title";
   exit 1;
