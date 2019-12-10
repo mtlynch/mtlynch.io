@@ -114,7 +114,7 @@ TODO: Screenshots of both pages.
 
 ### Setting unique page titles for SEO
 
-You may have noticed that these pages have no title. Time to fix that.
+You may have noticed that these pages have no title. Time to fix that!
 
 #### `pages/index.vue`
 
