@@ -1,5 +1,5 @@
 ---
-title: "Pre-Rendering Static Pages with Vue and Nuxt"
+title: "A Simple Pre-Rendered Web App Using Vue + Nuxt"
 excerpt: The easiest way to improve SEO and social sharing for a single-page app.
 tags:
 - vue
@@ -30,6 +30,8 @@ SPAs are called "single page" because all of the code is on one page. To the use
 
 The more common solution to populating these tags server side is to use server-side rendering. The problem is that, to leverage server-side rendering, you need to run a live web server. One of the draws of SPAs in the first place was that they didn't require a server. Who wants to maintain a whole node server just to serve a few pages? They'll render the same way every time, so why not just render them once and serve the result.
 
+Cheaper not to have to run a server.
+
 ## How is this different than a regular single page app (SPA)?
 
 Standard SPAs generate all their HTML in the browser. That doesn't
@@ -44,9 +46,13 @@ I used this template to implement the Zestful demo site as a static, pre-rendere
 ## What it's not good for
 
 * Sites that rely heavily on user-generated content
-  * The Vue + Nuxt solution requires you to know all of your page routes when you build your page. If users can add URLs to your site (e.g. yoursite.com/michael123/post/andf3j), the Vue + Nuxt template won't support you well.
+  * The Vue + Nuxt solution requires you to know all of your page routes when you build your page. If users can add URLs to your site (e.g. `yoursite.com/michael123/post/andf3j`), the Vue + Nuxt template won't support you well.
 * Blogs
   * If you have a site with lots of pages that have similar content and just differ in layout, consider a static site generator like Hugo or Jekyll.
+
+## Cost
+
+It's more complicated and you have to think about when things load.
 
 ## Pre-requisites
 
@@ -56,107 +62,236 @@ The only requirement for following along is that you have Node.js. I used [Node 
 
 ## A pre-rendered "Hello, world"
 
-To start out, I'll show you a basic hello world 
+To start out, I'll show you a basic, pre-rendered hello world app in just three files:
 
-Hooray! You pre-rendered a Vue app.
-
-## A more realistic project template
-
-Rendering two pages was probably the thrill of a lifetime, but I promised you HTML tags for SEO and social sharing. For the rest of the post, I'm going to show you how to build on the hello world example step by step until you have a project template with all the standard features you'd expect of a modern web app.
-
-### Deploying to Firebase (optional)
-
-Web apps are more fun when you can show your friends, so next I'm going to show you how to publish your app (for free).
-
-I like Firebase's static hosting, but several other providers offer static hosting, including [Netlify](https://www.netlify.com/blog/2016/10/27/a-step-by-step-guide-deploying-a-static-site-or-single-page-app/), [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html), and [Google Cloud Storage](https://cloud.google.com/storage/docs/hosting-static-website).
-
-### Adding a default layout
-
-Okay, back to developing your app. We started out with two pages. I wrote them as two completely independent pages, but for real web apps, pages tend to share a lot of content. For example, navigation bars, footers, and HTML tags.
-
-You can refactor common code out of your pages by creating a layout.
-
-#### `layouts/default.vue`
-
-```html
-<template>
-  <div class="app">
-    <div class="nav horizontal-align">
-      <nuxt-link class="nav-item" to="/">
-        Home
-      </nuxt-link>
-      <nuxt-link class="nav-item" to="/about">
-        About
-      </nuxt-link>
-    </div>
-    <!-- The <nuxt> tag inserts the unique content for the particular page -->
-    <nuxt class="container" />
-  </div>
-</template>
-
-<style>
-body,
-html {
-  padding: 0;
-  margin: 20px;
-  min-height: 100vh;
-}
-.nav-item {
-  text-decoration: none;
-  font-size: 1.2em;
-}
-</style>
-```
-
-Now, your pages have a navigation bar:
-
-TODO: Screenshots of both pages.
-
-### Setting unique page titles for SEO
-
-You may have noticed that these pages have no title. Time to fix that!
-
-#### `pages/index.vue`
+### `pages/index.vue`
 
 ```html
 <template>
   <div>
     <h1>Hello, world!</h1>
     <p>I'm an example of a pre-rendered Vue webpage.</p>
+    <button v-on:click="count++">I have been clicked {% raw %}{{ count }}{% endraw %} times</button>
   </div>
 </template>
 
 <script>
 export default {
-  head: {
-    title: 'Home page',
-  },
+  data: function() {
+    return {
+      count: 0
+    };
+  }
 };
 </script>
 ```
 
-#### `nuxt.config.js`
+### `package.json`
 
 ```javascript
-export default {
-  head: {
-    titleTemplate: '%s | Hello World Vue Static',
+{
+  "name": "hello-world-vue-static",
+  "dependencies": {
+    "nuxt": "latest"
   },
-};
+  "scripts": {
+    "dev": "nuxt --port 3600",
+    "generate": "nuxt generate"
+  }
+}
 ```
 
-### Adding opengraph tags social sharing
+### `nuxt.config.js`
 
-### Adding a sitemap
+Lastly, you need a Nuxt configuration file, even if it's empty:
 
-### Adding robots.txt
+```javascript
+// Even though we have no Nuxt settings, this file is required.
+```
 
-### Handling 404s
+### Running
 
-### Adding a favicon
+```bash
+npm install
+npm run dev
+```
 
-### Adding a Circle CI configuration
+Your app will be running on [http://localhost:3600](http://localhost:3600).
 
-### Setting up Google Analytics
+Below, you can see a live preview on Codesandbox:
 
-## The final product
+<iframe
+  src="https://codesandbox.io/embed/mystifying-sutherland-qgw4f?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="mystifying-sutherland-qgw4f"
+  sandbox="allow-modals allow-forms allow-popups allow-scripts"
+></iframe>
+
+### Pre-rendering your app
+
+When you run `npm run dev`, you're actually performing server-side rendering. Node runs a local development web and it generates pages on the fly as you request them.
+
+But I promised you *pre-rendered* pages. With pre-rendered pages, you don't even need a web server, because it's a set of static files.
+
+To pre-render your app, run the following command:
+
+```bash
+npm run generate
+```
+
+If you then check the `dist/` folder, you'll see that Nuxt has pre-rendered your page:
+
+```bash
+$ find ./dist/ -type f
+./dist/.nojekyll
+./dist/200.html
+./dist/index.html
+./dist/_nuxt/7cef7880379068a94897.js
+./dist/_nuxt/b10d0692e6306468ee9f.js
+./dist/_nuxt/cae55ee8b1125819f113.js
+./dist/_nuxt/ee10340617a3beab9da2.js
+./dist/_nuxt/LICENSES
+```
+
+If you upload these files to a static hosting service, you can access your pre-rendered web app without the need for a Node server. I explain that more below. (TODO: link)
+
+## A simple two-page app
+
+To make things more interesting, I'm going to add an additional page to this app:
+
+### `pages/about.vue`
+
+```html
+<template>
+  <div>
+    <h1>About this Build</h1>
+    <p v-if="buildTime">
+      Nuxt pre-rendered this page at <b>{% raw %}{{ buildTime }}{% endraw %}</b> (before the browser
+      ever saw it).
+    </p>
+    <template v-else>
+      <p>
+        Vue generated this page client-side because you navigated here from
+        another route on the same site.
+      </p>
+      <p>
+        <a href="/about">Refresh the page</a> to see the pre-rendered version.
+      </p>
+    </template>
+    <p>The browser loaded this page at <b>{% raw %}{{ loadTime }}{% endraw %}</b>.</p>
+    <p><nuxt-link to="/">Home</nuxt-link></p>
+  </div>
+</template>
+
+<script>
+export default {
+  asyncData() {
+    // Don't re-evaluate buildTime when the client loads this page in the
+    // browser.
+    if (!process.client) {
+      return {
+        buildTime: new Date().toUTCString()
+      };
+    }
+  },
+  // Vue evaluates data variables at page render time and again every time the
+  // browser loads this page.
+  data: function() {
+    return {
+      loadTime: new Date().toUTCString()
+    };
+  }
+};
+</script>
+```
+
+### `pages/index.vue`
+
+Next, I update `index.vue` to include a link to my newly created "About" page:
+
+```html
+<template>
+  <div>
+    <h1>Hello, world!</h1>
+    <p>I'm an example of a pre-rendered Vue webpage.</p>
+    <p>
+      To learn more, visit my <a v-bind:href="repoUrl">Github repo</a> or check
+      the <nuxt-link to="/about">about page</nuxt-link>.
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      repoUrl: "https://github.com/mtlynch/hello-world-vue-static"
+    };
+  }
+};
+</script>
+```
+
+### Live preview
+
+Below, you'll find a live preview embedded, but you can also visit it [here](https://hello-world-vue-static.web.app).
+
+<iframe
+  src="https://hello-world-vue-static.web.app"
+  style="width:100%; height:500px; border:1px solid black; border-radius: 4px; overflow:hidden;"
+  title="Hello, World!"
+  sandbox="allow-scripts"
+></iframe>
+
+### Understanding two versions of the About page
+
+The about page demonstrates the way that Nuxt and Vue work together to create a pre-rendered page.
+
+If you navigate directly to the About page, you see a page that looks like this:
+
+TODO: Screenshot
+
+If you start from the home page and then click the "About" link, you see a page that looks like this:
+
+TODO: Screenshot
+
+Why are you seeing two different versions of the page?
+
+The answer is in the asyncData hook. This function runs when Nuxt pre-renders the page and runs again any time the browser navigates to this page from elsewhere on the site.
+
+The first site you visit is pre-rendered. After that, your app behaves like a normal Vue app. When the user navigates to a different page, the app doesn't request a new page from the server. It actually just uses JavaScript to rebuild the DOM to match the new page. But when you load the page, it grabs the pre-rendered version.
+
+## Publishing your app
+
+Again, this is a static app, so you don't need to host a Node server to run it. All you need is a host that supports static file hosting. Here are a few of the popular providers:
+
+* [Google Firebase](https://firebase.google.com/docs/hosting/quickstart) (I use this)
+* [Netlify](https://www.netlify.com/blog/2016/10/27/a-step-by-step-guide-deploying-a-static-site-or-single-page-app/)
+* [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
+* [Google Cloud Storage](https://cloud.google.com/storage/docs/hosting-static-website)
+
+## Source code
+
+All code for this example is available on Github under the [MIT license](https://choosealicense.com/licenses/mit/):
+
+* [hello-world-vue-static](https://github.com/mtlynch/hello-world-vue-static)
+
+## A more feature-rich example
+
+If you're building a real-world app with Vue and Nuxt, you'll want a lot more functionality than just two pre-rendered pages. I created a template project you can use that includes all the boilerplate you need for SEO and social sharing:
+
+* [pre-vue](https://github.com/mtlynch/pre-vue): A template for building pre-rendered web apps with Vue + Nuxt
+  * [Live demo](https://pre-vue.web.app/)
+
+| Feature | Purpose |
+|---------|---------|
+| Generates a `robots.txt` file | Improves SEO, as it explicitly grants search engines to crawl your site. |
+| Generates a sitemap | Improves SEO, as it tells search engines how to crawl your site. |
+| Supports unique `<title>` tags for each page | Google supports indexing tags with dynamically generated `<title>` tags but [doesn't always achieve it correctly](https://twitter.com/JohnMu/status/1018956456304037893). Pre-rendering SEO-relevant tags guarantees that Google can index your page properly. |
+| Adds unique [Open Graph](https://ogp.me/) tags to each page | If you want each page on your site to display a rich, unique card when you share it on Twitter, Facebook, or Pinterest, you'll need to pre-render Open Graph and other social sharing tags server-side. |
+| Adds a favicon | Populates icons in browser tabs and shortcuts. |
+| Handles 404s | Shows a graceful error page when the user navigates to a non-existent page. |
+
+I used the pre-vue template to rewrite the [Zestful demo site](https://zestfuldata.com/), which was previously an Angular SPA. Within days of converting it to a pre-rendered app, the site [climbed to the first page of Google results](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite).
+
+The [README](https://github.com/mtlynch/pre-vue) explains how to use pre-vue, but I'll publish a detailed blog post explaining the details if there's interest.
