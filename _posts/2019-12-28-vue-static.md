@@ -8,17 +8,48 @@ tags:
 
 In this post, I'll show you how to generate pre-rendered pages using Vue and Nuxt.
 
-## Why pre-render?
+## A quick introduction to SPAs
 
-In the last few years, the new hot thing in web development is single page apps (SPAs). The three big web development frameworks are Vue, React, and Angular, all of which generate SPAs.
+In the last few years, the new hot thing in web development is single page apps (SPAs). The three most popular web development frameworks &mdash; Vue, React, and Angular &mdash; all generate SPAs.
 
-There are two huge problems with SPAs: search engine optimization and social sharing.
+Before SPAs, websites had many pages. If you navigated to a site's homepage and clicked the "About Us" button, your browser would request the "About Us" page from the web server. The server would send down the page, and your browser would load a whole new page. There's inefficiency here because different pages on a website have similar code, but the browser has to re-fetch them each time.
 
-For example, if you peek at the source for this blog post, you'll see an HTML tag like this:
+SPAs are called "single page" because everything on the website happens in a single page. If you click the "About Us" button, the browser just redraws the page to show the "About Us" page.
+
+## SPA problem #1: Social sharing
+
+There are two huge problems with SPAs: social sharing and search engine optimization.
+
+When the browser receives an SPA from the server, the HTML generally looks something like this:
 
 ```html
-<meta name="description" content="{{ page.excerpt }}">
+<html>
+<head>
+  <title>My Awesome Website</title>
+</head>
+<body>
+  <div id="app"></div>
+  <!-- app.js populates the rest of the page after it runs in the browser. -->
+  <script type="text/javascript" src="app.js">
+</body>
+</html>
 ```
+
+The page starts out as just an HTML stub, and the JavaScript does the heavy lifting of creating the page in the browser.
+
+The problem arises when you want to create pretty social sharing cards on Twitter, Facebook, or Pinterest. To do that, your page needs extra HTML `<meta>` tags. Most social sites use the [Open Graph](https://ogp.me/) standard. For example, to specify the image that should appear in social sharing cards, you'd add a tag that looks like this:
+
+```html
+<meta property="og:image" content="https://mtlynch.io/images/eliminate-distractions/ideal-facebook.jpg">
+```
+
+This is where the whole "single page" aspect of SPAs comes back to bite you. Because every page on your site is now a *single* page, you can't have distinct `<meta>` tags for different pages. You can set `<meta>` tags using JavaScript after the page loads, but it won't help you with any of the major social platforms because they require the HTML tags to be present before any JavaScript runs.
+
+## SPA problem #2: Search engine optimization (SEO)
+
+Search engines have a similar problem to social networking sites.
+
+[doesn't always achieve it correctly](https://twitter.com/JohnMu/status/1018956456304037893)
 
 That's a suggestion to Google of how to render this article when it appears in search results.
 
@@ -109,16 +140,9 @@ Lastly, you need a Nuxt configuration file, even if it's empty:
 // Even though we have no Nuxt settings, this file is required.
 ```
 
-### Running
+### Running "Hello, world"
 
-```bash
-npm install
-npm run dev
-```
-
-Your app will be running on [http://localhost:3600](http://localhost:3600).
-
-Below, you can see a live preview on Codesandbox:
+You can run this app [on Codesandbox](https://codesandbox.io/s/mystifying-sutherland-qgw4f):
 
 <iframe
   src="https://codesandbox.io/embed/mystifying-sutherland-qgw4f?fontsize=14&hidenavigation=1&theme=dark"
@@ -127,9 +151,22 @@ Below, you can see a live preview on Codesandbox:
   sandbox="allow-modals allow-forms allow-popups allow-scripts"
 ></iframe>
 
+Alternatively, you can run the app on your local machine with the following commands:
+
+```bash
+git clone https://github.com/mtlynch/hello-world-vue-static.git
+cd hello-world-vue-static
+git checkout step-1
+
+npm install
+npm run dev
+```
+
+Your app will be running on [http://localhost:3600](http://localhost:3600).
+
 ### Pre-rendering your app
 
-When you run `npm run dev`, you're actually performing server-side rendering. Node runs a local development web and it generates pages on the fly as you request them.
+When you run `npm run dev`, you're actually performing server-side rendering. Node runs a local development server and generates pages on-demand as you request them.
 
 But I promised you *pre-rendered* pages. With pre-rendered pages, you don't even need a web server, because it's a set of static files.
 
@@ -232,6 +269,16 @@ export default {
 </script>
 ```
 
+### Run it locally
+
+```bash
+git clone https://github.com/mtlynch/hello-world-vue-static.git
+cd hello-world-vue-static
+
+npm install
+npm run dev
+```
+
 ### Live preview
 
 Below, you'll find a live preview embedded, but you can also visit it [here](https://hello-world-vue-static.web.app).
@@ -283,12 +330,15 @@ If you're building a real-world app with Vue and Nuxt, you'll want a lot more fu
 * [pre-vue](https://github.com/mtlynch/pre-vue): A template for building pre-rendered web apps with Vue + Nuxt
   * [Live demo](https://pre-vue.web.app/)
 
+It has the following features:
+
 | Feature | Purpose |
 |---------|---------|
 | Generates a `robots.txt` file | Improves SEO, as it explicitly grants search engines to crawl your site. |
 | Generates a sitemap | Improves SEO, as it tells search engines how to crawl your site. |
-| Supports unique `<title>` tags for each page | Google supports indexing tags with dynamically generated `<title>` tags but [doesn't always achieve it correctly](https://twitter.com/JohnMu/status/1018956456304037893). Pre-rendering SEO-relevant tags guarantees that Google can index your page properly. |
+| Supports unique `<title>` tags and other SEO-relevant `<meta>` tags for each page | Improves SEO, as it guarantees that search engines will index your page properly. |
 | Adds unique [Open Graph](https://ogp.me/) tags to each page | If you want each page on your site to display a rich, unique card when you share it on Twitter, Facebook, or Pinterest, you'll need to pre-render Open Graph and other social sharing tags server-side. |
+| Adds Google Analytics support | Measure visits to your site. |
 | Adds a favicon | Populates icons in browser tabs and shortcuts. |
 | Handles 404s | Shows a graceful error page when the user navigates to a non-existent page. |
 
