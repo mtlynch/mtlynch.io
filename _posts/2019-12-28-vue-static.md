@@ -192,9 +192,9 @@ $ find ./dist/ -type f
 
 If you upload these files to a static hosting service, you can access your pre-rendered web app without the need for a Node server. I explain that more below. (TODO: link)
 
-## A simple two-page app
+## Adding an About page
 
-To make things more interesting, I'm going to add an additional page to this app:
+To make things more interesting, I'll add a new page to this app that displays information about how Vue and Nuxt render the page:
 
 ### `pages/about.vue`
 
@@ -242,55 +242,27 @@ export default {
 </script>
 ```
 
-### `pages/index.vue`
+## Testing the About page
 
-Next, I update `index.vue` to include a link to my newly created "About" page:
-
-```html
-<template>
-  <div>
-    <h1>Hello, world!</h1>
-    <p>I'm an example of a pre-rendered Vue webpage.</p>
-    <p>
-      To learn more, visit my <a v-bind:href="repoUrl">Github repo</a> or check
-      the <nuxt-link to="/about">about page</nuxt-link>.
-    </p>
-  </div>
-</template>
-
-<script>
-export default {
-  data: function() {
-    return {
-      repoUrl: "https://github.com/mtlynch/hello-world-vue-static"
-    };
-  }
-};
-</script>
-```
-
-### Run it locally
-
-```bash
-git clone https://github.com/mtlynch/hello-world-vue-static.git
-cd hello-world-vue-static
-
-npm install
-npm run dev
-```
-
-### Live preview
-
-Below, you'll find a live preview embedded, but you can also visit it [here](https://hello-world-vue-static.web.app).
+Here is a [live version](https://hello-world-vue-static.web.app) of the About page:
 
 <iframe
-  src="https://hello-world-vue-static.web.app"
-  style="width:100%; height:500px; border:1px solid black; border-radius: 4px; overflow:hidden;"
-  title="Hello, World!"
+  src="https://hello-world-vue-static.web.app/about"
+  style="width:100%; height:230px; border:1px solid black; border-radius: 4px; overflow:hidden;"
+  title="About this Build"
   sandbox="allow-scripts"
 ></iframe>
 
-### Understanding two versions of the About page
+But try starting from the homepage and clicking the "About" link:
+
+<iframe
+  src="https://hello-world-vue-static.web.app"
+  style="width:100%; height:230px; border:1px solid black; border-radius: 4px; overflow:hidden;"
+  title="About this Build"
+  sandbox="allow-scripts"
+></iframe>
+
+## Understanding two versions of the About page
 
 The about page demonstrates the way that Nuxt and Vue work together to create a pre-rendered page.
 
@@ -307,6 +279,20 @@ Why are you seeing two different versions of the page?
 The answer is in the asyncData hook. This function runs when Nuxt pre-renders the page and runs again any time the browser navigates to this page from elsewhere on the site.
 
 The first site you visit is pre-rendered. After that, your app behaves like a normal Vue app. When the user navigates to a different page, the app doesn't request a new page from the server. It actually just uses JavaScript to rebuild the DOM to match the new page. But when you load the page, it grabs the pre-rendered version.
+
+## Running the About page locally
+
+To experiment with the About page, run the following commands
+
+```bash
+git clone https://github.com/mtlynch/hello-world-vue-static.git
+cd hello-world-vue-static
+
+npm install
+npm run dev
+```
+
+You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about) the two times will roughly match one another. That's because when you run `npm run dev`, Nuxt is using server-side rendering to create the page just in time. Unlike pre-rendering, which generates the page once and keeps serving that same page, with server-side rendering, Nuxt generates a fresh version of the page each time the user lands on the page. Note that Nuxt only generates the *first* page that the user hits. After that, the app resumes behaving like a Vue SPA.
 
 ## Publishing your app
 
