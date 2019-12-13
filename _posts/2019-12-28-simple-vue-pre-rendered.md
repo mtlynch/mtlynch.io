@@ -6,21 +6,21 @@ tags:
 - nuxt
 ---
 
-In this post, I'll show you how to generate pre-rendered pages using Vue and Nuxt.
+In this post, I'll show you how to generate pre-rendered pages using Vue and Nuxt. Vue offers a pleasant developer experience for creating single-page apps (SPAs), but it also limits your ability to enable social sharing or search engine optimization. You can solve that problem with server-side rendering, but that requires you to bring an entire Node server into your stack. With pre-rendering, you control all the tags consumed by search engines and social networks, and you don't need to run a whole server.
 
 ## A quick introduction to SPAs
 
-In the last few years, the new hot thing in web development is single page apps (SPAs). The three most popular web development frameworks &mdash; Vue, React, and Angular &mdash; all generate SPAs.
+In the last few years, the new hot thing in web development is SPAs. The three most popular frontend frameworks &mdash; Vue, React, and Angular &mdash; all generate SPAs.
 
-Before SPAs, websites had many pages. If you navigated to a site's homepage and clicked the "About Us" button, your browser would request the "About Us" page from the web server. The server would send down the page, and your browser would load a whole new page. There's inefficiency here because different pages on a website have similar code, but the browser has to re-fetch them each time.
+Before SPAs, websites had many pages. If you navigated to a site's homepage and clicked the "About Us" button, your browser would request the "About Us" page from the web server. The server would send down the page, and your browser would load a whole new page.
 
-SPAs are called "single page" because everything on the website happens in a single page. If you click the "About Us" button, the browser just redraws the page to show the "About Us" page.
-
-## SPA problem #1: Social sharing
+SPAs are called "single-page" because everything on the website happens in a single page. If you click the "About Us" button, the browser doesn't have to fetch a whole new page from the server. Instead, it uses JavaScript to redraw the page to display the "About Us" contents.
 
 There are two huge problems with SPAs: social sharing and search engine optimization.
 
-When the browser receives an SPA from the server, the HTML generally looks something like this:
+## SPA problem #1: Social sharing
+
+When the browser receives an SPA from the server, the HTML looks something like this:
 
 ```html
 <html>
@@ -29,33 +29,28 @@ When the browser receives an SPA from the server, the HTML generally looks somet
 </head>
 <body>
   <div id="app"></div>
-  <!-- app.js populates the rest of the page after it runs in the browser. -->
+  <!-- app.js populates the rest of the page after the browser executes the script. -->
   <script type="text/javascript" src="app.js">
 </body>
 </html>
 ```
 
-The page starts out as just an HTML stub, and the JavaScript does the heavy lifting of creating the page in the browser.
+The page starts out as just an HTML stub, and the JavaScript does the heavy lifting of building the page contents within the browser.
 
 The problem arises when you want to create pretty social sharing cards on Twitter, Facebook, or Pinterest. To do that, your page needs extra HTML `<meta>` tags. Most social sites use the [Open Graph](https://ogp.me/) standard. For example, to specify the image that should appear in social sharing cards, you'd add a tag that looks like this:
 
 ```html
-<meta property="og:image" content="https://mtlynch.io/images/eliminate-distractions/ideal-facebook.jpg">
+<meta property="og:image"
+  content="https://mtlynch.io/images/eliminate-distractions/ideal-facebook.jpg">
 ```
 
-This is where the whole "single page" aspect of SPAs comes back to bite you. Because every page on your site is now a *single* page, you can't have distinct `<meta>` tags for different pages. You can set `<meta>` tags using JavaScript after the page loads, but it won't help you with any of the major social platforms because they require the HTML tags to be present before any JavaScript runs.
+This is where the whole "single-page" aspect of SPAs comes back to bite you. Because every page on your site is now a *single* page, you can't have distinct `<meta>` tags for different pages. You can set `<meta>` tags using JavaScript after the page loads, but it won't help you with any of the major social platforms because they require the HTML tags to be present before any JavaScript runs.
 
 ## SPA problem #2: Search engine optimization (SEO)
 
-Search engines have a similar problem to social networking sites.
+Unlike social networking sites, search engines do render websites using JavaScript. The problem is that it's impossible for them to do it perfectly. Many websites use JavaScript to continuously update a page's contents while you're viewing it. From Google's perspective, when is a page "done" rendering and ready for indexing?
 
-[doesn't always achieve it correctly](https://twitter.com/JohnMu/status/1018956456304037893)
-
-That's a suggestion to Google of how to render this article when it appears in search results.
-
-Social sharing is more straightforward. If you share a URL on Twitter, Facebook, or Pinterest, they don't render your page using JavaScript, so any HTML tags need to be there before the page loads.
-
-SPAs are called "single page" because all of the code is on one page. To the user, it may look like they're navigating to different pages, but they're, in fact, staying on the same page and JavaScript is just changing the page contents
+So, Google and other major search engines do respect SEO-relevant HTML tags, [even if you load them in the browser using JavaScript](https://twitter.com/JohnMu/status/1018956456304037893), but they will always index pre-rendered pages better.
 
 ## Why not use server-side rendering (SSR)?
 
@@ -63,33 +58,32 @@ The more common solution to populating these tags server side is to use server-s
 
 Cheaper not to have to run a server.
 
-## How is this different than a regular single page app (SPA)?
+## How is this different than a regular single-page app (SPA)?
 
 Standard SPAs generate all their HTML in the browser. That doesn't
 
-## What it's good for
+## Advantages
 
-* Landing pages
-* Sites with unique functionality on each page
+* Control over tags relevant to social sharing and SEO
+* Faster page loads
+  * Standard SPAs have to wait until the browser downloads all of its JavaScript before it starts rendering the page.
+  * With pre-rendering, users see your page before their browser executes any JavaScript.
 
-I used this template to implement the Zestful demo site as a static, pre-rendered site. Before that, it was an SPA
+## Disadvantages
 
-## What it's not good for
-
-* Sites that rely heavily on user-generated content
-  * The Vue + Nuxt solution requires you to know all of your page routes when you build your page. If users can add URLs to your site (e.g. `yoursite.com/michael123/post/andf3j`), the Vue + Nuxt template won't support you well.
-* Blogs
-  * If you have a site with lots of pages that have similar content and just differ in layout, consider a static site generator like Hugo or Jekyll.
-
-## Cost
-
-It's more complicated and you have to think about when things load.
+* More complexity than standard Vue
+  * While pre-rendering is less complex than running Nuxt on a Node server, it's more complicated than running a fully client-side Vue app.
+  * With pre-rendering, you have to mentally track whether code will run server-side or client-side and what context will be available at the time the code executes.
+* No user-generated pages
+  * Pre-rendering requires you to know all of your page routes when you build your page. It explicitly [does not support dynamic routes](https://nuxtjs.org/guide/routing#dynamic-routes).
+  * If your site features user-generated content and you want, for example, users to have their own URLs after joining (e.g., `yoursite.com/users/michael123`), you can't do that with pre-rendering.
+  * You can work around this by pushing some of your route into URL queries (e.g., `yoursite.com/users?id=michael123`) then pulling down the dynamic data client-side, but this means that these pages wouldn't have distinct social sharing tags.
 
 ## Pre-requisites
 
 * [Node.js](https://nodejs.org/en/download/)
 
-The only requirement for following along is that you have Node.js. I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
+The only requirement for following this tutorial is that you have Node.js installed. I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
 
 ## A pre-rendered "Hello, world"
 
