@@ -283,9 +283,9 @@ How could I bridge the gap between these two different environments with incompa
 
 ## A roundabout way to convert paths
 
-In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/v4.5.x/config.html#paths) that discussed combining paths from multiple filesystems:
+In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths) that discussed combining paths from multiple filesystems:
 
-{% assign fig_caption = "Documentation for [`paths` option](https://coverage.readthedocs.io/en/v4.5.x/config.html#paths) of `coverage` command" | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = "Documentation for [`paths` option](https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths) of `coverage` command" | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="paths-param.png" alt="Screenshot of paths documentation" fig_caption=fig_caption max_width="712px" link_url="https://coverage.readthedocs.io/en/v4.5.x/config.html#paths" class="img-border" %}
 
