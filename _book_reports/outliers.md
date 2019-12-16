@@ -25,7 +25,7 @@ Blah blah
 ## What I Disliked
 
 * Gladwell's overarching theories to tie together all of the case studies felt flimsy and unconvincing.
-  * *See also: every other Malcolm Gladwell book ever.*
+  * *See also*: every other Malcolm Gladwell book ever.
   * He basically argues that Asian Americans outperform other ethnic groups academically because rice is harder to grow than Western crops, so Asians have a cultural tolerance for hard work.
 * Some of his conclusions feel outright illogical.
   * If our selection systems for junior hockey leagues were less biased, we'd have twice as many elite hockey players?
@@ -69,8 +69,10 @@ Blah blah
   * You need to be at least 6'1 to have a reasonable shot at the NBA, but 6'8 players are not substantially better than 6'2 players.
   * Similarly, your IQ needs to be above a certain threshold to achieve exceptional success, but above that threshold, it's not a good predictor of success.
 * [Terman's Termites](https://en.wikipedia.org/wiki/Genetic_Studies_of_Genius)
-  * Lewis Terman conducted a long study whre he selected 1,470 children with the highest IQs among a pool of 250k tested.
-  * When they reached adulthood, none of the people in the group achieved exceptional succcess. They performed about the same as a random sample of children.
+  * Lewis Terman conducted a long study where he selected 1,470 children with the highest IQs among a pool of 250k tested.
+  * Terman lovingly referred to the children in the study as his "Termites." *[Ed: Awful name]*
+  * When they reached adulthood, none of the people in the group achieved exceptional succcess.
+    * They performed about the same as a random sample of children.
   * Two children that Terman rejected later went on to win Nobel prices.
 * Nobel laureates tend ot graduate from pretty good undergraduate colleges, but they don't come exclusively from top-tier schools like Harvard or MIT.
 
@@ -91,3 +93,81 @@ Blah blah
   * Generally, this type of culture is called a "culture of honor."
 
 ### Ethnic theory of plane crashes
+
+* One contributor to plane crashes is the communication style between the captain and their first office.
+  * If the first officer is too deferential to the captain, they fail to assert themselves clearly when they believe the captain is committing an error.
+* Crash of [Avianca flight 52](https://en.wikipedia.org/wiki/Avianca_Flight_52) is a famous example of deferential speech leading to a crash.
+  * The flight crashed just outside of JFK after running out of fuel.
+  * Several factors made the flight dangerous: weather was bad, pilots were tired, auto-pilot was malfunctioning, air traffic control repeatedly put the plane in a holding pattern before granting it clearance to land.
+  * First officer recognized problems, but only raised them to the captain gently.
+  * Both pilots recognized that they were dangerously low on fuel but did not communicate this clearly to air traffic control, who could have prioritized their landing.
+    * The black box recordings suggest that the JFK air traffic controllers' brusque communication style intimidated the Colombian pilots, and they didn't want to upset them.
+
+#### Levels of "mitigated speech"
+
+>1. *Command*: "Turn thirty degrees right." That's the most direct and explicit way of making a point imaginable. It's zero mitigation.
+1. *Crew Obligation Statement*: "I think we need to deviate right about now." Notice the use of "we" and the fact that the request is now much less specific. That's a little softer.
+1. *Crew Suggestion*: "Let's go around the weather." Implicit in that statement is "we're in this together."
+1. *Query*: "Which direction would you like to deviate?" That's even softer than a crew suggestion because the speaker is conceding that he's not in charge.
+1. *Preference*: "I think it would be wise to turn left or right."
+1. *Hint*: "That return at twenty-five miles looks mean." This is the most mitigated statement of all.
+
+* Captains overwhelmingly speak in commands (#1), the least mitigated form of speech.
+* First officers typically speak to their captain in hints (#6), the most mitigated form of speech.
+* Crashes are more common when the captain is flying.
+  * Even though the first officer usually has less experience, it means that the person *not* flying is more comofrotable speaking up when the active pilot is making an error.
+* Airlines have begun teaching first officers to escalating concerns using increasingly direct speech in every request:
+
+>1. "Captain, I'm concerned about..."
+1. "Captain, I'm uncomfortable with..."
+1. "Captain, I believe the situation is unsafe."
+
+#### [Hofstede's dimensions](https://en.wikipedia.org/wiki/Hofstede%27s_cultural_dimensions_theory)
+
+* Geert Hofstede worked as an HR pyschologist for IBM and surveyed people from many different countries to measure differences in cultural attitudes.
+  * "Hofstede's dimensions" are the different metrics that came out of this work.
+* **Power Distance Index** (PDI): One of Hofstede's dimensions that measures how much a culture respects authority
+* The PDI might have been a factor in the crash of Avianca flight 52.
+  * Colombia's culture has a high PDI (i.e., subordinates are expected to be deferential to their superiors)
+  * NYC is a low-PDI culture (i.e., New Yorkers are known for being direct, even with superiors)
+  * First officer used mitigated speech to the captain due to their high PDI cultural dynamic.
+  * NYC air traffic controllers didn't understand pilots' subtle hints (mitigated speech) because they're accustomed to directness.
+* Countries with high PDI scores tend to be the countries with the most plane crashes.
+
+### Why Chinese students outperform Western students academically
+
+*[Ed: This was the most far-fetched, least substantiated section of the book.]*
+
+* Chinese students outperform others academically because rice is difficult to grow.
+* There's a correlation between how many numbers a person can memorize in sequence and how quickly they can pronounce the numbers in their language.
+  * Numbers take less time to pronounce in Chinese than in English.
+  * 50% of English speakers can memorize a 7-digit sequence, but nearly 100% of Chinese speakers can.
+* The Chinese language represents numbers with more regularity than English.
+  * English has lots of exceptions and strange rules. For example, 11 is "eleven," whereas in Chinese it's more like "ten-one."
+    * Chinese children can count and do arithmetic from an earlier age, likely because of this regularity in the language.
+* Rice paddies are small, like the size of a hotel room, and farms only have 2-3 paddies.
+* Western farms grow by expanding land, so they scale by adding labor and mechanization.
+* Rice paddies increase their yield by increasing efficiency with the same amount of land.
+* Rice farming requires more labor than any other type of farming.
+  * European peasants in the 18th century worked from dawn until noon for a few months per year, but they were idle in winter months.
+    * Total work was ~1200 hours/year.
+  * Rice farming is 10-20x more labor intensive than the equivalent size wheat or corn field.
+    * Rice farmers worked ~3000/year.
+* [TIMMS](https://en.wikipedia.org/wiki/Trends_in_International_Mathematics_and_Science_Study) is an international math & science test that provides comparisons of aptitude across countries.
+  * It starts with a 120-question survey about the student's background.
+  * The survey has so many questions that many students fail to complete the survey in full.
+  * The average completion rate of the questionnaire by country corresponds perfectly with the average math & science score for that country.
+    * In other words, you could rank each country's average math and science aptitude without every testing math or science. Just look at the percentage of students who completed the pre-test survey.
+  * All five top-scoring countries by TIMMS are countries with a history of farming rice.
+* The US educational system was highly influenced by reformers who feared the risks of "overstudy."
+  * They thought overstudy could cause insanity, so they added summer breaks and built-in opportunities for students' mind to "rest" by not studying.
+  * Asian schools don't have summer breaks or the expectation that study requires breaks.
+  * Farming may have influenced these different views of education, as western crops need the soil to lie fallow for long periods, whereas this is not necessary when farming rice.
+* According to results of standardized testing in Baltimore, summer breaks weaken reading ability for lower-income students.
+  * Wealthier students more frequently have access to educational programs over the summer, so their scores generally increase at the end of the summer.
+* [KIPP](https://en.wikipedia.org/wiki/KIPP) is an experimental middle school for low-income minority students that demands intense study.
+  * The school is highly structured and students basically study non-stop every waking hour of the day.
+  * The rigorous program yields impressive results:
+    * 89% of students reach or exceed their grade level in math.
+    * 90% of students get scholarhsips to private high schools.
+    * 80% of students go on to attend college.
