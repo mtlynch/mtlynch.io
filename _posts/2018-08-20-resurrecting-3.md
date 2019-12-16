@@ -287,13 +287,13 @@ In the documentation for `coverage`, I noticed that it supported a [`paths` opti
 
 {% assign fig_caption = "Documentation for [`paths` option](https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths) of `coverage` command" | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="paths-param.png" alt="Screenshot of paths documentation" fig_caption=fig_caption max_width="712px" link_url="https://coverage.readthedocs.io/en/v4.5.x/config.html#paths" class="img-border" %}
+{% include image.html file="paths-param.png" alt="Screenshot of paths documentation" fig_caption=fig_caption max_width="712px" link_url="https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths" class="img-border" %}
 
 To use these options, I created the following `.coveragerc` file:
 
 {% include files.html title="coveragerc" language="ini" %}
 
-My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/v4.5.x/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
+My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/coverage-5.0/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
 
 After applying this solution, the `after_success` section of my [Travis configuration](https://github.com/mtlynch/ingredient-phrase-tagger/blob/9e66f28b07de290b77b1ec0b84baf14f3e7330a0/.travis.yml) looked like this:
 
