@@ -8,6 +8,8 @@ tags:
 
 In this post, I'll show you how to generate pre-rendered pages using Vue and Nuxt. Vue offers a pleasant developer experience for creating single-page apps (SPAs), but it also limits your ability to enable social sharing or search engine optimization. You can solve that problem with server-side rendering, but that requires you to bring an entire Node server into your stack. With pre-rendering, you control all the tags consumed by search engines and social networks, and you don't need to run a whole server.
 
+## Why pre-render?
+
 ## A quick introduction to SPAs
 
 In the last few years, the new hot thing in web development is SPAs. The three most popular frontend frameworks &mdash; Vue, React, and Angular &mdash; all generate SPAs.
@@ -40,8 +42,7 @@ The page starts out as just an HTML stub, and the JavaScript does the heavy lift
 The problem arises when you want to create pretty social sharing cards on Twitter, Facebook, or Pinterest. To do that, your page needs extra HTML `<meta>` tags. Most social sites use the [Open Graph](https://ogp.me/) standard. For example, to specify the image that should appear in social sharing cards, you'd add a tag that looks like this:
 
 ```html
-<meta property="og:image"
-  content="https://mtlynch.io/images/eliminate-distractions/ideal-facebook.jpg">
+<meta property="og:image" content="https://example.com/post-1/cover.jpg">
 ```
 
 This is where the whole "single-page" aspect of SPAs comes back to bite you. Because every page on your site is now a *single* page, you can't have distinct `<meta>` tags for different pages. You can set `<meta>` tags using JavaScript after the page loads, but it won't help you with any of the major social platforms because they require the HTML tags to be present before any JavaScript runs.
