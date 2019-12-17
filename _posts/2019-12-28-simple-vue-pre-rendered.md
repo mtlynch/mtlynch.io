@@ -42,7 +42,7 @@ Dynamic page rendering is neat and all, but some parts of the web don't react ve
 
 When I share my blog posts on Twitter, they look like this:
 
-TODO: Picture of blog tweet with photoshopped like count
+{% include image.html file="twitter-card.jpg" alt="Example of a rich Twitter card" max_width="590px" img_link="true" class="img-border" fig_caption="Using Open Graph tags so that Twitter generates rich cards for my posts." %}
 
 Twitter generates that card based on HTML tags in my page that follow the [Open Graph](https://ogp.me/) standard. For example, to specify the image, I add a tag that looks like this:
 
