@@ -290,7 +290,7 @@ Try starting from the homepage and clicking the "About" link:
 
 The about page demonstrates how Nuxt and Vue work together to create a pre-rendered page. You should see two versions of the page depending on how you navigated the site:
 
-{% include image.html file="about-versions.jpg" alt="Screenshot of Is It Keto's Pinterest page" max_width="850px" img_link="true" class="img-border" fig_caption="The About page displays different information depending on how you arrived to the page." %}
+{% include image.html file="about-versions.jpg" alt="Screenshot of different versions of About page" max_width="850px" img_link="true" class="img-border" fig_caption="The About page displays different information depending on how you arrived to the page." %}
 
 Why are you seeing two different versions of the page? The answer is in the [`asyncData` hook](https://nuxtjs.org/api/). This function executes at two points:
 
@@ -348,7 +348,7 @@ You'll notice that when you navigate to [https://localhost:3600/about](https://l
 
 {% assign fig_caption = "`npm run dev` renders pages as the user requests them, so build times and load times match." | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="about-ssr.jpg" alt="Screenshot of Is It Keto's Pinterest page" max_width="650px" img_link="true" class="img-border" fig_caption=fig_caption %}
+{% include image.html file="about-ssr.jpg" alt="Screenshot of About page rendered with server side rendering" max_width="650px" img_link="true" class="img-border" fig_caption=fig_caption %}
 
 Unlike pre-rendering, which generates the page once and keeps serving that same page, with server-side rendering, Nuxt generates a fresh version of the page each time the user lands on the page.
 
