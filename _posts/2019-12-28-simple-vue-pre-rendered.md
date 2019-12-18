@@ -7,6 +7,7 @@ header:
 tags:
   - vue
   - nuxt
+  - SPAs
 ---
 
 In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue with the power and control of server-side rendering.
@@ -218,7 +219,7 @@ This allows you to view your pre-rendered app at [http://localhost:8123](http://
 
 ## Adding an About page
 
-To make things more interesting, I'll add a new page to this app:
+To make things more interesting, I'll add a second page to this app.
 
 ### `pages/about.vue`
 
@@ -272,9 +273,7 @@ This page uses Vue hooks to display information about how the page was rendered.
 </script>
 ```
 
-## Testing the About page
-
-Here is a [live version](https://hello-world-vue-pre-rendered.web.app) of the About page:
+Here's a [live version](https://hello-world-vue-pre-rendered.web.app) of the About page:
 
 <iframe
   src="https://hello-world-vue-pre-rendered.web.app/about"
@@ -283,20 +282,13 @@ Here is a [live version](https://hello-world-vue-pre-rendered.web.app) of the Ab
   sandbox="allow-scripts"
 ></iframe>
 
-Try starting from the homepage and clicking the "About" link:
-
-<iframe
-  src="https://hello-world-vue-pre-rendered.web.app"
-  style="width:100%; height:230px; border:1px solid black; border-radius: 4px; overflow:hidden;"
-  title="About this Build"
-  sandbox="allow-scripts"
-></iframe>
-
 ## Understanding two versions of the About page
 
-The about page demonstrates how Nuxt and Vue work together to create a pre-rendered page. You should see two versions of the page depending on how you navigated the site:
+The About page demonstrates how Nuxt and Vue work together to create a pre-rendered page. You should see two versions of the page depending on how you navigate the site.
 
 {% include image.html file="about-versions.jpg" alt="Screenshot of different versions of About page" max_width="850px" img_link="true" class="img-border" fig_caption="The About page displays different information depending on how you arrived to the page." %}
+
+If you start on the [`/about` page](https://hello-world-vue-pre-rendered.web.app/about), you should see the version on the left. If you start on the [root page](https://hello-world-vue-pre-rendered.web.app), then click the "about page" link, you should see the version on the right.
 
 Why are you seeing two different versions of the page? The answer is in the [`asyncData` hook](https://nuxtjs.org/api/). This function executes at two points:
 
@@ -317,9 +309,9 @@ asyncData() {
 },
 ```
 
-When Nuxt pre-renders the site, the server executes the `asyncData` method. In the server environment, `process.client` is `null`, so it sets `buildTime` to the current time.
+When Nuxt pre-renders the site, the server executes the `asyncData` method. In the server environment, `process.client` is null, so it sets `buildTime` to the current time.
 
-When you navigate to the About page from a different page on the site, the browser executes the `asyncData` method on page load. `process.client` is now non-`null` because the code is running client-side, so the method never defines `buildTime`. Vue then renders the page components for when `buildTime` is undefined:
+When you navigate to the About page from a different page on the site, the browser executes the `asyncData` method on page load. `process.client` is now non-null because the code is running client-side, so the method never defines `buildTime`. Vue then renders the page components for when `buildTime` is undefined:
 
 ```html
 <p v-if="buildTime">
@@ -382,14 +374,12 @@ If you're building a real-world app with Vue and Nuxt, you'll want a lot more fu
 
 It has the following features:
 
-| Feature                                                                           | Purpose                                                                     |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Generates a `robots.txt` file                                                     | Improves SEO.                                                               |
-| Generates a sitemap                                                               | Improves SEO.                                                               |
-| Supports unique `<title>` tags and other SEO-relevant `<meta>` tags for each page | Improves SEO.                                                               |
-| Adds unique [Open Graph](https://ogp.me/) tags to each page                       | Supports social sharing.                                                    |
-| Adds Google Analytics support                                                     | Measure visits to your site.                                                |
-| Adds a favicon                                                                    | Populates icons in browser tabs and shortcuts.                              |
-| Handles 404s                                                                      | Shows a graceful error page when the user navigates to a non-existent page. |
+- Generates a `robots.txt` file
+- Generates a sitemap
+- Supports unique `<title>` tags and other SEO-relevant `<meta>` tags for each page
+- Adds unique [Open Graph](https://ogp.me/) tags to each page
+- Adds Google Analytics support
+- Adds a favicon
+- Handles 404s
 
 I used the pre-vue template to rewrite the [Zestful demo site](https://zestfuldata.com/), which was previously an Angular SPA. The [README](https://github.com/mtlynch/pre-vue) explains how to use pre-vue, but I'll publish a detailed blog post explaining the details if there's interest.
