@@ -9,17 +9,17 @@ tags:
   - nuxt
 ---
 
-In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the pleasant developer experience of Vue with the power and control of server-side rendering. I'm sticking to the basics, so even if you have no experience with Vue or Nuxt, everything should still make sense.
+In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue with the power and control of server-side rendering.
 
-## Why pre-render?
+This tutorial assumes no experience with Vue or Nuxt. I'll explain everything along the way.
+
+## The problem with Vue
 
 Vue offers many advantages over . To understand why, you need to understand a bit about how single page apps (SPAs) work.
 
 While traditional websites force the browser to download a whole new page every time the user clicks a link, SPAs keep everything on a single page. When the user navigates around the site, JavaScript simply draws a new page without pulling everything down from the server again.
 
-When the browser fetches an SPA from the server, the HTML looks something like this.
-
-The page starts out as just an HTML stub, and the JavaScript does the heavy lifting of building the page contents within the browser.
+When the browser fetches an SPA from the server, it receives HTML that looks something like the following:
 
 ```html
 <html>
@@ -34,9 +34,9 @@ The page starts out as just an HTML stub, and the JavaScript does the heavy lift
 </html>
 ```
 
-Because it's a _single page_ app, that HTML stub is the same for every page on your site. If the user visits `yoursite.com/about` or `yoursite.com/contact` the HTML stub is exactly the same, but the app's JavaScript renders the appropriate page in the user's browser.
+Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub. JavaScript is responsible for for figuring out the path and drawing the appropriate page after it executes in the user's browser.
 
-Dynamic page rendering is neat and all, but some parts of the web don't react very well to it. In particular, social sharing and search engine optimization.
+Dynamic page rendering is a neat innovation that makes pages more responsive, but it creates problems in areas that expect the server to do the heavy lifting. Two common problems, in particular, are social sharing and search engine optimization.
 
 ## SPA problem #1: Social sharing
 
@@ -47,26 +47,32 @@ When I share my blog posts on Twitter, they look like this:
 Twitter generates that card based on HTML tags in my page that follow the [Open Graph](https://ogp.me/) standard. For example, to specify the image, I add a tag that looks like this:
 
 ```html
-<meta property="og:image" content="https://example.com/post-1/cover.jpg" />
+<meta property="og:image" content="https://mtlynch.io/post-42/cover.jpg" />
 ```
 
-Recall that I said that on SPAs, all pages have the same initial HTML. This is a problem for social sharing because Twitter, Facebook, and all the other social sharing sites need to see the Open Graph HTML tags before JavaScript executes. With a regular SPA, every page on your site must share the same Open Graph tags. But if you pre-render, each of your pages can have unique HTML tags and thus every page can have its own distinct social sharing card.
+This is a problem for SPAs, where all pages on a site share the same HTML skeleton. The dominant social networks like Twitter and Facebook require Open Graph tags to be present before any JavaScript executes. The result is that every page on your SPA shares an identical Twitter card or Facebook card.
 
 ## SPA problem #2: Search engine optimization (SEO)
 
-Unlike social networking sites, search engines do render websites using JavaScript. The problem is that [it's impossible for them to do it perfectly](https://twitter.com/JohnMu/status/1018956456304037893). Many websites use JavaScript to continuously update a page's contents while you're viewing it. From Google's perspective, when is a page "done" rendering and ready for indexing?
+Unlike social networking sites, search engines _do_ render websites using JavaScript. The problem is that [it's impossible for them to do it perfectly](https://twitter.com/JohnMu/status/1018956456304037893). Many websites use JavaScript to continuously update a page's contents while you're viewing it. From Google's perspective, when is a page "done" rendering and ready for indexing?
 
-With a regular SPA, Google will try to index your page, but you never have a guarantee that they'll index it the way you want. With pre-rendering, you can always trust that Google will index your page with the correct tags because they're present before JavaScript even runs.
+With a regular SPA, Google will try to index your page, but you have no guarantee that they'll index it correctly. With pre-rendering, you know that Google will index your page with the correct tags because they're present before JavaScript even runs.
 
-## Nuxt pre-rendering to the rescue
+## Nuxt to the rescue
 
-To solve these problems, you can use a tool called Nuxt. It adds a layer on top of Vue to take some work away from the browser. Instead of sending down a bare stub page and waiting for the browser to render everything, Nuxt pre-processes the page to create HTML ahead of time.
+On the modern web, social networks and SEO are fairly important, so it would be a huge bummer if using Vue meant that your app can't solve these problems.
 
-## Why not use server-side rendering (SSR)?
+{% include image.html file="NuxtJS_Logo.png" alt="Nuxt.js logo" max_width="250px" link_url="https://nuxtjs.org/" %}
 
-The common solution to populating these tags prior to JavaScript execution is to use server-side rendering. You can run Nuxt in a live Node.js server and use it to run Nuxt to generate The problem is that, to leverage server-side rendering, you need to run a live web server.
+[Nuxt](https://nuxtjs.org/) is the framework that addresses this issue. It adds a layer on top of Vue to move some of the browser's work back to the server. Instead of sending down a bare HTML stub and waiting for client-side JavaScript to render everything, Nuxt pre-processes the page server-side to generate more fully-rendered HTML.
 
-Compared to server-side rendering, pre-rendering is cheaper, simpler, and requires less maintenance. Who wants to run an entire web server if they don't have to?
+## The problem with server-side rendering
+
+Most people run Nuxt from their web server. This is known as "server side rendering." When a user requests a page from the server, Nuxt pre-renders
+
+But if all you want is to populate a few HTML tags for social sharing and SEO, it's crazy to add Nuxt and a whole Node.js server to your server stack. One of the biggest strengths of SPAs is that they're static HTML, so they don't require an application server at all. Simple file hosts like Google Cloud Storage and Amazon S3 can host a standard SPA. If your app requires server-side rendering, you forfeit that advantage and have to bear the cost of maintaining a production Node.js server.
+
+Fortunately, there's an alternative to server side rendering: pre-rendering. Instead of waiting for a user request to render the page, Nuxt can simply render every page on your site in advance. This process generates static files, so you can still host your app anywhere you can host a standard SPA. Compared to server-side rendering, pre-rendering is cheaper, simpler, and requires less maintenance.
 
 ## Should you use pre-rendering?
 
@@ -386,6 +392,4 @@ It has the following features:
 | Adds a favicon                                                                    | Populates icons in browser tabs and shortcuts.                              |
 | Handles 404s                                                                      | Shows a graceful error page when the user navigates to a non-existent page. |
 
-I used the pre-vue template to rewrite the [Zestful demo site](https://zestfuldata.com/), which was previously an Angular SPA. Within days of converting it to a pre-rendered app, the site [climbed to the first page of Google results](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite).
-
-The [README](https://github.com/mtlynch/pre-vue) explains how to use pre-vue, but I'll publish a detailed blog post explaining the details if there's interest.
+I used the pre-vue template to rewrite the [Zestful demo site](https://zestfuldata.com/), which was previously an Angular SPA. The [README](https://github.com/mtlynch/pre-vue) explains how to use pre-vue, but I'll publish a detailed blog post explaining the details if there's interest.
