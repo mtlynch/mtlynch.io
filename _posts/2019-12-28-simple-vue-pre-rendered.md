@@ -133,7 +133,7 @@ The `package.json` file tells Node how to build this app:
 
 ```javascript
 {
-  "name": "hello-world-vue-static",
+  "name": "hello-world-vue-pre-rendered",
   "dependencies": {
     "nuxt": "latest"
   },
@@ -166,8 +166,8 @@ You can run this app [on Codesandbox](https://codesandbox.io/s/mystifying-suther
 Alternatively, you can run the app on your local machine with the following commands:
 
 ```bash
-git clone https://github.com/mtlynch/hello-world-vue-static.git
-cd hello-world-vue-static
+git clone https://github.com/mtlynch/hello-world-vue-pre-rendered.git
+cd hello-world-vue-pre-rendered
 git checkout step-1
 
 npm install
@@ -268,10 +268,10 @@ This page uses Vue hooks to display information about how the page was rendered.
 
 ## Testing the About page
 
-Here is a [live version](https://hello-world-vue-static.web.app) of the About page:
+Here is a [live version](https://hello-world-vue-pre-rendered.web.app) of the About page:
 
 <iframe
-  src="https://hello-world-vue-static.web.app/about"
+  src="https://hello-world-vue-pre-rendered.web.app/about"
   style="width:100%; height:230px; border:1px solid black; border-radius: 4px; overflow:hidden;"
   title="About this Build"
   sandbox="allow-scripts"
@@ -280,7 +280,7 @@ Here is a [live version](https://hello-world-vue-static.web.app) of the About pa
 Try starting from the homepage and clicking the "About" link:
 
 <iframe
-  src="https://hello-world-vue-static.web.app"
+  src="https://hello-world-vue-pre-rendered.web.app"
   style="width:100%; height:230px; border:1px solid black; border-radius: 4px; overflow:hidden;"
   title="About this Build"
   sandbox="allow-scripts"
@@ -337,8 +337,8 @@ The about page demonstrates a subtlety to pre-rendering. Only the _first_ page t
 To experiment with the About page, run the following commands
 
 ```bash
-git clone https://github.com/mtlynch/hello-world-vue-static.git
-cd hello-world-vue-static
+git clone https://github.com/mtlynch/hello-world-vue-pre-rendered.git
+cd hello-world-vue-pre-rendered
 
 npm install
 npm run dev
@@ -365,7 +365,7 @@ Because Nuxt pre-renders all of your pages, you don't need a Node server to host
 
 All code for this example is available on Github under the [MIT license](https://choosealicense.com/licenses/mit/):
 
-- [hello-world-vue-static](https://github.com/mtlynch/hello-world-vue-static)
+- [hello-world-vue-pre-rendered](https://github.com/mtlynch/hello-world-vue-pre-rendered)
 
 ## A more feature-rich example
 
