@@ -10,17 +10,15 @@ tags:
   - SPAs
 ---
 
-In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue with the power and control of server-side rendering.
+In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue without forfeiting critical features like social sharing or search engine optimization.
 
 This tutorial assumes no experience with Vue or Nuxt. I'll explain everything along the way.
 
 ## The problem with Vue
 
-Vue offers many advantages over . To understand why, you need to understand a bit about how single page apps (SPAs) work.
+Like Angular and React, Vue is a framework for building single-page apps (SPAs). While traditional websites force the browser to download a whole new page every time the user clicks a link within your site, SPAs keep everything on a single page. When the user navigates around your site, JavaScript simply draws a new page without pulling everything down from the server again. This cuts out slow network calls between the user's browser and your web server, resulting in a user experience that feels speedy and smooth.
 
-While traditional websites force the browser to download a whole new page every time the user clicks a link, SPAs keep everything on a single page. When the user navigates around the site, JavaScript simply draws a new page without pulling everything down from the server again.
-
-When the browser fetches an SPA from the server, it receives HTML that looks something like the following:
+The tradeoff for Vue's responsiveness is that you have less control over your pages' initial HTML. When the browser fetches an SPA from the server, it receives HTML that looks something like the following:
 
 ```html
 <html>
@@ -35,9 +33,9 @@ When the browser fetches an SPA from the server, it receives HTML that looks som
 </html>
 ```
 
-Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub. JavaScript is responsible for for figuring out the path and drawing the appropriate page after it executes in the user's browser.
+Because it's a _single page_ app, that HTML stub is the same for every page on your site. In other words, if the user visits `yoursite.com/about` or `yoursite.com/contact`, the server sends them the same HTML stub for both pages. JavaScript is responsible for for figuring out the path and drawing the appropriate page after it executes in the user's browser.
 
-Dynamic page rendering is a neat innovation that makes pages more responsive, but it creates problems in areas that expect the server to do the heavy lifting. Two common problems, in particular, are social sharing and search engine optimization.
+Dynamic page rendering is a neat innovation that makes site navigation faster, but it creates problems when you connect your site to social networks or search engines.
 
 ## SPA problem #1: Social sharing
 
@@ -45,23 +43,23 @@ When I share my blog posts on Twitter, they look like this:
 
 {% include image.html file="twitter-card.jpg" alt="Example of a rich Twitter card" max_width="590px" img_link="true" class="img-border" fig_caption="Using Open Graph tags so that Twitter generates rich cards for my posts." %}
 
-Twitter generates that card based on HTML tags in my page that follow the [Open Graph](https://ogp.me/) standard. For example, to specify the image, I add a tag that looks like this:
+Twitter generates that card based on HTML tags in my page that follow the [Open Graph](https://ogp.me/) standard. For example, to specify the image in the card, I add a tag that looks like this:
 
 ```html
 <meta property="og:image" content="https://mtlynch.io/post-42/cover.jpg" />
 ```
 
-This is a problem for SPAs, where all pages on a site share the same HTML skeleton. The dominant social networks like Twitter and Facebook require Open Graph tags to be present before any JavaScript executes. The result is that every page on your SPA shares an identical Twitter card or Facebook card.
+If your site is an SPA, then all of your pages share the same HTML skeleton and thus the same Open Graph tags. The dominant social networks like Twitter and Facebook require Open Graph tags to be present before any JavaScript executes. The result is that you can't create unique Twitter cards or Facebook cards for the different pages on your site.
 
 ## SPA problem #2: Search engine optimization (SEO)
 
-Unlike social networking sites, search engines _do_ render websites using JavaScript. The problem is that [it's impossible for them to do it perfectly](https://twitter.com/JohnMu/status/1018956456304037893). Many websites use JavaScript to continuously update a page's contents while you're viewing it. From Google's perspective, when is a page "done" rendering and ready for indexing?
+Unlike social networking sites, search engines _do_ render websites using JavaScript. The problem is that [it's impossible for them to do it perfectly](https://twitter.com/JohnMu/status/1018956456304037893).
 
-With a regular SPA, Google will try to index your page, but you have no guarantee that they'll index it correctly. With pre-rendering, you know that Google will index your page with the correct tags because they're present before JavaScript even runs.
+Many websites use JavaScript to continuously update a page's contents while the user views it. From Google's perspective, when is a page "done" rendering and ready for indexing? With a regular SPA, Google will try to index your page, but you have no guarantee that they'll index it correctly.
 
 ## Nuxt to the rescue
 
-On the modern web, social networks and SEO are fairly important, so it would be a huge bummer if using Vue meant that your app can't solve these problems.
+On the modern web, social networks and SEO are fairly important, so it would be a huge bummer if using Vue meant that your app couldn't fully integrate with those services.
 
 {% include image.html file="NuxtJS_Logo.png" alt="Nuxt.js logo" max_width="250px" link_url="https://nuxtjs.org/" %}
 
@@ -69,48 +67,45 @@ On the modern web, social networks and SEO are fairly important, so it would be 
 
 ## The problem with server-side rendering
 
-Most people run Nuxt from their web server. This is known as "server side rendering." When a user requests a page from the server, Nuxt pre-renders
+Most people run Nuxt from their web server. This is known as "server-side rendering." When a user requests a page from the server, Nuxt builds the page on the fly server-side before sending it to the user's browser.
 
-But if all you want is to populate a few HTML tags for social sharing and SEO, it's crazy to add Nuxt and a whole Node.js server to your server stack. One of the biggest strengths of SPAs is that they're static HTML, so they don't require an application server at all. Simple file hosts like Google Cloud Storage and Amazon S3 can host a standard SPA. If your app requires server-side rendering, you forfeit that advantage and have to bear the cost of maintaining a production Node.js server.
+This cuts down on your app's initial page load because your server is absorbing some of the browser's work. But if all you want is to populate a few HTML tags for social sharing and SEO, it's crazy to add Nuxt and a whole Node.js server to your tech stack.
 
-Fortunately, there's an alternative to server side rendering: pre-rendering. Instead of waiting for a user request to render the page, Nuxt can simply render every page on your site in advance. This process generates static files, so you can still host your app anywhere you can host a standard SPA. Compared to server-side rendering, pre-rendering is cheaper, simpler, and requires less maintenance.
+One of the biggest strengths of SPAs is that they're just static HTML, CSS, and JavaScript, so they don't require an application server at all. Simple file hosts like Google Cloud Storage and Amazon S3 can host a standard SPA. If you use server-side rendering, you have to graduate from static file hosting to an entire app server, which is more costly and complex.
+
+Fortunately, there's an alternative to server-side rendering: pre-rendering. Instead of rendering pages on-demand in response to HTTP requests, Nuxt can simply render every page on your site in advance. This process generates static files, so you can still host your app anywhere you can host a standard SPA.
 
 ## Should you use pre-rendering?
 
-Pre-rendering is not right for every situation. In some cases, it's better than a regular SPA, and in some cases it's better than server-side rendering. Below, I've included some advantages and disadvantages to help you decide when to employ pre-rendering.
+Pre-rendering is not right for every situation. You'll need to decide what your app needs and whether that requires pre-rendering or server-side rendering or if you can stick with plain Vue. Below, I've included some advantages and disadvantages to help you decide when to employ pre-rendering.
 
-### Advantages
+### Advantages of pre-rendering
 
-- Control over tags relevant to social sharing and SEO
-- Faster page loads
-  - Standard SPAs have to wait until the browser downloads all of its JavaScript before it starts rendering the page.
-  - With pre-rendering, users see your page before their browser executes any JavaScript.
+- Allows you to have unique social sharing cards for each page on your site
+- Improves page load time
+  - Standard SPAs have to wait until the browser downloads and executes JavaScript before it starts rendering the page. With pre-rendering, users see your page before their browser executes any JavaScript.
 
-### Disadvantages
+### Disadvantages of pre-rendering
 
-- More complexity than standard Vue
+- Increases complexity over standard Vue
   - While pre-rendering is less complex than running Nuxt on a Node server, it's more complicated than running a fully client-side Vue app.
   - With pre-rendering, you have to mentally track whether code will run server-side or client-side and what context will be available at the time the code executes.
-- No user-generated pages
+- Prevents user-generated pages
   - Pre-rendering requires you to know all of your page routes when you build your page. It explicitly [does not support dynamic routes](https://nuxtjs.org/guide/routing#dynamic-routes).
   - If your site features user-generated content and you want, for example, users to have their own URLs after joining (e.g., `yoursite.com/users/michael123`), you can't do that with pre-rendering.
   - You can work around this by pushing some of your route into URL queries (e.g., `yoursite.com/users?id=michael123`) then pulling down the dynamic data client-side, but you still can't generate distinct social sharing tags for those pages.
 
-## Pre-requisites
-
-- [Node.js](https://nodejs.org/en/download/)
-
-The only requirement for following this tutorial is that you have Node.js installed. I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
-
 ## A pre-rendered "Hello, world"
 
-To start out, I'll show you a basic, pre-rendered hello world app in just three files:
+To demonstrate pre-rendering, I'll show you a basic, pre-rendered "Hello, world!" app in just three files.
+
+The only pre-requisite is [Node.js](https://nodejs.org/en/download/). I used [Node v12.13.1](https://nodejs.org/dist/v12.13.1/), which is the latest stable release at the time of this writing.
 
 ### `pages/index.vue`
 
-The first file defines a page in the web app. The `pages/` folder has special meaning to Nuxt. It will pre-render a separate page for each `.vue` it finds in the `pages/` folder. `index.vue` indicates that this is a root page, so it's what the user sees if they don't specify any path.
+The first file defines a page in the web app. The `pages/` folder has special meaning to Nuxt. It will pre-render a separate page for each `.vue` file it finds in the `pages/` folder. The name `index.vue` indicates that this is a root page, so it's what the user sees if they don't specify any path.
 
-It's a simple hello world page that displays a welcome message and a button. The button updates its text every time you click on it.
+`index.vue` generates a simple "Hello, world!" page that displays a welcome message and a button. To showcase some of Vue's client-side functionality, the button updates its text every time the user clicks on it.
 
 ```html
 <template>
@@ -136,7 +131,7 @@ It's a simple hello world page that displays a welcome message and a button. The
 
 ### `package.json`
 
-The `package.json` file tells Node how to build this app:
+The `package.json` file tells Node.js how to build this app:
 
 ```javascript
 {
@@ -185,7 +180,7 @@ The app will run at [http://localhost:3600](http://localhost:3600).
 
 ### Pre-rendering your app
 
-When you run `npm run dev`, you're actually performing server-side rendering. Node runs a local development server and generates pages on-demand as you request them.
+When you run `npm run dev`, you're using server-side rendering. Node runs a local development server and generates pages on-demand as you request them.
 
 But I promised you _pre-rendered_ pages. With pre-rendered pages, you don't even need a web server, because it's a set of static files.
 
@@ -195,7 +190,7 @@ To pre-render your app, run the following command:
 npm run generate
 ```
 
-If you then check the `dist/` folder, you'll see that Nuxt has pre-rendered your page:
+If you check the `dist/` folder, you'll see that Nuxt has pre-rendered your page:
 
 ```bash
 $ find ./dist/ -type f
@@ -209,13 +204,14 @@ $ find ./dist/ -type f
 ./dist/_nuxt/LICENSES
 ```
 
-You can view these through a simple HTTP server, like Python's SimpleHTTPServer:
+You can view these through a simple HTTP server, like Python2's SimpleHTTPServer:
 
 ```bash
+cd dist
 python -m SimpleHTTPServer 8123
 ```
 
-This allows you to view your pre-rendered app at [http://localhost:8123](http://localhost:8123). Later, I'll show you how to [publish this app](#publishing-your-app) to a static file hosting service.
+Python will then spawn a web server that allows you to view your pre-rendered app at [http://localhost:8123](http://localhost:8123). Later, I'll show you how to [publish this app](#publishing-your-app) to a static file hosting service.
 
 ## Adding an About page
 
@@ -309,9 +305,9 @@ asyncData() {
 },
 ```
 
-When Nuxt pre-renders the site, the server executes the `asyncData` method. In the server environment, `process.client` is null, so it sets `buildTime` to the current time.
+When Nuxt pre-renders the site, the server executes the `asyncData` method. In the server environment, `process.client` is null, so it sets `buildTime` to the current time and uses that variable when it pre-renders the page's HTML.
 
-When you navigate to the About page from a different page on the site, the browser executes the `asyncData` method on page load. `process.client` is now non-null because the code is running client-side, so the method never defines `buildTime`. Vue then renders the page components for when `buildTime` is undefined:
+When you navigate to the `/about` path from a different page on the site, the browser executes the `asyncData` method on page load. `process.client` is now non-null because the code is running client-side, so the method never defines `buildTime` and Vue renders the page template for when `buildTime` is undefined:
 
 ```html
 <p v-if="buildTime">
@@ -328,7 +324,7 @@ When you navigate to the About page from a different page on the site, the brows
 
 ## Pre-rendering is only for the first page
 
-The about page demonstrates a subtlety to pre-rendering. Only the _first_ page the user visits is pre-rendered. After that, Vue behaves like a normal SPA and redraws the page any time the user navigates within the site.
+The About page demonstrates one of the subtleties of pre-rendering: Nuxt only pre-renders the _first_ page the user visits. After that, Vue behaves like a normal SPA and redraws the page client-side any time the user navigates within the site. This is a good thing, as it means that your app retains Vue's instant page-to-page navigation without sacrificing compatibility with services that require server-side rendering.
 
 ## Running the About page locally
 
@@ -342,17 +338,19 @@ npm install
 npm run dev
 ```
 
-You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about) the two times will roughly match one another. That's because when you run `npm run dev`, Nuxt uses server-side rendering to create the page just in time.
+You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about), the build time and the load time will roughly match one another. That's because when you run `npm run dev`, Nuxt uses server-side rendering to create the page just in time.
 
 {% assign fig_caption = "`npm run dev` renders pages as the user requests them, so build times and load times match." | markdownify | remove: "<p>" | remove: "</p>" %}
 
-{% include image.html file="about-ssr.jpg" alt="Screenshot of About page rendered with server side rendering" max_width="650px" img_link="true" class="img-border" fig_caption=fig_caption %}
+{% include image.html file="about-ssr.jpg" alt="Screenshot of About page rendered with server-side rendering" max_width="650px" img_link="true" class="img-border" fig_caption=fig_caption %}
 
-Unlike pre-rendering, which generates the page once and keeps serving that same page, with server-side rendering, Nuxt generates a fresh version of the page each time the user lands on the page.
+Unlike pre-rendering, which generates the page once and keeps serving that same page, server-side rendering generates a fresh version of the page each time the user visits.
 
 ## Publishing your app
 
-Because Nuxt pre-renders all of your pages, you don't need a Node server to host your app. All you need is a hosting service that supports static file hosting. Below are instructions for doing this with a few popular providers:
+With pre-rendering, you don't need a Node.js server to host your app. All you need is a hosting service that supports static file hosting.
+
+Below are instructions for publishing static files with a few popular providers:
 
 - [Google Firebase](https://firebase.google.com/docs/hosting/quickstart) (I use this)
 - [Netlify](https://www.netlify.com/blog/2016/10/27/a-step-by-step-guide-deploying-a-static-site-or-single-page-app/)
