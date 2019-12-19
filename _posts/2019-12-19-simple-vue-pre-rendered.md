@@ -53,9 +53,9 @@ If your site is an SPA, then all of your pages share the same HTML skeleton and 
 
 ## SPA problem #2: Search engine optimization (SEO)
 
-Unlike social networking sites, search engines _do_ render websites using JavaScript. The problem is that [they can't do it perfectly](https://twitter.com/JohnMu/status/1018956456304037893).
+Unlike social networking sites, search engines _do_ render websites using JavaScript. The problem is that [it's impossible for them to do it perfectly](https://twitter.com/JohnMu/status/1018956456304037893).
 
-Many websites use JavaScript to continuously update a page's contents while the user views it. From Google's perspective, when is a page "done" rendering and ready for indexing? With a regular SPA, Google tries to index your page, but you have no guarantee that they'll index it correctly.
+Many websites use JavaScript to continuously update a page's contents while the user views it. From Google's perspective, when is a page "done" rendering and ready for indexing? With a regular SPA, Google will try to index your page, but you have no guarantee that they'll index it correctly.
 
 ## Nuxt to the rescue
 
@@ -69,7 +69,7 @@ On the modern web, social networks and SEO are fairly important, so it would be 
 
 Most people run Nuxt from their web server. This is known as "server-side rendering." When a user requests a page from the server, Nuxt builds the page on the fly server-side before sending it to the user's browser.
 
-Server-side rendering cuts down on your app's initial page load because your server is absorbing some of the browser's work. But if all you want is to populate a few HTML tags for social sharing and SEO, it's crazy to add Nuxt and a whole Node.js server to your tech stack.
+This cuts down on your app's initial page load because your server is absorbing some of the browser's work. But if all you want is to populate a few HTML tags for social sharing and SEO, it's crazy to add Nuxt and a whole Node.js server to your tech stack.
 
 One of the biggest strengths of SPAs is that they're just static HTML, CSS, and JavaScript, so they don't require an application server at all. Simple file hosts like Google Cloud Storage and Amazon S3 can host a standard SPA. If you use server-side rendering, you have to graduate from static file hosting to an entire app server, which is more costly and complex.
 
@@ -89,7 +89,7 @@ Pre-rendering is not right for every situation. You'll need to decide what your 
 
 - Increases complexity over standard Vue
   - While pre-rendering is less complex than running Nuxt on a Node server, it's more complicated than running a fully client-side Vue app.
-  - With pre-rendering, you have to mentally track whether code runs server-side or client-side and what context is available at the time the code executes.
+  - With pre-rendering, you have to mentally track whether code will run server-side or client-side and what context will be available at the time the code executes.
 - Prevents user-generated pages
   - Pre-rendering requires you to know all of your page routes when you build your page. It explicitly [does not support dynamic routes](https://nuxtjs.org/guide/routing#dynamic-routes).
   - If your site features user-generated content and you want, for example, users to have their own URLs after joining (e.g., `yoursite.com/users/michael123`), you can't do that with pre-rendering.
@@ -103,7 +103,7 @@ The only pre-requisite is [Node.js](https://nodejs.org/en/download/). I used [No
 
 ### `pages/index.vue`
 
-The first file defines a page in the web app. The `pages/` folder has special meaning to Nuxt. It pre-renders separate pages for each `.vue` file it finds in the `pages/` folder. The name `index.vue` indicates that this is a root page, so it's what the user sees if they don't specify any path.
+The first file defines a page in the web app. The `pages/` folder has special meaning to Nuxt. It will pre-render a separate page for each `.vue` file it finds in the `pages/` folder. The name `index.vue` indicates that this is a root page, so it's what the user sees if they don't specify any path.
 
 `index.vue` generates a simple "Hello, world!" page that displays a welcome message and a button. To showcase some of Vue's client-side functionality, the button updates its text every time the user clicks on it.
 
@@ -286,7 +286,7 @@ The About page demonstrates how Nuxt and Vue work together to create a pre-rende
 
 If you start on the [`/about` page](https://hello-world-vue-pre-rendered.web.app/about), you should see the version on the left. If you start on the [root page](https://hello-world-vue-pre-rendered.web.app), then click the "about page" link, you should see the version on the right.
 
-Why do you see two different versions of the page? The answer is in the [`asyncData` hook](https://nuxtjs.org/api/). This function executes at two points:
+Why are you seeing two different versions of the page? The answer is in the [`asyncData` hook](https://nuxtjs.org/api/). This function executes at two points:
 
 1. (server-side) When Nuxt pre-renders the page
 1. (client-side) When the browser navigates to this page from elsewhere on the site
@@ -338,7 +338,7 @@ npm install
 npm run dev
 ```
 
-You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about), the build time and the load time roughly match one another. That's because when you run `npm run dev`, Nuxt uses server-side rendering to create the page just in time.
+You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about), the build time and the load time will roughly match one another. That's because when you run `npm run dev`, Nuxt uses server-side rendering to create the page just in time.
 
 {% assign fig_caption = "`npm run dev` renders pages as the user requests them, so build times and load times match." | markdownify | remove: "<p>" | remove: "</p>" %}
 
