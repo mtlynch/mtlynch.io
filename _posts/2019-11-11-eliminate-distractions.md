@@ -14,6 +14,9 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21506107
   reddit: https://redd.it/dva6b3
 ---
+If you're here after clicking the link for ["A Simple Pre-Rendered Web App Using Vue + Nuxt"](/simple-vue-pre-rendered/) in my email newsletter, I accidentally included the wrong link. Sorry about that! Click the link above to read the newest article.
+{: .notice--success}
+
 You open Gmail to write a note to your friend. Before you begin, you notice that you've received six new messages. It pains you to leave emails unopened, so you read them immediately. Two hours later, you realize that you never wrote that note to your friend.
 
 This happened to me constantly, and it wasn't just Gmail. I'd look at my phone to check the time and find myself mindlessly checking 10 notifications. I'd open Facebook to look up someone's birthday and fall into a zombie state scrolling through my News Feed.
