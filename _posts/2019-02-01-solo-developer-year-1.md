@@ -27,7 +27,7 @@ On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software enginee
 
 ## How I made and spent money
 
-{% assign fig_caption = 'Profit and loss chart via [Bench](http://refer.bench.co/pPrqq).' | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign fig_caption = 'Profit and loss chart via [Bench](https://bench.co/).' | markdownify | remove: "<p>" | remove: "</p>" %}
 
 {% include image.html file="bench-2018.jpg" alt="Profit and loss for 2018" max_width="793px" class="img-border" img_link="true" fig_caption=fig_caption %}
 
@@ -152,7 +152,7 @@ I developed it on and off at the beginning of the year but put it in maintenance
 
 | Expense | Purpose | Amount | Note |
 |------------|-----------|-----------|-------|
-| [Bench](http://refer.bench.co/pPrqq) | Bookkeeping | -$1,610 | Pricey, but it's one of the few services I've used that just solves a problem so thoroughly that I only have to think about it for a few hours per year. |
+| [Bench](https://bench.co/) | Bookkeeping | -$1,610 | Pricey, but it's one of the few services I've used that just solves a problem so thoroughly that I only have to think about it for a few hours per year. |
 | [Travis CI](https://travis-ci.com) | Continuous integration | -$1,419 | I wish this were cheaper, but I absolutely need continuous integration. I've heard that [CircleCI](https://circleci.com/) is now the better offering and costs less, so I'll likely switch when my subscription expires. |
 | [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 | Another one I wish was cheaper, but I love testing, so I'm willing to pay for anything that improves my tests. |
 | [GitHub Pro](https://github.com/) | Source code storage | -$91 | I bought this just for the private repositories, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I'll stop paying this in 2019. |
