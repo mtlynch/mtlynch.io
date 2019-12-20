@@ -73,11 +73,11 @@ Server-side rendering cuts down on your app's initial page load because your ser
 
 One of the biggest strengths of SPAs is that they're just static HTML, CSS, and JavaScript, so they don't require an application server at all. Simple file hosts like Google Cloud Storage and Amazon S3 can host a standard SPA. If you use server-side rendering, you have to graduate from static file hosting to an entire app server, which is more costly and complex.
 
-Fortunately, there's an alternative to server-side rendering: pre-rendering. Instead of rendering pages on-demand in response to HTTP requests, Nuxt can simply render every page on your site in advance. This process generates static files, so you can still host your app anywhere you can host a standard SPA.
+Fortunately, there's an alternative to server-side rendering: pre-rendering. Instead of rendering pages on-demand in response to HTTP requests, Nuxt simply renders every page on your site in advance. This process generates static files, so you can still host your app anywhere you can host a standard SPA.
 
 ## Should you use pre-rendering?
 
-Pre-rendering is not right for every situation. You'll need to decide what your app needs and whether that requires pre-rendering or server-side rendering or if you can stick with plain Vue. Below, I've included some advantages and disadvantages to help you decide when to employ pre-rendering.
+Pre-rendering is not right for every situation. You'll need to decide what your app needs and whether that requires pre-rendering or server-side rendering or if you should stick with plain Vue. Below, I've included a few advantages and disadvantages to help you decide when to employ pre-rendering.
 
 ### Advantages of pre-rendering
 
@@ -365,7 +365,7 @@ All code for this example is available on Github under the [MIT license](https:/
 
 ## A more feature-rich example
 
-If you're building a real-world app with Vue and Nuxt, you'll want a lot more functionality than just two pre-rendered pages. I created a template project, [pre-vue](https://github.com/mtlynch/pre-vue), that includes all the boilerplate you need for SEO and social sharing:
+If you're building a real-world app with Vue and Nuxt, you'll want more functionality than just two pre-rendered pages. I created a template project, [pre-vue](https://github.com/mtlynch/pre-vue), that includes all the boilerplate you need for SEO and social sharing:
 
 - [https://github.com/mtlynch/pre-vue](https://github.com/mtlynch/pre-vue) (source code)
 - [https://pre-vue.web.app/](https://pre-vue.web.app/) (live demo)
