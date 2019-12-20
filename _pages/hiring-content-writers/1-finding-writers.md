@@ -97,6 +97,14 @@ A few times throughout my project, I checked [/r/HireaWriter](https://www.reddit
 
 None of the writers seemed promising enough to merit an interview. The posts seemed geared toward cheap spam blog owners who are looking to pay bottom-of-the-barrel rates for barely-intelligible content.
 
+## Further sources
+
+After I wrote this guide, [The Write Life](https://thewritelife.com) published an excellent rundown of techniques for finding talented freelance writers:
+
+* ["Need to Hire a Writer? 45 Places to Find High-Quality, Reliable Freelance Writers,"](https://thewritelife.com/hire-a-writer/)
+
+I especially recommend their section on writing communities, as several people have recommended these groups to me as a source of high-quality candidates.
+
 ## Next step: the job description
 
 Once you've found writing candidates, it's time to write a job description that tells applicants what you expect.
