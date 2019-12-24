@@ -432,11 +432,10 @@ If it fails after you've lowered the intensity, try the following:
   {% include image.html file="cmd.png" alt="Run cmd" max_width="399px" %}
 {:start="3"}
 1. In the Command Prompt, type the following:
-
-    ```
+```
 cd C:\marlin
 marlin.bat
-    ```
+```
 
 This won't fix the issue, but the window will stay open so that you can see the error message Marlin is producing before it crashes.
 
