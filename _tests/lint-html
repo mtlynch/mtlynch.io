@@ -30,6 +30,6 @@ bundle exec htmlproofer ./_site \
   --url-swap "https\://mtlynch.io/:/" \
   `# Ignore the following URLs because they get 403 errors from CI` \
   `# intermittently.` \
-  --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/,/jeffgeerling.com/" \
+  --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/" \
   "$htmlproofer_args_extra"
 
