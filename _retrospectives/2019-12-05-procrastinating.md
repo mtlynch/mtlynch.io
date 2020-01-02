@@ -44,8 +44,8 @@ Given that my only real goal for the month was to interview customers, three is 
 ### [Is It Keto](https://isitketo.org)
 
 <figure class="half">
-  {% include image.html file="revenue-graph.jpg" alt="Before and after screenshots of removing price" max_width="600px" img_link="true" class="img-border" %}
-  {% include image.html file="view-graph.jpg" alt="Before and after screenshots of removing price" max_width="600px" img_link="true" class="img-border" %}
+  {% include image.html file="revenue-graph.jpg" alt="Is It Keto revenue graph" max_width="600px" img_link="true" class="img-border" %}
+  {% include image.html file="view-graph.jpg" alt="Is It Keto traffic graph" max_width="600px" img_link="true" class="img-border" %}
 </figure>
 
 | Metric                    | October 2019 | November 2019 | Change                                       |
