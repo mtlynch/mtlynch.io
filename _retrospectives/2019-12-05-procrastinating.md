@@ -218,7 +218,7 @@ Web developer [Bruno Simon](https://bruno-simon.com/) made his portfolio page in
 ### Goals for next month
 
 * Conduct five customer interviews.
-* Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-static).
+* Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-pre-rendered).
 * Publish two new Is It Keto articles.
 
 ---
