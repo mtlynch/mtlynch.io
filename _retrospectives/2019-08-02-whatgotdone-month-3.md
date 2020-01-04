@@ -44,7 +44,7 @@ As with Zestful, I was short on time and couldn't implement the other feature I 
 
 ## Inactive projects
 
-### Is It Keto
+### [Is It Keto](https://isitketo.org)
 
 Now that Is It Keto is on the back burner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
