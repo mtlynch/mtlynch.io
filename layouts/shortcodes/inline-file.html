@@ -1,0 +1,11 @@
+{{ $language := .Get "language" }}
+
+{{ with $.Page.Resources.GetMatch (.Get "filename") }}
+  <div class="inline-file">
+    {{ print "```" $language "\n" .Content "```" | markdownify }}
+    <a href="{{ .RelPermalink }}" download class="download-raw-button">download raw</a>
+  </div>
+{{ else }}
+  {{ errorf "failed to find file to inline %s: %s" (.Get "filename") .Position }}
+  could not find file
+{{ end }}

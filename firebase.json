@@ -1,8 +1,15 @@
 {
   "hosting": {
-    "public": "_site",
+    "public": "public",
     "ignore": [
       "firebase.json"
+    ],
+    "redirects": [
+      {
+        "source": "/feed.xml",
+        "destination": "/posts/index.xml",
+        "type": 301
+      }
     ],
     "headers": [ {
       "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",

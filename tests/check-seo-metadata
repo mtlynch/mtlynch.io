@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Verifies that site is generating Twitter metadata properly.
+
+# Echo commands to console.
+set -x
+# Exit on first failing command.
+set -e
+# Exit on unset variable.
+set -u
+
+BUILD_DIR=public
+
+# Make sure large twitter cards appear in the site HTML.
+if ! egrep "\"twitter:card.*summary_large_image\"" "$BUILD_DIR" -R; then
+  echo "ERROR: Large Twitter cards didn't appear in site build!";
+  exit 1;
+fi
+
+if ! egrep '"og:title".*="October 2019 Retrospective: Is It Keto - Month 10"' "${BUILD_DIR}/retrospectives/2019/11/index.html"; then
+  echo "ERROR: Monthly retrospective does not have expected opengraph title";
+  exit 1;
+fi
+
+if ! egrep '"og:title".*="Notes from PyGotham 2019"' "${BUILD_DIR}/retrospectives/pygotham-2019-notes/index.html"; then
+  echo "ERROR: Non-monthly retrospective has incorrect title";
+  exit 1;
+fi
+
+if ! egrep '"og:title".*="Book Report: Happy City by Charles Montgomery"' "${BUILD_DIR}/book-reports/happy-city/index.html"; then
+  echo "ERROR: Book report does not have expected opengraph title";
+  exit 1;
+fi

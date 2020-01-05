@@ -1,0 +1,8 @@
+{{ $caption := .Get "caption" }}
+
+<figure class="gallery">
+  <div class="img-container">
+    {{.Inner}}
+  </div>
+  {{ if $caption }}<figcaption><p>{{ $caption | markdownify }}</p></figcaption>{{ end }}
+</figure>

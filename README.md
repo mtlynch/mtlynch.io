@@ -13,98 +13,6 @@ New code should adhere to the appropriate Google Style guide for the given langu
 * [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
 * [JavaScript](https://google.github.io/styleguide/jsguide.html)
 
-### Liquid
-
-#### Line length
-
-* Limit lines to a maximum of 80 columns in length.
-  * It is acceptable to exceed 80 columns if there is no way to break up the line, but developers should observe the 80 column limit where possible.
-
-#### Whitespace
-
-##### Tags
-
-Tags should contain a single space after the opening `{%` and before the closing `%}`:
-
-```liquid
-{% assign my_variable = "tomato" %}
-```
-
-###### Inline vs. block
-
-For tags that have a start and end, write them on a single line if the start tag, end tag, and body all fit within the line limit:
-
-```liquid
-{% comment %} Store all files that match the pattern. {% endcomment %}
-```
-
-```liquid
-{% if page.title == 'Bio' %} Here's my bio! {% endif %}
-```
-
-When using inline syntax, there must be a single space after the opening tag and a single space preceding the closing tag.
-
-When the tags and body do not fit on a single line, use block syntax:
-
-```liquid
-{% comment %}
-  Store all files whose parent no longer exists. This can be due to a variety of
-  circumstances, such as purging or filesystem errors.
-{% endcomment %}
-{% assign orphaned_files = ... %}
-```
-
-Indent the body of a block by two spaces from its opening and closing tags.
-
-##### Variables
-
-* Variables should have a single space before the opening `{{` and closing `}}`:
-
-```liquid
-{% assign filename = "links.csv" %}
-{{ filename }}
-```
-
-##### Filters
-
-* Filters should have a single space on either side of the pipe character.
-* For filters that take arguments, the filter name should be immediately followed by a colon and a single space.
-* For filters with multiple arguments, each argument should be preceded by a single space.
-
-```liquid
-{{ "Have you read 'James & the Giant Peach'?" | escape }}
-```
-
-```liquid
-{{ 4 | plus: 2 }}
-```
-
-```liquid
-{{ "Take my protein pills and put my helmet on" | replace: "my", "your" }}
-```
-
-#### Naming
-
-* Variable names should use snake case (`image_size`, `background_color`).
-
-#### Comments
-
-* Write comments in full sentences using standard English capitalization and punctuation.
-
-## Dev / prod consistency
-
-`script/_serve_dev.sh` builds the site in dev mode and starts a web server on http://localhost:4000.
-
-`.travis.yml` builds the site in production mode and pushes the static files to Firebase.
-
-Dev and prod configurations should be as similar as possible. Any change in dev should also be made to prod and vice versa, except for features we deliberately make different for dev and prod (e.g., removing GA tag from dev).
-
-## Theme
-
-This blog uses the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme.
-
-Where possible, avoid duplicating code from the theme. Sometimes this will be unavoidable. The blog currently duplicates theme code in several places, but we seek to minimize this duplication.
-
 ## Pull requests
 
 ### Merge conflicts
@@ -151,7 +59,7 @@ Developers need not verify every change on every possible OS/browser combination
 
 ### Headings
 
-* Headings start with `<h1>` (single hash in Markdown).
+* Content headings start at `##` (`<h2>` in HTML).
 * Headings use sentence-style capitalization (only first word is capitalized).
 * Headings do not have trailing punctuation.
 
@@ -196,38 +104,6 @@ Developers need not verify every change on every possible OS/browser combination
 ### Spelling conventions
 
 * ebook (not e-book)
-
-## Including downloadable file content in posts
-
-### For non-yml files
-
-1. Place the file into the `_files` directory.
-1. Add yaml frontmatter to the file with a title key, for example:
-   ```yaml
-   ---
-   title: "filename.extension"
-   ---
-   ```
-1. In the post, use the below syntax to include the code sample.
-    ```
-   {% include files.html title="filename.extension" language="bash" %}
-    ```
-   The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is *optional* and indicates the syntax highlighting language to use for the file.
-
-### For yml files
-
-1. Place the yml file into the `_ymls` directory with no file extension.
-1. Add yaml frontmatter to the file with a title key, for example:
-    ```yaml
-    ---
-    title: "filename.yml"
-    ---
-   ```
-1. In the post, use the below syntax to include the yml file.
-    ```
-    {% include files.html title="filename.yml" language="yml" %}
-    ```
-    The `title` param is *required* and needs to match the title key that was inserted in step 2. The `language` param is also *required* and must be set to "yml".
 
 ## Encoding video for posts
 

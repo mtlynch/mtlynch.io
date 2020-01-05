@@ -1,6 +1,0 @@
----
-title: Dockerfile.nextcloud
----
-FROM nextcloud:12.0.0-apache
-
-EXPOSE 80

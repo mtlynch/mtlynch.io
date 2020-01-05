@@ -1,0 +1,23 @@
+<section class="container page book-report">
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <a href="{{ .Params.purchase_url }}">
+      <img src="cover.jpg" class="align-left book-cover" />
+    </a>
+
+    <ul class="book-summary">
+      <li>My rating: <strong>{{ .Params.rating }}</strong> / 10</li>
+      <li>
+        <a href="{{ .Params.purchase_url }}">
+          Amazon Link
+        </a></li>
+    </ul>
+
+    {{ .Content }}
+
+    {{ partial "mailing-list-signup.html" . }}
+  </article>
+</section>

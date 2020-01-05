@@ -1,0 +1,25 @@
+version: '3'
+volumes:
+  nextcloud-data:
+services:
+  sia:
+    build:
+      context: .
+      dockerfile: Dockerfile.sia
+    restart: on-failure
+    ports:
+      - "9980:9980"
+    volumes:
+      - ./sia-data:/mnt/sia-data
+      - ./sia-uploads:/mnt/sia-uploads
+  nextcloud:
+    build:
+      context: .
+      dockerfile: Dockerfile.nextcloud
+    ports:
+      - "8080:80"
+    links:
+      - sia:siad_container
+    volumes:
+      - ./sia-uploads:/mnt/sia-uploads
+      - nextcloud-data:/var/www/html
