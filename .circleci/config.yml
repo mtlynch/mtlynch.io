@@ -53,16 +53,6 @@ jobs:
       - run:
           name: Check HTML and external links
           command: tests/lint-html
-  check-seo-metadata:
-    <<: *defaults
-    docker:
-      - image: circleci/golang:1.13
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Check that SEO meta tags rendered properly
-          command: tests/check-seo-metadata
   check-google-analytics-token:
     <<: *defaults
     docker:
@@ -73,6 +63,16 @@ jobs:
       - run:
           name: Check presence of Google Analytics token
           command: tests/check-google-analytics-token
+  check-seo-metadata:
+    <<: *defaults
+    docker:
+      - image: circleci/golang:1.13
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check that SEO meta tags rendered properly
+          command: tests/check-seo-metadata
   check-amazon-links:
     <<: *defaults
     docker:
@@ -83,6 +83,20 @@ jobs:
       - run:
           name: Check Amazon links
           command: tests/check-amazon-links
+  deploy:
+    <<: *defaults
+    docker:
+      - image: circleci/node:13.1.0-stretch
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install firebase-tools
+          command: npm install firebase-tools
+      - run:
+          name: Deploy to firebase
+          command: |
+            ./node_modules/.bin/firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
 workflows:
   version: 2
   test-deploy:
@@ -102,3 +116,13 @@ workflows:
       - check-amazon-links:
           requires:
             - build
+      - deploy:
+        requires:
+          - build
+          - lint-htmlproofer
+          - check-google-analytics-token
+          - check-seo-metadata
+          - check-amazon-links
+        filters:
+          branches:
+            only: master
