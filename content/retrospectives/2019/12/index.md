@@ -63,7 +63,7 @@ Amazon Affiliate Earnings have dropped to their lowest levels since May, when tr
 ### [Zestful](https://zestfuldata.com)
 
 | Metric         | October 2019 | November 2019 | Change                                       |
-|-------------------------------|---------------|----------------------------------------------|
+|----------------|--------------|---------------|----------------------------------------------|
 | Total Earnings | $3.89        | $65.33        | <font color="green">+$61.44 (+1,580%)</font> |
 
 Zestful has been picking up slowly over the last few months. I've had a few big months in the past, but it was usually from people using it for large, one-off tasks. Over the past few months, I've seen consistent, growing usage from several different users.
