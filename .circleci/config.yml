@@ -119,7 +119,7 @@ workflows:
       - deploy:
         requires:
           - build
-          - lint-htmlproofer
+          - lint-html
           - check-google-analytics-token
           - check-seo-metadata
           - check-amazon-links
