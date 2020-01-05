@@ -1,0 +1,7 @@
+{{- with $.Params.images -}}
+<meta name="twitter:card" content="summary_large_image"/>
+{{ end }}
+{{ with .Site.Social.twitter }}
+    <meta name="twitter:site" content="@{{ . }}"/>
+    <meta name="twitter:creator" content="@{{ . }}"/>
+{{ end }}

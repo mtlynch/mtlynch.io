@@ -1,113 +1,80 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2.1
 jobs:
   check-whitespace:
-    <<: *defaults
     docker:
       - image: debian:jessie-20190228-slim
     steps:
       - checkout
       - run:
           name: Check for trailing whitespace
-          command: _tests/check-trailing-whitespace
-  minify-js:
-    <<: *defaults
+          command: tests/check-trailing-whitespace
+  lint-markdown:
     docker:
-      - image: circleci/node:13.1.0-stretch
+      - image: mtlynch/markdownlint:0.8.0
     steps:
       - checkout
-      - run:
-          name: Install npm packages
-          command: npm install
-      - run:
-          name: Minify JavaScript
-          command: npm run build:js
-      - persist_to_workspace:
-          root: ./
-          paths:
-            -  assets/js/main.min.js
-  build:
-    <<: *defaults
-    docker:
-      - image: circleci/ruby:2.6.5
-    environment:
-      # Keep in sync with save_cache path.
-      BUNDLE_PATH: ~/repo/_vendor/bundle
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ./
-      - restore_cache:
-          keys:
-            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
-            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}
-      - run:
-          name: Configure Bundler
-          command: |
-            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-            source $BASH_ENV
-            echo "BUNDLER_VERSION=${BUNDLER_VERSION}"
-            gem install bundler --version "$BUNDLER_VERSION"
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-      - run:
-          name: Lint frontmatter
-          command: _tests/lint-frontmatter
       - run:
           name: Lint Markdown
-          command: _tests/lint-markdown
-      - save_cache:
-          key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
-          paths:
-            # Keep in sync with BUNDLE_PATH.
-            - ~/repo/_vendor/bundle
+          command: tests/lint-markdown
+  build:
+    docker:
+      - image: peaceiris/hugo:v0.62.1
+    steps:
+      - checkout
+      - run:
+          name: Get submodules
+          command: |
+            git submodule init
+            git submodule update --remote
+      - attach_workspace:
+          at: ./
       - run:
           name: Build prod site
-          command: ./_build_prod_site
-      - run:
-          name: Lint HTML
-          command: _tests/lint-html
+          command: hugo version && hugo
       - persist_to_workspace:
           root: ./
           paths:
-            - _tests
-            - _site
+            - public
+            - tests
             - firebase.json
             - .firebaserc
-  check-google-analytics-token:
-    <<: *defaults
+  lint-html:
     docker:
-      - image: circleci/ruby:2.6.5
+      - image: mtlynch/htmlproofer:3.15.0
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check HTML and external links
+          command: tests/lint-html
+  check-google-analytics-token:
+    docker:
+      - image: circleci/golang:1.13
     steps:
       - attach_workspace:
           at: ./
       - run:
           name: Check presence of Google Analytics token
-          command: _tests/check-google-analytics-token
+          command: tests/check-google-analytics-token
   check-seo-metadata:
-    <<: *defaults
     docker:
-      - image: circleci/ruby:2.6.5
+      - image: circleci/golang:1.13
     steps:
       - attach_workspace:
           at: ./
       - run:
           name: Check that SEO meta tags rendered properly
-          command: _tests/check-seo-metadata
+          command: tests/check-seo-metadata
   check-amazon-links:
-    <<: *defaults
     docker:
-      - image: circleci/ruby:2.6.5
+      - image: circleci/golang:1.13
     steps:
       - attach_workspace:
           at: ./
       - run:
           name: Check Amazon links
-          command: _tests/check-amazon-links
+          command: tests/check-amazon-links
   deploy:
-    <<: *defaults
     docker:
       - image: circleci/node:13.1.0-stretch
     steps:
@@ -125,10 +92,11 @@ workflows:
   test-deploy:
     jobs:
       - check-whitespace
-      - minify-js
-      - build:
+      - lint-markdown
+      - build
+      - lint-html:
           requires:
-            - minify-js
+            - build
       - check-google-analytics-token:
           requires:
             - build
@@ -140,7 +108,10 @@ workflows:
             - build
       - deploy:
           requires:
+            - check-whitespace
+            - lint-markdown
             - build
+            - lint-html
             - check-google-analytics-token
             - check-seo-metadata
             - check-amazon-links

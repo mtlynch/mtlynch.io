@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Exit on first failing command.
+set -e
+# Echo commands to console.
+set -x
+# Exit on unset variable.
+set -u
+
+tests/check-trailing-whitespace
+#tests/lint-frontmatter
+tests/lint-markdown
+
+hugo
+
+tests/lint-html "$@"
+tests/check-google-analytics-token
+tests/check-twitter-cards
+tests/check-amazon-links "$@"
