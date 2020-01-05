@@ -17,7 +17,7 @@ disqusShortname = "silly-bits"
 
 [markup]
   [markup.highlight]
-    style = "rrt"
+    style = "native"
   [markup.goldmark.renderer]
     # Allow Markdown to include embedded HTML.
     unsafe= true
