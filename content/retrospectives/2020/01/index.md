@@ -1,0 +1,183 @@
+---
+title: Pursuing a Business I'll Love
+description: I'm finally building the app I've always wanted.
+date: '2020-01-03'
+---
+
+## Highlights
+
+* Zestful had its biggest month ever, with $3,936 in revenue.
+* Is It Keto also had its best month ever, at $393 in revenue.
+* After lots of research and customer interviews, I gave up on my idea for sheet metal software.
+* I published a first version of an app for finding live comedy.
+
+## Goal Grades
+
+At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/12/#goals-for-next-month). Here's how I did against those goals:
+
+### Conduct five customer interviews
+
+* **Result**: Conducted four customer interviews.
+* **Grade**: B+
+
+I researched and visited sheet metal shops in my area. I visited seven shops, and four agreed to speak with me.
+
+### Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-pre-rendered)
+
+* **Result**: I published "[A Simple Pre-Rendered Web App Using Vue + Nuxt](/simple-vue-pre-rendered/)."
+* **Grade**: A
+
+I was pleased with this blog post in that I feel like I did a good job of explaining the problem and solution clearly, but it didn't gain much of an audience. I'm holding out hope that this is a "slow-burn" kind of post, where it's not the kind of article you'd read because it pops up on Hacker News or Reddit, but it's what you'd hope to find if you Google "vue pre-rendering."
+
+### Publish two new Is It Keto articles
+
+* **Result**: Published eight new Is It Keto articles.
+* **Grade**: A+
+
+In anticipation of a surge in traffic in January, I offered my writer additional December hours, so we ended up producing many more articles than usual.
+
+## Stats
+
+### [Is It Keto](https://isitketo.org)
+
+<figure class="half">
+  {{< img src="revenue-graph.jpg" alt="Is It Keto revenue graph" maxWidth="600px" hasBorder="True" >}}
+  {{< img src="view-graph.jpg" alt="Is It Keto traffic graph" maxWidth="600px" hasBorder="True" >}}
+</figure>
+
+| Metric                    | November 2019 | December 2019 | Change                                         |
+| ------------------------- | ------------- | ------------- | ---------------------------------------------- |
+| Unique Visitors           | 27,981        | 26,891        | <font color="red">-1,090 (-4%)</font>          |
+| Total Pageviews           | 69,090        | 68,389        | <font color="red">-701 (-1%)</font>            |
+| Domain Rating (Ahrefs)    | 4.3           | 26.0          | <font color="green">+21.7 (+505%)</font>       |
+| Domain Authority (Moz)    | 14            | 15            | <font color="green">+1 (+7%)</font>            |
+| Ranking Keywords (Moz)    | 1,654         | 2,979         | <font color="green">+1,325 (+80%)</font>       |
+| AdSense Earnings          | $151.07       | $235.71       | <font color="green">+$84.64 (+56%)</font>      |
+| Amazon Affiliate Earnings | $118.00       | $157.08       | <font color="green">+$39.08 (+33%)</font>      |
+| **Total Earnings**        | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
+
+This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg).
+
+The revenue was a bit of a surprise given that traffic has been waning for the past couple months, as nobody wants to think about dieting over the holidays. But the holidays also mean increased advertiser spend and increased customer purchasing on Amazon, so my [RPM](https://en.wikipedia.org/wiki/Revenue_per_mille) rose substantially to $5.70 per thousand pageviews, also a record high.
+
+### [Zestful](https://zestfuldata.com)
+
+| Metric                   | November 2019 | December 2019 | Change                                            |
+| ------------------------ | ------------- | ------------- | ------------------------------------------------- |
+| Unique Visitors          | 232           | 207           | <font color="red">-25 (-11%)</font>               |
+| Total Pageviews          | 320           | 594           | <font color="green">+274 (+86%)</font>            |
+| RapidAPI Earnings        | $65.33        | $52.24        | <font color="red">-$13.09 (-20%)</font>           |
+| Enterprise Plan Earnings | $0.00         | $3883.70      | <font color="green">+$3883.70 (+inf%)</font>      |
+| **Total Earnings**       | **$65.33**    | **$3935.94**  | **<font color="green">+$3870.61 (+5925%)</font>** |
+
+This was a huge month for Zestful, as a fast-moving startup contacted me saying that Zestful was exactly what they wanted. We hopped on a call that same day, they tested it out using the standard plan, and then purchased an enterprise plan two days later. It was Zestful's biggest sale, and it more than doubled my total business revenue for the year. They've been satisfied with the service so far, so I hope they continue working with Zestful on a recurring basis.
+
+Last month, I [got all excited](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite) because I thought that rewriting the Zestful website as a static site would improve its SEO, but my Google Search Console suggests that it had negligible impact:
+
+{{< img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." maxWidth="704px" hasBorder="True" >}}
+
+Still, the Enterprise customer approached me only a few days after I rewrote the site, so I can pretend to myself that the rewrite was responsible for ~$3.9k in additional revenue.
+
+## Sheet metal research
+
+At the end of November, I met the owner of a [sheet metal shop](/retrospectives/2019/12/#interviewing-machine-shops) who was interested in talking with me about creating software specifically for sheet metal producers.
+
+Software for sheet metal shops ticked a lot of my boxes:
+
+* It's an industry that earns a lot of money, but it's un-sexy and not very tech-connected, so it could be a hidden gem.
+* It seems to be more common in my area than in big cities, so I'd have an advantage over more mainstream software companies.
+* I had at least one customer who was engaged and interested in teaching me about the space and open to piloting new software.
+
+I spent most of December researching existing solutions and visiting sheet metal shops to request interviews.
+
+## "We don't want an app that matches our use case."
+
+One of the most interesting insights that came from my sheet metal interviews was with a shop owner who described himself as technically illiterate. He told me that he was currently paying thousands of dollars per year for <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>, general-purpose enterprise planning software for mid-range machine shops.
+
+The owner seemed satisfied with his software but said he probably only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, so you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
+
+The owner had repeatedly said he didn't like dealing with software, so I thought offering a simpler solution would be a slam dunk:
+
+>**Me**: What if I made something that just focused on the 2% that you use so that there's less complexity?<br>
+**Owner**: Wouldn't be interested.<br>
+**Me**: Really? Why not?<br>
+**Owner**: Because ShopTech already has everything we could ever need built in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch and we have all the ISO 9001 features we need, but if you made something that's only what we use **now**, we'd be stuck.
+
+It made me realize that there's some nuance to the idea that people want software that perfectly matches their use case. The example in *Start Small, Stay Small* is that if there's accounting software specifically for web designers, they'll probably choose that over general purpose accounting software like Xero or QuickBooks, even if the niche software is more expensive. But that works because a web designers' accounting needs stay relatively static. Even if they drastically change the jobs they take on, they likely don't need to change much about their accounting software.
+
+When software is more core to a business, they're more likely to want room to grow. I apply the same thinking to software platforms. There are niche platforms like [Heroku](https://heroku.com/) and [Netlify](https://www.netlify.com/) that cater to developers with simple use cases, but I build almost everything on Google Cloud Platform. It's often frustratingly complex, but I'm unlikely to find features gaps because it has so many services built in, even if I currently only use 1% of them.
+
+## "Managed service? No thanks..."
+
+Another recurring theme in interviews was that nobody wanted a managed service. This surprised me because so much of the trend in software in the last 20 years has been toward SaaS, managed services, and monthly payments. Sheet metal shops wanted none of it.
+
+While SaaS businesses typically use the low up-front cost and minimal IT maintenance as selling points, sheet metal shops didn't value these things. They valued independence much more highly than convenience or cost. Multiple shops told me that they didn't want their business to come to a halt because their software vendor went out of business or there were network connectivity issues. I asked if they minded maintaining their own servers, and I was surprised to hear consistent "no"s.
+
+Given that some of these businesses have been operating for 70+ years, it makes sense that they plan to outlast their software vendors. Still, this sentiment surprised me because it seemed to contradict most of the conventional wisdom about SaaS sales.
+
+## Giving up on the sheet metal app
+
+I had hoped that sheet metal shops were so ignored by the industry that they'd just be doing everything on paper or in Excel spreadsheets. And while there indeed is not much software specifically for sheet metal shops, there's software for machine shops, and sheet metal shops are a type of machine shop.
+
+* <a href="https://jobboss.com/" rel="nofollow">JobBoss</a>: Entry-level, general-purpose machine shop software
+* <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>: Mid-range, general-purpose machine shop software
+* <a href="https://www.paperlessparts.com/" rel="nofollow">Paperless Parts</a>: Specifically for job estimation
+
+The existing competitors weren't dealbreakers because:
+
+1. They [seemed pretty bad](/retrospectives/2019/12/#interviewing-machine-shops).
+1. I thought I could outcompete them with a leaner solution that caters specifically to sheet metal.
+
+The next problem was that the customers seemed to have disjoint problems. Shop A said they were in desperate need of software for creating customer quotes, while Shop B said they'd love software for managing inventory, but they didn't care that much about creating quotes. Shop C said they were interested in managing labor capacity, but they weren't interested in quotes or inventory. This made it hard to develop a minimum viable product because there didn't seem to be a simple product that would satisfy more than one customer at a time.
+
+The worst problem was that nobody was particularly engaged aside from the shop owner who initially gave me the idea. Of the ones who agreed to speak to me when I visited their shop, I'd say the max level of interest I saw was "mildly curious." But they didn't invest anything into moving forward, and they didn't respond when I followed up on the conversations via email.
+
+At the end of December, I decided to stop pursuing the sheet metal idea and go back to the drawing board.
+
+## Creating an app for live comedy
+
+Before I officially closed the door on the sheet metal app, I met a couple at a startup event who has been running their own business for several years. They offered to host me at their home to offer mentorship based on their experience. I explained to them my sheet metal idea, but they were skeptical of its potential. They expected that it would be hard for me to remain passionate about sheet metal, since it's so outside of my interests.
+
+They asked me if there were any other ideas I was considering. "Well, there's one I've always wanted to build, but I can't figure out a way for it to make money..."
+
+I've always been passionate about comedy. I performed comedy in college and for several years after. I love seeing comedy shows &mdash; stand-up, improv, sketch &mdash; I love it all. When I lived in Manhattan, I consistently ran into two issues:
+
+* I knew there was a ton of great comedy around me, but there was no unified view of all the shows happening.
+* Comedians I liked would come to town and I'd 
+
+I wished there was something like <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
+
+My hosts found this idea exciting. They said, "Look at the way you light up when you talk about that idea! You're so much more excited about that than the sheet metal idea."
+
+What convinced me was the number of different options they saw:
+
+* It could be like a niche SquareSpace, where comedians pay for special features on their profile pages.
+* I could sell event data to larger providers who want information about entertainment options in a particular city.
+* Venues could pay me a referral fee for tickets sold through my site.
+* Venues or performers could pay for a featured position (similar to sponsored results in Google or Yelp)
+
+## The WanderJest MVP
+
+I reused a lot of the infrastructure from What Got Done, including the favicon:
+
+## Next steps for WanderJest
+
+## Wrap up
+
+### What got done?
+
+* I created a minimum viable product for WanderJest.
+* I sold my biggest Enterprise plan for Zestful.
+* I reached about 80% complete on [my port of mtlynch.io](https://github.com/mtlynch/migrate-mtlynch-to-hugo) from Jekyll to Hugo.
+
+### Lessons learned
+
+* Businesses don't always want apps that perfectly match their use case.
+  * If it's a business that could easily grow in different directions, a small, simple feature set becomes a constraint.
+* Older businesses might value independence more highly and take fewer risks on SaaS providers that could go out of business.
+
+### Goals for next month
+
+* Conduct eight interviews for WanderJest with comedians, bookers, promoters, and venue owners.
+* Earn my first dollar of revenue from WanderJest.
+* Publish a follow up to, ["My First Year as a Solo Developer,"](https://mtlynch.io/solo-developer-year-1/) about year two.
