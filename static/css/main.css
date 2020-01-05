@@ -4,6 +4,10 @@ body {
   line-height: 1.65em;
 }
 
+blockquote {
+  line-height: 2.8rem;
+}
+
 .content article header {
   margin-top: 0.5rem;
 }
