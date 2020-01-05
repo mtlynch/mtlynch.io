@@ -4,6 +4,10 @@ body {
   line-height: 1.65em;
 }
 
+.content article header {
+  margin-top: 0.5rem;
+}
+
 .content figure {
   max-width: 100%;
 }
