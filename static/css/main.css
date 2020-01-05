@@ -97,6 +97,10 @@ hr {
   margin-top: 50px;
 }
 
+article {
+  word-wrap: break-word;
+}
+
 @media screen and (min-width: 768px) {
   .book-report .book-cover {
     max-width: 275px;
