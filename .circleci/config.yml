@@ -105,17 +105,17 @@ workflows:
       - lint-markdown
       - build
       - lint-html:
-          requires:
-            - build
+        requires:
+          - build
       - check-seo-metadata:
-          requires:
-            - build
+        requires:
+          - build
       - check-google-analytics-token:
-          requires:
-            - build
+        requires:
+          - build
       - check-amazon-links:
-          requires:
-            - build
+        requires:
+          - build
       - deploy:
         requires:
           - build
