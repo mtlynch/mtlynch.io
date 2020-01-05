@@ -40,10 +40,10 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 
 ### [Is It Keto](https://isitketo.org)
 
-<figure class="half">
+{{< gallery caption="Is It Keto revenue (left) , Is It Keto traffic (right)" >}}
   {{< img src="revenue-graph.jpg" alt="Is It Keto revenue graph" maxWidth="600px" hasBorder="True" >}}
   {{< img src="view-graph.jpg" alt="Is It Keto traffic graph" maxWidth="600px" hasBorder="True" >}}
-</figure>
+{{</ gallery >}}
 
 | Metric                    | November 2019 | December 2019 | Change                                         |
 | ------------------------- | ------------- | ------------- | ---------------------------------------------- |
