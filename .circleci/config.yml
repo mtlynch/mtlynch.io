@@ -1,9 +1,6 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2.1
 jobs:
   check-whitespace:
-    <<: *defaults
     docker:
       - image: debian:jessie-20190228-slim
     steps:
@@ -12,7 +9,6 @@ jobs:
           name: Check for trailing whitespace
           command: tests/check-trailing-whitespace
   lint-markdown:
-    <<: *defaults
     docker:
       - image: mtlynch/markdownlint:0.8.0
     steps:
@@ -21,7 +17,6 @@ jobs:
           name: Lint Markdown
           command: tests/lint-markdown
   build:
-    <<: *defaults
     docker:
       - image: peaceiris/hugo:v0.62.1
     steps:
@@ -44,7 +39,6 @@ jobs:
             - firebase.json
             - .firebaserc
   lint-html:
-    <<: *defaults
     docker:
       - image: mtlynch/htmlproofer:3.15.0
     steps:
@@ -64,7 +58,6 @@ jobs:
           name: Check presence of Google Analytics token
           command: tests/check-google-analytics-token
   check-seo-metadata:
-    <<: *defaults
     docker:
       - image: circleci/golang:1.13
     steps:
@@ -74,7 +67,6 @@ jobs:
           name: Check that SEO meta tags rendered properly
           command: tests/check-seo-metadata
   check-amazon-links:
-    <<: *defaults
     docker:
       - image: circleci/golang:1.13
     steps:
@@ -84,7 +76,6 @@ jobs:
           name: Check Amazon links
           command: tests/check-amazon-links
   deploy:
-    <<: *defaults
     docker:
       - image: circleci/node:13.1.0-stretch
     steps:
