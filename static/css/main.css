@@ -81,6 +81,10 @@ h2, h3, h4, h5, hr {
   clear: both;
 }
 
+h3 {
+  margin-top: 32px;
+}
+
 hr {
   margin-top: 50px;
 }
