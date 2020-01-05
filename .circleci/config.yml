@@ -118,6 +118,8 @@ workflows:
             - build
       - deploy:
           requires:
+            - check-whitespace
+            - lint-markdown
             - build
             - lint-html
             - check-google-analytics-token
