@@ -82,6 +82,8 @@ hr {
 @media screen and (min-width: 768px) {
   .book-report .book-cover {
     max-width: 275px;
+    margin-right: 2em !important;
+    margin-bottom: 0.2em;
   }
 }
 
