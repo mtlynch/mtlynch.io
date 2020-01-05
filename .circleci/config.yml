@@ -48,7 +48,6 @@ jobs:
           name: Check HTML and external links
           command: tests/lint-html
   check-google-analytics-token:
-    <<: *defaults
     docker:
       - image: circleci/golang:1.13
     steps:
