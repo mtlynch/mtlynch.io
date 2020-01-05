@@ -105,24 +105,24 @@ workflows:
       - lint-markdown
       - build
       - lint-html:
-        requires:
-          - build
-      - check-seo-metadata:
-        requires:
-          - build
+          requires:
+            - build
       - check-google-analytics-token:
-        requires:
-          - build
+          requires:
+            - build
+      - check-seo-metadata:
+          requires:
+            - build
       - check-amazon-links:
-        requires:
-          - build
+          requires:
+            - build
       - deploy:
-        requires:
-          - build
-          - lint-html
-          - check-google-analytics-token
-          - check-seo-metadata
-          - check-amazon-links
-        filters:
-          branches:
-            only: master
+          requires:
+            - build
+            - lint-html
+            - check-google-analytics-token
+            - check-seo-metadata
+            - check-amazon-links
+          filters:
+            branches:
+              only: master
