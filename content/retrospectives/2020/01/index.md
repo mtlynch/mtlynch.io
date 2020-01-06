@@ -20,14 +20,14 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 * **Result**: Conducted four customer interviews.
 * **Grade**: B+
 
-I researched and visited sheet metal shops in my area. I visited seven shops, and four agreed to speak with me.
+I researched and visited sheet metal shops in my area. Of the seven I visited, four agreed to speak with me.
 
 ### Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-pre-rendered)
 
 * **Result**: I published "[A Simple Pre-Rendered Web App Using Vue + Nuxt](/simple-vue-pre-rendered/)."
 * **Grade**: A
 
-I was pleased with this blog post in that I feel like I did a good job of explaining the problem and solution clearly, but it didn't gain much of an audience. I'm holding out hope that this is a "slow-burn" kind of post, where it's not the kind of article you'd read because it pops up on Hacker News or Reddit, but it's what you'd hope to find if you Google "vue pre-rendering."
+I was pleased with this blog post in that I feel like I did a good job of explaining the problem and solution clearly, but it didn't gain much of an audience. I'm holding out hope that this is a "slow-burn" kind of post. It's never going to trend on Hacker News or Reddit, but it's what you'd hope to find if you Google "vue pre-rendering."
 
 ### Publish two new Is It Keto articles
 
@@ -70,7 +70,7 @@ The revenue was a bit of a surprise given that traffic has been waning for the p
 | Enterprise Plan Earnings | $0.00         | $3883.70      | <font color="green">+$3883.70 (+inf%)</font>      |
 | **Total Earnings**       | **$65.33**    | **$3935.94**  | **<font color="green">+$3870.61 (+5925%)</font>** |
 
-This was a huge month for Zestful, as a fast-moving startup contacted me saying that Zestful was exactly what they wanted. We hopped on a call that same day, they tested it out using the standard plan, and then purchased an enterprise plan two days later. It was Zestful's biggest sale, and it more than doubled my total business revenue for the year. They've been satisfied with the service so far, so I hope they continue working with Zestful on a recurring basis.
+This was a huge month for Zestful. A fast-moving startup told me that Zestful was exactly what they needed. We hopped on a call that same day, they tested it out using the standard plan, and then purchased an enterprise plan two days later. It was Zestful's biggest sale, and it more than doubled my total business revenue for the year. They've been satisfied with the service so far, so I hope they continue working with Zestful on a recurring basis.
 
 Last month, I [got all excited](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite) because I thought that rewriting the Zestful website as a static site would improve its SEO, but my Google Search Console suggests that it had negligible impact:
 
@@ -92,9 +92,9 @@ I spent most of December researching existing solutions and visiting sheet metal
 
 ## "We don't want an app that matches our use case."
 
-One of the most interesting insights that came from my sheet metal interviews was with a shop owner who described himself as technically illiterate. He told me that he was currently paying thousands of dollars per year for <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>, general-purpose enterprise planning software for mid-range machine shops.
+One of the most interesting insights that came from my sheet metal interviews was with a shop owner who described himself as technically illiterate. He told me that he was currently paying thousands of dollars per year for <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>, a general-purpose enterprise planning application for mid-range machine shops.
 
-The owner seemed satisfied with his software but said he probably only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, so you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
+The owner seemed satisfied with his software but said he probably only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
 
 The owner had repeatedly said he didn't like dealing with software, so I thought offering a simpler solution would be a slam dunk:
 
@@ -168,7 +168,8 @@ I reused a lot of the infrastructure from What Got Done, including the favicon:
 
 * I created a minimum viable product for WanderJest.
 * I sold my biggest Enterprise plan for Zestful.
-* I reached about 80% complete on [my port of mtlynch.io](https://github.com/mtlynch/migrate-mtlynch-to-hugo) from Jekyll to Hugo.
+* I [ported](https://github.com/mtlynch/mtlynch.io/pull/500) this blog from Jekyll to Hugo
+  * It was a lot of [tedious work](https://github.com/mtlynch/migrate-mtlynch-to-hugo), but Editing posts is [*so* much easier](https://twitter.com/deliberatecoder/status/1213966412793991168).
 
 ### Lessons learned
 
