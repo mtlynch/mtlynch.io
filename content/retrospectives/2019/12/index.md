@@ -40,10 +40,10 @@ Given that my only real goal for the month was to interview customers, three is 
 
 ### [Is It Keto](https://isitketo.org)
 
-<figure class="half">
-  {{< img src="revenue-graph.jpg" alt="Is It Keto revenue graph" maxWidth="600px" hasBorder="True" >}}
-  {{< img src="view-graph.jpg" alt="Is It Keto traffic graph" maxWidth="600px" hasBorder="True" >}}
-</figure>
+{{< gallery caption="Is It Keto revenue (left) , Is It Keto traffic (right)" >}}
+  {{< img src="revenue-graph.jpg" alt="Is It Keto revenue graph" hasBorder="True" >}}
+  {{< img src="view-graph.jpg" alt="Is It Keto traffic graph" hasBorder="True" >}}
+{{< /gallery >}}
 
 | Metric                    | October 2019 | November 2019 | Change                                       |
 | ------------------------- | ------------ | ------------- | -------------------------------------------- |
