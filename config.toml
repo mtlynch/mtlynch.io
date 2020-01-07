@@ -69,18 +69,18 @@ resampleFilter = "MitchellNetravali"
     weight = 1
     url  = "/posts/"
 [[menu.main]]
-    name = "About"
+    name = "Retrospectives"
     weight = 2
-    url = "/about/"
+    url = "/retrospectives/"
 [[menu.main]]
     name = "Projects"
     weight = 3
     url = "/projects/"
 [[menu.main]]
-    name = "Retrospectives"
-    weight = 4
-    url = "/retrospectives/"
-[[menu.main]]
     name = "Book Reports"
     weight = 4
     url = "/book-reports/"
+[[menu.main]]
+    name = "About"
+    weight = 5
+    url = "/about/"
