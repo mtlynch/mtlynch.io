@@ -8,7 +8,7 @@ date: '2019-10-31'
 
 ## Overview
 
-This past weekend, [PyGotham](https://www.pytexas.org/2019/) invited me to speak at their annual conference in Manhattan. In an effort to maximize the benefit I get from the event, I've prepared notes that capture what I learned by attending. I'm sharing them in hopes that it might be interesting or useful to others.
+This past weekend, [PyGotham](https://2019.pygotham.org/) invited me to speak at their annual conference in Manhattan. In an effort to maximize the benefit I get from the event, I've prepared notes that capture what I learned by attending. I'm sharing them in hopes that it might be interesting or useful to others.
 
 {{< img src="pygotham-logo.png" alt="PyGotham 2019 logo" maxWidth="450px" >}}
 
