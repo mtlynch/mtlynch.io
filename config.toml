@@ -15,6 +15,8 @@ pygmentscodefencesguesssyntax = true
 googleAnalytics = "UA-78473158-1"
 disqusShortname = "silly-bits"
 
+buildFuture = true
+
 [markup]
   [markup.highlight]
     style = "native"
