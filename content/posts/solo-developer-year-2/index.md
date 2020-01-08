@@ -20,7 +20,7 @@ Previously, on mtlynch.io...
 
 ### [Zestful](https://zestfuldata.com)
 
-{{< img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" >}}
+{{< img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="500px" >}}
 
 Zestful was my first attempt at software-as-a-service (SaaS). It allows developers to infer structure from recipe ingredients programmatically. Given an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, Zestful tells the application that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` are the product, and `finely chopped` is a preparation step.
 
@@ -33,7 +33,7 @@ Zestful was my first attempt at software-as-a-service (SaaS). It allows develope
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" >}}
+{{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="500px" >}}
 
 Is It Keto gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). If the food is keto-friendly, the site displays a purchase link and receives commission from any sales. The site also earns money from display ads through Google AdSense.
 
@@ -66,7 +66,7 @@ Total of ~$2.3k of revenue.
 
 ### What Got Done
 
-{{< img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" hasBorder="True" >}}
+{{< img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" hasBorder="True" maxWidth="500px" >}}
 
 
 | Income/Expense                              | Amount |
@@ -75,24 +75,15 @@ Total of ~$2.3k of revenue.
 | Domain                                      | -$12 |
 | **Net profit**                              | **-$XX** |
 
-### Conferences
-
-| Expense                                               | Amount     |
-|-------------------------------------------------------|------------|
-| [NERD Summit](https://2019.nerdsummit.org/)           | -$14.00    |
-| [PyTexas 2019](/retrospectives/pytexas-2019-notes/)   | -$1,184.24 |
-| [PyGotham 2019](/retrospectives/pygotham-2019-notes/) | -$109.52   |
-| [MicroConf 2020](https://microconf.com/)              | -$849.27   |
-| **Net profit**                                        | **-$2,157.03**   |
-
 ### Everything Else
 
-| Expense                  | Purpose   | Amount    | Note  |
+| Expense                   | Purpose   | Amount    | Note  |
 |---------------------------|-----------|-----------|-------|
+| Conference tickets, travel, and lodging | Networking and training | -$2,157.03 | |
 | [Xero](https://xero.com/) | Bookkeeping | -$XX |  |
 | [Circle CI](https://travis-ci.com) | Continuous integration | -$XX |  |
-| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |  |
-| Meetups, books | | -$634 | |
+| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270.00 |  |
+| Meetups, books | | -$XX | |
 
 ### Notable cutbacks
 
@@ -108,11 +99,29 @@ In last year's update, I
 
 ### Achieve $500/month in revenue across my businesses
 
+**Grade**: A-
+
 ### Present talks at three software conferences
+
+**Grade**: A
+
+| Conference                                  | My notes | Recording |
+|---------------------------------------------|----------|-------|
+| [NERD Summit](https://2019.nerdsummit.org/) |                                               | ["Modernize any Codebase through Tooling and Technique"](https://youtu.be/GfkVhr6SPz4)
+| [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)
+| [PyGotham 2019](https://2019.pygotham.org/) | [Notes](/retrospectives/pygotham-2019-notes/) | ["Why Good Developers Write Bad Tests"](https://youtu.be/ElzBGwyDzCc) |
 
 ### Publish 12 blog posts.
 
+**Grade**: B
+
+Depending on how you count, I either published 9 or 13 blog posts in 2019. I had nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/).
+
 ### Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
+
+**Grade**: A
+
+
 
 ## Goals for year three
 
@@ -121,3 +130,4 @@ Here's what I hope to accomplish in my third year as a solo developer:
 * Earn $20,000 in revenue across my businesses.
 * Present talks at three software conferences.
 * Publish 10 blog posts.
+* Learn one new technology.
