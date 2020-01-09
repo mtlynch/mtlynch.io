@@ -10,11 +10,23 @@ Previously, on mtlynch.io...
 
 ## How I made and spent money
 
-| Metric     | 2018        | 2019       | Change             |
-|------------|-------------|------------|--------------------|
-| Revenue    | $2,262.33   | $7,254.14  | <font color="green">+$4,991.81 (+220%)</font>  |
-| Expenses   | $23,133.44  | $9,656.61  | <font color="red">-$13,476.83 (-58%)</font> |
-| Net Profit | -$20,871.11 | -$2,402.47 | <font color="green">+$18,468.64‬ (+88%)</font> |
+TODO: Graph of income/expenses/profit month by month
+
+| Metric     | 2018        | 2019       | Change                                        |
+|------------|-------------|------------|-----------------------------------------------|
+| Revenue    | $2,262.33   | $7,254.14  | <font color="green">+$4,991.81 (+220%)</font> |
+| Expenses   | $23,133.44  | $9,656.61  | <font color="green">-$13,476.83 (-58%)</font> |
+| Net Profit | -$20,871.11 | -$2,402.47 | <font color="green">+$18,468.64 (+88%)</font> |
+
+I still finished the year in the red, but I'm much closer to profitability than I was last year.
+
+## How do you afford to keep losing money?
+
+When I tell people what I do or even if they read my blog, people come away thinking that I fund my ventures by freelancing, but I've actually never done freelance work. I recognize that I'm very fortunate to pursue this lifestyle, and it comes from three main factors.
+
+* Low expenses: I live in an inexpensive area where my expenses are around $2k/mo.
+* High savings: It's hard to work for big software companies for 11 years without a healthy pad of savings.
+* Lucky investments: I've been putting money into the S&P 500 for historically strong runs and I took small bets on cryptocurrency that paid off well.
 
 ## Project by project
 
@@ -91,6 +103,22 @@ Total of ~$2.3k of revenue.
 * Travis CI
 * Coveralls
 * GitHub Pro ($91)
+
+## Why I outsourced less
+
+People are obsessed with profits. It seems crazy to 
+
+It is a bad idea because it bogs you down.
+
+Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX..
+
+## Idea screening is more important than a good idea
+
+* Stone quarries: Most quarry owners weren't interested in talking to me, the one that did didn't seem to have problems I could solve with software.
+* Email copywriters: 
+* Sheet metal shops: There are existing solutions
+
+Even What Got Done, which I did build, is something I deliberately bailed on because it wasn't gaining traction. My main goal in building it was that I felt frustrated that Is It Keto hadn't grown the way I wanted (it turned out all I had to do was let it sit for XX months), so I wanted a fun project where I could learn Vue.js.
 
 ## Grading my goals
 
