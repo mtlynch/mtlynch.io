@@ -10,13 +10,82 @@ Previously, on mtlynch.io...
 
 ## How I made and spent money
 
-TODO: Graph of income/expenses/profit month by month
+<canvas id="myChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+ctx.height = 400;
+var myChart = new Chart(ctx, {
+    type: 'line',
+          data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: [{
+          label: 'Revenue',
+          data: [
+            20.08,
+            33.15,
+            68.83,
+            81.11,
+            193.58,
+            94.12,
+            278.12,
+            999.37,
+            513.47,
+            460.64,
+            167.84,
+            4343.83,
+          ],
+          backgroundColor: 'rgb(57, 57, 255)',
+          borderColor: 'rgb(131, 131, 235)',
+          fill: false,
+        }, {
+          label: 'Expenses',
+          data: [
+            -926.05,
+            -1967.04,
+            -1710.88,
+            -702.41,
+            -502.31,
+            -473.16,
+            -134.82,
+            -227.16,
+            -697.33,
+            -384.58,
+            -1384.61,
+            -546.26,
+          ],
+          backgroundColor: 'rgb(255, 0, 0)',
+          borderColor: 'rgb(255, 130, 130)',
+          fill: false,
+        }, {
+          label: 'Net Profit',
+          data: [
+            -905.97,
+            -1933.89,
+            -1642.05,
+            -621.30,
+            -308.73,
+            -379.04,
+            143.30,
+            772.21,
+            -183.86,
+            76.06,
+            -1216.77,
+            3797.57,
+          ],
+          backgroundColor: 'rgb(0, 255, 0)',
+          borderColor: 'rgb(172, 255, 172)',
+          fill: false,
+        }]
+      },
+});
+</script>
 
 | Metric     | 2018        | 2019       | Change                                        |
 |------------|-------------|------------|-----------------------------------------------|
-| Revenue    | $2,262.33   | $7,254.14  | <font color="green">+$4,991.81 (+220%)</font> |
-| Expenses   | $23,133.44  | $9,656.61  | <font color="green">-$13,476.83 (-58%)</font> |
-| Net Profit | -$20,871.11 | -$2,402.47 | <font color="green">+$18,468.64 (+88%)</font> |
+| Revenue    | $2,262   | $7,254  | <font color="green">+$4,992 (+220%)</font> |
+| Expenses   | $23,133  | $9,657  | <font color="green">-$13,477 (-58%)</font> |
+| Net Profit | -$20,871 | -$2,402 | <font color="green">+$18,469 (+88%)</font> |
 
 I still finished the year in the red, but I'm much closer to profitability than I was last year.
 
@@ -28,6 +97,28 @@ When I tell people what I do or even if they read my blog, people come away thin
 * High savings: It's hard to work for big software companies for 11 years without a healthy pad of savings.
 * Lucky investments: I've been putting money into the S&P 500 for historically strong runs and I took small bets on cryptocurrency that paid off well.
 
+## Why I outsourced less
+
+People are obsessed with profits. It seems crazy to 
+
+It is a bad idea because it bogs you down.
+
+Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX..
+
+## Raise prices, even if nobody's buying
+
+One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com).
+
+It changed the conversations. Instead 
+
+## Idea screening is more important than a good idea
+
+* Stone quarries: Most quarry owners weren't interested in talking to me, the one that did didn't seem to have problems I could solve with software.
+* Email copywriters: 
+* Sheet metal shops: There are existing solutions
+
+Even What Got Done, which I did build, is something I deliberately bailed on because it wasn't gaining traction. My main goal in building it was that I felt frustrated that Is It Keto hadn't grown the way I wanted (it turned out all I had to do was let it sit for XX months), so I wanted a fun project where I could learn Vue.js.
+
 ## Project by project
 
 ### [Zestful](https://zestfuldata.com)
@@ -38,10 +129,10 @@ Zestful was my first attempt at software-as-a-service (SaaS). It allows develope
 
 | Income/Expense   | Amount    |
 |------------------|-----------|
-| Sales            | $5,022.45 |
-| Hosting          | -$78.76   |
-| Domains          | -$12.00    |
-| **Net profit**   | **$4,931.69‬** |
+| Sales            | $5,022 |
+| Hosting          | -$80   |
+| Domains          | -$12    |
+| **Net profit**   | **$4,930‬** |
 
 ### [Is It Keto](https://isitketo.org)
 
@@ -51,50 +142,52 @@ Is It Keto gives readers clear, simple answers about which foods are compatible 
 
 | Income/Expense           | Amount     |
 |--------------------------|------------|
-| Amazon Affiliate revenue | $1,314.81  |
-| Google AdSense revenue   | $939.96    |
-| Meal plan sales          | $23.87     |
-| Content writing          | -$XX   |
-| Social media management  | -$XX   |
-| Graphic design           | -$XX   |
-| Hosting                  | -$XX   |
+| Amazon Affiliate revenue | $1,315  |
+| Google AdSense revenue   | $940    |
+| Meal plan sales          | $24     |
+| Content writing          | -$3,845   |
+| Social media management  | -$314   |
+| Graphic design           | -$163   |
+| Hosting                  | -$103   |
 | Domain                   | -$12   |
-| **Net profit**           | **-$XX** |
+| **Net profit**           | **-$2,158** |
 
 Total of ~$2.3k of revenue.
+
+38% of content writers was on writers who didn't work out. I either stuck with them too long.
 
 ### mtlynch.io *(this blog)*
 
 | Income/Expense | Amount |
 |---------------------------------------------|---------|
-| Affiliate revenue                           | $XX     |
-| Development                                 | -$XX |
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$XX |
-| [Editing](/editor/)                         | -$XX |
-| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$139.95 |
-| Hosting                                     | -$XX |
+| Affiliate revenue                           | $374     |
+| Development                                 | -$460 |
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$769 |
+| Hosting                                     | -$150 |
+| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 |
+| [Editing](/editor/)                         | -$60 |
 | Domain                                      | -$60 |
-| **Net profit**                              | **-$XX** |
+| **Net profit**                              | **-$1,265** |
 
 ### What Got Done
 
 {{< img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" hasBorder="True" maxWidth="500px" >}}
 
-
 | Income/Expense                              | Amount |
 |---------------------------------------------|---------|
-| Customer interviews                         | -$XX |
+| Customer interviews                         | -$31 |
 | Domain                                      | -$12 |
-| **Net profit**                              | **-$XX** |
+| **Net profit**                              | **-$43** |
 
 ### Everything Else
 
 | Expense                   | Purpose   | Amount    | Note  |
 |---------------------------|-----------|-----------|-------|
-| Conference tickets, travel, and lodging | Networking and training | -$2,157.03 | |
-| [Xero](https://xero.com/) | Bookkeeping | -$XX |  |
-| [Circle CI](https://travis-ci.com) | Continuous integration | -$XX |  |
-| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270.00 |  |
+| Conference tickets, travel, and lodging | Networking and training | -$2,182 | |
+| [Xero](https://xero.com/) | Bookkeeping | -$151 |  |
+| Bench to Xero migration   | Bookkeeping | -$232 | |
+| [Circle CI](https://travis-ci.com) | Continuous integration | -$350 |  |
+| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |  |
 | Meetups, books | | -$XX | |
 
 ### Notable cutbacks
@@ -104,21 +197,6 @@ Total of ~$2.3k of revenue.
 * Coveralls
 * GitHub Pro ($91)
 
-## Why I outsourced less
-
-People are obsessed with profits. It seems crazy to 
-
-It is a bad idea because it bogs you down.
-
-Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX..
-
-## Idea screening is more important than a good idea
-
-* Stone quarries: Most quarry owners weren't interested in talking to me, the one that did didn't seem to have problems I could solve with software.
-* Email copywriters: 
-* Sheet metal shops: There are existing solutions
-
-Even What Got Done, which I did build, is something I deliberately bailed on because it wasn't gaining traction. My main goal in building it was that I felt frustrated that Is It Keto hadn't grown the way I wanted (it turned out all I had to do was let it sit for XX months), so I wanted a fun project where I could learn Vue.js.
 
 ## Grading my goals
 
@@ -149,8 +227,6 @@ Depending on how you count, I either published 9 or 13 blog posts in 2019. I had
 
 **Grade**: A
 
-
-
 ## Goals for year three
 
 Here's what I hope to accomplish in my third year as a solo developer:
@@ -159,3 +235,7 @@ Here's what I hope to accomplish in my third year as a solo developer:
 * Present talks at three software conferences.
 * Publish 10 blog posts.
 * Learn one new technology.
+
+---
+
+*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/).*
