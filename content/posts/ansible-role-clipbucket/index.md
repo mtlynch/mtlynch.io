@@ -123,7 +123,7 @@ Jeff Geerling, author of [*Ansible for DevOps*](https://leanpub.com/ansible-for-
 
 I'm considering expanding the testing by writing more sophisticated web flows, such as creating a new account or uploading a new video. For something of that complexity, we'd want to go beyond simple shell commands and use a browser automation tool like [Selenium](http://www.seleniumhq.org/). Perhaps this will be a topic for a future blog post.
 
-**Update (2016-09-25)**: New post about integrating Selenium is up [here]({{ base_url }}/testing-ansible-selenium/).
+**Update (2016-09-25)**: New post about integrating Selenium is up [here](/testing-ansible-selenium/).
 
 ## Final Product
 
