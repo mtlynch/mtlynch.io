@@ -11,12 +11,12 @@
 
 {{ if $caption }}
 <figure
-  {{- if $align }} class="align-{{ $align }}"{{ end -}}
+  class="img{{ if $align }} align-{{ $align }}{{ end }}"
   {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
   >
 {{ else }}
 <div
-  {{- if $align }} class="align-{{ $align }}"{{ end -}}
+  class="img{{ if $align }} align-{{ $align }}{{ end }}"
   {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}
   >
 {{ end }}
