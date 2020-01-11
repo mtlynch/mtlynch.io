@@ -12,11 +12,8 @@ blockquote {
   margin-top: 0.5rem;
 }
 
-.content figure {
+.content .img {
   max-width: 100%;
-}
-
-.content figure {
   margin-left: auto;
   margin-right: auto;
 }
