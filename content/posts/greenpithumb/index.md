@@ -26,7 +26,7 @@ But I'm a programmer, not a gardener. If I had a plant, I'd have to water it and
 
 ## Why GreenPiThumb?
 
-Like most software projects I take on, my main motivation with GreenPiThumb was to learn new technologies. I wrote my previous app, [ProsperBot]({{ base_url }}/prosperbot/), to teach myself Go, Ansible, and Redis. I saw GreenPiThumb as a chance to learn front end development, specifically JavaScript and AngularJS.
+Like most software projects I take on, my main motivation with GreenPiThumb was to learn new technologies. I wrote my previous app, [ProsperBot](/prosperbot/), to teach myself Go, Ansible, and Redis. I saw GreenPiThumb as a chance to learn front end development, specifically JavaScript and AngularJS.
 
 My friend [Jeet](https://github.com/JeetShetty) had just started learning to program, so I asked if he'd be interested in collaborating with me on GreenPiThumb. It seemed like a good opportunity for him to learn about healthy software engineering practices like code reviews, unit tests, and continuous integration. Jeet was up for it, so we set off on what we *thought* would be a two- or three-month endeavor.
 
