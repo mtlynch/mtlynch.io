@@ -50,8 +50,8 @@ twitter = "deliberatecoder"
     photoWidths = [300, 600, 800, 1200]
 
 [imaging]
-quality = 70
-resampleFilter = "MitchellNetravali"
+quality = 90
+resampleFilter = "Lanczos"
 
 # Social links
 [[params.social]]
