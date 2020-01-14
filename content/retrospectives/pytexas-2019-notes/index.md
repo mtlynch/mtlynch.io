@@ -6,7 +6,7 @@ date: '2019-04-18'
 
 ## Overview
 
-This past weekend, [PyTexas](https://www.pytexas.org/2019/) invited me to speak at their annual conference in Austin, Texas.
+This past weekend, [PyTexas](https://2019.pytexas.org) invited me to speak at their annual conference in Austin, Texas.
 
 It was a fun trip, and I learned a lot. It was also expensive, both financially and in terms of time. I'm taking these notes partly to share what I learned and partly to help me decide whether the benefits I get from attending conferences outweigh the costs.
 

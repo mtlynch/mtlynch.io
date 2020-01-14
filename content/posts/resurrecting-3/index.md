@@ -277,15 +277,15 @@ How could I bridge the gap between these two different environments with incompa
 
 ## A roundabout way to convert paths
 
-In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths) that discussed combining paths from multiple filesystems:
+In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/v4.5.x/config.html#paths) that discussed combining paths from multiple filesystems:
 
-{{< img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths) of `coverage` command" maxWidth="712px" hasBorder="True" linkUrl="https://coverage.readthedocs.io/en/coverage-5.0/config.html#paths" >}}
+{{< img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/v4.5.x/config.html#paths) of `coverage` command" maxWidth="712px" hasBorder="True" linkUrl="https://coverage.readthedocs.io/en/v4.5.x/config.html#paths" >}}
 
 To use these options, I created the following `.coveragerc` file:
 
 {{< inline-file filename="coveragerc" language="ini" >}}
 
-My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/coverage-5.0/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
+My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/v4.5.x/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
 
 After applying this solution, the `after_success` section of my [Travis configuration](https://github.com/mtlynch/ingredient-phrase-tagger/blob/9e66f28b07de290b77b1ec0b84baf14f3e7330a0/.travis.yml) looked like this:
 
