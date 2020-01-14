@@ -232,7 +232,7 @@ I recognized that this kept happening, but I didn't know of a way to prevent it.
 
 It changed the conversations. Instead of me having to guess about whether they were planning to spend real money, they were telling me up front because they wanted to use their volume to negotiate a lower price. Then, if they asked for a new feature, I could politely tell them that I could guarantee it would be implemented by a certain date if they were willing to pre-pay $X, where X is several thousand dollars so that I can justify spending several weeks implement their request.
 
-## Stop outsourcing when it slows you down, not when you want to save money
+## Stop outsourcing when it slows you down, not to inflate profits artificially
 
 This year, I substantially cut back on the amount of work I outsourced to freelancers, but not for the reason you might assume. I think people get too obsessed with paper profits and discount the value of their time.
 
@@ -248,7 +248,7 @@ It is a bad idea because it bogs you down.
 
 Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX..
 
-## Idea screening is more important than a good idea
+## Pursuing the right idea means rejecting the wrong ones
 
 * Stone quarries: Most quarry owners weren't interested in talking to me, the one that did didn't seem to have problems I could solve with software.
 * Email copywriters: 
@@ -256,13 +256,21 @@ Just because I outsource something doesn't make it worth outsourcing. I was exci
 
 Even What Got Done, which I did build, is something I deliberately bailed on because it wasn't gaining traction. My main goal in building it was that I felt frustrated that Is It Keto hadn't grown the way I wanted (it turned out all I had to do was let it sit for XX months), so I wanted a fun project where I could learn Vue.js.
 
+## Start taking bigger swings
+
+## Customer research is a full-time job
+
+One of the mistakes I made this year was treating customer research as if it's a project that should take up only 20% of my time. In [April](/retrospectives/2019/05/), I was developing What Got Done, interviewing copywriters about my email tool idea, and trying to get stone quarry operators to talk to me about their software needs. It was way too much.
+
+It seems like it shouldn't take very long because you're probably only talking to customers a very small percentage of the time, but you're doing lots of other things that do take time. You're researching the customers, researching the tools they use, transcribing notes from your meetings.
+
+During the research phase, customers are generally doing you the favor by taking the time to speak with you, so you need to give yourself enough time that you can minimize theirs and respond quickly. If they offer to make you an introduction, they're going to be a lot less enthusiastic about following through if you follow up three weeks later because you're busy exploring four different ideas simultaneously.
 
 ## Goals for year three
 
 Here's what I hope to accomplish in my third year as a solo developer:
 
 * Earn $20,000 in revenue across my businesses.
-* Present talks at three software conferences.
 * Publish 10 blog posts.
 * Learn one new technology.
 
