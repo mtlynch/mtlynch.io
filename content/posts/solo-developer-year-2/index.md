@@ -232,7 +232,7 @@ I recognized that this kept happening, but I didn't know of a way to prevent it.
 
 It changed the conversations. Instead of me having to guess about whether they were planning to spend real money, they were telling me up front because they wanted to use their volume to negotiate a lower price. Then, if they asked for a new feature, I could politely tell them that I could guarantee it would be implemented by a certain date if they were willing to pre-pay $X, where X is several thousand dollars so that I can justify spending several weeks implement their request.
 
-## Stop outsourcing when it slows you down, not to inflate profits artificially
+## Stop outsourcing when it slows you down, not to inflate profits
 
 This year, I substantially cut back on the amount of work I outsourced to freelancers, but not for the reason you might assume. I think people get too obsessed with paper profits and discount the value of their time.
 
@@ -250,13 +250,29 @@ Just because I outsource something doesn't make it worth outsourcing. I was exci
 
 ## Pursuing the right idea means rejecting the wrong ones
 
+One of the best lessons I learned from my friend David Toth is that founders tend to undervalue the importance of idea screening. Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
+
+David's rule of thumb is that before he pursues an idea, he comes up with at least 10 concepts so that he can choose the best one.
+
+I'm worse at David at generating ideas, but I took this advice to heart. Combined with [my takeaways from the book *The Mom Test*](/book-reports/the-mom-test/), I was conservative about building products. I spent more time interviewing customers to validate ideas before I started building software to solve the problem I imagined needed solving.
+
 * Stone quarries: Most quarry owners weren't interested in talking to me, the one that did didn't seem to have problems I could solve with software.
 * Email copywriters: 
 * Sheet metal shops: There are existing solutions
 
-Even What Got Done, which I did build, is something I deliberately bailed on because it wasn't gaining traction. My main goal in building it was that I felt frustrated that Is It Keto hadn't grown the way I wanted (it turned out all I had to do was let it sit for XX months), so I wanted a fun project where I could learn Vue.js.
+The exception was What Got Done, which I did build without validating the idea, but mainly to meet my goal of learning a JavaScript framework. But I figured that as long as I was building it, I might as well see if there's a viable business there, and it seemed like the answer was no..
 
 ## Start taking bigger swings
+
+One of the other changes in my thinking was that I decided to start taking bigger swings. Feedback I saw last year was that $500/month is too low a target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
+
+That's true, but I needed the low target to get started. If I made a product that costs $50k, chances are that I'd fail, but it would be hard to figure out why I failed. Also, I'd probably have to invest a lot more time into the idea before I discovered it failed.
+
+Is It Keto was a great beginner business because I could see how my investment translated to revenue. When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if by a fraction of a penny each.
+
+I also saw how that's limiting. Because each customer yields only ~$XX in revenue, it limits the tools I can use. I can't use any kind of paid advertising because no channel is going to sell me visitors for less than $XX per visitor. Toward the end of the year, I found a college student who produced content for the site at $15/hr, but I wasn't even sure if that was net profitable.
+
+Now that I'm entering my third year of this, I'm ready to take bigger bets so that if I'm successful, the business will earn enough to grow it with other developers and skilled positions.
 
 ## Customer research is a full-time job
 
