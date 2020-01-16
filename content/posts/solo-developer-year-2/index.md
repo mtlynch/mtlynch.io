@@ -3,7 +3,7 @@ title: My Second Year as a Solo Developer
 date: '2020-01-31'
 ---
 
-Two years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about how my first year went. It's been another year, so it's time for another update.
+Two years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about how my first year went. Today marks the end of my second full year, so it's time for another update.
 
 ## How I made and spent money
 
@@ -97,23 +97,27 @@ var myChart = new Chart(ctx, {
 | Expenses   | $23,133  | $9,657  | <font color="green">-$13,477 (-58%)</font> |
 | Net Profit | -$20,871 | -$2,402 | <font color="green">+$18,469 (+88%)</font> |
 
-Overall, I still finished the year at a loss. Compared to my first year, I improved substantially. I tripled revenue to $7.2k and cut expenses by more than half.
+My second year was a huge improvement financially. Profits increased by $18.5k! They were still negative, but try not to get too hung up on that. I tripled revenue to $7.2k and cut expenses by more than half, all of which gives me pride.
 
 ## How can you afford to keep losing money?
 
-Two years is a long time to run a business that loses money, so people are often confused about how I pay for this. Many assume that I take on freelance work, but I've never done that. I'm very fortunate to have the luxury of failing for so long, and it comes down to three main factors:
+People are often confused about my uncanny ability to remain unprofitable for so long and continue surviving, so I should clarify how that works. Many assume that I take on freelance work, but I've never done that.
 
-* Low expenses: I [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
-* High savings: It's hard to work for big software companies for 11 years without building a decently-sized nest egg.
-* Lucky investments: I've kept most of my savings in the S&P 500 throughout my career at a time when it's had historically strong runs, and I took small bets on cryptocurrency that paid off well.
+I'm very fortunate to have the luxury of failing for so long, and it comes down to three main factors:
+
+* **Low expenses**: I [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
+* **High savings**: It's hard to work for big software companies for 11 years without building a decently-sized nest egg.
+* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, a period of especially strong runs. My small bets on cryptocurrency also paid off well.
 
 ## Project by project
 
 ### [Zestful](https://zestfuldata.com)
 
-{{< img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" >}}
+{{< img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" caption="Zestful is a SaaS for parsing recipe ingredients." >}}
 
 Zestful launched in mid-2018 as my first attempt at software-as-a-service (SaaS). It allows developers to infer structure from recipe ingredients programmatically. Given an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` are the product, and `finely chopped` is a preparation step.
+
+After earning a big fat zero last year, 2019 finally brought Zestful some revenue. XX% of its revenue came from [a single enterprise sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom). That sale also represented XX% of my revenue for the year across all my businesses.
 
 | Income/Expense   | Amount    |
 |------------------|-----------|
@@ -122,19 +126,23 @@ Zestful launched in mid-2018 as my first attempt at software-as-a-service (SaaS)
 | Domains          | -$12    |
 | **Net profit**   | **$4,930‬** |
 
-After earning a flat zero last year, 2019 finally brought Zestful some revenue. XX% of its revenue came from [a single enterprise sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom). That sale also represented XX% of my revenue for the year across all my businesses.
+Zestful is in a strange position because companies who are already parsing ingredients never want to switch to Zestful. If they already have some solution in place, the cost of switching to a new API and potentially taking on a new external dependency is too high.
 
-Zestful is a tricky product to sell because when I pitch it to companies who have apps that could use it, they're not interest in switching. They've either rolled their own solution or they've decided ingredient parsing isn't that important to their business. The customers that buy Zestful are companies who are just starting to build their products. But that presents a challenge for me because how do you sell to companies who don't have a product for you to discover?
+{{< img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results" >}}
 
-The only way I've found is to invest in search engine optimization so that Google shows Zestful first for queries like "ingredient parsing."
+The people who pay for Zestful are the ones who are in the process of building a new product that involves processing unstructured ingredients. In those cases, using a managed service is cheaper than rolling their own solution and building infrastructure around it.
 
-* Answered a StackOverflow question relating to parsing ingredients
-* Wrote a series of blog posts explaining how I built Zestful
-* Adjusted the language on the Zestful homepage to mention relevant keywords
+So, how do you sell to companies if they don't even exist yet? I've invested in search engine optimization so Zestful ranks highly for queries like "ingredient parsing." To do this, I:
+
+* answered a StackOverflow question relating to parsing ingredients.
+* wrote a series of blog posts explaining how I built Zestful.
+* adjusted the language on the Zestful homepage to mention relevant keywords.
+
+TODO: link all those
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" >}}
+{{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="Is It Keto is a reference site for the keto diet." >}}
 
 Is It Keto gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It earns money through Amazon Affiliate links and Google AdSense display ads.
 
@@ -152,9 +160,11 @@ Is It Keto gives readers clear, simple answers about which foods are compatible 
 | Domain                                      | -$12   |
 | **Net profit**                              | **-$2,158** |
 
-At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019. I abandoned the site in XX, but I came back to it XX months later after realizing that it had grown on its own without me. XX% of Is It Keto's visits come from search engines, and I've never been able to connect any change in my search engine traffics to any action I'm taking. Google seemed to just send more and more traffic my way every month until August, at which point it decided that I had enough users and my referrals stayed roughly the same despite earning more backlinks and producing more content.
+At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019. I abandoned the site in XX, but I came back to it XX months later after realizing that it had grown on its own without me.
 
 {{< img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" hasBorder="True" maxWidth="650px" caption="Is It Keto traffic by month" >}}
+
+XX% of Is It Keto's visits come from search engines, and I've never been able to connect any change in my search engine traffics to any action I'm taking. Google seemed to just send more and more traffic my way every month until August, at which point it decided that I had enough users and my referrals stayed roughly the same despite earning more backlinks and producing more content.
 
 Is It Keto was also my biggest expense, as I outsourced a lot of my content writing. I spent far more than I should have because I didn't know what rates were reasonable and when to give up on an underperforming writer. I learned a lot from the process and wrote a wildly unpopular [guide to hiring content writers](/hiring-content-writers/) based on my experience.
 
@@ -162,26 +172,27 @@ Is It Keto was also my biggest expense, as I outsourced a lot of my content writ
 
 ### mtlynch.io *(this blog)*
 
-| Income/Expense | 2019 |
-|---------------------------------------------|---------|
-| Affiliate revenue                           | $374    |
-| Development                                 | -$460 |
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$769 |
-| Hosting                                     | -$150 |
-| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 |
-| [Editing](/editor/)                         | -$60 |
-| Domain                                      | -$60 |
-| **Net profit**                              | **-$1,265** |
+| Metric                                      | 2018    | 2019    | Change |
+|---------------------------------------------|---------|---------|--------|
+| Pageviews                                   | 981,587 | 273,817 |
+| Affiliate revenue                           | $XX     | $374    |
+| Development                                 | -$XX    | -$460   |
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$XX    | -$769   |
+| Hosting                                     | -$XX    | -$150   |
+| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$XX | -$140 |
+| [Editing](/editor/)                         | -$XX    | -$60 |
+| Domain                                      | -$XX    | -$60 |
+| **Net profit**                              | -$XX    | **-$1,265** |
 
 Revenue is down, which is fine because I deliberately don't try to earn money from this blog.
 
 In 2019, I struggled to connect with audiences more. Throughout 2017 and 2018, I found it easy to find an audience for an article. I'd write something not thinking about who would read it, share it afterward
 
-There are certain things where I know it's not going to be popular but I write it anyway. I feel that if I had read it when I needed it, I would be so grateful to find it. Posts like, "The Dumbest Task I Ever Outsourced," and,  "Eliminating Distractions from Social Media, Email, and StackOverflow," were meant to have broad appeal, but they were felt like a swing and a miss.
+There are certain things where I know it's not going to be popular but I write it anyway. I feel that if I had read it when I needed it, I would be so grateful to find it. Posts like, "The Dumbest Task I Ever Outsourced," and,  "Eliminating Distractions from Social Media, Email, and StackOverflow," were meant to have broad appeal, but they fell flat.
 
 ### What Got Done
 
-{{< img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" hasBorder="True" maxWidth="550px" >}}
+{{< img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" maxWidth="550px" caption="What Got Done is a task journaling app." >}}
 
 What Got Done is a reinvention of an internal Google tool that I liked. It allows people to enter free-form text about what they accomplished that week.
 
@@ -197,36 +208,29 @@ I figured that as long as I was building it, I should explore the possibility of
 
 ### Everything Else
 
-| Expense                   | Purpose   | Amount    | Note  |
-|---------------------------|-----------|-----------|-------|
-| Conference tickets, travel, and lodging | Networking and training | -$2,182 | |
-| [Xero](https://xero.com/) | Bookkeeping | -$151 |  |
-| Bench to Xero migration   | Bookkeeping | -$232 | |
-| [Circle CI](https://travis-ci.com) | Continuous integration | -$350 |  |
-| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |  |
-| Meetups, books | | -$XX | |
+| Expense                   | Purpose   | Amount    |
+|---------------------------|-----------|-----------|
+| Conferences               | Networking and training | -$2,182 |
+| [Xero](https://xero.com/) | Bookkeeping | -$151 |
+| Bench to Xero migration   | Bookkeeping | -$232 |
+| [Circle CI](https://travis-ci.com) | Continuous integration | -$350 |
+| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |
 
-Conferences are a big expense because travel and lodging is expensive, and the conferences that accept me tend to be smaller and don't offer significant travel assistance. I enjoy conferences and I feel that I learn from them, but I can't think of anything I learned from conferences this year that substantially improved my life or my business. I'll continue applying to conferences in 2020, but I'm limiting it to conferences that people have strongly recommended (e.g., MicroConf, PyCon) or conferences in cities that I'd like to visit.
+Conferences are a big expense because travel and lodging is expensive, and the conferences that accept me tend to be smaller and don't offer significant travel assistance.
 
-I saved $68/month by switching from from Travis to Circle, which worked out great because it turns out Circle is a much better product. I paid for another year of Coveralls, which I now regret after accepting that code coverage metrics have little value for early stage products. I canceled my Coveralls subscription for next year.
+I saved $68/month by switching from from Travis to Circle, which worked out great because it turns out Circle innovates more quickly and integrates Docker well. I paid for another year of Coveralls, which I now regret after accepting that code coverage metrics have little value for early stage products. I canceled my Coveralls subscription for next year.
 
 I also switched from managed bookkeeping with Bench to self-serve bookkeeping with Xero. I enjoyed Bench and have no love for Xero, but I couldn't justify spending an extra $1.5k/yr for concierge bookkeeping when my finances are so simple and consistent.
 
-### Notable cutbacks
-
-* Bench
-* Travis CI
-* Coveralls
-* GitHub Pro ($91)
-
 ## Grading my goals
 
-In last year's update, I 
-
+In last year's update, I gave myself four goals for the year, so I'll review how I performed against these goals.
 
 ### Achieve $500/month in revenue across my businesses
 
-**Grade**: A-
+**Grade**: B+
+
+I achieved this, though I do feel like I'm kind of cheating by relying on one huge outlier sale that put me at ~$4.4k in total revenue. Without it, I'd be at $440.85 for the month, which is more representative of revenue I expect to continue in 2020.
 
 ### Present talks at three software conferences
 
@@ -237,6 +241,10 @@ In last year's update, I
 | [NERD Summit](https://2019.nerdsummit.org/) |                                               | ["Modernize any Codebase through Tooling and Technique"](https://youtu.be/GfkVhr6SPz4)
 | [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)
 | [PyGotham 2019](https://2019.pygotham.org/) | [Notes](/retrospectives/pygotham-2019-notes/) | ["Why Good Developers Write Bad Tests"](https://youtu.be/ElzBGwyDzCc) |
+
+This went well. I was accepted into three software conferences, and I feel good about my presentations at all of them.
+
+I enjoy conferences and I feel that I learn from them, but I can't think of anything I learned from conferences this year that substantially improved my life or my business. I'll continue applying to and attending conferences in 2020, but I'm limiting it to conferences that people have strongly recommended (e.g., MicroConf, PyCon) or conferences in cities that I'd like to visit.
 
 ### Publish 12 blog posts.
 
@@ -303,17 +311,14 @@ I also saw how that's limiting. Because each customer yields only ~$XX in revenu
 
 Now that I'm entering my third year of this, I'm ready to take bigger bets so that if I'm successful, the business will earn enough to grow it with other developers and skilled positions.
 
-## Customer research is a full-time job
-
-One of the mistakes I made this year was treating customer research as if it's a project that should take up only 20% of my time. In [April](/retrospectives/2019/05/), I was developing What Got Done, interviewing copywriters about my email tool idea, and trying to get stone quarry operators to talk to me about their software needs. It was way too much.
-
-It seems like it shouldn't take very long because you're probably only talking to customers a very small percentage of the time, but you're doing lots of other things that do take time. You're researching the customers, researching the tools they use, transcribing notes from your meetings.
-
-During the research phase, customers are generally doing you the favor by taking the time to speak with you, so you need to give yourself enough time that you can minimize theirs and respond quickly. If they offer to make you an introduction, they're going to be a lot less enthusiastic about following through if you follow up three weeks later because you're busy exploring four different ideas simultaneously.
 
 ## I still love it
 
 Everything's great.
+
+## What's next
+
+TODO: Talk about WanderJest
 
 ## Goals for year three
 
