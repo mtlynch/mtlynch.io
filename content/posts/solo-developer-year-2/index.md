@@ -188,9 +188,7 @@ In 2019, I struggled to connect with audiences more. Throughout 2017 and 2018, I
 
 There are certain things where I know it's not going to be popular but I write it anyway. I feel that if I had read it when I needed it, I would be so grateful to find it. Posts like, "The Dumbest Task I Ever Outsourced," and,  "Eliminating Distractions from Social Media, Email, and StackOverflow," were meant to have broad appeal, but they fell flat.
 
-Revenue is down, which is fine because I don't try to earn money from this blog. If I'm going to link to a product anyway, I use an affiliate link, but I don't let affiliate links guide what I write.
-
-Many were surprised last year to see that I paid almost $4k on development for what seems like a no-frills blog. I hired an excellent freelancer, Andrew Newhouse, so that I'd be able to focus on the writing aspect as much as possible. When I wanted something like responsive images, I asked Andrew to [research options](https://github.com/mtlynch/mtlynch.io/issues/116) and [implement the change](https://github.com/mtlynch/mtlynch.io/pull/126). In 2019, Andrew had less time for freelance work, and I got better at web design from my other projects. For things I used to need Andrew's help on, it became faster for me to just do myself.
+Revenue is down, which is fine because I don't try to earn money from this blog. If I'm going to link to a product anyway, I use an affiliate link, but I don't let affiliate links guide what I write. Costs are down, mainly because Andrew Newhouse, the excellent freelance developer who manages the coding, has had less time for freelancing, so I've taken on more of the development myself. Although I prefer to focus on the writing when it comes to my blog, I've gotten better at web development, so it's become easier for me to do the things Andrew used to do.
 
 ### What Got Done
 
@@ -265,21 +263,25 @@ Depending on how you count, I either published 9 or 13 blog posts in 2019. I had
 
 One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paying customers. How could my prices be too low if nobody was buying?
 
-Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company would contact me saying that they were interested in using Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first real customer, I'd spend the next couple weeks feverishly implementing the feature they wanted. Then, "Oh, yeah, we decided not to move forward with that project."
+Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company would contact me saying that they were interested in using Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first real customer, I'd spend the subsequent week feverishly implementing the feature they wanted. I'd proudly deliver, "Oh,yeah, that was for a project we actually decided not to pursue."
 
-It cost them nothing to ask for features, but it was extremely time-consuming for me to spend time in meetings with them and implementing their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I was afraid to refuse because what if one of them followed through and ended up paying me thousdands of dollars per month if I add their pet feature.
+It cost them nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I was afraid to refuse because what if one of them followed through and ended up paying me thousdands of dollars per month if I add their pet feature.
 
-When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate prices. When I bumped my rates 6.5x to $0.02, almost everyone asked if I could offer volume discounts. Because they were asking for volume discounts, it forced them to tell me how much data they needed to process. Then, if they said they'd buy if I implemented their pet feature, I gave them this line:
+When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate prices. When I bumped my rates 6.5x to $0.02 per request, everyone asked if I could offer volume discounts. Because they were asking for volume discounts, it forced them to tell me how much data they needed to process. Then, if they said they'd buy if I implemented their pet feature, I gave them this line:
 
 >You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
 
-I've never been burned on a feature request since then. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages unserious customers from setting up meetings with me to tell me about their long feature wishlists. The customers who ended up purchasing enterprise plans from Zestful had no feature requests, and those deals closed within days of them contacting me.
+I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages customers from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise Zestful plans had no feature requests, and those deals closed in a matter of days.
 
 ## Stop outsourcing when it slows you down, not to inflate profits
 
-This year, I substantially cut back on the amount of work I outsourced to freelancers, but not for the reason you might assume. I think people get too obsessed with paper profits and discount the value of their time.
+I think popular opinion about outsourcing is wrong. I happily outsource if it saves me time, and I don't care if it deflates my profits. I'm implicitly losing around $300k a year by not taking a big company software job, so if I spend an extra $2-3k here and there so that a freelancer can save a month of my time, I'm happy to do it.
 
-Take Is It Keto. It's basically a content site. Hiring someone takes a lot of time. I have to write a job description, advertise it, screen candidates, negotiate compensation, then train them. For writers on Is It Keto, it usually took three or four months before the total amount of time I saved by outsourcing is a net positive.
+That said, I've discovered that hiring freelancers for new products almost always slows me down. When I'm developing a brand new company, assumptions change so quickly and I so often change direction and take on tasks I didn't expect that hiring a freelancer just doesn't work. Freelancers are great at doing well-defined tasks at a consistent rate.
+
+Take Is It Keto. It's basically a content site. Hiring someone takes a lot of time. I have to create a job description, advertise it, screen candidates, negotiate compensation, then train them. It typically took three or four months before a writer saved me more time than I had spent hiring and training them.
+
+For a new business, four months is an eternity. By the four-month mark, I've already
 
 TODO: Graph of time spent vs. time saved
 
