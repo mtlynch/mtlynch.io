@@ -1,6 +1,6 @@
 baseurl = "https://mtlynch.io"
 title = "mtlynch.io"
-theme = "hugo-coder"
+theme = "hugo-coder-mtlynch"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
