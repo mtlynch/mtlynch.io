@@ -107,7 +107,7 @@ I'm very fortunate to have the luxury of failing for so long, and it's possible 
 
 * **Low expenses**: I [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
 * **High savings**: It's hard to work for big software companies for 11 years without building a decently-sized nest egg.
-* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, a period of especially strong runs. My small bets on cryptocurrency also paid off well.
+* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs runs. My small bets on cryptocurrency also paid off well.
 
 ## Project by project
 
@@ -146,21 +146,21 @@ TODO: link all those
 
 {{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="Is It Keto is a reference site for the keto diet." >}}
 
-Is It Keto gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It earns money through Amazon Affiliate links and Google AdSense display ads.
+Is It Keto was my attempt to earn money from Amazon Affiliate sales. The site gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through affiliate links and Google AdSense display ads.
 
-| Income/Expense                              | 2019     |
-|---------------------------------------------|----------|
-| Pageviews                                   | 521,913  |
-| Food corpus size                            | XX       |
-| Amazon Affiliate revenue                    | $1,315  |
-| Google AdSense revenue                      | $940    |
-| Meal plan sales                             | $24     |
-| [Content writing](/hiring-content-writers/) | -$3,845   |
-| Social media management                     | -$314   |
-| Graphic design                              | -$163   |
-| Hosting                                     | -$103   |
-| Domain                                      | -$12   |
-| **Net profit**                              | **-$2,158** |
+| Income/Expense                              | 2018    | 2019    |
+|---------------------------------------------|---------|---------|
+| Pageviews                                   |         | 521,913 |
+| Food corpus size                            |         | XX      |
+| Amazon Affiliate revenue                    |         | $1,315  |
+| Google AdSense revenue                      | N/A     | $940    |
+| Meal plan sales                             | N/A     | $24     |
+| [Content writing](/hiring-content-writers/) | $0      | -$3,845 |
+| Social media management                     | $0      | -$314   |
+| Graphic design                              |         | -$163   |
+| Hosting                                     | $0      | -$103   |
+| Domain                                      | -$12    | -$12    |
+| **Net profit**                              |         | **<font color="red">-$2,158</font>** |
 
 At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019. I abandoned the site in XX, but I came back to it XX months later after realizing that it had grown on its own without me.
 
@@ -168,7 +168,7 @@ At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019.
 
 XX% of Is It Keto's visits come from search engines, but I've never been able to connect any change I implement to any fluctuation in search engine traffic. There were months when I added lots of content, [tuned page titles and headings](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. At other points, I completely ignored the site for months and Google traffic grew the entire time. 
 
-Is It Keto was also my biggest expense, as I outsourced a lot of my content writing. I spent far more than I should have because I didn't know what rates were reasonable and when to give up on an underperforming writer. I learned a lot from the process and wrote a seemingly too-niche-to-be-popular [guide to hiring content writers](/hiring-content-writers/) based on my experience.
+Is It Keto was also my biggest expense, as I outsourced much of the writing. I spent far more than I should have because I didn't know what rates were reasonable and when to give up on an underperforming writer. I learned a lot from the process and wrote a seemingly too-niche-to-be-popular [guide to hiring content writers](/hiring-content-writers/) based on my experience.
 
 ### mtlynch.io *(this blog)*
 
@@ -182,13 +182,11 @@ Is It Keto was also my biggest expense, as I outsourced a lot of my content writ
 | [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | -$140 |
 | [Editing](/editor/)                         | -$75    | -$60 |
 | Domain                                      | -$60    | -$60 | - |
-| **Net profit**                              | **-$3,835** | **-$1,265** | +$XX (XX%) |
+| **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | +$XX (XX%) |
 
-In 2019, I struggled to connect with audiences more. Throughout 2017 and 2018, I found it easy to find an audience for an article. I'd write something not thinking about who would read it, share it afterward
+Pageviews are down substantially, which is to be expected. My quitting Google post received 500k pageviews alone last year, so it would be surprising if I could write another hit like that. Still, I struggled to find readers. Throughout 2017 and 2018, many of my articles became popular without me putting much though into subject matter or promotion. I'd write the article then find an appropriate community to share it with afterwards. In 2019, I found it hard to do that. It might be because my writing shifted from general programmer things to more niche business founder things, and people are more welcoming of the former.
 
-There are certain things where I know it's not going to be popular but I write it anyway. I feel that if I had read it when I needed it, I would be so grateful to find it. Posts like, "The Dumbest Task I Ever Outsourced," and,  "Eliminating Distractions from Social Media, Email, and StackOverflow," were meant to have broad appeal, but they fell flat.
-
-Revenue is down, which is fine because I don't try to earn money from this blog. If I'm going to link to a product anyway, I use an affiliate link, but I don't let affiliate links guide what I write. Costs are down, mainly because Andrew Newhouse, the excellent freelance developer who manages the coding, has had less time for freelancing, so I've taken on more of the development myself. Although I prefer to focus on the writing when it comes to my blog, I've gotten better at web development, so it's become easier for me to do the things Andrew used to do.
+Revenue is down, which is fine because I don't go out of my way to earn money from this blog. My development costs fell dramatically. This is partly due to the site's freelance developer having less time, but also my increased comfort with web development means that it's no longer so time-consuming for me to add features myself.
 
 ### What Got Done
 
@@ -202,9 +200,9 @@ What Got Done is a tool for recording and sharing weekly work accomplishments. I
 | Domain                                      | -$12 |
 | **Net profit**                              | **-$43** |
 
-I never thought What Got Done was a brilliant business idea, but I was feeling burned out after failing to grow Is It Keto for months. What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without getting mired of leaky abstraction.
+I never thought What Got Done was a brilliant business idea, but I was feeling burned out after failing for months to turn a profit on Is It Keto (TODO: link). What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without struggling to navigate through a jungle of leaky abstraction.
 
-I figured that as long as I was building it, I should explore the possibility of making it into a business. I interviewed several businesses to see if they'd be interested in a tool like What Got Done, but the general sentiment was that everyone is satisfied solving this problem with a dedicated Slack channel.
+I figured that as long as I was building What Got Done, I should explore the possibility of making it into a business. After interviews with several businesses, nobody seemed to feel that What Got Done fit them better than a dedicated Slack channel (TODO: link), so I moved on.
 
 ### Everything Else
 
@@ -212,13 +210,13 @@ I figured that as long as I was building it, I should explore the possibility of
 |---------------------------|-----------|-----------|
 | Conferences               | Networking and training | -$2,182 |
 | [Xero](https://xero.com/) | Bookkeeping | -$151 |
-| Bench to Xero migration   | Bookkeeping | -$232 |
-| [Circle CI](https://travis-ci.com) | Continuous integration | -$350 |
+| Bench to Xero migration (freelance accountant)   | Bookkeeping | -$232 |
+| [Circle CI](https://circleci.com) | Continuous integration | -$350 |
 | [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |
 
 Conferences are a big expense because travel and lodging is expensive, and the conferences that accept my speaking proposals tend to have minimal budgets for travel assistance.
 
-I saved $68/month by switching from from Travis to Circle, which worked out great because Circle adds features quicker and integrates better with Docker. I paid for another year of Coveralls, which I now regret after accepting that code coverage metrics have little value for early stage products. I've since disabled auto-renew.
+I saved $68/month by switching from from Travis to Circle, which worked out great because Circle adds features quicker and integrates better with Docker. I paid for another year of Coveralls, though I now regret after accepting that code coverage metrics have little value for early stage products. I've since disabled auto-renew.
 
 I also switched from managed bookkeeping with [Bench](https://bench.co) to self-serve bookkeeping with Xero. I enjoyed Bench and have no love for Xero, but I couldn't justify spending an extra $1.5k/yr for concierge bookkeeping when my finances are so simple and consistent.
 
@@ -230,7 +228,7 @@ In last year's update, I gave myself four goals for the year. Here's how I grade
 
 **Grade**: B+
 
-I achieved this, though I do feel like I'm kind of cheating by relying on one huge outlier sale that put me at ~$4.4k in total revenue for December. Without it, I'd be at $440.85 in total revenue for the month, which is more representative of revenue I expect to continue in 2020.
+I achieved this, though I'm kind of cheating by relying on one huge outlier sale in December that put me at ~$4.4k in total revenue for the month. Without it, I'd be at $441 in total revenue for December, which is more representative of revenue I expect to continue in 2020.
 
 ### Present talks at three software conferences
 
@@ -246,13 +244,15 @@ Three software conferences accepted my speaking proposals, and I'm proud of my p
 
 I enjoy conferences and pick up useful information by attending, but if I'm being honest, there's nothing I took from any of the conferences this year that substantially improved my life or my business. Between travel, time spent preparing my talks, and time at the conference itself, I spent around six weeks of full-time work to attend these three conferences.
 
-I'll continue applying to and attending conferences in 2020, but I'm limiting it to conferences that people have strongly recommended (e.g., MicroConf, PyCon) and events near friends I'd like to visit.
+I'll continue applying to and attending conferences in 2020, but I'm limiting it to conferences that people have strongly recommended or in cities near friends I'd like to visit.
 
 ### Publish 12 blog posts.
 
 **Grade**: B
 
 Depending on how you count, I either published 9 or 13 blog posts in 2019. I had nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/).
+
+
 
 ### Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
 
@@ -263,21 +263,27 @@ Depending on how you count, I either published 9 or 13 blog posts in 2019. I had
 
 One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paying customers. How could my prices be too low if nobody was buying?
 
-Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company would contact me saying that they were interested in using Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first real customer, I'd spend the subsequent week feverishly implementing the feature they wanted. I'd proudly deliver, "Oh,yeah, that was for a project we actually decided not to pursue."
+Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company would contact me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big customer, I'd work feverishly to implement the feature they wanted. A week later, I'd proudly deliver it to them.
 
-It cost them nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I was afraid to refuse because what if one of them followed through and ended up paying me thousdands of dollars per month if I add their pet feature.
+"Oh,yeah," they'd respond. "That was for a project we actually decided not to pursue."
 
-When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate prices. When I bumped my rates 6.5x to $0.02 per request, everyone asked if I could offer volume discounts. Because they were asking for volume discounts, it forced them to tell me how much data they needed to process. Then, if they said they'd buy if I implemented their pet feature, I gave them this line:
+It cost them nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I could refuse, but what if they truly would spend thousands per month if I met their needs?
+
+When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate prices. When I bumped my rates 6.5x to $0.02 per request, everyone who approached me asked if I could offer volume discounts. That forced them to tell me how much data they needed to process. When people say they'll buy if I add their pet feature, I give them this line:
 
 >You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
 
-I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages customers from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise Zestful plans had no feature requests, and those deals closed in a matter of days.
+I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise Zestful plans had no feature requests, and those deals closed in a matter of days.
 
 ## Stop outsourcing when it slows you down, not to inflate profits
 
-I think popular opinion about outsourcing is wrong. I happily outsource if it saves me time, and I don't care if it deflates my profits. I'm implicitly losing around $300k a year by not taking a big company software job, so if I spend an extra $2-3k here and there so that a freelancer can save a month of my time, I'm happy to do it.
+When I write online about my businesses, one of the things I get a lot of flak about is that I often spend more on freelancers than I earn in revenue. I stubbornly refuse to accept this criticism and continue to happily outsource if it saves me time. I'm implicitly losing ~$400k a year by not taking a big company software job, so if I can save a month of work by spending an extra $2-3k here and there, I gladly do it.
 
-That said, I've discovered that hiring freelancers for new products almost always slows me down. When I'm developing a brand new company, assumptions change so quickly and I so often change direction and take on tasks I didn't expect that hiring a freelancer just doesn't work. Freelancers are great at doing well-defined tasks at a consistent rate.
+The problem is that early in a company's life, it's hard to save time by hiring a freelancer. Freelancers are the solution when you think to yourself, "I've done this task 10 times, and I'm going to do it 50 more times."
+
+ When I'm developing a brand new company, assumptions change so quickly and I so often change direction and take on tasks I didn't expect that hiring a freelancer just doesn't work. But early in a product's life, that's almost never true unless you instantly hit a homerun and landed on the exact right idea.
+
+It gives you an inertia that you don't necessarily want.
 
 Take Is It Keto. It's basically a content site. Hiring someone takes a lot of time. I have to create a job description, advertise it, screen candidates, negotiate compensation, then train them. It typically took three or four months before a writer saved me more time than I had spent hiring and training them.
 
@@ -291,11 +297,11 @@ People are obsessed with profits. It seems crazy to
 
 It is a bad idea because it bogs you down.
 
-Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX..
+Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX.
 
 ## Pursuing the right idea means rejecting the wrong ones
 
-One of the best lessons I learned from my friend David Toth is that founders tend to undervalue the importance of idea screening. Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
+One of the best lessons I learned from my friend David Toth is that founders tend to undervalue idea screening. Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
 
 David's rule of thumb is that before he pursues an idea, he comes up with at least 10 concepts so that he can choose the best one.
 
