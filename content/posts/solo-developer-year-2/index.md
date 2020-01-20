@@ -275,30 +275,6 @@ When I took Cory's advice and raised prices, it changed the conversation in a wa
 
 I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise Zestful plans had no feature requests, and those deals closed in a matter of days.
 
-## Stop outsourcing when it slows you down, not to inflate profits
-
-When I write online about my businesses, one of the things I get a lot of flak about is that I often spend more on freelancers than I earn in revenue. I stubbornly refuse to accept this criticism and continue to happily outsource if it saves me time. I'm implicitly losing ~$400k a year by not taking a big company software job, so if I can save a month of work by spending an extra $2-3k here and there, I gladly do it.
-
-The problem is that early in a company's life, it's hard to save time by hiring a freelancer. Freelancers are the solution when you think to yourself, "I've done this task 10 times, and I'm going to do it 50 more times."
-
- When I'm developing a brand new company, assumptions change so quickly and I so often change direction and take on tasks I didn't expect that hiring a freelancer just doesn't work. But early in a product's life, that's almost never true unless you instantly hit a homerun and landed on the exact right idea.
-
-It gives you an inertia that you don't necessarily want.
-
-Take Is It Keto. It's basically a content site. Hiring someone takes a lot of time. I have to create a job description, advertise it, screen candidates, negotiate compensation, then train them. It typically took three or four months before a writer saved me more time than I had spent hiring and training them.
-
-For a new business, four months is an eternity. By the four-month mark, I've already
-
-TODO: Graph of time spent vs. time saved
-
-Even this blog, I used to deliberately outsource all the coding so that I could focus on writing. I recently 
-
-People are obsessed with profits. It seems crazy to 
-
-It is a bad idea because it bogs you down.
-
-Just because I outsource something doesn't make it worth outsourcing. I was excited about delegating all of Is It Keto's Twitter to an overseas freelancer, but I realized I was paying $XX for every visitor from Twitter and only earning back $XX.
-
 ## Pursuing the right idea means rejecting the wrong ones
 
 One of the best lessons I learned from my friend David Toth is that founders tend to undervalue idea screening. Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
