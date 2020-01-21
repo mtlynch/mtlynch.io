@@ -106,7 +106,7 @@ People are often confused about my uncanny ability to remain unprofitable for so
 I'm very fortunate to have the luxury of failing for so long, and it's possible due to three main factors:
 
 * **Low expenses**: I [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
-* **High savings**: It's hard to work for big software companies for 11 years without building a decently-sized nest egg.
+* **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
 * **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs runs. My small bets on cryptocurrency also paid off well.
 
 ## Project by project
@@ -179,9 +179,9 @@ Is It Keto was also my biggest expense, as I outsourced much of the writing. I s
 | Development                                 | -$3,896 | -$460   |
 | [Illustrations](/how-to-hire-a-cartoonist/) | -$599    | -$769   |
 | Hosting                                     | -$309    | -$150   |
-| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | -$140 |
+| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | -$140 | +0 (0%) |
 | [Editing](/editor/)                         | -$75    | -$60 |
-| Domain                                      | -$60    | -$60 | - |
+| Domain                                      | -$60    | -$60 | +0 (0%) |
 | **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | +$XX (XX%) |
 
 Pageviews are down substantially, which is to be expected. My quitting Google post received 500k pageviews alone last year, so it would be surprising if I could write another hit like that. Still, I struggled to find readers. Throughout 2017 and 2018, many of my articles became popular without me putting much though into subject matter or promotion. I'd write the article then find an appropriate community to share it with afterwards. In 2019, I found it hard to do that. It might be because my writing shifted from general programmer things to more niche business founder things, and people are more welcoming of the former.
@@ -252,12 +252,11 @@ I'll continue applying to and attending conferences in 2020, but I'm limiting it
 
 Depending on how you count, I either published 9 or 13 blog posts in 2019. I had nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/).
 
-
-
 ### Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
 
 **Grade**: A
 
+I'm not a Vue expert, but I'm "conversational" and can build sites quickly without getting stuck on the framework itself. After years of banging my head against the wall trying to use Angular, I'm happy to have finally switched over to a framework that feels appropriate for solo developers.
 
 ## Raise prices, even if nobody's buying
 
@@ -277,7 +276,9 @@ I've never been burned on a feature request since. The prices are high enough th
 
 ## Pursuing the right idea means rejecting the wrong ones
 
-One of the best lessons I learned from my friend David Toth is that founders tend to undervalue idea screening. Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
+One of the best lessons I learned from my friend David Toth is that founders tend to undervalue idea screening. As lean manufacturing techniques beccome more popular with startups, people think of building a minimum viable product as cheap. But it still usually means weeks or months of work.
+
+ Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
 
 David's rule of thumb is that before he pursues an idea, he comes up with at least 10 concepts so that he can choose the best one.
 
@@ -289,7 +290,7 @@ I'm worse at David at generating ideas, but I took this advice to heart. Combine
 
 The exception was What Got Done, which I did build without validating the idea, but mainly to meet my goal of learning a JavaScript framework. But I figured that as long as I was building it, I might as well see if there's a viable business there, and it seemed like the answer was no..
 
-## Start taking bigger swings
+## Take bigger swings
 
 One of the other changes in my thinking was that I decided to start taking bigger swings. Feedback I saw last year was that $500/month is too low a target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
 
@@ -304,19 +305,32 @@ Now that I'm entering my third year of this, I'm ready to take bigger bets so th
 
 ## I still love it
 
-Everything's great.
+When people find out that I'm not making money, they worry I'm disappointed. I've talked to other solo developers who experience burnout
+
+It's going how I expected it. I expected to fail several times before landing on a good idea, and I expected my attempts to get better each time, and that seems to be what's happening.
+
+I still love the independence of it. I love being in charge of my entire day and having the freedom to completely change direction or start over when it feels right.
 
 ## What's next
 
-TODO: Talk about WanderJest
+In January, I launched a new website caled [WanderJest](https://wanderjest.com):
+
+TODO: WanderJest screenshot
+
+It's a resource for comedy fans and performers. It's a tool I've wanted for a long time because there aren't good ways to find local comedy events. Comedy show listings are scattered amongst different tiket sellers, comedy club websites, and Facebook groups. My first strategy for earning money is making affiliate deals with local comedy theaters and schools.
+
+I'm piloting in my local area of Western Mass, but I'm soon expanding it to other areas.
 
 ## Goals for year three
 
 Here's what I hope to accomplish in my third year as a solo developer:
 
 * Earn $20,000 in revenue across my businesses.
+  * Setting a per-year target feels more sensible than targeting a per-month rate by the end of the year. I tripled revenues in 2019, so $20k assumes that I can roughly triple revenues again.
 * Publish 10 blog posts.
+  * This gives me time for one per month with some room for longer posts or taking a month off to prepare a conference presentation.
 * Learn one new technology.
+  * It doesn't have to benefit my business, but it would be cool if it did. I've been interested in learning more about Rust or Kubernetes.
 
 ---
 
