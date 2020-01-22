@@ -126,13 +126,11 @@ After earning a big fat zero last year, Zestful finally brought in some revenue 
 | Domains          | -$12    |
 | **Net profit**   | **$4,930‬** |
 
-Zestful is in a strange position because companies who are already parsing ingredients never want to switch to Zestful. If they already have a solution in place, the cost of switching to a new API and taking on a new external dependency is too high.
+Zestful is in a strange position because companies who are already parsing ingredients never want to switch to Zestful. If they already have a solution in place, the cost of switching to a new API and taking on a new external dependency is too high. All of Zestful's customers are companies building a brand new product.
 
 {{< img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results" >}}
 
-The people who pay for Zestful are developers building a brand new product. In those cases, using a managed service is cheaper than rolling their own solution and building infrastructure around it.
-
-So, how do you sell to companies if they don't even exist yet? My strategy has been to invest in search engine optimization so that Zestful ranks highly for queries like "ingredient parsing."
+How do you sell to companies if they don't even exist yet? My strategy has been to invest in search engine optimization so that Zestful ranks highly for queries like "ingredient parsing."
 
 To attract visitors from Google, I:
 
@@ -258,7 +256,9 @@ Depending on how you count, I either published 9 or 13 blog posts in 2019. I had
 
 I'm not a Vue expert, but I'm "conversational" and can build sites quickly without getting stuck on the framework itself. After years of banging my head against the wall trying to use Angular, I'm happy to have finally switched over to a framework that feels appropriate for solo developers.
 
-## Raise prices, even if nobody's buying
+## Lessons learned
+
+### Raise prices, even if nobody's buying
 
 One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paying customers. How could my prices be too low if nobody was buying?
 
@@ -274,7 +274,7 @@ When I took Cory's advice and raised prices, it changed the conversation in a wa
 
 I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise Zestful plans had no feature requests, and those deals closed in a matter of days.
 
-## Pursuing the right idea means rejecting the wrong ones
+### Pursuing the right idea means rejecting the wrong ones
 
 One of the best lessons I learned from my friend David Toth is that founders tend to undervalue idea screening. As lean manufacturing techniques beccome more popular with startups, people think of building a minimum viable product as cheap. But it still usually means weeks or months of work.
 
@@ -290,43 +290,40 @@ I'm worse at David at generating ideas, but I took this advice to heart. Combine
 
 The exception was What Got Done, which I did build without validating the idea, but mainly to meet my goal of learning a JavaScript framework. But I figured that as long as I was building it, I might as well see if there's a viable business there, and it seemed like the answer was no..
 
-## Take bigger swings
+### Take bigger swings
 
-One of the other changes in my thinking was that I decided to start taking bigger swings. Feedback I saw last year was that $500/month is too low a target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
+Last year, when I set my goal to $500/month in revenue, some commenters encouraged me to set a higher target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
 
-That's true, but I needed the low target to get started. If I made a product that costs $50k, chances are that I'd fail, but it would be hard to figure out why I failed. Also, I'd probably have to invest a lot more time into the idea before I discovered it failed.
+Looking back, I feel that $500/month was a good target. Is It Keto felt like a nice "beginner business." It was fun to work on because it was a fairly simple system. If I could attract visitors, those visitors would generate revenue through ads or affiliate purchases. As my friend David Toth put it, I had "levers to work with." When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if it was only fractions of a penny.
 
-Is It Keto was a great beginner business because I could see how my investment translated to revenue. When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if by a fraction of a penny each.
+But I also saw how that's limiting. Even now, each customer yields only ~$0.015 in revenue, which limits the tools I can use. Paid advertising is off the table, because I've never seen any advertising channel that costs a penny per visitor. I'd love to bring on an employee, but with per-user revenue so low, it's hard for any employee to justify their cost. If I paid a freelancer $200/month to help grow the site, they'd have to bring in ~13k additional visitors, a 50% increase from my current user base.
 
-I also saw how that's limiting. Because each customer yields only ~$XX in revenue, it limits the tools I can use. I can't use any kind of paid advertising because no channel is going to sell me visitors for less than $XX per visitor. Toward the end of the year, I found a college student who produced content for the site at $15/hr, but I wasn't even sure if that was net profitable.
-
-Now that I'm entering my third year of this, I'm ready to take bigger bets so that if I'm successful, the business will earn enough to grow it with other developers and skilled positions.
-
+Now that I'm entering my third year of this, I'm ready to take bigger bets. Is It Keto gave me confidence in different aspects of running a business, so I'm not as worried that I'm screwing things up. I'm aiming for projects where success means high enough margins that I can afford to grow it by hiring one or two other people to join me part time.
 
 ## I still love it
 
-When people find out that I'm not making money, they worry I'm disappointed. I've talked to other solo developers who experience burnout
+When people find out that I'm not making money, they worry I'm disappointed about the outcome of leaving my job. It's common for other solo developers to experience burnout after a year or two, but I've been fortunate in never feeling that way. A big part of this is my existing financial security, so I never worry about running out of money. And I also expected it to take several years before I landed on a business that earned serious profits, so I'm not disappointed.
 
-It's going how I expected it. I expected to fail several times before landing on a good idea, and I expected my attempts to get better each time, and that seems to be what's happening.
+Every day, I come downstairs and have breakfast with my girlfriend. When she leaves, I write for 60-90 minutes.  My house is at the end of a dead-end road, so it's perfectly quiet. After writing, I map out how to spend the rest of my day. I don't work after dinner or on the weekends. If I feel sleepy at 3pm, I take a nap and don't have to worry that my co-workers think I'm not pulling my weight.
 
-I still love the independence of it. I love being in charge of my entire day and having the freedom to completely change direction or start over when it feels right.
+Before I quit, the part of working for myself that I most fantasized about was just the independence of it. And it turns out that it's as satisfying as I imagined. I love being in charge of my entire day and having the freedom to completely change direction on my businesses or start over when it feels right.
 
 ## What's next
 
-In January, I launched a new website caled [WanderJest](https://wanderjest.com):
+The project that I hope to focus on for a large portion of year three is [WanderJest](https://wanderjest.com), a website I launched in January.
 
 TODO: WanderJest screenshot
 
-It's a resource for comedy fans and performers. It's a tool I've wanted for a long time because there aren't good ways to find local comedy events. Comedy show listings are scattered amongst different tiket sellers, comedy club websites, and Facebook groups. My first strategy for earning money is making affiliate deals with local comedy theaters and schools.
+WanderJest is a resource for comedy performers and their fans. Comedy show listings are currently scattered amongst Facebook groups, comedy club websites, and ticket sellers like TicketMaster or EventBrite. My hope is for WanderJest to unify these disparate event listings and make it easier for performers to attract audiences. Basically, <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 
-I'm piloting in my local area of Western Mass, but I'm soon expanding it to other areas.
+I'm piloting it in my home area of Western Mass, but I'll be expanding it to other areas soon.
 
 ## Goals for year three
 
 Here's what I hope to accomplish in my third year as a solo developer:
 
 * Earn $20,000 in revenue across my businesses.
-  * Setting a per-year target feels more sensible than targeting a per-month rate by the end of the year. I tripled revenues in 2019, so $20k assumes that I can roughly triple revenues again.
+  * Setting a per-year target feels more sensible than targeting a per-month rate by the end of the year. I tripled revenues in 2019, so would mean tripling again.
 * Publish 10 blog posts.
   * This gives me time for one per month with some room for longer posts or taking a month off to prepare a conference presentation.
 * Learn one new technology.
