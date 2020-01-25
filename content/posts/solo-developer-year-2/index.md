@@ -1,7 +1,11 @@
 ---
 title: My Second Year as a Solo Developer
 date: '2020-01-31'
+images:
+- solo-developer-year-2/cover.jpg
 ---
+
+{{< img src="cover.jpg" alt="My second year as a solo developer (cover image)" >}}
 
 Two years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about how my first year went. Today marks the end of my second full year, so it's time for another update.
 
