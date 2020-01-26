@@ -9,10 +9,14 @@
 {{ $image := .Page.Resources.GetMatch $srcRaw }}
 {{ $src := $image.RelPermalink }}
 
-{{ if (and $hasBorder $maxWidth) }}
+{{- /* If maxWidth is set to match the image size, but it also has a border, add
+  2px to the maxWidth to account for the 1px border on either side. */ -}}
+{{ if strings.HasSuffix $maxWidth "px" }}
   {{ $maxWidthPixels := int (replace $maxWidth "px" "") }}
-  {{ $maxWidthPixels := add $maxWidthPixels 1 }}
-  {{ $maxWidth = printf "%dpx" $maxWidthPixels }}
+  {{ if (and $hasBorder (eq $maxWidthPixels $image.Width)) }}
+    {{ $maxWidthPixels := add $maxWidthPixels 2 }}
+    {{ $maxWidth = printf "%dpx" $maxWidthPixels }}
+  {{ end }}
 {{ end }}
 
 {{ if $caption }}
