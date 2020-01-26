@@ -82,7 +82,7 @@ var myChart = new Chart(ctx, {
     options: {
       tooltips: {
         callbacks: {
-          label: function(tooltipItems, data) {
+          label: function(tooltipItems) {
             let original = parseFloat(tooltipItems.yLabel).toLocaleString();
             if (original[0] === "-") {
               return " -$" + original.substring(1);
@@ -91,6 +91,15 @@ var myChart = new Chart(ctx, {
           },
         },
       },
+      scales: {
+            yAxes: [{
+                ticks: {
+                    callback: function(value) {
+                        return '$' + value;
+                    }
+                }
+            }]
+        }
     },
 });
 </script>
