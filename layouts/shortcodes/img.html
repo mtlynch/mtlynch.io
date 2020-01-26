@@ -9,6 +9,12 @@
 {{ $image := .Page.Resources.GetMatch $srcRaw }}
 {{ $src := $image.RelPermalink }}
 
+{{ if (and $hasBorder $maxWidth) }}
+  {{ $maxWidthPixels := int (replace $maxWidth "px" "") }}
+  {{ $maxWidthPixels := add $maxWidthPixels 1 }}
+  {{ $maxWidth = printf "%dpx" $maxWidthPixels }}
+{{ end }}
+
 {{ if $caption }}
 <figure
   class="img{{ if $align }} align-{{ $align }}{{ end }}"
