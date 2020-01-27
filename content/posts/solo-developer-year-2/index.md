@@ -114,13 +114,11 @@ My second year was a huge improvement financially. I increased profits by $18.5k
 
 ## How can you afford to keep losing money?
 
-People are often confused about my uncanny ability to remain unprofitable for so long and continue surviving. They assume that I fund my money-losing businesses with freelance work, but my businesses are my full-time job.
-
-I'm very fortunate to have the luxury of failing for so long, and it's possible due to three main factors:
+People are often confused about my uncanny ability to remain unprofitable for so long. They assume that I fund my money-losing businesses with freelance work, but the truth is that I put 100% of my working hours into my non-lucrative businesses. This is possible due to three main factors:
 
 * **Low expenses**: I [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
 * **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
-* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs runs. My small bets on cryptocurrency also paid off well.
+* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
 
 ## Project by project
 
@@ -128,7 +126,7 @@ I'm very fortunate to have the luxury of failing for so long, and it's possible 
 
 {{< img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" caption="Zestful is a SaaS for parsing recipe ingredients." >}}
 
-Zestful launched in mid-2018 as my first attempt at software-as-a-service (SaaS). It allows developers to infer structure from recipe ingredients programmatically. Given an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
+Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to understand the structure of recipe ingredients. Given an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
 
 After earning a big fat zero last year, Zestful finally brought in some revenue in 2019. XX% of its revenue came from [a single enterprise sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom). That sale also represented XX% of my revenue for the year across all my businesses.
 
@@ -139,25 +137,17 @@ After earning a big fat zero last year, Zestful finally brought in some revenue 
 | Domains          | -$12    |
 | **Net profit**   | **$4,930‬** |
 
-Zestful is in a strange position because companies who are already parsing ingredients never want to switch to Zestful. If they already have a solution in place, the cost of switching to a new API and taking on a new external dependency is too high. All of Zestful's customers are companies building a brand new product.
-
 {{< img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results" >}}
+
+Zestful is in a strange position because companies who are already parsing ingredients never want to switch to Zestful. If they already have a solution in place, the cost of switching to a new API and taking on a new external dependency is too high. All of Zestful's customers are companies building a brand new product.
 
 How do you sell to companies if they don't even exist yet? My strategy has been to invest in search engine optimization so that Zestful ranks highly for queries like "ingredient parsing."
 
-To attract visitors from Google, I:
-
-* answered a StackOverflow question relating to parsing ingredients.
-* wrote a series of blog posts explaining how I built Zestful.
-* adjusted the language on the Zestful homepage to mention relevant keywords.
-
-TODO: link all those
-
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="Is It Keto is a reference site for the keto diet." >}}
+{{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="Is It Keto is a reference site for followers of the keto diet." >}}
 
-Is It Keto was my attempt to earn money from Amazon Affiliate sales. The site gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through affiliate links and Google AdSense display ads.
+Is It Keto  gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through Google AdSense display ads and receives an affiliate commission for every Amazon purchase through the site.
 
 | Income/Expense                              | 2018    | 2019    |
 |---------------------------------------------|---------|---------|
@@ -177,9 +167,9 @@ At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019.
 
 {{< img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" hasBorder="True" maxWidth="650px" caption="Is It Keto traffic by month" >}}
 
-XX% of Is It Keto's visits come from search engines, but I've never been able to connect any change I implement to any fluctuation in search engine traffic. There were months when I added lots of content, [tuned page titles and headings](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. At other points, I completely ignored the site for months and Google traffic grew the entire time. 
+XX% of Is It Keto's visits come from search engines, but I've never been able to connect any change I implement to any fluctuation in search engine traffic. There were months when I added lots of content, [tuned page titles and headings](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I completely ignored the site for months and Google traffic grew the entire time. 
 
-Is It Keto was also my biggest expense, as I outsourced much of the writing. I spent far more than I should have because I didn't know what rates were reasonable and when to give up on an underperforming writer. I learned a lot from the process and wrote a seemingly too-niche-to-be-popular [guide to hiring content writers](/hiring-content-writers/) based on my experience.
+Is It Keto was also my biggest expense, as I outsourced much of the writing. I spent far more than I should have because I didn't know what rates were reasonable and when to give up on an underperforming writer. I learned a lot from the process and wrote a widely ignored [guide to hiring content writers](/hiring-content-writers/) based on my experience.
 
 ### mtlynch.io *(this blog)*
 
@@ -195,9 +185,11 @@ Is It Keto was also my biggest expense, as I outsourced much of the writing. I s
 | Domain                                      | -$60    | -$60 | +0 (0%) |
 | **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | +$XX (XX%) |
 
-Pageviews are down substantially, which is to be expected. My quitting Google post received 500k pageviews alone last year, so it would be surprising if I could write another hit like that. Still, I struggled to find readers. Throughout 2017 and 2018, many of my articles became popular without me putting much though into subject matter or promotion. I'd write the article then find an appropriate community to share it with afterwards. In 2019, I found it hard to do that. It might be because my writing shifted from general programmer things to more niche business founder things, and people are more welcoming of the former.
+Pageviews are down substantially, which is to be expected. My [quitting Google post](/why-i-quit-google/) received 500k pageviews alone last year, so it would be surprising if I could write another hit like that.
 
-Revenue is down, which is fine because I don't go out of my way to earn money from this blog. My development costs fell dramatically. This is partly due to the site's freelance developer having less time, but also my increased comfort with web development means that it's no longer so time-consuming for me to add features myself.
+Still, I struggled to find readers in 2019. Throughout 2017 and 2018, many of my articles became popular without me trying very hard to promote them. I'd write the article then find an appreciative community to share it with afterwards. In 2019, I branched out from technical posts into more posts about the struggles of running a bootstrapped business. Even though there are communities for those topics, I've found that communities about running online businesses tend to be much less welcoming to blog posts. Probably because they'd otherwise be overrun with self-promoters and snake oil salespeople.
+
+Revenue is also down, which is fine because I don't go out of my way to earn money from this blog. My development costs fell dramatically. The site's freelance developer shifted focus more to his full-time job, and I gained enough web dev skills from my other projects that I felt comfortable adding features myself.
 
 ### What Got Done
 
