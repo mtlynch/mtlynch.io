@@ -203,7 +203,7 @@ What Got Done is a tool for recording and sharing weekly work accomplishments. I
 | Domain                                      | -$12 |
 | **Net profit**                              | **-$43** |
 
-I never thought What Got Done was a brilliant business idea, but I was feeling burned out after failing for months to turn a profit on Is It Keto (TODO: link). What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without struggling to navigate through a jungle of leaky abstraction.
+I never thought What Got Done was a brilliant business idea, but I was feeling frustrated after failing for months to turn a profit on Is It Keto (TODO: link). What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without struggling to navigate through a maze of leaky abstraction.
 
 I figured that as long as I was building What Got Done, I should explore the possibility of making it into a business. After interviews with several businesses, nobody seemed to feel that What Got Done fit them better than a dedicated Slack channel (TODO: link), so I moved on.
 
@@ -217,9 +217,9 @@ I figured that as long as I was building What Got Done, I should explore the pos
 | [Circle CI](https://circleci.com) | Continuous integration | -$350 |
 | [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |
 
-Conferences are a big expense because travel and lodging is expensive, and the conferences that accept my speaking proposals tend to have minimal budgets for travel assistance.
+Conferences are a big expense because travel and lodging is expensive, and the conferences that accepted my speaking proposals had minimal travel assistance budgets.
 
-I saved $68/month by switching from from Travis to Circle, which worked out great because Circle adds features quicker and integrates better with Docker. I paid for another year of Coveralls, though I now regret after accepting that code coverage metrics have little value for early stage products. I've since disabled auto-renew.
+I saved $68/month by switching from from Travis to Circle, which worked out great because I like Circle better. They develop their product more rapidly and integrate better with Docker. I accidentally let Coveralls auto-renew, even though I had accepted that code coverage metrics have little value for early stage products. I've canceled for next year.
 
 I also switched from managed bookkeeping with [Bench](https://bench.co) to self-serve bookkeeping with Xero. I enjoyed Bench and have no love for Xero, but I couldn't justify spending an extra $1.5k/yr for concierge bookkeeping when my finances are so simple and consistent.
 
@@ -245,17 +245,17 @@ Three software conferences accepted my speaking proposals, and I'm proud of my p
 | [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)
 | [PyGotham 2019](https://2019.pygotham.org/) | [Notes](/retrospectives/pygotham-2019-notes/) | ["Why Good Developers Write Bad Tests"](https://youtu.be/ElzBGwyDzCc) |
 
-I enjoy conferences and pick up useful information by attending, but if I'm being honest, there's nothing I took from any of the conferences this year that substantially improved my life or my business. Between travel, time spent preparing my talks, and time at the conference itself, I spent around six weeks of full-time work to attend these three conferences.
+I enjoy conferences and pick up useful information by attending, but if I'm being honest, there's nothing I took from any of the conferences this year that substantially improved my life or my business. Between travel, time spent preparing my talks, and time at the conference itself, attending three conferences cost me six to eight weeks of full-time work.
 
 I'll continue applying to and attending conferences in 2020, but I'm limiting it to conferences that people have strongly recommended or in cities near friends I'd like to visit.
 
-### Publish 12 blog posts.
+### Publish 12 blog posts
 
 **Grade**: B
 
 Depending on how you count, I either published 9 or 13 blog posts in 2019. I had nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/).
 
-### Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
+### Gain comfort with a JavaScript framework
 
 **Grade**: A
 
@@ -267,21 +267,21 @@ I'm not a Vue expert, but I'm "conversational" and can build sites quickly witho
 
 One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paying customers. How could my prices be too low if nobody was buying?
 
-Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company would contact me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big customer, I'd work feverishly to implement the feature they wanted. A week later, I'd proudly deliver it to them.
+Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company contacted me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big customer, I'd work feverishly to implement the feature they wanted. A week later, I'd proudly deliver it to them.
 
-"Oh,yeah," they'd respond. "That was for a project we actually decided not to pursue."
+"Oh,yeah," they'd reply sheepishly. "That was for a project we actually decided not to pursue."
 
-It cost them nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I could refuse, but what if they truly would spend thousands per month if I met their needs?
+It cost these companies nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I could ignore the request, but what if they truly were prepared to spend thousands per month?
 
-When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate prices. When I bumped my rates 6.5x to $0.02 per request, everyone who approached me asked if I could offer volume discounts. That forced them to tell me how much data they needed to process. When people say they'll buy if I add their pet feature, I give them this line:
+When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate. When I bumped my rates 6.5x to $0.02 per request, everyone who approached me asked if I could offer volume discounts. Then, when they claimed they'd buy after I added their pet feature, I gave them this line:
 
->You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
+>Great! You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
 
-I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise Zestful plans had no feature requests, and those deals closed in a matter of days.
+I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise plans had no feature requests, and those deals closed in a matter of days.
 
 ### Pursuing the right idea means rejecting the wrong ones
 
-One of the best lessons I learned from my friend David Toth is that founders tend to undervalue idea screening. As lean manufacturing techniques beccome more popular with startups, people think of building a minimum viable product as cheap. But it still usually means weeks or months of work.
+One of the best lessons I learned from my friend David Toth is that most founders underestimate the value of idea screening. As lean manufacturing techniques beccome more popular with startups, people think of building a minimum viable product as cheap. But it still usually means weeks or months of work.
 
  Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
 
@@ -293,7 +293,7 @@ I'm worse at David at generating ideas, but I took this advice to heart. Combine
 * Email copywriters: 
 * Sheet metal shops: There are existing solutions
 
-The exception was What Got Done, which I did build without validating the idea, but mainly to meet my goal of learning a JavaScript framework. But I figured that as long as I was building it, I might as well see if there's a viable business there, and it seemed like the answer was no..
+The exception was What Got Done, which I did build without validating the idea, but mainly to meet my goal of learning a JavaScript framework. But I figured that as long as I was building it, I might as well see if there's a viable business there, and it seemed like the answer was no.
 
 ### Take bigger swings
 
