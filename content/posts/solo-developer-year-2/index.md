@@ -281,27 +281,26 @@ I've never been burned on a feature request since. The prices are high enough th
 
 ### Pursuing the right idea means rejecting the wrong ones
 
-One of the best lessons I learned from my friend David Toth is that most founders underestimate the value of idea screening. As lean manufacturing techniques beccome more popular with startups, people think of building a minimum viable product as cheap. But it still usually means weeks or months of work.
+My friend [David Toth](https://twitter.com/jupiterunknown) often points out that founders underestimate the value of idea screening. They often rush into building a prototype or landing page because it seems cheap and easy, but they forget that validating a business idea takes weeks or months of work. Instead of bounding off after the first good idea he has, David thinks of at least ten ideas so that he can invest in the one that has the highest chance of success.
 
- Because it feels very cheap to explore an idea and build an MVP, most people rush into that without considering other ideas. But really, even a quick failure takes weeks or months of effort. A marginal but long-term loser business can take years to reveal itself as such.
+The books *Start Small, Stay Small* (notes) and *The Mom Test* ([notes](/book-reports/the-mom-test/)) also influenced my thinking substantially. They both emphasize starting with market research and then building a product based on that information. My first year as a solo developer, I made the classic mistake of building first and looking for customers later.
 
-David's rule of thumb is that before he pursues an idea, he comes up with at least 10 concepts so that he can choose the best one.
+This past year, I was both more rigorous about evaluating ideas at the concept stage and pivoting or bailing based on customer interviews.
 
-I'm worse at David at generating ideas, but I took this advice to heart. Combined with [my takeaways from the book *The Mom Test*](/book-reports/the-mom-test/), I was conservative about building products. I spent more time interviewing customers to validate ideas before I started building software to solve the problem I imagined needed solving.
 
-* Stone quarries: Most quarry owners weren't interested in talking to me, the one that did didn't seem to have problems I could solve with software.
-* Email copywriters: 
-* Sheet metal shops: There are existing solutions
-
-The exception was What Got Done, which I did build without validating the idea, but mainly to meet my goal of learning a JavaScript framework. But I figured that as long as I was building it, I might as well see if there's a viable business there, and it seemed like the answer was no.
+| Target market | The idea | Why I rejected it |
+|---------------|----------|-------------------|
+| Stone quarry owners | No idea except that I live by several stone quarries and suspected that nobody's ever offered to write software for them. | Most quarry owners weren't interested in talking to me. The one that did didn't seem to have problems I could solve with software. |
+| Email copywriters | Most email copywriters seem to be working in Google Docs or Word even though it matches their needs poorly. I could make a web app specifically for crafting email copy and iterating on it with clients. | It seemed like any solution required heavy focus on design, one of my weakest skills. Plus, I found a company doing <a href="https://beefree.io" rel="nofollow">basically the same thing</a>.
+| Sheet metal shops | Sheet metal shops use software to manage their manufacturing, but nobody's making software specifically for them. | Sheet metal shops seem happy enough with general-purpose machine shop software. There's not enough that's unique about them to merit a niche solution. |
 
 ### Take bigger swings
 
 Last year, when I set my goal to $500/month in revenue, some commenters encouraged me to set a higher target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
 
-Looking back, I feel that $500/month was a good target. Is It Keto felt like a nice "beginner business." It was fun to work on because it was a fairly simple system. If I could attract visitors, those visitors would generate revenue through ads or affiliate purchases. As my friend David Toth put it, I had "levers to work with." When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if it was only fractions of a penny.
+Looking back, I feel that $500/month was a good target. Is It Keto felt like a nice "beginner business." It was fun to work on because it was a fairly simple system. If I could attract visitors, those visitors would generate revenue through ads or affiliate purchases. As my friend David Toth put it, I had "levers to work with." When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if it was only ~$0.01 each.
 
-But I also saw how that's limiting. Even now, each customer yields only ~$0.015 in revenue, which limits the tools I can use. Paid advertising is off the table, because I've never seen any advertising channel that costs a penny per visitor. I'd love to bring on an employee, but with per-user revenue so low, it's hard for any employee to justify their cost. If I paid a freelancer $200/month to help grow the site, they'd have to bring in ~13k additional visitors, a 50% increase from my current user base.
+But I also saw how that's limiting. When margins are a penny per customer, most techniques for growing the business are off the table. I can't buy Google or Facebook ads for $0.50-$1.50 per visitor if each visit only generates a penny of revenue. I'd love to bring on an employee, but if I paid a freelancer $200/month to help grow the site, they'd have to double my traffic to justify their cost.
 
 Now that I'm entering my third year of this, I'm ready to take bigger bets. Is It Keto gave me confidence in different aspects of running a business, so I'm not as worried that I'm screwing things up. I'm aiming for projects where success means high enough margins that I can afford to grow it by hiring one or two other people to join me part time.
 
