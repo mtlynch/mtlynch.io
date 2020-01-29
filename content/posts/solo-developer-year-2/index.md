@@ -203,9 +203,9 @@ What Got Done is a tool for recording and sharing weekly work accomplishments. I
 | Domain                                      | -$12 |
 | **Net profit**                              | **-$43** |
 
-I never thought What Got Done was a brilliant business idea, but I was feeling frustrated after failing for months to turn a profit on Is It Keto (TODO: link). What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without struggling to navigate through a maze of leaky abstraction.
+I never thought What Got Done was a brilliant business idea, but I was [feeling frustrated](/keep-growing-never-profit/) after failing for months to turn a profit on Is It Keto. What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without struggling to navigate through a maze of leaky abstraction.
 
-I figured that as long as I was building What Got Done, I should explore the possibility of making it into a business. After interviews with several businesses, nobody seemed to feel that What Got Done fit them better than a dedicated Slack channel (TODO: link), so I moved on.
+I figured that as long as I was building What Got Done, I should explore the possibility of making it into a business. After interviews with several businesses, everyone felt they could achieve the same thing with a dedicated Slack channel](/retrospectives/2019/08/#why-use-what-got-done-when-we-have-slack), so I moved on.
 
 ### Everything Else
 
@@ -219,19 +219,19 @@ I figured that as long as I was building What Got Done, I should explore the pos
 
 Conferences are a big expense because travel and lodging is expensive, and the conferences that accepted my speaking proposals had minimal travel assistance budgets.
 
-I saved $68/month by switching from from Travis to Circle, which worked out great because I like Circle better. They develop their product more rapidly and integrate better with Docker. I accidentally let Coveralls auto-renew, even though I had accepted that code coverage metrics have little value for early stage products. I've canceled for next year.
+I saved $68/month by switching from from Travis to Circle, which worked out great because I like Circle better. They develop their product more rapidly and integrate better with Docker. I accidentally let Coveralls auto-renew without thinking about it. I've since accepted that code coverage metrics have little value for early stage products and canceled for next year.
 
 I also switched from managed bookkeeping with [Bench](https://bench.co) to self-serve bookkeeping with Xero. I enjoyed Bench and have no love for Xero, but I couldn't justify spending an extra $1.5k/yr for concierge bookkeeping when my finances are so simple and consistent.
 
 ## Grading my goals
 
-In last year's update, I gave myself four goals for the year. Here's how I grade myself against these goals:
+In last year's update, I [gave myself four goals](/solo-developer-year-1/#goals-for-year-two) for the year:
 
 ### Achieve $500/month in revenue across my businesses
 
 **Grade**: B+
 
-I achieved this, though I'm kind of cheating by relying on one huge outlier sale in December that put me at ~$4.4k in total revenue for the month. Without it, I'd be at $441 in total revenue for December, which is more representative of revenue I expect to continue in 2020.
+I achieved this, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what I expect the trend will be early in 2020.
 
 ### Present talks at three software conferences
 
@@ -239,7 +239,7 @@ I achieved this, though I'm kind of cheating by relying on one huge outlier sale
 
 Three software conferences accepted my speaking proposals, and I'm proud of my presentations at all of them:
 
-| Conference                                  | My notes | Recording |
+| Conference                                  | My notes | Presentation |
 |---------------------------------------------|----------|-------|
 | [NERD Summit](https://2019.nerdsummit.org/) | -                                           | ["Modernize any Codebase through Tooling and Technique"](https://youtu.be/GfkVhr6SPz4)
 | [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)
@@ -281,7 +281,7 @@ I've never been burned on a feature request since. The prices are high enough th
 
 ### Pursuing the right idea means rejecting the wrong ones
 
-My friend [David Toth](https://twitter.com/jupiterunknown) often points out that founders underestimate the value of idea screening. They often rush into building a prototype or landing page because it seems cheap and easy, but they forget that validating a business idea takes weeks or months of work. Instead of bounding off after the first good idea he has, David thinks of at least ten ideas so that he can invest in the one that has the highest chance of success.
+My friend [David Toth](https://twitter.com/jupiterunknown) often points out that founders underestimate the value of idea screening. They rush to a prototype or landing page because it seems cheap and easy, but they forget that validating a business idea takes weeks or months of work. Instead of bounding off after the first good idea he has, David thinks of at least ten ideas so that he can invest in the one that has the highest chance of success.
 
 The books *Start Small, Stay Small* (notes) and *The Mom Test* ([notes](/book-reports/the-mom-test/)) also influenced my thinking substantially. They both emphasize starting with market research and then building a product based on that information. My first year as a solo developer, I made the classic mistake of building first and looking for customers later.
 
@@ -291,14 +291,14 @@ This past year, I was both more rigorous about evaluating ideas at the concept s
 | Target market | The idea | Why I rejected it |
 |---------------|----------|-------------------|
 | Stone quarry owners | No idea except that I live by several stone quarries and suspected that nobody's ever offered to write software for them. | Most quarry owners weren't interested in talking to me. The one that did didn't seem to have problems I could solve with software. |
-| Email copywriters | Most email copywriters seem to be working in Google Docs or Word even though it matches their needs poorly. I could make a web app specifically for crafting email copy and iterating on it with clients. | It seemed like any solution required heavy focus on design, one of my weakest skills. Plus, I found a company doing <a href="https://beefree.io" rel="nofollow">basically the same thing</a>.
+| Email copywriters | Most email copywriters seem to be working in Google Docs or Word even though these tools fail to match their needs. There's opportunity to build a tool specifically for crafting email copy and iterating on it with clients. | It seemed like any solution required heavy focus on design, one of my weakest skills. Plus, I found a company doing <a href="https://beefree.io" rel="nofollow">basically the same thing</a>.
 | Sheet metal shops | Sheet metal shops use software to manage their manufacturing, but nobody's making software specifically for them. | Sheet metal shops seem happy enough with general-purpose machine shop software. There's not enough that's unique about them to merit a niche solution. |
 
 ### Take bigger swings
 
 Last year, when I set my goal to $500/month in revenue, some commenters encouraged me to set a higher target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
 
-Looking back, I feel that $500/month was a good target. Is It Keto felt like a nice "beginner business." It was fun to work on because it was a fairly simple system. If I could attract visitors, those visitors would generate revenue through ads or affiliate purchases. As my friend David Toth put it, I had "levers to work with." When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if it was only ~$0.01 each.
+Looking back, I still feel that $500/month was a good target. Is It Keto was a nice "beginner business" because the mechanics were so simple. If I could attract visitors, those visitors would generate revenue through ads or affiliate purchases. As my friend David Toth put it, I had "levers to work with." When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if it was only ~$0.01 each.
 
 But I also saw how that's limiting. When margins are a penny per customer, most techniques for growing the business are off the table. I can't buy Google or Facebook ads for $0.50-$1.50 per visitor if each visit only generates a penny of revenue. I'd love to bring on an employee, but if I paid a freelancer $200/month to help grow the site, they'd have to double my traffic to justify their cost.
 
@@ -327,11 +327,11 @@ I'm piloting it in my home area of Western Mass, but I'll be expanding it to oth
 Here's what I hope to accomplish in my third year as a solo developer:
 
 * Earn $20,000 in revenue across my businesses.
-  * Setting a per-year target feels more sensible than targeting a per-month rate by the end of the year. I tripled revenues in 2019, so would mean tripling again.
+  * I tripled revenues in 2019, so $20k would mean tripling again.
 * Publish 10 blog posts.
   * This gives me time for one per month with some room for longer posts or taking a month off to prepare a conference presentation.
 * Learn one new technology.
-  * It doesn't have to benefit my business, but it would be cool if it did. I've been interested in learning more about Rust or Kubernetes.
+  * It doesn't have to benefit my business, but it would be cool if it did. I've been looking for an excuse to learn Rust.
 
 ---
 
