@@ -130,12 +130,14 @@ Zestful launched in mid-2018 as my first attempt at a software-as-a-service (Saa
 
 After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldatacom) last year, Zestful finally brought in some revenue in 2019. XX% of its revenue came from [a single enterprise sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom). That sale also represented XX% of total revenue across all my businesses.
 
-| Income/Expense   | Amount    |
-|------------------|-----------|
-| Sales            | $5,022 |
-| Hosting          | -$80   |
-| Domains          | -$12    |
-| **Net profit**   | **$4,930‬** |
+| Income/Expense   | 2018        | 2019       | Change          |
+|------------------|-------------|------------|-----------------|
+| Sales            | $0          | $5,022     | <font color="green">+$5,022 (+inf%)</font> |
+| Hosting          | -$164       | -$80       | <font color="green">-$84 (-51%)</font>
+| Domains          | $-50        | -$12       | <font color="green">-$38 (-76%)</font>
+| Logo Design      | $-200       | $0         | <font color="green">-$200 (-100%)</font>
+| Development      | -$7,440     | $0         | <font color="green">-$7,440 (-100%)</font>
+| **Net profit**   | **-$7,854** | **$4,930‬** | <font color="green">+$12,784 (-162%)</font>
 
 {{< img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results" >}}
 
@@ -149,19 +151,20 @@ How do you sell to companies if they don't even exist yet? My strategy has been 
 
 Is It Keto  gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through Google AdSense display ads and receives an affiliate commission for every Amazon purchase through the site.
 
-| Income/Expense                              | 2018    | 2019    |
-|---------------------------------------------|---------|---------|
-| Pageviews                                   |         | 521,913 |
-| Food corpus size                            |         | XX      |
-| Amazon Affiliate revenue                    |         | $1,315  |
-| Google AdSense revenue                      | N/A     | $940    |
-| Meal plan sales                             | N/A     | $24     |
-| [Content writing](/hiring-content-writers/) | $0      | -$3,845 |
-| Social media management                     | $0      | -$314   |
-| Graphic design                              |         | -$163   |
-| Hosting                                     | $0      | -$103   |
-| Domain                                      | -$12    | -$12    |
-| **Net profit**                              |         | **<font color="red">-$2,158</font>** |
+| Income/Expense                              | 2018    | 2019    | Change |
+|---------------------------------------------|---------|---------|--------|
+| Pageviews                                   | 16,208  | 521,913 | <font color="green">+505,705 (+3120%)</font>
+| Food corpus size                            | 53      | 202     | <font color="green">+149 (+281%)</font>
+| Amazon Affiliate revenue                    | $1      | $1,315  | <font color="green">+$1,314 (+131400%)</font>
+| Google AdSense revenue                      | N/A     | $940    | <font color="green">+$940 (+inf%)</font>
+| Meal plan sales                             | N/A     | $24     | <font color="green">+$24 (+inf%)</font>
+| [Content writing](/hiring-content-writers/) | $0      | -$3,845 | <font color="red">+$3,845 (+inf%)</font>
+| Social media management                     | $0      | -$314   | <font color="red">+$314 (+inf%)</font>
+| Graphic design                              | -$211   | -$163   | <font color="green">-$48 (-23%)</font>
+| Development                                 | -$1,660 | $0      | <font color="green">-$1,660 (-100%)</font>
+| Hosting                                     | $0      | -$103   | <font color="red">+$103 (+inf%)</font>
+| Domain                                      | -$12    | -$12    | -
+| **Net profit**                              | **<font color="red">-$1,882 </font>**  | **<font color="red">-$2,158</font>** | <font color="red">-$276 (-15%)</font>
 
 At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019. I abandoned the site in XX, but I came back to it XX months later after realizing that it had grown on its own without me.
 
@@ -175,15 +178,15 @@ Is It Keto was also my biggest expense, as I outsourced much of the writing. I s
 
 | Metric                                      | 2018    | 2019    | Change |
 |---------------------------------------------|---------|---------|--------|
-| Pageviews                                   | 981,587 | 273,817 |
-| Affiliate revenue                           | $1,244  | $374    |
-| Development                                 | -$3,896 | -$460   |
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$599    | -$769   |
-| Hosting                                     | -$309    | -$150   |
-| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | -$140 | +0 (0%) |
-| [Editing](/editor/)                         | -$75    | -$60 |
-| Domain                                      | -$60    | -$60 | +0 (0%) |
-| **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | +$XX (XX%) |
+| Pageviews                                   | 981,587 | 273,817 | <font color="red">-707,770 (-72%)</font>
+| Affiliate revenue                           | $1,244  | $374    | <font color="red">-$870 (-70%)</font>
+| Development                                 | -$3,896 | -$460   | <font color="green">-$3,436 (-88%)</font>
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$599    | -$769   | <font color="red">+170 (+28%)</font>
+| Hosting                                     | -$309    | -$150   | <font color="green">-159 (-51%)</font>
+| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 | -$140 | - |
+| [Editing](/editor/)                         | -$75    | -$60 | <font color="red">-$15 (-20%)</font>
+| Domain                                      | -$60    | -$60 | - |
+| **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | <font color="green">+$2,570 (+67%)</font> |
 
 Pageviews are down substantially, which is unsurprising. My [quitting Google post](/why-i-quit-google/) received 500k pageviews in 2018, so I didn't expect to produce another hit like that.
 
