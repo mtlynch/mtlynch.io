@@ -319,9 +319,9 @@ After years of banging my head against the wall with [Angular](https://angular.i
 
 The project that I hope to focus on for a large portion of year three is [WanderJest](https://wanderjest.com), a website I launched in January.
 
-TODO: WanderJest screenshot
+{{< img src="wanderjest-feb-2020.jpg" alt="Screenshot of WanderJest website" maxWidth="600px" caption="[WanderJest](https://wanderjest.com) is a resource for finding live comedy shows." hasBorder="true" >}}
 
-WanderJest is a resource for comedy performers and their fans. Comedy show listings are currently scattered amongst Facebook groups, comedy club websites, and ticket sellers like TicketMaster or EventBrite. My hope is for WanderJest to unify these disparate event listings and make it easier for performers to attract audiences. Basically, <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
+It can be difficult to find local comedy shows, as listings are scattered amongst Facebook groups, comedy club websites, and ticket sellers like TicketMaster or Eventbrite. My hope is for WanderJest to unify these disparate sources, making it easier for performers to attract audiences. Basically, <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 
 I'm piloting it in my home area of Western Mass, but I'll be expanding it to other areas soon.
 
