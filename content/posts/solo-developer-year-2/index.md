@@ -7,7 +7,7 @@ images:
 
 {{< img src="cover.jpg" alt="My second year as a solo developer (cover image)" >}}
 
-Two years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about how my first year went. Today marks the end of my second full year, so it's time for another update.
+Two years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to build my own software business. A year later, I [posted an update](/solo-developer-year-1/) about my finances, happiness, and lessons learned. Today marks the end of my second full year, so it's time for another update.
 
 ## How I made and spent money
 
@@ -110,13 +110,13 @@ var myChart = new Chart(ctx, {
 | Expenses   | $23,133  | $9,657  | <font color="green">-$13,477 (-58%)</font> |
 | **Net Profit** | **<font color="red">-$20,871</font>** | **<font color="red">-$2,402</font>** | **<font color="green">+$18,469 (+88%)</font>** |
 
-My second year was a huge improvement financially. I increased profits by $18.5k! Overall, I still lost money, but try not to get too hung up on that. I tripled revenue to $7.2k and cut expenses by more than half, which I'm excited about.
+My second year was a huge improvement financially. I increased profits by $18.5k! Overall, I still lost money, but try not to get too hung up on that. I tripled revenue to $7.2k and cut expenses by more than half.
 
 ## How can you afford to keep losing money?
 
-People are often confused about my uncanny ability to remain unprofitable for so long. They assume that I fund my money-losing businesses with freelance work, but the truth is that I put 100% of my working hours into my non-lucrative businesses. This is possible due to three main factors:
+My uncanny ability to remain long-term unprofitable often perplexes people. They assume that I fund my money-losing businesses with freelance work, but the truth is that I put 100% of my working hours into my non-lucrative businesses. This is possible due to three main factors:
 
-* **Low expenses**: I [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
+* **Low expenses**: I have no children and [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are around $2k/mo.
 * **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
 * **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
 
@@ -126,9 +126,9 @@ People are often confused about my uncanny ability to remain unprofitable for so
 
 {{< img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" caption="Zestful is a SaaS for parsing recipe ingredients." >}}
 
-Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to understand the structure of recipe ingredients. Given an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
+Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to recognize the structure of recipe ingredients. Given an ingredient like `"2 1/2 tablespoons finely chopped parsley"`, Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
 
-After earning a big fat zero last year, Zestful finally brought in some revenue in 2019. XX% of its revenue came from [a single enterprise sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom). That sale also represented XX% of my revenue for the year across all my businesses.
+After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldatacom) last year, Zestful finally brought in some revenue in 2019. XX% of its revenue came from [a single enterprise sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom). That sale also represented XX% of total revenue across all my businesses.
 
 | Income/Expense   | Amount    |
 |------------------|-----------|
@@ -139,7 +139,7 @@ After earning a big fat zero last year, Zestful finally brought in some revenue 
 
 {{< img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results" >}}
 
-Zestful is in a strange position because companies who are already parsing ingredients never want to switch to Zestful. If they already have a solution in place, the cost of switching to a new API and taking on a new external dependency is too high. All of Zestful's customers are companies building a brand new product.
+Zestful is in a strange position because companies who parse ingredients never want to switch to Zestful. The cost and risk of migrating to a new API is too high to justify potential improvements in price or performance. Instead, all of Zestful's customers are companies building a brand new product.
 
 How do you sell to companies if they don't even exist yet? My strategy has been to invest in search engine optimization so that Zestful ranks highly for queries like "ingredient parsing."
 
@@ -167,9 +167,9 @@ At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019.
 
 {{< img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" hasBorder="True" maxWidth="650px" caption="Is It Keto traffic by month" >}}
 
-XX% of Is It Keto's visits come from search engines, but I've never been able to connect any change I implement to any fluctuation in search engine traffic. There were months when I added lots of content, [tuned page titles and headings](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I completely ignored the site for months and Google traffic grew the entire time. 
+XX% of Is It Keto's visits come from search engines, but I've never been able to connect improvements in search traffic to anything I did. There were months when I added lots of content, [optimized page titles](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I ignored the site for months and Google traffic grew the entire time. 
 
-Is It Keto was also my biggest expense, as I outsourced much of the writing. I spent far more than I should have because I didn't know what rates were reasonable and when to give up on an underperforming writer. I learned a lot from the process and wrote a widely ignored [guide to hiring content writers](/hiring-content-writers/) based on my experience.
+Is It Keto was also my biggest expense, as I outsourced much of the writing. I spent too much on writing because of my inexperience at hiring and managing writers. The experience taugh me a lot and led me to write my widely ignored [guide to hiring content writers](/hiring-content-writers/).
 
 ### mtlynch.io *(this blog)*
 
@@ -185,17 +185,19 @@ Is It Keto was also my biggest expense, as I outsourced much of the writing. I s
 | Domain                                      | -$60    | -$60 | +0 (0%) |
 | **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | +$XX (XX%) |
 
-Pageviews are down substantially, which is to be expected. My [quitting Google post](/why-i-quit-google/) received 500k pageviews alone last year, so it would be surprising if I could write another hit like that.
+Pageviews are down substantially, which is unsurprising. My [quitting Google post](/why-i-quit-google/) received 500k pageviews in 2018, so I didn't expect to produce another hit like that.
 
-Still, I struggled to find readers in 2019. Throughout 2017 and 2018, many of my articles became popular without me trying very hard to promote them. I'd write the article then find an appreciative community to share it with afterwards. In 2019, I branched out from technical posts into more posts about the struggles of running a bootstrapped business. Even though there are communities for those topics, I've found that communities about running online businesses tend to be much less welcoming to blog posts. Probably because they'd otherwise be overrun with self-promoters and snake oil salespeople.
+Still, I struggled to find readers in 2019. Throughout 2017 and 2018, many of my articles became popular without me trying very hard to promote them. I'd write the article then find an appreciative community to share it with afterwards. In 2019,
 
-Revenue is also down, which is fine because I don't go out of my way to earn money from this blog. My development costs fell dramatically. The site's freelance developer shifted focus more to his full-time job, and I gained enough web dev skills from my other projects that I felt comfortable adding features myself.
+I branched out from technical posts into more posts about the struggles of running a bootstrapped business. Even though there are plenty of online communities for bootstrappers, they tend to be much less welcoming to off-site blog posts. Probably because they'd otherwise be overrun with self-promoters and snake oil sellers.
+
+Revenue is also down, which is fine because I don't go out of my way to earn money from this blog. My development costs fell dramatically. The site's freelance developer shifted focus more to his full-time job, and I gained enough web dev skills from other projects that adding features myself is usually easy.
 
 ### What Got Done
 
 {{< img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" maxWidth="550px" caption="What Got Done is a task journaling app." >}}
 
-What Got Done is a tool for recording and sharing weekly work accomplishments. It's a technique that I learned while working at Google (TODO: link), and I've been using it to record [my progress](https://whatgotdone.com/michael) every week for the last 10 months.
+What Got Done is a tool for recording and sharing weekly work accomplishments. It's [a technique that I learned](/status-updates-to-nobody/) while working at Google, and I've been using it to record [my progress](https://whatgotdone.com/michael) every week for the last 10 months.
 
 | Income/Expense                              | Amount |
 |---------------------------------------------|---------|
@@ -203,9 +205,11 @@ What Got Done is a tool for recording and sharing weekly work accomplishments. I
 | Domain                                      | -$12 |
 | **Net profit**                              | **-$43** |
 
-I never thought What Got Done was a brilliant business idea, but I was [feeling frustrated](/keep-growing-never-profit/) after failing for months to turn a profit on Is It Keto. What Got Done seemed like a fun project to cheer myself up and teach myself Vue.js. And it was! I love Vue.js. I've finally found a web framework that lets me build websites quickly without struggling to navigate through a maze of leaky abstraction.
+I never thought What Got Done was a brilliant business idea, but I was [feeling frustrated](/keep-growing-never-profit/) after months of failing to turn a profit on Is It Keto. What Got Done seemed like a fun project to cheer myself up and teach myself [Vue.js](https://vuejs.org/), a popular web framework.
 
-I figured that as long as I was building What Got Done, I should explore the possibility of making it into a business. After interviews with several businesses, everyone felt they could achieve the same thing with a dedicated Slack channel](/retrospectives/2019/08/#why-use-what-got-done-when-we-have-slack), so I moved on.
+It worked! I love Vue.js. I've finally found a tool that lets me build websites quickly without struggling to navigate through a maze of leaky abstraction.
+
+I figured that as long as I was building What Got Done, I should explore the possibility of making it into a business. After interviews with several businesses, it seemed the vast majority felt that they could [achieve the same thing with a dedicated Slack channel](/retrospectives/2019/08/#why-use-what-got-done-when-we-have-slack), so I moved on.
 
 ### Everything Else
 
@@ -217,11 +221,59 @@ I figured that as long as I was building What Got Done, I should explore the pos
 | [Circle CI](https://circleci.com) | Continuous integration | -$350 |
 | [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |
 
-Conferences are a big expense because travel and lodging is expensive, and the conferences that accepted my speaking proposals had minimal travel assistance budgets.
+Conferences are a big expense because travel and lodging is expensive, and the conferences that accepted my speaking proposals offered minimal travel assistance.
 
-I saved $68/month by switching from from Travis to Circle, which worked out great because I like Circle better. They develop their product more rapidly and integrate better with Docker. I accidentally let Coveralls auto-renew without thinking about it. I've since accepted that code coverage metrics have little value for early stage products and canceled for next year.
+Switching from from Travis to Circle reduced my expenses by $68/month, which worked out great because I prefer Circle's product. They improve faster rapidly and integrate better with Docker. Coveralls unfortunately auto-renewed without me consciously choosing it again. I've since accepted that code coverage metrics have little value for early stage products and canceled for next year.
 
-I also switched from managed bookkeeping with [Bench](https://bench.co) to self-serve bookkeeping with Xero. I enjoyed Bench and have no love for Xero, but I couldn't justify spending an extra $1.5k/yr for concierge bookkeeping when my finances are so simple and consistent.
+I also switched from managed bookkeeping with [Bench](https://bench.co) to self-serve bookkeeping with Xero. I enjoyed Bench and have no love for Xero, but I couldn't justify an extra $1.5k/year for concierge bookkeeping when my finances are so simple and repetitive.
+
+## Lessons learned
+
+### Raise prices, even if nobody's buying
+
+One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paying users. How could my prices be too low if nobody was buying?
+
+Though Zestful had few real customers, it had many *prospective* customers. Every few weeks, a new company contacted me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big client, I'd work feverishly to implement the feature they wanted. A week later, I'd proudly deliver it to them.
+
+"Oh, yeah," they'd reply sheepishly. "That was for a project we decided not to pursue."
+
+It cost these companies nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening but couldn't figure out a way to stop it. Ignoring the request was an option, but what if they truly were prepared to spend thousands per month?
+
+When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate with me on price. When I bumped my rates 6.5x to $0.02 per request, everyone started askeding about volume discounts. Then, when they claimed they'd buy after I added their pet feature, I gave them this line:
+
+>Great! You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
+
+I've never been burned on a feature request since.
+
+My prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from arranging meetings to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise plans had no feature requests, and those deals closed in a matter of days.
+
+### Pursuing the right idea means rejecting the wrong ones
+
+My first year as a founder, I was a puppy chasing whatever ball happened to roll by. If one of my projects failed to get traction, I'd work on whatever idea was front of mind. Building a "quick" prototype felt cheap and easy at a project's outset, but it always took weeks of coding and then months of work trying to attract customers.
+
+My friend [David Toth](https://twitter.com/jupiterunknown) taught me the value of idea screening. He pointed out that whatever idea I pursue is going to determine my life for at least several months, so it's worth choosing carefully. Instead of bounding off after the first good idea he has, David's strategy is to generate ideas until he has a list of at least 10. He then evaluates that list carefully to choose which has the highest chance of success.
+
+Reading [*Start Small, Stay Small*](https://amzn.to/2HZT8lA) ([notes](/book-reports/start-small-stay-small/)) and [*The Mom Test*](https://amzn.to/2ZshKrl) ([notes](/book-reports/the-mom-test/)) also influenced how I approach new businesses. Both books encourage founders to start with market research and build the product later. As a result, I was conservative about what I built and always reminded myself to bail if my research indicated an idea was no longer my best chance of success.
+
+### Take bigger swings
+
+When I set last year's goal to $500/month in revenue, some people encouraged me to set a higher target. New businesses have a high chance of failure, so I may as well attempt something with a higher payoff.
+
+Looking back, I still feel that $500/month was sensible. Is It Keto was a nice "beginner business" because the mechanics were so simple. Ads and affiliate purchases generated about $0.01 per vistor, on average. More visits meant more money, so I got to experiment with different growth strategies without worrying about things like sales copy, pricing, or customer support. It was gratifying to watch my revenues begin at a [paltry $1/month](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661) then slowly grow by 50-150% each month to the $400/month number the site reached by the end of the year.
+
+The flip side was seeing how low-risk businesses can be limiting. When margins are a penny per customer, most avenues for expansion are off the table. It makes no sense to pay $0.50-$1.50 per click for an ad if the visitor only generates $0.01 in revenue. I'd love to bring on an employee to help grow the site, but even a cheap $200/month freelancer would have to double my traffic to justify their cost.
+
+Now that I'm entering my third year as a founder, I'm ready to make bigger bets. Growing Is It Keto gave me the confidence to push myself more. That means taking on projects where success means high enough margins to afford hiring a couple of people part time.
+
+## I still love it
+
+When people find out that I've run at a financial loss for the past two years, they worry I regret leaving my job. It's common for founders to experience burnout after a year or two, but I've been fortunate in never feeling that way. I chalk this up to my healthy sense of self-doubt at the start of this project, which made me assume I'd fail for awhile before finding success. Also, it's easy to not stress about earning money when you're in no danger of running out.
+
+Every day, I come downstairs and enjoy a leisurely breakfast with my girlfriend. We live at the end of a dead end street, so when she leaves for work, my house is perfectly quiet. After writing for 60-90 minutes, I map out the rest of my day. I don't work after dinner or on the weekends. If I feel sleepy at 3pm, I take a nap and never worry about what my manager thinks.
+
+Before quitting, the part of the lifestyle I fantasized about most was the independence of it, and it's indeed as satisfying as I dreamed. I love having full autonomy over my day and the freedom to completely change direction on my businesses or start over when it feels right.
+
+I'd do this forever.
 
 ## Grading my goals
 
@@ -231,13 +283,13 @@ In last year's update, I [gave myself four goals](/solo-developer-year-1/#goals-
 
 **Grade**: B+
 
-I achieved this, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what I expect the trend will be early in 2020.
+I achieved this, though it feels like cheating to include [my huge outlier sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) from December. Without it, I'd be at $441 in total revenue for December, which is closer to what I expect the trend will be through early 2020. It's not quite $500, but it's satisfyingly close.
 
 ### Present talks at three software conferences
 
 **Grade**: A
 
-Three software conferences accepted my speaking proposals, and I'm proud of my presentations at all of them:
+Three conferences accepted my proposals, and I'm proud of my presentations at all of them:
 
 | Conference                                  | My notes | Presentation |
 |---------------------------------------------|----------|-------|
@@ -245,9 +297,9 @@ Three software conferences accepted my speaking proposals, and I'm proud of my p
 | [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)
 | [PyGotham 2019](https://2019.pygotham.org/) | [Notes](/retrospectives/pygotham-2019-notes/) | ["Why Good Developers Write Bad Tests"](https://youtu.be/ElzBGwyDzCc) |
 
-I enjoy conferences and pick up useful information by attending, but if I'm being honest, there's nothing I took from any of the conferences this year that substantially improved my life or my business. Between travel, time spent preparing my talks, and time at the conference itself, attending three conferences cost me six to eight weeks of full-time work.
+I enjoy conferences and pick up useful information by attending, but if I'm being honest, there's nothing I took from any of the conferences this year that substantially improved my life or my business. Between travel, time spent preparing my talks, and attending the event itself, I spent six to eight weeks of full-time work on conference presentations.
 
-I'll continue applying to and attending conferences in 2020, but I'm limiting it to conferences that people have strongly recommended or in cities near friends I'd like to visit.
+I'll continue applying to and attending conferences in 2020, but I'm being more selective based on strong recommendations or proximity to friends I'd like to visit.
 
 ### Publish 12 blog posts
 
@@ -259,58 +311,9 @@ Depending on how you count, I either published 9 or 13 blog posts in 2019. I had
 
 **Grade**: A
 
-I'm not a Vue expert, but I'm "conversational" and can build sites quickly without getting stuck on the framework itself. After years of banging my head against the wall trying to use Angular, I'm happy to have finally switched over to a framework that feels appropriate for solo developers.
+I'm not a Vue expert, but I'd describe myself as "conversational." I can build sites quickly without getting stuck on the framework itself.
 
-## Lessons learned
-
-### Raise prices, even if nobody's buying
-
-One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paying customers. How could my prices be too low if nobody was buying?
-
-Though Zestful had few paying customers, it had many *prospective* customers. Every few weeks, a new company contacted me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big customer, I'd work feverishly to implement the feature they wanted. A week later, I'd proudly deliver it to them.
-
-"Oh,yeah," they'd reply sheepishly. "That was for a project we actually decided not to pursue."
-
-It cost these companies nothing to ask for features, but it was extremely time-consuming for me to meet with them and implement their wishlist. I recognized what was happening, but I couldn't figure out a way to stop it. I could ignore the request, but what if they truly were prepared to spend thousands per month?
-
-When I took Cory's advice and raised prices, it changed the conversation in a way I didn't expect. At $0.003 per request, nobody tried to negotiate. When I bumped my rates 6.5x to $0.02 per request, everyone who approached me asked if I could offer volume discounts. Then, when they claimed they'd buy after I added their pet feature, I gave them this line:
-
->Great! You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
-
-I've never been burned on a feature request since. The prices are high enough that most customers have to spend a few hundred dollars per month to use Zestful, which discourages people from setting up meetings with me to tell me about the long feature list I'd have to implement to earn their $5/month. Interestingly, the customers who ended up purchasing enterprise plans had no feature requests, and those deals closed in a matter of days.
-
-### Pursuing the right idea means rejecting the wrong ones
-
-My friend [David Toth](https://twitter.com/jupiterunknown) often points out that founders underestimate the value of idea screening. They rush to a prototype or landing page because it seems cheap and easy, but they forget that validating a business idea takes weeks or months of work. Instead of bounding off after the first good idea he has, David thinks of at least ten ideas so that he can invest in the one that has the highest chance of success.
-
-The books *Start Small, Stay Small* (notes) and *The Mom Test* ([notes](/book-reports/the-mom-test/)) also influenced my thinking substantially. They both emphasize starting with market research and then building a product based on that information. My first year as a solo developer, I made the classic mistake of building first and looking for customers later.
-
-This past year, I was both more rigorous about evaluating ideas at the concept stage and pivoting or bailing based on customer interviews.
-
-
-| Target market | The idea | Why I rejected it |
-|---------------|----------|-------------------|
-| Stone quarry owners | No idea except that I live by several stone quarries and suspected that nobody's ever offered to write software for them. | Most quarry owners weren't interested in talking to me. The one that did didn't seem to have problems I could solve with software. |
-| Email copywriters | Most email copywriters seem to be working in Google Docs or Word even though these tools fail to match their needs. There's opportunity to build a tool specifically for crafting email copy and iterating on it with clients. | It seemed like any solution required heavy focus on design, one of my weakest skills. Plus, I found a company doing <a href="https://beefree.io" rel="nofollow">basically the same thing</a>.
-| Sheet metal shops | Sheet metal shops use software to manage their manufacturing, but nobody's making software specifically for them. | Sheet metal shops seem happy enough with general-purpose machine shop software. There's not enough that's unique about them to merit a niche solution. |
-
-### Take bigger swings
-
-Last year, when I set my goal to $500/month in revenue, some commenters encouraged me to set a higher target. Solo businesses have a high risk of failure, so I may as well attempt something with a higher payoff.
-
-Looking back, I still feel that $500/month was a good target. Is It Keto was a nice "beginner business" because the mechanics were so simple. If I could attract visitors, those visitors would generate revenue through ads or affiliate purchases. As my friend David Toth put it, I had "levers to work with." When I spent several hours a day promoting the business on Facebook and Reddit, I saw that new people came from those sites and increased my revenue, even if it was only ~$0.01 each.
-
-But I also saw how that's limiting. When margins are a penny per customer, most techniques for growing the business are off the table. I can't buy Google or Facebook ads for $0.50-$1.50 per visitor if each visit only generates a penny of revenue. I'd love to bring on an employee, but if I paid a freelancer $200/month to help grow the site, they'd have to double my traffic to justify their cost.
-
-Now that I'm entering my third year of this, I'm ready to take bigger bets. Is It Keto gave me confidence in different aspects of running a business, so I'm not as worried that I'm screwing things up. I'm aiming for projects where success means high enough margins that I can afford to grow it by hiring one or two other people to join me part time.
-
-## I still love it
-
-When people find out that I'm not making money, they worry I'm disappointed about the outcome of leaving my job. It's common for other solo developers to experience burnout after a year or two, but I've been fortunate in never feeling that way. A big part of this is my existing financial security, so I never worry about running out of money. And I also expected it to take several years before I landed on a business that earned serious profits, so I'm not disappointed.
-
-Every day, I come downstairs and have breakfast with my girlfriend. When she leaves, I write for 60-90 minutes.  My house is at the end of a dead-end road, so it's perfectly quiet. After writing, I map out how to spend the rest of my day. I don't work after dinner or on the weekends. If I feel sleepy at 3pm, I take a nap and don't have to worry that my co-workers think I'm not pulling my weight.
-
-Before I quit, the part of working for myself that I most fantasized about was just the independence of it. And it turns out that it's as satisfying as I imagined. I love being in charge of my entire day and having the freedom to completely change direction on my businesses or start over when it feels right.
+After years of banging my head against the wall with [Angular](https://angular.io), I'm happy to have found a framework that feels appropriate for solo developers.
 
 ## What's next
 
@@ -331,7 +334,7 @@ Here's what I hope to accomplish in my third year as a solo developer:
 * Publish 10 blog posts.
   * This gives me time for one per month with some room for longer posts or taking a month off to prepare a conference presentation.
 * Learn one new technology.
-  * It doesn't have to benefit my business, but it would be cool if it did. I've been looking for an excuse to learn Rust.
+  * I've been looking for an excuse to learn [Rust](https://www.rust-lang.org).
 
 ---
 
