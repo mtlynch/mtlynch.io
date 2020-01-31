@@ -44,10 +44,12 @@ blockquote {
   border: 1px solid grey;
 }
 
+
 @media screen and (min-width: 768px) {
   .align-left {
     float: left;
     margin-right: 1em !important;
+    margin-top: 1em !important;
   }
 }
 
@@ -55,6 +57,7 @@ blockquote {
   .align-right {
     float: right;
     margin-left: 1em !important;
+    margin-top: 1em !important;
   }
 }
 
