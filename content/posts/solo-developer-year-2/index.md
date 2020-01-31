@@ -110,7 +110,7 @@ var myChart = new Chart(ctx, {
 | Expenses   | $23,133  | $9,657  | <font color="green">-$13,477 (-58%)</font> |
 | **Net Profit** | **<font color="red">-$20,871</font>** | **<font color="red">-$2,402</font>** | **<font color="green">+$18,469 (+88%)</font>** |
 
-My second year was a huge improvement financially. I increased profits by $18.5k! 
+My second year was a huge improvement financially. I increased profits by $18.5k!
 
 Overall, I still lost money, but try not to get too hung up on that. I tripled revenue to $7.2k and cut expenses by more than half.
 
@@ -120,7 +120,7 @@ My long-term unprofitability often perplexes people. They assume I fund my money
 
 * **Low expenses**: I have no children and [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are ~$2k/month.
 * **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
-* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
+* **Lucky investments**: I've kept most of my savings in the S&P 500 throughout my career, which has coincided with especially strong market runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
 
 ## Project by project
 
@@ -172,7 +172,7 @@ At $2.3k of revenue, Is It Keto was my second-highest grossing product for 2019.
 
 {{< img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" hasBorder="True" maxWidth="650px" caption="Is It Keto traffic by month" >}}
 
-88% of Is It Keto's visitors come from search engines, but I've never been able to connect improvements in search traffic to any change I made to the site. There were months when I added lots of content, [optimized page titles](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I ignored the site for months and Google traffic grew the entire time. 
+88% of Is It Keto's visitors come from search engines, but I've never been able to connect improvements in search traffic to any change I made to the site. There were months when I added lots of content, [optimized page titles](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I ignored the site for months, and Google traffic grew the entire time.
 
 Is It Keto was also my biggest expense, as I outsourced much of the writing. I spent more than I should have on contractors because of my inexperience at hiring and managing writers, but the experience taught me a lot and led to my widely ignored [guide to hiring content writers](/hiring-content-writers/).
 
@@ -192,7 +192,7 @@ Is It Keto was also my biggest expense, as I outsourced much of the writing. I s
 
 Pageviews are down substantially, which is unsurprising. My [quitting Google post](/why-i-quit-google/) received 500k pageviews in 2018, so I didn't expect to produce another hit like that.
 
-Still, I struggled to find readers last year. Throughout the preceding two years, many of my articles became popular without me trying very hard to promote them. I'd write the article then find an appreciative community to share it with afterwards.
+Still, I struggled to find readers last year. Throughout the preceding two years, many of my articles became popular without me trying very hard to promote them. I'd write the article then find an appreciative community to share it with afterward.
 
 In 2019, I branched out from technical writing and focused more on the struggles of running a bootstrapped business. Even though there are plenty of online communities for bootstrappers, they attract self-promoters, so the groups are less welcoming to off-site blog posts. I've also noticed that readers seem less interested in business lessons unless the story involves thousands of dollars &mdash; earning it or losing it both seem to work.
 
@@ -264,7 +264,7 @@ Reading [*Start Small, Stay Small*](https://amzn.to/2HZT8lA) ([notes](/book-repo
 
 When I set last year's goal to $500/month in revenue, some people encouraged me to set a higher target. New businesses have a high chance of failure, so I may as well shoot for the moon.
 
-Looking back, I still feel that $500/month was sensible. Is It Keto was a nice "beginner business" because the mechanics were so simple. Ads and affiliate purchases generated about $0.01 per vistor, on average. More visits meant more money, so I got to experiment with different growth strategies without worrying about things like pricing, sales funnels, or customer support. It was gratifying to watch my revenues begin at a [paltry $1/month](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661) then grow by 50-150% each month to reach $400/month by the end of the year.
+Looking back, I still feel that $500/month was sensible. Is It Keto was a nice "beginner business" because the mechanics were so simple. Ads and affiliate purchases generated about $0.01 per visitor, on average. More visits meant more money, so I got to experiment with different growth strategies without worrying about things like pricing, sales funnels, or customer support. It was gratifying to watch my revenues begin at a [paltry $1/month](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661) then grow by 50-150% each month to reach $400/month by the end of the year.
 
 The flip side was seeing how low-risk businesses can be limiting. When margins are a penny per customer, most avenues for expansion are off the table. It makes no sense to pay $0.50-$1.50 per click for an ad if the visitor only generates $0.01 in revenue. I'd love to bring on an employee to help grow the site, but even a cheap $200/month freelancer would have to double my traffic to justify their cost.
 
@@ -272,9 +272,9 @@ Now that I'm entering my third year as a founder, I'm ready to make bigger bets.
 
 ## I still love it
 
-When people find out that I've run at a financial loss for the past two years, they worry that I regret leaving my cushy Google job. It's common for founders to experience burnout after a year or two, but I've been fortunate to never feel that way. I chalk this up to my healthy sense of self-doubt at the start of this project &mdash; I assume I'd fail for awhile before finding success. It's also easy to avoid financial stress when you're in no danger of running out of money.
+When people find out that I've run at a financial loss for the past two years, they worry that I regret leaving my cushy Google job. It's common for founders to experience burnout after a year or two, but I've been fortunate never to feel that way. I chalk this up to my healthy sense of self-doubt at the start of this project &mdash; I assume I'd fail awhile before finding success. It's also easy to avoid financial stress when you're in no danger of running out of money.
 
-Every day, I come downstairs and enjoy a leisurely breakfast with my girlfriend. We live at the end of a dead end street, so when she leaves for work, my house is perfectly quiet. After writing for 60-90 minutes, I map out the rest of my day. I don't work after dinner or on the weekends. If I feel sleepy at 3pm, I take a nap and never worry about what my manager thinks.
+Every day, I come downstairs and enjoy a leisurely breakfast with my girlfriend. We live at the end of a dead-end street, so when she leaves for work, my house is perfectly quiet. After writing for 60-90 minutes, I map out the rest of my day. I don't work after dinner or on the weekends. If I feel sleepy at 3pm, I take a nap and never worry about what my manager thinks.
 
 Before quitting, the part of the lifestyle I fantasized about most was the simple independence of it. It is indeed as satisfying as I dreamed. I love having full autonomy over my day and the freedom to completely change the direction of my businesses or start over when it feels right.
 
