@@ -1,7 +1,7 @@
 ---
 title: My First Year as a Solo Developer
 tags:
-- retrospectives
+- annual review
 - blogging
 - google
 - zestful
@@ -9,7 +9,6 @@ tags:
 - sia
 - is it keto
 - ketohub
-- money
 description: Exactly one year ago, I quit my job at Google, so it's time to reflect
   on how the decision has affected my finances, lifestyle, and happiness.
 discuss_urls:
