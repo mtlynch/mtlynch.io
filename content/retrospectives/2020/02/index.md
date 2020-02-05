@@ -2,6 +2,8 @@
 title: "WanderJest: Month 1"
 date: 2020-02-05
 description: Still searching for my first dollar of revenue, but it feels like it's within grasp.
+images:
+- /retrospectives/2020/02/wanderjest-google-analytics.jpg
 ---
 
 ## Highlights
