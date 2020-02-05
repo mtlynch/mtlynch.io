@@ -51,7 +51,7 @@ This was useful to write, as it helped me re-evaluate my long term strategy. It 
 | Affiliate Earnings        | $0.00        |
 | **Total Earnings**        | **$0.00**    |
 
-It's WanderJest's first month, so I'm happy with its progress out of the gate. I wish I'd achieved some revenue, but I'm encouraged by how welcoming everyone has been when I approach them about setting up ad-hoc affiliate agreements. 
+It's WanderJest's first month, so I'm happy with its progress out of the gate. I wish I'd achieved some revenue, but I'm encouraged by how welcoming everyone has been when I approach them about setting up ad-hoc affiliate agreements.
 
 User engagement needs to improve. No users have created accounts yet, and that's partially because they've only been available for a week and partially because the only thing an account lets someone do is write public reviews of shows.
 
@@ -136,7 +136,7 @@ Ultimately, the thing that performers, venues, and show organizers care about ab
 
 Fancy features and promotions mean nothing unless I can demonstrate to show organizers that WanderJest increases their ticket sales. And to do that, I need to get WanderJest in front of consumers. Not only that, I need to make it "sticky" so that users think of WanderJest when they're wondering what to do for entertainment.
 
-I've posted on my town's local Facebook group and two local subreddits: [/r/northampton](https://redd.it/evoo77) and [/r/springfield](https://redd.it/ey90il). The response to every post has been uniformly positive, with the /r/springfield subreddit even adding WanderJest to their permanent sidebar. 
+I've posted on my town's local Facebook group and two local subreddits: [/r/northampton](https://redd.it/evoo77) and [/r/springfield](https://redd.it/ey90il). The response to every post has been uniformly positive, with the /r/springfield subreddit even adding WanderJest to their permanent sidebar.
 
 {{< gallery caption="Response to WanderJest social media posts" >}}
   {{< img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook" >}}
