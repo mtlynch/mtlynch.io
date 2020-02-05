@@ -6,7 +6,7 @@ description: TODO - One-line summary
 
 ## Highlights
 
-* 
+*
 
 ## Goal Grades
 
@@ -49,12 +49,12 @@ TODO
 
 ### What got done?
 
-* 
+*
 
 ### Lessons learned
 
-* 
+*
 
 ### Goals for next month
 
-* 
+*
