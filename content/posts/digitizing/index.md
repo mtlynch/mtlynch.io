@@ -39,6 +39,12 @@ The answer was always going to be "no" until I captured all the data and metadat
 
 ## Part 1: Digitizing
 
+Borrowed my dad's VCR, bought a cheap RCA to USB adaptor.
+
+Realized I was spending so much time fixing audio and it probably was because I skimped on the video capture device.
+
+Bought a new capture device, but quality was still bad. So I bought a new VCR with S-Video output. S-Video didn't work, so I was back to RCA and quality seemed about the same.
+
 * Second try with video capture software
 * Try three with different combinations of VCRs and capture devices
 * Try four with digitization company, EverPresent
