@@ -1,22 +1,31 @@
 ---
 title: My Eight Year Quest to Digitize 45 Video Tapes
+date: 2020-02-29
 ---
 
-I've carried this box of video tapes around for the last eight years. They've moved with me through four different apartments and one house. They're VHS tapes from the home videos my family made throughout my childhood. I refused to throw them away until I digitized them. And not just digitized them, but digitized them so well.
+I've carried this box of video tapes around for the last eight years. They've moved with me through four different apartments and one house. They're my family's home videos from my childhood.
 
-I finally completed the project last year. Even though it's a web server, I don't have to pay for web hosting. My only cost is 
+TODO: Picture of tapes
 
-## That doesn't sound so hard
+After eight years and 600 hours of work, I finally digitized and organized them well enough to throw away the original tapes. Here's what they look like now:
 
-If you're wondering why it took so long, I don't blame you. I thought it would be an easy project too. These are family artifacts, and I'm not willing to throw away the tapes until I'm confident that I've captured all of the data accurately. But once you start doing it, you realize that capturing the data accurately isn't as simple as it seems. There's metadata on the tapes. Some of the tapes have labels that give clues about the dates. There's ordering to the clips that's also important for establishing dates. If someone says the date in clip A then the date in clip C, you know that clip B must be between dates A and C. But if you naively approach it the way I originally did, just saving the clip as "Michael plays with water balloons.mp4" then you lose that metadata.
-
-## The result
+TODO: Screenshot of sharing site
 
 There are . It's 513 separate clips. Each clip shows the title, a description, the recording date, which tape it came from, who's in it, a description of what's going on, and how old everyone is at the time of the recording.
 
-TODO: Show screenshot
+TODO: Screenshot of a specific video
 
-My only costs are for storage. Web hosting is free through an ephemeral Heroku instance that spins up on demand.
+This post explains how I did it and why it took me eight years.
+
+And not just digitized them, but digitized them so well that I was confident I'd never need the originals again.
+
+I finally completed the project last year. Even though it's a web server, I don't have to pay for web hosting. My only cost is only $XX per month.
+
+## That doesn't sound so hard
+
+If you're wondering why it took so long, I don't blame you. I thought it would be an easy project too.
+
+These are family artifacts, and I'm not willing to throw away the tapes until I'm confident that I've captured all of the data accurately. But once you start doing it, you realize that capturing the data accurately isn't as simple as it seems. There's metadata on the tapes. Some of the tapes have labels that give clues about the recording dates. There's ordering to the clips that's also important for establishing dates. If someone says the date in clip A then the date in clip C, you know that clip B must be between dates A and C. But if you naively approach it the way I originally did, just saving the clip as "Michael plays with water balloons.mp4" then you lose that metadata.
 
 ## Accepting this quest
 
