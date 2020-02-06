@@ -17,10 +17,6 @@ TODO: Screenshot of a specific video
 
 This post explains how I did it and why it took me eight years.
 
-And not just digitized them, but digitized them so well that I was confident I'd never need the originals again.
-
-I finally completed the project last year. Even though it's a web server, I don't have to pay for web hosting. My only cost is only $XX per month.
-
 ## That doesn't sound so hard
 
 If you're wondering why it took so long, I don't blame you. I thought it would be an easy project too.
@@ -33,11 +29,19 @@ Back around 2010, my mom told me that she had digitized all of our old home vide
 
 And watching it, I realized that there were clips missing. I asked for the full original set of VHS tapes. My dad still had an old VCR. I thought it would be as simple as buying some kind of cable to connect the VCR to my computer and I'd be done.
 
+## My naive first try
+
+For years after we got rid of VCRs, my mom
+
+TODO: Picture of original DVDs (I'm not sure what happened to the missing letters)
+
+The answer was always going to be "no" until I captured all the data and metadata so thoroughly that I was confident that there was nothing I'd ever need on the originals.
+
 ## Part 1: Digitizing
 
-Second try with video capture software
-Try three with different combinations of VCRs and capture devices
-Try four with digitization company, EverPresent
+* Second try with video capture software
+* Try three with different combinations of VCRs and capture devices
+* Try four with digitization company, EverPresent
   * A long rant on EverPresent
     * Gave me a hard drive when I specifically said I didn't want one
     * Charged a different price than what I was quoted
@@ -50,8 +54,8 @@ The problem with home videos is that 90% of the footage is boring, 8% is enterta
 
 * First try of editing everything in Adobe Premiere Elements
   * Lose data, lots of starting and stopping.
+  * When you're watching the videos, you 
 * python scene detect
-* When you're watching the videos, you 
 * I remembered that I'm a programmer
   * process-home-videos
 
