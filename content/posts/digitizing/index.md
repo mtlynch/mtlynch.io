@@ -23,30 +23,70 @@ If you're wondering why it took so long, I don't blame you. I thought it would b
 
 These are family artifacts, and I'm not willing to throw away the tapes until I'm confident that I've captured all of the data accurately. But once you start doing it, you realize that capturing the data accurately isn't as simple as it seems. There's metadata on the tapes. Some of the tapes have labels that give clues about the recording dates. There's ordering to the clips that's also important for establishing dates. If someone says the date in clip A then the date in clip C, you know that clip B must be between dates A and C. But if you naively approach it the way I originally did, just saving the clip as "Michael plays with water balloons.mp4" then you lose that metadata.
 
-## Accepting this quest
-
-Back around 2010, my mom told me that she had digitized all of our old home videos. She bought some device that converted VHS to DVD, so she ran all of the old home videos through it. The problem was that there was only one copy, so to watch any of it, you still had to 
-
-And watching it, I realized that there were clips missing. I asked for the full original set of VHS tapes. My dad still had an old VCR. I thought it would be as simple as buying some kind of cable to connect the VCR to my computer and I'd be done.
-
 ## My naive first try
 
-For years after we got rid of VCRs, my mom
+Around 2010, my mom bought some sort of VHS to DVD converter and ran all of our home videos through it.
 
 TODO: Picture of original DVDs (I'm not sure what happened to the missing letters)
 
-The answer was always going to be "no" until I captured all the data and metadata so thoroughly that I was confident that there was nothing I'd ever need on the originals.
+The problem was that there was only one set of DVDs. At that point, everyone in my family lived in a different state, so it wasn't like we could easily trade the DVDs back and forth. So in 2011, I got the DVDs from my sister, converted the DVDs to AVI files and threw them all up on cloud storage. Problem solved! Now everyone can access them!
+
+TODO: Screenshot of files on GCS
+
+A few weeks later, I asked people if they'd watched any of the tapes, and nobody had. I hadn't either. In the age of YouTube, it seemed so boring to download a 3-hour mystery clip and then jump around in search of interesting footage.
+
+The only person who was excited about it was my mom. "Okay, great," she said, "Now, can I finally throw out all these tapes?" That was a scary question. What if there were tapes that we missed? What if we could do better on quality?
+
+I realized that I'd never feel comfortable throwing away the original tapes until I was confident that I captured everything we wanted from them. That meant capturing the footage itself at the highest quality.
+
+## Digitization: from start to finish
+
+TODO: Diagram of the whole process
+
+In reality, my path was messier, because I'd reach stage three, realize I screwed up stage one, then have to start all over again. For the sake of everyone's sanity, I'm explaining the process stage by stage instead of forcing you, my beloved readers, to constantly jump backwards and restart along with me.
 
 ## Part 1: Digitizing
 
-Borrowed my dad's VCR, bought a cheap RCA to USB adaptor.
+I told my mom I'd handle the original tapes, and so the next time I saw her, she handed me a huge cardboard box of the old tapes.
 
-Realized I was spending so much time fixing audio and it probably was because I skimped on the video capture device.
+The obvious solution would be to outsource it to a professional. There are plenty of digitization services, including companies who specialize in processing old home videos.
 
-Bought a new capture device, but quality was still bad. So I bought a new VCR with S-Video output. S-Video didn't work, so I was back to RCA and quality seemed about the same.
+I'm fairly privacy sensitive. I'm not going to hand over footage of me potty training (at the appropriate age, nothing weird!) to a random company for whom security is an afterthought. Besides, I thought, how hard could it be to digitize video?
 
-* Second try with video capture software
-* Try three with different combinations of VCRs and capture devices
+Spoiler alert: really hard.
+
+For my first attempt, I asked my dad to give me the old family VCR that was still in his basement. I bought a cheap RCA to USB adaptor from Amazon, and I was off to the races. To capture the raw video, I used VirtualDub, which was kind of dated at the time, but for 2012, not *that* dated.
+
+TODO: VCR picture
+
+To cut the videos into clips, I used Adobe Premiere Elements, a product I still happily use today. As I started the editing process, I realized that the audio and video was slightly out of sync. Okay, no problem. I can just shift the audio a little bit. But ten minutes later, I'd realize that it was out of sync. The skew would get progressively worse the deeper I got into each tape.
+
+I spent hours stubbornly and meticulously shifting audio. Do you know how hard it is to fix a clip's audio when you can't tell if a sound is happening 10 milliseconds too early or 10 milliseconds too late? It's really hard! Judge for yourself:
+
+TODO: Video
+
+### Maybe I should spend an extra hundred dollars instead of wasting hundreds of hours
+
+After an embarrassing number of hours, I realized that all this time was probably because I skimped on the video capture device. I had just purchased the cheapest one I saw on Amazon, but maybe a better one would capture without the headache.
+
+So, I bought another one! And then after hours of capturing footage from that, I realized I still had the same problem. After a bit of research, it seemed that the problem was with the VCR itself. So, I researched high-end VCRs. Nobody makes them anymore, but you can find good ones on eBay. I spent $XX on a XXX because it had S-Video output. I don't really know what difference that made, but it seemed like it was better than RCA, so I was excited. I bought a *third* video capture card and tried hooking it up.
+
+As luck would have it, it didn't work. At this point, I had three different video capture cards, two different VCRs. Women I dated at the time would come to my apartment and think that I was some sort of antique video equipment hoarding nutjob.
+
+### Surrendering to digitization professionals
+
+Jump forward to 2018. I had dragged these videotapes to different apartments, and I was preparing to move from New York City to Massachusetts. I couldn't justify dragging all the VCRs and video equipment too when it had become clear that I wasn't going to ever finish the project on my own.
+
+At this point, years had passed. I had invested hundreds of hours into experimenting with different settings. There were long gaps because it was a pain to drag out the VCR, hook it all up, and fiddle with sketchy Chinese device drivers. The cost of getting everything out and put away was about 30-40 minutes, so it only made sense on the weekends, when I had long blocks of free time to get into it. But it was a frustrating project, so it was easy to put off for months at a time.
+
+I reconsidered using a digitization company. I still didn't like the idea of handing over my family's most intimate memories to strangers, but I felt like they'd be able to capture the footage at a higher quality than I could ever achieve by myself.
+
+And they did. The quality was . They also screwed up security so badly that anyone could access all of my data for months, but if you'd like to read that rant, I've buried it in a separate rant.
+
+TODO: Link to rant about EverPresent
+
+TODO: Show side by side of video quality
+
 * Try four with digitization company, EverPresent
   * A long rant on EverPresent
     * Gave me a hard drive when I specifically said I didn't want one
@@ -56,24 +96,96 @@ Bought a new capture device, but quality was still bad. So I bought a new VCR wi
 
 ## Part 2: Editing
 
-The problem with home videos is that 90% of the footage is boring, 8% is entertaining, and 2% is amazing. That means that after you digitize the tapes, there's still lots of work to do.
+My experience with home videos is that 90% of the footage is boring, 8% is entertaining, and 2% is amazing. That means that after you digitize the tapes, there's still lots of work to do.
 
-* First try of editing everything in Adobe Premiere Elements
-  * Lose data, lots of starting and stopping.
-  * When you're watching the videos, you 
-* python scene detect
-* I remembered that I'm a programmer
-  * process-home-videos
+My first pass at editing was to just use Adobe Premiere Elements. This is a great tool, and it's inexpensive. Critically important for this type of work is the zoom bar. You want to be able to zoom out to jump around a long clip but zoom in and jump forward and backwards frame-by-frame when you're cutting the end of a scene. Premiere also gives you a lot of control over the video output. When converting a video, you can generally trade between three variables: conversion time, file size, and quality. Conversion time didn't matter because I had years to get this done. File size mattered a little bit, but the highest priority for me was video quality. I didn't want to ever re-do the editing process, so I optimized for quality.
+
+The biggest problem with Premiere is that it requires a lot of starting and stopping. I'd open a 2-hour video, select the boundaries of the first clip, and then export it. But exporting took 2-30 minutes, depending on the length of the clip. It basically meant that I could only do it if I was constantly context-switching between that and some other task.
+
+In one of my many failed attempts, three stages later, I realized I was throwing away critical metadata at this stage. The first time I started editing with Premiere, I'd just save each file based on how I'd title the video, like `michael dancing to the radio.mp4`. When I reached the sharing stage, I realized that I'd lost the order of when the clips were recorded. For many of the clips, I couldn't even tell what year they were recorded. But if I had saved the 
+
+Another huge issue is that fixing small errors is about as hard as doing everything again. For example, when I reached the sharing stage, I realized that I should have exported the video in a format that browsers can play natively. Because I didn't do that, I either had to re-do the tedious process of exporting hundreds of clips by hand or I had to degrade quality by transcoding the video to a different format.
+
+### Robot-powered editing
+
+After an embarrassing number of hours doing everything by hand, I wondered if it was possible to automate this process. The advantage of dragging my feet so long on this project was that machine learning had time to catch up with me. Throughout the 2010s, machine learning was getting better and cheaper. I knew that no automated solution would get it perfect, but maybe it could do 80% of the work and I could fix the last 20%.
+
+I experimented with a tool called pyscenedetect. It did indeed get about 80% of it right, but I realized that the amount of work I had to do verifying correctness was probably higher than the work of doing it all myself.
+
+So, pyscenedetect didn't work, but it did bring one of the most important realizations of this entire project.
+
+### I remembered that I'm a programmer
+
+Up until this point, I'd been treating the video files as these impenetrable blobs that I couldn't interact with except with pre-made tools. pyscenedetect outputs a CSV file (TODO: check this) in case you want to use the frame boundaries in some other tool. 
+
+I realized that videos are, in fact, not a dark and mysterious blobs of data that I need to edit via interactive tools. There are plenty of libraries and command-line tools that automate video editing. Instead of chopping up clips in a tool like Premiere, I could just record the start and end times of each clip and use whatever tool I wanted to cut the clips at those positions.
+
+I ended up with a spreadsheet that looked like this:
+
+I then wrote a script that took that CSV and a list of raw video files and chopped them up into smaller clips. The tool that does the heavy lifting is ffmpeg, one of the most popular open source tools for working with video.
+
+One tricky part of this is that ffmpeg edits in terms of frame numbers. I couldn't figure out a way to get Premiere to display the current frame number. VLC Media Player didn't seem to offer this either. After researching, it turned out the only popular player that offers this as a native feature is QuickTime player. I tried for a while to use QuickTime to find the clip boundaries, but to do this well, you really need Premiere's zooming in and out feature and the ability to step back frame by frame or jump a few frames at a time.
+
+I found instructions for using ffmpeg to *add* frame numbers to all of my videos. So I just made a scratch copy of all the videos with a superimposed frame number. That allowed me to use Premiere to find the frame boundaries and just record the data in my spreadsheet.
+
+You'll notice that there are extra columns in the video that don't refer to the frames. I'll explain those when I get to the sharing section.
+
+### The glory of an automated solution
+
+You have to remember that at this point, I've spent literally hundreds of hours going through the tedious process of selecting clip boundaries in Premiere, hitting export, waiting a few minutes for it to complete, then starting over. And I did that multiple times for the same clips because of how many times I screwed up either digitization or preserving metadata.
+
+Once I had it scripted, it was a huge weight off my shoulders. I didn't have to worry that I was dropping metadata or I picked the wrong format. If there was anything I missed, I could just tweak my script, run it again, and it would all be fine.
 
 ## Part 3: Sharing
 
-People also don't want to read through a bunch of video files.
+I had a bunch of clips now, and I wanted a way to share them. I saw that just throwing a bunch of files onto cloud storage didn't work, so I wanted a way of sharing them that made them easier to browse and more fun to play with. My first attempt at this was in 2016, so YouTube and similar platforms were firmly established. I wanted basically a private YouTube that only my family could access.
+
+### ClipBucket, the cheap YouTube clone
+
+ClipBucket seemed to fit the bill. It was an open source YouTube clone. Puzzlingly, they didn't seem to offer installation instructions, but I found a random guide that showed me how to install it on Ubuntu. I converted that guide into an Ansible playbook (TODO: link) to automate the process, so I could spin up a ClipBucket instance on a local VM or on a Google Compute Engine cloud VM. ClipBucket was [very excited to see a Google employee](https://clipbucket.com/2016/09/17/clipbucket-into-googles-doors/) using ClipBucket, even though I was always careful not to interact with them in my capacity as a Google employee.
+
+It was a little tricky to figure out how to serve the videos. I had XX GB of videos, and I didn't want to have to re-upload everything if I ever had to wipe the VM. Disk space for local VMs is also relatively expensive, so I didn't want to pay for a huge disk either.
+
+I found gcsfuse, an open source library that allows you to mount Google Cloud Storage buckets as a Linux directory. So, I did that.
+
+That worked fine, but I ran into issues installing ClipBucket's updates. The first time I wrote my automation, I found bugs that prevented me from initializing ClipBucket's database. They seemed like strange oversights. Their built-in script contained duplicate primary keys, which MySQL would reject. My solution just used find and replace to eliminate the redundancy, but I figured that ClipBucket must have some internal script that avoids this, so they would promptly fix it after I reported it. To make matters more interesting, I was employed by Google at the time, and I wasn't allowed to contribute to open source projects without explicit permission, so I couldn't fix it myself, but I was allowed to write highly pointed bug reports.
+
+They never fixed those bugs. Slowly, I started to realize that maybe the company that makes its money by charging customers to install its software isn't that interested in making their software easy to install.
+
+### MediaGoblin, the dying beast
+
+After using ClipBucket for initial versions, I reassessed what was available. I found MediaGoblin. Unlike ClipBucket, it had an official Docker image. What could be easier to install than that?
+
+Even better was that it was very developer friendly. It offered a simple CLI for importing videos and supplying metadata.
+
+It's a GPL project, which is a little bit frustrating. They only use infrastructure that's also GPL, so they refuse to touch Github or Gitlab. Contributing to their codebase requires you to apply for an account on their server, file a bug report, supply a URL to your patch, and then let them manually merge it in. It feels kind of like contributing to an open source project in 2005.
+
+### MediaGoblin and the video storage problem
+
+I figured that I could follow the same process as I did with ClipBucket - put the videos on GCS, then symlink all of MediaGoblin's folders to GCS folders via gcsfuse. It turns out that mounting a GCS bucket into a Docker container is much harder than mounting it in a normal VM. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
+
+Two weeks later, I realized that none of it was necessary. I finally loaded all of my videos into MediaGoblin, mounted the GCS folder, and it was slow. *Painfully* slow. It was slow to even load the video thumbnails when it displayed the index of videos. I tried switching to a more powerful VM, but I still got the same result.
+
+I realized that the bottleneck was the reading and writing of the video files. To serve any data, my MediaGoblin had to read it from Google Cloud Storage via gcsfuse, probably not optimized for speed. Then it had to send the same data to the browser. But MediaGoblin was a pointless middleman. For the static files, it was just a dumb proxy.
+
+It would be better if the browser could just bypass MediaGoblin entirely for static files and grab them directly from GCS.
+
+TODO: Diagram of interaction between browser and GCS.
+
+I realized I could just do that with nginx. I wrote a rewrite rule in nginx to re-write paths from XX to XX. I deployed the new version and everything was speedy!
+
+Note: There's a security vulnerability here because it means that any user who knows the proper URL can access all of my files without authentication. I'm relying on the fact that the URLs are not guessable or easily-enumerable.
+
+### If I were to do this again
+
+MediaGoblin is fine now that I've got it working, but the project seems to be mostly dead. For simple video sharing, it's too much complexity.
+
+If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
 
 * Put the zips on Google Cloud Storage
 * ClipBucket
   * Created an Ansible role
   * Realized it's a pain to install. It turns out that they make their money provisioning servers, so they weren't that interested in making it easy to self-host.
-  * https://clipbucket.com/2016/09/17/clipbucket-into-googles-doors/
 * MediaGoblin
   * Realized I can transcode ahead of time
   * Faster if the client can hit GCS directly
@@ -96,6 +208,8 @@ Switched to Heroku ephemeral image
 ## Tips for anyone about to try this
 
 * Capture as much metadata as possible
+  * Labels on the tapes might turn out to be handy
+  * Keep a record of which clip came from which tape and in what order
 * It will be *really* difficult and expensive for you to achieve the same quality capture as a company that does dedicated video digitization (but steer clear of XX company)
 * Capture as much of the data in an application-agnostic format
   * Clip descriptions, time codes, dates, etc.
