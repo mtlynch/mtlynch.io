@@ -199,7 +199,7 @@ If I were doing this again, I'd use a static site generator like Hugo or Jekyll.
 
 ## Part 4: Hosting
 
-Started on GCE
+Started on GCE, issues with permissions.
 Switched to Heroku ephemeral image
 
 ## The final workflow
@@ -222,6 +222,10 @@ Switched to Heroku ephemeral image
 * Make a montage!
   * Slow show is great. I discovered this by mistake.
   * Montages are all about the music. "Slow Show" by whoever is amazing for montages and nobody knows.
+
+## Doing this yourself
+
+I didn't generalize it too much, because I imagine that everyone will have their own preferences for exactly how to digitize their data, but you can see an end-to-end example of how I digitized a tape of found footage in the public domain using the same method as I digitized my home videos.
 
 ## Source code
 
