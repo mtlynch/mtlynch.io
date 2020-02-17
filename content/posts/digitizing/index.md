@@ -183,9 +183,6 @@ MediaGoblin is fine now that I've got it working, but the project seems to be mo
 If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
 
 * Put the zips on Google Cloud Storage
-* ClipBucket
-  * Created an Ansible role
-  * Realized it's a pain to install. It turns out that they make their money provisioning servers, so they weren't that interested in making it easy to self-host.
 * MediaGoblin
   * Realized I can transcode ahead of time
   * Faster if the client can hit GCS directly
@@ -204,6 +201,15 @@ Switched to Heroku ephemeral image
 
 ## The final workflow
 
+1. Digitize video tapes into high quality raw footage.
+1. Use ffmpeg to copy each raw video with frame numbers overlaid on the screen.
+1. Create a spreadsheet to track start and end frame numbers for each scene and any metadata you want to capture.
+1. Use Adobe Premiere Elements to view each clip and populate the spreadsheet.
+1. Run [`csv_to_yaml`](https://github.com/mtlynch/process-home-videos) to convert the CSV to a YAML file.
+1. Run [`render_scenes`](https://github.com/mtlynch/process-home-videos) to chop the raw footage into individual scenes.
+1. Run [`publish_to_mediagoblin`](https://github.com/mtlynch/process-home-videos) to create a mediagoblin database file
+1. Move the MediaGoblin database file and all the processed scenes to Google Cloud Storage.
+1. Deploy a custom MediaGoblin Docker image to Heroku.
 
 ## Tips for anyone about to try this
 
