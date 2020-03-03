@@ -35,15 +35,21 @@ TODO
 
 ## Stats
 
-### [Is It Keto](https://isitketo.org)
-
-### [Zestful](https://zestfuldata.com)
+### [WanderJest](https://wanderjest.com)
 
 ## Topic 1
 
 ## Topic 2
 
 ## Topic 3
+
+## Legacy projects
+
+Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
+
+### [Is It Keto](https://isitketo.org)
+
+### [Zestful](https://zestfuldata.com)
 
 ## Wrap up
 
