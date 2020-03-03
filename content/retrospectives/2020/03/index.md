@@ -79,7 +79,7 @@ Here's how I expected it to play out:
 
 ## My difficult marketing reality
 
-On Thursday, February 20th, I sent out a [press release ](https://wanderjest.com/press/scavenger-hunt-press-release-2020-02-20.pdf) to seven local newspapers and TV channels. As soon as the email went out, I began staring at my phone, nervously waiting for the deluge of press interview requests to pour in.
+On Thursday, February 20th, I sent out a [press release](https://wanderjest.com/press/scavenger-hunt-press-release-2020-02-20.pdf) to seven local newspapers and TV channels. As soon as the email went out, I began staring at my phone, nervously waiting for the deluge of press interview requests to pour in.
 
 The phone never rang.
 
@@ -194,7 +194,6 @@ At first, WakaTime didn't sound like something I'd want, but then I realized it 
 Long ago, I experimented with tools like [RescueTime](https://www.rescuetime.com) but promptly stopped when it dawned on me that I was basically installing a spyware tool that sent everything on my screen to an untrusted company. I like WakaTime because the client software is [open source](https://github.com/wakatime/wakatime), and they treat privacy as a first-class concern. It doesn't record any sensitive information except for filenames in your code editor, and even those you can obfuscate or exclude client-side. I do my coding in dedicated virtual machines for each project, so WakaTime only has access to specific projects where I install the tool.
 
 This is the first post I've written since installing WakaTime, and I can see that it took me 7 hours and 12 minutes to write (including updating [the script I use](https://github.com/mtlynch/make-mtlynch-stats) to spit out my stats tables). That's pretty close to what I expected. I generally dedicate half of the first two days of the month to writing my retrospective post, so that feels like the right amount of time.
-
 
 {{< img src="wakatime.jpg" alt="Screenshot of WakaTime dashboard" caption="[WakaTime](https://wakatime.com) dashboard showing the time I spent authoring this post." maxWidth="700px" >}}
 
