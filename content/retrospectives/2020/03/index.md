@@ -2,6 +2,8 @@
 title: "WanderJest: Month 2"
 date: 2020-03-03
 description: I never thought it would be so difficult to give away free money.
+images:
+- /retrospectives/2020/03/og-image.jpg
 ---
 
 ## Highlights
