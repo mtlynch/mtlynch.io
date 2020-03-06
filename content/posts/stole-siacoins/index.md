@@ -6,6 +6,7 @@ tags:
 - security
 - sia
 description: A lesson in Sia wallet seed safety
+aliases: [/stole-siacoin/]
 discuss_urls:
   reddit: https://www.reddit.com/r/CryptoCurrency/comments/6hm4w0/how_i_stole_your_siacoin/
   hacker_news: https://news.ycombinator.com/item?id=14568558
