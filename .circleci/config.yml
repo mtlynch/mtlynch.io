@@ -47,13 +47,13 @@ jobs:
             - resources
   lint-html:
     docker:
-      - image: mtlynch/htmlproofer:3.15.0
+      - image: wjdp/htmltest:v0.12.0
     steps:
       - attach_workspace:
           at: ./
       - run:
           name: Check HTML and external links
-          command: tests/lint-html
+          command: htmltest
   check-google-analytics-token:
     docker:
       - image: cimg/base:2020.01

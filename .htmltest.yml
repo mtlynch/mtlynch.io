@@ -1,0 +1,14 @@
+DirectoryPath: public
+IgnoreAltMissing: true
+StripQueryString: false
+OutputDir: /tmp/htmltest
+IgnoreURLs:
+  - amd.com
+  - linkedin.com
+  - meetup.com
+  - upwork.com
+  - vimeo.com
+  - //localhost
+  - https://mtlynch.io
+  - http://www.corsair.com/en-us/memory-finder
+  - http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability6.html
