@@ -19,12 +19,14 @@ fi
 
 # Run HTMLProofer
 htmlproofer "$BUILD_DIR" \
-  --only-4xx \
   --check-favicon \
   --check-html \
   --check-opengraph \
   --allow-hash-href \
   --empty-alt-ignore \
+  `# LinkedIn for some reason returns 999. If we use the --only-4xx flag, then`
+  `# we miss failures to connect (e.g., a site doesn't have https enabled).`
+  --http_status_ignore "999" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
