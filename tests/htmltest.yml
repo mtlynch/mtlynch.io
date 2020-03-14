@@ -9,6 +9,11 @@ IgnoreURLs:
   - upwork.com
   - vimeo.com
   - //localhost
-  - https://mtlynch.io
+  # TODO: Remove this
+  #- https://mtlynch.io
   - http://www.corsair.com/en-us/memory-finder
   - http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability6.html
+  # ./check-amazon-links will catch bad Amazon URLs. Ignore with htmltest because they tend
+  # to return 5xx errors.
+  - amazon.com
+  - amzn.to
