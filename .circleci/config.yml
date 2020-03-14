@@ -53,7 +53,7 @@ jobs:
           at: ./
       - run:
           name: Check HTML and external links
-          command: htmltest
+          command: htmltest --conf tests/htmltest.yml
   check-google-analytics-token:
     docker:
       - image: cimg/base:2020.01
