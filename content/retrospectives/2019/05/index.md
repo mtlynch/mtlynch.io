@@ -81,7 +81,7 @@ If you know a writer or copy editor who might be interested, please ask them to 
 
 One idea I liked from the book [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) was the "market-first approach." Instead of picking a product and trying to sell it to a particular market, you pick an underserved market, find out what they need, then build that.
 
-I [live in Western Massachusetts](/solo-developer-year-1/#so-i-bought-a-house), so I've been thinking about businesses that are exclusive to this area. One such business is quarries that mine [Goshen stone](https://en.wikipedia.org/wiki/Goshen_stone), a popular stone for home landscaping. These businesses have millions in revenue but seem to do most of their business through paper orders and phone calls, so I suspect there's opportunity for automation.
+I [live in Western Massachusetts](/solo-developer-year-1/#so-i-bought-a-house), so I've been thinking about businesses that are exclusive to this area. One such business is quarries that mine Goshen stone, a popular stone for home landscaping. These businesses have millions in revenue but seem to do most of their business through paper orders and phone calls, so I suspect there's opportunity for automation.
 
 {{< img src="quarry.jpg" alt="Photo by Mariana Proença on Unsplash" caption="Maybe what this quarry really needs is a good SaaS app" maxWidth="800px" >}}
 
