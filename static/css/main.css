@@ -121,7 +121,7 @@ table {
   }
 }
 
-.sbscrb_cont {
+.subscribe-container {
   background: #f9f9f9;
   font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
   line-height: 1.5em;
@@ -138,27 +138,23 @@ table {
 
 }
 
-.sbscrb_cont h3 {
+.subscribe-container h3 {
   text-align: center;
   margin: 0px 0px 10px;
   font-size: 28px;
 }
 
-.sbscrb_cont form {
+.subscribe-container form {
   background-color: inherit;
 }
 
-.sbscrb_cont .sbscrb_cont_inner {
+.subscribe-container .subscribe-container-inner {
   width: 100%;
   float: left;
   padding: 5%;
 }
 
-.ck_errorArea {
-  display: none; /* not used, but may need for inline form validation */
-}
-
-.sbscrb_cont input[type="text"], .sbscrb_cont input[type="email"] {
+.subscribe-container input[type="text"], .subscribe-container input[type="email"] {
   width: 100%;
   float: none;
   margin-top: 5px;
@@ -171,12 +167,16 @@ table {
   height: 42px;
 }
 
-.sbscrb_cont input[type="text"]:focus, .sbscrb_cont input[type="email"]:focus {
+.subscribe-container input[type="text"]:focus, .subscribe-container input[type="email"]:focus {
   outline: none;
   border-color: #aaa;
 }
 
-.sbscrb_cont .subscribe_btn {
+.subscribe-container .subscribe-topics {
+  margin-top: 2rem;
+}
+
+.subscribe-container .subscribe-btn {
   width: 100%;
   float: none;
   margin-top: 5px;
@@ -189,6 +189,10 @@ table {
   border: none;
   text-shadow: none;
   height: 42px;
+}
+
+.email-octopus-error-message{
+  color:#e74c3c
 }
 
 .honeypot {
