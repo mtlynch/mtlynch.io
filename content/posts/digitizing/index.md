@@ -177,7 +177,14 @@ After using ClipBucket for initial versions, I reassessed what was available. I 
 
 Even better was that it was very developer friendly. It offered a simple CLI for importing videos and supplying metadata.
 
-It's a GPL project, which is a little bit frustrating. They only use infrastructure that's also GPL, so they refuse to touch Github or Gitlab. Contributing to their codebase requires you to apply for an account on their server, file a bug report, supply a URL to your patch, and then let them manually merge it in. It feels kind of like contributing to an open source project in 2005.
+It's a GNU project, which is a little bit frustrating. They only use infrastructure that's also GPL, so they refuse to touch Github or Gitlab. Contributing to their codebase requires you to:
+
+1. Apply for an account on [their Trac server](https://issues.mediagoblin.org/)
+1. File a bug report
+1. Supply a URL to your patch
+1. Wait for them merge in your patch via command-line tools and publish the result to their [git repository](https://savannah.gnu.org/projects/mediagoblin).
+
+It feels kind of like contributing to an open source project in 2005. I submitted [a](https://issues.mediagoblin.org/ticket/5574) [few](https://issues.mediagoblin.org/ticket/5575) [patches](https://issues.mediagoblin.org/ticket/5576), but even filing the bugs took months because their Trac server was [blocking registrations](https://imgur.com/NOjfHI7), and then it was 11 months before I got a response on any of the bugs.
 
 ### Re-dockerizing MediaGoblin
 
@@ -201,7 +208,7 @@ TODO: Diagram of interaction between browser and GCS.
 
 I realized I could just do that with nginx. I wrote a rewrite rule in nginx to re-write paths from XX to XX. I deployed the new version and everything was speedy!
 
-{{<notice type="info">}}
+{{<notice type="danger">}}
 **Note**: There's a security vulnerability here because it means that any user who knows the proper URL can access all of my files without authentication. I'm relying on the difficulty of guessing my filenames.
 {{</notice>}}
 
@@ -234,10 +241,12 @@ Switched to Heroku ephemeral image
 
 ## Tips for anyone about to try this
 
-* Capture as much metadata as possible
-  * Labels on the tapes might turn out to be handy
-  * Keep a record of which clip came from which tape and in what order
-* It will be *really* difficult and expensive for you to achieve the same quality capture as a company that does dedicated video digitization
+* Capture as much metadata as possible during the entire capture process.
+  * Labels on the tapes might turn out to be handy.
+  * Keep a record of which clip came from which tape and in what order.
+  * Make note of any clues about the recording date in the clip.
+* Consider outsourcing the raw capture to professionals.
+  * It will be *really* difficult and expensive for you to achieve the same quality capture as a company that does dedicated video digitization
   * That said, I don't recommend EverPresent.
 * Capture as much of the data in an application-agnostic format
   * Clip descriptions, time codes, dates, etc.
@@ -259,7 +268,7 @@ I didn't generalize it too much, because I imagine that everyone will have their
 
 | Repository  | Description |
 |-------------|-------------|
-| [MediaGoblin](https://github.com/mtlynch/mediagoblin) | Mirror of the MediaGoblin core repo + Circle CI configuration. [mtlynch-custom](https://github.com/mtlynch/mediagoblin/tree/mtlynch-custom) has custom fixes for my instance (replaces their old video player and trims some parts of their UI that I don't need). |
+| [MediaGoblin](https://github.com/mtlynch/mediagoblin) | Mirror of the MediaGoblin core repo + Circle CI configuration.<br><br>The branch [mtlynch-custom](https://github.com/mtlynch/mediagoblin/tree/mtlynch-custom) has custom fixes for my instance (replaces their old video player and trims some parts of their UI that I don't need). |
 | [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker) | Docker image for MediaGoblin. Depends on the MediaGoblin repo. Adds support for nginx and HTTP Basic Auth. |
 | [process-home-videos](https://github.com/mtlynch/process-home-videos) | Python scripts for chopping up raw video files into clips and then publishing those clips to MediaGoblin. |
 
