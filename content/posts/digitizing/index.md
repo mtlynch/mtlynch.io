@@ -75,44 +75,57 @@ As luck would have it, it didn't work. At this point, I had three different vide
 
 ### Surrendering to digitization professionals
 
-Jump forward to 2018. I had dragged these videotapes to different apartments, and I was preparing to move from New York City to Massachusetts. I couldn't justify dragging all the VCRs and video equipment too when it had become clear that I wasn't going to ever finish the project on my own.
+Fast forward to 2018. I had dragged these videotapes to two different apartments, and I was preparing to move from New York City to Massachusetts. I couldn't justify dragging all the VCRs and video equipment too when it had become clear that I wasn't going to ever finish the project on my own.
 
-At this point, years had passed. I had invested hundreds of hours into experimenting with different settings. There were long gaps because it was a pain to drag out the VCR, hook it all up, and fiddle with sketchy Chinese device drivers. The cost of getting everything out and put away was about 30-40 minutes, so it only made sense on the weekends, when I had long blocks of free time to get into it. But it was a frustrating project, so it was easy to put off for months at a time.
+At this point, years had passed. I had invested hundreds of hours into experimenting with different settings. There were long gaps because it was a pain to drag out the VCR, hook it all up, and fiddle with sketchy Chinese device drivers. The cost of getting everything out and put away was about 30-40 minutes, so it only made sense on the weekends, when I had long blocks of free time to get into it. But the project often frustrated me, so I never wanted to do it on the weekend unless I was really bored or anxious to get rid of the tapes.
 
 I reconsidered using a digitization company. I still didn't like the idea of handing over my family's most intimate memories to strangers, but I felt like they'd be able to capture the footage at a higher quality than I could ever achieve by myself.
 
-And they did. The quality was . They also screwed up security so badly that anyone could access all of my data for months, but if you'd like to read that rant, I've buried it in a separate rant.
-
-TODO: Link to rant about EverPresent
+And they did. The quality was .
 
 TODO: Show side by side of video quality
 
-* Try four with digitization company, EverPresent
-  * A long rant on EverPresent
-    * Gave me a hard drive when I specifically said I didn't want one
-    * Charged a different price than what I was quoted
-    * Published easily discoverable videos
-    * Gotta admit, quality was great
+{{<notice type="info">}}
+**A brief aside about EverPresent**
+
+The downside was that my fears about security were realized. All their plans require the customer to receive their files via cloud storage, so I opted against having them store a copy on any other physical media. But when I picked up my tapes, they had also copied my files to an external hard drive and wanted to charge me several hundred dollars for it. They also wanted to charge me a different fee for the digitization than we had agreed. They only relented after I showed them an email where the rep quoted me the price.
+
+When I looked at the instructions for accessing my files on cloud storage, I realized that the password was just duplicated from the URL. They published all their customers videos in a way that anyone could guess most of their customers' URLs. They were password protected, but the password matched the URL, so if you found a valid URL, you knew the password.
+
+I reported the issue to them, and they were polite and timely in their responses. They promised to remediate the issue within weeks, but then did nothing. I contacted them a couple months later to check on status, and they said that tehy decided against fixing the issue, but switched to a new password scheme. They said that they could tell from their Box.com logs that nobody was exploiting this issue in the wild (sidenote: I'm not sure that Box.com offers logging to verify this), so they just let existing customer URLs expire after six months and switched future customers to the more secure password scheme. They never shared details of their new password scheme with me except to say XXX.
+{{</notice>}}
 
 ## Part 2: Editing
 
 My experience with home videos is that 90% of the footage is boring, 8% is entertaining, and 2% is amazing. That means that after you digitize the tapes, there's still lots of work to do.
 
-My first pass at editing was to just use Adobe Premiere Elements. This is a great tool, and it's inexpensive. Critically important for this type of work is the zoom bar. You want to be able to zoom out to jump around a long clip but zoom in and jump forward and backwards frame-by-frame when you're cutting the end of a scene. Premiere also gives you a lot of control over the video output. When converting a video, you can generally trade between three variables: conversion time, file size, and quality. Conversion time didn't matter because I had years to get this done. File size mattered a little bit, but the highest priority for me was video quality. I didn't want to ever re-do the editing process, so I optimized for quality.
+My first pass at editing was to just use Adobe Premiere Elements. This is a great tool, and it's inexpensive. Critically important for this type of work is the zoom bar. You want to be able to zoom out to jump around a long clip but zoom in and jump forward and backwards frame-by-frame when you're cutting the end of a scene. 
 
-The biggest problem with Premiere is that it requires a lot of starting and stopping. I'd open a 2-hour video, select the boundaries of the first clip, and then export it. But exporting took 2-30 minutes, depending on the length of the clip. It basically meant that I could only do it if I was constantly context-switching between that and some other task.
+TODO: Screenshot of Premiere
 
-In one of my many failed attempts, three stages later, I realized I was throwing away critical metadata at this stage. The first time I started editing with Premiere, I'd just save each file based on how I'd title the video, like `michael dancing to the radio.mp4`. When I reached the sharing stage, I realized that I'd lost the order of when the clips were recorded. For many of the clips, I couldn't even tell what year they were recorded. But if I had saved the 
+### The downsides of Adobe Premiere
 
-Another huge issue is that fixing small errors is about as hard as doing everything again. For example, when I reached the sharing stage, I realized that I should have exported the video in a format that browsers can play natively. Because I didn't do that, I either had to re-do the tedious process of exporting hundreds of clips by hand or I had to degrade quality by transcoding the video to a different format.
+The biggest problem with Premiere is that it requires a lot of starting and stopping. My process was:
+
+1. Open a raw capture file containing 30-120 minutes of video.
+1. Mark the boundaries of an individual clip.
+1. Export the clip.
+1. Wait 2-15 minutes for exporting to complete.
+1. Go back to (2) until the tape is complete.
+
+The long waits meant that I could only do this work if I was constantly context-switching between that and some other task.
+
+When I reached the point of sharing the videos, I realized I had discarded critical metadata. I was just giving each clip a title like `michael dancing to the radio.mp4`. Later, when I wanted to make a web interface to share the videos, I realized there was a lot more information about the clips that I'd lost, such as when they were recorded and tags about the contents. I could add tags by just re-watching the videos, but figuring out the recording date meant going back to the raw footage where they came from and then deducing the time from the label there.
+
+One of the other fatal flaws of this workflow is that it's not easily reproducible. Fixing a small error is about as hard as doing the entire thing from scratch. For example, when I reached the sharing stage, I realized that I should have exported the video in a format that browsers can play natively. Because I didn't do that, I either had to re-do the tedious process of exporting hundreds of clips by hand or I had to degrade quality by transcoding the already-exported video to a different format.
 
 ### Robot-powered editing
 
-After an embarrassing number of hours doing everything by hand, I wondered if it was possible to automate this process. The advantage of dragging my feet so long on this project was that machine learning had time to catch up with me. Throughout the 2010s, machine learning was getting better and cheaper. I knew that no automated solution would get it perfect, but maybe it could do 80% of the work and I could fix the last 20%.
+After an embarrassing number of hours doing everything by hand, I wondered if it was possible to automate this process. The advantage of dragging my feet so long on this project was that machine learning had time to catch up with me. Throughout the 2010s, machine learning was getting better and cheaper. I knew that no automated solution would get it perfect, but maybe it could do 80% of the work and I could fix the last 20% by hand.
 
 I experimented with a tool called pyscenedetect. It did indeed get about 80% of it right, but I realized that the amount of work I had to do verifying correctness was probably higher than the work of doing it all myself.
 
-So, pyscenedetect didn't work, but it did bring one of the most important realizations of this entire project.
+So, pyscenedetect didn't work, but it did bring one of the most important realizations of this entire project: CSVs can represent rich clip metadata.
 
 ### I remembered that I'm a programmer
 
@@ -124,21 +137,27 @@ I ended up with a spreadsheet that looked like this:
 
 I then wrote a script that took that CSV and a list of raw video files and chopped them up into smaller clips. The tool that does the heavy lifting is ffmpeg, one of the most popular open source tools for working with video.
 
+### The surprising challenge of finding frame numbers
+
 One tricky part of this is that ffmpeg edits in terms of frame numbers. I couldn't figure out a way to get Premiere to display the current frame number. VLC Media Player didn't seem to offer this either. After researching, it turned out the only popular player that offers this as a native feature is QuickTime player. I tried for a while to use QuickTime to find the clip boundaries, but to do this well, you really need Premiere's zooming in and out feature and the ability to step back frame by frame or jump a few frames at a time.
 
 I found instructions for using ffmpeg to *add* frame numbers to all of my videos. So I just made a scratch copy of all the videos with a superimposed frame number. That allowed me to use Premiere to find the frame boundaries and just record the data in my spreadsheet.
 
-You'll notice that there are extra columns in the video that don't refer to the frames. I'll explain those when I get to the sharing section.
+You'll notice that there are many more columns in the spreadsheet than the frame boundaries. I'll explain those when I get to the section describing how I shared these clips.
 
 ### The glory of an automated solution
 
-You have to remember that at this point, I've spent literally hundreds of hours going through the tedious process of selecting clip boundaries in Premiere, hitting export, waiting a few minutes for it to complete, then starting over. And I did that multiple times for the same clips because of how many times I screwed up either digitization or preserving metadata.
+At this point, I had literally spent **hundreds** of hours going through the tedious process of selecting clip boundaries in Premiere, hitting export, waiting a few minutes for it to complete, then starting over. And because I had to repeat this process so many times either because I didn't capture the raw footage well enough or I didn't preserve all the metadata I wanted, I had repeated this whole process 2-3 times for each clip.
 
 Once I had it scripted, it was a huge weight off my shoulders. I didn't have to worry that I was dropping metadata or I picked the wrong format. If there was anything I missed, I could just tweak my script, run it again, and it would all be fine.
 
 ## Part 3: Sharing
 
-I had a bunch of clips now, and I wanted a way to share them. I saw that just throwing a bunch of files onto cloud storage didn't work, so I wanted a way of sharing them that made them easier to browse and more fun to play with. My first attempt at this was in 2016, so YouTube and similar platforms were firmly established. I wanted basically a private YouTube that only my family could access.
+I had a bunch of clips now, and I wanted a way to share them. From my naive first approach, I knew that nobody would want to just download a bunch of opaque files from cloud storage.
+
+My first attempt at sharing these clips was in 2016, so YouTube, Vimeo, and Netflix were firmly established. Everyone had come to expect that they should be able to watch videos by searching a web interface that showed thumbnails and metadata about each clip.
+
+I wanted to create a private YouTube that only my family could access.
 
 ### ClipBucket, the cheap YouTube clone
 
@@ -152,13 +171,21 @@ That worked fine, but I ran into issues installing ClipBucket's updates. The fir
 
 They never fixed those bugs. Slowly, I started to realize that maybe the company that makes its money by charging customers to install its software isn't that interested in making their software easy to install.
 
-### MediaGoblin, the dying beast
+### MediaGoblin, a more modern alternative
 
-After using ClipBucket for initial versions, I reassessed what was available. I found MediaGoblin. Unlike ClipBucket, it had an official Docker image. What could be easier to install than that?
+After using ClipBucket for initial versions, I reassessed what was available. I found MediaGoblin. Unlike ClipBucket, it had an official Docker image. What could be easier to install than that? And it was Python-based, as opposed to ClipBucket, which was the less elegant PHP.
 
 Even better was that it was very developer friendly. It offered a simple CLI for importing videos and supplying metadata.
 
 It's a GPL project, which is a little bit frustrating. They only use infrastructure that's also GPL, so they refuse to touch Github or Gitlab. Contributing to their codebase requires you to apply for an account on their server, file a bug report, supply a URL to your patch, and then let them manually merge it in. It feels kind of like contributing to an open source project in 2005.
+
+### Re-dockerizing MediaGoblin
+
+Image I found was based on old code. I also had to set options it didn't support so that it knew not to re-transcode my files. I also had to add HTTP Basic auth.
+
+TODO: Everything broke in the Python2 to Python3 migration.
+
+No longer actively maintained
 
 ### MediaGoblin and the video storage problem
 
@@ -174,7 +201,9 @@ TODO: Diagram of interaction between browser and GCS.
 
 I realized I could just do that with nginx. I wrote a rewrite rule in nginx to re-write paths from XX to XX. I deployed the new version and everything was speedy!
 
-Note: There's a security vulnerability here because it means that any user who knows the proper URL can access all of my files without authentication. I'm relying on the fact that the URLs are not guessable or easily-enumerable.
+{{<notice type="info">}}
+**Note**: There's a security vulnerability here because it means that any user who knows the proper URL can access all of my files without authentication. I'm relying on the difficulty of guessing my filenames.
+{{</notice>}}
 
 ### If I were to do this again
 
@@ -182,14 +211,10 @@ MediaGoblin is fine now that I've got it working, but the project seems to be mo
 
 If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
 
-* Put the zips on Google Cloud Storage
-* MediaGoblin
-  * Realized I can transcode ahead of time
-  * Faster if the client can hit GCS directly
-  * Realized I don't actually want to give MediaGoblin access to Google Cloud Storage
-* In retrospect, MediaGoblin was also a bad choice
-  * No longer actively maintained
-  * Hard to contribute to their repo
+One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server.
+
+The other thing you lose from a static site is the ability.
+
 * If I were to do this again, I'd do everything with a static site generator
   * I don't need a web server for anything except for user authentication
   * I'd just need something that can consume my YAML file, then generate pages for each video
@@ -216,7 +241,8 @@ Switched to Heroku ephemeral image
 * Capture as much metadata as possible
   * Labels on the tapes might turn out to be handy
   * Keep a record of which clip came from which tape and in what order
-* It will be *really* difficult and expensive for you to achieve the same quality capture as a company that does dedicated video digitization (but steer clear of XX company)
+* It will be *really* difficult and expensive for you to achieve the same quality capture as a company that does dedicated video digitization
+  * That said, I don't recommend EverPresent.
 * Capture as much of the data in an application-agnostic format
   * Clip descriptions, time codes, dates, etc.
   * If you keep it in an application specific format (or worse, throw it away), it's difficult for you to reproduce the work if you decide on a different solution.
@@ -238,10 +264,8 @@ I didn't generalize it too much, because I imagine that everyone will have their
 | Repository  | Description |
 |-------------|-------------|
 | [MediaGoblin](https://github.com/mtlynch/mediagoblin) | Mirror of the MediaGoblin core repo + Circle CI configuration. [mtlynch-custom](https://github.com/mtlynch/mediagoblin/tree/mtlynch-custom) has custom fixes for my instance (replaces their old video player and trims some parts of their UI that I don't need). |
-| [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker) | Docker image for MediaGoblin. Depends on the MediaGoblin repo. |
+| [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker) | Docker image for MediaGoblin. Depends on the MediaGoblin repo. Adds support for nginx and HTTP Basic Auth. |
 | [process-home-videos](https://github.com/mtlynch/process-home-videos) | Python scripts for chopping up raw video files into clips and then publishing those clips to MediaGoblin. |
-
-TODO: How do people annotate with frame numbers?
 
 ---
 
