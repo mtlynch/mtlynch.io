@@ -140,9 +140,9 @@ KetoHub was a fun project, but I still hadn't found a way to monetize it. If par
 
 I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer), to begin experimenting with the *Times'* technique for parsing ingredients. Her initial results were promising, so we spent a few weeks going down the rabbit hole of machine learning and natural language processing.
 
-We now have a [working demo](https://ingredientparser.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break it down into structured components:
+We now have a [working demo](https://zestfuldata.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break it down into structured components:
 
-{{< img src="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" maxWidth="800px" linkUrl="https://ingredientparser.com/" >}}
+{{< img src="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" maxWidth="800px" linkUrl="https://zestfuldata.com/" >}}
 
 For the next few weeks, I'm going to focus on reaching out to different app developers about how the Ingredient Parser API can be useful for them. By June, I hope to refine the API based on their feedback and publish it to marketplaces like [Mashape](https://market.mashape.com/) and [RapidAPI](https://rapidapi.com/). **Update: (7/15)**: It's [now available](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis).
 

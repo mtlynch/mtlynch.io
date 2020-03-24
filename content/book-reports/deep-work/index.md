@@ -15,7 +15,7 @@ This was my favorite book of 2018. It profoundly impacted the way I approach my 
 
 * The author's arguments in favor of deep work are logical and compelling
 * Made me recognize how much time I was spending on low-effort, low-value work
-* Opened my eyes to the concept of ["attention residue"](http://calnewport.com/blog/2016/09/06/a-productivity-lesson-from-a-classic-arcade-game/)
+* Opened my eyes to the concept of ["attention residue"](https://calnewport.com/blog/2016/09/06/a-productivity-lesson-from-a-classic-arcade-game/)
 * Offers many simple, pragmatic techniques for achieving deep work
 
 ## What I Disliked
@@ -106,7 +106,7 @@ This was my favorite book of 2018. It profoundly impacted the way I approach my 
   * Honoring this schedule prevents work thoughts from encroaching on your downtime.
 * Become hard to reach
   * The cultural expectation is that, unless you're famous, you owe a reply to everyone who emails you.
-  * You can reduce your volume of emails by setting the expectation that you're unlikely to respond and can only reply to emails that match your schedules and interests. See [Cal Newport's contact page](http://calnewport.com/contact/) for an example of this.
+  * You can reduce your volume of emails by setting the expectation that you're unlikely to respond and can only reply to emails that match your schedules and interests. See [Cal Newport's contact page](https://calnewport.com/contact/) for an example of this.
 * You can reduce email noise by investing more thought into your replies.
   * Emails generally represent a "project."
   * Think about what reply most quickly brings the project to a resolution.

@@ -74,7 +74,7 @@ This month, I had calls with four different customers considering Zestful for la
   * If I invest in adding the requested features, I have no guarantee that any of the new customers will actually purchase
   * I can't tell if the lifetime value of the new customers is closer to $100 (not worth a month of work) or $10,000 (I'd be glad to put in a month of work)
 
-I received good advice from [Cory Zue](https://coryzue.com), which was to raise prices. I frequently hear that advice in general, but until Cory said it to me, I didn't think it applied to Zestful. The service didn't have any significant customers at the current low price, so it seemed irrational to raise prices and limit sales further. But I realized that raising prices addresses the last item on my Cons list (uncertainty of customer lifetime value).
+I received good advice from [Cory Zue](http://coryzue.com), which was to raise prices. I frequently hear that advice in general, but until Cory said it to me, I didn't think it applied to Zestful. The service didn't have any significant customers at the current low price, so it seemed irrational to raise prices and limit sales further. But I realized that raising prices addresses the last item on my Cons list (uncertainty of customer lifetime value).
 
 I originally priced Zestful hoping to make $30-100/month from smaller developers and $1,000-$3,000/month from larger companies. It's been on the market for almost a year, and I've found that very few companies need a service like Zestful. Supporting customers takes time and effort, so if I only have a handful of users, prices need to be much higher.
 
