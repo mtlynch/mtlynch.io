@@ -211,13 +211,9 @@ MediaGoblin is fine now that I've got it working, but the project seems to be mo
 
 If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
 
-One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server.
+One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server. You could use Commento or Disqus if you wanted to.
 
-The other thing you lose from a static site is the ability.
-
-* If I were to do this again, I'd do everything with a static site generator
-  * I don't need a web server for anything except for user authentication
-  * I'd just need something that can consume my YAML file, then generate pages for each video
+The other thing you lose from a static site is the ability to search.
 
 ## Part 4: Hosting
 
