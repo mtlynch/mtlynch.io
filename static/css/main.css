@@ -128,7 +128,7 @@ table {
   overflow: hidden;
   color: #666;
   font-size: 16px;
-  border: 1px, solid, #d1d1d1;
+  border: 1px solid #d1d1d1;
   box-shadow: none;
   clear: both;
   margin: 20px 0px;
@@ -191,8 +191,24 @@ table {
   height: 42px;
 }
 
-.email-octopus-error-message{
-  color:#e74c3c
+.subscribe-container .subscribe-topics {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.subscribe-container .success:empty, .error:empty {
+  display: none;
+}
+
+.subscribe-container .success {
+  background: #99ff9e;
+  padding: 1rem;
+}
+
+.subscribe-container .error {
+  color:#e74c3c;
 }
 
 .honeypot {
