@@ -1,27 +1,226 @@
+{{ $currentPageType := .Page.Section }}
+{{ $currentPageTypeFriendly := "" }}
+{{ $defaultAll := false }}
+{{ if (eq $currentPageType "posts") }}
+  {{ $currentPageType = "blog" }}
+  {{ $currentPageTypeFriendly = "blog posts" }}
+{{ end }}
 
-<div class="sbscrb_cont">
-  <div class="sbscrb_cont_inner">
+{{ if (eq $currentPageType "retrospectives") }}
+  {{ $currentPageTypeFriendly = "monthly retrospectives" }}
+  {{ $defaultAll = true }}
+{{ end }}
+
+{{ if (eq $currentPageType "book-reports") }}
+  {{ $currentPageTypeFriendly = "book reports" }}
+  {{ $defaultAll = true }}
+{{ end }}
+
+<div class="subscribe-container">
+  <div class="subscribe-container-inner">
     <h3>Be the first to know when I post cool stuff</h3>
-    <div>
-      <p>Subscribe to get my latest articles by email.</p>
-    </div>
+    <p>Subscribe to get my latest posts by email.</p>
+    <p class="email-octopus-success-message success"></p>
+    <p class="email-octopus-error-message error"></p>
+    <form method="post"
+      action="https://emailoctopus.com/lists/7905f9e4-6d63-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add"
+      class="email-octopus-form"
+      data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6"
+    >
+        <input id="field_0" name="field_0" type="email" placeholder="Email address">
 
-    <div id="mc_embed_signup">
-      <form action="//mtlynch.us16.list-manage.com/subscribe/post?u=827c54a25e4f8abbb83d878c4&amp;id=7941b1a771" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
-
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div class="honeypot" aria-hidden="true">
-            <input type="text" name="b_ab05d81926df17e7af3e99730_a470907d8d" tabindex="-1" value="">
+        <div class="subscribe-topics">
+          <div>
+            <input id="blogposts" name="field_3" type="radio" value="{{ $currentPageType }}" {{ if (not $defaultAll) }}checked{{ end }}>
+            <label for="blogposts">Only {{ $currentPageTypeFriendly }}</label>
           </div>
 
-          <div class="clear">
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe_btn">
+          <div>
+            <input id="all-updates" name="field_3" type="radio" value="all" {{ if $defaultAll }}checked{{ end }}>
+            <label for="all-updates">All posts (monthly retrospectives, book reports, etc.)</label>
           </div>
         </div>
-      </form>
-    </div>
 
-  </div>
+
+        <div class="honeypot" aria-hidden="true">
+            <!-- Do not remove this field, otherwise you risk bot sign-ups -->
+            <input type="text" name="hp1e2422ed-6c80-11ea-a3d0-06b4694bee2a"
+               tabindex="-1"
+               autocomplete="nope">
+        </div>
+
+
+        <input type="hidden"
+        name="successRedirectUrl"
+        value="">
+
+        <div class="clear">
+            <input type="submit" value="Subscribe" class="subscribe-btn">
+        </div>
+    </form>
+
+    </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script>
+/* inlined from https://emailoctopus.com/bundles/emailoctopuslist/js/1.4/formEmbed.js */
+(function ($) {
+    window.emailOctopus = {
+        successMessage: 'Thanks for subscribing!',
+        missingEmailAddressMessage: 'Your email address is required.',
+        invalidEmailAddressMessage: 'Your email address looks incorrect, please try again.',
+        botSubmissionErrorMessage: 'This doesn\'t look like a human submission.',
+        consentRequiredMessage: 'Please check the checkbox to indicate your consent.',
+        invalidParametersErrorMessage: 'This form has missing or invalid fields.',
+        unknownErrorMessage: 'Sorry, an unknown error has occurred. Please try again later.',
+        isBotPost: function ($form) {
+            return Boolean($form.find('.email-octopus-form-row-hp input').val());
+        },
+        /**
+         * Applies a basic regex to test the validity of an email address.
+         *
+         * @param $form
+         * @returns {boolean}
+         */
+        isEmailAddressValid: function ($form) {
+            return /\S+@\S+\.\S+/.test($form.find('input[type=email]').val());
+        },
+        hasEmailAddressBeenEntered: function ($form) {
+            return Boolean($.trim($form.find('input[type=email]').val()));
+        },
+        consentRequired: function ($form) {
+            var $checkbox = $form.find('.email-octopus-form-row-consent input');
+
+            return Boolean($checkbox.length && !$checkbox.is(':checked'));
+        },
+        hasRedirectUrl: function ($form) {
+            return Boolean($form.find('input[name=successRedirectUrl]').val().trim());
+        },
+        getRedirectUrl: function ($form) {
+            return $form.find('input[name=successRedirectUrl]').val().trim();
+        },
+        redirect: function (url) {
+            window.location.href = url;
+        },
+        showConfirmation: function ($form, response) {
+            var message = response.message ?
+                response.message :
+                emailOctopus.successMessage;
+
+            $form.hide()
+                .siblings('.email-octopus-success-message')
+                .text(message);
+        },
+        ajaxSuccess: function ($form, response) {
+            emailOctopus.hasRedirectUrl($form) ?
+                emailOctopus.redirect(emailOctopus.getRedirectUrl($form)) :
+                emailOctopus.showConfirmation($form, response);
+        },
+        ajaxError: function($form, textStatus) {
+            var response = $.parseJSON(textStatus.responseText);
+
+            if (response && response.error && response.error.code) {
+                switch (response.error.code) {
+                    case 'INVALID_PARAMETERS':
+                        emailOctopus.onError(
+                            $form,
+                            emailOctopus.invalidParametersErrorMessage
+                        );
+
+                        return;
+                    case 'BOT_SUBMISSION':
+                        emailOctopus.onError(
+                            $form,
+                            emailOctopus.botSubmissionErrorMessage
+                        );
+
+                        return;
+                }
+            }
+
+            emailOctopus.onError($form, emailOctopus.unknownErrorMessage);
+        },
+        ajaxSubmit: function ($form) {
+            $form.find(':submit').attr('disabled', true);
+
+            $.post($form.attr('action'), $form.serialize())
+                .done(function (response) {
+                    emailOctopus.ajaxSuccess($form, response);
+                })
+                .fail(function (textStatus) {
+                    emailOctopus.ajaxError($form, textStatus);
+                });
+        },
+        onError: function ($form, message) {
+            $form.siblings('.email-octopus-error-message')
+                .empty()
+                .text(message);
+
+            $form.find(':submit').removeAttr('disabled');
+
+            // If an instance of reCAPTCHA has been loaded, we must reset it,
+            // so we can submit the form again.
+            if (window.grecaptcha) {
+                window.grecaptcha.reset();
+            }
+        },
+        submit: function ($form) {
+            $form.siblings('.email-octopus-error-message').empty();
+
+            if (emailOctopus.isBotPost($form)) {
+                emailOctopus.onError($form, emailOctopus.botSubmissionErrorMessage);
+            } else if (!emailOctopus.hasEmailAddressBeenEntered($form)) {
+                emailOctopus.onError($form, emailOctopus.missingEmailAddressMessage);
+            } else if (!emailOctopus.isEmailAddressValid($form)) {
+                emailOctopus.onError($form, emailOctopus.invalidEmailAddressMessage);
+            } else if (emailOctopus.consentRequired($form)) {
+                emailOctopus.onError($form, emailOctopus.consentRequiredMessage);
+            } else {
+                emailOctopus.ajaxSubmit($form);
+            }
+        }
+    };
+
+    /**
+     * If the debug URL parameter is set, dynamically load in our debug script.
+     */
+    if (window.location.href.indexOf('eoDebug=1') !== -1) {
+        var src = 'https://emailoctopus.com/bundles/emailoctopuslist/js/1.4/debug.js';
+        var formAction = document.querySelector('.email-octopus-form').action;
+
+        if (formAction) {
+            var a = document.createElement('a');
+            a.href = formAction;
+
+            src = a.protocol + '//' + a.hostname + '/bundles/emailoctopuslist/js/1.4/debug.js';
+        }
+
+        var scr = document.createElement('script');
+        var head = document.head || document.getElementsByTagName('head')[0];
+        scr.src = src;
+        scr.async = false;
+        scr.defer = false;
+
+        head.insertBefore(scr, head.firstChild);
+    }
+
+    // Bind the form(s) when the document is ready, in case the user has
+    // added the form element *after* the script tag.
+    $(function () {
+        $('.email-octopus-form:not(.bound)')
+            .submit(function (event) {
+                event.stopPropagation();
+                event.preventDefault();
+
+                emailOctopus.submit($(this));
+
+                return false;
+            })
+            // Mitigate duplicate bindings, in case this script is included multiple
+            // times. More reliable than running 'unbind' or 'off' first, which doesn't
+            // work if jQuery is also included multiple times.
+            .addClass('bound');
+    });
+})(window.jQuery);
+</script>
