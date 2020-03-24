@@ -16,7 +16,7 @@ For the past few years, I've been outsourcing tasks from my daily life whenever 
 
 I recently started experimenting with [the keto diet](https://www.dietdoctor.com/low-carb/keto), which focuses on low carbs. I've had good experience with the diet, but it limits what food delivery I can order, as BBQ, deli sandwiches, pizza, etc. do not fit the diet.
 
-Fortunately, there are many sites that offer free keto recipes. My favorite is [ruled.me](http://ruled.me), but I also use a [recipe curation newletter](https://kuratedketo.com/) to find new sources. The recipes look great online, but the road from online recipes to actual meals is paved with cooking. And I don't like cooking.
+Fortunately, there are many sites that offer free keto recipes. My favorite is [ruled.me](http://ruled.me), but I also use a recipe curation newletter to find new sources. The recipes look great online, but the road from online recipes to actual meals is paved with cooking. And I don't like cooking.
 
 I thought this would be a good opportunity to experiment with outsourcing &mdash; I choose the recipes and hire someone else to handle the rest.
 

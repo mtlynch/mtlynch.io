@@ -30,8 +30,6 @@ Many newcomers to Sia ask, "Will I make a lot of money hosting on Sia?" The hone
 
 The storage rental market has not yet reached critical mass. [SiaHub](https://siahub.info), my favorite Sia host explorer, shows that the total storage capacity of Sia's network (as of 2017-05-25) is a whopping 1.1 petabytes. Only 2% of that capacity has been rented. With such a surplus of space, hosts can't sell their storage space unless they price it at almost zero.
 
-SiaPulse has a nice [host earnings calculator](http://siapulse.com/page/tools) that you should check out if you're interested in estimating how much you'd make by renting out your storage space.
-
 So the money's not rolling in quite yet, but here are a couple reasons you might want to participate anyway:
 
 ### Advantageous position if rental market succeeds
@@ -48,10 +46,7 @@ I personally host just to experiment with something new. I find it fun to tweak 
 
 This guide uses the latest version of each software component at the time of writing:
 
-<figure class="align-right">
-  <a href="https://www.amazon.com/Synology-DiskStation-Diskless-Attached-DS412/dp/B007JLE84C/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=mtlynch-20&linkId=3f9ff9d103c0282622ec5adb5959fa2a" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B007JLE84C&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mtlynch-20" alt="Synology DS412+" ></a>
-  <figcaption>Synology DS412+ NAS device</figcaption>
-</figure>
+{{< img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" maxWidth="300px" >}}
 
 * DiskStation Manager (DSM) 6.1.2-15132
 * Sia v.1.3.4
