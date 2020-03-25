@@ -13,7 +13,7 @@ TODO: Screenshot of sharing site
 
 There are . It's 513 separate clips. Each clip shows the title, a description, the recording date, which tape it came from, who's in it, a description of what's going on, and how old everyone is at the time of the recording.
 
-TODO: Screenshot of a specific video
+{{< img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" caption="Viewing a video on MediaGoblin" maxWidth="600px" >}}
 
 This post explains how I did it and why it took me eight years.
 
@@ -27,7 +27,7 @@ These are family artifacts, and I'm not willing to throw away the tapes until I'
 
 Around 2010, my mom bought some sort of VHS to DVD converter and ran all of our home videos through it.
 
-TODO: Picture of original DVDs (I'm not sure what happened to the missing letters)
+{{< img src="original-dvds.jpg" alt="Photo of rewritable DVDs labeled by letter" caption="The original DVD copies of the tapes my mom made. I'm not sure what happened to the missing letters." maxWidth="600px" >}}
 
 The problem was that there was only one set of DVDs. At that point, everyone in my family lived in a different state, so it wasn't like we could easily trade the DVDs back and forth. So in 2011, I got the DVDs from my sister, converted the DVDs to AVI files and threw them all up on cloud storage. Problem solved! Now everyone can access them!
 
@@ -86,7 +86,7 @@ And they did. The quality was .
 TODO: Show side by side of video quality
 
 {{<notice type="info">}}
-**A brief aside about EverPresent**
+**A brief rant about EverPresent**
 
 The downside was that my fears about security were realized. All their plans require the customer to receive their files via cloud storage, so I opted against having them store a copy on any other physical media. But when I picked up my tapes, they had also copied my files to an external hard drive and wanted to charge me several hundred dollars for it. They also wanted to charge me a different fee for the digitization than we had agreed. They only relented after I showed them an email where the rep quoted me the price.
 
@@ -119,7 +119,7 @@ When I reached the point of sharing the videos, I realized I had discarded criti
 
 One of the other fatal flaws of this workflow is that it's not easily reproducible. Fixing a small error is about as hard as doing the entire thing from scratch. For example, when I reached the sharing stage, I realized that I should have exported the video in a format that browsers can play natively. Because I didn't do that, I either had to re-do the tedious process of exporting hundreds of clips by hand or I had to degrade quality by transcoding the already-exported video to a different format.
 
-### Robot-powered editing
+### Machine learning-based editing
 
 After an embarrassing number of hours doing everything by hand, I wondered if it was possible to automate this process. The advantage of dragging my feet so long on this project was that machine learning had time to catch up with me. Throughout the 2010s, machine learning was getting better and cheaper. I knew that no automated solution would get it perfect, but maybe it could do 80% of the work and I could fix the last 20% by hand.
 
@@ -134,6 +134,8 @@ Up until this point, I'd been treating the video files as these impenetrable blo
 I realized that videos are, in fact, not a dark and mysterious blobs of data that I need to edit via interactive tools. There are plenty of libraries and command-line tools that automate video editing. Instead of chopping up clips in a tool like Premiere, I could just record the start and end times of each clip and use whatever tool I wanted to cut the clips at those positions.
 
 I ended up with a spreadsheet that looked like this:
+
+TODO: Screnshot of spreadsheet
 
 I then wrote a script that took that CSV and a list of raw video files and chopped them up into smaller clips. The tool that does the heavy lifting is ffmpeg, one of the most popular open source tools for working with video.
 
@@ -184,7 +186,7 @@ It's a GNU project, which is a little bit frustrating. They only use infrastruct
 1. Supply a URL to your patch
 1. Wait for them merge in your patch via command-line tools and publish the result to their [git repository](https://savannah.gnu.org/projects/mediagoblin).
 
-It feels kind of like contributing to an open source project in 2005. I submitted [a](https://issues.mediagoblin.org/ticket/5574) [few](https://issues.mediagoblin.org/ticket/5575) [patches](https://issues.mediagoblin.org/ticket/5576), but even filing the bugs took months because their Trac server was [blocking registrations](https://imgur.com/NOjfHI7), and then it was 11 months before I got a response on any of the bugs.
+It felt like contributing to an open source project in 2005. I submitted [a](https://issues.mediagoblin.org/ticket/5574) [few](https://issues.mediagoblin.org/ticket/5575) [patches](https://issues.mediagoblin.org/ticket/5576), but even filing the bugs took months because their Trac server was [blocking registrations](https://imgur.com/NOjfHI7), and then it was 11 months before I got a response on any of the bugs.
 
 ### Re-dockerizing MediaGoblin
 
@@ -226,6 +228,7 @@ The other thing you lose from a static site is the ability to search.
 
 Started on GCE, issues with permissions.
 Switched to Heroku ephemeral image
+HTTP Basic auth
 
 ## The final workflow
 
