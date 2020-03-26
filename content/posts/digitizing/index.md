@@ -200,7 +200,7 @@ No longer actively maintained
 
 I figured that I could follow the same process as I did with ClipBucket - put the videos on GCS, then symlink all of MediaGoblin's folders to GCS folders via gcsfuse. It turns out that mounting a GCS bucket into a Docker container is much harder than mounting it in a normal VM. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
 
-Two weeks later, I realized that none of it was necessary. I finally loaded all of my videos into MediaGoblin, mounted the GCS folder, and it was slow. *Painfully* slow. It was slow to even load the video thumbnails when it displayed the index of videos. I tried switching to a more powerful VM, but I still got the same result.
+I finally loaded all of my videos into MediaGoblin, mounted the GCS folder, and it was slow. *Painfully* slow. It was slow to even load the video thumbnails when it displayed the index of videos. I tried switching to a more powerful VM, but I still got the same result.
 
 I realized that the bottleneck was the reading and writing of the video files. To serve any data, my MediaGoblin had to read it from Google Cloud Storage via gcsfuse, probably not optimized for speed. Then it had to send the same data to the browser. But MediaGoblin was a pointless middleman. For the static files, it was just a dumb proxy.
 
@@ -214,9 +214,11 @@ I realized I could just do that with nginx. I wrote a rewrite rule in nginx to r
 **Note**: There's a security vulnerability here because it means that any user who knows the proper URL can access all of my files without authentication. I'm relying on the difficulty of guessing my filenames.
 {{</notice>}}
 
+The downside is that all the work I did to make gcsfuse work under Docker was actually completely unnecessary.
+
 ### If I were to do this again
 
-MediaGoblin is fine now that I've got it working, but the project seems to be mostly dead. For simple video sharing, it's too much complexity.
+MediaGoblin is alright now that I've got a working image, but MediaGoblin's dependencies are pretty coarsely defined, so I have to fix . The project seems to be mostly dead, though some contributors held a meeting a few months ago to discuss jumpstarting development again. For simple video sharing, it's too much complexity.
 
 If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
 
@@ -226,9 +228,37 @@ The other thing you lose from a static site is the ability to search.
 
 ## Part 4: Hosting
 
-Started on GCE, issues with permissions.
-Switched to Heroku ephemeral image
-HTTP Basic auth
+When I first started hosting, I used ClipBucket and 
+
+When I graduated to Docker, I continued using GCE, but I just kept a VM running all the time.
+
+### Running 24/7 to satisfy 2 hours of demand per year
+
+I ran MediaGoblin in a dedicated Docker image for about a year before it occurred to me how wasteful this was. It's nice for my family's MediaGoblin instance to be available whenever we're in a nostalgic mood to watch old home videos, but it's not the kind of thing you visit every day. I'd estimate that the server gets about 10 hours of usage collectively per year, but I was running it nonstop.
+
+When Google introduced Cloud Run, a service to launch Docker instances on-demand, I thought that would be a cool solution. I'd leave the Docker instance off and then anytime someone made an HTTP request, Google would spin up my MediaGoblin instance and run until it expires. I'd only pay for the time the server actually ran, which was basically nothing.
+
+I ended up having trouble getting it to run on Google Cloud Platform. I can't recall the details now, but Google seems to do something unexpected when your Docker container needs to do things as the `root` user. I ended up deploying with Heroku instead, and everything was smooth sailing.
+
+TODO: Explain how to set up the Heroku part and point it to the repo.
+
+```bash
+heroku login -i
+heroku container:login
+
+HEROKU_APP_NAME="your-heroku-app-name"
+HTTP_AUTH_USER="some-username-to-access-your-mediagoblin-instance"
+HTTP_AUTH_PASS="some-password-to-access-your-mediagoblin-instance"
+GCS_BUCKET="your-gcs-bucket"
+MEDIAGOBLIN_DB_URL="public-URL-of-your-mediagoblin.db-file"
+HTML_TITLE="My MediaGoblin Instance"
+
+heroku container:push web \
+    --app "$HEROKU_APP_NAME" \
+    --arg "HTTP_AUTH_USER=${HTTP_AUTH_USER},HTTP_AUTH_PASS=${HTTP_AUTH_PASS},GCS_BUCKET=${GCS_BUCKET},MEDIAGOBLIN_DB_URL=${MEDIAGOBLIN_DB_URL},HTML_TITLE=${HTML_TITLE}"
+
+heroku container:release --app "$HEROKU_APP_NAME" web
+```
 
 ## The final workflow
 
@@ -259,6 +289,8 @@ HTTP Basic auth
     * Who's in the video?
     * When was it recorded?
     * Is this video good? I tag my favorite clips "best of"
+* Try getting to an end-to-end solution as soon as possible.
+  * I wish I had started with a single tape and then did the work necessary to share that rather than digitize, edit, and share, then have to keep jumping back to earlier stages when I found mistakes later on.
 * Make a montage!
   * Slow show is great. I discovered this by mistake.
   * Montages are all about the music. "Slow Show" by whoever is amazing for montages and nobody knows.
@@ -272,7 +304,7 @@ I didn't generalize it too much, because I imagine that everyone will have their
 | Repository  | Description |
 |-------------|-------------|
 | [MediaGoblin](https://github.com/mtlynch/mediagoblin) | Mirror of the MediaGoblin core repo + Circle CI configuration.<br><br>The branch [mtlynch-custom](https://github.com/mtlynch/mediagoblin/tree/mtlynch-custom) has custom fixes for my instance (replaces their old video player and trims some parts of their UI that I don't need). |
-| [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker) | Docker image for MediaGoblin. Depends on the MediaGoblin repo. Adds support for nginx and HTTP Basic Auth. |
+| [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker) | Builds a Docker image for MediaGoblin. The Docker image includes support for [nginx](https://nginx.org/en/) and an option to enable [HTTP Basic Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme). |
 | [process-home-videos](https://github.com/mtlynch/process-home-videos) | Python scripts for chopping up raw video files into clips and then publishing those clips to MediaGoblin. |
 
 ---
