@@ -191,6 +191,13 @@ table {
   height: 42px;
 }
 
+/* Honeypot to prevent bot signups */
+.subscribe-container .ninja {
+  position: absolute;
+  top: -5000px;
+  right: 0px;
+}
+
 .subscribe-container .subscribe-topics {
   display: flex;
   flex-direction: column;
@@ -198,17 +205,21 @@ table {
   margin-bottom: 2rem;
 }
 
-.subscribe-container .success:empty, .error:empty {
-  display: none;
-}
-
 .subscribe-container .success {
-  background: #99ff9e;
-  padding: 1rem;
+  display: none;
+  background: #d3ffd6;
+  border: 1px solid #2f5a32;
+  color: black;
+  padding: 1rem 5rem;
 }
 
 .subscribe-container .error {
-  color:#e74c3c;
+  display: none;
+  color:#963328;
+  background: #fdd1bf;
+  margin-top: 2rem;
+  padding: 1rem 5rem;
+  border: 1px solid #770000;
 }
 
 .honeypot {
