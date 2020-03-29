@@ -1,21 +1,3 @@
-{{ $currentPageType := .Page.Section }}
-{{ $currentPageTypeFriendly := "" }}
-{{ $defaultAll := false }}
-{{ if (eq $currentPageType "posts") }}
-  {{ $currentPageType = "blog" }}
-  {{ $currentPageTypeFriendly = "blog posts" }}
-{{ end }}
-
-{{ if (eq $currentPageType "retrospectives") }}
-  {{ $currentPageTypeFriendly = "monthly retrospectives" }}
-  {{ $defaultAll = true }}
-{{ end }}
-
-{{ if (eq $currentPageType "book-reports") }}
-  {{ $currentPageTypeFriendly = "book reports" }}
-  {{ $defaultAll = true }}
-{{ end }}
-
 <div class="subscribe-container">
   <div class="subscribe-container-inner">
     <h3>Be the first to know when I post cool stuff</h3>
@@ -25,18 +7,6 @@
       <input name="email" type="email" placeholder="Email address" required>
       <!-- honeypot to prevent bot signups -->
       <input class="ninja" name="ninja" type="text">
-
-      <div class="subscribe-topics">
-        <div>
-          <input id="blogposts" name="topic" type="radio" value="{{ $currentPageType }}" {{ if (not $defaultAll) }}checked{{ end }}>
-          <label for="blogposts">Only {{ $currentPageTypeFriendly }}</label>
-        </div>
-
-        <div>
-          <input id="all-updates" name="topic" type="radio" value="all" {{ if $defaultAll }}checked{{ end }}>
-          <label for="all-updates">All posts (monthly retrospectives, book reports, etc.)</label>
-        </div>
-      </div>
 
       <div class="clear">
           <input type="submit" value="Subscribe" class="subscribe-btn">
