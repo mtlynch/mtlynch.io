@@ -186,19 +186,45 @@ It's a GNU project, which is a little bit frustrating. They only use infrastruct
 1. Supply a URL to your patch
 1. Wait for them merge in your patch via command-line tools and publish the result to their [git repository](https://savannah.gnu.org/projects/mediagoblin).
 
-It felt like contributing to an open source project in 2005. I submitted [a](https://issues.mediagoblin.org/ticket/5574) [few](https://issues.mediagoblin.org/ticket/5575) [patches](https://issues.mediagoblin.org/ticket/5576), but even filing the bugs took months because their Trac server was [blocking registrations](https://imgur.com/NOjfHI7), and then it was 11 months before I got a response on any of the bugs.
+It felt like contributing to an open source project in 2005. I submitted [a](https://issues.mediagoblin.org/ticket/5574) [few](https://issues.mediagoblin.org/ticket/5575) [patches](https://issues.mediagoblin.org/ticket/5576), but even filing the bugs took months because their Trac server was [blocking registrations](https://imgur.com/NOjfHI7). When they finally allowed me to register, it would still be 11 months before they responsed to any of the patches I submitted.
 
 ### Re-dockerizing MediaGoblin
 
-Image I found was based on old code. I also had to set options it didn't support so that it knew not to re-transcode my files. I also had to add HTTP Basic auth.
+The [MediaGoblin wiki](https://wiki.mediagoblin.org/EasyDeployment) pointed to a [Docker image](https://notabug.org/dachary/mediagoblin-docker). I was able to run the pre-built Docker image successfully. But I soon realized I needed a couple changes to the 
 
-TODO: Everything broke in the Python2 to Python3 migration.
+By default, MediaGoblin will attempt to re-transcode every video you give it. You can [adjust the configuration](https://wiki.mediagoblin.org/Configure_MediaGoblin#Disable_transcoding) to skip transcoding for videos that are already web-ready, but the pre-built Docker image didn't support that.
 
-No longer actively maintained
+I also needed to enable authentication. If I was going to put this on the public Internet, I needed a way to prevent anyone who stumbles upon the server from accessing all the files. MediaGoblin does have an authentication plugin, but who knows whether it even works or provides any real protection. Instead, I decided to use nginx's HTTP Basic Authentication feature, as it's pretty well battle tested.
+
+I spent so much time tinkering with the MediaGoblin docker image that it probably would have been faster for me to just write my own simple video-sharing web app from scratch.
+
+I tried forking the repo and building my own copy, but it didn't work. After lots of poking around and Googling error messages, I finally got it to work. But then six months later, the image stopped building again. A bunch of MediaGoblin's dependencies had changed drastically due to the Python 2 end of life, so now everything was broken. Fortunately, I saw that one of MediaGoblin's maintainers had made their own Docker image for Python3, so I incorporated that into my image and was up and running again. Then, when I was writing this blog post, I realized the image was broken again. This time, I abandoned my commitment to base the Docker image on the mainline MediaGoblin docker image and just pointed it at my own fork instead and tagged a release where all of the dependencies are exact matches for a specific version rather than >= to some version.
+
+But I finally got it working.
+
+### If I were to do this again
+
+MediaGoblin is alright now that I've got a working image, but MediaGoblin's dependencies are pretty coarsely defined, so I have to fix . The project seems to be mostly dead, though some contributors held a meeting a few months ago to discuss jumpstarting development again. For simple video sharing, it's too much complexity.
+
+If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
+
+One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server. You could use Commento or Disqus if you wanted to.
+
+The other thing you lose from a static site is the ability to search.
+
+## Part 4: Hosting
+
+When I first started launched a sharing solution, I just used a regular Google Compute Enginge VM and ran my Ansible playbook to install ClipBucket. That was a pain, though, because I had to maintain an entire server VM, when all I cared about was.
+
+By the time I switched to MediaGoblin as my hosting software, I'd seen how much better it was to host with Docker, so I did that.
+
+When I graduated to Docker, I continued using GCE, but I just kept a VM running all the time.
 
 ### MediaGoblin and the video storage problem
 
 I figured that I could follow the same process as I did with ClipBucket - put the videos on GCS, then symlink all of MediaGoblin's folders to GCS folders via gcsfuse. It turns out that mounting a GCS bucket into a Docker container is much harder than mounting it in a normal VM. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
+
+{{< img src="mg-gcs-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + gcsfuse" caption="Architecture for deploying MediaGoblin to Google Cloud Platform from my [2018 post](/retrofit-docker-gcs/)" maxWidth="600px" hasBorder="True" >}}
 
 I finally loaded all of my videos into MediaGoblin, mounted the GCS folder, and it was slow. *Painfully* slow. It was slow to even load the video thumbnails when it displayed the index of videos. I tried switching to a more powerful VM, but I still got the same result.
 
@@ -215,22 +241,6 @@ I realized I could just do that with nginx. I wrote a rewrite rule in nginx to r
 {{</notice>}}
 
 The downside is that all the work I did to make gcsfuse work under Docker was actually completely unnecessary.
-
-### If I were to do this again
-
-MediaGoblin is alright now that I've got a working image, but MediaGoblin's dependencies are pretty coarsely defined, so I have to fix . The project seems to be mostly dead, though some contributors held a meeting a few months ago to discuss jumpstarting development again. For simple video sharing, it's too much complexity.
-
-If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
-
-One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server. You could use Commento or Disqus if you wanted to.
-
-The other thing you lose from a static site is the ability to search.
-
-## Part 4: Hosting
-
-When I first started hosting, I used ClipBucket and 
-
-When I graduated to Docker, I continued using GCE, but I just kept a VM running all the time.
 
 ### Running 24/7 to satisfy 2 hours of demand per year
 
@@ -262,6 +272,8 @@ heroku container:release --app "$HEROKU_APP_NAME" web
 
 ## The final workflow
 
+TODO: Show a walkthrough using the demo footage.
+
 1. Digitize video tapes into high quality raw footage.
 1. Use ffmpeg to copy each raw video with frame numbers overlaid on the screen.
 1. Create a spreadsheet to track start and end frame numbers for each scene and any metadata you want to capture.
@@ -289,11 +301,11 @@ heroku container:release --app "$HEROKU_APP_NAME" web
     * Who's in the video?
     * When was it recorded?
     * Is this video good? I tag my favorite clips "best of"
-* Try getting to an end-to-end solution as soon as possible.
+* Build the end-to-end solution as soon as possible.
   * I wish I had started with a single tape and then did the work necessary to share that rather than digitize, edit, and share, then have to keep jumping back to earlier stages when I found mistakes later on.
 * Make a montage!
   * Slow show is great. I discovered this by mistake.
-  * Montages are all about the music. "Slow Show" by whoever is amazing for montages and nobody knows.
+  * Montages are all about the music. "Slow Show" by The National is amazing for montages and nobody knows.
 
 ## Doing this yourself
 
