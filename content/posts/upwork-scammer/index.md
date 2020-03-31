@@ -142,7 +142,7 @@ variations of Coca Cola like Coke Zero or the Diet Coke.
 
 The grammar was decent, but it further confirmed Lizzie was not a native speaker. The loudest giveaway was the definite article before "Diet Coke." Americans never say, "I'd love a refreshing glass of **the** Diet Coke."
 
-{{< img src="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" caption="\"" maxWidth="270px" >}}
+{{< img src="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" caption="\"Three glasses of the Diet Coke, please.\"" maxWidth="270px" >}}
 
 ## How Upwork handles fraud
 
