@@ -2,9 +2,13 @@
 title: Projects
 ---
 
-## [WanderJest](https://wanderjest.com) (2020 - present)
+## [Portfolio Rebalancer](https://assetrebalancer.com/) (2020 - present)
 
-WanderJest helps fans find local live comedy and helps comedians grow their audiences.
+Portfolio Rebalancer shows investors on what funds they need to buy and sell to achieve their target asset allocation.
+
+## [WanderJest](https://wanderjest.com) (2020)
+
+WanderJest helps fans find local live comedy and helps comedians grow their audiences, but is currently on hiatus due to the global pandemic.
 
 ## [What Got Done](https://whatgotdone.com) (2019)
 
