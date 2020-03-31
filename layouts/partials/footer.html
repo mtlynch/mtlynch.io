@@ -1,0 +1,13 @@
+<footer class="footer">
+  <section class="container">
+    {{ with .Site.Params.footercontent | safeHTML }}
+      <p>{{.}}</p>
+    {{ end }}
+    Crafted with ❤️ in Western Massachusetts.
+    {{ with .Site.Params.since }}
+      · © {{ if lt . now.Year }}{{ . }} - {{ end }}{{ now.Year }}
+    {{ else }}
+      · © {{ now.Year }}
+    {{ end }}
+  </section>
+</footer>
