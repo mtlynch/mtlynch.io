@@ -109,7 +109,7 @@ The scam seemed so clumsy and obvious that I feared it was step one of a more el
 
 In movies, the con-man always lets their victim *think* that they've uncovered the scam, but allowing the victim to expose the dummy fraud is all part of the *actual* fraud. Then, just as they believe they've gained the upper hand, the victim falls face-first into the real scam. Was there another layer of deceit here?
 
-{{< img src="oceans-eleven.jpg" alt="Still of George Clooney in Ocean's Eleven" caption="\"" maxWidth="800px" >}}
+{{< img src="oceans-eleven.jpg" alt="Still of George Clooney in Ocean's Eleven" caption="\"I've locked Danny Ocean in a room next to my vault and paid his friend to guard him. Now he can *never* heist me!\"" maxWidth="800px" >}}
 
 ## How did Upwork miss this?
 
