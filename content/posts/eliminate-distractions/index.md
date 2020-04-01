@@ -87,13 +87,7 @@ The "hot questions" are never relevant to the problem I came to StackOverflow to
 
 I solve this problem with a free browser extension: [uBlock Origin](https://github.com/gorhill/uBlock). Its primary purpose is to block ads, but its lesser-known "element picker" allows you to hide any page element permanently with a few mouse clicks:
 
-<figure>
-  <video style="max-width:100%" controls>
-    <source src="stackoverflow-cleaning.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <figcaption>Removing all sidebar distractions from StackOverflow using <a href="https://github.com/gorhill/uBlock">uBlock Origin</a></figcaption>
-</figure>
+{{< video src="stackoverflow-cleaning.mp4" caption="Removing all sidebar distractions from StackOverflow using [uBlock Origin](https://github.com/gorhill/uBlock)" >}}
 
 This technique works on many sites, though it does occasionally break after redesigns. It's ineffective on sites like Twitter because they generate so much of their page layouts dynamically that uBlock Origin's rules become invalid on subsequent visits.
 
@@ -165,13 +159,7 @@ Free of obstacles, it's painfully easy for me to indulge in social media on my c
 
 To curb my social media usage, I add mildly annoying hurdles to interrupt my habits. I sign out of time-waster sites in my main browser and access them only through a separate, dedicated browser profile.
 
-<figure>
-  <video style="max-width:100%" controls>
-    <source src="browser-profiles.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <figcaption>Setting up separate browser profiles in Chrome</figcaption>
-</figure>
+{{< video src="browser-profiles.mp4" caption="Setting up separate browser profiles in Chrome" >}}
 
 This seemingly minor speed bump prevents me from mindlessly popping open a new tab and visiting time-waster sites. To visit Facebook, I have to choose it consciously. It also means that when visiting Facebook for other reasons, such as finding information for a local business, Facebook can't show me personal notifications.
 
