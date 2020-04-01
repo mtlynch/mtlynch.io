@@ -46,11 +46,11 @@ A week later, people were starting to cancel shows and it was clear that this wa
 
 If I were to do it over with the same information, I would have done the same thing. If I wanted to protect myself from failure, I could have waited to officially launch the contest until I had enough signups, but at the time, I think aggressively pursuing the contest was the right move. Requiring signups would have saved money but delayed me learning about the contest.
 
-My takeaway was that WanderJest wasn't working in its original form and needed a drastic change
+My takeaway was that WanderJest wasn't working in its original form and needed a drastic change. Here are pivots I'm considering for when we're legally allowed to laugh at jokes again:
 
 * Doing the same thing, but scaling it to a bigger city like New York or Chicago, where there's a bigger fanbase of die-hard comedy fans.
-* Switching focus from performers to venues and offering more services to them.
-* Switching focus from local performers to traveling comedians who rely on comedy for their income.
+* Focusing on the more specialized niche of traveling comedians who rely on comedy for their income.
+* Focusing on services I can offer to venues.
 
 ## Creating an investment rebalancer
 
@@ -65,6 +65,12 @@ There are services that offer portfolio rebalancing tools, but they're part of b
 ## How do you balance percentages?
 
 It's been interesting because it's the most computer science-y project I've ever worked on. For most things I work on, I feel like I'm mostly gluing services together and deciding how to organize and present data. The portfolio rebalancer requires me to spend a lot more time thinking about abstract algorithms
+
+My initial implementation was that +1% in one slider should mean -0.5% in the other two sliders. But then that meant that you could never reach the balance you want because it's constantly adjusting everything else.
+
+Next, I tried adding a button that let you "lock" one slider into place, but that felt convoluted and allowed the user to get into illegal states:
+
+Finally, I kind of discovered by mistake that a more intuitive implementation is one where it auto-adjusts the slider you touched least recently:
 
 ## Interesting discoveries
 
@@ -108,16 +114,42 @@ I have a lot more to say about the process of evaluating newsletter services, an
 
 ### [WanderJest](https://wanderjest.com)
 
+| Metric                  | February 2020 | March 2020 | Change                                        |
+| ----------------------- | ------------- | ---------- | --------------------------------------------- |
+| Unique Visitors         | 1,344         | 246        | <font color="red">-1,098 (-82%)</font>        |
+| Total Pageviews         | 4,161         | 1,382      | <font color="red">-2,779 (-67%)</font>        |
+| Registered Users        | 4             | 10         | <font color="green">+6 (+150%)</font>         |
+| Affiliate Earnings      | $0.00         | $0.00      | 0                                             |
+| Scavenger Hunt Earnings | $100.00       | $0.00      | <font color="red">-$100.00 (-100%)</font>     |
+| **Total Earnings**      | **$100.00**   | **$0.00**  | **<font color="red">-$100.00 (-100%)</font>** |
 
 ### [Is It Keto](https://isitketo.org)
 
+| Metric                    | February 2020 | March 2020  | Change                                       |
+| ------------------------- | ------------- | ----------- | -------------------------------------------- |
+| Unique Visitors           | 47,698        | 33,007      | <font color="red">-14,691 (-31%)</font>      |
+| Total Pageviews           | 123,288       | 80,368      | <font color="red">-42,920 (-35%)</font>      |
+| Domain Rating (Ahrefs)    | 26.0          | 26.0        | 0                                            |
+| AdSense Earnings          | $286.95       | $195.85     | <font color="red">-$91.10 (-32%)</font>      |
+| Amazon Affiliate Earnings | $395.67       | $166.43     | <font color="red">-$229.24 (-58%)</font>     |
+| **Total Earnings**        | **$682.62**   | **$362.28** | **<font color="red">-$320.34 (-47%)</font>** |
+
 ### [Zestful](https://zestfuldata.com)
+
+| Metric             | February 2020 | March 2020 | Change                                       |
+| ------------------ | ------------- | ---------- | -------------------------------------------- |
+| Unique Visitors    | 877           | 291        | <font color="red">-586 (-67%)</font>         |
+| Total Pageviews    | 2,578         | 843        | <font color="red">-1,735 (-67%)</font>       |
+| RapidAPI Earnings  | $2.27         | $3.67      | <font color="green">+$1.40 (+62%)</font>     |
+| **Total Earnings** | **$2.27**     | **$3.67**  | **<font color="green">+$1.40 (+62%)</font>** |
 
 ## Wrap up
 
 ### What got done?
 
-*
+* Created a minimum viable product of the [Portfolio Rebalancer](https://assetrebalancer.com)
+* Presented my talk at NERD Summit: ["How I Used Python to Steal Money"](https://decks.mtlynch.io/nerds-2020/#/)
+  * There's a [recording](https://youtu.be/W05vGbi8B4A), but the audio quality is pretty bad.
 
 ### Lessons learned
 
@@ -126,4 +158,6 @@ I have a lot more to say about the process of evaluating newsletter services, an
 
 ### Goals for next month
 
+* Conduct five customer interviews for the portfolio rebalancer.
 * Decide whether to pursue the portfolio rebalancer or switch projects.
+* Publish one new blog post.
