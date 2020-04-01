@@ -68,6 +68,8 @@ It's been interesting because it's the most computer science-y project I've ever
 
 My initial implementation was that +1% in one slider should mean -0.5% in the other two sliders. But then that meant that you could never reach the balance you want because it's constantly adjusting everything else.
 
+{{< video src="sliders-naive.mp4" >}}
+
 Next, I tried adding a button that let you "lock" one slider into place, but that felt convoluted and allowed the user to get into illegal states:
 
 Finally, I kind of discovered by mistake that a more intuitive implementation is one where it auto-adjusts the slider you touched least recently:
