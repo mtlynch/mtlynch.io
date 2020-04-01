@@ -24,6 +24,10 @@ blockquote {
   max-width: 100%;
 }
 
+.content video {
+  max-width: 100%;
+}
+
 .content figcaption p {
   font-style: normal;
   font-size: 0.8em;

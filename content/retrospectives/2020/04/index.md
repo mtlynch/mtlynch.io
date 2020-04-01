@@ -26,6 +26,8 @@ I have been feeling more anxious. Last month, I was [backsliding into social med
 
 In my last retrospective, I had [invested $600 into publicity for a comedy scavenger hunt](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost), and I was worried it would flop. It did indeed flop, and not even due to COVID-19.
 
+{{< img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="600px" caption="I canceled the WanderJest Scavenger Hunt on March 11th" >}}
+
 The first week of March, people were still attending local comedy shows as normal. I'd go to these shows and hand out promotional cards about the scavenger hunt and explain to people that if they took a picture during the show and tagged it @WanderJest on social media, they'd enter a grand prize drawing for $200. People generally seemed receptive. I got a lot of, "$200? Wow! Cool."
 
 And then they just wouldn't take any photos.
@@ -42,9 +44,11 @@ I was still in a difficult position because people weren't canceling their shows
 
 A week later, people were starting to cancel shows and it was clear that this was getting even more serious. I replaced the WanderJest show listings page with a notice saying that the site was going on a temporary hiatus until the COVID-19 crisis was over.
 
-## Takeaways from WanderJest
+## Takeaways from the scavenger hunt
 
 If I were to do it over with the same information, I would have done the same thing. If I wanted to protect myself from failure, I could have waited to officially launch the contest until I had enough signups, but at the time, I think aggressively pursuing the contest was the right move. Requiring signups would have saved money but delayed me learning about the contest.
+
+**WanderJest isn't working**
 
 My takeaway was that WanderJest wasn't working in its original form and needed a drastic change. Here are pivots I'm considering for when we're legally allowed to laugh at jokes again:
 
@@ -52,31 +56,44 @@ My takeaway was that WanderJest wasn't working in its original form and needed a
 * Focusing on the more specialized niche of traveling comedians who rely on comedy for their income.
 * Focusing on services I can offer to venues.
 
+**Paper flyers did nothing**
+
+In a last act of desperation when other marketing strategies weren't working, I hired a local printing company to make 150 flyers and then hired a flyering company to distribute them around town. 
+
+They had a unique URL, which allowed me to to measure their performance: two visits. I paid ~$200 for the design, printing, and distribution, and two people visited the URL. It's possible that other people saw the flyer and just googled the page, but I didn't see any significant uptick in search traffic either.
+
+{{< img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" maxWidth="391px" caption="My sister texting me to tell me about a stray flyer that blew onto her lawn: sadly the most engagement that resulted from my flyers" hasBorder="true" >}}
+
 ## Creating an investment rebalancer
 
 Without WanderJest, I needed a new project. Something that occurred to me a few weeks before was that I rebalance my portfolio regularly, and it's a pretty tedious process.
 
+{{< gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy" >}}
+  {{< img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" >}}
+  {{< img src="rebalancer-rebalanced.png" alt="Screenshot of scavenger hunt announcement on Facebook" >}}
+{{</ gallery >}}
+
 Because of the recent market volatility, interest in portfolio rebalancing is spiking.
 
-TODO: Show optimalrebalancer
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC02/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"rebalance portfolio","geo":"US","time":"2015-04-01 2020-04-01"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=rebalance%20portfolio","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
 There are services that offer portfolio rebalancing tools, but they're part of bulkier offerings that include comprehensive investment management services. I'm hoping that there's a niche of people who want to maintain more control than they get with a robo-investing service like Betterment but who also value their time enough that they don't want to fiddle with a clunky spreadsheet for an hour every time they want to rebalance.
 
 ## How do you balance percentages?
 
-It's been interesting because it's the most computer science-y project I've ever worked on. For most things I work on, I feel like I'm mostly gluing services together and deciding how to organize and present data. The portfolio rebalancer requires me to spend a lot more time thinking about abstract algorithms
+It's been interesting because it's the most computer science-y project I've ever worked on. For most things I work on, I feel like I'm mostly gluing services together and deciding how to organize and present data. The portfolio rebalancer requires me to spend a lot more time thinking about algorithms.
 
 My initial implementation was that +1% in one slider should mean -0.5% in the other two sliders. But then that meant that you could never reach the balance you want because it's constantly adjusting everything else.
 
-{{< video src="sliders-naive.mp4" >}}
+{{< video src="sliders-naive.mp4" caption="First implementation: can't ever specify the set of percentages you want" >}}
 
 Next, I tried adding a button that let you "lock" one slider into place, but that felt convoluted and allowed the user to get into illegal states:
 
-{{< video src="sliders-locking.mp4" >}}
+{{< video src="sliders-locking.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
 
 Finally, I kind of discovered by mistake that a more intuitive implementation is one where it auto-adjusts the slider you touched least recently:
 
-{{< video src="sliders-final.mp4" >}}
+{{< video src="sliders-final.mp4" caption="Final implementation: balance changes against the least recently changed slider" >}}
 
 ## Interesting discoveries
 
@@ -91,6 +108,8 @@ It is nice having everything in source control. It also allows me to add this te
 One of the most conspicuously absent features is lack of support for making element on a slide appear one by one. The theme technically supports it, but it doesn't work for things like bulleted lists, and even when it does work, it makes the layout a little bit wonky. As a workaround, I made slides that were much shorter, so instead of revealing the next bullet point, I'd advance to the next slide. Maybe this is better because it potentially makes for a more lively presentation.
 
 The other big missing piece is drag and drop layouts. In Google Slides, having an arrow overlay appear over a picture is trivial, but if I wanted to do it in reveal-hugo, I think it would have involved gross CSS and absolute positioning, which I didn't want to spend time on.
+
+### Undraw
 
 ### MailChimp alternatives
 
@@ -140,6 +159,8 @@ I have a lot more to say about the process of evaluating newsletter services, an
 | Amazon Affiliate Earnings | $395.67       | $166.43     | <font color="red">-$229.24 (-58%)</font>     |
 | **Total Earnings**        | **$682.62**   | **$362.28** | **<font color="red">-$320.34 (-47%)</font>** |
 
+Is It Keto took a big hit. I suppose people are not that interested in diets when there's a global pandemic raging on.
+
 ### [Zestful](https://zestfuldata.com)
 
 | Metric             | February 2020 | March 2020 | Change                                       |
@@ -148,6 +169,8 @@ I have a lot more to say about the process of evaluating newsletter services, an
 | Total Pageviews    | 2,578         | 843        | <font color="red">-1,735 (-67%)</font>       |
 | RapidAPI Earnings  | $2.27         | $3.67      | <font color="green">+$1.40 (+62%)</font>     |
 | **Total Earnings** | **$2.27**     | **$3.67**  | **<font color="green">+$1.40 (+62%)</font>** |
+
+Zestful remains quiet. My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) decided not to renew.
 
 ## Wrap up
 
@@ -161,6 +184,9 @@ I have a lot more to say about the process of evaluating newsletter services, an
 
 * If I print promotional cards, the cards should 
   * The cards I printed said, "Win fabulous cash prizes" but I think it would have been better to say something more specific like, "Every photo enters you into a drawing to win the $200 cash prize."
+* When you advertise on physical media like cards or flyers, use unique URLs for each type of media.
+  * I realized this by mistake.
+  * The URL for the scavenger hunt was wanderjest.com/scavenger-hunt, so I created the alias wanderjest.com/hunt to save flyer space. I later realized the unique URL allowed me to see how many people visited the URL from the flyer.
 
 ### Goals for next month
 
