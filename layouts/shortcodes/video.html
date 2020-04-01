@@ -1,8 +1,8 @@
 {{ $src := .Get "src" }}
 {{ $caption := .Get "caption" }}
 
-<figure>
-  <video style="max-width:100%" controls>
+<figure class="video">
+  <video controls>
     <source src="{{ $src }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>

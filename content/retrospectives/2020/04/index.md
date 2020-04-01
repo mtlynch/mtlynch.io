@@ -72,7 +72,11 @@ My initial implementation was that +1% in one slider should mean -0.5% in the ot
 
 Next, I tried adding a button that let you "lock" one slider into place, but that felt convoluted and allowed the user to get into illegal states:
 
+{{< video src="sliders-locking.mp4" >}}
+
 Finally, I kind of discovered by mistake that a more intuitive implementation is one where it auto-adjusts the slider you touched least recently:
+
+{{< video src="sliders-final.mp4" >}}
 
 ## Interesting discoveries
 
