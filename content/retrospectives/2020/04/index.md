@@ -1,97 +1,118 @@
 ---
 title: "A Pandemic Reset Month"
 date: 2020-04-02T00:00:00Z
-description: TODO - One-line summary
+description: I'm safe and healthy, but my businesses have taken a tumble.
 ---
 
 ## Highlights
 
-* My loved ones and I remain safe and healthy despite COVID-19.
+* My loved ones and I are safe and healthy.
 * WanderJest is on hiatus due to the nationwide shutdown.
 * I'm working on a product to help investors rebalance their portfolios.
 
 ## COVID-19 and me
 
-Obviously, the most relevant thing to happen in the last month has been the global spread of COVID-19. It has been a difficult and rapidly-changing time for all of us, and I hope that everyone can return to normal life as quickly as it's safe to do so.
+Obviously, the most relevant thing to happen in the last month has been the global spread of COVID-19. It has been a difficult and rapidly-changing time for all of us, and I hope that we can all return to normal life quickly when it's safe to do so.
 
-I'm extremely fortunate to be in a position where I can continue living safely and doing most of what I want in spite of the virus. I always worked from home, so nothing has changed there. My girlfriend works in our second office slash guest bedroom. We're both very grateful to have each other during this.
+I'm extremely fortunate to be in a position to continue living safely and doing most of what I want while rigorously self-isolating.  I'm an introvert programmer, so staying home and doing everything on the computer isn't that hard for me. I'm grateful that I moved from NYC to a small town, as it's easy for me to hang out in my yard, visit my bee hives, or go for walks without risking anyone's health. My girlfriend is working from home in our guest bedroom, so we're both very grateful that we have each other during the self-isolation. The biggest change is that I don't get to see my family in person anymore, but we've started arranging video calls to stay connected.
 
-The biggest change is that I don't get to see my family in person anymore, but we've started arranging video chats to stay connected.
-
-My girlfriend and I are self-isolating strictly, both for our own safety and the safety of those around us. I'm grateful that I moved from NYC to a small town, as it's easy for me to hang out in my yard, visit my bee hives, or go for walks without risking anyone's health. I'm an introvert nerd, so staying home and doing everything on the computer isn't that hard for me.
-
-I have been feeling more anxious. Last month, I was [backsliding into social media addiction](/retrospectives/2020/03/#managing-stress) because Facebook and Instagram were integral parts of my business. I recognized what I had to do to stop obsessively checking social media, and I did well for about a week, then COVID-19 happened, and I began checking everything all the time, desperate for updates. I'm still doing a pretty poor job of managing that, but I'm hoping that April will be a reset and get me back to [my good social media habits](/eliminate-distractions/).
+In February, I found myself [backsliding into social media addiction](/retrospectives/2020/03/#managing-stress) because Facebook and Instagram were integral parts of my business. I recognized what I had to do to stop compulsively checking social media, and I did well for about a week... Then COVID-19 happened, and I began obsessively checking everything all the time, worse than ever before. I'm still managing that poorly, but I'm hoping that April will be a reset and get me back to [my good social media habits](/eliminate-distractions/).
 
 ## My failed scavenger hunt
 
-In my last retrospective, I had [invested $600 into publicity for a comedy scavenger hunt](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost), and I was worried it would flop. It did indeed flop, and not even due to COVID-19.
+In my last retrospective, I had [invested $600 into publicity for a comedy scavenger hunt](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost), and I was worried that it would flop. It did indeed flop, and not even due to COVID-19.
 
-{{< img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="600px" caption="I canceled the WanderJest Scavenger Hunt on March 11th" >}}
+{{< img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="500px" caption="I canceled the [WanderJest Scavenger Hunt](https://wanderjest.com/scavenger-hunt) on March 11th." >}}
 
-The first week of March, people were still attending local comedy shows as normal. I'd go to these shows and hand out promotional cards about the scavenger hunt and explain to people that if they took a picture during the show and tagged it @WanderJest on social media, they'd enter a grand prize drawing for $200. People generally seemed receptive. I got a lot of, "$200? Wow! Cool."
+The first week of March, people were still attending local comedy shows as normal. I'd go to these shows and hand out promotional cards about the scavenger hunt and explain to people that if they took a picture during the show and tagged it @WanderJest on social media, they'd enter a grand prize drawing for $200. People generally seemed receptive. "$200? Wow, cool!"
 
 And then they just wouldn't take any photos.
 
-Comedians didn't seem excited about it either, even the ones who had paid to sponsor the contest. When I was designing the contest, I felt so clever for including a $50 prize for "most photographed performer." I thought it would make performers feel invested in the contest, too, and inspire them to mention it when they hosted comedy shows. But nobody did.
+Comedians didn't seem excited about it either, even the ones who had paid to sponsor the contest. While designing it, I felt so clever for including a $50 prize for ["most photographed performer."](https://wanderjest.com/scavenger-hunt#fan-crush) I thought it would make performers feel invested in the contest and inspire them to mention it when they hosted comedy shows. But nobody did.
 
-The contest was supposed to last If I had the entire month, I would have probed more to figure out why people didn't want to participate. My best guess is that local comedy is cool, and PR contests are not cool. Perhaps people didn't want to be seen as desperate for $200 especially when nobody else was participating.
+My best guess is that local comedy is cool, and PR contests are not cool. Perhaps people didn't want to be seen as desperate to win $200 especially when nobody else was participating.
 
-## COVID-19 and WanderJest
+## Putting WanderJest on hold
 
-Even before the start of the month, news about COVID-19 was getting worse. But as we all know now, it quickly got much worse. On March 10th, the governor of Massachusetts declared a state of emergency and prohibited gatherings of over 50 people. Most local comedy shows in the area fit within that, but I no longer felt comfortable attending, and I didn't want to incentivize others to attend. I publicly canceled the contest and refunded all of the sponsors. For all the money I invested in publicity, I had only one entrant, the wife of one of the sponsors who had posted a photo the night before. Technically, the grand prize was $200, but that felt like a bit much for one photo in a contest that had to end early, so I offered her $100 and she felt like that was fair.
+Even before the start of the month, news about COVID-19 was getting worse, but I didn't know what the appropriate level of response was. Huge conferences and sporting events were obviously a bad idea, but was it a problem to have audiences of 20-30 mostly young healthy people?
 
-I was still in a difficult position because people weren't canceling their shows. I wanted to just shutter WanderJest and say, "Hey, stop attending shows! Comedy is great but we're in emergency mode, and this is not an essential service." But these performers had taken a chance on me and sponsored the scavenger hunt even though I had failed to build excitement for the contest. I felt guilty turning around a week later and withdrawing my support of their shows.
+But every day, news about COVID-19 got worse and it became clearer that we needed to take drastic action to slow the spread. On March 10th, the governor of Massachusetts declared a state of emergency and prohibited gatherings of over 50 people. Most local comedy shows in the area fit within that, but I no longer felt comfortable attending shows, and I didn't want to incentivize others to attend. I publicly canceled the contest and refunded all of the sponsors.
 
-A week later, people were starting to cancel shows and it was clear that this was getting even more serious. I replaced the WanderJest show listings page with a notice saying that the site was going on a temporary hiatus until the COVID-19 crisis was over.
+Because of the contest's pitiful engagement, only one person had taken a photo during the 10 days of the contest. The grand prize was $200, but I offered her $100 in light of the circumstances and we both felt that was fair.
+
+A week later, it became clear that the crisis was getting even more serious. I replaced the WanderJest show listings page with a notice saying that the site was going on a temporary hiatus until the COVID-19 pandemic was over.
+
+{{< img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" maxWidth="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control." hasBorder="true" >}}
 
 ## Takeaways from the scavenger hunt
 
-If I were to do it over with the same information, I would have done the same thing. If I wanted to protect myself from failure, I could have waited to officially launch the contest until I had enough signups, but at the time, I think aggressively pursuing the contest was the right move. Requiring signups would have saved money but delayed me learning about the contest.
+**Rushing the contest was the right choice**
 
-**WanderJest isn't working**
+The contest cost $600 for marketing another $100 in prizes, but it didn't achieve my goal of attracting new user signups. At first, I felt stupid for spending so much money without any evidence that people would participate. I could have limited the cost had I started slower and left myself room to cancel the contest if it failed to gain traction early on.
 
-My takeaway was that WanderJest wasn't working in its original form and needed a drastic change. Here are pivots I'm considering for when we're legally allowed to laugh at jokes again:
+{{< img src="promo-cards.jpg" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="600px" caption="These 500 unused promotional cards will come in handy the next time I launch a contest happening in March 2020." >}}
 
-* Doing the same thing, but scaling it to a bigger city like New York or Chicago, where there's a bigger fanbase of die-hard comedy fans.
-* Focusing on the more specialized niche of traveling comedians who rely on comedy for their income.
-* Focusing on services I can offer to venues.
+In retrospect, I'm glad I rushed into the contest and spent the money. I certainly could have set a later start date so I had more time to evaluate people's interest, but my top priority was finding ways to attract users to WanderJest. If $700 got me the results of my experiment a few weeks earlier than a more measured approach, that's an acceptable tradeoff.
 
 **Paper flyers did nothing**
 
-In a last act of desperation when other marketing strategies weren't working, I hired a local printing company to make 150 flyers and then hired a flyering company to distribute them around town. 
+In a last act of desperation when other marketing strategies weren't working, I hired a local printing company to make 150 flyers and then hired a flyering company to distribute them around town. The flyers had a unique URL, which allowed me to to measure their performance against my other advertising channels.
 
-They had a unique URL, which allowed me to to measure their performance: two visits. I paid ~$200 for the design, printing, and distribution, and two people visited the URL. It's possible that other people saw the flyer and just googled the page, but I didn't see any significant uptick in search traffic either.
+The results? Two visitors.
 
-{{< img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" maxWidth="391px" caption="My sister texting me to tell me about a stray flyer that blew onto her lawn: sadly the most engagement that resulted from my flyers" hasBorder="true" >}}
+I paid ~$200 for the design, printing, and distribution, and **two people** visited the URL. It's possible that other people saw the flyer and just Googled "wanderjest," but I didn't see any significant uptick in search traffic either.
+
+{{< img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" maxWidth="391px" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn." hasBorder="true" >}}
+
+**WanderJest isn't working**
+
+My main takeaway from the contest is that WanderJest isn't working in its current form and needs a drastic change.
+
+Here are pivots I'm considering for when live comedy starts up again:
+
+* Do the same thing, but scale it to a bigger city like New York or Chicago, where there's a critical mass of die-hard comedy fans.
+* Focus on the more specialized niche of traveling comedians who rely on comedy for their income.
+* Offer paid services to comedy venues like tools for booking performers or managing show schedules.
 
 ## Creating an investment rebalancer
 
-Without WanderJest, I needed a new project. Something that occurred to me a few weeks before was that I rebalance my portfolio regularly, and it's a pretty tedious process.
+Without WanderJest, I needed a new project. I periodically rebalance my portfolio to maintain my desired asset ratio of 50% bonds, 35% US stocks, and 15% international stocks. Rebalancing is tedious and involves me tinkering with a spreadsheet for 45 minutes testing out different hypothetical trades.
 
-{{< gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy" >}}
-  {{< img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" >}}
-  {{< img src="rebalancer-rebalanced.png" alt="Screenshot of scavenger hunt announcement on Facebook" >}}
-{{</ gallery >}}
+I looked for products that could speed this up, and the options seem to be:
 
-Because of the recent market volatility, interest in portfolio rebalancing is spiking.
+* Robo-investing services, such as Betterment
+* Portfolio rebalancing tools packaged into bulky investment management platforms
+* Free Excel spreadsheet templates that are difficult to use
+* Free online calculators whose functionality is limited
+
+There aren't any user-friendly tools for people who want to rebalance their assets but don't want to buy into a huge financial services platform. 
+
+And because of the recent market volatility, interest in portfolio rebalancing is at a five-year high:
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC02/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"rebalance portfolio","geo":"US","time":"2015-04-01 2020-04-01"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=rebalance%20portfolio","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
-There are services that offer portfolio rebalancing tools, but they're part of bulkier offerings that include comprehensive investment management services. I'm hoping that there's a niche of people who want to maintain more control than they get with a robo-investing service like Betterment but who also value their time enough that they don't want to fiddle with a clunky spreadsheet for an hour every time they want to rebalance.
+I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://assetrebalancer.com), a web app that shows you the trades you need to make in your Vanguard account to achieve your desired asset allocation strategy:
+
+{{< gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy" >}}
+  {{< img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" hasBorder="true" >}}
+  {{< img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets" hasBorder="true" >}}
+{{</ gallery >}}
+
+I'm still trying to figure out how to market it. I sent cold emails to several local financial advisors offering to pay them their hourly rate to participate in a customer interview, but none of them responded. I tried sharing it on [reddit](https://redd.it/fpyqmc) and got a small positive response, but nobody was banging down my door to get a paid version. My next idea is to write about the technical lessons I'm learning as I build the site and hope that it draws attention from readers who invest their money similarly.
 
 ## How do you balance percentages?
 
-It's been interesting because it's the most computer science-y project I've ever worked on. For most things I work on, I feel like I'm mostly gluing services together and deciding how to organize and present data. The portfolio rebalancer requires me to spend a lot more time thinking about algorithms.
+To choose their asset allocation on Portfolio Rebalancer, the user adjusts a series of sliders to say how what percentage of funds to move into each category. It seems simple enough, but I struggled with it for days.
 
-My initial implementation was that +1% in one slider should mean -0.5% in the other two sliders. But then that meant that you could never reach the balance you want because it's constantly adjusting everything else.
+My initial implementation was that +1% in one slider should mean -0.5% in the other two sliders. It quickly became obvious that wouldn't work, because if you set your first slider to 60%, then changed your next slider to 10%, it would auto-adjust the slider you just set:
 
 {{< video src="sliders-naive.mp4" caption="First implementation: can't ever specify the set of percentages you want" >}}
 
-Next, I tried adding a button that let you "lock" one slider into place, but that felt convoluted and allowed the user to get into illegal states:
+Next, I tried adding a checkbox to "lock" a particular slider into place, but that felt convoluted and allowed the user to get into states where the percentage totals exceeded 100%:
 
 {{< video src="sliders-locking.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
 
-Finally, I kind of discovered by mistake that a more intuitive implementation is one where it auto-adjusts the slider you touched least recently:
+Finally, I realized the more intuitive behavior is to just auto-adjust the slider you touched least recently:
 
 {{< video src="sliders-final.mp4" caption="Final implementation: balance changes against the least recently changed slider" >}}
 
@@ -99,41 +120,26 @@ Finally, I kind of discovered by mistake that a more intuitive implementation is
 
 ### Writing slide decks in Markdown with hugo-reveal
 
-I was scheduled to speak at NERD Summit in March. Fortunately, they decided pretty early on to go virtual and hold all presentations over Zoom.
+I created a new conference talk for [NERD Summit] this year called ["How I Used Python to Steal Money."](https://decks.mtlynch.io/nerds-2020/) For all previous talks, I've used Google Slides, but I've heard other people talk about using tools to "compile" their presentations from a plaintext source files, and that sounded neat.
 
-I generally write my presentations using Google Slides, but I've been seeing tools pop up that offer Markdown-based
+I used [reveal-hugo](https://reveal-hugo.dzello.com/) because I already knew how to use the Hugo static site generator (which powers this site).
 
-It is nice having everything in source control. It also allows me to add this template that auto-generates [an index for all of my talks](https://decks.mtlynch.io), which is cool. And the source is all [public](https://github.com/mtlynch/slide-decks).
+{{< gallery caption="[reveal-hugo](https://reveal-hugo.dzello.com/) lets you create slide decks in Markdown." >}}
+  {{< img src="reveal-code.png" alt="Source code for my presentation" hasBorder="true" >}}
+  {{< img src="reveal-rendered.png" alt="HTML rendering of the presentation" hasBorder="true" >}}
+{{</ gallery >}}
 
-One of the most conspicuously absent features is lack of support for making element on a slide appear one by one. The theme technically supports it, but it doesn't work for things like bulleted lists, and even when it does work, it makes the layout a little bit wonky. As a workaround, I made slides that were much shorter, so instead of revealing the next bullet point, I'd advance to the next slide. Maybe this is better because it potentially makes for a more lively presentation.
+The biggest advantage is that writing in Markdown allows me to focus on the content first and worry about the layout later. With Google Slides, you can't write a line of text without choosing its placement, so I get distracted thinking about the aesthetics. The other neat feature is that the generic format lends itself to more automation, so I now have [an index for all of my talks](https://decks.mtlynch.io), which is cool. And the source is all [public](https://github.com/mtlynch/slide-decks).
 
-The other big missing piece is drag and drop layouts. In Google Slides, having an arrow overlay appear over a picture is trivial, but if I wanted to do it in reveal-hugo, I think it would have involved gross CSS and absolute positioning, which I didn't want to spend time on.
+One of the the biggest pain points was that it's hard to make slide elements appear one-by-one as the presenter clicks forward. The theme [technically supports it](https://reveal-hugo.dzello.com/#/24), but it doesn't work for things like [bulleted lists](https://github.com/dzello/reveal-hugo/issues/36). Even when it does work, it makes the layout a little bit wonky. As a workaround, I made slides that were shorter, so instead of revealing the next bullet point, I'd advance to the next slide. This could be better for people who prefer slide decks to move more quickly.
 
-### Undraw
+The other big missing piece is drag and drop layouts. In Google Slides, it's trivial to add an arrow or box to highlight some part of a slide. In reveal-hugo, it's equivalent to positioning things in HTML and CSS, which is quite a bit harder and more tedious.
 
-### MailChimp alternatives
+### unDraw
 
-I've been on MailChimp for the past three years. It offers tons of features, and I only need ~2% of them, but I've always fit into the free tier, so it's been fine.Recently I've started bumping up against their 2,000 contact limit, so I've had to frequently cull my mailing list of email addresses that look like bot signups (I apologize to any legitimate subscribers who have an @discountsunglasses4u.us email address).
+I always felt like other indie projects had such cool stock imagery, but I wasn't sure if they were buying it or stealing it or if they were bundled into some template I didn't know about. It turns out that most of what I was seeing came from [unDraw](https://undraw.co), a collection of openly-licensed illustrations by [Katerina Limpitsouni](https://twitter.com/ninaLimpi). If you need free illustrations for a new product, I recommend checking out unDraw.
 
-But once you break out of MailChimp's free tier, they get very expensive very quickly. Most providers charge by the number of contact under the assumption that you're emailing each contact 5-6x per month. I email my contacts only once or twice per month, so I want something that's priced a little bit more toward infrequent senders.
-
-I also grew envious of Victor Zhou's mailing list implementation, where he allows readers to subscribe to particular topics.
-
-I began exploring MailChimp alternatives looking for a service that's a better match for my simple needs.
-
-| Provider   | Price for 2,501 subscribers | My notes |
-|------------|-----------------------------|----------|
-| [Email Octopus Connect](https://emailoctopus.com/pricing-connect) | $19/month            | My favorite user experience of all the services I've tested, but they don't support list segmentation, so I wouldn't be able to do subscribe by topic. But their API is pretty easy to use, they have a simple feature set that *almost* perfectly matches my need, and when I emailed support with questions, I got prompt answers directly from the CEO. I'm hoping they implement list segmentation so I can switch to them before I hit the hard limit of MailChimp's free tier. |
-| [BigMailer](https://www.bigmailer.io) | $3/month                        | I kept *wanting* to like them, as they seem to offer all of the functionality I want at an aggressive price, but I ran into so many ugly parts of their product that I gave up. [Their API is atrocious](https://docs.bigmailer.io/reference#updatecontact). |
-| [Sendinblue](https://www.sendinblue.com) | $25/month                       | One of the few providers that charges based on number of emails sent rather than number of contacts, but their product is pretty messy, so I gave up on them. |
-| <a href="https://convertkit.com" rel="nofollow">ConvertKit</a> | $49/month                       | They were the first newsletter service I ever tried, but they bungled enough of their stuff that I vowed never to return. |
-| [TinyLetter](https://tinyletter.com) | Free                      | TinyLetter is MailChimp's free, no-frills newsletter service. They don't track click rates, and they don't offer any way of letting users subscribe by topic. |
-| [MailChimp Pay As You Go](https://mailchimp.com/help/about-the-pay-as-you-go-plan/) | ~$75 per newsletter send | I never realized MailChimp had a pay as you go plan where you pay by the email rather than by the contact. Unfortunately, this only makes sense if you send *really* infrequently, like once a quarter or something because each email costs:<br><br>`$0.03 * subscriber count` |
-| [Sendy](https://sendy.co/)    | $59 (one-time fee)          | I've heard good things, but it requires me to manage my own LAMP server, and I don't want to do that. |
-| [Mailtrain](https://mailtrain.org/) | $0 (open source)           | I played around with the Docker image and it seems alright, but I don't want to have to maintain my own LAMP server or Kubernetes cluster just to send emails. |
-| [listmonk](https://listmonk.app/) | $0 (open source)            | Ditto, but even worse because it's still in alpha and is not recommended for real-world usage. |
-
-I have a lot more to say about the process of evaluating newsletter services, and I'm debating whether it's worth writing a whole blog post about it.
+{{< img src="undraw.png" alt="Screenshot of unDraw website" maxWidth="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project." hasBorder="true" >}}
 
 ## Legacy project stats
 
@@ -148,6 +154,8 @@ I have a lot more to say about the process of evaluating newsletter services, an
 | Scavenger Hunt Earnings | $100.00       | $0.00      | <font color="red">-$100.00 (-100%)</font>     |
 | **Total Earnings**      | **$100.00**   | **$0.00**  | **<font color="red">-$100.00 (-100%)</font>** |
 
+WanderJest was struggling in the first half of the month. In the second half of the month, visits were basically nil, as every live show was canceled.
+
 ### [Is It Keto](https://isitketo.org)
 
 | Metric                    | February 2020 | March 2020  | Change                                       |
@@ -159,7 +167,7 @@ I have a lot more to say about the process of evaluating newsletter services, an
 | Amazon Affiliate Earnings | $395.67       | $166.43     | <font color="red">-$229.24 (-58%)</font>     |
 | **Total Earnings**        | **$682.62**   | **$362.28** | **<font color="red">-$320.34 (-47%)</font>** |
 
-Is It Keto took a big hit. I suppose people are not that interested in diets when there's a global pandemic raging on.
+Is It Keto took a big hit this month after a strong start to the year. I suppose people are not that interested in diets when there's a global pandemic raging on.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -170,26 +178,32 @@ Is It Keto took a big hit. I suppose people are not that interested in diets whe
 | RapidAPI Earnings  | $2.27         | $3.67      | <font color="green">+$1.40 (+62%)</font>     |
 | **Total Earnings** | **$2.27**     | **$3.67**  | **<font color="green">+$1.40 (+62%)</font>** |
 
-Zestful remains quiet. My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) decided not to renew.
+Zestful remains quiet with a handful of occasional pay-as-you-go users.
+
+My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) was up for a plan renewal in early March, but they decided to cancel. I expected it because it seemed from the beginning that they needed the enterprise to process their existing corpus of ingredients, and their ongoing needs wouldn't be as significant. I asked when they canceled if there was anything they felt was missing from Zestful or needed improvement, but they never responded.
 
 ## Wrap up
 
 ### What got done?
 
-* Created a minimum viable product of the [Portfolio Rebalancer](https://assetrebalancer.com)
+* Created a minimum viable product of the [Portfolio Rebalancer](https://assetrebalancer.com).
 * Presented my talk at NERD Summit: ["How I Used Python to Steal Money"](https://decks.mtlynch.io/nerds-2020/#/)
   * There's a [recording](https://youtu.be/W05vGbi8B4A), but the audio quality is pretty bad.
+* Updated my blog newsletter so that subscribers can choose what type of updates to receive.
+  * If you're on my [mailing list](#subscribe-form), you'll see a link at the bottom of each email.
 
 ### Lessons learned
 
-* If I print promotional cards, the cards should 
+* Promotional cards need to be as self-explanatory as possible
   * The cards I printed said, "Win fabulous cash prizes" but I think it would have been better to say something more specific like, "Every photo enters you into a drawing to win the $200 cash prize."
+  * I shouldn't have relied on users to visit the website to learn the specifics.
 * When you advertise on physical media like cards or flyers, use unique URLs for each type of media.
-  * I realized this by mistake.
-  * The URL for the scavenger hunt was wanderjest.com/scavenger-hunt, so I created the alias wanderjest.com/hunt to save flyer space. I later realized the unique URL allowed me to see how many people visited the URL from the flyer.
+  * I discovered this by mistake.
+  * The URL for the scavenger hunt was [wanderjest.com/scavenger-hunt](wanderjest.com/scavenger-hunt), so I created the alias [wanderjest.com/hunt](wanderjest.com/hunt) to save flyer space.
+  * I later realized the unique URL allowed me to see how many people visited the URL from the flyer and track the flyer's effectiveness (or lack thereof).
 
 ### Goals for next month
 
 * Conduct five customer interviews for the portfolio rebalancer.
-* Decide whether to pursue the portfolio rebalancer or switch projects.
+* Implement customer payments for the portfolio rebalancer and either hide or limit the free version.
 * Publish one new blog post.
