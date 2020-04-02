@@ -85,7 +85,7 @@ I looked for products that could speed this up, and the options seemed to be:
 * Free Excel spreadsheet templates that are difficult to use
 * Free online calculators whose functionality is limited
 
-There aren't any user-friendly tools for people who want to rebalance their assets but don't want to buy into a huge financial services platform. 
+There aren't any user-friendly tools for people who want to rebalance their assets but don't want to buy into a huge financial services platform.
 
 And because of the recent market volatility, interest in portfolio rebalancing is at a five-year high:
 
@@ -199,7 +199,7 @@ My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) 
   * I shouldn't have relied on users to visit the website to learn the specifics.
 * When you advertise on physical media like cards or flyers, use unique URLs for each type of media to track engagement.
   * I discovered this by mistake.
-  * The URL for the scavenger hunt was [wanderjest.com/scavenger-hunt](wanderjest.com/scavenger-hunt), so I created the alias [wanderjest.com/hunt](wanderjest.com/hunt) to save space on printed flyers.
+  * The URL for the scavenger hunt was [wanderjest.com/scavenger-hunt](https://wanderjest.com/scavenger-hunt), so I created the alias [wanderjest.com/hunt](https://wanderjest.com/hunt) to save space on printed flyers.
   * I later realized the unique URL allowed me to see how many people visited the URL from the flyer and track the flyer's effectiveness (or lack thereof).
 
 ### Goals for next month
