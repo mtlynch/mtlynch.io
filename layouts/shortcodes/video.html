@@ -1,12 +1,14 @@
 {{ $src := .Get "src" }}
 {{ $caption := .Get "caption" }}
 
-<figure>
-  <video style="max-width:100%" controls>
-    <source src="{{ $src }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  {{ if $caption }}
-    <figcaption><p>{{ $caption | markdownify }}</p></figcaption>
-  {{ end }}
+<figure class="video">
+  <div class="video-inner">
+    <video controls>
+      <source src="{{ $src }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    {{ if $caption }}
+      <figcaption><p>{{ $caption | markdownify }}</p></figcaption>
+    {{ end }}
+  </div>
 </figure>
