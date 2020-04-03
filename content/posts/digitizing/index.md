@@ -1,6 +1,11 @@
 ---
 title: My Eight Year Quest to Digitize 45 Video Tapes
-date: 2020-02-29
+date: 2020-04-29
+tags:
+- mediagoblin
+- clipbucket
+- docker
+- gcsfuse
 ---
 
 I've carried this box of video tapes around for the last eight years. They've moved with me through four different apartments and one house. They're my family's home videos from my childhood.
@@ -61,9 +66,15 @@ TODO: VCR picture
 
 To cut the videos into clips, I used Adobe Premiere Elements, a product I still happily use today. As I started the editing process, I realized that the audio and video was slightly out of sync. Okay, no problem. I can just shift the audio a little bit. But ten minutes later, I'd realize that it was out of sync. The skew would get progressively worse the deeper I got into each tape.
 
-I spent hours stubbornly and meticulously shifting audio. Do you know how hard it is to fix a clip's audio when you can't tell if a sound is happening 10 milliseconds too early or 10 milliseconds too late? It's really hard! Judge for yourself:
+I spent hours stubbornly and meticulously shifting audio. Do you know how hard it is to fix a clip's audio when you can't tell if a sound is happening 10 milliseconds too early or 10 milliseconds too late? It's really hard! Judge for yourself. Here's a video of me playing with my poor, patient kitten Buddy. The audio is slightly out of sync with the video, but is the audio ahead of the video or behind?
 
-TODO: Video
+{{< video src="buddyjump.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
+
+Here's the part where Buddy jumps, slowed down to 1/5th speed:
+
+{{< video src="buddyjump-slowmo.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
+
+Answer: The audio is coming in a few milliseconds late.
 
 ### Maybe I should spend an extra hundred dollars instead of wasting hundreds of hours
 
@@ -88,18 +99,26 @@ TODO: Show side by side of video quality
 {{<notice type="info">}}
 **A brief rant about EverPresent**
 
-The downside was that my fears about security were realized. All their plans require the customer to receive their files via cloud storage, so I opted against having them store a copy on any other physical media. But when I picked up my tapes, they had also copied my files to an external hard drive and wanted to charge me several hundred dollars for it. They also wanted to charge me a different fee for the digitization than we had agreed. They only relented after I showed them an email where the rep quoted me the price.
+To capture the footage, I worked with a company called EverPresent, and I found their data security and customer service practices to be severely lacking.
 
-When I looked at the instructions for accessing my files on cloud storage, I realized that the password was just duplicated from the URL. They published all their customers videos in a way that anyone could guess most of their customers' URLs. They were password protected, but the password matched the URL, so if you found a valid URL, you knew the password.
+All EverPresent packages require the customer to receive their files via cloud storage, so I declined their add-on option for storing a copy on an USB hard drive. Despite this, they gave me an external hard drive with a copy of my files and wanted to charge me several hundred dollars for it. They took back the hard drive, but I have to take it on faith that they securely wiped my files before providing the same device to another customer. They also billed me a higher fee than we had agreed and only relented after I forwarded them an email where their rep quoted me the lower price.
 
-I reported the issue to them, and they were polite and timely in their responses. They promised to remediate the issue within weeks, but then did nothing. I contacted them a couple months later to check on status, and they said that tehy decided against fixing the issue, but switched to a new password scheme. They said that they could tell from their Box.com logs that nobody was exploiting this issue in the wild (sidenote: I'm not sure that Box.com offers logging to verify this), so they just let existing customer URLs expire after six months and switched future customers to the more secure password scheme. They never shared details of their new password scheme with me except to say XXX.
+When I looked at the instructions for accessing my files on cloud storage, I realized they had a huge security hole. that the password was just duplicated from the URL. They published all their customers videos in a way that anyone could guess most of their customers' URLs. They were password protected, but the password matched the URL, so if you found a valid URL, you knew the password.
+
+I reported the issue to them, and, to their credit, they quickly and professionally escalated it to their CEO and head of XX. They promised to remediate the issue within weeks, but then nothing happened. I contacted them a couple months later to check on status, and they said that they decided against fixing the issue, but switched to a new password scheme. They said that they could tell from their Box.com logs that nobody was exploiting this issue in the wild (sidenote: I'm not sure that Box.com offers logging to verify this), so they just let existing customer URLs expire after six months and switched future customers to the more secure password scheme. They never shared details of their new password scheme with me except to say XXX.
 {{</notice>}}
 
 ## Part 2: Editing
 
 My experience with home videos is that 90% of the footage is boring, 8% is entertaining, and 2% is amazing. That means that after you digitize the tapes, there's still lots of work to do.
 
-My first pass at editing was to just use Adobe Premiere Elements. This is a great tool, and it's inexpensive. Critically important for this type of work is the zoom bar. You want to be able to zoom out to jump around a long clip but zoom in and jump forward and backwards frame-by-frame when you're cutting the end of a scene. 
+### Critical for editing: a zoomable timeline
+
+Editing a home video really comes down to finding the boundaries between different clips. VHS tapes contain a long stream of different video clips and dead air, so you have to find where each clip starts and ends.
+
+I tried a few different tools, but nothing came close to Adobe Premiere Elements. It's still available without a monthly subscription for under $100. Its killer feature is the the zoomable timeline.
+
+When editing, I generally wanted to zoom out to find the rough boundary between clips and then zoom in so I could move frame-by-frame to find the exact ending spot.
 
 TODO: Screenshot of Premiere
 
@@ -113,23 +132,63 @@ The biggest problem with Premiere is that it requires a lot of starting and stop
 1. Wait 2-15 minutes for exporting to complete.
 1. Go back to (2) until the tape is complete.
 
-The long waits meant that I could only do this work if I was constantly context-switching between that and some other task.
+The long waits meant that I could only do this work if I was constantly context-switching between video editing and some other task.
 
-When I reached the point of sharing the videos, I realized I had discarded critical metadata. I was just giving each clip a title like `michael dancing to the radio.mp4`. Later, when I wanted to make a web interface to share the videos, I realized there was a lot more information about the clips that I'd lost, such as when they were recorded and tags about the contents. I could add tags by just re-watching the videos, but figuring out the recording date meant going back to the raw footage where they came from and then deducing the time from the label there.
+But in my first attempt, I just sucked it up and spent hours doing it this inefficient way. When I reached the point of sharing the clips online, I realized I'd made a grievous error. When I exported each clip, I just gave each one a title like `Michael dancing to the radio.mp4`. But there was a lot more metadata that I wanted to display
+
+1. What's happening in this clip?
+1. Which people and pets appear in this clip?
+1. When was this video recorded?
+1. Which tape did it come from?
+1. Where on the tape did it appear?
+
+(4) and (5) are not that interesting in themselves, but I could use those details to estimate the recording date when there were no other clues.
 
 One of the other fatal flaws of this workflow is that it's not easily reproducible. Fixing a small error is about as hard as doing the entire thing from scratch. For example, when I reached the sharing stage, I realized that I should have exported the video in a format that browsers can play natively. Because I didn't do that, I either had to re-do the tedious process of exporting hundreds of clips by hand or I had to degrade quality by transcoding the already-exported video to a different format.
 
-### Machine learning-based editing
+### Robo-editing
 
 After an embarrassing number of hours doing everything by hand, I wondered if it was possible to automate this process. The advantage of dragging my feet so long on this project was that machine learning had time to catch up with me. Throughout the 2010s, machine learning was getting better and cheaper. I knew that no automated solution would get it perfect, but maybe it could do 80% of the work and I could fix the last 20% by hand.
 
-I experimented with a tool called pyscenedetect. It did indeed get about 80% of it right, but I realized that the amount of work I had to do verifying correctness was probably higher than the work of doing it all myself.
+I experimented with a tool called [pyscenedetect](https://pyscenedetect.readthedocs.io/en/latest/). It uses machine learning to detect scene changes and prints out the timecodes where the scene changes happen:
 
-So, pyscenedetect didn't work, but it did bring one of the most important realizations of this entire project: CSVs can represent rich clip metadata.
+```bash
+ $ docker run \
+    --volume "/videos:/opt" \
+    handflucht/pyscenedetect \
+    --input /opt/test.mp4 \
+    --output /opt \
+    detect-content --threshold 80 \
+    list-scenes
+[PySceneDetect] Output directory set:
+  /opt
+[PySceneDetect] Loaded 1 video, framerate: 29.97 FPS, resolution: 720 x 480
+[PySceneDetect] Downscale factor set to 3, effective resolution: 240 x 160
+[PySceneDetect] Scene list CSV file name format:
+  $VIDEO_NAME-Scenes.csv
+[PySceneDetect] Detecting scenes...
+[PySceneDetect] Processed 55135 frames in 117.6 seconds (average 468.96 FPS).
+[PySceneDetect] Detected 33 scenes, average shot length 55.7 seconds.
+[PySceneDetect] Writing scene list to CSV file:
+  /opt/test-Scenes.csv
+[PySceneDetect] Scene List:
+-----------------------------------------------------------------------
+ | Scene # | Start Frame |  Start Time  |  End Frame  |   End Time   |
+-----------------------------------------------------------------------
+ |      1  |           0 | 00:00:00.000 |        1011 | 00:00:33.734 |
+ |      2  |        1011 | 00:00:33.734 |        1292 | 00:00:43.110 |
+ |      3  |        1292 | 00:00:43.110 |        1878 | 00:01:02.663 |
+ |      4  |        1878 | 00:01:02.663 |        2027 | 00:01:07.634 |
+ ...
+```
+
+It did indeed get about 80% of it right, but the work I had to do to verify correctness cost more than the time I saved from automating it.
+
+Nevertheless, pyscenedetect did spark one of my most important realizations of this entire project: CSVs can represent rich clip metadata.
 
 ### I remembered that I'm a programmer
 
-Up until this point, I'd been treating the video files as these impenetrable blobs that I couldn't interact with except with pre-made tools. pyscenedetect outputs a CSV file (TODO: check this) in case you want to use the frame boundaries in some other tool. 
+Up until this point, I'd been treating the video files as these impenetrable blobs that I couldn't interact with except with pre-made tools. pyscenedetect outputs a CSV file so that you can consume the metadata with other tools. 
 
 I realized that videos are, in fact, not a dark and mysterious blobs of data that I need to edit via interactive tools. There are plenty of libraries and command-line tools that automate video editing. Instead of chopping up clips in a tool like Premiere, I could just record the start and end times of each clip and use whatever tool I wanted to cut the clips at those positions.
 
@@ -206,15 +265,15 @@ But I finally got it working.
 
 MediaGoblin is alright now that I've got a working image, but MediaGoblin's dependencies are pretty coarsely defined, so I have to fix . The project seems to be mostly dead, though some contributors held a meeting a few months ago to discuss jumpstarting development again. For simple video sharing, it's too much complexity.
 
-If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I initially thought I needed something like MediaGoblin or ClipBucket to be able to play video in the browser, but modern browsers can play video natively as long as you encode your video in a supported format.
+If I were doing this again, I'd use a static site generator like Hugo or Jekyll. I originally chose tools like ClipBucket and MediaGoblin to avoid the problem of transcoding video and playing it in the browser, but I've since realized that those problems are easy to solve. Modern browsers natively support video, and a variety of tools to encode video to a browser-compatible format.
 
-One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server. You could use Commento or Disqus if you wanted to.
+One downside of using a static site generator is that you lose the ability to dynamically add comments. Everything is much simpler if all of the data is read-only as opposed to having to maintain dynamic state on the server. You could use Commento or Disqus if you wanted to. Even when I used platforms that supported it, my family never used the in-app commenting feature and instead just commented on videos over group texts.
 
 The other thing you lose from a static site is the ability to search.
 
 ## Part 4: Hosting
 
-When I first started launched a sharing solution, I just used a regular Google Compute Enginge VM and ran my Ansible playbook to install ClipBucket. That was a pain, though, because I had to maintain an entire server VM, when all I cared about was.
+When I first started launched a sharing solution, I just used a regular Google Compute Enginge VM and ran my Ansible playbook to install ClipBucket. That was a pain, though, because I had to maintain an entire server VM, when all I cared about was the one video-sharing app.
 
 By the time I switched to MediaGoblin as my hosting software, I'd seen how much better it was to host with Docker, so I did that.
 
@@ -222,19 +281,17 @@ When I graduated to Docker, I continued using GCE, but I just kept a VM running 
 
 ### MediaGoblin and the video storage problem
 
-I figured that I could follow the same process as I did with ClipBucket - put the videos on GCS, then symlink all of MediaGoblin's folders to GCS folders via gcsfuse. It turns out that mounting a GCS bucket into a Docker container is much harder than mounting it in a normal VM. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
+I again ran into the problem of how to share XX GB of video. I could theoretically stuff them all into the Docker image, but that felt ugly and expensive. I figured that I could follow the same process as I did with ClipBucket - put the videos on GCS, then symlink all of MediaGoblin's folders to GCS folders via gcsfuse. It turns out that mounting a GCS bucket into a Docker container is much harder than mounting it in a normal VM. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
 
 {{< img src="mg-gcs-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + gcsfuse" caption="Architecture for deploying MediaGoblin to Google Cloud Platform from my [2018 post](/retrofit-docker-gcs/)" maxWidth="600px" hasBorder="True" >}}
 
-I finally loaded all of my videos into MediaGoblin, mounted the GCS folder, and it was slow. *Painfully* slow. It was slow to even load the video thumbnails when it displayed the index of videos. I tried switching to a more powerful VM, but I still got the same result.
+Crushingly, after all the hours getting it to work, I realized it was unusably slow. It took about 20 seconds just to load all the video thumbnails on the homepage. I tried switching to a more powerful VM, but I still got the same result.
 
-I realized that the bottleneck was the reading and writing of the video files. To serve any data, my MediaGoblin had to read it from Google Cloud Storage via gcsfuse, probably not optimized for speed. Then it had to send the same data to the browser. But MediaGoblin was a pointless middleman. For the static files, it was just a dumb proxy.
+The bottleneck was in reading and writing of the video files and thumbnail images. To serve any data, my MediaGoblin had to read it from Google Cloud Storage via gcsfuse, probably not optimized for speed. Then it had to send the same data to the browser. But MediaGoblin was a pointless middleman. For the static files, it was just a dumb proxy.
 
 It would be better if the browser could just bypass MediaGoblin entirely for static files and grab them directly from GCS.
 
 TODO: Diagram of interaction between browser and GCS.
-
-I realized I could just do that with nginx. I wrote a rewrite rule in nginx to re-write paths from XX to XX. I deployed the new version and everything was speedy!
 
 {{<notice type="danger">}}
 **Note**: There's a security vulnerability here because it means that any user who knows the proper URL can access all of my files without authentication. I'm relying on the difficulty of guessing my filenames.
