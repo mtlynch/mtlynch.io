@@ -82,7 +82,11 @@ After an embarrassing number of hours, I realized that all this time was probabl
 
 So, I bought another one! And then after hours of capturing footage from that, I realized I still had the same problem. After a bit of research, it seemed that the problem was with the VCR itself. So, I researched high-end VCRs. Nobody makes them anymore, but you can find good ones on eBay. I spent $XX on a XXX because it had S-Video output. I don't really know what difference that made, but it seemed like it was better than RCA, so I was excited. I bought a *third* video capture card and tried hooking it up.
 
+{{< img src="jvc-vcr.jpg" alt="Photo of expensive VCR with S-VHS support" caption="The mint condition JVC SR-V10U VHS ET Super VHS Professional Series VCR that I bought on eBay for $XX." maxWidth="600px" >}}
+
 As luck would have it, it didn't work. At this point, I had three different video capture cards, two different VCRs. Women I dated at the time would come to my apartment and think that I was some sort of antique video equipment hoarding nutjob.
+
+{{< img src="s-video-capture.jpg" alt="TODO" caption="TODO" maxWidth="300px" >}}
 
 ### Surrendering to digitization professionals
 
