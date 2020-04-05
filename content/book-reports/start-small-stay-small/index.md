@@ -21,7 +21,8 @@ Unfortunately, much of the content aged poorly. Published in 2010, Walling inten
 ## What I Disliked
 
 * Much of it feels dated in 2019
-  * It's meant to be specific and practical, but that means many of the websites it mentions are no longer acive or relevant. For example, it refers to MySpace as the second most relevant social networking site.
+  * It's meant to be specific and practical, but that means many of the websites it mentions are no longer active or relevant.
+    * For example, it refers to MySpace as the second most relevant social networking site.
   * Examples of elegant web design in 2010 look very hokey and amateurish now.
 * Many of the author's example businesses feel low-quality.
   * e.g., a site that drop-ships beach towels
