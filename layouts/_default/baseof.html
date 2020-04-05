@@ -69,8 +69,12 @@
     <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
 
-    {{ range .AlternativeOutputFormats -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ if gt (len .AlternativeOutputFormats) 0 -}}
+      {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+      {{ end -}}
+    {{ else }}
+      {{ printf `<link rel="alternate" type="application/rss+xml" href="%sindex.xml" title="%s" />` .Site.BaseURL $.Site.Title | safeHTML }}
     {{ end -}}
 
     {{ hugo.Generator }}
