@@ -60,39 +60,55 @@ I'm fairly privacy sensitive. I'm not going to hand over footage of me potty tra
 
 Spoiler alert: really hard.
 
-For my first attempt, I asked my dad to give me the old family VCR that was still in his basement. I bought a cheap RCA to USB adaptor from Amazon, and I was off to the races. To capture the raw video, I used VirtualDub, which was kind of dated at the time, but for 2012, not *that* dated.
+For my first attempt, I asked my dad to give me the old family VCR that was still in his basement. I bought a [cheap RCA to USB adaptor](https://amzn.to/2xQuyyQ) from Amazon, and I was off to the races. To capture the raw video, I used VirtualDub, which was kind of dated at the time, but for 2012, not *that* dated.
 
-TODO: VCR picture
+TODO: VirtualDub screenshot
 
-To cut the videos into clips, I used Adobe Premiere Elements, a product I still happily use today. As I started the editing process, I realized that the audio and video was slightly out of sync. Okay, no problem. I can just shift the audio a little bit. But ten minutes later, I'd realize that it was out of sync. The skew would get progressively worse the deeper I got into each tape.
+To cut the videos into clips, I used Adobe Premiere Elements, a product I still happily use today.
 
-I spent hours stubbornly and meticulously shifting audio. Do you know how hard it is to fix a clip's audio when you can't tell if a sound is happening 10 milliseconds too early or 10 milliseconds too late? It's really hard! Judge for yourself. Here's a video of me playing with my poor, patient kitten Buddy. The audio is slightly out of sync with the video, but is the audio ahead of the video or behind?
+### Haunted for years by audio skew
 
-{{< video src="buddyjump.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
+As I started the editing process, I realized that the audio and video were slightly out of sync. Okay, no problem. I can just shift the audio a little bit.
 
-Here's the part where Buddy jumps, slowed down to 1/5th speed:
+Ten minutes later, it was out of sync again. Did I not shift it enough the first time?
 
-{{< video src="buddyjump-slowmo.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
+It slowly dawned on me that the audio and video diverged more and more the later I got in the tape. To correct it, I had to keep re-aligning the audio and video every few minutes of tape. Do you know how hard it is to fix a clip's audio when you can't tell if a sound is happening 10 milliseconds too early or 10 milliseconds too late? It's really hard! Judge for yourself. Here's a video of me playing with my poor, patient kitten Black Magic. The audio is slightly out of sync with the video, but is the audio ahead of the video or behind?
+
+{{< video src="magicjump.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
+
+Here's the part where Magic jumps, slowed down to 1/5th speed:
+
+{{< video src="magicjump-slowmo.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing" >}}
 
 Answer: The audio is coming in a few milliseconds late.
 
 ### Maybe I should spend an extra hundred dollars instead of wasting hundreds of hours
 
-After an embarrassing number of hours, I realized that all this time was probably because I skimped on the video capture device. I had just purchased the cheapest one I saw on Amazon, but maybe a better one would capture without the headache.
+I spent dozens of hours on audio correction alone. Finally, much later than I'd care to admit, it occurred to me that I was spending all this time correcting audio skew when maybe this all comes back to the fact that I chose a video capture device by picking the cheapest one I could find on Amazon.
 
-So, I bought another one! And then after hours of capturing footage from that, I realized I still had the same problem. After a bit of research, it seemed that the problem was with the VCR itself. So, I researched high-end VCRs. Nobody makes them anymore, but you can find good ones on eBay. I spent $XX on a XXX because it had S-Video output. I don't really know what difference that made, but it seemed like it was better than RCA, so I was excited. I bought a *third* video capture card and tried hooking it up.
+I revisited the capture device, this time doing more research and bought a new one. I hooked everything up, captured a tape, and still there was audio skew.
+
+{{< img src="s-video-capture.jpg" alt="GV-USB2 video capture device" caption="My slightly fancier, better reviewed video capture device" maxWidth="300px" >}}
+
+Maybe it was the VCR? From researching online, people said that it could be XXX, so I researched high-end VCRs and found [this guide](http://www.digitalfaq.com/guides/video/capture-playback-hardware.htm) for people trying to digitize VHS tapes at high quality. Apparently, I needed a VCR with something called a "time based corrector" (TBC), which could correct errors in playback. Nobody makes these VCRs anymore, but you can find good ones on eBay. I spent $XX on a JVC SR-V10U VHS:
 
 {{< img src="jvc-vcr.jpg" alt="Photo of expensive VCR with S-VHS support" caption="The mint condition JVC SR-V10U VHS ET Super VHS Professional Series VCR that I bought on eBay for $XX." maxWidth="600px" >}}
 
-As luck would have it, it didn't work. At this point, I had three different video capture cards, two different VCRs. Women I dated at the time would come to my apartment and think that I was some sort of antique video equipment hoarding nutjob.
+The main selling point was that it had S-Video output instead of RCA. I didn't really know the difference, but S-Video seemed like later technology than RCA, so I figured that would get a cleaner capture.
 
-{{< img src="s-video-capture.jpg" alt="TODO" caption="TODO" maxWidth="300px" >}}
+I got the VCR in the mail and hooked everything up. It couldn't capture on S-video. RCA worked, but I tried the S-video with both my capture cards and it still didn't work.
+
+ I bought a *third* video capture card. No dice. S-Video output still didn't work.
+ 
+ With enough effort, I probably could have gotten it working, but debugging it was always miserable. I had to haul all this equipment out of my closet, hook it up to my computer, record for a few minutes, then play it back (VirtualDub couldn't show the capture while it captured). Something would be wrong, so I'd have to look up sketchy unsigned device drivers for my capture device on hobbyist gaming forums (apparently they're popular with retro gaming streamers), so progress was slow.
+
+ Tried installing [AmaRecTV](http://www.amarectv.com/english/amarectv_e.htm), but that didn't make any difference. I can't even
 
 ### Surrendering to digitization professionals
 
-Fast forward to 2018. I had dragged these videotapes to two different apartments, and I was preparing to move from New York City to Massachusetts. I couldn't justify dragging all the VCRs and video equipment too when it had become clear that I wasn't going to ever finish the project on my own.
+Fast forward to 2018. I had dragged these videotapes to four different apartments, and I was preparing to move from New York City to Massachusetts. I couldn't justify dragging all the VCRs and video equipment too when it had become clear that I wasn't going to ever finish the project on my own.
 
-At this point, years had passed. I had invested hundreds of hours into experimenting with different settings. There were long gaps because it was a pain to drag out the VCR, hook it all up, and fiddle with sketchy Chinese device drivers. The cost of getting everything out and put away was about 30-40 minutes, so it only made sense on the weekends, when I had long blocks of free time to get into it. But the project often frustrated me, so I never wanted to do it on the weekend unless I was really bored or anxious to get rid of the tapes.
+At this point, years had passed. I had invested hundreds of hours into experimenting with different combinations of video capture devices and VCRs.
 
 I reconsidered using a digitization company. I still didn't like the idea of handing over my family's most intimate memories to strangers, but I felt like they'd be able to capture the footage at a higher quality than I could ever achieve by myself.
 
