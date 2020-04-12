@@ -192,7 +192,7 @@ Below are some images of our completed GreenPiThumb build:
 
 The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
-<div style="width: 100%; height: 0px; position: relative; padding-bottom: 75.000%;"><iframe src="https://streamable.com/s/vq0gt/wsplea" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;"></iframe></div>
+{{< video src="timelapse.mp4" >}}
 
 For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 
