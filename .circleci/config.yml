@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   check-whitespace:
     docker:
-      - image: debian:jessie-20190228-slim
+      - image: cimg/base:2020.01
     steps:
       - checkout
       - run:
@@ -49,7 +49,7 @@ jobs:
           command: tests/lint-html
   check-google-analytics-token:
     docker:
-      - image: circleci/golang:1.13
+      - image: cimg/base:2020.01
     steps:
       - attach_workspace:
           at: ./
@@ -58,7 +58,7 @@ jobs:
           command: tests/check-google-analytics-token
   check-seo-metadata:
     docker:
-      - image: circleci/golang:1.13
+      - image: cimg/base:2020.01
     steps:
       - attach_workspace:
           at: ./
@@ -67,7 +67,7 @@ jobs:
           command: tests/check-seo-metadata
   check-amazon-links:
     docker:
-      - image: circleci/golang:1.13
+      - image: cimg/base:2020.01
     steps:
       - attach_workspace:
           at: ./
