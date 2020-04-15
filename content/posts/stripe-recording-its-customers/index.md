@@ -1,5 +1,5 @@
 ---
-title: Stripe is Silently Recording Pageviews on All of Its Customers' Sites
+title: Stripe is Silently Recording Pageviews on Its Customers' Sites
 ---
 
 Other solutions I considered:
