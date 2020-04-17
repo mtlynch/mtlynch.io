@@ -231,7 +231,6 @@ Speaking of goals, here's what I hope to accomplish in my second year as a solo 
 * Publish 12 blog posts.
 * Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
 
-
 ## Updates
 
 * **Jan. 31, 2020**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
