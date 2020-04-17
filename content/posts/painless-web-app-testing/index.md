@@ -10,7 +10,7 @@ tags:
 discuss_urls:
   reddit: https://redd.it/bjhlp1
   hacker_news: https://news.ycombinator.com/item?id=19797185
-lastmod: '2019-05-02T19:39:00-04:00'
+lastmod: '2020-04-16T00:00:00-04:00'
 date: '2019-05-01'
 images:
 - painless-web-app-testing/cover.jpg
@@ -20,12 +20,9 @@ images:
 
 Okay, I know you're skeptical. Other guides have promised you painless web app tests only to reveal that their solution requires some hyper-specific tech stack or a paid third-party service. I won't do that to you.
 
-This guide provides a straightforward and flexible template for end-to-end tests that you can apply to almost any web app. There are only two requirements:
+This guide provides a straightforward and flexible template for end-to-end tests that you can apply to almost any web app. The **only** requirement is that your app can run in Docker.
 
-* Your app can run in Docker.
-* Your app is compatible with the Chrome browser.
-
-That's it! You can test a Ruby app, a React app, an Enterprise Java Beans app, or even some wacky web stack you invented. And it doesn't matter if you're developing on Windows, Linux, or Mac. Best of all, you don't have to perform convoluted configuration or install any software beyond Docker.
+That's really the only requirement! You can test a Ruby app, a React app, an Enterprise Java Beans app, or even some wacky web stack you invented. And it doesn't matter if you're developing on Windows, Linux, or Mac. Best of all, you don't have to perform convoluted configuration or install any software beyond Docker.
 
 This tutorial uses free, open-source tools, and you can run them without registering an account anywhere. When it comes time to run your tests in a continuous integration environment like Circle or Travis, you don't need to do anything special &mdash; you'll run your tests with the same one-line command you use on your development machine.
 
@@ -138,7 +135,7 @@ This file defines a Docker container for Sentimentalyzer and a Docker container 
 A few lines are worth calling out:
 
 ```yml
-image: "cypress/included:3.2.0"
+image: "cypress/included:4.4.0"
 ```
 
 `cypress/included` is the family of [Cypress Docker images](https://github.com/cypress-io/cypress-docker-images) that have Cypress pre-installed in the image itself. Other families such as `cypress/base` and `cypress/browsers` assume that the client will install Cypress at runtime. By using the `cypress/included` image, I ensure that Cypress executes tests as soon as its container starts up.
@@ -271,10 +268,7 @@ I also created several branches to demonstrate other common Cypress scenarios:
 * [How to run tests on Circle CI](https://github.com/mtlynch/hello-world-cypress/tree/circle)
 * [How to run tests on Travis CI](https://github.com/mtlynch/hello-world-cypress/tree/travis)
 * [How to run tests in the Chrome browser](https://github.com/mtlynch/hello-world-cypress/tree/chrome)
-
-{{<notice type="info">}}
-**Note**: Cypress currently supports only Chrome and Electron as browser options, but cross-browser testing is one of the dev team's [top priorities](https://github.com/cypress-io/cypress/issues/310).
-{{< /notice >}}
+* [How to run tests in the Firefox browser](https://github.com/mtlynch/hello-world-cypress/tree/firefox)
 
 ## Further reading
 
