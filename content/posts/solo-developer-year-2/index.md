@@ -11,6 +11,9 @@ date: '2020-01-31'
 images:
 - solo-developer-year-2/cover.jpg
 description: Two years ago, I quit my developer job at Google to build my own software business. A year later, I posted an update about my finances, happiness, and lessons learned. Today marks the end of my second full year, so it's time for another update.
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=22201337
+  reddit: https://redd.it/ewp2rw
 ---
 
 {{< img src="cover.jpg" alt="My second year as a solo developer (cover image)" >}}

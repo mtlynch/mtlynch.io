@@ -4,6 +4,8 @@ description: Two of my businesses had record-setting months, and I'm finally bui
 date: '2020-01-03'
 images:
 - /retrospectives/2020/01/wanderjest.png
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=21990409
 ---
 
 ## Highlights
