@@ -184,7 +184,7 @@ According to my logging, 3.7% of users clicked the "Buy now" button when I broug
 
 After concluding that there was nothing magical about my smoke test page, I continued polishing my sales page. My most recent change has been to split up each meal plan into its own page so that I can include more details:
 
-{{< img src="tex-mex-v3.jpg" alt="Screenshot of latest Tex-Mex sales page" caption="Putting each meal plan into its own [individual, more detailed page](https://isitketo.org/meal-plans/tex-mex/)" maxWidth="800px" hasBorder="True" >}}
+{{< img src="tex-mex-v3.jpg" alt="Screenshot of latest Tex-Mex sales page" caption="Putting each meal plan into its own individual, more detailed page" maxWidth="800px" hasBorder="True" >}}
 
 I made this change on October 31st, but there have still been no new sales after the first two.
 
@@ -215,7 +215,7 @@ Here are some additional ideas I have to encourage users to purchase:
 
 ### What got done?
 
-* Made my first sale of Is It Keto's [meal plan product](https://isitketo.org/meal-plans/).
+* Made my first sale of Is It Keto's meal plan product.
   * Drafted a licensing agreement with a third-party meal plan provider.
   * Tried several experiments to increase sales.
 * Simplified the build process on What Got Done so that anyone can spin up a local instance with [a single command](https://twitter.com/deliberatecoder/status/1189529617947869184).

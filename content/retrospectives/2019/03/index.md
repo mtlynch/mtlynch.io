@@ -174,7 +174,7 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 ### What got done?
 
 * Added an "Other Foods" section to the article pages so that users can easily discover new articles
-* Added an admin tool that lets me add redirects for alternative spellings of foods (e.g., [mayo](https://isitketo.org/mayo) -> [mayonnaise](https://isitketo.org/mayonnaise))
+* Added an admin tool that lets me add redirects for alternative spellings of foods (e.g., `mayo` -> [`mayonnaise`](https://isitketo.org/mayonnaise))
   * Previously I was doing this in a hacky way that required me to change the source code and re-deploy the entire site
 * Wrote tools to collect keto recipe data for upcoming data visualization blog posts
 * Published 30 new food pages

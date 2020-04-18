@@ -146,7 +146,7 @@ For new sites, Google ranks you low in results and then bumps you up or down dep
 
 Having this knowledge up front would have made me more cautious about pursuing a content site. Most online businesses flop, so I pursue projects that let me fail fast and avoid sinking years into a dud. The sluggish settling pace of search engine rankings stretches out this feedback loop inconveniently far.
 
-One way to accelerate this process is to earn links from other highly-ranked pages. If [*Men's Health Magazine*](https://www.menshealth.com/) linked to Is It Keto, search engines would consider my site more relevant and deserving of higher search rankings. In a strategic misstep on my part, I never created content that incentivized other sites to link to Is It Keto, save for a few [desperate blog posts](https://isitketo.org/blog) near the end that failed to win any attention.
+One way to accelerate this process is to earn links from other highly-ranked pages. If [*Men's Health Magazine*](https://www.menshealth.com/) linked to Is It Keto, search engines would consider my site more relevant and deserving of higher search rankings. In a strategic misstep on my part, I never created content that incentivized other sites to link to Is It Keto, save for a few desperate blog posts near the end that failed to win any attention.
 
 ### Good writing is expensive
 

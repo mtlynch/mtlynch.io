@@ -74,7 +74,7 @@ For the last few months, I've been exploring the possibility of selling meal pla
 
 In November, I tried a few more tweaks to the sales pages:
 
-* I [added a photo](https://isitketo.org/meal-plans/mushroom/) to one of the meal plans
+* I added a photo to one of the meal plans
 * I added a customer testimonial
 * I removed the price from the "Download" button
 
@@ -84,7 +84,7 @@ It was particularly discouraging when clicks remained low even after I changed t
 
 {{< img src="strip-price.jpg" alt="Before and after screenshots of removing price" caption="Removing price from download button" maxWidth="600px" hasBorder="True" >}}
 
-I'm sure there's a way to sell them successfully, but I spent 6+ weeks on it, and it felt like way too long. I had replaced a portion of AdSense ads with my own ads for the meal plans, but I would have made far more money from AdSense, so I got rid of my self-ads. I also took "Meal Plans" out of the site's main navigation bar and removed it from the homepage except for [a mention in the site's blog](https://isitketo.org/blog/announcing-meal-plans/).
+I'm sure there's a way to sell them successfully, but I spent 6+ weeks on it, and it felt like way too long. I had replaced a portion of AdSense ads with my own ads for the meal plans, but I would have made far more money from AdSense, so I got rid of my self-ads. I also took "Meal Plans" out of the site's main navigation bar and removed it from the homepage except for a mention in the site's blog.
 
 ## Rewriting the Zestful website out of spite
 
