@@ -257,17 +257,71 @@ h4:hover .hanchor {
 
 .btn-social {
   color: white;
-  border: 1px solid rgb(146, 148, 253);
   border-radius: 5px;
   padding: 1rem;
   margin-right: 1rem;
-  background: #0d6db8;
 }
 
 .btn-social:hover {
   text-decoration: none;
-  background: #1a97f7;
-  border: 1px solid #b9dcf7;
+}
+
+.btn-social span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-social span {
+    display: inline-block;
+  }
+}
+
+.btn-twitter {
+  background-color: #007bb6;
+}
+
+.btn-twitter:hover {
+  background-color: #016594;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-facebook:hover {
+  background-color: #264079;
+}
+
+.btn-linkedin {
+  background-color: #007bb6;
+}
+
+.btn-linkedin:hover {
+  background-color: #016796;
+}
+
+.btn-hacker-news {
+  background-color: #ff6600;
+}
+
+.btn-hacker-news:hover {
+  background-color: #c95609;
+}
+
+.btn-reddit {
+  background-color: #ff5700;
+}
+
+.btn-reddit:hover {
+  background-color: #e24d02;
+}
+
+.btn-indie-hackers {
+  background-color: rgb(32, 59, 85);
+}
+
+.btn-indie-hackers:hover {
+  background-color: rgb(44, 92, 131);
 }
 
 .btn-indie-hackers i {
