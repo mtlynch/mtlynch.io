@@ -1,0 +1,28 @@
+{{ if .Params.discuss_urls }}
+<section class="social-discuss">
+
+  <h4>Discuss on</h4>
+
+  {{ if .Params.discuss_urls.hacker_news }}
+    <a href="{{ .Params.discuss_urls.hacker_news }}" class="btn btn-hacker-news btn-social" title="Discuss on Hacker News">
+      <i class="fab fa-fw fa-hacker-news" aria-hidden="true"></i>
+      <span>Hacker News</span>
+    </a>
+  {{ end }}
+
+  {{ if .Params.discuss_urls.reddit }}
+    <a href="{{ .Params.discuss_urls.reddit }}" class="btn btn-reddit btn-social" title="Discuss on reddit">
+      <i class="fab fa-fw fa-reddit" aria-hidden="true"></i>
+      <span>Reddit</span>
+    </a>
+  {{ end }}
+
+  {{ if .Params.discuss_urls.indie_hackers }}
+    <a href="{{ .Params.discuss_urls.indie_hackers }}" class="btn btn-indie-hackers btn-social" title="Discuss on Indie Hackers">
+      <i class="fab fa-fw fa-indie-hackers" aria-hidden="true">&nbsp;</i>
+      <span>Indie Hackers</span>
+    </a>
+  {{ end }}
+
+</section>
+{{ end }}
