@@ -114,7 +114,7 @@ I tried to think of what unique advantages I had over other keto sites. My one s
 
 My idea was to create compelling visualizations from my KeotHub data. And then once I had some examples, approach major keto sites and ask if they want to republish my charts. Or I could even create custom visualizations about the recipes on their specific site. In exchange, they just had to provide attribution in the form of a link back to Is It Keto.
 
-To start out, I [made a bubble cloud](https://isitketo.org/blog/what-are-the-most-popular-ingredients) of how frequently different ingredients appear in keto recipes:
+To start out, I made a bubble cloud of how frequently different ingredients appear in keto recipes:
 
 {{< img src="ing-freq.jpg" alt="Bubble cloud of ingredient frequency in keto recipes" maxWidth="750px" >}}
 
@@ -122,7 +122,7 @@ This was harder than I anticipated. I used [D3.js](https://d3js.org/), which is 
 
 I reached out to a few keto sites that I had spoken to in the past through KetoHub, but most of them ignored my message. The few that did respond seemed put off by my proposal. To them, it came across as yet another spammer with offers of, "I'll pay you if you let me write a guest post on your blog and link to my shady website."
 
-My subsequent blog post was about [artificial sweeteners](https://isitketo.org/blog/which-keto-sweetener-is-the-most-popular), as they're a contentious topic in the keto community. I showed how different sweeteners rise and fall in popularity over time:
+My subsequent blog post was about artificial sweeteners, as they're a contentious topic in the keto community. I showed how different sweeteners rise and fall in popularity over time:
 
 {{< img src="sweetener-usage.jpg" alt="Stacked area chart of artificial sweetener usage over time" maxWidth="675px" >}}
 
@@ -148,7 +148,7 @@ In total, I spent about $4,500 on the site and earned only $76 in revenue so far
 
 ### What got done?
 
-* Published [two blog posts](https://isitketo.org/blog) experimenting with keto recipes and visualization
+* Published two blog posts experimenting with keto recipes and visualization
 * Reached out to eight major keto sites to see if they'd be interested in using my visualizations in exchange for attribution
   * No dice.
 * Wrote a tool to identify missing crosslinks in my pages

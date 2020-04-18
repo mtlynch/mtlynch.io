@@ -90,7 +90,7 @@ Their service didn't create meal "plans." It randomly threw together a bunch of 
 
 I took down the referral link and thought of a better solution: sell my own meal plans. I don't need a heavyweight, customizable meal platform, just some PDFs to sell. I reached out to someone with experience creating popular meal plans, and we're working on a partnership where I license their keto meal plans and sell them on my site under the Is It Keto brand.
 
-I put up a [crude landing page](http://isitketo.org/meal-plans/) with a "Buy" button. The button currently just brings you to a message saying that the meal plans are coming, but the page has had 254 unique visitors and 10 unique clicks on the Buy button, which implies a conversion rate of ~4%. That's an optimistic estimate because some of those users probably would not have completed the checkout process, but it's promising nonetheless that such a basic page would convince anyone to click at all.
+I put up a crude landing page with a "Buy" button. The button currently just brings you to a message saying that the meal plans are coming, but the page has had 254 unique visitors and 10 unique clicks on the Buy button, which implies a conversion rate of ~4%. That's an optimistic estimate because some of those users probably would not have completed the checkout process, but it's promising nonetheless that such a basic page would convince anyone to click at all.
 
 {{< img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" maxWidth="823px" hasBorder="True" >}}
 
