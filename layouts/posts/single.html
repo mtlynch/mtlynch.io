@@ -38,7 +38,11 @@
 
       <footer>
         {{ partial "posts/series.html" . }}
-        {{ partial "posts/disqus.html" . }}
+
+        {{ if not .Site.IsServer }}
+          {{ partial "posts/disqus.html" . }}
+        {{ end }}
+
       </footer>
     </article>
 
