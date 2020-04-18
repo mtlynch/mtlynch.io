@@ -255,6 +255,26 @@ h4:hover .hanchor {
   left: -5000px;
 }
 
+.btn-social {
+  color: white;
+  border: 1px solid rgb(146, 148, 253);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-right: 1rem;
+  background: #0d6db8;
+}
+
+.btn-social:hover {
+  text-decoration: none;
+  background: #1a97f7;
+  border: 1px solid #b9dcf7;
+}
+
+.btn-indie-hackers i {
+  background-image: url("/images/social/indie-hackers.svg");
+  background-position: center;
+}
+
 .inline-file {
   clear: both;
   margin-bottom: 65px;
