@@ -275,6 +275,16 @@ h4:hover .hanchor {
   background-position: center;
 }
 
+.btn-social span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-social span {
+    display: inline-block;
+  }
+}
+
 .inline-file {
   clear: both;
   margin-bottom: 65px;
