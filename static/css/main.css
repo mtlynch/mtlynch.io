@@ -123,6 +123,24 @@ table {
   display: block;
 }
 
+.hanchor {
+  visibility: hidden;
+  color:rgb(61, 155, 231);
+}
+
+.hanchor:hover {
+  visibility: hidden;
+  color:rgb(15, 81, 134);
+}
+
+h1:hover .hanchor,
+h2:hover .hanchor,
+h3:hover .hanchor,
+h4:hover .hanchor {
+  visibility: visible;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .book-report .book-cover {
     max-width: 275px;
