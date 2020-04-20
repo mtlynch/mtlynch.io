@@ -1,8 +1,8 @@
 ---
-title: Stripe is Silently Recording Entire Sessions on Customer Sites
+title: Stripe is Silently Recording Your Movements On its Customers' Websites
 tags:
 - stripe
-- security
+- privacy
 - portfolio rebalancer
 date: '2020-04-21'
 ---
@@ -11,6 +11,7 @@ While integrating Stripe payments into my web app, I discovered that the officia
 
 1. Every URL the user visits on my site, including pages that have nothing to do with payments or Stripe
 1. Telemetry about how the user moves their mouse cursor while browsing my site
+1. Unique identifiers that allow Stripe to correlate visitors to my site against other sites that accept Stripe payments
 
 This post shares what I found, who else it affects, and how you can mitigate this behavior in your applications.
 
@@ -115,6 +116,8 @@ You may have noticed from the video that when I loaded the page, the first page 
 ```
 
 Was Stripe recording the mouse movements of everyone who visits any page on my site? I certainly didn't like that.
+
+TODO: Discuss cookies
 
 ## Is this a mistake?
 
@@ -249,6 +252,10 @@ To see Stripe's behavior on a live site, I created a minimal Vue app that demons
 
 * [Vulnerable site](https://frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example)
 * [Site with mitigations](https://5e9db0c5ea0e3200062c02ea--frosty-banach-185455.netlify.app/)  [(source)](https://github.com/mtlynch/stripe-snooping-example/pull/1/files#diff-6d8c4c1f8080f58cb36a900829a76f43)
+
+## Implications
+
+Stripe is collecting every page.
 
 ## Reccomendations to Stripe
 
