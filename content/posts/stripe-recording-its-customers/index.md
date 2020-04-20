@@ -4,33 +4,41 @@ tags:
 - stripe
 - security
 - portfolio rebalancer
-date: '2020-04-24'
+date: '2020-04-21'
 ---
 
-While integrating Stripe's subscription payments into my web app, I recently discovered that Stripe, by default, shares all browsing data. The official Stripe JavaScript library shared every URL that visitors accessed on my website regardless of whether the page ever called the library. This post shares what I found, who else it affects, and how you can mitigate this behavior on your own web applications.
+While integrating Stripe payments into my web app, I discovered that the official Stripe JavaScript library records all user browsing activity on my site and reports it back to Stripe. This data includes:
+
+1. Every URL the user visits on my site, including pages that have nothing to do with payments or Stripe
+1. Telemetry about how the user moves their mouse cursor while browsing my site
+
+This post shares what I found, who else it affects, and how you can mitigate this behavior in your applications.
 
 ## Who's affected?
 
 This affects your website if either of the following are true:
 
-* You use Stripe to process payments It's a single page app, such as React, Vue, or Angular and you use Stripe to process payments
-* You include the `https://js.stripe.com/v3` Stripe `<script>` tag on your base page template.
+* Your base page template includes the Stripe script tag:
+  * `<script src="https://js.stripe.com/v3">`
+* Your app is a single page app, such as React, Vue, or Angular, and you use Stripe to process payments.
+
+You are **not** affected if:
+
+* Your app is a traditional, pre-rendered website using technology stacks like node.js, Ruby on Rails, or PHP.
 
 ## The discovery
 
-Whenever I do web development, I send my traffic through [Burp Proxy](https://portswigger.net/burp), a free tool for inspecting and modifying HTTP traffic.
+I discovered this by accident while adding paid plans to my [portfolio rebalancer](https://assetrebalancer.com). As part of debugging my app, I was using [Burp Proxy](https://portswigger.net/burp), a free tool for inspecting and modifying HTTP traffic.
 
-I had just gotten everything working but I noticed that every time I navigated to a new page, I saw an HTTP POST to this Stripe URL:
+After finally getting my Stripe payment flow to work, I noticed that every time I navigated to a new page, my app generated a new HTTP POST request to a Stripe URL:
 
 {{< video src="stripe-phone-home.mp4" caption="The stripe.js library reports back to Stripe every time I visit a new page in my app" >}}
 
-I checked out the request in Burp:
+This was strange because none of these pages contained any calls to Stripe's library. In fact, the only way to submit payment through Stripe was to create a user account and proceed to the payment page, but Stripe was making HTTP requests when I arrived on the page as a brand new user with no cookies or stored credentials.
 
-```
-https://m.stripe.com/4
-```
+## What is Stripe reporting?
 
-## What exactly is Stripe sending?
+To understand what these calls were, I inspected them in Burp. Each request looked like this:
 
 ```text
 POST /4 HTTP/1.1
@@ -49,7 +57,7 @@ Cookie: m=e29f7c00-b748-4e5f-8625-34d14dbc1c01; m=e29f7c00-b748-4e5f-8625-34d14d
 JTdCJTIydjIlMjIlM0ExJTJDJTIyaWQlMjIlM0ElMjI4MTBiOWIxY2E3ODU5YzNlYzExYTY0NTI0NzNkMTZmYyUyMiUyQyUyMnQlMjIlM0E4JTJDJTIydGFnJTIyJTNBJTIyNC41LjIxJTIyJTJDJTIyc3JjJTIyJTNBJTIyanMlMjIlMkMlMjJhJTIyJTNBbnVsbCUyQyUyMmIlMjIlM0ElN0IlMjJhJTIyJTNBJTIyJTIyJTJDJTIyYiUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGYXNzZXRyZWJhbGFuY2VyLmNvbSUyRnByaWNpbmclMjIlMkMlMjJjJTIyJTNBJTIyUG9ydGZvbGlvJTIwUmViYWxhbmNlciUyMiUyQyUyMmQlMjIlM0ElMjIxYjVhMDcxOS1jMTFjLTQwOTEtYWZiYi00NGE1MjRhMDM2ZGUlMjIlMkMlMjJlJTIyJTNBJTIyMWJhOTYwOWMtMjI0Ni00YjYwLTk1ZWUtYzg0YTRlNDhmOTkzJTIyJTJDJTIyZiUyMiUzQWZhbHNlJTJDJTIyZyUyMiUzQXRydWUlMkMlMjJoJTIyJTNBdHJ1ZSUyQyUyMmklMjIlM0ElNUIlMjJsb2NhdGlvbiUyMiU1RCUyQyUyMmolMjIlM0ElNUIlNUQlMkMlMjJuJTIyJTNBMTkzJTdEJTdE
 ```
 
-The request payload is a URL-encoded, base64-encoded JSON blob. When decoded, it looks like this:
+The string shown at the bottom, beginning with `JTdCJTIydj...` is the request request payload. It's a URL-encoded, base64-encoded JSON blob. The following bash commands decoded it:
 
 ```bash
 $ echo "JTdCJTIydjIlMjIlM0ExJTJDJTIyaWQlMjIlM0ElMjI4MTBiOWIxY2E3ODU5YzNlYzExYTY0NTI0NzNkMTZmYyUyMiUyQyUyMnQlMjIlM0E4JTJDJTIydGFnJTIyJTNBJTIyNC41LjIxJTIyJTJDJTIyc3JjJTIyJTNBJTIyanMlMjIlMkMlMjJhJTIyJTNBbnVsbCUyQyUyMmIlMjIlM0ElN0IlMjJhJTIyJTNBJTIyJTIyJTJDJTIyYiUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGYXNzZXRyZWJhbGFuY2VyLmNvbSUyRnByaWNpbmclMjIlMkMlMjJjJTIyJTNBJTIyUG9ydGZvbGlvJTIwUmViYWxhbmNlciUyMiUyQyUyMmQlMjIlM0ElMjIxYjVhMDcxOS1jMTFjLTQwOTEtYWZiYi00NGE1MjRhMDM2ZGUlMjIlMkMlMjJlJTIyJTNBJTIyMWJhOTYwOWMtMjI0Ni00YjYwLTk1ZWUtYzg0YTRlNDhmOTkzJTIyJTJDJTIyZiUyMiUzQWZhbHNlJTJDJTIyZyUyMiUzQXRydWUlMkMlMjJoJTIyJTNBdHJ1ZSUyQyUyMmklMjIlM0ElNUIlMjJsb2NhdGlvbiUyMiU1RCUyQyUyMmolMjIlM0ElNUIlNUQlMkMlMjJuJTIyJTNBMTkzJTdEJTdE" \
@@ -82,7 +90,9 @@ $ echo "JTdCJTIydjIlMjIlM0ExJTJDJTIyaWQlMjIlM0ElMjI4MTBiOWIxY2E3ODU5YzNlYzExYTY0
 }
 ```
 
-Each page view looked pretty similar, but the `b` field had a different URL. You'll notice in the video that when I loaded the page, the first page generated two requests to that URL. Here's what I found when I decoded the second one:
+It generated a new request like this every time I changed pages on my site. Each request looked pretty similar except that the URL field would reflect whatever URL was in the address bar. It appeared that Stripe was recording every single pageview in my app.
+
+You may have noticed from the video that when I loaded the page, the first page load generated two requests, whereas every other page load resulted in only one new request. Here's what I found when I decoded that second request:
 
 ```json
 {  "data": [
@@ -104,15 +114,39 @@ Each page view looked pretty similar, but the `b` field had a different URL. You
 }
 ```
 
+Was Stripe recording the mouse movements of everyone who visits any page on my site? I certainly didn't like that.
+
 ## Is this a mistake?
 
-When I Googled that URL, I found several other Github issues and StackOverflow posts from users who were surprised to see Stripe silently recording traffic on their websites. These reports go all the way back to XX.
+At first, I thought this was surely my mistake. I must have made a careless error in integrating Stripe's library that was causing it to phone home erroneously. To diagnose the issue, I [googled the URL](https://google.com/search?q=https%3A%2F%2Fm.stripe.com%2F4) that was receiving the HTTP POST requests from my app:
+
+```
+https://m.stripe.com/4
+```
+
+Instead of finding a mistake in my code, I discovered dozens of other posts from developers surprised to see this behavior in their app. The reports go [all the way back to 2017](https://stackoverflow.com/q/45718026/90388).
+
+{{< img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" maxWidth="800px" hasBorder="true" caption="TODO" >}}
 
 In one of the issue threads on Github, a Stripe employee named Adam Solove [suggested that this behavior was unintentional](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443) and Stripe would look for a fix:
 
 {{< img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" maxWidth="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), Stripe employee Adam Solove suggests that stripe.js should only send data when the app calls the library and only on pages where the user submits payment information." >}}
 
 That was 7 months ago, and there has been no follow up from Stripe on that thread or anywhere else I could find.
+
+## Confirming the issue
+
+Just to be sure, I created a minimal reproduction of the behavior I was seeing. I made a brand new Vue project and [installed only the `@stripe/stripe-js` npm package](https://github.com/mtlynch/stripe-hello-world).
+
+```javascript
+import { loadStripe } from '@stripe/stripe-js';
+```
+
+Including this line in any component causes the Stripe JS library to load and begin reporting browsing behavior to Stripe.
+
+Note that my app never even *calls* the `loadStripe` function. In reality, `@stripe/stripe-js` loads as soon as an app imports the library. For a single-page app, this means that the Stripe library loads as soon as the user visits any URL on the site.
+
+A more appropriate name for this function would be `ensureStripeIsLoaded` because its real job is to gate the app from making any calls to the the Stripe library before it has finished loading.
 
 ## Is Stripe disclosing this?
 
@@ -130,7 +164,6 @@ Then there's this in the [Privacy Policy](https://stripe.com/privacy):
 >We also may collect information about your online activities on websites and connected devices over time and across third-party websites, devices, apps and other online features and services. We use Google Analytics on our Sites to help us analyze Your use of our Sites and diagnose technical issues.
 
 That alludes to what they're doing, but it implies the tracking happens on Stripe's site, not on customer websites.
-
 
 ## Reporting this to Stripe
 
@@ -151,28 +184,36 @@ Stripe responded promptly to tell me that it was by design and quoted back to me
 >All the best,<br>
 Faith
 
-I was annoyed that Faith told me that "the calls being seen are ... in the best interests of the user." How's that now? The user isn't really better off unless Stripe was going to reject their payment unless they proved their human-ness by letting Stripe spy on their browsing behavior. And aren't I, as the developer, in a better position to choose what's best for my users than Stripe?
+I found the "in the best interests of the user" part particularly patronizing. The party benefiting most from this data collection is clearly Stripe and not the user. Stripe is getting free data for training its fraud-detection models.
+
+The user has a worse app experience because their browser is downloading Stripe's JavaScript library and executing it on every page, even if the user never tries to submit payment information. The only marginal benefit the user experiences is a lower chance of having their payment incorrectly flagged as fraudulent because the app has invasively tracked their every move around the site before and after executing the transaction.
 
 ## Mitigation
 
-There are actually two problems:
+To prevent this invasive tracking from Stripe, there are actually two problems to solve:
 
-1. I want to load Stripe only when the user loads my `/subscribe` page.
-1. When the user leaves my `/subscribe` page, I want to *unload* Stripe.
+1. Delay execution of Stripe's library until the user reaches a page where payment is required
+1. Unload the Stripe library after the user completes payment.
 
-Unfortunately, once you load the Stripe library, it digs its claws in and refuses to let you remove it. A Github user posted a JavaScript snippet of all the work he does in his app to unload Stripe, but it's very invasive. It involves deleting all JavaScript timers in the app, whether or not they're confirmed to be associated with Stripe, and then spidering the DOM to remove all Stripe elements. But his method depends on Stripe's internal variable names, so it's by nature brittle.
+### Solving problem one: defer Stripe's script loading
 
-### Defer `loadStripe` and force new HTTP request
+Previously, users were deferring Stripe's library load by [adding asynchronous wrapper functions](https://stackoverflow.com/a/61248986/90388) or using [code splitting](https://webpack.js.org/guides/code-splitting/).
 
-Fortunately, solving problem (1) is straightforward with most SPA frameworks. Code splitting is a feature that breaks up your app's JavaScript and loads it only when the user visits a page that needs it.
-
-This solves the problem of Stripe loading as soon as my app loads. But on April 16th, Stripe [introduced a new option](https://github.com/stripe/stripe-js/issues/43#issuecomment-614864800) in its `v1.4.0` release of the `@stripe/stripe-js` npm package:
+Fortunately, the stripe-js v.1.4.0 release, published last week [offers a cleaner solution](https://github.com/stripe/stripe-js/issues/43#issuecomment-614864800). The update introduced the `@stripe/stripe-js/pure` import path, which allows clients to import Stripe without side-effects:
 
 ```javascript
 import { loadStripe } from '@stripe/stripe-js/pure';
 ```
 
-That doesn't solve problem (2), however, because once my app loads Stripe, Stripe sticks around. To address that, I force a new HTTP request when my app leaves the `/subscribe` page.
+This causes Stripe to delay loading and executing its code until the app explicitly calls the `loadStripe` function. If you limit calls to the `loadStripe` function only to pages or components that involve Stripe payments, Stripe will only load on those pages and therefore won't record user behavior on other parts of your site.
+
+### Solving problem two: unloading Stripe after payment
+
+Deferring Stripe's library load is only half the battle. Even after you restrict Stripe to load only on pages that involve credit card payments, Stripe will persist in your app and continue sharing the user's browsing data for the rest of their session. To prevent this, your app must force Stripe to unload when the customer's payment is complete.
+
+Stripe unfortunately offers no supported way to unload its library or disable its user monitoring. One intrepid developer [created a JavaScript snippet to forcefully unload Stripe](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-522045812), but it's specific to React and is, by nature, a brittle solution because it depends on undocumented properties of the Stripe library that may change at any time.
+
+I addressed the issue in my app by forcing an HTTP reload when the user exits my payment page. Normally, single page apps. In Vue, there's the [`beforeRouteLeave`](https://router.vuejs.org/guide/advanced/navigation-guards.html#in-component-guards) hook, which the application executes before leaving the page. I added a hook that interrupts the routing process and forces the application to make an full HTTP request to the next route:
 
 ```javascript
 beforeRouteLeave(to) {
@@ -182,13 +223,43 @@ beforeRouteLeave(to) {
 }
 ```
 
+### (optional) Content Security Policy for defense in depth
+
+The previous two steps are all you need to prevent Stripe. For additional protection on my app, I 
+
+{{< img src="stripe-csp.png" alt="Collage of previous users reports about this behavior" maxWidth="815px" caption="TODO" >}}
+
+For this to work, I needed to add an extra
+
+```javascript
+beforeRouteEnter(to, from) {
+  // If we're landing on this page from another route, force an HTTP request
+  // so that we retrieve the route-specific Content Security Policy header.
+  if (from.matched.length > 0) {
+    window.location.replace(to.path);
+  }
+}
+```
+
+If you're not already using Content Security Policy, it's not worth implementing it just to hobble Stripe. If you do have a working policy in place, you may as well use it to flag any funny business from Stripe.
+
+## Demo site
+
+To see Stripe's behavior on a live site, I created a minimal Vue app that demonstrates this behavior:
+
+* [Vulnerable site](https://frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example)
+* [Site with mitigations](https://5e9db0c5ea0e3200062c02ea--frosty-banach-185455.netlify.app/)  [(source)](https://github.com/mtlynch/stripe-snooping-example/pull/1/files#diff-6d8c4c1f8080f58cb36a900829a76f43)
+
 ## Reccomendations to Stripe
 
-Given how seriously Stripe seems to take security and privacy, it's surprising that . I hope it's an oversight on their part and that the only reason it's persisted so long is that too few people notice for them to review their policies here.
+Given how seriously Stripe seems to take security and privacy, it's surprising that they have been collecting so much data from their customers while doing so little to disclose their collection practices. My hope is that this is simply an oversight from Stripe that's persisted because too few customers have noticed for Stripe to recognize the problem.
 
-Stripe can fix this issue with two steps:
+There are several actions Stripe can take to rectify this situation:
 
-* Disclose data sharing clearly
-  * The npm package pages and the Stripe.js reference should clearly define which data the Stripe.js library sends to Stripe.
+* Clearly disclose data sharing
+  * The npm package pages and the Stripe.js reference should clearly define what browsing and telemetry data their app will transmit to Stripe if they integrate with the Stripe library.
+* Give client applications control over what data to share via opt-in
+  * Stripe clients bear the cost of chargebacks against their application, so they should get to decide how much information to share with Stripe to reduce those chargebacks.
+  * The stripe-js library should offer clients different levels so clients can balance their tolerance for chargebacks against their willingness to share data to increase the accuracy of Stripe's fraud detection algorithms.
 * Support library unloading
-  * Give implementers an option to unload Stripe via an official API rather than forcing them to reload the page or resort to crazy hacks (TODO).
+  * Give client applications a supported mechanism to unload Stripe after the app has collected a user's payment.
