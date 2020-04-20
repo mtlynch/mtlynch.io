@@ -136,7 +136,7 @@ That was 7 months ago, and there has been no follow up from Stripe on that threa
 
 ## Confirming the issue
 
-Just to be sure, I created a minimal reproduction of the behavior I was seeing. I made a brand new Vue project and [installed only the `@stripe/stripe-js` npm package](https://github.com/mtlynch/stripe-hello-world).
+Just to be sure, I created a minimal reproduction of the behavior I was seeing. I made a brand new Vue project and [installed only the `@stripe/stripe-js` npm package](https://github.com/mtlynch/stripe-snooping-example).
 
 ```javascript
 import { loadStripe } from '@stripe/stripe-js';
