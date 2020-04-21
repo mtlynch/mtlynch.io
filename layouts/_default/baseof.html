@@ -77,7 +77,7 @@
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
       {{ end -}}
     {{ else }}
-      {{ printf `<link rel="alternate" type="application/rss+xml" href="%sindex.xml" title="%s" />` .Site.BaseURL $.Site.Title | safeHTML }}
+      {{ printf `<link rel="alternate" type="application/rss+xml" href="%s/%s" title="%s" />` .Site.BaseURL "index.xml" $.Site.Title | safeHTML }}
     {{ end -}}
 
     {{ hugo.Generator }}
