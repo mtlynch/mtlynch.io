@@ -194,8 +194,8 @@ The [privacy policy](https://stripe.com/privacy) is a bit more specific about th
 
 >Our Sites use cookies and other technologies to function effectively. These technologies record information about your use of our Sites, including:
 >
-> * Browser and device data, such as IP address, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons and the language version of the Sites you are visiting;
-> * Usage data, such as time spent on the Sites, pages visited, links clicked, language preferences, and the pages that led or referred you to our Sites.
+* Browser and device data, such as IP address, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons and the language version of the Sites you are visiting;
+* Usage data, such as time spent on the Sites, pages visited, links clicked, language preferences, and the pages that led or referred you to our Sites.
 >
 >We also may collect information about your online activities on websites and connected devices over time and across third-party websites, devices, apps and other online features and services.
 
