@@ -272,7 +272,7 @@ To see Stripe's behavior on a live site, I created a minimal Vue app that demons
 
 ## Summary
 
-Websites that use Stripe to collect payment must include Stripe's JavaScript library within their application. Integrating it according to Stripe's documentation causes the library to share user tracking data with Stripe throughout the user's browsing session, even on pages that do not interact with Stripe or display payment forms. This data includes:
+Websites that use Stripe to collect payment usually include Stripe's JavaScript library within their application. Integrating it according to Stripe's documentation causes the library to share user tracking data with Stripe throughout the user's browsing session, even on pages that do not interact with Stripe or display payment forms. This data includes:
 
 * Full URLs of each page the user visits, including query parameters and URL fragments
 * Timings of how quickly the user moves their mouse during browsing
@@ -299,4 +299,6 @@ There are several actions Stripe can take to rectify this situation:
 **Update: 2020-04-21, 2:47pm ET**
 
 Stripe co-founder Patrick Collison [responded to this article](https://news.ycombinator.com/item?id=22937303) reasserting Stripe's commitment to use the data collected exclusively for fraud detection. He added that Stripe will soon clarify language in its terms of service around their data collection practices.
+
+**Correction**: The article originally said, "Websites that use Stripe to collect payment **must** include Stripe's JavaScript library," but Collison points out that this is inaccurate, as it is possible for websites to integrate with Stripe without using the Stripe JS library.
 {{</ notice >}}
