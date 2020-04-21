@@ -95,7 +95,7 @@ Developers need not verify every change on every possible OS/browser combination
 
 ### e.g. / i.e.
 
-* Put e.g. or i.e. within parentheses (e.g. like this).
+* Put e.g. or i.e. within parentheses (e.g., like this).
 
 ### Oxford comma
 
