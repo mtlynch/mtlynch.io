@@ -4,6 +4,11 @@ all
 # MD002 First header should be a top level header
 exclude_rule 'MD002'
 
+# MD004 Unordered list style
+# TODO: This should actually be enabled, but it causes the linter to complain
+# about valid markers in /stripe-recording-its-customers/
+exclude_rule 'MD004'
+
 # MD013 - Line length.
 exclude_rule 'MD013'
 
