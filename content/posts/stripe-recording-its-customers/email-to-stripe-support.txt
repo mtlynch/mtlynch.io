@@ -1,0 +1,43 @@
+Hi Stripe Folks,
+
+I'm integrating with Stripe and using the @stripe/stripe-js npm package (v.1.3.2). I noticed that Stripe generates a request to the following URL on every route change in my app:
+
+https://m.stripe.com/4
+
+The request contains the current path portion of my app's URL.
+
+I created a minimal repro that just includes Vue, stripe.js and nothing else:
+
+https://github.com/mtlynch/stripe-hello-world
+
+To reproduce:
+
+1. git clone https://github.com/mtlynch/stripe-hello-world && cd stripe-hello-world
+2. npm install
+3. npm run serve
+4. Open http://localhost:8080 in a browser
+5. Click the "About" link on the page
+
+Expected: There are no HTTP requests to Stripe because the user has not yet interacted with a payment page.
+
+Actual: The browser has sent multiple HTTP requests to https://m.stripe.com/4 reporting route changes in my app.
+
+I don't see this behavior documented anywhere, so it's surprising to me that the Stripe library is silently logging every page users on my website access. This is a privacy violation, as I would not like my app to share this data with Stripe.
+
+Other developers have been surprised by this behavior as well:
+
+https://github.com/stripe/react-stripe-elements/issues/257
+https://github.com/stripe/react-stripe-elements/issues/99
+https://stackoverflow.com/questions/45718026/stripe-js-making-duplicate-requests-new-requests-on-state-change
+https://stackoverflow.com/questions/56481458/why-does-stripe-post-data-when-changing-pages
+https://stackoverflow.com/questions/55904278/reduce-network-traffic-from-stripe-api-phoning-home-in-single-page-application
+
+In this comment, Stripe Employee Adam Solove said:
+
+>I'm not aware of any tracking we do other than on first page load, when your JS calls our methods, or when a customer interacts with our specific embedded UIs. If you're seeing more than that, would love to dig in to it. In particular, I don't think leaving Stripe.js on the page after you're done with it has any privacy implications.
+>Nevertheless, it does seem like we should offer a way to tear down all the things Stripe.js sets up, at least to save the memory consumption and for sanity. We'll look into what that would require from an implementation perspective.
+
+Is there any update here? Is Stripe reporting every route change by-design? Is there any way to disable this functionality in Stripe or somehow explicitly load and unload the Stripe library only when we need it?
+
+Thanks,
+Michael
