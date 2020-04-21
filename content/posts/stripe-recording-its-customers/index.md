@@ -8,6 +8,9 @@ date: '2020-04-21'
 images:
 - stripe-recording-its-customers/og-image.jpg
 description: An investigation into how Stripe tracks your users and what you can do to prevent it
+discuss_urls:
+  reddit: https://redd.it/g5j2fb
+  hacker_news: https://news.ycombinator.com/item?id=22936818
 ---
 
 Among startups and tech companies, Stripe seems to be the near-universal favorite for payment processing. When I needed paid subscription functionality for my new web app, Stripe felt like the natural choice. After integration, however, I discovered that Stripe's official JavaScript library records all browsing activity on my site and reports it back to Stripe. This data includes:
