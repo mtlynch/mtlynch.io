@@ -294,3 +294,9 @@ There are several actions Stripe can take to rectify this situation:
   * Give client applications a supported mechanism to unload Stripe after the app has collected a user's payment.
 * Grant client applications control over what data to share via opt-in.
   * Stripe clients bear the cost of chargebacks against their application, so they should decide how much information to share with Stripe to reduce those chargebacks.
+
+{{< notice type="info" >}}
+**Update: 2020-04-21, 2:47pm ET**
+
+Stripe co-founder Patrick Collison [responded to this article](https://news.ycombinator.com/item?id=22937303) reasserting Stripe's commitment to use the data collected exclusively for fraud detection. He added that Stripe will soon clarify language in its terms of service around their data collection practices.
+{{</ notice >}}
