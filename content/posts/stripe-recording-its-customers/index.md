@@ -119,7 +119,7 @@ Based on the name `mouse-timings`, it seems that Stripe is recording my users' m
 
 Lastly, each request contains the same cookie, uniquely identifying the user:
 
-```
+```text
 Cookie: m=e29f7c00-b748-4e5f-8625-34d14dbc1c01
 ```
 
@@ -131,7 +131,7 @@ At first, I thought this was surely my mistake. There must have made a careless 
 
 To investigate, I [googled the URL](https://google.com/search?q=https%3A%2F%2Fm.stripe.com%2F4) that was receiving the HTTP POST requests from my app:
 
-```
+```text
 https://m.stripe.com/4
 ```
 
@@ -171,7 +171,7 @@ Stripe responded promptly to tell me that user tracking was by design, and I sho
 >
 >Thanks for getting in touch. Faith here from Stripe support.
 >
->Jumping right in, the calls being seen are by design in order to detect fraud and is in the best interests of the user. According to the docs: "To best leverage Stripe’s advanced fraud functionality, include this script on every page, not just the checkout page. This allows Stripe to detect anomalous behavior that may be indicative of fraud as customers browse your website." 
+>Jumping right in, the calls being seen are by design in order to detect fraud and is in the best interests of the user. According to the docs: "To best leverage Stripe’s advanced fraud functionality, include this script on every page, not just the checkout page. This allows Stripe to detect anomalous behavior that may be indicative of fraud as customers browse your website."
 >
 >[https://stripe.com/docs/js/including](https://stripe.com/docs/js/including)
 >
@@ -194,8 +194,8 @@ The [privacy policy](https://stripe.com/privacy) is a bit more specific about th
 
 >Our Sites use cookies and other technologies to function effectively. These technologies record information about your use of our Sites, including:
 >
->* Browser and device data, such as IP address, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons and the language version of the Sites you are visiting;
->* Usage data, such as time spent on the Sites, pages visited, links clicked, language preferences, and the pages that led or referred you to our Sites.
+> * Browser and device data, such as IP address, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons and the language version of the Sites you are visiting;
+> * Usage data, such as time spent on the Sites, pages visited, links clicked, language preferences, and the pages that led or referred you to our Sites.
 >
 >We also may collect information about your online activities on websites and connected devices over time and across third-party websites, devices, apps and other online features and services.
 
