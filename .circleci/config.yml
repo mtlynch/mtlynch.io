@@ -28,6 +28,9 @@ jobs:
             git submodule update --remote
       - attach_workspace:
           at: ./
+      - restore_cache:
+        keys:
+          - resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
           name: Build prod site
           command: hugo version && hugo
@@ -38,6 +41,10 @@ jobs:
             - tests
             - firebase.json
             - .firebaserc
+      - save_cache:
+        key: resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+        paths:
+          - resources
   lint-html:
     docker:
       - image: mtlynch/htmlproofer:3.15.0
