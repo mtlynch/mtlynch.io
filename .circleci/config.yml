@@ -83,17 +83,13 @@ jobs:
           command: tests/check-amazon-links
   deploy:
     docker:
-      - image: circleci/node:13.13.0-stretch
+      - image: mtlynch/firebase-tools:8.1.1-node-14.0.0
     steps:
       - attach_workspace:
           at: ./
       - run:
-          name: Install firebase-tools
-          command: npm install firebase-tools
-      - run:
           name: Deploy to firebase
-          command: |
-            ./node_modules/.bin/firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
+          command: firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
 workflows:
   version: 2
   test-deploy:
