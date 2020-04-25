@@ -83,7 +83,7 @@ jobs:
           command: tests/check-amazon-links
   deploy:
     docker:
-      - image: circleci/node:13.1.0-stretch
+      - image: circleci/node:13.13.0-stretch
     steps:
       - attach_workspace:
           at: ./
