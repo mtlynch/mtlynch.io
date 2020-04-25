@@ -29,8 +29,8 @@ jobs:
       - attach_workspace:
           at: ./
       - restore_cache:
-        keys:
-          - resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+          keys:
+            - resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
           name: Build prod site
           command: hugo version && hugo
@@ -42,9 +42,9 @@ jobs:
             - firebase.json
             - .firebaserc
       - save_cache:
-        key: resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
-        paths:
-          - resources
+          key: resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+          paths:
+            - resources
   lint-html:
     docker:
       - image: mtlynch/htmlproofer:3.15.0
