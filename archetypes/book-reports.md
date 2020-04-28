@@ -13,12 +13,12 @@ TODO: Short summary
 
 ## What I Liked
 
-* 
+*
 
 ## What I Disliked
 
-* 
+*
 
 ## Key Takeaways
 
-* 
+*
