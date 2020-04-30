@@ -17,7 +17,7 @@ Several commenters responded saying that they appreciated his assurances, but th
 
 Only seven days after my blog post, Stripe [published a blog post](https://stripe.com/blog/advanced-fraud-detection-updates) outlining the changes they had made to better disclose their data collection practices and guarantees around user privacy.
 
-TODO: Screenshot of new section
+{{< img src="stripe-blog.png" alt="Screenshot of Stripe's blog post" maxWidth="729px" hasBorder="true" >}}
 
 ## Stripe's changes
 
