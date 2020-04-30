@@ -7,6 +7,9 @@ date: '2020-04-30'
 images:
 - stripe-update/og-image.png
 description: Stripe has made several significant, positive changes to its user tracking and privacy policies in the last week.
+discuss_urls:
+  reddit: https://redd.it/gb2c08
+  hacker_news: https://news.ycombinator.com/item?id=23034924
 ---
 
 Last week, I [published a blog post](/stripe-recording-its-customers/) describing how Stripe recorded visitor behavior on their customers' websites. In short, Stripe's JavaScript library collected information about URLs users visited and telemetry about their mouse movements, even when the site never displayed any Stripe payment forms. I suspected that most Stripe customers were unaware of this and argued that Stripe should disclose their data gathering practices more prominently and in greater detail.

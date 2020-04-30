@@ -240,6 +240,23 @@ beforeRouteLeave(to) {
 }
 ```
 
+### (New) Disable user tracking
+
+{{< notice type="info" >}}
+**Added**: April 30, 2020
+{{</ notice >}}
+
+After the initial publication of my article, Stripe updated its JavaScript library to include [a new parameter to disable tracking entirely](https://github.com/stripe/stripe-js/blob/ef32028d0e1f8381b3b4ecca8bc74bf659e7153e/README.md#disabling-advanced-fraud-detection-signals). This option is available as of `@stripe/stripe-js` v1.5.0:
+
+```javascript
+import {loadStripe} from '@stripe/stripe-js/pure';
+
+loadStripe.setLoadParameters({advancedFraudSignals: false})
+const stripe = await loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+```
+
+This is a welcome option, though the downside is that the functionality is all-or-nothing. If you enable fraud detection, you can't turn it off after a Stripe transaction is complete unless you force a page reload (see [above](#solving-problem-two-unloading-stripe-after-payment)).
+
 ### (optional) Content Security Policy for defense in depth
 
 The previous two steps are sufficient to prevent Stripe's tracking. For additional protection, apply [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) to restrict Stripe to your payment pages.
@@ -295,9 +312,19 @@ There are several actions Stripe can take to rectify this situation:
   * Stripe clients bear the cost of chargebacks against their application, so they should decide how much information to share with Stripe to reduce those chargebacks.
 
 {{< notice type="info" >}}
-**Update: 2020-04-21, 2:47pm ET**
+**Update: April 21, 2020 - 2:47pm ET**
 
 Stripe co-founder Patrick Collison [responded to this article](https://news.ycombinator.com/item?id=22937303) reasserting Stripe's commitment to use the data collected exclusively for fraud detection. He added that Stripe will soon clarify language in its terms of service around their data collection practices.
 
 **Correction**: The article originally said, "Websites that use Stripe to collect payment **must** include Stripe's JavaScript library," but Collison points out that this is inaccurate, as it is possible for websites to integrate with Stripe without using the Stripe JS library.
+{{</ notice >}}
+
+{{< notice type="info" >}}
+**Update: April 30, 2020**
+
+Stripe has [revised their privacy policy and developer documentation](https://stripe.com/blog/advanced-fraud-detection-updates) and added functionality to their JavaScript library that empowers integrators to limit tracking behavior.
+
+I published a follow-up post that discusses how Stripe's changes address the concerns I raised:
+
+* [Update: Stripe's Response Regarding User Tracking](/stripe-update/)
 {{</ notice >}}
