@@ -62,3 +62,6 @@ Draws some ideas from mindfulness meditation.
   >* Institutional policies, rules, and regulations &mdash; "I have to suspend you for this infraction because it's the school policy."
   >* Gender roles, social roles, or age roles &mdash; "I hate going to work but I do it because I am a husband and a father."
   >* Uncontrollable impulses &mdash; "I was overcome by my urge to eat the candy bar."
+* The word "deserves" often blocks the speaker's compassion
+  * e.g., "He *deserves* to be punished."
+  * "deserves" attributes badness to the subject and implies that they deserve no empathy.
