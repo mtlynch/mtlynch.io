@@ -54,6 +54,8 @@ TODO
 | Amazon Affiliate Earnings | $166.43     | $128.39     | <font color="red">-$38.04 (-23%)</font>      |
 | **Total Earnings**        | **$362.28** | **$220.48** | **<font color="red">-$141.80 (-39%)</font>** |
 
+Is It Keto took a big hit in March amid COVID-19 panic, but it's been growing consistently every week since then.
+
 ## Attracting visitors to Portfolio Rebalancer but no sales
 
 ## Is It Keto and the long tail
