@@ -35,7 +35,7 @@ I successfully implemented a subscription payment workflow for the first time ev
 
 While integrating with Stripe, I noticed that their JavaScript library [collected user data from my site](/stripe-recording-its-customers/). My blog post about the issue [reached #1 on Hacker News](https://news.ycombinator.com/item?id=22936818) and prompted [a response from Stripe's CEO](https://news.ycombinator.com/item?id=22937303). *The Register* also [interviewed me](https://www.theregister.co.uk/2020/04/22/stripe_defends_mouse_measuring_javascript/) about the story.
 
-Stripe made several changes the week following my post, and I published [a follow-up ](/stripe-update/) with my thoughts. That post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more muted response](http://hnrankings.info/23034924/).
+Stripe made several changes the week following my post, and I published [a follow-up](/stripe-update/) with my thoughts. That post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more muted response](http://hnrankings.info/23034924/).
 
 ## Stats
 
@@ -55,7 +55,6 @@ For its first full month of existence, Portfolio Rebalancer achieved a healthy 1
 Unfortunately, it ended the month with a revenue of $0 and no signs of increasing.
 
 ### Is It Keto
-
 
 {{< img src="isitketo-ga.png" alt="Is It Keto traffic in Google Analytics" maxWidth="800px" hasBorder="true" maxWidth="800px" >}}
 
