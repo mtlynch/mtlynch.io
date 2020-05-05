@@ -1,7 +1,9 @@
 ---
 title: "Is It Keto: Month 11"
 date: 2020-05-03T22:01:20-04:00
-description: My pivot to long-tail SEO.
+description: Can I remix my original content to create 1000x as many pages?
+images:
+- /retrospectives/2020/05/isitketo-ga.png
 ---
 
 ## Highlights
