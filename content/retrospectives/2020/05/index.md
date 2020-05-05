@@ -6,7 +6,9 @@ description: My pivot to long-tail SEO.
 
 ## Highlights
 
-* Two of my blog posts reached the front page of Hacker News
+* Two of my blog posts reached the front page of Hacker News.
+* I may have finally discovered a way to profitably scale my keto site.
+* I'm putting Portfolio Rebalancer on the backburner due to lack of traction.
 
 ## Goal Grades
 
@@ -17,9 +19,9 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Conducted zero customer interviews.
 * **Grade**: F
 
-I deprioritized the portfolio rebalancer in favor of Is It Keto. I'll explain why below.
+I deprioritized the portfolio rebalancer in favor of Is It Keto. I'll explain why [below](#portfolio-rebalancer-has-lots-of-visitors-but-no-sales).
 
-### Implement customer payments for the portfolio rebalancer and either hide or limit the free version
+### Implement customer payments for the portfolio rebalancer
 
 * **Result**: Implemented a Stripe payment flow.
 * **Grade**: A
@@ -33,9 +35,7 @@ I successfully implemented a subscription payment workflow for the first time ev
 
 While integrating with Stripe, I noticed that their JavaScript library [collected user data from my site](/stripe-recording-its-customers/). My blog post about the issue [reached #1 on Hacker News](https://news.ycombinator.com/item?id=22936818) and prompted [a response from Stripe's CEO](https://news.ycombinator.com/item?id=22937303). *The Register* also [interviewed me](https://www.theregister.co.uk/2020/04/22/stripe_defends_mouse_measuring_javascript/) about the story.
 
-Stripe made several changes the week following my post, and I published [a follow-up ](/stripe-update/) with my thoughts on Stripe's changes. This post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more measured response](http://hnrankings.info/23034924/).
-
-The response was overall positive, but it is the most hostility I've seen in response to anything I've published. Partly, I think Stripe is so beloved in the tech community that people feel protective against anyone criticizing the company. Also, my post is about the correct way to weigh fraud protection against user privacy, and people have strong opinions about what balance is correct.
+Stripe made several changes the week following my post, and I published [a follow-up ](/stripe-update/) with my thoughts. That post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more muted response](http://hnrankings.info/23034924/).
 
 ## Stats
 
@@ -87,13 +87,13 @@ I haven't given up on Portfolio Rebalancer entirely, but I've placed it on the b
 
 One of the most common questions people ask me about Is It Keto is why I don't simply pull in a nutrition database and auto-generate pages for every possible food. I always explained that I feared the wrath of Google lest I run afoul of their [rules against auto-generated content](https://support.google.com/webmasters/answer/2721306?hl=en). Google drives almost all of Is It Keto's traffic, so if they brought the hammer down on me, the business would basically disappear overnight.
 
-Recently, I had an illuminating conversation with a friend who's had siginficantly more experience in search engine optimization. He suggested that my fears were unfounded. In his experience, Google only brings down harsh penalties on sites that egregiously try to manipulate search results. I might get in trouble if I used machine learning to auto-generate page text, but if I'm simply pulling nutritional data and presenting it in a way that adds value for users on the keto diet, that should be fine by Google.
+Recently, I had an illuminating conversation with a friend who's had siginficantly more experience than I have in search engine optimization. He suggested that my fears were unfounded. In his experience, Google only brings down harsh penalties on sites that egregiously try to manipulate search results. I might get in trouble if I used machine learning to auto-generate page text, but if I'm simply pulling nutritional data and presenting it in a way that adds value for users on the keto diet, that should be fine by Google.
 
 My friend's prediction was that if Google didn't like my auto-generated content, it's more likely that they'd simply downrank those particular pages rather than applying a penalty to my entire site.
 
 ## Chasing the long tail
 
-My discovery about auto-generated content got me excited about Is It Keto again. It's been successful at attracting visitors, but I was never able to find a way to make growth profitable. [Hiring writers](/hiring-content-writers/) costs me $50-100 per article, but articles typically earn less than $1/month in revenue.
+My discovery about auto-generated content got me excited about Is It Keto again. It's been successful at attracting visitors, but I was never able to find a way to make growth profitable. [Hiring writers](/hiring-content-writers/) costs me $50-100 per article, but articles typically earn less than $1/month in revenue, so it's not financially viable.
 
 Page generation would be a gamechanger because it substantially lowers my costs. The cost would be *so* low that I could produce articles that nobody else would bother creating. For example, if you Google "are pringles keto?" none of the results directly address the question.
 
@@ -104,9 +104,13 @@ Page generation would be a gamechanger because it substantially lowers my costs.
 
 According to Google's [keyword planner](https://ads.google.com/home/tools/keyword-planner/), there are only ~70 searches per month for searches like "are pringles keto?" Whoever took the #1 spot would only get ~50 clicks per month. Is It Keto earns ~$0.01 per visitor, meaning the Pringles article would bring in about $6 per year. It's hard to justify the time or cost of crafting a dedicated article for so few readers.
 
-The numbers change if I can generate entire batches of articles with roughly the same effort other authors take to generate one article. There are probably 25 different brands and varieties of chips that have similar search traffic. If I make a template that covers them all, that's $150 per year in extra revenue, which is a lot more appealing. I can likely re-use most of the content for chips for 1,000 other snack foods, so maybe that's an extra $6k year in revenue.
+The numbers change if I can generate entire *batches* of articles with roughly the same effort other authors take to generate one article. There are probably 25 different brands and varieties of potato chips that have similar search traffic. If I make a template that covers them all, that's $150 per year in extra revenue, which is a lot more appealing. I can likely re-use most of the content for chips for 1,000 other snack foods, so maybe that's an extra $6k year in revenue.
 
-Zapier is a successful product that provides plumbing to connect different apps that are not aware of each other. They used a similar SEO strategy to build their business. They generate a dedicated page for every possible combination of their partner apps, so if you search "the gift goose + connectwise manage," the top result is Zapier's [auto-generated page](https://zapier.com/apps/the-gift-goose/integrations/connectwise-manage):
+## Other examples of long-tail SEO
+
+Zapier is a successful product that provides plumbing to connect different apps that are not aware of each other. They used a similar SEO strategy to build their business.
+
+Zapier generates a dedicated page for every possible combination of their partner apps, so if you search "the gift goose + connectwise manage," the top result is Zapier's [auto-generated page](https://zapier.com/apps/the-gift-goose/integrations/connectwise-manage):
 
 {{< img src="gift-goose-connectwise.png" alt="Screenshot of Zapier's page for The Gift Goose + ConnectWise" maxWidth="500px" hasBorder="true" caption="Zapier ranks highly for thousands of search queries because they auto-generate pages for every pair of applications they support." >}}
 
@@ -118,7 +122,7 @@ According to [Ahrefs' backlink checker](https://ahrefs.com/backlink-checker), th
 
 >I want to invest in companies that have an unfair advantage. What's your unfair advantage?
 
-One of the reasons I keep abandoning Is It Keto is that it's never played to my strengths. I write well, but too many other keto sites have good writing for me to win on that front. I consider myself a good developer, but software has never played a key role in the site. A non-developer could have produced essentially the same thing with WordPress or Squarespace.
+One of the reasons I keep abandoning Is It Keto is that it's never played to my strengths. I write well, but too many other keto sites have good writers for me to win on that front. I consider myself a good developer, but software has never played a key role in the site. A non-developer could have produced essentially the same thing with WordPress or Squarespace.
 
 Pivoting to auto-generated pages gives me an advantage over other keto sites because none of them seem to have developers on staff. They probably have developers that help them maintain their WordPress setups or to create one-off tools like a keto calculator. Those things are in a different category of software engineering than what I'd be doing, which is creating and maintaining a data pipeline that runs smoothly for years. And that's great because that's the type of development I do best.
 
@@ -129,6 +133,8 @@ Another advantage is that I already have a database of nutritional information. 
 I've already begun auto-generating content for Is It Keto. I've created 13 new articles about different fruits. Fruits are the easiest articles because they require no analysis of artificial ingredients, so the article is usually a straightforward, "No, it's not keto-friendly."
 
 {{< img src="apricots-dates.png" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="800px" caption="I've begun auto-generating pages based on each food's nutritional information." hasBorder="true" >}}
+
+I've set it up so that I can improve my templates over time, then simply re-run my pipeline to update all previously-generated articles.
 
 One of the most popular pages on Is It Keto is ["Is Russell Stover Sugar-Free Chocolate Candy Keto?"](https://isitketo.org/russell-stover-sugar-free-chocolate-candy) I wrote that article by hand, but re-reading it today, I could largely re-use the content to build a template for other chocolates and candies:
 
@@ -147,7 +153,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | RapidAPI Earnings  | $3.67      | $32.19     | <font color="green">+$28.52 (+777%)</font>     |
 | **Total Earnings** | **$3.67**  | **$32.19** | **<font color="green">+$28.52 (+777%)</font>** |
 
-Zestful had an odd jump in traffic because a Chinese blog published an unauthorized translation of my [Second Year as a Solo Developer post](/solo-developer-year-2/), and I guess it gained enough traction that people clicked through to Zestful. It didn't seem to translate into any sales, though.
+Zestful had an odd jump in traffic because a Chinese blog published an unauthorized translation of my article, ["My Second Year as a Solo Developer"](/solo-developer-year-2/), and I guess it gained enough traction that people clicked through to Zestful. It didn't seem to translate into any sales, though.
 
 Its month-over-month sales jumped, but Zestful is historically bursty. Anything from $0 to $100 in monthly revenue is normal.
 
@@ -180,7 +186,7 @@ The other problem is that What Got Done generates the most value for people who 
 
 In response to COVID-19, Ahrefs released their $800 course on content marketing [for free](https://twitter.com/timsoulo/status/1240151594328621056). I generally prefer to learn by reading rather than watching online videos, but I've been impressed with this series.
 
-One lesson from the video that really hit home for me is that [traffic is a vanity metric](https://youtu.be/y5kQXogrLN0?t=53). If you're blogging as part of your business, the number of visitors you attract is only an intermediate goal to something else, like selling products or acquiring new customers.
+One lesson from the video that really hit home for me is that [traffic is a vanity metric](https://youtu.be/y5kQXogrLN0?t=53). If you're blogging as part of your business, the number of visitors you attract is only an intermediate goal to something else, like selling products or acquiring new customers. I experienced exactly this [with Portfolio Rebalancer](#portfolio-rebalancer-has-lots-of-visitors-but-no-sales); it was great to attract 1,000 visitors in its first month, but the volume itself isn't much to celebrate without accompanying revenue or signups.
 
 The series itself is a great example of elegant content marketing. Throughout the course, they're suggesting ways to strategize about writing content that will attract search traffic, and then they always show Ahrefs tools that can help. They build credibility by sharing useful information, then when they show you their tool, you trust that it's helpful.
 
