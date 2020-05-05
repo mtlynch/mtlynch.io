@@ -13,7 +13,7 @@ One of the biggest takeaways for me was how commonplace it's become for people t
 
 The distinction between "I must do X" and "I'm choosing to do X because..." seemed silly at first, but it grew more reasonable the more I thought about it. Now, I default to, "I *want to* do X." If I don't actually want to do it, I evaluate whether it's an intermediate step to something I ultimately want or if it's something I don't need to do at all.
 
-The book bears many similarities to [*Crucial Conversations*](https://amzn.to/3d8Tnp8). Both emphasize the importance of separating judgments from facts during high stakes conversations. They also both advocate making everyone feel comfortable and heard.
+The book bears many similarities to [*Crucial Conversations*](https://amzn.to/3dmbUyu). Both emphasize the importance of separating judgments from facts during high stakes conversations. They also both advocate making everyone feel comfortable and heard.
 
 *Nonviolent Communication* is a bit mushier in that it focuses on vulnerability and feelings, whereas *Crucial Conversations* is more clinical and process-oriented. Although both books advocate using their techniques in all contexts, I view *Crucial Conversations* as best-suited for professional relationships and *Nonviolent Communication* is a good match for friends and loved ones.
 
