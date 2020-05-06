@@ -61,7 +61,7 @@ You can't disable the Trending Topics panel, but you can make it boring. Configu
 
 Here's how my trends panel looks after I set it to Abu Dhabi.
 
-{{< img src="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" caption="Twitter Trending Topics for Abu Dhabi, UAE" maxWidth="352px" >}}
+{{< img src="abu-dhabi-trends.jpg" alt="Setting Twitter trends to Abu Dhabi results in mostly Arabic hashtags" caption="Twitter Trending Topics for Abu Dhabi, UAE" >}}
 
 The trends are mostly in Arabic, which I can't read. Even the English hashtag is specific to the United Arab Emirates.
 
@@ -131,7 +131,7 @@ If you currently manage tasks through your inbox, the prospect of maintaining a 
 
 Before extracting my to-do list from my inbox, I never realized the power those emails held over me. Any time I checked my inbox, every message was sitting there, begging for my attention. Now, when an email requires a non-urgent response, I create a task and schedule my reply for an appropriate time. It gives me the freedom to forget about the email because I know my to-do list will remind me when the time is right.
 
-{{< img src="nirvana-tasks.jpg" alt="Chat settings in Gmail" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" maxWidth="785px" hasBorder="True" >}}
+{{< img src="nirvana-tasks.jpg" alt="Chat settings in Gmail" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)"  hasBorder="True" >}}
 
 {{<notice type="info">}}
 My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's *okay*, not great. People tell me good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
@@ -141,11 +141,11 @@ My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's *okay*, n
 
 I send all of my texts through Hangouts because it allows me to type on my desktop keyboard instead of the tiny virtual keyboard on my phone. Unfortunately, Google integrates Hangouts into my Gmail by default, creating intrusive bundling. Checking my email means seeing my texts and vice-versa.
 
-{{< img src="hangouts-in-gmail.jpg" alt="Chat settings in Gmail" caption="By default, Gmail embeds Hangouts into your inbox." maxWidth="800px" hasBorder="True" >}}
+{{< img src="hangouts-in-gmail.jpg" alt="Hangouts embedded in Gmail" caption="By default, Gmail embeds Hangouts into your inbox." maxWidth="800px" hasBorder="True" >}}
 
 This is an easy problem to solve. Go to the [chat settings in Gmail](https://mail.google.com/mail/u/0/#settings/chat) and select "Chat off."
 
-{{< img src="gmail-disable-chat.jpg" alt="Chat settings in Gmail" caption="Disabling chat in [Gmail settings](https://mail.google.com/mail/u/0/#settings/chat)" maxWidth="821px" hasBorder="True" >}}
+{{< img src="gmail-disable-chat.jpg" alt="Chat settings in Gmail" caption="Disabling chat in [Gmail settings](https://mail.google.com/mail/u/0/#settings/chat)" hasBorder="True" >}}
 
 Now, Hangouts messages will not appear in your Gmail, but you can still access Hangouts through its dedicated URL: [https://hangouts.google.com](https://hangouts.google.com).
 
@@ -155,7 +155,7 @@ One way I've found to curb my bad habits is to put obstacles in front of them. F
 
 Free of obstacles, it's painfully easy for me to indulge in social media on my computer. I get bored, hit Ctrl+T to open a new tab, then visit Facebook, Twitter, or reddit.
 
-{{< img src="typewriter.png" alt="Chat settings in Gmail" caption="\"Typewriter\" by [xkcd](https://xkcd.com/477/)" maxWidth="443px" >}}
+{{< img src="typewriter.png" alt="relevant xkcd cartoon" caption="\"Typewriter\" by [xkcd](https://xkcd.com/477/)" >}}
 
 To curb my social media usage, I add mildly annoying hurdles to interrupt my habits. I sign out of time-waster sites in my main browser and access them only through a separate, dedicated browser profile.
 

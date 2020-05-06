@@ -64,7 +64,7 @@ The results? Two visitors.
 
 I paid ~$200 for the design, printing, and distribution, and **two people** visited the URL. It's possible that other people saw the flyer and just Googled "wanderjest," but I didn't see any measurable uptick in search traffic.
 
-{{< img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" maxWidth="391px" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn." hasBorder="true" >}}
+{{< img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn." hasBorder="true" >}}
 
 **WanderJest isn't working**
 

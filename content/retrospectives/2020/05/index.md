@@ -58,7 +58,7 @@ Unfortunately, it ended the month with a revenue of $0 and no signs of increasin
 
 ### Is It Keto
 
-{{< img src="isitketo-ga.png" alt="Is It Keto traffic in Google Analytics" maxWidth="800px" hasBorder="true" maxWidth="800px" >}}
+{{< img src="isitketo-ga.png" alt="Is It Keto traffic in Google Analytics" maxWidth="800px" hasBorder="true" >}}
 
 | Metric                    | March 2020  | April 2020  | Change                                       |
 | ------------------------- | ----------- | ----------- | -------------------------------------------- |
