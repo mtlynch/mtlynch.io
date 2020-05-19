@@ -118,4 +118,4 @@ An engaging read, but the narrator is painfully obnoxious.
   * If a stock drops 20% on IPO day, the people who lose out are the investment banks and the buyers who got exclusive deals to buy shares early. The company wins out by selling early shares at a premium to their true market value.
   * Investment banks have financial incentive to underprice IPOs so that they capitalize on the undervalued shares and don't get stuck holding the bag if the stock drops in price.
 * >Don't be deceived by my withering treatment of Facebook in this book; inside every cynic lives a heartbroken idealist.
-  * As a [once-loyal and later-bitter Googler](https://mtlynch.io/why-i-quit-google/), I related to this sentiment.
+  * As a [once-loyal and later-bitter Googler](/why-i-quit-google/), I related to this sentiment.

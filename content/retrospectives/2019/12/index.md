@@ -126,7 +126,7 @@ That said, the outputs do make it seem a little skewed. I did spend time attendi
 
 ## The disconnect problem in finding software business ideas
 
-One of the big lightbulb moments I had in running my own business was reading the book [*Start Small, Stay Small*](https://amzn.to/2HZT8lA) by Rob Walling ([my notes](https://mtlynch.io/book-reports/start-small-stay-small/)). He pointed out that the advantage of solo developers is that they can build solutions for niche audiences and still make money.
+One of the big lightbulb moments I had in running my own business was reading the book [*Start Small, Stay Small*](https://amzn.to/2HZT8lA) by Rob Walling ([my notes](/book-reports/start-small-stay-small/)). He pointed out that the advantage of solo developers is that they can build solutions for niche audiences and still make money.
 
 Walling gave the example of a company that makes accounting software specifically for freelance web developers. Despite huge competitors like QuickBooks or Xero, the specialty accounting software succeeds because web developers are willing to pay for a product that focuses on their specific needs. Walling's advice, therefore, is to write software for small niche businesses.
 

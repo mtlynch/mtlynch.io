@@ -148,7 +148,7 @@ For the 11 days it ran, Ezoic generated $45.49 in revenue from 5,452 unique visi
 
 ### What got done?
 
-* Published a new blog post: ["Staying Motivated by Sending Status Updates to Nobody"](https://mtlynch.io/status-updates-to-nobody/)
+* Published a new blog post: ["Staying Motivated by Sending Status Updates to Nobody"](/status-updates-to-nobody/)
 * Increased pricing on Zestful by 566%
 * Created an [internal web app](https://i.imgur.com/a5KKab5.png) that lets me quickly generate training data for Zestful (and fix the legacy data from my starting dataset)
 * Added a ["Save Draft" feature](https://i.imgur.com/s2lChnk.gif) to What Got Done

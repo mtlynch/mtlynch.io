@@ -135,7 +135,7 @@ So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured i
 
 ### Goals for next month
 
-* Publish a new blog post on [mtlynch.io](https://mtlynch.io).
+* Publish a new blog post on [mtlynch.io](/).
 * Publish an MVP for my [email copywriter tool idea](/retrospectives/2019/07/#slowing-down-on-the-email-tool-for-copywriters).
 * Prep What Got Done for the backburner.
   * Fix a few small outstanding bugs.

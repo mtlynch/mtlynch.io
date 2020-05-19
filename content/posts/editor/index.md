@@ -16,7 +16,7 @@ I started this blog in May of last year. I don't mean to brag, but by last April
 
 The size of my audience changed a bit in May 2017. The sharp-eyed reader may be able to spot the subtle shift in my traffic graph:
 
-{{< img src="full-traffic-graph.png" alt="Blog traffic graphs" caption="Number of unique readers visiting [mtlynch.io](https://mtlynch.io) per week" >}}
+{{< img src="full-traffic-graph.png" alt="Blog traffic graphs" caption="Number of unique readers visiting [mtlynch.io](/) per week" >}}
 
 As you notice from the chart above, my numbers went from "too insignificant to appear in a graph" for most of the first year of the blog's existence to over 9,000 readers per week starting last May. From that point on, when I published a new post, the blog received up to 40,000 visitors per week.
 
