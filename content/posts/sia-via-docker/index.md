@@ -107,7 +107,7 @@ admin@DiskStation:$ sudo docker run \
   --publish 9982:9982 \
   --restart always \
   --name sia-container \
-  mtlynch/sia
+  nebulouslabs/sia
 ```
 
 The previous commands do the following:
@@ -198,7 +198,7 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
     admin@Diskstation:/$ sudo docker rm sia-container
 
     # Upgrade to the latest Sia Docker image
-    admin@Diskstation:/$ sudo docker pull mtlynch/sia
+    admin@Diskstation:/$ sudo docker pull nebulouslabs/sia
 
     # NOTE: Replace 10.0.0.101 with the IP address of the Synology NAS on your
     # local network.
@@ -213,7 +213,7 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
       --publish 9982:9982 \
       --restart always \
       --name sia-container \
-      mtlynch/sia
+      nebulouslabs/sia
     ```
 
 When you complete this process, you'll have a new Sia Docker container running the latest version of Sia.
