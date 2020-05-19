@@ -32,7 +32,7 @@ I reached out to eight publishers and writers. Most ignored me but some of those
 
 **Get back to posting full-length blog articles**
 
-* **Result**: I published a new [blog post](https://mtlynch.io/painless-web-app-testing/) about end-to-end testing.
+* **Result**: I published a new [blog post](/painless-web-app-testing/) about end-to-end testing.
 * **Grade**: A
 
 I generally try to publish a new blog post each month, but I hadn't published anything since February because I got busy preparing talks for software conferences. My new blog post described a testing technique that works with almost any web app. It reached ~14,000 readers in its first two days, which is on the medium-high side for me.
@@ -114,7 +114,7 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 ### What got done?
 
 * [Presented a talk](/retrospectives/pytexas-2019-notes/) at PyTexas
-* Published a new [blog post](https://mtlynch.io/painless-web-app-testing/) about end-to-end testing
+* Published a new [blog post](/painless-web-app-testing/) about end-to-end testing
 * Created a [fake podcast](https://twitter.com/deliberatecoder/status/1112688989306318850) for April Fool's Day
 * Got a prototype of [What Got Done app](https://whatgotdone.com) almost working
 * Reached out to 11 potential customers for future projects

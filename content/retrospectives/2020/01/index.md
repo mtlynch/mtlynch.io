@@ -217,7 +217,7 @@ I'm also going to be attending as many local shows as I can. Partly because it's
 
 * Earn my first dollar of revenue from WanderJest.
 * Conduct eight interviews for WanderJest with comedians, bookers, promoters, and venue owners.
-* Publish a follow up to ["My First Year as a Solo Developer,"](https://mtlynch.io/solo-developer-year-1/) about year two.
+* Publish a follow up to ["My First Year as a Solo Developer,"](/solo-developer-year-1/) about year two.
 
 ---
 

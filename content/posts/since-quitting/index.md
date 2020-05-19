@@ -104,7 +104,7 @@ Unfortunately, these tests revealed that Sia was [not as cheap as everyone thoug
 
 ## KetoHub's ingredient problem
 
-I turned my attention back to [KetoHub](https://mtlynch.io/outsourcing-mvp/), a website I created last year to help users find recipes for the keto diet.
+I turned my attention back to [KetoHub](/outsourcing-mvp/), a website I created last year to help users find recipes for the keto diet.
 
 One of KetoHub's main features is finding recipes based on ingredients you have. For example, you can search for ["ground beef"](https://ketohub.io/?q=%22ground%20beef%22) and see 50 different keto-friendly recipes that use it.
 

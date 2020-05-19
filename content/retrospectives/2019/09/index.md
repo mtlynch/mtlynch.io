@@ -17,14 +17,14 @@ date: '2019-09-06'
 
 At the start of each month, I [declare what I'd like to accomplish](/retrospectives/2019/08/#goals-for-next-month). Here's how I did against those goals:
 
-### Publish a new blog post on [mtlynch.io](https://mtlynch.io)
+### Publish a new blog post on [mtlynch.io](/)
 
 * **Result**: I published ["The Dumbest Task I Ever Outsourced."](/dumbest-task-i-ever-outsourced/)
 * **Grade**: A
 
 The article was a mostly-for-fun story about one of my early blunders with outsourcing. I like the way it came out, but it didn't attract many readers.
 
-I find myself "chasing the high" in wanting another hit article, as none of my blog posts have garnered much of a response since, ["My First Year as a Solo Developer,"](https://mtlynch.io/solo-developer-year-1/) published 7 months ago. My next article will be about hiring a content writer, which I imagine will be fairly niche. After that, I plan to write about how developers can improve their writing, and that may have broader appeal.
+I find myself "chasing the high" in wanting another hit article, as none of my blog posts have garnered much of a response since, ["My First Year as a Solo Developer,"](/solo-developer-year-1/) published 7 months ago. My next article will be about hiring a content writer, which I imagine will be fairly niche. After that, I plan to write about how developers can improve their writing, and that may have broader appeal.
 
 ### Publish an MVP for my [email copywriter tool idea](/retrospectives/2019/07/#slowing-down-on-the-email-tool-for-copywriters)
 
@@ -158,7 +158,7 @@ I highly recommend watching this video because I can't convey the full experienc
 
 ### What got done?
 
-* Published ["The Dumbest Task I Ever Outsourced"](/dumbest-task-i-ever-outsourced/) on [mtlynch.io](https://mtlynch.io).
+* Published ["The Dumbest Task I Ever Outsourced"](/dumbest-task-i-ever-outsourced/) on [mtlynch.io](/).
 * Earned a backlink for Is It Keto from a website with a high domain ranking.
 * Added 10 new articles to Is It Keto.
 * Made various tweaks to Is It Keto's UI to improve usability and SEO.
