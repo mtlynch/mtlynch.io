@@ -124,7 +124,7 @@ SCENES_CSV="${MEDIAGOBLIN_METADATA}/scenes.csv"
 SCENES_YAML="${MEDIAGOBLIN_METADATA}/scenes.yaml"
 ```
 
-If you're following along with my spreadsheet example, you can download it as a CSV 
+If you're following along with my spreadsheet example, you can download it as a CSV:
 
 ```bash
 CSV_URL="https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/export?format=csv&id=1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI&gid=401061703"
