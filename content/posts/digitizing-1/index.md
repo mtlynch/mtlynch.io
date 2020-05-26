@@ -156,13 +156,13 @@ Here's a video that compares the digitization company's capture with one of my o
 
 ## Step 2: Editing
 
-With home videos, about 90% of the footage is boring, 8% is entertaining, and 2% is amazing. That means after you digitize the tapes, there's still lots of work to do.
+With home videos, about 90% of the footage is boring, 8% is entertaining, and 2% is amazing. After you digitize the tapes, there's still lots of work to do.
 
 ### Editing with Adobe Premiere
 
-VHS tapes contain a long stream of different video clips mixed with dead air. To edit a tape, you have to identify where each clip starts and ends.
+VHS tapes contain a long stream of video clips mixed with dead air. To edit a tape, you have to identify where each clip starts and ends.
 
-For my editing, I used [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html), which costs less than $100 for a lifetime license. Its crucial feature for editing VHS tapes is the zoomable timeline. It allows you to find rough scene boundaries quickly and then zoom in to mark the exact video frame where a clip starts or ends.
+For my editing, I used [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html), which costs less than $100 for a lifetime license. Its crucial feature for editing VHS tapes is the zoomable timeline. It allows you to find rough scene boundaries quickly and then zoom in to find the exact video frame where a clip starts or ends.
 
 {{< img src="premiere-elements-timeline.jpg" alt="Screenshot of Adobe Premiere Elements' zoomable edit feature" caption="The invaluable zoomable edit timeline in Adobe Premiere Elements" maxWidth="1000px" hasBorder="true" >}}
 
@@ -172,17 +172,17 @@ The problem with Premiere is that it requires frequent starting and stopping. My
 1. Mark the boundaries of an individual clip.
 1. Export the clip.
 1. Wait 2-15 minutes until the export completes.
-1. Repeat steps 2-4 until the end of the tape.
+1. Repeat steps 2-4 until the tape ends.
 
-The long waits meant that I was constantly context-switching between video editing and some other task.
+The long waits meant that I was constantly context-switching between video editing and some other task, scrambling my focus for hours
 
-The other drawback was non-reproducibility. Fixing a small error was almost as hard as doing the entire thing from scratch. That bit me hard when I reached the video-sharing stage. Only then did I realize I should have been exporting the videos in a format that web browsers could stream natively. My options were to re-do the tedious process of exporting hundreds of clips by hand or to re-encode the exported videos to a different format, degrading their quality.
+The other drawback was non-reproducibility. Fixing a small error was almost as hard as doing the entire thing from scratch. That bit me hard when I reached the video-sharing stage. Only then did I realize I should have been exporting the videos in a format that web browsers could stream natively. My options were to restart the tedious process of exporting hundreds of clips or to re-encode the exported videos to another format, degrading their quality.
 
 ### Robo-editing
 
-After an embarrassing number of hours doing everything by hand, I wondered if I could simply throw artificial intelligence at the problem. Identifying clip boundaries seemed like a suitable machine learning task. I knew that accuracy with an automated solution would be less than perfect, but maybe it could do 80% of the work, and I'd fix the last 20% by hand.
+After an embarrassing number of hours doing everything by hand, I wondered if I could simply throw artificial intelligence at the problem. Identifying clip boundaries seemed like a suitable machine learning task. I knew that accuracywould be less than perfect, but maybe it could do 80% of the work, and I'd fix the last 20% manually.
 
-I experimented with a tool called [pyscenedetect](https://pyscenedetect.readthedocs.io/en/latest/), which analyzed video files and printed out the timecodes where the scene changes occur:
+I experimented with a tool called [pyscenedetect](https://pyscenedetect.readthedocs.io/en/latest/), which analyzes video files and prints out the timecodes where scene changes occur:
 
 ```bash
  $ docker run \
@@ -214,17 +214,15 @@ I experimented with a tool called [pyscenedetect](https://pyscenedetect.readthed
  ...
 ```
 
-It was indeed about 80% accurate, but checking the tool's work took up more time than it saved me. Nevertheless, pyscenedetect sparked one of my most important realizations of this entire project: identifying scene boundaries and exporting clips are separate tasks.
+It was indeed about 80% accurate, but checking the tool's work took more time than it saved me. Nevertheless, pyscenedetect sparked one of my most important realizations of this entire project: identifying scene boundaries and exporting clips are separate tasks.
 
 ### I remembered that I'm a programmer
 
-Until that point, I had thought of "editing" as everything I was doing in Adobe Premiere. Chopping out subclips of raw footage felt inextricably tied to finding clip boundaries because that's how Adobe Premiere presented it.
-
-When pyscenedetect printed out its table of metadata, it made me realize I could decouple scene finding from video exporting. That was a gamechanger.
+Until that point, I had thought of "editing" as everything I was doing in Adobe Premiere. Chopping out subclips of raw footage felt inextricably tied to finding clip boundaries because that's how Premiere presented it. When pyscenedetect printed out its table of metadata, it made me realize I could decouple scene finding from video exporting. That was a gamechanger.
 
 The reason that editing was so tedious and time-consuming was that I had to keep waiting for Premiere to export each clip. If I recorded the metadata in a spreadsheet and wrote a script that exported videos automatically, the editing process would fly by.
 
-What's more, spreadsheets dramatically broadened the type of information I captured. Initially, I stuffed metadata into the filename, but that's limiting and inflexible. Having an entire spreadsheet allowed me to catalog so much more about the clip like who's in it, when it was recorded, and any other data I want to present alongside the video when people watch it.
+What's more, spreadsheets dramatically expanded the type of information I captured. Initially, I stuffed metadata into the filename, but that's limiting and inflexible. Having an entire spreadsheet allowed me to catalog so much more about the clip like who's in it, when it was recorded, and any other data I want to present alongside the video when people watch it.
 
 {{< img src="spreadsheet.png" alt="Spreadsheet of home video metadata" caption="Capturing metadata about my home videos in a giant spreadsheet" maxWidth="750px" hasBorder="true" >}}
 
@@ -242,7 +240,7 @@ Here's a screen capture of what it looks like in action:
 
 At this point, I'd spent **hundreds** of hours tediously selecting clip boundaries in Premiere, hitting export, waiting a few minutes for it to complete, then starting over. Not only that, I had repeated this process several times on the same footage after discovering quality problems later on.
 
-Once I automated the clip chopping part, it was a massive weight off my shoulders. I didn't have to worry about forgetting metadata or picking the wrong output format. If I discovered a mistake after the fact, I could just tweak my script and rerun everything.
+Once I automated the clip slicing part, it was a massive weight off my shoulders. I didn't have to worry about forgetting metadata or picking the wrong output format. If I discovered a mistake after the fact, I could just tweak my script and rerun everything.
 
 ## Part two
 
