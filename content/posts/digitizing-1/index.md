@@ -74,7 +74,7 @@ Spoiler alert: really hard.
 
 The old family VCR was still in my dad's basement, so I asked him to dig it out next time we met for lunch. I bought a [cheap RCA to USB adaptor](https://amzn.to/2xQuyyQ) from Amazon, and I was off to the races.
 
-{{< img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://amzn.to/2xQuyyQ), the first of many A/V devices I purchased throughout this process." maxWidth="400px" hasBorder="true" >}}
+{{< img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://amzn.to/36AaH4b), the first of many A/V devices I purchased throughout this process." maxWidth="400px" hasBorder="true" >}}
 
 To process the video from the USB capture device, I used VirtualDub, which was a bit dated in 2012, but not *that* dated.
 
