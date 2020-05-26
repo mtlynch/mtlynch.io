@@ -6,6 +6,8 @@ tags:
 - digitizing
 hero_image: cover.jpg
 description: My journey to create a YouTube of memories from my family's old home videos.
+discuss_urls:
+  reddit: https://redd.it/gqxvxb
 ---
 For the last eight years, I've carried around this box of videotapes through four different apartments and one house. They're family home videos from my childhood.
 
