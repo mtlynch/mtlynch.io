@@ -108,7 +108,7 @@ Here's the part where Magic jumps, slowed to 1/5th speed:
 
 Audio correction alone took hours of tedious, maddening work. It finally occurred to me that I might avoid this headache if I chose something other than Amazon's cheapest video capture device. After a bit more research, I bought a new one:
 
-{{< img src="S-Video-capture.jpg" alt="GV-USB2 video capture device" caption="My second attempt at [purchasing a video capture device](https://amzn.to/2yyEltS)" maxWidth="300px" >}}
+{{< img src="S-Video-capture.jpg" alt="GV-USB2 video capture device" caption="My second attempt at [purchasing a video capture device](https://amzn.to/2X41Fth)" maxWidth="300px" >}}
 
 Even with the new device, there was still audio skew.
 
@@ -132,7 +132,7 @@ Troubleshooting my hardware was miserable. I'd haul all the equipment out of my 
 
 Oh, a random forum post from 2008 says to install some sketchy, unsigned Chinese device driver? It's a terrible idea, but I'm desperate. It doesn't fix the problem.
 
-I tried different capturing software. I bought a [special VHS tape](https://smile.amazon.com/gp/product/B000001ON6) to clean the magnetic heads of my VCR. I bought a [third capture device](https://amzn.to/2ZsVhgD). The results were always the same.
+I tried different capturing software. I bought a [special VHS tape](https://smile.amazon.com/gp/product/B000001ON6) to clean the magnetic heads of my VCR. I bought a [third capture device](https://amzn.to/36wyIsU). The results were always the same.
 
 Invariably, I'd give up, disconnect everything, and banish the equipment to my closet for another few months.
 
