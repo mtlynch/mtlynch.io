@@ -1,3 +1,5 @@
 public/
 resources/
 .sw?
+push-preview
+config-preview.toml

@@ -5,6 +5,9 @@
   <section class="container post">
     <article>
       <header>
+        {{ if .Page.Params.hero_image }}
+          <img src="{{ .Page.Params.hero_image }}">
+        {{ end }}
         <div class="post-title">
           <h1 class="title">{{ .Title }}</h1>
         </div>
