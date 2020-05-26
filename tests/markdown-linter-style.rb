@@ -35,6 +35,11 @@ exclude_rule 'MD034'
 # MD036 - Emphasis used instead of a header
 exclude_rule 'MD036'
 
+# MD040 Fenced code blocks should have a language specified
+# TODO: This should actually be enabled, but it causes the linter to complain
+# about valid block in /digitizing-2/
+exclude_rule 'MD040'
+
 # MD041 First line in file should be a top level header
 exclude_rule 'MD041'
 

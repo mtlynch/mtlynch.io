@@ -1,7 +1,8 @@
 {{ $src := .Get "src" }}
 {{ $caption := .Get "caption" }}
+{{ $maxWidth := .Get "maxWidth" }}
 
-<figure class="video">
+<figure class="video" {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}>
   <div class="video-inner">
     <video controls>
       <source src="{{ $src }}" type="video/mp4">
