@@ -98,7 +98,7 @@ Now that we have Selenium installed, it's time to create a Selenium script to ex
 * Making a comment on a video and checking that it displays
 * Creating a new user account
 
-For ClipBucket, I'm particularly interested in making sure videos upload correctly, so we'll need to test login and video upload. Unfortunately, ClipBucket uses a pretty heavyweight JavaScript pakage for managing uploads, so the normal Selenium APIs for uploading files don't work.
+For ClipBucket, I'm particularly interested in making sure videos upload correctly, so we'll need to test login and video upload. Unfortunately, ClipBucket uses a heavyweight JavaScript package for managing uploads, so the normal Selenium APIs for uploading files don't work.
 
 As an alternative, we'll use the ClipBucket modules diagnostic page. It displays ClipBucket's installed modules and displays an error message when any of the modules are not installed properly:
 
