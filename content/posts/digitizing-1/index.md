@@ -72,7 +72,7 @@ Spoiler alert: really hard.
 
 ### My first attempt at video capture
 
-The old family VCR was still in my dad's basement, so I asked him to dig it out next time we met for lunch. I bought a [cheap RCA to USB adaptor](https://amzn.to/2xQuyyQ) from Amazon, and I was off to the races.
+The old family VCR was still in my dad's basement, so I asked him to dig it out next time we met for lunch. I bought a [cheap RCA to USB adaptor](https://amzn.to/36AaH4b) from Amazon, and I was off to the races.
 
 {{< img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://amzn.to/36AaH4b), the first of many A/V devices I purchased throughout this process." maxWidth="400px" hasBorder="true" >}}
 
