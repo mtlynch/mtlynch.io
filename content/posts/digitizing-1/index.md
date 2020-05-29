@@ -4,6 +4,7 @@ date: "2020-05-26T00:00:00Z"
 tags:
 - pyscenedetect
 - digitizing
+aliases: [/my-eight-year-quest-to-digitize-45-videotapes/]
 hero_image: cover.jpg
 description: My journey to create a YouTube of memories from my family's old home videos.
 discuss_urls:
