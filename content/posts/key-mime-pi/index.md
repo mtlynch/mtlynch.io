@@ -19,11 +19,11 @@ TODO: Show video demo
   * Raspberry Pi Zero W
   * Raspberry Pi A and A+ *(verification needed)*
     * [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
+* Raspbian OS 10 (Buster) with SSH enabled
 * A USB cable
   * For the Pi 4: USB-C to USB-A (Male/Male)
   * For the Pi Zero W: microUSB to USB-A (Male/Male)
 * An Ethernet cable or a USB WiFi adapter
-* A MicroSD card with Raspbian OS (TODO version) or later and SSH enabled
 
 ## Connecting your Pi
 
@@ -46,8 +46,13 @@ PI_SSH_USERNAME="pi"      # Change to your Pi username
 ssh "${PI_SSH_USERNAME}@${PI_HOSTNAME}"
 
 # Install Key Mime Pi
-INSTALL_SCRIPT="TODO"
-curl -sSL "$INSTALL_SCRIPT" | sudo bash -
+git clone https://github.com/mtlynch/key-mime-pi.git
+cd key-mime-pi
+sudo ./enable-usb-hid
+python3 -m venv venv
+. venv/bin/activate
+pip install --requirement requirements.txt
+PORT=8888 ./app/main.py
 ```
 
 TODO: Do they have to restart?
