@@ -70,6 +70,21 @@ echo "- hosts: $PI_HOSTNAME
 ansible-playbook --inventory "$PI_HOSTNAME", install.yml
 ```
 
+## Verifying the driver is working
+
+This creates a device path at `/dev/hidg0`. To verify that it's installed correctly, try the following command:
+
+```bash
+TODO: Hex for the 'A' key
+echo -ne \\x05\\x01\\x09\\x06 > /dev/hidg0
+
+echo -ne "\0\0\xb\0\0\0\0\0" > /dev/hidg0 && \
+echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0 && \
+echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
+```
+
+The the machine your Pi is connected to should react as though 'Hi' was typed from the keyboard.
+
 ## Using Key Mime Pi
 
 After you run the install script, you should be able to access the Key Mime Pi web interface from your browser:
