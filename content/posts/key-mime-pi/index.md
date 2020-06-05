@@ -23,15 +23,17 @@ TODO: Show video demo
 * A USB cable
   * For the Pi 4: USB-C to USB-A (Male/Male)
   * For the Pi Zero W: microUSB to USB-A (Male/Male)
-* An Ethernet cable or a USB WiFi adapter
+* Alternate power source (optional)
+  * You can omit it for this tutorial, but your Pi will be more stable with proper power.
+  * TODO
 
 ## Connecting your Pi
 
-Connect the USB-A end of your USB cable into the device that will receive keyboard input. Plug the other end into your Pi's power port.
+Connect the USB-A end of your USB cable into the device that will receive keyboard input. If you don't have a separate power source, USB 3.0 provides more power, but USB 2.0 ports work in my tests as well.
 
 TODO: Photos
 
-Your Pi Zero should run without any issues, but some USB outlets output too little energy to support a Raspberry Pi 4. See the troubleshooting steps below. TODO: link
+If the USB port can't sufficiently power your Pi, jump to [Solving the power problem](#solving-the-power-problem).
 
 ## Preparing your Pi
 
@@ -52,14 +54,18 @@ sudo ./enable-usb-hid
 python3 -m venv venv
 . venv/bin/activate
 pip install --requirement requirements.txt
-PORT=8888 ./app/main.py
+PORT=8000 ./app/main.py
 ```
+
+This starts a Key Mime Pi web server at:
+
+* [http://raspberrypi:8000/](http://raspberrypi:8000/)
 
 TODO: Do they have to restart?
 
 ### Option 2: The Ansible way
 
-If you're an Ansible user, you can use my [Key Mime Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi):
+If you're an Ansible user, you can use my [Key Mime Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi) for a bit more of an elegant installation.
 
 ```bash
 PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
@@ -75,20 +81,25 @@ echo "- hosts: $PI_HOSTNAME
 ansible-playbook --inventory "$PI_HOSTNAME", install.yml
 ```
 
+This installs Key Mime Pi on your device as a service. When the playbook is complete, Key Mime Pi will appear at:
+
+* [http://raspberrypi:8000/](http://raspberrypi:8000/)
+
 ## Verifying the driver is working
 
 This creates a device path at `/dev/hidg0`. To verify that it's installed correctly, try the following command:
 
 ```bash
-TODO: Hex for the 'A' key
-echo -ne \\x05\\x01\\x09\\x06 > /dev/hidg0
-
 echo -ne "\0\0\xb\0\0\0\0\0" > /dev/hidg0 && \
-echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0 && \
-echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
+  echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0 && \
+  echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
 ```
 
-The the machine your Pi is connected to should react as though 'Hi' was typed from the keyboard.
+If everything is working, you should see the following output on the machine the Pi is connected to via USB:
+
+```
+hi
+```
 
 ## Using Key Mime Pi
 
@@ -110,11 +121,87 @@ There are other projects that use the Raspberry Pi to emulate a keyboard, but mo
 
 >TODO: Quote from *Coders at Work* where the guy talks about skipping the library and looking at the interfaces
 
-Rafael Medina did an excellent job of [explaining this interface](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports).
+The reads and writes to the interface are based on the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf), but that's a 97-page document, and it's quite dry and convoluted. Rafael Medina did an excellent job of [summarizing this protocol](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) in human-readable terms.
+
+The keyboard part of the spec is extremely simple. Keyboards send 8 byte messages called "reports" upon each keystroke.
+
+| Byte Index | Purpose |
+|------------|---------|
+| 0          | Modifier keys (Ctrl, Alt, Shift) |
+| 1          | Reserved for manufacturers |
+| 2          | Key 1   |
+| 3          | Key 2   |
+| 4          | Key 3   |
+| 5          | Key 4   |
+| 6          | Key 5   |
+| 7          | Key 6   |
+
+This means you can send up to 6 keystrokes in a single message as long as they're distinct keys:
+
+```bash
+echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
+  echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
+```
+
+```
+whatup
+```
+
+These messages indicate you've pressed the keys, but you also have to indicate when you release the keys. You do that by sending a message where all the key bytes are zero.
+
+For Key Mime Pi, I only emulate one keystroke at a time, so it's as simple as zeroing an 8-byte block and setting bytes 0 and 2.
 
 ### Translating from JavaScript to HID
 
 When you type in the browser, JavaScript generates key events for each keystroke. To emulate keystrokes in the Pi, you need to generate HID codes in the browser. HID codes are distinct from JavaScript's codes, but there's essentially a 1:1 mapping between the two, so translating between the two is simply a matter of mapping 200 key codes from JavaScript to USB HID.
+
+I just have a [lookup table](https://github.com/mtlynch/key-mime-pi/blob/904e56b6bf1f76da1abb85f654637da0e3c35fa3/app/js_to_hid.py#L32) like this:
+
+```python
+_JS_TO_HID_KEYCODES = {
+    3: 0x48,  # Pause / Break
+    8: 0x2a,  # Backspace / Delete
+    9: 0x2b,  # Tab
+    ...
+    65: 0x04,  # a
+    66: 0x05,  # b
+    67: 0x06,  # c
+    68: 0x07,  # d
+```
+
+## Solving the power problem
+
+The only port on the Pi that supports USB OTG is the power port, but standard USB 2.0 and USB 3.0 ports don't provide enough power to meet the Pi's requirements.
+
+| Raspberry Pi Model | Power requirements |
+| ------------------ | ------------------ |
+| Pi Zero W          | 5 V / 1.2 A        |
+| Pi 4               | 5 V / 3.0 A        |
+
+Regular USB ports produce less energy than that:
+
+| PC output port     | Power output       |
+|--------------------|--------------------|
+| USB 2.0            | 5 V / 0.5 A        |
+| USB 3.0            | 5 V / 0.9 A        |
+
+In my tests, the Pi works even when underpowered, but the system log included under-voltage warnings:
+
+```bash
+ $ sudo journalctl -xe | grep "Under-voltage"
+Jun 05 03:46:05 pikvm kernel: Under-voltage detected! (0x00050005)
+Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
+Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
+Jun 05 04:06:16 pikvm kernel: Under-voltage detected! (0x00050005)
+```
+
+TODO: Explain solution
+
+I solved this by purchasing the [Zero2Go Omini – Multi-Channel Power Supply](https://www.adafruit.com/product/4114). Pis also accept power through their GPIO pins, and the Zero2Go Omini connects to GPIO and accepts power from a microUSB cable. It's essentially a microUSB to  . This is a bummer because at $20
+
+{{<notice type="info">}}
+**Note**: This feels like overkill, but I haven't found a better solution. If anyone knows of a cheaper device that allows you to power the Pi through the GPIO pins, please let me know in the comments.
+{{</notice>}}
 
 ## Next step: embedding display output
 
@@ -122,25 +209,15 @@ Remote typing is fun, but it's a bit impractical. Generally when you're typing i
 
 My next step is to add hardware that can capture HDMI output so I can embed it in the page. That way, I'll be able to plug my Pi and a capture device into a headless server and have a virtual console in the browser. It will essentially be a low-cost, hackable [KVM over IP device](https://amzn.to/2ZVT51k).
 
-I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender device](https://amzn.to/3cxrYfI), but seamless browser integration needs a bit more work.
+I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender device](https://amzn.to/3cxrYfI), but I'm still working on a solution that puts everything in a single browser window.
 
 TODO: Demo of ffplay version
 
-## Pre-configured kits
+## Want a pre-configured kit?
 
-When I get in-browser display working, I'm considering selling pre-configured kits for around $180. I'll publish instructions here for constructing your own, but you're interested in a pre-made kit, sign up for my notification list here:
+When I get in-browser display working, I'm considering selling pre-configured kits for around $180. I'll publish instructions here for constructing your own, but if you'd like a pre-made kit, sign up for my notification list here:
 
 * [Raspberry Pi KVM Interest List](https://tinyletter.com/kvmpi-interest)
-
-## Troubleshooting
-
-### The USB port doesn't sufficiently power my Pi
-
-You can buy the [Zero2Go Omini – Multi-Channel Power Supply](https://www.adafruit.com/product/4114).
-
-{{<notice type="info">}}
-**Note**: This feels like overkill, but I haven't found a better solution. If anyone knows of a cheaper device that allows you to power the Pi through the GPIO pins, please let me know in the comments.
-{{</notice>}}
 
 ## Source code
 
@@ -151,7 +228,7 @@ Key Mime Pi's code is fully open source under the permissive [MIT license](https
 
 ## Acknowledgements
 
-* [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard): This was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
+* [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard) was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
 * [Fmstrat/diy-ipmi](https://github.com/Fmstrat/diy-ipmi) was an inspiration for this project and proved that it was possible to make a Pi function as a KVM over IP device.
-* [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) for providing the most readable explanation of the HID protocol I found.
+* [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) provided the most readable explanation of the HID protocol I found.
 * The Linux developers who added USB HID functionality
