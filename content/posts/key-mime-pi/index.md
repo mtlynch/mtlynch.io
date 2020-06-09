@@ -19,7 +19,7 @@ TODO: Show video demo
   * Raspberry Pi Zero W
   * Raspberry Pi A and A+ *(verification needed)*
     * [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
-* Raspbian OS 10 (Buster) with SSH enabled
+* Raspbian OS 9 (Stretch) or later, with SSH enabled
 * A USB cable
   * For the Pi 4: USB-C to USB-A (Male/Male)
   * For the Pi Zero W: microUSB to USB-A (Male/Male)
@@ -197,11 +197,13 @@ Jun 05 04:06:16 pikvm kernel: Under-voltage detected! (0x00050005)
 
 TODO: Explain solution
 
-I solved this by purchasing the [Zero2Go Omini – Multi-Channel Power Supply](https://www.adafruit.com/product/4114). Pis also accept power through their GPIO pins, and the Zero2Go Omini connects to GPIO and accepts power from a microUSB cable. It's essentially a microUSB to  . This is a bummer because at $20
+I solved this by purchasing a [3A USB wall charger](https://amzn.to/2YitxsN) and a [EVISWIY PL2303TA USB to TTL Serial Cable](https://amzn.to/2Yk1CIX).
 
-{{<notice type="info">}}
-**Note**: This feels like overkill, but I haven't found a better solution. If anyone knows of a cheaper device that allows you to power the Pi through the GPIO pins, please let me know in the comments.
-{{</notice>}}
+TODO: Photo of connection
+
+## Troubleshooting: bad cable
+
+One of the issues I ran into when testing this on a Pi Zero was a bad microUSB to USB-A cable. I'm not sure what was wrong with it, but when I used one of my cables, it just hung when I tried to write keystrokes. I tried switching to another microUSB to USB-A cable I had lying around, and that solved the problem.
 
 ## Next step: embedding display output
 
@@ -231,4 +233,4 @@ Key Mime Pi's code is fully open source under the permissive [MIT license](https
 * [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard) was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
 * [Fmstrat/diy-ipmi](https://github.com/Fmstrat/diy-ipmi) was an inspiration for this project and proved that it was possible to make a Pi function as a KVM over IP device.
 * [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) provided the most readable explanation of the HID protocol I found.
-* The Linux developers who added USB HID functionality
+* The Linux and Raspbian developers who added USB HID functionality.
