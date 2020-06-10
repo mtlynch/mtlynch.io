@@ -6,11 +6,15 @@ tags:
 - python
 description: TODO
 ---
-One of the interesting features of recent Raspberry Pi models is that they support USB on-the-go (USB OTG). That means that things that used to only be accessible to the kernel are now possible in user mode. It's supported on Raspberry Pi 4 and later as well as Pi Zero W and later. This means that the Pi can impersonate USB devices such as keyboards, thumbdrives, and microphones.
+The Raspberry Pi is a small, inexpensive computer, popular with hobbyists. A few years ago, my friend Jeet and I used one to build [a plant watering robot](https://mtlynch.io/greenpithumb/) that *kind of* worked.
+
+Recent versions of Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumbdrives, and microphones. To take advantage of this, I made a small web app that turns my Pi into a fake keyboard that I control through my web browser. I call it Key Mime Pi.
+
+This post demonstrates how Key Mime Pi works and how you can build one for yourself.
 
 ## Demo
 
-TODO: Show video demo
+{{< youtube EYMGQxiu-kI >}}
 
 ## What you'll need
 
@@ -19,7 +23,8 @@ TODO: Show video demo
   * Raspberry Pi Zero W
   * Raspberry Pi A and A+ *(verification needed)*
     * [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
-* Raspbian OS 9 (Stretch) or later, with SSH enabled
+* [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
+  * Stretch or later
 * A USB cable
   * For the Pi 4: USB-C to USB-A (Male/Male)
   * For the Pi Zero W: microUSB to USB-A (Male/Male)
@@ -27,19 +32,30 @@ TODO: Show video demo
   * You can omit it for this tutorial, but your Pi will be more stable with proper power.
   * TODO
 
+## Install Raspberry Pi OS Lite
+
+To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) on a microSD card. Enable SSH access by placing a file called `ssh` on the microSD's boot partition. Insert the microSD card into your Pi device.
+
 ## Connecting your Pi
 
-Connect the USB-A end of your USB cable into the device that will receive keyboard input. If you don't have a separate power source, USB 3.0 provides more power, but USB 2.0 ports work in my tests as well.
+Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the microUSB port labeled "data."
 
-TODO: Photos
+{{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the data microUSB port.">}}
+  {{< img src="pi4-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="400px" >}}
+  {{< img src="pi-zero-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="445px" >}}
+{{</gallery>}}
 
-If the USB port can't sufficiently power your Pi, jump to [Solving the power problem](#solving-the-power-problem).
+Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
 
-## Preparing your Pi
+Your Pi should draw power from the computer's USB port and power up. If the USB port can't sufficiently power your Pi, jump to "[Solving the power problem](#solving-the-power-problem)."
 
-You have two options for installing it. You can do it using plain old bash, which requires no external
+## Install Key Mime Pi
+
+You have two options for installing Key Mime Pi. You can do it using plain old bash, which requires no external tools. Or, for a touch of class, you can install it using [Ansible](https://docs.ansible.com/ansible/latest/index.html), my favorite open source configuration management tool.
 
 ### Option 1: The pure bash way
+
+From a bash shell, enter the following commands to connect to your Pi and configure it for USB device emulation:
 
 ```bash
 # SSH into your Pi
@@ -47,10 +63,25 @@ PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
 PI_SSH_USERNAME="pi"      # Change to your Pi username
 ssh "${PI_SSH_USERNAME}@${PI_HOSTNAME}"
 
+# Install pre-requisites
+sudo apt-get update && \
+  sudo apt-get install -y \
+    git \
+    python-pip \
+    python3-venv
+
 # Install Key Mime Pi
 git clone https://github.com/mtlynch/key-mime-pi.git
 cd key-mime-pi
 sudo ./enable-usb-hid
+sudo reboot
+```
+
+Allow the Pi to reboot, then SSH in again and run the Key Mime Pi server:
+
+```bash
+ssh "${PI_SSH_USERNAME}@${PI_HOSTNAME}"
+cd key-mime-pi
 python3 -m venv venv
 . venv/bin/activate
 pip install --requirement requirements.txt
@@ -61,14 +92,13 @@ This starts a Key Mime Pi web server at:
 
 * [http://raspberrypi:8000/](http://raspberrypi:8000/)
 
-TODO: Do they have to restart?
-
 ### Option 2: The Ansible way
 
-If you're an Ansible user, you can use my [Key Mime Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi) for a bit more of an elegant installation.
+If you're an Ansible user, you can use my [Key Mime Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi) for better automation:
 
 ```bash
 PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
+PI_SSH_USERNAME="pi"      # Change to your Pi username
 
 # Install the Key Mime Pi Ansible role
 ansible-galaxy install mtlynch.keymimepi
@@ -78,28 +108,29 @@ echo "- hosts: $PI_HOSTNAME
   roles:
     - role: mtlynch.keymimepi" > install.yml
 
-ansible-playbook --inventory "$PI_HOSTNAME", install.yml
+ansible-playbook \
+  --inventory "$PI_HOSTNAME", \
+  --user "$PI_SSH_USERNAME" \
+  --become \
+  --become-method sudo \
+  --ask-pass \
+  --ask-become-pass \
+  install.yml
+
+# Reboot the Pi
+ansible \
+  "$PI_HOSTNAME" \
+  -a "/sbin/reboot" \
+  --inventory "$PI_HOSTNAME", \
+  --user "$PI_SSH_USERNAME" \
+  --ask-pass \
+  --become \
+  --become-method sudo
 ```
 
-This installs Key Mime Pi on your device as a service. When the playbook is complete, Key Mime Pi will appear at:
+This installs Key Mime Pi on your device as a service and reboots the device. When your Pi boots up again, Key Mime Pi will appear at:
 
 * [http://raspberrypi:8000/](http://raspberrypi:8000/)
-
-## Verifying the driver is working
-
-This creates a device path at `/dev/hidg0`. To verify that it's installed correctly, try the following command:
-
-```bash
-echo -ne "\0\0\xb\0\0\0\0\0" > /dev/hidg0 && \
-  echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0 && \
-  echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
-```
-
-If everything is working, you should see the following output on the machine the Pi is connected to via USB:
-
-```
-hi
-```
 
 ## Using Key Mime Pi
 
@@ -107,7 +138,9 @@ After you run the install script, you should be able to access the Key Mime Pi w
 
 * [http://raspberrypi:8000](http://raspberrypi:8000)
 
-Of course, change the URL based on whatever your Pi's hostname is.
+If you type into your browser, you should see the keystrokes appear in the machine connected to the Pi.
+
+TODO: Pi photo
 
 ## How it works
 
@@ -117,13 +150,9 @@ The real magic here comes from [Linux's USB Human Interface Device (HID) gadget 
 
 The [key-mime-pi configuration script](https://github.com/mtlynch/ansible-role-key-mime-pi/blob/master/files/enable-rpi-hid) creates a file path at `/dev/hidg0`, which any application can read or write to and the OS treats it the same way it would signals to and from a physical keyboard.
 
-There are other projects that use the Raspberry Pi to emulate a keyboard, but most of them build on top of Linux's [USB HID sample application](https://www.kernel.org/doc/html/latest/usb/gadget_hid.html). It's 250 lines of C++ and not very extensible. But that application is unnecessary if you understand how to read and write from `/dev/hidg0`.
+USB keyboards send signals according to the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf). At 97 pages of keycodes and tables, it's a bit of a slow read, but the protocol for keyboards is dead simple.
 
->TODO: Quote from *Coders at Work* where the guy talks about skipping the library and looking at the interfaces
-
-The reads and writes to the interface are based on the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf), but that's a 97-page document, and it's quite dry and convoluted. Rafael Medina did an excellent job of [summarizing this protocol](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) in human-readable terms.
-
-The keyboard part of the spec is extremely simple. Keyboards send 8 byte messages called "reports" upon each keystroke.
+Upon each keystroke, keyboards send 8 byte messages called "reports."
 
 | Byte Index | Purpose |
 |------------|---------|
@@ -136,7 +165,18 @@ The keyboard part of the spec is extremely simple. Keyboards send 8 byte message
 | 6          | Key 5   |
 | 7          | Key 6   |
 
-This means you can send up to 6 keystrokes in a single message as long as they're distinct keys:
+Sending the message "Hi" looks like this:
+
+```bash
+# H (Right shift + h)
+echo -ne "\x20\0\xb\0\0\0\0\0" > /dev/hidg0
+# i
+echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0
+# Release all keys
+echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
+```
+
+The above example sent one keystroke at a time, but HID supports six keys. This means you can send up to 6 keystrokes in a single message as long as they're distinct keys:
 
 ```bash
 echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
@@ -147,15 +187,15 @@ echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
 whatup
 ```
 
-These messages indicate you've pressed the keys, but you also have to indicate when you release the keys. You do that by sending a message where all the key bytes are zero.
-
-For Key Mime Pi, I only emulate one keystroke at a time, so it's as simple as zeroing an 8-byte block and setting bytes 0 and 2.
+In addition to signalling key presses, keyboards must also indicate key releases. An 8-byte block of zeroes indicates that no keys are active.
 
 ### Translating from JavaScript to HID
 
-When you type in the browser, JavaScript generates key events for each keystroke. To emulate keystrokes in the Pi, you need to generate HID codes in the browser. HID codes are distinct from JavaScript's codes, but there's essentially a 1:1 mapping between the two, so translating between the two is simply a matter of mapping 200 key codes from JavaScript to USB HID.
+When you type in the browser, JavaScript generates key events for each keystroke. Wes Bos' [keycode.info](https://keycode.info/) features a wonderful demonstration of how this works.
 
-I just have a [lookup table](https://github.com/mtlynch/key-mime-pi/blob/904e56b6bf1f76da1abb85f654637da0e3c35fa3/app/js_to_hid.py#L32) like this:
+To emulate keystrokes in the Pi, you need to generate HID codes in the browser.
+
+HID codes are distinct from JavaScript's codes, but there's a mostly 1:1 mapping between the two. To translate the two, I just created a [lookup table](https://github.com/mtlynch/key-mime-pi/blob/904e56b6bf1f76da1abb85f654637da0e3c35fa3/app/js_to_hid.py#L32) like this:
 
 ```python
 _JS_TO_HID_KEYCODES = {
@@ -168,6 +208,14 @@ _JS_TO_HID_KEYCODES = {
     67: 0x06,  # c
     68: 0x07,  # d
 ```
+
+The Key Mime Pi server listens to JavaScript keycode events from the browser, translates them into HID codes, then sends them to the Pi's HID interface at `/dev/hidg0`.
+
+1. User hits a key in the browser.
+1. JavaScript on the page sends the JavaScript keycode to the Key Mime Pi server on the Pi.
+1. The Key Mime Pi server translates the JavaScript keycode to its equivalent HID code.
+1. The Key Mime Pi server sends this keycode to the HID interface at `/dev/hidg0`.
+1. The computer connected to the Pi's USB cable receives this as a USB signal from a keyboard and accepts the keystroke, causing a character to appear on screen.
 
 ## Solving the power problem
 
@@ -192,16 +240,37 @@ In my tests, the Pi works even when underpowered, but the system log included un
 Jun 05 03:46:05 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
-Jun 05 04:06:16 pikvm kernel: Under-voltage detected! (0x00050005)
 ```
 
 TODO: Explain solution
 
 I solved this by purchasing a [3A USB wall charger](https://amzn.to/2YitxsN) and a [EVISWIY PL2303TA USB to TTL Serial Cable](https://amzn.to/2Yk1CIX).
 
-TODO: Photo of connection
 
-## Troubleshooting: bad cable
+{{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" caption="I keep the Pi sufficiently powered with a [3A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
+
+## Troubleshoting
+
+
+### Verifying the driver is working
+
+This creates a device path at `/dev/hidg0`. To verify that it's installed correctly, try the following command:
+
+```bash
+echo -ne "\0\0\xb\0\0\0\0\0" > /dev/hidg0 && \
+  echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0 && \
+  echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
+```
+
+If everything is working, you should see the following output on the machine the Pi is connected to via USB:
+
+```
+hi
+```
+
+If that fails, the problem is with the USB HID interface. If you can successfully generate keystrokes from the command line but not in the browser, that suggests a bug in the Key Mime Pi web app. [File a bug on Github](https://github.com/mtlynch/key-mime-pi/issues/new), so that I can help you diagnose it.
+
+### Writes to HID interface hang
 
 One of the issues I ran into when testing this on a Pi Zero was a bad microUSB to USB-A cable. I'm not sure what was wrong with it, but when I used one of my cables, it just hung when I tried to write keystrokes. I tried switching to another microUSB to USB-A cable I had lying around, and that solved the problem.
 
@@ -209,7 +278,7 @@ One of the issues I ran into when testing this on a Pi Zero was a bad microUSB t
 
 Remote typing is fun, but it's a bit impractical. Generally when you're typing into a system, you want to see what appears in the monitor.
 
-My next step is to add hardware that can capture HDMI output so I can embed it in the page. That way, I'll be able to plug my Pi and a capture device into a headless server and have a virtual console in the browser. It will essentially be a low-cost, hackable [KVM over IP device](https://amzn.to/2ZVT51k).
+My next step is to add hardware that can capture HDMI output so I can embed it in the page. That way, I'll be able to plug my Pi into a headless server to create a virtual console in the browser. It will essentially be a low-cost, hackable [KVM over IP device](https://amzn.to/2ZVT51k).
 
 I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender device](https://amzn.to/3cxrYfI), but I'm still working on a solution that puts everything in a single browser window.
 
@@ -217,7 +286,7 @@ TODO: Demo of ffplay version
 
 ## Want a pre-configured kit?
 
-When I get in-browser display working, I'm considering selling pre-configured kits for around $180. I'll publish instructions here for constructing your own, but if you'd like a pre-made kit, sign up for my notification list here:
+When I get in-browser display working, I'm considering selling pre-configured kits for around $170. I'll publish instructions here for constructing your own, but if you'd like a pre-made kit, sign up for my notification list here:
 
 * [Raspberry Pi KVM Interest List](https://tinyletter.com/kvmpi-interest)
 
@@ -233,4 +302,4 @@ Key Mime Pi's code is fully open source under the permissive [MIT license](https
 * [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard) was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
 * [Fmstrat/diy-ipmi](https://github.com/Fmstrat/diy-ipmi) was an inspiration for this project and proved that it was possible to make a Pi function as a KVM over IP device.
 * [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) provided the most readable explanation of the HID protocol I found.
-* The Linux and Raspbian developers who added USB HID functionality.
+* Thanks, of course, to the Linux and Raspberry Pi OS developers who made USB gadget functionality possible.
