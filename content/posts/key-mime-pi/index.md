@@ -1,10 +1,13 @@
 ---
 title: "Key Mime Pi: Turn Your Raspberry Pi into a Remote Keyboard"
-date: "2020-06-21T00:00:00Z"
+date: "2020-06-11T00:00:00Z"
 tags:
 - raspberry pi
 - python
+- ansible
 description: TODO
+images:
+- key-mime-pi/cover.jpg
 ---
 The Raspberry Pi is a small, inexpensive computer, popular with hobbyists. A few years ago, my friend Jeet and I used one to build [a plant watering robot](https://mtlynch.io/greenpithumb/) that *kind of* worked.
 
@@ -19,26 +22,30 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 ## What you'll need
 
 * A Raspberry Pi that supports USB OTG:
-  * Raspberry Pi 4 (all variants)
-  * Raspberry Pi Zero W
+  * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants)
+  * [Raspberry Pi Zero W](https://amzn.to/2BMgOXN)
   * Raspberry Pi A and A+ *(verification needed)*
     * [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
-* [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
+* [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (aka Raspbian)
   * Stretch or later
 * A USB cable
-  * For the Pi 4: USB-C to USB-A (Male/Male)
-  * For the Pi Zero W: microUSB to USB-A (Male/Male)
+  * For the Pi 4: [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
+  * For the Pi Zero W: [microUSB to USB-A](https://amzn.to/2B08iE5) (Male/Male)
 * Alternate power source (optional)
-  * You can omit it for this tutorial, but your Pi will be more stable with proper power.
-  * TODO
+  * [USB to TTL serial cable](https://amzn.to/3cVkuTT)
+  * [3A USB wall charger](https://amzn.to/3hal8Ax)
 
 ## Install Raspberry Pi OS Lite
 
-To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) on a microSD card. Enable SSH access by placing a file called `ssh` on the microSD's boot partition. Insert the microSD card into your Pi device.
+To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) on a microSD card.
+
+{{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work.">}}
+
+Enable SSH access by placing a file called `ssh` on the microSD's boot partition, and insert the microSD card into your Pi device.
 
 ## Connecting your Pi
 
-Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the microUSB port labeled "data."
+Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the microUSB port labeled "USB."
 
 {{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the data microUSB port.">}}
   {{< img src="pi4-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="400px" >}}
@@ -96,7 +103,7 @@ This starts a Key Mime Pi web server at:
 
 ### Option 2: The Ansible way
 
-If you're an Ansible user, you can use my [Key Mime Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi) for better automation:
+If you're an Ansible user, you can use my [Key Mime Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi) for better automation. The following commands install Key Mime Pi on your device as a [systemd service](https://wiki.archlinux.org/index.php/systemd):
 
 ```bash
 PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
@@ -117,7 +124,6 @@ ansible-playbook \
   --become \
   --become-method sudo \
   --ask-pass \
-  --ask-become-pass \
   install.yml
 
 # Reboot the Pi
@@ -131,13 +137,12 @@ ansible \
   --become-method sudo
 ```
 
-This installs Key Mime Pi on your device as a service and reboots the device. When your Pi boots up again, Key Mime Pi will appear at:
-
-* [http://raspberrypi:8000/](http://raspberrypi:8000/)
 
 ## Using Key Mime Pi
 
-After you run the install script, you should be see a screen like this:
+After you run the install script, Key Mime Pi will be available at:
+
+* [http://raspberrypi:8000/](http://raspberrypi:8000/)
 
 {{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" maxWidth="650px">}}
 
@@ -153,9 +158,9 @@ The real magic here comes from [Linux's USB Human Interface Device (HID) gadget 
 
 The [key-mime-pi configuration script](https://github.com/mtlynch/ansible-role-key-mime-pi/blob/master/files/enable-rpi-hid) creates a file path at `/dev/hidg0`, which any application can read or write to and the OS treats it the same way it would signals to and from a physical keyboard.
 
-USB keyboards send signals according to the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf). At 97 pages of keycodes and tables, it's a bit of a slow read, but the protocol for keyboards is dead simple.
+To mimic a keyboard, the Pi has to communicate according to the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf). At 97 pages of keycodes and tables, that document is a bit of a slog, but it turns out that the protocol for keyboards is dead simple.
 
-Upon each keystroke, keyboards send an 8-byte message called a "report."
+Upon each keystroke, the keyboard sends an 8-byte message called a "report."
 
 | Byte Index | Purpose |
 |------------|---------|
@@ -181,7 +186,7 @@ echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
 
 In addition to signalling key presses, keyboards must also indicate key releases. An 8-byte block of zeroes indicates that no keys are active.
 
-The above example sent one keystroke at a time, but HID supports six keys. This means you can send up to six keystrokes in a single message as long as they're distinct keys:
+The above example sent one keystroke at a time, but HID reports have space for six keys. This means you can send up to six keystrokes in a single message as long as they're distinct keys:
 
 ```bash
 echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
@@ -222,7 +227,7 @@ Here's how it works from end to end:
 
 ## Solving the power problem
 
-In my tests, a PC's USB port output enough electricity to power the Pi, but the system log included under-voltage warnings:
+In my tests, USB ports from computers produced enough electricity to power the Pi, but under-voltage warnings appeared frequently in the system log:
 
 ```bash
  $ sudo journalctl -xe | grep "Under-voltage"
@@ -231,7 +236,7 @@ Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
 ``` 
 
-These warnings appear because standard USB 2.0 and USB 3.0 ports provide insufficient power to meet the Pi's requirements.
+The Pi was correctly detecting that standard USB 2.0 and USB 3.0 ports provide insufficient power to meet the Pi's requirements.
 
 | Raspberry Pi Model | Power requirements |
 | ------------------ | ------------------ |
@@ -247,7 +252,7 @@ Standard USB ports come up short:
 
 The Pi still runs even when it's underpowered, but running an underpowered Pi is bound to create issues sooner or later.
 
-I solved this by purchasing a [3A USB wall charger](https://amzn.to/2YitxsN) and a [EVISWIY PL2303TA USB to TTL Serial Cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, which include alternative power inputs.
+I solved this by purchasing a [3A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 A of electricity.
 
 {{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" caption="I keep the Pi sufficiently powered with a [3A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
 
