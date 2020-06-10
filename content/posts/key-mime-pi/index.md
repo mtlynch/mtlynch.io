@@ -61,6 +61,8 @@ From a bash shell, enter the following commands to connect to your Pi and config
 # SSH into your Pi
 PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
 PI_SSH_USERNAME="pi"      # Change to your Pi username
+
+# Connect to the Pi (default password is "raspberry")
 ssh "${PI_SSH_USERNAME}@${PI_HOSTNAME}"
 
 # Install pre-requisites
@@ -108,6 +110,7 @@ echo "- hosts: $PI_HOSTNAME
   roles:
     - role: mtlynch.keymimepi" > install.yml
 
+# Install all software (default password is "raspberry")
 ansible-playbook \
   --inventory "$PI_HOSTNAME", \
   --user "$PI_SSH_USERNAME" \
@@ -120,7 +123,7 @@ ansible-playbook \
 # Reboot the Pi
 ansible \
   "$PI_HOSTNAME" \
-  -a "/sbin/reboot" \
+  -m reboot \
   --inventory "$PI_HOSTNAME", \
   --user "$PI_SSH_USERNAME" \
   --ask-pass \
@@ -134,13 +137,13 @@ This installs Key Mime Pi on your device as a service and reboots the device. Wh
 
 ## Using Key Mime Pi
 
-After you run the install script, you should be able to access the Key Mime Pi web interface from your browser:
+After you run the install script, you should be see a screen like this:
 
-* [http://raspberrypi:8000](http://raspberrypi:8000)
+{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" maxWidth="650px">}}
 
-If you type into your browser, you should see the keystrokes appear in the machine connected to the Pi.
+If you type into your browser, the keys you type will appear on the machine connected to the Pi.
 
-TODO: Pi photo
+{{<img src="key-mime-pi-usage.jpg" alt="Key Mime Pi transmitting keystrokes from the browser" caption="Key Mime Pi allows you to send keystrokes through the browser to a remote computer.">}}
 
 ## How it works
 
@@ -152,7 +155,7 @@ The [key-mime-pi configuration script](https://github.com/mtlynch/ansible-role-k
 
 USB keyboards send signals according to the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf). At 97 pages of keycodes and tables, it's a bit of a slow read, but the protocol for keyboards is dead simple.
 
-Upon each keystroke, keyboards send 8 byte messages called "reports."
+Upon each keystroke, keyboards send an 8-byte message called a "report."
 
 | Byte Index | Purpose |
 |------------|---------|
@@ -165,7 +168,7 @@ Upon each keystroke, keyboards send 8 byte messages called "reports."
 | 6          | Key 5   |
 | 7          | Key 6   |
 
-Sending the message "Hi" looks like this:
+Sending the keys for "Hi" looks like this:
 
 ```bash
 # H (Right shift + h)
@@ -176,7 +179,9 @@ echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0
 echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
 ```
 
-The above example sent one keystroke at a time, but HID supports six keys. This means you can send up to 6 keystrokes in a single message as long as they're distinct keys:
+In addition to signalling key presses, keyboards must also indicate key releases. An 8-byte block of zeroes indicates that no keys are active.
+
+The above example sent one keystroke at a time, but HID supports six keys. This means you can send up to six keystrokes in a single message as long as they're distinct keys:
 
 ```bash
 echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
@@ -187,15 +192,11 @@ echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
 whatup
 ```
 
-In addition to signalling key presses, keyboards must also indicate key releases. An 8-byte block of zeroes indicates that no keys are active.
-
 ### Translating from JavaScript to HID
 
-When you type in the browser, JavaScript generates key events for each keystroke. Wes Bos' [keycode.info](https://keycode.info/) features a wonderful demonstration of how this works.
+When you type in the browser, JavaScript generates key events for each keystroke. The website [keycode.info](https://keycode.info) provides a simple demonstration of how this works.
 
-To emulate keystrokes in the Pi, you need to generate HID codes in the browser.
-
-HID codes are distinct from JavaScript's codes, but there's a mostly 1:1 mapping between the two. To translate the two, I just created a [lookup table](https://github.com/mtlynch/key-mime-pi/blob/904e56b6bf1f76da1abb85f654637da0e3c35fa3/app/js_to_hid.py#L32) like this:
+JavaScript key events include keycodes, but they're distinct from HID keycodes. Fortunately, there's a mostly 1:1 mapping between the two. To translate the two, I just created a [lookup table](https://github.com/mtlynch/key-mime-pi/blob/904e56b6bf1f76da1abb85f654637da0e3c35fa3/app/js_to_hid.py#L32) like this:
 
 ```python
 _JS_TO_HID_KEYCODES = {
@@ -211,46 +212,46 @@ _JS_TO_HID_KEYCODES = {
 
 The Key Mime Pi server listens to JavaScript keycode events from the browser, translates them into HID codes, then sends them to the Pi's HID interface at `/dev/hidg0`.
 
+Here's how it works from end to end:
+
 1. User hits a key in the browser.
 1. JavaScript on the page sends the JavaScript keycode to the Key Mime Pi server on the Pi.
 1. The Key Mime Pi server translates the JavaScript keycode to its equivalent HID code.
-1. The Key Mime Pi server sends this keycode to the HID interface at `/dev/hidg0`.
+1. The Key Mime Pi server sends the HID code to the HID interface at `/dev/hidg0`.
 1. The computer connected to the Pi's USB cable receives this as a USB signal from a keyboard and accepts the keystroke, causing a character to appear on screen.
 
 ## Solving the power problem
 
-The only port on the Pi that supports USB OTG is the power port, but standard USB 2.0 and USB 3.0 ports don't provide enough power to meet the Pi's requirements.
-
-| Raspberry Pi Model | Power requirements |
-| ------------------ | ------------------ |
-| Pi Zero W          | 5 V / 1.2 A        |
-| Pi 4               | 5 V / 3.0 A        |
-
-Regular USB ports produce less energy than that:
-
-| PC output port     | Power output       |
-|--------------------|--------------------|
-| USB 2.0            | 5 V / 0.5 A        |
-| USB 3.0            | 5 V / 0.9 A        |
-
-In my tests, the Pi works even when underpowered, but the system log included under-voltage warnings:
+In my tests, a PC's USB port output enough electricity to power the Pi, but the system log included under-voltage warnings:
 
 ```bash
  $ sudo journalctl -xe | grep "Under-voltage"
 Jun 05 03:46:05 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
-```
+``` 
 
-TODO: Explain solution
+These warnings appear because standard USB 2.0 and USB 3.0 ports provide insufficient power to meet the Pi's requirements.
 
-I solved this by purchasing a [3A USB wall charger](https://amzn.to/2YitxsN) and a [EVISWIY PL2303TA USB to TTL Serial Cable](https://amzn.to/2Yk1CIX).
+| Raspberry Pi Model | Power requirements |
+| ------------------ | ------------------ |
+| Pi Zero W          | 5 V / 1.2 A        |
+| Pi 4               | 5 V / 3.0 A        |
 
+Standard USB ports come up short:
+
+| USB Port Type      | Power output       |
+|--------------------|--------------------|
+| USB 2.0            | 5 V / 0.5 A        |
+| USB 3.0            | 5 V / 0.9 A        |
+
+The Pi still runs even when it's underpowered, but running an underpowered Pi is bound to create issues sooner or later.
+
+I solved this by purchasing a [3A USB wall charger](https://amzn.to/2YitxsN) and a [EVISWIY PL2303TA USB to TTL Serial Cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, which include alternative power inputs.
 
 {{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" caption="I keep the Pi sufficiently powered with a [3A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
 
-## Troubleshoting
-
+## Troubleshooting
 
 ### Verifying the driver is working
 
@@ -282,7 +283,7 @@ My next step is to add hardware that can capture HDMI output so I can embed it i
 
 I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender device](https://amzn.to/3cxrYfI), but I'm still working on a solution that puts everything in a single browser window.
 
-TODO: Demo of ffplay version
+{{<img src="ffplay-key-mime-pi.jpg" alt="Screenshot of Key Mime Pi showing the remote machine's screen" caption="I can view the remote machine's monitor output using an [HDMI extender device](https://amzn.to/3cxrYfI), but I'm still working on integrating everything into the browser.">}}
 
 ## Want a pre-configured kit?
 
