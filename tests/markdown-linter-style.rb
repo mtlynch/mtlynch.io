@@ -9,6 +9,11 @@ exclude_rule 'MD002'
 # about valid markers in /stripe-recording-its-customers/
 exclude_rule 'MD004'
 
+# Otherwise, linter complains about unordered lists embedded within ordered
+# lists.
+# MD005 Inconsistent indentation for list items at the same level
+exclude_rule 'MD005'
+
 # MD013 - Line length.
 exclude_rule 'MD013'
 
