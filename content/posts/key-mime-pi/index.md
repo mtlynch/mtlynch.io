@@ -131,7 +131,6 @@ ansible \
   --become-method sudo
 ```
 
-
 ## Using Key Mime Pi
 
 After you run the install script, Key Mime Pi will be available at:
@@ -230,7 +229,7 @@ In my tests, USB ports from computers produced enough electricity to power the P
 Jun 05 03:46:05 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
 Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
-``` 
+```
 
 The Pi was correctly detecting that standard USB 2.0 and USB 3.0 ports provide insufficient power to meet the Pi's requirements.
 
