@@ -57,7 +57,7 @@ The first half of the book focuses on the software development parts of his life
 * *Prince of Persia* was almost a commercial flop due to inadequate support from Broderbund's marketing department.
   * Despite glowing reviews from critics and players, *Prince of Persia* sold poorly for almost a full year after release.
   * Broderbund's marketing department constantly clashed with Mechner and withheld investment in the game.
-    * *[**Ed**: Marketing was a female-dominated department, so I wonder if this was fallout from female employees' concerns about the game's anti-feminist cover art.]*
+    * *[**Ed**: Marketing was a female-dominated department, so I wonder if this was fallout from female employees' concerns about the game's cover art.]*
   * Sales finally turned around after personnel changes in the marketing department brought people who supported the game.
 
 ### Early computer game development
