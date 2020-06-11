@@ -8,6 +8,8 @@ tags:
 description: Using the Pi as a USB gadget, I can impersonate a keyboard and make it type whatever I want through the web browser.
 images:
 - key-mime-pi/cover.jpg
+discuss_urls:
+  reddit: https://redd.it/h0yg3d
 ---
 Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [Key Mime Pi](https://github.com/mtlynch/key-mime-pi.git).
 
@@ -275,7 +277,7 @@ If that fails, the problem is with the USB HID interface. If you can successfull
 
 ### Writes to HID interface hang
 
-When testing Key Mime Pi on the Pi Zero W, I ran into a case where writes to `/dev/hidg0` would hang indefinitely. I tried a different Micro-USB to USB-A cable, and the problem went away. I suspect that the first cable was either damaged or supported power only and not data. If you run into hanging writes to `/dev/hidg0`, try a USB cable that supports data transfer (most USB cables do).
+When testing Key Mime Pi on the Pi Zero W, I ran into a case where writes to `/dev/hidg0` hung indefinitely. I tried a different Micro-USB to USB-A cable, and the problem went away. I suspect that the first cable was either damaged or supported power only and not data. If you run into hanging writes to `/dev/hidg0`, try a USB cable that supports data transfer (most USB cables do).
 
 ## Next step: embedding display output
 
