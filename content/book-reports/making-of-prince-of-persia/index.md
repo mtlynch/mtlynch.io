@@ -80,5 +80,5 @@ While diagnosing problems with *Prince of Persia*, Mechner surveys the popular g
 
 1. A glance at the screen is all you need to identify how much progress you've made.
 1. On the path to your ultimate goal, there are smaller setbacks and successes.
-    * e.g., clearing a difficult area in *Pac-Man*
+   * e.g., clearing a difficult area in *Pac-Man*
 1. The player controls the pace and chooses when they want to progress into a high tension part of the game.
