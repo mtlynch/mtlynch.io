@@ -166,12 +166,12 @@ Upon each keystroke, the keyboard sends an 8-byte message called a "report."
 |------------|---------|
 | 0          | Modifier keys (Ctrl, Alt, Shift) |
 | 1          | Reserved for manufacturers |
-| 2          | Key 1   |
-| 3          | Key 2   |
-| 4          | Key 3   |
-| 5          | Key 4   |
-| 6          | Key 5   |
-| 7          | Key 6   |
+| 2          | Key #1   |
+| 3          | Key #2   |
+| 4          | Key #3   |
+| 5          | Key #4   |
+| 6          | Key #5   |
+| 7          | Key #6   |
 
 Sending the keys for "Hi" looks like this:
 
