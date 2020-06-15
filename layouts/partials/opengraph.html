@@ -13,6 +13,8 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ if $.Params.hero_image }}
 <meta property="og:image" content="{{ printf "%s%s" .Permalink $.Params.hero_image }}" />
+{{ else if and .IsPage (eq .Type "book-reports") }}
+<meta property="og:image" content="{{ printf "%s%s" .Permalink "cover.jpg" }}" />
 {{ else }}
 {{ with $.Params.images }}{{ range first 6 . -}}
 <meta property="og:image" content="{{ . | absURL }}" />
