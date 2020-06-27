@@ -4,7 +4,7 @@ theme = "hugo-coder-mtlynch"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 20
+paginate = 10
 canonifyurls = true
 timeout = 120000
 

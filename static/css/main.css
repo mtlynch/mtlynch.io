@@ -359,6 +359,10 @@ h4:hover .hanchor {
   font-size: .6875em;
 }
 
+.posts-list li img {
+  max-width: 300px;
+}
+
 .book-reports-list li {
   margin: 2rem 0;
   display: flex;
