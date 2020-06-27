@@ -1,0 +1,16 @@
+<li>
+  <h2><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <div class="summary">
+    <div class="img-wrapper">
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .RelPermalink }}cover.jpg">
+      </a>
+    </div>
+    <div>
+      <p class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</p>
+      <p>My rating: <strong>{{ .Page.Params.rating }}</strong> / 10 </p>
+      {{ .Summary }}
+      <a class="full-review-link" href="{{ .RelPermalink }}">Full review</a>
+    </div>
+  </div>
+</li>

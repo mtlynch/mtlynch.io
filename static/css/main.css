@@ -147,14 +147,6 @@ h4:hover .hanchor {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .book-report .book-cover {
-    max-width: 275px;
-    margin-right: 2em !important;
-    margin-bottom: 0.2em;
-  }
-}
-
 .subscribe-container {
   background: #f9f9f9;
   font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
@@ -365,4 +357,80 @@ h4:hover .hanchor {
   float: right;
   margin-left: 1em;
   font-size: .6875em;
+}
+
+.book-reports-list li {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .book-reports-list li {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .book-reports-list li .summary {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.book-reports-list li h2 {
+  margin: 1rem 0 2rem 0 !important;
+}
+
+.book-reports-list li .title {
+  font-size: 1.1em !important;
+  text-decoration: none;
+}
+
+.book-reports-list .img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .book-reports-list .img-wrapper {
+    justify-content: flex-start;
+    margin-right: 2.5rem;
+    min-width: 260px;
+    max-width: 260px;
+  }
+}
+
+.book-reports-list img {
+  object-fit: contain;
+}
+
+.book-reports-list ul li .date {
+  text-align: left;
+  margin: 0;
+}
+
+.book-reports-list .full-review-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+  background-color: rgb(225, 255, 208);
+  border: 1px solid rgb(119, 197, 119);
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .book-reports-list .full-review-link {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .book-report .book-cover {
+    max-width: 300px;
+    padding-right: 1rem;
+    margin: 0 3rem 0 0 !important;
+  }
 }
