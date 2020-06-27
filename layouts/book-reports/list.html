@@ -2,10 +2,10 @@
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
-  <section class="container list book-reports-list">
+  <section class="container list">
     <h1 class="title">{{ .Title }}</h1>
 
-    <ul>
+    <ul class="book-reports-list">
       {{- range .Paginator.Pages -}}
         {{- .Render "li" -}}
       {{- end -}}

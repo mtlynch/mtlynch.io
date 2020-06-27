@@ -8,9 +8,12 @@
 {{ end }}
 
 <li>
-  <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
-  <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-  <a href="{{ .RelPermalink }}">
-    <img class="list-img" src="{{ $image }}">
+  <a class="img-wrapper" href="{{ .RelPermalink }}">
+    <img src="{{ $image }}">
   </a>
+  <div>
+    <h2><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</p>
+    <p>{{ .Page.Params.description }}</p>
+  </div>
 </li>
