@@ -1,0 +1,16 @@
+{{ $image := "" }}
+{{ if .Page.Params.hero_image }}
+  {{ $image = printf "%s%s" .RelPermalink .Page.Params.hero_image }}
+{{ else }}
+{{- with .Page.Params.images -}}
+  {{ $image = printf "/%s"  (index . 0) }}
+{{ end }}
+{{ end }}
+
+<li>
+  <a href="{{ .RelPermalink }}">
+    <img class="list-img" src="{{ $image }}">
+  </a>
+  <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+  <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+</li>
