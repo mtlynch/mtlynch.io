@@ -359,6 +359,58 @@ h4:hover .hanchor {
   font-size: .6875em;
 }
 
+.list ul li .date {
+  text-align: left;
+  margin: 0;
+}
+
+.list img {
+  object-fit: contain;
+}
+
+.posts-list li {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 3rem 0 6rem 0 !important;
+  border-bottom: 1px solid rgba(177, 177, 177, 0.623);
+}
+
+@media screen and (min-width: 768px) {
+  .posts-list li {
+    flex-direction: row;
+    padding-bottom: 2rem !important;
+  }
+}
+
+.posts-list .img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .posts-list .img-wrapper {
+    display: block;
+    margin-right: 2.5rem;
+    min-width: 280px;
+    max-width: 280px;
+  }
+}
+
+.posts-list li img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .posts-list li img {
+    max-height: 200px;
+  }
+}
+
+.posts-list li h2 {
+  margin: 0rem 0 0.5rem 0 !important;
+}
+
 .book-reports-list li {
   margin: 2rem 0;
   display: flex;
@@ -378,10 +430,6 @@ h4:hover .hanchor {
   }
 }
 
-.book-reports-list li h2 {
-  margin: 1rem 0 2rem 0 !important;
-}
-
 .book-reports-list li .title {
   font-size: 1.1em !important;
   text-decoration: none;
@@ -399,15 +447,6 @@ h4:hover .hanchor {
     min-width: 260px;
     max-width: 260px;
   }
-}
-
-.book-reports-list img {
-  object-fit: contain;
-}
-
-.book-reports-list ul li .date {
-  text-align: left;
-  margin: 0;
 }
 
 .book-reports-list .full-review-link {
