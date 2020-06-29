@@ -291,9 +291,17 @@ I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an
 
 ## Want a pre-configured kit?
 
-When I get in-browser display working, I'm considering selling pre-configured kits for around $170. I'll publish a follow-up post explaining how to construct your own, but if you'd like a pre-made kit, sign up for my notification list here:
+{{<notice type="info">}}
+**Update: June 29, 2020**
+{{</notice>}}
 
-* [Raspberry Pi KVM Interest List](https://tinyletter.com/kvmpi-interest)
+I now have a working solution that both captures video output from a target device and allows you to send keystrokes, all within a browser window.
+
+<img src="kvmpi-bios.gif">
+
+A detailed follow-up post is coming soon, but in the meantime, you can pre-order pre-configured KVM Pi kits that include everything you need to build your own KVM Pi:
+
+* [kvmpi.com](https://kvmpi.com)
 
 ## Source code
 
