@@ -120,7 +120,7 @@ The equation changes if I can generate entire *batches* of articles with roughly
 
 Zapier is a successful product that provides plumbing to connect different apps that are not aware of each other. They used a similar SEO strategy to build their business.
 
-Zapier generates a dedicated page for every possible combination of their partner apps, so if you search "the gift goose + connectwise manage," the top result is Zapier's [auto-generated page](https://zapier.com/apps/the-gift-goose/integrations/connectwise-manage):
+Zapier generates a dedicated page for every possible combination of their partner apps, so if you search "the gift goose + connectwise manage," the top result is Zapier's auto-generated page:
 
 {{< img src="gift-goose-connectwise.png" alt="Screenshot of Zapier's page for The Gift Goose + ConnectWise" maxWidth="500px" hasBorder="true" caption="Zapier ranks highly for thousands of search queries because they auto-generate pages for every pair of applications they support." >}}
 
