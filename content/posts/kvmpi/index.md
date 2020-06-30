@@ -115,6 +115,8 @@ It had a delay of 4 seconds, which was usable but obviously annoying. Arsenio De
 
 When I publised my previous blog post about getting keyboard input working, Maxim Devaev [commented](/key-mime-pi/#comment-4950940807) encouraging me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm). I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off. Breadboards and I [have a difficult history](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).
 
+Talk about `<img>` tag.
+
 ## KVM Pi kits
 
 If you'd like your own KVM Pi. I ship from the US, and turnaround time is about two weeks.
