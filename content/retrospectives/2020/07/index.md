@@ -1,12 +1,13 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Is It Keto: Month 13"
+date: 2020-07-01T00:00:00-04:00
 description: TODO - One-line summary
 ---
 
 ## Highlights
 
-*
+* I sold my first pre-order for [KVM Pi](https://kvmpi.com)
+* I sold an Enterprise plan for Zestful
 
 ## Goal Grades
 
@@ -39,9 +40,11 @@ TODO
 
 ### [KVM Pi](https://kvmpi.com)
 
-## Topic 1
+## Keto interviews: they seemed like a good idea at the time
 
-## Topic 2
+I thought it would be fun to . I was inspired by Dhruv at keto.fm.
+
+## Selling my first hardware device
 
 ## Topic 3
 
