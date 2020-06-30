@@ -1,5 +1,5 @@
 ---
-title: "KVM Pi: Build a KVM over IP device for under $100"
+title: "KVM Pi: Build your own KVM over IP for under $100"
 date: "2020-07-10T00:00:00Z"
 tags:
 - raspberry pi
@@ -26,9 +26,10 @@ TODO
 * [HDMI to USB capture device](https://amzn.to/2YHEvJN)
   * Strangely, these don't have a brand name, but you can recognize them by their appearance.
   * They're generally available on eBay for $11-15.
-* HDMI cable
 * [USB to TTL serial cable](https://amzn.to/3cVkuTT)
 * [3A USB wall charger](https://amzn.to/3hal8Ax)
+* microSD card (8 GB or larger)
+* HDMI to HDMI cable
 
 ## Install Raspberry Pi OS Lite
 
@@ -40,216 +41,85 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 
 ## Powering your Pi via GPIO
 
+The Pi requires 3 Amps of power, but standard USB ports output less than 1 Amp. To solve this, I  purchased a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 A of electricity.
+
+{{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" caption="I keep the Pi sufficiently powered with a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
+
 ## Connecting your Pi
 
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
-{{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the data Micro-USB port.">}}
-  {{< img src="pi4-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="400px" >}}
-{{</gallery>}}
+{{<img src="pi4-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="500px" caption="Connect the USB-C cable to the Pi's USB-C port, marked 'POWER IN'.">}}
 
-## Install KVM Pi
+## Install KVM Pi on your device
 
-You have two options for installing KVM Pi. You can do it using plain old bash, which requires no external tools. Or, for a touch of class, install it via [Ansible](https://docs.ansible.com/ansible/latest/index.html), my favorite open source configuration management tool.
-
-### Option 1: The pure bash way
-
-From a bash shell, enter the following commands to connect to your Pi and configure it for USB device emulation:
+SSH into your Pi device (default credentials are `pi` / `raspberry`), and run the following commands:
 
 ```bash
-# SSH into your Pi
-PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
-PI_SSH_USERNAME="pi"      # Change to your Pi username
-
-# Connect to the Pi (default password is "raspberry")
-ssh "${PI_SSH_USERNAME}@${PI_HOSTNAME}"
-
-# Install pre-requisites
-sudo apt-get update && \
-  sudo apt-get install -y \
-    git \
-    python-pip \
-    python3-venv
-
-# Install KVM Pi
-git clone https://github.com/mtlynch/key-mime-pi.git
-cd key-mime-pi
-sudo ./enable-usb-hid
+curl -sS https://raw.githubusercontent.com/mtlynch/kvmpi/master/quick-install \
+  | bash -
 sudo reboot
 ```
 
-Allow the Pi to reboot, then SSH in again and start the KVM Pi web server:
+If you're appropriately suspicious of piping a random web script into your shell, read [the source](https://github.com/mtlynch/kvmpi/blob/master/quick-install). It uses Ansible to provision
 
-```bash
-ssh "${PI_SSH_USERNAME}@${PI_HOSTNAME}"
-cd key-mime-pi
-python3 -m venv venv
-. venv/bin/activate
-pip install --requirement requirements.txt
-PORT=8000 ./app/main.py
-```
-
-### Option 2: The Ansible way
-
-If you're an Ansible user, you can use my [KVM Pi Ansible role](https://galaxy.ansible.com/mtlynch/keymimepi) for better automation. The following commands install KVM Pi on your device as a [systemd service](https://wiki.archlinux.org/index.php/systemd):
-
-```bash
-PI_HOSTNAME="raspberrypi" # Change to your pi's hostname
-PI_SSH_USERNAME="pi"      # Change to your Pi username
-
-# Install the KVM Pi Ansible role
-ansible-galaxy install mtlynch.keymimepi
-
-# Create a minimal Ansible playbook to configure your Pi
-echo "- hosts: $PI_HOSTNAME
-  roles:
-    - role: mtlynch.keymimepi" > install.yml
-
-# Install all software (default password is "raspberry")
-ansible-playbook \
-  --inventory "$PI_HOSTNAME", \
-  --user "$PI_SSH_USERNAME" \
-  --become \
-  --become-method sudo \
-  --ask-pass \
-  install.yml
-
-# Reboot the Pi
-ansible \
-  "$PI_HOSTNAME" \
-  -m reboot \
-  --inventory "$PI_HOSTNAME", \
-  --user "$PI_SSH_USERNAME" \
-  --ask-pass \
-  --become \
-  --become-method sudo
-```
+* nginx
+* ustreamer (which I explain below)
+* kvmpi
 
 ## Using KVM Pi
 
 After you run the install script, KVM Pi will be available at:
 
-* [http://raspberrypi:8000/](http://raspberrypi:8000/)
-
-Its interface looks like this:
-
-{{<img src="key-mime-pi-interface.png" alt="Screenshot of KVM Pi web interface" caption="KVM Pi web interface awaiting input" maxWidth="650px">}}
-
-And like, magic, when you type into your browser, the keys will appear on the machine connected to the Pi.
-
-{{<img src="key-mime-pi-usage.jpg" alt="KVM Pi transmitting keystrokes from the browser" caption="KVM Pi allows you to send keystrokes through the browser to a remote computer.">}}
+* [http://raspberrypi/](http://raspberrypi/)
 
 ## How it works
 
-### USB device emulation
+### Keyboard emulation
 
-The real magic here comes from [Linux's USB Human Interface Device (HID) gadget driver](https://www.kernel.org/doc/html/latest/usb/gadget_hid.html). It allows user-mode applications to interact with the operating system as if they were USB devices.
+I describe that in more detail in [my previous post](/key-mime-pi#how-it-works).
 
-The [key-mime-pi configuration script](https://github.com/mtlynch/ansible-role-key-mime-pi/blob/master/files/enable-rpi-hid) creates a file path at `/dev/hidg0`. Any program can read or write to this path, and the OS translates the data to keyboard signals.
+### Video capture
 
-To mimic a keyboard, the Pi has to communicate with the OS according to the [USB HID spec](https://www.usb.org/sites/default/files/documents/hid1_11.pdf). At 97 pages of keycodes and tables, that document is a bit of a slog, but it turns out that the protocol for keyboards is dead simple.
+Video capture was the most difficult part of this. It took a while to find hardware that could capture HDMI input while also being:
 
-Upon each keystroke, the keyboard sends an 8-byte message called a "report."
+1. Affordable
+1. Performant
+1. Hackable
 
-| Byte Index | Purpose |
-|------------|---------|
-| 0          | Modifier keys (Ctrl, Alt, Shift) |
-| 1          | Reserved for manufacturers |
-| 2          | Key #1   |
-| 3          | Key #2   |
-| 4          | Key #3   |
-| 5          | Key #4   |
-| 6          | Key #5   |
-| 7          | Key #6   |
+#### First try: Lenkeng HDMI over IP extender
 
-Sending the keys for "Hi" looks like this:
+My first attempt was to use the Lenkeng HDMI extender – LKV373A. Daniel Kucera did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this hardware and even [contributed a patch to ffmpeg](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow it to capture output from this device.
 
-```bash
-# H (Right shift + h)
-echo -ne "\x20\0\xb\0\0\0\0\0" > /dev/hidg0
-# i
-echo -ne "\0\0\xc\0\0\0\0\0" > /dev/hidg0
-# Release all keys
-echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
-```
+The device had a few big drawbacks.
 
-In addition to signalling key presses, keyboards must also indicate key releases. An 8-byte block of zeroes indicates that no keys are active.
+The first was that it's not designed to capture HDMI streams. Its actual purpose is to pair with a custom receiver which translates the stream back to HDMI. It just allows you to extend an HDMI cable over your network rather than with physical HDMI wires. So using it as an HDMI capture device, you're sort of fighting with the device to achieve functionality it doesn't want to provide.
 
-The above example sent one keystroke at a time, but HID reports have space for six keys. This means you can send up to six keystrokes in a single message as long as they're distinct keys:
+As an extension of that, the device sends video in a non-standard format that confuses standard tools like ffmpeg or VLC. Daniel Kucera [contributed a patch to ffmpeg](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html). I tried using ffmpeg
 
-```bash
-echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
-  echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
-```
+Lastly, the LKV373A outputs its data through UDP multicast. That means that every device on your network receives an HD video stream while the LKV373A is running. Kucera found a way to switch it to unicast, but it involves installing a flashing the device with mystery firmware from a shared Google Drive folder (legality TBD). I considered avoiding the unicast issue altogether by just connecting the LKV373A directly to the Pi's Ethernet port, but then that uses up the Pi's only Ethernet port.
 
-```
-whatup
-```
+#### HDMI to USB device
 
-### Translating from JavaScript to HID
+By sheer luck, I saw a tweet by [Arsenio Dev](https://twitter.com/Ascii211) talking about a low-cost HDMI to USB
 
-When you type into a browser window, JavaScript generates events for each keystroke. The website [keycode.info](https://keycode.info) provides an excellent demonstration of this functionality in action.
+https://twitter.com/Ascii211/status/1268631069051453448
 
-JavaScript key events include keycodes, but they're distinct from HID keycodes. Fortunately, there's a mostly 1:1 mapping between the two. To translate from JavaScript to HID, I created a [lookup table](https://github.com/mtlynch/key-mime-pi/blob/904e56b6bf1f76da1abb85f654637da0e3c35fa3/app/js_to_hid.py#L32) like this:
+. It outputs UVC, which is widely compatible. It seemed a little too good to be true. I ordered one from eBay. Unlike the LKV373A, which seem to only be available from sellers in China, plenty of US-based sellers had this device in stock. I don't even know what you call it. It has no brand name except for just "HDMI to USB capture device."
 
-```python
-_JS_TO_HID_KEYCODES = {
-    3: 0x48,  # Pause / Break
-    8: 0x2a,  # Backspace / Delete
-    9: 0x2b,  # Tab
-    ...
-    65: 0x04,  # a
-    66: 0x05,  # b
-    67: 0x06,  # c
-    68: 0x07,  # d
-```
+That was a big improvement over the LKV373A because it plugged right into the Pi's USB port and output video in a widely compatible format. I was able to stream it from my Pi with ffmpeg and then view it with ffplay or VLC.
 
-The KVM Pi server listens for JavaScript keycode events from the browser, translates them into HID codes, then sends them to the Pi's HID interface at `/dev/hidg0`.
+It had a delay of 4 seconds, which was usable but obviously annoying. Arsenio Dev reported a latency of 20 ms, so I assumed I either hadn't yet found the magical formula of ffmpeg flags or the combination of the Pi's network and the work of a network round trip was pushing it to 4 seconds.
 
-Here's how it works from end to end:
+#### uStreamer: a super-fast video streamer
 
-1. A user hits a key in the browser.
-1. JavaScript on the page sends the JavaScript keycode to the KVM Pi server on the Pi.
-1. The KVM Pi server translates the JavaScript keycode to its equivalent HID code.
-1. The KVM Pi server sends the HID code to the USB gadget interface at `/dev/hidg0`.
-1. The computer connected to the Pi's USB cable receives this as keyboard input, causing a character to appear on the screen.
+When I publised my previous blog post about getting keyboard input working, Maxim Devaev [commented](/key-mime-pi/#comment-4950940807) encouraging me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm). I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off. Breadboards and I [have a difficult history](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).
 
-## Solving the power problem
+## KVM Pi kits
 
-In my tests, USB ports from computers produced enough electricity to power the Pi, but under-voltage warnings appeared frequently in the system log:
+If you'd like your own KVM Pi. I ship from the US, and turnaround time is about two weeks.
 
-```bash
- $ sudo journalctl -xe | grep "Under-voltage"
-Jun 05 03:46:05 pikvm kernel: Under-voltage detected! (0x00050005)
-Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
-Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
-```
-
-The Pi was correctly detecting that standard USB 2.0 and USB 3.0 ports provide insufficient power to meet the Pi's requirements.
-
-| Raspberry Pi Model | Power requirements |
-| ------------------ | ------------------ |
-| Pi Zero W          | 5 V / 1.2 A        |
-| Pi 4               | 5 V / 3.0 A        |
-
-Standard USB ports come up short:
-
-| USB Port Type      | Power output       |
-|--------------------|--------------------|
-| USB 2.0            | 5 V / 0.5 A        |
-| USB 3.0            | 5 V / 0.9 A        |
-
-The Pi runs even when it's underpowered, but running an underpowered computer is bound to create issues sooner or later.
-
-I solved this by purchasing a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 A of electricity.
-
-{{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" caption="I keep the Pi sufficiently powered with a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
-
-## Want a pre-configured kit?
-
-When I get in-browser display working, I'm considering selling pre-configured kits for around $170. I'll publish a follow-up post explaining how to construct your own, but if you'd like a pre-made kit, sign up for my notification list here:
-
-* [KVM Pi](https://tinyletter.com/kvmpi-interest)
+* [kvmpi.com](https://kvmpi.com)
 
 ## Source code
 
@@ -257,10 +127,3 @@ KVM Pi's code is fully open source under the permissive [MIT license](https://op
 
 * [key-mime-pi](https://github.com/mtlynch/key-mime-pi.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
 * [ansible-role-key-mime-pi](https://github.com/mtlynch/ansible-role-key-mime-pi): The Ansible role for configuring the Pi's USB gadget functionality and for installing the web server as a systemd service.
-
-## Acknowledgments
-
-* [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard) was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
-* [Fmstrat/diy-ipmi](https://github.com/Fmstrat/diy-ipmi) was an inspiration for this project and proved that it was possible to make a Pi function as a KVM over IP.
-* [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) provided the most readable explanation of the HID protocol I found.
-* Thanks to the Linux and Raspberry Pi OS developers who made USB gadget functionality possible.
