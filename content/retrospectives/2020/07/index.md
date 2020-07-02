@@ -2,6 +2,8 @@
 title: "Is It Keto: Month 13"
 date: 2020-07-02T00:00:00-04:00
 description: My new product is building momentum just as I'm losing motivation on the old one.
+images:
+- /retrospectives/2020/06/kvmpi-assembled.jpg
 ---
 
 ## Highlights
