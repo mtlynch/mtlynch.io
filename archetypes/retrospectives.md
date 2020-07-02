@@ -35,7 +35,9 @@ TODO
 
 ## Stats
 
-### [WanderJest](https://wanderjest.com)
+### [Is It Keto](https://isitketo.org)
+
+### [KVM Pi](https://kvmpi.com)
 
 ## Topic 1
 
@@ -46,8 +48,6 @@ TODO
 ## Legacy projects
 
 Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
-
-### [Is It Keto](https://isitketo.org)
 
 ### [Zestful](https://zestfuldata.com)
 
