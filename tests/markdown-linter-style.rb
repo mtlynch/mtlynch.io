@@ -12,7 +12,9 @@ exclude_rule 'MD004'
 # Otherwise, linter complains about unordered lists embedded within ordered
 # lists.
 # MD005 Inconsistent indentation for list items at the same level
+# MD007 Unordered list indentation
 exclude_rule 'MD005'
+exclude_rule 'MD007'
 
 # MD013 - Line length.
 exclude_rule 'MD013'
