@@ -175,7 +175,7 @@ Here was my process:
 
 1. Wrote a [blog post](https://mtlynch.io/key-mime-pi/) that shared my progress in building KVM Pi (when only the keyboard part worked).
 1. Shared the blog post on Raspberry Pi [forums](https://www.raspberrypi.org/forums/viewtopic.php?f=36&t=276860) / [subreddits](https://www.reddit.com/r/RASPBERRY_PI_PROJECTS/comments/h0z8m6/key_mime_pi_i_turned_my_pi_into_a_remote_keyboard/).
-    * The post got a decent but not huge reaction, the biggest being [a writeup in Tom's Hardware](https://www.tomshardware.com/news/key-mime-pi-the-raspberry-pi-remote-keyboard), a popular tech blog.
+   * The post got a decent but not huge reaction, the biggest being [a writeup in Tom's Hardware](https://www.tomshardware.com/news/key-mime-pi-the-raspberry-pi-remote-keyboard), a popular tech blog.
 1. Created an "interested buyer" mailing list and linked to it from my blog post (I've since replaced it with a link to my sales page). I got 11 subscribers this way.
 1. Shared progress with my subscribers and [sent a Google Forms survey](kvmpi-survey.png) to gauge interest and price preferences
 1. Five of my 11 subscribers [responded to the survey](kvmpi-survey-results.png), and 60% (3 people) said they were happy with the $180 price I had in mind.
