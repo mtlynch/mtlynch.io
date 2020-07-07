@@ -37,7 +37,7 @@ TODO
 
 ### [Is It Keto](https://isitketo.org)
 
-### [KVM Pi](https://kvmpi.com)
+### [Tiny Pilot](https://tinypilotkvm.com)
 
 ## Topic 1
 
