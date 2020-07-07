@@ -153,9 +153,9 @@ I'm writing a blog post that will explain everything in more detail, but if you 
 * [key-mime-pi](https://github.com/mtlynch/key-mime-pi.git): Web server for forwarding keystrokes to the Raspberry Pi's virtual keyboard device.
 * [ansible-role-key-mime-pi](https://github.com/mtlynch/ansible-role-key-mime-pi): An Ansible role for configuring the Pi's USB gadget functionality (so it can mimic a keyboard) and for installing the web server as a systemd service.
 
-I'm considering selling pre-configured kits for around $180. If you'd be interested in purchasing one, sign up for my notification list here:
+I'm considering selling pre-configured kits for around $180. If you'd be interested in purchasing one, visit:
 
-* [Raspberry Pi KVM Interest List](https://tinyletter.com/kvmpi-interest)
+* [Tiny Pilot KVM](https://tinypilotkvm.com)
 
 ## Legacy projects
 
