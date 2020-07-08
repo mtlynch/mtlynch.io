@@ -290,3 +290,6 @@ Tiny Pilot's code is fully open source under the permissive [MIT license](https:
 
 * [tinypilot](https://github.com/mtlynch/tinypilot.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
 * [ansible-role-tinypilot](https://github.com/mtlynch/ansible-role-tinypilot): The Ansible role for installing Tiny Pilot and its dependencies as systemd services.
+
+---
+*Thanks to Maxim Devaev for his incredible work on uStreamer.*
