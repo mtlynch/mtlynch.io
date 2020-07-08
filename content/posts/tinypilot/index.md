@@ -1,5 +1,5 @@
 ---
-title: "KVM Pi: Build your own KVM over IP for under $100"
+title: "Tiny Pilot: Build your own KVM over IP for under $100"
 date: "2020-07-10T00:00:00Z"
 tags:
 - raspberry pi
@@ -8,12 +8,14 @@ tags:
 - homelab
 description: The Raspberry Pi 4 has an impressive array of functionality that allow it to capture video output and impersonate a keyboard, effectively making a virtual KVM.
 images:
-- kvmpi/cover.jpg
+- tinypilot/cover.jpg
 ---
 
-## Don't tell me your life story; just tell me how to build a KVM over IP
+Tiny Pilot is a device that gives you remote access to a computer even if the machine has no network connection or operating system loaded. I use Tiny Pilot with [my homelab bare metal servers](/building-a-vm-homelab/) to install new operating systems and to debug boot errors. This posts explains my experience building it and how you can build your own for under $100.
 
-If you want to skip over the backstory, skip to [Build your own KVM Pi](#build-your-own-kvm-pi).
+## Don't tell me your life story; just tell me how to build it
+
+If you want to skip over the backstory, skip to [Build your own Tiny Pilot](#build-your-own-tiny-pilot).
 
 ## Headless servers are great until they're not
 
@@ -23,9 +25,9 @@ The problem is that from my desk, it's all the way over there. When everything w
 
 I'd always told myself that I'd correct this mistake by building my next server with a remote administration in mind. I knew Dell servers have iDRAC and HP servers have iLO, both of which are basically chips that let you get a virtual keyboard and monitor on the device as long as there's a network cable plugged in. Even if the OS itself won't boot. But when I actually looked into it, those chips are super expensive and require $XX license from the manufacturer. I looked into 
 
-Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [KVM Pi](https://github.com/mtlynch/kvmpi.git).
+Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [Tiny Pilot](https://github.com/mtlynch/tinypilot.git).
 
-This post demonstrates how KVM Pi works and how you can build one for yourself.
+This post demonstrates how Tiny Pilot works and how you can build one for yourself.
 
 ## Demo
 
@@ -47,19 +49,63 @@ Video capture was the most difficult part of this. It took a while to find hardw
 
 #### First try: Lenkeng HDMI over IP extender
 
-My first attempt was to use the Lenkeng HDMI extender – LKV373A. Daniel Kucera did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this hardware and even [contributed a patch to ffmpeg](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow it to capture output from this device.
+My first attempt was to use the Lenkeng LKV373A HDMI extender. Daniel Kucera did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device and even [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow ffmpeg to capture output from this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
 
-The device had a few big drawbacks.
+TODO: Photos
 
-The first issue was that the LKV373A's actual purpose is to act as sort of an HDMI extension cord over your network. It pairs with a custom receiver which translates the stream back to HDMI. Kucera found ways to intercept the video stream, but bending the device to perform against its intended purpose adds complexity to every stage of the process.
+I received the LKV373A within a few weeks and quickly realized that it was tough to build a solution on top of a device designed for a different purpose. The LKV373A is supposed to be sort of an HDMI extension cord over your network. It pairs with a custom receiver, which translates the stream back to HDMI. Kucera found ways to intercept the video stream, but bending the device to perform against its intended purpose adds complexity to every stage of the process.
 
 The other big drawback was that the LKV373A outputs its data through UDP multicast. That means that every device on your network receives an HD video stream while the LKV373A is running. Kucera found a way to switch it to unicast, but it involves flashing the device with mystery firmware from a shared Google Drive folder (legality TBD). I considered avoiding the unicast issue altogether by just connecting the LKV373A directly to the Pi's Ethernet port, but then that uses up the Pi's only Ethernet port.
 
+#### Capturing video with the LKV373A
+
+I was able to capture video, but it was flaky.
+
+It broadcasts to UDP on XX
+
+```bash
+ffplay -i udp://239.255.42.42:5004
+```
+
+I was able to reduce the latency a bit more with this command, which I cobbled together haphazardly from different forum posts and StackOverflow answers:
+
+```bash
+ffplay \
+  -i udp://239.255.42.42:5004 \
+  -fflags \
+  -nobuffer \
+  -analyzeduration 1 \
+  -sync ext \
+  -probesize 32
+```
+
+Daniel Kucera was able to play his stream directly in VLC, but it didn't work for me. The only way I could get it to work was when I re-streamed it with ffmpeg:
+
+```bash
+ffmpeg -i udp://@239.255.42.42:5004 -vcodec copy -f mpegts udp://127.0.0.1:1234
+```
+
+```bash
+vlc.exe udp://@:1234
+```
+
+But even with that solution, VLC would sometimes fail to play the stream.
+
+Even if I got it to play consistently in VLC, I still needed to figure out a way to get it to play in the browser. Peer 5 had a [mostly-working tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. I was able to reproduce it with some tweaks. I was worried about that, because it added tons of other complexity to the mix:
+
+* I'd have to get ffmpeg to automatically run whenever the device received
+* Needs a video player that can play HLS streams, as browsers can't play it natively.
+* I'd have to automate the process of compiling nginx with an open source rtmp module and installing it as a service.
+
+It was hard enough to debug problems when there was just a network video stream and a desktop video player. Adding in nginx, ffmpeg, and video.js into the mix would make things a lot more complicated.
+
+Fortunately, I found a better solution by complete coincidence.
+
 #### HDMI to USB device
 
-By sheer luck, I happened to see a tweet by  talking about a low-cost HDMI to USB
+Amid my mindless Twitter scrolling, I happened to see a tweet by Arsenio Dev talking about a low-cost HDMI to USB dongle he had just purchased:
 
-{{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A tweet from [Arsenio Dev](https://twitter.com/Ascii211) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
+{{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
 It seemed a little too good to be true, but I ordered one from eBay for only $11, including shipping. Unlike the LKV373A, which are available almost exclusively from sellers in China, plenty of US-based sellers had this device in stock. I don't even know what you call it. It has no brand name, so I'll just call it "the HDMI dongle."
 
@@ -67,7 +113,7 @@ I received the device a few days later and was blown away. It was better for my 
 
 Surprisingly, this dongle can even capture video protected with HDCP. When I connected the LKV373A to my Roku Premiere, it captured a blank stream, but the HDMI dongle captured it without issue:
 
-{{<img src="roku-capture.jpg" alt="KVM Pi capturing Roku output" maxWidth="600px" caption="The HDMI dongle can capture a video stream from a Roku Premiere, even though Roku encrypts its output stream with HDCP.">}}
+{{<img src="roku-capture.jpg" alt="Tiny Pilot capturing Roku output" maxWidth="600px" caption="The HDMI dongle can capture a video stream from a Roku Premiere, even though Roku encrypts its output stream with HDCP.">}}
 
 The only problem was latency. Using ffmpeg to stream, there was a delay of four to five seconds on the video. I wasn't sure if this delay was coming from the device itself, from ffmpeg, or from ffplay, the video player I was using to receive the stream. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found the magic formula of ffmpeg's arcane flags, I could substantially reduce the latency.
 
@@ -83,17 +129,21 @@ I had looked at it briefly earlier in my work, but it [required soldering compon
 
 {{<img src="melty-breadboard.jpg" alt="GPIO pins" maxWidth="500px" caption="My previous experience with breadboards involved accidentally melting them.">}}
 
-At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
+I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
+
+Wow!
 
 Do you ever have that feeling where you find a solution to a problem that you didn't even realize you had. uStreamer was awesome. 
 
-One of the chores I was dreading with ffmpeg was figuring out how to translate the video stream into something that a standard web browser could consume. The best solution I had found was using ffmpeg to stream XXX to Nginx using the XXX plugin. I'd tinkered with it, but it added lots of complexity and was going to make the latency problem even harder. uStreamer streamed directly to HTTP. It spins up its own web server and gives you an HTTP endpoint that modern browsers can stream natively. It even has a JSON endpoint so you can retrieve metadata about the stream in real time.
+Not only did it improve video latency by an order of magnitude, it handled all the complexity of translating the video stream to a browser-friendly format. Until I found uStreamer, I thought my solution would still depend on klunkily chaining together ffmpeg, nginx, and the XX plugin. 
 
-I assumed it was a fork, but it's not. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly donated to Maxim, and I invite anyone who tries his software to do the same.
+uStreamer streamed directly to HTTP. It spins up its own web server and gives you an HTTP endpoint that modern browsers can stream natively. It even has a JSON endpoint so you can retrieve metadata about the stream in real time.
 
-#### What the heck is Motion JPEG?
+The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but no. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who tries his software to do the same.
 
-I mentioned that uStreamer output to a regular URL endpoint. I embedded it in KVM Pi using an `<iframe>`. That worked, so I assumed I solved the problem. Then, I noticed that my browser never stopped loading. Checking the network tab, it seemed to think that the uStreamer stream was just a never-ending download. That was still usable, but I wanted it to display the same way it would display any normal streaming video.
+### What the heck is Motion JPEG?
+
+I mentioned that uStreamer output to a regular URL endpoint. I embedded it in Tiny Pilot using an `<iframe>`. That worked, so I assumed I solved the problem. Then, I noticed that my browser never stopped loading. Checking the network tab, it seemed to think that the uStreamer stream was just a never-ending download. That was still usable, but I wanted it to display the same way it would display any normal streaming video.
 
 I tried dropping the `<iframe>` and loading the URL in a `<video>` tag. No luck.
 
@@ -101,18 +151,38 @@ From reading uStreamer's documentation, it said that it was streaming video in a
 
 But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfectly. The infinite reload issue went away. It had the exact behavior I wanted where the user didn't have to hit "play" to start the stream. It was just streaming as soon as the page loaded.
 
-## Using KVM Pi
+### Improving latency
 
-It's not something I use every day.
+```bash
+$ sudo v4l2-ctl --all
+Driver Info:
+        Driver name      : uvcvideo
+        Card type        : UVC Camera (534d:2109): USB Vid
+...
+Format Video Capture:
+        Width/Height      : 1280/720
+        Pixel Format      : 'MJPG' (Motion-JPEG)
+...
+Streaming Parameters Video Capture:
+        Capabilities     : timeperframe
+        Frames per second: 30.000 (30/1)
+```
 
+D'oh, it was already in motion JPEG.
 
-## Build your own KVM Pi
+### Building the Tiny Pilot web interface
+
+Wanted to try building it without any external libraries.
+
+## Build your own Tiny Pilot
+
+I have all-in-one kits you can use or you can buy your own parts. The software is all free and open source.
 
 ### Parts list
 
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
 * [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) cable (Male/Male)
-* [HDMI to USB capture device](https://amzn.to/2YHEvJN)
+* [HDMI to USB capture dongle](https://amzn.to/2YHEvJN)
   * Strangely, these don't have a brand name, but you can recognize them by their appearance.
   * They're generally available on eBay for $11-15.
 * [USB to TTL serial cable](https://amzn.to/3cVkuTT)
@@ -120,66 +190,103 @@ It's not something I use every day.
 * [microSD card](https://amzn.to/2VH0RcL) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
+* (Optional) A cooling case or heat sink
+  * Ensure that the case provides easy access to the Pi's GPIO pins.
+  * I use a minimalist aluminum passively cooling case. (TODO: link)
 
-## Install Raspberry Pi OS Lite
+### Install Raspberry Pi OS Lite
 
 To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (formerly known as Raspbian) on a microSD card.
 
 {{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work.">}}
 
-Enable SSH access by placing a file called `ssh` on the microSD's boot partition, and insert the microSD card into your Pi device. If you're connecting over wireless, you'll also need to [create a `wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) on the boot partition.
+Enable SSH access by placing a file called `ssh` on the microSD's boot partition. If you're connecting over wireless, you'll also need to [create a `wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) on the boot partition.
 
-## Power your Pi via GPIO
+When you're done preparing the microSD card, insert it into your Pi device.
 
-The Pi requires 3 Amps of power, but standard USB ports output less than 1 Amp. To solve this, I  purchased a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 A of electricity.
+### Install a case (optional)
 
-{{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the data Micro-USB port.">}}
+The Raspberry Pi 4 famously generates a lot of heat (TODO: link to GeerlingGuy post). You can run it fine as a bare chip, but you'll likely run
+
+TODO: Photos
+
+I use this chip
+
+### Power your Pi via GPIO
+
+People typically power their Pi through its USB-C port. Tiny Pilot uses this port to connect to the target computer and emulate a USB keyboard. The Pi requires 3 Amps of power, but a computer's standard USB port outputs less than 1 Amp of power. It's enough to boot the Pi, but the Pi will run into stability issues if that's its only power source.
+
+You can solve this with a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 Amps of electricity.
+
+The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row. See the photos below:
+
+{{<gallery caption="To power the Pi, connect a USB to TTL">}}
   {{< img src="power-pins-top.jpg" alt="Top view of USB to TTL connection" maxWidth="400px" >}}
   {{< img src="power-pins-side.jpg" alt="Side view of USB to TTL connection" maxWidth="400px" >}}
 {{</gallery>}}
 
-## Connect your USB cable
+To power on your Pi, plug the wall charger into an outlet and connect the USB-A end of the USB to TTL cable:
+
+TODO: Show photo
+
+### Connect to the machine via USB
 
 Connect your USB cable to your Pi's USB-C port:
 
 {{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px" caption="Connect the USB-C cable to the Pi's USB-C port, marked 'POWER IN'.">}}
 
-## Install KVM Pi on your device
+Connect the other end to a USB port on the target computer:
 
-SSH into your Pi device (default credentials are `pi` / `raspberry`), and run the following commands:
+TODO: Show photo
+
+### Attach the HDMI capture dongle
+
+The last part of the physical installation involves capturing the target computer's display output.
+
+{{<notice type="info">}}
+**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a simple DVI to HDMI adaptor or Display Port to HDMI adaptor, though I haven't tested this personally. (TODO:  link to devices)
+{{</notice>}}
+
+### Install Tiny Pilot
+
+SSH into your Pi device (default credentials for Raspberry Pi OS are `pi` / `raspberry`), and run the following commands:
 
 ```bash
-curl -sS https://raw.githubusercontent.com/mtlynch/kvmpi/master/quick-install \
+curl -sS https://raw.githubusercontent.com/mtlynch/tinypilot/master/quick-install \
   | bash -
 sudo reboot
 ```
 
-If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/mtlynch/kvmpi/blob/master/quick-install).
+If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/mtlynch/tinypilot/blob/master/quick-install).
 
-The script installs four services on to the Pi that run at every boot:
+The script installs four services that run on every boot:
 
 * [nginx](https://nginx.org/): a popular open source web server
-* [ustreamer](https://github.com/pikvm/ustreamer): a video streaming server optimized for Raspberry Pi's hardware.
-* [usb-gadget](https://github.com/mtlynch/kvmpi/blob/master/enable-usb-hid): enables USB "gadget mode" which allows the Pi to impersonate USB devices.
-* [kvmpi](https://github.com/mtlynch/kvmpi): the web interface I created for KVM Pi.
+* [ustreamer](https://github.com/pikvm/ustreamer): a video streaming server optimized for Raspberry Pi hardware
+* [usb-gadget](https://github.com/mtlynch/tinypilot/blob/master/enable-usb-hid): enables the Pi's USB "gadget mode" which allows the Pi to impersonate USB devices
+* [tinypilot](https://github.com/mtlynch/tinypilot): the web interface I created for Tiny Pilot
 
-## Using KVM Pi
+## Using Tiny Pilot
 
-After you run the install script, KVM Pi will be available at:
+After you run the install script, Tiny Pilot will be available at:
 
 * [http://raspberrypi/](http://raspberrypi/)
 
 TODO: Demo
 
-## KVM Pi kits
+## Tiny Pilot kits
 
-If you'd like your own KVM Pi. I ship from the US, and turnaround time is about two weeks.
+If you'd like to support further development of Tiny Pilot, you can buy a Tiny Pilot kit. It includes all the hardware you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
 
-* [kvmpi.com](https://kvmpi.com)
+TODO: Show order page
+
+I ship from the US, and turnaround time is about two weeks.
+
+* [tinypilotkvm.com](https://tinypilotkvm.com)
 
 ## Source code
 
-KVM Pi's code is fully open source under the permissive [MIT license](https://opensource.org/licenses/MIT):
+Tiny Pilot's code is fully open source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
-* [kvmpi](https://github.com/mtlynch/kvmpi.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
-* [ansible-role-kvmpi](https://github.com/mtlynch/ansible-role-kvmpi): The Ansible role for installing KVM Pi and its dependencies as systemd services.
+* [tinypilot](https://github.com/mtlynch/tinypilot.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
+* [ansible-role-tinypilot](https://github.com/mtlynch/ansible-role-tinypilot): The Ansible role for installing Tiny Pilot and its dependencies as systemd services.
