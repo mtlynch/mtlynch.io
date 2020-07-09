@@ -1,5 +1,5 @@
 ---
-title: "Tiny Pilot: Build your own KVM over IP for under $100"
+title: "TinyPilot: Build your own KVM over IP for under $100"
 date: "2020-07-10T00:00:00Z"
 tags:
 - raspberry pi
@@ -11,11 +11,11 @@ images:
 - tinypilot/cover.jpg
 ---
 
-Tiny Pilot is a device that gives you remote access to a computer even if the machine has no network connection or operating system loaded. I use Tiny Pilot with [my homelab bare metal servers](/building-a-vm-homelab/) to install new operating systems and to debug boot errors. This posts explains my experience building it and how you can build your own for under $100.
+TinyPilot is a device that gives you remote access to a computer even if the machine has no network connection or operating system loaded. I use TinyPilot with [my homelab bare metal servers](/building-a-vm-homelab/) to install new operating systems and to debug boot errors. This posts explains my experience building it and how you can build your own for under $100.
 
 ## Don't tell me your life story; just tell me how to build it
 
-If you want to skip over the backstory, skip to [Build your own Tiny Pilot](#build-your-own-tiny-pilot).
+If you're a grinch and you want to skip over my fascinating and enlightening journey to building TinyPilot, you can skip directly to [build your own TinyPilot](#build-your-own-tinypilot) for the tutorial portion of this post.
 
 ## Headless servers are great until they're not
 
@@ -25,9 +25,9 @@ The problem is that from my desk, it's all the way over there. When everything w
 
 I'd always told myself that I'd correct this mistake by building my next server with a remote administration in mind. I knew Dell servers have iDRAC and HP servers have iLO, both of which are basically chips that let you get a virtual keyboard and monitor on the device as long as there's a network cable plugged in. Even if the OS itself won't boot. But when I actually looked into it, those chips are super expensive and require $XX license from the manufacturer. I looked into 
 
-Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [Tiny Pilot](https://github.com/mtlynch/tinypilot.git).
+Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [TinyPilot](https://github.com/mtlynch/tinypilot.git).
 
-This post demonstrates how Tiny Pilot works and how you can build one for yourself.
+This post demonstrates how TinyPilot works and how you can build one for yourself.
 
 ## Demo
 
@@ -89,19 +89,9 @@ ffmpeg -i udp://@239.255.42.42:5004 -vcodec copy -f mpegts udp://127.0.0.1:1234
 vlc.exe udp://@:1234
 ```
 
-But even with that solution, VLC would sometimes fail to play the stream.
+But even with that solution, VLC would sometimes fail to play the stream. Fortunately, I found a better solution by complete coincidence.
 
-Even if I got it to play consistently in VLC, I still needed to figure out a way to get it to play in the browser. Peer 5 had a [mostly-working tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. I was able to reproduce it with some tweaks. I was worried about that, because it added tons of other complexity to the mix:
-
-* I'd have to get ffmpeg to automatically run whenever the device received
-* Needs a video player that can play HLS streams, as browsers can't play it natively.
-* I'd have to automate the process of compiling nginx with an open source rtmp module and installing it as a service.
-
-It was hard enough to debug problems when there was just a network video stream and a desktop video player. Adding in nginx, ffmpeg, and video.js into the mix would make things a lot more complicated.
-
-Fortunately, I found a better solution by complete coincidence.
-
-#### HDMI to USB device
+#### HDMI to USB dongle
 
 Amid my mindless Twitter scrolling, I happened to see a tweet by Arsenio Dev talking about a low-cost HDMI to USB dongle he had just purchased:
 
@@ -113,37 +103,46 @@ I received the device a few days later and was blown away. It was better for my 
 
 Surprisingly, this dongle can even capture video protected with HDCP. When I connected the LKV373A to my Roku Premiere, it captured a blank stream, but the HDMI dongle captured it without issue:
 
-{{<img src="roku-capture.jpg" alt="Tiny Pilot capturing Roku output" maxWidth="600px" caption="The HDMI dongle can capture a video stream from a Roku Premiere, even though Roku encrypts its output stream with HDCP.">}}
+{{<img src="roku-capture.jpg" alt="TinyPilot capturing Roku output" maxWidth="600px" caption="The HDMI dongle can capture a video stream from a Roku Premiere, even though Roku encrypts its output stream with HDCP.">}}
 
 The only problem was latency. Using ffmpeg to stream, there was a delay of four to five seconds on the video. I wasn't sure if this delay was coming from the device itself, from ffmpeg, or from ffplay, the video player I was using to receive the stream. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found the magic formula of ffmpeg's arcane flags, I could substantially reduce the latency.
 
 Fortunately, I was blessed with another stroke of luck that saved me tons of work.
 
-#### uStreamer: a super-fast video streamer
+#### Borrowing from a similar project
 
-When I publised my previous blog post about getting keyboard input working, Maxim Devaev [encouraged me](/key-mime-pi/#comment-4950940807) to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
+When I publised my previous blog post about getting keyboard input working, I received [a comment from Maxim Devaev](/key-mime-pi/#comment-4950940807), who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
 
 {{<img src="maxim-comment.png" alt="Maxim's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" hasBorder="true" caption="Maxim Devaev pointed me to his existing [Pi KVM](https://github.com/pikvm/pikvm) project.">}}
 
-I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off. I have a [difficult history with breadboards](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).
+I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off. I have a [difficult history with breadboards](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot), so I ended up rolling my own solution that involved simpler hardware.
 
 {{<img src="melty-breadboard.jpg" alt="GPIO pins" maxWidth="500px" caption="My previous experience with breadboards involved accidentally melting them.">}}
 
-I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
+At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
 
-Wow!
+#### uStreamer: a super-fast video streamer
 
-Do you ever have that feeling where you find a solution to a problem that you didn't even realize you had. uStreamer was awesome. 
+Have you ever found a tool that's so good, it not only solves your problems but also solves adjacent problems you didn't even realize you had? uStreamer was awesome.
 
-Not only did it improve video latency by an order of magnitude, it handled all the complexity of translating the video stream to a browser-friendly format. Until I found uStreamer, I thought my solution would still depend on klunkily chaining together ffmpeg, nginx, and the XX plugin. 
+Right out of the box, uStreamer reduced my latency from 5 seconds to 600 milliseconds, an incredible speedup. But beyond that, it eliminated a whole chain of extra work I expected to do.
 
-uStreamer streamed directly to HTTP. It spins up its own web server and gives you an HTTP endpoint that modern browsers can stream natively. It even has a JSON endpoint so you can retrieve metadata about the stream in real time.
+Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how exactly I'd get it from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. The ffmpeg + nginx solution had worked, but it added even more latency and left a few hairy problems to solve:
 
-The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but no. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who tries his software to do the same.
+* It makes no sense for the user to play or pause the video stream, so could I eliminate those controls and make the video auto-play?
+* How do I get ffmpeg to launch automatically when the user connects and HDMI cable?
+* Browsers can't play HLS streams natively, so which third-party JavaScript solution should I use to render the stream?
+* How do I debug issues now that the stream is going from target computer -> HDMI dongle -> ffmpeg -> nginx -> third-party video player -> browser?
+
+uStreamer simply solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other. uStreamer just saved me three or four weeks of work.
+
+The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but no. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who uses his software to do the same.
 
 ### What the heck is Motion JPEG?
 
-I mentioned that uStreamer output to a regular URL endpoint. I embedded it in Tiny Pilot using an `<iframe>`. That worked, so I assumed I solved the problem. Then, I noticed that my browser never stopped loading. Checking the network tab, it seemed to think that the uStreamer stream was just a never-ending download. That was still usable, but I wanted it to display the same way it would display any normal streaming video.
+I mentioned that uStreamer output to a regular URL endpoint. When I loaded the URL in the browser, it played the video natively.
+
+I embedded uStreamer's video in TinyPilot's web interface using an `<iframe>`. That worked, so I assumed I solved the problem. Then, I noticed that my browser never stopped loading. Checking the network tab, it seemed to think that the uStreamer stream was just a never-ending download. That was still usable, but I wanted it to display the same way it would display any normal streaming video.
 
 I tried dropping the `<iframe>` and loading the URL in a `<video>` tag. No luck.
 
@@ -151,7 +150,13 @@ From reading uStreamer's documentation, it said that it was streaming video in a
 
 But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfectly. The infinite reload issue went away. It had the exact behavior I wanted where the user didn't have to hit "play" to start the stream. It was just streaming as soon as the page loaded.
 
-### Improving latency
+### Improving video latency
+
+With uStreamer, the only big difference between my solution and the more expensive solutions was latency. uStreamer got me from 5 seconds of latency down to 600 milliseconds, which was a huge improvement, but 600 milliseconds was still noticeable. It didn't feel like a normal remote desktop session. I haven't used enterprise-grade KVM over IP gear, but I suspected that they did a lot better than 600 milliseconds.
+
+{{<img src="maxim-tmate.png" alt="Screenshot of conversation where Maxim ofers to help me via tmate" caption="Maxim offered to either help improve latency or frame me for a felony. Fortunately, he ended up doing the former.">}}
+
+After a few minutes of testing how uStreamer played with my device, Maxim ran [`v4l2-ctl`](https://www.mankier.com/1/v4l2-ctl) a command I didn't know existed. It outputs information about the video capture devices on the system. The output had a line that was fascinating to Maxim but totally lost on me at first:
 
 ```bash
 $ sudo v4l2-ctl --all
@@ -168,17 +173,25 @@ Streaming Parameters Video Capture:
         Frames per second: 30.000 (30/1)
 ```
 
-D'oh, it was already in motion JPEG.
+The pixel format was `MJPG`: that meant the device was already encoding the video stream to Motion JPEG. uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since it was effectively re-encoding a stream that was already in the format we wanted.
 
-### Building the Tiny Pilot web interface
+We adjust uStreamer to skip the re-encode and just pass through the video stream as-is.
+
+{{<img src="tinypilot-latency.jpg" maxWidth="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
+
+Wow! Latency went from 600 milliseconds all the way down to 200 ms. It's not instantaneous, but it's low enough that it's easy to forget the latency after a few minutes.
+
+### Building the TinyPilot web interface
 
 Wanted to try building it without any external libraries.
 
-## Build your own Tiny Pilot
+## Build your own TinyPilot
 
 I have all-in-one kits you can use or you can buy your own parts. The software is all free and open source.
 
 ### Parts list
+
+TODO: Self-ad for TinyPilot kits.
 
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
 * [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) cable (Male/Male)
@@ -200,27 +213,27 @@ To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/r
 
 {{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work.">}}
 
-Enable SSH access by placing a file called `ssh` on the microSD's boot partition. If you're connecting over wireless, you'll also need to [create a `wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) on the boot partition.
+Enable SSH access by placing a file called `ssh` on the microSD's boot partition. If you're connecting over wireless, you'll also need to [add a `wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
 
 When you're done preparing the microSD card, insert it into your Pi device.
 
 ### Install a case (optional)
 
-The Raspberry Pi 4 famously generates a lot of heat (TODO: link to GeerlingGuy post). You can run it fine as a bare chip, but you'll likely run
+The Raspberry Pi 4 famously generates a lot of heat (TODO: link to GeerlingGuy post). You can run it fine as a bare chip, but you'll likely hit stability issues. Fortunately, there's a wide selection of cases that cool either with a fan or by passively spreading the heat from the CPU and GPU across a larger surface area.
+
+I like this minimalist case that provides passive cooling:
 
 TODO: Photos
 
-I use this chip
-
 ### Power your Pi via GPIO
 
-People typically power their Pi through its USB-C port. Tiny Pilot uses this port to connect to the target computer and emulate a USB keyboard. The Pi requires 3 Amps of power, but a computer's standard USB port outputs less than 1 Amp of power. It's enough to boot the Pi, but the Pi will run into stability issues if that's its only power source.
+People typically power their Pi through its USB-C port. TinyPilot uses this port to connect to the target computer and emulate a USB keyboard. The Pi requires 3 Amps of power, but a computer's standard USB port outputs less than 1 Amp of power. It's enough to boot the Pi, but the Pi will run into stability issues if that's its only power source.
 
 You can solve this with a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 Amps of electricity.
 
 The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row. See the photos below:
 
-{{<gallery caption="To power the Pi, connect a USB to TTL">}}
+{{<gallery caption="To power the Pi, connect a [USB to TTL cable](https://amzn.to/3cVkuTT) to the power pins on the GPIO.">}}
   {{< img src="power-pins-top.jpg" alt="Top view of USB to TTL connection" maxWidth="400px" >}}
   {{< img src="power-pins-side.jpg" alt="Side view of USB to TTL connection" maxWidth="400px" >}}
 {{</gallery>}}
@@ -231,23 +244,24 @@ TODO: Show photo
 
 ### Connect to the machine via USB
 
-Connect your USB cable to your Pi's USB-C port:
+Connect your USB cable to your Pi's USB-C port and the other end to your target computer:
 
-{{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px" caption="Connect the USB-C cable to the Pi's USB-C port, marked 'POWER IN'.">}}
-
-Connect the other end to a USB port on the target computer:
-
+{{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
+{{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
 TODO: Show photo
+{{</gallery>}}
 
 ### Attach the HDMI capture dongle
 
 The last part of the physical installation involves capturing the target computer's display output.
 
+TODO: Test Display Port to HDMI cable.
+
 {{<notice type="info">}}
 **Note**: If the computer you're connecting to has no HDMI output, you should be able to use a simple DVI to HDMI adaptor or Display Port to HDMI adaptor, though I haven't tested this personally. (TODO:  link to devices)
 {{</notice>}}
 
-### Install Tiny Pilot
+### Install the TinyPilot software
 
 SSH into your Pi device (default credentials for Raspberry Pi OS are `pi` / `raspberry`), and run the following commands:
 
@@ -259,37 +273,35 @@ sudo reboot
 
 If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/mtlynch/tinypilot/blob/master/quick-install).
 
-The script installs four services that run on every boot:
+The script bootstraps a self-contained Ansible environment on your Pi and uses it to install four services that run on every boot:
 
 * [nginx](https://nginx.org/): a popular open source web server
 * [ustreamer](https://github.com/pikvm/ustreamer): a video streaming server optimized for Raspberry Pi hardware
 * [usb-gadget](https://github.com/mtlynch/tinypilot/blob/master/enable-usb-hid): enables the Pi's USB "gadget mode" which allows the Pi to impersonate USB devices
-* [tinypilot](https://github.com/mtlynch/tinypilot): the web interface I created for Tiny Pilot
+* [tinypilot](https://github.com/mtlynch/tinypilot): the web interface I created for TinyPilot
 
-## Using Tiny Pilot
+## Using TinyPilot
 
-After you run the install script, Tiny Pilot will be available at:
+After you run the install script, TinyPilot will be available at:
 
 * [http://raspberrypi/](http://raspberrypi/)
 
 TODO: Demo
 
-## Tiny Pilot kits
+## TinyPilot kits
 
-If you'd like to support further development of Tiny Pilot, you can buy a Tiny Pilot kit. It includes all the hardware you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
+If you'd like to support further development of this software, consider purchasing a TinyPilot kit. It includes all the hardware you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
 
 TODO: Show order page
-
-I ship from the US, and turnaround time is about two weeks.
 
 * [tinypilotkvm.com](https://tinypilotkvm.com)
 
 ## Source code
 
-Tiny Pilot's code is fully open source under the permissive [MIT license](https://opensource.org/licenses/MIT):
+All TinyPilot software is open source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
 * [tinypilot](https://github.com/mtlynch/tinypilot.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
-* [ansible-role-tinypilot](https://github.com/mtlynch/ansible-role-tinypilot): The Ansible role for installing Tiny Pilot and its dependencies as systemd services.
+* [ansible-role-tinypilot](https://github.com/mtlynch/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
 ---
-*Thanks to Maxim Devaev for his incredible work on uStreamer.*
+*Special thanks to Maxim Devaev for his contributions to TinyPilot and his incredible work on [uStreamer](https://github.com/pikvm/ustreamer).*
