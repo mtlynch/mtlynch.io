@@ -19,17 +19,17 @@ This setup worked fine, but I was starting to become aware of the increasing pai
 
 ## Why VMs?
 
-### Clean Environments
+### Clean environments
 
 All the software I write depends on a particular software environment. For example, development on my project [ProsperBot](/prosperbot/) depends on the Go toolchain, nginx, and Redis. If I keep installing dependencies for each of my projects all on my main desktop PC, it becomes a mess of different web servers, database servers, and competing versions of the same libraries.
 
-### Security: VM Isolation
+### Security: VM isolation
 
 VMs also provide security by keeping software isolated from my main system. I like to experiment with new tools and apps, but it's always possible that an app could be malicious (maybe the developer made a malicious app, maybe it's a legitimate app but an attacker compromised it to spread malware). If I install an app directly to my Windows machine and it infects it with malware, it's game over. Very basic malware running on my machine could record everything on my screen, control my Gmail, Facebook, Github, or hold all my files [for ransom](https://en.wikipedia.org/wiki/Ransomware).
 
 Malware running in a VM is much more limited in the damage it can cause. If I install software in a VM and it covertly installs a keylogger, it can only record my keystrokes in that VM, not my main desktop machine. VMs are not a complete defense, as advanced malware could [escape the VM](https://arstechnica.com/security/2017/03/hack-that-escapes-vm-by-exploiting-edge-browser-fetches-105000-at-pwn2own/), but they still provide a large degree of protection.
 
-## Why a Whole VM Server?
+## Why a whole VM server?
 
 I've been running virtual machines within my main Windows desktop with VirtualBox, there a few issues:
 
@@ -40,7 +40,7 @@ With a dedicated VM server, I can run a barebones Linux server OS on it. The les
 
 There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](https://openbazaar.org), [BitSquare](https://bitsquare.io/)), but they require running a server all the time. I've tried doing this through VirtualBox, but the hassles I mention above tend to make me lose interest in keeping these VMs running. If I could just spin up a VM once and leave it running, experimenting with these projects becomes a lot more attractive.
 
-## Choosing the Parts
+## Choosing the parts
 
 ### CPU
 
@@ -88,7 +88,7 @@ Because my requirements for the GPU were flexible, I just wanted something inexp
 
 It didn't make sense to buy a dedicated monitor for this system because 99.99% of the time, I'd be managing it headless. The remaining .01% of the time, I can just crawl under my desk and move my main monitor's HDMI cable from my primary desktop to my VM server.
 
-### Network Adapter
+### Network adapter
 
 I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would fail to detect the NIC...
 
@@ -96,7 +96,7 @@ At this point, I was tired of tinkering with the onboard NIC and just bought a P
 
 Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadcom NIC *was* compatible.
 
-### Final Parts List
+### Final parts list
 
 | Category | Component |
 |------|-------|
@@ -129,13 +129,13 @@ Because of my apartment's limited space, I wanted a server I could hide out of s
   {{< img src="vm-server-above.jpg" alt="Assembled server - overhead view" >}}
 {{</ gallery >}}
 
-## Installing a Host OS
+## Installing a host OS
 
 The VM server's host OS should be as lightweight as possible. It needs to host a hypervisor and not much else. The more software we add to the host, the more packages we need to keep up to date to have a stable server.
 
 I tried a few different Linux distros, but Ubuntu server was the only one that worked out of the box on my hardware (successfully tested both 16.04 and 17.04) . I think [Ryzen's SMT functionality](https://www.phoronix.com/scan.php?page=news_item&px=AMD-Ryzen-Newer-Kernel) is what causes the installations to fail on other distros. I suspect I could work around this by disabling SMT in the BIOS, installing another distro, then upgrading the kernel to >= 4.10, then re-enabling SMT, but I decided to just stick with **Ubuntu 16.04 server** since it's the distro I'm most familiar with anyway.
 
-## Running Virtual Machines
+## Running virtual machines
 
 ### KVM
 
@@ -164,7 +164,7 @@ vSphere didn't seem to offer a significantly better experience than Kimchi. The 
 
 The dealbreaker for me was that on login, vSphere prominently displayed a warning saying that the software would stop working in 60 days unless I entered a VMware registration key. VMware provides a license key for free, but I didn't want to bother with registration keys when Kimchi isn't tied to any kind of licensing checks and provides an experience that's about equal to vSphere.
 
-## Automating Server Provisioning
+## Automating server provisioning
 
 I'm a big fan of Ansible, so I wrote an  [Ansible playbook](provision-vm-host.yml) to automatically provision my VM server. It does the following:
 
@@ -186,7 +186,7 @@ ansible-playbook provision-vm-host.yml \
   --extra-vars "cifs_password=bar"
 ```
 
-## Reviewing My Choices
+## Reviewing my choices
 
 ### Review: CPU
 
