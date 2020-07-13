@@ -55,17 +55,21 @@ TODO: Photos
 
 I received the LKV373A within a few weeks and quickly realized that it was tough to build a solution on top of a device designed for a different purpose. The LKV373A is supposed to be sort of an HDMI extension cord over your network. It pairs with a custom receiver, which translates the stream back to HDMI. Kucera found ways to intercept the video stream, but bending the device to perform against its intended purpose adds complexity to every stage of the process.
 
-The other big drawback was that the LKV373A outputs its data through UDP multicast. That means that every device on your network receives an HD video stream while the LKV373A is running. Kucera found a way to switch it to unicast, but it involves flashing the device with mystery firmware from a shared Google Drive folder (legality TBD). I considered avoiding the unicast issue altogether by just connecting the LKV373A directly to the Pi's Ethernet port, but then that uses up the Pi's only Ethernet port.
+The other big drawback was that the LKV373A outputs its data through UDP multicast. That means that every device on your network receives an HD video stream while the LKV373A is running. Kucera found a way to switch it to unicast, but it involves flashing the device with mystery firmware from a shared Google Drive folder (legality TBD). I considered avoiding the unicast issue altogether by just connecting the LKV373A directly to the Pi's Ethernet port, but that would occupy the Pi's only Ethernet port.
 
 #### Capturing video with the LKV373A
 
 I was able to capture video, but it was flaky.
 
-It broadcasts to UDP on XX
+It broadcasts to UDP on at URL `udp://239.255.42.42:5004`. Kucera was able to play the stream directly with VLC, a popular video player, but that didn't work for me. I was able to do it with ffplay, an open source video player:
 
 ```bash
 ffplay -i udp://239.255.42.42:5004
 ```
+
+TODO: screenshot
+
+But it was very slow. It seemed to show video at a delay of around 10 seconds from the laptop it was capturing. 
 
 I was able to reduce the latency a bit more with this command, which I cobbled together haphazardly from different forum posts and StackOverflow answers:
 
@@ -97,7 +101,7 @@ Amid my mindless Twitter scrolling, I happened to see [a tweet by Arsenio Dev](h
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
-It seemed a little too good to be true, but I ordered one from eBay for only $11, including shipping. Unlike the LKV373A, which are available almost exclusively from sellers in China, plenty of US-based sellers had this device in stock. I don't even know what you call it. It has no brand name, so I'll just call it "the HDMI dongle."
+It seemed a little too good to be true, but I ordered one from eBay. It was only $11, including shipping. Unlike the LKV373A, which are available almost exclusively from sellers in China, plenty of US-based sellers had this device in stock. I don't even know what you call it. It has no brand name, so I'll just call it "the HDMI dongle."
 
 I received the device a few days later and was blown away. It was better than the LKV373A in every way. Within minutes of connecting it to my Pi, I was able to successfully stream the video output using ffmpeg. The LKV373A was almost as large as a brick and required its own power source and Ethernet cable. The HDMI dongle was the size of a thumbdrive and required nothing more than a USB port.
 
