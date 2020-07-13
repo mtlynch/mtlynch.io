@@ -93,15 +93,19 @@ But even with that solution, VLC would sometimes fail to play the stream. Fortun
 
 #### HDMI to USB dongle
 
-Amid my mindless Twitter scrolling, I happened to see a tweet by Arsenio Dev talking about a low-cost HDMI to USB dongle he had just purchased:
+Amid my mindless Twitter scrolling, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) talking about a low-cost HDMI to USB dongle he had just purchased:
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
 It seemed a little too good to be true, but I ordered one from eBay for only $11, including shipping. Unlike the LKV373A, which are available almost exclusively from sellers in China, plenty of US-based sellers had this device in stock. I don't even know what you call it. It has no brand name, so I'll just call it "the HDMI dongle."
 
-I received the device a few days later and was blown away. It was better for my needs than the LKV373A in every way. Within minutes of connecting it to my Pi, I was able to successfully stream the video output using ffmpeg. Unlike the LKV373A, which was almost double the size of the Pi and required its own power source and Ethernet cable, the HDMI dongle was conveniently small and required nothing more than a USB port.
+I received the device a few days later and was blown away. It was better than the LKV373A in every way. Within minutes of connecting it to my Pi, I was able to successfully stream the video output using ffmpeg. The LKV373A was almost as large as a brick and required its own power source and Ethernet cable. The HDMI dongle was the size of a thumbdrive and required nothing more than a USB port.
+
+TODO: Side by side
 
 Surprisingly, this dongle can even capture video protected with HDCP. When I connected the LKV373A to my Roku Premiere, it captured a blank stream, but the HDMI dongle captured it without issue:
+
+TODO: Replace with ffplay
 
 {{<img src="roku-capture.jpg" alt="TinyPilot capturing Roku output" maxWidth="600px" caption="The HDMI dongle can capture a video stream from a Roku Premiere, even though Roku encrypts its output stream with HDCP.">}}
 
@@ -115,17 +119,20 @@ When I publised my previous blog post about getting keyboard input working, I re
 
 {{<img src="maxim-comment.png" alt="Maxim's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" hasBorder="true" caption="Maxim Devaev pointed me to his existing [Pi KVM](https://github.com/pikvm/pikvm) project.">}}
 
-I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off. I have a [difficult history with breadboards](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot), so I ended up rolling my own solution that involved simpler hardware.
+{{<img src="melty-breadboard.jpg" align="right" alt="GPIO pins" maxWidth="500px" caption="My previous experience with breadboards involved [accidentally melting them](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).">}}
 
-{{<img src="melty-breadboard.jpg" alt="GPIO pins" maxWidth="500px" caption="My previous experience with breadboards involved accidentally melting them.">}}
+I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off, so I continued rolling my own solution with simpler hardware.
+
 
 At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
 
 #### uStreamer: a super-fast video streamer
 
-Have you ever found a tool that's so good, it not only solves your problems but also solves adjacent problems you didn't even realize you had? uStreamer was awesome.
+Have you ever found a tool that's so good, it not only solves your problems but also solves adjacent problems you didn't even expect it to address?
 
 Right out of the box, uStreamer reduced my latency from 5 seconds to 600 milliseconds, an incredible speedup. But beyond that, it eliminated a whole chain of extra work I expected to do.
+
+TODO: Side by side
 
 Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how exactly I'd get it from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. The ffmpeg + nginx solution had worked, but it added even more latency and left a few hairy problems to solve:
 
@@ -134,7 +141,7 @@ Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I
 * Browsers can't play HLS streams natively, so which third-party JavaScript solution should I use to render the stream?
 * How do I debug issues now that the stream is going from target computer -> HDMI dongle -> ffmpeg -> nginx -> third-party video player -> browser?
 
-uStreamer simply solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other. uStreamer just saved me three or four weeks of work.
+uStreamer simply solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
 
 The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but no. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who uses his software to do the same.
 
@@ -148,15 +155,17 @@ I tried dropping the `<iframe>` and loading the URL in a `<video>` tag. No luck.
 
 From reading uStreamer's documentation, it said that it was streaming video in a format called Motion JPEG (MJPEG), which I'd never heard of before. I Googled how to embed MJPEG in a website. To my surprise, in all the discussions, people were talking about loading MJPEG streams in `<img>` tags. What? Images are for still images. Okay, maybe animated GIFs, but not streaming video.
 
-But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfectly. The infinite reload issue went away. It had the exact behavior I wanted where the user didn't have to hit "play" to start the stream. It was just streaming as soon as the page loaded.
+But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfectly. The infinite reload issue went away. It had the exact behavior I wanted where the user didn't have to hit "play" to start the stream. It began streaming as soon as the page loaded.
 
 ### Improving video latency
 
-With uStreamer, the only big difference between my solution and the more expensive solutions was latency. uStreamer got me from 5 seconds of latency down to 600 milliseconds, which was a huge improvement, but 600 milliseconds was still noticeable. It didn't feel like a normal remote desktop session. I haven't used enterprise-grade KVM over IP gear, but I suspected that they did a lot better than 600 milliseconds.
+With uStreamer, the only big difference between my solution and the more expensive solutions was latency. uStreamer got me from 5 seconds of latency down to 600 milliseconds, which was a huge leap forward. Still, 600 milliseconds was noticeable delay. I've never used enterprise-grade KVM over IP gear, but I suspected that they did a lot better than 600 milliseconds.
+
+I told Maxim about the possibility of funding performance improvements in uStreamer, so we got to chatting. He was interested in the HDMI dongle I was using since he'd never experimented with it. He invited me to create a tmate session so that he could remotely access my device.
 
 {{<img src="maxim-tmate.png" alt="Screenshot of conversation where Maxim ofers to help me via tmate" caption="Maxim offered to either help improve latency or frame me for a felony. Fortunately, he ended up doing the former.">}}
 
-After a few minutes of testing how uStreamer played with my device, Maxim ran [`v4l2-ctl`](https://www.mankier.com/1/v4l2-ctl) a command I didn't know existed. It outputs information about the video capture devices on the system. The output had a line that was fascinating to Maxim but totally lost on me at first:
+After a few minutes of testing how uStreamer played with my device, Maxim ran [`v4l2-ctl`](https://www.mankier.com/1/v4l2-ctl) a command I didn't know existed. It outputs information about the video capture devices on the system. The output had a line that fascinated Maxim but totally went over my head at first:
 
 ```bash
 $ sudo v4l2-ctl --all
@@ -175,7 +184,7 @@ Streaming Parameters Video Capture:
 
 The pixel format was `MJPG`: that meant the device was already encoding the video stream to Motion JPEG. uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since it was effectively re-encoding a stream that was already in the format we wanted.
 
-We adjust uStreamer to skip the re-encode and just pass through the video stream as-is.
+We adjusted uStreamer to skip the re-encode and just pass through the video stream as-is.
 
 {{<img src="tinypilot-latency.jpg" maxWidth="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
 
@@ -234,32 +243,43 @@ You can solve this with a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and 
 The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row. See the photos below:
 
 {{<gallery caption="To power the Pi, connect a [USB to TTL cable](https://amzn.to/3cVkuTT) to the power pins on the GPIO.">}}
-  {{< img src="power-pins-top.jpg" alt="Top view of USB to TTL connection" maxWidth="400px" >}}
-  {{< img src="power-pins-side.jpg" alt="Side view of USB to TTL connection" maxWidth="400px" >}}
+  {{<img src="power-pins-top.jpg" alt="Top view of USB to TTL connection" maxWidth="400px">}}
+  {{<img src="power-pins-side.jpg" alt="Side view of USB to TTL connection" maxWidth="400px">}}
 {{</gallery>}}
 
-To power on your Pi, plug the wall charger into an outlet and connect the USB-A end of the USB to TTL cable:
+To power on your Pi, plug the wall charger into an outlet, and connect the USB-A end of the USB to TTL cable:
 
-TODO: Show photo
+{{<img src="ac-adaptor.jpg" alt="Photo of USB cable plugged into AC adaptor" maxWidth="600px" caption="Power to Pi by connecting the USB to TTL cable to a 3 Amp AC adaptor.">}}
 
 ### Connect to the machine via USB
 
 Connect your USB cable to your Pi's USB-C port and the other end to your target computer:
 
 {{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
-{{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
-TODO: Show photo
+  {{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
+  {{<img src="usb-server.jpg" alt="USB connection to target computer" maxWidth="500px">}}
 {{</gallery>}}
 
 ### Attach the HDMI capture dongle
 
-The last part of the physical installation involves capturing the target computer's display output.
+To complete the physical assembly, insert the HDMI dongle into one of the Pi's USB ports. Insert an HDMI cable into the dongle, and connect the other end to the display output of your target computer.
+
+{{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
+  {{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" maxWidth="500px">}}
+  {{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" maxWidth="500px">}}
+{{</gallery>}}
 
 TODO: Test Display Port to HDMI cable.
 
 {{<notice type="info">}}
 **Note**: If the computer you're connecting to has no HDMI output, you should be able to use a simple DVI to HDMI adaptor or Display Port to HDMI adaptor, though I haven't tested this personally. (TODO:  link to devices)
 {{</notice>}}
+
+### Connect an Ethernet cable (optional)
+
+If you're connecting to your Pi over wired Ethernet, attach an Ethernet cable to your Pi's Ethernet port:
+
+{{<img src="ethernet-cable.jpg" alt="Photo of Ethernet cable connected to Pi device" maxWidth="700px" caption="Connect an Ethernet cable to your Pi.">}}
 
 ### Install the TinyPilot software
 
