@@ -6,7 +6,7 @@ tags:
 - python
 - ansible
 - homelab
-description: The Raspberry Pi 4 has an impressive array of functionality that allow it to capture video output and impersonate a keyboard, effectively making a virtual KVM.
+- kvm
 images:
 - tinypilot/cover.jpg
 ---
@@ -49,9 +49,9 @@ Video capture was the most difficult part of this. It took a while to find hardw
 
 #### First try: Lenkeng HDMI over IP extender
 
-My first attempt was to use the Lenkeng LKV373A HDMI extender. Daniel Kucera did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device and even [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow ffmpeg to capture output from this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
+My first attempt was to use the [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI). Daniel Kucera did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device and even [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow ffmpeg to capture output from this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
 
-TODO: Photos
+{{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) was my first attempt at HDMI video capture." maxWidth="600px">}}
 
 I received the LKV373A within a few weeks and quickly realized that it was tough to build a solution on top of a device designed for a different purpose. The LKV373A is supposed to be sort of an HDMI extension cord over your network. It pairs with a custom receiver, which translates the stream back to HDMI. Kucera found ways to intercept the video stream, but bending the device to perform against its intended purpose adds complexity to every stage of the process.
 
@@ -67,33 +67,15 @@ It broadcasts to UDP on at URL `udp://239.255.42.42:5004`. Kucera was able to pl
 ffplay -i udp://239.255.42.42:5004
 ```
 
-TODO: screenshot
+{{<img src="ffplay-screenshot.jpg" alt="Screenshot of ffplay rendering video stream from LKV373A" caption="Rendering the video stream from the LKV373A with ffplay" maxWidth="800px">}}
 
-But it was very slow. It seemed to show video at a delay of around 10 seconds from the laptop it was capturing. 
+But it was very slow. There was almost a one-second delay between the target computer and the network stream.
 
-I was able to reduce the latency a bit more with this command, which I cobbled together haphazardly from different forum posts and StackOverflow answers:
+{{<img src="lkv373a-latency.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The LKV373A introduced 838 milliseconds of latency before any re-encoding." maxWidth="600px">}}
 
-```bash
-ffplay \
-  -i udp://239.255.42.42:5004 \
-  -fflags \
-  -nobuffer \
-  -analyzeduration 1 \
-  -sync ext \
-  -probesize 32
-```
+I tried playing around with ffplay's many command-line flags to speed up the stream, but I never pushed past 800 milliseconds. And that was a problem because that was the upper-limit since I was capturing the stream and rendering it locally on my desktop. I wanted to capture the stream on the Pi and re-encode over the network in the browser. That was likely to add a lot more latency.
 
-Daniel Kucera was able to play his stream directly in VLC, but it didn't work for me. The only way I could get it to work was when I re-streamed it with ffmpeg:
-
-```bash
-ffmpeg -i udp://@239.255.42.42:5004 -vcodec copy -f mpegts udp://127.0.0.1:1234
-```
-
-```bash
-vlc.exe udp://@:1234
-```
-
-But even with that solution, VLC would sometimes fail to play the stream. Fortunately, I found a better solution by complete coincidence.
+Fortunately, I found a better solution by complete coincidence.
 
 #### HDMI to USB dongle
 
@@ -105,7 +87,7 @@ It seemed a little too good to be true, but I ordered one from eBay. It was only
 
 I received the device a few days later and was blown away. It was better than the LKV373A in every way. Within minutes of connecting it to my Pi, I was able to successfully stream the video output using ffmpeg. The LKV373A was almost as large as a brick and required its own power source and Ethernet cable. The HDMI dongle was the size of a thumbdrive and required nothing more than a USB port.
 
-TODO: Side by side
+{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) (left) was larger and required more connections than the HDMI dongle (right)." maxWidth="700px">}}
 
 Surprisingly, this dongle can even capture video protected with HDCP. When I connected the LKV373A to my Roku Premiere, it captured a blank stream, but the HDMI dongle captured it without issue:
 
