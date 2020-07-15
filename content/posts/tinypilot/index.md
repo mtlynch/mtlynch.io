@@ -11,35 +11,45 @@ images:
 - tinypilot/cover.jpg
 ---
 
-TinyPilot is a device that gives you remote access to a computer even if the machine has no network connection or operating system loaded. I use TinyPilot with [my homelab bare metal servers](/building-a-vm-homelab/) to install new operating systems and to debug boot errors. This posts explains my experience building it and how you can build your own for under $100.
+TinyPilot is a low-cost, open source device that provides remote access to a computer before its operating system even boots. I use TinyPilot to perform operating system upgrades and to debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
+
+This posts explains my experience creating TinyPilot and how you can build one of your own for under $100.
 
 ## Don't tell me your life story; just tell me how to build it
 
-If you're a grinch and you want to skip over my fascinating and enlightening journey to building TinyPilot, you can skip directly to [build your own TinyPilot](#build-your-own-tinypilot) for the tutorial portion of this post.
-
-## Headless servers are great until they're not
-
-A few years ago, I built my own home server for hosting my virtual machines. It's been a great investment, and I use it every day.
-
-The problem is that from my desk, it's all the way over there. When everything works, it works great. There's no keyboard or monitor attached, because I can access the server over ssh or through its web interface. The problem is that when something goes wrong, it's a huge pain. Every few months, I'll screw something up that prevents the server from booting or joining the network. When that happens, I'm effectively locked out of the machine, so I have to disconnect everything, drag the server over to my desk, and juggle cables around to disconnect my desktop and hook up the keyboard and monitor to my server.
-
-I'd always told myself that I'd correct this mistake by building my next server with a remote administration in mind. I knew Dell servers have iDRAC and HP servers have iLO, both of which are basically chips that let you get a virtual keyboard and monitor on the device as long as there's a network cable plugged in. Even if the OS itself won't boot. But when I actually looked into it, those chips are super expensive and require $XX license from the manufacturer. I looked into 
-
-Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [TinyPilot](https://github.com/mtlynch/tinypilot.git).
-
-This post demonstrates how TinyPilot works and how you can build one for yourself.
+If you're a grinch and you want to skip my fascinating tale of trial and error in developing TinyPilot, jump directly to [build your own TinyPilot](#how-to-build-your-own-tinypilot) for the tutorial portion of this post.
 
 ## Demo
 
-TODO
+TODO: Video demo
 
-## How it works
+## Why TinyPilot?
 
-### Keyboard emulation
+A few years ago, I built my own home server for hosting my virtual machines. It's been a great investment, and I use it every day.
 
-In order for the Pi to send keystrokes to the target device, it uses USB OTG functionality to impersonate a USB keyboard. I described this behavior in more detail in [my previous post](/key-mime-pi#how-it-works).
+TODO: Photo of VM server
 
-### Video capture
+When everything works, it works great. There's no keyboard or monitor attached, because I can access the server through its web interface or ssh. When something goes wrong, it's a huge pain.
+
+Every few months, I'll screw something up that prevents the server from booting or joining the network. When that happens, I'm effectively locked out of the machine. I have to disconnect everything, drag the server over to my desk, and juggle cables around to connect the server to my workstation's keyboard and monitor.
+
+I told myself that on my next server build, I'd include hardware that gives me remote access. I've seen friends use iDRAC, a chip in dell servers that gives console level access at the physical level. When it came time to actually build it, I realized iDRAC is super expensive. It adds $XX to the build and the iDRAC is bound to that particular machine.
+
+I looked at commercial KVM over IP solutions, but they were no better. They ranged in price from $500-1000. As lazy as I am about dragging servers around, I couldn't justify spending that amount on something I only use a few times per year.
+
+{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="800px" hasBorder="true">}}
+
+I've always enjoyed experimenting with the Raspberry Pi, the popular, inexpensive single-board computer. I'd read that recent versions supported USB on-the-go (USB OTG), which allows the Pi to impersonate USB devices such as keyboards, thumb drives, and microphones. I'd seen projects where people use the Pi to capture video, so I figured I could build my own KVM over IP for far less and customize the experience just the way I wanted.
+
+## Impersonating a keyboard
+
+In order for the Pi to send keystrokes to the target device, it uses USB OTG functionality to impersonate a USB keyboard. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
+
+TODO: Key Mime Pi, my first version of TinyPilot that supported keyboard forwarding but no video capture.
+
+## The challenge of capturing video
+
+Keyboard forwarding isn't so useful if I can't see the what's happening on the screen. My obvious next step was to find a way to capture my server's display output in the Pi and render it in the browser.
 
 Video capture was the most difficult part of this. It took a while to find hardware that could capture HDMI input while also being:
 
@@ -47,21 +57,19 @@ Video capture was the most difficult part of this. It took a while to find hardw
 1. Performant
 1. Hackable
 
-#### First try: Lenkeng HDMI over IP extender
+### First try: Lenkeng HDMI over IP extender
 
-My first attempt was to use the [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI). Daniel Kucera did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device and even [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow ffmpeg to capture output from this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
+My first attempt was to use the [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI). Daniel Kučera (aka [danman](https://blog.danman.eu/)) did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device and even [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to allow ffmpeg to capture output from this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
 
 {{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) was my first attempt at HDMI video capture." maxWidth="600px">}}
 
-I received the LKV373A within a few weeks and quickly realized that it was tough to build a solution on top of a device designed for a different purpose. The LKV373A is supposed to be sort of an HDMI extension cord over your network. It pairs with a custom receiver, which translates the stream back to HDMI. Kucera found ways to intercept the video stream, but bending the device to perform against its intended purpose adds complexity to every stage of the process.
+I received the LKV373A within a few weeks and quickly realized that it was tough to build a solution on top of a device designed for a different purpose. The LKV373A is supposed to be sort of an HDMI extension cord over your network. It pairs with a custom receiver, which translates the stream back to HDMI. danman found ways to intercept the video stream, but bending the device to perform against its intended purpose adds complexity to every stage of the process.
 
-The other big drawback was that the LKV373A outputs its data through UDP multicast. That means that every device on your network receives an HD video stream while the LKV373A is running. Kucera found a way to switch it to unicast, but it involves flashing the device with mystery firmware from a shared Google Drive folder (legality TBD). I considered avoiding the unicast issue altogether by just connecting the LKV373A directly to the Pi's Ethernet port, but that would occupy the Pi's only Ethernet port.
+The other big drawback was that the LKV373A outputs its data through UDP multicast. That means that every device on your network receives an HD video stream while the LKV373A is running. danman found a way to switch it to unicast, but it involves flashing the device with mystery firmware from a shared Google Drive folder (legality TBD). I considered avoiding the unicast issue altogether by just connecting the LKV373A directly to the Pi's Ethernet port, but that would occupy the Pi's only Ethernet port.
 
-#### Capturing video with the LKV373A
+### Capturing video with the LKV373A
 
-I was able to capture video, but it was flaky.
-
-It broadcasts to UDP on at URL `udp://239.255.42.42:5004`. Kucera was able to play the stream directly with VLC, a popular video player, but that didn't work for me. I was able to do it with ffplay, an open source video player:
+Capturing video from the LKV373A was tricky because its video stream broke most video players. danman discovered that it broadcast null frames, which tripped up some video players. He contributed a patch to ffmpeg to handle it, so I was able to play the video with ffplay, the video player that comes bundled with ffmpeg:
 
 ```bash
 ffplay -i udp://239.255.42.42:5004
@@ -77,48 +85,60 @@ I tried playing around with ffplay's many command-line flags to speed up the str
 
 Fortunately, I found a better solution by complete coincidence.
 
-#### HDMI to USB dongle
+### HDMI to USB dongle
 
-Amid my mindless Twitter scrolling, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) talking about a low-cost HDMI to USB dongle he had just purchased:
+While mindless scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) talking about a low-cost HDMI to USB dongle he had just purchased:
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
-It seemed a little too good to be true, but I ordered one from eBay. It was only $11, including shipping. Unlike the LKV373A, which are available almost exclusively from sellers in China, plenty of US-based sellers had this device in stock. I don't even know what you call it. It has no brand name, so I'll just call it "the HDMI dongle."
+It seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it. It has no brand name, so I'll just call it "the HDMI dongle."
 
-I received the device a few days later and was blown away. It was better than the LKV373A in every way. Within minutes of connecting it to my Pi, I was able to successfully stream the video output using ffmpeg. The LKV373A was almost as large as a brick and required its own power source and Ethernet cable. The HDMI dongle was the size of a thumbdrive and required nothing more than a USB port.
+TODO: Screenshot of eBay
+
+When the device arrived a few days later, it blew me away. It was better than the LKV373A in every way. Within minutes of connecting it to my Pi, I was able to successfully stream the video output using ffmpeg. The LKV373A was nearly brick-sized and required its own power source and Ethernet cable. The HDMI dongle was as small as a thumbdrive and required nothing more than a USB port.
 
 {{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) (left) was larger and required more connections than the HDMI dongle (right)." maxWidth="700px">}}
 
-Surprisingly, this dongle can even capture video protected with HDCP. When I connected the LKV373A to my Roku Premiere, it captured a blank stream, but the HDMI dongle captured it without issue:
+The only problem was latency. Using ffmpeg to stream, there was a delay of four to five seconds on the video.
 
-TODO: Replace with ffplay
+```bash
+# On the Pi
+ffmpeg \
+  -re \
+  -f v4l2 \
+  -i /dev/video0 \
+  -vcodec libx264 \
+  -f mpegts udp://10.0.0.100:1234/stream
 
-{{<img src="roku-capture.jpg" alt="TinyPilot capturing Roku output" maxWidth="600px" caption="The HDMI dongle can capture a video stream from a Roku Premiere, even though Roku encrypts its output stream with HDCP.">}}
+# On my Windows desktop
+ffplay.exe -i udp://@10.0.0.100:1234/stream
+```
 
-The only problem was latency. Using ffmpeg to stream, there was a delay of four to five seconds on the video. I wasn't sure if this delay was coming from the device itself, from ffmpeg, or from ffplay, the video player I was using to receive the stream. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found the magic formula of ffmpeg's arcane flags, I could substantially reduce the latency.
+ I wasn't sure if this delay was coming from dongle itself, from ffmpeg on the Pi, or from ffplay on my desktop. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found a magic formula within ffmpeg's arcane flags, I could reduce the latency.
 
-Fortunately, I was blessed with another stroke of luck that saved me tons of work.
+Fortunately, I was blessed with another stroke of luck that spared me from that task.
 
-#### Borrowing from a similar project
+### Borrowing from a similar project
 
-When I publised my previous blog post about getting keyboard input working, I received [a comment from Maxim Devaev](/key-mime-pi/#comment-4950940807), who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
+When I publised [my previous blog post](/key-mime-pi/) about getting keyboard input working, I received [a comment from Maxim Devaev](/key-mime-pi/#comment-4950940807), who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
 
 {{<img src="maxim-comment.png" alt="Maxim's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" hasBorder="true" caption="Maxim Devaev pointed me to his existing [Pi KVM](https://github.com/pikvm/pikvm) project.">}}
 
 {{<img src="melty-breadboard.jpg" align="right" alt="GPIO pins" maxWidth="500px" caption="My previous experience with breadboards involved [accidentally melting them](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).">}}
 
-I had looked at it briefly earlier in my work, but it [required soldering components together](https://github.com/pikvm/pikvm#v2-diagram), which scared me off, so I continued rolling my own solution with simpler hardware.
-
+I had looked at Pi-KVM briefly earlier in my work, but it [required breadboards and soldering](https://github.com/pikvm/pikvm#v2-diagram), which scared me off.
 
 At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
 
-#### uStreamer: a super-fast video streamer
+### uStreamer: a super-fast video streamer
 
-Have you ever found a tool that's so good, it not only solves your problems but also solves adjacent problems you didn't even expect it to address?
+Have you ever found a tool that's so good, it even solves problems adjacent to the ones your wanted it to address?
 
-Right out of the box, uStreamer reduced my latency from 5 seconds to 600 milliseconds, an incredible speedup. But beyond that, it eliminated a whole chain of extra work I expected to do.
+Right out of the box, uStreamer reduced my latency from 5 seconds to 600 milliseconds, an incredible speedup.
 
 TODO: Side by side
+
+Beyond the latency improvements, ustreamer eliminated a whole chain of extra work I expected to do.
 
 Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how exactly I'd get it from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. The ffmpeg + nginx solution had worked, but it added even more latency and left a few hairy problems to solve:
 
@@ -131,7 +151,7 @@ uStreamer simply solved all of this. It ran its own minimal HTTP server that ser
 
 The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but no. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who uses his software to do the same.
 
-### What the heck is Motion JPEG?
+## What the heck is Motion JPEG?
 
 I mentioned that uStreamer output to a regular URL endpoint. When I loaded the URL in the browser, it played the video natively.
 
@@ -139,15 +159,13 @@ I embedded uStreamer's video in TinyPilot's web interface using an `<iframe>`. T
 
 I tried dropping the `<iframe>` and loading the URL in a `<video>` tag. No luck.
 
-From reading uStreamer's documentation, it said that it was streaming video in a format called Motion JPEG (MJPEG), which I'd never heard of before. I Googled how to embed MJPEG in a website. To my surprise, in all the discussions, people were talking about loading MJPEG streams in `<img>` tags. What? Images are for still images. Okay, maybe animated GIFs, but not streaming video.
+From reading uStreamer's documentation, it said that it was streaming video in a format called Motion JPEG (MJPEG), which I'd never heard of before. I Googled how to embed MJPEG in a website. To my surprise, in all the discussions, people were talking about loading MJPEG streams in `<img>` tags. What? A video stream in an `<img>` tag? That would be madness.
 
 But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfectly. The infinite reload issue went away. It had the exact behavior I wanted where the user didn't have to hit "play" to start the stream. It began streaming as soon as the page loaded.
 
-### Improving video latency
+## Improving video latency
 
-With uStreamer, the only big difference between my solution and the more expensive solutions was latency. uStreamer got me from 5 seconds of latency down to 600 milliseconds, which was a huge leap forward. Still, 600 milliseconds was noticeable delay. I've never used enterprise-grade KVM over IP gear, but I suspected that they did a lot better than 600 milliseconds.
-
-I told Maxim about the possibility of funding performance improvements in uStreamer, so we got to chatting. He was interested in the HDMI dongle I was using since he'd never experimented with it. He invited me to create a tmate session so that he could remotely access my device.
+uStreamer reduced my latency from 5 seconds down to 600 milliseconds. That was a huge leap forward but still a noticeable delay. I told Maxim I was interested in funding uStreamer further if he could find ways to improve performance, so we got to chatting. He was interested in the HDMI dongle I was using since he'd never tried that particular hardware. He invited me to create a shared shell session using tmate (TODO: link) so that he could access my device remotely.
 
 {{<img src="maxim-tmate.png" alt="Screenshot of conversation where Maxim ofers to help me via tmate" caption="Maxim offered to either help improve latency or frame me for a felony. Fortunately, he ended up doing the former.">}}
 
@@ -168,19 +186,23 @@ Streaming Parameters Video Capture:
         Frames per second: 30.000 (30/1)
 ```
 
-The pixel format was `MJPG`: that meant the device was already encoding the video stream to Motion JPEG. uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since it was effectively re-encoding a stream that was already in the format we wanted.
+The pixel format was `MJPG`: that meant the device was already encoding the video stream to Motion JPEG. uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since it was re-encoding a Motion JPEG stream to Motion JPEG.
 
-We adjusted uStreamer to skip the re-encode and just pass through the video stream as-is.
+We adjusted uStreamer to skip the re-encode and just pass through the video stream.
 
 {{<img src="tinypilot-latency.jpg" maxWidth="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
 
 Wow! Latency went from 600 milliseconds all the way down to 200 ms. It's not instantaneous, but it's low enough that it's easy to forget the latency after a few minutes.
 
-### Building the TinyPilot web interface
+## TinyPilot in action
 
-Wanted to try building it without any external libraries.
+Remember way back at the beginning of this post when I said I wanted TinyPilot so that I could access my headless VM server before it boots? Well, it works!
 
-## Build your own TinyPilot
+I built a new headless VM server this year and used TinyPilot to install Proxmox, an open source hypervisor and web interface for managing VMs. I plugged a bootable USB into my server and used TinyPilot to reboot the system, boot from the USB drive, and install a new OS all from my browser. It was definitely more convenient than my old process of dragging computers around and swapping around cables.
+
+TODO: TinyPilot Proxmox gif
+
+## How to build your own TinyPilot
 
 I have all-in-one kits you can use or you can buy your own parts. The software is all free and open source.
 
@@ -282,8 +304,8 @@ If you're appropriately suspicious of piping a random web script into your shell
 The script bootstraps a self-contained Ansible environment on your Pi and uses it to install four services that run on every boot:
 
 * [nginx](https://nginx.org/): a popular open source web server
-* [ustreamer](https://github.com/pikvm/ustreamer): a video streaming server optimized for Raspberry Pi hardware
-* [usb-gadget](https://github.com/mtlynch/tinypilot/blob/master/enable-usb-hid): enables the Pi's USB "gadget mode" which allows the Pi to impersonate USB devices
+* [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
+* [usb-gadget](https://github.com/mtlynch/tinypilot/blob/master/enable-usb-hid): a script enabling Pi's "USB gadget mode" which allows the Pi to impersonate USB devices
 * [tinypilot](https://github.com/mtlynch/tinypilot): the web interface I created for TinyPilot
 
 ## Using TinyPilot
@@ -292,11 +314,11 @@ After you run the install script, TinyPilot will be available at:
 
 * [http://raspberrypi/](http://raspberrypi/)
 
-TODO: Demo
+TODO: Screenshot
 
 ## TinyPilot kits
 
-If you'd like to support further development of this software, consider purchasing a TinyPilot kit. It includes all the hardware you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
+If you'd like to support further development of this software, consider donating (TODO: link) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the hardware you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
 
 TODO: Show order page
 
