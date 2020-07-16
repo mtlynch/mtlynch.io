@@ -49,7 +49,7 @@ I looked at commercial KVM over IP solutions, but they were no better. They rang
 
 I've always enjoyed experimenting with the Raspberry Pi, the popular, inexpensive single-board computer. I'd read that recent versions supported USB on-the-go (USB OTG), which allows the Pi to impersonate USB devices such as keyboards, thumb drives, and microphones. I'd seen projects where people use the Pi to capture video, so I figured I could build my own KVM over IP for far less and customize the experience just the way I wanted.
 
-TODO: Key Mime Pi, my first version of TinyPilot that supported keyboard forwarding but no video capture.
+{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="[Key Mime Pi](/key-mime-pi), my early precursor to TinyPilot that only supported keyboard forwarding." maxWidth="700px" hasBorder="true">}}
 
 In order for the Pi to send keystrokes to the target device, it uses USB OTG functionality to impersonate a USB keyboard. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
 
