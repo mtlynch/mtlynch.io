@@ -17,7 +17,7 @@ This posts explains my experience creating TinyPilot and how you can build your 
 
 ## Don't tell me your life story; just tell me how to build it
 
-If you're a grinch and you want to skip my fascinating tale of trial and error in developing TinyPilot, jump directly to [build your own TinyPilot](#how-to-build-your-own-tinypilot) for the tutorial portion of this post.
+If you're a grinch who wants to skip my fascinating tale of triumph and despair in developing TinyPilot, jump directly to [build your own TinyPilot](#how-to-build-your-own-tinypilot) for the tutorial portion of this post.
 
 ## Demo
 
@@ -83,11 +83,11 @@ ffplay -i udp://239.255.42.42:5004
 
 {{<img src="ffplay-screenshot.jpg" alt="Screenshot of ffplay rendering video stream from LKV373A" caption="Rendering the video stream from the LKV373A with ffplay" maxWidth="800px">}}
 
-But it was very slow. There was almost a one-second delay between the target computer and the network stream.
+But it was slow. There was almost a one-second delay between the target computer and the network stream.
 
 {{<img src="lkv373a-latency.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The LKV373A introduced 838 milliseconds of latency before any re-encoding." maxWidth="600px">}}
 
-I tried playing around with ffplay's many command-line flags to speed up the stream, but I never pushed past 800 milliseconds. And that was a problem because that was the upper-limit since I was capturing the stream and rendering it locally on my desktop. I wanted to capture the stream on the Pi and re-encode over the network in the browser. That was likely to add a lot more latency.
+I tried playing around with ffplay's many command-line flags to speed up the stream, but I never pushed past 800 milliseconds. And that was a problem because even 800 milliseconds was much higher than I expected to achieve in practice. I was capturing the stream and rendering it locally on my desktop. I wanted to capture the stream on the Pi and re-encode over the network in the browser. That was likely to add a lot more latency.
 
 Fortunately, I found a better solution by complete coincidence.
 
@@ -136,8 +136,7 @@ It was so darn convenient, too. The LKV373A was nearly brick-sized and required 
 
 The only problem was latency. Using ffmpeg to stream, there was a delay of four to five seconds on the video.
 
-
- I wasn't sure if this delay was coming from dongle itself, from ffmpeg on the Pi, or from ffplay on my desktop. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found a magic formula within ffmpeg's arcane flags, I could reduce the latency.
+I wasn't sure if this delay was coming from dongle itself, from ffmpeg on the Pi, or from ffplay on my desktop. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found a magic formula within ffmpeg's arcane flags, I could reduce the latency.
 
 Fortunately, I was blessed with another stroke of luck that spared me from that task.
 
@@ -149,9 +148,9 @@ When I publised [my previous blog post](/key-mime-pi/) about getting keyboard in
 
 {{<img src="melty-breadboard.jpg" align="right" alt="GPIO pins" maxWidth="500px" caption="My previous experience with breadboards involved [accidentally melting them](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).">}}
 
-I had looked at Pi-KVM briefly earlier in my work, but it [required breadboards and soldering](https://github.com/pikvm/pikvm#v2-diagram), which scared me off.
+I had looked at Pi-KVM briefly earlier in my work, but it scared me off when I discovered that it [required breadboards and soldering](https://github.com/pikvm/pikvm#v2-diagram).
 
-At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer). I'd never heard of it, but it seemed simple enough to compile from source, so I did.
+At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer).
 
 ### uStreamer: a super-fast video streamer
 
@@ -301,8 +300,6 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
   {{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" maxWidth="500px">}}
   {{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" maxWidth="500px">}}
 {{</gallery>}}
-
-TODO: Test Display Port to HDMI cable.
 
 {{<notice type="info">}}
 **Note**: If the computer you're connecting to has no HDMI output, you should be able to use a DisplayPort to HDMI cable or a DVI to HDMI cable, though I haven't tested the latter personally. (TODO: link to devices)
