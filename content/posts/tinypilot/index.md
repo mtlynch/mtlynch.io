@@ -27,7 +27,7 @@ TODO: Video demo
 
 A few years ago, I built my own home server to run the virtual machines I use in developing software. It's been a great investment, and I use it every day.
 
-TODO: Photo of VM server
+{{<img src="homelab-server.jpg" alt="Photo of my homelab VM server" caption="The homelab server I built in 2017 to host my virtual machines" maxWidth="650px">}}
 
 The server has no keyboard or monitor attached because I access it through its web interface or ssh. This is a convenient and mostly smooth setup, except when small things go wrong, they become a huge pain.
 
@@ -37,9 +37,9 @@ I told myself that on my next server build, I'd give myself an option for debugg
 
 ## Commercial solutions
 
-I've seen friends use iDRAC, a chip in dell servers that gives console level access at the physical level. When it came time to actually build it, I realized iDRAC is super expensive. It adds $XX to the build and the iDRAC is bound to that particular machine.
+I've seen friends use iDRAC, a chip in dell servers that gives console level access at the physical level. When it came time to actually build it, I realized iDRAC is super expensive. The license alone costs $300 per machine, and then you have to pay for the iDRAC hardware on top of that.
 
-TODO: Price of iDRAC
+{{<img src="idrac-price.png" alt="Screenshot of $300 price for iDRAC 9 Enterprise license" caption="A license for Dell's iDRAC technology costs $300 per machine plus the cost of hardware" maxWidth="700px" hasBorder="true">}}
 
 I looked at commercial KVM over IP solutions, but they were no better. They ranged in price from $500-1000. As lazy as I am about dragging servers around, I couldn't justify spending that amount on something I only use a few times per year.
 
@@ -99,7 +99,7 @@ While mindless scrolling through Twitter, I happened to see [a tweet by Arsenio 
 
 It seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle."
 
-TODO: Screenshot of eBay
+{{<img src="hdmi-ebay.png" alt="Screenshot of HDMI for sale on eBay for $11.20" caption="HDMI to USB dongle available on eBay for $11.20 with free shipping" maxWidth="750px" hasBorder="true">}}
 
 When the device arrived a few days later, it blew me away. As soon as I plugged it in to the Raspberry Pi, it showed up as a UVC capture device
 
@@ -134,9 +134,11 @@ It was so darn convenient, too. The LKV373A was nearly brick-sized and required 
 
 {{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) (left) was larger and required more connections than the HDMI dongle (right)." maxWidth="700px">}}
 
-The only problem was latency. Using ffmpeg to stream, there was a delay of four to five seconds on the video.
+The only problem was latency. Using ffmpeg to stream, there was a delay of 7-10 seconds on the video.
 
-I wasn't sure if this delay was coming from dongle itself, from ffmpeg on the Pi, or from ffplay on my desktop. Arsenio Dev reported a latency of 20 ms, so I suspected that if I found a magic formula within ffmpeg's arcane flags, I could reduce the latency.
+{{<img src="dongle-ffmpeg.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="Using ffmpeg to stream video from my Pi, there was a delay on the video of up to 10 seconds." maxWidth="700px">}}
+
+I wasn't sure if this delay was coming from dongle itself, from ffmpeg on the Pi, or from ffplay on my desktop. Arsenio Dev reported a latency of 20 ms, so it seemed like faster performance was possible if I delved into the mysteries of [ffmpeg's arcane flags](https://ffmpeg.org/ffmpeg.html).
 
 Fortunately, I was blessed with another stroke of luck that spared me from that task.
 
@@ -156,9 +158,9 @@ At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in h
 
 Have you ever found a tool that's so good, it even solves problems adjacent to the ones your wanted it to address?
 
-Right out of the box, uStreamer reduced my latency from 5 seconds to 600 milliseconds, an incredible speedup.
+Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 milliseconds, an incredible speedup.
 
-TODO: Side by side
+{{<img src="ustreamer-1.jpg" alt="500 ms latency with uStreamer and the HDMI dongle" caption="uStreamer reduced my latency by a factor of 15." maxWidth="700px">}}
 
 Beyond the latency improvements, ustreamer eliminated a whole chain of extra work I expected to do.
 
@@ -187,9 +189,9 @@ But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfec
 
 ## Improving video latency
 
-uStreamer reduced my latency from 5 seconds down to 600 milliseconds. That was a huge leap forward but still a noticeable delay. I told Maxim I was interested in funding uStreamer further if he could find ways to improve performance, so we got to chatting.
+uStreamer reduced my latency from 10 seconds down to ~600 milliseconds. That was a huge leap forward but still a noticeable delay. I told Maxim I was interested in funding uStreamer further if he could find ways to improve performance, so we got to chatting.
 
-Maxim was interested in the HDMI dongle I was using since he'd never tried that particular hardware. He invited me to create a shared shell session using tmate (TODO: link) so that he could access my device remotely.
+Maxim was interested in the HDMI dongle I was using since he'd never tried that particular hardware. He invited me to create a shared shell session using [tmate](https://tmate.io/) so that he could access my device remotely.
 
 {{<img src="maxim-tmate.png" alt="Screenshot of conversation where Maxim ofers to help me via tmate" caption="Maxim offered to either help improve latency or frame me for a felony. Fortunately, he ended up doing the former.">}}
 
@@ -222,9 +224,9 @@ Wow! Latency went from 600 milliseconds all the way down to 200 ms. It's not ins
 
 Remember way back at the beginning of this post when I said I wanted TinyPilot so that I could access my headless VM server before it boots? Well, it works!
 
-TODO: TinyPilot Proxmox gif
+<img src="tinypilot-bios.gif">
 
-I built a new headless VM server this year and used TinyPilot to install Proxmox, an open source hypervisor and web interface for managing VMs. I plugged a bootable USB into my server and used TinyPilot to reboot the system, boot from the USB drive, and install a new OS all from my browser. It was definitely more convenient than my old process of dragging computers around and swapping around cables.
+I built a new headless VM server this year and used TinyPilot to install [Proxmox](https://www.proxmox.com/en/), an open source hypervisor and web interface for managing VMs. I plugged a bootable USB into my server and used TinyPilot to reboot the system, boot from the USB drive, and install a new OS all from my browser. It was definitely more pleasant than my old process of dragging computers around and swapping around cables.
 
 ## How to build your own TinyPilot
 
@@ -246,9 +248,9 @@ Want to buy all the parts as an all-in-one bundle? You can support TinyPilot's d
 * [microSD card](https://amzn.to/2VH0RcL) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
-* (Optional) A cooling case or heat sink
+* (Optional) A cooling case, heat sink, or fan
   * Ensure that the case provides easy access to the Pi's GPIO pins.
-  * I use a minimalist aluminum passively cooling case. (TODO: link)
+  * I use a minimalist [passive cooling case](https://amzn.to/3fG1fAa).
 
 ### Install Raspberry Pi OS Lite
 
@@ -262,7 +264,7 @@ When you're done preparing the microSD card, insert it into your Pi device.
 
 ### Install a case (optional)
 
-The Raspberry Pi 4 famously generates a lot of heat (TODO: link to GeerlingGuy post). You can run it fine as a bare chip, but you'll likely hit stability issues. Fortunately, there's a wide selection of cases that cool either with a fan or by passively spreading the heat from the CPU and GPU across a larger surface area.
+The Raspberry Pi 4 famously [generates a lot of heat](https://www.jeffgeerling.com/blog/2019/best-way-keep-your-cool-running-raspberry-pi-4). You can run it fine without cooling, but you'll likely hit stability issues over time.
 
 I like this minimalist case because it's inexpensive and passively cools the Pi without the complexity of connecting a powered fan:
 
@@ -302,7 +304,7 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
 {{</gallery>}}
 
 {{<notice type="info">}}
-**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a DisplayPort to HDMI cable or a DVI to HDMI cable, though I haven't tested the latter personally. (TODO: link to devices)
+**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a [DisplayPort to HDMI cable](https://amzn.to/2Oy2Con) or a [DVI to HDMI cable](https://amzn.to/2WyWrFg), though I haven't tested the latter personally.
 {{</notice>}}
 
 ### Connect an Ethernet cable (optional)
@@ -323,7 +325,7 @@ sudo reboot
 
 If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/mtlynch/tinypilot/blob/master/quick-install).
 
-The script bootstraps a self-contained Ansible environment with my [TinyPilot Ansible role](https://github.com/mtlynch/ansible-role-tinypilot), which installs four services that run on every boot:
+The script bootstraps a self-contained Ansible environment with my [TinyPilot Ansible role](https://github.com/mtlynch/ansible-role-tinypilot). It installs four services that run on every boot:
 
 * [nginx](https://nginx.org/): a popular open source web server
 * [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
@@ -340,7 +342,7 @@ After you run the install script, TinyPilot will be available at:
 
 ## TinyPilot kits
 
-If you'd like to support further development of this software, consider donating (TODO: link) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the hardware you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
+If you'd like to support further development of this software, consider [donating](https://paypal.me/mtlynchio) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the equipment you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
 
 {{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/order" hasBorder="true" caption="I'm offering [TinyPilot kits](https://tinypilotkvm.com/order) that let you build your own TinyPilot and skip the software configuration.">}}
 
