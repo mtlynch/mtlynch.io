@@ -1,5 +1,5 @@
 ---
-title: "TinyPilot: Build your own KVM over IP for under $100"
+title: "TinyPilot: Build a KVM over IP for under $100"
 date: "2020-07-10T00:00:00Z"
 tags:
 - raspberry pi
@@ -21,7 +21,7 @@ If you're a grinch who wants to skip my fascinating tale of triumph and despair 
 
 ## Demo
 
-TODO: Video demo
+{{<youtube IF-AyHJ8DOI>}}
 
 ## Why TinyPilot?
 
@@ -103,15 +103,15 @@ It seemed a little too good to be true, so I ordered one from eBay. It was only 
 
 When the device arrived a few days later, it blew me away. As soon as I plugged it in to the Raspberry Pi, it showed up as a UVC capture device
 
-```bash
+```bash {hl_lines=[7,8,9]}
 $ sudo v4l2-ctl --list-devices
 bcm2835-codec-decode (platform:bcm2835-codec):
         /dev/video10
         /dev/video11
         /dev/video12
 
-UVC Camera (534d:2109): USB Vid (usb-0000:01:00.0-1.4):
-        /dev/video0   << HDMI capture dongle
+UVC Camera (534d:2109): USB Vid (usb-0000:01:00.0-1.4): <<< HDMI capture dongle
+        /dev/video0
         /dev/video1
 ```
 
@@ -156,7 +156,7 @@ At Maxim's suggestion, I gave Pi-KVM a second look, particularly interested in h
 
 ### uStreamer: a super-fast video streamer
 
-Have you ever found a tool that's so good, it even solves problems adjacent to the ones your wanted it to address?
+Have you ever found a tool that's so good, it even solves problems you weren't even expecting?
 
 Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 milliseconds, an incredible speedup.
 
@@ -164,28 +164,11 @@ Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 mil
 
 Beyond the latency improvements, ustreamer eliminated a whole chain of extra work I expected to do.
 
-Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how exactly I'd get it from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. The ffmpeg + nginx solution had worked, but it added even more latency and left a few hairy problems to solve:
-
-* It makes no sense for the user to play or pause the video stream, so could I eliminate those controls and make the video auto-play?
-* How do I get ffmpeg to launch automatically when the user connects and HDMI cable?
-* Browsers can't play HLS streams natively, so which third-party JavaScript solution should I use to render the stream?
-* How do I debug issues now that the stream is going from target computer -> HDMI dongle -> ffmpeg -> nginx -> third-party video player -> browser?
+Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how exactly I'd get it from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. The ffmpeg + nginx solution had worked, but it added even more latency and left many outstanding problems around starting and stopping when a video stream was available and getting the video into a browser-friendly format.
 
 uStreamer simply solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
 
-The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but no. This maniac wrote his own video encoder in C just to squeeze the maximum performance he could out of the Pi's hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who uses his software to do the same.
-
-## What the heck is Motion JPEG?
-
-I mentioned that uStreamer output to a regular URL endpoint. When I loaded the URL in the browser, it played the video natively.
-
-I embedded uStreamer's video in TinyPilot's web interface using an `<iframe>`. That worked, so I assumed I solved the problem. Then, I noticed that my browser never stopped loading. Checking the network tab, it seemed to think that the uStreamer stream was just a never-ending download. That was still usable, but I wanted it to display the same way it would display any normal streaming video.
-
-I tried dropping the `<iframe>` and loading the URL in a `<video>` tag. No luck.
-
-From reading uStreamer's documentation, it said that it was streaming video in a format called Motion JPEG (MJPEG), which I'd never heard of before. I Googled how to embed MJPEG in a website. To my surprise, in all the discussions, people were talking about loading MJPEG streams in `<img>` tags. What? A video stream in an `<img>` tag? That would be madness.
-
-But sure enough, I tried putting the URL in an `<img>` tag, and it worked perfectly. The infinite reload issue went away. It had the exact behavior I wanted where the user didn't have to hit "play" to start the stream. It began streaming as soon as the page loaded.
+The tool was so fully-featured that I assumed Maxim simply forked it from a more mature tool, but I was mistaken. This maniac [wrote his own video encoder](https://github.com/pikvm/ustreamer) in C just to squeeze the maximum performance out of Pi hardware. I quickly [donated to Maxim](https://www.paypal.me/mdevaev), and I invite anyone who uses his software to do the same.
 
 ## Improving video latency
 
@@ -193,11 +176,11 @@ uStreamer reduced my latency from 10 seconds down to ~600 milliseconds. That was
 
 Maxim was interested in the HDMI dongle I was using since he'd never tried that particular hardware. He invited me to create a shared shell session using [tmate](https://tmate.io/) so that he could access my device remotely.
 
-{{<img src="maxim-tmate.png" alt="Screenshot of conversation where Maxim ofers to help me via tmate" caption="Maxim offered to either help improve latency or frame me for a felony. Fortunately, he ended up doing the former.">}}
+{{<img src="maxim-tmate.png" alt="Screenshot of conversation where Maxim ofers to help me via tmate" caption="Maxim offered to either help improve latency or frame me for a federal crime. Fortunately, he ended up doing the former.">}}
 
 After a few minutes of testing how uStreamer played with my device, Maxim ran [`v4l2-ctl`](https://www.mankier.com/1/v4l2-ctl) and saw a line that fascinated him but totally went over my head:
 
-```bash
+```bash {hl_lines=[8]}
 $ sudo v4l2-ctl --all
 Driver Info:
         Driver name      : uvcvideo
@@ -212,7 +195,7 @@ Streaming Parameters Video Capture:
         Frames per second: 30.000 (30/1)
 ```
 
-The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since the stream was already compressed to Motion JPEG.
+The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since modern browsers can render Motion JPEG natively.
 
 We adjusted uStreamer to skip the re-encode and just pass through the video stream.
 
@@ -270,7 +253,7 @@ I like this minimalist case because it's inexpensive and passively cools the Pi 
 
 TODO: Photos
 
-### Power your Pi via GPIO
+### Power your Pi via GPIO (optional)
 
 People typically power their Pi through its USB-C port, but TinyPilot needs this port to connect to the target computer and emulate a USB keyboard. Interestingly, the Pi can still draw enough power from a computer's USB port to run, but it needs 3 Amps of power for stable operation, and a computer's standard USB port outputs less than 1 Amp of power.
 
@@ -304,7 +287,7 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
 {{</gallery>}}
 
 {{<notice type="info">}}
-**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a [DisplayPort to HDMI cable](https://amzn.to/2Oy2Con) or a [DVI to HDMI cable](https://amzn.to/2WyWrFg), though I haven't tested the latter personally.
+**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a [DisplayPort to HDMI cable](https://amzn.to/2Oy2Con) or a [DVI to HDMI cable](https://amzn.to/2WyWrFg), though I haven't tested these personally.
 {{</notice>}}
 
 ### Connect an Ethernet cable (optional)
