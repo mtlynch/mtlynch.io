@@ -152,6 +152,10 @@ I had looked at Pi-KVM briefly, but its [requirements of breadboards and solderi
 
 At Max's suggestion, I gave Pi-KVM a second look, particularly interested in how he solved the video latency issue. I noticed that he captured video through a tool called [uStreamer](https://github.com/pikvm/ustreamer).
 
+{{<notice type="info">}}
+**Note**: From further discussions with Max, I've learned that Pi-KVM does support builds without soldering or breadboards.
+{{</notice>}}
+
 ### uStreamer: a super-fast video streamer
 
 Have you ever found a tool that's so good, it solves problems you hadn't even anticipated?
@@ -197,7 +201,7 @@ We adjusted uStreamer to skip the re-encode and just pass through the video stre
 
 {{<img src="tinypilot-latency.jpg" maxWidth="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
 
-Wow! Latency went from 600 milliseconds all the way down to 200 ms. It's not instantaneous, but it's low enough to forget the latency after using it for a few minutes.
+Latency went from 600 milliseconds all the way down to 200 ms. It's not instantaneous, but it's low enough to forget the latency after using it for a few minutes.
 
 ## TinyPilot in action
 
@@ -214,7 +218,9 @@ Using TinyPilot, I managed the entire install from my browser. It was definitely
 ### Parts list
 
 {{<notice type="info">}}
-Want to buy all the parts as an all-in-one bundle? You can support TinyPilot's development by purchasing a TinyPilot kit from [my website](https://tinypilotkvm.com).
+**Want an all-in-one TinyPilot kit?**
+
+Support TinyPilot's development by purchasing an official [TinyPilot kit](https://tinypilotkvm.com). It includes all the parts needed to build TinyPilot and grants access to premium versions of TinyPilot software I may release in the future.
 {{</notice>}}
 
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
