@@ -7,12 +7,15 @@ tags:
 - ansible
 - homelab
 - kvm
-hero_image: cover.png
+images:
+  - tinypilot/opengraph.jpg
 ---
 
 TinyPilot is a low-cost, open source device I created to provide remote access to computers even before their operating system boots. I use TinyPilot to perform OS installs and to debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
+
+{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="800px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Windows machine">}}
 
 ## I don't want your life story; just tell me how to build it
 
