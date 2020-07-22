@@ -7,11 +7,10 @@ tags:
 - ansible
 - homelab
 - kvm
-images:
-- tinypilot/cover.jpg
+hero_image: cover.png
 ---
 
-TinyPilot is a low-cost, open source device I created to provide remote access to computers even before their operating system boots. I use TinyPilot to perform operating system upgrades and to debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
+TinyPilot is a low-cost, open source device I created to provide remote access to computers even before their operating system boots. I use TinyPilot to perform OS installs and to debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
@@ -29,35 +28,35 @@ A few years ago, I built my own home server for testing software. It's been a gr
 
 {{<img src="homelab-server.jpg" alt="Photo of my homelab VM server" caption="The homelab server I built in 2017 to host my virtual machines" maxWidth="650px">}}
 
-The server has no keyboard or monitor attached because I access it through its web interface or ssh. This is a convenient setup, but it also makes small issues a huge pain.
+The server has no keyboard or monitor attached because I access it over ssh or a web interface. This is a convenient setup, but it also makes small issues a huge pain.
 
-Every few months, I'll screw something up that prevents the server from booting or joining the network, so I'm effectively locked out of the machine. To get things running again, I have to disconnect everything, drag the server over to my desk, and juggle cables around to connect my desktop keyboard and monitor to my server.
+Every few months, I'll screw something up and prevent the server from booting or joining the network, effectively locking me out of the machine. To get things running again, I have to disconnect everything, drag the server over to my desk, and juggle cables around to connect the server to the keyboard and monitor for my desktop.
 
 ## Commercial solutions
 
-Friends who maintain real servers have told me about iDRAC, a chip in Dell servers that provides a virtual console. It works as long as there's a network connection and offers control from the moment the system powers on. I explored it as an option for my next server, but I realized iDRAC is fairly pricey. The license alone costs $300 and requires custom hardware on top of that.
+Friends have raved to me about their experience with iDRAC. It's a chip in Dell servers that provide a virtual console from the moment the system powers on. When I was building my new home server, I explored it as an option, but I realized iDRAC is fairly pricey. The license alone costs $300 and requires custom hardware on top of that.
 
 {{<img src="idrac-price.png" alt="Screenshot of $300 price for iDRAC 9 Enterprise license" caption="A license for Dell's iDRAC technology costs $300 per machine plus the cost of hardware" maxWidth="700px" hasBorder="true">}}
 
-Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to the target computer's keyboard, video, and mouse ports (hence the name KVM). They turned out to be even more expensive, ranging in price from $500 to $1000 per unit. 
+Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to the target computer's keyboard, video, and mouse ports (hence the name KVM). Sadly, they're even more expensive, ranging in price from $500 to $1000 per unit. 
 
 {{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="800px" hasBorder="true">}}
 
 As lazy as I am about dragging servers around, I couldn't justify spending $500 to save myself the trouble of swapping cables around a few times per year.
 
-So, I did what any appropriately irrational programmer would do: I spent several hundred hours building one myself.
+So, I did what any appropriately irrational programmer would do: spend several hundred hours building my own KVM over IP.
 
 ## Building a KVM over IP with Raspberry Pi
 
-The Raspberry Pi is a small, inexpensive single board computer. They start at only $30 and they're powerful enough to run a full desktop operating system, so they're a popular tool among hobbyists and programmers.
+The [Raspberry Pi](https://www.raspberrypi.org/) is a small, inexpensive single board computer. Starting as low as $30 per device, they're powerful enough to run a full desktop operating system, so they're a popular tool among hobbyists and programmers.
 
-TODO: Photo of Raspberry Pi
+{{<img src="pi-in-hand.jpg" alt="Raspberry Pi in the palm of my hand" caption="The Raspberry Pi is a fully-functional computer that fits on a single chip and costs only $30-60." maxWidth="600px">}}
 
-Recent versions of the Pi support USB on-the-go (USB OTG), a feature that allows the Pi to impersonate USB devices such as keyboards, thumb drives, and microphones. Given that there are tools that can capture and stream video, it seemed like the Pi had everything necessary to act as a KVM over IP device.
+Recent versions of the Pi [support USB on-the-go (USB OTG)](https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md#overview_pi4), a feature that allows the Pi to impersonate USB devices such as keyboards, thumb drives, and microphones.
 
-## Using the Pi to impersonate a keyboard
+As a proof of concept, I created a simple web app called [Key Mime Pi](/key-mime-pi).
 
-I started with the challenge of keyboard impersonation, since it required no special hardware beyond a Pi and a USB cable. As a proof of concept, I created a simple web app called Key Mime Pi.
+TODO: Better photo
 
 {{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="[Key Mime Pi](/key-mime-pi), my early precursor to TinyPilot that only supported keyboard forwarding." maxWidth="700px" hasBorder="true">}}
 
@@ -71,7 +70,7 @@ My first attempt at video capture was to use the [Lenkeng LKV373A HDMI extender]
 
 {{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) was my first attempt at HDMI video capture." maxWidth="600px">}}
 
-Capturing video was tricky because the LKV373A isn't a video capture device. Its intended purpose is to pair with another custom device that converts the network video stream back to an HDMI signal and plugs into a TV or monitor. In danman's investigation, he discovered a way to intercept and capture the video stream, but the LKV373A speaks a non-standard protocol that few video tools understand.
+Capturing video was tricky because the LKV373A transmitter isn't a video capture device. Its intended purpose is to pair with LKV373A receiver that converts the network video stream back to an HDMI signal and plugs into a TV or monitor. In danman's investigation, he discovered a way to intercept and capture the video stream, but the LKV373A speaks a non-standard protocol that few video tools understand.
 
 Fortunately, danman [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to ffmpeg to handle the LKV377A's goofy behavior, so I was able to render the stream with ffplay, the video player that comes bundled with ffmpeg:
 
@@ -81,11 +80,11 @@ ffplay -i udp://239.255.42.42:5004
 
 {{<img src="ffplay-screenshot.jpg" alt="Screenshot of ffplay rendering video stream from LKV373A" caption="Rendering the video stream from the LKV373A with ffplay" maxWidth="800px">}}
 
-Quickly, I had my first taste of the problem that would dog me throughout the project: latency. There was almost a one-second delay between the target computer and the the video stream on my desktop.
+This was the first taste of a problem that would dog me throughout the project: latency. There was almost a one-second delay between the target computer and the the video playback on my desktop.
 
 {{<img src="lkv373a-latency.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The LKV373A introduced 838 milliseconds of latency before any re-encoding." maxWidth="600px">}}
 
-I tried playing around with ffplay's many command-line flags to speed up the stream, but I never pushed past 800 milliseconds. And that was on my desktop with its high-end GPU and CPU. It didn't give me much hope for low-latency capturing and rebroadcasting from a scrappy little Raspberry Pi.
+I tried playing around with ffplay's many command-line flags to speed up the stream, but I never pushed past 800 milliseconds. And that was on my desktop with its high-end GPU and CPU. It didn't bode well for performance-wise for my scrappy little Raspberry Pi.
 
 Fortunately, I found a better solution by complete coincidence.
 
@@ -95,11 +94,11 @@ While mindlessly scrolling through Twitter, I happened to see [a tweet by Arseni
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
-Capturing at 1080p at 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle."
+Capturing video at 1080p resolution and 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle."
 
 {{<img src="hdmi-ebay.png" alt="Screenshot of HDMI for sale on eBay for $11.20" caption="HDMI to USB dongle available on eBay for $11.20 with free shipping" maxWidth="750px" hasBorder="true">}}
 
-When the device arrived a few days later, it blew me away. As soon as I plugged it in to the Raspberry Pi, it showed up as a UVC capture device
+When the device arrived a few days later, it blew me away. Without any tinkering, it showed up as a UVC video capture device as soon as I plugged it in to the Raspberry Pi.
 
 ```bash {hl_lines=[7,8,9]}
 $ sudo v4l2-ctl --list-devices
@@ -132,7 +131,7 @@ It was so darn convenient, too. The LKV373A was nearly brick-sized and required 
 
 {{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) (left) was larger and required more connections than the HDMI dongle (right)." maxWidth="700px">}}
 
-The only problem was, again, latency. There was a delay of 7-10 seconds on the video coming from the Pi.
+The only problem was, again, latency. The video stream the Pi rebroadcast lagged the source video by 7-10 seconds.
 
 {{<img src="dongle-ffmpeg.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="Using ffmpeg to stream video from my Pi, there was a delay on the video of up to 10 seconds." maxWidth="700px">}}
 
@@ -164,21 +163,21 @@ Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 mil
 
 {{<img src="ustreamer-1.jpg" alt="500 ms latency with uStreamer and the HDMI dongle" caption="uStreamer reduced my latency by a factor of 15." maxWidth="700px">}}
 
-Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how exactly I'd get it from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for streaming video from ffmpeg to nginx using HLS. The ffmpeg + nginx solution had worked, but it added even more latency and left many outstanding problems around starting and stopping when a video stream was available and getting the video into a browser-friendly format.
+Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how I'd get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stopping streaming on cable connects and disconnects or and how to translate the video to a browser-friendly format.
 
-uStreamer simply solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
+uStreamer solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
 
-The tool was so fully-featured that I assumed Max simply forked it from a more mature tool, but I was mistaken. This maniac [wrote his own video encoder](https://github.com/pikvm/ustreamer) in C just to squeeze the maximum performance out of Pi hardware. I quickly [donated to Max](https://www.paypal.me/mdevaev), and I invite anyone who uses his software to do the same.
+The tool was so fully-featured that I assumed Max simply forked it from a more mature tool, but I was mistaken. This maniac [wrote his own video encoder](https://github.com/pikvm/ustreamer) in C just to squeeze the maximum performance out of Pi hardware. I quickly [donated to Max](https://www.paypal.me/mdevaev) and invite anyone who uses his software to do the same.
 
 ## Improving video latency
 
 uStreamer reduced my latency from 10 seconds down to ~600 milliseconds. That was a huge leap forward but still a noticeable delay. I told Max I was interested in funding uStreamer further if he could find ways to improve performance, so we got to chatting.
 
-Max was interested in the HDMI dongle I was using since he'd never tried that particular hardware. He invited me to create a shared shell session using [tmate](https://tmate.io/) so that he could access my device remotely.
+Max was interested in the HDMI dongle I was using since he'd never seen that particular device. He invited me to create a shared shell session using [tmate](https://tmate.io/) so that he could access my Pi remotely.
 
 {{<img src="maxim-tmate.png" alt="Screenshot of conversation where Max ofers to help me via tmate" caption="Max offered to either help improve latency or frame me for a federal crime. Fortunately, he ended up doing the former.">}}
 
-After a few minutes of testing how uStreamer played with my device, Max ran [`v4l2-ctl`](https://www.mankier.com/1/v4l2-ctl) and saw a line that fascinated him but totally went over my head:
+After a few minutes of testing how uStreamer ran on my hardware, Max ran the [`v4l2-ctl` utility](https://www.mankier.com/1/v4l2-ctl) and saw a line that fascinated him but totally went over my head:
 
 ```bash {hl_lines=[8]}
 $ sudo v4l2-ctl --all
@@ -197,7 +196,7 @@ Streaming Parameters Video Capture:
 
 The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since modern browsers can render Motion JPEG natively.
 
-We adjusted uStreamer to skip the re-encode and just pass through the video stream.
+We adjusted uStreamer to skip the re-encode and just pass through the video stream as-is.
 
 {{<img src="tinypilot-latency.jpg" maxWidth="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
 
@@ -220,13 +219,13 @@ Using TinyPilot, I managed the entire install from my browser. It was definitely
 {{<notice type="info">}}
 **Want an all-in-one TinyPilot kit?**
 
-Support TinyPilot's development by purchasing an official [TinyPilot kit](https://tinypilotkvm.com). It includes all the parts needed to build TinyPilot and grants access to premium versions of TinyPilot software I may release in the future.
+Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
 {{</notice>}}
 
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
 * [HDMI to USB capture dongle](https://amzn.to/2YHEvJN)
-  * Strangely, these don't have a brand name, but you can recognize them by their appearance.
+  * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
   * They're generally available on eBay for $11-15.
 * [microSD card](https://amzn.to/2VH0RcL) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
@@ -243,7 +242,7 @@ To begin, install [Raspberry Pi OS lite](https://www.raspberrypi.org/downloads/r
 
 {{<img src="rufus-install.png" alt="Screenshot of Rufus" caption="I use [Rufus](https://rufus.ie) to write my Pi micro SD cards, but any whole disk imaging tool will work.">}}
 
-Enable SSH access by placing a file called `ssh` on the microSD's boot partition. If you're connecting over wireless, you'll also need to [add a `wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
+Enable SSH access by placing a file called `ssh` on the microSD's boot partition. If you're connecting over wireless, you need a [`wpa_supplicant.conf` file](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
 
 When you're done preparing the microSD card, insert it into your Pi device.
 
@@ -251,13 +250,13 @@ When you're done preparing the microSD card, insert it into your Pi device.
 
 The Raspberry Pi 4 famously [generates a lot of heat](https://www.jeffgeerling.com/blog/2019/best-way-keep-your-cool-running-raspberry-pi-4). You can run it fine without cooling, but you'll likely hit stability issues over time.
 
-I like this minimalist case because it's inexpensive and passively cools the Pi without the complexity of connecting a powered fan:
+I like [this minimalist case](https://amzn.to/3fG1fAa) because it's inexpensive and passively cools the Pi without the complexity of connecting a powered fan:
 
-TODO: Photos
+{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://amzn.to/3fG1fAa) is a good way to cool your Pi without the complexity of a fan." maxWidth="600px">}}
 
 ### Power your Pi via GPIO (optional)
 
-When you connect your Pi to the target computer's USB port, the Pi will draw enough power to run. For stable operation, the Pi requires 3 Amps of power, but a computer's USB port outputs [less than 1 Amp](/key-mime-pi/#solving-the-power-problem).
+The Pi draws enough power from the  target computer's USB port to boot and run, but it needs 3 Amps of power for stable operation. A computer's USB port outputs [less than 1 Amp](/key-mime-pi/#solving-the-power-problem).
 
 To give the Pi enough power, you can use a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row:
 
@@ -283,7 +282,7 @@ To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C p
 
 To complete the physical assembly, insert the HDMI dongle into one of the Pi's USB ports. Insert an HDMI cable into the dongle, and connect the other end to the display output of your target computer.
 
-{{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
+{{<gallery caption="Connect the display output of the target computer to the HDMI dongle and insert it into the Pi's USB port.">}}
   {{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" maxWidth="500px">}}
   {{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" maxWidth="500px">}}
 {{</gallery>}}
@@ -294,7 +293,7 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
 
 ### Connect an Ethernet cable (optional)
 
-If you're connecting to your Pi over wired Ethernet, attach an Ethernet cable to your Pi's Ethernet port:
+If you're connecting to your Pi over wired LAN, attach a network cable to your Pi's Ethernet port:
 
 {{<img src="ethernet-cable.jpg" alt="Photo of Ethernet cable connected to Pi device" maxWidth="700px" caption="Connect an Ethernet cable to your Pi.">}}
 
@@ -327,15 +326,15 @@ After you run the install script, TinyPilot will be available at:
 
 ## TinyPilot kits
 
-If you'd like to support further development of this software, consider [donating](https://paypal.me/mtlynchio) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the equipment you need to build your own, and it includes a pre-formatted microSD card so you don't need to configure anything.
+If you'd like to support further development of this software, consider [donating](https://paypal.me/mtlynchio) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the equipment you need to build your own TinyPilot, and it includes a pre-formatted microSD card so you don't need to configure any software.
 
-{{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/order" hasBorder="true" caption="I'm offering [TinyPilot kits](https://tinypilotkvm.com/order) that let you build your own TinyPilot and skip the software configuration.">}}
+{{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/order" hasBorder="true" caption="Purchasing a [TinyPilot kit](https://tinypilotkvm.com/order) supports future development of TinyPilot and guarantees you access to premium features I may add in the future.">}}
 
 ## Source code
 
 All TinyPilot software is open source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
-* [tinypilot](https://github.com/mtlynch/tinypilot.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
+* [tinypilot](https://github.com/mtlynch/tinypilot.git): The TinyPilot web interface and backend.
 * [ansible-role-tinypilot](https://github.com/mtlynch/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
 ---
