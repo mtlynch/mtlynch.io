@@ -1,16 +1,17 @@
 ---
 title: "TinyPilot: Build a KVM over IP for under $100"
-date: "2020-07-10T00:00:00Z"
+date: "2020-07-23T00:00:00Z"
 tags:
 - raspberry pi
 - python
 - ansible
 - homelab
 - kvm
+- tinypilot
 images:
   - tinypilot/opengraph.jpg
+description: Using only a Raspberry Pi and some inexpensive video capture equipment, you can create your own KVM over IP device, allowing you to capture video and send keyboard input to a remote computer.
 ---
-
 TinyPilot is a low-cost, open source device I created to provide remote access to computers even before their operating system boots. I use TinyPilot to perform OS installs and to debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
@@ -83,7 +84,7 @@ ffplay -i udp://239.255.42.42:5004
 
 {{<img src="ffplay-screenshot.jpg" alt="Screenshot of ffplay rendering video stream from LKV373A" caption="Rendering the video stream from the LKV373A with ffplay" maxWidth="800px">}}
 
-This was the first taste of a problem that would dog me throughout the project: latency. There was almost a one-second delay between the target computer and the the video playback on my desktop.
+This was the first taste of a problem that dogged me throughout the project: latency. There was almost a one-second delay between the target computer and the the video playback on my desktop.
 
 {{<img src="lkv373a-latency.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The LKV373A introduced 838 milliseconds of latency before any re-encoding." maxWidth="600px">}}
 
@@ -168,7 +169,7 @@ Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 mil
 
 Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how I'd get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stopping streaming on cable connects and disconnects or and how to translate the video to a browser-friendly format.
 
-uStreamer solved all of this. It ran its own minimal HTTP server that served video in a format browsers could play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
+uStreamer solved all of this. It ran its own minimal HTTP server that served video in a format browsers play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
 
 The tool was so fully-featured that I assumed Max simply forked it from a more mature tool, but I was mistaken. This maniac [wrote his own video encoder](https://github.com/pikvm/ustreamer) in C just to squeeze the maximum performance out of Pi hardware. I quickly [donated to Max](https://www.paypal.me/mdevaev) and invite anyone who uses his software to do the same.
 
@@ -197,7 +198,7 @@ Streaming Parameters Video Capture:
         Frames per second: 30.000 (30/1)
 ```
 
-The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since modern browsers can render Motion JPEG natively.
+The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since modern browsers render Motion JPEG natively.
 
 We adjusted uStreamer to skip the re-encode and just pass through the video stream as-is.
 
@@ -261,7 +262,7 @@ I like [this minimalist case](https://amzn.to/3fG1fAa) because it's inexpensive 
 
 The Pi draws enough power from the  target computer's USB port to boot and run, but it needs 3 Amps of power for stable operation. A computer's USB port outputs [less than 1 Amp](/key-mime-pi/#solving-the-power-problem).
 
-To give the Pi enough power, you can use a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row:
+To give the Pi enough power, use a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row:
 
 {{<gallery caption="To power the Pi, connect a [USB to TTL cable](https://amzn.to/3cVkuTT) to the power pins on the GPIO.">}}
   {{<img src="power-pins-top.jpg" alt="Top view of USB to TTL connection" maxWidth="400px">}}
