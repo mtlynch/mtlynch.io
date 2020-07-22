@@ -38,11 +38,11 @@ Every few months, I'll screw something up and prevent the server from booting or
 
 ## Commercial solutions
 
-Friends have raved to me about their experience with iDRAC. It's a chip in Dell servers that provide a virtual console from the moment the system powers on. When I was building my new home server, I explored it as an option, but I realized iDRAC is fairly pricey. The license alone costs $300 and requires custom hardware on top of that.
+Friends have raved to me about their experience with iDRAC. It's a chip in Dell servers that provide a virtual console from the moment the system powers on. I briefly considered an iDRAC for my next home server, but the price tag put an end to that. The license alone costs $300, and it requires custom hardware.
 
 {{<img src="idrac-price.png" alt="Screenshot of $300 price for iDRAC 9 Enterprise license" caption="A license for Dell's iDRAC technology costs $300 per machine plus the cost of hardware" maxWidth="700px" hasBorder="true">}}
 
-Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to the target computer's keyboard, video, and mouse ports (hence the name KVM). Sadly, they're even more expensive, ranging in price from $500 to $1000 per unit. 
+Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to a computer's keyboard, video, and mouse ports (hence the name KVM). Sadly, they're even more expensive, ranging in price from $500 to $1000 per unit. 
 
 {{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="800px" hasBorder="true">}}
 
@@ -52,7 +52,7 @@ So, I did what any appropriately irrational programmer would do: spend several h
 
 ## Building a KVM over IP with Raspberry Pi
 
-The [Raspberry Pi](https://www.raspberrypi.org/) is a small, inexpensive single board computer. Starting as low as $30 per device, they're powerful enough to run a full desktop operating system, so they're a popular tool among hobbyists and programmers.
+The [Raspberry Pi](https://www.raspberrypi.org/) is a small, inexpensive single board computer. They're powerful enough to run a full desktop operating system, so their $30-60 price point makes them a popular tool among hobbyists and programmers.
 
 {{<img src="pi-in-hand.jpg" alt="Raspberry Pi in the palm of my hand" caption="The Raspberry Pi is a fully-functional computer that fits on a single chip and costs only $30-60." maxWidth="600px">}}
 
@@ -60,11 +60,9 @@ Recent versions of the Pi [support USB on-the-go (USB OTG)](https://www.raspberr
 
 As a proof of concept, I created a simple web app called [Key Mime Pi](/key-mime-pi).
 
-TODO: Better photo
-
 {{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="[Key Mime Pi](/key-mime-pi), my early precursor to TinyPilot that only supported keyboard forwarding." maxWidth="700px" hasBorder="true">}}
 
- Key Mime Pi connects via USB to another computer and registers itself as a USB keyboard. It also presents a web page and listens for JavaScript key events. When the user types while viewing the page, Key Mime Pi captures the key events and translates them into keystrokes through its fake USB keyboard. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
+ Key Mime Pi connects via USB to another computer and registers itself as a USB keyboard. It also presents a web page and listens for JavaScript key events. As the user types, Key Mime Pi captures the key events and translates them into keystrokes through its fake USB keyboard. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
 
 ## The challenge of capturing video
 
@@ -76,7 +74,7 @@ My first attempt at video capture was to use the [Lenkeng LKV373A HDMI extender]
 
 Capturing video was tricky because the LKV373A transmitter isn't a video capture device. Its intended purpose is to pair with LKV373A receiver that converts the network video stream back to an HDMI signal and plugs into a TV or monitor. In danman's investigation, he discovered a way to intercept and capture the video stream, but the LKV373A speaks a non-standard protocol that few video tools understand.
 
-Fortunately, danman [contributed a patch](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) to ffmpeg to handle the LKV377A's goofy behavior, so I was able to render the stream with ffplay, the video player that comes bundled with ffmpeg:
+Fortunately, danman [contributed a patch to ffmpeg](https://ffmpeg.org/pipermail/ffmpeg-devel/2017-May/211607.html) that handles the LKV377A's goofy behavior, so I was able to render the stream using ffmpeg's video player:
 
 ```bash
 ffplay -i udp://239.255.42.42:5004
@@ -135,7 +133,7 @@ It was so darn convenient, too. The LKV373A was nearly brick-sized and required 
 
 {{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) (left) was larger and required more connections than the HDMI dongle (right)." maxWidth="700px">}}
 
-The only problem was, again, latency. The video stream the Pi rebroadcast lagged the source video by 7-10 seconds.
+The only problem was, again, latency. The Pi's rebroadcast of the video stream lagged the source computer by 7-10 seconds.
 
 {{<img src="dongle-ffmpeg.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="Using ffmpeg to stream video from my Pi, there was a delay on the video of up to 10 seconds." maxWidth="700px">}}
 
@@ -167,7 +165,7 @@ Right out of the box, uStreamer reduced my latency from 8 seconds to 500-600 mil
 
 {{<img src="ustreamer-1.jpg" alt="500 ms latency with uStreamer and the HDMI dongle" caption="uStreamer reduced my latency by a factor of 15." maxWidth="700px">}}
 
-Prior to uStreamer, my intended strategy was to encode the video using ffmpeg. I wasn't sure how I'd get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stopping streaming on cable connects and disconnects or and how to translate the video to a browser-friendly format.
+Prior to uStreamer, I wasn't sure how I'd get video from ffmpeg into the user's browser, but I knew it was possible somehow. I tested this [mostly-accurate tutorial](https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/) for piping video from ffmpeg to nginx using HLS, but it added even more latency. And it still left open problems like how to start and stop streaming on HDMI cable connects and disconnects or and how to translate the video to a browser-friendly format.
 
 uStreamer solved all of this. It ran its own minimal HTTP server that served video in a format browsers play natively. I didn't have to bother with HLS streams or getting ffmpeg and nginx to talk to each other.
 
@@ -198,9 +196,9 @@ Streaming Parameters Video Capture:
         Frames per second: 30.000 (30/1)
 ```
 
-The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since modern browsers render Motion JPEG natively.
+The HDMI dongle was delivering the video stream in `MJPG` format! uStreamer's hardware-assisted encoding was fast, but it was totally unnecessary since modern browsers play Motion JPEG natively.
 
-We adjusted uStreamer to skip the re-encode and just pass through the video stream as-is.
+We adjusted uStreamer to skip re-encoding and just pass through the video stream as-is.
 
 {{<img src="tinypilot-latency.jpg" maxWidth="700px" alt="Photo showing 200ms of latency after eliminating re-encode step" caption="Skipping the extra re-encode step on the Pi reduced latency from 600 ms down to 200 ms.">}}
 
@@ -208,13 +206,13 @@ Latency went from 600 milliseconds all the way down to 200 ms. It's not instanta
 
 ## TinyPilot in action
 
-Remember way back at the beginning of this post when I said I wanted TinyPilot so that I could access my headless VM server before it boots? Well, it works!
+Remember way back at the beginning of this post when I said I wanted TinyPilot so that I could access my headless VM server before it boots? Well, it works! I iterated on Key Mime Pi to make a new video-integrated web interface called TinyPilot:
 
 <img src="tinypilot-bios.gif">
 
 I built a new headless VM server this year and used TinyPilot to install [Proxmox](https://www.proxmox.com/en/), an open source hypervisor and web interface for managing VMs.
 
-Using TinyPilot, I managed the entire install from my browser. It was definitely more pleasant than my old process of dragging computers around and swapping cables back and forth.
+TinyPilot allowed me to manage the entire install from my browser. It was definitely more pleasant than my old process of dragging computers around and swapping cables back and forth.
 
 ## How to build your own TinyPilot
 
