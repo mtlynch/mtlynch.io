@@ -222,6 +222,8 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 **Want an all-in-one TinyPilot kit?**
 
 Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
+
+<a href="https://tinypilotkvm.com" class="btn order-now-btn">Order now</a>
 {{</notice>}}
 
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
