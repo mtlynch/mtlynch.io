@@ -1,5 +1,5 @@
 ---
-title: "TinyPilot: Build a KVM over IP for under $100"
+title: "TinyPilot: Build a KVM Over IP for Under $100"
 date: "2020-07-23T00:00:00Z"
 tags:
 - raspberry pi
