@@ -43,7 +43,7 @@ Friends have raved to me about their experience with iDRAC. It's a chip in Dell 
 
 {{<img src="idrac-price.png" alt="Screenshot of $300 price for iDRAC 9 Enterprise license" caption="A license for Dell's iDRAC technology costs $300 per machine plus the cost of hardware" maxWidth="700px" hasBorder="true">}}
 
-Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to a computer's keyboard, video, and mouse ports (hence the name KVM). Sadly, they're even more expensive, ranging in price from $500 to $1000 per unit. 
+Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to a computer's keyboard, video, and mouse ports (hence the name KVM). Sadly, they're even more expensive, ranging in price from $500 to $1000 per unit.
 
 {{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="800px" hasBorder="true">}}
 
