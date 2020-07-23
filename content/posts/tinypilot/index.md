@@ -13,7 +13,7 @@ images:
 description: Using only a Raspberry Pi and an $11 video capture dongle, you can create your own KVM over IP device, allowing you to send keyboard input to a remote computer and capture its display.
 custom_css: true
 ---
-TinyPilot is an inexpensive, open-source device I created to provide remote access to computers even before their operating system boots. I use TinyPilot to perform OS installs and to debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
+TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
@@ -144,7 +144,7 @@ Fortunately, another stroke of luck spared me from that task.
 
 ### Borrowing from a similar project
 
-When I published [my previous blog post](/key-mime-pi/) about Key Mime Pi, I received [a comment from Max Devaev](/key-mime-pi/#comment-4950940807), who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
+When I published [my previous blog post](/key-mime-pi/) about Key Mime Pi, I received [a comment from Max Devaev](https://mtlynch.io/key-mime-pi/#comment-4950940807), who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
 
 {{<img src="maxim-comment.png" alt="Max's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" hasBorder="true" caption="Max Devaev pointed me to his existing [Pi-KVM](https://github.com/pikvm/pikvm) project.">}}
 
