@@ -144,7 +144,7 @@ Another stroke of luck spared me from that miserable task.
 
 ### Borrowing from a similar project
 
-When I published [my previous blog post](/key-mime-pi/) about Key Mime Pi, I received [a comment from Max Devaev](https://mtlynch.io/key-mime-pi/#comment-4950940807), who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
+When I published [my previous blog post](/key-mime-pi/) about Key Mime Pi, I received a comment from Max Devaev, who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
 
 {{<img src="maxim-comment.png" alt="Max's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" hasBorder="true" caption="Max Devaev pointed me to his existing [Pi-KVM](https://github.com/pikvm/pikvm) project.">}}
 
