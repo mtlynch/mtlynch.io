@@ -1,3 +1,14 @@
+.order-now {
+  background-color: #eef7fa;
+  box-shadow: 0 1px 1px rgba(82,173,200,0.25);
+  border: 1px solid rgb(0, 107, 168);
+  padding: 1rem 2.5rem;
+}
+
+.order-now h4 {
+  margin: 1rem 0;
+}
+
 .btn-wrapper {
   display: flex;
   justify-content: center;
