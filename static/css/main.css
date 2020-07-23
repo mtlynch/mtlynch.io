@@ -80,6 +80,7 @@ blockquote {
   font-size: .8em !important;
   border-radius: 4px;
   text-indent: initial;
+  clear: both;
 }
 
 .notice-info {

@@ -68,6 +68,10 @@
       <link rel="stylesheet" href="{{ . | relURL }}" />
     {{ end }}
 
+    {{ if and .Params.custom_css .Permalink }}
+      <link rel="stylesheet" href="{{ printf `%s%s` .Permalink `pagestyle.css` }}" />
+    {{ end }}
+
     {{ range .Site.Params.custom_js }}
       <script src="{{ . | relURL }}"></script>
     {{ end }}
