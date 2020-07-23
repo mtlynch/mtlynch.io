@@ -14,6 +14,7 @@ description: Using only a Raspberry Pi and an $11 video capture dongle, you can 
 custom_css: true
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=23927380
+  reddit: https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/
 ---
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
