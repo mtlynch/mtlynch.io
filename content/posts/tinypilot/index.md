@@ -12,6 +12,8 @@ images:
   - tinypilot/opengraph.jpg
 description: Using only a Raspberry Pi and an $11 video capture dongle, you can create your own KVM over IP device, allowing you to send keyboard input to a remote computer and capture its display.
 custom_css: true
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=23927380
 ---
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
