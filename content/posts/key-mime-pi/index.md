@@ -33,7 +33,7 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
   * For the Pi Zero W: [Micro-USB to USB-A](https://amzn.to/2B08iE5) (Male/Male)
 * Alternate power source (optional)
   * [USB to TTL serial cable](https://amzn.to/3cVkuTT)
-  * [3A USB wall charger](https://amzn.to/3hal8Ax)
+  * [USB wall charger](https://amzn.to/3hal8Ax)
 
 ## Install Raspberry Pi OS Lite
 
@@ -54,7 +54,7 @@ Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C 
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
 
-Your Pi should draw power from the computer's USB port and power up. If the USB port can't sufficiently power your Pi, jump to "[Solving the power problem](#solving-the-power-problem)."
+Your Pi should draw power from the computer's USB port and power up.
 
 ## Install Key Mime Pi
 
@@ -222,7 +222,7 @@ Here's how it works from end to end:
 1. The Key Mime Pi server sends the HID code to the USB gadget interface at `/dev/hidg0`.
 1. The computer connected to the Pi's USB cable receives this as keyboard input, causing a character to appear on the screen.
 
-## Solving the power problem
+## The power problem
 
 In my tests, USB ports from computers produced enough electricity to power the Pi, but under-voltage warnings appeared frequently in the system log:
 
@@ -247,11 +247,18 @@ Standard USB ports come up short:
 | USB 2.0            | 5 V / 0.5 A        |
 | USB 3.0            | 5 V / 0.9 A        |
 
-The Pi runs even when it's underpowered, but running an underpowered computer is bound to create issues sooner or later.
+I currently am still searching for a solution tot his problem. Here are some possible solutions I have not yet tested:
 
-I solved this by purchasing a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives at least 3 A of electricity.
+* Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
+* Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://amzn.to/30OyQl6).
 
-{{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" caption="I keep the Pi sufficiently powered with a [3 A USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
+## Maintaining continuous power
+
+Relying on power from the target computer has the drawback that the Pi can only run when the target computer is turned on. In my tests, the Pi survived reboots of the target computer, but when the target shut off completely, the Pi lost power.
+
+I solved this by purchasing a [ USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives power, though the cable provides only 0.5 Amps, which is still lower than the Pi requires for stable operation.
+
+{{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to USB wall charger" caption="I keep the Pi sufficiently powered with a [USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
 
 ## Troubleshooting
 
