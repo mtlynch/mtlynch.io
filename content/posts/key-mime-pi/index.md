@@ -256,7 +256,7 @@ I currently am still searching for a solution tot his problem. Here are some pos
 
 Relying on power from the target computer has the drawback that the Pi can only run when the target computer is turned on. In my tests, the Pi survived reboots of the target computer, but when the target shut off completely, the Pi lost power.
 
-I solved this by purchasing a [ USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives power, though the cable provides only 0.5 Amps, which is still lower than the Pi requires for stable operation.
+I solved this by purchasing a [USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives power, though the cable provides only 0.5 Amps, which is still lower than the Pi requires for stable operation.
 
 {{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to USB wall charger" caption="I keep the Pi sufficiently powered with a [USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
 
