@@ -100,7 +100,7 @@ While mindlessly scrolling through Twitter, I happened to see [a tweet by Arseni
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
-Capturing video at 1080p resolution and 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle."
+Capturing video at 1080p resolution and 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle." There are several variants, but they're all just different housing over the same [MacroSilicon MS2109 chip](https://twitter.com/Ascii211/status/1268641527531741186).
 
 {{<img src="hdmi-ebay.png" alt="Screenshot of HDMI for sale on eBay for $11.20" caption="HDMI to USB dongle available on eBay for $11.20 with free shipping" maxWidth="750px" hasBorder="true">}}
 
@@ -243,7 +243,7 @@ Support TinyPilot's development by purchasing [an official TinyPilot kit](https:
 * [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
 * (Optional) [USB to TTL serial cable](https://amzn.to/3cVkuTT)
-* (Optional) [3 Amp USB wall charger](https://amzn.to/3hal8Ax)
+* (Optional) [USB wall charger](https://amzn.to/3hal8Ax)
 * (Optional) A cooling case, heat sink, or fan
   * Choose a case that provides access to the Pi's GPIO pins.
   * I use [this minimalist, passive cooling case](https://amzn.to/3fG1fAa).
@@ -268,9 +268,11 @@ I like [this minimalist case](https://amzn.to/3fG1fAa) because it's inexpensive 
 
 ### Power your Pi via GPIO (optional)
 
-The Pi draws enough power from the  target computer's USB port to boot up and run, but it needs 3 Amps of power for stable operation. A computer's USB port outputs [less than 1 Amp](/key-mime-pi/#solving-the-power-problem).
+The Pi draws enough power from the target computer's USB port to boot up and run, but if the target computer shuts down, your Pi will crash due to the sudden loss of power.
 
-To give the Pi enough power, use a [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row:
+A [USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX) keep your Pi running continuously regardless of the target computer's state. The TTL cable provides 0.5 Amps of power, which is far less than the Pi's desired 3 Amps, but it's enough to keep the Pi running and does not affect stability in my tests.
+
+The USB to TTL cable plugs into the Pi's outer row of GPIO pins just before the end of the row:
 
 {{<gallery caption="To power the Pi, connect a [USB to TTL cable](https://amzn.to/3cVkuTT) to the power pins on the GPIO.">}}
   {{<img src="power-pins-top.jpg" alt="Top view of USB to TTL connection" maxWidth="400px">}}
@@ -279,7 +281,11 @@ To give the Pi enough power, use a [3 Amp USB wall charger](https://amzn.to/2Yit
 
 To power on your Pi, plug the wall charger into an outlet, and connect the USB-A end of your power cable to the AC adaptor:
 
-{{<img src="ac-adaptor.jpg" alt="Photo of USB cable plugged into AC adaptor" maxWidth="600px" caption="Power the Pi by connecting the USB to TTL cable to a 3 Amp AC adaptor.">}}
+{{<img src="ac-adaptor.jpg" alt="Photo of USB cable plugged into AC adaptor" maxWidth="600px" caption="Maintain a constant power source to the Pi by connecting the USB to TTL cable to an AC adaptor.">}}
+
+{{<notice type="warning">}}
+**Note**: A previous version of this tutorial claimed that the USB to TTL cable could provide the full 3 Amps the Pi requires, but a reader has pointed out to me that the USB to TTL cable [provides only 0.5 Amps](https://www.adafruit.com/product/954).
+{{</notice>}}
 
 ### Connect to the machine via USB
 
@@ -289,6 +295,10 @@ To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C p
   {{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
   {{<img src="usb-server.jpg" alt="USB connection to target computer" maxWidth="500px">}}
 {{</gallery>}}
+
+{{<notice type="info">}}
+**Note**: Prefer USB 3.0 ports, as they provide more power to the Pi.
+{{</notice>}}
 
 ### Attach the HDMI capture dongle
 
@@ -335,6 +345,17 @@ After you run the install script, TinyPilot will be available at:
 * [http://raspberrypi/](http://raspberrypi/)
 
 {{<img src="tinypilot-hello-world.png" alt="Screenshot of TinyPilot web interface" maxWidth="700px" caption="When setup is complete, you can access TinyPilot's web interface at [http://raspberrypi/](http://raspberrypi/) on your local network.">}}
+
+## Running underpowered
+
+One limitation of this setup is that it has insufficient power. The Pi 4 needs 3 Amps for stable operation, though it can run at lower power. A computer's USB 3.0 port provides only 0.9 Amps and USB 2.0 provides only 0.5 Amps, which is why you may see these warnings in the Pi's system logs:
+
+```bash
+ $ sudo journalctl -xe | grep "Under-voltage"
+Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
+```
+
+That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues. I'm looking for a better solution, so let me know in the comments if you have suggestions.
 
 ## TinyPilot kits
 
