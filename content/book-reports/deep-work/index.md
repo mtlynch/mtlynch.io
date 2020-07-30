@@ -44,9 +44,12 @@ This was my favorite book of 2018. It profoundly impacted the way I approach my 
 
 ### Attenion residue
 
-  * When you context-switch between tasks, even though you're focused on the new task, your focus is lower because there's still "residue" from the previous task.
-  * Attention residue decreases your performance on the subsequent task.
-  * Checking email or social media and then returning to work creates attention residue because part of your mind continues to think about messages you need to respond to.
+* When you context-switch between tasks, even though you're focused on the new task, your focus is lower because there's still "residue" from the previous task.
+* Attention residue decreases your performance on the subsequent task.
+* Checking email or social media and then returning to work creates attention residue because part of your mind continues to think about messages you need to respond to.
+
+### Shallow work for journalists
+
 * Publishers now encourage journalists and novelists to maintain an active presence on social media.
   * Worrying trend given that these writers need to be free from distraction to write well.
 
