@@ -230,6 +230,6 @@ Even if you have crystal clear principles, the concert example is still a diffic
 * The questions from [the beginning of this section](#habit-3-put-first-things-first) are meant to elicit Quadrant II activities that we're starving because they're non-urgent.
 * To ensure you reserve time for Quadrant II activities, you must decline commitments that are not aligned with your goals.
   * Many people take on extra commitments to be polite but they don't reserve enough time to proactively handle important things.
-  * This matches what Cal Newport argues for in [*Deep Work*](/book-reports/deep-work/#protecting-time-for-deep-work)
+  * This is the same thing Cal Newport [encourages in *Deep Work*](/book-reports/deep-work/#protecting-time-for-deep-work)
 
 #### Managing time with people
