@@ -19,11 +19,15 @@ TODO: Short summary
 ## What I Liked
 
 * The author genuinely finds human behavior delightful and fascinating, and his writing shows it.
+* Liked P/PC
+* Emotional bank account
+* Time quadrants
 
 ## What I Disliked
 
-* I felt like certain topics 
+* I felt like certain topics could have been explained better.
   * e.g., the terms "character ethic" and "personality ethic" to me sound very similar but Covey uses them to represent opposite ideas.
+* Some chapters didn't connect with me at all. (TODO: Habits with no notes)
 
 ## Key Takeaways
 
@@ -149,7 +153,6 @@ Even if you have crystal clear principles, the concert example is still a diffic
   * He recommends that families collaboratively draft a family mission statement and update it regularly.
   * For an organizational/business mission statement to be effective, every member of the organization should have a voice in shaping it.
 
-
 ### Habit 3: Put First Things First
 
 >**Question 1**: What is one thing could you do (you aren't doing now) that if you did on a regular basis would make a tremendous positive difference in your personal life?
@@ -233,3 +236,55 @@ Even if you have crystal clear principles, the concert example is still a diffic
   * This is the same thing Cal Newport [encourages in *Deep Work*](/book-reports/deep-work/#protecting-time-for-deep-work)
 
 #### Managing time with people
+
+* You can't think "efficiency" with people.
+  * You can't accurately predict how long it will take to have an intense conversation with someone close to you.
+  * If it takes longer to have an important conversation than you expected, you'll feel resentful that they're throwing off your schedule.
+  
+>...you simply can't think *efficiency* with people. You think *effectiveness* with people and *efficiency* with things.
+
+* People are more important than things.
+* The relationship where you should care most about effectiveness is with yourself.
+* It can be frustrating when relationship complications throw off your schedule, but in those instances, take a step back to recognize that maintaining the relationship is in line with your goals, you can afford to adapt and be flexible.
+
+#### Effective delegation
+
+* Delegation is the most effective way to increase your results.
+* An individual producer can create one hour's worth of output for every hour of work.
+* An effective manager can produce 10-100 hours' worth of results for one hour of work.
+
+##### Gofer delegation vs. stewardship delegation
+
+* Gofer delegation
+  * Manager tells underling "go for this, go for that, do this, tell me when it's done."
+  * aka "micromanaging"
+* Stewardship delegation
+  * Focuses on results rather than methods.
+    * The subordinate is free to choose any method that achieves the desired results.
+* Stewardship delegation requires mutual understanding across five dimensions:
+  * Desired results: Focus on the "what" and not the "how."
+  * Guidelines: Identify restrictions or pitfalls.
+    * Focus on what not to do, not on required methods.
+    * Share any lessons you've learned from failure.
+  * Resources: Human, financial, technical, or organizational resources the person can use to accomplish the task.
+  * Accountability: Identify the criteria by which they'll be evaluated and when evaluation will happen.
+  * Consequences: Identify what happens as a result of evaluation, both good and bad.
+* Stewardship delegation occurs between employers and employees but also between parents and children.
+
+#### Emotional bank account
+
+* Relationships with others have an implicit "emotional bank account."
+* The emotional bank account grows through kindness, courtesy, and a track record of delivering on commitments.
+* Discourtesty, disrespect, and lies drain an emotional bank account.
+* An emotional bank account with a high balance results in easy communication because there's high trust.
+  * Mistakes are not a big deal because there's so much accumulated goodwill.
+* When the bank balance is low or overdrawn, communication is difficult and tense.
+* Relationship, especially family relationships, require continual deposits.
+  * This ties back to the idea of [balancing production with production capacity](#production-vs-production-capability).
+* Major types of deposits
+  1. Understand the individual: e.g., getting into baseball because your son loves baseball
+  1. Attending to the little things
+  1. Keeping commitments
+  1. Clarifying expectations
+  1. Showing personal integrity
+  1. Apologizing sincerely when you make a withdrawal
