@@ -3,8 +3,7 @@ title: "The Seven Habits of Highly Effective People"
 date: 2020-07-17T20:33:09-04:00
 rating: TODO
 purchase_url: https://amzn.to/3fGvqqW
-custom_css:
-  - pagestyle.css
+custom_css: true
 ---
 
 TODO: Short summary
@@ -153,8 +152,8 @@ Even if you have crystal clear principles, the concert example is still a diffic
 
 ### Habit 3: Put First Things First
 
->Question 1: What is one thing could you do (you aren't doing now) that if you did on a regular basis would make a tremendous positive difference in your personal life?
->Question 2: What one thing in your business or professional life would bring similar results?
+>**Question 1**: What is one thing could you do (you aren't doing now) that if you did on a regular basis would make a tremendous positive difference in your personal life?
+>**Question 2**: What one thing in your business or professional life would bring similar results?
 
 * To decide what "first things" are, you need leadership.
   * You then need good management skills to prioritize those things so they happen first and consistently.
@@ -221,3 +220,16 @@ Even if you have crystal clear principles, the concert example is still a diffic
     </div>
   </div>
 </div>
+
+* If we don't take the time to figure out what's important, we default to doing what's urgent.
+* People who focus their time on Quandrant I just learn to manage crisis after crisis.
+* People often spend time in Quadrant III thinking they're in Quadrant I because they neglect to think critically about what's important.
+* Effective people:
+  * Minimize time in Quadrants III and IV.
+  * Spend time in Quadrant II to minimize their time in Quadrant I.
+* The questions from [the beginning of this section](#habit-3-put-first-things-first) are meant to elicit Quadrant II activities that we're starving because they're non-urgent.
+* To ensure you reserve time for Quadrant II activities, you must decline commitments that are not aligned with your goals.
+  * Many people take on extra commitments to be polite but they don't reserve enough time to proactively handle important things.
+  * This matches what Cal Newport argues for in [*Deep Work*](/book-reports/deep-work/#protecting-time-for-deep-work)
+
+#### Managing time with people
