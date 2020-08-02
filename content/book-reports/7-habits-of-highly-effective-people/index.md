@@ -1,7 +1,7 @@
 ---
 title: "The Seven Habits of Highly Effective People"
 date: 2020-07-17T20:33:09-04:00
-rating: TODO
+rating: 8
 purchase_url: https://amzn.to/3fGvqqW
 custom_css: true
 ---
@@ -9,7 +9,7 @@ custom_css: true
 TODO: Short summary
 
 * Successmanship parody
-* Elitist in a fancy way
+* Elitist in a funny way
 * Sounds corny. Girlfriend read snippet about "synergy" and "paradigm shift"
 
 <!--more-->
@@ -307,3 +307,34 @@ This chapter is exactly what the title sounds like. I didn't have any useful tak
 {{<notice type="info">}}
 This section aligns well with much of the discussion in [*Nonviolent Communication*](/book-reports/nonviolent-communication/#receiving-empathically)
 {{</notice>}}
+
+### Habit 6: Synergize
+
+* Synergy requires people to value and respect differences among those with whom they collaborate.
+  * This builds on strengths and compensates for weaknesses.
+* Synergistic communication requires high trust and openness.
+* When someone disagrees with you, it's an opportunity to say, "Good! You see it differently."
+  * You can work to understand their perspective before trying to convince them of yours.
+
+### Habit 7: Sharpen the Saw
+
+>Suppose you were to come upon someone in the woods working feverishly to saw down a tree.
+>
+>"What are you doing?" you ask.
+>
+>"Can't you see?" comes the impatient reply. "I'm sawing down this tree."
+>
+>"You look exhausted!" you exclaim. "How long have you been at it?"
+>
+>"Over five hours," he returns, "and I'm beat! This is hard work."
+>
+>'Well, why don't you take a break for a few minutes and sharpen that saw?" you inquire. "I'm sure it would go a lot faster."
+>
+>"I don't have time to sharpen the saw," the man says emphatically. "I'm too busy sawing!"
+
+* "Sharpening the saw" is about finding ways to improve efficiency for common or high-impact tasks.
+* Physical: eating the right foods, exercising
+  * >If it's raining on the morning you're scheduled to jog, do it anyway. "Oh good! It's raining! I get to develop my willpower as well as my body!"
+* Spirtual: Meditation, great literature, music
+* Mental: Learning new subjects, limiting TV consumption
+* Social: Investing in personal relationships
