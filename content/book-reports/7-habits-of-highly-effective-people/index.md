@@ -288,3 +288,22 @@ Even if you have crystal clear principles, the concert example is still a diffic
   1. Clarifying expectations
   1. Showing personal integrity
   1. Apologizing sincerely when you make a withdrawal
+
+### Habit 4: Think Win/Win
+
+{{<notice type="info">}}
+This chapter is exactly what the title sounds like. I didn't have any useful takeaways here.
+{{</notice>}}
+
+### Habit 5: Seek First to Understand, Then to Be Understood
+
+* Rather than listen empathically, most people listen with the goal of formulating a response.
+  
+* Empathic listening is a good way to build an emotional bank account with someone.
+* Instead of replying to tell someone their own story, an empathic listener describes the speaker's feelings.
+  * This is differnt than "active listening," where the listener mirrors speech in a shallow way.
+* When you understand the other person's needs, you can make compelling arguments for change by connecting your proposal to their needs.
+
+{{<notice type="info">}}
+This section aligns well with much of the discussion in [*Nonviolent Communication*](/book-reports/nonviolent-communication/#receiving-empathically)
+{{</notice>}}
