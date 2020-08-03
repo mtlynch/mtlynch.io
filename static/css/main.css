@@ -474,3 +474,10 @@ h4:hover .hanchor {
     margin: 0 3rem 0 0 !important;
   }
 }
+
+.affiliate-disclosure {
+  margin-bottom: 5rem;
+  padding: 2rem 1rem;
+  background-color: rgb(245, 252, 240);
+  border: 1px solid rgb(166, 224, 166);
+}
