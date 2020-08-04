@@ -6,7 +6,8 @@ description: "TODO"
 
 ## Highlights
 
-*
+* This is my highest revenue month ever, at $9.1k across all of my projects.
+* TinyPilot had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
 
 ## Goal Grades
 
@@ -69,6 +70,21 @@ Suppliers run out of stock. Suppliers don't really ship according to their estim
 
 It was scary. Outside of me, only one other person had tested TinyPilot. Only one person had tested .
 
+## How can I make TinyPilot sustainable?
+
+Right now, there's not a huge incentive for people to purchase a TinyPilot kit from me. As far as I can tell, there are two reasons:
+
+1. They prefer to receive an all-in-one kit rather than ordering their parts piecemeal.
+1. They're essentially donating money to me to show appreciation for the project.
+
+Neither of these things is a strong incentive.
+
+* Offer custom hardware
+* Offer custom enclosures
+* Switch to paid software.
+
+Moving to less mainstream hardware naturally pushes people to purchase from me.
+
 ## Legacy projects
 
 Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
@@ -114,6 +130,7 @@ Zestful was fairly quiet. No new inbound inquiries. The small customer who signe
 
 ### What got done?
 
+* Published ["TinyPilot: Build a KVM Over IP for Under $100,"](/tinypilot/), which led to a spike in TinyPilot sales.
 * Commissioned a [logo for TinyPilot](https://tinypilotkvm.com/images/og-logo.png).
 
 ### Lessons learned
