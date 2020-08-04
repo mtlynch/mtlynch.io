@@ -74,7 +74,7 @@ I wonder if this is a critique of [*How to Win Friends and Influence People*](ht
     * If you fail to advance your career, you get stuck in a dead-end job.
   * Personal
     * It's easy to focus on the fun, easy parts of a romantic relationship while neglecting the difficult work of maintaining it (i.e., taking your partner for granted).
-    *  It's easy to coddle your children and never invest time in helping them become independent.
+    * It's easy to coddle your children and never invest time in helping them become independent.
 
 ### Habit 1: Be Proactive
 
@@ -109,7 +109,6 @@ I wonder if this is a critique of [*How to Win Friends and Influence People*](ht
 | I can't. | I choose. |
 | I must. | I prefer. |
 | If only. | I will. |
-
 
 {{<notice type="info">}}
 This closely mirrors the idea of ["choicelessness language" in *Nonviolent Communication*](/book-reports/nonviolent-communication/#choicelessness-language).
@@ -256,7 +255,7 @@ Even if you have crystal clear principles, the concert example is still a diffic
 * You can't think "efficiency" with people.
   * You can't accurately predict how long it will take to have an important conversation with someone close to you.
   * If it takes longer to have an important conversation than you expected, you'll feel resentful that they're throwing off your schedule.
-  
+
 >...you simply can't think *efficiency* with people. You think *effectiveness* with people and *efficiency* with things.
 
 * People are more important than things.
