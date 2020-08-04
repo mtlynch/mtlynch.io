@@ -1,0 +1,65 @@
+
+#quadrant-table {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: fit-content;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+#quadrant-table .header {
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+}
+
+#quadrant-table .row {
+  display: flex;
+  flex-direction: row;
+}
+
+#quadrant-table .row .col:nth-child(1) {
+  width: 150px;
+}
+
+#quadrant-table .row .col:nth-child(2), #quadrant-table .row .col:nth-child(3) {
+  min-width: 30ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+@media screen and (min-width: 768px) {
+  #quadrant-table .row .col:nth-child(2), #quadrant-table .row .col:nth-child(3) {
+    width: 50%;
+  }
+}
+
+#quadrant-table .quadrant-label {
+  font-family: serif;
+  text-align: right;
+  margin-top: 2rem;
+  align-self: flex-end;
+}
+
+#quadrant-table .quadrant {
+  padding: 1rem;
+}
+
+#quadrant-table .quadrant-1 {
+  background-color: rgb(255, 111, 111);
+}
+
+#quadrant-table .quadrant-2 {
+  background-color: rgb(196, 251, 255);
+}
+
+#quadrant-table .quadrant-3 {
+  background-color: rgb(255, 194, 137);
+}
+
+#quadrant-table .quadrant-4 {
+  background-color: rgb(216, 216, 216);
+}
