@@ -1,8 +1,11 @@
 <footer class="footer">
   <section class="container">
-    <p class="affiliate-disclosure">
-      <i>Disclosure: Some links on this site contain affiliate tags. Purchases you make through these links may result in the merchant paying this site a commission, though these commissions never affect the price that you pay.</i>
-    </p>
+    {{ with .Params.Title }}
+      <p class="affiliate-disclosure">
+        <i>Disclosure: Some links on this site contain affiliate tags. Purchases you make through these links may result in the merchant paying this site a commission, though these commissions never affect the price that you pay.</i>
+      </p>
+    {{ end }}
+
 
     {{ with .Site.Params.footercontent | safeHTML }}
       <p>{{.}}</p>
