@@ -1,13 +1,14 @@
 ---
 title: "TinyPilot: Month 1"
 date: 2020-08-03T08:47:05-04:00
-description: "TODO"
+description: "I finally created a business that gained immediate traction."
 ---
 
 ## Highlights
 
-* This is my highest revenue month ever, at $9.1k across all of my projects.
+* This is my highest revenue month ever, at $9.8k across all of my projects.
 * [Tiny Pilot](https://tinypilotkvm.com) had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
+* The sudden surge in customers also made it one of my highest-stress months of working for myself.
 
 ## Goal Grades
 
@@ -18,21 +19,21 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Published ["TinyPilot: Build a KVM Over IP for Under $100,"](/tinypilot/) which attracted 48k readers in its first week
 * **Grade**: A
 
-TODO
+This post took a long time to write, as it involved lots of screenshots, photos, and a video demo. I'm happy with the way it turned out. The surge in sales definitely make the extra effort feel justified.
 
 ### Sell 10 TinyPilot units
 
 * **Result**: Sold 52 TinyPilot units
 * **Grade**: A+
 
-TODO
+Prior to my blog post, I had only sold one TinyPilot kit in July. Then, the blog post came out and led to a huge burst of orders, far exceedig my goal.
 
 ### Write up the interviews I promised to my keto interviewees
 
 * **Result**: Published the interviews to [Keto Cornerstone](https://ketocornerstone.com/)
 * **Grade**: A
 
-Keto Cornerstone was my previous project idea. Even though the project seemed like a dead end, I still had to finish publishing interviews I had promised to my interviewees, so I [put them up](https://ketocornerstone.com/stories) and tried to make the website look decent.
+Keto Cornerstone was a [project idea I had in June](/retrospectives/2020/07/#validating-keto-product-ideas). Even though it seemed like a dead end, I had interviewed people with the promise of publishing their stories, so I still had to finish that. I [put up their interviews](https://ketocornerstone.com/stories) and tried to make the website look decent, but it's safe to say that project is now dead.
 
 ## TinyPilot stats
 
@@ -42,35 +43,52 @@ Keto Cornerstone was my previous project idea. Even though the project seemed li
 | Total Pageviews    | 220         | 10,427        | <font color="green">+10,207 (+4640%)</font>        |
 | **Total Earnings** | **$173.94** | **$8,741.37** | **<font color="green">+$8,567.43 (+4926%)</font>** |
 
+Obviously, this was a huge launch month and was better than I expected.
+
 It's a bit difficult to calculate exact profits because I'm buying a lot of inventory in advance, so it would be tedious to dissect my receipts to isolate the costs associated purely with the units I've already sold. Instead, I'll say that my margins are around 40-50%, so the profit for the month was around $4k.
 
-Not showing profit yet but my margins are around 40-50%, so I'd estimate . I'd have to do a lot of tedious accounting to match all the .
+## Aligning my blog with my business (finally)
 
-## Aligning the blog with my business (finally)
+In the past few years, I've had several blog posts that have been minor hits, attracting 30k-200k readers the week I publish them. They've also been relatively successful on tech social media like Reddit, Twitter, and Hacker News.
 
-My friend Jen Yip mentioned that whenever articles about Lunch Money reach the front page of Hacker News, she receives a noticeable influx of new customers. Oh! I was just in it for the vanity. I forgot that Hacker News could actually be good for your business.
+For most indie developers, it would be a huge boon to their business if an article they wrote reached the #1 spot on Hacker News or a popular subreddit. My problem is that the businesses I've created cater to a different market than my blog audience. Nobody says, "I really like Michael's [opinions on code reviews](/human-code-reviews-1/). Now, I'm going to  visit [his keto website](https://isitketo.org/) and purchase a lot of food through his affiliate links."
 
-Other than vanity.
+Before publishing it, I knew my [TinyPilot blog post](/tinypilot/) was different. The audience for that article obviously had a strong overlap with likely customers of [TinyPilot kits](https://tinypilotkvm.com/) that I began selling in July.
 
-I've been lucky on Hacker News. In the past two years, nine of my articles have reached the front page of Hacker News, with several reaching the #1 spot. It doesn't sound like much, but it's pretty difficult to reach the front page of Hacker News.
+Fortunately, the blog post got a positive response. It reached the #1 spot on Hacker News and stayed there for most of the day. It attracted
 
-{{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true" caption="My TinyPilot blog post reached #1 on Hacker News.">}}
+{{< gallery caption="My TinyPilot blog post received a positive reception on Hacker News and several popular subreddits." >}}
+  {{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true">}}
+  {{<img src="reddit-submissions.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true">}}
+{{</gallery>}}
+
+The response was actually much better than I expected. I only had enough inventory on hand to ship nine kits, so I was sold out by midday. It's a shame I wasn't able to capitalize better on the surge in interest, but I was nervous about buying thousands of dollars of inventory in the event that nobody was interested. Looking back, I should have been more strategic in keeping my inventory. The HDMI dongles ship the slowest but they're also one of the cheapest pieces. I could have simply ordered 100 of those and some of the other low-cost parts. Then, I could have handled a surge by rush-ordering the rest and be back in business within 2-3 days.
 
 ## Managing inventory is hard
 
-Ever since the blog post, managing inventory has taken up 30% of my time and occupied 80% of my thoughts.
+Ever since the blog post, managing inventory has taken up 30% of my time and occupied 80% of my thoughts. I keep obsessively checking delivery status on all of my orders and worrying that I'm going to fall behind on inventory. As of this writing, I could clear my 22-order backlog right now, but I'm blocked on [one missing part](https://amzn.to/2DtQse5). That was a part I never worried that much about sourcing because it consistently arrived within two days of my order. Now turnaround has ballooned to one week.
 
+Here are some other scaling issues I've discovered in managing inventory for physical goods:
 
-| Issue               | Mitigation                |
-|---------------------|---------------------------|
-| Delivery speeds are inconsistent, especially when you go from ordering a single unit to ordering 30 units. | Split orders across multiple suppliers to hedge my bets. |
-| Delivery estimates become less accurate when ordering in larger quantities. | Maintain a larger inventory, especially of less common items. |
+* When you have 10-20 orders in transit at once across different merchants, it becomes difficult to keep track of what you need more of and when all parts of a set will be available.
+* Delivery estimates become less accurate and consistent when you order in larger quantities.
+* Certain suppliers cap orders on their website to 10 units and only take larger orders through purchase orders that take extra 2-3 business days to arrange.
+* When you order thousands of dollars in inventory, your credit card maxes out.
+* When you order items from Chinese merchants, your credit card gets flagged for fraud.
 
-I wish there was inventory management software . But the options I've found are either too simple or far too complex. At the simple end, they assume that your inventory is just items that arrive to you ready to sell. You're selling laptops, so the number of laptops you have in stock is the number of laptops you can sell. At the e 
+I wish there was inventory management software that matched my use case. I tried a few different options but they were either too complex or too simple. The simple ones don't understand the concept of raw materials and assume that everything in your inventory is an item you'd sell as-is. The complex solutions do support my use-case, which they call "kitting," but they also come with an assumption that I have multiple warehouses, shipping clerks, and purchase orders. They also tend to cost $80-500/month, which feels pretty steep at this point.
+
+My current solution is a dopey spreadsheet where I track all the parts I need along with what I have in stock. It's an inelegant solution, but it's mostly working in the short term.
 
 {{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" hasBorder="true" caption="My TinyPilot inventory spreadsheet" maxWidth="800px">}}
 
+I'm hoping that once I get through this backlog, inventory won't be so complicated. For each part, I can set a range of units I want to keep in stock and resupply when I fall below that range. Hopefully, I can pick numbers that are high enough to absorb spikes in purchases and have enough left over to sustain me until delivery of new parts.
+
 ## Managing stress is harder
+
+Stress has been one of the unexpected side effects of selling TinyPilots quickly. I generally do a good job of turning off my work brain at dinnertime and pick things up the following morning. The first week after the blog post, I was worrying about TinyPilot constantly, day and night. I was only sleeping 3-4 hours per night. I wasn't up late doing anything useful, just ruminating.
+
+At the time the surge of orders came in, only two people had ever used TinyPilot, and one of them was me. I successfully tested it on two of my servers, but what if there were huge classes of hardware that were incomptible for some reason? Was Raspberry Pi even the right hardware for TinyPilot or should I 
 
 It was scary. Outside of me, only one other person had tested TinyPilot. Only one person had tested .
 
@@ -125,7 +143,19 @@ It's now been two months since I used [programmatic page generation](/retrospect
 | Enterprise Plan Earnings | $679.40     | $0.00      | <font color="red">-$679.40 (-100%)</font>    |
 | **Total Earnings**       | **$685.26** | **$18.05** | **<font color="red">-$667.21 (-97%)</font>** |
 
-Zestful was fairly quiet. No new inbound inquiries. The small customer who signed up for an enterprise plan last month chose not to renew, as expected. Earnings on RapidAPI remained in the sub-$100 range.
+Zestful had a quiet month. No new inbound inquiries. The small customer who signed up for an enterprise plan last month chose not to renew, as expected. Earnings on RapidAPI remained in the sub-$100 range.
+
+### mtlynch.io (this blog)
+
+| Metric                   | June 2020   | July 2020  | Change                                       |
+| ------------------------ | ----------- | ---------- | -------------------------------------------- |
+| Unique Visitors          | 12,518      | 49,957     | <font color="green">+37,439 (+299%)</font>        |
+| Total Pageviews          | 25,042      | 79,921     | <font color="green">+54,879 (+219%)</font>       |
+| **Amazon Affiliate Earnings**       | **$39.02** | **$649.45** | **<font color="green">$610.43 (+1564%)</font>** |
+
+I generally don't track stats for this blog, but I'm including them this month exclusively for a brag I want to make in the following section.
+
+Revenue-wise, July was an outlier month for the blog because many readers purchased equipment to make their own TinyPilots through the [affiliate links in my tutorial](/tinypilot/#parts-list).
 
 ### Revenue summary
 
@@ -134,9 +164,10 @@ Zestful was fairly quiet. No new inbound inquiries. The small customer who signe
 | TinyPilot  | $173.94       | $8,741.37     | <font color="green">+$8,567.43 (+4926%)</font>    |
 | Is It Keto | $180.66       | $369.91       | <font color="green">+$189.25 (+105%)</font>       |
 | Zestful    | $685.26       | $18.05        | <font color="red">-$667.21 (-97%)</font>          |
-| **Total**  | **$1,039.86** | **$9,129.33** | **<font color="green">+$8,089.47 (+778%)</font>** |
+| mtlynch.io | $39.02        | $649.45       | <font color="green">$610.43 (+1564%)</font>       |
+| **Total**  | **$1,078.88** | **$9,778.78** | **<font color="green">+$8,699.90 (+806%)</font>** |
 
-July was the strongest revenue month I've ever had. In fact, it was only $400 shy of beating [my combined revenue from all of 2018-2019](/solo-developer-year-2/#how-i-made-and-spent-money).
+July was the strongest revenue month I've ever had. In fact, it's $200 higher than all of [my revenue from 2018 and 2019, combined](/solo-developer-year-2/#how-i-made-and-spent-money). It brings me to $13.1k for 2020, and makes my [2020 goal of $20k](/solo-developer-year-2/#goals-for-year-three) seem very possible.
 
 ## Wrap up
 
@@ -147,7 +178,8 @@ July was the strongest revenue month I've ever had. In fact, it was only $400 sh
 
 ### Lessons learned
 
-* Don't use Stripe to sell physical items.
+* When ordering inventory, allocate larger buffers for items that have longer delivery turnarounds and/or are cheaper to hold.
+* [Don't use Stripe to sell physical items](https://twitter.com/deliberatecoder/status/1288271098262544385).
   * Shopify is superior in every way.
 * When ordering raw materials, use at least two suppliers for each item.
   * Split/rotate your orders between them so you're not at the mercy of a single vendor.
