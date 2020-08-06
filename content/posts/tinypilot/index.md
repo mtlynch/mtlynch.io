@@ -313,11 +313,15 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
 **Note**: If the computer you're connecting to has no HDMI output, you should be able to use a [DisplayPort to HDMI cable](https://amzn.to/2Oy2Con) or a [DVI to HDMI cable](https://amzn.to/2WyWrFg), though I haven't tested these personally.
 {{</notice>}}
 
-### Connect an Ethernet cable (optional)
+### Connect an Ethernet cable
 
 If you're connecting to your Pi over wired LAN, attach a network cable to your Pi's Ethernet port:
 
 {{<img src="ethernet-cable.jpg" alt="Photo of Ethernet cable connected to Pi device" maxWidth="700px" caption="Connect an Ethernet cable to your Pi.">}}
+
+{{<notice type="info">}}
+**Note**: You can skip this step if you configured wireless access by adding a `wpa_supplicant.conf` file [above](#install-raspberry-pi-os-lite).
+{{</notice>}}
 
 ### Install the TinyPilot software
 
