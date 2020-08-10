@@ -65,7 +65,7 @@ Despite my best efforts, the blog earned more than all of my other projects comb
 | Development\* | -$3,896 |
 | [Illustrations](/how-to-hire-a-cartoonist/) | -$599 |
 | [Editing](/editor/) | -$75 |
-| [Grammarly](https://www.grammarly.com/?affiliateNetwork=cj&affiliateID=8329872) (Grammar and style checking service) | -$140 |
+| [Grammarly](https://www.jdoqocy.com/click-8329872-11001874) (Grammar and style checking service) | -$140 |
 | Hosting | -$309 |
 | Domain | -$60 |
 | **Net profit** | **-$3,835** |
