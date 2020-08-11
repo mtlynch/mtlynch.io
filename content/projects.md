@@ -2,7 +2,11 @@
 title: Projects
 ---
 
-## [Portfolio Rebalancer](https://assetrebalancer.com/) (2020 - present)
+## [TinyPilot](https://tinypilotkvm.com/) (2020 - present)
+
+TinyPilot is a small, inexpensive device that gives you remote access to servers before they even boot.
+
+## [Portfolio Rebalancer](https://assetrebalancer.com/) (2020)
 
 Portfolio Rebalancer shows investors on what funds they need to buy and sell to achieve their target asset allocation.
 
