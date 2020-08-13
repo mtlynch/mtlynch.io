@@ -7,10 +7,11 @@ tags:
 date: '2020-08-13'
 images:
   - collect-debt/cover.png
+description: Within two emails, a merchant went from blatant dismissal to full payment, and I owe it to The Organized Professional Method.
 # No affiliate links in this article
 hide_affiliate_warning: true
 ---
-A few years ago, I learned a handy technique for resolving disputes with uncooperative businesses. It's simple to understand and easy to implement. You don't need lawyers or a large social media presence. All it requires is for you to behave like an organized professional. This technique recently resolved a problem so effectively that I had to share the story.
+A few years ago, I learned a handy technique for resolving disputes with uncooperative businesses. It's simple to understand and easy to implement. You don't need lawyers or a prominent social media presence. All it requires is for you to behave like an organized professional. This technique recently resolved a problem so effectively that I had to share the story.
 
 The conversation began with a merchant telling me in no uncertain terms that they refused to pay the money they owed me:
 
@@ -25,17 +26,17 @@ This post explains the dispute and how The Organized Professional Method solved 
 
 ## Handling bad behavior with The Organized Professional Method
 
-In 2017, Patrick McKenzie wrote an article called, ["Identity Theft, Credit Reports, and You."](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/). It's ostensibly about disputing information on your credit report, but the article is much more generalizable than Patrick perhaps intended. It was an illuminating read for me in demonstrating how much power you can wield by thinking strategically about an organization's incentives.
+In 2017, Patrick McKenzie wrote a blog post called ["Identity Theft, Credit Reports, and You."](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/). It's ostensibly about disputing information on your credit report, but the article is more generalizable than Patrick perhaps intended. It was an illuminating read for me in demonstrating how much power you can wield by thinking strategically about an organization's incentives.
 
 In Patrick's article, he explains that banks reward their customer service agents for getting customers off the phone as quickly as possible. They reward their compliance team for minimizing the bank's number of regulatory incidents per year. Therefore, Patrick taught his readers how to navigate from a bank's customer service department to their legal department. From there, the customer presents themselves as knowledgeable enough of their rights that the compliance team should rightly fear a regulatory incident.
 
-This strategy applies to businesses more generally. If a business mistreats you, usually someone at the organization has the power to correct it. The potential problem solver follows follows self-serving incentives, as anyone does. If you can identify those incentives and demonstrate an ability to affect them, then the person is likely to take your problem seriously.
+This strategy applies to businesses more generally. If a company mistreats you, usually someone at the organization has the power to correct it. The potential problem solver follows self-serving incentives, as anyone does. If you can identify those incentives and demonstrate an ability to affect them, then the person is likely to take your problem seriously.
 
-The biggest takeaway for me was Patrick's recommendations on the tone to mantain throughout the dispute:
+The biggest takeaway for me was Patrick's recommendations on the tone to maintain throughout the dispute:
 
 >...you want to communicate with the bank in a manner which suggests that you're an organized professional who is capable of escalating the matter if the bank does not handle it themselves. You do not yell [...] You do not bluster [...] You instead present as if you're collecting a paper trail.
 
-Patrick's recommendation resonated with me because I generally don't see the sense in yelling at people, but I also don't want to take shady business practices lying down.
+Patrick's recommendation resonated with me because I generally don't see value in yelling at people, but I also don't want to take shady business practices lying down.
 
 ## The dispute I needed to resolve
 
@@ -51,7 +52,7 @@ Kiss My Keto's affiliate program sounded like a good deal, but I would later com
 
 ## Do my customers just hate spending money?
 
-Eager to see my earnings skyrocket, I checked my affiliate stats the next day. From my own analytics, I could see that seven visitors had clicked the link to Kiss My Keto. Checking on Kiss My Keto's affiliate dashboard, I still had zero "conversions," meaning that none of the visitors I referred had purchased anything. Okay, fine. Maybe prices were higher than they expected, or none of those seven felt like buying anything that day.
+Eager to see my earnings skyrocket, I checked my affiliate stats the next day. Seven visitors had clicked the link to Kiss My Keto, but I still had zero "conversions," meaning that none of the visitors I referred had purchased anything. Okay, fine. Maybe prices were higher than they expected, or none of those seven felt like buying anything that day.
 
 After a week, it was the same thing. 26 users had visited, but none of them purchased anything.
 
@@ -89,7 +90,7 @@ First, Kiss My Keto's published policies say explicitly that their commissions a
 
 {{<img src="20pct-on-all.png" alt="Kiss My Keto's published guidelines say they pay 20% commission on all products" hasBorder="true" caption="Kiss My Keto's published rates claimed a 20% commission on all products with no mention of exceptions." maxWidth="650px">}}
 
-Secondly, bread is Kiss My Keto's flagship product. If you visit their website, they showcase bread so prominently that you'd think they're a bread store. A hidden exception for bread would be like if [Zappos](https://www.zappos.com) advertised a commission on all their products and then later said, "Oh, but we didn't mean *shoes*".
+Secondly, bread is Kiss My Keto's flagship product. If you visit their website, they showcase bread so prominently that you'd think they're a bread store. A hidden exception for bread would be like if [Zappos](https://www.zappos.com) advertised a commission on all their products and then later said, "Oh, but we didn't mean *shoes*."
 
 {{<img src="kmk-homepage.png" alt="Nini reports that Kiss My Keto pays no commission on sales of bread or during sitewide discounts" hasBorder="true" caption="Kiss My Keto's homepage features bread prominently." maxWidth="600px">}}
 
@@ -126,11 +127,11 @@ I sent the following email to Alex Bird, Kiss My Keto's CEO and co-founder:
 
 I'm doing a few things in the email to adhere to The Organized Professional Method:
 
-* I make no threats nor do I express anger.
+* I make no threats, nor do I express anger.
   * The most heated thing I say is that the policy is "unacceptable."
 * The email lays out facts that are objective and provably true.
 * I'm firm but polite in what I want.
-* Wherever possible, I used the names of our businesses instead of saying "you" or "me."
+* Wherever possible, I used our businesses' names instead of saying "you" or "me."
   * This was a cold, emotionless business issue, not a request to validate my feelings.
 
 After two weeks, Alex still hadn't responded, so I sent him this follow-up:
@@ -143,8 +144,8 @@ Things to notice:
 
 * I'm mentioning specific dates, which hints at building a paper trail.
 * The one-week deadline discourages Alex from deferring his response indefinitely.
-* I *hint* at legal action, but don't explicitly threaten it.
-  * My plan if they failed to pay was to file a complaint with the [Federal Trade Commission](https://www.ftc.gov) and reach out to other affiliates suggesting they do the same.
+* I *hint* at legal action but don't explicitly threaten it.
+  * If they failed to pay, my plan was to file a complaint with the [Federal Trade Commission](https://www.ftc.gov) and reach out to other affiliates suggesting they do the same.
 
 ## "To put it blatantly, we are not paying you for your conversions"
 
@@ -164,7 +165,7 @@ The next day, I received a response from Michael Herscu, Alex's co-founder:
 
 There are a few things that are confusing about Herscu's email that I need to unpack.
 
-He says "we have already paid [me]." Unbeknownst to me, Kiss My Keto had spontaneously begun paying me commissions on bread purchases (more on that [below](#calculating-the-debt)). The day before Herscu responded to me, I received a PayPal payment for $26.60 for commissions I earned over the preceding two weeks.
+He says, "we have already paid you." Unbeknownst to me, Kiss My Keto had spontaneously begun paying me commissions on bread purchases (more on that [below](#calculating-the-debt)). The day before Herscu responded to me, I received a PayPal payment for $26.60 for commissions I earned over the preceding two weeks.
 
 Herscu also seems to misunderstand the real issue. He was acting as though it was a simple matter of distrusting Kiss My Keto's numbers. Though I was indeed skeptical of their numbers, I didn't want to fight that battle because I had no evidence to prove any of my readers purchased something. What I could prove was that Kiss My Keto's advertised pay structure differed from what their affiliate manager described to me privately.
 
@@ -186,7 +187,7 @@ Herscu responded half an hour later, this time in a less hostile tone:
 
 {{<img src="herscu-outcome.png" alt="Screenshot of Herscu asking 'how do you wish to resolve the matter? What outcome are you hoping for?'" hasBorder="true">}}
 
-That seemed like a good sign. He asked what he can do to get me to stop bothering him, so he seemed open to a solution.
+That was a good sign. He asked what he can do to make me stop bothering him, so he appeared amenable to a solution.
 
 I sent this response:
 
@@ -204,13 +205,13 @@ He responded a few days later, agreeing to pay me the $88:
 
 You may have noticed a logical inconsistency in my demand to Kiss My Keto. My original issue was that Kiss My Keto's statistics seemed untrustworthy, so why was I suddenly treating everything after July 16th as reliable?
 
-Something changed on July 16th that was very much in my favor. Suddenly, Kiss My Keto started crediting me for sales of bread, the thing they privately had claimed was inelgible for commission. Interestingly, my first commission occurred less than 24 hours after I emailed their CEO, Alex Bird:
+Something changed on July 16th that was very much in my favor. Suddenly, Kiss My Keto started crediting me for sales of bread, the thing they privately had claimed was ineligible for commission. Interestingly, my first commission occurred less than 24 hours after I emailed their CEO, Alex Bird:
 
 {{<img src="kmk-bread-purchase.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" maxWidth="600px">}}
 
-That was great news for me because it gave me hard numbers from which to extrapolate my missing sales. When I had zero commissions, Kiss My Keto could simply claim that none of the customers who came from my site completed purchases. Without access to their internal receipts, I'd have no evidence to argue. By flipping on commissions for bread, they gave me a view into what my commissions *should* have looked like the entire time.
+That was great news for me because it gave me hard numbers to extrapolate my missing sales. When I had zero commissions, Kiss My Keto could simply claim that none of the customers who came from my site completed purchases. Without access to their internal receipts, I'd have no evidence to argue. By flipping on commissions for bread, they gave me a view into what my commissions *should* have looked like the entire time.
 
-I've collected more data since the email exchange, and now their accounting prior to July 16th seems even more suspect:
+Since the email exchange, I've collected more data, and now their accounting prior to July 16th seems even more suspect:
 
 | Period                  | Days      | Referrals | Credited purchases | Commissions |
 |-------------------------|-----------|-----------|--------------------|-------------|
@@ -227,9 +228,9 @@ Did Kiss My Keto pay me because I convinced them that it was the ethical and jus
 
 To me, it looks like Kiss My Keto was violating their published policies, I had clear evidence of it, and $88 seemed like a cheap price to placate me. After my email to the CEO, they took down [their affiliate policy page](https://archive.is/iyoxj), and I started receiving commissions when customers I referred purchased bread.
 
-Even if Kiss My Keto thought my assertions were baseless and paid me $88 just to get me to buzz off, that's still a win. Had I huffed and puffed and told them how mad I was, they would have simply stopped responding. Herscu started at, "to put it blatantly, we're not paying you." Two emails later, I brougt him to, "$88 seems fair to me." Even if all I did was convince him that $88 was cheaper than dealing with whatever nuisance I might cause, The Organized Professional Method created that impression.
+Even if Kiss My Keto thought my assertions were baseless and paid me $88 just to get me to buzz off, that's still a win. Had I huffed and puffed and told them how mad I was, they would have simply stopped responding. Herscu started at, "to put it blatantly, we're not paying you." Two emails later, I brought him to, "$88 seems fair to me." Even if all I did was convince him that $88 was cheaper than dealing with whatever nuisance I might cause, The Organized Professional Method created that impression.
 
-I use this method a lot. Sometimes it works, and sometimes it doesn't, but I always find it to be the least stressful way of addressing disputes. When a company engages in bad behavior, I think about these questions:
+I use this method frequently. Sometimes it works, and sometimes it doesn't, but I always find it to be the least stressful way of addressing disputes. When a company engages in bad behavior, I think about these questions:
 
 * Who in the organization can solve this problem?
 * What are their incentives?
