@@ -153,13 +153,13 @@ The next day, I received a response from Michael Herscu, Alex's co-founder:
 
 >Nini, our ambassador manager tells me we have already paid you for the most recent conversions.
 >
->Now I'm being told you feel you are still owed for older campaigns that weren't tracked properly. To put it blatantly, we are not paying you for your conversions. 
+>Now I'm being told you feel you are still owed for older campaigns that weren't tracked properly. To put it blatantly, we are not paying you for your conversions.
 >
->Here[sic] the thing Michael... We can't pull an arbitrary number out of a hat based on a number of conversions that you feel you were owed. 
+>Here[sic] the thing Michael... We can't pull an arbitrary number out of a hat based on a number of conversions that you feel you were owed.
 >
 >Nini spoke to Refersion and they told her 0 conversions out of 95 clicks is not impossible so it seems your traffic simply did not convert.
 >
->Is it possible your affiliate link wasn't working? Sure, anything is possible but Refersion assures us it's working so I think it's extremely unlikely this was the case. 
+>Is it possible your affiliate link wasn't working? Sure, anything is possible but Refersion assures us it's working so I think it's extremely unlikely this was the case.
 >
 >Do you have any proof of conversions that weren't tracked? If you do please share them here with me and we can address them. We will follow up with those customers to get to the bottom of the matter and of course, we will pay you out accordingly.
 
@@ -224,7 +224,7 @@ Since the email exchange, I've collected more data, and now their accounting pri
 
 ## Conclusion
 
-Did Kiss My Keto pay me because I convinced them that it was the ethical and just thing to do? Probably not. 
+Did Kiss My Keto pay me because I convinced them that it was the ethical and just thing to do? Probably not.
 
 To me, it looks like Kiss My Keto was violating their published policies, I had clear evidence of it, and $88 seemed like a cheap price to placate me. After my email to the CEO, they took down [their affiliate policy page](https://archive.is/iyoxj), and I started receiving commissions when customers I referred purchased bread.
 
