@@ -25,7 +25,7 @@ htmlproofer "$BUILD_DIR" \
   --check-opengraph \
   --allow-hash-href \
   --empty-alt-ignore \
-  --file-ignore "/collect-debt/full-emails/index.html" \
+  --file-ignore "public/collect-debt/full-emails/index.html" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
