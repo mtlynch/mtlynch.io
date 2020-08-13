@@ -8,8 +8,7 @@ date: '2020-08-13'
 images:
   - collect-debt/cover.png
 description: Within two emails, a merchant went from blatant dismissal to full payment, and I owe it to The Organized Professional Method.
-# No affiliate links in this article
-hide_affiliate_warning: true
+hide_affiliate_warning: true # No affiliate links in this article
 ---
 A few years ago, I learned a handy technique for resolving disputes with uncooperative businesses. It's simple to understand and easy to implement. You don't need lawyers or a prominent social media presence. All it requires is for you to behave like an organized professional. This technique recently resolved a problem so effectively that I had to share the story.
 

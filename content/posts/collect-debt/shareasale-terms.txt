@@ -23,7 +23,7 @@ We makes no express or implied warranties or representations with respect to the
 Revocation of Affiliate Status
 Reason for termination of your affiliate application and status in the program may be (but is not limited to) any of the following:
 
-1) Inappropriate advertisements (false claims, misleading hyperlinks) 
+1) Inappropriate advertisements (false claims, misleading hyperlinks)
 2) Illegal spamming (mass email, mass newsgroup posting, etc.)
 3) Advertising on sites containing/promoting illegal activities
 4) Violation of intellectual property rights
