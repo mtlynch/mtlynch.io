@@ -25,7 +25,7 @@ This post explains the dispute and how The Organized Professional Method solved 
 
 ## Handling bad behavior with The Organized Professional Method
 
-In 2017, Patrick McKenzie wrote a blog post called ["Identity Theft, Credit Reports, and You."](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/). It's ostensibly about disputing information on your credit report, but the article is more generalizable than Patrick perhaps intended. It was an illuminating read for me in demonstrating how much power you can wield by thinking strategically about an organization's incentives.
+In 2017, Patrick McKenzie wrote a blog post called ["Identity Theft, Credit Reports, and You."](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/) It's ostensibly about disputing information on your credit report, but the article is more generalizable than Patrick perhaps intended. It was an illuminating read for me in demonstrating how much power you can wield by thinking strategically about an organization's incentives.
 
 In Patrick's article, he explains that banks reward their customer service agents for getting customers off the phone as quickly as possible. They reward their compliance team for minimizing the bank's number of regulatory incidents per year. Therefore, Patrick taught his readers how to navigate from a bank's customer service department to their legal department. From there, the customer presents themselves as knowledgeable enough of their rights that the compliance team should rightly fear a regulatory incident.
 
