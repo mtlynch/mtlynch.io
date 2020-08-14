@@ -51,7 +51,7 @@ Kiss My Keto's affiliate program sounded like a good deal, but I would later com
 
 ## Do my customers just hate spending money?
 
-Eager to see my earnings skyrocket, I checked my affiliate stats the day after I began advertising Kiss My Keto. Seven visitors had clicked the link to Kiss My Keto, but I still had zero "conversions," meaning that none of the visitors I referred had purchased anything. Okay, fine. Maybe prices were higher than they expected, or none of those seven felt like buying anything that day.
+Eager to see my earnings skyrocket, I checked my affiliate stats the day after I began advertising Kiss My Keto. Seven visitors had clicked links to Kiss My Keto, but I still had zero "conversions," meaning that none of the visitors I referred had purchased anything. Okay, fine. Maybe prices were higher than they expected, or none of those seven felt like buying anything that day.
 
 After a week, it was the same thing. 26 users had visited, but none of them purchased anything.
 
