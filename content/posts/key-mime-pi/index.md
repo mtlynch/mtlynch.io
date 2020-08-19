@@ -280,8 +280,6 @@ If everything is working, you should see the following output on the machine the
 hi
 ```
 
-If that fails, the problem is with the USB HID interface. If you can successfully generate keystrokes from the command line but not in the browser, that suggests a bug in the Key Mime Pi web app. [File a bug on Github](https://github.com/mtlynch/key-mime-pi/issues/new), so that I can help you diagnose it.
-
 ### Writes to HID interface hang
 
 When testing Key Mime Pi on the Pi Zero W, I ran into a case where writes to `/dev/hidg0` hung indefinitely. I tried a different Micro-USB to USB-A cable, and the problem went away. I suspect that the first cable was either damaged or supported power only and not data. If you run into hanging writes to `/dev/hidg0`, try a USB cable that supports data transfer (most USB cables do).
