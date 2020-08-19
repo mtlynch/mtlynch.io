@@ -344,7 +344,7 @@ The script bootstraps a self-contained [Ansible](https://docs.ansible.com/ansibl
 
 * [nginx](https://nginx.org/): a popular open-source web server
 * [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
-* [usb-gadget](https://github.com/mtlynch/tinypilot/blob/master/enable-usb-hid): a script enabling Pi's "USB gadget mode," which allows the Pi to impersonate USB devices
+* [usb-gadget](https://github.com/mtlynch/tinypilot/blob/4587f989b6d479034a64b2411c1c9964cdad7261/scripts/usb-gadget/init-usb-gadget): a script enabling Pi's "USB gadget mode," which allows the Pi to impersonate USB devices
 * [tinypilot](https://github.com/mtlynch/tinypilot): the web interface I created for TinyPilot
 
 ## Using TinyPilot
