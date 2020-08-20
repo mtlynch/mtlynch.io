@@ -18,25 +18,6 @@ discuss_urls:
 ---
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
-<div class="order-now order-now-thin">
-
-  <a href="https://tinypilotkvm.com"><img src="assembled-v2.jpg"></a>
-
-  <div class="second-half">
-
-  <h4>TinyPilot v2 is now available for sale</h4>
-
-  The kit includes all the parts you need to build your own TinyPilot.
-
-  <div class="btn-wrapper">
-    <a href="https://tinypilotkvm.com" class="btn order-now-btn">
-      Order now
-    </a>
-  </div>
-
-  </div>
-</div>
-
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
 {{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="800px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
@@ -243,16 +224,6 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 ### Parts list
 
-<div class="order-now">
-<h4>Want an all-in-one TinyPilot kit?</h4>
-
-Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
-
-<div class="btn-wrapper">
-  <a href="https://tinypilotkvm.com" class="btn order-now-btn">Order now</a>
-</div>
-</div>
-
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
 * [HDMI to USB capture dongle](https://amzn.to/2YHEvJN)
@@ -261,10 +232,6 @@ Support TinyPilot's development by purchasing [an official TinyPilot kit](https:
 * [microSD card](https://amzn.to/2VH0RcL) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
-* [USB-C OTG Y-cable](https://amzn.to/3aurSX1)
-  * Alternatively: [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) cable (Male/Male), which will work, but it will not sufficiently power your Pi for stable operation.
-* (Optional) [3 Amp USB wall charger](https://amzn.to/3hal8Ax): Not necessary if you're powering with only USB-C to USB-A.
-* (Optional) [USB extension cable](https://amzn.to/34bJ16E): Not necessary if you're powering with only USB-C to USB-A.
 * (Optional) A cooling case, heat sink, or fan
   * Choose a case that provides access to the Pi's GPIO pins.
   * I use [this minimalist, passive cooling case](https://amzn.to/3fG1fAa).
@@ -287,23 +254,18 @@ I like [this minimalist case](https://amzn.to/3fG1fAa) because it's inexpensive 
 
 {{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://amzn.to/3fG1fAa) cools your Pi well without the complexity of a fan." maxWidth="600px">}}
 
-### Power your Pi via USB-C OTG Y-cable (optional)
-
-The Pi draws enough power from the target computer's USB port to boot up and run, but if the target computer shuts down, your Pi will crash due to the sudden loss of power.
-
-A [3 Amp USB wall charger](https://amzn.to/2YitxsN) and a [USB-C OTG Y-cable](https://amzn.to/3aurSX1) provide your device with the proper amount of power and keep your Pi running regardless of the target computer's state. The Y-cable is only two feet long, so you'll likely want a [USB extension cable](https://amzn.to/34bJ16E) to reach your target computer.
-
-{{<img src="y-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="700px" caption="Use a USB-C OTG Y-cable to provide continuous power to the Pi while it's connected to the target computer.">}}
-
-{{<notice type="info">}}
-**Note**: If you don't have a USB OTG Y-cable, you can power the Pi by connecting it to the target computer using a USB-C to USB-A cable. This will provide enough power for the Pi to run, but it won't meet the Pi's official power requirement of 3 Amps.
-{{</notice>}}
-
 ### Connect to the machine via USB
 
-To enable TinyPilot to function as a virtual keyboard, connect the USB-A cable to a USB port on the target machine:
+To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C port to a USB-A port on the target machine:
 
-{{<img src="usb-server.jpg" alt="USB connection to target computer" maxWidth="500px" caption="Plug the other end of the USB-A cable into the target machine.">}}
+{{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
+  {{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
+  {{<img src="usb-server.jpg" alt="USB connection to target computer" maxWidth="500px">}}
+{{</gallery>}}
+
+{{<notice type="info">}}
+**Note**: Prefer USB 3.0 ports, as they provide more power to the Pi.
+{{</notice>}}
 
 ### Attach the HDMI capture dongle
 
@@ -354,6 +316,19 @@ After you run the install script, TinyPilot will be available at:
 * [http://raspberrypi/](http://raspberrypi/)
 
 {{<img src="tinypilot-hello-world.png" alt="Screenshot of TinyPilot web interface" maxWidth="700px" caption="When setup is complete, you can access TinyPilot's web interface at [http://raspberrypi/](http://raspberrypi/) on your local network.">}}
+
+## The power problem
+
+The biggest limitation of this setup is power. Relying on the target computer for power means that when the target shuts down, the Pi suffers an unexpected power cut.
+
+Further, The Pi 4 needs 3 Amps for stable operation, though it can run at lower power. A computer's USB 3.0 port provides only 0.9 Amps and USB 2.0 provides only 0.5 Amps, which is why you may see these warnings in the Pi's system logs:
+
+```bash
+ $ sudo journalctl -xe | grep "Under-voltage"
+Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
+```
+
+That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues. I'm looking for a better solution, so let me know in the comments if you have suggestions.
 
 ## TinyPilot kits
 

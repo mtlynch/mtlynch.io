@@ -31,9 +31,6 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 * A USB cable
   * For the Pi 4: [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
   * For the Pi Zero W: [Micro-USB to USB-A](https://amzn.to/2B08iE5) (Male/Male)
-* Alternate power source (optional)
-  * [USB to TTL serial cable](https://amzn.to/3cVkuTT)
-  * [USB wall charger](https://amzn.to/3hal8Ax)
 
 ## Install Raspberry Pi OS Lite
 
@@ -47,9 +44,9 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
-{{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the data Micro-USB port.">}}
-  {{< img src="pi4-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="400px" >}}
-  {{< img src="pi-zero-connection.jpg" alt="Pi 4 with USB to TTL cable attached to 3A wall charger" maxWidth="445px" >}}
+{{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the Micro-USB data port.">}}
+  {{< img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px" >}}
+  {{< img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px" >}}
 {{</gallery>}}
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
@@ -251,14 +248,6 @@ I currently am still searching for a solution tot his problem. Here are some pos
 
 * Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
 * Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://amzn.to/30OyQl6).
-
-## Maintaining continuous power
-
-Relying on power from the target computer has the drawback that the Pi can only run when the target computer is turned on. In my tests, the Pi survived reboots of the target computer, but when the target shut off completely, the Pi lost power.
-
-I solved this by purchasing a [USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL serial cable](https://amzn.to/2Yk1CIX). The USB to TTL cable connects to the Pi's GPIO pins, ensuring the device always receives power, though the cable provides only 0.5 Amps, which is still lower than the Pi requires for stable operation.
-
-{{< img src="extra-power.jpg" alt="Pi 4 with USB to TTL cable attached to USB wall charger" caption="I keep the Pi sufficiently powered with a [USB wall charger](https://amzn.to/2YitxsN) and a [USB to TTL cable](https://amzn.to/2Yk1CIX)." maxWidth="600px" >}}
 
 ## Troubleshooting
 
