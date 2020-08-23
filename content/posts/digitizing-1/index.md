@@ -183,7 +183,7 @@ The other drawback was non-reproducibility. Fixing a small error was almost as h
 
 ### Robo-editing
 
-After an embarrassing number of hours doing everything by hand, I wondered if I could simply throw artificial intelligence at the problem. Identifying clip boundaries seemed like a suitable machine learning task. I knew that accuracywould be less than perfect, but maybe it could do 80% of the work, and I'd fix the last 20% manually.
+After an embarrassing number of hours doing everything by hand, I wondered if I could simply throw artificial intelligence at the problem. Identifying clip boundaries seemed like a suitable machine learning task. I knew that accuracy would be less than perfect, but maybe it could do 80% of the work, and I'd fix the last 20% manually.
 
 I experimented with a tool called [pyscenedetect](https://pyscenedetect.readthedocs.io/en/latest/), which analyzes video files and prints out the timecodes where scene changes occur:
 
