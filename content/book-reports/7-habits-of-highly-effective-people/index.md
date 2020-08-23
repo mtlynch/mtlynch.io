@@ -1,5 +1,5 @@
 ---
-title: "The Seven Habits of Highly Effective People"
+title: "The Seven Habits of Highly Effective People by Stephen R. Covey"
 date: 2020-07-17T20:33:09-04:00
 rating: 8
 purchase_url: https://amzn.to/3fGvqqW
