@@ -37,4 +37,37 @@ The book would be interesting as a series of interviews, but it overreaches in t
 
 ## Key Takeaways
 
-*
+### Defining traction
+
+* **Traction** is evidence that your company is satisfying a need
+  * e.g., downloads of your app are increaing, more customers are buying subscriptions
+
+### 50% Rule
+
+* If your early customers love your product, but you have no means to find more customers, your company will likely fail.
+* To avoid getting lost in the product, dedicate 50% of your time to product development and 50% of your time to marketing.
+* Focusing on marketing brings you a stream of fresh customers who are experiencing your product for the first time.
+
+### The leaky bucket
+
+* Early in your product's life, investing in marketing is like pouring water into a leaky bucket.
+  * You expose your product to customers, but most of them leave because your offering isn't complete yet.
+* Most founders postpone marketing efforts because they see it as wasteful to market before their product is polished.
+* Marketing is helpful even when most customers are because it helps you understand which gaps in your product are the ones that matter to customers.
+* In the leaky bucket analogy, your bucket is still leaking, but marketing shows you where the leaks are.
+
+### Moving the needle
+
+* You need to pick marketing channels and strategies that will make a difference to your business if they succeed.
+  * e.g., a tweet that drives 20 visitors to your website is good if you're brand new, but if you're already getting 10k visitors per day, that tweet is negligible.
+* As you grow, you need to find new strategies that are appropriate for your scale.
+
+### The Bullseye Method
+
+* Bullseye is a three-phase technique to discover your product's ideal distribution channel.
+* A business needs only one strong distribution channel to succeed, but most businesses don't experiment enough to discover their ideal channel.
+
+#### Step 1: The Outer Ring - What's possible?
+
+* For each traction channel, brainstorm at least one strategy for your business that could move the needle.
+* Research successful companies similar to yours and learn what strategies they applied.
