@@ -71,3 +71,16 @@ The book would be interesting as a series of interviews, but it overreaches in t
 
 * For each traction channel, brainstorm at least one strategy for your business that could move the needle.
 * Research successful companies similar to yours and learn what strategies they applied.
+
+#### Step 2: The Middle Ring - What's probable?
+
+* Test a handful of marketing channels at small scales.
+* It's better to test multiple channels in parallel, as marketing tests take time and parallelize well.
+* In each test, evaluate:
+  1. How costly is customer acquisition?
+  1. How many customers are available through this channel?
+  1. Are these the customers you want?
+
+#### Step 3: The Inner Ring - What's working?
+
+* Take your most successful channel from step 2 and focus all your energy on optimizing this channel.
