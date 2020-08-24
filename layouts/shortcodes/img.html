@@ -46,7 +46,7 @@
                 {{ end }}
               {{ end }}
               {{ $image.RelPermalink }} {{ $image.Width }}w'
-      src="{{ $src }}" alt="{{$altText}}"/>
+      src="{{ $src }}" alt="{{$altText}}" loading="lazy"/>
   </a>
 {{ else }}
   {{ errorf "failed to find image %s: %s" $srcRaw .Position }}
