@@ -22,8 +22,12 @@ exclude_rule 'MD013'
 # MD033 - Inline HTML - used for Markdown purists
 exclude_rule 'MD033'
 
-## MD026 - Trailing punctuation in header
+# MD026 - Trailing punctuation in header
 exclude_rule 'MD026'
+
+# Need this to include blockquotes in bulleted lists.
+# MD027 Multiple spaces after blockquote symbol
+exclude_rule 'MD027'
 
 # Need to ignore this so that we can quote ordered lists.
 # MD029 Ordered list item prefix
