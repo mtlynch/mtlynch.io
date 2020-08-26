@@ -28,7 +28,7 @@ The first few chapters had the most value to me. They describe a high-level appr
 * The quality of the writing was poor.
   * Most of the book is in the passive voice.
   * There were many sloppy, confusing sentences, such as the following:
-    * >The way this step gets most often messed up by founders is by keeping around distracting marketing efforts in other traction channels.
+    * > The way this step gets most often messed up by founders is by keeping around distracting marketing efforts in other traction channels.
 * Lots of fluff and redundancy. The book could have been 30-40% shorter with the same information.
 * The authors don't seem to have firsthand experience with many of the topics they describe.
 * It's aimed more toward VC-backed startups that have money to blow.
