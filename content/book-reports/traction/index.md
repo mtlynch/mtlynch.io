@@ -128,7 +128,7 @@ The book includes a few pages of strategies for each of these channels, but I di
 * Sales
 * Affiliate programs
 * Existing platforms
-  * i.e., platforms with an existing audience where users can find you 
+  * i.e., platforms with an existing audience where users can find you
   * e.g., eBay, App Store
 * Trade shows
 * Offline events
