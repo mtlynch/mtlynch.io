@@ -52,7 +52,8 @@ The first few chapters had the most value to me. They describe a high-level appr
 * Early in your product's life, investing in marketing is like pouring water into a leaky bucket.
   * You expose your product to customers, but most leave because your offering isn't complete yet.
 * Most founders postpone marketing efforts because they see it as wasteful to market before their product is polished.
-* Marketing is helpful even when most customers are because it helps you understand which gaps in your product are the ones that matter to customers.
+* Marketing is helpful even when most customers choose not to buy.
+  * In these cases, marketing exposes which gaps in your product are the ones that matter to customers.
 * In the leaky bucket analogy, your bucket is still leaking, but marketing shows you where the leaks are.
 
 ### Moving the needle
