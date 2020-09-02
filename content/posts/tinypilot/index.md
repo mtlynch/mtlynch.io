@@ -328,7 +328,13 @@ Further, The Pi 4 needs 3 Amps for stable operation, though it can run at lower 
 Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
 ```
 
-That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues. I'm looking for a better solution, so let me know in the comments if you have suggestions.
+That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues.
+
+I'm working on a custom power connector that allows users to deliver full, continuous power to the Pi while sharing the USB-C port. Sign up to the [TinyPilot mailing list](https://tinypilotkvm.com/about) to find out when it's availab.e.
+
+{{<notice type="warning">}}
+**Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/mtlynch/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
+{{</notice>}}
 
 ## TinyPilot kits
 
