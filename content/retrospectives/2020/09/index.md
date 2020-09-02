@@ -53,7 +53,7 @@ I missed my sales goals, partly because I had issues keeping inventory adequatel
 
 The donations have been a nice surprise. I received almost $100 in donations from people who wanted to support the project, including one from [what seems to be a bot](https://twitter.com/deliberatecoder/status/1300138860668686336).
 
-## Why, oh Y-cables!
+## Why, oh, Y-cables!
 
 Since the earliest stages of TinyPilot, I've struggled with one major problem: power.
 
@@ -92,7 +92,7 @@ Including design, parts, and labor, the total cost for this run is on track for 
 
 ## HID descriptors are the devil
 
-As I described [above](#why-oh-y-cables), TinyPilot needs to present itself to the target computer as a USB keyboard. It does this by sending what's called a human interface device (HID) descriptor over the USB connection. USB devices like a keyboards, mice, and thumbdrives each have HID descriptors that announce what the device can do.
+As I described [above](#why-oh-y-cables), TinyPilot needs to present itself to the target computer as a USB keyboard. It does this by sending what's called a human interface device (HID) descriptor over the USB connection. USB devices like keyboards, mice, and thumb drives have HID descriptors that announce what the device can do.
 
 The HID descriptor is a binary blob that looks like this:
 
@@ -207,7 +207,7 @@ Finally, I convinced them to host the code on their side and cut me out of the d
 | RapidAPI Earnings  | $18.05     | $9.36       | <font color="red">-$8.69 (-48%)</font>     |
 | **Total Earnings** | **$18.05** | **$9.36**   | **<font color="red">-$8.69 (-48%)</font>** |
 
-Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called [Servernope](https://servernope.com/) approached me inviting me to their API platform. I told them that I didn't have time to set it up, but they were welcome to create a Zestful entry on my behalf. So, they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
+Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called [Servernope](https://servernope.com/) invited me to their API platform. I told them that I didn't have time to set it up, but they were welcome to create a Zestful entry on my behalf. So, they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
 
 I'm not quite sold yet. One of my biggest issues with RapidAPI is that their analytics fail to present data in a useful way. Servernope seems to have a similar problem, except I have no paid users from Servernope yet, so it's hard to compare.
 
