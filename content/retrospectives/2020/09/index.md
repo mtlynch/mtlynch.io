@@ -1,12 +1,13 @@
 ---
 title: "TinyPilot: Month 2"
 date: 2020-09-01T09:17:34-04:00
-description: TODO - One-line summary
+description: Handling a huge curveball.
 ---
 
 ## Highlights
 
-*
+* I paused TinyPilot sales to address a design problem.
+* I'm manufacturing a custom USB power connector for TinyPilot.
 
 ## Goal Grades
 
@@ -53,33 +54,38 @@ The problem is that the only port capable of impersonating a keyboard is also th
 
 Finally, I found this USB OTG Y-cable, which seemed like what I needed:
 
-TODO: Y-cable
+{{<img src="y-cable.jpg" alt="Photo of Y-cable" hasBorder="true" caption="A USB OTG Y-cable that seemed like what I needed" maxWidth="400px">}}
 
 I bought one, and it worked! It split the connection to the Raspberry Pi so that I could connect to both power and the target computer. I transitioned my entire supply to make a TinyPilot v2 that integrated this cable. After I sold six kits and started promoting the new version, someone reached out to me asking if the cable prevented power backflow.
 
-Power backflow? Uh oh.
+Power backflow? I wasn't even aware that could be an issue.
 
-The Y-cable I was using didn't expect the user to connect to two different power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. But there's no guarantee that both will produce *exactly* 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the power supply back into the computer's USB port, potentially overloading the port and damaging it permanently.
+It turned out that the Y-cable wasn't meant to connect to distinct power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. In practice, there's no guarantee that both will produce *exactly* 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the power supply back into the computer's USB port, potentially overloading the port and damaging it permanently.
 
-As soon as the reader suggested this danger, I paused sales and hired an electrical engineering firm to investigate. They confirmed the risk existed, so I reached out to my customers and advising them to disconnect from external power until I find a solution. Fortunately, TinyPilot can still run without external power, though it's less convenient.
+As soon as the reader suggested this danger, I paused sales and hired an electrical engineering firm to investigate. They confirmed the risk existed, so I reached out to my customers and advising them to disconnect from external power until I found a solution. Fortunately, TinyPilot can still run without external power, though it's less convenient.
 
 ## I can manufacture something from scratch in two weeks?
 
-The engineering firm completed their investigation on Thursday, August 27th. The same day, I asked them to design an electronic component that would address TinyPilot's power issue. The design was ready the next day, and they printed 100 circuit boards.
+One of my most surprising discoveries in the past month was how fast and inexpensive manufacturing has become.
 
-At the time of this writing, the circuit boards are en-route to the design firm, where they'll be assembled.
+Just a week ago, on August 27th, I asked TinyPilot's electrical engineering partner to design a component that would address TinyPilot's power issue. The design was ready the next day, and they immediately ordered 100 circuit boards to be printed. We expect the boards to arrive this weekend. Testing and assembly will take another few days.
 
-Simultaneously, I contacted a 3D printing design shop and asked them to design an enclosure so that I'm not just shipping customers a bare circuit board with some wires sticking into it. They completed the designs in two business days, and they're in the process of printing the first three prototypes. They have capacity to print 100 in under two days.
+Simultaneously, I'm working with a 3D printing design shop on an enclosure for the circuit board. The 3D printing firm completed their designs in two days, and they're in the process of printing the first three prototypes. Once they get going, they have the capacity to 3D print 50 enclosures per day.
 
-If everything goes well, the case and boards could be ready for shipping as early as next week. That would mean that we went from zero to a completed physical product in under two weeks. Including parts and labor, the total cost per unit this run is on track for ~$13. Even for a simple project like this, I had no idea turnaround time and cost could be that low.
+{{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast" >}}
+  {{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true" maxWidth="340px">}}
+  {{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true" maxWidth="420px">}}
+{{</gallery>}}
+
+If everything goes well, the case and boards could be ready for customers as early as next week. That would mean that we went from zero to a completed physical product in just two weeks.
+
+Including design, parts, and labor, the total cost for this run is on track for ~$13/unit. Even for a simple project like this, I had no idea turnaround time and cost could be that low. Assuming everything goes well, that is.
 
 ## HID descriptors are the devil
 
-When you connect a USB keyboard or mouse to a computer, the USB device announces itself to the host in the form of a USB HID descriptor. Because TinyPilot impersonates a keyboard and mouse.
+As I described [above](#why-oh-y-cables), TinyPilot needs to present itself to the target computer as a USB keyboard. It does this by sending what's called a human interface device (HID) descriptor over the USB interface. Every USB device like a keyboard, mouse, or thumbdrive has an HID descriptor that announces what the device can do.
 
-Debugging it is a pain because once you announce the HID descriptor, you can't revise your announcement (as far as I know). So you have to reboot the entire Raspberry Pi and try again.
-
-It's a binary blob that looks like this:
+The HID descriptor is a binary blob that looks like this:
 
 ```c
 // HID descriptor for a keyboard
@@ -126,11 +132,33 @@ static struct hidg_func_descriptor my_hid_data = {
 };
 ```
 
-For keyboards, it was easy. Lots of people had implemented fake keyboards in Python, and the process was well-documented.
+Creating an HID descriptor for keyboards was a walk in the park. Lots of people had implemented fake keyboards in Python, and the process was well-documented.
 
-Implementing a fake mouse was much harder and required me to learn more about how HID descriptors worked. Because keyboards are pretty bland. They type keys and that's about it. With mice, there are lots of variants depending on what kind of mouse you want to be. Do you have two buttons or eight? Do you have a scrollwheel? Do you have a horizontal scrollwheel? Do you send relative movements (like a traditional mouse) or do you send absolute positions (like a touchpad)?
+Implementing a fake mouse was much harder and required me to [learn more about how HID descriptors work](https://eleccelerator.com/tutorial-about-usb-hid-report-descriptors/). Mice have lots more variations like number of buttons, number of scrollwheels, and type of positioning (absolute vs. relative). Debugging is a pain because the descriptor either works or it doesn't. If you generate an invalid descriptor, there's no way I found to get feedback about what's wrong with it. And every time you try, you have to reboot the Raspberry Pi.
 
-The USB foundation has published this HID descriptor tool, an old-looking Windows application that *kind of* helps you create descriptors. It's pretty limited in that it only reads descriptors in a special `.hid` file format, but nobody publishes their example descriptors that way.
+It took me five days of tedious work (often giving up for the day midway) before I got basic mouse functionality working. The key for me was focusing on tooling. At first, I was working with descriptors as giant unstructured blobs, like this:
+
+```bash
+echo -ne \\x05\\x01\\x09\\x02\\xA1\\x01\\x05\\x09\\x19\\x01\\x29\\x08\\x15\\x00\\x25\\x01\\x95\\x08\\x75\\x01\\x81\\x02\\x05\\x01\\x09\\x30\\x09\\x31\\x16\\x00\\x00\\x26\\xFF\\x7F\\x75\\x10\\x95\\x02\\x81\\x02\\xC0 > "${MOUSE_FUNCTIONS_DIR}/report_desc"
+```
+
+That made it difficult to think about the descriptor because I couldn't modify anything without starting over. I wrote a quick JavaScript app that allowed me to take example HID descriptors in different formats and convert them to the file format I needed:
+
+{{<img src="hid-formatter.png" alt="Screenshot of my HID formatter tool" hasBorder="true" caption="A rudimentary JavaScript app I created to format HID descriptors for me" maxWidth="500px">}}
+
+Next, I wrote little utility scripts in my home directory. They were dead-simple scripts that normally wouldn't be worth their own files:
+
+```bash
+sudo journalctl -u init-usb-gadget
+```
+
+But these dumb scripts reduced cognitive load while I was debugging. Instead of recalling the syntax for viewing the systemd logs, I could just type `~/show-systemd-log`.
+
+These simple tools helped me in two ways. First, they gave me a sense of accomplishment when I felt like I was banging my head against the wall for days. If I couldn't get the HID descriptors to work, I felt like I was making tangible progress by creating tools that did what I needed. Next, they reduced my cognitive load and freed up more mental capacity to focus on the problem at hand.
+
+It turned out that most of my problems weren't even HID descriptors but rather the shell commands I was using to create them. Once I cleared other tedious tasks from my mind, I realized that I should verify that the files on disk match my expectations. Of course, they didn't. Once I realized that, a working mouse descriptor soon followed.
+
+{{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop" >}}
 
 ## Legacy projects
 
@@ -149,7 +177,9 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Other Affiliate Earnings  | $26.60      | $118.88     | <font color="green">+$92.28 (+347%)</font>     |
 | **Total Earnings**        | **$369.91** | **$486.22** | **<font color="green">+$116.31 (+31%)</font>** |
 
-I switched from AdSense to AdThrive, and it's been rockier than I expected. The onboarding process is very slow. They'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on. 
+Is It Keto grew a small amount this month, though I've been trying to focus all of my attention on TinyPilot, as the ROI is much higher there.
+
+The one notable Is It Keto event was that I switched my display ads from AdSense to AdThrive. Frustratingly, it's required much more of my attention than I expected. The onboarding process involves lots of little steps where they'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on. 
 
 Finally, we finally got to the point of switching my site over to AdThrive ads, and it turned out that their JavaScript snippet didn't work on single-page apps. I get that a lot of their clients probably have WordPress sites, but c'mon! An SPA shouldn't be such a curveball in 2020.
 
@@ -166,29 +196,31 @@ Finally, I convinced them to host the code on their side and cut me out of the d
 | RapidAPI Earnings  | $18.05     | $9.36       | <font color="red">-$8.69 (-48%)</font>     |
 | **Total Earnings** | **$18.05** | **$9.36**   | **<font color="red">-$8.69 (-48%)</font>** |
 
-Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called Servernope approached me inviting me to their API platform. I told them that I didn't have time to set it up, but if they wanted to do it for me, I'd do that. So they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
+Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called [Servernope](https://servernope.com/) approached me inviting me to their API platform. I told them that I didn't have time to set it up, but they were welcome to create a Zestful entry on my behalf. So, they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
 
-I can't really tell so far. Their metrics aren't very good, so either nobody has ever called my API from their platform or they just don't track free calls.
-
-## Recommendations
-
-### PirateShip
-
-### FORGE?
+I'm not quite sold yet. One of my biggest issues with RapidAPI is that their analytics fail to present data in a useful way. Servernope seems to have a similar problem, except I have no paid users from Servernope yet, so it's hard to compare.
 
 ## Wrap up
 
 ### What got done?
 
+* Investigated a power issue on TinyPilot and began work on a solution.
+* Added mouse support to TinyPilot.
+* Hired a freelancer to [take over inventory management](/retrospectives/2020/08/#managing-inventory-is-hard) and some research tasks.
 * Set up eBay listings to sell TinyPilot internationally.
   * I'm in the process of figuring out how to do it all through Shopify, but eBay is an easy interim solution.
 * Published a new blog post: ["How I Collected a Debt from an Unscrupulous Merchant"](https://mtlynch.io/collect-debt/)
+  * And two new [book reports](/book-reports).
 
 ### Lessons learned
 
-* When you're stuck on a hard problem, take a moment to improve your tools.
-  * Refactoring is a valid debugging technique
+* Work with electrical engineering experts earlier.
+  * Looking back, I was veering far enough out of mainstream Raspberry Pi usage that I should have consulted experts to review my plans.
+* When you're stuck on a hard problem, create tools that eliminate debugging work.
+  * Creating tools gives you a feeling of forward momentum and frees your mind to focus on the essentials of a problem.
 
 ### Goals for next month
 
-*
+* Sell 60 TinyPilot kits and power connectors.
+* Test three new marketing channels.
+* Interview seven IT professionals about whether they'd use TinyPilot in their work.
