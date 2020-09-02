@@ -1,13 +1,16 @@
 ---
 title: "TinyPilot: Month 2"
-date: 2020-09-01T09:17:34-04:00
-description: Handling a huge curveball.
+date: 2020-09-02T14:00:00-04:00
+description: TinyPilot threw me a huge curveball, but things continue moving forward.
+images:
+- /retrospectives/2020/09/tinypilot-mouse-support.png
 ---
 
 ## Highlights
 
 * I paused TinyPilot sales to address a design problem.
 * I'm manufacturing a custom USB power connector for TinyPilot.
+* Revenue across all my projects was among my strongest ever, at $3.6k total.
 
 ## Goal Grades
 
@@ -44,13 +47,19 @@ This ended up being more difficult than I expected, but I completed the feature 
 | Donations          | N/A           | $94.06        | <font color="green">+$94.06 (+inf%)</font>     |
 | **Total Earnings** | **$8,741.37** | **$3,124.80** | **<font color="red">-$5,616.57 (-64%)</font>** |
 
+Visits stats aren't as strong as when I had [a big surge](/2020/08/#aligning-my-blog-with-my-business-finally) from Hacker News last month, but I'm still pleased with the steady flow of potential customers.
+
+I missed my sales goals, partly because I had issues keeping inventory adequately stocked and largely because I had to pause sales halfway through the month.
+
+The donations have been a nice surprise. I received almost $100 in donations from people who wanted to support the project, including one from [what seems to be a bot](https://twitter.com/deliberatecoder/status/1300138860668686336).
+
 ## Why, oh Y-cables!
 
 Since the earliest stages of TinyPilot, I've struggled with one major problem: power.
 
 The Raspberry Pi has a special ability to impersonate other USB devices. That's how it's able to type keystrokes into a target computer. It tells the computer that it's a USB keyboard and then sends keystrokes the same way a USB keyboard would.
 
-The problem is that the only port capable of impersonating a keyboard is also the main port for receiving power. A computer's USB port does output a little bit of power, but not enough to match the Raspberry Pi's official requirements of 3.0 Amps. The initial version of TinyPilot ran on 0.5 Amps of power, which did work, but I was constantly worried that running underpowered would cause unexpected problems, so I was desperate to find a better solution.
+The problem is that the only port capable of impersonating a keyboard is also the main port for receiving power. A computer's USB port does output a little bit of power, but not enough to meet the Pi's official requirement of 3.0 Amps. The initial version of TinyPilot ran on 0.5 Amps of power, which worked, but I was constantly worried that running underpowered would cause unexpected problems, so I was desperate to find a better solution.
 
 Finally, I found this USB OTG Y-cable, which seemed like what I needed:
 
@@ -60,15 +69,15 @@ I bought one, and it worked! It split the connection to the Raspberry Pi so that
 
 Power backflow? I wasn't even aware that could be an issue.
 
-It turned out that the Y-cable wasn't meant to connect to distinct power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. In practice, there's no guarantee that both will produce *exactly* 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the power supply back into the computer's USB port, potentially overloading the port and damaging it permanently.
+It turned out that the Y-cable wasn't meant to connect to distinct power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. In practice, there's no guarantee that both will produce *exactly* 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the external power supply *backwards* into the computer's USB port, potentially overloading the port and damaging it permanently.
 
-As soon as the reader suggested this danger, I paused sales and hired an electrical engineering firm to investigate. They confirmed the risk existed, so I reached out to my customers and advising them to disconnect from external power until I found a solution. Fortunately, TinyPilot can still run without external power, though it's less convenient.
+As soon as the reader suggested this danger, I paused sales and hired an electrical engineering firm to investigate. They confirmed the risk existed, so I reached out to my customers and advised them to disconnect from external power until I found a solution. Fortunately, TinyPilot functions without external power, though it's less convenient.
 
 ## I can manufacture something from scratch in two weeks?
 
 One of my most surprising discoveries in the past month was how fast and inexpensive manufacturing has become.
 
-Just a week ago, on August 27th, I asked TinyPilot's electrical engineering partner to design a component that would address TinyPilot's power issue. The design was ready the next day, and they immediately ordered 100 circuit boards to be printed. We expect the boards to arrive this weekend. Testing and assembly will take another few days.
+Just a week ago, on August 27th, I asked TinyPilot's electrical engineering partner to design a connector to address the power issue. The design was ready the next day, and they immediately ordered it printed on 100 circuit boards. We expect the boards to arrive this weekend. Testing and assembly should only take another few days.
 
 Simultaneously, I'm working with a 3D printing design shop on an enclosure for the circuit board. The 3D printing firm completed their designs in two days, and they're in the process of printing the first three prototypes. Once they get going, they have the capacity to 3D print 50 enclosures per day.
 
@@ -83,7 +92,7 @@ Including design, parts, and labor, the total cost for this run is on track for 
 
 ## HID descriptors are the devil
 
-As I described [above](#why-oh-y-cables), TinyPilot needs to present itself to the target computer as a USB keyboard. It does this by sending what's called a human interface device (HID) descriptor over the USB interface. Every USB device like a keyboard, mouse, or thumbdrive has an HID descriptor that announces what the device can do.
+As I described [above](#why-oh-y-cables), TinyPilot needs to present itself to the target computer as a USB keyboard. It does this by sending what's called a human interface device (HID) descriptor over the USB connection. USB devices like a keyboards, mice, and thumbdrives each have HID descriptors that announce what the device can do.
 
 The HID descriptor is a binary blob that looks like this:
 
@@ -134,29 +143,31 @@ static struct hidg_func_descriptor my_hid_data = {
 
 Creating an HID descriptor for keyboards was a walk in the park. Lots of people had implemented fake keyboards in Python, and the process was well-documented.
 
-Implementing a fake mouse was much harder and required me to [learn more about how HID descriptors work](https://eleccelerator.com/tutorial-about-usb-hid-report-descriptors/). Mice have lots more variations like number of buttons, number of scrollwheels, and type of positioning (absolute vs. relative). Debugging is a pain because the descriptor either works or it doesn't. If you generate an invalid descriptor, there's no way I found to get feedback about what's wrong with it. And every time you try, you have to reboot the Raspberry Pi.
+Implementing a fake mouse was much harder and required me to [learn more about how HID descriptors work](https://eleccelerator.com/tutorial-about-usb-hid-report-descriptors/). Mice have lots more variations like number of buttons, number of scrollwheels, and type of positioning (absolute vs. relative). Debugging is a pain because the descriptor either works or it doesn't. If you generate an invalid descriptor, there's no way to get feedback about what's wrong with it. Worst of all, every time you try a descriptor, you have to reboot the Raspberry Pi.
 
-It took me five days of tedious work (often giving up for the day midway) before I got basic mouse functionality working. The key for me was focusing on tooling. At first, I was working with descriptors as giant unstructured blobs, like this:
+It took me five days of tedious work before I got basic mouse functionality working. The key for me was focusing on tooling. At first, I was working with descriptors as giant unstructured blobs, like this:
 
 ```bash
 echo -ne \\x05\\x01\\x09\\x02\\xA1\\x01\\x05\\x09\\x19\\x01\\x29\\x08\\x15\\x00\\x25\\x01\\x95\\x08\\x75\\x01\\x81\\x02\\x05\\x01\\x09\\x30\\x09\\x31\\x16\\x00\\x00\\x26\\xFF\\x7F\\x75\\x10\\x95\\x02\\x81\\x02\\xC0 > "${MOUSE_FUNCTIONS_DIR}/report_desc"
 ```
 
-That made it difficult to think about the descriptor because I couldn't modify anything without starting over. I wrote a quick JavaScript app that allowed me to take example HID descriptors in different formats and convert them to the file format I needed:
+That made it difficult to think about the descriptor because I couldn't modify anything without starting over. I wrote a quick JavaScript app that allowed me to take example HID descriptors in different formats and convert them to equivalent shell commands to generate the file:
 
 {{<img src="hid-formatter.png" alt="Screenshot of my HID formatter tool" hasBorder="true" caption="A rudimentary JavaScript app I created to format HID descriptors for me" maxWidth="500px">}}
 
 Next, I wrote little utility scripts in my home directory. They were dead-simple scripts that normally wouldn't be worth their own files:
 
 ```bash
+#!/bin/bash
+
+set -x
+
 sudo journalctl -u init-usb-gadget
 ```
 
-But these dumb scripts reduced cognitive load while I was debugging. Instead of recalling the syntax for viewing the systemd logs, I could just type `~/show-systemd-log`.
+These dumb tools helped me in two ways. First, they gave me a sense of accomplishment when I felt like I was banging my head against the wall for days. Even though the HID descriptors weren't working, I was at least producing *some* code that did what I wanted. Next, they reduced my cognitive load and freed up more mental capacity to focus on the problem at hand. Instead of recalling the syntax for viewing the systemd logs, I could just type `~/show-systemd-log`.
 
-These simple tools helped me in two ways. First, they gave me a sense of accomplishment when I felt like I was banging my head against the wall for days. If I couldn't get the HID descriptors to work, I felt like I was making tangible progress by creating tools that did what I needed. Next, they reduced my cognitive load and freed up more mental capacity to focus on the problem at hand.
-
-It turned out that most of my problems weren't even HID descriptors but rather the shell commands I was using to create them. Once I cleared other tedious tasks from my mind, I realized that I should verify that the files on disk match my expectations. Of course, they didn't. Once I realized that, a working mouse descriptor soon followed.
+It turned out that most of my problems weren't even HID descriptors but rather the shell commands I was using to create them. Once I cleared other tedious tasks from my mind, I realized that I should verify that the files on disk match my expectations. They didn't. Once I realized that, a working mouse descriptor soon followed.
 
 {{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop" >}}
 
@@ -179,13 +190,13 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 Is It Keto grew a small amount this month, though I've been trying to focus all of my attention on TinyPilot, as the ROI is much higher there.
 
-The one notable Is It Keto event was that I switched my display ads from AdSense to AdThrive. Frustratingly, it's required much more of my attention than I expected. The onboarding process involves lots of little steps where they'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on.
+The one notable Is It Keto event was that I switched my display ads from AdSense to AdThrive. Frustratingly, the transition has demanded much more of my attention than I expected. The onboarding process involved lots of little steps where they'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on.
 
-Finally, we finally got to the point of switching my site over to AdThrive ads, and it turned out that their JavaScript snippet didn't work on single-page apps. I get that a lot of their clients probably have WordPress sites, but c'mon! An SPA shouldn't be such a curveball in 2020.
+Finally, we reached the point of switching my site over to AdThrive ads, and it turned out that their JavaScript snippet didn't work on single-page apps, so it misbehaved on the Vue-based Is It Keto code. I get that a lot of their clients probably have WordPress sites, but... come on! An SPA shouldn't be such a curveball in 2020.
 
-That was a whole new can of worms because they kept on sending me broken, hacky JavaScript that was supposed to make my site compatible, I'd run it, report to them that it didn't work, they'd send me a new JavaScript snippet that was broken in a different way.
+That was a whole new can of worms because AdThrive kept sending me broken, hacky JavaScript that was supposed to make AdThrive play nicely with my site. I'd run it, report to them that it didn't work, and they'd send me a new JavaScript snippet that was broken in a different way.
 
-Finally, I convinced them to host the code on their side and cut me out of the debug loop. I'm not crazy about the fact that they're pushing code to production where the testing seems to be minimal to zero, but I don't have bandwidth to worry about it at the moment.
+Finally, I convinced them to host the code on their side and cut me out of the debug loop. I'm not crazy about the fact that they're pushing to production with what feels like insufficient testing, but I don't have bandwidth to worry about it at the moment.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -204,7 +215,7 @@ I'm not quite sold yet. One of my biggest issues with RapidAPI is that their ana
 
 ### What got done?
 
-* Investigated a power issue on TinyPilot and began work on a solution.
+* Investigated a power issue on TinyPilot and began manufacturing a component to fix it.
 * Added mouse support to TinyPilot.
 * Hired a freelancer to [take over inventory management](/retrospectives/2020/08/#managing-inventory-is-hard) and some research tasks.
 * Set up eBay listings to sell TinyPilot internationally.
@@ -215,7 +226,7 @@ I'm not quite sold yet. One of my biggest issues with RapidAPI is that their ana
 ### Lessons learned
 
 * Work with electrical engineering experts earlier.
-  * Looking back, I was veering far enough out of mainstream Raspberry Pi usage that I should have consulted experts to review my plans.
+  * Looking back, I was veering far enough out of mainstream Raspberry Pi usage that I should have consulted professional electrical engineers to review my plans.
 * When you're stuck on a hard problem, create tools that eliminate debugging work.
   * Creating tools gives you a feeling of forward momentum and frees your mind to focus on the essentials of a problem.
 
