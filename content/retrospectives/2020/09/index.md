@@ -47,7 +47,7 @@ This ended up being more difficult than I expected, but I completed the feature 
 | Donations          | N/A           | $94.06        | <font color="green">+$94.06 (+inf%)</font>     |
 | **Total Earnings** | **$8,741.37** | **$3,124.80** | **<font color="red">-$5,616.57 (-64%)</font>** |
 
-Visits stats aren't as strong as when I had [a big surge](/2020/08/#aligning-my-blog-with-my-business-finally) from Hacker News last month, but I'm still pleased with the steady flow of potential customers.
+Visits stats aren't as strong as when I had [a big surge](/retrospectives/2020/08/#aligning-my-blog-with-my-business-finally) from Hacker News last month, but I'm still pleased with the steady flow of potential customers.
 
 I missed my sales goals, partly because I had issues keeping inventory adequately stocked and largely because I had to pause sales halfway through the month.
 
