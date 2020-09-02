@@ -179,7 +179,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 Is It Keto grew a small amount this month, though I've been trying to focus all of my attention on TinyPilot, as the ROI is much higher there.
 
-The one notable Is It Keto event was that I switched my display ads from AdSense to AdThrive. Frustratingly, it's required much more of my attention than I expected. The onboarding process involves lots of little steps where they'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on. 
+The one notable Is It Keto event was that I switched my display ads from AdSense to AdThrive. Frustratingly, it's required much more of my attention than I expected. The onboarding process involves lots of little steps where they'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on.
 
 Finally, we finally got to the point of switching my site over to AdThrive ads, and it turned out that their JavaScript snippet didn't work on single-page apps. I get that a lot of their clients probably have WordPress sites, but c'mon! An SPA shouldn't be such a curveball in 2020.
 
