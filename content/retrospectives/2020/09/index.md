@@ -43,7 +43,25 @@ This ended up being more difficult than I expected, but I completed the feature 
 | Donations          | N/A           | $94.06        | <font color="green">+$94.06 (+inf%)</font>     |
 | **Total Earnings** | **$8,741.37** | **$3,124.80** | **<font color="red">-$5,616.57 (-64%)</font>** |
 
-## Why, oh Y-cables?
+## Why, oh Y-cables!
+
+Since the earliest stages of TinyPilot, I've struggled with one major problem: power.
+
+The Raspberry Pi has a special ability to impersonate other USB devices. That's how it's able to type keystrokes into a target computer. It tells the computer that it's a USB keyboard and then sends keystrokes the same way a USB keyboard would.
+
+The problem is that the only port capable of impersonating a keyboard is also the main port for receiving power. A computer's USB port does output a little bit of power, but not enough to match the Raspberry Pi's official requirements of 3.0 Amps. The initial version of TinyPilot ran on 0.5 Amps of power, which did work, but I was constantly worried that running underpowered would cause unexpected problems, so I was desperate to find a better solution.
+
+Finally, I found this USB OTG Y-cable, which seemed like what I needed:
+
+TODO: Y-cable
+
+I bought one, and it worked! It split the connection to the Raspberry Pi so that I could connect to both power and the target computer. I transitioned my entire supply to make a TinyPilot v2 that integrated this cable. After I sold six kits and started promoting the new version, someone reached out to me asking if the cable prevented power backflow.
+
+Power backflow? Uh oh.
+
+The Y-cable I was using didn't expect the user to connect to two different power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. But there's no guarantee that both will produce *exactly* 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the power supply back into the computer's USB port, potentially overloading the port and damaging it permanently.
+
+As soon as the reader suggested this danger, I paused sales and hired an electrical engineering firm to investigate. They confirmed the risk existed, so I reached out to my customers and advising them to disconnect from external power until I find a solution. Fortunately, TinyPilot can still run without external power, though it's less convenient.
 
 ## I can manufacture something from scratch in two weeks?
 
@@ -120,6 +138,17 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
+| Metric                    | July 2020   | August 2020 | Change                                         |
+| ------------------------- | ----------- | ----------- | ---------------------------------------------- |
+| Unique Visitors           | 48,231      | 49,981      | <font color="green">+1,750 (+4%)</font>        |
+| Total Pageviews           | 118,980     | 125,599     | <font color="green">+6,619 (+6%)</font>        |
+| Domain Rating (Ahrefs)    | 8.0         | 9.0         | <font color="green">+1.0 (+12%)</font>         |
+| AdSense Earnings          | $208.86     | $202.46     | <font color="red">-$6.40 (-3%)</font>          |
+| AdThrive Earnings         | N/A         | $35.00      | N/A                                            |
+| Amazon Affiliate Earnings | $134.45     | $129.88     | <font color="red">-$4.57 (-3%)</font>          |
+| Other Affiliate Earnings  | $26.60      | $118.88     | <font color="green">+$92.28 (+347%)</font>     |
+| **Total Earnings**        | **$369.91** | **$486.22** | **<font color="green">+$116.31 (+31%)</font>** |
+
 I switched from AdSense to AdThrive, and it's been rockier than I expected. The onboarding process is very slow. They'll ask me to fill out some form, wait a week, ask me to fill out another form, and on and on. 
 
 Finally, we finally got to the point of switching my site over to AdThrive ads, and it turned out that their JavaScript snippet didn't work on single-page apps. I get that a lot of their clients probably have WordPress sites, but c'mon! An SPA shouldn't be such a curveball in 2020.
@@ -129,6 +158,13 @@ That was a whole new can of worms because they kept on sending me broken, hacky 
 Finally, I convinced them to host the code on their side and cut me out of the debug loop. I'm not crazy about the fact that they're pushing code to production where the testing seems to be minimal to zero, but I don't have bandwidth to worry about it at the moment.
 
 ### [Zestful](https://zestfuldata.com)
+
+| Metric             | July 2020  | August 2020 | Change                                     |
+| ------------------ | ---------- | ----------- | ------------------------------------------ |
+| Unique Visitors    | 440        | 324         | <font color="red">-116 (-26%)</font>       |
+| Total Pageviews    | 1,247      | 841         | <font color="red">-406 (-33%)</font>       |
+| RapidAPI Earnings  | $18.05     | $9.36       | <font color="red">-$8.69 (-48%)</font>     |
+| **Total Earnings** | **$18.05** | **$9.36**   | **<font color="red">-$8.69 (-48%)</font>** |
 
 Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called Servernope approached me inviting me to their API platform. I told them that I didn't have time to set it up, but if they wanted to do it for me, I'd do that. So they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
 
