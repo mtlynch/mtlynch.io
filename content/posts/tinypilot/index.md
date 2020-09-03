@@ -18,6 +18,25 @@ discuss_urls:
 ---
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
+<div class="order-now order-now-thin">
+
+  <a href="https://tinypilotkvm.com"><img src="assembled-v2.jpg"></a>
+
+  <div class="second-half">
+
+  <h4>TinyPilot v2 is now available for sale</h4>
+
+  The kit includes all the parts you need to build your own TinyPilot.
+
+  <div class="btn-wrapper">
+    <a href="https://tinypilotkvm.com" class="btn order-now-btn">
+      Order now
+    </a>
+  </div>
+
+  </div>
+</div>
+
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
 {{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="800px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
@@ -224,6 +243,16 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 ### Parts list
 
+<div class="order-now">
+<h4>Want an all-in-one TinyPilot kit?</h4>
+
+Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
+
+<div class="btn-wrapper">
+  <a href="https://tinypilotkvm.com" class="btn order-now-btn">Order now</a>
+</div>
+</div>
+
 * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
 * [HDMI to USB capture dongle](https://amzn.to/2YHEvJN)
@@ -232,6 +261,8 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 * [microSD card](https://amzn.to/2VH0RcL) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
+* (Optional) [A USB-C OTG split connector](https://tinypilotkvm.com/product/tinypilot-power-connector)
+  * Requires two additional [USB-A to microUSB cables](https://amzn.to/2Z5eJiF).
 * (Optional) A cooling case, heat sink, or fan
   * Choose a case that provides access to the Pi's GPIO pins.
   * I use [this minimalist, passive cooling case](https://amzn.to/3fG1fAa).
@@ -330,7 +361,7 @@ Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
 
 That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues.
 
-I'm working on a custom power connector that allows users to deliver full, continuous power to the Pi while sharing the USB-C port. Sign up to the [TinyPilot mailing list](https://tinypilotkvm.com/about) to find out when it's availab.e.
+I'm working on a custom power connector that allows users to deliver full, continuous power to the Pi while sharing the USB-C port. [Pre-orders are available](https://tinypilotkvm.com/product/tinypilot-power-connector) for an September 21, 2020 ETA.
 
 {{<notice type="warning">}}
 **Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/mtlynch/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
