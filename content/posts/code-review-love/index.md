@@ -47,6 +47,8 @@ Keep track of your mistakes. Look for patterns in past reviews.
 
 ## Answer questions with the code
 
+When I ask code authors why they made a certain choice, what I'm *really* saying is, "This code caused me to ask the following question..."
+
 If your reviewer asks you why you made a choice, add a comment in the code or rewrite your code to make the answer obvious.
 
 ## Capture context in the review itself
@@ -70,24 +72,23 @@ Similarly, don't obscure functional changes by adding lots of unnecessary style 
 
 Similar, keep changes small. Don't submit changelists one line at a time, but think about how you can break your changes into a series of small, self-contained changes.
 
-## Don't get defensive
-
 ## Respond graciously to critiques
 
 Say thanks, good point, especially if the author has taken time to write out a lot.
 
 Thank your reviewer for catching something subtle, "nice catch!"
 
+Don't get defensive. Keep the discussion about the code. Even if they're making it personal (TODO: link to other article), focus on the code.
+
 ## Give explicit responses
 
-Respond explicitly to each note to either confirm that you've fixed it (if it requires action) or to acknowledge the note (if it requires no action).
+Respond explicitly to each note to either confirm that you've fixed it (if it requires action) or to acknowledge the note (if it requires no action). If your review tool allows you to mark notes as resolved, that's good. If not, just follow a simple convention like, "Fixed."
 
-Adjust your response based on the effort of their note.
-  * If they wrote you a long detailed note, don't just mark it done. Give a thoughtful response because they wrote something thoughtful to you.
+Adjust your response based on the effort of their note. If they wrote you a long detailed note, don't just mark it done. Give a thoughtful response because they wrote something thoughtful to you.
 
 ## Use tools to catch simple errors
 
-Make the tools part of your normal workflow and not something you have to remember to do because you'll forget
+Make the tools part of your normal workflow and not something you have to remember to do because you'll forget. Configure pre-commit hooks, and encourage your team to invest in continuous integration tools that run before every code review.
 
 ## Artfully solicit missing information
 
