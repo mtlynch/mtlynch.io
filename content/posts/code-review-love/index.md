@@ -27,13 +27,15 @@ Nobody ever goes to their deathbed lamenting that too many people fell in love w
 
 ## The golden rule: maximize your reviewer's value
 
-Reviewing code is difficult. More difficult than writing code.
+Reviewing code is difficult. More difficult than writing code. Your teammate arrives at work each day with a finite supply of focus. If they give focused attention to giving you a code review, they're giving some of their limited supply of focus to you, so you should maximize the benefit you get from it.
 
-Presumably, your teammate is an intelligent developer who complements gaps in your skillset. They have a finite amount of focus. They're hopefully dedicating some of their daily focus to help you with your code. For both of your sakes, it's optimal to maximize the value of their focus.
+There are many ways to squander the time they give to you:
 
-If you treat them like your personal quality assurance person, you're wasting their focus and making them annoyed. If you force them to review changelists that are unnecessarily complicated, you're squandering their focus. If you let the review derail into petty arguments, you're wasting their focus. 
+* Treat them like your personal quality assurance person.
+* Send them changelists that are unnecessarily complicated.
+* Allow the review to devolve into petty arguments.
 
-If you value their focus, your reviewer is more likely to identify bugs in your code, more able to think about ways to improve your code's clarity and maintainability, and more likely to share their knowledge with you.
+If you do it well, code reviews are a fantastic way to exchange knowledge and skill, for both the reviewer and reviewee. Your team also benefits from having clear, maintainable code whose providence (provenance) is inspectable.
 
 ## Review your own code first
 
@@ -45,13 +47,30 @@ Careless errors are inevitable, but you should take them seriously. If you send 
 
 Keep track of your mistakes. Look for patterns in past reviews.
 
+## Catch simple errors with automated tools
+
+If your reviewer is telling you that you put the curly braces on the wrong line, you're wasting their time. Similarly, if the reviewer has to tell you that your code broke automated tests
+
+Make the tools part of your normal workflow and not something you have to remember to do because you'll forget. Configure pre-commit hooks, and encourage your team to invest in continuous integration tools that run before every code review.
+
 ## Answer questions with the code
 
-When I ask code authors why they made a certain choice, what I'm *really* saying is, "This code caused me to ask the following question..."
+One of my biggest pet peeves in a code review is when I ask someone why the code is doing something seemingly nonsensical. They respond by simply leaving me a comment explaining why it is the way it is.
 
-If your reviewer asks you why you made a choice, add a comment in the code or rewrite your code to make the answer obvious.
+This of course drives me crazy because I wasn't so much asking the question as pointing out that everyone who reads the code will probably wonder the same thing I did. It's great that I have an answer now, but what about the next 50 people who read this code?
+
+TODO: Cartoon of dog being awakened by a late night phone call about variable.
+* A: Is this dog?
+* B: Yes...
+* A: When you wrote foo.py six years ago, why did you multiply totalCost by 0.0625?
+* B: I'm glad you called! It's because the tax rate in MA is 6.25%.
+* A: This is a good system for understanding implementation choices.
+
+When someone asks you a question about your code, the best way to answer them is by rewriting your code to eliminate the question. Can you change variable names or restructure the logic to answer the question? Adding a comment works, but it's less ideal than code that's self-documenting.
 
 ## Capture context in the review itself
+
+Everything you said in this email should be in the design doc itself. If the design doc is self-describing, anyone in the company can read it and understand it.
 
 Figure out why code is the way that it is, the order of preference should be:
 
@@ -62,15 +81,25 @@ Figure out why code is the way that it is, the order of preference should be:
 Write a description that covers everything happening in the change
   Don't explain anything outside of the written review
 
+## Keep changes narrowly scoped
+
+Similar, keep changes small. Don't submit changelists one line at a time, but think about how you can break your changes into a series of small, self-contained changes.
+
 ## Separate functional and non-functional changes
+
+The ugly cousin of mixed changes are mixing functional and non-functional changes. For example, someone changes a few lines in a file, but decides that while they're there, why not reflow all the whitespace?
+
+I'm a big fan of consistent coding conventions. If you use tools that reformat your code to apply consistent conventions, that's a win. I also like refactoring.
+
+Please don't do this! Reviewing a whitespace-only change is generally pretty easy. The reviewer can scan through and double check that whitespace changes didn't break anything.
+
+There's a similar deal with refactoring. Sometimes you need to make a change to a function that's so messy that you can't edit it without doing some cleanup. That's great, but do your cleanup in its own changelist. If you clean up code and show that the tests still pass. What? You don't have tests? Okay, write tests in a first changelist, refactor code in a second, then make changes in a third.
+
+The problem is when people
 
 If you're refactoring or fixing code style, do it in its own change.
 
 Similarly, don't obscure functional changes by adding lots of unnecessary style changes
-
-## Keep changes narrowly scoped
-
-Similar, keep changes small. Don't submit changelists one line at a time, but think about how you can break your changes into a series of small, self-contained changes.
 
 ## Respond graciously to critiques
 
@@ -85,10 +114,6 @@ Don't get defensive. Keep the discussion about the code. Even if they're making 
 Respond explicitly to each note to either confirm that you've fixed it (if it requires action) or to acknowledge the note (if it requires no action). If your review tool allows you to mark notes as resolved, that's good. If not, just follow a simple convention like, "Fixed."
 
 Adjust your response based on the effort of their note. If they wrote you a long detailed note, don't just mark it done. Give a thoughtful response because they wrote something thoughtful to you.
-
-## Use tools to catch simple errors
-
-Make the tools part of your normal workflow and not something you have to remember to do because you'll forget. Configure pre-commit hooks, and encourage your team to invest in continuous integration tools that run before every code review.
 
 ## Artfully solicit missing information
 
