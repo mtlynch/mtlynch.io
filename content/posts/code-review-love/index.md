@@ -18,7 +18,7 @@ By the end of this article, you're going to be so good at code reviews that any 
 
 They're going to fall in love with you. Deal with it.
 
-Nobody ever goes to their deathbed lamenting that too many people fell in love with them.
+Nobody ever complained on their deathbed that too many people loved them.
 
 ## Why get good at receiving code reviews?
 
@@ -31,11 +31,11 @@ Reviewing code is difficult. More difficult than writing code. Your teammate arr
 
 There are many ways to squander the time they give to you:
 
-* Treat them like your personal quality assurance person.
-* Send them changelists that are unnecessarily complicated.
+* Treat your reviewer like your personal quality assurance person.
+* Send changelists to your reviewer that are unnecessarily complicated.
 * Allow the review to devolve into petty arguments.
 
-If you do it well, code reviews are a fantastic way to exchange knowledge and skill, for both the reviewer and reviewee. Your team also benefits from having clear, maintainable code whose providence (provenance) is inspectable.
+If you do it well, code reviews are a fantastic way to exchange knowledge and skill, for both the reviewer and reviewee. Your team also benefits from having clear, maintainable code whose providence (provenance?) is inspectable.
 
 ## Review your own code first
 
