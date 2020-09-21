@@ -174,11 +174,18 @@ I looked into remote administration solutions and was blown away by how expensiv
 
 {{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="600px" hasBorder="true">}}
 
-I took the unusual approach of turning my Raspberry Pi into a remote administration device using a Raspberry Pi. It captures HDMI output and simulates keyboard and mouse input, so it provides the same access you'd have if you physically connected a real keyboard, mouse, and monitor. The software is all open source, and [my recent article](/tinypilot) explains how I built it. I offer all-in-one kits starting at $169.99.
+I took the unusual approach of building my own KVM over IP device using a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com).
 
-TODO: Photo of TinyPilot plugged in + screenshot
+{{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com) to install an OS on my server">}}
+  {{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" maxWidth="260px">}}
 
-TODO: Insert TinyPilot ad
+  <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" style="max-width: 500px; object-fit: contain;"></a>
+
+{{</gallery>}}
+
+ It captures HDMI output and simulates keyboard and mouse input from its USB port, so it provides the same access you'd have if you physically connected a real keyboard, mouse, and monitor. The software is all open source, and [my recent article](/tinypilot) explains how I built it.
+
+{{<tinypilot-ad headline="Install a new server OS right from your browser" copy="TinyPilot provides a remote console for your headless server. Starting at just $169.99.">}}
 
 ## My 2020 server build
 
@@ -208,7 +215,7 @@ TODO: Insert TinyPilot ad
   {{<img src="install-everything.jpg" alt="Photo of motherboard with all components installed">}}
 {{</gallery>}}
 
-TODO: Final photo
+{{<img src="build-completed.jpg" alt="My completed homelab VM server build" maxWidth="600px" caption="The completed build, in its new home between my battery backup and cable modem">}}
 
 ## VM Management: Proxmox
 
