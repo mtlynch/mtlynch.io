@@ -1,95 +1,61 @@
 .tinypilot-box {
-  background: #f9f9f9;
-  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-  color: #666;
-  border: 1px solid #0b5e00;
-  background-color: rgb(237, 247, 225);
-  clear: both;
-  margin: 20px 0px;
-  text-align: left;
-  width: 100%;
+  background-color: #eef7fa;
+  box-shadow: 0 1px 1px rgba(82,173,200,0.25);
+  border: 1px solid rgb(0, 107, 168);
+  padding: 1rem 2.5rem;
 }
 
-@media screen and (min-width: 768px) {
-  .tinypilot-box {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.tinypilot-box h4 {
+  margin: 1rem 0;
 }
 
-.tinypilot-box .tinypilot-box-inner {
-  padding: 3%;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .tinypilot-box .tinypilot-box-inner {
-    padding: 1rem;
-  }
-}
-
-.tinypilot-box p {
-  margin: 0;
-}
-
-.tinypilot-box .logo {
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .tinypilot-box .logo {
-    max-width: 340px;
-    margin-right: 15px;
-  }
-}
-
-.tinypilot-box .logo a {
+.tinypilot-box-thin {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0.8rem 1rem;
 }
 
-.tinypilot-box .text {
+@media screen and (min-width: 768px) {
+  .tinypilot-box-thin {
+    max-width: 700px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.tinypilot-box-thin p {
+  max-width: 500px;
+  margin: 0;
+}
+
+.tinypilot-box-thin .second-half {
+  text-align: center;
+}
+
+.btn-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 20px;
+  justify-content: center;
+}
+
+.tinypilot-box-thin .btn-wrapper {
+  min-width: 200px;
+}
+
+.tinypilot-box-thin img {
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
-  .tinypilot-box .text {
-    margin-top: 0;
+  .tinypilot-box-thin img {
+    max-width: 260px;
+    margin-right: 1rem;
   }
 }
 
-.tinypilot-box .text h3 {
-  margin: 0 1rem 0 0;
-  font-size: 1.6em;
-}
-
-@media screen and (min-width: 768px) {
-  .tinypilot-box .text h3 {
-    font-size: 1.5em;
-  }
-}
-
-.tinypilot-box .text p {
-  margin: 3rem 0;
-  font-size: 0.9em;
-  line-height: 1.6;
-}
-
-@media screen and (min-width: 768px) {
-  .tinypilot-box .text p {
-    margin: 1rem 0;
-    font-size: 0.75em;
-  }
-}
-
-.tinypilot-box .btn {
+.order-now-btn {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -97,24 +63,24 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background: #ffffff;
+  background: #fff6a8;
   padding: 2rem 5rem;
-  margin: 1rem;
+  margin: 1rem auto;
   border: 4px solid #494949 !important;
   display: inline-block;
   transition: all 0.4s ease 0s;
 }
 
-
 @media screen and (min-width: 768px) {
-  .tinypilot-box .learn-more-btn {
+  .order-now-btn {
     margin: 1.5rem auto;
   }
 }
 
-.tinypilot-box .btn:hover {
+.order-now-btn:hover {
   color: #ffffff !important;
   background: #f6b93b;
-  border-color: #f6b93b !important;
+  border-color: #9c6b08 !important;
   transition: all 0.4s ease 0s;
+  text-decoration: none;
 }

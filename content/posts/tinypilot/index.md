@@ -18,24 +18,7 @@ discuss_urls:
 ---
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
-<div class="order-now order-now-thin">
-
-  <a href="https://tinypilotkvm.com"><img src="assembled-v2.jpg"></a>
-
-  <div class="second-half">
-
-  <h4>TinyPilot v2 is now available for sale</h4>
-
-  The kit includes all the parts you need to build your own TinyPilot.
-
-  <div class="btn-wrapper">
-    <a href="https://tinypilotkvm.com" class="btn order-now-btn">
-      Order now
-    </a>
-  </div>
-
-  </div>
-</div>
+{{<tinypilot-ad headline="TinyPilot is now available for sale" copy="The kit includes all the parts you need to build your own TinyPilot." >}}
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
@@ -361,7 +344,7 @@ Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
 
 That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues.
 
-I'm working on a custom power connector that allows users to deliver full, continuous power to the Pi while sharing the USB-C port. [Pre-orders are available](https://tinypilotkvm.com/product/tinypilot-power-connector) for an September 21, 2020 ETA.
+I'm working on a custom power connector that allows users to deliver full, continuous power to the Pi while sharing the USB-C port. [Pre-orders are available](https://tinypilotkvm.com/product/tinypilot-power-connector) for an September 28, 2020 ETA.
 
 {{<notice type="warning">}}
 **Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/mtlynch/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
