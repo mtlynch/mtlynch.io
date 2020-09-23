@@ -25,7 +25,7 @@ If you're not interested in the "why" of this project, you can jump [directly to
 
 ## Why build a whole VM server?
 
-Originally, I used VirtualBox to run VMs from my Windows desktop. That was fine for awhile, but reboots became a huge hassle.
+Originally, I used VirtualBox to run VMs from my Windows desktop. That was fine for a while, but reboots became a huge hassle.
 
 Between forced reboots from Windows Update, voluntary restarts to complete software installs, and the occasional OS crash, I had to restart my entire suite of development VMs three to five times per month.
 
@@ -34,7 +34,7 @@ A dedicated VM server spares me most reboots. The VM host runs a minimal set of 
 {{<notice type="info">}}
 **What's a "homelab?"**
 
-Homelab is just a colloquial term that's grown in the past few years. Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use them as a low-stakes practice environment before they try using the same tools to manage software for enterprise clients.
+Homelab is just a colloquial term that's grown in the past few years. Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use them as a low-stakes practice environment before using the same tools to manage software for enterprise clients.
 {{</notice>}}
 
 ## Why not use cloud computing?
@@ -59,7 +59,7 @@ That turned out to be a dumb idea.
 
 First, running VMs on network storage creates a strict dependency on the disk server. Synology publishes OS upgrades every couple of months, and their patches always require reboots. With my VMs running on top of Synology's storage, I had to shut down my entire VM fleet before applying an update from Synology. It was the same reboot problem I had when I ran VMs on my Windows desktop.
 
-{{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" maxWidth="550px" hasBorder="true" caption="The OS on my storage server requires frequent upgrades">}}
+{{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" maxWidth="550px" hasBorder="true" caption="The OS on my storage server requires frequent upgrades.">}}
 
 Second, random disk access over the network is **slow**. At the time of my first build, most of my development work was on backend Python and Go applications, and they didn't have any significant disk requirements. Since then, I've expanded into frontend web development. Modern web frameworks all use Node.js, so every project has anywhere from 10k-200k random JavaScript files in its dependency tree. Node.js builds involve tons of random disk access, a worst-case scenario for network storage.
 
@@ -95,7 +95,7 @@ My first VM server's CPU was a [Ryzen 7 1700](https://www.amd.com/en/products/cp
 
 {{<img src="do-u-even.png" alt="redditor /u/pylori asks 'Bro, do you even homelab? Seriously you're worried about hardware failure on enterprise gear that's built to outlast newer consumer stuff?'" caption="[/r/homelab was unimpressed](https://www.reddit.com/r/homelab/comments/69sk2v/building_a_homelab_vm_server/dh93sur/) with my first build.">}}
 
-Resolved to never let /r/homelab make fun of me again, I ventured into the world of enterprise server hardware. I took it a step further and chose a dual-CPU build.
+Resolved nevert to let /r/homelab make fun of me again, I ventured into the world of enterprise server hardware. I took it a step further and chose a dual-CPU build.
 
 To get the best performance for my dollar, I restricted my search to used CPUs, released four to eight years ago. For each candidate, I [looked up benchmark scores on PassMark](https://www.cpubenchmark.net) and then checked eBay for recent sales of that CPU model in used condition.
 
@@ -106,7 +106,7 @@ The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https
   {{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" maxWidth="490px" hasBorder="true">}}
 {{</gallery>}}
 
- For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual-E5-2680s, I'd more than double the processing power from my previous server.
+ For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual-E5-2680s, I'd more than double the processing power from my old server.
 
 ### Motherboard
 
@@ -128,7 +128,7 @@ I went with [Crucial CT4K16G4RFD4213 64 GB (4 x 16 GB)](https://www.newegg.com/c
 
 {{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
-I love M.2 SSDs, as they're small, have great performance, and neatly tuck away in the motherboard without any cabling. Sadly, the MBD-X10DAL doesn't support the M.2 interface.
+I love M.2 SSDs, as they're small, perform outstandingly, and neatly tuck away in the motherboard without any cabling. Sadly, the MBD-X10DAL doesn't support the M.2 interface.
 
 Instead, I stuck with traditional old SATA. I bought a [1 TB Samsung 860 EVO](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673). I typically allocate 40 GB of space to each VM, so 1 TB would give me plenty of room. If I need to upgrade later, I can always buy more disks.
 
@@ -138,7 +138,7 @@ Instead, I stuck with traditional old SATA. I bought a [1 TB Samsung 860 EVO](ht
 
 Choosing a power supply unit (PSU) isn't that interesting, so I again chose mainly by trusted brand, the [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)
 
-The wattage on all of my components added up to 400 W, so 450 W would have been sufficient. But the 550 W version was only $10 more, which seemed like a good price for an extra 100 W of breathing room.
+The wattage on all of my components added up to 400 W, so 450 W would have been sufficient. But the 550 W version was only $10 more, which seemed like a fair price for an extra 100 W of breathing room.
 
 The only other important feature to me was semi-modular cabling. In my last build, I made the mistake of using non-modular cabling, which meant that all of the PSU's cables stay attached permanently. My server barely has any internal components, so the extraneous power cables created clutter. With semi-modular cabling, I can keep things tidy by removing unused cables from the PSU.
 
@@ -160,7 +160,7 @@ The [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design
 
 {{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
-For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931), as a cheap, easy option.
+For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931) as a cheap, easy option.
 
 ### Remote administration
 
@@ -198,7 +198,7 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 
 &nbsp;
 
-{{<gallery caption="The Meshify C has been my all-time favorite case for cable management. Its built-in velcro straps organize the cables and little rubber dividers hide them in the far side of the case.">}}
+{{<gallery caption="The Meshify C has been my all-time favorite case for cable management. Its built-in velcro straps organize the cables, and little rubber dividers hide them in the far side of the case.">}}
   {{<img src="cable-management-1.jpg" alt="Photo of outer side of empty case">}}
   {{<img src="cable-management-2.jpg" alt="Photo of empty case interior">}}
 {{</gallery>}}
@@ -218,11 +218,11 @@ To manage my VMs, I'm using [Proxmox VE](https://www.proxmox.com/en/).
 
 {{<img src="proxmox-summary.png" maxWidth="600px" hasBorder="true" alt="Screenshot of Proxmox dashboard" caption="Proxmox's dashboard of all my VMs">}}
 
-After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another free solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it definitely lags behind ESXi in slickness.
+After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another free solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it lags behind ESXi in slickness.
 
-The part of Proxmox that I most appreciate is its scriptability. One of my common task is creating a new VM from a template and then using [Ansible](https://docs.ansible.com/ansible/latest/index.html) to configure it how I want. With ESXi, I couldn't find a way to do this without manually clicking buttons in the web UI every time. With Proxmox, [their CLI](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span) is powerful enough that I can script it to the point where I just type `./create-vm whatgotdone-dev` and my scripts create a fresh [What Got Done](https://whatgotdone.com) development VM.
+The part of Proxmox that I most appreciate is its scriptability. One of my frequent tasks is creating a new VM from a template and then using [Ansible](https://docs.ansible.com/ansible/latest/index.html) to configure it how I want. With ESXi, I couldn't find a way to do this without manually clicking buttons in the web UI every time. With Proxmox, [their CLI](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span) is powerful enough that I can script it to the point where I just type `./create-vm whatgotdone-dev` and my scripts create a fresh [What Got Done](https://whatgotdone.com) development VM.
 
-My biggest complaint is that Proxmox is fairly unintuitive. I couldn't even figure out how to install it until I found [Craft Computing's installation tutorial](https://www.youtube.com/watch?v=azORbxrItOo). But once you learn your way around, it's easy to use.
+My biggest complaint is that Proxmox is unintuitive. I couldn't even figure out how to install it until I found [Craft Computing's installation tutorial](https://www.youtube.com/watch?v=azORbxrItOo). But once you learn your way around, it's easy to use.
 
 ## Benchmarks
 
@@ -254,7 +254,7 @@ The first benchmark I took was provisioning a new VM. I have a standard VM templ
 
 My new server brought a huge speedup to this workflow. Cloning a VM went from 15 minutes on my old server to less than four minutes on the new one.
 
-If I skip the package upgrade step, the speedup is a little less impressive. The new server still blows away performance on NAS storage, dropping from eight minutes to just under two and a half. SSD to SSD, it underperforms my previous server. It's likely that cloning a VM is primarily disk-bound, and my old M.2 SSD was faster than my new SATA SSD.
+If I skip the package upgrade step, the speedup is a little less impressive. The new server still blows away performance on NAS storage, dropping from eight minutes to just under two and a half. SSD to SSD, it underperforms my previous server. Cloning a VM is likely disk-bound, and my old M.2 SSD was faster than my new SATA SSD.
 
 ### Boot a VM
 
@@ -266,13 +266,13 @@ My old VMs booted in 48 seconds. The few SSD-based VMs on my old system did a li
 
 ### Run What Got Done end-to-end tests
 
-My weekly journaling app, [What Got Done](https://whatgotdone.com) has automated tests that exercise the app's functionality end-to-end. This is one of my most diverse workflows, as it involves compiling a Go backend, compiling a Vue frontend, building a series of Docker containers, and automating Chrome to exercise my app. This was one of the workflows that exhausted resources on my old VM, so I expected big gains here.
+My weekly journaling app, [What Got Done](https://whatgotdone.com), has automated tests that exercise its functionality end-to-end. This is one of my most diverse workflows &mdash; it involves compiling a Go backend, compiling a Vue frontend, building a series of Docker containers, and automating Chrome to exercise my app. This was one of the workflows that exhausted resources on my old VM, so I expected substantial gains here.
 
 {{<video src="wgt-test.mp4" maxWidth="600px">}}
 
 {{<img src="build-wgt.png" alt="Graph showing 2017 SSD server completed in 5.4 minutes vs. 2020 server completed in 5.6 minutes">}}
 
-Surprisingly, there was no significant performance difference between the two. For a cold start (downloading all of the Docker base images), the new server is 2% slower than the old one. When the base Docker images are already available locally, my new server beats my old, but only by 6%. It looks like the bottleneck is largely the disk and browser interaction, so the new server doesn't make much difference.
+Surprisingly, there was no significant performance difference between the two. For a cold start (downloading all of the Docker base images), the new server is 2% slower than the old one. When the base Docker images are already available locally, my new server beats my old, but only by 6%. It looks like the bottleneck is mainly the disk and browser interaction, so the new server doesn't make much difference.
 
 ### Build Is It Keto
 
@@ -280,7 +280,7 @@ One frequent workflow I have is building [Is It Keto](https://isitketo.org), my 
 
 {{<img src="build-isitketo.png" alt="Graph showing 2017 SSD server completed in 3.7 minutes vs. 2020 server completed in 4 minutes">}}
 
-I expected a big speedup here, so I was surprised when my build got slower. The build seemed to be mostly CPU-bound on my old server, but doubling CPU resources on my new server did nothing. My next guess was that it was disk-bound, so I tried moving the files to a RAMdisk, but this had no effect on build times.
+I expected a significant speedup here, so I was surprised when my build got slower. The build seemed to be mostly CPU-bound on my old server, but doubling CPU resources on my new server did nothing. My next guess was that it was disk-bound, so I tried moving the files to a RAMdisk, but build speeds remained the same.
 
 My hypothesis is that the workflow is CPU-bound but parallelizes poorly. My old server has fewer CPU cores, but the cores are individually faster. If the build is limited to five or six threads, it can't take advantage of my new server's 48 cores.
 
@@ -290,7 +290,7 @@ My hypothesis is that the workflow is CPU-bound but parallelizes poorly. My old 
 
 {{<img src="train-zestful.png" alt="Graph showing 2017 SSD server completed in 18.3 minutes vs. 2020 server completed in 8 minutes">}}
 
-Finally, a case where my new 48 CPU cores shine! The new server blows the old one away, training the model in less than half the time. Unfortunately it's a workflow I only run a few times per year.
+Finally, a case where my new 48 CPU cores shine! The new server blows the old one away, training the model in less than half the time. Unfortunately, it's a workflow I only run a few times per year.
 
 ## Reflections
 
@@ -300,7 +300,7 @@ Even though /r/homelab may never respect me, on my next build, I'm planning to r
 
 The biggest advantage I see with server components is that they have [better compatibility with server software](/building-a-vm-homelab-2017/#installing-a-host-os). Back in 2017, I [couldn't install ESXi until I disabled multithreading](/building-a-vm-homelab-2017/#also-ran-esxi-65), degrading performance substantially. But that was a limitation in the Linux kernel, and later updates [fixed it](https://www.pcworld.com/article/3176323/kernel-410-gives-linux-support-for-zen-multithreading.html).
 
-Server hardware commands a premium because of its greater reliability. For user-facing services, this quality is important, but it matters much less on a development server. An occasional crash or bit flip on a dev server shouldn't ruin your day.
+Server hardware commands a premium because of its greater reliability. For user-facing services, this quality is meaningful, but it matters much less on a development server. An occasional crash or bit flip on a dev server shouldn't ruin your day.
 
 ### Consider the full cost of dual-CPU
 
@@ -310,13 +310,13 @@ Based on my benchmarks, the CPU was so rarely the limiting factor in my workflow
 
 {{<img src="max-cpu.png" alt="Graph of showing I never used more than 11% of my CPU" hasBorder="true" caption="My max CPU usage in the last few months never went above 11% of my server's capacity.">}}
 
-The requirement for dual CPUs drove up the cost of motherboard substantially and limited my options. Only a scant few support Intel 2011-v3 CPUs, so I didn't have many choices in terms of other motherboard features.
+The requirement for dual CPUs drove up the cost of a motherboard substantially and limited my options. Only a scant few support Intel 2011-v3 CPUs, so I didn't have many choices in terms of other motherboard features.
 
 ### Remote administration provides flexibility
 
 Before I used TinyPilot to manage my server, I didn't realize how change-averse I had been with my old server. I was reluctant to change any BIOS or network settings for fear that I'd lose the next hour of my life physically moving around machines and reconnecting peripherals to debug and fix the problem.
 
-Having a virtual console gives me the freedom to fail and makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not built TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance installing Proxmox.
+Having a virtual console gives me the freedom to fail and makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not built TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance on switching to Proxmox.
 
 ## My previous VM server build
 
