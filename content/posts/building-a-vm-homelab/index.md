@@ -316,7 +316,7 @@ The requirement for dual CPUs drove up the cost of a motherboard substantially a
 
 Before I used TinyPilot to manage my server, I didn't realize how change-averse I had been with my old server. I was reluctant to change any BIOS or network settings for fear that I'd lose the next hour of my life physically moving around machines and reconnecting peripherals to debug and fix the problem.
 
-Having a virtual console gives me the freedom to fail and makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not built TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance on switching to Proxmox.
+Having a virtual console gives me the freedom to fail and makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not built TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance on Proxmox.
 
 ## My previous VM server build
 
