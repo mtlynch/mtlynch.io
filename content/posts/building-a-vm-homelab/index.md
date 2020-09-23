@@ -11,11 +11,11 @@ hide_affiliate_warning: true # No affiliate links in this article
 images:
 - building-a-vm-homelab/build-components.jpg
 ---
-For the past five years, I've done all of my software development in virtual machines (VMs). Every project gets its own dedicated VM. I never have to worry about dependency conflicts or TCP port collisions, as the VMs isolate projects from one another.
+For the past five years, I've done all of my software development in virtual machines (VMs). Each of my projects gets a dedicated VM, sparing me the headache of dependency conflicts and TCP port collisions.
 
-Three years ago, I took things to the next level by [building a dedicated homelab server](/building-a-vm-homelab-2017) to host all of my VMs. It's been a fantastic investment and greatly improved the reliability and speed of my common workflows.
+Three years ago, I took things to the next level by [building a homelab server](/building-a-vm-homelab-2017) to host all of my VMs. It's been a fantastic investment, as it sped up many of my common workflows and improved system reliability overall.
 
-In the past few months, I began hitting the limits of my VM server. My projects have become more resource-hungry, and there were fundamental mistakes in my first build, so I decided to build a brand new homelab VM server for 2020.
+In the past few months, I began hitting the limits of my VM server. My projects have become more resource-hungry, and mistakes I'd made in my first build were coming back to bite me, so I decided to build a brand new homelab VM server for 2020.
 
 {{<img src="build-components.jpg" alt="Photo of my server build components" maxWidth="600px" caption="Components of my new VM server build (most of them, anyway)">}}
 
@@ -25,40 +25,43 @@ If you're not interested in the "why" of this project, you can jump [directly to
 
 ## Why build a whole VM server?
 
-Originally, I used VirtualBox to run VMs from my Windows desktop, but reboots became a huge hassle. Between forced reboots from Windows Update, voluntary reboots to complete software installs, and the occasional OS crash, I had to restart my entire suite of development VMs three to five times per month.
+Originally, I used VirtualBox to run VMs from my Windows desktop. That was fine for awhile, but reboots became a huge hassle.
+
+Between forced reboots from Windows Update, voluntary restarts to complete software installs, and the occasional OS crash, I had to restart my entire suite of development VMs three to five times per month.
 
 A dedicated VM server spares me most reboots. The VM host runs a minimal set of software, so crashes and mandatory reboots are rare.
+
+{{<notice type="info">}}
+**What's a "homelab?"**
+
+Homelab is just a colloquial term that's grown in the past few years. Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use them as a low-stakes practice environment before they try using the same tools to manage software for enterprise clients.
+{{</notice>}}
+
+## Why not use cloud computing?
 
 Cloud servers could serve the same function and save me the trouble (fun!) of maintaining my own hardware, but it's prohibitively expensive. For VM resources similar to my homelab server, AWS EC2 instances would cost over $6k per year:
 
 {{<img src="aws-pricing.png" alt="Screenshot showing AWS EC2 instances would cost $6,112.68 per year" maxWidth="600px" hasBorder="true" caption="Using AWS instead of my homelab server would [cost me over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c).">}}
 
-
-{{<notice type="info">}}
-
-**What's a "homelab?"**
-
-Homelab is just a colloquial term that's grown in the past few years. Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use them as a low-stakes practice environment before they try using the same tools to manage software for enterprise clients.
-
-{{</notice>}}
+I could substantially reduce this cost by turning cloud instances on or off as needed, but that would introduce friction into my workflows. With a local VM server, I can keep 10-20 VMs available and ready at all times without worrying about micromanaging them to reduce my costs.
 
 ## Learning from past mistakes
 
-My 2017 server build served me well, but in three years of using it, I definitely recognized areas for improvement.
+My 2017 server build served me well, but in three years of using it, I've come to recognize areas begging for improvement.
 
 ### 1. Keep storage local
 
-My Synology NAS has 10.9 TB of storage capacity. With all that space, I thought, "why buy more disk space than the bare minimum to boot the host OS?"
+My Synology NAS has 10.9 TB of storage capacity. With all that network storage space, I thought, "why buy more disk space than the bare minimum to boot the host OS?"
 
 {{<img src="synology-pool.png" alt="Screenshot showing 10.9 TB" maxWidth="600px" hasBorder="true" caption="On my first build, I relied on my 10.9 TB of network storage.">}}
 
 That turned out to be a dumb idea.
 
-First, running VMs on network storage creates a strict dependency on the disk server. Synology publishes OS upgrades every couple of months, and their patches always require reboots. With my VMs running on top of Synology's storage, I had to shut down each VM before applying an update from Synology. It was the same reboot problem I had when I ran VMs on my Windows desktop.
+First, running VMs on network storage creates a strict dependency on the disk server. Synology publishes OS upgrades every couple of months, and their patches always require reboots. With my VMs running on top of Synology's storage, I had to shut down my entire VM fleet before applying an update from Synology. It was the same reboot problem I had when I ran VMs on my Windows desktop.
 
 {{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" maxWidth="550px" hasBorder="true" caption="The OS on my storage server requires frequent upgrades">}}
 
-Second, random access over the network is **slow**. At the time of my first build, most of my development work was on backend Python and Go applications, and they didn't have any special disk requirements. Since then, I've expanded into more frontend web development. Modern web frameworks all use Node.js, which means that every project has anywhere from 10k-200k random JavaScript files in its dependency tree. Node.js builds involve tons of random disk access, a worst-case scenario for network storage.
+Second, random disk access over the network is **slow**. At the time of my first build, most of my development work was on backend Python and Go applications, and they didn't have any significant disk requirements. Since then, I've expanded into frontend web development. Modern web frameworks all use Node.js, so every project has anywhere from 10k-200k random JavaScript files in its dependency tree. Node.js builds involve tons of random disk access, a worst-case scenario for network storage.
 
 ### 2. Pick better VM management software
 
@@ -70,7 +73,7 @@ Almost immediately after I installed it, development on Kimchi stopped.
 
 {{<img src="i-use-kimchi.png" alt="Graph of commits to Kimchi repository showing commits ending right after I started using it" maxWidth="600px" hasBorder="true" caption="Code commits to Kimchi, which stop almost immediately after I started using it">}}
 
-Over time, Kimchi turned out to be extremely flaky. I often had to click a VM's "clone" or "shutdown" button multiple times before it would obey me. And there were infuriating UI bugs where menus would disappear or shift position right before I clicked them.
+Over time, Kimchi's shortcomings became more and more apparent. I often had to click a VM's "clone" or "shutdown" button multiple times before it would obey me. And there were infuriating UI bugs where buttons disappeared or shifted position right before I clicked them.
 
 ### 3. Plan for remote administration
 
@@ -78,7 +81,7 @@ Over time, Kimchi turned out to be extremely flaky. I often had to click a VM's 
 
 If you read the above and thought, "Kimchi is just software. Why did Michael have to build a whole new server to install a different VM manager?" It's because I failed to anticipate the importance of remote administration.
 
-My VM server is just a headless server that sits in the corner of my office. And that's fine 99% of the time when I can SSH in or use the web interface. But for the 1% of the time when the server fails to boot or I want to install a new host OS, it's a huge pain. I have to drag the server over to my desk, disconnect my desktop keyboard and monitor, fix whatever needs fixing, and rearrange my office to its original configuration.
+My VM server is just a PC that sits in the corner of my office with no monitor or keyboard attached. That's fine 99% of the time when I can SSH in or use the web interface. But for the 1% of the time when the server fails to boot or I want to install a new host OS, it's a huge pain. I have to drag the server over to my desk, disconnect my desktop keyboard and monitor, fix whatever needs fixing, then restore everything in my office to its original configuration.
 
 For my next build, I wanted a virtual console with physical-level access to the machine as soon as it powered on. I was thinking something like Dell's iDRAC or HP's iLO.
 
@@ -88,13 +91,13 @@ For my next build, I wanted a virtual console with physical-level access to the 
 
 ### CPU
 
-My first VM server's CPU was a [Ryzen 7 1700](https://www.amd.com/en/products/cpu/amd-ryzen-7-1700). At eight cores and 16 threads, it was [the hot new CPU at the time](https://www.tomshardware.com/reviews/amd-ryzen-7-1700-cpu-review,5009.html). But when I showed off my build on [/r/homelab](https://www.reddit.com/r/homelab/), reddit's homelab subcommunity, they mocked me as a filthy amateur because I used *consumer* parts. The cool kids used enterprise gear.
+My first VM server's CPU was a [Ryzen 7 1700](https://www.amd.com/en/products/cpu/amd-ryzen-7-1700). At eight cores and 16 threads, it was [the hot new CPU at the time](https://www.tomshardware.com/reviews/amd-ryzen-7-1700-cpu-review,5009.html). But when I showed off my build on [/r/homelab](https://www.reddit.com/r/homelab/), reddit's homelab subcommunity, they mocked me as a filthy casual because I used *consumer* parts. The cool kids used enterprise gear.
 
 {{<img src="do-u-even.png" alt="redditor /u/pylori asks 'Bro, do you even homelab? Seriously you're worried about hardware failure on enterprise gear that's built to outlast newer consumer stuff?'" caption="[/r/homelab was unimpressed](https://www.reddit.com/r/homelab/comments/69sk2v/building_a_homelab_vm_server/dh93sur/) with my first build.">}}
 
 Resolved to never let /r/homelab make fun of me again, I ventured into the world of enterprise server hardware. I took it a step further and chose a dual-CPU build.
 
-To get the best performance for my dollar, I restricted my search to used CPUs, released four to eight years ago. For each candidate, I [looked up benchmarks](https://www.cpubenchmark.net) and then checked eBay for recent sales of that CPU model in used condition.
+To get the best performance for my dollar, I restricted my search to used CPUs, released four to eight years ago. For each candidate, I [looked up benchmark scores on PassMark](https://www.cpubenchmark.net) and then checked eBay for recent sales of that CPU model in used condition.
 
 The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https://ark.intel.com/content/www/us/en/ark/products/series/78583/intel-xeon-processor-e5-v3-family.html) family, especially the 2600 models. I settled on the [E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html). It had an average benchmark of 15,618 and cost ~$130 used on eBay.
 
@@ -119,7 +122,7 @@ I chose the [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x1
 
 There seems to be a lot less choice in memory for server hardware. With consumer hardware, plenty of websites publish reviews and benchmarks online of different RAM options, but I didn't see anything like that for server RAM.
 
-I went with [Crucial CT4K16G4RFD4213 64 GB (4 x 16 GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) because I trusted the brand. I chose 64 GB of RAM because [my previous build had 32 GB](/building-a-vm-homelab-2017/#memory), and some of my workflows reached that limit, so I figured doubling RAM would cover me for the next few years.
+I went with [Crucial CT4K16G4RFD4213 64 GB (4 x 16 GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) because I trusted the brand. I chose 64 GB of RAM because [my previous build had 32 GB](/building-a-vm-homelab-2017/#memory), and some of my workflows were approaching that limit, so I figured doubling RAM would cover me for the next few years.
 
 ### Storage
 
@@ -143,21 +146,21 @@ The only other important feature to me was semi-modular cabling. In my last buil
 
 {{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
-The dual-CPU build made cooling an unexpected challenge. Fans are enormous!
-
-The MBD-X10DAL doesn't leave much space between the two CPU sockets, so I looked carefully for fans thin enough to work side-by-side. A pair of [Cooler Master Hyper 212s](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) fit the bill.
+The dual-CPU build made cooling an unexpected challenge. The MBD-X10DAL doesn't leave much space between the two CPU sockets, so I looked carefully for fans thin enough to work side-by-side. A pair of [Cooler Master Hyper 212s](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) fit the bill.
 
 ### Case
 
 {{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" maxWidth="200px" align="left" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
-My server sits inconspicuously in the corner of my office, so I didn't want any clear panels or flashy lights. The [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085) had positive reviews and seemed like a simple, quiet case.
+My server sits inconspicuously in the corner of my office, so I didn't want any clear panels or flashy lights.
+
+The [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085) had positive reviews and seemed like a simple, quiet case.
 
 ### Graphics
 
-{{<img src="msi-geforce-gt-710.jpg" alt="MSI GeForce GT170 GPU" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
-For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931), as an easy, cheap option.
+For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931), as a cheap, easy option.
 
 ### Remote administration
 
@@ -215,9 +218,9 @@ To manage my VMs, I'm using [Proxmox VE](https://www.proxmox.com/en/).
 
 {{<img src="proxmox-summary.png" maxWidth="600px" hasBorder="true" alt="Screenshot of Proxmox dashboard" caption="Proxmox's dashboard of all my VMs">}}
 
-After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another open source solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it definitely lags behind ESXi in slickness.
+After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another free solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it definitely lags behind ESXi in slickness.
 
-The part of Proxmox that I most appreciate is its scriptability. It's a common task for me to create a new VM from a template and then use [Ansible](https://docs.ansible.com/ansible/latest/index.html) to configure it how I want. With ESXi, I couldn't find a way to do this without manually clicking buttons in the web UI every time. With Proxmox, [their CLI](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span) is powerful enough that I can script it to the point where I just type `./create-vm whatgotdone-dev` and my scripts create a fresh [What Got Done](https://whatgotdone.com) development VM.
+The part of Proxmox that I most appreciate is its scriptability. One of my common task is creating a new VM from a template and then using [Ansible](https://docs.ansible.com/ansible/latest/index.html) to configure it how I want. With ESXi, I couldn't find a way to do this without manually clicking buttons in the web UI every time. With Proxmox, [their CLI](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span) is powerful enough that I can script it to the point where I just type `./create-vm whatgotdone-dev` and my scripts create a fresh [What Got Done](https://whatgotdone.com) development VM.
 
 My biggest complaint is that Proxmox is fairly unintuitive. I couldn't even figure out how to install it until I found [Craft Computing's installation tutorial](https://www.youtube.com/watch?v=azORbxrItOo). But once you learn your way around, it's easy to use.
 
@@ -225,7 +228,7 @@ My biggest complaint is that Proxmox is fairly unintuitive. I couldn't even figu
 
 Before I decommissioned my old VM server, I collected simple benchmarks of my common workflows to compare performance improvements on my new server.
 
-Most of my old VMs ran on NAS storage because it had only 256 GB of local disk. A few of my VMs that had disk-heavy workflows ran on local SSD. In the benchmarks below, I compare performance in three different scenarios:
+Most of my old VMs ran on network storage because its local SSD only had room for a couple of VMs. In the benchmarks below, I compare performance in three different scenarios:
 
 * 2017 Server (NAS): The typical VM I kept on network storage
 * 2017 Server (SSD): For the few VMs I kept on local storage
@@ -249,11 +252,9 @@ The first benchmark I took was provisioning a new VM. I have a standard VM templ
 
 {{<img src="provision-vm.png" alt="Graph showing 2020 server outperforms my 2017 server on both NAS and SSD">}}
 
-My new server brought a huge speedup to this workflow. Cloning a VM went from 15 minutes on my old server to less than four minutes on the new one. Comparing SSD to SSD is less impresive, as 
+My new server brought a huge speedup to this workflow. Cloning a VM went from 15 minutes on my old server to less than four minutes on the new one.
 
-On my old system, I typically provisioning a new VM using network storage since I had so little local disk. Including system updates, that process took 15 minutes! With my new server, it's under four minutes.
-
-If I skip the package upgrade step, the speedup is a little less impressive. The new server still blows away performance on NAS storage dropping from eight minutes to just under two and a half. SSD to SSD, it underperforms my previous server. It's likely that cloning a VM is primarily disk-bound, and my old M.2 SSD was faster than my new SATA SSD.
+If I skip the package upgrade step, the speedup is a little less impressive. The new server still blows away performance on NAS storage, dropping from eight minutes to just under two and a half. SSD to SSD, it underperforms my previous server. It's likely that cloning a VM is primarily disk-bound, and my old M.2 SSD was faster than my new SATA SSD.
 
 ### Boot a VM
 
@@ -279,9 +280,9 @@ One frequent workflow I have is building [Is It Keto](https://isitketo.org), my 
 
 {{<img src="build-isitketo.png" alt="Graph showing 2017 SSD server completed in 3.7 minutes vs. 2020 server completed in 4 minutes">}}
 
-I expected a big speedup here, so I was surprised when my build got slower. The build seemed to be mostly CPU-bound on my old build, but adding more CPU resources did nothing. My next guess was that it was disk-bound, but I tried moving the files to a RAMdisk and saw no change.
+I expected a big speedup here, so I was surprised when my build got slower. The build seemed to be mostly CPU-bound on my old server, but doubling CPU resources on my new server did nothing. My next guess was that it was disk-bound, so I tried moving the files to a RAMdisk, but this had no effect on build times.
 
-My hypothesis is that it's CPU-bound but parallelizes poorly. My old server has fewer CPU cores, but the cores are individually faster. If the build is limited to five or six threads, it can't take advantage of my new server's 48 cores.
+My hypothesis is that the workflow is CPU-bound but parallelizes poorly. My old server has fewer CPU cores, but the cores are individually faster. If the build is limited to five or six threads, it can't take advantage of my new server's 48 cores.
 
 ### Train a new Zestful model
 
@@ -297,9 +298,9 @@ Finally, a case where my new 48 CPU cores shine! The new server blows the old on
 
 Even though /r/homelab may never respect me, on my next build, I'm planning to return to consumer hardware.
 
-The biggest advantage I see with server components is that they have [better compatibility with server software](/building-a-vm-homelab-2017/#installing-a-host-os). Back in 2017, I [couldn't install ESXi until I disabled multithreading](/building-a-vm-homelab-2017/#also-ran-esxi-65), degrading performance substantially. But that was a limitation with the Linux kernel, and later updates [fixed that](https://www.pcworld.com/article/3176323/kernel-410-gives-linux-support-for-zen-multithreading.html).
+The biggest advantage I see with server components is that they have [better compatibility with server software](/building-a-vm-homelab-2017/#installing-a-host-os). Back in 2017, I [couldn't install ESXi until I disabled multithreading](/building-a-vm-homelab-2017/#also-ran-esxi-65), degrading performance substantially. But that was a limitation in the Linux kernel, and later updates [fixed it](https://www.pcworld.com/article/3176323/kernel-410-gives-linux-support-for-zen-multithreading.html).
 
-Server hardware commands a premium because of their increased reliability. For production workflows, this premium is often worthwhile, but it doesn't make sense for a development server. An occasional crash or bit flip on a dev server shouldn't ruin your day.
+Server hardware commands a premium because of its greater reliability. For user-facing services, this quality is important, but it matters much less on a development server. An occasional crash or bit flip on a dev server shouldn't ruin your day.
 
 ### Consider the full cost of dual-CPU
 
@@ -309,14 +310,14 @@ Based on my benchmarks, the CPU was so rarely the limiting factor in my workflow
 
 {{<img src="max-cpu.png" alt="Graph of showing I never used more than 11% of my CPU" hasBorder="true" caption="My max CPU usage in the last few months never went above 11% of my server's capacity.">}}
 
-The requirement for dual CPUs drove up the cost of motherboard substantially and limited my options. I only found a handful of options for Xeon E5 v3 compatible motherboards, and the only one I found didn't support M.2 disk interface or built-in remote administration tools like some other SuperMicro motherboards do.
+The requirement for dual CPUs drove up the cost of motherboard substantially and limited my options. Only a scant few support Intel 2011-v3 CPUs, so I didn't have many choices in terms of other motherboard features.
 
-### Remote administration provides OS flexibility
+### Remote administration provides flexibility
 
-Before I used TinyPilot to manage my server, I didn't realize how change-averse I had been with my old server. But I was. If I changed a setting on my server that caused its boot to fail or messed up its network settings, that's probably an hour of work physically moving around machines and reconnecting peripherals to debug and fix the problem.
+Before I used TinyPilot to manage my server, I didn't realize how change-averse I had been with my old server. I was reluctant to change any BIOS or network settings for fear that I'd lose the next hour of my life physically moving around machines and reconnecting peripherals to debug and fix the problem.
 
-This freedom to fail makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not had TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance installing Proxmox.
+Having a virtual console gives me the freedom to fail and makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not built TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance installing Proxmox.
 
-## Previous article
+## My previous VM server build
 
 * [Building a Homelab VM Server (2017 Edition)](/building-a-vm-homelab-2017)
