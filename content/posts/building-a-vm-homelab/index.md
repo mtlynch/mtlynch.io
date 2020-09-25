@@ -73,7 +73,7 @@ Almost immediately after I installed it, development on Kimchi stopped.
 
 {{<img src="i-use-kimchi.png" alt="Graph of commits to Kimchi repository showing commits ending right after I started using it" maxWidth="600px" hasBorder="true" caption="Code commits to Kimchi, which stop almost immediately after I started using it">}}
 
-Over time, Kimchi's shortcomings became more and more apparent. I often had to click a VM's "clone" or "shutdown" button multiple times before it would obey me. And there were infuriating UI bugs where buttons disappeared or shifted position right before I clicked them.
+Over time, Kimchi's shortcomings became more and more apparent. I often had to click a VM's "clone" or "shutdown" button multiple times before it cooperated. And there were infuriating UI bugs where buttons disappeared or shifted position right before I clicked them.
 
 ### 3. Plan for remote administration
 
