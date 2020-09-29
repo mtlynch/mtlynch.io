@@ -1,5 +1,6 @@
 ---
 title: Projects
+hide_affiliate_warning: true # No affiliate links on this page
 ---
 
 ## [TinyPilot](https://tinypilotkvm.com/) (2020 - present)

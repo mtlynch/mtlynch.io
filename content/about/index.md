@@ -1,5 +1,6 @@
 ---
 title: About
+hide_affiliate_warning: true # No affiliate links on this page
 ---
 
 {{< img src="author-photo.jpg" alt="Author photo" maxWidth="350px" align="right" >}}
