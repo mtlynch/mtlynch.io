@@ -342,9 +342,14 @@ Further, The Pi 4 needs 3 Amps for stable operation, though it can run at lower 
 Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
 ```
 
-That said, I've run CPU and RAM stress tests while powering the Pi via USB, and it reports no issues.
+To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
-I'm working on a custom power connector that allows users to deliver full, continuous power to the Pi while sharing the USB-C port. [Pre-orders are available](https://tinypilotkvm.com/product/tinypilot-power-connector) for an September 28, 2020 ETA.
+{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
+  {{<img src="power-connector.jpg" alt="Close-up of power connector" maxWidth="500px">}}
+  {{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" maxWidth="500px">}}
+{{</gallery>}}
+
+Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.
 
 {{<notice type="warning">}}
 **Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/mtlynch/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
