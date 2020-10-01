@@ -95,14 +95,14 @@ Cartoon of dog being awakened by a late night phone call.
 
 Frame 1
 * B: Hello?
-* A: When you wrote foo.py six years ago, why did you multiply totalCost by 0.0625?
+* A: When you wrote foo.py six years ago, why'd you make t=6?
 
 Frame 2
-* B: I'm glad you called! It's because the tax rate in MA is 6.25%.
+* B: I'm glad you called! It's a 6% sales tax.
 * A: Of course!
 
 Frame 3:
-* A: This is a good system for understanding implementation choices.
+* A: This is a good way to communicate implementation choices.
 
 Both are nodding and smiling.
 {{</notice>}}
@@ -217,6 +217,8 @@ The more open changelists in flight, the more confusing it is for everyone. A co
 Remember the golden rule: value your reviewer's time. If you demonstrate that you care about their experience as a reviewer, they'll return the favor.
 
 Helping your reviewer focus on the interesting parts of your code allows them to give you feedback that helps you grow as a developer rather than superficial stuff like finding out that your whitespace is wrong.
+
+Your reviewer is now in love with you.
 
 ## Further Reading
 
