@@ -35,8 +35,6 @@ TODO
 
 ## Stats
 
-### [Is It Keto](https://isitketo.org)
-
 ### [Tiny Pilot](https://tinypilotkvm.com)
 
 ## Topic 1
@@ -48,6 +46,8 @@ TODO
 ## Legacy projects
 
 Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
+
+### [Is It Keto](https://isitketo.org)
 
 ### [Zestful](https://zestfuldata.com)
 
