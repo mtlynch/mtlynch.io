@@ -2,6 +2,7 @@
 title: "TinyPilot: Month 3"
 date: 2020-10-02T07:54:00-04:00
 description: TODO - One-line summary
+hide_affiliate_warning: true
 ---
 
 ## Highlights
@@ -131,10 +132,19 @@ I pay a low rate for 3D printing and design because my state has a fantastic gov
 
 So far, maintaining inventory has been the biggest challenge of selling TinyPilot. Most of the time that TinyPilot has been available, . The power connector continually felt like it was a week away. The electrical engineers underestimated how long it would take to build them. Fortunately, I padded their estimate in communications with customers, so the actual delivery date was on time.
 
-
 {{<img src="manageable-inventory.png" alt="Photo of Y-cable" hasBorder="true" caption="When inventory is well-stocked, I can fulfill orders at a steady, relaxed paced.">}}
 
+I get a few orders a day, and I pack them up. Life is easy!
+
+When I'm backordered, it's a different picture:
+
 {{<img src="backlogged-inventory.png" alt="Graph showing large order backlogs and consequent spikes in stress" hasBorder="true" caption="When there are inventory shortages, orders pile up and need to be cleared quickly, increasing overall stress.">}}
+
+People continue to order, so my work queue backs up. I can't clear it because I'm missing some inventory item.
+
+When I was down to my last 15 power connectors, I listed the individual item as backordered but I continued listing the kits as in-stock. I did this because my profits on the connectors are much smaller, so I didn't want to sell off all the connectors on their own and be stuck out of stock on the kits until the next batch could be produced. I still think that was a good idea, but it created complexity later on as it meant that I was now processing orders in a special order instead of first-come, first-serve.
+
+As of today, I'm well-stocked again. I received a batch of 48 new power connectors yesterday, so the TinyPilot sales machine is pumping again. Over the next few days, I'll start up marketing efforts that have been paused for weeks.
 
 But it's a repeat of a problem I've consistently struggled with TinyPilot. Inventory and the thundering herd problem. I've had a few weeks where I was well-stocked, and I would receive 0-3 orders per day, which I can fulfill comfortably.
 
@@ -148,11 +158,15 @@ There's been about a week where I was comfortably ahead on inventory. It's what 
 
 ## Moving forward during a standstill
 
-The biggest mistake I made this month was just being unfocused. 
+The biggest mistake I made this month was being unfocused. Manufacturing the boards for the power connectors took longer than we expected, so 
 
-## Topic 3
+## Assorted company recommendations
 
-## Random tips
+### Pirate Ship
+
+### Mercury
+
+### Uline
 
 * Uline is great.
 
@@ -173,9 +187,11 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Other Affiliate Earnings  | $118.88     | N/A            | N/A                                          |
 | **Total Earnings**        | **$486.22** | **$379.09**    | **<font color="red">-$107.13 (-22%)</font>** |
 
-* This is from memory. AdThrive locked me out of my account, so I won't know my exact earnings until they (hopefully) pay me in November.
+{{<notice type="info">}}
+\* This is an estimate from memory. AdThrive locked me out of my dashboard when I terminated my contract with them, so I won't know my exact earnings until they (hopefully) pay me in November.
+{{</notice>}}
 
-Is It Keto is languishing, as I put all of my focus into.
+Is It Keto is languishing a bit, as I put all of my focus into TinyPilot. I think some of this is seasonal, as I [saw a slowdown last year in September](/retrospectives/2019/10/#is-it-ketohttpsisitketoorg).
 
 The only thing that happened was that I switched back from AdThrive to AdSense. I'd heard that AdThrive was the fancy advertiser. They only work with publishers who reach 100k monthly pageviews, and their payout rates are supposed to be significantly higher than Google AdSense.
 
