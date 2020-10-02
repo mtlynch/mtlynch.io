@@ -70,7 +70,7 @@ Developers need not verify every change on every possible OS/browser combination
 
 ### Readers
 
-* Readers of the blog are collectively referred ot as "readers" or "visitors."
+* Readers of the blog are collectively referred to as "readers" or "visitors."
   * Readers are not referred to as "users" and should never be described as "traffic."
 
 ### Numbers
