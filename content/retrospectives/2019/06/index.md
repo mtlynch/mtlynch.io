@@ -108,11 +108,10 @@ Most of them either use Google Docs or the editing interface of the client's ema
 
 Based on these conversations, I made [some sketches](https://www.dropbox.com/sh/b7df1s5z40lqd47/AADgcLG5ZmSPM9HRFwb0llPTa?dl=0) of a possible tool specifically aimed at addressing their pain points.
 
-<figure class="half">
-  {{< img src="email-comments.png" alt="Wireframe of feedback view" maxWidth="81%" >}}
-  {{< img src="email-diff.png" alt="Wireframe of diff view" >}}
-  <figcaption>Possible interfaces for email campaign authoring tool</figcaption>
-</figure>
+{{<gallery caption="Possible interfaces for email campaign authoring tool">}}
+  {{<img src="email-comments.png" alt="Wireframe of feedback view" maxWidth="81%">}}
+  {{<img src="email-diff.png" alt="Wireframe of diff view">}}
+{{</gallery>}}
 
 This was my first attempt at applying the "market-first approach" that Rob Walling describes in [*Start Small, Stay Small*](/book-reports/start-small-stay-small/). Instead of creating a product and convincing people to use it, you find a market with an unmet need, then build the product that satisfies their need.
 
