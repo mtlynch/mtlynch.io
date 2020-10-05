@@ -1,13 +1,15 @@
 ---
 title: "TinyPilot: Month 3"
 date: 2020-10-02T07:54:00-04:00
-description: TODO - One-line summary
+description: Racing to manufacture a physical product from scratch.
 hide_affiliate_warning: true
+images:
+- /retrospectives/2020/10/backlogged-inventory.png
 ---
 
 ## Highlights
 
-* TinyPilot generated $3,800 in revenue with zero marketing and while backordered.
+* TinyPilot generated $3,800 in revenue with zero marketing and mostly while all of my products were listed as backordered.
 * I went from zero to a complete, custom manufactured product in 26 days.
 * I'm still struggling to manage my inventory.
 
@@ -36,13 +38,13 @@ With inventory so low, I decided to postpone marketing efforts. It didn't make s
 * **Result**: Interviewed two IT professionals about remote administration.
 * **Grade**: C-
 
-This is a big flop. The other goals, I was stuck without power connectors. While I was stuck on shipping, I should have put extra effort into
+This was a big flop. The inventory squeeze was a legitimate reason to defer marketing, but customer research should have been the thing I do more of while I'm stuck waiting for inventory to catch up.
 
-The two conversations I had went positively, though. I stuck to [Rob Fitpatrick's strategy](/book-reports/the-mom-test/) of focusing on gathering information as opposed to pitching my product, but both were interested in TinyPilot and volunteered unprompted to participate in a demo when I'm ready.
+The two conversations I had went positively, though. I stuck to [Rob Fitpatrick's strategy](/book-reports/the-mom-test/) of focusing on gathering information as opposed to pitching my product. Both were interested in the idea of a low-cost KVM over IP and asked if they could participate in a demo when I have a product ready for them.
 
 ## Stats
 
-### [Tiny Pilot](https://tinypilotkvm.com)
+### [TinyPilot](https://tinypilotkvm.com)
 
 | Metric             | August 2020   | September 2020 | Change                                         |
 | ------------------ | ------------- | -------------- | ---------------------------------------------- |
@@ -56,16 +58,19 @@ The two conversations I had went positively, though. I stuck to [Rob Fitpatrick'
 \* I've made a slight change to how I count "sales revenue." Previously, I was just adding up all the money that came in, including tax and shipping. With 45% of my orders this month coming from international customers, shipping is a much larger percentage of sales, so starting in September, "sales revenue" excludes taxes and shipping.
 {{</notice>}}
 
-Sales were closed 
-Sales are up a bit, but these metrics are confusing. For half of August, I closed sales to work on the power issue. Through most of September, sales were either closed or backordered.
+Sales are up a bit, though there's a bit of noise in the data given that everything was listed as backordered for most of August and September. Visits are down, which is unsurprising given the lack of advertising or new content on the site.
 
 ## Manufacturing a power connector: from start to finish
 
-(Aug 27)
+Last month, I discovered that I had been [powering my TinyPilots incorrectly](/retrospectives/2020/09/#why-oh-y-cables), so I paused sales until I could fix the issue. The fix involved manufacturing a brand new circuit board from scratch while simultaneously 3D printing plastic enclosures for the board. I had never done either before, but I needed the new component urgently, as my sales were frozen until I could produce it at scale.
+
+Here's what that process looked like from start to finish:
 
 ### Day 1
 
-The engineering firm begins work on the circuit board for the power connector. It's a simple enough board that they're able to design it and order 100 printed circuit boards from China that same day.
+The engineering firm begins work on the circuit board for the power connector.
+
+It's a simple enough board that they're able to design it and order 100 printed circuit boards from China that same day.
 
 ### Day 2
 
@@ -89,11 +94,13 @@ The 3D printing lab completes the design and gets ready to begin printing.
 
 ### Day 8
 
-The engineering firm receives the PCBs and begins the process of attaching the USB ports and testing connectivity.
+The engineering firm receives the bare PCBs from the overseas manufacturer.
 
 {{<img src="v1-pcbs.jpg" alt="Photo of a panel of uncut, unassembled PCBs" caption="First batch of PCBs for the TinyPilot Power Connector" maxWidth="600px">}}
 
-The same day, the 3D printing shop produces their first two cases. I picked them up and overnighted them to the engineering firm so that they could test the fit.
+At this point, the PCBs have an electrical circuit embedded in them, but the engineering firm still has to attach components to the boards, most notably the USB ports.
+
+The same day, the 3D printing shop produces their first two cases. I pick up the cases and overnight them to the engineering firm to test the fit when the first completed board is ready.
 
 ### Day 9
 
@@ -104,7 +111,7 @@ The engineering firm reports that the cases fit the boards. The only noticeable 
   {{<img src="microusb-gaps.jpg" alt="Photo of a panel of uncut, unassembled PCBs" maxWidth="300px">}}
 {{</gallery>}}
 
-The large gaps turned out to be intentional. Because I asked the 3D printing shop to minimize turnaround time, they used large gaps to minimize the risk that the case would get in the way of any plugs. Once we confirm that my USB cables will fit a smaller opening, they revise the design to tighten the opening.
+The large gaps turned out to be intentional. Because I emphasized urgency, the 3D printing shop used wide holes to minimize the risk that the case would get in the way of any plugs. Once we confirm that my USB cables will fit a smaller opening, the 3D printing lab revises their design to tighten the opening.
 
 ### Day 10
 
@@ -121,7 +128,7 @@ $
 
 Success! No under-voltage warnings.
 
-It's a huge relief to find that this chip works.
+It's a huge relief to that the chip works.
 
 ### Day 13
 
@@ -163,15 +170,17 @@ I receive the remaining 74 completed boards from the electrical engineers. With 
 * Cases: $500.00
 * **Total**: **$3,297.64**
 
-The total cost turned out to be substantially higher than [my original estimate of $13/unit](/retrospectives/2020/09/#i-can-manufacture-something-from-scratch-in-two-weeks), but $33/unit is still doable.
+The total cost turned out to be substantially higher than [my original estimate of $13/unit](/retrospectives/2020/09/#i-can-manufacture-something-from-scratch-in-two-weeks), but $33/unit is still doable for a first run.
 
-The dominant cost is electrical engineers' person-hours during manufacture. Because this was a small production run and had to be finished quickly, many of the steps were manual for the sake of short-term expediency. Now that I have some breathing room in my inventory, we're evaluating cost optimizations, including better automation and outsourcing manufacture.
+The dominant cost is the electrical engineers' person-hours during manufacture. Because this was a small production run that had to be finished quickly, the engineers performed many of the steps manually for the sake of expediency.
 
-In contrast, my 3D printing expenses are fantastically low. My state has [a government subsidy](https://www.uml.edu/research/crf/state-voucher-program.aspx) for locally-incorporated small businesses that pays 75% of 3D printing costs through state universities.
+Long-term, it's obviously suboptimal to pay highly-trained electrical engineers to manufacture circuit boards by hand. Now that I have some breathing room in my inventory, we're evaluating cost optimizations, including automating and outsourcing more of the manufacturing process.
+
+In contrast, my 3D printing expenses are fantastically low. My state has [a government subsidy](https://www.uml.edu/research/crf/state-voucher-program.aspx) for locally-incorporated small businesses that pays 75% of 3D printing costs through state universities. Without it, I would have had to pay $20 per case!
 
 ## Inventory shortages and the thundering herd problem
 
-So far, maintaining inventory has been the biggest challenge of selling TinyPilot. At this point, I've been backordered more days than I have inventory in stock. In some ways, it's "a good problem to have," in that there's enough demand that TinyPilot kits are difficult to keep in stock. In other ways, it's an annoying problem to have because maintaining a backlog of orders is stressful.
+So far, maintaining inventory has been the biggest challenge of selling TinyPilot. At this point, I've been backordered more days than I've had inventory in stock. In some ways, it's "a good problem to have," in that it reflects high demand. In other ways, it's an annoying problem to have because maintaining a backlog of orders is stressful.
 
 When my inventory is healthy, the relationship between my order backlog and stress levels look like this:
 
@@ -185,25 +194,25 @@ When I'm backordered, it's a different picture:
 
 With a backlog, everything gets harder. Instead of a nice, predictable stream of work, there's nothing to ship for days or weeks. There are other tasks my assistant can do, but it's more time-consuming for both of us to learn lots of new one-off tasks as opposed to a smaller set of consistent jobs.
 
-This month, when I started running low on power connectors, I marked the individual product as backordered so that I could continue selling my kits, which have higher margins. That was a useful strategy, but it added complexity in that we could no longer simply process all open orders. We had to keep track of which ones to prioritize and when they were ultimately due to customers.
+This month, when I started running low on power connectors, I marked it as backordered on my store so that I could continue selling my kits, which have higher margins. That was a useful strategy, but it added complexity in that we could no longer simply process all open orders. We had to keep track of which ones to delay and when they were ultimately due to customers.
 
-I've [struggled with this problem before](/retrospectives/2020/08/#managing-inventory-is-hard), and my solution has been to keep a deeper inventory than I think I'll need. The problem there is that I've iterated on TinyPilot a few times, changing a few components each time. I have hundreds of cables and cases that I no longer ship in any kit, but they're sitting around in my house. I want to liquidate them on eBay, but it'll probably take four hours of work and yield only $200-300, whereas four hours of marketing or product investment would likely yield more. Still, I prefer letting unused inventory pile up over letting unmet demand pile up.
+I've [struggled with this problem before](/retrospectives/2020/08/#managing-inventory-is-hard), and my solution has been to keep a deeper inventory than I expect to need. The problem there is that I've iterated on TinyPilot's design a few times, changing a few components each time. As a result, there are hundreds of cables and cases sitting in my closet that I no longer ship in any kit. I could liquidate them on eBay, but it'll probably take four hours of work to list and sell them, yielding maybe $200-300. Alternatively, four hours of marketing or product investment would likely have a higher ROI.
+
+All in all, I prefer letting unused inventory pile up over letting unmet demand pile up.
 
 ## Moving forward during a standstill
 
-The biggest mistake I made was letting my work ethic slip. I found it hard to stay motivated during my inventory shortage because I knew every additional sale I made just put me deeper into the backlog. Plus, most tasks felt silly 
+The biggest mistake I made this month was letting my work ethic slip. I found it hard to stay motivated during my inventory shortage because I knew every additional sale I made just put me deeper into the backlog. I continued working, but often on whatever happened to catch my attention, not on what was most useful.
 
-One of the biggest problems was that the power connectors perpetually felt like they were only a week away. Had I known on September 1st that the first run wouldn't be complete until three weeks later, I perhaps could have planned a better strategy. But I kept feeling like, "Well, I don't know what I should focus on this week, but that's okay because I'll be back to normal when the power connectors arrive next week." But it was the first run, so naturally there were unanticipated hitches and delays.
+The power connectors perpetually felt like they were only a week away. Had I known on September 1st that the first run wouldn't be complete until three weeks later, I perhaps could have planned a better strategy. But I kept feeling like, "I don't know what I should focus on this week, but that's okay because I'll be back to normal when the power connectors arrive next week." But it was the first run, so naturally there were unanticipated hitches and delays, so that feeling of limbo extended through almost the entire month.
 
-In retrospect, it seems . "Well, what if they look me up, find TinyPilot, and then they see I don't have anything in stock?" I don't know why I thought that would be a problem. If anything, it would make it seem like I already have a successful business, but I used it to rationalize away reaching out to companies.
-
-## Assorted company recommendations
+## Cool companies I've found recently
 
 As a software developer, eCommerce is all still new to me. In the process of running TinyPilot, I've discovered a few useful companies I thought I'd share. I have no partnerships with any of these companies; I'm just a happy customer.
 
 * [Pirate Ship](https://www.pirateship.com/) (self-printed postage and package pickups): I was using the USPS website to print postage, but it's slow and clunky, as you'd expect a government website to be. Pirate Ship lets you purchase discounted USPS postage and schedule pickups. Their web app is snappy, user-friendly, and when you talk to their customer support, they speak to you in pirate ([really](pirateship-support.png)). It's free, so I use it for both business and personal shipping.
 
-* [Mercury](https://mercury.com/) (startup banking): I'm having a surprisingly difficult time finding a bank who will give me an account for my recently registered TinyPilot LLC. The big banks have rejected me for being too new a business with too small an income. Mercury approved me within a week, and they have a nice, easy interface. They also offer virtual ATM cards, so you can instantly create additional virtual cards with transaction limits.
+* [Mercury](https://mercury.com/) (startup banking): I had a surprisingly difficult time finding a bank who will give me an account for my recently registered TinyPilot LLC. The big banks have rejected me for being too new a business with too small an income. Mercury approved me within a week, and they have a nice, clean web interface. They also offer virtual ATM cards, so you can instantly create additional virtual card numbers with defined transaction limits.
 
 * [Uline](https://uline.com) (cardboard boxes): When I needed shipping boxes, I was searching "shipping boxes" on Amazon and browsing page after page, looking for something that came close enough to the dimensions I wanted. Then, I realized that there are companies that sell *just* boxes. Uline is cheaper than Amazon, and you can order basically any dimensions you want. Their standard shipping is next-day delivery if you order by 6 PM, and the shipping cost is still only ~$6.
 
@@ -243,26 +252,26 @@ AdThrive turned out to be a mistake. They couldn't figure out how to make their 
 | RapidAPI Earnings  | $9.36       | $12.27         | <font color="green">+$2.91 (+31%)</font>     |
 | **Total Earnings** | **$9.36**   | **$12.27**     | **<font color="green">+$2.91 (+31%)</font>** |
 
-Zestful remains quiet. I've had no inquiries for enterprise plans, and pay-as-you-go usage continues to generate $0-$50 in revenue.
+Zestful remains quiet and mostly irrelevant. I've had no inquiries for enterprise plans, and pay-as-you-go usage continues silently in the background to generate $10-$50/month in revenue.
 
 ## Wrap up
 
 ### What got done?
 
 * Learned to ship directly to international customers
-  * Originally, I was going through eBay's Global Shipping Program. That was a good first-pass solution, but eBay's a pain in that they require all communication to stay on the platform. They also have no real solution if you need to send your customer a replacement part after the initial order.
+  * Originally, I was going through eBay's Global Shipping Program. That was a good first-pass solution, but eBay's a pain in that they require all communication to stay on the platform. They also have no real solution if you need to send your customer a replacement part after their initial order.
   * Shipping directly through DHL and USPS isn't that hard (assuming I'm doing it right), but it's *super* hard to find information about how to do it correctly because every Google result is an article trying to sell you international shipping as a service.
+  * This old, overlooked [/r/Entrepreneur post](https://redd.it/4w5pq5) summarizes pretty well how to ship internationally.
 * Added several new features to TinyPilot
   * Full-screen mode, paste from clipboard, configurable installs, diagnostic scripts, and support for AZERTY keyboard layouts.
 * Added shopping cart functionality to [the TinyPilot website](https://tinypilotkvm.com/)
   * Previously, customers could only order one item at a time unless they emailed me to manually create the order.
 * Automated the process of generating redistributable TinyPilot ISOs
-  * Previously, I had to flash a fresh microSD, install TinyPilot, then capture the image of the microSD, which involved physically moving around microSDs a lot. The new method is 100% software.
+  * Previously, I had to flash a fresh microSD, install TinyPilot, then capture the image of the microSD, which involved physically moving around microSDs a lot. The new method is 100% software, and therefore 90% less tedious.
 
 ### Lessons learned
 
 * Shipping internationally isn't that hard to do yourself.
-  * The hard part is finding out what forms you need to attach to the box, because the information is buried behind 5,000 companies trying to sell you managed services for international shipping.
 * Continue over-ordering inventory.
   * It's better to have too much than to allow sales to freeze when inventory gets used up.
 * Remain disciplined, even if temporary circumstances block you from working on the most important thing.

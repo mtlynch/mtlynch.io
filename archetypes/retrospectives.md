@@ -35,7 +35,7 @@ TODO
 
 ## Stats
 
-### [Tiny Pilot](https://tinypilotkvm.com)
+### [TinyPilot](https://tinypilotkvm.com)
 
 ## Topic 1
 
