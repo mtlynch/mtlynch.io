@@ -80,11 +80,10 @@ In September, I tested an affiliate partnership with a company that claimed to o
 
 I tried testing the service myself, and I quickly realized why nobody wanted to use it: it was terrible.
 
-<figure class="half">
-  {{< img src="meal-planner.jpg" alt="Meal planner screenshot" >}}
-  {{< img src="grocery-list.jpg" alt="Grocery list screenshot" >}}
-  <figcaption>My former affiliate partner expects users to buy 102 different grocery store items and spend 12 hours per day cooking.</figcaption>
-</figure>
+{{<gallery caption="My former affiliate partner expects users to buy 102 different grocery store items and spend 12 hours per day cooking.">}}
+  {{<img src="meal-planner.jpg" alt="Meal planner screenshot">}}
+  {{<img src="grocery-list.jpg" alt="Grocery list screenshot">}}
+{{</gallery>}}
 
 Their service didn't create meal "plans." It randomly threw together a bunch of breakfast, lunch, and dinner meals. To cook all the meals would take you hours. Ridiculously, the plan called for the user to purchase **102 different items** from the grocery store. This is to feed a single person for a single week. The items include things like 1/8th of a cucumber and 1/2 of a jicama, which is clearly impractical.
 

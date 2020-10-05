@@ -71,11 +71,10 @@ Except for the person who reached out to me, the consistent feedback I heard was
 
 One other path I thought might make What Got Done viable was organic growth. There was a steady stream of [new user signups at the end of June](/retrospectives/2019/07/#a-jumpstart-for-what-got-done). If people continued using the free plan, maybe What Got Done would gain momentum, and people would push for their employers to adopt a paid plan. Unfortunately, organic growth tapered off in early July:
 
-<figure class="half">
-  {{< img src="whatgotdone-new-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" maxWidth="600px" hasBorder="True" >}}
-  {{< img src="whatgotdone-active-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" maxWidth="600px" hasBorder="True" >}}
-  <figcaption>Daily signups and user actives for What Got Done - July 2019</figcaption>
-</figure>
+{{<gallery caption="Daily signups and user actives for What Got Done - July 2019">}}
+  {{<img src="whatgotdone-new-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" maxWidth="600px" hasBorder="True">}}
+  {{<img src="whatgotdone-active-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" maxWidth="600px" hasBorder="True">}}
+{{</gallery>}}
 
 I'm going to shelve What Got Done as a business idea and keep it as a personal tool. My primary motivation in building it was [to teach myself Vue.js](/retrospectives/2019/05/#the-what-got-done-app), and I was successful in that regard. It wasn't my strongest business idea, but I figured I'd try selling it if I was going to build the app either way. It turned out to be too weak as a business product, so I'm going to focus on other ideas that have greater potential.
 
