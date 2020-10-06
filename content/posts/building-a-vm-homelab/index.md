@@ -105,7 +105,7 @@ To get the best performance for my dollar, I restricted my search to used CPUs, 
 The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https://ark.intel.com/content/www/us/en/ark/products/series/78583/intel-xeon-processor-e5-v3-family.html) family, especially the 2600 models. I settled on the [E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html). It had an average benchmark of 15,618 and cost ~$130 used on eBay.
 
 {{<gallery  caption="The Intel Xeon E5-2680 v3 [scores 15,618 on cpubenchmark.net](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3+%40+2.50GHz&id=2390).">}}
-  {{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" maxWidth="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10drl-i-o-intel-xeon-processor-e5-2600-v3-family-motherboard-supports-this-maxi/p/N82E16813182944?&quicklink=true">}}
+  {{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" maxWidth="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
   {{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" maxWidth="490px" hasBorder="true">}}
 {{</gallery>}}
 
@@ -113,7 +113,7 @@ The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https
 
 ### Motherboard
 
-{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" maxWidth="280px" align="left" linkUrl="https://www.newegg.com/supermicro-mbd-x10drl-i-o-intel-xeon-processor-e5-2600-v3-family-motherboard-supports-this-maxi/p/N82E16813182944?&quicklink=true">}}
+{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" maxWidth="280px" align="left" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
 
 The downside of a dual-CPU system was that it limited my options for motherboards. Only a handful of motherboards support dual Intel 2011-v3 CPUs. Their prices ranged from $300 to $850, which was far more than I expected to spend on a motherboard.
 
