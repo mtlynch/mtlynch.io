@@ -10,6 +10,9 @@ date: '2020-10-06'
 hide_affiliate_warning: true # No affiliate links in this article
 images:
 - building-a-vm-homelab/build-components.jpg
+discuss_urls:
+  reddit: https://www.reddit.com/r/homelab/comments/j64za2/building_a_homelab_vm_server/
+  hacker_news: https://news.ycombinator.com/item?id=24697380
 ---
 For the past five years, I've done all of my software development in virtual machines (VMs). Each of my projects gets a dedicated VM, sparing me the headache of dependency conflicts and TCP port collisions.
 
