@@ -117,7 +117,7 @@ The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https
 
 The downside of a dual-CPU system was that it limited my options for motherboards. Only a handful of motherboards support dual Intel 2011-v3 CPUs. Their prices ranged from $300 to $850, which was far more than I expected to spend on a motherboard.
 
-I chose the [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10drl-i-o-intel-xeon-processor-e5-2600-v3-family-motherboard-supports-this-maxi/p/N82E16813182944?&quicklink=true), which at $320 was lower in price than similar motherboards, but it was still **five times** what I paid for [my last one](/building-a-vm-homelab-2017/#motherboard).
+I chose the [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967), which at $320 was lower in price than similar motherboards, but it was still **five times** what I paid for [my last one](/building-a-vm-homelab-2017/#motherboard).
 
 ### Memory
 
@@ -189,7 +189,7 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 | Category    | Component                               | I paid        |
 |-------------|-----------------------------------------|---------------|
 | CPU         | [Intel Xeon E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html) (x2, used)        | $264.82       |
-| Motherboard | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10drl-i-o-intel-xeon-processor-e5-2600-v3-family-motherboard-supports-this-maxi/p/N82E16813182944?&quicklink=true)               | $319.99       |
+| Motherboard | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)               | $319.99       |
 | Disk        | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                   | $149.99       |
 | Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $285.99       |
 | Power       | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)      | $79.99        |
