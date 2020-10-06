@@ -83,7 +83,7 @@ If you read the above and thought, "Kimchi is just software. Why did Michael hav
 
 My VM server is just a PC that sits in the corner of my office with no monitor or keyboard attached. That's fine 99% of the time when I can SSH in or use the web interface. But for the 1% of the time when the server fails to boot or I want to install a new host OS, it's a huge pain. I have to drag the server over to my desk, disconnect my desktop keyboard and monitor, fix whatever needs fixing, then restore everything in my office to its original configuration.
 
-For my next build, I wanted a virtual console with physical-level access to the machine as soon as it powered on. I was thinking something like [Dell's iDRAC](https://www.delltechnologies.com/en-us/solutions/openmanage/idrac.htm) or [HP's iLO](https://www.hpe.com/us/en/servers/integrated-lights-out-ilo.html).
+For my next build, I wanted a virtual console with physical-level access to the machine as soon as it powered on. I was thinking something like [Dell's iDRAC](https://en.wikipedia.org/wiki/Dell_DRAC) or [HP's iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out).
 
 {{<img src="idrac.png" alt="Screenshot of Dell iDRAC interface" maxWidth="600px" caption="Dell iDRAC was one option I considered for remote server management.">}}
 
