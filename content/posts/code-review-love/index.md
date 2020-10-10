@@ -5,7 +5,7 @@ tags:
 - culture
 - code style
 description: TODO
-date: '2020-10-07'
+date: '2020-10-25'
 hero_image: cover.png
 images:
 - code-review-love/og-cover.jpg
