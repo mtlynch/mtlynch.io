@@ -10,9 +10,9 @@ hero_image: cover.png
 images:
 - code-review-love/og-cover.jpg
 ---
-Most discussion of code review best practices focuses on what the reviewer should do. But the reviewer is only part of the equation. The author has just as important a role in ensuring a productive review. This post discusses techniques for improving your code reviews when you're the author.
+Most advice around code reviews focuses on what the reviewer should do. But the author is just as important to a successful code review as the reviewer. Sadly, there is little guidance for authors, so people make big mistakes simply because they don't know an alternative.
 
-By the end of this article, you're going to be so good at sending your code out for review that **your reviewer will fall in love with you**.
+This article describes best practices for participating in a code review when you're the author. In fact, by the end of this post, you're going to be so good at sending your code out for review that **your reviewer will fall in love with you**.
 
 ## But I don't want my reviewer to fall in love with me
 
@@ -22,22 +22,29 @@ Nobody ever complained on their deathbed that too many people fell in love with 
 
 ## Why improve your code reviews?
 
+Improving your technique in code reviews helps your reviewer, your team, and most importantly you.
+
 * Learn faster
-  * It will be easier for your reviewer to give you good feedback if you demonstrate that you value constructive criticism. You'll also influence how your reviewers spend their time so they can focus on areas for you to learn rather than catching boring mistakes.
+  * If you properly prepare changelists for review, it directs your reviewer's attention to areas where you can grow as a developer rather than boring mistakes you made.
+  * Your reviewer will provide better feedback when you demonstrate that you value constructive criticism.
 * Make others better
-  * The way you participate in code reviews as an author sets an example for others. If you follow good practices, it will rub off on your teammates. Your job of reviewing their code becomes easier.
+  * The way you participate in code reviews as an author sets an example for others. If you follow good practices, it will rub off on your teammates. This makes your job easier when you're reviewing their code.
 * Minimize team conflicts
-  * Code reviews are sensitive and are a common source of conflict. If you follow good practices, you minimize your chances of conflict.
+  * Code reviews are sensitive and are a common source of conflict. Approaching code reviews deliberately and conscientiously minimizes conflict.
 
 ## The golden rule: value your reviewer's time
 
-Reviewing code is difficult. More difficult than writing code. Your teammate arrives at work each day with a finite supply of focus. If they some of it to you by reviewing your code, that's time they can't spend on their own work. You should maximize the value they provide in that time.
+Reviewing code is difficult. It's harder than writing the code in the first place.
+
+Your teammate arrives at work each day with a finite supply of focus. If they allocate some of it to you by reviewing your code, that's time they can't spend on their own work. You should maximize the value they provide in that time.
 
 It sounds straightforward, but I so often see authors treat their reviewer as their personal quality assurance technician. They rely on their reviewer to catch careless errors, and they make minimal effort to organize their changelist for reviewability.
 
-Reviews are about trust. You're much less open to feedback from someone who you think is out to find fault in your code. And your reviewer is much more interested in providing constructive criticism when they think you'll value it. Showing that you value their time builds their trust in you.
+Reviews improve drastically when participants trust each another. If you think your reviewer is out to find fault in your code as a way of feeling superior, you're not going to learn from their feedback. Similarly, if your reviewer feels that you're dismissive of their notes, they won't put effort into helping you. Demonstrating respect for your reviewer's time builds trust in the review process.
 
 ## Techniques
+
+TODO(mtlynch): Add links for all of these.
 
 1. Review your own code first
 1. Write a clear changelist description
@@ -86,11 +93,7 @@ For an example of an excellent changelist description, see David Thompson's arti
 
 If you rely on your reviewer to tell you that you put the curly braces on the wrong line or that your change broke the automated test suite, you're wasting their time tremendously.
 
-{{<notice type="info">}}
-
-Can you verify that my code syntax is correct? I'd ask the compiler, but I don't want to waste its time.
-
-{{</notice>}}
+{{<img src="verify-syntax.jpg">}}
 
 Automated checks should be part of your entire team's normal workflow. There should be a cultural understanding that a review starts after [all automated checks pass in a continuous integration environment](/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
@@ -172,45 +175,39 @@ Even when your reviewer sees a flaw in your code that isn't there, that's still 
 
 TODO: Screenshot of two people arguing in a code review.
 
->A: There's a risk of buffer overflow here since we never verify that `sourceLength <= destinationLength`.
+>A: There's a buffer overflow vulnerability here since we never verify that `sourceLength <= destinationLength`.
 >
->B: In **my** code? Impossible! The constructor calls which calls `CheckWeather`, which would have returned an error if the buffer length was incorrect.
+>B: In **my** code? Impossible! The constructor calls which calls `CheckWeather`, which would have returned an error if the buffer length was incorrect. Try actually **reading** the entire 200k line codebase before you even begin to entertain the notion that I'm capable of a mistake.
 
-Look for ways to rewrite the code that limit future misunderstandings. Refactor the code or add comments that stave off potential misreadings. If the misunderstanding stems from obscure features or your language or framework, consider rewriting your code to be less clever.
+Look for ways to rewrite the code that limit future misunderstandings. Refactor the code or add comments that stave off potential misreadings. If the misunderstanding stems from obscure features of your language or framework, switch to mechanisms that make your choices obvious to non-experts.
 
 ## Provide explicit responses to each note
 
-For every note you receive from your reviewer that requires action, respond explicitly to confirm that you've addressed the note. If your code review tool supports it, mark comments as "resolved." If not, follow a simple convention, like commenting, "Fixed," for each note.
+For every note you receive from your reviewer that requires action, respond explicitly to confirm that you've addressed the note. If your code review tool supports it, mark comments as "resolved." If not, follow a simple convention, like a comment of, "Fixed," for each note.
 
 TODO: Screenshot of Reviewable mark as resolved.
 
-When your reviewer gives you a note, they should trust that you've assumed responsibility of it. If the reviewer has to review all of their own notes to make sure you actually acted on them, it's a waste of their time.
+When your reviewer gives you a note, they should trust that you've assumed responsibility of it. If the reviewer has to review all of their own notes to verify that you've handled them, it's a waste of the reviewer's time.
 
-If you ever miss a note, it puts your reviewer in an awkward position. Did you overlook it or just silently reject it? Now they have to chase you down and ask you what happened. If you accidentally marked it as "Fixed" but forgot to fix it, it's at least obvious to your reviewer what happened.
-
-Some notes merit a longer response than, "Fixed." Adjust your response based on your reviewer's effort. If they write you a long, detailed note to help you learn, don't just mark it done. Give a thoughtful response to recognize their thoughtful note to you.
+Adjust your response based on your reviewer's effort. If they write you a detailed note to help you learn something new, don't just mark it done. Respond thoughtfully to recognize their helpful note to you.
 
 ## Artfully solicit missing information
 
-Sometimes code review notes leave too much to interpretation:
+Sometimes code review notes leave too much to interpretation. If you receive a note like, "This function is confusing," you'd probably wonder what "confusing" means, exactly. Is the function too long? Is the function name not clear? Does it require more documentation?
 
->This function is confusing.
-
-What does "confusing" mean in this context? Is the function too long? Is the function name not clear? Does it require more documentation?
-
-For a long time, I struggled with these notes because it's hard to clarify them without sounding defensive. "What's confusing about it?" can be a sincere question, but it reads as grouchy.
+For a long time, I struggled with these notes because it's hard to clarify them without sounding defensive. "What's confusing about it?" sounds grouchy, even if I write it sincerely.
 
 Once, I unintentionally gave a teammate a vague note, and they responded in a way that I found fantastically disarming:
 
 >What changes would be helpful?
 
-I love this response, and I use variations of it whenever I receive vague feedback in a code review. It lacks defensiveness and communicates an openness to change.
+I love this response, and I use variations of it whenever I receive unclear feedback in a code review. It lacks defensiveness and signals openness to feedback.
 
-In addition to requesting clarification, change your code proactively based on your educated best guess. If your reviewer said only, "This is confusing," give your code a second look. Usually there's *something* you can do to improve clarity. Offering a change signals to your reviewer that you want to accept their feedback, but you just aren't sure how.
+You can also proactively edit your code based on your best guess of your reviewer's intent. For a note like, "this is confusing," give your code a second look. Usually there's *something* you can do to improve clarity. Proactively offering a change communicates to your reviewer that you're open to change, even if it's not the change they intended.
 
 ## Award all ties to your reviewer
 
-In tennis, when you're unsure whether your opponent's serve landed out of bounds, you give them the benefit of the doubt. There should be a similar expectation for code reviews.
+In tennis, when you're unsure if your opponent's serve landed out of bounds, you give them the benefit of the doubt. There should be a similar expectation for code reviews.
 
 >A player in attempting to be scrupulously honest on line calls frequently will keep a ball in play
 that might have been out or that the player discovers too late was out. Even so, the game is
@@ -221,21 +218,21 @@ much better played this way.
 
 Some decisions about code are a matter of personal taste. If your reviewer thinks your 8-line function would be better as two 5-line functions, neither of you is objectively "right." It's a matter of opinion which version is better.
 
-When your reviewer makes a suggestion and you both have about equal evidence to support your claim, defer to your reviewer. Between the two of you, the reviewer has better perspective on what it's like to read this code fresh.
+When your reviewer makes a suggestion, and you both have about equal evidence to support your position, defer to your reviewer. Between the two of you, the reviewer has better perspective on what it's like to read this code fresh.
 
 ## Minimize lag between rounds of review
 
-A few months ago, a reviewer contributed a small change to an open source project I maintain. I gave them feedback a few hours later, and then they seemed to just disappear. I checked back a few days later to make sure I didn't overlook a notification, but there was just nothing.
+A few months ago, a reviewer contributed a small change to an open source project I maintain. I gave them feedback within a few hours, and then they disappeared. After a few days, I checked back to make sure I didn't overlook a notification, but there was still no response from the author.
 
-A month later, the author finally popped up again to submit their revisions. While I appreciated their effort, the lag between rounds doubled my work. I had forgotten all the context, so I was essentially starting over from zero. Not only did I have to re-read their code, I had to re-read my feedback as well. Had they followed up within a day or two, I wouldn't have to do all that extra work.
+A month later, the author finally popped up again to submit their revisions. While I appreciated their effort, the lag between review rounds doubled my work. Not only did I have to re-read their code, I had to re-read my feedback as well to recall the full context. Had they followed up within a day or two, I wouldn't have to do all that extra work.
 
 That's an extreme example, but I see it frequently with teams of full-time developers. Someone will send out a changelist for review, get feedback, and then put it on the backburner for a week because they got distracted by another task.
 
 TODO: Diagram of total time for a three-round review. Maybe a graph of someone's memory slowly decaying over time?
 
-In addition, complexity increases with the number of changelists in flight. There's more work in remembering the state of the codebase and in resolving merge conflicts.
+In addition to the time lost in restoring context, half-finished changelists increase complexity. It's harder for everyone to keep track of what's already merged and what's pending, and it leads to more merge conflicts.
 
-Once you send your code out for review, driving the review to completion should be one of your highest priorities. Delays on your end to waste your reviewer's limited time and focus.
+Once you send your code out for review, driving the review to completion should be one of your highest priorities. Delays on your end waste your reviewer time and increase complexity for your teammates.
 
 ## Conclusion
 
