@@ -9,6 +9,7 @@ date: '2020-10-25'
 hero_image: cover.png
 images:
 - code-review-love/og-cover.jpg
+hide_affiliate_warning: true # No affiliate links in this post
 ---
 Most advice around code reviews focuses on what the reviewer should do. But the author is just as important to a successful code review as the reviewer. Sadly, there is little guidance for authors, so people make big mistakes simply because they don't know an alternative.
 
@@ -95,7 +96,7 @@ If you rely on your reviewer to tell you that you put the curly braces on the wr
 
 {{<img src="verify-syntax.jpg">}}
 
-Automated checks should be part of your entire team's normal workflow. There should be a cultural understanding that a review starts after [all automated checks pass in a continuous integration environment](/human-code-reviews-1/#let-computers-do-the-boring-parts).
+Automated checks should be part of your entire team's normal workflow. Mature software teams have a cultural understanding that a review starts after [all automated checks pass in a continuous integration environment](/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
 If your team is woefully misguided and refuses to invest in continuous integration, perform these checks yourself by adding git pre-commit hooks, linters, and formatters to your development environment. This ensures that your code doesn't go out for review until it matches your team's style and passes your automated checks.
 
@@ -161,9 +162,15 @@ One of the fastest ways to ruin a code review is taking feedback personally. Thi
 
 As the author, [you ultimately control how you react to feedback](/book-reports/7-habits-of-highly-effective-people/#habit-1-be-proactive). As much as possible, treat your reviewer's feedback as an objective discussion about the code and not a personal attack. Getting defensive will only make things worse.
 
-I find it helpful to interpret all feedback as helpful lessons. My instinct is often to explain why I overlooked a subtle bug that my reviewer found. Instead, I focus on how conscientious my reviewer was in spotting the issue for me. Rather than make excuses for myself, I praise my reviewer for the find, like, "Wow, nice catch!"
+I find it helpful to interpret all feedback as helpful lessons. My instinct is often to explain why I overlooked a subtle bug that my reviewer found. Instead, I focus on how conscientious my reviewer was in spotting the issue for me. Rather than make excuses for myself, I praise my reviewer for the find.
 
-Surprisingly, a reviewer catching subtle bugs in your code is generally a sign that you're packaging your changelists well. When you clear out all the obvious stuff like bad formatting and confusing names, your reviewer can focus deeply on the logic and generate more interesting feedback.
+>`ConvertExcelDateToBasicDate(int32 timestamp) {`
+>
+>A: This actually won't work for January and February, 1900.
+>
+>B: Wow, nice catch!
+
+Surprisingly, a reviewer catching subtle bugs in your code is generally a sign that you're packaging your changelists well. When you clear out all the obvious stuff like bad formatting and confusing names, your reviewer can focus deeply on the logic and provide more interesting feedback.
 
 ## Be patient when your reviewer is wrong
 
@@ -243,6 +250,8 @@ Helping your reviewer focus on the interesting parts of your code allows them to
 Congratulations! Your reviewer is now in love with you.
 
 TODO: Add alt text
+
+TODO: Put TinyPilot sponsorship
 
 ## Further Reading
 
