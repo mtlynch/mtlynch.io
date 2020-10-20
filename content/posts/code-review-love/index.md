@@ -112,7 +112,7 @@ TODO: Make this a screenshot
 
 The author helped me understand the function, but what about the next person who reads it? Should they dive into the change history and read every code review discussion to figure out why it's there? Worse is when the author comes over to my desk to give me an in-person explanation, which both interrupts my focus and ensures that nobody else ever has access to the information.
 
-When your reviewer expresses confusion about how the code works, the solution isn't to explain it to that one person. You need a way to allow *every* reader to understand it.
+When your reviewer expresses confusion about how the code works, the solution isn't to explain it to that one person. A proper resolution allows *every* reader to understand it.
 
 {{<img src="late-night-question.jpg" maxWidth="550px">}}
 
@@ -162,7 +162,7 @@ One of the fastest ways to ruin a code review is taking feedback personally. Thi
 
 As the author, [you ultimately control how you react to feedback](/book-reports/7-habits-of-highly-effective-people/#habit-1-be-proactive). As much as possible, treat your reviewer's feedback as an objective discussion about the code and not a personal attack. Getting defensive will only make things worse.
 
-I find it helpful to interpret all feedback as helpful lessons. My instinct is often to explain why I overlooked a subtle bug that my reviewer found. Instead, I focus on how conscientious my reviewer was in spotting the issue for me. Rather than make excuses for myself, I praise my reviewer for the find.
+I find it helpful to interpret all feedback as helpful lessons. My instinct is often to explain why I overlooked a subtle bug that my reviewer found. Instead, I focus on how conscientious my reviewer was in spotting the issue for me. Rather than make excuses for myself, I praise my reviewer for their scrupulousness.
 
 >`ConvertExcelDateToBasicDate(int32 timestamp) {`
 >
@@ -200,9 +200,9 @@ Adjust your response based on your reviewer's effort. If they write you a detail
 
 ## Artfully solicit missing information
 
-Sometimes code review notes leave too much to interpretation. If you receive a note like, "This function is confusing," you'd probably wonder what "confusing" means, exactly. Is the function too long? Is the function name not clear? Does it require more documentation?
+Sometimes code review notes leave too much to interpretation. If you receive a note like, "This function is confusing," you'd probably wonder what "confusing" means, exactly. Is the function too long? Is the name unclear? Does it require more documentation?
 
-For a long time, I struggled with these notes because it's hard to clarify them without sounding defensive. "What's confusing about it?" sounds grouchy, even if I write it sincerely.
+For a long time, I struggled with these notes because it's hard to solicit clarification without sounding defensive. "What's confusing about it?" seems grouchy, even if I write it sincerely.
 
 Once, I unintentionally gave a teammate a vague note, and they responded in a way that I found fantastically disarming:
 
@@ -233,11 +233,11 @@ A few months ago, a reviewer contributed a small change to an open source projec
 
 A month later, the author finally popped up again to submit their revisions. While I appreciated their effort, the lag between review rounds doubled my work. Not only did I have to re-read their code, I had to re-read my feedback as well to recall the full context. Had they followed up within a day or two, I wouldn't have to do all that extra work.
 
-That's an extreme example, but I see it frequently with teams of full-time developers. Someone will send out a changelist for review, get feedback, and then put it on the backburner for a week because they got distracted by another task.
+That's an extreme example, but I see it frequently with teams of full-time developers. Someone sends out a changelist for review, receives feedback, then puts it on the backburner for a week because they get distracted by another task.
 
 TODO: Diagram of total time for a three-round review. Maybe a graph of someone's memory slowly decaying over time?
 
-In addition to the time lost in restoring context, half-finished changelists increase complexity. It's harder for everyone to keep track of what's already merged and what's pending, and it leads to more merge conflicts.
+In addition to the time lost in restoring context, half-finished changelists increase complexity. It's harder for everyone to keep track of what's already merged and what's in flight. It leads to more merge conflicts.
 
 Once you send your code out for review, driving the review to completion should be one of your highest priorities. Delays on your end waste your reviewer time and increase complexity for your teammates.
 
