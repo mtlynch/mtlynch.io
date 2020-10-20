@@ -14,7 +14,7 @@ images:
 description: How I used MediaGoblin and Google Cloud Storage to create a private media server for less than $1/month.
 discuss_urls:
   reddit: https://redd.it/gqxvxb
-  hacker_news: https://news.ycombinator.com/item?id=23311096
+  hacker_news: https://news.ycombinator.com/item?id=24839848
 ---
 
 In [part one](/digitizing-1), I described my arduous journey to capture my old home movies in digital format and divide them into individual scenes. After processing all the clips, I wanted the experience of exploring them to be as simple as looking up clips on YouTube. Because these videos are my family's private memories, *actual* YouTube is too public. I needed a way to share them that was both user-friendly and secure.
