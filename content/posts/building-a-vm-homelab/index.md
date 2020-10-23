@@ -139,7 +139,7 @@ Instead, I stuck with traditional old SATA. I bought a [1 TB Samsung 860 EVO](ht
 
 {{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" maxWidth="200px" align="left" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
-Choosing a power supply unit (PSU) isn't that interesting, so I again chose mainly by trusted brand, the [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)
+Choosing a power supply unit (PSU) isn't that interesting, so I again chose mainly by trusted brand, the [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147).
 
 The wattage on all of my components added up to 400 W, so 450 W would have been sufficient. But the 550 W version was only $10 more, which seemed like a fair price for an extra 100 W of breathing room.
 
