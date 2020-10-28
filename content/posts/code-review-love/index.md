@@ -69,17 +69,17 @@ I find it helpful to take a break between writing my code and reviewing it. Peop
 
 {{<img src="what-idiot.jpg">}}
 
-Adopt your reviewer's environment as much as possible. Use the same interface that they'll use, which will likely be a diff view. It's easier to catch careless errors in a diff than simply reading code in your normal editor.
+Adopt your reviewer's environment as much as possible. Use the same diff view that they'll see. It's easier to catch careless errors in a diff than simply reading code in your normal editor.
 
 Inevitably, you'll miss something. Sometimes you send out a changelist with some debugging code that you forgot to delete or you forgot to check in a file. These mistakes aren't the end of the world, but you should take them seriously and think about systems you can put in place to prevent them. If they happen too frequently, it signals to your reviewer that you don't value their time.
 
 ## Write a clear changelist description
 
-At my last job, I met regularly with a senior engineer as part of the company's mentorship program. For our first meeting, he asked me to bring a design doc I'd written. As I handed it to him, I explained what the project was and how my design doc fit in with my team's goals. My mentor frowned. "Everything you just told me should be on the first page of your design doc," he said, bluntly.
+At my last job, I met regularly with a senior engineer as part of my company's developer mentorship program. Before our first meeting, he asked me to bring a design doc I'd written. As I handed it to him, I explained what the project was and how my design doc fit in with my team's goals. My mentor frowned. "Everything you just told me should be on the first page of your design doc," he said, bluntly.
 
 He was right. I wrote the design document imagining how my teammates would read it, but I failed to consider other readers. Partner teams might want to understand it. I definitely wanted Google's [promotion committee](#TODO) to understand it, as they decided my career trajectory.
 
-Ever since that discussion, I always think about how I can package my work to make the context discoverable to readers. I think about this while writing my changelist descriptions. The changelist description should describe the full context needed for your reviewer to understand it and anyone else who might need to read this changelist in the future.
+Ever since that discussion, I always think about how to package my work to make the context discoverable to readers, especially while writing my changelist descriptions. The changelist description should describe the full context needed for your reviewer to understand it and anyone else who might need to read this changelist in the future.
 
 You might have a code reviewer in mind when you write your code, but they don't necessarily have the context that you assume they do. Besides, other developers on your team should understand the change, and developers in the future should be able to understand it if they ever need to review the change history.
 
@@ -132,7 +132,9 @@ A common mistake among developers inexperienced with code reviews is to make a t
 
 This is a huge insult to your reviewer. Whitespace-only changes are easy to review. Two-line changes are easy to review. Two-line functional changes lost in a sea of whitespace changes are tedious and maddening.
 
-Developers also tend to inapproriately mix changes during refactoring. I love it when my teammates refactor code to make it easier to understand and maintain. But I don't like it when they refactor code *while* changing its behavior.
+TODO: Show screenshot of buried change
+
+When refactoring, developers also tend to inapproriately mix changes. I love it when my teammates refactor code to make it easier to understand and maintain. But I don't like it when they refactor code *while* changing its behavior.
 
 TODO: Screenshot of a function changing behavior and being refactored at the same time. First screenshot shows everything changing at once, second screenshot shows refactoring in one step followed by behavior change in second.
 
