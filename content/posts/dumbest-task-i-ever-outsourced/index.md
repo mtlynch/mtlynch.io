@@ -29,7 +29,7 @@ Growing up, my parents routinely popped all the keys from our keyboards to deep 
 
 I should do that!
 
-No, couldn't do that or I'd never finish my story. I recognized my newfound cleanliness obsession as the procrastination mechanism that it was, but my only way of moving past it was to promise myself that I'd handle the dirty keyboard later that week.
+No, I couldn't do that or I'd never finish my story. I recognized my newfound cleanliness obsession as the procrastination mechanism that it was, but my only way of moving past it was to promise myself that I'd handle the dirty keyboard later that week.
 
 ## Outsource all the things
 
