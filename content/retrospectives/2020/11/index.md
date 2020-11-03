@@ -3,6 +3,8 @@ title: "TinyPilot: Month 4"
 date: 2020-11-03T08:18:10-05:00
 description: My first $10k month.
 hide_affiliate_warning: true # No affiliate links on this page
+images:
+- /retrospectives/2020/11/shopify-dashboard.png
 ---
 
 ## Highlights
@@ -44,9 +46,14 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 | ------------------ | -------------- | -------------- | ------------------------------------------------- |
 | Unique Visitors    | 1,741          | 2,604          | <font color="green">+863 (+50%)</font>            |
 | Total Pageviews    | 7,057          | 8,780          | <font color="green">+1,723 (+24%)</font>          |
-| Sales Revenue      | $3,636.03      | $10,176.23     | <font color="green">+$6,540.20 (+180%)</font>     |
+| Sales Revenue      | $3,636.03      | $10,176.23\*   | <font color="green">+$6,540.20 (+180%)</font>     |
 | Donations          | $187.40        | $90.00         | <font color="red">-$97.40 (-52%)</font>           |
 | **Total Earnings** | **$3,817.99**  | **$10,263.62** | **<font color="green">+$6,445.63 (+169%)</font>** |
+
+
+{{<notice type="info">}}
+\* Excludes revenue from shipping fees and taxes, because those are just pass-through costs.
+{{</notice>}}
 
 TinyPilot had a great month across basically all metrics. I'm glad to see visits to the site grow organically and sales continue to increase.
 
