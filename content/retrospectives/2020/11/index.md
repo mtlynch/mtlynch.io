@@ -50,7 +50,6 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 | Donations          | $187.40        | $90.00         | <font color="red">-$97.40 (-52%)</font>           |
 | **Total Earnings** | **$3,817.99**  | **$10,263.62** | **<font color="green">+$6,445.63 (+169%)</font>** |
 
-
 {{<notice type="info">}}
 \* Excludes revenue from shipping fees and taxes, because those are just pass-through costs.
 {{</notice>}}
