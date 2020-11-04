@@ -233,6 +233,8 @@ I'm sure this is solvable, as my flow isn't *that* crazy. I just need to spend s
 
 {{<notice type="info">}}
 The problem of tracking sessions across Shopify checkouts feels like one of those problems that's easy to solve once you've done it, so if any of my readers know the solution, [get in touch](/about/).
+
+**Update**: A kind reddit user has [shared a potential solution](https://www.reddit.com/r/SideProject/comments/jnkkzu/my_first_10k_month_selling_a_raspberry_pibased/gb3i0cz/?context=3).
 {{</notice>}}
 
 ## Legacy projects
