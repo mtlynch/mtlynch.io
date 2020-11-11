@@ -29,6 +29,9 @@
     {{ if .HasShortcode "tinypilot-ad" }}
       <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/tinypilot.css" media="screen">
     {{ end }}
+    {{ if .HasShortcode "htfp-ad" }}
+      <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/htfp.css" media="screen">
+    {{ end }}
 
     {{ if .Site.IsServer }}
       {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}

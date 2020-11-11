@@ -4,7 +4,7 @@ tags:
 - code review
 - culture
 - code style
-description: TODO
+description: Best practices for code review when you're the author.
 date: '2020-11-15'
 hero_image: cover.png
 images:
@@ -27,15 +27,15 @@ Improving code review technique helps your reviewer, your team, and, most import
 
 ### Learn faster
   
-If you properly prepare changelists for review, it directs your reviewer's attention to areas that support your growth rather than boring issues like style violations. Your reviewer provides better feedback when you demonstrate an appreciation for constructive criticism.
+If you properly prepare changelists for review, it directs your reviewer's attention to areas that support your growth rather than boring issues like style violations. Additionally, your reviewer provides better feedback when you demonstrate an appreciation for constructive criticism.
 
 ### Make others better
 
-The way you participate in code reviews as an author sets an example for others. Effective practices rub off on your teammates, which makes your job easier when the tables are turned.
+The way you participate in code reviews sets an example for others. Effective author practices rub off on your teammates, which makes your job easier when they send code to you.
 
 ### Minimize team conflicts
 
-Code reviews are a common source of friction. Reduce arguments by approaching them deliberately and conscientiously.
+Code reviews are a common source of friction. Approach them deliberately and conscientiously to minimize arguments.
 
 ## The golden rule: value your reviewer's time
 
@@ -136,11 +136,11 @@ Jumbled changelists are a massive insult to your reviewer. Whitespace-only chang
 
 TODO(mtlynch): Show screenshot of buried change
 
-Developers also tend to mix changes inappropriately while refactoring. I love it when my teammates refactor code to make it easier to understand and maintain, but I hate when they refactor code *while* changing its behavior.
+Developers also tend to mix changes inappropriately while refactoring. I love it when my teammates refactor code, but I hate when they mix it in with changes to the code's behavior.
 
 TODO(mtlynch): Screenshot of a function changing behavior and being refactored at the same time. First screenshot shows everything changing at once, second screenshot shows refactoring in one step followed by behavior change in second.
 
-If a piece of code requires refactoring *and* behavioral changes, this should happen in two to three changelists:
+If a piece of code requires refactoring *and* behavioral changes, it should happen in two to three changelists:
 
 1. Add tests to exercise the existing behavior (if they're not already there).
 1. Refactor the production code while holding the test code constant.
@@ -256,7 +256,7 @@ Congratulations! If you've read to this point and integrated these ideas, you're
 
 TODO(mtlynch): Add alt text
 
-TODO(mtlynch): Put in plug for *Hit the Front Page of Hacker News* course.
+{{<htfp-ad>}}
 
 ## Further Reading
 
