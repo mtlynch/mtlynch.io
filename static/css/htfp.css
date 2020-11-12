@@ -85,7 +85,7 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background: #ffffff;
+  background: #9fffab;
   padding: 2rem 5rem;
   margin: 1rem;
   border: 4px solid #494949 !important;
@@ -102,7 +102,7 @@
 
 .htfp-box .btn:hover {
   color: #ffffff !important;
-  background: #f6b93b;
-  border-color: #f6b93b !important;
+  background: #308300;
+  border-color: #0c945b !important;
   transition: all 0.4s ease 0s;
 }
