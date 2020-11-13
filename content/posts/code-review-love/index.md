@@ -102,13 +102,7 @@ If your team is woefully misguided and refuses to invest in continuous integrati
 
 What's wrong with this picture?
 
-TODO(mtlynch): Make this a screenshot
-
->`function verifyInput(frombobulator) {`
->
->**Me, reviewer**: I'm having trouble understanding the purpose of this function.
->
->**Author**: Oh, it's in case the caller passes a Frombobulator that's missing a frombobulate implementation.
+{{<img src="having-trouble.png" hasBorder="true">}}
 
 The author helped me understand the function, but what about the next person who reads it? Should they dive into the change history and read every code review discussion ever? Worse is when the author comes over to my desk to give me an in-person explanation, which both interrupts my focus and ensures that nobody else ever has access to the information.
 
