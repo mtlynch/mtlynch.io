@@ -5,36 +5,38 @@ rating: 3
 purchase_url: https://amzn.to/2IBnZ8I
 ---
 
-TODO: Short summary
-
-{{<notice type="info">}}
-**Note**: A [revised edition](https://amzn.to/38LnofQ) came out while I was reading the book, but my notes are for the [first edition](https://amzn.to/2IBnZ8I).
-{{</notice>}}
+The idea of social capital has interested me for a long time, but when I finally sat down to read this book, it was painfully dry. It offers an eye-opening investigation into the many ways that civic engagement has declined in the US, but it was a real slog to get through.
 
 <!--more-->
+
+I find [the idea of social capital](/book-reports/bowling-alone/#social-capital) fascinating, and I was hoping to come away with a better understanding of how to foster it in a community. Social capital has a substantial effect on how society functions, but I think people forget about it when  considering policy issues. In that way, the book reminded me of [*Happy City*](/book-reports/happy-city/), which described how city design affects happiness and community bonds among residents. The difference is that *Happy City* found ways to make the research lively and engaging, whereas *Bowling Alone* felt like it was just endlessly throwing charts at me.
+
+{{<notice type="info">}}
+**Note**: A [revised 2020 edition](https://amzn.to/38LnofQ) came out while I was reading the book, but my notes are for the [first edition](https://amzn.to/2IBnZ8I), published in 2001.
+{{</notice>}}
 
 ---
 
 ## What I Liked
 
 * The history of social and political group membership in the US was interesting.
-* The correlations between measures of civic engagement and other measures of social well-being was surprising and enlightening.
+* The [correlations](#social-capital-indexhttpswwwoecdorginnovationresearch1825848pdf) between measures of civic engagement and other measures of social well-being was surprising and enlightening.
 * The middle third of the book was engaging, especially the discussion of how television has affected social capital.
 
 ## What I Disliked
 
 * It's extremely dry.
   * It buries the reader in graphs and statistics to an extent far beyond what was necessary to make the point.
-* The book constantly refers to social networking as "computer mediated communication."
+* The book constantly refers to social networking as "computer-mediated communication."
   * I know Putnam wrote it in 2001, but I don't remember anyone calling it that, even then.
-* Putnam's recommended remediations felt vague.
+* Putnam's proposed remediations felt vague.
   * There's a whole section of the book about ways to fix the issues he raises, but they're framed in terms of "what should we do as a society" as opposed to concrete steps that an individual can take.
 
 ## Key Takeaways
 
 ### Social capital
 
-* **Social capital** is the value generated from people in a community knowing an interacting with one another.
+* **Social capital** is the value generated from people in a community knowing and interacting with one another.
 * Generalized reciprocity
   * People in high-trust communities do favors for one another without expecting reciprocity immediately because they're confident they'll receive a favor later.
   * Generalized reciprocity makes communities more efficient because obligations don't need to be settled immediately.
@@ -58,7 +60,7 @@ TODO: Short summary
 * Club membership
   * Americans still outrank almost every other nation in terms of percentage of citizens involved in clubs and organizations.
   * Throughout the 1900s, the number of membership organizations increased, but the average size shrunk.
-    * Organizations also moved focused less on meetings and more on mailing lists, where people are "members" by virtue of writing a check every year, but they don't attend any meetings.
+    * Organizations also focused less on meetings and more on mailing lists, where people are "members" by virtue of writing a check every year, but they don't attend any meetings.
 
 ### Machers and schmoozers
 
@@ -95,7 +97,8 @@ TODO: Short summary
 
 * Decline in trust
   * Between 1960 to 2000, people who agreed with the survey question, "most people can be trusted" dropped from 55% to 35%.
-    * Interestingly, the decline comes from new generations. Individuals tend to maintain the same level of trust as they age, but younger generations start out at a lower baseline level of trust and drive trends down.
+    * Interestingly, the decline comes from new generations.
+    * Individuals tend to maintain the same level of trust as they age, but younger generations start out at a lower baseline level of trust and drive trends down.
 
 ### Urban sprawl
 
@@ -112,21 +115,20 @@ TODO: Short summary
     * Internet was ~15 years.
 
 * Newspaper readership declined as TV viewership increased.
-  * Initially, people thought that newspaper readers were switching to TV news, but it turns out most TV news watchers also read the newspaper.
+  * Initially, people thought that newspaper readers were switching to TV news, but it turns out most TV news watchers also read the newspaper. TV news is generally a supplement to newspapers, not a replacement.
   * Declines in newspaper readership are mostly due to generational succession. People within the same age cohort continue reading the newspaper at the same rate, but the next generation reads substantially less.
 
 * Soaking up leisure time
-  * Between 1965 and 1995, Americans gained an average of six extra hours per week of leisure time. TV absorbed almost all of the extra time.
-  * Americans spend 3-4x as much time watching TV than talking to their spouse and 6-7x as much as they participate in community activities.
+  * Between 1965 and 1995, Americans gained an average of six extra hours per week of leisure time. Over the same time, the average time watching TV swelled to six hours per week, suggesting that TV absorbed almost all of the gains in leisure time.
+  * Americans spend 3-4x as much time watching TV as they do talking to their spouse and 6-7x as much as they spend participating in community activities.
 
 * Anti-social behavior
   * In surveys, the amount of TV that people watch is strongly correlated with many antisocial behaviors.
     * Heavy TV watchers are more likely to experience road rage, less likely to attend club meetings, less likely to attend church, less likely to stay in touch with friends.
 
-  * [Notel, Unitel, and Multitel](http://sk.sagepub.com/reference/childmedia/n325.xml)
+* [Notel, Unitel, and Multitel](http://sk.sagepub.com/reference/childmedia/n325.xml)
 
-  * Researchers observed one Canadian town that had no TV reception or cable access until 1970.
-    * As soon as they got TV, their civic participation dropped.
+  * Researchers observed one Canadian town that had no TV reception or cable access until 1970. As soon as they got TV, their civic participation dropped.
 
 ### Suicide rates
 
@@ -137,9 +139,9 @@ TODO: Short summary
 
 * Putnam created a "social capital index" that aggregates various measures of civic engagement into a single score.
 * Putnam's index correlates closely with many measures of a healthy society.
-  * Interestingly, South Dakota scores well on almost all of these metrics.
+  * Unexpected bit of trivia: South Dakota scores well on almost all of these metrics.
 
-{{<img src="murder-rate.png" hasBorder="true">}}
-{{<img src="equality.png" hasBorder="true">}}
-{{<img src="public-health.png" hasBorder="true">}}
-{{<img src="child-welfare.png" hasBorder="true">}}
+{{<img src="murder-rate.png" hasBorder="true" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
+{{<img src="equality.png" hasBorder="true" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
+{{<img src="public-health.png" hasBorder="true" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
+{{<img src="child-welfare.png" hasBorder="true" alt="Scatter chart showing positive correlation between child welfare and social capital">}}
