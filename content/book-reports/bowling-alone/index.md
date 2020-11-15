@@ -2,10 +2,14 @@
 title: "Bowling Alone by Robert D. Putnam"
 date: 2020-11-14T17:55:30-05:00
 rating: 3
-purchase_url: TODO
+purchase_url: https://amzn.to/2IBnZ8I
 ---
 
 TODO: Short summary
+
+{{<notice type="info">}}
+**Note**: A [revised edition](https://amzn.to/38LnofQ) came out while I was reading the book, but my notes are for the [first edition](https://amzn.to/2IBnZ8I).
+{{</notice>}}
 
 <!--more-->
 
