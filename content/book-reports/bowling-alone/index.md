@@ -9,7 +9,7 @@ The idea of social capital has interested me for a long time, but when I finally
 
 <!--more-->
 
-I find [the idea of social capital](/book-reports/bowling-alone/#social-capital) fascinating, and I was hoping to come away with a better understanding of how to foster it in a community. Social capital has a substantial effect on how society functions, but I think people forget about it when  considering policy issues. In that way, the book reminded me of [*Happy City*](/book-reports/happy-city/), which described how city design affects happiness and community bonds among residents. The difference is that *Happy City* found ways to make the research lively and engaging, whereas *Bowling Alone* felt like it was just endlessly throwing charts at me.
+I find [the idea of social capital](/book-reports/bowling-alone/#social-capital) fascinating, and I was hoping the book would delve further into how to foster social capital in a community. Social capital profoundly affects society, but people forget about it when considering policy issues. In that way, the book reminded me of [*Happy City*](/book-reports/happy-city/), which described how city design affects happiness and community bonds among residents. The difference is that *Happy City* found ways to make the research lively and engaging, whereas *Bowling Alone* felt like it was endlessly throwing charts at me.
 
 {{<notice type="info">}}
 **Note**: A [revised 2020 edition](https://amzn.to/38LnofQ) came out while I was reading the book, but my notes are for the [first edition](https://amzn.to/2IBnZ8I), published in 2001.
@@ -20,17 +20,17 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 ## What I Liked
 
 * The history of social and political group membership in the US was interesting.
-* The [correlations](#social-capital-indexhttpswwwoecdorginnovationresearch1825848pdf) between measures of civic engagement and other measures of social well-being was surprising and enlightening.
+* The [correlations](#social-capital-indexhttpswwwoecdorginnovationresearch1825848pdf) between measures of civic engagement and other measures of social well-being were surprising and enlightening.
 * The middle third of the book was engaging, especially the discussion of how television has affected social capital.
 
 ## What I Disliked
 
 * It's extremely dry.
   * It buries the reader in graphs and statistics to an extent far beyond what was necessary to make the point.
-* The book constantly refers to social networking as "computer-mediated communication."
+* The book repeatedly refers to social networking as "computer-mediated communication."
   * I know Putnam wrote it in 2001, but I don't remember anyone calling it that, even then.
 * Putnam's proposed remediations felt vague.
-  * There's a whole section of the book about ways to fix the issues he raises, but they're framed in terms of "what should we do as a society" as opposed to concrete steps that an individual can take.
+  * There's a whole section of the book about ways to fix the issues he raises, but it frames the answers as, "what should we do as a society?" as opposed to concrete steps that an individual can take.
 
 ## Key Takeaways
 
@@ -53,7 +53,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 * Political campaigns
   * Political campaigns now reach many more people than they did a century ago, but it's because they've switched from in-person gatherings and door-to-door visits to direct mail and telemarketing.
 
-* Drops after 1970s
+* Drops after the 1970s
   * Between the 1970s and 1990s, most forms of civic participation (e.g., attending town meetings, making a public speech) dropped by 30-40%.
   * The activities that dropped the least were solitary forms of civic participation like writing a letter to a newspaper or congressperson, but even these dropped by 10%.
 
@@ -67,11 +67,11 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 * The terms "macher" and "schmoozer" come from Yiddish.
 * "Macher" - a person who spends a lot of time participating in formal organizations.
   * e.g., current events, church and club meetings, work on community projects
-* "Schmoozer" - a person who spends time on information conversations and gatherings.
-  * e.g., dinner parties, bars and night clubs, barbecues
+* "Schmoozer" - a person who spends time on informal conversations and gatherings.
+  * e.g., dinner parties, bars, night clubs, barbecues
 * Men are more likely to be machers, though it's likely a function of employment rather than gender.
   * When women began entering the workforce, there was a proportional increase in women entering formal membership organizations.
-* Frequency of informal social gatherings declined consistently in the US throughout the second half of the 20th century.
+* The frequency of informal social gatherings declined consistently in the US throughout the second half of the 20th century.
 
 ### Americans and playing cards
 
@@ -79,7 +79,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 * A survey in 1958 revealed that one in three adults regularly played bridge.
 * In the 1970s, 40% of adults reported playing cards once a month.
 * In 1940, 87% of homes had a deck of cards.
-  * For comparison, only 83% had radios and 36% had phones.
+  * For comparison, only 83% had radios, and 36% had phones.
 
 ### Reciprocity, honesty, and trust
 
@@ -96,9 +96,9 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
   * Thin-trust communities tend to have greater civic engagement.
 
 * Decline in trust
-  * Between 1960 to 2000, people who agreed with the survey question, "most people can be trusted" dropped from 55% to 35%.
+  * Between 1960 to 2000, people who agreed with the survey question, "most people can be trusted," dropped from 55% to 35%.
     * Interestingly, the decline comes from new generations.
-    * Individuals tend to maintain the same level of trust as they age, but younger generations start out at a lower baseline level of trust and drive trends down.
+    * Individuals tend to maintain the same level of trust as they age, but younger generations start at a lower baseline level of trust and drive trends down.
 
 ### Urban sprawl
 
@@ -107,8 +107,8 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 ### TV
 
 * TV is likely a significant factor in America's reduced civic engagement.
-* TV is the fastest growing consumer product in the US.
-  * It went from 1% penetration to 75% of American households in just 7 years.
+* TV is the fastest-growing consumer product in the US.
+  * It went from 1% penetration to 75% of American households in just seven years.
     * Telephones took 67 years.
     * Cars took 52 years.
     * Radio took 14 years.
