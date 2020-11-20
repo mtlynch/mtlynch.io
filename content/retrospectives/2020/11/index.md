@@ -50,11 +50,12 @@ ctx.height = 300;
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['June 2020', 'July 2020', 'August 2020', 'September 2020', 'October 2020'],
+      labels: ['May 2020', 'June 2020', 'July 2020', 'August 2020', 'September 2020', 'October 2020'],
       datasets: [{
         label: 'Total Earnings',
         data: [
           0,
+          173.94,
           8741.37,
           3124.80,
           3817.99,
