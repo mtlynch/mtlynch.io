@@ -42,6 +42,57 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 
 ### [TinyPilot](https://tinypilotkvm.com)
 
+<canvas id="revenue-chart" style="margin-bottom: 50px"></canvas>
+<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+<script>
+const ctx = document.getElementById('revenue-chart');
+ctx.height = 300;
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['June 2020', 'July 2020', 'August 2020', 'September 2020', 'October 2020'],
+      datasets: [{
+        label: 'Total Earnings',
+        data: [
+          0,
+          8741.37,
+          3124.80,
+          3817.99,
+          10263.62,
+        ],
+        backgroundColor: 'rgb(0, 255, 0)',
+        borderColor: 'rgb(172, 255, 172)',
+        fill: false,
+        }]
+      },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItems) {
+            let original = parseFloat(tooltipItems.yLabel).toLocaleString();
+            if (original[0] === "-") {
+              return " -$" + original.substring(1);
+            }
+            return " $" + original;
+          },
+        },
+      },
+      scales: {
+            yAxes: [{
+                ticks: {
+                  suggestedMin: 0,
+                    callback: function(value) {
+                        return '$' + value;
+                    }
+                }
+            }]
+        }
+    },
+});
+</script>
+
 | Metric             | September 2020 | October 2020   | Change                                            |
 | ------------------ | -------------- | -------------- | ------------------------------------------------- |
 | Unique Visitors    | 1,741          | 2,604          | <font color="green">+863 (+50%)</font>            |
