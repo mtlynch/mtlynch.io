@@ -176,7 +176,7 @@ To achieve remote administration, I took the unusual approach of [building my ow
 {{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com) to install an OS on my server">}}
   {{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" maxWidth="260px">}}
 
-  <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" style="max-width: 500px; object-fit: contain;"></a>
+  <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="width: 500px; max-width: 100%; object-fit: contain;"></a>
 
 {{</gallery>}}
 
