@@ -40,10 +40,7 @@ Given that my only real goal for the month was to interview customers, three is 
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< gallery caption="Is It Keto revenue (left) , Is It Keto traffic (right)" >}}
-  {{< img src="revenue-graph.jpg" alt="Is It Keto revenue graph" hasBorder="True" >}}
-  {{< img src="view-graph.jpg" alt="Is It Keto traffic graph" hasBorder="True" >}}
-{{< /gallery >}}
+{{<revenue-graph project="isitketo">}}
 
 | Metric                    | October 2019 | November 2019 | Change                                       |
 | ------------------------- | ------------ | ------------- | -------------------------------------------- |
@@ -61,6 +58,8 @@ Things are improving a bit, but I think October-December is the worst time of ye
 Amazon Affiliate Earnings have dropped to their lowest levels since May, when traffic was half the size it is today. AdSense is up a bit because I fixed a bug in my AdSense integration. The fix went live in mid-November, so I'm expecting an even bigger increase in AdSense revenue next month, which will have the fix in place for the full month. I'm still offering meal plans for sale, but I've virtually ended all efforts to sell them (more on that [below](#giving-up-on-meal-plans)).
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric         | October 2019 | November 2019 | Change                                       |
 |----------------|--------------|---------------|----------------------------------------------|

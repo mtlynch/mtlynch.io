@@ -156,6 +156,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Zestful](https://zestfuldata.com)
 
+{{<revenue-graph project="zestful">}}
+
 | Metric             | March 2020 | April 2020 | Change                                         |
 | ------------------ | ---------- | ---------- | ---------------------------------------------- |
 | Unique Visitors    | 291        | 1,142      | <font color="green">+851 (+292%)</font>        |

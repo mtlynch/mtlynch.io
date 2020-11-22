@@ -50,7 +50,7 @@ I published What Got Done's source on Github and released it under the [Apache 2
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="adsense.jpg" alt="Screenshot of AdSense earnings" caption="Google AdSense Earnings - September 2019" maxWidth="950px" >}}
+{{<revenue-graph project="isitketo">}}
 
 | Metric                    | August 2019 | September 2019 | Change                                      |
 | ------------------------- | ----------- | -------------- | ------------------------------------------- |
@@ -67,6 +67,8 @@ So, it finally happened. Is It Keto has grown by about 30% in revenue and traffi
 Everything stayed relatively flat except for AdSense earnings. I'm not sure if this is due to changes I made or if it's just natural fluctuations in AdSense.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                 | August 2019 | September 2019 | Change |
 |------------------------|-------------|----------------|--------|

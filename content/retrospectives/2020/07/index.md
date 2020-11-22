@@ -56,6 +56,8 @@ There are [a few bugs](https://github.com/mtlynch/tinypilot/milestone/2) I want 
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | May 2020    | June 2020   | Change                                      |
 | ------------------------- | ----------- | ----------- | ------------------------------------------- |
 | Unique Visitors           | 50,352      | 57,166      | <font color="green">+6,814 (+14%)</font>    |
@@ -194,6 +196,8 @@ Now that I think about it, I can still make that offer. I'll do that tomorrow. T
 Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                   | May 2020  | June 2020   | Change                                            |
 | ------------------------ | --------- | ----------- | ------------------------------------------------- |

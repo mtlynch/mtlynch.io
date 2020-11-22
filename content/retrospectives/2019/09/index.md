@@ -46,7 +46,7 @@ This took significantly longer than I expected. I underestimated how difficult i
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="amazon-affiliates.jpg" alt="Screenshot of Amazon Affiliate earnings" caption="Amazon Affiliate Earnings - August 2019" maxWidth="950px" >}}
+{{<revenue-graph project="isitketo">}}
 
 | Metric                    | July 2019   | August 2019 | Change                                         |
 | ------------------------- | ----------- | ----------- | ---------------------------------------------- |
@@ -61,6 +61,8 @@ This took significantly longer than I expected. I underestimated how difficult i
 Is It Keto continued to grow at a rapid rate. Amazon Affiliate earnings stayed flat, which is a bit worrying given that pageviews increased so rapidly, but Google AdSense bolstered revenues, as August was the first full month I ran AdSense ads.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                 | July 2019 | August 2019 | Change |
 |------------------------|-----------|-------------|--------|

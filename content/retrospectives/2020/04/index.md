@@ -160,6 +160,8 @@ WanderJest was struggling in the first half of the month. In the second half of 
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | February 2020 | March 2020  | Change                                       |
 | ------------------------- | ------------- | ----------- | -------------------------------------------- |
 | Unique Visitors           | 47,698        | 33,007      | <font color="red">-14,691 (-31%)</font>      |
@@ -172,6 +174,8 @@ WanderJest was struggling in the first half of the month. In the second half of 
 Is It Keto took a big hit this month after a strong start to the year. I suppose people are not that interested in diets when there's a global pandemic raging on.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric             | February 2020 | March 2020 | Change                                       |
 | ------------------ | ------------- | ---------- | -------------------------------------------- |

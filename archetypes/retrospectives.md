@@ -37,6 +37,8 @@ TODO
 
 ### [TinyPilot](https://tinypilotkvm.com)
 
+{{<revenue-graph project="tinypilot">}}
+
 ## Topic 1
 
 ## Topic 2
@@ -49,7 +51,11 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 ## Wrap up
 
