@@ -44,9 +44,7 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="revenue-graph.jpg" alt="Is It Keto revenue graph" maxWidth="700px" hasBorder="True" caption="Is It Keto revenue grew 46% in December." >}}
-
-{{< img src="view-graph.jpg" alt="Is It Keto traffic graph" maxWidth="700px" hasBorder="True" caption="Is It Keto traffic remained relatively flat in December." >}}
+{{<revenue-graph project="isitketo">}}
 
 | Metric                    | November 2019 | December 2019 | Change                                         |
 | ------------------------- | ------------- | ------------- | ---------------------------------------------- |
@@ -64,6 +62,8 @@ This was a record month for Is It Keto, beating out the previous record of [$379
 The revenue was a bit of a surprise given that traffic has been waning for the past few months, as nobody wants to think about dieting over the holidays. But the holidays also mean higher advertiser spend and increased customer purchasing on Amazon, so my [RPM](https://en.wikipedia.org/wiki/Revenue_per_mille) rose substantially to $5.70 per thousand pageviews, also a record high.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                   | November 2019 | December 2019 | Change                                            |
 | ------------------------ | ------------- | ------------- | ------------------------------------------------- |

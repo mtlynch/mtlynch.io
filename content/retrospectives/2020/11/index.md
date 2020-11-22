@@ -42,7 +42,7 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 
 ### [TinyPilot](https://tinypilotkvm.com)
 
-<canvas id="tinypilot-revenue" style="margin-bottom: 50px"></canvas>
+{{<revenue-graph project="tinypilot">}}
 
 | Metric             | September 2020 | October 2020   | Change                                            |
 | ------------------ | -------------- | -------------- | ------------------------------------------------- |
@@ -245,7 +245,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
-<canvas id="isitketo-revenue" style="margin-bottom: 50px"></canvas>
+{{<revenue-graph project="isitketo">}}
 
 | Metric                    | September 2020 | October 2020 | Change                                         |
 | ------------------------- | -------------- | ------------ | ---------------------------------------------- |
@@ -263,7 +263,7 @@ These numbers further confirm what I've always liked about Is It Keto as a busin
 
 ### [Zestful](https://zestfuldata.com)
 
-<canvas id="zestful-revenue" style="margin-bottom: 50px"></canvas>
+{{<revenue-graph project="zestful">}}
 
 | Metric             | September 2020 | October 2020 | Change                                         |
 | ------------------ | -------------- | ------------ | ---------------------------------------------- |
@@ -298,78 +298,3 @@ I received an inquiry from a large customer about an enterprise package for Zest
 * Release a high-end version of TinyPilot that arrives pre-assembled in a custom case.
 * Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro).
 * Figure out how to properly track the source of customers who end up completing purchases.
-
-<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
-<script>
-function drawChart(chartId, labels, data) {
-  const ctx = document.getElementById(chartId);
-  if (!ctx) {
-    return;
-  }
-  ctx.height = 300;
-  const myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Total Earnings',
-          data: data,
-          backgroundColor: 'rgb(0, 255, 0)',
-          borderColor: 'rgb(172, 255, 172)',
-          fill: false,
-          }]
-        },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        tooltips: {
-          callbacks: {
-            label: function(tooltipItems) {
-              let original = parseFloat(tooltipItems.yLabel).toLocaleString();
-              if (original[0] === "-") {
-                return " -$" + original.substring(1);
-              }
-              return " $" + original;
-            },
-          },
-        },
-        scales: {
-              yAxes: [{
-                  ticks: {
-                    suggestedMin: 0,
-                      callback: function(value) {
-                          return '$' + value;
-                      }
-                  }
-              }]
-          }
-      },
-  });
-}
-function parseDate(d) {
-  const dateParts = d.split('-');
-  const year = parseInt(dateParts[0]);
-  const month = parseInt(dateParts[1]);
-  return new Date(year, month);
-}
-function drawCharts(limit) {
-  fetch('/data/project-revenue.json')
-    .then(res => res.json())
-    .then(revenueByProject => {
-      const limitDate = parseDate(limit);
-      for ([project, data] of Object.entries(revenueByProject)) {
-        let dates = [];
-        for (d of Object.keys(data)) {
-          const date = parseDate(d);
-          if (date >= limitDate) {
-            continue;
-          }
-          dates.push(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear());
-        }
-        let values = Object.values(data);
-        drawChart(project + '-revenue', dates, values)
-      }
-    });
-}
-drawCharts('2020-11')
-</script>

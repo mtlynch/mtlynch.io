@@ -38,6 +38,8 @@ The post [got a good response on Reddit](https://redd.it/gqxvxb) but [failed to 
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | April 2020  | May 2020    | Change                                      |
 | ------------------------- | ----------- | ----------- | ------------------------------------------- |
 | Unique Visitors           | 35,451      | 50,352      | <font color="green">+14,901 (+42%)</font>   |
@@ -162,6 +164,8 @@ I'm considering selling pre-configured kits for around $180. If you'd be interes
 Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric             | April 2020 | May 2020  | Change                                      |
 | ------------------ | ---------- | --------- | ------------------------------------------- |

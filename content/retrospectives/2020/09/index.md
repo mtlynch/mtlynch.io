@@ -37,7 +37,9 @@ For the same reasons as above, I postponed marketing efforts until I had a produ
 
 This ended up being more difficult than I expected, but I completed the feature right at the end of the month. Integrating the mouse improved the user experience more than I anticipated.
 
-## TinyPilot Stats
+## [TinyPilot](https://tinypilotkvm.com)
+
+{{<revenue-graph project="tinypilot">}}
 
 | Metric             | July 2020     | August 2020   | Change                                         |
 | ------------------ | ------------- | ------------- | ---------------------------------------------- |
@@ -177,6 +179,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | July 2020   | August 2020 | Change                                         |
 | ------------------------- | ----------- | ----------- | ---------------------------------------------- |
 | Unique Visitors           | 48,231      | 49,981      | <font color="green">+1,750 (+4%)</font>        |
@@ -199,6 +203,8 @@ That was a whole new can of worms because AdThrive kept sending me broken, hacky
 Finally, I convinced them to host the code on their side and cut me out of the debug loop. I'm not crazy about the fact that they're pushing to production with what feels like insufficient testing, but I don't have bandwidth to worry about it at the moment.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric             | July 2020  | August 2020 | Change                                     |
 | ------------------ | ---------- | ----------- | ------------------------------------------ |

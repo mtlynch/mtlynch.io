@@ -156,6 +156,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | January 2020 | February 2020 | Change                                       |
 | ------------------------- | ------------ | ------------- | -------------------------------------------- |
 | Unique Visitors           | 63,465       | 47,698        | <font color="red">-15,767 (-25%)</font>      |
@@ -173,6 +175,8 @@ Numbers are down for Is It Keto, but that's misleading because January was an an
 $682 in revenue is surprisingly strong revenue for Is It Keto. I had expected numbers to drop to their December levels of ~$400, but February's revenue was the site's second-highest in history.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric             | January 2020 | February 2020 | Change                                      |
 | ------------------ | ------------ | ------------- | ------------------------------------------- |

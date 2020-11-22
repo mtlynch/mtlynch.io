@@ -138,6 +138,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | June 2020   | July 2020   | Change                                          |
 | ------------------------- | ----------- | ----------- | ----------------------------------------------- |
 | Unique Visitors           | 46,386      | 48,231      | <font color="green">+1,845 (+4%)</font>         |
@@ -155,6 +157,8 @@ The site's metrics are strong enough that I now qualify to apply to the [AdThriv
 It's now been two months since I used [programmatic page generation](/retrospectives/2020/05/#venturing-into-auto-generated-pages) to [grow Is It Keto's content by 50%](/retrospectives/2020/06/#add-100-new-articles-to-is-it-keto). It's still unclear if that's working. The new pages account for only 7.6k clicks from Google Search in the last three months out of 122k total, but it's possible that they're still growing and leading to more pageviews once visitors are on the site.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                   | June 2020   | July 2020  | Change                                       |
 | ------------------------ | ----------- | ---------- | -------------------------------------------- |

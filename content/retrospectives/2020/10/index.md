@@ -46,6 +46,8 @@ The two conversations went positively, though. I stuck to [Rob Fitzpatrick's str
 
 ### [TinyPilot](https://tinypilotkvm.com)
 
+{{<revenue-graph project="tinypilot">}}
+
 | Metric             | August 2020   | September 2020 | Change                                         |
 | ------------------ | ------------- | -------------- | ---------------------------------------------- |
 | Unique Visitors    | 2,284         | 1,741          | <font color="red">-543 (-24%)</font>           |
@@ -222,6 +224,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | August 2020 | September 2020 | Change                                       |
 | ------------------------- | ----------- | -------------- | -------------------------------------------- |
 | Unique Visitors           | 49,981      | 44,751         | <font color="red">-5,230 (-10%)</font>       |
@@ -244,6 +248,8 @@ The only notable update is that I switched back from AdThrive to AdSense. I'd he
 AdThrive turned out to be a mistake. They couldn't figure out how to make their ads display properly on Is It Keto because it's a single-page app (as opposed to a WordPress site or other pre-rendered web app). AdThrive's ads kept randomly changing as the user viewed the page, causing text on the page to bounce around. After I complained a few times, AdThrive finally gave up on fixing the ads and released me from my contract.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric             | August 2020 | September 2020 | Change                                       |
 | ------------------ | ----------- | -------------- | -------------------------------------------- |

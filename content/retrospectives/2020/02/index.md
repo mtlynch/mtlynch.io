@@ -59,7 +59,7 @@ User engagement needs to improve. No users have created accounts yet, and that's
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="isitketo-earnings.jpg" alt="Is It Keto traffic and earnings graph" maxWidth="829px" hasBorder="True" caption="Is It Keto traffic and earnings doubled in January." >}}
+{{<revenue-graph project="isitketo">}}
 
 <div style="height: 1.5em"><!-- hack to add whitespace between graph and table --></div>
 
@@ -80,6 +80,8 @@ I tried to capitalize on increased diet enthusiasm by bringing [meal plans](/ret
 Is It Keto is officially in maintenance mode now. I had hoped the site's freelance writer would reach self-sufficiency and continue adding content in the background. After three months of working with me, their articles still required me to edit them thoroughly, so I [let the writer go](/hiring-content-writers/5-terminating-writers/) at the start of the month and stopped adding content.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                   | December 2019 | January 2020 | Change                                        |
 | ------------------------ | ------------- | ------------ | --------------------------------------------- |

@@ -41,6 +41,8 @@ It still feels unfortunate that I can't connect my [guide to hiring writers](/hi
 
 ### [Is It Keto](https://isitketo.org)
 
+{{<revenue-graph project="isitketo">}}
+
 | Metric                    | September 2019 | October 2019 | Change                                      |
 | ------------------------- | -------------- | ------------ | ------------------------------------------- |
 | Unique Visitors           | 28,768         | 26,315       | <font color="red">-2,453 (-9%)</font>       |
@@ -62,6 +64,8 @@ I knew I'd lose AdSense revenue by dialing down its ads, but I hoped to make up 
 Traffic stats are slumping, too. I think this is partially due to waning interest in diets as we get closer to the end of the year. I might also be losing SEO battles with blogs that produce content that's similar to Is It Keto but put more effort into gaming Google's algorithms.
 
 ### [Zestful](https://zestfuldata.com)
+
+{{<revenue-graph project="zestful">}}
 
 | Metric                 | September 2019 | October 2019   | Change |
 |------------------------|----------------|----------------|--------|

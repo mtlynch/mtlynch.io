@@ -33,3 +33,79 @@
     {{ partial "mailing-list-signup.html" . }}
   </article>
 </section>
+
+<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+<script>
+function drawChart(chartId, labels, data) {
+  const ctx = document.getElementById(chartId);
+  if (!ctx) {
+    return;
+  }
+  ctx.height = 300;
+  const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Total Earnings',
+          data: data,
+          backgroundColor: 'rgb(0, 255, 0)',
+          borderColor: 'rgb(172, 255, 172)',
+          fill: false,
+          }]
+        },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems) {
+              let original = parseFloat(tooltipItems.yLabel).toLocaleString();
+              if (original[0] === "-") {
+                return " -$" + original.substring(1);
+              }
+              return " $" + original;
+            },
+          },
+        },
+        scales: {
+              yAxes: [{
+                  ticks: {
+                    suggestedMin: 0,
+                      callback: function(value) {
+                          return '$' + value;
+                      }
+                  }
+              }]
+          }
+      },
+  });
+}
+// Parse a date string like "2020-05" into a JavaScript Date object.
+function parseDate(d) {
+  const dateParts = d.split('-');
+  const year = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]) - 1;
+  return new Date(year, month);
+}
+function drawCharts(limit) {
+  fetch('/data/project-revenue.json')
+    .then(res => res.json())
+    .then(revenueByProject => {
+      const limitDate = parseDate(limit);
+      for ([project, data] of Object.entries(revenueByProject)) {
+        let dates = [];
+        for (d of Object.keys(data)) {
+          const date = parseDate(d);
+          if (date >= limitDate) {
+            continue;
+          }
+          dates.push(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear());
+        }
+        let values = Object.values(data).slice(0, dates.length);
+        drawChart(project + '-revenue', dates, values);
+      }
+    });
+}
+drawCharts({{ .Date.Format "2006-01" }});
+</script>
