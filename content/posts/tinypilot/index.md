@@ -357,7 +357,7 @@ Importantly, the power connector's data port excludes a USB power line. This ens
 
 ## TinyPilot kits
 
-If you'd like to support further development of this software, consider [donating](https://paypal.me/mtlynchio) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the equipment you need to build your own TinyPilot. It comes with a preformatted microSD card, so you don't need to configure any software.
+If you'd like to support further development of this software, consider [donating](https://paypal.me/tinypilotkvm) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the equipment you need to build your own TinyPilot. It comes with a preformatted microSD card, so you don't need to configure any software.
 
 {{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/order" hasBorder="true" caption="Purchasing a [TinyPilot kit](https://tinypilotkvm.com/order) supports future development of TinyPilot and guarantees you access to premium features I may add in the future.">}}
 
