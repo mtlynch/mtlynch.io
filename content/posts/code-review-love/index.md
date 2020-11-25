@@ -123,9 +123,7 @@ The corollary to scoping changes tightly is separating functional and non-functi
 
 Developers inexperienced with code reviews often violate this rule. They'll make two lines of actual code changes, and then their code editor automatically reformats the entire file. The developer either fails to recognize what they did or decides that the new formatting is better. They send out a two-line functional change buried in hundreds of lines of non-functional whitespace changes.
 
-{{<notice type="info">}}
-TODO(mtlynch): Show screenshot of buried change
-{{</notice>}}
+{{<img src="buried-change.png" hasBorder="true" caption="Can you spot the functional change buried in this changelist's whitespace changes?">}}
 
 Jumbled changelists are a massive insult to your reviewer. Whitespace-only changes are easy to review. Two-line changes are easy to review. Two-line functional changes lost in a sea of whitespace changes are tedious and maddening.
 
