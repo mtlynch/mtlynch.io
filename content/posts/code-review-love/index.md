@@ -5,13 +5,18 @@ tags:
 - culture
 - code style
 description: Best practices for code review when you're the author.
-date: '2020-11-15'
+date: '2020-12-01'
 hero_image: cover.png
 images:
 - code-review-love/og-cover.jpg
 hide_affiliate_warning: true # No affiliate links in this post
 ---
-When people talk about code reviews, they focus on rules the reviewer should follow. What about the author? In a successful review, the person who writes the code is just as important as the one who reads it. There's scarcely any guidance on preparing your code for this process, so authors often sabotage their own reviews out of sheer ignorance.
+
+{{<notice type="danger">}}
+**This article is a work in progress. Please do not distribute.**
+{{</notice>}}
+
+When people talk about code reviews, they focus on rules the reviewer should follow. What about the author? The person who writes the code is just as important to the review as the developer who reads it. There's scarcely any guidance on preparing your code for this process, so authors often sabotage their own reviews out of sheer ignorance.
 
 This article describes best practices for participating in a code review when you're the author. In fact, by the end of this post, you're going to be so good at sending out your code for review that **your reviewer will literally fall in love with you**.
 
@@ -25,21 +30,15 @@ Nobody ever complained on their deathbed that too many people fell in love with 
 
 Improving code review technique helps your reviewer, your team, and, most importantly: you.
 
-### Learn faster
-  
-If you prepare your changelist properly, it directs your reviewer's attention to areas that support your growth rather than boring issues like style violations. Additionally, your reviewer provides better feedback when you demonstrate an appreciation for constructive criticism.
+* **Learn faster**: If you prepare your changelist properly, it directs your reviewer's attention to areas that support your growth rather than boring issues like style violations. Additionally, your reviewer provides better feedback when you demonstrate an appreciation for constructive criticism.
 
-### Make others better
+* **Make others better**: The way you participate in code reviews sets an example for your colleagues. Effective author practices rub off on your teammates, which makes your job easier when they send code to you.
 
-The way you participate in code reviews sets an example for your colleagues. Effective author practices rub off on your teammates, which makes your job easier when they send code to you.
-
-### Minimize team conflicts
-
-Code reviews are a common source of friction. Approaching them deliberately and conscientiously minimizes arguments.
+* **Minimize team conflicts**: Code reviews are a common source of friction. Approaching them deliberately and conscientiously minimizes arguments.
 
 ## The golden rule: value your reviewer's time
 
-This advice sounds obvious, but I often see authors treat reviewers like their personal quality assurance technicians. These authors ignore opportunities to catch careless errors, and they make minimal effort to organize their changelist for reviewability.
+This advice sounds obvious, but I often see authors treat reviewers like their personal quality assurance technicians. These authors make zero effort to catch their own errors or to organize their changelist for reviewability.
 
 Your teammate arrives at work each day with a finite supply of focus. If they allocate some of it to reviewing your code, that's time they can't spend on their own work. It's only fair that you maximize the value of their time.
 
@@ -124,13 +123,17 @@ The corollary to scoping changes tightly is separating functional and non-functi
 
 Developers inexperienced with code reviews often violate this rule. They'll make two lines of actual code changes, and then their code editor automatically reformats the entire file. The developer either fails to recognize what they did or decides that the new formatting is better. They send out a two-line functional change buried in hundreds of lines of non-functional whitespace changes.
 
+{{<notice type="info">}}
 TODO(mtlynch): Show screenshot of buried change
+{{</notice>}}
 
 Jumbled changelists are a massive insult to your reviewer. Whitespace-only changes are easy to review. Two-line changes are easy to review. Two-line functional changes lost in a sea of whitespace changes are tedious and maddening.
 
 Developers also tend to mix changes inappropriately while refactoring. I love it when my teammates refactor code, but I hate it when they refactor while changing the code's behavior.
 
+{{<notice type="info">}}
 TODO(mtlynch): Screenshot of a function changing behavior and being refactored at the same time. First screenshot shows everything changing at once, second screenshot shows refactoring in one step followed by behavior change in second.
+{{</notice>}}
 
 If a piece of code requires refactoring *and* behavioral changes, it should happen in two to three changelists:
 
@@ -158,6 +161,7 @@ As the author, [you ultimately control your reaction to feedback](/book-reports/
 
 I try to interpret all notes as helpful lessons. When a reviewer catches an embarrassing bug in my code, my first instinct is to make excuses. Instead, I catch myself and praise my reviewer for their scrupulousness.
 
+{{<notice type="info">}}
 TODO(mtlynch): Make this a screenshot.
 
 >`ConvertExcelDateToBasicDate(int32 timestamp) {`
@@ -165,6 +169,8 @@ TODO(mtlynch): Make this a screenshot.
 >A: This actually won't work for January and February 1900.
 >
 >B: Wow, nice catch!
+
+{{</notice>}}
 
 Surprisingly, it's a **good** sign when your reviewer spots subtle flaws in your code. It indicates that you're packaging your changelists well. Without all the obvious issues like bad formatting and confusing names, your reviewer can focus deeply on logic and design, yielding more valuable feedback.
 
@@ -176,11 +182,13 @@ Many developers react to reviewer mistakes with defensiveness. They take it as a
 
 Even when your reviewer is mistaken, that's still a red flag. If they misread it, will others make the same mistake? Does the reader have to exercise an abnormal level of scrutiny to reassure themselves that a particular bug *isn't* there?
 
+{{<notice type="info">}}
 TODO(mtlynch): Screenshot of two people arguing in a code review.
 
 >A: There's a buffer overflow vulnerability here since we never verify that `sourceLength <= destinationLength`.
 >
 >B: In **my** code? Impossible! The constructor calls `PurchaseHats`, which calls `CheckWeather`, which would have returned an error if the buffer length was incorrect. Try actually **reading** the entire 200k line codebase before you even **begin** to entertain the notion that I'm capable of a mistake.
+{{</notice>}}
 
 Look for ways to refactor the code, or add comments that make the code more obviously correct. If the confusion stems from obscure language features, rewrite your code using mechanisms that are intelligible to non-experts.
 
@@ -190,11 +198,15 @@ I frequently run into a scenario where I give someone notes, they update their c
 
 Establish conventions on your team that make it clear who's "holding the baton" at any point. Either the author is working on edits, or the reviewer is writing feedback. There should never be a situation where the process stalls because nobody knows who's doing what. You can accomplish this easily with changelist-level comments that indicate when you're handing control back and forth.
 
+{{<notice type="info">}}
 TODO(mtlynch): Screenshot of someone saying, "Updated! Please take a look."
+{{</notice>}}
 
 For every note that requires action, respond explicitly to confirm that you've addressed it. Some code review tools allow you to mark comments as "resolved." Otherwise, follow a simple convention, like, "Fixed," for each note. If you disagree with the note, politely explain why you declined to take action.
 
+{{<notice type="info">}}
 TODO(mtlynch): Screenshot of Reviewable mark as resolved.
+{{</notice>}}
 
 Adjust your response based on your reviewer's effort. If they write a detailed note to help you learn something new, don't just mark it done. Respond thoughtfully to show gratitude for their effort.
 
@@ -246,7 +258,9 @@ When preparing your changelists for review, remember the golden rule: value your
 
 Congratulations! If you've read to this point and integrated these ideas, you're now an expert reviewee. Your reviewer is likely in love with you, so treat them well.
 
+{{<notice type="info">}}
 TODO(mtlynch): Add alt text
+{{</notice>}}
 
 {{<htfp-ad>}}
 
