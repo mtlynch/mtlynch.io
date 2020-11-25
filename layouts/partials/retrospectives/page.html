@@ -43,42 +43,46 @@ function drawChart(chartId, labels, data) {
   }
   ctx.height = 300;
   const myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
           label: 'Total Earnings',
           data: data,
           backgroundColor: 'rgb(0, 255, 0)',
           borderColor: 'rgb(172, 255, 172)',
           fill: false,
-          }]
         },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        tooltips: {
-          callbacks: {
-            label: function(tooltipItems) {
-              let original = parseFloat(tooltipItems.yLabel).toLocaleString();
-              if (original[0] === "-") {
-                return " -$" + original.substring(1);
-              }
-              return " $" + original;
-            },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      tooltips: {
+        callbacks: {
+          label: function (tooltipItems) {
+            let original = parseFloat(tooltipItems.yLabel).toLocaleString();
+            if (parseFloat(tooltipItems.yLabel) < 0) {
+              return ' -$' + original.substring(1);
+            }
+            return ' $' + original;
           },
         },
-        scales: {
-              yAxes: [{
-                  ticks: {
-                    suggestedMin: 0,
-                      callback: function(value) {
-                          return '$' + value;
-                      }
-                  }
-              }]
-          }
       },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              suggestedMin: 0,
+              callback: function (value) {
+                return '$' + value;
+              },
+            },
+          },
+        ],
+      },
+    },
   });
 }
 // Parse a date string like "2020-05" into a JavaScript Date object.
@@ -89,9 +93,9 @@ function parseDate(d) {
   return new Date(year, month);
 }
 function drawCharts(limit) {
-  fetch('/data/project-revenue.json')
-    .then(res => res.json())
-    .then(revenueByProject => {
+  fetch('/data/project_revenue.json')
+    .then((res) => res.json())
+    .then((revenueByProject) => {
       const limitDate = parseDate(limit);
       for ([project, data] of Object.entries(revenueByProject)) {
         let dates = [];
@@ -100,7 +104,11 @@ function drawCharts(limit) {
           if (date >= limitDate) {
             continue;
           }
-          dates.push(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear());
+          dates.push(
+            date.toLocaleString('default', {month: 'long'}) +
+              ' ' +
+              date.getFullYear()
+          );
         }
         let values = Object.values(data).slice(0, dates.length);
         drawChart(project + '-revenue', dates, values);
