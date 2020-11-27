@@ -9,9 +9,9 @@ class InvalidRequestError(Error):
 class InvalidUsernameError(Error):
   pass
 
-def parse_request(user_request_body):
+def parse_request(request_body_raw):
   try:
-    body_parsed = json.loads(user_request_body)
+    body_parsed = json.loads(request_body_raw)
   except json.decoder.JSONDecodeError:
     raise InvalidRequestError('Request body must be valid JSON')
 
