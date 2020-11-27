@@ -123,15 +123,15 @@ The corollary to scoping changes tightly is separating functional and non-functi
 
 Developers inexperienced with code reviews often violate this rule. They'll make two lines of actual code changes, and then their code editor automatically reformats the entire file. The developer either fails to recognize what they did or decides that the new formatting is better. They send out a two-line functional change buried in hundreds of lines of non-functional whitespace changes.
 
-{{<img src="buried-change.png" hasBorder="true" caption="Can you spot the functional change buried in this changelist's whitespace changes?">}}
+{{<img src="buried-change.png" hasBorder="true" caption="Can you spot the functional change buried in this changelist's whitespace noise?">}}
 
 Jumbled changelists are a massive insult to your reviewer. Whitespace-only changes are easy to review. Two-line changes are easy to review. Two-line functional changes lost in a sea of whitespace changes are tedious and maddening.
 
 Developers also tend to mix changes inappropriately while refactoring. I love it when my teammates refactor code, but I hate it when they refactor while changing the code's behavior.
 
-{{<notice type="info">}}
-TODO(mtlynch): Screenshot of a function changing behavior and being refactored at the same time. First screenshot shows everything changing at once, second screenshot shows refactoring in one step followed by behavior change in second.
-{{</notice>}}
+{{<gallery caption="The changelist above makes a single change to behavior, but it's hard to find through all the refactoring changes.">}}
+  {{<img src="mixed-refactoring.png" maxWidth="550px" hasBorder="true">}}
+{{</gallery>}}
 
 If a piece of code requires refactoring *and* behavioral changes, it should happen in two to three changelists:
 
@@ -196,9 +196,7 @@ I frequently run into a scenario where I give someone notes, they update their c
 
 Establish conventions on your team that make it clear who's "holding the baton" at any point. Either the author is working on edits, or the reviewer is writing feedback. There should never be a situation where the process stalls because nobody knows who's doing what. You can accomplish this easily with changelist-level comments that indicate when you're handing control back and forth.
 
-{{<notice type="info">}}
-TODO(mtlynch): Screenshot of someone saying, "Updated! Please take a look."
-{{</notice>}}
+{{<img src="ptal.png" hasBorder="true" caption="Comment on the changelist to communicate explicitly when you hand control back to your reviewer.">}}
 
 For every note that requires action, respond explicitly to confirm that you've addressed it. Some code review tools allow you to mark comments as "resolved." Otherwise, follow a simple convention, like, "Fixed," for each note. If you disagree with the note, politely explain why you declined to take action.
 
@@ -226,11 +224,7 @@ Another useful technique is to guess your reviewer's intent and proactively edit
 
 In tennis, when you're unsure if your opponent's serve landed out of bounds, you give them the benefit of the doubt. There should be a similar expectation for code reviews.
 
->A player in attempting to be scrupulously honest on line calls frequently will keep a ball in play
-that might have been out or that the player discovers too late was out. Even so, the game is
-much better played this way.
->
->-[*THE CODE: The Players' Guide to Fair Play and the Unwritten Rules of Tennis*](https://www.usta.com/content/dam/usta/pdfs/2015_Code.pdfhttps://www.usta.com/content/dam/usta/pdfs/2015_Code.pdf) by the US Tennis Association
+{{<img src="usta.png" hasBorder="true" alt="A player in attempting to be scrupulously honest on line calls frequently will keep a ball in play that might have been out or that the player discovers too late was out. Even so, the game is much better played this way." caption="The US Tennis Association requires players to [give their opponents the benefit of the doubt when making line calls](https://www.usta.com/content/dam/usta/pdfs/2015_Code.pdf).">}}
 
 Some decisions about code are a matter of personal taste. If your reviewer thinks your 8-line function would be better as two 5-line functions, neither of you is objectively "right." It's a matter of opinion which version is better.
 
