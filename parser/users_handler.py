@@ -20,20 +20,10 @@ def parse_request(request_body_raw):
     The parsed request message, as a dict.
   """
   body_parsed = _parse_request_body_raw(request_body_raw)
-  try:
-    username = body_parsed['username']
-  except KeyError:
-    raise InvalidRequestError('Request must include username field')
-
-  if not (1 <= len(username) <= 20):
-    raise InvalidUsernameError('Username must be between 1 and 20 characters')
-
-  try:
-    bio = body_parsed['bio']
-  except KeyError:
-    raise InvalidRequestError('Request must include bio field')
-
-  return {'username': username, 'bio': bio}
+  return {
+    'username': _parse_username(body_parsed),
+    'bio': _parse_bio(body_parsed),
+  }
 
 
 def parse_response(response_body_raw):
@@ -53,6 +43,34 @@ def parse_response(response_body_raw):
     'error_code': error_code,
     'error_message': error_message,
   }
+
+
+def _parse_request_body_raw(request_body_raw):
+  try:
+    return json.loads(request_body_raw)
+  except json.decoder.JSONDecodeError:
+    raise InvalidRequestError('Request body must be valid JSON')
+
+
+def _parse_username(request_body):
+  try:
+    username = request_body['username']
+  except KeyError:
+    raise InvalidRequestError('Request must include username field')
+
+  if not (1 <= len(username) <= 20):
+    raise InvalidUsernameError('Username must be between 1 and 20 characters')
+
+  return username
+
+
+def _parse_bio(request_body):
+  try:
+    return request_body['bio']
+  except KeyError:
+    raise InvalidRequestError('Request must include bio field')
+
+  return {'username': username, 'bio': bio}
 
 
 def _parse_request_body_raw(request_body_raw):
