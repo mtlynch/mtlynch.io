@@ -9,6 +9,7 @@ class InvalidRequestError(Error):
 class InvalidUsernameError(Error):
   pass
 
+
 def parse_request(request_body_raw):
   body_parsed = _parse_request_body_raw(request_body_raw)
 
