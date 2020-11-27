@@ -60,6 +60,9 @@ def _parse_username(request_body):
 
   if not (1 <= len(username) <= 20):
     raise InvalidUsernameError('Username must be between 1 and 20 characters')
+  
+  if username.lower() == 'root':
+    raise InvalidUsernameError('Username cannot be root')
 
   return username
 
