@@ -11,11 +11,6 @@ images:
 - code-review-love/og-cover.jpg
 hide_affiliate_warning: true # No affiliate links in this post
 ---
-
-{{<notice type="danger">}}
-**This article is a work in progress. Please do not distribute.**
-{{</notice>}}
-
 When people talk about code reviews, they focus on rules the reviewer should follow. What about the author? The person who writes the code is just as important to the review as the developer who reads it. There's scarcely any guidance on preparing your code for this process, so authors often sabotage their own reviews out of sheer ignorance.
 
 This article describes best practices for participating in a code review when you're the author. In fact, by the end of this post, you're going to be so good at sending out your code for review that **your reviewer will literally fall in love with you**.
@@ -159,16 +154,7 @@ As the author, [you ultimately control your reaction to feedback](/book-reports/
 
 I try to interpret all notes as helpful lessons. When a reviewer catches an embarrassing bug in my code, my first instinct is to make excuses. Instead, I catch myself and praise my reviewer for their scrupulousness.
 
-{{<notice type="info">}}
-TODO(mtlynch): Make this a screenshot.
-
->`ConvertExcelDateToBasicDate(int32 timestamp) {`
->
->A: This actually won't work for January and February 1900.
->
->B: Wow, nice catch!
-
-{{</notice>}}
+{{<img src="nice-catch.png" hasBorder="true" alt="Two developers are discussing a changelist. doggo: This actually won't work for January and February 1900. mtlynch: Wow, nice catch!" caption="Show gratitude when your reviewer catches a subtle bug in your code.">}}
 
 Surprisingly, it's a **good** sign when your reviewer spots subtle flaws in your code. It indicates that you're packaging your changelists well. Without all the obvious issues like bad formatting and confusing names, your reviewer can focus deeply on logic and design, yielding more valuable feedback.
 
@@ -180,13 +166,8 @@ Many developers react to reviewer mistakes with defensiveness. They take it as a
 
 Even when your reviewer is mistaken, that's still a red flag. If they misread it, will others make the same mistake? Does the reader have to exercise an abnormal level of scrutiny to reassure themselves that a particular bug *isn't* there?
 
-{{<notice type="info">}}
-TODO(mtlynch): Screenshot of two people arguing in a code review.
 
->A: There's a buffer overflow vulnerability here since we never verify that `sourceLength <= destinationLength`.
->
->B: In **my** code? Impossible! The constructor calls `PurchaseHats`, which calls `CheckWeather`, which would have returned an error if the buffer length was incorrect. Try actually **reading** the entire 200k line codebase before you even **begin** to entertain the notion that I'm capable of a mistake.
-{{</notice>}}
+{{<img src="try-actually-reading.png" hasBorder="true" alt="Two developers are arguing in a code review. mtlynch: There's a buffer overflow here, since we never verify that we allocated enough memory in name to fit newNameLen characters. doggo: In my code? Impossible! The constructor calls PurchaseHats, which calls CheckWeather, which would have returned an error if the buffer length was incorrect. Try actually reading the entire 200k line codebase before you even begin to entertain the notion that I’m capable of a mistake." caption="Resist the temptation to prove your reviewer wrong when they make a mistake.">}}
 
 Look for ways to refactor the code, or add comments that make the code more obviously correct. If the confusion stems from obscure language features, rewrite your code using mechanisms that are intelligible to non-experts.
 
@@ -198,11 +179,9 @@ Establish conventions on your team that make it clear who's "holding the baton" 
 
 {{<img src="ptal.png" hasBorder="true" caption="Comment on the changelist to communicate explicitly when you hand control back to your reviewer.">}}
 
-For every note that requires action, respond explicitly to confirm that you've addressed it. Some code review tools allow you to mark comments as "resolved." Otherwise, follow a simple convention, like, "Fixed," for each note. If you disagree with the note, politely explain why you declined to take action.
+For every note that requires action, respond explicitly to confirm that you've addressed it. Some code review tools allow you to mark comments as resolved. Otherwise, follow a simple convention, like, "Done," for each note. If you disagree with the note, politely explain why you declined to take action.
 
-{{<notice type="info">}}
-TODO(mtlynch): Screenshot of Reviewable mark as resolved.
-{{</notice>}}
+{{<img src="reviewable-satisfied.png" hasBorder="true" alt="Reviewable interface shows options: discussing, satisfied, blocking, and working. Satisfied means you think you've addressed the reviewer's note." caption="Code review tools like [Reviewable](https://reviewable.io) and [Gerritt](https://www.gerritcodereview.com/) offer mechanisms for the author to mark specific notes as resolved.">}}
 
 Adjust your response based on your reviewer's effort. If they write a detailed note to help you learn something new, don't just mark it done. Respond thoughtfully to show gratitude for their effort.
 
