@@ -11,7 +11,45 @@ class InvalidUsernameError(Error):
 
 
 def parse_request(request_body_raw):
+  """Parse the body of a user request.
+
+  Args:
+    request_body_raw: Raw request body, as JSON string.
+
+  Returns:
+    The parsed request message, as a dict.
+  """
   body_parsed = _parse_request_body_raw(request_body_raw)
+  return {
+    'username': _parse_username(body_parsed),
+    'bio': _parse_bio(body_parsed),
+  }
+
+
+def parse_response(response_body_raw):
+  """Parse the response from the user request.
+
+  Args:
+    response_body_raw: Raw response body, as JSON string.
+
+  Returns:
+    The parsed response message, as a dict.
+  """
+  body_parsed = _parse_response_body_raw(request_body_raw)
+  error_code = body_parsed['errorCode']
+  error_message = body_parsed['errorMessage']
+
+  return {
+    'error_code': error_code,
+    'error_message': error_message,
+  }
+
+
+def _parse_request_body_raw(request_body_raw):
+  try:
+    return json.loads(request_body_raw)
+  except json.decoder.JSONDecodeError:
+    raise InvalidRequestError('Request body must be valid JSON')
 
   try:
     username = body_parsed['username']
