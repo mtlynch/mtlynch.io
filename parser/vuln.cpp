@@ -24,7 +24,7 @@ private:
 HatManager::HatManager() {}
 
 void HatManager::Rename() {
-    strncpy(newName, name, newNameLen);
+    strncpy(name, newName, newNameLen);
     delete[] newName;
 }
 
