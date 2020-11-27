@@ -10,10 +10,7 @@ class InvalidUsernameError(Error):
   pass
 
 def parse_request(request_body_raw):
-  try:
-    body_parsed = json.loads(request_body_raw)
-  except json.decoder.JSONDecodeError:
-    raise InvalidRequestError('Request body must be valid JSON')
+  body_parsed = _parse_request_body_raw(request_body_raw)
 
   try:
     username = body_parsed['username']
@@ -32,3 +29,10 @@ def parse_request(request_body_raw):
     raise InvalidRequestError('Request must include bio field')
 
   return {'username': username, 'bio': bio}
+
+
+def _parse_request_body_raw(request_body_raw):
+  try:
+    return json.loads(request_body_raw)
+  except json.decoder.JSONDecodeError:
+    raise InvalidRequestError('Request body must be valid JSON')
