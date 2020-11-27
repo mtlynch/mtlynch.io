@@ -30,6 +30,16 @@ def parse_request(request_body_raw):
 
   return {'username': username, 'bio': bio}
 
+def parse_response(response_body_raw):
+  body_parsed = _parse_response_body_raw(request_body_raw)
+  error_code = body_parsed['errorCode']
+  error_message = body_parsed['errorMessage']
+
+  return {
+    'error_code': error_code,
+    'error_message': error_message,
+  }
+
 
 def _parse_request_body_raw(request_body_raw):
   try:
