@@ -61,7 +61,7 @@ Before sending code to your teammate, read it yourself. Don't just check for mis
 
 I find it helpful to take a break between writing my code and reviewing it. People often fire off their changes at the end of the day, but that's when you're least likely to spot your mistakes. Wait until morning, and look at it with fresh eyes before handing a changelist over to your teammate.
 
-{{<img src="what-idiot.jpg">}}
+{{<img src="what-idiot.jpg" alt="First panel: Dog reads changelist and asks 'What idiot wrote this?' Second panel: PR title is 'Sync cron jobs to lunar cycle' with description 'I've added this sync logic to ensure that nature is in harmony with our ETL pipeline. Dictated but not read' signed by the same Dog from the first panel. Third panel: Dog is grimacing.">}}
 
 Adopt your reviewer's environment as much as possible. Use the same diff view that they'll see. It's easier to catch careless errors in a diff view than in your regular source editor.
 
@@ -86,7 +86,7 @@ For an example of an excellent changelist description, see David Thompson's arti
 
 If you rely on your reviewer to notice when your curly braces are on the wrong line or that your change broke the automated test suite, you're egregiously wasting their time.
 
-{{<img src="verify-syntax.jpg">}}
+{{<img src="verify-syntax.jpg" alt="Dog interrupts cat's work, asking 'Can you verify that my code syntax is correct? I'd ask the compiler, but I don't want to waste its time.'">}}
 
 Automated checks should be part of your team's standard workflow. The review begins after [all automated checks pass in a continuous integration environment](/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
@@ -96,13 +96,13 @@ If your team is woefully misguided and refuses to invest in continuous integrati
 
 What's wrong with this picture?
 
-{{<img src="having-trouble.png" hasBorder="true">}}
+{{<img src="having-trouble.png" hasBorder="true" alt="mtlynch: I'm having trouble understanding the purpose of this function. doggo: Oh, it's in case the caller passes a Frombobulator that's missing a frombobulate implementation.">}}
 
 The author helped me understand the function, but what about the next person who reads it? Should they dive into the change history and read every code review discussion ever? Worse is when the author comes over to my desk to give me an in-person explanation, which both interrupts my focus and ensures that nobody else ever has access to the information.
 
 When your reviewer expresses confusion about how the code works, the solution isn't to explain it to that one person. You need to explain it to *everyone*.
 
-{{<img src="late-night-question.jpg" maxWidth="600px">}}
+{{<img src="late-night-question.jpg" maxWidth="600px" alt="Dog: Hello? Cat: When you wrote bill.py six years ago, why'd you make t=6? Dog: I'm glad you called! It's because sales tax is 6%. Cat: Of course! Dog: This is a good way to communicate implementation choices. Cat: smiles">}}
 
 The best way to answer someone's question is to refactor the code and eliminate the confusion. Can you rename things or restructure logic to make it more clear? Code comments are an acceptable solution, but they're strictly inferior to code that documents itself naturally.
 
@@ -118,15 +118,13 @@ The corollary to scoping changes tightly is separating functional and non-functi
 
 Developers inexperienced with code reviews often violate this rule. They'll make two lines of actual code changes, and then their code editor automatically reformats the entire file. The developer either fails to recognize what they did or decides that the new formatting is better. They send out a two-line functional change buried in hundreds of lines of non-functional whitespace changes.
 
-{{<img src="buried-change.png" hasBorder="true" caption="Can you spot the functional change buried in this changelist's whitespace noise?">}}
+{{<img src="buried-change.png" hasBorder="true" alt="Changelist where logic changes are obscured by whitespace changes" caption="Can you spot the functional change buried in this changelist's whitespace noise?">}}
 
 Jumbled changelists are a massive insult to your reviewer. Whitespace-only changes are easy to review. Two-line changes are easy to review. Two-line functional changes lost in a sea of whitespace changes are tedious and maddening.
 
 Developers also tend to mix changes inappropriately while refactoring. I love it when my teammates refactor code, but I hate it when they refactor while changing the code's behavior.
 
-{{<gallery caption="The changelist above makes a single change to behavior, but it's hard to find through all the refactoring changes.">}}
-  {{<img src="mixed-refactoring.png" maxWidth="550px" hasBorder="true">}}
-{{</gallery>}}
+{{<img src="mixed-refactoring.png" maxWidth="550px" hasBorder="true" alt="Changelist where logic changes are obscured by refactoring changes" caption="This changelist makes a single change to behavior, but the refactoring changes obscure it.">}}
 
 If a piece of code requires refactoring *and* behavioral changes, it should happen in two to three changelists:
 
@@ -177,7 +175,7 @@ I frequently run into a scenario where I give someone notes, they update their c
 
 Establish conventions on your team that make it clear who's "holding the baton" at any point. Either the author is working on edits, or the reviewer is writing feedback. There should never be a situation where the process stalls because nobody knows who's doing what. You can accomplish this easily with changelist-level comments that indicate when you're handing control back and forth.
 
-{{<img src="ptal.png" hasBorder="true" caption="Comment on the changelist to communicate explicitly when you hand control back to your reviewer.">}}
+{{<img src="ptal.png" hasBorder="true" alt="Screenshot of author saying 'Updated! Please take a look.'" caption="Comment on the changelist to communicate explicitly when you hand control back to your reviewer.">}}
 
 For every note that requires action, respond explicitly to confirm that you've addressed it. Some code review tools allow you to mark comments as resolved. Otherwise, follow a simple convention, like, "Done," for each note. If you disagree with the note, politely explain why you declined to take action.
 
@@ -215,7 +213,7 @@ A few months ago, a user contributed a small change to an open-source project I 
 
 Six weeks later, the mysterious developer reappeared to submit their revisions. While I appreciated their effort, the lag between rounds of review had doubled my workload. Not only did I have to re-read their code, but I also had to re-read my feedback to bring back to mind the state of the discussion. Had they followed up within a day or two, I wouldn't have had to do all that extra work.
 
-{{<img src="effort-graph.jpg">}}
+{{<img src="effort-graph.jpg" alt="Graph of reviewer's memory vs review latency shows wasted effort when there are long delays between review rounds.">}}
 
 A six-week pause is extreme, but I frequently see long, unnecessary delays among teammates. Someone sends out a changelist for review, receives feedback, then puts it on the back burner for a week because another task distracted them.
 
@@ -228,10 +226,6 @@ Once you send your code out, driving the review to completion should be your hig
 When preparing your changelists for review, remember the golden rule: value your reviewer's time. If you demonstrate that you care about their experience, they'll return the favor. A reviewer who focuses on the interesting parts of your code generates quality feedback. When they have to untangle your code or police simple mistakes you could have caught yourself, you both suffer.
 
 Congratulations! If you've read to this point and integrated these ideas, you're now an expert reviewee. Your reviewer is likely in love with you, so treat them well.
-
-{{<notice type="info">}}
-TODO(mtlynch): Add alt text
-{{</notice>}}
 
 {{<htfp-ad>}}
 
