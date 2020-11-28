@@ -1,11 +1,12 @@
 ---
-title: Why a Freelance Editor Was a Gamechanger for My Blog
+title: How I Hired a Freelance Editor for My Blog
 tags:
 - editing
 - blogging
 - meta
-description: Investing in lifelong writing skills paid dividends immediately.
+description: It's surprisingly easy to hire a blog editor, and it provides tremendous value.
 date: '2017-07-25'
+lastmod: '2020-11-28T00:00:00-04:00'
 images:
 - editor/stole-siacoin-stats.png
 ---
@@ -116,7 +117,7 @@ If you compare the visitor statistics for the three articles I published before 
 |-------|:-----------------------------:|:----------------------------:|
 | ["A Beginner’s Guide to Mining Siacoin"](/windows-sia-mining/) | 709 | 27,871 |
 | ["How I Stole Your Siacoin"](/stole-siacoins/)  | 38,808 | 62,425 |
-| ["GreenPiThumb: A Raspberry Pi Gardening Bot"](/greenpithumb/) | 27,908 | 38,514 (and counting)  |
+| ["GreenPiThumb: A Raspberry Pi Gardening Bot"](/greenpithumb/) | 27,908 | 38,683  |
 
 ## Cost
 
