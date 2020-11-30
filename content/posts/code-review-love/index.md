@@ -5,39 +5,37 @@ tags:
 - culture
 - code style
 description: Best practices for code review when you're the author.
-date: '2020-12-01'
+date: '2020-12-02'
 hero_image: cover.png
 images:
 - code-review-love/og-cover.jpg
 hide_affiliate_warning: true # No affiliate links in this post
 ---
-When people talk about code reviews, they focus on rules the reviewer should follow. What about the author? The person who writes the code is just as important to the review as the developer who reads it. There's scarcely any guidance on preparing your code for this process, so authors often sabotage their own reviews out of sheer ignorance.
+When people talk about code reviews, they focus on the reviewer. But the developer who writes the code is just as important to the review as the person who reads it. There's scarcely any guidance on preparing your code for review, so authors often screw it up out of sheer ignorance.
 
 This article describes best practices for participating in a code review when you're the author. In fact, by the end of this post, you're going to be so good at sending out your code for review that **your reviewer will literally fall in love with you**.
 
 ## But I don't want my reviewer to fall in love with me
 
-They're going to fall in love with you. Deal with it.
-
-Nobody ever complained on their deathbed that too many people fell in love with them.
+They're going to fall in love with you. Deal with it. Nobody ever complained on their deathbed that too many people fell in love with them.
 
 ## Why improve your code reviews?
 
 Improving code review technique helps your reviewer, your team, and, most importantly: you.
 
-* **Learn faster**: If you prepare your changelist properly, it directs your reviewer's attention to areas that support your growth rather than boring issues like style violations. Additionally, your reviewer provides better feedback when you demonstrate an appreciation for constructive criticism.
+* **Learn faster**: If you prepare your changelist properly, it directs your reviewer's attention to areas that support your growth rather than boring style violations. When you demonstrate an appreciation for constructive criticism, your reviewer provides better feedback .
 
-* **Make others better**: The way you participate in code reviews sets an example for your colleagues. Effective author practices rub off on your teammates, which makes your job easier when they send code to you.
+* **Make others better**: Your code review techniques set an example for your colleagues. Effective author practices rub off on your teammates, which makes your job easier when they send code to you.
 
 * **Minimize team conflicts**: Code reviews are a common source of friction. Approaching them deliberately and conscientiously minimizes arguments.
 
 ## The golden rule: value your reviewer's time
 
-This advice sounds obvious, but I often see authors treat reviewers like their personal quality assurance technicians. These authors make zero effort to catch their own errors or to organize their changelist for reviewability.
+This advice sounds obvious, but I often see authors treat reviewers like their personal quality assurance technicians. These authors make zero effort to catch their own errors or to design their changelist for reviewability.
 
-Your teammate arrives at work each day with a finite supply of focus. If they allocate some of it to reviewing your code, that's time they can't spend on their own work. It's only fair that you maximize the value of their time.
+Your teammate arrives at work each day with a finite supply of focus. If they allocate some of it to you, that's time they can't spend on their own work. It's only fair that you maximize the value of their time.
 
-Reviews drastically improve when participants trust each other. Your reviewer puts in more effort when they can count on you to take their feedback seriously. If you treat your reviewer as an obstacle you have to overcome, you miss out on a valuable perspective.
+Reviews drastically improve when participants trust each other. Your reviewer puts in more effort when they can count on you to take their feedback seriously. If you treat your reviewer as an obstacle you have to overcome, you miss out on valuable insights they can offer.
 
 ## Techniques
 
@@ -59,11 +57,11 @@ Reviews drastically improve when participants trust each other. Your reviewer pu
 
 Before sending code to your teammate, read it yourself. Don't just check for mistakes &mdash; imagine reading the code for the first time. What might confuse you?
 
-I find it helpful to take a break between writing my code and reviewing it. People often fire off their changes at the end of the day, but that's when you're least likely to spot your mistakes. Wait until morning, and look at it with fresh eyes before handing a changelist over to your teammate.
+I find it helpful to take a break between writing my code and reviewing it. People often fire off their changes at the end of the day, but that's when you're most likely to overlook careless errors. Wait until morning, and look at the changelist with fresh eyes before handing it over to your teammate.
 
 {{<img src="what-idiot.jpg" alt="First panel: Dog reads changelist and asks 'What idiot wrote this?' Second panel: PR title is 'Sync cron jobs to lunar cycle' with description 'I've added this sync logic to ensure that nature is in harmony with our ETL pipeline. Dictated but not read' signed by the same Dog from the first panel. Third panel: Dog is grimacing.">}}
 
-Adopt your reviewer's environment as much as possible. Use the same diff view that they'll see. It's easier to catch careless errors in a diff view than in your regular source editor.
+Adopt your reviewer's environment as much as possible. Use the same diff view that they'll see. It's easier to catch dumb mistakes in a diff view than in your regular source editor.
 
 Don't expect yourself to be perfect. Inevitably, you'll send out a changelist with debugging code that you forgot to delete or a stray file you meant to exclude. These mistakes aren't the end of the world, but they're worth tracking. Pay attention to your patterns of error, and think about creating systems to prevent them. If they happen too frequently, it signals to your reviewer that you don't value their time.
 
@@ -84,13 +82,13 @@ For an example of an excellent changelist description, see David Thompson's arti
 
 ## 3. Automate the easy stuff
 
-If you rely on your reviewer to notice when your curly braces are on the wrong line or that your change broke the automated test suite, you're egregiously wasting their time.
+If you rely on your reviewer to tell you when your curly braces are on the wrong line or that your change broke the automated test suite, you're wasting their time.
 
 {{<img src="verify-syntax.jpg" alt="Dog interrupts cat's work, asking 'Can you verify that my code syntax is correct? I'd ask the compiler, but I don't want to waste its time.'">}}
 
 Automated checks should be part of your team's standard workflow. The review begins after [all automated checks pass in a continuous integration environment](/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
-If your team is woefully misguided and refuses to invest in continuous integration, automate these checks yourself. Add [git pre-commit hooks](https://www.atlassian.com/git/tutorials/git-hooks), linters, and formatters to your development environment to ensure that your code observes proper conventions and preserves correct behavior.
+If your team is woefully misguided and refuses to invest in continuous integration, automate these checks yourself. Add [git pre-commit hooks](https://www.atlassian.com/git/tutorials/git-hooks), linters, and formatters to your development environment to ensure that your code observes proper conventions and preserves intended behavior on each commit.
 
 ## 4. Answer questions with the code itself
 
@@ -114,7 +112,7 @@ The best changelists just [Do One Thing](https://blog.codinghorror.com/curlys-la
 
 ## 6. Separate functional and non-functional changes
 
-The corollary to scoping changes tightly is separating functional and non-functional changes.
+The corollary to minimizing scope is separating functional and non-functional changes.
 
 Developers inexperienced with code reviews often violate this rule. They'll make two lines of actual code changes, and then their code editor automatically reformats the entire file. The developer either fails to recognize what they did or decides that the new formatting is better. They send out a two-line functional change buried in hundreds of lines of non-functional whitespace changes.
 
@@ -132,13 +130,13 @@ If a piece of code requires refactoring *and* behavioral changes, it should happ
 1. Refactor the production code while holding the test code constant.
 1. Change behavior in the production code and update the tests to match.
 
-By leaving the automated tests untouched in step 2, you prove to your reviewer that your refactoring preserves behavior. When you reach step 3, your reviewer doesn't have to disentangle the behavioral changes from the refactoring changes, as you've decoupled them ahead of time.
+By leaving the automated tests untouched in step 2, you prove to your reviewer that your refactoring preserves behavior. When you reach step 3, your reviewer doesn't have to untangle the behavioral changes from the refactoring changes, as you've decoupled them ahead of time.
 
 ## 7. Break up large changelists
 
-Overly large changelists are the ugly cousins of scope creep. A developer finds that they must modify semantics of libraries A and B in order to introduce feature X. If it's a small set of changes, that's fine, but too many of these sprawling modifications can make the changelist enormous.
+Overly large changelists are the ugly cousins of [scope creep](#5-narrowly-scope-changes). A developer finds that they must modify semantics of libraries A and B in order to introduce feature X. If it's a small set of changes, that's fine, but too many of these sprawling modifications can make the changelist enormous.
 
-A changelist's complexity grows exponentially with its size. When my changes exceed 400 lines of production code, I look for opportunities to break it up before requesting a review.
+A changelist's complexity grows exponentially with the number of code lines it touches. When my changes exceed 400 lines of production code, I look for opportunities to break it up before requesting a review.
 
  Instead of changing everything at once, can you change the dependencies first and add the new feature in a subsequent changelist? Can you keep the codebase in a sane state if you add half of the feature now and the other half in the next changelist?
 
@@ -146,7 +144,7 @@ It's tedious to break up your code to find a subset that makes a working, intell
 
 ## 8. Respond graciously to critiques
 
-The fastest way to ruin a code review is to take feedback personally. This is challenging, as many developers take pride in their work and see it as an extension of themselves. If your reviewer tactlessly frames their feedback [in terms of you personally instead of your work](/human-code-reviews-1/#never-say-you), it's even harder.
+The fastest way to ruin a code review is to take feedback personally. This is challenging, as many developers take pride in their work and see it as an extension of themselves. If your reviewer tactlessly frames their feedback [as a personal attack](/human-code-reviews-1/#never-say-you), it's even harder.
 
 As the author, [you ultimately control your reaction to feedback](/book-reports/7-habits-of-highly-effective-people/#habit-1-be-proactive). Treat your reviewer's notes as an objective discussion about the code, not your personal worth as a human. Responding defensively will only make things worse.
 
@@ -167,7 +165,7 @@ Even when your reviewer is mistaken, that's still a red flag. If they misread it
 
 {{<img src="try-actually-reading.png" hasBorder="true" alt="Two developers are arguing in a code review. mtlynch: There's a buffer overflow here, since we never verify that we allocated enough memory in name to fit newNameLen characters. doggo: In my code? Impossible! The constructor calls PurchaseHats, which calls CheckWeather, which would have returned an error if the buffer length was incorrect. Try actually reading the entire 200k line codebase before you even begin to entertain the notion that I’m capable of a mistake." caption="Resist the temptation to prove your reviewer wrong when they make a mistake.">}}
 
-Look for ways to refactor the code, or add comments that make the code more obviously correct. If the confusion stems from obscure language features, rewrite your code using mechanisms that are intelligible to non-experts.
+Look for ways to refactor the code, or add comments that make the code more [obviously correct](https://wiki.c2.com/?TwoWaysToDesign). If the confusion stems from obscure language features, rewrite your code using mechanisms that are intelligible to non-experts.
 
 ## 10. Communicate your responses explicitly
 
@@ -185,9 +183,9 @@ Adjust your response based on your reviewer's effort. If they write a detailed n
 
 ## 11. Artfully solicit missing information
 
-Sometimes code review notes leave too much to interpretation. When you receive a comment like, "This function is confusing," you probably wonder what "confusing" means, exactly. Is the function too long? Is the name unclear? Does it require more documentation?
+Sometimes code review notes leave too much room for interpretation. When you receive a comment like, "This function is confusing," you probably wonder what "confusing" means, exactly. Is the function too long? Is the name unclear? Does it require more documentation?
 
-For a long time, I struggled with notes like these because it was hard to clarify them without sounding defensive. My instinct was to ask, "What's confusing about it?" but that comes across as grouchy.
+For a long time, I struggled to clarify ambiguous notes without sounding defensive. My instinct was to ask, "What's confusing about it?" but that comes across as grouchy.
 
 Once, I unintentionally sent a vague note to my teammate, and he responded in a way that I found fantastically disarming:
 
@@ -211,7 +209,7 @@ When your reviewer makes a suggestion, and you each have roughly equal evidence 
 
 A few months ago, a user contributed a small change to an open-source project I maintain. I gave them feedback within hours, but they promptly disappeared. I checked again a few days later, and there was still no response.
 
-Six weeks later, the mysterious developer reappeared to submit their revisions. While I appreciated their effort, the lag between rounds of review had doubled my workload. Not only did I have to re-read their code, but I also had to re-read my feedback to bring back to mind the state of the discussion. Had they followed up within a day or two, I wouldn't have had to do all that extra work.
+Six weeks later, the mysterious developer reappeared to submit their revisions. While I appreciated their effort, the lag between rounds of review had doubled my workload. Not only did I have to re-read their code, but I also had to re-read my feedback to restore my memory of the discussion. Had they followed up within a day or two, I wouldn't have had to do all that extra work.
 
 {{<img src="effort-graph.jpg" alt="Graph of reviewer's memory vs review latency shows wasted effort when there are long delays between review rounds.">}}
 
@@ -223,9 +221,13 @@ Once you send your code out, driving the review to completion should be your hig
 
 ## Conclusion
 
-When preparing your changelists for review, remember the golden rule: value your reviewer's time. If you demonstrate that you care about their experience, they'll return the favor. A reviewer who focuses on the interesting parts of your code generates quality feedback. When they have to untangle your code or police simple mistakes you could have caught yourself, you both suffer.
+As you prepare your next changelist for review, consider the factors you control, and use them to guide the review productively. As you participate in reviews, look for patterns that stall progress or waste effort.
 
-Congratulations! If you've read to this point and integrated these ideas, you're now an expert reviewee. Your reviewer is likely in love with you, so treat them well.
+Remember the golden rule: value your reviewer's time. A reviewer generates high-quality feedback when you allow them to focus on the interesting parts of your code. If you require them to untangle your code or police simple mistakes, you both suffer.
+
+Lastly, communicate thoughtfully. It's frighteningly easy for simple miscommunications or thoughtless comments to derail a review. Emotions run hot when discussing code, so be conscious of pitfalls that could make your reviewer feel attacked or disrespected.
+
+Congratulations! If you've reached this point, you're now an expert reviewee. Your reviewer is likely in love with you, so treat them well.
 
 {{<htfp-ad>}}
 
