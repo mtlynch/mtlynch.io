@@ -6,7 +6,9 @@ description: TODO - One-line summary
 
 ## Highlights
 
-*
+* TinyPilot revenue grew 20% to $12k
+* Revenue across all my business jumped 26% to $13,600
+* I launched my first ever paid course
 
 ## Goal Grades
 
@@ -14,7 +16,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Release a high-end version of TinyPilot that arrives pre-assembled in a custom case
 
-* **Result**: Released TinyPilot Voyager
+* **Result**: Released [TinyPilot Voyager](https://tinypilotkvm.com/product/tinypilot-voyager)
 * **Grade**: A
 
 TODO
@@ -49,9 +51,25 @@ Another founder made a compelling argument to me that my largely tech audience i
 | Donations          | $90.00         | $0.00          | <font color="red">-$90.00 (-100%)</font>         |
 | **Total Earnings** | **$10,263.62** | **$12,313.25** | **<font color="green">+$2,049.63 (+20%)</font>** |
 
-## Hardcoding configuration comes back to bite me
+## New products require new habits
 
-## Topic 2
+I'm finding that one of the biggest sources of stress with running TinyPilot as a business is just new things. When I'm in steady state, it's easy to run TinyPilot. It's a simple system: orders come in, my assistant packs them and mails them out. A few customers have support questions, and I answer them.
+
+When we do something new, everything goes haywire and feels stressful. A good example was international shipping. Shipping a product internationally isn't very hard once you know how to do it, but it's hard to figure out how to do it. The first two weeks that I began selling TinyPilot internationally, my assistant and I were stressing out over whether we were including the right documents, assigning the right product codes, calculating shipping prices correctly. Now, we don't even think about it. International orders are like regular orders with a few extra forms.
+
+We successfully launched Voyager, the new high-end
+
+## Hardcoding comes back to bite me
+
+The biggest schedule slip this month was how poorly I estimated the software tasks related to Voyager. In terms of electronics, the Voyager differs from the hobbyist kit only in the HDMI capture device. The original TinyPilot kits ship with low-cost HDMI to USB dongles, which do pretty good video capture, but their main strength is that they only cost $7-10/each, which is what made TinyPilot so affordable.
+
+The Voyager uses a more advanced HDMI capture device. It requires a slightly different configuration. I had tested it a few months ago, and I got the different capture device working without issue, so I figured I'd just update the TinyPilot installer to .
+
+A few problems here. TinyPilot users perform version-to-version upgrades by running an updater script on their device. That updater script would have to preserve the configuration .
+
+1. I updated the uStreamer role to look for 
+1. I updated the TinyPilot installer to place a file in the TinyPilot user's home directory indicating whether this uses the USB dongle or the CSI capture.
+1. I changed the update script to default to check if the device was previously configured for an HDMI to CSI chip or the user explicitly selected that install option. Otherwise, default to settings for the USB dongle.
 
 ## My first paid course
 
