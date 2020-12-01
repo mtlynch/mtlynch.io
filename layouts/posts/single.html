@@ -6,7 +6,9 @@
     <article>
       <header>
         {{ if .Page.Params.hero_image }}
-          <img src="{{ .Page.Params.hero_image }}">
+          <a href="{{ .Page.Params.hero_image }}">
+            <img src="{{ .Page.Params.hero_image }}">
+          </a>
         {{ end }}
         <div class="post-title">
           <h1 class="title">{{ .Title }}</h1>
