@@ -240,6 +240,10 @@ Good luck, and may your code reviews be human-like.
 
 ## Further Reading
 
-Dr. Karl Wiegers is the only author I found who gave the social factors of code reviews their due attention. He summarizes his views nicely in his article, ["Humanizing Peer Reviews."](http://www.processimpact.com/articles/humanizing_reviews.pdf) Written in 2002, its continued relevance demonstrates the long-term value of effective communication.
+Dr. Karl Wiegers is the only author I found who gave due attention to the social factors of code reviews. He summarizes his views nicely in his article, ["Humanizing Peer Reviews."](http://www.processimpact.com/articles/humanizing_reviews.pdf) Written in 2002, its continued relevance demonstrates the long-term value of effective communication.
+
+{{<htfp-ad>}}
+
+---
 
 *This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to [@global4g](https://twitter.com/global4g) for providing valuable feedback on an early draft of this post.*
