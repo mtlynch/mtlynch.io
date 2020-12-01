@@ -186,3 +186,7 @@ Every time I complete the first draft of a new blog post, I check my editor's no
 ---
 
 *Special thanks to my editor, [Samantha Mason](https://www.samanthamasonfreelancer.com), for volunteering her time to edit this piece.*
+
+{{<notice type="info">}}
+**Note**: Samantha is not taking on new editing clients at this time.
+{{</notice>}}
