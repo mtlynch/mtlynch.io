@@ -91,6 +91,9 @@ Here are some brief updates on projects that I still maintain but are not the pr
 ### What got done?
 
 * Launched pre-orders for my [Hacker News course](https://gum.co/htfphn/hacker)
+* Two of my blog posts reached the frong page of Hacker News
+  * [How I Hired a Freelance Editor for My Blog](https://news.ycombinator.com/item?id=25262272)
+  * [Building a Homelab VM Server](https://news.ycombinator.com/item?id=25061823)
 
 ### Lessons learned
 
