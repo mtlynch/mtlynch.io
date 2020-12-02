@@ -10,6 +10,9 @@ hero_image: cover.png
 images:
 - code-review-love/og-cover.jpg
 hide_affiliate_warning: true # No affiliate links in this post
+discuss_urls:
+  reddit: https://www.reddit.com/r/programming/comments/k5cbln/how_to_make_your_code_reviewer_fall_in_love_with/
+  hacker_news: https://news.ycombinator.com/item?id=25277754
 ---
 When people talk about code reviews, they focus on the reviewer. But the developer who writes the code is just as important to the review as the person who reads it. There's scarcely any guidance on preparing your code for review, so authors often screw up this process out of sheer ignorance.
 
