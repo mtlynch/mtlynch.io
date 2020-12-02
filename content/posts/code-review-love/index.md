@@ -103,7 +103,7 @@ The best way to answer someone's question is to refactor the code and eliminate 
 
 ## 5. Narrowly scope changes
 
-Scope creep is a common anti-pattern in code reviews. A developer starts to fix a logic bug, but they notice a UI blemish in the process. "While I'm here," they think, "I'll just fix this other thing." But now they've muddled things. Their reviewer has to figure out which changes serve goal A and which serve goal B 
+Scope creep is a common anti-pattern in code reviews. A developer starts to fix a logic bug, but they notice a UI blemish in the process. "While I'm here," they think, "I'll just fix this other thing." But now they've muddled things. Their reviewer has to figure out which changes serve goal A and which serve goal B.
 
 The best changelists just [Do One Thing](https://blog.codinghorror.com/curlys-law-do-one-thing/). The smaller and simpler the change, the easier it is for the reviewer to keep all the context in their head. Decoupling unrelated changes also allows you to parallelize your reviews across teammates, reducing turnaround time for your changes.
 
@@ -158,7 +158,6 @@ From time to time, reviewers are flat out wrong. Just as you can accidentally wr
 Many developers react to reviewer mistakes with defensiveness. They take it as an affront that someone would insult their code with criticisms that *aren't even true*.
 
 Even when your reviewer is mistaken, that's still a red flag. If they misread it, will others make the same mistake? Does the reader have to exercise an abnormal level of scrutiny to reassure themselves that a particular bug *isn't* there?
-
 
 {{<img src="try-actually-reading.png" hasBorder="true" alt="Two developers are arguing in a code review. mtlynch: There's a buffer overflow here, since we never verify that we allocated enough memory in name to fit newNameLen characters. doggo: In my code? Impossible! The constructor calls PurchaseHats, which calls CheckWeather, which would have returned an error if the buffer length was incorrect. Try actually reading the entire 200k line codebase before you even begin to entertain the notion that I’m capable of a mistake." caption="Resist the temptation to prove your reviewer wrong when they make a mistake.">}}
 
