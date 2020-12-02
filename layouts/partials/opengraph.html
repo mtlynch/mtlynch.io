@@ -11,7 +11,7 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if $.Params.hero_image }}
+{{ if and $.Params.hero_image (not $.Params.images) }}
 <meta property="og:image" content="{{ printf "%s%s" .Permalink $.Params.hero_image }}" />
 {{ else if and .IsPage (eq .Type "book-reports") }}
 <meta property="og:image" content="{{ printf "%s%s" .Permalink "cover.jpg" }}" />
