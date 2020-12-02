@@ -78,7 +78,7 @@ Your changelist description should summarize any background knowledge the reader
 
 A good changelist description explains **what** the change achieves, at a high level, and **why** you're making this change.
 
-For an example of an excellent changelist description, see David Thompson's article, ["My favourite Git commit."](https://dhwthompson.com/2019/my-favourite-git-commit)
+For a deeper dive into writing excellent changelist descriptions, see ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) by Chris Beams and, ["My favourite Git commit"](https://dhwthompson.com/2019/my-favourite-git-commit) by David Thompson.
 
 ## 3. Automate the easy stuff
 
