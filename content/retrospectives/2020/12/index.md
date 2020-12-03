@@ -62,8 +62,8 @@ The biggest TinyPilot event this past month was [the release of TinyPilot Voyage
 
 {{<img src="voyager-angled.jpg" maxWidth="600px" alt="3/4 view photo of TinyPilot Voyager" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager) is the new model of TinyPilot, aimed at business customers.">}}
 
- Unlike my previous products, which ship as "some assembly required" kits, Voyager comes pre-assembled, so it's plug 'n play.
- 
+Unlike my previous products, which ship as "some assembly required" kits, Voyager comes pre-assembled, so it's plug 'n play.
+
 I'm finding that one of the biggest sources of stress with running TinyPilot as a business is just forming new habits. When I'm in steady-state, everything is easy. Orders come in, then my assistant packs them and mails them out. There are a few special cases here and there, but for the most part, once a routine forms, it's low-stress and manageable.
 
 When we do something new, everything goes haywire and gets stressful. It happened when I started selling TinyPilot internationally. Now that I know the process, it's easy, but figuring out the requirements and setting everything up for the first time was bewildering and frustrating.
