@@ -2,6 +2,7 @@
 title: "TinyPilot: Month 5"
 date: 2020-12-01T10:57:20-05:00
 description: TODO - One-line summary
+hide_affiliate_warning: true # No affiliate links in this article
 ---
 
 ## Highlights
@@ -51,29 +52,86 @@ Another founder made a compelling argument to me that my largely tech audience i
 | Donations          | $90.00         | $0.00          | <font color="red">-$90.00 (-100%)</font>         |
 | **Total Earnings** | **$10,263.62** | **$12,313.25** | **<font color="green">+$2,049.63 (+20%)</font>** |
 
+## Adding Voyager and the mysterious sales gap
+
+The biggest TinyPilot news in November was [the release of TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager). It uses a higher-quality video capture device, and I worked with a 3D printing lab to create a nice case for it that packages together all the parts nicely.
+
+{{<img src="voyager-angled.jpg" maxWidth="600px" caption="[Voyager](https://tinypilotkvm.com/product/tinypilot-voyager) is the new model of TinyPilot, aimed at business customers.">}}
+
+ Unlike my previous products, which ship as kits the end-user has to assemble, Voyager comes pre-assembled, so it's plug 'n play.
+
+I expected a big response from Voyager because in the weeks leading up to its launch, whenever I had conversations with business customers interested in purchasing TinyPilot kits, I showed them previews of Voyager, and they said they'd pay much more for it. On launch day, 100% of those customers put their money where their mouths were and purchased Voyager on release day.
+
+Then, for five days, nobody bought any Voyagers. In fact, nobody bought TinyPilot kits of any kind. The rest of the month, I was selling two or three TinyPilots per day. What was going on?
+
+I began worrying. There's a bit of a mysterious art to pricing. I was offering Voyager for $249, and the low-end kit for $169. Was there some pricing psychology to why customers were buying before, and I had broken it by changing pricing?
+
+Then again, it was only five days. Five days is too small a sample to draw any meaningful conclusions when my sales volume ranges from zero to five sales per day. And this sales gap occurred in the five days leading up to Black Friday, so I figured maybe customers were just waiting for me to offer discounts on Black Friday.
+
+Fortunately, Black Friday seemed to break the spell. Over Black Friday weekend, I offered a 20% discount on all TinyPilot products, and I sold 12 Voyagers and one low-end kit. Sales seem to be continuing past Black Friday, as I've sold five Voyagers and two kits in the two days since the sale ended.
+
+## Voyager pricing
+
+Voyager is exciting because it's a product that only I offer, so I can charge a premium for it. My costs for each Voyager are ~$106/unit, so I make a profit of $144 on each unit (58% margins). I have similar margins on the kits, but my profits are lower in absolute terms (~$85/unit) because of the lower price point.
+
+| Product      | Cost    | Retail Price | Profit |
+|--------------|---------|--------------|--------|
+| Hobbyist kit | $84.22  | $169.99      | $85.77 (50.5%)  |
+| Voyager      | $106.22 | $249.99      | $143.77 (57.5%) |
+
+I plan to experiment more with Voyager's pricing, as I suspect there's room to grow upward.
+
+Before I released TinyPilot, one of my business clients said to me, "You should make a custom enclosure for these, because business clients like me would pay $400 for them." TinyPilot replaces enterprise KVMs, where [costs are $600-1,000 per device](https://mtlynch.io/tinypilot/#commercial-solutions). Many of those solutions require clients to run old versions of Java just to access the interface, so it's possible I don't even have to compete with them on price.
+
 ## New products require new habits
 
-I'm finding that one of the biggest sources of stress with running TinyPilot as a business is just new things. When I'm in steady state, it's easy to run TinyPilot. It's a simple system: orders come in, my assistant packs them and mails them out. A few customers have support questions, and I answer them.
+I'm finding that one of the biggest sources of stress with running TinyPilot as a business is just new things. When I'm in steady state, it's easy to run TinyPilot. It's a simple system: orders come in, my assistant packs them and mails them out. There are a few special cases here and there, but for the most part, once a routine forms, it's low-stress.
 
-When we do something new, everything goes haywire and feels stressful. A good example was international shipping. Shipping a product internationally isn't very hard once you know how to do it, but it's hard to figure out how to do it. The first two weeks that I began selling TinyPilot internationally, my assistant and I were stressing out over whether we were including the right documents, assigning the right product codes, calculating shipping prices correctly. Now, we don't even think about it. International orders are like regular orders with a few extra forms.
+When we do something new, everything goes haywire and feels stressful. It happened when I started selling TinyPilot internationally. Now that I know the process, it's easy, but figuring out the process and setting everything up for the first time was stressful.
 
+One of the things I wish I had budgeted for with Voyager was padding time estimates to account for learning new habits.
 We successfully launched Voyager, the new high-end
 
-## Hardcoding comes back to bite me
+## Eliminating sales questions with a product add-on
 
-The biggest schedule slip this month was how poorly I estimated the software tasks related to Voyager. In terms of electronics, the Voyager differs from the hobbyist kit only in the HDMI capture device. The original TinyPilot kits ship with low-cost HDMI to USB dongles, which do pretty good video capture, but their main strength is that they only cost $7-10/each, which is what made TinyPilot so affordable.
+One of the most common questions customers ask about TinyPilot was, "Does it work with servers that have VGA output instead of HDMI?" For the first month, my answer was that a VGA to HDMI adapter would probably work, but I'd never tested it.
 
-The Voyager uses a more advanced HDMI capture device. It requires a slightly different configuration. I had tested it a few months ago, and I got the different capture device working without issue, so I figured I'd just update the TinyPilot installer to .
+After the third inquiry about VGA support, I purchased a VGA to HDMI adapter from Amazon, verified that it worked with TinyPilot, and just began recommending that product to any customers who asked.
 
-A few problems here. TinyPilot users perform version-to-version upgrades by running an updater script on their device. That updater script would have to preserve the configuration .
+As I continued receiving questions about VGA, I started thinking about ways to answer the question before they have to email me. So I did this:
 
-1. I updated the uStreamer role to look for 
-1. I updated the TinyPilot installer to place a file in the TinyPilot user's home directory indicating whether this uses the USB dongle or the CSI capture.
-1. I changed the update script to default to check if the device was previously configured for an HDMI to CSI chip or the user explicitly selected that install option. Otherwise, default to settings for the USB dongle.
+{{<img src="vga-add-on.png" hasBorder="true" caption="Adding a VGA add-on option eliminated my customers' most common pre-sales question.">}}
+
+About one-third of my customers now choose the VGA add-on, so the experiment was a success. I sell the adapter at cost, but it creates convenience for my customers who don't have to go elsewhere to purchase it separately.
+
 
 ## My first paid course
 
-As of this writing, I've sold XX pre-orders, and I'm currently panicking that I made a huge mistake.
+The idea of making a paid course or book has been in the back of my mind for the past couple of years. Two things happened recently that made me think much more seriously about it.
+
+The first was TinyPilot. In the back of my mind, I felt embarrassed to try to sell a course teaching anything when none of my businesses were profitable. I thought back to this joke ad that ran in the 90s where a slick guru tells you to pay $50 for his guide to fast wealth, and the book is titled, *How to Convince People to Send You $50 for a Book*. But with TinyPilot succeeding, I felt like the things I know are demonstrably valuable.
+
+The other factor was [Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo). I've been following Daniel's progress because he [left Amazon](https://danielvassallo.com/only-intrinsic-motivation-lasts/) for reasons similar to [why I left Google](https://mtlynch.io/why-i-quit-google/). In the year after he started working for himself, he released an [ebook about AWS](https://gumroad.com/l/aws-good-parts/dv), which earned $100k, and [a video course about Twitter](https://gumroad.com/l/twitter-audience/dv) that earned $150k. He recorded and published the Twitter course in just 16 hours to test his theory that people care more about information quality than production value.
+
+{{<img src="177-daniel-vassallo.png" maxWidth="650px" caption="[Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo) made me realize how accessible and profitable it is to make a paid video course.">}}
+
+$150k for 16 hours of work? That sounded like a great deal to me!
+
+Okay, I didn't really expect to make $150k, but I thought $20k was achievable. And I fuss too much over editing to do it in 16 hours, but I could probably put together a course in 40 hours.
+
+In the last year, I've realized that one of my unique skills is writing articles that reach the front page of [Hacker News](https://news.ycombinator.com/), so I decided to make a course that teaches everything I've learned about doing that.
+
+{{<img src="htfp-cover.jpg" maxWidth="750px" caption="[*Hit the Front Page of Hacker News*](https://gum.co/htfphn/hacker) is my new video course about writing articles that succeed on [Hacker News](https://news.ycombinator.com/).">}}
+
+I announced the course on Tuesday, and sales have been... slow.
+
+{{<img src="htfp-sales.png" maxWidth="740px" hasBorder="true" alt="Screenshot from Gumroad showing 478 visits to my sales page and 5 sales for $300 total.">}}
+
+As of this writing, I've sold five pre-orders for $300 total. I'm happy to have sales, but I'm a bit worried that I overestimated the market for this book. One possibility is that people are much less interested in pre-paying for a course that's not yet available. I might create a landing page instead that just collects emails to announce the release date and direct people there instead.
+
+I've spent about 30 hours already putting together slides, working on the cover image, and presenting to test audiences, and I haven't even started recording the real course yet. I'd estimate that there's 30-50 hours of work to go, so I'm worried about splitting my focus too much between TinyPilot and this course.
+
+But it's **fine**. I think whatever happens, it'll be an interesting learning experience and will inform whether I do more of this type of work.
 
 ## Legacy projects
 
@@ -92,6 +150,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Amazon Affiliate Earnings | $188.28      | $74.01        | <font color="red">-$114.27 (-61%)</font>    |
 | **Total Earnings**        | **$510.86**  | **$431.52**   | **<font color="red">-$79.34 (-16%)</font>** |
 
+Is It Keto is still chugging along in the background. Amazon Affiliate revenue is dwindling, likely because I haven't updated them in a few months, so many of them are pointing to products that no longer exist. But the process of updating them is 90-180 minutes of tedious work, so I'd rather spend the time on TinyPilot.
+
 ### [Zestful](https://zestfuldata.com)
 
 {{<revenue-graph project="zestful">}}
@@ -104,21 +164,28 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Enterprise Plan Earnings | $0.00        | $872.63       | <font color="green">+$872.63 (+inf%)</font>      |
 | **Total Earnings**       | **$35.05**   | **$901.00**   | **<font color="green">+$865.95 (+2471%)</font>** |
 
+Zestful had a nice jump this month. One of my longtime pay-as-you go customers upgraded to a short-term unlimited plan because he had a big batch of ingredients he needed to parse in a big batch. So that was a nice sale, but it's definitely a one-off.
+
 ## Wrap up
 
 ### What got done?
 
 * Launched pre-orders for my [Hacker News course](https://gum.co/htfphn/hacker)
-* Two of my blog posts reached the frong page of Hacker News
+* Two of my blog posts reached the front page of Hacker News
   * [How I Hired a Freelance Editor for My Blog](https://news.ycombinator.com/item?id=25262272)
   * [Building a Homelab VM Server](https://news.ycombinator.com/item?id=25061823)
 
 ### Lessons learned
 
-* New products need new processes
-  * I underestimated how much additional time and stress Voyager would create.
+* New products need new processes.
+  * Adapting to new processes creates stress.
+  * I underestiated
+* Plan to pay back technical debt
+  * It took two weeks longer than I expected to release Voyager because I forgot about shortcuts I took earlier in TinyPilot's software.
+  * For simplicity, I baked assumptions into the code about which video capture device it would use, and untangling those assumptions was messy.
 
 ### Goals for next month
 
-* Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro)
-* Publish a follow-up blog post about code reviews
+* Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro).
+* Receive TinyPilot reviews from two bloggers or YouTubers with a relevant audience.
+* Record five out of seven parts of my [Hacker News course](https://gum.co/htfphn/hacker).
