@@ -184,6 +184,8 @@ Google was a great place to work, and I learned valuable skills during my time t
 * **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/solo-developer-year-1/)
 * **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
 
+{{< htfp-ad >}}
+
 ---
 
 *Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
