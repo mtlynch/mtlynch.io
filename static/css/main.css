@@ -8,6 +8,35 @@ blockquote {
   line-height: 2.8rem;
 }
 
+.navigation-author {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.navigation-avatar {
+  display: inline-block !important;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.navigation-avatar img {
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 30%;
+}
+
+.navigation-author .name {
+  margin-left: 1rem;
+  font-size: 1.5em;
+}
+
+.content {
+  margin-top: 3rem;
+}
+
 .content article header {
   margin-top: 0.5rem;
 }
