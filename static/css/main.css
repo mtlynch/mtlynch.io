@@ -31,6 +31,7 @@ blockquote {
 .navigation-author .name {
   margin-left: 1rem;
   font-size: 1.5em;
+  text-decoration: none;
 }
 
 .content {
@@ -509,4 +510,23 @@ h4:hover .hanchor {
   padding: 2rem 1rem;
   background-color: rgb(236, 236, 236);
   border: 1px solid rgb(168, 168, 168);
+}
+
+.footer ul {
+  list-style: none;
+  margin: 3rem 0 1rem;
+  padding: 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.footer ul li a {
+  color: #212121;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
 }

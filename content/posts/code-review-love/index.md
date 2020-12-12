@@ -232,7 +232,7 @@ Congratulations! If you've reached this point, you're now an expert reviewee. Yo
 
 ## Further Reading
 
-* [How to do Code Reviews Like a Human](/human-code-reviews-1/): Now that you've learned effective practices from the author side, learn to improve your code reviews when you're the reviewer.
+* [How to Do Code Reviews Like a Human](/human-code-reviews-1/): Now that you've learned effective practices from the author side, learn to improve your code reviews when you're the reviewer.
 
 ---
 
