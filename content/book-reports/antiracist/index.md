@@ -24,7 +24,7 @@ One of my biggest disagreements with the book was that he asserts that no ethnic
 ## Key Takeaways
 
 {{<notice type="info">}}
-Usually, I use the "Key Takeaways" section to share the lessons from the book that I'm applying to my life. This book is a little different in that I think some of his ideas are interesting or worth being aware of, even though I don't necessarily agree with them.
+Usually, I use the "Key Takeaways" section to share the lessons from the book that I'm applying to my life. I'm including ideas here that I'm not necessarily endorsing, but they're ideas I think are interesting or useful to be aware of when participating in discussions about race.
 {{</notice>}}
 
 *
