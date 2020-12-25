@@ -196,7 +196,7 @@ Is It Keto was also my biggest expense, as I outsourced much of the writing. Tha
 | Development                                 | -$3,896 | -$460   | <font color="green">-$3,436 (-88%)</font>
 | [Illustrations](/how-to-hire-a-cartoonist/) | -$599    | -$769   | <font color="red">+$170 (+28%)</font>
 | Hosting                                     | -$309    | -$150   | <font color="green">-$159 (-51%)</font>
-| [Grammarly](https://www.jdoqocy.com/click-8329872-11001874) (Grammar and style checking service) | -$140 | -$140 | - |
+| [Grammarly](https://grammarly.com) (Grammar and style checking service) | -$140 | -$140 | - |
 | [Editing](/editor/)                         | -$75    | -$60 | <font color="green">-$15 (-20%)</font>
 | Domain                                      | -$60    | -$60 | - |
 | **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | <font color="green">+$2,570 (+67%)</font> |
