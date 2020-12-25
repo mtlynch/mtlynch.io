@@ -11,7 +11,7 @@ AMAZON_SUFFIX_PATTERN = re.compile(r'/ref=.*$')
 
 
 def simplify_amazon_url(url):
-  return AMAZON_SUFFIX_PATTERN.sub('', url)
+  return AMAZON_SUFFIX_PATTERN.sub('/', url)
 
 
 def smilify(url):
