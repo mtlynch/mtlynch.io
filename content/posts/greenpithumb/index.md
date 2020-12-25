@@ -66,11 +66,11 @@ The code for GreenPiThumb is open-source and features:
 
 {{< figure src="https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" caption="GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))" >}}
 
-The Raspberry Pi reads *digital* signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](http://amzn.to/2oCFlUO).
+The Raspberry Pi reads *digital* signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](https://smile.amazon.com/gp/product/B0157PFTS0/).
 
-The [DHT11 sensor](https://amzn.to/2mK0s7d) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Raspberry Pi.
+The [DHT11 sensor](https://smile.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Raspberry Pi.
 
-Lastly, we have a [12V water pump](http://amzn.to/2p90wk8), but the Raspberry Pi can only output 5V, so we connect a [12V power adapter](http://amzn.to/2oET4vC)  to the pump in series with a [MOSFET](http://amzn.to/2rpHXZ4). The Raspberry Pi uses the MOSFET as a digital switch, breaking or completing the circuit when it wants to turn its pump off or on.
+Lastly, we have a [12V water pump](https://smile.amazon.com/gp/product/B00PRM9UZ2/), but the Raspberry Pi can only output 5V, so we connect a [12V power adapter](https://smile.amazon.com/gp/product/B000MGG6SC/)  to the pump in series with a [MOSFET](https://smile.amazon.com/FAIRCHILD-SEMICONDUCTOR-FQP30N06L-CHANNEL-MOSFET/dp/B00MMY2E7E/). The Raspberry Pi uses the MOSFET as a digital switch, breaking or completing the circuit when it wants to turn its pump off or on.
 
 ## Software architecture
 
@@ -116,7 +116,7 @@ The other Raspberry Pi gardening projects don't talk about how they spread water
 
 The first time we pumped water into our planter, the tube directed a small stream into one spot, completely soaking that area but leaving the rest of the soil dry. We considered coiling the rubber tubing around the inner wall of the planter and poking holes in the tube, but we weren't sure if this would get enough water to the center part of the soil. We tried using a showerhead, but couldn't figure out how to fasten it water-tight to the tubing and still control the stream's direction.
 
-We ultimately settled on "spray and pray." It was a solution borne out of looking around my apartment and randomly grabbing things that might solve our problem. We cut a finger off of [a small kitchen glove](http://amzn.to/2rQVES9), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the glove using a sewing needle and nail clippers.
+We ultimately settled on "spray and pray." It was a solution borne out of looking around my apartment and randomly grabbing things that might solve our problem. We cut a finger off of [a small kitchen glove](https://smile.amazon.com/gp/product/B0002XJZME/), fastened it to the water tube with a tightly doubled rubber band, and made lots of holes in the glove using a sewing needle and nail clippers.
 
 We turned on the pump, and  the severed finger of the glove immediately shot off the tubing, spraying water all over my apartment's wall. We reattached everything, but this time, stuck a safety pin just in front of the rubber bands so that they couldn't slide forward.
 
@@ -161,9 +161,9 @@ We originally used Dickson Chow's [Plant Friends soil probe](http://dickson.bigc
 
 {{< img src="miracle-gro.png" alt="Miracle-Gro soil" maxWidth="300px" align="right" >}}
 
-Maybe it was the dirt's fault. Our potting soil was this [pre-packaged mix](http://amzn.to/2rchhfH) from Miracle-Gro that featured an "easy to water formula." A bit suspicious, no? Clearly, this was evil, genetically engineered dirt that never dries. That's why our poor soil sensors were so confused.
+Maybe it was the dirt's fault. Our potting soil was this [pre-packaged mix](https://smile.amazon.com/gp/product/B01JIRJK8S/) from Miracle-Gro that featured an "easy to water formula." A bit suspicious, no? Clearly, this was evil, genetically engineered dirt that never dries. That's why our poor soil sensors were so confused.
 
-We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](http://amzn.to/2sCQwNK). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the soil conditions in our GreenPiThumb planter. At the end of three days, we tested our sensor in both types of soil.
+We needed dirt that wouldn't play games with us, so we purchased this [organic potting mix](https://smile.amazon.com/gp/product/B002Y04TK6/). As a test, we filled a plastic cup with the organic soil, added water,  poked holes in the bottom to let it drain, then let it sit for three days to match the soil conditions in our GreenPiThumb planter. At the end of three days, we tested our sensor in both types of soil.
 
 We got the exact same reading: 82% in each. So, we couldn't blame the soil...
 
@@ -190,7 +190,7 @@ Below are some images of our completed GreenPiThumb build:
   {{< img src="greenpithumb-reservoir.jpg" alt="GreenPiThumb reservoir" >}}
 {{</ gallery >}}
 
-The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](http://amzn.to/2oCsaD8), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
+The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](https://smile.amazon.com/gp/product/B00FZAY86C/), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
 {{< video src="timelapse.mp4" >}}
 
@@ -208,9 +208,9 @@ It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/not
 
 ### Electronics: start with the basics
 
-{{< img src="arduino-starter-kit.jpg" alt="Arduino starter kit" maxWidth="300px" align="left" linkUrl="http://amzn.to/2rpRLCf" >}}
+{{< img src="arduino-starter-kit.jpg" alt="Arduino starter kit" maxWidth="300px" align="left" linkUrl="https://smile.amazon.com/gp/product/B009UKZV0A/" >}}
 
-At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](http://amzn.to/2rpRLCf) and went through the tutorials to build a foundation in electronics.
+At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](https://smile.amazon.com/gp/product/B009UKZV0A/) and went through the tutorials to build a foundation in electronics.
 
 These tutorials turned out to be quite enjoyable and useful. They do a good job of starting off easy and incrementally building to more advanced topics. I recommend this kit to any beginners who are interested in electronics.
 
@@ -222,7 +222,7 @@ When it came to the hardware, we were very un-rigorous. I dare say we were a bit
 
 Nothing. It produced nothing. Because that was a terrible strategy for testing hardware. Every electronics component in a system has the potential to fail, either because the component itself is defective or because it's been installed incorrectly. By connecting everything at once, we had no way of figuring out which piece or pieces were broken.
 
-Over time, we learned to test our sensors in isolation. We created standalone [diagnostic scripts](https://github.com/JeetShetty/ansible-role-greenpithumb/tree/master/files) for each hardware component. Every time we tweak the hardware now, the first thing we do is run through the diagnostic scripts to verify that we're getting sane readings. When a new hardware piece is not working, we use our [multimeter](http://amzn.to/2s4VNkw) to systematically detect the root cause. We should have purchased the multimeter much earlier. It only cost $13, but would have saved us countless hours of frustration and headscratching.
+Over time, we learned to test our sensors in isolation. We created standalone [diagnostic scripts](https://github.com/JeetShetty/ansible-role-greenpithumb/tree/master/files) for each hardware component. Every time we tweak the hardware now, the first thing we do is run through the diagnostic scripts to verify that we're getting sane readings. When a new hardware piece is not working, we use our [multimeter](https://smile.amazon.com/gp/product/B01ISAMUA6/) to systematically detect the root cause. We should have purchased the multimeter much earlier. It only cost $13, but would have saved us countless hours of frustration and headscratching.
 
 ## Source Code
 
@@ -237,21 +237,21 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 
 ### GreenPiThumb essentials
 
-* [Raspberry Pi 3 Model B](https://amzn.to/2Tz27iW)
-* [12V water pump](http://amzn.to/2p90wk8)
-* [Raspberry Pi Camera V2 - 8  MP](http://amzn.to/2oEVomw)
-* [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](http://amzn.to/2oET4vC)
-* [MicroSD card (32 GB)](http://amzn.to/2rgHcTC)
-* [Silicone tubing](http://amzn.to/2v73JUM)
-* [FQP30N06L  N-channel MOSFET](http://amzn.to/2rpHXZ4)
-* [Raspberry Pi power supply](http://amzn.to/2rlAMh2)
-* [DHT11 temperature and humidity sensor](https://amzn.to/2mK0s7d)
-* [MCP3008 analog-to-digital converter](http://amzn.to/2poV4tn)
-* [Solderable breadboard (400 tie-point)](http://amzn.to/2nTDOfF)
+* [Raspberry Pi 3 Model B](https://smile.amazon.com/Raspberry-Pi-MS-004-00000024-Model-Board/dp/B01LPLPBS8/)
+* [12V water pump](https://smile.amazon.com/gp/product/B00PRM9UZ2/)
+* [Raspberry Pi Camera V2 - 8  MP](https://smile.amazon.com/dp/B01ER2SKFS/)
+* [100-240v AC to 12 & 5v DC 4pin Molex 2A Power Adapter](https://smile.amazon.com/gp/product/B000MGG6SC/)
+* [MicroSD card (32 GB)](https://smile.amazon.com/dp/B0046XAROG/)
+* [Silicone tubing](https://smile.amazon.com/gp/product/B000FOWGGW/)
+* [FQP30N06L  N-channel MOSFET](https://smile.amazon.com/FAIRCHILD-SEMICONDUCTOR-FQP30N06L-CHANNEL-MOSFET/dp/B00MMY2E7E/)
+* [Raspberry Pi power supply](https://smile.amazon.com/CanaKit-Raspberry-Supply-Adapter-Listed/dp/B00MARDJZ4)
+* [DHT11 temperature and humidity sensor](https://smile.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/)
+* [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/)
+* [Solderable breadboard (400 tie-point)](https://smile.amazon.com/gp/product/B0040Z3012/)
 * [Soil moisture sensor](https://www.sparkfun.com/products/13322)
-* [Rubber glove](http://amzn.to/2rQVES9)
-* [Molex to SATA power cable adapter](http://amzn.to/2wgDg4o)
-* [Light-dependent photoresistor](http://amzn.to/2oCFlUO)
+* [Rubber glove](https://smile.amazon.com/gp/product/B0002XJZME/)
+* [Molex to SATA power cable adapter](https://smile.amazon.com/Cable-Matters-Molex-Power-Adapter/dp/B00STNUB04/)
+* [Light-dependent photoresistor](https://smile.amazon.com/gp/product/B0157PFTS0/)
 * 1-gallon plastic water jug (for reservoir)
 * Safety pin
 * Rubber bands
@@ -260,37 +260,37 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 
 The items below are generic electronics tools and components that you can use for many projects. We bought them because we had zero electronics equipment, so we include them for completeness:
 
-* ~~Netflix and chill wire~~ [Hook up wire](http://amzn.to/2rELX8y)
-* [Soldering iron](http://amzn.to/2qLi3wa)
-* [Assorted resistors](http://amzn.to/2sCUINF)
-* [Wire stripper](http://amzn.to/2sqt5bw)
-* [Soldering stand](http://amzn.to/2qLx2Gc)
-* [Jumper wires](http://amzn.to/2rF93Mc)
-* [Heat shrink tubing](http://amzn.to/2rSdLXV) (to cover solder joints)
-* [Wire cutters](http://amzn.to/2srCW0s)
-* [Solderless breadboard, 830 tie-points](http://amzn.to/2rQH4dh) (for testing)
+* ~~Netflix and chill wire~~ [Hook up wire](https://smile.amazon.com/gp/product/B00B4ZQ3L0/)
+* [Soldering iron](https://smile.amazon.com/gp/product/B01C9P7HDQ/)
+* [Assorted resistors](https://smile.amazon.com/gp/product/B00FVT8I22/)
+* [Wire stripper](https://smile.amazon.com/gp/product/B000JNPQZW/)
+* [Soldering stand](https://smile.amazon.com/gp/product/B00LQG47V0/)
+* [Jumper wires](https://smile.amazon.com/gp/product/B01GK2Q4ZQ/)
+* [Heat shrink tubing](https://smile.amazon.com/gp/product/B01461R89O/) (to cover solder joints)
+* [Wire cutters](https://smile.amazon.com/gp/product/B00FZPDG1K/)
+* [Solderless breadboard, 830 tie-points](https://smile.amazon.com/gp/product/B0195V3682/) (for testing)
 
 ### Gardening supplies
 
-* [10" planter pot](http://amzn.to/2qMosHd)
-* [Potting mix](http://amzn.to/2rgOtxX) (soil)
-* [Kentucky Wonder bush bean seeds](http://amzn.to/2srEHuH)
+* [10" planter pot](https://smile.amazon.com/gp/product/B006GK60PC/)
+* [Potting mix](https://smile.amazon.com/gp/product/B01JIRJK8S/) (soil)
+* [Kentucky Wonder bush bean seeds](https://smile.amazon.com/gp/product/B009YZBG7S/)
 
 ### Optional components
 
-* [Third hand soldering tool](http://amzn.to/2rDucqm)
-  * We started with [this basic clamp stand](http://amzn.to/2rFZJrx), but it was awkward to position and adjust. The bendy model was several times more expensive, but it made the task of soldering simpler and more pleasant.
-* [Bendy camera mount](http://amzn.to/2oCsaD8)
+* [Third hand soldering tool](https://smile.amazon.com/gp/product/B010C504NK/)
+  * We started with [this basic clamp stand](https://smile.amazon.com/gp/product/B000RB38X8/), but it was awkward to position and adjust. The bendy model was several times more expensive, but it made the task of soldering simpler and more pleasant.
+* [Bendy camera mount](https://smile.amazon.com/gp/product/B00FZAY86C/)
   * Great for holding the camera. Long and flexible enough to give you lots of options for finding a good angle and range.
-* [PEX tubing cutter](http://amzn.to/2olsG6N)
+* [PEX tubing cutter](https://smile.amazon.com/dp/B0058I1YW2/)
   * Makes nice clean cuts to the water tubing.
-* [Digital multimeter](http://amzn.to/2s4VNkw)
+* [Digital multimeter](https://smile.amazon.com/gp/product/B01ISAMUA6/)
   * We *highly* recommend you buy a basic multimeter. There's nothing special about this particular one, but it served us well.
-* [Pi camera mount](http://amzn.to/2rDwLbY)
+* [Pi camera mount](https://smile.amazon.com/Raspberry-Pi-Camera-Module-Mount/dp/B00E1UOXMQ/)
   * Allows you to attach the Raspberry Pi camera to a standard 1/4" camera mount, such as the bendy mount above.
-* [Pi camera extension cable (1m)](http://amzn.to/2rQMEfR)
+* [Pi camera extension cable (1m)](https://smile.amazon.com/Adafruit-Flex-Cable-Raspberry-Camera/dp/B01BQUSQNU/)
   * Necessary for positioning the Raspberry Pi camera far away from the Raspberry Pi device itself.
-* [Zip ties](http://amzn.to/2qMoxe5)
+* [Zip ties](https://smile.amazon.com/gp/product/B010CCZJSS/)
   * For fastening tubing or wiring in place.
 
 ## Acknowledgments

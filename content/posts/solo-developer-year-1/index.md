@@ -36,7 +36,7 @@ Okay, that's a bit of a fanciful interpretation. The reason that my profits incr
 
 ## Costly lessons in outsourcing
 
-At first, I had a very [*Four Hour Work Week*](https://amzn.to/2t8r2Ks) mentality:  my job was not to *do* work but rather to *manage* work, so I hired freelancers to do everything.
+At first, I had a very [*Four Hour Work Week*](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) mentality:  my job was not to *do* work but rather to *manage* work, so I hired freelancers to do everything.
 
 Two problems quickly arose:
 

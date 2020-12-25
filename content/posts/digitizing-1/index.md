@@ -75,9 +75,9 @@ Spoiler alert: really hard.
 
 ### My first attempt at video capture
 
-The old family VCR was still in my dad's basement, so I asked him to dig it out next time we met for lunch. I bought a [cheap RCA to USB adaptor](https://amzn.to/36AaH4b) from Amazon, and I was off to the races.
+The old family VCR was still in my dad's basement, so I asked him to dig it out next time we met for lunch. I bought a [cheap RCA to USB adaptor](https://smile.amazon.com/gp/product/B00M7T8T1E/) from Amazon, and I was off to the races.
 
-{{< img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://amzn.to/36AaH4b), the first of many A/V devices I purchased throughout this process." maxWidth="400px" hasBorder="true" >}}
+{{< img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://smile.amazon.com/gp/product/B00M7T8T1E/), the first of many A/V devices I purchased throughout this process." maxWidth="400px" hasBorder="true" >}}
 
 To process the video from the USB capture device, I used VirtualDub, which was a bit dated in 2012, but not *that* dated.
 
@@ -111,7 +111,7 @@ Here's the part where Magic jumps, slowed to 1/5th speed:
 
 Audio correction alone took hours of tedious, maddening work. It finally occurred to me that I might avoid this headache if I chose something other than Amazon's cheapest video capture device. After a bit more research, I bought a new one:
 
-{{< img src="S-Video-capture.jpg" alt="GV-USB2 video capture device" caption="My second attempt at [purchasing a video capture device](https://amzn.to/2X41Fth)" maxWidth="300px" >}}
+{{< img src="S-Video-capture.jpg" alt="GV-USB2 video capture device" caption="My second attempt at [purchasing a video capture device](https://smile.amazon.com/gp/product/B00428BF1Y/)" maxWidth="300px" >}}
 
 Even with the new device, there was still audio skew.
 
@@ -135,7 +135,7 @@ Troubleshooting my hardware was miserable. I'd haul all the equipment out of my 
 
 Oh, a random forum post from 2008 says to install some sketchy, unsigned Chinese device driver? It's a terrible idea, but I'm desperate. It doesn't fix the problem.
 
-I tried different capturing software. I bought a [special VHS tape](https://smile.amazon.com/gp/product/B000001ON6) to clean the magnetic heads of my VCR. I bought a [third capture device](https://amzn.to/36wyIsU). The results were always the same.
+I tried different capturing software. I bought a [special VHS tape](https://smile.amazon.com/gp/product/B000001ON6) to clean the magnetic heads of my VCR. I bought a [third capture device](https://smile.amazon.com/gp/product/B00EAS14KI/ref/). The results were always the same.
 
 Invariably, I'd give up, disconnect everything, and banish the equipment to my closet for another few months.
 

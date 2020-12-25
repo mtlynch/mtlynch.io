@@ -92,7 +92,7 @@ The best way I've found for reading code is to refactor and test as I go. Famed 
 
 >When I look at unfamiliar code, I have to try to understand what it does. I look at a couple of lines and say to myself, oh yes, that’s what this bit of code is doing. With refactoring I don’t stop at the mental note. I actually change the code to better reflect my understanding, and then I test that understanding by rerunning the code to see if it still works.
 >
->-Martin Fowler, [*Refactoring: Improving the Design of Existing Code*](https://amzn.to/2nuHVfv)
+>-Martin Fowler, [*Refactoring: Improving the Design of Existing Code*](https://smile.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672/)
 
 ## Addressing poor code organization
 
@@ -328,7 +328,7 @@ Given how proud I was of these changes, it may surprise you to learn that after 
 
 >...plan to throw one away; you will, anyhow.
 >
->-Fred Brooks, [*The Mythical Man-Month: Essays on Software Engineering*](https://amzn.to/2OTNCQK)
+>-Fred Brooks, [*The Mythical Man-Month: Essays on Software Engineering*](https://smile.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/)
 
 The more I refactored the code, the more I recognized problems with its fundamental architectural. That doesn't mean that I wasted effort in improving the code &mdash; I needed to get my hands dirty to develop a deep understanding. Once I understood everything, I felt comfortable rewriting it from scratch for better maintainability and performance.
 

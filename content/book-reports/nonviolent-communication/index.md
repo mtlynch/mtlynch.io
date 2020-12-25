@@ -2,7 +2,7 @@
 title: "Nonviolent Communication by Marshall B. Rosenberg, Ph.D."
 date: 2020-05-05T00:00:00-04:00
 rating: 7
-purchase_url: https://amzn.to/3bcIjpL
+purchase_url: https://smile.amazon.com/Nonviolent-Communication-Language-Life-Changing-Relationships-dp-189200528X/dp/189200528X/
 ---
 
 *Nonviolent Communication* describes a communication style centered around sharing vulnerability and offering empathy. One of its biggest strengths is in how it highlights common patterns of lazy communication that exclude personal feelings or critical thinking. I also found its discussion of empathy illuminating, as it made me realize ways that I could improve my skills at listening empathetically.
@@ -13,7 +13,7 @@ One of the biggest takeaways for me was how commonplace it is for people to say,
 
 The distinction between "I must do X" and "I'm choosing to do X because..." seemed silly at first, but it grew more reasonable the more I thought about it. Now, I default to, "I *want to* do X." If I don't want to do it, I evaluate whether it's an intermediate step to something I ultimately want or if it's something I don't need to do at all.
 
-The book bears many similarities to [*Crucial Conversations*](https://amzn.to/3dmbUyu). Both emphasize the importance of separating judgments from facts during high stakes conversations. They also both advocate making everyone feel comfortable and heard.
+The book bears many similarities to [*Crucial Conversations*](https://smile.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/0071771328/). Both emphasize the importance of separating judgments from facts during high stakes conversations. They also both advocate making everyone feel comfortable and heard.
 
 *Nonviolent Communication* is a bit mushier in that it focuses on vulnerability and feelings, whereas *Crucial Conversations* is more clinical and process-oriented. Although both books advocate using their techniques in all contexts, I view *Crucial Conversations* as best-suited for professional relationships and *Nonviolent Communication* as a good match for friends and loved ones.
 

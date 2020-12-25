@@ -121,7 +121,7 @@ It's tempting to manage tasks with your email inbox because it *seems* so conven
 * It makes it impossible to order your tasks by priority.
 * It couples the act of reviewing your to-do list with the act of checking for new emails.
 
-Instead, I process each email using the workflow that David Allen popularized in [*Getting Things Done*](https://amzn.to/2J3GIY1):
+Instead, I process each email using the workflow that David Allen popularized in [*Getting Things Done*](https://smile.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563/):
 
 1. If the email doesn't require a response, I archive it.
 1. If the email requires a response I can write in under two minutes, I reply immediately.
@@ -218,7 +218,7 @@ For a long time, I thought I was managing my email and social media well. I wasn
 
 The first problem is that the scenario is a fantasy. If I check Twitter while waiting for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
 
-The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [*Deep Work*](https://amzn.to/2NcYWqL) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
+The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [*Deep Work*](https://smile.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
 
 The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to feel bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're facing a difficult challenge.
 

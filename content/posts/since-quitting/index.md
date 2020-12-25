@@ -114,7 +114,7 @@ This type of search is difficult because it requires KetoHub to determine what p
 
 Throwing away junk words is harder than it looks. I initially solved this by writing lots of rules. One rule was, "remove units of measurement." If someone begins typing "tab..." then "**Tab**asco" is a good match, but "2 **tab**lespoons vinegar" is not. Nobody wants to see recipes based on the fact that they involve a tablespoon of something.
 
-But what about "dash?" It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://amzn.to/2Ks05bh). Okay, I'll refine the rule to, "throw away units of measurement unless it's 'dash' preceded by 'Mrs.'"
+But what about "dash?" It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://smile.amazon.com/Mrs-Dash-Natural-Seasoning-Original/dp/B00U9WHH78/). Okay, I'll refine the rule to, "throw away units of measurement unless it's 'dash' preceded by 'Mrs.'"
 
 That rule doesn't always work either. One recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "*Ms.* Dash."
 

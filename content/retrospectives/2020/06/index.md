@@ -138,7 +138,7 @@ I've been working on a hobby project for the past few weeks that I don't think w
 
 My [current server](/building-a-vm-homelab/) is headless, so there's no keyboard or monitor attached. I just interact with it over SSH. The problem is that if the OS fails to load or I want to change BIOS settings, I'm stuck &mdash; I have to drag the whole server over to my desk and attach my desktop monitor and keyboard to access the server.
 
-For my next server, I've dreamed about getting some sort of virtual console. There are enterprise solutions like [Dell's iDRAC](https://en.wikipedia.org/wiki/Dell_DRAC) and [HP's iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out), but they add several hundred dollars to a server's cost. There are also [KVM over IP devices](https://amzn.to/2ZVT51k), but they also cost $400+ and require bloated client software.
+For my next server, I've dreamed about getting some sort of virtual console. There are enterprise solutions like [Dell's iDRAC](https://en.wikipedia.org/wiki/Dell_DRAC) and [HP's iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out), but they add several hundred dollars to a server's cost. There are also [KVM over IP devices](https://smile.amazon.com/Lantronix-1PORT-Remote-Spider-SLS200USB0-01/dp/B000OH5MDO/), but they also cost $400+ and require bloated client software.
 
 For the past few weeks, I've been trying to build the poor-man's remote console with a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/). The keyboard part works great over the network:
 

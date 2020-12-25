@@ -171,7 +171,7 @@ This process obviously took me a long time, but I hope this article can save oth
   * But steer clear of a company called EverPresent (email me if you want the details).
 * If you do your own capture, buy plenty of disk space.
   * Uncompressed video captures are ~100-200 MB per minute of standard definition video.
-  * I stored everything on my 10 TB [Synology DS412+](http://amzn.to/2pf3unf).
+  * I stored everything on my 10 TB [Synology DS412+](https://smile.amazon.com/Synology-DiskStation-Diskless-Attached-DS412/dp/B007JLE84C/).
 * Record metadata in an application-agnostic format.
   * Clip descriptions, time codes, dates, etc.
   * If you keep it in an application-specific format (or worse, throw it away), you can't reproduce the work if you decide on a different solution.
@@ -193,7 +193,7 @@ This process obviously took me a long time, but I hope this article can save oth
   * If I were starting over, I would have used a static site generator like [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/), or [Gridsome](https://gridsome.org/).
 * Make a montage.
   * Video montages are a fun way to bring together the best moments from several home videos.
-  * Montages are all about the music. ["Slow Show" by The National](https://amzn.to/3d7brAc) is amazing for montages, and nobody else seems to have realized.
+  * Montages are all about the music. ["Slow Show" by The National](https://smile.amazon.com/Slow-Show-Explicit/dp/B000SFZIQI/) is amazing for montages, and nobody else seems to have realized.
 
 ## An end-to-end walkthrough of my process
 

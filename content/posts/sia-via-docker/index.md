@@ -54,7 +54,7 @@ This guide uses the latest version of each software component at the time of wri
 
 Though this guide is written specifically for the Synology DSM system, the steps relating to Docker should be applicable on any platform that supports Docker.
 
-I successfully tested this on a [Synology DS412+](http://amzn.to/2pf3unf), but these steps should work on any Synology NAS with the latest DSM and sufficient CPU/RAM. It should also be straightforward to adapt these instructions to work for another full featured consumer NAS, such as a [QNAP NAS](https://www.qnap.com/en-us/).
+I successfully tested this on a [Synology DS412+](https://smile.amazon.com/Synology-DiskStation-Diskless-Attached-DS412/dp/B007JLE84C/), but these steps should work on any Synology NAS with the latest DSM and sufficient CPU/RAM. It should also be straightforward to adapt these instructions to work for another full featured consumer NAS, such as a [QNAP NAS](https://www.qnap.com/en-us/).
 
 ## Configuring the NAS
 

@@ -184,7 +184,7 @@ It probably took a long time to find a writer that matches your needs. Now, it's
 
 Allow them to share in your mission. If the business is growing thanks to their writing, share those victories with your writer. It's motivating for them to see the impact of their work instead of feeling like they're cranking out thousands of words for a paycheck every few weeks.
 
-With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [*The Elements of Style*](https://amzn.to/30cUr8y) (aka [*Strunk and White*](https://amzn.to/30cUr8y)). I asked her if it would be okay if I sent her a copy, and she happily agreed. Later on, she specifically mentioned that gift as something that made her value the job &mdash; it demonstrated that I was interested in and supportive of her long-term growth as a writer.
+With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [*The Elements of Style*](https://smile.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X/) (aka [*Strunk and White*](https://smile.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X/)). I asked her if it would be okay if I sent her a copy, and she happily agreed. Later on, she specifically mentioned that gift as something that made her value the job &mdash; it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 
 ## Terminating writers
 

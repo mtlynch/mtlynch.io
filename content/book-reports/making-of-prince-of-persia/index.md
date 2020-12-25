@@ -2,7 +2,7 @@
 title: "The Making of Prince of Persia by Jordan Mechner"
 date: 2020-06-10T10:18:48-04:00
 rating: 7
-purchase_url: https://amzn.to/30ePifS
+purchase_url: https://smile.amazon.com/Making-Prince-Persia-Journals-1985-1993-Illustrated/dp/0578627310/
 ---
 
 This book follows the author of the hit 90s computer game *Prince of Persia* through the game's development, release, and several years after. The book consists of diary entries that author Jordan Mechner wrote during that time, with margin notes and accompanying photos and sketches Mechner added for publication.
@@ -13,7 +13,7 @@ I played *Prince of Persia* as a child, so it was a nostalgic treat to revisit d
 
 The feature that most stuck with me about *Prince of Persia* was the realism of the protagonist's physical movements. Reading this book, it seems that this is the same feature that captivated everyone else. It's a unique feeling to find out 30 years later that you're in agreement with everyone else.
 
-The book presents a romantic view of software development. In the 80s and 90s, game developers were more like auteurs, controlling every aspect of a game: code, graphics, music, box art, sales copy. It's fun to get a peek inside Mechner's thought process in creating his games and reading about his conversations with other top developers about design techniques.I was surprised to see how important plot was to everyone, as they often treated the storyline as the game's foundation. It presents an interesting contrast to [Masters of Doom](https://amzn.to/30weAGk), which described id Software's development process as basically, "[John Carmack](https://en.wikipedia.org/wiki/John_Carmack) figured out a new awesome thing he can do with computer graphics, so let's build a game around it."
+The book presents a romantic view of software development. In the 80s and 90s, game developers were more like auteurs, controlling every aspect of a game: code, graphics, music, box art, sales copy. It's fun to get a peek inside Mechner's thought process in creating his games and reading about his conversations with other top developers about design techniques.I was surprised to see how important plot was to everyone, as they often treated the storyline as the game's foundation. It presents an interesting contrast to [Masters of Doom](https://smile.amazon.com/Masters-Doom-Created-Transformed-Culture/dp/0812972155/), which described id Software's development process as basically, "[John Carmack](https://en.wikipedia.org/wiki/John_Carmack) figured out a new awesome thing he can do with computer graphics, so let's build a game around it."
 
 It's also interesting as a social time capsule. During game development, "a group of irate women" at the company collectively raise complaints about [the game's cover art](cover-art.jpg), which featured a menacing Middle Eastern man violently grabbing the wrist of a busty princess. The response from the men is sort of like, "Ugh, these concerns are *so annoying*." One of the men in upper management sends out a condescending email explaining why women are wrong to be offended, and then... that's it. The matter is settled, and it's never addressed again. Later, they celebrate the brilliance of their box art.
 

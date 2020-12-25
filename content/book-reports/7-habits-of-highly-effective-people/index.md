@@ -2,7 +2,7 @@
 title: "The Seven Habits of Highly Effective People by Stephen R. Covey"
 date: 2020-08-03T20:33:09-04:00
 rating: 8
-purchase_url: https://amzn.to/3fGvqqW
+purchase_url: https://smile.amazon.com/Habits-Highly-Effective-People-Powerful/dp/1451639619/
 custom_css: true
 ---
 
@@ -38,13 +38,13 @@ One example was his idea of the [circle of influence vs. the circle of concern](
 ### Character ethic vs. personality ethic
 
 * The first 150 years of American literature on success focuses on principles, values, and how to deeply examine oneself to live with integrity.
-  * [Benjamin Franklin's autobiography](https://amzn.to/2B8DOQP) exemplifies this type of writing.
+  * [Benjamin Franklin's autobiography](https://smile.amazon.com/Autobiography-Benjamin-Franklin-dp-1517387337/dp/1517387337/) exemplifies this type of writing.
 * After World War I, there's a shift toward short-term, superficial techniques to achieve success.
 * "Character ethic": people can only experience true success and sustainable happiness if they learn principles of effective living and consciously align their lives with those principles.
 * "Personality ethic": people can achieve success through short-term, superficial techniques like smiling more or reminding themselves of motivational catchphrases (e.g., "your attitude determines your altitude").
 
 {{<notice type="info">}}
-I wonder if this is a critique of [*How to Win Friends and Influence People*](https://amzn.to/3eMT1Ff), which came out around the time Covey claims this shift occurred.
+I wonder if this is a critique of [*How to Win Friends and Influence People*](https://smile.amazon.com/How-Win-Friends-Influence-People/dp/0671027034/), which came out around the time Covey claims this shift occurred.
 {{</notice>}}
 
 * Personality ethic strategies are sometimes beneficial, but they're secondary.
@@ -178,7 +178,7 @@ Even if you have crystal clear principles, the concert example is still a diffic
 
 >The successful person has the habit of doing the things failures don't like to do. They don't like doing them either necessarily. But their disliking is subordinated to the strength of their purpose.
 >
-> Albert E.N. Gray, [*The Common Denominator of Success*](https://amzn.to/2BhDqje)
+> Albert E.N. Gray, [*The Common Denominator of Success*](https://smile.amazon.com/New-Common-Denominator-Success-Leadership/dp/1933715731/)
 
 * The most extreme approaches to time management require you to [schedule every moment of your day](/book-reports/deep-work/#scheduling-your-day-for-deep-work).
   * Most people dislike having their day overly scheduled because it feels restrictive and leaves too little space for spontaneity.

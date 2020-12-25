@@ -72,7 +72,7 @@ It's a shame I wasn't able to capitalize better on the surge of interest, but I 
 
 Ever since the blog post, managing inventory has taken up 30% of my time and occupied 80% of my thoughts. I keep obsessively checking delivery status on all of my orders and worrying that my orders will grind to a halt because I run out of one piece of the kit.
 
-As of this writing, I could clear my 22-order backlog right now, but I'm out of [USB to TTL cables](https://amzn.to/2DtQse5). That was a part I never worried about sourcing because it consistently arrived within two days of my order. Now turnaround has ballooned to one week, possibly because I'm competing with my readers for a limited supply.
+As of this writing, I could clear my 22-order backlog right now, but I'm out of [USB to TTL cables](https://smile.amazon.com/gp/product/B07D9R5JFK/). That was a part I never worried about sourcing because it consistently arrived within two days of my order. Now turnaround has ballooned to one week, possibly because I'm competing with my readers for a limited supply.
 
 Here are some other scaling issues I've discovered in managing inventory for physical goods:
 
