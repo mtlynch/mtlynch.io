@@ -163,7 +163,7 @@ If you have a blog about pop music, you don't need to hire a professional music 
 
 ### Catch the easy stuff yourself
 
-You're paying a premium for an expert's time, so there's no sense in squandering that time on simple mistakes you could identify yourself. Before sending your writing to an editor, run it through a tool like [Grammarly](https://www.jdoqocy.com/click-8329872-11001874) or Microsoft Word to catch spelling and grammatical errors.
+You're paying a premium for an expert's time, so there's no sense in squandering that time on simple mistakes you could identify yourself. Before sending your writing to an editor, run it through a tool like [Grammarly](https://grammarly.com) or Microsoft Word to catch spelling and grammatical errors.
 
 Part of your proofreading process should also be reading your posts aloud. My editor encouraged me to do this, and I was amazed at how effectively it catches careless errors and unnatural wording.
 

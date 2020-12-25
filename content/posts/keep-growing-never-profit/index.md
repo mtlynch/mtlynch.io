@@ -128,9 +128,9 @@ See the problem?
 
 People don't order any of those things from Amazon. The issue extends far beyond those five. Among the top 100 requests, only a handful are products people might buy through Amazon. This means that there's a massive, revenue-draining disconnect between the foods that readers seek out on Is It Keto and the items they purchase online.
 
-In evaluating business ideas now, I think about revenue from start to finish. For me to receive a dollar of revenue, what sequence of events must occur? Had this been part of my evaluation process for Is It Keto, hopefully I would have spotted the red flag when I got to, "And then the customer asks Amazon to mail them [a head of lettuce](https://amzn.to/2WgKYLD) so that I can collect my affiliate fee."
+In evaluating business ideas now, I think about revenue from start to finish. For me to receive a dollar of revenue, what sequence of events must occur? Had this been part of my evaluation process for Is It Keto, hopefully I would have spotted the red flag when I got to, "And then the customer asks Amazon to mail them [a head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/) so that I can collect my affiliate fee."
 
-{{< img src="amazon-lettuce.jpg" alt="Google Analytics screenshot" caption="For only about 10x what you'd pay at the supermarket, Amazon will mail you [a single head of lettuce](https://amzn.to/2WgKYLD)." maxWidth="800px" hasBorder="True" >}}
+{{< img src="amazon-lettuce.jpg" alt="Google Analytics screenshot" caption="For only about 10x what you'd pay at the supermarket, Amazon will mail you [a single head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/)." maxWidth="800px" hasBorder="True" >}}
 
 ## What I wish I had known
 

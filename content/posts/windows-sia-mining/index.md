@@ -351,28 +351,28 @@ For each GPU chip, I've provided an example GPU product that contains that chip,
 
 GPU | Performance (MH/s) | Example
 ---|---|---
-GTX 660 | 300 | [EVGA GeForce GTX 660](http://amzn.to/2qAGdM8)
-GTX 670 | 400 | [ASUS GeForce GTX 670](http://amzn.to/2qH58Mg)
-GTX 970 | 895 | [EVGA GeForce GTX 970](http://amzn.to/2r25sIO)
-GTX 980 | 1,290 | [GIGABYTE GeForce GTX 980](http://amzn.to/2qDGgY5)
-GTX Titan X | 1,300 | [EVGA GeForce GTX TITAN X](http://amzn.to/2q2Rulz)
-GTX 980 Ti | 1,540 | [GIGABYTE GeForce GTX 980Ti](http://amzn.to/2qH6bvP)
-GTX 980 Ti Hybrid | 1,725 | [EVGA GeForce GTX 980 Ti](https://amzn.to/2MNRd5L)
-GTX 1080 FE | 2,190 | [EVGA GeForce GTX 1080 Founders Edition](https://amzn.to/2GyHpW0)
+GTX 660 | 300 | [EVGA GeForce GTX 660](https://smile.amazon.com/EVGA-GeForce-SUPERCLOCKED-Graphics-02G-P4-2662-KR/dp/B00966IREK/)
+GTX 670 | 400 | [ASUS GeForce GTX 670](https://smile.amazon.com/ASUS-GeForce-GTX-670-DC2-2GD5-GTX670-DC2-2GD5/dp/B0081IFO2C/)
+GTX 970 | 895 | [EVGA GeForce GTX 970](https://smile.amazon.com/EVGA-GeForce-Quieter-Graphics-04G-P4-2974-KR/dp/B00NVODXR4/)
+GTX 980 | 1,290 | [GIGABYTE GeForce GTX 980](https://smile.amazon.com/GIGABYTE-GeForce-GTX-980-WINDFORCE/dp/B00Q7PNNIS/)
+GTX Titan X | 1,300 | [EVGA GeForce GTX TITAN X](https://smile.amazon.com/EVGA-GeForce-GAMING-Graphics-12G-P4-2992-KR/dp/B00UXTN5P0/)
+GTX 980 Ti | 1,540 | [GIGABYTE GeForce GTX 980Ti](https://smile.amazon.com/GIGABYTE-GeForce-GTX-980Ti-GAMING/dp/B00ZJP9DMC/)
+GTX 980 Ti Hybrid | 1,725 | [EVGA GeForce GTX 980 Ti](https://smile.amazon.com/EVGA-GeForce-Whisper-Graphics-06G-P4-4991-KR/dp/B00YDAYOF0/)
+GTX 1080 FE | 2,190 | [EVGA GeForce GTX 1080 Founders Edition](https://smile.amazon.com/EVGA-GeForce-FOUNDERS-Support-11G-P4-6390-KR/dp/B06XH2P8DD/)
 
 ### AMD GPUs
 
 GPU | Performance (MH/s) | Example
 ---|---|---
-R9 270X | 635 | [Gigabyte R9 270X](http://amzn.to/2q2Pxpb)
-R9 380 | 750 | [ASUS STRIX Radeon R9 380](http://amzn.to/2q2Rjqy)
-HD 7970 | 790 | [Sapphire Radeon HD 7970](http://amzn.to/2q2AeNo)
-R9 290 | 1,050 | [Sapphire Radeon R9 290](http://amzn.to/2rBk2Ut)
-R9 290X | 1,200 | [Sapphire Radeon R9 290X](http://amzn.to/2rBSvkZ)
-R9 390x | 1,200 | [Sapphire Radeon NITRO R9 390X](http://amzn.to/2q2APyO)
-R9 Nano | 1,600 | [XFX Radeon R9 Nano](http://amzn.to/2q2PUAb)
-R9 Fury X | 1,800 | [XFX RADEON R9 FURY X](http://amzn.to/2q2PZ6X)
-R9 295x2 | 2,250 | [Sapphire Radeon R9 295X2](http://amzn.to/2q2Xtqs)
+R9 270X | 635 | [Gigabyte R9 270X](https://smile.amazon.com/Gigabyte-GDDR5-2GB-2xDVI-Graphics-GV-R927XOC-2GD/dp/B00FONITCE/)
+R9 380 | 750 | [ASUS STRIX Radeon R9 380](https://smile.amazon.com/Radeon-Overclocked-256-bit-DisplayPort-Graphics/dp/B00ZQ3QVS6/)
+HD 7970 | 790 | [Sapphire Radeon HD 7970](https://smile.amazon.com/Sapphire-DL-DVI-I-SL-DVI-D-PCI-Express-11197-03-40G/dp/B009B6Y01Y/)
+R9 290 | 1,050 | [Sapphire Radeon R9 290](https://smile.amazon.com/Sapphire-Radeon-PCI-Express-Graphics-21227-00-40G/dp/B00FLMKQYW/)
+R9 290X | 1,200 | [Sapphire Radeon R9 290X](https://smile.amazon.com/Sapphire-Radeon-PCI-Express-Graphics-21226-00-40G/dp/B00FLMKQY2/)
+R9 390x | 1,200 | [Sapphire Radeon NITRO R9 390X](https://smile.amazon.com/Sapphire-Radeon-Backplate-Graphics-11241-04-20G/dp/B0196LP8M8/)
+R9 Nano | 1,600 | [XFX Radeon R9 Nano](https://smile.amazon.com/XFX-4096-Bit-Express-CrossFireX-R9-NANO-4SF6/dp/B015121DMA/)
+R9 Fury X | 1,800 | [XFX RADEON R9 FURY X](https://smile.amazon.com/XFX-R9-FURY-4QFA-RADEON-FURY-3xDP/dp/B0106IJXX0/)
+R9 295x2 | 2,250 | [Sapphire Radeon R9 295X2](https://smile.amazon.com/Sapphire-Radeon-PCI-Express-Graphics-21234-00-40G/dp/B00JS8JRHW/)
 
 I do **not** recommend buying a GPU for the express purpose of mining Siacoin. Your profits are determined by Siacoin's market price and the number of other active miners on the network. These variables can change drastically at any time.
 

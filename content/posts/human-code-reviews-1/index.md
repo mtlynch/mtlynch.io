@@ -58,7 +58,7 @@ If a programmer sends you a changelist that they think is awesome, and you write
 
 >That's one reason I don't miss IT, because programmers are very unlikable people... In aviation, for example, people who greatly overestimate their level of skill are all dead.
 >
->-Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](http://amzn.to/2g6oTsV)
+>-Philip Greenspun, co-founder of ArsDigita, excerpted from [*Founders at Work*](https://smile.amazon.com/Founders-Work-Stories-Startups-Early/dp/1430210788/)
 
 It's easy for an author to interpret criticism of their code as an implication that they are an incompetent programmer. Code reviews are an opportunity to share knowledge and make informed engineering decisions. But that can't happen if the author perceives the discussion as a personal attack.
 

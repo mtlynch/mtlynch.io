@@ -74,9 +74,9 @@ As a proof of concept of my Pi-as-KVM idea, I created a simple web app called [K
 
 Keyboard forwarding isn't so useful if you can't see what's happening on the screen. My obvious next step was to find a way to capture my server's display output in the Pi and render it in the browser.
 
-My first attempt at video capture was to use the [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI). Daniel Kučera (aka [danman](https://blog.danman.eu/)) did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
+My first attempt at video capture was to use the [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/). Daniel Kučera (aka [danman](https://blog.danman.eu/)) did an excellent job [reverse engineering](https://blog.danman.eu/new-version-of-lenkeng-hdmi-over-ip-extender-lkv373a/) this device. It was available from Chinese merchants on eBay for around $40, so it seemed like my best option.
 
-{{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) was my first attempt at HDMI video capture." maxWidth="600px">}}
+{{<img src="lkv373a.jpg" alt="Photo of Lenkeng LKV373A HDMI extender" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) was my first attempt at HDMI video capture." maxWidth="600px">}}
 
 Capturing video was tricky because the LKV373A transmitter isn't a video capture device. Its intended purpose is to pair with an LKV373A receiver that converts the network stream back to HDMI output. In danman's investigation, he discovered a way to intercept and capture the video stream, but the LKV373A speaks a non-standard variant of the RTP protocol that few video tools understand.
 
@@ -98,7 +98,7 @@ Fortunately, I found a better solution by complete coincidence.
 
 ### HDMI to USB dongle
 
-While mindlessly scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) about a [low-cost HDMI to USB dongle](https://amzn.to/2YHEvJN) he had just purchased:
+While mindlessly scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) about a [low-cost HDMI to USB dongle](https://smile.amazon.com/Camcorder-Definition-Acquisition-Broadcasting-Conference/dp/B08B4J2XXF/) he had just purchased:
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
@@ -137,7 +137,7 @@ ffplay.exe -i udp://@10.0.0.100:1234/stream
 
 It was so darn convenient, too. The LKV373A was nearly brick-sized and required its own power source and Ethernet cable. The HDMI dongle was as small as a thumb drive and required nothing more than a USB port.
 
-{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://amzn.to/3cxrYfI) (left) was larger and required more connections than the [HDMI dongle](https://amzn.to/2YHEvJN) (right)." maxWidth="700px">}}
+{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) (left) was larger and required more connections than the [HDMI dongle](https://smile.amazon.com/Camcorder-Definition-Acquisition-Broadcasting-Conference/dp/B08B4J2XXF/) (right)." maxWidth="700px">}}
 
 The only problem was, again, latency. The Pi's rebroadcast of the video stream lagged the source computer by 7-10 seconds.
 
@@ -236,19 +236,19 @@ Support TinyPilot's development by purchasing [an official TinyPilot kit](https:
 </div>
 </div>
 
-* [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants work)
+* [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-* [HDMI to USB capture dongle](https://amzn.to/2YHEvJN)
+* [HDMI to USB capture dongle](https://smile.amazon.com/Camcorder-Definition-Acquisition-Broadcasting-Conference/dp/B08B4J2XXF/)
   * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
   * They're generally available on eBay for $11-15.
-* [microSD card](https://amzn.to/2VH0RcL) (Class 10, 8 GB or larger)
-* [HDMI to HDMI cable](https://amzn.to/3gnlZwj)
+* [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)
+* [HDMI to HDMI cable](https://smile.amazon.com/Cable-DisplayPort-marca-AmazonBasics-longitud/dp/B015OW3M1W/)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
 * (Optional) [A USB-C OTG split connector](https://tinypilotkvm.com/product/tinypilot-power-connector)
-  * Requires two additional [USB-A to microUSB cables](https://amzn.to/2Z5eJiF).
+  * Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/gp/product/B01JPDTZXK/).
 * (Optional) A cooling case, heat sink, or fan
   * Choose a case that provides access to the Pi's GPIO pins.
-  * I use [this minimalist, passive cooling case](https://amzn.to/3fG1fAa).
+  * I use [this minimalist, passive cooling case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/).
 
 ### Install Raspberry Pi OS Lite
 
@@ -264,9 +264,9 @@ When you finish preparing the microSD card, insert it into your Pi device.
 
 The Raspberry Pi 4 famously [generates a lot of heat](https://www.jeffgeerling.com/blog/2019/best-way-keep-your-cool-running-raspberry-pi-4). You can run it fine without cooling, but you'll likely hit stability issues over time.
 
-I like [this minimalist case](https://amzn.to/3fG1fAa) because it's inexpensive and passively cools the Pi without the complexity of a powered fan:
+I like [this minimalist case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/) because it's inexpensive and passively cools the Pi without the complexity of a powered fan:
 
-{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://amzn.to/3fG1fAa) cools your Pi well without the complexity of a fan." maxWidth="600px">}}
+{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/) cools your Pi well without the complexity of a fan." maxWidth="600px">}}
 
 ### Connect to the machine via USB
 
@@ -291,7 +291,7 @@ To complete the physical assembly, insert the HDMI dongle into one of the Pi's U
 {{</gallery>}}
 
 {{<notice type="info">}}
-**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a [DisplayPort to HDMI cable](https://amzn.to/2Oy2Con) or a [DVI to HDMI cable](https://amzn.to/2WyWrFg), though I haven't tested these personally.
+**Note**: If the computer you're connecting to has no HDMI output, you should be able to use a [DisplayPort to HDMI cable](https://smile.amazon.com/Rankie-DisplayPort-Cable-Resolution-Ready/dp/B00Z05JMKO/) or a [DVI to HDMI cable](https://smile.amazon.com/AmazonBasics-DVI-to-HDMI-Cable/dp/B014I8UQJY/), though I haven't tested these personally.
 {{</notice>}}
 
 ### Connect an Ethernet cable

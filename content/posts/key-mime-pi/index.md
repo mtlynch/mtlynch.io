@@ -22,15 +22,15 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 ## What you'll need
 
 * A Raspberry Pi that supports USB OTG:
-  * [Raspberry Pi 4](https://amzn.to/3fdarLM) (all variants)
-  * [Raspberry Pi Zero W](https://amzn.to/2BMgOXN)
+  * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants)
+  * [Raspberry Pi Zero W](https://smile.amazon.com/CanaKit-Raspberry-Wireless-Official-Supply/dp/B071L2ZQZX/)
   * Raspberry Pi A and A+ *(verification needed)*
     * [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
 * [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (aka Raspbian)
   * Stretch or later
 * A USB cable
   * For the Pi 4: [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-  * For the Pi Zero W: [Micro-USB to USB-A](https://amzn.to/2B08iE5) (Male/Male)
+  * For the Pi Zero W: [Micro-USB to USB-A](https://smile.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B072J1BSV6/) (Male/Male)
 
 ## Install Raspberry Pi OS Lite
 
@@ -247,7 +247,7 @@ Standard USB ports come up short:
 I currently am still searching for a solution tot his problem. Here are some possible solutions I have not yet tested:
 
 * Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
-* Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://amzn.to/30OyQl6).
+* Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://smile.amazon.com/Raspberry-Supply-SoulBay-Adapter-Android/dp/B07CVH21NC/).
 
 ## Troubleshooting
 
@@ -277,11 +277,11 @@ When testing Key Mime Pi on the Pi Zero W, I ran into a case where writes to `/d
 
 Remote typing is fun, but it's a bit impractical. When you're typing into a system, it generally helps to see the output too.
 
-My next step is to capture HDMI output from the target computer and embed it in Key Mime Pi's web interface. That way, I'll be able to plug my Pi into a headless server and have a virtual console in the browser. It will essentially be a low-cost, hackable [KVM over IP device](https://amzn.to/2ZVT51k).
+My next step is to capture HDMI output from the target computer and embed it in Key Mime Pi's web interface. That way, I'll be able to plug my Pi into a headless server and have a virtual console in the browser. It will essentially be a low-cost, hackable [KVM over IP device](https://smile.amazon.com/Lantronix-1PORT-Remote-Spider-SLS200USB0-01/dp/B000OH5MDO/).
 
-I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender](https://amzn.to/3cxrYfI), but I'm still working on a solution that puts everything in a single browser window with low latency.
+I have a working prototype using [ffplay](https://ffmpeg.org/ffplay.html) and an [HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/), but I'm still working on a solution that puts everything in a single browser window with low latency.
 
-{{<img src="ffplay-key-mime-pi.jpg" alt="Screenshot of Key Mime Pi showing the remote machine's screen" caption="I can view the remote machine's monitor output using an [HDMI extender](https://amzn.to/3cxrYfI), but I'm still working on integrating everything into the browser.">}}
+{{<img src="ffplay-key-mime-pi.jpg" alt="Screenshot of Key Mime Pi showing the remote machine's screen" caption="I can view the remote machine's monitor output using an [HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/), but I'm still working on integrating everything into the browser.">}}
 
 ## Want a pre-configured kit?
 

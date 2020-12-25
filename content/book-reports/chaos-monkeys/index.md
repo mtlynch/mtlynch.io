@@ -2,7 +2,7 @@
 title: Chaos Monkeys by Antonio García Martínez
 date: '2019-05-30'
 rating: 6
-purchase_url: https://amzn.to/2F372Q1
+purchase_url: https://smile.amazon.com/Chaos-Monkeys-Obscene-Fortune-Failure/dp/0062458191/
 ---
 
 An insider's story about Facebook in the years leading up to its IPO. It's surprisingly candid &mdash; it names names and exposes internal Facebook discussions that were never meant to be public.

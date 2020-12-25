@@ -38,9 +38,9 @@ Oh well! Now I have a logo, and I like it. I probably would have preferred havin
 
 I'm not a web developer, and I don't have a good eye for design. When I built the first version of KetoHub, the design was utilitarian with little attention to aesthetics.
 
-{{< img src="hwd-books.jpg" alt="Stack of Hello Web Design books" maxWidth="300px" linkUrl="http://amzn.to/2CXrlfq" >}}
+{{< img src="hwd-books.jpg" alt="Stack of Hello Web Design books" maxWidth="300px" linkUrl="https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/" >}}
 
-In December, I read the book [*Hello Web Design*](http://amzn.to/2CXrlfq) by Tracy Osborn. It's a quick read, written for people in exactly my situation. It doesn't get bogged down in design theory but instead provides simple, practical tips for achieving a successful web design.
+In December, I read the book [*Hello Web Design*](https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/) by Tracy Osborn. It's a quick read, written for people in exactly my situation. It doesn't get bogged down in design theory but instead provides simple, practical tips for achieving a successful web design.
 
 The book gave me good ideas for improving KetoHub's look. Here's the before and after on desktop:
 
@@ -117,7 +117,7 @@ From what I've heard, a good website will bring back at least 10% of its users t
 * Conduct more user interviews
   * When I initially launched, I had keto-dieting friends speak to me on the phone as they tried the site for the first time. I used their feedback to improve the site, but now I want to focus less on first impressions and more on sustained usage.
   * I'll be conducting interviews with strangers who follow keto, then doing a follow-up interview a week later to find out why they did or did not continue using KetoHub after the first day.
-* Read [*Hooked: How to Build Habit-Forming Products*](http://amzn.to/2EZLzFZ) by Nir Eyal
+* Read [*Hooked: How to Build Habit-Forming Products*](https://smile.amazon.com/gp/product/1591847788/) by Nir Eyal
   * I listened to [his interview](https://www.indiehackers.com/podcast/023-nir-eyal-of-hooked) on the Indie Hackers podcast last year and found him insightful. I'm hoping the book will give me ideas for incentivizing my users to return to KetoHub regularly.
 * Set up better event tracking analytics
   * I'd like to build a better understanding of how visitors use KetoHub. I'm currently using Google Analytics, which is nice, but not very powerful. I'd like to ask questions such as, "Of users who return every week, how often do they filter by category? How often do they search?"

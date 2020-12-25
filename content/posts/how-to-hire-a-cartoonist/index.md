@@ -16,9 +16,9 @@ I had just completed a passionate blog post.
 
 Too passionate, maybe, as I had written over 8,000 words. That's 1000x longer than the average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
 
-{{< img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND) by Ali Almossawi" maxWidth="270px" align="right" linkUrl="http://amzn.to/2jy2vND" >}}
+{{< img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[*An Illustrated Book of Bad Arguments*](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/) by Ali Almossawi" maxWidth="270px" align="right" linkUrl="https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/" >}}
 
-I had recently read [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND). It explained the various classes of logical fallacies in a beautiful children's book style. I was impressed at how well it used illustrations to make dry academic ideas fun and easy to consume.
+I had recently read [*An Illustrated Book of Bad Arguments*](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/). It explained the various classes of logical fallacies in a beautiful children's book style. I was impressed at how well it used illustrations to make dry academic ideas fun and easy to consume.
 
 Maybe cartoons could have the same effect on my massive tome of a blog article.
 
@@ -63,7 +63,7 @@ Sofia was the first artist to submit her sample. I liked it. The animals were *j
 
 Manel's submission was impressive in how *closely* it matched the style of *An Illustrated Book of Bad Arguments*. Her first sketch was even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were blatantly ripping off the book.
 
-{{< img src="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" caption="\"Appeal to Ignorance,\" from [*An Illustrated Book of Bad Arguments*](http://amzn.to/2jy2vND)" maxWidth="400px" >}}
+{{< img src="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" caption="\"Appeal to Ignorance,\" from [*An Illustrated Book of Bad Arguments*](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/)" maxWidth="400px" >}}
 
 ### Christine's submission
 

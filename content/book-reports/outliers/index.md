@@ -2,7 +2,7 @@
 title: Outliers by Malcolm Gladwell
 date: '2019-12-16'
 rating: 5
-purchase_url: https://amzn.to/2LATHSa
+purchase_url: https://smile.amazon.com/gp/product/0316017930/
 ---
 
 Like all Gladwell books, *Outliers* does an excellent job of building an engaging narrative out of topics that the average person might otherwise find inaccessible. His exploration into the causes of airline crashes was especially fascinating.

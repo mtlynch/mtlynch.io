@@ -2,7 +2,7 @@
 title: Deep Work by Cal Newport
 date: '2018-08-26'
 rating: 9
-purchase_url: https://amzn.to/2NcYWqL
+purchase_url: https://smile.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/
 ---
 
 This was my favorite book of 2018. It profoundly impacted the way I approach my work and organize my time. After reading it, I find it easier to maintain concentration and to prioritize important tasks. It was also the final push I needed to un-addict myself from social media.
@@ -69,7 +69,7 @@ This was my favorite book of 2018. It profoundly impacted the way I approach my 
 
 >Ironically, jobs are actually easier to enjoy than free time, because like flow activities they have built-in goals, feedback, rules, and challenges, all of which encourage one to become involved in one’s work, to concentrate, and lose oneself in it. Free time, on the other hand, is unstructured, and requires much greater effort to be shaped into something that can be enjoyed.
 >
-> -Mikhail Csikszentmihalyi, [*Flow*](https://amzn.to/2GQnchd)
+> -Mikhail Csikszentmihalyi, [*Flow*](https://smile.amazon.com/Flow-Psychology-Experience-Perennial-Classics/dp/0061339202/)
 
 * Deep work requires periods of idle detachment
   * Your brain needs to relax with something unrelated to the target of your focus.

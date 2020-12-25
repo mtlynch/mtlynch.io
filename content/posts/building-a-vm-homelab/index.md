@@ -7,7 +7,6 @@ tags:
 - esxi
 description: I built a home server to host my development VMs and went a bit overboard.
 date: '2020-10-06'
-hide_affiliate_warning: true # No affiliate links in this article
 images:
 - building-a-vm-homelab/build-components.jpg
 discuss_urls:

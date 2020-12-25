@@ -103,7 +103,7 @@ There's an anti-pattern I see frequently where the reviewer identifies something
 
 >If a hungry little mouse shows up on your doorstep, you might want to give him a cookie. And if you give him a cookie, he'll ask for a glass of milk. He'll want to look in a mirror to make sure he doesn't have a milk mustache, and then he'll ask for a pair of scissors to give himself a trim...
 >
->-Laura Joffe Numeroff, [*If You Give a Mouse a Cookie*](http://amzn.to/2iFNk4u)
+>-Laura Joffe Numeroff, [*If You Give a Mouse a Cookie*](https://smile.amazon.com/If-You-Give-Mouse-Cookie/dp/0060245867/)
 
 The rule of thumb is: if the changelist doesn't touch the line, it's out of scope.
 
@@ -204,7 +204,7 @@ Messy review arguments tend to be less about the code and more about the relatio
 * Take a break from each other.
   * If possible, avoid sending each other code reviews for a few weeks until things cool down.
 * Study conflict resolution.
-  * I found the book [*Crucial Conversations*](http://amzn.to/2hvUbsP) to be helpful. Its advice may sound common-sense, but there's tremendous value in analyzing your approach to conflict while you're not in the heat of an argument.
+  * I found the book [*Crucial Conversations*](https://smile.amazon.com/Crucial-Conversations-Talking-Stakes-Business/dp/0071771328/) to be helpful. Its advice may sound common-sense, but there's tremendous value in analyzing your approach to conflict while you're not in the heat of an argument.
 
 ## My worst code review: revisited
 

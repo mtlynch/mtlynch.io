@@ -2,7 +2,6 @@
 title: "TinyPilot: Month 4"
 date: 2020-11-03T08:18:10-05:00
 description: My first $10k month.
-hide_affiliate_warning: true # No affiliate links on this page
 images:
 - /retrospectives/2020/11/shopify-dashboard.png
 ---

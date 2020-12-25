@@ -185,7 +185,7 @@ After that, I organized my kitchen so that all of my cooking tools were in more 
 
 Related to the above, I realized that Leah was probably uncomfortable telling me that I was missing kitchen equipment that she needed. If I wanted to find out about problems, I'd need to ask her. Aside from that, she's in my home working for me, so I wanted to make sure I was treating her with respect and fostering a good work environment.
 
-After the first session, I reached out to Leah to ask if there were any changes I could make to the process or to my kitchen setup to improve the work experience for her. Interestingly, she brought up my [Magic Bullet](http://amzn.to/2q7Azyh), a small blender I use for its ease of cleaning.  She told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a basic one](http://amzn.to/2q0aCou) from Amazon for $50. Easy peasy.
+After the first session, I reached out to Leah to ask if there were any changes I could make to the process or to my kitchen setup to improve the work experience for her. Interestingly, she brought up my [Magic Bullet](https://smile.amazon.com/dp/B017IATJ6U/), a small blender I use for its ease of cleaning.  She told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a basic one](https://smile.amazon.com/dp/B00AN9UJ68/) from Amazon for $50. Easy peasy.
 
 I've made this feedback check a regular practice, and it continues to bring forth useful suggestions from Leah. Many of her recommendations have come in handy even when I'm just cooking for myself.
 

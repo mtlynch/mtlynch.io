@@ -56,41 +56,41 @@ In Brian's blog post, he was excited to take advantage of the [low price of used
 
 I overclock the CPU on my main PC, but this also leads to occasional crashes. Because I want to keep my VM server as stable as possible, I decided not to overclock this system. The happy consequence of this is that choosing parts easier and less expensive because I don't need to pay a premium for an unlocked CPU, a motherboard that supports overclocking, or a premium CPU cooler.
 
-I ended up going with the [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI). It's 8 cores, 16 threads, so it should be a good fit for running many VMs and it has been getting a lot of good reviews lately.
+I ended up going with the [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/). It's 8 cores, 16 threads, so it should be a good fit for running many VMs and it has been getting a lot of good reviews lately.
 
 ### Motherboard
 
-{{< img src="motherboard.png" alt="ASRock AB350M-HDV" maxWidth="250px" align="left" linkUrl="https://amzn.to/30cTkCg" >}}
+{{< img src="motherboard.png" alt="ASRock AB350M-HDV" maxWidth="250px" align="left" linkUrl="https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/" >}}
 
 I live in a pretty small 1 BR apartment in Manhattan, so physical space is at a premium. My requirements also obviated a lot of components that typically requires a lot of physical space in a PC, such as disk drives, GPUs, or premium CPU fans.
 
-These requirements led me towards MicroATX motherboards and I ultimately chose the [ASRock AB350M-HDV](https://amzn.to/30cTkCg). I've had good success with ASRock boards in the past and this seemed to be a solid option. I was hesitant about its memory support, as it only has two RAM slots, which means I could install 2x16 GB sticks with no room for expansion. I figured if I ever run out of RAM, 2x32 GB sticks would probably be available by then and I'll just bite the bullet and replace both sticks.
+These requirements led me towards MicroATX motherboards and I ultimately chose the [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/). I've had good success with ASRock boards in the past and this seemed to be a solid option. I was hesitant about its memory support, as it only has two RAM slots, which means I could install 2x16 GB sticks with no room for expansion. I figured if I ever run out of RAM, 2x32 GB sticks would probably be available by then and I'll just bite the bullet and replace both sticks.
 
 In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the [parts review](#review-motherboard) below).
 
 ### Memory
 
-{{< img src="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" maxWidth="250px" align="right" linkUrl="https://amzn.to/2JsJ1Dr" >}}
+{{< img src="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" maxWidth="250px" align="right" linkUrl="https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/" >}}
 
-My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://amzn.to/2JsJ1Dr) because these were the fastest RAM sticks tested compatible with my motherboard.
+My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) because these were the fastest RAM sticks tested compatible with my motherboard.
 
 ### Disk
 
 {{< img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" maxWidth="590px" align="left" linkUrl="https://www.amazon.com/gp/product/B00TGIVZTW/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li2&tag=mtlynch-20&linkId=5406b1b2957a1e42f41c407ba8fd6559" >}}
 
-Like Brian, [I have a NAS](/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](http://amzn.to/2pyfArr) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
+Like Brian, [I have a NAS](/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](https://smile.amazon.com/gp/product/B00TGIVZTW/) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
 
 ### Case
 
-{{< img src="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" maxWidth="180px" align="right" linkUrl="https://amzn.to/2JcxBEU" >}}
+{{< img src="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" maxWidth="180px" align="right" linkUrl="https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/" >}}
 
-For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](https://amzn.to/2JcxBEU) is a nice, small, inexpensive, and functional.
+For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/) is a nice, small, inexpensive, and functional.
 
 ### Graphics
 
 I'm mainly going to run this system headless and just manage it over SSH/Ansible, but I need a display occasionally (e.g. during initial install or when I accidentally break the network configuration). I initially *thought* I could use the motherboard's integrated graphics support, but I could not (see the [parts review](#review-motherboard) below).
 
-Because my requirements for the GPU were flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](http://amzn.to/2qmwmHO).
+Because my requirements for the GPU were flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/).
 
 It didn't make sense to buy a dedicated monitor for this system because 99.99% of the time, I'd be managing it headless. The remaining .01% of the time, I can just crawl under my desk and move my main monitor's HDMI cable from my primary desktop to my VM server.
 
@@ -98,7 +98,7 @@ It didn't make sense to buy a dedicated monitor for this system because 99.99% o
 
 I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would fail to detect the NIC...
 
-At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
+At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
 
 Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadcom NIC *was* compatible.
 
@@ -106,14 +106,14 @@ Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadc
 
 | Category | Component |
 |------|-------|
-| CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) |
-| Motherboard | [ASRock AB350M-HDV](https://amzn.to/30cTkCg) |
-| Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) |
-| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://amzn.to/2JsJ1Dr) |
-| Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](http://amzn.to/2oVMo9u) |
-| Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](http://amzn.to/2qmwmHO) |
-| Network | [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH) |
-| Case | [Rosewill Micro ATX SRM-01](https://amzn.to/2JcxBEU) |
+| CPU | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/) |
+| Motherboard | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/) |
+| Disk | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/) |
+| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) |
+| Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/) |
+| Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/) |
+| Network | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/) |
+| Case | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/) |
 | **Total Cost** | **$823.55** |
 
 ## Build
@@ -215,7 +215,7 @@ My one regret is that I didn't read the onboard video support carefully enough. 
 
 So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics *only if* you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them, so no onboard graphics for me.
 
-If I did this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](https://amzn.to/2Xoms7H) just for the simplicity of having an onboard GPU.
+If I did this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](https://smile.amazon.com/GIGABYTE-GA-AB350-Gaming-Fusion-HDMI1-4-Motherboard/dp/B06VWHXK94/) just for the simplicity of having an onboard GPU.
 
 ### Review: RAM
 

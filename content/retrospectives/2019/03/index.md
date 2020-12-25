@@ -49,7 +49,7 @@ It's hard to say because I wasn't collecting fine-grained metrics in January, bu
 
 Things looked good at the start of the month. I mentioned Is It Keto in [an article on my personal blog](/solo-developer-year-1/), and that post [reached the front page of Hacker News](https://news.ycombinator.com/item?id=19054150). It was a one-time bump, but it was a nice boost for affiliate revenue for the week. Then, I realized I mixed up my tracking IDs.
 
-I use a single Amazon account for all of my projects, but each of my websites has its own unique tracking ID so that I can see revenue on a per-site basis. When you create an Amazon Affiliate link, it auto-populates the tracking ID with whatever you used last. I had been generating lots of links for Is It Keto, so I didn't notice that when I generated a link for [*Four Hour Work Week*](https://amzn.to/2t8r2Ks) on my blog, I forgot to change the tracking ID.
+I use a single Amazon account for all of my projects, but each of my websites has its own unique tracking ID so that I can see revenue on a per-site basis. When you create an Amazon Affiliate link, it auto-populates the tracking ID with whatever you used last. I had been generating lots of links for Is It Keto, so I didn't notice that when I generated a link for [*Four Hour Work Week*](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) on my blog, I forgot to change the tracking ID.
 
 {{< img src="amazon-affiliate-screwup.jpg" alt="Generating an Amazon Affiliate link" caption="I forgot to change my tracking ID, leading to accounting confusion for Is It Keto" maxWidth="800px" hasBorder="True" >}}
 
