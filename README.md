@@ -31,7 +31,7 @@ If the PR fixes an issue, include the text "Fixes #XX" in the PR description, wh
 
 If HTMLProofer fails on a broken link, we have three options: suppress the error, fix the link, or remove the link.
 
-You should suppress the error if the link works fine in a browser, but fails in Travis occasionally. To do this, open `_tests/build`, update the `--url-ignore` flag for the `htmlproofer` command. Add a comment above the command to explain why we're adding this suppression. Be especially conservative about suppressing warnings on affiliate links (links to products that can be purchased) because we care when these die.
+You should suppress the error if the link works fine in a browser, but fails in Travis occasionally. To do this, open `_tests/build`, update the `--url-ignore` flag for the `htmlproofer` command. Add a comment above the command to explain why we're adding this suppression.
 
 If the link is just permanently broken and does not load, even in a browser, either replace the link with another that achieves the same effect or remove the link entirely.
 
