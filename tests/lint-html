@@ -36,5 +36,5 @@ htmlproofer "$BUILD_DIR" \
   --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/,/mediagoblin-v5lmqis51k.herokuapp.com/,/servernope.com/" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends `
   `# requests, so ignore those.` \
-  --http_status_ignore "400,429" \
+  --http-status-ignore "400,429" \
   "$htmlproofer_args_extra"
