@@ -50,7 +50,7 @@ There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](ht
 
 ### CPU
 
-{{< img src="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" maxWidth="390px" align="right" linkUrl="https://www.amazon.com/dp/B06WP5YCX6/ref=as_li_ss_il?&linkCode=li3&tag=mtlynch-20&linkId=54dcc577d5c28eef7c3514b05b53b8be" >}}
+{{< img src="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" maxWidth="390px" align="right" linkUrl="https://smile.amazon.com/dp/B06WP5YCX6/" >}}
 
 In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new, retail CPU.
 
@@ -76,7 +76,7 @@ My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (ev
 
 ### Disk
 
-{{< img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" maxWidth="590px" align="left" linkUrl="https://www.amazon.com/gp/product/B00TGIVZTW/ref=as_li_ss_il?ie=UTF8&psc=1&linkCode=li2&tag=mtlynch-20&linkId=5406b1b2957a1e42f41c407ba8fd6559" >}}
+{{< img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" maxWidth="590px" align="left" linkUrl="https://smile.amazon.com/gp/product/B00TGIVZTW/" >}}
 
 Like Brian, [I have a NAS](/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](https://smile.amazon.com/gp/product/B00TGIVZTW/) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
 
