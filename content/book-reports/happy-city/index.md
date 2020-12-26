@@ -2,7 +2,7 @@
 title: Happy City by Charles Montgomery
 date: '2018-08-06'
 rating: 8
-purchase_url: https://smile.amazon.com/Happy-City-Transforming-Through-Design/dp/0374534888/
+purchase_url: https://www.indiebound.org/book/9780374534882
 ---
 
 Given how much urban design affects our lives, it's surprising how little we think about and participate in it. This book was eye-opening in terms of the way I look at cities and how its inhabitants interact with them.

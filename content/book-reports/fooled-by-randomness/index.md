@@ -2,7 +2,7 @@
 title: Fooled by Randomness by Nassim Nicholas Taleb
 date: '2018-09-04'
 rating: 5
-purchase_url: https://smile.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/
+purchase_url: https://www.indiebound.org/book/9780812975215
 ---
 
 The book contains many interesting examples of common biases and logical fallacies, but it's buried in a lot of bluster and fluff about how smart the author is. While it was likely groundbreaking when it was published in 2004, its ideas have since permeated into the mainstream. Reading it in 2018, the ideas feel neither novel nor original. [*Thinking Fast and Slow*](https://smile.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/) covers the same material with more depth and better writing.
