@@ -23,7 +23,7 @@ def find_all_matches(pattern, text):
 
 
 def replace_affiliate_tags(path):
-  with open(path, 'r+', encoding='utf-8') as f:
+  with open(path, encoding='utf-8') as f:
     contents = f.read()
     for amazon_url in find_all_matches(AMAZON_URL_PATTERN, contents):
       simple_url = smilify(simplify_amazon_url(amazon_url))
@@ -35,7 +35,7 @@ def replace_affiliate_tags(path):
         url = ex.geturl()
       simple_url = smilify(simplify_amazon_url(url))
       contents = contents.replace(short_link, simple_url)
-    f.seek(0)
+  with open(path, 'w', encoding='utf-8') as f:
     f.write(contents)
 
 
