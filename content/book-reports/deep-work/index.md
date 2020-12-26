@@ -2,7 +2,7 @@
 title: Deep Work by Cal Newport
 date: '2018-08-26'
 rating: 9
-purchase_url: https://smile.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/
+purchase_url: https://www.indiebound.org/book/9781455586691
 ---
 
 This was my favorite book of 2018. It profoundly impacted the way I approach my work and organize my time. After reading it, I find it easier to maintain concentration and to prioritize important tasks. It was also the final push I needed to un-addict myself from social media.

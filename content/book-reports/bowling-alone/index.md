@@ -2,7 +2,7 @@
 title: "Bowling Alone by Robert D. Putnam"
 date: 2020-11-14T17:55:30-05:00
 rating: 3
-purchase_url: https://smile.amazon.com/dp/0743203046/
+purchase_url: https://www.indiebound.org/book/9780743203043
 ---
 
 The idea of social capital has interested me for a long time, but when I finally sat down to read this book, it was painfully dry. It offers an eye-opening investigation into the many ways that civic engagement has declined in the US, but it was a real slog to get through.
@@ -12,7 +12,7 @@ The idea of social capital has interested me for a long time, but when I finally
 I find [the idea of social capital](/book-reports/bowling-alone/#social-capital) fascinating, and I was hoping the book would delve further into how to foster social capital in a community. Social capital profoundly affects society, but people forget about it when considering policy issues. In that way, the book reminded me of [*Happy City*](/book-reports/happy-city/), which described how city design affects happiness and community bonds among residents. The difference is that *Happy City* found ways to make the research lively and engaging, whereas *Bowling Alone* felt like it was endlessly throwing charts at me.
 
 {{<notice type="info">}}
-**Note**: A [revised 2020 edition](https://smile.amazon.com/Bowling-Alone-Collapse-American-Community/dp/1982130849/) came out while I was reading the book, but my notes are for the [first edition](https://smile.amazon.com/dp/0743203046/), published in 2001.
+**Note**: A [revised 2020 edition](https://www.indiebound.org/book/9781982130848) came out while I was reading the book, but my notes are for the [first edition](https://www.indiebound.org/book/9780743203043), published in 2001.
 {{</notice>}}
 
 ---

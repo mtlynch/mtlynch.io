@@ -2,7 +2,7 @@
 title: "Traction by Gabriel Weinberg and Justin Mares"
 date: 2020-08-23T09:45:33-04:00
 rating: 5
-purchase_url: https://smile.amazon.com/Traction-Startup-Achieve-Explosive-Customer/dp/0241242533/
+purchase_url: https://www.indiebound.org/book/9781591848363
 ---
 This book was thoroughly underwhelming. Dozens of people have recommended it to me in the past couple of years, and I don't understand the hype. It has some insightful ideas, but they're buried under questionable advice and poor writing.
 

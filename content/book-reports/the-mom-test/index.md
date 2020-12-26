@@ -2,7 +2,7 @@
 title: The Mom Test by Rob Fitzpatrick
 date: '2019-08-01'
 rating: 7
-purchase_url: https://smile.amazon.com/Mom-Test-customers-business-everyone/dp/1492180742/
+purchase_url: http://momtestbook.com/
 ---
 
 A quick, practical guide to interviewing customers during the early stages of a new product idea.

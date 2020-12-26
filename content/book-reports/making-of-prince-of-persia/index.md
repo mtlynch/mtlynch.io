@@ -2,7 +2,7 @@
 title: "The Making of Prince of Persia by Jordan Mechner"
 date: 2020-06-10T10:18:48-04:00
 rating: 7
-purchase_url: https://smile.amazon.com/Making-Prince-Persia-Journals-1985-1993-Illustrated/dp/0578627310/
+purchase_url: https://jordanmechner.com/store/the-making-of-prince-of-persia/
 ---
 
 This book follows the author of the hit 90s computer game *Prince of Persia* through the game's development, release, and several years after. The book consists of diary entries that author Jordan Mechner wrote during that time, with margin notes and accompanying photos and sketches Mechner added for publication.
