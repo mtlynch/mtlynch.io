@@ -1,6 +1,6 @@
 ---
 title: "How to Be an Antiracist by Ibram X. Kendi"
-date: 2020-12-20T09:02:20-05:00
+date: 2020-12-30T09:02:20-05:00
 rating: 5
 purchase_url: https://www.ibramxkendi.com/how-to-be-an-antiracist-1
 ---
@@ -9,25 +9,35 @@ It introduces interesting ideas, but many of the arguments are flimsy, and he ch
 
 <!--more-->
 
-One of my biggest disagreements with the book was that he asserts that in the absence of racism, no ethnic group would be measurably different than any other ethnic group in any dimension. For example, Jews today are disproportionately represented in occupations like law or medicine. Kendi believes that this is not a consequence of education being valued in Jewish culture. Instead he says it's a simple coincidence that a disproportionate number of people who value education happen to be Jewish.
+One of my biggest disagreements with the book was that he asserts that in the absence of racism, no ethnic group would be measurably different than any other ethnic group in any dimension.
+
+For example, Jews today are disproportionately represented in occupations like law or medicine. Kendi believes that this is unrelated to Judaism's emphasis on education. Instead he says it's simply a coincidence. People who value education are more likely to be doctors and lawyers, and some people who value education happen to be Jewish, but he sees no causal relationship.
 
 ## Results over intentions
 
-Kendi values results. I thought this was an interesting idea, but I don't find it to be particularly practical. I agree with the idea that we should judge activists by how effective they are at influencing policy rather than just how radical their ideas are. But he also claims that we should use the term "racist" purely in terms of outcomes. If you do something with the most antiracist intentions but it increases racial inequity, you were actually being racist, even if you didn't mean to.
+There's a recurring theme in the book of valuing results over intentions. Kendi is frustrated that people with racist motivations can put policies in place that hold down minority groups but still identify as "not racist." Americans typically define racism in terms of intentions. If someone passes a law that indirectly increases unemployment for black Americans, it's hard for anyone else to declare conclusively that person is racist.
 
-So it sort of makes sense for policymakers. Like, "Politician X passed a law they claimed would lead to greater racial equity but it actually caused black Americans to be incarcerated at much higher rates than before. That politician did something racist, and their law was racist."
+Kendi's solution is to define racism in terms of objective, measurable results. He proposes that an action or policy is "antiracist" is if it leads to greater racial equity. Everything else is racist. It's impossible to be neutral, as neutral is a tacit endorsement of the status quo, which is racist.
 
-But then the opposite leads to absurd conclusions. In May of 2020, [Derek Chauvin killed George Floyd](https://en.wikipedia.org/wiki/Killing_of_George_Floyd), and Americans were so outraged that it led to a dramatic increase in racial awareness. Does that make Derek Chauvin an antiracist? I believe Kendi's definition would say yes, but I don't think most people would view that as a sensible label.
+I found the idea interesting at first blush. It does address the problem Kendi describes. But as I thought more about it, I felt like it's a poor solution in almost every other scenario.
+
+If someone earnestly fights for racial equality but fails to achieve it, what's the point of labeling that person a racist?
+
+When you consider the opposite, it leads to absurd conclusions. For example, when [Derek Chauvin killed George Floyd](https://en.wikipedia.org/wiki/Killing_of_George_Floyd) earlier this year, it outraged Americans to such an unprecedented degree that it led to a dramatic increase in racial awareness around the globe. Does that make the killing an act of antiracism? Is Derek Chauvin an antiracist? The answer should be "no" under any sane definition, but under Kendi's definition, the answer would be yes.
+
+The place where I think a results-focused perspective made sense was in terms of activism. Kendi is critical of activists who take pride in being "radical" while achieving no real change. Kendi considers policy change to be the primary avenue for reducing racial inequity, so he doesn't consider activists radical or effective unless they achieve policy change.
 
 ## Did eugenicists perform 700,000 involuntary sterilizations on black women every year?
 
-One of the most shocking aspects of *How to Be an Antiracist* was Kendi's sloppiness with facts. I appreciated that he footnoted most of his claims with citations, but when I dug into them, I was disappointed that many were secondary or even tertiary sources. I'd frequently check a source only to find that it was a news article referencing another news article that referenced an academic study. In several instances, the fact became distorted after traveling through so many indirect sources.
+One of the most shocking aspects of *How to Be an Antiracist* was Kendi's sloppiness with facts. I appreciated that he included citations for most of his claims, but when I dug into them, I was disappointed that many were secondary or even tertiary sources. 
+
+Often, I'd check a source only to find that it was a news article referencing another news article that referenced an academic study. In several instances, the fact became distorted after traveling through so many indirect sources.
 
 The most egregious error I found in the book was this line on page 189:
 
 >Gender racism was behind the growing number of involuntary sterilizations of Black women by eugenicist physicians &mdash; two hundred thousand cases in 1970, rising to seven hundred thousand in 1980.
 
-700,000 involuntary sterilizations per year? That's a shockingly high number. It surprised me because I'd never heard figures anywhere close to that high. There were [26.5 million black Americans in 1980](https://www.census.gov/prod/cen1990/wepeople/we-1.pdf), so this would mean doctors were nonconsensually sterilizing 6-7% of reproductive age black women every year.
+700,000 involuntary sterilizations per year? That's a shockingly high number. There were [26.5 million black Americans in 1980](https://www.census.gov/prod/cen1990/wepeople/we-1.pdf), so this would mean doctors were nonconsensually sterilizing 6-7% of reproductive age black women every year.
 
 The source for this statistic is *Killing the Black Body* by Dorothy E. Roberts, pages 90-96. That book is [available on OpenLibrary](https://openlibrary.org/works/OL2624319W/Killing_the_black_body?edition=killingblackbody00robe), so I looked it up and found the line that Kendi seems to be referencing:
 
@@ -50,7 +60,7 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
   * He prefers the term, "racist policy," which has the same meaning and doesn't require background knowledge.
 * The autobiographical stories were interesting.
 * Interesting way of thinking about racism that I hadn't seen elsewhere.
-* Interesting distinction between assimilationists and segregationists.
+* Interesting distinction between [assimilationism, segregationism, and separatism](#segregationism-vs-assimiilationism-vs-separatism).
 * Enlightening to see examples of popular figures saying blatantly racist things, both historically and in the recent past.
 
 ## What I Disliked
@@ -80,7 +90,9 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
 ## Key Takeaways
 
 {{<notice type="info">}}
-Usually, I use the "Key Takeaways" section to share the lessons from the book that I'm applying to my life. This book is different in that I disagree with many of the author's points, but I find them helpful to keep in mind as another perspective to consider or to understand terms when reading about race theory elsewhere.
+Usually, the "Key Takeaways" section summarizes the lessons from the book that I'm applying to my life.
+
+This book is different in that I disagree with many of the author's points, but I find them helpful to keep in mind as another perspective to consider or to understand terms when reading about race theory elsewhere.
 {{</notice>}}
 
 ### Racist vs. antiracist
@@ -103,7 +115,7 @@ Usually, I use the "Key Takeaways" section to share the lessons from the book th
 
 * Any policy that produces or sustains racial inequity between groups is racist.
   * This is true even if the policymakers had antiracist intentions. All that matters is the outcome.
-* Others describe "racist policy" with terms like "institutional racism," "systemic racism," or "structural racism."
+* Others race theory writers use terms like "institutional racism," "systemic racism," or "structural racism."
   * Kendi rejects these terms because they are redundant.
     * Racism is systematic, institutional, and structural.
   * "racist policy" has a more obvious meaning to people who haven't studied race theory.
@@ -113,9 +125,10 @@ Usually, I use the "Key Takeaways" section to share the lessons from the book th
 * "Racial discrimination" has a negative connotation, but it's not inherently racist.
 * If discrimination promotes racial equity, it is antiracist.
   * It's impossible to rectify racial injustices without taking into account race.
-  > You do not take a person who, for years, has been hobbled by chains and liberate him, bring him up to the starting line of a race and then say, “you are free to compete with all the others,” and still justly believe that you have been completely fair.
-  >
-  > -Lyndon B. Johnson, [Howard University Commencement Address, 1965](https://www.americanyawp.com/reader/27-the-sixties/lyndon-johnson-howard-university-commencement-address-1965/)
+
+> You do not take a person who, for years, has been hobbled by chains and liberate him, bring him up to the starting line of a race and then say, “you are free to compete with all the others,” and still justly believe that you have been completely fair.
+>
+> -Lyndon B. Johnson, [Howard University Commencement Address, 1965](https://www.americanyawp.com/reader/27-the-sixties/lyndon-johnson-howard-university-commencement-address-1965/)
 
 ### Racist ideas
 
@@ -146,7 +159,7 @@ Usually, I use the "Key Takeaways" section to share the lessons from the book th
 
 * There are many similarities between taking standardized tests and weightlifting.
   * The people who can lift the heaviest weights aren't necessarily the strongest, but rather the people who combine strength with proper form.
-  * Students who score well on standardized tests are not necessarily the smartest, but rarhter the ones who combine their intelligence with skill at taking standardized tests.
+  * Students who score well on standardized tests are not necessarily the smartest, but rather the ones who combine their intelligence with skill at taking standardized tests.
 * Blacks have unequal access to test prep for standardized tests.
   * This makes standardized tests racist.
   * Discussing a black/white achievement gap based on standardized test scores is racist.
@@ -167,19 +180,20 @@ the end punish the man who attempts to establish it.
 ### Anti-white racism
 
 * It's important not to conflate hatred for racist policymakers with hatred toward white people in general.
-* The claim that black people can't be racist because they have no power undermines the power that they have achieved.
+* Kendi disagrees with the popular notion that black people "can't be racist" because racism requires power.
+  * This idea devalues the achievements of black people in positions of power.
 
 ### Class
 
-* Inequity from racism is interralted with inequity from capitalism.
+* Inequity from racism is interrelated with inequity from capitalism.
   * We need both antiracism and anti-capitalism to eliminate racial and class inequity.
 
 ### Segregationism vs. assimiilationism vs. separatism
 
-* Assimilationists view disadvantaged racial groups like children who need an education in proper behavior.
-* Segregationists view disadvantaged racial groups like animals that can be trained in limited ways but can't function in civilized society.
+* Assimilationists view disadvantaged racial groups as children who need an education in proper behavior.
+* Segregationists view disadvantaged racial groups as animals that can be trained in limited ways but can't function in civilized society.
 * During The Civil War, Garrison Frazier, spokesperson for black leaders asked that freed blacks live separately from whites due to racism.
-  * General Sherman honored the request and issued a special field order granting blacks 40 acres from Confederate land, plus a mule.
+  * General Sherman honored the request and issued a special field order granting blacks ["40 acres and a mule"](https://en.wikipedia.org/w/index.php?title=Forty_acres_and_a_mule&oldid=995738508#Sherman's_Special_Field_Orders,_No._15) from Confederate land.
   * Esteemed newspaper editor Horace Greeley opposed black separation because he felt it depraved blacks of positive influence from whites.
 * Black separatism is different from white segregation.
   * Black separatism is about escaping racism, whereas white segregation is about distancing from races perceived as inferior.
