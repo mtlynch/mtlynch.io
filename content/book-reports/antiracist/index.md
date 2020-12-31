@@ -31,7 +31,7 @@ The place where I think a results-focused perspective made sense was in terms of
 
 ## Did eugenicists perform 700,000 involuntary sterilizations on black women every year?
 
-One of the most shocking aspects of *How to Be an Antiracist* was Kendi's sloppiness with facts. I appreciated that he included citations for most of his claims, but when I dug into them, I was disappointed that many were secondary or even tertiary sources. 
+One of the most shocking aspects of *How to Be an Antiracist* was Kendi's sloppiness with facts. I appreciated that he included citations for most of his claims, but when I dug into them, I was disappointed that many were secondary or even tertiary sources.
 
 Often, I'd check a source only to find that it was a news article referencing another news article that referenced an academic study. In several instances, the fact became distorted after traveling through so many indirect sources.
 
