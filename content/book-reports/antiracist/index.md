@@ -5,25 +5,27 @@ rating: 5
 purchase_url: https://www.ibramxkendi.com/how-to-be-an-antiracist-1
 ---
 
-It introduces interesting ideas, but many of the arguments are flimsy, and he cherry picks statistics, often misrepresenting them or getting them outright wrong.
+I had a mixed reaction to this book. Some of Ibram X. Kendi's ideas felt novel and compelling. It broaden my perspective in thinking about race. And there's a lot of historical discussion of race and slavery that covered details I don't remember from school. At the same time, I felt that many of Kendi's arguments were flimsy and his facts questionable. He cherry-picked statistics and often misrepresented details or got them outright wrong.
 
 <!--more-->
 
-One of my biggest disagreements with the book was that he asserts that in the absence of racism, no ethnic group would be measurably different than any other ethnic group in any dimension.
+One of my biggest disagreements with the book was that Kendi asserts that in the absence of racism, no ethnic group would be measurably different than any other ethnic group in any dimension. I don't think there would be a "superior race" in the absence of bias, but I think any nonrandom sample of people will be measurably different on some meaningful metrics.
 
-For example, Jews today are disproportionately represented in occupations like law or medicine. Kendi believes that this is unrelated to Judaism's emphasis on education. Instead he says it's simply a coincidence. People who value education are more likely to be doctors and lawyers, and some people who value education happen to be Jewish, but he sees no causal relationship.
+For example, Jews today are disproportionately represented in occupations like law or medicine. Kendi believes that this is unrelated to Judaism's emphasis on education. Instead, he says it's simply a coincidence. People who value education are more likely to be doctors and lawyers, and some people who value education happen to be Jewish, but he sees no causal relationship.
 
 ## Results over intentions
 
-There's a recurring theme in the book of valuing results over intentions. Kendi is frustrated that people with racist motivations can put policies in place that hold down minority groups but still identify as "not racist." Americans typically define racism in terms of intentions. If someone passes a law that indirectly increases unemployment for black Americans, it's hard for anyone else to declare conclusively that person is racist.
+Throughout the book, Kendi emphasizes the importance of results over intentions. Kendi is frustrated that people with racist motivations can put policies in place that hold down minority groups but still declare themselves "not racist." He thinks we should focus on the effects instead.
 
-Kendi's solution is to define racism in terms of objective, measurable results. He proposes that an action or policy is "antiracist" is if it leads to greater racial equity. Everything else is racist. It's impossible to be neutral, as neutral is a tacit endorsement of the status quo, which is racist.
+Americans typically define racism in terms of private belief. We call someone "racist" if they do or say things that indicate that they hold racial biases. But when a politician passes a complex law that indirectly increases unemployment for black Americans, it's hard for anyone else to declare conclusively that the politician is racist.
 
-I found the idea interesting at first blush. It does address the problem Kendi describes. But as I thought more about it, I felt like it's a poor solution in almost every other scenario.
+Kendi's solution is to define racism in terms of objective, measurable results. He proposes that an action or policy is "antiracist" is if it leads to greater racial equity. Everything else is racist. If your law increased black unemployment, you are racist, regardless of what your intentions were. It's impossible to be "race-neutral," as neutral is a tacit endorsement of the status quo, which is racist.
+
+I found the idea interesting at first blush. It does address the problem Kendi describes. But as I thought about it more, it felt like a poor solution in almost every other scenario.
 
 If someone earnestly fights for racial equality but fails to achieve it, what's the point of labeling that person a racist?
 
-When you consider the opposite, it leads to absurd conclusions. For example, when [Derek Chauvin killed George Floyd](https://en.wikipedia.org/wiki/Killing_of_George_Floyd) earlier this year, it outraged Americans to such an unprecedented degree that it led to a dramatic increase in racial awareness around the globe. Does that make the killing an act of antiracism? Is Derek Chauvin an antiracist? The answer should be "no" under any sane definition, but under Kendi's definition, the answer would be yes.
+And then the opposite scenario &mdash; a racist person unintentionally doing something antiracist &mdash; leads to absurd conclusions. For example, when [Derek Chauvin killed George Floyd](https://en.wikipedia.org/wiki/Killing_of_George_Floyd) earlier this year, it caused such outrage that racial justice awareness increased dramatically across the globe. Does that make the killing of George Floyd an act of antiracism? Is Derek Chauvin an antiracist? The answer should be "no" under any sane definition, but under Kendi's definition, the answer would be yes.
 
 The place where I think a results-focused perspective made sense was in terms of activism. Kendi is critical of activists who take pride in being "radical" while achieving no real change. Kendi considers policy change to be the primary avenue for reducing racial inequity, so he doesn't consider activists radical or effective unless they achieve policy change.
 
@@ -57,33 +59,30 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
 
 * Kendi treats accessibility of terms as a first-class concern.
   * He avoids the terms "institutional racism" and "systemic racism" because he believes these terms only make sense to people who study race theory.
-  * He prefers the term, "racist policy," which has the same meaning and doesn't require background knowledge.
-* The autobiographical stories were interesting.
-* Interesting way of thinking about racism that I hadn't seen elsewhere.
-* Interesting distinction between [assimilationism, segregationism, and separatism](#segregationism-vs-assimiilationism-vs-separatism).
-* Enlightening to see examples of popular figures saying blatantly racist things, both historically and in the recent past.
+  * He prefers the term "racist policy," which has the same meaning and doesn't require background knowledge.
+* The stories from Kendi's personal life were interesting and kept the book engaging.
+* He presents a unique way of thinking about racism that I hadn't seen elsewhere.
+  * Kendi offers a compelling comparison of [assimilationism, segregationism, and separatism](#segregationism-vs-assimiilationism-vs-separatism).
+* It was enlightening to see examples of popular figures saying blatantly racist things, both in the distant not-so-distant past.
 
 ## What I Disliked
 
 * Kendi often blurs the distinction between what he believes the definition of a word should be and how Americans currently use this word.
-  * e.g. he argues that "racist" is simply a descriptive term to describe behavior and not a moral judgment, though I think that contradicts most Americans' use of the word.
+  * e.g., he argues that "racist" is simply a descriptive term to describe behavior and not a moral judgment, though I think that contradicts most Americans' use of the word.
 * The book defines words in terms of themselves.
   * For example, the first line of the book defines "racist" by repeatedly using the word "racist":
     > **racist**: one who is supporting a racist policy through their actions or inaction or expressing a racist idea.
   * He also uses the present progressive tense to emphasize that "being racist" is tied to your actions at a given moment, but it makes all the definitions sound awkward and convoluted.
 * There were many logical leaps that I didn't find convincing.
-  * e.g., rejecting racism necessarily means rejecting capitalism as well as sexism and vice-versa.
+  * e.g., rejecting racism necessarily means rejecting capitalism and vice-versa.
 * The book often attempts to disprove stereotypes by using questionable cherry-picked statistics.
   * Kendi argues that contrary to stereotypes about black dependence on welfare, the majority of welfare recipients are non-black.
-    * Obviously, the majority are non-black because only 13% of the US population is black. The real question is whether different races rely on welfare at different rates.
-  * Kendi claims the majority of black Americans eligible for welfare decline it.
-    * He doesn't provide a source for this, and I'm skeptical that this is true. I suspect the real statistic is that the majority of black Americans don't apply for every welfare available to them.
-    * Again, this statistic on its own is meaningless in evaluating the accuracy of stereotypes. The real question is whether racial groups behave differently from each other with respect to public assistance programs.
-  * Black people are not inherently more violent because black residents in high-income areas commit fewer violent crimes than black residents in low-income neighborhoods.
+    * Obviously, the majority are non-black because only 13% of the US population is black. The relevant statistic would be whether there's a *disproportionate* dependence on welfare.
+  * Kendi claims that black people are not inherently more violent because black residents in high-income areas commit fewer violent crimes than black residents in low-income neighborhoods.
     * The relevant statistic would be to compare crime rates across races controlling for factors like income and educational levels.
-* Kendi asserts that it's illogical and racist for white people to avoid high-crime black neighborhoods.
-  * His justification is that burglary and robbery account for only $4B in losses per year, whereas white-collar crimes account for $300-600B.
-* Acknowledges that there are genetic differences between ethnic groups, but dismisses as a racist any scientist who explores those differences.
+  * Kendi asserts that it's illogical and racist for white people to avoid high-crime black neighborhoods.
+    * His justification is that burglary and robbery account for only $4B in losses per year, whereas white-collar crimes account for $300-600B.
+* Kendi acknowledges that there are genetic differences between ethnic groups but dismisses as a racist any scientist who explores those differences.
 * Kendi fundamentally misunderstands the plot of the 1988 film [*Coming to America*](https://www.imdb.com/title/tt0094898/).
   * The audience is **not** supposed to empathize with Lisa's obnoxious boyfriend!
 
@@ -100,11 +99,11 @@ This book is different in that I disagree with many of the author's points, but 
 * It's impossible to be "not racist."
   * In other words, you can't be "neutral" in the fight for racial equality.
   * Doing nothing tacitly endorses the status quo, so to do nothing in the fight for racial justice is to be racist.
-* Many racists describe themselves as "not racist" so we need a word that more clearly identifies racists.
+* Many racists describe themselves as "not racist," so we need a word that more clearly identifies racists.
   * Specifically, the word can't depend on private motivations because it's impossible for others to know someone's true intentions.
 * Antiracists actively fight to achieve racial equity. Everyone else is a racist.
-  * Antiracists are judged based on outcomes not intentions.
-  * If you do something with antiracist intentions but it fails to achieve greater racial equity, your action was racist and you were racist in the moment of committing that action.
+  * Antiracists are judged based on outcomes, not intentions.
+  * If you do something with antiracist intentions, but it fails to achieve greater racial equity, your action was racist, and you were racist in the moment of committing that action.
 * Calling a person or action racist is not a moral judgment but a statement of fact.
   * It's similar to calling a law progressive or regressive based on which social classes benefit from the law.
 * People are not permanently racist or antiracist.
@@ -115,7 +114,7 @@ This book is different in that I disagree with many of the author's points, but 
 
 * Any policy that produces or sustains racial inequity between groups is racist.
   * This is true even if the policymakers had antiracist intentions. All that matters is the outcome.
-* Others race theory writers use terms like "institutional racism," "systemic racism," or "structural racism."
+* Other race theory writers use terms like "institutional racism," "systemic racism," or "structural racism."
   * Kendi rejects these terms because they are redundant.
     * Racism is systematic, institutional, and structural.
   * "racist policy" has a more obvious meaning to people who haven't studied race theory.
@@ -144,12 +143,12 @@ This book is different in that I disagree with many of the author's points, but 
 
 ### Ebonics
 
-* Languages naturally evolve, and people generally accept new dialects as natural evolution, but white people hold biases against black dialects.
-* Many people view dialects like [Ebonics](https://en.wikipedia.org/wiki/African-American_English) as "broken" English or [Hatian Creole](https://en.wikipedia.org/wiki/Haitian_Creole) as "improper" French, but they don't dismiss dialects that are popular among white speakers.
+* Languages naturally evolve, and people generally accept new dialects as a natural evolution, but white people hold biases against black dialects.
+* Many people view dialects like [Ebonics](https://en.wikipedia.org/wiki/African-American_English) as "broken" English or [Haitian Creole](https://en.wikipedia.org/wiki/Haitian_Creole) as "improper" French, but they don't dismiss dialects that are popular among white speakers.
 
 ### Behavioral racism
 
-* Behavioral racism refers to criticizing behavior of a racial group.
+* Behavioral racism refers to criticizing the behavior of a racial group.
   * e.g., "Blacks should stop wearing baggy jeans and listening to violent rap music."
 * Suggesting that a racial group behaves differently than another is behavioral racism.
   * e.g., the statement "blacks are more religious than whites" is racist.
@@ -166,9 +165,9 @@ This book is different in that I disagree with many of the author's points, but 
 
 ### Colorism
 
-* Within minority ethnic groups in the US, darker skinned people tend to earn less money and face more severe discrimination than lighter skinned members of the same racial group.
-  * Applies to blacks, latinos, Philipinos, and others.
-* Colorism dates back to the age of slavery, when slaveowners ascribed higher intelligence to and paid more for lighter-skinned slaves.
+* Within minority ethnic groups in the US, darker-skinned people tend to earn less money and face more severe discrimination than lighter-skinned members of the same racial group.
+  * Applies to blacks, Latinos, Philipinos, and others.
+* Colorism dates back to the age of slavery when slaveowners ascribed higher intelligence to and paid more for lighter-skinned slaves.
 
 >American Negroes recognize no color line in or out of the race, and they will in
 the end punish the man who attempts to establish it.
@@ -188,23 +187,23 @@ the end punish the man who attempts to establish it.
 * Inequity from racism is interrelated with inequity from capitalism.
   * We need both antiracism and anti-capitalism to eliminate racial and class inequity.
 
-### Segregationism vs. assimiilationism vs. separatism
+### Segregationism vs. assimilationism vs. separatism
 
 * Assimilationists view disadvantaged racial groups as children who need an education in proper behavior.
-* Segregationists view disadvantaged racial groups as animals that can be trained in limited ways but can't function in civilized society.
-* During The Civil War, Garrison Frazier, spokesperson for black leaders asked that freed blacks live separately from whites due to racism.
+* Segregationists view disadvantaged racial groups as animals that can be trained in limited ways but can't function in a civilized society.
+* During The Civil War, Garrison Frazier, spokesperson for black leaders, asked that freed blacks live separately from whites due to racism.
   * General Sherman honored the request and issued a special field order granting blacks ["40 acres and a mule"](https://en.wikipedia.org/w/index.php?title=Forty_acres_and_a_mule&oldid=995738508#Sherman's_Special_Field_Orders,_No._15) from Confederate land.
-  * Esteemed newspaper editor Horace Greeley opposed black separation because he felt it depraved blacks of positive influence from whites.
+  * Esteemed newspaper editor Horace Greeley opposed black separation because he felt it deprived blacks of positive influence from whites.
 * Black separatism is different from white segregation.
   * Black separatism is about escaping racism, whereas white segregation is about distancing from races perceived as inferior.
 * White integrationists perceive black separatism as movement away from whites as opposed to solidarity among blacks.
 * The white integrationist's dream is for every space's demographic makeup to match the US population as a whole. This would unfairly favor whites.
-  * At 13% of the population, a black person woulddn't encounter another black person until meeting roughly eight non-black people.
+  * At 13% of the population, a black person wouldn't encounter another black person until meeting roughly eight non-black people.
   * At 60% of the population, whites would dominate every space whose racial makeup matches the overall racial shares in the US.
 
 ### Gender racism
 
->Women are a race gender. Black people are a race. When we identify black women, we are identifying a race-gender. A sexist policy produces inequities between women and men. A racist policy produces inequities beteween racial groups. When a policy produces inequities between race-genders, it is gendered racism, or gender racism for short.
+>Women are a race gender. Black people are a race. When we identify black women, we are identifying a race-gender. A sexist policy produces inequities between women and men. A racist policy produces inequities between racial groups. When a policy produces inequities between race-genders, it is gendered racism, or gender racism for short.
 >
 >To be antiracist is to reject not only the hierarchy of races but of race-genders. To be feminist is to reject not only the hierarchy of genders but of race-genders. To truly be antiracist is to be feminist. To truly be feminist is to be antiracist.
 
@@ -216,10 +215,10 @@ the end punish the man who attempts to establish it.
 
 ### Results-based activism
 
-* Activist often invest in activities that have no real impact but make participants feel involved.
+>What if we measure the radicalism of speech by how radically it transforms open-minded people, by how the speech liberates the antiracist power within? What if we measure the conservatism of speech by how intensely it keeps people the same, keeps people enslaved by their racist ideas and fears, conserving their inequitable society?
+
+* Activists often invest in activities that have no real impact but make participants feel involved.
   * e.g., marches, protests, educational programs
   * Real change happens only when policies change.
   * Activists should be judged based on how effectively they've influenced policy.
   * It doesn't matter how radical an activist's ideas or how passionate their rhetoric is if they don't influence policy.
-
->What if we measure the radicalism of speech by how radically it transforms open-minded people, by how the pseech liberates the antiracist power within? What if we measure the conservatism of speech by how intesnsely it keeps people the same, keeps people enslaved by their racist ideas and fears, conserving their inequitable society?
