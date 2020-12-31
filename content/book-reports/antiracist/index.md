@@ -62,7 +62,7 @@ In any case, it's obvious that eugenicist physicians did **not** perform 700,000
   * He prefers the term "racist policy," which has the same meaning and doesn't require background knowledge.
 * The stories from Kendi's personal life were interesting and kept the book engaging.
 * He presents a unique way of thinking about racism that I hadn't seen elsewhere.
-  * Kendi offers a compelling comparison of [assimilationism, segregationism, and separatism](#segregationism-vs-assimiilationism-vs-separatism).
+  * Kendi offers a compelling comparison of [assimilationism, segregationism, and separatism](#segregationism-vs-assimilationism-vs-separatism).
 * It was enlightening to see examples of popular figures saying blatantly racist things, both in the distant not-so-distant past.
 
 ## What I Disliked
