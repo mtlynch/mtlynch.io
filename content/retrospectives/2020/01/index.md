@@ -1,7 +1,7 @@
 ---
 title: Pursuing a Business I'll Love
 description: Two of my businesses had record-setting months, and I'm finally building the app I've always wanted.
-date: '2020-01-03'
+date: '2020-01-06'
 images:
 - /retrospectives/2020/01/wanderjest.png
 discuss_urls:
