@@ -81,7 +81,7 @@ When it comes to pay structure for your freelancers, you have several options:
 | Pay structure | Description |
 |---------------|-------------|
 | Pay per hour  | Writer earns an hourly rate regardless of how much content they produce. |
-| Pay per word  | Writer's fee is the final word count of the piece multiplied by an agreed price per word.<br>*(typically [$0.10 to $0.75 per word](http://whopayswriters.com))* |
+| Pay per word  | Writer's fee is the final word count of the piece multiplied by an agreed price per word.<br> *(typically [$0.10 to $0.75 per word](http://whopayswriters.com))* |
 | Pay per article | Writer earns a fixed price for each assignment they complete, regardless of word count or hours invested. |
 
 **Pay per article** is the most common arrangement for experienced freelance writers, but I chose **pay per hour** for Is It Keto for two reasons:
