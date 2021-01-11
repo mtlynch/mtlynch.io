@@ -192,7 +192,7 @@ Zestful's quiet, too. The enterprise customer finished their one-month plan and 
   * The downside of pre-selling is that I feel uncomfortable changing the scope or pushing back the release date since I've already sold under the promise of certain topics by a certain date.
   * If I sell an ebook or course in the future, I'll create a waitlist instead of pre-selling.
   * Adam Wathan talks more about pre-selling vs. waitlisting in [this helpful Microconf talk](https://www.youtube.com/watch?v=ajrDxZRpP9M).
-  * Actually, now that I typed this out, I feel like I'm needlessly putting pressure on myself to stick rigidly to the course outline I advertised. I don't think anyone cares *that* much about me matching my outline exactly, and if they do, I offer painless refunds.
+  * Actually, now that I typed this out, I feel like I'm needlessly putting pressure on myself to stick rigidly to the course outline I advertised. I don't think anyone cares *that* much about me matching my outline exactly. If they do, I offer painless refunds.
 
 ### Goals for next month
 
