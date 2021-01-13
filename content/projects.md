@@ -6,6 +6,10 @@ title: Projects
 
 TinyPilot is a small, inexpensive device that gives you remote access to servers before they even boot.
 
+## [Hit the Front Page of Hacker News](https://hitthefrontpage.com/) (2021)
+
+An in-depth video course covering everything I've learned about blogging in the last five years. The course explains my strategy of writing a small number of highly-polished posts that reach the front page of Hacker News, reddit, and Google search results.
+
 ## [Portfolio Rebalancer](https://assetrebalancer.com/) (2020)
 
 Portfolio Rebalancer shows investors on what funds they need to buy and sell to achieve their target asset allocation.
