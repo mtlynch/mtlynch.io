@@ -110,7 +110,7 @@ Okay, I didn't really expect to make $150k, but I thought $20k was achievable. A
 
 In the last year, I've realized that one of my unique skills is writing articles that reach the front page of [Hacker News](https://news.ycombinator.com/), so I decided to make a course that teaches everything I've learned about doing that.
 
-{{<img src="htfp-cover.jpg" alt="Cover image to my video course" maxWidth="750px" caption="[*Hit the Front Page of Hacker News*](https://gum.co/htfphn/hacker) is my new video course about writing articles that succeed on [Hacker News](https://news.ycombinator.com/).">}}
+{{<img src="htfp-cover.jpg" alt="Cover image to my video course" maxWidth="750px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/) is my new video course about writing articles that succeed on [Hacker News](https://news.ycombinator.com/).">}}
 
 I announced the course two days ago, and sales have been... slow.
 
@@ -165,7 +165,7 @@ Zestful had a nice jump this month. One of my longtime pay-as-you go customers u
 
 * Launched [Voyager](https://tinypilotkvm.com/product/tinypilot-voyager), the new model of TinyPilot aimed at business customers.
 * Published a [new release](https://github.com/mtlynch/tinypilot/releases/tag/1.2.0) of TinyPilot that includes an on-screen keyboard and support for saving screenshots.
-* Launched pre-orders for my [Hacker News course](https://gum.co/htfphn/hacker).
+* Launched pre-orders for my [Hacker News course](https://hitthefrontpage.com/).
 * Two of my blog posts reached the front page of Hacker News.
   * [How I Hired a Freelance Editor for My Blog](https://news.ycombinator.com/item?id=25262272)
   * [Building a Homelab VM Server](https://news.ycombinator.com/item?id=25061823)
@@ -183,4 +183,4 @@ Zestful had a nice jump this month. One of my longtime pay-as-you go customers u
 
 * Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro).
 * Receive TinyPilot reviews from two bloggers or YouTubers with a relevant audience.
-* Record five out of seven parts to my [Hacker News course](https://gum.co/htfphn/hacker).
+* Record five out of seven parts to my [Hacker News course](https://hitthefrontpage.com/).

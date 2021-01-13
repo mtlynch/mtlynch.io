@@ -9,7 +9,7 @@ images:
 ## Highlights
 
 * [TinyPilot](https://tinypilotkvm.com) had another record-breaking month, with $15k in revenue.
-* I sold $1.1k in pre-orders for my first ever [video course](https://gum.co/htfphn/hacker).
+* I sold $1.1k in pre-orders for my first ever [video course](https://hitthefrontpage.com/).
 * My attempt to slow down sales ended up doing the opposite.
 
 ## Goal Grades
@@ -36,7 +36,7 @@ They didn't want to record a review that would become obsolete a week later. So,
 
 Another YouTuber agreed to review it but never followed up after I sent their free device, so hopefully, they're just backlogged.
 
-### Record five out of seven parts to my [Hacker News course](https://gum.co/htfphn/hacker)
+### Record five out of seven parts to my [Hacker News course](https://hitthefrontpage.com/)
 
 * **Result**: Recorded five parts and published them to pre-order customers
 * **Grade**: A
@@ -61,7 +61,7 @@ TinyPilot had another strong month, growing by 25% in revenue. It's crazy to thi
 
 Despite the growth, I still feel like I'm fumbling on TinyPilot. I did no marketing in December aside from failed attempts to get reviews from YouTubers. Even development work slowed because of how little bandwidth I had. I've decided that revenues are strong enough that I can afford to bring on a part-time developer, and I've already begun the search process.
 
-### [Hit the Front Page of Hacker News](https://gum.co/htfphn/hacker)
+### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
 | Metric             | December 2020  |
 | ------------------ | -------------- |
@@ -131,9 +131,9 @@ I generally avoid promising customers a product by a certain deadline. TinyPilot
 
 {{<img src="tp-pro-listing.png" hasBorder="true" caption="I released [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro) in beta for customers anxious to use the new premium features." maxWidth="600px">}}
 
-At the same time, I started working on [my first-ever video course](https://gum.co/htfphn/hacker). I estimated that it would take ~40 hours to write, record, edit, and publish. That's roughly how long it takes me to write a new blog post, so I figured I'd just do that instead of my next blog post. I picked a release date of January 13th, which seemed like an incredibly relaxed schedule to produce a couple hours of video.
+At the same time, I started working on [my first-ever video course](https://hitthefrontpage.com/). I estimated that it would take ~40 hours to write, record, edit, and publish. That's roughly how long it takes me to write a new blog post, so I figured I'd just do that instead of my next blog post. I picked a release date of January 13th, which seemed like an incredibly relaxed schedule to produce a couple hours of video.
 
-{{<img src="htfp-still.jpg" hasBorder="true" caption="A still from my blogging course, [*Hit the Front Page of Hacker News*](https://gum.co/htfphn/hacker)" maxWidth="700px">}}
+{{<img src="htfp-still.jpg" hasBorder="true" caption="A still from my blogging course, [*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/)" maxWidth="700px">}}
 
 I *vastly* underestimated the work required to complete the course. It's probably going to take 150-200 hours to create this course, and it's been draining tons of time from TinyPilot.
 
