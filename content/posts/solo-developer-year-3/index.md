@@ -153,6 +153,6 @@ I was hoping to find an excuse to learn Rust, but I never found a good match. Th
 
 I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled *Refactoring English*.
 
-### Hire a full-time engineer for TinyPilot
+### Automate TinyPilot management
 
-I'd like to grow to the point where the business is strong enough to support one full-time engineer.
+A lot of things are still blocked on me.
