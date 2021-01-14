@@ -24,35 +24,37 @@ TODO: Graph
 
 Okay, I'm still not making a profit, but that's just a detail.
 
+{{<notice type="info">}}
+
+**Wait, how can you afford to keep losing money?**
+
+I went into more detail about this in my year two summary (TODO: link), but the short version is that my living expenses are lower than interest (TODO: reword) I earn on my savings.
+
+{{</notice>}}
+
 ## Project by project
 
 ### WanderJest
 
-At the start of the year, I started working on a project called WanderJest. I'm a big fan of live comedy, and I've always found it frustrating that there's no good way of finding comedy shows around me. Often, comedians I love would perform a few miles from my house, and I'd have no idea until months later.
+I started the year with an ambitious new project called WanderJest. I described it as "Bandsintown, but for comedy." I love live comedy, but I find it hard to discover shows because there's no unified place to find out about shows. It's spread across comedians' Twitter feeds, crappy theater websites, Ticketmaster, Stubhub, etc.
 
-My idea was to build a tool that aggregated together show listings. Kind of like what Fandango is for movie theaters or bandsintown is for bands.
+I planned to monetize it with affiliate deals. Comedians struggle desperately to get people to their shows. If I could bring them audiences, surely they'd find that valuable.
 
-I built WanderJest, and it was the most fun I ever had building a business. I was going to see comedy shows like it was my job. Because it was my job.
+The problem was that I couldn't bring them audiences. I started by covering shows in my local area. I attracted a few thousand people to the site each month, but when I offered discount codes to shows, zero people used them.
 
-The only problem was that it didn't work at all. Even though I was attracting a few dozen users per day, nobody seemed to change their behavior.
+I was going to turn all that around with a big marketing push. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out.
 
-My most ambitious project was a "comedy scavenger hunt." I paid hundreds of dollars to advertise it and offered hundreds more in prize money. The idea was that fans would win points by attending local comedy shows, so the show organizers would pay to have their shows earn extra points in the scavenger hunt.
-
-If this idea seems bizarre to you, it's because I planned the contest in February 2020 and it was supposed to run throughout March 2020.
-
-When was this contest scheduled? March 2020.
-
-People suggested I pivot into livestreamed comedy shows, but I couldn't find the motivation. I love seeing live comedy, but I can't even sit through a livestreamed comedy show. I don't know why, but I don't enjoy it, even though I do enjoy comedy podcasts.
+With a heavy heart, I announced on March 18th that the site was [gone until further notice](/retrospectives/2020/04/#putting-wanderjest-on-hold). It's a shame because even though I hadn't found a way to earn money, it was the most fun I've had on a business.
 
 ### Portfolio Rebalancer
 
-When it became clear that WanderJest wouldn't be viable for a few months or years, I wasn't sure what to do. With all the financial volatility, I was debating whether to rebalance my portfolio. I had just been doing it with spreadsheets where I'd keep plugging in trades until my split was correct. It was clearly something a computer could do, but I never bothered.
+By April, COVID had turned the world upside down. I didn't know what new business would make sense. So, I just did something I could test quickly: a portfolio rebalancer.
 
-But I figured now would be a good opportunity.
+My investments are a mix of US stocks, international stocks, and bonds. I have percentage targets for each asset class, and every quarter, I rebalance the investments so that they match my targets. I've always done this in a spreadsheet, but I always dread it because my process is just plugging in trades and fiddling with numbers until it comes out right.
 
-I got several people to try it, but it's hard to market. Investing communities are defensive towards anyone promoting their own product because there are so many snake oil salesmen. I got a stream of Google users, but nobody wanted to pay for access.
+I made a web app to automate the process. It turned out to be hard to find customers. There are plenty of investment communities that discuss rebalancing, but those communities constantly get bad pitches from people selling snake oil, so they generally don't allow any kind of product promotion. Of the few users I could find, nobody was even willing to start a paid trial.
 
-I ended up just removing the paywall. It works, but it's limited to Vanguard funds, and it doesn't yet support limiting trades between accounts.
+It was kind of a desperate stab at an idea, and I wasn't passionate about it anyway, so I just dropped it after two months. I removed the paywall. It works, but it's limited to Vanguard funds, and it's not very sophisticated.
 
 ### Is It Keto
 
@@ -92,7 +94,7 @@ I gave a talk at my peer mentorship group called "How to be a Sort of Successful
 
 ## Lessons learned
 
-### Success in one project makes everything easier
+### Success in one area leads to success elsewhere
 
 I noticed that once I started talking about earning money, people became more interested in following me on Facebook. I write monthly retrospectives, and I used to post them occasionally to the /r/SideProject subreddit, but once my revenue reached $10k, people would get excited about them. Even when the retrospective was me saying how I did a bad job that month and neglected my business, people were still excited that my revenues grew.
 
@@ -104,7 +106,7 @@ I felt like I was neglecting the business, and it nevertheless grew by 25% to $1
 
 TinyPilot feels like it's growing on its own.
 
-### There's no shame in product-founder fit
+### There's no shame in seeking product-founder fit
 
 One of the considerations I've had in all the businesses I've ever started is that I wanted to be able to tune out on evenings and weekends. One of the things I hated most at Google was being "on call" where a page could wake me up at 3 AM, and I'd have to get up and fix the issue, then go to work like normal the next day.
 
@@ -117,3 +119,40 @@ I was always a little embarrassed that I had this restriction. I felt like I was
 After my last year-in-review, Patrick McKenzie recommended I watch a Jason Cohen video. Jason Cohen has launched several successful startups. In the video, he recommends that solo founders avoid businesses where an outage is A Big Deal.
 
 One of the features TinyPilot users have asked for is cloud management. It would be lucrative, as customers would likely pay $20/month for it, but it also makes me a single point of failure, where I have to care about what happens on the weekends or evenings.
+
+## Grading last year's goals
+
+I [set three goals](/solo-developer-year-2/#goals-for-year-three) at the start of the year, so let's see how I performed against them.
+
+### Earn $20,000 in revenue across my businesses
+
+* **Result**: Earned $XX in revenue
+* **Grade**: A+
+
+### Publish 10 blog posts
+
+* **Result**: Published 9 blog posts
+* **Grade**: B
+
+Instead of a tenth blog post, I published 
+
+### Learn one new technology
+
+* **Result**: Learned more JavaScript
+* **Grade**: B-
+
+I was hoping to find an excuse to learn Rust, but I never found a good match. The most significant new technology I learned was Gridsome, a Vue-based static site generator. I used it to rewrite Is It Keto from a database-backed Flask app to a simple SPA. It also powers [my sales site](https://tinypilotkvm.com) for TinyPilot.
+
+## Goals for year four
+
+### Earn $250,000 in revenue across my businesses
+
+
+
+### Publish six blog posts and one ebook
+
+I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled *Refactoring English*.
+
+### Hire a full-time engineer for TinyPilot
+
+I'd like to grow to the point where the business is strong enough to support one full-time engineer.
