@@ -14,7 +14,7 @@ Today is the third anniversary of me [quitting my developer job at Google](/why-
 
 ## The big picture
 
-This is the year that things finally began clicking into place for me. I set a goal to earn $20k in revenue by the end of the year.
+This is the year that things finally began clicking into place for me. I [set a goal](/solo-developer-year-2/#goals-for-year-three) to earn $20k in revenue by the end of the year.
 
 For the first six months, it didn't look like I was going to make it. I was eking out $300/month from my various projects, and I was looking for some 10x improvement to help me meet my goal.
 
@@ -22,13 +22,13 @@ Starting in July, I started a new project that was obviously a winner right out 
 
 TODO: Graph
 
-Okay, I'm still not making a profit, but that's just a detail.
+Okay, I'm still not making a profit, but there's a good explanation. Because I'm selling a physical product, my costs are more front-loaded. Sales continue to grow rapidly, which means I have to keep an even larger inventory.
 
 {{<notice type="info">}}
 
 **Wait, how can you afford to keep losing money?**
 
-I went into more detail about this in my year two summary (TODO: link), but the short version is that my living expenses are lower than interest (TODO: reword) I earn on my savings.
+I went into more detail about this in last year's retrospective (TODO: link), but the short version is that my living expenses are lower than interest (TODO: reword) I earn on my savings.
 
 {{</notice>}}
 
@@ -42,9 +42,9 @@ I planned to monetize it with affiliate deals. Comedians struggle desperately to
 
 The problem was that I couldn't bring them audiences. I started by covering shows in my local area. I attracted a few thousand people to the site each month, but when I offered discount codes to shows, zero people used them.
 
-I was going to turn all that around with a big marketing push. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out.
+All that was sure to change with my big, brilliant marketing push. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out.
 
-With a heavy heart, I announced on March 18th that the site was [gone until further notice](/retrospectives/2020/04/#putting-wanderjest-on-hold). It's a shame because even though I hadn't found a way to earn money, it was the most fun I've had on a business.
+With a heavy heart, I announced on March 18th that the site was [gone until further notice](/retrospectives/2020/04/#putting-wanderjest-on-hold). It's a shame because even though I hadn't found a way to earn money, it was the most fun I've ever had building a product.
 
 ### Portfolio Rebalancer
 
@@ -58,9 +58,13 @@ It was kind of a desperate stab at an idea, and I wasn't passionate about it any
 
 ### Is It Keto
 
-After Portfolio Rebalancer, I came back to Is It Keto, a site I started in 2018. I've managed it off and on since then. I always get bored because I'm not passionate about keto, but then I keep getting drawn back in because it was my only project that earned money consistently.
+After Portfolio Rebalancer, I came back to Is It Keto, a site I started in 2018. I've managed it off and on since then. I always get bored because I'm not passionate about keto, but then I keep getting drawn back in because it was my only project that consistently earned money.
 
-My new idea for the site was to move to "templatized" content. For all of Is It Keto's life, I wrote the articles by hand or hired writers and carefully edited the content to make each article artisenal and special. But I only earned about $0.01 per visitor in ads and affiliate money, and the average article only received about XX unique visitors per month. Meanwhile, it generally cost me ~$100 in content writer salary and 30-60 minutes of editing time.
+My new idea for the site was to move to "templatized" content. For all of Is It Keto's life, I wrote artisenal, hand-crafted articles for each food. People asked why I wasn't generating the articles automatically, and I said I couldn't do that or Google would 
+
+This year, I talked to a friend who knows way more than I do about SEO, and he told me I had misunderstood Google's rules and penalties. Google doesn't like it if you just generate garbage content to fill the page, but they don't mind if you programmatically generate content to add value around data. He also said that it's rare for Google to just completely deindex a site unless you're doing something egregiously shady.
+
+ content, and I always  But I only earned about $0.01 per visitor in ads and affiliate money, and the average article only received about XX unique visitors per month. Meanwhile, it generally cost me ~$100 in content writer salary and 30-60 minutes of editing time.
 
 This wasn't sustainable, so I thought about templatizing content. I had a friend who had successfully built several content businesses by purchasing databases and building friendly websites around them. He mixed hand-written articles with templatized content.
 
@@ -78,33 +82,38 @@ I realized there was a real business here that was way bigger than any other pro
 
 ### mtlynch.io (this blog)
 
-One of my the changes I made this year was thinking more strategically about my blog. I can use it to bring attention to my projects.
+One of my the changes I made to the blog this year was thinking more strategically about topics.
 
-The big insight I had is that I need a plan to share my blog posts before I write them. In 2019, I wrote so many blog posts with the attitude of, "This is what's top of mind right now, so I'm going to write it and see what happens." Sometimes they'd find an audience, but more often they wouldn't.
+Before 2020, I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
 
-For example, my post, "Hiring Content Writers: A Guide for Small Businesses." That's my longest-ever post. It took me about three months to write. It's also one of my least popular. And it's frustrating because when I find people on reddit asking how to hire a content writer, I share the article and they thank me profusely and say it's exactly what they needed. The problem is that I can't reach communities of people trying to hire content writers. Communities around starting businesses are extremely defensive against people pushing low-quality snake oil content that you can't really reach a critical mass of people.
+Now, I think about sharing the article before I write it. Would this do well on reddit? Would Hacker News find this interesting? Is this a topic people ever Google?
 
-I realized I needed to come up with a plan for finding an audience before I wrote the post. If I had no way of reaching an audience, don't write the post.
-
-Every article except one reached the front page of Hacker News, and four of them reached the #1 slot.
+That change made a huge difference in my readership. Looking at the number of readers each article attracts the first week after publication, the median went from XX in 2019 to XX in 2020. All but one of my blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
 
 ### Hit the Front Page of Hacker News
 
-I gave a talk at my peer mentorship group called "How to be a Sort of Successful Software Blogger." I liked writing it, but as I mentioned above, I didn't have anywhere to share it.
+In XX, I gave a talk to my peer mentorship group called "How to be a Sort of Successful Software Blogger." The talk covered the best tips I'd learned about blogging in the past few years.
+
+ I liked writing it, but as I mentioned above, I didn't have anywhere to share it.
 
 ## Lessons learned
 
 ### Success in one area leads to success elsewhere
 
+People are more interested in what I post on Twitter and . And then because of that, when I send people cold emails, they're more interested in talking to me because
+
+I was always a little resentful of other indie developers who get attention by boasting about revenue without doing any real introspection or sharing anything useful. Time and again, I'd see people cheer on a post that was basically, "Wow, I spent two hours putting up a landing page, went to sleep, and woke up to find $20k in pre-orders! Go me!" It felt like 
+
+Now that I'm earning more money, I feel like my suspicions are confirmed. It's so much easier to attract people to content about your business when you're making money. My retrospectives, which people were never that excited about before, suddenly get a lot of attention on Twitter and reddit even though nothing has changed except for the numbers.
+
+
 I noticed that once I started talking about earning money, people became more interested in following me on Facebook. I write monthly retrospectives, and I used to post them occasionally to the /r/SideProject subreddit, but once my revenue reached $10k, people would get excited about them. Even when the retrospective was me saying how I did a bad job that month and neglected my business, people were still excited that my revenues grew.
 
-### The first $1k is harder than the next $9k
+### The first $1,000 is harder than the next $9,000
 
-I thought the next step would be to find a product that generates $1k/month in revenue, and then it would be another order of magnitude to reach $10k.
+The first two and a half years of working on my own, I was grinding away to grow my little businesses. Last year, Cory Zue inspired me to take bigger swings and go for something that earned serious money from the start rather than try to monetize my businesses $0.01 per unique visitor at a time.
 
-I felt like I was neglecting the business, and it nevertheless grew by 25% to $15k in revenue.
-
-TinyPilot feels like it's growing on its own.
+I thought earning $10,000 per month would be an order of magnitude harder than earning $1,000, but it's significantly easier. TinyPilot feels like it just grows on its own. Maybe that's an illusion because I am thinking strategically about how to develop the product, but it feels like it has this momentum of its own.
 
 ### There's no shame in seeking product-founder fit
 
@@ -118,41 +127,47 @@ I was always a little embarrassed that I had this restriction. I felt like I was
 
 After my last year-in-review, Patrick McKenzie recommended I watch a Jason Cohen video. Jason Cohen has launched several successful startups. In the video, he recommends that solo founders avoid businesses where an outage is A Big Deal.
 
-One of the features TinyPilot users have asked for is cloud management. It would be lucrative, as customers would likely pay $20/month for it, but it also makes me a single point of failure, where I have to care about what happens on the weekends or evenings.
+### Success is more stressful than failure
+
+I didn't make money, but people were supportive. I was the scrappy little developer who kept on going.
 
 ## Grading last year's goals
 
-I [set three goals](/solo-developer-year-2/#goals-for-year-three) at the start of the year, so let's see how I performed against them.
+At the start of last year, I [set three high-level goals](/solo-developer-year-2/#goals-for-year-three). Here's how I performed against them.
 
 ### Earn $20,000 in revenue across my businesses
 
 * **Result**: Earned $XX in revenue
 * **Grade**: A+
 
+For the first half of the year, I didn't think I'd make it. Fortunately, I landed on a winner with TinyPilot that put me way above my goal.
+
 ### Publish 10 blog posts
 
 * **Result**: Published 9 blog posts
-* **Grade**: B
+* **Grade**: A-
 
-Instead of a tenth blog post, I published 
+Depending on how you count, Instead of a tenth blog post, I published 
 
 ### Learn one new technology
 
 * **Result**: Learned more JavaScript
 * **Grade**: B-
 
-I was hoping to find an excuse to learn Rust, but I never found a good match. The most significant new technology I learned was Gridsome, a Vue-based static site generator. I used it to rewrite Is It Keto from a database-backed Flask app to a simple SPA. It also powers [my sales site](https://tinypilotkvm.com) for TinyPilot.
+I was hoping to find an excuse to learn Rust, but I never found a good match.
+
+Instead, I ended up gaining more breadth and depth in JavaScript. I already knew Vue, but this year I learned to use Gridsome, a Vue-based static site generator. I used it to rewrite Is It Keto and to build [my TinyPilot sales site](https://tinypilotkvm.com). I also learned to use pure JavaScript more effectively. TinyPilot's web app is pure JavaScript (TODO: link) with no Webpack or compilation step, and I love the simplicity of it.
 
 ## Goals for year four
 
 ### Earn $250,000 in revenue across my businesses
 
-
+This is an aggressive goal. It's certainly a big jump from my previous goal of $20,000. Based on TinyPilot's rate of growth, it feels achievable.
 
 ### Publish six blog posts and one ebook
 
-I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled *Refactoring English*.
+I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled *Refactoring English: Effective Writing for Software Developers*.
 
 ### Automate TinyPilot management
 
-A lot of things are still blocked on me.
+My girlfriend works with me on TinyPilot part-time. She manages inventory and packs orders, but this is fragile and doesn't scale well. I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
