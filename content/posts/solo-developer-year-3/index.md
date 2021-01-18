@@ -10,25 +10,25 @@ hero_image: cover.jpg
 date: '2021-02-01'
 ---
 
-Today is the third anniversary of me [quitting my developer job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years on my own, so I figured I'd keep up the tradition.
+Today is the third anniversary of me [quitting my developer job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years on my own, and this year will be no different.
 
 ## The big picture
 
-This is the year that things finally began clicking into place for me. I [set a goal](/solo-developer-year-2/#goals-for-year-three) to earn $20k in revenue by the end of the year.
+This is the year that things finally began clicking into place for me. I made less than $10,000 total in my first two years, so I [set a goal](/solo-developer-year-2/#goals-for-year-three) to earn $20k by the end of my third year.
 
-For the first six months, it didn't look like I was going to make it. I was eking out $300/month from my various projects, and I was looking for some 10x improvement to help me meet my goal.
+For the first six months, it didn't look like I was going to make it. My businesses collectively earned about $300/month, and none of my ideas for new revenue sources were working.
 
-Starting in July, I started a new project that was obviously a winner right out of the gate. I ended the year with $XXk in revenue.
+Miraculously, I had one good idea, and it turned everything around. By the end of the year, I had $XX in revenue, far exceeding my goal.
 
 TODO: Graph
 
-Okay, I'm still not making a profit, but there's a good explanation. Because I'm selling a physical product, my costs are more front-loaded. Sales continue to grow rapidly, which means I have to keep an even larger inventory.
+Okay, I'm still not making a profit, but this time I have a good excuse! I sell a physical product now, so my income lags my expenses by two or three months. My profit margins are XX% to XX% per sale, so the numbers will catch up eventually.
 
 {{<notice type="info">}}
 
 **Wait, how can you afford to keep losing money?**
 
-I went into more detail about this in last year's retrospective (TODO: link), but the short version is that my living expenses are lower than interest (TODO: reword) I earn on my savings.
+I went into more detail about this in last year's retrospective (TODO: link), but the short version is: low cost of living, significant savings from my Google days, and passive investment income.
 
 {{</notice>}}
 
@@ -36,39 +36,47 @@ I went into more detail about this in last year's retrospective (TODO: link), bu
 
 ### WanderJest
 
-I started the year with an ambitious new project called WanderJest. I described it as "Bandsintown, but for comedy." I love live comedy, but I find it hard to discover shows because there's no unified place to find out about shows. It's spread across comedians' Twitter feeds, crappy theater websites, Ticketmaster, Stubhub, etc.
+I started the year with an ambitious new project called WanderJest. I described it as "Bandsintown, but for comedy." I love live comedy, but I'm terrible at discovering shows. There's no unified place to find out about them. I've missed countless opportunities to see a comedian's show because I'm not on the right mailing list, not following the right social media account, or not checking Ticketmaster daily. I wanted WanderJest to provide a convenient, aggregate view of all live comedy near you.
 
-I planned to monetize it with affiliate deals. Comedians struggle desperately to get people to their shows. If I could bring them audiences, surely they'd find that valuable.
+My plan was to earn money through affiliate partnerships. Comedians struggle to get fans to their shows, so if I could help, that would be valuable.
 
-The problem was that I couldn't bring them audiences. I started by covering shows in my local area. I attracted a few thousand people to the site each month, but when I offered discount codes to shows, zero people used them.
+The only problem was that I couldn't bring anyone to shows. I made a few affiliate deals with theaters and show organizers, and in two months, a grand total of zero ticket buyers used my discount code.
 
-All that was sure to change with my big, brilliant marketing push. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out.
+All that was sure to change with my big, brilliant marketing stunt. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out. [I shuttered the site](/retrospectives/2020/04/#putting-wanderjest-on-hold) in mid-March.
 
-With a heavy heart, I announced on March 18th that the site was [gone until further notice](/retrospectives/2020/04/#putting-wanderjest-on-hold). It's a shame because even though I hadn't found a way to earn money, it was the most fun I've ever had building a product.
+It was the most fun I've ever had building a product. Even though everything I tried completely failed, I found it so fun to be in the comedy world, going to shows and interviewing comedians about what tools would help them.
 
 ### Portfolio Rebalancer
 
-By April, COVID had turned the world upside down. I didn't know what new business would make sense. So, I just did something I could test quickly: a portfolio rebalancer.
+After shutting down WanderJest, I didn't know what to work on. With COVID turning everything upside down, I decided to just make a tool I wanted personally: a portfolio rebalancer.
 
-My investments are a mix of US stocks, international stocks, and bonds. I have percentage targets for each asset class, and every quarter, I rebalance the investments so that they match my targets. I've always done this in a spreadsheet, but I always dread it because my process is just plugging in trades and fiddling with numbers until it comes out right.
+My investment portfolio is XX% bonds, XX% US stocks, and XX% international stocks. As market prices change, the balance of my investments change, so I have to move money around to get back to my target ratios.
 
-I made a web app to automate the process. It turned out to be hard to find customers. There are plenty of investment communities that discuss rebalancing, but those communities constantly get bad pitches from people selling snake oil, so they generally don't allow any kind of product promotion. Of the few users I could find, nobody was even willing to start a paid trial.
+I've always just done this in a spreadsheet. It's a tedious process where I plug in a bunch of hypothetical trades and keep adjusting numbers until everything looks right. Why not automate it in a web app?
 
-It was kind of a desperate stab at an idea, and I wasn't passionate about it anyway, so I just dropped it after two months. I removed the paywall. It works, but it's limited to Vanguard funds, and it's not very sophisticated.
+Only one person was interested enough to sign up for the free trial, and they ultimately decided not to buy. After a month, a month, I decided it wasn't worth pursuing and moved on.
 
 ### Is It Keto
 
-After Portfolio Rebalancer, I came back to Is It Keto, a site I started in 2018. I've managed it off and on since then. I always get bored because I'm not passionate about keto, but then I keep getting drawn back in because it was my only project that consistently earned money.
+I started Is It Keto in 2018. It's a simple site that just tells you whether or not certain foods fit the keto diet. I go through cycles where I focus on it for a while, ditch it because I'm not passionate about it, then come back a few months later as it's grown in the background.
 
-My new idea for the site was to move to "templatized" content. For all of Is It Keto's life, I wrote artisenal, hand-crafted articles for each food. People asked why I wasn't generating the articles automatically, and I said I couldn't do that or Google would 
+{{<revenue-graph project="isitketo">}}
 
-This year, I talked to a friend who knows way more than I do about SEO, and he told me I had misunderstood Google's rules and penalties. Google doesn't like it if you just generate garbage content to fill the page, but they don't mind if you programmatically generate content to add value around data. He also said that it's rare for Google to just completely deindex a site unless you're doing something egregiously shady.
+I had two new ideas for Is It Keto.
 
- content, and I always  But I only earned about $0.01 per visitor in ads and affiliate money, and the average article only received about XX unique visitors per month. Meanwhile, it generally cost me ~$100 in content writer salary and 30-60 minutes of editing time.
+The first was to templatize content. For all of Is It Keto's life, each article was 100% original and custom-written by me or writers I hired (TODO: link). I always knew I could auto-generate some of the content based on nutritional data, but I feared Google would punish me. But this year, an SEO friend explained that I'd misunderstood the rules. Adding value by generating text or UI around data is fine. Google just doesn't like it if you generate a bunch of garbage text meant to look like human-written content.
 
-This wasn't sustainable, so I thought about templatizing content. I had a friend who had successfully built several content businesses by purchasing databases and building friendly websites around them. He mixed hand-written articles with templatized content.
+My other idea was from my friend Justin Vincent, who recommended that I offer a sister product to Is It Keto. I was getting XX unique visitors per month, and he said I was squandering the opportunity by just showing them ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only XX% of visitors signed up for the mailing list. It seemed like it would be a long time before I find any way to earn money from these sister products, and I wasn't sure I was that excited about keto.
+
+Luckily, the decision became easy for me.
 
 ### TinyPilot
+
+In May, I started tinkering with a device that would allow me to manage my servers remotely. Once I got it working, I tried selling kits to other people so that they could build their own. I didn't think much would come of it, but I thought maybe I could earn an extra few hundred dollars per month by selling one or two per week.
+
+I blogged about it, and I knew immediately that this project was different. It reached the front page of Hacker News and became one of the top "Show HN" posts of all time. Within hours, I sold all 13 of the kits I'd purchased, and things continued to grow from there. I ended the year with $XXk in revenue.
+
+{{<revenue-graph project="tinypilot">}}
 
 While I was working on Is It Keto, I was thinking about building a new VM server. I was beginning to hit the limits of my old one, and I wanted to correct some mistakes I made in building it.
 
@@ -80,21 +88,25 @@ I wrote a blog post about it thinking that it could be a neat side project. My h
 
 I realized there was a real business here that was way bigger than any other project I was working on.
 
-### mtlynch.io (this blog)
-
-One of my the changes I made to the blog this year was thinking more strategically about topics.
-
-Before 2020, I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
-
-Now, I think about sharing the article before I write it. Would this do well on reddit? Would Hacker News find this interesting? Is this a topic people ever Google?
-
-That change made a huge difference in my readership. Looking at the number of readers each article attracts the first week after publication, the median went from XX in 2019 to XX in 2020. All but one of my blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
-
 ### Hit the Front Page of Hacker News
 
 In XX, I gave a talk to my peer mentorship group called "How to be a Sort of Successful Software Blogger." The talk covered the best tips I'd learned about blogging in the past few years.
 
- I liked writing it, but as I mentioned above, I didn't have anywhere to share it.
+I liked writing it, but as I mentioned above, I didn't have anywhere to share it.
+
+### mtlynch.io (this blog)
+
+I don't think of my blog as a business. I write because I enjoy it and want to improve my writing.
+
+Perhaps because it's not a business, I'd never thought much about strategy for the blog.
+
+At the beginning of 2020, I had two realizations.
+
+The first is that I have more fun with my blog when my posts attract a large audience. Before 2020, I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
+
+Now, I think about sharing the article before I write it. Would this do well on reddit? Would Hacker News find this interesting? Is this a topic people ever Google?
+
+That change made a huge difference in my readership. Looking at the number of readers each article attracts the first week after publication, the median went from XX in 2019 to XX in 2020. All but one of my blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
 
 ## Lessons learned
 
@@ -102,7 +114,7 @@ In XX, I gave a talk to my peer mentorship group called "How to be a Sort of Suc
 
 People are more interested in what I post on Twitter and . And then because of that, when I send people cold emails, they're more interested in talking to me because
 
-I was always a little resentful of other indie developers who get attention by boasting about revenue without doing any real introspection or sharing anything useful. Time and again, I'd see people cheer on a post that was basically, "Wow, I spent two hours putting up a landing page, went to sleep, and woke up to find $20k in pre-orders! Go me!" It felt like 
+I was always a little resentful of other indie developers who get attention by boasting about revenue without doing any real introspection or sharing anything useful. Time and again, I'd see people cheer on a post that was basically, "Wow, I spent two hours putting up a landing page, went to sleep, and woke up to find $20k in pre-orders! Go me!" It felt like
 
 Now that I'm earning more money, I feel like my suspicions are confirmed. It's so much easier to attract people to content about your business when you're making money. My retrospectives, which people were never that excited about before, suddenly get a lot of attention on Twitter and reddit even though nothing has changed except for the numbers.
 
@@ -147,7 +159,7 @@ For the first half of the year, I didn't think I'd make it. Fortunately, I lande
 * **Result**: Published 9 blog posts
 * **Grade**: A-
 
-Depending on how you count, Instead of a tenth blog post, I published 
+Depending on how you count, Instead of a tenth blog post, I published
 
 ### Learn one new technology
 
@@ -171,3 +183,80 @@ I enjoy writing more than recording video lessons. I'd like to write a book that
 ### Automate TinyPilot management
 
 My girlfriend works with me on TinyPilot part-time. She manages inventory and packs orders, but this is fragile and doesn't scale well. I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
+
+<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+<script>
+function drawChart(chartId, labels, data) {
+  const ctx = document.getElementById(chartId);
+  if (!ctx) {
+    return;
+  }
+  ctx.height = 300;
+  const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Total Earnings',
+          data: data,
+          backgroundColor: '#047a15',
+          borderColor: '#4ba658',
+          fill: false,
+          lineTension: 0.0,
+          }]
+        },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems) {
+              let original = parseFloat(tooltipItems.yLabel).toLocaleString();
+              if (original[0] === "-") {
+                return " -$" + original.substring(1);
+              }
+              return " $" + original;
+            },
+          },
+        },
+        scales: {
+              yAxes: [{
+                  ticks: {
+                    suggestedMin: 0,
+                      callback: function(value) {
+                          return '$' + value;
+                      }
+                  }
+              }]
+          }
+      },
+  });
+}
+// Parse a date string like "2020-05" into a JavaScript Date object.
+function parseDate(d) {
+  const dateParts = d.split('-');
+  const year = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]) - 1;
+  return new Date(year, month);
+}
+function drawCharts(limit) {
+  fetch('/data/project-revenue.json')
+    .then(res => res.json())
+    .then(revenueByProject => {
+      const limitDate = parseDate(limit);
+      for ([project, data] of Object.entries(revenueByProject)) {
+        let dates = [];
+        for (d of Object.keys(data)) {
+          const date = parseDate(d);
+          if (date >= limitDate) {
+            continue;
+          }
+          dates.push(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear());
+        }
+        let values = Object.values(data).slice(0, dates.length);
+        drawChart(project + '-revenue', dates, values);
+      }
+    });
+}
+drawCharts("2021-01");
+</script>
