@@ -28,13 +28,15 @@ Okay, I'm still not making a profit, but this time I have a good excuse! I sell 
 
 **Wait, how can you afford to keep losing money?**
 
-I went into more detail about this in last year's retrospective (TODO: link), but the short version is: low cost of living, significant savings from my Google days, and passive investment income.
+I went into more detail about this [in last year's retrospective](/solo-developer-year-2/#how-can-you-afford-to-keep-losing-money), but the short version is: low cost of living, significant savings from my Google days, and passive investment income.
 
 {{</notice>}}
 
 ## Project by project
 
-### WanderJest
+### [WanderJest](https://wanderjest.com)
+
+{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot WanderJest website" hasBorder="True" maxWidth="600px" caption="[WanderJest](https://wanderjest.com) helps comedy fans find live comedy shows nearby.">}}
 
 I started the year with an ambitious new project called WanderJest. I described it as "Bandsintown, but for comedy." I love live comedy, but I'm terrible at discovering shows. There's no unified place to find out about them. I've missed countless opportunities to see a comedian's show because I'm not on the right mailing list, not following the right social media account, or not checking Ticketmaster daily. I wanted WanderJest to provide a convenient, aggregate view of all live comedy near you.
 
@@ -46,17 +48,21 @@ All that was sure to change with my big, brilliant marketing stunt. I spent [a t
 
 It was the most fun I've ever had building a product. Even though everything I tried completely failed, I found it so fun to be in the comedy world, going to shows and interviewing comedians about what tools would help them.
 
-### Portfolio Rebalancer
+### [Portfolio Rebalancer](https://assetrebalancer.com/)
+
+{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
 
 After shutting down WanderJest, I didn't know what to work on. With COVID turning everything upside down, I decided to just make a tool I wanted personally: a portfolio rebalancer.
 
-My investment portfolio is XX% bonds, XX% US stocks, and XX% international stocks. As market prices change, the balance of my investments change, so I have to move money around to get back to my target ratios.
+My investment portfolio is 45% US stock, 35% bonds, and 20% international stocks. As market prices change, the balance of my investments change, so I have to move money around to get back to my target ratios.
 
 I've always just done this in a spreadsheet. It's a tedious process where I plug in a bunch of hypothetical trades and keep adjusting numbers until everything looks right. Why not automate it in a web app?
 
 Only one person was interested enough to sign up for the free trial, and they ultimately decided not to buy. After a month, a month, I decided it wasn't worth pursuing and moved on.
 
-### Is It Keto
+### [Is It Keto](https://isitketo.org)
+
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
 
 I started Is It Keto in 2018. It's a simple site that just tells you whether or not certain foods fit the keto diet. I go through cycles where I focus on it for a while, ditch it because I'm not passionate about it, then come back a few months later as it's grown in the background.
 
@@ -74,7 +80,7 @@ Luckily, the decision became easy for me.
 
 In May, I started tinkering with a device that would allow me to manage my servers remotely. Once I got it working, I tried selling kits to other people so that they could build their own. I didn't think much would come of it, but I thought maybe I could earn an extra few hundred dollars per month by selling one or two per week.
 
-I blogged about it, and I knew immediately that this project was different. It reached the front page of Hacker News and became one of the top "Show HN" posts of all time. Within hours, I sold all 13 of the kits I'd purchased, and things continued to grow from there. I ended the year with $XXk in revenue.
+I blogged about it, and I knew immediately that this project was different. It reached the front page of Hacker News and became one of the top "Show HN" posts of all time. Within hours, I sold all 13 of the kits I'd purchased, and things continued to grow from there. I ended the year with $53k in revenue.
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -88,7 +94,9 @@ I wrote a blog post about it thinking that it could be a neat side project. My h
 
 I realized there was a real business here that was way bigger than any other project I was working on.
 
-### Hit the Front Page of Hacker News
+### [Hit the Front Page of Hacker News](https://hitthefrontpage.com)
+
+{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com), a video course I released this year about my blogging techniques.">}}
 
 In XX, I gave a talk to my peer mentorship group called "How to be a Sort of Successful Software Blogger." The talk covered the best tips I'd learned about blogging in the past few years.
 
@@ -98,17 +106,34 @@ I liked writing it, but as I mentioned above, I didn't have anywhere to share it
 
 I don't think of my blog as a business. I write because I enjoy it and want to improve my writing.
 
-Perhaps because it's not a business, I'd never thought much about strategy for the blog.
+Perhaps because it's not a business, I'd never thought much about strategy. I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
 
-At the beginning of 2020, I had two realizations.
+The big change I made this year was planning up-front about my audience, which meant asking myself two questions before I began writing:
 
-The first is that I have more fun with my blog when my posts attract a large audience. Before 2020, I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
+1. How many readers are interested in this topic?
+1. Do I have a way of reaching them?
 
-Now, I think about sharing the article before I write it. Would this do well on reddit? Would Hacker News find this interesting? Is this a topic people ever Google?
+Question #2 is important, as it would have saved me the three months I spent writing "Hiring Content Writers: A Guide for Small Businesses." There are plenty of people interested in that topic, but I have no way of reaching them.
 
-That change made a huge difference in my readership. Looking at the number of readers each article attracts the first week after publication, the median went from XX in 2019 to XX in 2020. All but one of my blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
+Asking myself these two questions made a huge difference in my readership. In 2019, my articles attracted an average of 5,000 readers in their first week. In 2020, this jumped to 25,000. Eight of my nine blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
 
 ## Lessons learned
+
+### There's no shame in seeking product-founder fit
+
+One of the things I hated most at Google was the on-call rotation. Every two months, I had to take a two-week on-call shift, which meant carrying a pager and being ready 24/7 to accept the page and get in front of my work laptop in under 30 minutes. There were several times the pager woke me up in the middle of the night,
+
+Since leaving Google, I've been careful about avoiding businesses where an outage would be A Big Deal. I didn't want to wake up at 4am to handle a work emergency, and I didn't want to carry a laptop with me everywhere I went.
+
+My friend Justin Vincent refers to this as "product-founder fit." People focus heavily on "product-market fit," &mdash; building a product that serves a good group of customers. But before that, you need to figure out the product-founder fit. Is this building this product something that would make *you* happy?
+
+Around the two year mark, I started worrying that this restriction that was preventing me from succeeding. I kept seeing other founders succeed with businesses that most definitely do require a pager. Maybe there wasn't space for founders who weren't willing to make that commitment?
+
+After my last year-in-review, Patrick McKenzie recommended I watch a talk by Jason Cohen, who has launched several multimillion dollar startups. In the video, he recommends that solo founders avoid businesses where an outage is A Big Deal. He says that there's too high a risk of burnout.
+
+That was a big relief. Just being able to hear from someone else that it's okay to protect your focus like that was nice.
+
+And now it's working. TinyPilot had $XXk of revenue last month, but I never have to worry about outages. TinyPilot customers run my software on their own devices. I could shut down every server and delete every code repository, and TinyPilot customers could happily using what they purchased.
 
 ### Success in one area leads to success elsewhere
 
@@ -118,26 +143,14 @@ I was always a little resentful of other indie developers who get attention by b
 
 Now that I'm earning more money, I feel like my suspicions are confirmed. It's so much easier to attract people to content about your business when you're making money. My retrospectives, which people were never that excited about before, suddenly get a lot of attention on Twitter and reddit even though nothing has changed except for the numbers.
 
-
 I noticed that once I started talking about earning money, people became more interested in following me on Facebook. I write monthly retrospectives, and I used to post them occasionally to the /r/SideProject subreddit, but once my revenue reached $10k, people would get excited about them. Even when the retrospective was me saying how I did a bad job that month and neglected my business, people were still excited that my revenues grew.
 
-### The first $1,000 is harder than the next $9,000
+### The first $1,000/month is the hardest
 
-The first two and a half years of working on my own, I was grinding away to grow my little businesses. Last year, Cory Zue inspired me to take bigger swings and go for something that earned serious money from the start rather than try to monetize my businesses $0.01 per unique visitor at a time.
+The first two and a half years of working on my own, I was grinding away to grow my little businesses. Last year, Cory Zue inspired me to take bigger swings and go for something that earned serious money from the start rather than pursue businesses that were earning me $0.01 per user.
 
 I thought earning $10,000 per month would be an order of magnitude harder than earning $1,000, but it's significantly easier. TinyPilot feels like it just grows on its own. Maybe that's an illusion because I am thinking strategically about how to develop the product, but it feels like it has this momentum of its own.
 
-### There's no shame in seeking product-founder fit
-
-One of the considerations I've had in all the businesses I've ever started is that I wanted to be able to tune out on evenings and weekends. One of the things I hated most at Google was being "on call" where a page could wake me up at 3 AM, and I'd have to get up and fix the issue, then go to work like normal the next day.
-
-None of my projects require me to carry a pager. Is It Keto could have a complete outage over the weekend, and it wouldn't matter much.  I'd lose a little bit of ad revenue, but that's it.
-
-Imagine instead that I had built a web service called Is It Lethal, and it allowed pharmacies to automatically check whether prescription drug combinations could kill their patients. That's the kind of thing that needs to be online all the time, and if it's down at 4 AM, someone should page me. An outage there would be A Big Deal.
-
-I was always a little embarrassed that I had this restriction. I felt like I wasn't a *real* entrepreneur by limiting myself in this way. I wondered if the reason none of my products had taken off was because I was being too prissy about carrying a pager.
-
-After my last year-in-review, Patrick McKenzie recommended I watch a Jason Cohen video. Jason Cohen has launched several successful startups. In the video, he recommends that solo founders avoid businesses where an outage is A Big Deal.
 
 ### Success is more stressful than failure
 
@@ -168,7 +181,9 @@ Depending on how you count, Instead of a tenth blog post, I published
 
 I was hoping to find an excuse to learn Rust, but I never found a good match.
 
-Instead, I ended up gaining more breadth and depth in JavaScript. I already knew Vue, but this year I learned to use Gridsome, a Vue-based static site generator. I used it to rewrite Is It Keto and to build [my TinyPilot sales site](https://tinypilotkvm.com). I also learned to use pure JavaScript more effectively. TinyPilot's web app is pure JavaScript (TODO: link) with no Webpack or compilation step, and I love the simplicity of it.
+Instead, I ended up gaining more breadth and depth in JavaScript. I already knew Vue, but this year I learned to use Gridsome, a Vue-based static site generator. I used it to rewrite Is It Keto and to build [my TinyPilot sales site](https://tinypilotkvm.com).
+
+I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/mtlynch/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no Webpack or compilation step, and I love the simplicity of it.
 
 ## Goals for year four
 
@@ -178,7 +193,7 @@ This is an aggressive goal. It's certainly a big jump from my previous goal of $
 
 ### Publish six blog posts and one ebook
 
-I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled *Refactoring English: Effective Writing for Software Developers*.
+I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled [*Refactoring English: Effective Writing for Software Developers*](https://refactoringenglish.com).
 
 ### Automate TinyPilot management
 
