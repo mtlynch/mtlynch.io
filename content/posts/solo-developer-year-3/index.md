@@ -42,11 +42,11 @@ I started the year with an ambitious new project called WanderJest. I described 
 
 My plan was to earn money through affiliate partnerships. Comedians struggle to get fans to their shows, so if I could help, that would be valuable.
 
-The only problem was that I couldn't bring anyone to shows. I made a few affiliate deals with theaters and show organizers, and in two months, a grand total of zero ticket buyers used my discount code.
+The only problem was that I couldn't bring anyone to shows. I made a few affiliate deals with theaters and show organizers, and in two months, a grand total of zero ticket buyers used my discount codes.
 
-All that was sure to change with my big, brilliant marketing stunt. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out. [I shuttered the site](/retrospectives/2020/04/#putting-wanderjest-on-hold) in mid-March.
+All that was sure to change with my big, brilliant marketing stunt. I spent [a thousand dollars](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost) marketing a "Comedy Scavenger Hunt" that would award cash prizes to fans for attending local comedy shows. The month of the big event? March 2020. You can probably guess how that turned out.
 
-It was the most fun I've ever had building a product. Even though everything I tried completely failed, I found it so fun to be in the comedy world, going to shows and interviewing comedians about what tools would help them.
+Despite the fact that everything I tried completely failed, it was the most fun I've ever had building a product. I found it so fun to be in the comedy world, going to shows and interviewing comedians about what tools would help them.
 
 ### [Portfolio Rebalancer](https://assetrebalancer.com/)
 
@@ -70,37 +70,33 @@ I started Is It Keto in 2018. It's a simple site that just tells you whether or 
 
 I had two new ideas for Is It Keto.
 
-The first was to templatize content. For all of Is It Keto's life, each article was 100% original and custom-written by me or writers I hired (TODO: link). I always knew I could auto-generate some of the content based on nutritional data, but I feared Google would punish me. But this year, an SEO friend explained that I'd misunderstood the rules. Adding value by generating text or UI around data is fine. Google just doesn't like it if you generate a bunch of garbage text meant to look like human-written content.
+The first was to templatize content. For all of Is It Keto's life, each article was 100% original and custom-written by me or [writers I hired](/hiring-content-writers/). I always knew I could auto-generate some of the content based on nutritional data, but I feared Google would punish me. But this year, an SEO friend explained that I'd misunderstood the rules. Adding value by generating text or UI around data is fine. Google just doesn't like it if you generate a bunch of garbage text meant to look like human-written content.
 
-My other idea was from my friend Justin Vincent, who recommended that I offer a sister product to Is It Keto. I was getting XX unique visitors per month, and he said I was squandering the opportunity by just showing them ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only XX% of visitors signed up for the mailing list. It seemed like it would be a long time before I find any way to earn money from these sister products, and I wasn't sure I was that excited about keto.
-
-Luckily, the decision became easy for me.
+My other idea was from my friend Justin Vincent, who recommended that I offer a sister product to Is It Keto. I was getting XX unique visitors per month, and he said I was squandering the opportunity by just showing them ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only 0.1% of visitors [signed up for the mailing list](/retrospectives/2020/07/#validating-keto-product-ideas). It seemed like it would be a long time before I find any way to earn money from these sister products, and I wasn't sure I was that excited about keto.
 
 ### TinyPilot
 
-In May, I started tinkering with a device that would allow me to manage my servers remotely. Once I got it working, I tried selling kits to other people so that they could build their own. I didn't think much would come of it, but I thought maybe I could earn an extra few hundred dollars per month by selling one or two per week.
+In May, I started thinking about [building a new VM server](/building-a-vm-homelab/). One of the biggest problems with my previous server was that it was a pain to fix when it failed to boot or I wanted to install a new operating system.
 
-I blogged about it, and I knew immediately that this project was different. It reached the front page of Hacker News and became one of the top "Show HN" posts of all time. Within hours, I sold all 13 of the kits I'd purchased, and things continued to grow from there. I ended the year with $53k in revenue.
+I had read that the Raspberry Pi could emulate a keyboard. I was pretty sure it could capture video, too. So if I could get that working, I could build my own remote management device. I started tinkering with it around May. Once I got it working, I tried selling kits to other people so that they could build their own. I didn't think much would come of it, but I thought maybe I could earn an extra few hundred dollars per month by selling one or two per week.
+
+Then, I blogged about TinyPilot. It immediately became clear that this business was different from anything else I'd ever built before.
+
+It reached the front page of Hacker News and became one of the top "Show HN" posts of all time. Within hours, I sold all 13 of the kits I had in stock, and things continued to grow from there. I ended the year with $53k in revenue.
 
 {{<revenue-graph project="tinypilot">}}
-
-While I was working on Is It Keto, I was thinking about building a new VM server. I was beginning to hit the limits of my old one, and I wanted to correct some mistakes I made in building it.
-
-The biggest mistake I made in building my first server was not considering remote management. If I ever ran into issues booting the server, I had to drag it over to my desk, swap all my keyboard and monitor cables, fix the issue, then put everything back.
-
-I had read that the Raspberry Pi could emulate a keyboard. I was pretty sure it could capture video, too. So if I could get that working, I could build my own KVM over IP device. I started tinkering with it around May.
-
-I wrote a blog post about it thinking that it could be a neat side project. My hope was that I could make an extra $100 per week selling little kits to reproduce my project. But I posted it to Hacker News, and I sold out within hours.
-
-I realized there was a real business here that was way bigger than any other project I was working on.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com)
 
 {{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com), a video course I released this year about my blogging techniques.">}}
 
-In XX, I gave a talk to my peer mentorship group called "How to be a Sort of Successful Software Blogger." The talk covered the best tips I'd learned about blogging in the past few years.
+In May, I gave a talk to my peer mentorship group called ["How to be a Sort of Successful Software Blogger."](https://decks.mtlynch.io/show-and-tell-2020-05/) The talk covered the best tips I'd learned about blogging in the past few years and explained why I thought my writing has been especially successful at succeeding on sites like Hacker News and reddit.
 
-I liked writing it, but as I mentioned above, I didn't have anywhere to share it.
+I had fun deconstructing my process and explaining it. I wanted to talk more about it, but I didn't have a good place to share it. Every time I had ever tried to blog about blogging, the articles flopped because there are way too many people trying to give blogging advice.
+
+After seeing several other developers sell educational products, I thought it could work that way. I had also seen how powerful it could be to align my blog with my business, so I felt like if people liked my writing, maybe they'd buy a course about how I do it.
+
+Cory Zue teased me about how jaded I've become to be disappointed over $3,000 in sales, when that number exceeded my earnings for all of 2018.
 
 ### mtlynch.io (this blog)
 
@@ -118,6 +114,16 @@ Question #2 is important, as it would have saved me the three months I spent wri
 Asking myself these two questions made a huge difference in my readership. In 2019, my articles attracted an average of 5,000 readers in their first week. In 2020, this jumped to 25,000. Eight of my nine blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
 
 ## Lessons learned
+
+### Product market fit is magic
+
+There's a term that's popular in the startup community: product-market fit. It means that you built a product that matches the needs of a critical mass of users. People talk about it the way they talk about finding true love, and now I understand why.
+
+The first two and a half years of working on my own, I was grinding away to grow my little businesses. Last year, Cory Zue inspired me to take bigger swings and go for something that earned serious money from the start rather than pursue businesses that were earning me $0.01 per user.
+
+With TinyPilot, there's clearly product market fit, and it's such a different experience. It feels like the product drives the business, and I'm just along for the ride. There have been many months where I felt like I made big mistakes in managing the business, and it continued growing anyway.
+
+I thought earning $10,000 per month would be an order of magnitude harder than earning $1,000, but it's significantly easier. TinyPilot feels like it just grows on its own. Maybe that's an illusion because I am thinking strategically about how to develop the product, but it feels like it has this momentum of its own.
 
 ### There's no shame in seeking product-founder fit
 
@@ -145,13 +151,6 @@ Now that I'm earning more money, I feel like my suspicions are confirmed. It's s
 
 I noticed that once I started talking about earning money, people became more interested in following me on Facebook. I write monthly retrospectives, and I used to post them occasionally to the /r/SideProject subreddit, but once my revenue reached $10k, people would get excited about them. Even when the retrospective was me saying how I did a bad job that month and neglected my business, people were still excited that my revenues grew.
 
-### The first $1,000/month is the hardest
-
-The first two and a half years of working on my own, I was grinding away to grow my little businesses. Last year, Cory Zue inspired me to take bigger swings and go for something that earned serious money from the start rather than pursue businesses that were earning me $0.01 per user.
-
-I thought earning $10,000 per month would be an order of magnitude harder than earning $1,000, but it's significantly easier. TinyPilot feels like it just grows on its own. Maybe that's an illusion because I am thinking strategically about how to develop the product, but it feels like it has this momentum of its own.
-
-
 ### Success is more stressful than failure
 
 I didn't make money, but people were supportive. I was the scrappy little developer who kept on going.
@@ -165,14 +164,14 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-2
 * **Result**: Earned $XX in revenue
 * **Grade**: A+
 
-For the first half of the year, I didn't think I'd make it. Fortunately, I landed on a winner with TinyPilot that put me way above my goal.
+For the first half of the year, I didn't think I'd make it. Fortunately, TinyPilot grew so quickly that it put me well past my goal.
 
 ### Publish 10 blog posts
 
-* **Result**: Published 9 blog posts
+* **Result**: Published nine blog posts
 * **Grade**: A-
 
-Depending on how you count, Instead of a tenth blog post, I published
+I was on track to publish 10 posts, but I decided to forego my tenth post to make time to produce my video course. Nevertheless, I'm pleased with the results of my blog posts this year.
 
 ### Learn one new technology
 
@@ -187,17 +186,17 @@ I also learned to use plain JavaScript more effectively. TinyPilot's web app [is
 
 ## Goals for year four
 
-### Earn $250,000 in revenue across my businesses
+### Earn $500,000 in revenue across my businesses
 
-This is an aggressive goal. It's certainly a big jump from my previous goal of $20,000. Based on TinyPilot's rate of growth, it feels achievable.
+Okay, as crazy as it sounds to go from a goal of $20k to $500k, I think this is achievable. TinyPilot has already earned $30k in January, so I'd just have to grow an average of XX% per month to reach $500k by end of year.
 
 ### Publish six blog posts and one ebook
 
-I enjoy writing more than recording video lessons. I'd like to write a book that teaches software developers to write effectively. It's tentatively titled [*Refactoring English: Effective Writing for Software Developers*](https://refactoringenglish.com).
+I've distantly fantasized about writing a book ever since I began working for myself, and I want to finally do it this year. The book will teach software developers easy ways to make their writing more effective. It's tentatively titled [*Refactoring English: Effective Writing for Software Developers*](https://refactoringenglish.com).
 
 ### Automate TinyPilot management
 
-My girlfriend works with me on TinyPilot part-time. She manages inventory and packs orders, but this is fragile and doesn't scale well. I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
+My girlfriend works with me part-time on TinyPilot, managing inventory and packing orders. We enjoy working together, but it's a fragile system that scales poorly. I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
@@ -239,7 +238,7 @@ function drawChart(chartId, labels, data) {
                   ticks: {
                     suggestedMin: 0,
                       callback: function(value) {
-                          return '$' + value;
+                          return '$' + value.toLocaleString();
                       }
                   }
               }]
