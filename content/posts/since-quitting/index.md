@@ -56,7 +56,7 @@ By the third day, I started to feel overwhelmed. I realized that I could spend t
 
 ## Managing feedback
 
-One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics software company](http://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
+One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics software company](http://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](https://web.archive.org/web/20200708151056/http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
 
 She sent me a kind message about the post and offered her availability if I ever wanted advice. I had been following Stephanie for months before she reached out to me, and I knew that she received a high volume of messages. I asked her how she managed them, and she shared this helpful suggestion:
 

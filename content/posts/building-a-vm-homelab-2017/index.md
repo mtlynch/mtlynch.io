@@ -180,7 +180,7 @@ I'm a big fan of Ansible, so I wrote an  [Ansible playbook](provision-vm-host.ym
 * Installs KVM and Kimchi
 * Mounts an NFS share for storing VM images
 
-You can use the same playbook to provision your server by [installing Ansible](https://docs.ansible.com/ansible/intro_installation.html) and running the commands below:
+You can use the same playbook to provision your server by [installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html) and running the commands below:
 
 ```bash
 VM_SERVER=vmaster # Replace with your VM server's hostname

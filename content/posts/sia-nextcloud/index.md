@@ -231,7 +231,7 @@ Difficulty: 228263093718558163
 Next, you need to create a Siacoin wallet within the Docker container and send it at least 500 SC.
 
 {{<notice type="danger">}}
-**Warning**: If you have an existing Sia wallet seed, do not re-use it within your Docker container while your other wallet is running. [Sia has undefined behavior](https://support.sia.tech/article/JH2mSUch6b-what-are-these-deductions-in-my-wallet) if you run two wallets simultaneously with the same seed.
+**Warning**: If you have an existing Sia wallet seed, do not re-use it within your Docker container while your other wallet is running. Sia has undefined behavior if you run two wallets simultaneously with the same seed.
 {{< /notice >}}
 
 To create a new Sia wallet, enter the command below:

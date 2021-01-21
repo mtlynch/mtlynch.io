@@ -136,7 +136,7 @@ My ClipBucket Ansible Role is available:
 
 *Note: If you're not familiar with Ansible and not interested in learning, see the ["Just Install Clipbucket"](#just-install-clipbucket) section at the top of this post.*
 
-It's easy to use the ClipBucket Ansible role. To get started, you'll need to [install Ansible](https://docs.ansible.com/ansible/intro_installation.html). Then create the following files:
+It's easy to use the ClipBucket Ansible role. To get started, you'll need to [install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html). Then create the following files:
 
 ### `install.yml`
 
