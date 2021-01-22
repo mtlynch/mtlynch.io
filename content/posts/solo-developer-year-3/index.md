@@ -7,6 +7,8 @@ tags:
 - is it keto
 - wanderjest
 hero_image: cover.jpg
+images:
+- code-review-love/og-cover.jpg
 date: '2021-02-01'
 ---
 
