@@ -50,6 +50,15 @@ All that was sure to change with my big, brilliant marketing stunt. I spent [a t
 
 Despite the fact that everything I tried completely failed, it was the most fun I've ever had building a product. I found it so fun to be in the comedy world, going to shows and interviewing comedians about what tools would help them.
 
+| Income/Expense   | 2020        |
+|------------------|-------------|
+| Sales            | $0          |
+| Hosting          | -$XX        |
+| Domains          | -$XX        |
+| Graphic Design   | -$XX        |
+| Advertising      | -$XX        |
+| **Net profit**   | **-$XX**    |
+
 ### [Portfolio Rebalancer](https://assetrebalancer.com/)
 
 {{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
@@ -61,6 +70,15 @@ My investment portfolio is 45% US stock, 35% bonds, and 20% international stocks
 I've always just done this in a spreadsheet. It's a tedious process where I plug in a bunch of hypothetical trades and keep adjusting numbers until everything looks right. Why not automate it in a web app?
 
 Only one person was interested enough to sign up for the free trial, and they ultimately decided not to buy. After a month, a month, I decided it wasn't worth pursuing and moved on.
+
+| Income/Expense   | 2020        |
+|------------------|-------------|
+| Sales            | $0          |
+| Hosting          | -$XX        |
+| Domains          | -$XX        |
+| Graphic Design   | -$XX        |
+| Advertising      | -$XX        |
+| **Net profit**   | **-$XX**    |
 
 ### [Is It Keto](https://isitketo.org)
 
@@ -76,9 +94,21 @@ The first was to templatize content. For all of Is It Keto's life, each article 
 
 My other idea was from my friend Justin Vincent, who recommended that I offer a sister product to Is It Keto. I was getting XX unique visitors per month, and he said I was squandering the opportunity by just showing them ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only 0.1% of visitors [signed up for the mailing list](/retrospectives/2020/07/#validating-keto-product-ideas). It seemed like it would be a long time before I find any way to earn money from these sister products, and I wasn't sure I was that excited about keto.
 
+| Metric                                      | 2019    | 2020      | Change |
+|---------------------------------------------|---------|-----------|---------|
+| Pageviews                                   | 521,913 | 1,314,583   | <font color="green">+XX (+XX%)</font>
+| Ad revenue                                  | $940    | $2,934         | <font color="green">+$XX (+XX%)</font>
+| Affiliate revenue                           | $1,315  | $2,147      | <font color="green">+$XX (+XX%)</font>
+| Meal plan sales\*                             | $XX     | $18          | <font color="green">+$XX (+XX%)</font>
+| Freelance designers and [content writers](/hiring-content-writers/) | -$3,845 | XX     | <font color="red">+$XX (+XX%)</font>
+| Hosting / domain                            | -$103   | XX          | <font color="red">+$XX (+XX%)</font>
+| **Net profit**                              | **<font color="red">-$1,882 </font>**  | **<font color="green">$XX</font>** | <font color="green">$XX (+XX%)</font>
+
+\* I gave up on these in January 2020
+
 ### TinyPilot
 
-In May, I started thinking about [building a new VM server](/building-a-vm-homelab/). One of the biggest problems with my previous server was that it was a pain to fix when it failed to boot or I wanted to install a new operating system.
+In May, I started thinking about [building a new home server](/building-a-vm-homelab/). One of the biggest problems with my previous server was that it was a pain to fix when it failed to boot or I wanted to install a new operating system.
 
 I had read that the Raspberry Pi could emulate a keyboard. I was pretty sure it could capture video, too. So if I could get that working, I could build my own remote management device. I started tinkering with it around May. Once I got it working, I tried selling kits to other people so that they could build their own. I didn't think much would come of it, but I thought maybe I could earn an extra few hundred dollars per month by selling one or two per week.
 
@@ -88,17 +118,38 @@ It reached the front page of Hacker News and became one of the top "Show HN" pos
 
 {{<revenue-graph project="tinypilot">}}
 
+| Income/Expense            | 2020        |
+|---------------------------|-------------|
+| Sales                     | $53,362     |
+| Donations                 | $380        |
+| Materials                 | -$XX        |
+| Contractors               | -$XX        |
+| Graphic Design            | -$XX        |
+| Advertising               | -$XX        |
+| Open Source Contributions | -$XX        |
+| Hosting / Domains         | -$XX        |
+| **Net profit**            | **-$XX**    |
+
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com)
 
 {{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com), a video course I released this year about my blogging techniques.">}}
 
-In May, I gave a talk to my peer mentorship group called ["How to be a Sort of Successful Software Blogger."](https://decks.mtlynch.io/show-and-tell-2020-05/) The talk covered the best tips I'd learned about blogging in the past few years and explained why I thought my writing has been especially successful at succeeding on sites like Hacker News and reddit.
+In May, I gave a talk to my peer mentorship group called ["How to be a Sort of Successful Software Blogger."](https://decks.mtlynch.io/show-and-tell-2020-05/) It explained the approach to blogging that I'd developed over the past few years. It explained why I thought my writing has been especially successful at succeeding on sites like Hacker News and reddit.
 
-I had fun deconstructing my process and explaining it. I wanted to talk more about it, but I didn't have a good place to share it. Every time I had ever tried to blog about blogging, the articles flopped because there are way too many people trying to give blogging advice.
+I had fun deconstructing my process and explaining it. I wanted to talk more about it, but I didn't have a good place to share it. Every time I had ever tried to blog about blogging, the articles flopped because there are too many people trying to give blogging advice.
 
-After seeing several other developers sell educational products, I thought it could work that way. I had also seen how powerful it could be to align my blog with my business, so I felt like if people liked my writing, maybe they'd buy a course about how I do it.
+After seeing several other developers sell educational products, I thought it could work that way. I had also seen how powerful it could be to align my blog with my business, so I felt like if people liked my writing, they might buy a course about how I do it.
 
-Cory Zue teased me about how jaded I've become to be disappointed over $3,000 in sales, when that number exceeded my earnings for all of 2018.
+It was harder than I expected! But then there's a lot of work in marketing the course: posting about it on Twitter, finding people willing to give testimonials, begging podcasts to interview me. I could do three months of full-time work just looking for.
+
+| Metric            | 2020        |
+|-------------------|-------------|
+| Orders            | 29          |
+| Sales             | $1,431        |
+| Private presentations       | $400        |
+| Cover design      | -$293        |
+| Recording equipment       | -$584        |
+| **Net profit**    | **$954**    |
 
 ### mtlynch.io (this blog)
 
@@ -114,6 +165,18 @@ The big change I made this year was planning up-front about my audience, which m
 Question #2 is important, as it would have saved me the three months I spent writing "Hiring Content Writers: A Guide for Small Businesses." There are plenty of people interested in that topic, but I have no way of reaching them.
 
 Asking myself these two questions made a huge difference in my readership. In 2019, my articles attracted an average of 5,000 readers in their first week. In 2020, this jumped to 25,000. Eight of my nine blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
+
+| Metric                                      | 2019    | 2020    | Change |
+|---------------------------------------------|---------| --------|--------|
+| Pageviews                                   | 273,817 | 719,899 | <font color="green">+XX (+XX%)</font>
+| Affiliate revenue\*                         | $374    | $XX     | <font color="red">-$XX (-XX%)</font>
+| Development                                 | -$460   | $0      | <font color="green">-$XX (-XX%)</font>
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$769   | -$XX    | <font color="red">+$XX (+XX%)</font>
+| Hosting / Domain                            | -$150   | -$XX     | <font color="green">-$XX (-XX%)</font>
+| [Editing](/editor/) + [Grammarly](https://grammarly.com)  | -$200    | -$XX | <font color="green">-$XX (-XX%)</font>
+| **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | <font color="green">+$2,570 (+67%)</font> |
+
+\* I dropped all affiliate partnerships from this blog at the end of 2020.
 
 ## Lessons learned
 
@@ -155,7 +218,13 @@ I noticed that once I started talking about earning money, people became more in
 
 ### Success is more stressful than failure
 
-I didn't make money, but people were supportive. I was the scrappy little developer who kept on going.
+For the first two years on my own, I didn't make money, but I didn't mind. People were supportive. I was a scrappy little developer who kept chugging along and writing about the process.
+
+Now that one of my businesses is finally succeeding, the stakes feel real. TinyPilot could grow to a multi-million dollar business in the next few years, and I feel like it's basically mine to lose. I feel obligations toward my customers, so I get stressed out when I can't add features quickly enough or I'm too slow in responding to a support request. If I run out of inventory, I feel a sense of unease for days because I know that fewer customers purchase when I'm backordered, so I'm leaving money on the table.
+
+But it's pretty much all in my head. A customer has never told me they're mad because I failed to deliver a feature they expected. If I'm out of stock for a few days and sell a little bit less than I could have, who cares?
+
+I've had to make more of an effort this year to manage work-life boundaries. It's much easier to resist checking email when I know nobody's waiting on me for an answer. TinyPilot requires coordination with so many other people, so I feel more pressure to check email consistently, but that's also just something I put on myself. If I checked email once per day, not much would change.
 
 ## Grading last year's goals
 
@@ -188,17 +257,19 @@ I also learned to use plain JavaScript more effectively. TinyPilot's web app [is
 
 ## Goals for year four
 
-### Earn $500,000 in revenue across my businesses
+### Grow TinyPilot to $600,000 in annual revenue
 
-Okay, as crazy as it sounds to go from a goal of $20k to $500k, I think this is achievable. TinyPilot has already earned $30k in January, so I'd just have to grow an average of XX% per month to reach $500k by end of year.
+Okay, as crazy as it sounds to go from a goal of $20k to $600k, I think this is achievable. TinyPilot earned $40k in January, so I'd just have to grow an average of XX% per month to reach $600k by end of year.
 
-### Publish six blog posts and one ebook
+### Publish six blog posts and one book
 
-I've distantly fantasized about writing a book ever since I began working for myself, and I want to finally do it this year. The book will teach software developers easy ways to make their writing more effective. It's tentatively titled [*Refactoring English: Effective Writing for Software Developers*](https://refactoringenglish.com).
+I've distantly fantasized about self-publishing a book ever since I began working for myself, and I want to finally do it this year. The book will teach software developers easy ways to make their writing more effective. It's tentatively titled [*Refactoring English: Effective Writing for Software Developers*](https://refactoringenglish.com).
 
 ### Automate TinyPilot management
 
-My girlfriend works with me part-time on TinyPilot, managing inventory and packing orders. We enjoy working together, but it's a fragile system that scales poorly. I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
+My girlfriend works with me part-time on TinyPilot, managing inventory and packing orders. We enjoy working together, but it's a fragile system that scales poorly. If either of us can't work for a few days, we'd quickly accumulate a massive backlog of work.
+
+I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
