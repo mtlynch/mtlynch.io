@@ -125,7 +125,7 @@ This small bit of extra planning made a huge difference in my readership. In 201
 |---------------------------------------------|---------| --------|--------|
 | Pageviews                                   | 273,817 | 719,899 | <font color="green">+XX (+XX%)</font>
 | Affiliate revenue\*                         | $374    | $1,599     | <font color="green">+$XX (-XX%)</font>
-| Development                                 | -$460   | $0      | <font color="green">-$XX (-XX%)</font>
+| Development                                 | -$460   | $0      | <font color="green">+$460 (-100%)</font>
 | [Illustrations](/how-to-hire-a-cartoonist/) | -$769   | -$XX    | <font color="red">+$XX (+XX%)</font>
 | Hosting / Domain                            | -$150   | -$XX     | <font color="green">-$XX (-XX%)</font>
 | [Editing](/editor/) + [Grammarly](https://grammarly.com)  | -$200    | -$XX | <font color="green">-$XX (-XX%)</font>
@@ -194,7 +194,7 @@ I quickly put together a prototype that automated the process I'd been following
 
 ### Product-market fit is magic
 
-There's a term that's popular in the startup community: product-market fit. It means building a product and finding enough customers for it to make your business viable. When founders talk about finding product-market fit, they describe it in the same breathless terms they'd use to talk about finding true love. But now I get it.
+There's a term that's popular in the startup community: product-market fit. It means building a product and finding enough customers for it to make your business viable. When founders talk about finding product-market fit, they describe it in the same breathless terms they'd use to talk about finding true love. Now, I understand why.
 
 The first two and a half years of working on my own, I was grinding away to grow little by little. Some of my businesses would grow consistently, but the money was small potatoes. Other times, I'd [make a big sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) but then fail to replicate it.
 
@@ -257,9 +257,9 @@ I was on track to publish 10 posts, but I decided to forego my tenth post to mak
 
 I was hoping to find an excuse to learn Rust, but I never found a good match.
 
-Instead, I ended up gaining more breadth and depth in JavaScript. I already knew Vue, but this year I learned to use Gridsome, a Vue-based static site generator. I used it to rewrite Is It Keto and to build [my TinyPilot sales site](https://tinypilotkvm.com).
+Instead, I gained breadth and depth in JavaScript. I already knew Vue, but this year I learned Gridsome, a Vue-based static site generator. I used it to build [my TinyPilot sales site](https://tinypilotkvm.com) and rewrite Is It Keto (TODO: link).
 
-I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/mtlynch/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no build or compilation steps, and I appreciate how much complexity I avoid by keeping it simple.
+I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/mtlynch/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no build or compilation steps. It's astonishing how much complexity that eliminates.
 
 ## Goals for year four
 
