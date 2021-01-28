@@ -2,7 +2,7 @@
 title: "How to Be an Antiracist by Ibram X. Kendi"
 date: 2020-12-30T09:02:20-05:00
 rating: 5
-purchase_url: https://www.ibramxkendi.com/how-to-be-an-antiracist-1
+purchase_url: https://www.ibramxkendi.com/how-to-be-an-antiracist
 ---
 
 I had a mixed reaction to this book. Some of Ibram X. Kendi's ideas felt novel and compelling. It broadened my perspective in thinking about race. And there's a lot of historical discussion of race and slavery that covered details I don't remember from school. At the same time, I felt that many of Kendi's arguments were flimsy and his facts questionable. He cherry-picked statistics and often misrepresented details or got them outright wrong.
