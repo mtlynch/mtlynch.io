@@ -58,9 +58,14 @@ Was there even a market for this? I figured I could sell one or two kits per wee
 
 Then, I published [a blog post](/tinypilot/) about it.
 
-Immediately, it became clear that this business was different than anything I'd ever done before. It reached the front page of Hacker News and became [one of the top "Show HN" posts](https://bestofshowhn.com/) of all time.  Within two hours, customers had purchased all 13 of the kits in my inventory. Over the next few weeks, I'd earn $XXk in revenue, primarily from people who had seen my blog post or articles about my post.
+Immediately, it became clear that this business was different than anything I'd ever done before. It reached the front page of Hacker News and became [one of the top "Show HN" posts](https://bestofshowhn.com/) of all time.
 
-TODO: Screenshots of reddit, HN
+{{<gallery caption="TinyPilot's response on Hacker News and reddit">}}
+ {{<img src="tinypilot-hn.png">}}
+ {{<img src="tinypilot-reddit.png" hasBorder="true">}}
+{{</gallery>}}
+
+Four hours later, customers had purchased all nine of the kits in my inventory. Within a week, the blog post had driven $8.8k in sales.
 
 I interviewed as many customers as I could to ask what features they want and spent the rest of the year improving the product.  I added support for mouse input. I created my own custom hardware to improve power. I worked with a 3D printing lab to create a sleek case. I'm a software developer, so I had to learn quickly many things outside my experience, like managing inventory, ordering custom circuit boards, and working with 3D printing labs to design custom cases.
 
@@ -73,11 +78,12 @@ In mid-August, I discovered a [design flaw](/retrospectives/2020/09/#why-oh-y-ca
 | Sales                     | $53,362     |
 | Donations                 | $380        |
 | Materials                 | -$XX        |
-| EE consulting             | -$XX        |
+| EE consulting             | -$7,130     |
 | Order fulfillment         | -$2,570     |
-| Graphic Design            | -$XX        |
-| Advertising               | -$XX        |
-| Open Source Contributions | -$XX        |
+| Software development      | -$1,321     |
+| Open source contributions | -$1,270     |
+| Advertising               | -$675       |
+| Graphic design            | -$250       |
 | Hosting / Domains         | -$XX        |
 | **Net profit**            | **-$XX**    |
 
@@ -111,7 +117,7 @@ The big change I made in 2020 was choosing my topics more strategically. Before 
 1. How many readers are interested in this topic?
 1. Do I have a way of reaching them?
 
-Question #2 is important, as it would have saved me the three months I spent writing "Hiring Content Writers: A Guide for Small Businesses." (TODO: link) There are plenty of people interested in that topic, but I have no way of reaching them.
+Question #2 is important, as it would have saved me the three months I spent writing, ["Hiring Content Writers: A Guide for Small Businesses."](http://blog:1313/hiring-content-writers/) There are plenty of people interested in that topic, but I have no way of reaching them.
 
 This small bit of extra planning made a huge difference in my readership. In 2019, my articles attracted an average of 5,000 readers in their first week. In 2020, this jumped to 25,000. Eight of my nine blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
 
@@ -120,9 +126,9 @@ This small bit of extra planning made a huge difference in my readership. In 201
 | Pageviews                                   | 273,817 | 719,899 | <font color="green">+XX (+XX%)</font>
 | Affiliate revenue\*                         | $374    | $1,599     | <font color="green">+$XX (-XX%)</font>
 | Development                                 | -$460   | $0      | <font color="green">+$460 (-100%)</font>
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$769   | -$XX    | <font color="red">+$XX (+XX%)</font>
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$769   | -$964    | <font color="red">+$XX (+XX%)</font>
 | Hosting / Domain                            | -$150   | -$XX     | <font color="green">-$XX (-XX%)</font>
-| [Editing](/editor/) + [Grammarly](https://grammarly.com)  | -$200    | -$XX | <font color="green">-$XX (-XX%)</font>
+| [Editing](/editor/) + [Grammarly](https://grammarly.com)  | -$200    | -$222 | <font color="green">-$XX (-XX%)</font>
 | **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="green">$XX</font>** | <font color="green">+$XX (+XX%)</font> |
 
 \* I [dropped all affiliate partnerships](https://twitter.com/deliberatecoder/status/1342847048811499523) from this blog at the end of 2020.
@@ -143,19 +149,18 @@ To scale growth, I tried to templatize the site's content. For all of Is It Keto
 
 TODO: Screenshot
 
-At first, it seemed like this would allow me to add hundreds of articles per week, but I found it harder than I expected to auto-generate content while still maintaining accuracy and quality. In XX months, I only managed to add XX articles. The more templates I added, the faster I could go, but it wasn't attracting enough new users to make it worthwhile.
+At first, it seemed like this would allow me to add hundreds of articles per week, but I found it harder than I expected to auto-generate content while still maintaining accuracy and quality. In two months, I only managed to add 118 articles. The more templates I added, the faster I could go, but it wasn't attracting enough new users to make it worthwhile.
 
-My other idea was from my friend Justin Vincent (TODO: link). When he found out that XX users visited Is It Keto every month, he was astonished that I was squandering my readers' attention on banner ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only 0.1% of visitors [signed up for more information](/retrospectives/2020/07/#validating-keto-product-ideas).
+My other idea was from my friend [Justin Vincent](http://nugget.one/jv). When he found out that XX users visited Is It Keto every month, he was astonished that I was squandering my readers' attention on banner ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only 0.1% of visitors [signed up for more information](/retrospectives/2020/07/#validating-keto-product-ideas).
 
 TODO: screenshot
-
 
 | Metric                                      | 2019    | 2020      | Change |
 |---------------------------------------------|---------|-----------|---------|
 | Pageviews                                   | 521,913 | 1,314,583   | <font color="green">+XX (+XX%)</font>
 | Ad revenue                                  | $940    | $2,934         | <font color="green">+$XX (+XX%)</font>
 | Affiliate revenue                           | $1,315  | $2,147      | <font color="green">+$XX (+XX%)</font>
-| Meal plan sales\*                             | $XX     | $18          | <font color="green">+$XX (+XX%)</font>
+| Meal plan sales\*                           | $24     | $18          | <font color="green">+$XX (+XX%)</font>
 | Freelance designers and [content writers](/hiring-content-writers/) | -$3,845 | $0     | <font color="green">$3,845 (-100%)</font>
 | Hosting / domain                            | -$103   | XX          | <font color="red">+$XX (+XX%)</font>
 | **Net profit**                              | **<font color="red">-$1,882 </font>**  | **<font color="green">$XX</font>** | <font color="green">$XX (+XX%)</font>
@@ -170,7 +175,7 @@ WanderJest was a short-lived project I started at the beginning of the year. I d
 
 I love live comedy, but I've missed countless opportunities to see a comedian perform near me because I'm not on the right mailing list, not following the right social media account, or not checking Ticketmaster at the right time. WanderJest was going to solve that.
 
-My plan was to earn money through affiliate deals with theaters, but nobody ever used my discount codes (TODO: link). Once COVID hit, I shuttered the site.
+My plan was to earn money through affiliate deals with theaters, but nobody ever used my discount codes. Once COVID hit, I [shuttered the site](/retrospectives/2020/04/#putting-wanderjest-on-hold).
 
 ### [Portfolio Rebalancer](https://assetrebalancer.com/)
 
@@ -212,7 +217,7 @@ Early last year, I watched the above talk called ["Designing the Ideal Bootstrap
 
 Even though TinyPilot doesn't require constant attention, my brain often forgets that.
 
-After my big launch, I couldn't sleep for two days. I mailed out all 13 devices to my customers, and I was terrified of the results. I was the only person to ever test a TinyPilot. What if everyone got their devices, and none of them worked? What if there was some horrible bug that destroyed people's servers?
+After my big launch, I couldn't sleep for two days. I mailed out all nine devices to my customers, and I was terrified of the results. I was the only person to ever test a TinyPilot. What if everyone got their devices, and none of them worked? What if there was some horrible bug that destroyed people's servers?
 
 After I got happy reports from customers, I relaxed and took pleasure in the success, but every few weeks, something new would pop up to worry me for days. A shipment of parts I needed got stuck in customs. A positive review drove a surge of customers that cleared out my inventory. I filled out an international invoice and worried that I did it incorrectly and would be sent to export jail.
 
