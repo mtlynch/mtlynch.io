@@ -26,15 +26,7 @@ For the first six months, it didn't look like I was going to make it. My busines
 
 Miraculously, one good idea in May turned everything around. By the end of the year, I earned $63k in revenue, far exceeding my goal.
 
-{{<img src="net-profit-year-3.png" alt="Graph of revenue and net profit over the past three years" hasBorder="True" maxWidth="800px" caption="Finances for my businesses over the past three years">}}
-
-<div>&nbsp;</div>
-
-| Metric     | 2019        | 2020       | Change                                        |
-|------------|-------------|------------|-----------------------------------------------|
-| Revenue    | $7,254   | $63,477  | <font color="green">+$56,223 (+775%)</font> |
-| Expenses   | $9,657  | $67,441  | <font color="red">+$57,784 (+598%)</font> |
-| **Net Profit** | **<font color="red">-$2,402</font>** | **<font color="red">-$3,964</font>** | **<font color="red">-$1,561 (-65%)</font>** |
+<canvas id="overall-finances"></canvas>
 
 Okay, I'm still not making a profit, but this time I have a good excuse!
 
@@ -299,6 +291,11 @@ So once again, I feel incredibly lucky I have the freedom to work for myself, an
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
+var dollarFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+});
 function drawChart(chartId, labels, data) {
   const ctx = document.getElementById(chartId);
   if (!ctx) {
@@ -324,11 +321,7 @@ function drawChart(chartId, labels, data) {
         tooltips: {
           callbacks: {
             label: function(tooltipItems) {
-              let original = parseFloat(tooltipItems.yLabel).toLocaleString();
-              if (original[0] === "-") {
-                return " -$" + original.substring(1);
-              }
-              return " $" + original;
+              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
             },
           },
         },
@@ -337,7 +330,7 @@ function drawChart(chartId, labels, data) {
                   ticks: {
                     suggestedMin: 0,
                       callback: function(value) {
-                          return '$' + value.toLocaleString();
+                          return dollarFormatter.format(value);
                       }
                   }
               }]
@@ -371,5 +364,60 @@ function drawCharts(limit) {
       }
     });
 }
+function drawOverallChart() {
+  const ctx = document.getElementById("overall-finances");
+  if (!ctx) {
+    return;
+  }
+  ctx.height = 500;
+  const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          datasets: [
+            {
+              label: 'Net Profit',
+              data: [-20871, -2402, -3964],
+              type: 'line',
+              backgroundColor: 'rgba(0, 0, 0, 0.0)',
+              borderColor: 'black',
+              pointBorderColor: 'black'
+            },
+            {
+              label: 'Expenses',
+              data: [-23133, -9657, -67441],
+              backgroundColor: 'red'
+            },
+            {
+              label: 'Revenue',
+              data: [2262, 7254, 63477],
+              backgroundColor: '#047a15'
+            }
+          ],
+          labels: ['2018', '2019', '2020']
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems) {
+              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
+            },
+          },
+        },
+        scales: {
+              yAxes: [{
+                  ticks: {
+                    suggestedMin: 0,
+                      callback: function(value) {
+                          return dollarFormatter.format(value);
+                      }
+                  }
+              }]
+          }
+      },
+  });
+}
+drawOverallChart();
 drawCharts("2021-01");
 </script>
