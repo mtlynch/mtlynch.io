@@ -291,7 +291,7 @@ So once again, I feel incredibly lucky I have the freedom to work for myself, an
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
-var dollarFormatter = new Intl.NumberFormat('en-US', {
+const dollarFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
   maximumFractionDigits: 0,
@@ -378,9 +378,11 @@ function drawOverallChart() {
               label: 'Net Profit',
               data: [-20871, -2402, -3964],
               type: 'line',
-              backgroundColor: 'rgba(0, 0, 0, 0.0)',
+              backgroundColor: 'black',
               borderColor: 'black',
-              pointBorderColor: 'black'
+              pointBorderColor: 'black',
+              pointBackgroundColor: 'black',
+              fill: false,
             },
             {
               label: 'Expenses',
