@@ -16,15 +16,15 @@ date: '2021-02-01'
 **Note**: This is a preview of an upcoming blog post. Please do not share this URL.
 {{</notice>}}
 
-Today is the third anniversary of me [quitting my developer job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years on my own, so it's time for another update.
+Today is the third anniversary of me [quitting my developer job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years, so it's time for another update.
 
 ## The year things clicked into place
 
-In my first two years on my own, I earned less than $10,000. [My goal](/solo-developer-year-2/#goals-for-year-three) for year three was to earn $20k by the end of 2020.
+In my first two years working for myself, I earned less than $10k total. [My goal](/solo-developer-year-2/#goals-for-year-three) was to end the third year with at least $20k in total revenue.
 
-For the first six months, it didn't look like I was going to make it. My businesses collectively earned about $300/month, and none of my new ideas were working.
+For the first six months, it looked like I'd fall short. My businesses collectively earned about $300/month, and none of my new ideas were working.
 
-Miraculously, one good idea in May turned everything around. By the end of the year, I earned $63k in revenue, far exceeding my goal.
+Miraculously, one new product in May turned everything around. By the end of the year, I earned $63k in revenue, far exceeding my goal.
 
 <canvas id="overall-finances"></canvas>
 
@@ -48,11 +48,13 @@ I went into more detail about this [in last year's retrospective](/solo-develope
 
 For the past few years, I've done all my software development on a [home server](/building-a-vm-homelab/). It works great, except when I screw up the network configuration or want to install a new operating system. My server has no monitor or keyboard attached, so I have to drag it over to my desk, swap all the cables with my workstation, and then swap everything back when I'm done.
 
-I had read that the Raspberry Pi could masquerade as a USB keyboard, and I knew it could capture video. I wondered if I could turn one of my Raspberry Pis into a little remote administration device, where I could plug it into a server, and it would host a web interface where I could type in keyboard input and see the server's video output. In July, after a few months of tinkering, I had a working prototype.
+I had read that the Raspberry Pi could masquerade as a USB keyboard, and I knew it could capture video. I wondered if I could turn one of my Raspberry Pis into a little remote administration device, where I could plug it into a server, and it would host a web interface where I could type in keyboard input and see the server's video output.
 
-TODO: photo of prototype
+After a few months of tinkering, I had a working prototype.
 
-Was there even a market for this? I wasn't excited to sell a physical product, but I figured it would be worth it for me to spend an hour a week packing up a box if I could make like $80 in profit per kit. And it seemed like I could sell maybe one or two kits per week.
+{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
+
+Was there even a market for this? I figured I could sell one or two kits per week, so if I made $80 per kit, it would be worth my time packing up and shipping boxes.
 
 Then, I published [a blog post](/tinypilot/) about it.
 
@@ -62,7 +64,7 @@ TODO: Screenshots of reddit, HN
 
 I interviewed as many customers as I could to ask what features they want and spent the rest of the year improving the product.  I added support for mouse input. I created my own custom hardware to improve power. I worked with a 3D printing lab to create a sleek case. I'm a software developer, so I had to learn quickly many things outside my experience, like managing inventory, ordering custom circuit boards, and working with 3D printing labs to design custom cases.
 
-In mid-August, I discovered a design flaw (TODO: link) and paused sales for four weeks until I could ship a fix to my customers. After that, TinyPilot grew consistently each month, ending the year with almost $54k in total revenue.
+In mid-August, I discovered a [design flaw](/retrospectives/2020/09/#why-oh-y-cables) and paused sales for four weeks until I could ship a fix to my customers. After that, TinyPilot grew consistently each month, ending the year with almost $54k in total revenue.
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -87,7 +89,7 @@ In May, I gave an informal presentation to my peer mentorship group called ["How
 
 Over the course of the year, I saw more and more developers teach what they knew in paid courses. TinyPilot had shown me how powerful it could be to align my blog with my business, so I felt like if people liked my writing, they might buy a course about how I do it.
 
-The course was much harder than I expected. What I planned to be 30-40 hours of work turned into nearly 200. I released the course in January, and the audience turned out to be smaller than I expected, but I'm still proud of the course, and many of the customers who have watched it have told me that it taught them a lot.
+The course was much harder than I expected. What I planned to be 30-40 hours of work turned into nearly 200. I [released the course](https://hitthefrontpage.com) in January, and the audience turned out to be smaller than I expected, but I'm still proud of the material, and many of the customers who have watched it have told me that it taught them a lot.
 
 | Metric            | 2020        |
 |-------------------|-------------|
@@ -168,67 +170,61 @@ WanderJest was a short-lived project I started at the beginning of the year. I d
 
 I love live comedy, but I've missed countless opportunities to see a comedian perform near me because I'm not on the right mailing list, not following the right social media account, or not checking Ticketmaster at the right time. WanderJest was going to solve that.
 
-My plan was to earn money through affiliate deals with theaters, but nobody ever used my discount codes. Once COVID hit, I shuttered the site.
+My plan was to earn money through affiliate deals with theaters, but nobody ever used my discount codes (TODO: link). Once COVID hit, I shuttered the site.
 
 ### [Portfolio Rebalancer](https://assetrebalancer.com/)
 
 {{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
 
-After shutting down WanderJest, I didn't know what to work on. With COVID turning everything upside down, I decided to just make a tool I wanted personally: a portfolio rebalancer.
+My investment portfolio is 45% US stock, 35% bonds, and 20% international stocks. As market prices fluctuate, the balance of my investments change, so I have to move money around to get back to my target ratios. This involves tediously plugging numbers into a spreadsheet until everything looks right.
 
-My investment portfolio is 45% US stock, 35% bonds, and 20% international stocks. As market prices fluctuate, the balance of my investments change, so I have to move money around to get back to my target ratios.
-
-My rebalancing process involves exporting my portfolio to a spreadsheet and then tediously plugging in hypothetical trades through trial and error until everything looks right. Why not automate it in a web app?
-
-I quickly put together a prototype that automated the process I'd been following with my spreadsheet and began talking about the tool on reddit and my blog. Even though XX people visited the site through my posts, only one person was interested enough to sign up for the free trial. They ultimately decided not to buy. After a month, I decided it wasn't worth pursuing and moved on.
+I quickly put together a simple web app that automated the process and began sharing the tool on reddit and my blog. Even though XX people visited the site through my posts, only one person was interested enough to sign up for the free trial, and they decided not to buy. After a month, I decided it wasn't worth pursuing and moved on.
 
 ## Lessons learned
 
 ### Product-market fit is magic
 
-There's a term that's popular in the startup community: product-market fit. It means building a product and finding enough customers for it to make your business viable. When founders talk about finding product-market fit, they describe it in the same breathless terms they'd use to talk about finding true love. Now, I understand why.
+Finding "product-market fit" means building a product and connecting to enough customers to make your business viable. When founders talk about achieving product-market fit, they describe it in the same breathless terms they'd use to talk about finding true love. Now, I understand why.
 
-The first two and a half years of working on my own, I was grinding away to grow little by little. Some of my businesses would grow consistently, but the money was small potatoes. Other times, I'd [make a big sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) but then fail to replicate it.
+The first two and a half years of working on my own, I was grinding away and growing, but it would take hundreds of hours to earn an extra $100/month. Other times, I'd [make a big sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) but fail to replicate it.
 
-TinyPilot was product-market fit at first sight. As soon as I published the blog post, I knew. It's a completely different experience than anything else I've built. It feels like the product drives the business, and I'm just along for the ride. There have been several months where I felt like I made critical mistakes in managing the business, and it continued growing anyway.
+TinyPilot was product-market fit at first sight. As soon as I published the blog post, I knew.
 
-### There's no shame in seeking product-founder fit
+The experience has been completely different than with anything else I've built. It feels like the product drives the business, and I'm just along for the ride. There have been several months where I felt like I made critical mistakes in managing the business, and it continued growing anyway. It's a good enough match for what customers want that there's still room for huge blunders.
 
-I still have a vivid memory of a comedy show I saw at the UCB comedy theater (TODO: link) in late 2017. I don't recall anything about the show. What I remember was that I was on-call that week, so all I could think about was that my pager could go off at any moment and force me to rush home.
+### There's no shame in avoiding zero-downtime businesses
+
+I still have a vivid memory of a comedy show I saw at the UCB comedy theater (TODO: link) in late 2017. I don't recall anything about the show. What I remember is being on-call that week, so my thoughts were focused on the pager in my pocket that could go off at any moment and force me to rush home.
 
 My team at Google had an "on-call rotatation," which meant that every two months, you had to carry a pager at all times for two weeks. If the pager went off, you had to be "fingers on keyboard" within 30 minutes.
 
-That dumb pager woke me up several times at 2am, sometimes again the same night. It ruined parties, prevented me from enjoying live shows, and generally stressed me out for the whole two weeks I was on-call.
+When I left Google, I was unsure of many things about my future, but I was certain of one thing: I'm never carrying a pager again. So, I've carefully avoided creating any business where an outage would be A Big Deal.
 
-When I left Google, I was unsure of many things about my future, but I was certain of one thing: I'm never carrying a pager again.
+Around the two year mark, thoughts began creeping into my mind that *this* was why I wasn't succeeding. Other founders were building services that promised to be available 24/7/365, so why should I expect to succeed without the same level of dedication?
 
-Since then, I've carefully avoided creating any business where an outage would be A Big Deal. I wanted a business that let me control exactly how much of my life it occupied.
+{{<youtube id="otbnC2zE2rw" title="Designing the Ideal Bootstrapped Business">}}
 
-I learned recently that there's a term for this: product-founder fit. While product-market fit is about finding the right product for your customers, product-founder fit is about finding a product that would make you happy to build.
+Early last year, I watched the above talk called ["Designing the Ideal Bootstrapped Business"](https://www.youtube.com/watch?v=otbnC2zE2rw) by Jason Cohen, who has launched several multimillion dollar startups. He [explicitly discourages](https://youtu.be/otbnC2zE2rw?t=1962) independent founders from building products that are "real-time," by which he means services that must be available 24/7 or your customers will cancel.
 
-Around the two year mark, I started worrying that this restriction that was preventing me from succeeding. I kept seeing other founders succeed with businesses that promise 24/7 support. Maybe there wasn't space for founders who weren't willing to make that commitment?
-
-Early last year, I watched a talk by Jason Cohen (TODO: link), who has launched several multimillion dollar startups. In the video, he recommends that solo founders avoid businesses where an outage is A Big Deal. He says that there's too high a risk of burnout. It was a huge relief to just hear from a successful founder that it's okay to protect your focus and downtime.
-
-I'm glad I didn't cave to the pressure of a 24/7 business. TinyPilot had $40k in revenue last month, but I've never thought once about outages. TinyPilot customers run my software on their own devices. I could shut down every server and delete every code repository, and TinyPilot customers could continue happily using what they purchased.
+ Hearing Cohen was such a relief and strengthened my resolve to stick with my instincts. I'm so glad I didn't cave to the pressure. TinyPilot doesn't require me to keep anything online. I could shut down every server and delete every code repository, and TinyPilot customers could continue using their software uninterrupted, forever.
 
 ### Success is more stressful than failure
 
-Even though TinyPilot is structured in a way that lets me disconnect when I want, actually letting myself disconnect is another story.
+Even though TinyPilot doesn't require constant attention, my brain often forgets that.
 
-After my big launch, I couldn't sleep for two days. I sold my first 13 kits in hours, but nobody besides me had ever tested this software. What if everyone got their devices and none of them worked? What if there was some horrible bug that destroyed people's servers?
+After my big launch, I couldn't sleep for two days. I mailed out all 13 devices to my customers, and I was terrified of the results. I was the only person to ever test a TinyPilot. What if everyone got their devices, and none of them worked? What if there was some horrible bug that destroyed people's servers?
 
-After I got happy reports from customers, I was able to relax a bit and take pleasure in the success. But about once a month, something will keep me up at night. A shipment of parts I need will get stuck in customs. A positive review will drive a surge of customers that clears out my inventory. I'll fill out an international invoice and worry that I did it incorrectly and be sent to export jail.
+After I got happy reports from customers, I relaxed and took pleasure in the success, but every few weeks, something new would pop up to worry me for days. A shipment of parts I needed got stuck in customs. A positive review drove a surge of customers that cleared out my inventory. I filled out an international invoice and worried that I did it incorrectly and would be sent to export jail.
 
-Realistically, the pressure I feel is all self-imposed. A customer has never told me they're furious because I failed to deliver a feature they expected. If I'm out of stock for a few days and sell a little bit less than I could have, what does it really matter?
+Realistically, the pressure I feel is all self-imposed. If I'm out of stock for a few days and sell a little bit less than I could have, what does it really matter? I rarely ship orders late, but when I do, customers never get upset. In fact, when I email a customer to apologize for a late shipment, their response is always to say they're impressed that I emailed them at all. So, the standards I set for myself are much higher than what my customers even demand.
 
-I've been getting better at separating work from life, but it's an ongoing process. It's been months since TinyPilot kept me up at night, but I'm still not able to disconnect at the end of the day. I'm putting systems in place that let me avoid work things until I explicitly choose to see them during work hours.
+I've been getting better at separating work from life, but it's an ongoing process. I think deliberately about systems that prevent me from checking work stuff during non-work hours and following habits that let me disconnect at the end of the day.
 
 ## Grading last year's goals
 
 At the start of last year, I [set three high-level goals](/solo-developer-year-2/#goals-for-year-three). Here's how I performed against them.
 
-### Earn $20,000 in revenue across my businesses
+### Earn $20k in revenue across my businesses
 
 * **Result**: Earned $XX in revenue
 * **Grade**: A+
@@ -249,13 +245,13 @@ I was on track to publish 10 posts, but I decided to forego my tenth post to mak
 
 I was hoping to find an excuse to learn Rust, but I never found a good match.
 
-Instead, I gained breadth and depth in JavaScript. I already knew Vue, but this year I learned Gridsome, a Vue-based static site generator. I used it to build [my TinyPilot sales site](https://tinypilotkvm.com) and rewrite Is It Keto (TODO: link).
+Instead, I gained breadth and depth in JavaScript. I already knew Vue, but this year I learned Gridsome, a Vue-based static site generator. I used it to build [my TinyPilot sales site](https://tinypilotkvm.com) and [rewrite Is It Keto](https://whatgotdone.com/michael/2020-04-17).
 
 I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/mtlynch/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no build or compilation steps. It's astonishing how much complexity that eliminates.
 
 ## Goals for year four
 
-### Grow TinyPilot to $600,000 in annual revenue
+### Grow TinyPilot to $600k in annual revenue
 
 Okay, as crazy as it sounds to go from a goal of $20k to $600k, I think this is achievable. TinyPilot earned $40k in January, so I'd have to grow an average of 4% per month to reach a $600k annual total.
 
