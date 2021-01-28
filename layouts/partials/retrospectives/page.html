@@ -36,6 +36,11 @@
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
+const dollarFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+});
 function drawChart(chartId, labels, data) {
   const ctx = document.getElementById(chartId);
   if (!ctx) {
@@ -61,11 +66,7 @@ function drawChart(chartId, labels, data) {
         tooltips: {
           callbacks: {
             label: function(tooltipItems) {
-              let original = parseFloat(tooltipItems.yLabel).toLocaleString();
-              if (original[0] === "-") {
-                return " -$" + original.substring(1);
-              }
-              return " $" + original;
+              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
             },
           },
         },
@@ -74,7 +75,7 @@ function drawChart(chartId, labels, data) {
                   ticks: {
                     suggestedMin: 0,
                       callback: function(value) {
-                          return '$' + value;
+                          return dollarFormatter.format(value);
                       }
                   }
               }]
