@@ -28,7 +28,7 @@ Miraculously, one new product in May turned everything around. By the end of the
 
 <canvas id="overall-finances"></canvas>
 
-Okay, I'm still not making a profit, but this time I have a good excuse!
+Okay, my net profits are still negative, but this time I have a good excuse!
 
 I sell a physical product now, so my income lags my expenses by two or three months. My profit margins are 50% to 200% per sale, so the numbers will catch up eventually.
 
@@ -48,11 +48,17 @@ I went into more detail about this [in last year's retrospective](/solo-develope
 
 For the past few years, I've done all my software development on a [home server](/building-a-vm-homelab/). It works great, except when I screw up the network configuration or want to install a new operating system. My server has no monitor or keyboard attached, so I have to drag it over to my desk, swap all the cables with my workstation, and then swap everything back when I'm done.
 
-I had read that the Raspberry Pi could masquerade as a USB keyboard, and I knew it could capture video. I wondered if I could turn one of my Raspberry Pis into a little remote administration device, where I could plug it into a server, and it would host a web interface where I could type in keyboard input and see the server's video output.
+I had read that the Raspberry Pi could masquerade as a USB keyboard, and I knew it could capture video. I wondered if I could turn one of my Raspberry Pis into a little remote administration device. That way, I could plug it into a server, and it would spin up a web interface where I could type in keyboard input and see the server's video output.
 
 After a few months of tinkering, I had a working prototype.
 
-{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
+{{<gallery caption="Prototype of TinyPilot, my open source KVM over IP device">}}
+
+{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="600px">}}
+
+<a href="tinypilot-bios.gif" style="max-width: 445px"><img src="tinypilot-bios.gif" style="object-fit: contain;"></a>
+
+{{</gallery>}}
 
 Was there even a market for this? I figured I could sell one or two kits per week, so if I made $80 per kit, it would be worth my time packing up and shipping boxes.
 
@@ -65,11 +71,11 @@ Immediately, it became clear that this business was different than anything I'd 
  {{<img src="tinypilot-reddit.png" hasBorder="true">}}
 {{</gallery>}}
 
-Four hours later, customers had purchased all nine of the kits in my inventory. Within a week, the blog post had driven $8.8k in sales.
+Four hours after the blog post went live, customers had purchased all nine of the kits in my inventory. Within a week, the blog post had driven $8.8k in sales.
 
-I interviewed as many customers as I could to ask what features they want and spent the rest of the year improving the product.  I added support for mouse input. I created my own custom hardware to improve power. I worked with a 3D printing lab to create a sleek case. I'm a software developer, so I had to learn quickly many things outside my experience, like managing inventory, ordering custom circuit boards, and working with 3D printing labs to design custom cases.
+There was a drop in sales after that initial spike, but TinyPilot has been growing consistently ever since then. I had no experience with shipping a physical product, so I quickly had to learn how to manage inventory, systemetize the order fulfillment process, and work with vendors to make circuit boards and 3D-printed cases.
 
-In mid-August, I discovered a [design flaw](/retrospectives/2020/09/#why-oh-y-cables) and paused sales for four weeks until I could ship a fix to my customers. After that, TinyPilot grew consistently each month, ending the year with almost $54k in total revenue.
+TinyPilot ended the year with almost $54k in total revenue. In terms of net income, I'm still in the negative, but it's because my costs are front-loaded. My expenses for 2020 include inventory to last me through February 2021.
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -108,18 +114,16 @@ The course was much harder than I expected. What I planned to be 30-40 hours of 
 
 ### mtlynch.io (this blog)
 
-I don't think of my blog as a business. I write because I enjoy it and want to improve my writing.
+I don't think of my blog as a business. I write mainly for enjoyment.
 
 Perhaps because it's not a business, I'd never thought much about strategy before this year. I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
 
-The big change I made in 2020 was choosing my topics more strategically. Before I began any new post, I asked myself two questions:
+My big change in 2020 was thinking more strategically about topics. Before I began any new post, I asked myself two questions:
 
 1. How many readers are interested in this topic?
 1. Do I have a way of reaching them?
 
-Question #2 is important, as it would have saved me the three months I spent writing, ["Hiring Content Writers: A Guide for Small Businesses."](http://blog:1313/hiring-content-writers/) There are plenty of people interested in that topic, but I have no way of reaching them.
-
-This small bit of extra planning made a huge difference in my readership. In 2019, my articles attracted an average of 5,000 readers in their first week. In 2020, this jumped to 25,000. Eight of my nine blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
+This small bit of planning made a huge difference in my readership. In 2019, my posts averaged 5,000 readers in their first week. In 2020, this number jumped to 25,000. Eight of my nine blog posts reached the front page of Hacker News, and four of them reached the #1 slot.
 
 | Metric                                      | 2019    | 2020    | Change |
 |---------------------------------------------|---------| --------|--------|
@@ -141,19 +145,17 @@ This small bit of extra planning made a huge difference in my readership. In 201
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not certain foods fit the keto diet.
 
-I go through alternating cycles of focusing on it, ditching it out of boredom, then crawling back a few months later to my only profitable business. I returned once again in early 2020, but I knew something had to change drastically. The site only earned around $0.01 per visitor, so I had to do something that dramatically increased visitors and/or earnings.
+I go through alternating cycles of focusing on it, ditching it out of boredom, then crawling back a few months later to my only profitable business at the time. I returned once again in early 2020, but I knew something major had to change. The site only earned around $0.01 per visitor, so I had to do something that drastically increased visitors and/or earnings.
 
 {{<revenue-graph project="isitketo">}}
 
-To scale growth, I tried to templatize the site's content. For all of Is It Keto's life, each article was 100% original and custom-written by me or [writers I hired](/hiring-content-writers/). In 2020, I tried making templates instead. From looking at all my human-written articles, there were consistent structures and patterns that I could abstract into templates and plug in the right food name and nutritional information.
+To scale growth, I tried to automate content generation. For all of Is It Keto's life, each article was 100% original and custom-written by me or [writers I hired](/hiring-content-writers/). In reviewing my existing articles, I noticed consistent structures and patterns that I could abstract into templates. Plugging in the right food name, photos, and nutritional information, I could generate the contents automatically.
 
-TODO: Screenshot
+{{<img src="isitketo-template.png" caption="Creating Is It Keto articles programmatically from templates">}}
 
 At first, it seemed like this would allow me to add hundreds of articles per week, but I found it harder than I expected to auto-generate content while still maintaining accuracy and quality. In two months, I only managed to add 118 articles. The more templates I added, the faster I could go, but it wasn't attracting enough new users to make it worthwhile.
 
 My other idea was from my friend [Justin Vincent](http://nugget.one/jv). When he found out that XX users visited Is It Keto every month, he was astonished that I was squandering my readers' attention on banner ads and affiliate links. I tested a few landing pages for paid keto communities and apps, but only 0.1% of visitors [signed up for more information](/retrospectives/2020/07/#validating-keto-product-ideas).
-
-TODO: screenshot
 
 | Metric                                      | 2019    | 2020      | Change |
 |---------------------------------------------|---------|-----------|---------|
@@ -183,13 +185,13 @@ My plan was to earn money through affiliate deals with theaters, but nobody ever
 
 My investment portfolio is 45% US stock, 35% bonds, and 20% international stocks. As market prices fluctuate, the balance of my investments change, so I have to move money around to get back to my target ratios. This involves tediously plugging numbers into a spreadsheet until everything looks right.
 
-I quickly put together a simple web app that automated the process and began sharing the tool on reddit and my blog. Even though XX people visited the site through my posts, only one person was interested enough to sign up for the free trial, and they decided not to buy. After a month, I decided it wasn't worth pursuing and moved on.
+I quickly put together a simple web app that automated the process and began sharing the tool on reddit, my blog, and through Google ads. The tool attracted 1,000 visitors in its first month, but only one person was interested enough to sign up for the free trial. They decided not to upgrade to a paid plan. I was never that confident in the idea, so I [moved on](/retrospectives/2020/05/#portfolio-rebalancer-has-lots-of-visitors-but-no-sales).
 
 ## Lessons learned
 
 ### Product-market fit is magic
 
-Finding "product-market fit" means building a product and connecting to enough customers to make your business viable. When founders talk about achieving product-market fit, they describe it in the same breathless terms they'd use to talk about finding true love. Now, I understand why.
+Finding "product-market fit" means building a product and connecting to enough customers to make your business viable. When founders talk about achieving product-market fit, they describe it in the same breathless tone as finding true love. Now, I understand why.
 
 The first two and a half years of working on my own, I was grinding away and growing, but it would take hundreds of hours to earn an extra $100/month. Other times, I'd [make a big sale](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) but fail to replicate it.
 
@@ -199,7 +201,7 @@ The experience has been completely different than with anything else I've built.
 
 ### There's no shame in avoiding zero-downtime businesses
 
-I still have a vivid memory of a comedy show I saw at the UCB comedy theater (TODO: link) in late 2017. I don't recall anything about the show. What I remember is being on-call that week, so my thoughts were focused on the pager in my pocket that could go off at any moment and force me to rush home.
+I still have a vivid memory of a comedy show I saw at the [UCB comedy theater](https://ucbtheatre.com/) in late 2017. I don't recall anything about the show. What I remember is being on-call that week, so my thoughts were focused on the pager in my pocket that could go off at any moment and force me to rush home.
 
 My team at Google had an "on-call rotatation," which meant that every two months, you had to carry a pager at all times for two weeks. If the pager went off, you had to be "fingers on keyboard" within 30 minutes.
 
@@ -207,27 +209,34 @@ When I left Google, I was unsure of many things about my future, but I was certa
 
 Around the two year mark, thoughts began creeping into my mind that *this* was why I wasn't succeeding. Other founders were building services that promised to be available 24/7/365, so why should I expect to succeed without the same level of dedication?
 
+
+Early last year, I watched a talk called ["Designing the Ideal Bootstrapped Business"](https://www.youtube.com/watch?v=otbnC2zE2rw) by Jason Cohen, who has launched several multimillion dollar startups. He [explicitly discourages](https://youtu.be/otbnC2zE2rw?t=1962) independent founders from building products that are "real-time," by which he means services that must be available 24/7 or your customers will cancel.
+
+<div style="max-width: 600px; display: block; margin: 0 auto;">
+
 {{<youtube id="otbnC2zE2rw" title="Designing the Ideal Bootstrapped Business">}}
 
-Early last year, I watched the above talk called ["Designing the Ideal Bootstrapped Business"](https://www.youtube.com/watch?v=otbnC2zE2rw) by Jason Cohen, who has launched several multimillion dollar startups. He [explicitly discourages](https://youtu.be/otbnC2zE2rw?t=1962) independent founders from building products that are "real-time," by which he means services that must be available 24/7 or your customers will cancel.
+</div>
 
- Hearing Cohen was such a relief and strengthened my resolve to stick with my instincts. I'm so glad I didn't cave to the pressure. TinyPilot doesn't require me to keep anything online. I could shut down every server and delete every code repository, and TinyPilot customers could continue using their software uninterrupted, forever.
+ Hearing Cohen was such a relief and strengthened my resolve to stick with my instincts.
+
+ I'm so glad I didn't cave to the pressure. TinyPilot is about as far from "real-time" as it gets. Customers run my software on their own hardware, so I could shut down every server and delete every code repository, and TinyPilot customers could happily continue using their devices uninterrupted, forever.
 
 ### Success is more stressful than failure
 
-Even though TinyPilot doesn't require constant attention, my brain often forgets that.
+Even though TinyPilot objectively doesn't require constant availability, my brain often forgets that.
 
-After my big launch, I couldn't sleep for two days. I mailed out all nine devices to my customers, and I was terrified of the results. I was the only person to ever test a TinyPilot. What if everyone got their devices, and none of them worked? What if there was some horrible bug that destroyed people's servers?
+After my big launch, I couldn't sleep for two days. I mailed out all nine devices to my customers, and I was terrified of the results. What if everyone got their devices, and none of them worked? What if there was some horrible bug that destroyed people's servers?
 
-After I got happy reports from customers, I relaxed and took pleasure in the success, but every few weeks, something new would pop up to worry me for days. A shipment of parts I needed got stuck in customs. A positive review drove a surge of customers that cleared out my inventory. I filled out an international invoice and worried that I did it incorrectly and would be sent to export jail.
+After I got happy reports from customers, I relaxed and took pleasure in the success, but every few weeks, something new would pop up to worry me for days. A shipment of parts I needed got stuck in customs. A positive review drove a surge of customers and cleared out my inventory. I filled out an international invoice and worried that I did it incorrectly and would be sent to export jail.
 
-Realistically, the pressure I feel is all self-imposed. If I'm out of stock for a few days and sell a little bit less than I could have, what does it really matter? I rarely ship orders late, but when I do, customers never get upset. In fact, when I email a customer to apologize for a late shipment, their response is always to say they're impressed that I emailed them at all. So, the standards I set for myself are much higher than what my customers even demand.
+Realistically, the pressure I feel is all self-imposed. If I'm out of stock for a few days, who cares? In the rare event that I ship an order late, I feel anxious about disappointing the customer, but nobody's ever gotten upset. In fact, when I apologize that a shipment is going out late, customers only ever reply back to say they're impressed I took the time to let them know.
 
-I've been getting better at separating work from life, but it's an ongoing process. I think deliberately about systems that prevent me from checking work stuff during non-work hours and following habits that let me disconnect at the end of the day.
+I've been getting better at separating work from life, but it's an ongoing process. The things I've found most helpful are systems that prevent me from checking work stuff during non-work hours and following habits that let me disconnect at the end of the day.
 
 ## Grading last year's goals
 
-At the start of last year, I [set three high-level goals](/solo-developer-year-2/#goals-for-year-three). Here's how I performed against them.
+At the start of last year, I [set three high-level goals](/solo-developer-year-2/#goals-for-year-three).
 
 ### Earn $20k in revenue across my businesses
 
@@ -241,7 +250,7 @@ For the first half of the year, I didn't think I'd make it. Fortunately, TinyPil
 * **Result**: Published nine blog posts
 * **Grade**: A-
 
-I was on track to publish 10 posts, but I decided to forego my tenth post to make time to produce my video course. Nevertheless, I'm pleased with the results of my blog posts this year.
+I was on track to publish 10 posts, but I decided to skip my tenth post in order to make [my video course](https://hitthefrontpage.com). Nevertheless, I'm pleased with the results of my blogging this year.
 
 ### Learn one new technology
 
@@ -262,29 +271,27 @@ Okay, as crazy as it sounds to go from a goal of $20k to $600k, I think this is 
 
 ### Publish six blog posts and one book
 
-I've distantly fantasized about self-publishing a book ever since I began working for myself. This year, I'm finally going to do it.
+Ever since I began working for myself, I've distantly fantasized about self-publishing a book. This year, I'm finally going to do it.
 
 The book will teach software developers practical ways to improve their writing. The tentative title is [*Refactoring English: Effective Writing for Software Developers*](https://refactoringenglish.com) (TODO: put up landing page).
 
 ### Automate TinyPilot management
 
-My girlfriend works with me part-time on TinyPilot, managing inventory and packing orders. We enjoy working together, but it's a fragile system that scales poorly. If either of us can't work for a few days, we'd quickly accumulate a massive backlog of work.
+My girlfriend works with me part-time on TinyPilot, managing inventory and packing orders. We enjoy working together, but it's a fragile system that scales poorly. If either of us can't work for a few days, we quickly accumulate a massive backlog.
 
 I'd like to systematize and outsource enough of our processes that we can take a two-week vacation and let the business run on its own.
 
 ## Closing thoughts
 
-At one point at Google, my team had to spend two weeks filling out spreadsheets to generate data for a new machine learning algorithm. The spreadsheet was nothing complicated &mdash; it was work an intelligent high school graduate could do with a few hours of instruction for $15/hour.
+Before I quit my job, I'd read books and listen to podcasts about startups. The part that felt most exhilerating to me was all the possibilites.
 
-Because of Google's size, hiring a new person to fill out spreadsheets would have meant months of coordination, approvals, and HR paperwork. It was easier to pay software engineers to do it for an average of $250/hour, even though that was obviously absurd.
+When you run your own business, you can do *anything*. You can focus on the product. You can put your energy into marketing. You can hire someone to help you. And within those categories, there are infinite subcategories of possibilities because you can hire a salesperson, a developer.
 
-Those days, I'd come home and listen to the Indie Hackers podcast (TODO: link), where host Courtland Allen interviewed software founders who started their companies without venture capital investment. One of the things that intrigued me about their stories was the limitless possibilities of it all.
+I love creating systems, so I like having the opportunity to test hypotheses and then build systems to scale them.
 
-When you work a corporate job, you have to fill out spreadsheets for days because they ask you to. When you're a founder, there are infinite choices you can make. You could focus on the product, market, sales, or hiring. Within each of those categories, there are almost infinite subcategories. And you get to see the result, usually pretty fast. If you're at Google, it's hard for you to measure your impact on the company, but if you're running a scrappy bootstrapped business, and you spend $5,000 on something, you'll usually find out in a month or two whether it was worth the money.
+With any fantasy, you figure it's never going to be as fun as you expect. For me, running a successful business actually is. Stressful, but fun. Now that I have money coming in, there are almost limitless ways for me to reinvest it into the business.
 
-With any fantasy, you figure it's never going to be *as* fun as you expect, but running a successful business actually is. Stressful, but fun. Now that I have money coming in, there are almost limitless ways for me to reinvest it into the business.
-
-So once again, I feel incredibly lucky I have the freedom to work for myself, and I hope to do it forever.
+So once again, I feel incredibly lucky to be working for myself, and I hope I have the opportunity as long as possible.
 
 ---
 
