@@ -6,6 +6,7 @@ tags:
 - tinypilot
 - is it keto
 - wanderjest
+description: TODO
 hero_image: cover.jpg
 images:
 - code-review-love/og-cover.jpg
@@ -175,7 +176,7 @@ My other idea was from my friend [Justin Vincent](http://nugget.one/jv). When he
 
 WanderJest was a short-lived project I started at the beginning of the year. I described it as "Bandsintown, but for comedy."
 
-I love live comedy, but I've missed countless opportunities to see a comedian perform near me because I'm not on the right mailing list, not following the right social media account, or not checking Ticketmaster at the right time. WanderJest was going to solve that.
+I love live comedy, but I've missed countless opportunities to see a comedian perform near me because I'm not on the right mailing list, not following the right social media account, or not checking Ticketmaster at the right time. WanderJest was going to solve that by aggregating together show listings from as many sources as possible.
 
 My plan was to earn money through affiliate deals with theaters, but nobody ever used my discount codes. Once COVID hit, I [shuttered the site](/retrospectives/2020/04/#putting-wanderjest-on-hold).
 
@@ -201,7 +202,7 @@ The experience has been completely different than with anything else I've built.
 
 ### There's no shame in avoiding zero-downtime businesses
 
-I still have a vivid memory of a comedy show I saw at the [UCB comedy theater](https://ucbtheatre.com/) in late 2017. I don't recall anything about the show. What I remember is being on-call that week, so my thoughts were focused on the pager in my pocket that could go off at any moment and force me to rush home.
+I still have a vivid memory of a comedy show I saw at the [UCB comedy theater](https://ucbtheatre.com/) in late 2017. I don't recall anything about the performance. What I remember is being on-call that week, so my thoughts were focused on the pager in my pocket that could go off at any moment and force me to rush home.
 
 My team at Google had an "on-call rotatation," which meant that every two months, you had to carry a pager at all times for two weeks. If the pager went off, you had to be "fingers on keyboard" within 30 minutes.
 
@@ -209,8 +210,7 @@ When I left Google, I was unsure of many things about my future, but I was certa
 
 Around the two year mark, thoughts began creeping into my mind that *this* was why I wasn't succeeding. Other founders were building services that promised to be available 24/7/365, so why should I expect to succeed without the same level of dedication?
 
-
-Early last year, I watched a talk called ["Designing the Ideal Bootstrapped Business"](https://www.youtube.com/watch?v=otbnC2zE2rw) by Jason Cohen, who has launched several multimillion dollar startups. He [explicitly discourages](https://youtu.be/otbnC2zE2rw?t=1962) independent founders from building products that are "real-time," by which he means services that must be available 24/7 or your customers will cancel.
+I felt deep relief when I watched ["Designing the Ideal Bootstrapped Business"](https://www.youtube.com/watch?v=otbnC2zE2rw) where bootstrapped founder extraordinaire Jason Cohen said to keep doing what I'm doing. He [explicitly discourages](https://youtu.be/otbnC2zE2rw?t=1962) independent founders from building products that are "real-time," by which he means services that must be available 24/7 or your customers will cancel.
 
 <div style="max-width: 600px; display: block; margin: 0 auto;">
 
@@ -218,13 +218,11 @@ Early last year, I watched a talk called ["Designing the Ideal Bootstrapped Busi
 
 </div>
 
- Hearing Cohen was such a relief and strengthened my resolve to stick with my instincts.
-
  I'm so glad I didn't cave to the pressure. TinyPilot is about as far from "real-time" as it gets. Customers run my software on their own hardware, so I could shut down every server and delete every code repository, and TinyPilot customers could happily continue using their devices uninterrupted, forever.
 
 ### Success is more stressful than failure
 
-Even though TinyPilot objectively doesn't require constant availability, my brain often forgets that.
+Even though TinyPilot doesn't require constant availability, my brain often forgets that.
 
 After my big launch, I couldn't sleep for two days. I mailed out all nine devices to my customers, and I was terrified of the results. What if everyone got their devices, and none of them worked? What if there was some horrible bug that destroyed people's servers?
 
@@ -295,7 +293,7 @@ So once again, I feel incredibly lucky to be working for myself, and I hope I ha
 
 ---
 
-*Thanks to Monica Lent (TODO: link) and the Blogging for Devs community (TODO: link) for providing early feedback for this post.*
+*Thanks to [Monica Lent](https://monicalent.com/) and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
