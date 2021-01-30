@@ -1,6 +1,6 @@
 # mtlynch.io
 
-[![CircleCI](https://circleci.com/gh/mtlynch/mtlynch.io.svg?style=svg)](https://circleci.com/gh/mtlynch/mtlynch.io)
+[![CircleCI](https://circleci.com/gh/mtlynch/mtlynch.io.svg?style=svg)](https://circleci.com/gh/mtlynch/mtlynch.io) [![Creative Commons License CC-BY 4.0](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
 ## Overview
 
