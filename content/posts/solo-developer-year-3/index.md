@@ -8,15 +8,16 @@ tags:
 - wanderjest
 description: TODO
 hero_image: cover.jpg
+description: Today is the third anniversary of me quitting my job at Google to build my own software business. I posted updates at the end of my first and second years, so it's time for another update.
 images:
 - code-review-love/og-cover.jpg
 date: '2021-02-01'
 ---
-Today is the third anniversary of me [quitting my developer job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years, so it's time for another update.
+Today is the third anniversary of me [quitting my job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years, so it's time for another update.
 
 ## The year things clicked into place
 
-In my first two years working for myself, I earned less than $10k total. [My goal](/solo-developer-year-2/#goals-for-year-three) was to end the third year with at least $20k in total revenue.
+In my first two years working for myself, I earned less than $10k total. [My goal](/solo-developer-year-2/#goals-for-year-three) for the third year was to earn $20k in revenue.
 
 For the first six months, it looked like I'd fall short. My businesses collectively earned about $300/month, and none of my new ideas were working.
 
@@ -26,7 +27,7 @@ Miraculously, one new product in May turned everything around. By the end of the
 
 Okay, my net profits are still negative, but this time I have a good excuse!
 
-I sell a physical product now, so my income lags my expenses by two or three months. My profit margins are 50% to 200% per sale, so the numbers will catch up eventually.
+I sell a physical product now, so my income lags my expenses by two or three months. My profit margins are 50-200% per sale, so the numbers will catch up eventually.
 
 {{<notice type="info">}}
 
@@ -44,7 +45,7 @@ I went into more detail about this [in last year's retrospective](/solo-develope
 
 For the past few years, I've done all my software development on a [home server](/building-a-vm-homelab/). It works great, except when I screw up the network configuration or want to install a new operating system. My server has no monitor or keyboard attached, so I have to drag it over to my desk, swap all the cables with my workstation, and then swap everything back when I'm done.
 
-I had read that the Raspberry Pi could masquerade as a USB keyboard, and I knew it could capture video. I wondered if I could turn one of my Raspberry Pis into a little remote administration device. That way, I could plug it into a server, and it would spin up a web interface where I could type in keyboard input and see the server's video output.
+I'd read that a [Raspberry Pi](https://www.raspberrypi.org/) could masquerade as a USB keyboard, and I knew it could capture video. I wondered if a Raspberry Pi into serve as a miniature remote administration device. It could plug into a server and spin up a web interface where I could type in keyboard input and see the server's video output.
 
 After a few months of tinkering, I had a working prototype.
 
@@ -56,11 +57,11 @@ After a few months of tinkering, I had a working prototype.
 
 {{</gallery>}}
 
-Was there even a market for this? I figured I could sell one or two kits per week, so if I made $80 per kit, it would be worth my time packing up and shipping boxes.
+Was there even a market for this? Why would anyone buy this device from me? It was just a collection of widely available hardware components. Maybe one or two customers per week would purchase, so if I made $80 per kit, it would be worth my time packing up and shipping boxes.
 
 Then, I published [a blog post](/tinypilot/) about it.
 
-Immediately, it became clear that this business was different than anything I'd ever done before. Four hours after the blog post went live, customers had purchased all nine of the kits in my inventory.
+Immediately, it became clear that this business was different than anything I'd ever done before. Less than four hours after the blog post went live, customers had purchased all nine kits from my inventory.
 
 Within a week, the blog post had driven $8.8k in sales. It reached the front page of Hacker News and became [one of the top "Show HN" posts](https://bestofshowhn.com/) of all time.
 
@@ -69,10 +70,9 @@ Within a week, the blog post had driven $8.8k in sales. It reached the front pag
  {{<img src="tinypilot-reddit.png" hasBorder="true">}}
 {{</gallery>}}
 
+There was a drop in sales after that initial spike, but TinyPilot has been growing consistently ever since. I had zero experience selling a physical product, so I quickly learned how to [manage inventory](/retrospectives/2020/08/#managing-inventory-is-hard), systematize the order fulfillment process, and work with vendors to make [circuit boards](/retrospectives/2020/10/#manufacturing-a-power-connector-from-start-to-finish) and [3D-printed cases](/retrospectives/2020/12/#new-products-require-new-habits).
 
-There was a drop in sales after that initial spike, but TinyPilot has been growing consistently ever since then. I had no experience with shipping a physical product, so I quickly had to learn how to [manage inventory](/retrospectives/2020/08/#managing-inventory-is-hard), systemetize the order fulfillment process, and work with vendors to make [circuit boards](/retrospectives/2020/10/#manufacturing-a-power-connector-from-start-to-finish) and [3D-printed cases](/retrospectives/2020/12/#new-products-require-new-habits).
-
-TinyPilot ended the year with almost $54k in total revenue. In terms of net income, I'm still in the negative, but it's because my costs are front-loaded. My expenses for 2020 include inventory to last me through February 2021.
+TinyPilot ended the year with almost $54k in revenue. In terms of net income, I'm still in the negative, but it's because my costs are front-loaded. My expenses for 2020 include inventory to last me through February 2021.
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -83,20 +83,22 @@ TinyPilot ended the year with almost $54k in total revenue. In terms of net inco
 | Materials                 | -$46,143    |
 | Electircal engineering consulting             | -$7,130     |
 | Order fulfillment         | -$2,570     |
-| Software development      | -$1,321     |
+| Software development\*      | -$1,321     |
 | Open source contributions | -$1,270     |
 | Advertising               | -$675       |
 | Graphic design            | -$250       |
 | Hosting / Domains         | -$64        |
 | **Net profit**            | **-$5,681**    |
 
+\* I write the vast majority of the code, but I hired a developer to help with the [sales page](https://tinypilotkvm.com).
+
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com)
 
 {{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging">}}
 
-In May, I gave an informal presentation to my peer mentorship group called ["How to be a Sort of Successful Software Blogger."](https://decks.mtlynch.io/show-and-tell-2020-05/) I tried to reverse engineer the techniques that made my writing especially successful on sites like Hacker News and reddit. I enjoyed deconstructing my process, but I didn't know what more to do with the material.
+In May, I gave an informal presentation to my peer mentorship group called ["How to be a Sort of Successful Software Blogger."](https://decks.mtlynch.io/show-and-tell-2020-05/) I tried to deconstruct the techniques that made my writing especially successful on sites like Hacker News and reddit. I enjoyed sharing my process, but I didn't know what more to do with the material.
 
-Over the course of the year, I saw more and more developers teach what they knew in paid courses. TinyPilot had shown me how powerful it could be to align my blog with my business, so I felt like if people liked my blog, they might be interested in a course about how I make it.
+Over the course of the year, I saw developers teach what they knew in paid courses. TinyPilot had shown me how powerful it could be to align my blog with my business, so I felt like if people liked my blog, they might be interested in a course about how I make it.
 
 The course was much harder than I expected. What I planned to be 30-40 hours of work turned into nearly 200. I [released the course](https://hitthefrontpage.com) in January, and the audience turned out to be smaller than I expected, but I'm still proud of the material, and many of the customers who have watched it have told me that it taught them a lot.
 
@@ -111,16 +113,14 @@ The course was much harder than I expected. What I planned to be 30-40 hours of 
 
 ### mtlynch.io (this blog)
 
-I don't think of my blog as a business. I write mainly for enjoyment.
+My big change this year was thinking more strategically about article topics. Before 2020, I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
 
-Perhaps because it's not a business, I'd never thought much about strategy before this year. I wrote with an attitude of, "This topic is on my mind right now, so I'm going to write about it and see what happens." Sometimes the post would find an audience, but more often it wouldn't.
-
-My big change in 2020 was thinking more strategically about topics. Before I began any new post, I asked myself two questions:
+This year, before I began writing any new article, I asked myself two questions:
 
 1. How many readers are interested in this topic?
 1. Do I have a way of reaching them?
 
-This small bit of planning made a huge difference in my readership. In 2019, my posts averaged 5,000 readers in their first week. In 2020, this number jumped to 25,000. Of the nine new blog posts I published this year, all but one reached reached the front page of Hacker News, and four of them reached the #1 slot.
+This small bit of planning made a huge difference in my readership. In 2019, my posts averaged 5,000 readers in their first week. In 2020, this number jumped to 25,000. Of the nine new blog posts I published, all but one reached reached the front page of Hacker News, and four of them reached the #1 slot.
 
 | Metric                                      | 2019    | 2020    | Change |
 |---------------------------------------------|---------| --------|--------|
@@ -142,17 +142,19 @@ This small bit of planning made a huge difference in my readership. In 2019, my 
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not certain foods fit the keto diet.
 
-I gave up on it in 2019 but [came crawling back](/retrospectives/2020/05/) in April 2020 after several of new business ideas flopped. Is It Keto was profitable, but barely. It earned less than $0.01 per visitor, so it needed a drastic increase in visitors and/or earnings.
+I gave up on it in 2019 but [came crawling back](/retrospectives/2020/05/) in April 2020 after several of my new business ideas flopped. Is It Keto was profitable, but barely. It earned less than $0.01 per visitor, so it needed a drastic increase in visitors and/or earnings.
 
 {{<revenue-graph project="isitketo">}}
 
-To scale growth, I tried to automate article-writing. For all of Is It Keto's life, each article was 100% original and custom-written by me or [writers I hired](/hiring-content-writers/). In reviewing my existing articles, I noticed a consistent structure and patterns that I could abstract into templates. Plugging in the right food name, photos, and nutritional information would allow the site to auto-generate articles.
+To scale growth, I tried to automate article-writing. For all of Is It Keto's life, each article was 100% original and custom-written by me or [writers I hired](/hiring-content-writers/). In reviewing my existing articles, I noticed consistent patterns that I could abstract into templates. Plugging in the right food name, photos, and nutritional information would allow me to quickly generate new articles.
 
 {{<img src="isitketo-template.png" caption="Creating Is It Keto articles programmatically from templates">}}
 
 At first, it seemed like templatizing content would add hundreds of articles per week, but it was harder than I expected to scale so quickly without sacrificing quality. In two months, I only managed to add 118 articles. The more templates I added, the faster I could go, but the new articles drew in too few users to make it worthwhile.
 
-The other idea came from my friend [Justin Vincent](http://nugget.one/jv), who was flabberghsted to hear that that my earnings were so pitiful on 73k pageviews per month. He recommended that I build a paid sister product and use Is It Keto to generate a stream of qualified leads. I tested a few landing pages for keto communities and apps, but only 0.1% of visitors [signed up for more information](/retrospectives/2020/07/#validating-keto-product-ideas). Around this time, TinyPilot began taking off, so I put Is It Keto on the backburner.
+The other idea came from my friend [Justin Vincent](http://nugget.one/jv), who was flabbergasted to hear that that the site earned so little from 73k pageviews per month. He recommended that I build a paid sister product and use Is It Keto to generate a stream of qualified leads.
+
+I tested a few landing pages for keto communities and apps, but only 0.1% of visitors [signed up for more information](/retrospectives/2020/07/#validating-keto-product-ideas). Around this time, TinyPilot began taking off, so I put Is It Keto on the backburner.
 
 | Metric                                      | 2019    | 2020      | Change |
 |---------------------------------------------|---------|-----------|---------|
@@ -164,7 +166,7 @@ The other idea came from my friend [Justin Vincent](http://nugget.one/jv), who w
 | Hosting / domain                            | -$115   | -$241          | <font color="red">+$126 (+110%)</font>
 | **Net profit**                              | **<font color="red">-$2,158 </font>**  | **<font color="green">$4,753</font>** | **<font color="green">+$6,911</font>**
 
-\* I gave up on these in January 2020
+\* I [gave up on meal plans](/retrospectives/2019/12/#giving-up-on-meal-plans) in January 2020
 
 ### [WanderJest](https://wanderjest.com)
 

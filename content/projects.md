@@ -6,9 +6,13 @@ title: Projects
 
 TinyPilot is a small, inexpensive device that gives you remote access to servers before they even boot.
 
+## [Refactoring English](https://refactoringenglish.com) (2021)
+
+*Refactoring English: Effective Writing for Software Developers* is my upcoming book that teaches developers practical tips to improve their writing.
+
 ## [Hit the Front Page of Hacker News](https://hitthefrontpage.com/) (2021)
 
-An in-depth video course covering everything I've learned about blogging in the last five years. The course explains my strategy of writing a small number of highly-polished posts that reach the front page of Hacker News, reddit, and Google search results.
+Hit the Front Page of Hacker News is my video course that shows how I write high-quality blog posts that succeed on tech sites like Hacker News and reddit.
 
 ## [Portfolio Rebalancer](https://assetrebalancer.com/) (2020)
 
