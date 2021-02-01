@@ -11,6 +11,9 @@ description: Today is the third anniversary of me quitting my job at Google to b
 images:
 - solo-developer-year-3/og-cover.jpg
 date: '2021-02-01'
+discuss_urls:
+  reddit: https://www.reddit.com/r/programming/comments/la4hfq/my_third_year_as_a_solo_developer/
+  hacker_news: https://news.ycombinator.com/item?id=25989010
 ---
 Today is the third anniversary of [quitting my job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years, so it's time to share my progress.
 
