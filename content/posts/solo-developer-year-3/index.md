@@ -83,7 +83,7 @@ TinyPilot ended the year with almost $54k in revenue. My net income is still neg
 | Sales                     | $53,362     |
 | Donations                 | $380        |
 | Materials                 | -$46,143    |
-| Electircal engineering consulting             | -$7,130     |
+| Electrical engineering consulting             | -$7,130     |
 | Order fulfillment         | -$2,570     |
 | Software development\*      | -$1,321     |
 | Open-source contributions | -$1,270     |
