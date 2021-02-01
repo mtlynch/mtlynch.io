@@ -309,6 +309,7 @@ Once again, I feel incredibly fortunate to be working for myself, and I hope to 
 const dollarFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
+  minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
 function drawChart(chartId, labels, data) {
