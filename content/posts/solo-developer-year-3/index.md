@@ -6,11 +6,10 @@ tags:
 - tinypilot
 - is it keto
 - wanderjest
-description: TODO
 hero_image: cover.jpg
 description: Today is the third anniversary of me quitting my job at Google to build my own software business. I posted updates at the end of my first and second years, so it's time for another update.
 images:
-- code-review-love/og-cover.jpg
+- solo-developer-year-3/og-cover.jpg
 date: '2021-02-01'
 ---
 Today is the third anniversary of [quitting my job at Google](/why-i-quit-google/) to build my own software business. I posted updates at the end of my [first](/solo-developer-year-1/) and [second](/solo-developer-year-2/) years, so it's time for another update.
