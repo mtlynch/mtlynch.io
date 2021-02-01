@@ -506,11 +506,8 @@ h4:hover .hanchor {
   }
 }
 
-.affiliate-disclosure {
-  margin-bottom: 5rem;
-  padding: 2rem 1rem;
-  background-color: rgb(236, 236, 236);
-  border: 1px solid rgb(168, 168, 168);
+.twitter-tweet {
+  margin: 0 auto;
 }
 
 .footer .creative-commons-license {
