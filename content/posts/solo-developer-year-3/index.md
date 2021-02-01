@@ -298,6 +298,8 @@ As I finally see financial success with one of my businesses, there's more reven
 
 Once again, I feel incredibly fortunate to be working for myself, and I hope to continue doing it forever.
 
+{{< tweet 1356256679231434753 >}}
+
 ---
 
 *Cover image by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to [Monica Lent](https://monicalent.com/) and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*
