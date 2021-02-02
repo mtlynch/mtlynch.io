@@ -71,7 +71,7 @@ I realized too late that I underestimated the cost of establishing new habits fo
 
 ## Voyager pricing
 
-Voyager is exciting because it's a product that only I offer, so I can charge a higher premium than my other products. My costs for each Voyager are ~$106/unit, so I make a profit of $144 on each sale (58% margins). I have similar percentage margins on the kits, but my profits are lower in absolute terms (~$86/unit) because of the lower price point.
+Voyager is exciting because it's a product that only I offer, so I can charge a higher premium than my other products. My costs for each Voyager are ~$106/unit, so I make a profit of $144 on each sale (58% markup). I have similar percentage markups on the kits, but my profits are lower in absolute terms (~$86/unit) because of the lower price point.
 
 | Product      | Cost    | Retail Price | Profit |
 |--------------|---------|--------------|--------|

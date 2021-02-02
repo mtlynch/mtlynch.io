@@ -29,7 +29,7 @@ Miraculously, one new product in May turned everything around. By the end of the
 
 Okay, my net profits are still negative, but this time I have a good excuse!
 
-I sell a physical product now, so my income lags my expenses by two or three months. My profit margins are 50-200% per sale, so the numbers will catch up eventually.
+I sell a physical product now, so my income lags my expenses by two or three months. My profit margins are 30-50% per sale, so the numbers will catch up eventually.
 
 {{<notice type="info">}}
 
