@@ -238,14 +238,14 @@ Support TinyPilot's development by purchasing [an official TinyPilot kit](https:
 
 * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-* [HDMI to USB capture dongle](https://smile.amazon.com/Camcorder-Definition-Acquisition-Broadcasting-Conference/dp/B08B4J2XXF/)
+* [HDMI to USB capture dongle](https://smile.amazon.com/Definition-Camcorder-Acquisition-Streaming-Conference/dp/B08C9FCF2X/)
   * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
   * They're generally available on eBay for $11-15.
 * [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://smile.amazon.com/Cable-DisplayPort-marca-AmazonBasics-longitud/dp/B015OW3M1W/)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
 * (Optional) [A USB-C OTG split connector](https://tinypilotkvm.com/product/tinypilot-power-connector)
-  * Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/gp/product/B01JPDTZXK/).
+  * Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/gp/product/B01JPDTZXK/) and a [3 Amp power adapter](https://smile.amazon.com/dp/B0728HB18G).
 * (Optional) A cooling case, heat sink, or fan
   * Choose a case that provides access to the Pi's GPIO pins.
   * I use [this minimalist, passive cooling case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/).
