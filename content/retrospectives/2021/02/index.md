@@ -117,16 +117,6 @@ The over-order was a human mistake, but it highlights how our system invites mis
 
 **Fix**: Add a column in the spreadsheet for "reorder quantity" that factors in quantity-per-pack.
 
-## Where's the inventory management app for me?
-
-You may have noticed that in the postmortem, most of the problems come back to our ad-hoc, homegrown spreadsheet. I've looked for inventory management apps several times throughout the life of TinyPilot, but every solution is either too simple or too complicated.
-
-My ideal workflow would be that I record the sale of a TinyPilot Voyager (better yet, it finds out directly from Shopify), and the app deducts from my inventory all the components that make up a Voyager: case, cables, microSD card, and Raspberry Pi.
-
-The "too simple" solutions have no concept of "product components." They track inventory only of finished products like T-shirts or sneakers. The "too complicated" solutions understand components, but they see orders as heavyweight workflows that involve a sales lifecycle, purchase order numbers, and tracking which warehouse holds the parts needed.
-
-If you're reading this and want to build a SaaS app, I would pay you $200/month if you build a solution that matches TinyPilot's use case.
-
 ## How can I scale?
 
 To scale production, I'm blah blah
