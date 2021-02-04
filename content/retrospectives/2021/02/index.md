@@ -30,7 +30,7 @@ Hiring a new developer is a slow process, but it's going according to plan. With
 
 I underestimated how long it takes for YouTubers to make new videos. One new review came out, but it's based on outreach I did in November. Two other YouTubers agreed to review, but they're still working on their videos.
 
-That said, one review turned out to be almost too much to handle. More on that [below](#my-first-youtube-review).
+That said, one review turned out to be almost too much to handle. More on that [below](#tinypilots-first-youtube-review).
 
 ### Earn $4k in revenue from *Hit the Front Page of Hacker News*
 
