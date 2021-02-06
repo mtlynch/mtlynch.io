@@ -230,7 +230,7 @@ h4:hover .hanchor {
   border-color: #aaa;
 }
 
-.subscribe-container .subscribe-topics {
+.subscribe-container .subscribe-topic {
   margin-top: 2rem;
 }
 
@@ -256,7 +256,7 @@ h4:hover .hanchor {
   right: 0px;
 }
 
-.subscribe-container .subscribe-topics {
+.subscribe-container .subscribe-topic {
   display: flex;
   flex-direction: column;
   text-align: left;

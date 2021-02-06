@@ -24,14 +24,14 @@
 
       <input name="email" type="email" placeholder="Email address" required>
 
-      <div class="subscribe-topics">
+      <div class="subscribe-topic">
         <div>
-          <input id="blogposts" name="topics" type="radio" value="{{ $currentPageType }}">
+          <input id="blogposts" name="topic" type="radio" value="{{ $currentPageType }}">
           <label for="blogposts">Only {{ $currentPageTypeFriendly }}</label>
         </div>
 
         <div>
-          <input id="all-updates" name="topics" type="radio" value="all" checked>
+          <input id="all-updates" name="topic" type="radio" value="all" checked>
           <label for="all-updates">All posts (monthly retrospectives, book reports, etc.)</label>
         </div>
       </div>
