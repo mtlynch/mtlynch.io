@@ -51,7 +51,7 @@ Now that Is It Keto is on the backburner, I'm not going to dive as deeply into i
 | Total Pageviews        | 11,431     | 19,732     | <font color="green">+8,301 (+73%)</font>       |
 | Domain Authority (Moz) | 9          | 9          | 0                                              |
 | Ranking Keywords (Moz) | 448        | 548        | <font color="green">+100 (+22%)</font>         |
-| **Total Earnings**     | **$40.84** | **$82.44** | **<font color="green">+$41.60 (+102%)</font>** |
+| **Total Revenue**     | **$40.84** | **$82.44** | **<font color="green">+$41.60 (+102%)</font>** |
 
 ## Money for nothing
 

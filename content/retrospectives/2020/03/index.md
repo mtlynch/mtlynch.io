@@ -54,7 +54,7 @@ Again, I expected the scavenger hunt to drive more visits, but the contest so fa
 | Registered Users        | 0            | 4             | <font color="green">+4 (+inf%)</font>           |
 | Affiliate Earnings      | $0.00        | $0.00         | 0                                               |
 | Scavenger Hunt Earnings | N/A          | $100.00       | N/A                                             |
-| **Total Earnings**      | **$0.00**    | **$100.00**   | **<font color="green">+$100.00 (+inf%)</font>** |
+| **Total Revenue**      | **$0.00**    | **$100.00**   | **<font color="green">+$100.00 (+inf%)</font>** |
 
 ## My brilliant marketing plan
 
@@ -168,7 +168,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdSense Earnings          | $423.57      | $286.95       | <font color="red">-$136.62 (-32%)</font>     |
 | Amazon Affiliate Earnings | $345.04      | $395.67       | <font color="green">+$50.63 (+15%)</font>    |
 | Meal Plan Sales           | $18.10       | $0.00         | <font color="red">-$18.10 (-100%)</font>     |
-| **Total Earnings**        | **$786.71**  | **$682.62**   | **<font color="red">-$104.09 (-13%)</font>** |
+| **Total Revenue**        | **$786.71**  | **$682.62**   | **<font color="red">-$104.09 (-13%)</font>** |
 
 Numbers are down for Is It Keto, but that's misleading because January was an anomalously profitable month. There's always a big surge of interest in January due to people starting the keto diet for their new year's resolutions, but it fades within weeks.
 
@@ -183,7 +183,7 @@ $682 in revenue is surprisingly strong revenue for Is It Keto. I had expected nu
 | Unique Visitors    | 1,723        | 877           | <font color="red">-846 (-49%)</font>        |
 | Total Pageviews    | 4,078        | 2,578         | <font color="red">-1,500 (-37%)</font>      |
 | RapidAPI Earnings  | $79.67       | $2.27         | <font color="red">-$77.40 (-97%)</font>     |
-| **Total Earnings** | **$79.67**   | **$2.27**     | **<font color="red">-$77.40 (-97%)</font>** |
+| **Total Revenue** | **$79.67**   | **$2.27**     | **<font color="red">-$77.40 (-97%)</font>** |
 
 Zestful had a dead month, but that's also not surprising given that Zestful's revenue is bursty.
 

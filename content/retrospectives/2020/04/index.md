@@ -154,7 +154,7 @@ I always felt like other indie projects had such slick stock imagery, but I wasn
 | Registered Users        | 4             | 10         | <font color="green">+6 (+150%)</font>         |
 | Affiliate Earnings      | $0.00         | $0.00      | 0                                             |
 | Scavenger Hunt Earnings | $100.00       | $0.00      | <font color="red">-$100.00 (-100%)</font>     |
-| **Total Earnings**      | **$100.00**   | **$0.00**  | **<font color="red">-$100.00 (-100%)</font>** |
+| **Total Revenue**      | **$100.00**   | **$0.00**  | **<font color="red">-$100.00 (-100%)</font>** |
 
 WanderJest was struggling in the first half of the month. In the second half of the month, visits were basically nil, as every live show was canceled.
 
@@ -169,7 +169,7 @@ WanderJest was struggling in the first half of the month. In the second half of 
 | Domain Rating (Ahrefs)    | 26.0          | 26.0        | 0                                            |
 | AdSense Earnings          | $286.95       | $195.85     | <font color="red">-$91.10 (-32%)</font>      |
 | Amazon Affiliate Earnings | $395.67       | $166.43     | <font color="red">-$229.24 (-58%)</font>     |
-| **Total Earnings**        | **$682.62**   | **$362.28** | **<font color="red">-$320.34 (-47%)</font>** |
+| **Total Revenue**        | **$682.62**   | **$362.28** | **<font color="red">-$320.34 (-47%)</font>** |
 
 Is It Keto took a big hit this month after a strong start to the year. I suppose people are not that interested in diets when there's a global pandemic raging on.
 
@@ -182,7 +182,7 @@ Is It Keto took a big hit this month after a strong start to the year. I suppose
 | Unique Visitors    | 877           | 291        | <font color="red">-586 (-67%)</font>         |
 | Total Pageviews    | 2,578         | 843        | <font color="red">-1,735 (-67%)</font>       |
 | RapidAPI Earnings  | $2.27         | $3.67      | <font color="green">+$1.40 (+62%)</font>     |
-| **Total Earnings** | **$2.27**     | **$3.67**  | **<font color="green">+$1.40 (+62%)</font>** |
+| **Total Revenue** | **$2.27**     | **$3.67**  | **<font color="green">+$1.40 (+62%)</font>** |
 
 Zestful remains quiet with a handful of occasional pay-as-you-go users.
 

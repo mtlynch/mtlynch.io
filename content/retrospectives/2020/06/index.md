@@ -47,7 +47,7 @@ The post [got a good response on Reddit](https://redd.it/gqxvxb) but [failed to 
 | Domain Rating (Ahrefs)    | 27.0        | 27.0        | 0                                           |
 | AdSense Earnings          | $92.09      | $109.92     | <font color="green">+$17.83 (+19%)</font>   |
 | Amazon Affiliate Earnings | $128.39     | $111.61     | <font color="red">-$16.78 (-13%)</font>     |
-| **Total Earnings**        | **$220.48** | **$221.53** | **<font color="green">+$1.05 (+0%)</font>** |
+| **Total Revenue**        | **$220.48** | **$221.53** | **<font color="green">+$1.05 (+0%)</font>** |
 
 Is It Keto continued growing in visitors. It seems to have recovered to its normal level of activity pre-COVID. Worryingly, AdSense earnings failed to keep pace, and Amazon Affiliate earnings actually dropped.
 
@@ -172,7 +172,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Unique Visitors    | 1,142      | 467       | <font color="red">-675 (-59%)</font>        |
 | Total Pageviews    | 2,960      | 1,258     | <font color="red">-1,702 (-57%)</font>      |
 | RapidAPI Earnings  | $32.19     | $6.48     | <font color="red">-$25.71 (-80%)</font>     |
-| **Total Earnings** | **$32.19** | **$6.48** | **<font color="red">-$25.71 (-80%)</font>** |
+| **Total Revenue** | **$32.19** | **$6.48** | **<font color="red">-$25.71 (-80%)</font>** |
 
 For some reason, Zestful got a burst of interest in May. Three customers requested Enterprise pricing. Two of them seem like dead leads, but I might have something that works well for the third. I should know what's going to happen by the end of this week.
 

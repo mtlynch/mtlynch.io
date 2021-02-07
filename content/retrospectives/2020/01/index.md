@@ -55,7 +55,7 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 | Ranking Keywords (Moz)    | 1,654         | 2,979         | <font color="green">+1,325 (+80%)</font>       |
 | AdSense Earnings          | $151.07       | $235.71       | <font color="green">+$84.64 (+56%)</font>      |
 | Amazon Affiliate Earnings | $118.00       | $157.08       | <font color="green">+$39.08 (+33%)</font>      |
-| **Total Earnings**        | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
+| **Total Revenue**        | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
 
 This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg).
 
@@ -71,7 +71,7 @@ The revenue was a bit of a surprise given that traffic has been waning for the p
 | Total Pageviews          | 320           | 594           | <font color="green">+274 (+86%)</font>            |
 | RapidAPI Earnings        | $65.33        | $52.24        | <font color="red">-$13.09 (-20%)</font>           |
 | Enterprise Plan Earnings | $0.00         | $3883.70      | <font color="green">+$3883.70 (+inf%)</font>      |
-| **Total Earnings**       | **$65.33**    | **$3935.94**  | **<font color="green">+$3870.61 (+5925%)</font>** |
+| **Total Revenue**       | **$65.33**    | **$3935.94**  | **<font color="green">+$3870.61 (+5925%)</font>** |
 
 December was a huge month for Zestful. A fast-moving startup told me that Zestful was exactly what they needed. We hopped on a call that same day, they tested it out using the standard plan, and then purchased an enterprise plan two days later. It was Zestful's biggest sale ever, and it more than doubled my total business revenue for the year. They've been satisfied with the service so far, so I hope they continue working with Zestful on a recurring basis.
 

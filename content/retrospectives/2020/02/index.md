@@ -51,7 +51,7 @@ This was useful to write, as it helped me re-evaluate my long term strategy. It 
 | Registered Users          | 0            |
 | New Affiliate Partners    | 3            |
 | Affiliate Earnings        | $0.00        |
-| **Total Earnings**        | **$0.00**    |
+| **Total Revenue**        | **$0.00**    |
 
 It's WanderJest's first month, so I'm happy with its progress out of the gate. I wish I'd achieved some revenue, but I'm encouraged by how welcoming everyone has been when I approach them about setting up ad-hoc affiliate agreements.
 
@@ -71,7 +71,7 @@ User engagement needs to improve. No users have created accounts yet, and that's
 | AdSense Earnings          | $235.71       | $423.57      | <font color="green">+$187.86 (+80%)</font>      |
 | Amazon Affiliate Earnings | $157.08       | $345.04      | <font color="green">+$187.96 (+120%)</font>     |
 | Meal Plan Sales           | $0.00         | $18.10       | <font color="green">+$18.10 (+inf%)</font>      |
-| **Total Earnings**        | **$392.79**   | **$786.71**  | **<font color="green">+$393.92 (+100%)</font>** |
+| **Total Revenue**        | **$392.79**   | **$786.71**  | **<font color="green">+$393.92 (+100%)</font>** |
 
 Is It Keto had its biggest month ever. I wish I could claim credit, but January always brings a huge surge in traffic from new year's resolution dieters. Unfortunately, this bump fades pretty quickly.
 
@@ -88,7 +88,7 @@ Is It Keto is officially in maintenance mode now. I had hoped the site's freelan
 | Unique Visitors          | 207           | 1,723        | <font color="green">+1,516 (+732%)</font>     |
 | RapidAPI Earnings        | $50.43        | $79.67       | <font color="green">+$29.24 (+58%)</font>     |
 | Enterprise Plan Earnings | $3883.70      | $0.00        | <font color="red">-$3883.70 (-100%)</font>    |
-| **Total Earnings**       | **$3934.13**  | **$79.67**   | **<font color="red">-$3854.46 (-98%)</font>** |
+| **Total Revenue**       | **$3934.13**  | **$79.67**   | **<font color="red">-$3854.46 (-98%)</font>** |
 
 It might appear that Zestful experienced a disastrous drop in revenue, but it's just that [December](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) was a huge outlier.
 

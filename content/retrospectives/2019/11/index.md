@@ -52,7 +52,7 @@ It still feels unfortunate that I can't connect my [guide to hiring writers](/hi
 | AdSense Earnings          | $178.79        | $75.65       | <font color="red">-$103.14 (-58%)</font>    |
 | Amazon Affiliate Earnings | $150.06        | $159.02      | <font color="green">+$8.96 (+6%)</font>     |
 | Meal Plan Sales           | N/A            | $23.87       | N/A                                         |
-| **Total Earnings**        | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
+| **Total Revenue**        | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
 
 Revenues are way down from my [August peak](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg) of $389. The loss comes from reductions in AdSense earnings, which I believe have two causes:
 

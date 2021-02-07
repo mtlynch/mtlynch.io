@@ -49,7 +49,7 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 | Total Pageviews        | 28,751      | 39,405      | <font color="green">+10,654 (+37%)</font>     |
 | Domain Authority (Moz) | 6           | 6           | 0                                             |
 | Ranking Keywords (Moz) | 949         | 862         | <font color="red">-87 (-9%)</font>            |
-| **Total Earnings**     | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
+| **Total Revenue**     | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
 
 After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/category/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
 

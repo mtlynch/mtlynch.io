@@ -49,7 +49,7 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 | Total Pageviews    | 7,057          | 8,780          | <font color="green">+1,723 (+24%)</font>          |
 | Sales Revenue      | $3,636.03      | $10,176.23\*   | <font color="green">+$6,540.20 (+180%)</font>     |
 | Donations          | $187.40        | $90.00         | <font color="red">-$97.40 (-52%)</font>           |
-| **Total Earnings** | **$3,817.99**  | **$10,263.62** | **<font color="green">+$6,445.63 (+169%)</font>** |
+| **Total Revenue** | **$3,817.99**  | **$10,263.62** | **<font color="green">+$6,445.63 (+169%)</font>** |
 
 {{<notice type="info">}}
 \* Excludes revenue from shipping fees and taxes, because those are just pass-through costs.
@@ -254,7 +254,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdSense Earnings          | $161.06        | $322.58      | <font color="green">+$161.52 (+100%)</font>    |
 | AdThrive Earnings         | $135.00        | N/A          | N/A                                            |
 | Amazon Affiliate Earnings | $83.03         | $188.28      | <font color="green">+$105.25 (+127%)</font>    |
-| **Total Earnings**        | **$379.09**    | **$510.86**  | **<font color="green">+$131.77 (+35%)</font>** |
+| **Total Revenue**        | **$379.09**    | **$510.86**  | **<font color="green">+$131.77 (+35%)</font>** |
 
 Is It Keto had nice growth this month, and I'm not sure why. I haven't touched it at all since September.
 
@@ -269,7 +269,7 @@ These numbers further confirm what I've always liked about Is It Keto as a busin
 | Unique Visitors    | 333            | 436          | <font color="green">+103 (+31%)</font>         |
 | Total Pageviews    | 849            | 1,149        | <font color="green">+300 (+35%)</font>         |
 | RapidAPI Earnings  | $12.27         | $35.05       | <font color="green">+$22.78 (+186%)</font>     |
-| **Total Earnings** | **$12.27**     | **$35.05**   | **<font color="green">+$22.78 (+186%)</font>** |
+| **Total Revenue** | **$12.27**     | **$35.05**   | **<font color="green">+$22.78 (+186%)</font>** |
 
 Zestful continues its multi-month streak of sub-$100 revenue from low-volume clients.
 
