@@ -97,7 +97,7 @@ That landing page performed even worse, with only a 2% signup rate. I've since r
 
 ## Keto interviews: seemed like a good idea at the time
 
-With my email outreach failing to attract any users to talk to me, I thought of [keto.fm](https://newsletter.keto.fm/), a site I partnered with a few years ago when I was working on [KetoHub](https://ketohub.io). One of their clever growth strategies was ["keto stories."](https://newsletter.keto.fm/stories/)
+With my email outreach failing to attract any users to talk to me, I thought of [keto.fm](https://newsletter.keto.fm/), a site I partnered with a few years ago when I was working on [KetoHub](https://ketohub.io). One of their clever growth strategies was ["keto stories."](hhttps://web.archive.org/web/20200805153806/https://newsletter.keto.fm/stories/)
 
 keto.fm would find people who posted progress photos on keto subreddits and invite them to be featured in keto.fm's newsletter. The people who received invitations were flattered enough at the attention to provide a text interview. As a result, keto.fm gained free content, and the interviewees spread the newsletter to their friends.
 
