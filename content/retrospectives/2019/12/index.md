@@ -51,7 +51,7 @@ Given that my only real goal for the month was to interview customers, three is 
 | AdSense Earnings          | $75.65       | $151.07       | <font color="green">+$75.42 (+100%)</font>   |
 | Amazon Affiliate Earnings | $159.02      | $118.00       | <font color="red">-$41.02 (-26%)</font>      |
 | Meal Plan Sales           | $23.87       | $0.00         | <font color="red">-$23.87 (-100%)</font>     |
-| **Total Earnings**        | **$258.54**  | **$269.07**   | **<font color="green">+$10.53 (+4%)</font>** |
+| **Total Revenue**        | **$258.54**  | **$269.07**   | **<font color="green">+$10.53 (+4%)</font>** |
 
 Things are improving a bit, but I think October-December is the worst time of year for diet-related websites. I'm expecting a huge surge in January, as people begin exploring the keto diet as part of New Year's resolutions.
 

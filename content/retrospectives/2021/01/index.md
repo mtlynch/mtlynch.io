@@ -55,7 +55,7 @@ I got this in just under the wire, sending out the last video at 5 PM on New Yea
 | Total Pageviews    | 9,021          | 5,785          | <font color="red">-3,236 (-36%)</font>           |
 | Sales Revenue      | $12,313.25     | $15,358.31     | <font color="green">+$3,045.06 (+25%)</font>     |
 | Donations          | $0.00          | $9.00          | <font color="green">+$9.00 (+inf%)</font>        |
-| **Total Earnings** | **$12,313.25** | **$15,367.05** | **<font color="green">+$3,053.80 (+25%)</font>** |
+| **Total Revenue** | **$12,313.25** | **$15,367.05** | **<font color="green">+$3,053.80 (+25%)</font>** |
 
 TinyPilot had another strong month, growing by 25% in revenue. It's crazy to think that [my goal for 2020](/solo-developer-year-2/#goals-for-year-three) was to make $20k in revenue for the *year*, and I'm earning that almost every month now.
 
@@ -67,7 +67,7 @@ Despite the growth, I still feel like I'm fumbling on TinyPilot. I did no market
 | ------------------ | -------------- |
 | Total Pageviews    | 2,243          |
 | Orders             | 30             |
-| **Total Earnings** | **$1,181.40**  |
+| **Total Revenue** | **$1,181.40**  |
 
 December was my first month selling pre-orders for my blogging course, *Hit the Front Page of Hacker News*.
 
@@ -156,7 +156,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Domain Rating (Ahrefs)    | 10.0          | 10.0          | 0                                             |
 | AdSense Earnings          | $357.51       | $334.72       | <font color="red">-$22.79 (-6%)</font>        |
 | Amazon Affiliate Earnings | $74.01        | $149.99       | <font color="green">+$75.98 (+103%)</font>    |
-| **Total Earnings**        | **$431.52**   | **$484.71**   | **<font color="green">+$53.19 (+12%)</font>** |
+| **Total Revenue**        | **$431.52**   | **$484.71**   | **<font color="green">+$53.19 (+12%)</font>** |
 
 I'm expecting a significant bump in January, as people often begin looking into healthier eating options at the start of the new year. I spent an hour updating Amazon Affiliate links so that I maximize the value from the upcoming surge months. Otherwise, Is It Keto remains on auto-pilot in the background.
 
@@ -170,7 +170,7 @@ I'm expecting a significant bump in January, as people often begin looking into 
 | Total Pageviews          | 1,393         | 1,511         | <font color="green">+118 (+8%)</font>        |
 | RapidAPI Earnings        | $28.37        | $103.33       | <font color="green">+$74.96 (+264%)</font>   |
 | Enterprise Plan Earnings | $872.63       | $0.00         | <font color="red">-$872.63 (-100%)</font>    |
-| **Total Earnings**       | **$901.00**   | **$103.33**   | **<font color="red">-$797.67 (-89%)</font>** |
+| **Total Revenue**       | **$901.00**   | **$103.33**   | **<font color="red">-$797.67 (-89%)</font>** |
 
 Zestful's quiet, too. The enterprise customer finished their one-month plan and didn't need to renew, as expected. There was a jump in RapidAPI earnings, but 95% of that came from a single user who seems to have used Zestful in a one-off bulk parsing.
 

@@ -323,7 +323,7 @@ function drawChart(chartId, labels, data) {
       data: {
         labels: labels,
         datasets: [{
-          label: 'Total Earnings',
+          label: 'Total Revenue',
           data: data,
           backgroundColor: '#047a15',
           borderColor: '#4ba658',

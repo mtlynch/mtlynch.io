@@ -56,7 +56,7 @@ This took significantly longer than I expected. I underestimated how difficult i
 | Ranking Keywords (Moz)    | 1,442       | 2,205       | <font color="green">+763 (+53%)</font>         |
 | AdSense Earnings          | $71.49      | $227.25     | <font color="green">+$155.76 (+218%)</font>    |
 | Amazon Affiliate Earnings | $153.98     | $152.55     | <font color="red">-$1.43 (-1%)</font>          |
-| **Total Earnings**        | **$225.47** | **$379.80** | **<font color="green">+$154.33 (+68%)</font>** |
+| **Total Revenue**        | **$225.47** | **$379.80** | **<font color="green">+$154.33 (+68%)</font>** |
 
 Is It Keto continued to grow at a rapid rate. Amazon Affiliate earnings stayed flat, which is a bit worrying given that pageviews increased so rapidly, but Google AdSense bolstered revenues, as August was the first full month I ran AdSense ads.
 

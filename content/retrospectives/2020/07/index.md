@@ -65,7 +65,7 @@ There are [a few bugs](https://github.com/mtlynch/tinypilot/milestone/2) I want 
 | Domain Rating (Ahrefs)    | 27.0        | 8.0         | <font color="red">-19.0 (-70%)</font>       |
 | AdSense Earnings          | $109.92     | $85.81      | <font color="red">-$24.11 (-22%)</font>     |
 | Amazon Affiliate Earnings | $111.61     | $94.85      | <font color="red">-$16.76 (-15%)</font>     |
-| **Total Earnings**        | **$221.53** | **$180.66** | **<font color="red">-$40.87 (-18%)</font>** |
+| **Total Revenue**        | **$221.53** | **$180.66** | **<font color="red">-$40.87 (-18%)</font>** |
 
 My visitors grew by 14%, but it's hard to know if that's due to general trends in keto or from actual improvements in the site. [Rough numbers on Google Trends](https://trends.google.com/trends/explore?date=today%203-m&geo=US&q=keto) suggest that search interest in keto grew by about 5% from May to June, so hopefully I'm growing faster than the baseline.
 
@@ -205,7 +205,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Total Pageviews          | 1,258     | 995         | <font color="red">-263 (-21%)</font>              |
 | RapidAPI Earnings        | $6.48     | $5.86       | <font color="red">-$0.62 (-10%)</font>            |
 | Enterprise Plan Earnings | $0.00     | $679.40     | <font color="green">+$679.40 (+inf%)</font>       |
-| **Total Earnings**       | **$6.48** | **$685.26** | **<font color="green">+$678.78 (+10475%)</font>** |
+| **Total Revenue**       | **$6.48** | **$685.26** | **<font color="green">+$678.78 (+10475%)</font>** |
 
 This was a good month for Zestful, as I sold a new Enterprise plan. The customer was a small bootstrapped company, so I offered a significant discount and shorter contract length.
 

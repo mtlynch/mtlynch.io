@@ -67,7 +67,7 @@ Unfortunately, it ended the month with a revenue of $0 and no signs of increasin
 | Domain Rating (Ahrefs)    | 26.0        | 27.0        | <font color="green">+1.0 (+4%)</font>        |
 | AdSense Earnings          | $195.85     | $92.09      | <font color="red">-$103.76 (-53%)</font>     |
 | Amazon Affiliate Earnings | $166.43     | $128.39     | <font color="red">-$38.04 (-23%)</font>      |
-| **Total Earnings**        | **$362.28** | **$220.48** | **<font color="red">-$141.80 (-39%)</font>** |
+| **Total Revenue**        | **$362.28** | **$220.48** | **<font color="red">-$141.80 (-39%)</font>** |
 
 Is It Keto took a big hit in March amid COVID-19 panic, but it's been growing consistently every week since then.
 
@@ -163,7 +163,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Unique Visitors    | 291        | 1,142      | <font color="green">+851 (+292%)</font>        |
 | Total Pageviews    | 843        | 2,960      | <font color="green">+2,117 (+251%)</font>      |
 | RapidAPI Earnings  | $3.67      | $32.19     | <font color="green">+$28.52 (+777%)</font>     |
-| **Total Earnings** | **$3.67**  | **$32.19** | **<font color="green">+$28.52 (+777%)</font>** |
+| **Total Revenue** | **$3.67**  | **$32.19** | **<font color="green">+$28.52 (+777%)</font>** |
 
 Zestful had an odd jump in traffic because a Chinese blog published an unauthorized translation of my article, ["My Second Year as a Solo Developer,"](/solo-developer-year-2/) and I guess it gained enough traction that people clicked through to Zestful. It didn't seem to translate into any sales, though.
 

@@ -51,7 +51,7 @@ I tried [several different techniques](https://twitter.com/deliberatecoder/statu
 | Total Pageviews    | 5,785          | 17,737         | <font color="green">+11,952 (+207%)</font>         |
 | Sales Revenue      | $15,358.31     | $41,992.92     | <font color="green">+$26,634.61 (+173%)</font>     |
 | Donations          | $9.00          | $0.00          | <font color="red">-$9.00 (-100%)</font>            |
-| **Total Earnings** | **$15,367.05** | **$41,992.92** | **<font color="green">+$26,625.87 (+173%)</font>** |
+| **Total Revenue** | **$15,367.05** | **$41,992.92** | **<font color="green">+$26,625.87 (+173%)</font>** |
 
 This was a enormous month for [TinyPilot](https://tinypilotkvm.com). Sales jumped from $15k to $42k.
 
@@ -188,7 +188,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Metric             | December 2020 | January 2021  | Change                                           |
 | ------------------ | ------------- | ------------- | ------------------------------------------------ |
 | Unique Visitors    | 2,595         | 1,042         | <font color="red">-1,553 (-60%)</font>           |
-| **Total Earnings** | **$1,431.00** | **$2,565.22** | **<font color="green">+$1,134.22 (+79%)</font>** |
+| **Total Revenue** | **$1,431.00** | **$2,565.22** | **<font color="green">+$1,134.22 (+79%)</font>** |
 
 *Hit the Front Page of Hacker News*, my course about blogging for developer audiences, finally launched in January. There was a jump in sales around the launch, but it was significantly less than I expected. My goal for the course was to earn $20k by the end of the year. That's looking unlikely.
 
@@ -205,9 +205,9 @@ I'm planning to write a retrospective later this month that's focused entirely o
 | Unique Visitors           | 49,373        | 80,177       | <font color="green">+30,804 (+62%)</font>      |
 | Total Pageviews           | 93,242        | 182,367      | <font color="green">+89,125 (+96%)</font>      |
 | Domain Rating (Ahrefs)    | 10.0          | 11.0         | <font color="green">+1.0 (+10%)</font>         |
-| AdSense Earnings          | $334.72       | $677.36      | <font color="green">+$342.64 (+102%)</font>    |
-| Amazon Affiliate Earnings | $149.99       | $238.02      | <font color="green">+$88.03 (+59%)</font>      |
-| **Total Earnings**        | **$484.71**   | **$915.38**  | **<font color="green">+$430.67 (+89%)</font>** |
+| AdSense Revenue           | $334.72       | $677.36      | <font color="green">+$342.64 (+102%)</font>    |
+| Amazon Affiliate Revenue | $149.99       | $238.02      | <font color="green">+$88.03 (+59%)</font>      |
+| **Total Revenue**        | **$484.71**   | **$915.38**  | **<font color="green">+$430.67 (+89%)</font>** |
 
 Is It Keto had a record month even though I didn't touch the site at all. Because it's related to dieting, there's always a spike in interest that coincides with new year's resolutions.
 
@@ -219,8 +219,8 @@ Is It Keto had a record month even though I didn't touch the site at all. Becaus
 | ------------------ | ------------- | ------------ | --------------------------------------------- |
 | Unique Visitors    | 507           | 419          | <font color="red">-88 (-17%)</font>           |
 | Total Pageviews    | 1,511         | 1,194        | <font color="red">-317 (-21%)</font>          |
-| RapidAPI Earnings  | $103.33       | $155.50      | <font color="green">+$52.17 (+50%)</font>     |
-| **Total Earnings** | **$103.33**   | **$155.50**  | **<font color="green">+$52.17 (+50%)</font>** |
+| RapidAPI Revenue  | $103.33       | $155.50      | <font color="green">+$52.17 (+50%)</font>     |
+| **Total Revenue** | **$103.33**   | **$155.50**  | **<font color="green">+$52.17 (+50%)</font>** |
 
 Zestful is growing slightly, even though it's in maintenance mode. The growth seems to be from a single long-standing customer whose usage has increased.
 

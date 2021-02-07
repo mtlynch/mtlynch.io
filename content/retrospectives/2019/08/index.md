@@ -55,7 +55,7 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 | Ranking Keywords (Moz)    | 862         | 1,442       | <font color="green">+580 (+67%)</font>        |
 | AdSense Earnings          | N/A         | $71.49      | N/A                                           |
 | Amazon Affiliate Earnings | $138.76     | $153.98     | <font color="green">+$15.22 (+11%)</font>     |
-| **Total Earnings**        | **$138.76** | **$225.47** | **<font color="green">+$86.71 (+62%)</font>** |
+| **Total Revenue**        | **$138.76** | **$225.47** | **<font color="green">+$86.71 (+62%)</font>** |
 
 It feels strange to keep ignoring Is It Keto, given that it's grown at least 30-50% in traffic and revenue every month this year. I'm torn between my urge to focus more on my most profitable project and my desire to stop splitting my focus among many ideas.
 

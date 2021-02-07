@@ -43,7 +43,7 @@ Keto Cornerstone was a [project idea I had in June](/retrospectives/2020/07/#val
 | ------------------ | ----------- | ------------- | -------------------------------------------------- |
 | Unique Visitors    | 51          | 4,930         | <font color="green">+4,879 (+9567%)</font>         |
 | Total Pageviews    | 220         | 10,427        | <font color="green">+10,207 (+4640%)</font>        |
-| **Total Earnings** | **$173.94** | **$8,741.37** | **<font color="green">+$8,567.43 (+4926%)</font>** |
+| **Total Revenue** | **$173.94** | **$8,741.37** | **<font color="green">+$8,567.43 (+4926%)</font>** |
 
 Obviously, this was a huge launch month for TinyPilot, and sales went far better than I expected.
 
@@ -148,7 +148,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdSense Earnings          | $85.81      | $208.86     | <font color="green">+$123.05 (+143%)</font>     |
 | Amazon Affiliate Earnings | $94.85      | $134.45     | <font color="green">+$39.60 (+42%)</font>       |
 | Other Affiliate Earnings  | N/A         | $26.60      | N/A                                             |
-| **Total Earnings**        | **$180.66** | **$369.91** | **<font color="green">+$189.25 (+105%)</font>** |
+| **Total Revenue**        | **$180.66** | **$369.91** | **<font color="green">+$189.25 (+105%)</font>** |
 
 Over the past two months, I tried shifting Is It Keto's ads away from AdSense and Amazon and towards [direct affiliate partnerships](/retrospectives/2020/07/#being-an-affiliate-sucks) and [landing pages for my sister products](/retrospectives/2020/07/#validating-keto-product-ideas). Direct deals earned almost zero revenue, and I even caught one company [cheating their affiliates](https://www.reddit.com/r/juststart/comments/hsfaq7/how_to_deal_with_merchant_who_is_defrauding/). I've switched the ads back to 100% boring AdSense and Amazon ads, which is why ad revenue is back up.
 
@@ -166,7 +166,7 @@ It's now been two months since I used [programmatic page generation](/retrospect
 | Total Pageviews          | 995         | 1,247      | <font color="green">+252 (+25%)</font>       |
 | RapidAPI Earnings        | $5.86       | $18.05     | <font color="green">+$12.19 (+208%)</font>   |
 | Enterprise Plan Earnings | $679.40     | $0.00      | <font color="red">-$679.40 (-100%)</font>    |
-| **Total Earnings**       | **$685.26** | **$18.05** | **<font color="red">-$667.21 (-97%)</font>** |
+| **Total Revenue**       | **$685.26** | **$18.05** | **<font color="red">-$667.21 (-97%)</font>** |
 
 Zestful had a quiet month. There were no new inbound inquiries. The small customer who signed up for an enterprise plan last month chose not to renew, as expected. Earnings on RapidAPI remained in the sub-$100 range.
 

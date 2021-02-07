@@ -51,7 +51,7 @@ Another founder made a compelling argument to me that my largely tech audience i
 | Total Pageviews    | 8,780          | 9,021          | <font color="green">+241 (+3%)</font>            |
 | Sales Revenue      | $10,176.23     | $12,313.25     | <font color="green">+$2,137.02 (+21%)</font>     |
 | Donations          | $90.00         | $0.00          | <font color="red">-$90.00 (-100%)</font>         |
-| **Total Earnings** | **$10,263.62** | **$12,313.25** | **<font color="green">+$2,049.63 (+20%)</font>** |
+| **Total Revenue** | **$10,263.62** | **$12,313.25** | **<font color="green">+$2,049.63 (+20%)</font>** |
 
 TinyPilot had another month of strong growth, with a $2k increase in overall revenue. I ran a Black Friday Weekend special for 20% off, and that generated a $3k bump in revenue to close out the month.
 
@@ -139,7 +139,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Domain Rating (Ahrefs)    | 10.0         | 10.0          | 0                                           |
 | AdSense Earnings          | $322.58      | $357.51       | <font color="green">+$34.93 (+11%)</font>   |
 | Amazon Affiliate Earnings | $188.28      | $74.01        | <font color="red">-$114.27 (-61%)</font>    |
-| **Total Earnings**        | **$510.86**  | **$431.52**   | **<font color="red">-$79.34 (-16%)</font>** |
+| **Total Revenue**        | **$510.86**  | **$431.52**   | **<font color="red">-$79.34 (-16%)</font>** |
 
 Is It Keto is still chugging along in the background. Amazon Affiliate revenue is dwindling, likely because I haven't updated my affiliate links in a few months, so many of them are pointing to products that no longer exist. Updating the dead links requires 90-180 minutes of tedious work, so I'd rather spend the time on TinyPilot.
 
@@ -155,7 +155,7 @@ The drop in visitors is expected, as there's historically a seasonal drop for th
 | Total Pageviews          | 1,149        | 1,393         | <font color="green">+244 (+21%)</font>           |
 | RapidAPI Earnings        | $35.05       | $28.37        | <font color="red">-$6.68 (-19%)</font>           |
 | Enterprise Plan Earnings | $0.00        | $872.63       | <font color="green">+$872.63 (+inf%)</font>      |
-| **Total Earnings**       | **$35.05**   | **$901.00**   | **<font color="green">+$865.95 (+2471%)</font>** |
+| **Total Revenue**       | **$35.05**   | **$901.00**   | **<font color="green">+$865.95 (+2471%)</font>** |
 
 Zestful had a nice jump this month. One of my longtime pay-as-you go customers upgraded to a short-term unlimited plan because he had a big batch of ingredients to parse. That was a nice sale, but it's definitely a one-off.
 

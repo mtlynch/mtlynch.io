@@ -53,7 +53,7 @@ The two conversations went positively, though. I stuck to [Rob Fitzpatrick's str
 | Total Pageviews    | 6,136         | 7,057          | <font color="green">+921 (+15%)</font>         |
 | Sales Revenue      | $2,951.40     | $3,636.03*      | <font color="green">+$684.63 (+23%)</font>     |
 | Donations          | $94.06        | $187.40        | <font color="green">+$93.34 (+99%)</font>      |
-| **Total Earnings** | **$3,045.46** | **$3,817.99**  | **<font color="green">+$772.53 (+25%)</font>** |
+| **Total Revenue** | **$3,045.46** | **$3,817.99**  | **<font color="green">+$772.53 (+25%)</font>** |
 
 {{<notice type="info">}}
 \* I've made a slight change to how I count "sales revenue." Previously, I was just adding up all the money that came in, including tax and shipping. With 45% of my orders this month coming from international customers, shipping is a much larger percentage of sales, so starting in September, "sales revenue" excludes taxes and shipping.
@@ -234,7 +234,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdThrive Earnings         | $35.00      | $135.00*        | <font color="green">+$100.00 (+286%)</font>  |
 | Amazon Affiliate Earnings | $129.88     | $83.03         | <font color="red">-$46.85 (-36%)</font>      |
 | Other Affiliate Earnings  | $118.88     | N/A            | N/A                                          |
-| **Total Earnings**        | **$486.22** | **$379.09**    | **<font color="red">-$107.13 (-22%)</font>** |
+| **Total Revenue**        | **$486.22** | **$379.09**    | **<font color="red">-$107.13 (-22%)</font>** |
 
 {{<notice type="info">}}
 \* This is an estimate from memory. AdThrive locked me out of my dashboard when I terminated my contract with them, so I won't know my exact earnings until they (hopefully) pay me in November.
@@ -255,7 +255,7 @@ AdThrive turned out to be a mistake. They couldn't figure out how to make their 
 | Unique Visitors    | 324         | 333            | <font color="green">+9 (+3%)</font>          |
 | Total Pageviews    | 841         | 849            | <font color="green">+8 (+1%)</font>          |
 | RapidAPI Earnings  | $9.36       | $12.27         | <font color="green">+$2.91 (+31%)</font>     |
-| **Total Earnings** | **$9.36**   | **$12.27**     | **<font color="green">+$2.91 (+31%)</font>** |
+| **Total Revenue** | **$9.36**   | **$12.27**     | **<font color="green">+$2.91 (+31%)</font>** |
 
 Zestful remains quiet and mostly irrelevant. I've had no inquiries for enterprise plans recently.Pay-as-you-go usage continues to generate $10-$50/month silently in the background.
 

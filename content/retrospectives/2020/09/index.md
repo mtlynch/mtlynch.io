@@ -47,7 +47,7 @@ This ended up being more difficult than I expected, but I completed the feature 
 | Total Pageviews    | 10,427        | 6,136         | <font color="red">-4,291 (-41%)</font>         |
 | Sales Revenue      | $8,741.37     | $3,030.74     | <font color="red">-$5,710.63 (-65%)</font>     |
 | Donations          | N/A           | $94.06        | <font color="green">+$94.06 (+inf%)</font>     |
-| **Total Earnings** | **$8,741.37** | **$3,124.80** | **<font color="red">-$5,616.57 (-64%)</font>** |
+| **Total Revenue** | **$8,741.37** | **$3,124.80** | **<font color="red">-$5,616.57 (-64%)</font>** |
 
 Visits stats aren't as strong as when I had [a big surge](/retrospectives/2020/08/#aligning-my-blog-with-my-business-finally) from Hacker News last month, but I'm still pleased with the steady flow of potential customers.
 
@@ -190,7 +190,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdThrive Earnings         | N/A         | $35.00      | N/A                                            |
 | Amazon Affiliate Earnings | $134.45     | $129.88     | <font color="red">-$4.57 (-3%)</font>          |
 | Other Affiliate Earnings  | $26.60      | $118.88     | <font color="green">+$92.28 (+347%)</font>     |
-| **Total Earnings**        | **$369.91** | **$486.22** | **<font color="green">+$116.31 (+31%)</font>** |
+| **Total Revenue**        | **$369.91** | **$486.22** | **<font color="green">+$116.31 (+31%)</font>** |
 
 Is It Keto grew a small amount this month, though I've been trying to focus all of my attention on TinyPilot, as the ROI is much higher there.
 
@@ -211,7 +211,7 @@ Finally, I convinced them to host the code on their side and cut me out of the d
 | Unique Visitors    | 440        | 324         | <font color="red">-116 (-26%)</font>       |
 | Total Pageviews    | 1,247      | 841         | <font color="red">-406 (-33%)</font>       |
 | RapidAPI Earnings  | $18.05     | $9.36       | <font color="red">-$8.69 (-48%)</font>     |
-| **Total Earnings** | **$18.05** | **$9.36**   | **<font color="red">-$8.69 (-48%)</font>** |
+| **Total Revenue** | **$18.05** | **$9.36**   | **<font color="red">-$8.69 (-48%)</font>** |
 
 Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called [Servernope](https://servernope.com/) invited me to their API platform. I told them that I didn't have time to set it up, but they were welcome to create a Zestful entry on my behalf. So, they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
 
