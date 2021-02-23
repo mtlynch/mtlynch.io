@@ -43,13 +43,12 @@
 
       {{ partial "social-discuss.html" . }}
 
+      {{ if not .Site.IsServer }}
+        {{ partial "talkyard.html" . }}
+      {{ end }}
+
       <footer>
         {{ partial "posts/series.html" . }}
-
-        {{ if not .Site.IsServer }}
-          {{ partial "posts/disqus.html" . }}
-        {{ end }}
-
       </footer>
     </article>
 

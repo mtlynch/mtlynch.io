@@ -13,7 +13,6 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 googleAnalytics = "UA-78473158-1"
-disqusShortname = "silly-bits"
 
 buildFuture = true
 
@@ -48,6 +47,9 @@ twitter = "deliberatecoder"
     custom_css = ["css/main.css"]
 
     photoWidths = [300, 600, 800, 1200]
+
+    talkyardServerUrl = "https://comments-for-mtlynch-io.talkyard.net"
+    talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
 
 [imaging]
 quality = 90
