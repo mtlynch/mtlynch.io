@@ -40,7 +40,7 @@ I took for granted the idea that cities should be friendly to car-travel, but th
   * When communities occupy a large, sparse area, it's more expensive to run buses, maintain roads, offer police/fire protection.
   * Denser communities lead to more positive relationships with neighbors and easier lifestyle because it puts more shops and services within walking distance.
 * Private cars impose many external costs that are borne by the community as a whole rather than the drivers themselves.
-  * [Take up more space per person](http://www.880cities.org/doablecity/wp-content/uploads/2014/11/space-needed-transport-perp.jpg) than almost all other modes of transportation, cause faster road wear, pollute the air, create noise pollution, limit places where pedestrians can walk.
+  * [Take up more space per person](https://web.archive.org/web/20151123071501/https://www.880cities.org/doablecity/wp-content/uploads/2014/11/space-needed-transport-perp.jpg) than almost all other modes of transportation, cause faster road wear, pollute the air, create noise pollution, limit places where pedestrians can walk.
 * There is a common notion that for an area of the city to attract people, it needs lots of road and parking access, but there have been several examples where banning cars has revitalized an area
   * e.g., [Times Square Plaza](http://www.landezine.com/index.php/2017/04/times-square-redesign-by-snohetta-opens-today/) in New York, [Strøget](https://en.wikipedia.org/wiki/Str%C3%B8get) in Copenhagen
 * There's an important distinction between "crowding" and "population density."
