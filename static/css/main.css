@@ -142,7 +142,9 @@ h2, h3, h4, h5, hr {
 }
 
 h3 {
-  margin-top: 3.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #707070;
 }
 
 hr {
