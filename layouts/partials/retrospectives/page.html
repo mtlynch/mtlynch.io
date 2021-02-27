@@ -31,6 +31,10 @@
     {{- end -}}
 
     {{ partial "mailing-list-signup.html" . }}
+
+    {{ if not .Site.IsServer }}
+      {{ partial "talkyard.html" . }}
+    {{ end }}
   </article>
 </section>
 
