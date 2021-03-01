@@ -33,9 +33,7 @@ TODO
 
 TODO
 
-## Stats
-
-### [TinyPilot](https://tinypilotkvm.com)
+## [TinyPilot](https://tinypilotkvm.com) stats
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -52,6 +50,10 @@ Here are some brief updates on projects that I still maintain but are not the pr
 ### [Is It Keto](https://isitketo.org)
 
 {{<revenue-graph project="isitketo">}}
+
+### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
+
+{{<revenue-graph project="hitthefrontpage">}}
 
 ### [Zestful](https://zestfuldata.com)
 
