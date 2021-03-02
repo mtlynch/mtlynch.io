@@ -295,7 +295,7 @@ I now have a working solution that both captures video output from a target devi
 
 A detailed follow-up post is coming soon, but in the meantime, you can pre-order pre-configured KVM Pi kits that include everything you need to build your own KVM Pi:
 
-* [tinypilotkvm.com](https://tinypilotkvm.com)
+* [tinypilotkvm.com](https://tinypilotkvm.com/?ref=mtlynch.io)
 
 ## Source code
 

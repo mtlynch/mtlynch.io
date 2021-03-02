@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-## [TinyPilot](https://tinypilotkvm.com/) (2020 - present)
+## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (2020 - present)
 
 TinyPilot is a small, inexpensive device that gives you remote access to servers before they even boot.
 

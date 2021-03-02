@@ -170,9 +170,9 @@ I looked into remote administration solutions and was blown away by how expensiv
 
 {{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="600px" hasBorder="true">}}
 
-To achieve remote administration, I took the unusual approach of [building my own KVM over IP device](/tinypilot) out of a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com).
+To achieve remote administration, I took the unusual approach of [building my own KVM over IP device](/tinypilot) out of a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io).
 
-{{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com) to install an OS on my server">}}
+{{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) to install an OS on my server">}}
   {{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" maxWidth="260px">}}
 
   <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="width: 500px; max-width: 100%; object-fit: contain;"></a>
@@ -195,7 +195,7 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 | Graphics    | [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931)                      | $44.99        |
 | Case        | [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085)          | $84.99        |
 | CPU Fans    | [Cooler Master Hyper 212](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) (x2)            | $72.98        |
-| Remote administration | [TinyPilot](https://tinypilotkvm.com) (KVM over IP) | $65.00 |
+| Remote administration | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP) | $65.00 |
 | **Total**   |                                         | **$1,368.74** |
 
 &nbsp;
