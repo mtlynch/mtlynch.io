@@ -32,7 +32,7 @@ I added three new convenience features to TinyPilot, but I haven't yet cut an of
 * Change hostname through the web UI
 * View debug logs from the web UI
 
-I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
+I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq?ref=mtlynch.io), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
 
 ### Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot
 
@@ -41,7 +41,7 @@ I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently a
 
 TODO
 
-## [TinyPilot](https://tinypilotkvm.com) stats
+## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
 | Metric             | January 2021   | February 2021  | Change                                         |
 | ------------------ | -------------- | -------------- | ---------------------------------------------- |
@@ -59,15 +59,41 @@ Part of this was due to an inventory shortage. I suspended advertising and promo
 
 ## Dealing with materials shortage
 
-Throughout January, I kept hearing from vendors talk about how things would slow down in February due to Chinese New Year. I heeded the warnings and purchased enough of the parts I get from China to last me through mid-March. Even so, I thought everyone was exaggerating. I thought there would maybe be a week where things stop
+Throughout January, I kept hearing from vendors talk about how things would slow down in February due to Chinese New Year. I heeded the warnings and purchased enough of the parts I get from China to last me through mid-March. Even so, I thought everyone was exaggerating. I thought there would maybe be a week where things stop and business would resume as usual.
 
-I placed an order on February 4th with my usual supplier for the high-quality HDMI capture chip I use in Voyager, my premium TinyPilot. Nothing happeend, so I figured I just was too late and I'd get it when things started up again at the end of the month.
+I placed an order on February 4th with my usual supplier for the high-quality HDMI capture chip I use in Voyager, my premium TinyPilot. Nothing happeend, so I figured I just was too late and I'd get it when things started up again at the end of the month. No problem! I planned for this.
 
-Then I got this message:
+Two weeks later, I got this message:
 
-At first, it didn't seem like a big deal. I'd just order from another vendor. But my backup vendor was out of stock as well. I found several other vendors, but I was nervous about placing huge orders with a vendor I've never worked with before. Some vendors can take months to ship, and I don't want $5k tied up in a vendor taking their time.
+{{<img src="hdmi-wait.png" alt="hello This product is currently out of stock Need to arrive in March Could you wait, please?" hasBorder="true" caption="Bad news from my HDMI chip vendor">}}
 
-The curveball was that the supplier who makes the high-quality HDMI capture chips I use in the Voyager told me after r
+At first, it didn't seem like a big deal. I'd just order from another vendor. But my backup vendor was out of stock as well. Uh oh...
+
+I found several other vendors, but I was nervous about placing huge orders with a vendor I've never worked with before. Some vendors can take months to ship, and I don't want $5k tied up in a vendor taking their time.
+
+To hedge my risk, I split my orders across several vendors on eBay and AliExpress. The problem is that I think most of these sellers are actually the same company. I'd often get identical auto-responses after placing the order.
+
+I placed 15 different orders for about 200 chips total, paying a premium for expedited shipping. Since then I have received a total of 3 chips. And despite me ordering them from three different vendors, they all arrived on the same day in identical packaging.
+
+{{<img src="hdmi-chip-deliveries.jpg" alt="Photo of unwrapped HDMI chips I received" caption="I ordered from three different vendors, but they all arrived in identical packaging on the same day." maxWidth="600px">}}
+
+There are two sequences that have happened every time I've placed an order:
+
+### The bad sequence
+
+1. I place the order
+1. Vendor responds saying that they're out of stock, would I like to wait or get a refund?
+1. I ask for a refund
+1. They process it and I get the money back
+
+### The worse sequence
+
+1. I place the order
+1. Vendor creates adds a phony tracking number to the order
+1. I ask vendor why it's not showing up on DHL and they tell me that it will be there soon
+1. Repeat (3) every three days
+
+I even tried switching to another variant of the same chip, but I'm getting the same runaround with those listings too.
 
 ## YouTube success might not replicate
 
@@ -167,6 +193,6 @@ Zestful is chugging along in the background as well. I got an unexpected spike o
 ### Goals for next month
 
 * Hire two part-time employees to begin taking over order fulfillment.
-  * My current fulfillment manager goes back to grad eschool in June.
+  * TinyPilot's current fulfillment manager goes back to grad eschool in June.
 * Attract five bloggers or YouTubers to a TinyPilot affiliate program.
 * Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot.
