@@ -35,7 +35,7 @@ TODO
 
 ## Stats
 
-### [TinyPilot](https://tinypilotkvm.com)
+### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
 
 {{<revenue-graph project="tinypilot">}}
 

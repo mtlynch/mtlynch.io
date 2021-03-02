@@ -8,7 +8,7 @@ images:
 
 ## Highlights
 
-* [TinyPilot](https://tinypilotkvm.com) had another record-breaking month, with $15k in revenue.
+* [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) had another record-breaking month, with $15k in revenue.
 * I sold $1.1k in pre-orders for my first ever [video course](https://hitthefrontpage.com/).
 * My attempt to slow down sales ended up doing the opposite.
 
@@ -16,7 +16,7 @@ images:
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro)
+### Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io)
 
 * **Result**: Released a beta version of TinyPilot Pro
 * **Grade**: B
@@ -45,7 +45,7 @@ I got this in just under the wire, sending out the last video at 5 PM on New Yea
 
 ## Stats
 
-### [TinyPilot](https://tinypilotkvm.com)
+### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -79,9 +79,9 @@ One of the best ways I've found for reaching new customers is to [share behind-t
 
 In the first few months of TinyPilot, I struggled to keep up with inventory and often had to [forfeit sales by listing all of my products as backordered](/retrospectives/2020/10/#inventory-shortages-and-the-thundering-herd-problem). I've thankfully managed to avoid going into backorder for two months, but that streak ended in December.
 
-A shipment of HDMI capture chips was running late, and I needed them to build more [Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager), my high-end TinyPilots.
+A shipment of HDMI capture chips was running late, and I needed them to build more [Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), my high-end TinyPilots.
 
-{{<img src="voyager-connected.jpg" maxWidth="500px" caption="To build more [TinyPilot Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager), I needed a delivery of HDMI capture chips that was stuck in transit from China.">}}
+{{<img src="voyager-connected.jpg" maxWidth="500px" caption="To build more [TinyPilot Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), I needed a delivery of HDMI capture chips that was stuck in transit from China.">}}
 
 It was Monday, and the chips were supposed to arrive that Saturday. I had six Voyagers left. I generally sell about one every day or two, so I thought I might skate by. Then two customers purchased that day.
 
@@ -129,7 +129,7 @@ I definitely over-committed in December.
 
 I generally avoid promising customers a product by a certain deadline. TinyPilot is still so young, and things change quickly. At the same time, I was growing increasingly embarrassed about my promises to release TinyPilot Pro "soon" for the last six months, despite the fact that I had made zero progress. Finally, I started telling customers that I'd release the first version by end of the year.
 
-{{<img src="tp-pro-listing.png" hasBorder="true" caption="I released [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro) in beta for customers anxious to use the new premium features." maxWidth="600px">}}
+{{<img src="tp-pro-listing.png" hasBorder="true" caption="I released [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) in beta for customers anxious to use the new premium features." maxWidth="600px">}}
 
 At the same time, I started working on [my first-ever video course](https://hitthefrontpage.com/). I estimated that it would take ~40 hours to write, record, edit, and publish. That's roughly how long it takes me to write a new blog post, so I figured I'd just do that instead of my next blog post. I picked a release date of January 13th, which seemed like an incredibly relaxed schedule to produce a couple hours of video.
 

@@ -43,7 +43,7 @@ The two conversations went positively, though. I stuck to [Rob Fitzpatrick's str
 
 ## Stats
 
-### [TinyPilot](https://tinypilotkvm.com)
+### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -197,7 +197,7 @@ With a backlog, everything gets harder. Instead of a nice, predictable stream of
 
 This month, when I started running low on power connectors, I marked that item as backordered on my store so that I could continue selling my kits, which have higher margins. That was a useful strategy, but it added complexity to the fulfillment process. We could no longer simply process all open orders as they arrived. We had to keep track of which ones to delay and when they were ultimately due to customers.
 
-I've [struggled with inventory shortages before](/retrospectives/2020/08/#managing-inventory-is-hard), and my solution has been to keep a deeper inventory than I expect to need. The problem there is that I've [iterated on TinyPilot's design](https://tinypilotkvm.com/blog/v2-design) a few times, changing a few components each time. As a result, there are hundreds of cables and cases sitting in my closet that I no longer ship in any kit. I could liquidate them on eBay, but it'll probably take four hours of work to list and sell them, yielding maybe $200-300. Alternatively, four hours of marketing or product investment would likely have a higher ROI.
+I've [struggled with inventory shortages before](/retrospectives/2020/08/#managing-inventory-is-hard), and my solution has been to keep a deeper inventory than I expect to need. The problem there is that I've [iterated on TinyPilot's design](https://tinypilotkvm.com/blog/v2-design?ref=mtlynch.io) a few times, changing a few components each time. As a result, there are hundreds of cables and cases sitting in my closet that I no longer ship in any kit. I could liquidate them on eBay, but it'll probably take four hours of work to list and sell them, yielding maybe $200-300. Alternatively, four hours of marketing or product investment would likely have a higher ROI.
 
 All in all, I prefer letting unused inventory pile up as opposed to letting unmet demand pile up.
 
@@ -269,7 +269,7 @@ Zestful remains quiet and mostly irrelevant. I've had no inquiries for enterpris
   * This old, overlooked [/r/Entrepreneur post](https://redd.it/4w5pq5) summarizes pretty well how to ship internationally.
 * Added several new features to TinyPilot
   * [Full-screen mode](https://github.com/mtlynch/tinypilot/pull/219), [paste from clipboard](https://github.com/mtlynch/tinypilot/pull/194), [configurable installs](https://github.com/mtlynch/tinypilot/pull/145), [a diagnostic script](https://github.com/mtlynch/tinypilot/pull/231), and [support for AZERTY keyboard layouts](https://github.com/mtlynch/tinypilot/pull/235).
-* Added shopping cart functionality to [the TinyPilot website](https://tinypilotkvm.com/)
+* Added shopping cart functionality to [the TinyPilot website](https://tinypilotkvm.com/?ref=mtlynch.io)
   * Previously, customers could only order one item at a time unless they emailed me to manually create the order.
 * Automated the process of building redistributable TinyPilot ISOs
   * Previously, I had to flash a fresh microSD, install TinyPilot, then capture the image of the microSD, which involved physically moving around microSDs a lot. The new method is 100% software and therefore 90% less tedious.
