@@ -5,7 +5,7 @@ description: TODO
 date: '2021-02-25'
 hero_image: cover.jpg
 images:
-- freelancer-guidelines/cover.jpg
+- freelancer-guidelines/og-cover.jpg
 ---
 
 I've been hiring software developers and other freelancers to work with me for the past seven years. Even though I'm a developer myself, hiring other developers is a fantastic force multiplier when I need to free up bandwidth to focus on other parts of my business.
@@ -16,7 +16,7 @@ The document below explains what it's like to work with me as a freelance develo
 
 It's a living document, so I update it when I run into issues that clearer expectations could have prevented.
 
-If you hire freelancers or work as one, you're welcome to copy or modify these guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/). If you have your own set of guidelines, let me know, as I'd love to see others.
+If you hire freelancers or work as one, you're welcome to copy or modify these guidelines or the markdown version (TODO: link) under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/). If you have your own set of guidelines, let me know, as I'd love to see others.
 
 ---
 
@@ -161,7 +161,7 @@ When you begin working with me on a project, you become the new owner of its ram
 Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for things you can't express in code. Aim to document new code to roughly the same degree as nearby existing code.
 
 ```python
-# Number of days per week (7)   <-- BAD comment
+# Number of days per week (seven)   <-- BAD comment
 DAYS_PER_WEEK = 7
 
 # This is a workaround for a bug in FooComponent, which crashes the process
@@ -194,7 +194,6 @@ My projects adhere to Google's code style guidelines:
 
 *   [Python](https://google.github.io/styleguide/pyguide.html)
 *   [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
-*   [JavaScript](https://google.github.io/styleguide/jsguide.html)
 *   [Shell](https://google.github.io/styleguide/shellguide.html)
 
 As much as possible, I [use automated tools to enforce style conventions](https://mtlynch.io/human-code-reviews-1/#let-computers-do-the-boring-parts).
@@ -227,9 +226,6 @@ Write sensible pull requests. ["How to Write a Git Commit Message"](https://chri
   * This makes it hard to look back
 * If you need new changes from the `master` branch, **[rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)** from `master`, never *merge*.
   * Merging clutters the pull request and makes it hard to review.
-
-
-
 
 If you need to sync changes from the `master` branch into yours (e.g., if other changes occurred while you were working on a pull request),  from `master`.
 
