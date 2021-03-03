@@ -171,6 +171,12 @@ Sadly, I've stopped promotion of the course. I tried a few things in January (TO
 
 Zestful is chugging along in the background as well. I got an unexpected spike of inbound inquiries for enterprise plans, but nothing has come of it so far.
 
+## Neat discoveries
+
+### Litestream
+
+### Plaintext accounting
+
 ## Wrap up
 
 ### What got done?
