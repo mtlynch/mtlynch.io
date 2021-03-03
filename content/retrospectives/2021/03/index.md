@@ -176,7 +176,7 @@ Zestful is chugging along in the background as well. I got an unexpected spike o
 
 ## Neat discoveries
 
-### Litestream
+### [Litestream](https://litestream.io)
 
 I hate being responsible for database backups, so I always end up using a managed database like Google Cloud Datastore or Google Firestore. But as Google increasingly [makes me regret building on their platform](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc), I've searched for an alternative.
 
@@ -184,7 +184,7 @@ Litestream looks like the solution I've been waiting for. It's a lightweight ser
 
 To test out Litestream, I created a little [log pasting service](http://logpaste-demo.mtlynch.io/) that I wanted for TinyPilot. I can run it on any Docker hosting service (Heroku, Lightsail, DigitalOcean), but it fits in the free tier of both Heroku and Amazon S3. At any time, I can tear down the Docker container, launch it somewhere else, and it will have all the same data and continue replicating automatically.
 
-### Plaintext accounting
+### [Plaintext accounting](https://plaintextaccounting.org/)
 
 For the past two years, I've begrudgingly done my bookkeeping with Xero. I dislike the software, but it's the best bookkeeping solution I can find.
 
