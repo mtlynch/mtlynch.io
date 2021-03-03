@@ -229,16 +229,16 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 <div class="order-now">
 <h4>Want an all-in-one TinyPilot kit?</h4>
 
-Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
+Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com/?ref=mtlynch.io). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
 
 <div class="btn-wrapper">
-  <a href="https://tinypilotkvm.com" class="btn order-now-btn">Order now</a>
+  <a href="https://tinypilotkvm.com/?ref=mtlynch.io" class="btn order-now-btn">Order now</a>
 </div>
 </div>
 
 * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-* [HDMI to USB capture dongle](https://smile.amazon.com/Definition-Camcorder-Acquisition-Streaming-Conference/dp/B08C9FCF2X/)
+* [HDMI to USB capture dongle](https://www.ebay.com/itm/393119228675)
   * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
   * They're generally available on eBay for $11-15.
 * [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)
@@ -342,9 +342,9 @@ Further, The Pi 4 needs 3 Amps for stable operation, though it can run at lower 
 Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
 ```
 
-To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
+To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
-{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
+{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
   {{<img src="power-connector.jpg" alt="Close-up of power connector" maxWidth="500px">}}
   {{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" maxWidth="500px">}}
 {{</gallery>}}
@@ -357,9 +357,9 @@ Importantly, the power connector's data port excludes a USB power line. This ens
 
 ## TinyPilot kits
 
-If you'd like to support further development of this software, consider [donating](https://paypal.me/tinypilotkvm) or [purchasing a TinyPilot kit](https://tinypilotkvm.com). Kits include all the equipment you need to build your own TinyPilot. It comes with a preformatted microSD card, so you don't need to configure any software.
+If you'd like to support further development of this software, consider [donating](https://paypal.me/tinypilotkvm) or [purchasing a TinyPilot kit](https://tinypilotkvm.com/?ref=mtlynch.io). Kits include all the equipment you need to build your own TinyPilot. It comes with a preformatted microSD card, so you don't need to configure any software.
 
-{{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/order" hasBorder="true" caption="Purchasing a [TinyPilot kit](https://tinypilotkvm.com/order) supports future development of TinyPilot and guarantees you access to premium features I may add in the future.">}}
+{{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/products?ref=mtlynch.io" hasBorder="true" caption="Purchasing a [TinyPilot kit](https://tinypilotkvm.com/products?ref=mtlynch.io) supports future development of TinyPilot and guarantees you access to premium features I may add in the future.">}}
 
 ## Source code
 

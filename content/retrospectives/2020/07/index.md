@@ -8,7 +8,7 @@ images:
 
 ## Highlights
 
-* I sold my first pre-order for [KVM Pi](https://tinypilotkvm.com).
+* I sold my first pre-order for [KVM Pi](https://tinypilotkvm.com/?ref=mtlynch.io).
 * Finding new ways to monetize [Is It Keto](https://isitketo.org) is proving more difficult than I expected.
 * I sold an Enterprise plan for [Zestful](https://zestfuldata.com).
 
@@ -36,7 +36,7 @@ I intentionally scaled down my output from [May's goal of 100 new articles](/ret
 
 ### Create a working Pi-based KVM over IP, controllable through the web browser
 
-* **Result**: Created [KVM Pi](https://tinypilotkvm.com), which works better than I expected
+* **Result**: Created [KVM Pi](https://tinypilotkvm.com/?ref=mtlynch.io), which works better than I expected
 * **Grade**: A
 
 KVM Pi now works and is extremely usable. I thought the first version would be more finicky or brittle, but I've been using it to [manage my server](kvmpi-os-install.mp4) and [run demos](kvmpi-typing-demo.mp4), and it's all pretty smooth.
@@ -51,7 +51,7 @@ There are [a few bugs](https://github.com/mtlynch/tinypilot/milestone/2) I want 
 |-------------|----------|-----------|----------------------------------------------|
 | [Is It Keto](https://isitketo.org)  | $221.53  | $180.66   | <font color="red">-$40.87 (-18%)</font>      |
 | [Zestful](https://zestfuldata.com)     | $6.48    | $685.26   | <font color="green">+$678.78 (+10475%)</font> |
-| [KVM Pi](https://tinypilotkvm.com)      | N/A      | $173.94   | N/A |
+| [KVM Pi](https://tinypilotkvm.com/?ref=mtlynch.io)      | N/A      | $173.94   | N/A |
 | **Total**   | **$228.01** | **$1,039.86** | <font color="green">+$811.85 (+356%)</font> |
 
 ### [Is It Keto](https://isitketo.org)
@@ -167,7 +167,7 @@ I'm not sure if I just have unreasonable expectations or if the affiliate progra
 
 ## Selling my first hardware device
 
-Okay, I feel like this retrospective has been mostly negative, so now for some good news. I've been working on software to turn a Raspberry Pi into [a server administration device](https://tinypilotkvm.com). At the end of June, I received my first pre-order!
+Okay, I feel like this retrospective has been mostly negative, so now for some good news. I've been working on software to turn a Raspberry Pi into [a server administration device](https://tinypilotkvm.com/?ref=mtlynch.io). At the end of June, I received my first pre-order!
 
 {{<img src="kvmpi-first-sale.jpg" alt="Screenshot of Stripe receipt for my first sale" hasBorder="true" caption="My first KVM Pi sale">}}
 
@@ -183,7 +183,7 @@ Here was my process:
 1. Created an "interested buyer" mailing list and linked to it from my blog post (I've since replaced it with a link to my sales page). I got 11 subscribers this way.
 1. Shared progress with my subscribers and [sent a Google Forms survey](kvmpi-survey.png) to gauge interest and price preferences
 1. Five of my 11 subscribers [responded to the survey](kvmpi-survey-results.png), and 60% (3 people) said they were happy with the $180 price I had in mind.
-1. Created a [sales page](https://tinypilotkvm.com/) with photos and demo videos.
+1. Created a [sales page](https://tinypilotkvm.com/?ref=mtlynch.io) with photos and demo videos.
 1. Announced the pre-sale to my subscribers.
     * 30 minutes later, I received my first pre-order.
 
@@ -215,7 +215,7 @@ I was nervous because I've found that customers who can't afford the standard ra
 
 ### What got done?
 
-* Created [a server administration device](https://tinypilotkvm.com) and sold my first unit.
+* Created [a server administration device](https://tinypilotkvm.com/?ref=mtlynch.io) and sold my first unit.
 * Tested two ideas for sister products to Is It Keto (both duds).
 * Published ["Key Mime Pi: Turn Your Raspberry Pi into a Remote Keyboard"](https://mtlynch.io/key-mime-pi/).
 

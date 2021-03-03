@@ -9,7 +9,7 @@ images:
 ## Highlights
 
 * This is my highest revenue month ever, at $9.8k across all of my projects.
-* [Tiny Pilot](https://tinypilotkvm.com) had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
+* [Tiny Pilot](https://tinypilotkvm.com/?ref=mtlynch.io) had the biggest first month of anything I've ever launched, at 52 sales and $8.7k in revenue.
 * The sudden surge in customers also made it one of my highest-stress months since [going full-time to work for myself](/why-i-quit-google/).
 
 ## Goal Grades
@@ -55,7 +55,7 @@ For the past few years, I've had several minor hit blog posts, attracting 30k-20
 
 For most indie developers, reaching #1 on Hacker News would be a massive boon to their business. My problem has always been that my businesses cater to a different market than my blog audience. Nobody says, "I really like Michael's [opinions on code reviews](/human-code-reviews-1/). Now, I'm going to  visit [his keto website](https://isitketo.org/) and purchase a lot of food through his affiliate links."
 
-I knew the [TinyPilot blog post](/tinypilot/) would be different before I published it. The audience for that article obviously had a strong overlap with likely customers of my [TinyPilot kits](https://tinypilotkvm.com/). If I could attract interest in the blog post, sales would likely follow.
+I knew the [TinyPilot blog post](/tinypilot/) would be different before I published it. The audience for that article obviously had a strong overlap with likely customers of my [TinyPilot kits](https://tinypilotkvm.com/?ref=mtlynch.io). If I could attract interest in the blog post, sales would likely follow.
 
 Fortunately, the blog post got a positive response. It reached the #1 spot on Hacker News and stayed there for most of the day. It attracted 22k readers on its first day and 52k total since then.
 
@@ -126,7 +126,7 @@ I'm looking for ways to make what I offer to customers more valuable than what t
 
 Because I'm a software developer, I'm leaning toward (3).
 
-Last Friday, I put up a teaser for [TinyPilot Pro](https://tinypilotkvm.com/pro) and braced myself for a backlash from people who felt betrayed that I'm not staying pure and open source, but there's been no pushback yet.
+Last Friday, I put up a teaser for [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io) and braced myself for a backlash from people who felt betrayed that I'm not staying pure and open source, but there's been no pushback yet.
 
 Several customers have asked for cloud management features, which sound lucrative but also require major adjustments to my lifestyle. The idea is that TinyPilots could phone home to a cloud server, and then customers would be able to access their devices anywhere on the Internet without configuring VPNs or firewall rules. This would be an obvious way to collect recurring revenue because users would likely pay upwards of $50/month for TinyPilot cloud management.
 
