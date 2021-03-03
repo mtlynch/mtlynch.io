@@ -33,7 +33,7 @@ TODO
 
 TODO
 
-## [TinyPilot](https://tinypilotkvm.com) stats
+## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
 {{<revenue-graph project="tinypilot">}}
 
