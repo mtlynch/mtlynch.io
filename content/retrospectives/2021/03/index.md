@@ -71,11 +71,9 @@ At first, it didn't seem like a big deal. I'd just order from another vendor. Bu
 
 I found several other vendors, but I was nervous about placing huge orders with a vendor I've never worked with before. Some vendors can take months to ship, and I don't want $5k tied up in a vendor taking their time.
 
-To hedge my risk, I split my orders across several vendors on eBay and AliExpress. The problem is that I think most of these sellers are actually the same company. I'd often get identical auto-responses after placing the order.
+To hedge my risk, I split my orders across several vendors on eBay and AliExpress. The problem is that I think most of these sellers are actually the same company. I'd often get identical auto-responses after placing the order. One eBay seller flat-out told me so:
 
-I placed 15 different orders for about 200 chips total, paying a premium for expedited shipping. Since then I have received a total of 3 chips. And despite me ordering them from three different vendors, they all arrived on the same day in identical packaging.
-
-{{<img src="hdmi-chip-deliveries.jpg" alt="Photo of unwrapped HDMI chips I received" caption="I ordered from three different vendors, but they all arrived in identical packaging on the same day." maxWidth="600px">}}
+{{<img src="all-same-company.png" alt="hi friend, ar eyou sure for this order? since we see that you also order with my other store of my workmate. the other two store you order also in my company" caption="I tried to split my risk by ordering from multiple vendors, but they're all the same vendor operating under different names." hasBorder="true" maxWidth="600px">}}
 
 There are two sequences that have happened every time I've placed an order:
 
@@ -84,47 +82,43 @@ There are two sequences that have happened every time I've placed an order:
 1. I place the order
 1. Vendor responds saying that they're out of stock, would I like to wait or get a refund?
 1. I ask for a refund
-1. They process it and I get the money back
+1. I get the money back but still have no chips
 
 ### The worse sequence
 
 1. I place the order
-1. Vendor creates adds a phony tracking number to the order
+1. Vendor adds a phony tracking number to the order
 1. I ask vendor why it's not showing up on DHL and they tell me that it will be there soon
-1. Repeat (3) every three days
+1. Repeat step (3) every two days
+1. I have neither my money nor my chips
 
-I even tried switching to another variant of the same chip, but I'm getting the same runaround with those listings too.
+I even tried switching to another variant of the same chip, but I'm getting the same runaround with those listings.
 
 ## YouTube success might not replicate
 
 After TinyPilot's [first YouTube review](/retrospectives/2021/02/#tinypilots-first-youtube-review), the business experienced its largest-ever surge in sales. Naturally, I thought, "Wow! I really need to get more YouTubers to review TinyPilot."
 
-TODO: image
+{{<img src="sales-jan.png" caption="[First YouTube review](/retrospectives/2021/02/#tinypilots-first-youtube-review) causes a huge spike in sales">}}
 
-I worked with two more YouTubers to get reviews, but the results were less dramatic. The reviews were positive, but they didn't have a measurable impact on sales.
+I worked with two more YouTubers to get reviews, but the results were less dramatic. The subsequent reviews were positive, but they had no measurable impact on sales.
 
-TODO: image
+{{<img src="all-reviews.png" caption="The second and third YouTube reviews had no measurable impact on sales">}}
 
 I still see a great deal of potential in YouTube. There are tons of YouTubers who teach server maintenance, and if I can win them over to TinyPilot when they show demos of low-level administration, I think that has tremendous value for the TinyPilot brand.
 
 ## Finding time for deep work
 
-For the past few months, I've felt extremely pressed for time. There are tons of things on my to-do list, and I feel like I'm often checking off the urgent things rather than the important things (TODO: link to seven habits). I find myself often spending the majority of my day responding to emails, focused on the short-term rather than the long-term deep work (TODO: link).
+For the past few months, I've felt extremely pressed for time. There are tons of things on my to-do list, and I feel like I'm often checking off the [urgent things than the important things](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). I find myself spending the majority of my time responding to emails, focused on short-term tasks rather than [deep work](/book-reports/deep-work/#key-takeaways) that serves me long-term.
 
-Although it's possible that things are going according to plan. I've been delegating more, so maybe I naturally have less time for deep work because I've delegated it to the people working for me.
+On the other hand, it's possible things are going to plan. I've been focusing on delegating more for the past three months. Hiring new people means I have less time for deep work because I'm spending more time communicating with people and helping new hires get up to speed.
 
-I've noticed that I'm
-
-I don't want to be totally unreachable because I think a big part of TinyPilot's appeal is that I'm a small business owner. I'm not a faceless enterprise provider. I'm a friendly developer who you can talk to directly.
+One thing I haven't tried to delegate is customer service. I think a significant part of TinyPilot's appeal is that customers identify me as personally responsible for the business, as opposed to a huge enterprise vendor where you'd never get in touch with an engineer, much less the CEO.
 
 That said, I don't want to be *so* accessible that I spend all my time responding to customer emails. I'm trying to find ways to
 
-That said, it's extremely inefficient for me to provide private email support to everyone. I end up answering the same questions repeatedly. don't want to volunteer to be the private support specialist for every customer. I'm happy to
-
 * Adjust language around support documentation to tell users that I prioritize responding to posts to the support forum over support requests sent to my email.
 * Add FAQ articles for repeated support questions.
-* Focus on bugfixes rather than new features.
-* Delegate more development tasks to freelance developers.
+* Allocate more development toward bugfixes and usability features.
 
 ## Legacy projects
 
@@ -143,9 +137,9 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Amazon Affiliate Earnings | $238.02      | $202.78       | <font color="red">-$35.24 (-15%)</font>      |
 | **Total Earnings**        | **$915.38**  | **$786.96**   | **<font color="red">-$128.42 (-14%)</font>** |
 
-Is It Keto is still enjoying its surge in traffic from New Year's Resolution dieters. It's having an almost identical dropoff to what happened in 2020.
+Is It Keto is still enjoying its bump in traffic from New Year's Resolution dieters. The January-to-February drop is almost identical dropoff to what happened in 2020.
 
-It continues to run in the background without me touching it. I had an offer to buy the site last month for a decent valuation, but the time it would take me to complete the sale would take too much away from TinyPilot.
+The site continues to run in the background without me touching it. I had an offer to buy the site last month for a decent valuation, but the time it would take me to complete the sale would take too much away from TinyPilot.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
@@ -156,7 +150,7 @@ It continues to run in the background without me touching it. I had an offer to 
 | Unique Visitors    | 1,042         | 483           | <font color="red">-559 (-54%)</font>           |
 | **Total Earnings** | **$2,565.22** | **$359.95**   | **<font color="red">-$2,205.27 (-86%)</font>** |
 
-Sadly, I've stopped promotion of the course. I tried a few things in January (TODO: link), but they didn't seem to have any impact on sales. It feels like a waste because I put so much time into the course, and the results faded so quickly.
+Sadly, I've stopped promotion of the course. I tried several marketing tactics in January, but none of them seemed to impact sales, so I've stopped trying. It feels like a waste because I put so much time into the course, and the results faded so quickly.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -175,6 +169,12 @@ Zestful is chugging along in the background as well. I got an unexpected spike o
 
 ### Litestream
 
+I hate being responsible for database backups, so I always end up using a managed database like Google Cloud Datastore or Google Firestore. But as I've increasingly been [burned by taking dependencies on Google](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc), I've wanted an alternative.
+
+Litestream looks like the alternative I've been waiting for. It's a lightweight service that replicates a SQLite database to any S3-compatible interface. That means that I can completely blow away a server with zero notice, and all the data will still be safely stored in my S3 bucket. When I start the server up again, it will gracefully pull down the database from S3 and resume without me having to do any manual repairs.
+
+To test out Litestream, I created a little [log pasting service](http://logpaste-demo.mtlynch.io/) that I wanted for TinyPilot. I can run it on any Docker hosting service (Heroku, Lightsail, DigitalOcean), but it fits in the free tier of both Heroku and Amazon S3. But at any time, I can tear down the Docker container, launch it somewhere else, and it will have all the same data and continue replicating automatically.
+
 ### Plaintext accounting
 
 ## Wrap up
@@ -184,17 +184,19 @@ Zestful is chugging along in the background as well. I got an unexpected spike o
 * Hired three freelance developers for TinyPilot
   * Two work 10-15 hours/week on the product and one works 3-5 hours/week on the website
 * Created a TinyPilot support forum and FAQ
+* Reached feature complete on TinyPilot's next release
 * Published ["My Third Year as a Solo Developer,"](/solo-developer-year-3/) which reached #1 on [/r/programming](https://www.reddit.com/r/programming/comments/la4hfq/my_third_year_as_a_solo_developer/) and [#7 on Hacker News](https://news.ycombinator.com/item?id=25989010)
 
 ### Lessons learned
 
 * Even commodity parts can disappear overnight.
-  * I was conscious of the fact that I depended on one specific type of HDMI capture chip, but I thought the risk was low given that there were dozens of vendors selling it, many of whom reported 1000+ in stock at any given time.
+  * I was conscious of the risk I carried by depending on one specific type of HDMI capture chip.
+  * I felt the risk was low given that there were dozens of vendors selling the chip, many of whom reported 1000+ in stock at any given time.
   * Worse comes to worst, I figured I could switch to an alternative board with the same chipset, of which there were several.
-  * When the shortage happened, it broke both my assumptions. All vendors ran out at the same time of both my chip and the alternative boards, suggesting that they all share a single point of failure somewhere in the manufacturing pipeline.
+  * When the shortage happened, it broke both my assumptions. All vendors ran out at the same time of both my chip and the alternative boards, suggesting that the vendors are less separate independent than they seem.
 * Prepare more for Chinese New Year
   * I expected slow responses for a week or so, but most vendors were shut down entirely for the majority of February.
-  * Next year, I need to plan for Chinese vendors being totally unavailable and unable to ship new parts from the start of February until the end of March.
+  * In the future, I'll plan for Chinese vendors to be totally unavailable and unable to ship new parts from the start of February until the end of March.
 
 ### Goals for next month
 
