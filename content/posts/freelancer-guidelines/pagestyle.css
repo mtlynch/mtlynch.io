@@ -1,0 +1,35 @@
+
+.email {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.email p {
+  margin: 0;
+}
+
+.freelancer-email {
+  background-color: #eef7fa;
+}
+
+.manager-email {
+  background-color: #e6ffe8;
+}
+
+.example {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.example p {
+  margin: 0;
+}
+
+.bad-example {
+  background-color: #ffa59c;
+}
+
+.good-example {
+  background-color: #e6ffe8;
+}

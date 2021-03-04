@@ -1,9 +1,9 @@
-
 ---
 title: Guidelines for Freelance Developers Working with Me
 description: TODO
 date: '2021-02-25'
 hero_image: cover.jpg
+custom_css: true
 images:
 - freelancer-guidelines/og-cover.jpg
 ---
@@ -42,21 +42,67 @@ I primarily communicate over email. I write emails in a style Cal Newport descri
 
 Emails usually represent a task or a question, and we're aiming to resolve it with as few back-and-forths as possible.
 
-* **Bad Email Sequence**
-  * **Freelancer**: What format do you prefer for the image? PNG or JPEG?
-  * **Me**: PNG
-  * **Freelancer**: What size should it be?
-  * **Me**: 800x600px
-  * **Freelancer**: Should it rescale on smaller devices?
-  * **Me**: Yes, it should be 400x300px on viewports smaller than 768px.
-* **Good Email Sequence**
-   * **Freelancer**: I'd love your input on the image. Can you let me know your preferences on the following?
-      * Format (PNG or JPEG)?
-      * Size (in pixels)?
-      * Should it rescale on smaller devices?
-  * **Me**: Thanks for the well-thought out questions!
-    * The format should be PNG.
-    * The size should be 800x600px on desktop and 400x300px on viewports smaller than 768px.
+#### Bad Email Sequence
+
+<div class="email freelancer-email">
+
+**Freelancer**: What format do you prefer for the image? PNG or JPEG?
+
+</div>
+
+<div class="email manager-email">
+
+**Me**: PNG
+
+</div>
+
+<div class="email freelancer-email">
+
+**Freelancer**: What size should it be?
+
+</div>
+
+<div class="email manager-email">
+
+**Me**: 800x600px
+
+</div>
+
+<div class="email freelancer-email">
+
+**Freelancer**: Should it rescale on smaller devices?
+
+</div>
+
+<div class="email manager-email">
+
+**Me**: Yes, it should be 400x300px on viewports smaller than 768px.
+
+</div>
+
+This is a poor email sequence because the freelancer meted out questions over time instead of thinking through
+
+#### Good Email Sequence
+
+<div class="email freelancer-email">
+
+**Freelancer**: I'd love your input on the image. Can you let me know your preferences on the following?
+
+* Format (PNG or JPEG)?
+* Size (in pixels)?
+* Should it rescale on smaller devices?
+
+</div>
+
+<div class="email manager-email">
+
+**Me**: Thanks for the well-thought out questions!
+  * The format should be PNG.
+  * The size should be 800x600px on desktop and 400x300px on viewports smaller than 768px.
+
+</div>
+
+This is a good sequence because the freelancer did up-front planning to minimize the amount of back and forth in answering the questions.
 
 ### Email response time
 
@@ -77,7 +123,7 @@ I use meetings to discuss topics that require low-latency back-and-forths. I use
   * I've read section X of the spec, but I'm still confused. Can we meet to discuss it?
     * GOOD: This will require a back and forth that would take too many emails.
 
-If we begin working together long-term, I'll schedule meetings about once per month to check in just so we have some face time together. I've found that email-only communication can make things feel impersonal and tense (TODO: link).
+If we begin working together long-term, I'll schedule meetings about once per month to check in just so we have some face time together. I've found that email-only communication can make things feel [impersonal and tense](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat).
 
 ## Interviews
 
@@ -93,14 +139,24 @@ Freelancers provide the most value when they minimize the time I spend on tasks 
 
 You should feel comfortable asking questions, but I also expect you to answer questions on your own where possible. If you're unable to answer the question, let me know how you've tried.
 
-* **Bad Questions**
-  * How do I install Flask on my computer?
-  * Who's Elon Musk?
-  * How do I link to specific sections of a Google Doc?
+<div class="example bad-example">
 
-* **Good Questions**
-  * I'm having trouble understanding section 3 of the spec. Does "bat" refer to sports equipment or the animal?
-  * When I try to install your software, I get the error message <code>FooBarBaz</code>. I've re-read the installation guide and searched the open issues, but I can't figure out what's going wrong. Do you know what the problem is?
+**Bad Questions**
+
+* How do I install Flask on my computer?
+* Who's Elon Musk?
+* How do I link to specific sections of a Google Doc?
+
+</div>
+
+<div class="example good-example">
+
+**Good Questions**
+
+* I'm having trouble understanding section 3 of the spec. Does "bat" refer to sports equipment or the animal?
+* When I try to install your software, I get the error message <code>FooBarBaz</code>. I've re-read the installation guide and searched the open issues, but I can't figure out what's going wrong. Do you know what the problem is?
+
+</div>
 
 ## Availability
 
@@ -204,7 +260,7 @@ I use Git for source control.
 
 ### Git features
 
-You don't need to be a Git expert to work with me. You should the following basic usage:
+You don't need to be a Git expert to work with me as long as you understand basic functionality:
 
 * Clone a repo
 * Push and pull changes to a repo
@@ -212,27 +268,30 @@ You don't need to be a Git expert to work with me. You should the following basi
 * Make a commit
 * Rebase a commit (occasionally)
 
-I assign repo access on a least-privilege basis. If you're working on a public repository, you don't need special access. You can clone the repo and begin making pull requests.
+### Repo access
+
+I assign repo access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on a public repository, you can clone the repo and begin making pull requests with no additional permissions.
 
 ### Commit hygiene
 
-Some people are picky about maintaining a beautiful commit history. You're welcome to do it, but it doesn't matter to me. I use Github's squash and merge functionality, so all the commits in the pull request will collapse down to a single commit when I merge.
+Some developers believe that every commit is sacred and beautiful. I'm not one of them.
 
-Write sensible pull requests. ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) is a good explanation, but I only care about the pull request message. You can
+It's important to me that the *main* branch has a sane commit history. In all other branches, you can commit however you like. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so all the commits in a pull request collapse down to a single commit when I merge.
+
+Write sensible pull requests. ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) is a good explanation, but I only care about the pull request title and message. Commit messages within the pull request are not important to me.
 
 ### A few Git rules
 
 * Don't squash a commit after you've pushed it (especially after I've reviewed it).
-  * This makes it hard to look back
+  * This makes it hard to track edits during the review
 * If you need new changes from the `master` branch, **[rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)** from `master`, never *merge*.
   * Merging clutters the pull request and makes it hard to review.
 
 If you need to sync changes from the `master` branch into yours (e.g., if other changes occurred while you were working on a pull request),  from `master`.
 
-
 ## Testing
 
-If there are automated tests or CI checks, you're responsible for keeping them green. Fix any build breaks before sending me code to review.
+You're responsible for keeping continuous integration tests passing. Fix any build breaks before sending me code to review.
 
 If you've added a feature that changes behavior, you're responsible for adding tests to exercise the new behavior and updating any previous tests.
 
@@ -242,17 +301,27 @@ If it's a feature that's difficult to test with automation, you should run manua
 
 I consider almost everything you do in service of working with me to be billable work.
 
-* **Examples of billable work**
-  * Communicating with me (including emails, video calls, and in-person meetings)
-  * Reading documents I ask you to read (including this one)
-  * Researching a technique or technology relevant to your work
-  * Going for a walk to think about a difficult problem
+<div class="example good-example">
 
-* **Examples of non-billable work**
-  * Reading a book cover-to-cover because it's related to your work
-    * Reading a chapter is fine.
-  * Fixing your work computer because your hard drive died
-  * Shopping for a new desk chair
+**Examples of billable work**
+
+* Communicating with me (including emails, video calls, and in-person meetings)
+* Reading documents I ask you to read (including this one)
+* Researching a technique or technology relevant to your work
+* Going for a walk to think about a difficult problem
+
+</div>
+
+<div class="example bad-example">
+
+**Examples of non-billable work**
+
+* Reading a book cover-to-cover because it's related to your work
+  * Reading a chapter is fine.
+* Fixing your work computer because your hard drive died
+* Shopping for a new desk chair
+
+</div>
 
 ## Expenses
 
@@ -276,7 +345,7 @@ I pay via PayPal, Payoneer, ACH transfer, or a mailed check.
 
 ## Post-contract work
 
-I'll never contact you after a job and ask you questions about your work or ask you to make changes for free. It's my responsibility to determine that you delivered everything I requested within the time we work together under contract.
+I'll never contact you after a job with questions about your work or requests for free changes. It's my responsibility to determine that you delivered everything I requested within the time we work together under contract.
 
 If I discover an issue in your work after I send you payment, I am responsible for fixing it myself or offering you additional billable hours.
 
