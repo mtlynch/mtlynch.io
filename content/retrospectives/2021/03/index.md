@@ -22,7 +22,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Failed to even launch an affiliate program
 * **Grade**: D
 
-I thought this would be easy. I use Shopify as my payments backend, and there are tons of Shopify apps that let you create affiliate programs. I only realized after trying to up an affiliate program that every option requires you to [hand over all of your customers' personal information](https://twitter.com/deliberatecoder/status/1360284765149085699) to the affiliate app.
+I thought this would be easy. I use Shopify as my payments backend, and there are tons of Shopify apps that let you create affiliate programs. I only realized after trying to create an affiliate program that every option requires you to [hand over all of your customers' personal information](https://twitter.com/deliberatecoder/status/1360284765149085699) to the affiliate app.
 
 Instead, I'm rolling my own, which I'm hoping is [as simple as it seems](https://www.joelonsoftware.com/2002/03/04/nothing-is-as-simple-as-it-seems/). All I need to do is tell affiliates to use a link like `tinpilotkvm.com/?ref=some-affiliate` and record the affiliate ID with the transaction. At the end of the month, I pay everyone manually. It doesn't scale, but it should be fine for ~10 affiliates.
 
