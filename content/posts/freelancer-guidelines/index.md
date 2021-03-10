@@ -133,10 +133,10 @@ The exception is social meetings. I'll schedule meetings once or twice a month j
 
 | Discussion Topic | Notes |
 |------------------|-------|
-| "Can we schedule a meeting to discuss the deadline for this project?" | <font color="red">BAD</font>: This is a simple question that doesn't require a live meeting. |
-| "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <font color="red">BAD</font>: Context for the code [should be part of the source itself](/code-review-love/#4-answer-questions-with-the-code-itself). |
-| "I have an idea for us to " | <font color="red">BAD</font>: This is a simple question that doesn't require a live meeting. |
-| "The design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to discuss other options." | <font color="green">GOOD</font>: This is a complicated decision that likely requires many small back-and-forths, so a live discussion will be more efficient than email. |
+| "Can we schedule a meeting to discuss the deadline for this project?" | <span class="bad-prefix">BAD</span>: This is a simple question that doesn't require a live meeting. |
+| "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <span class="bad-prefix">BAD</span>: Context for the code [should be part of the source itself](/code-review-love/#4-answer-questions-with-the-code-itself). |
+| "I have an idea for us to " | <span class="bad-prefix">BAD</span>: This is a simple question that doesn't require a live meeting. |
+| "The design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to discuss other options." | <span class="good-prefix">GOOD</span>: This is a complicated decision that likely requires many small back-and-forths, so a live discussion will be more efficient than email. |
 
 ## Interviews
 
@@ -192,9 +192,9 @@ My questions are generally:
 
 ## Deadlines
 
-It's rare that I need work urgently, so I generally allow you to set your deadlines. That said, you're responsible for meeting your deadlines and managing expectations when there are delays.
+It's rare that I need work urgently, so I generally allow you to set your deadlines. That said, you're responsible for meeting your deadlines.
 
-Don't allow deadlines to sail by without an update. If you tell me to expect work by 3 PM ET Tuesday, and I don't see anything from you by Tuesday night, it creates stress for me because I don't know if you've completely forgotten the task or you're running slightly late.
+Don't allow deadlines to sail by without an update. If you tell me to expect work by 3 PM ET Tuesday, and I don't see anything from you by Tuesday night, it creates stress for me. You may have completely forgotten the task, or you could be running late slightly.
 
 If you're going to miss a deadline, let me know. The earlier you can let me know about a deadline slip, the better. The absolute latest you should be telling me about a delay is the deadline itself.
 
@@ -202,11 +202,11 @@ In general, delays are not a big deal as long as I can plan around them. If a de
 
 When specifying deadlines, use precise, unambiguous time conventions:
 
-* <font color="green"> **Pretty Good** </font>: I'll send it to you by EOD Friday
-* <font color="green"> **Better** </font>: I'll send it to you by 5pm ET on Dec. 8th.
-* <font color="red"> **Bad** </font>: I'll have it ready in the next few days.
+* <span class="good-prefix">Pretty Good</span>: I'll send it to you by EOD Friday
+* <span class="good-prefix">Better</span>: I'll send it to you by 5pm ET on Dec. 8th.
+* <span class="bad-prefix">Bad</span>: I'll have it ready in the next few days.
   * Too vague.
-* <font color="red"> **Terrible** </font>: I'll let you know when it's ready.
+* <span class="bad-prefix">Terrible</span>: I'll let you know when it's ready.
   * Extremely vague
 
 ## Timeboxing
@@ -217,7 +217,7 @@ If you're approaching the end of the hours limit and won't finish, reserve time 
 
 I won't pay for any work performed beyond the agreed hours cap.
 
-As we work together more, I'll increase or eliminate this limit to give you more autonomy.
+As we work together more, I'll increase or eliminate the time cap to give you more autonomy.
 
 ## Documentation
 
@@ -227,7 +227,7 @@ If a project has documented processes or Github templates, please follow them. I
 
 When you begin working with me on a project, you become the new owner of its ramp-up documents. If you got stuck because something was documented poorly or not at all, please submit edits to fill the gaps.
 
-Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for things you can't express in code. Aim to document new code to roughly the same degree as nearby existing code.
+Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for things you can't express in code. Aim to document new code with roughly the same thoroughness as nearby code.
 
 ```python
 # Number of days per week (seven)   <-- BAD comment

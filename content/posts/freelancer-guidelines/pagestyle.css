@@ -46,9 +46,20 @@
 }
 
 .bad-example {
-  background-color: #ffa59c;
+  background-color: #ffbeb8;
 }
 
 .good-example {
   background-color: #e6ffe8;
+}
+
+.good-prefix {
+  color: green;
+  font-weight: bold;
+}
+
+
+.bad-prefix {
+  color: red;
+  font-weight: bold;
 }
