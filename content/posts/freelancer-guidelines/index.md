@@ -8,15 +8,15 @@ images:
 - freelancer-guidelines/og-cover.jpg
 ---
 
-I've been hiring software developers and other freelancers to work with me for the past seven years. Even though I'm a developer myself, hiring other developers is a fantastic force multiplier when I need to free up bandwidth to focus on other parts of my business.
+I've been hiring software developers and other freelancers to work with me for the past seven years. Even though I write most code myself, hiring other developers is a fantastic force multiplier that frees up my time and allows me to focus on other parts of my business.
 
-Freelancers work well if you manage the relationship properly, but there are hundreds of ways to screw it up. Every client is different, so it's critical that developers working with you understand the way you do things and what you should each expect of the partnership.
+Freelancers work well if you manage the relationship properly, but there are hundreds of ways to screw it up. Every freelancer-client relationship is different, so it's critical that developers working with you understand what to expect of the partnership.
 
-The document below explains what it's like to work with me as a freelance developer. I share it when I offer a job to new contractors, and I pay them to read it closely after we begin working together. It allows candidates to skip applying if they prefer a different working style. For candidates that like my way of doing things, it helps them ramp up quicly and reduces ambiguity in the work.
+The document below explains what it's like to work with me as a freelance developer. I share it when advertising developer roles, and I pay contractors to read it closely after we begin working together. It allows candidates to skip applying if they prefer a different working style. For candidates that like my way of doing things, it helps them ramp up quicly and reduces ambiguity in the work.
 
 It's a living document, so I update it when I run into issues that clearer expectations could have prevented.
 
-If you hire freelancers or work as one, you're welcome to copy or modify these guidelines or the markdown version (TODO: link) under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/). If you have your own set of guidelines, let me know, as I'd love to see others.
+If you hire freelancers, you're welcome to adapt these guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/) (Markdown version (TODO: link), if that's easier). If you have your own set of guidelines, let me know, as I'd love to see others.
 
 ---
 
@@ -44,40 +44,46 @@ Emails usually represent a task or a question, and we're aiming to resolve it wi
 
 #### Bad Email Sequence
 
-<div class="email freelancer-email">
+<div class="email-exchange">
+  <div class="email freelancer-email">
 
 **Freelancer**: What format do you prefer for the image? PNG or JPEG?
 
-</div>
+  </div>
 
-<div class="email manager-email">
+  <div class="email manager-email">
 
 **Me**: PNG
 
+  </div>
 </div>
 
-<div class="email freelancer-email">
+<div class="email-exchange">
+  <div class="email freelancer-email">
 
 **Freelancer**: What size should it be?
 
-</div>
+  </div>
 
-<div class="email manager-email">
+  <div class="email manager-email">
 
 **Me**: 800x600px
 
+  </div>
 </div>
 
-<div class="email freelancer-email">
+<div class="email-exchange">
+  <div class="email freelancer-email">
 
 **Freelancer**: Should it rescale on smaller devices?
 
-</div>
+  </div>
 
-<div class="email manager-email">
+  <div class="email manager-email">
 
 **Me**: Yes, it should be 400x300px on viewports smaller than 768px.
 
+  </div>
 </div>
 
 This is a poor email sequence because the freelancer meted out questions over time instead of thinking through
@@ -116,14 +122,13 @@ It's okay if turnaround time is occasionally longer than one working day, but it
 
 I use meetings to discuss topics that require low-latency back-and-forths. I use emails for everything else. Avoid scheduling a meeting to ask questions that could have been an email.
 
-* **Bad Meeting Discussions**
-  * Can we schedule a meeting to discuss the deadline for this project?
-    * BAD: We can figure that out over email.
-* **Good Meeting Discussions**
-  * I've read section X of the spec, but I'm still confused. Can we meet to discuss it?
-    * GOOD: This will require a back and forth that would take too many emails.
+As we continue working together, I'll schedule meetings about once per month to check in just so we have some face time together. I've found that email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out).
 
-If we begin working together long-term, I'll schedule meetings about once per month to check in just so we have some face time together. I've found that email-only communication can make things feel [impersonal and tense](/hiring-content-writers/4-working-with-writers/#meet-regularly-in-person-or-on-video-chat).
+| Discussion Topic | Notes |
+|------------------|-------|
+| "Can we schedule a meeting to discuss the deadline for this project?" | <font color="red">BAD</font>: We can figure that out over email. |
+| "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <font color="red">BAD</font>: Context for the code [should be part of the source itself](/code-review-love/#4-answer-questions-with-the-code-itself). |
+| "The design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to discuss other options." | <font color="green">GOOD</font>: This is a complicated decision that likely requires many small back-and-forths, so a live discussion will be more efficient than email. |
 
 ## Interviews
 
@@ -248,9 +253,9 @@ These articles explain my code review process:
 
 My projects adhere to Google's code style guidelines:
 
-*   [Python](https://google.github.io/styleguide/pyguide.html)
-*   [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
-*   [Shell](https://google.github.io/styleguide/shellguide.html)
+* [Python](https://google.github.io/styleguide/pyguide.html)
+* [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
+* [Shell](https://google.github.io/styleguide/shellguide.html)
 
 As much as possible, I [use automated tools to enforce style conventions](https://mtlynch.io/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
@@ -284,16 +289,14 @@ Write sensible pull requests. ["How to Write a Git Commit Message"](https://chri
 
 * Don't squash a commit after you've pushed it (especially after I've reviewed it).
   * This makes it hard to track edits during the review
-* If you need new changes from the `master` branch, **[rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)** from `master`, never *merge*.
+* If you need new changes from the main branch, **[rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)** the changes, never *merge*.
   * Merging clutters the pull request and makes it hard to review.
-
-If you need to sync changes from the `master` branch into yours (e.g., if other changes occurred while you were working on a pull request),  from `master`.
 
 ## Testing
 
-You're responsible for keeping continuous integration tests passing. Fix any build breaks before sending me code to review.
+When you create a pull request, you're responsible for ensuring all tests passing in continuous integration. Fix any build breaks before sending me code to review.
 
-If you've added a feature that changes behavior, you're responsible for adding tests to exercise the new behavior and updating any previous tests.
+If you've added a feature or otherwise changed behavior, update the automated tests to exercise the new behavior.
 
 If it's a feature that's difficult to test with automation, you should run manual tests to exercise the new code. If you can't find a way to do that, warn me that it's untested when you send it for review (this should be extremely rare).
 
@@ -325,9 +328,11 @@ I consider almost everything you do in service of working with me to be billable
 
 ## Expenses
 
-I'll pay for the cost of any software, services, or equipment you need to purchase to work on my projects, as long as you run it by me first.
+I expect you to provide the basic tools you need to operate as a freelance developer (e.g., computer, internet connection, electricity).
 
-I expect you to provide the basic tools you need to operate as a freelance developer (e.g., computer, internet connection, electricity), but I'll cover the cost of expenses that are specific to my project.
+I'm happy to pay the cost of any software, services, or equipment that make your work more efficient or pleasant. Just run it by me first.
+
+If I ask you to purchase something, I'll reimburse you for it on your next invoice.
 
 ## Monitoring
 
@@ -339,9 +344,9 @@ If we're on a platform such as Upwork where monitoring is built-in, I'll always 
 
 Please send me invoices for your hours every two weeks. You can expect payment within five business days of the invoice, usually sooner.
 
-I don't give bonuses or tips. I want your compensation to be as transparent as possible.
+I don't pay bonuses or tips. Your compensation is as transparent and objective as possible.
 
-I pay via PayPal, Payoneer, ACH transfer, or a mailed check.
+I pay via PayPal, Payoneer, ACH transfer, or (in the US) a mailed check.
 
 ## Post-contract work
 
@@ -363,4 +368,6 @@ I'll need a [W-8BEN](https://www.irs.gov/pub/irs-pdf/fw8ben.pdf) form that decla
 
 ## Intellectual property
 
-If we're working together on a project where I want to retain intellectual property rights, I'll send you a contract to e-sign that declares that in exchange for your hourly rate, I am purchasing the rights to the code you write for me. The contract is specifically about work you produce for me, not all code you write.
+If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright for the code you write for me.
+
+The contract relates specifically to work I pay you to produce. You retain the rights to all work you create outside of your paid hours for me.

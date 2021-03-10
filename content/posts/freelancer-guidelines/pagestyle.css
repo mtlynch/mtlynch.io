@@ -1,8 +1,18 @@
+.email-exchange {
+  margin-bottom: 4rem;
+}
 
 .email {
   border: 1px solid black;
   padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  max-width: 90%;
+  margin: 1rem auto 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .email {
+    max-width: 80%;
+  }
 }
 
 .email p {
@@ -19,8 +29,17 @@
 
 .example {
   padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
+  max-width: 90%;
+  margin: 1rem auto 1rem auto;
+  border: 1px solid black;
 }
+
+@media screen and (min-width: 768px) {
+  .example {
+    max-width: 80%;
+  }
+}
+
 
 .example p {
   margin: 0;
