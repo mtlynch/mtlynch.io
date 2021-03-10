@@ -238,7 +238,7 @@ Support TinyPilot's development by purchasing [an official TinyPilot kit](https:
 
 * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-* [HDMI to USB capture dongle](https://www.ebay.com/itm/393119228675)
+* [HDMI to USB capture dongle](https://www.ebay.com/itm/393119231505)
   * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
   * They're generally available on eBay for $11-15.
 * [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)
