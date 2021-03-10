@@ -120,14 +120,22 @@ It's okay if turnaround time is occasionally longer than one working day, but it
 
 ### Meetings
 
+I consider meeting time to be precious. I try to minimize.
+
+* Reading a document together
+* One person speaks for more than five minutes without interactive discussion
+
 I use meetings to discuss topics that require low-latency back-and-forths. I use emails for everything else. Avoid scheduling a meeting to ask questions that could have been an email.
 
-As we continue working together, I'll schedule meetings about once per month to check in just so we have some face time together. I've found that email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out).
+A good meeting has an agenda. We should have a . If the meeting involves one person talking uninterrupted for
+
+The exception is social meetings. I'll schedule meetings once or twice a month just as a casual check-in so we have some face time together. I've found that email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out). These meetings are casual and don't necessarily have a written agenda.
 
 | Discussion Topic | Notes |
 |------------------|-------|
-| "Can we schedule a meeting to discuss the deadline for this project?" | <font color="red">BAD</font>: We can figure that out over email. |
+| "Can we schedule a meeting to discuss the deadline for this project?" | <font color="red">BAD</font>: This is a simple question that doesn't require a live meeting. |
 | "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <font color="red">BAD</font>: Context for the code [should be part of the source itself](/code-review-love/#4-answer-questions-with-the-code-itself). |
+| "I have an idea for us to " | <font color="red">BAD</font>: This is a simple question that doesn't require a live meeting. |
 | "The design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to discuss other options." | <font color="green">GOOD</font>: This is a complicated decision that likely requires many small back-and-forths, so a live discussion will be more efficient than email. |
 
 ## Interviews
