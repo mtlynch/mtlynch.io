@@ -8,21 +8,21 @@ images:
 - freelancer-guidelines/og-cover.jpg
 ---
 
-I've been hiring software developers and other freelancers to work with me for the past seven years. Even though I write most code myself, hiring other developers is a fantastic force multiplier that frees up time to focus on other parts of my business.
+I've been hiring software developers and other freelancers for the past seven years. Even though I write most code myself, hiring other developers is a tremendous force multiplier that frees up time for other parts of my business.
 
-Freelancers work well if you manage the relationship properly, but there are hundreds of ways to screw it up. Every freelancer-client relationship is different, so it's critical that developers working with you understand what to expect of the partnership.
+Freelancers work well if you manage the relationship properly, but there are hundreds of ways it can go wrong. The best way to start things off right is by reaching a shared understanding of how the freelancer-client relationship will work.
 
-The document below explains what it's like to work with me as a freelance developer. I include it in every dev job listing I publish, and I pay contractors to read it closely after we begin working together. It attracts candidates with compatible working styles, and it reduces ramp-up time after I hire them.
+The document below explains what it's like to work with me as a freelance developer. I include it in every dev job listing I publish, and I pay contractors to read it closely after we begin working together. It attracts candidates with compatible working styles and reduces ramp-up time after I hire them.
 
-I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so anyone is welcome to reuse or adapt them.
+I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them if they're helpful.
 
 ---
 
 ## Overview
 
-This document explains processes and conventions I use when working with freelance developers.
+This document explains the processes and conventions I use when working with freelance developers.
 
-If you're reading this document before working with me, feel free to skim it quickly to see if this working style matches yours. If you're reading it while on an active contract with me, read it thoroughly and bill me for the time.
+If you're reading this document before working with me, feel free to skim it to see if this working style matches yours. If you're reading it while on an active contract with me, read it thoroughly and bill me for the time.
 
 ## Golden rule
 
@@ -36,11 +36,13 @@ Err on the side of overcommunication. When sharing a solution, it's helpful to h
 
 ### Resolve emails quickly
 
-I communicate primarily over email. I write emails in a style Cal Newport describes as ["process-centric."](https://www.calnewport.com/blog/2016/04/19/write-longer-emails/)
+I communicate primarily over email.
 
-Emails usually represent a task or a question, and we're aiming to resolve it with as few back-and-forths as possible. This requires us both to compose emails thoughtfully rather than firing off the quickest response to get the thread out of our inbox.
+My email style is what Cal Newport describes as ["process-centric."](https://www.calnewport.com/blog/2016/04/19/write-longer-emails/) In short, emails usually represent a task or a question, and we're aiming to resolve it with as few back-and-forths as possible. This requires us both to compose emails thoughtfully rather than firing off the quickest response to get the thread out of our inbox.
 
 #### Bad Email Sequence
+
+The following is a fictional example of a poor email sequence. Instead of investing time up front to think about the information they need, the freelancer dribbles out questions one by one.
 
 <div class="email-exchange">
   <div class="email freelancer-email">
@@ -84,9 +86,9 @@ Emails usually represent a task or a question, and we're aiming to resolve it wi
   </div>
 </div>
 
-This is a poor email sequence because the freelancer dribbled out questions little by little instead of investing time up front to think about everything they need to move forward with their work.
-
 #### Good Email Sequence
+
+In contrast, this email sequence answers the same questions as above, but in a planned, efficient way.
 
 <div class="email freelancer-email">
 
@@ -100,13 +102,11 @@ This is a poor email sequence because the freelancer dribbled out questions litt
 
 <div class="email manager-email">
 
-**Me**: Thanks for the well-thought out questions!
+**Me**: Thanks for the well-thought-out questions!
   * The format should be PNG.
   * The size should be 800x600px on desktop and 400x300px on viewports smaller than 768px.
 
 </div>
-
-This is a good sequence because the freelancer planned carefully to minimize our back-and-forths.
 
 ### Email response time
 
@@ -114,35 +114,35 @@ If we're in the middle of ongoing work, I expect responses to emails within one 
 
 If you don't have a complete answer, respond to acknowledge the message and provide an ETA for the full response.
 
-It's okay if turnaround time is occasionally longer than one working day, but it should be the exception and not the rule. Expect the same from me.
+It's okay for turnaround time to run longer than one working day occasionally, but it should be the exception and not the rule. Expect the same from me.
 
 ### Meetings
 
-Meetings have value, but they impose significant cost on focus and schedule. Meetings are useful for topics that are inefficient or impossible to communicate in writing.
+Meetings are useful for topics that are inefficient or impossible to communicate in writing, but they come at a significant cost. Meetings interrupt focus and constrain schedules, so I minimize their frequency and length.
 
 I use emails to communicate facts and meetings to discuss opinions. For example, if we review a design document, we don't need to read it together live. Instead, we can read the document beforehand and reserve the meeting time for interactive discussion.
 
-I'll also schedule meetings once or twice a month as a casual check-in for face-time together. Email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out).
+I'll also schedule meetings once or twice a month for casual face-time together. Email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out).
 
 | Discussion Topic | Notes |
 |------------------|-------|
 | "Can we schedule a meeting to discuss the deadline for this project?" | <span class="bad-prefix">BAD</span>: This is a simple question that doesn't require a meeting. |
 | "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <span class="bad-prefix">BAD</span>: If the code is too complicated to understand, a [meeting is not the answer](/code-review-love/#4-answer-questions-with-the-code-itself). |
 | "I have an idea for a new architecture. Can we hop on a call to go over it?" | <span class="bad-prefix">BAD</span>: I'd rather start with a written explanation and then discuss after I've read it. |
-| "The design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to understand the constraints and talk about other options." | <span class="good-prefix">GOOD</span>: This is a complicated decision that likely requires many small back-and-forths, so a live discussion will be more efficient than email. |
-| "You've given me feedback about 'cohesion' in my code, but I feel like we're still not quite on the same page. Can we meet to discuss it?." | <span class="good-prefix">GOOD</span>: If we've tried to communicate something in writing, and it's not working, a meeting is a good way to hash it out. |
+| "Your design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to understand the constraints and talk about other options." | <span class="good-prefix">GOOD</span>: This is a complicated decision that likely requires many little back-and-forths, so a live discussion will be more efficient than email. |
+| "You've given me feedback about 'cohesion' in my code, but I feel like we're still not quite on the same page. Can we meet to discuss it?." | <span class="good-prefix">GOOD</span>: If we've tried to communicate something in writing, and it's not working, a meeting is an excellent way to hash it out. |
 
 ## Interviews
 
 I never conduct formal interviews to make a hiring decision.
 
-I'll ask to see examples of previous work, or I may ask a few questions over email, but I'm most interested in how well we work together. If you're a good candidate, I'll set up a narrowly-scoped job at your normal pay rate.
+I'll ask to see examples of previous work, or I may ask a few questions over email, but I'm primarily interested in how well we work together. If you're a good candidate, I'll set up a narrowly-scoped job at your regular pay rate. People generally refer to this style as "contract-to-hire."
 
-If I ask you to begin a paid trial assignment, I'll pay for your time even if we decide not to work together afterwards. The only exception is if you fail to make a good-faith effort on the assignment (e.g., you bill ten hours on a programming task and deliver zero code).
+If I ask you to begin a paid trial assignment, I'll pay for your time even if we decide not to work together afterward. The only exception is if you fail to make a good-faith effort on the assignment (e.g., you bill ten hours on a programming task and deliver zero code).
 
 ## Due Diligence
 
-Freelancers provide the most value when they minimize my time overseeing their work. A large part of this is exercising due diligence before reaching out with questions.
+Freelancers provide the most value when they minimize my time overseeing their work. This requires due diligence before reaching out with questions.
 
 You should feel comfortable asking for help, but I expect you to answer questions on your own where possible. If you're unable to solve the problem, let me know how you've tried.
 
@@ -160,7 +160,7 @@ You should feel comfortable asking for help, but I expect you to answer question
 
 **Good Questions**
 
-* I'm having trouble understanding section 3 of the spec. Does "bat" refer to sports equipment or the animal?
+* I'm having trouble understanding section 3 of the spec. Does "client" refer to the end-user or a client of the API?
 * When I try to install your software, I get the error message <code>FooBarBaz</code>. I've re-read the installation guide and searched the open issues, but I can't figure out what's going wrong. Do you know what the problem is?
 
 </div>
@@ -173,24 +173,24 @@ I don't work weekends or major US holidays. You're welcome to email me on the we
 
 You're free to work whichever hours you like, but I'd like you to have at least some overlap with my working hours, which are 10am-6:30pm ET.
 
-I don't expect you to work a specific schedule each week, but the more I can predict your hours, the easier it is for me to ensure tasks and feedback are ready for you when you next have availability.
+I don't expect you to work a specific schedule each week, but the more I can predict your hours, the easier it is to prepare tasks and feedback that coincides with your availability.
 
 ## Feedback
 
-It's common for me to ask for feedback during or after a project. I do this because freelancers often have useful ideas for improving processes or work dynamics, but they don't feel comfortable sharing until they're asked directly.
+It's common for me to ask for feedback during or after a project. Freelancers have valuable ideas for improving processes or work dynamics, but they sometimes don't feel comfortable sharing until they're asked directly.
 
 My questions are generally:
 
-*   Are there things I can improve to make the work smoother or more enjoyable?
+*   Are there changes that would make the work smoother or more enjoyable?
 *   Are there types of work you want to do more of? Less of?
 
 ## Deadlines
 
-It's rare that I need work urgently, so I generally allow you to set your own deadlines. Once you set a deadline, you're responsible for meeting it.
+I rarely need work urgently, so I generally allow you to set your own deadlines. Once you announce a deadline, you're responsible for meeting it.
 
-Don't allow deadlines to sail by without an update. If you tell me to expect work by 3 PM ET Tuesday, and I don't see anything from you by Tuesday night, it causes me stress. I'll wonder if you completely forgot the task and you're starting from scratch or you're almost done and will deliver results in a few hours.
+Don't allow deadlines to sail by without an update. If you tell me to expect work by 3pm ET Tuesday, it causes me stress if I don't see anything from you by Tuesday night. I'll wonder if you completely forgot the task and you'll have to start from scratch or if you're almost done and will deliver results in a few hours.
 
-If you're going to miss a deadline, let me know. The earlier you can warn me about a deadline slip, the better. The absolute latest you should be telling me about a delay is the deadline itself.
+If you're going to miss a deadline, let me know. The earlier you can warn me about a schedule slip, the better. The absolute latest you should be telling me about a delay is the deadline itself.
 
 In general, delays are not a big deal as long as I can plan around them. If a deadline is important to me, I'll let you know.
 
@@ -205,9 +205,9 @@ When specifying deadlines, use precise, unambiguous time conventions:
 
 ## Timeboxing
 
-Early in our work together, I'll ask you to limit billable hours per week or per milestone. I do this to control billing as I get a sense of your development velocity and whether we work well together.
+Early in our work together, I'll ask you to limit billable hours per week or milestone. I do this to control billing as I get a sense of your development velocity and whether we work well together.
 
-If you're approaching the end of the hours limit and won't finish, reserve time to organize the work you've done. Include it in an email with an explanation of what's complete, what's incomplete, and how many hours you expect for the remaining work.
+If you're approaching the limit and won't finish, reserve time to organize the work you've done. Send it to me in an email with an explanation of what's complete, what's incomplete, and how many hours you expect for the remaining work.
 
 I won't pay for any time beyond the agreed hours cap.
 
@@ -221,7 +221,7 @@ If a project has documented processes or Github templates, please follow them. I
 
 When you begin working with me on a project, you become the new owner of its ramp-up documents. If you got stuck because something was documented poorly or not at all, please submit edits to fill the gaps.
 
-Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for things you can't express in code. Comment new code with roughly the same thoroughness as nearby code.
+Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for things code can't express. Comment new code with roughly the same thoroughness as nearby code.
 
 ```python
 # Number of days per week (seven)   <-- BAD comment
@@ -244,7 +244,7 @@ If it takes you twice as long to make your code 30% simpler, that's a net positi
 
 I thoroughly review all code changes and provide detailed feedback.
 
-My comments are not meant to criticize you or make you feel bad. I review rigorously to help me understand the code and get it to a state where I feel comfortable maintaining it long-term.
+My comments are not meant to criticize you or make you feel bad. I review rigorously to help me understand the code and get it to a state where I can maintain it long-term.
 
 These articles explain my code review process:
 
@@ -279,9 +279,9 @@ I assign repo access on a [least-privilege basis](https://en.wikipedia.org/wiki/
 
 Some developers believe that every commit is beautiful and sacred. I'm not one of them.
 
-It's important to me that the *main* branch has a sane commit history. In all other branches, you can commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so all the commits in a pull request collapse down to a single commit when I merge.
+It's important to me that the *main* branch has a sane commit history. In all other branches, you can commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
 
-Write sensible pull request titles and explanations. The article, ["How to Write a Git Commit Message,"](https://chris.beams.io/posts/git-commit/) describes the style I prefer, except applied to the pull request not the individual commits.
+Write sensible pull request titles and descriptions. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes the style I prefer, except applied to the pull request, not the individual commits.
 
 ### A few Git rules
 
@@ -307,9 +307,9 @@ I consider almost everything you do in service of working with me to be billable
 **Examples of billable work**
 
 * Communicating with me (including emails, video calls, and in-person meetings)
-* Reading documents I ask you to read (including this one)
+* Reading documents that I ask you to read (including this one)
 * Researching a technique or technology relevant to your work
-* Going for a walk to think about a difficult problem
+* Going for a walk to think about a complex problem
 
 </div>
 
@@ -336,15 +336,15 @@ If I ask you to purchase something related to the job, I'll reimburse you for it
 
 I trust you to report your hours honestly. I'll never ask you to "prove" your hours to me or install any surveillance software on your system.
 
-If we're on a platform such as Upwork where monitoring is built-in, I'll always make the monitoring features optional. I won't review the logs unless there's an egregious discrepancy in hours. Even in that case, I'll speak to you before inspecting your logs.
+If we're on a platform such as Upwork, where monitoring is built-in, I'll always make the monitoring features optional. I won't review the monitoring data unless there's an egregious discrepancy in hours. Even in that case, I'll speak to you before inspecting the data.
 
 ## Payment
 
 Please send me invoices for your hours every two weeks. You can expect payment within five business days of the invoice, usually sooner.
 
-I don't pay bonuses or tips. This is so that your compensation is transparent, and you don't have to wonder about undefined parts left to my discretion.
+I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined parts left to my discretion.
 
-I pay via PayPal, Payoneer, ACH transfer, or (in the US) a mailed check.
+I pay via PayPal, Payoneer, ACH transfer, or (in the US) a mailed check, depending on your preference.
 
 ## Post-contract work
 
@@ -363,7 +363,7 @@ If I pay you more than $600 per calendar year, I need some forms for tax purpose
 
 ## Intellectual property
 
-If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright for the code you write for me.
+If we're working together on a project where I want to retain intellectual property rights, I'll send you [a contract](https://www.docracy.com/0wceme3njsd/sample-freelance-developer-agreement) to e-sign. It declares that I'm purchasing the copyright to the code you write for me.
 
 The contract relates specifically to work I pay you to produce, not anything you create outside of your paid hours for me.
 
