@@ -6,15 +6,18 @@ hero_image: cover.jpg
 custom_css: true
 images:
 - freelancer-guidelines/og-cover.jpg
+tags:
+- culture
+- outsourcing
 ---
 
 I've been hiring software developers and other freelancers for the past seven years. Even though I write most code myself, hiring other developers is a tremendous force multiplier that frees up time for other parts of my business.
 
-Freelancers work well if you manage the relationship properly, but there are hundreds of ways it can go wrong. The best way to start things off right is by reaching a shared understanding of how the freelancer-client relationship will work.
+Freelancers work well if you manage the relationship properly, but there are hundreds of ways it can go wrong. The best way to start things off is by reaching a shared understanding of your freelancer-client relationship.
 
 The document below explains what it's like to work with me as a freelance developer. I include it in every dev job listing I publish, and I pay contractors to read it closely after we begin working together. It attracts candidates with compatible working styles and reduces ramp-up time after I hire them.
 
-I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them if they're helpful.
+I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
 
 ---
 
