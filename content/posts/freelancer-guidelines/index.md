@@ -172,9 +172,9 @@ I don't expect anyone to be available more than five days per week. Unless you t
 
 I don't work weekends or major US holidays. You're welcome to email me on the weekend, but I won't respond until the next business day. I try to avoid email before noon in US Eastern Time.
 
-You're free to work whichever hours you like, but I'd like you to have at least some overlap with my working hours, which are 10am-6:30pm ET.
+You're free to work whichever hours you like, but I'd like you to have some overlap with my working hours, which are 10am-6:30pm ET.
 
-I don't expect you to work a specific schedule each week, but the more I can predict your hours, the easier it is to prepare tasks and feedback that coincides with your availability.
+I don't expect you to work a fixed schedule each week, but the more I can predict your hours, the easier it is to prepare tasks and feedback that coincides with your availability.
 
 ## Feedback
 
@@ -187,7 +187,7 @@ My questions are generally:
 
 ## Deadlines
 
-I rarely need work urgently, so I generally allow you to set your own deadlines. Once you announce a deadline, you're responsible for meeting it.
+I rarely need work urgently, so I generally allow you to set your own deadlines. You're responsible for meeting your deadlines without reminders from me.
 
 Don't allow deadlines to sail by without an update. If you tell me to expect work by 3pm ET Tuesday, it causes me stress if I don't see anything from you by Tuesday night. I'll wonder if you completely forgot the task and you'll have to start from scratch or if you're almost done and will deliver results in a few hours.
 
@@ -222,7 +222,7 @@ If a project has documented processes or Github templates, please follow them. I
 
 When you begin working with me on a project, you become the new owner of its ramp-up documents. If you got stuck because something was documented poorly or not at all, please submit edits to fill the gaps.
 
-Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for things code can't express. Comment new code with roughly the same thoroughness as nearby code.
+Thoughtfully document the code that you write. Aim to make the code self-documenting, but include source comments for information that code can't express. Comment new code with roughly the same thoroughness as nearby code.
 
 ```python
 # Number of days per week (seven)   <-- BAD comment
@@ -237,9 +237,7 @@ time.sleep(5)
 
 I value quality and maintainability over turnaround time.
 
-Once you have working code, look for opportunities to simplify or refactor the logic and make it more intuitive.
-
-If it takes you twice as long to make your code 30% simpler, that's a net positive for me.
+Once you have working code, look for opportunities to simplify or refactor the logic and make it more intuitive. If it takes you twice as long to make your code 30% simpler, that's a net positive for me.
 
 ## Code reviews
 
@@ -274,7 +272,7 @@ I use Git for source control. You don't need to be a Git expert as long as you u
 
 ### Repo access
 
-I assign repo access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can clone the repo and begin making pull requests with no additional permissions.
+I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can clone it and begin making pull requests with no additional permissions.
 
 ### Commit hygiene
 
@@ -287,7 +285,7 @@ Write sensible pull request titles and descriptions. The article ["How to Write 
 ### A few Git rules
 
 * Don't squash a commit after you've pushed it (especially after I've reviewed it).
-  * This makes it hard to track edits during the review
+  * Squashing makes it hard to track edits during the review
 * If you need new changes from the main branch, **[rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)** the changes, never *merge*.
   * Merging clutters the pull request and makes it hard to review.
 
@@ -343,7 +341,7 @@ If we're on a platform such as Upwork, where monitoring is built-in, I'll always
 
 Please send me invoices for your hours every two weeks. Expect payment within five business days of the invoice, usually sooner.
 
-I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined parts left to my discretion.
+I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined pay left to my discretion.
 
 I pay via PayPal, Payoneer, ACH transfer, or (in the US) a mailed check, depending on your preference.
 
