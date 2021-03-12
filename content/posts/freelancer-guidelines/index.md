@@ -9,6 +9,9 @@ images:
 tags:
 - culture
 - outsourcing
+discuss_urls:
+  reddit: https://www.reddit.com/r/programming/comments/m3j6x9/guidelines_for_freelance_developers_working_with/
+  hacker_news: https://news.ycombinator.com/item?id=26436379
 ---
 
 I've been hiring software developers and other freelancers for the past seven years. Even though I write most code myself, hiring other developers is a tremendous force multiplier that frees up time for other parts of my business.
@@ -370,3 +373,5 @@ The contract relates specifically to work I pay you to produce, not anything you
 *Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
 
 Are you a client or freelancer? I'd love to see similar documents or hear how others approach this problem, so feel free to share in the comments.
+
+{{< tweet 1370392431049474048 >}}
