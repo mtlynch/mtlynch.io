@@ -1,7 +1,7 @@
 ---
 title: Guidelines for Freelance Developers Working with Me
-description: TODO
-date: '2021-02-25'
+description: I provide this document when advertising dev jobs, and I pay freelancers to read it when they begin working with me.
+date: '2021-03-12'
 hero_image: cover.jpg
 custom_css: true
 images:
@@ -38,7 +38,7 @@ Err on the side of overcommunication. When sharing a solution, it's helpful to h
 
 I communicate primarily over email.
 
-My email style is what Cal Newport describes as ["process-centric."](https://www.calnewport.com/blog/2016/04/19/write-longer-emails/) In short, emails usually represent a task or a question, and we're aiming to resolve it with as few back-and-forths as possible. This requires us both to compose emails thoughtfully rather than firing off the quickest response to get the thread out of our inbox.
+My email style is what Cal Newport describes as ["process-centric."](https://www.calnewport.com/blog/2016/04/19/write-longer-emails/) In short, emails usually represent a task or a question, and we're aiming to resolve it with as few back-and-forths as possible. This requires us both to compose emails thoughtfully rather than firing off the quickest response that clears the thread from our inbox.
 
 #### Bad Email Sequence
 
@@ -190,7 +190,7 @@ I rarely need work urgently, so I generally allow you to set your own deadlines.
 
 Don't allow deadlines to sail by without an update. If you tell me to expect work by 3pm ET Tuesday, it causes me stress if I don't see anything from you by Tuesday night. I'll wonder if you completely forgot the task and you'll have to start from scratch or if you're almost done and will deliver results in a few hours.
 
-If you're going to miss a deadline, let me know. The earlier you can warn me about a schedule slip, the better. The absolute latest you should be telling me about a delay is the deadline itself.
+If you're going to miss a deadline, let me know. The earlier you warn me about a schedule slip, the better. The absolute latest you should be telling me about a delay is the deadline itself.
 
 In general, delays are not a big deal as long as I can plan around them. If a deadline is important to me, I'll let you know.
 
@@ -236,7 +236,7 @@ time.sleep(5)
 
 I value quality and maintainability over turnaround time.
 
-Once you have working code, review your changes to see if you can simplify or refactor the logic to make it more intuitive.
+Once you have working code, look for opportunities to simplify or refactor the logic and make it more intuitive.
 
 If it takes you twice as long to make your code 30% simpler, that's a net positive for me.
 
@@ -244,7 +244,7 @@ If it takes you twice as long to make your code 30% simpler, that's a net positi
 
 I thoroughly review all code changes and provide detailed feedback.
 
-My comments are not meant to criticize you or make you feel bad. I review rigorously to help me understand the code and get it to a state where I can maintain it long-term.
+My comments are not meant to criticize you or make you feel bad. I review rigorously to help me understand the code and bring it to a state where I can maintain it long-term.
 
 These articles explain my code review process:
 
@@ -279,7 +279,7 @@ I assign repo access on a [least-privilege basis](https://en.wikipedia.org/wiki/
 
 Some developers believe that every commit is beautiful and sacred. I'm not one of them.
 
-It's important to me that the *main* branch has a sane commit history. In all other branches, you can commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
+It's important to me that the *main* branch has a sane commit history. In all other branches, commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
 
 Write sensible pull request titles and descriptions. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes the style I prefer, except applied to the pull request, not the individual commits.
 
@@ -340,7 +340,7 @@ If we're on a platform such as Upwork, where monitoring is built-in, I'll always
 
 ## Payment
 
-Please send me invoices for your hours every two weeks. You can expect payment within five business days of the invoice, usually sooner.
+Please send me invoices for your hours every two weeks. Expect payment within five business days of the invoice, usually sooner.
 
 I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined parts left to my discretion.
 
