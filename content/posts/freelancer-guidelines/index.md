@@ -107,17 +107,15 @@ In contrast, this email sequence answers the same questions as above, but in a p
 
 **Me**: Thanks for the well-thought-out questions!
   * The format should be PNG.
-  * The size should be 800x600px on desktop and 400x300px on viewports smaller than 768px.
+  * On viewports smaller than 768px, the size should be 400x300px. Otherwise, the size should be 800x600px.
 
 </div>
 
 ### Email response time
 
-If we're in the middle of ongoing work, I expect responses to emails within one business day. In other words, if I email you at 3pm on a Tuesday, I expect a response by 3pm Wednesday.
+I expect responses to emails within one business day. In other words, if I email you at 3pm on a Tuesday, I expect a response by 3pm Wednesday. If you don't have a complete answer, respond to acknowledge the message and provide an ETA for the full response.
 
-If you don't have a complete answer, respond to acknowledge the message and provide an ETA for the full response.
-
-It's okay for turnaround time to run longer than one working day occasionally, but it should be the exception and not the rule. Expect the same from me.
+It's okay for response time to run longer than one day occasionally, but it should be the exception and not the rule. Expect the same from me.
 
 ### Meetings
 
@@ -133,13 +131,13 @@ I'll also schedule meetings once or twice a month for casual face-time together.
 | "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <span class="bad-prefix">BAD</span>: If the code is too complicated to understand, a [meeting is not the answer](/code-review-love/#4-answer-questions-with-the-code-itself). |
 | "I have an idea for a new architecture. Can we hop on a call to go over it?" | <span class="bad-prefix">BAD</span>: I'd rather start with a written explanation and then discuss after I've read it. |
 | "Your design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to understand the constraints and talk about other options." | <span class="good-prefix">GOOD</span>: This is a complicated decision that likely requires many little back-and-forths, so a live discussion will be more efficient than email. |
-| "You've given me feedback about 'cohesion' in my code, but I feel like we're still not quite on the same page. Can we meet to discuss it?." | <span class="good-prefix">GOOD</span>: If we've tried to communicate something in writing, and it's not working, a meeting is an excellent way to hash it out. |
+| "You've given me feedback in code reviews about 'cohesion,' but I feel like we're still not quite on the same page. Can we meet to discuss it?." | <span class="good-prefix">GOOD</span>: If we've tried to communicate something in writing, and it's not working, a meeting is an excellent way to hash it out. |
 
 ## Interviews
 
 I never conduct formal interviews to make a hiring decision.
 
-I'll ask to see examples of previous work, or I may ask a few questions over email, but I'm primarily interested in how well we work together. If you're a good candidate, I'll set up a narrowly-scoped job at your regular pay rate. People generally refer to this style as "contract-to-hire."
+I'll ask to see examples of previous work, or I may ask a few questions over email, but I'm primarily interested in how well we work together. If you're a strong candidate, I'll set up a narrowly-scoped job at your regular pay rate. People generally refer to this style as "contract-to-hire."
 
 If I ask you to begin a paid trial assignment, I'll pay for your time even if we decide not to work together afterward. The only exception is if you fail to make a good-faith effort on the assignment (e.g., you bill ten hours on a programming task and deliver zero code).
 
@@ -184,8 +182,8 @@ It's common for me to ask for feedback during or after a project. Freelancers ha
 
 My questions are generally:
 
-*   Are there changes that would make the work smoother or more enjoyable?
-*   Are there types of work you want to do more of? Less of?
+* Are there changes that would make the work smoother or more enjoyable?
+* Are there types of work you want to do more of? Less of?
 
 ## Deadlines
 
