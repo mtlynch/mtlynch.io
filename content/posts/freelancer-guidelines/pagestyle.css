@@ -1,0 +1,65 @@
+.email-exchange {
+  margin-bottom: 4rem;
+}
+
+.email {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  max-width: 90%;
+  margin: 1rem auto 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .email {
+    max-width: 80%;
+  }
+}
+
+.email p {
+  margin: 0;
+}
+
+.freelancer-email {
+  background-color: #eef7fa;
+}
+
+.manager-email {
+  background-color: #e6ffe8;
+}
+
+.example {
+  padding: 0.5rem 1rem;
+  max-width: 90%;
+  margin: 1rem auto 1rem auto;
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 768px) {
+  .example {
+    max-width: 80%;
+  }
+}
+
+
+.example p {
+  margin: 0;
+}
+
+.bad-example {
+  background-color: #ffbeb8;
+}
+
+.good-example {
+  background-color: #e6ffe8;
+}
+
+.good-prefix {
+  color: green;
+  font-weight: bold;
+}
+
+
+.bad-prefix {
+  color: red;
+  font-weight: bold;
+}

@@ -5,6 +5,7 @@ description: With no idea what I was doing, I hired a cartoonist to illustrate m
 tags:
 - cartoons
 - blogging
+- outsourcing
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=16186049
 date: '2018-01-19'
