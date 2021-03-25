@@ -6,12 +6,12 @@ tags:
 - litestream
 description: I needed a simple way for users to share debug logs with me, so I built my own solution with Go and Litestream.
 ---
-As more and more users are running TinyPilot, my open source server management device, I've needed a way for them to share debug logs with me when something goes wrong.
+My software runs offline, so I don't have access to my users' logs. When users reported issues to me, I needed a frictionless way for them to share debug logs with me.
 
 I built a solution called [LogPaste](http://logpaste.com/). If you want an easy way for users to upload logs or other text files. Here are some of its features:
 
 * Users can generate shareable URLs with zero signup
-* Users can generate shareable URLs from the command line or JavaScript, even from other domains
+* Users can generate shareable URLs from a single shell command or a few lines of JavaScript
 * LogPaste runs in a Docker container, so it's simple to deploy
 * LogPaste replicates its datastore to any S3-compatible interface
   * You can tear down a LogPaste container and relaunch it on a completely different service, and it will keep all of its data
@@ -20,59 +20,124 @@ For the rest of the post, I'll explain why I created LogPaste and what my proces
 
 ## sprunge: My original solution
 
-There are already plenty of services that let you.
+I initially solved this problem using a service called sprunge. sprunge was great! It's a free service that lets anyone upload log files, and it hosts them forever.
 
-I used a service called sprunge. sprunge was great! It's a free service that lets anyone upload log files, and it hosts them forever.
+But free is a double edged sword. If nobody's paying for the service, it could very well disappear at any moment. Additionally, as a non-paying user, I have no control over the service. If one of my customers accidentally uploads their social security number and all of their bank logins to sprunge, I have no way to clear it for them.
 
-There were a few problems:
+Fortunately, sprunge is open source. Maybe I could host it myself. But when I looked at the code, I realized sprunge was not long for this world. Nobody had touched the code in XX years, and it depended on the Python 2.7 version of AppEngine and Google Cloud Datastore, two services that Google is actively killing off.
 
-* What if sprunge disappears suddenly since nobody is paying for it?
-* What if a user accidentally uploads sensitive data to sprunge and wants me to remove it?
-
-I didn't have a good solution to either. I wouldn't have minded paying for a private version of sprunge, but there was no way to contact the maintainer. I looked for other solutions and didn't find anything promising.
-
-sprunge is open source, so I looked into hosting it myself, but I wasn't excited about the code. It depended on the Python 2.7 version of AppEngine and Google Cloud Datastore, two services that Google is eager to kill off.
-
-## Other pastebin services
+## I don't want to maintain a database server
 
 I found a Github page listing [a bunch of other open source solutions](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but none of them were a match for what I wanted.
 
-* Too complicated
-* Depended on a separate database server
-*
+Most of them were too complicated and offered lots of bells and whistles I didn't need. I just wanted simple ability to upload from the command-line or JavaScript.
 
- I didn't want to have to maintain a server, so that meant something that either ran in Docker or on some platform as a service like AppEngine or Heroku.
+The other issue is that almost all the solutions expected you to run a separate database server to manage the uploads. For just a simple log sharing service, I didn't want to maintain a database, and I wasn't too excited to pay a premium for managed database hosting on a service that would write to the database only a few times per day.
 
-None of the solutions fit the bill.
+## I'm tired of Google Cloud data stores
 
-## I'm tired of Google's managed data stores
+For the last eight years, I've avoided maintaining my own database by using managed data services on Google Cloud Platform. Originally, that worked out great. Google abstracted away the infrastructure and let me just worry about my data. I never dealt with outages or data corruption.
 
-Confession: I hate maintaining database servers. I hate dealing with installing patches regularly, and I hate worrying that I'm screwing up data backups. I haven't run a database server in production in about 10 years.
+Then, Google started doing its Google thing and decided to replace its good service with a service that *promised* to be great once you rewrote all of your code.
 
-Instead, when I've needed a data store, I've used Google Cloud Platform's solution du jour. At first it was Google Cloud Datastore. For all its annoyances, it was a nice solution in many ways.
+Steve Yegge's [open letter to Google Cloud Platform](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc) is the best summary of the situation I've ever read. Google Cloud Platform is continually forcing its clients to rewrite their code in order to achieve the same level of service. I don't want to marry myself to Google-specific technologies.
 
-Then a few years ago, Google decided that Cloud Datastore was dead, and everyone should move to Firebase. Okay, fine. Firebase looked cooler, so I didn't mind moving.
+So, I don't want to maintain my own database server, and I don't want to marry myself to a particular provider, what do I do?
 
-Then, a few years after that, Google insisted that everyone move again to not Fire**base** but Fire**store**.
+## Litestream: the best of both worlds
 
-I was annoyed, but it wasn't until I read Steve Yegge's [open letter to Google Cloud Platform](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc) that I realized how ridiculous it was to keep marrying myself to Google solutions.
-
-So, I wanted a solution that would be platform-agnostic. I didn't want to be stuck with Google because I built against GCP. I wanted to move to whatever cloud provider offered the best service.
-
-But that
-
-I don't want to host a database, but I'm tired of building on top of Google Cloud Platform. For many of the
-
-## Litestream to the rescue
-
-A few weeks earlier, I'd seen a post on Hacker News about Litestream. It's an open source service that replicates SQLite databases to S3 storage.
+A few weeks earlier, I'd seen a post on Hacker News about Litestream. It's an open source tool that replicates SQLite databases to S3 storage.
 
 I realized that this was my ticket out of Google Cloud Platform. I could build my app on top of SQLite, and then Litestream would handle data replication for me. I didn't have to run a whole database server, and I didn't have to pay someone for a managed datastore.
 
-Best of all, it gave me incredible vendor flexibility. S3 isn't even limited to Amazon. Many providers offer S3-compatible interfaces, including BackBlaze B2, XX. You can even host your own S3-compatile server using Minio, which is open source.
+Best of all, it gave me incredible vendor flexibility. I can run on any platform because I can run sqlite anywhere. And I have tons of options for the data replication because many providers offer S3-compatible interfaces. BackBlaze B2, Wasabi. You can even host your own S3-compatile server using Minio, which is open source.
+
+## Combining Litestream with Docker
+
+Generally, Docker containers should hold Just One Service. But the jump from a service that can live entirely in one Docker container to one that depends on two increases the complexity significantly. I decide to do something a little bit hacky and just run Litestream as a background service.
+
+So, in my Docker entrypoint script, I first use Litestream to pull down the latest database:
+
+```bash
+# TODO
+```
+
+Then, before I start my web service, I spawn a Litestream instance in the background that watches my SQLite database and continually replicates it to an S3 instance:
+
+```bash
+# TODO
+```
+
+I pass in my S3 credentials as environment variables, because I don't want to hardcode them into my source.
+
+## Customizability
+
+I wanted to make LogPaste easy for other hosts to customize, so I added command-line flags and environment variables that allow you to apply your own branding.
+
+## Demo
+
+Here's a demo of LogPaste that's built against my demo instance:
+
+<div class="upload-form">
+  <textarea id="upload-textarea" placeholder="Enter some text"></textarea>
+  <button class="button" id="upload">Upload</button>
+</div>
+<div id="result"></div>
+
+<script src="http://logpaste.com/js/logpaste.js"></script>
+<script>
+const baseUrl = 'http://logpaste.com';
+document.getElementById("upload").addEventListener("click", (evt) => {
+  const textToUpload = document.getElementById("upload-textarea").value;
+  logpaste
+    .uploadText(textToUpload, baseUrl)
+    .then((id) => {
+      document.getElementById("result").innerText = `${baseUrl}/${id}`;
+    })
+    .catch((error) => {
+      document.getElementById("result").innerText = error;
+    });
+});
+</script>
+
+The code is pretty simple:
+
+```html
+<div class="upload-form">
+  <textarea id="upload-textarea" placeholder="Enter some text"></textarea>
+  <button class="button" id="upload">Upload</button>
+</div>
+<div id="result"></div>
+
+<script src="http://logpaste.com/js/logpaste.js"></script>
+<script>
+const baseUrl = 'http://logpaste.com';
+document.getElementById("upload").addEventListener("click", (evt) => {
+  const textToUpload = document.getElementById("upload-textarea").value;
+  logpaste
+    .uploadText(textToUpload, baseUrl)
+    .then((id) => {
+      document.getElementById("result").innerText = `${baseUrl}/${id}`;
+    })
+    .catch((error) => {
+      document.getElementById("result").innerText = error;
+    });
+});
+</script>
+```
+
+## I'm using this in production
+
+I've been using this for several weeks. When I added the ability to upload debug logs from my app's web interface, LogPaste made the process a lot simpler because it sends the proper CORS headers, so you can upload across domains. With sprunge, I would have had to do a lot of other stuff.
 
 ## Caveats
 
-* It's not the end of the world if I lose a few log files (it's never happened, to my knowledge)
-* If litestream dies in the background, replication stops and I'll lose all log files
+While I have been successfully using LogPaste and Litestream in production for the past few months, I'm not running what most people would consider "production-scale" loads on it. These components may do strange things under heavier loads, and I haven't seen it yet.
+
+There are a few qualities that make this solution especially friendly to my use case:
+
+* This is a low-volume service. Users only upload logs a handful of times per day.
+* If litestream dies in the background, replication stops and I'll lose all subsequent log files
+  * This has never happened to me, but it could.
+  * I suspect that I could work around this with regular health checks.
   * You could solve this by running the app on Kubernetes, with Litestream in its own container with health checks. For my scenario, it's not worth the added complexity, but it's what I'd do if I were running a service with higher reliability requirements.
