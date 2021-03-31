@@ -5,30 +5,41 @@ tags:
 - tinypilot
 - litestream
 description: I needed a simple way for users to share debug logs with me, so I built my own solution with Go and Litestream.
+custom_css: true
 ---
-I recently needed a frictionless way for my users to share their debug logs with me. I would have happily paid for such a service, but nothing matched my needs. Instead, I built my own and am releasing the code under the open source MIT license.
+{{<notice type="danger">}}
 
-The tool is called [LogPaste](http://logpaste.com). Here are some of its features:
+**Note**: This is a pre-release blog post draft. Please do not share this URL.
 
+{{</notice>}}
+
+I recently needed a frictionless way for my users to share their debug logs with me. I would have happily paid for such a service, but nothing matched my needs. Instead, I built my own and released the code under the open-source MIT license.
+
+The tool is called [LogPaste](http://logpaste.com). My favorite feature is that you can kill a LogPaste server and launch it somewhere else with no data backup. You can re-launch the service somewhere else, and it will still have all of its data. It achieves this this without any external database service or proprietary data store.
+
+<img src="logpaste-demo.gif">
+
+Here are some other features of LogPaste:
+
+* You can run your own LogPaste server for pennies per month and no maintenance overhead
 * Users can share text logs with zero signup
 * Users can generate shareable URLs from a single shell command or a few lines of JavaScript
 * LogPaste runs in a Docker container, so it's simple to deploy
 * LogPaste replicates its datastore to any S3-compatible interface
-  * You can tear down a LogPaste container and relaunch it on a completely different service, and it will keep all of its data
-
-<img src="logpaste-demo.gif">
 
 ## sprunge is about to die
 
 I initially collected log files from users with a service called [sprunge](http://sprunge.us/). It was a nearly perfect match for my needs &mdash; it's a free service that accepts uploads of plaintext files and hosts them forever.
 
+{{<img src="sprunge.png" alt="Screenshot of Sprunge homepage" caption="I initially used [sprunge](http://sprunge.us), a free service for sharing text files.">}}
+
 Unfortunately, "free" is a double edged sword. If nobody's paying for the service, it could disappear at any moment. Additionally, as a non-paying user, I have no control over the service. If one of my customers accidentally uploads their social security number and bank logins to sprunge, I have no way to purge the data.
 
-sprunge is [open source](https://github.com/rupa/sprunge), so I thought I could simply self-host it. But when I looked at the code, I realized sprunge was not long for this world. Nobody has touched the code in six years. Further, it depended on the Python 2.7 version of AppEngine and Google Cloud Datastore, two services that Google is [actively](https://cloud.google.com/appengine/docs/standard/python/migrate-to-python3) [killing off](https://cloud.google.com/datastore/docs/upgrade-to-firestore).
+sprunge is [open-source](https://github.com/rupa/sprunge), so I thought I could simply self-host it. But when I inspected the source, I realized sprunge was not long for this world. Nobody has touched the code in six years. Further, it depended on the Python 2.7 version of AppEngine and Google Cloud Datastore, two services that Google is [actively](https://cloud.google.com/appengine/docs/standard/python/migrate-to-python3) [killing off](https://cloud.google.com/datastore/docs/upgrade-to-firestore).
 
 ## I don't want to maintain a database server
 
-There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but none of them were a match for what I wanted. Most of them were too complicated and integrated things I didn't need like encryption or a slick text editor. I just wanted simple ability to upload from the command-line or JavaScript.
+There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but none of them were a match for what I wanted. Most of them included complex features I didn't need like encryption or a slick editing interface. I just wanted the simple ability to upload from the command line or JavaScript.
 
 Worse, almost all the solutions required a separate database server to manage the uploads. And my shameful programmer secret is that I can't maintain a database server.
 
@@ -36,48 +47,58 @@ I've been building my own software products and services for the last eight year
 
 Instead, I've always used Google-managed datastores like Cloud Datastore, Firebase, and Firestore. But every few years, Google builds a totally new datastore solution, deprecates its old solution, and [dumps all the migration work onto its customers](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc). I was tired of Google's [shiny object syndrome](https://en.wikipedia.org/wiki/Shiny_object_syndrome) and didn't want to build another service using technologies that Google would probably kill off soon.
 
+{{<img src="gcp-deprecations.png" alt="Screenshot of AppEngine library documentation featuring several deprecation notices" caption="Google deprecated its Python DB Client library, forcing users to migrate to NDB. They then deprecated NDB in favor of Cloud NDB. Now, they're ominously directing developers to build new apps against yet another API." maxWidth="680px" hasBorder="true">}}
+
 ## Litestream: all the fun of a database server minus the hassle
 
 A [post recently popped up on Hacker News](https://news.ycombinator.com/item?id=26103776) about Litestream. It's an open source tool that replicates a SQLite database to Amazon's S3 cloud storage.
 
-This was my ticket out of Google Cloud Platform! Litestream was the best of both worlds. SQLite [runs without a server process](https://www.sqlite.org/serverless.html), so I didn't need to maintain my own database. And then with Litestream replicating all the data to S3, that's a simple way to achieve backups.
+{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." maxWidth="700px" hasBorder="true">}}
 
-Best of all, it gave me incredible vendor flexibility: I can run SQLite anywhere. And I have tons of data replication because there are many S3-compatible storage services, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
+This was my ticket out of Google Cloud Platform! Litestream was the best of both worlds. SQLite [runs without a server process](https://www.sqlite.org/serverless.html), so I didn't need to maintain my own database. With Litestream replicating all the data to S3, I don't need to worry about backups.
+
+Best of all, it gave me incredible vendor flexibility: I can run SQLite anywhere. And I have tons of options for data replication because there are many S3-compatible storage services, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
 
 ## Creating the basic functionality
 
-Because this was a simple web service, I used Go. It provides
+I decided to use Go to implement the service. This app would be a simple web service, and that's where Go really shines. It allowed me to create a solution that's efficient, lightweight, and secure with minimal third-party dependencies.
+
+LogPaste needed to accept HTTP PUT requests from the command-line, so I began by writing [this HTTP handler](https://github.com/mtlynch/logpaste/blob/add9e363bd0ea0116d60e759778114ddbc979024/handlers/paste.go#L45L78).
 
 ```go
 func (s defaultServer) pastePut() http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		bodyRaw, err := ioutil.ReadAll(r.Body)
-		if err != nil {
-			http.Error(w, "can't read request body", http.StatusBadRequest)
-			return
-		}
+  return func(w http.ResponseWriter, r *http.Request) {
+    // Read the full HTTP PUT request body as a string.
+    bodyRaw, err := ioutil.ReadAll(r.Body)
+    if err != nil {
+      http.Error(w, "can't read request body", http.StatusBadRequest)
+      return
+    }
+    body := string(bodyRaw)
 
-		body := string(bodyRaw)
+    // Generate a random entry ID.
+    id := generateEntryId()
 
-		id := generateEntryId()
-		err = s.store.InsertEntry(id, body)
-		if err != nil {
-			http.Error(w, "can't save entry", http.StatusInternalServerError)
-			return
-		}
+    // Store the PUT body in the SQLite database.
+    err = s.store.InsertEntry(id, body)
+    if err != nil {
+      http.Error(w, "can't save entry", http.StatusInternalServerError)
+      return
+    }
 
-		w.Header().Set("Content-Type", "application/json")
-		resp := PastePutResponse{
-			Id: id,
-		}
-		if err := json.NewEncoder(w).Encode(resp); err != nil {
-			panic(err)
-		}
-	}
+    // Send a JSON response with the ID we generated.
+    w.Header().Set("Content-Type", "application/json")
+    resp := PastePutResponse{
+      Id: id,
+    }
+    if err := json.NewEncoder(w).Encode(resp); err != nil {
+      panic(err)
+    }
+  }
 }
 ```
 
-It accepts uploads via command-line utilities like this:
+This allows LogPaste to accept HTTP requests from command-line utilities like this:
 
 ```bash
 $ curl -X PUT -d "Hello, world!" http://localhost:3001
@@ -86,50 +107,100 @@ $ curl http://localhost:3001/fFnL9cU6
 Hello, world!
 ```
 
-It worked!
+That works, but it's just writing the SQLite database to the local filesystem. To deploy this to a public, production server, I needed to make data replication easy and automatic.
 
-## Making deployment easy with Docker
+## Layering in Docker and Litestream
+
+TODO: Clean up the wording in this section
+
+Docker is one of my favorite ways to deploy a web service. There are dozens of managed Docker hosting vendors, so I'm not bound to any particular platform. And Docker would provide a nice way for me to integrate LogPaste with Litestream without baking any Litestream-specific logic into my LogPaste's code.
 
 Generally, Docker containers should hold Just One Service. But the jump from a service that can live entirely in one Docker container to one that depends on two increases the complexity significantly. It's a bit of a hack, but I just run Litestream as a background service within my LogPaste container.
 
-So, in my Docker entrypoint script, I first use Litestream to pull down the latest database:
+The only thing I need before running Litestream is to create a [configuration file](https://litestream.io/reference/config/). I create this at runtime in my [Docker entrypoint script](https://github.com/mtlynch/logpaste/blob/add9e363bd0ea0116d60e759778114ddbc979024/docker_entrypoint#L60L71):
 
 ```bash
-# TODO
+cat > /etc/litestream.yml <<EOF
+access-key-id:     "${AWS_ACCESS_KEY_ID}"
+secret-access-key: "${AWS_SECRET_ACCESS_KEY}"
+dbs:
+  - path: "${DB_PATH}"
+    replicas:
+      - url: "${DB_REPLICA_URL}"
+EOF
+```
+
+I deliberately create this file at container runtime so that I can change S3 replica locations or credentials without rebuilding the Docker image.
+
+With the configuration file in place, I can use Litestream to pull down the latest database:
+
+```bash
+# Restore database from S3.
+if [[ "${CREATE_NEW_DB}" != 'true' ]]; then
+  litestream restore -v "${DB_PATH}"
+fi
 ```
 
 Then, before I start my web service, I spawn a Litestream instance in the background that watches my SQLite database and continually replicates it to an S3 instance:
 
 ```bash
-# TODO
+# Begin replication to S3 in the background.
+litestream replicate "${DB_PATH}" "${DB_REPLICA_URL}" &
 ```
 
-I pass in my S3 credentials as environment variables, because I don't want to hardcode them into my source.
+Finally, to run the Docker container with all the environment variables set properly, I use this command:
 
-TODO: Diagram
+```bash
+AWS_ACCESS_KEY_ID=YOUR-ACCESS-ID
+AWS_SECRET_ACCESS_KEY=YOUR-SECRET-ACCESS-KEY
+DB_REPLICA_URL=s3://your-bucket-name/db
+
+docker run \
+  -e "PORT=3001" \
+  -e "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" \
+  -e "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}" \
+  -e "DB_REPLICA_URL=${DB_REPLICA_URL}" \
+  -e "CREATE_NEW_DB='true'" `# change to false after first run` \
+  -p 3001:3001/tcp \
+  --name logpaste \
+  mtlynch/logpaste
+```
+
+Here's how it all fits together:
+
+TODO: Add diagram
 
 ## Demo
 
-Here's a demo of LogPaste that's built against my demo instance:
+Users can upload to LogPaste from the command line, but it's also easy to integrate with other web apps. Here's a demo of a custom HTML client for LogPaste that runs against my demo instance:
+
+TODO: Make this prettier
 
 <div class="upload-form">
   <textarea id="upload-textarea" placeholder="Enter some text"></textarea>
   <button class="button" id="upload">Upload</button>
 </div>
-<div id="result"></div>
+<a id="result"></a>
+<div id="error"></div>
 
 <script src="http://logpaste.com/js/logpaste.js"></script>
 <script>
 const baseUrl = 'http://logpaste.com';
 document.getElementById("upload").addEventListener("click", (evt) => {
+  const resultElement = document.getElementById("result");
+  const errorElement = document.getElementById("error");
+  resultElement.innerText = "";
+  errorElement.innerText = "";
   const textToUpload = document.getElementById("upload-textarea").value;
   logpaste
     .uploadText(textToUpload, baseUrl)
     .then((id) => {
-      document.getElementById("result").innerText = `${baseUrl}/${id}`;
+      const url = `${baseUrl}/${id}`;
+      resultElement.innerText = url;
+      resultElement.href = url;
     })
     .catch((error) => {
-      document.getElementById("result").innerText = error;
+      errorElement.innerText = error;
     });
 });
 </script>
@@ -141,57 +212,56 @@ The code is pretty simple:
   <textarea id="upload-textarea" placeholder="Enter some text"></textarea>
   <button class="button" id="upload">Upload</button>
 </div>
-<div id="result"></div>
+<a id="result"></a>
+<div id="error"></div>
 
 <script src="http://logpaste.com/js/logpaste.js"></script>
 <script>
 const baseUrl = 'http://logpaste.com';
 document.getElementById("upload").addEventListener("click", (evt) => {
+  const resultElement = document.getElementById("result");
+  const errorElement = document.getElementById("error");
+  resultElement.innerText = "";
+  errorElement.innerText = "";
   const textToUpload = document.getElementById("upload-textarea").value;
   logpaste
     .uploadText(textToUpload, baseUrl)
     .then((id) => {
-      document.getElementById("result").innerText = `${baseUrl}/${id}`;
+      const url = `${baseUrl}/${id}`;
+      resultElement.innerText = url;
+      resultElement.href = url;
     })
     .catch((error) => {
-      document.getElementById("result").innerText = error;
+      errorElement.innerText = error;
     });
 });
 </script>
 ```
 
-## LogPaste under real-world usage
+## Using LogPaste in production
 
-I run a business called TinyPilot, where I provide open source KVM over IP devices that let users control their servers remotely. Because all code runs on the end-user's device, I need a simple way for users to share debug logs with me when things go wrong, so I integrated with LogPaste.
+I run a business called [TinyPilot](https://tinypilotkvm.com). I develop and sell open source KVM over IP devices that let users control their servers remotely. LogPaste has been handling all of TinyPilot's debug logs for the past few months, and it's worked well.
 
-I migrated from sprunge to LogPaste, and it's worked well
+{{<video src="tinypilot-shareable-log.mp4" caption="TinyPilot uses LogPaste to let users generate URLs for their debug logs.">}}
 
-LogPaste has been handling all of TinyPilot's debug logs for the past few months, and
-
-I've been using LogPaste for several weeks. When I added the ability to upload debug logs from my app's web interface, LogPaste made the process a lot simpler because it sends the proper CORS headers, so you can upload across domains. With sprunge, I would have had to do a lot of other stuff.
-
-## Caveat: My use-case is especially gentle
-
-While I'm using LogPaste in production, my server isn't serving what most developers would consider "production-scale" loads. It's possible LogPaste would experience scaling issues.
-
-There are a few qualities that make this solution especially friendly to my use case:
-
-* This is a low-volume service. Users only upload logs a handful of times per day.
-* I use LogPaste to store non-critical data.
-  * These are debug logs, so they're good to have indefinitely, but if I screwed up and lost everything, it would be a mild inconvenience at worst.
-* Volume is low enough that I expect to never use more than one server instance.
-  * Growing beyond a single server is considerably more complicated, as Litestream can't sync writes from multiple servers.
-* If litestream dies in the background, replication stops and I'll lose all subsequent log files
-  * This has never happened to me, but it could.
-  * I suspect that I could work around this with regular health checks.
-  * You could solve this by running the app on Kubernetes, with Litestream in its own container with health checks. For my scenario, it's not worth the added complexity.
+My use case is, admittedly, fairly gentle. Only a handful of users upload their logs each day, so there may be pain points with this setup under heavier workloads. Still, I've been incredibly impressed with Litestream, and I'm eager to use it in more scenarios.
 
 ## Self-hosting LogPaste
 
-It's trivial to run your own instance of LogPaste. There are settings that allow you to customize the text on the page so that it says your product's name instead of "LogPaste."
+It's trivial to run your own instance of LogPaste. You can even customize the text on the homepage so that it says your product's name instead of "LogPaste."
 
-I've included deployment instructions for a few different platforms:
+For example, here's TinyPilot's version:
+
+{{<img src="tinypilot-branding.png" alt="Screenshot of TinyPilot's LogPaste instance" caption="TinyPilot's instance of LogPaste includes custom branding without any code changes" maxWidth="680px" hasBorder="true">}}
+
+I've written deployment instructions for a few different platforms:
 
 * [Docker](https://github.com/mtlynch/logpaste#from-docker--cloud-data-replication)
 * [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md)
 * [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md)
+
+## Source
+
+The source is available on Github under the MIT License:
+
+* [mtlynch/logpaste](https://github.com/mtlynch/logpaste)
