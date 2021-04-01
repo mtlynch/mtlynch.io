@@ -15,7 +15,7 @@ custom_css: true
 
 I recently needed a frictionless way for my users to share their debug logs with me. I would have happily paid for such a service, but nothing matched my needs. Instead, I built my own and released the code under the open-source MIT license.
 
-The tool is called [LogPaste](http://logpaste.com). My favorite feature is that you can kill a LogPaste server and launch it somewhere else with no data backup. You can re-launch the service somewhere else, and it will still have all of its data. It achieves this this without any external database service or proprietary data store.
+The tool is called [LogPaste](https://logpaste.com). My favorite feature is that you can kill a LogPaste server and launch it somewhere else with no data backup. You can re-launch the service somewhere else, and it will still have all of its data. It achieves this this without any external database service or proprietary data store.
 
 <img src="logpaste-demo.gif">
 
@@ -185,9 +185,9 @@ TODO: Make this prettier
 <a id="result"></a>
 <div id="error"></div>
 
-<script src="http://logpaste.com/js/logpaste.js"></script>
+<script src="https://logpaste.com/js/logpaste.js"></script>
 <script>
-const baseUrl = 'http://logpaste.com';
+const baseUrl = 'https://logpaste.com';
 document.getElementById("upload").addEventListener("click", (evt) => {
   const resultElement = document.getElementById("result");
   const errorElement = document.getElementById("error");
@@ -217,9 +217,9 @@ The code is pretty simple:
 <a id="result"></a>
 <div id="error"></div>
 
-<script src="http://logpaste.com/js/logpaste.js"></script>
+<script src="https://logpaste.com/js/logpaste.js"></script>
 <script>
-const baseUrl = 'http://logpaste.com';
+const baseUrl = 'https://logpaste.com';
 document.getElementById("upload").addEventListener("click", (evt) => {
   const resultElement = document.getElementById("result");
   const errorElement = document.getElementById("error");
