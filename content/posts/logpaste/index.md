@@ -22,10 +22,10 @@ The tool is called [LogPaste](http://logpaste.com). My favorite feature is that 
 Here are some other features of LogPaste:
 
 * You can run your own LogPaste server for pennies per month and no maintenance overhead
+* The code is open-source and vendor-agnostic, so you can run it anywhere
 * Users can share text logs with zero signup
 * Users can generate shareable URLs from a single shell command or a few lines of JavaScript
-* LogPaste runs in a Docker container, so it's simple to deploy
-* LogPaste replicates its datastore to any S3-compatible interface
+* LogPaste background-syncs its datastore to any S3-compatible interface, so you can tear down and rebuild your server without losing any data
 
 ## sprunge is about to die
 
@@ -37,7 +37,7 @@ Unfortunately, "free" is a double edged sword. If nobody's paying for the servic
 
 sprunge is [open-source](https://github.com/rupa/sprunge), so I thought I could simply self-host it. But when I inspected the source, I realized sprunge was not long for this world. Nobody has touched the code in six years. Further, it depended on the Python 2.7 version of AppEngine and Google Cloud Datastore, two services that Google is [actively](https://cloud.google.com/appengine/docs/standard/python/migrate-to-python3) [killing off](https://cloud.google.com/datastore/docs/upgrade-to-firestore).
 
-## I don't want to maintain a database server
+## Storing data without a database server
 
 There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but none of them were a match for what I wanted. Most of them included complex features I didn't need like encryption or a slick editing interface. I just wanted the simple ability to upload from the command line or JavaScript.
 
@@ -58,6 +58,8 @@ A [post recently popped up on Hacker News](https://news.ycombinator.com/item?id=
 This was my ticket out of Google Cloud Platform! Litestream was the best of both worlds. SQLite [runs without a server process](https://www.sqlite.org/serverless.html), so I didn't need to maintain my own database. With Litestream replicating all the data to S3, I don't need to worry about backups.
 
 Best of all, it gave me incredible vendor flexibility: I can run SQLite anywhere. And I have tons of options for data replication because there are many S3-compatible storage services, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
+
+TODO: Better transition
 
 ## Creating the basic functionality
 
