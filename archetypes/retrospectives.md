@@ -53,7 +53,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
-{{<revenue-graph project="hitthefrontpage">}}
+{{<revenue-graph project="htfp">}}
 
 ### [Zestful](https://zestfuldata.com)
 
