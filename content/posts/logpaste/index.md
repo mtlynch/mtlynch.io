@@ -27,17 +27,7 @@ Here are some other features of LogPaste:
 * Users can generate shareable URLs from a single shell command or a few lines of JavaScript
 * LogPaste background-syncs its datastore to any S3-compatible interface, so you can tear down and rebuild your server without losing any data
 
-## sprunge is about to die
-
-I initially collected log files from users with a service called [sprunge](http://sprunge.us/). It was a nearly perfect match for my needs &mdash; it's a free service that accepts uploads of plaintext files and hosts them forever.
-
-{{<img src="sprunge.png" alt="Screenshot of Sprunge homepage" caption="I initially used [sprunge](http://sprunge.us), a free service for sharing text files.">}}
-
-Unfortunately, "free" is a double edged sword. If nobody's paying for the service, it could disappear at any moment. Additionally, as a non-paying user, I have no control over the service. If one of my customers accidentally uploads their social security number and bank logins to sprunge, I have no way to purge the data.
-
-sprunge is [open-source](https://github.com/rupa/sprunge), so I thought I could simply self-host it. But when I inspected the source, I realized sprunge was not long for this world. Nobody has touched the code in six years. Further, it depended on the Python 2.7 version of AppEngine and Google Cloud Datastore, two services that Google is [actively](https://cloud.google.com/appengine/docs/standard/python/migrate-to-python3) [killing off](https://cloud.google.com/datastore/docs/upgrade-to-firestore).
-
-## Storing data without a database server
+## Data persistence for people who hate database servers
 
 There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but none of them were a match for what I wanted. Most of them included complex features I didn't need like encryption or a slick editing interface. I just wanted the simple ability to upload from the command line or JavaScript.
 
@@ -259,6 +249,7 @@ For example, here's TinyPilot's version:
 I've written deployment instructions for a few different platforms:
 
 * [Docker](https://github.com/mtlynch/logpaste#from-docker--cloud-data-replication)
+* [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md)
 * [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md)
 * [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md)
 
