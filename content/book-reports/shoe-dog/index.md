@@ -17,6 +17,7 @@ I was hoping this would contain more business lessons, but it's more like a fun 
   * I laughed out loud several times while reading it, which is rare for me while reading.
 * I related strongly to the experience of [struggling with overseas suppliers](/retrospectives/2021/03/#dealing-with-materials-shortage).
 * As a casual runner, it was motivating to read someone write about running with such love and celebration.
+* It was interesting to see how closely Steve Prefontaine was tied to Nike.
 
 ## What I Disliked
 
@@ -71,3 +72,25 @@ I was hoping this would contain more business lessons, but it's more like a fun 
 {{<notice type="info">}}
 This is a weird dynamic, as Knight held power over Penny in so many dimensions. At the time they began dating, he was her professor, advisor, and employer.
 {{</notice>}}
+
+### Swoosh logo
+
+* The famous Nike Swoosh logo was desiged by a design student that Knight happened to meet while teaching at Portland State University.
+  * Nike paid her $35 for the logo.
+  * Thye had no idea what kind of logo they wanted, so they told her to draw "motion."
+
+### Blue Ribbon becomes Nike
+
+* Nike's big turning point came in 19XX, when they graduated from a shoe importer to a shoe manufacturer.
+  * Their original Japanese supplier, Onitsuka, attempted a hostile takeover of the company.
+  * Nike was able to get financing from Nissho, a different Japanese company, to manufacture their own sneakers.
+* When Knight changed the company's name from Blue Ribbon to Nike, it was a last-minute decision that made him feel ambivalent.
+  * The heads of the company were deciding between the names "Falcon" and "Dimension Six."
+  * The name "Nike" appeared in a dream to Jeff Johnson, Blue Ribbon's first employee.
+
+### Steve Prefontaine
+
+* Steve "Pre" Prefontaine was a superstar runner in the 1970s.
+* He was tightly tied to Nike because Bowerman was his college coach and Knight hihred Pre so that he'd have money to support himself while training for the Olympics.
+  * Earning money from races or endorsements would have disqualified him from the Olympics.
+  * Unofficially, Pre was Nike's second-ever athelete endorsement.
