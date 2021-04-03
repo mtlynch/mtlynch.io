@@ -83,7 +83,7 @@ This was a weird dynamic, as Knight held power over Penny in so many dimensions.
   * Thye had no idea what kind of logo they wanted, so they told her to draw "motion."
 
 {{<notice type="info">}}
-Knight doesn't mention it in the book, but he later [gave her 500 shares of Nike stock](https://creativemarket.com/blog/the-35-nike-logo-and-the-woman-who-designed-it) as a thank you.
+Knight doesn't mention it in the book, but he later [gave her 500 shares of Nike stock](https://www.oregonlive.com/business/2011/06/nikes_swoosh_brand_logo_hits_4.html) as a thank you.
 {{</notice>}}
 
 ### Blue Ribbon becomes Nike
