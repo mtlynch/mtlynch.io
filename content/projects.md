@@ -14,6 +14,10 @@ TinyPilot is a small, inexpensive device that gives you remote access to servers
 
 Hit the Front Page of Hacker News is my video course that shows how I write high-quality blog posts that succeed on tech sites like Hacker News and reddit.
 
+## [ResticPy](https://github.com/mtlynch/resticpy) (2021)
+
+A minimal Python wrapper around the [restic](https://restic.readthedocs.io/) backup utility.
+
 ## [Portfolio Rebalancer](https://assetrebalancer.com/) (2020)
 
 Portfolio Rebalancer shows investors on what funds they need to buy and sell to achieve their target asset allocation.
