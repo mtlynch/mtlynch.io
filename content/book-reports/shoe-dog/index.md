@@ -21,7 +21,7 @@ Nike's history is more interesting than I expected, and the book provides a live
 
 * I laughed out loud several times while reading it, which is rare for me while reading.
 * I related strongly to Knight's experience as a founder new to manufacturing and importing.
-* As a casual runner, it was motivating to see someone describe running with such love and celebration.
+* As a casual runner, it was motivating to see someone describe running with such love and reverence.
 * It was interesting to see how closely Steve Prefontaine was tied to Nike.
 
 ## What I Disliked
@@ -43,7 +43,7 @@ Nike's history is more interesting than I expected, and the book provides a live
 * Knight originally started Nike under the name Blue Ribbon Sports.
   * Blue Ribbon formed as the US distributor for a Japanese shoe company called Onitsuka.
   * Knight lied to Onitsuka, telling them that Blue Ribbon was an existing, successful company. In reality, he formed the company specifically to import their shoes.
-  * At the time (1963), Adidas and Puma dominated the US shoe market. Japan was just beginning to reach maturity in manufacturing capabilities, and they were producing sneakers at high quality at low costs.
+  * At the time (1963), Adidas and Puma dominated the US shoe market. Japan was just beginning to reach maturity in manufacturing capabilities, and they were producing sneakers at high quality and low costs.
 * Knight partnered with Bowerman after the first shoe samples arrived from Japan.
   * They formed a 51/49 partnership, with Knight as the majority owner.
 * Knight failed to sell to sporting goods stores, but he successfully sold shoes by attending track meets and selling to runners directly.
@@ -79,8 +79,8 @@ This was a weird dynamic, as Knight held power over Penny in so many dimensions.
 ### Swoosh logo
 
 * [Carolyn Davidson](https://en.wikipedia.org/wiki/Carolyn_Davidson_(graphic_designer)) designed the famous Nike Swoosh logo because she happened to meet Knight while she was a student at Portland State University.
-  * Nike paid the student $35 for the logo.
-  * Thye had no idea what kind of logo they wanted, so they told her to draw "motion."
+  * Nike paid Davidson $35 for the logo.
+  * They had no idea what kind of logo they wanted, so they told Davidson to draw "motion."
 
 {{<notice type="info">}}
 Knight doesn't mention it in the book, but he later [gave her 500 shares of Nike stock](https://www.oregonlive.com/business/2011/06/nikes_swoosh_brand_logo_hits_4.html) as a thank you.
@@ -120,7 +120,8 @@ Knight doesn't mention it in the book, but he later [gave her 500 shares of Nike
 * Nissho apparently didn't mind the deception. The Nissho manager responsible for the Nike relationship told Knight, "There are worse things than ambition."
 * After the audit, Nissho assumed all of Nike's debt to Bank of California.
 * Nissho was so loyal to Nike that they withdrew from a separate deal to punish Bank of California.
-  * Bank of California had been pursuing a deal with Nissho to manage one of their banks in San Francisco. After the Nike incident, Nissho told Bank of California that it cost them the San Francisco deal.
+  * Bank of California had been pursuing a deal to manage one of Nissho's banks in San Francisco.
+  * After the Nike incident, Nissho told Bank of California that it cost them the San Francisco deal.
 
 ### Shoe dog
 
