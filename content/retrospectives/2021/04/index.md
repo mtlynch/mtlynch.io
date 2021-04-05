@@ -23,7 +23,7 @@ I slacked a bit here and didn't get the ball rolling until late into the month. 
 
 ### Attract five bloggers or YouTubers to a TinyPilot affiliate program
 
-* **Result**: Two affiliates signed up and a third is considering it
+* **Result**: Two affiliates signed up, and a third is considering it
 * **Grade**: C
 
 This has been harder than I expected. I wanted to start with mid-tier bloggers, but they're hard to find. Everyone seems to be a massive site like Tom's Hardware or a tiny personal blog that nobody reads. I'm not having much luck finding the in-between.
@@ -55,7 +55,7 @@ Still, I see dwindling revenues as TinyPilot's biggest problem at the moment. In
 
 ## Optimizing order fulfillment through time-shifting
 
-When I first started selling TinyPilots, the fulfillment process was a huge mess. It took me almost the entire day to pack orders, bring them to the post office, then send customers their tracking numbers by hand. Since then, my girlfriend joined the company and handles fulfillment. That works great, but we still have [the thundering herd problem](/retrospectives/2020/10/#inventory-shortages-and-the-thundering-herd-problem). We'll go through some lulls, and then a huge surge of orders comes in and overwhelms us.
+When I first started selling TinyPilots, the fulfillment process was a huge mess. It took me almost the entire day to pack orders, bring them to the post office, then send customers their tracking numbers by hand. Since then, my girlfriend has joined the company and handles fulfillment. That works great, but we still have [the thundering herd problem](/retrospectives/2020/10/#inventory-shortages-and-the-thundering-herd-problem). We'll go through some lulls, and then a massive surge of orders comes in and overwhelms us.
 
 Most of the reason order surges are so painful is that we do just-in-time order packing. When an order comes in, we print the necessary documents and labels, grab the right parts, flash a disk with the latest TinyPilot software, pack everything into a box, and ship it out. That process takes 5-10 minutes per order.
 
@@ -83,7 +83,7 @@ My dream was to find some sort of "warehouse as a service" business, where I shi
 
 And then there's Fulfillment by Amazon, a service that lets me ship big batches of finished products to Amazon for fulfillment. That would sort of work, except that creating TinyPilots still requires a lot of physical labor. Parts are continuously arriving that need to be processed and assembled into working devices. Amazon wouldn't do any of that. Plus, I'm not quite ready to insert an enormous corporate machine between me and my customers.
 
-{{<img src="amazon-fba.png" hasBorder="true" maxWidth="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their product to Amazon warehouses for fulfillment.">}}
+{{<img src="amazon-fba.png" hasBorder="true" maxWidth="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
 
 All signs were pointing to hiring local employees, which scared me. Based on the IRS' definition, a local worker who uses equipment I provide and follows instructions I give is unambiguously an "employee" rather than an "independent contractor." I've only ever hired contractors, and the process there is fairly lightweight.  With real employees, there's *so* much more paperwork. I have to give them a bunch of forms and notices and make sure I'm withholding all the right taxes.
 
@@ -106,7 +106,7 @@ I wasn't planning to begin searching yet, but I saw a "for lease" sign on an off
 
 I'm going to try to get a 1-year lease and establish the first official TinyPilot headquarters.
 
-Having an office means that we can move everything out of our house. It'll be convenient to have a dedicated space outside our house for work stuff, but I still need to figure out how to orchestrate everything, as I plan to continue working mostly from home. I also have to figure out how to ship and receive packages, because I don't want packages to just sit outside a relatively well-trafficked office until someone arrives to pick them up.
+Having an office means that we can move everything out of our house. It'll be convenient to have a dedicated space outside our house for work stuff, but I still need to figure out how to orchestrate everything, as I plan to continue working mostly from home. I also have to figure out how to ship and receive packages because I don't want packages to just sit outside a relatively well-trafficked office until someone arrives to pick them up.
 
 ## Legacy projects
 
@@ -170,8 +170,9 @@ Zestful's still chugging along in the background, bringing in slightly more than
 ### Lessons learned
 
 * There are some positives to a drop in revenue.
+  * The slower pace gave me time to invest more in improving processes.
 * Pre-pack as much as possible.
-  * I should have done this sooner, as it's so much more practical to control when the bulk of fulfillment work happens until waiting to do it just-in-time when the order comes in.
+  * I should have done this sooner, as it's so much more practical to control when the bulk of fulfillment work happens until waiting to do it just in time when the order comes in.
 
 ### Goals for next month
 
