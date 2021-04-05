@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 9"
 date: 2021-04-05T00:00:00-04:00
 description: Using the sales lull to optimize processes.
+images:
+  - /retrospectives/2021/04/og-cover.png
 ---
 
 ## Highlights
