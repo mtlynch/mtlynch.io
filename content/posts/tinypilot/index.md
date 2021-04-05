@@ -248,7 +248,7 @@ Support TinyPilot's development by purchasing [an official TinyPilot kit](https:
   * Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/gp/product/B01JPDTZXK/) and a [3 Amp power adapter](https://smile.amazon.com/dp/B0728HB18G).
 * (Optional) A cooling case, heat sink, or fan
   * Choose a case that provides access to the Pi's GPIO pins.
-  * I use [this minimalist, passive cooling case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/).
+  * I use [this minimalist, passive cooling case](https://www.ebay.com/itm/393234622652).
 
 ### Install Raspberry Pi OS Lite
 
@@ -264,9 +264,9 @@ When you finish preparing the microSD card, insert it into your Pi device.
 
 The Raspberry Pi 4 famously [generates a lot of heat](https://www.jeffgeerling.com/blog/2019/best-way-keep-your-cool-running-raspberry-pi-4). You can run it fine without cooling, but you'll likely hit stability issues over time.
 
-I like [this minimalist case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/) because it's inexpensive and passively cools the Pi without the complexity of a powered fan:
+I like [this minimalist case](https://www.ebay.com/itm/393234622652) because it's inexpensive and passively cools the Pi without the complexity of a powered fan:
 
-{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/) cools your Pi well without the complexity of a fan." maxWidth="600px">}}
+{{<img src="minimal-case.jpg" alt="Minimal aluminum case for Raspberry Pi" caption="This [minimalist aluminum case](https://www.ebay.com/itm/393234622652) cools your Pi well without the complexity of a fan." maxWidth="600px">}}
 
 ### Connect to the machine via USB
 
