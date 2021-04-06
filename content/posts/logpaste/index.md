@@ -13,23 +13,29 @@ custom_css: true
 
 {{</notice>}}
 
-I recently needed a frictionless way for my users to share their debug logs with me. I would have happily paid for such a service, but nothing matched my needs. Instead, I built my own and released the code under the open-source MIT license.
+Here's a riddle. My web app keeps all of its data in a SQL database. I can spontaneously tear down my server, deploy the code to a completely different platform, and the app will still serve all the same data. It costs me $0.03 per month to run my app in production. How am I doing this?
 
-The tool is called [LogPaste](https://logpaste.com). My favorite feature is that you can kill a LogPaste server and launch it somewhere else with no data backup. You can re-launch the service somewhere else, and it will still have all of its data. It achieves this this without any external database service or proprietary data store.
+>That's easy. You have a separate database server running somewhere that stores all of your app's state.
 
-<img src="logpaste-demo.gif">
+No, my app never talks to a remote database server.
 
-Here are some other features of LogPaste:
+>Oh, then you're using a proprietary managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
 
-* You can run your own LogPaste server for pennies per month and no maintenance overhead
-* The code is open-source and vendor-agnostic, so you can run it anywhere
-* Users can share text logs with zero signup
-* Users can generate shareable URLs from a single shell command or a few lines of JavaScript
-* LogPaste background-syncs its datastore to any S3-compatible interface, so you can tear down and rebuild your server without losing any data
+Nope, my entire stack is open-source and vendor-agnostic.
+
+>Then what?
+
+I combined SQLite, Litestream, Docker, and fly.io.
+
+The tool is called [LogPaste](https://logpaste.com). It allows users to generate shareable URLs for text files. I use it in my open source [KVM over IP](https://tinypilotkvm.com) to give my users an easy way to share logs with me. Here's a demo of me migrating a server from Heroku to fly.io without losing any data:
+
+TODO: Demo
+
+My tool is nothing revolutionary, but Litestream is. It changed the way I think about web development, and I think it has the potential to make 80% of web apps simpler and more cost effective.
 
 ## Data persistence for people who hate database servers
 
-There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but none of them were a match for what I wanted. Most of them included complex features I didn't need like encryption or a slick editing interface. I just wanted the simple ability to upload from the command line or JavaScript.
+When I needed a log sharing service, I couldn't find any that were a match for what I wanted. There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but most of them included complex features I didn't need like encryption or a slick editing interface. I just wanted the simple ability to upload from the command line or JavaScript.
 
 Worse, almost all the solutions required a separate database server to manage the uploads. And my shameful programmer secret is that I can't maintain a database server.
 
@@ -39,7 +45,7 @@ Instead, I've always used Google-managed datastores like Cloud Datastore, Fireba
 
 {{<img src="gcp-deprecations.png" alt="Screenshot of AppEngine library documentation featuring several deprecation notices" caption="Google deprecated its Python DB Client library, forcing users to migrate to NDB. They then deprecated NDB in favor of Cloud NDB. Now, they're ominously directing developers to build new apps against yet another API." maxWidth="680px" hasBorder="true">}}
 
-## Litestream: all the fun of a database server minus the hassle
+## Litestream: the serverless database server
 
 A [post recently popped up on Hacker News](https://news.ycombinator.com/item?id=26103776) about Litestream. It's an open source tool that replicates a SQLite database to Amazon's S3 cloud storage.
 
@@ -90,6 +96,28 @@ func (s defaultServer) pastePut() http.HandlerFunc {
 }
 ```
 
+The [`InsertEntry` implementation](https://github.com/mtlynch/logpaste/blob/master/store/sqlite/sqlite.go#L56L75) looks how you'd expect. It's just a basic SQLite row insertion:
+
+```go
+func (d db) InsertEntry(id string, contents string) error {
+	stmt, err := d.ctx.Prepare(`INSERT INTO entries
+      (id, creation_time, contents)
+      values(?,?,?)`)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+
+	t := time.Now().Format(time.RFC3339)
+
+	_, err = stmt.Exec(id, t, contents)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+```
+
 This allows LogPaste to accept HTTP requests from command-line utilities like this:
 
 ```bash
@@ -101,13 +129,17 @@ Hello, world!
 
 That works, but it's just writing the SQLite database to the local filesystem. To deploy this to a public, production server, I needed to make data replication easy and automatic.
 
-## Layering in Docker and Litestream
+## Layering in Litestream for cloud data syncing
 
 TODO: Clean up the wording in this section
 
+The wonderful thing about Litestream is that it requires zero code changes. There's nothing Litestream-aware about my LogPaste code. From LogPaste's perspective, it's just writing to a SQLite database file.
+
 Docker is one of my favorite ways to deploy a web service. There are dozens of managed Docker hosting vendors, so I'm not bound to any particular platform. And Docker would provide a nice way for me to integrate LogPaste with Litestream without baking any Litestream-specific logic into my LogPaste's code.
 
-Generally, Docker containers should hold Just One Service. But the jump from a service that can live entirely in one Docker container to one that depends on two increases the complexity significantly. It's a bit of a hack, but I just run Litestream as a background service within my LogPaste container.
+To layer in Litestream on top of LogPaste, I created a custom Docker container. Generally, Docker containers should hold Just One Service, but I sometimes bend this rule to facilitate deployment. It's orders of magnitude easier to deploy a single, independent Docker container than two interdependent containers. For my LogPaste container, I used a bit of and ran Litestream as a background process within my LogPaste container.
+
+But before I can launch Litestream, I needed to create its configuration file. This file specifies the cloud storage location where it should sync the database
 
 The only thing I need before running Litestream is to create a [configuration file](https://litestream.io/reference/config/). I create this at runtime in my [Docker entrypoint script](https://github.com/mtlynch/logpaste/blob/add9e363bd0ea0116d60e759778114ddbc979024/docker_entrypoint#L60L71):
 
@@ -236,7 +268,7 @@ I run a business called [TinyPilot](https://tinypilotkvm.com). I develop and sel
 
 {{<video src="tinypilot-shareable-log.mp4" caption="TinyPilot uses LogPaste to let users generate URLs for their debug logs.">}}
 
-My use case is, admittedly, fairly gentle. Only a handful of users upload their logs each day, so there may be pain points with this setup under heavier workloads. Still, I've been incredibly impressed with Litestream, and I'm eager to use it in more scenarios.
+My use case is, admittedly, fairly gentle. Only a handful of users upload their logs each day, so there may be pain points with this setup under heavier workloads. It's also important to note that Litestream can't resolve conflicts between multiple database writes, so you can only run one application server for each database. Still, I've been incredibly impressed with Litestream, and I'm eager to use it in more scenarios.
 
 ## Self-hosting LogPaste
 
@@ -248,10 +280,11 @@ For example, here's TinyPilot's version:
 
 I've written deployment instructions for a few different platforms:
 
-* [Docker](https://github.com/mtlynch/logpaste#from-docker--cloud-data-replication)
-* [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md)
-* [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md)
-* [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md)
+| Platform | Notes |
+|----------|-------|
+| [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md) | Three instances under the free tier, includes SSL certificates |
+| [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md) | $7/month per instance, includes SSL certificates |
+| [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md) | On-demand instances under the free tier, $7/mo for SSL certificates |
 
 ## Source
 
