@@ -1,10 +1,11 @@
 ---
-title: "How I Replaced My Cloud Database Server for $0.03 per Month"
+title: "How Litestream Replaced My Database Server for $0.03/month"
 date: "2021-04-05T00:00:00Z"
 tags:
 - tinypilot
 - litestream
 - docker
+- logpaste
 description: I needed a simple way for users to share debug logs with me, so I built my own solution with Go and Litestream.
 custom_css: true
 ---
@@ -34,13 +35,43 @@ Here's a demo of me migrating a server from Heroku to [fly.io](https://fly.io) w
 
 TODO: Demo
 
+```bash
+. /home/mike/go/src/github.com/mtlynch/logpaste/.dev.env
+
+RANDOM_SUFFIX="$(head /dev/urandom | tr -dc 'a-z0-9' | head -c 6 ; echo '')"
+APP_NAME="logpaste-${RANDOM_SUFFIX}"
+
+# Show after this line
+
+heroku apps:destroy --app "${APP_NAME}" --confirm "${APP_NAME}"
+
+curl -s -L https://raw.githubusercontent.com/mtlynch/logpaste/master/dev-scripts/make-fly-config | \
+  bash /dev/stdin "${APP_NAME}"
+
+fly init "${APP_NAME}" --nowrite
+
+fly secrets set \
+  "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" \
+  "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
+
+LOGPASTE_IMAGE="mtlynch/logpaste:0.1.1"
+
+fly deploy \
+  --env "AWS_REGION=${AWS_REGION}" \
+  --env "DB_REPLICA_URL=${DB_REPLICA_URL}" \
+  --image "${LOGPASTE_IMAGE}"
+
+LOGPASTE_URL="https://${APP_NAME}.fly.dev/"
+curl -s "$LOGPASTE_URL}/siiNbEMm"; echo
+```
+
 The best part is that I didn't need to modify my app's code to make this possible. As far as my software is concerned, it's writing to a local SQLite database. It has no idea that Litestream even exists.
 
 In this post, I'll explain how I built LogPaste and how you can apply a similar model to replace your expensive, complicated database server.
 
 ## Data persistence for people who hate database servers
 
-This all started because I wanted to deploy my own service like pastebin, which allows users to easily share text files. There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but almost all of them relied on an external database server.
+This all started because I wanted to deploy a service for sharing text files. There are at least [a dozen open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins), but almost all of them relied on an external database server.
 
 My shameful programmer secret is that I can't maintain a database server.
 
@@ -52,21 +83,21 @@ Instead, I've always used Google-managed datastores like Cloud Datastore, Fireba
 
 ## Litestream: the serverless database server
 
-I found out a few months ago that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular BoltDB database had taken on a new project called Litestream. It's a simple tool that replicates a SQLite database to Amazon's S3 cloud storage.
+A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular BoltDB database, had taken on a new project. It's called [Litestream](http://litestream.io), and it's a simple tool that replicates a SQLite database to Amazon's S3 cloud storage.
 
 {{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." maxWidth="700px" hasBorder="true">}}
 
-It seemed neat, but I wasn't particularly excited about it because I never use SQLite. Unlike other databases that rely on a whole server process that accepts network connections, SQLite is just a library for writing to a local database file. That's a whole lot simpler than standing up a database server or integrating with Google Cloud Platform's ever-changing data store APIs. But I always worried, "What happens if I lose that database file?"
+It seemed neat, but I wasn't particularly excited about it at first. I never use SQLite, so what did I care? I didn't have anything against SQLite, but it didn't seem practical. Unlike other databases that rely on a whole server process that accepts network connections, SQLite is just a library for writing to a local database file. I always worried, "What happens if I lose that database file?"
 
-Wait, what? I dismissed Litestream because I don't use SQLite, but Litestream solves the exact obstacle that kept me from using with SQLite.
+Hmm, hold on a sec. I dismissed Litestream because I don't use SQLite, but Litestream solves the exact obstacle that kept me from using with SQLite.
 
 Best of all, it would be my ticket out of Google Cloud Platform! Litestream enables incredible vendor flexibility: I can run SQLite anywhere. And I have tons of options for data replication because there are many S3-compatible storage services, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
 
-At least, I hoped it would be. To see how Litestream performed in production, I'd have to deploy a real app that used it.
+At least, I hoped it would free me from Google. To see how Litestream performed in production, I'd have to deploy a real app that used it.
 
 ## Creating the basic functionality
 
-LogPaste needed to accept HTTP PUT requests from the command-line, so I began by writing [this simple HTTP handler](https://github.com/mtlynch/logpaste/blob/add9e363bd0ea0116d60e759778114ddbc979024/handlers/paste.go#L45L78) in Go:
+Okay, time to build my text sharing service. LogPaste needed to accept HTTP PUT requests from the command-line, so I began by writing [this simple HTTP handler](https://github.com/mtlynch/logpaste/blob/add9e363bd0ea0116d60e759778114ddbc979024/handlers/paste.go#L45L78) in Go:
 
 ```go
 func (s defaultServer) pastePut() http.HandlerFunc {
@@ -105,19 +136,13 @@ The [`InsertEntry` implementation](https://github.com/mtlynch/logpaste/blob/mast
 
 ```go
 func (d db) InsertEntry(id string, contents string) error {
-	stmt, err := d.ctx.Prepare(`INSERT INTO entries
-      (id, creation_time, contents)
-      values(?,?,?)`)
-	if err != nil {
-		return err
-	}
-	defer stmt.Close()
-
-	_, err = stmt.Exec(id, time.Now().Format(time.RFC3339), contents)
-	if err != nil {
-		return err
-	}
-	return nil
+	_, err := d.ctx.Exec(`
+	INSERT INTO entries(
+		id,
+		creation_time,
+		contents)
+	values(?,?,?)`, id, time.Now().Format(time.RFC3339), contents)
+	return err
 }
 ```
 
@@ -134,13 +159,13 @@ That works, but it's just writing the SQLite database to the local filesystem. T
 
 ## Layering in Litestream for cloud data syncing
 
-The wonderful thing about Litestream is that it requires zero code changes. My LogPaste code never calls into a Litestream API or does anything special to allow syncing. Litestream runs independently in the background
+One of Litestream's biggest strengths is that it's completely independent of my application. My LogPaste code never calls into a Litestream API or does anything special to allow syncing. Litestream just does its job quietly in the background
 
 To layer in Litestream on top of LogPaste, I created a custom Docker container. Generally, Docker containers should hold Just One Service, but I sometimes bend this rule to facilitate deployment. It's orders of magnitude easier to deploy a single, independent Docker container than two containers that need to coordinate with each other.
 
-I created [a Dockerfile](https://github.com/mtlynch/logpaste/blob/e6658318af9be4c72e73c6cba7730e98d238076b/Dockerfile) that built an image containing both my LogPaste binary and Litestream. The interesting part of my Docker setup is the [`docker_entrypoint` script](https://github.com/mtlynch/logpaste/blob/e6658318af9be4c72e73c6cba7730e98d238076b/docker_entrypoint), which runs when the container launches.
+My [Dockerfile](https://github.com/mtlynch/logpaste/blob/e6658318af9be4c72e73c6cba7730e98d238076b/Dockerfile) built the LogPaste executable and pulls down the Linux executable for Litestream. The interesting part of my Docker setup is the [`docker_entrypoint` script](https://github.com/mtlynch/logpaste/blob/e6658318af9be4c72e73c6cba7730e98d238076b/docker_entrypoint), which runs when the container launches.
 
-The script begins by creating a [Litestream configuration file](https://litestream.io/reference/config/), which specifies the cloud storage location where Litestream should sync the database
+The script begins by creating a [Litestream configuration file](https://litestream.io/reference/config/), which specifies the cloud storage location where Litestream should sync the database. Because the container creates this file at runtime, anyone can reuse my Docker image to create their own LogPaste server by replacing these runtime S3 variables.
 
 ```bash
 cat > /etc/litestream.yml <<EOF
@@ -153,8 +178,6 @@ dbs:
 EOF
 ```
 
-It was important to create this file at container runtime because that allows me to change S3 replica locations or credentials without rebuilding the Docker image.
-
 With the configuration file in place, the script then uses Litestream to pull down the latest database. If this app is running for the first time and there's no database to pull down from S3, I set `CREATE_NEW_DB=true` to skip this step and allow LogPaste to bootstrap its own empty database.
 
 ```bash
@@ -164,7 +187,7 @@ if [[ "${CREATE_NEW_DB}" != 'true' ]]; then
 fi
 ```
 
-Before the script launches the LogPaste web service, it spawns a Litestream instance in the background. The Litestream process watches my SQLite database and continually replicates it to the my S3 bucket:
+Before the script launches the LogPaste web service, it spawns a Litestream instance in the background. The Litestream process watches my SQLite database and continually replicates it to my S3 bucket:
 
 ```bash
 # Begin replication to S3 in the background.
@@ -197,16 +220,16 @@ TODO: I'm going to replace this diagram with a much prettier one that looks more
 
 ## LogPaste demo
 
-Users can upload to LogPaste from the command line, but it's also easy to integrate with other web apps. Here's a demo of a custom HTML client for LogPaste that runs against my demo instance:
+Users can upload to LogPaste from the command line, but it's also easy to integrate with other web apps. Here's a simple HTML client for LogPaste that runs against my demo instance:
 
-TODO: Make this prettier
-
+<div class="demo">
 <div class="upload-form">
   <textarea id="upload-textarea" placeholder="Enter some text"></textarea>
   <button class="button" id="upload">Upload</button>
 </div>
 <a id="result"></a>
 <div id="error"></div>
+</div>
 
 <script src="https://logpaste.com/js/logpaste.js"></script>
 <script>
@@ -295,12 +318,13 @@ I've written deployment instructions for a few different platforms:
 | [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md) | $7/month per instance, includes SSL certificates |
 | [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md) | On-demand instances under the free tier, $7/month for SSL certificates |
 
-## Source
+## Further reading
 
-The source is available on Github under the MIT License:
-
-* [mtlynch/logpaste](https://github.com/mtlynch/logpaste)
+* [Litestream](https://litestream.io/): Includes straightforward documentation about using Litestream.
+* [mtlynch/logpaste](https://github.com/mtlynch/logpaste): LogPaste's MIT-licensed source code and documentation.
 
 ---
 
-*Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for their early feedback on this article.*
+*Architecture diagram by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+
+*Thanks to Ben Johnson for his work on Litestream and his assistance with this article. Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback.*
