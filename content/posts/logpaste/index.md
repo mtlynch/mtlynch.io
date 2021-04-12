@@ -1,5 +1,5 @@
 ---
-title: "How Litestream Replaced My Database Server for $0.03/month"
+title: "How Litestream Eliminates My Database Server for $0.03/month"
 date: "2021-04-05T00:00:00Z"
 tags:
 - tinypilot
@@ -36,36 +36,36 @@ Here's a demo of me migrating a server from Heroku to [fly.io](https://fly.io) w
 TODO: Demo
 
 ```bash
-. /home/mike/go/src/github.com/mtlynch/logpaste/.dev.env
-
-RANDOM_SUFFIX="$(head /dev/urandom | tr -dc 'a-z0-9' | head -c 6 ; echo '')"
-APP_NAME="logpaste-${RANDOM_SUFFIX}"
-
 # Show after this line
 
-heroku apps:destroy --app "${APP_NAME}" --confirm "${APP_NAME}"
+fly destroy lpaste --yes
 
-curl -s -L https://raw.githubusercontent.com/mtlynch/logpaste/master/dev-scripts/make-fly-config | \
-  bash /dev/stdin "${APP_NAME}"
+./heroku-deploy mtlynch-lp
 
-fly init "${APP_NAME}" --nowrite
+# First, I'll upload some text to my LogPaste server on Heroku.
 
-fly secrets set \
-  "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" \
-  "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
+echo "Hello to my Heroku instance!" | \
+  curl -F '_=<-' http://lp-mtlynch.herokuapp.com
 
-LOGPASTE_IMAGE="mtlynch/logpaste:0.1.1"
+curl http://lp-mtlynch.herokuapp.com/<id>
 
-fly deploy \
-  --env "AWS_REGION=${AWS_REGION}" \
-  --env "DB_REPLICA_URL=${DB_REPLICA_URL}" \
-  --image "${LOGPASTE_IMAGE}"
+# Let's save this ID for later
+ID="<id>"
 
-LOGPASTE_URL="https://${APP_NAME}.fly.dev/"
-curl -s "$LOGPASTE_URL}/siiNbEMm"; echo
+# Now, I'll unceremoniously tear down my Heroku instance.
+heroku apps:destroy --app lp-mtlynch --confirm lp-mtlynch
+
+# I haven't done any data migration, so let's hope my data is okay!
+
+# Now, I redeploy the server image to fly.io.
+./fly-deploy lpaste
+
+curl https://lpaste.fly.dev/<id>
+
+# LogPaste preserved its state across server deployments!
 ```
 
-The best part is that I didn't need to modify my app's code to make this possible. As far as my software is concerned, it's writing to a local SQLite database. It has no idea that Litestream even exists.
+The best part is that I didn't need to modify my app's code to make this possible. My software is just writing to a local SQLite database and has no idea that Litestream even exists.
 
 In this post, I'll explain how I built LogPaste and how you can apply a similar model to replace your expensive, complicated database server.
 
