@@ -294,7 +294,7 @@ I run a business called [TinyPilot](https://tinypilotkvm.com). I develop and sel
 
 {{<video src="tinypilot-shareable-log.mp4" caption="TinyPilot uses LogPaste to let users generate URLs for their debug logs.">}}
 
-The costs for data replication really is just $0.03 per month:
+The cost for data replication really is just $0.03 per month:
 
 {{<img src="aws-bill.png" alt="Screenshot of AWS bill showing $0.03 in S3 charges and $0.00 in data transfer fees" maxWidth="600px" hasBorder="true">}}
 
