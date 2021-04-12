@@ -87,11 +87,13 @@ A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), aut
 
 {{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." maxWidth="700px" hasBorder="true">}}
 
-It seemed neat, but I wasn't particularly excited about it at first. I never use SQLite, so what did I care? I didn't have anything against SQLite, but it didn't seem practical. Unlike other databases that rely on a whole server process that accepts network connections, SQLite is just a library for writing to a local database file. I always worried, "What happens if I lose that database file?"
+It seemed neat, but I wasn't particularly excited about it at first. I never use SQLite, so what did I care?
 
-Hmm, hold on a sec. I dismissed Litestream because I don't use SQLite, but Litestream solves the exact obstacle that kept me from using with SQLite.
+I didn't have anything against SQLite, but it didn't seem practical. Unlike other databases send data to an external server over the network, SQLite is just a library for writing to a local database file. I always worried, "What happens if I lose that database file?"
 
-Best of all, it would be my ticket out of Google Cloud Platform! Litestream enables incredible vendor flexibility: I can run SQLite anywhere. And I have tons of options for data replication because there are many S3-compatible storage services, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
+Hmm, hold on a sec. I dismissed Litestream because I don't use SQLite, but Litestream solves the exact obstacle that kept me from using with SQLite. Maybe this was worth a try.
+
+It could be my ticket out of Google Cloud Platform. Litestream enables incredible vendor flexibility: I can run SQLite anywhere. And I have tons of options for data replication because there are many S3-compatible storage services, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
 
 At least, I hoped it would free me from Google. To see how Litestream performed in production, I'd have to deploy a real app that used it.
 
