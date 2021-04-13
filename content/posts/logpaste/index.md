@@ -33,34 +33,36 @@ The tool is called [LogPaste](https://logpaste.com). It allows users to generate
 
 Here's a demo of me migrating a server from Heroku to [fly.io](https://fly.io) without losing any data:
 
-TODO: Demo
+<script id="asciicast-I2HcYheYayeh7aHj23QSY9Vyf" data-speed="2.0" src="https://asciinema.org/a/I2HcYheYayeh7aHj23QSY9Vyf.js" async></script>
 
 ```bash
-# Show after this line
-
-fly destroy lpaste --yes
+fly destroy lp --yes
 
 ./heroku-deploy mtlynch-lp
 
+asciinema rec
+```
+
+```bash
 # First, I'll upload some text to my LogPaste server on Heroku.
 
 echo "Hello to my Heroku instance!" | \
-  curl -F '_=<-' http://lp-mtlynch.herokuapp.com
+  curl -F '_=<-' http://mtlynch-lp.herokuapp.com
 
-curl http://lp-mtlynch.herokuapp.com/<id>
+curl http://mtlynch-lp.herokuapp.com/<id>
 
 # Let's save this ID for later
 ID="<id>"
 
 # Now, I'll unceremoniously tear down my Heroku instance.
-heroku apps:destroy --app lp-mtlynch --confirm lp-mtlynch
+heroku apps:destroy --app mtlynch-lp --confirm mtlynch-lp
 
 # I haven't done any data migration, so let's hope my data is okay!
 
 # Now, I redeploy the server image to fly.io.
-./fly-deploy lpaste
+./fly-deploy lp
 
-curl https://lpaste.fly.dev/<id>
+curl https://lp.fly.dev/<id>
 
 # LogPaste preserved its state across server deployments!
 ```
