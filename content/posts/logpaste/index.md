@@ -35,38 +35,6 @@ Here's a demo of me migrating a server from Heroku to [fly.io](https://fly.io) w
 
 <script id="asciicast-I2HcYheYayeh7aHj23QSY9Vyf" data-speed="2.0" src="https://asciinema.org/a/I2HcYheYayeh7aHj23QSY9Vyf.js" async></script>
 
-```bash
-fly destroy lp --yes
-
-./heroku-deploy mtlynch-lp
-
-asciinema rec
-```
-
-```bash
-# First, I'll upload some text to my LogPaste server on Heroku.
-
-echo "Hello to my Heroku instance!" | \
-  curl -F '_=<-' http://mtlynch-lp.herokuapp.com
-
-curl http://mtlynch-lp.herokuapp.com/<id>
-
-# Let's save this ID for later
-ID="<id>"
-
-# Now, I'll unceremoniously tear down my Heroku instance.
-heroku apps:destroy --app mtlynch-lp --confirm mtlynch-lp
-
-# I haven't done any data migration, so let's hope my data is okay!
-
-# Now, I redeploy the server image to fly.io.
-./fly-deploy lp
-
-curl https://lp.fly.dev/<id>
-
-# LogPaste preserved its state across server deployments!
-```
-
 The best part is that I didn't need to modify my app's code to make this possible. My software is just writing to a local SQLite database and has no idea that Litestream even exists.
 
 In this post, I'll explain how I built LogPaste and how you can apply a similar model to replace your expensive, complicated database server.
