@@ -33,7 +33,7 @@ The tool is called [LogPaste](https://logpaste.com). It allows users to generate
 
 Here's a demo of me migrating a server from Heroku to [fly.io](https://fly.io) without losing any data:
 
-<script id="asciicast-I2HcYheYayeh7aHj23QSY9Vyf" data-speed="2.0" src="https://asciinema.org/a/I2HcYheYayeh7aHj23QSY9Vyf.js" async></script>
+<script id="asciicast-I2HcYheYayeh7aHj23QSY9Vyf" data-speed="2.0" data-size="medium" data-cols="80" src="https://asciinema.org/a/I2HcYheYayeh7aHj23QSY9Vyf.js" async></script>
 
 The best part is that I didn't need to modify my app's code to make this possible. My software is just writing to a local SQLite database and has no idea that Litestream even exists.
 
