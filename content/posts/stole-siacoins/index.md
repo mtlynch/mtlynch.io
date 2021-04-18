@@ -215,7 +215,7 @@ Now that the coins were secured, it was time to figure out just what was going o
 
 The last transaction in the list is the withdrawal. That's just me stealing the money. Don't worry about that. The transaction of 0.00 SC is just noise, as Sia wallets generate these 0.0 transactions when moving money between their own addresses.
 
-I was interested in the first transaction in the list. That line showed that this wallet had only ever received one deposit of 594.83 SC at block height 108,589. The block height is essentially a "time" in Siacoin time units. Checking the [transaction in the Sia block explorer](http://explore.sia.tech/block.html?height=427b72c98e8ea64fba234ca2a00288f7a750003a243e6b3e967f5c6d426c2f9f), I could see this deposit was made on June 7th, 2017, two days before the user's reddit post.
+I was interested in the first transaction in the list. That line showed that this wallet had only ever received one deposit of 594.83 SC at block height 108,589. The block height is essentially a "time" in Siacoin time units. Checking the [transaction in the Sia block explorer](https://siastats.info/navigator?search=427b72c98e8ea64fba234ca2a00288f7a750003a243e6b3e967f5c6d426c2f9f), I could see this deposit was made on June 7th, 2017, two days before the user's reddit post.
 
 Why would the user claim that they had put  €2,000 in the wallet when they had only deposited  €10?
 
