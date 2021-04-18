@@ -56,7 +56,7 @@ jobs:
       - run:
           name: Validate HTML
           command: tests/lint-html
-  htmllint:
+  htmltest:
     docker:
       - image: wjdp/htmltest:v0.14.0
     steps:
@@ -100,6 +100,9 @@ workflows:
       - lint-markdown
       - build
       - lint-html:
+          requires:
+            - build
+      - htmltest:
           requires:
             - build
       - check-google-analytics-token:
