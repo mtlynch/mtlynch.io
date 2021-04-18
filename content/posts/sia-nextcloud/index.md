@@ -191,7 +191,7 @@ To apply the blockchain sync workaround:
   # Stop the Docker containers.
   docker-compose down
   ```
-1. Download the Sia [consensus.db file](https://consensus.siahub.info/consensus.db) from the latest [SiaHub](https://siahub.info) snapshot.
+1. Download the Sia [consensus.db file](https://siastats.info/consensus) from the latest [SiaStats](https://siastats.info) snapshot.
 1. Copy the `consensus.db` file to `sia-nextcloud/sia-data/consensus/consensus.db` (overwriting the existing file).
 1. Restart the Docker containers.
   ```bash
