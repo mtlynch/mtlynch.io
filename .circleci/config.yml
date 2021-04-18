@@ -47,7 +47,7 @@ jobs:
             - resources
   # Check for valid HTML, which htmltest can't do yet, but htmltest is better at all
   # the other HTML linter tests.
-  htmllint:
+  htmlproofer:
     docker:
       - image: mtlynch/htmlproofer:3.15.0
     steps:
@@ -99,7 +99,7 @@ workflows:
       - check-whitespace
       - lint-markdown
       - build
-      - lint-html:
+      - htmlproofer:
           requires:
             - build
       - htmltest:
