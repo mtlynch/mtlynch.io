@@ -8,6 +8,9 @@ jobs:
       - run:
           name: Check for trailing whitespace
           command: tests/check-trailing-whitespace
+      - run:
+          name: Check for trailing newlines
+          command: tests/check-trailing-newline
   lint-markdown:
     docker:
       - image: mtlynch/markdownlint:0.8.0
