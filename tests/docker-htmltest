@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eux
+
+docker run \
+  --tty \
+  --volume "${PWD}:/app" \
+  --workdir "/app" \
+  wjdp/htmltest:v0.14.0 \
+  --conf tests/htmltest.yml

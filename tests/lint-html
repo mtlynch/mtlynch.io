@@ -9,20 +9,9 @@ set -u
 
 BUILD_DIR=public
 
-# Skips validation checks that take a long time.
-htmlproofer_args_extra=""
-if [ "${1-}" = "--quick" ]; then
-  htmlproofer_args_extra="--disable-external"
-else
-  htmlproofer_args_extra="--check-external-hash"
-fi
-
 # Run HTMLProofer
 htmlproofer "$BUILD_DIR" \
-  --only-4xx \
-  --check-favicon \
   --check-html \
-  --check-opengraph \
   --allow-hash-href \
   --empty-alt-ignore \
   --file-ignore "public/collect-debt/full-emails/index.html" \
@@ -31,10 +20,4 @@ htmlproofer "$BUILD_DIR" \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
   `# mtlynch.io server to verify that URLs are present.` \
   --url-swap "https\://mtlynch.io/:/" \
-  `# Ignore the following URLs because they get 403 errors from CI` \
-  `# intermittently.` \
-  --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/,/mediagoblin-v5lmqis51k.herokuapp.com/,/servernope.com/" \
-  `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
-  `# requests, so ignore those.` \
-  --http-status-ignore "400,429" \
-  "$htmlproofer_args_extra"
+  --disable-external

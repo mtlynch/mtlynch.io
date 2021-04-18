@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eux
+
+docker run \
+  --tty \
+  --volume "${PWD}:/app" \
+  --workdir "/app" \
+  --entrypoint /app/tests/lint-html \
+  mtlynch/htmlproofer:3.15.0

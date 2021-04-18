@@ -1,4 +1,5 @@
 DirectoryPath: public
+EnforceHTML5: true
 IgnoreAltMissing: true
 StripQueryString: false
 OutputDir: /tmp/htmltest
@@ -9,10 +10,10 @@ IgnoreURLs:
   - upwork.com
   - vimeo.com
   - //localhost
-  # TODO: Remove this
-  #- https://mtlynch.io
+  - http://raspberrypi:8000
   - http://www.corsair.com/en-us/memory-finder
   - http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability6.html
+  - www.landezine.com/index.php/2017/04/times-square-redesign-by-snohetta-opens-today/
   # ./check-amazon-links will catch bad Amazon URLs. Ignore with htmltest because they tend
   # to return 5xx errors.
   - amazon.com
