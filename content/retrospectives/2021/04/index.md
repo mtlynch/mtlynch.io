@@ -93,7 +93,7 @@ After asking some friends and Twitter, I found out that there are services for s
 
 I created [a job description](https://bit.ly/tinypilot-assistant) and shared it with friends and in some local Facebook groups. I'm still going to start the workers as contractors because [I like the contract-to-hire model](/freelancer-guidelines/#interviews), and a time-limited position fits more under the IRS' definition of a contractor.
 
-The rate is $16/hr, which I expected to yield a bigger response. Subway cashiers in my area earn $14-16, and TinyPilot should be substantially more attractive in terms of flexibility. Still, I've received some promising applications, so I'm hoping to make hires in the next week or two.
+The rate is $16/hr, which I expected to yield a bigger response. In my area, entry-level jobs in food service and retail pay $14-16/hr, and TinyPilot should be substantially more attractive in terms of flexibility. Still, I've received some promising applications, so I'm hoping to make hires in the next week or two.
 
 ## TinyPilot's first real office
 
