@@ -90,4 +90,4 @@ If you'd like to experience the joy of reviewing your accomplishments each week,
 
 ---
 
-*Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by [Loraine Yow](https://www.lolo-ology.com/).*

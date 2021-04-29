@@ -170,4 +170,4 @@ While I'm disappointed that Is It Keto never produced positive returns, it was a
 
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Cover art by [Loraine Yow](https://www.lolo-ology.com/).*

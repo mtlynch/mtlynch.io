@@ -700,4 +700,4 @@ In this tutorial, you learned to redirect an app's data to cloud storage without
 
 ---
 
-*Software architecture diagrams by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)*
+*Software architecture diagrams by [Loraine Yow](https://www.lolo-ology.com/)*

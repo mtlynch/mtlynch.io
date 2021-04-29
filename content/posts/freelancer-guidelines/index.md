@@ -370,7 +370,7 @@ If we're working together on a project where I want to retain intellectual prope
 The contract relates specifically to work I pay you to produce, not anything you create outside of your paid hours for me.
 
 ---
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Cover art by [Loraine Yow](https://www.lolo-ology.com/).*
 
 Are you a client or freelancer? I'd love to see similar documents or hear how others approach this problem, so feel free to share in the comments.
 

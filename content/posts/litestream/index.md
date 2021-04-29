@@ -320,6 +320,6 @@ I've written deployment instructions for a few different platforms:
 
 ---
 
-*Architecture diagram by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Architecture diagram by [Loraine Yow](https://www.lolo-ology.com/).*
 
 *Thanks to [Ben Johnson](https://twitter.com/benbjohnson) for his work on Litestream and his early review of this article. Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post.*

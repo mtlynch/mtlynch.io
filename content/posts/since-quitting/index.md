@@ -150,4 +150,4 @@ If you're a developer with an app that handles recipe ingredients or you know of
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Space Duck logo by [Marina Mocanu](https://pour-trait.ro/).*
+*Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Space Duck logo by [Marina Mocanu](https://pour-trait.ro/).*

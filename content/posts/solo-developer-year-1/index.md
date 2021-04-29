@@ -237,4 +237,4 @@ Speaking of goals, here's what I hope to accomplish in my second year as a solo 
 
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)*
+*Cover art by [Loraine Yow](https://www.lolo-ology.com/)*
