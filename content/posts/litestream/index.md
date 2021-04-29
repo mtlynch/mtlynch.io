@@ -105,13 +105,13 @@ The [`InsertEntry` implementation](https://github.com/mtlynch/logpaste/blob/mast
 
 ```go
 func (d db) InsertEntry(id string, contents string) error {
-	_, err := d.ctx.Exec(`
-	INSERT INTO entries(
-		id,
-		creation_time,
-		contents)
-	values(?,?,?)`, id, time.Now().Format(time.RFC3339), contents)
-	return err
+  _, err := d.ctx.Exec(`
+  INSERT INTO entries(
+    id,
+    creation_time,
+    contents)
+  values(?,?,?)`, id, time.Now().Format(time.RFC3339), contents)
+  return err
 }
 ```
 
