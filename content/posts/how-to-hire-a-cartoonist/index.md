@@ -40,7 +40,7 @@ Some of the applicants' portfolios were clearly bad, like doodles you'd see in t
 Four of the portfolios had the lighthearted, playful style reminiscent of *An Illustrated Book of Bad Arguments*, so I selected those artists for my shortlist:
 
 * [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
-* [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)
+* [Loraine Yow](https://www.lolo-ology.com/)
 * [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
 * Sofia (she preferred I not link to her profile for this article)
 
@@ -74,7 +74,7 @@ Christine's was the most elaborate. We learn a great deal about the two characte
 
 ### Winner: Loraine's submission
 
-{{< img src="sample-loraine.png" alt="Sample submission from Loraine" caption="Cartoon submission from [Loraine Yow](https://www.linkedin.com/in/lolo-ology/)" maxWidth="500px" >}}
+{{< img src="sample-loraine.png" alt="Sample submission from Loraine" caption="Cartoon submission from [Loraine Yow](https://www.lolo-ology.com/)" maxWidth="500px" >}}
 
 Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time.
 

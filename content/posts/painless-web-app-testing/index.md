@@ -281,4 +281,4 @@ This guide provided a basic introduction to Cypress. For more advanced functiona
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article.*
+*Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article.*

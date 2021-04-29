@@ -235,4 +235,4 @@ Congratulations! If you've reached this point, you're now an expert reviewee. Yo
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/). Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com).*
+*Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com).*

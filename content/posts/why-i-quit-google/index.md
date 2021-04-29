@@ -188,4 +188,4 @@ Google was a great place to work, and I learned valuable skills during my time t
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Illustrations by [Loraine Yow](https://www.lolo-ology.com/).*

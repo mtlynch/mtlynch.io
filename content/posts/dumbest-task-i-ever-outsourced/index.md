@@ -157,4 +157,4 @@ A less wasteful solution would be to buy a new keyboard and offer the old one fo
 
 ---
 
-*Cover art by [Loraine Yow](https://www.linkedin.com/in/lolo-ology/).*
+*Cover art by [Loraine Yow](https://www.lolo-ology.com/).*
