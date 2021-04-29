@@ -9,7 +9,7 @@ tags:
 description: I've always hated maintaining database servers. Litestream offers a simple alternative without sacrificing reliability or security.
 custom_css: true
 images:
-- logpaste/og-cover.jpg
+- litestream/og-cover.jpg
 ---
 
 Here's a riddle. My web app keeps all of its data in a SQL database. I can spontaneously tear it down, deploy the code to a different hosting platform, and the app will still serve all the same data. Running my app in production costs $0.03 per month.
