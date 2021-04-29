@@ -10,6 +10,9 @@ description: I've always hated maintaining database servers. Litestream offers a
 custom_css: true
 images:
 - litestream/og-cover.jpg
+discuss_urls:
+  reddit: https://www.reddit.com/r/programming/comments/n1518s/how_litestream_eliminated_my_database_server_for/
+  hacker_news: https://news.ycombinator.com/item?id=26981239
 ---
 
 Here's a riddle. My web app keeps all of its data in a SQL database. I can spontaneously tear it down, deploy the code to a different hosting platform, and the app will still serve all the same data. Running my app in production costs $0.03 per month.
@@ -312,6 +315,8 @@ I've written deployment instructions for a few different platforms:
 * [Litestream](https://litestream.io/): Litestream's official documentation.
 * [mtlynch/logpaste](https://github.com/mtlynch/logpaste): MIT-licensed source code and documentation for LogPaste.
 * [litestream-s6-example](https://github.com/benbjohnson/litestream-s6-example): A more advanced and robust method for running Litestream alongside your app in a Docker container. It uses [s6-overlay](https://github.com/just-containers/s6-overlay) to restart the Litestream instance on failure.
+
+{{< tweet 1387768253854986247 >}}
 
 ---
 
