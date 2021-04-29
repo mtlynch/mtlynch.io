@@ -12,7 +12,7 @@ images:
 - logpaste/og-cover.jpg
 ---
 
-Here's a riddle. My web app keeps all of its data in a SQL database. I can spontaneously tear it down, deploy the code to a completely different hosting platform, and the app will still serve all the same data. Running my app in production costs $0.03 per month.
+Here's a riddle. My web app keeps all of its data in a SQL database. I can spontaneously tear it down, deploy the code to a different hosting platform, and the app will still serve all the same data. Running my app in production costs $0.03 per month.
 
 How is this possible?
 
@@ -20,7 +20,7 @@ How is this possible?
 
 No, my app never talks to a remote database server.
 
->Oh, then you're using a proprietary managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
+>Oh, then you're using a proprietary, managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
 
 Nope, my entire stack is open-source and platform-agnostic.
 
@@ -28,21 +28,21 @@ Nope, my entire stack is open-source and platform-agnostic.
 
 I combined [SQLite](https://sqlite.org/index.html), [Litestream](https://litestream.io/), and [Docker](https://www.docker.com/).
 
-My tool is called [LogPaste](https://logpaste.com). It allows users to generate shareable URLs for text files. I use it in my open-source [KVM over IP device](https://tinypilotkvm.com) to give users an easy way to share diagnostic logs with me.
+My tool is called [LogPaste](https://logpaste.com). It allows users to generate shareable URLs for text files. I use it in my open-source [KVM over IP device](https://tinypilotkvm.com) so that users can easily share diagnostic logs with me.
 
-Sharing text files isn't exactly revolutionary, but serverless data replication is exciting. Here's a demo of me migrating my LogPaste app server from [Heroku](https://www.heroku.com/) to [fly.io](https://fly.io). There's no database server or data migration step, but all of my data persists between hosts:
+Sharing text files isn't exactly revolutionary, but serverless data replication might be. Here's a demo of me migrating my LogPaste app server between two separate hosting platforms: [Heroku](https://www.heroku.com/) and [fly.io](https://fly.io). There's no database server or data migration step, but all of my data persists between platforms:
 
 <script id="asciicast-I2HcYheYayeh7aHj23QSY9Vyf" data-speed="2.0" data-size="medium" data-cols="80" src="https://asciinema.org/a/I2HcYheYayeh7aHj23QSY9Vyf.js" async></script>
 
 The best part is that I didn't need to modify my app's code at all. It just writes to a local SQLite database, and Litestream magically handles data replication in the background.
 
-In this post, I'll explain how I integrated Litestream into my app and how you can do the same to replace your expensive, complicated database server.
+In this post, I'll explain how I integrated Litestream into my app and how you can do the same to replace your expensive, complicated database servers.
 
 ## Data persistence for people who hate database servers
 
-I created LogPaste because all the existing [open-source text sharing services](https://github.com/awesome-selfhosted/awesome-selfhosted#pastebins) relied on an external database server. My shameful programmer secret is that I can't maintain a database server.
+My shameful programmer secret is that I can't maintain a database server.
 
-I've been building my own software products and services for the past eight years, and I've never used a database server in production. I don't want to be responsible for backups or software upgrades, so anything that requires a server is a dealbreaker for me.
+I've been building my own software products and services for the past eight years, and I've never used a database server in production. I don't want to be responsible for backups or software upgrades, so anything that requires MySQL, Postgres, or Redis is a dealbreaker for me.
 
 Instead, I've always used Google-managed datastores like Cloud Datastore, Firebase, and Firestore. But every few years, Google builds a totally new datastore solution, deprecates its old one, and [dumps all the migration work onto its customers](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc). I didn't want to create another service on top of a tech stack that Google would probably kill off soon.
 
@@ -54,15 +54,15 @@ A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), aut
 
 {{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." maxWidth="700px" hasBorder="true">}}
 
-It seemed neat, but I wasn't particularly excited about it at first. I never use SQLite, so what did I care?
+It seemed neat, but I wasn't particularly excited about it. I never use SQLite, so what did I care?
 
-I didn't have anything against SQLite, but the design seemed impractical. Unlike other databases that send data to an external server over the network, SQLite just writes everything to a local file. I always worried, "What happens if I lose that file?"
+I didn't have anything against SQLite, but the design seemed impractical. Unlike other databases that send data to an external server over the network, SQLite writes everything to a local file. I always worried, "What happens if I lose that file?"
 
-Thinking about it more, I realized I'd dismissed Litestream because I didn't use SQLite, but Litestream solved the very obstacle keeping me from adopting SQLite. Maybe this was worth a try.
+Thinking about it more, I realized I'd dismissed Litestream because I didn't use SQLite. But Litestream solved the very obstacle keeping me from adopting SQLite... Maybe this was worth a try.
 
-Litestream could be my ticket out of Google Cloud Platform. SQLite runs anywhere, so you have freedom in choosing server hosting platforms. Litestream also offers vendor flexibility in cloud storage, as it supports any S3-compatible service, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
+Even better, Litestream could be my ticket out of Google Cloud Platform. SQLite runs anywhere, so I'd have freedom in choosing server hosting platforms. Litestream provides vendor flexibility on the storage side, as it supports any S3-compatible service, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
 
-Litestream sounded rosy in theory, but you can't judge a technology until you test it in production. My log upload service seemed like the perfect experimental project.
+Litestream sounded rosy in theory, but you can't judge a technology until you test it in production. I needed a log upload service, and it seemed like the perfect project to test Litestream.
 
 ## Creating the basic functionality
 
@@ -101,7 +101,7 @@ func (s defaultServer) pastePut() http.HandlerFunc {
 }
 ```
 
-The [`InsertEntry` implementation](https://github.com/mtlynch/logpaste/blob/master/store/sqlite/sqlite.go#L56L75) looks how you'd expect. It's just a basic SQLite row insertion:
+The [`InsertEntry` implementation](https://github.com/mtlynch/logpaste/blob/master/store/sqlite/sqlite.go#L56L75) looks how you'd expect. It's a basic SQLite row insertion:
 
 ```go
 func (d db) InsertEntry(id string, contents string) error {
@@ -115,7 +115,7 @@ func (d db) InsertEntry(id string, contents string) error {
 }
 ```
 
-This allows LogPaste to accept HTTP requests from command-line utilities like this:
+This allows LogPaste to accept HTTP requests from the command line like this:
 
 ```bash
 $ curl -X PUT -d "Hello, world!" http://localhost:3001
@@ -124,11 +124,11 @@ $ curl http://localhost:3001/fFnL9cU6
 Hello, world!
 ```
 
-That works, but it's just writing the SQLite database to the local filesystem. Next, I needed to integrate Litestream to sync the local database to cloud storage.
+That works, but it's writing the SQLite database to the local filesystem. I needed to integrate Litestream to enable cloud storage.
 
 ## Layering in Litestream for cloud data syncing
 
-One of Litestream's biggest strengths is that it's completely independent of the application it serves. My LogPaste code never calls into a Litestream API, nor does it require any special configuration to allow syncing. Litestream just quietly does its job in the background.
+One of Litestream's biggest strengths is that it's completely independent of the application it serves. My LogPaste code never calls into a Litestream API, nor does it require any special configuration to allow syncing. Litestream quietly does its job in the background.
 
 I created [a custom Docker image](https://hub.docker.com/r/mtlynch/logpaste/) to combine Litestream and LogPaste. Generally, Docker images should hold Just One Service, but I sometimes bend this rule to facilitate deployment. It's orders of magnitude easier to deploy a single, independent Docker container than two containers that need to coordinate with each other.
 
@@ -146,7 +146,7 @@ RUN go build \
 RUN wget "https://github.com/benbjohnson/litestream/releases/download/v${litestream_version}/${litestream_deb_filename}"
 ```
 
-Next, Docker copies into the image `litestream.yml`, LogPaste's [Litestream configuration file](https://litestream.io/reference/config/).
+Next, Docker copies a custom `litestream.yml` file into the image. This is Litestream's [configuration file](https://litestream.io/reference/config/).
 
 ```yaml
 access-key-id: ${LITESTREAM_ACCESS_KEY_ID}
@@ -159,32 +159,34 @@ dbs:
 
 The `replicas.url` field contains the cloud storage location for my database. `access-key-id` and `secret-access-key` are the IAM-style credentials Litestream needs to access the cloud storage bucket.
 
-You can hardcode these values into the configuration file, but Litestream supports environment variables for field values and interpolates them at runtime. That's a convenient feature, as it allows you to keep your `litestream.yml` file under source control without storing any sensitive credentials. It also makes the Docker image portable &mdash; anyone can create their own LogPaste server by reusing [my image](https://hub.docker.com/r/mtlynch/logpaste/) and setting these environment variables.
+You can hardcode these values into the configuration file, but Litestream supports environment variables and interpolates them at runtime. That's a convenient feature, as it allows you to keep your `litestream.yml` file under source control without storing any sensitive credentials. It also makes the Docker image portable &mdash; anyone can create their own LogPaste server by reusing [my image](https://hub.docker.com/r/mtlynch/logpaste/) and setting environment variables for their cloud storage bucket.
 
-The next bit of Litestream logic is in LogPaste's [`docker_entrypoint` script](https://github.com/mtlynch/logpaste/blob/a9d9b39e4b78401c68cd54ed3d2fd40838dd7b8b/docker_entrypoint), which runs when the Docker container launches. It starts by pulling down the latest database snapshot from cloud storage:
+The next bit of Litestream logic is in LogPaste's [`docker_entrypoint` script](https://github.com/mtlynch/logpaste/blob/a9d9b39e4b78401c68cd54ed3d2fd40838dd7b8b/docker_entrypoint), which runs when the Docker container launches. It starts by pulling down the app's latest database snapshot from cloud storage:
 
 ```bash
 # Restore database from S3.
 litestream restore -if-replica-exists -v "${DB_PATH}"
 ```
 
-The `-if-replica-exists` flag tells Litestream that it's okay if no snapshots exist on cloud storage yet. Otherwise, you'd have a chicken-and-egg problem the first time you run your application. Your app could never launch because there's no cloud database to restore, but Litestream can't replicate the database to cloud storage because the app has never run.
+The `-if-replica-exists` flag tells Litestream that it's okay if no snapshots exist on cloud storage yet. Otherwise, you'd have a chicken-and-egg problem. Your app could never launch because there's no cloud database to restore, but Litestream can't replicate the database to cloud storage because the app has never run.
 
-Next, the entrypoint script spawns a Litestream process in the background. It watches LogPaste's SQLite database and continuously streams any changes to the cloud storage location:
+Next, the entrypoint script spawns a Litestream process, which watches LogPaste's SQLite database and continuously streams any changes to cloud storage:
 
 ```bash
 # Begin replication to S3 in the background.
 litestream replicate "${DB_PATH}" "${DB_REPLICA_URL}" &
 ```
 
-The entrypoint script ends by launching the Logpaste app, which is just a simple HTTP server:
+The minor hack is in that trailing `&`. It tells the script to run the Litestream process in the background, which is how I can execute two long-running processes in the same Docker container. Ben Johnson has published [a cleaner solution](https://github.com/benbjohnson/litestream-s6-example), but I'm using the hacky version for ease of demonstration.
+
+The entrypoint script ends by launching the Logpaste app, which is a simple HTTP server:
 
 ```bash
 # Start LogPaste server.
 /app/server
 ```
 
-To run the Docker container with all the environment variables populated, I use this command:
+To run the Docker container with all the environment variables populated, I use [this command](https://github.com/mtlynch/logpaste#from-docker--cloud-data-replication):
 
 ```bash
 LITESTREAM_ACCESS_KEY_ID=MY-ACCESS-ID
@@ -275,17 +277,17 @@ document.getElementById("upload").addEventListener("click", (evt) => {
 
 ## Using LogPaste in production
 
-I'm using LogPaste in production for [TinyPilot](https://tinypilotkvm.com), my open-source KVM over IP device. Because users run my software on devices they own, I don't have any diagnostic information when they report issues. LogPaste provides a convenient way for them to share their logs with me.
+I'm using LogPaste in production for [TinyPilot](https://tinypilotkvm.com), my open-source KVM over IP device. Because users run my software on devices they own, I can't see any diagnostic information when they report issues. LogPaste provides a convenient way for users to share their logs with me.
 
 {{<video src="tinypilot-shareable-log.mp4" caption="TinyPilot uses LogPaste to let users generate URLs for their debug logs.">}}
 
-LogPaste has been handling all of TinyPilot's debug logs for the past few months, and it's worked well. The cost for data replication truly is just $0.03 per month:
+LogPaste has handled all of TinyPilot's debug logs for the past few months, and it's worked well. The cost for data replication truly is just $0.03 per month:
 
 {{<img src="aws-bill.png" alt="Screenshot of AWS bill showing $0.03 in S3 charges and $0.00 in data transfer fees" maxWidth="600px" hasBorder="true">}}
 
 My use case is, admittedly, fairly gentle. Only a handful of users upload their logs each day, so there may be pain points with this setup under heavier workloads.
 
-It's also important to note that Litestream can't resolve conflicts between multiple database writes, so you can only run one application server for each database.
+It's also important to note that Litestream can't resolve conflicts between multiple database writes, so each database can have only one application server with write access.
 
 Still, I've been incredibly impressed with Litestream, and I'm eager to use it in more scenarios.
 
