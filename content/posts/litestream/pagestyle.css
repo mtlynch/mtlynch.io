@@ -1,0 +1,29 @@
+.demo {
+  border: 1px dotted #105724;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #e0ffe9;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-form textarea {
+  padding: 0.8rem;
+}
+
+.upload-form button {
+  margin: 1rem 0 1rem auto;
+}
+
+#result {
+  text-align: center;
+}
+
+#error {
+  color: red;
+  text-align: center;
+}

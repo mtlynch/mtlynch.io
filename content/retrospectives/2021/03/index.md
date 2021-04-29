@@ -182,7 +182,7 @@ I hate being responsible for database backups, so I always end up using a manage
 
 Litestream looks like the solution I've been waiting for. It's a lightweight service that replicates a SQLite database to any S3-compatible interface. That means that I can completely blow away a server with zero notice, and all the data remains safely stored in my S3 bucket. When I start the server up again, it will gracefully pull down the database from S3 and resume without me having to do any manual repairs.
 
-To test out Litestream, I created a little [log pasting service](http://logpaste-demo.mtlynch.io/) that I wanted for TinyPilot. I can run it on any Docker hosting service (Heroku, Lightsail, DigitalOcean), but it fits in the free tier of both Heroku and Amazon S3. At any time, I can tear down the Docker container, launch it somewhere else, and it will have all the same data and continue replicating automatically.
+To test out Litestream, I created a little [log pasting service](https://logpaste.com/) that I wanted for TinyPilot. I can run it on any Docker hosting service (Heroku, Lightsail, DigitalOcean), but it fits in the free tier of both Heroku and Amazon S3. At any time, I can tear down the Docker container, launch it somewhere else, and it will have all the same data and continue replicating automatically.
 
 ### [Plaintext accounting](https://plaintextaccounting.org/)
 
