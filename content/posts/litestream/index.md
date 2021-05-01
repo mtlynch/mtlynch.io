@@ -11,7 +11,7 @@ custom_css: true
 images:
 - litestream/og-cover.jpg
 discuss_urls:
-  reddit: https://www.reddit.com/r/programming/comments/n1518s/how_litestream_eliminated_my_database_server_for/
+  reddit: https://www.reddit.com/r/golang/comments/n15ikk/how_litestream_eliminated_my_database_server_for/
   hacker_news: https://news.ycombinator.com/item?id=26981239
 ---
 
