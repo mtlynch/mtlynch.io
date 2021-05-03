@@ -37,6 +37,17 @@ TODO
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric           | March 2021 | April 2021    | Change                                       |
+| ---------------- | ---------- | ------------- | -------------------------------------------- |
+| Unique Visitors  | 5,805      | 5,880         | <font color="green">+75 (+1%)</font>         |
+| Total Pageviews  | 9,762      | 10,483        | <font color="green">+721 (+7%)</font>        |
+| Sales Revenue    | $19,782.96 | $28,880.65    | <font color="green">+$9,097.69 (+46%)</font> |
+| Donations        | $19.92     | $0.00         | <font color="red">-$19.92 (-100%)</font>     |
+| Total Revenue    | $19,802.30 | $28,880.65    | <font color="green">+$9,078.35 (+46%)</font> |
+| **Total Profit**\* | *not calculated*    | **$2,146.50** | **N/A**                                      |
+
+\* It's hard for me to calculate profit quickly in a meaningful way because I do bookkeeping mid-month when all my bank statements come in. The number above is a naive calculation based on change in cash in my checking account over the month, though it doesn't take into account outstanding debt.
+
 ## TinyPilot's new office: the fun stuff
 
 Another part of the new office that I didn't expect to enjoy so much was choosing
@@ -45,7 +56,7 @@ Another part of the new office that I didn't expect to enjoy so much was choosin
   * I like the EdgeRouter 4 I have at home, but Ubiquiti's been going downhill (TODO: link) and pfSense seems to be lying about being open source (TODO: link)
 * Wireless access point: Ruckus R310
 * Door lock: Yale XX
-* File Server: HP XX G7
+* File Server: HP DL380 G7
   * I was going to go with a G8, but I've read that that G7 series is supposed to be quieter
   * I'm mainly buying this so I can try playing with a server rack for the first time
 * Paper Printer: Brother
@@ -99,13 +110,15 @@ When I sat down to implement it, I realized this was more complicated than I exp
 
 All told, it took about six hours. That doesn't sound like a lot, but I don't get very much time to do development work. TinyPilot now has a lot of moving parts, so I'm happy if I get 60-90 minutes per day to write code. In other words, this project was about a week of my coding time.
 
+{{< youtube YUQ9VVuMOZs >}}
+
 And this is nothing against Will's work. The video is what we discussed.
 
 Here are the stats as of this writing:
 
 | Metric       | XX |
 |---------------|----|
-| YouTube view | XX |
+| YouTube views | XX |
 | Mailing list signups | XX |
 | Conversion rate | XX% |
 
@@ -121,13 +134,36 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 {{<revenue-graph project="isitketo">}}
 
+| Metric                   | March 2021  | April 2021  | Change                                       |
+| ------------------------ | ----------- | ----------- | -------------------------------------------- |
+| Unique Visitors          | 63,493      | 56,094      | <font color="red">-7,399 (-12%)</font>       |
+| Total Pageviews          | 141,199     | 123,723     | <font color="red">-17,476 (-12%)</font>      |
+| Domain Rating (Ahrefs)   | 11.0        | 11.0        | 0                                            |
+| AdSense Revenue          | $611.99     | $560.20     | <font color="red">-$51.79 (-8%)</font>       |
+| Amazon Affiliate Revenue | $337.29     | $116.78     | <font color="red">-$220.51 (-65%)</font>     |
+| **Total Revenue**        | **$949.28** | **$676.98** | **<font color="red">-$272.30 (-29%)</font>** |
+
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
 {{<revenue-graph project="htfp">}}
 
+| Metric                    | March 2021  | April 2021  | Change                                       |
+| ------------------------- | ----------- | ----------- | -------------------------------------------- |
+| Unique Visitors           | 185         | 114         | <font color="red">-71 (-38%)</font>          |
+| Gumroad Revenue           | $313.63     | $341.61     | <font color="green">+$27.98 (+9%)</font>     |
+| Blogging for Devs Revenue | $655.20     | $109.20     | <font color="red">-$546.00 (-83%)</font>     |
+| **Total Revenue**         | **$968.83** | **$450.81** | **<font color="red">-$518.02 (-53%)</font>** |
+
 ### [Zestful](https://zestfuldata.com)
 
 {{<revenue-graph project="zestful">}}
+
+| Metric            | March 2021 | April 2021 | Change                                        |
+| ----------------- | ---------- | ---------- | --------------------------------------------- |
+| Unique Visitors   | 480        | 892        | <font color="green">+412 (+86%)</font>        |
+| Total Pageviews   | 1,367      | 2,132      | <font color="green">+765 (+56%)</font>        |
+| RapidAPI Revenue  | $21.97     | $40.82     | <font color="green">+$18.85 (+86%)</font>     |
+| **Total Revenue** | **$21.97** | **$40.82** | **<font color="green">+$18.85 (+86%)</font>** |
 
 ## Wrap up
 
