@@ -50,17 +50,36 @@ TODO
 
 ## TinyPilot's new office: the fun stuff
 
-Another part of the new office that I didn't expect to enjoy so much was choosing
+Another part of the new office that I didn't expect to enjoy so much was choosing the tech infrastructure. Here's a brief tour of what I'm using:
 
-* Router: XX with OPNSense
-  * I like the EdgeRouter 4 I have at home, but Ubiquiti's been going downhill (TODO: link) and pfSense seems to be lying about being open source (TODO: link)
-* Wireless access point: Ruckus R310
-* Door lock: Yale XX
-* File Server: HP DL380 G7
-  * I was going to go with a G8, but I've read that that G7 series is supposed to be quieter
-  * I'm mainly buying this so I can try playing with a server rack for the first time
-* Paper Printer: Brother
-* Shipping Label Printer: XX
+### Door lock: Yale XX
+
+I've heard good things about August, but they only make deadbolts, which the office door didn't support. Yale acquired August in 2017, and they make a door latch with August software. I'm happy with the way it looks, but the software is surprisingly bad.
+
+
+### Router: OPNSense running on a XX mini PC
+
+I like the EdgeRouter 4 I have at home, but Ubiquiti's been going downhill (TODO: link) and pfSense seems to be lying about being open source (TODO: link).
+
+I'm enjoying it so far. The complexity is higher than Ubiquiti, but it's much more intuitive than Microtik.
+
+### Switch: TP-Link XX
+
+It's the same switch I use at home, and I've liked it. It has four PoE ports.
+
+### Wireless Access Point: Rucks R310
+
+Again, same one I use at home. Probably a bit too fancy for a single 125 square foot office, but I love that it's PoE, so it only needs a single cable. With my home Ruckus, I configured it once and never had to mess with it again.
+
+### Paper Printer: Brother XX
+
+Another copy of what I use at home. I have terrible luck with printers that try to serve over the network, especially over WiFi. This is just a dumb USB printer, and I use another server to make it available over the network.
+
+### Print server: CUPS on a Pi 4B
+
+This was surprisingly easy to set up. I stuck a PoE HAT on a Pi 4B (I happen to have many available), installed `cups` and `printer-driver-brlaser`, and it worked smoothly.
+
+### Jumpbox / bastion server: Tailscale on an old Pi 3
 
 To access my machines remotely, I installed Tailscale on an old Raspberry Pi 3 I had lying around. Then, I installed Tailscale on my home desktop, so the two are joined over Tailscale's virtual network whenever both machines have Internet.
 
@@ -82,23 +101,33 @@ Tada! I can access my router's management dashboard.
 
 Apparently, OPNSense has a plugin that allows Tailscale directly on the router, which allows me to access different office machines easily. For now, I'm sticking with this, because I understand what's happening clearly, whereas I find it hard to reason about what's happening when I combina OPNSense and Tailscale.
 
+### Still to come
+
+* HP DL380 G7 rack-mounted server
+  * Mainly because I want to experiment using a server rack for the first time.
+* 12 U server rack
+* A desktop workstation for testing
+
 ## TinyPilot's new office: the annoying stuff
 
-I'm hiring part-time employees.
+The not-so-fun part about opening an office is all the legal stuff.
 
-My landlord also required me to get liability insurance. Industries not as modern. When you fill out their web form, they have business categories like "Retail store - Beverages (cold)" and "Retail store - Beverages (hot)" but for "computers" the only matches are "Computer Repair Consulting."
+Because employees are working on-premises using my equipment, that makes them part-time employees rather than independent contractors. And that means I have to do a whole bunch of paperwork and get worker's comp insurance. My lease also requires me to purchase liability and property insurance.
 
-TinyPilot is in this annoying no-man's land between a manufacturing plant and an office where everyone only uses computers and does no manual labor, so insurers want to treat me as a factory.
+TinyPilot doesn't fit neatly into any existing business category. We manufacture a product in that we screw circuit boards into plastic cases, but we're not what you'd think of as a "manufacturing plant" with heavy equipment. But because employees have to assemble things and occasionally drive to and from our vendors' location, we're not "general office work," either.
 
-JustWorks is pretty annoying.
+When I applied for liability and property insurance, I went through two different 15-minute web forms which ended with the insurer telling me that I had to call and start the process over. When I called, they had no record of my answers and wanted me to start everything over on the phone. I ended up going with [insureon](https://www.insureon.com/) because they had a web form that resulted in an actual quote and their agent was responsive.
+
+For the HR stuff, I went with JustWorks, which I'm beginning to regret. Here's my experience with them so far:
 
 * The on-boarding process involved seven different people contacting me who seemed to not be communicating with each other and asking the same questions repeatedly.
 * They obscure the fact that they require you to use their provider for Worker's Comp insurance, which is a significant hidden fee.
-* Their Worker's Comp insurance provider classified my job as [warehouse worker](https://www.wcribma.org/mass/ToolsAndServices/MACI/Results.aspx?class=8018), so I'm the same risk pool as people who operate forklifts and work with packages weighing hundreds of pounds. When I tried to correct it, they just kept insisting that they assigned me the correct code and refuse to provide details.
-* They by default send you a poster of labor laws and then charge you $50. It's opt-out rather than opt-in, and they don't give you an easy way to opt-out except by emailing your request. The government provides these posters [for free](https://www.mass.gov/service-details/massachusetts-workplace-poster-requirements) (albeit not conveniently), and it feels very nickel-and-dimey to charge me extra for this thing that probably costs them $0.50 when I'm already paying them $150/month.
-* They've given me PDFs where JustWorks sections are pre-filled and my sections are not, even though they could have easily pre-populated the PDF with information I'd already provided.
+* Their Worker's Comp insurance provider classified my job as [warehouse worker](https://www.wcribma.org/mass/ToolsAndServices/MACI/Results.aspx?class=8018), so I'm the same risk pool as people who operate forklifts and work with packages weighing hundreds of pounds. When I tried to correct it, they just kept insisting that they assigned me the correct code and refused to elaborate.
+* They, by default, send you a poster of labor laws and then charge you $50. You can opt-out, but it feels like something that should be included. I'd much prefer them to say, "Hey, thanks for payng us $200/month for a team of only four people. This poster costs us $1 to print, but you can have it for free."
 
-I worked with a lawyer for the first time for a business purpose. I was inspired by re-watching XX's famous talk, "F--- you, pay me." His advice is for consultants and contractors, but his message is that you should have a lawyer review all busin contracts because you give up a tremendous amount of power in letting the other party define all terms of a contract. That was slow, but it was actually pretty fun. He was able to tell me
+Lastly, I "consulted a lawyer" for the first time for my business. I was inspired by re-watching Mike Monteiro's famous talk, ["F--- You, Pay Me."](https://www.youtube.com/watch?v=jVkLVRt6c1U) Monteiro's advice is for consultants and contractors, but his message is that you should have a lawyer review all business contracts. You forfeit a tremendous amount of power in letting the other party define all terms of a contract.
+
+Working with a lawyer added a week to the lease process, so that was stressful. The latency was because I was doing two things at once: hiring a lawyer for the first time and having him review a lease. But the result was pretty fun. My lawyer identified contradictions in the contract and suggested clearer language for the things that were important to me, like Internet availability and limitations on the landlord's rights to enter the leased space.
 
 ## Being more strategic about promotion
 
