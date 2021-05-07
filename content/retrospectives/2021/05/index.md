@@ -206,6 +206,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 * Never commit to a feature request during a live discussion
   * Even if it seems small, it's probably more complicated than it seems.
   * I need more time to think over whether the work is worth the effort.
+* Allocate a lot of time to change
+  * Switching to the new office and hiring a new person is taking a long time, but that's something I should have anticipated.
 
 ### Goals for next month
 
