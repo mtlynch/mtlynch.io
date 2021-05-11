@@ -56,7 +56,7 @@ I wrote an outline that feels right to me, but I haven't yet collected feedback 
 
 TinyPilot has its first official office space! It's a 15-minute walk from my house, so it's a great location. The lease started on May 1st, and I'm in the process of moving operations there.
 
-While I stil primarily work from home, I'm finding it more fun than I expected to have a real office. My house was increasingly becoming a TinyPilot warehouse, so it was a relief to move everything into the office and gain back two full cabinets and a large closet.
+While I still primarily work from home, I'm finding it more fun than I expected to have a real office. My house was increasingly becoming a TinyPilot warehouse, so it was a relief to move everything into the office and gain back two full cabinets and a large closet.
 
 Another part of the new office that I didn't expect to enjoy so much was choosing the tech infrastructure. Here's a brief tour of what I'm using:
 
@@ -66,13 +66,13 @@ Another part of the new office that I didn't expect to enjoy so much was choosin
 
 The office came with a normal lockable door handle, but I wanted a better way of handling temporary access. Also, if an employee relationship goes south and we have to part ways, I don't want to worry that they potentially have a copy of the office keys lying around somewhere.
 
-I've heard good things about August smart locks, but the company only make deadbolts. Yale acquired August in 2017, and they make a door latch with August software.
+I've heard good things about August smart locks, but they only make deadbolts. Yale acquired August in 2017, and they make a door latch with August software.
 
 I'm not sure if this is a side effect of the Yale acquisition, but the installation process was surprisingly bad. Every step of setting it up took at least three tries because the app is so unclear in its directions and fails completely on any hardware or WiFi issue instead of handling errors gracefully.
 
 Now that it's all set up, it's nice to open the door without digging in my pocket for keys, and it's cool to have a log of who's gone in and out of the office.
 
-### Printers:  Zebra LP2844 (shipping labels) and Brother HL-2300D (paper)
+### Printers: Zebra LP2844 (shipping labels) and Brother HL-2300D (paper)
 
 {{<img src="printers.jpg" maxWidth="600px" alt="Photo of printers on my desk">}}
 
@@ -93,7 +93,7 @@ We were already using the Zebra printer at home, so we just moved it to the offi
 
 At home, I have a Ubiquiti EdgeRouter 4, but Ubiquiti's been [going](https://krebsonsecurity.com/2021/03/whistleblower-ubiquiti-breach-catastrophic/) [downhill](https://www.reddit.com/r/sysadmin/comments/mgd2k5/ubiquity_starts_to_serve_selfpromotion_ads_in/) fast this year. pfSense is a popular alternative, but they seem to be [lying about being open-source](https://github.com/rapi3/pfsense-is-closed-source). I've heard from several sources that [OPNsense](https://opnsense.org/) is the "good citizen" fork of pfSense.
 
-The Qotom Q355G4 mini PC is a popular choice for running OPNsense, so I picked up one from Amazon. I of course installed the OS using only a TinyPilot, thanks to its new [virtual storage mounting feature](https://tinypilotkvm.com/blog/whats-new-in-1-5#boot-into-a-virtual-disk-drive).
+The Qotom Q355G4 mini PC is a popular choice for running OPNsense, so I picked up one from Amazon. I, of course, installed the OS using only a TinyPilot, thanks to its new [virtual storage mounting feature](https://tinypilotkvm.com/blog/whats-new-in-1-5#boot-into-a-virtual-disk-drive).
 
 I'm enjoying OPNsense so far. The complexity is higher than Ubiquiti, but it's much more intuitive than Microtik. I can find my way around, but I'm not yet comfortable fiddling with settings.
 
@@ -107,7 +107,7 @@ It's the same switch I use at home, and I've liked it. I'm quickly running out o
 
 {{<img src="ruckus-r310.jpg" maxWidth="400px" alt="Ruckus wireless access point, not mounted">}}
 
-Again, same one I use at home. Probably a bit too fancy for a single 125-square-foot office.
+Again, it's the same one I use at home. Probably a bit too fancy for a single 125-square-foot office.
 
 I love that it's PoE, so it only needs a single cable. With my home Ruckus, I configured it once and never had to tinker with it again, so I like the minimal maintenance.
 
@@ -167,9 +167,9 @@ Here's my experience with JustWorks so far:
 
 * The JustWorks on-boarding process involved seven different people contacting me and asking the same questions, seemingly without any collaboration with anyone else on their team.
 * JustWorks obscures a huge hidden fee in that you're required to purchase worker's comp insurance from them, and you don't find out until a week into the signup process.
-* JustWorks, by default, sends you a poster of labor laws and then charges you $50. Customers can opt-out, but wow does it feel like JustWorks is nickle-and-diming me. If I'm paying $200/month for a team of four people, a cheap poster seems like the kind of thing JustWorks can throw in for free.
+* JustWorks, by default, sends you a poster of labor laws and then charges you $50. Customers can opt-out, but wow does it feel like JustWorks is nickel-and-diming me. If I'm paying $200/month for a team of four people, a cheap poster seems like the kind of thing JustWorks can throw in for free.
 
-The most frustrating part of JustWorks is that, for worker's comp insurance, they've classified my job as [wholesale warehouse worker](https://www.wcribma.org/mass/ToolsAndServices/MACI/Results.aspx?class=8018). I'm the same risk pool as people who move giant pallets around with a forklift. Even though I defined my job as purely computer work, the insurance rate on my pay is 3x higher than employees who actually perform manual work of assembling devices. When I tried to correct the rate, JustWorks kept insisting that they assigned me the correct code and refused to elaborate.
+The most frustrating part of JustWorks is that, for worker's comp insurance, they've classified my job as a [wholesale warehouse worker](https://www.wcribma.org/mass/ToolsAndServices/MACI/Results.aspx?class=8018). I'm in the same risk pool as people who move giant pallets around with a forklift. Even though I defined my job as purely computer work, the insurance rate on my pay is 3x higher than employees who actually perform manual work of assembling devices. When I tried to correct the rate, JustWorks kept insisting that they assigned me the correct code and refused to elaborate.
 
 I finally got on the phone with my account manager and explained to him that my job is limited to writing software and managing people, so it makes no sense to classify me as a warehouse worker. He was understanding and said he'd talk to the worker's comp team. A few days later, he relayed this message:
 
