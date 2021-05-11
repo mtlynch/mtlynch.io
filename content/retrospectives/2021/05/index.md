@@ -205,7 +205,7 @@ TinyPilot runs on a Raspberry Pi, which has electronic pins that turn on and off
 
 This seemed like a great idea! It could open up a whole new market for TinyPilot. And even though other people had blogged about using a Raspberry Pi to control a DSLR's shutter, nobody had ever combined it with video capture and put it all in a slick web interface.
 
-With Will would doing the heavy lifting of creating the circuit and shooting the video, this felt like a slam dunk. All I had to do was add a button to a web UI. That should take an hour of my time at the most.
+With Will doing the heavy lifting of creating the circuit and shooting the video, this felt like a slam dunk. All I had to do was add a button to a web UI. That should take an hour of my time at the most.
 
 When I sat down to implement the software portion, I quickly realized that there was more work than just adding a button. I needed to update TinyPilot's installer to include the right library for controlling Raspberry Pi's electronic interfaces. And I can't just stick a button anywhere &mdash; I had to rearrange the UI to put the button somewhere sensible. Even after I had a working solution, Will and I had to iterate on it a few times as we discovered what worked with different cameras.
 
