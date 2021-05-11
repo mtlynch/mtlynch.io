@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 10"
 date: 2021-05-11T00:00:00-04:00
 description: TinyPilot gets its first real office.
+images:
+  - /retrospectives/2021/04/move-in-day.jpg
 ---
 
 ## Highlights
@@ -55,6 +57,8 @@ I wrote an outline that feels right to me, but I haven't yet collected feedback 
 ## TinyPilot's new office: the fun stuff
 
 TinyPilot has its first official office space! It's a 15-minute walk from my house, so it's a great location. The lease started on May 1st, and I'm in the process of moving operations there.
+
+{{<img src="move-in-day.jpg" maxWidth="700px" alt="Photo of TinyPilot's office on move-in day" caption="Day one at the new office (it's much tidier now)">}}
 
 While I still primarily work from home, I'm finding it more fun than I expected to have a real office. My house was increasingly becoming a TinyPilot warehouse, so it was a relief to move everything into the office and gain back two full cabinets and a large closet.
 
