@@ -285,13 +285,6 @@ It's important to me that the *main* branch has a sane commit history. In all ot
 
 Write sensible pull request titles and descriptions. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes the style I prefer, except applied to the pull request, not the individual commits.
 
-### A few Git rules
-
-* Don't squash a commit after you've pushed it (especially after I've reviewed it).
-  * Squashing makes it hard to track edits during the review
-* If you need new changes from the main branch, **[rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)** the changes, never *merge*.
-  * Merging clutters the pull request and makes it hard to review.
-
 ## Testing
 
 When you create a pull request, you're responsible for ensuring all tests pass in continuous integration. Fix any build breaks before sending me code to review.
