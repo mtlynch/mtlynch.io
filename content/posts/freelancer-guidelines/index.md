@@ -122,7 +122,7 @@ It's okay for response time to run longer than one day occasionally, but it shou
 
 ### Meetings
 
-Meetings are useful for topics that are inefficient or impossible to communicate in writing, but they come at a significant cost. Meetings interrupt focus and constrain schedules, so I minimize their frequency and length.
+Meetings are useful for topics that are inefficient or impossible to communicate in writing. They come at a significant cost &mdash; meetings interrupt focus and constrain schedules, so I keep them to a minimum.
 
 I use emails to communicate facts and meetings to discuss opinions. For example, if we review a design document, we don't need to read it together live. Instead, we can read the document beforehand and reserve the meeting time for interactive discussion.
 
@@ -246,7 +246,7 @@ Once you have working code, look for opportunities to simplify or refactor the l
 
 I thoroughly review all code changes and provide detailed feedback.
 
-My comments are not meant to criticize you or make you feel bad. I review rigorously to help me understand the code and bring it to a state where I can maintain it long-term.
+My comments are not meant to criticize you or make you feel bad. I review rigorously to understand the code and bring it to a state where I can maintain it long-term.
 
 These articles explain my code review process:
 
@@ -292,6 +292,7 @@ When you create a pull request, you're responsible for ensuring all tests pass i
 If you've added a feature or otherwise changed behavior, update the automated tests to exercise the new behavior.
 
 If you've modified a feature that's difficult to test with automation, manually test the functionality to exercise the new code. If you can't find a way to do that, warn me that it's untested when you send it for review (this should be extremely rare).
+
 
 ## Billable hours
 
