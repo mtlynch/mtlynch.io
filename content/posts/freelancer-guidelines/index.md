@@ -293,7 +293,6 @@ If you've added a feature or otherwise changed behavior, update the automated te
 
 If you've modified a feature that's difficult to test with automation, manually test the functionality to exercise the new code. If you can't find a way to do that, warn me that it's untested when you send it for review (this should be extremely rare).
 
-
 ## Billable hours
 
 I consider almost everything you do in service of working with me to be billable work.
