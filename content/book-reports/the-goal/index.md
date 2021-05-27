@@ -35,4 +35,48 @@ The story is funny in that it's kind of shamelessly self-aggrandizing. It's abou
 
 ## Key Takeaways
 
-*
+### Science is not truth
+
+* Science is the process by which we create a minimum set of assumptions necessary to explain a phenomenon.
+
+>The Law of Conservation of Energy of physics is not truth. It is just an assumption that is valid in explaining a tremendous amount of natural phenmoena. Such an assumption can never be proven since even an infinite number of phenmena that can be explained by it does not prove its universal application. On the other hand, it can be disproved by just a single phenomenon that cannot be explained by the assumption. This disproving does not detract from the validity of the assumption. It just highliughts the need or even the existence of another assumption that is *more* valid. This is the case with the assumption of the conservation of energy which was replaced by Einstein's more global &mdash; more valid &mdash postulation of the conservation of energy and mass. Einstein's assumption is not true to the same extent that the previous one was not "true."
+
+* We've done too much gatekeeping around the label "science."
+  * We think of science as a way to explain physics, math, and biology, but we should accept the study of businesses and organizations as real science as well.
+
+### Basic characters and plot
+
+*The Goal* explains non-fiction ideas through a fictional story, so it's hard to explain without giving some basics on the story itself.
+
+* **Alex** is the manager of a ~100-person factory that manufactures some unspecified set of physical products.
+* **Jonah** is an Israeli physicist-turned-business consultant. Alex studied under him in college and then runs into him many years later at the start of this story.
+
+Alex's factory is underperforming and company executives are considering shutting down the entire factory. Jonah claims that Alex's problems result from blindly accepting conventional wisdom about business practices. Jonah begins advising Alex on how to approach his business scientifically from first principles.
+
+### Local efficiencies are irrelevant
+
+* Alex brags to Jonah that new robots in the factory lowered cost while improving efficiency by 30%.
+  * Jonah asks if they shipped more products -> No.
+  * Jonah asks if they fired anyone (reduced labor costs) -> No.
+  * Jonah asks if they reduced inventory (reduced warehousing costs) -> No.
+  * Jonah claims that these answers prove that the robots have not improved efficiency, as they failed to increase sales, reduce costs, or increase throughput.
+* Jonah claims that all of Alex's metrics for measuring efficiency are incorrect.
+  * Because everyone in the company uncritically accepts these metrics, nobody notices that the metrics don't align with the true goal of the company.
+
+### The goal
+
+* The goal of any company is to make money.
+* An activity is productive if it moves the company closer to its goal.
+  * Any activity within a company must be measured in terms of whether it helps the company earn money.
+
+### Metrics
+
+* Three main metrics indicate whether a company is successful at making money.
+  1. Net profit: How much the company earns in absolute dollar amounts.
+  1. Return on investment: Net profit must be judged in the context of initial investment. A $10M profit is great for a $1M investment but a poor return for a $50B investment.
+  1. Cash flow: Even with healthy profits and return on investment, a business can go bankrupt if its cash flow is poor.
+
+* Jonah suggests the following metrics, which express equivalent ideas but are more practical to measure:
+  1. Throughput: the rate at which the system generates money through sales.
+  1. Inventory: all the money the system has invested in purchasing things which it intends to sell.
+  1. Operational expense: all the money the system spends in order to turn inventory into throughput.
