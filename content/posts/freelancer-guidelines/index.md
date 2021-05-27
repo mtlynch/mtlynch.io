@@ -335,11 +335,13 @@ If we're on a platform such as Upwork, where monitoring is built-in, I'll always
 
 ## Progress updates
 
-Aim to share progress updates every two to eight hours.
+It's difficult to specify exactly how frequently to share updates, as there's a degree of judgment required.
 
-Provide updates on the more frequent side of the range for tasks where the total time required is unclear, like bug investigations. You can update less frequently for tasks that are large in scope, like adding a new feature. The absolute upper-limit on time without a status update should be three calendar days of billable work or 10 billable hours, whichever happens first.
+For tasks where the scope is obvious, like feature work that's well-understood, share an update once every eight to ten hours of billable work. For tasks where the scope is variable, such as bug investigations or features that require experimentation, aim to update once for every two to four hours of billable work. The absolute upper-limit on time without a status update should be three calendar days of billable work or 10 billable hours, whichever happens first.
 
-The best way to share status update is with pull requests that reflect progress. Ideally, you can peel off a part of your work that makes a complete pull request, but if not, you can share a pull request and mark it as "draft" to indicate it's still a work in progress and not ready for review. If you're doing a bug investigation, update the Github issue summarizing what you've investigated and what you've learned. If you don't have results that fit in a Github issue or pull request, send me an email, but it should be the last option.
+The best way to share status update is with pull requests that reflect progress. Ideally, you can peel off a part of your work that makes a complete pull request, but if not, you can share a pull request and mark it as "draft" to indicate it's still a work in progress. To share progress during a bug investigation, update the Github issue summarizing what you've investigated and what you've learned.
+
+You can email me privately for meta-discussions about the work that you prefer not to share widely on Github, but try to keep as much discussion as possible on Github.
 
 ## Payment
 
