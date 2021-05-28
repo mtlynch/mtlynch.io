@@ -4,17 +4,13 @@ date: 2021-05-23T16:09:09-04:00
 rating: 7
 purchase_url: https://www.indiebound.org/book/9780884271956
 ---
-
-TODO: Short summary
-
+*The Goal* is about deriving . It involves identifying the bottlenecks of a business and reorganizing processes until that bottlenecks is no longer the limiting factor. It sounds simple and perhaps obvious, but it helped me to think about my own business.
 
 <!--more-->
 
-It's a business parable, so even though it's meant to teach about business, it's told in the format of a novel. It reminded me of [*Built to Sell*](https://www.indiebound.org/book/9781591845829) and [*The Five Dysfunctions of a Team*](https://www.indiebound.org/book/9780787960759).
+The book is a novel that teaches Goldratt's ideas through a fictional story. It makes the book a light, engaging read, but it also feels like a lot of fluff to teach a few simple concepts. I felt silly that the author was doing the equivalent of hiding vitamins in my oatmeal because I can't pay attention to a real nonfiction book. That said, the last chapter is pure lessons and no story, and I found it difficult to pay attention and get through it, so maybe I the novel format is what I need to stay engaged.
 
-The novel format is a double-edged sword. It makes it a light, engaging read, but it also feels like a lot of fluff to teach a few simple concepts. It makes me feel silly that the author feels like I can't pay attention to a real nonfiction book, so he has to spoonfeed me the information through this hokey novel. That said, the last chapter is pure lessons and no story, and I found it difficult to pay attention and get through it, so maybe I need the novel format.
-
-The story is funny in that it's kind of shamelessly self-aggrandizing. It's about a struggling factory manager who meets a nearly omniscient, amazing Israeli physicist-turned-business-consultant. The author, Eliyahu Goldratt, happens to be an Israeli physicist-turned-business-consultant.
+The story is funny in that it's the author's thinly veiled business fantasy. The protagonist is a struggling factory manager whose plant is about to fold. He's mostly helpless without the guidance of his friend, a mysterious and near-omniscient Israeli physicist-turned-business-consultant. The author, Eliyahu Goldratt, happens to be an Israeli physicist-turned-business-consultant.
 
 ---
 
@@ -62,6 +58,10 @@ Alex's factory is underperforming and company executives are considering shuttin
   * Jonah claims that these answers prove that the robots have not improved efficiency, as they failed to increase sales, reduce costs, or increase throughput.
 * Jonah claims that all of Alex's metrics for measuring efficiency are incorrect.
   * Because everyone in the company uncritically accepts these metrics, nobody notices that the metrics don't align with the true goal of the company.
+* Alex reviews his sales figures and inventory metrics and discovers that Jonah is right.
+  * Robots had no impact on sales, and they increased inventory (decreased throughput).
+  * Because the robots were so expensive, the company pressured the factory to run them at 100% capacity, even when there was no demand for the parts they produced.
+    * The result was a huge increase in half-finished inventory.
 
 ### The goal
 
@@ -80,3 +80,32 @@ Alex's factory is underperforming and company executives are considering shuttin
   1. Throughput: the rate at which the system generates money through sales.
   1. Inventory: all the money the system has invested in purchasing things which it intends to sell.
   1. Operational expense: all the money the system spends in order to turn inventory into throughput.
+
+### The myth of the balanced plant
+
+* Every factory strives to be perfectly "balanced."
+  * Where "balanced" means that the capacity for every resource perfectly matches market demand.
+  * Every employee and machine is busy all the time, and there's a customer ready to purchase the finished product as soon as it leaves the factory.
+* A balanced plant is unattainable in practice.
+* A plant with zero idle time is inefficient because it means people must be working on products faster than the rate the company can sell them.
+  * They're optimizing for local efficiencies rather than optimizing for what will most improve the company's bottom line.
+* If you perfectly match capacity to demand, productivity will decrease.
+  * This is due to two factors:
+    1. Dependent events: Manufacturing a product involves multiple steps that depend on earlier processes.
+    1. Statistical fluctuations: There's always random variance in the time it takes for any particular step in a pipeline.
+  * Example:
+    * A product passes through five departments for a task that takes, on average, an hour in each department.
+    * Due to statistical variance, some departements will finish their work in a little more than an hour, and some will be a little faster than an hour.
+    * If batches of products go through this pipeline, backups will form because delays in one stage impact all subsequent stages. Finishing early has no benefit unless the next department is ready to process the incoming batch immediately.
+
+### Dependencies and fluctuations: hiking single-file
+
+* Alex leads a Boy Scout troop on a hike and observes dependent events and statistical events in the boys' pace.
+* The path is narrow, so everyone has to walk single-file.
+* Even though most boys can walk ~2 mph, the group moves slower than that.
+* One heavyset boy is slower than the rest and begins falling behind.
+* Alex realizes that the average pace doesn't matter, because the slowest team member sets the pace of the group.
+* The line of boys has dependent events and statistical fluctuations.
+  * Statistical fluctuations: Boys don't walk a constant speed, but rather a mixture of faster and slower paces about 2 mph.
+  * Dependent events: You can't move faster than the person ahead of you in line, so your speed is limited by theirs.
+* Solution: The troop discovers the slowest boy is carrying a ton of excess weight in his pack, so they divide it up. The boy can now move much faster, which means the troop overall moves faster.
