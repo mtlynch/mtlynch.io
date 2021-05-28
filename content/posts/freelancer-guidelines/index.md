@@ -273,9 +273,11 @@ I use Git for source control. You don't need to be a Git expert as long as you u
 * Push and pull changes
 * Rebase a commit (occasionally)
 
-### Repo access
+### Github permissions
 
 I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can clone it and begin making pull requests with no additional permissions.
+
+I use two Github integrations that require annoyingly broad permissions: [CircleCI](https://circleci.com/) and [Reviewable](https://reviewable.io/). Both applications require write access to all repos in your Github account. If you don't feel comfortable with those permissions, you'll need to create a dedicated Github user account for your work with me so that you can grant those tools full access.
 
 ### Commit hygiene
 
