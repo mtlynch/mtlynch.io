@@ -6,7 +6,7 @@ description: TODO - One-line summary
 
 ## Highlights
 
-*
+* I need to increase TinyPilot's profits.
 
 ## Goal Grades
 
@@ -28,8 +28,8 @@ We finally moved TinyPilot operations out of my house and into a real office. Th
 
 ### Gather feedback on the table of contents for [*Refactoring English*](https://refactoringenglish.com) and iterate on it
 
-* **Result**: XX
-* **Grade**: A
+* **Result**: I gathered feedback, but I'm not yet sure how to integrate it
+* **Grade**: B
 
 I got feedback from the [Write Useful Books community](https://writeusefulbooks.com) and from my mailing list. Responses were a bit lower than I hoped (6 responses from 202 subscribers), but it provided useful feedback.
 
@@ -39,11 +39,17 @@ I got feedback from the [Write Useful Books community](https://writeusefulbooks.
 
 ## How is $30k/month not profitable?
 
+I was talking to my girlfriend recently and said that I feel like I'm probably doing a lot of things wrong because I'm not in touch with people who run businesses like mine. She asked who I'd want to reach out to, and I realized I can just do that. So I emailed Mike Perham, the founder of Sidekiq.
+
+Mike's [interview on Indie Hackers](https://www.indiehackers.com/podcast/016-mike-perham-of-sidekiq) is one of my favorites. Because he making $80k/month writing an open source software package. Customers run their software on their own machines, so nothing that can happen that requires immediate attention, like a service outage if you're hosting a service.
+
+>Get those profits up. A 5% profit margin is not a healthy business to be in. Either get your costs down, massage your prices a bit or find a software-only addon that can be closer to pure profit.
+
 My average revenue is about $30k per month, but I'm barely breaking even.
 
 I haven't done all my bookkeeping for May yet, so let's look at April.
 
-{{<img src="pie-chart.png" maxWidth="800px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
+{{<img src="pie-chart.png" maxWidth="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
 
 |                 Category          | Total        |
 |-----------------------------------|--------------|
@@ -59,6 +65,20 @@ I haven't done all my bookkeeping for May yet, so let's look at April.
 | Cloud Services                    |   $137.33    |
 | Local Contractors                 |   $129.12    |
 | Misc                              |    $161.21   |
+
+Raw materials isn't so surprising. My margin on products is generally around XX%, so that looks about right.
+
+Software is the big one that stands out. It accounts for a third of my expenses.
+
+>Why don't you just write the software yourself?
+
+I can't really do that at this point. There's too much to manage, so I don't get enough uninterrupted streaks of development time.
+
+>Why don't you just hire cheaper developers?
+
+The developer's I work with are really good. I've worked with developers who aren't as good, and the issue is that they require a lot of management or they drive down the quality of the code, and if they do that for too long, it becomes unmaintainable garbage. The developers I work with now are
+
+So I don't see any opportunity to reduce costs.
 
 ## I'm just a manager
 
