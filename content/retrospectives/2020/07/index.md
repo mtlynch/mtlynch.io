@@ -223,7 +223,7 @@ I was nervous because I've found that customers who can't afford the standard ra
 
 * When offering people something in exchange for participating in a customer interview, make sure the offer won't become burdensome if your plans change.
 * Allow people to sign up for your mailing list, even if you don't know how you'll use it.
-  * I created an [Is It Keto mailing list](https://isitketo.org/discounts) for the first time this month and steadily receive 20 new subscribers per week with zero effort.
+  * I created an Is It Keto mailing list for the first time this month and steadily receive 20 new subscribers per week with zero effort.
 
 ### Goals for next month
 
