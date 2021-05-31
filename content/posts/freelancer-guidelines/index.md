@@ -335,6 +335,16 @@ I trust you to report your hours honestly. I'll never ask you to "prove" your ho
 
 If we're on a platform such as Upwork, where monitoring is built-in, I'll always make the monitoring features optional. I won't review the monitoring data unless there's an egregious discrepancy in hours. Even in that case, I'll speak to you before inspecting the data.
 
+## Progress updates
+
+It's difficult to specify exactly how frequently to share updates, as there's a degree of judgment required.
+
+For tasks where the scope is obvious, like feature work that's well-understood, share an update once every eight to ten hours of billable work. For tasks where the scope is variable, such as bug investigations or features that require experimentation, aim to update once for every two to four hours of billable work. The absolute upper-limit on time without a status update should be three calendar days of billable work or 10 billable hours, whichever happens first.
+
+The best way to share status update is with pull requests that reflect progress. Ideally, you can peel off a part of your work that makes a complete pull request, but if not, you can share a pull request and mark it as "draft" to indicate it's still a work in progress. To share progress during a bug investigation, update the Github issue summarizing what you've investigated and what you've learned.
+
+You can email me privately for meta-discussions about the work that you prefer not to share widely on Github, but try to keep as much discussion as possible on Github.
+
 ## Payment
 
 Please send me invoices for your hours every two weeks. Expect payment within five business days of the invoice, usually sooner.
