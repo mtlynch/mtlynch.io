@@ -39,7 +39,26 @@ I got feedback from the [Write Useful Books community](https://writeusefulbooks.
 
 ## How is $30k/month not profitable?
 
+My average revenue is about $30k per month, but I'm barely breaking even.
+
 I haven't done all my bookkeeping for May yet, so let's look at April.
+
+{{<img src="pie-chart.png" maxWidth="800px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
+
+|                 Category          | Total        |
+|-----------------------------------|--------------|
+| Raw Materials                     | $15,637.68   |
+| Software Contractors              |  $9,331.79   |
+| Electrical Engineering Consulting |   $901.25    |
+| Office Rent                       |   $550.00    |
+| Advertising                       |   $370.00    |
+| Legal Counsel                     |   $270.00    |
+| Office Equipment                  |   $233.72    |
+| Graphic Design                    |   $169.00    |
+| Stickers                          |   $163.63    |
+| Cloud Services                    |   $137.33    |
+| Local Contractors                 |   $129.12    |
+| Misc                              |    $161.21   |
 
 ## I'm just a manager
 
