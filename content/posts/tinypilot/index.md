@@ -317,7 +317,7 @@ sudo reboot
 
 If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/mtlynch/tinypilot/blob/master/quick-install).
 
-The script bootstraps a self-contained [Ansible](https://docs.ansible.com/ansible/latest/index.html) environment with my [TinyPilot Ansible role](https://github.com/mtlynch/ansible-role-tinypilot). It installs four services that run on every boot:
+The script bootstraps a self-contained [Ansible](https://docs.ansible.com/ansible/latest/index.html) environment with my [TinyPilot Ansible role](https://github.com/tiny-pilot/ansible-role-tinypilot). It installs four services that run on every boot:
 
 * [nginx](https://nginx.org/): a popular open-source web server
 * [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
@@ -367,7 +367,7 @@ If you'd like to support further development of this software, consider [donatin
 All TinyPilot software is open-source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
 * [tinypilot](https://github.com/mtlynch/tinypilot.git): The TinyPilot web interface and backend.
-* [ansible-role-tinypilot](https://github.com/mtlynch/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
+* [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
 ---
 *Special thanks to Max Devaev for his incredible work on [uStreamer](https://github.com/pikvm/ustreamer) and his contributions to TinyPilot.*
