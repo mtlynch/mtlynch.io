@@ -54,7 +54,7 @@ Exciting outcomes are naturally more attractive than fundamentals. If I wrote a 
 
 \* *Provisional until I do real bookkeeping for the month. This number is just the delta in my checking account since May 1st. It's artificially inflated because I wasn't able to purchase Raspberry Pi boards this month due to chip shortages. My next order may cost $8k and completely wipe out all profits.*
 
-TinyPilot had its second-best month ever. It was exciting how everything worked smoothly at this level of sales. When a similar rush hit in January, it overwhelmed us. Fortunately, we've improved our order fulfillment workflow, so all of our systems worked as normal.
+TinyPilot had its second-best month ever. It was exciting how everything worked smoothly at this level of sales. When a similar rush hit in January, it [overwhelmed us](/retrospectives/2021/02/#tinypilots-first-postmortem). Fortunately, we've improved our order fulfillment workflow, so all of our systems worked as normal.
 
 ## I'm just a manager
 
