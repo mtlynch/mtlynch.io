@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 11"
-date: 2021-06-02T00:00:00-04:00
+date: 2021-06-03T00:00:00-04:00
 description: How do I increase TinyPilot's profit margins?
 ---
 
