@@ -163,7 +163,6 @@ This would be a nice software as a service subscription opportunity, which would
 
 Still, I want to avoid hosting a service [where I have to be on-call](/solo-developer-year-3/#you-can-build-a-successful-business-without-being-available-247). I'm exploring the possibility of working with a vendor that can manage the operational aspects of the service.
 
-
 ### Talk to a lawyer who specializes in open-source licensing
 
 There's a lot I still don't understand about open-source licensing, so I should talk to a lawyer to find out what my options are. The ideal license would keep TinyPilot affordable for personal users who can try it at home and then bring it to their employer for a more expensive license in a commercial setting, [similar to Sidekiq](https://github.com/mperham/sidekiq/wiki/Commercial-FAQ).
