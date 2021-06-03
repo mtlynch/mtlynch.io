@@ -50,9 +50,7 @@ I wrote an outline that feels right to me, but I haven't yet collected feedback 
 | Sales Revenue    | $19,782.96 | $28,880.65    | <font color="green">+$9,097.69 (+46%)</font> |
 | Donations        | $19.92     | $0.00         | <font color="red">-$19.92 (-100%)</font>     |
 | Total Revenue    | $19,802.30 | $28,880.65    | <font color="green">+$9,078.35 (+46%)</font> |
-| **Net Profit**\* | *not calculated*    | **$2,146.50** | **N/A**                                      |
-
-\* It's hard for me to calculate profit quickly because I do bookkeeping mid-month after all my bank statements arrive. The profit above is simply the change in my checking account balance in the last month. It's not the full picture, as it ignores outstanding debt.
+| **Net Profit**   | **-$352.77**    | **$843.56** | **N/A**                                      |
 
 ## TinyPilot's new office: the fun stuff
 
