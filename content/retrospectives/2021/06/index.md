@@ -33,11 +33,11 @@ We finally moved TinyPilot operations out of my house and into a real office. Th
 * **Result**: I gathered feedback, but I'm not yet sure how to integrate it
 * **Grade**: B
 
-I got feedback from the [Write Useful Books community](https://writeusefulbooks.com) and from my mailing list. Response rate was a bit lower than I hoped (6 responses from 202 subscribers), but it provided [helpful feedback](https://twitter.com/deliberatecoder/status/1396595066316148742).
+I got feedback from the [Write Useful Books community](https://writeusefulbooks.com) and from my mailing list. Six people responded out of 202 subscribers, which was a bit lower than I hoped, but it provided [helpful feedback](https://twitter.com/deliberatecoder/status/1396595066316148742).
 
-People seemed more interested in the high-level tasks like "Write better blog posts," and less interested in chapters that explain how to improve verb use. I want to reorder things to front-load the interesting parts, but I'm not sure how to do that because the later chapters depend on the earlier ones.
+People seemed more interested in the high-level tasks like "Write better blog posts" and less interested in chapters that explain how to improve verb use. I want to reorder things to front-load the interesting parts, but I'm not sure how to do that because the later chapters depend on the earlier ones.
 
-Exciting outcomes are naturally more attractive than fundamentals. If I wrote a book about creating a video game, people would be interested in chapters like, "How to build enemies with intelligent AI" and probably not so interested in "the basics of linear algebra." That doesn't mean that I can just skip the fundamentals, but maybe it means I need to find ways to keep the lessons practical and easy to apply while teaching the fundamentals
+Exciting outcomes are naturally more attractive than fundamentals. If I wrote a book about creating a video game, people would be interested in chapters like "How to build enemies with intelligent AI" and probably not so interested in "the basics of linear algebra." That doesn't mean that I can just skip the fundamentals, but maybe it means I need to find ways to keep the lessons practical and easy to apply while teaching the fundamentals
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -50,7 +50,7 @@ Exciting outcomes are naturally more attractive than fundamentals. If I wrote a 
 | Sales Revenue   | $28,880.65  | $38,767.77 | <font color="green">+$9,887.12 (+34%)</font> |
 | **Profit**      | **$843.56** | **$7,929.10\***    | **N/A**                                      |
 
-\* *Provisional until I do real bookkeeping for the month. This number is just the delta in my checking account since May 1st. It's artifically inflated because I wasn't able to purchase Raspberry Pi boards this month due to chip shortages. My next order may cost $8k and completely wipe out all profits.*
+\* *Provisional until I do real bookkeeping for the month. This number is just the delta in my checking account since May 1st. It's artificially inflated because I wasn't able to purchase Raspberry Pi boards this month due to chip shortages. My next order may cost $8k and completely wipe out all profits.*
 
 TinyPilot had its second-best month ever. It was exciting how everything worked smoothly at this level of sales. When a similar rush hit in January, it overwhelmed us. Fortunately, we've improved our order fulfillment workflow, so all of our systems worked as normal.
 
@@ -66,7 +66,7 @@ I now relate to Peter's sentiment. I'll often get to the end of the day and feel
 * three local staffers who handle inventory, assembly, and order fulfillment
 * two vendors with whom I work closely on 3D printing and electrical engineering
 
-So, eight people in total that I communicate with at least once per week. And on top of that, there are other people and services I work with like the office's landlord, my HR/payroll service, our knowledge base, and tools for tracking inventory. And I'm the only one handling customer support and sales.
+So, eight people in total that I communicate with at least once per week. And on top of that, there are other people and services I work with, like the office's landlord, my HR/payroll service, our knowledge base, and tools for tracking inventory. And I'm the only one handling customer support and sales.
 
 Taking that into consideration, it feels more reasonable that I spend most of my time just emailing people. I need to adjust my strategies to embrace management even more.
 
@@ -88,7 +88,7 @@ These tasks primarily cross domains or roles, like managing tools that only my l
 
 ## How is $30k/month not profitable?
 
-I was lamenting recently to my girlfriend that there are likely easy solutions to many of my issues growing TinyPilot, but I'm unaware of them because I'm not in touch with people who run businesses like mine. She asked who I'd want advice from, and pointed out that I could just think of people and email them.
+I was lamenting recently to my girlfriend that there are likely easy solutions to many of my issues growing TinyPilot, but I'm unaware of them because I'm not in touch with people who run businesses like mine. She asked who I'd want advice from and pointed out that I could just think of people and email them.
 
 The first person who came to mind was [Mike Perham](https://www.mikeperham.com/), the founder of Sidekiq. Mike's [interview on Indie Hackers](https://www.indiehackers.com/podcast/016-mike-perham-of-sidekiq) is one of my favorites. I listened to it when I was still an employee at Google, and his business has always stuck with me as the ideal indie software business. He was earning ~$80k/month writing open-source software. Best of all, customers run Sidekiq on their own machines, so it's nearly impossible for an emergency to pop up that demands Mike's immediate attention.
 
@@ -123,9 +123,9 @@ My second largest expense is software development, which probably seems strange 
 
 I could hire cheaper developers, but that would quickly become disastrous. The developers I work with are especially talented. They keep the quality of the codebase high so that the software continues to be maintainable and low in bugs.
 
-I've worked with cheaper developers (~$30/hr), and they either can't figure out how to do the work at all or they apply naïve implementations that lead to bugs and maintenance headaches later on. If I staffed the project with low-cost developers, the codebase would become an unmaintainable nightmare within a few months.
+I've worked with cheaper developers (~$30/hr), and they either can't figure out how to do the work at all, or they apply naïve implementations that lead to bugs and maintenance headaches later on. If I staffed the project with low-cost developers, the codebase would become an unmaintainable nightmare within a few months.
 
-Outside of this, I don't have any expenses I can meaningfully cut. My third biggest expense is my local fulfillment staff, but even slashing 50% of costs there would only be a 2.5% reduction in overall expenses, so it's not worth messing with a system that works well.
+Outside of this, I don't have any expenses I can meaningfully cut. My third biggest expense is my local fulfillment staff, but even slashing 50% of costs would only reduce overall expenses by 2.5%, so it's not worth messing with a system that works well.
 
 The other way I can follow Mike Perham's advice is to increase revenue.
 
@@ -157,7 +157,7 @@ I'm going to talk to large customers about an Enterprise version of TinyPilot wi
 
 ### Offer a SaaS add-on
 
-TinyPilot is easy to use if you're on the same local network as the device, but if customers want to access their TinyPilots from over the Internet, they currently have to rely on third-party solutions. I've floated the idea to several customers of a "TinyPilot Cloud Portal": a secure web interface which gives them remote access to their TinyPilot devices anywhere on the Internet.
+TinyPilot is easy to use if you're on the same local network as the device, but if customers want to access their TinyPilots from over the Internet, they currently have to rely on third-party solutions. I've floated the idea to several customers of a "TinyPilot Cloud Portal": a secure web interface that gives them remote access to their TinyPilot devices anywhere on the Internet.
 
 This would be a nice software as a service subscription opportunity, which would provide a complement to TinyPilot's hardware offerings at a higher profit margin.
 
@@ -267,7 +267,7 @@ And you'll see JSON output like this:
 * When it comes to new employee training, "tell, don't show."
   * We trained our first local employee almost entirely through written instructions rather than live discussions.
   * We were all happy with how easily the ramp-up went, and it led to a smooth transition of responsibilities to the new employee.
-  * A second local employee started in mid-May, and we're expecting the ramp up to be even easier because everything is already documented.
+  * A second local employee started in mid-May, and we're expecting the ramp-up to be even easier because everything is already documented.
 * Management requires time, too.
   * If I want to manage well, I need to let go of tasks that my teammates can do instead.
 * TinyPilot needs higher profit margins.
