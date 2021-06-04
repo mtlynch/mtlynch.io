@@ -285,7 +285,7 @@ Some developers believe that every commit is beautiful and sacred. I'm not one o
 
 It's important to me that the *main* branch has a sane commit history. In all other branches, commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
 
-Write sensible pull request titles and descriptions. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes the style I prefer, except applied to the pull request, not the individual commits.
+If you submit a pull request with many commits, I'll read the pull request title, description, and comments. I don't dig through the individual commits, as I assume they represent your intermediate work. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes my preferred style of documenting contributions, except applied to the pull request, not the individual commits.
 
 ## Testing
 
