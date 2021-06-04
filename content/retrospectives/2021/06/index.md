@@ -109,6 +109,7 @@ Based on Mike's advice, I took a closer look at my expenses. I haven't done my b
 | Raw Materials                     | $15,637.68   |
 | Software Contractors              |  $9,331.79   |
 | Local Fulfillment Staff           |  $1,460.12   |
+| Postage                           |  $1,262.53   |
 | Electrical Engineering Consulting |   $901.25    |
 | Office Rent                       |   $550.00    |
 | Advertising                       |   $370.00    |
@@ -116,7 +117,7 @@ Based on Mike's advice, I took a closer look at my expenses. I haven't done my b
 | Office Equipment                  |   $233.72    |
 | Graphic Design                    |   $169.00    |
 | Stickers                          |   $163.63    |
-| Cloud Services                    |   $137.33    |
+| Cloud Services                    |   $176.33    |
 | Misc                              |    $161.21   |
 
 My cost for raw materials isn't so surprising. My profit margin on physical products is generally around 50-60%, so $15k matches what I'd expect on about $30k of sales. There's not much wiggle room there, as there aren't cheaper alternatives to the materials I buy. There are a few items like cables where I pay a premium for quality, but that's a difference of $1-2/unit on a product I sell for $300. The expensive parts are things that have no cheaper alternatives, like the Raspberry Pis or the HDMI capture chips.
