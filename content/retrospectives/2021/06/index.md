@@ -128,7 +128,7 @@ I could hire cheaper developers, but that would quickly become disastrous. The d
 
 I've worked with cheaper developers (~$30/hr), and they either can't figure out how to do the work at all, or they apply naïve implementations that lead to bugs and maintenance headaches later on. If I staffed the project with low-cost developers, the codebase would become an unmaintainable nightmare within a few months.
 
-Outside of this, I don't have any expenses I can meaningfully cut. My third biggest expense is my local fulfillment staff, but even slashing 50% of costs would only reduce overall expenses by 2.5%, so it's not worth messing with a system that works well.
+Outside of this, I don't have any expenses I can meaningfully cut. My third biggest expense is my local fulfillment staff, but even slashing 50% of costs would only reduce overall expenses by 2.4%, so it's not worth messing with a system that works well.
 
 The other way I can follow Mike Perham's advice is to increase revenue.
 
