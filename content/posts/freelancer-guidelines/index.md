@@ -351,7 +351,7 @@ Please send me invoices for your hours every two weeks. Expect payment within fi
 
 I don't pay bonuses or tips. I want your compensation to be transparent, so you don't have to wonder about undefined pay left to my discretion.
 
-I pay via PayPal, Payoneer, ACH transfer, or (in the US) a mailed check, depending on your preference.
+I pay via PayPal, Payoneer, ACH transfer (US only), or a mailed check (US only), depending on your preference.
 
 ## Post-contract work
 
