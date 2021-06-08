@@ -41,7 +41,7 @@ I intentionally scaled down my output from [May's goal of 100 new articles](/ret
 
 KVM Pi now works and is extremely usable. I thought the first version would be more finicky or brittle, but I've been using it to [manage my server](kvmpi-os-install.mp4) and [run demos](kvmpi-typing-demo.mp4), and it's all pretty smooth.
 
-There are [a few bugs](https://github.com/mtlynch/tinypilot/milestone/2) I want to close before I start shipping them next week, but I'm still ahead of schedule. I'm also working on a blog post and YouTube video that I think can generate excitement around the product.
+There are [a few bugs](https://github.com/tiny-pilot/tinypilot/milestone/2) I want to close before I start shipping them next week, but I'm still ahead of schedule. I'm also working on a blog post and YouTube video that I think can generate excitement around the product.
 
 ## Stats
 

@@ -310,19 +310,19 @@ If you're connecting to your Pi over wired LAN, attach a network cable to your P
 SSH into your Pi device (default credentials for Raspberry Pi OS are `pi` / `raspberry`), and run the following commands:
 
 ```bash
-curl -sS https://raw.githubusercontent.com/mtlynch/tinypilot/master/quick-install \
+curl -sS https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/quick-install \
   | bash -
 sudo reboot
 ```
 
-If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/mtlynch/tinypilot/blob/master/quick-install).
+If you're appropriately suspicious of piping a random web script into your shell, I encourage you to inspect [the source](https://github.com/tiny-pilot/tinypilot/blob/master/quick-install).
 
 The script bootstraps a self-contained [Ansible](https://docs.ansible.com/ansible/latest/index.html) environment with my [TinyPilot Ansible role](https://github.com/tiny-pilot/ansible-role-tinypilot). It installs four services that run on every boot:
 
 * [nginx](https://nginx.org/): a popular open-source web server
 * [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
-* [usb-gadget](https://github.com/mtlynch/tinypilot/blob/4587f989b6d479034a64b2411c1c9964cdad7261/scripts/usb-gadget/init-usb-gadget): a script enabling Pi's "USB gadget mode," which allows the Pi to impersonate USB devices
-* [tinypilot](https://github.com/mtlynch/tinypilot): the web interface I created for TinyPilot
+* [usb-gadget](https://github.com/tiny-pilot/tinypilot/blob/4587f989b6d479034a64b2411c1c9964cdad7261/scripts/usb-gadget/init-usb-gadget): a script enabling Pi's "USB gadget mode," which allows the Pi to impersonate USB devices
+* [tinypilot](https://github.com/tiny-pilot/tinypilot): the web interface I created for TinyPilot
 
 ## Using TinyPilot
 
@@ -353,7 +353,7 @@ To solve this problem, I worked with an engineering firm to create [a custom cir
 Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.
 
 {{<notice type="warning">}}
-**Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/mtlynch/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
+**Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/tiny-pilot/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
 {{</notice>}}
 
 ## TinyPilot kits
@@ -366,7 +366,7 @@ If you'd like to support further development of this software, consider [donatin
 
 All TinyPilot software is open-source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
-* [tinypilot](https://github.com/mtlynch/tinypilot.git): The TinyPilot web interface and backend.
+* [tinypilot](https://github.com/tiny-pilot/tinypilot.git): The TinyPilot web interface and backend.
 * [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
 ---

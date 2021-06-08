@@ -32,7 +32,7 @@ For the same reasons as above, I postponed marketing efforts until I had a produ
 
 ### Implement TinyPilot support for mouse integration
 
-* **Result**: [Added mouse support](https://github.com/mtlynch/tinypilot/pull/125) for TinyPilot
+* **Result**: [Added mouse support](https://github.com/tiny-pilot/tinypilot/pull/125) for TinyPilot
 * **Grade**: A
 
 This ended up being more difficult than I expected, but I completed the feature right at the end of the month. Integrating the mouse improved the user experience more than I anticipated.

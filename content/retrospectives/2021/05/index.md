@@ -221,7 +221,7 @@ Will put together a great video, but we were both underwhelmed by the response. 
 
 After the video came out, I realized I had asked myself the wrong questions. While it was true that nobody had built a solution like this with a *Raspberry Pi*, there were already products that controled DSLRs from a phone or web browser. One company even holds [a patent](https://patents.google.com/patent/US9712688B2/en) claiming they invented the idea of controlling a camera over a computer network, so they could potentially sue me if I created a competing product.
 
-I'm glad I had the foresight to keep all the DSLR code in [a separate, experimental branch](https://github.com/mtlynch/tinypilot/tree/experimental/dslr) of the codebase. Initially, I thought it was a small enough change that I could add it as a feature to the regular TinyPilot software. It's a good thing I didn't, as that would have introduced a ton of complexity to the code and cluttered the UI with a feature that 99% of my users don't want.
+I'm glad I had the foresight to keep all the DSLR code in [a separate, experimental branch](https://github.com/tiny-pilot/tinypilot/tree/experimental/dslr) of the codebase. Initially, I thought it was a small enough change that I could add it as a feature to the regular TinyPilot software. It's a good thing I didn't, as that would have introduced a ton of complexity to the code and cluttered the UI with a feature that 99% of my users don't want.
 
 ## Legacy projects
 

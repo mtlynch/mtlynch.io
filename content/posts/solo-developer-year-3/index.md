@@ -264,7 +264,7 @@ I was hoping to find an excuse to learn Rust, but I never found a good match.
 
 Instead, I gained breadth and depth in JavaScript. I already knew [Vue](https://vuejs.org/), but this year, I learned [Gridsome](https://gridsome.org/), a Vue-based static site generator. I used it to build [my TinyPilot sales site](https://tinypilotkvm.com/?ref=mtlynch.io) and to [rewrite Is It Keto](https://whatgotdone.com/michael/2020-04-17).
 
-I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/mtlynch/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no build or compilation steps. It's astonishing how much complexity you save by eschewing modern JavaScript frameworks.
+I also learned to use plain JavaScript more effectively. TinyPilot's web app [is pure JavaScript](https://github.com/tiny-pilot/tinypilot/tree/bf07bfe72941457cf068ca0a44c6b0d62dd9ef05/app/static/js) with no build or compilation steps. It's astonishing how much complexity you save by eschewing modern JavaScript frameworks.
 
 ## Goals for year four
 

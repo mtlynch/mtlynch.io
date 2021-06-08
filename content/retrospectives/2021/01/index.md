@@ -99,7 +99,7 @@ I explained the inventory situation, and he said that he was fine with me shippi
 
 I had been postponing work on TinyPilot Pro for months. It was largely because the first step in the process was so boring: distribution.
 
-It's easy to distribute the free version of TinyPilot because the software is all [open-source](https://github.com/mtlynch/tinypilot). I publish an install script that works the same for customers and non-customers alike.
+It's easy to distribute the free version of TinyPilot because the software is all [open-source](https://github.com/tiny-pilot/tinypilot). I publish an install script that works the same for customers and non-customers alike.
 
 TinyPilot Pro would be more complicated. If I published the source, customers might think, "Why would I pay for this when I can just find it online for free?" I needed some way to limit access to paying customers.
 
