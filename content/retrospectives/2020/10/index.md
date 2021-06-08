@@ -268,7 +268,7 @@ Zestful remains quiet and mostly irrelevant. I've had no inquiries for enterpris
   * Shipping directly through DHL and USPS isn't that hard (assuming I'm doing it right), but it's *super* hard to find information about the requirements. Every Google result on the subject is an article trying to sell you international shipping as a service.
   * This old, overlooked [/r/Entrepreneur post](https://redd.it/4w5pq5) summarizes pretty well how to ship internationally.
 * Added several new features to TinyPilot
-  * [Full-screen mode](https://github.com/mtlynch/tinypilot/pull/219), [paste from clipboard](https://github.com/mtlynch/tinypilot/pull/194), [configurable installs](https://github.com/mtlynch/tinypilot/pull/145), [a diagnostic script](https://github.com/mtlynch/tinypilot/pull/231), and [support for AZERTY keyboard layouts](https://github.com/mtlynch/tinypilot/pull/235).
+  * [Full-screen mode](https://github.com/tiny-pilot/tinypilot/pull/219), [paste from clipboard](https://github.com/tiny-pilot/tinypilot/pull/194), [configurable installs](https://github.com/tiny-pilot/tinypilot/pull/145), [a diagnostic script](https://github.com/tiny-pilot/tinypilot/pull/231), and [support for AZERTY keyboard layouts](https://github.com/tiny-pilot/tinypilot/pull/235).
 * Added shopping cart functionality to [the TinyPilot website](https://tinypilotkvm.com/?ref=mtlynch.io)
   * Previously, customers could only order one item at a time unless they emailed me to manually create the order.
 * Automated the process of building redistributable TinyPilot ISOs

@@ -167,7 +167,7 @@ Zestful's still chugging along in the background, bringing in slightly more than
 * Published a blog post [explaining how I work with freelance developers](/freelancer-guidelines/)
 * Published two new releases of TinyPilot
   * [TinyPilot 1.4.0](https://tinypilotkvm.com/blog/whats-new-in-1-4) adds easy updates, support for device renaming, and accessible logs.
-  * [TinyPilot 1.4.1](https://github.com/mtlynch/tinypilot/releases/tag/1.4.1) substantially improves UI
+  * [TinyPilot 1.4.1](https://github.com/tiny-pilot/tinypilot/releases/tag/1.4.1) substantially improves UI
 
 ### Lessons learned
 

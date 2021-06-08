@@ -138,7 +138,7 @@ Earlier this year, I talked to an IT manager at a large corporation. He loved Ti
 
 Guess how much TinyPilot earned from that deployment. Zero.
 
-Instead of buying the hardware from me, they simply built their own devices. And because the software has [a permissive open-source license](https://github.com/mtlynch/tinypilot/blob/master/LICENSE), they were free to use it in their company without paying me anything.
+Instead of buying the hardware from me, they simply built their own devices. And because the software has [a permissive open-source license](https://github.com/tiny-pilot/tinypilot/blob/master/LICENSE), they were free to use it in their company without paying me anything.
 
 This is an extremely common problem in open-source. An open license helps people discover your product and encourages them to use it, but it also allows big corporations to profit from your work while offering nothing in return.
 

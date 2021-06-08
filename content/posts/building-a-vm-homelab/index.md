@@ -179,7 +179,7 @@ To achieve remote administration, I took the unusual approach of [building my ow
 
 {{</gallery>}}
 
-TinyPilot captures HDMI output and forwards keyboard and mouse input from the browser. It provides the same access you'd have if you physically connected a real keyboard, mouse, and monitor. The software is [fully open source](https://github.com/mtlynch/tinypilot), and I offer all-in-one kits if you'd like to build one for yourself.
+TinyPilot captures HDMI output and forwards keyboard and mouse input from the browser. It provides the same access you'd have if you physically connected a real keyboard, mouse, and monitor. The software is [fully open source](https://github.com/tiny-pilot/tinypilot), and I offer all-in-one kits if you'd like to build one for yourself.
 
 {{<tinypilot-ad headline="Install a new server OS right from your browser" copy="TinyPilot provides a remote console for your headless server. Starting at just $169.99.">}}
 

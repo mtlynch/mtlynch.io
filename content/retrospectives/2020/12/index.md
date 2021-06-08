@@ -164,7 +164,7 @@ Zestful had a nice jump this month. One of my longtime pay-as-you go customers u
 ### What got done?
 
 * Launched [Voyager](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), the new model of TinyPilot aimed at business customers.
-* Published a [new release](https://github.com/mtlynch/tinypilot/releases/tag/1.2.0) of TinyPilot that includes an on-screen keyboard and support for saving screenshots.
+* Published a [new release](https://github.com/tiny-pilot/tinypilot/releases/tag/1.2.0) of TinyPilot that includes an on-screen keyboard and support for saving screenshots.
 * Launched pre-orders for my [Hacker News course](https://hitthefrontpage.com/).
 * Two of my blog posts reached the front page of Hacker News.
   * [How I Hired a Freelance Editor for My Blog](https://news.ycombinator.com/item?id=25262272)
