@@ -109,3 +109,49 @@ Alex's factory is underperforming and company executives are considering shuttin
   * Statistical fluctuations: Boys don't walk a constant speed, but rather a mixture of faster and slower paces about 2 mph.
   * Dependent events: You can't move faster than the person ahead of you in line, so your speed is limited by theirs.
 * Solution: The troop discovers the slowest boy is carrying a ton of excess weight in his pack, so they divide it up. The boy can now move much faster, which means the troop overall moves faster.
+
+### Two types of resources
+
+* **Bottleneck resource**: Any resource whose capacity is less than or equal to the demand placed on it.
+* **Non-bottleneck resource**: Any resource whose capacity is greater than deman placed on it.
+* Businesses should match their bottleneck resources' capacity to the market demand for the product.
+
+### Finding bottlenecks
+
+* Alex tried to calculate bottlenecks in his plant by measuring the capacity for each resource and the operational time it needs to meet demand.
+  * This failed because it required highly accurate record-keeping, which the plant didn't have.
+* Instead, Alex used heuristics to identify bottlenecks:
+  * Ask foremen and expediters where there were frequent issues.
+  * Look for resources with long work queue ahead of them.
+* Alex discovers two bottlenecks in his plant.
+  * One is an advanced machine that requires a specialist to operate it.
+  * The other is the heat-treating station.
+  * Alex can't move either bottleneck to another position in the production pipeline.
+  * Alex can't purchase more of either resource because it's too expensive.
+  * Alex can't offload work to other resources because those machines are the only ones of their type.
+
+### Fixing the bottlenecks
+
+* Jonah notices that the specialty machine is idle when workers take their union break.
+  * Fix: Renegotiate union contract so that workers rotate on the bottleneck machine to eliminate downtime.
+* The heat treat machine often runs below capacity.
+  * Fix: Prioritize planning so that they can make each heat treat load close operate at near capacity.
+* The heat treat machine has idle time while workers load parts in and out.
+  * Fix: Invest in more efficient techniques for loading and unloading the heat treat machine.
+* Quality control checks happen at the end of production.
+  * This means that bottleneck resources wasted time processing parts that were already defective.
+  * Fix: Do quality checks before bottleneck resources.
+* The plant uses bottleneck resources to produce products that don't have pending orders.
+  * Fix: Reserve bottleneck resources for parts that the plant needs to fill outstanding orders.
+* Specialty machine is too expensive to buy more than one.
+  * Fix: They find a set of older, less efficient machines that accomplish the same result as the specialty machine, but slower. These machines supplement the capacity of the bottleneck machine.
+* TODO(mtlynch): Continue adding notes from "problems & solutions"
+
+### Modeling the cost of a bottleneck resource
+
+* The entire plant is only as fast as its bottleneck resources.
+* The cost of a bottleneck sitting idle for one hour is equivalent to the cost of the entire plant shutting down for one hour.
+* Cost at Alex's plant:
+  * Plant has $1.6M per month in operating expenses.
+  * Specialty machine (bottleneck) can run for 585 hours per month.
+  * One hour of idle time for the specialty machine costs the plant $2,735 ($1.6M / 585)
