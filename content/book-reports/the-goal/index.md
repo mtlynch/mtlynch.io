@@ -52,7 +52,6 @@ Characters:
 * **Alex** is the manager of a ~100-person factory that manufactures some never-quite-defined product.
 * **Jonah** is an Israeli physicist-turned-business consultant. Alex studied under him in college and then runs into him many years later at the start of this story.
 
-
 Basic premise:
 
 * Alex's branch is underperforming, and company executives are considering shutting down his factory.
