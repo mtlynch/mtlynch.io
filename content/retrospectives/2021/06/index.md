@@ -50,9 +50,7 @@ Exciting outcomes are naturally more attractive than fundamentals. If I wrote a 
 | Unique Visitors | 5,880       | 7,283      | <font color="green">+1,403 (+24%)</font>     |
 | Total Pageviews | 10,483      | 13,267     | <font color="green">+2,784 (+27%)</font>     |
 | Sales Revenue   | $28,880.65  | $38,767.77 | <font color="green">+$9,887.12 (+34%)</font> |
-| **Profit**      | **$843.56** | **$7,929.10\***    | **N/A**                                      |
-
-\* *Provisional until I do real bookkeeping for the month. This number is just the delta in my checking account since May 1st. It's artificially inflated because I wasn't able to purchase Raspberry Pi boards this month due to chip shortages. My next order may cost $8k and completely wipe out all profits.*
+| **Profit**      | **$843.56** | **$6,858.72**    | **<font color="green">+$6,015.16 (+713%)</font>**                                      |
 
 TinyPilot had its second-best month ever. It was exciting how everything worked smoothly at this level of sales. When a similar rush hit in January, it [overwhelmed us](/retrospectives/2021/02/#tinypilots-first-postmortem). Fortunately, we've improved our order fulfillment workflow, so all of our systems worked as normal.
 
