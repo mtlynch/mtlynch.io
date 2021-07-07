@@ -25,7 +25,7 @@ I didn't quite hit my $30k goal, but I came close. It's a relief to end the down
 
 ### Produce a prototype for a custom TinyPilot PoE HAT
 
-* **Result**: The global chip shortage has delayed the prototype by at least one month
+* **Result**: The [global chip shortage](https://en.wikipedia.org/wiki/2020%E2%80%9321_global_chip_shortage) has delayed the prototype by at least one month
 * **Grade**: D
 
 When we began work, my electrical engineering partners took into account the [global shortage of integrated circuits](https://www.cnbc.com/2021/05/07/chip-shortage-is-starting-to-have-major-real-world-consequences.html), but it's worse than they expected.
