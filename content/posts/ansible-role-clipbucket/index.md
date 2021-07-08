@@ -86,7 +86,7 @@ ClipBucket has some smaller dependencies, such as ImageMagick and FFMpeg, which 
 
 As mentioned earlier, ClipBucket expects the user to walk through a web UI to complete the installation. We'd like to eliminate this manual step, but this is a challenge. Ansible is designed to automate command line tasks, but is not well suited for automating user actions in a web UI.
 
-I asked in the [ClipBucket forums](http://discourse.clipbucket.com/t/deploy-and-configure-clipbucket-automatically/2166) if there was an alternative to the web UI install and Saqib Razzaq, one of ClipBucket's developers, was kind enough to point me to some PHP and SQL scripts in the ClipBucket source that would allow me to script the post-install steps.
+I asked in the [ClipBucket forums](https://web.archive.org/web/20170122170739/http://discourse.clipbucket.com/t/deploy-and-configure-clipbucket-automatically/2166) if there was an alternative to the web UI install and Saqib Razzaq, one of ClipBucket's developers, was kind enough to point me to some PHP and SQL scripts in the ClipBucket source that would allow me to script the post-install steps.
 
 Many of the SQL scripts are (strangely) [just broken](https://github.com/arslancb/clipbucket/issues/223) and ClipBucket's PHP code seems to silently ignore the errors. I preferred not to silently ignore the SQL errors, so I wrote a [hacky Ansible playbook](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tasks/fix-sql-scripts.yml) to fix or delete the erroneous lines in the ClipBucket SQL scripts.
 
