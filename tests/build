@@ -8,7 +8,6 @@ set -x
 set -u
 
 tests/check-trailing-whitespace
-#tests/lint-frontmatter
 tests/lint-markdown
 
 hugo
