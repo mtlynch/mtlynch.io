@@ -77,7 +77,7 @@ And here's what I'm planning to do in July:
 
 * Show local staff how I research marketing opportunities so that they can do more of the legwork in that process.
 * Define playbooks for technical support so that local staffers can take on easy cases and escalate to me when it's beyond their technical knowledge.
-* Revise sofware workflows so that developers review each other's code instead of me reviewing all changes personally.
+* Revise software workflows so that developers review each other's code instead of me reviewing all changes personally.
 
 ## Getting unstuck on the TinyPilot website
 
