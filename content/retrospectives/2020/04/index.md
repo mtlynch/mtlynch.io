@@ -24,13 +24,13 @@ In February, I found myself [backsliding into social media addiction](/retrospec
 
 In my last retrospective, I had [invested $600 into publicity for a comedy scavenger hunt](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost), and I was worried that it would flop. It did indeed flop, and not even due to COVID-19.
 
-{{< img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="500px" caption="I canceled the [WanderJest Scavenger Hunt](https://wanderjest.com/scavenger-hunt) on March 11th." >}}
+{{< img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="500px" caption="I canceled the WanderJest Scavenger Hunt on March 11th." >}}
 
 In the first week of March, people were still attending local comedy shows as usual. I'd go to these shows and hand out promotional cards about the scavenger hunt and explain to people that if they took a picture during the show and tagged it @WanderJest on social media, they'd enter a grand prize drawing for $200. People generally seemed receptive. "$200? Wow, cool!"
 
 And then they just wouldn't take any photos. I made Facebook ads, put up flyers, and promoted the contest through my social media channels, but nobody participated.
 
-Comedians didn't seem excited about it either, even the ones who had paid to sponsor the contest. While designing it, I felt so clever for including a $50 prize for ["most photographed performer"](https://wanderjest.com/scavenger-hunt#fan-crush) because I expected it to help performers feel invested in the contest and inspire them to mention it when they hosted comedy shows. But nobody did.
+Comedians didn't seem excited about it either, even the ones who had paid to sponsor the contest. While designing it, I felt so clever for including a $50 prize for "most photographed performer" because I expected it to help performers feel invested in the contest and inspire them to mention it when they hosted comedy shows. But nobody did.
 
 My best guess is that local comedy is cool, and PR contests are *not* cool. Perhaps people didn't want to be seen as desperate to win $200, especially when nobody else was participating.
 
@@ -205,7 +205,7 @@ My one [enterprise client](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) 
   * I shouldn't have relied on users to visit the website to learn the specifics.
 * When you advertise on physical media like cards or flyers, use unique URLs for each type of media to track engagement.
   * I discovered this by mistake.
-  * The URL for the scavenger hunt was [wanderjest.com/scavenger-hunt](https://wanderjest.com/scavenger-hunt), so I created the alias [wanderjest.com/hunt](https://wanderjest.com/hunt) to save space on printed flyers.
+  * The URL for the scavenger hunt was `wanderjest.com/scavenger-hunt`, so I created the alias `wanderjest.com/hunt` to save space on printed flyers.
   * I later realized the unique URL allowed me to see how many people visited the URL from the flyer and track the flyer's effectiveness (or lack thereof).
 
 ### Goals for next month

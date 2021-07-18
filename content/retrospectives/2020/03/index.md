@@ -64,9 +64,9 @@ In my [last retrospective](/retrospectives/2020/02/#attracting-audiences), I dec
 
 When I shared WanderJest in local social media groups, people responded positively, but I couldn't tell if that was translating to in-person show attendance. I needed a way to prove to myself and to show organizers that WanderJest brought people to shows.
 
-So, I came up with the [Comedy Scavenger Hunt](https://wanderjest.com/scavenger-hunt):
+So, I came up with the Comedy Scavenger Hunt:
 
-{{< img src="banner.png" alt="WanderJest Comedy Scavenger Hunt banner" caption="The [Scavenger Hunt](https://wanderjest.com/scavenger-hunt) is a contest I launched to market WanderJest to local residents." maxWidth="650px" >}}
+{{< img src="banner.png" alt="WanderJest Comedy Scavenger Hunt banner" caption="The Scavenger Hunt is a contest I launched to market WanderJest to local residents." maxWidth="650px" >}}
 
 Fans can win prizes by attending shows and posting photos to social media. Comedians win prizes based on how many photos fans take of them. Show organizers can contribute money to the contest to give their shows special status.
 
@@ -228,7 +228,7 @@ These episodes resonated with me because Cory and Jen are both solo developer fo
 
 ### What got done?
 
-* Organized and launched my first-ever [marketing contest](https://wanderjest.com/scavenger-hunt).
+* Organized and launched my first-ever marketing contest.
   * Wrote my first [press release](https://wanderjest.com/press/scavenger-hunt-press-release-2020-02-20.pdf).
 * Added self-serve performer and fan profiles to WanderJest.
 * Pitched WanderJest at [Valley Venture Mentors](https://valleyventurementors.org).
