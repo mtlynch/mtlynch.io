@@ -181,8 +181,11 @@ My plan is to try different projects for a few months each to see if any of them
 
 Google was a great place to work, and I learned valuable skills during my time there. Leaving was difficult because I had more to learn, but there will always be employers like Google. I won't always have the freedom to start my own company, so I look forward to seeing where this takes me.
 
+## Updates
+
 * **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/solo-developer-year-1/)
 * **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
+* **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
 
 {{< htfp-ad >}}
 

@@ -233,7 +233,8 @@ Speaking of goals, here's what I hope to accomplish in my second year as a solo 
 
 ## Updates
 
-* **Jan. 31, 2020**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
+* **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
+* **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
 
 ---
 
