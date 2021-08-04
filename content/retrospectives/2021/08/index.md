@@ -110,6 +110,8 @@ Delegating the reordering process also takes time to build up trust. I don't wan
 
 Finally in July, I got everyone on the team set up with Bitwarden and wrote instructions on how to order from our various vendors. It's one of those tasks that feels like such a minor amount of work, but there are so many little tasks involved in the process of reordering supplies that I'm always immensely relieved when someone else takes it over.
 
+{{<img src="order-raw.png" maxWidth="800px" alt="Screenshot of TinyPilot's internal Notion page for ordering raw parts" caption="TinyPilot's internal documentation for reordering raw materials." hasBorder="true">}}
+
 ### Allow developers to review each other's pull requests
 
 Since February, two freelance developers have worked with me on TinyPilot, and a third joined last month. I've mostly stopped writing code, as TinyPilot's developers can handle it. But until July, I was still the code reviewer on every single change.
@@ -124,7 +126,9 @@ Every time we publish a new release of TinyPilot, I create a microSD image with 
 
 My build process worked okay, but because I was the only one with a build server, managing the build process became my sole responsibility. Even though TinyPilot's developers are perfectly capable of managing the build code, they couldn't simply due to the logistics of a single Pi server being silo'ed in my office.
 
-Sometimes, I hopelessly Google something for months and months, desperate for a solution, only to find out that I was Googling the wrong thing. I always wanted Pi cloud hosting, so I searched "pi cloud hosting" or "pi cloud server," which turned up results about making your own server. Finally, it occurred to me to search "pi dedicated server." That led me to [Mythic Beasts](), a company that offers Raspberry Pi servers that you can rent by the minute.
+Sometimes, I hopelessly Google something for months and months, desperate for a solution, only to find out that I was Googling the wrong thing. I always wanted Pi cloud hosting, so I searched "pi cloud hosting" or "pi cloud server," which turned up results about making your own server. Finally, it occurred to me to search "pi dedicated server." That led me to [Mythic Beasts](https://www.mythic-beasts.com/), a company that offers Raspberry Pi servers that you can rent by the minute.
+
+{{<img src="mb-hosting.png" maxWidth="800px" alt="Screenshot of Mythic Beasts Raspberry Pi pricing" caption="[Mythic Beasts](https://www.mythic-beasts.com/) offers bare-metal Raspberry Pi server hosting." hasBorder="true">}}
 
 Mythic Beasts has a nice API for dynamically spinning up Pi servers, but I realized that their server costs are so inexpensive, it's cheaper for me to just give each of my developers a server that runs 24/7/365 than to spend developer time scripting server turnup and turndown.
 
