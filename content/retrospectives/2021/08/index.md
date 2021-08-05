@@ -132,7 +132,9 @@ Since February, two freelance developers have worked with me on TinyPilot, and a
 
 A few months ago, we tried removing me from the review process, but it didn't take. I'm available full-time, whereas the others are only available part-time at mostly non-overlapping hours. If they had a sequence of code changes that depended on each other, [latency between reviews could kill progress](/code-review-love/#13-minimize-lag-between-rounds-of-review).
 
-At our monthly dev meeting, we realized that only a fraction of changes come in a sequence like that. For most changes, it's not a big deal if you have to wait a day or two for a review. So, developers are now reviewing each other's code. I admit that it's a little scary
+At our monthly dev meeting, we realized that only a fraction of changes come in a sequence like that. For most changes, it's not a big deal if you have to wait a day or two for a review. So, developers are now reviewing each other's code.
+
+As someone who still sees themselves as an indie developer, it feels scary to own code that I didn't personally review. But I trust my teammates, and I think this system works better for the company overall.
 
 ### Externalize the image building process
 
@@ -140,15 +142,15 @@ Every time we publish a new release of TinyPilot, I create a microSD image with 
 
 {{<img src="pi-build-server.jpg" maxWidth="600px" alt="Photo of Pi and SSD drive" caption="The official TinyPilot build server, until recently">}}
 
-Even though TinyPilot's developers are perfectly capable of managing the code, the logistics of a single home server made it too difficult to share access. The result was that I was the sole maintainer of the build code.
+Even though TinyPilot's developers are perfectly capable of managing the code, the logistics of a single server silo'ed in my home made it too difficult to share access. The result was that I remained the sole maintainer of the build code.
 
-Sometimes, I hopelessly Google something for months and months, desperate for a solution, only to find out that I was Googling the wrong thing. I always wanted Pi cloud hosting, and I'd routinely searched for "pi cloud hosting" or "pi cloud server," only to find unhelpful results about using your own Pi as a cloud server. Finally, it occurred to me to search "pi dedicated server." That led me to [Mythic Beasts](https://www.mythic-beasts.com/), a company that offers cloud-hosted Raspberry Pi servers that you can rent by the minute.
+Sometimes, I hopelessly Google something for months and months, desperate for a solution, only to find out that I was using the wrong search terms. I always wanted Pi cloud hosting, and I'd routinely searched for "pi cloud hosting" or "pi cloud server," only to find unhelpful results about using your own Pi as a cloud server. Finally, it occurred to me to search "pi dedicated server." That led me to [Mythic Beasts](https://www.mythic-beasts.com/), a company that offers cloud-hosted Raspberry Pi servers that you can rent by the second.
 
 {{<img src="mb-hosting.png" maxWidth="800px" alt="Screenshot of Mythic Beasts Raspberry Pi pricing" caption="[Mythic Beasts](https://www.mythic-beasts.com/) offers bare-metal Raspberry Pi server hosting." hasBorder="true">}}
 
 Mythic Beasts has a nice API for dynamically spinning up Pi servers, but I realized that their server costs are so inexpensive relative to developer time, it's cheaper for me to just give each of my developers a server that runs 24/7/365 than to automate any fancy server allocation logic.
 
-With the Pi server solved, I cleaned up my image building code and shared it with my team. Now any TinyPilot developer can provision their server with the latest build code and use it to generate a TinyPilot microSD image. More importantly, if we discover bugs in the process or add new steps, TinyPilot's developers can make those changes instead of it being a Michael-only task.
+With the server problem solved, I cleaned up my image building code and shared it with my team. Now any TinyPilot developer can provision their server with the latest build code and use it to generate a TinyPilot microSD image. More importantly, if we discover bugs in the process or add new steps, TinyPilot's developers can make those changes instead of it being a Michael-only task.
 
 ## Starting EU distribution
 
