@@ -48,9 +48,7 @@ We ultimately decided to drop PoE as a Voyager 2 feature and instead reduced the
 | Total Pageviews | 13,267        | 11,514     | <font color="red">-1,753 (-13%)</font>     |
 | Sales Revenue   | $38,767.77    | $29,446.46 | <font color="red">-$9,321.31 (-24%)</font> |
 | Total Revenue   | $38,767.77    | $29,446.46 | <font color="red">-$9,321.31 (-24%)</font> |
-| **Profit**      | **$6,858.72** | <font color="red">**-$11,378.30**</font>\*    | **N/A**                                    |
-
-\* *June profit is provisional until I do real bookkeeping for the month. This number is just the delta in my checking account since June 1st.*
+| **Profit**      | **$6,858.72** | <font color="red">**-$-9452.32**</font>    | **N/A**                                    |
 
 All of my numbers are down, which I attribute mostly to neglecting marketing.
 
