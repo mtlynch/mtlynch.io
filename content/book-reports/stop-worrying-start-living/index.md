@@ -68,11 +68,11 @@ No one can humiliate or disturb you unless you let them.
 
 Would you sell any of these things for a million dollars?
 
-  * Your eyes
-  * Your legs
-  * Your hands
-  * Your family
-  * Your children
+* Your eyes
+* Your legs
+* Your hands
+* Your family
+* Your children
 
 If not, you effectively have millions of dollars in assets for which to be thankful.
 
