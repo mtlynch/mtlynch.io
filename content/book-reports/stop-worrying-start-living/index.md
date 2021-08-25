@@ -5,22 +5,27 @@ rating: 5
 purchase_url: https://www.indiebound.org/book/9780671733353
 ---
 
-TODO: Short summary
+As a big fan of Dale Carnegie's *How to Win Friends and Influence People*, I was interested in this book. 70 years after it was published, I still see people recommending it, so I had high hopes.
+
+Sadly, the book fell short of my expectations. When I read *How to Win Friends and Influence People*, every chapter felt relevant and useful. In contrast, only about 20% of *How to Stop Worrying and Start Living* felt useful. Most of the book is personal anecdotes that failed to connect with me and mental exercises that didn't appeal to me.
 
 <!--more-->
+
+I'm glad I read the book, as I feel like the useful lessons were valuable enough to justify the cost of the fluff, but I wish that more of it resonated with me.
 
 ---
 
 ## What I Liked
 
+* Several of the lessons helped me reduce stress and look at my life from different perspectives.
 * The stories are often hokey, but they make the lessons feel more relatable.
 
 ## What I Disliked
 
-* All the excerpts from contributors sound suspiciously like Dale Carnegie.
+* The excerpts from the "third-party contributors" sound suspiciously like Dale Carnegie.
 * Lots of the stories were fluff that didn't resonate with me.
 * A lot of the advice feels easier said than done.
-  * e.g., deciding to just stop worrying about a problem once you've thought about it enough
+  * e.g., just deciding to stop worrying about a problem once you've thought about it enough
 
 ## Key Takeaways
 
@@ -35,7 +40,7 @@ TODO: Short summary
 ### Formula for Solving Worry Situations
 
 1. Figure out the worst-case scenario for the thing that worries you.
-1. Find a way to accept that outcome, if it were to happen.
+1. Find a way to accept that outcome if it were to happen.
 1. Devote your time to improving the outcome.
 
 If you can accept the worst-case scenario, then anything above that is an improvement.
@@ -56,7 +61,7 @@ No one can humiliate or disturb you unless you let them.
 * People become obsessed with resentment when they feel like someone shows them too little gratitude for a gift or favor.
 * It's natural for people to forget to show gratitude, so we shouldn't expect it.
   * Jesus cured 10 lepers, and only one said thank you, so we shouldn't expect more.
-* We need to find joy in the act of giving rather relying on the recipient's gratitude.
+* We need to find joy in the act of giving rather than relying on the recipient's gratitude.
 * Gratitude is a learned trait, so if you want your children to be grateful, you must demonstrate gratitude.
 
 ### Would you take a million dollars for what you have?
@@ -74,7 +79,7 @@ If not, you effectively have millions of dollars in assets for which to be thank
 ### Clear your desk
 
 * To improve your focus and reduce stress, clear your desk of all papers except those related to the immediate problem at hand.
-* Psycohologist William Sadler had a story about helping an executive manage stress at work.
+* Psychologist William Sadler had a story about helping an executive to manage stress at work.
 
 >"Tell me," said the patient, "where do you keep your unfinished business?"
 >
