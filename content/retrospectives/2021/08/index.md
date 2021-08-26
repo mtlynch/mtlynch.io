@@ -57,9 +57,7 @@ Fortunately, TinyPilot's existing electrical engineering partner managed to find
 | Sales Revenue   | $29,446.46 | $23,954.64 | <font color="red">-$5,491.82 (-19%)</font> |
 | Enterprise Subscriptions | $48.00 | $48.00 | $0 (0%) |
 | Total Revenue   | $29,494.46 | $24,002.64 | <font color="red">-$5,491.82 (-19%)</font> |
-| **Profit**      | **<font color="red">-$9,452.32</font>**    | **<font color="red">-$8,854.07</font>**\*    | **N/A**                                    |
-
-\* *July profit is provisional until I do real bookkeeping for the month. This number is just the delta in my checking account since June 1st.*
+| **Profit**      | **<font color="red">-$9,452.32</font>**    | **<font color="red">-$9,713.34</font>**\*    | **N/A**                                    |
 
 Sales continue to slump, as I've been focusing on setting up EU distribution and transitioning TinyPilot's fulfillment processes to local staff. I'm lucky that TinyPilot can continue to hit $24k in revenue two months without any marketing or advertising, but I need to increase my investments in sales and marketing over the next few months.
 
