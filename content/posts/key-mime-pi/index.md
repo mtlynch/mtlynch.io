@@ -225,9 +225,9 @@ In my tests, USB ports from computers produced enough electricity to power the P
 
 ```bash
  $ sudo journalctl -xe | grep "Under-voltage"
-Jun 05 03:46:05 pikvm kernel: Under-voltage detected! (0x00050005)
-Jun 05 03:48:29 pikvm kernel: Under-voltage detected! (0x00050005)
-Jun 05 03:54:22 pikvm kernel: Under-voltage detected! (0x00050005)
+Jun 05 03:46:05 keymimepi kernel: Under-voltage detected! (0x00050005)
+Jun 05 03:48:29 keymimepi kernel: Under-voltage detected! (0x00050005)
+Jun 05 03:54:22 keymimepi kernel: Under-voltage detected! (0x00050005)
 ```
 
 The Pi was correctly detecting that standard USB 2.0 and USB 3.0 ports provide insufficient power to meet the Pi's requirements.

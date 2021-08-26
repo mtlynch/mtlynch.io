@@ -340,7 +340,7 @@ Further, The Pi 4 needs 3 Amps for stable operation, though it can run at lower 
 
 ```bash
  $ sudo journalctl -xe | grep "Under-voltage"
-Jun 28 06:23:15 pikvm kernel: Under-voltage detected! (0x00050005)
+Jun 28 06:23:15 tinypilot kernel: Under-voltage detected! (0x00050005)
 ```
 
 To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
