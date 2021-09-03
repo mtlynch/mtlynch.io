@@ -46,7 +46,7 @@ const dollarFormatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
-function drawChart(chartId, labels, data, label) {
+function drawChart(chartId, labels, data, label, formatter=dollarFormatter.format) {
   const ctx = document.getElementById(chartId);
   if (!ctx) {
     return;
@@ -71,7 +71,7 @@ function drawChart(chartId, labels, data, label) {
         tooltips: {
           callbacks: {
             label: function(tooltipItems) {
-              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
+              return formatter(parseFloat(tooltipItems.yLabel));
             },
           },
         },
@@ -80,7 +80,7 @@ function drawChart(chartId, labels, data, label) {
                   ticks: {
                     suggestedMin: 0,
                       callback: function(value) {
-                          return dollarFormatter.format(value);
+                          return formatter(value);
                       }
                   }
               }]
