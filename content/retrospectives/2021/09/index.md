@@ -124,7 +124,7 @@ And lastly, we redesigned the footer. It was a jumbled mess before, but now it l
 
 {{<img src="footer.png" alt="TODO" maxWidth="800px" hasBorder="true">}}
 
-This is just a first pass. I'd still like to hire a professional designer to iterate on this.
+This is just a first pass. I'm going to hire a professional designer to [iterate on this](https://docs.google.com/document/d/1dypa3pwaTbzdOJzGrcYiiERuYSJ9GMrqxh80D-t_NKk/edit?usp=sharing). If you have recommendations, [let me know](/about).
 
 ## Adding a European distributor
 
@@ -132,13 +132,29 @@ This is just a first pass. I'd still like to hire a professional designer to ite
 
 ## Carving out more time for myself
 
+For the past few months, I've been struggling to find time for TinyPilot. With so many moving pieces, I feel like I'm
+
 ### Automated license checks
+
+One of the silliest things I was still doing was verifying user licenses. If a user wanted to reinstall TinyPilot from scratch, they need a disk image. I don't offer the image publicly because otherwise users would have no incentive to purchase it, so if they emailed me their order number, I looked it up to verify they were a real user, then sent them a download link.
+
+It's a classic "do things that don't scale" task. I never prioritized it because it only happened 5-10 times per month. Still, it was a very unnecessary disruption, and I didn't like that customers had to wait around for a human to give them access to software they paid for. So we added a serverless function that checks purchase records in from our Shopify store and implemented a simple web UI for it.
+
+{{<img src="license-check.png" alt="TODO" maxWidth="800px" hasBorder="true" caption="TinyPilot Voyager now also [ships from Europe](https://www.kvm-ip.de/en/p/tinypilot-voyager-1).">}}
 
 ### QA testing
 
 ### Results
 
+With the added time, I'm doing more important but non-urgent things I want to do.
+
 Spending more time on outreach
+
+
+I'm exercising regularly again. I typically run or lift weights two to four times per week. There have been streaks over the last few months where I feel too busy to exercise, and that's probably the wrong decision.
+
+I'm back to writing for an hour each morning. I've done that for most of the past three years, but I stopped around March because I was too short on time to manage TinyPilot. I like the habit, but looking at my TinyPilot sales for the past two months, I think I need that time back until TinyPilot is consistently profitable. There are ways that I can increase TinyPilot's sales that I'm not taking advantage of due to lack of time, so I think I need that time back.
+
 
 Writing
 
