@@ -6,33 +6,33 @@ description: TODO - One-line summary
 
 ## Highlights
 
-* A redesign of TinyPilot's website might have been responsible for increased sales.
-
+* A redesign of TinyPilot's website seems to have increased sales.
+* I'm still fighting
 
 ## Goal Grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Help my EU distributor achieve his first sale
+### Help TinyPilot's EU distributor achieve his first sale
 
-* **Result**: The distributor is accepting orders but has not yet made a sale
-* **Grade**: B-
+* **Result**: The distributor made his first sale on September 6th
+* **Grade**: B
 
-TODO
+I was hoping we'd earn the first sale within the month of August. They soft-launched [their sales site](https://www.kvm-ip.de/) on August 27th, and I announced it to TinyPilot's 400+ mailing list subscribers, but none of them purchased. Finally, this week, he sold his first unit, which was an exciting step in the partnership.
 
 ### Finalize the design of the Voyager 2
 
-* **Result**: XX
-* **Grade**: B
+* **Result**: The design is taking longer than expected, so it will take another month
+* **Grade**: B-
 
-TODO
+I thought the chip shortage was the last big challenge to overcome, but the electrical engineers are running into more complexity than they expected in designing the circuit board. One change that's worked well is that we've now broken down the project into individual steps with time estimates for each so that we have a shared view of the overall schedule and what the implications are of each delay.
 
 ### Publish a sample chapter of [*Refactoring English*](https://refactoringenglish.com)
 
-* **Result**: Almost finished a sample chapter
-* **Grade**: XX
+* **Result**: Almost finished a sample chapter, but I'm still editing
+* **Grade**: B
 
-It's hard to write about good writing because people expect it to be well-written!
+The thing about writing a book about effective writing is that people expect *you* to be a good writer. That makes the writing process more of a challenge.  Still, I'm glad to resume my habit of writing every day.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -45,7 +45,9 @@ It's hard to write about good writing because people expect it to be well-writte
 | Sales Revenue   | $23,954.64     | $30,191.04     | <font color="green">+$6,236.40 (+26%)</font>      |
 | Enterprise Subscriptions | $48.00 | $48.00 | $0 (0%) |
 | Total Revenue   | $24,002.64     | $30,239.04     | <font color="green">+$6,236.40 (+26%)</font>      |
-| **Profit**      | <font color="red">**$-9,713.34**</font> | <font color="red">**$-8,049.21**</font> | **<font color="green">+$1,664.13</font>** |
+| **Profit**      | <font color="red">**$-9,713.34**</font> | <font color="red">**$-8,049.21**</font>\* | **<font color="green">+$1,664.13</font>** |
+
+\* Provisional until I perform bookkeeping for August. This number is just the change in my checking account minus my credit card balance.
 
 ## TinyPilot website improvements
 
@@ -102,7 +104,7 @@ window.addEventListener("load", function () {
 });
 </script>
 
-I didn't do a rigorous A/B test to prove that the new site made a difference, so it's possible that this was a fluke, so we'll see how September turns out.
+I didn't do a rigorous A/B test to prove that the new site made a difference. It's certainly possible that the increase was a fluke. I'll feel more confident if the trend continues through September.
 
 I'll go through the changes piece by piece.
 
@@ -130,9 +132,17 @@ This is just a first pass. I'd still like to hire a professional designer to ite
 
 ## Carving out more time for myself
 
+### Automated license checks
+
 ### QA testing
 
-### Automated license checks
+### Results
+
+Spending more time on outreach
+
+Writing
+
+Exercising
 
 ## Legacy projects
 
@@ -207,3 +217,5 @@ I'm not getting my hopes up, but it will be a nice bonus if it happens.
 ### Goals for next month
 
 * Publish a sample chapter of [*Refactoring English*](https://refactoringenglish.com)
+* Start development on a monthly service-based software complement to TinyPilot
+* Finalize the design of the Voyager 2
