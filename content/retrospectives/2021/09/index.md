@@ -10,7 +10,7 @@ images:
 
 * A redesign of TinyPilot's website seems to have increased sales.
 * TinyPilot now has a European distributor.
-* After three years, Zestful is finally profitable (and I might sell it).
+* After three years, I've earned back my investment in Zestful (and I might sell it).
 * I'm still ruthlessly delegating every task I can.
 
 ## Goal Grades
@@ -29,14 +29,14 @@ I was hoping we'd earn the first sale within August, which unfortunately didn't 
 * **Result**: The design is taking longer than expected, so it will take another month
 * **Grade**: C
 
-I thought the chip shortage was the last big challenge to overcome, but the electrical engineers are running into more complexity than they expected in the design. One change that's worked well is that we've now broken down the project into individual steps with time estimates for each so that we have a shared view of the overall schedule and how delays affect our timeline.
+I thought the chip shortage was the last big hurdle to overcome, but the electrical engineers are running into more complexity than they expected in the design. We've now broken the project down into individual steps with time estimates for each so that we have a shared view of the overall schedule and how delays affect our timeline.
 
 ### Publish a sample chapter of [*Refactoring English*](https://refactoringenglish.com)
 
 * **Result**: Almost finished a sample chapter, but I'm still editing
 * **Grade**: C
 
-The thing about publishing a book about effective writing is that people expect you to be a good writer. That puts some pressure on me. I'm about 70% done with a sample chapter to publish, but I still need to edit it more before it's ready.
+The thing about publishing a book about effective writing is that people expect you to be a good writer. That puts some pressure on me. I'm about 70% ready to publish a sample chapter to publish, but I still need to edit it more.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -153,7 +153,7 @@ Still, I'm hopeful that this partnership will be a big step forward for TinyPilo
 
 ## Carving out more time for myself
 
-For the past few months, I've been struggling to find time to grow TinyPilot. With so many moving pieces, I sometimes get stuck in a position where I spend all my time filling the gaps between roles for which I've hired contractors and part-time employees.
+For the past few months, I've been struggling to find time to grow TinyPilot. With so many moving pieces, I sometimes get stuck spending all my time filling the gaps between my teammates.
 
 Now, when I have available time, I invest in sales, but I also reserve time for delegating or automating tasks that others could do in my place.
 
@@ -171,19 +171,19 @@ In August, one of TinyPilot's developers added a serverless function that checks
 
 ### QA testing
 
-A month or two after I began selling TinyPilot, I published a bad update that broke keyboard input under certain conditions. Ever since then, I used a checklist of features that I test manually before each release.
+A month or two after I began selling TinyPilot, I published a bad software update that broke keyboard input under certain conditions. Ever since then, I used a checklist of features that I test manually before each release.
 
 My checklist started out as a handful of items I could check in five minutes. As we've added more features, the checklist has grown longer to the point where testing a release takes me almost half a day.
 
 I'd love to automate QA testing, but some of the workflows are unfriendly to automation. So, I designed a system and documented steps for my local staff to run manual QA tests on spare hardware while recording their screen.
 
-In addition to eliminating a time-consuming task from my workload, delegating QA gives the developers an opportunity to fix bugs earlier. I noticed a pattern where I'd discover bugs during final QA testing that were annoying but not significant enough to delay the release. Now that the QA process isn't blocked on me, we can run QA cycles mid-release and fix those minor issues.
+In addition to eliminating a time-consuming task from my workload, delegating QA gives us an opportunity to fix bugs earlier. I noticed a pattern where I'd discover bugs during final QA testing that were not significant enough to delay the release. Now that the QA process isn't blocked on me, we can run QA cycles mid-release and fix those minor issues.
 
 ## Can I afford to keep writing?
 
-With the added time, I'm doing more [important but non-urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) things.
+With the added time I gained from delegation, I'm doing more [important but non-urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) things.
 
-* I'm spending more time proactively reaching out to customers rather than talking only to customers with support issues.
+* I'm spending more time reaching out to customers proactively rather than talking only to customers with support issues.
 * I'm exercising more regularly instead of cutting it out of my day because I feel too busy.
 * I'm back to writing for an hour each morning.
 
@@ -210,7 +210,7 @@ Last month, I mentioned that I was applying for Is It Keto to join a premium ad 
 
 My reading was that the ad partner could request unlimited site changes from me, and the contract required me to carry them out. It also required me to serve their ads exclusively for at least three months. If I even *spoke* to another advertiser, I'd be in breach. The ad network, on the other hand, can drop me at any time or change the terms of the contract on a whim.
 
-So, I'm sticking with boring but reliable AdSense. My numbers are down, and it's at least partially seasonal changes. I might also be losing traffic to a competitor that popped up in the last six months. I'm still focusing on TinyPilot instead of worrying about it.
+So, I'm sticking with boring but reliable AdSense. My numbers are down, and it's at least partially seasonal changes. I might also be losing visitors to a competitor that popped up in the last six months. I'm still focusing on TinyPilot instead of worrying about it.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
@@ -243,7 +243,7 @@ This month, another customer had a big spike in usage, and this one seems legiti
 
 These past two months bring me to an exciting Zestful milestone: I've earned back my investment!
 
-I [spent $7.4k](/solo-developer-year-1/#zestfulhttpszestfuldatacom) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful probably paid me about a nickel per hour.
+I [spent $7.4k](/solo-developer-year-1/#zestfulhttpszestfuldatacom) hiring a freelancer to help me launch the first version, and I had a few other smaller costs leading to a total cost of $8k. Including August, my lifetime revenue from Zestful is now $8,246, so the project has officially turned a profit. Of course, this was possible because I paid myself $0. On an hourly basis, Zestful has probably earned me about a nickel per hour.
 
 Lastly, a company reached out in August about potentially acquiring Zestful. I was upfront with them that its earnings are small, but if they want to acquire my solution instead of rolling their own, I'm open to it. We had a preliminary call, and they requested some historical data from me. They said they're considering an offer. I'm not getting my hopes up, but it will be a nice bonus if it happens.
 
