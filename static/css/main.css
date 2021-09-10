@@ -289,11 +289,6 @@ h4:hover .hanchor {
   border: 1px solid #770000;
 }
 
-.honeypot {
-  position: absolute;
-  left: -5000px;
-}
-
 .btn-social {
   color: white;
   border-radius: 5px;
