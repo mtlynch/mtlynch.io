@@ -5,4 +5,4 @@
 # Note that we use sh instead of bash because only sh is available
 # in some markdownlint Docker images.
 
-markdownlint "./content/**/*.md"
+markdownlint-cli2 "./content/**/*.md"
