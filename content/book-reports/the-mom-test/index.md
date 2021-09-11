@@ -43,14 +43,18 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 
 ### The Mom Test elicits honest feedback
 
+<!-- markdownlint-disable blanks-around-lists -->
+
 * ***Problem***: When asked to evaluate a founder's business idea, people lie to spare the founder's feelings.
 * **The Mom Test**
   * Rules for asking constructive questions during customer interviews so that potential customers give you useful information instead of trying to please you.
   * Named "The Mom Test" because these questions elicit useful information even from an overprotective mother who wants to shield her child from hurt feelings.
   * Rules for passing The Mom Test:
-    > 1. Talk about their life instead of your idea.
-    > 1. Ask about specifics in the past instead of generics or opinions about the future.
-    > 1. Talk less and listen more.
+    >1. Talk about their life instead of your idea.
+    >1. Ask about specifics in the past instead of generics or opinions about the future.
+    >1. Talk less and listen more.
+
+<!-- markdownlint-enable blanks-around-lists -->
 
 ### Focus on past experience, not hypotheticals
 
@@ -61,10 +65,10 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 * People are often overly optimistic about paying for a product when it's hypothetical.
   * In practice, they're less likely to follow through.
 * **Don't** ask the customer how much they'd pay for a product that solves problem X.
- * **Do** ask how much problem X currently costs them.
+  * **Do** ask how much problem X currently costs them.
 * Other good questions:
-  > * Who else should I talk to?
-  > * Is there anything else I should have asked?
+  * Who else should I talk to?
+  * Is there anything else I should have asked?
 
 ### Compliments from the customer are a bad sign
 
@@ -74,10 +78,11 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 
 ### Avoid fluff
 
-> Fluff comes in 3 cuddly shapes:
-> * Generic claims ("I usually", "I always", "I never")
-> * Future-tense promises ("I would", "I will")
-> * Hypothetical maybes ("I might", "I could")
+>Fluff comes in 3 cuddly shapes:
+>
+>* Generic claims ("I usually", "I always", "I never")
+>* Future-tense promises ("I would", "I will")
+>* Hypothetical maybes ("I might", "I could")
 
 * When customers drift into fluff, anchor the conversation to concrete details, such as a specific time they solved the problem in question.
 
@@ -161,7 +166,8 @@ I expected basic advice about how you shouldn't ask customers leading questions,
 * Phone calls hide too many subtle social cues.
 * In-person meetings over coffee tend to be less time-constrained than a 30-minute calendar slot for a phone call.
 
-> ...nobody becomes friends over the phone.
+>...nobody becomes friends over the phone.
+
 * Adopt the mindset of seeking advisors
   * If you go into the meeting thinking of it as an *almost* sales meeting, you'll learn less.
   * Instead, privately maintain the mindset that you're looking for an advisor with industry-specific expertise, not a customer.

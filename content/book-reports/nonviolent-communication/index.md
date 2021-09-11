@@ -65,23 +65,25 @@ The book bears many similarities to [*Crucial Conversations*](https://www.indieb
 * During the trial of [Adolf Eichmann](https://en.wikipedia.org/wiki/Adolf_Eichmann) (Nazi officer), he said that Nazis discussed atrocities in the language of "amtssprache" ("office talk" or "bureaucratese").
   * When pressed to explain why they committed war crimes, Nazis would give responses like "I had to."
 * Examples of responsibility-denying language:
-  >* Vague, impersonal forces &mdash; "I cleaned my room because I had to."
-  >* Our condition, diagnosis, or personal or psychological history &mdash; "I drink because I am an alcoholic."
-  >* The actions of others &mdash; "I hit my child because he ran into the street."
-  >* The dictates of authority &mdash; "I lied to the client because the boss told me to."
-  >* Group pressure &mdash; "I started smoking because all my friends did."
-  >* Institutional policies, rules, and regulations &mdash; "I have to suspend you for this infraction because it's the school policy."
-  >* Gender roles, social roles, or age roles &mdash; "I hate going to work but I do it because I am a husband and a father."
-  >* Uncontrollable impulses &mdash; "I was overcome by my urge to eat the candy bar."
+
+>* Vague, impersonal forces &mdash; "I cleaned my room because I had to."
+>* Our condition, diagnosis, or personal or psychological history &mdash; "I drink because I am an alcoholic."
+>* The actions of others &mdash; "I hit my child because he ran into the street."
+>* The dictates of authority &mdash; "I lied to the client because the boss told me to."
+>* Group pressure &mdash; "I started smoking because all my friends did."
+>* Institutional policies, rules, and regulations &mdash; "I have to suspend you for this infraction because it's the school policy."
+>* Gender roles, social roles, or age roles &mdash; "I hate going to work but I do it because I am a husband and a father."
+>* Uncontrollable impulses &mdash; "I was overcome by my urge to eat the candy bar."
 
 * Styles of communication that minimize individual agency may be artifacts of living in hierarchical societies.
   * In a society where a small number of people control large populations, it's beneficial to leaders if citizens communicate using language that implies choicelessness and powerlessness.
 
-# Compassion-denying language
+## Compassion-denying language
 
 * The word "deserves" often blocks the speaker's compassion
   * e.g., "He *deserves* to be punished."
   * "deserves" attributes badness to the subject and implies that they deserve no empathy.
+
 ## Separating observations from judgments
 
 * People are more open to feedback that's objective and indisputable rather than feedback based on our opinions or judgments.
@@ -131,10 +133,11 @@ Words like "always," "never," "frequently," and "seldom" often accompany evaluat
   * "When you don't call me on my birthday, I feel hurt."
 
 It's possible to correct these speech patterns by connecting our feeling with the underlying need that caused it.
-  * Use the format: "I feel \[feeling\] because \[underlying need\]."
-  * Examples:
-    * "*I feel* really infuriated when spelling mistakes like that appear in our public brochures *because I* want our company to project a professional image."
-    * "*I feel* angry that the supervisor broke her promise, *because I* was counting on getting that long weekend to visit my brother."
+
+* Use the format: "I feel \[feeling\] because \[underlying need\]."
+* Examples:
+  * "*I feel* really infuriated when spelling mistakes like that appear in our public brochures *because I* want our company to project a professional image."
+  * "*I feel* angry that the supervisor broke her promise, *because I* was counting on getting that long weekend to visit my brother."
 
 ## State needs and desires in positive terms
 

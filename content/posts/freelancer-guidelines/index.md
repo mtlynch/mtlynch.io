@@ -109,8 +109,9 @@ In contrast, this email sequence answers the same questions as above, but in a p
 <div class="email manager-email">
 
 **Me**: Thanks for the well-thought-out questions!
-  * The format should be PNG.
-  * On viewports smaller than 768px, the size should be 400x300px. Otherwise, the size should be 800x600px.
+
+* The format should be PNG.
+* On viewports smaller than 768px, the size should be 400x300px. Otherwise, the size should be 800x600px.
 
 </div>
 

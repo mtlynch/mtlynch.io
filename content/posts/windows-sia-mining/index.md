@@ -108,34 +108,36 @@ To install Marlin, follow the steps below:
   {{< img src="cmd.png" alt="Run cmd" maxWidth="399px" >}}
 1. In the Command Prompt, type the following:
 
-    ```
+    ```text
     C:\marlin\marlin.exe --selftest
     ```
 
 You should see output that says `PASS` on each line:
 
-    2017/05/18 20:24:30 Starting marlin 1.0.0
-    2017/05/18 20:24:31 OpenCL error: cannot load OpenCL.dll
-    2017/05/18 20:24:31 CUDA (driver version 8.0)
-    2017/05/18 20:24:31  [0] GeForce GTX 970 (CC 5.2)
-    2017/05/18 20:24:31 [0] default   : PASS
-    2017/05/18 20:24:31 [0] m1p0      : PASS
-    2017/05/18 20:24:31 [0] m1p1      : PASS
-    2017/05/18 20:24:31 [0] m1p1x32   : PASS
-    2017/05/18 20:24:31 [0] m1p4x32   : PASS
-    2017/05/18 20:24:31 [0] m2p0      : PASS
-    2017/05/18 20:24:31 [0] m2p1      : PASS
-    2017/05/18 20:24:31 [0] m2p1x32   : PASS
-    2017/05/18 20:24:31 [0] m2p2      : PASS
-    2017/05/18 20:24:31 [0] m2p2x32   : PASS
-    2017/05/18 20:24:31 [0] m2p4      : PASS
-    2017/05/18 20:24:31 [0] m2p4x32   : PASS
-    2017/05/18 20:24:31 [0] x1p1      : PASS
-    2017/05/18 20:24:31 [0] x1p1x32   : PASS
-    2017/05/18 20:24:31 [0] x1p2x32   : PASS
-    2017/05/18 20:24:31 [0] x1p3x32   : PASS
-    2017/05/18 20:24:31 [0] x1p4x32   : PASS
-    2017/05/18 20:24:31 [0] x1p5x32   : PASS
+```text
+2017/05/18 20:24:30 Starting marlin 1.0.0
+2017/05/18 20:24:31 OpenCL error: cannot load OpenCL.dll
+2017/05/18 20:24:31 CUDA (driver version 8.0)
+2017/05/18 20:24:31  [0] GeForce GTX 970 (CC 5.2)
+2017/05/18 20:24:31 [0] default   : PASS
+2017/05/18 20:24:31 [0] m1p0      : PASS
+2017/05/18 20:24:31 [0] m1p1      : PASS
+2017/05/18 20:24:31 [0] m1p1x32   : PASS
+2017/05/18 20:24:31 [0] m1p4x32   : PASS
+2017/05/18 20:24:31 [0] m2p0      : PASS
+2017/05/18 20:24:31 [0] m2p1      : PASS
+2017/05/18 20:24:31 [0] m2p1x32   : PASS
+2017/05/18 20:24:31 [0] m2p2      : PASS
+2017/05/18 20:24:31 [0] m2p2x32   : PASS
+2017/05/18 20:24:31 [0] m2p4      : PASS
+2017/05/18 20:24:31 [0] m2p4x32   : PASS
+2017/05/18 20:24:31 [0] x1p1      : PASS
+2017/05/18 20:24:31 [0] x1p1x32   : PASS
+2017/05/18 20:24:31 [0] x1p2x32   : PASS
+2017/05/18 20:24:31 [0] x1p3x32   : PASS
+2017/05/18 20:24:31 [0] x1p4x32   : PASS
+2017/05/18 20:24:31 [0] x1p5x32   : PASS
+```
 
 This verifies that your GPU library is installed correctly and your miner is able to access it. All you need now is a Siacoin wallet and you'll be ready to begin mining.
 
@@ -191,12 +193,11 @@ You'll see a progress bar in the upper right corner that represents Sia-UI's pro
 1. Click "Create a new wallet."
   {{< img src="sia-ui-create-wallet.png" alt="Sia-UI create wallet" >}}
 1. Sia-UI then displays your wallet seed. This is a series of words that gives you access to your Siacoin wallet.
-  * **Save your wallet seed**. Either write it down on paper or save it to a text file.
-  * Sia offers to let you choose a wallet *password* that is distinct from your wallet *seed*. For simplicity, leave the password as is so that it will match your seed.
-  * **Important**: You'll need your wallet seed to access your wallet every time you start Sia-UI. If you lose your wallet seed, you can never recover the money inside your wallet.
-  * **Important**: Anyone who has your wallet seed controls your Siacoin balance. Never post your wallet seed online (unless you're writing a Siacoin mining tutorial).
-
-  {{< img src="sia-seed.png" alt="Sia-UI seed" >}}
+    * **Save your wallet seed**. Either write it down on paper or save it to a text file.
+    * Sia offers to let you choose a wallet *password* that is distinct from your wallet *seed*. For simplicity, leave the password as is so that it will match your seed.
+    * **Important**: You'll need your wallet seed to access your wallet every time you start Sia-UI. If you lose your wallet seed, you can never recover the money inside your wallet.
+    * **Important**: Anyone who has your wallet seed controls your Siacoin balance. Never post your wallet seed online (unless you're writing a Siacoin mining tutorial).
+    {{<img src="sia-seed.png" alt="Sia-UI seed">}}
 1. Click the button that says "I have written these down in a safe place."
 1. Because Sia-UI maintains a healthy skepticism of its users, the next screen challenges you to enter the wallet seed you just saved. Type in the seed you saved in step 3 and click "Confirm."
   {{< img src="sia-password-and-seed.png" alt="Sia-UI enter seed and password" >}}
@@ -415,10 +416,10 @@ If it fails after you've lowered the intensity, try the following:
 1. Type `cmd` and hit Enter.
   {{< img src="cmd.png" alt="Run cmd" maxWidth="399px" >}}
 1. In the Command Prompt, type the following:
-```
-cd C:\marlin
-marlin.bat
-```
+    ```text
+    cd C:\marlin
+    marlin.bat
+    ```
 
 This won't fix the issue, but the window will stay open so that you can see the error message Marlin is producing before it crashes.
 

@@ -15,10 +15,11 @@ date: '2017-08-06'
 images:
 - sia-nextcloud/nextcloud-complete.png
 ---
+<!-- markdownlint-disable blanks-around-fences blanks-around-lists -->
 
 In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB/month. By comparison, the same storage would cost $8.25 per month on Dropbox or $10 per month on Google Drive.
 
-{{< img src="nextcloud-complete.png" alt="Completed Nextcloud install" >}}
+{{<img src="nextcloud-complete.png" alt="Completed Nextcloud install">}}
 
 ## Video tutorial
 
@@ -85,9 +86,9 @@ To begin, you'll create a directory for this solution and download all the neces
 
 1. Create a directory called `sia-nextcloud`. You'll be downloading the full blockchain within this folder, so make sure it's on a drive with at least 6 GB of free space.
 1. Download the three files below into the `sia-nextcloud` directory:
-  * [`docker-compose.yml`](docker-compose.yml)
-  * [`Dockerfile.nextcloud`](Dockerfile.nextcloud)
-  * [`Dockerfile.sia`](Dockerfile.sia)
+    * [`docker-compose.yml`](docker-compose.yml)
+    * [`Dockerfile.nextcloud`](Dockerfile.nextcloud)
+    * [`Dockerfile.sia`](Dockerfile.sia)
 1. Within `sia-nextcloud` create two directories: `sia-data` and `sia-uploads`.
 
 After downloading these files and creating the appropriate folders, your directory should look like this:

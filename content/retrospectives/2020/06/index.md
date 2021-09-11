@@ -111,7 +111,7 @@ Everyone talks about using [webpack-bundle-analyzer](https://www.npmjs.com/packa
 
 But they never explain **how** you actually generate the visualization. I finally figured out that the missing step 2 is to plug webpack-bundle-analyzer into your build (varies by stack, but [here](https://www.codegram.com/blog/improving-a-gridsome-website-performance/#avoid-enormous-network-payloads-and-minimize-main-thread-work) is how to do it on Gridsome). Then the next time you build your app, you'll see a line like this:
 
-```
+```text
 Webpack Bundle Analyzer saved report to /home/user/isitketo/dist/report.html
 ```
 

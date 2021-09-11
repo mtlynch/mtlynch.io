@@ -13,7 +13,7 @@ jobs:
           command: tests/check-trailing-newline
   lint-markdown:
     docker:
-      - image: mtlynch/markdownlint:0.8.0
+      - image: davidanson/markdownlint-cli2:0.3.0
     steps:
       - checkout
       - run:

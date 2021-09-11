@@ -485,13 +485,13 @@ If you're using this process to store family videos, you probably want your fami
 
 If you want to do that, click the "Original file" link in the MediaGoblin interface:
 
-{{< img src="share-single-file.png" alt="Screenshot with pointer to 'Original file' link" maxWidth="700px" >}}
+{{<img src="share-single-file.png" alt="Screenshot with pointer to 'Original file' link" maxWidth="700px">}}
 
 This will give the guest access to that individual file, but because of the way you [configured Google Cloud Storage bucket permissions](#create-a-storage-bucket), they won't be able to explore the library and access other videos.
 
 The "original file" link gives you a URL that looks like this:
 
-* https://storage.googleapis.com/mediagoblin-39dpduhfz1wstbprmyk5ak29/media_entries/4/Texas_Family_-_1952_-_04_-_Trudy_Working_at_the_Loom.mp4
+* <https://storage.googleapis.com/mediagoblin-39dpduhfz1wstbprmyk5ak29/media_entries/4/Texas_Family_-_1952_-_04_-_Trudy_Working_at_the_Loom.mp4>
 
 As you can see, given the above URL, you can watch that single video, but it's not possible to explore the bucket to find other videos.
 

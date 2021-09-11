@@ -1,5 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+set -eux
 
 # Uses Markdown Linter to find issues in markdown files.
 
-mdl ./content --style ./tests/markdown-linter-style.rb
+markdownlint "./content/**/*.md"

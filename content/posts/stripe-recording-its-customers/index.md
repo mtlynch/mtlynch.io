@@ -66,6 +66,7 @@ $ echo "JTdCJTIydjIlMjIlM0ExJTJDJTIyaWQlMjIlM0ElMjI4MTBiOWIxY2E3ODU5YzNlYzExYTY0
   | base64 --decode \
   | python -c "import sys; import json; from urllib.parse import unquote; print(json.dumps(json.loads(unquote(sys.stdin.read())), indent=2, sort_keys=True))"
 ```
+
 ```json
 {
   "a": null,
