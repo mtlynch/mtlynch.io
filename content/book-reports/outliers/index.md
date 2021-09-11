@@ -110,11 +110,11 @@ In the past few years, I've noticed people increasingly mocking Gladwell and his
 #### Levels of "mitigated speech"
 
 >1. *Command*: "Turn thirty degrees right." That's the most direct and explicit way of making a point imaginable. It's zero mitigation.
-1. *Crew Obligation Statement*: "I think we need to deviate right about now." Notice the use of "we" and the fact that the request is now much less specific. That's a little softer.
-1. *Crew Suggestion*: "Let's go around the weather." Implicit in that statement is "we're in this together."
-1. *Query*: "Which direction would you like to deviate?" That's even softer than a crew suggestion because the speaker is conceding that he's not in charge.
-1. *Preference*: "I think it would be wise to turn left or right."
-1. *Hint*: "That return at twenty-five miles looks mean." This is the most mitigated statement of all.
+>1. *Crew Obligation Statement*: "I think we need to deviate right about now." Notice the use of "we" and the fact that the request is now much less specific. That's a little softer.
+>1. *Crew Suggestion*: "Let's go around the weather." Implicit in that statement is "we're in this together."
+>1. *Query*: "Which direction would you like to deviate?" That's even softer than a crew suggestion because the speaker is conceding that he's not in charge.
+>1. *Preference*: "I think it would be wise to turn left or right."
+>1. *Hint*: "That return at twenty-five miles looks mean." This is the most mitigated statement of all.
 
 * Captains overwhelmingly speak in commands (#1), the least mitigated form of speech.
 * First officers typically speak to their captain in hints (#6), the most mitigated form of speech.
@@ -123,8 +123,8 @@ In the past few years, I've noticed people increasingly mocking Gladwell and his
 * Airlines have begun teaching first officers to escalate concerns using increasingly direct speech in every request:
 
 >1. "Captain, I'm concerned about..."
-1. "Captain, I'm uncomfortable with..."
-1. "Captain, I believe the situation is unsafe."
+>1. "Captain, I'm uncomfortable with..."
+>1. "Captain, I believe the situation is unsafe."
 
 #### [Hofstede's dimensions](https://en.wikipedia.org/wiki/Hofstede%27s_cultural_dimensions_theory)
 

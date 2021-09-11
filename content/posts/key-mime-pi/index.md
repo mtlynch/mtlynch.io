@@ -187,7 +187,7 @@ echo -ne "\0\0\x1a\x0b\x04\x17\x18\x13" > /dev/hidg0 && \
   echo -ne "\0\0\0\0\0\0\0\0" > /dev/hidg0
 ```
 
-```
+```text
 whatup
 ```
 
@@ -265,7 +265,7 @@ echo -ne "\0\0\xb\0\0\0\0\0" > /dev/hidg0 && \
 
 If everything is working, you should see the following output on the machine the Pi is connected to via USB:
 
-```
+```text
 hi
 ```
 

@@ -2,4 +2,7 @@
 
 # Uses Markdown Linter to find issues in markdown files.
 
-mdl ./content --style ./tests/markdown-linter-style.rb
+# Note that we use sh instead of bash because only sh is available
+# in some markdownlint Docker images.
+
+markdownlint-cli2 "./content/**/*.md"

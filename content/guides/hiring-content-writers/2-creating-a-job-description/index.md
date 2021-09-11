@@ -19,7 +19,7 @@ A clear, concise job description shows candidates that you're an organized profe
 
 Below, I've included the job description I use to hire writers for Is It Keto. It's a Google Doc, and I always link candidates directly to it to ensure a single, authoritative version. When I fix mistakes or clarify the wording, I never worry about who has which draft of my document.
 
-{{< img src="job-description.jpg" alt="Screenshot of Is It Keto's job description" caption="Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" maxWidth="825px" hasBorder="True" linkUrl="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#" >}}
+{{<img src="job-description.jpg" alt="Screenshot of Is It Keto's job description" caption="Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" maxWidth="825px" hasBorder="True" linkUrl="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#">}}
 
 ## Elements of a good job description
 
@@ -108,15 +108,19 @@ Which writer costs more in the long run?
 
 To understand why, consider the total cost of producing an article, given by the formula below:
 
+<!-- markdownlint-disable no-space-in-emphasis -->
+
 ![Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)](/hiring-content-writers/2-creating-a-job-description/cost-formula.svg "Cost per article = (Freelancer's time writing the article * freelancer's wage) + (Your time editing the article * value of your time)")
 
 For example, in February, I [calculated](/retrospectives/2019/03/#diving-into-my-content-costs) that each article took my writer about 2.3 hours to write and required 37.5 minutes of my time to edit. I paid the writer $20/hr, and I valued my own time at $30/hr, so the total cost for each article was:
 
 ![Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article](/hiring-content-writers/2-creating-a-job-description/cost-example.svg "Cost per article = (2.3 hours * $20/hr) + (0.625 hours * $30/hr) = $64.75 per article")
 
+<!-- markdownlint-enable no-space-in-emphasis -->
+
 {{<notice type="info">}}
 **Note**: This applies specifically to [pay per hour structure](/hiring-content-writers/2-creating-a-job-description/#pay-per-hour-per-word-or-per-article). If you're paying per word or per article, check [Who Pays Writers](http://whopayswriters.com) to get a sense of market rates for publications similar to yours.
-{{< /notice >}}
+{{</notice>}}
 
 A writer's hourly rate is meaningless unless you know how quickly they work and how much editing they require. I typically pay writers their asking rate, then use a [trial hire](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial) to evaluate whether they're worth the money.
 

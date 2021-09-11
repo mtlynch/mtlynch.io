@@ -278,6 +278,7 @@ gcloud services enable \
 # Enable gcloud to provide credentials for Docker image pushes.
 gcloud auth configure-docker --quiet
 ```
+
 ## Uploading image to Google Container Registry
 
 Before you deploy a Docker image to GCE, you need to publish it to a Docker image hosting service. GCR is Google Cloud's integrated Docker image hosting service, so that's the easiest option.
