@@ -2,7 +2,7 @@
 title: "How to Stop Worrying and Start Living by Dale Carnegie"
 date: 2021-08-24T00:00:00-04:00
 rating: 5
-purchase_url: https://www.indiebound.org/book/9780671733353
+purchase_url: https://www.indiebound.org/book/9780671035976
 ---
 
 As a big fan of Dale Carnegie's *How to Win Friends and Influence People*, I was interested in this book. 70 years after it was published, I still see people recommending it, so I had high hopes.
