@@ -49,9 +49,7 @@ The thing about publishing a book about effective writing is that people expect 
 | Sales Revenue   | $23,954.64     | $30,191.04     | <font color="green">+$6,236.40 (+26%)</font>      |
 | Enterprise Subscriptions | $48.00 | $48.00 | $0 (0%) |
 | Total Revenue   | $24,002.64     | $30,239.04     | <font color="green">+$6,236.40 (+26%)</font>      |
-| **Profit**      | <font color="red">**$-9,713.34**</font> | <font color="red">**$-8,049.21**</font>\* | **<font color="green">+$1,664.13</font>** |
-
-\* *Provisional until I perform bookkeeping for August. This number is just the change in my checking account minus my credit card balance.*
+| **Profit**      | <font color="red">**$-9,713.34**</font> | <font color="red">**$-10,140.95**</font> | **<font color="green">+$1,664.13</font>** |
 
 Ouch! That's three consecutive months of ~$8-10k losses. Worryingly, I increased revenue by $6k from last month but only reduced my net losses by ~$2k.
 
