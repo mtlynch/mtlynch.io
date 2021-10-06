@@ -17,21 +17,21 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Made progress but didn't publish a chapter
 * **Grade**: D
 
-TinyPilot got busy enough again that I didn't have much time to write this month, so I'm not sure when I'll be able to pick up the book again.
+TinyPilot got busy enough again that I didn't have much time to write this month. Sadly, I'm going to put the book on hold indefinitely, since TinyPilot still needs my full attention.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
-* **Result**: XX
+* **Result**: We're still at the design stage, but for good reasons
 * **Grade**: B-
 
-TODO
+I was hoping to start development by the end of the month, but there are more design questions than I anticipated. Still, I don't feel too bad about the delay because investing more in up-front design will save us time on the initial implementation overall and prevent us from locking ourselves into bad decisions.
 
 ### Finalize the design of the Voyager 2
 
-* **Result**: XX
+* **Result**: We finished all testing on the first Voyager 2
 * **Grade**: A
 
-TODO
+We're running a little late on this, but we're still on track to ship the first Voyager 2 by the end of November. The electrical engineers have built several prototypes, and they've passed all testing, so we're now in the process of ordering the first production batch from a PCB manufacturer.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -50,34 +50,55 @@ TODO
 \* Royalties are an estimate until my distributor and I calculate the totals.<br>
 \*\* Profit is provisional until I complete my monthly bookkeeping. Currently, it's just the delta in my cash for the month minus my credit card balance.
 
-After an unremarkable first half of the month, I got a surprise [review from Jeff Geerling](https://www.youtube.com/watch?v=TIrkEr2AeDY), a beloved blogger and YouTube creator in the Raspberry Pi world. Jeff's video compared TinyPilot to PiKVM, and I feel like both products came across well. The video already has over 250k views, so it led tons of new customers to TinyPilot.
+After an unremarkable first half of the month, I got a surprise [review from Jeff Geerling](https://www.youtube.com/watch?v=TIrkEr2AeDY), a beloved blogger and YouTube creator in the Raspberry Pi world.
+
+{{<youtube TIrkEr2AeDY>}}
+
+Jeff's video compared TinyPilot to PiKVM, and I feel like both products came across well. The video already has over 250k views, so it led tons of new customers to TinyPilot.
+
+TinyPilot had $42k in sales from our own website, but it was also a . It was the first full month that [TinyPilot's European distributor](https://www.kvm-ip.de/) was running, and they had a great sales month as well.
 
 ## PiKVM's scary fundraising
 
 Speaking of PiKVM, they just raised an enormous amount of money on Kickstarter.
 
-PiKVM is a similar KVM over IP product. While I was launching TinyPilot, Maxim, PiKVM's founder and sole developer reached out to me and helped me get TinyPilot off the ground.
+PiKVM is similar to TinyPilot in that they're both KVM over IP products built on the Raspberry Pi. PiKVM's founder Maxim actually reached out to me when I was developing TinyPilot and [helped me get my project off the ground](/tinypilot/#borrowing-from-a-similar-project).
 
-PiKVM started in XX, predating TinyPilot by five years. Until recently PiKVM relied purely on donations, with about $800 in monthly contributions from their Patreon. In September, they launched a Kickstarter to sell their first paid product, a hardware accessory for the Raspberry Pi that complements PiKVM's software.
+TinyPilot and PiKVM have co-existed and served somewhat different markets. My goal with TinyPilot has always been to make it easy to use, whereas PiKVM has catered more to the DIY crowd who don't mind having to tinker a bit to get things working the way they want.
+
+PiKVM started in 2016. Until recently, PiKVM relied purely on donations, with about $800 in monthly contributions from their Patreon supporters and one-off donations from other sources. In September, they began selling their first-ever paid product through Kickstarter. It's a hardware accessory for the Raspberry Pi that complements PiKVM's software.
 
 When I heard about the Kickstarter, I thought it would perhaps earn $15-20k, enough to manufacture a few hundred units. It ended up far exceeding my expectations, closing with a total of $789k from 3,572 backers.
 
-I'm happy for Maxim, and he certainly deserves it for all the work he's put into PiKVM, but I'd be lying if I said it didn't make me nervous.
+{{<img src="pikvm-kickstarter.png" alt="Screenshot of PiKVM Kickstarter, showing $789,191 in funds raised" maxWidth="800px" hasBorder="true" caption="PiKVM's Kickstarter raised $789,191.">}}
 
-Granted, I think PiKVM and TinyPilot serve different niches. TinyPilot is plug 'n play
+I'm happy for Maxim, and he certainly deserves it for all the work he's put into PiKVM. That said, it's a bit scary to see a competitor suddenly raise almost a million dollars. Scarier still is that he's commented that he's interested in making a plug 'n play version to compete with TinyPilot.
 
+Still, I think the Kickstarter shows how enormous the market is for products like TinyPilot. PiKVM and TinyPilot still probably capture less than 1% of the total market of people who need a KVM over IP device. And even though PiKVM has a five-year lead on me in developing his product, TinyPilot still has a significant lead in several domains:
 
-My advantages are still:
+**TinyPilot has a dev team**. Even with unlimited money, it's still difficult to find and hire talented developers. Google, Apple, and friends have almost infinite money, and they struggle to hire developers. I have three solid developers that are ramped up on TinyPilot and all the development processes around it, so that's difficult for a competitor to replicate.
 
-**TinyPilot has a dev team**. Even with unlimited money, it's still difficult to find and hire talented developers. Google, Apple, and friends have almost infinite money, and they struggle to hire developers. I've assembled a strong, cohesive dev team, but it took months and leveraged what I see as my unique strengths
+**TinyPilot has a learnable codebase**. TinyPilot has extensive unit tests, [continuous integration](https://github.com/tiny-pilot/tinypilot/blob/4476e3b40af6879191a8d682bef54005e74aca48/.circleci/config.yml), and [documentation](https://github.com/tiny-pilot/tinypilot/blob/4476e3b40af6879191a8d682bef54005e74aca48/CONTRIBUTING.md) that make it easy for new developers to work on the code. In contrast, only one person is comfortable with the PiKVM codebase, and that's the founder. The project has significantly less documentation and automated tests than TinyPilot, so new developers will face a steep learning curve.
 
-**TinyPilot has a learnable codebase**. TinyPilot has extensive unit tests, continuous integration, and [documentation](https://github.com/tiny-pilot/tinypilot/blob/4476e3b40af6879191a8d682bef54005e74aca48/CONTRIBUTING.md) that make it easy for new developers to work on the code. Only one person is comfortable with the PiKVM codebase, and that's the founder. There's a 500-fold difference between PiKVM's founder and the next most prolific contributor. For TinyPilot, I only have 2x as much code as the next most active contributor and only 10x more than the one after that.
+**TinyPilot has an asssembly pipeline**. PiKVM is currently a simpler product to sell because a generic circuit board manufacturer can produce their product. If they move into pre-assembled devices, they need to hire staff to assemble parts, manage inventory, and ship to distributors. It took me almost a year to get all these processes smoothed out, so it's not the kind of thing a competitor could flip on overnight.
 
-**TinyPilot has an asssembly pipeline**. PiKVM is currently a simpler product to sell because it can go directly from a circuit board factory to a customer or a distributor. If they move into pre-assembled devices, they need to hire staff to assemble products and manage inventory. It took me a year to set that up and smooth out  For anyone to compete with TinyPilot by building a pre-assembled device, they'd need to hire and train staff to do this. This isn't trivial, and it took me several months to fully delegate. PiKVM is cutting out some complexity by delegating order fulfillment to another company, but that only works for products that don't require any assembly or functional testing.
+## Investing more into design
 
-## Investing more into marketing
+Last month, I talked about how [improving TinyPilot's website design](/retrospectives/2021/09/#tinypilot-website-improvements) seems to have increased sales. I decided to continue work on the website by hiring a professional designer.
 
-I didn't have development bandwidth. I didn't want to
+I interviewed six different designers and firms, and I ended up picking the most expensive one. I might be a rube, but they convinced me to expand the scope of the project significantly.
+
+My plan was to just hand the . They argued that what I should actually do is this:
+
+1. Re-do TinyPilot's branding (logo, fonts, color scheme)
+1. Hire a marketing firm to talk about an ad strategy
+1. Redesign the TinyPilot website based on the new brand and the ad strategy
+
+I might be a rube who got hornswoggled into an expensive project, but I felt like they made a compelling case. The brand forms the foundation of everything else, so it makes sense to invest more in that now.
+
+{{<img src="tinypilot-logo.jpg" alt="TinyPilot's logo, a chipmunk in an airplane" maxWidth="600px" hasBorder="true" caption="TinyPilot's chipmunk mascot may not be long for this world.">}}
+
+As much as I love the TinyPilot chipmunk, I think the company has outgrown the mascot. The cartoonishness worked in the beginning when we were catering mainly to hobbyists, but now that more of our customers are businesses, I want a logo that's a bit more serious &mdash; not IBM-level serious, but maybe like a notch or two more playful than [Ubiquiti](https://ui.com) or [Proxmox](https://www.proxmox.com/en/).
 
 ## Legacy projects
 
@@ -96,7 +117,9 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Amazon Affiliate Revenue | $43.73      | $77.42         | <font color="green">+$33.69 (+77%)</font>   |
 | **Total Revenue**        | **$402.16** | **$342.05**    | **<font color="red">-$60.11 (-15%)</font>** |
 
-Is It Keto seems to be slowly dying. Another website popped up that does the same thing as Is It Keto, but they're actively building it, so they're outcompeting me in search engine rankings. I was hoping to quietly collect passive income on it indefinitely, but it's been deflating fast each month.
+Is It Keto seems to be slowly dying. Another website popped up that does the same thing, and they're outcompeting me in search engine rankings.
+
+I was hoping the site would quietly generate passive income indefinitely, but it's been deflating fast each month.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
@@ -109,7 +132,7 @@ Is It Keto seems to be slowly dying. Another website popped up that does the sam
 | Blogging for Devs Revenue | $0.00       | $27.30         | <font color="green">+$27.30 (+inf%)</font>   |
 | **Total Revenue**         | **$728.90** | **$216.44**    | **<font color="red">-$512.46 (-70%)</font>** |
 
-In August, I ran a pay-what-you-want promotion for the course, and that led to a jump in sales. I worried that anyone who would ever consider the course had already purchased it during that promotion, but September showed that a handful of people are still buying.
+In August, I ran a [pay-what-you-want promotion](/retrospectives/2021/09/#hit-the-front-page-of-hacker-newshttpshitthefrontpagecom) for the course, and that led to a jump in sales. I worried that anyone who would ever consider the course had already purchased it during that promotion, but September showed that a handful of people are still buying.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -119,7 +142,6 @@ In August, I ran a pay-what-you-want promotion for the course, and that led to a
 | ----------------- | ----------- | -------------- | -------------------------------------------- |
 | Unique Visitors   | 585         | 596            | <font color="green">+11 (+2%)</font>         |
 | Total Pageviews   | 1,467       | 1,512          | <font color="green">+45 (+3%)</font>         |
-| RapidAPI Revenue  | $390.80     | $185.12        | <font color="red">-$205.68 (-53%)</font>     |
 | **Total Revenue** | **$390.80** | **$185.12**    | **<font color="red">-$205.68 (-53%)</font>** |
 
 Zestful is popping up from nowhere as a recurring revenue source. Historically, the service only made money from companies that wanted the Enterprise version for a month or two to bulk process millions of records. The pay-as-you-go service never earned much money. In the last three months, multiple customers are increasing their usage of Zestful to the point that it's generating a few hundred dollars per month in usage fees.
@@ -129,8 +151,9 @@ Zestful is popping up from nowhere as a recurring revenue source. Historically, 
 ### What got done?
 
 * Hired a design firm to redesign the TinyPilot website.
-* Published the TinyPilot [September update](https://tinypilotkvm.com/blog/whats-new-in-2021-09).
+* Released the TinyPilot [September update](https://tinypilotkvm.com/blog/whats-new-in-2021-09).
 * Moved TinyPilot's image build process to the cloud.
+* Moved TinyPilot's email support to [HelpScout](https://helpscout.com), a shared inbox service, which will help me scale customer support.
 
 ### Lessons learned
 
