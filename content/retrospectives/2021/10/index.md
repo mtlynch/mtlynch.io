@@ -50,19 +50,30 @@ TODO
 \* Royalties are an estimate until my distributor and I calculate the totals.<br>
 \*\* Profit is provisional until I complete my monthly bookkeeping. Currently, it's just the delta in my cash for the month minus my credit card balance.
 
-After an unremarkable first half of the month, I got a surprise review from Jeff Geerling, a beloved blogger and YouTube creator in the Raspberry Pi world. He made a video that compared TinyPilot to PiKVM, and I feel like both products came across well.
+After an unremarkable first half of the month, I got a surprise [review from Jeff Geerling](https://www.youtube.com/watch?v=TIrkEr2AeDY), a beloved blogger and YouTube creator in the Raspberry Pi world. Jeff's video compared TinyPilot to PiKVM, and I feel like both products came across well. The video already has over 250k views, so it led tons of new customers to TinyPilot.
 
 ## PiKVM's scary fundraising
 
-When I was developing TinyPilot, the maintainer of . At the time, Pi KVM was one of several Raspberry Pi KVM over IP projects, and I felt they were limiting their audience by requiring so much electronics background and
+Speaking of PiKVM, they just raised an enormous amount of money on Kickstarter.
+
+PiKVM is a similar KVM over IP product. While I was launching TinyPilot, Maxim, PiKVM's founder and sole developer reached out to me and helped me get TinyPilot off the ground.
+
+PiKVM started in XX, predating TinyPilot by five years. Until recently PiKVM relied purely on donations, with about $800 in monthly contributions from their Patreon. In September, they launched a Kickstarter to sell their first paid product, a hardware accessory for the Raspberry Pi that complements PiKVM's software.
+
+When I heard about the Kickstarter, I thought it would perhaps earn $15-20k, enough to manufacture a few hundred units. It ended up far exceeding my expectations, closing with a total of $789k from 3,572 backers.
+
+I'm happy for Maxim, and he certainly deserves it for all the work he's put into PiKVM, but I'd be lying if I said it didn't make me nervous.
+
+Granted, I think PiKVM and TinyPilot serve different niches. TinyPilot is plug 'n play
+
 
 My advantages are still:
 
-**Assembling a dev team**: Even with unlimited money, it's still difficult and time-consuming to find and hire talented developers.
+**TinyPilot has a dev team**. Even with unlimited money, it's still difficult to find and hire talented developers. Google, Apple, and friends have almost infinite money, and they struggle to hire developers. I've assembled a strong, cohesive dev team, but it took months and leveraged what I see as my unique strengths
 
-**Learnable codebase**: TinyPilot has extensive unit tests, continuous integration, and documentation that make it easy for new developers to work on the code. Only one person is comfortable with the PiKVM codebase, and that's the founder. There's a 500-fold difference between PiKVM's founder and the next most prolific contributor. For TinyPilot, I only have 2x as much code as the next most active contributor and only 10x more than the one after that.
+**TinyPilot has a learnable codebase**. TinyPilot has extensive unit tests, continuous integration, and [documentation](https://github.com/tiny-pilot/tinypilot/blob/4476e3b40af6879191a8d682bef54005e74aca48/CONTRIBUTING.md) that make it easy for new developers to work on the code. Only one person is comfortable with the PiKVM codebase, and that's the founder. There's a 500-fold difference between PiKVM's founder and the next most prolific contributor. For TinyPilot, I only have 2x as much code as the next most active contributor and only 10x more than the one after that.
 
-**Assembly workflow**: For anyone to compete with TinyPilot by building a pre-assembled device, they'd need to hire and train staff to do this. This isn't trivial, and it took me several months to fully delegate. PiKVM is cutting out some complexity by delegating order fulfillment to another company, but that only works for products that don't require any assembly or functional testing.
+**TinyPilot has an asssembly pipeline**. PiKVM is currently a simpler product to sell because it can go directly from a circuit board factory to a customer or a distributor. If they move into pre-assembled devices, they need to hire staff to assemble products and manage inventory. It took me a year to set that up and smooth out  For anyone to compete with TinyPilot by building a pre-assembled device, they'd need to hire and train staff to do this. This isn't trivial, and it took me several months to fully delegate. PiKVM is cutting out some complexity by delegating order fulfillment to another company, but that only works for products that don't require any assembly or functional testing.
 
 ## Investing more into marketing
 
