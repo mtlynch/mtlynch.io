@@ -19,7 +19,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Made progress but didn't publish a chapter
 * **Grade**: D
 
-TinyPilot got busy enough again that I didn't have much time to write this month. Sadly, I'm going to put the book on hold indefinitely, since TinyPilot still needs my full attention.
+TinyPilot got busy enough again that I didn't have much time to write this month. Sadly, I'm going to put the book on hold indefinitely since TinyPilot still needs my full attention.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
@@ -68,7 +68,7 @@ PiKVM is similar to TinyPilot in that they're both KVM over IP products built on
 
 TinyPilot and PiKVM have co-existed for the past year while serving somewhat different markets. My primary goal with TinyPilot has always been to make the device easy to use, whereas PiKVM has catered to the DIY crowd who don't mind tinkering a bit to get things working the way they want.
 
-PiKVM gives all of their software away for free and doesn't offer a paid version. Until recently, PiKVM relied purely on donations, with about $800 in monthly contributions from their Patreon supporters and one-off donations from other sources. In September, PiKVM launched a Kickstarter for their first-ever paid product. It's a hardware accessory for the Raspberry Pi that complements PiKVM's software.
+PiKVM gives all of its software away for free and doesn't offer a paid version. Until recently, PiKVM relied purely on donations, with about $800 in monthly contributions from their Patreon supporters and one-off donations from other sources. In September, PiKVM launched a Kickstarter for their first-ever paid product. It's a hardware accessory for the Raspberry Pi that complements PiKVM's software.
 
 When I heard about PiKVM's Kickstarter, I estimated that it would earn $15-20k, enough to manufacture a few hundred units. It ended up **far** exceeding my expectations. The final total was $789k from 3,572 backers. That's twice as much as TinyPilot's total sales revenue since launch.
 
@@ -84,7 +84,7 @@ Even though PiKVM has a five-year lead in developing their software, TinyPilot s
 
 **TinyPilot has a learnable codebase**. TinyPilot has extensive unit tests, [continuous integration](https://github.com/tiny-pilot/tinypilot/blob/4476e3b40af6879191a8d682bef54005e74aca48/.circleci/config.yml), and [documentation](https://github.com/tiny-pilot/tinypilot/blob/4476e3b40af6879191a8d682bef54005e74aca48/CONTRIBUTING.md) that make it easy for new developers to work on the code. In contrast, only one person is comfortable with the PiKVM codebase, and that's the founder. PiKVM has significantly less documentation and automated tests than TinyPilot, so new developers will face a steeper learning curve.
 
-**TinyPilot has an asssembly pipeline**. PiKVM is currently a simpler product to sell because a generic circuit board manufacturer can produce their product. If they move into pre-assembled devices, they need to hire staff and train them to assemble parts, manage inventory, and ship to distributors. It took me almost a year to get all these processes running smoothly for TinyPilot, so it's not the kind of thing a competitor could flip on overnight.
+**TinyPilot has an assembly pipeline**. PiKVM is currently a simpler product to sell because a generic circuit board manufacturer can produce their product. If they move into pre-assembled devices, they need to hire staff and train them to assemble parts, manage inventory, and ship to distributors. It took me almost a year to get all these processes running smoothly for TinyPilot, so it's not the kind of thing a competitor could flip on overnight.
 
 ## Investing more into design
 
@@ -152,7 +152,7 @@ In August, I ran a [pay-what-you-want promotion](/retrospectives/2021/09/#hit-th
 | Total Pageviews   | 1,467       | 1,512          | <font color="green">+45 (+3%)</font>         |
 | **Total Revenue** | **$390.80** | **$185.12**    | **<font color="red">-$205.68 (-53%)</font>** |
 
-Zestful is popping up from nowhere as a recurring revenue source. Historically, the pay-as-you go service rarely earns more than $50/month. The bulk of Zestful's income came from Enterprise customers who wanted the service for a month or two to bulk process millions of records. In the last three months, multiple customers are increasing their pay-as-you-go usage of Zestful to the point that it's generating a few hundred dollars per month.
+Zestful is popping up from nowhere as a recurring revenue source. Historically, the pay-as-you-go service rarely earns more than $50/month. The bulk of Zestful's income came from Enterprise customers who wanted the service for a month or two to bulk process millions of records. In the last three months, multiple customers are increasing their pay-as-you-go usage of Zestful to the point that it's generating a few hundred dollars per month.
 
 ## Wrap up
 
