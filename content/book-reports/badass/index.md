@@ -125,8 +125,8 @@ Answer: Secret option D &mdash; "**I'm** awesome."
 
 ### Why isn't deliberate practice more common?
 
- * By definition, deliberate practice is outside of your comfort zone.
- * It's more appealing to do things we already know in the hopes of getting incrementally better.
+* By definition, deliberate practice is outside of your comfort zone.
+* It's more appealing to do things we already know in the hopes of getting incrementally better.
 
 ### Masters have better exposure
 
@@ -138,9 +138,9 @@ Answer: Secret option D &mdash; "**I'm** awesome."
 * "Chicken sexing" is the practice of identifying a chicken's biological sex at a glance.
 * In the 1900s, Japan trained expert chicken sexers.
   * These chicken sexers could identify the chickens' gender with near-perfect accuracy, but they have no conscious awareness of their reasoning.
- * To train new chicken sexers, a trainee stands next to an expert, examines a chick, makes a guess, and then the expert tells them whether or not their guess was correct. Eventually, the trainee develops an accurate intuition for chicken sexing.
+  * To train new chicken sexers, a trainee stands next to an expert, examines a chick, makes a guess, and then the expert tells them whether or not their guess was correct. Eventually, the trainee develops an accurate intuition for chicken sexing.
 
-###  Perceptual exposure
+### Perceptual exposure
 
 * Experts learn through repeated perceptual exposure.
 * Effective training involves showing a student a large number of examples that have persistent patterns but feel varied to the learner.
