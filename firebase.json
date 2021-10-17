@@ -16,7 +16,7 @@
         "type": 301
       },
       {
-        "source": "/plaus-api/event",
+        "source": "/api/event",
         "destination": "https://plausible.io/api/event",
         "type": 301
       }
