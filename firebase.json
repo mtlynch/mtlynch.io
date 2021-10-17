@@ -11,6 +11,16 @@
         "type": 301
       }
     ],
+    "rewrites": [
+      {
+        "source": "/cloud-fns/plaus-script",
+        "function": "ProxyPlausibleScript"
+      },
+      {
+        "source": "/cloud-fns/plaus-event",
+        "function": "ProxyPlausibleEvent"
+      }
+    ],
     "headers": [ {
       "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
       "headers" : [ {
