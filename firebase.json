@@ -13,12 +13,8 @@
     ],
     "rewrites": [
       {
-        "source": "/cloud-fns/plaus-script",
-        "function": "ProxyPlausibleScript"
-      },
-      {
-        "source": "/cloud-fns/plaus-event",
-        "function": "ProxyPlausibleEvent"
+        "source": "/plaus-proxy/**",
+        "function": "ProxyPlausible"
       }
     ],
     "headers": [ {
