@@ -3,6 +3,7 @@ jobs:
   check-whitespace:
     docker:
       - image: cimg/base:2020.01
+    resource_class: small
     steps:
       - checkout
       - run:
@@ -60,6 +61,7 @@ jobs:
   check-google-analytics-token:
     docker:
       - image: cimg/base:2020.01
+    resource_class: small
     steps:
       - attach_workspace:
           at: ./
@@ -69,6 +71,7 @@ jobs:
   check-seo-metadata:
     docker:
       - image: cimg/base:2020.01
+    resource_class: small
     steps:
       - attach_workspace:
           at: ./
@@ -78,6 +81,7 @@ jobs:
   deploy:
     docker:
       - image: mtlynch/firebase-tools:8.1.1-node-14.0.0
+    resource_class: small
     steps:
       - attach_workspace:
           at: ./
