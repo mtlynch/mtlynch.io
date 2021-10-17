@@ -46,13 +46,7 @@
     {{ end }}
 
     {{ if not .Site.IsServer }}
-      <script
-        defer
-        data-api="/api/event"
-        data-domain="mtlynch.io"
-        src="/plaus.js"
-        >
-      </script>
+      <script defer data-domain="mtlynch.io" src="https://plausible.io/js/plausible.js"></script>
     {{ end }}
 
     {{ if .Site.Params.rtl }}
