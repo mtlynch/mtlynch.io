@@ -31,7 +31,7 @@ htmlproofer "$BUILD_DIR" \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
   `# mtlynch.io server to verify that URLs are present.` \
   `# Swap the plaus.js URL with the official Plausible URL to match the ` \
-  `# redirect that happens server-side.`
+  `# redirect that happens server-side.` \
   --url-swap "https\://mtlynch.io/:/,https\://mtlynch.io/plaus.js:https\://plausible.io/js/plausible.js" \
   `# Ignore the following URLs because they get 403 errors from CI` \
   `# intermittently.` \
