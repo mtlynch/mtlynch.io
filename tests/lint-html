@@ -30,7 +30,9 @@ htmlproofer "$BUILD_DIR" \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
   `# mtlynch.io server to verify that URLs are present.` \
-  --url-swap "https\://mtlynch.io/:/" \
+  `# Swap the plaus.js URL with the official Plausible URL to match the ` \
+  `# redirect that happens server-side.`
+  --url-swap "https\://mtlynch.io/:/,https\://mtlynch.io/plaus.js:https\://plausible.io/js/plausible.js" \
   `# Ignore the following URLs because they get 403 errors from CI` \
   `# intermittently.` \
   --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/,/mediagoblin-v5lmqis51k.herokuapp.com/,/servernope.com/,/gusto.com/,/vmware.com/" \
