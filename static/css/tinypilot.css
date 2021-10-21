@@ -7,12 +7,14 @@
 
 .tinypilot-box h4 {
   margin: 1rem 0;
+  text-align: center;
 }
 
 .tinypilot-box-thin {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   padding: 0.8rem 1rem;
 }
 
