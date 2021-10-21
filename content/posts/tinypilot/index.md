@@ -19,11 +19,11 @@ canonical_url: https://tinypilotkvm.com/blog/build-a-kvm-over-ip-under-100
 ---
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
-{{<tinypilot-ad headline="TinyPilot is now available for sale" copy="The kit includes all the parts you need to build your own TinyPilot." >}}
-
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
 
-{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="800px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
+{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
+
+{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
 ## I don't want your life story; just tell me how to build it
 
@@ -225,17 +225,9 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 ## How to build your own TinyPilot
 
+{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
+
 ### Parts list
-
-<div class="order-now">
-<h4>Want an all-in-one TinyPilot kit?</h4>
-
-Support TinyPilot's development by purchasing [an official TinyPilot kit](https://tinypilotkvm.com/?ref=mtlynch.io). It includes all the parts you need to build TinyPilot and guarantees access to premium versions of TinyPilot software I may release in the future.
-
-<div class="btn-wrapper">
-  <a href="https://tinypilotkvm.com/?ref=mtlynch.io" class="btn order-now-btn">Order now</a>
-</div>
-</div>
 
 * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
@@ -356,18 +348,14 @@ Importantly, the power connector's data port excludes a USB power line. This ens
 **Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/tiny-pilot/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
 {{</notice>}}
 
-## TinyPilot kits
-
-If you'd like to support further development of this software, consider [donating](https://paypal.me/tinypilotkvm) or [purchasing a TinyPilot kit](https://tinypilotkvm.com/?ref=mtlynch.io). Kits include all the equipment you need to build your own TinyPilot. It comes with a preformatted microSD card, so you don't need to configure any software.
-
-{{<img src="tinypilot-order.png" alt="Screenshot of TinyPilot order page" linkUrl="https://tinypilotkvm.com/products?ref=mtlynch.io" hasBorder="true" caption="Purchasing a [TinyPilot kit](https://tinypilotkvm.com/products?ref=mtlynch.io) supports future development of TinyPilot and guarantees you access to premium features I may add in the future.">}}
-
 ## Source code
 
-All TinyPilot software is open-source under the permissive [MIT license](https://opensource.org/licenses/MIT):
+TinyPilot's software is open-source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
 * [tinypilot](https://github.com/tiny-pilot/tinypilot.git): The TinyPilot web interface and backend.
 * [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
+
+{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
 ---
 *Special thanks to Max Devaev for his incredible work on [uStreamer](https://github.com/pikvm/ustreamer) and his contributions to TinyPilot.*

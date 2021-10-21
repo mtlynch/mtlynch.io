@@ -7,12 +7,14 @@
 
 .tinypilot-box h4 {
   margin: 1rem 0;
+  text-align: center;
 }
 
 .tinypilot-box-thin {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   padding: 0.8rem 1rem;
 }
 
@@ -20,14 +22,32 @@
   .tinypilot-box-thin {
     max-width: 700px;
     margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tinypilot-box-thin .image-link {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.tinypilot-box-thin img {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .tinypilot-box-thin img {
+    max-width: 80%;
   }
 }
 
 .tinypilot-box-thin p {
-  max-width: 500px;
-  margin: 0;
+  max-width: 50ch;
+  margin: 0 auto;
 }
 
 .tinypilot-box-thin .second-half {
@@ -41,18 +61,6 @@
 
 .tinypilot-box-thin .btn-wrapper {
   min-width: 200px;
-}
-
-.tinypilot-box-thin img {
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
-  .tinypilot-box-thin img {
-    max-width: 260px;
-    margin-right: 1rem;
-  }
 }
 
 .order-now-btn {
