@@ -357,6 +357,5 @@ TinyPilot's software is open-source under the permissive [MIT license](https://o
 
 {{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
-
 ---
 *Special thanks to Max Devaev for his incredible work on [uStreamer](https://github.com/pikvm/ustreamer) and his contributions to TinyPilot.*
