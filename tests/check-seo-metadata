@@ -12,7 +12,7 @@ set -u
 BUILD_DIR=public
 
 # Make sure large twitter cards appear in the site HTML.
-if ! egrep "\"twitter:card.*summary_large_image\"" "$BUILD_DIR" -R; then
+if ! egrep "name=\"?twitter:card\"? content=\"summary_large_image\"" "$BUILD_DIR" -R; then
   echo "ERROR: Large Twitter cards didn't appear in site build!";
   exit 1;
 fi

@@ -37,7 +37,7 @@ jobs:
             - resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
           name: Build prod site
-          command: hugo version && hugo
+          command: hugo version && hugo --minify
       - persist_to_workspace:
           root: ./
           paths:
