@@ -190,7 +190,7 @@ For the past two years, I've begrudgingly done my bookkeeping with Xero. I disli
 
 I recently learned about [plaintext accounting](https://plaintextaccounting.org/), a dev-oriented way of tracking finances using command-line tools and double-entry accounting in plaintext files. Compared with Xero, I find plaintext accounting much more intuitive, and I have more confidence that I'm doing things correctly.
 
-All the tools have [a steep learning curve](https://twitter.com/deliberatecoder/status/1358975568637747207), but my favorite so far is [Beancount](http://furius.ca/beancount). It appeals to me because it's one of the most mature tools in its category and it's Python-based.
+All the tools have [a steep learning curve](https://twitter.com/deliberatecoder/status/1358975568637747207), but my favorite so far is [Beancount](https://beancount.github.io/). It appeals to me because it's one of the most mature tools in its category and it's Python-based.
 
 ## Wrap up
 
