@@ -53,6 +53,22 @@ Sales in the EU are going strong, so royalties have doubled since last month.
 
 ## Simplifying to just one product
 
+The first TinyPilot product I offered was the TinyPilot Hobbyist Kit. Before I had any custom hardware or cases, I offered TinyPilot as just a convenient set of off-the-shelf hardware that allowed customers to build a TinyPilot the same way I built my first one.
+
+As TinyPilot has evolved and I've added the high-end TinyPilot Voyager, I continued to offer the Hobbyist Kit as a way for price-conscious customers to use the product.
+
+When I began working with a design firm on a rebrand for TinyPilot, they asked me who I want TinyPilot to appeal to. I told them that I want to market to small-to-medium-sized businesses and tech-savvy consumers. After that conversation, I began to wonder whether the Hobbyist Kit was getting in the way of that goal. Seeing the TinyPilot Voyager next to a cheap DIY device might send the message that the Voyager is a small step up from something you could build yourself.
+
+At the same time, there's been a shortage of Raspberry Pi devices, and the wait time on new orders is six months or more. If it's possible that I'll run out of Raspberry Pis before the chip shortage eases up, it makes a lot more sense to use them on my $350 product than on my $190 product. Halfway through the month, I removed the Hobbyist Kit from the website.
+
+That felt nicer. No more emails from confused customers asking about the difference between a Voyager and a Hobbyist. Now, it was just a single KVM over IP device. But then I thought, "Why stop there?"
+
+When the design agency asked me what eCommerce websites I think are good, I showed them the reMarkable website.
+
+
+
+\[Sidenote: if you want 200 Raspberry Pi cases for a big discount, let me know.\]
+
 ## Taking a test vacation
 
 ## Legacy projects
