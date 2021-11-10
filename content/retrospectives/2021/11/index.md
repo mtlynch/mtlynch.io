@@ -17,7 +17,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Local staff members are answering ~50% of support emails
 * **Grade**: A-
 
-We now have a shared support queue using [HelpScout](https://www.helpscout.com/). There are still a lot of support requests that I have to handle personally because nobody else has the context and technical background yet, but it's great to have help on about half the requests.
+We now have a shared support queue using [HelpScout](https://www.helpscout.com/). There are still plenty of requests where nobody else has the context and technical background yet, but it's great to have help on about half the requests.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
@@ -47,27 +47,61 @@ The rebrand is taking longer than expected, but I expect to have it completed th
 | Total Revenue            | $45,713.52     | $41,780.08     | <font color="red">-$3,933.44 (-9%)</font>        |
 | **Profit**               | **$11,713.04** | **<font color="red">-$1,194.62</font>** | **<font color="red">-$12,907.66 (-110%)</font>** |
 
-Sales in the EU are going strong, so royalties have doubled since last month.
+Sales in the EU are going strong, so royalties have doubled since last month. I finished the month in the negative because I'm adding about $5k/month in expenses on the website rebrand and redesign, but those are short-term costs that should wrap up by the end of the year.
 
 ## The TinyPilot Cloud flop
+
+One of the most common requests I hear from users is that they want to access their TinyPilot devices over the Internet. There are a few [third-party solutions](https://tinypilotkvm.com/faq/cloud-access), but they're either slow or inconvenient to set up.
+
+Naturally, this led to the idea for TinyPilot Cloud, a simple and performant way to enable cloud access to your TinyPilot device. It would be a big advantage for TinyPilot because no other KVM over IP device offers this natively. And it fits in with the TinyPilot brand of making everything dead simple while preserving performance and security.
+
+With the open-source tools and cloud vendors available, TinyPilot Cloud seemed like it would take only a month of dev work to deploy a minimum viable product.I worked with other TinyPilot developers on a simple proof-of-concept implementation using [Wireguard](https://www.wireguard.com/) and [fly.io](https://fly.io). It was harder than I anticipated, but it worked better than any of the existing third-party cloud access solutions.
+
+So far, so good! Now that we had a fully-working proof-of-concept, I wrote a requirements document and asked TinyPilot's most senior developer to turn it into a design document. That also turned out to be more difficult than either of us expected.
+
+As part of the design work, he created screenshots to mock up the user flow. I saw those and thought, "Oh, I could make a good teaser blog post." And then I realized it would be a good way to measure interest, so I created a separate mailing list.
+
+{{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" maxWidth="600px" caption="A teaser [blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) I published about TinyPilot Cloud." hasBorder="true">}}
+
+I sent out the [blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) to TinyPilot's 450 mailing list subscribers. 94 of them clicked the link, which is a strong conversion rate. But after two days, only two users had signed up for the TinyPilot Cloud waitlist.
+
+{{<img src="cloud-waitlist.png" alt="Screenshot of EmailOctopus showing only two signups" maxWidth="700px" caption="Two days after the teaser blog post, only two users had signed up for early access to TinyPilot Cloud." hasBorder="true">}}
+
+That was *way* less than I was hoping for. I was expecting maybe 50 signups, of which 25 could turn into actual customers, so we'd be starting out with ~$750/month. Development and operations would cost significantly more than that, but it would be a decent start. If, out of a biased sample of people who actively follow TinyPilot, only two were interested
+
+I reached out to users on the signup list individually to ask. The bigger customers tend to want to own their own cloud access solution, like integrating TinyPilot into their VPN.
 
 ## Simplifying to just one product
 
 The first TinyPilot product I offered was the TinyPilot Hobbyist Kit. Before I had any custom hardware or cases, I offered TinyPilot as just a convenient set of off-the-shelf hardware that allowed customers to build a TinyPilot the same way I built my first one.
 
+{{<img src="hobbyist-parts.jpg" alt="Photo of parts in TinyPilot hobbyist kit" maxWidth="600px" caption="TinyPilot Hobbyist Kit, RIP">}}
+
 As TinyPilot has evolved and I've added the high-end TinyPilot Voyager, I continued to offer the Hobbyist Kit as a way for price-conscious customers to use the product.
 
-When I began working with a design firm on a rebrand for TinyPilot, they asked me who I want TinyPilot to appeal to. I told them that I want to market to small-to-medium-sized businesses and tech-savvy consumers. After that conversation, I began to wonder whether the Hobbyist Kit was getting in the way of that goal. Seeing the TinyPilot Voyager next to a cheap DIY device might send the message that the Voyager is a small step up from something you could build yourself.
+When I began working with a design firm on a rebrand for TinyPilot, they asked me who I want TinyPilot to appeal to. I said small-to-medium-sized businesses and tech-savvy consumers.
 
-At the same time, there's been a shortage of Raspberry Pi devices, and the wait time on new orders is six months or more. If it's possible that I'll run out of Raspberry Pis before the chip shortage eases up, it makes a lot more sense to use them on my $350 product than on my $190 product. Halfway through the month, I removed the Hobbyist Kit from the website.
+After that conversation, I began to wonder whether the Hobbyist Kit was hindering that goal. Seeing the TinyPilot Voyager next to a cheap DIY device might send the message that the Voyager is only a small step up from something you could build yourself.
 
-That felt nicer. No more emails from confused customers asking about the difference between a Voyager and a Hobbyist. Now, it was just a single KVM over IP device. But then I thought, "Why stop there?"
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side by side" maxWidth="800px" caption="Does the TinyPilot Voyager look cheap sitting alongside the Hobbyist Kit?" hasBorder="true">}}
 
-When the design agency asked me what eCommerce websites I think are good, I showed them the reMarkable website.
+There has also been a shortage of Raspberry Pi devices, and the wait time on new orders is six months or more. If it's possible that I'll run out of Raspberry Pis before the chip shortage eases up, it seemed foolish to waste them on my $190 product instead of my $350 product.
 
+Halfway through the month, I retired the Hobbyist Kit from the website to focus on the Voyager:
 
+{{<img src="no-hobbyist-kit.png" alt="Screenshot of website without Hobbyist kit" maxWidth="300px" caption="Removing the TinyPilot Hobbyist kit from the products page" hasBorder="true">}}
 
-\[Sidenote: if you want 200 Raspberry Pi cases for a big discount, let me know.\]
+That felt nicer. If a customer wanted a KVM over IP device, the choice was unambigous. They didn't have to research the Hobbyist kit and Voyager and evaluate whether they were willing to pay more for a plug 'n play device.
+
+Then, I thought, "Why stop there?" Did all the other products need to be there? When customers upgrade to TinyPilot Pro, they typically purchase directly from their TinyPilot web dashboard rather than navigating the website. And I still wanted to offer the power connectors for the DIY crowd, but I could still do that without listing it on my main product page. At that point, I realized I didn't even need a product index page.
+
+Trimming out the accessory products allowed me to focus the TinyPilot website around my flagship product: the TinyPilot Voyager.
+
+{{<img src="one-product.png" alt="Screenshot of TinyPilot website, offering only one product" maxWidth="600px" caption="The TinyPilot website now offers a single product: the Voyager" hasBorder="true">}}
+
+Reducing to a single product offers a lot of benefits. There's less complexity for customer support, it gives us more room to store inventory, and it simplifies our order fulfillment process.
+
+The Voyager 2 is on track to ship in a month or two. My original plan was to sell both models side-by-side and experiment with price to cater to more customers, but seeing how much easier it is to sell a single product, I'm probably going to phase out Voyager 1 soon after I start shipping its successor.
 
 ## Taking a test vacation
 

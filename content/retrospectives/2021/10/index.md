@@ -47,12 +47,9 @@ We're running a little late on this, but we're still on track to ship the first 
 | Total Pageviews          | 8,864           | 15,744         | <font color="green">+6,880 (+78%)</font>            |
 | Sales Revenue            | $30,191.04      | $42,234.17     | <font color="green">+$12,043.13 (+40%)</font>       |
 | Enterprise Subscriptions | $48.00          | $48.00         | 0                                                   |
-| Royalties                | N/A             | $3,000.00\*      | N/A                                                 |
-| Total Revenue            | $30,239.04      | $45,282.17     | <font color="green">+$15,043.13 (+50%)</font>       |
-| **Profit**               | <font color="red">**$-10,140.95**</font> | **$7,168.50**\**  | **<font color="green">+$17,309.45 (+inf%)</font>** |
-
-\* Royalties are an estimate until my distributor and I calculate the totals.<br>
-\*\* Profit is provisional until I complete my monthly bookkeeping. Currently, it's just the delta in cash balances for the month minus my credit card balance.
+| Royalties                | N/A             | $3,431.35      | N/A                                                 |
+| Total Revenue            | $30,239.04      | $45,713.52     | <font color="green">+$15,474.48 (+51%)</font>       |
+| **Profit**               | <font color="red">**$-10,140.95**</font> | **$11,713.04**\*  | **<font color="green">+$21,853.99 (+inf%)</font>** |
 
 After an unremarkable first half of the month, I got a surprise [review from Jeff Geerling](https://www.youtube.com/watch?v=TIrkEr2AeDY), a beloved blogger and YouTube creator in the Raspberry Pi world.
 
