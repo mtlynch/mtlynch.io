@@ -172,7 +172,8 @@ The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09
 
 ### What got done?
 
-*
+* Published episode 1 of "Deliberate Programming"
+  * I started a project of looking for ways of to apply [deliberate practice](/book-reports/badass/#building-expertise) to software development.
 
 ### Lessons learned
 
