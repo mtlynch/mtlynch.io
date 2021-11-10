@@ -14,14 +14,16 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Train local staff members to assist with customer support
 
-* **Result**: Local staff members are answering ~50% of support emails
+* **Result**: Local staff members are answering ~50% of support emails.
 * **Grade**: A-
 
-We now have a shared support queue using [HelpScout](https://www.helpscout.com/). There are still plenty of requests where nobody else has the context and technical background yet, but it's great to have help on about half the requests.
+We now have a shared support queue using [HelpScout](https://www.helpscout.com/). There are still plenty of cases where I'm the only one with the context or technical background to handle the request, but it's great to have help on about half the requests.
+
+It's also fantastic to take myself out of the critical path on time-sensitive inquiries, like when a customer places an order and then follows up quickly to tell use they entered the wrong shipping address. Before HelpScout, I slowed the process down because I'd have to ferry messages between the customer and TinyPilot's fulfillment staff, but now the fulfillment staff get the requests directly and can handle them independently.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
-* **Result**: Paused development after a tepid user reception
+* **Result**: I've paused development after a tepid user reception.
 * **Grade**: C-
 
 I [published a preview](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) of a service called TinyPilot Cloud and offered signups for early access. There wasn't enough interest from users, so I've paused the project for now.
@@ -31,7 +33,7 @@ I [published a preview](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) 
 * **Result**: We're very close, but it's not done yet.
 * **Grade**: B-
 
-The rebrand is taking longer than expected, but I expect to have it completed this month. I'm excited about the website's new look.
+The rebrand is taking longer than expected, but I expect to have it completed this month.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -83,7 +85,7 @@ When I began working with a design firm on a rebrand for TinyPilot, they asked m
 
 After that conversation, I began to wonder whether the Hobbyist Kit was hindering that goal. Seeing the TinyPilot Voyager next to a cheap DIY device might send the message that the Voyager is only a small step up from something you could build yourself.
 
-{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side by side" maxWidth="800px" caption="Does the TinyPilot Voyager look cheap sitting alongside the Hobbyist Kit?" hasBorder="true">}}
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" maxWidth="800px" caption="Does the TinyPilot Voyager look cheap sitting alongside the Hobbyist Kit?" hasBorder="true">}}
 
 There has also been a shortage of Raspberry Pi devices, and the wait time on new orders is six months or more. If it's possible that I'll run out of Raspberry Pis before the chip shortage eases up, it seemed foolish to waste them on my $190 product instead of my $350 product.
 
@@ -101,9 +103,23 @@ Trimming out the accessory products allowed me to focus the TinyPilot website ar
 
 Reducing to a single product offers a lot of benefits. There's less complexity for customer support, it gives us more room to store inventory, and it simplifies our order fulfillment process.
 
-The Voyager 2 is on track to ship in a month or two. My original plan was to sell both models side-by-side and experiment with price to cater to more customers, but seeing how much easier it is to sell a single product, I'm probably going to phase out Voyager 1 soon after I start shipping its successor.
+Sales have been stronger since the change, but it's difficult to say confidentaly whether that's related to simplifying TinyPilot's offering. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [postitive press](/retrospectives/2021/10/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats).
+
+{{<img src="sales-trends.png" alt="Screenshot of TinyPilot website, offering only one product" maxWidth="800px" caption="Total TinyPilot sales for the last 90 days &mdash; Did reducing to a single product increase TinyPilot's revenue?">}}
+
+The Voyager 2 is on track to ship in a month or two. My original plan was to sell the Voyagers 1 and 2 side-by-side and experiment with their respective pricing. Seeing how much easier it is to sell a single product, I'm probably going to phase out Voyager 1 soon after I start shipping its successor.
 
 ## Taking a test vacation
+
+One of my goals for this year is to [systematize enough of TinyPilot's business operations that I can take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management). Because of the pandemic, that hasn't been a meaningful constraint, because there's not much to do on a vacation during a global pandemic. But now that vaccines have rolled out, I've taken a few trips. In August, I took a three-day weekend to attend a friend's wedding.
+
+In October, I pushed it a bit more. I took a five-day vacation (three weekdays + a weekend). That was harder. I mostly stayed off of my work email, but I did scan it a few times to see if there was anything urgent. Next time, I'll set up a system with TinyPilot's staff to send me a message with a special subject line so that I can just set a filter for that and not worry.
+
+I got back, and everything was still running fine, so that was good. But I still had 122 new emails in my work inbox. I spent three full days doing almost nothing but catching up on email, which is not so fun.
+
+I don't have a great plan for how to solve this. The fundamental problem is that TinyPilot has a lot of moving parts. There's me, two local staff, three developers, a European distributor, a 3D-printing lab, and an electrical engineering vendor. I communicate with all of them on a weekly basis, so that's just a lot of emails. On top of that, there are sales questions and customer support requests, though the local staff is helping to absorb some of those now.
+
+I listened to an interview with Jason Cohen earlier this year where he said that part of being a successful leader is helping the people around you grow and take on more responsibility.
 
 ## Legacy projects
 
@@ -122,6 +138,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Amazon Affiliate Revenue | $77.42         | $27.76       | <font color="red">-$49.66 (-64%)</font>     |
 | **Total Revenue**        | **$342.05**    | **$258.40**  | **<font color="red">-$83.65 (-24%)</font>** |
 
+Is It Keto is continuing its slow decline, as competing sites outperform it in search results. It's a shame, but it's not worth it for me to shift focus from TinyPilot.
+
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
 {{<revenue-graph project="htfp">}}
@@ -132,6 +150,8 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Gumroad Revenue           | $189.14        | $75.27       | <font color="red">-$113.87 (-60%)</font>     |
 | Blogging for Devs Revenue | $27.30         | $0.00        | <font color="red">-$27.30 (-100%)</font>     |
 | **Total Revenue**         | **$216.44**    | **$75.27**   | **<font color="red">-$141.17 (-65%)</font>** |
+
+I havevn't done anything to promote my blogging course, but a couple of people purchased last month. At the last indie founder meetup I hosted, one of the attendees had watched my course, so it was a cool first to meet someone in person who had taken it.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -144,7 +164,9 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | RapidAPI Revenue  | $185.12        | $99.74       | <font color="red">-$85.38 (-46%)</font>     |
 | **Total Revenue** | **$185.12**    | **$99.74**   | **<font color="red">-$85.38 (-46%)</font>** |
 
-The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09/#zestfulhttpszestfuldatacom) stopped following up and hasn't replied to my emails, so that's no longer in play.
+Zestful keeps doing its thing in the background. It's had a good run these past few months with $100-600/month in revenue. I suspect that the sales are coming from users who are doing bulk parsing rather than clients with recurring needs, but it's a nice burst.
+
+The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09/#zestfulhttpszestfuldatacom) stopped following up and hasn't replied to my emails, so I think that deal is dead.
 
 ## Wrap up
 
@@ -158,4 +180,6 @@ The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09
 
 ### Goals for next month
 
-*
+* Complete TinyPilot’s website rebrand
+* Prep for Voyager 2 launch
+* Hire a marketing firm or freelancer to help TinyPilot explore paid marketing channels.
