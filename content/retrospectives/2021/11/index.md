@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 16"
-date: 2021-11-08T09:31:27-05:00
-description: TODO - One-line summary
+date: 2021-11-11T00:00:00-05:00
+description: The TinyPilot Cloud flop
 images:
   - /retrospectives/2021/11/sales-trends.png
 ---
@@ -9,8 +9,8 @@ images:
 ## Highlights
 
 * I announced a new product and then discovered it was a mistake.
-* I simplified the TinyPilot website to focus on a single product.
-* I tried taking my first real vacation from TinyPilot and realized I need to make myself less critical for day-to-day operations.
+* I simplified the TinyPilot website to focus on a single device.
+* I tried taking my first real vacation from TinyPilot with mixed results.
 
 ## Goal Grades
 
@@ -21,9 +21,9 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 * **Result**: Local staff members are answering ~50% of support emails.
 * **Grade**: A-
 
-We now have a shared support queue using [HelpScout](https://www.helpscout.com/). There are still plenty of cases where I'm the only one with the context or technical background to handle the request, but it's great to have help on about half the requests.
+We now use [HelpScout](https://www.helpscout.com/) as a shared customer support queue. There are still plenty of cases where I'm the only one with the context or technical background to handle the request, but it's great to have help with the rest.
 
-It's also fantastic to take myself out of the critical path on time-sensitive inquiries, like when a customer places an order and then follows up quickly to tell use they entered the wrong shipping address. Before HelpScout, I slowed the process down because I'd have to ferry messages between the customer and TinyPilot's fulfillment staff, but now the fulfillment staff get the requests directly and can handle them independently.
+It's also fantastic to take myself out of the critical path on time-sensitive inquiries, like when a customer places an order and then follows up quickly to tell us they entered the wrong shipping address. Before HelpScout, I'd have to ferry messages between the customer and TinyPilot's fulfillment staff, often too late. Now, the fulfillment staff get the requests directly and can handle them without me.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
@@ -37,7 +37,7 @@ I [published a preview](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) 
 * **Result**: We're very close, but it's not done yet.
 * **Grade**: B-
 
-The rebrand is taking longer than expected, but I expect to have it completed this month. The new designs look really cool, so I'm eager to get them up.
+The rebrand is taking longer than I expected, but it should be ready in November. The new designs look really cool, so I'm eager to get them up.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -53,21 +53,21 @@ The rebrand is taking longer than expected, but I expect to have it completed th
 | Total Revenue            | $45,713.52     | $41,780.08     | <font color="red">-$3,933.44 (-9%)</font>        |
 | **Profit**               | **$11,713.04** | **$1,936.22** | **<font color="red">-$9,776.82 (-83%)</font>** |
 
-TinyPilot continued to have a fairly strong sales month. Sales are down a bit from last month, but our European distributor doubled their sales from September, providing a nice boost.
+TinyPilot had a fairly strong sales month. Sales are down a bit from last month, but our European distributor doubled their sales from September, providing a nice boost.
 
-Profits are lower than last month despite sales being only a bit smaller because my dev costs were atypically high at $11k. I also spent $5k on design consulting for the rebrand, but those costs are only ongoing for the next couple months. The rest of the costs came from my [normal spending](/retrospectives/2021/06/#how-is-30kmonth-not-profitable) on raw materials, local fulfillment staff, and postage.
+Profits are lower than last month despite sales because my dev costs were atypically high at $11k. I also spent $5k on design consulting for the rebrand, but those costs are only ongoing for the next couple of months.
 
 ## The TinyPilot Cloud flop
 
-One of the most common requests I hear from users is for access to their TinyPilot devices over the Internet. There are a few [third-party solutions](https://tinypilotkvm.com/faq/cloud-access), but they're either slow or inconvenient to set up.
+One of the most common requests I hear from users is for access to their TinyPilot devices over the Internet. There are a few [third-party solutions](https://tinypilotkvm.com/faq/cloud-access), but they're either slow or inconvenient.
 
-Naturally, this led to the idea for TinyPilot Cloud, a paid service to complement TinyPilot that offers simple and performant cloud access. It would be a great selling point for TinyPilot because no other KVM over IP device offers this natively. The service fits in with the TinyPilot brand of making everything dead simple while preserving performance and security. Best of all, it would provide a consistent stream of income, unlike the bursty nature of eCommerce.
+Naturally, this led to the idea for TinyPilot Cloud, a paid service that offers customers simple and performant cloud access to their devices. It would be a great selling point because no other KVM over IP device offers this natively. The service fits in with TinyPilot's brand of making everything dead-simple while preserving performance and security. Best of all, it would provide a consistent stream of income, unlike the bursty nature of eCommerce.
 
 With the open-source tools and cloud vendors available, I estimated that it would take about a month to deploy a minimum viable product of TinyPilot Cloud. I worked with other TinyPilot developers on a simple proof-of-concept implementation using [Wireguard](https://www.wireguard.com/) and [fly.io](https://fly.io). It was harder than I anticipated, but it worked better than any of the existing third-party cloud access solutions.
 
-Now that we had a fully-working proof-of-concept, I wrote a requirements document and asked TinyPilot's senior developer to turn it into a design document. That also turned out to be more difficult than either of us expected. We had to evaluate authentication providers and map out a setup flow that balanced security with ease-of-use.
+Now that we had a basic prototype, I wrote a requirements document and asked TinyPilot's senior developer to turn it into a design document. That also turned out to be more difficult than either of us expected. We had to evaluate authentication providers and map out a complex setup flow that balanced security with ease-of-use.
 
-As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I turned that into a [teaser blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) and ended by inviting readers to enter their emails up for TinyPilot Cloud early access.
+As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I included them in a [teaser blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) which invited readers to sign up for TinyPilot Cloud early access.
 
 {{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" maxWidth="600px" caption="A teaser [blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) I published about TinyPilot Cloud." hasBorder="true">}}
 
@@ -77,25 +77,25 @@ After two days, only two users had signed up for the TinyPilot Cloud waitlist, a
 
 {{<img src="cloud-waitlist.png" alt="Screenshot of EmailOctopus showing only two signups" maxWidth="700px" caption="Two days after the teaser blog post, only two users had signed up for early access to TinyPilot Cloud." hasBorder="true">}}
 
-Two signups were *way* less than I was hoping. I expected maybe 50 signups, of which 25 could turn into actual customers, so we'd be starting out with ~$750/month. Development and operations would cost significantly more than that, but it would be a decent start. If, out of a biased sample of people who actively follow TinyPilot, only two were interested something was seriously wrong.
+Two signups were *way* less than I was hoping. I expected maybe 50 signups, of which 25 could turn into actual customers, so we'd be starting out with ~$750/month. If only two people total were interested out of a population that actively follows TinyPilot, something was seriously wrong.
 
-I invited the users who signed to talk more in hopes of finding out how to find more customers like them, but they weren't so enthusiastic. One of them never responded to my email, and the other said he signed up out of curiosity but wasn't sure he'd actually use the service.
+I invited the users who signed up to talk more in hopes of learning out how to find more customers like them, but they weren't so enthusiastic. One of them never responded to my email, and the other said he signed up out of curiosity but wasn't sure he'd actually use the service.
 
-Other users expressed concern about cost, as $30/month for cloud access felt steep. Larger customers were less price-sensitive, but they didn't want to expose their internal networks to an external service.
+Other users expressed concern about the cost, as $30/month for cloud access felt steep. Larger customers were less price-sensitive, but they didn't want to expose their internal networks to an external service.
 
-I felt discouraged and embarrassed that I'd invested between 50-75 developer hours into something users didn't want in the first place. Validating customer demand before investing months into engineering is like entrepreneurship 101.
+I felt discouraged and embarrassed that I'd invested so much time into something users didn't want in the first place. All told, this project consumed six to eight person-weeks of development time. Validating customer demand before investing months into engineering is like entrepreneurship 101.
 
-Looking back, instead of setting out to create a working product, I should have just aimed for the blog post and measured interest from there. My mistake was assuming that just because people *wanted* cloud access meant that they'd be willing to pay $30/month for it. The existing providers in this space offer their service free to small businesses and individuals, so I think $30/month seemed surprisingly high.
+Looking back, instead of setting out to create a working product, I should have just aimed for the blog post and measured interest from there. My mistake was assuming that just because people *wanted* cloud access meant that they'd be willing to pay $30/month for it. The existing providers in this space offer their services free to small businesses and home users, so I think $30/month seemed surprisingly high.
 
-For now, we're pausing development on TinyPilot Cloud. We documented our design work well, so we should be able to pick it up in a few months if we find more customers. Alternatively, we may end up publishing an open-source version of the service that customers can self-host.
+For now, we're pausing development on TinyPilot Cloud. We've documented our design work well, so we should be able to pick it up in a few months if we find more customers. Alternatively, we may end up publishing an open-source version of the service that customers can self-host.
 
 ## Simplifying to just one product
 
-The first TinyPilot product I offered was the TinyPilot Hobbyist Kit. Before I had any custom hardware or cases, I offered this kit of off-the-shelf hardware that allowed customers to build a TinyPilot the same way I built my first one. As TinyPilot has evolved and I've added the high-end [TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager), I continued to offer the Hobbyist Kit for price-conscious customers.
+The first TinyPilot product I ever offered was the TinyPilot Hobbyist Kit. Before I had any custom hardware or cases, I offered this kit of off-the-shelf hardware that allowed customers to build a TinyPilot the same way I built my first one. As TinyPilot has evolved and I've added the high-end [TinyPilot Voyager](https://tinypilotkvm.com/blog/introducing-voyager), I continued to offer the Hobbyist Kit for price-conscious customers.
 
 {{<img src="hobbyist-parts.jpg" alt="Photo of parts in TinyPilot hobbyist kit" maxWidth="600px" caption="TinyPilot Hobbyist Kit, which I stopped offering this month">}}
 
-I began working with a design firm in September on a rebrand for TinyPilot. When they asked me who I want TinyPilot to appeal to, I said small-to-medium-sized businesses and tech-savvy consumers.
+I began working with a design firm in September on a rebrand for TinyPilot. When they asked me which customers TinyPilot should to appeal to, I said small-to-medium-sized businesses and tech-savvy consumers.
 
 After that conversation, I began to wonder whether the Hobbyist Kit was hindering that goal. Seeing the TinyPilot Voyager next to a cheap DIY device might send the message that the Voyager is only a small step up from something you could build yourself.
 
@@ -111,7 +111,7 @@ That felt nicer. If a customer wanted a KVM over IP device, the choice was unamb
 
 Then, I thought, "Why stop there?" Did all the other products need to be there? When customers upgrade to TinyPilot Pro, they typically purchase directly from their TinyPilot web dashboard rather than navigating the website. And I still wanted to offer the power connectors for the DIY crowd, but I could do that without listing it on my main product page. At that point, I realized I didn't even need an index page of products.
 
-Trimming out the accessory products allowed me to focus the TinyPilot website around my flagship product: the TinyPilot Voyager.
+Trimming out the accessory products allowed me to focus the TinyPilot website around my flagship product: the Voyager.
 
 {{<img src="one-product.png" alt="Screenshot of TinyPilot website, offering only one product" maxWidth="600px" caption="The TinyPilot website now offers a single product: the Voyager" hasBorder="true">}}
 
@@ -127,17 +127,17 @@ The Voyager 2 is on track to ship in a month or two. My original plan was to sel
 
 One of my goals for this year is to [systematize enough of TinyPilot's business operations that I can take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management). I haven't tested that much because it's not so appealing to travel during a global pandemic. Now that vaccines have rolled out, I've taken a few trips.
 
-In August, I took a three-day weekend to attend a friend's wedding. That went smoothly, but I was essentially just taking a Friday off work, so there's not much that could go wrong.
+In August, I took a three-day weekend to attend a friend's wedding. That went smoothly, but I was essentially just taking a Friday off work, so there's very little that could have gone wrong.
 
-This past month, I pushed my vacation a bit more. I took a five-day vacation: three weekdays + a weekend. That was harder than my August trip. I managed to mostly stay off of my work email, though I did scan it a few times to see if there was anything urgent. When I returned, TinyPilot's local staff had been fulfilling orders and managing inventory without any issues, but I still had 122 new emails in my work inbox. I spent three full days doing almost nothing but catching up on email, which is not so fun.
+This past month, I pushed my vacation a bit more. I took a five-day trip: three weekdays + a weekend. I managed to stay off of my work email for the most part, though I did scan it a few times to see if there was anything urgent. When I returned, TinyPilot's local staff had been fulfilling orders and managing inventory without any issues, but I still had 122 new emails in my work inbox. I spent three full days doing almost nothing but catching up on email, which is not so fun.
 
-I don't have a great plan for how to solve this. The fundamental problem is that TinyPilot has a lot of moving parts. There's me, two local staff, three developers, a European distributor, a 3D-printing lab, and an electrical engineering vendor. I communicate with all of them on a weekly basis, so that's just a lot of coordination.
+I don't have a great plan for how to solve this. The fundamental problem is that TinyPilot as a business has so many moving parts. There's me, two local staff, three developers, a European distributor, a 3D-printing lab, and an electrical engineering vendor. I communicate with all of them on a weekly basis, so that's just a lot of coordination.
 
-I prioritize systematizing and documenting as much as possible, but there are always exceptional cases that require my attention. On top of that, there are sales inquiries and customer support requests, though the local staff is helping to absorb some of those now.
+I prioritize systematizing and documenting as much as possible, but there are always exceptional cases that require my attention. On top of that, there are sales inquiries and customer support requests, though the local staff is now helping to absorb some of those.
 
 I listened to an interview with WPEngine founder Jason Cohen earlier this year where he said that part of being a successful leader is [helping the people around you grow and take on more responsibility](https://twitter.com/deliberatecoder/status/1424894197702799362). That's something I took to heart, and it's my best hope of growing the business to the point where it can run without me for a few weeks. Allowing developers to [review each other's code](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests) has helped the dev team grow and achieve more autonomy. I expect to see a similar effect from integrating TinyPilot's local staff into the customer support process.
 
-Lastly, I hope that exceptional problems become less exceptional over time. Situations typically require my intervention because we don't have a defined process for handling it. And we usually don't have a process because it's never happened before. TinyPilot is still a relatively young company, so many things happen that we've never seen before. We've only [had an office](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff) for six months, we added our first distributor only [two months ago](/retrospectives/2021/09/#adding-a-european-distributor), and the dev team only formed [eight months ago](/retrospectives/2021/03/#what-got-done). I'm hoping in time the proportion of new surprising things goes down so that we have a written, consistent process for handling most situations.
+Lastly, I hope that exceptional problems become less exceptional over time. A situation typically requires my intervention because we don't have a defined process for handling it. And we usually don't have a process because it's never happened before. TinyPilot is still a relatively young company, so there are still lots of things we've never seen before. The dev team only formed [eight months ago](/retrospectives/2021/03/#what-got-done), we've only [had an office](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff) for six months, and we added our first distributor only [two months ago](/retrospectives/2021/09/#adding-a-european-distributor). I'm hoping the proportion of new, surprising things goes down over time so that we have a written, consistent process for handling most situations.
 
 ## Legacy projects
 
@@ -156,7 +156,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Amazon Affiliate Revenue | $77.42         | $27.76       | <font color="red">-$49.66 (-64%)</font>     |
 | **Total Revenue**        | **$342.05**    | **$258.40**  | **<font color="red">-$83.65 (-24%)</font>** |
 
-Is It Keto is continuing its slow decline, as competing sites outperform it in search results. It's a shame, but it's not worth it for me to shift focus from TinyPilot.
+Is It Keto continues its slow decline, as competing sites outperform it in search results. It's a shame, but it's not worth it for me to shift focus from TinyPilot.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
@@ -169,7 +169,7 @@ Is It Keto is continuing its slow decline, as competing sites outperform it in s
 | Blogging for Devs Revenue | $27.30         | $0.00        | <font color="red">-$27.30 (-100%)</font>     |
 | **Total Revenue**         | **$216.44**    | **$75.27**   | **<font color="red">-$141.17 (-65%)</font>** |
 
-I haven't done anything to promote my blogging course, but a couple of people purchased last month. At the last indie founder meetup I hosted, one of the attendees had watched my course, so it was a cool first to meet someone in person who had taken it.
+I haven't done anything to promote my blogging course, but a couple of people purchased last month. At the last indie founder meetup I co-hosted, one of the attendees had watched my course, so it was cool to meet a student in real life for the first time.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -194,7 +194,7 @@ The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09
 * Paused development on TinyPilot Cloud.
 * Retired the TinyPilot Hobbyist Kit and focused the site around the Voyager.
 * Published [episode 1 of "Deliberate Programming"](https://www.youtube.com/watch?v=RKpaccCmxwQ)
-  * I started a project of looking for ways of to apply [deliberate practice](/book-reports/badass/#building-expertise) to software development.
+  * I started a project about looking for ways of to apply [deliberate practice](/book-reports/badass/#building-expertise) to software development.
 
 ### Lessons learned
 
