@@ -23,7 +23,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 We now use [HelpScout](https://www.helpscout.com/) as a shared customer support queue. There are still plenty of cases where I'm the only one with the context or technical background to handle the request, but it's great to have help with the rest.
 
-It's also fantastic to take myself out of the critical path on time-sensitive inquiries, like when a customer places an order and then follows up quickly to tell us they entered the wrong shipping address. Before HelpScout, I'd have to ferry messages between the customer and TinyPilot's fulfillment staff, often too late. Now, the fulfillment staff get the requests directly and can handle them without me.
+It's also fantastic to take myself out of the critical path on time-sensitive inquiries, like when a customer places an order and then follows up quickly to tell us they entered the wrong shipping address. Before HelpScout, I'd have to ferry messages between the customer and TinyPilot's fulfillment staff, often too late. Now, the fulfillment staff members get the requests directly and can handle them without me.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
@@ -65,9 +65,9 @@ Naturally, this led to the idea for TinyPilot Cloud, a paid service that offers 
 
 With the open-source tools and cloud vendors available, I estimated that it would take about a month to deploy a minimum viable product of TinyPilot Cloud. I worked with other TinyPilot developers on a simple proof-of-concept implementation using [Wireguard](https://www.wireguard.com/) and [fly.io](https://fly.io). It was harder than I anticipated, but it worked better than any of the existing third-party cloud access solutions.
 
-Now that we had a basic prototype, I wrote a requirements document and asked TinyPilot's senior developer to turn it into a design document. That also turned out to be more difficult than either of us expected. We had to evaluate authentication providers and map out a complex setup flow that balanced security with ease-of-use.
+Now that we had a basic prototype, I wrote a requirements document and asked TinyPilot's senior developer to turn it into a design document. That also turned out to be more difficult than either of us expected. We had to evaluate authentication providers and map out a complex setup flow that balanced security with ease of use.
 
-As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I included them in a [teaser blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) which invited readers to sign up for TinyPilot Cloud early access.
+As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I included them in a [teaser blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) that invited readers to sign up for TinyPilot Cloud early access.
 
 {{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" maxWidth="600px" caption="A teaser [blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) I published about TinyPilot Cloud." hasBorder="true">}}
 
@@ -107,9 +107,9 @@ Halfway through the month, I retired the Hobbyist Kit from the website to focus 
 
 {{<img src="no-hobbyist-kit.png" alt="Screenshot of website without Hobbyist kit" maxWidth="300px" caption="Removing the TinyPilot Hobbyist kit from the products page" hasBorder="true">}}
 
-That felt nicer. If a customer wanted a KVM over IP device, the choice was unambigous. They didn't have to research the Hobbyist kit and Voyager and evaluate whether they were willing to pay more for a plug 'n play device and higher quality video.
+That felt nicer. If a customer wanted a KVM over IP device, the choice was unambiguous. They didn't have to research the Hobbyist kit and Voyager and evaluate whether they were willing to pay more for a plug 'n play device and higher quality video.
 
-Then, I thought, "Why stop there?" Did all the other products need to be there? When customers upgrade to TinyPilot Pro, they typically purchase directly from their TinyPilot web dashboard rather than navigating the website. And I still wanted to offer the power connectors for the DIY crowd, but I could do that without listing it on my main product page. At that point, I realized I didn't even need an index page of products.
+Then, I thought, "Why stop there?" Did all the other products need to be there? When customers upgrade to TinyPilot Pro, they typically purchase directly from their TinyPilot web dashboard rather than navigating the website. And I still wanted to offer the power connector for the DIY crowd, but I could do that without listing it on my main product page. At that point, I realized I didn't even need an index page of products.
 
 Trimming out the accessory products allowed me to focus the TinyPilot website around my flagship product: the Voyager.
 
@@ -117,7 +117,7 @@ Trimming out the accessory products allowed me to focus the TinyPilot website ar
 
 Reducing to a single product offers a lot of benefits. There's less complexity for customer support, it gives us more room to store inventory, and it simplifies our order fulfillment process.
 
-Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [postitive press](/retrospectives/2021/10/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats).
+Sales have been stronger since the change, but it's difficult to say whether there's a causal connection. There's definitely a trend upwards after the change, but it could just be trailing effects from last month's [positive press](/retrospectives/2021/10/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats).
 
 {{<img src="sales-trends.png" alt="Screenshot of TinyPilot website, offering only one product" maxWidth="800px" caption="Total TinyPilot sales for the last 90 days">}}
 
@@ -169,7 +169,7 @@ Is It Keto continues its slow decline, as competing sites outperform it in searc
 | Blogging for Devs Revenue | $27.30         | $0.00        | <font color="red">-$27.30 (-100%)</font>     |
 | **Total Revenue**         | **$216.44**    | **$75.27**   | **<font color="red">-$141.17 (-65%)</font>** |
 
-I haven't done anything to promote my blogging course, but a couple of people purchased last month. At the last indie founder meetup I co-hosted, one of the attendees had watched my course, so it was cool to meet a student in real life for the first time.
+I haven't done anything to promote my blogging course, but a couple of people purchased it last month. At the last indie founder meetup I co-hosted, one of the attendees had watched my course, so it was cool to meet a student in real life for the first time.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -193,14 +193,14 @@ The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09
 * Integrated local staff into the customer support workflows.
 * Paused development on TinyPilot Cloud.
 * Retired the TinyPilot Hobbyist Kit and focused the site around the Voyager.
-* Published [episode 1 of "Deliberate Programming"](https://www.youtube.com/watch?v=RKpaccCmxwQ)
-  * I started a project about looking for ways of to apply [deliberate practice](/book-reports/badass/#building-expertise) to software development.
+* Published [episode 1 of "Deliberate Programming."](https://www.youtube.com/watch?v=RKpaccCmxwQ)
+  * I started a project about looking for ways of applying [deliberate practice](/book-reports/badass/#building-expertise) to software development.
 
 ### Lessons learned
 
 * Validate your product early.
   * Wanting a feature or product is different than being willing to pay for it.
-* If I want to be able to take vacation, I have to help my teammates grow.
+* If I want to be able to take vacations, I have to help my teammates grow.
   * The more responsibility that my teammates take on, the less reliant the business is on me personally for day-to-day operations.
 
 ### Goals for next month
