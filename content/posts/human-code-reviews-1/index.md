@@ -146,7 +146,7 @@ I prefer to keep my team's style guide as Markdown under source control (e.g., [
 
 ***Option 3: The hybrid approach***
 
-By combining options 1 and 2, you can adopt an existing style guide as your base, and then maintain a local style guide to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md). It uses [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as a base, but makes its own changes and additions on top of it.
+By combining options 1 and 2, you can adopt an existing style guide as your base, and then maintain a local style guide to extend or override the base. A good example of this is the [Chromium C++ style guide](https://chromium.googlesource.com/chromium/src/+/HEAD/styleguide/c++/c++.md). It uses [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as a base, but makes its own changes and additions on top of it.
 
 ### Start reviewing immediately
 
