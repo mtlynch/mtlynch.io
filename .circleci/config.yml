@@ -127,6 +127,9 @@ workflows:
       - publish_draft:
           requires:
             - build
+          filters:
+            branches:
+              ignore: master
       - deploy:
           requires:
             - check-whitespace
