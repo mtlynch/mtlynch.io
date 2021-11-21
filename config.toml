@@ -5,8 +5,11 @@ languagecode = "en"
 defaultcontentlanguage = "en"
 
 paginate = 10
-canonifyurls = true
 timeout = 120000
+
+# We don't want to canonify URLs because it prevents us from
+# deploying drafts of the site to alternate hosts.
+canonifyurls = false
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
