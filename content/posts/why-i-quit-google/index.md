@@ -15,7 +15,11 @@ images:
 - why-i-quit-google/spoiled-coder.png
 ---
 
-For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.
+{{<notice type="info">}}
+This is a draft post to show how Netlify publishes draft URLs.
+{{</notice>}}
+
+For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because **Manel Rodero** suggested the idea.
 
 Well, I guess it's a little more complicated than that.
 
