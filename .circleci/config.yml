@@ -78,16 +78,32 @@ jobs:
       - run:
           name: Check that SEO meta tags rendered properly
           command: tests/check-seo-metadata
-  deploy:
+  publish_draft:
     docker:
-      - image: mtlynch/firebase-tools:8.1.1-node-14.0.0
+      - image: circleci/node:14.18.1-bullseye
     resource_class: small
     steps:
       - attach_workspace:
           at: ./
       - run:
-          name: Deploy to firebase
-          command: firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
+          name: Install netlify CLI
+          command: npm install netlify-cli --save-dev
+      - run:
+          name: Deploy a live draft
+          command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
+  deploy:
+    docker:
+      - image: circleci/node:14.18.1-bullseye
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install netlify CLI
+          command: npm install netlify-cli --save-dev
+      - run:
+          name: Deploy to production
+          command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}" --prod
 workflows:
   version: 2
   test-deploy:
@@ -102,6 +118,9 @@ workflows:
           requires:
             - build
       - check-seo-metadata:
+          requires:
+            - build
+      - publish_draft:
           requires:
             - build
       - deploy:
