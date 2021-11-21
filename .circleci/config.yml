@@ -43,8 +43,7 @@ jobs:
           paths:
             - public
             - tests
-            - firebase.json
-            - .firebaserc
+            - netlify.toml
       - save_cache:
           key: resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
