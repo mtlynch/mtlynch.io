@@ -4,3 +4,6 @@ resources/
 .sw?
 push-preview
 config-preview.toml
+package-lock.json
+.netlify/state.json
+node_modules/
