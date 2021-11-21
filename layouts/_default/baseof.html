@@ -56,6 +56,7 @@
 
     {{ range .Site.Params.custom_css }}
       <link rel="stylesheet" foo="{{ . }}" foo="{{ . | relURL }}" href="{{ . | relURL }}" />
+      <link rel="stylesheet" href="/some/css.css" />
     {{ end }}
 
     {{ if and .Params.custom_css .Permalink }}
