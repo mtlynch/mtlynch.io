@@ -49,15 +49,25 @@ I ran a Black Friday promotion last year that generated a significant bump in sa
 
 ## Migrating my hobby projects off of Google Cloud Platform
 
+### HTTP Load Balancing
+
 HTTP Load Balancing was a bit of a gotcha. On What Got Done and WanderJest, I let users upload images and then store them to a Google Cloud Storage bucket. I got tired of ugly URLs for user-generated content that were like `https://storage.googleapis.com/whatgotdone-public/uploads/...`, so I looked into how to serve a GCS bucket from a subdomain like `media.whatgotdone.com`. I found this easy [80-step process](https://cloud.google.com/storage/docs/hosting-static-website) that explained the Google way of serving from a subdomain, and it involved setting up an HTTP Load Balancer. Little did I know, the load balancer costs an extra $15/mo on a site that previously cost around $1/mo.
 
 The solution to the load balancer was switching to [BunnyCDN](https://bunny.net/) to serve my GCS bucket files from a friendly URL. I worried that setting up a whole CDN would be a pain, but it took less than 30 minutes to set up. I just telling BunnyCDN the GCS bucket URL, the subdomain I wanted, and then I added a DNS entry, and it was working. It was an infinitely better experience than Google 80-step process, and Bunny's minimum charge is $1/mo to Google's $15. And even if I exceed the minimum, Bunny's bandwidth prices are less than 1/10th Google's.
 
+### Bandwidth
+
 Outgoing bandwidth is mostly this blog and Is It Keto. I was hosting both sites on Google Firebase, where the bandwidth fees are $0.15/GB. I usually have 150 GB/mo in bandwidth, but sometimes it spikes up to 450 GB/mo. I've stuck with Firebase for a while despite their high bandwidth prices because they're one of the few hosts that will just accept their role as dumb static file hosts instead of insisting that they should take over your entire build process. Netlify has a $19/mo plan with 400 GB of bandwidth and $0.20/GB after that, so even in the rare month that I got a huge influx of visitors, I'd still only be paying ~$20/month.
 
-My next biggest cost was What Got Done's AppEngine costs. I've been running it for years at median price of ~$2/mo, and then in July, it suddenly shot up to $10-15/month. I'm not sure why that's suddenly exploded in price. It went from under ~$1/mo
+### AppEngine
 
-I was paying $XX/month for
+My next biggest cost was AppEngine hosting for What Got Done. For years, the cost had been ~$2/mo. In July, the bills suddenly shot up to $10-15/month, and I don't know why.
+
+Fortunately, What Got Done is a standard Go web app, so it doesn't have any strict dependencies on AppEngine. What Got Done does use Google Firestore, and I never was that fond of it, so I decided I'd migrate off Firestore at the same time as I switched away from AppEngine.
+
+I rewrote the app to [use SQLite and Litestream](https://github.com/mtlynch/whatgotdone/pull/639) using the same [technique I described for LogPaste](/litestream/). I deployed to fly.io, and one of the unexpected benefits was that it got 10-30x faster. It brought 800+ ms requests down to
+
+{{<img src="appengine-vs-fly.png" alt="TODO" maxWidth="800px" caption="TODO">}}
 
 ## Legacy projects
 
