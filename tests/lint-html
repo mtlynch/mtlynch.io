@@ -33,7 +33,7 @@ htmlproofer "$BUILD_DIR" \
   --url-swap "https\://mtlynch.io/:/" \
   `# Ignore the following URLs because they get 403 errors from CI` \
   `# intermittently.` \
-  --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/,/mediagoblin-v5lmqis51k.herokuapp.com/,/servernope.com/,/gusto.com/,/vmware.com/,/plaus-proxy/" \
+  --url-ignore "/vimeo.com/,/upwork.com/,/www.amd.com/,/mediagoblin-v5lmqis51k.herokuapp.com/,/servernope.com/,/gusto.com/,/vmware.com/" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
   `# requests, so ignore those.` \
   --http-status-ignore "400,429" \
