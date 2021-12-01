@@ -5,19 +5,3 @@
   to = "/posts/index.xml"
   status = 301
   force = false
-
-# Proxy the Plausible JS script in case an overzealous ad-block blocks
-# Plausible.
-[[redirects]]
-  from = "/plaus-proxy/js/script.js"
-  to = "https://plausible.io/js/plausible.js"
-  status = 200
-  force = true
-
-# Proxy the Plausible event API in case an overzealous ad-block blocks
-# Plausible.
-[[redirects]]
-  from = "/plaus-proxy/api/event"
-  to = "https://plausible.io/api/event"
-  status = 200
-  force = true
