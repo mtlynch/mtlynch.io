@@ -15,8 +15,6 @@ pygmentsstyle = "colorful"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-googleAnalytics = "UA-78473158-1"
-
 buildFuture = true
 
 [markup]
