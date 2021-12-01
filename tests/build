@@ -13,5 +13,4 @@ tests/lint-markdown
 hugo
 
 tests/lint-html "$@"
-tests/check-google-analytics-token
 tests/check-twitter-cards
