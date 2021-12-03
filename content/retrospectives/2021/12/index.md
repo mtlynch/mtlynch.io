@@ -6,7 +6,9 @@ description: How removing a single link generated a 62% sales increase
 
 ## Highlights
 
-*
+* TinyPilot's sales jumped to $57k, and it might be sustainable.
+* I'm just about to launch TinyPilot's new product and branding.
+* I reduced Google Cloud Project fees by 90% on my side projects.
 
 ## Goal Grades
 
@@ -73,6 +75,11 @@ For the first six months of TinyPilot, I was always scrambling to keep up with g
 
 This new sales spike has brought back some growing pains. We have contingency plans, and they've served us well this year, but we didn't have a plan for sustained growth like this.
 
+First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of PCBs, which would prevent us from selling Voyagers. I listed them out of stock for individual sale and that slowed down the pace *just* enough to last us until the new order arrived. If you're wondering how we were selling them even though I just said we reduced to a single product, there are still links to our old products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but it's not easily discoverable from the homepage.
+
+Next, we started running low on ribbon cables. We typically buy them in bulk and we have so many on hand that it's not even worth tracking them individually. But because we're not tracking them, we didn't notice that the order we places in October to replenish our supply was running late and we were down to just 30 cables, enough to make a few days' worth of Voyagers. We use a non-standard size, so we get them special ordered, and they take 4-6 weeks to arrive, so I
+
+The last shortage is the one we still haven't solved: the cases
 
 
 We caught a few miracles that have allowed us to sell continuously
@@ -81,51 +88,57 @@ We caught a few miracles that have allowed us to sell continuously
 
 I ran a Black Friday promotion last year that generated a significant bump in sales, and I was considering it again this year, but there was too much going on. Between preparing for the Voyager 2 launch and scrambling to handle inventory shortages, I didn't want to add more stress and complexity to our fulfillment processes.
 
-## Migrating my hobby projects off of Google Cloud Platform
+## Migrating my side projects away from Google Cloud Platform
 
-I mainly focus on my business projects in these retrospectives, but I had some fun this past month migrating off of Google Cloud Projects for several of my hobby projects.
+I mainly focus on my business projects in these retrospectives, but I had some fun this past month migrating my side projects off of Google Cloud Platform (GCP).
 
-I've been using Google Cloud Platform for years because I used to work for Google, I think Google does engineering well, so I just thought they were a good default choice for cloud services. Over time, I've come to realize that Google Cloud Platform is usually a poor solution for small projects. When I start new projects, I look for solutions outside of Google, and the alternatives I find are invariably easier to use, less expensive, and they provide better customer support (which is to say they provide a non-zero amount of customer support).
+I started using GCP about eight years ago. At the time, it was a good match for small web projects because services like AppEngine and Firebase let you run low-volume websites for free while most other cloud providers cost $10-20/mo to host a website. While $10/mo isn't a huge amount, I'm much less likely to publish an experimental project if I feel like I'm committing myself to pay $10/mo indefinitely.
 
-I still had a lot of old projects running on Google Cloud Platform, and they were accruing more and more service fees, so I spent the month eliminating the most costly ones. Here's what my costs looked like before moving:
+Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new project. Fortunately, there are lots of great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean, *any* customer support).
 
-{{<img src="gcp-before.png" alt="TODO" maxWidth="800px" hasBorder="true" caption="TODO">}}
+Many of my side projects were still running on Google Cloud Platform, and they were accruing more and more service fees. I spent evenings and weekends last month migrating the most expensive services away from GCP.
 
-So, I'm going to share how I eliminated those costs, starting from the most expensive to the least expensive.
+Here are what my GCP costs looked like before the great migration:
+
+{{<img src="gcp-before.png" alt="TODO" maxWidth="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
+
+And here's what it looked like when I was finished:
+
+{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" maxWidth="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
 
 ### HTTP Load Balancing - $37/mo
 
-HTTP Load Balancing was a big gotcha.
+HTTP load balancing was a big gotcha.
 
-On What Got Done and WanderJest, I let users upload images, and the app stores the images in a Google Cloud Storage (GCS) bucket. By default, GCS URLs are big, ugly messes like `https://storage.googleapis.com/whatgotdone-public/...`. I wanted a nice, tidy URL like `https://media.whatgotdone.com`.
+On [What Got Done](https://whatgotdone.com) and [WanderJest](https://wanderjest.com), I let users upload images, and then I store the uploads in Google Cloud Storage (GCS) buckets. By default, GCS URLs are big, ugly messes like `https://storage.googleapis.com/whatgotdone-public/...`. I wanted a nice, tidy URL like `https://media.whatgotdone.com`.
 
-This simple [80-step process](https://cloud.google.com/storage/docs/hosting-static-website) explains the Google way of serving from a subdomain. You have to provision a static IPv4 address and set up an HTTP Load Balancer. Little did I know, the load balancer would drive up my costs by about $18/mo per site.
+This simple [80-step process](https://cloud.google.com/storage/docs/hosting-static-website) explains the Google way of serving from a subdomain. It involves provisioning a static IPv4 address, setting up an HTTP load balancer, and provisioning a certificate. Little did I know, the load balancer would drive up my costs by about $18/mo per site.
 
-I cut that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after I first discovered BunnyCDN as a service, I was successfully serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell BunnyCDN the GCS bucket URL, the subdomain I wanted, and add a DNS entry.
+I dramatically reduced that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after discovering BunnyCDN as a service, I was successfully serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell Bunny the GCS bucket URL, the subdomain I wanted, and add a DNS entry.
 
 {{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" maxWidth="800px" hasBorder="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
 
-Bunny's minimum charge is $1/mo total whereas Google's is ~$18/mo per site. And even if I exceed the minimum, Bunny's bandwidth prices are less than 1/10th Google's, so I'm happy with the switch.
+Bunny's minimum charge is $1/mo total whereas Google's is ~$18/mo per site. I'm *way* below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed Bunny's minimum, their bandwidth prices are less than 1/10th Google's.
 
 ### Bandwidth - $21/mo
 
-My outgoing bandwidth fees come mostly this blog and Is It Keto. I was hosting both sites on Google Firebase, where the bandwidth fees are $0.15/GB. My websites collectively serve about 150 GB/mo in bandwidth, but a popular blog post can drive that up by a factor of three.
+My outgoing bandwidth fees come mostly this blog and [Is It Keto](https://isitketo.org). I was hosting both sites on Google Firebase, where the bandwidth fees are $0.15/GB. My websites collectively serve about 150 GB/mo in bandwidth, but a surge in blog readers can drive that up by a factor of three.
 
-I've searched for other static file hosts, but for some reason, almost every provider wants to take over your entire continuous integration (CI) process. I don't want that. I want to use a CI company for CI, and I want to use a hosting company for hosting.
+I've searched for other static file hosts, but for some reason, almost every static hosting provider wants to take over my entire continuous integration (CI) process. I don't want that. I want to use a CI company for CI, and I want to use a hosting company for hosting.
 
-I'd looked into Netlify in the past, but I dismissed them as a "we insist on being your CI" company. Then, [Siddhant Goel told me](https://twitter.com/siddhantgoel/status/1457381011923378176) about Netlify's "manual build" mode that lets you skip all their CI nonsense. They have a $19/mo plan with 400 GB of bandwidth and $0.20/GB after that, so even in the rare month that I got a huge influx of visitors, I'd still only be paying ~$20/month.
+I'd looked into [Netlify](https://www.netlify.com/) in the past, but I dismissed them as a "we insist on being your CI" company. Then, [Siddhant Goel told me](https://twitter.com/siddhantgoel/status/1457381011923378176) about Netlify's "manual build" mode that lets you skip all their CI nonsense. They have a $19/mo plan with 400 GB of bandwidth and $0.20/GB after that, so even in the rare month that I got a huge influx of visitors, I'd still only be paying ~$20/month.
 
 ### AppEngine - $13/mo
 
 My last significant cost was AppEngine hosting for What Got Done. For years, the cost had been ~$2/mo. In July, the bills suddenly shot up to $10-15/month, and I don't know why.
 
-Fortunately, What Got Done is a standard Go web app, so it doesn't especially need to run on AppEngine. What Got Done also depends on Google Firestore for data, and I could have migrated them separately, but I figured it would be easier to switch both at once. Otherwise, I'd have to spend hours getting a service account working from another host and make sure it has proper access to Firestore.
+Fortunately, What Got Done is a standard Go web app, so it doesn't need to run on AppEngine. The harder dependency was that What Got Done uses Google Firestore for data. I could have migrated AppEngine and Firestore separately, but dealing with Google service accounts and permissions is such a pain that I decided to make a clean break from both services at once.
 
-To replace Firestore, I used [use SQLite and Litestream](https://github.com/mtlynch/whatgotdone/pull/639). SQLite is a simple SQL database that keeps everything in a single file. Litestream is a tool for syncing SQLite databases to the cloud. You may recall that I used these technologies [to build LogPaste](/litestream/).
+To replace Firestore, I used SQLite and Litestream. [SQLite](https://sqlite.org) is a simple SQL database that keeps everything in a single file. [Litestream](https://litestream.io) is a tool for syncing SQLite databases to the cloud. I used these same technologies [to build LogPaste](/litestream/), and they worked well, so I wanted to invest more in them.
 
-To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting with fly.io, and I consitently have good experiences with them. Their documentation is clear, their tools work how you expect, and their customer support team includes the founders and lead engineers.
+To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting with fly.io, and I consitently have good experiences with them. Their documentation is clear, their tools work how you expect, and their founders and lead engineers actively engage on their [support forum](https://community.fly.io/).
 
-My move to fly.io was mainly about reducing costs and vendor-dependence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 15-30x speedups in response time after I migrated to SQLite and fly.io.
+My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 15-30x speedups in response time after I migrated to SQLite and fly.io.
 
 {{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" maxWidth="800px">}}
 
@@ -137,14 +150,6 @@ My move to fly.io was mainly about reducing costs and vendor-dependence, but the
 |Fetch user's complete entry history | 215.7 | 62.0 | 71.3% |
 |Fetch impression count | 349.7 | 20.0 | 94.3% |
 |Publish entry | 183.3 | 72.7 | 60.4% |
-
-### Final costs
-
-After migrating the big-ticket services away from Google Cloud Platform, my ongoing fees for Google services are nearly zero:
-
-{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" maxWidth="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
-
-Strangely, the remaining bandwidth costs are coming from my old [demo app of pre-rendering in Vue](https://hello-world-vue-pre-rendered.web.app/). It doesn't seem to be linked from anywhere except this blog, but it somehow attracts ~6.5 GB/mo in bandwidth? It's strange, but I'm not too concerned about it since it's only a few cents per month.
 
 ## Legacy projects
 
@@ -177,7 +182,7 @@ Is It Keto is still hanging around in the background earning small amounts of re
 | **Total Revenue**         | **$75.27**   | **$94.57**    | **<font color="green">+$19.30 (+26%)</font>** |
 
 
-My blogging course had a handful of sales this past month. I considered running a Black Friday sale, but I was enjoying the long weekend of not thinking about business, so I decided against it. I'm glad I did because it allowed me to focus on finishing up the improvements to What Got Done.
+My blogging course had a handful of sales this past month. I considered running a Black Friday sale, but I was enjoying the long weekend of not thinking about business, so I decided against it. I'm glad I didn't because I had a blast tinkering with What Got Done instead.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -190,7 +195,7 @@ My blogging course had a handful of sales this past month. I considered running 
 | RapidAPI Revenue  | $99.74       | $727.17       | <font color="green">+$627.43 (+629%)</font>     |
 | **Total Revenue** | **$99.74**   | **$727.17**   | **<font color="green">+$627.43 (+629%)</font>** |
 
-Zestful saw a big bump this month from a new customer doing around $700 in requests. The customer's name seemed familiar, so I checked my emails. It turns out that I reached out to this customer three years ago, but they politely declined. I guess they needed a few years to think about it.
+Zestful saw a big bump this month from a new customer doing around $700 in requests. The customer's name seemed familiar, so I checked my emails. It turns out that I reached out three years ago, and they politely declined. I guess they needed a few years to think about it.
 
 ## Wrap up
 
@@ -199,14 +204,20 @@ Zestful saw a big bump this month from a new customer doing around $700 in reque
 * Published the [TinyPilot 2.3.1 release](https://tinypilotkvm.com/blog/whats-new-in-2021-11)
 * Prepared for the launch of Voyager 2
 * [Migrated What Got Done](https://github.com/mtlynch/whatgotdone/pull/639) from GCP and Firestore to fly.io, SQLite, and Litestream
-* Migrated this blog, Is It Keto, and a few other static sites from Google Firebase Hosting to Netlify
+* Migrated this blog, Is It Keto, and a few other static sites from Google Firebase to Netlify
 
 ### Lessons learned
 
 * When sales begin trending upwards, think early about scaling.
+* Google Cloud Platform is usually the wrong choice for small projects.
 
 ### Goals for next month
 
-* Launch the Voyager 2
-* Launch TinyPilot’s rebrand
+* Launch the Voyager 2.
+* Launch TinyPilot's rebrand.
   * For real this time.
+* Build up enough inventory that TinyPilot isn't scrambling to meet demand.
+
+---
+
+**Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees.
