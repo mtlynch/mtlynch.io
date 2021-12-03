@@ -144,7 +144,7 @@ To replace Firestore, I used SQLite and Litestream. [SQLite](https://sqlite.org)
 
 To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting with fly.io, and I consitently have good experiences with them. Their documentation is clear, their tools work how you expect, and their founders and lead engineers actively engage on their [support forum](https://community.fly.io/).
 
-My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 15-30x speedups in response time after I migrated to SQLite and fly.io.
+My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 2-20x speedups in response time after I migrated to SQLite and fly.io.
 
 {{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" maxWidth="800px">}}
 
