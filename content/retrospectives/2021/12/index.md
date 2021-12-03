@@ -57,44 +57,50 @@ Due to supply shortages, I retired TinyPilot's lower-cost product last month to 
 
 I basically just removed a link from the site's navigation bar.
 
-TODO: Screenshot of change
+{{<gallery caption="The biggest impact change I ever made on the TinyPilot website was removing a navigation bar link to a product catalog page.">}}
+  {{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" maxWidth="600px" hasBorder="true">}}
+  {{<img src="no-product-page.png" alt="Screenshot of old product catalog page" maxWidth="250px" hasBorder="true">}}
+{{</gallery>}}
 
 In last month's retrospective, I mentioned that I was [starting to see sales trending upwards](/retrospectives/2021/11/#simplifying-to-just-one-product) and wondered whether it was related to simplifying the product offering. After a month of extra data, I'm pretty convinced that it made a huge difference:
 
-{{<img src="tp-sales-consolidated.png" alt="TODO" maxWidth="800px" caption="TODO">}}
+{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" maxWidth="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product">}}
 
 We've had spikes in sales before, but they always followed some obvious event like a mention on YouTube or a review on a popular website. Sales would spike and then slowly subside.
 
 Ever since the consolidation to a single product, sales have been as high as our spikes in the past, except they don't seem to be tapering off like they do for one-time events.
 
-If I'm correct that the sales increase came from eliminating the catalog page, it's the highest return on investment from anything I've done with TinyPilot. I got a 62% sales jump just by removing a link!
+If I'm correct that the sales increase came from eliminating the catalog page, it's the highest return on investment from anything I've done with TinyPilot. I got a 62% sales jump just by removing one link!
 
 ## The return of growing pains
 
-For the first six months of TinyPilot, I was always scrambling to keep up with growth. Sales were doubling every four to eight weeks, so I constantly had to search for new suppliers and reinvent processes to scale up the business. While that growth was exciting, those growing pains are exhausting, so I was glad to settle into a more consistent, predictable pace for most of 2021.
+For the first six months of TinyPilot, I was always scrambling to keep up with growth. Sales were doubling every four to eight weeks, so I constantly had to search for new suppliers and reinvent processes to scale up the business. While that growth was exciting, it was also exhausting. I was glad to settle into a more consistent, predictable pace for most of 2021.
 
-This new sales spike has brought back some growing pains. We have contingency plans, and they've served us well this year, but we didn't have a plan for sustained growth like this.
+The latest sales spike has brought back some growing pains. We have contingency plans, and they've served us well this year, but we didn't have a plan for sustained growth like this.
 
-First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of PCBs, which would prevent us from selling Voyagers. I listed them out of stock for individual sale and that slowed down the pace *just* enough to last us until the new order arrived. If you're wondering how we were selling them even though I just said we reduced to a single product, there are still links to our old products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but it's not easily discoverable from the homepage.
+First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of PCBs, which would prevent us from selling Voyagers. I listed them out of stock for individual sale and that slowed down the pace *just* enough to last us until the new order arrived.
 
-Next, we started running low on ribbon cables. We typically buy them in bulk and we have so many on hand that it's not even worth tracking them individually. But because we're not tracking them, we didn't notice that the order we places in October to replenish our supply was running late and we were down to just 30 cables, enough to make a few days' worth of Voyagers. We use a non-standard size, so we get them special ordered, and they take 4-6 weeks to arrive, so I
+*\[Sidenote: If you're wondering why I was still selling power connectors even though I [just made a huge deal](#reducing-to-a-single-product-nearly-doubled-sales) about how I stopped selling anything but Voyagers, I can explain. There are still working links to some of TinyPilot's secondary products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but users can't easily discover those pages by visiting the TinyPilot website.\]*
 
-The last shortage is the one we still haven't solved: the cases
+Next, we started running low on ribbon cables. We typically buy them in bulk and we have so many on hand that it's not even worth tracking them in our inventory system. But because we're not tracking them, we didn't notice that the order we placed in October to replenish our supply was running late. We were down to just 30 cables, enough to make a few days' worth of Voyagers.
 
+{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" maxWidth="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
 
-We caught a few miracles that have allowed us to sell continuously
+We use a non-standard ribbon cable size, so we get them special ordered. I dreaded the thought of being stuck for weeks because of something as stupid as ribbon cables. Luckily, our supplier was able to expedite our order and get it to us within days. I also panic-bought another 1,500, so we should be fine for a while, but we're also going to track them better.
 
- Our 3D print vendor can scale gradually with us by buying more equipment, but if we double sales in a month, he can't easily just double his capacity.
+The last shortage is the one we still haven't solved: the cases. We 3D-print the cases for the Voyager, and 3D-printing has worked well for us. We use a material that has a premium feel, and we get a lot of feedback from customers and reviewers about the quality of the case.
 
-I ran a Black Friday promotion last year that generated a significant bump in sales, and I was considering it again this year, but there was too much going on. Between preparing for the Voyager 2 launch and scrambling to handle inventory shortages, I didn't want to add more stress and complexity to our fulfillment processes.
+The problem is that 3D-printing is slow, especially the material we use. It takes eight hours to print each Voyager 1 case, and the Voyager 2 will take twelve hours. Our 3D-printing vendor bought an additional printer for us, but I expect to exceed the new capacity when we switch to Voyager 2, and our vendor can't buy new printers every time we increase sales.
+
+In the short term, TinyPilot's EU distributor is printing cases locally instead of buying from us, so that lightens the load on our printer by about 30%. For long-term, I'm working with my 3D-printer to explore other materials that print faster but still have a premium feel. It also might be time to revisit [injection molding](/retrospectives/2021/02/#scaling-manufacturing), which costs $20-40k up front but has an output of thousands of cases per week. I'd like to stick with 3D-printing, as the quick prototyping and fast iteration has been a huge benefit for TinyPilot.
 
 ## Migrating my side projects away from Google Cloud Platform
 
-I mainly focus on my business projects in these retrospectives, but I had some fun this past month migrating my side projects off of Google Cloud Platform (GCP).
+I mainly focus on my main business in these retrospectives, but I had some fun this past month migrating my side projects off of Google Cloud Platform (GCP).
 
-I started using GCP about eight years ago. At the time, it was a good match for small web projects because services like AppEngine and Firebase let you run low-volume websites for free while most other cloud providers cost $10-20/mo to host a website. While $10/mo isn't a huge amount, I'm much less likely to publish an experimental project if I feel like I'm committing myself to pay $10/mo indefinitely.
+I started using GCP about eight years ago. At the time, it was a good match for small web projects because services like AppEngine and Firebase let you run low-traffic web apps for free while most other cloud providers charged $10-20/mo. I'm much less likely to publish an experimental project if I feel like I'm committing myself to pay $10/mo indefinitely.
 
-Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new project. Fortunately, there are lots of great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean, *any* customer support).
+Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new, basic web app. Fortunately, there are great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean, *any* customer support).
 
 Many of my side projects were still running on Google Cloud Platform, and they were accruing more and more service fees. I spent evenings and weekends last month migrating the most expensive services away from GCP.
 
