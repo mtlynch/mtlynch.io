@@ -359,7 +359,7 @@ I still love Proxmox as a VM manager. I purchased a license, which I'm not sure 
 
 Annoyingly, the licenses are priced per CPU, so in addition the shame of buying too much CPU, I have to pay double for Proxmox.
 
-### Parts list (2021-12-05)
+### Parts list (as of 2021-12-05)
 
 | Category    | Component                               | I paid        |
 |-------------|-----------------------------------------|---------------|
