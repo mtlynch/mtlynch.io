@@ -203,7 +203,6 @@ Is It Keto is still hanging around in the background earning small amounts of re
 | Blogging for Devs Revenue | $0.00        | $0.00         | 0                                             |
 | **Total Revenue**         | **$75.27**   | **$94.57**    | **<font color="green">+$19.30 (+26%)</font>** |
 
-
 My blogging course had a handful of sales this past month. I considered running a Black Friday sale, but I was enjoying the long weekend of not thinking about business, so I decided against it. I'm glad I didn't because I had a blast tinkering with What Got Done instead.
 
 ### [Zestful](https://zestfuldata.com)
