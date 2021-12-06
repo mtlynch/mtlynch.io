@@ -47,8 +47,8 @@ I spoke to a few marketing firms, but I wasn't ready to hire anyone yet. We're s
 | Total Pageviews          | 13,008        | 14,596        | <font color="green">+1,588 (+12%)</font>          |
 | Sales Revenue            | $34,927.55    | $56,626.33    | <font color="green">+$21,698.78 (+62%)</font>     |
 | Enterprise Subscriptions | $48.00        | $48.00        | 0                                                 |
-| Royalties                | $6,804.53     | $7,590.49     | <font color="green">+$785.96 (+12%)</font>        |
-| Total Revenue            | $41,780.08    | $64,264.82    | <font color="green">+$22,484.74 (+54%)</font>     |
+| Royalties                | $6,804.53     | $8,185.78     | <font color="green">+$1,381.25 (+20%)</font>      |
+| Total Revenue            | $41,780.08    | $64,860.11    | <font color="green">+$23,080.03 (+55%)</font>     |
 | **Profit**               | **$1,936.22** | **$9,442.26**\* | **<font color="green">+$7,506.04 (+388%)</font>** |
 
 \* *Profit is provisional until I complete monthly bookkeeping. The current number is just a simple delta in cash holdings since last month.*
