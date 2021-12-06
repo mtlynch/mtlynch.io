@@ -7,6 +7,7 @@ tags:
 - esxi
 description: I built a home server to host my development VMs and went a bit overboard.
 date: '2020-10-06'
+lastmod: '2021-12-04'
 images:
 - building-a-vm-homelab/build-components.jpg
 discuss_urls:
@@ -320,6 +321,64 @@ Before I used TinyPilot to manage my server, I didn't realize how change-averse 
 
 Having a virtual console gives me the freedom to fail and makes me more open to experimenting with different operating systems. It's always going to be a substantial effort to install and learn a new OS, but knowing that I don't have to drag machines back and forth makes me much more open to it. Had I not built TinyPilot, I might have stuck with ESXi as "good enough" rather than taking a chance on Proxmox.
 
-## My previous VM server build
+## A Year Later
 
-* [Building a Homelab VM Server (2017 Edition)](/building-a-vm-homelab-2017)
+{{<notice type="info">}}
+
+**Updated 2021-12-05**
+
+{{</notice>}}
+
+A reader asked me if there's anything I'd change about this build in retrospect, so I thought I'd share an update as it's been a little over a year with this server.
+
+### CPU - Too much
+
+I definitely went overboard on the dual E5-2680 v3 CPUs.
+
+{{<img src="cpu-usage.png" alt="Graph showing I rarely used more than 50% of my CPU" hasBorder="true" caption="In a year of usage, I've rarely exceeded 50% CPU usage, meaning one CPU would have been sufficient.">}}
+
+In a year of usage, I've never reached 100% CPU usage, and I've only ever exceeded 50% capacity a handful of times, so I would have been fine with just a single CPU.
+
+### SSD - Not enough
+
+My 1 TB Samsung SSD is just about full, so I just purchased another a [2 TB Samsung 870 Evo](https://www.newegg.com/samsung-2tb-870-evo-series/p/N82E16820147794?Item=N82E16820147794) for a total of 3 TB of SSD. There's plenty of space in the case for more SSDs.
+
+{{<img src="disk-usage.png" alt="Screenshot showing my disk is 85% full" maxWidth="800px" hasBorder="true" caption="My server has only 15% of disk still free.">}}
+
+By default, I provision each VM with 40 GB of disk, which is sometimes limiting. When I'm doing work with Docker, container images can eat up disk quickly. Every few weeks, I find that I've filled up my VM's disk, and I have to run `docker system prune --all`, so the additional disk will spare me those interruptions.
+
+### RAM - Slightly too little
+
+The 64 GB of RAM has mostly been sufficient, but there have been a few instances where I have to turn off VMs to give myself more memory. I prefer not to interrupt my workflow managing resources, so I just ordered another 64 GB of the same RAM sticks.
+
+{{<img src="ram-usage.png" alt="Graph showing RAM frequently reaching 64 GB of capacity" hasBorder="true" caption="I'm reaching the limits of 64 GB of RAM.">}}
+
+### Proxmox - Still great
+
+I still love Proxmox as a VM manager. I purchased a license, which I'm not sure adds any new features that I use, but I'm happy to support the project.
+
+Annoyingly, the licenses are priced per CPU, so in addition the shame of buying too much CPU, I have to pay double for Proxmox.
+
+### Parts list (2021-12-05)
+
+| Category    | Component                               | I paid        |
+|-------------|-----------------------------------------|---------------|
+| CPU         | [Intel Xeon E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html) (x2, used)        | $264.82       |
+| Motherboard | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)               | $319.99       |
+| Disk        | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                   | $149.99       |
+| Disk        | [Samsung 870 EVO (2TB)](https://www.newegg.com/samsung-2tb-870-evo-series/p/N82E16820147794?Item=N82E16820147794)                   | $239.99\*       |
+| Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $285.99       |
+| Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $164.11\*       |
+| Power       | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)      | $79.99        |
+| Graphics    | [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931)                      | $44.99        |
+| Case        | [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085)          | $84.99        |
+| CPU Fans    | [Cooler Master Hyper 212](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) (x2)            | $72.98        |
+| Remote administration | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP) | $65.00 |
+| **Total**   |                                         | **$1,772.84** |
+
+\* Purchased a year after the original build.
+
+## Related posts
+
+* [TinyPilot: Build a KVM Over IP for Under $100](/tinypilot) - The open-source tool I created to provision my server.
+* [Building a Homelab VM Server (2017 Edition)](/building-a-vm-homelab-2017) - My first homelab server build.
