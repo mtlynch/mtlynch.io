@@ -2,13 +2,15 @@
 title: "TinyPilot: Month 17"
 date: 2021-12-06T00:00:00-05:00
 description: How removing a single link generated a 62% sales increase
+images:
+  - /retrospectives/2021/12/tp-sales-consolidated.png
 ---
 
 ## Highlights
 
 * TinyPilot's sales jumped to $57k, and it might be sustainable.
 * I'm just about to launch TinyPilot's new product and branding.
-* I reduced Google Cloud Project fees by 90% on my side projects.
+* I reduced Google Cloud Platform fees by 90% on my side projects.
 
 ## Goal Grades
 
@@ -45,15 +47,15 @@ I spoke to a few marketing firms, but I wasn't ready to hire anyone yet. We're s
 | Total Pageviews          | 13,008        | 14,596        | <font color="green">+1,588 (+12%)</font>          |
 | Sales Revenue            | $34,927.55    | $56,626.33    | <font color="green">+$21,698.78 (+62%)</font>     |
 | Enterprise Subscriptions | $48.00        | $48.00        | 0                                                 |
-| Royalties                | $6,804.53     | $6,000.00     | <font color="red">-$804.53 (-12%)</font>          |
-| Total Revenue            | $41,780.08    | $62,674.33    | <font color="green">+$20,894.25 (+50%)</font>     |
+| Royalties                | $6,804.53     | $7,590.49     | <font color="green">+$785.96 (+12%)</font>        |
+| Total Revenue            | $41,780.08    | $64,264.82    | <font color="green">+$22,484.74 (+54%)</font>     |
 | **Profit**               | **$1,936.22** | **$9,442.26**\* | **<font color="green">+$7,506.04 (+388%)</font>** |
 
 \* *Profit is provisional until I complete monthly bookkeeping. The current number is just a simple delta in cash holdings since last month.*
 
 ## Reducing to a single product nearly doubled sales
 
-Due to supply shortages, I retired TinyPilot's lower-cost product last month to focus on our premium product, the TinyPilot Voyager. That reduced the product catalog to just the Voyager and some accessories that don't generate many sales, so I decided to scrap the product catalog page.
+Due to supply shortages, I retired TinyPilot's lower-cost product in October to focus on our premium product, the TinyPilot Voyager. That reduced the product catalog to just the Voyager and some accessories that don't generate many sales, so I decided to scrap the catalog page.
 
 I basically just removed a link from the site's navigation bar.
 
@@ -68,47 +70,61 @@ In last month's retrospective, I mentioned that I was [starting to see sales tre
 
 We've had spikes in sales before, but they always followed some obvious event like a mention on YouTube or a review on a popular website. Sales would spike and then slowly subside.
 
-Ever since the consolidation to a single product, sales have been as high as our spikes in the past, except they don't seem to be tapering off like they do for one-time events.
+Since the consolidation to a single product, sales have been as high as our spikes in the past, except they don't seem to be tapering off like they do for one-time events.
 
-If I'm correct that the sales increase came from eliminating the catalog page, it's the highest return on investment from anything I've done with TinyPilot. I got a 62% sales jump just by removing one link!
+If I'm correct that the sales increase came from eliminating the catalog page, it's the highest return on investment from anything I've done with TinyPilot. I got a 62% sales jump by removing one link!
 
 ## The return of growing pains
 
 For the first six months of TinyPilot, I was always scrambling to keep up with growth. Sales were doubling every four to eight weeks, so I constantly had to search for new suppliers and reinvent processes to scale up the business. While that growth was exciting, it was also exhausting. I was glad to settle into a more consistent, predictable pace for most of 2021.
 
-The latest sales spike has brought back some growing pains. We have contingency plans, and they've served us well this year, but we didn't have a plan for sustained growth like this.
+The latest sales increase has brought back some growing pains. We have contingency plans for sales spikes, and they've served us well this year, but we didn't have a plan for sustained growth like this.
 
-First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of PCBs, which would prevent us from selling Voyagers. I listed them out of stock for individual sale and that slowed down the pace *just* enough to last us until the new order arrived.
+### Running out of power connectors
 
-*\[Sidenote: If you're wondering why I was still selling power connectors even though I [just made a huge deal](#reducing-to-a-single-product-nearly-doubled-sales) about how I stopped selling anything but Voyagers, I can explain. There are still working links to some of TinyPilot's secondary products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but users can't easily discover those pages by visiting the TinyPilot website.\]*
+First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of circuit boards, which would prevent us from selling Voyagers.
 
-Next, we started running low on ribbon cables. We typically buy them in bulk and we have so many on hand that it's not even worth tracking them in our inventory system. But because we're not tracking them, we didn't notice that the order we placed in October to replenish our supply was running late. We were down to just 30 cables, enough to make a few days' worth of Voyagers.
+{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" maxWidth="500px" caption="We came within days of running out of TinyPilot Power Connectors.">}}
+
+I listed them out of stock for individual sale, and that slowed down the pace *just* enough to last us until the new shipment arrived.
+
+*\[Sidenote: If you're wondering why I was still selling power connectors even though I [just made a huge deal](#reducing-to-a-single-product-nearly-doubled-sales) about not selling anything but Voyagers, I can explain. There are still working links to some of TinyPilot's secondary products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but users can't easily discover those pages by visiting the TinyPilot website.\]*
+
+### Running our of ribbon cables
+
+Next, we started running low on ribbon cables. We typically buy them in bulk, and we have so many on hand that it's not even worth tracking them in our inventory system. But because we're not tracking them, we didn't notice that our last order was running late. We were down to just 30 cables, enough to make only a few days' worth of Voyagers.
 
 {{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" maxWidth="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
 
-We use a non-standard ribbon cable size, so we get them special ordered. I dreaded the thought of being stuck for weeks because of something as stupid as ribbon cables. Luckily, our supplier was able to expedite our order and get it to us within days. I also panic-bought another 1,500, so we should be fine for a while, but we're also going to track them better.
+We use a non-standard ribbon cable size, so we get them special-ordered. Was I going to have to halt sales for weeks because of something as stupid as ribbon cables?
 
-The last shortage is the one we still haven't solved: the cases. We 3D-print the cases for the Voyager, and 3D-printing has worked well for us. We use a material that has a premium feel, and we get a lot of feedback from customers and reviewers about the quality of the case.
+Luckily, our supplier was able to expedite our order and get us new cables within days. I also panic-bought another 1,500, so we should be fine for a while.
 
-The problem is that 3D-printing is slow, especially the material we use. It takes eight hours to print each Voyager 1 case, and the Voyager 2 will take twelve hours. Our 3D-printing vendor bought an additional printer for us, but I expect to exceed the new capacity when we switch to Voyager 2, and our vendor can't buy new printers every time we increase sales.
+In addition, we're going to start tracking these cables in our normal inventory system. We realized our informal tracking made it too difficult to tell the difference between "time to place a leisurely new order" and "this is an emergency!"
 
-In the short term, TinyPilot's EU distributor is printing cases locally instead of buying from us, so that lightens the load on our printer by about 30%. For long-term, I'm working with my 3D-printer to explore other materials that print faster but still have a premium feel. It also might be time to revisit [injection molding](/retrospectives/2021/02/#scaling-manufacturing), which costs $20-40k up front but has an output of thousands of cases per week. I'd like to stick with 3D-printing, as the quick prototyping and fast iteration has been a huge benefit for TinyPilot.
+### Scaling 3D printing
+
+The last shortage is the one we still haven't solved: the cases. We've always 3D-printed the cases because it gives us the flexibility to iterate quickly. We use a 3D-printing material that has a premium feel, and we frequently hear feedback from customers and reviewers about the quality of the case.
+
+The problem is that 3D printing is slow, especially the material we use. It takes eight hours to print each Voyager 1 case. The Voyager 2 will take twelve hours. Our 3D-printing vendor bought an additional printer for us, but I expect to exceed the new capacity when we switch to Voyager 2. Sadly, our vendor can't just buy new printers every time we increase sales.
+
+In the short term, TinyPilot's EU distributor is printing cases locally instead of buying them from us, so that lightens the load on our printer by about 30%. For the long-term, I'm working with my 3D-printing vendor to explore other materials that print faster but still have a premium feel. It also might be time to revisit [injection molding](/retrospectives/2021/02/#scaling-manufacturing), which costs $20-40k upfront but has an output of thousands of cases per week.
 
 ## Migrating my side projects away from Google Cloud Platform
 
 I mainly focus on my main business in these retrospectives, but I had some fun this past month migrating my side projects off of Google Cloud Platform (GCP).
 
-I started using GCP about eight years ago. At the time, it was a good match for small web projects because services like AppEngine and Firebase let you run low-traffic web apps for free while most other cloud providers charged $10-20/mo. I'm much less likely to publish an experimental project if I feel like I'm committing myself to pay $10/mo indefinitely.
+I started using GCP about eight years ago. At the time, most cloud providers charge $10-20/mo to host a web app. Google services like AppEngine and Firebase could scale down to $0/mo for small projects, which made experimentation attractive. I'm much more likely to publish a new project if I know I'm not committing myself to pay $20/mo indefinitely.
 
-Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new, basic web app. Fortunately, there are great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean, *any* customer support).
+Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new, basic web app. Fortunately, there are great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean *any* customer support).
 
-Many of my side projects were still running on Google Cloud Platform, and they were accruing more and more service fees. I spent evenings and weekends last month migrating the most expensive services away from GCP.
+Because I used GCP for so long, many of my side projects are still running on Google Cloud Platform, and they've been accruing more and more service fees. I spent evenings and weekends last month migrating my most expensive services away from GCP.
 
 Here are what my GCP costs looked like before the great migration:
 
-{{<img src="gcp-before.png" alt="TODO" maxWidth="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
+{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" maxWidth="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
 
-And here's what it looked like when I was finished:
+And here's what costs looked like when I was finished:
 
 {{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" maxWidth="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
 
@@ -118,33 +134,33 @@ HTTP load balancing was a big gotcha.
 
 On [What Got Done](https://whatgotdone.com) and [WanderJest](https://wanderjest.com), I let users upload images, and then I store the uploads in Google Cloud Storage (GCS) buckets. By default, GCS URLs are big, ugly messes like `https://storage.googleapis.com/whatgotdone-public/...`. I wanted a nice, tidy URL like `https://media.whatgotdone.com`.
 
-This simple [80-step process](https://cloud.google.com/storage/docs/hosting-static-website) explains the Google way of serving from a subdomain. It involves provisioning a static IPv4 address, setting up an HTTP load balancer, and provisioning a certificate. Little did I know, the load balancer would drive up my costs by about $18/mo per site.
+This simple [80-step process](https://cloud.google.com/storage/docs/hosting-static-website) explains the Google way of serving GCS files from a subdomain. It involves provisioning a static IPv4 address, setting up an HTTP load balancer, and generating a TLS certificate. I went through all those steps, not realizing that the load balancer would drive up my costs by about $18/mo per site.
 
-I dramatically reduced that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after discovering BunnyCDN as a service, I was successfully serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell Bunny the GCS bucket URL, the subdomain I wanted, and add a DNS entry.
+I dramatically reduced that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after discovering BunnyCDN as a service, it was serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell Bunny the GCS bucket URL and the subdomain I wanted, then add a DNS entry.
 
 {{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" maxWidth="800px" hasBorder="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
 
-Bunny's minimum charge is $1/mo total whereas Google's is ~$18/mo per site. I'm *way* below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed Bunny's minimum, their bandwidth prices are less than 1/10th Google's.
+BunnyCDN's minimum charge is $1/mo total, whereas Google's is ~$18/mo per site. I'm *way* below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed BunnyCDN's minimum, their bandwidth prices are less than 1/10th of Google's.
 
 ### Bandwidth - $21/mo
 
-My outgoing bandwidth fees come mostly this blog and [Is It Keto](https://isitketo.org). I was hosting both sites on Google Firebase, where the bandwidth fees are $0.15/GB. My websites collectively serve about 150 GB/mo in bandwidth, but a surge in blog readers can drive that up by a factor of three.
+My outgoing bandwidth fees come mostly from this blog and [Is It Keto](https://isitketo.org). I was hosting both sites on Google Firebase, where the bandwidth fees are $0.15/GB. My websites collectively serve about 150 GB/mo in bandwidth, but a surge in blog readers can drive that up by a factor of three.
 
-I've searched for other static file hosts, but for some reason, almost every static hosting provider wants to take over my entire continuous integration (CI) process. I don't want that. I want to use a CI company for CI, and I want to use a hosting company for hosting.
+I've searched for other static file hosts, but for some reason, almost every static hosting provider wants to take over the entire continuous integration (CI) workflow. I don't want that. I want to use a CI vendor for CI, and I want to use a hosting provider for hosting.
 
-I'd looked into [Netlify](https://www.netlify.com/) in the past, but I dismissed them as a "we insist on being your CI" company. Then, [Siddhant Goel told me](https://twitter.com/siddhantgoel/status/1457381011923378176) about Netlify's "manual build" mode that lets you skip all their CI nonsense. They have a $19/mo plan with 400 GB of bandwidth and $0.20/GB after that, so even in the rare month that I got a huge influx of visitors, I'd still only be paying ~$20/month.
+I'd looked into [Netlify](https://www.netlify.com/) in the past, but I dismissed them as a "we insist on being your CI" host. Then, [Siddhant Goel told me](https://twitter.com/siddhantgoel/status/1457381011923378176) about Netlify's "manual build" mode that lets you skip all their CI nonsense. They have a $19/mo plan with 400 GB of bandwidth and $0.20/GB after that, so even in the rare month that I see a huge influx of visitors, I'd still only be paying ~$20/month.
 
 ### AppEngine - $13/mo
 
 My last significant cost was AppEngine hosting for What Got Done. For years, the cost had been ~$2/mo. In July, the bills suddenly shot up to $10-15/month, and I don't know why.
 
-Fortunately, What Got Done is a standard Go web app, so it doesn't need to run on AppEngine. The harder dependency was that What Got Done uses Google Firestore for data. I could have migrated AppEngine and Firestore separately, but dealing with Google service accounts and permissions is such a pain that I decided to make a clean break from both services at once.
+Fortunately, What Got Done is a standard Go web app, so it doesn't need to run on AppEngine. The harder dependency was on Google Firestore for data. I could have migrated AppEngine and Firestore separately, but dealing with Google service accounts and permissions is such a pain that I decided to make a clean break from both services at once.
 
-To replace Firestore, I used SQLite and Litestream. [SQLite](https://sqlite.org) is a simple SQL database that keeps everything in a single file. [Litestream](https://litestream.io) is a tool for syncing SQLite databases to the cloud. I used these same technologies [to build LogPaste](/litestream/), and they worked well, so I wanted to invest more in them.
+To replace Firestore, I used [SQLite](https://sqlite.org) and [Litestream](https://litestream.io). SQLite is a simple SQL database that keeps everything in a single file. Litestream is a tool for syncing SQLite databases to the cloud. I used these same technologies [to build LogPaste](/litestream/), and they worked well, so I wanted to invest more in them.
 
-To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting with fly.io, and I consitently have good experiences with them. Their documentation is clear, their tools work how you expect, and their founders and lead engineers actively engage on their [support forum](https://community.fly.io/).
+To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting with fly.io for the past year, and I consistently have good experiences with them. Their documentation is clear, their tools work how you expect, and their founders and lead engineers actively engage on their [support forum](https://community.fly.io/).
 
-My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 2-20x speedups in response time after I migrated to SQLite and fly.io.
+My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 2-20x speedups after I migrated to SQLite and fly.io.
 
 {{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" maxWidth="800px">}}
 
@@ -201,7 +217,7 @@ My blogging course had a handful of sales this past month. I considered running 
 | RapidAPI Revenue  | $99.74       | $727.17       | <font color="green">+$627.43 (+629%)</font>     |
 | **Total Revenue** | **$99.74**   | **$727.17**   | **<font color="green">+$627.43 (+629%)</font>** |
 
-Zestful saw a big bump this month from a new customer doing around $700 in requests. The customer's name seemed familiar, so I checked my emails. It turns out that I reached out three years ago, and they politely declined. I guess they needed a few years to think about it.
+Zestful saw a big bump this month from a new customer who made around $700 in requests. The customer's name seemed familiar, so I checked my emails. I had reached out to them three years ago, and they politely declined. I guess they needed a few years to think it over.
 
 ## Wrap up
 
@@ -226,4 +242,4 @@ Zestful saw a big bump this month from a new customer doing around $700 in reque
 
 ---
 
-**Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees.
+***Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees.*
