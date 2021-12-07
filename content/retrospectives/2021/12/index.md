@@ -59,7 +59,7 @@ Due to supply shortages, I retired TinyPilot's lower-cost product in October to 
 
 I basically just removed a link from the site's navigation bar.
 
-{{<gallery caption="The biggest impact change I ever made on the TinyPilot website was removing a navigation bar link to a product catalog page.">}}
+{{<gallery caption="The highest impact change I ever made on the TinyPilot website was removing a navigation bar link to a product catalog page.">}}
   {{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" maxWidth="600px" hasBorder="true">}}
   {{<img src="no-product-page.png" alt="Screenshot of old product catalog page" maxWidth="250px" hasBorder="true">}}
 {{</gallery>}}
@@ -114,7 +114,7 @@ In the short term, TinyPilot's EU distributor is printing cases locally instead 
 
 I mainly focus on my main business in these retrospectives, but I had some fun this past month migrating my side projects off of Google Cloud Platform (GCP).
 
-I started using GCP about eight years ago. At the time, most cloud providers charge $10-20/mo to host a web app. Google services like AppEngine and Firebase could scale down to $0/mo for small projects, which made experimentation attractive. I'm much more likely to publish a new project if I know I'm not committing myself to pay $20/mo indefinitely.
+I started using GCP about eight years ago. At the time, most cloud providers charged $10-20/mo to host a web app. Google services like AppEngine and Firebase could scale down to $0/mo for small projects, which made experimentation attractive. I'm much more likely to publish a new project if I know I'm not committing myself to pay $20/mo indefinitely.
 
 Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new, basic web app. Fortunately, there are great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean *any* customer support).
 
