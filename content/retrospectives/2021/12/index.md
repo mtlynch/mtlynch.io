@@ -41,17 +41,15 @@ I spoke to a few marketing firms, but I wasn't ready to hire anyone yet. We're s
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | October 2021  | November 2021 | Change                                            |
-| ------------------------ | ------------- | ------------- | ------------------------------------------------- |
-| Unique Visitors          | 6,898         | 7,983         | <font color="green">+1,085 (+16%)</font>          |
-| Total Pageviews          | 13,008        | 14,596        | <font color="green">+1,588 (+12%)</font>          |
-| Sales Revenue            | $34,927.55    | $56,626.33    | <font color="green">+$21,698.78 (+62%)</font>     |
-| Enterprise Subscriptions | $48.00        | $48.00        | 0                                                 |
-| Royalties                | $6,804.53     | $7,590.49     | <font color="green">+$785.96 (+12%)</font>        |
-| Total Revenue            | $41,780.08    | $64,264.82    | <font color="green">+$22,484.74 (+54%)</font>     |
-| **Profit**               | **$1,936.22** | **$9,442.26**\* | **<font color="green">+$7,506.04 (+388%)</font>** |
-
-\* *Profit is provisional until I complete monthly bookkeeping. The current number is just a simple delta in cash holdings since last month.*
+| Metric                   | October 2021  | November 2021  | Change                                             |
+| ------------------------ | ------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 6,898         | 7,983          | <font color="green">+1,085 (+16%)</font>           |
+| Total Pageviews          | 13,008        | 14,596         | <font color="green">+1,588 (+12%)</font>           |
+| Sales Revenue            | $34,927.55    | $56,626.33     | <font color="green">+$21,698.78 (+62%)</font>      |
+| Enterprise Subscriptions | $48.00        | $47.75         | <font color="red">-$0.25 (-1%)</font>              |
+| Royalties                | $6,804.53     | $8,185.78      | <font color="green">+$1,381.25 (+20%)</font>       |
+| Total Revenue            | $41,780.08    | $64,859.86     | <font color="green">+$23,079.78 (+55%)</font>      |
+| **Profit**               | **$1,936.22** | **$12,758.39** | **<font color="green">+$10,822.17 (+559%)</font>** |
 
 ## Reducing to a single product nearly doubled sales
 
