@@ -26,6 +26,12 @@ My main concern with the CPU was finding a CPU and motherboard combination that 
 
 ### Motherboard
 
+{{<alert type="danger">}}
+
+I don't recommend the combination of CPU and motherboard I used unless you have a spare CPU to bootstrap the BIOS. See more discussion below.
+
+{{</alert>}}
+
 ### Case
 
 I chose
@@ -54,15 +60,25 @@ I love the M.2 form factor as it requires no cabling, and it takes up essentiall
 
 \* Caveat: This won't work out of the box with the Asus Prime A320I-K motherboard. See details below.
 
+## Building the server with TinyPilot
+
+I created TinyPilot specifically for the task of building custom PCs and servers. It was great in this instance because I could monitor video output, boot to BIOS, and mount the TrueNAS system entirely from the TinyPilot browser window.
+
 ## CPU
 
 ## The build
 
 ### My first PSU was dead
 
+I got everything hooked up, and nothing. I've built several computers, and this is one of the worst feelings. You just have no feedback, and you're potentially going to .
+
+I disconnected everything except for the PSU's cables to the motherboard and the power button. Still, no luck. I tried removing the RAM. Same thing. I tried re-seating the CPU. Same thing.
+
+Finally, I took apart my 2017 homelab VM server and connected its PSU to the NAS motherboard. It powered on! So, I successfully identified the problem as a defective PSU. I ordered a replacement of the same model, and it powered on, but there was no video output. This led me to the next issue...
+
 ### The CPU BIOS incompatibility fiasco
 
-I borrowed the PSU from my old 2017 homelab VM server, and I got the system to power on, but there was no video display. Oh no! Did I misunderstand what was required for the motherboard's on-board video to work?
+I got the system to power on, but there was no video display. Oh no! Did I misunderstand what was required for the motherboard's on-board video to work?
 
 After some research, I saw some comments that the Asus Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I *don't have a CPU*.
 
