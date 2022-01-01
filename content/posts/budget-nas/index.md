@@ -99,3 +99,9 @@ Not crazy about the CPU compatibility.
 ### Case
 
 Didn't love it. Very little documentation and the set of screws wasn't obvious.
+
+### TrueNAS
+
+No built-in Recycle Bin. There's some sort of Recycle Bin capability but it has a bunch of caveats about not storing large files, and it doesn't seem to empty automatically.
+
+Jails are much harder to configure. To access storage, you have to create the jail, check the uid of the user running within the jail, then create a matching user on the host system, then edit permissions to give that user access to the shared dataset.
