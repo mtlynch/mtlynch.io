@@ -6,8 +6,8 @@ description: The launch of TinyPilot Voyager 2
 
 ## Highlights
 
-* I've launched the TinyPilot Voyager 2 and a new logo.
-* TinyPilot's revenue continues running strong at $55k.
+* I've launched a new TinyPilot product and debuted a new logo.
+* TinyPilot's revenue finished the year strong at $55k for December.
 * I've learned to manage design projects more aggressively.
 
 ## Goal Grades
@@ -26,14 +26,14 @@ After many months of hard work, I finally launched the Voyager 2 last month.
 * **Result**: Debuted TinyPilot's new logo
 * **Grade**: B
 
-I haven't quite finished the rebrand, but I've published TinyPilot's new logo, which is 80% of the benefit.
+I haven't quite finished the rebrand, but I've published TinyPilot's new logo, which is 80% of what I want out of the rebrand.
 
 ### Build up enough inventory that TinyPilot isn't scrambling to meet demand
 
 * **Result**: We're no longer in emergency mode, but we're still scrambling a bit.
 * **Grade**: B
 
-I raised prices slightly on the Voyager 2, and that seems to have slowed sales down just enough that our manufacturing processes have time to catch up and build a small buffer of inventory.
+I raised prices slightly on the Voyager 2, and that seems to have down slowed sales enough that we can catch up and build a small buffer of inventory.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -55,7 +55,7 @@ I raised prices slightly on the Voyager 2, and that seems to have slowed sales d
 
 Sales are down slightly from November, but December was still my second-highest revenue month of all time. I'm continuing to enjoy the revenue boost from [selling just one product](/retrospectives/2021/12/#reducing-to-a-single-product-nearly-doubled-sales).
 
-My cash profit is down because I'm investing heavily in inventory for 2022. With the chip shortage continuing, I want to secure as many electronic components as possible. Otherwise, I'll constantly have to redesign TinyPilot's circuit boards to swap in components as certain items become unavailable.
+My cash profit is down because I'm investing heavily in inventory for 2022. With the chip shortage continuing, I want to secure as many electronic components as possible. Otherwise, I'll constantly have to redesign TinyPilot's circuit boards around unavailable parts.
 
 ## Releasing the Voyager 2
 
@@ -70,29 +70,29 @@ The Voyager 2 brings a tidier form factor. The Voyager 1 had an external power c
 
 Honestly, the launch felt a little anticlimactic. While it's more convenient to eliminate the external power connector, I struggled to write [the announcement](https://tinypilotkvm.com/blog/introducing-voyager-2) in a way that sounded exciting. It felt silly to say, "Brand new version! It's exactly the same except without a separate box!"
 
-But it does really simplify things. The Voyager 1 came with six distinct parts &mdash; the Voyager 2 requires only three. That simplifies installation for the user and the fulfillment process for TinyPilot's staff.
+But it does simplify things. The Voyager 1 came with six distinct parts &mdash; the Voyager 2 requires only three. That improves the installation experience for the user and the fulfillment process for TinyPilot's staff.
 
 I'm still excited for the power over Ethernet (PoE) version, which is due to launch this month. Even though it's still just a difference of cables, eliminating the whole power plug makes a big difference in convenience. Plus, I just love PoE. Anytime I plug in a PoE device, and it turns on *just from the network cable*, it feels magical.
 
 ## TinyPilot's new logo and learning to work with designers
 
-Back in July of 2020, I commissioned TinyPilot's first logo. I found an illustrator on Upwork and paid her $600 to create it.
+Back in July of 2020, I commissioned TinyPilot's first logo. I found an illustrator on Upwork and paid her $600 to create the mascot and text.
 
 {{<img src="old-tinypilot-logo.png" alt="TinyPilot's new logo" maxWidth="500px" caption="TinyPilot's original logo" >}}
 
-By mid-2021, it felt like TinyPilot had outgrown the logo. Now that we were targeting business users instead of solely hobbyists, the chipmunk mascot came across as too cutesy and not professional enough.
+After a year, it felt like TinyPilot had outgrown the logo. Now that we were targeting business users in addition to hobbyists, the chipmunk mascot came across as too cutesy and not professional enough.
 
-In September, I [hired a design firm](/retrospectives/2021/10/#investing-more-into-design) to redesign TinyPilot's website and create a new company logo. After lots of discussion, we finalized the logo in December:
+In September, I [hired a firm](/retrospectives/2021/10/#investing-more-into-design) to redesign TinyPilot's website and create a new company logo. After lots of discussion, we finalized the logo in December:
 
 {{<img src="tinypilot-logo.png" alt="TinyPilot's new logo" maxWidth="500px" caption="TinyPilot's new logo">}}
 
 I like the logo a lot, and I've heard positive feedback about it.
 
-One big lesson I'm taking away from this project is to be more vigilant about structuring design projects in the future.
+One important lesson I'm taking away from the experience is to be more vigilant about project structure.
 
 When I initially contracted the design firm, they estimated that the rebrand and new logo would take 2-4 weeks for a cost of $5-7k. The plan was to agree on a rebrand, which would basically be a new logo, new fonts, and a new color scheme. Once that was nailed down, we'd start the larger project of redesigning the website.
 
-But then the milestones got a little murky. The designers started the rebranding by showing me new designs for the website. When I clarified that I just wanted to focus on the branding, they said they understood but that it's easier seeing the new brand alongside a "sketch" of a new website design.
+But then the milestones got a little murky. The designers started by showing me new designs for the website. When I clarified that I just wanted to focus on the branding, they said they understood but that it's easier to see the new brand alongside a "sketch" of a new website design.
 
 Okay, fine.
 
@@ -102,17 +102,17 @@ Three months later, I'd spent $16k and had no finished work. I liked where the d
 
 I don't think the designers were trying to manipulate me, but I realized I needed to be more aggressive about structuring the project.
 
-First, I asked the designers to pause the rest of the redesign and focus on completing the logo. Two days later, we had the final logo. Great! Now I at least had a tangible artifact of the design work that I could publish and use.
+First, I asked the designers to focus on completing the logo. Two days later, we had the final logo. Great! Now, I at least had a tangible artifact of the design work that I could publish and use.
 
 Next, I requested that the design firm pause and map out the remaining work in terms of milestones, calendar time, and billable hours. Instead of focusing on all the pages at once, I suggested that we focus on completing one page at a time. That way, as soon as we finish a page, I can hand the designs to my dev team for implementation rather than blocking dev work until the entire project is complete.
 
-The design firm took it well. They said they typically work on larger projects where the milestones are at the scale of months, but they were happy to slice the work into more granular segments to support the style of incremental development I want.
+The design firm took it well. They said they typically work on larger projects where the milestones are at the scale of months, but they were happy to slice the work into more granular segments to support the style of incremental development I wanted.
 
 ## The last unfilled role: tech support
 
-One of my goals for 2021 was to systematize enough of TinyPilot that [I can take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management) without impacting operations.
+One of my goals for 2021 was to systematize enough of TinyPilot that [I could take a two-week vacation](/solo-developer-year-3/#automate-tinypilot-management) without impacting operations.
 
-Over the December holidays, I took a one-week vacation where I didn't read any TinyPilot email. Everything went smoothly, but it took me several days to get through technical support requests when I got back.
+Over the December holidays, I took a one-week vacation where I didn't read any TinyPilot email. Everything went smoothly, but it took me several days to get through the backlog of technical support requests when I got back.
 
 A member of my fulfillment staff has stepped up and taken over for most customer support requests, but he doesn't have a background in software or IT. There are still 2-5 support requests per day that need to be escalated to a support engineer. And right now, the only support engineer is me.
 
@@ -174,7 +174,7 @@ It was a slow month for Hit the Front Page of Hacker News. Not a lot of technica
 ### Lessons learned
 
 * Define expectations with designers and enforce them consistently.
-  * The design firm I hired for TinyPilot's redesign is doing good work, but I let myself get into a position where I had no usable work after three months and $16k.
+  * The firm I hired creates high-quality designs, but I let myself get into a position where I had no usable work after three months and $16k.
   * What I should have done was more aggressively insist on a structure that facilitated iterative design.
 
 ### Goals for next month
