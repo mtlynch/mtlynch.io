@@ -35,7 +35,7 @@ I haven't quite finished the rebrand, but I've published TinyPilot's new logo, w
 * **Result**: We're no longer in emergency mode, but we're still scrambling a bit.
 * **Grade**: B
 
-I raised prices slightly on the Voyager 2, and that seems to have down slowed sales enough that we can catch up and build a small buffer of inventory.
+I raised prices slightly on the Voyager 2, and that seems to have slowed down sales enough that we can catch up and build a small buffer of inventory.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
