@@ -33,7 +33,7 @@ I haven't quite finished the rebrand, but I've published TinyPilot's new logo, w
 * **Result**: We're no longer in emergency mode, but we're still scrambling a bit.
 * **Grade**: B
 
-I raised prices slightly on the Voyager 2, and that seems to have slowed sales down just enough that our manufacturing processes have time to catch up and we can build up a small buffer of inventory.
+I raised prices slightly on the Voyager 2, and that seems to have slowed sales down just enough that our manufacturing processes have time to catch up and build a small buffer of inventory.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -70,7 +70,7 @@ The Voyager 2 brings a tidier form factor. The Voyager 1 had an external power c
 
 Honestly, the launch felt a little anticlimactic. While it's more convenient to eliminate the external power connector, I struggled to write [the announcement](https://tinypilotkvm.com/blog/introducing-voyager-2) in a way that sounded exciting. It felt silly to say, "Brand new version! It's exactly the same except without a separate box!"
 
-But it does really simplify things. The Voyager 1 came with six distinct parts &mdash; the Voyager 2 requires only three. That simplifies installation for the user and the fulfillment proceess for TinyPilot's staff.
+But it does really simplify things. The Voyager 1 came with six distinct parts &mdash; the Voyager 2 requires only three. That simplifies installation for the user and the fulfillment process for TinyPilot's staff.
 
 I'm still excited for the power over Ethernet (PoE) version, which is due to launch this month. Even though it's still just a difference of cables, eliminating the whole power plug makes a big difference in convenience. Plus, I just love PoE. Anytime I plug in a PoE device, and it turns on *just from the network cable*, it feels magical.
 
@@ -135,7 +135,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | Amazon Affiliate Revenue | $26.25        | $30.21        | <font color="green">+$3.96 (+15%)</font>    |
 | **Total Revenue**        | **$261.61**   | **$201.21**   | **<font color="red">-$60.40 (-23%)</font>** |
 
-December is typically a slow month for Is It Keto, but I usually see traffic double in January, as people begin thinking about diet-related New Year's resolutions. I've let the site languish in 2021, but I'm hoping to see a bump back up to ~$400/month for the first few months of 2022.
+December is typically a slow month for Is It Keto, but I usually see traffic double in January as people begin thinking about diet-related New Year's resolutions. I've let the site languish in 2021, but I'm hoping to see a bump back up to ~$400/month for the first few months of 2022.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
