@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 18"
 date: 2022-01-06T00:00:00-05:00
 description: The launch of TinyPilot Voyager 2
+images:
+  - /retrospectives/2022/01/tinypilot-logo.png
 ---
 
 ## Highlights
