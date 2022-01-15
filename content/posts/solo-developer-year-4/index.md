@@ -74,9 +74,15 @@ http://logpaste.com/BQGczWYC
 
 I think that's also good management...
 
-### A good manager grows their team
+### Organizations succeed when the team improves
+
+I quoted Jason Cohen last year, and I'll quote him again from a more recent interview.
 
 https://www.youtube.com/watch?v=Sjs5gEUlZyU&t=3608s
+
+Handling rush orders.
+
+Letting developers peer review.
 
 ## Favorite discoveries
 
