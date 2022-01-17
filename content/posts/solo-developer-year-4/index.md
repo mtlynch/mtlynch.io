@@ -53,7 +53,7 @@ We've added several major features in the last year including:
 
 Several of my favorite YouTubers reviewed TinyPilot, which was exciting. One of my favorite moments of the year was when we got our first-ever review from Craft Computing. We sat on the couch and watched it on our TV, so the experience was fairly surreal.
 
-That video led to the biggest sales jump we had ever seen at that point. And it was still just my girlfriend and I, so we were running around for two weeks trying to ship orders out fast enough and replenish our inventory even though sales were twice as large as any sales spike we planned for.
+That video led to the biggest sales jump we had ever seen at that point. And it was still just my girlfriend and I, so we were running around for two weeks trying to ship orders out fast enough and replenish our inventory even though sales were twice as large as any sales spike we planned for. It [exhausted us](/retrospectives/2021/02/#tinypilots-first-postmortem).
 
 ## Other projects
 
@@ -122,19 +122,46 @@ LogPaste has worked out great. It works as I expected it to. It eliminates the h
 
 I've given up on making money from What Got Done, but I continue working on it as a way to sharpen my development skills and because it's valuable to me as a tool.
 
-My major 2021 achievement for What Got Done was migrating it from Google Cloud Platform to fly.io, SQLite, and Litestream for an XXx speedup on most requests. That change was a lot of fun, and I love the switch from
+My major 2021 achievement for What Got Done was migrating it from Google Cloud Platform to fly.io, SQLite, and Litestream for an XXx speedup on most requests. That change was a lot of fun, and I love the switch from Firestore to SQLite. I can replicate my production database locally in seconds [with a single command](https://youtu.be/_XuJaHJGgrc?t=2826). That would have been a week-long project with Firestore. And it's so easy for me to make schema changes because I can do that in simple scripts as well.
 
 ## Lessons learned
 
 ### Sell just one thing
 
-### Plan to fail for four years
+For most of the year, TinyPilot earned between $20-30k per month in revenue. I sadly invested very little in marketing, as I was mostly running around trying to keep things .
+
+The one marketing move I did use was sending review units to YouTubers with related audiences. For most of the year, the months where I broke $30k in revenue, it was a direct result of a popular YouTuber reviewing TinyPilot on their channel.
+
+From October to December, my sales doubled and I didn't have any YouTube reviews. In fact, I didn't do any marketing at all.
+
+
+With the chip shortage, I was afraid of running out of Raspberry Pis. I didn't want to fail to sell my flagship product because I used up all my Pis on my low-end product. So I got rid
+
+After I got rid of the Hobbyist Kit, I decided to just get rid of the product index page entirely. I'd sell just the TinyPilot Voyager and see how that went.
+
+Sales immediatley jumped. They haven't stopped.
+
+It obviously simplifies things for inventory management, fulfillment, and customer support as well. So now I'm selling just one product.
 
 ### Good management attracts good employees
+
+A few months ago, I caught up with my friend Matt on a video call. I met Matt at Microsoft, and he's one of the smartest developers I know. He has incredibly incisive insight software and organizations at both a high level and a low level.
+
+He had followed TinyPilot's progress on my blog, but this was the first time we were talking about it directly. I was saying how lucky I was that I ended up with such a good team, both in terms of the developers I've hired and the local staff that run the TinyPilot office. Well, give yourself some credit. I know you, and you probably shaped that team by putting processes in place that allowed people to work well.
+
+I think Matt's right about everything, so I'm going to do what he says and take that credit now.
+
+I of course still have a lot to learn about being a manager, but I think many of the early things I've done have contributed to building a good team. When we agree on a new process or policy, it's not just a verbal agreement or buried in an email somewhere. We update our documentation so that everyone on the team can see it and refer back to it easily.
+
+I can't prove it, but I think it's true. I designed the TinyPilot jobs to be . And I put a lot of effort into defining expectations and process.
 
 I think that's also good management...
 
 ### Organizations succeed when the team improves
+
+I think Jason Cohen always says useful things, so I listened to an interview with him in August. One of the takeaways from me was what he said about how a good leader focuses on making their team better rather than just improving their own skills:
+
+>
 
 I quoted Jason Cohen last year, and I'll quote him again from a more recent interview.
 
@@ -142,7 +169,12 @@ https://www.youtube.com/watch?v=Sjs5gEUlZyU&t=3608s
 
 Handling rush orders.
 
-Letting developers peer review.
+Letting developers [peer review](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests)
+
+Letting fulfillment staff take over customer support.
+
+### Plan to fail for four years
+
 
 ## Favorite discoveries
 
