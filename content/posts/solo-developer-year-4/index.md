@@ -120,20 +120,22 @@ I'd guess that market price for the site is $8-15k, but it would probably take 3
 
 ### LogPaste
 
-I created LogPaste because I wanted an easy way for TinyPilot users to share their diagnostic logs with me. Every other solution I found was too heavyweight, so
+{{<img src="logpaste-screenshot.png" maxWidth="450px" hasBorder="true" caption="[LogPaste](https://logpaste.com) is my minimalist, self-hostable log uploading tool.">}}
+
+I created LogPaste because I wanted an easy way for TinyPilot users to share their diagnostic logs with me. Every other solution I found was too heavyweight, so I created my own [using Go, SQLite, and Litestream](/litestream/).
+
+LogPaste has worked out great. It works as I expected it to. It eliminates the hurdles users would normally face in sharing log files with me. Nobody has ever failed to figure it out or run into errors.
 
 ```bash
 $ echo "hello, world!" | curl -F '_=<-' https://logpaste.com
 http://logpaste.com/BQGczWYC
 ```
 
-LogPaste has worked out great. It works as I expected it to. It eliminates the hurdles users would normally face in sharing log files with me. Nobody has ever failed to figure it out or run into errors.
-
 ### What Got Done
 
-I've given up on making money from What Got Done, but I continue working on it as a way to sharpen my development skills and because it's valuable to me as a tool.
+I created What Got Done in 2019 as a lightweight way for team members to share weekly updates with each other. It never took off as a business, but I've continued working on it on weekends as a way to learn new technologies or do just-for-fun development.
 
-My major 2021 achievement for What Got Done was migrating it from Google Cloud Platform to fly.io, SQLite, and Litestream for an XXx speedup on most requests. That change was a lot of fun, and I love the switch from Firestore to SQLite. I can replicate my production database locally in seconds [with a single command](https://youtu.be/_XuJaHJGgrc?t=2826). That would have been a week-long project with Firestore. And it's so easy for me to make schema changes because I can do that in simple scripts as well.
+My major What Got Done achievement in 2021 was migrating the site from Google Cloud Platform to fly.io. To replace Google Firestore, I used SQLite and Litestream, which achieved an XXx speedup on most requests. That change was a lot of fun, and I love the switch from Firestore to SQLite. I can replicate my production database locally in seconds [with a single command](https://youtu.be/_XuJaHJGgrc?t=2826). That would have been a week-long project with Firestore. And it's so easy for me to make schema changes because I can do that in simple scripts as well.
 
 ## Lessons learned
 
@@ -154,9 +156,9 @@ Sales immediatley jumped. They haven't stopped.
 
 It obviously simplifies things for inventory management, fulfillment, and customer support as well. So now I'm selling just one product.
 
-### Good management attracts good employees
+### Good management attracts a good team
 
-A few months ago, I caught up with my friend Matt on a video call. I met Matt at Microsoft, and he's one of the smartest developers I know. He has incredibly incisive insight software and organizations at both a high level and a low level.
+A few months ago, I caught up with my friend Matt on a video call. Matt and I met on the BitLocker team at Microsoft, where we were both hired straight out of college. He's one of the smartest developers I know, and he has incredibly incisive insight into software and organizations at both a high level and a low level.
 
 He had followed TinyPilot's progress on my blog, but this was the first time we were talking about it directly. I was saying how lucky I was that I ended up with such a good team, both in terms of the developers I've hired and the local staff that run the TinyPilot office. Well, give yourself some credit. I know you, and you probably shaped that team by putting processes in place that allowed people to work well.
 
@@ -168,15 +170,13 @@ I can't prove it, but I think it's true. I designed the TinyPilot jobs to be . A
 
 I think that's also good management...
 
-### Organizations succeed when the team improves
+### Leadership means helping teammates grow
 
-I think Jason Cohen always says useful things, so I listened to an interview with him in August. One of the takeaways from me was what he said about how a good leader focuses on making their team better rather than just improving their own skills:
+In August, I listened to [an interview with WPEngine founder Jason Cohen](https://youtu.be/Sjs5gEUlZyU?t=3605).  One of the takeaways from me was what he said about how a good leader focuses on making their team better rather than just improving their own skills:
 
+>With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context. They're smarter in whatever that means. In whatever dimension that may mean. That's also the goal.
 >
-
-I quoted Jason Cohen last year, and I'll quote him again from a more recent interview.
-
-https://www.youtube.com/watch?v=Sjs5gEUlZyU&t=3608s
+>If you're the only one who can do that in the room, you're a terrible leader. Because that means your team isn't getting better. That's the only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.
 
 Handling rush orders.
 
