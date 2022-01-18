@@ -14,14 +14,13 @@ Four years ago to the day, I [quit my job as a developer at Google](/why-i-quit-
 
 Previous updates:
 
-* My First Year as a Solo Developer
-* My Second Year as a Solo Developer
-* My Third Year as a Solo Developer
+* [My First Year as a Solo Developer](/solo-developer-year-1/)
+* [My Second Year as a Solo Developer](/solo-developer-year-2/)
+* [My Third Year as a Solo Developer](/solo-developer-year-3/)
 
+## The year of scaling
 
-
-## The high-level view
-
+TODO: Graph of money
 
 {{<notice type="info">}}
 
@@ -39,7 +38,7 @@ At the start of 2021, I was TinyPilot's sole developer. I was also the sole cust
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and even a [European distributor](https://kvm-ip.de).
 
-The software has changed a lot in the last year, too. For fun, I installed the TinyPilot image from last January, and compared it to the latest release:
+The software has changed a lot in the last year, too. For fun, I installed the TinyPilot image from last January, and compared it to the latest release. I was surprised at how much has changed in just a year in just the UI:
 
 TODO: GIF comparison
 
@@ -51,19 +50,25 @@ We've added several major features in the last year including:
 * System updates from the browser
 * Video bandwidth tuning
 
-Several of my favorite YouTubers reviewed TinyPilot, which was exciting. One of my favorite moments of the year was when we got our first-ever review from Craft Computing. We sat on the couch and watched it on our TV, so the experience was fairly surreal.
+One of my favorite moments of the year was when we got our first-ever product review from one of my favorite YouTube creators, Craft Computing. We sat on the couch and watched it on our TV, so the experience was fairly surreal.
 
 That video led to the biggest sales jump we had ever seen at that point. And it was still just my girlfriend and I, so we were running around for two weeks trying to ship orders out fast enough and replenish our inventory even though sales were twice as large as any sales spike we planned for. It [exhausted us](/retrospectives/2021/02/#tinypilots-first-postmortem).
 
+We were both lying awake at night hours after we went to bed because we were so wired from running around. It was stressful, but it was also exciting to be working on so much growth.
+
+{{<revenue-graph project="tinypilot">}}
+
 ## Other projects
 
-### Refactoring English
+### *Refactoring English*
 
-My great shame of the year is that I made almost no progress on this book. I got about 80% done with the first chapter, and then
+One of my 2021 goals (TODO: link) was to publish a book about techniques developers can use to improve their writing. I often hear developers say they struggle with writing, and I've learned several techniques that have made my writing more effective. I wanted to write a book capturing all the techniques I apply when writing.
 
-I've had a morning ritual for the past three years of writing for an hour every morning. That generally translates into about ten blog posts per year, so I thought that if I spent that time on a book instead, I'd be done within a year.
+My great shame of the year is that I made almost no progress on this book. I got about 80% done with the first chapter, and then put it on the backburner indefinitely.
 
-The problem is that TinyPilot now has its own pace that I don't fully control. For the first few months of 2021, I stuck to writing for an hour a day, but I'd end every day with a list of important, unfinished TinyPilot tasks. I decided to [suspend my writing](/retrospectives/2021/09/#can-i-afford-to-keep-writing) until TinyPilot slowed down, and then that never happened.
+I've had a morning ritual for the past three years of writing for an hour every morning. That generally translated to about ten blog posts per year. I thought that if I spent that time on a book instead, I'd be done within a year.
+
+But that morning ritual worked in my pre-TinyPilot life. TinyPilot has its own pace that I don't fully control. For the first few months of 2021, I stuck to writing for an hour a day, but I'd end every day with a list of important, unfinished TinyPilot tasks. I decided to [suspend my writing](/retrospectives/2021/09/#can-i-afford-to-keep-writing) until TinyPilot slowed down, and then that never happened.
 
 I'm still excited to write this book, and I hope I have more time for it this year.
 
@@ -71,19 +76,21 @@ I'm still excited to write this book, and I hope I have more time for it this ye
 
 As with my lack of book-writing time, I had very little blog-writing time. I published three new blog posts.
 
-I stuck with my habit of writing monthly retrospectives. I find it easier to budget time for retrospectives because they almost always help me run my business. The act of sitting down and explaining my strategy has helped me countless times recognize a flaw in my thinking that I otherwise wouldn't have noticed.
+Ironically, the year that I have the least amount of time to write is the year that I had the most to write about. There are so many things I have to learn for TinyPilot that I wish I could write about and capture while it's still fresh in my mind, but there just isn't enough time.
 
-More and more people are telling me that they find them helpful, which always surprises me a bit because they feel like me just thinking aloud.
+I dif faithfully maintain my habit of writing [monthly retrospectives](/retrospectives/). I can budget time for those because they're so clearly a net positive for my business, even in the short term. Almost every retrospective I write, I recognize some flaw in my thinking or a weakness in my plans that I wouldn't have noticed had I not sat down to organize my thoughts and write everything out.
 
 ### Hit the Front Page of Hacker News
 
 {{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging.">}}
 
-At the beginning of the year, I released my blogging course. I'm glad I did it, but I wouldn't have done it had I known how hard it would be.
+At the beginning of the year, I released my first-ever paid course. It was a course teaching everything I've learned about writing blog posts that gain traction on tech-savvy sites like Hacker News and reddit.
 
-I've heard positive feedback about the course, and a few people credited it with helping them write successful blog posts.
+I'm proud of the content of the course. I've heard positive feedback about the course, and a few people credited it with helping them write successful blog posts.
 
-I wish I had more time to market it. It earned $XX in its first year, and I was hoping for something closer to $20k. Had TinyPilot not been so busy, I think I could have spent more time marketing it and gotten closer to my goal, but I still learned a lot about creating an educational product, and I'd like to do more of it in the future.
+It earned $XX in its first year, and I was hoping for something closer to $20k. Had TinyPilot not been so busy, I think I could have spent more time marketing it and gotten closer to my goal. I still learned a lot about creating an educational product, and I'd like to do more of it in the future.
+
+{{<revenue-graph project="htfp">}}
 
 ### Is It Keto
 
@@ -91,9 +98,11 @@ I wish I had more time to market it. It earned $XX in its first year, and I was 
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet. It earns money from Amazon Affiliate links and Google AdSense.
 
-I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021. But by June or so, another site popped up that did the same thing, and they started overtaking me in search engine results.
+I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021. In the second half of the year, another site appeared and continued adding content, so they quickly overtook Is It Keto in search results.
 
 I did briefly explore the idea of moving to MediaVine, which is one of the higher-end ad networks. I've heard they pay 3-8x as much as AdSense. MediaVine accepted Is It Keto into their program, but then I discovered [how bad their contract terms are](/retrospectives/2021/09/#is-it-ketohttpsisitketoorg), so I bailed on them and stuck with AdSense.
+
+{{<revenue-graph project="isitketo">}}
 
 {{<notice type="info">}}
 
@@ -106,6 +115,8 @@ I'd guess that market price for the site is $8-15k, but it would probably take 3
 ### Zestful
 
 2021 was a nice comeback year for Zestful. The only work I did on it was to publish a Python SDK for it. I don't think that had anything to do with the growth.
+
+{{<revenue-graph project="zestful">}}
 
 ### LogPaste
 
@@ -149,7 +160,7 @@ A few months ago, I caught up with my friend Matt on a video call. I met Matt at
 
 He had followed TinyPilot's progress on my blog, but this was the first time we were talking about it directly. I was saying how lucky I was that I ended up with such a good team, both in terms of the developers I've hired and the local staff that run the TinyPilot office. Well, give yourself some credit. I know you, and you probably shaped that team by putting processes in place that allowed people to work well.
 
-I think Matt's right about everything, so I'm going to do what he says and take that credit now.
+I think Matt's right about everything, so I have no choice but to accept his praise.
 
 I of course still have a lot to learn about being a manager, but I think many of the early things I've done have contributed to building a good team. When we agree on a new process or policy, it's not just a verbal agreement or buried in an email somewhere. We update our documentation so that everyone on the team can see it and refer back to it easily.
 
@@ -234,3 +245,141 @@ I still prefer it to working for any employer I've had, but it's not a happy-go-
 ---
 
 *Cover image by [Loraine Yow](https://www.lolo-ology.com/).*
+
+
+<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+<script>
+const dollarFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
+function drawChart(chartId, labels, data) {
+  const ctx = document.getElementById(chartId);
+  if (!ctx) {
+    return;
+  }
+  ctx.height = 300;
+  const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Total Revenue',
+          data: data,
+          backgroundColor: '#047a15',
+          borderColor: '#4ba658',
+          fill: false,
+          lineTension: 0.0,
+          }]
+        },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems) {
+              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
+            },
+          },
+        },
+        scales: {
+              yAxes: [{
+                  ticks: {
+                    suggestedMin: 0,
+                      callback: function(value) {
+                          return dollarFormatter.format(value);
+                      }
+                  }
+              }]
+          }
+      },
+  });
+}
+// Parse a date string like "2020-05" into a JavaScript Date object.
+function parseDate(d) {
+  const dateParts = d.split('-');
+  const year = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]) - 1;
+  return new Date(year, month);
+}
+function drawCharts(limit) {
+  fetch('/data/project-revenue.json')
+    .then(res => res.json())
+    .then(revenueByProject => {
+      const limitDate = parseDate(limit);
+      for ([project, data] of Object.entries(revenueByProject)) {
+        let dates = [];
+        for (d of Object.keys(data)) {
+          const date = parseDate(d);
+          if (date >= limitDate) {
+            continue;
+          }
+          dates.push(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear());
+        }
+        let values = Object.values(data).slice(0, dates.length);
+        drawChart(project + '-revenue', dates, values);
+      }
+    });
+}
+/*
+function drawOverallChart() {
+  const ctx = document.getElementById("overall-finances");
+  if (!ctx) {
+    return;
+  }
+  ctx.height = 500;
+  const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          datasets: [
+            {
+              label: 'Net Profit',
+              data: [-20871, -2402, -3964],
+              type: 'line',
+              backgroundColor: 'black',
+              borderColor: 'black',
+              pointBorderColor: 'black',
+              pointBackgroundColor: 'black',
+              fill: false,
+            },
+            {
+              label: 'Expenses',
+              data: [-23133, -9657, -67441],
+              backgroundColor: 'red'
+            },
+            {
+              label: 'Revenue',
+              data: [2262, 7254, 63477],
+              backgroundColor: '#047a15'
+            }
+          ],
+          labels: ['2018', '2019', '2020']
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems) {
+              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
+            },
+          },
+        },
+        scales: {
+              yAxes: [{
+                  ticks: {
+                    suggestedMin: 0,
+                      callback: function(value) {
+                          return dollarFormatter.format(value);
+                      }
+                  }
+              }]
+          }
+      },
+  });
+}*/
+//drawOverallChart();
+drawCharts("2022-01");
+</script>
