@@ -32,13 +32,19 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 ## TinyPilot's second year
 
-In 2021, I focused mainly on TinyPilot, a company I created in mid-2020 (TODO: link). TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control your computers from your browser without installing any software, even when the computer is in BIOS or has no network connectivity.
+In 2021, I focused mainly on TinyPilot, a company [I created in mid-2020](/tinypilot). TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control another computer from your browser without installing any software, even when the computer is in BIOS or has no network connectivity.
 
-At the start of 2021, I was TinyPilot's sole developer. I was also the sole customer support person, salesperson, and marketer. My girlfriend managed fulfillment and inventory. We ran TinyPilot out of our house, where it was slowly occupying more and more territory.
+At the start of 2021, I was TinyPilot's sole developer, customer support person, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our house, and our shelves and cabinets were overflowing with TinyPilot parts and shipping material.
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and even a [European distributor](https://kvm-ip.de).
 
-The software has changed a lot in the last year, too. For fun, I installed the TinyPilot image from last January, and compared it to the latest release. I was surprised at how much has changed in just a year in just the UI:
+{{<revenue-graph project="tinypilot">}}
+
+In December, I took a one-week vacation, my longest of the year. To my relief, the fulfillment staff continued shipping orders without issue. The dev team completed a software release without me. The thing I'm most proud of is that TinyPilot works without me being there, at least for short periods.
+
+### Software progress
+
+The software has changed a lot in the last year, too. For fun, I installed the TinyPilot image from January 2021 and compared it to our January 2022 release. I was surprised at how much has changed in just a year in just the UI:
 
 TODO: GIF comparison
 
@@ -47,16 +53,16 @@ We've added several major features in the last year including:
 * Mounting virtual USB drives and CD-ROMs
 * Wake on LAN
 * Password-based authentication
-* System updates from the browser
+* Software updates from the web UI
 * Video bandwidth tuning
+
+### Our first review
 
 One of my favorite moments of the year was when we got our first-ever product review from one of my favorite YouTube creators, Craft Computing. We sat on the couch and watched it on our TV, so the experience was fairly surreal.
 
 That video led to the biggest sales jump we had ever seen at that point. And it was still just my girlfriend and I, so we were running around for two weeks trying to ship orders out fast enough and replenish our inventory even though sales were twice as large as any sales spike we planned for. It [exhausted us](/retrospectives/2021/02/#tinypilots-first-postmortem).
 
 We were both lying awake at night hours after we went to bed because we were so wired from running around. It was stressful, but it was also exciting to be working on so much growth.
-
-{{<revenue-graph project="tinypilot">}}
 
 ## Other projects
 
@@ -84,7 +90,7 @@ I dif faithfully maintain my habit of writing [monthly retrospectives](/retrospe
 
 {{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging.">}}
 
-At the beginning of the year, I released my first-ever paid course. It was a course teaching everything I've learned about writing blog posts that gain traction on tech-savvy sites like Hacker News and reddit.
+At the beginning of the year, I released my first-ever paid course. It was a course teaching everything I've learned about writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
 I'm proud of the content of the course. I've heard positive feedback about the course, and a few people credited it with helping them write successful blog posts.
 
@@ -100,8 +106,6 @@ I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that te
 
 I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021. In the second half of the year, another site appeared and continued adding content, so they quickly overtook Is It Keto in search results.
 
-I did briefly explore the idea of moving to MediaVine, which is one of the higher-end ad networks. I've heard they pay 3-8x as much as AdSense. MediaVine accepted Is It Keto into their program, but then I discovered [how bad their contract terms are](/retrospectives/2021/09/#is-it-ketohttpsisitketoorg), so I bailed on them and stuck with AdSense.
-
 {{<revenue-graph project="isitketo">}}
 
 {{<notice type="info">}}
@@ -114,28 +118,13 @@ I'd guess that market price for the site is $8-15k, but it would probably take 3
 
 ### Zestful
 
-2021 was a nice comeback year for Zestful. The only work I did on it was to publish a Python SDK for it. I don't think that had anything to do with the growth.
+Zestful is a paid service that parses recipe ingredients into structured data. For example, if you give it the string `"2 1/2 tablespoons finely chopped parsley"`, it tells you that the quantity is `2.5`, the product is `parsley`, etc.
+
+I created Zestful in 2019 and worked on it for a few months before writing it off as a failure. It attracted clients every few months for one-time bulk parses, but it never generated revenue consistently.
+
+2021 was a nice comeback year for Zestful. Starting midyear, several new clients began using the service, and several existing clients increased their usage to several hundred dollars per month. Fortunately, it's been purely passive income. None of the clients have reported issues or requested technical support.
 
 {{<revenue-graph project="zestful">}}
-
-### LogPaste
-
-{{<img src="logpaste-screenshot.png" maxWidth="450px" hasBorder="true" caption="[LogPaste](https://logpaste.com) is my minimalist, self-hostable log uploading tool.">}}
-
-I created LogPaste because I wanted an easy way for TinyPilot users to share their diagnostic logs with me. Every other solution I found was too heavyweight, so I created my own [using Go, SQLite, and Litestream](/litestream/).
-
-LogPaste has worked out great. It works as I expected it to. It eliminates the hurdles users would normally face in sharing log files with me. Nobody has ever failed to figure it out or run into errors.
-
-```bash
-$ echo "hello, world!" | curl -F '_=<-' https://logpaste.com
-http://logpaste.com/BQGczWYC
-```
-
-### What Got Done
-
-I created What Got Done in 2019 as a lightweight way for team members to share weekly updates with each other. It never took off as a business, but I've continued working on it on weekends as a way to learn new technologies or do just-for-fun development.
-
-My major What Got Done achievement in 2021 was migrating the site from Google Cloud Platform to fly.io. To replace Google Firestore, I used SQLite and Litestream, which achieved an XXx speedup on most requests. That change was a lot of fun, and I love the switch from Firestore to SQLite. I can replicate my production database locally in seconds [with a single command](https://youtu.be/_XuJaHJGgrc?t=2826). That would have been a week-long project with Firestore. And it's so easy for me to make schema changes because I can do that in simple scripts as well.
 
 ## Lessons learned
 
@@ -146,7 +135,6 @@ For most of the year, TinyPilot earned between $20-30k per month in revenue. I s
 The one marketing move I did use was sending review units to YouTubers with related audiences. For most of the year, the months where I broke $30k in revenue, it was a direct result of a popular YouTuber reviewing TinyPilot on their channel.
 
 From October to December, my sales doubled and I didn't have any YouTube reviews. In fact, I didn't do any marketing at all.
-
 
 With the chip shortage, I was afraid of running out of Raspberry Pis. I didn't want to fail to sell my flagship product because I used up all my Pis on my low-end product. So I got rid
 
@@ -172,26 +160,26 @@ I think that's also good management...
 
 ### Leadership means helping teammates grow
 
-In August, I listened to [an interview with WPEngine founder Jason Cohen](https://youtu.be/Sjs5gEUlZyU?t=3605).  One of the takeaways from me was what he said about how a good leader focuses on making their team better rather than just improving their own skills:
+Jason Cohen, founder of WPEngine, said [something interesting recently about leadership](https://youtu.be/Sjs5gEUlZyU?t=3605), and it stuck with me:
 
 >With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context. They're smarter in whatever that means. In whatever dimension that may mean. That's also the goal.
 >
 >If you're the only one who can do that in the room, you're a terrible leader. Because that means your team isn't getting better. That's the only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.
 
-Handling rush orders.
+In the past year, the best management decisions I've made are the ones that have allowed the people working with me to take on more autonomy. In July, TinyPilot had two developers in addition to me. I felt like I'd delegated that work as much as was possible, but I was still personally reviewing every code change. In July, we tried an experiment where the developers would [review each other's code changes](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests). The comments they gave to each other were pretty much the same as the comments I would have given. Taking myself out of the process also made me realize just . I was realizing it had freed up an extra hour or two per day.
 
-Letting developers [peer review](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests)
-
-Letting fulfillment staff take over customer support.
-
-### Plan to fail for four years
-
+Something similar happened with customer service. One of TinyPilot's employees for fulfilment was interested in more hours, so I asked if he'd like to do customer service. I set up a HelpScout account and a support inbox that both of us can manage. Even a simple issue like a customer tells us that they accidentally put in the wrong shipping address, it would previously be an annnoying problem. There'd be a back and forth with the fulfillment staff to see if they can grab it before the courier picks it up, they'd have to get back to me, then I'd have to tell the customer we handled it. With a shared inbox, the fulfillment staff receive the email directly, they fix the issue, and then they just tell the customer it's solved. I'm completely out of the critical path, and the employees have more ownership over their work.
 
 ## Favorite discoveries
 
-* beancount
-* Litestream
-* TalkYard
+I discovered really cool open-source projects last year, and here are a few of my favorites:
+
+* [beancount](https://github.com/beancount/beancount): Free, open-source bookkeeping software that replaces QuickBooks or Xero.
+  * It has a steep learning curve, but it's turned my bookkeeping from a chore into pleasure. It's a steep learning curve, but Siddhant Goel's [*Tracking Personal Finances using Python*](https://personalfinancespython.com/) is a good starting point.
+* [Litestream](https://litestream.io): Simple, inexpensive replication for SQLite databases.
+  * The more I use it, the more I love it.
+* [TalkYard](https://www.talkyard.io/): Open-source discussion forum with an affordable managed hosting option.
+  * I use TalkYard for TinyPilot's help forum and for comments on this blog. I've had a great experience, and the maintainer is extremely responsive.
 
 ## Grading last year's goals
 
@@ -237,6 +225,8 @@ I feel like I get stuck in what XX calls the urgent but unimportant quadrant. Th
 ## Do I still love it?
 
 This has definitely been my most stressful year as a bootstrapped founder.
+
+I like feeling like I'm running a real business. There's real money coming in, so I get to make intelligent decisions about how to allocate resources. In my previous projects, my businesses would make like $50/month, and at that scale, there's not really any interesting business decisions to make. Like, do I hire a competent developer to write four lines of code with that $50?
 
 I love writing and programming, and the past year didn't leave me much time to do either. The nature of the business requires . My team is growing
 
