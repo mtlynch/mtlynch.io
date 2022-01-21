@@ -204,8 +204,6 @@ As I said above, I wish I had more time to write. Writing is one of the things I
 * **Result**:
 * **Grade**: B-
 
-This time last year, I was still running TinyPilot out of my house, and my girlfriend and I were the only employees.
-
 I've made a lot of progress in getting myself out of the critical path. I took a one-week vacation over the holidays, and that mostly worked fine, although I did have to do about 30 minutes of emergency work to prevent thousands of dollars of equipment from being sent back to China.
 
 ## Goals for year four
