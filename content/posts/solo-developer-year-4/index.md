@@ -1,5 +1,5 @@
 ---
-title: My Fourth Year as a Solo Developer
+title: My Fourth Year as a Bootstrapped Founder
 tags:
 - annual review
 - blogging
@@ -10,7 +10,11 @@ description: TODO
 date: '2022-02-01'
 hero_image: cover.jpg
 ---
-Four years ago to the day, I [quit my job as a developer at Google](/why-i-quit-google/) to experiment with bootstrapping a software business. I attempted several businesses for the first few years, and one finally caught on in 2020.
+Four years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to experiment with bootstrapping a software business.
+
+For the first few years, I experimented with several different businesses, but none of them worked out. Finally, in 2020, I created a business called TinyPilot, which caught on and continued growing throughout 2021, finishing the year with $XXk in annual revenue.
+
+In this post, I'll share what I've learned from running TinyPilot about what I've learned about being a bootstrapped founder.
 
 Previous updates:
 
@@ -20,7 +24,13 @@ Previous updates:
 
 ## The year of scaling
 
-TODO: Graph of money
+<canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
+
+| Metric         | 2020        | 2021       | Change                                        |
+|----------------|-------------|------------|-----------------------------------------------|
+| Revenue        | $7,254      | $XX     | <font color="green">+$XX (+220%)</font> |
+| Expenses       | $9,657      | $XX        | <font color="green">-$XX (-58%)</font> |
+| **Net Profit** | **<font color="red">-$2,402</font>** | **<font color="red">-$XX</font>** |  **<font color="green">+$XX (+88%)</font>** |
 
 {{<notice type="info">}}
 
@@ -32,9 +42,9 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 ## TinyPilot's second year
 
-In 2021, I focused mainly on TinyPilot, a company [I created in mid-2020](/tinypilot). TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control another computer from your browser without installing any software, even when the computer is in BIOS or has no network connectivity.
+TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control another computer from your browser without installing any software, even when the computer has no network connectivity or hasn't booted into an OS.
 
-At the start of 2021, I was TinyPilot's sole developer, customer support person, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our home, which was slowly transforming into a TinyPilot warehouse and fulfillment center.
+At the start of 2021, I was TinyPilot's sole developer, customer support person, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our home, which was slowly transforming into a TinyPilot warehouse.
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and a [distributor in Europe](https://kvm-ip.de).
 
@@ -82,7 +92,7 @@ I kept my habit of writing [monthly retrospectives](/retrospectives/). I can bud
 
 ### Hit the Front Page of Hacker News
 
-{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging.">}}
+{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging for technically sophisticated readers.">}}
 
 At the beginning of the year, I released my first-ever paid course. It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
@@ -98,13 +108,15 @@ It earned $XX in its first year, which was a bit disappointing. I was hoping for
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet. It earns money from Amazon Affiliate links and Google AdSense.
 
-I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021, and it was providing a nice side income of $500-1,000 per month.
+I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k per month.
 
 Around June, I noticed another site overtake Is It Keto for most search queries. They have the same idea as my site, but they've scaled the content better, and they're continuing to improve the site, so they're rightfully absorbing all of my visitors and revenue.
 
 I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
 
 ### Zestful
+
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" caption="[Zestful](https://zestfuldata.com) is an API that parses recipe ingredients into structured data.">}}
 
 Zestful is a paid service that parses recipe ingredients into structured data. For example, if you give it the string `"2 1/2 tablespoons finely chopped parsley"`, it tells you that the quantity is `2.5`, the product is `parsley`, the preparation is `finely chopped`, etc.
 
@@ -128,17 +140,17 @@ So, what doubled our sales? I got rid of our product page.
 
 Until that point, TinyPilot had always offered different versions so that customers could a product to match their budget. Customers who wanted the custom-designed plug 'n play model could buy our flagship TinyPilot Voyager. Customers who wanted a more DIY experience could buy our Hobbyist Kit. People who already had all the hardware could buy a software-only package.
 
-One of the products that impressed me this past year was the reMarkable 2 tablet. The checkout process on their website is almost hypnotizing. They do a great job of upselling you with add-ons without making you feel manipulated. And a big part of that is that there's a single flow. You never decide *which* reMarkable to buy. They sell a single product, and the checkout flow just offers you different accessories.
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" maxWidth="800px" caption="TinyPilot used to offer a variety of products to let the user choose which was right for them" hasBorder="true">}}
 
-I decided to try moving TinyPilot closer to reMarkable's design. In October, I got rid of the product catalog and instead focused the website exclusively on my main product, the TinyPilot Voyager.
+In October, I got rid of the product catalog and instead focused the website exclusively on my main product, the TinyPilot Voyager.
 
-Sales jumped immediately. They're consistently double what they were prior to the change. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
+Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 
 I considered taking it a step further and selling zero products. That would logically increase my revenue to infinity, but I don't want to be greedy.
 
-{{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" maxWidth="800px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
+{{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" maxWidth="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
 
-### Good management attracts a good team
+### Thoughtful management attracts a strong team
 
 A few months ago, I had a video call with my friend Matt. Matt and I met as developers on the BitLocker team at Microsoft when we were both fresh out of college. He's one of the smartest developers I know, and he has incredible insight into software and organizations at both a high level and a low level.
 
@@ -157,13 +169,17 @@ I'm certainly not an expert manager, but I think Matt is right that some of my. 
 * I document processes and encourage others to invest in documentation so that everyone has clear, shared expectations.
 * We operate under the assumption that everyone who works on TinyPilot is smart and well-intentioned, so when things go wrong, it indicates a bad process rather than a bad person.
 
-### Leadership means helping teammates grow
+### Good leadership means helping teammates grow
 
-A few months ago, I listened to [an interview with Jason Cohen](https://youtu.be/Sjs5gEUlZyU?t=3605), and what he said something about leadership stuck with me:
+{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" maxWidth="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
 
->With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context. They're smarter in whatever that means... That's also the goal.
+WPEngine founder Jason Cohen [did an interview interview with Jason Cohen](https://youtu.be/Sjs5gEUlZyU?t=3605) recently, and his thoughts about leadership stuck with me:
+
+>With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context...
 >
->If you're the only one who can do that in the room, you're a terrible leader. Because that means your team isn't getting better. That's the only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.
+>If you're the only one who can do that in the room, you're a terrible leader. Because that means your team isn't getting better.
+>
+>**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
 In the past year, the best management decisions I've made are the ones that get me out of the way so the team can work more independently. And I never realize how much I was constraining things until after I see how well the team does without me.
 
@@ -171,7 +187,7 @@ One good example of the team taking on more responsibility is code reviews. In J
 
 We tried having every developer act as reviewer, and [everyone liked it](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests). I've seen the developers grow from reading code and giving feedback with more rigor than they've been asked to before. Latency is a little higher, but the team reports that it hasn't made the dev experience meaningfully worse. I never felt like I was spending
 
- In July, we tried an experiment where the developers would [review each other's code changes. The comments they gave to each other were pretty much the same as the comments I would have given. Taking myself out of the process also made me realize just . I was realizing it had freed up an extra hour or two per day.
+ In July, we tried an experiment where the developers would review each other's code changes. The comments they gave to each other were pretty much the same as the comments I would have given. Taking myself out of the process also made me realize just . I was realizing it had freed up an extra hour or two per day.
 
 Something similar happened with customer service. John, one was interested in more hours, so I asked if he'd like to do customer service. I set up a shared inbox and directed support emails to it. And wow it's so much easier.
 
@@ -185,7 +201,7 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 
 ### Grow TinyPilot to $600k in annual revenue
 
-* **Result**:
+* **Result**: Grew TinyPilot 's revenue $XXk to $XXk
 * **Grade**: B
 
 I was a little over-optimistic because at the time I set my goals, revenue had grown 20-200% every month for the previous five months. But then in February, sales slumped and I never recaptured the rapid growth of the first few months.
@@ -201,7 +217,7 @@ As I said above, I wish I had more time to write. Writing is one of the things I
 
 ### Automate TinyPilot management
 
-* **Result**:
+* **Result**: Systematized enough of TinyPilot to take a one-week vacation
 * **Grade**: B-
 
 I've made a lot of progress in getting myself out of the critical path. I took a one-week vacation over the holidays, and that mostly worked fine, although I did have to do about 30 minutes of emergency work to prevent thousands of dollars of equipment from being sent back to China.
@@ -211,8 +227,6 @@ I've made a lot of progress in getting myself out of the critical path. I took a
 ### Grow TinyPilot to $1M in annual revenue
 
 There hasn't been any time for marketing. I think I should be able to explore more marketing channels. I've reached out to YouTube reviewers offering them review units, and that's been successful, but there are tons of paid marketing channels I haven't tested at all. I think there's a lot of room to grow.
-
- double revenue
 
 ### Manage TinyPilot on 30 hours per week
 
@@ -224,18 +238,21 @@ I feel like I get stuck in what XX calls the urgent but unimportant quadrant. Th
 
 ## Do I still love it?
 
-This has definitely been my most stressful year as a founder.
+When I look back every year, I think about whether I'm happy with my life as a bootstrapped founder.
+
+This year was definitely my most stressful.
 
 I like feeling like I'm running a real business. There's real money coming in, so I get to make intelligent decisions about how to allocate resources. In my previous projects, my businesses would make like $50/month, and at that scale, there's not really any interesting business decisions to make. Like, do I hire a competent developer to write four lines of code with that $50?
 
+And it's not so much being an indie business as much as the type of business I've chosen. For TinyPilot, I'm a software business, a hardware business, and an e-commerce business all at once. But that has a benefit too of creating a good moat. Other developers might see
+
 I love writing and programming, and the past year didn't leave me much time to do either. The nature of the business requires . My team is growing
 
-I still prefer it to working for any employer I've had, but it's not a happy-go-lucky. I'd like to find ways back to the parts that I loved.
+But am I still happy that I quit my job at Google? Definitely.
 
 ---
 
 *Cover image by [Loraine Yow](https://www.lolo-ology.com/).*
-
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script>
@@ -245,6 +262,64 @@ const dollarFormatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
+function drawTotalFinancesChart() {
+  var ctx = document.getElementById('total-finances').getContext('2d');
+  ctx.height = 400;
+  let revenues = new Map();
+  revenues.set(2018, 2262);
+  revenues.set(2019, 7254);
+  revenues.set(2020, 63477);
+  revenues.set(2021, 453916);
+  let expenses = new Map();
+  expenses.set(2018, 23133);
+  expenses.set(2019, 9657);
+  expenses.set(2020, 67441);
+  expenses.set(2021, 443025);
+  var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: Array.from(revenues.keys()).map(x => String(x)),
+        datasets: [{
+          label: 'Revenue',
+          data: Array.from(revenues.values()),
+          backgroundColor: 'rgb(57, 57, 255)',
+          borderColor: 'rgb(131, 131, 235)',
+          fill: false,
+        }, {
+          label: 'Expenses',
+          data: Array.from(expenses.values()).map(x => -x),
+          backgroundColor: 'rgb(255, 0, 0)',
+          borderColor: 'rgb(255, 130, 130)',
+          fill: false,
+        }, {
+          label: 'Net Profit',
+          data: Array.from(revenues.keys()).map(y => revenues.get(y) - expenses.get(y)),
+          backgroundColor: 'rgb(0, 255, 0)',
+          borderColor: 'rgb(172, 255, 172)',
+          fill: false,
+          }]
+        },
+      options: {
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems) {
+              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
+            },
+          },
+        },
+        scales: {
+              yAxes: [{
+                  ticks: {
+                    suggestedMin: 0,
+                      callback: function(value) {
+                          return dollarFormatter.format(value);
+                      }
+                  }
+              }]
+          }
+      },
+  });
+}
 function drawChart(chartId, labels, data) {
   const ctx = document.getElementById(chartId);
   if (!ctx) {
@@ -313,63 +388,6 @@ function drawCharts(limit) {
       }
     });
 }
-/*
-function drawOverallChart() {
-  const ctx = document.getElementById("overall-finances");
-  if (!ctx) {
-    return;
-  }
-  ctx.height = 500;
-  const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-          datasets: [
-            {
-              label: 'Net Profit',
-              data: [-20871, -2402, -3964],
-              type: 'line',
-              backgroundColor: 'black',
-              borderColor: 'black',
-              pointBorderColor: 'black',
-              pointBackgroundColor: 'black',
-              fill: false,
-            },
-            {
-              label: 'Expenses',
-              data: [-23133, -9657, -67441],
-              backgroundColor: 'red'
-            },
-            {
-              label: 'Revenue',
-              data: [2262, 7254, 63477],
-              backgroundColor: '#047a15'
-            }
-          ],
-          labels: ['2018', '2019', '2020']
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        tooltips: {
-          callbacks: {
-            label: function(tooltipItems) {
-              return dollarFormatter.format(parseFloat(tooltipItems.yLabel));
-            },
-          },
-        },
-        scales: {
-              yAxes: [{
-                  ticks: {
-                    suggestedMin: 0,
-                      callback: function(value) {
-                          return dollarFormatter.format(value);
-                      }
-                  }
-              }]
-          }
-      },
-  });
-}*/
-//drawOverallChart();
+drawTotalFinancesChart();
 drawCharts("2022-01");
 </script>
