@@ -28,9 +28,9 @@ Previous updates:
 
 | Metric         | 2020        | 2021       | Change                                        |
 |----------------|-------------|------------|-----------------------------------------------|
-| Revenue        | $7,254      | $XX     | <font color="green">+$XX (+220%)</font> |
-| Expenses       | $9,657      | $XX        | <font color="green">-$XX (-58%)</font> |
-| **Net Profit** | **<font color="red">-$2,402</font>** | **<font color="red">-$XX</font>** |  **<font color="green">+$XX (+88%)</font>** |
+| Revenue        | $63,477      | $XX     | <font color="green">+$XX (+220%)</font> |
+| Expenses       | $67,441      | $XX        | <font color="green">-$XX (-58%)</font> |
+| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="red">-$XX</font>** |  **<font color="green">+$XX (+88%)</font>** |
 
 {{<notice type="info">}}
 
@@ -82,6 +82,10 @@ Unfortunately, TinyPilot has its own pace that I don't fully control. For the fi
 
 I'm still excited to write this book, and I hope I have more time for it this year.
 
+TODO: Stats
+
+|
+
 ### mtlynch.io (this blog)
 
 As with my lack of book-writing time, I had very little blog-writing time. I published three new blog posts, my fewest-ever in five years of blogging.
@@ -89,6 +93,17 @@ As with my lack of book-writing time, I had very little blog-writing time. I pub
 Ironically, the year that I have the least amount of time to write is the year that I had the most to write about. There are so many things I have to learn for TinyPilot that I wish I could capture while the experience is still fresh in my mind, but there just isn't enough time.
 
 I kept my habit of writing [monthly retrospectives](/retrospectives/). I can budget time for those because an unambiguous net positive for my business, even in the short term. Almost every retrospective I write, I discover some flaw in my strategy or a weakness in my plans that I wouldn't have noticed had I not sat down to organize my thoughts and write everything out.
+
+
+| Metric                                      | 2020    | Change |
+|---------------------------------------------|---------|--------|
+| Pageviews                                   | 719,899 | <font color="green">+446,082 (+163%)</font>
+| Affiliate revenue\*                         | $1,599     | <font color="green">+$1,225 (+328%)</font>
+| Development                                 | $0      | <font color="green">-$460 (-100%)</font>
+| [Illustrations](/how-to-hire-a-cartoonist/) | -$964    | <font color="red">+$195 (+25%)</font>
+| Hosting / Domain                            | -$534      | <font color="red">+$384 (+256%)</font>
+| [Editing](/editor/) + [Grammarly](https://grammarly.com)  | -$200    | -$222 | <font color="red">+$22 (+11%)</font>
+| **Net profit**                              | **<font color="red">-$121</font>** | **<font color="green">+$3,714</font>** |
 
 ### Hit the Front Page of Hacker News
 
@@ -102,6 +117,14 @@ It earned $XX in its first year, which was a bit disappointing. I was hoping for
 
 {{<revenue-graph project="htfp">}}
 
+| Metric              | 2020     |
+|---------------------|----------|
+| Purchases           | 29       |
+| Revenue             | $1,431   |
+| Cover design        | -$293    |
+| Recording equipment | -$584    |
+| **Net profit**      | **$554** |
+
 ### Is It Keto
 
 {{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
@@ -113,6 +136,17 @@ I put the site on the backburner when I started TinyPilot, but it continued to g
 Around June, I noticed another site overtake Is It Keto for most search queries. They have the same idea as my site, but they've scaled the content better, and they're continuing to improve the site, so they're rightfully absorbing all of my visitors and revenue.
 
 I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
+
+
+| Metric                                      | 2020      | Change |
+|---------------------------------------------|-----------|---------|
+| Pageviews                                   | 1,314,583   | <font color="green">+792,670 (+152%)</font>
+| Ad revenue                                  | $2,934         | <font color="green">+$1,994 (+212%)</font>
+| Affiliate revenue                           | $2,147      | <font color="green">+$832 (+63%)</font>
+| Meal plan sales\*                           | $18          | <font color="red">-$6 (-25%)</font>
+| Freelance designers and [content writers](/hirt-writers/) | -$4,322 | -$105     | <font color="green">-$4,217 (-98%)</font>
+| Hosting / domain                            | -$241          | <font color="red">+$126 (+110%)</font>
+| **Net profit**                              | **<font color="green">$4,753</font>** | **<font color="green">+$6,911</font>**
 
 ### Zestful
 
@@ -128,6 +162,13 @@ Because of TinyPilot, I don't have time to work on the site, but it fortunately 
 
 {{<revenue-graph project="zestful">}}
 
+| Metric              | 2020     | 2021 | Change
+|---------------------|----------|------|--------
+| Pageviews           | XX       | XX   | XX
+| Revenue             | $XX      | $XX  | $XX
+| Hosting / domain    | $XX      | $XX   | $XX
+| **Net profit**      | **$XX**  | $XX   | $XX
+
 ## Lessons learned
 
 ### Sell just one thing
@@ -140,9 +181,11 @@ So, what doubled our sales? I got rid of our product page.
 
 Until that point, TinyPilot had always offered different versions so that customers could a product to match their budget. Customers who wanted the custom-designed plug 'n play model could buy our flagship TinyPilot Voyager. Customers who wanted a more DIY experience could buy our Hobbyist Kit. People who already had all the hardware could buy a software-only package.
 
-{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" maxWidth="800px" caption="TinyPilot used to offer a variety of products to let the user choose which was right for them" hasBorder="true">}}
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" maxWidth="600px" caption="TinyPilot used to offer a variety of products." hasBorder="true">}}
 
 In October, I got rid of the product catalog and instead focused the website exclusively on my main product, the TinyPilot Voyager.
+
+TODO: Screenshot of product page
 
 Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 
@@ -152,9 +195,9 @@ I considered taking it a step further and selling zero products. That would logi
 
 ### Thoughtful management attracts a strong team
 
-A few months ago, I had a video call with my friend Matt. Matt and I met as developers on the BitLocker team at Microsoft when we were both fresh out of college. He's one of the smartest developers I know, and he has incredible insight into software and organizations at both a high level and a low level.
+A few months ago, I had a video call with my friend Matt. Matt and I met fresh out of college as developers on the BitLocker team at Microsoft.  He's one of the smartest developers I know, and he has incredible insight into software and organizations at both a high level and a low level.
 
-He had followed TinyPilot's progress on my blog, but this was the first time Matt and I were talking about it. I was telling him how lucky I was that I ended up with such a good team. The developers I hired and the local staff that run the TinyPilot office have all worked out great.
+He had followed TinyPilot's progress on my blog, but this was the first time Matt and I were talking about it. I mentioned how lucky I was that I ended up with such a good team. The developers I hired and the local staff that run the TinyPilot office have all worked out great.
 
 >Well, give yourself some credit. I know you, and you probably shaped that team by putting processes in place that allowed people to work well.
 
@@ -173,7 +216,7 @@ I'm certainly not an expert manager, but I think Matt is right that some of my. 
 
 {{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" maxWidth="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
 
-WPEngine founder Jason Cohen [did an interview interview with Jason Cohen](https://youtu.be/Sjs5gEUlZyU?t=3605) recently, and his thoughts about leadership stuck with me:
+WPEngine founder Jason Cohen [did an interview interview](https://youtu.be/Sjs5gEUlZyU?t=3605) recently, and his thoughts about leadership stuck with me:
 
 >With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context...
 >
@@ -181,19 +224,15 @@ WPEngine founder Jason Cohen [did an interview interview with Jason Cohen](https
 >
 >**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
-In the past year, the best management decisions I've made are the ones that get me out of the way so the team can work more independently. And I never realize how much I was constraining things until after I see how well the team does without me.
+When I started TinyPilot, I felt like a manager's job was to ensure that employees can focus on the job they were hired to do. If you're hired to write . It's true, but it doesn't leave room for growth. If I'm still doing work as a manager to package work to be ready for them, can I give them more autonomy by giving that up?
 
-One good example of the team taking on more responsibility is code reviews. In July, TinyPilot had two developers but I was still personally reviewing every code change. I worried that if the developers reviewed each other's code, it would slow things down since they worked part-time and on different schedules.
+This change in strategy drastically improved TinyPilot's approach to customer service. For most of the year, I felt like customer service *had* to be my job. My dev team didn't have the bandwidth, and my fulfillment staff didn't have the training to troubleshoot technical issues.
 
-We tried having every developer act as reviewer, and [everyone liked it](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests). I've seen the developers grow from reading code and giving feedback with more rigor than they've been asked to before. Latency is a little higher, but the team reports that it hasn't made the dev experience meaningfully worse. I never felt like I was spending
+But a few months ago, one member of TinyPilot's fulfillment staff said he was interested in more hours, so we decided to try sharing responsibility for customer support. Eric could handle the non-technical issues like tracking down stuck packages or handling special requests from customers. If he ran into an issue, he could search our documentation and help forums and answer based on that, and otherwise, and if that didn't work, he could escalate to me.
 
- In July, we tried an experiment where the developers would review each other's code changes. The comments they gave to each other were pretty much the same as the comments I would have given. Taking myself out of the process also made me realize just . I was realizing it had freed up an extra hour or two per day.
+Now, Eric handles about 80% of customer service emails on his own.
 
-Something similar happened with customer service. John, one was interested in more hours, so I asked if he'd like to do customer service. I set up a shared inbox and directed support emails to it. And wow it's so much easier.
-
-When I was the only one answering customer support emails, a simple issue like a customer asking to update the address on their order would be a complex ordeal requiring 5-6 emails to resolve. I'd have to check their order and see if it was packed, email my staff to see if anyone could fix the package before it gets picked up, wait for a response, then follow up with the customer.
-
-Now, simple issues stay simple. The customer emails us. John handles it and tells the customer no problem, and it's done. I'm completely out of the critical path, and John has more ownership over his role.
+Remember my big insight that TinyPilot should offer only a single product? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Letting go of that task gave me space to re-evaluate the website and experiment with changes.
 
 ## Grading last year's goals
 
@@ -201,26 +240,26 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 
 ### Grow TinyPilot to $600k in annual revenue
 
-* **Result**: Grew TinyPilot 's revenue $XXk to $XXk
+* **Result**: Grew TinyPilot's revenue $XXk to $XXk
 * **Grade**: B
 
-I was a little over-optimistic because at the time I set my goals, revenue had grown 20-200% every month for the previous five months. But then in February, sales slumped and I never recaptured the rapid growth of the first few months.
+$600k turned out to be a bit overly optimistic. At the time I was setting my 2021 goals, revenue had grown 20-200% for the previous five months. The month after, sales slumped and I never recaptured the rapid growth of the first few months.
 
-Still, $500k is nothing to sneeze at. I think I could have reached my goal with different decisions, but nothing in particular stands out as a blunder. Even with the obvious win of reducing to one product, I'm not sure it would have been effective had we done it earlier because having a low-end option might have helped the product reach a wider audience.
+Still, $XXk is nothing to sneeze at. It's possible that different decsions would have brought me to $600k, but nothing stands out as a blunder based on what I knew at the time.
 
 ### Publish six blog posts and one book
 
 * **Result**: Published three blog posts and zero books
 * **Grade**: D
 
-As I said above, I wish I had more time to write. Writing is one of the things I most enjoy, so I'm disappointed I had so little time for it, but in retrospect I wouldn't have changed how I allocated my time.
+Writing is one of the things I most enjoy, so I'm disappointed I had so little time for it. Looking back, I still wouldn't have changed how I allocated my time.
 
 ### Automate TinyPilot management
 
 * **Result**: Systematized enough of TinyPilot to take a one-week vacation
 * **Grade**: B-
 
-I've made a lot of progress in getting myself out of the critical path. I took a one-week vacation over the holidays, and that mostly worked fine, although I did have to do about 30 minutes of emergency work to prevent thousands of dollars of equipment from being sent back to China.
+I've made a lot of progress in getting myself out of the critical path. I took a one-week vacation over the holidays. It went smoothly, though I did have to do about 30 minutes of emergency work to prevent thousands of dollars of equipment from being sent back to China.
 
 ## Goals for year four
 
@@ -228,21 +267,19 @@ I've made a lot of progress in getting myself out of the critical path. I took a
 
 There hasn't been any time for marketing. I think I should be able to explore more marketing channels. I've reached out to YouTube reviewers offering them review units, and that's been successful, but there are tons of paid marketing channels I haven't tested at all. I think there's a lot of room to grow.
 
-### Manage TinyPilot on 30 hours per week
+### Manage TinyPilot on 20 hours per week
 
-This is a continuation of my goal from last year. I've been good about not working on TinyPilot during evenings or weekends, but I crave more slack time. The times when I most enjoy TinyPilot are  . The times I enjoy it least are when there are so many
+I've been disciplined about not working on TinyPilot during evenings or weekends, but I crave more slack time. The times when I most enjoy TinyPilot the least are when I have a thousand short-term things to do, and it's more work to delegate them than to do them myself. The times I enjoy TinyPilot the most are when everything's running smoothly so that I cna think about ways to grow the business or improve the product.
 
- I'd like to manage TinyPilot on 30 hours per week so that I have time left over to write and develop new skills.
-
-I feel like I get stuck in what XX calls the urgent but unimportant quadrant. The time I enjoy TinyPilot the most are when I feel like I've gotten through all of my emails and I have time to think about new things to add. The times when I enjoy it least are when it feels like there are a thousand little things that need to get done, and I'm the only one in a position to do them.
+This year, I'd like to continue systematizing TinyPilot so that everything runs smoothly if I only work 20 hours per week. That would free up time for me to write more or work on software for the fun of it, which I don't get to do now.
 
 ## Do I still love it?
 
-When I look back every year, I think about whether I'm happy with my life as a bootstrapped founder.
+When I do these writeups, I think about whether I'm happy with life as a bootstrapped founder.
 
 This year was definitely my most stressful.
 
-I like feeling like I'm running a real business. There's real money coming in, so I get to make intelligent decisions about how to allocate resources. In my previous projects, my businesses would make like $50/month, and at that scale, there's not really any interesting business decisions to make. Like, do I hire a competent developer to write four lines of code with that $50?
+The part I like is that I finally feel like I'm running a real business. In my previous projects, revenue would be less than $200/month. At that scale, most options for growth are prohibitively expensive. that scale, there's not really any interesting business decisions to make. Like, do I hire a competent developer to write four lines of code with that $50?
 
 And it's not so much being an indie business as much as the type of business I've chosen. For TinyPilot, I'm a software business, a hardware business, and an e-commerce business all at once. But that has a benefit too of creating a good moat. Other developers might see
 
