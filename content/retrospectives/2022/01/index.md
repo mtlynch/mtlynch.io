@@ -47,13 +47,9 @@ I raised prices slightly on the Voyager 2, and that seems to have slowed down sa
 | Total Pageviews          | 14,596         | 12,840          | <font color="red">-1,756 (-12%)</font>           |
 | Sales Revenue            | $56,626.33     | $52,224.65      | <font color="red">-$4,401.68 (-8%)</font>        |
 | Enterprise Subscriptions | $47.75         | $47.75          | 0                                                |
-| Royalties                | $8,185.78      | $3,000.00\*       | <font color="red">-$5,185.78 (-63%)</font>       |
-| Total Revenue            | $64,859.86     | $55,272.40      | <font color="red">-$9,587.46 (-15%)</font>       |
-| **Profit**               | **$12,758.39** | **<font color="red">$-16,609.43</font>**\*\* | **<font color="red">-$29,367.82 (-230%)</font>** |
-
-\* Royalties are an estimate until I receive the final numbers from my distributor.
-
-\*\* Profit is a rough approximation based on the delta in my cash balance month-over-month. I'll update with the final numbers in a few weeks when I complete bookkeeping.
+| Royalties                | $8,185.78      | $1,100.47       | <font color="red">-$7,085.31 (-87%)</font>       |
+| Total Revenue            | $64,859.86     | $53,372.87      | <font color="red">-$11,486.99 (-18%)</font>      |
+| **Profit**               | **$12,758.39** | **$-15,207.05** | **<font color="red">-$27,965.44 (-219%)</font>** |
 
 Sales are down slightly from November, but December was still my second-highest revenue month of all time. I'm continuing to enjoy the revenue boost from [selling just one product](/retrospectives/2021/12/#reducing-to-a-single-product-nearly-doubled-sales).
 
