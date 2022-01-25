@@ -193,25 +193,6 @@ I considered taking it a step further and selling zero products. That would logi
 
 {{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" maxWidth="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
 
-### Thoughtful management attracts a strong team
-
-A few months ago, I had a video call with my friend Matt. Matt and I met fresh out of college as developers on the BitLocker team at Microsoft.  He's one of the smartest developers I know, and he has incredible insight into software and organizations at both a high level and a low level.
-
-He had followed TinyPilot's progress on my blog, but this was the first time Matt and I were talking about it. I mentioned how lucky I was that I ended up with such a good team. The developers I hired and the local staff that run the TinyPilot office have all worked out great.
-
->Well, give yourself some credit. I know you, and you probably shaped that team by putting processes in place that allowed people to work well.
-
-In my experience, Matt is right about everything, so I have no choice but to accept his praise.
-
-I'm certainly not an expert manager, but I think Matt is right that some of my. Based on my frustrations with previous jobs, I tried to create processes that avoided the things that frustrated me at previous jobs. I w
-
-* Employees have flexibility.
-* I give [thorough details](/freelancer-guidelines/) about what to expect from the hiring process and the job.
-* My hiring process is quick, as talented people don't want to waste time on a lengthy, unpaid screening process.
-* Communication is mostly written and asynchronous, which gives people flexibility.
-* I document processes and encourage others to invest in documentation so that everyone has clear, shared expectations.
-* We operate under the assumption that everyone who works on TinyPilot is smart and well-intentioned, so when things go wrong, it indicates a bad process rather than a bad person.
-
 ### Good leadership means helping teammates grow
 
 {{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" maxWidth="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
