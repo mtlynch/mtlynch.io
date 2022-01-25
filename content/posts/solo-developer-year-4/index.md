@@ -6,13 +6,13 @@ tags:
 - tinypilot
 - is it keto
 - zestful
-description: TODO
+description: "TODO: Write blurb"
 date: '2022-02-01'
 hero_image: cover.jpg
 ---
 Four years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to experiment with bootstrapping a software business.
 
-For the first few years, I experimented with several different businesses, but none of them worked out. Finally, in 2020, I created a business called TinyPilot, which caught on and continued growing throughout 2021, finishing the year with $XXk in annual revenue.
+For the first few years, I experimented with several different businesses, but none of them worked out. Finally, in 2020, I created a business called TinyPilot, which caught on and continued growing throughout 2021, finishing the year with $XXk in revenue.
 
 In this post, I'll share what I've learned from running TinyPilot about what I've learned about being a bootstrapped founder.
 
@@ -48,11 +48,27 @@ At the start of 2021, I was TinyPilot's sole developer, customer support person,
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and a [distributor in Europe](https://kvm-ip.de).
 
+Revenue is XXx what from 2020, but we also had the full year. But sales are growing steadily.
+
 {{<revenue-graph project="tinypilot">}}
 
-TODO: Stats
+| Income/Expense                    | 2020        |
+|-----------------------------------|-------------|
+| Sales                             | $53,362     |
+| Donations                         | $380        |
+| Materials                         | -$46,143    |
+| Electrical engineering consulting | -$7,130     |
+| Fulfillment staff                 | -$2,570     |
+| Software development              | -$1,321     |
+| Open-source contributions         | -$1,270     |
+| Advertising                       | -$675       |
+| Web design / branding             | -$250       |
+| Hosting / Domains                 | -$64        |
+| **Net profit**                    | <font color="red">**-$5,681**</font> |
 
-Revenue is XXx what from 2020, but we also had the full year. But sales are growing steadily.
+{{<notice type="info">}}
+TODO: Add 2021 TinyPilot stats
+{{</notice>}}
 
 ### Software progress
 
@@ -84,7 +100,17 @@ I'm still excited to write this book, and I hope I have more time for it this ye
 
 TODO: Stats
 
-|
+| Metric                        | 2021  |
+|-------------------------------|-------|
+| Pageviews                     | 1,927 |
+| Mailing list signups          | 308   |
+| Chapters published            | 0     |
+| Sales\*                       | $0    |
+| Landing page hosting / domain | -$XX  |
+| Illustrations                 | -$XX  |
+| Net profit                    | -$XX  |
+
+\* I haven't offered this book for pre-sale yet.
 
 ### mtlynch.io (this blog)
 
@@ -95,15 +121,16 @@ Ironically, the year that I have the least amount of time to write is the year t
 I kept my habit of writing [monthly retrospectives](/retrospectives/). I can budget time for those because an unambiguous net positive for my business, even in the short term. Almost every retrospective I write, I discover some flaw in my strategy or a weakness in my plans that I wouldn't have noticed had I not sat down to organize my thoughts and write everything out.
 
 
-| Metric                                      | 2020    | Change |
-|---------------------------------------------|---------|--------|
-| Pageviews                                   | 719,899 | <font color="green">+446,082 (+163%)</font>
-| Affiliate revenue\*                         | $1,599     | <font color="green">+$1,225 (+328%)</font>
-| Development                                 | $0      | <font color="green">-$460 (-100%)</font>
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$964    | <font color="red">+$195 (+25%)</font>
-| Hosting / Domain                            | -$534      | <font color="red">+$384 (+256%)</font>
-| [Editing](/editor/) + [Grammarly](https://grammarly.com)  | -$200    | -$222 | <font color="red">+$22 (+11%)</font>
-| **Net profit**                              | **<font color="red">-$121</font>** | **<font color="green">+$3,714</font>** |
+| Metric                                                   | 2020    | 2021 | Change |
+|----------------------------------------------------------|---------|------|--------|
+| Pageviews                                                | 719,899 |      | <font color="green">+446,082 (+163%)</font>
+| Affiliate revenue\*                                      | $1,599  | $0   | <font color="green">-$1,599 (-100%)</font>
+| [Illustrations](/how-to-hire-a-cartoonist/)              | -$964   |      | <font color="red">+$195 (+25%)</font>
+| Hosting / Domain                                         | -$534   |      | <font color="red">+$384 (+256%)</font>
+| [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222 |   | <font color="red">+$22 (+11%)</font>
+| **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="green">+$3,714</font>** |
+
+\* I [dropped all affiliate partnerships](https://twitter.com/deliberatecoder/status/1342847048811499523) from this blog at the end of 2020.
 
 ### Hit the Front Page of Hacker News
 
@@ -117,13 +144,13 @@ It earned $XX in its first year, which was a bit disappointing. I was hoping for
 
 {{<revenue-graph project="htfp">}}
 
-| Metric              | 2020     |
-|---------------------|----------|
-| Purchases           | 29       |
-| Revenue             | $1,431   |
-| Cover design        | -$293    |
-| Recording equipment | -$584    |
-| **Net profit**      | **$554** |
+| Metric              | 2020     | 2021   | Change
+|---------------------|----------|--------|--------
+| Purchases           | 29       |        |
+| Revenue             | $1,431   |        |
+| Cover design        | -$293    |        |
+| Recording equipment | -$584    |        |
+| **Net profit**      | **$554** |        |
 
 ### Is It Keto
 
@@ -137,16 +164,14 @@ Around June, I noticed another site overtake Is It Keto for most search queries.
 
 I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
 
-
-| Metric                                      | 2020      | Change |
-|---------------------------------------------|-----------|---------|
-| Pageviews                                   | 1,314,583   | <font color="green">+792,670 (+152%)</font>
-| Ad revenue                                  | $2,934         | <font color="green">+$1,994 (+212%)</font>
-| Affiliate revenue                           | $2,147      | <font color="green">+$832 (+63%)</font>
-| Meal plan sales\*                           | $18          | <font color="red">-$6 (-25%)</font>
-| Freelance designers and [content writers](/hirt-writers/) | -$4,322 | -$105     | <font color="green">-$4,217 (-98%)</font>
-| Hosting / domain                            | -$241          | <font color="red">+$126 (+110%)</font>
-| **Net profit**                              | **<font color="green">$4,753</font>** | **<font color="green">+$6,911</font>**
+| Metric                                                              | 2020      | 2021      | Change
+|---------------------------------------------------------------------|-----------|-----------|--------
+| Pageviews                                                           | 1,314,583 | 1,163,745 | <font color="red">-XX (-XX%)</font>
+| Ad revenue                                                          | $2,934    |           | <font color="green">+$1,994 (+212%)</font>
+| Affiliate revenue                                                   | $2,147    |           | <font color="green">+$832 (+63%)</font>
+| Freelance designers and [content writers](/hiring-content-writers/) | -$105   |           | -$105     | <font color="green">-$105 (-10%)</font>
+| Hosting / domain                                                    | -$241     |           | <font color="red">+$126 (+110%)</font>
+| **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$XX</font>**
 
 ### Zestful
 
@@ -185,7 +210,7 @@ Until that point, TinyPilot had always offered different versions so that custom
 
 In October, I got rid of the product catalog and instead focused the website exclusively on my main product, the TinyPilot Voyager.
 
-TODO: Screenshot of product page
+TODO: Screenshot of TinyPilot after the change.
 
 Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 
@@ -246,27 +271,29 @@ I've made a lot of progress in getting myself out of the critical path. I took a
 
 ### Grow TinyPilot to $1M in annual revenue
 
-There hasn't been any time for marketing. I think I should be able to explore more marketing channels. I've reached out to YouTube reviewers offering them review units, and that's been successful, but there are tons of paid marketing channels I haven't tested at all. I think there's a lot of room to grow.
+I've never invested as much as I should on TinyPilot's marketing. I've been fortunate that TinyPilot can survive almost exclusively on word of mouth and organic search.
+
+The only marketing I've done is sending free units to YouTube creators to review. That worked pretty well, but there are tons of marketing channels that I've never explored at all.
+
+I think the right marketing channels could double my current revenue. And if I'm aiming for $900k, why not just make it a cool million?
 
 ### Manage TinyPilot on 20 hours per week
 
-I've been disciplined about not working on TinyPilot during evenings or weekends, but I crave more slack time. The times when I most enjoy TinyPilot the least are when I have a thousand short-term things to do, and it's more work to delegate them than to do them myself. The times I enjoy TinyPilot the most are when everything's running smoothly so that I cna think about ways to grow the business or improve the product.
+The times when I least enjoy are when I have a thousand short-term things to do, and it's more work to delegate them than to do them myself. I most enjoy TinyPilot when things are running smoothly enough to give me space to think about ways to grow the business or improve the product.
 
-This year, I'd like to continue systematizing TinyPilot so that everything runs smoothly if I only work 20 hours per week. That would free up time for me to write more or work on software for the fun of it, which I don't get to do now.
+This year, I'd like to continue systematizing TinyPilot so that everything runs smoothly if I only work 20 hours per week. That would free up time for me to write and code, neither of which I have time for now.
 
 ## Do I still love it?
 
-When I do these writeups, I think about whether I'm happy with life as a bootstrapped founder.
+When I do these writeups, I think about whether I still love being a bootstrapped founder. This is the first year where it's difficult to say yes.
 
-This year was definitely my most stressful.
+As TinyPilot grows, the highs are high but the lows are lower.
 
-The part I like is that I finally feel like I'm running a real business. In my previous projects, revenue would be less than $200/month. At that scale, most options for growth are prohibitively expensive. that scale, there's not really any interesting business decisions to make. Like, do I hire a competent developer to write four lines of code with that $50?
+I'll start with the positives. I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500 per month. That limits what I could do because it's not enough to hire anyone or pay for tooling. You end up grinding away at problems you know are already solved, but you have to reinvent the wheel out of necessity. With TinyPilot, I can hire an awesome 3D printing designer to make my cases instead of spending hundreds of hours learning to make CAD designs and operate a 3D printer.
 
-And it's not so much being an indie business as much as the type of business I've chosen. For TinyPilot, I'm a software business, a hardware business, and an e-commerce business all at once. But that has a benefit too of creating a good moat. Other developers might see
+So if we ship a bad bug, I feel it. When I announce a launch date for new hardware, and then I keep having to delay it, I find it stressful and personally embarrassing in a way that I never felt at Google when I was eight layers removed from real customers.
 
-I love writing and programming, and the past year didn't leave me much time to do either. The nature of the business requires . My team is growing
-
-But am I still happy that I quit my job at Google? Definitely.
+Overall, I still prefer working for myself. At Google, I felt so powerless over my career. If there were aspects of the company I disliked, I had no hope of changing them. With TinyPilot, I'm fully in control of changing the business to fit my needs. Some of these changes can't happen overnight, but I'm able to align the business with my goals.
 
 ---
 
