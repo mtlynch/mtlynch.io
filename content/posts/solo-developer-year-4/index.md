@@ -52,7 +52,7 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 {{<img src="tinypilot-screenshot.png" maxWidth="650px" caption="[TinyPilot](https://tinypilotkvm.com) is an open-source KVM over IP device built on the Raspberry Pi" hasBorder="true">}}
 
-In 2021, I focused on running [TinyPilot](https://tinypilotkvm.com), the business I created in 2020. TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control another computer from your browser without installing any software, even when the computer has no network connectivity or hasn't booted into an OS.
+In 2021, I focused on running [TinyPilot](https://tinypilotkvm.com), the business I created in 2020. TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control another computer from your browser without installing any software, even if the computer has no OS installed and no network connectivity.
 
 <a href="tinypilot-bios.gif" style="display: block; margin: auto 0;"><img src="tinypilot-bios.gif" style="margin: 0 auto; display: block; object-fit: contain; max-width: 550px"></a>
 
@@ -60,11 +60,13 @@ In 2021, I focused on running [TinyPilot](https://tinypilotkvm.com), the busines
 TODO: Replace with GIF of current TinyPilot UI
 {{</notice>}}
 
-At the start of 2021, I was TinyPilot's sole developer, customer support person, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our home, which was slowly transforming into a TinyPilot warehouse.
+At the start of 2021, I was TinyPilot's sole developer, customer support agent, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our home, which was slowly transforming into a TinyPilot warehouse.
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and a [distributor in Europe](https://kvm-ip.de).
 
-{{<img src="tinypilot-office.jpg" maxWidth="450px" caption="TinyPilot now has a real office where we assemble products and ship out orders." hasBorder="true">}}
+{{<img src="tinypilot-office.jpg" maxWidth="600px" caption="TinyPilot now has a real office where we assemble products and ship out orders." hasBorder="true">}}
+
+### TinyPilot finances
 
 Revenue grew by eightfold from 2020, and they're continuing to grow.
 
@@ -91,12 +93,14 @@ TODO: Finish 2021 TinyPilot stats
 | **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | $XX |
 
 {{<notice type="info">}}
-I also have $XX of raw materials in my inventory, but I don't know a useful way to factor those into net profit.
+**Note**: I also have $59k in inventory, but I don't know a useful way to factor that into net profit.
 {{</notice>}}
 
-### Software progress
+### TinyPilot's software development
 
-The software has changed a lot in the last year, too. For fun, I installed the version of TinyPilot from January 2021 and compared it to our January 2022 release. I was surprised at how much has changed in just a year in just the UI:
+The software has changed a lot in the last year, too.
+
+For fun, I installed the version of TinyPilot from January 2021 and compared it to our January 2022 release. I was surprised at how much has changed in just a year in just the UI:
 
 {{<notice type="info">}}
 TODO: Add GIF comparing both versions
@@ -104,7 +108,7 @@ TODO: Add GIF comparing both versions
 
 We've added several major features in the last year including:
 
-* Mounting virtual USB drives and CD-ROMs
+* Mount virtual USB drives and CD-ROMs
 * Wake on LAN
 * Password-based authentication
 * Software updates from the web UI
@@ -166,9 +170,9 @@ TODO: Finish stats
 
 At the beginning of the year, I released my first-ever paid course. It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
-I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course with helping them write blog posts that became hit the #1 spot on Hacker News.
+I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course with helping them write blog posts that reached the #1 spot on Hacker News.
 
-It earned $6.3k in its first year, which was a bit disappointing. I was hoping for something closer to $20k. Had TinyPilot not been so busy, I could have spent more time marketing it and gotten closer to my goal. Still, the expereience taught me a lot about creating an educational product, and I'd like to do more of it in the future.
+It earned $6.3k in its first year, which was a bit disappointing. I was hoping for something closer to $20k. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my goal. Still, the expereience taught me a lot about creating an educational product, and I'd like to do more of it in the future.
 
 {{<revenue-graph project="htfp">}}
 
@@ -179,12 +183,12 @@ TODO: Finish stats
 | Metric              | 2020     | 2021    | Change
 |---------------------|----------|---------|--------
 | Purchases           | 29       | 230     | <font color="green">+201 (+693%)</font>
-| Revenue             | $1,431   | $6,293  | <font color="green">+$4,862 (+340%)</font>
-| Gumroad             | $0       | $XX     | <font color="red">+$XX (+XX%)</font>
+| Revenue             | $1,431   | $7,483  | <font color="green">+$XX (+XX%)</font>
+| Gumroad membership  | -$XX     | -$140    | <font color="red">+$XX (+XX%)</font>
 | Hosting / domain    | $0       | -$8     | <font color="red">+$8 (+inf%)</font>
 | Cover design        | -$293    | $0      | <font color="green">-$293 (-100%)</font>
 | Recording equipment | -$584    | $0      | <font color="green">-$584 (-100%)</font>
-| **Net profit**      | **$554** | **$XX** | <font color="green">+$XX (+XX%)</font>
+| **Net profit**      | **$XX** | **$XX** | <font color="green">+$XX (+XX%)</font>
 
 ### Is It Keto
 
@@ -203,9 +207,9 @@ TODO: Finish stats
 | Metric                                                              | 2020      | 2021      | Change
 |---------------------------------------------------------------------|-----------|-----------|--------
 | Pageviews                                                           | 1,314,583 | 1,163,745 | <font color="red">-XX (-XX%)</font>
-| Ad revenue                                                          | $2,934    |           | <font color="green">+$XX (+XX%)</font>
-| Affiliate revenue                                                   | $2,147    |           | <font color="green">+$XX (+XX%)</font>
-| Freelance designers and [content writers](/hiring-content-writers/) | -$105   |           | -$105     | <font color="green">-$105 (-10%)</font>
+| Ad revenue                                                          | $2,934    | $5,252    | <font color="green">+$XX (+XX%)</font>
+| Affiliate revenue                                                   | $2,147    | $2,022    | <font color="green">+$XX (+XX%)</font>
+| Freelance designers and [content writers](/hiring-content-writers/) | -$105     | $0        | -$105     | <font color="green">-$105 (-10%)</font>
 | Hosting / domain                                                    | -$241     |           | <font color="red">+$XX (+XX%)</font>
 | **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$XX</font>**
 
@@ -274,17 +278,17 @@ WPEngine founder Jason Cohen recently [did a podcast interview](https://youtu.be
 >
 >**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
-When I started TinyPilot, I felt like my job as manager was to ensure that my employees could focus on the job they were hired to do. My job was to cover all the gaps between roles so that my employees could do exactly their jobs. And that's true to a degree, but it doesn't leave room for growth. I realized that some of the work I was protecting my employees from was work that would allow them to grow in their roles.
+When I started TinyPilot, I thought that good management meant protecting my employees from anything outside of their job description. If I prpeared work for them so that they can focus on their narrow role, then they'd be happy and focused.
 
-The best example of this is how TinyPilot changed its approach to customer support. For most of the year, I was TinyPilot's only customer support rep. It was one of those jobs that felt like it was in a gap between what anyone else on my team could do. The developers couldn't do it because they don't have insight into questions about packages going missing or delivery times. My fulfillment staff couldn't do it because they didn't have the technical background to troubleshoot software problems.
+Over time, I realized that my strictness about roles left no room for growth. People want to learn and grow in their careers, and if I'm limiting them from doing anything but their original job, then I'm hindering that growth.
 
-In October, Eric, a member of TinyPilot's fulfillment staff said he was interested in more hours. Wee decided to try sharing responsibility for customer support. Eric could handle the non-technical issues like tracking down stuck packages or handling special requests from customers. If he got a technical question, he could look for answers in our documentation or help forums. If that didn't work, he could escalate to me.
+I saw the benefit of giving employees room to grow most starkly in customer support. For most of the year, I was TinyPilot's only customer support rep. In October, Eric, a member of TinyPilot's fulfillment staff said he was interested in more hours, so I suggested he share customer support with me. It was something I'd considered before, but I didn't know how it would work, as many of the support requests we get are technical questions, and Eric didn't have the background to answer them.
 
-As soon as we started this system, I realized I should have done it earlier. Eric taking over customer support freed up hours of my time every week.
+As soon as Eric and I started sharing customer support, I realized we should have done it earlier. I overestimated the difficulty of our customers' technical questions. Most of them are repeat questions, so we made an internal playbook for common questions. When a solution wasn't in our playbooks, email archives, or public help forums, Eric just escalated to me. Now, Eric handles about 70% of customer support emails.
 
-Now, Eric handles about 70% of customer service emails on his own. He was initially unsure if he'd enjoy customer service, but he found that customer support made him enjoy his job more. He feels invested in the business by talking to our customers. And the role gives him more insight into the bigger picture of how his work benefits our customers.
+Eric was initially unsure if he'd enjoy customer service, but he found that customer support made him enjoy his job more. He feels invested in the business by talking to our customers. And the role gives him more insight into the bigger picture of how his work benefits our customers.
 
-Remember my big insight that TinyPilot should offer only a single product? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Letting go of that task gave me space to re-evaluate the website and experiment with changes, and it paid off massively.
+Eric's growth into customer support freed up several hours per week for me as the founder. Remember my big insight that TinyPilot should offer only a single product? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Letting go of that task gave me space to re-evaluate the website and experiment with changes, and it paid off massively.
 
 ## Grading last year's goals
 
