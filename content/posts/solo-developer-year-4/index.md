@@ -288,7 +288,7 @@ As soon as Eric started answering support requests, I realized we should have do
 
 Eric was surprised at how much he enjoyed taking over customer service. Talking to our customers has made him feel more invested in the business and gives him more insight into how his work benefits them.
 
-Remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Letting go of that task gave me space to re-evaluate our the customer's buying experience, and that had a tremendous impact on our business.
+Remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Letting go of that task gave me space to re-evaluate our customer's buying experience, and that had a tremendous impact on our business.
 
 ## Grading last year's goals
 
