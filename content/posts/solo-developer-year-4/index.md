@@ -280,15 +280,15 @@ WPEngine founder Jason Cohen recently [did a podcast interview](https://youtu.be
 
 When I started TinyPilot, I thought that good management meant protecting my employees from anything outside of their job description. If I prepared work for them, they could focus happily on their narrow role.
 
-Over time, I realized that my strictness about roles left no room for growth. People want to learn and grow in their careers. If I'm limiting them from doing anything but their original job, then I'm hindering their development.
+Over time, I realized that my protectiveness limited growth. People enjoy learning and evolving in their careers. If I'm limiting employees from doing anything but their original job, then I'm hindering their development.
 
-I saw this effect most starkly in my approach to customer service. In October, Eric, a member of TinyPilot's fulfillment staff said he was interested in more hours, so I suggested he share customer support with me. It was something I'd considered before, but I worried that too many support requests required technical knowledge that only I had.
+I saw this effect most starkly in my approach to customer service. In October, Eric, a member of TinyPilot's fulfillment staff, said he was interested in more hours. I suggested he share customer support with me. It was something I'd considered before, but I worried that too many support requests required technical knowledge that only I had.
 
-As soon as Eric started answering support requests, I realized we should have done it earlier. I overestimated the difficulty of our customers' technical questions. We made an internal playbook for handling common issues. When a solution wasn't in our playbooks, email archives, or public help forums, Eric just escalated to me. Now, Eric handles about 70% of customer support emails without any involvement from me.
+As soon as Eric began working on the support queue, I realized we should have done it earlier. I overestimated the difficulty of our customers' technical questions. Eric could solve most customer issues by referring to our help forum and email archives. If he couldn't answer, he'd just escalate to me. Now, Eric handles about 70% of customer support emails without me.
 
 Eric was surprised at how much he enjoyed taking over customer service. Talking to our customers has made him feel more invested in the business and gives him more insight into how his work benefits them.
 
-Remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Letting go of that task gave me space to re-evaluate our customer's buying experience, and that had a tremendous impact on our business.
+Remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Ceding that task gave me space to re-evaluate our customer's buying experience, and that had a tremendous impact on our business.
 
 ## Grading last year's goals
 
@@ -299,7 +299,7 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 * **Result**: Quadrupled TinyPilot's monthly revenue, totalling $468k for the year
 * **Grade**: B
 
-Okay, my $600k revenue goal turned out to be tad a bit optimistic. I chose that number in January 2021, when revenue had grown 20-200% for the previous five months. The month after I announced that goal, TinyPilot's sales withered, and I never recaptured the consistent growth of the first few months.
+Okay, my $600k revenue goal turned out to be tad a bit optimistic. I chose that number in January 2021, when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's sales fell by 50% over two months, and I never recaptured the consistent growth of the first few months.
 
 Still, $468k is nothing to sneeze at. It's possible that different decsions would have brought me to $600k, but nothing stands out as an egregious blunder.
 
@@ -308,7 +308,7 @@ Still, $468k is nothing to sneeze at. It's possible that different decsions woul
 * **Result**: Published three blog posts and zero books
 * **Grade**: D
 
-Writing is one of the things I enjoy most, so I'm disappointed I had so little time for it. Looking back, I still wouldn't have changed how I allocated my time.
+Writing is one of the things I enjoy most, so I'm disappointed I had so little time for it. Looking back, I still feel like it was the right decision to deprioritize my writing so that I had more time to smooth out TinyPilot.
 
 ### Automate TinyPilot management
 
@@ -329,7 +329,7 @@ I think the right marketing channels could double my current revenue. And if I d
 
 ### Manage TinyPilot on 20 hours per week
 
-The times when I enjoy TinyPilot least are when I have a thousand short-term things to do, and it's more work to delegate them than to do them myself. I most enjoy TinyPilot when things are running smoothly enough to give me space to think about ways to grow the business or improve the product.
+The times when I enjoy TinyPilot most are when things are running smoothly enough to give me space to think about ways to grow the business or improve the product. The most unpleasant times are when I have a thousand short-term things to do, and they're so urgent that I can't delegate them.
 
 This year, I'd like to continue systematizing TinyPilot so that everything runs smoothly if I only work 20 hours per week. That would also free up time for me to write and code, neither of which I have time for now.
 
@@ -341,9 +341,11 @@ I plan to work with my electrical engineering vendor to develop a new TinyPilot 
 
 ## Do I still love it?
 
-When I do these writeups, I think about whether I still love being a bootstrapped founder. This is the first year where it's difficult to say yes. As TinyPilot grows, the highs are high but the lows are lower.
+When I do these writeups, I think about whether I still love being a bootstrapped founder. This is the first year where it's difficult to say yes.
 
-I'll start with the positives. I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500 per month. At that scale, you're so limited in what you can do. It's not enough to hire for any skilled roles or pay for tooling. You end up grinding away at problems you know are already solved, but you have to reinvent the wheel out of necessity.
+As TinyPilot grows, the highs are high but the lows are lower.
+
+I'll start with the positives. I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500 per month. At that scale, you're extremely limited. You can't hire for any skilled roles or pay for expert guidance. You end up grinding away at problems you know are already solved, but you have to reinvent the wheel because you can't afford the already-invented ones.
 
 With TinyPilot, I can pay for tooling or hire specialists where it makes sense. TinyPilot uses elegant cases for the Voyager, and it's because I hired an awesome 3D printing designer. If I didn't have money for that, I definitely wouldn't have spent hundreds of hours learning to make CAD designs and operating a 3D printer.
 
