@@ -9,6 +9,8 @@ tags:
 description: "TODO: Write blurb"
 date: '2022-02-01'
 hero_image: cover.jpg
+images:
+- solo-developer-year-4/og-cover.jpg
 ---
 Four years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own self-funded software business.
 
@@ -347,7 +349,7 @@ As TinyPilot grows, the highs are high but the lows are lower.
 
 I'll start with the positives. I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500 per month. At that scale, you're extremely limited. You can't hire for any skilled roles or pay for expert guidance. You end up grinding away at problems you know are already solved, but you have to reinvent the wheel because you can't afford the already-invented ones.
 
-With TinyPilot, I can pay for tooling or hire specialists where it makes sense. TinyPilot uses elegant cases for the Voyager, and it's because I hired an awesome 3D printing designer. If I didn't have money for that, I definitely wouldn't have spent hundreds of hours learning to make CAD designs and operating a 3D printer.
+With TinyPilot, there's enough money coming in to hire specialists where it makes sense. I enjoy being able to work with a talented dev team again after three years of coding by myself. I pay $200/month for dev tooling and CI without thinking twice about it because it's obviously a net cost savings to help my dev team eliminate gruntwork.
 
 The downside of running your own business with thousands of customers is that you're responsible for failure. When I ship a bad bug, I feel it. When I announce a launch date for new hardware and have to delay it over and over, I find it personally embarrassing in a way that I never felt at Google when I was eight layers removed from real customers.
 
