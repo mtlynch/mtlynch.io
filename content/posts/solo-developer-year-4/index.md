@@ -16,7 +16,7 @@ Four years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to
 
 For the first few years, all of my businesses flopped. Nothing I made generated more than a few hundred dollars per month in revenue.
 
-Finally, in 2020, I created a business called TinyPilot, which caught on. That's been my main focus ever since. 2021 was TinyPilot's first full year in operation, and it generated $460k in revenue.
+Halfway through my third year, I created a business called [TinyPilot](https://tinypilotkvm.com), which caught on. That's been my main focus ever since. 2021 was TinyPilot's first full year in operation, and it generated $460k in revenue.
 
 In this post, I'll share what I've learned about being a bootstrapped founder from running TinyPilot and my other businesses this past year.
 
@@ -28,7 +28,7 @@ Previous updates:
 
 ## My first year of profit
 
-After four years, I've finally turned a profit! Across all of my businesses, I earned almost $11k in profit for the year.
+After running in the red for the first few years, this is my first year of profit. I earned almost $11k in profit for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from my old projects that have been running in the background.
 
 <canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
 
@@ -138,10 +138,6 @@ TODO: Finish stats
 |-------------------------------|-------|
 | Pageviews                     | 1,927 |
 | Mailing list signups          | 308   |
-| Chapters published            | 0     |
-| Landing page hosting / domain | -$8   |
-| Illustrations                 | -$320 |
-| Net profit                    | -$XX  |
 
 ### mtlynch.io (this blog)
 
@@ -186,10 +182,7 @@ TODO: Finish stats
 |---------------------|----------|---------|--------
 | Purchases           | 29       | 230     | <font color="green">+201 (+693%)</font>
 | Revenue             | $1,431   | $7,483  | <font color="green">+$XX (+XX%)</font>
-| Gumroad membership  | -$106    | -$140   | <font color="red">+$XX (+XX%)</font>
-| Hosting / domain    | $0       | -$8     | <font color="red">+$8 (+inf%)</font>
-| Cover design        | -$293    | $0      | <font color="green">-$293 (-100%)</font>
-| Recording equipment | -$584    | $0      | <font color="green">-$584 (-100%)</font>
+| Expenses            | -$983    | -$148   | <font color="green">+$XX (+XX%)</font>
 | **Net profit**      | **$448** | **$7,335** | <font color="green">+$XX (+XX%)</font>
 
 ### Is It Keto
@@ -198,7 +191,7 @@ TODO: Finish stats
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet. It earns money from Amazon Affiliate links and Google AdSense.
 
-I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k per month. That slowed down around June, as other sites began offering similar content and supplanted Is It Keto in search results.
+I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k/month. That slowed down around June, as other sites began offering similar content and supplanted Is It Keto in search results.
 
 I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
 
@@ -244,9 +237,9 @@ TODO: Finish stats
 
 ### Sell just one thing
 
-For most of the year, TinyPilot earned a steady $20-30k per month in revenue. The months where there was a sales bump, it was because we got positive reviews from YouTube channels.
+For most of the year, TinyPilot earned a steady $20-30k/month in revenue. The months where there was a sales bump, it was because we got positive reviews from YouTube channels.
 
-Starting in October, revenues doubled to $40-60k per month. TinyPilot didn't receive any new reviews in that period. In fact, I didn't do any marketing at all in those months.
+Starting in October, revenues doubled to $40-60k/month. TinyPilot didn't receive any new reviews in that period. In fact, I didn't do any marketing at all in those months.
 
 So, what doubled our sales? I got rid of our product page.
 
@@ -272,7 +265,7 @@ I considered taking my strategy a step further and selling zero products. That w
 
 {{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" maxWidth="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
 
-WPEngine founder Jason Cohen recently [did a podcast interview](https://youtu.be/Sjs5gEUlZyU?t=3605), and his thoughts about leadership stuck with me:
+In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), WPEngine founder Jason Cohen described leadership in a way that stuck with me:
 
 >With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context...
 >
@@ -280,17 +273,17 @@ WPEngine founder Jason Cohen recently [did a podcast interview](https://youtu.be
 >
 >**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
-When I started TinyPilot, I thought that good management meant protecting my employees from anything outside of their job description. If I prepared work for them, they could focus happily on their narrow role.
+When I started TinyPilot, I thought that good management meant protecting my employees from anything outside their job description. If I prepared work for them, they could focus happily on their narrow role.
 
 Over time, I realized that my protectiveness limited growth. People enjoy learning and evolving in their careers. If I'm limiting employees from doing anything but their original job, then I'm hindering their development.
 
-I saw this effect most starkly in my approach to customer service. In October, Eric, a member of TinyPilot's fulfillment staff, said he was interested in more hours. I suggested he share customer support with me. It was something I'd considered before, but I worried that too many support requests required technical knowledge that only I had.
+I saw this effect most starkly in my approach to customer service. In October, Eric, a member of TinyPilot's fulfillment staff, said he was interested in increasing his hours. We decided that he'd share customer support with me. It was something I'd considered before, but I worried that too many support requests required technical knowledge that only I had.
 
-As soon as Eric began working on the support queue, I realized we should have done it earlier. I overestimated the difficulty of our customers' technical questions. Eric could solve most customer issues by referring to our help forum and email archives. If he couldn't answer, he'd just escalate to me. Now, Eric handles about 70% of customer support emails without me.
+As soon as Eric began working on the support queue, I realized we should have done it earlier. I overestimated the difficulty of our customers' technical questions. Eric could solve most customer issues by referring to our help forum and email archives. When he couldn't, he'd just escalate to me. Now, Eric handles about 70% of customer support emails without me.
 
 Eric was surprised at how much he enjoyed taking over customer service. Talking to our customers has made him feel more invested in the business and gives him more insight into how his work benefits them.
 
-Remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me, and it's no coincidence. Ceding that task gave me space to re-evaluate our customer's buying experience, and that had a tremendous impact on our business.
+And remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me. It's no coincidence. Ceding that task freed me from several hours of work per week, giving me the space to think critically about the way customers see TinyPilot.
 
 ## Grading last year's goals
 
@@ -301,7 +294,7 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 * **Result**: Quadrupled TinyPilot's monthly revenue, totalling $468k for the year
 * **Grade**: B
 
-Okay, my $600k revenue goal turned out to be tad a bit optimistic. I chose that number in January 2021, when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's sales fell by 50% over two months, and I never recaptured the consistent growth of the first few months.
+Okay, my $600k revenue goal turned out to be tad a bit optimistic. I chose that number in January 2021, when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's shrunk over the next two months by 50%. I never recaptured the consistent growth of those first few months.
 
 Still, $468k is nothing to sneeze at. It's possible that different decsions would have brought me to $600k, but nothing stands out as an egregious blunder.
 
@@ -310,14 +303,18 @@ Still, $468k is nothing to sneeze at. It's possible that different decsions woul
 * **Result**: Published three blog posts and zero books
 * **Grade**: D
 
-Writing is one of the things I enjoy most, so I'm disappointed I had so little time for it. Looking back, I still feel like it was the right decision to deprioritize my writing so that I had more time to smooth out TinyPilot.
+Writing is one of the things I enjoy most, so I'm disappointed I had so little time for it.
+
+Looking back, I still feel like it was the right decision to deprioritize my writing so that I had more time to smooth out TinyPilot.
 
 ### Automate TinyPilot management
 
 * **Result**: Systematized enough of TinyPilot to take a one-week vacation
 * **Grade**: B-
 
-I've made a lot of progress in getting myself out of the critical path. I took a one-week vacation over the holidays. It went smoothly, though I did have to do about 30 minutes of emergency work to prevent thousands of dollars of equipment from being sent back to China.
+I've made a lot of progress in getting myself out of the critical path in TinyPilot's day-to-day operations.
+
+My goal was to be able to take a two-week vaction, and I'm not quite there yet. I took a one-week vacation over the holidays where I didn't check work email. That went pretty well, though I did have to take a call from FedEx to prevent thousands of dollars of equipment from being sent back to China.
 
 ## Goals for year four
 
@@ -331,31 +328,29 @@ I think the right marketing channels could double my current revenue. And if I d
 
 ### Manage TinyPilot on 20 hours per week
 
-The times when I enjoy TinyPilot most are when things are running smoothly enough to give me space to think about ways to grow the business or improve the product. The most unpleasant times are when I have a thousand short-term things to do, and they're so urgent that I can't delegate them.
+The times when I enjoy TinyPilot most are when things are running smoothly enough to give me space to think about ways to grow the business or improve the product. The least pleasant times are when I have a thousand short-term things to do, and they're urgent enough that I can't delegate them to my teammates.
 
 This year, I'd like to continue systematizing TinyPilot so that everything runs smoothly if I only work 20 hours per week. That would also free up time for me to write and code, neither of which I have time for now.
 
 ### Ship a new TinyPilot hardware product
 
-TinyPilot's core hardware is a Raspberry Pi single-board computer. The Pi was great for getting TinyPilot up and running, but we're starting to feel its limitations as we grow.
+TinyPilot's core hardware is a Raspberry Pi single-board computer. The Pi has been fantastic in getting TinyPilot up and running, but we're starting to feel its limitations as we grow.
 
-I plan to work with my electrical engineering vendor to develop a new TinyPilot product that replaces the Raspberry Pi with a custom board that we can optimize for TinyPilot's needs.
+I plan to work with my electrical engineering vendor to develop a new TinyPilot product that replaces the Raspberry Pi with a custom board that we can optimize for our customers' needs.
 
 ## Do I still love it?
 
-When I do these writeups, I think about whether I still love being a bootstrapped founder. This is the first year where it's difficult to say yes.
+When I do these writeups, I think about whether I still love being a bootstrapped founder. This is the first year where it's difficult to say yes. I still like my job, but it's not as fun and easy as when I was just building unsuccessful software products and blogging about it.
 
-As TinyPilot grows, the highs are high but the lows are lower.
+I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500/month. At that scale, I felt extremely limited. It's not enough to hire for any skilled roles or pay for expert guidance. I frequently had to solve uninteresting problems simply because my revenue was too small to justify purchasing better solutions.
 
-I'll start with the positives. I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500 per month. At that scale, you're extremely limited. You can't hire for any skilled roles or pay for expert guidance. You end up grinding away at problems you know are already solved, but you have to reinvent the wheel because you can't afford the already-invented ones.
+With TinyPilot, there's enough money coming in to hire specialists where it makes sense. I enjoy being able to work with a talented dev team again after three years of coding by myself. I pay $200/month for dev tooling and CI without thinking twice about it because it's obviously a net cost savings to help my dev team eliminate gruntwork. In my previous businesses, paying for those tools would consume most of my revenue.
 
-With TinyPilot, there's enough money coming in to hire specialists where it makes sense. I enjoy being able to work with a talented dev team again after three years of coding by myself. I pay $200/month for dev tooling and CI without thinking twice about it because it's obviously a net cost savings to help my dev team eliminate gruntwork.
+I enjoy having a company culture that matches what I always wanted to see from my employers. Everyone has flexible hours. There are no tight deadlines, so people can do their jobs well instead of rushing and compromising on quality. Almost all of our work is asynchronous, so everyone has the space to do [deep, focused work](/book-reports/deep-work/).
 
-The downside of running your own business with thousands of customers is that you're responsible for failure. When I ship a bad bug, I feel it. When I announce a launch date for new hardware and have to delay it over and over, I find it personally embarrassing in a way that I never felt at Google when I was eight layers removed from real customers.
+The hardest part for me about running a business with real customers is being responsible for failure. I have a team, but the buck ultimately stops with me. When I ship a bad bug or fail to launch a new product by the date I predicted, I find it painful and personally embarrassing. It's a completely different experience from being a developer at Microsoft or Google, where I shared blame with the people who reviewed and tested my work, and we were all eight layers removed from real customers.
 
-The benefit of working for myself is that I can shape the business to give myself work that I enjoy. Many of these changes take time, as they involve hiring and training new people, but they're achievable. When I worked for Google, there were aspects of the job that I disliked, and I had no power to change them.
-
-Overall, I'm still happy to be working for myself, and I want to sustain it for the rest of my working life.
+Overall, I'm still happy to be working for myself and hope to sustain it for the rest of my working life.
 
 ---
 
