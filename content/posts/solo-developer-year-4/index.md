@@ -108,7 +108,6 @@ The software has changed a lot in the last year, too. We've added several major 
 * Software updates from the web UI
 * Video bandwidth tuning
 
-
 For fun, I installed the version of TinyPilot from January 2021 and compared it to our January 2022 release. I was surprised at how much has changed in the last year:
 
 <div style="display: flex; justify-content: center; flex-direction: column; max-width: 100%">
