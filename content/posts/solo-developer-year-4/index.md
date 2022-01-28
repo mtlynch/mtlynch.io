@@ -100,21 +100,21 @@ TODO: Finish 2021 TinyPilot stats
 
 ### TinyPilot's software development
 
-The software has changed a lot in the last year, too.
-
-For fun, I installed the version of TinyPilot from January 2021 and compared it to our January 2022 release. I was surprised at how much has changed in just a year in just the UI:
-
-{{<notice type="info">}}
-TODO: Add GIF comparing both versions
-{{</notice>}}
-
-We've added several major features in the last year including:
+The software has changed a lot in the last year, too. We've added several major features, including:
 
 * Mount virtual USB drives and CD-ROMs
 * Wake on LAN
 * Password-based authentication
 * Software updates from the web UI
 * Video bandwidth tuning
+
+
+For fun, I installed the version of TinyPilot from January 2021 and compared it to our January 2022 release. I was surprised at how much has changed in the last year:
+
+<div style="display: flex; justify-content: center; flex-direction: column; max-width: 100%">
+<a href="voyager-1.2.1-hello-world.mp4"><img src="voyager-1.2.1-hello-world.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="max-width: 100%; display: block; object-fit: contain;"></a>
+<a href="voyager-2.3.2-hello-world.mp4"><img src="voyager-2.3.2-hello-world.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="margin-top: 2rem; max-width: 100%; display: block; object-fit: contain;"></a>
+</div>
 
 ## Other projects
 
@@ -249,17 +249,15 @@ Until that point, TinyPilot had always offered different versions so that custom
 
 In October, I got rid of the product catalog and instead focused the website exclusively on my main product, the TinyPilot Voyager.
 
-{{<notice type="info">}}
-TODO: Add Screenshot of TinyPilot after the change.
-{{</notice>}}
+{{<img src="no-catalog.png" alt="Screenshot of TinyPilot website with product catalog removed" hasBorder="True" maxWidth="550px" caption="In October, I removed the product catalog page from TinyPilot and focused on my flagship product.">}}
 
 Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 
-{{<notice type="info">}}
-I considered taking my strategy a step further and selling zero products. That would logically increase my revenue to infinity, but I don't want to be greedy.
-{{</notice>}}
-
 {{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" maxWidth="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
+
+{{<notice type="info">}}
+**Note**: I considered taking my strategy a step further and selling zero products. That would logically increase my revenue to infinity, but I didn't want to be greedy.
+{{</notice>}}
 
 ### Good leadership means helping teammates grow
 
