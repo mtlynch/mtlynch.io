@@ -28,19 +28,16 @@ Previous updates:
 
 ## My first year of profit
 
-After running in the red for the first few years, this is my first year of profit. I earned almost $11k in profit for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from my old projects that have been running in the background.
+After running in the red for the first few years, this is my first year of profit. I earned $13k in profit for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects that have been running in the background.
 
 <canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
 
 | Metric         | 2020         | 2021       | Change                                        |
 |----------------|--------------|------------|-----------------------------------------------|
-| Revenue        | $63,477      | $474,765     | <font color="green">+$411,198 (+648%)</font> |
-| Expenses       | $67,441      | $463,832        | <font color="red">+$396,391 (+588%)</font> |
-| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$10,844</font>** |  **<font color="green">+$14,808 (+inf%)</font>** |
-
-{{<notice type="info">}}
-TODO: Re-do these stats with full December numbers.
-{{</notice>}}
+| Revenue        | $63,477      | $477,449     | <font color="green">+$XX (+XX%)</font> |
+| Expenses       | $67,441      | $464,071        | <font color="red">+$XX (+XX%)</font> |
+{{<table-row>}}Expenses2 | $100 | $150{{</table-row>}}
+| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** |  **<font color="green">+$XX (+inf%)</font>** |
 
 {{<notice type="info">}}
 
@@ -80,7 +77,7 @@ TODO: Finish 2021 TinyPilot stats
 
 | Income/Expense                    | 2020        | 2021      | Change
 |-----------------------------------|-------------|-----------|---------
-| Sales                             | $53,362     | $459,528  |
+| Sales                             | $53,362     | $459,529  |
 | Donations                         | $380        | $0        |
 | Raw materials                     | -$46,143    | -$218,256 |
 | Software development              | -$1,321     | -$119,015 |
@@ -228,7 +225,7 @@ TODO: Finish stats
 | Metric              | 2020     | 2021   | Change
 |---------------------|----------|--------|--------
 | Pageviews           | 19,702   | 17,553 | <font color="red">-2,149 (-11%)</font>
-| Revenue             | $1,889   | $3,600 | <font color="green">+$1,711 (+91%)</font>
+| Revenue             | $1,889   | $2,495 | <font color="green">+$XX (+XX%)</font>
 | Hosting / domain    | $XX      | $XX    | $XX
 | **Net profit**      | **$XX**  | $XX    | $XX
 
@@ -368,12 +365,12 @@ function drawTotalFinancesChart() {
   revenues.set(2018, 2262);
   revenues.set(2019, 7254);
   revenues.set(2020, 63477);
-  revenues.set(2021, 468478);
+  revenues.set(2021, 17920.91 + 459528.53);
   let expenses = new Map();
   expenses.set(2018, 23133);
   expenses.set(2019, 9657);
   expenses.set(2020, 67441);
-  expenses.set(2021, 443025);
+  expenses.set(2021, 7649.72 + 456420.95);
   var myChart = new Chart(ctx, {
       type: 'line',
       data: {
