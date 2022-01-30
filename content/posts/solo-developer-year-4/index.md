@@ -126,26 +126,13 @@ Unfortunately, TinyPilot has its own pace that I don't fully control. For the fi
 
 I'm still excited to write the book, and I hope I have more time for it this year.
 
-{{<notice type="info">}}
-TODO: Finish stats
-{{</notice>}}
-
-| Metric                        | 2021  |
-|-------------------------------|-------|
-| Pageviews                     | 1,927 |
-| Mailing list signups          | 308   |
-
 ### mtlynch.io (this blog)
 
 As with my lack of book-writing time, I had very little blog-writing time. I published three new blog posts, my fewest-ever in five years of blogging.
 
 Ironically, the year that I have the least amount of time to write is the year that I was most desperate to do it. There are so many things I have to learn for TinyPilot that I wish I could capture while the experience is still fresh in my mind, but there just isn't enough time.
 
-I kept my habit of writing [monthly retrospectives](/retrospectives/). I can budget time for those because they're unambiguously a net positive for my business, even in the short term. Almost every retrospective I write, I discover some flaw in my strategy or a weakness in my plans that I wouldn't have noticed had I not sat down to organize my thoughts.
-
-{{<notice type="info">}}
-TODO: Finish stats
-{{</notice>}}
+I kept my habit of writing [monthly retrospectives](/retrospectives/). I can budget time for those because they're unambiguously a net positive for my business, even in the short term. Sitting down to organize my thoughts almost always reveals some flaw in my strategy or a weakness in my plans that I wouldn't have noticed otherwise.
 
 | Metric                                                   | 2020    | 2021    | Change |
 |----------------------------------------------------------|---------|---------|--------|
@@ -156,7 +143,11 @@ TODO: Finish stats
 | [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222   | -$140   | {{<delta-cell>}}
 | **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="red">-$830</font>** | **{{<delta-cell>}}**
 
+{{<notice type="info">}}
+
 \* I [dropped all affiliate partnerships](https://twitter.com/deliberatecoder/status/1342847048811499523) from this blog at the end of 2020.
+
+{{</notice>}}
 
 ### Hit the Front Page of Hacker News
 
