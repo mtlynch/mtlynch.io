@@ -9,6 +9,7 @@ tags:
 description: "TODO: Write blurb"
 date: '2022-02-01'
 hero_image: cover.jpg
+custom_css: true
 images:
 - solo-developer-year-4/og-cover.jpg
 ---
@@ -34,9 +35,9 @@ After running in the red for the first few years, this is my first year of profi
 
 | Metric         | 2020         | 2021       | Change                                        |
 |----------------|--------------|------------|-----------------------------------------------|
-| Revenue        | $63,477      | $477,449     | <font color="green">+$XX (+XX%)</font> |
-| Expenses       | $67,441      | $464,071        | <font color="red">+$XX (+XX%)</font> |
-| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** |  **<font color="green">+$XX (+inf%)</font>** |
+| Revenue        | $63,477      | $477,449   | {{<delta-cell>}} |
+| Expenses       | -$67,441     | -$464,071   | {{<delta-cell>}} |
+| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** |  **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 
@@ -76,19 +77,19 @@ TODO: Finish 2021 TinyPilot stats
 
 | Income/Expense                    | 2020        | 2021      | Change
 |-----------------------------------|-------------|-----------|---------
-| Sales                             | $53,362     | $459,529  |
-| Donations                         | $380        | $0        |
-| Raw materials                     | -$46,143    | -$218,256 |
-| Software development              | -$1,321     | -$119,015 |
-| Electrical engineering consulting | -$7,130     | -$28,662  |
-| Fulfillment staff                 | -$2,570     | -$26,269  |
-| Web design / branding             | -$250       | -$15,931  |
-| Affiliate commissions             | $0          | -$317.35  |
-| Open-source contributions         | -$1,270     | -$240     |
-| Advertising                       | -$675       | -$2,716   |
-| Cloud services                    | -$64        | -$4,231   |
+| Sales                             | $53,362     | $459,529  | {{<delta-cell>}}
+| Donations                         | $380        | $0        | {{<delta-cell>}}
+| Raw materials                     | -$46,143    | -$218,256 | {{<delta-cell>}}
+| Software development              | -$1,321     | -$119,015 | {{<delta-cell>}}
+| Electrical engineering consulting | -$7,130     | -$28,662  | {{<delta-cell>}}
+| Fulfillment staff                 | -$2,570     | -$26,269  | {{<delta-cell>}}
+| Web design / branding             | -$250       | -$15,931  | {{<delta-cell>}}
+| Affiliate commissions             | $0          | -$317.35  | {{<delta-cell>}}
+| Open-source contributions         | -$1,270     | -$240     | {{<delta-cell>}}
+| Advertising                       | -$675       | -$2,716   | {{<delta-cell>}}
+| Cloud services                    | -$64        | -$4,231   | {{<delta-cell>}}
 | Everything else                   | -$0         | -$XX      |
-| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | $XX |
+| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 **Note**: I also have $59k in inventory, but I don't know a useful way to factor that into net profit.
@@ -148,11 +149,11 @@ TODO: Finish stats
 
 | Metric                                                   | 2020    | 2021    | Change |
 |----------------------------------------------------------|---------|---------|--------|
-| Pageviews                                                | 719,899 | 479,666 | <font color="red">-XX (+XX%)</font>
-| Affiliate revenue\*                                      | $1,599  | $0      | <font color="red">-$1,599 (-100%)</font>
-| [Illustrations](/how-to-hire-a-cartoonist/)              | -$964   | $384    | <font color="red">+$195 (+XX%)</font>
+| Pageviews                                                | 719,899 | 479,666 | {{<delta-cell>}}
+| Affiliate revenue\*                                      | $1,599  | $0      | {{<delta-cell>}}
+| [Illustrations](/how-to-hire-a-cartoonist/)              | -$964   | -$384   | {{<delta-cell>}}
 | Hosting / Domain                                         | -$534   |         | <font color="red">+$XX (+XX%)</font>
-| [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222   | -$140   | <font color="red">+$XX (+XX%)</font>
+| [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222   | -$140   | {{<delta-cell>}}
 | **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="red">-$XX</font>** |
 
 \* I [dropped all affiliate partnerships](https://twitter.com/deliberatecoder/status/1342847048811499523) from this blog at the end of 2020.
@@ -175,10 +176,10 @@ TODO: Finish stats
 
 | Metric              | 2020     | 2021    | Change
 |---------------------|----------|---------|--------
-| Purchases           | 29       | 230     | <font color="green">+201 (+693%)</font>
-| Revenue             | $1,431   | $7,483  | <font color="green">+$XX (+XX%)</font>
-| Expenses            | -$983    | -$148   | <font color="green">+$XX (+XX%)</font>
-| **Net profit**      | **$448** | **$7,335** | <font color="green">+$XX (+XX%)</font>
+| Purchases           | 29       | 230     | {{<delta-cell>}}
+| Revenue             | $1,431   | $7,483  | {{<delta-cell>}}
+| Expenses            | -$983    | -$148   | {{<delta-cell>}}
+| **Net profit**      | **$448** | **$7,335** | **{{<delta-cell>}}**
 
 ### Is It Keto
 
@@ -196,10 +197,10 @@ TODO: Finish stats
 
 | Metric                                                              | 2020      | 2021      | Change
 |---------------------------------------------------------------------|-----------|-----------|--------
-| Pageviews                                                           | 1,314,583 | 1,163,745 | <font color="red">-XX (-XX%)</font>
-| Ad revenue                                                          | $2,934    | $5,252    | <font color="green">+$XX (+XX%)</font>
-| Affiliate revenue                                                   | $2,147    | $2,022    | <font color="green">+$XX (+XX%)</font>
-| Freelance designers and [content writers](/hiring-content-writers/) | -$105     | $0        | -$105     | <font color="green">-$105 (-10%)</font>
+| Pageviews                                                           | 1,314,583 | 1,163,745 | {{<delta-cell>}}
+| Ad revenue                                                          | $2,934    | $5,252    | {{<delta-cell>}}
+| Affiliate revenue                                                   | $2,147    | $2,022    | {{<delta-cell>}}
+| Freelance designers and [content writers](/hiring-content-writers/) | -$105     | $0        | {{<delta-cell>}}
 | Hosting / domain                                                    | -$241     |           | <font color="red">+$XX (+XX%)</font>
 | **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$XX</font>**
 
@@ -223,8 +224,8 @@ TODO: Finish stats
 
 | Metric              | 2020     | 2021   | Change
 |---------------------|----------|--------|--------
-| Pageviews           | 19,702   | 17,553 | <font color="red">-2,149 (-11%)</font>
-| Revenue             | $1,889   | $2,495 | <font color="green">+$XX (+XX%)</font>
+| Pageviews           | 19,702   | 17,553 | {{<delta-cell>}}
+| Revenue             | $1,889   | $2,495 | {{<delta-cell>}}
 | Hosting / domain    | $XX      | $XX    | $XX
 | **Net profit**      | **$XX**  | $XX    | $XX
 
@@ -357,6 +358,24 @@ const dollarFormatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
+const deltaDollarFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  signDisplay: 'always',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
+const numberFormatter = new Intl.NumberFormat('en-US', {
+  signDisplay: 'always',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
+const percentageFormatter = new Intl.NumberFormat('en-US', {
+  style: 'percent',
+  signDisplay: 'always',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
 function drawTotalFinancesChart() {
   var ctx = document.getElementById('total-finances').getContext('2d');
   ctx.height = 400;
@@ -483,6 +502,44 @@ function drawCharts(limit) {
       }
     });
 }
+function parseMetric(raw) {
+  return parseInt(raw.replace(/[$,]/gi, ''));
+}
+function populateDeltaCell(deltaCell) {
+  deltaCell.innerText = '';
+  const baseValueRaw = deltaCell.previousElementSibling.previousElementSibling.innerText;
+  const newValueRaw = deltaCell.previousElementSibling.innerText;
+  console.log('baseRaw', baseValueRaw);
+  const baseValue = parseMetric(baseValueRaw);
+  console.log('base', baseValue);
+  const newValue = parseMetric(newValueRaw);
+  let absoluteDelta = newValue - baseValue;
+  let percentageDelta = absoluteDelta / baseValue;
+  if (absoluteDelta > 0) {
+    deltaCell.classList.add('good-delta');
+  } else if (absoluteDelta < 0) {
+    deltaCell.classList.add('bad-delta');
+  }
+  let absoluteFormatter = numberFormatter;
+  if (baseValueRaw.indexOf('$') >= 0) {
+    absoluteFormatter = deltaDollarFormatter;
+  }
+  if (baseValueRaw.indexOf('-') >= 0) {
+    if (newValueRaw.indexOf('-') >= 0) {
+      absoluteDelta *= -1;
+    } else {
+      percentageDelta = Infinity;
+    }
+  }
+  deltaCell.innerText = `${absoluteFormatter.format(absoluteDelta)} (${percentageFormatter.format(percentageDelta)})`;
+}
+document.querySelectorAll('[blog-purpose="delta"]').forEach((deltaSpan) => {
+  let el = deltaSpan.parentElement;
+  while (!(el instanceof HTMLTableCellElement)) {
+    el = el.parentElement;
+  }
+  populateDeltaCell(el);
+});
 drawTotalFinancesChart();
 drawCharts("2022-01");
 </script>
