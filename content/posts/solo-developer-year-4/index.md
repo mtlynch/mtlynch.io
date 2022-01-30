@@ -36,7 +36,6 @@ After running in the red for the first few years, this is my first year of profi
 |----------------|--------------|------------|-----------------------------------------------|
 | Revenue        | $63,477      | $477,449     | <font color="green">+$XX (+XX%)</font> |
 | Expenses       | $67,441      | $464,071        | <font color="red">+$XX (+XX%)</font> |
-{{<table-row>}}Expenses2 | $100 | $150{{</table-row>}}
 | **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** |  **<font color="green">+$XX (+inf%)</font>** |
 
 {{<notice type="info">}}
