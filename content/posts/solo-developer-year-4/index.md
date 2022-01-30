@@ -152,9 +152,9 @@ TODO: Finish stats
 | Pageviews                                                | 719,899 | 479,666 | {{<delta-cell>}}
 | Affiliate revenue\*                                      | $1,599  | $0      | {{<delta-cell>}}
 | [Illustrations](/how-to-hire-a-cartoonist/)              | -$964   | -$384   | {{<delta-cell>}}
-| Hosting / Domain                                         | -$534   |         | <font color="red">+$XX (+XX%)</font>
+| Hosting / Domain                                         | -$534   | -$306   | {{<delta-cell>}}
 | [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222   | -$140   | {{<delta-cell>}}
-| **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="red">-$XX</font>** |
+| **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="red">-$830</font>** | **{{<delta-cell>}}**
 
 \* I [dropped all affiliate partnerships](https://twitter.com/deliberatecoder/status/1342847048811499523) from this blog at the end of 2020.
 
@@ -191,18 +191,14 @@ I put the site on the backburner when I started TinyPilot, but it continued to g
 
 I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
 
-{{<notice type="info">}}
-TODO: Finish stats
-{{</notice>}}
-
 | Metric                                                              | 2020      | 2021      | Change
 |---------------------------------------------------------------------|-----------|-----------|--------
 | Pageviews                                                           | 1,314,583 | 1,163,745 | {{<delta-cell>}}
 | Ad revenue                                                          | $2,934    | $5,252    | {{<delta-cell>}}
 | Affiliate revenue                                                   | $2,147    | $2,022    | {{<delta-cell>}}
 | Freelance designers and [content writers](/hiring-content-writers/) | -$105     | $0        | {{<delta-cell>}}
-| Hosting / domain                                                    | -$241     |           | <font color="red">+$XX (+XX%)</font>
-| **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$XX</font>**
+| Hosting / domain                                                    | -$241     | -$240     | {{<delta-cell>}}
+| **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$7,034</font>** | **{{<delta-cell>}}**
 
 ### Zestful
 
@@ -218,16 +214,11 @@ Because of TinyPilot, I don't have time to work on Zestful, but it fortunately h
 
 {{<revenue-graph project="zestful">}}
 
-{{<notice type="info">}}
-TODO: Finish stats
-{{</notice>}}
-
 | Metric              | 2020     | 2021   | Change
 |---------------------|----------|--------|--------
-| Pageviews           | 19,702   | 17,553 | {{<delta-cell>}}
 | Revenue             | $1,889   | $2,495 | {{<delta-cell>}}
-| Hosting / domain    | $XX      | $XX    | $XX
-| **Net profit**      | **$XX**  | $XX    | $XX
+| Hosting / domain    | -$112    | -$113   | {{<delta-cell>}}
+| **Net profit**      | **$1,777**  | **$2,382**    | **{{<delta-cell>}}**
 
 ## Lessons learned
 
@@ -239,9 +230,9 @@ Starting in October, revenues doubled to $40-60k/month. TinyPilot didn't receive
 
 So, what doubled our sales? I got rid of our product page.
 
-Until that point, TinyPilot had always offered different versions so that customers could pick the TinyPilot product that matched their budget. Customers who wanted the custom-designed plug 'n play model could buy our flagship TinyPilot Voyager. Customers who wanted a more DIY experience could buy our Hobbyist Kit. People who already had all the hardware could buy a software-only package.
-
 {{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" maxWidth="600px" caption="TinyPilot used to offer a variety of products." hasBorder="true">}}
+
+Until that point, TinyPilot had always offered different versions so that customers could pick the TinyPilot product that matched their budget. Customers who wanted the custom-designed plug 'n play model could buy our flagship TinyPilot Voyager. Customers who wanted a more DIY experience could buy our Hobbyist Kit. People who already had all the hardware could buy a software-only package.
 
 In October, I got rid of the product catalog and instead focused the website exclusively on my main product, the TinyPilot Voyager.
 
@@ -505,41 +496,40 @@ function drawCharts(limit) {
 function parseMetric(raw) {
   return parseInt(raw.replace(/[$,]/gi, ''));
 }
-function populateDeltaCell(deltaCell) {
-  deltaCell.innerText = '';
+function populateDeltaCell(deltaSpan) {
+  // Find the parent <td> element
+  let el = deltaSpan.parentElement;
+  while (el && !(el instanceof HTMLTableCellElement)) {
+    el = el.parentElement;
+  }
+  deltaCell = el;
   const baseValueRaw = deltaCell.previousElementSibling.previousElementSibling.innerText;
   const newValueRaw = deltaCell.previousElementSibling.innerText;
-  console.log('baseRaw', baseValueRaw);
   const baseValue = parseMetric(baseValueRaw);
-  console.log('base', baseValue);
   const newValue = parseMetric(newValueRaw);
   let absoluteDelta = newValue - baseValue;
   let percentageDelta = absoluteDelta / baseValue;
   if (absoluteDelta > 0) {
-    deltaCell.classList.add('good-delta');
+    deltaSpan.classList.add('good-delta');
   } else if (absoluteDelta < 0) {
-    deltaCell.classList.add('bad-delta');
+    deltaSpan.classList.add('bad-delta');
   }
   let absoluteFormatter = numberFormatter;
   if (baseValueRaw.indexOf('$') >= 0) {
     absoluteFormatter = deltaDollarFormatter;
   }
-  if (baseValueRaw.indexOf('-') >= 0) {
-    if (newValueRaw.indexOf('-') >= 0) {
-      absoluteDelta *= -1;
-    } else {
-      percentageDelta = Infinity;
+  if (deltaCell.previousElementSibling.previousElementSibling.previousElementSibling.innerText !== "Net profit") {
+    if (baseValueRaw.indexOf('-') >= 0) {
+      if (newValueRaw.indexOf('-') >= 0) {
+        absoluteDelta *= -1;
+      } else {
+        percentageDelta = Infinity;
+      }
     }
   }
-  deltaCell.innerText = `${absoluteFormatter.format(absoluteDelta)} (${percentageFormatter.format(percentageDelta)})`;
+  deltaSpan.innerText = `${absoluteFormatter.format(absoluteDelta)} (${percentageFormatter.format(percentageDelta)})`;
 }
-document.querySelectorAll('[blog-purpose="delta"]').forEach((deltaSpan) => {
-  let el = deltaSpan.parentElement;
-  while (!(el instanceof HTMLTableCellElement)) {
-    el = el.parentElement;
-  }
-  populateDeltaCell(el);
-});
+document.querySelectorAll('[blog-purpose="delta"]').forEach(populateDeltaCell);
 drawTotalFinancesChart();
 drawCharts("2022-01");
 </script>
