@@ -6,7 +6,7 @@ tags:
 - tinypilot
 - is it keto
 - zestful
-description: "TODO: Write blurb"
+description: Four years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my fourth year and what I've learned so far about bootstrapping software businesses.
 date: '2022-02-01'
 hero_image: cover.jpg
 custom_css: true
@@ -59,7 +59,7 @@ TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It all
 TODO: Replace with GIF of current TinyPilot UI
 {{</notice>}}
 
-At the start of 2021, I was TinyPilot's sole developer, customer support agent, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our home, which was slowly transforming into a TinyPilot warehouse.
+At the start of 2021, I was TinyPilot's sole developer, customer support agent, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our Western Massachusetts home, which was slowly transforming into a TinyPilot warehouse.
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and a [distributor in Europe](https://kvm-ip.de).
 
@@ -67,30 +67,26 @@ Today, TinyPilot has a real office, a two-person fulfillment staff, a team of th
 
 ### TinyPilot finances
 
-TinyPilot's monthly revenue grew fourfold over 2020, and it's continuing to grow.
+For most of the year, TinyPilot's sales were inconsistent. We saw big spikes when popular tech reviewers featured TinyPilot, but then sales dwindled afterward.
 
-For most of the year, TinyPilot's sales were inconsistent. We saw big spikes when popular tech reviewers featured TinyPilot, but then sales dwindled afterward. In September and October, we partnered with a European distributor and refocused our website (more on that [below](#sell-just-one-thing)). Those changes smoothed out our sales and made the business less reliant on external events.
+In September and October, we partnered with a European distributor and refocused our website (more on that [below](#sell-just-one-thing)). Those changes smoothed out our sales and made the business less reliant on external events.
 
 {{<revenue-graph project="tinypilot">}}
 
-{{<notice type="info">}}
-TODO: Finish 2021 TinyPilot stats
-{{</notice>}}
 
 | Income/Expense                    | 2020        | 2021      | Change
 |-----------------------------------|-------------|-----------|---------
-| Sales                             | $53,362     | $459,529  | {{<delta-cell>}}
-| Donations                         | $380        | $0        | {{<delta-cell>}}
-| Raw materials                     | -$46,143    | -$218,256 | {{<delta-cell>}}
+| Sales                             | $53,742     | $459,529  | {{<delta-cell>}}
+| Raw materials                     | -$46,143    | -$248,273 | {{<delta-cell>}}
 | Software development              | -$1,321     | -$119,015 | {{<delta-cell>}}
 | Electrical engineering consulting | -$7,130     | -$28,662  | {{<delta-cell>}}
-| Fulfillment staff                 | -$2,570     | -$26,269  | {{<delta-cell>}}
+| Fulfillment staff                 | -$2,570     | -$25,893  | {{<delta-cell>}}
 | Web design / branding             | -$250       | -$15,931  | {{<delta-cell>}}
-| Affiliate commissions             | $0          | -$317.35  | {{<delta-cell>}}
-| Open-source contributions         | -$1,270     | -$240     | {{<delta-cell>}}
-| Advertising                       | -$675       | -$2,716   | {{<delta-cell>}}
-| Cloud services                    | -$64        | -$4,231   | {{<delta-cell>}}
-| Everything else                   | -$0         | -$XX      |
+| Cloud services                    | -$64        | -$5,554   | {{<delta-cell>}}
+| Office space                      | $0          | -$4,400   | {{<delta-cell>}}
+| Advertising                       | -$675       | -$3,633   | {{<delta-cell>}}
+| Office equipment                  | $0          | -$2,083   | {{<delta-cell>}}
+| Everything else                   | $0         | -$2,738   | {{<delta-cell>}}
 | **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
@@ -155,7 +151,7 @@ I kept my habit of writing [monthly retrospectives](/retrospectives/). I can bud
 
 {{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging for technically sophisticated readers.">}}
 
-At the beginning of the year, I released my first-ever paid course. It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
+At the beginning of the year, I released my first-ever [paid course](https://hitthefrontpage.com). It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
 I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course for helping them reach the #1 spot on Hacker News. And it wasn't that I taught them special tricks or gimmicks &mdash; the course helped them improve their writing and better understand which topics resonate with the Hacker News audience.
 
@@ -166,9 +162,9 @@ The course reached $7.3k in sales, which fell disappointingly short of my $20k g
 | Metric              | 2020     | 2021    | Change
 |---------------------|----------|---------|--------
 | Purchases           | 29       | 230     | {{<delta-cell>}}
-| Revenue             | $1,431   | $7,483  | {{<delta-cell>}}
+| Revenue             | $0       | $7,483  | {{<delta-cell>}}
 | Expenses            | -$983    | -$148   | {{<delta-cell>}}
-| **Net profit**      | **$448** | **$7,335** | **{{<delta-cell>}}**
+| **Net profit**      | **-$983** | **$7,335** | **{{<delta-cell>}}**
 
 ### Is It Keto
 
@@ -506,8 +502,8 @@ function populateDeltaCell(deltaSpan) {
     absoluteFormatter = deltaDollarFormatter;
   }
   let isNetProfitRow = deltaCell.previousElementSibling.previousElementSibling.previousElementSibling.innerText === "Net profit";
-  if (baseValueRaw.indexOf('-') >= 0) {
-    if (newValueRaw.indexOf('-') >= 0) {
+  if (baseValue <= 0) {
+    if (newValue <= 0) {
       if (isNetProfitRow) {
         percentageDelta *= -1;
       } else {
