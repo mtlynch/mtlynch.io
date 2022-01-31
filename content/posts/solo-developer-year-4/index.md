@@ -15,7 +15,7 @@ images:
 ---
 Four years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own self-funded software business.
 
-For the first few years, all of my businesses flopped. They all operated at a loss with the most successful only
+For the first few years, all of my businesses flopped. They all operated at a loss, and none of them earned more than a few hundred dollars per month in revenue.
 
 Halfway through my third year, I created a network administration device called [TinyPilot](https://tinypilotkvm.com). It quickly caught on, and it's been my main focus ever since. TinyPilot generated $460k in revenue in 2021, its first full year in operation.
 
@@ -29,7 +29,7 @@ Previous updates:
 
 ## My first year of profit
 
-After running in the red for the first few years, this is my first year of profit. I earned $13k in profit for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects that have been running in the background.
+After running in the red for the first few years, this is my first year of profit. I earned $13k in profit for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
 
 <canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
 
@@ -63,9 +63,9 @@ Today, TinyPilot has a real office, a two-person fulfillment staff, a team of th
 
 ### TinyPilot finances
 
-For most of the year, TinyPilot's sales were inconsistent. We saw big spikes when popular tech reviewers featured TinyPilot, but then sales dwindled afterward.
+For most of the year, TinyPilot's sales were inconsistent. We saw big spikes when popular tech reviewers featured TinyPilot, but sales dwindled afterward.
 
-In September and October, we partnered with a European distributor and refocused our website (more on that [below](#sell-just-one-thing)). Those changes smoothed out our sales and made the business less reliant on external events.
+Starting in September, we partnered with a European distributor and refocused our website (more on that [below](#sell-just-one-thing)). Those changes smoothed out our sales and made the business less reliant on luck from external events.
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -114,7 +114,7 @@ In writing this blog for the past five years, I've learned several techniques th
 
 My great shame of the year is that I made almost no progress on the book.
 
-I've had a ritual for the past three years of writing for an hour every morning. That generally translated to about ten blog posts per year. I thought that if I spent that time on a book instead, I'd be done within the year.
+For the past three years, I've had a routine of writing for an hour every morning. That generally translated to about ten blog posts per year. I thought that if I spent that time on a book instead, I'd finish within the year.
 
 Unfortunately, TinyPilot has its own pace that I don't fully control. For the first few months of 2021, I stuck to writing for an hour in the morning, but I'd end every day behind on TinyPilot. I decided to suspend my writing until TinyPilot required less management, but that never happened.
 
@@ -124,7 +124,7 @@ I'm still excited to write the book, and I hope I have more time for it this yea
 
 As with my lack of book-writing time, I had very little blog-writing time. I published three new blog posts, my fewest ever in five years of blogging.
 
-Ironically, I found myself most desperate to write in the year I had the least amount of time to do it. There are so many things I've learned for TinyPilot that I wish I could capture while the experience is still fresh, but there just isn't enough time.
+Ironically, the year I found myself most desperate to write was the year I had the least time to do it. There are so many things I've learned for TinyPilot that I wish I could capture while the experience is still fresh, but there just isn't enough time.
 
 I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget time for those because they're unambiguously a net positive for my business, even in the short term. Sitting down to organize my thoughts almost always reveals some flaw in my strategy or a weakness in my plans that I wouldn't have noticed otherwise.
 
@@ -145,13 +145,13 @@ I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget 
 
 ### Hit the Front Page of Hacker News
 
-{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging for technically sophisticated readers.">}}
+{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about blogging for technically sophisticated readers.">}}
 
 At the beginning of the year, I released my first-ever [paid course](https://hitthefrontpage.com). It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
 I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course for helping them reach the #1 spot on Hacker News. And it wasn't that I taught them special tricks or gimmicks &mdash; the course helped them improve their writing and better understand which topics resonate with the Hacker News audience.
 
-The course reached $7.5k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the expereience taught me about creating educational products, and I'd like to do more of that in the future.
+The course reached $7.5k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the experience taught me about creating educational products, and I'd like to do more of that in the future.
 
 {{<revenue-graph project="htfp">}}
 
@@ -168,7 +168,7 @@ The course reached $7.5k in sales, which fell disappointingly short of my $20k g
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet. It earns money from Amazon Affiliate links and Google AdSense.
 
-I put the site on the backburner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k/month. That slowed down around June, as other sites began offering similar content and supplanted Is It Keto in search results.
+I put the site on the back burner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k/month. That slowed down around June, as other sites began offering similar content and supplanted Is It Keto in search results.
 
 I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
 
@@ -189,7 +189,7 @@ Zestful is a paid service that parses recipe ingredients into structured data. F
 
 I created Zestful in 2019 and worked on it for a few months before writing it off as a failure. It attracted clients every few months for one-time bulk parses, but it never generated revenue consistently.
 
-2021 was a nice comeback year for Zestful. Starting midyear, I began seeing revenue more regularly. New clients started building on top of Zestful, and old clients were increasing their usage. It now consistently earns a few hundred dollars per month. In December, it broke $1k for the first time from pay-as-you-go users.
+2021 was a gratifying comeback year for Zestful. Starting midyear, I began seeing revenue more regularly. New clients began building on top of Zestful, and old clients increased their usage. It now consistently earns a few hundred dollars per month. In December, it broke $1k for the first time from pay-as-you-go users.
 
 {{<revenue-graph project="zestful">}}
 
@@ -239,9 +239,9 @@ In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), [WPEngine](https:/
 >
 >**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
-When I started TinyPilot, I thought that good management meant protecting my employees from anything outside their job description. I worked hard to do fill gaps outside of my employees' roles so that they had consistent, focused work.
+When I started TinyPilot, I thought good management meant protecting my employees from anything outside their job description. I worked hard to fill gaps outside of my employees' roles so that they had consistent, focused work.
 
-Over time, I realized that my protectiveness limited growth. People enjoy learning and evolving in their careers. If I'm preventing employees from doing anything beyond their original job, I'm hindering their development.
+Over time, I realized that my protectiveness limited growth. People enjoy learning and evolving in their careers. If I prevent employees from doing anything beyond their original job, I'm hindering their development.
 
 In October, Eric, a member of TinyPilot's fulfillment staff, said he was interested in increasing his hours, so we decided to share the customer support load I'd been carrying alone. It was something I'd considered before, but I worried that customer support required technical knowledge that only I had.
 
@@ -257,12 +257,12 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 
 ### Grow TinyPilot to $600k in annual revenue
 
-* **Result**: Quadrupled TinyPilot's monthly revenue, totalling $468k for the year
+* **Result**: Quadrupled TinyPilot's monthly revenue, totaling $468k for the year
 * **Grade**: B
 
-Okay, my $600k revenue goal turned out to be tad a bit optimistic. I chose that number in January, when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's sales shriveled by 50% over the next two months. We recovered, but never with the the rapid growth of those first few months.
+Okay, my $600k revenue goal turned out to be a tad optimistic. I chose that number in January, when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's sales shriveled by 50% over the next two months. We recovered, but never with the rapid growth of those first few months.
 
-Still, $468k is nothing to sneeze at. It's possible that different decsions would have brought me to $600k, but nothing stands out as an egregious blunder.
+Still, $468k is nothing to sneeze at. It's possible that different decisions would have brought me to $600k, but nothing stands out as an egregious blunder.
 
 ### Publish six blog posts and one book
 
@@ -271,7 +271,7 @@ Still, $468k is nothing to sneeze at. It's possible that different decsions woul
 
 Writing is one of the things I enjoy most, so I'm disappointed I had so little time for it.
 
-Looking back, I still feel like deprioritizing my writing was the right decision, but I definitely fell short of the goal I set.
+Looking back, I still feel like deprioritizing my writing was the right decision, but I fell short of the goal I set.
 
 ### Automate TinyPilot management
 
@@ -280,7 +280,7 @@ Looking back, I still feel like deprioritizing my writing was the right decision
 
 I've made a lot of progress in getting myself out of the critical path in TinyPilot's day-to-day operations.
 
-My goal was to be able to take a two-week vaction, and I'm not quite there yet. I took a one-week vacation over the holidays, where I didn't check work email or monitor sales. That went well, though I did have to take a call from FedEx to prevent thousands of dollars of equipment from being sent back to China.
+My goal was to be able to take a two-week vacation, and I'm not quite there yet. I took a one-week vacation over the holidays, where I didn't check work email or monitor sales. That went well, though I did have to take a call from FedEx to prevent thousands of dollars of equipment from being sent back to China.
 
 ## Goals for year four
 
@@ -306,9 +306,9 @@ I plan to work with my electrical engineering vendor to develop a new TinyPilot 
 
 When I do these [annual writeups](/tags/annual-review/), I think about whether I still love being a bootstrapped founder. This is the first year where it's difficult to say yes. I still like my job, but it's not as fun and easy as when I was just building unsuccessful software products and blogging about it.
 
-I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500/month. At that scale, I felt too limited by capital. You can't hire for any skilled roles or pay for expert guidance with $500. I frequently had to solve uninteresting problems simply because my revenue was too small to justify better solutions.
+I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500/month. At that scale, I felt too limited by capital. You can't hire skilled roles or pay for expert guidance with $500. I frequently had to solve uninteresting problems simply because my revenue was too small to justify better solutions.
 
-With TinyPilot, there's enough money coming in to hire specialists where it makes sense. I enjoy being able to work with a talented dev team again after three years of coding by myself. I pay $200/month for dev tooling and continuous integration because eliminating that gruntwork is obviously a net positive. In my previous businesses, paying for those tools would consume most of my revenue.
+With TinyPilot, there's enough money coming in to hire specialists where it makes sense. I enjoy working with a talented dev team again after three years of coding by myself. I pay $200/month for dev tooling and continuous integration because eliminating that gruntwork is obviously a net positive. In my previous businesses, paying for those tools would consume most of my revenue.
 
 I enjoy having a company culture that matches what I always wanted to see from my employers. Everyone has flexible hours. There are no tight deadlines, so people don't have to compromise on quality. Almost all of our work is asynchronous, so everyone has the space to do [deep, focused work](/book-reports/deep-work/).
 
