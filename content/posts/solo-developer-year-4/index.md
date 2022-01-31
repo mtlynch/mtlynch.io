@@ -67,7 +67,9 @@ Today, TinyPilot has a real office, a two-person fulfillment staff, a team of th
 
 ### TinyPilot finances
 
-Revenue grew by eightfold from 2020, and they're continuing to grow.
+TinyPilot's monthly revenue grew fourfold over 2020, and it's continuing to grow.
+
+For most of the year, TinyPilot's sales were inconsistent. We saw big spikes when popular tech reviewers reviewed TinyPilot, but then sales would slump for a few months. In September and October, we refocused our website (more on that [below](#sell-just-one-thing)) and added an EU distributor. Those changes smoothed out our sales and made the business less reliant on external events.
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -92,7 +94,7 @@ TODO: Finish 2021 TinyPilot stats
 | **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
-**Note**: I also have $59k in inventory, but I don't know a useful way to factor that into net profit.
+**Note**: Net profit is a little misleading, as it doesn't reflect the additional $59k I have in inventory.
 {{</notice>}}
 
 ### TinyPilot's software development
@@ -161,10 +163,6 @@ It earned $7.3k in its first year, which was a bit disappointing. I was hoping f
 
 {{<revenue-graph project="htfp">}}
 
-{{<notice type="info">}}
-TODO: Finish stats
-{{</notice>}}
-
 | Metric              | 2020     | 2021    | Change
 |---------------------|----------|---------|--------
 | Purchases           | 29       | 230     | {{<delta-cell>}}
@@ -200,8 +198,6 @@ Zestful is a paid service that parses recipe ingredients into structured data. F
 I created Zestful in 2019 and worked on it for a few months before writing it off as a failure. It attracted clients every few months for one-time bulk parses, but it never generated revenue consistently.
 
 2021 was a nice comeback year for Zestful. Starting midyear, I began seeing revenue more regularly. New clients started building on top of Zestful, and old clients were increasing their usage. It now earns a few hundred dollars per month, and in December it broke $1k for the first time from pay-as-you-go users.
-
-Because of TinyPilot, I don't have time to work on Zestful, but it fortunately hasn't required any work at all. None of Zestful's customers have reported issues or requested technical support, so it's living the SaaS dream of pure passive income.
 
 {{<revenue-graph project="zestful">}}
 
@@ -427,7 +423,7 @@ function drawChart(chartId, labels, data) {
       data: {
         labels: labels,
         datasets: [{
-          label: 'Total Revenue',
+          label: 'Revenue',
           data: data,
           backgroundColor: '#047a15',
           borderColor: '#4ba658',
