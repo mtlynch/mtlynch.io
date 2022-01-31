@@ -126,7 +126,7 @@ As with my lack of book-writing time, I had very little blog-writing time. I pub
 
 Ironically, I found myself most desperate to write in the year I had the least amount of time to do it. There are so many things I've learned for TinyPilot that I wish I could capture while the experience is still fresh, but there just isn't enough time.
 
-I kept my habit of writing [monthly retrospectives](/retrospectives/). I can budget time for those because they're unambiguously a net positive for my business, even in the short term. Sitting down to organize my thoughts almost always reveals some flaw in my strategy or a weakness in my plans that I wouldn't have noticed otherwise.
+I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget time for those because they're unambiguously a net positive for my business, even in the short term. Sitting down to organize my thoughts almost always reveals some flaw in my strategy or a weakness in my plans that I wouldn't have noticed otherwise.
 
 | Metric                                                   | 2020    | 2021    | Change |
 |----------------------------------------------------------|---------|---------|--------|
@@ -151,7 +151,7 @@ At the beginning of the year, I released my first-ever [paid course](https://hit
 
 I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course for helping them reach the #1 spot on Hacker News. And it wasn't that I taught them special tricks or gimmicks &mdash; the course helped them improve their writing and better understand which topics resonate with the Hacker News audience.
 
-The course reached $7.3k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the expereience taught me about creating educational products, and I'd like to do more of that in the future.
+The course reached $7.5k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the expereience taught me about creating educational products, and I'd like to do more of that in the future.
 
 {{<revenue-graph project="htfp">}}
 
@@ -203,7 +203,7 @@ I created Zestful in 2019 and worked on it for a few months before writing it of
 
 ### Sell just one thing
 
-For most of the year, TinyPilot earned a steady $20-30k/month in revenue. The months where there was a sales bump, it was because we got positive reviews, mainly on YouTube.
+For most of the year, TinyPilot earned a steady $20-30k/month in revenue. The months where there was a sales bump, it was because of positive reviews, mainly on YouTube.
 
 Starting in October, revenues doubled to $40-60k/month. TinyPilot didn't receive any new reviews in that period. In fact, I didn't do any marketing at all in those months.
 
