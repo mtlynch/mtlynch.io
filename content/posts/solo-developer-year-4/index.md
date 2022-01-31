@@ -53,11 +53,7 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 TinyPilot is an open-source KVM over IP device built on the Raspberry Pi. It allows you to control another computer from your browser without installing any software, even if the computer has no operating system or network connectivity.
 
-<a href="tinypilot-bios.gif" style="display: block; margin: auto 0;"><img src="tinypilot-bios.gif" style="margin: 0 auto; display: block; object-fit: contain; max-width: 550px"></a>
-
-{{<notice type="info">}}
-TODO: Replace with GIF of current TinyPilot UI
-{{</notice>}}
+<a href="tinypilot-demo-2.1.2-full.gif" style="display: block; margin: auto 0;"><img src="tinypilot-demo-2.1.2-opt.gif" style="margin: 0 auto; display: block; object-fit: contain; max-width: 630px"></a>
 
 At the start of 2021, I was TinyPilot's sole developer, customer support agent, salesperson, and marketer. The only other employee was my girlfriend, who managed inventory and fulfilled orders. We ran TinyPilot out of our Western Massachusetts home, which was slowly transforming into a TinyPilot warehouse.
 
@@ -155,7 +151,7 @@ At the beginning of the year, I released my first-ever [paid course](https://hit
 
 I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course for helping them reach the #1 spot on Hacker News. And it wasn't that I taught them special tricks or gimmicks &mdash; the course helped them improve their writing and better understand which topics resonate with the Hacker News audience.
 
-The course reached $7.3k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the expereience taught me a lot about creating educational products, and I'd like to do more of that in the future.
+The course reached $7.3k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the expereience taught me about creating educational products, and I'd like to do more of that in the future.
 
 {{<revenue-graph project="htfp">}}
 
@@ -284,13 +280,13 @@ Looking back, I still feel like deprioritizing my writing was the right decision
 
 I've made a lot of progress in getting myself out of the critical path in TinyPilot's day-to-day operations.
 
-My goal was to be able to take a two-week vaction, and I'm not quite there yet. I took a one-week vacation over the holidays, where I didn't check work email or monitor sales. That went pretty well, though I did have to take a call from FedEx to prevent thousands of dollars of equipment from being sent back to China.
+My goal was to be able to take a two-week vaction, and I'm not quite there yet. I took a one-week vacation over the holidays, where I didn't check work email or monitor sales. That went well, though I did have to take a call from FedEx to prevent thousands of dollars of equipment from being sent back to China.
 
 ## Goals for year four
 
 ### Grow TinyPilot to $1M in annual revenue
 
-I've never invested as much as I want in marketing for TinyPilot. I've been fortunate that the business survives almost exclusively on word of mouth and organic search. The only marketing I've done is sending free units to YouTube creators. That's worked pretty well, but there are tons of marketing channels that I've never explored at all.
+I've never invested as much as I want in marketing for TinyPilot. I've been fortunate that the business survives almost exclusively on word of mouth and organic search. The only marketing I've done is sending free units to YouTube creators. That's been successful, but there are tons of marketing channels that I've never explored at all.
 
 I think the right marketing channels could double my current revenue. And if I double to $900k, why not just make it a cool million?
 
