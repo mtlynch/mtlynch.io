@@ -57,8 +57,8 @@
       <link rel="stylesheet" href="{{ . | relURL }}" />
     {{ end }}
 
-    {{ if and .Params.custom_css .Permalink }}
-      <link rel="stylesheet" href="{{ printf `%s%s` .Permalink `pagestyle.css` }}" />
+    {{ if and .Params.custom_css }}
+      <link rel="stylesheet" href="pagestyle.css" />
     {{ end }}
 
     {{ range .Site.Params.custom_js }}
