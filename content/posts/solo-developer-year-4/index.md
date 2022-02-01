@@ -29,7 +29,7 @@ Previous updates:
 
 ## My first year of profit
 
-After running in the red for the first few years, this is my first year of profit. I earned $13k in profit for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
+After running in the red for the first few years, this is my first year of profit. I earned a total of $13k for the year. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
 
 <canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
 
@@ -149,7 +149,7 @@ I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget 
 
 At the beginning of the year, I released my first-ever [paid course](https://hitthefrontpage.com). It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
-I'm proud of the content, and I've heard positive feedback from customers. A few people credited the course for helping them reach the #1 spot on Hacker News. And it wasn't that I taught them special tricks or gimmicks &mdash; the course helped them improve their writing and better understand which topics resonate with the Hacker News audience.
+I'm proud of the content, and I've heard positive feedback from customers. A few of them credited the course for blog posts that reached the #1 spot on Hacker News.
 
 The course reached $7.5k in sales, which fell disappointingly short of my $20k goal. Had TinyPilot not been so busy, I could have spent more time marketing the course and gotten closer to my target. Still, the experience taught me about creating educational products, and I'd like to do more of that in the future.
 
@@ -170,7 +170,7 @@ I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that te
 
 I put the site on the back burner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k/month. That slowed down around June, as other sites began offering similar content and supplanted Is It Keto in search results.
 
-I considered selling the site but I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
+I considered selling the site but, I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather spend that time on TinyPilot.
 
 | Metric                                                              | 2020      | 2021      | Change
 |---------------------------------------------------------------------|-----------|-----------|--------
@@ -189,7 +189,7 @@ Zestful is a paid service that parses recipe ingredients into structured data. F
 
 I created Zestful in 2019 and worked on it for a few months before writing it off as a failure. It attracted clients every few months for one-time bulk parses, but it never generated revenue consistently.
 
-2021 was a gratifying comeback year for Zestful. Starting midyear, I began seeing revenue more regularly. New clients began building on top of Zestful, and old clients increased their usage. It now consistently earns a few hundred dollars per month. In December, it broke $1k for the first time from pay-as-you-go users.
+2021 was a gratifying comeback year for Zestful. Starting midyear, I began seeing revenue more regularly. New clients started building on top of Zestful, and old clients increased their usage. It now consistently earns a few hundred dollars per month. In December, it broke $1k for the first time from pay-as-you-go users.
 
 {{<revenue-graph project="zestful">}}
 
@@ -203,7 +203,7 @@ I created Zestful in 2019 and worked on it for a few months before writing it of
 
 ### Sell just one thing
 
-For most of the year, TinyPilot earned a steady $20-30k/month in revenue. The months where there was a sales bump, it was because of positive reviews, mainly on YouTube.
+For most of the year, TinyPilot earned a steady $20-30k/month in revenue. The months where sales jumped were because of positive reviews, mainly on YouTube.
 
 Starting in October, revenues doubled to $40-60k/month. TinyPilot didn't receive any new reviews in that period. In fact, I didn't do any marketing at all in those months.
 
@@ -219,12 +219,12 @@ Sales jumped immediately. At first, I thought it might be a coincidence, but the
 
 {{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" maxWidth="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
 
-I think the change eliminated friction and decision-making from the buying process. Customers didn't always understand what the difference was between the products or whether they needed to buy the accessories.
+I think the change eliminated friction and decision-making from the buying process. Customers didn't always understand the difference between the products or whether they needed to buy accessories separately.
 
 Now that there's only a single option, the purchase decision reduces to a simple question: do you want this product?
 
 {{<notice type="info">}}
-**Note**: I considered taking my strategy a step further and selling zero products. That would logically increase my revenue to infinity, but I didn't want to be greedy.
+**Note**: I considered taking my strategy one step further and selling zero products. That would logically increase my revenue to infinity, but I didn't want to be greedy.
 {{</notice>}}
 
 ### Good leadership means helping teammates grow
@@ -239,17 +239,17 @@ In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), [WPEngine](https:/
 >
 >**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
-When I started TinyPilot, I thought good management meant protecting my employees from anything outside their job description. I worked hard to fill gaps outside of my employees' roles so that they had consistent, focused work.
+When I started TinyPilot, I thought good management meant protecting my employees from anything outside their job description. I worked hard to fill gaps outside of my employees' roles to ensure they had consistent, focused work.
 
-Over time, I realized that my protectiveness limited growth. People enjoy learning and evolving in their careers. If I prevent employees from doing anything beyond their original job, I'm hindering their development.
+Over time, I realized that my protectiveness limited growth. People enjoy learning and evolving in their careers. If I prevent employees from doing anything beyond their original job, it hinders their development.
 
-In October, Eric, a member of TinyPilot's fulfillment staff, said he was interested in increasing his hours, so we decided to share the customer support load I'd been carrying alone. It was something I'd considered before, but I worried that customer support required technical knowledge that only I had.
+In October, Eric, a member of TinyPilot's fulfillment staff, said he was interested in increasing his hours. We decided to share the customer support load I'd been carrying alone. It was something I'd considered before, but I worried that customer support required technical knowledge that only I had.
 
 As soon as Eric began working on the support queue, I realized we should have done it earlier. I overestimated the difficulty of our customers' technical questions. Eric could solve most issues by referring to our help forum and email archives. When he couldn't, he'd just escalate to me. Now, Eric handles about 70% of support emails without me.
 
 Eric was surprised at how much he enjoyed taking over customer service. Talking to our customers has made him feel more invested in the business and gives him more insight into how his work benefits them.
 
-And remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me. It's no coincidence. Ceding that task gave me back several hours per week of free time, and that provided space to think critically about the way customers see TinyPilot.
+And remember my big insight about [consolidating TinyPilot to a single product](/solo-developer-year-4/#sell-just-one-thing)? That happened the same month that Eric started sharing customer support with me. It's no coincidence. Ceding that task gave me back several hours per week of free time, allowing me to think critically about the way customers see TinyPilot.
 
 ## Grading last year's goals
 
@@ -260,9 +260,9 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 * **Result**: Quadrupled TinyPilot's monthly revenue, totaling $468k for the year
 * **Grade**: B
 
-Okay, my $600k revenue goal turned out to be a tad optimistic. I chose that number in January, when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's sales shriveled by 50% over the next two months. We recovered, but never with the rapid growth of those first few months.
+Okay, my $600k revenue goal turned out to be a tad optimistic. I chose that number in January when revenue had grown 20-200% for the previous five months. After I announced that goal, TinyPilot's sales shriveled by 50% over the next two months. We recovered, but never with the rapid growth of those first few months.
 
-Still, $468k is nothing to sneeze at. It's possible that different decisions would have brought me to $600k, but nothing stands out as an egregious blunder.
+Still, $468k is nothing to sneeze at. Different decisions might have brought me to $600k, but nothing stands out as an egregious blunder.
 
 ### Publish six blog posts and one book
 
@@ -308,11 +308,11 @@ When I do these [annual writeups](/tags/annual-review/), I think about whether I
 
 I enjoy feeling like I run a real business. Before TinyPilot, my businesses typically earned less than $500/month. At that scale, I felt too limited by capital. You can't hire skilled roles or pay for expert guidance with $500. I frequently had to solve uninteresting problems simply because my revenue was too small to justify better solutions.
 
-With TinyPilot, there's enough money coming in to hire specialists where it makes sense. I enjoy working with a talented dev team again after three years of coding by myself. I pay $200/month for dev tooling and continuous integration because eliminating that gruntwork is obviously a net positive. In my previous businesses, paying for those tools would consume most of my revenue.
+With TinyPilot, there's enough money coming in to hire specialists where it makes sense. After three years of coding by myself, I appreciate working with a talented dev team again. I pay $200/month for dev tooling and continuous integration because eliminating that gruntwork is obviously a net positive. In my previous businesses, paying for those tools would consume most of my revenue.
 
-I enjoy having a company culture that matches what I always wanted to see from my employers. Everyone has flexible hours. There are no tight deadlines, so people don't have to compromise on quality. Almost all of our work is asynchronous, so everyone has the space to do [deep, focused work](/book-reports/deep-work/).
+I'm pleased to have a company culture that matches what I always wanted to see from my employers. Everyone has flexible hours. There are no tight deadlines, so people don't have to compromise on quality. Almost all of our work is asynchronous, so everyone has the space to do [deep, focused work](/book-reports/deep-work/).
 
-The hardest part for me about running a business with thousands of real customers is being responsible for failure. We're a team, but the buck ultimately stops with me. When I ship a bad bug or fail to launch a new product by the date I predicted, I find it painful and personally embarrassing. It's a completely different experience from being a developer at Microsoft or Google, where I shared blame with the people who reviewed and tested my work, and we were all eight layers removed from real customers.
+The hardest part for me about running a business with thousands of real customers is being responsible for failure. We're a team, but the buck ultimately stops with me. When I ship a serious bug or fail to launch a new product by the date I predicted, I find it painful and personally embarrassing. It's a completely different experience from being a developer at Microsoft or Google, where I shared blame with the people who reviewed and tested my work, and we were all eight layers removed from real customers.
 
 Overall, I'm still happy to be working for myself and hope to sustain it for the rest of my working life.
 
