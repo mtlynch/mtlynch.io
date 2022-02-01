@@ -320,4 +320,4 @@ Overall, I'm still happy to be working for myself and hope to sustain it for the
 *Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
-<script src="script.js">
+<script src="script.js"></script>
