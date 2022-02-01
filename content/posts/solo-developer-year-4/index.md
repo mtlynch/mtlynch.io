@@ -316,6 +316,8 @@ The hardest part for me about running a business with thousands of real customer
 
 Overall, I'm still happy to be working for myself, and I hope to sustain it for the rest of my working life.
 
+{{<tweet user="deliberatecoder" id="1488517727002284039" >}}
+
 ---
 
 *Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*
