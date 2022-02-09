@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* I published my [fourth annual retrospective](/solo-developer-year-4/) of being a bootstrapped founder.
+* I published my [fourth annual retrospective](/solo-developer-year-4/) about being a bootstrapped founder.
 * TinyPilot sales continue running strong despite a delay in launching our next product.
-* I analyze how I'm spending my time and figure out ways to better allocate hours.
+* I analyze how I'm spending my time and figure out ways to allocate my hours better.
 
 ## Goal Grades
 
@@ -81,7 +81,7 @@ One of my goals for this year is to [manage TinyPilot with only 20 hours per wee
 
 {{</notice>}}
 
-I spend most of my time coordinating changes. By this I mean little adjustments as TinyPilot evolves. For example, releasing a new product involves many big changes up front in assembling and shipping it, and then there are many small adjustments for months afterward as we work out all the kinks. It's a complicated enough topic that I split it into its own section [below](#how-can-i-spend-less-time-coordinating-changes).
+I spend most of my time coordinating changes. By this, I mean little adjustments as TinyPilot evolves. For example, releasing a new product involves many big changes upfront in assembling and shipping it, and then there are many small adjustments for months afterward as we work out all the kinks. It's a complicated enough topic that I split it into its own section [below](#how-can-i-spend-less-time-coordinating-changes).
 
 Technical support is the most obvious place to outsource. I've been thinking for months that I should hire someone to help out with it, but I haven't been prioritizing it enough. I'm [working on that now](/retrospectives/2022/01/#the-last-unfilled-role-tech-support).
 
@@ -186,7 +186,7 @@ Zestful dipped a bit, slumping back under its $1k/month revenue, but clients are
 
 ### What got done?
 
-* Published my [fourth year retrospective](/solo-developer-year-4/)
+* Published my [fourth-year retrospective](/solo-developer-year-4/)
 * Released [TinyPilot 2.3.2](https://tinypilotkvm.com/blog/whats-new-in-2022-01)
 * Began transition process to my new electrical engineering vendor
 * Worked with an external consultant to create a [proof-of-concept WebRTC implementation](https://github.com/tiny-pilot/tinypilot/tree/experimental/h264) of TinyPilot's video streaming
