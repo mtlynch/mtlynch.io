@@ -33,7 +33,7 @@ It's one of those things that I keep deprioritizing because it's not urgent but 
 
 I was glad to publish it, as I'd been working on it for a few weeks.
 
-I was surprised the post didn't get more traction on Hacker News and reddit. Usually, my annual updates are popular there, but this year was a miss on both sites. I can understand reddit, since I'm sharing them ot the /r/programming subreddit, and this year was less focused on software, but I thought it would be a great match for Hacker News. But as always, there's a lot of luck involved, so I can't draw too much from an individual post.
+I was surprised the post didn't get more traction on Hacker News and reddit. Usually, my annual updates are popular there, but this year was a miss on both sites. As always, there's a lot of luck involved, so I can't draw too much from an individual post.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -84,7 +84,6 @@ Technical support questions is the most obvious place to outsource. That's been 
 I'm still spending too much time preparing TinyPilot releases, but I've been working on automating and delegating that. It's been a long process. Each release used to take me about 35 hours between building, testing, and writing the announcement. Now, it's down to about 15 hours. The dev team has automated a lot of the build process, and TinyPilot's local staff has taken over most of manual testing. There's still more to do, but we're making steady progress.
 
 Software architecture decisions is another one where I spend a lot of time, but my dev team is also working on taking on more of that responsibility.
-
 
 ## How can I spend less time coordinating changes?
 
