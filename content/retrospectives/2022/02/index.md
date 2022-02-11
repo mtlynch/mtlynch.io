@@ -51,7 +51,7 @@ I was surprised the post didn't get more traction on Hacker News and reddit. Usu
 | Enterprise Subscriptions | $47.75          | $47.75         | 0                                                 |
 | Royalties                | $1,100.47       | $5,075.00      | <font color="green">+$3,974.53 (+361%)</font>     |
 | Total Revenue            | $53,372.87      | $56,189.53     | <font color="green">+$2,816.66 (+5%)</font>       |
-| **Profit**               | <font color="red">**$-15,207.05**</font> | <font color="red">**$-8,425.67**</font> | **<font color="green">+$6,781.38 (+45%)</font>** |
+| **Profit**               | <font color="red">**$-15,207.05**</font> | <font color="red">**$-21,316.65**</font> | **<font color="red">-$6,109.60 (-40%)</font>** |
 
 Sales were down slightly relative to December, but only slightly. Considering we had to pause sales for four days because we were sold out of Voyager 2, this feels like a stronger month than December.
 
