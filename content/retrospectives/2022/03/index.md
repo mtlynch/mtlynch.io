@@ -203,48 +203,11 @@ If Remote can offer a service for free that others are charging $30-50/mo per em
 
 ## Legacy projects
 
-Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
+I used to keep a regular section in my retrospectives for updates on my legacy businesses, but the writeups have gotten pretty boring.
 
-### [Is It Keto](https://isitketo.org)
+I'm not spending any time on these projects, so the updates basically boil down to: I didn't do anything, but the numbers are
 
-{{<revenue-graph project="isitketo">}}
-
-| Metric                   | January 2022 | February 2022 | Change                                       |
-| ------------------------ | ------------ | ------------- | -------------------------------------------- |
-| Unique Visitors          | 25,948       | 17,573        | <font color="red">-8,375 (-32%)</font>       |
-| Total Pageviews          | 59,351       | 40,933        | <font color="red">-18,418 (-31%)</font>      |
-| Domain Rating (Ahrefs)   | 14.0         | 15.0          | <font color="green">+1.0 (+7%)</font>        |
-| AdSense Revenue          | $291.47      | $184.29       | <font color="red">-$107.18 (-37%)</font>     |
-| Amazon Affiliate Revenue | $51.45       | $33.82        | <font color="red">-$17.63 (-34%)</font>      |
-| **Total Revenue**        | **$342.92**  | **$218.11**   | **<font color="red">-$124.81 (-36%)</font>** |
-
-Is It Keto continues to languish.
-
-### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
-
-{{<revenue-graph project="htfp">}}
-
-| Metric                    | January 2022 | February 2022 | Change                                       |
-| ------------------------- | ------------ | ------------- | -------------------------------------------- |
-| Unique Visitors           | 140          | 183           | <font color="green">+43 (+31%)</font>        |
-| Gumroad Revenue           | $66.59       | $0.00         | <font color="red">-$66.59 (-100%)</font>     |
-| Blogging for Devs Revenue | $0.00        | $0.00         | 0                                            |
-| **Total Revenue**         | **$66.59**   | **$0.00**     | **<font color="red">-$66.59 (-100%)</font>** |
-
-Oof, my first zero month.
-
-### [Zestful](https://zestfuldata.com)
-
-{{<revenue-graph project="zestful">}}
-
-| Metric            | January 2022 | February 2022 | Change                                       |
-| ----------------- | ------------ | ------------- | -------------------------------------------- |
-| Unique Visitors   | 564          | 535           | <font color="red">-29 (-5%)</font>           |
-| Total Pageviews   | 1,514        | 1,275         | <font color="red">-239 (-16%)</font>         |
-| RapidAPI Revenue  | $847.38      | $271.25       | <font color="red">-$576.13 (-68%)</font>     |
-| **Total Revenue** | **$847.38**  | **$271.25**   | **<font color="red">-$576.13 (-68%)</font>** |
-
-Zestful was having a nice run of near $1k monthly revenues, but it seems to be tailing off. I haven't been following it closely, but I'd guess that the spike was due to a few customers doing bulk processing around the same time.
+## Side projects
 
 ## Wrap up
 
