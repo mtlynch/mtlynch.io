@@ -53,7 +53,13 @@ My profit is atypically high this month, but it's more a consequence of timing. 
 
 ## Hiring a support engineer: the job posting
 
-The vast majority of applications came from.
+I advertised the job description in three places:
+
+| Channel | Cost | Total Candidates | Passed Initial Screen | Trial Hires |
+|---------|------|------------------|-----------------------|-------------|
+| [Twitter](https://twitter.com/deliberatecoder/status/1488993366666887168) | $0   | 2                | 1                     | 0           |
+| [Hacker News](https://news.ycombinator.com/item?id=30184256) | $0 | Didn't track, seemed low | N/A | N/A |
+| We Work Remotely | $XX | XX | XX | 1 |
 
 One of the problems with hiring is that, as a small business owner, I want to hire someone who understands what my company is and communicates that to me. But most companies treat candidates like garbage, and so they don't have any incentive to
 
@@ -67,16 +73,86 @@ I wasn't sure what to choose for pay.
 
 If the writing was clear, they had relevant skills, and they wrote a unique note, I responded as soon as possible telling them specifics of what I liked about their application and asked if they'd be interested in proceeding to the sample questions.
 
-If I was unsure, I queued the application for later.
+### instant-reject
 
-If the candidate put in effort to write a unique note, but they didn't have experience or communication skills I wanted, I put them in a "pending rejection" folder. When I had free time, I wrote these candidates notes to thank them for applying but explained politely why they weren't a good fit.
+My `instant-reject` folder was for candidates who didn't follow the instructions about how to apply. This included:
 
-If the candidate was a complete mismatch (e.g., someone who has no experience in IT or customer support and doesn't address the mismatch), I put them in the "instant reject" folder and didn't respond.
+* Candidates who didn't include a cover letter
+* Candidates whose cover letter didn't mention any specifics of the job or of TinyPilot
+* Candidates who didn't match the job requirements, and they didn't acknowledge the gap in their cover letter
 
-If the canddiate sent me a resume without any note or they send a clearly recycled note that has nothing specific about TinyPilot, I put them in the "instant reject" folder and didn't respond.
+For these candidates, I moved their application to the `instant-reject` folder and didn't send a reply.
 
-## Hiring a support engineer: screening applications
+I put XX% of candidates into the `instant-reject` folder.
 
+### cover-letter-reject
+
+The `cover-letter-reject` folder was for candidates who made a good faith effort in applying, but I could tell from their cover letter or resume that they were a poor match.
+
+For these candidates, I sent an individualized response. Here's an example:
+
+>Hi Joe,
+>
+>Thanks for reaching out and for taking the time to learn more about TinyPilot.
+>
+>Unfortunately, I don't think this would be a good match.
+>
+>It seems like you have a lot of great experience with Linux and Raspberry Pi, but the position requires someone with more experience writing customer-facing content. Your English is pretty strong, but there were several errors in your letter and resume, so I don't think this role would be a good fit.
+>
+>I'm sorry it didn't work out, but I wish you the best of luck in your search.
+>
+>Best,<br>
+Michael
+
+In the response, I'm trying to focus on the application or specifics rather than saying "I'm rejecting [**you**](/human-code-reviews-1/#never-say-you)." I avoided getting too specific because I didn't want the candidate to feel like I was picking on them or rejecting them over a single careless error.
+
+Most employers skip sending individualized rejection letters, and I understand why. It's a huge time-suck, and it has no benefit for the employer. Still, I feel like it's disrespectful to ignore people after I've asked them to spend unpaid time applying to my job.
+
+About 65% of candidates never responded to my rejection letter. Roughly 25% responded saying that they appreciated the feedback. Of these, a few asked for clarification, and I gave more specific feedback about their application. The last 10% tried to convince me to advance them to the next stage so that they could prove themselves, but I never did.
+
+Nobody became hostile in their responses. Everyone stayed professional.
+
+### pending-questions
+
+If a candidate's cover letter had clear, grammatically correct English, and they met the technical requirements, I wrote them a personalized response telling them specifics of what I liked about their application and why I think they might be a good match.
+
+I then invited these candidates to answer three example customer support requests so I could get a sense of how they speak to customers and offer technical solutions.
+
+After I responded, I put them in the `pending-questions` folder until they responded.
+
+XX% of candidates reached this stage. Of those XX% answered the sample questions.
+
+### questions-reject
+
+I sent all candidates who answered the sample questions detailed feedback regardless of whether I was making them an offer. I got this idea from Firebase founder, Andrew Lee:
+
+>It’s critical that candidates don’t feel their time is wasted. At Firebase, we made sure of this by putting a great deal of effort ourselves into the take home test process... [A]fter they submitted their answer, we would provide them with a thorough and detailed code review (usually by the legendary [@mikelehen](https://twitter.com/mikelehen)).
+
+>We treated this code review like a real production code review, and we did it whether or not we planned to move forward with the candidate. This review was very important for two reasons. First, it showed the candidate that we took them seriously and that we were investing a significant amount of our own time in the interview process. Second, it gave the candidate an idea of what working at Firebase might be like; “If they do code reviews this well for their coding challenges, I can’t wait to work with this team on real production code!”
+>
+>-Andrew Lee, ["How Firebase Interviewed Software Engineers"](https://startupandrew.com/posts/how-firebase-interviewed-software-engineers/)
+
+Andrew's process always stuck with me as the right way to treat people, so I've tried to apply that mentality in hiring for any position.
+
+Most people were appreciative of the detailed feedback. One person
+
+If the candidate's answers to the sample questions were below what I expected, I put them into the `questions-reject` folder.
+
+### maybe-trial-hire
+
+In the first week of my search, one candidate answered the screening questions pretty well, but I still had reservations. They were the best I'd seen so far, but I wanted to see more options. I told them that I was going to have a decision for them in a few weeks, and I put them in the `maybe-trial-hire` folder. I ended up finding a candidate who was a better match, so I later told the "maybe" candidate I went with someone else.
+
+I've started a trial hire now, but I'm still keeping this folder in case it doesn't work out. I'm transparent with candidates that I'm already running a trial hire but  they can continue with their application and they'll be in my shortlist if I hire additional support later or they can pause where they are and resume later.
+
+So far, everyone has chosen to answer the sample questions, but their answers fall substantially short of the person I chose for the trial hire, so I'm
+
+When I was hiring developers, I ran multiple trial hires at once and let go people who weren't a good match. That worked because dev work is easier to parallelize, especially early on. I'd just give different developers different tasks, and I could usually tell by the first task whether someone was going to work out.
+
+After I hired my first support engineer, I realized it would be too hard to run a trial hire with multiple people. With developers, I can run multiple trial hires at once becase I can just give them separate tasks. With support engineers, it's harder to isolate them from one another, so they'd be working alongside and coordinating with the person who they're competing with for a single slot. It felt
+
+### trial-hire
+
+I was only trial hiring one person at a time
 
 
 ## Hiring a support engineer: training
