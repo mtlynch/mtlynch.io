@@ -203,11 +203,17 @@ If Remote can offer a service for free that others are charging $30-50/mo per em
 
 ## Legacy projects
 
-I used to keep a regular section in my retrospectives for updates on my legacy businesses, but the writeups have gotten pretty boring.
+I used to keep a regular section in my retrospectives for updates on my legacy businesses, but the writeups have gotten pretty boring. They're all essentially, "I didn't do anything, but here's how that affected my metrics."
 
-I'm not spending any time on these projects, so the updates basically boil down to: I didn't do anything, but the numbers are
+I'm hereby replacing the "Legacy projects" section with a "Side projects" section that describes the hobby projects I work on during evenings and weekends.
 
 ## Side projects
+
+### Lenny
+
+Lenny is a service that I created to waste time for people that send me spam emails. I was inspired [an automated phone recording](https://www.youtube.com/channel/UCrBZYWrikliO6EPZKM7KxVQ) that someone set up. The author created a VoIP number that takes calls from telemarketers and responds with automated recordings of a kindly Australian man that gives long-winded responses to telemarketers.
+
+### PicoShare
 
 ## Wrap up
 
