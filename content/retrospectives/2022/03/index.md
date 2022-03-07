@@ -270,7 +270,7 @@ I'm not sure where Lenny will go as a project. I might release it as a free open
 
 ### [PicoShare](http://pico.rocks)
 
-PicoShare is a simple tool for sharing files with people.
+PicoShare is a simple tool for sharing files.
 
 There are a million services that will let you host and share files, but they all get in your way in one form or another. For example, I can't just upload a video to Google Drive and send someone a link. Google Drive insists on re-encoding the video, so it's a 10-minute wait before the video is even available. And even then, the recipient has to navigate through the Google Drive UI to even play the file. It's the same on Dropbox, imgur, etc.
 
@@ -282,13 +282,15 @@ I used PicoShare recently to share a short clip from *30 Rock* with my family in
 
 PicoShare also supports setting an expiration time for shared files. Sometimes I want to share a file for TinyPilot, but maybe it has sensitive data that I don't want sitting in someone's email account indefinitely. In the past, I've uploaded the files to cloud storage and shared a link, but then I have to remember to delete the file later. PicoShare automates it by auto-deleting the file after its expiration.
 
-I only started working on PicoShare a few weeks ago, so it's still rough. I don't think there's a business here because the cost of policing abuse is too high. For now, it's open-source, but I'm still rapidly changing it, so I haven't invested much into documentation.
+I only started working on PicoShare a few weeks ago, so it's still rough. I don't think there's a business here because the cost of policing abuse is too high. For now, it's [open-source](https://github.com/mtlynch/picoshare), but I'm still rapidly changing it, so I haven't invested much into documentation.
 
 ## Wrap up
 
 ### What got done?
 
-*
+* Launched [TinyPilot Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
+* Hired TinyPilot's first support engineer
+* Created [PicoShare](https://pico.rocks)
 
 ### Lessons learned
 
