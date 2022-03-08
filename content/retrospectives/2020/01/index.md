@@ -59,7 +59,7 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 
 This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg).
 
-The revenue was a bit of a surprise given that traffic has been waning for the past few months, as nobody wants to think about dieting over the holidays. But the holidays also mean higher advertiser spend and increased customer purchasing on Amazon, so my [RPM](https://en.wikipedia.org/wiki/Revenue_per_mille) rose substantially to $5.70 per thousand pageviews, also a record high.
+The revenue was a bit of a surprise given that traffic has been waning for the past few months, as nobody wants to think about dieting over the holidays. But the holidays also mean higher advertiser spend and increased customer purchasing on Amazon, so my revenue per mille (RPM) rose substantially to $5.70 per thousand pageviews, also a record high.
 
 ### [Zestful](https://zestfuldata.com)
 
