@@ -49,7 +49,9 @@ The design firm I'm working with had too few hours to complete the design in Feb
 
 \* Profit is just a rough estimate based on the delta in my cash holdings until I complete real bookkeeping for the month.
 
-My profit is atypically high this month, but it's mainly a consequence of timing. I'm waiting to receive a few large invoices, and my business credit card finally increased my line of credit by $20k, so I'm holding more cash.
+Sales are steady since last month. Total sales are down slightly due to the shorter month.
+
+My profit was atypically high in February, but it's mainly a consequence of timing. I'm waiting to receive a few large invoices, and my business credit card finally increased my line of credit by $20k, so I'm holding more cash.
 
 ## Hiring a support engineer: the job posting
 
@@ -60,20 +62,21 @@ I advertised the job description in three places:
 | [Twitter](https://twitter.com/deliberatecoder/status/1488993366666887168) | $0   | 2                | 1                     | 0           |
 | [Hacker News](https://news.ycombinator.com/item?id=30184256) | $0 | Didn't track, seemed low | N/A | N/A |
 | We Work Remotely | $358 | 219 | 18 | 1 |
+| **Total** | **$358** | **221** | **19** | **1** |
 
-One of the problems with hiring is that, as a small business owner, I want to hire someone who understands what my company is and communicates that to me. But most companies treat candidates like garbage, and so they don't have any incentive to
+One of the problems with hiring is that, as a small business owner, I want to hire someone who understands what my company is and communicates that to me. But most companies treat candidates like garbage. This discourages candidates from investing time into any particular company because they expect an 90% chance that their application is going into the void.
 
-Here's my [job posting](https://tinypilotkvm.com/jobs/support-engineer/). I'm trying to make it clear that I'm personally reading each and every application. Applications aren't going to a robot or clueless recruiter who's blindly screening on keywords. If you put in effort, I'll put in effort.
+When I wrote my [job posting](https://tinypilotkvm.com/jobs/support-engineer/), I tried to make it clear that I'm personally reading each and every application. Applications aren't going to a robot or clueless recruiter who's blindly screening on keywords. If you put in effort, I'll put in effort.
 
-Sending that message up front helps me to screen the letters. If I receive low-effort applications or cover letters that begin "Dear Sirs," I can instantly archive those without feeling guilty because they're not putting in any effort.
+I also wanted the job posting to communicate that TinyPilot is a small company, so the hiring process is small and personal directly with the founder. I wanted candidates to feel that I respected their time throughout the hiring process because that's how I want them to feel when we work together.
 
-I wasn't sure what to choose for pay. It's tough to guage the market rate for this kind of role because so few job postings list compoensation, and most of them are for full-time roles rather than 10 hours per week. I chose $40 but other founders I spoke to say they'd expect to find a qualified candidate for $20-30/hr.
+I wasn't sure what to choose for pay. It's tough to guage the market rate for this role because so few job postings list compensation. I chose $40/hr, but other founders I spoke to say they'd expect to find a qualified candidate for $20-30/hr.
 
 ## Hiring a support engineer: screening applications
 
-Once the job posting was up, it was time to start screening applications.
+Once the job posting was up, it was time to start screening applications. This was the most time-consuming part of the process.
 
-At this stage, I'm evaluating:
+At this stage, I was evaluating:
 
 * Is their writing clear and syntactically correct?
 * Did they take the time to learn about TinyPilot?
@@ -90,19 +93,19 @@ I quickly found that I needed some sort of organization system for managing cand
 
 My `instant-reject` folder was for candidates who didn't follow the instructions about how to apply. This included:
 
-* Candidates who didn't include a cover letter
-* Candidates whose cover letter didn't mention any specifics of the job or of TinyPilot
+* Candidates who only submitted a resume with no letter
+* Candidates whose letter didn't mention any specifics of the job or of TinyPilot
 * Candidates who didn't match the job requirements, and they didn't acknowledge the gap in their cover letter
 
 For these candidates, I moved their application to the `instant-reject` folder and didn't send a reply.
 
-I put 138 candidates 62% of candidates into the `instant-reject` folder.
+I put 138 candidates (62% of total) into the `instant-reject` folder.
 
 ### cover-letter-reject
 
-The `cover-letter-reject` folder was for candidates who made a good faith effort in applying, but I could tell from their cover letter or resume that they were a poor match.
+The `cover-letter-reject` folder was for candidates who made a good faith effort to apply, but I could tell from their cover letter or resume that they were a poor match.
 
-For these candidates, I sent an individualized response. Here's an example:
+For these candidates, I sent individualized responses. Here's an example:
 
 >Hi Joe,
 >
@@ -135,7 +138,7 @@ I then invited these candidates to answer three example customer support request
 
 After I responded, I put them in the `pending-questions` folder until they responded.
 
-19 candidates (9%) reached this stage. Of those, only 10 (53%) submitted answers the sample questions, though two or three candidates only got the questions in the last few days and may still respond.
+20 candidates (9%) reached this stage. Of those, only 10 (53%) submitted answers the sample questions, though two or three candidates only got the questions in the last few days and may still respond.
 
 ### questions-reject
 
@@ -151,7 +154,7 @@ I sent all candidates who answered the sample questions detailed feedback regard
 
 Andrew's process always stuck with me as the right way to treat people, so I've tried to apply that mentality in hiring for any position.
 
-Most people were appreciative of the detailed feedback. One person felt that my criteria were too narrow, and I ended up changing the question based on his feedback.
+Most people were appreciative of the detailed feedback and said they appreciated the notes. One person felt that my criteria were too narrow, and I ended up changing the question based on his feedback.
 
 Of candidates who answered the questions, I put 18 of 20 (90%) in the `questions-reject` folder.
 
@@ -159,9 +162,9 @@ Of candidates who answered the questions, I put 18 of 20 (90%) in the `questions
 
 In the first week of my search, one candidate answered the screening questions pretty well, but I still had reservations. They were the best I'd seen so far, but I wanted to see more options. I told them that I was going to have a decision for them in a few weeks, and I put them in the `maybe-trial-hire` folder. I ended up finding a candidate who was a better match, so I later told the "maybe" candidate I went with someone else.
 
-I've started a trial hire now, but I'm still keeping this folder in case it doesn't work out. I'm transparent with candidates that I'm already running a trial hire but  they can continue with their application and they'll be in my shortlist if I hire additional support later or they can pause where they are and resume later.
-
 After I hired my first support engineer, I realized it would be too hard to run a trial hire with multiple candidates. With developers, I can run multiple trial hires at once becase I can just give them separate tasks. It felt too dog-eat-dog to have multiple support engineers seeing each other's answers on the help forum and knowing that they're competing for the same job.
+
+I'm still keeping the `maybe-trial-hire` folder in case I add support engineers in a few months. I'm transparent with candidates that I'm already running a trial hire but  they can continue with their application and they'll be on my shortlist if I hire additional support later. Alternatively, I give them the option to pause their appication and resume later.
 
 ### trial-hire
 
@@ -180,15 +183,15 @@ Converting my folder system to a "hiring funnel," here are what the numbers look
 
 ## Hiring a support engineer: training
 
-Training for the support engineer has been the most difficult of any position I've hired so far. It has nothing to do with the new team member, who's doing great. I've been TinyPilot's sole tech support person for the past 20 months, and there's tons of institutional knowledge trapped in my head.
+Training for the support engineer has been the most difficult of any position I've hired so far. It has nothing to do with the new team member, who's doing great. It's more about the amount of institutional knowledge that's been trapped for so long.
 
-As much as possible, I'm trying to document information in Notion rather than letting the information get lost in private email threads. That way, if we add another support engineer in the future, they can get up to speed faster by reading over our onboarding documents.
+I've been TinyPilot's sole tech support person for the past 20 months, and there's tons of TinyPilot-specific support knowledge trapped in my head. As much as possible, I'm trying to document information in Notion rather than letting the information get lost in private email threads. That way, if we add another support engineer in the future, they can get up to speed faster by reading over our onboarding documents.
 
 {{<img src="idempotent-changes.png" hasBorder="true" alt="Screenshot of TinyPilot internal documentation page about suggesting idempotent changes" caption="An excerpt from TinyPilot's internal documentation on offering technical support to end-users.">}}
 
 ## Hiring a support engineer: payment
 
-I currently work with three freelance developers in different countries, and all of them receive payment in a different way. Now that I'm adding a fourth contractor, I thought I should start to standardize the payment process with a single solution.
+I currently work with three freelance developers, each in a different countries. All of them receive payment in a different way. Now that I'm adding a fourth contractor, I thought I should start to standardize the payment process with a single solution.
 
 I looked for payment platforms for remote workers that would do the following:
 
@@ -202,20 +205,17 @@ I looked for payment platforms for remote workers that would do the following:
 
 I ended up choosing Deel, as they ticked all of my boxes. I'm only a week in, but it's going well so far.
 
-I liked that Deel has time tracking built in, whereas Pilot left that as an exercise for the contractors.
-
-Deel also seems to be a lot more transparent than other providers in they show the exact amount that will arrive in the contractor's bank account in their local currency. Other providers just promise to do their best in finding good conversion rates, but you only find out the final rate when you receive payment.
+Deel seems to be more transparent than other providers in showing the exact amount that will arrive in the contractor's bank account in their local currency. Other providers just promise to do their best in finding good conversion rates, but you only find out the final rate when you receive payment.
 
 Deel is also planning to expand into payroll services for US-based employees. That would be great for me, as I've been disappointed with Justworks and Gusto.
 
 Deel costs $49/mo per contractor, which is pricey, but I'm willing to pay if it frees up more of my time.
 
-
 ### Pilot
 
-Pilot is pretty similar to Deel. They're both backed by Y Combinator, and they have a similarly slick UI.
+Pilot is pretty similar to Deel. They're both backed by Y Combinator, and they have a similarly slick UI. Pilot doesn't support time tracking, while Deel does.
 
-I signed up for Pilot first, and I was planning to use them, but they took an entire week to activate my account. In the meantime, another founder mentioned Deel, so I switched. Get it together, Pilot.
+I signed up for Pilot first, and I was planning to use them, but they took an entire week to activate my account. In the meantime, another founder mentioned Deel, so I switched. It pays to onboard your customers well.
 
 ### Remote
 
@@ -243,11 +243,11 @@ I'm replacing "Legacy projects" with "Side projects," so I can talk about the ho
 
 Lenny is a service I created to waste time for people who send me spam emails.
 
-Spammers are now sending automated message sequences when I don't respond to their first message.
+Spam is getting more agressive. Spammers are now sending automated message sequences when I don't respond to their first message.
 
 {{<img src="spammer-sequence.png" maxWidth="700px" hasBorder="true" caption="Some spammers continue sending automated pester sequences when I don't respond.">}}
 
-It annoyed me that spammers can spend fractions of a penny to keep getting in my inbox and waste my time. And they're doing this to thousands of people because they don't have to put in any effort until they get a response. I wanted a way to increase the spammers' costs so that bulk, semi-targeted emails stop being cost-effective.
+It annoyed me that spammers can spend fractions of a penny to keep invading my inbox and wasting my time. And they're doing this to thousands of people because they don't have to put in any effort until they get a response. I wanted a way to increase the spammers' costs so that bulk, semi-targeted emails aren't as cost-effective.
 
 I was inspired by [a YouTube channel](https://www.youtube.com/channel/UCrBZYWrikliO6EPZKM7KxVQ) that wastes telemarketers' time. The channel maintains a VoIP number that takes calls from telemarketers and responds with recordings of a kindly Australian man named Lenny. The recorded responses always express interest in what the telemarketers are selling but with lots of rambly digressions. Lenny has probably cost telemarketing firms tens to hundreds of thousands of dollars.
 
