@@ -266,7 +266,7 @@ I'm trying to keep the third-party dependencies to a minimum, but in February, I
 
 Outside of that, I've been working on making it easier to define new responses. Currently, all the responses are baked into the code, but I want to make them editable through the web UI.
 
-I'm not sure where Lenny will go as a project. I might release it as a free open-source tool, but I feel like people might be willing to pay for this as a hosted service. For now, I'm just working on it for my own entertainment, but I hope to offer it to others in the next few months.
+I'm not sure where Lenny will go as a project. I might release it as a free open-source tool, but I feel like people might be willing to pay for this as a hosted service. For now, I'm just working on it for my own entertainment, but I hope to offer it to others in the next few months. I just realized that the [Lenny telemarketing bot](https://www.lennytroll.com/) author seems to be making his own business for it, so I'll probably have to change the name.
 
 ### [PicoShare](http://pico.rocks)
 
@@ -300,3 +300,4 @@ I only started working on PicoShare a few weeks ago, so it's still rough. I don'
 
 * Wrap up design overhaul of TinyPilot website
 * Complete onboarding for TinyPilot's new support engineer
+* Publish TinyPilot Pro 2.4.0
