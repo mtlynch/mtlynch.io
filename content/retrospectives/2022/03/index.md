@@ -239,7 +239,7 @@ I'm replacing "Legacy projects" with "Side projects," so I can talk about the ho
 
 ## Side projects
 
-### Lenny
+### [Lenny](https://lenny.email)
 
 Lenny is a service I created to waste time for people who send me spam emails.
 
