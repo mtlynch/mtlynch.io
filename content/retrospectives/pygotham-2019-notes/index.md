@@ -108,7 +108,7 @@ Other things I liked:
   * [tox](https://tox.readthedocs.io/en/latest/): Runs Python test scripts in different virtual environments.
     * I *think* I used tox about five years ago, but at the time, I was using it as a way to mock behavior in unit tests. The project now is something totally different, so I can't figure out if they changed focus after [mock](https://docs.python.org/3/library/unittest.mock.html) made it into the standard library or if I'm just confused.
     * Anyway, it seems neat. I haven't created any projects that run in multiple Python environments, but it's good to keep in my back pocket.
-* I liked Hynek's example [pull request checklist](https://github.com/python-attrs/attrs/blob/master/.github/PULL_REQUEST_TEMPLATE.md) and [contributor documentation](https://github.com/python-attrs/attrs/blob/master/.github/CONTRIBUTING.rst).
+* I liked Hynek's example [pull request checklist](https://github.com/python-attrs/attrs/blob/1d6ef3be7965f2e294569e65be5d14e19b3013c4/.github/PULL_REQUEST_TEMPLATE.md) and [contributor documentation](https://github.com/python-attrs/attrs/blob/1d6ef3be7965f2e294569e65be5d14e19b3013c4/.github/CONTRIBUTING.md).
 * I've never seen anyone create a public text outline of their talk before, but [Hynek's](https://hynek.me/talks/python-foss/) was helpful.
 
 ### Make You An Async For Great Good!
