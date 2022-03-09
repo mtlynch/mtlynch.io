@@ -217,7 +217,7 @@ I signed up for Pilot first, and I was planning to use them, but they took an en
 
 ### Remote
 
-Remove offers free payments for contractors. Sounds great, right? Free service was the dealbreaker for me.
+Remote offers free payments for contractors. Sounds great, right? Free service was the dealbreaker for me.
 
 If Remote can offer a service for free that others are charging $30-50/mo per contractor, something is fishy. It might mean they're making money from me in some unexpected way like they hide fees in their currency conversion rate. Or it could mean that contractors are a use-case they don't care about, and they might suddenly drop it, as we see Google do over and over with their free services.
 
