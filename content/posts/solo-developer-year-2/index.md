@@ -355,6 +355,7 @@ Here's what I hope to accomplish in my third year as a solo developer:
 ## Updates
 
 * **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
+* **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 
 ---
 
