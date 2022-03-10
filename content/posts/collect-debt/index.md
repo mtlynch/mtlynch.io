@@ -238,5 +238,3 @@ I use this method frequently. Sometimes it works, and sometimes it doesn't, but 
 
 * [My unabridged email exchange with Kiss My Keto](full-emails/)
 * ["Identity Theft, Credit Reports, and You"](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/): Patrick McKenzie's article that taught me these techniques
-
-{{< htfp-ad >}}

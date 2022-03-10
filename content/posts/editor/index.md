@@ -184,8 +184,6 @@ There have been several instances where my editor suggested a change that I reco
 
 Every time I complete the first draft of a new blog post, I check my editor's notes on the last article she reviewed. For mistakes I find myself repeating, I keep a separate checklist that I run through at the end of my writing process. My checklist has reminders like, "make sure you're not overusing the word 'really'," but you'll find patterns to add to your own list. Really.
 
-{{<htfp-ad>}}
-
 ---
 
 *Special thanks to my editor, [Samantha Mason](https://www.samanthamasonfreelancer.com), for volunteering her time to edit this piece.*

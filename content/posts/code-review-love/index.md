@@ -227,8 +227,6 @@ Lastly, communicate thoughtfully. It's frighteningly easy for simple miscommunic
 
 Congratulations! If you've reached this point, you're now an expert reviewee. Your reviewer is likely in love with you, so treat them well.
 
-{{<htfp-ad>}}
-
 ## Further Reading
 
 * [How to Do Code Reviews Like a Human](/human-code-reviews-1/): Now that you've learned effective practices from the author side, learn to improve your code reviews when you're the reviewer.
