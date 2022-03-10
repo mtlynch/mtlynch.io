@@ -186,6 +186,7 @@ Google was a great place to work, and I learned valuable skills during my time t
 * **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/solo-developer-year-1/)
 * **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
 * **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
+* **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 
 {{< htfp-ad >}}
 
