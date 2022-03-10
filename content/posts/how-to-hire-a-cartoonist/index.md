@@ -249,8 +249,6 @@ For a fixed-cost contract, stay within a reasonable number of revisions. The car
 
 While none of the artists I spoke with said they strictly require it, they all agreed that it's standard practice to credit the artist when you hire them for a blog post.
 
-{{<htfp-ad>}}
-
 ---
 
 *Thanks to all the artists who spoke with me for this article and to Nicole Michaelis for volunteering her time to edit this piece.*
