@@ -5,7 +5,7 @@ tags:
 - homelab
 - truenas
 description: TODO
-date: '2021-01-01'
+date: '2022-04-15'
 ---
 
 TODO: Link to skip to the parts list
@@ -26,11 +26,11 @@ My main concern with the CPU was finding a CPU and motherboard combination that 
 
 ### Motherboard
 
-{{<alert type="danger">}}
+{{<notice type="danger">}}
 
 I don't recommend the combination of CPU and motherboard I used unless you have a spare CPU to bootstrap the BIOS. See more discussion below.
 
-{{</alert>}}
+{{</notice>}}
 
 ### Case
 
