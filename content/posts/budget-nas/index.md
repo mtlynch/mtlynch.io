@@ -49,7 +49,7 @@ I love the M.2 form factor as it requires no cabling, and it takes up essentiall
 | CPU         | [AMD Athlon 3000G](https://www.newegg.com/amd-athlon-3000g/p/274-000M-001B8)        | $264.82       |
 | Motherboard | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)               | $319.99       |
 | Graphics         | None! | $0 |
-| Disk (OS)        | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                   | $149.99       |
+| Disk (OS)        | [Kingston A400 120GB](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474?Item=9SIASRACS09297)                   | $149.99       |
 | Disk Storage
 | Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $285.99       |
 | Power       | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)      | $79.99        |
