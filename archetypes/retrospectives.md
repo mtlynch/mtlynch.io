@@ -43,21 +43,7 @@ TODO
 
 ## Topic 3
 
-## Legacy projects
-
-Here are some brief updates on projects that I still maintain but are not the primary focus of my development:
-
-### [Is It Keto](https://isitketo.org)
-
-{{<revenue-graph project="isitketo">}}
-
-### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
-
-{{<revenue-graph project="htfp">}}
-
-### [Zestful](https://zestfuldata.com)
-
-{{<revenue-graph project="zestful">}}
+## Side projects
 
 ## Wrap up
 

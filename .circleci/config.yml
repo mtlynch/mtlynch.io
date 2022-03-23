@@ -69,7 +69,7 @@ jobs:
           command: tests/check-seo-metadata
   publish_draft:
     docker:
-      - image: circleci/node:14.18.1-bullseye
+      - image: cimg/node:14.18.1
     resource_class: small
     steps:
       - attach_workspace:
@@ -87,7 +87,7 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
   deploy:
     docker:
-      - image: circleci/node:14.18.1-bullseye
+      - image: cimg/node:14.18.1
     resource_class: small
     steps:
       - attach_workspace:

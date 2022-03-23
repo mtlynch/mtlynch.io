@@ -99,7 +99,7 @@ Fortunately, I found a better solution by complete coincidence.
 
 ### HDMI to USB dongle
 
-While mindlessly scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) about a [low-cost HDMI to USB dongle](https://smile.amazon.com/Camcorder-Definition-Acquisition-Broadcasting-Conference/dp/B08B4J2XXF/) he had just purchased:
+While mindlessly scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) about a low-cost HDMI to USB dongle he had just purchased:
 
 {{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
@@ -138,7 +138,7 @@ ffplay.exe -i udp://@10.0.0.100:1234/stream
 
 It was so darn convenient, too. The LKV373A was nearly brick-sized and required its own power source and Ethernet cable. The HDMI dongle was as small as a thumb drive and required nothing more than a USB port.
 
-{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) (left) was larger and required more connections than the [HDMI dongle](https://smile.amazon.com/Camcorder-Definition-Acquisition-Broadcasting-Conference/dp/B08B4J2XXF/) (right)." maxWidth="700px">}}
+{{<img src="lkv373a-vs-dongle.jpg" alt="Comparison of Lenkeng LKV373A with HDMI dongle" caption="The [Lenkeng LKV373A HDMI extender](https://smile.amazon.com/AEMYO-Extender-V3-0-Ethernet-Supports/dp/B01LGUT9HW/) (left) was larger and required more connections than the HDMI dongle (right)." maxWidth="700px">}}
 
 The only problem was, again, latency. The Pi's rebroadcast of the video stream lagged the source computer by 7-10 seconds.
 
@@ -231,7 +231,7 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
 * [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-* [HDMI to USB capture dongle](https://smile.amazon.com/Definition-Camcorder-Acquisition-Streaming-Conference/dp/B08C9FCF2X/)
+* [HDMI to USB capture dongle](https://www.ebay.com/itm/393872381980)
   * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
   * They're generally available on eBay for $11-15.
 * [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)

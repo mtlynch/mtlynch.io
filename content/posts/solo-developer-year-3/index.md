@@ -300,6 +300,10 @@ Once again, I feel incredibly fortunate to be working for myself, and I hope to 
 
 {{<tweet user="deliberatecoder" id="1356256679231434753" >}}
 
+## Updates
+
+* **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+
 ---
 
 *Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Monica Lent](https://monicalent.com/) and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*

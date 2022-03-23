@@ -39,7 +39,7 @@ The most egregious error I found in the book was this line on page 189:
 
 >Gender racism was behind the growing number of involuntary sterilizations of Black women by eugenicist physicians &mdash; two hundred thousand cases in 1970, rising to seven hundred thousand in 1980.
 
-700,000 involuntary sterilizations per year? That's a shockingly high number. There were [26.5 million black Americans in 1980](https://www.census.gov/prod/cen1990/wepeople/we-1.pdf), so this would mean doctors were nonconsensually sterilizing 6-7% of reproductive age black women every year.
+700,000 involuntary sterilizations per year? That's a shockingly high number. There were [26.5 million black Americans in 1980](https://www.census.gov/library/publications/1993/dec/we-01.html), so this would mean doctors were nonconsensually sterilizing 6-7% of reproductive age black women every year.
 
 The source for this statistic is *Killing the Black Body* by Dorothy E. Roberts, pages 90-96. That book is [available on OpenLibrary](https://openlibrary.org/works/OL2624319W/Killing_the_black_body?edition=killingblackbody00robe), so I looked it up and found the line that Kendi seems to be referencing:
 
