@@ -8,9 +8,9 @@ description: TODO
 date: "2022-04-15"
 ---
 
-TODO: Link to skip to the parts list
+This year, I decided to build my first ever homelab NAS server. It's a 32 TB storage server that I use to keep all of my home data. The total cost was $1,328, so it's price competitive with off-the shelf storage servers but with significantly more power.
 
-I use it to
+In this post, I'll walk through how I chose the parts, what issues I ran into in the build, and my thoughts on the final build.
 
 - Skip to parts list
 - Skip to build photos
@@ -46,7 +46,35 @@ But as much as I love Synology, I hate platform lock-in. I had set up my Synolog
 
 So I decided to switch to something open source and open standards, and I settled on ZFS.
 
+## Why TrueNAS?
+
+There are only two options.
+
+- Proxmox: I'm already familiar with it, but it's much more focused on virtual machine management than acting as a storage server. I wanted an OS dedicated to storage.
+- Unraid: Looks nice, but I wanted an open-source solution.
+
+That left TrueNAS (formerly known as FreeNAS).
+
+TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZFS, but it seems like cool technology optimized for large disks.
+
 ## How I chose parts
+
+### Motherboard
+
+The first decision was motherboard size. My Synology DS412+ was nice and compact, and I liked that form factor. I've never built a computer with a mini-ITX motherboard before, so I figured this would be a good opportunity.
+
+I chose the ASUS Prime A320I-K AM4 AMD A320 for a few reasons:
+
+- It has four SATA ports, which would allow me to connect four disks directly to the motherboard.
+-
+
+I also looked at the B450, which was very similar, but it was almost twice the price, and the main advantage seemed to be better overclocking support, which I didn't need.
+
+{{<notice type="danger">}}
+
+**Warning**: I regret this choice of motherboard. See more discussion below (TODO: link).
+
+{{</notice>}}
 
 ### CPU
 
@@ -54,19 +82,15 @@ From what I've read, ZFS is not very CPU-intensive. I did a basic TrueNAS test b
 
 My main concern with the CPU was finding a CPU and motherboard combination that supported video without requiring a dedicated GPU.
 
-I looked at a few. I settled on it. It's the same one that Brian Moses used in his theoretical [EconoNAS](https://blog.briancmoses.com/2020/12/diy-nas-econonas-2020.html) build.
-
-### Motherboard
-
-{{<notice type="danger">}}
-
-I don't recommend the combination of CPU and motherboard I used unless you have a spare CPU to bootstrap the BIOS. See more discussion below.
-
-{{</notice>}}
+I looked at a few. I settled on the AMD Athlon 3000G. It's inexpensive at only $105, but it supports AMD's APU, which means that it can leverage motherboards that support XX without a dedicated GPU. That was important to me because I wanted to use a micro
 
 ### Case
 
-I chose
+For my VM server, I used a Fractal Design case, and it's my favorite computer case I'd ever used. I decided to stick with Fractal Design for this build.
+
+I like the 304 design because it's closer to a cube than a tower. It supported six disks, which was the number I wanted. It supported the mini-ITX motherboard I wanted as well.
+
+Fractal Design Node 304 Black
 
 ### OS disk
 
@@ -83,6 +107,10 @@ The problem with disks is that they're not statistically independent. Maybe each
 Quantity or size? If you're building a NAS server that has 20-drive bays, then sure, buy a bunch of small disks. ZFS can make more efficient use of your disks the more you have of them. I wanted to give myself room to grow. The problem with buying a lot of small disks is that . And since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). I figure that I won't need to do that for another year or two, and then hopefully by that time, the feature is complete and landed in TrueNAS.
 
 Shucking - didn't want to deal with it. At my scale, it's a maximum savings of tens of dollars, so it wasn't worth it.
+
+Avoiding SMR
+
+Shingled magnetic
 
 ### HBA
 
@@ -128,17 +156,17 @@ A four-disk QNAP TS-473A-8G-US has a slightly faster CPU, but half as much RAM.
 
 I created TinyPilot specifically for the task of building custom PCs and servers. It was great in this instance because I could monitor video output, boot to BIOS, and mount the TrueNAS system entirely from the TinyPilot browser window.
 
-## CPU
-
-## The build
+## Build issues
 
 ### My first PSU was dead
 
-I got everything hooked up, and nothing. I've built several computers, and this is one of the worst feelings. You just have no feedback, and you're potentially going to .
+I got everything hooked up, and nothing. I've built several computers, and this is one of the worst feelings. You just have no feedback, and you have to go on a long hunt to find the defective part or the bad connection.
 
 I disconnected everything except for the PSU's cables to the motherboard and the power button. Still, no luck. I tried removing the RAM. Same thing. I tried re-seating the CPU. Same thing.
 
-Finally, I took apart my 2017 homelab VM server and connected its PSU to the NAS motherboard. It powered on! So, I successfully identified the problem as a defective PSU. I ordered a replacement of the same model, and it powered on, but there was no video output. This led me to the next issue...
+Finally, I took apart my 2017 homelab VM server and connected its PSU to the NAS motherboard. It powered on! So, I successfully identified the problem as a defective PSU. I ordered a replacement of the same model, and it powered on
+
+Success! But there was no video output. This led me to the next issue...
 
 ### The CPU BIOS incompatibility fiasco
 
@@ -146,7 +174,13 @@ I got the system to power on, but there was no video display. Oh no! Did I misun
 
 After some research, I saw some comments that the Asus Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I _don't have a CPU_.
 
-I caught an extremely lucky break in realizing that the CPU from my 2017 homelab server build was compatible going back to BIOS version XX. So I borrowed it, and I got it to boot!
+I caught an extremely lucky break in realizing that the CPU from my 2017 homelab server build was compatible going back to BIOS version XX. So I borrowed the CPU and GPU from that build, and I got it to boot!
+
+Strangely, even after I got the syste to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. The BIOS supports downloading its own updates, and I tried doing that, but it kept telling me that I had the latest BIOS version available, even though I could clearly see later BIOS versions.
+
+I ended up having to download the BIOS files manually and load them on a USB disk. I upgraded to BIOS version XXX, and _then_ it recognized my Athlon 3000G.
+
+So if you're trying a similar build, watch out for CPU compatiblity.
 
 ## Benchmarks
 
@@ -164,8 +198,57 @@ Not crazy about the CPU compatibility.
 
 Didn't love it. Very little documentation and the set of screws wasn't obvious.
 
-### TrueNAS
+I found it very awkward to work in. I know it's minimizing space. With my Fractal Design XX, I kept discovering features I'd never seen on any case before that delighted me. Why didn't anyone. On this case, it was the opposite. Why is this a problem in this case when this has never been a problem for me before?
+
+It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly, but I was definitely disappointed.
+
+## TrueNAS vs. Synology
+
+I've been using the TrueNAS system for a few months
+
+### Web Interface (UX)
+
+TrueNAS's web interface is usable, but it's got tons of gotchas and design warts. To perform any action takes three confirmations. On Synology, when you decrypt a volume. On TrueNAS, here's the sequence:
+
+1. Enter your password
+1. Are you sure you want to unlock the volume?
+1. Alert! You've unlocked the volume! Click to acknowledge.
+
+There's this baffling pattern everywhere where in addition to a confirmation dialog, you also have to check a "confirm" checkbox.
+
+Winner: Synology (by miles)
+
+### Updates
+
+TrueNAS is on a slower update pace than Synology. Synology would push out updates every few weeks, but they were
+
+I [submitted a small bugfix](https://github.com/truenas/webui/pull/6213), but it's not in a production release yet.
+
+It's cool that I can [see everything that's coming out](https://www.truenas.com/docs/releasenotes/core/13.0beta1/) and test it if I want to live dangerously.
+
+Winner: TrueNAS
+
+### Monitoring
+
+TrueNAS monitoring is not very useful. It's too granular and there aren't any high-level views. Synology shows volume utilization, which is actually useful.
 
 No built-in Recycle Bin. There's some sort of Recycle Bin capability but it has a bunch of caveats about not storing large files, and it doesn't seem to empty automatically.
 
 Jails are much harder to configure. To access storage, you have to create the jail, check the uid of the user running within the jail, then create a matching user on the host system, then edit permissions to give that user access to the shared dataset.
+
+### Power
+
+It's nice to be in a real system.
+
+ZFS gives you a lot of power on the command-line that's not fully exposed in the GUI.
+
+Winner: TrueNAS
+
+### Overall
+
+I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software.
+
+If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
+
+Winner (for my personal tastes): TrueNAS
+Winner (for a rational person): Synology
