@@ -73,21 +73,32 @@ Starting in September, we partnered with a European distributor and refocused ou
 
 {{<revenue-graph project="tinypilot">}}
 
-| Income/Expense                    | 2020                                 | 2021                                  | Change               |
-| --------------------------------- | ------------------------------------ | ------------------------------------- | -------------------- |
-| Sales                             | $53,742                              | $459,529                              | {{<delta-cell>}}     |
-| Credit card rewards               | $0                                   | $1,139                                | {{<delta-cell>}}     |
-| Raw materials                     | -$46,143                             | -$248,273                             | {{<delta-cell>}}     |
-| Software development              | -$1,321                              | -$119,015                             | {{<delta-cell>}}     |
-| Electrical engineering consulting | -$7,130                              | -$28,662                              | {{<delta-cell>}}     |
-| Fulfillment staff                 | -$2,570                              | -$25,893                              | {{<delta-cell>}}     |
-| Web design / branding             | -$250                                | -$15,931                              | {{<delta-cell>}}     |
-| Cloud services                    | -$64                                 | -$5,554                               | {{<delta-cell>}}     |
-| Office space                      | $0                                   | -$4,400                               | {{<delta-cell>}}     |
-| Advertising                       | -$675                                | -$3,633                               | {{<delta-cell>}}     |
-| Office equipment                  | $0                                   | -$2,083                               | {{<delta-cell>}}     |
-| Everything else                   | $0                                   | -$2,738                               | {{<delta-cell>}}     |
-| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
+| Income/Expense | 2020    | 2021     | Change           |
+| -------------- | ------- | -------- | ---------------- |
+| Sales          | $53,742 | $459,529 | {{<delta-cell>}} |
+
+<<<<<<< HEAD
+| Credit card rewards | $0 | $1,139 | {{<delta-cell>}} |
+=======
+
+> > > > > > > master
+> > > > > > > | Raw materials | -$46,143 | -$248,273 | {{<delta-cell>}} |
+> > > > > > > | Software development | -$1,321 | -$119,015 | {{<delta-cell>}} |
+> > > > > > > | Electrical engineering consulting | -$7,130 | -$28,662 | {{<delta-cell>}} |
+> > > > > > > | Fulfillment staff | -$2,570 | -$25,893 | {{<delta-cell>}} |
+> > > > > > > | Web design / branding | -$250 | -$15,931 | {{<delta-cell>}} |
+> > > > > > > | Cloud services | -$64 | -$5,554 | {{<delta-cell>}} |
+> > > > > > > | Office space | $0 | -$4,400 | {{<delta-cell>}} |
+> > > > > > > | Advertising | -$675 | -$3,633 | {{<delta-cell>}} |
+> > > > > > > | Office equipment | $0 | -$2,083 | {{<delta-cell>}} |
+> > > > > > > | Everything else | $0 | -$2,738 | {{<delta-cell>}} |
+> > > > > > > <<<<<<< HEAD
+
+# | **Net profit** | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
+
+| **Net profit** | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
+
+> > > > > > > master
 
 {{<notice type="info">}}
 **Note**: Net profit is a little misleading, as it doesn't reflect the additional $59k I have in inventory.
