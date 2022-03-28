@@ -29,7 +29,7 @@ function drawTotalFinancesChart() {
   revenues.set(2018, 2262);
   revenues.set(2019, 7254);
   revenues.set(2020, 63477);
-  revenues.set(2021, 17920.91 + 459528.53);
+  revenues.set(2021, 17920.91 + 460667.49);
   let expenses = new Map();
   expenses.set(2018, 23133);
   expenses.set(2019, 9657);
