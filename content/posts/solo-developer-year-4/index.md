@@ -39,8 +39,8 @@ After running in the red for the first few years, this is my first cashflow posi
 | Metric         | 2020         | 2021       | Change                                        |
 |----------------|--------------|------------|-----------------------------------------------|
 | Revenue        | $63,477      | $477,449   | {{<delta-cell>}} |
-| Expenses       | -$67,441     | -$464,071   | {{<delta-cell>}} |
-| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** |  **{{<delta-cell>}}** |
+| Expenses       | -$67,441     | -$462,932   | {{<delta-cell>}} |
+| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$14,517</font>** |  **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 
