@@ -110,6 +110,10 @@ Avoiding SMR
 
 Shingled magnetic
 
+Checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/).
+
+List of [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/).
+
 ### Disk (OS)
 
 I love the M.2 form factor as it requires no cabling, and it takes up essentially zero space.
