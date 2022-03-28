@@ -84,8 +84,8 @@ Starting in September, we partnered with a European distributor and refocused ou
 | Office space                      | $0          | -$4,400   | {{<delta-cell>}}
 | Advertising                       | -$675       | -$3,633   | {{<delta-cell>}}
 | Office equipment                  | $0          | -$2,083   | {{<delta-cell>}}
-| Everything else                   | $0         | -$2,738   | {{<delta-cell>}}
-| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
+| Everything else                   | $0         | -$1,599   | {{<delta-cell>}}
+| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 **Note**: Net profit is a little misleading, as it doesn't reflect the additional $59k I have in inventory.
