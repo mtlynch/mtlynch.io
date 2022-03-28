@@ -61,12 +61,12 @@ TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZF
 
 ### Motherboard
 
-The first decision was motherboard size. My Synology DS412+ was nice and compact, and I liked that form factor. I've never built a computer with a mini-ITX motherboard before, so I figured this would be a good opportunity.
+The first decision was motherboard size. My Synology DS412+ was nice and compact, and I liked that form factor. I've never built a computer with a mini-ITX motherboard before, and this seemed like a good opportunity.
 
-I chose the ASUS Prime A320I-K AM4 AMD A320 for a few reasons:
+I chose the [ASUS Prime A320I-K](https://www.newegg.com/asus-prime-a320i-k/p/N82E16813119200) for a few reasons:
 
 - It has four SATA ports, which would allow me to connect four disks directly to the motherboard.
--
+- It supports Radeon graphics, which would spare me from buying a separate graphics card
 
 I also looked at the B450, which was very similar, but it was almost twice the price, and the main advantage seemed to be better overclocking support, which I didn't need.
 
@@ -78,19 +78,21 @@ I also looked at the B450, which was very similar, but it was almost twice the p
 
 ### CPU
 
-From what I've read, ZFS is not very CPU-intensive. I did a basic TrueNAS test by installing
+From what I've read, ZFS is not very CPU-intensive. I ran a basic test by installing TrueNAS on a cheap Dell OptiPlex 7040 mini PC. It barely used the CPU, so it seemed safe to go with a low-powered CPU.
+
+The important thing to me was to find a CPU that supported Radeon graphics so that I could use my motherboard's onboard HDMI output.
 
 My main concern with the CPU was finding a CPU and motherboard combination that supported video without requiring a dedicated GPU.
 
-I looked at a few. I settled on the AMD Athlon 3000G. It's inexpensive at only $105, but it supports AMD's APU, which means that it can leverage motherboards that support XX without a dedicated GPU. That was important to me because I wanted to use a micro
+I settled on the AMD Athlon 3000G. It's inexpensive at only $105, and it has decent CPU benchmarks.
+
+Normally, I'd buy a third-party CPU fan for more efficient cooling, but for this build, I just used the Athlon's stock fan. I wasn't worried about the CPU absorbing heavy workloads, and I didn't want to worry about verifying that a larger fan would fit in a mini-ITX case.
 
 ### Case
 
 For my VM server, I used a Fractal Design case, and it's my favorite computer case I'd ever used. I decided to stick with Fractal Design for this build.
 
-I like the 304 design because it's closer to a cube than a tower. It supported six disks, which was the number I wanted. It supported the mini-ITX motherboard I wanted as well.
-
-Fractal Design Node 304 Black
+I went with the [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which was the number I wanted.
 
 ### OS disk
 
@@ -112,7 +114,7 @@ Avoiding SMR
 
 Shingled magnetic
 
-### HBA
+### HBA (none)
 
 A lot of NAS builds include a host bus adaptor (HBA). My motherboard had four SATA ports, so I figured I could start with four disks and upgrade
 
@@ -122,9 +124,13 @@ If I ever want one, I can use. I made sure to keep a PCI slot available for this
 
 ### 90-degree SATA cables
 
-{{<img src="holding-sata.jpg" alt="Me holding 90-degree SATA cable" align="right" maxWidth="400px" caption="90-degree SATA cable">}}
+{{<img src="holding-sata.jpg" alt="Me holding 90-degree SATA cable" maxWidth="400px" caption="I needed 90-degree SATA cables to work within the case's space constraints">}}
 
 One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realizing how little space the case left between the motherboard and the PSU.
+
+## SLOG disk
+
+https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/
 
 ## Parts list
 
@@ -183,6 +189,22 @@ I ended up having to download the BIOS files manually and load them on a USB dis
 So if you're trying a similar build, watch out for CPU compatiblity.
 
 ## Benchmarks
+
+Large file write, encrypted volume
+
+Large file write, unencrypted volume
+
+```text
+robocopy C:\tmp\nas-benchmark-files\small-files\ \\truenas\vids\scratch\small-files /s
+```
+
+```text
+robocopy C:\tmp\nas-benchmark-files\large-files\ \\truenas\vids\scratch\large-files /s
+```
+
+```text
+robocopy \\truenas\vids\scratch\large-files C:\tmp\nas-benchmark-files\read-scratch  /s
+```
 
 ## Final thoughts
 
