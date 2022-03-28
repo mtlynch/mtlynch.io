@@ -33,7 +33,7 @@ Previous updates:
 
 ## My first year of profit
 
-After running in the red for the first few years, this is my first cashflow positive year. I earned a total of $13k in profit in 2021. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
+After running in the red for the first few years, this is my first cashflow positive year. I earned a total of $14k in profit in 2021. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
 
 <canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
 
