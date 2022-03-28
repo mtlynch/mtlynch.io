@@ -94,11 +94,7 @@ For my VM server, I used a Fractal Design case, and it's my favorite computer ca
 
 I went with the [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which was the number I wanted.
 
-### OS disk
-
-I love the M.2 form factor as it requires no cabling, and it takes up essentially zero space.
-
-### Data storage disks
+### Disk (Data)
 
 To reduce the chances of
 
@@ -114,13 +110,19 @@ Avoiding SMR
 
 Shingled magnetic
 
-### HBA (none)
+### Disk (OS)
 
-A lot of NAS builds include a host bus adaptor (HBA). My motherboard had four SATA ports, so I figured I could start with four disks and upgrade
+I love the M.2 form factor as it requires no cabling, and it takes up essentially zero space.
 
-I chose against an HBA. It seems like a pain in the butt.
+### Memory
 
-If I ever want one, I can use. I made sure to keep a PCI slot available for this potential upgrade.
+I find memory extremely boring to shop for. I perhaps should have looked more into benchmarks since ZFS is so RAM-intensive, but honestly I didn't. I went with a brand name I trust and looked for sticks below $150 that were listed as compatible with the XX motherboard
+
+### Power supply unit (PSU)
+
+According to PCPartPicker, the total power consumption of all my components is only 218 W, so 500 W gives me plenty of breathing room.
+
+I specifically chose a semi-modular PSU because I wanted to minimize clutter. Having a single cable supply power to multiple disks allowed. I didn't want full modular because I didn't want a separate cable for each disk. And I didn't want to go non-modular because then I'd have a bunch of unused power cables in my case.
 
 ### 90-degree SATA cables
 
@@ -128,9 +130,27 @@ If I ever want one, I can use. I made sure to keep a PCI slot available for this
 
 One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realizing how little space the case left between the motherboard and the PSU.
 
-## SLOG disk
+## What's missing?
 
-https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/
+### Graphics card (GPU)
+
+As I mentioned above, with space and ports at a premium, I wanted to avoid graphics card. I chose a motherboard and CPU combination that supported graphics rendering without an external card.
+
+### Host bus adaptor (HBA)
+
+A lot of NAS builds include a host bus adaptor (HBA). My motherboard had four SATA ports, so I figured I could start with four disks and upgrade
+
+I chose against an HBA. It seems like a pain in the butt.
+
+If I ever want one, I can use. I made sure to keep a PCI slot available for this potential upgrade.
+
+### SLOG disk
+
+Before writing data to disk, ZFS first writes an entry in the transaction log. When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk for storing the SLOG, using high-performance SSD. Serve The Home found [significant speed improvements](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/) with a SLOG disk.
+
+I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later.
+
+Also, most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than optimizing disk writes.
 
 ## Parts list
 
@@ -141,14 +161,13 @@ https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/
 | Graphics                    | None needed &mdash; built in to CPU                                                                                                  | $0            |
 | Disk (OS)                   | [Kingston A400 120GB](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474)                                                  | $31.90        |
 | Memory                      | [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) | $127.99       |
-| Power                       | [EVGA 110-BQ-0500-K1 500W 80 Plus Bronze Semi Modular](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101)     | $44.99        |
+| Power                       | [EVGA 110-BQ-0500-K1 500W 80 Plus Bronze Semi-Modular](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101)     | $44.99        |
 | Case                        | [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027)              | $99.99        |
 | SATA cables                 | [Silverstone Tek Ultra Thin Lateral 90 Degree SATA Cables](https://www.newegg.com/p/N82E16812162042) (x2)                            | $22.30        |
-| Remote administration       | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP)                                                                  | $65.00        |
-| **_Total (without disks)_** |                                                                                                                                      | **_$595.29_** |
+| **_Total (without disks)_** |                                                                                                                                      | **_$530.29_** |
 | Disk (Storage)              | [Toshiba N300 HDWG480XZSTA 8TB 7200 RPM](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (x2)                | $372.79       |
 | Disk (Storage)              | [Seagate IronWolf 8TB NAS Hard Drive 7200 RPM](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (x2)       | $359.98       |
-| **Total**                   |                                                                                                                                      | **$1,328.06** |
+| **Total**                   |                                                                                                                                      | **$1,263.06** |
 
 \* Caveat: This won't work out of the box with the Asus Prime A320I-K motherboard. See details below.
 
@@ -172,7 +191,7 @@ I disconnected everything except for the PSU's cables to the motherboard and the
 
 Finally, I took apart my 2017 homelab VM server and connected its PSU to the NAS motherboard. It powered on! So, I successfully identified the problem as a defective PSU. I ordered a replacement of the same model, and it powered on
 
-Success! But there was no video output. This led me to the next issue...
+Success! But there was no video output. This led to the next issue...
 
 ### The CPU BIOS incompatibility fiasco
 
@@ -212,17 +231,33 @@ robocopy \\truenas\vids\scratch\large-files C:\tmp\nas-benchmark-files\read-scra
 
 Works well. Supports onboard motherboard video as desired.
 
+My expecations were correct that TrueNAS requires very little CPU overhead in order to act as a simple storage server. My TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage.
+
+{{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
+
 ### Motherboard
 
-Not crazy about the CPU compatibility.
+I'm happy with it, and the BIOS UI is fine, but the BIOS itself is flaky. It didn't work with the Athlon 3000G CPU even though it claims that revision XX was compatible. It worked better after I upgraded to revision XX.
+
+Its BIOS upgrade utility was completely broken. It claimed that I had the latest BIOS when I didn't, so I had to upgrade manually by downloading the files and loading them on a thumbdirve.
 
 ### Case
 
+I was disappointed in the case. With my Fractal Design XX, I kept discovering features I'd never seen on any case before that delighted me. Why didn't anyone. On this case, it was the opposite. Why is this a problem in this case when this has never been a problem for me before?
+
+It looks nice on the outside, but I found it awkward to work in. I know it's minimizing space.
+
+There was no documentation, and the behavior wasn't obvious.
+
 Didn't love it. Very little documentation and the set of screws wasn't obvious.
 
-I found it very awkward to work in. I know it's minimizing space. With my Fractal Design XX, I kept discovering features I'd never seen on any case before that delighted me. Why didn't anyone. On this case, it was the opposite. Why is this a problem in this case when this has never been a problem for me before?
-
 It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly, but I was definitely disappointed.
+
+### Disk (Data)
+
+I saw some reviews that the N300s were noisy, but I haven't heard them at all.
+
+### Disk (OS)
 
 ## TrueNAS vs. Synology
 
