@@ -39,9 +39,9 @@ After running in the red for the first few years, this is my first cashflow posi
 
 | Metric         | 2020                                 | 2021                                   | Change               |
 | -------------- | ------------------------------------ | -------------------------------------- | -------------------- |
-| Revenue        | $63,477                              | $477,449                               | {{<delta-cell>}}     |
+| Revenue        | $63,477                              | $478,638                               | {{<delta-cell>}}     |
 | Expenses       | -$67,441                             | -$464,071                              | {{<delta-cell>}}     |
-| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** | **{{<delta-cell>}}** |
+| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$14,518</font>** | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 
@@ -76,6 +76,7 @@ Starting in September, we partnered with a European distributor and refocused ou
 | Income/Expense                    | 2020                                 | 2021                                  | Change               |
 | --------------------------------- | ------------------------------------ | ------------------------------------- | -------------------- |
 | Sales                             | $53,742                              | $459,529                              | {{<delta-cell>}}     |
+| Credit card rewards               | $0                                   | $1,139                                | {{<delta-cell>}}     |
 | Raw materials                     | -$46,143                             | -$248,273                             | {{<delta-cell>}}     |
 | Software development              | -$1,321                              | -$119,015                             | {{<delta-cell>}}     |
 | Electrical engineering consulting | -$7,130                              | -$28,662                              | {{<delta-cell>}}     |
@@ -86,7 +87,7 @@ Starting in September, we partnered with a European distributor and refocused ou
 | Advertising                       | -$675                                | -$3,633                               | {{<delta-cell>}}     |
 | Office equipment                  | $0                                   | -$2,083                               | {{<delta-cell>}}     |
 | Everything else                   | $0                                   | -$2,738                               | {{<delta-cell>}}     |
-| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
+| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 **Note**: Net profit is a little misleading, as it doesn't reflect the additional $59k I have in inventory.
