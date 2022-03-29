@@ -8,7 +8,7 @@ description: TODO
 date: "2022-04-15"
 ---
 
-This year, I decided to build my first ever homelab NAS server. It's a 32 TB storage server that I use to keep all of my home data. The total cost was $1,328, so it's price competitive with off-the shelf storage servers but with significantly more power.
+This year, I decided to build my first ever homelab NAS server. It's a 32 TB storage server that I use to keep all of my home data. The server cost $531, and I bought $732 of disks, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
 
 In this post, I'll walk through how I chose the parts, what issues I ran into in the build, and my thoughts on the final build.
 
@@ -24,7 +24,11 @@ In this post, I'll walk through how I chose the parts, what issues I ran into in
 
 NAS is network-attached storage. A NAS server is just a server you can keep whose main purpose is to store data and make it available within your home network.
 
-I'm a data hoarder
+I'm a data hoarder, so I keep. I scan documents
+
+I use it to share data between computers in my house.
+
+I used to keep everything
 
 I keep disk ISOs on it. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows, and I rip them. I keep the full raw disc image as well as a streaming-friendly MP4 copy. Each disc can take up around 60 GB of disk space, so I like having a lot of space.
 
@@ -36,7 +40,7 @@ Homelab servers are no different from any other servers, except that you build t
 
 ## Why build your own NAS?
 
-If you're new to homelab or you don't have experience building PCs, I recommend that you **don't** build your own NAS. There are off-the-shelf solutions that offer basic functionality and user-friendly interfaces.
+If you're new to homelab or you don't have experience building PCs, I recommend that you **don't build your own NAS**. There are off-the-shelf solutions that offer basic functionality and user-friendly interfaces.
 
 I've had a NAS since 2010. In fact, the first blog post I ever wrote was about using my NAS.
 
@@ -56,6 +60,20 @@ There are only two options.
 That left TrueNAS (formerly known as FreeNAS).
 
 TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZFS, but it seems like cool technology optimized for large disks.
+
+## How I planned storage capacity
+
+When I bought my Synology NAS, I initially installed three 4 TB drives, giving me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
+
+I wanted the same for this build. I wanted to have enough space to do a big jump now and have room to add disks in a few years without building a whole new server.
+
+I wanted a machine with enough drive bays to meet my current capacity needs with some room to spare.
+
+TODO: Link to raidz calculator.
+
+ZFS uses space more efficiently the more disks you give it, so many homelab builders would build a 20 TB server by buying something like 8 drives of 2 TB each (TODO: check). The problem is that means you need to build a giant server to accomodate all those drives. I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
+
+raidz2 can protect you in the case of two disks failing, but it eats a lot of your storage capacity. I chose raidz1, which means I can suffer a single disk failure without data loss, but not two.
 
 ## How I chose parts
 
@@ -100,6 +118,10 @@ To reduce the chances of
 
 I looked at the failure rate of .
 
+Checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/). I didn't want to hyper-optimize for low failure rate. At one point, I rejected a disk that Backblaze reported as a 1.2% AFR in favor of one that cost twice as much but had a 0.5% AFR.
+
+I also did things to increase my chances of getting disks from different mannufacturing batches. Each disk has some probability of failing during the time you're using it, but it's important to note that the failure rates are not statistically independent.
+
 The problem with disks is that they're not statistically independent. Maybe each disk only has a 2% chance of failing each year, so the naive expectation would be that the chances of two drives failing at the same time is vanishingly thin. But drives from the same manufacturing batch that have served the same loads in the same environment have a much higher probability of failing at the same time than two random drives.
 
 Quantity or size? If you're building a NAS server that has 20-drive bays, then sure, buy a bunch of small disks. ZFS can make more efficient use of your disks the more you have of them. I wanted to give myself room to grow. The problem with buying a lot of small disks is that . And since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). I figure that I won't need to do that for another year or two, and then hopefully by that time, the feature is complete and landed in TrueNAS.
@@ -110,13 +132,11 @@ Avoiding SMR
 
 Shingled magnetic
 
-Checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/).
-
 List of [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/).
 
 ### Disk (OS)
 
-I love the M.2 form factor as it requires no cabling, and it takes up essentially zero space.
+I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least XX of space, but it otherwise doesn't read or write much to the OS disk. I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 for a 120 GB M.2 disk. And I love M.2 disks. They don't require any cabling. They just tuck away into the motherboard, take up nearly zero space, and you never have to touch them again.
 
 ### Memory
 
@@ -124,7 +144,9 @@ I find memory extremely boring to shop for. I perhaps should have looked more in
 
 ### Power supply unit (PSU)
 
-According to PCPartPicker, the total power consumption of all my components is only 218 W, so 500 W gives me plenty of breathing room.
+There are different ratings for PSUs like bronze, silver, gold, platinum that reflect the power efficiency. The differences are fairly small, so I didn't optimize for that.
+
+The main choices are case modularity and power capacity. You want to have enough wattage to support your components plus any that you might add in the future. For a system like this, basically any PSU would have more than enough capacity. According to PCPartPicker, the total power consumption of all my components is only 218 W, so 500 W gives me plenty of breathing room.
 
 I specifically chose a semi-modular PSU because I wanted to minimize clutter. Having a single cable supply power to multiple disks allowed. I didn't want full modular because I didn't want a separate cable for each disk. And I didn't want to go non-modular because then I'd have a bunch of unused power cables in my case.
 
@@ -132,7 +154,9 @@ I specifically chose a semi-modular PSU because I wanted to minimize clutter. Ha
 
 {{<img src="holding-sata.jpg" alt="Me holding 90-degree SATA cable" maxWidth="400px" caption="I needed 90-degree SATA cables to work within the case's space constraints">}}
 
-One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realizing how little space the case left between the motherboard and the PSU.
+One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realized there wasn't enough space to plug in a standard SATA cable. These slim 90-degree cables solved the problem.
+
+TODO: Photo
 
 ## What's missing?
 
@@ -142,11 +166,9 @@ As I mentioned above, with space and ports at a premium, I wanted to avoid graph
 
 ### Host bus adaptor (HBA)
 
-A lot of NAS builds include a host bus adaptor (HBA). My motherboard had four SATA ports, so I figured I could start with four disks and upgrade
+A lot of NAS builds include a host bus adaptor (HBA). I chose against an HBA. It seems like a pain in the butt.
 
-I chose against an HBA. It seems like a pain in the butt.
-
-If I ever want one, I can use. I made sure to keep a PCI slot available for this potential upgrade.
+My motherboard had four SATA ports, so I figured I could start with four disks. When I need to add disks, I'll buy an HBA. I made sure to leave an available PCI slot for that purpose.
 
 ### SLOG disk
 
@@ -156,13 +178,26 @@ I decided against the SLOG disk because I'm limited by ports and drive bays. Add
 
 Also, most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than optimizing disk writes.
 
+If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved some for a SLOG disk, but it didn't seem worth it in my build.
+
+## Preventing concurrent disk failures
+
+Recall that I chose raidz1, which protects me if one disk fails but not two at the same time. Naively, it would seem that the probability of two disks failing at once would be impossibly low. It would take me one to two weeks to replace a failed disk, and each disk has a &lt;2% chance of failing each year. That should make the odds of two disks failing in the same two-week span vanishingly small. But you have to remember that disk failures are not statistically independent. If one disk fails, the odds of another disk failing are much higher if it was:
+
+- the same disk model
+- manufactured in the same batch
+- operated in the same environment
+- processed a similar disk load
+
+So I tried to reduce the probability of concurrent failures. I chose two different disks from two different manufacturers. I bought the disks from different vendors to reduce the chances of buying two disks in the same manufacturing batch.
+
 ## Parts list
 
 | Category                    | Component                                                                                                                            | I paid        |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
 | CPU                         | [AMD Athlon 3000G](https://www.newegg.com/amd-athlon-3000g/p/274-000M-001B8)\*                                                       | $105.13       |
 | Motherboard                 | [ASUS Prime A320I-K AM4 AMD A320](https://www.newegg.com/asus-prime-a320i-k/p/N82E16813119200)                                       | $97.99        |
-| Graphics                    | None needed &mdash; built in to CPU                                                                                                  | $0            |
+| Graphics                    | None needed &mdash; motherboard has native graphics support                                                                          | $0            |
 | Disk (OS)                   | [Kingston A400 120GB](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474)                                                  | $31.90        |
 | Memory                      | [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) | $127.99       |
 | Power                       | [EVGA 110-BQ-0500-K1 500W 80 Plus Bronze Semi-Modular](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101)     | $44.99        |
@@ -175,11 +210,21 @@ Also, most of my disk operations on this server will be over the network. I susp
 
 \* Caveat: This won't work out of the box with the Asus Prime A320I-K motherboard. See details below.
 
-Pretty good on price. For comparison, here are
+## Compared to off-the-shelf products
 
-A Synology DS920+ is $549.99, but it's limited to four disks (mine can expand to six). It has 4 GB, expandable to 8 GB (75% less than mine).
+For comparison, here are some off-the-shelf solutions at similar price points.
 
-A four-disk QNAP TS-473A-8G-US has a slightly faster CPU, but half as much RAM.
+| Product       | 2022 Budget NAS | Synology DS920+ | QNAP TS-473A-8G-US |
+| ------------- | --------------- | --------------- | ------------------ |
+| Disk bays     | 6               | 4               | 4                  |
+| RAM           | 32 GB           | 4 GB            | 4 GB               |
+| Max RAM       | XX GB           | 8 GB            | 8 GB               |
+| CPU benchmark | XX              | XX              | XX                 |
+| Price         | $530.29         | $549.99         | $549               |
+
+## Build photos
+
+TODO
 
 ## Building the server with TinyPilot
 
