@@ -8,12 +8,16 @@ description: TODO
 date: "2022-04-15"
 ---
 
-This year, I decided to build my first ever homelab NAS server. It's a 32 TB storage server that I use to keep all of my home data. The server cost $531, and I bought $732 of disks, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
+This year, I decided to build my first ever homelab NAS server. It's a 32 TB storage server that I use to keep all of my data.
 
-In this post, I'll walk through how I chose the parts, what issues I ran into in the build, and my thoughts on the final build.
+The server itself cost $531, and I bought four disk drives for $732, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
 
-- Skip to parts list
-- Skip to build photos
+In this post, I'll walk through how I chose the parts, what issues I ran into in the build, and my recommendations for anyone interested in building their own.
+
+- Background
+- Parts list
+- Build photos
+- Reflections
 
 {{<gallery caption="TODO">}}
 {{<img src="all-parts.jpg" alt="TODO" maxWidth="450px">}}
@@ -22,33 +26,33 @@ In this post, I'll walk through how I chose the parts, what issues I ran into in
 
 ## What's the point of a NAS server?
 
-NAS is network-attached storage. A NAS server is just a server you can keep whose main purpose is to store data and make it available within your home network.
+NAS stands for network-attached storage. A NAS server is just a server you can keep whose purpose is to store data and make it available to computers within your home network.
 
-I'm a data hoarder, so I keep. I scan documents
+But every computer stores data. Why have a whole dedicated server for data?
 
-I use it to share data between computers in my house.
+I like decoupling data storage from my computers. I upgrade my main workstation every two to three years, and moving my data was always a pain. Solid state drives continue to get faster, and that's usually one of the biggest bottlenecks, but it was a pain to move all of my data from
 
-I used to keep everything
+I also have a _lot_ of data. I'm a data hoarder, so I have every digital photo I've ever taken, all of my notes from college, and the source code for every personal project.
 
-I keep disk ISOs on it. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows, and I rip them. I keep the full raw disc image as well as a streaming-friendly MP4 copy. Each disc can take up around 60 GB of disk space, so I like having a lot of space.
+The biggest data source is my my DVD and Blu-Ray collection. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip it so that I have it available on my computer and can stream it to my TV. Between the raw ISO copy and the streamable MP4s, a single disc can take up around 60 GB of disk space.
 
-## What's a "homelab?"
+## What's a "homelab server?"
 
 Homelab is a colloquial term that's grown in popularity in the last few years.
 
-Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use them as a low-stakes practice environment before using the same tools in a real-world business context.
+Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use homelab servers as low-stakes practice environments before they use the technologies in a real-world business context.
 
 ## Why build your own NAS?
 
-If you're new to homelab or you don't have experience building PCs, I recommend that you **don't build your own NAS**. There are off-the-shelf solutions that offer basic functionality and user-friendly interfaces.
+If you're new to homelab or you don't have experience building PCs, I recommend that you **don't build your own NAS**. There are off-the-shelf solutions that offer most of the same functionality and with a substantially better user experience.
 
-I've had a NAS since 2010. In fact, the first blog post I ever wrote was about using my NAS.
+Before building my own homelab NAS, I used a Synology DSXX that I used for XX years. And honestly, I loved it. It was one of the best purchases I ever made. It was a very gentle introduction into the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
-I love my Synology. It's honestly one of the best products I've ever purchased. A few months ago, it started clicking, and I started to worry. I've built all the other computers in my home, so if some component breaks, I can just replace that part. The Synology is a packaged deal. If some part broke, I'd have to replace the whole thing. It's well past its warranty, and it's not a system you can repair on your own.
+As much as I love Synology, I hate platform lock-in. I had configured my Synology using Synology Hybrid RAID, a proprietary storage format that allows you to mix disks of different sizes.
 
-But as much as I love Synology, I hate platform lock-in. I had set up my Synology using Synology Hybrid RAID. Its advantage is that it can use disks of mismatched size, which is handy for growing your storage incrementally. But it's a proprietary technology, so only Synology NAS appliances can ready SHR volumes.
+A few months ago, my Synology started to make a clicking noise. I started to worry that XX years in, it didn't have much time left. I've built all the other computers in my home, so if a component breaks, I can just replace that part. Synology devices are not user-repairable. If a part breaks and you're past warranty, you have to replace the whole server. And if you've short-sightedly used a Synology-proprietary data format, you can't access the data on your disks unless you buy another Synology sytem.
 
-So I decided to switch to something open source and open standards, and I settled on ZFS.
+Fortunately, my Synology's clicking went away, but it was a wake up call how dependent I'd let myself become on that NAS. I decided to switch to something open source and open standards, so I decided on TrueNAS.
 
 ## Why TrueNAS?
 
@@ -61,17 +65,23 @@ That left TrueNAS (formerly known as FreeNAS).
 
 TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZFS, but it seems like cool technology optimized for large disks.
 
-## How I planned storage capacity
+## How I planned disk capacity
 
 When I bought my Synology NAS, I initially installed three 4 TB drives, giving me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
 
-I wanted the same for this build. I wanted to have enough space to do a big jump now and have room to add disks in a few years without building a whole new server.
+That strategy worked well, so I decided to take the same path on this build. My goal was to start with enough space to accomodate me for the next 2-3 years while still making it easy for me to add drives incrementally.
 
-I wanted a machine with enough drive bays to meet my current capacity needs with some room to spare.
+I decided to aim for double my current capacity with the ability to add later. I'd aim for 20 TB of usable storage.
+
+## Many small disks or fewer large disks?
+
+ZFS is designed to survive disk failures, so it stores each block of data redundantly. Because of this redundancy, it's complicated to think about storage capacity. Naively, you'd expect that four 8 TB drives would give you 32 TB of space, but if you take into account the space needed for redundancy, your actual usable capacity is XX TB.
+
+I found this raidz calculator that tells you how much space different disk configurations give you:
 
 TODO: Link to raidz calculator.
 
-ZFS uses space more efficiently the more disks you give it, so many homelab builders would build a 20 TB server by buying something like 8 drives of 2 TB each (TODO: check). The problem is that means you need to build a giant server to accomodate all those drives. I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
+ZFS uses space more efficiently the more disks it has. Many homelab builders would build a 20 TB server by buying something like eight drives of 2 TB each (TODO: check). The problem is that disks are large, so eight drives drastically increases the size of the case you need, especially if you want to leave some drive bays open to give yourself room for expansion. I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
 
 raidz2 can protect you in the case of two disks failing, but it eats a lot of your storage capacity. I chose raidz1, which means I can suffer a single disk failure without data loss, but not two.
 
@@ -170,6 +180,10 @@ A lot of NAS builds include a host bus adaptor (HBA). I chose against an HBA. It
 
 My motherboard had four SATA ports, so I figured I could start with four disks. When I need to add disks, I'll buy an HBA. I made sure to leave an available PCI slot for that purpose.
 
+### ECC RAM
+
+Why didn't I do ECC RAM?
+
 ### SLOG disk
 
 Before writing data to disk, ZFS first writes an entry in the transaction log. When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk for storing the SLOG, using high-performance SSD. Serve The Home found [significant speed improvements](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/) with a SLOG disk.
@@ -258,6 +272,10 @@ So if you're trying a similar build, watch out for CPU compatiblity.
 
 ## Benchmarks
 
+One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that can benchmark local disk writes, but those will miss bottlenecks in the Samba network sharing stack or in the networking equipment.
+
+To benchmark my system, I just used robocopy with lots of files.
+
 Large file write, encrypted volume
 
 Large file write, unencrypted volume
@@ -278,33 +296,41 @@ robocopy \\truenas\vids\scratch\large-files C:\tmp\nas-benchmark-files\read-scra
 
 ### CPU
 
-Works well. Supports onboard motherboard video as desired.
-
-My expecations were correct that TrueNAS requires very little CPU overhead in order to act as a simple storage server. My TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage.
+The Athlon 3000G has worked well. I perhaps could have even gone with an even slower CPU because my TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage:
 
 {{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
 
+The most important thing about the CPU was that it supported AMD's XX video technology, which meant that I didn't need a separate GPU. That worked well.
+
 ### Motherboard
+
+The biggest flaw with the motherboard was its limited compatibility. The AMD 3000G came out in XX and the XX motherboard came out in XX, so it should have been compatible. It even advertised the BIOS revision it shipped with as compatible with my CPU, but it didn't work until I upgraded to BIOS revision XX.
+
+The other weakness with the motherboard was how poorly the BIOS update worked. It's supposed to support native updating, but it didn't work. I had to do the update myself.
+
+But aside from that, it's been fine as far as BIOS goes.
 
 I'm happy with it, and the BIOS UI is fine, but the BIOS itself is flaky. It didn't work with the Athlon 3000G CPU even though it claims that revision XX was compatible. It worked better after I upgraded to revision XX.
 
 Its BIOS upgrade utility was completely broken. It claimed that I had the latest BIOS when I didn't, so I had to upgrade manually by downloading the files and loading them on a thumbdirve.
 
+I also missed that it only supports 32 GB of RAM. If I want to expand storage, I might start being RAM bound because ZFS is so RAM-hungry.
+
+If I were doing it again, I'd go with the Gigabyte B550I. It's $50 more, but it supports 64 GB of RAM, and it has an extra M.2 slot, so I could add a SLOG disk if I ever wanted one.
+
 ### Case
 
-I was disappointed in the case. With my Fractal Design XX, I kept discovering features I'd never seen on any case before that delighted me. Why didn't anyone. On this case, it was the opposite. Why is this a problem in this case when this has never been a problem for me before?
+I was disappointed in the case. With my Fractal Design XX, I kept discovering features I'd never seen on any case before that delighted me. I'd think, "Wow, why has nobody done this before?" On this case, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
 
 It looks nice on the outside, but I found it awkward to work in. I know it's minimizing space.
 
-There was no documentation, and the behavior wasn't obvious.
-
-Didn't love it. Very little documentation and the set of screws wasn't obvious.
+There was very little documentation, and some of the case mechanisms weren't obvious.
 
 It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly, but I was definitely disappointed.
 
 ### Disk (Data)
 
-I saw some reviews that the N300s were noisy, but I haven't heard them at all.
+It's a bit too early to judge disks, so check back in about five years to see how I'm liking them, but so far, so good. My biggest worry was that they'd be too noisy, but I haven't heard them at all.
 
 ### Disk (OS)
 
@@ -358,3 +384,7 @@ If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd
 
 Winner (for my personal tastes): TrueNAS
 Winner (for a rational person): Synology
+
+## Further reading
+
+I like Brian Moses' posts on his homelabs. I learned a lot especially from his EconoNAS series, but it's worth noting that some of his builds are theoretical, so he wouldn't have hit issues like the CPU/BIOS mismatch I saw.
