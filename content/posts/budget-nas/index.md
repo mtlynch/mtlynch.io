@@ -248,6 +248,10 @@ TODO
 
 ## Building the server with TinyPilot
 
+Longtime readers of this blog will recall that I built a device on top of the Raspberry Pi specifically for building servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new Voyager 2, and I really enjoyed it.
+
+The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the XX files for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. But I hope to add that feature soon so that my next BIOS upgrade can be all TinyPilot.
+
 I created TinyPilot specifically for the task of building custom PCs and servers. It was great in this instance because I could monitor video output, boot to BIOS, and mount the TrueNAS system entirely from the TinyPilot browser window.
 
 ## Build issues
@@ -286,16 +290,22 @@ Large file write, encrypted volume
 
 Large file write, unencrypted volume
 
-```text
-robocopy C:\tmp\nas-benchmark-files\small-files\ \\truenas\vids\scratch\small-files /s
+```ps
+robocopy /s `
+  C:\tmp\nas-benchmark-files\small-files\ `
+  \\truenas\vids\scratch\small-files
 ```
 
-```text
-robocopy C:\tmp\nas-benchmark-files\large-files\ \\truenas\vids\scratch\large-files /s
+```ps
+robocopy /s `
+  C:\tmp\nas-benchmark-files\large-files\ `
+  \\truenas\vids\scratch\large-files
 ```
 
-```text
-robocopy \\truenas\vids\scratch\large-files C:\tmp\nas-benchmark-files\read-scratch  /s
+```ps
+robocopy /s `
+  \\truenas\vids\scratch\large-files `
+  C:\tmp\nas-benchmark-files\read-scratch
 ```
 
 ## Power usage
