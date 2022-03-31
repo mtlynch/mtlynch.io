@@ -362,56 +362,27 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 
 {{<img src="truenas-io.png" alt="Graph of disk I/O on OS disk showing minimal activity" maxWidth="800px" caption="TrueNAS rarely touches its OS disk after booting.">}}
 
-## TrueNAS vs. Synology
+### TrueNAS
 
 I've been using the TrueNAS system for a few months
 
-### Web Interface (UX)
+User experience is miles better on the Synology. Synology feels like they're trying hard to make their system usable to people who don't need to understand the underlying technologies, whereas TrueNAS's UI feels like an afterthought designed by people who prefer to do everything from the command-line.
 
-TrueNAS's web interface is usable, but it's got tons of gotchas and design warts. To perform any action takes three confirmations. On Synology, when you decrypt a volume. On TrueNAS, here's the sequence:
+It took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several different menus to just set up a drive and share it. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
 
-1. Enter your password
-1. Are you sure you want to unlock the volume?
-1. Alert! You've unlocked the volume! Click to acknowledge.
+I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. With Synology, I installed it and it worked out of the box. With TrueNAS, it was about an hour of fiddling. For Plex to access my storage, I had to:
 
-There's this baffling pattern everywhere where in addition to a confirmation dialog, you also have to check a "confirm" checkbox.
+1. Create a BSD jail
+1. SSH into that jail
+1. Find the UID of the user under the jail system
+1. Create a matching user with a matching UID on the TrueNAS host system
+1. Edit permissions on the TrueNAS host system to give the jail user access to my media files
 
-Winner: Synology (by miles)
-
-### Updates
-
-TrueNAS is on a slower update pace than Synology. Synology would push out updates every few weeks, but they were
-
-I [submitted a small bugfix](https://github.com/truenas/webui/pull/6213), but it's not in a production release yet.
-
-It's cool that I can [see everything that's coming out](https://www.truenas.com/docs/releasenotes/core/13.0beta1/) and test it if I want to live dangerously.
-
-Winner: TrueNAS
-
-### Monitoring
-
-TrueNAS monitoring is not very useful. It's too granular and there aren't any high-level views. Synology shows volume utilization, which is actually useful.
-
-No built-in Recycle Bin. There's some sort of Recycle Bin capability but it has a bunch of caveats about not storing large files, and it doesn't seem to empty automatically.
-
-Jails are much harder to configure. To access storage, you have to create the jail, check the uid of the user running within the jail, then create a matching user on the host system, then edit permissions to give that user access to the shared dataset.
-
-### Power
-
-It's nice to be in a real system.
-
-ZFS gives you a lot of power on the command-line that's not fully exposed in the GUI.
-
-Winner: TrueNAS
-
-### Overall
+Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. I tried installing something
 
 I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software.
 
 If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
-
-Winner (for my personal tastes): TrueNAS
-Winner (for a rational person): Synology
 
 ## Further reading
 
