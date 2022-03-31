@@ -182,7 +182,9 @@ My motherboard had four SATA ports, so I figured I could start with four disks. 
 
 ### ECC RAM
 
-Why didn't I do ECC RAM?
+I saw people urging ECC RAM. ECC RAM does XX. At first, I thought I had to get it, but then I realized I've been using computers without ECC RAM for the past 30 years, and I've never noticed any data corruption, so I didn't think it was worth doubling the price.
+
+If I was building a server that was going to be under heavy load from multiple users all day, then sure I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
 
 ### SLOG disk
 
@@ -196,25 +198,29 @@ If I were building a rack-mounted server with 16 drive bays, I definitely would 
 
 ## Preventing concurrent disk failures
 
-Recall that I chose raidz1, which protects me if one disk fails but not two at the same time. Naively, it would seem that the probability of two disks failing at once would be impossibly low. It would take me one to two weeks to replace a failed disk, and each disk has a &lt;2% chance of failing each year. That should make the odds of two disks failing in the same two-week span vanishingly small. But you have to remember that disk failures are not statistically independent. If one disk fails, the odds of another disk failing are much higher if it was:
+Recall that I chose raidz1, which protects me if one disk fails. If two or more drives fail at once, I'll suffer data loss.
 
-- the same disk model
-- manufactured in the same batch
+Based on Backblaze's stats, the average failure rate of each disk is only 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small.
+
+Disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it:
+
+- has the same model number
+- was manufactured in the same batch
 - operated in the same environment
 - processed a similar disk load
 
-So I tried to reduce the probability of concurrent failures. I chose two different disks from two different manufacturers. I bought the disks from different vendors to reduce the chances of buying two disks in the same manufacturing batch.
+Given this, I did what I could to reduce the risk of concurrent disk failures. I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks in the same manufacturing batch, I bought the disks from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
 ## Parts list
 
 | Category                    | Component                                                                                                                            | I paid        |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
-| CPU                         | [AMD Athlon 3000G](https://www.newegg.com/amd-athlon-3000g/p/274-000M-001B8)\*                                                       | $105.13       |
-| Motherboard                 | [ASUS Prime A320I-K AM4 AMD A320](https://www.newegg.com/asus-prime-a320i-k/p/N82E16813119200)                                       | $97.99        |
+| CPU                         | [AMD Athlon 3000G](https://www.newegg.com/amd-athlon-3000g/p/274-000M-001B8)                                                         | $105.13       |
+| Motherboard                 | [ASUS Prime A320I-K](https://www.newegg.com/asus-prime-a320i-k/p/N82E16813119200)\*                                                  | $97.99        |
 | Graphics                    | None needed &mdash; motherboard has native graphics support                                                                          | $0            |
 | Disk (OS)                   | [Kingston A400 120GB](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474)                                                  | $31.90        |
 | Memory                      | [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) | $127.99       |
-| Power                       | [EVGA 110-BQ-0500-K1 500W 80 Plus Bronze Semi-Modular](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101)     | $44.99        |
+| Power                       | [EVGA 110-BQ-0500-K1 500W 80+ Bronze Semi-Modular](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101)         | $44.99        |
 | Case                        | [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027)              | $99.99        |
 | SATA cables                 | [Silverstone Tek Ultra Thin Lateral 90 Degree SATA Cables](https://www.newegg.com/p/N82E16812162042) (x2)                            | $22.30        |
 | **_Total (without disks)_** |                                                                                                                                      | **_$530.29_** |
@@ -222,7 +228,7 @@ So I tried to reduce the probability of concurrent failures. I chose two differe
 | Disk (Storage)              | [Seagate IronWolf 8TB NAS Hard Drive 7200 RPM](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (x2)       | $359.98       |
 | **Total**                   |                                                                                                                                      | **$1,263.06** |
 
-\* Caveat: This won't work out of the box with the Asus Prime A320I-K motherboard. See details below.
+\* Caveat: This motherboard won't work out of the box with the AMD Athlon 3000G CPU. See details below.
 
 ## Compared to off-the-shelf products
 
@@ -262,15 +268,15 @@ I got the system to power on, but there was no video display. Oh no! Did I misun
 
 After some research, I saw some comments that the Asus Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I _don't have a CPU_.
 
-I caught an extremely lucky break in realizing that the CPU from my 2017 homelab server build was compatible going back to BIOS version XX. So I borrowed the CPU and GPU from that build, and I got it to boot!
+I caught an extremely lucky break in realizing that the AMD Ryzen 7 1700 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
-Strangely, even after I got the syste to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. The BIOS supports downloading its own updates, and I tried doing that, but it kept telling me that I had the latest BIOS version available, even though I could clearly see later BIOS versions.
+Strangely, even after I got the system to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. The BIOS supports downloading its own updates, and I tried doing that, but it kept telling me that I had the latest BIOS version available, even though I could clearly see later BIOS versions.
 
 I ended up having to download the BIOS files manually and load them on a USB disk. I upgraded to BIOS version XXX, and _then_ it recognized my Athlon 3000G.
 
 So if you're trying a similar build, watch out for CPU compatiblity.
 
-## Benchmarks
+## Performance benchmarks
 
 One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that can benchmark local disk writes, but those will miss bottlenecks in the Samba network sharing stack or in the networking equipment.
 
@@ -291,6 +297,10 @@ robocopy C:\tmp\nas-benchmark-files\large-files\ \\truenas\vids\scratch\large-fi
 ```text
 robocopy \\truenas\vids\scratch\large-files C:\tmp\nas-benchmark-files\read-scratch  /s
 ```
+
+## Power usage
+
+TODO:
 
 ## Final thoughts
 
@@ -330,9 +340,17 @@ It's my first mini-ITX build, and I know the case designers have to make sacrifi
 
 ### Disk (Data)
 
-It's a bit too early to judge disks, so check back in about five years to see how I'm liking them, but so far, so good. My biggest worry was that they'd be too noisy, but I haven't heard them at all.
+It's a bit too early to judge disks, so check back in about five years to see how I'm liking them, but so far, so good.
+
+My biggest worry was that they'd be too noisy, but I can't hear them at all.
 
 ### Disk (OS)
+
+The Kingston A400 is working fine. TrueNAS puts such a minimal load on the OS disk that there isn't much for it to do, but it's been fine. It has 90 GB free, so I could have used an even smaller drive.
+
+There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of some scheduled task, but that's it.
+
+{{<img src="truenas-io.png" alt="Graph of disk I/O on OS disk showing minimal activity" maxWidth="800px" caption="TrueNAS rarely touches its OS disk after booting.">}}
 
 ## TrueNAS vs. Synology
 
