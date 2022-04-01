@@ -63,9 +63,9 @@ Do I start on Voyager 3? Voyager 3 will probably cost $100-150k, which will esse
 
 ### Agree on hours per month
 
-I'd love to agree on deadlines, but that's harder to wring out of them. And it's reasonable because if you like the first thing they show you, then a task can take only 10 hours, but if you keep rejecting everything, then the time can grow unbounded.
-
 Even though I signed a retainer agreement for 60 hours of work in March, the agency isn't obligated to deliver 60 hours. The contract says that if they can't reach 60 hours, they either refund me the hours or roll them over to the next month.
+
+I'd love to agree on _deadlines_, but designers don't want to agree to that. And that's reasonable because the deadlines aren't completely within their control. A job can be done in 15 hours if you love the first thing they show you, but if you keep rejecting things, the project timeline grows unbounded.
 
 ### Beware of latency
 
