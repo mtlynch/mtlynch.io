@@ -16,6 +16,9 @@ pygmentscodefencesguesssyntax = true
 
 buildFuture = true
 
+[taxonomies]
+  tag = "tags"
+
 [markup]
   [markup.highlight]
     style = "native"
