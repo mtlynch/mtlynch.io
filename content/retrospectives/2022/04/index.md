@@ -53,6 +53,10 @@ The big change is that we released the Voyager 2 PoE. We sold 14% more devices t
 
 Profit is down, but TinyPilot's finances are too bursty to evaluate on a month-by-month basis. Profit for the first quarter of 2022 is at a healthy $16k.
 
+{{<img src="sales-per-unique-visitor.png" maxWidth="600px" hasBorder="true" caption="Sales Per Unique Visitor reached its highest-ever level in March 2022.">}}
+
+Revenue per visitor was its highest ever, at $10.49 per unique visitor.
+
 ## The return of discretionary time
 
 Published his first tutorial, a guide to [setting up Tailscale on TinyPilot](https://tinypilotkvm.com/blog/tailscale).
