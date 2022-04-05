@@ -16,6 +16,7 @@
           </span>
         </div>
       </div>
+      {{ partial "prev-next.html" . }}
     </header>
 
     {{ if not (hasPrefix .Title "Notes from") }}
@@ -29,6 +30,10 @@
       {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
     </div>
     {{- end -}}
+
+    <hr/>
+
+    {{ partial "prev-next.html" . }}
 
     {{ partial "mailing-list-signup.html" . }}
 
