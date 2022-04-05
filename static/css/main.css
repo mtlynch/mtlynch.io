@@ -39,7 +39,12 @@ blockquote {
 }
 
 .content article header {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.content article header + h2 {
+  margin-top: 1rem;
 }
 
 .content .img {
