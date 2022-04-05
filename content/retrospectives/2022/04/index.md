@@ -7,6 +7,7 @@ description: TODO - One-line summary
 ## Highlights
 
 - TinyPilot had its best month of sales ever, at $69k of total revenue.
+- How I went five months and $32k over budget on a website redesign.
 
 ## Goal Grades
 
