@@ -23,10 +23,10 @@ The latest release [added support for multiple users](https://tinypilotkvm.com/b
 
 ### Wrap up design overhaul of the TinyPilot website
 
-- **Result**: The design is done but it's not published yet
+- **Result**: The design is done, but it's not published yet
 - **Grade**: C
 
-This project is continuing to take longer than I expected. We're done with the designs themselves, but the design agency hasn't had bandwidth yet to implement the code changes to publish them on TinyPilot's site.
+This project is continuing to take longer than I expected. We're done with the designs themselves, but the design agency hasn't had capacity to implement the code changes to publish them on TinyPilot's site.
 
 ### Complete onboarding for TinyPilot's new support engineer
 
@@ -57,13 +57,13 @@ My profit was negative, but that's more a function of how my expenses were timed
 
 {{<img src="sales-per-unique-visitor.png" maxWidth="700px" hasBorder="true" caption="Sales Per Unique Visitor reached its highest-ever level in March 2022.">}}
 
-Revenue per unique visitor reached $10.49, its highest-ever. To put that in context, my average revenue per visitor this time last year was about $4. This is great news, as my plan was to focus on increasing the conversion rate on my website ("bottom of funnel") before I focus on marketing. The growth in this metric suggests my plan is working. I think improvements in the product, pricing, and the website have made people more likely to purchase.
+Revenue per unique visitor reached $10.49, its highest ever. To put that in context, my average revenue per visitor this time last year was about $4. This is great news, as my plan was to focus on increasing the conversion rate on my website ("bottom of funnel") before focusing on marketing. The growth in this metric suggests my plan is working. I think improvements in the product, pricing, and website have made people more likely to purchase.
 
 ## I have free time again!
 
 In February, I brainstormed how I could manage TinyPilot [with 20 hours per week](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). I'm definitely not there yet, but I'm making progress.
 
-One of the largest demands on my time was technical support, which took me 8 hours per week. That was the hardest responsibility to delegate because the hiring process took hundreds of hours. Even after I found a qualified engineer, training was time-consuming because I have two years of institutional knowledge trapped in my head.
+One of the largest demands on my time was technical support, which took me 8 hours per week. That was the hardest responsibility to delegate because the hiring process took hundreds of hours. Even after I found a qualified engineer, training was time-consuming because I had two years of institutional knowledge trapped in my head.
 
 I'm happy to say that we're now over the hump. Diego, TinyPilot's first support engineer, is now answering all questions in our [support forum](https://forum.tinypilotkvm.com/), so I'm averaging less than 8 hours a week on support. He also published his first tutorial, a guide to [setting up Tailscale on TinyPilot](https://tinypilotkvm.com/blog/tailscale).
 
@@ -95,15 +95,15 @@ But I'm not a venture-backed startup. My goal isn't to grow forever and get an I
 
 My main short-term expenses are optimizing the Voyager 2's electrical design for manufacturability ($10-20k/month) and redesigning the [sales website](https://tinypilotkvm.com) ($5-6k/month). In a few months, we'll finalize circuit boards for the Voyager 2, and I'll stop fiddling with the website, so those costs will fall drastically. If I sustain my sales, I'll earn $20k/month by just not starting any new projects.
 
-My initial plan was to work with my electrical engineering partner on Voyager 3 as soon as we stabilize production for Voyager 2. Developing the Voyager 3 will cost about $15-25k per month for the next six months, swallowing my profit for the rest of the year. Not only that, it will consume a large portion of my time, as releasing a new product changes a lot of TinyPilot's internal workflows.
+My initial plan was to work with my electrical engineering partner on Voyager 3 as soon as we stabilized production for Voyager 2. Developing the Voyager 3 will cost about $15-25k per month for the next six months, swallowing my profit for the rest of the year. Not only that, it will consume a large portion of my time, as releasing a new product changes a lot of TinyPilot's internal workflows.
 
-At this point, I think it's time to start collecting income. I can start new projects later in the year, but first I'd like to grow sales to the $70-90k range so that I can invest in product improvements without draining all my profits.
+At this point, I think it's time to start collecting income. I can start new projects later in the year, but first, I'd like to grow sales to the $70-90k range so that I can invest in product improvements without draining all my profits.
 
 ## What I wish I knew about working with a design agency
 
 Back in September, I [hired a design agency](/retrospectives/2021/10/#investing-more-into-design) to improve the TinyPilot website. At the time, I thought the project would take six weeks and cost $7k. Six months later, I've spent $39,577, and the project is still not done.
 
-How did we get here? I can point to mistakes on the agency's side, but the core problem was that I didn't know how to work effectively with an agency. I've only ever hired freelancers, and I didn't realize how much of the dynamic changes with an agency.
+How did we get here? I can point to mistakes on the agency's side, but the core problem was that I didn't know how to work effectively with an agency. I've only ever hired freelancers, and I didn't realize how much an agency changes the dynamics.
 
 I'm recording the things I wish I knew at the beginning, as a reminder to myself and in the hopes that it benefits someone who hasn't started working with an agency yet.
 
@@ -123,15 +123,15 @@ The same logic applies to a design agency. Even if you're getting 40 hours/month
 
 The biggest problem with this project has been in scoping. You might have guessed that based on the fact that I'm six months into a six-week project.
 
-Initially, the agency and I agreed that the project was just a rebrand. We'd create a new logo, color scheme, and font for the website and then evaluate next steps. But then came scope creep. The designers kept silently expanding the scope until I found myself halfway through [a full redesign of the website](/retrospectives/2022/01/#tinypilots-new-logo-and-learning-to-work-with-designers).
+Initially, the agency and I agreed that the project was just a rebrand. We'd create a new logo, color scheme, and font for the website and then evaluate the next steps. But then came scope creep. The designers kept silently expanding the scope until I found myself halfway through [a full redesign of the website](/retrospectives/2022/01/#tinypilots-new-logo-and-learning-to-work-with-designers).
 
 I kept feeling like if I let them go for a little longer, they'd wrap up within the month, but things kept dragging. Looking back, I should have just cut my losses and downscoped the project down to the rebranding, as we had originally planned. But I was distracted by the Voyager 2 launch during those months, so the easiest thing for me to do was let the agency keep going.
 
-Even though I thought I learned my lesson, scope creep bit me again this month. I created a project board with the list of outstanding tasks for the redesign. I booked 60 hours for the month, but I wasn't sure the design tasks would consume all the hours. I added some low-priority bugs at the end of the list in case they had time left over.
+Even though I thought I learned my lesson, scope creep bit me again this month. I created a project board with outstanding tasks for the redesign in priority order. I booked 60 hours for the month, but I wasn't sure the design tasks would consume all the hours. I added some low-priority bugs at the end of the list in case the agency had time left over.
 
 You know where this is going...
 
-The design agency left all of the design tasks half-finished, but they used a quarter of my hours for the month fixing all the low-priority bugs.
+The design agency left all of the design tasks half-finished, but they used a quarter of my hours for the month to fix all the low-priority bugs.
 
 Going forward, I need to set better expectations so they know not to work on non-critical tasks until all the critical tasks are complete.
 
@@ -139,15 +139,15 @@ Going forward, I need to set better expectations so they know not to work on non
 
 If you assigned a freelancer tasks A, B, and C, it would be odd if they abruptly stopped working on task A when it was 80% complete and then started working on task B instead. It would be even more bizarre if they stopped midway through task B to start task C.
 
-With an agency, it's easy to end up in a situation where several tasks are only 80% complete. Maybe Alice at the agency only has 10 hours free this month, so she gets 80% through task A. Bob starts next, but he doesn't want to pick up Alice's project midway through, so he starts task B and gets 30% through it. Before you know it, you've spent $39,577 and you can't use any of the work because it's all only 80-90% finished.
+With an agency, it's easy to end up in a situation where several tasks are only 80% complete. Maybe Alice at the agency only has 10 hours free this month, so she gets 80% through task A. Bob starts next, but he doesn't want to pick up Alice's project midway through, so he starts task B and gets 30% through it. Before you know it, you've spent $39,577, and you can't use any of the work because it's all only 80-90% finished.
 
-In the book _Getting Things Done_, David Allen describes unfinished tasks as "open loops." The more open loops you have, the worse your focus, because each one occupies a bit of real estate in your mind. A freelancer will generally have only a couple open loops with you at once, whereas a design agency can have 5-10x as many, and they drag on for longer because people can get scheduled off the project for months and come back later.
+In the book _Getting Things Done_, David Allen describes unfinished tasks as "open loops." The more open loops you have, the worse your focus because each one occupies a bit of real estate in your mind. A freelancer will generally have only a couple of open loops with you at once, whereas a design agency can have 5-10x as many, and they drag on for longer.
 
-Open loops are also worse value for your money. Suppose you need to complete six tasks over the course of six months. If you're hiring an individual, they'd deliver about one task per month. If you pay them at the end of each month, by the time you've paid, you're already enjoying the benefit of the work. With an agency, they might assign those six tasks to six people who only spend 1/6th of their time on your project, so at month five, you've spent 80% of the money and enjoyed 0% of the benefit.
+Open loops are also worse value for your money. Suppose you need to complete six tasks over the course of six months. If you hired an individual, they'd deliver about one task per month. If you pay them at the end of each month, by the time you've paid, you're already enjoying the benefit of the work. With an agency, they might assign those six tasks to six people who only spend 1/6th of their time on your project. At month five, you've spent 80% of the money and enjoyed 0% of the benefit.
 
 ### Start hourly, then switch to retainer
 
-The agency I'm working with offers both hourly and retainer plans. With hourly, I can buy a block of 30 hours up front, and then the agency work with them until they've consumed those hours. With a retainer plan, I commit to a certain number of hours every month, with a minimum of 40. It's a 20% discount from the hourly rate, but unused hours don't roll over, and I have to give 28 days' notice to cancel.
+The agency I'm working with offers both hourly and retainer plans. With hourly, I can buy a block of 30 hours up front, and then the agency works with me until they've consumed those hours. With a retainer plan, I commit to a certain number of hours every month, with a minimum of 40. It's a 20% discount from the hourly rate, but unused hours don't roll over, and I have to give 28 days' notice to cancel.
 
 What I didn't realize is that hourly clients can end up starved for resources for months. I started working with the agency in October, and the work was great for two months and then took a massive nosedive in December.
 
@@ -193,10 +193,12 @@ I also created a [live demo](https://demo.pico.rocks/) server. I avoided it at f
 
 ### Lessons learned
 
-- Agencies require different management than freelancers
+- Agencies require different management than freelancers.
+- Creating a Docker image for a self-hosted tool makes it much more attractive.
+  - I suspect the reason PicoShare has attracted users so quickly is that you can run it with a single Docker command.
 
 ### Goals for next month
 
 - Publish a blog post and video about building a homelab NAS server with TinyPilot.
 - Complete the TinyPilot website redesign.
-- Publish a release of TinyPilot Pro with opt-in experimental support for H264 video over WebRTC
+- Publish a release of TinyPilot Pro with opt-in experimental support for H264 video over WebRTC.
