@@ -2,12 +2,12 @@
 title: "TinyPilot: Build a KVM Over IP for Under $100"
 date: "2020-07-23T00:00:00Z"
 tags:
-- raspberry pi
-- python
-- ansible
-- homelab
-- kvm
-- tinypilot
+  - raspberry pi
+  - python
+  - ansible
+  - homelab
+  - kvm
+  - tinypilot
 images:
   - tinypilot/opengraph.jpg
 description: Using only a Raspberry Pi and an $11 video capture dongle, you can create your own KVM over IP device, allowing you to send keyboard input to a remote computer and capture its display.
@@ -17,6 +17,7 @@ discuss_urls:
   reddit: https://www.reddit.com/r/homelab/comments/hwimys/tinypilot_build_a_kvm_over_ip_for_under_100/
 canonical_url: https://tinypilotkvm.com/blog/build-a-kvm-over-ip-under-100
 ---
+
 TinyPilot is my inexpensive, open-source device for controlling computers remotely. It works even before the operating system boots, so I use TinyPilot to install new OSes and debug boot failures on my [bare metal homelab servers](/building-a-vm-homelab/).
 
 This post details my experience creating TinyPilot and shows how you can build your own for under $100 using a Raspberry Pi.
@@ -69,7 +70,7 @@ As a proof of concept of my Pi-as-KVM idea, I created a simple web app called [K
 
 {{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="[Key Mime Pi](/key-mime-pi), my early precursor to TinyPilot that only supported keyboard forwarding." maxWidth="700px" hasBorder="true">}}
 
- Key Mime Pi connects to another computer via USB and registers as a USB keyboard. It also presents a web page and listens for JavaScript key events. As the user types, Key Mime Pi captures the key events and translates them into keystrokes through its fake USB keyboard. This causes the keystrokes to appear on the target computer. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
+Key Mime Pi connects to another computer via USB and registers as a USB keyboard. It also presents a web page and listens for JavaScript key events. As the user types, Key Mime Pi captures the key events and translates them into keystrokes through its fake USB keyboard. This causes the keystrokes to appear on the target computer. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
 
 ## The challenge of capturing video
 
@@ -229,19 +230,19 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 ### Parts list
 
-* [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
-* [USB-C to USB-A cable](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-* [HDMI to USB capture dongle](https://www.ebay.com/itm/393872381980)
-  * Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
-  * They're generally available on eBay for $11-15.
-* [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)
-* [HDMI to HDMI cable](https://smile.amazon.com/Cable-DisplayPort-marca-AmazonBasics-longitud/dp/B015OW3M1W/)
-  * Or \[other\] to HDMI, depending on how your target machine displays output.
-* (Optional) [A USB-C OTG split connector](https://tinypilotkvm.com/product/tinypilot-power-connector)
-  * Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/gp/product/B01JPDTZXK/) and a [3 Amp power adapter](https://smile.amazon.com/dp/B0728HB18G).
-* (Optional) A cooling case, heat sink, or fan
-  * Choose a case that provides access to the Pi's GPIO pins.
-  * I use [this minimalist, passive cooling case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/).
+- [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants work)
+- [USB-C to USB-A cable](https://www.amazon.com/Anker-2-Pack-Premium-Charging-Samsung/dp/B07DC5PPFV/) (Male/Male)
+- [HDMI to USB capture dongle](https://www.ebay.com/itm/393872381980)
+  - Strangely, these don't have a brand name, but you can recognize them [by their appearance](hdmi-dongle.jpg).
+  - They're generally available on eBay for $11-15.
+- [microSD card](https://smile.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/) (Class 10, 8 GB or larger)
+- [HDMI to HDMI cable](https://smile.amazon.com/Cable-DisplayPort-marca-AmazonBasics-longitud/dp/B015OW3M1W/)
+  - Or \[other\] to HDMI, depending on how your target machine displays output.
+- (Optional) [A USB-C OTG split connector](https://tinypilotkvm.com/product/tinypilot-power-connector)
+  - Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/gp/product/B01JPDTZXK/) and a [3 Amp power adapter](https://smile.amazon.com/dp/B0728HB18G).
+- (Optional) A cooling case, heat sink, or fan
+  - Choose a case that provides access to the Pi's GPIO pins.
+  - I use [this minimalist, passive cooling case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum-Passive-Cooling/dp/B07TVS5GWV/).
 
 ### Install Raspberry Pi OS Lite
 
@@ -266,8 +267,8 @@ I like [this minimalist case](https://smile.amazon.com/Dorhea-Raspberry-Aluminum
 To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C port to a USB-A port on the target machine:
 
 {{<gallery caption="With a USB-C to USB-A cable, connect the USB-C end to the Pi's USB-C port and the USB-A end to the target computer.">}}
-  {{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
-  {{<img src="usb-server.jpg" alt="USB connection to target computer" maxWidth="500px">}}
+{{<img src="usb-cable.jpg" alt="USB connection to Raspberry Pi" maxWidth="500px">}}
+{{<img src="usb-server.jpg" alt="USB connection to target computer" maxWidth="500px">}}
 {{</gallery>}}
 
 {{<notice type="info">}}
@@ -279,8 +280,8 @@ To enable TinyPilot to function as a virtual keyboard, connect your Pi's USB-C p
 To complete the physical assembly, insert the HDMI dongle into one of the Pi's USB ports. Then, connect an HDMI cable to the dongle, and plug the other end into the display output of your target computer.
 
 {{<gallery caption="Connect the display output of the target computer to the HDMI dongle and insert it into the Pi's USB port.">}}
-  {{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" maxWidth="500px">}}
-  {{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" maxWidth="500px">}}
+{{<img src="hdmi-insert.jpg" alt="HDMI input connection to Raspberry Pi" maxWidth="500px">}}
+{{<img src="hdmi-server.jpg" alt="HDMI output connection from target computer" maxWidth="500px">}}
 {{</gallery>}}
 
 {{<notice type="info">}}
@@ -311,16 +312,16 @@ If you're appropriately suspicious of piping a random web script into your shell
 
 The script bootstraps a self-contained [Ansible](https://docs.ansible.com/ansible/latest/index.html) environment with my [TinyPilot Ansible role](https://github.com/tiny-pilot/ansible-role-tinypilot). It installs four services that run on every boot:
 
-* [nginx](https://nginx.org/): a popular open-source web server
-* [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
-* [usb-gadget](https://github.com/tiny-pilot/tinypilot/blob/4587f989b6d479034a64b2411c1c9964cdad7261/scripts/usb-gadget/init-usb-gadget): a script enabling Pi's "USB gadget mode," which allows the Pi to impersonate USB devices
-* [tinypilot](https://github.com/tiny-pilot/tinypilot): the web interface I created for TinyPilot
+- [nginx](https://nginx.org/): a popular open-source web server
+- [ustreamer](https://github.com/pikvm/ustreamer): a lightweight HTTP video streaming server
+- [usb-gadget](https://github.com/tiny-pilot/tinypilot/blob/4587f989b6d479034a64b2411c1c9964cdad7261/scripts/usb-gadget/init-usb-gadget): a script enabling Pi's "USB gadget mode," which allows the Pi to impersonate USB devices
+- [tinypilot](https://github.com/tiny-pilot/tinypilot): the web interface I created for TinyPilot
 
 ## Using TinyPilot
 
 After you run the install script, TinyPilot will be available at:
 
-* [http://raspberrypi/](http://raspberrypi/)
+- [http://raspberrypi/](http://raspberrypi/)
 
 {{<img src="tinypilot-hello-world.png" alt="Screenshot of TinyPilot web interface" maxWidth="700px" caption="When setup is complete, you can access TinyPilot's web interface at [http://raspberrypi/](http://raspberrypi/) on your local network.">}}
 
@@ -338,8 +339,8 @@ Jun 28 06:23:15 tinypilot kernel: Under-voltage detected! (0x00050005)
 To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
 {{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
-  {{<img src="power-connector.jpg" alt="Close-up of power connector" maxWidth="500px">}}
-  {{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" maxWidth="500px">}}
+{{<img src="power-connector.jpg" alt="Close-up of power connector" maxWidth="500px">}}
+{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" maxWidth="500px">}}
 {{</gallery>}}
 
 Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.
@@ -352,10 +353,11 @@ Importantly, the power connector's data port excludes a USB power line. This ens
 
 TinyPilot's software is open-source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
-* [tinypilot](https://github.com/tiny-pilot/tinypilot.git): The TinyPilot web interface and backend.
-* [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
+- [tinypilot](https://github.com/tiny-pilot/tinypilot.git): The TinyPilot web interface and backend.
+- [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
 {{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
 ---
-*Special thanks to Max Devaev for his incredible work on [uStreamer](https://github.com/pikvm/ustreamer) and his contributions to TinyPilot.*
+
+_Special thanks to Max Devaev for his incredible work on [uStreamer](https://github.com/pikvm/ustreamer) and his contributions to TinyPilot._
