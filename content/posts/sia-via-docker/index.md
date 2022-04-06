@@ -28,7 +28,7 @@ Many newcomers to Sia ask, "Will I make a lot of money hosting on Sia?" The hone
 
 {{< img src="siahub-2percent.png" alt="SiaHub screenshot" maxWidth="380px" align="right" >}}
 
-The storage rental market has not yet reached critical mass. [SiaHub](https://siahub.info), my favorite Sia host explorer, shows that the total storage capacity of Sia's network (as of 2017-05-25) is a whopping 1.1 petabytes. Only 2% of that capacity has been rented. With such a surplus of space, hosts can't sell their storage space unless they price it at almost zero.
+The storage rental market has not yet reached critical mass. SiaHub, my favorite Sia host explorer, shows that the total storage capacity of Sia's network (as of 2017-05-25) is a whopping 1.1 petabytes. Only 2% of that capacity has been rented. With such a surplus of space, hosts can't sell their storage space unless they price it at almost zero.
 
 So the money's not rolling in quite yet, but here are a couple reasons you might want to participate anyway:
 
