@@ -8,6 +8,7 @@ description: TODO - One-line summary
 
 - TinyPilot had its best month of sales ever, at $69k of total revenue.
 - How I went five months and $32k over budget on a website redesign.
+- PicoShare is now the fastest-growing project I've ever published.
 
 ## Goal Grades
 
@@ -56,56 +57,61 @@ My profit was negative, but that's really about odd timing of expenses this mont
 
 {{<img src="sales-per-unique-visitor.png" maxWidth="700px" hasBorder="true" caption="Sales Per Unique Visitor reached its highest-ever level in March 2022.">}}
 
-Revenue per visitor was its highest ever, at $10.49 per unique visitor. To put that in context, my average revenue per visitor this time last year was about $4. I think improvements in the product, pricing, and the website have made people more likely to purchase.
+Revenue per visitor was its highest ever, at $10.49 per unique visitor. To put that in context, my average revenue per visitor this time last year was about $4. I'm happy to see this, as my plan was to focus on increasing the conversion rate on my website ("bottom of funnel") before I focus on marketing, and that strategy seems to be working. I think improvements in the product, pricing, and the website have made people more likely to purchase.
 
-## The return of discretionary time
+## I have free time again!
 
 In February, I brainstormed how I could manage TinyPilot [with 20 hours per week](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week).
 
-One of the largest demands on my time was technical support, which occupied 8 hours per week.
+One of the largest demands on my time was technical support, which took me 8 hours per week. That was the hardest responsibility to delegate because the hiring process took hundreds of hours. Even after I found a qualified engineer, training was time-consuming because I have two years of institutional knowledge trapped in my head.
 
-TinyPilot's first support engineer, Diego, is now ramped up. He answers all the questions in the support forum now. He also published his first tutorial, a guide to [setting up Tailscale on TinyPilot](https://tinypilotkvm.com/blog/tailscale).
+I'm happy to say that we're now over the hump. Diego, TinyPilot's first support engineer, is now answering all questions in our [support forum](https://forum.tinypilotkvm.com/), so I'm averaging less than 8 hours a week on support. He also published his first tutorial, a guide to [setting up Tailscale on TinyPilot](https://tinypilotkvm.com/blog/tailscale).
 
-I've also been making an effort to let TinyPilot's staff take on more responsibility. There are lots of little routine tasks that I've been doing in coordinating with our vendors. For example, this week, we found out that the specific type of screw we use to assemble the Voyager 2 is now out of stock everywhere. Normally, I would work with our case designer to find a replacement and verify it works, but instead, I'm letting TinyPilot's staff take it on.
+I've also been making an effort to let TinyPilot's local staff take on more responsibility. For example, this week, we found out that the specific type of screw we use to assemble the Voyager 2 is now out of stock everywhere. Normally, I would work with our case designer to find a replacement and verify it works, but I caught myself before emailing him. This was a good opportunity for TinyPilot's local staff to take on more responsibility, so I asked them to take the lead.
 
-One of the things I'm happy to do again is write. I've been working for the past few weeks on a blog post in my [homelab](/tags/homelab/) series. I enjoy writing them, and they bring a lot of new customers to TinyPilot. I've always wanted to write more of them, but it's hard to outsource because I have to find someone knowledgeable about building computers, good at writing, and interested in freelance work.
+I noticed a significant difference in my time management throughout March. For the previous six months, I've ended most days feeling like I didn't finish everything I wanted and had to postpone [important but non-urgent tasks](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). In March, I often completed my urgent tasks by mid-afternoon and had free time to invest in marketing or experimenting with a new tool to eliminate toil for TinyPilot.
 
-I'm focusing my free time on marketing, automation, and delegation. For the last six months, we've been shifting from the Voyager 1 to the Voyager 2. It's hard to work on efficiency when everything is in flux. Now that there's less change, I want to focus on optimizing our workflows.
+I'm resisting the temptation to spend this newfound free time _adding_ things like hiring another person or adding a new feature to TinyPilot. I have to remind myself that those things are always more complicated than they first seem. I spent 2021 scrambling to manage too many growth projects, so now it's time to optimize what we have:
 
 - Automating our release process
 - Automating our end-to-end testing
+- Talking more with customers outside of support flows
 - Establishing escalation paths between TinyPilot's customer service staff and support engineer
-- Establishing repeatable workflows with our manufacturers
-
-I'm resisting the temptation to spend this new free time on adding things. I keep thinking, "Oh, I should add this feature or hire this person." And I have to remind myself that those things are always more complicated than they first seem. I've been scrambling to manage too many growth projects for the past year, so now it's time to optimize what I have right now.
+- Improving workflows with our manufacturers
 
 ## Keep reinvesting or start collecting income?
 
-I want to keep iterating on the software, as that's the part I enjoy most.
+For all of TinyPilot's existence, I've ignored short-term profits and instead focused on long-term growth. I avoided running at a deficit, but I was happy to run at nearly breakeven, reinvesting all revenue into improving the product.
 
-My big expenses now are redesigning the website ($5-6k/month) and iterating on the Voyager 2's electrical design ($5-6k/month). In a few months, I expect those costs to drop drastically, as we finalize circuit boards and I stop fiddling with the website.
+I thought of reinvestment as building momentum. If my sales were $3k/month and I spent $5k to improve the product or website to reach $4k/month, that $5k is a one-time cost, but then I'm permanently at a higher sales velocity.
 
-At that point, do I continue investing in either category? I could have the designers start working on the TinyPilot app itself to make it look more professional.
+But I'm not a venture-backed startup. My goal isn't to grow forever and get an IPO. At some point, I have to stop putting everything into growth and start collecting income. Is that time now?
 
-And I can begin working on
+My main short-term expenses are iterating on the Voyager 2's electrical design ($10-20k/month) and redesigning the [sales website](https://tinypilotkvm.com) ($5-6k/month). In a few months, we'll finalize circuit boards for the Voyager 2, and I'll stop fiddling with the website, so those costs will fall drastically. Instead of averaging $5k/month in profit, I can be making $20k/month by doing nothing but wrapping up short-term projects and not starting new ones.
 
-One thing that could shift things is that I applied for a grant for manufacturers affected by the supply shortage. I could win up to $25k toward the Voyager 3, and then that slightly shifts things, but it's still.
+My initial plan was to work with my electrical engineering partner to begin work on Voyager 3 as soon as we get production stabilized for Voyager 2. Voyager 3 will cost about $15-25k per month for the next six months, which would essentially swallow m profit for the rest of the year. Not only that, it will eat a big chunk out of my time, as releasing a new product changes a lot of TinyPilot's internal workflows.
 
-Do I start on Voyager 3? Voyager 3 will probably cost $100-150k, which will essentially swallow my profit for the next year. But it would allow me to add features that make Voyager competitive with similar products in the $1,500-$3k range while not significantly increasing my manufacturing costs. So we'd be making $1-2k on every sale rather than $250-350.
+At this point, I think it's time to start collecting income. I can start new projects later in the year, but I'd like to work on increasing sales so that I can continue making a healthy profit while still investing in meaningful product improvements.
 
 ## What I wish I knew about working with a design agency
 
 Back in September, I [hired a design agency](/retrospectives/2021/10/#investing-more-into-design) to improve the TinyPilot website. At the time, I thought the project would take six weeks and cost $7k. Six months later, I've spent $39,577, and the project is still not done.
 
-There are many factors that led to this point. Some of these were mistakes on the agency's side, but the majority of the problems came from me not knowing how to work effectively with an agency. I've only ever hired freelancers, and I didn't realize how different things are when working with an agency.
+How did we get here? I can point to mistakes on the agency's side, but the core problem was that I didn't know how to work effectively with an agency. I've only ever hired freelancers, and I didn't realize how different things are with agencies.
+
+So I'm recording the things I wish I knew at the beginning, as a reminder to myself and in the hopes that it might benefit someone else who's planning to hire an agency.
 
 ### An agency requires more management, not less
 
-My perception of design and development agencies is that they cater to people who don't have experience managing people or projects. Going into the project, I felt like the agency would require less oversight and management
+My perception of design and development agencies is that they cater to people who don't have experience managing people or projects. Because of that, I assumed the agency would mostly manage itself and not require much oversight from me.
+
+The fundamental mistake I made when hiring this agency was underestimating the time I'd need to manage them. I think I could have avoided a lot of these problems if I was more on top of the project instead of assuming that the agency would mostly manage itself.
+
+The agency was working 40-60 hours per month, the same hours as my other freelancer, so I thought the agency as a whole would require similar oversight to one freelancer. In retrospect
+
+It's obvious in retrospect why
 
 In theory, the agency could give you a single point of contact, and that person abstracts the rest of the team from you, but then you'd be playing telephone through that person and things would get lost in translation. So working with an agency team necessarily means communicating with more people than if you're working with an individaul freelancer.
-
-The fundamental mistake I made when hiring this agency was underestimating the time I'd need to manage them. I budgeted the amount of time I'd allocate to hiring one freelancer, but I should have budgeted more like three. I think I could have avoided a lot of these problems if I was more on top of the project instead of assuming that the agency would mostly manage itself.
 
 ### Aggressively protect your scope
 
@@ -131,23 +137,29 @@ Open loops are also worse value for your money. Suppose you hire someone to comp
 
 Presumably, you're paying for this work because you expect some sort of return on this investment, such as increased sales from a better design. With the individual, you're realizing these results much earlier. So if you're getting a 3% increase in sales from each task, the serialized tasks would have paid off much earlier.
 
-### Agree on hours per month
+### Start hourly, then switch to retainer
 
-Even though I signed a retainer agreement for 60 hours of work in March, the agency isn't obligated to deliver 60 hours. The contract says that if they can't reach 60 hours, they either refund me the hours or roll them over to the next month.
+The agency I'm working with offers both hourly and retainer plans. With hourly, I can buy a block of 30 hours and then work with them until that block is done. With retainer, I commit to a certain number of hours every month, and I have to give 28 days' notice before canceling the agreement. The minimum retainer plan was 40 hours/month, but it's a 20% discount from the hourly rate.
 
-I'd love to agree on _deadlines_, but designers don't want to agree to that. And that's reasonable because the deadlines aren't completely within their control. A job can be done in 15 hours if you love the first thing they show you, but if you keep rejecting things, the project timeline grows unbounded.
+What I didn't realize is that hourly clients are the lowest priority, so the agency can starve their projects of resources indefinitely. That's what happened with TinyPilot. The agency was doing great work in October and November, but then quality and bandwidth took a nosedive in December.
 
-### Beware of latency
+At the time, I thought it was just a holiday slowdown, but when it continued into January, I raised the issue with the owner. He admitted that the agency had lost staff and taken on new retainer clients, so they were finding it difficult to allocate bandwidth for TinyPilot, as I was their only hourly client. He recommended I switch to a retainer agreement to guarantee priority.
 
-Even with a retainer agreement, I don't have any guarantees around latency. For this past month, there was no design work at all for the first
+I was annoyed. Why should I reward them for deprioritizing my project by making a bigger commitment to them? At the same time, I get it. The agency is a small business too, and they want to prioritize clients who are going to work with them long-term rather than one-and-done clients. The agency told me at the beginning that I'd get priority as a retainer client, but I didn't realize how much of a difference that made.
 
-The designer I've been working with isn't available for several weeks, so the design sits half done. By the time we circle around, we've lost a lot of momentum. And at that point, I'm much less interested in polishing the design because who knows if it's going to be another three weeks before I hear back, so I have to drop my standards more than what I'd necessarily want.
+If I were to do it over again, I'd buy one 30-hour hourly block as a trial hire for the agency and then switch to a retainer agreement for the remainder of the project. Having guaranteed hours on the agency's schedule is a better value for your money because it protects your time on their schedule instead of them just squeezing a few hours in here and there when they have time between their priority clients.
 
 ## Side projects
 
 ### [PicoShare](https://demo.pico.rocks/)
 
-Two YouTube creators made videos about it.
+PicoShare is a project I started in February. It's a minimalist file-sharing tool. I often want to share images, videos, or PDFs with other people. If I'm sending a file for business, I feel silly sending an imgur or mega.nz link, because those don't really say "professional business communication." But I didn't like dealing with Google Drive or Dropbox either because I don't like their UI getting in the way, so I made my own tool.
+
+I officially released PicoShare [v1.0.0](https://github.com/mtlynch/picoshare/releases/tag/1.0.0) on March 20th by [announcing it to the /r/selfhosted](https://old.reddit.com/r/selfhosted/comments/tirbdq/picoshare_a_minimalist_easytohost_service_for/) subreddit. The reception was positive but nothing sensational. But then it seems to have had a slow burn in the next few weeks with people adopting it.
+
+It's the fastest-growing project I've ever created. The [first commit](https://github.com/mtlynch/picoshare/commit/bd4b3c38a680ffc06f95174d0e062cb429e2e4d1) was February 13th, and the project currently has 664 stars on Github. For comparison, [TinyPilot](https://github.com/tiny-pilot/tinypilot) has 1.8k stars after almost two years, and [LogPaste](https://github.com/mtlynch/logpaste) has 201 stars after a year.
+
+Two YouTube creators made videos about it. A self-hosting blogger [wrote a tutorial](https://mariushosting.com/how-to-install-picoshare-on-your-synology-nas/) about installing PicoShare on a Synology NAS. That blog post was fun for me because my first-ever blog post was about [setting up a Docker image on my Synology NAS](/sia-via-docker/).
 
 David Burgess made [a video about it](https://www.youtube.com/watch?v=9eJeA8If0dY).
 
