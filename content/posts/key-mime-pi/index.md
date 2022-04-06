@@ -2,15 +2,16 @@
 title: "Key Mime Pi: Turn Your Raspberry Pi into a Remote Keyboard"
 date: "2020-06-11T00:00:00Z"
 tags:
-- raspberry pi
-- python
-- ansible
+  - raspberry pi
+  - python
+  - ansible
 description: Using the Pi as a USB gadget, I can impersonate a keyboard and make it type whatever I want through the web browser.
 images:
-- key-mime-pi/cover.jpg
+  - key-mime-pi/cover.jpg
 discuss_urls:
   reddit: https://redd.it/h0yg3d
 ---
+
 Recent versions of the Raspberry Pi support USB on-the-go (USB OTG), which allows them to impersonate USB devices such as keyboards, thumb drives, and microphones. To take advantage of this, I made an open-source web app that turns my Pi into a fake keyboard. I call it [Key Mime Pi](https://github.com/mtlynch/key-mime-pi.git).
 
 This post demonstrates how Key Mime Pi works and how you can build one for yourself.
@@ -21,16 +22,16 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 
 ## What you'll need
 
-* A Raspberry Pi that supports USB OTG:
-  * [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants)
-  * [Raspberry Pi Zero W](https://smile.amazon.com/CanaKit-Raspberry-Wireless-Official-Supply/dp/B071L2ZQZX/)
-  * Raspberry Pi A and A+ *(verification needed)*
-    * [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
-* [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (aka Raspbian)
-  * Stretch or later
-* A USB cable
-  * For the Pi 4: [USB-C to USB-A](https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYN0A/) (Male/Male)
-  * For the Pi Zero W: [Micro-USB to USB-A](https://smile.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B072J1BSV6/) (Male/Male)
+- A Raspberry Pi that supports USB OTG:
+  - [Raspberry Pi 4](https://smile.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/) (all variants)
+  - [Raspberry Pi Zero W](https://smile.amazon.com/CanaKit-Raspberry-Wireless-Official-Supply/dp/B071L2ZQZX/)
+  - Raspberry Pi A and A+ _(verification needed)_
+    - [This source](https://raspberrypi.stackexchange.com/a/73911) claims that early Pis support USB OTG, but I have not tested these devices personally.
+- [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) (aka Raspbian)
+  - Stretch or later
+- A USB cable
+  - For the Pi 4: [USB-C to USB-A](https://www.amazon.com/Anker-2-Pack-Premium-Charging-Samsung/dp/B07DC5PPFV/) (Male/Male)
+  - For the Pi Zero W: [Micro-USB to USB-A](https://smile.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B072J1BSV6/) (Male/Male)
 
 ## Install Raspberry Pi OS Lite
 
@@ -45,8 +46,8 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
 {{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the Micro-USB data port.">}}
-  {{< img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px" >}}
-  {{< img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px" >}}
+{{< img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px" >}}
+{{< img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px" >}}
 {{</gallery>}}
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
@@ -134,7 +135,7 @@ ansible \
 
 After you run the install script, Key Mime Pi will be available at:
 
-* [http://raspberrypi:8000/](http://raspberrypi:8000/)
+- [http://raspberrypi:8000/](http://raspberrypi:8000/)
 
 Its interface looks like this:
 
@@ -156,16 +157,16 @@ To mimic a keyboard, the Pi has to communicate with the OS according to the [USB
 
 Upon each keystroke, the keyboard sends an 8-byte message called a "report."
 
-| Byte Index | Purpose |
-|------------|---------|
+| Byte Index | Purpose                          |
+| ---------- | -------------------------------- |
 | 0          | Modifier keys (Ctrl, Alt, Shift) |
-| 1          | Reserved for manufacturers |
-| 2          | Key #1   |
-| 3          | Key #2   |
-| 4          | Key #3   |
-| 5          | Key #4   |
-| 6          | Key #5   |
-| 7          | Key #6   |
+| 1          | Reserved for manufacturers       |
+| 2          | Key #1                           |
+| 3          | Key #2                           |
+| 4          | Key #3                           |
+| 5          | Key #4                           |
+| 6          | Key #5                           |
+| 7          | Key #6                           |
 
 Sending the keys for "Hi" looks like this:
 
@@ -239,15 +240,15 @@ The Pi was correctly detecting that standard USB 2.0 and USB 3.0 ports provide i
 
 Standard USB ports come up short:
 
-| USB Port Type      | Power output       |
-|--------------------|--------------------|
-| USB 2.0            | 5 V / 0.5 A        |
-| USB 3.0            | 5 V / 0.9 A        |
+| USB Port Type | Power output |
+| ------------- | ------------ |
+| USB 2.0       | 5 V / 0.5 A  |
+| USB 3.0       | 5 V / 0.9 A  |
 
 I currently am still searching for a solution tot his problem. Here are some possible solutions I have not yet tested:
 
-* Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
-* Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://smile.amazon.com/Raspberry-Supply-SoulBay-Adapter-Android/dp/B07CVH21NC/).
+- Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
+- Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://smile.amazon.com/Raspberry-Supply-SoulBay-Adapter-Android/dp/B07CVH21NC/).
 
 ## Troubleshooting
 
@@ -295,18 +296,18 @@ I now have a working solution that both captures video output from a target devi
 
 A detailed follow-up post is coming soon, but in the meantime, you can pre-order pre-configured KVM Pi kits that include everything you need to build your own KVM Pi:
 
-* [tinypilotkvm.com](https://tinypilotkvm.com/?ref=mtlynch.io)
+- [tinypilotkvm.com](https://tinypilotkvm.com/?ref=mtlynch.io)
 
 ## Source code
 
 Key Mime Pi's code is fully open source under the permissive [MIT license](https://opensource.org/licenses/MIT):
 
-* [key-mime-pi](https://github.com/mtlynch/key-mime-pi.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
-* [ansible-role-key-mime-pi](https://github.com/mtlynch/ansible-role-key-mime-pi): The Ansible role for configuring the Pi's USB gadget functionality and for installing the web server as a systemd service.
+- [key-mime-pi](https://github.com/mtlynch/key-mime-pi.git): Web server that forwards keystrokes to the Pi's virtual keyboard.
+- [ansible-role-key-mime-pi](https://github.com/mtlynch/ansible-role-key-mime-pi): The Ansible role for configuring the Pi's USB gadget functionality and for installing the web server as a systemd service.
 
 ## Acknowledgments
 
-* [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard) was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
-* [Fmstrat/diy-ipmi](https://github.com/Fmstrat/diy-ipmi) was an inspiration for this project and proved that it was possible to make a Pi function as a KVM over IP.
-* [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) provided the most readable explanation of the HID protocol I found.
-* Thanks to the Linux and Raspberry Pi OS developers who made USB gadget functionality possible.
+- [raspberrypisig/pizero-usb-hid-keyboard](https://github.com/raspberrypisig/pizero-usb-hid-keyboard) was the first sample code I found that successfully installed the virtual USB HID device on my Pi.
+- [Fmstrat/diy-ipmi](https://github.com/Fmstrat/diy-ipmi) was an inspiration for this project and proved that it was possible to make a Pi function as a KVM over IP.
+- [Rafael Medina](https://www.rmedgar.com/blog/using-rpi-zero-as-keyboard-send-reports) provided the most readable explanation of the HID protocol I found.
+- Thanks to the Linux and Raspberry Pi OS developers who made USB gadget functionality possible.
