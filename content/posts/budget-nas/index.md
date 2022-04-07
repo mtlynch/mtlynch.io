@@ -79,7 +79,7 @@ ZFS is designed to survive disk failures, so it stores each block of data redund
 
 I found this raidz calculator that tells you how much space different disk configurations give you:
 
-TODO: Link to raidz calculator.
+TODO: Link to [raidz calculator](https://wintelguy.com/zfs-calc.pl).
 
 ZFS uses space more efficiently the more disks it has. Many homelab builders would build a 20 TB server by buying something like eight drives of 2 TB each (TODO: check). The problem is that disks are large, so eight drives drastically increases the size of the case you need, especially if you want to leave some drive bays open to give yourself room for expansion. I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
 
@@ -128,7 +128,12 @@ The biggest decision was the disk. I wanted to. Things I wanted to avoid:
 
 - Noise
 - High failure rate
-- SMR
+- Shingled magnetic recording (SMR) disks
+  - ZFS performs poorly on SMR drives.
+  - Look for drives with conventional magnetic recording (CMR).
+  - Check this list of [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/).
+
+From there, there are things you want to consider, such as RPM speed, size, and price.
 
 7200 vs 1000 RPM
 
@@ -140,13 +145,7 @@ Checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog
 
 Quantity or size? If you're building a NAS server that has 20-drive bays, then sure, buy a bunch of small disks. ZFS can make more efficient use of your disks the more you have of them. I wanted to give myself room to grow. The problem with buying a lot of small disks is that . And since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). I figure that I won't need to do that for another year or two, and then hopefully by that time, the feature is complete and landed in TrueNAS.
 
-Shucking - didn't want to deal with it. At my scale, it's a maximum savings of tens of dollars, so it wasn't worth it.
-
-Avoiding SMR
-
-Shingled magnetic
-
-List of [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/).
+One technique that's become increasingly popular is called "shucking." You buy a portable USB drive and then strip it out of its case to get the disk inside. For whatever reason, portable drives are sometimes less expensive in this form factor, so you can save a few dollars by shucking. At my scale, the savings seemed like they'd be on the order of tens of dollars, so I didn't want to deal with it.
 
 ### Disk (OS)
 
