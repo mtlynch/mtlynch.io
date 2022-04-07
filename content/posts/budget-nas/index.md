@@ -171,7 +171,7 @@ I specifically chose a semi-modular PSU because I wanted to minimize clutter. Ha
 
 One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realized there wasn't enough space to plug in a standard SATA cable. These slim 90-degree cables solved the problem.
 
-TODO: Photo
+{{<img src="sata-just-barely.jpg" alt="TODO" maxWidth="500px">}}
 
 ## What's missing?
 
@@ -247,6 +247,22 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 ## Build photos
 
 TODO
+
+{{<img src="all-parts.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="motherboard-installed.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="ssd-installed.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="psu-installed.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="90-degree-sata-installed.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="sata-just-barely.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="cpu-ram-pwr.jpg" alt="TODO" maxWidth="600px">}}
+
+{{<img src="completed-build.jpg" alt="TODO" maxWidth="800px">}}
 
 ## Building the server with TinyPilot
 
