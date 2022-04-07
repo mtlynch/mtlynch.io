@@ -198,7 +198,7 @@ I originally met my friend [David Toth](https://twitter.com/jupiterunknown) at a
 
 David loves meeting other tech founders, but he only has finite time to do it. He found that his in-person interactions were almost always richer and longer-lasting than relationships he formed online, so he dedicates nearly all of his networking time to real-life events.
 
-{{< img src="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" caption="Photo from a recent [Indie Hackers Western Mass Meetup](https://www.meetup.com/nerdsummit/events/266162598/), which David and I now co-organize" maxWidth="650px" >}}
+{{< img src="indiehackers-august.jpg" alt="Group photo of Indie Hackers meetup" caption="Photo from a recent Indie Hackers Western Mass Meetup, which David and I now co-organize" maxWidth="650px" >}}
 
 David's philosophy made complete sense to me. I'm still in touch with several people today after meeting them at a meetup or conference years ago for only 30 minutes. That's not true of anyone I interact with on Twitter or reddit. In my social media history, there are countless examples of me spending an hour or more to engage with someone, but now I have no memory of the conversation and am not in touch with the person at all.
 

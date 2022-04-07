@@ -1,21 +1,22 @@
 ---
 title: My Fourth Year as a Bootstrapped Founder
 tags:
-- annual review
-- blogging
-- tinypilot
-- is it keto
-- zestful
+  - annual review
+  - blogging
+  - tinypilot
+  - is it keto
+  - zestful
 description: Four years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my fourth year and what I've learned so far about bootstrapping software businesses.
-date: '2022-02-01'
+date: "2022-02-01"
 hero_image: cover.jpg
 custom_css: true
 images:
-- solo-developer-year-4/og-cover.jpg
+  - solo-developer-year-4/og-cover.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/shvsqy/my_fourth_year_as_a_bootstrapped_founder/
   hacker_news: https://news.ycombinator.com/item?id=30162509
 ---
+
 Four years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own self-funded software company.
 
 For the first few years, all of my businesses flopped. They all operated at a loss, and none of them earned more than a few hundred dollars per month in revenue.
@@ -26,21 +27,21 @@ In this post, I'll share what I've learned from TinyPilot about being a bootstra
 
 Previous updates:
 
-* [My First Year as a Solo Developer](/solo-developer-year-1/)
-* [My Second Year as a Solo Developer](/solo-developer-year-2/)
-* [My Third Year as a Solo Developer](/solo-developer-year-3/)
+- [My First Year as a Solo Developer](/solo-developer-year-1/)
+- [My Second Year as a Solo Developer](/solo-developer-year-2/)
+- [My Third Year as a Solo Developer](/solo-developer-year-3/)
 
 ## My first year of profit
 
-After running in the red for the first few years, this is my first cashflow positive year. I earned a total of $13k in profit in 2021. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
+After running in the red for the first few years, this is my first cashflow positive year. I earned a total of $14k in profit in 2021. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
 
 <canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
 
-| Metric         | 2020         | 2021       | Change                                        |
-|----------------|--------------|------------|-----------------------------------------------|
-| Revenue        | $63,477      | $477,449   | {{<delta-cell>}} |
-| Expenses       | -$67,441     | -$464,071   | {{<delta-cell>}} |
-| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$13,379</font>** |  **{{<delta-cell>}}** |
+| Metric         | 2020                                 | 2021                                   | Change               |
+| -------------- | ------------------------------------ | -------------------------------------- | -------------------- |
+| Revenue        | $63,477                              | $478,638                               | {{<delta-cell>}}     |
+| Expenses       | -$67,441                             | -$464,071                              | {{<delta-cell>}}     |
+| **Net Profit** | **<font color="red">-$3,964</font>** | **<font color="green">$14,518</font>** | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 
@@ -72,20 +73,21 @@ Starting in September, we partnered with a European distributor and refocused ou
 
 {{<revenue-graph project="tinypilot">}}
 
-| Income/Expense                    | 2020        | 2021      | Change
-|-----------------------------------|-------------|-----------|---------
-| Sales                             | $53,742     | $459,529  | {{<delta-cell>}}
-| Raw materials                     | -$46,143    | -$248,273 | {{<delta-cell>}}
-| Software development              | -$1,321     | -$119,015 | {{<delta-cell>}}
-| Electrical engineering consulting | -$7,130     | -$28,662  | {{<delta-cell>}}
-| Fulfillment staff                 | -$2,570     | -$25,893  | {{<delta-cell>}}
-| Web design / branding             | -$250       | -$15,931  | {{<delta-cell>}}
-| Cloud services                    | -$64        | -$5,554   | {{<delta-cell>}}
-| Office space                      | $0          | -$4,400   | {{<delta-cell>}}
-| Advertising                       | -$675       | -$3,633   | {{<delta-cell>}}
-| Office equipment                  | $0          | -$2,083   | {{<delta-cell>}}
-| Everything else                   | $0         | -$2,738   | {{<delta-cell>}}
-| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$3,108**</font> | **{{<delta-cell>}}** |
+| Income/Expense                    | 2020                                 | 2021                                  | Change               |
+| --------------------------------- | ------------------------------------ | ------------------------------------- | -------------------- |
+| Sales                             | $53,742                              | $459,529                              | {{<delta-cell>}}     |
+| Credit card rewards               | $0                                   | $1,139                                | {{<delta-cell>}}     |
+| Raw materials                     | -$46,143                             | -$248,273                             | {{<delta-cell>}}     |
+| Software development              | -$1,321                              | -$119,015                             | {{<delta-cell>}}     |
+| Electrical engineering consulting | -$7,130                              | -$28,662                              | {{<delta-cell>}}     |
+| Fulfillment staff                 | -$2,570                              | -$25,893                              | {{<delta-cell>}}     |
+| Web design / branding             | -$250                                | -$15,931                              | {{<delta-cell>}}     |
+| Cloud services                    | -$64                                 | -$5,554                               | {{<delta-cell>}}     |
+| Office space                      | $0                                   | -$4,400                               | {{<delta-cell>}}     |
+| Advertising                       | -$675                                | -$3,633                               | {{<delta-cell>}}     |
+| Office equipment                  | $0                                   | -$2,083                               | {{<delta-cell>}}     |
+| Everything else                   | $0                                   | -$2,738                               | {{<delta-cell>}}     |
+| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 **Note**: Net profit is a little misleading, as it doesn't reflect the additional $59k I have in inventory.
@@ -102,17 +104,17 @@ For fun, I installed TinyPilot's January 2021 release and compared it the curren
 
 Aside from UI changes, we've added several major features, including:
 
-* Mount virtual USB drives and CD-ROMs
-* Wake on LAN
-* Password-based authentication
-* Software updates from the web UI
-* Video bandwidth tuning
+- Mount virtual USB drives and CD-ROMs
+- Wake on LAN
+- Password-based authentication
+- Software updates from the web UI
+- Video bandwidth tuning
 
 ## Other projects
 
-### *Refactoring English*
+### _Refactoring English_
 
-In building this blog over the past five years, I've learned several techniques that have made my writing clearer, more interesting, and better at attracting readers. One of my [2021 goals](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) was to share what I've learned in a book called [*Refactoring English*](https://refactoringenglish.com). It would teach writing skills specifically to software developers.
+In building this blog over the past five years, I've learned several techniques that have made my writing clearer, more interesting, and better at attracting readers. One of my [2021 goals](/solo-developer-year-3/#publish-six-blog-posts-and-one-book) was to share what I've learned in a book called [_Refactoring English_](https://refactoringenglish.com). It would teach writing skills specifically to software developers.
 
 My great shame of the year is that I made almost no progress on the book.
 
@@ -130,14 +132,14 @@ Ironically, it's when I'm most desperate to write that I have the least time to 
 
 I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget time for those because they're unambiguously a net positive for my business. Sitting down to organize my thoughts almost always reveals some flaw in my strategy or a weakness in my plans that I wouldn't have noticed otherwise.
 
-| Metric                                                   | 2020    | 2021    | Change |
-|----------------------------------------------------------|---------|---------|--------|
-| Pageviews                                                | 719,899 | 479,666 | {{<delta-cell>}}
-| Affiliate revenue\*                                      | $1,599  | $0      | {{<delta-cell>}}
-| [Illustrations](/how-to-hire-a-cartoonist/)              | -$964   | -$384   | {{<delta-cell>}}
-| Hosting / Domain                                         | -$534   | -$306   | {{<delta-cell>}}
-| [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222   | -$140   | {{<delta-cell>}}
-| **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="red">-$830</font>** | **{{<delta-cell>}}**
+| Metric                                                   | 2020                               | 2021                               | Change               |
+| -------------------------------------------------------- | ---------------------------------- | ---------------------------------- | -------------------- |
+| Pageviews                                                | 719,899                            | 479,666                            | {{<delta-cell>}}     |
+| Affiliate revenue\*                                      | $1,599                             | $0                                 | {{<delta-cell>}}     |
+| [Illustrations](/how-to-hire-a-cartoonist/)              | -$964                              | -$384                              | {{<delta-cell>}}     |
+| Hosting / Domain                                         | -$534                              | -$306                              | {{<delta-cell>}}     |
+| [Editing](/editor/) + [Grammarly](https://grammarly.com) | -$222                              | -$140                              | {{<delta-cell>}}     |
+| **Net profit**                                           | **<font color="red">-$121</font>** | **<font color="red">-$830</font>** | **{{<delta-cell>}}** |
 
 {{<notice type="info">}}
 
@@ -157,12 +159,12 @@ The course earned $7.5k in sales, which fell disappointingly short of my $20k go
 
 {{<revenue-graph project="htfp">}}
 
-| Metric              | 2020     | 2021    | Change
-|---------------------|----------|---------|--------
-| Purchases           | 29       | 230     | {{<delta-cell>}}
-| Revenue             | $0       | $7,483  | {{<delta-cell>}}
-| Expenses            | -$983    | -$148   | {{<delta-cell>}}
-| **Net profit**      | **<font color="red">-$983</font>** | **<font color="green">$7,335</font>** | **{{<delta-cell>}}**
+| Metric         | 2020                               | 2021                                  | Change               |
+| -------------- | ---------------------------------- | ------------------------------------- | -------------------- |
+| Purchases      | 29                                 | 230                                   | {{<delta-cell>}}     |
+| Revenue        | $0                                 | $7,483                                | {{<delta-cell>}}     |
+| Expenses       | -$983                              | -$148                                 | {{<delta-cell>}}     |
+| **Net profit** | **<font color="red">-$983</font>** | **<font color="green">$7,335</font>** | **{{<delta-cell>}}** |
 
 ### Is It Keto
 
@@ -174,14 +176,14 @@ I put the site on the back burner when I started TinyPilot, but it continued to 
 
 I considered selling the site but, I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather focus on TinyPilot.
 
-| Metric                                                              | 2020      | 2021      | Change
-|---------------------------------------------------------------------|-----------|-----------|--------
-| Pageviews                                                           | 1,314,583 | 1,163,745 | {{<delta-cell>}}
-| Ad revenue                                                          | $2,934    | $5,252    | {{<delta-cell>}}
-| Affiliate revenue                                                   | $2,147    | $2,022    | {{<delta-cell>}}
-| Freelance designers and [content writers](/hiring-content-writers/) | -$105     | $0        | {{<delta-cell>}}
-| Hosting / domain                                                    | -$241     | -$240     | {{<delta-cell>}}
-| **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$7,034</font>** | **{{<delta-cell>}}**
+| Metric                                                              | 2020                                  | 2021                                  | Change               |
+| ------------------------------------------------------------------- | ------------------------------------- | ------------------------------------- | -------------------- |
+| Pageviews                                                           | 1,314,583                             | 1,163,745                             | {{<delta-cell>}}     |
+| Ad revenue                                                          | $2,934                                | $5,252                                | {{<delta-cell>}}     |
+| Affiliate revenue                                                   | $2,147                                | $2,022                                | {{<delta-cell>}}     |
+| Freelance designers and [content writers](/hiring-content-writers/) | -$105                                 | $0                                    | {{<delta-cell>}}     |
+| Hosting / domain                                                    | -$241                                 | -$240                                 | {{<delta-cell>}}     |
+| **Net profit**                                                      | **<font color="green">$4,753</font>** | **<font color="green">$7,034</font>** | **{{<delta-cell>}}** |
 
 ### Zestful
 
@@ -195,11 +197,11 @@ I created Zestful in 2019 and worked on it for a few months before writing it of
 
 {{<revenue-graph project="zestful">}}
 
-| Metric              | 2020     | 2021   | Change
-|---------------------|----------|--------|--------
-| Revenue             | $1,889   | $2,495 | {{<delta-cell>}}
-| Hosting / domain    | -$112    | -$113   | {{<delta-cell>}}
-| **Net profit**      | **<font color="green">$1,777</font>**  | **<font color="green">$2,382</font>**    | **{{<delta-cell>}}**
+| Metric           | 2020                                  | 2021                                  | Change               |
+| ---------------- | ------------------------------------- | ------------------------------------- | -------------------- |
+| Revenue          | $1,889                                | $2,495                                | {{<delta-cell>}}     |
+| Hosting / domain | -$112                                 | -$113                                 | {{<delta-cell>}}     |
+| **Net profit**   | **<font color="green">$1,777</font>** | **<font color="green">$2,382</font>** | **{{<delta-cell>}}** |
 
 ## Lessons learned
 
@@ -233,11 +235,11 @@ I think the change eliminated friction and decision-making from the buying proce
 
 In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), [WPEngine](https://wpengine.com) founder Jason Cohen described leadership in a way that stuck with me:
 
->With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context...
+> With leadership, yes, you're trying to get the right answers, and goals, and decisions... You're also trying to build a team that's smarter and better, that's themselves making better decisions, themselves are coming up with better answers, themselves have better context...
 >
->If you're the only one who can do that in the room, you're a terrible leader. Because that means your team isn't getting better.
+> If you're the only one who can do that in the room, you're a terrible leader. Because that means your team isn't getting better.
 >
->**The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
+> **The only way for the organization to succeed is if the team is getting better. And that's your job: to build great teams.**
 
 When I started TinyPilot, I thought good management meant protecting my employees from anything outside their job description. I worked hard to fill gaps between roles to ensure that my employees had consistent, focused work.
 
@@ -257,8 +259,8 @@ At the start of last year, I [set three high-level goals](/solo-developer-year-3
 
 ### Grow TinyPilot to $600k in annual revenue
 
-* **Result**: Quadrupled TinyPilot's monthly revenue, totaling $468k for the year
-* **Grade**: B
+- **Result**: Quadrupled TinyPilot's monthly revenue, totaling $468k for the year
+- **Grade**: B
 
 Okay, my $600k goal turned out to be a tad optimistic. I chose that target in January when revenue had grown 20-200% every month for the previous five months. After I announced that goal, TinyPilot's sales shriveled by 50% over the next two months. We recovered but never recaptured the rapid growth of the early days.
 
@@ -266,8 +268,8 @@ Still, $468k is nothing to sneeze at. Different decisions might have brought me 
 
 ### Publish six blog posts and one book
 
-* **Result**: Published three blog posts and zero books
-* **Grade**: D
+- **Result**: Published three blog posts and zero books
+- **Grade**: D
 
 Writing is one of the things I enjoy most, so I'm disappointed I had so little time for it.
 
@@ -275,8 +277,8 @@ Looking back, I still feel like deprioritizing my writing was the right decision
 
 ### Automate TinyPilot management
 
-* **Result**: Systematized enough of TinyPilot to take a one-week vacation
-* **Grade**: B-
+- **Result**: Systematized enough of TinyPilot to take a one-week vacation
+- **Grade**: B-
 
 I've made great progress removing myself from the critical path of TinyPilot's day-to-day operations.
 
@@ -320,7 +322,7 @@ Overall, I'm still happy to be working for myself, and I hope to sustain it for 
 
 ---
 
-*Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post._
 
 <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>

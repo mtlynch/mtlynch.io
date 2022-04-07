@@ -23,10 +23,9 @@
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              {{ i18n "reading_time" .ReadingTime }}
+              {{ .ReadingTime }}-minute read
             </span>
           </div>
-          {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
           {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
         </div>
       </header>
@@ -47,11 +46,7 @@
         {{ partial "talkyard.html" . }}
       {{ end }}
 
-      <footer>
-        {{ partial "posts/series.html" . }}
-      </footer>
     </article>
 
-    {{ partial "posts/math.html" . }}
   </section>
 {{ end }}

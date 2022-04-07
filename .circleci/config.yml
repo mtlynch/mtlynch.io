@@ -122,7 +122,6 @@ workflows:
             - check-whitespace
             - lint-markdown
             - build
-            - lint-html
             - check-seo-metadata
           filters:
             branches:

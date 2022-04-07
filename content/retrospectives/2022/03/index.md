@@ -262,7 +262,7 @@ I'm trying to keep the third-party dependencies to a minimum, but in February, I
 
 Outside of that, I've been working on making it easier to define new responses. Currently, all the responses are baked into the code, but I want to make them editable through the web UI.
 
-I'm not sure where Lenny will go as a project. I might release it as a free, open-source tool, but I feel like people might be willing to pay for this as a hosted service. For now, I'm just working on it for my own entertainment, but I hope to offer it to others in the next few months. If you're interested in paying for early access, [sign up](https://mtlynch.eo.page/lenny).
+I'm not sure where Lenny will go as a project. I might release it as a free, open-source tool, but I feel like people might be willing to pay for this as a hosted service. For now, I'm just working on it for my own entertainment, but I hope to offer it to others in the next few months. If you're interested in paying for early access, [sign up](https://mtlynch.eo.page/stan).
 
 {{<notice type="info">}}
 I just realized as I'm writing this that the [Lenny telemarketing bot](https://www.lennytroll.com/) author seems to be building a business around his chatbot, so I'll probably have to change the name.
