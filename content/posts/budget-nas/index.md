@@ -124,15 +124,19 @@ I went with the [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fr
 
 ### Disk (Data)
 
-To reduce the chances of
+The biggest decision was the disk. I wanted to. Things I wanted to avoid:
 
-I looked at the failure rate of .
+- Noise
+- High failure rate
+- SMR
+
+7200 vs 1000 RPM
+
+Size
+
+Pice. For a 8 TB drive, you can pay anywhere from $130 to $400 per disk. For a server with four disks, that's a difference of $1k, so those price differences matter.
 
 Checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/). I didn't want to hyper-optimize for low failure rate. At one point, I rejected a disk that Backblaze reported as a 1.2% AFR in favor of one that cost twice as much but had a 0.5% AFR.
-
-I also did things to increase my chances of getting disks from different mannufacturing batches. Each disk has some probability of failing during the time you're using it, but it's important to note that the failure rates are not statistically independent.
-
-The problem with disks is that they're not statistically independent. Maybe each disk only has a 2% chance of failing each year, so the naive expectation would be that the chances of two drives failing at the same time is vanishingly thin. But drives from the same manufacturing batch that have served the same loads in the same environment have a much higher probability of failing at the same time than two random drives.
 
 Quantity or size? If you're building a NAS server that has 20-drive bays, then sure, buy a bunch of small disks. ZFS can make more efficient use of your disks the more you have of them. I wanted to give myself room to grow. The problem with buying a lot of small disks is that . And since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). I figure that I won't need to do that for another year or two, and then hopefully by that time, the feature is complete and landed in TrueNAS.
 
@@ -146,7 +150,9 @@ List of [known SMR drives](https://www.truenas.com/community/resources/list-of-k
 
 ### Disk (OS)
 
-I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least XX of space, but it otherwise doesn't read or write much to the OS disk. I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 for a 120 GB M.2 disk. And I love M.2 disks. They don't require any cabling. They just tuck away into the motherboard, take up nearly zero space, and you never have to touch them again.
+I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least XX of space, but it otherwise doesn't read or write much to the OS disk.
+
+I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 for a 120 GB M.2 disk. And I love M.2 disks. They don't require any cabling. They just tuck away into the motherboard, take up nearly zero space, and you never have to touch them again.
 
 ### Memory
 
@@ -170,44 +176,39 @@ TODO: Photo
 
 ## What's missing?
 
+There are a few components that I consciously chose not to include in my build due to price, complexity, or physical space.
+
 ### Graphics card (GPU)
 
-As I mentioned above, with space and ports at a premium, I wanted to avoid graphics card. I chose a motherboard and CPU combination that supported graphics rendering without an external card.
+As I mentioned above, with space and ports at a premium, purposely avoided the need for a graphics card. I chose a motherboard and CPU combination that supported graphics rendering without an external card.
 
 ### Host bus adaptor (HBA)
 
-A lot of NAS builds include a host bus adaptor (HBA). I chose against an HBA. It seems like a pain in the butt.
+Many NAS builds include a host bus adaptor (HBA). TODO: Explain HBA.
+
+I chose not to include an HBA in my build, but I intentionally left a PCI slot available if I need one in the future. I chose against an HBA. It seems like a pain in the butt.
 
 My motherboard had four SATA ports, so I figured I could start with four disks. When I need to add disks, I'll buy an HBA. I made sure to leave an available PCI slot for that purpose.
 
 ### ECC RAM
 
-I saw people urging ECC RAM. ECC RAM does XX. At first, I thought I had to get it, but then I realized I've been using computers without ECC RAM for the past 30 years, and I've never noticed any data corruption, so I didn't think it was worth doubling the price.
+I saw people urging ECC RAM. ECC RAM does XX. At first, I thought I had to get it, but then I realized I've been using computers without ECC RAM for the past 30 years, and I've never noticed any data corruption. And ECC RAM changes not just the RAM, but you'd also need an enterprise-grade motherboard and CPU. I didn't think it was worth doubling the price to reduce such a small risk of data corruption.
 
-If I was building a server that was going to be under heavy load from multiple users all day, then sure I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
+If I was building a server that was going to be under heavy load from multiple users all day, then I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
 
 ### SLOG disk
 
-Before writing data to disk, ZFS first writes an entry in the transaction log. When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk for storing the SLOG, using high-performance SSD. Serve The Home found [significant speed improvements](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/) with a SLOG disk.
+Before writing data to disk, ZFS first writes an entry in the transaction log. When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk for storing the SLOG, using high-performance SSD. Serve The Home found that a SLOG disk [improved read and write performance significantly](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/).
 
-I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later.
+I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later. If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved some for a SLOG disk, but it didn't seem worth it in my build.
 
-Also, most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than optimizing disk writes.
-
-If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved some for a SLOG disk, but it didn't seem worth it in my build.
+Most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than disk I/O.
 
 ## Preventing concurrent disk failures
 
 Recall that I chose raidz1, which protects me if one disk fails. If two or more drives fail at once, I'll suffer data loss.
 
-Based on Backblaze's stats, the average failure rate of each disk is only 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small.
-
-Disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it:
-
-- has the same model number
-- was manufactured in the same batch
-- operated in the same environment
-- processed a similar disk load
+Based on Backblaze's stats, the average failure rate of each disk is only 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small. But disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it's the same model, from the same manufacturing batch, and it spent its life in the same environment processing a similar workload.
 
 Given this, I did what I could to reduce the risk of concurrent disk failures. I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks in the same manufacturing batch, I bought the disks from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
@@ -238,9 +239,11 @@ For comparison, here are some off-the-shelf solutions at similar price points.
 | ------------- | --------------- | --------------- | ------------------ |
 | Disk bays     | 6               | 4               | 4                  |
 | RAM           | 32 GB           | 4 GB            | 4 GB               |
-| Max RAM       | XX GB           | 8 GB            | 8 GB               |
+| Max RAM       | 32 GB           | 8 GB            | 8 GB               |
 | CPU benchmark | XX              | XX              | XX                 |
 | Price         | $530.29         | $549.99         | $549               |
+
+The total cost of my build is similar to off-the-shelf solutions, but I get more value for my money. I have 8x as much RAM, and I'm not locked in to any closed-source, vendor-specific OS platform.
 
 ## Build photos
 
@@ -272,11 +275,9 @@ I got the system to power on, but there was no video display. Oh no! Did I misun
 
 After some research, I saw some comments that the Asus Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I _don't have a CPU_.
 
-I caught an extremely lucky break in realizing that the AMD Ryzen 7 1700 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
+I caught a lucky break when I realized the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible with the Asus Prime A320 [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
-Strangely, even after I got the system to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. The BIOS supports downloading its own updates, and I tried doing that, but it kept telling me that I had the latest BIOS version available, even though I could clearly see later BIOS versions.
-
-I ended up having to download the BIOS files manually and load them on a USB disk. I upgraded to BIOS version XXX, and _then_ it recognized my Athlon 3000G.
+Strangely, even after I got the system to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. I upgraded to BIOS version XXX, and _then_ it recognized my Athlon 3000G.
 
 So if you're trying a similar build, watch out for CPU compatiblity.
 
@@ -383,7 +384,3 @@ Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest
 I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software.
 
 If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
-
-## Further reading
-
-I like Brian Moses' posts on his homelabs. I learned a lot especially from his EconoNAS series, but it's worth noting that some of his builds are theoretical, so he wouldn't have hit issues like the CPU/BIOS mismatch I saw.
