@@ -24,7 +24,7 @@ This post details my experience creating TinyPilot and shows how you can build y
 
 {{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="600px" caption="Using TinyPilot to control my Ubuntu laptop from Chrome on my Microsoft Surface">}}
 
-{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
+{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager 2 is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
 ## I don't want your life story; just tell me how to build it
 
@@ -226,7 +226,7 @@ TinyPilot allowed me to manage the entire install from my browser. It was defini
 
 ## How to build your own TinyPilot
 
-{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
+{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager 2 is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
 ### Parts list
 
@@ -356,7 +356,7 @@ TinyPilot's software is open-source under the permissive [MIT license](https://o
 - [tinypilot](https://github.com/tiny-pilot/tinypilot.git): The TinyPilot web interface and backend.
 - [ansible-role-tinypilot](https://github.com/tiny-pilot/ansible-role-tinypilot): The Ansible role for installing TinyPilot and its dependencies as systemd services.
 
-{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
+{{<tinypilot-ad headline="Want a pre-made TinyPilot?" copy="The TinyPilot Voyager 2 is a pre-assembled, plug 'n play KVM over IP that uses high-quality components and includes additional features." >}}
 
 ---
 

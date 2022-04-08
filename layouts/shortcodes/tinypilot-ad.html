@@ -1,17 +1,20 @@
-{{ $headline := .Get "headline" }}
-{{ $copy := .Get "copy" }}
+{{ $headline := .Get "headline" }} {{ $copy := .Get "copy" }}
 
 <div class="tinypilot-box tinypilot-box-thin">
   <h4>{{ $headline }}</h4>
 
-  <a href="https://tinypilotkvm.com/?ref=mtlynch.io" class="image-link"><img src="/tinypilot/voyager-side-cables.jpg"></a>
+  <a href="https://tinypilotkvm.com/?ref=mtlynch.io" class="image-link"
+    ><img src="/images/tinypilot/voyager2-back-600px.png"
+  /></a>
 
   <p>{{ $copy }}</p>
 
   <div class="btn-wrapper">
-    <a href="https://tinypilotkvm.com/?ref=mtlynch.io" class="btn order-now-btn">
+    <a
+      href="https://tinypilotkvm.com/?ref=mtlynch.io"
+      class="btn order-now-btn"
+    >
       Order now
     </a>
-
   </div>
 </div>
