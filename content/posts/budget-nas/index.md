@@ -19,12 +19,12 @@ In this post, I'll walk through how I chose the parts, what issues I ran into in
 - Build photos
 - Reflections
 
-{{<gallery caption="TODO">}}
+{{<gallery caption="Before and after of my 2022 homelab TrueNAS server build">}}
 {{<img src="all-parts.jpg" alt="TODO" maxWidth="450px">}}
 {{<img src="completed-build.jpg" alt="TODO" maxWidth="450px">}}
 {{</gallery>}}
 
-## What's the point of a NAS server?
+## What's a NAS server?
 
 NAS stands for network-attached storage. A NAS server is just a server you can keep whose purpose is to store data and make it available to computers within your home network.
 
@@ -36,54 +36,67 @@ I also have a _lot_ of data. I'm a data hoarder, so I have every digital photo I
 
 The biggest data source is my my DVD and Blu-Ray collection. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip it so that I have it available on my computer and can stream it to my TV. Between the raw ISO copy and the streamable MP4s, a single disc can take up around 60 GB of disk space.
 
-## What's a "homelab server?"
+## What's a homelab?
 
-Homelab is a colloquial term that's grown in popularity in the last few years.
+"Homelab" is a colloquial term that's grown in popularity in the last few years. A homelab is a place in your home where you can experiment with hardware or software that people typically use in professional environments.
 
-Homelab servers are no different from any other servers, except that you build them at home rather than in an office or data center. Many people use homelab servers as low-stakes practice environments before they use the technologies in a real-world business context.
+Many people use homelab servers as low-stakes practice environments before they use the technologies in their day jobs. I use my homelab for software development, as I keep [each project in its own virtual machine](/building-a-vm-homelab-2017/#why-vms).
 
 ## Why build your own NAS?
 
 If you're new to homelab or you don't have experience building PCs, I recommend that you **don't build your own NAS**. There are off-the-shelf solutions that offer most of the same functionality and with a substantially better user experience.
 
-Before building my own homelab NAS, I used a Synology DSXX that I used for XX years. And honestly, I loved it. It was one of the best purchases I ever made. It was a very gentle introduction into the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
+Before building my own homelab NAS, I used a Synology DSXX that I used for XX years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction into the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
-As much as I love Synology, I hate platform lock-in. I had configured my Synology using Synology Hybrid RAID, a proprietary storage format that allows you to mix disks of different sizes.
+As much as I love my Synology, I detest platform lock-in. I had configured my Synology using Synology Hybrid RAID, a proprietary storage format that allows you to mix disks of different sizes.
 
-A few months ago, my Synology started to make a clicking noise. I started to worry that XX years in, it didn't have much time left. I've built all the other computers in my home, so if a component breaks, I can just replace that part. Synology devices are not user-repairable. If a part breaks and you're past warranty, you have to replace the whole server. And if you've short-sightedly used a Synology-proprietary data format, you can't access the data on your disks unless you buy another Synology sytem.
+A few months ago, my Synology started to make a clicking noise. I started to worry that XX years in, it didn't have much time left. Synology devices are not user-repairable. If a part breaks and you're past warranty, you have to replace the whole server. And if you've short-sightedly used a Synology-proprietary storage format, you can't access the data on your disks unless you buy another Synology sytem.
 
 Fortunately, my Synology's clicking went away, but it was a wake up call how dependent I'd let myself become on that NAS. I decided to switch to something open source and open standards, so I decided on TrueNAS.
 
-## Why TrueNAS?
+## TrueNAS and ZFS
 
-There are only two options.
-
-- Proxmox: I'm already familiar with it, but it's much more focused on virtual machine management than acting as a storage server. I wanted an OS dedicated to storage.
-- Unraid: Looks nice, but I wanted an open-source solution.
-
-That left TrueNAS (formerly known as FreeNAS).
+TrueNAS (formerly known as FreeNAS) is one of the most popular storage servers. I also see a lot of people talk about Unraid, and it looked nice, but I wanted something open-source.
 
 TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZFS, but it seems like cool technology optimized for large disks.
 
 ## How I planned disk capacity
 
-When I bought my Synology NAS, I initially installed three 4 TB drives, giving me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
+When I bought my Synology NAS, I initially installed three 4 TB drives and left the fourth drive bay empty. That gave me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
 
-That strategy worked well, so I decided to take the same path on this build. My goal was to start with enough space to accomodate me for the next 2-3 years while still making it easy for me to add drives incrementally.
+I decided to apply the same strategy for my new build. I wanted to build a system with enough storage to meet my current needs but with room to grow in a few years by adding disks.
 
-I decided to aim for double my current capacity with the ability to add later. I'd aim for 20 TB of usable storage.
+I decided to aim for double my current capacity with the ability to add later. I'd aim for 20 TB of usable storage with room to grow to 30 TB over the next five or ten years.
 
 ## Many small disks or fewer large disks?
 
 ZFS is designed to survive disk failures, so it stores each block of data redundantly. Because of this redundancy, it's complicated to think about storage capacity. Naively, you'd expect that four 8 TB drives would give you 32 TB of space, but if you take into account the space needed for redundancy, your actual usable capacity is XX TB.
 
-I found this raidz calculator that tells you how much space different disk configurations give you:
+I found this [raidz calculator](https://wintelguy.com/zfs-calc.pl) that tells you how much space different disk configurations give you.
 
-TODO: Link to [raidz calculator](https://wintelguy.com/zfs-calc.pl).
+ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the more efficiently ZFS can use their storage capacity. For example, if you give ZFS two 10 TB drives, you only get to use 10 TB out of your 20 TB capacity. If you instead use five 4 TB drives, ZFS could give you 14 TB of usable storage.
 
-ZFS uses space more efficiently the more disks it has. Many homelab builders would build a 20 TB server by buying something like eight drives of 2 TB each (TODO: check). The problem is that disks are large, so eight drives drastically increases the size of the case you need, especially if you want to leave some drive bays open to give yourself room for expansion. I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
+When you're building a NAS server, you need to decide whether to use a smaller quantity . Smaller drives are usually cheaper in terms of $/TB, but they're more expensive to operate. It takes twice as much power to run two 4 TB drives than a single 8 TB drive.
 
-raidz2 can protect you in the case of two disks failing, but it eats a lot of your storage capacity. I chose raidz1, which means I can suffer a single disk failure without data loss, but not two.
+I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
+
+## raidz 1, 2, or 3?
+
+There are a few different ZFS modes: raidz1, raidz2, and raidz3. The difference is just how robust the system is to disk failures. raidz1 can survive one disk failure, but you'll suffer data loss if two disks fail at the same time. raidz2 can survive two disk failures without data loss, and raidz3 can survive three failures.
+
+Why wouldn't everyone just choose raidz3 then? You pay for robustness in disk space. Given five 4 TB hard drives, here's how much usable storage you'd get from each ZFS mode:
+
+| ZFS type | Usable storage | % of total capacity |
+| -------- | -------------- | ------------------- |
+| raidz1   | 15.4 TB        | 77.2%               |
+| raidz2   | 11.4 TB        | 57.2%               |
+| raidz3   | 7.7 TB         | 38.6%               |
+
+I chose raidz1. I think the odds of two drives failing simultaneously in my NAS is fairly low, and I use restic (TODO: link) to back everything up to the cloud anyway.
+
+When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend a day repairing my storage?" You shouldn't think of RAID as a backup strategy. RAID doesn't so much protect you against data loss as it protects you against the hassle of recovering your data from backup if your disk fails.
+
+The more physical drives you have, the more defensive you want to be about disk failure. If I had a pool of 30 disks, I'd probably use raidz2 or raidz3, but the odds of two disks failing when I only have five or six total is pretty small.
 
 ## How I chose parts
 
