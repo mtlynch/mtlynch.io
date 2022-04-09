@@ -57,19 +57,40 @@ function drawChart(chartId, labels, data, label, formatter=dollarFormatter.forma
     return;
   }
   ctx.height = 300;
+  const profitRaw = [3636.08, 10328.80, -352.77, 843.56, 6858.72, -9452.32, -9713.34, -10140.95, 11713.04, 1936.22, 12758.39, -15207.05, -8425.67, 27039.62, -2551.26];
+  let profitAvg = [null, null, null, null, null, null, null];
+  let trailing = [];
+  for (const p of profitRaw) {
+    trailing.push(p);
+    if (trailing.length > 3) {
+      trailing.shift();
+    }
+    profitAvg.push(trailing.reduce((a, b) => a + b) / trailing.length)
+  }
+  console.log(profitAvg)
   const myChart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: labels,
-        datasets: [{
-          label: label,
-          data: data,
-          backgroundColor: '#047a15',
-          borderColor: '#4ba658',
-          fill: false,
-          lineTension: 0.0,
-          }]
-        },
+        datasets: [
+          {
+            label: label,
+            data: data,
+            backgroundColor: '#047a15',
+            borderColor: '#4ba658',
+            fill: false,
+            lineTension: 0.0,
+          },
+          {
+            label: "Profit (3-month trailing average)",
+            data: profitAvg,
+            backgroundColor: 'black',
+            borderColor: 'black',
+            fill: false,
+            lineTension: .60,
+          },
+        ]
+      },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -106,6 +127,9 @@ function drawCharts(limit) {
     .then(revenueByProject => {
       const limitDate = parseDate(limit);
       for ([project, data] of Object.entries(revenueByProject)) {
+        if (project !== 'tinypilot') {
+          continue;
+        }
         let dates = [];
         for (d of Object.keys(data)) {
           const date = parseDate(d);
@@ -115,6 +139,8 @@ function drawCharts(limit) {
           dates.push(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear());
         }
         let values = Object.values(data).slice(0, dates.length);
+        console.log(project)
+        console.log(values)
         drawChart(project + '-revenue', dates, values, 'Total Revenue');
       }
     });
