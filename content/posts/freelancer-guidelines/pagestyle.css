@@ -40,7 +40,6 @@
   }
 }
 
-
 .example p {
   margin: 0;
 }
@@ -57,7 +56,6 @@
   color: green;
   font-weight: bold;
 }
-
 
 .bad-prefix {
   color: red;

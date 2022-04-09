@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
-
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.author }}
+      <meta name="author" content="{{ . }}" />
+    {{ end }}
+    {{ with .Site.Params.description }}
+      <meta name="description" content="{{ . }}" />
+    {{ end }}
 
     {{ partial "twitter-card.html" . }}
     {{ partial "opengraph.html" . }}
 
     {{ if .Permalink }}
-      <base href="{{ .Permalink }}">
+      <base href="{{ .Permalink }}" />
     {{ end }}
     <title>{{ block "title" . }}{{- .Site.Title -}}{{ end }}</title>
 
     {{ if .Params.canonical_url }}
-      <link rel="canonical" href="{{ .Params.canonical_url }}">
+      <link rel="canonical" href="{{ .Params.canonical_url }}" />
     {{ else if .Permalink }}
-      <link rel="canonical" href="{{ .Permalink }}">
+      <link rel="canonical" href="{{ .Permalink }}" />
     {{ end }}
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Rubik:300,700|Source+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700|Rubik:300,700|Source+Code+Pro:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
     {{ if .HasShortcode "zestful-ad" }}
-      <link rel="stylesheet" href="/css/zestful.css" media="screen">
+      <link rel="stylesheet" href="/css/zestful.css" media="screen" />
     {{ end }}
     {{ if .HasShortcode "tinypilot-ad" }}
-      <link rel="stylesheet" href="/css/tinypilot.css" media="screen">
+      <link rel="stylesheet" href="/css/tinypilot.css" media="screen" />
     {{ end }}
 
     {{ if .Site.IsServer }}
       {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}
       {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
     {{ else }}
       {{ $cssOpts := (dict "targetPath" "css/coder.css" ) }}
       {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+      <link
+        rel="stylesheet"
+        href="{{ $styles.RelPermalink }}"
+        integrity="{{ $styles.Data.Integrity }}"
+        crossorigin="anonymous"
+        media="screen"
+      />
     {{ end }}
 
     {{ if not .Site.IsServer }}
@@ -62,8 +85,20 @@
       <script src="{{ . | relURL }}"></script>
     {{ end }}
 
-    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}
+      "
+      sizes="16x16"
+    />
 
     {{ if gt (len .AlternativeOutputFormats) 0 -}}
       {{ range .AlternativeOutputFormats -}}
@@ -80,13 +115,12 @@
     <main class="wrapper">
       {{ partial "header.html" . }}
 
+
       <div class="content">
         {{ block "content" . }}{{ end }}
       </div>
 
       {{ partial "footer.html" . }}
     </main>
-
   </body>
-
 </html>

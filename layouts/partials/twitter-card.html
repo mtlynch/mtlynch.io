@@ -1,7 +1,7 @@
 {{- if or ($.Params.images) ($.Params.hero_image) -}}
-<meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:card" content="summary_large_image" />
 {{ end }}
 {{ with .Site.Social.twitter }}
-    <meta name="twitter:site" content="@{{ . }}"/>
-    <meta name="twitter:creator" content="@{{ . }}"/>
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
 {{ end }}

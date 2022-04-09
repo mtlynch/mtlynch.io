@@ -6,13 +6,13 @@
         <div class="date">
           <span class="posted-on">
             <i class="fas fa-calendar"></i>
-            <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
               {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
             </time>
           </span>
           <span class="reading-time">
             <i class="fas fa-clock"></i>
-              {{ .ReadingTime }}-minute read
+            {{ .ReadingTime }}-minute read
           </span>
         </div>
       </div>
@@ -20,18 +20,19 @@
     </header>
 
     {{ if not (hasPrefix .Title "Notes from") }}
-    <h2>One-Line Summary</h2>
+      <h2>One-Line Summary</h2>
 
-    {{ .Params.description }}
+      {{ .Params.description }}
     {{ end }}
 
     {{- with .Content -}}
-    <div>
-      {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
-    </div>
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
+      </div>
     {{- end -}}
 
-    <hr/>
+
+    <hr />
 
     {{ partial "prev-next.html" . }}
 

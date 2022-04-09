@@ -4,7 +4,8 @@
     {{- print ": " -}}
   {{- end -}}
 
-  {{- .Title }} · {{ .Site.Title -}}
+  {{- .Title }} ·
+  {{ .Site.Title -}}
 {{ end }}
 {{ define "content" }}
   {{ partial "list.html" . }}

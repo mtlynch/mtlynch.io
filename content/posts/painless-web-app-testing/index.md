@@ -1,19 +1,20 @@
 ---
-title: 'End-to-End Testing Web Apps: The Painless Way'
-description: Create an end-to-end test for your web app in under 30 minutes (no software
+title: "End-to-End Testing Web Apps: The Painless Way"
+description:
+  Create an end-to-end test for your web app in under 30 minutes (no software
   installation required).
 tags:
-- testing
-- cypress
-- docker
-- docker-compose
+  - testing
+  - cypress
+  - docker
+  - docker-compose
 discuss_urls:
   reddit: https://redd.it/bjhlp1
   hacker_news: https://news.ycombinator.com/item?id=19797185
-lastmod: '2020-04-16T00:00:00-04:00'
-date: '2019-05-01'
+lastmod: "2020-04-16T00:00:00-04:00"
+date: "2019-05-01"
 images:
-- painless-web-app-testing/cover.jpg
+  - painless-web-app-testing/cover.jpg
 ---
 
 {{< img src="cover.jpg" alt="A reusable template for testing web apps (cover image)" maxWidth="1000px" >}}
@@ -59,15 +60,15 @@ As an example web app to test, I present Sentimentalyzer: the world's dumbest te
 If you enter the text `It's a nice day today`, Sentimentalyzer deduces that you're happy:
 
 {{< gallery caption="Sentimentalyzer analyzing happy text" >}}
-  {{< img src="sentimentalyzer-analyze-content.png" alt="Entering text in Sentimentalyzer" >}}
-  {{< img src="sentimentalyzer-results-content.png" alt="Sentimentalyzer produces results" >}}
+{{< img src="sentimentalyzer-analyze-content.png" alt="Entering text in Sentimentalyzer" >}}
+{{< img src="sentimentalyzer-results-content.png" alt="Sentimentalyzer produces results" >}}
 {{</ gallery >}}
 
 If you enter the text `Who ate ALL MY WAFFLES?`, Sentimentalyzer assumes that you're angry:
 
 {{< gallery caption="Sentimentalyzer analyzing angry text" >}}
-  {{< img src="sentimentalyzer-analyze-angry.png" alt="Entering text in Sentimentalyzer" >}}
-  {{< img src="sentimentalyzer-results-angry.png" alt="Sentimentalyzer produces results" >}}
+{{< img src="sentimentalyzer-analyze-angry.png" alt="Entering text in Sentimentalyzer" >}}
+{{< img src="sentimentalyzer-results-angry.png" alt="Sentimentalyzer produces results" >}}
 {{</ gallery >}}
 
 The algorithm is simple: if more than 50% of the characters are uppercase, the user is yelling, so they must be mad. Otherwise, Sentimentalyzer assumes the user feels okay.
@@ -114,9 +115,9 @@ Now that I can run my app in a Docker container, I'm ready to use Cypress to cre
 
 To write your first Cypress end-to-end test, you only need three files:
 
-* [`cypress.json`](#cypressjson)
-* [`docker-compose.yml`](#docker-composeyml)
-* [`integration/spec.js`](#integrationspecjs)
+- [`cypress.json`](#cypressjson)
+- [`docker-compose.yml`](#docker-composeyml)
+- [`integration/spec.js`](#integrationspecjs)
 
 ### `cypress.json`
 
@@ -183,14 +184,13 @@ Even if you're unfamiliar with [the Cypress API](https://docs.cypress.io/api/api
 I'll walk through the first test line by line:
 
 ```javascript
-cy.visit('/analyze')
+cy.visit("/analyze");
 ```
 
 This line tells Cypress to load the `/analyze` path of Sentimentalyzer in the browser. Cypress combines this with the `CYPRESS_baseUrl` environment variable, which I defined in [`docker-compose.yml`](#docker-composeyml), above, so the full URL is `http://sentimentalyzer:8123/analyze`. You can't access that URL from your development machine, but it's a valid address within the Cypress container.
 
 ```javascript
-cy.get('#feelings')
-  .type('I REALLY need some COFFEE')
+cy.get("#feelings").type("I REALLY need some COFFEE");
 ```
 
 Next, I tell Cypress to find the text field. This is easy because the text field has a unique ID, `feelings`, so I specify the element using CSS selector syntax: `#feelings`.
@@ -202,7 +202,7 @@ The [`type()` function](https://docs.cypress.io/api/commands/type.html), tells C
 Next, Cypress has to submit the form. Cypress provides a [`submit()` function](https://docs.cypress.io/api/commands/submit.html) for this common task. There's only one `<form>` element on the page, so it's trivial to retrieve it with the CSS selector of `form` and then to submit the form:
 
 ```javascript
-cy.get('form').submit()
+cy.get("form").submit();
 ```
 
 Submitting the form should bring Cypress to Sentimentalyzer's results page. Cypress needs to check for the text `"You are feeling: Angry"` but it's a bit trickier since the `<p>` tag that contains it lacks an ID attribute:
@@ -212,8 +212,7 @@ Submitting the form should bring Cypress to Sentimentalyzer's results page. Cypr
 I again use CSS selector syntax to locate the relevant text by specifying a `<p>` element under a DOM node whose class is `"results"`:
 
 ```javascript
-cy.get('.results p')
-  .should('contain', 'You are feeling: Angry')
+cy.get(".results p").should("contain", "You are feeling: Angry");
 ```
 
 The [`contain` assertion](https://docs.cypress.io/guides/references/assertions.html#Chai-jQuery) verifies that the `<p>` tag contains the text I expect.
@@ -261,24 +260,24 @@ Those three files are all you need to start end-to-end testing your web app. Her
 
 The full source for this demo is available on Github:
 
-* [mtlynch/hello-world-cypress](https://github.com/mtlynch/hello-world-cypress)
+- [mtlynch/hello-world-cypress](https://github.com/mtlynch/hello-world-cypress)
 
 I also created several branches to demonstrate other common Cypress scenarios:
 
-* [How to run tests on Circle CI](https://github.com/mtlynch/hello-world-cypress/tree/circle)
-* [How to run tests on Travis CI](https://github.com/mtlynch/hello-world-cypress/tree/travis)
-* [How to run tests in the Chrome browser](https://github.com/mtlynch/hello-world-cypress/tree/chrome)
-* [How to run tests in the Firefox browser](https://github.com/mtlynch/hello-world-cypress/tree/firefox)
+- [How to run tests on Circle CI](https://github.com/mtlynch/hello-world-cypress/tree/circle)
+- [How to run tests on Travis CI](https://github.com/mtlynch/hello-world-cypress/tree/travis)
+- [How to run tests in the Chrome browser](https://github.com/mtlynch/hello-world-cypress/tree/chrome)
+- [How to run tests in the Firefox browser](https://github.com/mtlynch/hello-world-cypress/tree/firefox)
 
 ## Further reading
 
 This guide provided a basic introduction to Cypress. For more advanced functionality, check out the official Cypress docs:
 
-* [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html)
-* [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)
+- [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html)
+- [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)
 
 **Update (2019-05-02)**: In response to this post, the Cypress team published [an official Docker image](https://hub.docker.com/r/cypress/included) that has Cypress pre-installed. I've revised this tutorial to integrate their new image. Check out [the Cypress blog post](https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/) for additional details about their images and more tricks for using Cypress and Docker together.
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article.*
+_Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Gleb Bahmutov](https://glebbahmutov.com/) from the Cypress team for providing early feedback on this article._
