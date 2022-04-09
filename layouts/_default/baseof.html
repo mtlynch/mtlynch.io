@@ -49,12 +49,12 @@
     {{ end }}
 
     {{ if .Site.IsServer }}
-      {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}
-      {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts }}
+      {{ $cssOpts := (dict "targetPath" "css/style.css" "enableSourceMap" true ) }}
+      {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.style.css" . | toCSS $cssOpts }}
       <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
     {{ else }}
-      {{ $cssOpts := (dict "targetPath" "css/coder.css" ) }}
-      {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts | minify | fingerprint }}
+      {{ $cssOpts := (dict "targetPath" "css/style.css" ) }}
+      {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.style.css" . | toCSS $cssOpts | minify | fingerprint }}
       <link
         rel="stylesheet"
         href="{{ $styles.RelPermalink }}"
