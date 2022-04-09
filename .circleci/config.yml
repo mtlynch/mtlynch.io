@@ -114,6 +114,7 @@ workflows:
   test-deploy:
     jobs:
       - check-whitespace
+      - check_html_format
       - lint-markdown
       - build
       - lint-html:
@@ -131,6 +132,7 @@ workflows:
       - deploy:
           requires:
             - check-whitespace
+            - check_html_format
             - lint-markdown
             - build
             - check-seo-metadata
