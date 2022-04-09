@@ -12,6 +12,17 @@ jobs:
       - run:
           name: Check for trailing newlines
           command: tests/check-trailing-newline
+  check_html_format:
+    docker:
+      - image: cimg/node:14.18.1
+    steps:
+      - checkout
+      - run:
+          name: Download npm packages
+          command: npm install
+      - run:
+          name: Check formatting
+          command: npm run check-format
   lint-markdown:
     docker:
       - image: davidanson/markdownlint-cli2:0.3.0

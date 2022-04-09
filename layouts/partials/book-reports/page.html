@@ -11,15 +11,14 @@
     <ul class="book-summary">
       <li>My rating: <strong>{{ .Params.rating }}</strong> / 10</li>
       <li>
-        <a href="{{ .Params.purchase_url }}">
-          Purchase Link
-        </a></li>
+        <a href="{{ .Params.purchase_url }}"> Purchase Link </a>
+      </li>
     </ul>
 
     {{- with .Content -}}
-    <div>
-      {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
-    </div>
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
+      </div>
     {{- end -}}
 
     {{ partial "mailing-list-signup.html" . }}

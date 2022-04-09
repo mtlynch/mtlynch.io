@@ -6,7 +6,7 @@ description: TODO - One-line summary
 
 ## Highlights
 
-*
+-
 
 ## Goal Grades
 
@@ -14,22 +14,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Goal 1
 
-* **Result**: XX
-* **Grade**: XX
+- **Result**: XX
+- **Grade**: XX
 
 TODO
 
 ### Goal 2
 
-* **Result**: XX
-* **Grade**: XX
+- **Result**: XX
+- **Grade**: XX
 
 TODO
 
 ### Goal 3
 
-* **Result**: XX
-* **Grade**: XX
+- **Result**: XX
+- **Grade**: XX
 
 TODO
 
@@ -49,12 +49,12 @@ TODO
 
 ### What got done?
 
-*
+-
 
 ### Lessons learned
 
-*
+-
 
 ### Goals for next month
 
-*
+-

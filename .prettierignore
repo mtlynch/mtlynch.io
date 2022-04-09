@@ -1,3 +1,5 @@
+.netlify/state.json
+node_modules/
 public/
 resources/
 static/js/chart.js/
