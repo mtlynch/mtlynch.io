@@ -43,6 +43,11 @@
       <link rel="stylesheet" href="/css/tinypilot.css" media="screen" />
     {{ end }}
 
+    {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
+      <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+      <script src="/js/retrospectives.js"></script>
+    {{ end }}
+
     {{ if .Site.IsServer }}
       {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}
       {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts }}
