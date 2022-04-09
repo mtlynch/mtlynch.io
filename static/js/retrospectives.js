@@ -17,7 +17,20 @@ function drawChart(
     return;
   }
   ctx.height = 300;
-  const myChart = new Chart(ctx, {
+  const profitRaw = [
+    3636.08, 10328.8, -352.77, 843.56, 6858.72, -9452.32, -9713.34, -10140.95,
+    11713.04, 1936.22, 12758.39, -15207.05, -8425.67, 27039.62, -2551.26,
+  ];
+  let profitAvg = [null, null, null, null, null, null, null];
+  let trailing = [];
+  for (const p of profitRaw) {
+    trailing.push(p);
+    if (trailing.length > 3) {
+      trailing.shift();
+    }
+    profitAvg.push(trailing.reduce((a, b) => a + b) / trailing.length);
+  }
+  new Chart(ctx, {
     type: "line",
     data: {
       labels: labels,
@@ -29,6 +42,14 @@ function drawChart(
           borderColor: "#4ba658",
           fill: false,
           lineTension: 0.0,
+        },
+        {
+          label: "Profit (3-month trailing average)",
+          data: profitAvg,
+          backgroundColor: "black",
+          borderColor: "black",
+          fill: false,
+          lineTension: 0.6,
         },
       ],
     },
@@ -78,6 +99,9 @@ function drawCharts(limitDate) {
     .then((res) => res.json())
     .then((revenueByProject) => {
       for ([project, data] of Object.entries(revenueByProject)) {
+        if (project !== "tinypilot") {
+          continue;
+        }
         let dates = [];
         for (d of Object.keys(data)) {
           const date = parseDate(d);
