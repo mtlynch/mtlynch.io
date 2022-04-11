@@ -21,14 +21,14 @@ function drawChart(
     3636.08, 10328.8, -352.77, 843.56, 6858.72, -9452.32, -9713.34, -10140.95,
     11713.04, 1936.22, 12758.39, -15207.05, -8425.67, 27039.62, -2551.26,
   ];
-  let profitAvg = [null, null, null, null, null, null, null];
+  let profitAvg = [null, null, null, null, null, null, null, null];
   let trailing = [];
   for (const p of profitRaw) {
     trailing.push(p);
     if (trailing.length > 3) {
       trailing.shift();
+      profitAvg.push(trailing.reduce((a, b) => a + b) / trailing.length);
     }
-    profitAvg.push(trailing.reduce((a, b) => a + b) / trailing.length);
   }
   new Chart(ctx, {
     type: "line",
