@@ -455,6 +455,10 @@ h4:hover .hanchor {
   margin: 0rem 0 0.5rem 0 !important;
 }
 
+.retrospective .finances-chart {
+  margin-bottom: 5rem;
+}
+
 .book-reports-list li {
   margin: 2rem 0;
   display: flex;

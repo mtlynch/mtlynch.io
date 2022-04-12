@@ -1,57 +1,57 @@
-const dollarFormatter = new Intl.NumberFormat("en-US", {
+const dollarFormat = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
+const dollarFormatter = dollarFormat.format;
 
-function drawChart(
-  chartId,
-  labels,
-  data,
-  label,
-  formatter = dollarFormatter.format
-) {
-  const ctx = document.getElementById(chartId);
+function drawChart(project, dates, data) {
+  const ctx = document.getElementById(project + "-finances");
   if (!ctx) {
     return;
   }
   ctx.height = 300;
-  const profitRaw = [
-    3636.08, 10328.8, -352.77, 843.56, 6858.72, -9452.32, -9713.34, -10140.95,
-    11713.04, 1936.22, 12758.39, -15207.05, -8425.67, 27039.62, -2551.26,
-  ];
-  let profitAvg = [null, null, null, null, null, null, null, null];
+
+  profitRaw = data.map((x) => { return x.profit ? x.profit : null })
+  let profitAvg = [];
   let trailing = [];
   for (const p of profitRaw) {
-    trailing.push(p);
+    if (p !== null) {
+      trailing.push(p);
+    }
     if (trailing.length > 3) {
       trailing.shift();
       profitAvg.push(trailing.reduce((a, b) => a + b) / trailing.length);
+    } else {
+      profitAvg.push(null);
     }
+  }
+  datasets = [
+    {
+      label: "Total Revenue",
+      data: data.map((x) => x.totalRevenue),
+      backgroundColor: "#047a15",
+      borderColor: "#4ba658",
+      fill: false,
+      lineTension: 0.0,
+    },
+  ];
+  if (project === "tinypilot") {
+    datasets.push({
+      label: "Profit (3-month trailing average)",
+      data: profitAvg,
+      backgroundColor: "black",
+      borderColor: "black",
+      fill: false,
+      lineTension: 0.6,
+    });
   }
   new Chart(ctx, {
     type: "line",
     data: {
-      labels: labels,
-      datasets: [
-        {
-          label: label,
-          data: data,
-          backgroundColor: "#047a15",
-          borderColor: "#4ba658",
-          fill: false,
-          lineTension: 0.0,
-        },
-        {
-          label: "Profit (3-month trailing average)",
-          data: profitAvg,
-          backgroundColor: "black",
-          borderColor: "black",
-          fill: false,
-          lineTension: 0.6,
-        },
-      ],
+      labels: dates,
+      datasets: datasets,
     },
     options: {
       responsive: true,
@@ -59,7 +59,7 @@ function drawChart(
       tooltips: {
         callbacks: {
           label: function (tooltipItems) {
-            return formatter(parseFloat(tooltipItems.yLabel));
+            return dollarFormatter(parseFloat(tooltipItems.yLabel));
           },
         },
       },
@@ -69,7 +69,7 @@ function drawChart(
             ticks: {
               suggestedMin: 0,
               callback: function (value) {
-                return formatter(value);
+                return dollarFormatter(value);
               },
             },
           },
@@ -95,13 +95,10 @@ function parseDate(d) {
 }
 
 function drawCharts(limitDate) {
-  fetch("/data/project-revenue.json")
+  fetch("/data/project-finances.json")
     .then((res) => res.json())
-    .then((revenueByProject) => {
-      for ([project, data] of Object.entries(revenueByProject)) {
-        if (project !== "tinypilot") {
-          continue;
-        }
+    .then((financesByProject) => {
+      for ([project, data] of Object.entries(financesByProject)) {
         let dates = [];
         for (d of Object.keys(data)) {
           const date = parseDate(d);
@@ -114,8 +111,7 @@ function drawCharts(limitDate) {
               date.getFullYear()
           );
         }
-        let values = Object.values(data).slice(0, dates.length);
-        drawChart(project + "-revenue", dates, values, "Total Revenue");
+        drawChart(project, dates, Object.values(data));
       }
     });
 }
