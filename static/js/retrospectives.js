@@ -13,7 +13,9 @@ function drawChart(project, dates, data) {
   }
   ctx.height = 300;
 
-  profitRaw = data.map((x) => { return x.profit ? x.profit : null })
+  profitRaw = data.map((x) => {
+    return x.profit ? x.profit : null;
+  });
   let profitAvg = [];
   let trailing = [];
   for (const p of profitRaw) {
