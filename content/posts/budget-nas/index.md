@@ -196,23 +196,27 @@ As I mentioned above, with space and ports at a premium, purposely avoided the n
 
 ### Host bus adaptor (HBA)
 
-Many NAS builds include a host bus adaptor (HBA). TODO: Explain HBA.
+Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
 I chose not to include an HBA in my build, but I intentionally left a PCI slot available if I need one in the future. I chose against an HBA. It seems like a pain in the butt.
+
+One of the popular HBAs I see is the IBM ServeRAID M1015. The ServeRAID M1015 has two SAS ports, and each SAS port can accept four SATA drives via a [SAS to SATA cable], so the HBA can add capacity for eight additional disks. To use the M1015 with ZFS, you need to [cross-flash it to IT mode](https://www.servethehome.com/ibm-serveraid-m1015-part-4/).
 
 My motherboard had four SATA ports, so I figured I could start with four disks. When I need to add disks, I'll buy an HBA. I made sure to leave an available PCI slot for that purpose.
 
 ### ECC RAM
 
-I saw people urging ECC RAM. ECC RAM does XX. At first, I thought I had to get it, but then I realized I've been using computers without ECC RAM for the past 30 years, and I've never noticed any data corruption. And ECC RAM changes not just the RAM, but you'd also need an enterprise-grade motherboard and CPU. I didn't think it was worth doubling the price to reduce such a small risk of data corruption.
+I saw people urging ECC RAM. It's possible for RAM to flip a bit and silently corrupt data, so error correction code (ECC) RAM has protections against memory corruption.
+
+At first, I thought I absolutely needed ECC RAM for this build. Then, I realized I've been using computers without ECC RAM for the past 30 years, and I've never noticed any data corruption. And ECC RAM changes not just the RAM, but you'd also need an enterprise-grade motherboard and CPU. I didn't think it was worth doubling the price to reduce such a small risk of data corruption. It's also slower than non-ECC RAM.
 
 If I was building a server that was going to be under heavy load from multiple users all day, then I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
 
 ### SLOG disk
 
-Before writing data to disk, ZFS first writes an entry in the transaction log. When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk for storing the SLOG, using high-performance SSD. Serve The Home found that a SLOG disk [improved read and write performance significantly](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/).
+Before writing data to disk, ZFS first [writes an entry in a transaction log](https://www.truenas.com/docs/references/slog/). When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk called the SLOG (separate intent log). The SLOG is usually a dedicated, high-performance SSD. Serve The Home found that a SLOG disk [improved read and write performance significantly](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/).
 
-I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later. If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved some for a SLOG disk, but it didn't seem worth it in my build.
+I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later. If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved one for a SLOG disk, but it didn't seem worth it in my build.
 
 Most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than disk I/O.
 
