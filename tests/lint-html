@@ -35,6 +35,8 @@ IGNORE_PATTERNS+=("/vmware.com/")
 IGNORE_PATTERNS+=("/medium.com/")
 IGNORE_PATTERNS+=("/typeform.com/")
 IGNORE_PATTERNS+=("/www.sciencedirect.com/")
+IGNORE_PATTERNS+=("/developer.github.com/")
+IGNORE_PATTERNS+=("/docs.github.com/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
