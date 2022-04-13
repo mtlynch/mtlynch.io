@@ -253,13 +253,13 @@ Given this, I did what I could to reduce the risk of concurrent disk failures. I
 
 For comparison, here are some off-the-shelf solutions at similar price points.
 
-| Product       | 2022 Budget NAS | Synology DS920+ | QNAP TS-473A-8G-US |
-| ------------- | --------------- | --------------- | ------------------ |
-| Disk bays     | 6               | 4               | 4                  |
-| RAM           | 32 GB           | 4 GB            | 4 GB               |
-| Max RAM       | 32 GB           | 8 GB            | 8 GB               |
-| CPU benchmark | XX              | XX              | XX                 |
-| Price         | $530.29         | $549.99         | $549               |
+| Product       | 2022 Budget NAS                                                           | Synology DS920+                                                                          | QNAP TS-473A-8G-US                                                                 |
+| ------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Disk bays     | 6                                                                         | 4                                                                                        | 4                                                                                  |
+| RAM           | 32 GB                                                                     | 4 GB                                                                                     | 4 GB                                                                               |
+| Max RAM       | 32 GB                                                                     | 8 GB                                                                                     | 8 GB                                                                               |
+| CPU benchmark | [4479](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3614) | [3002](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Celeron+J4125+%40+2.00GHz&id=3667) | [4588](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Embedded+V1500B&id=4304) |
+| Price         | $530.29                                                                   | $549.99                                                                                  | $549                                                                               |
 
 The total cost of my build is similar to off-the-shelf solutions, but I get more value for my money. I have 8x as much RAM, and I'm not locked in to any closed-source, vendor-specific OS platform.
 
@@ -312,6 +312,8 @@ After some research, I saw some comments that the Asus Prime A320I-K requires a 
 I caught a lucky break when I realized the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible with the Asus Prime A320 [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
 Strangely, even after I got the system to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. I upgraded to BIOS version XXX, and _then_ it recognized my Athlon 3000G.
+
+I'm not totally sure what happened. Even when I upgraded to XX, the first boot still took about a minute. I've never seen that with a motherboard before. It's possible that it would have worked out of the box with the Athlon 3000G had I just waited a couple of minutes for the motherboard to wake up fully.
 
 So if you're trying a similar build, watch out for CPU compatiblity.
 
