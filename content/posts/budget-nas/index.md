@@ -200,17 +200,19 @@ Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/t
 
 I chose not to include an HBA in my build, but I intentionally left a PCI slot available if I need one in the future. I chose against an HBA. It seems like a pain in the butt.
 
-One of the popular HBAs I see is the IBM ServeRAID M1015. The ServeRAID M1015 has two SAS ports, and each SAS port can accept four SATA drives via a [SAS to SATA cable], so the HBA can add capacity for eight additional disks. To use the M1015 with ZFS, you need to [cross-flash it to IT mode](https://www.servethehome.com/ibm-serveraid-m1015-part-4/).
+One of the popular HBAs I see is the IBM ServeRAID M1015, which you can find for under $100. The ServeRAID M1015 has two SAS ports, and each SAS port can accept four SATA drives via a [SAS to SATA cable], so the HBA can add capacity for eight additional disks. To use the M1015 with ZFS, you need to [cross-flash it to IT mode](https://www.servethehome.com/ibm-serveraid-m1015-part-4/).
 
 My motherboard had four SATA ports, so I figured I could start with four disks. When I need to add disks, I'll buy an HBA. I made sure to leave an available PCI slot for that purpose.
 
 ### ECC RAM
 
-I saw people urging ECC RAM. It's possible for RAM to flip a bit and silently corrupt data, so error correction code (ECC) RAM has protections against memory corruption.
+In researching different TrueNAS builds, I saw several recommendations that said error correct code (ECC) RAM was a must-have. I ultimately decided against ECC RAM and just used standard, consumer-grade RAM.
 
-At first, I thought I absolutely needed ECC RAM for this build. Then, I realized I've been using computers without ECC RAM for the past 30 years, and I've never noticed any data corruption. And ECC RAM changes not just the RAM, but you'd also need an enterprise-grade motherboard and CPU. I didn't think it was worth doubling the price to reduce such a small risk of data corruption. It's also slower than non-ECC RAM.
+In non-ECC RAM, it's possible for the RAM to accidentally flip a bit and corrupt your data in memory. For a system like ZFS that sends a lot of data through RAM, this is a scary thought. ECC RAM reduces this risk, as it stores a checksum of the data.
 
-If I was building a server that was going to be under heavy load from multiple users all day, then I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
+The two main downsides of ECC RAM are the expense and performance. ECC RAM is significantly more expensive than non-ECC RAM. And beyond the RAM sticks themselves, you also have to buy an ECC-compatible motherboard and CPU. If you're using server-grade components anyway, but you're not going to find ECC support on low-end consumer grade hardware. ECC RAM is also slower, as it has to do the additional work of validating the checksum on all RAM operations.
+
+While I obviously don't want my server to corrupt my data in RAM, I've also been using computers for the past 30 years without ECC RAM, and I've never noticed data corruption. If I was building a server that was going to be under heavy load from multiple users all day, then I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
 
 ### SLOG disk
 
