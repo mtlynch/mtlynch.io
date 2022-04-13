@@ -22,9 +22,9 @@ function drawChart(project, dates, data) {
     if (p !== null) {
       trailing.push(p);
     }
-    if (trailing.length > 3) {
-      trailing.shift();
+    if (trailing.length === 3) {
       profitAvg.push(trailing.reduce((a, b) => a + b) / trailing.length);
+      trailing.shift();
     } else {
       profitAvg.push(null);
     }
