@@ -14,9 +14,11 @@ The server itself cost $531, and I bought four disk drives for $732, bringing th
 
 In this post, I'll walk through how I chose the parts, what issues I ran into in the build, and my recommendations for anyone interested in building their own.
 
-- Background
-- Parts list
-- Build photos
+- [Background](#background)
+- [Storage planning](#storage-planning)
+- [How I chose parts](#how-i-chose-parts)
+- [Build photos](#build-photos)
+- [Benchmarking performance](#performance-benchmarks)
 - Reflections
 
 {{<gallery caption="Before and after of my 2022 homelab TrueNAS server build">}}
@@ -24,7 +26,9 @@ In this post, I'll walk through how I chose the parts, what issues I ran into in
 {{<img src="completed-build.jpg" alt="TODO" maxWidth="450px">}}
 {{</gallery>}}
 
-## What's a NAS server?
+## Background
+
+### What's a NAS server?
 
 NAS stands for network-attached storage. A NAS server is just a server you can keep whose purpose is to store data and make it available to computers within your home network.
 
@@ -36,13 +40,13 @@ I also have a _lot_ of data. I'm a data hoarder, so I have every digital photo I
 
 The biggest data source is my my DVD and Blu-Ray collection. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip it so that I have it available on my computer and can stream it to my TV. Between the raw ISO copy and the streamable MP4s, a single disc can take up around 60 GB of disk space.
 
-## What's a homelab?
+### What's a homelab?
 
 "Homelab" is a colloquial term that's grown in popularity in the last few years. A homelab is a place in your home where you can experiment with hardware or software that people typically use in professional environments.
 
 Many people use homelab servers as low-stakes practice environments before they use the technologies in their day jobs. I use my homelab for software development, as I keep [each project in its own virtual machine](/building-a-vm-homelab-2017/#why-vms).
 
-## Why build your own NAS?
+### Why build your own NAS?
 
 If you're new to homelab or you don't have experience building PCs, I recommend that you **don't build your own NAS**. There are off-the-shelf solutions that offer most of the same functionality and with a substantially better user experience.
 
@@ -54,13 +58,24 @@ A few months ago, my Synology started to make a clicking noise. I started to wor
 
 Fortunately, my Synology's clicking went away, but it was a wake up call how dependent I'd let myself become on that NAS. I decided to switch to something open source and open standards, so I decided on TrueNAS.
 
-## TrueNAS and ZFS
+### TrueNAS and ZFS
 
 TrueNAS (formerly known as FreeNAS) is one of the most popular storage servers. I also see a lot of people talk about Unraid, and it looked nice, but I wanted something open-source.
 
 TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZFS, but it seems like cool technology optimized for large disks.
 
-## How I planned disk capacity
+## Storage planning
+
+When building a storage server, the big question is storage, so before I began, I asked myself a few questions:
+
+- How much disk space do I need?
+- How will my storage needs grow over the lifetime of the server?
+- How worried am I about disk failures and data loss?
+- What am I willing to spend?
+
+Here is how I thought about these concerns.
+
+### How I planned disk capacity
 
 When I bought my Synology NAS, I initially installed three 4 TB drives and left the fourth drive bay empty. That gave me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
 
@@ -68,7 +83,7 @@ I decided to apply the same strategy for my new build. I wanted to build a syste
 
 I decided to aim for double my current capacity with the ability to add later. I'd aim for 20 TB of usable storage with room to grow to 30 TB over the next five or ten years.
 
-## Many small disks or fewer large disks?
+### Many small disks or fewer large disks?
 
 ZFS is designed to survive disk failures, so it stores each block of data redundantly. Because of this redundancy, it's complicated to think about storage capacity. Naively, you'd expect that four 8 TB drives would give you 32 TB of space, but if you take into account the space needed for redundancy, your actual usable capacity is XX TB.
 
@@ -76,15 +91,17 @@ I found this [raidz calculator](https://wintelguy.com/zfs-calc.pl) that tells yo
 
 ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the more efficiently ZFS can use their storage capacity. For example, if you give ZFS two 10 TB drives, you only get to use 10 TB out of your 20 TB capacity. If you instead use five 4 TB drives, ZFS could give you 14 TB of usable storage.
 
-When you're building a NAS server, you need to decide whether to use a smaller quantity . Smaller drives are usually cheaper in terms of $/TB, but they're more expensive to operate. It takes twice as much power to run two 4 TB drives than a single 8 TB drive.
+When you're building a NAS server, you need to decide whether to use a smaller quantity . Smaller drives are usually cheaper in terms of $/TB, but they're more expensive to operate. It takes twice as much electricity to run two 4 TB drives than a single 8 TB drive.
 
 I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
 
-## raidz 1, 2, or 3?
+### raidz 1, 2, or 3?
 
-There are a few different ZFS modes: raidz1, raidz2, and raidz3. The difference is just how robust the system is to disk failures. raidz1 can survive one disk failure, but you'll suffer data loss if two disks fail at the same time. raidz2 can survive two disk failures without data loss, and raidz3 can survive three failures.
+There are a few different ZFS modes: raidz1, raidz2, and raidz3. The main difference is in robustness. raidz1 can survive one disk failure, but you'll suffer data loss if two disks fail at the same time. raidz2 can survive two disk failures without data loss. raidz3 can survive three.
 
-Why wouldn't everyone just choose raidz3 then? You pay for robustness in disk space. Given five 4 TB hard drives, here's how much usable storage you'd get from each ZFS mode:
+Why wouldn't everyone simply choose raidz3? What you gain in robustness, you pay for in disk space.
+
+Given five 4 TB hard drives, here's how much usable storage you'd get from each ZFS mode:
 
 | ZFS type | Usable storage | % of total capacity |
 | -------- | -------------- | ------------------- |
@@ -94,9 +111,11 @@ Why wouldn't everyone just choose raidz3 then? You pay for robustness in disk sp
 
 I chose raidz1. I think the odds of two drives failing simultaneously in my NAS is fairly low, and I use restic (TODO: link) to back everything up to the cloud anyway.
 
-When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend a day repairing my storage?" You shouldn't think of RAID as a backup strategy. RAID doesn't so much protect you against data loss as it protects you against the hassle of recovering your data from backup if your disk fails.
+When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend several hours recovering my data?" [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft of your server.
 
-The more physical drives you have, the more defensive you want to be about disk failure. If I had a pool of 30 disks, I'd probably use raidz2 or raidz3, but the odds of two disks failing when I only have five or six total is pretty small.
+To me, the value of ZFS is that I don't have to resort to my cloud backups if one drive dies. With raidz1, I'll have to recover from backups if two drives fail, which is a pain but not the end of the world. To me, it's not worth giving up 26% of my server's usable storage for raidz2.
+
+The more physical drives you have, the more defensive you should be about disk failure. If I had a pool of 20 disks, I'd probably use raidz2 or raidz3.
 
 ## How I chose parts
 
