@@ -150,7 +150,7 @@ Normally, I'd buy a third-party CPU fan for more efficient cooling, but for this
 
 ### Case
 
-For my VM server, I used a Fractal Design case, and it's my favorite computer case I'd ever used. I decided to stick with Fractal Design for this build.
+For my VM server, I [used a Fractal Design case](/building-a-vm-homelab/#case), and it's my favorite computer case I'd ever used. I decided to stick with Fractal Design for this build.
 
 I went with the [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which was the number I wanted.
 
@@ -396,11 +396,9 @@ If I were doing it again, I'd go with the Gigabyte B550I. It's $50 more, but it 
 
 ### Case
 
-I was disappointed in the case. With my Fractal Design XX, I kept discovering features I'd never seen on any case before that delighted me. I'd think, "Wow, why has nobody done this before?" On this case, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
+I was disappointed in the case. When I built my VM server with the Fractal Design Meshify C, I kept discovering features that delighted me. On this build, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
 
-It looks nice on the outside, but I found it awkward to work in. I know it's minimizing space.
-
-There was very little documentation, and some of the case mechanisms weren't obvious.
+It looks nice on the outside, but I found it awkward to work in. There was barely any documentation, and some of the case mechanisms weren't obvious.
 
 It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly, but I was definitely disappointed.
 
@@ -426,7 +424,7 @@ User experience is miles better on the Synology. Synology feels like they're try
 
 It took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several different menus to just set up a drive and share it. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
 
-I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. With Synology, I installed it and it worked out of the box. With TrueNAS, it was about an hour of fiddling. For Plex to access my storage, I had to:
+I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. TrueNAS required an hour of fiddling and searching through documentation. For Plex to access my storage, I had to:
 
 1. Create a BSD jail
 1. SSH into that jail
@@ -434,8 +432,6 @@ I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media S
 1. Create a matching user with a matching UID on the TrueNAS host system
 1. Edit permissions on the TrueNAS host system to give the jail user access to my media files
 
-Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. I tried installing something
+By comparison, installing Plex on Synology takes about two minutes. You breeze through a user-friendly wizard, and you're done.
 
-I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software.
-
-If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
+I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software. If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
