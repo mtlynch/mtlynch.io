@@ -62,7 +62,16 @@ Fortunately, my Synology's clicking went away, but it was a wake up call how dep
 
 TrueNAS (formerly known as FreeNAS) is one of the most popular storage servers. I also see a lot of people talk about Unraid, and it looked nice, but I wanted something open-source.
 
-TrueNAS uses ZFS, which is a whole other technology. I had no experience with ZFS, but it seems like cool technology optimized for large disks.
+TrueNAS uses [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/), a filesystem designed specifically for storage servers. Most filesystems like NTFS on Windows or ext4 run on top of a separate disk volume system that manages low-level disk I/O. ZFS manages everything in the stack from the filesystem down to the disk I/O, which gives it more power and performance than other filesystems.
+
+Some neat features of ZFS include:
+
+- Aggregating multiple physical disks into a single filesystem
+- Automatically repairing data corruption
+- Creating point-in-time snapshots of data on disk
+- Optionally encrypting or compressing data on disk
+
+Before building this system, I had zero experience with ZFS, so I was excited to experiment with it.
 
 ## Storage planning
 
@@ -93,6 +102,8 @@ ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the
 
 When you're building a NAS server, you need to decide whether to use a smaller quantity . Smaller drives are usually cheaper in terms of $/TB, but they're more expensive to operate. It takes twice as much electricity to run two 4 TB drives than a single 8 TB drive.
 
+Since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully by the time I need to exand storage, the feature is complete and available in TrueNAS.
+
 I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
 
 ### raidz 1, 2, or 3?
@@ -109,13 +120,21 @@ Given five 4 TB hard drives, here's how much usable storage you'd get from each 
 | raidz2   | 11.4 TB        | 57.2%               |
 | raidz3   | 7.7 TB         | 38.6%               |
 
-I chose raidz1. I think the odds of two drives failing simultaneously in my NAS is fairly low, and I use restic (TODO: link) to back everything up to the cloud anyway.
+I chose raidz1. I think the odds of two drives failing simultaneously in my NAS is fairly low, and I use [restic](https://restic.net) to back everything up to the cloud anyway.
 
 When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend several hours recovering my data?" [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft of your server.
 
 To me, the value of ZFS is that I don't have to resort to my cloud backups if one drive dies. With raidz1, I'll have to recover from backups if two drives fail, which is a pain but not the end of the world. To me, it's not worth giving up 26% of my server's usable storage for raidz2.
 
 The more physical drives you have, the more defensive you should be about disk failure. If I had a pool of 20 disks, I'd probably use raidz2 or raidz3.
+
+### Preventing concurrent disk failures
+
+raidz1 protects me if one disk fails. If two or more drives fail at once, I'll suffer data loss.
+
+Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), the average failure rate of each disk is only 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small. But disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it's the same model, from the same manufacturing batch, and it spent its life in the same environment processing a similar workload. Given this, I did what I could to reduce the risk of concurrent disk failures.
+
+I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks in the same manufacturing batch, I bought the disks from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
 ## How I chose parts
 
@@ -165,19 +184,15 @@ The biggest decision was the disk. I wanted to. Things I wanted to avoid:
   - Look for drives with conventional magnetic recording (CMR).
   - Check this list of [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/).
 
-From there, there are things you want to consider, such as RPM speed, size, and price.
+To limit failure rate, I checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), to avoid especially failure-prone disks, but I didn't hyper-optimize for low failure rate. It's irrational to pay twice as much for a drive that has a failure rate of 0.5% rather than 1%. You're spending twice the money to reduce failure rate by only 0.5%.
 
 7200 vs 1000 RPM
 
-Size
+The Fractal Design Node 304 has six drive bays, so I decided to start with four 8 TB disks to give myself room for expansion later. With raidz1, that would give me 22.5 TB of usable storage to start. A fifth disk would bring me to 30.9 TB, and a sixth would get me 37 TB, so this should last me a while.
 
-Pice. For a 8 TB drive, you can pay anywhere from $130 to $400 per disk. For a server with four disks, that's a difference of $1k, so those price differences matter.
+Price. For a 8 TB drive, you can pay anywhere from $130 to $400 per disk. For a server with four disks, that's a difference of $1k, so those price differences matter.
 
-Checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/). I didn't want to hyper-optimize for low failure rate. At one point, I rejected a disk that Backblaze reported as a 1.2% AFR in favor of one that cost twice as much but had a 0.5% AFR.
-
-Quantity or size? If you're building a NAS server that has 20-drive bays, then sure, buy a bunch of small disks. ZFS can make more efficient use of your disks the more you have of them. I wanted to give myself room to grow. The problem with buying a lot of small disks is that . And since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). I figure that I won't need to do that for another year or two, and then hopefully by that time, the feature is complete and landed in TrueNAS.
-
-One technique that's become increasingly popular is called "shucking." You buy a portable USB drive and then strip it out of its case to get the disk inside. For whatever reason, portable drives are sometimes less expensive in this form factor, so you can save a few dollars by shucking. At my scale, the savings seemed like they'd be on the order of tens of dollars, so I didn't want to deal with it.
+I cho
 
 ### Disk (OS)
 
@@ -235,19 +250,13 @@ While I obviously don't want my server to corrupt my data in RAM, I've also been
 
 ### SLOG disk
 
-Before writing data to disk, ZFS first [writes an entry in a transaction log](https://www.truenas.com/docs/references/slog/). When you store the transaction log on the same disk as your data, you take a performance hit because ZFS has to do two separate writes to the same disk. Many ZFS builds include a separate, dedicated disk called the SLOG (separate intent log). The SLOG is usually a dedicated, high-performance SSD. Serve The Home found that a SLOG disk [improved read and write performance significantly](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/).
+Many ZFS builds include a separate, dedicated disk called the [SLOG (separate intent log)](https://www.truenas.com/docs/references/slog/). The SLOG [improves write speeds](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/) significantly.
+
+People generally use a high-performance SSD as their SLOG. The idea is that writing to an SSD is orders of magnitude faster than writing to multiple spinning disks. When an application writes data, ZFS can quickly write it to the fast SSD, tell the application that the write succeeded, then asynchronously move the data from the SSD to the storage pool.
 
 I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later. If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved one for a SLOG disk, but it didn't seem worth it in my build.
 
-Most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than disk I/O.
-
-## Preventing concurrent disk failures
-
-Recall that I chose raidz1, which protects me if one disk fails. If two or more drives fail at once, I'll suffer data loss.
-
-Based on Backblaze's stats, the average failure rate of each disk is only 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small. But disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it's the same model, from the same manufacturing batch, and it spent its life in the same environment processing a similar workload.
-
-Given this, I did what I could to reduce the risk of concurrent disk failures. I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks in the same manufacturing batch, I bought the disks from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
+Most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than disk write speed.
 
 ## Parts list
 
@@ -304,11 +313,9 @@ TODO
 
 ## Building the server with TinyPilot
 
-Longtime readers of this blog will recall that I built a device on top of the Raspberry Pi specifically for building servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new Voyager 2, and I really enjoyed it.
+Longtime readers of this blog will recall that I built a device on top of the Raspberry Pi specifically for building and managing headless servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new Voyager 2. I really enjoyed it. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image from the TinyPilot browser window.
 
 The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the XX files for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. But I hope to add that feature soon so that my next BIOS upgrade can be all TinyPilot.
-
-I created TinyPilot specifically for the task of building custom PCs and servers. It was great in this instance because I could monitor video output, boot to BIOS, and mount the TrueNAS system entirely from the TinyPilot browser window.
 
 ## Build issues
 
@@ -435,3 +442,9 @@ I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media S
 By comparison, installing Plex on Synology takes about two minutes. You breeze through a user-friendly wizard, and you're done.
 
 I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software. If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
+
+### ZFS
+
+ZFS is cool, but I actually haven't found a need for the features people are excited about. I see people talking about snapshotting, but I don't create snapshots and I haven't found a need for them. I have offsite backup snapshots with restic, and they're not especially convenient, but it takes me about 15 minutes to recover it. I've been using restic for two years, and I only recall needing to find a snapshot once.
+
+I do like how easy it is to create new filesystems with different properties. And it's nice that it just does its job and I don't have to think about it much.
