@@ -8,7 +8,7 @@ description: TODO
 date: "2022-04-15"
 ---
 
-This year, I decided to build my first ever homelab NAS server. It's a 32 TB storage server that I use to keep all of my data.
+This year, I decided to build my first ever home storage server. It's a 32 TB server that stores all of my personal and business data using all open-source software.
 
 The server itself cost $531, and I bought four disk drives for $732, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
 
@@ -19,12 +19,14 @@ In this post, I'll walk through how I chose the parts, what issues I ran into in
 - [How I chose parts](#how-i-chose-parts)
 - [Build photos](#build-photos)
 - [Benchmarking performance](#performance-benchmarks)
-- Reflections
+- [Final thoughts](#final-thoughts)
 
 {{<gallery caption="Before and after of my 2022 homelab TrueNAS server build">}}
 {{<img src="all-parts.jpg" alt="TODO" maxWidth="450px">}}
 {{<img src="completed-build.jpg" alt="TODO" maxWidth="450px">}}
 {{</gallery>}}
+
+If you'd prefer a video explanation instead, I recorded one on YouTube.
 
 ## Background
 
@@ -40,6 +42,8 @@ I also have a _lot_ of data. I'm a data hoarder, so I have every digital photo I
 
 The biggest data source is my my DVD and Blu-Ray collection. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip it so that I have it available on my computer and can stream it to my TV. Between the raw ISO copy and the streamable MP4s, a single disc can take up around 60 GB of disk space.
 
+TODO: Photo of DVDs
+
 ### What's a homelab?
 
 "Homelab" is a colloquial term that's grown in popularity in the last few years. A homelab is a place in your home where you can experiment with hardware or software that people typically use in professional environments.
@@ -48,7 +52,9 @@ Many people use homelab servers as low-stakes practice environments before they 
 
 ### Why build your own NAS?
 
-If you're new to homelab or you don't have experience building PCs, I recommend that you **don't build your own NAS**. There are off-the-shelf solutions that offer most of the same functionality and with a substantially better user experience.
+If you're new to the homelab world or you have no experience building PCs, I recommend that you **don't build your own NAS**.
+
+There are off-the-shelf solutions that offer most of the same functionality and with a substantially better user experience.
 
 Before building my own homelab NAS, I used a Synology DSXX that I used for XX years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction into the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
@@ -68,7 +74,7 @@ Some neat features of ZFS include:
 
 - Aggregating multiple physical disks into a single filesystem
 - Automatically repairing data corruption
-- Creating point-in-time snapshots of data on disk
+- Creating point-in-time snapshots of data on disk (similar to OS X's Time Machine feature)
 - Optionally encrypting or compressing data on disk
 
 Before building this system, I had zero experience with ZFS, so I was excited to experiment with it.
@@ -88,13 +94,11 @@ Here is how I thought about these concerns.
 
 When I bought my Synology NAS, I initially installed three 4 TB drives and left the fourth drive bay empty. That gave me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
 
-I decided to apply the same strategy for my new build. I wanted to build a system with enough storage to meet my current needs but with room to grow in a few years by adding disks.
-
-I decided to aim for double my current capacity with the ability to add later. I'd aim for 20 TB of usable storage with room to grow to 30 TB over the next five or ten years.
+I decided to apply the same strategy for my new build. I wanted to build a system that met my current needs and still offered room to grow. My rough target was to start with 20 TB of usable storage and capacity for up to 30 TB if I add disks later.
 
 ### Many small disks or fewer large disks?
 
-ZFS is designed to survive disk failures, so it stores each block of data redundantly. Because of this redundancy, it's complicated to think about storage capacity. Naively, you'd expect that four 8 TB drives would give you 32 TB of space, but if you take into account the space needed for redundancy, your actual usable capacity is XX TB.
+ZFS is designed to survive disk failures, so it stores each block of data redundantly. Because of this redundancy, it's complicated to think about storage capacity. Naively, you'd expect that five 4 TB drives would give you 20 TB of space, but if you take into account the space needed for redundancy, your actual usable capacity is only 15.4 TB.
 
 I found this [raidz calculator](https://wintelguy.com/zfs-calc.pl) that tells you how much space different disk configurations give you.
 
@@ -163,15 +167,19 @@ The important thing to me was to find a CPU that supported Radeon graphics so th
 
 My main concern with the CPU was finding a CPU and motherboard combination that supported video without requiring a dedicated GPU.
 
+{{<img src="amd-3000g.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
+
 I settled on the AMD Athlon 3000G. It's inexpensive at only $105, and it has decent CPU benchmarks.
 
 Normally, I'd buy a third-party CPU fan for more efficient cooling, but for this build, I just used the Athlon's stock fan. I wasn't worried about the CPU absorbing heavy workloads, and I didn't want to worry about verifying that a larger fan would fit in a mini-ITX case.
 
 ### Case
 
-For my VM server, I [used a Fractal Design case](/building-a-vm-homelab/#case), and it's my favorite computer case I'd ever used. I decided to stick with Fractal Design for this build.
+When I built my last VM server, I [used a Fractal Design case](/building-a-vm-homelab/#case). It's my favorite computer case ever, so stuck with Fractal Design on this build.
 
-I went with the [Fractal Design Node 304 Black](hhttps://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which was the number I wanted.
+{{<img src="fractal-design-304.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
+
+I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which was the number I wanted.
 
 ### Disk (Data)
 
@@ -198,11 +206,13 @@ I cho
 
 I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least XX of space, but it otherwise doesn't read or write much to the OS disk.
 
+{{<img src="kingston-a400.jpg" alt="TODO" maxWidth="300px" hasBorder="true" caption="The Kingston A400 is a fantastic value as a 120 GB M.2 SSD for only $32.">}}
+
 I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 for a 120 GB M.2 disk. And I love M.2 disks. They don't require any cabling. They just tuck away into the motherboard, take up nearly zero space, and you never have to touch them again.
 
 ### Memory
 
-I find memory extremely boring to shop for. I perhaps should have looked more into benchmarks since ZFS is so RAM-intensive, but honestly I didn't. I went with a brand name I trust and looked for sticks below $150 that were listed as compatible with the XX motherboard
+I find memory extremely boring to shop for. I perhaps should have looked more into benchmarks since ZFS is so RAM-intensive, but honestly I didn't. I went with a brand name I trust and looked for sticks below $150 that were listed as compatible with the ASUS A320I-K motherboard I chose.
 
 ### Power supply unit (PSU)
 
@@ -222,21 +232,19 @@ One item I've never purchased before was these 90-degree SATA cables. I didn't r
 
 ## What's missing?
 
-There are a few components that I consciously chose not to include in my build due to price, complexity, or physical space.
+There are a few components that I intentionally excluded from my build due to price, complexity, or physical space.
 
 ### Graphics card (GPU)
 
-As I mentioned above, with space and ports at a premium, purposely avoided the need for a graphics card. I chose a motherboard and CPU combination that supported graphics rendering without an external card.
+With scarce physical space and motherboard ports, I didn't want a dedicated graphics card. I chose a motherboard and CPU combination that supported graphics rendering without an external card.
 
 ### Host bus adaptor (HBA)
 
 Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
-I chose not to include an HBA in my build, but I intentionally left a PCI slot available if I need one in the future. I chose against an HBA. It seems like a pain in the butt.
-
 One of the popular HBAs I see is the IBM ServeRAID M1015, which you can find for under $100. The ServeRAID M1015 has two SAS ports, and each SAS port can accept four SATA drives via a [SAS to SATA cable], so the HBA can add capacity for eight additional disks. To use the M1015 with ZFS, you need to [cross-flash it to IT mode](https://www.servethehome.com/ibm-serveraid-m1015-part-4/).
 
-My motherboard had four SATA ports, so I figured I could start with four disks. When I need to add disks, I'll buy an HBA. I made sure to leave an available PCI slot for that purpose.
+Honestly, the whole process of cross-flashing sounds tedious and frustrating, so I decided to punt on it until I need an HBA. My motherboard had four SATA ports, so I could start with four disks just by using the available SATA ports. When I need more disks, I'll buy an HBA. I made sure to leave a PCI slot available for that purpose.
 
 ### ECC RAM
 
@@ -293,27 +301,28 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 ## Build photos
 
-TODO
+{{<img src="all-parts.jpg" alt="Photo of parts in retail packages" caption="All the parts in their retail boxes" maxWidth="600px">}}
 
-{{<img src="all-parts.jpg" alt="TODO" maxWidth="600px">}}
+{{<img src="motherboard-installed.jpg" alt="Photo of motherboard in the case" caption="It was straightforward to install the ASUS Prime A320-I-K motherboard in the Fractal Design Node 304 case." maxWidth="600px">}}
 
-{{<img src="motherboard-installed.jpg" alt="TODO" maxWidth="600px">}}
+{{<img src="ssd-installed.jpg" alt="Photo of motherboard with M.2 SSD installed" caption="I love installing M.2 SSDs. No wires or rails &mdash; one screw and you're done." maxWidth="600px">}}
 
-{{<img src="ssd-installed.jpg" alt="TODO" maxWidth="600px">}}
+{{<img src="psu-installed.jpg" alt="Photo of PSU installed" caption="This is the first case I've ever seen that doesn't expose the back face of the PSU outside of the case. Instead, the case has a short NEMA extension cable that routes the internal PSU to the case's own external power input." maxWidth="600px">}}
 
-{{<img src="psu-installed.jpg" alt="TODO" maxWidth="600px">}}
+{{<gallery caption="It was such a tight squeeze between the motherboard's SATA ports and the PSU that I had to buy special 90-degree slim SATA cables.">}}
+{{<img src="90-degree-sata-installed.jpg" alt="Photo of SATA cables before PSU is installed" maxWidth="500px">}}
+{{<img src="sata-just-barely.jpg" alt="Photo of SATA cables with just barely enough space next to the PSU" maxWidth="280px">}}
+{{</gallery>}}
 
-{{<img src="90-degree-sata-installed.jpg" alt="TODO" maxWidth="600px">}}
+{{<img src="cpu-ram-pwr.jpg" alt="Photo of motherboard with everything connected" caption="After connecting everything to the motherboard (except for the CPU fan)" maxWidth="600px">}}
 
-{{<img src="sata-just-barely.jpg" alt="TODO" maxWidth="600px">}}
-
-{{<img src="cpu-ram-pwr.jpg" alt="TODO" maxWidth="600px">}}
-
-{{<img src="completed-build.jpg" alt="TODO" maxWidth="800px">}}
+{{<img src="completed-build.jpg" alt="Photo of NAS server on my desk" caption="The completed build" maxWidth="800px">}}
 
 ## Building the server with TinyPilot
 
-Longtime readers of this blog will recall that I built a device on top of the Raspberry Pi specifically for building and managing headless servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new Voyager 2. I really enjoyed it. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image from the TinyPilot browser window.
+Longtime readers of this blog will recall that I built a device on top of the Raspberry Pi specifically for building and managing headless servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new TinyPilot Voyager 2.
+
+I'm obviously biased, but building this server with the Voyager 2 was a great experience. I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image from the TinyPilot browser window.
 
 The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the XX files for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. But I hope to add that feature soon so that my next BIOS upgrade can be all TinyPilot.
 
@@ -329,19 +338,27 @@ Finally, I took apart my 2017 homelab VM server and connected its PSU to the NAS
 
 Success! But there was no video output. This led to the next issue...
 
-### The CPU BIOS incompatibility fiasco
+### Is this BIOS version incompatible? Or am I an idiot?
 
 I got the system to power on, but there was no video display. Oh no! Did I misunderstand what was required for the motherboard's on-board video to work?
 
-After some research, I saw some comments that the Asus Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I _don't have a CPU_.
+After some research, I saw some comments that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I _don't have a CPU_.
 
-I caught a lucky break when I realized the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible with the Asus Prime A320 [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
+I caught a lucky break when I realized the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible with the ASUS Prime A320 [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
-Strangely, even after I got the system to boot with borrowed parts, the BIOS reported that it was version XXX, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. I upgraded to BIOS version XXX, and _then_ it recognized my Athlon 3000G.
+{{<img src="boot-2203.jpg" alt="Screenshot of ASUS BIOS at version 2203" caption="I was able to use parts from my old [2017 homelab VM server](/building-a-vm-homelab-2017/) to upgrade the BIOS." maxWidth="800px" hasBorder="true">}}
 
-I'm not totally sure what happened. Even when I upgraded to XX, the first boot still took about a minute. I've never seen that with a motherboard before. It's possible that it would have worked out of the box with the Athlon 3000G had I just waited a couple of minutes for the motherboard to wake up fully.
+Strangely, even after I got the system to boot with borrowed parts, the motherboard reported that it was running BIOS version 2203, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU.
 
-So if you're trying a similar build, watch out for CPU compatiblity.
+{{<img src="a320i-k-compat.png" alt="Screenshot of ASUS support page saying ASUS Prime A320I-K supports Athlon 3000G at version 2203" caption="The ASUS Prime A320I-K [CPU compatibility page](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) claims it's compatible with the Athlon 3000G starting at BIOS version 2203." hasBorder="true">}}
+
+After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging in the HDMI cable into the DisplayPort port by mistake. So it's possible that this whole thing was just me being an idiot and not realizing I had the wrong port. Was I doing that the whole time? Was this whole parts-borrowing fiasco even necessary?
+
+I can't remember if I 100% confirmed I had the right video port when I was testing pre-BIOS upgrade. I _think_ I did, but it's possible I had it wrong the whole time.
+
+Normally, I'd accept the blame, but there was a lot of flakiness in the ASUS BIOS, so I'm still not sure whether the compatibility isn't what ASUS says or if I just was plugging an HDMI cable into a DisplayPort hole the entire time.
+
+{{<img src="3000g-boot.png" alt="Screenshot of point in video when I get first boot" caption="The moment I finally got a boot screen with the Athlon 3000G installed" maxWidth="800px" hasBorder="true">}}
 
 ## Performance benchmarks
 
@@ -383,7 +400,7 @@ The Athlon 3000G has worked well. I perhaps could have even gone with an even sl
 
 {{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
 
-The most important thing about the CPU was that it supported AMD's XX video technology, which meant that I didn't need a separate GPU. That worked well.
+The most important thing about the CPU was that it supported AMD's Radeon video technology, which meant that I didn't need a separate GPU, and it served that purposed.
 
 ### Motherboard
 
@@ -397,7 +414,12 @@ I'm happy with it, and the BIOS UI is fine, but the BIOS itself is flaky. It did
 
 Its BIOS upgrade utility was completely broken. It claimed that I had the latest BIOS when I didn't, so I had to upgrade manually by downloading the files and loading them on a thumbdirve.
 
-I also missed that it only supports 32 GB of RAM. If I want to expand storage, I might start being RAM bound because ZFS is so RAM-hungry.
+{{<gallery caption="The ASUS EZ Flash utility claimed I had the latest BIOS at version 2203. The ASUS website offered BIOS version 5862, so I had to update manually.">}}
+{{<img src="ez-bios-1.png" alt="TODO" maxWidth="450px">}}
+{{<img src="ez-bios-2.png" alt="TODO" maxWidth="450px">}}
+{{</gallery>}}
+
+I also missed that the A320I-K supports a maximum of 32 GB of RAM. If I want to expand storage, the server might become RAM-bound because ZFS is so memory intensive.
 
 If I were doing it again, I'd go with the Gigabyte B550I. It's $50 more, but it supports 64 GB of RAM, and it has an extra M.2 slot, so I could add a SLOG disk if I ever wanted one.
 
@@ -448,3 +470,5 @@ I'm sticking with TrueNAS because I care more about platform lock-in than almost
 ZFS is cool, but I actually haven't found a need for the features people are excited about. I see people talking about snapshotting, but I don't create snapshots and I haven't found a need for them. I have offsite backup snapshots with restic, and they're not especially convenient, but it takes me about 15 minutes to recover it. I've been using restic for two years, and I only recall needing to find a snapshot once.
 
 I do like how easy it is to create new filesystems with different properties. And it's nice that it just does its job and I don't have to think about it much.
+
+TODO: Link to YouTube video
