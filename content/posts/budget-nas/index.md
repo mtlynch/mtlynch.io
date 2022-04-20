@@ -42,7 +42,7 @@ I also have a _lot_ of data. I'm a data hoarder, so I have every digital photo I
 
 The biggest data source is my my DVD and Blu-Ray collection. I don't like relying on streaming services to keep good content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip it so that I have it available on my computer and can stream it to my TV. Between the raw ISO copy and the streamable MP4s, a single disc can take up around 60 GB of disk space.
 
-TODO: Photo of DVDs
+{{<img src="dvd-collection.jpg" alt="Photo of two 500-disc binders of DVDs and Blu-Rays" maxWidth="600px" caption="I still buy physical DVDs or Blu-Rays for anything I might watch a second time.">}}
 
 ### What's a homelab?
 
@@ -56,7 +56,7 @@ If you're new to the homelab world or you have no experience building PCs, I rec
 
 There are off-the-shelf solutions that offer most of the same functionality and with a substantially better user experience.
 
-Before building my own homelab NAS, I used a Synology DSXX that I used for XX years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction into the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
+Before building my own homelab NAS, I used a Synology DS412+ that I used for seven years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction into the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
 As much as I love my Synology, I detest platform lock-in. I had configured my Synology using Synology Hybrid RAID, a proprietary storage format that allows you to mix disks of different sizes.
 
@@ -264,7 +264,7 @@ People generally use a high-performance SSD as their SLOG. The idea is that writ
 
 I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later. If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved one for a SLOG disk, but it didn't seem worth it in my build.
 
-Most of my disk operations on this server will be over the network. I suspected that my network would be the bottleneck rather than disk write speed.
+Most of my disk operations on this server will be over the network. I suspected that my network would be the dominant bottleneck.
 
 ## Parts list
 
@@ -283,7 +283,7 @@ Most of my disk operations on this server will be over the network. I suspected 
 | Disk (Storage)              | [Seagate IronWolf 8TB NAS Hard Drive 7200 RPM](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (x2)       | $359.98       |
 | **Total**                   |                                                                                                                                      | **$1,263.06** |
 
-\* Caveat: This motherboard won't work out of the box with the AMD Athlon 3000G CPU. See details below.
+\* Caveat: This motherboard may not work out of the box with the AMD Athlon 3000G CPU. See details [below](/budget-nas/#is-this-bios-version-incompatible-or-am-i-an-idiot).
 
 ## Compared to off-the-shelf products
 
@@ -372,19 +372,19 @@ Large file write, unencrypted volume
 
 ```ps
 robocopy /s `
-  C:\tmp\nas-benchmark-files\small-files\ `
-  \\truenas\vids\scratch\small-files
+  C:\tmp\nas-benchmark-files\20gib-of-1mib-files\ `
+  \\truenas\nas-benchmark-unencrypted\20gib-of-1mib-files
 ```
 
 ```ps
 robocopy /s `
-  C:\tmp\nas-benchmark-files\large-files\ `
-  \\truenas\vids\scratch\large-files
+  C:\tmp\nas-benchmark-files\20gib-of-1gib-files\ `
+  \\truenas\nas-benchmark-unencrypted\20gib-of-1gib-files
 ```
 
 ```ps
 robocopy /s `
-  \\truenas\vids\scratch\large-files `
+  \\truenas\nas-benchmark-unencrypted\20gib-of-1gib-files `
   C:\tmp\nas-benchmark-files\read-scratch
 ```
 
@@ -406,13 +406,7 @@ The most important thing about the CPU was that it supported AMD's Radeon video 
 
 The biggest flaw with the motherboard was its limited compatibility. The AMD 3000G came out in XX and the XX motherboard came out in XX, so it should have been compatible. It even advertised the BIOS revision it shipped with as compatible with my CPU, but it didn't work until I upgraded to BIOS revision XX.
 
-The other weakness with the motherboard was how poorly the BIOS update worked. It's supposed to support native updating, but it didn't work. I had to do the update myself.
-
-But aside from that, it's been fine as far as BIOS goes.
-
-I'm happy with it, and the BIOS UI is fine, but the BIOS itself is flaky. It didn't work with the Athlon 3000G CPU even though it claims that revision XX was compatible. It worked better after I upgraded to revision XX.
-
-Its BIOS upgrade utility was completely broken. It claimed that I had the latest BIOS when I didn't, so I had to upgrade manually by downloading the files and loading them on a thumbdirve.
+The BIOS upgrade utility was completely broken. It claimed that I had the latest BIOS when I didn't, so I had to upgrade manually by downloading the files and loading them on a thumbdirve.
 
 {{<gallery caption="The ASUS EZ Flash utility claimed I had the latest BIOS at version 2203. The ASUS website offered BIOS version 5862, so I had to update manually.">}}
 {{<img src="ez-bios-1.png" alt="TODO" maxWidth="450px">}}
