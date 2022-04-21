@@ -41,17 +41,15 @@ The design firm I'm working with had too few hours to complete the design in Feb
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | January 2022   | February 2022    | Change                                             |
-| ------------------------ | -------------- | ---------------- | -------------------------------------------------- |
-| Unique Visitors          | 7,282          | 6,991            | <font color="red">-291 (-4%)</font>                |
-| Total Pageviews          | 15,477         | 14,916           | <font color="red">-561 (-4%)</font>                |
-| Sales Revenue            | $51,066.78     | $49,026.99       | <font color="red">-$2,039.79 (-4%)</font>          |
-| Enterprise Subscriptions | $47.75         | $47.75           | 0                                                  |
-| Royalties                | $5,075.00      | $3,552.41        | <font color="red">-$1,522.59 (-30%)</font>         |
-| Total Revenue            | $56,189.53     | $52,627.15       | <font color="red">-$3,562.38 (-6%)</font>          |
-| **Profit**               | **-$8,425.67** | **$14,130.75**\* | **<font color="green">+$22,736.42 (+inf%)</font>** |
-
-\* Profit is just a rough estimate based on the delta in my cash holdings until I complete real bookkeeping for the month.
+| Metric                   | January 2022   | February 2022  | Change                                             |
+| ------------------------ | -------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 7,282          | 6,991          | <font color="red">-291 (-4%)</font>                |
+| Total Pageviews          | 15,477         | 14,916         | <font color="red">-561 (-4%)</font>                |
+| Sales Revenue            | $51,066.78     | $49,026.99     | <font color="red">-$2,039.79 (-4%)</font>          |
+| Enterprise Subscriptions | $47.75         | $47.75         | 0                                                  |
+| Royalties                | $5,075.00      | $3,552.41      | <font color="red">-$1,522.59 (-30%)</font>         |
+| Total Revenue            | $56,189.53     | $52,627.15     | <font color="red">-$3,562.38 (-6%)</font>          |
+| **Profit**               | **-$8,425.67** | **$14,130.75** | **<font color="green">+$22,736.42 (+inf%)</font>** |
 
 Sales have been steady since January. Total sales are down slightly due to the shorter month, but on a per-day basis, I actually did better than in January.
 
