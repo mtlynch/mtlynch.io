@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* I hired TinyPilot's first support engineer.
-* I learned that hiring a support engineer is even harder than I expected.
-* I'm evaluating platforms for paying international contractors.
+- I hired TinyPilot's first support engineer.
+- I learned that hiring a support engineer is even harder than I expected.
+- I'm evaluating platforms for paying international contractors.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Launch Voyager 2: PoE Edition
 
-* **Result**: I finally [launched Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
-* **Grade**: A
+- **Result**: I finally [launched Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
+- **Grade**: A
 
 Oh, boy. This took way longer than I expected. I looked back at the original design document that I wrote in early April 2021. I estimated that we'd have 200 units ready by May 15, 2021. In other words, I estimated six weeks, and it took 11 months.
 
 ### Hire a TinyPilot support engineer
 
-* **Result**: Started a trial hire with a support engineer
-* **Grade**: A
+- **Result**: Started a trial hire with a support engineer
+- **Grade**: A
 
 It was a lot of work to hire for this role, but I'm excited to have this new member of the team. This retrospective is mostly about the process of hiring a support engineer, so read on for more details.
 
 ### Complete design work on TinyPilot website overhaul
 
-* **Result**: Deferred this until March
-* **Grade**: N/A
+- **Result**: Deferred this until March
+- **Grade**: N/A
 
 The design firm I'm working with had too few hours to complete the design in February. I've negotiated guaranteed hours with them in March and April, so I expect to complete this by the end of the month.
 
@@ -41,14 +41,14 @@ The design firm I'm working with had too few hours to complete the design in Feb
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | January 2022   | February 2022  | Change                                              |
-| ------------------------ | -------------- | -------------- | --------------------------------------------------- |
-| Unique Visitors          | 7,282          | 6,991          | <font color="red">-291 (-4%)</font>                 |
-| Total Pageviews          | 15,477         | 14,916         | <font color="red">-561 (-4%)</font>                 |
-| Sales Revenue            | $51,066.78     | $49,026.99     | <font color="red">-$2,039.79 (-4%)</font>           |
-| Enterprise Subscriptions | $47.75         | $47.75         | 0                                                   |
-| Royalties                | $5,075.00      | $3,552.41      | <font color="red">-$1,522.59 (-30%)</font>          |
-| Total Revenue            | $56,189.53     | $52,627.15     | <font color="red">-$3,562.38 (-6%)</font>           |
+| Metric                   | January 2022   | February 2022    | Change                                             |
+| ------------------------ | -------------- | ---------------- | -------------------------------------------------- |
+| Unique Visitors          | 7,282          | 6,991            | <font color="red">-291 (-4%)</font>                |
+| Total Pageviews          | 15,477         | 14,916           | <font color="red">-561 (-4%)</font>                |
+| Sales Revenue            | $51,066.78     | $49,026.99       | <font color="red">-$2,039.79 (-4%)</font>          |
+| Enterprise Subscriptions | $47.75         | $47.75           | 0                                                  |
+| Royalties                | $5,075.00      | $3,552.41        | <font color="red">-$1,522.59 (-30%)</font>         |
+| Total Revenue            | $56,189.53     | $52,627.15       | <font color="red">-$3,562.38 (-6%)</font>          |
 | **Profit**               | **-$8,425.67** | **$27,039.62**\* | **<font color="green">+$35,465.29 (+inf%)</font>** |
 
 \* Profit is just a rough estimate based on the delta in my cash holdings until I complete real bookkeeping for the month.
@@ -63,12 +63,12 @@ I've wanted to hire a support engineer for the past few months, but I've been sh
 
 I advertised the job description in three places:
 
-| Channel | Cost | Total Candidates | Passed Initial Screen | Trial Hires |
-|---------|------|------------------|-----------------------|-------------|
-| [Twitter](https://twitter.com/deliberatecoder/status/1488993366666887168) | $0   | 2                | 1                     | 0           |
-| [Hacker News](https://news.ycombinator.com/item?id=30184256) | $0 | Didn't track, seemed low | N/A | N/A |
-| We Work Remotely | $358 | 219 | 18 | 1 |
-| **Total** | **$358** | **221** | **19** | **1** |
+| Channel                                                                   | Cost     | Total Candidates         | Passed Initial Screen | Trial Hires |
+| ------------------------------------------------------------------------- | -------- | ------------------------ | --------------------- | ----------- |
+| [Twitter](https://twitter.com/deliberatecoder/status/1488993366666887168) | $0       | 2                        | 1                     | 0           |
+| [Hacker News](https://news.ycombinator.com/item?id=30184256)              | $0       | Didn't track, seemed low | N/A                   | N/A         |
+| We Work Remotely                                                          | $358     | 219                      | 18                    | 1           |
+| **Total**                                                                 | **$358** | **221**                  | **19**                | **1**       |
 
 One of the problems with hiring is that, as a small business owner, I want to hire someone who understands what my company is and communicates that to me. The problem is that most companies treat their candidates like garbage. This creates an ecosystem that discourages candidates from investing time into any particular company because there's a 90% chance that their application is going into the void.
 
@@ -86,10 +86,10 @@ Once the job posting was up, it was time to start screening applications. This w
 
 At this stage, I was evaluating:
 
-* Is their writing clear and syntactically correct?
-* Did they take the time to learn about TinyPilot?
-* Do they have experience with support or writing user-facing documentation?
-* Do they meet the technical requirements?
+- Is their writing clear and syntactically correct?
+- Did they take the time to learn about TinyPilot?
+- Do they have experience with support or writing user-facing documentation?
+- Do they meet the technical requirements?
 
 I tried to identify standout candidates and responded to them quickly. For everyone else, I either fast-rejected them or put them in a queue for a response as I had availability.
 
@@ -99,9 +99,9 @@ I quickly found that I needed some sort of organization system for managing cand
 
 My `instant-reject` folder was for candidates who didn't follow the instructions about how to apply. This included:
 
-* Candidates who sent me a blank email with only their resume attached
-* Candidates whose letter didn't mention any specifics about the job or TinyPilot (recycled application)
-* Candidates who didn't meet the job requirements and didn't acknowledge the gap in their cover letter
+- Candidates who sent me a blank email with only their resume attached
+- Candidates whose letter didn't mention any specifics about the job or TinyPilot (recycled application)
+- Candidates who didn't meet the job requirements and didn't acknowledge the gap in their cover letter
 
 For these candidates, I moved their application to the `instant-reject` folder and didn't send a reply.
 
@@ -113,20 +113,20 @@ The `cover-letter-reject` folder was for candidates who made a good faith effort
 
 For these candidates, I sent individualized responses. Here's an example:
 
->Hi Joe,
+> Hi Joe,
 >
->Thanks for reaching out and for taking the time to learn more about TinyPilot.
+> Thanks for reaching out and for taking the time to learn more about TinyPilot.
 >
->Unfortunately, I don't think this would be a good match.
+> Unfortunately, I don't think this would be a good match.
 >
->It seems like you have a lot of great experience with Linux and Raspberry Pi, but the position requires someone with more experience writing customer-facing content. Your English is pretty strong, but there were several errors in your letter and resume, so I don't think this role would be a good fit.
+> It seems like you have a lot of great experience with Linux and Raspberry Pi, but the position requires someone with more experience writing customer-facing content. Your English is pretty strong, but there were several errors in your letter and resume, so I don't think this role would be a good fit.
 >
->I'm sorry it didn't work out, but I wish you the best of luck in your search.
+> I'm sorry it didn't work out, but I wish you the best of luck in your search.
 >
->Best,<br>
-Michael
+> Best,<br>
+> Michael
 
-In the response, I'm trying to emphasize that I'm rejecting their *application* rather than saying, "I'm rejecting [**you**](/human-code-reviews-1/#never-say-you)." I avoided getting too specific because I didn't want the candidate to feel like I was picking on them or rejecting them over a single careless error.
+In the response, I'm trying to emphasize that I'm rejecting their _application_ rather than saying, "I'm rejecting [**you**](/human-code-reviews-1/#never-say-you)." I avoided getting too specific because I didn't want the candidate to feel like I was picking on them or rejecting them over a single careless error.
 
 Most employers skip individualized rejection letters, and I understand why. It's a huge time-suck, and it has no benefit for the employer. Still, I feel like it's disrespectful to ignore people or send them a form letter after I've asked them to spend unpaid time applying to work with me.
 
@@ -154,11 +154,11 @@ When the candidate shared their answers to my sample questions, I decided whethe
 
 I sent all candidates who answered the sample questions detailed feedback regardless of whether I was making them an offer. I got this idea from Firebase founder, Andrew Lee:
 
->It’s critical that candidates don’t feel their time is wasted. At Firebase, we made sure of this by putting a great deal of effort ourselves into the take home test process... [A]fter they submitted their answer, we would provide them with a thorough and detailed code review (usually by the legendary [@mikelehen](https://twitter.com/mikelehen)).
+> It’s critical that candidates don’t feel their time is wasted. At Firebase, we made sure of this by putting a great deal of effort ourselves into the take home test process... [A]fter they submitted their answer, we would provide them with a thorough and detailed code review (usually by the legendary [@mikelehen](https://twitter.com/mikelehen)).
 
->We treated this code review like a real production code review, and we did it whether or not we planned to move forward with the candidate. This review was very important for two reasons. First, it showed the candidate that we took them seriously and that we were investing a significant amount of our own time in the interview process. Second, it gave the candidate an idea of what working at Firebase might be like; “If they do code reviews this well for their coding challenges, I can’t wait to work with this team on real production code!”
+> We treated this code review like a real production code review, and we did it whether or not we planned to move forward with the candidate. This review was very important for two reasons. First, it showed the candidate that we took them seriously and that we were investing a significant amount of our own time in the interview process. Second, it gave the candidate an idea of what working at Firebase might be like; “If they do code reviews this well for their coding challenges, I can’t wait to work with this team on real production code!”
 >
->-Andrew Lee, ["How Firebase Interviewed Software Engineers"](https://startupandrew.com/posts/how-firebase-interviewed-software-engineers/)
+> -Andrew Lee, ["How Firebase Interviewed Software Engineers"](https://startupandrew.com/posts/how-firebase-interviewed-software-engineers/)
 
 Andrew's process always stuck with me as the right way to treat people, so I've tried to apply that mentality in hiring for any position.
 
@@ -172,7 +172,7 @@ In the first week of my search, one candidate answered the screening questions p
 
 After I hired my first support engineer, I realized it would be too hard to run a trial hire with multiple candidates. With developers, I can run multiple trial hires at once because I can just give them separate tasks. It felt too dog-eat-dog to have multiple support engineers seeing each other's answers on the help forum and knowing that they're competing for the same job.
 
-I'm still keeping the `maybe-trial-hire` folder in case I add support engineers in a few months. I'm transparent with candidates that I'm already running a trial hire, but  they can continue with their application, and they'll be on my shortlist if I hire additional support later. Alternatively, I give them the option to pause their application and resume from where they left off.
+I'm still keeping the `maybe-trial-hire` folder in case I add support engineers in a few months. I'm transparent with candidates that I'm already running a trial hire, but they can continue with their application, and they'll be on my shortlist if I hire additional support later. Alternatively, I give them the option to pause their application and resume from where they left off.
 
 ### trial-hire
 
@@ -182,12 +182,12 @@ I was only trial hiring one person at a time, so it was easy to track at that st
 
 Converting my folder system to a "hiring funnel," here are what the numbers looked like at each stage:
 
-| Stage | # of candidates | % of total |
-|-------|-------|-------------|
-| Applied for the job | 221 | 100% |
-| Met the minimum application requirements | 83 | 38% |
-| Strong enough application to offer sample questions | 19 | 9% |
-| Trial hire | 1 | 0.5%
+| Stage                                               | # of candidates | % of total |
+| --------------------------------------------------- | --------------- | ---------- |
+| Applied for the job                                 | 221             | 100%       |
+| Met the minimum application requirements            | 83              | 38%        |
+| Strong enough application to offer sample questions | 19              | 9%         |
+| Trial hire                                          | 1               | 0.5%       |
 
 ## Hiring a support engineer: payment
 
@@ -195,11 +195,11 @@ I currently work with three freelance developers, each in a different country. T
 
 I looked for payment platforms for remote workers that would do the following:
 
-* Minimize everyone's time dealing with invoicing and payments
-* Manage compliance documentation
-* Manage contract documents
-* Make it possible for contractors to record expenses
-* Make it easy for contractors to track their billable time without installing spyware
+- Minimize everyone's time dealing with invoicing and payments
+- Manage compliance documentation
+- Manage contract documents
+- Make it possible for contractors to record expenses
+- Make it easy for contractors to track their billable time without installing spyware
 
 ### Deel (winner)
 
@@ -254,8 +254,8 @@ I've built my own version of Lenny, but for email rather than voice calls. Now, 
 The following are two different spammers responding to the same message sequence I wrote for my chatbot. Lenny manages to get five responses from each spammer before they each give up at the same point. In the second example, Lenny's responses stop making sense in the context of the spammer's messages, but the spammer keeps going for a while.
 
 {{<gallery  caption="Lenny is a service I built to send automated responses to spammers that go nowhere.">}}
-  {{<img src="lenny-1.png" maxWidth="400px" hasBorder="true">}}
-  {{<img src="lenny-2.png" maxWidth="400px" hasBorder="true">}}
+{{<img src="lenny-1.png" maxWidth="400px" hasBorder="true">}}
+{{<img src="lenny-2.png" maxWidth="400px" hasBorder="true">}}
 {{</gallery>}}
 
 I'm trying to keep the third-party dependencies to a minimum, but in February, I started using the [Bulma CSS framework](https://bulma.io/), and it makes the UI look a lot better.
@@ -276,7 +276,7 @@ There are a million services that will let you host and share files, but they al
 
 PicoShare is a no-frills, no-hassle file-sharing service. You upload a file and get a direct link. Anyone with the link can view it or download it directly without signing up for an account or viewing ads.
 
-I used PicoShare recently to share a short clip from *30 Rock* with my family in a group text. Here's what it looks like for me to upload the clip to PicoShare and get a shareable link:
+I used PicoShare recently to share a short clip from _30 Rock_ with my family in a group text. Here's what it looks like for me to upload the clip to PicoShare and get a shareable link:
 
 {{<video src="picoshare-demo.mp4" caption="PicoShare lets me share a video instantly without re-encoding it or burying it in another UI.">}}
 
@@ -288,24 +288,24 @@ I only started working on PicoShare a few weeks ago, so it's still rough. I don'
 
 ### What got done?
 
-* Launched [TinyPilot Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
-* Hired TinyPilot's first support engineer
-* Created [PicoShare](https://pico.rocks)
+- Launched [TinyPilot Voyager 2 PoE](https://tinypilotkvm.com/blog/voyager-2-poe)
+- Hired TinyPilot's first support engineer
+- Created [PicoShare](https://pico.rocks)
 
 ### Lessons learned
 
-* Use the hiring process as a preview of your working relationship.
-  * Talented people want to work with people who treat them well.
-  * Your job description and hiring process should show candidates that you'll respect them and value their time.
-* You can't spot generic applications if your job description is generic.
-  * If you write a generic job description, you'll get recycled applications that say nothing specific about your company.
-  * Use the job description to distinguish your company from others. Give candidates unique things they can talk about in their cover letter to demonstrate that they've put effort into learning about your company.
-* Treating candidates well is expensive, but it delights people.
-  * It takes 10x longer to treat rejected candidates respectfully, but that doesn't mean you should skip it.
-  * If you're a founder, you choose how you treat people, even if it doesn't directly benefit you.
+- Use the hiring process as a preview of your working relationship.
+  - Talented people want to work with people who treat them well.
+  - Your job description and hiring process should show candidates that you'll respect them and value their time.
+- You can't spot generic applications if your job description is generic.
+  - If you write a generic job description, you'll get recycled applications that say nothing specific about your company.
+  - Use the job description to distinguish your company from others. Give candidates unique things they can talk about in their cover letter to demonstrate that they've put effort into learning about your company.
+- Treating candidates well is expensive, but it delights people.
+  - It takes 10x longer to treat rejected candidates respectfully, but that doesn't mean you should skip it.
+  - If you're a founder, you choose how you treat people, even if it doesn't directly benefit you.
 
 ### Goals for next month
 
-* Publish TinyPilot Pro 2.4.0
-* Wrap up design overhaul of the TinyPilot website
-* Complete onboarding for TinyPilot's new support engineer
+- Publish TinyPilot Pro 2.4.0
+- Wrap up design overhaul of the TinyPilot website
+- Complete onboarding for TinyPilot's new support engineer
