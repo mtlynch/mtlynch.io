@@ -126,7 +126,7 @@ Given five 4 TB hard drives, here's how much usable storage you'd get from each 
 
 I chose raidz1. I think the odds of two drives failing simultaneously in my NAS is fairly low, and I use [restic](https://restic.net) to back everything up to the cloud anyway.
 
-When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend several hours recovering my data?" [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft of your server.
+When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend several hours recovering my data?" [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft.
 
 To me, the value of ZFS is that I don't have to resort to my cloud backups if one drive dies. With raidz1, I'll have to recover from backups if two drives fail, which is a pain but not the end of the world. To me, it's not worth giving up 26% of my server's usable storage for raidz2.
 
@@ -161,7 +161,7 @@ I also looked at the B450, which was very similar, but it was almost twice the p
 
 ### CPU
 
-From what I've read, ZFS is not very CPU-intensive. I ran a basic test by installing TrueNAS on a cheap Dell OptiPlex 7040 mini PC. It barely used the CPU, so it seemed safe to go with a low-powered CPU.
+From what I read, ZFS is not very CPU-intensive. I ran a basic test by installing TrueNAS on a cheap Dell OptiPlex 7040 mini PC. It barely used the CPU, so it seemed safe to go with a low-powered CPU.
 
 The important thing to me was to find a CPU that supported Radeon graphics so that I could use my motherboard's onboard HDMI output.
 
@@ -202,6 +202,11 @@ Price. For a 8 TB drive, you can pay anywhere from $130 to $400 per disk. For a 
 
 I cho
 
+{{<gallery caption="[Toshiba N300 HDWG480XZSTA 8TB 7200 RPM](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf 8TB NAS Hard Drive 7200 RPM](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (right)">}}
+{{<img src="toshiba-n300.jpg" alt="TODO" maxWidth="250px" hasBorder="true">}}
+{{<img src="seagate-ironwolf.jpg" alt="TODO" maxWidth="260px" hasBorder="true">}}
+{{</gallery>}}
+
 ### Disk (OS)
 
 I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least XX of space, but it otherwise doesn't read or write much to the OS disk.
@@ -214,13 +219,21 @@ I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 
 
 I find memory extremely boring to shop for. I perhaps should have looked more into benchmarks since ZFS is so RAM-intensive, but honestly I didn't. I went with a brand name I trust and looked for sticks below $150 that were listed as compatible with the ASUS A320I-K motherboard I chose.
 
+{{<img src="corsair-vengeance.jpg" alt="TODO" maxWidth="400px" hasBorder="true" caption="The [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
+
 ### Power supply unit (PSU)
 
-There are different ratings for PSUs like bronze, silver, gold, platinum that reflect the power efficiency. The differences are fairly small, so I didn't optimize for that.
+When purchasing a PSU, the choices you can make are around cable modularity, power capacity, and efficiency.
 
-The main choices are case modularity and power capacity. You want to have enough wattage to support your components plus any that you might add in the future. For a system like this, basically any PSU would have more than enough capacity. According to PCPartPicker, the total power consumption of all my components is only 218 W, so 500 W gives me plenty of breathing room.
+Cable modularity refers to how much control you have over the PSU's cabling. Non-modular PSUs come with every cable you could possibly need all attached, and if you don't need some cables, you just have to tuck them away someplace in the case. Full modular PSUs are the opposite &mdash; each cable is removable, so you only need to install the cables you need. Semi-modular is the happy medium where you can attach and remove cables a la carte, but they're grouped together more than they are with a fully modular PSU.
 
-I specifically chose a semi-modular PSU because I wanted to minimize clutter. Having a single cable supply power to multiple disks allowed. I didn't want full modular because I didn't want a separate cable for each disk. And I didn't want to go non-modular because then I'd have a bunch of unused power cables in my case.
+I wanted a modular PSU to minimize cable clutter in my case, especially since my server wouldn't have many components that required power. I only needed to power the motherboard, CPU, and disks, so for me the difference between a fully modular and semi-modular PSU is that fully modular would have provided me separate cables for motherboard and CPU. I preferred fewer distinct cables, so I went with semi-modular.
+
+In terms of power capacity, basically any consumer PSU would have provided more than enough wattage. According to PCPartPicker, my system only requires 218 W. I would have picked a PSU in the 300-400 W range, but to find semi-modular PSUs in that range. I went with the 500 W [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101).
+
+{{<img src="evga-psu.jpg" alt="TODO" maxWidth="400px" hasBorder="true" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
+
+There are different ratings for PSUs like bronze, silver, gold, platinum that reflect the power efficiency. The differences are fairly small, and they reflect performance at peak load, which is not very meaningful for me. I didn't optimize for power efficiency.
 
 ### 90-degree SATA cables
 
@@ -228,7 +241,7 @@ I specifically chose a semi-modular PSU because I wanted to minimize clutter. Ha
 
 One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realized there wasn't enough space to plug in a standard SATA cable. These slim 90-degree cables solved the problem.
 
-{{<img src="sata-just-barely.jpg" alt="TODO" maxWidth="500px">}}
+{{<img src="sata-just-barely.jpg" alt="TODO" maxWidth="500px" caption="It was such a tight squeeze between my PSU and motherboard that I needed 90-degree slim SATA cables.">}}
 
 ## What's missing?
 
@@ -242,17 +255,11 @@ With scarce physical space and motherboard ports, I didn't want a dedicated grap
 
 Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
-One of the popular HBAs I see is the IBM ServeRAID M1015, which you can find for under $100. The ServeRAID M1015 has two SAS ports, and each SAS port can accept four SATA drives via a [SAS to SATA cable], so the HBA can add capacity for eight additional disks. To use the M1015 with ZFS, you need to [cross-flash it to IT mode](https://www.servethehome.com/ibm-serveraid-m1015-part-4/).
-
-Honestly, the whole process of cross-flashing sounds tedious and frustrating, so I decided to punt on it until I need an HBA. My motherboard had four SATA ports, so I could start with four disks just by using the available SATA ports. When I need more disks, I'll buy an HBA. I made sure to leave a PCI slot available for that purpose.
+To use the an HBA with ZFS, you need to [reflash the firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds very tedious and confusing. I decided to punt on the HBA until I need more storage. My motherboard had four SATA ports, so I could start with four disks just by using the available SATA ports. I made sure to leave a PCI slot available for that purpose.
 
 ### ECC RAM
 
-In researching different TrueNAS builds, I saw several recommendations that said error correct code (ECC) RAM was a must-have. I ultimately decided against ECC RAM and just used standard, consumer-grade RAM.
-
-In non-ECC RAM, it's possible for the RAM to accidentally flip a bit and corrupt your data in memory. For a system like ZFS that sends a lot of data through RAM, this is a scary thought. ECC RAM reduces this risk, as it stores a checksum of the data.
-
-The two main downsides of ECC RAM are the expense and performance. ECC RAM is significantly more expensive than non-ECC RAM. And beyond the RAM sticks themselves, you also have to buy an ECC-compatible motherboard and CPU. If you're using server-grade components anyway, but you're not going to find ECC support on low-end consumer grade hardware. ECC RAM is also slower, as it has to do the additional work of validating the checksum on all RAM operations.
+In researching different TrueNAS builds, I saw several recommendations that said error correction code (ECC) RAM was a must-have to prevent data corruption. I ultimately decided against ECC RAM and just used standard, consumer-grade RAM.
 
 While I obviously don't want my server to corrupt my data in RAM, I've also been using computers for the past 30 years without ECC RAM, and I've never noticed data corruption. If I was building a server that was going to be under heavy load from multiple users all day, then I'd spring for a build with ECC RAM. But for home needs, I think simple consumer-grade RAM should be fine.
 
@@ -260,11 +267,11 @@ While I obviously don't want my server to corrupt my data in RAM, I've also been
 
 Many ZFS builds include a separate, dedicated disk called the [SLOG (separate intent log)](https://www.truenas.com/docs/references/slog/). The SLOG [improves write speeds](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/) significantly.
 
-People generally use a high-performance SSD as their SLOG. The idea is that writing to an SSD is orders of magnitude faster than writing to multiple spinning disks. When an application writes data, ZFS can quickly write it to the fast SSD, tell the application that the write succeeded, then asynchronously move the data from the SSD to the storage pool.
+People generally use a high-performance SSD as their SLOG. The idea is that writing to an SSD is orders of magnitude faster than writing to multiple spinning disks. When an application writes data, ZFS can quickly write it to the SSD, tell the application that the write succeeded, then asynchronously move the data from the SSD to the storage pool.
 
-I decided against the SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later. If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved one for a SLOG disk, but it didn't seem worth it in my build.
+I decided against a SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later.
 
-Most of my disk operations on this server will be over the network. I suspected that my network would be the dominant bottleneck.
+If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved one for a SLOG disk, but it didn't seem worth it in my build. Most of my disk operations on this server will be over the network. I suspected that my network would be the dominant bottleneck.
 
 ## Parts list
 
@@ -326,23 +333,11 @@ I'm obviously biased, but building this server with the Voyager 2 was a great ex
 
 The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the XX files for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. But I hope to add that feature soon so that my next BIOS upgrade can be all TinyPilot.
 
-## Build issues
-
-### My first PSU was dead
-
-I got everything hooked up, and nothing. I've built several computers, and this is one of the worst feelings. You just have no feedback, and you have to go on a long hunt to find the defective part or the bad connection.
-
-I disconnected everything except for the PSU's cables to the motherboard and the power button. Still, no luck. I tried removing the RAM. Same thing. I tried re-seating the CPU. Same thing.
-
-Finally, I took apart my 2017 homelab VM server and connected its PSU to the NAS motherboard. It powered on! So, I successfully identified the problem as a defective PSU. I ordered a replacement of the same model, and it powered on
-
-Success! But there was no video output. This led to the next issue...
-
-### Is this BIOS version incompatible? Or am I an idiot?
+## Is this BIOS version incompatible? Or am I an idiot?
 
 I got the system to power on, but there was no video display. Oh no! Did I misunderstand what was required for the motherboard's on-board video to work?
 
-After some research, I saw some comments that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I remember seeing that during parts selection, and I breezed by it. I've done BIOS updates in the past, and they're no big deal. I didn't think about how I'd do a BIOS when I _don't have a CPU_.
+After some research, I saw some comments that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I recalled breezing by that warning when I was selecting parts. "I've done BIOS updates," I thought. They're no big deal! I didn't consider how I'd do a BIOS _without a CPU_.
 
 I caught a lucky break when I realized the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was compatible with the ASUS Prime A320 [from BIOS version 0212](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/). I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
@@ -352,7 +347,11 @@ Strangely, even after I got the system to boot with borrowed parts, the motherbo
 
 {{<img src="a320i-k-compat.png" alt="Screenshot of ASUS support page saying ASUS Prime A320I-K supports Athlon 3000G at version 2203" caption="The ASUS Prime A320I-K [CPU compatibility page](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) claims it's compatible with the Athlon 3000G starting at BIOS version 2203." hasBorder="true">}}
 
-After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging in the HDMI cable into the DisplayPort port by mistake. So it's possible that this whole thing was just me being an idiot and not realizing I had the wrong port. Was I doing that the whole time? Was this whole parts-borrowing fiasco even necessary?
+After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging in the HDMI cable into the DisplayPort port by mistake.
+
+TODO: Photo of ports
+
+So it's possible that this whole thing was just me being an idiot and not realizing I had the wrong port. Was I doing that the whole time? Was this whole parts-borrowing fiasco even necessary?
 
 I can't remember if I 100% confirmed I had the right video port when I was testing pre-BIOS upgrade. I _think_ I did, but it's possible I had it wrong the whole time.
 
@@ -364,29 +363,165 @@ Normally, I'd accept the blame, but there was a lot of flakiness in the ASUS BIO
 
 One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that can benchmark local disk writes, but those will miss bottlenecks in the Samba network sharing stack or in the networking equipment.
 
-To benchmark my system, I just used robocopy with lots of files.
+I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator). The first set is 20 files of 1 GiB each. The other is 3,072 files of 1 MiB each (3 GiB total). I then ran the Windows robocopy utility three times for each scenario and recorded the resulting averages.
 
-Large file write, encrypted volume
+This is not meant to be a maximally a rigorous test. I just want to get a rough idea of the performance differences. And this is not to prove that TrueNAS is better than Synology, as I'm testing a brand new TrueNAS system against a Synology server from eight years ago, so it's not exactly a fair fight. I didn't test it on a perfectly isolated network.
 
-Large file write, unencrypted volume
+<!--
+
+## 1 MiB files unencrypted
 
 ```ps
+ssh root@truenas "find /mnt/pool1/nas-benchmark-unencrypted/3gib-of-1mib-files/ -name '*.testfile' -delete"
 robocopy /s `
-  C:\tmp\nas-benchmark-files\20gib-of-1mib-files\ `
-  \\truenas\nas-benchmark-unencrypted\20gib-of-1mib-files
+  C:\tmp\nas-benchmark-files\3gib-of-1mib-files\ `
+  \\truenas\nas-benchmark-unencrypted\3gib-of-1mib-files
+
 ```
 
 ```ps
+rm \\diskstation\nas-benchmark-unencrypted\3gib-of-1mib-files\*.testfile
+robocopy /s `
+  C:\tmp\nas-benchmark-files\3gib-of-1mib-files\ `
+  \\diskstation\nas-benchmark-unencrypted\3gib-of-1mib-files
+
+```
+
+## 1 MiB files encrypted
+
+```ps
+ssh root@truenas "find /mnt/pool1/nas-benchmark-encrypted/3gib-of-1mib-files/ -name '*.testfile' -delete"
+robocopy /s `
+  C:\tmp\nas-benchmark-files\3gib-of-1mib-files\ `
+  \\truenas\nas-benchmark-encrypted\3gib-of-1mib-files
+
+```
+
+```ps
+rm \\diskstation\nas-benchmark-encrypted\3gib-of-1mib-files\*.testfile
+robocopy /s `
+  C:\tmp\nas-benchmark-files\3gib-of-1mib-files\ `
+  \\diskstation\nas-benchmark-encrypted\3gib-of-1mib-files
+
+```
+
+
+## 20 GiB files unencrypted
+
+```ps
+ssh root@truenas "find /mnt/pool1/nas-benchmark-unencrypted/20gib-of-1gib-files/ -name '*.testfile' -delete"
 robocopy /s `
   C:\tmp\nas-benchmark-files\20gib-of-1gib-files\ `
   \\truenas\nas-benchmark-unencrypted\20gib-of-1gib-files
+
 ```
 
 ```ps
+rm \\diskstation\nas-benchmark-unencrypted\20gib-of-1gib-files\*.testfile
+robocopy /s `
+  C:\tmp\nas-benchmark-files\20gib-of-1gib-files\ `
+  \\diskstation\nas-benchmark-unencrypted\20gib-of-1gib-files
+
+```
+
+## 20 GiB files encrypted
+
+```ps
+rm \\truenas\nas-benchmark-encrypted\20gib-of-1gib-files\*.testfile
+robocopy /s `
+  C:\tmp\nas-benchmark-files\20gib-of-1gib-files\ `
+  \\truenas\nas-benchmark-encrypted\20gib-of-1gib-files
+
+```
+
+```ps
+rm \\diskstation\nas-benchmark-encrypted\20gib-of-1gib-files\*.testfile
+robocopy /s `
+  C:\tmp\nas-benchmark-files\20gib-of-1gib-files\ `
+  \\diskstation\nas-benchmark-encrypted\20gib-of-1gib-files
+
+```
+-->
+
+<!--
+
+# Read
+
+
+## 1 MiB files unencrypted
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\truenas\nas-benchmark-unencrypted\3gib-of-1mib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\diskstation\nas-benchmark-unencrypted\3gib-of-1mib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+## 1 MiB files encrypted
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\truenas\nas-benchmark-encrypted\3gib-of-1mib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\diskstation\nas-benchmark-encrypted\3gib-of-1mib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+
+## 1 GiB files unencrypted
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
 robocopy /s `
   \\truenas\nas-benchmark-unencrypted\20gib-of-1gib-files `
   C:\tmp\nas-benchmark-files\read-scratch
+
 ```
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\diskstation\nas-benchmark-unencrypted\20gib-of-1gib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+## 1 GiB files encrypted
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\truenas\nas-benchmark-encrypted\20gib-of-1gib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+```ps
+rm C:\tmp\nas-benchmark-files\read-scratch\*.testfile
+robocopy /s `
+  \\diskstation\nas-benchmark-encrypted\20gib-of-1gib-files `
+  C:\tmp\nas-benchmark-files\read-scratch
+
+```
+
+-->
 
 ## Power usage
 
@@ -396,11 +531,11 @@ TODO:
 
 ### CPU
 
-The Athlon 3000G has worked well. I perhaps could have even gone with an even slower CPU because my TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage:
+I'm happy with the Athlon 3000G, but it's actually way more powerful than I need. My TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage:
 
 {{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
 
-The most important thing about the CPU was that it supported AMD's Radeon video technology, which meant that I didn't need a separate GPU, and it served that purposed.
+The most important thing about the CPU was that it supported AMD's Radeon video technology, which meant that I didn't need a separate GPU, and it served that purposed. For $105, it was a great deal.
 
 ### Motherboard
 
@@ -419,7 +554,7 @@ If I were doing it again, I'd go with the Gigabyte B550I. It's $50 more, but it 
 
 ### Case
 
-I was disappointed in the case. When I built my VM server with the Fractal Design Meshify C, I kept discovering features that delighted me. On this build, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
+I was disappointed in the case. When I built my VM server with the Fractal Design Meshify C, the case kept delighting me with features I'd never seen on other cases. On this build, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
 
 It looks nice on the outside, but I found it awkward to work in. There was barely any documentation, and some of the case mechanisms weren't obvious.
 
@@ -429,7 +564,7 @@ It's my first mini-ITX build, and I know the case designers have to make sacrifi
 
 It's a bit too early to judge disks, so check back in about five years to see how I'm liking them, but so far, so good.
 
-My biggest worry was that they'd be too noisy, but I can't hear them at all.
+My biggest worry was that they'd be too noisy, but I never hear them at all. The only time I heard them was while running the performance benchmarks. And not during reads or writes, interestingly, but when I was deleting files between tests.
 
 ### Disk (OS)
 
@@ -442,6 +577,11 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 ### TrueNAS
 
 I've been using the TrueNAS system for a few months
+
+{{<gallery caption="The Synology web interface (left) is leaps and bounds ahead of TrueNAS (right).">}}
+{{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" maxWidth="500px">}}
+{{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" maxWidth="500px">}}
+{{</gallery>}}
 
 User experience is miles better on the Synology. Synology feels like they're trying hard to make their system usable to people who don't need to understand the underlying technologies, whereas TrueNAS's UI feels like an afterthought designed by people who prefer to do everything from the command-line.
 
