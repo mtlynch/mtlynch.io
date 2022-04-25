@@ -155,7 +155,7 @@ I also looked at the B450, which was very similar, but it was almost twice the p
 
 {{<notice type="danger">}}
 
-**Warning**: I regret this choice of motherboard. See more discussion below (TODO: link).
+**Warning**: I regret this choice of motherboard. See more discussion [below](http://blog:1313/budget-nas/#motherboard-1).
 
 {{</notice>}}
 
@@ -347,25 +347,51 @@ Strangely, even after I got the system to boot with borrowed parts, the motherbo
 
 {{<img src="a320i-k-compat.png" alt="Screenshot of ASUS support page saying ASUS Prime A320I-K supports Athlon 3000G at version 2203" caption="The ASUS Prime A320I-K [CPU compatibility page](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) claims it's compatible with the Athlon 3000G starting at BIOS version 2203." hasBorder="true">}}
 
-After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging in the HDMI cable into the DisplayPort port by mistake.
+After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging in my HDMI cable into the server's DisplayPort output.
 
-TODO: Photo of ports
+{{<img src="hdmi-vs-dp.jpg" alt="Screenshot of TrueNAS web dashboard" maxWidth="650px" caption="Why did the designers of DisplayPort make it so easy to plug in HDMI cables by mistake?">}}
 
-So it's possible that this whole thing was just me being an idiot and not realizing I had the wrong port. Was I doing that the whole time? Was this whole parts-borrowing fiasco even necessary?
+Was this whole parts-borrowing rigamarole even necessary? There are two possibilities:
 
-I can't remember if I 100% confirmed I had the right video port when I was testing pre-BIOS upgrade. I _think_ I did, but it's possible I had it wrong the whole time.
+- I'm dumb and didn't notice I had my HDMI cable plugged into a the motherboard's DisplayPort output until after I upgraded the BIOS.
+- ASUS is dumb, and they incorrectly listed the Athlon 3000G as compatible with BIOS version 2203 when it isn't.
 
-Normally, I'd accept the blame, but there was a lot of flakiness in the ASUS BIOS, so I'm still not sure whether the compatibility isn't what ASUS says or if I just was plugging an HDMI cable into a DisplayPort hole the entire time.
+Normally, I'd accept the blame, but the ASUS BIOS was so flaky that the problem might have been on the ASUS side. In any case, I was relieved to finally boot the NAS without any borrowed parts.
 
 {{<img src="3000g-boot.png" alt="Screenshot of point in video when I get first boot" caption="The moment I finally got a boot screen with the Athlon 3000G installed" maxWidth="800px" hasBorder="true">}}
 
 ## Performance benchmarks
 
-One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that can benchmark local disk writes, but those will miss bottlenecks in the Samba network sharing stack or in the networking equipment.
+One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools I can run on the NAS itself that can benchmark local disk writes, but that doesn't reflect real-world usage. A local disk benchmark will miss bottlenecks in the networking stack.
 
-I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator). The first set is 20 files of 1 GiB each. The other is 3,072 files of 1 MiB each (3 GiB total). I then ran the Windows robocopy utility three times for each scenario and recorded the resulting averages.
+I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. The first fileset is 20 files of 1 GiB each. The other set is 3,072 files of 1 MiB each (3 GiB total). I ran each test three times and took the average result.
 
-This is not meant to be a maximally a rigorous test. I just want to get a rough idea of the performance differences. And this is not to prove that TrueNAS is better than Synology, as I'm testing a brand new TrueNAS system against a Synology server from eight years ago, so it's not exactly a fair fight. I didn't test it on a perfectly isolated network.
+I was testing four different variables, so I had 2^4 = 16 test cases total:
+
+1. TrueNAS vs. Synology
+1. Read vs. write
+1. Encrypted volume vs. unencrypted volume
+1. Small files (1 MiB) vs. large files (1 GiB)
+
+This is not meant to be a perfectly rigorous test &mdash; it's just a rough estimate of how this upgrade will affect my NAS performance. It's also not evidence that TrueNAS is better than Synology, as I'm testing a brand new TrueNAS system against a Synology server from eight years ago, so not exactly a fair fight.
+
+Performance tops out at around 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. It's likely that my home network is the bottleneck, as my switch, my desktop's Ethernet port, and the NAS Ethernet ports all max out at 1 Gbps.
+
+### Read performance
+
+For unencrypted volumes, I was surprised to see the 8-year-old Synology outperform my new TrueNAS build. It was XX% faster on small files and XX% faster on large files.
+
+Synology really chokes on encryption. For an encrypted volume, performance flips drastically in TrueNAS' favor. It outperformed Synology by XX% for small files and XX% on large files.
+
+Notably, encryption doesn't seem to affect TrueNAS' performance at all. It performed the same with or without encryption, whereas Synology suffered a XX% slowdown in both read tests.
+
+I keep most of my data on encrypted volumes, so the test on the encrypted volume represents my typical usage more accurately.
+
+### Write performance
+
+Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was XX% faster on small files, and they performed almost identically on 1 GiB files.
+
+Again, bringing encryption into the mix obliterates Synology's performance while they had no significant impact on TrueNAS. With encryption enabled, TrueNAS outperforms Synology by XX% on small files and XX% on large files.
 
 <!--
 
@@ -406,7 +432,7 @@ robocopy /s `
 ```
 
 
-## 20 GiB files unencrypted
+## 1 GiB files unencrypted
 
 ```ps
 ssh root@truenas "find /mnt/pool1/nas-benchmark-unencrypted/20gib-of-1gib-files/ -name '*.testfile' -delete"
@@ -424,7 +450,7 @@ robocopy /s `
 
 ```
 
-## 20 GiB files encrypted
+## 1 GiB files encrypted
 
 ```ps
 rm \\truenas\nas-benchmark-encrypted\20gib-of-1gib-files\*.testfile
@@ -550,7 +576,7 @@ The BIOS upgrade utility was completely broken. It claimed that I had the latest
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. If I want to expand storage, the server might become RAM-bound because ZFS is so memory intensive.
 
-If I were doing it again, I'd go with the Gigabyte B550I. It's $50 more, but it supports 64 GB of RAM, and it has an extra M.2 slot, so I could add a SLOG disk if I ever wanted one.
+If I were doing it again, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, and it has an extra M.2 slot, and it LAN port supports 2.5 Gbps speeds.
 
 ### Case
 
@@ -576,16 +602,16 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 
 ### TrueNAS
 
-I've been using the TrueNAS system for a few months
+Synology's web UI is hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They do a great job of building an intuitive UI that spares the end-user from understanding a lot of the underlying filesystem details.
+
+TrueNAS has its hacker charm, but I find it a huge step down from Synology in terms of usability. The interface seems like it was designed by developers with a disdain for anything outside the command-line.
 
 {{<gallery caption="The Synology web interface (left) is leaps and bounds ahead of TrueNAS (right).">}}
 {{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" maxWidth="500px">}}
 {{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" maxWidth="500px">}}
 {{</gallery>}}
 
-User experience is miles better on the Synology. Synology feels like they're trying hard to make their system usable to people who don't need to understand the underlying technologies, whereas TrueNAS's UI feels like an afterthought designed by people who prefer to do everything from the command-line.
-
-It took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several different menus to just set up a drive and share it. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
+It took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
 
 I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. TrueNAS required an hour of fiddling and searching through documentation. For Plex to access my storage, I had to:
 
@@ -601,7 +627,9 @@ I'm sticking with TrueNAS because I care more about platform lock-in than almost
 
 ### ZFS
 
-ZFS is cool, but I actually haven't found a need for the features people are excited about. I see people talking about snapshotting, but I don't create snapshots and I haven't found a need for them. I have offsite backup snapshots with restic, and they're not especially convenient, but it takes me about 15 minutes to recover it. I've been using restic for two years, and I only recall needing to find a snapshot once.
+ZFS is cool, but I actually haven't found a need for most of its features beyond RAID.
+
+I see people talking about snapshotting, but I don't create snapshots and I haven't found a need for them. I have offsite backup snapshots with restic, and they're not especially convenient, but it takes me about 15 minutes to recover it. I've been using restic for two years, and I only recall needing to find a snapshot once.
 
 I do like how easy it is to create new filesystems with different properties. And it's nice that it just does its job and I don't have to think about it much.
 
