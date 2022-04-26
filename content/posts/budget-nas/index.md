@@ -5,6 +5,8 @@ tags:
   - homelab
   - truenas
 description: TODO
+images:
+  - budget-nas/og-cover.jpg
 date: "2022-04-15"
 ---
 
@@ -90,33 +92,27 @@ When building a storage server, the big question is storage, so before I began, 
 
 Here is how I thought about these concerns.
 
-### How I planned disk capacity
+### Estimating my storage capacity needs
 
-When I bought my Synology NAS, I initially installed three 4 TB drives and left the fourth drive bay empty. That gave me a total of XX space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
+When I bought my Synology NAS, I initially installed three 4 TB drives and left the fourth drive bay empty. That gave me a total of 7 TB space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to about 10 TB.
 
-I decided to apply the same strategy for my new build. I wanted to build a system that met my current needs and still offered room to grow. My rough target was to start with 20 TB of usable storage and capacity for up to 30 TB if I add disks later.
+I decided to apply the same strategy for my new build. I wanted to build a system that met my current needs and still offered room to grow. My rough target was to start with 20 TB of usable storage and capacity for up to 30 TB if I add disks later. ZFS doesn't let you add a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully by the time I need to exand storage, the feature is complete and available in TrueNAS.
 
 ### Many small disks or fewer large disks?
 
-ZFS is designed to survive disk failures, so it stores each block of data redundantly. Because of this redundancy, it's complicated to think about storage capacity. Naively, you'd expect that five 4 TB drives would give you 20 TB of space, but if you take into account the space needed for redundancy, your actual usable capacity is only 15.4 TB.
+ZFS is designed to survive disk failures, so it stores each block of data redundantly. This feature makes capacity planning a bit more complicated because your total usable storage is no longer the sum of each disk's capacity.
 
-I found this [raidz calculator](https://wintelguy.com/zfs-calc.pl) that tells you how much space different disk configurations give you.
+ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the more efficiently ZFS can use their storage capacity. For example, if you give ZFS two 10 TB drives, you [can only use 10 TB](https://wintelguy.com/zfs-calc.pl) out of your 20 TB capacity. If you instead use five 4 TB drives, ZFS could give you 14 TB of usable storage.
 
-ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the more efficiently ZFS can use their storage capacity. For example, if you give ZFS two 10 TB drives, you only get to use 10 TB out of your 20 TB capacity. If you instead use five 4 TB drives, ZFS could give you 14 TB of usable storage.
-
-When you're building a NAS server, you need to decide whether to use a smaller quantity . Smaller drives are usually cheaper in terms of $/TB, but they're more expensive to operate. It takes twice as much electricity to run two 4 TB drives than a single 8 TB drive.
-
-Since you can't mix drive sizes in a ZFS pool, you have to replace all disks in a drive pool if you want to expand storage. ZFS doesn't support adding a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully by the time I need to exand storage, the feature is complete and available in TrueNAS.
+When you're building a NAS server, you need to decide whether to use a smaller quantity of large disks or a larger quantity of small disks. Smaller drives are usually cheaper in terms of $/TB, but they're more expensive to operate. It takes twice as much electricity to run two 4 TB drives than a single 8 TB drive.
 
 I wanted to keep my server on the smaller side, so I opted for fewer, larger drives.
 
 ### raidz 1, 2, or 3?
 
-There are a few different ZFS modes: raidz1, raidz2, and raidz3. The main difference is in robustness. raidz1 can survive one disk failure, but you'll suffer data loss if two disks fail at the same time. raidz2 can survive two disk failures without data loss. raidz3 can survive three.
+There are a few different ZFS modes: raidz1, raidz2, and raidz3. The main difference is in robustness. raidz1 can survive one disk failure, but you'll suffer data loss if two disks fail at the same time. raidz2 can survive two disk failures without data loss, and raidz3 can survive three.
 
-Why wouldn't everyone simply choose raidz3? What you gain in robustness, you pay for in disk space.
-
-Given five 4 TB hard drives, here's how much usable storage you'd get from each ZFS mode:
+What you gain in robustness, you pay for in disk space. Given five 4 TB hard drives, here's how much usable storage you'd get from each ZFS mode:
 
 | ZFS type | Usable storage | % of total capacity |
 | -------- | -------------- | ------------------- |
@@ -126,9 +122,9 @@ Given five 4 TB hard drives, here's how much usable storage you'd get from each 
 
 I chose raidz1. I think the odds of two drives failing simultaneously in my NAS is fairly low, and I use [restic](https://restic.net) to back everything up to the cloud anyway.
 
-When choosing which ZFS mode to use, don't think "how willing am I to lose data?" but rather, "how willing am I to spend several hours recovering my data?" [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft.
+When choosing which ZFS mode to use, don't think "how willing am I to lose data?" Instead ask, "how willing am I to spend several hours recovering my data?" [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft.
 
-To me, the value of ZFS is that I don't have to resort to my cloud backups if one drive dies. With raidz1, I'll have to recover from backups if two drives fail, which is a pain but not the end of the world. To me, it's not worth giving up 26% of my server's usable storage for raidz2.
+To me, the value of ZFS is that I don't have to resort to my cloud backups if one drive dies. With raidz1, I'll have to recover from backups if two drives fail, which is a pain but not the end of the world. To me, it's not worth giving up 20+% of my server's usable storage for raidz2.
 
 The more physical drives you have, the more defensive you should be about disk failure. If I had a pool of 20 disks, I'd probably use raidz2 or raidz3.
 
@@ -136,7 +132,7 @@ The more physical drives you have, the more defensive you should be about disk f
 
 raidz1 protects me if one disk fails. If two or more drives fail at once, I'll suffer data loss.
 
-Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), the average failure rate of each disk is only 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small. But disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it's the same model, from the same manufacturing batch, and it spent its life in the same environment processing a similar workload. Given this, I did what I could to reduce the risk of concurrent disk failures.
+Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), the average failure rate of each disk is 0.5-4% per year. Naively, the probability of two disks failing at once would seem vanishingly small. But disks aren't statistically independent. If one disk fails, the odds of another disk failing are much higher if it's the same model, from the same manufacturing batch, and it spent its life in the same environment processing a similar workload. Given this, I did what I could to reduce the risk of concurrent disk failures.
 
 I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks in the same manufacturing batch, I bought the disks from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
@@ -165,21 +161,19 @@ From what I read, ZFS is not very CPU-intensive. I ran a basic test by installin
 
 The important thing to me was to find a CPU that supported Radeon graphics so that I could use my motherboard's onboard HDMI output.
 
-My main concern with the CPU was finding a CPU and motherboard combination that supported video without requiring a dedicated GPU.
-
 {{<img src="amd-3000g.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
 
-I settled on the AMD Athlon 3000G. It's inexpensive at only $105, and it has decent CPU benchmarks.
+I settled on the AMD Athlon 3000G. At only $105 it's a good value, and it has decent [CPU benchmarks](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3614).
 
-Normally, I'd buy a third-party CPU fan for more efficient cooling, but for this build, I just used the Athlon's stock fan. I wasn't worried about the CPU absorbing heavy workloads, and I didn't want to worry about verifying that a larger fan would fit in a mini-ITX case.
+Normally, I'd buy a third-party CPU fan for more efficient cooling, but for this build, I just used the CPU's stock fan. I wasn't worried about the CPU absorbing heavy workloads, and I didn't want to worry about verifying that a larger fan would fit in a mini-ITX case.
 
 ### Case
 
 When I built my last VM server, I [used a Fractal Design case](/building-a-vm-homelab/#case). It's my favorite computer case ever, so stuck with Fractal Design on this build.
 
-{{<img src="fractal-design-304.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
+I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which would let me start with enough drives now with room to grow in the future.
 
-I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which was the number I wanted.
+{{<img src="fractal-design-304.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
 
 ### Disk (Data)
 
@@ -196,13 +190,13 @@ To limit failure rate, I checked average failure rate (AFR) [on Backblaze](https
 
 7200 vs 1000 RPM
 
-The Fractal Design Node 304 has six drive bays, so I decided to start with four 8 TB disks to give myself room for expansion later. With raidz1, that would give me 22.5 TB of usable storage to start. A fifth disk would bring me to 30.9 TB, and a sixth would get me 37 TB, so this should last me a while.
+The Fractal Design Node 304 has six drive bays, so I decided to start with four 8 TB disks. With raidz1, that would give me 22.5 TB of usable storage to start. When I need to expand in the future, a fifth disk will bring me to 30.9 TB, and a sixth would get me 37 TB.
 
 Price. For a 8 TB drive, you can pay anywhere from $130 to $400 per disk. For a server with four disks, that's a difference of $1k, so those price differences matter.
 
-I cho
+I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796). I saw positive reviews of these drives on the TrueNAS forums as well as on reddit. Both models sold for $180-190, which was a good value for the storage space.
 
-{{<gallery caption="[Toshiba N300 HDWG480XZSTA 8TB 7200 RPM](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf 8TB NAS Hard Drive 7200 RPM](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (right)">}}
+{{<gallery caption="[Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (right)">}}
 {{<img src="toshiba-n300.jpg" alt="TODO" maxWidth="250px" hasBorder="true">}}
 {{<img src="seagate-ironwolf.jpg" alt="TODO" maxWidth="260px" hasBorder="true">}}
 {{</gallery>}}
@@ -385,13 +379,13 @@ Synology really chokes on encryption. For an encrypted volume, performance flips
 
 Notably, encryption doesn't seem to affect TrueNAS' performance at all. It performed the same with or without encryption, whereas Synology suffered a XX% slowdown in both read tests.
 
-I keep most of my data on encrypted volumes, so the test on the encrypted volume represents my typical usage more accurately.
+I keep most of my data on encrypted volumes, so the test with encryption more accurately represents my typical usage.
 
 ### Write performance
 
 Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was XX% faster on small files, and they performed almost identically on 1 GiB files.
 
-Again, bringing encryption into the mix obliterates Synology's performance while they had no significant impact on TrueNAS. With encryption enabled, TrueNAS outperforms Synology by XX% on small files and XX% on large files.
+Again, bringing encryption into the mix obliterates Synology's performance but had no impact on TrueNAS. With encryption enabled, TrueNAS outperforms Synology by XX% on small files and XX% on large files.
 
 <!--
 
@@ -549,9 +543,16 @@ robocopy /s `
 
 -->
 
-## Power usage
+### Power consumption
 
-TODO:
+I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460.html) to measure power consumption on the server.
+
+TODO: Measure NAS build.
+
+|      | Synology | 2022 NAS |
+| ---- | -------- | -------- |
+| Idle | 38 W     | XX       |
+| Load | 43 W     | XX       |
 
 ## Final thoughts
 
@@ -576,11 +577,11 @@ The BIOS upgrade utility was completely broken. It claimed that I had the latest
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. If I want to expand storage, the server might become RAM-bound because ZFS is so memory intensive.
 
-If I were doing it again, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, and it has an extra M.2 slot, and it LAN port supports 2.5 Gbps speeds.
+If I were doing it again, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, has an extra M.2 slot, and it supports 2.5 Gbps Ethernet.
 
 ### Case
 
-I was disappointed in the case. When I built my VM server with the Fractal Design Meshify C, the case kept delighting me with features I'd never seen on other cases. On this build, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
+I was disappointed in the case. When I built my VM server with the Fractal Design Meshify C, the case [kept delighting me](/building-a-vm-homelab/#my-2020-server-build) with features I'd never seen on other cases. On this build, it was the opposite. I kept thinking, "Why is this a problem in this case when this has never been a problem for me before?"
 
 It looks nice on the outside, but I found it awkward to work in. There was barely any documentation, and some of the case mechanisms weren't obvious.
 
@@ -604,33 +605,25 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 
 Synology's web UI is hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They do a great job of building an intuitive UI that spares the end-user from understanding a lot of the underlying filesystem details.
 
-TrueNAS has its hacker charm, but I find it a huge step down from Synology in terms of usability. The interface seems like it was designed by developers with a disdain for anything outside the command-line.
+TrueNAS has its hacker charm, but I find it a huge step down from Synology in terms of usability. The interface seems designed by someone with a disdain for anything outside the command-line.
 
 {{<gallery caption="The Synology web interface (left) is leaps and bounds ahead of TrueNAS (right).">}}
 {{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" maxWidth="500px">}}
 {{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" maxWidth="500px">}}
 {{</gallery>}}
 
-It took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
+On TrueNAS, it took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
 
-I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. TrueNAS required an hour of fiddling and searching through documentation. For Plex to access my storage, I had to:
-
-1. Create a BSD jail
-1. SSH into that jail
-1. Find the UID of the user under the jail system
-1. Create a matching user with a matching UID on the TrueNAS host system
-1. Edit permissions on the TrueNAS host system to give the jail user access to my media files
+I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. TrueNAS required an hour of fiddling and searching through documentation.
 
 By comparison, installing Plex on Synology takes about two minutes. You breeze through a user-friendly wizard, and you're done.
 
-I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software. If I were to recommend an OS to a friend who wasn't as ideologically driven, I'd definitely recommend Synology.
+I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software, but if I were recommending a NAS OS to a friend who wasn't as ideologically driven, I'd suggest Synology.
 
 ### ZFS
 
-ZFS is cool, but I actually haven't found a need for most of its features beyond RAID.
+ZFS is cool, but I actually haven't found a need for most of its features beyond RAID. I see people talking about snapshotting, but I haven't found a need. I already have snapshots in my restic backup solution. They're not especially convenient, but I've been using restic for two years, and I only recall needing to find a snapshot once.
 
-I see people talking about snapshotting, but I don't create snapshots and I haven't found a need for them. I have offsite backup snapshots with restic, and they're not especially convenient, but it takes me about 15 minutes to recover it. I've been using restic for two years, and I only recall needing to find a snapshot once.
-
-I do like how easy it is to create new filesystems with different properties. And it's nice that it just does its job and I don't have to think about it much.
+## Video
 
 TODO: Link to YouTube video
