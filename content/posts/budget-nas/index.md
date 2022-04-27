@@ -177,24 +177,17 @@ I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fra
 
 ### Disk (Data)
 
-The biggest decision was the disk. I wanted to. Things I wanted to avoid:
-
-- Noise
-- High failure rate
-- Shingled magnetic recording (SMR) disks
-  - ZFS performs poorly on SMR drives.
-  - Look for drives with conventional magnetic recording (CMR).
-  - Check this list of [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/).
+The biggest decision was the disk. I wanted to find quiet, high-performance disks with low probability of disk failure.
 
 To limit failure rate, I checked average failure rate (AFR) [on Backblaze](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), to avoid especially failure-prone disks, but I didn't hyper-optimize for low failure rate. It's irrational to pay twice as much for a drive that has a failure rate of 0.5% rather than 1%. You're spending twice the money to reduce failure rate by only 0.5%.
 
-7200 vs 1000 RPM
-
 The Fractal Design Node 304 has six drive bays, so I decided to start with four 8 TB disks. With raidz1, that would give me 22.5 TB of usable storage to start. When I need to expand in the future, a fifth disk will bring me to 30.9 TB, and a sixth would get me 37 TB.
 
-Price. For a 8 TB drive, you can pay anywhere from $130 to $400 per disk. For a server with four disks, that's a difference of $1k, so those price differences matter.
+In the 8 TB range, there aren't many drives below 7200 RPM, but you can go up to 10k RPM. For my NAS, speeds above 7200 RPM wouldn't make a difference because the bottleneck is the network. A 10k RPM drive would be louder and consume more power but offer no practical gain in performance.
 
-I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796). I saw positive reviews of these drives on the TrueNAS forums as well as on reddit. Both models sold for $180-190, which was a good value for the storage space.
+The last pitfall to avoid is disks that use shingled magnetic recording (SMR) technology. ZFS [performs poorly on SMR drives](https://www.servethehome.com/wd-red-smr-vs-cmr-tested-avoid-red-smr/), so if you're building a NAS, avoid [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/). If the drive is labeled as CMR, that's conventional magnetic recording (CMR), which is fine for ZFS.
+
+I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) and the [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796). I saw positive reviews of these drives on the TrueNAS forums as well as on reddit. Both models sold for $180-190, which was a good value for the storage space.
 
 {{<gallery caption="[Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (right)">}}
 {{<img src="toshiba-n300.jpg" alt="TODO" maxWidth="250px" hasBorder="true">}}
@@ -203,7 +196,7 @@ I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/
 
 ### Disk (OS)
 
-I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least XX of space, but it otherwise doesn't read or write much to the OS disk.
+I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least 2 GB of space, but it otherwise doesn't read or write much to the OS disk.
 
 {{<img src="kingston-a400.jpg" alt="TODO" maxWidth="300px" hasBorder="true" caption="The Kingston A400 is a fantastic value as a 120 GB M.2 SSD for only $32.">}}
 
@@ -211,9 +204,16 @@ I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 
 
 ### Memory
 
-I find memory extremely boring to shop for. I perhaps should have looked more into benchmarks since ZFS is so RAM-intensive, but honestly I didn't. I went with a brand name I trust and looked for sticks below $150 that were listed as compatible with the ASUS A320I-K motherboard I chose.
+I find memory extremely boring to shop for. I wish I had a more rigorous process for choosing RAM, but I couldn't find trustworthy bechmarks or user reports for RAM performance the way I could with other components. My process was:
 
-{{<img src="corsair-vengeance.jpg" alt="TODO" maxWidth="400px" hasBorder="true" caption="The [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
+1. Review the list of RAM sticks [compatible with the ASUS A320I-K motherboard](https://www.asus.com/Motherboards-Components/Motherboards/CSM/PRIME-A320I-K-CSM/HelpDesk_QVL/)
+1. Filter for 32 GB or 64 GB options that used only two sticks
+1. Filter for brands I trust (Corsair, Crucial, G.SKILL, Kingston, Samsung, Patriot, Mushkin, HyperX)
+1. Filter for options below $150
+
+That process led me to the [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854). At $128, they seemed like a good match for my server with
+
+{{<img src="corsair-vengeance.jpg" alt="Photo of CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 RAM" maxWidth="400px" hasBorder="true" caption="The [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
 
 ### Power supply unit (PSU)
 
@@ -360,16 +360,16 @@ One of the surprises to me in writing this up is that I couldn't find any good b
 
 I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. The first fileset is 20 files of 1 GiB each. The other set is 3,072 files of 1 MiB each (3 GiB total). I ran each test three times and took the average result.
 
-I was testing four different variables, so I had 2^4 = 16 test cases total:
+I was testing four different variables, so I had 2<sup>4</sup> = 16 test cases total:
 
 1. TrueNAS vs. Synology
 1. Read vs. write
 1. Encrypted volume vs. unencrypted volume
 1. Small files (1 MiB) vs. large files (1 GiB)
 
-This is not meant to be a perfectly rigorous test &mdash; it's just a rough estimate of how this upgrade will affect my NAS performance. It's also not evidence that TrueNAS is better than Synology, as I'm testing a brand new TrueNAS system against a Synology server from eight years ago, so not exactly a fair fight.
+This was not a perfectly rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test. It's a broad measurement of how this upgrade will affect my NAS performance. It's also not evidence that TrueNAS is better than Synology, as I'm testing a brand new TrueNAS system against a Synology server from eight years ago, so it's not exactly a fair fight.
 
-Performance tops out at around 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. It's likely that my home network is the bottleneck, as my switch, my desktop's Ethernet port, and the NAS Ethernet ports all max out at 1 Gbps.
+Performance topped out around 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. It's likely that the limiting factor is the network, as my switch, my desktop's Ethernet port, and the NAS servers' Ethernet ports all max out at 1 Gbps.
 
 ### Read performance
 
@@ -379,11 +379,13 @@ Synology really chokes on encryption. For an encrypted volume, performance flips
 
 Notably, encryption doesn't seem to affect TrueNAS' performance at all. It performed the same with or without encryption, whereas Synology suffered a XX% slowdown in both read tests.
 
+Read speeds were surprisingly inconsistent on the TrueNAS for small files. For every other test on both servers, performance in each of the three trials was consistent to about 5%. In the tests of small file reads on the TrueNAS, speeds ranged from 33 MiB/s to 54 MiB/s on unencrypted files and 34 MiB/s to 67 MiB/s on encrypted files. I'm not sure where the inconsistency was coming from, as the same tests for 1 GiB files had much less variance.
+
 I keep most of my data on encrypted volumes, so the test with encryption more accurately represents my typical usage.
 
 ### Write performance
 
-Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was XX% faster on small files, and they performed almost identically on 1 GiB files.
+Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was XX% faster on small files, and the two systems performed almost identically on 1 GiB files.
 
 Again, bringing encryption into the mix obliterates Synology's performance but had no impact on TrueNAS. With encryption enabled, TrueNAS outperforms Synology by XX% on small files and XX% on large files.
 
