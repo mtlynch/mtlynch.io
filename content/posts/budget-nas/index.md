@@ -323,9 +323,13 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 Longtime readers of this blog will recall that I built a device on top of the Raspberry Pi specifically for building and managing headless servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new TinyPilot Voyager 2.
 
+TODO: Photo of Voyager 2
+
 I'm obviously biased, but building this server with the Voyager 2 was a great experience. I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image from the TinyPilot browser window.
 
-The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the XX files for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. But I hope to add that feature soon so that my next BIOS upgrade can be all TinyPilot.
+{{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without ever plugging in a flash drive, keyboard, or monitor." maxWidth="800px" hasBorder="true">}}
+
+The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the `.CAP` file for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. I hope to support that scenario soon in TinyPilot so that my next BIOS upgrade will be entirely via TinyPilot.
 
 ## Is this BIOS version incompatible? Or am I an idiot?
 
@@ -373,11 +377,13 @@ Performance topped out around 111 MiB/s (931 Mbps), which is suspiciously close 
 
 ### Read performance
 
+{{<img src="read-perf-unencrypted.png" alt="TODO" hasBorder="true">}}
+
 For unencrypted volumes, I was surprised to see the 8-year-old Synology outperform my new TrueNAS build. It was XX% faster on small files and XX% faster on large files.
 
-Synology really chokes on encryption. For an encrypted volume, performance flips drastically in TrueNAS' favor. It outperformed Synology by XX% for small files and XX% on large files.
+{{<img src="read-perf-encrypted.png" alt="TODO" hasBorder="true">}}
 
-Notably, encryption doesn't seem to affect TrueNAS' performance at all. It performed the same with or without encryption, whereas Synology suffered a XX% slowdown in both read tests.
+Synology really chokes on encryption. For an encrypted volume, performance flips drastically in TrueNAS' favor. Encryption caused a 67-75% performance hit on Synology, whereas it had no effect on TrueNAS. That allowed TrueNAS to outperform Synology by 2.3x for small files and 3x for large files on an encrypted volume.
 
 Read speeds were surprisingly inconsistent on the TrueNAS for small files. For every other test on both servers, performance in each of the three trials was consistent to about 5%. In the tests of small file reads on the TrueNAS, speeds ranged from 33 MiB/s to 54 MiB/s on unencrypted files and 34 MiB/s to 67 MiB/s on encrypted files. I'm not sure where the inconsistency was coming from, as the same tests for 1 GiB files had much less variance.
 
@@ -385,9 +391,13 @@ I keep most of my data on encrypted volumes, so the test with encryption more ac
 
 ### Write performance
 
-Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was XX% faster on small files, and the two systems performed almost identically on 1 GiB files.
+{{<img src="write-perf-unencrypted.png" alt="TODO" hasBorder="true">}}
 
-Again, bringing encryption into the mix obliterates Synology's performance but had no impact on TrueNAS. With encryption enabled, TrueNAS outperforms Synology by XX% on small files and XX% on large files.
+Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was 77% faster on small files, and the two systems performed almost identically on 1 GiB files.
+
+{{<img src="write-perf-encrypted.png" alt="TODO" hasBorder="true">}}
+
+Again, bringing encryption into the mix obliterates Synology's performance but had no impact on TrueNAS. With encryption enabled, TrueNAS was 5.2x faster on small files and 3.2x faster on large files.
 
 ### Power consumption
 
@@ -395,10 +405,10 @@ I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460
 
 TODO: Measure NAS build.
 
-|      | Synology | 2022 NAS |
-| ---- | -------- | -------- |
-| Idle | 38 W     | XX       |
-| Load | 43 W     | XX       |
+|      | Synology DS412+ | 2022 NAS |
+| ---- | --------------- | -------- |
+| Idle | 38 W            | XX       |
+| Load | 43 W            | XX       |
 
 ## Final thoughts
 
@@ -423,7 +433,7 @@ The BIOS upgrade utility was completely broken. It claimed that I had the latest
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. If I want to expand storage, the server might become RAM-bound because ZFS is so memory intensive.
 
-If I were doing it again, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, has an extra M.2 slot, and it supports 2.5 Gbps Ethernet.
+If I were doing it again, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, 2.5 Gbps Ethernet, and it has an extra M.2 slot.
 
 ### Case
 
@@ -449,7 +459,7 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 
 ### TrueNAS
 
-Synology's web UI is hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They do a great job of building an intuitive UI that spares the end-user from understanding a lot of the underlying filesystem details.
+Synology's web UI is hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They did a great job of building a clean UI that spares the end-user from understanding a lot of the underlying filesystem details.
 
 TrueNAS has its hacker charm, but I find it a huge step down from Synology in terms of usability. The interface seems designed by someone with a disdain for anything outside the command-line.
 
@@ -458,17 +468,19 @@ TrueNAS has its hacker charm, but I find it a huge step down from Synology in te
 {{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" maxWidth="500px">}}
 {{</gallery>}}
 
-On TrueNAS, it took me several tries to even figure out how to create a new volume and share it on my network with correct permissions. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, it's hard to get it wrong because there's a complete UI flow when you set up a volume where Synology helps you configure it on the network and give users permissions.
+On TrueNAS, it took me several tries to create a new volume and share it on my network. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, there's a smooth UI flow that guides you through all the required settings.
 
-I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install. TrueNAS required an hour of fiddling and searching through documentation.
+I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so this should be one of the easiest apps to install, but it took me an hour of fiddling and searching through documentation. By comparison, installing Plex on Synology takes about two minutes.
 
-By comparison, installing Plex on Synology takes about two minutes. You breeze through a user-friendly wizard, and you're done.
-
-I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else. I like supporting open-source software, but if I were recommending a NAS OS to a friend who wasn't as ideologically driven, I'd suggest Synology.
+I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else, and I like supporting open-source software. If I were recommending a NAS OS to a friend who wasn't as ideologically driven, I'd suggest Synology.
 
 ### ZFS
 
-ZFS is cool, but I actually haven't found a need for most of its features beyond RAID. I see people talking about snapshotting, but I haven't found a need. I already have snapshots in my restic backup solution. They're not especially convenient, but I've been using restic for two years, and I only recall needing to find a snapshot once.
+ZFS is cool, but I actually haven't found a need for most of its features beyond RAID.
+
+I see people talking about snapshotting, but I haven't found a need for it. I already have snapshots in my restic backup solution. They're not especially convenient, but I've been using restic for two years, and I only recall needing to find a snapshot once.
+
+One interesting feature is encrypted snapshots. You can take snapshots of a data volume without having to decrypt it. I have some data that I want to keep encrypted, but I don't need to access it very often, so being able to back it up regularly without decrypting it would be handy.
 
 ## Video
 
