@@ -10,6 +10,9 @@ images:
 date: "2022-04-15"
 ---
 
+<!-- Disable linter complaints about duplicate headers -->
+<!-- markdownlint-disable MD024 -->
+
 This year, I decided to build my first ever home storage server. It's a 32 TB server that stores all of my personal and business data with open-source software.
 
 The server itself cost $531, and I bought four disks for $732, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
