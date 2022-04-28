@@ -1,11 +1,8 @@
-<ul class="prev-next-links">
+<div class="prev-next-links">
   {{ with .PrevInSection }}
-  <li>
-    Previous: <a href="{{ .RelPermalink }}">{{ .Title }}: {{ .Description }}</a>
-  </li>
-  {{ end }} {{ with .NextInSection }}
-  <li>
-    Next: <a href="{{ .RelPermalink }}">{{ .Title }}: {{ .Description }}</a>
-  </li>
+    <a href="{{ .RelPermalink }}">&laquo; Previous</a>
   {{ end }}
-</ul>
+  {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}">Next &raquo;</a>
+  {{ end }}
+</div>

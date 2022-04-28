@@ -455,6 +455,10 @@ h4:hover .hanchor {
   margin: 0rem 0 0.5rem 0 !important;
 }
 
+.retrospective .finances-chart {
+  margin-bottom: 5rem;
+}
+
 .book-reports-list li {
   margin: 2rem 0;
   display: flex;
@@ -543,4 +547,25 @@ h4:hover .hanchor {
   margin-left: 1rem;
   margin-right: 1rem;
   font-size: 1.6rem;
+}
+
+.retrospective .prev-next-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.retrospective .prev-next-links a {
+  background-color: #d6d6d6;
+  color: black;
+  padding: 0.5rem 2rem;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+.retrospective .prev-next-links a:hover {
+  background-color: #ccc;
+  color: black;
+  text-decoration: none;
 }

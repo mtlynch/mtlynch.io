@@ -1,0 +1,14 @@
+{
+  "name": "mtlynch-io-dev",
+  "version": "1.0.0",
+  "description": "mtlynch.io dev scripts",
+  "scripts": {
+    "check-format": "prettier --check ./**/*.js ./**/*.json ./**/*.css ./**/*.html",
+    "format": "prettier --write ./**/*.js ./**/*.json ./**/*.css ./**/*.html"
+  },
+  "author": "Michael Lynch",
+  "devDependencies": {
+    "prettier": "^2.6.0",
+    "prettier-plugin-go-template": "0.0.11"
+  }
+}
