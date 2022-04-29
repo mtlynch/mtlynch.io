@@ -55,7 +55,9 @@ The biggest data source is my my DVD and Blu-Ray collection. I don't like relyin
 
 ### What's a homelab?
 
-"Homelab" is a colloquial term that's grown in popularity in the last few years. A homelab is a place in your home where you can experiment with hardware or software that people typically use in professional environments. Homelab enthusiasts use their equipment as a low-stakes practice environment where they can learn new skills.
+"Homelab" is a colloquial term that's grown in popularity in the last few years.
+
+A homelab is a place in your home where you can experiment with professional-grade IT hardware or software. Your homelab lets you learn new technologies in a low-stakes environment before using them at work. Or it can just be a place to play with tech you find cool.
 
 ### Why build your own NAS?
 
@@ -63,15 +65,17 @@ If you're new to the homelab world, or you have no experience building PCs, I re
 
 There are off-the-shelf solutions that offer similar functionality with an easier learning curve.
 
-Before building my own homelab NAS, I used a Synology DS412+ for seven years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction to the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
+Before building my own homelab NAS, I used a 4-disk [Synology DS412+](https://www.newegg.com/synology-ds412/p/N82E16822108113) for seven years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction to the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
-A few months ago, my Synology started to make a clicking noise. I worried that my dear friend didn't have much time left. Synology devices are not user-repairable. If a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data on your disks unless you buy another Synology sytem.
+A few months ago, my Synology failed to boot and started making a clicking noise. A chill came over me as I realized how dependent I'd become on not just NAS servers but Synology in particular. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data on your disks unless you buy another Synology sytem.
 
-Fortunately, my Synology's clicking went away, but it was a wake up call how dependent I'd let myself become on Synology. I decided to switch to something open source and open standards, so I decided on TrueNAS.
+Fortunately, after cleaning out the system and re-seating all the disks, my Synology was back in action, but it was an important wake-up call. I decided to switch to something open source and using open standards for storage, so I decided on TrueNAS.
 
 ### TrueNAS and ZFS
 
 [TrueNAS](https://truenas.com/) (formerly known as FreeNAS) is one of the most popular operating systems for storage servers. [Unraid](https://unraid.net/) looked nice as well, but I wanted something open-source.
+
+![TrueNAS logo](truenas-logo.svg)
 
 TrueNAS uses [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/), a filesystem designed specifically for storage servers. Traditional filesystems like NTFS or ext4 run on top of a volume interface that manages low-level disk I/O. ZFS manages everything in the stack from the file-level logic down to disk I/O. ZFS' comprehensive control gives it more power and performance than other filesystems.
 
@@ -82,7 +86,7 @@ Some neat features of ZFS include:
 - Creating point-in-time snapshots of data on disk (similar to OS X's Time Machine feature)
 - Optionally encrypting or compressing data on disk
 
-Before building this system, I had zero experience with ZFS, so I was excited to experiment with it.
+Before building this system, I had zero experience with ZFS, so I was excited to try it out.
 
 ## Storage planning
 
