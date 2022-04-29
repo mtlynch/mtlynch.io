@@ -53,7 +53,7 @@ It took a long time to find the right engineer, but I'm happy this is working ou
 
 March was TinyPilot's best month ever in terms of sales and total revenue. We only sold 14% more devices than in February, but half of them were our new Voyager 2 PoE. The new model costs $60 more than our standard model, which translated to a 33% increase in revenue.
 
-My profit was negative, but that's more a function of how my expenses were timed. Profit for the first quarter of 2022 is at a healthy $16k, averaging $5.3k per month.
+My profit was negative, but that's more a function of how my expenses were timed. Profit for the first quarter of 2022 is at ~~a healthy $16k, averaging $5.3k per month~~ (**Edit (2022-04-29)**: I had the numbers wrong &mdash; I actually took a $10k _loss_ in the first quarter of 2022).
 
 {{<img src="sales-per-unique-visitor.png" maxWidth="700px" hasBorder="true" caption="Sales Per Unique Visitor reached its highest-ever level in March 2022.">}}
 
