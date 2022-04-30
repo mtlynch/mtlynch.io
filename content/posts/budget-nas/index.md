@@ -403,12 +403,10 @@ Again, bringing encryption into the mix obliterates Synology's write performance
 
 I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460.html) to measure power consumption on the server.
 
-TODO: Measure TrueNAS build.
-
 |      | Synology DS412+ | 2022 NAS |
 | ---- | --------------- | -------- |
-| Idle | 38 W            | XX       |
-| Load | 43 W            | XX       |
+| Idle | 38 W            | 60 W     |
+| Load | 43 W            | 67 W     |
 
 ## Final thoughts
 
