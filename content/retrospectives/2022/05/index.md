@@ -137,7 +137,7 @@ Google ads are performing much better than I expected, and Bing ads are bombing.
 
 I originally intended to advertise on [Duck Duck Go](https://duckduckgo.com) because I suspect those users are a good match for my product, but bizarrely, Duck Duck Go only sells ads indirectly through its competitor Bing. To buy Ads on Duck Duck Go, you have to advertise on Bing and then enable advertising through Bing's syndicated partners, which include AOL, Yahoo, and Duck Duck Go.
 
-{{<img src="ddg-advertising.png" hasBorder="true" maxWidth="600px" caption="The only way to [advertise on Duck Duck Go](https://help.duckduckgo.com/duckduckgo-help-pages/company/advertising-and-affiliates/) is to advertise on Bing, Yahoo, and AOL.">}}
+{{<img src="dg-policy.png" hasBorder="true" maxWidth="600px" caption="The only way to [advertise on Duck Duck Go](https://help.duckduckgo.com/duckduckgo-help-pages/company/advertising-and-affiliates/) is to advertise on Bing, Yahoo, and AOL.">}}
 
 The most important metric is revenue on ad spend (ROAS), which is 2.45 on Google. That means for every $1 I spend on Google ads, I'm getting $2.45 in revenue. $2.45 in revenue costs me about $0.76 in parts and labor, so that comes out to $2.45 revenue - $1 ad spend - $0.76 in parts and labor = $0.69 profit.
 
