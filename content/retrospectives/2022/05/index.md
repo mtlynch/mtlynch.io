@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 22"
-date: 2022-05-09T12:09:29-04:00
+date: 2022-05-12T12:09:29-04:00
 description: Where is all of my money going?
 images:
   - /retrospectives/2022/05/expenses-pie.png
