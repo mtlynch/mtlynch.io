@@ -41,15 +41,15 @@ It took a long time to find the right engineer, but I'm happy this is working ou
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | February 2022  | March 2022                                | Change                                           |
-| ------------------------ | -------------- | ----------------------------------------- | ------------------------------------------------ |
-| Unique Visitors          | 6,991          | 6,212                                     | <font color="red">-779 (-11%)</font>             |
-| Total Pageviews          | 14,916         | 13,375                                    | <font color="red">-1,541 (-10%)</font>           |
-| Sales Revenue            | $49,026.99     | $65,171.82                                | <font color="green">+$16,144.83 (+33%)</font>    |
-| Enterprise Subscriptions | $47.75         | $47.75                                    | 0                                                |
-| Royalties                | $3,552.41      | $4,012.83                                 | <font color="green">+$460.42 (+13%)</font>       |
-| Total Revenue            | $52,627.15     | $69,232.40                                | <font color="green">+$16,605.25 (+32%)</font>    |
-| **Profit**               | **$27,039.62** | **<font color="red">-$3,043.34</font>**\* | **<font color="red">-$30,082.96 (-inf%)</font>** |
+| Metric                   | February 2022  | March 2022                              | Change                                           |
+| ------------------------ | -------------- | --------------------------------------- | ------------------------------------------------ |
+| Unique Visitors          | 6,991          | 6,212                                   | <font color="red">-779 (-11%)</font>             |
+| Total Pageviews          | 14,916         | 13,375                                  | <font color="red">-1,541 (-10%)</font>           |
+| Sales Revenue            | $49,026.99     | $65,171.82                              | <font color="green">+$16,144.83 (+33%)</font>    |
+| Enterprise Subscriptions | $47.75         | $47.75                                  | 0                                                |
+| Royalties                | $3,552.41      | $4,012.83                               | <font color="green">+$460.42 (+13%)</font>       |
+| Total Revenue            | $52,627.15     | $69,232.40                              | <font color="green">+$16,605.25 (+32%)</font>    |
+| **Profit**               | **$27,039.62** | **<font color="red">-$3,043.34</font>** | **<font color="red">-$30,082.96 (-inf%)</font>** |
 
 March was TinyPilot's best month ever in terms of sales and total revenue. We only sold 14% more devices than in February, but half of them were our new Voyager 2 PoE. The new model costs $60 more than our standard model, which translated to a 33% increase in revenue.
 
