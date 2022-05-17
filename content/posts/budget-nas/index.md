@@ -31,8 +31,8 @@ In this post, I'll walk through how I chose the parts, what mistakes I made, and
 - [Final thoughts](#final-thoughts)
 
 {{<gallery caption="Before and after of my 2022 homelab TrueNAS server build">}}
-{{<img src="all-parts.jpg" alt="TODO" maxWidth="450px">}}
-{{<img src="completed-build.jpg" alt="TODO" maxWidth="450px">}}
+{{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" maxWidth="450px">}}
+{{<img src="completed-build.jpg" alt="Photo of completed server build" maxWidth="450px">}}
 {{</gallery>}}
 
 If you'd prefer a video explanation instead, I recorded one on YouTube.
@@ -162,7 +162,7 @@ From what I had read, ZFS is not very CPU-intensive. I ran a basic test by insta
 
 The important thing to me was to find a CPU that supported Radeon graphics so that I could use my motherboard's onboard HDMI output.
 
-{{<img src="amd-3000g.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
+{{<img src="amd-3000g.jpg" alt="Photo of AMD Athlon 3000G" maxWidth="500px" hasBorder="true" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
 
 I settled on the AMD Athlon 3000G. At only $105 it's a good value, and it has decent [CPU benchmarks](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3614).
 
@@ -172,7 +172,7 @@ When I built my last VM server, I [used a Fractal Design case](/building-a-vm-ho
 
 I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which allows me to start with enough drives now with room to grow in the future.
 
-{{<img src="fractal-design-304.jpg" alt="TODO" maxWidth="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
+{{<img src="fractal-design-304.jpg" alt="Fractal Design Node 304 Black case" maxWidth="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
 
 ### Disk (Data)
 
@@ -187,15 +187,15 @@ The last pitfall to avoid is shingled magnetic recording (SMR) technology. ZFS [
 I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) and the [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796). I saw positive reviews of these drives on the TrueNAS forums as well as on reddit. Both models sold for $180-190, which was a good value for the storage space.
 
 {{<gallery caption="[Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (right)">}}
-{{<img src="toshiba-n300.jpg" alt="TODO" maxWidth="250px" hasBorder="true">}}
-{{<img src="seagate-ironwolf.jpg" alt="TODO" maxWidth="260px" hasBorder="true">}}
+{{<img src="toshiba-n300.jpg" alt="Toshiba N300" maxWidth="250px" hasBorder="true">}}
+{{<img src="seagate-ironwolf.jpg" alt="Seagate IronWolf" maxWidth="260px" hasBorder="true">}}
 {{</gallery>}}
 
 ### Disk (OS)
 
 I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least 2 GB of space, but it otherwise doesn't read or write much to the OS disk.
 
-{{<img src="kingston-a400.jpg" alt="TODO" maxWidth="300px" hasBorder="true" caption="The Kingston A400 is a fantastic value as a 120 GB M.2 SSD for only $32.">}}
+{{<img src="kingston-a400.jpg" alt="Kingston A400" maxWidth="300px" hasBorder="true" caption="The Kingston A400 is a fantastic value as a 120 GB M.2 SSD for only $32.">}}
 
 I went with the Kingston A400 because it was incredibly inexpensive &mdash; $32 for a 120 GB M.2 disk. And I love M.2 disks. They don't require any cabling. They just tuck away into the motherboard, take up nearly zero space, and you never have to touch them again.
 
@@ -228,7 +228,7 @@ I wanted a modular PSU to minimize cable clutter, especially since my NAS has so
 
 In terms of power capacity, basically any consumer PSU would have been sufficient. According to [PCPartPicker](https://pcpartpicker.com/), my system only requires 218 W. I would have picked a PSU in the 300-400 W range, but there weren't semi-modular options in that range. I went with the 500 W [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101).
 
-{{<img src="evga-psu.jpg" alt="TODO" maxWidth="400px" hasBorder="true" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
+{{<img src="evga-psu.jpg" alt="EVGA 110-BQ-0500-K1" maxWidth="400px" hasBorder="true" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
 
 There are different ratings for PSUs like bronze, silver, gold, platinum that reflect the power efficiency. The differences are fairly small, and they reflect performance at peak load, which is not very meaningful for me, so I didn't optimize for power efficiency.
 
@@ -238,7 +238,7 @@ There are different ratings for PSUs like bronze, silver, gold, platinum that re
 
 One item I've never purchased before was these 90-degree SATA cables. I didn't realize I needed them until I tried connecting all the disks and realized there wasn't enough space to plug in a standard SATA cable. These slim 90-degree cables solved the problem.
 
-{{<img src="sata-just-barely.jpg" alt="TODO" maxWidth="500px" caption="It was such a tight squeeze between my PSU and motherboard that I needed 90-degree slim SATA cables.">}}
+{{<img src="sata-just-barely.jpg" alt="Photo of 90-degree SATA cable just barely fitting between the SATA port and the power supply" maxWidth="500px" caption="It was such a tight squeeze between my PSU and motherboard that I needed 90-degree slim SATA cables.">}}
 
 ## What's missing?
 
