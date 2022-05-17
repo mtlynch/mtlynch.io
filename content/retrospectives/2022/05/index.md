@@ -75,11 +75,11 @@ To find out, I took a closer look at my monthly expenses for 2022 Q1.
 | Software and Support Contractors | $14,900.43     |
 | Design Agency                    | $7,938.32      |
 | Electrical Engineering           | $5,291.07      |
-| Postage                          | $3,535.35      |
 | Fulfillment Staff                | $2,915.75      |
+| Postage                          | $2,393.49      |
+| Taxes / Tariffs                  | $1,423.14      |
 | Office Rent                      | $916.67\*      |
 | Cloud Services                   | $495.03        |
-| Taxes / Tariffs                  | $281.28        |
 | Advertising                      | $106.78        |
 | Everything Else                  | $265.34        |
 | **Total**                        | **$61,542.47** |
