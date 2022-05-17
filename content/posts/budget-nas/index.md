@@ -236,8 +236,6 @@ In terms of power capacity, basically any consumer PSU would have been sufficien
 
 {{<img src="evga-psu.jpg" alt="EVGA 110-BQ-0500-K1" maxWidth="600px" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
 
-There are different ratings for PSUs like bronze, silver, gold, and platinum that reflect the power efficiency. The differences are fairly small, and they reflect performance at peak load, which is not very meaningful for me, so I opted against a gold- or platinum-rated PSU.
-
 ### 90-degree SATA cables
 
 {{<img src="holding-sata.jpg" alt="Me holding 90-degree SATA cable" maxWidth="400px" caption="I needed 90-degree SATA cables to work within the case's space constraints">}}
@@ -375,33 +373,33 @@ Normally, I'd accept the blame, but the ASUS BIOS was so flaky that the problem 
 
 One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools I can run on the NAS itself that can benchmark local disk writes, but that doesn't reflect real-world usage. Most of my usage is over the network, so a local disk benchmark will completely miss bottlenecks in the networking stack.
 
-I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. The first fileset is 20 GiB of 1 GiB files, and the other is 3 GiB of 1 MiB files. I tested both encrypted volumes and unencrypted volumes. I ran each test three times and took the average result.
+I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. The first fileset is 20 GiB of 1 GiB files, and the other is 3 GiB of 1 MiB files. I tested both encrypted volumes and unencrypted volumes. I ran each test three times and took the average.
 
 This was not a perfectly rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test.
 
 To see what benefit I gained over my old NAS, I ran the same tests against my old Synology DS412+.
 
-Performance topped out around 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. The limiting factor is likely the network hardware, as my switch, my desktop's Ethernet port, and the NAS servers' Ethernet ports all max out at 1 Gbps.
+Performance topped out around 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. The limiting factor is likely my networking hardware, as my switch, my desktop, and the NAS servers all have 1 Gbps Ethernet ports.
 
 ### Read performance
 
-{{<img src="read-perf-unencrypted.png" alt="TODO" hasBorder="true">}}
+{{<img src="read-perf-unencrypted.png" hasBorder="true">}}
 
-For unencrypted volumes, I was surprised to my rusty, 7-year-old Synology outperform my shiny, new TrueNAS build. Synology was 31% faster at reading small files and 10% faster on large files.
+For unencrypted volumes, I was surprised to see my rusty, 7-year-old Synology outperform my shiny, new TrueNAS build. Synology was 31% faster at reading small files and 10% faster on large files.
 
-{{<img src="read-perf-encrypted.png" alt="TODO" hasBorder="true">}}
+{{<img src="read-perf-encrypted.png" hasBorder="true">}}
 
-Synology's glory was short-lived, as it completely choked on encryption, dropping speeds by 67-75% on encrypted volumes, whereas encryption had no effect on TrueNAS. That allowed TrueNAS to outperform Synology by 2.3x for small files and 3x for large files on an encrypted volume. I keep most of my data on encrypted volumes, so this test more accurately represents my typical usage.
+Synology's glory was short-lived, as it completely choked on encryption. Synology's read speeds dropped by 67-75% on encrypted volumes, whereas encryption had no effect on TrueNAS. That allowed TrueNAS to outperform Synology by 2.3x for small files and 3x for large files on an encrypted volume. I keep most of my data on encrypted volumes, so this test more accurately represents my typical usage.
 
-Read speeds were surprisingly inconsistent on the TrueNAS for small files. For every other test, performance was consistent to about 5% between trials. When I measured small file reads on TrueNAS, speeds ranged from 33 MiB/s to 54 MiB/s on unencrypted files and 34 MiB/s to 67 MiB/s on encrypted files. I'm not sure where the inconsistency was coming from, as the same tests for 1 GiB files had much less variance.
+Read speeds were surprisingly inconsistent on the TrueNAS for small files. For every other test, performance was consistent to about 5% between trials. When I measured small file reads on TrueNAS, speeds ranged from 33 MiB/s to 67 MiB/s. I'm not sure where the inconsistency was coming from, as the same tests for 1 GiB files had much smaller variance.
 
 ### Write performance
 
-{{<img src="write-perf-unencrypted.png" alt="TODO" hasBorder="true">}}
+{{<img src="write-perf-unencrypted.png" hasBorder="true">}}
 
 Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was 77% faster on small files, and the two systems performed almost identically on 1 GiB files.
 
-{{<img src="write-perf-encrypted.png" alt="TODO" hasBorder="true">}}
+{{<img src="write-perf-encrypted.png" hasBorder="true">}}
 
 Again, bringing encryption into the mix obliterates Synology's write performance. With encryption enabled, TrueNAS was 5.2x faster on small files and 3.2x faster on large files.
 
@@ -414,6 +412,10 @@ I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460
 | Idle | 38 W            | 60 W     |
 | Load | 43 W            | 67 W     |
 
+The new server uses 60% more power than my old Synology, which is a bit surprising. I pay about $0.17/kWh, so the server costs around $7.20/month to run.
+
+I don't know much about what factors drive up the power draw, but one possibility is that Synology can build servers with PSUs perfectly sized to the hardware, whereas my 500 W PSU is likely inefficient at powering a system that requires only 15% of its capacity.
+
 ## Final thoughts
 
 ### Motherboard
@@ -423,8 +425,8 @@ My biggest complaint about the ASUS Prime A320I-K was its limited compatibility,
 Beyond that, I wasn't crazy about the BIOS. Its upgrade utility was completely broken. It's supposed to be able to download and install the latest BIOS versions, but when I tried upgrading, it kept telling me that I had the latest BIOS when I didn't. I had to upgrade manually by downloading the files and loading them on a thumbdirve.
 
 {{<gallery caption="The ASUS EZ Flash utility claimed I had the latest BIOS at version 2203. The ASUS website offered BIOS version 5862, so I had to update manually.">}}
-{{<img src="ez-bios-1.png" alt="TODO" maxWidth="450px">}}
-{{<img src="ez-bios-2.png" alt="TODO" maxWidth="450px">}}
+{{<img src="ez-bios-1.png" alt="Screenshot showing ASUS EZ Flash saying my 2203 BIOS was the latest" maxWidth="450px">}}
+{{<img src="ez-bios-2.png" alt="Screenshot of ASUS website showing BIOS version 5862 available" maxWidth="450px">}}
 {{</gallery>}}
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. I'm not sure if I'll ever need to expand memory, but it would have been good to give myself some more breathing room.
@@ -452,6 +454,10 @@ The most important thing about the CPU was that it supported AMD's Radeon video 
 It's a bit too early to judge disks, so check back in about five years to see how I'm liking them, but so far, so good.
 
 My biggest worry was that they'd be too noisy, but I never hear them at all. The only time I heard them was while running the performance benchmarks. And not during reads or writes, interestingly, but when I was deleting files between tests.
+
+### Power supply unit (PSU)
+
+After seeing that the system idles at 60 W, I'm wondering if I should have put more effort into a lower-capacity power supply. 500 W is over twice the capacity I need, so maybe I could have reduced my server's power usage with a PSU in the 300-400 W range.
 
 ### Disk (OS)
 
