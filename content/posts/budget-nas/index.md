@@ -499,3 +499,7 @@ Overall, I'm enjoying my new NAS, and I learned a lot from this build. If I had 
 ## Video
 
 TODO: Link to YouTube video
+
+---
+
+_Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post._
