@@ -311,11 +311,11 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 {{<img src="all-parts.jpg" alt="Photo of parts in retail packages" caption="All the parts in their retail boxes" maxWidth="600px">}}
 
-{{<img src="motherboard-installed.jpg" alt="Photo of motherboard in the case" caption="It was straightforward to install the ASUS Prime A320-I-K motherboard in the Fractal Design Node 304 case." maxWidth="600px">}}
+{{<img src="motherboard-installed.jpg" alt="Photo of motherboard in the case" caption="I had no issues installing the motherboard in the Fractal Design mini-ITX case." maxWidth="600px">}}
 
 {{<img src="ssd-installed.jpg" alt="Photo of motherboard with M.2 SSD installed" caption="I love installing M.2 SSDs. No wires or rails &mdash; one screw and you're done." maxWidth="600px">}}
 
-{{<img src="psu-installed.jpg" alt="Photo of PSU installed" caption="This is the first case I've ever seen that doesn't expose the back face of the PSU outside of the case. Instead, the case has a short NEMA extension cable that routes the internal PSU to the case's own external power input." maxWidth="600px">}}
+{{<img src="psu-installed.jpg" alt="Photo of PSU installed" caption="This is the first system I've ever built that doesn't expose the back face of the PSU outside of the case. Instead, the case has a short NEMA extension cable that routes the internal PSU to the case's own external power input." maxWidth="600px">}}
 
 {{<gallery caption="It was such a tight squeeze between the motherboard's SATA ports and the PSU that I had to buy special 90-degree slim SATA cables.">}}
 {{<img src="90-degree-sata-installed.jpg" alt="Photo of SATA cables before PSU is installed" maxWidth="500px">}}
@@ -328,27 +328,27 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 ## Building the server with TinyPilot
 
-Longtime readers of this blog will recall that I used the Raspberry Pi to create a tool specifically for building and managing headless servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new TinyPilot Voyager 2.
+Longtime readers of this blog may recall that I used the Raspberry Pi to create a tool specifically for building and managing servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new TinyPilot Voyager 2.
 
 TODO: Photo of Voyager 2
 
-I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image from the TinyPilot browser window.
+I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 
 {{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without ever plugging in a flash drive, keyboard, or monitor." maxWidth="800px" hasBorder="true">}}
 
-The one place where TinyPilot fell down was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the `.CAP` file for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. I hope to support that scenario soon in TinyPilot so that my next BIOS upgrade will be entirely via TinyPilot.
+The one gap I ran into was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the `.CAP` file for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. I hope to add support for that scenario soon so that TinyPilot can handle my next BIOS upgrade.
 
 ## Is this BIOS version incompatible? Or am I an idiot?
 
 When I got all the components installed, the system powered on, but there was no video display.
 
-Oh no! Did I misunderstand what was required for the motherboard's on-board video to work? I did all the usual diagnostics: reseated the RAM, reseated the CPU, checked all cables. Same result.
+Oh no! Did I misunderstand the motherboard's on-board video requirements? I did all the usual diagnostics: reseated the RAM, reseated the CPU, checked all the cables. Same result.
 
-After some panicked Googling, I saw discussion threads saying that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I recalled breezing by that warning when I was selecting parts. "I've done BIOS updates," I thought. They're no big deal!
+After some panicked Googling, I saw mentions that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I recalled seeing that warning when I was selecting parts and breezing right by it. "I've done BIOS updates," I thought. They're no big deal!
 
-I didn't consider how I'd do a BIOS _without a CPU_.
+I didn't consider how I'd upgrade my BIOS _without a CPU_.
 
-I caught a lucky break when I realized the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was [compatible](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) with the ASUS Prime A320. I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
+Luckily, the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was [compatible](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) with the ASUS Prime A320. I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
 {{<img src="boot-2203.jpg" alt="Screenshot of ASUS BIOS at version 2203" caption="I was able to use parts from my old [2017 homelab VM server](/building-a-vm-homelab-2017/) to upgrade the BIOS." maxWidth="800px" hasBorder="true">}}
 
@@ -356,7 +356,7 @@ Strangely, even after I got the system to boot with borrowed parts, the motherbo
 
 {{<img src="a320i-k-compat.png" alt="Screenshot of ASUS support page saying ASUS Prime A320I-K supports Athlon 3000G at version 2203" caption="The ASUS Prime A320I-K [CPU compatibility page](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) claims it's compatible with the Athlon 3000G starting at BIOS version 2203." hasBorder="true">}}
 
-After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging in my HDMI cable into the server's DisplayPort output.
+After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging my HDMI cable into the server's DisplayPort output.
 
 {{<img src="hdmi-vs-dp.jpg" alt="Screenshot of TrueNAS web dashboard" maxWidth="650px" caption="Why did the designers of DisplayPort make it so easy to plug in HDMI cables by mistake?">}}
 
@@ -371,15 +371,13 @@ Normally, I'd accept the blame, but the ASUS BIOS was so flaky that the problem 
 
 ## Performance benchmarks
 
-One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools I can run on the NAS itself that can benchmark local disk writes, but that doesn't reflect real-world usage. Most of my usage is over the network, so a local disk benchmark will completely miss bottlenecks in the networking stack.
+One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that run on the NAS itself to benchmark local disk I/O, but that doesn't reflect real-world usage. Most of my usage is over the network, so a local disk benchmark will completely miss bottlenecks in the networking stack.
 
-I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. The first fileset is 20 GiB of 1 GiB files, and the other is 3 GiB of 1 MiB files. I tested both encrypted volumes and unencrypted volumes. I ran each test three times and took the average.
+I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. This was by no means a rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test. To put the results in perspective, I ran the same tests against my old Synology DS412+.
 
-This was not a perfectly rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test.
+The first fileset was 20 GiB of 1 GiB files, and the other was 3 GiB of 1 MiB files. I took the average of three trials over both encrypted volumes and unencrypted volumes.
 
-To see what benefit I gained over my old NAS, I ran the same tests against my old Synology DS412+.
-
-Performance topped out around 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. The limiting factor is likely my networking hardware, as my switch, my desktop, and the NAS servers all have 1 Gbps Ethernet ports.
+Performance topped out at 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. This suggests that the limiting factor is my networking hardware, as my switch, my desktop, and the NAS servers all have 1 Gbps Ethernet ports.
 
 ### Read performance
 
@@ -397,7 +395,7 @@ Read speeds were surprisingly inconsistent on the TrueNAS for small files. For e
 
 {{<img src="write-perf-unencrypted.png" hasBorder="true">}}
 
-Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was 77% faster on small files, and the two systems performed almost identically on 1 GiB files.
+Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was 77% faster on small files, and the two systems performed similarly on 1 GiB files.
 
 {{<img src="write-perf-encrypted.png" hasBorder="true">}}
 
@@ -405,7 +403,7 @@ Again, bringing encryption into the mix obliterates Synology's write performance
 
 ### Power consumption
 
-I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460.html) to measure power consumption on the server.
+I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460.html) to measure power consumption on both my old Synology and the new TrueNAS server:
 
 |      | Synology DS412+ | 2022 NAS |
 | ---- | --------------- | -------- |
@@ -414,7 +412,7 @@ I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460
 
 The new server uses 60% more power than my old Synology, which is a bit surprising. I pay about $0.17/kWh, so the server costs around $7.20/month to run.
 
-I don't know much about what factors drive up the power draw, but one possibility is that Synology can build servers with PSUs perfectly sized to the hardware, whereas my 500 W PSU is likely inefficient at powering a system that requires only 15% of its capacity.
+I don't know much about what factors drive up the power draw, but one possibility is that Synology likely has a PSU that's perfectly sized to the hardware, whereas my 500 W PSU is likely inefficient at powering a system that requires only 15% of its capacity.
 
 ## Final thoughts
 
@@ -439,11 +437,11 @@ I was disappointed in the Fractal Design Node 304. When I built my VM server wit
 
 It looks nice on the outside, but I found it awkward to work in. There was barely any documentation, and some of the case mechanisms weren't obvious.
 
-It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly, but I was definitely disappointed.
+It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly.
 
 ### CPU
 
-I'm happy with the Athlon 3000G, but it's actually way more powerful than I need. My TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage:
+I'm happy with the Athlon 3000G, but it turned out to be massively overpowered for my needs. My TrueNAS dashboard reports that CPU load has been 99% idle for the past month of usage:
 
 {{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
 
@@ -451,17 +449,17 @@ The most important thing about the CPU was that it supported AMD's Radeon video 
 
 ### Disk (Data)
 
-It's a bit too early to judge disks, so check back in about five years to see how I'm liking them, but so far, so good.
+It's a bit too early to judge disks, so check back in about five years to see how I'm liking them. So far, so good.
 
-My biggest worry was that they'd be too noisy, but I never hear them at all. The only time I heard them was while running the performance benchmarks. And not during reads or writes, interestingly, but when I was deleting files between tests.
+My biggest worry was that the disks would be too noisy, but I never hear them at all. The only time I've heard them was while running the performance benchmarks. Interestingly, they were noisiest not during reads or writes but when I was deleting files between tests.
 
 ### Power supply unit (PSU)
 
-After seeing that the system idles at 60 W, I'm wondering if I should have put more effort into a lower-capacity power supply. 500 W is over twice the capacity I need, so maybe I could have reduced my server's power usage with a PSU in the 300-400 W range.
+After seeing that the system idles at 60 W, I'm wondering if I should have put more effort into a lower-capacity power supply. 500 W is more than double capacity I need, so maybe I could have reduced my server's idle power draw with a PSU in the 300-400 W range.
 
 ### Disk (OS)
 
-The Kingston A400 is working fine. TrueNAS puts such a minimal load on the OS disk that there isn't much for it to do, but it's been fine. It has 90 GB free, so I could have used an even smaller drive.
+The Kingston A400 is working fine. TrueNAS puts such a minimal load on the OS disk that there isn't much for it to do. It has 90 GB free, so I could have used an even smaller drive.
 
 There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of some scheduled task, but that's it.
 
@@ -469,9 +467,9 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 
 ### TrueNAS
 
-Synology's web UI is hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They did a great job of building a clean UI that spares the end-user from technical details of the underlying filesystem.
+Coming into TrueNAS, I knew my Synology's web UI would be hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They did a great job of building a clean UI that spares the end-user from technical details of the underlying filesystem.
 
-TrueNAS has its hacker charm, but I find it a huge step down from Synology in terms of usability. The interface seems designed by someone with a disdain for anything outside the command-line.
+TrueNAS has its hacker charm, but I find it a huge usability downgrade from Synology. The interface seems like it was designed by someone with a disdain for anything outside of the command-line.
 
 {{<gallery caption="The Synology web interface (left) is leaps and bounds ahead of TrueNAS (right).">}}
 {{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" maxWidth="500px">}}
@@ -480,21 +478,21 @@ TrueNAS has its hacker charm, but I find it a huge step down from Synology in te
 
 On TrueNAS, it took me several tries to create a new volume and share it on my network. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, there's a smooth UI flow that guides you through all the required settings.
 
-I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection. Plex is a pre-configured plugin on TrueNAS, so it should be one of the easiest apps to install, but it took me an hour of fiddling and searching through documentation. By comparison, installing Plex on Synology takes about two minutes of clicking through a wizard.
+I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection, and Plex is a pre-configured plugin on TrueNAS. It should be one of the easiest apps to install, but it took me an hour of fiddling and searching through documentation. By comparison, installing Plex on Synology takes about two minutes of clicking through a wizard.
 
 I'm sticking with TrueNAS because I care more about platform lock-in than almost anything else, and I like supporting open-source software. If I were recommending a NAS to a friend who wasn't as ideologically driven, I'd suggest Synology.
 
 ### ZFS
 
-ZFS is cool, but I actually haven't found a need for most of its features beyond RAID.
+ZFS is cool, but I haven't found a need for most of its features beyond RAID.
 
-I see people talking about snapshotting, but I haven't found a need for it. I already have snapshots in my restic backup solution. They're not especially convenient, but I've been using restic for two years, and I only recall needing to find a snapshot once.
+I see people talking about snapshotting, but I haven't found a need for it. I already have snapshots in my restic backup solution. They're not especially convenient, but I've been using restic for two years, and I only recall needing to recover data from a snapshot once.
 
 One interesting feature is encrypted snapshots. You can take snapshots of a data volume without having to decrypt it. I have some data that I want to keep encrypted, but I don't need to access it very often, so being able to back it up regularly without decrypting it would be handy.
 
 ### Overall
 
-Overall, I'm enjoying my new NAS, and I learned a lot from this build. If I had started with this system seven years ago, I'd be miserable and confused, but the Synology was a gentle introduction to NAS technologies. I feel like the training wheels are off, and I'm ready to tinker with the power features of ZFS and TrueNAS.
+Overall, I'm enjoying my new NAS, and I learned a lot from this build. If this had been my first experience with a NAS, I'd be miserable and confused, but starting with my Synology gave me a gentle introduction to the technologies involved. I feel like the training wheels are off, and I'm ready to tinker with the power features of ZFS and TrueNAS.
 
 ## Video
 
