@@ -43,17 +43,15 @@ The month's theme is, "this took a little longer than I expected." The release i
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | March 2022                              | April 2022                                 | Change                                          |
-| ------------------------ | --------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
-| Unique Visitors          | 6,212                                   | 5,268                                      | <font color="red">-944 (-15%)</font>            |
-| Total Pageviews          | 13,375                                  | 11,974                                     | <font color="red">-1,401 (-10%)</font>          |
-| Sales Revenue            | $65,171.82                              | $43,771.00                                 | <font color="red">-$21,400.82 (-33%)</font>     |
-| Enterprise Subscriptions | $47.75                                  | $47.75                                     | 0                                               |
-| Royalties                | $4,012.83                               | $2,253.61                                  | <font color="red">-$1,759.22 (-44%)</font>      |
-| Total Revenue            | $69,232.40                              | $46,072.36                                 | <font color="red">-$23,160.04 (-33%)</font>     |
-| **Profit**               | **<font color="red">$-3,043.34</font>** | **<font color="red">$-17,203.28</font>**\* | **<font color="red">-$14,159.94 (inf%)</font>** |
-
-\* April profit is just a rough estimate based on the delta in my checking account until I do monthly bookkeeping.
+| Metric                   | March 2022     | April 2022                               | Change                                          |
+| ------------------------ | -------------- | ---------------------------------------- | ----------------------------------------------- |
+| Unique Visitors          | 6,212          | 5,268                                    | <font color="red">-944 (-15%)</font>            |
+| Total Pageviews          | 13,375         | 11,974                                   | <font color="red">-1,401 (-10%)</font>          |
+| Sales Revenue            | $65,171.82     | $43,771.00                               | <font color="red">-$21,400.82 (-33%)</font>     |
+| Enterprise Subscriptions | $47.75         | $47.75                                   | 0                                               |
+| Royalties                | $4,012.83      | $2,253.61                                | <font color="red">-$1,759.22 (-44%)</font>      |
+| Total Revenue            | $69,232.40     | $46,072.36                               | <font color="red">-$23,160.04 (-33%)</font>     |
+| **Profit**               | **$-3,043.34** | **<font color="red">$-19,392.76</font>** | **<font color="red">-$16,349.42 (inf%)</font>** |
 
 April was a rough month for TinyPilot. Sales dropped to their lowest levels in six months, both in the US and with our EU distributor. Usually, about $5-10k in revenue each month comes from a handful of large orders, but we didn't see any of those in April.
 
