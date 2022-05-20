@@ -13,10 +13,6 @@ date: "2022-05-15"
 <!-- Disable linter complaints about duplicate headers -->
 <!-- markdownlint-disable MD024 -->
 
-{{<notice type="info">}}
-**Note**: This is still a rough draft. Please do not distribute this link.
-{{</notice>}}
-
 This year, I decidded to build my first ever home storage server. It's a 32 TB system that stores all of my personal and business data with open-source software.
 
 The server itself cost $531, and I bought four disks for $732, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
@@ -67,7 +63,7 @@ There are off-the-shelf solutions that offer similar functionality with a gentle
 
 Before building my own homelab NAS, I used a 4-disk [Synology DS412+](https://www.newegg.com/synology-ds412/p/N82E16822108113) for seven years. Honestly, I loved my Synology. It was one of the best purchases I ever made. It was a gentle introduction to the world of NAS servers, and it's where I'd recommend you start if you're not sure about the whole NAS thing.
 
-TODO: Photo of DS412
+{{<img src="ds412-plus.jpg" alt="Photo of Synology DS412+ on my shelf" caption="My 10 TB Synology DS412+ has served me well for seven years." maxWidth="600px">}}
 
 A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data on your disks unless you buy another Synology sytem.
 
@@ -328,9 +324,9 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 ## Building the server with TinyPilot
 
-Longtime readers of this blog may recall that I used the Raspberry Pi to create a tool specifically for building and managing servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new TinyPilot Voyager 2.
+Longtime readers of this blog may recall that I used the Raspberry Pi to create a tool specifically for building and managing servers. It's called [TinyPilot](/tinypilot/). This was the third server I've built with TinyPilot and the first I built with the new [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2?ref=mtlynch.io).
 
-TODO: Photo of Voyager 2
+{{<img src="voyager2-install.jpg" alt="Photo of Voyager 2 PoE device on top of TrueNAS server" caption="Instead of connecting a keyboard, mouse, and monitor to the TrueNAS server, I managed the installation with a [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2?ref=mtlynch.io)." maxWidth="600px">}}
 
 I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 
