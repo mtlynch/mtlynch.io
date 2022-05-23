@@ -155,7 +155,7 @@ I chose the [ASUS Prime A320I-K](https://www.asus.com/Motherboards-Components/Mo
 
 {{<notice type="danger">}}
 
-**Warning**: I regret this choice of motherboard. See more discussion [below](http://blog:1313/budget-nas/#motherboard-1).
+**Warning**: I regret this choice of motherboard. See more discussion [below](/budget-nas/#motherboard-1).
 
 {{</notice>}}
 
