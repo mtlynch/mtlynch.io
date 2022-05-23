@@ -4,7 +4,8 @@ tags:
   - virtualization
   - homelab
   - truenas
-description: TODO
+  - tinypilot
+description: How I chose parts, built, and configured my first custom home storage server.
 images:
   - budget-nas/og-cover.jpg
 date: "2022-05-15"
@@ -13,9 +14,9 @@ date: "2022-05-15"
 <!-- Disable linter complaints about duplicate headers -->
 <!-- markdownlint-disable MD024 -->
 
-This year, I decidded to build my first ever home storage server. It's a 32 TB system that stores all of my personal and business data with open-source software.
+This year, I decided to build my first ever home storage server. It's a 32 TB system that stores my personal and business data using open-source software.
 
-The server itself cost $531, and I bought four disks for $732, bringing the total cost to $1,263. It's similar in price to off-the shelf storage servers, but it offers significantly more power and customizability.
+The server itself cost $531, and I bought four disks for $732, bringing the total cost to $1,263. It's similar in price to off-the-shelf storage servers, but it offers more power and customizability.
 
 In this post, I'll walk through how I chose the parts, what mistakes I made, and my recommendations for anyone interested in building their own.
 
@@ -33,6 +34,8 @@ In this post, I'll walk through how I chose the parts, what mistakes I made, and
 
 If you'd prefer a video explanation instead, I recorded one on YouTube.
 
+{{<youtube q_Mi5LrnIiU>}}
+
 ## Background
 
 ### Why build a NAS server?
@@ -45,7 +48,7 @@ I enjoy decoupling data storage from my computers. I upgrade my main workstation
 
 I also have a _lot_ of data. I'm a [data hoarder](https://www.reddit.com/r/DataHoarder/), so I keep every digital photo I've ever taken, every email I've sent or received in the last 20 years, and source code for every personal project I've ever started. The total is currently 8.5 TB.
 
-The biggest data source is my my DVD and Blu-Ray collection. I don't like relying on streaming services to keep my favorite content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip the raw image and make a streamable video file. Between the raw ISO copy and the streamable MP4s, a single disc can occupy 60 GB of disk space.
+The biggest data source is my DVD and Blu-Ray collection. I don't like relying on streaming services to keep my favorite content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip the raw image and make a streamable video file. Between the raw ISO copy and the streamable MP4s, a single disc can occupy 60 GB of disk space.
 
 {{<img src="dvd-collection.jpg" alt="Photo of two 500-disc binders of DVDs and Blu-Rays" maxWidth="600px" caption="I still buy physical DVDs or Blu-Rays for anything I might watch a second time.">}}
 
@@ -53,11 +56,11 @@ The biggest data source is my my DVD and Blu-Ray collection. I don't like relyin
 
 "Homelab" is a colloquial term that's grown in popularity in the last few years.
 
-A homelab is a place in your home where you can experiment with IT hardware or software that you'd normally find in an office or data center. It can serve as a practice environment for new professional skills, or it can just be a place to play with interesting technology.
+A homelab is a place in your home where you can experiment with IT hardware or software that you'd typically find in an office or data center. It can serve as a practice environment for new professional skills, or it can just be a place to play with interesting technology.
 
 ### Why build your own NAS?
 
-If you're new to the homelab world, or you have no experience building PCs, I recommend that you **don't build your own NAS**.
+If you're new to the homelab world or have no experience building PCs, I recommend that you **don't build your own NAS**.
 
 There are off-the-shelf solutions that offer similar functionality with a gentler learning curve.
 
@@ -65,9 +68,9 @@ Before building my own homelab NAS, I used a 4-disk [Synology DS412+](https://ww
 
 {{<img src="ds412-plus.jpg" alt="Photo of Synology DS412+ on my shelf" caption="My 10 TB Synology DS412+ has served me well for seven years." maxWidth="600px">}}
 
-A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data on your disks unless you buy another Synology sytem.
+A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data without another Synology system.
 
-Fortunately, my old Synology recovered after I cleaned it out and re-seated the disks, but it was an important wake-up call. I decided to switch to something open source and using open standards for storage, so I decided on TrueNAS.
+Fortunately, my old Synology recovered after I cleaned it out and reseated the disks, but it was an important wake-up call. I decided to switch to TrueNAS, as it offers an open-source implementation of an open storage format.
 
 ### TrueNAS and ZFS
 
@@ -94,11 +97,11 @@ When I bought my Synology NAS, I initially installed three 4 TB drives and left 
 
 I decided to apply the same strategy for my new build. I wanted to build a system that met my current needs with room to grow. My rough target was to start with 20 TB of usable storage and capacity for up to 30 TB if I add disks later.
 
-ZFS doesn't let you add a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully, by the time I need to exand storage, the feature will be available in TrueNAS.
+ZFS doesn't let you add a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully, by the time I need to expand storage, the feature will be available in TrueNAS.
 
 ### Many small disks or fewer large disks?
 
-ZFS is designed to survive disk failures, so it stores each block of data redundantly. This feature makes capacity planning a bit complicated because your total usable storage is no longer the sum of each disk's capacity.
+ZFS is designed to survive disk failures, so it stores each block of data redundantly. This feature complicates capacity planning because your total usable storage is no longer the sum of each disk's capacity.
 
 ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the more efficiently ZFS can use their storage capacity. For example, if you give ZFS two 10 TB drives, you [can only use half of your total disk capacity](https://wintelguy.com/zfs-calc.pl). If you instead use five 4 TB drives, ZFS gives you 14 TB of usable storage. Even though your total disk space is the same in either scenario, the five smaller drives give you 40% more usable space.
 
@@ -128,7 +131,7 @@ The more physical drives you have, the more defensive you should be about disk f
 
 ### Preventing concurrent disk failures
 
-Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at a rate of 0.5-4% per year. A 4% risk per year is 2% chance in any given week. Two simultaneous failure would happen once every 48 years.
+Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 2% chance in any given week. Two simultaneous failures would happen once every 48 years.
 
 The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and have the same operating age. Given this, I did what I could to reduce the risk of concurrent disk failures.
 
@@ -156,7 +159,7 @@ I chose the [ASUS Prime A320I-K](https://www.asus.com/Motherboards-Components/Mo
 
 {{</notice>}}
 
-I also looked at the [B450](https://www.newegg.com/asus-rog-strix-b450-i-gaming/p/N82E16813119143), which was very similar, but it was almost twice the price. The main advantage seemed to be better overclocking support, which I didn't need.
+I also looked at the [B450](https://www.newegg.com/asus-rog-strix-b450-i-gaming/p/N82E16813119143), which was very similar but almost twice the price. The main advantage seemed to be better overclocking support, which I didn't need.
 
 ### CPU
 
@@ -166,7 +169,7 @@ The important thing to me was to find a CPU that supported Radeon graphics so th
 
 {{<img src="amd-3000g.jpg" alt="Photo of AMD Athlon 3000G" maxWidth="600px" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
 
-I settled on the AMD Athlon 3000G. At only $105 it's a good value, it supports Radeon graphics, and it has decent [CPU benchmarks](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3614).
+I settled on the AMD Athlon 3000G. At only $105, it's a good value, it supports Radeon graphics, and it has decent [CPU benchmarks](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3614).
 
 ### Case
 
@@ -182,7 +185,7 @@ With six drive bays available in the case, I decided to start with four 8 TB dis
 
 In the 8 TB range, there aren't many drives below 7200 RPM, but you can go up to 10k RPM. For my NAS, speeds above 7200 RPM wouldn't make a difference because the bottleneck is the network. A 10k RPM drive would be louder and consume more power but offer no practical gain in performance.
 
-I initially tried checking [Backblaze's hard drive stats](https://www.backblaze.com/blog/backblaze-drive-stats-for-2021/) to avoid failure-prone disks, but they use drives on the pricier side. At one point, I was considering $400 drives for their impressively low 0.5% failure rate, and then I realized it's irrational to spend twice as much money to reduce failure rate by a few percent.
+I initially tried checking [Backblaze's hard drive stats](https://www.backblaze.com/blog/backblaze-drive-stats-for-2021/) to avoid failure-prone disks, but they use drives on the pricier side. At one point, I was considering $400 drives for their impressively low 0.5% failure rate, but I realized it's irrational to spend twice as much to reduce the failure rate by a few percent.
 
 The last pitfall to avoid is shingled magnetic recording (SMR) technology. ZFS [performs poorly on SMR drives](https://www.servethehome.com/wd-red-smr-vs-cmr-tested-avoid-red-smr/), so if you're building a NAS, avoid [known SMR drives](https://www.truenas.com/community/resources/list-of-known-smr-drives.141/). If the drive is labeled as CMR, that's conventional magnetic recording, which is fine for ZFS.
 
@@ -205,7 +208,7 @@ I went with the [Kingston A400](https://www.newegg.com/kingston-a400-120gb/p/N82
 
 In my research, I frequently found references to the "rule" that ZFS requires 1 GB of RAM for every TB of disk space in the system. According to ZFS developer Richard Yao, [that rule is incorrect](https://www.reddit.com/r/DataHoarder/comments/5u3385/linus_tech_tips_unboxes_1_pb_of_seagate/ddrngar/). There are some RAM-hungry ZFS features like data deduplication, but ZFS [runs fine with constrained memory](https://www.reddit.com/r/DataHoarder/comments/3s7vrd/so_you_think_zfs_needs_a_ton_of_ram_for_a_simple/).
 
-I find memory extremely boring to shop for. I wish I had a more rigorous process for choosing RAM, but I couldn't find trustworthy bechmarks or user reports for RAM. My process was:
+I find memory extremely boring to shop for. I wish I had a more rigorous process for choosing RAM, but I couldn't find trustworthy benchmarks or user reports for RAM. My process was:
 
 1. Review the list of RAM sticks [compatible with the ASUS A320I-K motherboard](https://www.asus.com/Motherboards-Components/Motherboards/CSM/PRIME-A320I-K-CSM/HelpDesk_QVL/)
 1. Filter for 32 GB or 64 GB options that used only two sticks
@@ -217,16 +220,6 @@ That process led me to the [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 1
 {{<img src="corsair-vengeance.jpg" alt="Photo of CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 RAM" maxWidth="600px" caption="The [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 16GB)](https://www.newegg.com/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820233854) is compatible with the A320I-K motherboard and is a decent price for 32 GB.">}}
 
 ### Power supply unit (PSU)
-
-When purchasing a PSU, my criteria are:
-
-- cable modularity
-- power capacity
-- efficiency
-
-Cable modularity refers to how much control you have over the PSU's cabling. Non-modular PSUs come with every cable you could possibly need permanantly attached. If you don't need some cables, you just have to tuck them away someplace in the case. Full modular PSUs are the opposite &mdash; each cable is removable, so you only need to install the cables you need. Semi-modular is the happy medium where you can attach and remove cables a la carte, but they're grouped together more than they are with a fully modular PSU.
-
-I wanted a modular PSU to minimize cable clutter, especially since my NAS has so few components that require power. I only needed to power the motherboard, CPU, and disks. For me, the difference between a fully modular and semi-modular PSU is that fully modular would have provided me separate cables for motherboard and CPU. I preferred fewer distinct cables, so I went with semi-modular.
 
 In terms of power capacity, basically any consumer PSU would have been sufficient. According to [PCPartPicker](https://pcpartpicker.com/), my system only requires 218 W. I would have picked a PSU in the 300-400 W range, but there weren't semi-modular options in that range. I went with the 500 W [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101).
 
@@ -252,13 +245,13 @@ With scarce physical space and motherboard ports, I didn't want a dedicated grap
 
 Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
-Using an HBA with ZFS requires [reflash the firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing. I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
+Using an HBA with ZFS requires you to [reflash the firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing. I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
 
 ### ECC RAM
 
 In researching different TrueNAS builds, I saw several posts claiming that ECC RAM (error correction code RAM) is a must-have to prevent data corruption. I ultimately decided against ECC RAM and just used standard, consumer-grade RAM.
 
-While I obviously don't want my server to corrupt my data in RAM, I've also been using computers for the past 30 years without ECC RAM, and I've never noticed data corruption. If I was building a server for heavy load from multiple users all day, then I'd spring for a build with ECC RAM. For home needs, I think simple consumer-grade RAM should be fine.
+While I obviously don't want my server to corrupt my data in RAM, I've also been using computers for the past 30 years without ECC RAM, and I've never noticed data corruption. If I were building a server for heavy load from multiple users all day, I'd spring for a build with ECC RAM. For home needs, I think simple consumer-grade RAM should be fine.
 
 ### SLOG disk
 
@@ -309,7 +302,7 @@ The total cost of my build is similar to off-the-shelf solutions, but I get more
 
 {{<img src="motherboard-installed.jpg" alt="Photo of motherboard in the case" caption="I had no issues installing the motherboard in the Fractal Design mini-ITX case." maxWidth="600px">}}
 
-{{<img src="ssd-installed.jpg" alt="Photo of motherboard with M.2 SSD installed" caption="I love installing M.2 SSDs. No wires or rails &mdash; one screw and you're done." maxWidth="600px">}}
+{{<img src="ssd-installed.jpg" alt="Photo of motherboard with M.2 SSD installed" caption="I love installing M.2 SSDs. No wires or rails &mdash; one screw, and you're done." maxWidth="600px">}}
 
 {{<img src="psu-installed.jpg" alt="Photo of PSU installed" caption="This is the first system I've ever built that doesn't expose the back face of the PSU outside of the case. Instead, the case has a short NEMA extension cable that routes the internal PSU to the case's own external power input." maxWidth="600px">}}
 
@@ -330,15 +323,15 @@ Longtime readers of this blog may recall that I used the Raspberry Pi to create 
 
 I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 
-{{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without ever plugging in a flash drive, keyboard, or monitor." maxWidth="800px" hasBorder="true">}}
+{{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without plugging in a flash drive, keyboard, or monitor." maxWidth="800px" hasBorder="true">}}
 
-The one gap I ran into was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the `.CAP` file for the ASUS BIOS upgrade, I shamefully put them on a USB thumbdrive instead of keeping it a pure TinyPilot build. I hope to add support for that scenario soon so that TinyPilot can handle my next BIOS upgrade.
+The one gap I ran into was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the `.CAP` file for the ASUS BIOS upgrade, I shamefully put them on a USB thumb drive instead of keeping it a pure TinyPilot build. I hope to add support for that scenario soon so that TinyPilot can handle my next BIOS upgrade.
 
 ## Is this BIOS version incompatible? Or am I an idiot?
 
 When I got all the components installed, the system powered on, but there was no video display.
 
-Oh no! Did I misunderstand the motherboard's on-board video requirements? I did all the usual diagnostics: reseated the RAM, reseated the CPU, checked all the cables. Same result.
+Oh no! Did I misunderstand the motherboard's onboard video requirements? I did all the usual diagnostics: reseated the RAM, reseated the CPU, and checked all the cables &mdash; same result.
 
 After some panicked Googling, I saw mentions that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I recalled seeing that warning when I was selecting parts and breezing right by it. "I've done BIOS updates," I thought. They're no big deal!
 
@@ -354,7 +347,7 @@ Strangely, even after I got the system to boot with borrowed parts, the motherbo
 
 After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging my HDMI cable into the server's DisplayPort output.
 
-{{<img src="hdmi-vs-dp.jpg" alt="Screenshot of TrueNAS web dashboard" maxWidth="650px" caption="Why did the designers of DisplayPort make it so easy to plug in HDMI cables by mistake?">}}
+{{<img src="hdmi-vs-dp.jpg" alt="Screenshot of TrueNAS web dashboard" maxWidth="650px" caption="Why did the DisplayPort designers make it so easy to plug in HDMI cables by mistake?">}}
 
 Was this whole parts-borrowing rigamarole even necessary? There are two possibilities:
 
@@ -371,7 +364,7 @@ One of the surprises to me in writing this up is that I couldn't find any good b
 
 I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. This was by no means a rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test. To put the results in perspective, I ran the same tests against my old Synology DS412+.
 
-The first fileset was 20 GiB of 1 GiB files, and the other was 3 GiB of 1 MiB files. I took the average of three trials over both encrypted volumes and unencrypted volumes.
+The first file set was 20 GiB of 1 GiB files, and the other was 3 GiB of 1 MiB files. I took the average of three trials over both encrypted volumes and unencrypted volumes.
 
 Performance topped out at 111 MiB/s (931 Mbps), which is suspiciously close to 1 Gbps. This suggests that the limiting factor is my networking hardware, as my switch, my desktop, and the NAS servers all have 1 Gbps Ethernet ports.
 
@@ -441,7 +434,7 @@ I'm happy with the Athlon 3000G, but it turned out to be massively overpowered f
 
 {{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
 
-The most important thing about the CPU was that it supported AMD's Radeon video technology, which meant that I didn't need a separate GPU, and it served that purposed. For $105, it was a great deal.
+The most important thing about the CPU was that it supported AMD's Radeon video technology, which meant that I didn't need a separate GPU, and it served that purpose. For $105, it was a great deal.
 
 ### Disk (Data)
 
@@ -451,7 +444,7 @@ My biggest worry was that the disks would be too noisy, but I never hear them at
 
 ### Power supply unit (PSU)
 
-After seeing that the system idles at 60 W, I'm wondering if I should have put more effort into a lower-capacity power supply. 500 W is more than double capacity I need, so maybe I could have reduced my server's idle power draw with a PSU in the 300-400 W range.
+After seeing that the system idles at 60 W, I'm wondering if I should have put more effort into a lower-capacity power supply. 500 W is more than double the capacity I need, so maybe I could have reduced my server's idle power draw with a PSU in the 300-400 W range.
 
 ### Disk (OS)
 
@@ -465,14 +458,14 @@ There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read
 
 Coming into TrueNAS, I knew my Synology's web UI would be hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They did a great job of building a clean UI that spares the end-user from technical details of the underlying filesystem.
 
-TrueNAS has its hacker charm, but I find it a huge usability downgrade from Synology. The interface seems like it was designed by someone with a disdain for anything outside of the command-line.
+TrueNAS has its hacker charm, but I find it a huge usability downgrade from Synology. The interface seems like it was designed by someone with disdain for anything outside of the command line.
 
 {{<gallery caption="The Synology web interface (left) is leaps and bounds ahead of TrueNAS (right).">}}
 {{<img src="synology-dashboard.png" alt="Screenshot of Synology web dashboard" maxWidth="500px">}}
 {{<img src="truenas-dashboard.png" alt="Screenshot of TrueNAS web dashboard" maxWidth="500px">}}
 {{</gallery>}}
 
-On TrueNAS, it took me several tries to create a new volume and share it on my network. You have to jump between several disconnected menus, and there's no hints about what action you need to perform next. With Synology, there's a smooth UI flow that guides you through all the required settings.
+On TrueNAS, it took me several tries to create a new volume and share it on my network. You have to jump between several disconnected menus, and there aren't any hints about what action you need to perform next. With Synology, there's a smooth UI flow that guides you through all the required settings.
 
 I found third-party apps _much_ harder to install on TrueNAS. I use Plex Media Server to stream my movie and TV collection, and Plex is a pre-configured plugin on TrueNAS. It should be one of the easiest apps to install, but it took me an hour of fiddling and searching through documentation. By comparison, installing Plex on Synology takes about two minutes of clicking through a wizard.
 
@@ -492,8 +485,8 @@ Overall, I'm enjoying my new NAS, and I learned a lot from this build. If this h
 
 ## Video
 
-TODO: Link to YouTube video
+{{<youtube q_Mi5LrnIiU>}}
 
 ---
 
-_Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post._
+_Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._
