@@ -32,7 +32,7 @@ In this post, I'll walk through how I chose the parts, what mistakes I made, and
 {{<img src="completed-build.jpg" alt="Photo of completed server build" maxWidth="450px">}}
 {{</gallery>}}
 
-If you'd prefer a video explanation instead, I recorded one on YouTube.
+If you'd prefer a video explanation, I recorded one on YouTube.
 
 {{<youtube q_Mi5LrnIiU>}}
 
@@ -40,13 +40,13 @@ If you'd prefer a video explanation instead, I recorded one on YouTube.
 
 ### Why build a NAS server?
 
-NAS stands for [network-attached storage](https://en.wikipedia.org/wiki/Network-attached_storage). A NAS server is just a server whose primary job is storing data and making it available to other computers on your network.
+NAS stands for [network-attached storage](https://en.wikipedia.org/wiki/Network-attached_storage). A NAS server's primary job is storing data and making it available to other computers on your network.
 
-But every computer stores data. Why have a whole dedicated server for data?
+So, why have a whole dedicated server for data? After all, every computer stores data.
 
-I enjoy decoupling data storage from my computers. I upgrade my main workstation and laptop every two to three years, and migrating my data between computers was always a pain. A dedicated storage server eliminates most data migrations and facilitates sharing files between my systems.
+I find it helpful to decouple data storage from my other systems. I upgrade my main workstation and laptop every two to three years, and migrating my data between computers was always a pain. A dedicated storage server eliminates most data migrations and facilitates sharing files between my systems.
 
-I also have a _lot_ of data. I'm a [data hoarder](https://www.reddit.com/r/DataHoarder/), so I keep every digital photo I've ever taken, every email I've sent or received in the last 20 years, and source code for every personal project I've ever started. The total is currently 8.5 TB.
+I also have a _lot_ of data. I'm a [data hoarder](https://www.reddit.com/r/DataHoarder/), so I keep every digital photo I've ever taken, every email I've sent or received in the last 20 years, and source code for all of my personal projects. The total is currently 8.5 TB.
 
 The biggest data source is my DVD and Blu-Ray collection. I don't like relying on streaming services to keep my favorite content available, so I still buy physical copies of movies and TV shows. As soon as I get a new disc, I rip the raw image and make a streamable video file. Between the raw ISO copy and the streamable MP4s, a single disc can occupy 60 GB of disk space.
 
@@ -95,13 +95,13 @@ Before building this system, I had zero experience with ZFS, so I was excited to
 
 When I bought my Synology NAS, I initially installed three 4 TB drives and left the fourth slot empty. That gave me a total of 7 TB of usable space with Synology Hybrid Raid. Three years later, I was running out of space, so I added a fourth drive, bringing my total usable space to 10 TB.
 
-I decided to apply the same strategy for my new build. I wanted to build a system that met my current needs with room to grow. My rough target was to start with 20 TB of usable storage and capacity for up to 30 TB if I add disks later.
+I decided to apply the same strategy for my new build. I wanted a system that met my current needs with room to grow. My rough target was to start with 20 TB of usable storage and extra headroom for up to 30 TB if I add disks later.
 
 ZFS doesn't let you add a new drive to an existing pool, but that feature is [under active development](https://github.com/openzfs/zfs/pull/12225). Hopefully, by the time I need to expand storage, the feature will be available in TrueNAS.
 
 ### Many small disks or fewer large disks?
 
-ZFS is designed to survive disk failures, so it stores each block of data redundantly. This feature complicates capacity planning because your total usable storage is no longer the sum of each disk's capacity.
+ZFS is designed to survive disk failures, so it stores each block of data redundantly. This feature complicates capacity planning because your total usable storage is not just the sum of each disk's capacity.
 
 ZFS creates filesystems out of "pools" of disks. The more disks in the pool, the more efficiently ZFS can use their storage capacity. For example, if you give ZFS two 10 TB drives, you [can only use half of your total disk capacity](https://wintelguy.com/zfs-calc.pl). If you instead use five 4 TB drives, ZFS gives you 14 TB of usable storage. Even though your total disk space is the same in either scenario, the five smaller drives give you 40% more usable space.
 
@@ -125,17 +125,17 @@ I chose raidz1. With only a handful of disks, the odds of two drives failing sim
 
 Keep in mind that [ZFS is not a backup strategy](https://www.raidisnotabackup.com/). ZFS can protect you against disk failure, but there are many threats to your data that ZFS won't mitigate, such as accidental deletion, malware, or physical theft. I use [restic](https://restic.net) to replicate everything important to encrypted cloud backups.
 
-The value of ZFS is that I don't have to resort to my cloud backups if one drive dies. With raidz1, I'll have to recover from backups if two drives fail. That would be a pain, but it's not worth giving up 20% of my server's usable storage for raidz2.
+The value of ZFS is that I don't have to resort to my cloud backups if one drive dies, but I'll have to recover from backups if two drives fail. That would be a pain, but it's not worth giving up 20% of my server's usable storage for raidz2.
 
 The more physical drives you have, the more defensive you should be about disk failure. If I had a pool of 20 disks, I'd probably use raidz2 or raidz3.
 
 ### Preventing concurrent disk failures
 
-Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 2% chance in any given week. Two simultaneous failures would happen once every 48 years.
+Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 2% chance in any given week. Two simultaneous failures would happen once every 48 years, so I should be fine, right?
 
-The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and have the same operating age. Given this, I did what I could to reduce the risk of concurrent disk failures.
+The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and processed the same workloads. Given this, I did what I could to reduce the risk of concurrent disk failures.
 
-I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks in the same manufacturing batch, I bought the disks from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
+I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks from the same manufacturing batch, I bought them from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
 {{<img src="ironwolf-disks.jpg" alt="Photo of me holding Seagate IronWolf drives with different packaging" maxWidth="700px" caption="I purchased the same model of disk from two different vendors to decrease the chances of getting two disks from the same manufacturing batch.">}}
 
@@ -143,7 +143,7 @@ I chose two different models of disk from two different manufacturers. To reduce
 
 ### Motherboard
 
-The first decision was motherboard size. I've always appreciated my Synology DS412+'s nice and compact form factor. I've never built a computer with a mini-ITX motherboard before, and this seemed like a good opportunity.
+The first decision was motherboard size. I've always appreciated my Synology DS412+'s compact form factor. I've never built a computer with a mini-ITX motherboard before, and this seemed like a good opportunity.
 
 I chose the [ASUS Prime A320I-K](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/) for a few reasons:
 
@@ -163,9 +163,9 @@ I also looked at the [B450](https://www.newegg.com/asus-rog-strix-b450-i-gaming/
 
 ### CPU
 
-From what I had read, ZFS is not very CPU-intensive. I ran a basic test by installing TrueNAS on a cheap Dell OptiPlex 7040 mini PC. It barely used the CPU, so it seemed safe to go with a low-powered CPU.
+From what I had read, ZFS is not very CPU-intensive. I ran a basic test by installing TrueNAS on a cheap Dell OptiPlex 7040 mini PC. It barely used the CPU, so it seemed safe to go with a low-powered option.
 
-The important thing to me was to find a CPU that supported Radeon graphics so that I could use the A320 motherboard's onboard HDMI output.
+My main criteria in a CPU was support for Radeon graphics so that I could use the A320 motherboard's onboard HDMI output.
 
 {{<img src="amd-3000g.jpg" alt="Photo of AMD Athlon 3000G" maxWidth="600px" caption="The AMD Athlon 3000G is inexpensive and has native graphics support.">}}
 
@@ -175,7 +175,7 @@ I settled on the AMD Athlon 3000G. At only $105, it's a good value, it supports 
 
 When I built my last VM server, I [used a Fractal Design case](/building-a-vm-homelab/#case). It's my favorite computer case ever, so I returned to Fractal Design on this build.
 
-I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which allows me to start with enough drives now with room to grow in the future.
+I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which allows me to start with enough drives and still have room to grow in the future.
 
 {{<img src="fractal-design-304.jpg" alt="Fractal Design Node 304 Black case" maxWidth="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
 
@@ -198,7 +198,7 @@ I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/
 
 ### Disk (OS)
 
-I need a dedicated disk to install the TrueNAS OS, but from what I'd read, TrueNAS doesn't demand much of its OS disk. The OS needs at least 2 GB of space, but TrueNAS doesn't read or write much to the OS disk.
+TrueNAS needs a dedicated OS disk, but from what I'd read, it doesn't demand much of it. The OS needs at least 2 GB of space, but TrueNAS infrequently reads or writes to the OS disk.
 
 {{<img src="kingston-a400.jpg" alt="Kingston A400" maxWidth="600px" caption="The [Kingston A400](https://www.newegg.com/kingston-a400-120gb/p/N82E16820242474) is a fantastic value as a 120 GB M.2 SSD for only $32.">}}
 
@@ -206,7 +206,7 @@ I went with the [Kingston A400](https://www.newegg.com/kingston-a400-120gb/p/N82
 
 ### Memory
 
-In my research, I frequently found references to the "rule" that ZFS requires 1 GB of RAM for every TB of disk space in the system. According to ZFS developer Richard Yao, [that rule is incorrect](https://www.reddit.com/r/DataHoarder/comments/5u3385/linus_tech_tips_unboxes_1_pb_of_seagate/ddrngar/). There are some RAM-hungry ZFS features like data deduplication, but ZFS [runs fine with constrained memory](https://www.reddit.com/r/DataHoarder/comments/3s7vrd/so_you_think_zfs_needs_a_ton_of_ram_for_a_simple/).
+In my research, I frequently found references to the "rule" that ZFS requires 1 GB of RAM for every TB of disk space in the system. According to ZFS developer Richard Yao, [that rule is a myth](https://www.reddit.com/r/DataHoarder/comments/5u3385/linus_tech_tips_unboxes_1_pb_of_seagate/ddrngar/). There are some RAM-hungry ZFS features like data deduplication, but ZFS [runs fine with constrained memory](https://www.reddit.com/r/DataHoarder/comments/3s7vrd/so_you_think_zfs_needs_a_ton_of_ram_for_a_simple/).
 
 I find memory extremely boring to shop for. I wish I had a more rigorous process for choosing RAM, but I couldn't find trustworthy benchmarks or user reports for RAM. My process was:
 
@@ -221,7 +221,7 @@ That process led me to the [CORSAIR Vengeance LPX 32GB CMK32GX4M2A2400C14 (2 x 1
 
 ### Power supply unit (PSU)
 
-In terms of power capacity, basically any consumer PSU would have been sufficient. According to [PCPartPicker](https://pcpartpicker.com/), my system only requires 218 W. I would have picked a PSU in the 300-400 W range, but there weren't semi-modular options in that range. I went with the 500 W [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101).
+In terms of power capacity, basically any consumer PSU would have been sufficient. According to [PCPartPicker](https://pcpartpicker.com/), my system only requires 218 W. I would have picked a PSU in the 300-400 W range, but there weren't semi-modular options with lower wattage. I went with the 500 W [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101).
 
 {{<img src="evga-psu.jpg" alt="EVGA 110-BQ-0500-K1" maxWidth="600px" caption="The [EVGA 110-BQ-0500-K1](https://www.newegg.com/evga-500-bq-110-bq-0500-k1-500w/p/N82E16817438101) is a semi-modular PSU. At 500 W, it offers more than enough power for my build.">}}
 
@@ -239,13 +239,13 @@ There are a few components that I intentionally excluded from my build due to pr
 
 ### Graphics card (GPU)
 
-With scarce physical space and motherboard ports, I didn't want a dedicated graphics card. I chose a motherboard and CPU combination that supported graphics rendering without an external card.
+With scarce physical space and motherboard ports, I didn't want a dedicated graphics card. I chose a motherboard and CPU combination that supports graphics rendering without an external card.
 
 ### Host bus adaptor (HBA)
 
-Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
+Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/) (HBA). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
-Using an HBA with ZFS requires you to [reflash the firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing. I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
+ZFS requires you to [reflash the HBA's firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing. I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
 
 ### ECC RAM
 
@@ -259,9 +259,7 @@ Many ZFS builds include a separate, dedicated SSD called the [SLOG (separate int
 
 The idea is that writing to an SSD is orders of magnitude faster than writing to multiple spinning disks. When an application writes data, ZFS can quickly write it to the SSD, tell the application that the write succeeded, then asynchronously move the data from the SSD to the storage pool. The SLOG [improves write speeds](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/) significantly.
 
-I decided against a SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later.
-
-If I were building a rack-mounted server with 16 drive bays, I definitely would have reserved one for a SLOG disk, but it didn't seem worth it in my build. I expected that the network would be the limiting factor in my transfer speeds.
+I chose not to integrate a SLOG disk because I'm limited by ports and drive bays. Adding a SLOG disk meant either forfeiting my only PCI slot or one of my six drive bays. I'd rather leave myself room to expand capacity later.
 
 ## Parts list
 
@@ -321,7 +319,7 @@ Longtime readers of this blog may recall that I used the Raspberry Pi to create 
 
 {{<img src="voyager2-install.jpg" alt="Photo of Voyager 2 PoE device on top of TrueNAS server" caption="Instead of connecting a keyboard, mouse, and monitor to the TrueNAS server, I managed the installation with a [TinyPilot Voyager 2](https://tinypilotkvm.com/product/tinypilot-voyager2?ref=mtlynch.io)." maxWidth="600px">}}
 
-I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could monitor video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
+I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could see video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 
 {{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without plugging in a flash drive, keyboard, or monitor." maxWidth="800px" hasBorder="true">}}
 
@@ -333,7 +331,7 @@ When I got all the components installed, the system powered on, but there was no
 
 Oh no! Did I misunderstand the motherboard's onboard video requirements? I did all the usual diagnostics: reseated the RAM, reseated the CPU, and checked all the cables &mdash; same result.
 
-After some panicked Googling, I saw mentions that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I recalled seeing that warning when I was selecting parts and breezing right by it. "I've done BIOS updates," I thought. They're no big deal!
+After some panicked Googling, I saw mentions that the ASUS Prime A320I-K requires a BIOS upgrade before it can work with the Athlon 3000G. I recalled seeing that warning when I was selecting parts and breezing right by it. "I've done BIOS updates," I thought. "They're no big deal!"
 
 I didn't consider how I'd upgrade my BIOS _without a CPU_.
 
@@ -360,9 +358,9 @@ Normally, I'd accept the blame, but the ASUS BIOS was so flaky that the problem 
 
 ## Performance benchmarks
 
-One of the surprises to me in writing this up is that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that run on the NAS itself to benchmark local disk I/O, but that doesn't reflect real-world usage. Most of my usage is over the network, so a local disk benchmark will completely miss bottlenecks in the networking stack.
+One of the surprises to me in writing this up was that I couldn't find any good benchmarking tools for measuring NAS performance. There are tools that run on the NAS itself to benchmark local disk I/O, but that doesn't reflect real-world usage. Most of my usage is over the network, so a local disk benchmark will completely miss bottlenecks in the networking stack.
 
-I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. This was by no means a rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test. To put the results in perspective, I ran the same tests against my old Synology DS412+.
+I just made up my own rudimentary benchmark. I [generated two sets of random file data](https://github.com/mtlynch/dummy_file_generator) and then used [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) to measure read and write speeds between my main desktop and my NAS. This was by no means a rigorous test &mdash; I didn't do it on an isolated network, and I didn't shut down all other processes on my desktop while running the test. I ran the same tests against my old Synology DS412+ as a comparison.
 
 The first file set was 20 GiB of 1 GiB files, and the other was 3 GiB of 1 MiB files. I took the average of three trials over both encrypted volumes and unencrypted volumes.
 
@@ -377,8 +375,6 @@ For unencrypted volumes, I was surprised to see my rusty, 7-year-old Synology ou
 {{<img src="read-perf-encrypted.png" hasBorder="true">}}
 
 Synology's glory was short-lived, as it completely choked on encryption. Synology's read speeds dropped by 67-75% on encrypted volumes, whereas encryption had no effect on TrueNAS. That allowed TrueNAS to outperform Synology by 2.3x for small files and 3x for large files on an encrypted volume. I keep most of my data on encrypted volumes, so this test more accurately represents my typical usage.
-
-Read speeds were surprisingly inconsistent on the TrueNAS for small files. For every other test, performance was consistent to about 5% between trials. When I measured small file reads on TrueNAS, speeds ranged from 33 MiB/s to 67 MiB/s. I'm not sure where the inconsistency was coming from, as the same tests for 1 GiB files had much smaller variance.
 
 ### Write performance
 
@@ -401,7 +397,7 @@ I used a [Kill A Watt P4460 meter](http://www.p3international.com/products/p4460
 
 The new server uses 60% more power than my old Synology, which is a bit surprising. I pay about $0.17/kWh, so the server costs around $7.20/month to run.
 
-I don't know much about what factors drive up the power draw, but one possibility is that Synology likely has a PSU that's perfectly sized to the hardware, whereas my 500 W PSU is likely inefficient at powering a system that requires only 15% of its capacity.
+I don't know much about what factors drive up the power draw, but one possibility is the PSU. Synology probably has a PSU that's perfectly sized to its other components, whereas my 500 W PSU is likely inefficient at powering a system that requires only 15% of its capacity.
 
 ## Final thoughts
 
@@ -409,7 +405,7 @@ I don't know much about what factors drive up the power draw, but one possibilit
 
 My biggest complaint about the ASUS Prime A320I-K was its limited compatibility, but it's possible that I'm mistaken.
 
-Beyond that, I wasn't crazy about the BIOS. Its upgrade utility was completely broken. It's supposed to be able to download and install the latest BIOS versions, but when I tried upgrading, it kept telling me that I had the latest BIOS when I didn't. I had to upgrade manually by downloading the files and loading them on a thumbdirve.
+Beyond that, I wasn't crazy about the BIOS. Its upgrade utility was completely broken. It's supposed to be able to download and install the latest BIOS versions, but when I tried upgrading, it kept telling me that I had the latest BIOS when I didn't. I had to upgrade manually by downloading the files and loading them on a thumb drive.
 
 {{<gallery caption="The ASUS EZ Flash utility claimed I had the latest BIOS at version 2203. The ASUS website offered BIOS version 5862, so I had to update manually.">}}
 {{<img src="ez-bios-1.png" alt="Screenshot showing ASUS EZ Flash saying my 2203 BIOS was the latest" maxWidth="450px">}}
@@ -426,7 +422,7 @@ I was disappointed in the Fractal Design Node 304. When I built my VM server wit
 
 It looks nice on the outside, but I found it awkward to work in. There was barely any documentation, and some of the case mechanisms weren't obvious.
 
-It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging too harshly.
+It's my first mini-ITX build, and I know the case designers have to make sacrifices in the name of minimizing size, so maybe I'm judging it too harshly.
 
 ### CPU
 
@@ -434,7 +430,7 @@ I'm happy with the Athlon 3000G, but it turned out to be massively overpowered f
 
 {{<img src="truenas-cpu.png" alt="Graph of CPU usage in March showing almost entirely <10% usage" maxWidth="800px" caption="TrueNAS barely uses any CPU capacity.">}}
 
-The most important thing about the CPU was that it supported AMD's Radeon video technology, which meant that I didn't need a separate GPU, and it served that purpose. For $105, it was a great deal.
+The most important thing about the CPU was that it supported AMD's Radeon video technology, which saved me from needing a GPU. For $105, it was a great deal.
 
 ### Disk (Data)
 
