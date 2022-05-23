@@ -8,7 +8,7 @@ tags:
 description: How I chose parts, built, and configured my first custom home storage server.
 images:
   - budget-nas/og-cover.jpg
-date: "2022-05-15"
+date: "2022-05-23"
 ---
 
 <!-- Disable linter complaints about duplicate headers -->
