@@ -245,7 +245,7 @@ With scarce physical space and motherboard ports, I didn't want a dedicated grap
 
 Many NAS builds include a [host bus adaptor](https://www.truenas.com/community/threads/whats-all-the-noise-about-hbas-and-why-cant-i-use-a-raid-controller.81931/) (HBA). An HBA is a chip that goes into the PCI slot of a motherboard and increases the number of disks the motherboard can support.
 
-ZFS requires you to [reflash the HBA's firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing. I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
+~~ZFS requires you to [reflash the HBA's firmware](https://www.servethehome.com/ibm-serveraid-m1015-part-4/) in a process that sounds tedious and confusing~~ (Edit: Apparently, [re-flashing is only necessary on RAID HBAs](https://mtlynch.io/budget-nas/#comment-6)). I decided to punt on the HBA until I need more storage. The ASUS A320I-K has four SATA ports, which is enough for my initial needs. I made sure to leave a PCI slot empty for a future HBA.
 
 ### ECC RAM
 
