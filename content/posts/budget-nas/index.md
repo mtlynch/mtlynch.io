@@ -420,9 +420,10 @@ I noticed that the motherboard's Ethernet adaptor would sometimes die when my sy
 
 1. From the TrueNAS web dashboard, go to System > Tunables
 1. Add the following two settings:
-   | Variable | Value | Type |
+
+   | Variable     | Value                    | Type   |
    | ------------ | ------------------------ | ------ |
-   | `if_re_load` | `YES` | loader |
+   | `if_re_load` | `YES`                    | loader |
    | `if_re_name` | `/boot/modules/if_re.ko` | loader |
 
 ### Case
