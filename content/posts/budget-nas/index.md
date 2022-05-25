@@ -414,7 +414,17 @@ Beyond that, I wasn't crazy about the BIOS. Its upgrade utility was completely b
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. I'm not sure if I'll ever need to expand memory, but it would have been good to give myself some more breathing room.
 
-If I were to do this build over, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, 2.5 Gbps Ethernet, and it has an extra M.2 slot.
+#### Fixing the Realtek networking driver
+
+I noticed that the motherboard's Ethernet adaptor would sometimes die when my system was under heavy network load, and [/u/trevaar](https://old.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/i9wrn6m/?context=3) on reddit helpfully explained why. Apparently, the FreeBSD driver for the A320I-K's Realtek NIC has stability issues, but it's possible to load the official driver with the following workaround:
+
+1. From the TrueNAS web dashboard, go to System > Tunables
+1. Add the following two settings:
+
+   | Variable     | Value                    | Type   |
+   | ------------ | ------------------------ | ------ |
+   | `if_re_load` | `YES`                    | loader |
+   | `if_re_name` | `/boot/modules/if_re.ko` | loader |
 
 ### Case
 
@@ -446,11 +456,13 @@ After seeing that the system idles at 60 W, I'm wondering if I should have put m
 
 The Kingston A400 is working fine. TrueNAS puts such a minimal load on the OS disk that there isn't much for it to do. It has 90 GB free, so I could have used an even smaller drive.
 
-There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of some scheduled task, but that's it.
+There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of a default scheduled task for error checking, but that's it.
 
 {{<img src="truenas-io.png" alt="Graph of disk I/O on OS disk showing minimal activity" maxWidth="800px" caption="TrueNAS rarely touches its OS disk after booting.">}}
 
 ### TrueNAS
+
+I'm running TrueNAS Core 13, which is the more mature FreeBSD version. The other option is TrueNAS Scale, which is based on Debian, which has wider hardware and software compatibility.
 
 Coming into TrueNAS, I knew my Synology's web UI would be hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They did a great job of building a clean UI that spares the end-user from technical details of the underlying filesystem.
 
