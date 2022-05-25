@@ -416,14 +416,14 @@ I also missed that the A320I-K supports a maximum of 32 GB of RAM. I'm not sure 
 
 #### Fixing the Realtek networking driver
 
-I noticed that the motherboard's Ethernet adaptor would sometimes die when my system was under heavy network load, and [/u/trevaar](https://old.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/i9wrn6m/?context=3) on reddit helpfully explained why. Apparently the FreeBSD driver for the A320I-K's Realtek NIC has stability issues, but it's possible to load the official driver with this workaround:
+I noticed that the motherboard's Ethernet adaptor would sometimes die when my system was under heavy network load, and [/u/trevaar](https://old.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/i9wrn6m/?context=3) on reddit helpfully explained why. Apparently, the FreeBSD driver for the A320I-K's Realtek NIC has stability issues, but it's possible to load the official driver with the following workaround:
 
-From the TrueNAS web dashboard, go to System > Tunables, and then add the following two settings:
-
-| Variable     | Value                    | Type   |
-| ------------ | ------------------------ | ------ |
-| `if_re_load` | `YES`                    | loader |
-| `if_re_name` | `/boot/modules/if_re.ko` | loader |
+1. From the TrueNAS web dashboard, go to System > Tunables
+1. Add the following two settings:
+   | Variable | Value | Type |
+   | ------------ | ------------------------ | ------ |
+   | `if_re_load` | `YES` | loader |
+   | `if_re_name` | `/boot/modules/if_re.ko` | loader |
 
 ### Case
 
