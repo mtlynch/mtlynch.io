@@ -71,7 +71,7 @@ Before building my own homelab NAS, I used a 4-disk [Synology DS412+](https://ww
 
 {{<img src="ds412-plus.jpg" alt="Photo of Synology DS412+ on my shelf" caption="My 10 TB Synology DS412+ has served me well for seven years." maxWidth="600px">}}
 
-A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data without another Synology system.
+A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, ~~you can't access your data without another Synology system~~. (Edit: A [commenter on Hacker News](https://news.ycombinator.com/item?id=31549755) showed me that you can [recover a Synology Hybrid RAID volume from a non-Synology system](https://kb.synology.com/en-us/DSM/tutorial/How_can_I_recover_data_from_my_DiskStation_using_a_PC).)
 
 Fortunately, my old Synology recovered after I cleaned it out and reseated the disks, but it was an important wake-up call. I decided to switch to TrueNAS, as it offers an open-source implementation of an open storage format.
 
