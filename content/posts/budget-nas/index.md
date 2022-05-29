@@ -9,6 +9,9 @@ description: How I chose parts, built, and configured my first custom home stora
 images:
   - budget-nas/og-cover.jpg
 date: "2022-05-23"
+discuss_urls:
+  reddit: https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/
+  hacker_news: https://news.ycombinator.com/item?id=31548829
 ---
 
 <!-- Disable linter complaints about duplicate headers -->
