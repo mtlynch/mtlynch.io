@@ -136,9 +136,11 @@ The more physical drives you have, the more defensive you should be about disk f
 
 Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 2% chance in any given week. Two simultaneous failures would happen once every 48 years, so I should be fine, right?
 
-The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and processed the same workloads. Given this, I did what I could to reduce the risk of concurrent disk failures.
+The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and processed the same workloads.
 
-I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks from the same manufacturing batch, I bought them from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
+Further, rebuilding a ZFS pool puts an unusual amount of strain on all of the surviving disks. A disk that would have lasted a few more months under normal usage might die under the additional load of a pool rebuild.
+
+Given these risks, I did what I could to reduce the risk of concurrent disk failures. I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks from the same manufacturing batch, I bought them from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
 {{<img src="ironwolf-disks.jpg" alt="Photo of me holding Seagate IronWolf drives with different packaging" maxWidth="700px" caption="I purchased the same model of disk from two different vendors to decrease the chances of getting two disks from the same manufacturing batch.">}}
 
