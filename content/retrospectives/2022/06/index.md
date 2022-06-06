@@ -7,6 +7,7 @@ description: TODO - One-line summary
 ## Highlights
 
 - The TinyPilot website redesign is finally done!
+- I've learned to make Debian packages, and it's surprisingly painless.
 
 ## Goal Grades
 
@@ -17,7 +18,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: [Published the post](/budget-nas/)
 - **Grade**: A
 
-This was my first blog post in over a year that wasn't a retrospective or year-end review. It got a so-so reception on reddit, but it made to [#2 on Hacker News](https://news.ycombinator.com/item?id=31548829).
+This was my first blog post in over a year that wasn't a retrospective or year-end review. It got a [so-so reception on reddit](https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/), but it reached [#2 on Hacker News](https://news.ycombinator.com/item?id=31548829).
 
 The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's twice its typical monthly visitors and 30% higher than its previous monthly record. This helps me feel justified in all the time I spent writing the post.
 
@@ -30,12 +31,12 @@ The redesign is finally complete. I've been expecting to wrap up on this project
 
 ### Hire a marketing agency or freelancer
 
-- **Result**: Still searching
-- **Grade**: D
+- **Result**: Hired a freelancer a few days into June
+- **Grade**: B
 
-I found an agency that seemed like a potential match, but I felt a little iffy about them. We agreed on pricing for a three-month contract, but then after I agreed, they asked to change it to a five-month minimum. That was a big red flag, but I was still open to working something out with them.
+I found an agency that seemed like a potential match, but I felt a little iffy about them. We agreed on pricing for a three-month contract, but then after I agreed, they asked to change it to a five-month minimum. That was a big red flag. I continued trying to work something out with them, but their proposals all felt questionable.
 
-As we continued discussions, it seemed like we just weren't on the same page, so I ended negotiations. In the meantime, my electrical engineering partner firm recommended a freelancer who has done good work for them, so I'm now speaking with him.
+Fortunately, my electrical engineering partner firm recommended a digital marketing freelancer. From the first call, he was a much better match than anyone else I'd spoken to, so I hired him on the spot.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -49,48 +50,57 @@ What to say?
 
 When I interviewed designers and agencies at the start of this project, I told them I was looking to spend $8-15k on a project that would last a couple of months. I said that I most certainly didn't want this to be the kind of thing where I have to spend six months and $40k before measuring whether the changes have any real impact on sales.
 
-In the end, the project took eight months and cost $46k. I fell into the exact outcome I set out to avoid.
+In the end, the project took eight months and cost $46k. I fell into the exact trap I wanted to avoid.
 
-But let's take a look at the results. The redesign was to re-do the logo, color scheme, and fonts, and then to redesign the three pages involved in the checkout flow: landing page, product page, and shopping cart page.
+I'm going to write a longer blog post about what I learned from the experience, but the main mistakes were:
+
+- **Scope was too broad**: I should have [kept the scope small](/retrospectives/2022/04/#aggressively-protect-your-scope), starting with a rebranding before I let the agency expand into a full-blown redesign.
+- **Hours reporting was too slow**: I should have insisted on a system where they [report billable hours to me](/retrospectives/2022/05/#the-importance-of-low-latency-hours-reporting) as they occur rather than on a 2-week delay. If I can't see how long a task is taking, I can't react and downscope it if it turns out to be more expensive than I expected.
+- **Scheduling needed more transparency**: I should have pushed for more communication about timelines so that I wasn't surprised with how long the project dragged on.
+- **Needed more management time**: I assumed that an agency working 40 hours per month would require roughly the same management overhead as an individual freelancer working 40 hours per month. In reality, more people involved [means more management is required](/retrospectives/2022/04/#an-agency-requires-more-management-not-less).
+
+But let's take a look at the results. The project involved redesigning the three pages involved in the checkout flow: the landing page, the product page, and the shopping cart page:
 
 {{<gallery caption="Before and after of landing page redesign">}}
-{{<img src="landing-before.png" alt="Photo of NAS server parts in retail packaging" maxWidth="300px" hasBorder="true">}}
-{{<img src="landing-after.png" alt="Photo of completed server build" maxWidth="260px" hasBorder="true">}}
+{{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
+{{<img src="landing-after.png" alt="Screenshot of new landing page" maxWidth="260px" hasBorder="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after of product page redesign">}}
-{{<img src="product-before.png" alt="Photo of NAS server parts in retail packaging" maxWidth="300px" hasBorder="true">}}
-{{<img src="product-after.png" alt="Photo of completed server build" maxWidth="220px" hasBorder="true">}}
+{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" maxWidth="300px" hasBorder="true">}}
+{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" maxWidth="220px" hasBorder="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after of shopping cart page redesign">}}
-{{<img src="cart-before.png" alt="Photo of NAS server parts in retail packaging" maxWidth="400px" hasBorder="true">}}
-{{<img src="cart-after.png" alt="Photo of completed server build" maxWidth="340px" hasBorder="true">}}
+{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" maxWidth="400px" hasBorder="true">}}
+{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" maxWidth="340px" hasBorder="true">}}
 {{</gallery>}}
 
-Money aside, I'm happy with the results. I think the new logo and images make the project look substantially more professional.
+Money aside, I'm happy with the results. I think the new design is inarguably better than what I had previously. The new logo and images make the project look substantially more professional.
 
-If I had to do it over, I wouldn't have paid $46k and sunk all that time into the redesign, but now I can at least enjoy the results and take it as an expensive lesson.
+So, the new design is better, but is it $46k better?
+
+If I could go back in time, I certainly wouldn't have paid that much and sunk all that time into the redesign, but it could still plausibly pay for itself. Beyond my fixed costs, 70% of TinyPilot's sales revenue are profit. That means the redesign has to generate $66k in additional sales to earn its keep. That might happen. If it increases my sales by 10% with a bump from $50k/month to $55k/month, I'll come out ahead in about a year. If better marketing attracts more customers to the site, I'll make my money back even faster.
 
 ## Debian packages are easy
 
-One of TinyPilot's odd design features is that we install and update it using [Ansible](https://www.ansible.com/), a tool that's designed for devops engineers to provision systems at scale. That was what I used to provision my Raspberry Pi with the first prototype of TinyPilot, and that flow worked, so we just stuck with it.
+One of the odd design decisions I made with TinyPilot is its installation and update mechanism. We do it using [Ansible](https://www.ansible.com/), a tool that's designed for devops engineers to provision systems at scale. I used Ansible to provision my Raspberry Pi with [the first prototype of TinyPilot](/tinypilot/). That flow worked, so we just stuck with it.
 
-I knew that there were better solutions for installing software on Linux, but I didn't have experience with any of them. And I feared trying to use them with TinyPilot, which has unusual requirements for configuring the underlying OS to take advantage of the Pi's hardware features. So we continued using Ansible, as it worked and wasn't causing any problems except that it was fairly slow, with installs and updates taking a few minutes.
+I knew that there were better solutions for installing software on Linux, but I didn't have experience with them. TinyPilot has unusual requirements for configuring Raspberry Pi's hardware features, so I dreaded the process of adapting standard install tools to meet those requirements. Instead, we continued using Ansible, as it worked and wasn't causing any problems. It was slow, so an install process that should have been a few seconds took two minutes, but that wasn't too bad.
 
-Two years in, we're pushing the limits of Ansible. Our install process is getting too complex, and Ansible is increasingly the wrong tool for our needs.
+Two years in, we're pushing the limits of Ansible. Our install process is getting too complex, and updates take upwards of five minutes.
 
-I'd considered Debian packages (e.g., `apt-get install`) in the past, but they always seemed scary. I knew creating the package required confusing tools, and then there were repository servers involved somehow. There were keypairs and a package signing process. It seemed like it would be a huge effort to just get the basics in place and then an incredible pain to make it do what we need.
+I'd considered Debian packages (e.g., `apt-get`) in the past, but they always seemed scary. I'd heard negative stories about how difficult the tools were. And then on top of that, there were repository servers, keypairs, and a signing process to manage. It seemed like it would be a huge effort to just get the basics in place and then an incredible pain to make it do what we need.
 
-As an experiment, I tried building a Debian package. It turns out, it's easy! Debian packages are just tarballs with a particular folder structure and a few special files. I made my first working `.deb` package in about an hour.
+As an experiment, I tried building a Debian package, and it turned out to be far easier than I feared. Debian packages are just tarballs with a particular folder structure and a few special files. I made my first working `.deb` file in about an hour.
 
-And all the parts about setting up repository servers and key pairs? That's optional. You can just distribute the `.deb` package files directly without ever needing a repository.
+And the repository servers and key pairs? It turns out that's optional. You can just distribute the `.deb` package files directly without ever needing a repository.
 
 Better still, we don't have to switch from Ansible to Debian packages in one giant move. We can incrementally move logic from Ansible to Debian packages at our own pace.
 
-Our first Debian package is for Janus, the open-source WebRTC server. It reduced the install time on a Raspberry Pi from 30 minutes to a few seconds. And even though we need 32-bit ARM binaries, we can build them on x64 cloud servers using Docker's QEMU integration. All of our code for compiling and packaging the code [is open-source](https://github.com/tiny-pilot/janus-debian), if you're interested in taking a peek.
+Our first Debian package is for [Janus](https://janus.conf.meetecho.com), the open-source WebRTC server. Compiling the package from source took ~30 minutes, but our Debian package installs in a few seconds. And even though we need 32-bit ARM binaries, we can build them on x64 cloud servers using Docker's QEMU integration. All of our code for compiling and packaging the code [is open-source](https://github.com/tiny-pilot/janus-debian).
 
-If you're interested in building your own Debian packages, here are the resources we found helpful:
+Here are the resources we found helpful for learning about Debian packages:
 
 - [Creating and hosting your own deb packages and apt repo](https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/)
 - [Building binary deb packages: a practical guide](https://www.internalpointers.com/post/build-binary-deb-package-practical-guide)
@@ -102,7 +112,7 @@ If you're interested in building your own Debian packages, here are the resource
 
 When I last calculated it, Google search ads looked amazing. I calculated that I was making $0.69 in profit for every dollar I spent on Google Ads.
 
-With more data, it's less exciting. When I ran the numbers last month, I was including April and the first week of May. The first 10 days of May were my most successful ad days, so if we look at it by month, it's not as good:
+Now that more time has elapsed and I have more data, it's a less rosy picture. When I ran the numbers last month, I was including April and the first week of May. That first week turned out to be an outlier, so segmenting the numbers by month, the profit is weaker:
 
 | Metric                     | April     | May       |
 | -------------------------- | --------- | --------- |
@@ -114,51 +124,65 @@ With more data, it's less exciting. When I ran the numbers last month, I was inc
 | Revenue from conversions   | $1,314.91 | $7,649.60 |
 | Revenue on ad spend (ROAS) | 1.63      | 1.79      |
 
-About 30% of my revenue goes to hardware and labor costs, so a ROAS at 1.43 or higher is profitable for me. At 1.79, I'm still making about $0.25 for every dollar I spend on ads, so I'll keep it going.
+About 30% of my revenue goes to hardware and labor costs, so a ROAS of 1.43 is roughly breakeven. Anything higher is profitable. At 1.79, I'm still making $0.26 for every dollar I spend on ads, so I'll keep it going.
+
+TinyPilot's new digital marketing consultant reviewed our Google Ads account and identified several places where I was overspending on low-value keywords, so we'll likely be able to improve these numbers over the next few months.
 
 ## Side projects
 
 ### [PicoShare](http://pico.rocks/)
 
-PicoShare is the open-source tool I [released in March ](/retrospectives/2022/04/#picosharehttpsdemopicorocks). It makes it easy to share files that are too big for email.
+PicoShare is the open-source tool I [released in March ](/retrospectives/2022/04/#picosharehttpsdemopicorocks) that makes facilitates sharing files that are too big for email.
 
-In May, I added support for editing a file's metadata after you upload it. Originally, the had the chance to add a note and choose an expiration time for a file at the time you uploaded it, and those decisions were final. Now, PicoShare is more flexible and allows you to change these details at any time:
+In May, I added support for editing a file's metadata after you upload it:
 
 {{<img src="ps-edit-file.png" alt="TODO" hasBorder="true" caption="In May, I added support in PicoShare for editing file metadata.">}}
 
-After I added the edit screen, I realized it was a good opportunity to make the process of deleting files more error-proof. Before, if you clicked the delete button in the file listing, the file was gone. No confirmation, no undo, no takebacks.
+Originally, you had a chance to add a note and choose an expiration time for a file at the time you uploaded it, but those decisions were final. Now, PicoShare is more flexible and allows you to change these details at any time.
 
-Now, deleting a file requires you to first visit the edit screen, click delete, then approve the confirmation.
+After I added the edit screen, I realized it was a good opportunity to make the process of deleting files more error-proof. Before, if you clicked the delete button in the file listing, the file was gone. No confirmation, no undo. Now, deleting a file requires you to first visit the edit screen, click delete, then confirm the deletion:
 
 {{<img src="ps-confirm-delete.png" alt="TODO" hasBorder="true" caption="I added a confirmation dialog to reduce accidental file deletes.">}}
 
 ### [WanderJest](https://wanderjest.com)
 
-Prior to the pandemic, I was [trying to build WanderJest](/retrospectives/2020/04/#putting-wanderjest-on-hold), a business that would help fans find live comedy near them. I [put the site on hold](/retrospectives/2020/04/#putting-wanderjest-on-hold) due to the pandemic and ended up launching TinyPilot instead, but I've kept tending to WanderJest on weekends and evenings.
+In early 2020, I was [trying to build WanderJest](/retrospectives/2020/04/#putting-wanderjest-on-hold), a site that helps people find live comedy near them. I [put the site on hold](/retrospectives/2020/04/#putting-wanderjest-on-hold) due to the pandemic and ended up launching TinyPilot instead, but I've kept tending to WanderJest on weekends and evenings.
 
-One of the things that struck me in developing PicoShare is how much faster I can add features. I think the tech stack has a lot to do with it:
+One of the things that struck me in developing PicoShare is how much faster I am with a simpler tech stack:
 
-|            | PicoShare           | WanderJest |
-| ---------- | ------------------- | ---------- |
-| Backend    | Go                  | Go         |
-| Frontend   | Go + HTML5          | Vue 2      |
-| Data Store | SQLite + Litestream | Firestore  |
+|            | PicoShare            | WanderJest |
+| ---------- | -------------------- | ---------- |
+| Backend    | Go                   | Go         |
+| Frontend   | Go templates + HTML5 | Vue 2      |
+| Data Store | SQLite + Litestream  | Firestore  |
 
 Firestore slows me down a lot because I find it very difficult to make schema changes. The only way I know how to do it is to write custom migration code and deploy it to the production server. With SQLite, I can just download the production database, tinker with it, and then push it out to the server.
 
-And writing a frontend in Go is easier than I expected. The initial experience isn't as nice as Vue. I'd love conditional rendering or reactive properties, and you just don't get that in vanilla JS. But the advantage is that I can throw away almost all of the code for
+I'm now working on reimplementing WanderJest to replace Vue with Go templates and Firestore with SQLite.
 
-With Vue on the frontend, my process for rendering data on the page was:
+{{<gallery caption="Current Vue-based WanderJest site (left) vs. in-progress reimplementation of WanderJest with Go HTML templates (right)">}}
+{{<img src="wanderjest-before.png" alt="Screnshot of WanderJest live site" maxWidth="450px" hasBorder="true">}}
+{{<img src="wanderjest-after.png" alt="Screenshot of new Go-based WanderJest site" maxWidth="467px" hasBorder="true">}}
+{{</gallery>}}
 
-1. Retrieve the data from the datastore.
-1. Derive a copy of the data with only the properties we want to share with the frontend.
-1. Serialize all the fields to JSON.
-1. Write a controller for the frontend that retrieves the data from the backend.
-1. Populate page elements based on data we retrieved from the server.
+Writing a frontend in Go is easier than I expected. The up-front experience isn't as nice as Vue. I'd love conditional rendering or reactive properties, and you don't get that in vanilla JS. But overall, rendering a page is so much simpler with Go.
 
-When you render the frontend in Go, you can skip steps 2-4. You don't have to worry about exposing too much information to the client because you're only exposing what you render.
+With Vue, my process for rendering data on the page was:
 
-Started reimplementing in pure Go and SQLite.
+1. Backend retrieves the data from the datastore.
+1. Backend derives a copy of the data with only the properties we want to share with the frontend.
+1. Backend serializes all the fields to JSON.
+1. Frontend retrieves the JSON data from the backend.
+1. Frontend populates page elements based on data it retrieved from the backend.
+
+In contrast, rendering the page with Go templates is just two steps:
+
+1. Backend retrieves the data from the datastore.
+1. Backend populates a page template with data from the datastore.
+
+When you render the frontend in Go, you can skip all the work of choosing what data the backend can expose to the frontend, serializing it, or managing a local cache.
+
+I'll have to wait until I've reached feature parity with the Vue version, but I think I'm on track to reduce total lines of code by about 50%.
 
 ## Wrap up
 
@@ -166,10 +190,11 @@ Started reimplementing in pure Go and SQLite.
 
 - Completed TinyPilot website redesign.
 - Published [a new TinyPilot release](https://tinypilotkvm.com/blog/whats-new-in-2022-05).
+- Hired a digital marketing freelancer.
 
 ### Lessons learned
 
--
+- Debian packages are easier than they seem.
 
 ### Goals for next month
 
