@@ -2,9 +2,9 @@
 title: "TinyPilot: Month 23"
 date: 2022-06-07T00:00:00-04:00
 description: The eight-month redesign is finally complete!
+images:
+  - /retrospectives/2022/06/og-cover.png
 ---
-
-TODO: OpenGraph image
 
 ## Highlights
 
