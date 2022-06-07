@@ -18,12 +18,12 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish a blog post and video about building a homelab NAS server with TinyPilot
 
-- **Result**: [Published the post](/budget-nas/)
+- **Result**: [Published the post](/budget-nas/) and [accompanying video](https://youtu.be/q_Mi5LrnIiU)
 - **Grade**: A
 
 This was my first blog post in over a year that wasn't a retrospective or year-end review. It got a [so-so reception on reddit](https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/), but it reached [#2 on Hacker News](https://news.ycombinator.com/item?id=31548829).
 
-The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's twice its typical monthly visitors and 30% higher than its previous monthly record. This helps me feel justified in all the time I spent writing the post.
+The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's twice its typical monthly visitors and 30% higher than its previous monthly record. I spent about 45 hours writing the post and producing the video, so the results help me feel justified in the effort.
 
 ### Complete the TinyPilot website redesign
 
