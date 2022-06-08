@@ -155,7 +155,7 @@ TinyPilot's new digital marketing consultant reviewed my Google Ads account and 
 
 ### [PicoShare](http://pico.rocks/)
 
-PicoShare is the open-source tool I [released in March ](/retrospectives/2022/04/#picosharehttpsdemopicorocks) that facilitates sharing files that are too big for email.
+PicoShare is the open-source tool I [released in March](/retrospectives/2022/04/#picosharehttpsdemopicorocks) that facilitates sharing files that are too big for email.
 
 In May, I added support for editing a file's metadata after you upload it:
 
