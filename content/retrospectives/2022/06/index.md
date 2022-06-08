@@ -9,7 +9,7 @@ images:
 ## Highlights
 
 - The TinyPilot website redesign is finally done.
-- I've learned to make Debian packages, and it's surprisingly painless.
+- I've learned to make Debian packages, and it's surprisingly simple.
 - I've given up on Vue and frontend frameworks in general.
 
 ## Goal Grades
@@ -23,7 +23,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 This was my first blog post in over a year that wasn't a retrospective or year-end review. It got a [so-so reception on reddit](https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/), but it reached [#2 on Hacker News](https://news.ycombinator.com/item?id=31548829).
 
-The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's twice its typical monthly visitors and 30% higher than its previous monthly record. I spent about 45 hours writing the post and producing the video, so the results helped justify the effort.
+The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's an all-time high, beating its previous record by 30%. I spent about 45 hours writing the post and producing the video, so the results helped justify the effort.
 
 ### Complete the TinyPilot website redesign
 
@@ -57,7 +57,7 @@ Fortunately, my electrical engineering partner firm recommended a digital market
 
 This was a strong month in terms of visitors and sales. Visitors nearly tripled, and sales jumped by 25%.
 
-Most of the visitors arrived from Hacker News, though it didn't seem to have much of an effect on sales. Sales were already on track to beat April by about 25% before I published the articles landed on Hacker News.
+Most of the visitors arrived from Hacker News, though it didn't seem to have much of an effect on sales. Sales were already on track to beat April by about 25% before I published the articles landed on Hacker News. The results might be delayed, as I'm seeing an atypically strong start to June.
 
 ## The TinyPilot website redesign
 
@@ -67,18 +67,18 @@ What to say?
 
 It's been dragging on for months, and the end has always felt just a few weeks away.
 
-When I interviewed designers and agencies at the start of this project, I told them I was looking to spend $8-15k on a project that would last a couple of months. I said that I most certainly didn't want a project where I have to spend six months and $40k before I can see whether the changes have any real impact on sales.
+When I interviewed designers and agencies at the start of this project, I told them I was looking to spend $8-15k on a redesign that would last a couple of months. I said that I most certainly didn't want a project where I have to spend six months and $40k before I can see whether the changes have any real impact on sales.
 
 In the end, the project took eight months and cost $46k. I fell into the exact trap I wanted to avoid.
 
-I'm going to write a longer blog post about what I learned from the experience, but the main mistakes were:
+I'm going to write a longer blog post about the experience, but the main mistakes were:
 
 - **Too broad a scope**: I should have [kept the scope small](/retrospectives/2022/04/#aggressively-protect-your-scope), starting with a rebranding before I let the agency expand into a full-blown redesign.
-- **Hours reporting was too slow**: I should have insisted on a system where they [report billable hours to me](/retrospectives/2022/05/#the-importance-of-low-latency-hours-reporting) as they occur rather than on a 2-week delay. If I can't see how long a task is taking, I can't adjust the scope it if it turns out to be more expensive than I expected.
+- **Hours reporting was too slow**: I should have insisted on a system where the agency [reported billable hours to me](/retrospectives/2022/05/#the-importance-of-low-latency-hours-reporting) as they occured rather than on a 2-week delay. If I can't see how long a task is taking, I can't adjust the scope it if it turns out to be more expensive than I expected.
 - **Scheduling needed more transparency**: I should have pushed for more communication about timelines so that I wasn't surprised with how long the project dragged on.
-- **Insufficient management time**: I assumed that an agency working 40 hours per month would require roughly the same management overhead as an individual freelancer working 40 hours per month. But agencies involve more people, and more people mean [more management](/retrospectives/2022/04/#an-agency-requires-more-management-not-less).
+- **Insufficient management time**: I assumed that an agency working 40 hours per month would require roughly the same management overhead as an individual freelancer working 40 hours per month. Agencies involve more people, and more people mean [more management](/retrospectives/2022/04/#an-agency-requires-more-management-not-less).
 
-But let's take a look at the results. The project involved redesigning the three pages involved in the checkout flow: the landing page, the product page, and the shopping cart page:
+But let's take a look at the results. The project involved redesigning the three pages in the checkout flow: the landing page, the product page, and the shopping cart page:
 
 {{<gallery caption="Before and after landing page redesign">}}
 {{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
@@ -95,21 +95,23 @@ But let's take a look at the results. The project involved redesigning the three
 {{<img src="cart-after.png" alt="Screenshot of new shopping cart page" maxWidth="340px" hasBorder="true">}}
 {{</gallery>}}
 
-Money aside, I'm happy with the results. I think the new design is inarguably better than what I had previously. The new logo and images make the project look substantially more professional.
+Money aside, I'm happy with the results. I think the new design is inarguably better than what I had before. The new logo and images make the project look more professional and distinctive.
 
 So, the new design is better, but is it $46k better?
 
-If I could go back in time, I certainly wouldn't have paid that much and sunk all that time into the redesign, but it could still plausibly pay for itself. Beyond my fixed costs, 70% of TinyPilot's sales revenue are profit. That means the redesign has to generate $66k in additional sales to earn its keep. That might happen. If it increases my sales by 10% with a bump from $50k/month to $55k/month, I'll come out ahead in about a year. If better marketing attracts more customers to the site, I'll make my money back even faster.
+If I could go back in time, I certainly wouldn't have paid that much and sunk all that time into the redesign. Still, it could still plausibly pay for itself.
+
+Beyond my fixed costs, 70% of TinyPilot's sales revenue are profit. That means the redesign has to generate $66k in additional sales to earn its keep. If it increases my sales by 10%, then I'd go from an average of $50k/month to $55k/month. That would put me ahead in about a year. If better marketing attracts more customers to the site, I'll make my money back even faster.
 
 ## Debian packages are easy
 
 One of the odd design decisions I made with TinyPilot is its installation and update mechanism. We do it using [Ansible](https://www.ansible.com/), a tool that's designed for devops engineers to provision systems at scale. I used Ansible to provision my Raspberry Pi with [the first prototype of TinyPilot](/tinypilot/). That flow worked, so we just stuck with it.
 
-I knew that there were better solutions for installing software on Linux, but I didn't have experience with them. TinyPilot has unusual requirements for configuring Raspberry Pi's hardware features, so I dreaded the process of adapting standard install tools to meet those requirements. Instead, we continued using Ansible, as it worked and wasn't causing any problems. It was slow, so an installation that should have been a few seconds took two minutes, but that wasn't too bad.
+I knew that there were better solutions for installing software on Linux, but I didn't have experience with them. TinyPilot has unusual requirements for configuring Raspberry Pi's hardware features, so I dreaded the process of adapting standard install tools to meet those requirements. Instead, we continued using Ansible, as it worked fine and wasn't causing any problems. It was slow, so an installation that should have been a few seconds took two minutes, but that wasn't too bad.
 
 Two years in, we're pushing the limits of Ansible. Our installation is getting too complex, and updates take upwards of five minutes.
 
-I'd considered Debian packages (e.g., `apt-get`) in the past, but they always seemed scary. I'd heard negative stories about how Debian's packaging tools. And then on top of that, there were repository servers, keypairs, and a signing process to manage. It seemed like it would be a huge effort to just get the basics in place and then an incredible pain to make it do what we needed.
+I'd considered Debian packages (e.g., `apt-get`) in the past, but I'd heard negative stories about Debian's packaging tools. And then on top of that, there were repository servers, keypairs, and a package signing process? It seemed like it would be a huge effort just to get the basics in place and then an incredible pain to do what we needed.
 
 As an experiment, I tried building a Debian package, and it turned out to be far easier than I feared. Debian packages are just tarballs with a particular folder structure and a few special files. I made my first working `.deb` file in about an hour.
 
@@ -117,7 +119,7 @@ And the repository servers and key pairs? It turns out that's optional. You can 
 
 [`debhelper`](https://man7.org/linux/man-pages/man7/debhelper.7.html), the official tool for creating Debian packages, was indeed as confusing and difficult as I'd heard, but it's not necessary. We found it easier to just skip `debhelper` and generate Debian's metadata files by hand.
 
-Better still, we don't have to switch from Ansible to Debian packages in one enormous migration. We can incrementally move logic from Ansible to Debian packages at our own pace.
+Better still, we don't have to switch from Ansible to Debian packages in one terrifying leap. We can incrementally move logic from Ansible to Debian packages at our own pace.
 
 Our first Debian package is for [Janus](https://janus.conf.meetecho.com), the open-source WebRTC server. We used to compile the application from source on each device, which took ~30 minutes. Our new Debian package installs in a few seconds. And even though we need 32-bit ARM binaries, we can build the Debian package on x64 cloud servers using Docker's QEMU integration. All of our code for compiling and packaging the code [is open-source](https://github.com/tiny-pilot/janus-debian).
 
@@ -131,9 +133,9 @@ Here are the resources we found helpful for learning about Debian packages:
 
 ## Search ads are leveling off
 
-When I last calculated it, Google search ads looked amazing. I was [earning $0.69 in profit](/retrospectives/2022/05/#dipping-my-toe-in-paid-search-advertising) for every dollar I spent on Google Ads. Now that more time has elapsed and I have more data, it's a less rosy picture.
+When I last calculated it, Google search ads looked amazing. I was [earning $0.69 in profit](/retrospectives/2022/05/#dipping-my-toe-in-paid-search-advertising) for every dollar I spent on Google Ads. Now that more time has elapsed, and I have more data, it's a less rosy picture.
 
-When I ran the numbers last month, I included April and the first week of May. That first week turned out to be an outlier, so segmenting the numbers by month, the profit is weaker:
+When I ran the numbers last month, I included April and the first week of May. That first week turned out to be an outlier, so the profit is weaker when I segment by month:
 
 | Metric                     | April     | May       |
 | -------------------------- | --------- | --------- |
@@ -145,9 +147,9 @@ When I ran the numbers last month, I included April and the first week of May. T
 | Revenue from conversions   | $1,314.91 | $7,649.60 |
 | Revenue on ad spend (ROAS) | 1.63      | 1.79      |
 
-About 30% of my revenue goes to hardware and labor costs, so a ROAS of 1.43 is roughly breakeven (1.43 - 30% = 1.0). Anything higher is profitable. At 1.79, I'm still making $0.26 for every dollar I spend on ads, so I'll keep it going.
+About 30% of my revenue goes to hardware and labor costs, so a ROAS of 1.43 is roughly breakeven (1.43 - 30% = 1.0). Anything higher is profitable. At 1.79, I'm still making $0.26 for every dollar I spend on ads, so I'll keep going.
 
-TinyPilot's new digital marketing consultant reviewed our Google Ads account and identified several places where I was overspending on low-value keywords, so we'll likely be able to improve these numbers over the next few months.
+TinyPilot's new digital marketing consultant reviewed my Google Ads account and identified several places where I was overspending on low-value keywords, so we'll likely be able to improve these numbers over the next few months.
 
 ## Side projects
 
@@ -192,7 +194,7 @@ With Vue, my process for rendering data on the page was:
 
 1. Backend retrieves the data from the datastore.
 1. Backend derives a copy of the data with only the properties we want to share with the frontend.
-1. Backend serializes all the fields to JSON.
+1. Backend serializes the data to JSON.
 1. Frontend retrieves the JSON data from the backend.
 1. Frontend populates page elements based on data it retrieved from the backend.
 
@@ -201,7 +203,7 @@ In contrast, rendering the page with Go templates is just two steps:
 1. Backend retrieves the data from the datastore.
 1. Backend populates a page template with data from the datastore.
 
-When you render the frontend in Go, you can skip all the work of choosing what data the backend can expose to the frontend, serializing it, or managing a local cache.
+When you render the frontend in Go, you can skip all the work of choosing what data the backend exposes to the frontend, how to serialize and unserialize it, and how to manage a local cache.
 
 I'll have to wait until I've reached feature parity with the Vue version, but I think I'm on track to reduce total lines of code by about 50%.
 
