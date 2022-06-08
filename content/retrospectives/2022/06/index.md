@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 23"
-date: 2022-06-07T00:00:00-04:00
+date: 2022-06-08T00:00:00-04:00
 description: The eight-month redesign is finally complete!
 images:
   - /retrospectives/2022/06/og-cover.png
@@ -23,7 +23,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 This was my first blog post in over a year that wasn't a retrospective or year-end review. It got a [so-so reception on reddit](https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/), but it reached [#2 on Hacker News](https://news.ycombinator.com/item?id=31548829).
 
-The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's twice its typical monthly visitors and 30% higher than its previous monthly record. I spent about 45 hours writing the post and producing the video, so the results help me feel justified in the effort.
+The post led many visitors to TinyPilot's website, bringing the monthly unique visitors to 14k. That's twice its typical monthly visitors and 30% higher than its previous monthly record. I spent about 45 hours writing the post and producing the video, so the results helped justify the effort.
 
 ### Complete the TinyPilot website redesign
 
@@ -37,7 +37,7 @@ The redesign is finally complete. I've expected this project to wrap up every si
 - **Result**: Hired a freelancer a few days into June
 - **Grade**: B
 
-I found an agency that seemed like a potential match, but I felt a little iffy about them. We agreed on pricing for a three-month contract, but then after I agreed, they asked to change it to a five-month minimum. That was a big red flag. I continued trying to work something out with them, but their proposals all felt questionable, so I eventually ended discussions.
+I found an agency that seemed like a potential match, but I felt a little iffy about them. We agreed on pricing for a three-month contract, but then after I agreed, they asked to change it to a five-month minimum. That was a big red flag. I continued trying to work something out with them, but their proposals all felt questionable, so I eventually ended the discussions.
 
 Fortunately, my electrical engineering partner firm recommended a digital marketing freelancer. From the first call, he was a much better match than anyone else I'd spoken to, so I hired him on the spot.
 
@@ -55,7 +55,9 @@ Fortunately, my electrical engineering partner firm recommended a digital market
 | Total Revenue            | $46,072.36                               | $58,161.51    | <font color="green">+$12,089.15 (+26%)</font>      |
 | **Profit**               | **<font color="red">-$19,392.76</font>** | **$2,419.26** | **<font color="green">+$21,812.02 (+inf%)</font>** |
 
-There was a jump in website visitors because of the attention from Hacker News, though it didn't seem to have much of an effect on sales. Sales were strong on the days TinyPilot was on Hacker News but still within the noise
+This was a strong month in terms of visitors and sales. Visitors nearly tripled, and sales jumped by 25%.
+
+Most of the visitors arrived from Hacker News, though it didn't seem to have much of an effect on sales. Sales were already on track to beat April by about 25% before I published the articles landed on Hacker News.
 
 ## The TinyPilot website redesign
 
@@ -72,23 +74,23 @@ In the end, the project took eight months and cost $46k. I fell into the exact t
 I'm going to write a longer blog post about what I learned from the experience, but the main mistakes were:
 
 - **Too broad a scope**: I should have [kept the scope small](/retrospectives/2022/04/#aggressively-protect-your-scope), starting with a rebranding before I let the agency expand into a full-blown redesign.
-- **Hours reporting was too slow**: I should have insisted on a system where they [report billable hours to me](/retrospectives/2022/05/#the-importance-of-low-latency-hours-reporting) as they occur rather than on a 2-week delay. If I can't see how long a task is taking, I can't react and downscope it if it turns out to be more expensive than I expected.
+- **Hours reporting was too slow**: I should have insisted on a system where they [report billable hours to me](/retrospectives/2022/05/#the-importance-of-low-latency-hours-reporting) as they occur rather than on a 2-week delay. If I can't see how long a task is taking, I can't adjust the scope it if it turns out to be more expensive than I expected.
 - **Scheduling needed more transparency**: I should have pushed for more communication about timelines so that I wasn't surprised with how long the project dragged on.
-- **Insufficient management time**: I assumed that an agency working 40 hours per month would require roughly the same management overhead as an individual freelancer working 40 hours per month. But agencies involve more people, and more people meant [more management](/retrospectives/2022/04/#an-agency-requires-more-management-not-less).
+- **Insufficient management time**: I assumed that an agency working 40 hours per month would require roughly the same management overhead as an individual freelancer working 40 hours per month. But agencies involve more people, and more people mean [more management](/retrospectives/2022/04/#an-agency-requires-more-management-not-less).
 
 But let's take a look at the results. The project involved redesigning the three pages involved in the checkout flow: the landing page, the product page, and the shopping cart page:
 
-{{<gallery caption="Before and after of landing page redesign">}}
+{{<gallery caption="Before and after landing page redesign">}}
 {{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
 {{<img src="landing-after.png" alt="Screenshot of new landing page" maxWidth="260px" hasBorder="true">}}
 {{</gallery>}}
 
-{{<gallery caption="Before and after of product page redesign">}}
+{{<gallery caption="Before and after product page redesign">}}
 {{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" maxWidth="300px" hasBorder="true">}}
 {{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" maxWidth="220px" hasBorder="true">}}
 {{</gallery>}}
 
-{{<gallery caption="Before and after of shopping cart page redesign">}}
+{{<gallery caption="Before and after shopping cart page redesign">}}
 {{<img src="cart-before.png" alt="Screenshot of old shopping cart page" maxWidth="400px" hasBorder="true">}}
 {{<img src="cart-after.png" alt="Screenshot of new shopping cart page" maxWidth="340px" hasBorder="true">}}
 {{</gallery>}}
@@ -103,11 +105,11 @@ If I could go back in time, I certainly wouldn't have paid that much and sunk al
 
 One of the odd design decisions I made with TinyPilot is its installation and update mechanism. We do it using [Ansible](https://www.ansible.com/), a tool that's designed for devops engineers to provision systems at scale. I used Ansible to provision my Raspberry Pi with [the first prototype of TinyPilot](/tinypilot/). That flow worked, so we just stuck with it.
 
-I knew that there were better solutions for installing software on Linux, but I didn't have experience with them. TinyPilot has unusual requirements for configuring Raspberry Pi's hardware features, so I dreaded the process of adapting standard install tools to meet those requirements. Instead, we continued using Ansible, as it worked and wasn't causing any problems. It was slow, so an install process that should have been a few seconds took two minutes, but that wasn't too bad.
+I knew that there were better solutions for installing software on Linux, but I didn't have experience with them. TinyPilot has unusual requirements for configuring Raspberry Pi's hardware features, so I dreaded the process of adapting standard install tools to meet those requirements. Instead, we continued using Ansible, as it worked and wasn't causing any problems. It was slow, so an installation that should have been a few seconds took two minutes, but that wasn't too bad.
 
-Two years in, we're pushing the limits of Ansible. Our install process is getting too complex, and updates take upwards of five minutes.
+Two years in, we're pushing the limits of Ansible. Our installation is getting too complex, and updates take upwards of five minutes.
 
-I'd considered Debian packages (e.g., `apt-get`) in the past, but they always seemed scary. I'd heard negative stories about how Debian's packaging tools. And then on top of that, there were repository servers, keypairs, and a signing process to manage. It seemed like it would be a huge effort to just get the basics in place and then an incredible pain to make it do what we need.
+I'd considered Debian packages (e.g., `apt-get`) in the past, but they always seemed scary. I'd heard negative stories about how Debian's packaging tools. And then on top of that, there were repository servers, keypairs, and a signing process to manage. It seemed like it would be a huge effort to just get the basics in place and then an incredible pain to make it do what we needed.
 
 As an experiment, I tried building a Debian package, and it turned out to be far easier than I feared. Debian packages are just tarballs with a particular folder structure and a few special files. I made my first working `.deb` file in about an hour.
 
@@ -117,7 +119,7 @@ And the repository servers and key pairs? It turns out that's optional. You can 
 
 Better still, we don't have to switch from Ansible to Debian packages in one enormous migration. We can incrementally move logic from Ansible to Debian packages at our own pace.
 
-Our first Debian package is for [Janus](https://janus.conf.meetecho.com), the open-source WebRTC server. We used to compiling the package from source on each device, which took ~30 minutes. Our new Debian package installs in a few seconds. And even though we need 32-bit ARM binaries, we can build the Debian package on x64 cloud servers using Docker's QEMU integration. All of our code for compiling and packaging the code [is open-source](https://github.com/tiny-pilot/janus-debian).
+Our first Debian package is for [Janus](https://janus.conf.meetecho.com), the open-source WebRTC server. We used to compile the application from source on each device, which took ~30 minutes. Our new Debian package installs in a few seconds. And even though we need 32-bit ARM binaries, we can build the Debian package on x64 cloud servers using Docker's QEMU integration. All of our code for compiling and packaging the code [is open-source](https://github.com/tiny-pilot/janus-debian).
 
 Here are the resources we found helpful for learning about Debian packages:
 
@@ -127,11 +129,11 @@ Here are the resources we found helpful for learning about Debian packages:
 - [Official Debian Documentation](https://help.ubuntu.com/community/Repositories/Personal)
 - [Basic Overview of the debian/ Directory](https://packaging.ubuntu.com/html/debian-dir-overview.html)
 
-## Search ads are levelling off
+## Search ads are leveling off
 
 When I last calculated it, Google search ads looked amazing. I was [earning $0.69 in profit](/retrospectives/2022/05/#dipping-my-toe-in-paid-search-advertising) for every dollar I spent on Google Ads. Now that more time has elapsed and I have more data, it's a less rosy picture.
 
-When I ran the numbers last month, I was including April and the first week of May. That first week turned out to be an outlier, so segmenting the numbers by month, the profit is weaker:
+When I ran the numbers last month, I included April and the first week of May. That first week turned out to be an outlier, so segmenting the numbers by month, the profit is weaker:
 
 | Metric                     | April     | May       |
 | -------------------------- | --------- | --------- |
@@ -220,5 +222,5 @@ I'll have to wait until I've reached feature parity with the Vue version, but I 
 ### Goals for next month
 
 - Create a self-contained tarball for installing TinyPilot.
-- Complete a first draft of a full-length blog post about the TinyPilot website redesign.
+- Complete the first draft of a full-length blog post about the TinyPilot website redesign.
 - Increase ROAS on paid search ads to 2.0.
