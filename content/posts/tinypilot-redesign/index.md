@@ -205,7 +205,7 @@ I had CI checks and everything, but I didn't have pre-commit checks, they were r
 
 ## Why didn't you just...?
 
-As I've shared snippets of stories?
+As I've shared snippets of stories. I think I certainly made mistakes, but I think the people that think a project like this is trivial to manage have never managed a project like this. Or they have, and they don't realize that their code is garbage, and if they ever have to make changes, they'll have to essentially start over.
 
 ### Why didn't you just use a Shopify template?
 
