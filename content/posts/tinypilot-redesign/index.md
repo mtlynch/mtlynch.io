@@ -11,7 +11,9 @@ My company was still small and bootstrapped, so I budgeted $10-15k over two or t
 
 TODO: Final screenshot
 
-Except it didn't take $10k and two months. It took $46k, eight months, and massive stress. Now that it's over, I'm revisiting what happened and what mistakes I made hiring a web design agency so that you don't fall into the same trap.
+Except it didn't take $10k and two months. It took $46k, eight months, and massive stress.
+
+Now that the project is over, I'm revisiting what happened and what mistakes I made hiring a web design agency so that you don't fall into the same trap.
 
 ## My first agency hire
 
@@ -29,11 +31,11 @@ At the start of this process, I started looking for agencies. The problem with b
 
 I interviewed four freelancers and one agency. WebAgency immediately stood out as the best. Their portfolio showed a variety of styles that they executed well, and they had lots of different expertise in-house, so they could do design, development, animations, and 3D images if I needed them.
 
-What's more, WebAgency's CEO suggested I reduce the project scope. He said that instead of a full-blown redesign, I should just start with a rebranding. WebAgency would create a new logo and work with me to select a new color scheme and fonts for the site. From there, I could measure results, and the solid branding would let me start working with digital marketing agencies. That sounded smart!
+What's more, WebAgency's CEO suggested I reduce the project scope. He said that instead of a full-blown redesign, I should just start with a rebranding. WebAgency would create a new logo and work with me to select a new color scheme and fonts for the site. From there, I could measure results, and the branding would let me start working with digital marketing agencies. That sounded smart!
 
-WebAgency's CEO estimated that the rebrand would require 30-40 billable hours over two to four weeks at their hourly rate $175/hour. So, $5-7k for new logo and branding felt reasonable to me. If the rebrand improved TinyPilot's sales, I could start a monthly retainer with WebAgency and have them continue their design work.
+WebAgency's CEO estimated that the rebrand would require 30-40 billable hours over two to four weeks at their hourly rate $175/hour. So, $5-7k for new logo and branding felt reasonable to me. If the rebrand improved TinyPilot's sales, I could start a monthly retainer with WebAgency and have them polish design in other areas of TinyPilot.
 
-WebAgency's CEO did warn me that I was smaller than most of their clients. He said that they have long-term retainer agreements with most of their clients. But he said that this project was so small that we could do it hourly, but there was a possibility that they'd have to pause my work if a retainer client needed more time.
+WebAgency's CEO did warn me that I was smaller than most of their other clients. Most of their clients have them on long-term retainer agreements. This project was so tightly-scoped that we could do it hourly, but there was a possibility that they'd have to pause my work occasionally if a retainer client needed more time.
 
 ## The honeymoon period
 
@@ -63,25 +65,29 @@ I emailed the CEO, and he called me. He was embarrassed that the designers had g
 
 I didn't like that they had gone beyond the scope of the rebrand, but I reasoned that they were doing quality work, and I'd probably work with them in the future anyway, so why not do it.
 
-## Grinding to a halt
+## "I don't know when we'll have the hours to finish"
 
-In December, our meetings stopped. I checked Figma and would see occasional changes, but the project manager had stopped reaching out to me to arrange check-ins.
+Starting in December, WebAgency slowed down. A lot.
 
-When things started up again in January, there was no improvement.
+They stopped scheduling calls to review work with me. They occasionally shared updates with me over email, but when I left comments on their designs, they unacknowledged for weeks.
 
-I emailed the CEO laying out my concerns.
+At the time, I chalked it up to the holidays. Lots of people are on vacation in December, so I assumed things would pick back up in the new year.
 
-## Start over or push through?
+The slow pace continued into January. And not only was the pace slow, the quality of the work degraded. When the project started, I'd give them feedback on the designs, and they'd integrate my feedback. But now, when I'd give them a note about how there's not enough contrast between a text field and a background color, it took three back-and-forths before they understood what I was saying.
 
-Everything was around 80% done. The logo was almost done, the page designs were done minus a few tweaks and mobile versions. But nothing was complete and usable. I was four months and $XXk into this four-week project, and I had no usable work.
+I emailed the CEO to ask what was going on. We had a call, and he apologized for the way the project was going. He admitted that things were bumpy internally at WebAgency. Their project manager quit in November, and the CEO was scrambling to cover those duties while also interviewing replacements.
 
-It had taken several weeks to find them. I'd have to start over, transfer partial assets
+The reason I was seeing the degradation in quality was that they were busy with other clients. WebAgency _really_ wanted to work with me, but I was their only hourly client. They had to prioritize the retainer clients that made a long-term commitment to them.
 
-And to be honest, I didn't have time to fuss with anything. I was dealing with the mayhem of launching a new product (TODO: link) and making sure all of our internal workflows were ready to fulfill orders. I just wanted to do the thing that would minimize my time, and that was to just stick with them. It seemed like the design work was mostly 85% done anyway, so why not just spend a few hours on the last 15%?
+I said I understood I was a small client to them. I was willing to wait a few weeks until their other work slowed down. We both agreed that there were probably only 10-15 hours of design work left. I just wanted them to be high-quality October hours and not the harried, squeeze time in between other things hours I saw in December and January.
 
-## Internal turmoil at WebAgency
+"We'll definitely finish your project. I just don't know when we'll have the hours." I asked if it would be done by March, and he said he wasn't sure. But he did have an idea for a way to solve it.
 
-In February, I laid out the issues in an email to the CEO. We had a call, and he apologized for the way the project is going. He said that WebAgency really wanted to work with me, but I was their only hourly client. They had to prioritize their
+## The solution is to pay more
+
+I told WebAgency I was willing to wait. I just wanted to get back to the kind of work they were doing in October and November where their designers had time to focus on my project. The recent work felt like they were squeezing in low-quality work when they found a few minutes here and there.
+
+I said I was willing to wait a few weeks until things slowed down, but when was
 
 Their project manager had quit in November, and the CEO was scrambling to handle project management duties while also recruiting and interviewing new project managers. He admitted some things fell through the cracks, and they hadn't been doing the quality of work he wanted to do for me.
 
@@ -93,7 +99,15 @@ My initial reaction was outrage. The solution to them doing a poor job was that 
 
 The CEO agreed that it was unfair. He should have told me about the project manager leaving. He refunded me the price I'd paid in November and December as if I'd been on the retainer agreement.
 
-## The last 20% of work costs 50% of the budget
+## Start over or push through?
+
+Everything was around 80% done. The logo was almost done, the page designs were done minus a few tweaks and mobile versions. But nothing was complete and usable. I was four months and $XXk into this four-week project, and I had no usable work.
+
+It had taken several weeks to find them. I'd have to start over, transfer partial assets
+
+And to be honest, I didn't have time to fuss with anything. I was dealing with the mayhem of launching a new product (TODO: link) and making sure all of our internal workflows were ready to fulfill orders. I just wanted to do the thing that would minimize my time, and that was to just stick with them. It seemed like the design work was mostly 85% done anyway, so why not just spend a few hours on the last 15%?
+
+## The one-week task that took six weeks
 
 I already had three freelance developers working with me. The main thing I needed from the design agency was design.
 
@@ -223,8 +237,6 @@ I've shared pieces of this story in my monthly retrospectives, and I've gotten s
 
 As I've shared snippets of stories. I think I certainly made mistakes, but I think the people that think a project like this is trivial to manage have never managed a project like this. Or they have, and they don't realize that their code is garbage, and if they ever have to make changes, they'll have to essentially start over.
 
-### Why didn't you just use a Shopify template?
-
 ### Why didn't you just refuse to pay them until the work was done?
 
 They required payment up-front. I had no leverage to force them to complete the project. The contract just said I was buying hours. And I paid for the hours up front, so if I refused to accept the work, they already had my money. On the monthly retainer, they required a month of notice, so I still had to pay them for a final month once I canceled.
@@ -239,4 +251,6 @@ They've either never hired anyone or they've never had to maintain code from a b
 
 If you know of a place where you can reliably hire skilled web developers
 
-It would have taken an extra 20-80 hours of my time. I have to interview candidates, ramp them up on the codebase. It was possible I'd run into the same problems or worse and then have to start over again multiple times. With Design Crew, I at least had confidence the work would get done to my standards eventually if I let them continue.
+It would have taken an extra 20-80 hours of my time. I have to interview candidates, ramp them up on the codebase. It was possible I'd run into the same problems or worse and then have to start over again multiple times. With WebAgency, I at least had confidence the work would get done to my standards eventually if I let them continue.
+
+### Why didn't you just use a Shopify template?
