@@ -65,7 +65,7 @@ I emailed the CEO, and he called me. He was embarrassed that the designers had g
 
 I didn't like that they had gone beyond the scope of the rebrand, but I reasoned that they were doing quality work, and I'd probably work with them in the future anyway, so why not do it.
 
-## "I don't know when we'll have the hours to finish"
+## Work slows down
 
 Starting in December, WebAgency slowed down. A lot.
 
@@ -74,6 +74,8 @@ They stopped scheduling calls to review work with me. They occasionally shared u
 At the time, I chalked it up to the holidays. Lots of people are on vacation in December, so I assumed things would pick back up in the new year.
 
 The slow pace continued into January. And not only was the pace slow, the quality of the work degraded. When the project started, I'd give them feedback on the designs, and they'd integrate my feedback. But now, when I'd give them a note about how there's not enough contrast between a text field and a background color, it took three back-and-forths before they understood what I was saying.
+
+## "I don't know when we'll have the hours to finish"
 
 I emailed the CEO to ask what was going on. We had a call, and he apologized for the way the project was going. He admitted that things were bumpy internally at WebAgency. Their project manager quit in November, and the CEO was scrambling to cover those duties while also interviewing replacements.
 
@@ -101,17 +103,33 @@ The CEO agreed that it was unfair. He should have told me about the project mana
 
 ## Start over or push through?
 
-Everything was around 80% done. The logo was almost done, the page designs were done minus a few tweaks and mobile versions. But nothing was complete and usable. I was four months and $XXk into this four-week project, and I had no usable work.
+Everything was around 80% done, but nothing was usable. The logo still needed some adjustments. The desktop versions of the page redesigns were almost done, but they hadn't started the mobile versions, so I couldn't hand things to my dev team to begin work. I was four months and $XXk into this four-week project, and I had no usable work.
 
-It had taken several weeks to find them. I'd have to start over, transfer partial assets
+Now, I had a decision to make. Do I dig myself even deeper with WebAgency by signing the retainer agreement? Do I wait indefinitely for them to find time for me on an hourly contract? Or do I hire someone else to finish the work?
+
+Hiring a new designer was off the table. I was in the middle of launching a new product, and I barely had time to do my current work. I didn't have time to search, interview, and onboard a new agency or freelancer. And I've seen what happens when one person tries to finish a project that someone else claimed was 80% done. The results are never good.
+
+It sounds absurd now, but the retainer with WebAgency sounded like a good plan. I only had to give a month's notice for cancellation, so if it wasn't working, I could back out. Plus, they had access to so many .
+
+I had started having TinyPilot's developers code up parts of WebAgency's design, and it was very bumpy. It took longer than I expected because TinyPilot's devs were more used to JavaScript development than matching precise designs with CSS. And there was a lot of back-and-forth across teams of, "What should the button look like when the page is in this state?" If WebAgency handled both design and implementation, those discussions could happen much more quickly, and I wouldn't be in the mix.
 
 And to be honest, I didn't have time to fuss with anything. I was dealing with the mayhem of launching a new product (TODO: link) and making sure all of our internal workflows were ready to fulfill orders. I just wanted to do the thing that would minimize my time, and that was to just stick with them. It seemed like the design work was mostly 85% done anyway, so why not just spend a few hours on the last 15%?
 
-## The one-week task that took six weeks
+It sounds absurd looking back, but the retainer seemed like an attractive solution to me. I loved WebAgency's work back in October. If I could get that quality of work consistently, that would be good. And if their developers were as good as their designers, $160/hr is still a little pricey, but maybe it would be worth it to have an agency that can do so many different skills without me having to interview people.
+
+I signed a retainer
 
 I already had three freelance developers working with me. The main thing I needed from the design agency was design.
 
 Meanwhile, the design agency had been telling me that their strength is the collaboration between their developers and designers. Their developers were well-practiced in implementing designs, so they'd likely be able to code the designs much faster than who I had on staff.
+
+## Not like other dev work
+
+## The one-week task that took six weeks
+
+## Before and after
+
+TODO: Screenshots from May retro
 
 ## The postmortem
 
@@ -124,10 +142,6 @@ They typically work on completely new apps or bigger features where it's not val
 They minimized project management because of they were low on hours.
 
 They actually could have shared the hours with me. They were tracking billable time with [toggl](https://toggl.com), so he wouldn't have minded just giving me access to their dashboard.
-
-## Before and after
-
-TODO: Screenshots from May retro
 
 ## What I'd do differently
 
@@ -159,7 +173,11 @@ The design agency left all of the design tasks half-finished, but they used a qu
 
 Going forward, I need to set better expectations so they know not to work on non-critical tasks until all the critical tasks are complete.
 
-### Structure the project to deliver incremental, usable results
+### Structure for serial, incremental results
+
+The agency worked in parallel because that's the most flexible for them. Their commitment was to deliver the finished work at the end of the project, but there were no commitments for how that work was structured. If I do this in the future, I'll push for the agency to complete tasks in serial. So if we have six tasks, I'd like to see task one and two 100% complete before we start task two. I don't want six ongoing tasks that are all going to inch closer to 100% at the same time at the end of the project.
+
+Working in parallel seems attractive because it's the most efficient use of resources. You . But actually, it's much worse for the client in ways that are no obvious.
 
 You're hiring a design agency because you think it will increase your profits. For the sake of simplicity, let's suppose that you have six distinct design tasks. Each task takes one month to complete, and it will increase your profits by 2%, but it will cost you $10k per month. And let's assume your profits are also $10k per month.
 
@@ -167,13 +185,9 @@ If the agency works on all tasks in parallel and delivers the results to you in 
 
 If instead, the agency delivered one task per month
 
-If you assigned a freelancer tasks A, B, and C, it would be odd if they abruptly stopped working on task A when it was 80% complete and then started working on task B instead. It would be even more bizarre if they stopped midway through task B to start task C.
+Letting the agency work on several things also puts you in a weak position if things go south. If there are eight distinct tasks that are partially complete, you're in the position I was where it's difficult to leave the agency because so much of the work is in jeopardy. If there are only two or three tasks in progress, you're in much better position to cut things off if they're going poorly.
 
-With an agency, it's easy to end up in a situation where several tasks are only 80% complete. Maybe Alice at the agency only has 10 hours free this month, so she gets 80% through task A. Bob starts next, but he doesn't want to pick up Alice's project midway through, so he starts task B and gets 30% through it. Before you know it, you've spent $39,577, and you can't use any of the work because it's all only 80-90% finished.
-
-In the book _Getting Things Done_, David Allen describes unfinished tasks as "open loops." The more open loops you have, the worse your focus is because each one occupies a bit of real estate in your mind. A freelancer will generally have only a couple of open loops with you at once, whereas a design agency can have 5-10x as many, and they drag on for longer.
-
-Open loops are also worse value for your money. Suppose you need to complete six tasks over the course of six months. If you hired an individual, they'd deliver about one task per month. If you pay them at the end of each month, you're enjoying the benefit of the work around the same time you pay for it. With an agency, they might assign those six tasks to six people who only spend 1/6th of their time on your project. At month five, the agency has 80% of the money, but you're getting 0% of the benefit because none of the tasks are complete yet.
+Lastly, it's just more mentally taxing on you as the client to oversee eight different tasks happening in parallel. In the book _Getting Things Done_, David Allen describes unfinished tasks as "open loops." The more open loops you have, the worse your focus in general because each loop occupies a bit of real estate in your mind.
 
 ### Require a shared view of billable hours
 
