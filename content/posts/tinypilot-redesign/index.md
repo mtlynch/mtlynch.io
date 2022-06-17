@@ -3,38 +3,46 @@ title: "Things I Wish I'd Known Before Spending $46k on a Website Redesign"
 date: 2022-06-09T08:33:40-04:00
 ---
 
-I created my company's site when I first launched the business. It was meant to be a placeholder until I hired a real designer. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project.
+In 2020, I put up a website for a produce I was launching called TinyPilot. I had no idea if the business would go anywhere, so the first version of the website was just a basic site with a free theme. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project, so it was time for a touch-up.
 
-I was still bootstrapped and had a lot of expenses, so I budgeted $10-15k for a redesign that I expected to take two or three months. By the end, it took eight months, $46k, and a massive amount of headache.
+I set aside $15k for a redesign, which I expected to take two or three months.
+
+Here's what the site looked after the redesign:
 
 {{<gallery caption="Before and after my $46k redesign of the [TinyPilot website](https://tinypilotkvm.com)">}}
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="460px" hasBorder="true">}}
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="401px" hasBorder="true">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="380px" hasBorder="true">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="332px" hasBorder="true">}}
 {{</gallery>}}
+
+Except it didn't take three months and $15k. It took eight months, $46k, and a massive amount of headache.
 
 Now that the project is over, I'm revisiting what happened and what mistakes I made in hiring and working with the web design agency that did this work.
 
-## My experience with hiring
+## I know what you're thinking
 
-If you're assuming that I'm an idiot who let a design agency take advantage of them, it's worth noting that this is not my first rodeo. I definitely made mistakes in this project, but this was not my first time hiring outside help for a project.
+If you hear that someone ended up spending $46k on a pretty simple website redesign, you're probably assume that person's a clueless rube that let someone take advantage of them.
 
-I've hired dozens of freelancers, including developers, artists, writers, and editors. I've never hired an agency, but I've worked with web design agencies at previous jobs.
+But I had experience with. I'm a software developer, so I understood all the work I was asking for. I've never hired an agency, but I've hired dozens of freelancers, including developers, artists, writers, and editors. (TODO: links)
 
-## Finding an agency
+So, I definitely made mistakes on this project, but hopefully they're more interesting mistakes than the ones you'd assume.
+
+## Finding a design agency
 
 At the start of this process, I started looking for agencies. The problem with being a bootstrapped founder is that if you can find them by Googling "web design agency," they're about 10x too expensive for you. So it's hard to find people that match your size. I asked for recommendations and searched on sites like Indie Hackers and Hacker News.
 
-I interviewed four freelancers and one agency.
-
-I'm not trying to shame the agency who did this project, so I'll just call them "WebAgency." I don't think they were evil or deceptive. They seemed like they made a good-faith effort to deliver the results I wanted, but we were just mismatched. I didn't have enough experience hiring agencies, and they didn't have enough experience working for a bootstrapped software developer.
+I interviewed four freelancers and one agency, who I'll just call WebAgency.
 
 WebAgency immediately stood out as the best. Their portfolio showed a variety of styles that they executed well, and they had lots of different expertise in-house, so they could do design, development, animations, and 3D images if I needed them.
 
 What's more, WebAgency's CEO suggested I reduce the project scope. He said that instead of a full-blown redesign, I should just start with a rebranding. WebAgency would create a new logo and work with me to select a new color scheme and fonts for the site. From there, I could measure results, and the branding would let me start working with digital marketing agencies. That sounded smart!
 
-WebAgency's CEO estimated that the rebrand would require 30-40 billable hours over two to four weeks at their hourly rate $175/hour. So, $5-7k for new logo and branding felt reasonable to me. If the rebrand improved TinyPilot's sales, I could start a monthly retainer with WebAgency and have them polish design in other areas of TinyPilot.
+## Project planning
 
-WebAgency's CEO did warn me that I was smaller than most of their other clients. Most of their clients have them on long-term retainer agreements. This project was so tightly-scoped that we could do it hourly, but there was a possibility that they'd have to pause my work occasionally if a retainer client needed more time. That was fine with me. I didn't mind pausing the project for a week or two if they got busy.
+WebAgency's estimated that the rebrand would require 30-40 billable hours over two to four weeks at their hourly rate $175/hour. So, $5-7k for new logo and branding felt reasonable to me.
+
+WebAgency's CEO warned me that I was smaller than most of their other clients. Most of their clients have them on long-term retainer agreements. This project was so tightly-scoped that we could do it hourly, but there was a possibility that they'd have to pause my work occasionally if a retainer client needed more time.
+
+I didn't mind pausing the project for a week or two if they got busy. I was originally expecting the project to take two or three months, so stretching out a 4-week project was still well within my timeline.
 
 ## The honeymoon period
 
@@ -42,21 +50,23 @@ The first month of the project was fantastic.
 
 WebAgency's CEO was on all the calls, as well as the company's lead designer, a senior designer, and a project manager. They'd show me samples of the new logos and branding. I told them what I liked and disliked about the options. They took my feedback graciously, and the next round, we'd be a little closer.
 
-After three or four rounds of feedback, we landed on a logo concept we all liked:
+Within six weeks, we were zeroing in on a logo concept we all liked:
 
 TODO: Show logo draft
 
 ## The first red flag: scope creep
 
-In parallel with the logo, WebAgency started doing mockups of my site with different fonts and colors. At first, the website was essentially my existing website, but as we continued to meet, the designs got more elaborate.
+In addition to the logo, the agency was also responsible for choosing new fonts and colors for the website. They showed me mockups of different colors and how they'd look with my site design and the new logo.
 
-Sometimes, we'd meet, and there would be no change to the logos or branding. They just wanted to show me design ideas for the website.
+At first, their mockups were just my site with different colors and fonts. As we continued to meet, the designs got more elaborate.
 
-"To be clear, this project is still just the rebranding, right?," I asked them.
+Finally, they held a meeting just to show me different design ideas for the website. "To be clear, this project is still just the rebranding, right?," I asked them.
 
-"Oh, yes, yes," they reassured me. "Some branding choices won't make sense on top of the old design, so these are just quick sketches of how they could look."
+"Oh, yes, yes!" the lead designer reassured me. "Some branding choices wouldn't make sense on top of the old design, so these are just quick sketches of how they could look."
 
-But then it just continued. I was desperate to have the new logo because once that was done, I could put it on the sales site, my product's web app, and on the physical device's case. But instead of finalizing the last 10% of the logo, they just kept redesigning the website.
+But then it just continued. We were 95% done with the logo, and instead of making the final few adjustments, they just kept focusing on design and branding choices for the rest of the site.
+
+I was desperate to have the new logo because once that was done, I could put it on the sales site, my product's web app, and on the physical device's case. But instead of finalizing the last 10% of the logo, they just kept redesigning the website.
 
 The breaking point was when they started showing me new designs for my site's blog. From the beginning, I had said that I only cared about the purchase flow, and all other pages were explicitly out of scope.
 
@@ -285,9 +295,7 @@ I had CI checks and everything, but I didn't have pre-commit checks, they were r
 
 ## Why didn't you just...?
 
-I've shared pieces of this story in my monthly retrospectives, and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. Below, I've addressed why the obvious suggestions would not have worked.
-
-As I've shared snippets of stories. I think I certainly made mistakes, but I think the people that think a project like this is trivial to manage have never managed a project like this. Or they have, and they don't realize that their code is garbage, and if they ever have to make changes, they'll have to essentially start over.
+I've shared pieces of this story in my monthly retrospectives, and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. I think this feedback is well-intentioned, but a lot of it comes from people who have never hired anyone, much less an agency. Below, I've addressed why the obvious suggestions would not have worked.
 
 ### Why didn't you just refuse to pay them until the work was done?
 
@@ -297,7 +305,7 @@ If I had pushed for milestone-based payments from the start, they likely would h
 
 ### Why didn't you just find a cheap developer to do it for $4/hr?
 
-They've either never hired anyone or they've never had to maintain code from a bargain basement developer.
+In my experience, cheap developers are only worthwhile if you value your time at zero or you want a one-time implementation that you never have to touch again. In my case, I plan to maintain the TinyPilot website long-term, so I want code that meets my quality standards and that I feel comfortable maintaining long-term. You just can't get that with bargain-basement developers.
 
 ### Why didn't you just fire them and hire someone better?
 
@@ -305,6 +313,8 @@ If you know of a place where you can reliably hire skilled web developers
 
 It would have taken an extra 20-80 hours of my time. I have to interview candidates, ramp them up on the codebase. It was possible I'd run into the same problems or worse and then have to start over again multiple times. With WebAgency, I at least had confidence the work would get done to my standards eventually if I let them continue.
 
-### Why didn't you just use a Shopify/WordPress/ template?
+### Why didn't you just use a Shopify template?
 
-If I were starting the website over from scratch, I'd probably use a Shopify template. The site started out simple, and I was just using "buy" buttons to bring people to Shopify. Eventually
+Okay, this one is valid. Looking back, the site should just be a simple Shopify store with a custom theme.
+
+When I launched the site, I used Vue, as it was the tech stack I knew best for web development. Over time, the purchase experience has gotten more complex, and I've expensively reimplemented functionality that would have been free had I used a Shopify store. But at this point, migrating all the content to a Shopify store would be its own major project, so I stuck with redesigning what I had.
