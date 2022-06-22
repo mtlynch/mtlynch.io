@@ -138,29 +138,51 @@ Finally, on January XXth, the devs seemed to come to life. WebAgency's project m
 
 Dan contacted me to talk about how I wanted him to approach the design work. We had a call where we talked things over, and he seemed to have a plan.
 
-By the end of the work, Dan hadn't submitted any work to make progress on publishing the new designs. Meanwhile, Daniel used 25% of the March to fix the minor bugs from the end of the task queue. Oof.
+By the end of the work, Dan hadn't submitted any work to make progress on publishing the new designs. Meanwhile, Daniel used 15 of the 60 hours I'd booked to fix the minor bugs from the end of the task queue. Oof.
 
 ## The one-week task that took five weeks
 
 The TinyPilot website uses the Bootstrap CSS framework. We were still using the same free, third-party theme I got from [Bootswatch](https://bootswatch.com/) when I created the first version of the site. On top of Bootstrap and the third-party theme, we also have our own custom styles, often on a per-page or per-component basis.
 
-Daniel pointed out that this architecture was convoluted, and we should replace the third-party theme and per-page styles with our own site-wide Bootstrap theme. They estimated that it would only be a few days of work. It sounded sensible to me. It would probably pay for itself because otherwise the rest of the redesign would be fighting with three different layers of CSS styling.
+Dan pointed out that this architecture was convoluted, and we should replace the third-party theme and per-page styles with our own site-wide Bootstrap theme. Dan estimated that it would only be a few days of work.
 
-The theme work ended up taking five weeks for a total cost of $6.1k.
+It sounded sensible to me. It would probably pay for itself because otherwise the rest of the redesign would be fighting with three different layers of CSS styling.
+
+A few days later, Dan said there was another issue. I wasn't using CSS utility classes. Like a caveman, I was still assigning my own CSS classes to page elements and then defining style rules like `margin: 1rem`. What I should be doing instead, Dan said, was to use Bootstrap's
+
+Weeks went by and they kept working on refactoring the theme. Because WebAgency didn't report their hours until the end of the month, I couldn't tell if we'd burned two hours on this work or 30.
+
+At the end of the month, the final hours breakdown gave me my answer. The "one-week task" of replacing the Bootstrap theme ultimately took five weeks for a total cost of $6.1k.
 
 ## The final month
 
-By May, we were seven months in, and I'd spent $46k. Every month, it seemed like we were weeks away from wrapping up the project, and then somehow, the project would drag on for another month.
+By May, we were seven months in, and I'd spent $46k on what was supposed to be a simple rebranding.
 
-I gave WebAgency notice that I was terminating the contract. I had to give 28 days' notice, so I still had another month of work that I already paid for.
+Every month, it seemed like we were weeks away from wrapping up the project. And every month, something managed to eat up time and prevent WebAgency from finishing the thing I cared about.
 
-And finally, May was the month where the project progressed at the pace I expected from the start. WebAgency was able to code up each page within 7-10 days. Daniel kept pitching flourishes to the design that would look better but add time, and I declined them all and asked him to just focus on getting the basic designs done. By the last week, the product page was the only thing left. I was watching nervous that it was going to turn into a mess because the design was done, but it broke functionality. And the pull request was a mess with four or five distinct changes mashed into one. I figured worse comes to worst, I had enough to untangle it myself. I'd have a hard time implementing nice CSS.
+I decided I had to cut things off or this project could drag out for years. I gave WebAgency the required 28 days' notice that I was terminating the retainer contract.
 
-The month ended, and there was no communication from Daniel or WebAgency about what was supposed to happen with this half-finished PR. Then on June 1st, they asked me if I wanted them to continue. I asked if they wanted more billable hours or if this was included, and they said they'd wrap up the last PR for no additional charge. So they did. It took an extra XX days, but it wasn't too bad.
+Surprisingly, May was the month where the project progressed at the pace I expected from the start. Dan was able to code up each page within 7-10 days. WebAgency kept suggesting new flourishes to the design, and I always declined and asked them to focus on just wrapping up the basics in the time we had remaining.
 
-It was done, and I was incredibly relieved not to be dealing with this project anymore that had spiralled out of control.
+By the final week, they had completed two of the three pages. The only thing left wast the product detail page, which was also the most complex.
+
+TODO: Photo of product detail page
+
+With two days left in May, Dan created a pull request that implemented the design changes to the product page. Yes! Victory was close at hand!
+
+I looked closer at the code and saw that it was a bit of a mess. It mixed refactoring changes with behavioral changes (TODO: link), style changes with functional changes, and it had a functional bug that prevented the user from adding and removing items from their shopping cart. The pull request was still in draft state, so I was hoping Dan viewed this code as a rough draft.
+
+On the last day of the month, I was anxiously watching Dan's final pull request to see what would happen. Would WebAgency disappear and leave me with a broken, incomplete code change? Or would they tell me I have to pay them more to finish it up?
+
+Surprisingly, nothing happened. The month ended without any communication from WebAgency about how they'd disengage from the project.
+
+Then, on June 1st, I received an email from Dan. He told me that WebAgency's CEO authorized him to wrap up the last pull request at no charge. I pointed out the bug and asked them to split it into five distinct pull requests. To their credit, they did with no fuss. They wrapped up the outstanding work in two days.
+
+It was done! and I was incredibly relieved not to be dealing with this project anymore that had spiralled out of control.
 
 ## Before and after
+
+Here are the full changes. So this is what $46k buys you with a boutique design agency:
 
 {{<gallery caption="Before and after landing page redesign">}}
 {{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
@@ -299,19 +321,26 @@ I've shared pieces of this story in my monthly retrospectives, and I've gotten s
 
 ### Why didn't you just refuse to pay them until the work was done?
 
-They required payment up-front. I had no leverage to force them to complete the project. The contract just said I was buying hours. And I paid for the hours up front, so if I refused to accept the work, they already had my money. On the monthly retainer, they required a month of notice, so I still had to pay them for a final month once I canceled.
+WebAgency required payment up-front, so I had no leverage to force them to complete the project.
 
-If I had pushed for milestone-based payments from the start, they likely would have just declined the project. I think they saw me as a small client who could grow to something more substantial, but nobody wants to work with a tiny client who's going to be demanding about the budget.
+If I had pushed for milestone-based payments at the start of the contract, WebAgency likely would have just declined the project. They saw me as a small client who could grow to something more substantial, but nobody wants to work with a tiny client who has demands like a giant corporation.
 
 ### Why didn't you just find a cheap developer to do it for $4/hr?
 
-In my experience, cheap developers are only worthwhile if you value your time at zero or you want a one-time implementation that you never have to touch again. In my case, I plan to maintain the TinyPilot website long-term, so I want code that meets my quality standards and that I feel comfortable maintaining long-term. You just can't get that with bargain-basement developers.
+In my experience, cheap developers are worthwhile in two scenarios:
+
+1. You need throwaway code that has to work once and never require any changes
+1. You value your time at zero, so you don't mind giving 20 hours of feedback on a task a competent developer could complete with minimal supervision
+
+I plan to keep the TinyPilot website around for a while, so I want code that I understand and feel comfortable maintaining.
 
 ### Why didn't you just fire them and hire someone better?
 
-If you know of a place where you can reliably hire skilled web developers
+I did consider firing WebAgency at several points, especially when we switched from design to development.
 
-It would have taken an extra 20-80 hours of my time. I have to interview candidates, ramp them up on the codebase. It was possible I'd run into the same problems or worse and then have to start over again multiple times. With WebAgency, I at least had confidence the work would get done to my standards eventually if I let them continue.
+Talented web developers are in high demand. You can't just wave a $100 bill in the air and wait for competed developers to show up. It took me 20-30 hours of searching and interviewing to find WebAgency, and I was dreading starting that process over. Especially because the end always seemed like it was weeks away.
+
+The other problem is that handing off a project midway through causes substantial rework. If I switch vendors 200 hours into a 300-hour project, it's probably going to take the next vendor 150-200 hours to finish, as they have to re-do all the onboarding to understand the project and then figure out how to take over where the first agency left off.
 
 ### Why didn't you just use a Shopify template?
 
