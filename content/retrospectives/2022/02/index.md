@@ -25,7 +25,7 @@ I had to delay the launch because we discovered that the first manufactured batc
 
 ### Write a job description for TinyPilot support engineer and begin interviewing candidates
 
-* **Result**: I wrote a [job description](https://tinypilotkvm.com/jobs/support-engineer), but I haven't posted it to any job boards.
+* **Result**: I wrote a job description, but I haven't posted it to any job boards.
 * **Grade**: C+
 
 This is one of those things that I keep deprioritizing because it's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). If TinyPilot had a support engineer, it would get me out of frequent time crunches, so I need to prioritize it better.
