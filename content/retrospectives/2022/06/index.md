@@ -45,15 +45,15 @@ Fortunately, my electrical engineering partner firm recommended a digital market
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | April 2022                               | May 2022      | Change                                             |
-| ------------------------ | ---------------------------------------- | ------------- | -------------------------------------------------- |
-| Unique Visitors          | 5,268                                    | 14,296        | <font color="green">+9,028 (+171%)</font>          |
-| Total Pageviews          | 11,974                                   | 24,131        | <font color="green">+12,157 (+102%)</font>         |
-| Sales Revenue            | $43,771.00                               | $54,844.20    | <font color="green">+$11,073.20 (+25%)</font>      |
-| Enterprise Subscriptions | $47.75                                   | $47.75        | 0                                                  |
-| Royalties                | $2,253.61                                | $3,269.56     | <font color="green">+$1,015.95 (+45%)</font>       |
-| Total Revenue            | $46,072.36                               | $58,161.51    | <font color="green">+$12,089.15 (+26%)</font>      |
-| **Profit**               | **<font color="red">-$19,392.76</font>** | **$2,419.26** | **<font color="green">+$21,812.02 (+inf%)</font>** |
+| Metric                   | April 2022                               | May 2022                                 | Change                                             |
+| ------------------------ | ---------------------------------------- | ---------------------------------------- | -------------------------------------------------- |
+| Unique Visitors          | 5,268                                    | 14,296                                   | <font color="green">+9,028 (+171%)</font>          |
+| Total Pageviews          | 11,974                                   | 24,131                                   | <font color="green">+12,157 (+102%)</font>         |
+| Sales Revenue            | $43,771.00                               | $54,844.20                               | <font color="green">+$11,073.20 (+25%)</font>      |
+| Enterprise Subscriptions | $47.75                                   | $47.75                                   | 0                                                  |
+| Royalties                | $2,253.61                                | $3,269.56                                | <font color="green">+$1,015.95 (+45%)</font>       |
+| Total Revenue            | $46,072.36                               | $58,161.51                               | <font color="green">+$12,089.15 (+26%)</font>      |
+| **Profit**               | **<font color="red">-$19,392.76</font>** | **<font color="green">$6,445.38</font>** | **<font color="green">+$25,838.14 (+inf%)</font>** |
 
 This was a strong month in terms of visitors and sales. Visitors nearly tripled, and sales jumped by 25%.
 
