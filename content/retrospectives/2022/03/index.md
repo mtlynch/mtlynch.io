@@ -57,7 +57,7 @@ My profit was atypically high in February, but it's mainly a consequence of timi
 
 ## Hiring a support engineer: the job posting
 
-I've wanted to hire a support engineer for the past few months, but I've been short on time. It took even longer than I expected, but I've hired my first support engineer. The first step was to create a [job posting](https://tinypilotkvm.com/jobs/support-engineer/).
+I've wanted to hire a support engineer for the past few months, but I've been short on time. It took even longer than I expected, but I've hired my first support engineer. The first step was to create a job posting](https://web.archive.org/web/20220128024101/https://tinypilotkvm.com/jobs/support-engineer/).
 
 I advertised the job description in three places:
 
