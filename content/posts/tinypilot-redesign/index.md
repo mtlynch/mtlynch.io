@@ -20,11 +20,11 @@ Now that the project is over, I'm revisiting what happened and what mistakes I m
 
 ## I know what you're thinking
 
-If you hear that someone ended up spending $46k on a pretty simple website redesign, you're probably assume that person's a clueless rube that let someone take advantage of them.
+You're assuming I spent $46k because I'm just a clueless rube whose never hired anyone before, so someone take advantage of me.
 
-But I had experience with. I'm a software developer, so I understood all the work I was asking for. I've never hired an agency, but I've hired dozens of freelancers, including developers, artists, writers, and editors. (TODO: links)
+I've never hired an agency, but I've hired dozens of freelancers, including [developers](/freelancer-guidelines/), [artists](/how-to-hire-a-cartoonist/), [writers](/hiring-content-writers/), and [editors](/editor/). I'm also a software developer, so I understood the work I hired the agency to complete.
 
-So, I definitely made mistakes on this project, but hopefully they're more interesting mistakes than the ones you'd assume.
+I definitely made mistakes on this project, but hopefully they're more interesting than the ones you might guess.
 
 ## Finding a design agency
 
