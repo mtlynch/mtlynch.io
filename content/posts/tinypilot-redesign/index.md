@@ -20,7 +20,7 @@ Now that the project is over, I'm revisiting what happened and what mistakes I m
 
 ## I know what you're thinking
 
-You're assuming I spent $46k because I'm just a clueless rube whose never hired anyone before, so someone take advantage of me.
+If you hear that someone spent $46k to redesign three pages of a website, you probably think they're a clueless rube who's never hired anyone before.
 
 I've never hired an agency, but I've hired dozens of freelancers, including [developers](/freelancer-guidelines/), [artists](/how-to-hire-a-cartoonist/), [writers](/hiring-content-writers/), and [editors](/editor/). I'm also a software developer, so I understood the work I hired the agency to complete.
 
@@ -28,7 +28,7 @@ I definitely made mistakes on this project, but hopefully they're more interesti
 
 ## Finding a design agency
 
-At the start of this process, I started looking for agencies. The problem with being a bootstrapped founder is that if you can find them by Googling "web design agency," they're about 10x too expensive for you. So it's hard to find people that match your size. I asked for recommendations and searched on sites like Indie Hackers and Hacker News.
+The problem with being a bootstrapped founder is that if you can find them by Googling "web design agency," they're about 10x too expensive for you. So it's hard to find people that match your size. I asked for recommendations and searched on sites like Indie Hackers and Hacker News.
 
 I interviewed four freelancers and one agency, who I'll just call WebAgency.
 
@@ -36,9 +36,9 @@ WebAgency immediately stood out as the best. Their portfolio showed a variety of
 
 What's more, WebAgency's CEO suggested I reduce the project scope. He said that instead of a full-blown redesign, I should just start with a rebranding. WebAgency would create a new logo and work with me to select a new color scheme and fonts for the site. From there, I could measure results, and the branding would let me start working with digital marketing agencies. That sounded smart!
 
-## Project planning
+## The initial estimate: four weeks and $7k
 
-WebAgency's estimated that the rebrand would require 30-40 billable hours over two to four weeks at their hourly rate $175/hour. So, $5-7k for new logo and branding felt reasonable to me.
+WebAgency estimated that the rebrand would require 30-40 billable hours over two to four weeks at their hourly rate $175/hour. So, $5-7k for new logo and branding felt reasonable to me.
 
 WebAgency's CEO warned me that I was smaller than most of their other clients. Most of their clients have them on long-term retainer agreements. This project was so tightly-scoped that we could do it hourly, but there was a possibility that they'd have to pause my work occasionally if a retainer client needed more time.
 
@@ -50,23 +50,32 @@ The first month of the project was fantastic.
 
 WebAgency's CEO was on all the calls, as well as the company's lead designer, a senior designer, and a project manager. They'd show me samples of the new logos and branding. I told them what I liked and disliked about the options. They took my feedback graciously, and the next round, we'd be a little closer.
 
-Within six weeks, we were zeroing in on a logo concept we all liked:
+Within six weeks, we had narrowed in on a logo concept we all liked:
 
-TODO: Show logo draft
+{{<gallery caption="From oldest to newest, the progression of TinyPilot logo drafts that WebAgency showed me in the first few weeks of the project.">}}
+{{<img src="logos-1.png" hasBorder="true">}}
+{{<img src="logos-2.png" hasBorder="true">}}
+{{<img src="logos-5.png" hasBorder="true">}}
+{{<img src="logos-6.png" hasBorder="true">}}
+{{</gallery>}}
 
 ## The first red flag: scope creep
 
 In addition to the logo, the agency was also responsible for choosing new fonts and colors for the website. They showed me mockups of different colors and how they'd look with my site design and the new logo.
 
+TODO: Show draft
+
 At first, their mockups were just my site with different colors and fonts. As we continued to meet, the designs got more elaborate.
+
+TODO: Show draft
 
 Finally, they held a meeting just to show me different design ideas for the website. "To be clear, this project is still just the rebranding, right?," I asked them.
 
 "Oh, yes, yes!" the lead designer reassured me. "Some branding choices wouldn't make sense on top of the old design, so these are just quick sketches of how they could look."
 
-But then it just continued. We were 95% done with the logo, and instead of making the final few adjustments, they just kept focusing on design and branding choices for the rest of the site.
+## Just finish the logo!
 
-I was desperate to have the new logo because once that was done, I could put it on the sales site, my product's web app, and on the physical device's case. But instead of finalizing the last 10% of the logo, they just kept redesigning the website.
+They were 95% done with the logo, but I'd asked for a few final adjustments. I was desperate to get the logo to 100% because once that was done, I could put it on the sales site, my product's web app, and on the physical device's case. But instead of finalizing the last 5% of the logo, they just kept redesigning the website.
 
 The breaking point was when they started showing me new designs for my site's blog. From the beginning, I had said that I only cared about the purchase flow, and all other pages were explicitly out of scope.
 
@@ -84,17 +93,17 @@ At the time, I chalked it up to the holidays. Lots of people are on vacation in 
 
 The slow pace continued into January. And not only was the pace slow, the quality of the work degraded.
 
-When the project started, we communicated effectively. I'd give them feedback on the designs, and they'd integrate my feedback. But now, when I'd mention something like insufficient contrast between a text field and its surrounding color, it took three back-and-forths before they understood what I was saying.
+When the project started, we communicated effectively. I'd give them feedback on the designs, and they'd integrate my feedback. But now, when I'd say something like, "there's not enough contrast between the text input and the background," it took three back-and-forths before they understood what I was saying.
 
 ## "I don't know when we'll have the hours to finish"
 
 I emailed the CEO to ask what was going on. We had a call, and he apologized for the way the project was going. He admitted that things were bumpy internally at WebAgency. Their project manager quit in November, and the CEO was scrambling to cover those duties while also interviewing replacements.
 
-The reason I was seeing the degradation in quality was that they were busy with other clients. WebAgency _really_ wanted to work with me, but I was their only hourly client. They had to prioritize the retainer clients that made a long-term commitment to them.
+He confirmed that I wasn't imagining the drop in quality. They were busy with their larger clients, so they were squeezing my project into the gaps, but the designers probably aren't as focused as they were when we started.
 
-I said I understood I was a small client to them. I was willing to wait a few weeks until their other work slowed down. We both agreed that there were probably only 10-15 hours of design work left. I just wanted them to be high-quality October hours and not the harried, squeeze time in between other things hours I saw in December and January.
+I said I understood I was a small client to them. I was willing to wait a few weeks until their other work slowed down. We both agreed that there were probably only 10-15 hours of design work left. I just wanted them to be high-quality October hours and not the harried, squeeze-in-whatever time I saw in December and January.
 
-"We'll definitely finish your project. I just don't know when we'll have the hours." I asked if it would be done by March, and he said he wasn't sure.
+"We'll definitely finish your project. I just don't know when we'll have the hours," the CEO told me. I asked if it would be done by March, and he said he wasn't sure.
 
 WebAgency's CEO did, however, have an idea for how we could complete the project quickly.
 
@@ -106,27 +115,23 @@ My initial reaction was outrage. The solution to them doing a poor job was that 
 
 The CEO agreed that it was unfair. He told me he'd retroactively adjust my December and January bills as if I'd been on a retainer agreement and refund the difference. And he said the offer stood even if I walked away at that point.
 
-The CEO did emphasize the benefits of the retainer. TinyPilot's developers had started to implement parts of the design like the new header and footer, and it had gone poorly. They mainly worked in JavaScript and Python, so implementing existing designs in CSS wasn't their strong suit. Even though they were significantly more expensive than TinyPilot's developers, they'd cost less overall since they're so experienced at exactly the tasks I needed.
-
-The retainer agreement only had a 28-day notice requirement, so if it didn't work out, I was only on the hook to pay them for one more month.
+The CEO emphasized that the retainer would allow WebAgency to handle not only the design work but the development work to get it on my site. I had planned to use TinyPilot's in-house developers for that, but it was going poorly. TinyPilot's developers worked primarily in JavaScript and Python, so implementing designs in CSS wasn't their strong suit. WebAgency's CEO estimated that even their developers were significantly more expensive than TinyPilot's, the project would cost less overall since WebAgency's developers have so much experienced working with their designers and implementing their designs.
 
 ## Start over or push through?
 
-WebAgency put me in a tough position. Now, I had a decision to make. Do I dig myself even deeper with WebAgency by signing the retainer agreement? Do I wait indefinitely for them to find time for me on an hourly contract? Or do I hire someone else to finish the work?
+WebAgency put me in a tough position. Should I dig myself even deeper into the project by signing the retainer agreement? Do I wait around for months until they find time for me on an hourly contract? Or do I hire someone else to finish the work?
 
-All the designs were around 80% done, but nothing was usable. The logo still needed some adjustments. The desktop versions of the page redesigns were 80-90% done, but they hadn't started the mobile versions. I couldn't hand things to TinyPilot's dev team to begin work. I was four months and $XXk into what was supposed to be a six-week project.
+All the designs were around 80% done, but nothing was usable. The logo still needed those final few adjustments. They had mostly completed the page designs for desktop, but they hadn't started the mobile versions. That meant I couldn't hand any work off to TinyPilot's developers because they needed both desktop and mobile designs to begin work. I was four months and $XXk into what was supposed to be a six-week project.
 
-I had seen WebAgency do excellent work, but I'd also seen them do poor work. Would the retainer get me back to the excellent work? It sounded plausible.
+I had seen WebAgency do excellent work, but I'd also seen them drop the ball. Would the retainer get me back to the excellent work? It sounded plausible.
 
 Switching designers would have been incredibly difficult. I've seen what happens when one person tries to finish a project that someone else claimed was 80% done. The results are never good.
 
 I was in the middle of launching a new product, and I barely had time to do my current work. I didn't have time to search, interview, and onboard a new agency or freelancer.
 
-And to be honest, I didn't have time to fuss with anything. I was dealing with the mayhem of launching a new product (TODO: link) and making sure all of our internal workflows were ready to fulfill orders. I just wanted to do the thing that would minimize my time, and that was to just stick with them. It seemed like the design work was mostly 85% done anyway, so why not just spend a few hours on the last 15%?
-
 I signed the retainer. My good, protected hours were scheduled to resume in March.
 
-## Not like other dev work
+## Life as a retainer client
 
 We were off to a good start. Within the first week of my retainer month, they wrapped up almost all of the outstanding design work. There were still some small kinks to work out, but two of the there pages were finalized and ready for the developers to begin coding up the designs so I could publish them.
 
@@ -178,11 +183,11 @@ Surprisingly, nothing happened. The month ended without any communication from W
 
 Then, on June 1st, I received an email from Dan. He told me that WebAgency's CEO authorized him to wrap up the last pull request at no charge. I pointed out the bug and asked them to split it into five distinct pull requests. To their credit, they did with no fuss. They wrapped up the outstanding work in two days.
 
-It was done! and I was incredibly relieved not to be dealing with this project anymore that had spiralled out of control.
+And then it was finally done! I was incredibly relieved not to be dealing with this project anymore that had spiralled so far beyond what I initially wanted.
 
 ## Before and after
 
-Here are the full changes. So this is what $46k buys you with a boutique design agency:
+Here's what the site looked like after the redesign:
 
 {{<gallery caption="Before and after landing page redesign">}}
 {{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
@@ -199,21 +204,21 @@ Here are the full changes. So this is what $46k buys you with a boutique design 
 {{<img src="cart-after.png" alt="Screenshot of new shopping cart page" maxWidth="340px" hasBorder="true">}}
 {{</gallery>}}
 
-I think the new designs are inarguably better.
+The new designs are inarguably better. Were they _$46k better_? It's hard to say.
 
-Were they $46k better? It's hard to say. I certainly wouldn't have chosen to begin the project had I known the true cost and stress involved, but the site is seeing significantly more sales since we put the new design in place, so it might end up working out.
+I certainly wouldn't have chosen to begin the project had I known the true cost and stress involved, but the site is seeing significantly more sales since we put the new design in place, so it might end up working out.
 
 ## The postmortem
 
-The big problem seemed to be that TinyPilot is much smaller and budget-sensitive than most of their clients. He said that their typical client has a retainer in the range of $20-40k per month, so they weren't used to working within only 40 hours.
+After the project ended, I asked WebAgency's CEO if he'd be open to a postmortem to discuss what could be improved on the project. I said I had some ideas for improvement on both sides, and I was interested in hearing his perspective as well. He was candid with me in admitting that the project hadn't gone as smoothly as he'd hoped, and he was open to talking it through with me.
 
-He said that in order to maximize the amount of design and engineering time I received, he minimized project management. He admitted that was a mistake, and he should have included me in that conversation to make sure it was what I wanted.
+He felt that the underlying problem was that WebAgency had trouble scaling down their workflows to fit TinyPilot's budget. Their typical client has a retainer in the range of $20-40k per month. TinyPilot was buying only 40-60 hours per month, which they typically only reserve for maintenance rather than new development.
 
-They typically work on completely new apps or bigger features where it's not valuable to deliver features piecemeal. In my case, it would have been valuable to have them work on projects serially. In other words, if the project is going to take eight months, I get more value from having the new landing page up in month three rather than waiting until month eight for everything to be done.
+I told him that I wished we'd structed the work to give me incremental results so that I'd have the logo first, then the landing page design, then the product page design, etc. instead of working on everything in parallel. He said that WebAgency typically works on completely new apps or bigger features where it's not valuable to deliver features piecemeal, so they weren't used to working that way, though he understood why I would have preferred it.
 
-They minimized project management because of they were low on hours.
+I told WebAgency that I expected that one of the benefits of the agency was that they'd be more active in managing the project, but it ultimately felt like I was doing my own project management and they had just loaned me developers. He agreed that this was true and that this was a misstep on his part. He said that WebAgency tries to keep project management to less than 5% of billable hours, but on a 40-hour retainer, that meant basically eliminating the project managers from the project. He admitted that was a mistake, and he should have included me in that conversation to make sure it was what I wanted.
 
-They actually could have shared the hours with me. They were tracking billable time with [toggl](https://toggl.com), so he wouldn't have minded just giving me access to their dashboard.
+I mentioned how I wished I could have had more insight into their hours as they happened, and I felt silly because he said they would have been happy to share that with me had I asked. They were tracking billable time with [toggl](https://toggl.com), so he wouldn't have minded just giving me access to their dashboard.
 
 ## What I'd do differently
 
@@ -221,11 +226,9 @@ If I were approaching this project again, here are the things I'd do differently
 
 ### Budget more time for management
 
-The fundamental mistake I made when hiring this agency was underestimating how much time I'd need to manage them.
+The fundamental mistake I made when hiring this agency was underestimating how much time I'd need to manage them. I certainly made other mistakes, but I think those would have been less likely had I kept a closer eye on the project to make sure that things were on track.
 
-The agency works with me for 40-60 hours per month. That's the same as each of TinyPilot's other freelancer developers, so I thought the agency would require similar oversight to one freelancer. I found that agencies required significantly more managment than individual freelancers for the same number of billable hours.
-
-When you work with an agency, you're interacting with multiple people who are working on their own subprojects. More people necessarily means more management time. Agencies are supposed to abstract away the distinct people, but if you're working with different people with different specialties, you can't really have a single point of contact playing telephone for everyone.
+The agency was working with me for 40-60 hours per month, which was the same as each of TinyPilot's other freelancer developers. I thought the agency would require similar oversight to one freelancer, but having more people on a project requires more management even if they're collectively only working 40 hours per month.
 
 ### Narrow the project scope
 
@@ -323,27 +326,29 @@ I've shared pieces of this story in my monthly retrospectives, and I've gotten s
 
 WebAgency required payment up-front, so I had no leverage to force them to complete the project.
 
-If I had pushed for milestone-based payments at the start of the contract, WebAgency likely would have just declined the project. They saw me as a small client who could grow to something more substantial, but nobody wants to work with a tiny client who has demands like a giant corporation.
+If I had pushed for milestone-based payments at the start of the contract, WebAgency likely would have just declined the project. They saw me as a small client who could grow to something more substantial, but nobody wants to work with a tiny client who makes demands like a giant corporation.
 
 ### Why didn't you just find a cheap developer to do it for $4/hr?
 
 In my experience, cheap developers are worthwhile in two scenarios:
 
 1. You need throwaway code that has to work once and never require any changes
-1. You value your time at zero, so you don't mind giving 20 hours of feedback on a task a competent developer could complete with minimal supervision
+1. You value your time at zero, so you don't mind giving 20 hours of feedback on a task a competent developer could complete in three hours
 
-I plan to keep the TinyPilot website around for a while, so I want code that I understand and feel comfortable maintaining.
+I plan to keep the TinyPilot website around for a while, so I want code that I understand and feel comfortable maintaining. That meant I needed a developer who can write clear, maintainable code.
 
 ### Why didn't you just fire them and hire someone better?
 
-I did consider firing WebAgency at several points, especially when we switched from design to development.
+I did consider firing WebAgency at several points, especially as the proejct shifted from design to development.
 
-Talented web developers are in high demand. You can't just wave a $100 bill in the air and wait for competed developers to show up. It took me 20-30 hours of searching and interviewing to find WebAgency, and I was dreading starting that process over. Especially because the end always seemed like it was weeks away.
+It took me 20-30 hours of searching and interviewing to find WebAgency, and I was dreading starting that process over. Especially because the end always seemed like it was weeks away.
 
 The other problem is that handing off a project midway through causes substantial rework. If I switch vendors 200 hours into a 300-hour project, it's probably going to take the next vendor 150-200 hours to finish, as they have to re-do all the onboarding to understand the project and then figure out how to take over where the first agency left off.
 
 ### Why didn't you just use a Shopify template?
 
-Okay, this one is valid. Looking back, the site should just be a simple Shopify store with a custom theme.
+If I could go back in time to when I first created the website, I would have made it a simple Shopify store with a custom theme.
 
-When I launched the site, I used Vue, as it was the tech stack I knew best for web development. Over time, the purchase experience has gotten more complex, and I've expensively reimplemented functionality that would have been free had I used a Shopify store. But at this point, migrating all the content to a Shopify store would be its own major project, so I stuck with redesigning what I had.
+When I launched the site, I used Vue, as it was the tech stack I knew best for web development. I didn't want to marry myself to Shopify and learn their templating system when all I needed was a simple "buy" button.
+
+Over time, TinyPilot's purchase experience became more complex, and I expensively reimplemented functionality that would have been free had I used a Shopify store. But at this point, migrating all the content to a Shopify store would be its own major project, so I stuck with redesigning what I had.
