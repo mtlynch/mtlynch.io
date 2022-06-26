@@ -171,3 +171,25 @@
     }
   }
 }
+
+.tag {
+  font-size: 0.8em;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.tag:hover {
+  text-decoration: none;
+}
+
+.tag-posts {
+  background-color: #e3ffe8;
+}
+
+.tag-retrospectives {
+  background-color: #fffade;
+}
+
+.tag-book-reports {
+  background-color: #f5ebfa;
+}
