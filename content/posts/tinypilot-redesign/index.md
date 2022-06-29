@@ -5,13 +5,13 @@ date: 2022-06-09T08:33:40-04:00
 
 In 2020, I put up a website for a product I was launching called TinyPilot. I had no idea if the business would go anywhere, so the first version of the website was just a basic site with a free theme. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project.
 
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="350px" hasBorder="true">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true">}}
 
 Beautiful designs aren't my strong side, so I set aside $15k to hire a designer for a few months. My site was pretty simple, and I only wanted to redesign the three pages the customer sees when they buy my product, so I expected it to take a couple of months.
 
 Here's what the site looked after the redesign:
 
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="350px" hasBorder="true">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="400px" hasBorder="true">}}
 
 Except it didn't take a few months and $15k. It took eight months, $46k, and massive stress.
 
@@ -168,9 +168,9 @@ Dan pointed out that this architecture was convoluted, and suggested we replace 
 
 A few days later, Dan said there was another issue. I wasn't using CSS utility classes. Like a caveman, I was still assigning my own CSS classes to page elements and then defining style rules like `margin: 1rem`. What I should be doing instead, Dan said, was to use Bootstrap's utility classes like `m-3`. That way, the styles would respect the theme. It should only be a few days of work, though.
 
-Weeks went by and they kept working on refactoring the theme. Because WebAgency didn't report their hours until the end of the month, I couldn't tell if we'd burned two hours on this work or 30.
+Weeks went by and they kept working on refactoring the theme. Because WebAgency of how WebAgency reported their hours, I couldn't tell if this work was taking 40 hours or 4 hours. At the end of the month, the final hours breakdown gave me my answer.
 
-At the end of the month, the final hours breakdown gave me my answer. The "one-week task" of replacing the Bootstrap theme ultimately took five weeks for a total cost of $6.1k.
+The "one-week" task of replacing the Bootstrap theme ultimately took 38 hours over five weeks for a total cost of $6.1k.
 
 {{<gallery caption="Before and after five weeks and $6.1k of web development">}}
 {{<img src="before-theme.png" hasBorder="true">}}
@@ -189,7 +189,7 @@ Surprisingly, May was the month where the project progressed at the pace I expec
 
 By the final week, they had completed two of the three pages. The only thing left wast the product detail page, which was also the most complex.
 
-TODO: Photo of product detail page
+{{<img src="product-page-design.png" maxWidth="400px" hasBorder="true" caption="The product detail page had the most complex design because it allowed the user to customize their order.">}}
 
 With two days left in May, Dan created a pull request that implemented the design changes to the product page. Yes! Victory was close at hand!
 
@@ -199,7 +199,7 @@ On the last day of the month, I was anxiously watching Dan's final pull request 
 
 Surprisingly, nothing happened. The month ended without any communication from WebAgency about how they'd disengage from the project.
 
-Then, on June 1st, I received an email from Dan. He told me that WebAgency's CEO authorized him to wrap up the last pull request at no charge. I pointed out the bug and asked them to split it into five distinct pull requests. To their credit, they did with no fuss. They wrapped up the outstanding work in two days.
+Then, on June 1st, I received an email from Dan. He told me that WebAgency authorized him to wrap up the last pull request at no charge. I pointed out the bug and asked them to split it into five distinct pull requests. To their credit, they did with no fuss. They wrapped up the outstanding work in two days.
 
 And then it was finally done! I was incredibly relieved not to be dealing with this project anymore that had spiralled so far beyond what I initially wanted.
 
@@ -244,53 +244,41 @@ The fundamental mistake I made when hiring this agency was underestimating how m
 
 The agency was working with me for 40-60 hours per month, which was the same as each of TinyPilot's other freelancer developers. I thought the agency would require similar oversight to one freelancer, but having more people on a project requires more management even if they're collectively only working 40 hours per month.
 
-### Narrow the project scope
-
-I didn't enforce the project scope aggressively enough. During the design phase, I let them go too far in redesigning the website when they were supposed to focus on just the logo, color scheme, and fonts. During the implementation phase, I should have been more aggressive in preventing them from working on minor bugfixes until they finished the redesign.
-
-Because WebAgency kept expanding the project scope, it put me in a terrible negotiating position. They were always sitting on work that was 80% done, but nothing was ever complete and usable. It meant that if I were to switch agencies, I'd lose a lot in rework by handing off lots of partially finished subtasks instead of having mostly complete work and only a few tasks in-progress.
-
-Normally, when I'm working with someone new, I give them small, narrowly defined tasks. As we get more experience working together, I expand the scope of what I give them (TODO: link). That wasn't possible with WebAgency because I had to
-
 ### Structure for serial, incremental results
 
-The agency worked in parallel because that's the most flexible for them. Their commitment was to deliver the finished work at the end of the project, but there were no commitments for how that work was structured. If I do this in the future, I'll push for the agency to complete tasks in serial. So if we have six tasks, I'd like to see task one and two 100% complete before we start task two. I don't want six ongoing tasks that are all going to inch closer to 100% at the same time at the end of the project.
+At first, it would seem ideal to let the agency parallelize as much of the work as possible. It reduces the total time of the project, and it lets the agency use their resources more efficiently.
 
-Working in parallel seems attractive because it's the most efficient use of resources. You . But actually, it's much worse for the client in ways that are no obvious.
+For a small, budget-conscious client, parallelizing tasks carries several subtle disadvantages.
 
-You're hiring a design agency because you think it will increase your profits. For the sake of simplicity, let's suppose that you have six distinct design tasks. Each task takes one month to complete, and it will increase your profits by 2%, but it will cost you $10k per month. And let's assume your profits are also $10k per month.
+First, it's likely worse value for money. If you have eight tasks that will take one month each, it's better to have something usable by the end of month one and keep improving it than to have nothing for eight months and suddenly publish everything all at once.
 
-If the agency works on all tasks in parallel and delivers the results to you in month seven, but your profits were zero for the past six months.
+Second, it puts you in terrible negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or replace the agency. If you limit the agency to only two or three tasks at a time, you're much more protected in the case of switching vendors because at the very worst, you'd just have to re-do those handful of subtasks rather than having a new agency restart everything.
 
-If instead, the agency delivered one task per month
+Lastly, it's just more mentally taxing on you as the client to oversee eight different tasks happening in parallel. Each task occupies a bit of real estate in your mind, so it's better to knock them out in small batches as opposed to dragging everything out for the full length of the project.
 
-Letting the agency work on several things also puts you in a weak position if things go south. If there are eight distinct tasks that are partially complete, you're in the position I was where it's difficult to leave the agency because so much of the work is in jeopardy. If there are only two or three tasks in progress, you're in much better position to cut things off if they're going poorly.
+### Narrow the project scope
 
-Lastly, it's just more mentally taxing on you as the client to oversee eight different tasks happening in parallel. In the book _Getting Things Done_, David Allen describes unfinished tasks as "open loops." The more open loops you have, the worse your focus in general because each loop occupies a bit of real estate in your mind.
+I didn't enforce the project scope aggressively enough. During the design phase, I let the agency go too far in redesigning the website when they were supposed to focus on just the logo, color scheme, and fonts. During the implementation phase, I should have been more aggressive in preventing them from working on minor bugfixes until they finished the redesign.
 
 ### Agree on timelines
 
-I regret not asking the developers for up-front estimates about how long each task would take. Developers don't never like committing to precise timelines because there are so many unknowns, but for something like implementing CSS designs, it should be pretty predictable.
+When I asked during the design phase how long they expected it to take, they said it depended on me. If I loved their first pitch, we could wrap up the design in days. If I hated everything they showed me for weeks, the project would be longer. I felt and still feel that was reasonable, so I didn't push for a more exact timeline.
 
-We should have at least had a conversation about "t-shirt sizing" (TODO: link) where we classify them into small, medium, and large where each size translates to a rough estimate at the granularity of days or weeks.
+I regret letting that attitude carry over into the development work. At the very least, I should pressed the developers to write down task estimates at the granularity of days to weeks with the understanding that we should revisit scope if a task balloons far beyond its estimate.
 
 ### Require a shared view of billable hours
 
-Remember the Bootstrap refactoring that was supposed to take a few days but stretched into five weeks? I tried to figure out how that happened with the agency when that never happens with TinyPilot's in-house developers.
-
-One critical difference is that TinyPilot's developers give me low-latency insight into how they spend their time. At the end of each working session, they record their hours with a short note saying what they were working on.
+Remember the Bootstrap refactoring that was supposed to take a few days but stretched into five weeks? That doesn't happen with TinyPilot's in-house developers, and a big factor is that they give me low-latency insight into how they spend their time. At the end of each working session, they record their hours with a short note saying what they were working on.
 
 {{<img src="work-timing.png" alt="Screenshot of TinyPilot hours reporting on Deel" hasBorder="true" caption="TinyPilot's in-house developers report their hours as they go.">}}
 
-If I'm expecting work from them, I check their hours. If I see that they've spent 14 hours on a task that I expected to take two, it means I either underestimated the difficulty or explained the task poorly. In either case, I check in with the dev, and we decide whether to continue or course-correct.
-
-WebAgency had a slower feedback loop. They send me an update on the 15th of the month telling me only the total number of hours they've worked. At the end of the month, they send me a full report of where the hours went, but by then, it's too late. And because they don't work consistent hours each week, I can't tell the difference between a week where they're working fewer hours and a week where a task is stretching longer than we expected.
+WebAgency had a slower and opaque feedback loop. At the end of the month, they'd send me a report detailing how many hours went to each task, but by then, it's too late to course correct.
 
 If I work with a design agency in the future, I'll insist on using a tool that lets us share a view of billable hours as they happen. I don't need some creepy spyware that monitors keystrokes, just something that lets them self-report what they did in each billable working session.
 
 ### Avoid hiring an agency as their smallest client
 
-When we started the project, they told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal that I'd get service normally reserved for large clients
+When we started the project, they told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal. I thought I'd get service normally reserved for large clients despite my limited budget.
 
 In reality, I didn't get the same service as their large clients. When I was an hourly client, WebAgency was deprioritizing me in favor of their larger clients. When I switched to a retainer, they didn't know how to work with me on the scale of 40-60 hours per month.
 
@@ -298,17 +286,11 @@ In reality, I didn't get the same service as their large clients. When I was an 
 
 ### Write a spec
 
-I think a trap most clients fall into is that they hire an expert and then assume that the expert just knows everything. Or they wait for the expert to ask questions. If I'm hiring an expensive expert, I want to minimize the amount of time they have to spend extracting information from me. I write down everything I can think of before I even start the search process.
+Whenever I'm soliciting bids for a new project, I always write a spec. Vendors are always surprised, but they always respond positively to it. It cuts out a lot of the initial discovery work because a lot of what they'd normally have to tease out of a client is already there.
 
-This has a double effect. Not only does it save billable time on the project, it also makes clients take you seriously. I've heard this again and again from people I hire, one of the reasons that they took me on as a client was that I had already put a lot of work into a project spec when I approached them. That signals to them that I'm not going to just make them play twenty questions with me to find out what I want, and I'm not just hiring them on a whim.
+I also suspect that it makes me more attractive as a client because it shows the vendor that I'm taking the project seriously and valuing their time.
 
-When WebAgency started drifting out of scope and redesigning pages outside of TinyPilot's purchase flow, the CEO was embarrassed and told me I was 100% correct because he knew I'd spelled that out in the spec.
-
-Clients take you much more seriously if you write a spec. A lot of clients will wait for the freelancer or agency to tease information out of them.
-
-You feel like you don't know where to begin, but you actually know a lot. Just write down what you can think of.
-
-When they asked me what other websites I liked, I took that seriously.
+[The spec](tinypilot-redesign-spec.pdf) also came in handy when the designers started redesigning the blog, as I could point back to the spec and show them that I explicitly asked them not to do that.
 
 ### Set expectations for code review
 
@@ -316,19 +298,17 @@ I sent them articles about TinyPilot's [development workflows](/freelancer-guide
 
 ### Automate code review tasks
 
-They're rotating between projects, so they're unlikely to remember your style conventions.
+I always [use automated tools to enforce code style conventions](/human-code-reviews-1/#let-computers-do-the-boring-parts), but it was especially important working with an agency.
 
-I had end-to-end tests set up, and they ran on every pull request to ensure that they didn't break any of the website's purchase flows. The automated checks also verified that the code adhered to our existing style conventions, didn't have stray debug logging left in.
+There are always conventions that you can't automate, and it typically takes new developers a few weeks to learn them. The agency's developers never seemed to learn any coding conventions outside of what the tools enforced. They're constantly bouncing between clients, so it's hard to internalize style rules for any particular client.
 
-Those tests worked. The WebAgency devs would open pull requests, and then they'd see tests break and fix it on their own. They didn't have to wait for me to give them notes. It allowed them to fix things on their own.
-
-I realized too late that I should have automated more. While I had continuous integration in place for pull requests, I forgot to add pre-commit hooks to the repo, so there were quick tasks like style checks that could have happened instantly before they committed. I realized their developers were relying on CI to tell them about style errors rather than running the linter on their local machine. So I added a pre-commit hook and a script to enable it, similar to [what we use in the main TinyPilot repo](https://github.com/tiny-pilot/tinypilot/tree/2d82f7af60a1be3c99bb09cb7c2359a2abd0635e/hooks).
-
-I had CI checks and everything, but I didn't have pre-commit checks, they were relying on CI to catch things the linter could have caught in two seconds. I didn't notice because I have the linter hooked up to my IDE.
+I realized too late that I should have automated even more. While I had continuous integration in place for pull requests, I forgot to add pre-commit hooks to the repo for tests that could run quickly and locally. I noticed that their developers were pushing to Github and waiting a few minutes for CI to tell them about style errors rather than running the linter on their local machine. So I added a pre-commit hook and a script to enable it, similar to [what we use in the main TinyPilot repo](https://github.com/tiny-pilot/tinypilot/tree/2d82f7af60a1be3c99bb09cb7c2359a2abd0635e/hooks).
 
 ## Why didn't you just...?
 
-I've shared pieces of this story in my monthly retrospectives, and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. I think this feedback is well-intentioned, but a lot of it comes from people who have never hired anyone, much less an agency. Below, I've addressed why the obvious suggestions would not have worked.
+I've shared pieces of this story in my [monthly retrospectives](/retrospectives), and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. I think this feedback is well-intentioned, but a lot of it comes from people who have never hired an agency.
+
+Below, I've addressed why the obvious suggestions would not have worked.
 
 ### Why didn't you just refuse to pay them until the work was done?
 
@@ -347,11 +327,9 @@ I plan to keep the TinyPilot website around for a while, so I want code that I u
 
 ### Why didn't you just fire them and hire someone better?
 
-I did consider firing WebAgency at several points, especially as the proejct shifted from design to development.
+The main reason I didn't fire them is that it's so difficult to find a good designer in the $10-15k budget range. I could have fired them and started over, but it would have burned 30-60 hours of management time, and there was no guarantee that the replacement would be better.
 
-It took me 20-30 hours of searching and interviewing to find WebAgency, and I was dreading starting that process over. Especially because the end always seemed like it was weeks away.
-
-The other problem is that handing off a project midway through causes substantial rework. If I switch vendors 200 hours into a 300-hour project, it's probably going to take the next vendor 150-200 hours to finish, as they have to re-do all the onboarding to understand the project and then figure out how to take over where the first agency left off.
+Also, due to the way the project was structured, for most of the project, I was sitting on a bunch of partially-complete tasks. The cost of reassigning it and bringing a new vendor up to speed would be almost as expensive as starting over from scratch. It always seemed like if I gave them one more month, they'd be done, and then it was always another month.
 
 ### Why didn't you just use a Shopify template?
 
@@ -359,10 +337,12 @@ If I could go back in time to when I first created the website, I would have mad
 
 When I launched the site, I used Vue, as it was the tech stack I knew best for web development. I didn't want to marry myself to Shopify and learn their templating system when all I needed was a simple "buy" button.
 
-Over time, TinyPilot's purchase experience became more complex, and I expensively reimplemented functionality that would have been free had I used a Shopify store. But at this point, migrating all the content to a Shopify store would be its own major project, so I stuck with redesigning what I had.
+Over time, TinyPilot's purchase experience became more complex. I ended up expensively reimplementing functionality that would have been free had I used a Shopify store. But at this point, migrating all the content to a Shopify store would be its own major project, so I stuck with redesigning what I had.
 
 ## Conclusion
 
 The new designs are inarguably better. Were they _$46k better_? It's hard to say.
 
 I certainly wouldn't have chosen to begin the project had I known the true cost and stress involved, but the site is seeing significantly more sales since we put the new design in place, so it might end up working out.
+
+I still think that WebAgency did their best on this project, and they have talented designers and developers. I don't think they tried to deceive me or squeeze money out of me. We just didn't match, as I was used to dealing with individual freelancers and they were used to dealing with large clients.
