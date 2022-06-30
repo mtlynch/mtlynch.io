@@ -13,7 +13,7 @@ In 2020, I put up a website for a product I was launching called TinyPilot. I ha
 
 {{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true">}}
 
-Beautiful designs aren't my strong side, so I set aside $15k to hire a designer for a few months. My site was pretty simple, and I only wanted to redesign the three pages the customer sees when they buy my product, so I expected it to take a couple of months.
+Beautiful designs aren't my strong suit, so I set aside $15k to hire a designer for a few months. My site was pretty simple, and I only wanted to redesign the three pages the customer sees when they buy my product, so I expected it to take a couple of months.
 
 Here's what the site looked after the redesign:
 
