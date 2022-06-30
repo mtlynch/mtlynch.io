@@ -1,6 +1,8 @@
 ---
 title: "I Regret my $46k Website Redesign"
-date: 2022-06-09T08:33:40-04:00
+date: 2022-07-15T00:00:00-04:00
+images:
+  - /tinypilot-redesign/og-cover.png
 ---
 
 In 2020, I put up a website for a product I was launching called TinyPilot. I had no idea if the business would go anywhere, so the first version of the website was just a basic site with a free theme. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project.
