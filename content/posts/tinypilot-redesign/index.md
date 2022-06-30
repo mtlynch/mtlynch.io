@@ -5,6 +5,10 @@ images:
   - tinypilot-redesign/og-cover.png
 ---
 
+{{<notice type="warning">}}
+**Note**: This is still a rough draft. Please do not distribute this link.
+{{</notice>}}
+
 In 2020, I put up a website for a product I was launching called TinyPilot. I had no idea if the business would go anywhere, so the first version of the website was just a basic site with a free theme. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project.
 
 {{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true">}}
