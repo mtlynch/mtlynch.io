@@ -9,15 +9,15 @@ images:
 **Note**: This is still a rough draft. Please do not distribute this link.
 {{</notice>}}
 
-In 2020, I put up a website for a product I was launching called TinyPilot. I had no idea if the business would go anywhere, so the first version of the website was just a basic site with a free theme. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project.
+In 2020, I put up a website for a prototype of a product called TinyPilot. I had no idea if the business would go anywhere, so the first version of the website was just a basic site with a free theme. A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project.
 
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), before design changes">}}
 
 Beautiful designs aren't my strong suit, so I set aside $15k to hire a designer for a few months. My site was pretty simple, and I only wanted to redesign the three pages the customer sees when they buy my product, so I expected it to take a couple of months.
 
 Here's what the site looked after the redesign:
 
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="400px" hasBorder="true">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
 
 Except it didn't take a few months and $15k. It took eight months, $46k, and massive stress.
 
@@ -152,9 +152,11 @@ I put all the design tasks into a Github project in priority order. At the end, 
 
 And then nothing happened. For two weeks, there was no activity from the devs. I asked Isaac what was going on, and he explained that they only target hours on a monthly basis. He said they'd work the remaining 48 hours, but he didn't have an exact time.
 
-Finally, on January XXth, the devs seemed to come to life. WebAgency's project manager assigned Github issues to two of their developers, Dan and Daniel. Daniel seemed to be the more junior dev, as the PM assigned him all the small bugfix tasks while Dan was responsible for all the tasks related to implementing the designs.
+Finally, on March XXth, the devs seemed to come to life. WebAgency's project manager assigned Github issues to two of their developers, Dan and Daniel.
 
-By the end of the month, Dan hadn't submitted any work to make progress on publishing the new designs. Meanwhile, Daniel used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue. Oof.
+When the month ended, Dan hadn't submitted any work to make progress on publishing the new designs. Meanwhile, Daniel used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue. Oof.
+
+{{<img src="console-log.png" alt="Screenshot of new landing page" hasBorder="true" caption="One of the WebAgency developers used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue.">}}
 
 ## The one-week task that took five weeks
 
@@ -316,7 +318,7 @@ Below, I've addressed why the obvious suggestions would not have worked.
 
 ### Why didn't you just refuse to pay them until the work was done?
 
-WebAgency required payment up-front, so I had no leverage to force them to complete the project.
+WebAgency required payment up-front. For the hourly contract, I had to buy 30-hour blocks up front, and for the monthly retainer, I had to pay for the full month's bill before work began. I had no leverage to force them to complete the project.
 
 If I had pushed for milestone-based payments at the start of the contract, WebAgency likely would have just declined the project. They saw me as a small client who could grow, but nobody wants to work with a tiny client who makes demands like a giant corporation.
 
@@ -350,3 +352,7 @@ I still think that WebAgency did their best on this project, and they have talen
 The new designs are inarguably better. Were they _$46k better_? It's hard to say.
 
 I certainly wouldn't have chosen to begin the project had I known the true cost and stress involved, but the site is seeing significantly more sales since we put the new design in place, so it might end up that the work pays for itself even if I feel like I overpaid.
+
+---
+
+_Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._
