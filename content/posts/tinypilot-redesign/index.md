@@ -35,7 +35,7 @@ I definitely made mistakes on this project, but hopefully they're more interesti
 
 A $15k budget puts you in an awkward position. Anyone you can find by Googling "web design agency" is too big an agency to give you the time of day for a $15k project. And if you go the low-end route through freelancer marketplaces, there's enough fraud and inflated reviews that you waste a lot of time on low-quality designers.
 
-After interviewing a handful of freelancers I found through recommendations, I spoke to an agency I found through Hacker News who I'll just call WebAgency. They had the most profesional presentation and a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
+After interviewing a handful of freelancers I found through recommendations, I spoke to a US-based web design agency I found through Hacker News who I'll just call WebAgency. They had the most profesional presentation and a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
 
 Isaac, WebAgency's CEO, suggested I reduce the project scope. Instead of a full-blown redesign, I should just start with a rebranding. WebAgency would create a new logo and work with me to select a new color scheme and fonts for the site. From there, I could measure results to see if it was worth continuing the redesign. If nothing else, a rebrand would give me solid foundation to create a marketing campaign with digital marketing agencies. That sounded smart!
 
