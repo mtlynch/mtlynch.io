@@ -37,7 +37,7 @@ TODO
 
 {{<revenue-graph project="tinypilot">}}
 
-## Topic 1
+## How do TinyPilot Pro users prove their license?
 
 ## Topic 2
 
