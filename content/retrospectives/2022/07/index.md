@@ -1,12 +1,14 @@
 ---
 title: "TinyPilot: Month 24"
 date: 2022-07-01T14:09:52-04:00
-description: "TODO"
+description: "Making TinyPilot sales sustainable"
 ---
 
 ## Highlights
 
 - TinyPilot had a record-breaking month of revenue.
+- I'm trying to figure out the best approach to software licensing.
+- I'm still searching for a web framework to love.
 
 ## Goal Grades
 
@@ -30,10 +32,10 @@ I thought it would be easy to write the blog post because I'd written so much ab
 
 ### Increase ROAS on paid search ads to 2.0
 
-- **Result**: Increased ROAS from 1.79 to 1.90
-- **Grade**: B
+- **Result**: Increased ROAS from 1.79 to 1.99
+- **Grade**: A
 
-The digital marketing freelancer working with TinyPilot increased revenue on ad spend to 1.90. It's below the goal, but the goal was also kind of a guess, as it's difficult to know what's achieveable. I estimate that I'm earning about $0.47 for every dollar I spend on ads.
+The digital marketing freelancer working with TinyPilot increased revenue on ad spend to 1.99. I estimate that I'm earning about $0.55 in profit for every dollar I spend on ads.
 
 Unfortunately, I can't just double ad spend and double sales, as the price increases as you try to capture a greater share of search impressions. Still, I'm happy with the performance so far, and I'm continuing to work with a digital marketer to explore new marketing channels.
 
@@ -55,25 +57,19 @@ Unfortunately, I can't just double ad spend and double sales, as the price incre
 
 This was TinyPilot's all-time strongest month of revenue. And the exciting part is that there was otherwise nothing remarkable about June.
 
-All of TinyPilot's previous record-breaking months were related to some one-time event like a new product launch or a positive review.
+All of TinyPilot's previous record-breaking months were related to some one-time event like a new product launch or a positive review. But June was effectively just a boring old month where nothing happened out of the ordinary. And that's great! It means that what we're doing is repeatable without relying on some external event.
 
 Site visitors are down relative to May because the previous month, my storage server article reached the front page of Hacker News and mentioned TinyPilot, but our overall visit count is still significantly higher than the first quarter of the year. I credit the increase to our new marketing campaign, which is
 
 ## How do TinyPilot Pro users prove their license?
 
-I've always wanted TinyPilot's software to be sustainable on its own regardless of whether we continue selling new hardware. For that to happen, there needs to be a way for users to pay for the software.
+I've always wanted TinyPilot's software to be sustainable on its own regardless of whether we continue selling new hardware. For that to happen, there needs to be a way for users to pay for software maintenance.
 
 I launched a paid version of TinyPilot called TinyPilot Pro back in December of 2020. I initially planned to launch with license key checks, but I [decided to punt on it](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-system) because licenses wouldn't expire for a year. But now it's 18 months later, and very few users renew their licenses because they don't even realize they're expired.
 
-So now I'm left with the problem of how do users prove that they have an active TinyPilot Pro license?
+I'm planning to start checking for a valid license when a user upgrades to the latest version, but it requires the user to prove to the update server that they have an active TinyPilot Pro license.
 
-### Background
-
-The install date can't be burned into the software. If a user has version N, they should be able to upgrade to version N + 1 as long as .
-
-We don't have to be backwards compatible back to version 1. We can set some version C that everyone is allowed to upgrade to without a license, but version C contains logic for sending license information to the update server, and the update server won't allow upgrades to version C + 1 without an active license.
-
-The solution should work for about 98% or more users, and customer support can manually generate or transfer licenses for users in weird scenarios (e.g., transferring the license to a new device, buying a used TinyPilot device).
+Here are the options I'm considering:
 
 ### Device ID
 
@@ -84,39 +80,39 @@ $ cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2
 10000000ecf8821b
 ```
 
-We could collect the device IDs from each Pi before we sell them to a customer. When the user attempts to upgrade, we check if their device ID is pre-registered.
+We could collect the device IDs from each Pi before we sell them to a customer. When the user attempts to upgrade, we just check if their device ID is pre-registered and activate based on their device ID.
 
 - Pros
-  - Easy for the user - can't lose it or forget their hardware ID
+  - Easy for the user - can't lose it or forget their device ID
 - Cons
   - We still need a solution for users who purchased before we started recording device IDs
   - Requires us to keep track of all the device IDs
-  - Adds an extra step to the device building/testing process
+  - Adds an extra step to the device manufacturing process
 
 ### Order details
 
-Today, when a customer wants to download the official TinyPilot disk image, we ask for their order number and the email associated with their purchase:
+Today, when a customer wants to download the official TinyPilot disk image, we ask for their order number and the email address associated with their purchase:
 
 {{<img src="download-image.png" alt="Screenshot of image download page on TinyPilot website" hasBorder="true" caption="The TinyPilot website currently grants TinyPilot image downloads based on the user proving they know details of their order.">}}
 
 We could use the same logic within the TinyPilot web app to gate upgrades.
 
 - Pros
-  - Minimizes bookkeeping because we don’t have to keep track of keys or device IDs, as we’re already storing order information.
-  - Works for all past customers because we already have their order information.
+  - Minimizes bookkeeping because we don’t have to keep track of keys or device IDs, as we’re already storing order information
+  - Works for all past customers because we already have their order information
 - Cons
-  - End-users don't always know their order details if they bought from a reseller or if someone else at their company purchased the device.
-  - Every time we start selling through a new channel (e.g., Amazon, eBay), we’d have to write custom code to query order numbers from that channel
+  - End-users don't always know their order details if they bought from a reseller or if someone else at their company purchased the device
+  - Every time we start selling through a new channel (e.g., Amazon, eBay), we’d have to write custom code to query order information from that channel
 
 ### Printed activation key
 
-We could generate a set of activation keys, similar to what you have for activating Microsoft Windows or Office (e.g. `1F9PA-V4JD5-4JPOM`). The keys could be printed out and included with the device, and the user types it in to prove they have a license.
+We could generate a set of activation keys, similar to how you activate Microsoft Windows or Office (e.g. `1F9PA-V4JD5-4JPOM`). The keys could be printed out and included with the device, and the user types it in to prove they have a license.
 
 - Pros
   - Works the same regardless of whether the user buys directly from us or through Amazon, eBay, etc.
 - Cons
-  - Easy for users to lose a printed activation key.
-  - We still need a solution for users who purchased before we started handing out activation keys.
+  - Users are prone to lose or ignore a printed slip of paper in their order
+  - We still need a solution for users who purchased before we started handing out activation keys
 
 ### License baked into the software
 
@@ -128,14 +124,17 @@ One possibility I considered would be to bake a unique license key into each cus
 - Cons
   - Wildly impractical and complicated to implement
     - We'd have to generate custom disk images for each customer and make sure the customer always install their particular image
+  - We still need a solution for users who purchased before we started baking in activation keys
 
 ### Some combination
 
-The route I'm leaning towards is checking the device ID first to see if it's pre-registered and then falling back to prompting the user for their order details. Of the options I can think of, that seems to be the least error prone and puts the least amount of work on end-users.
+The route I'm leaning towards is checking the device ID first to see if it's pre-registered and then falling back to prompting the user for their order details.
+
+Of the options I can think of, that seems to be the least error prone and puts the least amount of work on end-users.
 
 ## Abandon all hope, ye who enters the Amazon Sellers Marketplace
 
-I'd always considered selling TinyPilot on Amazon, as many people now shop exclusively on Amazon and don't look elsewhere. But I was resistant because I expected signing up as an Amazon seller to be a miserable and tedious process. Having gone through the process, it is more miserable and tedious than I expected.
+For a long time, I've considered selling TinyPilot on Amazon, as many people now shop exclusively on Amazon and don't look elsewhere. I was resistant because I expected signing up as an Amazon seller to be a miserable and tedious process. Having gone through the process, it is more miserable and tedious than I expected.
 
 It took three weeks before I could even start offering a product. Every few days, Amazon told me I needed some new approval.
 
@@ -163,11 +162,13 @@ This is especially weird given that Amazon's autocomplete suggestions were all c
 
 {{<img src="autocomplete.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" hasBorder="true" caption="Amazon's search suggestions for 'tinypilot' are all clearly about my product, but it still doesn't appear in search results." maxWidth="700px">}}
 
-Even "tinypilot kvm over ip" didn't show my product until page two or three. I ended up just purchasing ads on Amazon, so that finally got sales started. I'm hoping that if I get a critical mass of purchases and reviews through ads, TinyPilot will bubble to the top organically.
+Even "tinypilot kvm over ip" didn't show my product until page two or three of search results.
+
+I ended up just purchasing ads on Amazon, which finally led to my first few Amazon sales.
 
 Amazon customers seem to have drastically different expectations than customers who purchase directly from the TinyPilot website. The first customer to purchase through Amazon sent a message with the order "ship this with UPS 2-day," but we don't offer UPS shipping. I responded to the customer's message, but I wasn't sure what to do. Should I cancel the order and risk a penalty from Amazon? Wait for the customer to respond and risk Amazon penalizing me for shipping late? I ended up waiting a day and canceling after not hearing back. Then, the customer placed the same order, so we just fulfilled it with USPS and didn't hear any complaints.
 
-A few days later, a different Amazon customer sent me a message saying she was "very disappointed" that her product hadn't arrived yet, as she paid $10 for expedited shipping. I checked the tracking and saw that we shipped her product a day early via USPS Priority, but USPS screwed up and was running late. This is obviously out of our control, but it's possible these customers don't understand the difference between purchasing from a third-party seller and purchasing directly from Amazon with their own delivery fleet.
+A few days later, a different Amazon customer sent me a message saying she was "very disappointed" that her product hadn't arrived yet, as she paid $10 for expedited shipping. I checked the tracking and saw that we shipped her product a day early via USPS Priority, but USPS screwed up and was running late. This is obviously out of our control, but I suspect customers don't understand the difference between purchasing from a third-party seller and purchasing directly from Amazon with their own delivery fleet.
 
 We sometimes get these types of complaints from customers who order directly, but it's nowhere near the rates we're seeing on Amazon.
 
@@ -190,7 +191,7 @@ For example, to allow users to create profiles on WanderJest with their photo, b
 1. Write SQL queries for inserting and retrieving the data from the data store
 1. Create a web UI for rendering the profile information
 
-It's fewer steps than other frameworks I've used, but that stuff is all pretty boring and reinventing the wheel.
+It's fewer steps than other frameworks I've used, but that stuff is _really boring_.
 
 [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view) has been on my list for the past year or so, as it's what the cool kids over at [fly.io](https://fly.io) are all excited about. Part of Phoenix's promise is that it automates many of the repetitive tasks I listed above. Chris McCord made a [neat demo](https://www.youtube.com/watch?v=MZvmYaFkNJI) where he uses Phoenix to build a basic Twitter clone in 15 minutes.
 
@@ -202,6 +203,7 @@ At the same time, I'm afraid of a "grass is always greener" mentality that has m
 
 - Started selling TinyPilot on Amazon
 - Completed a first draft of a new full-length blog article
+- Completed the process of generating install bundles for TinyPilot
 
 ### Lessons learned
 
