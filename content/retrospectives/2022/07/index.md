@@ -63,7 +63,7 @@ Site visitors are down relative to May because the previous month, my storage se
 
 I've always wanted TinyPilot's software to be sustainable on its own regardless of whether we continue selling new hardware. For that to happen, there needs to be a way for users to pay for the software.
 
-I launched a paid version of TinyPilot called TinyPilot Pro back in December of 2020. I initially planned to launch with a
+I launched a paid version of TinyPilot called TinyPilot Pro back in December of 2020. I initially planned to launch with license key checks, but I [decided to punt on it](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-system) because licenses wouldn't expire for a year. But now it's 18 months later, and very few users renew their licenses because they don't even realize they're expired.
 
 So now I'm left with the problem of how do users prove that they have an active TinyPilot Pro license?
 
@@ -95,48 +95,113 @@ We could collect the device IDs from each Pi before we sell them to a customer. 
 
 ### Order details
 
-When a customer wants to download the official TinyPilot disk image, we grant access based on the user supplying the order number and email associated with their order.
+Today, when a customer wants to download the official TinyPilot disk image, we ask for their order number and the email associated with their purchase:
 
 {{<img src="download-image.png" alt="Screenshot of image download page on TinyPilot website" hasBorder="true" caption="The TinyPilot website currently grants TinyPilot image downloads based on the user proving they know details of their order.">}}
 
 We could use the same logic within the TinyPilot web app to gate upgrades.
 
 - Pros
-  - Minimizes bookkeeping because we don’t have to keep track of keys or device IDs, as we’re already storing order information
-  - Works for users who purchased any time in the last year because we have the order information
+  - Minimizes bookkeeping because we don’t have to keep track of keys or device IDs, as we’re already storing order information.
+  - Works for all past customers because we already have their order information.
 - Cons
-  - Platforms like eBay and Amazon don’t provide the user's real email address, but those order numbers are random enough that we could just use the order number as the credential.
-  - If the customer bought through a reseller or IT procurement company, the end-user might not know their order number / email
-  - Every time we start selling through a new channel, we’d have to write custom code to query order numbers from that channel
+  - End-users don't always know their order details if they bought from a reseller or if someone else at their company purchased the device.
+  - Every time we start selling through a new channel (e.g., Amazon, eBay), we’d have to write custom code to query order numbers from that channel
 
-### Activation key
+### Printed activation key
 
-We could generate a set of activation keys, similar to what you have for activating Microsoft Windows or Office (e.g. foo-bar-baz). The keys could be printed out and included with the device, and the user types it in to prove they have a license.
+We could generate a set of activation keys, similar to what you have for activating Microsoft Windows or Office (e.g. `1F9PA-V4JD5-4JPOM`). The keys could be printed out and included with the device, and the user types it in to prove they have a license.
 
 - Pros
   - Works the same regardless of whether the user buys directly from us or through Amazon, eBay, etc.
 - Cons
-  - Easy for users to lose or throw away the license key
-  - We still need a solution for users who purchased before we started handing out activation keys
-  - Lets punkt.de and tinypilotkvm.com stay loosely coupled. We wouldn’t need to query your order records or device IDs because we could just hand you a list of valid activation keys to give to your customers.
+  - Easy for users to lose a printed activation key.
+  - We still need a solution for users who purchased before we started handing out activation keys.
+
+### License baked into the software
+
+One possibility I considered would be to bake a unique license key into each customer's installation. We flash images for customers and provide installer scripts, so we could theoretically place a unique key file on each customer's machine.
+
+- Pros
+  - Works the same regardless of whether the user buys directly from us or through Amazon, eBay, etc.
+  - User can't lose their key
+- Cons
+  - Wildly impractical and complicated to implement
+    - We'd have to generate custom disk images for each customer and make sure the customer always install their particular image
 
 ### Some combination
 
-The route I'm leaning towards is a combination, like device ID or order details. That way, the users who purchased before we started collecting device IDs will still have a really low-friction way of upgrading, and then users who bought pre-registered devices won't even have to be aware of the check at all.
+The route I'm leaning towards is checking the device ID first to see if it's pre-registered and then falling back to prompting the user for their order details. Of the options I can think of, that seems to be the least error prone and puts the least amount of work on end-users.
 
 ## Abandon all hope, ye who enters the Amazon Sellers Marketplace
 
-TODO
+I'd always considered selling TinyPilot on Amazon, as many people now shop exclusively on Amazon and don't look elsewhere. But I was resistant because I expected signing up as an Amazon seller to be a miserable and tedious process. Having gone through the process, it is more miserable and tedious than I expected.
 
-## Side projects
+It took three weeks before I could even start offering a product. Every few days, Amazon told me I needed some new approval.
 
-### WanderJest
+First, Amazon had to verify my identity with my driver's license and credit card. Then, I needed to appear on a live video call holding my driver's license in front of my face and bending it to prove it wasn't just a printout.
+
+Then, Amazon froze my account for a day because they couldn't verify my credit card. Yes, the same credit card I'd had on file with Amazon for a year and used to make ~$50k in purchases through Amazon.
+
+Then, Amazon froze my account so they could verify I'm entitled to use the "TinyPilot" brand name. I showed them proof that I'm the owner of TinyPilot, LLC, and I sent them photos of my product with "TinyPilot" written on the side.
+
+{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" maxWidth="500px">}}
+
+They said they'd review within three days, but it actually took 10. Their conclusion was that my photos didn't sufficiently prove that "TinyPilot" was permanently affixed to my product...
+
+{{<img src="not-permanently-affixed.png" alt="Thank you for your patience. This is the follow up regarding 5665 error. We have completed our review and we are sorry to inform you that your brand does not meet our criteria for approval. In the provided images, we do not see sufficient proof that the branding is permanently affixed to the product and/or packaging, per the Brand Name Policy. In future, if you would like to request another review, we require new images that show 'TinyPilot' is permanently affixed to the product and/or packaging." hasBorder="true" caption="Amazon thinks &ldquo;TinyPilot&rdquo; is not affixed permanently enough to my product.">}}
+
+So, I sent new photos much more focused on the brand name, and only then did they finally approve the product.
+
+{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" maxWidth="600px">}}
+
+The new problem was that TinyPilot didn't show up in search results if you search for "tinypilot":
+
+{{<img src="tinypilot-results.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" hasBorder="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" maxWidth="700px">}}
+
+This is especially weird given that Amazon's autocomplete suggestions were all clearly about my product:
+
+{{<img src="autocomplete.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" hasBorder="true" caption="Amazon's search suggestions for 'tinypilot' are all clearly about my product, but it still doesn't appear in search results." maxWidth="700px">}}
+
+Even "tinypilot kvm over ip" didn't show my product until page two or three. I ended up just purchasing ads on Amazon, so that finally got sales started. I'm hoping that if I get a critical mass of purchases and reviews through ads, TinyPilot will bubble to the top organically.
+
+Amazon customers seem to have drastically different expectations than customers who purchase directly from the TinyPilot website. The first customer to purchase through Amazon sent a message with the order "ship this with UPS 2-day," but we don't offer UPS shipping. I responded to the customer's message, but I wasn't sure what to do. Should I cancel the order and risk a penalty from Amazon? Wait for the customer to respond and risk Amazon penalizing me for shipping late? I ended up waiting a day and canceling after not hearing back. Then, the customer placed the same order, so we just fulfilled it with USPS and didn't hear any complaints.
+
+A few days later, a different Amazon customer sent me a message saying she was "very disappointed" that her product hadn't arrived yet, as she paid $10 for expedited shipping. I checked the tracking and saw that we shipped her product a day early via USPS Priority, but USPS screwed up and was running late. This is obviously out of our control, but it's possible these customers don't understand the difference between purchasing from a third-party seller and purchasing directly from Amazon with their own delivery fleet.
+
+We sometimes get these types of complaints from customers who order directly, but it's nowhere near the rates we're seeing on Amazon.
+
+I'm hoping the hardest parts are over, so I'll stick with it and see if Amazon grows our sales as we accrue ratings there.
+
+## Still searching for a lovable web framework
+
+As I mentioned in [my last update](/retrospectives/2022/06/#wanderjesthttpswanderjestcom), I'm rebuilding [WanderJest](https://wanderjest.com), a tool for finding live comedy that I put on hold [at the start of the pandemic](/retrospectives/2020/04/#putting-wanderjest-on-hold).
+
+I'm rewriting WanderJest in Go + VanillaJS + SQLite as a "back to basics" tech stack after years of trying to work with SPA frameworks like Angular and Vue. Chris Ferdinandi articulates some of my frustrations in his article, ["SPAs were a mistake."](https://gomakethings.com/spas-were-a-mistake/)
+
+I like my current tech stack better than anything I've tried in the past, but I still don't _love_ it. I spend the majority of my time on tedious tasks just gluing things together.
+
+For example, to allow users to create profiles on WanderJest with their photo, bio, and links to other social networks, I need to:
+
+1. Create web UI forms to allow the user to create and edit their profile
+1. Create server-side endpoints to receive the user submissions
+1. Create data models to represent profile information
+1. Write serialization/deserialization code to move data in and out of the data store
+1. Write SQL queries for inserting and retrieving the data from the data store
+1. Create a web UI for rendering the profile information
+
+It's fewer steps than other frameworks I've used, but that stuff is all pretty boring and reinventing the wheel.
+
+[Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view) has been on my list for the past year or so, as it's what the cool kids over at [fly.io](https://fly.io) are all excited about. Part of Phoenix's promise is that it automates many of the repetitive tasks I listed above. Chris McCord made a [neat demo](https://www.youtube.com/watch?v=MZvmYaFkNJI) where he uses Phoenix to build a basic Twitter clone in 15 minutes.
+
+At the same time, I'm afraid of a "grass is always greener" mentality that has me constantly hopping around to different frameworks without learning any particular stack well. Maybe a good compromise is [Ruby on Rails](https://rubyonrails.org), which I think has a similar developer experience to Phoenix but with a more mature ecosystem around it.
 
 ## Wrap up
 
 ### What got done?
 
--
+- Started selling TinyPilot on Amazon
+- Completed a first draft of a new full-length blog article
 
 ### Lessons learned
 
@@ -144,4 +209,4 @@ TODO
 
 ### Goals for next month
 
--
+- Finalize plans for managing TinyPilot licenses
