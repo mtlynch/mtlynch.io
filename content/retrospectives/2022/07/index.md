@@ -59,7 +59,7 @@ This was TinyPilot's all-time strongest month of revenue. And the exciting part 
 
 All of TinyPilot's previous record-breaking months were related to some one-time event like a new product launch or a positive review. But June was effectively just a boring old month where nothing happened out of the ordinary. And that's great! It means that what we're doing is repeatable without relying on some external event.
 
-Site visitors are down relative to May because the previous month, my storage server article reached the front page of Hacker News and mentioned TinyPilot, but our overall visit count is still significantly higher than the first quarter of the year. I credit the increase to our new marketing campaign, which is
+Site visitors are down relative to May because the previous month, my storage server article reached the front page of Hacker News and mentioned TinyPilot, but our overall visit count is still significantly higher than the first quarter of the year. I credit the increase in visitors to our new marketing campaign.
 
 ## How do TinyPilot Pro users prove their license?
 
