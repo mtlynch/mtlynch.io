@@ -97,7 +97,7 @@ We could record the device IDs from each Pi before we sell them to a customer. W
 
 Today, when a customer wants to download the official TinyPilot disk image, we ask for the order number and the email address associated with their purchase:
 
-{{<img src="download-image.png" alt="Screenshot of image download page on TinyPilot website" hasBorder="true" caption="The TinyPilot website currently grants TinyPilot image downloads based on the user proving they know details of their order.">}}
+{{<img src="download-image.png" alt="Screenshot of image download page on TinyPilot website" hasBorder="true" caption="The TinyPilot website currently grants TinyPilot image downloads based on the user proving they know the details of their order.">}}
 
 We could use the same logic within the TinyPilot web app to gate upgrades.
 
@@ -111,7 +111,7 @@ We could use the same logic within the TinyPilot web app to gate upgrades.
 
 ### Printed activation key
 
-We could generate a set of activation keys, similar to how you activate Microsoft Windows or Office (e.g. `1F9PA-V4JD5-4JPOM`). The keys could be printed out and included with each device, and the user types the key to prove they have a license.
+We could generate a set of activation keys, similar to how you activate Microsoft Windows or Office (e.g., `1F9PA-V4JD5-4JPOM`). The keys could be printed out and included with each device, and the user types the key to prove they have a license.
 
 - Pros
   - Works the same regardless of whether the user buys directly from us or through Amazon, eBay, etc.
@@ -133,7 +133,7 @@ We flash images onto customer devices, so we could theoretically place a unique 
 
 ### Some combination
 
-The route I'm leaning towards a blended approach that uses the most automatic method possible but falls back to more manual methods for edge cases:
+I'm leaning towards a blended approach that uses the most automatic method possible but falls back to more manual methods for edge cases:
 
 1. Check if the device's hardware ID is pre-registered.
 1. If the device isn't pre-registered, prompt the user for their order ID and email so we can find their order automatically.
@@ -143,7 +143,7 @@ Of the options I can think of, that seems to be the least error prone and puts t
 
 ## Abandon all hope, ye who enters the Amazon Sellers Marketplace
 
-For a long time, I've considered selling TinyPilot on Amazon, as many people treat Amazon as their one-stop-shop for all online shopping. I've been resistant because signing up as an Amazon seller seemed like a miserable and tedious process. Having now gone through the process, I can say it's more miserable and tedious than I expected.
+For a long time, I've considered selling TinyPilot on Amazon, as many people treat Amazon as their one-stop shop for all online shopping. I've been resistant because signing up as an Amazon seller seemed like a miserable and tedious process. Having now gone through the process, I can say it's more miserable and tedious than I expected.
 
 It took three weeks before I could even list my product on Amazon. Every few days, Amazon told me I needed some new approval or had to prove something about my identity or my product.
 
@@ -219,12 +219,12 @@ At the same time, I'm afraid of a "grass is always greener" mentality that has m
 ### What got done?
 
 - Started selling TinyPilot on Amazon
-- Completed a first draft of a new full-length blog article
+- Completed the first draft of a new full-length blog article
 - Completed the process of generating install bundles for TinyPilot
 
 ### Lessons learned
 
-- Amazon Seller Marketplace is even more unpleasant than it seems
+- Amazon Seller Marketplace is even more unpleasant than it seems.
 
 ### Goals for next month
 
