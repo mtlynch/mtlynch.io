@@ -23,7 +23,7 @@ const percentageFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 function drawTotalFinancesChart() {
-  var ctx = document.getElementById("total-finances").getContext("2d");
+  var ctx = document.getElementById("total-finances-chart").getContext("2d");
   ctx.height = 400;
   let revenues = new Map();
   revenues.set(2018, 2262);
@@ -90,11 +90,8 @@ function drawTotalFinancesChart() {
 }
 function drawChart(chartId, labels, data) {
   const ctx = document.getElementById(chartId);
-  if (!ctx) {
-    return;
-  }
   ctx.height = 300;
-  const myChart = new Chart(ctx, {
+  new Chart(ctx, {
     type: "line",
     data: {
       labels: labels,
@@ -142,13 +139,18 @@ function parseDate(d) {
   return new Date(year, month);
 }
 function drawCharts(limit) {
-  fetch("/data/project-revenue.json")
+  fetch("/data/project-finances.json")
     .then((res) => res.json())
-    .then((revenueByProject) => {
+    .then((financesByProject) => {
       const limitDate = parseDate(limit);
-      for ([project, data] of Object.entries(revenueByProject)) {
+
+      for ([project, data] of Object.entries(financesByProject)) {
         let dates = [];
+        let values = [];
         for (d of Object.keys(data)) {
+          if (!data[d].totalRevenue) {
+            continue;
+          }
           const date = parseDate(d);
           if (date >= limitDate) {
             continue;
@@ -158,9 +160,9 @@ function drawCharts(limit) {
               " " +
               date.getFullYear()
           );
+          values.push(data[d].totalRevenue);
         }
-        let values = Object.values(data).slice(0, dates.length);
-        drawChart(project + "-revenue", dates, values);
+        drawChart(project + "-finances-chart", dates, values);
       }
     });
 }
