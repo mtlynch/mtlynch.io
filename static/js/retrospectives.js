@@ -7,7 +7,7 @@ const dollarFormat = new Intl.NumberFormat("en-US", {
 const dollarFormatter = dollarFormat.format;
 
 function drawChart(project, dates, data) {
-  const ctx = document.getElementById(project + "-finances");
+  const ctx = document.getElementById(project + "-finances-chart");
   if (!ctx) {
     return;
   }
