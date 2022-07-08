@@ -286,30 +286,6 @@ When we started the project, WebAgency told me that most of their clients were l
 
 In reality, I didn't get the same service as their large clients. When I was an hourly client, WebAgency was deprioritizing me in favor of their larger clients. When I switched to a retainer, they didn't know how to work with me on the scale of 40-60 hours per month.
 
-## What I did well
-
-### Write a spec
-
-Whenever I'm soliciting bids for a new project, I always write a spec. Vendors are always surprised, but they always respond positively to it. It cuts out a lot of the initial discovery work because a lot of what they'd normally have to tease out of a client is already there.
-
-I also suspect that it makes me more attractive as a client because it shows the vendor that I'm taking the project seriously and valuing their time.
-
-[The spec](tinypilot-redesign-spec.pdf) also came in handy when the designers started redesigning the blog, as I could point back to the spec and show them that I explicitly asked them not to do that.
-
-### Set expectations for code review
-
-WebAgency wasn't used to working with clients who actually review the code, so I told them before we started the dev work that our review process would likely be more rigorous than other clients.
-
-I sent WebAgency articles about TinyPilot's [development workflows](/freelancer-guidelines/) and [how we do code reviews](/code-review-love/). I'm glad that I did because it taught them all of our dev workflows that they'd otherwise have to learn through trial and error.
-
-### Automate code review tasks
-
-I always [use automated tools to enforce code style conventions](/human-code-reviews-1/#let-computers-do-the-boring-parts), but it was especially important working with an agency.
-
-There are always conventions that you can't automate, and it typically takes new developers a few weeks to learn them. The agency's developers never seemed to learn any coding conventions outside of what the tools enforced. They're constantly bouncing between clients, so it's hard to internalize style rules for any particular client.
-
-I realized too late that I should have automated even more. While I had continuous integration in place for pull requests, I forgot to add pre-commit hooks to the repo for tests that could run quickly and locally. I noticed that their developers were pushing to Github and waiting a few minutes for CI to tell them about style errors rather than running the linter on their local machine. So I added a pre-commit hook and a script to enable it, similar to [what we use in the main TinyPilot repo](https://github.com/tiny-pilot/tinypilot/tree/2d82f7af60a1be3c99bb09cb7c2359a2abd0635e/hooks).
-
 ## Why didn't you just...?
 
 I've shared pieces of this story in my [monthly retrospectives](/retrospectives), and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. I think this feedback is well-intentioned, but a lot of it comes from people who have never hired an agency.
