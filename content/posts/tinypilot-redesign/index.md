@@ -232,6 +232,12 @@ I mentioned how I wished I could have had more insight into their hours as they 
 
 If I were approaching this project again, here are the things I'd do differently, in descending order of importance.
 
+### Hire an individaul freelancer instead of an agency
+
+TODO
+
+I don't want to overgeneralize agencies based on this one experience, but I think
+
 ### Budget more time for management
 
 The fundamental mistake I made when hiring this agency was underestimating how much time I'd need to manage them. I certainly made other mistakes, but I think those would have been less likely had I kept a closer eye on the project to make sure that things were on track.
@@ -246,7 +252,7 @@ For a small, budget-conscious client, parallelizing tasks carries several subtle
 
 First, it's likely worse value for money. If you have eight tasks that will take one month each, it's better to have something usable by the end of month one and keep improving it than to have nothing for eight months and suddenly publish everything all at once.
 
-Second, it puts you in terrible negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or replace the agency. If you limit the agency to only two or three tasks at a time, you're much more protected in the case of switching vendors because at the very worst, you'd just have to re-do those handful of subtasks rather than having a new agency restart everything.
+Second, it puts you in terrible negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at a time, it limits your downside more effectively. At worst, you'd have to re-do a few subtasks rather than hand over a project where everything is in half-finished state.
 
 Lastly, it's just more mentally taxing to oversee eight subprojects in parallel. Each unfinished task occupies a bit of real estate in your mind, so it's better to knock them out in small batches as opposed to dragging everything out for the full length of the project.
 
@@ -258,15 +264,15 @@ During the design phase, I let the agency go too far in redesigning the website 
 
 ### Agree on timelines
 
-When I asked during the design phase how long they expected it to take, they said it depended on me. If I loved their first pitch, we could wrap up the design in days. If I hated everything they showed me for weeks, the project would be longer. I felt and still feel that was reasonable, so I didn't push for a more exact timeline.
+When I asked during the design phase how long they expected it to take, they said it was up to me. If might love their first pitch, or I could reject everything for weeks. I felt and still feel that was reasonable, so I didn't push for a more exact timeline.
 
-I mistakenly let my loose attitude on design timelines carry over into the development work. I should have pressed the developers to write down task estimates to the nearest 5-hour multiple with the understanding that we'd revisit scope if a task ballooned far beyond its estimate.
+I mistakenly let my loose attitude on design timelines carry over into the development work. I should have pressed the developers to share rough estimates of each task with the understanding that we'd revisit scope if a task ballooned far beyond our expectations.
 
 ### Require a shared view of billable hours
 
 Many of the issues with scope bloat were a consequence of the slow feedback loop in WebAgency's hours reporting. WebAgency a total number of hours used halfway through the month and then a per-task summary of hours at the end of the month. Combine that with the fact that they don't distribute their hours evenly throughout the month, I could never tell when they'd overinvested in a task until it was too late.
 
-TODO: Show screenshot of WebAgency's summary
+{{<img src="hours-summary.png" alt="Screenshot of TinyPilot hours reporting on Deel" maxWidth="550px" hasBorder="true" caption="WebAgency only reported cost of each task in an invoice at the end of the month.">}}
 
 In contrast, TinyPilot's in-house developers report their hours at the end of each working session. No creepy spyware to monitor keystrokes. Just a self-report of their total hours and a one-sentence summary of what they were working on. If a tasks is ever taking longer than I expect, I check the hours, and we can course correct if a three-hour task has exploded into something much bigger. And I rarely even have to do that because TinyPilot's developers proactively raise a flag if a task has expanded beyond the initial scope we expected.
 
@@ -274,9 +280,9 @@ In contrast, TinyPilot's in-house developers report their hours at the end of ea
 
 If I work with a design agency in the future, I'll insist on using a tool that lets us share a view of billable hours as they happen, similar to what I use with TinyPilot's regular devs.
 
-### Avoid hiring an agency as their smallest client
+### Avoid hiring a vendor as their smallest client
 
-When we started the project, they told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal. I thought I'd get service normally reserved for large clients despite my limited budget.
+When we started the project, WebAgency told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal. I thought I'd get service normally reserved for large clients despite my limited budget.
 
 In reality, I didn't get the same service as their large clients. When I was an hourly client, WebAgency was deprioritizing me in favor of their larger clients. When I switched to a retainer, they didn't know how to work with me on the scale of 40-60 hours per month.
 
