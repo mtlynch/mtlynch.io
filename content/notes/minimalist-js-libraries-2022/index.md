@@ -193,6 +193,8 @@ Stimulus forces me to name things that you otherwise wouldn't name. I want the f
 
 And then strangely, you have to repeat that `new-user` name throughout the child elements. For example, when I want to bind the input field to the `name` variable in the controller, I have to specify it as `data-new-user-target="name"` instead of just `data-target="name"`.
 
+The target semantics binds the element to an element, but I didn't see a way to bind to an element's attributes or contents.
+
 And then you have to repeat that name in many places where it seems like it should be implied.
 
 ### [MobX](https://mobx.js.org)
