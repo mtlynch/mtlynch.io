@@ -1,5 +1,6 @@
 {{ define "title" -}}
-  {{- .Title }} · {{ .Site.Title -}}
+  {{- .Title }} ·
+  {{ .Site.Title -}}
 {{ end }}
 {{ define "content" }}
   <section class="container post">
@@ -7,7 +8,7 @@
       <header>
         {{ if .Page.Params.hero_image }}
           <a href="{{ .Page.Params.hero_image }}">
-            <img src="{{ .Page.Params.hero_image }}">
+            <img src="{{ .Page.Params.hero_image }}" />
           </a>
         {{ end }}
         <div class="post-title">
@@ -17,7 +18,7 @@
           <div class="date">
             <span class="posted-on">
               <i class="fas fa-calendar"></i>
-              <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
               </time>
             </span>
@@ -25,15 +26,20 @@
               <i class="fas fa-clock"></i>
               {{ .ReadingTime }}-minute read
             </span>
+            {{ if .Site.IsServer }}
+              <span>&mdash; {{ .Content | countwords }} words </span>
+            {{ end }}
           </div>
-          {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+          {{ with .Page.Params.Tags }}
+            {{ partial "taxonomy/tags.html" . }}
+          {{ end }}
         </div>
       </header>
 
       {{- with .Content -}}
-      <div>
-        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
-      </div>
+        <div>
+          {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
+        </div>
       {{- end -}}
 
       {{ partial "mailing-list-signup.html" . }}
@@ -47,6 +53,5 @@
       {{ end }}
 
     </article>
-
   </section>
 {{ end }}
