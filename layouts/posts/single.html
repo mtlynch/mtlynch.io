@@ -26,6 +26,9 @@
               <i class="fas fa-clock"></i>
               {{ .ReadingTime }}-minute read
             </span>
+            {{ if .Site.IsServer }}
+              <span>&mdash; {{ .Content | countwords }} words </span>
+            {{ end }}
           </div>
           {{ with .Page.Params.Tags }}
             {{ partial "taxonomy/tags.html" . }}
