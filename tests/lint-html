@@ -40,6 +40,9 @@ IGNORE_PATTERNS+=("/www.sciencedirect.com/")
 IGNORE_PATTERNS+=("/developer.github.com/")
 IGNORE_PATTERNS+=("/docs.github.com/")
 IGNORE_PATTERNS+=("/calculator.aws/")
+# Ignore links to comments that only load in production.
+IGNORE_PATTERNS+=("/mtlynch.io\/.*#comment-.*/")
+
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
