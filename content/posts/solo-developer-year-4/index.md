@@ -35,7 +35,7 @@ Previous updates:
 
 After running in the red for the first few years, this is my first cashflow positive year. I earned a total of $14k in profit in 2021. Although TinyPilot generated the vast majority of revenue, most of my profit came from old projects running in the background.
 
-<canvas id="total-finances" style="margin-bottom: 50px;"></canvas>
+<canvas id="total-finances-chart" style="margin-bottom: 50px;"></canvas>
 
 | Metric         | 2020                                 | 2021                                   | Change               |
 | -------------- | ------------------------------------ | -------------------------------------- | -------------------- |
@@ -175,6 +175,8 @@ I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that te
 I put the site on the back burner when I started TinyPilot, but it continued to grow on its own in 2021, providing a nice side income of $500-$1k/month. That slowed down around June, as other sites began offering similar content and supplanted Is It Keto in search results.
 
 I considered selling the site but, I suspect it's only worth $5-10k. It would probably take 30-60 hours to go through the sales process, and I'd rather focus on TinyPilot.
+
+{{<revenue-graph project="isitketo">}}
 
 | Metric                                                              | 2020                                  | 2021                                  | Change               |
 | ------------------------------------------------------------------- | ------------------------------------- | ------------------------------------- | -------------------- |

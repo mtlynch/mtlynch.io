@@ -9,6 +9,9 @@ description: How I chose parts, built, and configured my first custom home stora
 images:
   - budget-nas/og-cover.jpg
 date: "2022-05-23"
+discuss_urls:
+  reddit: https://www.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/
+  hacker_news: https://news.ycombinator.com/item?id=31548829
 ---
 
 <!-- Disable linter complaints about duplicate headers -->
@@ -68,7 +71,7 @@ Before building my own homelab NAS, I used a 4-disk [Synology DS412+](https://ww
 
 {{<img src="ds412-plus.jpg" alt="Photo of Synology DS412+ on my shelf" caption="My 10 TB Synology DS412+ has served me well for seven years." maxWidth="600px">}}
 
-A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, you can't access your data without another Synology system.
+A few months ago, my Synology failed to boot and started making a clicking noise. A chill ran up my spine as I realized how dependent I'd become on this single device. Synology servers are not user-repairable, so if a part breaks after warranty, you have to replace the whole server. And if you're dumb like me, and you've used a Synology-proprietary storage format, ~~you can't access your data without another Synology system~~. (Edit: A [commenter on Hacker News](https://news.ycombinator.com/item?id=31549755) showed me that you can [recover a Synology Hybrid RAID volume from a non-Synology system](https://kb.synology.com/en-us/DSM/tutorial/How_can_I_recover_data_from_my_DiskStation_using_a_PC).)
 
 Fortunately, my old Synology recovered after I cleaned it out and reseated the disks, but it was an important wake-up call. I decided to switch to TrueNAS, as it offers an open-source implementation of an open storage format.
 
@@ -133,9 +136,11 @@ The more physical drives you have, the more defensive you should be about disk f
 
 Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 2% chance in any given week. Two simultaneous failures would happen once every 48 years, so I should be fine, right?
 
-The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and processed the same workloads. Given this, I did what I could to reduce the risk of concurrent disk failures.
+The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and processed the same workloads.
 
-I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks from the same manufacturing batch, I bought them from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
+Further, rebuilding a ZFS pool puts an unusual amount of strain on all of the surviving disks. A disk that would have lasted a few more months under normal usage might die under the additional load of a pool rebuild.
+
+Given these risks, I did what I could to reduce the risk of concurrent disk failures. I chose two different models of disk from two different manufacturers. To reduce the chances of getting disks from the same manufacturing batch, I bought them from different vendors. I can't say how much this matters, but it didn't increase costs significantly, so why not?
 
 {{<img src="ironwolf-disks.jpg" alt="Photo of me holding Seagate IronWolf drives with different packaging" maxWidth="700px" caption="I purchased the same model of disk from two different vendors to decrease the chances of getting two disks from the same manufacturing batch.">}}
 
@@ -414,7 +419,17 @@ Beyond that, I wasn't crazy about the BIOS. Its upgrade utility was completely b
 
 I also missed that the A320I-K supports a maximum of 32 GB of RAM. I'm not sure if I'll ever need to expand memory, but it would have been good to give myself some more breathing room.
 
-If I were to do this build over, I'd go with the [Gigabyte B550I](https://www.newegg.com/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222). It's $50 more, but it supports 64 GB of RAM, 2.5 Gbps Ethernet, and it has an extra M.2 slot.
+#### Fixing the Realtek networking driver
+
+I noticed that the motherboard's Ethernet adaptor would sometimes die when my system was under heavy network load, and [/u/trevaar](https://old.reddit.com/r/truenas/comments/uw5hly/how_i_built_my_first_home_truenas_server_22_tb/i9wrn6m/?context=3) on reddit helpfully explained why. Apparently, the FreeBSD driver for the A320I-K's Realtek NIC has stability issues, but it's possible to load the official driver with the following workaround:
+
+1. From the TrueNAS web dashboard, go to System > Tunables
+1. Add the following two settings:
+
+   | Variable     | Value                    | Type   |
+   | ------------ | ------------------------ | ------ |
+   | `if_re_load` | `YES`                    | loader |
+   | `if_re_name` | `/boot/modules/if_re.ko` | loader |
 
 ### Case
 
@@ -446,11 +461,13 @@ After seeing that the system idles at 60 W, I'm wondering if I should have put m
 
 The Kingston A400 is working fine. TrueNAS puts such a minimal load on the OS disk that there isn't much for it to do. It has 90 GB free, so I could have used an even smaller drive.
 
-There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of some scheduled task, but that's it.
+There's almost zero disk activity in TrueNAS' reporting. There's a tiny I/O read every week as part of a default scheduled task for error checking, but that's it.
 
 {{<img src="truenas-io.png" alt="Graph of disk I/O on OS disk showing minimal activity" maxWidth="800px" caption="TrueNAS rarely touches its OS disk after booting.">}}
 
 ### TrueNAS
+
+I'm running TrueNAS Core 13, which is the more mature FreeBSD version. The other option is TrueNAS Scale, which is based on Debian, which has wider hardware and software compatibility.
 
 Coming into TrueNAS, I knew my Synology's web UI would be hard to beat. It's the most elegant and intuitive interface I've ever seen for a network appliance. They did a great job of building a clean UI that spares the end-user from technical details of the underlying filesystem.
 
