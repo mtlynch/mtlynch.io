@@ -84,13 +84,13 @@ I was eager to finalize the logo because it would be the first finished product 
 
 All I needed was a couple more hours of work. But I didn't get them.
 
-Instead, WebAgency just kept redesigning the website. Their lead designer would complete the finishing touches when he had availability, but what did I think about this new design idea for the landing page?
+Instead, WebAgency just kept redesigning the website. Their lead designer didn't have availability to work on the logo, but what did I think about this new design idea for the landing page?
 
 The breaking point came when they started showing me new designs for my site's blog. From the beginning, I had said that I only cared about three pages: the landing page, the product page, and the shopping cart page. All other pages were explicitly out of scope.
 
-{{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." hasBorder="true" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
+{{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." maxWidth="550px" hasBorder="true" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
 
-I emailed Isaac, and he called me, embarrassed. He admitted that the designers went beyond just sketching. They were just so excited about the project that they got carried away and designed more than they should have, but he was going to remove the hours they'd spent redesigning the blog.
+I emailed Isaac, and he called me, embarrassed. He admitted that the designers went beyond just sketching. They were so excited about the project that they got carried away and designed more than they should have, but he was going to remove the hours they'd spent redesigning the blog.
 
 ## The two-month holiday slowdown
 
@@ -98,9 +98,9 @@ Midway through December, I noticed WebAgency had stopped making progress on anyt
 
 They stopped scheduling calls to review work with me. They occasionally shared updates over email, but comments I left on their designs sat ignored for weeks.
 
-At the time, I chalked it up to the holidays. Lots of people are on vacation in December, so I assumed things would pick back up in the new year.
+I chalked it up to the holidays. Lots of people are on vacation in December, so I assumed things would pick back up in the new year.
 
-The new year started, and not only did the pace stay slow, the quality of the work degraded. We had an easy, clear communication at the start of the project, but now a minor note about background color would require three back-and-forths.
+The new year started, and not only did the pace stay slow, the quality of the work degraded. The easy, clear communication we had at the start of the project was gone, and now a minor note about background color would require three back-and-forths.
 
 ## "I just don't know when we'll have the hours"
 
@@ -112,11 +112,11 @@ I said I understood I was a small client to them, and I was willing to wait a fe
 
 "We'll definitely finish your project. I just don't know when we'll have the hours," Isaac told me. I asked if they'd have time within the next two months. He wasn't sure.
 
-Isaac did, however, have an idea for how we could complete the project quickly.
+Isaac did, however, have an idea for completing the project quickly.
 
 ## The solution is to pay more
 
-The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of their long-term retainer clients pre-empting my project. So what if I signed a retainer agreement to protect my hours each month? Their retainers started at 40 hours per month for $160/hr.
+The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of long-term retainer clients pre-empting my project. So what if I signed a retainer agreement to protect my hours each month? Their retainers started at 40 hours per month for $160/hr.
 
 I felt duped and manipulated. They structured the work so that everything was 80-90% done, but nothing was usable. If I took the work to a new vendor, there'd be a huge amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement with them?
 
@@ -124,7 +124,7 @@ As diplomatically as possible, I told Isaac that I felt like the situation was W
 
 Isaac conceded that the situation was unfair to me. He promised to retroactively adjust my December and January bills as if I'd been on a retainer agreement and refund the difference. The offer was not even contingent on the new retainer.
 
-But what would we do with 40 hours per month if there were only 20 hours left in the project? Isaac proposed that WebAgency take over the design portion of the project that I had planned for TinyPilot's in-house developers to do. WebAgency billed a much higher rate than TinyPilot's developers, but Isaac predicted they'd reduce costs overall. TinyPilot's devs specialize in Python and JavaScript, but WebAgency's devs do design-heavy work all the time. Plus, they already work closely with the designers.
+But what would we do with 40 hours per month if there were only 20 hours left in the project? Isaac proposed that WebAgency take over the dev work as well. WebAgency billed a much higher rate than TinyPilot's in-house developers, but Isaac predicted they'd reduce costs overall. TinyPilot's devs specialize in Python and JavaScript, but WebAgency's devs do design-heavy work all the time.
 
 I signed the retainer. My 60 high-quality retainer hours were scheduled to resume in March.
 
@@ -132,15 +132,17 @@ I signed the retainer. My 60 high-quality retainer hours were scheduled to resum
 
 The retainer agreement started off well. Within the first week, WebAgency wrapped up almost all of the outstanding design work. There were still some small kinks to work out, but two of the three pages were ready to hand over to the developers.
 
-But then nothing happened. For two weeks, there was no activity from the dev team. I asked Isaac what was going on, and he explained that WebAgency's schedule is fluid, so they won't necessarily work on my project every week. He assured me that by the end of the month, they'd certainly use the remaining 48 hours I'd booked.
+And then, radio silence.
 
-When the month ended, WebAgency hadn't moved the website any closer to the new design. Instead, in the last few days of the month, they fixed a bunch of minor bugs from my issue tracker.
+For two weeks, there was no activity from the dev team. I asked Isaac what was going on, and he explained that WebAgency's schedule is fluid, so they won't necessarily work on my project every week. He assured me that by the end of the month, they'd certainly use the remaining 48 hours I'd booked.
+
+When the month ended, WebAgency hadn't moved the website any closer to the new design. Instead, they spent the last few days of the month fixing minor bugs from my issue tracker.
 
 {{<img src="console-log.png" alt="Screenshot of new landing page" hasBorder="true" caption="One of the WebAgency developers used 15 of the month's 60 hours to fix the minor bugs from the end of the task queue.">}}
 
-WebAgency had asked me to create a list of development tasks I wanted them to complete, and those bugs were there, but at the end of the list. WebAgency encouraged me to overbook the schedule so that the devs never have to sit idle waiting for the next task, as they didn't refund unused hours.
+WebAgency had asked me to create a list of development tasks, so I created tickets for each of the pages. WebAgency suggested I add extra tasks in case the devs complete the work faster than I expected, as they didn't refund unused hours. That's how those minor bugfix tasks ended up at the end of the task queue.
 
-What I didn't anticipate was that two of WebAgency's developers would split the tasks, and the junior dev would spend a quarter of the month's billable hours chipping away at low-priority bugs from the end of the project list.
+I didn't anticipate that two of WebAgency's developers would split the task list, so the junior dev spent a quarter of the month's billable hours chipping away at low-priority bugs instead of making progress migrating to the new designs.
 
 ## The one-week task that took five weeks
 
@@ -167,11 +169,11 @@ I gave WebAgency the required 28 days' notice to terminate the contract. Because
 
 Surprisingly, the dev work was never smoother than after I canceled the contract. The project finally seemed to work at the pace I expected. They coded up each page within 7-10 days.
 
-There were still some issues, but I was prepared for them. WebAgency kept suggesting new flourishes to the design I declined all of them, and I'm glad I did because they barely had enough time to wrap up the basics.
+There were still some issues, but I was prepared for them. WebAgency kept suggesting new flourishes to the design I declined all of them. If I hadn't they'd probably still be working on the website today.
 
-They actually didn't even have enough time for the basics. The month ended with the final page incomplete and no communication about how WebAgency would disengage from the project. But on June 1st, they told me that they'd finish the outstanding work at no charge, and they officially finished two days later.
+The month ended with the final page incomplete and no communication about how WebAgency would disengage from the project. But on June 1st, they told me that they'd finish the outstanding work at no charge, and they officially finished two days later.
 
-And then it was finally done! This project had spiralled so far beyond what I initially wanted, so I was incredibly relieved to put it behind me.
+And then it was finally done! This project had spiralled so far beyond what I initially wanted and turned into an interminable drain on my time and finances. I was incredibly relieved to put it behind me.
 
 ## Before and after
 
@@ -210,9 +212,9 @@ If I were approaching this project again, here are the things I'd do differently
 
 ### Hire an individaul freelancer instead of an agency
 
-TODO
+I don't want to overgeneralize agencies based on this one experience, but I think an individual freelancer would have been a better fit than an agency for a client my size (&lt;10 contractors and employees, &lt;$10k/mo in profit).
 
-I don't want to overgeneralize agencies based on this one experience, but I think
+The problems I experienced around resource allocation and communication couldn't have happened with a freelancer because it's a single person instead of a whole team.
 
 ### Budget more time for management
 
@@ -222,15 +224,15 @@ The agency was working with me for 40-60 hours per month, which was the same as 
 
 ### Structure for serial, incremental results
 
-At first, letting the agency parallelize their work seems like the obvious choice &mdash; It shortens the project's total duration, and it lets the agency use their resources more efficiently. But for a small, budget-conscious client there are subtle but significant drawbacks.
+At first, letting the agency parallelize their work seems like the obvious choice &mdash; it lets the agency use their resources efficiently, which should reduce total project duration. But there are significant drawbacks.
 
-Put another way, if a project involves eight tasks that will take roughly one month each, would you rather have the agency complete one task per month? Or would you rather they work on all eight tasks simultaneously and deliver them all at the end of eight months?
+Think about it another way: if a project involves eight tasks that will take roughly one month each, would you rather have the agency complete one task per month? Or would you rather they work on all eight tasks simultaneously and deliver them all at the end of the project?
 
 The one-at-a-time is better value for your money. At the end of month one, you have one asset that provides value to your business for the next seven months. In month two, you have even more, and so on.
 
-Allowing the agency to parallelize maximally also puts you in terrible negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at a time, there's much less friction if you have to hand the work to someone else.
+Parallelizing everything also puts you in terrible negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at once, you protect your downside if you have to hand the work to someone else.
 
-Lastly, it's just more mentally taxing to oversee eight subprojects in parallel because every unfinished task occupies a bit of real estate in your mind. It's better to knock them out in small batches as opposed to dragging everything out for the full length of the project.
+Lastly, it's just more mentally taxing to oversee eight subprojects at once. Every unfinished task occupies a bit of real estate in your mind. It's better to knock them out in small batches as opposed to dragging everything out for the full length of the project.
 
 ### Narrow the project scope
 
@@ -240,9 +242,9 @@ During the implementation phase, I should have been more aggressive in preventin
 
 ### Agree on timelines
 
-At the start of the project, I asked how long the agency expected it to take. They said it was up to me. I might love their first pitch, or I could reject everything for weeks. That was sensible, so I didn't push for a more exact timeline.
+At the start of design work, I asked how long the agency expected it to take. They said it was up to me. I might love their first pitch, or I could reject everything for weeks. That was sensible, so I didn't push for a more exact timeline.
 
-I mistakenly let my loose attitude on design timelines carry over into the development work. I should have pressed the developers to share rough estimates of each task with the understanding that we'd revisit scope if a task ballooned far beyond our expectations.
+I mistakenly let that loose attitude carry into the development work. I should have pressed the developers to share estimates of each task and agree that we'd revisit scope if it ballooned far beyond our expectations. That would have prevented situations like [the five-week refactoring quest](#the-one-week-task-that-took-five-weeks) that was only supposed to take a few days.
 
 ### Require a shared view of billable hours
 
@@ -250,9 +252,12 @@ Many of the issues with scope bloat were a consequence of the slow feedback loop
 
 Halfway through each month, WebAgency reported an opaque total number of hours used. At the end of the month, they'd send a per-task breakdown. By then, it was too late to catch tasks that had bloated beyond their initial scope.
 
-{{<img src="hours-summary.png" alt="Screenshot of TinyPilot hours reporting on Deel" maxWidth="550px" hasBorder="true" caption="WebAgency only reported cost of each task in an invoice at the end of the month.">}}
+{{<gallery caption="WebAgency reports an hours total on the 15th at the month and then a detailed breakdown at the end of the month.">}}
+{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" hasBorder="true" >}}
+{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="550px" hasBorder="true" >}}
+{{</gallery>}}
 
-In contrast, TinyPilot's in-house developers report their hours at the end of each working session. If a three-hour task explodes into something bigger, we re-evaluate whether to cut or downscope the task.
+In contrast, TinyPilot's in-house developers report their hours at the end of each working session. If a three-hour task explodes into something bigger, we re-evaluate whether to eliminate or downscope the task.
 
 {{<img src="work-timing.png" alt="Screenshot of TinyPilot hours reporting on Deel" hasBorder="true" caption="TinyPilot's in-house developers report their hours as they go.">}}
 
