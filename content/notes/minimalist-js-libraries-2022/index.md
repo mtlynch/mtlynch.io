@@ -206,6 +206,18 @@ The target semantics binds a name to an element, but I actually want to bind to 
 
 So, Stimulus is interesting, but it's not a match for what I want.
 
+### [Knockout](https://knockoutjs.com/)
+
+I'd never heard of knockout until I started researching libraries for this post. Apparently it was big for a brief period in the early 2010s and then was quickly crowded out by Angular, React, and friends.
+
+If SPAs are where I feel it all went wrong, maybe the popular thing just before SPAs would be a match. Sadly, Knockout [doesn't work with CSP](https://github.com/knockout/knockout/issues/903).
+
+### [TKO](https://github.com/knockout/tko)
+
+I'm not sure exactly what the state of TKO is. It's either a spiritual successor to Knockout, or it's just the next major version.
+
+Supposedly, it's [CSP-compatible](https://github.com/knockout/knockout/issues/903#issuecomment-301468183), but it doesn't have a production release. Its [first alpha](https://github.com/knockout/tko/releases/tag/v4.0.0-alpha1) was almost six years ago. Still, there's activity. They just had a [beta release](https://github.com/knockout/tko/releases/tag/v4.0.0-beta1.3) in May 2022, so maybe it's due for a rebirth.
+
 ### [MobX](https://mobx.js.org)
 
 MobX is a lower-level library than the others. It seems designed primarily to combine with React, so it doesn't handle
