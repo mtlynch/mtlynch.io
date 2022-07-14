@@ -5,21 +5,21 @@ images:
   - tinypilot-redesign/og-cover.png
 ---
 
-{{<notice type="warning">}}
-**Note**: This is still a rough draft. Please do not distribute this link.
-{{</notice>}}
-
-Two years ago, I created a website for my business with a free theme and my terrible design skills. I told myself if the business took off, I'd hire a real designer to make it look professional.
+Two years ago, I created a website for my business by combining a free template with my terrible design skills. I told myself if the business took off, I'd hire a real designer to make it look professional.
 
 {{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), before design changes">}}
 
-A year later, my business was earning $45k/month in revenue, and my website still looked like a college student's hobby project. I only wanted to redesign the three pages the customer would visit in the purchase flow for my main product, so I expected it to be a simple redesign. Maybe a few months and $10-15k.
+A year later, the business was generating $45k/month in revenue, and my website still looked like a college student's hobby project. It was time for that professional redesign I'd promised myself.
+
+The site was pretty simple. Customers only saw three pages in the checkout flow for my main product, so I expected the project would be straightforward. Maybe a few months and $10-15k.
 
 Here's what the site looked after the redesign:
 
 {{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
 
-Except it didn't take a few months and $15k. It took eight months, $46k, and a long series of headaches. Now that the project is over, I'm revisiting what mistakes I made that let this project grow so far out of control.
+Except it didn't take a few months and $15k. It took eight months, $46k, and a lot of headache.
+
+Now that the project is over, I'm revisiting what mistakes I made that let this project spiral out of control.
 
 ## I know what you're thinking
 
@@ -31,7 +31,9 @@ I definitely made mistakes on this project, but hopefully they're more interesti
 
 ## The initial estimate: four weeks and $7k
 
-After interviewing a handful of freelancers I found through recommendations, I spoke to a US-based web design agency I found through Hacker News who I'll just call WebAgency. They gave me the highest quote, but their portfolio best matched the style I wanted, and they had a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
+Before I started the project, I interviewed several freelancers and agencies, but I ended up choosing a web design agency that I'll just call WebAgency. They're based in the US, and I found through one of the [Hacker News monthly freelancer threads](https://news.ycombinator.com/submitted?id=whoishiring).
+
+WebAgency quoted the highest rate, but their portfolio best matched the style I wanted. They had a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
 
 WebAgency won my confidence when Isaac, the CEO, suggested I scope the project down to reduce costs. Isaac proposed that instead of a full-blown redesign, his agency could focus on a rebranding, so they'd create a new logo and work with me to select a new color scheme and fonts for the site.
 
@@ -253,8 +255,8 @@ Many of the issues with scope bloat were a consequence of the slow feedback loop
 Halfway through each month, WebAgency reported an opaque total number of hours used. At the end of the month, they'd send a per-task breakdown. By then, it was too late to catch tasks that had bloated beyond their initial scope.
 
 {{<gallery caption="WebAgency reports an hours total on the 15th at the month and then a detailed breakdown at the end of the month.">}}
-{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" hasBorder="true" >}}
-{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="550px" hasBorder="true" >}}
+{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="400px"  hasBorder="true" >}}
+{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="600px" hasBorder="true" >}}
 {{</gallery>}}
 
 In contrast, TinyPilot's in-house developers report their hours at the end of each working session. If a three-hour task explodes into something bigger, we re-evaluate whether to eliminate or downscope the task.
@@ -318,4 +320,4 @@ It's too early to tell, but I'm optimistic about earning a positive return on th
 
 ---
 
-_Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._
+_Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._
