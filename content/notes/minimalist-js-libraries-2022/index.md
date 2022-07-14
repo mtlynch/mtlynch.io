@@ -11,7 +11,9 @@ There's so much leaky abstraction. I don't mind abstraction. Python is an abstra
 
 ## Vanilla JavaScript requires so much boilerplate
 
-The downside of working without a framework is that I end up spending a lot of time on boilerplate code. For example, let's say I have a web form that submits data to a server and displays the result.
+The downside of working without a framework is that I end up spending a lot of time on boilerplate code.
+
+For example, let's say I have a web form that submits data to a server and displays the result.
 
 <form id="new-user-form">
   <input type="text" id="username-field" placeholder="jane123" />
@@ -122,16 +124,16 @@ Doesn't take over the whole app and decide how to route pages.
 
 ## Summary
 
-| Library                                   | Two-way data binding | Conditional Display | Compilation-free | CSP-friendly                      |
-| ----------------------------------------- | -------------------- | ------------------- | ---------------- | --------------------------------- |
-| Alpine.js                                 | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| HTMX                                      | ✔️                   | ✔️                  | ✔️               | Technically yes, practically no\* |
-| [Stimulus](https://stimulus.hotwired.dev) | ❌                   | ❌                  | ✔️               | ✔️                                |
-| [Mavo](https://mavo.io/)                  |                      |                     |                  |                                   |
-| petite-vue                                | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| Knockout                                  | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| TKO                                       | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| [MobX](https://mobx.js.org)               | ❌                   | ❌                  | ✔️               | ✔️                                |
+| Library                                           | Two-way data binding | Conditional Display | Compilation-free | CSP-friendly                      |
+| ------------------------------------------------- | -------------------- | ------------------- | ---------------- | --------------------------------- |
+| [Alpine.js](https://alpinejs.dev)                 | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [htmx](https://htmx.org)                          | ✔️                   | ✔️                  | ✔️               | Technically yes, practically no\* |
+| [Stimulus](https://stimulus.hotwired.dev)         | ❌                   | ❌                  | ✔️               | ✔️                                |
+| [Mavo](https://mavo.io/)                          |                      |                     |                  |                                   |
+| [petite-vue](https://github.com/vuejs/petite-vue) | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [Knockout](https://knockoutjs.com/)               | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [TKO](https://github.com/knockout/tko)            | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [MobX](https://mobx.js.org)                       | ❌                   | ❌                  | ✔️               | ✔️                                |
 
 \* HTMX can run under CSP but effectively neuters it. If an attacker can control HTML on the page, [they can achieve XSS through HTMX directives](https://htmx.org/docs/#security). You can disable this with `hx-disable`, but the nature of XSS makes it hard for the developer to anticipate which elements are at high risk of attacker-controlled HTML. The more secure way is secure by default while giving the developer the power to give certain elements more permissions to execute JS.
 
@@ -142,6 +144,10 @@ Very close.
 Hard to bridge between application code and existing JS code.
 
 Alpine.js documentation mentions [a CSP-compatible build](https://alpinejs.dev/advanced/csp), but it [doesn't actually exist yet](https://github.com/alpinejs/alpine/issues/237#issuecomment-999692410). No progress for years.
+
+### [htmx](https://htmx.org/)
+
+TODO
 
 ### [Stimulus](https://stimulus.hotwired.dev)
 
@@ -217,6 +223,14 @@ If SPAs are where I feel it all went wrong, maybe the popular thing just before 
 I'm not sure exactly what the state of TKO is. It's either a spiritual successor to Knockout, or it's just the next major version.
 
 Supposedly, it's [CSP-compatible](https://github.com/knockout/knockout/issues/903#issuecomment-301468183), but it doesn't have a production release. Its [first alpha](https://github.com/knockout/tko/releases/tag/v4.0.0-alpha1) was almost six years ago. Still, there's activity. They just had a [beta release](https://github.com/knockout/tko/releases/tag/v4.0.0-beta1.3) in May 2022, so maybe it's due for a rebirth.
+
+#### [Mavo](https://mavo.io/)
+
+Seems like maybe is an academic research project?
+
+### [petite-vue](https://github.com/vuejs/petite-vue)
+
+TODO
 
 ### [MobX](https://mobx.js.org)
 
