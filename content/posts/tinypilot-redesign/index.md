@@ -11,7 +11,7 @@ Two years ago, I created a website for my business. By combining my terrible des
 
 A year later, the business was generating $45k/month in revenue, but my website still looked like a college student's hobby project. It was time for that professional redesign I'd promised myself.
 
-There were only three pages in the checkout flow for my main product, so I expected the redesign would be straightforward. Maybe a few months and $10-15k.
+There were only three pages in the checkout flow for my main product, so I expected the redesign would be straightforward. Maybe a few months and $15k.
 
 Here's what the site looked after the redesign:
 
@@ -23,7 +23,7 @@ Now that the project is over, I'm revisiting what mistakes I made that let this 
 
 ## I know what you're thinking
 
-If you hear that someone spent $46k to redesign three pages of a website, you probably think they're a rube with no software or hiring experience.
+If you hear that someone spent $46k to redesign three pages of a website, you probably think they're a rube without experience in software or hiring.
 
 But I've done this before! I'm a software developer, and I've hired dozens of freelancers, including [developers](/freelancer-guidelines/), [artists](/how-to-hire-a-cartoonist/), [writers](/hiring-content-writers/), and [editors](/editor/).
 
@@ -31,11 +31,11 @@ I definitely made mistakes on this project, but hopefully they're more interesti
 
 ## The initial estimate: four weeks and $7k
 
-I'm trying to explore what I did wrong rather than shaming the web design agency I worked with, so I'll just call them WebAgency. They're based in the US, and I found through one of the [Hacker News monthly freelancer threads](https://news.ycombinator.com/submitted?id=whoishiring).
+I'm not trying to bash the agency here, so I'll just call them WebAgency. They're based in the US, and I found through one of the [Hacker News monthly freelancer threads](https://news.ycombinator.com/submitted?id=whoishiring).
 
 WebAgency quoted the highest rate, but their portfolio best matched the style I wanted. They had a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
 
-Isaac, WebAgency's CEO, won my confidence during our initial call by suggesting I scope the project down to reduce costs. Even though it meant less money for him, Isaac proposed a rebranding rather than a full-blown redesign. That meant that instead of reinventing the site, they'd focus on the fundamentals like a new logo, color scheme and fonts.
+Isaac, WebAgency's CEO, won my confidence during our initial call by suggesting I reduce the project's scope. Even though it meant less money for him, Isaac proposed a rebranding rather than a full-blown redesign. Instead of reinventing the site, WebAgency would focus on fundamentals like a new logo, color scheme, and fonts.
 
 After rebranding, I could measure results to see if it was worth continuing the redesign. If nothing else, a rebrand would give me solid foundation to create a marketing campaign with digital marketing agencies.
 
@@ -53,7 +53,7 @@ The first month of the project was fantastic.
 
 WebAgency invited me to meetings every two weeks with the CEO, their lead designer, a senior designer, and a project manager. They'd show me samples of the new logos and branding, and I'd give feedback. The next round, we'd be a little closer.
 
-Within six weeks, we had narrowed in on a concept we all liked.
+Within six weeks, we narrowed in on a concept we all liked.
 
 {{<gallery caption="From oldest to newest, the progression of TinyPilot logo drafts that WebAgency showed me in the first few weeks of the project.">}}
 {{<img src="logos-1.png" hasBorder="true">}}
@@ -74,7 +74,7 @@ As the project progressed, the mockups became more elaborate. WebAgency started 
 
 We'd never discussed custom illustrations, but it seemed like a small amount of work, so I just let it go.
 
-A few weeks later, WebAgency showed me their progress, and they had made zero changes to the logo and branding. They were just showing me design ideas for the website.
+A few weeks later, WebAgency called a meeting to share their progress, and they hadn't made any progress at all on the logo or branding. They were just showing me design ideas for the website.
 
 "To be clear, the project is still a rebranding and not a redesign, right?," I asked.
 
@@ -82,13 +82,13 @@ A few weeks later, WebAgency showed me their progress, and they had made zero ch
 
 ## Just finish the logo!
 
-By December, we were three months into the project. WebAgency was 95% done with TinyPilot's new logo. All I wanted was to change the rounding on the corners and get rid of the border. I expected it to be a couple of hours of work maximum.
+By December, we were three months into the project. WebAgency was 95% done with TinyPilot's new logo. All I wanted was to change the rounding on the corners and get rid of the border. I expected it to be a couple of hours of work.
 
-I was eager to finalize the logo because it would be the first completed asset from the project. Once it was done, I could use it immediately to improve the look of the website, the product's web interface, and the device's physical case.
-
-TODO: Photo of all the places I want to replace the logo
+I was eager to finalize the logo because it would be the first completed asset WebAgency was giving me. Once it was done, I could use it immediately to improve the look of the website, the product's web interface, and the device's physical case.
 
 All I needed was a couple more hours of work. But I didn't get them.
+
+{{<img src="new-logo-places.jpg" alt="Photos of TinyPilot website, app interface, and case showing the old logo" maxWidth="500px" hasBorder="true" caption="All the locations I could place the new TinyPilot logo once WebAgency delivered the final result.">}}
 
 Instead, WebAgency just kept redesigning the website. Their lead designer didn't have availability to work on the logo, but what did I think about this new design idea for the landing page?
 
@@ -102,7 +102,7 @@ I pointed this out to WebAgency, and Isaac called me, embarrassed. He admitted t
 
 Midway through December, I noticed WebAgency had stopped making progress on anything.
 
-They stopped scheduling calls to review work with me. They occasionally shared updates over email, but comments I left on their designs sat ignored for weeks.
+They stopped scheduling calls to review work with me, and the comments I left on their designs sat ignored for weeks.
 
 I chalked it up to the holidays. Lots of people are on vacation in December, so I assumed things would pick back up in the new year.
 
@@ -125,6 +125,8 @@ Isaac did, however, have an idea for expediting the project.
 The real issue, Isaac said, was that I was their only hourly client. I would always be at the mercy of long-term retainer clients pre-empting my project. So what if I signed a retainer agreement to guarantee WebAgency's time? Their retainers started at 40 hours per month for $160/hr.
 
 I felt duped and manipulated. They structured the work so that everything was 80-90% done, but nothing was usable. If I took the work to a new vendor, there'd be a huge amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement with them?
+
+{{<img src="not-sure-what-would-help.jpg" maxWidth="700px" hasBorder="true" alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
 
 As diplomatically as possible, I told Isaac that I felt like the situation was WebAgency's fault. If a retainer agreement was better for everyone, why didn't they propose it months ago? The project could have been done by now.
 
@@ -275,7 +277,7 @@ If I work with a design agency in the future, I'll insist on using a tool that l
 
 When we started the project, WebAgency told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal. I thought I'd get service normally reserved for large clients despite my limited budget.
 
-TODO: Screen cap of _Mad Men_ scene
+{{<img src="big-airline.jpg" maxWidth="400px" caption="My initial conversation with WebAgency, as I remember it." alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
 
 In reality, I didn't get the same service as their large clients. When I was an hourly client, WebAgency kept deprioritizing me. When I switched to a retainer, they didn't know how to work with me effectively with only 40-60 retainer hours per month.
 
@@ -326,4 +328,6 @@ It's too early to tell, but I'm optimistic about earning a positive return on th
 
 ---
 
-_Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._
+_Custom artwork by [Loraine Yow](https://www.lolo-ology.com/)._
+
+_Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing early feedback on this post._
