@@ -126,7 +126,7 @@ The real issue, Isaac said, was that I was their only hourly client. I would alw
 
 I felt duped and manipulated. They structured the work so that everything was 80% done, but nothing was usable. If I took the work to a new vendor, there'd be a huge amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement with them?
 
-{{<img src="not-sure-what-would-help.jpg" maxWidth="700px" hasBorder="true" alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
+{{<img src="not-sure-what-would-help.png" maxWidth="700px" alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
 
 As diplomatically as possible, I told Isaac that I felt like the situation was WebAgency's fault. If a retainer agreement was better for everyone, why didn't they propose it months ago? The project could have been done by now.
 
