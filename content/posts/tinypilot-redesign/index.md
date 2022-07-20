@@ -226,7 +226,7 @@ If I were approaching this project again, here are the things I'd do differently
 
 I don't want to overgeneralize agencies based on this one experience, but I think an individual freelancer would have been a better fit for a business of my size.
 
-Many of the problems were around management, resource allocation, and communication. I drastically underestimated how much more difficult those problems would be with a team rather than a single freelancer.
+Many of the problems were around management, resource allocation, and communication. I drastically underestimated how difficult those problems would be with a team rather than a single freelancer.
 
 The agency was working with me for 40-60 hours per month, the same as each of TinyPilot's other freelance developers. I thought the agency would require similar oversight to one freelancer, but having more people on a project requires more management, even if they're collectively only working 40 hours per month.
 
