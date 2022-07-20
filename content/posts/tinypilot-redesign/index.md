@@ -162,7 +162,7 @@ WebAgency pointed out that layering a new design onto a totally different theme 
 
 Sure, that sounded fine.
 
-Days stretched into weeks, and there were no updates about the new theme. Was the work taking longer than they expected? Or was this just a repeat of March where they were planning to squeeze most of the dev hours into the last few days of the month? At the end of the month, the invoice gave me my answer.
+Days stretched into weeks, and there were no updates about the new theme. Was the work taking longer than they expected? Or was this just a repeat of March, and they'd squeeze the dev hours into the last few days of the month? The monthly invoice in May gave me my answer.
 
 The "one-week" task of replacing the Bootstrap theme ultimately took five weeks and 38 billable hours for a total cost of $6.1k.
 
@@ -255,7 +255,7 @@ During the implementation phase, I should have been more aggressive in preventin
 
 In my first meeting with WebAgency's team, I asked how long they expected my project to take. They said it was up to me. I might love their first pitch, or I could reject everything for weeks. That was sensible, so I didn't push for a more exact timeline.
 
-I mistakenly let that loose attitude carry into the development work. I should have pressed the developers to share estimates of each task and asked them to revisit the scope if the work ballooned far beyond our expectations. That would have prevented situations like [the five-week refactoring quest](#the-one-week-task-that-took-five-weeks) that was only supposed to take a few days.
+I mistakenly let that lax attitude carry into the development work. I should have pressed the developers to share estimates of each task and asked them to revisit the scope if the work ballooned far beyond our expectations. That would have prevented situations like [the five-week refactoring quest](#the-one-week-task-that-took-five-weeks) that was only supposed to take a few days.
 
 ### Require a shared view of billable hours
 
