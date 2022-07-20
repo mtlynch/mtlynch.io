@@ -114,7 +114,7 @@ In early February, I emailed Isaac to ask what was going on. He called and apolo
 
 Isaac confirmed that I hadn't imagined the drop in quality. WebAgency was overloaded with work from their larger clients. They were squeezing my project into the gaps, so their designers probably weren't as focused as when we started.
 
-I said I understood I was a small client to them, and I was willing to wait a few weeks until their other work slowed down. I just wanted the remaining 10-20 hours of work to be high-quality October hours and not the harried, pop-in-whenever hours I saw in December and January.
+I understood that TinyPilot was a small client to them. I was willing to wait a few weeks until their other work slowed down, but I wanted the remaining 10-20 hours to be high-quality October hours and not the harried, pop-in-whenever hours I saw in December and January.
 
 "We'll definitely finish your project. I just don't know when we'll have the hours," Isaac told me. I asked if they'd have time within the next two months. He wasn't sure.
 
