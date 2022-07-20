@@ -13,7 +13,7 @@ A year later, the business was generating $45k/month in revenue, but my website 
 
 There were only three pages in the checkout flow for my main product, so I expected the redesign would be straightforward. Maybe a few months and $15k.
 
-Here's what the site looked after the redesign:
+Here's how the site looked after the redesign:
 
 {{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
 
@@ -27,17 +27,17 @@ If you hear that someone spent $46k to redesign three pages of a website, you pr
 
 But I've done this before! I'm a software developer, and I've hired dozens of freelancers, including [developers](/freelancer-guidelines/), [artists](/how-to-hire-a-cartoonist/), [writers](/hiring-content-writers/), and [editors](/editor/).
 
-I definitely made mistakes on this project, but hopefully they're more interesting than the ones you expect.
+I made mistakes on this project, but hopefully they're more interesting than the ones you expect.
 
 ## The initial estimate: four weeks and $7k
 
-I'm not trying to bash the agency here, so I'll just call them WebAgency. They're based in the US, and I found through one of the [Hacker News monthly freelancer threads](https://news.ycombinator.com/submitted?id=whoishiring).
+I'm not trying to bash the agency here, so I'll just call them WebAgency. They're based in the US, and I found them through a [Hacker News monthly freelancer thread](https://news.ycombinator.com/submitted?id=whoishiring).
 
 WebAgency quoted the highest rate, but their portfolio best matched the style I wanted. They had a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
 
 Isaac, WebAgency's CEO, won my confidence during our initial call by suggesting I reduce the project's scope. Even though it meant less money for him, Isaac proposed a rebranding rather than a full-blown redesign. Instead of reinventing the site, WebAgency would focus on fundamentals like a new logo, color scheme, and fonts.
 
-After rebranding, I could measure results to see if it was worth continuing the redesign. If nothing else, a rebrand would give me solid foundation to create a marketing campaign with digital marketing agencies.
+After rebranding, I could measure results to see if it was worth continuing the redesign. If nothing else, a rebrand would give me a solid foundation to create a marketing campaign with digital marketing agencies.
 
 That sounded smart!
 
@@ -70,21 +70,21 @@ In our first few meetings, WebAgency showed me mockups of my site with different
 
 As the project progressed, the mockups became more elaborate. WebAgency started showing me custom images and icons for the site.
 
-{{<img src="design-sketches2.png" alt="Basic designs of TinyPilot website with different colors and logos" maxWidth="800px" hasBorder="true" caption="The design agency became less interested in branding and started focusing on details of the overall website design.">}}
+{{<img src="design-sketches2.png" alt="Basic designs of TinyPilot website with different colors and logos" maxWidth="800px" hasBorder="true" caption="The design agency became less interested in branding and started focusing on the overall website design.">}}
 
 We'd never discussed custom illustrations, but it seemed like a small amount of work, so I just let it go.
 
 A few weeks later, WebAgency called a meeting to share their progress, and they hadn't made any progress at all on the logo or branding. They were just showing me design ideas for the website.
 
-"To be clear, the project is still a rebranding and not a redesign, right?," I asked.
+"To be clear, the project is still a rebranding and not a redesign, right?" I asked.
 
 "Oh, yes, yes!" the lead designer reassured me. "Some branding choices wouldn't make sense on top of the old design, so these are just quick sketches of how they could look."
 
 ## Just finish the logo!
 
-By December, we were three months into the project. WebAgency was 95% done with TinyPilot's new logo. All I wanted was to change the rounding on the corners and get rid of the border. I expected it to be a couple of hours of work.
+By December, we were three months into the project. WebAgency was 95% done with TinyPilot's new logo. All I wanted was to change the rounding on the corners and eliminate the border. I expected it to be a couple of hours of work.
 
-I was eager to finalize the logo because it would be the first completed asset WebAgency was giving me. Once it was done, I could use it immediately to improve the look of the website, the product's web interface, and the device's physical case.
+I was eager to finalize the logo because it would be the first completed asset WebAgency was giving me. Once it was ready, I could use it immediately to improve the look of the website, the product's web interface, and the device's physical case.
 
 All I needed was a couple more hours of work. But I didn't get them.
 
@@ -96,7 +96,7 @@ The breaking point came when WebAgency started showing me new designs for my sit
 
 {{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." maxWidth="550px" hasBorder="true" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
 
-I pointed this out to WebAgency, and Isaac called me, embarrassed. He admitted that the designers went beyond just sketching. They were so excited about the project that they got carried away and designed more than they should have, but he was going to remove the hours they'd spent redesigning the blog.
+I pointed this out to WebAgency, and Isaac called me, embarrassed. He admitted that the designers went beyond just sketching. They were so excited about the project and got carried away, so he was going to remove the hours they'd spent redesigning the blog.
 
 ## The two-month holiday slowdown
 
@@ -110,9 +110,9 @@ The new year started, and not only did the pace stay slow, the quality of the wo
 
 ## "I just don't know when we'll have the hours"
 
-In early February, I emailed Isaac to ask what was going on. He called and apologized for the way the project was going, admitting that internal issues at WebAgency were affecting my project. Their project manager quit in November, and Isaac was scrambling to fill the role himself while searching frantically for replacements.
+In early February, I emailed Isaac to ask what was going on. He called and apologized for the way the project was going, admitting that internal issues at WebAgency were affecting my project. Their project manager quit in November, and Isaac was scrambling to fill the role himself while searching for replacements.
 
-He confirmed that I wasn't imagining the drop in quality. WebAgency was overloaded with work from their larger clients. They were squeezing my project into the gaps, so their designers probably weren't as focused as when we started.
+Isaac confirmed that I hadn't imagined the drop in quality. WebAgency was overloaded with work from their larger clients. They were squeezing my project into the gaps, so their designers probably weren't as focused as when we started.
 
 I said I understood I was a small client to them, and I was willing to wait a few weeks until their other work slowed down. I just wanted the remaining 10-20 hours of work to be high-quality October hours and not the harried, pop-in-whenever hours I saw in December and January.
 
@@ -181,11 +181,11 @@ WebAgency required each month's payment up front, so they already had all of my 
 
 Surprisingly, the dev work was never smoother than after I terminated the contract. The project finally worked at the pace I expected from the beginning. They coded up each page within 7-10 days.
 
-There were still some issues, but I was prepared this time. WebAgency kept suggesting new flourishes to the design. I declined them all and told them to focus on the design I'd approved. I'm glad I did, because otherwise they'd probably still be working on the website today.
+There were still some issues, but I was prepared this time. WebAgency kept suggesting new flourishes to the design. I declined them all and told them to focus on the design I'd approved. I'm glad I did because they'd probably still be working on the website today.
 
 On the last day of the month, the final page was incomplete, and WebAgency hadn't communicated with me at all about how they'd disengage from the project. On June 1st, the day after our contract officially ended, their dev told me that Isaac had authorized him to finish the outstanding work at no charge. He wrapped up the final page within two days.
 
-And then it was finally done! This project had spiralled so far beyond what I initially wanted and turned into an interminable drain on my time and finances. I was incredibly relieved to put it behind me.
+And then it was finally done! This project had spiraled so far beyond what I initially wanted and turned into an interminable drain on my time and finances. I was incredibly relieved to put it behind me.
 
 ## Before and after
 
@@ -212,9 +212,9 @@ After the project ended, I told Isaac I'd like to write a blog post about takeaw
 
 Isaac was candid with me that the project hadn't gone as smoothly as he'd hoped. He felt that the underlying problem was WebAgency's difficulty scaling down their workflows to fit TinyPilot's budget. Their typical client has a retainer in the range of $20-40k per month. TinyPilot was buying only 40-60 hours per month, which they typically only reserve for maintenance rather than new development.
 
-I told Isaac that I wished we'd structed the work to give me usable assets sooner. I would have preferred to have the logo first, then a new navbar design, then the landing page design, etc. He said that WebAgency typically works on completely new apps or bigger features where it's not practical to deliver features piecemeal, though he now understood why it would have benefitted me.
+I told Isaac that I wished we'd structured the work to give me usable assets sooner. I would have preferred to have the logo first, then a new navbar design, then the landing page design, etc. He said that WebAgency typically works on completely new apps or bigger features where it's not practical to deliver features piecemeal, though he now understood why it would have benefitted me.
 
-I shared my surprise at how little WebAgency managed the project. I expected WebAgency's project managers to regularly report status on tasks and maintain project timelines, but nobody was doing that. Isaac said this was a misstep on his part. WebAgency tries to keep project management to less than 5% of billable hours, but at my scale, it wouldn't have been practical, so he eliminated project management entirely. He admitted that, in retrospect, he should have included me in that conversation to make sure it was what I wanted.
+I shared my surprise at how little WebAgency managed the project. I expected WebAgency's project managers to report status regularly and maintain project timelines, but nobody was doing that. Isaac said this was a misstep on his part. WebAgency tries to keep project management to less than 5% of billable hours. At my scale, 5% would be too limited to provide real benefits, so he eliminated project management entirely. He admitted that, in retrospect, he should have included me in that conversation to make sure it was what I wanted.
 
 We talked about the opaqueness of WebAgency's hours. Because they shared their hours so infrequently and worked an irregular schedule, I could never tell when a task was bloating beyond its worth. I wished I'd raised this issue earlier because it turned out all I had to do was ask. WebAgency tracks billable time with [toggl](https://toggl.com), and Isaac would have been happy to give me access to their dashboard.
 
@@ -241,7 +241,7 @@ But think about it this way: if a project involves eight tasks that will take ro
 
 The one-at-a-time is better value for your money. At the end of month one, you have one asset that provides value to your business for the next seven months. In month two, you have more, and so on.
 
-Parallelizing everything also puts you in terrible negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at once, those are the only tasks at risk if the project goes south.
+Parallelizing everything also puts you in a weak negotiating position. If the agency has eight tasks that are all 80% complete, it's expensive for you to scope down the project or switch vendors. If you limit the agency to only two or three tasks at once, those are the only tasks at risk if the project goes south.
 
 Lastly, it's just more mentally taxing to oversee eight subprojects at once. Every unfinished task occupies cognitive real estate. It's better to knock them out in small batches as opposed to dragging everything out for the full length of the project.
 
@@ -255,7 +255,7 @@ During the implementation phase, I should have been more aggressive in preventin
 
 In my first meeting with WebAgency's team, I asked how long they expected my project to take. They said it was up to me. I might love their first pitch, or I could reject everything for weeks. That was sensible, so I didn't push for a more exact timeline.
 
-I mistakenly let that loose attitude carry into the development work. I should have pressed the developers to share estimates of each task and asked them to revisit scope if the work ballooned far beyond our expectations. That would have prevented situations like [the five-week refactoring quest](#the-one-week-task-that-took-five-weeks) that was only supposed to take a few days.
+I mistakenly let that loose attitude carry into the development work. I should have pressed the developers to share estimates of each task and asked them to revisit the scope if the work ballooned far beyond our expectations. That would have prevented situations like [the five-week refactoring quest](#the-one-week-task-that-took-five-weeks) that was only supposed to take a few days.
 
 ### Require a shared view of billable hours
 
@@ -284,7 +284,7 @@ In reality, I didn't get the same service as their large clients. When I was an 
 
 ## Why didn't you just...?
 
-I've shared pieces of this story in my [monthly retrospectives](/retrospectives), and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. I think this feedback is well-intentioned, but a lot of it comes from people who either haven't worked with agencies, or they've done so only as a large, powerful client.
+I've shared pieces of this story in my [monthly retrospectives](/retrospectives), and I've gotten some questions about why I didn't solve the problem in some easy, obvious way. I think this feedback is well-intentioned, but I suspect it comes from armchair experts and people who have only worked with agencies as a large, powerful client.
 
 Below, I've addressed why some of the obvious suggestions I've received would not have worked.
 
