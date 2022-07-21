@@ -45,17 +45,15 @@ Unfortunately, I can't just double ad spend and double sales, as costs increase 
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | May 2022      | June 2022       | Change                                           |
-| ------------------------ | ------------- | --------------- | ------------------------------------------------ |
-| Unique Visitors          | 14,296        | 10,056          | <font color="red">-4,240 (-30%)</font>           |
-| Total Pageviews          | 24,131        | 18,764          | <font color="red">-5,367 (-22%)</font>           |
-| Sales Revenue            | $54,844.20    | $72,476.80      | <font color="green">+$17,632.60 (+32%)</font>    |
-| Enterprise Subscriptions | $47.75        | $47.75          | 0                                                |
-| Royalties                | $3,269.56     | $1,710.27       | <font color="red">-$1,559.29 (-48%)</font>       |
-| Total Revenue            | $58,161.51    | $74,234.82      | <font color="green">+$16,073.31 (+28%)</font>    |
-| **Profit**               | **$6,445.38** | **$7,716.34**\* | **<font color="green">+$1,270.96 (+20%)</font>** |
-
-\* _Note: Profit is just a naive delta in my cash balance until I do real bookkeeping mid-month._
+| Metric                   | May 2022      | June 2022      | Change                                           |
+| ------------------------ | ------------- | -------------- | ------------------------------------------------ |
+| Unique Visitors          | 14,296        | 10,056         | <font color="red">-4,240 (-30%)</font>           |
+| Total Pageviews          | 24,131        | 18,764         | <font color="red">-5,367 (-22%)</font>           |
+| Sales Revenue            | $54,844.20    | $72,476.80     | <font color="green">+$17,632.60 (+32%)</font>    |
+| Enterprise Subscriptions | $47.75        | $47.75         | 0                                                |
+| Royalties                | $3,269.56     | $1,710.27      | <font color="red">-$1,559.29 (-48%)</font>       |
+| Total Revenue            | $58,161.51    | $74,234.82     | <font color="green">+$16,073.31 (+28%)</font>    |
+| **Profit**               | **$6,445.38** | **-$4,230.17** | **<font color="red">-$10,675.55 (-inf%)</font>** |
 
 This was TinyPilot's all-time strongest month of revenue. And the exciting part is that there was otherwise nothing remarkable about June.
 
