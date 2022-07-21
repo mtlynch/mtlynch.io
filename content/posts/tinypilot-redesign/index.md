@@ -4,6 +4,8 @@ date: 2022-07-21T00:00:00-04:00
 description: Mistakes I made working with my first design agency.
 images:
   - tinypilot-redesign/og-cover.png
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=32179563
 ---
 
 Two years ago, I created a website for my business. By combining my terrible design skills with a decent-looking template, I created a site that looked okay. I told myself that if the business took off, I'd hire a real designer to make it look professional.
