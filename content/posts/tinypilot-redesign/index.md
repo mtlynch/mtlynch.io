@@ -336,6 +336,8 @@ It's too early to tell, but I'm optimistic about earning a positive return on th
 
 {{<img src="sales-timeline.png" alt="Graph of TinyPilot sales showing a permanent increase in November when we discontinued our low-cost product, a temporary spike in March for a new product, and an increase for the last two months of having the new website." hasBorder="true" caption="Sales through the TinyPilot website over the last year">}}
 
+{{<tweet user="deliberatecoder" id="1550124485331734528" >}}
+
 ---
 
 _Doghouse illustration by [Loraine Yow](https://www.lolo-ology.com/)._
