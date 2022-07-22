@@ -38,7 +38,7 @@ I'm not trying to bash the agency here, so I'll just call them WebAgency. They'r
 
 WebAgency quoted the highest rate of anyone I interviewed, but their portfolio best matched the style I wanted. They had a wide range of talent in-house, including design, custom illustrations, and 3D imaging.
 
-Isaac, WebAgency's CEO, won my confidence during our initial call by suggesting I reduce the project's scope. Even though it meant less money for him, Isaac proposed a rebranding rather than a full-blown redesign. That meant focusing on fundamentals like a new logo, color scheme, and fonts.
+Isaac, WebAgency's CEO, won my confidence during our initial call by suggesting I reduce the project's scope. Even though it meant less money for him, Isaac proposed a rebranding rather than a full-blown redesign. WebAgency would work on the fundamentals like a new logo, color scheme, and fonts.
 
 After rebranding, I could measure results to see if it was worth continuing the redesign. If nothing else, a rebrand would give me a solid foundation to create a marketing campaign with digital marketing agencies.
 
@@ -46,7 +46,7 @@ That sounded smart!
 
 WebAgency estimated that the rebrand would require 30-40 billable hours over two to four weeks. Their hourly rate was $175, so we were looking at $5-7k for a new logo and branding. That was half my budget, so it was an easy call.
 
-Isaac warned that I was smaller than their other clients. Most of their customers had WebAgency on an expensive long-term retainer agreement. This project was so tightly-scoped that we could do it hourly, but there was a possibility that they'd have to pause my work occasionally if a retainer client needed more time.
+Isaac warned that I was smaller than their other clients. Most of their customers had WebAgency on expensive long-term retainer agreements. This project was so tightly-scoped that we could do it hourly, but there was a possibility that they'd have to pause my work occasionally if a retainer client needed more time.
 
 I didn't mind pausing the project for a week or two if things got busy. I was originally expecting the project to take two or three months, so a few extra weeks was nothing.
 
@@ -115,7 +115,7 @@ The new year started, and not only did the pace stay slow, the quality of the wo
 
 In early February, I emailed Isaac to ask what was going on. He called and apologized for how the project was going, admitting that internal issues at WebAgency were affecting my project. Their project manager quit in November, and Isaac was scrambling to fill the role himself while searching for replacements.
 
-Isaac confirmed that I hadn't imagined the drop in quality. WebAgency was overloaded with work from their larger clients. They were squeezing my project into the gaps, so their designers probably weren't as focused as when we started.
+Isaac confirmed that I hadn't imagined the drop in quality. WebAgency was overloaded with work from their larger clients. Their designers were squeezing me in when they had a spare moment, but they probably weren't as focused as when we started.
 
 I understood that TinyPilot was a small client to them. I was willing to wait a few weeks until their other work slowed down, but I wanted the remaining 10-20 hours to be high-quality October hours and not the harried, pop-in-whenever hours I saw in December and January.
 
@@ -155,7 +155,7 @@ When the month ended, WebAgency hadn't moved the website any closer to the new d
 
 What inspired WebAgency to take on these insignificant bugs, you ask? Well, WebAgency had asked me to create Github tickets for each redesign task. WebAgency warned that they don't refund or roll over unused hours, so they encouraged me to overbook the schedule with tasks beyond the redesign work.
 
-What I didn't expect was how WebAgency would split the tickets among the developers. I thought developer A would work on page X, and developer B would work on page Y. Instead, WebAgency assigned all the design-related tickets to developer A and left the rest to developer B. And that's how a quarter of the March dev budget went to minor bugfixes.
+What I didn't expect was how WebAgency would split the tickets among their developers. I thought developer A would work on page X, and developer B would work on page Y. Instead, WebAgency assigned all the design-related tickets to developer A and left the rest to developer B. And that's how a quarter of the March dev budget went to minor bugfixes.
 
 ## The one-week task that took five weeks
 
@@ -169,7 +169,7 @@ Sure, that sounded fine.
 
 Days stretched into weeks, and there were no updates about the new theme. Was the work taking longer than they expected? Or was this a repeat of March, and they'd squeeze everything into the last few days of the month?
 
-I got my answer from the following month's invoice. The "one-week" task of replacing the Bootstrap theme ultimately took five weeks and 38 billable hours for a total cost of $6.1k.
+The following month's invoice gave me the answer. The "one-week" task of replacing the Bootstrap theme ultimately took five weeks and 38 billable hours for a total cost of $6.1k.
 
 {{<gallery caption="Before and after five weeks and $6.1k of web development">}}
 {{<img src="before-theme.png" hasBorder="true">}}
@@ -285,7 +285,7 @@ If I work with a design agency in the future, I'll insist on a tool that lets us
 
 ### Avoid hiring a vendor as their smallest client
 
-When we started the project, WebAgency told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal. I thought I'd enjoy service normally reserved for large companies despite my limited budget.
+When we started the project, WebAgency told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal &mdash; I'd enjoy service normally reserved for large companies despite my limited budget.
 
 {{<img src="big-airline.jpg" maxWidth="400px" caption="My initial conversation with WebAgency, as I remember it." alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
 
