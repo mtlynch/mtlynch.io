@@ -1,5 +1,5 @@
 ---
-title: "I Regret my $46k Website Redesign"
+title: "I Regret My $46k Website Redesign"
 date: 2022-07-21T00:00:00-04:00
 description: Mistakes I made working with my first design agency.
 images:
