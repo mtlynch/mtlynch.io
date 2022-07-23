@@ -7,6 +7,10 @@ images:
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=32179563
   reddit: https://www.reddit.com/r/web_design/comments/w4ir7r/i_regret_my_46k_website_redesign/
+tags:
+  - tinypilot
+  - outsourcing
+  - conflict resolution
 ---
 
 Two years ago, I created a website for my business. By combining my terrible design skills with a decent-looking template, I created a site that looked okay. I told myself that if the business took off, I'd hire a real designer to make it look professional.
