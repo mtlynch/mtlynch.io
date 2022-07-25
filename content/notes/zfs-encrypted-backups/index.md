@@ -5,7 +5,7 @@ date: 2022-07-05T20:37:27-04:00
 
 I recently built my first [TrueNAS server](/budget-nas/), and I've been learning more about TrueNAS and ZFS.
 
-{{<gallery caption="Before and after of my 2022 [homelab TrueNAS server](/budget-nas/)">}}
+{{<gallery caption="My [homelab TrueNAS server](/budget-nas/)">}}
 {{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" maxWidth="450px">}}
 {{<img src="completed-build.jpg" alt="Photo of completed server build" maxWidth="450px">}}
 {{</gallery>}}
@@ -29,7 +29,7 @@ To demonstrate what I'm trying to do, I created a dataset called `diary-entries`
 Okay, let's put a file into this dataset:
 
 ```bash
-truenas# echo "I enjoy Taylor Swift, but I don't want anyone to know" \
+echo "I enjoy Taylor Swift, but I don't want anyone to know" \
   > /mnt/pool1/diary-entries/2022-07-05.txt
 ```
 
@@ -154,6 +154,16 @@ $ cat /mnt/pool1/diary-entries-backup3/2022-07-05.txt
 I enjoy Taylor Swift, but I don’t want anyone to know
 ```
 
-Hooray! It worked. I
+Hooray! It worked. I can
 
-## Replicating encrypted datasets to an unencrypted dataset
+## The clean solution
+
+I've created a set of convenience scripts:
+
+- [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
+
+## Scheduling backups
+
+{{<img src="monthly-cron.png">}}
+
+Starting at 3 AM because sometimes I'm still awake and using my computer at midnight.
