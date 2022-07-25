@@ -331,6 +331,11 @@ And it works! It recovers a dataset using my full backup and incremental backup:
 
 {{<img src="dataset4.png">}}
 
+```bash
+zfs receive pool1/diary-entries-backup4 < /mnt/pool1/diary-entries-backup/snapshot@2022-07-05
+zfs receive pool1/diary-entries-backup4 < /mnt/pool1/diary-entries-backup/snapshot@2022-07-06
+```
+
 ## The clean solution
 
 I've created a set of convenience scripts:
