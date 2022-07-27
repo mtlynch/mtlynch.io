@@ -1,5 +1,5 @@
 ---
-title: "How to Back Up an Encrypted ZFS Dataset to an Unencrypted Dataset"
+title: "Back Up Encrypted ZFS Datasets without Unlocking It"
 date: 2022-07-05T20:37:27-04:00
 ---
 
@@ -11,6 +11,8 @@ I recently built my first [TrueNAS server](/budget-nas/), and I've been learning
 {{</gallery>}}
 
 One of the neat features of ZFS is that you can make backups of encrypted data while it's still encrypted.
+
+ZFS is designed to back up to other ZFS systems, but what if you want to back up to a Windows system or cloud storage that knows nothing about ZFS? Then you have to do things a little bit more complicated, but I've got some scripts for you.
 
 ## Why back up encrypted data?
 
@@ -51,9 +53,7 @@ I start the replication task and... it fails:
 
 The error is:
 
-```text
-Unable to send encrypted dataset 'pool1/diary-entries' to existing unencrypted or unrelated dataset 'pool1/diary-entries-backup'.
-```
+> Unable to send encrypted dataset 'pool1/diary-entries' to existing unencrypted or unrelated dataset 'pool1/diary-entries-backup'.
 
 Shucks!
 
@@ -79,7 +79,7 @@ And now let's try replicating `diary-entries` to `diary-entries-backup`:
 
 ```bash
 $ zfs send pool1/diary-entries@2022-07-05 \
-  | zfs receive pool1/diary-entries-backup@2022-07-05
+  | zfs receive pool1/diary-entries-backup
 cannot receive new filesystem stream: destination 'pool1/diary-entries-backup' exists
 must specify -F to overwrite it
 ```
@@ -88,7 +88,7 @@ Okay, so I can't replicate into an existing dataset? Let's just specify a new da
 
 ```bash
 $ zfs send pool1/diary-entries@2022-07-05 \
-  | zfs receive pool1/diary-entries-backup2@2022-07-05
+  | zfs receive pool1/diary-entries-backup
 warning: cannot send 'pool1/diary-entries@2022-07-05': dataset key must be loaded
 cannot receive: failed to read from stream
 ```
@@ -104,7 +104,7 @@ Okay, let me try that:
 
 ```bash
 $ zfs send --raw pool1/diary-entries@2022-07-05 \
-  | zfs receive pool1/diary-entries-backup2@2022-07-05
+  | zfs receive pool1/diary-entries-backup2
 ```
 
 Success!
@@ -121,7 +121,7 @@ Revisiting the command I was using, I noticed something:
 
 ```bash
 $ zfs send --raw pool1/diary-entries@2022-07-05 \
-  | zfs receive pool1/diary-entries-backup2@2022-07-05
+  | zfs receive pool1/diary-entries-backup2
 ```
 
 Okay so there's a `zfs send` command that pipes its output to a `zfs receive` command. What if instead of piping output to `zfs receive`, I just write it to a file?
@@ -141,7 +141,7 @@ $ du -h /mnt/pool1/diary-entries-backup/*
 Now that I have the backup as a file on an unencrypted dataset, I can mount the dataset over Samba from my Windows machine and back up the file to the cloud. But first, let's test that I can recreate the data in `diary-entries` just from this backup:
 
 ```bash
-$ zfs receive pool1/diary-entries-backup3@2022-07-05 \
+$ zfs receive pool1/diary-entries-backup3 \
   < /mnt/pool1/diary-entries-backup/snapshot@2022-07-05
 ```
 
@@ -166,10 +166,10 @@ One of the datasets I plan to back up this way is for video captures of my scree
 
 Fortunately, ZFS supports incremental backups. If you snapshot a dataset on Monday and then again on Tuesday, you don't have to create a full backup file for both Monday and Tuesday. Instead, your Tuesday backup can just be the delta between the two snapshots.
 
-To demonstrate, I'll add a little more to my `diary-entries` dataset:
+To demonstrate, I'll add a little more data to my `diary-entries` dataset:
 
 ```bash
-echo "Upon reflection, I'm not ashamed of how much I enjoy Blank Space" \
+echo "Upon reflection, I'm not ashamed of how much I enjoy You Belong with Me" \
   > /mnt/pool1/diary-entries/2022-07-06.txt
 ```
 
@@ -187,7 +187,7 @@ zfs send \
   --verbose \
   -i pool1/diary-entries@2022-07-05 \
   pool1/diary-entries@2022-07-06 \
-  > /mnt/pool1/diary-entries-backup/snapshot@2022-07-06
+  > /mnt/pool1/diary-entries-backup/snapshot@2022-07-05-to-2022-07-06
 ```
 
 Success! It created the new incremental backup:
@@ -195,10 +195,38 @@ Success! It created the new incremental backup:
 ```bash
 $ du -h /mnt/pool1/diary-entries-backup/*
  24K    /mnt/pool1/diary-entries-backup/snapshot@2022-07-05
-6.5K    /mnt/pool1/diary-entries-backup/snapshot@2022-07-06
+6.5K    /mnt/pool1/diary-entries-backup/snapshot@2022-07-05-to-2022-07-06
 ```
 
 It's a little silly on this demo because my files are tiny anyway, but you can still see that the second snapshot is substantially smaller than the first because it contains only the changes since the `2022-07-05` snapshot.
+
+```bash
+# Recover from full backup.
+zfs receive pool1/diary-entries-backup4@2022-07-05 \
+  < /mnt/pool1/diary-entries-backup/snapshot@2022-07-05
+# Add changes since incremental backup.
+zfs receive pool1/diary-entries-backup4 \
+  < /mnt/pool1/diary-entries-backup/snapshot@2022-07-05-to-2022-07-06
+```
+
+We recovered it!
+
+{{<img src="dataset4.png">}}
+
+```bash
+$ du -h /mnt/pool1/diary-entries-backup4/*
+6.5K    /mnt/pool1/diary-entries-backup4/2022-07-05.txt
+6.5K    /mnt/pool1/diary-entries-backup4/2022-07-06.txt
+```
+
+Note that I have to first recover from the full backup and then advance it with an incremental backup. If I try to start a recovery with an incremental backup, ZFS will tell me I'm doing it wrong:
+
+```bash
+# This isn't going to work because it's an incremental backup.
+$ zfs receive pool1/diary-entries-backup5 \
+  < /mnt/pool1/diary-entries-backup/snapshot@2022-07-05-to-2022-07-06
+cannot receive incremental stream: destination 'pool1/diary-entries-backup5' does not exist
+```
 
 ## Scripting backups
 
@@ -219,7 +247,7 @@ DATASETS+=("emails")
 readonly DATASETS
 ```
 
-And now I'll make a script that creates full backups of my datasets:
+And now I'll make a script called `replicate-full-snapshots.sh` that creates full backups of my datasets:
 
 ```bash
 #!/bin/bash
@@ -248,7 +276,7 @@ done
 
 The script iterates through each of the datasets I defined in `settings.sh`, creates a new snapshot, then creates a full backup of that dataset.
 
-Next, I want a script that creates incremental backups:
+Next, I want a script called `replicate-incremental-snapshots.sh` that creates incremental backups:
 
 ```bash
 #!/bin/bash
@@ -282,9 +310,7 @@ for DATASET in "${DATASETS[@]}"; do
 done
 ```
 
-## Recovering a backup
-
-I also created a convenience script called `snapshot-to-dataset.sh` that translates backup files back into a ZFS dataset:
+And finally, backing up is not much use if you can't recover, so I created a convenience script called `snapshot-to-dataset.sh` that translates backup files back into a ZFS dataset:
 
 ```bash
 #!/bin/bash
@@ -318,38 +344,104 @@ if [[ -n "${INCREMENTAL_SNAPSHOT_PATH}" ]]; then
 fi
 ```
 
-Before, we just called `zfs receive`, but it gets a little complicated when we're working with incremental backups, so the convenience script simplifies things. To recover my `diary-entries` dataset using my full backup and incremental backup, I'd run the following command:
+## My convenience scripts in action
+
+Here's my `settings.sh` file:
+
+```bash
+readonly POOL="pool1"
+readonly BASE_DIR="/mnt/${POOL}/secure-backups"
+readonly FULL_SNAPSHOTS_DIR="${BASE_DIR}/full-snapshots"
+readonly INCREMENTAL_SNAPSHOTS_DIR="${BASE_DIR}/incremental-snapshots"
+
+DATASETS=()
+DATASETS+=("diary-entries")
+readonly DATASETS
+```
+
+And now I'll run a full backup:
+
+```bash
+./replicate-full-snapshots.sh
+```
+
+And let me see if it worked:
+
+```bash
+$ du -h /mnt/pool1/secure-backups/full-snapshots/diary-entries*
+24K    /mnt/pool1/secure-backups/full-snapshots/diary-entries@2022-07-27T073416-0400
+```
+
+Cool, it created a backup file.
+
+Now, I'll add some data and create an incremental backup:
+
+```bash
+echo "I've got a blank space, so I'll write a new diary entry" \
+  > /mnt/pool1/diary-entries/2022-07-27.txt
+```
+
+And I'll create an incremental backup:
+
+```bash
+./replicate-incremental-snapshots.sh
+```
+
+Let's check the incremental backups:
+
+```bash
+$ du -h /mnt/pool1/secure-backups/incremental-snapshots/diary-entries*
+12K    /mnt/pool1/secure-backups/incremental-snapshots/diary-entries@2022-07-27T074246-0400
+```
+
+And let's see if I can recover from it. Recall that the syntax of my `snapshot-to-dataset.sh` script is:
+
+```bash
+./snapshot-to-dataset.sh new-dataset-name full-backup-file [incremental-backup-file]
+```
+
+With that, I'll try recovering from my backups:
 
 ```bash
 ./snapshot-to-dataset.sh \
-  diary-entries-backup4 \
-  /mnt/pool1/diary-entries-backup/snapshot@2022-07-05 \
-  /mnt/pool1/diary-entries-backup/snapshot@2022-07-06
+  diary-entries-backup5 \
+  /mnt/pool1/secure-backups/full-snapshots/diary-entries@2022-07-27T073416-0400 \
+  /mnt/pool1/secure-backups/incremental-snapshots/diary-entries@2022-07-27T074246-0400
 ```
 
-And it works! It recovers a dataset using my full backup and incremental backup:
-
-{{<img src="dataset4.png">}}
+Success! It created a new dataset with all my files:
 
 ```bash
-zfs receive pool1/diary-entries-backup4 < /mnt/pool1/diary-entries-backup/snapshot@2022-07-05
-zfs receive pool1/diary-entries-backup4 < /mnt/pool1/diary-entries-backup/snapshot@2022-07-06
+du -h /mnt/pool1/diary-entries-backup5/*
+6.5K    /mnt/pool1/diary-entries-backup5/2022-07-05.txt
+6.5K    /mnt/pool1/diary-entries-backup5/2022-07-06.txt
+6.5K    /mnt/pool1/diary-entries-backup5/2022-07-27.txt
 ```
-
-## The clean solution
 
 I've created a set of convenience scripts:
 
-- [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
-
 ## Scheduling backups
+
+Now that I have the backups scripted, I can create scheduled jobs to my backup scripts regularly. Fortunately, this is easy enough to do in the TrueNAS web UI, so I can just create a task from Tasks > Cron Jobs.
+
+The first one is a monthly task for creating full backups:
 
 {{<img src="monthly-cron.png">}}
 
-Starting at 3 AM because sometimes I'm still awake and using my computer at midnight.
+I've scheduled it to start at 3 AM on the first of every month because sometimes I'm still awake and using my computer at midnight, but at 3 AM, I'm reliably asleep.
+
+Next, I want a daily task to create incremental backups relative to my monthly snapshot. I'll start that at 4 AM so that the full backups will be done by the time the incremental backups start:
 
 {{<img src="daily-cron.png">}}
+
+And that's all. To verify that it's running successfully, I can check the logs in `/var/log/cron`:
 
 ```bash
 tail /var/log/cron
 ```
+
+## Source code
+
+I've published the convenience scripts on Github:
+
+- [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
