@@ -440,11 +440,11 @@ du -h /mnt/pool1/diary-entries-backup5/*
 
 Now that I have the backups scripted, I can create scheduled jobs to my backup scripts regularly. Fortunately, this is easy enough to do in the TrueNAS web UI, so I can just create a task from Tasks > Cron Jobs.
 
-The first Cron Job is a monthly task for creating full backups:
+The first cron job is a monthly task for creating full backups:
 
 {{<img src="monthly-cron.png">}}
 
-I've scheduled it to start at 3 AM on the first of every month because sometimes I'm still awake and using my computer at midnight, but at 3 AM, I'm reliably asleep.
+I've scheduled it to start at 3 AM on the first of every month because that's when I'm most reliably asleep.
 
 Next, I want a daily task to create incremental backups relative to my monthly snapshot. I'll start that at 4 AM so that the full backups at 3 AM have time to complete before the incremental backup starts:
 
@@ -453,7 +453,14 @@ Next, I want a daily task to create incremental backups relative to my monthly s
 To verify that my cron jobs are running successfully, I can check the logs in `/var/log/cron`:
 
 ```bash
-tail /var/log/cron
+$ tail /var/log/cron
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.757011-04:00 truenas.local cron 302 - - + OUTPUT_PATH=/mnt/pool1/secure-backups/incremental-snapshots/videos@2022-07-28T084502-0400
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.757087-04:00 truenas.local cron 302 - - + [[ -f /mnt/pool1/secure-backups/incremental-snapshots/videos@2022-07-28T084502-0400 ]]
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.757168-04:00 truenas.local cron 302 - - + zfs send --raw --verbose -i pool1/videos@2022-07-28T080351-0400 pool1/videos@2022-07-28T084502-0400
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.761156-04:00 truenas.local cron 302 - - send from pool1/videos@2022-07-28T080351-0400 to pool1/videos@2022-07-28T084502-0400 estimated size is 624B
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.761291-04:00 truenas.local cron 302 - - total estimated size is 624
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.761877-04:00 truenas.local cron 302 - - + echo 'Finished replicating incremental snapshots'
+Jul 28 05:45:03 truenas 1 2022-07-28T08:45:03.761958-04:00 truenas.local cron 302 - - Finished replicating incremental snapshots
 ```
 
 ## Alerts for failed backup
