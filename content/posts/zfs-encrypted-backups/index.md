@@ -1,6 +1,8 @@
 ---
 title: "Back Up Encrypted ZFS Data without Unlocking It"
 date: 2022-07-29T00:00:00-04:00
+images:
+  - zfs-encrypted-backups/og-cover.jpg
 ---
 
 I recently [built my first TrueNAS server](/budget-nas/), so I've been learning neat tricks to do with TrueNAS and ZFS. Today, I want to tell you about backing up encrypted data.
