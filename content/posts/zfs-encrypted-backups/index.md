@@ -28,7 +28,7 @@ I use [restic](https://restic.readthedocs.io/) and [resticpy](https://github.com
 
 To demonstrate what I'm trying to do, I created a dataset called `diary-entries`.
 
-{{<img src="diary-entries-row.png">}}
+{{<img src="diary-entries-row.png" alt="Screenshot of diary-entries dataset in TrueNAS">}}
 
 Okay, let's put a file into this dataset:
 
@@ -39,17 +39,17 @@ echo "I enjoy Taylor Swift, but I don't want anyone to know" \
 
 And I'll need to create a new dataset to receive the backups called `diary-entries-backup`. I've disabled encryption on this new dataset because I don't need an extra layer of encryption on top of already-encrypted backups:
 
-{{<img src="diary-backup.png">}}
+{{<img src="diary-backup.png" alt="Screenshot of TrueNAS dataset creation screen with encryption disabled">}}
 
 Now, I'm ready to set up a replication task to back up encrypted snapshots of the `diary-entries` dataset to the unencrypted `diary-entries-backup` dataset. From there, restic can the `diary-entries-backup` dataset and back it up to cloud storage.
 
 When I create the replication task, TrueNAS warns me that I'm replicating an encrypted dataset. And that's fine because it's what I want. I want to take encrypted snapshots and back them up to the cloud while they're still encrypted:
 
-{{<img src="replication-warning.png">}}
+{{<img src="replication-warning.png" alt="Warning in TrueNAS: You are replicating the following encrypted datasets: 'pool1/diary-entries'. Destination datasets will be locked and can be unlocked with source datasets' encryption key'">}}
 
 I start the replication task and... it fails:
 
-{{<img src="replication-error.png">}}
+{{<img src="replication-error.png" alt="Unable to send encrypted dataset 'pool1/diary-entries' to existing unencrypted or unrelated dataset 'pool1/diary-entries-backup'.">}}
 
 The error is:
 
@@ -111,7 +111,7 @@ Success!
 
 Let me go back to the TrueNAS dataset listing to see what I just created:
 
-{{<img src="new-encrypted-dataset.png">}}
+{{<img src="new-encrypted-dataset.png" alt="Screenshot of diary-entries-backup2 in TrueNAS, labeled as an encrypted dataset">}}
 
 Darn, that wasn't what I wanted.
 
@@ -151,7 +151,7 @@ $ zfs receive pool1/diary-entries-backup3 \
 
 That succeeds and creates a new dataset in my pool:
 
-{{<img src="dataset3.png">}}
+{{<img src="dataset3.png" alt="Screenshot of diary-entries-backup3 as an encrypted dataset">}}
 
 Moment of truth! If I can decrypt `diary-entries-backup3` with the same password I used for `diary-entries` and it contains the same data, then I'll know that the file `diary-entries-backup/snapshot@2022-07-05` contains everything I need to recover the `diary-entries` dataset in case anything ever happens to the original copy.
 
@@ -219,7 +219,7 @@ zfs receive pool1/diary-entries-backup4 \
 
 We recovered it!
 
-{{<img src="dataset4.png">}}
+{{<img src="dataset4.png" alt="Screenshot of diary-entries-backup3 as an encrypted dataset">}}
 
 ```bash
 $ du -h /mnt/pool1/diary-entries-backup4/*
@@ -442,13 +442,13 @@ Now that I have the backups scripted, I can create scheduled jobs to my backup s
 
 The first cron job is a monthly task for creating full backups:
 
-{{<img src="monthly-cron.png">}}
+{{<img src="monthly-cron.png" alt="Cron Job in TrueNAS with command '/mnt/pool1/secure-backups/scripts/replicate-full-snapshots.sh' and schedule '0 0 3 * *'">}}
 
 I've scheduled it to start at 3 AM on the first of every month because that's when I'm most reliably asleep.
 
 Next, I want a daily task to create incremental backups relative to my monthly snapshot. I'll start that at 4 AM so that the full backups at 3 AM have time to complete before the incremental backup starts:
 
-{{<img src="daily-cron.png">}}
+{{<img src="daily-cron.png" alt="Cron Job in TrueNAS with command '/mnt/pool1/secure-backups/scripts/replicate-incremental-snapshots.sh' and schedule '0 0 4 * *'">}}
 
 To verify that my cron jobs are running successfully, I can check the logs in `/var/log/cron`:
 
@@ -471,7 +471,7 @@ Fortunately, there are a variety of services that will alert you when a schedule
 
 From Cronitor, I created a new monitor with a `0 0 3 * *` schedule that matches the schedule for full backups on my TrueNAS server:
 
-{{<img src="cronitor-setup.png" hasBorder="true">}}
+{{<img src="cronitor-setup.png" hasBorder="true" alt="New Cronitor Monitor with name truenas-full-backups and schedule 0 0 3 * *">}}
 
 Cronitor generates a unique URL for this monitor that looks like this:
 
@@ -483,10 +483,12 @@ To make sure that my full backups cron job reports success, I add a `curl` comma
 
 {{<img src="add-cronitor.png" alt="/mnt/pool1/secure-backups/scripts/replicate-full-snapshots.sh && curl --silent https://cronitor.link/p/[my telemetry id]?state=complete">}}
 
-I repeat the same process with my incremental backups job, and that's it! I now have a robust system for creating backups of my encrypted ZFS datasets.
+I repeat the same process with my incremental backups job, and that's it!
+
+I now have a robust system for creating backups of my encrypted ZFS datasets, and I'll receive an alert from Cronitor if the jobs ever stop completing successfully.
 
 ## Source code
 
-I've published the convenience scripts on Github:
+I've published my convenience scripts on Github:
 
 - [mtlynch/zfs-encrypted-backup](https://github.com/mtlynch/zfs-encrypted-backup)
