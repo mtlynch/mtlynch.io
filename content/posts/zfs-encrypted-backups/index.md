@@ -3,7 +3,7 @@ title: "Back Up Encrypted ZFS Data without Unlocking It"
 description: How to create backup files of encrypted ZFS datasets that you can securely replicate anywhere.
 date: 2022-07-29T00:00:00-04:00
 images:
-  - zfs-encrypted-backups/og-cover.jpg
+  - zfs-encrypted-backups/og-cover.png
 tags:
   - homelab
   - truenas
