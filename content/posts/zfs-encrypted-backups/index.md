@@ -9,6 +9,9 @@ tags:
   - truenas
 ---
 
+<!-- Linter is getting confused about the asterisks in cron syntax -->
+<!-- markdownlint-disable MD037 -->
+
 I recently [built my first home TrueNAS server](/budget-nas/). I use it to store the bulk of my personal and work data, so I've been learning how to make the most of TrueNAS and its filesystem, ZFS.
 
 Today, I want to tell you about backing up encrypted data.
