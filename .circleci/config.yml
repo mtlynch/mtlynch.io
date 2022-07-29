@@ -45,7 +45,7 @@ jobs:
           at: ./
       - restore_cache:
           keys:
-            - resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+            - resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
           name: Build prod site
           command: hugo version && hugo --minify
@@ -56,7 +56,7 @@ jobs:
             - tests
             - netlify.toml
       - save_cache:
-          key: resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+          key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
             - resources
   lint-html:
