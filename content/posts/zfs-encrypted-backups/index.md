@@ -12,15 +12,15 @@ I recently [built my first TrueNAS server](/budget-nas/), so I've been learning 
 {{<img src="completed-build.jpg" alt="Photo of completed server build" maxWidth="450px">}}
 {{</gallery>}}
 
-One of the neat features of ZFS is that you can make backups of encrypted data while it's still encrypted. The tricky part is that TrueNAS assumes you'll only ever back up to other TrueNAS system. If you're like me, and you want to back up your encrypted data to a generic cloud storage provider, you need to do a bit more work.
+One of the neat features of ZFS is that you can make backups of encrypted data while it's still encrypted. The tricky part is that TrueNAS assumes you'll only ever back up to other TrueNAS systems. If you're like me and want to back up your encrypted data to a generic cloud storage provider, you need to do a bit more work.
 
 ## Why back up encrypted data?
 
-I have some files that I access rarely but I still want to keep on an encrypted dataset.
+I have some files that I rarely access but still want to keep on an encrypted dataset.
 
 On my previous Synology NAS, there was no way to back up an encrypted volume. If files were on an encrypted volume, the data was completely inaccessible to anything until you unlocked it. For most of my data, that's okay, but what about volumes I access infrequently?
 
-TrueNAS is better! You can make full and incremental backups even when the dataset is encrypted and locked. This seemed like a great way for me to maintain backups of data I wanted to back up without having to decrypt it all the time.
+TrueNAS is better! You can make full and incremental backups even when the dataset is encrypted and locked. This seemed like a great way to back up infrequently accessed data without having to keep it decrypted.
 
 I use [restic](https://restic.readthedocs.io/) and [resticpy](https://github.com/mtlynch/resticpy) to back up my data to cloud storage, so I needed a way for restic to access my encrypted ZFS backups. It took a bit of tinkering and creating manual scripts, but I got it working.
 
@@ -41,7 +41,7 @@ And I'll need to create a new dataset to receive the backups called `diary-entri
 
 {{<img src="diary-backup.png" alt="Screenshot of TrueNAS dataset creation screen with encryption disabled">}}
 
-Now, I'm ready to set up a replication task to back up encrypted snapshots of the `diary-entries` dataset to the unencrypted `diary-entries-backup` dataset. From there, restic can the `diary-entries-backup` dataset and back it up to cloud storage.
+Now, I'm ready to set up a replication task to back up encrypted snapshots of the `diary-entries` dataset to the unencrypted `diary-entries-backup` dataset. From there, restic can access the `diary-entries-backup` dataset and back it up to cloud storage.
 
 When I create the replication task, TrueNAS warns me that I'm replicating an encrypted dataset. And that's fine because it's what I want. I want to take encrypted snapshots and back them up to the cloud while they're still encrypted:
 
@@ -206,7 +206,7 @@ $ du -h /mnt/pool1/diary-entries-backup/*
 
 It's a little silly on this demo because my files are tiny anyway, but you can still see that the second snapshot is substantially smaller than the first because it contains only the changes since the `2022-07-05` snapshot.
 
-The test isn't complete until I actually restore the original data from the backup, so let's try creating a new dataset using the incremental backup:
+The test isn't complete until I restore the original data from the backup, so let's try creating a new dataset using the incremental backup:
 
 ```bash
 # Recover from full backup.
