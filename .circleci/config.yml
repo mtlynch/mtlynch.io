@@ -25,7 +25,7 @@ jobs:
           command: npm run check-format
   lint-markdown:
     docker:
-      - image: davidanson/markdownlint-cli2:0.3.0
+      - image: davidanson/markdownlint-cli2:v0.5.0
     steps:
       - checkout
       - run:
