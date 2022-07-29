@@ -13,7 +13,7 @@
         {{ range ( .Site.RegularPages | first 10 ) }}
           <li>
             {{ .Date.Format "2006-01-02" }}:
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             <a class="tag tag-{{ .Section }}" href="/{{ .Section }}/"
               >{{ .Section }}</a
             >
