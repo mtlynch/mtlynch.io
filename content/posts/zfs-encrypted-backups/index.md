@@ -510,6 +510,26 @@ I repeat the same process with my incremental backups job, and that's it!
 
 I now have a robust system for creating backups of my encrypted ZFS datasets, and I'll receive an alert from Cronitor if the jobs ever fail.
 
+## Caveat: Back up your encryption roots
+
+Thanks to **@Invisible** and **@adamkf** in the comments for pointing out an important gotcha when backing up ZFS to a file instead of another ZFS system.
+
+Always back up the encryption root for a dataset.
+
+If you're backing up a dataset that's a child of an encrypted dataset, a `zfs send` of the child dataset won't capture all of the data needed to restore the snapshot on a different TrueNAS system, so your backup will be worthless.
+
+To check the encryption root of a dataset, run `zfs get -r encryptionroot pool/dataset`. If the dataset has no parent encryption, you will see output showing the dataset is its own encryption root:
+
+```bash
+$ zfs get -r encryptionroot pool1/diary-entries | head -n 2
+NAME                                     PROPERTY        VALUE                SOURCE
+pool1/diary-entries                      encryptionroot  pool1/diary-entries  -
+```
+
+When the dataset is its own encryption root, you don't need to back up any additional datasets.
+
+I recommend testing your backups on a separate ZFS system, even a TrueNAS VM, to verify that you can recover from your snapshot files.
+
 ## Source code
 
 I've published my convenience scripts on Github:
