@@ -52,12 +52,18 @@ Unfortunately, I can't just double ad spend and double sales, as costs increase 
 | Sales Revenue            | $54,844.20    | $72,476.80     | <font color="green">+$17,632.60 (+32%)</font>    |
 | Enterprise Subscriptions | $47.75        | $47.75         | 0                                                |
 | Royalties                | $3,269.56     | $1,710.27      | <font color="red">-$1,559.29 (-48%)</font>       |
-| Total Revenue            | $58,161.51    | $74,234.82     | <font color="green">+$16,073.31 (+28%)</font>    |
+| Total Revenue            | $58,161.51    | $67,355.75     | <font color="green">+$9,174.24 (+15%)</font>     |
 | **Profit**               | **$6,445.38** | **-$4,230.17** | **<font color="red">-$10,675.55 (-inf%)</font>** |
 
-This was TinyPilot's all-time strongest month of revenue. And the exciting part is that there was otherwise nothing remarkable about June.
+This was TinyPilot's all-time ~~strongest~~ (Update: second-strongest, see below) month of revenue. And the exciting part is that there was otherwise nothing remarkable about June.
 
 All of TinyPilot's previous record-breaking months were related to some one-time event like a new product launch or a positive review. But June was effectively just a boring old month where nothing out of the ordinary happened. And that's great! It indicates that we can repeat what we're doing without relying on external events to drive sales.
+
+{{<notice type="info">}}
+
+**Update (2022-08-03)**: In doing the July bookkeeping, I realized I had miscalculated June's revenue by about $7k. There was a large, custom order in Shopify that got double-counted in the total, and I added Amazon's sales separately, forgetting that my Shopify integration already includes them. I've corrected the table above.
+
+{{</notice>}}
 
 Site visitors are down relative to the previous month but only because May was [atypically high](/retrospectives/2022/06/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats) due to my last blog post. Our overall visit count is still significantly higher than the first quarter. I credit the increase in visitors to our new marketing campaign.
 
