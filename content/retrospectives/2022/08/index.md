@@ -14,22 +14,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Finalize plans for managing TinyPilot licenses
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Made no progress on plans for managing TinyPilot licenses
+- **Grade**: F
 
 TODO
 
 ### Migrate TinyPilot Community to the next-generation update system
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We're close but we haven't pulled the trigger yet
+- **Grade**: C
 
 TODO
 
 ### Publish the blog post about the TinyPilot website redesign
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published ["I Regret My $46k Website Redesign"](/tinypilot-redesign/), which became my second most popular blog post
+- **Grade**: A
 
 TODO
 
@@ -53,25 +53,59 @@ Every month, I feel like my one-time costs are coming to a close, and then a lar
 
 ## My redesign regret blog post
 
+### What were the results?
+
+podcast appearance
+
+Plausible stats
+
+It had 157k unique readers in its first week. The only article I've ever written that's attracted more attention was, ["Why I Quit Google to Work for Myself,"](/why-i-quit-google/) which had 389k readers.
+
+### Why didn't you name and shame the agency?
+
+Mainly because that wasn't the goal of the post. I think if my takeaway from the experience was just that WebAgency was evil and everything was their fault, then there's nothing useful to learn except to avoid that particular agency. I think the more useful lessons are what a client can do to protect themselves regardless of the agency.
+
+Last, I didn't think naming the agency would do anything useful. In theory, if I name the agency, it protects other clients who might otherwise hire them. But what are the odds of a prospective client of this particular agency finding my blog post? The more likely outcomes are people harassing the agency or the agency feeling compelled to respond and then there's a whole back-and-forth
+
+One of the common
+
+### Is it worth writing blog posts like this?
+
+One of the things I struggle with is whether I can justify time I spend blogging when TinyPilot is still struggling. I don't think people directly buy it
+
+Visits to TinyPilot
+
+There wasn't a noticeable jump in sales. Sales were high for a few days after, but they were still within the noise of TinyPilot's usual sales.
+
+I think it's good for TinyPilot long-term, though, as most of the readers had probably never heard of TinyPilot and maybe weren't even aware that products like it exist.
+
 ## Less tweeting, more blogging
 
-Last month, Josh Pitzalis asked me on Twitter about something I'd written about programmatic SEO for local content.
+Last month on Twitter, Josh Pitzalis asked me about something I'd written about programmatic SEO for local content.
 
 {{<tweet user="joshpitzalis" id="1543083914071519232">}}
 
-I knew I _had_ done programmatic SEO to generate pages for my local comedy site, WanderJest, but I didn't remember ever writing about it.
+I knew I'd used programmatic SEO to generate pages for my local comedy site, but I couldn't figure out what writing he was talking about. I vaguely remembered writing something, but I couldn't find anything in my blog.
 
-I searched my blog and couldn't find anything I'd written about generating city-specific pages for WanderJest. But then Josh ended up finding the thing he'd remembered reading: a Twitter thread I'd completely forgotten that I wrote:
+But then Josh ended up finding the thing he'd remembered reading: a Twitter thread I'd completely forgotten:
 
 {{<tweet user="deliberatecoder" id="1411709346845650944">}}
 
-Ever since that exchange, I've been thinking about how I can keep more of my writing on my blog rather than on other platforms. Twitter is especially bad because it's so ephemeral. I forget what I post there, and it's difficult to find things there.
+Ever since that exchange, I've been thinking about how I can write more on my blog and less on other platforms. Twitter is an especially bad medium for preserving knowledge because it's ephemeral by design. I forget what I post there, and searching my post history is slow and tedious.
 
-When I started blogging, it was because I'd run into situations that took me a long time to figure out, so I wanted to save other people the trouble. My early blog posts are mainly tutorials.
+When I started blogging, it was because I'd run into situations that took me a long time to figure out, so I wanted to save other people the trouble. My early posts are almost all tutorials. Over time, I found that readers responded more to the story of me figuring something out than the solution itself. For example, [GreenPiThumb](/greenpithumb/) was one of my first popular posts, and it was because I told it as a story rather than a tutorial.
 
-Over time, I found that readers responded more to things that were a little less. For example, GreenPiThumb was about the story of how my friend and I made a plant watering robot and not a walkthrough of our code.
+As I've started focusing on the story behind the solution, I'm once again left with the problem of not having a good place to share solutions to things I found challenging. So I'm experimenting with posts that aren't meant to attract wide readership but are just a place for me to share useful knowledge. My first try was an article I published last week called, ["Back Up Encrypted ZFS Data without Unlocking It."](/zfs-encrypted-backups/)
 
-## Topic 3
+Though I'm trying to keep more content on my blog, I think some things are a better fit for Twitter. For the past two weeks, I've been trying to figure out why PicoShare keeps crashing on systems with low RAW, and I've been tweeting my progress.
+
+{{<tweet user="deliberatecoder" id="1552438652537835521">}}
+
+People seem to enjoy the thread, and I received lots of great advice that helped me identify issues much more quickly than if I'd been doing it by myself. And I think that's the ideal kind of content for Twitter because I'm sharing live progress and not a finished result. I'd still like to do a writeup of the thread on my blog summarizing what I've learned in a more concise format.
+
+## Will reducing price increase volume?
+
+The non-PoE version outsells the PoE version 2:1. We'll see what effect this has on sales.
 
 ## Side projects
 
@@ -79,7 +113,7 @@ Over time, I found that readers responded more to things that were a little less
 
 ### What got done?
 
-- Published two new blog posts: "" and ""
+- Published two new blog posts: ["I Regret My $46k Website Redesign"](/tinypilot-redesign/) and ""
 
 ### Lessons learned
 
@@ -87,4 +121,5 @@ Over time, I found that readers responded more to things that were a little less
 
 ### Goals for next month
 
--
+- Migrate TinyPilot Community and TinyPilot Pro to the next-generation update system
+- Finalize plans for managing TinyPilot licenses
