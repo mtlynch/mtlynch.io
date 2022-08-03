@@ -53,21 +53,21 @@ Every month, I feel like my one-time costs are coming to a close, and then a lar
 
 ## My redesign regret blog post
 
-### What were the results?
+I had been writing about the TinyPilot website redesign in my [retrospectives](/retrospectives/), so I thought it would be fast to write, but it still took me a long time. It ended up taking 23.8 hours over two months.
+
+I was honestly surprised that it got such a strong reception. The post had 157k unique readers in its first week. It was the second most upvoted post [on Hacker News](https://news.ycombinator.com/item?id=32179563) for the full month of July, and it reached the top spot of the [/r/web_design](https://www.reddit.com/r/web_design/comments/w4ir7r/i_regret_my_46k_website_redesign/) and [/r/programming](https://www.reddit.com/r/programming/comments/w5egi7/i_regret_my_46k_website_redesign/) subreddits. The only article I've ever written that's attracted more attention was, ["Why I Quit Google to Work for Myself,"](/why-i-quit-google/) which had 389k readers.
 
 podcast appearance
 
 Plausible stats
 
-It had 157k unique readers in its first week. The only article I've ever written that's attracted more attention was, ["Why I Quit Google to Work for Myself,"](/why-i-quit-google/) which had 389k readers.
-
 ### Why didn't you name and shame the agency?
 
-Mainly because that wasn't the goal of the post. I think if my takeaway from the experience was just that WebAgency was evil and everything was their fault, then there's nothing useful to learn except to avoid that particular agency. I think the more useful lessons are what a client can do to protect themselves regardless of the agency.
+I'm fine doing that, but it's a higher bar. And it's not so much that I want to protect the agency but because naming them risks costing me a lot more time. If I name the agency and then that starts a big public fight where they blame me, then that eats up a lot of my time.
 
-Last, I didn't think naming the agency would do anything useful. In theory, if I name the agency, it protects other clients who might otherwise hire them. But what are the odds of a prospective client of this particular agency finding my blog post? The more likely outcomes are people harassing the agency or the agency feeling compelled to respond and then there's a whole back-and-forth
+I wrote publicly about misbehavior by [Stripe](/stripe-recording-its-customers/) and a [shady keto bread company](/collect-debt/), but in those cases, it was more unambiguously bad behavior. And the Stripe post did eat up a lot of extra time after I published it. I let myself get dragged into hours of online arguments with people who supported Stripe's right to collect any data they want in the name of fraud protection.
 
-One of the common
+I also think focusing on the agency as the villain makes the experience less useful. If the takeaway is just "don't work with this agency," that's not very helpful. It's more useful for people to learn techniques that protect themselves from a bad agency relationship, even if the agency is trying to do a good job.
 
 ### Is it worth writing blog posts like this?
 
