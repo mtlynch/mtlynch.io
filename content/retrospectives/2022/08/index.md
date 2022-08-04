@@ -57,9 +57,9 @@ I had been writing about the TinyPilot website redesign in my [retrospectives](/
 
 I was honestly surprised that it got such a strong reception. The post had 157k unique readers in its first week. It was the second most upvoted post [on Hacker News](https://news.ycombinator.com/item?id=32179563) for the full month of July, and it reached the top spot of the [/r/web_design](https://www.reddit.com/r/web_design/comments/w4ir7r/i_regret_my_46k_website_redesign/) and [/r/programming](https://www.reddit.com/r/programming/comments/w5egi7/i_regret_my_46k_website_redesign/) subreddits. The only article I've ever written that's attracted more attention was, ["Why I Quit Google to Work for Myself,"](/why-i-quit-google/) which had 389k readers.
 
-podcast appearance
+{{<img src="redesign-analytics.png" alt="Graph of visitors to blog post on Plausible showing 157k unique visitors, 197k total pageviews, 87% bounce rate, 34m19s time on page" hasBorder="true" maxWidth="600px" caption="[&rdquo;I Regret My $46k Website Redesign&ldquo;](/tinypilot-redesign/) became my second most popular blog post of all time, with 157k unique readers in its first week.">}}
 
-Plausible stats
+I appeared as [a guest on the _Ditching Hourly_ podcast](https://podcast.ditchinghourly.com/episodes/michael-lynch-i-regret-my-46k-website-redesign) to talk about my experience with the website redesign
 
 ### Why didn't you name and shame the agency?
 
@@ -97,6 +97,8 @@ When I started blogging, it was because I'd run into situations that took me a l
 
 As I've started focusing on the story behind the solution, I'm once again left with the problem of not having a good place to share solutions to things I found challenging. So I'm experimenting with posts that aren't meant to attract wide readership but are just a place for me to share useful knowledge. My first try was an article I published last week called, ["Back Up Encrypted ZFS Data without Unlocking It."](/zfs-encrypted-backups/)
 
+{{<img src="back-up-zfs.png" alt="Screenshot of my article at #1 for Google search of 'back up encrypted zfs data'" hasBorder="true" maxWidth="600px">}}
+
 Though I'm trying to keep more content on my blog, I think some things are a better fit for Twitter. For the past two weeks, I've been trying to figure out why PicoShare keeps crashing on systems with low RAW, and I've been tweeting my progress.
 
 {{<tweet user="deliberatecoder" id="1552438652537835521">}}
@@ -113,7 +115,7 @@ The non-PoE version outsells the PoE version 2:1. We'll see what effect this has
 
 ### What got done?
 
-- Published two new blog posts: ["I Regret My $46k Website Redesign"](/tinypilot-redesign/) and ""
+- Published two new blog posts: ["I Regret My $46k Website Redesign"](/tinypilot-redesign/) and ["Back Up Encrypted ZFS Data without Unlocking It"](/zfs-encrypted-backups/)
 
 ### Lessons learned
 
