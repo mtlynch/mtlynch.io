@@ -6,7 +6,9 @@ description: TODO - One-line summary
 
 ## Highlights
 
--
+- My blog post about redesigning the TinyPilot website became my second most popular of all time
+- I'm exploring ways to preserve more knowledge on my blog
+- I've lowered TinyPilot's prices in an effort to reduce inventory
 
 ## Goal Grades
 
@@ -17,21 +19,21 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Made no progress on plans for managing TinyPilot licenses
 - **Grade**: F
 
-TODO
+Migrating to the next-gen update system took longer than I expected, so I ended up not making progress on this.
 
 ### Migrate TinyPilot Community to the next-generation update system
 
 - **Result**: We're close but we haven't pulled the trigger yet
 - **Grade**: C
 
-TODO
+Overhauling our update system is one of those things that keeps seeming like we're days away from finishing, and then we find more places we have to fix. So, it's taking a long time, but I think it's a symptom of how complicated our old system was, so our new system should be easier to maintain.
 
 ### Publish the blog post about the TinyPilot website redesign
 
 - **Result**: Published ["I Regret My $46k Website Redesign"](/tinypilot-redesign/), which became my second most popular blog post
 - **Grade**: A
 
-TODO
+I thought it would be easy to write this since I'd written so much in my retros, but it took me about two months to complete. It got an unexpectedly strong response with 157k unique readers in its first week. It continues to ripple out and attract new visitors as people see it in other channels and then add it to things like design newsletters.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -59,18 +61,20 @@ But oof on that negative profit. Every month, I feel like my one-time costs are 
 
 {{<img src="redesign-analytics.png" alt="Graph of visitors to blog post on Plausible showing 157k unique visitors, 197k total pageviews, 87% bounce rate, 34m19s time on page" hasBorder="true" maxWidth="600px" caption="[&rdquo;I Regret My $46k Website Redesign&ldquo;](/tinypilot-redesign/) became my second most popular blog post of all time, with 157k unique readers in its first week.">}}
 
-I appeared as [a guest on the _Ditching Hourly_ podcast](https://podcast.ditchinghourly.com/episodes/michael-lynch-i-regret-my-46k-website-redesign) to talk about my experience with the website redesign
+I appeared as [a guest on the _Ditching Hourly_ podcast](https://podcast.ditchinghourly.com/episodes/michael-lynch-i-regret-my-46k-website-redesign) to talk about the whole debacle. The host, Jonathan Stark, felt like the whole mess was due to hourly billing creating poor incentives. I respectfully disagreed, and I think we had an interesting discussion.
 
-### Why was it so popular?
+### Why was the post so popular?
 
-I'm honestly surprised that the post got so popular. I thought there was a stronger chance than most of my posts that this would flop. It had several big things working against it:
+I'm honestly surprised that the post got as much attention as it did.
 
-- It's 4,100 words and an estmated 20-minute read, twice as long as my usual posts.
+Any of my posts can flop, but I thought this one had an especially high risk of flopping. It had several factors working against it:
+
+- It's 4,100 words and an estmated 20-minute read, nearly twice as long as my usual posts.
 - It's a good match for Hacker News, but I wasn't confident it would match anywhere else.
-- It's about hiring a web design agency on a small budget, which is not a relatable experience to most people.
+- Hiring a web design agency on a small budget is not a relatable experience to most people.
 - If it misses on social media platforms (Hacker News, reddit), there's little chance of people discovering it through Google because "website redesign regret" isn't a common search term.
 
-Seeing the post succeed, I realized I failed to consider a few important strengths.
+Seeing the post succeed, I realize I failed to consider a few important strengths.
 
 First, it's a story, and people love stories. Most of my successful blog posts are stories. Even if a reader is not particularly interested in a topic, they'll stick around if they connect to the human elements of the story.
 
@@ -140,13 +144,19 @@ People seem to enjoy the thread, and I received lots of great advice that helped
 
 ## Experimenting more with price
 
-In July, I reduced pricing on TinyPilot for the first time in at least six months. I'd been slowly inching up pricing.
+In July, I reduced pricing on TinyPilot for the first time in at least six months.
 
-Every time I raised prices, I thought, "People aren't going to buy at this new price. That's crazy!" And then it seemed like sales revenue stayed the same.
+I'd been moving the other direction, gradually increasing prices to find out where sales might slow down. Every time I raised prices, I thought, "People aren't going to buy at this new price. That's crazy!" And then it seemed like sales revenue stayed the same or increased. And even if revenues stay flat in response to price increases, that's still a win because it's easier to support
 
-Right now, we have a backlog of hardware, so I'd rather sell it and not have so much of my assets tied up inventory. I'm hoping that reducing prices can increase sales, but it's possible that it will have no effect or the opposite effect. It could be that almost anyone who'd buy TinyPilot at $350 would also buy it at $400, so I'm just forfeiting $50 per sale. I'll hopefully have a better idea by the end of next month.
+Another factor keeping prices high was that we had a shortage of HATs, the custom circuit boards
+
+Our next bottleneck is
+
+Now, we have a backlog of raw materials, so I'd rather sell it and not have so much of the company's assets tied up in inventory that's just taking up shelf space. I'm hoping that reducing prices can increase sales, but it's possible that it will have no effect or the opposite effect. It could be that almost anyone who'd buy TinyPilot at $350 would also buy it at $400, so I'm just forfeiting $50 per sale. I'll hopefully have a better idea by the end of next month.
 
 The non-PoE version outsells the PoE version 2:1. We'll see what effect this has on sales.
+
+For example, each Voyager 2 case costs $12.25 to make, and it takes up more storage space per unit than any other component. Right now, we have 348 of them in inventory, and that's just the ones that aren't assembled yet.
 
 ## Side projects
 
