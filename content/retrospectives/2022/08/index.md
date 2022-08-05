@@ -6,7 +6,7 @@ description: Are blog posts worthwhile, even when they succeed?
 
 ## Highlights
 
-- My blog post about redesigning the TinyPilot website became my second most popular of all time
+- My blog post about redesigning the TinyPilot website became my second most popular article of all time
 - I'm exploring ways to preserve more knowledge on my blog
 - I've lowered TinyPilot's prices in an effort to reduce inventory
 
@@ -23,7 +23,7 @@ Migrating to the next-gen update system took longer than I expected, so I ended 
 
 ### Migrate TinyPilot Community to the next-generation update system
 
-- **Result**: We're close but we haven't pulled the trigger yet
+- **Result**: We're close but haven't pulled the trigger yet
 - **Grade**: C
 
 Overhauling our update system is one of those things that keeps seeming like we're days away from finishing, and then we find more places we have to fix. So, it's taking a long time, but I think it's a symptom of how complicated our old system was, so our new system should be easier to maintain.
@@ -51,7 +51,7 @@ I thought it would be easy to write this since I'd written so much in my retros,
 
 \* July profit is just a naive estimate based on change in cash holdings until I do real bookkeeping mid-month.
 
-Sales are still strong following the website redesign. There was a 13% drop, but that's almost entirely due to a single order. A large company placed a complicated, custom order for $4,200. The day after we shipped it, they changed their mind and canceled the order. That's $8,400 of the delta between the last two months because June had the revenue, and July had the refund.
+Sales are still strong following the website redesign. There was a 13% drop, but that's almost entirely due to a single order. A large company placed a complicated, custom order for $4,200. The day after we shipped it, they changed their mind and canceled the order. That's $8,400 of the delta between the last two months because June had the revenue and July had the refund.
 
 But oof on that negative profit. Every month, I feel like I've seen the last of my large, one-time costs, and then something pops up that eats up any chance at profit for the month. This month, it was $17k in hardware engineering to redesign around the chip shortage and a $10k invoice from an old vendor who hadn't gotten around to billing me for work done a year ago.
 
@@ -69,7 +69,7 @@ I'm honestly surprised that the post got as much attention as it did.
 
 Any of my posts can flop, but I thought this one had an especially high risk of flopping. It had several factors working against it:
 
-- It's 4,100 words and an estmated 20-minute read, nearly twice as long as my usual posts.
+- It's 4,100 words and an estimated 20-minute read, nearly twice as long as my usual posts.
 - It's a good match for Hacker News, but I wasn't confident it would match anywhere else.
 - Hiring a web design agency on a small budget is not a relatable experience to most people.
 - If it misses on social media platforms (Hacker News, reddit), there's little chance of people discovering it through Google because "website redesign regret" isn't a common search term.
@@ -78,7 +78,7 @@ Seeing the post succeed, I realize I failed to consider a few important strength
 
 First, it's a story, and people love stories. Most of my successful blog posts are stories. Even if a reader is not particularly interested in a topic, they'll stick around if they connect to the human elements of the story.
 
-Next, it's more relatable than I considered. Even though a miniscule portion of the population hires designers, nearly everyone has opinions about design. And I know almost nothing about design, so it was impossible for me to alienate anyone by being too jargony or academic in telling the story. I also wonder if people related to it on the level of feeling taken advantage of by a business, which is more common than the specific experience of hiring a design agency.
+Next, it's more relatable than I considered. Even though a minuscule portion of the population hires designers, nearly everyone has opinions about design. And I know almost nothing about design, so it was impossible for me to alienate anyone by being too jargony or academic in telling the story. I also wonder if people related to it on the level of feeling taken advantage of by a business, which is more common than the specific experience of hiring a design agency.
 
 Last, it's about blowing a lot of money on something stupid, and people love those stories. People just get excited about money and (relatively) big numbers, whether it's gaining or losing.
 
@@ -88,11 +88,11 @@ One of the most common responses I heard was that I should have named the agency
 
 I had a few reasons for keeping the agency anonymous:
 
-- The point was too learn from the experience, and blaming everything on the agency doesn't teach me much
-- I didn't want them to respond and having a whole public back-and-forth about who was to blame
+- The point was to learn from the experience, and blaming everything on the agency doesn't teach me much
+- I didn't want them to respond and have a whole public back-and-forth about who was to blame
 - I didn't want people harassing the agency on the basis of my one-sided story
 
-But in writing up this retro, I realized those reasons aren't really true. I've named and shamed companies in the past, where all of those reasons would have applied:
+But in writing up this retro, I realized those reasons aren't really true. I've named and shamed companies in the past where all of those reasons would have applied:
 
 - I accused [Stripe](/stripe-recording-its-customers/) of collecting excessive data about their customers.
 - I accused [a keto bread company](/collect-debt/) of underpaying its affiliates.
@@ -122,7 +122,7 @@ Looking at sales data, the blog posts don't correlate as strongly with increases
 **Note**: The sales spike after my first blog post is a bit exaggerated because it includes a large order from a customer who ended up canceling, and due to a bug in Shopify's analytics, the order is counted twice in the graph. The spike should be $8,400 shorter than it is.
 {{</notice>}}
 
-Coming back to the question of is it worth it: I say yes, but I don't really have a strong case to prove it.
+Coming back to the question of whether these blog posts are worth the investment: I say yes, but I don't really have a strong case to prove it.
 
 I enjoy blogging, and I strongly dislike the feeling that I'm too busy to write. Although I can't prove that my articles translate into TinyPilot sales, I think there's likely a long-term positive effect in terms of awareness. I believe my articles make people aware of TinyPilot who might otherwise not even realize a product like mine exists.
 
@@ -142,7 +142,7 @@ Ever since that exchange, I've been thinking about how I can write more on my bl
 
 When I started blogging, it was because I kept running into situations where I wished a tutorial existed. Over time, I found that readers responded more to the story of me figuring something out than the solution itself. For example, [GreenPiThumb](/greenpithumb/) was one of my first popular posts, and it was because I focused more on the story than the code.
 
-That's helped me write more popular articles, but I'm once again left with the problem of not having a good place to share solutions to things I found challenging. So, I'm experimenting with posts that aren't meant to attract wide readership but are just a place for me to share useful knowledge.
+That's helped me write more popular articles, but I'm once again left with the problem of not having a good place to share solutions to things I found challenging. So, I'm experimenting with posts that aren't meant to attract a wide readership but are just a place for me to share useful knowledge.
 
 My first attempt to return to a "capture knowledge" style of article was a post I published last week called, ["Back Up Encrypted ZFS Data without Unlocking It."](/zfs-encrypted-backups/) It didn't get much traction anywhere, but it's now the top result on Google for the (admittedly specific) search query of "back up encrypted zfs data":
 
@@ -160,13 +160,13 @@ People seem to enjoy the thread, and I received lots of great advice that helped
 
 In July, I reduced prices on TinyPilot products for the first time in at least six months.
 
-For a long time, I'd been moving the other direction &mdash; gradually increasing prices in search of the price point that would be too expensive. Every time I raised prices, I thought, "People aren't going to buy at this new price. That's crazy!" And then it seemed like sales revenue stayed the same or increased. And even if revenues stay flat in response to price increases, that's still a win because it's easier to support a smaller number of customers who pay more.
+For a long time, I'd been moving in the other direction &mdash; gradually increasing prices in search of the price point that would be too expensive. Every time I raised prices, I thought, "People aren't going to buy at this new price. That's crazy!" And then it seemed like sales revenue stayed the same or increased. And even if revenues stay flat in response to price increases, that's still a win because it's easier to support a smaller number of customers who pay more.
 
 Another factor keeping prices high was that we couldn't manufacture new devices. The Voyager 2 requires a custom PCB that our hardware engineering partners designed. We did an initial run of 900 units, but then we couldn't produce more due to part shortages. The hardware engineers had to redesign the PCB, so I increased prices to stretch out our inventory.
 
 Fortunately, the hardware engineers were able to redesign and manufacture a new batch of PCBs just in time. We were down to our last six devices! For the next few months, at least, we should be unconstrained by manufacturing capacity.
 
-Now, we have a backlog of raw materials, so I'd rather sell it and not have so much of the company's assets tied up in inventory that's just taking up shelf space. I reduced prices to see if it will increase our sales velocity:
+Now, we have a backlog of raw materials, so I'd rather sell it and not have so much of the company's assets tied up in inventory that's just taking up shelf space. I've reduced prices to see if it will increase our sales velocity:
 
 | Product            | Old Price | New Price | Change      |
 | ------------------ | --------- | --------- | ----------- |
