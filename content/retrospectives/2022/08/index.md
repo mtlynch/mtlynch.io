@@ -1,7 +1,9 @@
 ---
 title: "TinyPilot: Month 25"
-date: 2022-08-01T10:11:46-04:00
+date: 2022-08-05T00:00:00-04:00
 description: Are blog posts worthwhile, even when they succeed?
+images:
+  - /retrospectives/2022/08/2022-analytics.png
 ---
 
 ## Highlights
