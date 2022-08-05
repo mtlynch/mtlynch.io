@@ -106,7 +106,7 @@ If the agency's shortcomings had been more egregious, then I'd happily name them
 
 Since starting TinyPilot, I've drastically cut back on writing. For most of last year, I felt like I didn't have enough hours in the day to complete critical TinyPilot work, so it didn't make sense to spend an hour per day blogging.
 
-Back in March, I [found enough free time](/2022/04/#i-have-free-time-again) to start blogging again, but only about topics that tie back to TinyPilot. So, is it worth it?
+Back in March, I [found enough free time](/retrospectives/2022/04/#i-have-free-time-again) to start blogging again, but only about topics that tie back to TinyPilot. So, is it worth it?
 
 The new blog posts have been successful at bringing people to the TinyPilot website. Looking at visitor analytics for 2022, there are clear spikes around when I published blog posts related to TinyPilot:
 
