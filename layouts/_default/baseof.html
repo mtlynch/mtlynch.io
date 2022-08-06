@@ -26,10 +26,7 @@
     {{ end }}
 
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700|Rubik:300,700|Source+Code+Pro:400,700"
-      rel="stylesheet"
-    />
+    <link href="/third-party/google-fonts/css/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="/third-party/font-awesome/v5.11.2/css/all.css"
@@ -42,7 +39,7 @@
     {{ end }}
 
     {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
-      <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+      <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 
