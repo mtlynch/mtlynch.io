@@ -12,13 +12,16 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 readonly SCRIPT_DIR
 cd "${SCRIPT_DIR}/.."
 
+
+success=0
+
 while read -r filepath; do
   if ! [[ -s "${filepath}" && -z "$(tail -c 1 "${filepath}")" ]]; then
     printf "File must end in a trailing newline: %s\n" "${filepath}" >&2
-    exitcode=255
+    success=255
   fi
 done < <(git ls-files \
-  | xargs grep ".*" \
+  | xargs -d '\n' grep ".*" \
     --files-with-matches \
     --binary-files=without-match \
     --exclude="*.svg" \
