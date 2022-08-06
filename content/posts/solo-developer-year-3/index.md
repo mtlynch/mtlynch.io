@@ -308,7 +308,7 @@ Once again, I feel incredibly fortunate to be working for myself, and I hope to 
 
 *Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Monica Lent](https://monicalent.com/) and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post.*
 
-<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+<script src="/third-party/chart.js/2.9.4/Chiart.min.js"></script>
 <script>
 const dollarFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',

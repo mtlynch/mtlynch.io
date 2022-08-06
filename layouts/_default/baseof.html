@@ -44,7 +44,7 @@
     {{ end }}
 
     {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
-      <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+      <script src="/third-party/chart.js/2.9.4/Chiart.min.js"></script>
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 

@@ -23,7 +23,8 @@ Two years ago, I [quit my developer job at Google](/why-i-quit-google/) to build
 ## How I made and spent money
 
 <canvas id="myChart" style="margin-bottom: 50px;"></canvas>
-<script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+
+<script src="/third-party/chart.js/2.9.4/Chiart.min.js"></script>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 ctx.height = 400;
