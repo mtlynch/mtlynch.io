@@ -134,7 +134,7 @@ The more physical drives you have, the more defensive you should be about disk f
 
 ### Preventing concurrent disk failures
 
-Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 2% chance in any given week. Two simultaneous failures would happen once every 48 years, so I should be fine, right?
+Naively, the probability of two disks failing at once seems vanishingly small. Based on [Backblaze's stats](https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/), high-quality disk drives fail at 0.5-4% per year. A 4% risk per year is a 0.08% chance in any given week. Two simultaneous failures would happen once every 30,000 years, so I should be fine, right?
 
 The problem is that disks aren't statistically independent. If one disk fails, its neighbor has a substantially higher risk of dying. This is especially true if the disks are the same model, from the same manufacturing batch, and processed the same workloads.
 
