@@ -326,13 +326,38 @@ Still, I wanted to eliminate it as a possibility, so I deployed PicoShare to Ama
 
 {{<tweet user="deliberatecoder" id="1552466794971107328">}}
 
+### /tmp is not a RAMdisk
+
+Thought that Fly was potentially mounting the `/tmp` path in the VM to a RAM disk, which would explain why writes to the disk were bloating RAM.
+
+I don't have a great understanding of this, but I think the real explanation is that disk IO still passes through RAM, and RAM was still caching those disk blocks until it needed the memory for something else.
+
 ### Writing a hand-crafted multipart form reader
 
-aaa
+I tried my own that never wrote to disk and always wrote directly to SQLite. I had low expectations since it didn't seem much better to write to
 
-### Uploading more slowly
+It ended up not yielding any behavior from the standard library implementation, but it was kind of fun to play around with multipart forms at a lower level.
+
+### Throttling uploads
 
 I tried uploading from the client end by throttling Chrome to simulate 3G speeds, and I tried throttling at the server end to reduce speed of writing to disk, but neither worked.
+
+It's surprisingly easy to throttle I/O in Go, though. If you're working with APIs that take an `io.Reader` interface, you can just wrap a `Reader` in a throttled reader like this:
+
+```golang
+import "github.com/juju/ratelimit"
+
+...
+
+throttleRate := 1 << 20 // 1 MB
+bucket := ratelimit.NewBucketWithRate(float64(throttleRate), throttleRate)
+throttledReader := ratelimit.Reader(reader, bucket)
+
+w := file.NewWriter(tx, metadata.ID, d.chunkSize)
+if _, err := io.Copy(w, throttledReader); err != nil {
+  return err
+}
+```
 
 ## Acknowledgments
 
