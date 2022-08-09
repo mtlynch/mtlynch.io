@@ -153,41 +153,41 @@ Dan found a bug in the code responsible for reading PicoShare's file data from t
 
 ```golang
 func (fr *fileReader) populateBuffer() error {
-	if fr.offset == int64(fr.fileLength) {
-		return io.EOF
-	}
+  if fr.offset == int64(fr.fileLength) {
+    return io.EOF
+  }
 
-	startChunk := fr.offset / int64(fr.chunkSize)
-	stmt, err := fr.db.Prepare(`
-			SELECT
-				chunk
-			FROM
-				entries_data
-			WHERE
-				id=? AND
-				chunk_index>=?
-			ORDER BY
-				chunk_index ASC
-			`)
-	if err != nil {
-		log.Printf("reading chunk failed: %v", err)
-		return err
-	}
-	defer stmt.Close()
+  startChunk := fr.offset / int64(fr.chunkSize)
+  stmt, err := fr.db.Prepare(`
+      SELECT
+        chunk
+      FROM
+        entries_data
+      WHERE
+        id=? AND
+        chunk_index>=?
+      ORDER BY
+        chunk_index ASC
+      `)
+  if err != nil {
+    log.Printf("reading chunk failed: %v", err)
+    return err
+  }
+  defer stmt.Close()
 
-	var chunk []byte
-	err = stmt.QueryRow(fr.entryID, startChunk).Scan(&chunk)
-	if err != nil {
-		return err
-	}
+  var chunk []byte
+  err = stmt.QueryRow(fr.entryID, startChunk).Scan(&chunk)
+  if err != nil {
+    return err
+  }
 
-	// Move the start index to the position in the chunk we want to read.
-	readStart := fr.offset % int64(fr.chunkSize)
+  // Move the start index to the position in the chunk we want to read.
+  readStart := fr.offset % int64(fr.chunkSize)
 
-	fr.buf = bytes.NewBuffer(chunk[readStart:])
-	fr.offset += int64(len(chunk)) - readStart
+  fr.buf = bytes.NewBuffer(chunk[readStart:])
+  fr.offset += int64(len(chunk)) - readStart
 
-	return nil
+  return nil
 }
 ```
 
