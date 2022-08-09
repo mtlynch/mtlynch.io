@@ -70,7 +70,7 @@ Now, when you run your app, there will be a `/debug/pprof/` route with lots of u
 
 {{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" maxWidth="700px">}}
 
-I was surprised at how easy this was to add. There's a lot of interesting debugging information in this web interface, but the one that I used was `heap`. To use it, run this command from the command-line:
+I was surprised at how easy this was to add. There's a lot of interesting debugging information in this web interface, but the one that I used was `heap`. To use it, run this command from the command line:
 
 ```bash
 go tool pprof \
@@ -104,7 +104,7 @@ r.ParseMultipartForm(32 << 20) // 32 MB
 
 Even though we were specifying a limit of 32 MB, Go was allocating 64 MB of RAM.
 
-Ben tried reducing the `maxMemory` paramter to `1 << 20` (1 MB), and the RAM usage from `ParseMultipartForm` dropped to only 2.5 MB:
+Ben tried reducing the `maxMemory` parameter to `1 << 20` (1 MB), and the RAM usage from `ParseMultipartForm` dropped to only 2.5 MB:
 
 {{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" maxWidth="400px" hasBorder="true">}}
 
@@ -223,7 +223,7 @@ When PicoShare wrote file data into SQLite, I did it within a [transaction](http
 
 By using transactions, SQLite guaranteed that I would never reach a state where only part of the file was in the database if some writes failed. It also ensured that I couldn't accidentally write the file metadata without writing the file contents and vice-versa.
 
-Some Googling indicated that [large SQLite transactions can be a source of memory bloat](https://stackoverflow.com/a/15305650/90388), so I figured it was worth trying. I tested a basic implementation commiting changes to SQLite immediately instead of using transactions, but it still bloated RAM. It didn't seem like transactions were making any difference.
+Some Googling indicated that [large SQLite transactions can be a source of memory bloat](https://stackoverflow.com/a/15305650/90388), so I figured it was worth trying. I tried committing changes to SQLite immediately instead of using transactions, but it still bloated RAM. It didn't seem like transactions were making any difference.
 
 ### RAM bloat is fine, but crashes are not
 
@@ -240,7 +240,7 @@ At this point, I was measuring RAM usage from three different angles that all di
 
 In particular, Fly's metrics would frequently show RAM maxed out when Go and `htop` showed barely any usage. It was frustrating to debug because the further I drilled down, the further RAM measurements diverged from the crash behavior I was observing.
 
-The gamechanging insight came from Andrew Ayer:
+The game-changing insight came from Andrew Ayer:
 
 {{<tweet user="__agwa" id="1553767839156379649">}}
 
@@ -410,7 +410,7 @@ Even though I suspected Litestream, I didn't want to create more work for Ben Jo
 
 But then in May, [Fly acquired Litestream](https://fly.io/blog/all-in-on-sqlite-litestream/) and hired Ben to maintain it. Now seemed like the perfect time to bother Ben with this as it concerned both Litestream and Fly!
 
-I [filed a bug on Litestream](https://github.com/benbjohnson/litestream/issues/403) explaining what I'd tried and why I thought the problem was related ot Litestream. And then 15 minutes later, I managed to crash PicoShare with Litestream disabled, so I closed the bug.
+I [filed a bug on Litestream](https://github.com/benbjohnson/litestream/issues/403) explaining what I'd tried and why I thought the problem was related to Litestream. And then 15 minutes later, I managed to crash PicoShare with Litestream disabled, so I closed the bug.
 
 That said, the exercise was useful because it forced me to approach the problem rigorously so I could write a good bug report. And it also piqued Ben's curiosity, leading him to offer lots of useful advice even after it was clear Litestream wasn't involved.
 
