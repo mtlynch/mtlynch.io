@@ -5,10 +5,11 @@ date: 2022-08-07T00:00:00-04:00
 tags:
   - picoshare
   - golang
-  - profiling
+  - sqlite
+  - debugging
 ---
 
-Earlier this year, I created an open-source web app called [PicoShare](https://pico.rocks). It's a small Golang app that lets you share files easily. I use it for sending files that are too large for email, but I don't want the recipient to deal with Dropbox or Google Drive.
+Earlier this year, I created an open-source web app called [PicoShare](https://pico.rocks). It's a simple Golang app for sharing files. I use it to send files that are too large for email, but I don't want the recipient to deal with Dropbox or Google Drive.
 
 <img src="https://raw.githubusercontent.com/mtlynch/picoshare/master/docs/readme-assets/demo-full.gif" style="max-width: 550px; border: 1px solid gray; margin: auto; display: block;">
 
@@ -18,7 +19,7 @@ A few months ago, I started seeing my PicoShare server die every few days. When 
 
 I didn't have time to debug the crash, so I just increased the VM's memory from 512 MB to 1 GB. And then I kept seeing crashes, so I increased it again to 2 GB.
 
-Obviously, it's not very satisfying to fix a recurring crash by just throwing more RAM at the system, so when I had some spare time, I dug into it more. For the past two weeks, I've been debugging the crashes and sharing my progress on Twitter.
+It's unsatisfying to fix a recurring crash by just throwing more RAM at the system, so when I had some spare time, I dug into it more. For the past two weeks, I've been debugging the crashes and sharing my progress on Twitter.
 
 {{<tweet user="deliberatecoder" id="1552438652537835521">}}
 
@@ -339,7 +340,7 @@ I still don't understand why PicoShare behaves differently under Docker than a r
 
 When Dan Wilhelm reported how much progress he'd made by running PicoShare locally and observing RAM usage, it made me realize how much time I was wasting by deploying to Fly for every change. I tried running PicoShare on my home VM server, but it never crashed or bloated RAM the way it did on Fly.
 
-What eventually worked was creating my own development environment on Fly. I created a Dockerfile that had the PicoShare source and some dev tools and deployed that to Fly. From there, I could use `fly ssh console` to open a shell on my server and then test code changes quickly.
+What eventually worked was [creating my own development environment on Fly](https://github.com/mtlynch/picoshare-fly-debug). I wrote a [Dockerfile](https://github.com/mtlynch/picoshare-fly-debug/blob/4779b55500e59ac984e9f9abc379bfd7f3ace43a/Dockerfile) that had the PicoShare source and some dev tools and deployed that to Fly. From there, I could use `fly ssh console` to open a shell on my server and then test code changes quickly.
 
 It still wasn't super fast because there's about 30 seconds of latency before the RAM updates on Fly, but it was a big improvement over having to deploy each change from scratch.
 
@@ -367,15 +368,15 @@ James Tucker pointed out that this measurement would exclude any resources I all
 
 I was indeed using SQLite via cgo. PicoShare uses [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3), the most popular SQLite library for Go.
 
-And it makes sense that this prevents Go from showing accurate performance metrics. If you're using Go to call external C code, Go can't track resources in the external code.
+And it makes sense that using cgo prevents Go from showing accurate performance metrics. If you're using Go to call external C code, Go can't track resources in the external code.
 
 To work around this, I tried using [modernc.org/sqlite](https://pkg.go.dev/modernc.org/sqlite), a pure Go implementation of SQLite. For whatever reason, I couldn't see resource leaks with all Go code either.
 
 ### Fly has a crazy fast disk performance
 
-At one point, commenters on Twitter suggested that I might be exhausting RAM if I'm trying to write to write to the cloud VM's disk faster than it can process the data, so everything was getting queued in RAM.
+At one point, commenters on Twitter suggested that I might be exhausting RAM with disk writes. If PicoShare was writing to the Fly VM's disk faster than the disk could write the data to physical media, the data would get queued in RAM.
 
-To test this theory, I used the `fio` utility, which I'd never used before. I thought I was using the tool wrong, because it reported write speeds of 3353 MB/s, which seemed impossibly fast for a cloud VM.
+To test this theory, I used the `fio` disk benchmarking utility, which I'd never used before. I thought I was using the tool wrong, because it reported write speeds of 3353 MB/s, which seemed impossibly fast for a cloud VM.
 
 Kurt Mackey confirmed that the measurements were likely correct because Fly's local disks are Enterprise NVMe drives:
 
@@ -389,9 +390,9 @@ As much as I wish my investigation was an exercise of strictly increasing progre
 
 The first rule of debugging is to assume the problem is in your code. But I broke that rule here, partially because I dreaded how much work it would be to chase down these bugs.
 
-That said, there were legitimate reasons to suspect Litestream. Even though PicoShare uses SQLite in a strange way, tons of other applications write hundreds of megabytes to SQLite without issue. Litestream is relatively new and uses SQLite in novel ways, so it wasn't too big a leap to imagine this was coming from Litestream.
+That said, there were legitimate reasons to suspect Litestream. Even though PicoShare uses SQLite in a strange way, storing 1 GB of data in SQLite is fairly common, and I didn't hear about other people exhausting RAM by doing that. Litestream is relatively new and uses SQLite in novel ways, so it wasn't too big a leap to imagine this was coming from Litestream.
 
-Even though I suspected Litestream, I didn't want to bother Ben Johnson, Litestream's maintainer. I knew PicoShare was a pretty unusual use case for Litestream, and I didn't have a simple repro to isolate the problem.
+Even though I suspected Litestream, I didn't want to create more work for Ben Johnson, Litestream's maintainer. I knew PicoShare was a pretty unusual use case for Litestream, and I didn't have a simple repro to isolate the problem.
 
 But then in May, [Fly acquired Litestream](https://fly.io/blog/all-in-on-sqlite-litestream/) and hired Ben to maintain it. Now seemed like the perfect time to bother Ben with this as it concerned both Litestream and Fly!
 
@@ -403,7 +404,7 @@ That said, the exercise was useful because it forced me to approach the problem 
 
 When I couldn't reproduce the crashes on my local VMs or under Docker, I started to suspect that the problem was on Fly's end. It seemed unlikely because I wasn't doing anything very exotic, so it would be strange if none of Fly's other users had noticed their deployments dying from RAM starvation.
 
-Still, I wanted to eliminate Fly as a possibility. I deployed PicoShare to Amazon Lightsail. They don't have a 256 MB RAM option, so I deployed to a 512 MB instance. Within a few minutes, I was able to reproduce the crash there, eliminating Fly as the culprit:
+Still, I wanted to eliminate Fly as a possibility. I deployed PicoShare to [Lightsail](https://aws.amazon.com/lightsail/), Amazon's managed Docker container service. They don't have a 256 MB RAM option, so I deployed to a 512 MB instance. Within a few minutes, I was able to reproduce the crash there, eliminating Fly as the culprit:
 
 {{<tweet user="deliberatecoder" id="1552466794971107328">}}
 
