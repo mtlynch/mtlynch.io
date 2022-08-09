@@ -88,7 +88,7 @@ At the bottom, you can see a large red block labeled `bytes makeSlice 63.99 MB`,
 
 `makeSlice` is in the Go standard library, not my code. To find what code in PicoShare is causing these allocations, I traced up the graph until I found a PicoShare function name:
 
-{{<img src="pprof2.png" alt="Graph showing all memory allocations" maxWidth="300px" hasBorder="true">}}
+{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" maxWidth="300px" hasBorder="true">}}
 
 The last PicoShare function in this chain is [`handlers.fileFromRequest`](https://github.com/mtlynch/picoshare/blob/1.1.7/handlers/upload.go#L242), which calls the Go standard library function [`*Request.ParseMultipartForm`](https://pkg.go.dev/net/http@go1.18.4#Request.ParseMultipartForm). That function is responsible for parsing multipart HTTP data, which is the most common way to upload file data to a web server.
 
@@ -106,7 +106,7 @@ Even though we were specifying a limit of 32 MB, Go was allocating 64 MB of RAM.
 
 Ben tried reducing the `maxMemory` paramter to `1 << 20` (1 MB), and the RAM usage from `ParseMultipartForm` dropped to only 2.5 MB:
 
-{{<img src="pprof3.png" alt="Graph showing all memory allocations" maxWidth="400px" hasBorder="true">}}
+{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" maxWidth="400px" hasBorder="true">}}
 
 This was a huge reduction in memory, so I thought for sure Ben had solved it.
 
@@ -268,7 +268,7 @@ Or so I thought...
 
 I left my server running overnight, and when I checked it the next morning, it had failed with the same out of memory crash.
 
-{{<img src="oom-kill-overnight.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" maxWidth="700px">}}
+{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" maxWidth="700px">}}
 
 ### Eliminating SQLite vacuuming
 
@@ -278,7 +278,7 @@ Nobody was using the PicoShare server when it crashed, but it did line up with P
 
 I tested running the `VACUUM` call on my server and saw that it did indeed reduce the size of my main `.db` file, but it was increasing the size of the [SQLite write-ahead log](https://sqlite.org/wal.html).
 
-{{<img src="vacuum-bloat.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" maxWidth="250px">}}
+{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" maxWidth="250px">}}
 
 At this point, Ben asked me why I need to `VACUUM` at all:
 
