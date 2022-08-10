@@ -38,17 +38,17 @@ These are my notes to summarize what applicant tracking systems I found and how 
 
 ## Overview
 
-| Platform                                 | Pricing             | Self-service signup?           | Pause billing?                    | Focused on applicant tracking? | UX Rating |
-| ---------------------------------------- | ------------------- | ------------------------------ | --------------------------------- | ------------------------------ | --------- |
-| [Homerun](https://www.homerun.co/)       | $71/mo              | <font color="green">Yes</font> | <font color="green">Mostly</font> | <font color="green">Yes</font> | 8         |
-| [Polymer](https://www.polymer.co/)       | $10/mo per open job | <font color="green">Yes</font> | <font color="green">Yes</font>    | <font color="green">Yes</font> | 6         |
-| [Recruitee](https://recruitee.com)       | $109/mo             | <font color="green">Yes</font> | <font color="red">No</font>       | <font color="green">Yes</font> | 7         |
-| [Breezy](https://breezy.hr)              | Free                | <font color="green">Yes</font> | <font color="red">No</font>       | <font color="green">Yes</font> | 5         |
-| [Hireproof](https://hireproof.io/)       | Not published       | Sort of                        | ???                               | <font color="red">No</font>    | 3         |
-| [JOIN](https://join.com)                 | Free                | Yes                            | ???                               | <font color="red">No</font>    | 5         |
-| [Eddy](https://eddy.com/)                | $300/mo + ???       | <font color="red">No</font>    | ???                               | <font color="red">No</font>    | N/A       |
-| [Greenhouse](https://www.greenhouse.io/) | Not published       | <font color="red">No</font>    | ???                               | <font color="red">No</font>    | N/A       |
-| [Lever](https://www.lever.co/)           | Not published       | <font color="red">No</font>    | ???                               | <font color="red">No</font>    | N/A       |
+| Platform                                 | Pricing             | Self-service signup?           | Pause billing?                 | Focused on applicant tracking? | UX Rating |
+| ---------------------------------------- | ------------------- | ------------------------------ | ------------------------------ | ------------------------------ | --------- |
+| [Homerun](https://www.homerun.co/)       | $71/mo              | <font color="green">Yes</font> | <font color="green">Yes</font> | <font color="green">Yes</font> | 8         |
+| [Polymer](https://www.polymer.co/)       | $10/mo per open job | <font color="green">Yes</font> | <font color="green">Yes</font> | <font color="green">Yes</font> | 6         |
+| [Recruitee](https://recruitee.com)       | $109/mo             | <font color="green">Yes</font> | <font color="red">No</font>    | <font color="green">Yes</font> | 7         |
+| [Breezy](https://breezy.hr)              | Free                | <font color="green">Yes</font> | <font color="red">No</font>    | <font color="green">Yes</font> | 5         |
+| [Hireproof](https://hireproof.io/)       | Not published       | Sort of                        | ???                            | <font color="red">No</font>    | 3         |
+| [JOIN](https://join.com)                 | Free                | Yes                            | ???                            | <font color="red">No</font>    | 5         |
+| [Eddy](https://eddy.com/)                | $300/mo + ???       | <font color="red">No</font>    | ???                            | <font color="red">No</font>    | N/A       |
+| [Greenhouse](https://www.greenhouse.io/) | Not published       | <font color="red">No</font>    | ???                            | <font color="red">No</font>    | N/A       |
+| [Lever](https://www.lever.co/)           | Not published       | <font color="red">No</font>    | ???                            | <font color="red">No</font>    | N/A       |
 
 For pricing, I'm using the lowest tier plan that would fit my needs, which is to have one job opening and unlimited candidates. For companies that bill in Euros, I've converted to USD for convenience of comparing.
 
@@ -59,6 +59,8 @@ Homerun had the best UX of any
 At first, I thought Homerun's process for creating job listings was too complicated. By default, they drop you into a full-blown landing page builder with complicated layouts, when all I really wanted was a job description and initial questions. But it turns out that you can skip the landing page and just make the simple application. That's really nice, because it lets you delegate the job posting to other sites that specialize in it.
 
 They sort of allow you to pause billing in that you can downgrade to the free tier when you're not actively hiring. I believe this forces you to delete all but your 100 most recent candidates, which is a bummer but not a dealbreaker.
+
+Cons: creepy mascot.
 
 ## [Polymer](https://www.polymer.co/)
 
