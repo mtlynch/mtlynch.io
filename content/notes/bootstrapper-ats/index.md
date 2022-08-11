@@ -110,16 +110,33 @@ Polymer's UX is okay. It's simpler than a lot of the other platforms, but I foun
 
 ## [Recruitee](https://recruitee.com)
 
-It's designed for collaborative hiring decisions, so it's not a great match for most indie companies where only one or two people are making the hiring decision.
+The main problem with Recruitee from a bootstrapper's perspective is that it's designed for collaborative hiring decisions. If you're an indie founder who makes hiring decisions alone or with one other co-founder, all the features around collaboration just get in the way.
+
+{{<gallery>}}
+{{<img src="recruitee-1.png" maxWidth="400px" hasBorder="true" alt="Kanban overview of job applicants">}}
+{{<img src="recruitee-2.png" maxWidth="400px" hasBorder="true" alt="Detailed view of applicant">}}
+{{</gallery>}}
+
+Visually, Recruitee's UI is attractive. The style is nice, but Recruitee has so much functionality that I found myself getting lost while trying to find the tools or views that I wanted.
 
 - Pros
 
   - Self-serve demo experience is nice
+  - UI is visually appealing
 
 - Cons
   - Designed for team-based hiring decisions, so flows aren't ideal for a solo founder / hiring manager
+  - Scope is bloated with lots of features beyond applicant tracking such as offer letter signing and recruiting
+  - No way to pause billing when you're not hiring, so you have to either pay for unused months or lose all your data
 
 ## [Breezy](https://breezy.hr)
+
+- Pros
+
+  - TODO
+
+- Cons
+  - No way to pause billing when you're not hiring, so you have to either pay for unused months or lose all your data
 
 ## [JOIN](https://join.com)
 
