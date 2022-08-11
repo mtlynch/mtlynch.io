@@ -120,6 +120,10 @@ From Googling, I discovered another gotcha with `ParseMultipartForm`.
 
 The documentation doesn't warn the reader, but the caller is responsible for calling `r.MultipartForm.RemoveAll()` to free the resources Go allocated during `ParseMultipartForm`. So, I was leaking memory every time I called `ParseMultipartForm`.
 
+{{<notice type="info">}}
+**Update (2022-08-11)**: Damien Neil points out in the comments that Go should clean up these resources automatically. On Go's HTTP/1 implementation, it automatically cleans up resources, and Damien has [submitted a bugfix](https://go.dev/cl/423055) to make Go's HTTP/2 implementation behave consistently.
+{{</notice>}}
+
 To fix the leak, I rewrote my code to clean up the multipart resources:
 
 ```golang
