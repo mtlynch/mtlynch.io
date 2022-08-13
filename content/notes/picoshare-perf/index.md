@@ -13,7 +13,7 @@ tags:
 
 Earlier this year, I created an open-source app called [PicoShare](https://pico.rocks). It's a simple Golang web app for sharing files. I use it to send files that are too large to be email attachments, but I don't want the recipient to deal with Dropbox or Google Drive.
 
-<img src="https://raw.githubusercontent.com/mtlynch/picoshare/master/docs/readme-assets/demo-full.gif" style="max-width: 550px; border: 1px solid gray; margin: auto; display: block;" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
+<img src="https://raw.githubusercontent.com/mtlynch/picoshare/master/docs/readme-assets/demo-full.gif" style="max-width: 100%; @media only screen and (max-width : 768px) { max-width: 550px; } border: 1px solid gray; margin: auto; display: block;" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
 
 A few months ago, I started seeing my PicoShare server die every few days. When I checked the logs, I saw an out of memory error:
 
