@@ -22,9 +22,16 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 - Most of the examples focus on highly scalable applications rather than single-server Go applications that I typically write.
 - Overly dependent on heavy Google libraries (e.g., Maps, OAuth, gRPC, AppEngine).
   - Often got bogged down in minutiae of a particular library rather than the Go-relevant parts of the solution.
+- Recommends several horribly insecure software practices:
+  - Advises developers to [use `0777` as the default bitmask](https://github.com/matryer/goblueprints/issues/78) when they don't know what permissions to assign.
+  - Fails to protect against directory traversal, leading to an arbitrary write vulnerability in an example application that can [gain remote code execution](https://github.com/matryer/goblueprints/issues/79)
+  - Fails to protect against trivial [denial of service attacks on user uploads](https://github.com/matryer/goblueprints/issues/80)
 - Poor editing in the prose and error checking in the code.
-  - There were tons of careless grammar and code mistakes.
+  - There were a high number of careless grammar and code mistakes.
   - Users have [submitted fixes](https://github.com/matryer/goblueprints/pulls?q=is%3Aopen+is%3Apr), but they've been ignored for years.
+- Uses an extra JavaScript library (jQuery) in places where vanilla JavaScript would be just as easy.
+- Uses bash scripting poorly.
+- ePub formatting was poor, but it's my first time reading a programming book in ePub, so I'm not sure how fixable that is.
 
 ## Key Takeaways
 
