@@ -29,7 +29,7 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 - Poor editing in the prose and error checking in the code.
   - There were a high number of careless grammar and code mistakes.
   - Users have [submitted fixes](https://github.com/matryer/goblueprints/pulls?q=is%3Aopen+is%3Apr), but they've been ignored for years.
-- Uses an extra JavaScript library (jQuery) in places where vanilla JavaScript would be just as easy.
+- Uses an extra JavaScript library (jQuery) in places where vanilla JavaScript would be work just as well or better.
 - Uses bash scripting poorly.
 - ePub formatting was poor, but it's my first time reading a programming book in ePub, so I'm not sure how fixable that is.
 
