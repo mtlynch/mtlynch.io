@@ -72,7 +72,7 @@ The first half of the book focuses on the software development parts of his life
   * They had to hire contractors for months of work to rewrite *Prince of Persia* for a new platform, taking into account the new system's unique graphics capabilities and resource constraints.
   * Developers who write the port were offered royalties of 5-10%, not that far from what the author himself earned.
 * Software engineering practices were so much messier back in the day.
-  * The author continued adding pet features to the game close to relase, sometimes introducing severe bugs in the process and forcing QA to restart late into the testing process.
+  * The author continued adding pet features to the game close to release, sometimes introducing severe bugs in the process and forcing QA to restart late into the testing process.
 
 ### Play theory
 
