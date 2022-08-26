@@ -1,14 +1,14 @@
 ---
-title: 'Is It Keto: Month 7'
+title: "Is It Keto: Month 7"
 description: A record month, but it's time to give up.
-date: '2019-04-03'
+date: "2019-04-03"
 ---
 
 ## Highlights
 
-* [Is It Keto](https://isitketo.org)'s visits reached a record high of 11k pageviews.
-* Revenues reached a record high of $40.84 in affiliate income.
-* Despite this, Is It Keto didn't satisfy its critical goals, so I'm putting it on the backburner.
+- [Is It Keto](https://isitketo.org)'s visits reached a record high of 11k pageviews.
+- Revenues reached a record high of $40.84 in affiliate income.
+- Despite this, Is It Keto didn't satisfy its critical goals, so I'm putting it on the backburner.
 
 ## Goal Grades
 
@@ -16,8 +16,8 @@ At the start of the month, I laid out some high-level goals. Because of Is It Ke
 
 **Achieve $100 in revenue**
 
-* **Result**: Earned $40.84 in revenue (<font color="red">59% below target</font>)
-* **Grade**: C-
+- **Result**: Earned $40.84 in revenue (<font color="red">59% below target</font>)
+- **Grade**: C-
 
 This was the site's highest revenue month, almost doubling the previous record set in January. At this level of traffic, revenue levels seem to be smoothing out to a few dollars per week rather than isolated bursts on just two or three days for the entire month.
 
@@ -25,15 +25,15 @@ That said, $40 is small potatoes. It doesn't even meet the goal I was trying to 
 
 **Receive links from two websites with a Moz Domain Authority of at least 40**
 
-* **Result**: Got zero new links except for random spam domains  (<font color="red">100% below target</font>)
-* **Grade**: F
+- **Result**: Got zero new links except for random spam domains (<font color="red">100% below target</font>)
+- **Grade**: F
 
 I made a longshot bet that other keto sites would link to me if I created interesting visualizations about keto recipes. Sadly, it didn't pan out. Most sites didn't respond to my inquiries, and the ones that did felt that their readers wouldn't be interested.
 
 **Add 10 new pages for different foods**
 
-* **Result**: Added 12 new food pages (<font color="green">20% above target</font>)
-* **Grade**: A
+- **Result**: Added 12 new food pages (<font color="green">20% above target</font>)
+- **Grade**: A
 
 In January and February, I set more aggressive goals for publishing new food articles (75 and 30, respectively). March's target was deliberately conservative so that I could focus on strategies for increasing incoming links. This was a nice, easy goal, so I beat the target by a small amount.
 
@@ -43,11 +43,11 @@ In January and February, I set more aggressive goals for publishing new food art
 
 {{< img src="amazon-earnings-2019-03.jpg" alt="Amazon Earnings - March 2019" caption="Amazon affiliate earnings - March 2019" maxWidth="800px" >}}
 
-| Metric         |  February 2019 | March 2019 | Change |
-|----------------|----------------|--------------|--------|
-| Total Earnings |  ~$11          | $40.84    | <font color="green">+$29.84 (+271%)</font> |
-| Clicks         |  371           | 236       | <font color="red">-135 (-36%)</font>        |
-| Conversion     |  ???           | 19.07%    | ??? |
+| Metric         | February 2019 | March 2019 | Change                                     |
+| -------------- | ------------- | ---------- | ------------------------------------------ |
+| Total Earnings | ~$11          | $40.84     | <font color="green">+$29.84 (+271%)</font> |
+| Clicks         | 371           | 236        | <font color="red">-135 (-36%)</font>       |
+| Conversion     | ???           | 19.07%     | ???                                        |
 
 Conversion rates have been promisingly high. I don't have numbers for February [due to my link tag screwup](/retrospectives/2019/03/#amazon-affiliate-stats), but my January conversions were 23%. Both of these are substantially higher than on this blog, where conversion is around 3%. It seems like if users click the "Where to Buy" link on Is It Keto, they're typically ready to make a purchase.
 
@@ -57,13 +57,13 @@ There was a precipitous drop in affiliate link clicks relative to February, but 
 
 {{< img src="ga-2019-03-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - April 2018 through March 2019" maxWidth="800px" >}}
 
-| Metric                        | February 2019 | March 2019   | Change |
-|-------------------------------|---------------|--------------|--------|
-| Unique Visitors               | 2,687         | 4,001   | <font color="green">+1,314 (+49%)</font> |
-| Total Pageviews               | 8,500         | 11,431   | <font color="green">+2,931 (+34%)</font> |
-| Referrals from organic search | 1,998         | 3,362   | <font color="green">+1,364 (+82%)</font> |
-| Referrals from Facebook       | 18            | 40   | <font color="green">+22 (+97%)</font> |
-| Referrals from Twitter        | 307           | 325   | <font color="green">+325 (+6%)</font>   |
+| Metric                        | February 2019 | March 2019 | Change                                   |
+| ----------------------------- | ------------- | ---------- | ---------------------------------------- |
+| Unique Visitors               | 2,687         | 4,001      | <font color="green">+1,314 (+49%)</font> |
+| Total Pageviews               | 8,500         | 11,431     | <font color="green">+2,931 (+34%)</font> |
+| Referrals from organic search | 1,998         | 3,362      | <font color="green">+1,364 (+82%)</font> |
+| Referrals from Facebook       | 18            | 40         | <font color="green">+22 (+97%)</font>    |
+| Referrals from Twitter        | 307           | 325        | <font color="green">+325 (+6%)</font>    |
 
 This was a great month for user visits in every category, but the growth came almost entirely from organic search. Unsurprisingly, Google dominated my referrals from organic search.
 
@@ -73,28 +73,28 @@ So much of Is It Keto's success depends on how Google ranks me for a query like 
 
 {{< img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - March 2019" maxWidth="800px" >}}
 
-| Metric         | February 2019 | March 2019 | Change |
-|----------------|---------------|--------------|--------|
-| Google-indexed pages               | 93 |   161        | <font color="green">+68 (+73%)</font> |
-| Google indexed vs. excluded pages  |  65.0%          | 91.4% | <font color="green">+26.4 (+40.6%)</font>|
-| Domain Authority (Moz)             | 10         | 9  | <font color="red">-1</font> |
-| Linking Domains (Moz)              | 10 | 11       | <font color="green">+1</font> |
-| Ranking Keywords (Moz)             | 99  | 448 | <font color="green">+349 (+352%)</font>  |
+| Metric                            | February 2019 | March 2019 | Change                                    |
+| --------------------------------- | ------------- | ---------- | ----------------------------------------- |
+| Google-indexed pages              | 93            | 161        | <font color="green">+68 (+73%)</font>     |
+| Google indexed vs. excluded pages | 65.0%         | 91.4%      | <font color="green">+26.4 (+40.6%)</font> |
+| Domain Authority (Moz)            | 10            | 9          | <font color="red">-1</font>               |
+| Linking Domains (Moz)             | 10            | 11         | <font color="green">+1</font>             |
+| Ranking Keywords (Moz)            | 99            | 448        | <font color="green">+349 (+352%)</font>   |
 
 Google loved me in March! Almost every Is It Keto article is now in Google's search index, and it ranked me higher in search results for many new terms. The number of keywords for which Is It Keto appears in the first page of results exploded from 99 in February to 448 in March.
 
-In February, there were only two Is It Keto pages that appeared more than 500 times in Google search results. In March, that number increased to 18. Of those,  11 pages received 1,000 impressions or more.
+In February, there were only two Is It Keto pages that appeared more than 500 times in Google search results. In March, that number increased to 18. Of those, 11 pages received 1,000 impressions or more.
 
 I'm not sure why there was such a dramatic boost this month. It could be that there's an age component to it, so my links are bubbling to the top of results as more users click. Or it could be that Google is ranking me more favorably as the breadth of my site has grown, so I'm a more trustworthy authority on the keto diet now that I've reached 173 articles.
 
 ### Finances
 
-| Income/Expense | February 2019 | March 2019 |
-|----------|----------|--------------|
-| Amazon Affiliate revenue | $11 | $41 |
-| Content writers | <font color="red">-$893</font> | <font color="red">-$425</font> |
-| Twitter manager | <font color="red">-$144</font> | <font color="red">-$96</font> |
-| **Net Profit** | **<font color="red">-$1,026</font>** | **<font color="red">-$480</font>** |
+| Income/Expense           | February 2019                        | March 2019                         |
+| ------------------------ | ------------------------------------ | ---------------------------------- |
+| Amazon Affiliate revenue | $11                                  | $41                                |
+| Content writers          | <font color="red">-$893</font>       | <font color="red">-$425</font>     |
+| Twitter manager          | <font color="red">-$144</font>       | <font color="red">-$96</font>      |
+| **Net Profit**           | **<font color="red">-$1,026</font>** | **<font color="red">-$480</font>** |
 
 In winding down the site, I reduced the hours of my content writers and my Twitter manager. As a result, this was my lowest level of spending since I began focusing on the site in December.
 
@@ -126,7 +126,7 @@ My subsequent blog post was about artificial sweeteners, as they're a contentiou
 
 {{< img src="sweetener-usage.jpg" alt="Stacked area chart of artificial sweetener usage over time" maxWidth="675px" >}}
 
-This time, I used [NVD3](https://github.com/nvd3/nvd3), a more user-friendly interface to D3 that [my friend](https://oky.moe/) suggested. It was still a clunky process, but substantially easier than raw D3. I also decided to stick with more traditional visualizations like pie charts and line graphs. This sped up the process because staying within common scenarios meant there were plenty of  examples.
+This time, I used [NVD3](https://github.com/nvd3/nvd3), a more user-friendly interface to D3 that [my friend](https://oky.moe/) suggested. It was still a clunky process, but substantially easier than raw D3. I also decided to stick with more traditional visualizations like pie charts and line graphs. This sped up the process because staying within common scenarios meant there were plenty of examples.
 
 With both blog posts published, I reached out to the remaining keto sites with a softer pitch. I offered to create visualizations that they could include on their website, but I left it vague about what I wanted from the deal.
 
@@ -148,28 +148,28 @@ In total, I spent about $4,500 on the site and earned only $76 in revenue so far
 
 ### What got done?
 
-* Published two blog posts experimenting with keto recipes and visualization
-* Reached out to eight major keto sites to see if they'd be interested in using my visualizations in exchange for attribution
-  * No dice.
-* Wrote a tool to identify missing crosslinks in my pages
-  * For example, it notifies me if an Is It Keto article mentions "lima beans" but doesn't link to the dedicated [lima beans article](https://isitketo.org/lima-beans).
-* Added 12 new food pages
+- Published two blog posts experimenting with keto recipes and visualization
+- Reached out to eight major keto sites to see if they'd be interested in using my visualizations in exchange for attribution
+  - No dice.
+- Wrote a tool to identify missing crosslinks in my pages
+  - For example, it notifies me if an Is It Keto article mentions "lima beans" but doesn't link to the dedicated [lima beans article](https://isitketo.org/lima-beans).
+- Added 12 new food pages
 
 ### Lessons learned
 
 These are my takeaways from March, but I'll probably do a full-length blog post about what high-level lessons I've learned from this project.
 
-* When it comes to data visualization, start simple.
-  * It's easier to generate something common like a line chart or bar graph than something exotic like a bubble cloud.
-  * Simple charts prevent you from going too far down the rabbit hole of fiddling with visualization code.
-* [D3.js](https://d3js.org/) is a powerful visualization library, but it's too complex for quick, experimental visualizations.
-  * I had a good experience with NVD3, but their fork situation is confusing. [nvd3/nvd3](https://github.com/nvd3/nvd3) is the most stable repo, but their [documentation page is broken](https://github.com/nvd3/nvd3/issues/6). The nvd3-community fork is out of date, but [their documentation works](https://nvd3-community.github.io/nvd3/).
-  * I've heard good things about the more actively maintained [Vega library](https://vega.github.io/vega/), but haven't tried it.
+- When it comes to data visualization, start simple.
+  - It's easier to generate something common like a line chart or bar graph than something exotic like a bubble cloud.
+  - Simple charts prevent you from going too far down the rabbit hole of fiddling with visualization code.
+- [D3.js](https://d3js.org/) is a powerful visualization library, but it's too complex for quick, experimental visualizations.
+  - I had a good experience with NVD3, but their fork situation is confusing. [nvd3/nvd3](https://github.com/nvd3/nvd3) is the most stable repo, but their [documentation page is broken](https://github.com/nvd3/nvd3/issues/6). The nvd3-community fork is out of date, but [their documentation works](https://nvd3-community.github.io/nvd3/).
+  - I've heard good things about the more actively maintained [Vega library](https://vega.github.io/vega/), but haven't tried it.
 
 ### Goals for next month
 
 Is It Keto is on hold, so my top goal is to resist the temptation to continue working on it or monitoring it closely. In addition, here are a couple other things I'd like to achieve in April:
 
-* Learn [Vue.js](https://vuejs.org), as I've officially given up on Angular after [constant headaches](https://twitter.com/deliberatecoder/status/1011358706108456960).
-* Explore ideas for a new project that I can begin in May/June.
-* Get back to posting full-length blog articles because I've only published one in 2019.
+- Learn [Vue.js](https://vuejs.org), as I've officially given up on Angular after [constant headaches](https://twitter.com/deliberatecoder/status/1011358706108456960).
+- Explore ideas for a new project that I can begin in May/June.
+- Get back to posting full-length blog articles because I've only published one in 2019.

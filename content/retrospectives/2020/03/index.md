@@ -3,14 +3,14 @@ title: "WanderJest: Month 2"
 date: 2020-03-03
 description: I never thought it would be so difficult to give away free money.
 images:
-- /retrospectives/2020/03/og-image.jpg
+  - /retrospectives/2020/03/og-image.jpg
 ---
 
 ## Highlights
 
-* I'm betting big on a publicity campaign that's at risk of failing spectacularly.
-* WanderJest finally earned its first dollar of revenue, but in a way that is definitely unsustainable.
-* Poor work habits have left me with the most stress I've felt in a year.
+- I'm betting big on a publicity campaign that's at risk of failing spectacularly.
+- WanderJest finally earned its first dollar of revenue, but in a way that is definitely unsustainable.
+- Poor work habits have left me with the most stress I've felt in a year.
 
 ## Goal Grades
 
@@ -18,8 +18,8 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 
 ### Make $1 in revenue
 
-* **Result**: Earned $100 in revenue
-* **Grade**: A
+- **Result**: Earned $100 in revenue
+- **Grade**: A
 
 I've been pursuing affiliate partnerships for WanderJest, and I had agreements with three different shows to pay me a percentage of any purchases with WanderJest's discount code. Crushingly, zero customers purchased tickets using my code.
 
@@ -27,8 +27,8 @@ I took in $100 in revenue by organizing a comedy scavenger hunt, though this rev
 
 ### Get 20 new user signups
 
-* **Result**: Four new users signed up
-* **Grade**: D+
+- **Result**: Four new users signed up
+- **Grade**: D+
 
 I was expecting more users to create accounts in anticipation of the comedy scavenger hunt, but I only had four signups.
 
@@ -36,8 +36,8 @@ One of the new users is a comedian in New York, and I was excited that he used t
 
 ### Reach 2,000 unique visitors
 
-* **Result**: Attracted 1,344 unique visitors
-* **Grade**: C+
+- **Result**: Attracted 1,344 unique visitors
+- **Grade**: C+
 
 Again, I expected the scavenger hunt to drive more visits, but the contest so far hasn't been the draw that I hoped.
 
@@ -54,13 +54,13 @@ Again, I expected the scavenger hunt to drive more visits, but the contest so fa
 | Registered Users        | 0            | 4             | <font color="green">+4 (+inf%)</font>           |
 | Affiliate Earnings      | $0.00        | $0.00         | 0                                               |
 | Scavenger Hunt Earnings | N/A          | $100.00       | N/A                                             |
-| **Total Revenue**      | **$0.00**    | **$100.00**   | **<font color="green">+$100.00 (+inf%)</font>** |
+| **Total Revenue**       | **$0.00**    | **$100.00**   | **<font color="green">+$100.00 (+inf%)</font>** |
 
 ## My brilliant marketing plan
 
 In my [last retrospective](/retrospectives/2020/02/#attracting-audiences), I declared that WanderJest's biggest challenge was bringing its online users to real-life shows:
 
->Ultimately, the thing that performers, venues, and show organizers care about above all else is **audiences**. Fancy features and promotions mean nothing unless I can demonstrate to show organizers that WanderJest increases their ticket sales.
+> Ultimately, the thing that performers, venues, and show organizers care about above all else is **audiences**. Fancy features and promotions mean nothing unless I can demonstrate to show organizers that WanderJest increases their ticket sales.
 
 When I shared WanderJest in local social media groups, people responded positively, but I couldn't tell if that was translating to in-person show attendance. I needed a way to prove to myself and to show organizers that WanderJest brought people to shows.
 
@@ -89,24 +89,24 @@ Of the seven emails I sent, I received only one reply: a terse, disinterested re
 
 I sought advice from my friend [Heather Johnson](https://www.gozynta.com) based on her past experience as a local journalist. She suggested that I reach out to reporters individually.
 
->I would send a specific journalist in each of the publications a direct email and introduce yourself. You need to make a journalist feel like it's their special day. Talk briefly about why you left \[Google\] and what you are doing now and then say you have a press release and you hope they can help you get it to print.
+> I would send a specific journalist in each of the publications a direct email and introduce yourself. You need to make a journalist feel like it's their special day. Talk briefly about why you left \[Google\] and what you are doing now and then say you have a press release and you hope they can help you get it to print.
 >
->-Heather Johnson of [Gozynta](https://www.gozynta.com/)
+> -Heather Johnson of [Gozynta](https://www.gozynta.com/)
 
-I tried that with 10 separate reporters, and my success rate was still small, but significantly better than my first attempt. One local TV reporter responded enthusiastically and recorded a TV interview with me a few days later. The interview never aired, and she hasn't returned my emails. Another reporter offered to include my event in the Arts and Leisure section of the paper's website in the next few weeks, which isn't *super* useful, but it's better than nothing.
+I tried that with 10 separate reporters, and my success rate was still small, but significantly better than my first attempt. One local TV reporter responded enthusiastically and recorded a TV interview with me a few days later. The interview never aired, and she hasn't returned my emails. Another reporter offered to include my event in the Arts and Leisure section of the paper's website in the next few weeks, which isn't _super_ useful, but it's better than nothing.
 
 Promoting the contest on social media also turned out to be harder than I expected. Groups that welcomed my initial WanderJest announcement with open arms totally ignored my announcement about the scavenger hunt:
 
 {{< gallery caption="My post in a local Facebook group about launching WanderJest earned 33 likes, 12 comments, whereas my later scavenger hunt post received only 6 likes and no comments." >}}
-  {{< img src="fb-announce-1.jpg" alt="Screenshot of initial WanderJest announcement on Facebook" >}}
-  {{< img src="fb-announce-2.jpg" alt="Screenshot of scavenger hunt announcement on Facebook" >}}
+{{< img src="fb-announce-1.jpg" alt="Screenshot of initial WanderJest announcement on Facebook" >}}
+{{< img src="fb-announce-2.jpg" alt="Screenshot of scavenger hunt announcement on Facebook" >}}
 {{</ gallery >}}
 
 One of the ways users can earn a chance at the $200 grand prize is by re-sharing WanderJest's contest announcement post, but not a single person has done that, save for a few performers, and they're ineligible for the grand prize.
 
 ## $100 in revenue, but at what cost?
 
-My plan for revenue was to have show organizers contribute money to the contest. I expected to lose money overall since I was offering $400 in prize money and expected to collect an optimistic maximum of $250, but I was happy to take that loss as a marketing expense. Unfortunately, with the frosty response I had from fans and press leading up to the contest, I had nothing to convince venues that there was value in contributing, except for my hopes of what *could* happen.
+My plan for revenue was to have show organizers contribute money to the contest. I expected to lose money overall since I was offering $400 in prize money and expected to collect an optimistic maximum of $250, but I was happy to take that loss as a marketing expense. Unfortunately, with the frosty response I had from fans and press leading up to the contest, I had nothing to convince venues that there was value in contributing, except for my hopes of what _could_ happen.
 
 By February 29th, I was still at $0 in revenue. Thank goodness for [Leap Day](https://www.youtube.com/watch?v=uK0KTH0ezgc), because in the final 24 hours before the deadline, five separate show producers contributed a total of $100 to the contest.
 
@@ -114,15 +114,15 @@ By February 29th, I was still at $0 in revenue. Thank goodness for [Leap Day](ht
 
 I'm trying as hard as I can to ensure that each partner earns a return on their investment, even if it means I lose a lot more money. I had hoped the contest would market itself on social media, but since that's not happening, I ordered business cards and flyers and am hiring someone to distribute them in the area.
 
-| Expense | Cost |
-|---------|-------|
-| Contest prizes | $400 |
-| Graphic design | $140 |
-| Flyer printing (150 color flyers) | $83 |
-| Flyer distribution | $110 |
-| Promotional cards | $215 |
-| Facebook ads | $50 |
-| **Total** | **$998** |
+| Expense                           | Cost     |
+| --------------------------------- | -------- |
+| Contest prizes                    | $400     |
+| Graphic design                    | $140     |
+| Flyer printing (150 color flyers) | $83      |
+| Flyer distribution                | $110     |
+| Promotional cards                 | $215     |
+| Facebook ads                      | $50      |
+| **Total**                         | **$998** |
 
 This contest is going to cost about $1k. In other words, each dollar I earned cost me ten. This is not what [Steve Blank](https://steveblank.com/2014/03/04/why-companies-are-not-startups/) would describe as "a repeatable and scalable business model."
 
@@ -144,11 +144,11 @@ I find it helpful to think about worst-case scenarios, so for this contest, the 
 
 Here's my plan for reducing stress going forward:
 
-* When I have WanderJest-related activities at night, think of it as a time-swap rather than a late workday.
-  * If I'm going to be at a show for three hours in the evening, stop work three hours before dinner to work on personal tasks.
-* Check social media and email more purposefully at scheduled times or for specific time-sensitive reasons.
-* Switch to a social media management tool like [Buffer](https://buffer.com) or [HootSuite](https://hootsuite.com/).
-  * It'll be better if I can perform some of WanderJest's social media work without having to log in to the suck-you-in social media platforms themselves.
+- When I have WanderJest-related activities at night, think of it as a time-swap rather than a late workday.
+  - If I'm going to be at a show for three hours in the evening, stop work three hours before dinner to work on personal tasks.
+- Check social media and email more purposefully at scheduled times or for specific time-sensitive reasons.
+- Switch to a social media management tool like [Buffer](https://buffer.com) or [HootSuite](https://hootsuite.com/).
+  - It'll be better if I can perform some of WanderJest's social media work without having to log in to the suck-you-in social media platforms themselves.
 
 ## Legacy projects
 
@@ -168,7 +168,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdSense Earnings          | $423.57      | $286.95       | <font color="red">-$136.62 (-32%)</font>     |
 | Amazon Affiliate Earnings | $345.04      | $395.67       | <font color="green">+$50.63 (+15%)</font>    |
 | Meal Plan Sales           | $18.10       | $0.00         | <font color="red">-$18.10 (-100%)</font>     |
-| **Total Revenue**        | **$786.71**  | **$682.62**   | **<font color="red">-$104.09 (-13%)</font>** |
+| **Total Revenue**         | **$786.71**  | **$682.62**   | **<font color="red">-$104.09 (-13%)</font>** |
 
 Numbers are down for Is It Keto, but that's misleading because January was an anomalously profitable month. There's always a big surge of interest in January due to people starting the keto diet for their new year's resolutions, but it fades within weeks.
 
@@ -178,11 +178,11 @@ $682 in revenue is surprisingly strong revenue for Is It Keto. I had expected nu
 
 {{<revenue-graph project="zestful">}}
 
-| Metric             | January 2020 | February 2020 | Change                                      |
-| ------------------ | ------------ | ------------- | ------------------------------------------- |
-| Unique Visitors    | 1,723        | 877           | <font color="red">-846 (-49%)</font>        |
-| Total Pageviews    | 4,078        | 2,578         | <font color="red">-1,500 (-37%)</font>      |
-| RapidAPI Earnings  | $79.67       | $2.27         | <font color="red">-$77.40 (-97%)</font>     |
+| Metric            | January 2020 | February 2020 | Change                                      |
+| ----------------- | ------------ | ------------- | ------------------------------------------- |
+| Unique Visitors   | 1,723        | 877           | <font color="red">-846 (-49%)</font>        |
+| Total Pageviews   | 4,078        | 2,578         | <font color="red">-1,500 (-37%)</font>      |
+| RapidAPI Earnings | $79.67       | $2.27         | <font color="red">-$77.40 (-97%)</font>     |
 | **Total Revenue** | **$79.67**   | **$2.27**     | **<font color="red">-$77.40 (-97%)</font>** |
 
 Zestful had a dead month, but that's also not surprising given that Zestful's revenue is bursty.
@@ -219,8 +219,8 @@ The video was tremendously valuable and turned up [13 new bugs](https://github.c
 
 In the span of two weeks, the [Indie Hackers podcast](https://www.indiehackers.com/podcast) published two of my favorite episodes in recent memory:
 
-* [Maximizing Fun on the Path to Independence with Cory Zue of Place Card Me](https://www.indiehackers.com/podcast/147-cory-zue-of-place-card-me)
-* [Acquiring the Experience to Make It as a Solo Founder with Jen Yip of Lunch Money](https://www.indiehackers.com/podcast/150-jen-yip-of-lunch-money)
+- [Maximizing Fun on the Path to Independence with Cory Zue of Place Card Me](https://www.indiehackers.com/podcast/147-cory-zue-of-place-card-me)
+- [Acquiring the Experience to Make It as a Solo Founder with Jen Yip of Lunch Money](https://www.indiehackers.com/podcast/150-jen-yip-of-lunch-money)
 
 These episodes resonated with me because Cory and Jen are both solo developer founders, they both write publicly about their progress ([Cory's blog](http://www.coryzue.com/), [Jen's blog](https://lunchbag.ca)), and they both feel comfortable building their companies with slow, steady growth.
 
@@ -228,24 +228,24 @@ These episodes resonated with me because Cory and Jen are both solo developer fo
 
 ### What got done?
 
-* Organized and launched my first-ever marketing contest.
-  * Wrote my first [press release](https://wanderjest.com/press/scavenger-hunt-press-release-2020-02-20.pdf).
-* Added self-serve performer and fan profiles to WanderJest.
-* Pitched WanderJest at [Valley Venture Mentors](https://valleyventurementors.org).
-  * VVM is an organization that offers mentorship and resources to startups in Western Massachusetts.
+- Organized and launched my first-ever marketing contest.
+  - Wrote my first [press release](https://wanderjest.com/press/scavenger-hunt-press-release-2020-02-20.pdf).
+- Added self-serve performer and fan profiles to WanderJest.
+- Pitched WanderJest at [Valley Venture Mentors](https://valleyventurementors.org).
+  - VVM is an organization that offers mentorship and resources to startups in Western Massachusetts.
 
 ### Lessons learned
 
-* When collecting payments from people, use online forms as much as possible.
-  * I gave a few people my direct PayPal address, which led to confusion about (or ignoring of) payment deadlines.
-  * With online payment forms, there's less room for ambiguity about what the customer is purchasing, and I can adjust pricing after a discount deadline expires without it coming across as personal or confrontational.
-* Send press releases to individual reporters, not to the general editor.
-  * If you're sending out a press release that the publication might not pick up, send it to an individual reporter with a personalized message about why you chose them.
-* It's harder than you'd expect to get people excited about a free cash giveaway contest.
+- When collecting payments from people, use online forms as much as possible.
+  - I gave a few people my direct PayPal address, which led to confusion about (or ignoring of) payment deadlines.
+  - With online payment forms, there's less room for ambiguity about what the customer is purchasing, and I can adjust pricing after a discount deadline expires without it coming across as personal or confrontational.
+- Send press releases to individual reporters, not to the general editor.
+  - If you're sending out a press release that the publication might not pick up, send it to an individual reporter with a personalized message about why you chose them.
+- It's harder than you'd expect to get people excited about a free cash giveaway contest.
 
 ### Goals for next month
 
-* Get 40 new user signups to WanderJest.
-* Conduct eight customer interviews.
-* Present [my talk at NERD Summit](https://nerdsummit.org/#17).
-* Limit work to eight hours a day and check social media only as scheduled.
+- Get 40 new user signups to WanderJest.
+- Conduct eight customer interviews.
+- Present [my talk at NERD Summit](https://nerdsummit.org/#17).
+- Limit work to eight hours a day and check social media only as scheduled.

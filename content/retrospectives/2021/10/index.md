@@ -8,32 +8,32 @@ images:
 
 ## Highlights
 
-* TinyPilot had its highest-revenue month ever.
-* One of TinyPilot's competitors raised $800k almost overnight.
-* I'm working with a design firm to improve TinyPilot's brand and website.
+- TinyPilot had its highest-revenue month ever.
+- One of TinyPilot's competitors raised $800k almost overnight.
+- I'm working with a design firm to improve TinyPilot's brand and website.
 
 ## Goal Grades
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Publish a sample chapter of [*Refactoring English*](https://refactoringenglish.com)
+### Publish a sample chapter of [_Refactoring English_](https://refactoringenglish.com)
 
-* **Result**: Made progress but didn't publish a chapter
-* **Grade**: D
+- **Result**: Made progress but didn't publish a chapter
+- **Grade**: D
 
 TinyPilot got busy enough again that I didn't have much time to write this month. Sadly, I'm going to put the book on hold indefinitely since TinyPilot still needs my full attention.
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
-* **Result**: We're still at the design stage, but for good reasons
-* **Grade**: B-
+- **Result**: We're still at the design stage, but for good reasons
+- **Grade**: B-
 
 I was hoping to start development by the end of the month, but there are more design questions than I anticipated. Still, I don't feel bad about the delay because investing more in up-front design will save us time on the implementation. This project involves important architectural decisions that will be difficult to change later, so it's worth investing time into getting them right initially.
 
 ### Finalize the design of the Voyager 2
 
-* **Result**: We finished all testing on the Voyager 2
-* **Grade**: A
+- **Result**: We finished all testing on the Voyager 2
+- **Grade**: A
 
 We're running a little late on this, but we're still on track to ship the first Voyager 2 by the end of November. The electrical engineers have built several prototypes, and they've passed all tests. We're now in the process of ordering the first production batch from a PCB manufacturer.
 
@@ -41,15 +41,15 @@ We're running a little late on this, but we're still on track to ship the first 
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | August 2021     | September 2021 | Change                                              |
-| ------------------------ | --------------- | -------------- | --------------------------------------------------- |
-| Unique Visitors          | 4,194           | 9,960          | <font color="green">+5,766 (+137%)</font>           |
-| Total Pageviews          | 8,864           | 15,744         | <font color="green">+6,880 (+78%)</font>            |
-| Sales Revenue            | $30,191.04      | $42,234.17     | <font color="green">+$12,043.13 (+40%)</font>       |
-| Enterprise Subscriptions | $48.00          | $48.00         | 0                                                   |
-| Royalties                | N/A             | $3,431.35      | N/A                                                 |
-| Total Revenue            | $30,239.04      | $45,713.52     | <font color="green">+$15,474.48 (+51%)</font>       |
-| **Profit**               | <font color="red">**$-10,140.95**</font> | **$11,713.04**\*  | **<font color="green">+$21,853.99 (+inf%)</font>** |
+| Metric                   | August 2021                              | September 2021   | Change                                             |
+| ------------------------ | ---------------------------------------- | ---------------- | -------------------------------------------------- |
+| Unique Visitors          | 4,194                                    | 9,960            | <font color="green">+5,766 (+137%)</font>          |
+| Total Pageviews          | 8,864                                    | 15,744           | <font color="green">+6,880 (+78%)</font>           |
+| Sales Revenue            | $30,191.04                               | $42,234.17       | <font color="green">+$12,043.13 (+40%)</font>      |
+| Enterprise Subscriptions | $48.00                                   | $48.00           | 0                                                  |
+| Royalties                | N/A                                      | $3,431.35        | N/A                                                |
+| Total Revenue            | $30,239.04                               | $45,713.52       | <font color="green">+$15,474.48 (+51%)</font>      |
+| **Profit**               | <font color="red">**$-10,140.95**</font> | **$11,713.04**\* | **<font color="green">+$21,853.99 (+inf%)</font>** |
 
 After an unremarkable first half of the month, I got a surprise [review from Jeff Geerling](https://www.youtube.com/watch?v=TIrkEr2AeDY), a beloved blogger and YouTube creator in the Raspberry Pi world.
 
@@ -157,18 +157,18 @@ Zestful is popping up from nowhere as a recurring revenue source. Historically, 
 
 ### What got done?
 
-* Hired a design firm to redesign the TinyPilot website.
-* Released the TinyPilot [September update](https://tinypilotkvm.com/blog/whats-new-in-2021-09).
-* Moved TinyPilot's image build process to the cloud.
-* Moved TinyPilot's email support to [HelpScout](https://helpscout.com), a shared inbox service, which will help me scale customer support.
+- Hired a design firm to redesign the TinyPilot website.
+- Released the TinyPilot [September update](https://tinypilotkvm.com/blog/whats-new-in-2021-09).
+- Moved TinyPilot's image build process to the cloud.
+- Moved TinyPilot's email support to [HelpScout](https://helpscout.com), a shared inbox service, which will help me scale customer support.
 
 ### Lessons learned
 
-* Don't panic just because a competitor raises a crazy amount of money.
-  * Many of the things that have occupied my time over the past year are things that my competitor has not yet figured out, so I still have several valuable advantages.
+- Don't panic just because a competitor raises a crazy amount of money.
+  - Many of the things that have occupied my time over the past year are things that my competitor has not yet figured out, so I still have several valuable advantages.
 
 ### Goals for next month
 
-* Train local staff members to assist with customer support.
-* Start development on a monthly service-based software complement to TinyPilot.
-* Complete TinyPilot's website rebrand.
+- Train local staff members to assist with customer support.
+- Start development on a monthly service-based software complement to TinyPilot.
+- Complete TinyPilot's website rebrand.

@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* I announced a new product and then discovered it was a mistake.
-* I simplified the TinyPilot website to focus on a single device.
-* I tried taking my first real vacation from TinyPilot with mixed results.
+- I announced a new product and then discovered it was a mistake.
+- I simplified the TinyPilot website to focus on a single device.
+- I tried taking my first real vacation from TinyPilot with mixed results.
 
 ## Goal Grades
 
@@ -18,8 +18,8 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Train local staff members to assist with customer support
 
-* **Result**: Local staff members are answering ~50% of support emails.
-* **Grade**: A-
+- **Result**: Local staff members are answering ~50% of support emails.
+- **Grade**: A-
 
 We now use [HelpScout](https://www.helpscout.com/) as a shared customer support queue. There are still plenty of cases where I'm the only one with the context or technical background to handle the request, but it's great to have help with the rest.
 
@@ -27,15 +27,15 @@ It's also fantastic to take myself out of the critical path on time-sensitive in
 
 ### Start development on a monthly service-based software complement to TinyPilot
 
-* **Result**: I've paused development after a tepid user reception.
-* **Grade**: C-
+- **Result**: I've paused development after a tepid user reception.
+- **Grade**: C-
 
 I [published a preview](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) of a service called TinyPilot Cloud and offered signups for early access. There wasn't enough interest from users, so I've paused the project for now.
 
 ### Complete TinyPilot's website rebrand
 
-* **Result**: We're very close, but it's not done yet.
-* **Grade**: B-
+- **Result**: We're very close, but it's not done yet.
+- **Grade**: B-
 
 The rebrand is taking longer than I expected, but it should be ready in November. The new designs look really cool, so I'm eager to get them up.
 
@@ -43,14 +43,14 @@ The rebrand is taking longer than I expected, but it should be ready in November
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | September 2021 | October 2021   | Change                                           |
-| ------------------------ | -------------- | -------------- | ------------------------------------------------ |
-| Unique Visitors          | 9,960          | 6,898          | <font color="red">-3,062 (-31%)</font>           |
-| Total Pageviews          | 15,744         | 13,008         | <font color="red">-2,736 (-17%)</font>           |
-| Sales Revenue            | $42,234.17     | $34,927.55     | <font color="red">-$7,306.62 (-17%)</font>       |
-| Enterprise Subscriptions | $48.00         | $48.00         | 0                                                |
-| Royalties                | $3,431.35      | $6,804.53      | <font color="green">+$3,373.18 (+98%)</font>     |
-| Total Revenue            | $45,713.52     | $41,780.08     | <font color="red">-$3,933.44 (-9%)</font>        |
+| Metric                   | September 2021 | October 2021  | Change                                         |
+| ------------------------ | -------------- | ------------- | ---------------------------------------------- |
+| Unique Visitors          | 9,960          | 6,898         | <font color="red">-3,062 (-31%)</font>         |
+| Total Pageviews          | 15,744         | 13,008        | <font color="red">-2,736 (-17%)</font>         |
+| Sales Revenue            | $42,234.17     | $34,927.55    | <font color="red">-$7,306.62 (-17%)</font>     |
+| Enterprise Subscriptions | $48.00         | $48.00        | 0                                              |
+| Royalties                | $3,431.35      | $6,804.53     | <font color="green">+$3,373.18 (+98%)</font>   |
+| Total Revenue            | $45,713.52     | $41,780.08    | <font color="red">-$3,933.44 (-9%)</font>      |
 | **Profit**               | **$11,713.04** | **$1,936.22** | **<font color="red">-$9,776.82 (-83%)</font>** |
 
 TinyPilot had a fairly strong sales month. Sales are down a bit from last month, but our European distributor doubled their sales from September, providing a nice boost.
@@ -77,7 +77,7 @@ After two days, only two users had signed up for the TinyPilot Cloud waitlist, a
 
 {{<img src="cloud-waitlist.png" alt="Screenshot of EmailOctopus showing only two signups" maxWidth="700px" caption="Two days after the teaser blog post, only two users had signed up for early access to TinyPilot Cloud." hasBorder="true">}}
 
-Two signups were *way* less than I was hoping. I expected maybe 50 signups, of which 25 could turn into actual customers, so we'd be starting out with ~$750/month. If only two people total were interested out of a population that actively follows TinyPilot, something was seriously wrong.
+Two signups were _way_ less than I was hoping. I expected maybe 50 signups, of which 25 could turn into actual customers, so we'd be starting out with ~$750/month. If only two people total were interested out of a population that actively follows TinyPilot, something was seriously wrong.
 
 I invited the users who signed up to talk more in hopes of learning out how to find more customers like them, but they weren't so enthusiastic. One of them never responded to my email, and the other said he signed up out of curiosity but wasn't sure he'd actually use the service.
 
@@ -85,7 +85,7 @@ Other users expressed concern about the cost, as $30/month for cloud access felt
 
 I felt discouraged and embarrassed that I'd invested so much time into something users didn't want in the first place. All told, this project consumed six to eight person-weeks of development time. Validating customer demand before investing months into engineering is like entrepreneurship 101.
 
-Looking back, instead of setting out to create a working product, I should have just aimed for the blog post and measured interest from there. My mistake was assuming that just because people *wanted* cloud access meant that they'd be willing to pay $30/month for it. The existing providers in this space offer their services free to small businesses and home users, so I think $30/month seemed surprisingly high.
+Looking back, instead of setting out to create a working product, I should have just aimed for the blog post and measured interest from there. My mistake was assuming that just because people _wanted_ cloud access meant that they'd be willing to pay $30/month for it. The existing providers in this space offer their services free to small businesses and home users, so I think $30/month seemed surprisingly high.
 
 For now, we're pausing development on TinyPilot Cloud. We've documented our design work well, so we should be able to pick it up in a few months if we find more customers. Alternatively, we may end up publishing an open-source version of the service that customers can self-host.
 
@@ -190,21 +190,21 @@ The person who [expressed interest in acquiring Zestful](/retrospectives/2021/09
 
 ### What got done?
 
-* Integrated local staff into the customer support workflows.
-* Paused development on TinyPilot Cloud.
-* Retired the TinyPilot Hobbyist Kit and focused the site around the Voyager.
-* Published [episode 1 of "Deliberate Programming."](https://www.youtube.com/watch?v=RKpaccCmxwQ)
-  * I started a project about looking for ways of applying [deliberate practice](/book-reports/badass/#building-expertise) to software development.
+- Integrated local staff into the customer support workflows.
+- Paused development on TinyPilot Cloud.
+- Retired the TinyPilot Hobbyist Kit and focused the site around the Voyager.
+- Published [episode 1 of "Deliberate Programming."](https://www.youtube.com/watch?v=RKpaccCmxwQ)
+  - I started a project about looking for ways of applying [deliberate practice](/book-reports/badass/#building-expertise) to software development.
 
 ### Lessons learned
 
-* Validate your product early.
-  * Wanting a feature or product is different than being willing to pay for it.
-* If I want to be able to take vacations, I have to help my teammates grow.
-  * The more responsibility that my teammates take on, the less reliant the business is on me personally for day-to-day operations.
+- Validate your product early.
+  - Wanting a feature or product is different than being willing to pay for it.
+- If I want to be able to take vacations, I have to help my teammates grow.
+  - The more responsibility that my teammates take on, the less reliant the business is on me personally for day-to-day operations.
 
 ### Goals for next month
 
-* Complete TinyPilot’s website rebrand.
-* Prepare for Voyager 2 launch as soon as the hardware is ready.
-* Hire a marketing firm or freelancer to help TinyPilot explore paid marketing channels.
+- Complete TinyPilot’s website rebrand.
+- Prepare for Voyager 2 launch as soon as the hardware is ready.
+- Hire a marketing firm or freelancer to help TinyPilot explore paid marketing channels.

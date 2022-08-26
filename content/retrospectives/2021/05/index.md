@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* TinyPilot has its first official office space.
-* I tried a marketing experiment that flopped.
-* Designing IT infrastructure for a new office is fun.
+- TinyPilot has its first official office space.
+- I tried a marketing experiment that flopped.
+- Designing IT infrastructure for a new office is fun.
 
 ## Goal Grades
 
@@ -18,24 +18,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Increase TinyPilot revenue to $30k
 
-* **Result**: Increased revenue by 46% to $29k
-* **Grade**: A-
+- **Result**: Increased revenue by 46% to $29k
+- **Grade**: A-
 
 I didn't quite hit my $30k goal, but I came close. It's a relief to end the downward sales trend that began in February.
 
 ### Produce a prototype for a custom TinyPilot PoE HAT
 
-* **Result**: The [global chip shortage](https://en.wikipedia.org/wiki/2020%E2%80%9321_global_chip_shortage) has delayed the prototype by at least one month
-* **Grade**: D
+- **Result**: The [global chip shortage](https://en.wikipedia.org/wiki/2020%E2%80%9321_global_chip_shortage) has delayed the prototype by at least one month
+- **Grade**: D
 
 When we began work, my electrical engineering partners took into account the [global shortage of integrated circuits](https://www.cnbc.com/2021/05/07/chip-shortage-is-starting-to-have-major-real-world-consequences.html), but it's worse than they expected.
 
-Normally, you'd buy components in bulk after designing and printing a successful prototype. We planned to move up the buying step to the point where we just *design* the prototype. We tried this three times, and every time, the components sold out in the three or four days we spent designing the circuit board. Our new strategy is to buy a six-month supply of the critical components as soon as we identify compatible parts and cross our fingers that they work in our design.
+Normally, you'd buy components in bulk after designing and printing a successful prototype. We planned to move up the buying step to the point where we just _design_ the prototype. We tried this three times, and every time, the components sold out in the three or four days we spent designing the circuit board. Our new strategy is to buy a six-month supply of the critical components as soon as we identify compatible parts and cross our fingers that they work in our design.
 
-### Create an outline for my book, [*Refactoring English*](https://refactoringenglish.com)
+### Create an outline for my book, [_Refactoring English_](https://refactoringenglish.com)
 
-* **Result**: Completed the outline and published it on [the book's landing page](https://refactoringenglish.com)
-* **Grade**: A
+- **Result**: Completed the outline and published it on [the book's landing page](https://refactoringenglish.com)
+- **Grade**: A
 
 I wrote an outline that feels right to me, but I haven't yet collected feedback from readers. My next step is to survey the book's mailing list about whether the outline matches what they're hoping to learn.
 
@@ -43,14 +43,14 @@ I wrote an outline that feels right to me, but I haven't yet collected feedback 
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric           | March 2021 | April 2021    | Change                                       |
-| ---------------- | ---------- | ------------- | -------------------------------------------- |
-| Unique Visitors  | 5,805      | 5,880         | <font color="green">+75 (+1%)</font>         |
-| Total Pageviews  | 9,762      | 10,483        | <font color="green">+721 (+7%)</font>        |
-| Sales Revenue    | $19,782.96 | $28,880.65    | <font color="green">+$9,097.69 (+46%)</font> |
-| Donations        | $19.92     | $0.00         | <font color="red">-$19.92 (-100%)</font>     |
-| Total Revenue    | $19,802.30 | $28,880.65    | <font color="green">+$9,078.35 (+46%)</font> |
-| **Net Profit**   | **-$352.77**    | **$843.56** | **N/A**                                      |
+| Metric          | March 2021   | April 2021  | Change                                       |
+| --------------- | ------------ | ----------- | -------------------------------------------- |
+| Unique Visitors | 5,805        | 5,880       | <font color="green">+75 (+1%)</font>         |
+| Total Pageviews | 9,762        | 10,483      | <font color="green">+721 (+7%)</font>        |
+| Sales Revenue   | $19,782.96   | $28,880.65  | <font color="green">+$9,097.69 (+46%)</font> |
+| Donations       | $19.92       | $0.00       | <font color="red">-$19.92 (-100%)</font>     |
+| Total Revenue   | $19,802.30   | $28,880.65  | <font color="green">+$9,078.35 (+46%)</font> |
+| **Net Profit**  | **-$352.77** | **$843.56** | **N/A**                                      |
 
 ## TinyPilot's new office: the fun stuff
 
@@ -89,8 +89,8 @@ We were already using the Zebra printer at home, so we just moved it to the offi
 {{</notice>}}
 
 {{<gallery>}}
-  {{<img src="router.jpg" maxWidth="350px" alt="Photo of Qotom Q355G4 mini PC">}}
-  {{<img src="opnsense.png" maxWidth="500px" alt="OPNsense screenshot">}}
+{{<img src="router.jpg" maxWidth="350px" alt="Photo of Qotom Q355G4 mini PC">}}
+{{<img src="opnsense.png" maxWidth="500px" alt="OPNsense screenshot">}}
 {{</gallery>}}
 
 At home, I have a Ubiquiti EdgeRouter 4, but Ubiquiti's been [going](https://krebsonsecurity.com/2021/03/whistleblower-ubiquiti-breach-catastrophic/) [downhill](https://www.reddit.com/r/sysadmin/comments/mgd2k5/ubiquity_starts_to_serve_selfpromotion_ads_in/) fast this year. pfSense is a popular alternative, but they seem to be [lying about being open-source](https://github.com/rapi3/pfsense-is-closed-source). I've heard from several sources that [OPNsense](https://opnsense.org/) is the "good citizen" fork of pfSense.
@@ -147,13 +147,13 @@ And voila, I can access `franklin`'s CUPS web interface.
 
 ### Still to come
 
-* 12 U server rack
-* HP DL380 G7 rack-mounted server
-  * Mainly because I want to experiment using a server rack for the first time.
-  * It's enormous and weighs 60 lbs.
-  * It may turn out to be a terrible idea.
-* Dell Optiplex 3050 Micro (main workstation)
-  * In the meantime, a 17" test laptop is acting as the main workstation
+- 12 U server rack
+- HP DL380 G7 rack-mounted server
+  - Mainly because I want to experiment using a server rack for the first time.
+  - It's enormous and weighs 60 lbs.
+  - It may turn out to be a terrible idea.
+- Dell Optiplex 3050 Micro (main workstation)
+  - In the meantime, a 17" test laptop is acting as the main workstation
 
 ## TinyPilot's new office: the annoying stuff
 
@@ -167,15 +167,15 @@ HR stuff was more annoying and continues to drag on. I went with JustWorks based
 
 Here's my experience with JustWorks so far:
 
-* The JustWorks on-boarding process involved seven different people contacting me and asking the same questions, seemingly without any collaboration with anyone else on their team.
-* JustWorks obscures a huge hidden fee in that you're required to purchase worker's comp insurance from them, and you don't find out until a week into the signup process.
-* JustWorks, by default, sends you a poster of labor laws and then charges you $50. Customers can opt-out, but wow does it feel like JustWorks is nickel-and-diming me. If I'm paying $200/month for a team of four people, a cheap poster seems like the kind of thing JustWorks can throw in for free.
+- The JustWorks on-boarding process involved seven different people contacting me and asking the same questions, seemingly without any collaboration with anyone else on their team.
+- JustWorks obscures a huge hidden fee in that you're required to purchase worker's comp insurance from them, and you don't find out until a week into the signup process.
+- JustWorks, by default, sends you a poster of labor laws and then charges you $50. Customers can opt-out, but wow does it feel like JustWorks is nickel-and-diming me. If I'm paying $200/month for a team of four people, a cheap poster seems like the kind of thing JustWorks can throw in for free.
 
 The most frustrating part of JustWorks is that, for worker's comp insurance, they've classified my job as a [wholesale warehouse worker](https://www.wcribma.org/mass/ToolsAndServices/MACI/Results.aspx?class=8018). I'm in the same risk pool as people who move giant pallets around with a forklift. Even though I defined my job as purely computer work, the insurance rate on my pay is 3x higher than employees who actually perform manual work of assembling devices. When I tried to correct the rate, JustWorks kept insisting that they assigned me the correct code and refused to elaborate.
 
 I finally got on the phone with my account manager and explained to him that my job is limited to writing software and managing people, so it makes no sense to classify me as a warehouse worker. He was understanding and said he'd talk to the worker's comp team. A few days later, he relayed this message:
 
->The admin in this case has exposure to the product and the operations of the wholesale business even though the work that this person does is computer work in the office. This is why the client is getting the classification they are getting. The exposure to such disqualifies this employee from being simply a clerical employee.
+> The admin in this case has exposure to the product and the operations of the wholesale business even though the work that this person does is computer work in the office. This is why the client is getting the classification they are getting. The exposure to such disqualifies this employee from being simply a clerical employee.
 
 It's too hard to switch away from JustWorks at this point, but I plan to evaluate [Gusto](https://gusto.com/) and [OnPay](https://onpay.com/) at the end of the year.
 
@@ -213,13 +213,13 @@ All told, I spent about six hours of development time on this. It sounds small, 
 
 Will put together a great video, but we were both underwhelmed by the response. Here are the stats as of this writing:
 
-| Metric       | Value |
-|---------------|----|
-| YouTube views | 812 |
-| Mailing list signups | 17 |
-| Conversion rate | 2% |
+| Metric               | Value |
+| -------------------- | ----- |
+| YouTube views        | 812   |
+| Mailing list signups | 17    |
+| Conversion rate      | 2%    |
 
-After the video came out, I realized I had asked myself the wrong questions. While it was true that nobody had built a solution like this with a *Raspberry Pi*, there were already products that controled DSLRs from a phone or web browser. One company even holds [a patent](https://patents.google.com/patent/US9712688B2/en) claiming they invented the idea of controlling a camera over a computer network, so they could potentially sue me if I created a competing product.
+After the video came out, I realized I had asked myself the wrong questions. While it was true that nobody had built a solution like this with a _Raspberry Pi_, there were already products that controled DSLRs from a phone or web browser. One company even holds [a patent](https://patents.google.com/patent/US9712688B2/en) claiming they invented the idea of controlling a camera over a computer network, so they could potentially sue me if I created a competing product.
 
 I'm glad I had the foresight to keep all the DSLR code in [a separate, experimental branch](https://github.com/tiny-pilot/tinypilot/tree/experimental/dslr) of the codebase. Initially, I thought it was a small enough change that I could add it as a feature to the regular TinyPilot software. It's a good thing I didn't, as that would have introduced a ton of complexity to the code and cluttered the UI with a feature that 99% of my users don't want.
 
@@ -278,23 +278,23 @@ It's hard to take a lot of the Enterprise inquiries seriously, though. The inqui
 
 ### What got done?
 
-* Signed a lease on TinyPilot's first-ever office space.
-* Hired two new employees to staff the office part-time.
-* Documented about 50% of TinyPilot's internal processes for new employees.
-* Reached code complete on TinyPilot 1.5.0, adding virtual storage and support for tuning the video stream.
-* Published the blog post, ["How Litestream Eliminated My Database Server for $0.03/month"](https://mtlynch.io/litestream/).
+- Signed a lease on TinyPilot's first-ever office space.
+- Hired two new employees to staff the office part-time.
+- Documented about 50% of TinyPilot's internal processes for new employees.
+- Reached code complete on TinyPilot 1.5.0, adding virtual storage and support for tuning the video stream.
+- Published the blog post, ["How Litestream Eliminated My Database Server for $0.03/month"](https://mtlynch.io/litestream/).
 
 ### Lessons learned
 
-* Never commit to a new project during a live discussion.
-  * Even if it seems small, it's probably more complicated than it seems.
-  * I need more time to think over whether the work is worth the effort.
-* Allocate more time for change.
-  * TinyPilot is experiencing two major changes simultaneously: moving to our first office and training a new employee from scratch.
-  * I anticipated that both would take time, but I should have given myself more of a buffer to handle unanticipated tasks.
+- Never commit to a new project during a live discussion.
+  - Even if it seems small, it's probably more complicated than it seems.
+  - I need more time to think over whether the work is worth the effort.
+- Allocate more time for change.
+  - TinyPilot is experiencing two major changes simultaneously: moving to our first office and training a new employee from scratch.
+  - I anticipated that both would take time, but I should have given myself more of a buffer to handle unanticipated tasks.
 
 ### Goals for next month
 
-* Increase TinyPilot's revenue to $33k.
-* Fully migrate TinyPilot's operations to our new office.
-* Gather feedback on the table of contents for [*Refactoring English*](https://refactoringenglish.com) and iterate on it.
+- Increase TinyPilot's revenue to $33k.
+- Fully migrate TinyPilot's operations to our new office.
+- Gather feedback on the table of contents for [_Refactoring English_](https://refactoringenglish.com) and iterate on it.

@@ -1,14 +1,15 @@
 ---
 title: How I Collected a Debt from an Unscrupulous Merchant
 tags:
-- affiliate marketing
-- is it keto
-- conflict resolution
-date: '2020-08-13'
+  - affiliate marketing
+  - is it keto
+  - conflict resolution
+date: "2020-08-13"
 images:
   - collect-debt/cover.png
 description: Within two emails, a merchant went from blatant dismissal to full payment, and I owe it to The Organized Professional Method.
 ---
+
 A few years ago, I learned a handy technique for resolving disputes with uncooperative businesses. It's simple to understand and easy to implement. You don't need lawyers or a prominent social media presence. All it requires is for you to behave like an organized professional. This technique recently resolved a problem so effectively that I had to share the story.
 
 The conversation began with a merchant telling me in no uncertain terms that they refused to pay the money they owed me:
@@ -32,7 +33,7 @@ This strategy applies to businesses more generally. If a company mistreats you, 
 
 The biggest takeaway for me was Patrick's recommendations on the tone to maintain throughout the dispute:
 
->...you want to communicate with the bank in a manner which suggests that you're an organized professional who is capable of escalating the matter if the bank does not handle it themselves. You do not yell [...] You do not bluster [...] You instead present as if you're collecting a paper trail.
+> ...you want to communicate with the bank in a manner which suggests that you're an organized professional who is capable of escalating the matter if the bank does not handle it themselves. You do not yell [...] You do not bluster [...] You instead present as if you're collecting a paper trail.
 
 Patrick's recommendation resonated with me because I generally don't see value in yelling at people, but I also don't want to take shady business practices lying down.
 
@@ -70,11 +71,11 @@ Baffled by these stats, I reached out to Nini Perez, Kiss My Keto's affiliate ma
 
 At first, she told me that maybe my customers just click the links out of curiosity:
 
->It does happen. Sometimes, customers are curious and go to the site but leave without purchasing.
+> It does happen. Sometimes, customers are curious and go to the site but leave without purchasing.
 
 She also said something confusing:
 
->Other times, they try to purchase an item not qualified for a discount (subscribe & save, bundles or bread).
+> Other times, they try to purchase an item not qualified for a discount (subscribe & save, bundles or bread).
 
 Not qualified for a discount? Why should that matter?
 
@@ -88,7 +89,7 @@ First, Kiss My Keto's published policies say explicitly that their commissions a
 
 {{<img src="20pct-on-all.png" alt="Kiss My Keto's published guidelines say they pay 20% commission on all products" hasBorder="true" caption="Kiss My Keto's published rates claimed a 20% commission on all products with no mention of exceptions." maxWidth="650px">}}
 
-Secondly, bread is Kiss My Keto's flagship product. If you visit their website, they showcase bread so prominently that you'd think they're a bread store. A hidden exception for bread would be like if [Zappos](https://www.zappos.com) advertised a commission on all their products and then later said, "Oh, but we didn't mean *shoes*."
+Secondly, bread is Kiss My Keto's flagship product. If you visit their website, they showcase bread so prominently that you'd think they're a bread store. A hidden exception for bread would be like if [Zappos](https://www.zappos.com) advertised a commission on all their products and then later said, "Oh, but we didn't mean _shoes_."
 
 {{<img src="kmk-homepage.png" alt="Nini reports that Kiss My Keto pays no commission on sales of bread or during sitewide discounts" hasBorder="true" caption="Kiss My Keto's homepage features bread prominently." maxWidth="600px">}}
 
@@ -108,58 +109,58 @@ To me, the discrepancy between Kiss My Keto's published rates and their actual p
 
 I sent the following email to Alex Bird, Kiss My Keto's CEO and co-founder:
 
->Nini has been professional and courteous in working with me, but she is currently describing a Kiss My Keto policy that is unacceptable, so I'm reaching out to you to address it.
+> Nini has been professional and courteous in working with me, but she is currently describing a Kiss My Keto policy that is unacceptable, so I'm reaching out to you to address it.
 >
->According to Refersion stats, I've driven 120 visitors to Kiss My Keto through my referral links. I was surprised to see that after this many visitors, I had not been credited with any conversions.
+> According to Refersion stats, I've driven 120 visitors to Kiss My Keto through my referral links. I was surprised to see that after this many visitors, I had not been credited with any conversions.
 >
->When I asked Nini about this, she said that Kiss My Keto withholds payments based on exceptions that are not part of the published ambassador agreement. Specifically, Nini reported to me the following unpublished exceptions:
+> When I asked Nini about this, she said that Kiss My Keto withholds payments based on exceptions that are not part of the published ambassador agreement. Specifically, Nini reported to me the following unpublished exceptions:
 >
->* Purchases of bundles, subscriptions, and bread products do not qualify for commission
->* Purchases where the customer applies a sitewide discount do not qualify for commission
+> - Purchases of bundles, subscriptions, and bread products do not qualify for commission
+> - Purchases where the customer applies a sitewide discount do not qualify for commission
 >
->The Kiss My Keto ambassador page states that the affiliate program [pays 20% on sales of all Kiss My Keto products](20pct-on-all.png).
+> The Kiss My Keto ambassador page states that the affiliate program [pays 20% on sales of all Kiss My Keto products](20pct-on-all.png).
 >
->These exceptions also directly contradict messaging from Kiss My Keto. \[...\] On July 2nd, [Alec Mwali sent out an email](4th-of-july-codes.png) encouraging ambassadors to "boost \[our\] earnings" by sharing Kiss My Keto's 4th of July discount codes.
+> These exceptions also directly contradict messaging from Kiss My Keto. \[...\] On July 2nd, [Alec Mwali sent out an email](4th-of-july-codes.png) encouraging ambassadors to "boost \[our\] earnings" by sharing Kiss My Keto's 4th of July discount codes.
 >
->Kiss My Keto owes Is It Keto the agreed upon 20% of all customer orders to your site that originated from Is It Keto's referral link. This money is due to Is It Keto regardless of the product the customer purchased or the discount code that they applied, as the published agreement states a commission of 20% with no exceptions.
+> Kiss My Keto owes Is It Keto the agreed upon 20% of all customer orders to your site that originated from Is It Keto's referral link. This money is due to Is It Keto regardless of the product the customer purchased or the discount code that they applied, as the published agreement states a commission of 20% with no exceptions.
 
 I'm doing a few things in the email to adhere to The Organized Professional Method:
 
-* I make no threats, nor do I express anger.
-  * The most heated thing I say is that the policy is "unacceptable."
-* The email lays out facts that are objective and provably true.
-* I'm firm but polite in what I want.
-* Wherever possible, I used our businesses' names instead of saying "you" or "me."
-  * This was a cold, emotionless business issue, not a request to validate my feelings.
+- I make no threats, nor do I express anger.
+  - The most heated thing I say is that the policy is "unacceptable."
+- The email lays out facts that are objective and provably true.
+- I'm firm but polite in what I want.
+- Wherever possible, I used our businesses' names instead of saying "you" or "me."
+  - This was a cold, emotionless business issue, not a request to validate my feelings.
 
 After two weeks, Alex still hadn't responded, so I sent him this follow-up:
 
->I have not received a response from you in response to my email dated July 17th, 2020 regarding Kiss My Keto's failure to pay me its advertised commissions.
+> I have not received a response from you in response to my email dated July 17th, 2020 regarding Kiss My Keto's failure to pay me its advertised commissions.
 >
->If I do not receive a response by Friday, August 7th, 2020, I will assume that Kiss My Keto is not willing to honor the ambassador agreement, and I will seek other means to recover the money owed.
+> If I do not receive a response by Friday, August 7th, 2020, I will assume that Kiss My Keto is not willing to honor the ambassador agreement, and I will seek other means to recover the money owed.
 
 Things to notice:
 
-* I'm mentioning specific dates, which hints at building a paper trail.
-* The one-week deadline discourages Alex from deferring his response indefinitely.
-* I *hint* at legal action but don't explicitly threaten it.
-  * If they failed to pay, my plan was to file a complaint with the [Federal Trade Commission](https://www.ftc.gov) and reach out to other affiliates suggesting they do the same.
+- I'm mentioning specific dates, which hints at building a paper trail.
+- The one-week deadline discourages Alex from deferring his response indefinitely.
+- I _hint_ at legal action but don't explicitly threaten it.
+  - If they failed to pay, my plan was to file a complaint with the [Federal Trade Commission](https://www.ftc.gov) and reach out to other affiliates suggesting they do the same.
 
 ## "To put it blatantly, we are not paying you for your conversions"
 
 The next day, I received a response from Michael Herscu, Alex's co-founder:
 
->Nini, our ambassador manager tells me we have already paid you for the most recent conversions.
+> Nini, our ambassador manager tells me we have already paid you for the most recent conversions.
 >
->Now I'm being told you feel you are still owed for older campaigns that weren't tracked properly. To put it blatantly, we are not paying you for your conversions.
+> Now I'm being told you feel you are still owed for older campaigns that weren't tracked properly. To put it blatantly, we are not paying you for your conversions.
 >
->Here[sic] the thing Michael... We can't pull an arbitrary number out of a hat based on a number of conversions that you feel you were owed.
+> Here[sic] the thing Michael... We can't pull an arbitrary number out of a hat based on a number of conversions that you feel you were owed.
 >
->Nini spoke to Refersion and they told her 0 conversions out of 95 clicks is not impossible so it seems your traffic simply did not convert.
+> Nini spoke to Refersion and they told her 0 conversions out of 95 clicks is not impossible so it seems your traffic simply did not convert.
 >
->Is it possible your affiliate link wasn't working? Sure, anything is possible but Refersion assures us it's working so I think it's extremely unlikely this was the case.
+> Is it possible your affiliate link wasn't working? Sure, anything is possible but Refersion assures us it's working so I think it's extremely unlikely this was the case.
 >
->Do you have any proof of conversions that weren't tracked? If you do please share them here with me and we can address them. We will follow up with those customers to get to the bottom of the matter and of course, we will pay you out accordingly.
+> Do you have any proof of conversions that weren't tracked? If you do please share them here with me and we can address them. We will follow up with those customers to get to the bottom of the matter and of course, we will pay you out accordingly.
 
 There are a few things that are confusing about Herscu's email that I need to unpack.
 
@@ -169,13 +170,13 @@ Herscu also seems to misunderstand the real issue. He was acting as though it wa
 
 I responded a few hours later:
 
->The issue is not with Refersion's stats but with Kiss My Keto's policy.
+> The issue is not with Refersion's stats but with Kiss My Keto's policy.
 >
->Kiss My Keto's published Ambassador documentation states that Kiss My Keto pays "20% starting commission on sales of all Kiss My Keto products."
+> Kiss My Keto's published Ambassador documentation states that Kiss My Keto pays "20% starting commission on sales of all Kiss My Keto products."
 >
->On July 16th, Nini Perez stated in an email to me that there are exceptions to these terms. Specifically, Nini said that Kiss My Keto withholds commissions on sales of bread products or purchases made during a Kiss My Keto sitewide sale.
+> On July 16th, Nini Perez stated in an email to me that there are exceptions to these terms. Specifically, Nini said that Kiss My Keto withholds commissions on sales of bread products or purchases made during a Kiss My Keto sitewide sale.
 >
->Is the information that Nini reported to me accurate? If so, where is that information published? All official documentation I can find says that the payout is 20% on all sales.
+> Is the information that Nini reported to me accurate? If so, where is that information published? All official documentation I can find says that the payout is 20% on all sales.
 
 I intentionally steered the conversation away from stats, as I had no way to prove anything about Kiss My Keto's internal sales numbers, however dubious they might seem. By posing the question of published policies, I forced the conversation to a place where we share access to the same information.
 
@@ -189,11 +190,11 @@ That was a good sign. He asked what he can do to make me stop bothering him, so 
 
 I sent this response:
 
->I will consider this matter resolved if Kiss My Keto pays Is It Keto full commission based on the published Ambassador agreement.
+> I will consider this matter resolved if Kiss My Keto pays Is It Keto full commission based on the published Ambassador agreement.
 >
->Between June 16th and July 16th, Refersion's statistics show that Is It Keto referred 120 visitors to Kiss My Keto and received credit for 0 conversions. I expect Kiss My Keto to pay the full 20% commission on any conversions that were excluded based on Kiss My Keto's unpublished exceptions.
+> Between June 16th and July 16th, Refersion's statistics show that Is It Keto referred 120 visitors to Kiss My Keto and received credit for 0 conversions. I expect Kiss My Keto to pay the full 20% commission on any conversions that were excluded based on Kiss My Keto's unpublished exceptions.
 >
->If it's difficult for Kiss My Keto to review the purchase history in that way, I would accept $88 as a fair estimate of my owed commissions. This number is based on the fact that I've earned $26.60 on 36 referrals since July 17th, which is $0.73 per referral. Extrapolating that to 120 visitors yields $88.66.
+> If it's difficult for Kiss My Keto to review the purchase history in that way, I would accept $88 as a fair estimate of my owed commissions. This number is based on the fact that I've earned $26.60 on 36 referrals since July 17th, which is $0.73 per referral. Extrapolating that to 120 visitors yields $88.66.
 
 He responded a few days later, agreeing to pay me the $88:
 
@@ -207,14 +208,14 @@ Something changed on July 16th that was very much in my favor. Suddenly, Kiss My
 
 {{<img src="kmk-bread-purchase.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" maxWidth="600px">}}
 
-That was great news for me because it gave me hard numbers to extrapolate my missing sales. When I had zero commissions, Kiss My Keto could simply claim that none of the customers who came from my site completed purchases. Without access to their internal receipts, I'd have no evidence to argue. By flipping on commissions for bread, they gave me a view into what my commissions *should* have looked like the entire time.
+That was great news for me because it gave me hard numbers to extrapolate my missing sales. When I had zero commissions, Kiss My Keto could simply claim that none of the customers who came from my site completed purchases. Without access to their internal receipts, I'd have no evidence to argue. By flipping on commissions for bread, they gave me a view into what my commissions _should_ have looked like the entire time.
 
 Since the email exchange, I've collected more data, and now their accounting prior to July 16th seems even more suspect:
 
-| Period                  | Days      | Referrals | Credited purchases | Commissions |
-|-------------------------|-----------|-----------|--------------------|-------------|
-| Before emailing the CEO | 31        | 120       | 0                  | $0.00       |
-| After emailing the CEO  | 27        | 64        | 6                  | $57.48      |
+| Period                  | Days | Referrals | Credited purchases | Commissions |
+| ----------------------- | ---- | --------- | ------------------ | ----------- |
+| Before emailing the CEO | 31   | 120       | 0                  | $0.00       |
+| After emailing the CEO  | 27   | 64        | 6                  | $57.48      |
 
 {{<notice type="info">}}
 **Note**: Fewer Is It Keto readers clicked these links in the second half because I stopped featuring Kiss My Keto as prominently on my site. I've since removed all mention of Kiss My Keto, as I no longer have any interest in helping them earn money, regardless of what they pay me.
@@ -230,11 +231,11 @@ Even if Kiss My Keto thought my assertions were baseless and paid me $88 just to
 
 I use this method frequently. Sometimes it works, and sometimes it doesn't, but I always find it to be the least stressful way of addressing disputes. When a company engages in bad behavior, I think about these questions:
 
-* Who in the organization can solve this problem?
-* What are their incentives?
-* How can I demonstrate to them that I'm organized and capable of asserting my rights?
+- Who in the organization can solve this problem?
+- What are their incentives?
+- How can I demonstrate to them that I'm organized and capable of asserting my rights?
 
 ## Further reading
 
-* [My unabridged email exchange with Kiss My Keto](full-emails/)
-* ["Identity Theft, Credit Reports, and You"](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/): Patrick McKenzie's article that taught me these techniques
+- [My unabridged email exchange with Kiss My Keto](full-emails/)
+- ["Identity Theft, Credit Reports, and You"](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/): Patrick McKenzie's article that taught me these techniques

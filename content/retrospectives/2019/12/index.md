@@ -2,15 +2,15 @@
 title: I'm Probably Procrastinating
 description: I need to spend more time talking to customers.
 images:
-- /retrospectives/2019/12/revenue-graph.jpg
-date: '2019-12-05'
+  - /retrospectives/2019/12/revenue-graph.jpg
+date: "2019-12-05"
 ---
 
 ## Highlights
 
-* A change to Zestful's website boosted it to the front page of Google results within days.
-* I'm going to try to make a better version of a decades' old application for managing machine shops.
-* I'm doing lots of coding to avoid talking to customers.
+- A change to Zestful's website boosted it to the front page of Google results within days.
+- I'm going to try to make a better version of a decades' old application for managing machine shops.
+- I'm doing lots of coding to avoid talking to customers.
 
 ## Goal Grades
 
@@ -18,8 +18,8 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 
 ### Publish a new blog post about eliminating distractions from email and social media
 
-* **Result**: I published ["Eliminating Distractions from Social Media, Email, and StackOverflow"](/eliminate-distractions/)
-* **Grade**: A
+- **Result**: I published ["Eliminating Distractions from Social Media, Email, and StackOverflow"](/eliminate-distractions/)
+- **Grade**: A
 
 I published this post as planned but was surprised how little a response it generated. I've had a string of posts that I knew were too narrowly-focused to get widespread attention, but I thought a blog post about focus in the age of social media would attract more interest.
 
@@ -29,10 +29,10 @@ On the positive side, I've heard good feedback from the people who did read it. 
 
 ### Interview five customers for a potential new business
 
-* **Result**: Interviewed three customers
-* **Grade**: C
+- **Result**: Interviewed three customers
+- **Grade**: C
 
-In a *sense*, I had three customer interviews, but for a very generous definition of "customer interview." Only one was a true customer interview. Another was a general meeting with someone unlikely to become a customer, and the last was a brief in-person discussion and an invitation to follow up in December.
+In a _sense_, I had three customer interviews, but for a very generous definition of "customer interview." Only one was a true customer interview. Another was a general meeting with someone unlikely to become a customer, and the last was a brief in-person discussion and an invitation to follow up in December.
 
 Given that my only real goal for the month was to interview customers, three is very few. It's partially due to my aversion to sales and my tendency toward trying to solve problems with code. There's also a problem in that this requires networking, and it's hard to begin networking from a cold start.
 
@@ -51,7 +51,7 @@ Given that my only real goal for the month was to interview customers, three is 
 | AdSense Earnings          | $75.65       | $151.07       | <font color="green">+$75.42 (+100%)</font>   |
 | Amazon Affiliate Earnings | $159.02      | $118.00       | <font color="red">-$41.02 (-26%)</font>      |
 | Meal Plan Sales           | $23.87       | $0.00         | <font color="red">-$23.87 (-100%)</font>     |
-| **Total Revenue**        | **$258.54**  | **$269.07**   | **<font color="green">+$10.53 (+4%)</font>** |
+| **Total Revenue**         | **$258.54**  | **$269.07**   | **<font color="green">+$10.53 (+4%)</font>** |
 
 Things are improving a bit, but I think October-December is the worst time of year for diet-related websites. I'm expecting a huge surge in January, as people begin exploring the keto diet as part of New Year's resolutions.
 
@@ -62,7 +62,7 @@ Amazon Affiliate Earnings have dropped to their lowest levels since May, when tr
 {{<revenue-graph project="zestful">}}
 
 | Metric         | October 2019 | November 2019 | Change                                       |
-|----------------|--------------|---------------|----------------------------------------------|
+| -------------- | ------------ | ------------- | -------------------------------------------- |
 | Total Earnings | $3.89        | $65.33        | <font color="green">+$61.44 (+1,580%)</font> |
 
 Zestful has been picking up slowly over the last few months. I've had a few big months in the past, but it was usually from people using it for large, one-off tasks. Over the past few months, I've seen consistent, growing usage from several different users.
@@ -73,13 +73,13 @@ For the last few months, I've been exploring the possibility of selling meal pla
 
 In November, I tried a few more tweaks to the sales pages:
 
-* I added a photo to one of the meal plans
-* I added a customer testimonial
-* I removed the price from the "Download" button
+- I added a photo to one of the meal plans
+- I added a customer testimonial
+- I removed the price from the "Download" button
 
 None of those changes made any difference.
 
-It was particularly discouraging when clicks remained low even after I changed the text on the purchase button to "Download PDF." At that point, a user might assume that it's a free download, and they *still* weren't clicking.
+It was particularly discouraging when clicks remained low even after I changed the text on the purchase button to "Download PDF." At that point, a user might assume that it's a free download, and they _still_ weren't clicking.
 
 {{< img src="strip-price.jpg" alt="Before and after screenshots of removing price" caption="Removing price from download button" maxWidth="600px" hasBorder="True" >}}
 
@@ -119,13 +119,13 @@ I'm a bit skeptical because I've never seen any change affect Google rankings so
 
 ## But it's all procrastination
 
-So, tinkering with Zestful and Is It Keto *seems* productive, but it doesn't serve my high-level goal of finding a new, [big swing idea](/retrospectives/2019/10/#thinking-bigger). Looking back at the month, I spent too much time on coding tasks and too little time on prospecting customers.
+So, tinkering with Zestful and Is It Keto _seems_ productive, but it doesn't serve my high-level goal of finding a new, [big swing idea](/retrospectives/2019/10/#thinking-bigger). Looking back at the month, I spent too much time on coding tasks and too little time on prospecting customers.
 
 That said, the outputs do make it seem a little skewed. I did spend time attending events and researching companies, but I ended up eliminating most prospects, so there are fewer tangible outputs from those activities.
 
 ## The disconnect problem in finding software business ideas
 
-One of the big lightbulb moments I had in running my own business was reading the book [*Start Small, Stay Small*](https://smile.amazon.com/Start-Small-Stay-Developers-Launching/dp/0615373968/) by Rob Walling ([my notes](/book-reports/start-small-stay-small/)). He pointed out that the advantage of solo developers is that they can build solutions for niche audiences and still make money.
+One of the big lightbulb moments I had in running my own business was reading the book [_Start Small, Stay Small_](https://smile.amazon.com/Start-Small-Stay-Developers-Launching/dp/0615373968/) by Rob Walling ([my notes](/book-reports/start-small-stay-small/)). He pointed out that the advantage of solo developers is that they can build solutions for niche audiences and still make money.
 
 Walling gave the example of a company that makes accounting software specifically for freelance web developers. Despite huge competitors like QuickBooks or Xero, the specialty accounting software succeeds because web developers are willing to pay for a product that focuses on their specific needs. Walling's advice, therefore, is to write software for small niche businesses.
 
@@ -141,26 +141,26 @@ But there's the disconnect problem! If you're the owner of the custom auto shop,
 
 I, as the developer, don't have a way of discovering that the business owner has this problem because I don't know their workflows and pain points. I could ask them, of course, but it's sort of a strange proposition:
 
->**Me**: I'd like to sell you a software product to automate the expensive or tedious parts of running your business.
+> **Me**: I'd like to sell you a software product to automate the expensive or tedious parts of running your business.
 >
->**Business owner**: Great! What does your software do?
+> **Business owner**: Great! What does your software do?
 >
->**Me**: I don't know.
+> **Me**: I don't know.
 >
->**Business owner**: ...?
+> **Business owner**: ...?
 >
->**Me**: I don't know what software you need, so in order to find out, you have to spend a few hours teaching me, a stranger, about your business.
+> **Me**: I don't know what software you need, so in order to find out, you have to spend a few hours teaching me, a stranger, about your business.
 >
->**Business owner**: ...
+> **Business owner**: ...
 >
->**Me**: Also, there's a good chance I'll decide there isn't a profitable opportunity for me, so I'll end up not making anything that solves any of your problems.
+> **Me**: Also, there's a good chance I'll decide there isn't a profitable opportunity for me, so I'll end up not making anything that solves any of your problems.
 >
->**Business owner**: *[calls security]*
+> **Business owner**: _[calls security]_
 
-So, that's a bit of what I'm running into right now. There are probably plenty of businesses near me that would pay me to build them a software product, but I'm not aware that they exist. And when I find businesses that I *suspect* could benefit from a new software solution, I don't have a way of demonstrating my value to them until they spend a few hours explaining their work to me.
+So, that's a bit of what I'm running into right now. There are probably plenty of businesses near me that would pay me to build them a software product, but I'm not aware that they exist. And when I find businesses that I _suspect_ could benefit from a new software solution, I don't have a way of demonstrating my value to them until they spend a few hours explaining their work to me.
 
 {{<notice type="info">}}
-**Sidenote:** Maybe that auto shop example I made up is actually a good idea!<br><br>**Note to self**: *Research custom auto shops.*
+**Sidenote:** Maybe that auto shop example I made up is actually a good idea!<br><br>**Note to self**: _Research custom auto shops._
 {{< /notice >}}
 
 ## Interviewing machine shops
@@ -202,21 +202,22 @@ Web developer [Bruno Simon](https://bruno-simon.com/) made his portfolio page in
 
 ### What got done?
 
-* Rewrote the Zestful website in Nuxt + Vue, so now it's pre-rendered and SEO-friendly.
-* Published the blog post ["Eliminating Distractions from Social Media, Email, and StackOverflow"](/eliminate-distractions/)
-* Refactored my Jinja templates on Is It Keto, which revealed some bugs and allowed me to clean up [some of the UI](https://imgur.com/sQV6kCq).
-* Reviewed and published four new articles on Is It Keto.
+- Rewrote the Zestful website in Nuxt + Vue, so now it's pre-rendered and SEO-friendly.
+- Published the blog post ["Eliminating Distractions from Social Media, Email, and StackOverflow"](/eliminate-distractions/)
+- Refactored my Jinja templates on Is It Keto, which revealed some bugs and allowed me to clean up [some of the UI](https://imgur.com/sQV6kCq).
+- Reviewed and published four new articles on Is It Keto.
 
 ### Lessons learned
 
-* Stop procrastinating, and go talk to more customers.
-* Server-side rendering seems to make a huge difference in search engine rankings.
+- Stop procrastinating, and go talk to more customers.
+- Server-side rendering seems to make a huge difference in search engine rankings.
 
 ### Goals for next month
 
-* Conduct five customer interviews.
-* Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-static).
-* Publish two new Is It Keto articles.
+- Conduct five customer interviews.
+- Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-static).
+- Publish two new Is It Keto articles.
 
 ---
-*Auto shop photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/auto-shop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).*
+
+_Auto shop photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/auto-shop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._

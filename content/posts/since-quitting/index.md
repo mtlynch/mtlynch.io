@@ -5,13 +5,13 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17186865
   indie_hackers: https://www.indiehackers.com/forum/i-quit-google-to-become-a-full-time-indie-hacker-four-months-later-2341bcb1f6
 tags:
-- entrepreneurship
-- space duck
-- sia
-- google
-date: '2018-05-29'
+  - entrepreneurship
+  - space duck
+  - sia
+  - google
+date: "2018-05-29"
 images:
-- since-quitting/so-stressed.jpg
+  - since-quitting/so-stressed.jpg
 ---
 
 I worked as a software engineer for Google from 2014 to 2018. On February 1st, I [quit my job](/why-i-quit-google/) and formed my own single-person software company.
@@ -26,7 +26,7 @@ For the first few days, I kept thinking, "Woohoo! I'm free!" It was like startin
 
 Now, it just feels normal. Enjoyable, but normal.
 
-It seems weird to me that I ever had an office job. It's like remembering the experience of high school. "I sat listening to people talk for *six hours a day*? And then I had to go home and do more work?" I know that it happened, but it seems so foreign to me now.
+It seems weird to me that I ever had an office job. It's like remembering the experience of high school. "I sat listening to people talk for _six hours a day_? And then I had to go home and do more work?" I know that it happened, but it seems so foreign to me now.
 
 The best part of quitting has been how much control I have over my time. I structure my day however I want, and there's no friction when I change my schedule. If I feel like going for a run at 3 o'clock in the afternoon, I just go for a run. I'm not going to miss a meeting or hold up anyone's work.
 
@@ -60,29 +60,29 @@ One of the people who reached out to me was Stephanie Hurlburt. She's the co-fou
 
 She sent me a kind message about the post and offered her availability if I ever wanted advice. I had been following Stephanie for months before she reached out to me, and I knew that she received a high volume of messages. I asked her how she managed them, and she shared this helpful suggestion:
 
->...it is 100% okay to take a month or more to respond to someone, and expect a response back. It is even okay to take a year to respond to someone, but maybe don't expect a response back then (they've probably moved on to other things). So in other words, you don't need to tackle every message as it comes in, you can have a day a month where you just power through them.
+> ...it is 100% okay to take a month or more to respond to someone, and expect a response back. It is even okay to take a year to respond to someone, but maybe don't expect a response back then (they've probably moved on to other things). So in other words, you don't need to tackle every message as it comes in, you can have a day a month where you just power through them.
 >
->-Stephanie Hurlburt ([@sehurlburt](https://twitter.com/sehurlburt))
+> -Stephanie Hurlburt ([@sehurlburt](https://twitter.com/sehurlburt))
 
 Her advice might sound simple, but it was very freeing. I typically respond to people in a day or two, so having a backlog of hundreds of messages and emails made me feel perpetually behind.
 
 After I spoke to Stephanie, I felt like I had permission to take my time. I shifted my focus back to my software projects but set aside time every few days to answer a specific number of messages like five emails or 10 Twitter messages.
 
 {{<notice type="info">}}
-**Sidenote**: Stephanie *said*  it was okay to delay responses for a month, but she wrote me a thoughtful three-paragraph reply within minutes of my question. It's possible that she's tricking me so that she can maintain her position as the most helpful person on Twitter.
+**Sidenote**: Stephanie _said_ it was okay to delay responses for a month, but she wrote me a thoughtful three-paragraph reply within minutes of my question. It's possible that she's tricking me so that she can maintain her position as the most helpful person on Twitter.
 {{< /notice >}}
 
 Stephanie also pointed out that it's not realistic to respond to every single message. I still feel guilty when I ignore an email, but I found that getting out of the mindset of prompt responses helped me detach a bit and make rational choices about which messages to answer. For example, if someone writes me with questions about [finding a blog cartoonist](/how-to-hire-a-cartoonist/), that's fun for me to talk about because not many bloggers work with cartoonists. I'll answer that email ahead of one that asks me more general questions about getting hired at Google.
 
 ## Managing stress
 
-Before quitting, I kept hearing stories about how starting even a small business causes severe stress. I thought, "I'm sure that's true for *them*, but I'm going to be spending every day in my pajamas. How stressed will I really be?"
+Before quitting, I kept hearing stories about how starting even a small business causes severe stress. I thought, "I'm sure that's true for _them_, but I'm going to be spending every day in my pajamas. How stressed will I really be?"
 
 {{< img src="so-stressed.jpg" alt="The stresses of my daily life after quitting my job" maxWidth="800px" >}}
 
 But they were right. I did feel stress. Not about the things they warned me about like money or customers. I was stressing about self-imposed deadlines that nobody else cared about. They gave me more anxiety than any external deadline I ever had at Google.
 
-The problem was that I took on too many projects. While I was an employee, eight hours a day in the office felt like an eternity. I reasoned that eliminating my hours in the office would give me eternal *free* time.
+The problem was that I took on too many projects. While I was an employee, eight hours a day in the office felt like an eternity. I reasoned that eliminating my hours in the office would give me eternal _free_ time.
 
 Tragically, I found myself still limited to the standard 24 hours per day. But I kept saying yes to new opportunities because each one seemed small in isolation. After a few weeks, I had taken on so many little tasks that I wasn't making progress on any of them.
 
@@ -116,7 +116,7 @@ Throwing away junk words is harder than it looks. I initially solved this by wri
 
 But what about "dash?" It's an informal unit of measurement ("a dash of cinnamon"), but there's also a popular seasoning called [Mrs. Dash](https://smile.amazon.com/Mrs-Dash-Natural-Seasoning-Original/dp/B00U9WHH78/). Okay, I'll refine the rule to, "throw away units of measurement unless it's 'dash' preceded by 'Mrs.'"
 
-That rule doesn't always work either. One recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "*Ms.* Dash."
+That rule doesn't always work either. One recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "_Ms._ Dash."
 
 {{< img src="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash." maxWidth="726px" linkUrl="https://www.ruled.me/low-carb-corndogs/" >}}
 
@@ -128,17 +128,17 @@ I needed a more flexible way for KetoHub to process ingredients.
 
 ## New project: Ingredient parsing as a service
 
-Early in KetoHub's life, a commenter on Indie Hackers [showed me](https://www.indiehackers.com/forum/ketohub-month-2-report-1229ddb803?commentId=-L-clmWeoqUnFcAzTi5t) a blog post describing how *The New York Times* [used machine learning](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) to parse ingredients from the *Times'* historical archive of recipes.
+Early in KetoHub's life, a commenter on Indie Hackers [showed me](https://www.indiehackers.com/forum/ketohub-month-2-report-1229ddb803?commentId=-L-clmWeoqUnFcAzTi5t) a blog post describing how _The New York Times_ [used machine learning](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) to parse ingredients from the _Times'_ historical archive of recipes.
 
 {{< img src="nyt-parser.png" alt="Visualization of New York Times results" caption="Visualization of *The New York Times*' ingredient parser results" maxWidth="509px" >}}
 
 That sounded neat but felt like overkill for my little recipe aggregator site. It would be like launching a home cleaning startup because your bathroom was dirty. It might solve the problem, but the solution was bigger than the issue it addressed.
 
-Then I had a realization: what if ingredient parsing *is* the business?
+Then I had a realization: what if ingredient parsing _is_ the business?
 
 KetoHub was a fun project, but I still hadn't found a way to monetize it. If parsing ingredients was a problem for KetoHub, maybe it was a problem for other apps. There were existing services that offered ingredient parsing, but each one I evaluated was either inaccurate or mandated prohibitively strict usage terms.
 
-I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer), to begin experimenting with the *Times'* technique for parsing ingredients. Her initial results were promising, so we spent a few weeks going down the rabbit hole of machine learning and natural language processing.
+I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer), to begin experimenting with the _Times'_ technique for parsing ingredients. Her initial results were promising, so we spent a few weeks going down the rabbit hole of machine learning and natural language processing.
 
 We now have a [working demo](https://zestfuldata.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break it down into structured components:
 
@@ -150,4 +150,4 @@ If you're a developer with an app that handles recipe ingredients or you know of
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Space Duck logo by [Marina Mocanu](https://pour-trait.ro/).*
+_Illustrations by [Loraine Yow](https://www.lolo-ology.com/). Space Duck logo by [Marina Mocanu](https://pour-trait.ro/)._

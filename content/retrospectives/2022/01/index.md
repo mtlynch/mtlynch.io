@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* I've launched a new TinyPilot product and debuted a new logo.
-* TinyPilot's revenue finished the year strong at $55k for December.
-* I've learned to manage design projects more aggressively.
+- I've launched a new TinyPilot product and debuted a new logo.
+- TinyPilot's revenue finished the year strong at $55k for December.
+- I've learned to manage design projects more aggressively.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Launch the Voyager 2
 
-* **Result**: Launched the Voyager 2
-* **Grade**: A
+- **Result**: Launched the Voyager 2
+- **Grade**: A
 
 After many months of hard work, I finally launched the Voyager 2 last month.
 
 ### Launch TinyPilot's rebrand
 
-* **Result**: Debuted TinyPilot's new logo
-* **Grade**: B
+- **Result**: Debuted TinyPilot's new logo
+- **Grade**: B
 
 I haven't quite finished the rebrand, but I've published TinyPilot's new logo, which is 80% of what I want out of the rebrand.
 
 ### Build up enough inventory that TinyPilot isn't scrambling to meet demand
 
-* **Result**: We're no longer in emergency mode, but we're still scrambling a bit.
-* **Grade**: B
+- **Result**: We're no longer in emergency mode, but we're still scrambling a bit.
+- **Grade**: B
 
 I raised prices slightly on the Voyager 2, and that seems to have slowed down sales enough that we can catch up and build a small buffer of inventory.
 
@@ -62,15 +62,15 @@ I've been working on the Voyager 2 since March 2021. I originally expected it to
 The Voyager 2 brings a tidier form factor. The Voyager 1 had an external power connector that sat outside the main device and required three different cables. The Voyager 2 eliminates that component so that everything is in a single unit.
 
 {{<gallery caption="The TinyPilot Voyager 1 (left) had an external component to expose the power and data ports. The TinyPilot Voyager 2 (right) eliminates the external component so that everything fits in a single unit.">}}
-  {{<img src="voyager-1-power-connector.jpg" alt="TinyPilot's new logo" maxWidth="400px">}}
-  {{<img src="voyager2-angled.jpg" alt="TinyPilot's new logo" maxWidth="400px">}}
+{{<img src="voyager-1-power-connector.jpg" alt="TinyPilot's new logo" maxWidth="400px">}}
+{{<img src="voyager2-angled.jpg" alt="TinyPilot's new logo" maxWidth="400px">}}
 {{</gallery>}}
 
 Honestly, the launch felt a little anticlimactic. While it's more convenient to eliminate the external power connector, I struggled to write [the announcement](https://tinypilotkvm.com/blog/introducing-voyager-2) in a way that sounded exciting. It felt silly to say, "Brand new version! It's exactly the same except without a separate box!"
 
 But it does simplify things. The Voyager 1 came with six distinct parts &mdash; the Voyager 2 requires only three. That improves the installation experience for the user and the fulfillment process for TinyPilot's staff.
 
-I'm still excited for the power over Ethernet (PoE) version, which is due to launch this month. Even though it's still just a difference of cables, eliminating the whole power plug makes a big difference in convenience. Plus, I just love PoE. Anytime I plug in a PoE device, and it turns on *just from the network cable*, it feels magical.
+I'm still excited for the power over Ethernet (PoE) version, which is due to launch this month. Even though it's still just a difference of cables, eliminating the whole power plug makes a big difference in convenience. Plus, I just love PoE. Anytime I plug in a PoE device, and it turns on _just from the network cable_, it feels magical.
 
 ## TinyPilot's new logo and learning to work with designers
 
@@ -165,18 +165,18 @@ It was a slow month for Hit the Front Page of Hacker News. Not a lot of technica
 
 ### What got done?
 
-* Launched [TinyPilot Voyager 2](https://tinypilotkvm.com/blog/introducing-voyager-2).
-* Debuted TinyPilot's new logo.
-* Migrated employee payroll from Justworks to Gusto.
+- Launched [TinyPilot Voyager 2](https://tinypilotkvm.com/blog/introducing-voyager-2).
+- Debuted TinyPilot's new logo.
+- Migrated employee payroll from Justworks to Gusto.
 
 ### Lessons learned
 
-* Define expectations with designers and enforce them consistently.
-  * The firm I hired creates high-quality designs, but I let myself get into a position where I had no usable work after three months and $16k.
-  * What I should have done was more aggressively insist on a structure that facilitated iterative design.
+- Define expectations with designers and enforce them consistently.
+  - The firm I hired creates high-quality designs, but I let myself get into a position where I had no usable work after three months and $16k.
+  - What I should have done was more aggressively insist on a structure that facilitated iterative design.
 
 ### Goals for next month
 
-* Launch Voyager 2: PoE Edition
-* Write a job description for TinyPilot support engineer and begin interviewing candidates.
-* Publish my fourth [annual retrospective](/tags/annual-review/)
+- Launch Voyager 2: PoE Edition
+- Write a job description for TinyPilot support engineer and begin interviewing candidates.
+- Publish my fourth [annual retrospective](/tags/annual-review/)

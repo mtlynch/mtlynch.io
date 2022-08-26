@@ -3,14 +3,14 @@ title: "Is It Keto: Month 11"
 date: 2020-05-03T22:01:20-04:00
 description: Can I remix my original content to create 1000x as many pages?
 images:
-- /retrospectives/2020/05/isitketo-ga.png
+  - /retrospectives/2020/05/isitketo-ga.png
 ---
 
 ## Highlights
 
-* Two of my blog posts reached the front page of Hacker News.
-* I may have finally discovered a way to scale my keto site profitably.
-* I'm putting Portfolio Rebalancer on the backburner due to lack of traction.
+- Two of my blog posts reached the front page of Hacker News.
+- I may have finally discovered a way to scale my keto site profitably.
+- I'm putting Portfolio Rebalancer on the backburner due to lack of traction.
 
 ## Goal Grades
 
@@ -18,24 +18,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Conduct five customer interviews for the portfolio rebalancer
 
-* **Result**: Conducted zero customer interviews.
-* **Grade**: F
+- **Result**: Conducted zero customer interviews.
+- **Grade**: F
 
 I deprioritized the portfolio rebalancer in favor of Is It Keto. I'll explain why [below](#portfolio-rebalancer-has-lots-of-visitors-but-no-sales).
 
 ### Implement customer payments for the portfolio rebalancer
 
-* **Result**: Implemented a Stripe payment flow.
-* **Grade**: A
+- **Result**: Implemented a Stripe payment flow.
+- **Grade**: A
 
 I successfully implemented a subscription payment workflow for the first time ever. I expected a simple two-day process, but it took me about three weeks to get everything working.
 
 ### Publish one new blog post
 
-* **Result**: Published two new blog posts, both of which reached the front page of Hacker News.
-* **Grade**: A
+- **Result**: Published two new blog posts, both of which reached the front page of Hacker News.
+- **Grade**: A
 
-While integrating with Stripe, I noticed that their JavaScript library [collected user data from my site](/stripe-recording-its-customers/). My blog post about the issue [reached #1 on Hacker News](https://news.ycombinator.com/item?id=22936818) and prompted [a response from Stripe's CEO](https://news.ycombinator.com/item?id=22937303). *The Register* also [interviewed me](https://www.theregister.co.uk/2020/04/22/stripe_defends_mouse_measuring_javascript/) about the story.
+While integrating with Stripe, I noticed that their JavaScript library [collected user data from my site](/stripe-recording-its-customers/). My blog post about the issue [reached #1 on Hacker News](https://news.ycombinator.com/item?id=22936818) and prompted [a response from Stripe's CEO](https://news.ycombinator.com/item?id=22937303). _The Register_ also [interviewed me](https://www.theregister.co.uk/2020/04/22/stripe_defends_mouse_measuring_javascript/) about the story.
 
 Stripe made several changes the week following my post, and I published [a follow-up](/stripe-update/) with my thoughts. That post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more muted response](http://hnrankings.info/23034924/).
 
@@ -43,14 +43,14 @@ Stripe made several changes the week following my post, and I published [a follo
 
 ### Portfolio Rebalancer
 
-| Metric | April 2020 |
-|--------|------------|
-| Unique Visitors | 1,081 |
-| Total Pageviews | 2,279 |
-| User Signups | 12 |
-| Free Trials Initiated | 0 |
-| Paid Subscriptions Initiated | 0 |
-| New revenue       | $0 |
+| Metric                       | April 2020 |
+| ---------------------------- | ---------- |
+| Unique Visitors              | 1,081      |
+| Total Pageviews              | 2,279      |
+| User Signups                 | 12         |
+| Free Trials Initiated        | 0          |
+| Paid Subscriptions Initiated | 0          |
+| New revenue                  | $0         |
 
 For its first full month of existence, Portfolio Rebalancer achieved a healthy 1.1k visitors.
 
@@ -67,7 +67,7 @@ Unfortunately, it ended the month with a revenue of $0 and no signs of increasin
 | Domain Rating (Ahrefs)    | 26.0        | 27.0        | <font color="green">+1.0 (+4%)</font>        |
 | AdSense Earnings          | $195.85     | $92.09      | <font color="red">-$103.76 (-53%)</font>     |
 | Amazon Affiliate Earnings | $166.43     | $128.39     | <font color="red">-$38.04 (-23%)</font>      |
-| **Total Revenue**        | **$362.28** | **$220.48** | **<font color="red">-$141.80 (-39%)</font>** |
+| **Total Revenue**         | **$362.28** | **$220.48** | **<font color="red">-$141.80 (-39%)</font>** |
 
 Is It Keto took a big hit in March amid COVID-19 panic, but it's been growing consistently every week since then.
 
@@ -105,16 +105,16 @@ My friend predicted that if Google didn't like my auto-generated content, it's m
 
 My discovery about auto-generated content got me excited about Is It Keto again. It's been successful at attracting visitors, but I was never able to find a way to make growth profitable. [Hiring writers](/hiring-content-writers/) costs me $50-100 per article, but articles typically earn less than $1/month in revenue, so I could never figure out how to scale the site.
 
-Page generation would be a gamechanger because it substantially lowers my costs. The cost would be *so* low that I could produce articles in the "long tail" of Google queries that nobody else would bother creating. For example, if you Google "are pringles keto?" none of the results directly address the question.
+Page generation would be a gamechanger because it substantially lowers my costs. The cost would be _so_ low that I could produce articles in the "long tail" of Google queries that nobody else would bother creating. For example, if you Google "are pringles keto?" none of the results directly address the question.
 
 {{< gallery caption="Nobody has written articles about whether pringles are keto because the search volume is too low." >}}
-  {{< img src="pringles-search.png" alt="Google search result for 'are pringles keto?'" maxWidth="375px" hasBorder="true" >}}
-  {{< img src="pringles-planner.png" alt="Google keywords planner results for pringles and keto related searches" maxWidth="450px" hasBorder="true" >}}
+{{< img src="pringles-search.png" alt="Google search result for 'are pringles keto?'" maxWidth="375px" hasBorder="true" >}}
+{{< img src="pringles-planner.png" alt="Google keywords planner results for pringles and keto related searches" maxWidth="450px" hasBorder="true" >}}
 {{</ gallery >}}
 
 According to Google's [keyword planner](https://ads.google.com/home/tools/keyword-planner/), there are only ~70 searches per month for searches like "are pringles keto?" Whoever took the #1 spot would only get ~50 clicks per month. Is It Keto earns ~$0.01 per visitor, meaning the Pringles article would bring in about $6 per year. It's hard to justify the time or cost of crafting a dedicated article for so few readers.
 
-The equation changes if I can generate entire *batches* of articles with roughly the same effort other authors take to generate one article. There are probably 25 different brands and varieties of potato chips that have similar search traffic. If I make a template that covers them all, that's $150 per year in extra revenue, which is a lot more appealing. I can likely re-use most of the content for chips for 1,000 other snack foods, so maybe that's an extra $6k year in revenue. And then what happens when I can do that with 10 other food categories?
+The equation changes if I can generate entire _batches_ of articles with roughly the same effort other authors take to generate one article. There are probably 25 different brands and varieties of potato chips that have similar search traffic. If I make a template that covers them all, that's $150 per year in extra revenue, which is a lot more appealing. I can likely re-use most of the content for chips for 1,000 other snack foods, so maybe that's an extra $6k year in revenue. And then what happens when I can do that with 10 other food categories?
 
 ## Other examples of long-tail SEO
 
@@ -128,9 +128,9 @@ According to [Ahrefs' backlink checker](https://ahrefs.com/backlink-checker), th
 
 ## I finally have an unfair advantage
 
-[*Startup*](https://gimletmedia.com/startup/) is one of my favorite podcasts, and I often think back to this moment in one of the early episodes where the podcast's host and founder was seeking investment from Chris Sacca, a well-known venture capital investor. Sacca asks the host:
+[_Startup_](https://gimletmedia.com/startup/) is one of my favorite podcasts, and I often think back to this moment in one of the early episodes where the podcast's host and founder was seeking investment from Chris Sacca, a well-known venture capital investor. Sacca asks the host:
 
->I want to invest in companies that have an unfair advantage. What's your unfair advantage?
+> I want to invest in companies that have an unfair advantage. What's your unfair advantage?
 
 One of the reasons I keep abandoning Is It Keto is that it's never played to my strengths. I write well, but too many other keto sites have good writers for me to win on that front. I consider myself a good developer, but software has never played a key role in the site. A non-developer could have produced essentially the same thing with WordPress or Squarespace.
 
@@ -158,11 +158,11 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 {{<revenue-graph project="zestful">}}
 
-| Metric             | March 2020 | April 2020 | Change                                         |
-| ------------------ | ---------- | ---------- | ---------------------------------------------- |
-| Unique Visitors    | 291        | 1,142      | <font color="green">+851 (+292%)</font>        |
-| Total Pageviews    | 843        | 2,960      | <font color="green">+2,117 (+251%)</font>      |
-| RapidAPI Earnings  | $3.67      | $32.19     | <font color="green">+$28.52 (+777%)</font>     |
+| Metric            | March 2020 | April 2020 | Change                                         |
+| ----------------- | ---------- | ---------- | ---------------------------------------------- |
+| Unique Visitors   | 291        | 1,142      | <font color="green">+851 (+292%)</font>        |
+| Total Pageviews   | 843        | 2,960      | <font color="green">+2,117 (+251%)</font>      |
+| RapidAPI Earnings | $3.67      | $32.19     | <font color="green">+$28.52 (+777%)</font>     |
 | **Total Revenue** | **$3.67**  | **$32.19** | **<font color="green">+$28.52 (+777%)</font>** |
 
 Zestful had an odd jump in traffic because a Chinese blog published an unauthorized translation of my article, ["My Second Year as a Solo Developer,"](/solo-developer-year-2/) and I guess it gained enough traction that people clicked through to Zestful. It didn't seem to translate into any sales, though.
@@ -185,8 +185,8 @@ Users sign up and then immediately abandon the app. Sometimes they'll post updat
 
 I suspect two main causes:
 
-* Lack of onboarding
-* Failure to support habit-building
+- Lack of onboarding
+- Failure to support habit-building
 
 One of the most valuable pieces of feedback [my friend DK](https://www.dkthehuman.com/) gave me after testing out my app was that the signup process [left him feeling lost](https://youtu.be/JnAAkjS4x6k?t=430). The [first thing](https://youtu.be/JnAAkjS4x6k?t=240) a user sees after registering is a giant blank textbox and vague instructions about how to fill it. I could certainly do more to help the user create updates in smaller, incremental steps so that it doesn't feel like such an overwhelming task.
 
@@ -206,24 +206,24 @@ The series itself is a fantastic example of elegant content marketing. Throughou
 
 Companies often get this backward; they start with their own product and show you all the ways it can help you. That turns people off because the company hasn't yet earned the viewer's trust, so the content just feels like advertising.
 
-Ahrefs [is undecided](https://twitter.com/slagter/status/1240197698525028352) about how long the course will remain free,  so I've archived my copy for future reference.
+Ahrefs [is undecided](https://twitter.com/slagter/status/1240197698525028352) about how long the course will remain free, so I've archived my copy for future reference.
 
 ## Wrap up
 
 ### What got done?
 
-* Published two blog posts that reached the front page of Hacker News.
-  * This continues my lucky streak on Hacker News with [five frontpage articles in the last four months](https://news.ycombinator.com/from?site=mtlynch.io).
-* Launched the paid version of [Portfolio Rebalancer](https://assetrebalancer.com).
-* Put infrastructure in place to generate new [Is It Keto](https://isitketo.org) articles automatically.
+- Published two blog posts that reached the front page of Hacker News.
+  - This continues my lucky streak on Hacker News with [five frontpage articles in the last four months](https://news.ycombinator.com/from?site=mtlynch.io).
+- Launched the paid version of [Portfolio Rebalancer](https://assetrebalancer.com).
+- Put infrastructure in place to generate new [Is It Keto](https://isitketo.org) articles automatically.
 
 ### Lessons learned
 
-* Traffic is a vanity metric.
-* Auto-generating pages in a useful way gives developer-authors an advantage over authors who use generic publishing platforms like WordPress.
-  * This is still a theory, so we'll see if I can make it work.
+- Traffic is a vanity metric.
+- Auto-generating pages in a useful way gives developer-authors an advantage over authors who use generic publishing platforms like WordPress.
+  - This is still a theory, so we'll see if I can make it work.
 
 ### Goals for next month
 
-* Add 100 new articles to Is It Keto (a ~50% increase in the current corpus size).
-* Publish one new blog post.
+- Add 100 new articles to Is It Keto (a ~50% increase in the current corpus size).
+- Publish one new blog post.

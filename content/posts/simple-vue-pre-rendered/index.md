@@ -2,12 +2,12 @@
 title: A Simple Pre-Rendered Web App Using Vue + Nuxt
 description: The easiest way to improve social sharing and SEO for a single-page app.
 tags:
-- vue
-- nuxt
-- SPAs
-date: '2019-12-19'
+  - vue
+  - nuxt
+  - SPAs
+date: "2019-12-19"
 images:
-- simple-vue-pre-rendered/og-cover.jpg
+  - simple-vue-pre-rendered/og-cover.jpg
 ---
 
 In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue without forfeiting critical features like social sharing or search engine optimization.
@@ -112,15 +112,13 @@ The first file defines a page in the web app. The `pages/` folder has special me
   <div>
     <h1>Hello, world!</h1>
     <p>I'm an example of a pre-rendered Vue webpage.</p>
-    <button v-on:click="count++">
-      I have been clicked {{ count }} times
-    </button>
+    <button v-on:click="count++">I have been clicked {{ count }} times</button>
   </div>
 </template>
 
 <script>
   export default {
-    data: function() {
+    data: function () {
       return {
         count: 0,
       };
@@ -227,8 +225,7 @@ This page uses Vue hooks to display information about how the page was rendered.
     <h1>About this Build</h1>
     <p v-if="buildTime">
       Nuxt pre-rendered this page at
-      <b>{{ buildTime }}</b> (before the browser ever saw
-      it).
+      <b>{{ buildTime }}</b> (before the browser ever saw it).
     </p>
     <template v-else>
       <p>
@@ -260,7 +257,7 @@ This page uses Vue hooks to display information about how the page was rendered.
     },
     // Vue evaluates data variables at page render time and again every time the
     // browser loads this page.
-    data: function() {
+    data: function () {
       return {
         loadTime: new Date().toUTCString(),
       };
@@ -310,9 +307,7 @@ When Nuxt pre-renders the site, the server executes the `asyncData` method. In t
 When you navigate to the `/about` path from a different page on the site, the browser executes the `asyncData` method on page load. `process.client` is now non-null because the code is running client-side, so the method never defines `buildTime` and Vue renders the page template for when `buildTime` is undefined:
 
 ```html
-<p v-if="buildTime">
-  ...
-</p>
+<p v-if="buildTime">...</p>
 <template v-else>
   <p>
     Vue generated this page client-side because you navigated here from another

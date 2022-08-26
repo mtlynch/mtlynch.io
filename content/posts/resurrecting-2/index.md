@@ -1,27 +1,27 @@
 ---
-title: 'Resurrecting a Dead Library: Part Two - Stabilization'
+title: "Resurrecting a Dead Library: Part Two - Stabilization"
 tags:
-- zestful
-- docker
-- testing
-- ingredient-phrase-tagger
-- ingredient parsing
+  - zestful
+  - docker
+  - testing
+  - ingredient-phrase-tagger
+  - ingredient parsing
 description: Using Docker to get a legacy library under test in continuous integration
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17698145
   reddit: https://www.reddit.com/r/programming/comments/95219m/resurrecting_a_dead_library_stabilization/
-date: '2018-08-06'
+date: "2018-08-06"
 images:
-- resurrecting-2/cover.jpg
+  - resurrecting-2/cover.jpg
 ---
 
 In this post, I demonstrate how to retrofit automated tests onto an untested legacy library.
 
 This is part two of a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse cooking ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
 
-* [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
-* **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
-* [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
+- [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
+- **Part Two: Stabilization (this post)** - In which I prevent functionality from regressing while I restore the code
+- [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
 
 {{< img src="cover.jpg" alt="Beavers stabilizing shaky house" maxWidth="800px" >}}
 
@@ -249,9 +249,9 @@ $ crf_learn --help
 
 The `--thread` flag looked interesting. I checked the [full documentation](https://taku910.github.io/crfpp/) for more details:
 
->-p NUM:
+> -p NUM:
 >
->If the PC has multiple CPUs, you can make the training faster by using multi-threading. NUM is the number of threads.
+> If the PC has multiple CPUs, you can make the training faster by using multi-threading. NUM is the number of threads.
 
 This sounded promising.
 
@@ -286,14 +286,14 @@ With the end-to-end test in place and continuous integration running, I had an a
 
 With the confidence from my test, it was time for my favorite part of a software project: refactoring. I was free to make large-scale changes to the code because I knew the build would break loudly if I did anything too stupid.
 
-Read on for [part three](/resurrecting-3/)  of this series, where I describe how I:
+Read on for [part three](/resurrecting-3/) of this series, where I describe how I:
 
-* added unit tests
-* applied style conventions to the code automatically
-* integrated static analysis into the build
+- added unit tests
+- applied style conventions to the code automatically
+- integrated static analysis into the build
 
 {{<zestful-ad>}}
 
 ---
 
-*Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com).*
+_Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

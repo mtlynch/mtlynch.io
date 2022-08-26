@@ -1,15 +1,15 @@
 ---
-title: 'Hiring Content Writers: Part Three - Screening Candidates'
+title: "Hiring Content Writers: Part Three - Screening Candidates"
 url: /hiring-content-writers/3-screening-candidates/
-date: '2019-09-30'
+date: "2019-09-30"
 ---
 
-* [Overview: Hiring Content Writers](/hiring-content-writers/)
-* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
-* **Part Three: Screening Candidates** (this section)
-* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
-* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+- [Overview: Hiring Content Writers](/hiring-content-writers/)
+- [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+- [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+- **Part Three: Screening Candidates** (this section)
+- [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+- [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
@@ -63,22 +63,22 @@ The Internet is experiencing an epidemic of fluff writing. Site owners [think th
 
 Fluff writing sounds like a book report from a fifth-grader who forgot to do the reading. Below, I've included an example of fluff writing. I wrote the passage myself, but it's depressingly similar to writing samples I've received:
 
->Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
+> Fitness is important. We all know this! A recent study found that people who exercise are better than people who don’t. So you don’t have any excuse not to hit the gym and start working on those extra pounds!
 >
->But fitness won’t just happen. You have to WORK for it! The first step is making a commitment that will force you to keep a regular gym habit. It can be a pact with a friend or sessions with a personal trainer. Anything that will keep your butt off the couch!
+> But fitness won’t just happen. You have to WORK for it! The first step is making a commitment that will force you to keep a regular gym habit. It can be a pact with a friend or sessions with a personal trainer. Anything that will keep your butt off the couch!
 >
->Don’t overdo it either! Many people start working out and push themselves past their limits and injure themselves. Make sure to know your limits and always stay hydrated.
+> Don’t overdo it either! Many people start working out and push themselves past their limits and injure themselves. Make sure to know your limits and always stay hydrated.
 
 When hiring, avoid "fluff factories" &mdash; writers who produce only fluff. Signs of a fluff factory include:
 
-* Desperate grabs at the reader's attention
-  * Hyperbole
-  * ALL CAPS
-  * Exclamation points!!!
-* Long stretches of text devoid of useful information or analysis
-* Irrelevant details or tangents
+- Desperate grabs at the reader's attention
+  - Hyperbole
+  - ALL CAPS
+  - Exclamation points!!!
+- Long stretches of text devoid of useful information or analysis
+- Irrelevant details or tangents
 
-### Beware the jack  of all trades
+### Beware the jack of all trades
 
 Good writers tend to focus exclusively on their craft. People who are "amazing" content writers and "expert" WordPress designers, in reality, tend to be weak in both.
 
@@ -106,11 +106,11 @@ When hiring writers, my top priority is evaluating their published content. It's
 
 Still, the interview does give you a glimpse into what it's like working with this person. Do the two of you communicate well, or does it take several back and forths before a question is sufficiently stated and answered? Is their working style compatible with yours?
 
-| Signs of a <font color="red">bad</font> candidate | Signs of a <font color="green">good</font> candidate |
-|--------------------------|---------------------------|
+| Signs of a <font color="red">bad</font> candidate                                          | Signs of a <font color="green">good</font> candidate                  |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
 | They ask questions that you already answered in your invitation letter or job description. | They demonstrate that they've spent time learning about your project. |
-| They respond to your personalized invitation with a generic form letter. | They express genuine interest and enthusiasm about the work. |
-| They ask questions that are ambiguous or poorly-worded. | They ask questions that are thoughtful and relevant. |
+| They respond to your personalized invitation with a generic form letter.                   | They express genuine interest and enthusiasm about the work.          |
+| They ask questions that are ambiguous or poorly-worded.                                    | They ask questions that are thoughtful and relevant.                  |
 
 ## Start a paid trial
 
@@ -126,13 +126,13 @@ Now that you've hired a writer on a trial basis, it's time to evaluate whether t
 
 ---
 
-* [Overview: Hiring Content Writers](/hiring-content-writers/)
-* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
-* **Part Three: Screening Candidates** (this section)
-* [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
-* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+- [Overview: Hiring Content Writers](/hiring-content-writers/)
+- [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+- [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+- **Part Three: Screening Candidates** (this section)
+- [Part Four - Working with Writers](/hiring-content-writers/4-working-with-writers/)
+- [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*
+_Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._

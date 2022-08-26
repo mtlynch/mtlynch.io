@@ -1,21 +1,22 @@
 ---
 title: The Perils of Outsourcing Your MVP
 tags:
-- mvp
-- outsourcing
-- startups
-- web scraping
-- ketohub
+  - mvp
+  - outsourcing
+  - startups
+  - web scraping
+  - ketohub
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=15861032
-description: 'A few months ago, I had a brilliant idea for a website. Then, I had
-  an even brillianter idea: build the website, but outsource all the work.'
-date: '2017-12-06'
+description:
+  "A few months ago, I had a brilliant idea for a website. Then, I had
+  an even brillianter idea: build the website, but outsource all the work."
+date: "2017-12-06"
 images:
-- outsourcing-mvp/wireframe-v1.jpg
+  - outsourcing-mvp/wireframe-v1.jpg
 ---
 
-A few months ago, I had a brilliant idea for a website. Then, I had an even *brillianter* idea: build the website, but outsource all the work.
+A few months ago, I had a brilliant idea for a website. Then, I had an even _brillianter_ idea: build the website, but outsource all the work.
 
 Every great website starts with an MVP: the minimum viable product. It demonstrates the idea in its simplest form to test whether anyone is interested. When Twitter launched their MVP, you could only tweet pictures of Russet potatoes. Slack famously launched with language support limited to pig latin. Netflix is now so synonymous with instant streaming that you may have forgotten its first version, which required you to select a movie, then wait several days until Reed Hastings arrived at your house to act out the plot himself.
 
@@ -26,7 +27,7 @@ I had a simple plan to build my MVP:
 1. Offer said freelancer $4/hr so that I can maximize site profits.
 1. Watch the MVP blossom into a thriving web property frequented by millions of passionate users demanding that I take their money.
 
-You may be surprised to learn that this plan did *not* work. I'm not writing this from my luxurious $200 million Silicon Valley two-bedroom apartment. I didn't grab headlines with an outrageous buyout from Facebook. Instead, I'm writing this from my regular one-bedroom apartment after receiving a half-finished product and somehow becoming my freelancer's freelancer.
+You may be surprised to learn that this plan did _not_ work. I'm not writing this from my luxurious $200 million Silicon Valley two-bedroom apartment. I didn't grab headlines with an outrageous buyout from Facebook. Instead, I'm writing this from my regular one-bedroom apartment after receiving a half-finished product and somehow becoming my freelancer's freelancer.
 
 ## The idea
 
@@ -66,7 +67,7 @@ That's when I started getting anxious.
 
 It took me a week to complete the web portion, but I still hadn't seen any code from Ferngully. What was she doing?
 
-Before I built the frontend, the project was stress-free. Now that we had a site ready with dummy data, it felt like we had a living thing that we were keeping caged. With each passing day, my code was withering into obsolescence. I just wanted to show KetoHub to the world so that I could get to the part of this process where Mark Zuckerberg  invites me for champagne on his personal-information-collecting superyacht.
+Before I built the frontend, the project was stress-free. Now that we had a site ready with dummy data, it felt like we had a living thing that we were keeping caged. With each passing day, my code was withering into obsolescence. I just wanted to show KetoHub to the world so that I could get to the part of this process where Mark Zuckerberg invites me for champagne on his personal-information-collecting superyacht.
 
 ## Working under low bandwidth
 
@@ -100,7 +101,7 @@ To save time, I decided to stop giving Ferngully notes. When she sent me her nex
 
 Ferngully was less enthused about my clever new time-saving technique. The tough reviews gave her technical growth. Without those, KetoHub was just work, and she had enough of that at work.
 
-I debated whether I could keep doing notes. Even when I was skipping them, I wasn't sure I was actually saving time overall with a freelancer. If I started writing them again, I'd definitely be in the negative timewise.  I'd be paying a freelancer a nontrivial hourly rate, and it would cost me more in time than writing the code myself.
+I debated whether I could keep doing notes. Even when I was skipping them, I wasn't sure I was actually saving time overall with a freelancer. If I started writing them again, I'd definitely be in the negative timewise. I'd be paying a freelancer a nontrivial hourly rate, and it would cost me more in time than writing the code myself.
 
 We talked it over and decided it no longer made sense for Ferngully to work on KetoHub. With the first component completed, it was a convenient time for her to transition off the project.
 
@@ -124,13 +125,13 @@ Despite the issues, this process taught me important lessons about creating new 
 
 If you choose to work with a freelancer:
 
-* **Discuss target completion dates**.
-  * You don't have to set rigid deadlines, but figure out up front if you're in the same ballpark.
-* **Agree on weekly bandwidth**.
-  * Your freelancer may have other clients or priorities. Find out how much time they'll be able to dedicate to your project.
+- **Discuss target completion dates**.
+  - You don't have to set rigid deadlines, but figure out up front if you're in the same ballpark.
+- **Agree on weekly bandwidth**.
+  - Your freelancer may have other clients or priorities. Find out how much time they'll be able to dedicate to your project.
 
 ---
 
-*This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com).*
+_This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com)._
 
-*If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article.*
+_If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article._

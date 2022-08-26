@@ -2,8 +2,8 @@
 title: Notes from PyGotham 2019
 description: My notes and self-critiques from speaking at PyGotham.
 images:
-- /retrospectives/pygotham-2019-notes/pygotham-logo.svg
-date: '2019-10-31'
+  - /retrospectives/pygotham-2019-notes/pygotham-logo.svg
+date: "2019-10-31"
 ---
 
 ## Overview
@@ -14,12 +14,12 @@ This past weekend, [PyGotham](https://2019.pygotham.org/) invited me to speak at
 
 ## Ratings and reviews
 
-| Conference Attribute | Grade |
-|----------------------|-------|
-| Quality of talks     | C     |
-| Event smoothness     | A     |
-| Venue                | A     |
-| How I felt about my talk | B |
+| Conference Attribute     | Grade |
+| ------------------------ | ----- |
+| Quality of talks         | C     |
+| Event smoothness         | A     |
+| Venue                    | A     |
+| How I felt about my talk | B     |
 
 ### Quality of talks
 
@@ -81,8 +81,8 @@ wget \
 
 Other things I liked:
 
-* Nick shared [kiwix](https://wiki.kiwix.org/wiki/Content_in_all_languages), a project that was new to me. They provide offline copies of large content sites like Wikipedia and StackOverflow that you can run locally.
-* Nick maintains [a directory of archiving resources and communities](https://github.com/pirate/ArchiveBox/wiki/Web-Archiving-Community).
+- Nick shared [kiwix](https://wiki.kiwix.org/wiki/Content_in_all_languages), a project that was new to me. They provide offline copies of large content sites like Wikipedia and StackOverflow that you can run locally.
+- Nick maintains [a directory of archiving resources and communities](https://github.com/pirate/ArchiveBox/wiki/Web-Archiving-Community).
 
 ### Maintaining a Python Project When It’s Not Your Job
 
@@ -90,8 +90,8 @@ Other things I liked:
 
 **Speaker**: [Hynek Schlawack](https://hynek.me/)
 
-* [Talk Outline](https://hynek.me/talks/python-foss/)
-* [Slides](https://speakerdeck.com/hynek/maintaining-a-python-project-when-its-not-your-job)
+- [Talk Outline](https://hynek.me/talks/python-foss/)
+- [Slides](https://speakerdeck.com/hynek/maintaining-a-python-project-when-its-not-your-job)
 
 Hynek maintains several popular open source projects ([attrs](https://github.com/python-attrs/attrs), [structlog](https://www.structlog.org/en/stable/)), and he has only limited time to review external pull requests. He uses automated tools to minimize his time reviewing and to empower third-party contributors to find their own bugs. This aligned nicely with my #1 rule for code reviews: [Let computers do the boring parts](/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
@@ -99,17 +99,17 @@ Hynek is a fun, and lively speaker. He opens with a joke, "Hello, I'm Hynek, you
 
 Other things I liked:
 
-* Introduced me to a few tools I didn't know about:
-  * [isort](https://github.com/timothycrosley/isort): Sorts your Python import statements.
-    * I [added it](https://github.com/mtlynch/python3_seed/pull/15) to my [Python3 boilerplate project](https://github.com/mtlynch/python3_seed).
-    * The tool's [shortcoming](https://github.com/timothycrosley/isort/issues/1039) is that it only offers two modes: "fix automatically" (not what I want in a build check) or "give an unhelpful failure message."
-  * [Black](https://github.com/psf/black): Formats Python code whitespace.
-    * Interesting, but doesn't seem to provide any meaningful improvements over [yapf](https://github.com/google/yapf), my preferred formatter.
-  * [tox](https://tox.readthedocs.io/en/latest/): Runs Python test scripts in different virtual environments.
-    * I *think* I used tox about five years ago, but at the time, I was using it as a way to mock behavior in unit tests. The project now is something totally different, so I can't figure out if they changed focus after [mock](https://docs.python.org/3/library/unittest.mock.html) made it into the standard library or if I'm just confused.
-    * Anyway, it seems neat. I haven't created any projects that run in multiple Python environments, but it's good to keep in my back pocket.
-* I liked Hynek's example [pull request checklist](https://github.com/python-attrs/attrs/blob/1d6ef3be7965f2e294569e65be5d14e19b3013c4/.github/PULL_REQUEST_TEMPLATE.md) and [contributor documentation](https://github.com/python-attrs/attrs/blob/1d6ef3be7965f2e294569e65be5d14e19b3013c4/.github/CONTRIBUTING.md).
-* I've never seen anyone create a public text outline of their talk before, but [Hynek's](https://hynek.me/talks/python-foss/) was helpful.
+- Introduced me to a few tools I didn't know about:
+  - [isort](https://github.com/timothycrosley/isort): Sorts your Python import statements.
+    - I [added it](https://github.com/mtlynch/python3_seed/pull/15) to my [Python3 boilerplate project](https://github.com/mtlynch/python3_seed).
+    - The tool's [shortcoming](https://github.com/timothycrosley/isort/issues/1039) is that it only offers two modes: "fix automatically" (not what I want in a build check) or "give an unhelpful failure message."
+  - [Black](https://github.com/psf/black): Formats Python code whitespace.
+    - Interesting, but doesn't seem to provide any meaningful improvements over [yapf](https://github.com/google/yapf), my preferred formatter.
+  - [tox](https://tox.readthedocs.io/en/latest/): Runs Python test scripts in different virtual environments.
+    - I _think_ I used tox about five years ago, but at the time, I was using it as a way to mock behavior in unit tests. The project now is something totally different, so I can't figure out if they changed focus after [mock](https://docs.python.org/3/library/unittest.mock.html) made it into the standard library or if I'm just confused.
+    - Anyway, it seems neat. I haven't created any projects that run in multiple Python environments, but it's good to keep in my back pocket.
+- I liked Hynek's example [pull request checklist](https://github.com/python-attrs/attrs/blob/1d6ef3be7965f2e294569e65be5d14e19b3013c4/.github/PULL_REQUEST_TEMPLATE.md) and [contributor documentation](https://github.com/python-attrs/attrs/blob/1d6ef3be7965f2e294569e65be5d14e19b3013c4/.github/CONTRIBUTING.md).
+- I've never seen anyone create a public text outline of their talk before, but [Hynek's](https://hynek.me/talks/python-foss/) was helpful.
 
 ### Make You An Async For Great Good!
 
@@ -127,7 +127,7 @@ I was impressed at how much of `asyncio`'s functionality Mark was able to reimpl
 
 **Speaker**: Michael Lynch (me)
 
-* [Slides](https://mtlynch.page.link/gdbt-pg)
+- [Slides](https://mtlynch.page.link/gdbt-pg)
 
 I felt good about my talk. I was happy with my level of prep (5-7 runthroughs of my talk), although I wish I started rehearsing earlier instead of procrastinating until the week of the conference.
 
@@ -135,25 +135,26 @@ After my PyTexas talk, my [notes for improvement](/retrospectives/pytexas-2019-n
 
 My biggest mistake was projecting my talk using Google Slides' "Presenter View" rather than mirroring my screen. I thought the on-screen timer would help me keep pace, but I forgot that it would prevent me from seeing my own slides. I knew them well enough that I could present most of them just from seeing the tiny thumbnail in presenter view, but there were several instances where I had to turn away from the audience and look at the screen to read text.
 
-* What went well
-  * I felt comfortable with the material I was presenting.
-  * I succeeded in slowing down my talking speed and keeping my focus on the audience.
+- What went well
 
-* What needs improvement
-  * Remember to mirror my laptop display rather than present with "Presenter View."
-  * Speaking slowly doesn't mean speaking keeping a flat tone. I'm excited to be at these conferences, so I can do a better job of showing that enthusiasm in my talk.
-  * The content itself comes across as a bit clinical &mdash; it could use some more levity and more jokes.
-  * Start rehearsing earlier so that preparation doesn't feel rushed.
+  - I felt comfortable with the material I was presenting.
+  - I succeeded in slowing down my talking speed and keeping my focus on the audience.
+
+- What needs improvement
+  - Remember to mirror my laptop display rather than present with "Presenter View."
+  - Speaking slowly doesn't mean speaking keeping a flat tone. I'm excited to be at these conferences, so I can do a better job of showing that enthusiasm in my talk.
+  - The content itself comes across as a bit clinical &mdash; it could use some more levity and more jokes.
+  - Start rehearsing earlier so that preparation doesn't feel rushed.
 
 ## Costs
 
-| Expense | Amount |
-|---------|--------|
-| Train tickets | $95.00 |
+| Expense              | Amount                   |
+| -------------------- | ------------------------ |
+| Train tickets        | $95.00                   |
 | Lodging (two nights) | $0 (stayed with friends) |
-| Uber rides | $9.08 |
-| Food | $5.44 |
-| **Total** | **$109.52** |
+| Uber rides           | $9.08                    |
+| Food                 | $5.44                    |
+| **Total**            | **$109.52**              |
 
 Compare this to the [$1,200ish I spent](/retrospectives/pytexas-2019-notes/#costs) to attend PyTexas! It would be super convenient if all conference organizers just planned conferences within car or train distance from me and ensured that I had friends living nearby with a spare bedroom.
 
@@ -195,13 +196,13 @@ PyGotham is the first conferenced I've experienced where attendees get to see an
 
 Some takeaways:
 
-* Reviewing CFPs is *really* draining.
-  * I think there were ~300 submissions. I split it into 3-4 shifts, but I'm sure I was more patient and generous with some than others just by virtue of different energy levels.
-* It's tough to balance my own interests against the crowd's.
-  * For example, I'm not that interested in machine learning talks, but I know others are. Do I vote for or against those?
-* Snottiness plays poorly in CFPs.
-  * Some of the submitters acted as though it was below them to fill out the CFP. There was a question like, "What is your talk about?" and then a subsequent question along the lines of, "What should attendees take away from your talk?" I saw several people give lazy answers to the latter question like, "See above" or ,"This is not meaningfully different from the first question."
-  * When you've reviewed 100 CFPs and have to eliminate 90% of what you read, the snotty ones are the easiest to reject.
+- Reviewing CFPs is _really_ draining.
+  - I think there were ~300 submissions. I split it into 3-4 shifts, but I'm sure I was more patient and generous with some than others just by virtue of different energy levels.
+- It's tough to balance my own interests against the crowd's.
+  - For example, I'm not that interested in machine learning talks, but I know others are. Do I vote for or against those?
+- Snottiness plays poorly in CFPs.
+  - Some of the submitters acted as though it was below them to fill out the CFP. There was a question like, "What is your talk about?" and then a subsequent question along the lines of, "What should attendees take away from your talk?" I saw several people give lazy answers to the latter question like, "See above" or ,"This is not meaningfully different from the first question."
+  - When you've reviewed 100 CFPs and have to eliminate 90% of what you read, the snotty ones are the easiest to reject.
 
 ### Three conferences per year is a good goal
 

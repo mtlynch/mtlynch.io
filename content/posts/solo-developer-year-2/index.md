@@ -1,15 +1,15 @@
 ---
 title: My Second Year as a Solo Developer
 tags:
-- annual review
-- blogging
-- zestful
-- is it keto
-- wanderjest
-- what got done
-date: '2020-01-31'
+  - annual review
+  - blogging
+  - zestful
+  - is it keto
+  - wanderjest
+  - what got done
+date: "2020-01-31"
 images:
-- solo-developer-year-2/cover.jpg
+  - solo-developer-year-2/cover.jpg
 description: Two years ago, I quit my developer job at Google to build my own software business. A year later, I posted an update about my finances, happiness, and lessons learned. Today marks the end of my second full year, so it's time for another update.
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=22201337
@@ -116,10 +116,10 @@ var myChart = new Chart(ctx, {
 });
 </script>
 
-| Metric     | 2018        | 2019       | Change                                        |
-|------------|-------------|------------|-----------------------------------------------|
-| Revenue    | $2,262   | $7,254  | <font color="green">+$4,992 (+220%)</font> |
-| Expenses   | $23,133  | $9,657  | <font color="green">-$13,477 (-58%)</font> |
+| Metric         | 2018                                  | 2019                                 | Change                                         |
+| -------------- | ------------------------------------- | ------------------------------------ | ---------------------------------------------- |
+| Revenue        | $2,262                                | $7,254                               | <font color="green">+$4,992 (+220%)</font>     |
+| Expenses       | $23,133                               | $9,657                               | <font color="green">-$13,477 (-58%)</font>     |
 | **Net Profit** | **<font color="red">-$20,871</font>** | **<font color="red">-$2,402</font>** | **<font color="green">+$18,469 (+88%)</font>** |
 
 My second year was a huge improvement financially. I increased profits by $18.5k!
@@ -130,9 +130,9 @@ Overall, I still lost money, but try not to get too hung up on that. I tripled r
 
 My long-term unprofitability often perplexes people. They assume I fund my money-losing endeavors with freelance work, but the truth is that 100% of my working hours go into my non-lucrative businesses. This is possible due to three main factors:
 
-* **Low expenses**: I have no children and [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are ~$2k/month.
-* **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
-* **Lucky investments**: Throughout my career, most of my money has been in the S&P 500 during periods of especially strong market runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
+- **Low expenses**: I have no children and [live in an inexpensive area](/solo-developer-year-1/#so-i-bought-a-house) where my costs are ~$2k/month.
+- **High savings**: It's hard to work for big software companies for 11 years without building a decent nest egg.
+- **Lucky investments**: Throughout my career, most of my money has been in the S&P 500 during periods of especially strong market runs. My small bets on [cryptocurrency](/tags/sia/) also paid off well.
 
 ## Project by project
 
@@ -144,14 +144,14 @@ Zestful launched in mid-2018 as my first attempt at a software-as-a-service (Saa
 
 After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldatacom) last year, Zestful finally realized significant revenue throughout 2019. [A single enterprise sale in December](/retrospectives/2020/01/#zestfulhttpszestfuldatacom) accounted for 79% of its annual revenue. That sale also represented 53% of total revenue across all my businesses.
 
-| Income/Expense   | 2018        | 2019       | Change          |
-|------------------|-------------|------------|-----------------|
-| Sales            | $0          | $5,022     | <font color="green">+$5,022 (+inf%)</font> |
-| Hosting          | -$164       | -$80       | <font color="green">-$84 (-51%)</font>
-| Domains          | $-50        | -$12       | <font color="green">-$38 (-76%)</font>
-| Logo Design      | $-200       | $0         | <font color="green">-$200 (-100%)</font>
-| Development      | -$7,440     | $0         | <font color="green">-$7,440 (-100%)</font>
-| **Net profit**   | **-$7,854** | **$4,930‬** | <font color="green">+$12,784 (+162%)</font>
+| Income/Expense | 2018        | 2019        | Change                                      |
+| -------------- | ----------- | ----------- | ------------------------------------------- |
+| Sales          | $0          | $5,022      | <font color="green">+$5,022 (+inf%)</font>  |
+| Hosting        | -$164       | -$80        | <font color="green">-$84 (-51%)</font>      |
+| Domains        | $-50        | -$12        | <font color="green">-$38 (-76%)</font>      |
+| Logo Design    | $-200       | $0          | <font color="green">-$200 (-100%)</font>    |
+| Development    | -$7,440     | $0          | <font color="green">-$7,440 (-100%)</font>  |
+| **Net profit** | **-$7,854** | **$4,930‬** | <font color="green">+$12,784 (+162%)</font> |
 
 {{< img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results" >}}
 
@@ -163,22 +163,22 @@ How do you sell to companies if they don't even exist yet? My strategy has been 
 
 {{< img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="Is It Keto is a reference site for followers of the keto diet." >}}
 
-Is It Keto  gives readers clear, straightforward answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through Google AdSense display ads and receives commission for every Amazon purchase through the site.
+Is It Keto gives readers clear, straightforward answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through Google AdSense display ads and receives commission for every Amazon purchase through the site.
 
-| Income/Expense                              | 2018    | 2019    | Change |
-|---------------------------------------------|---------|---------|--------|
-| Pageviews                                   | 16,208  | 521,913 | <font color="green">+505,705 (+3,120%)</font>
-| Food corpus size                            | 53      | 202     | <font color="green">+149 (+281%)</font>
-| Amazon Affiliate revenue                    | $1      | $1,315  | <font color="green">+$1,314 (+131,400%)</font>
-| Google AdSense revenue                      | N/A     | $940    | <font color="green">+$940 (+inf%)</font>
-| Meal plan sales                             | N/A     | $24     | <font color="green">+$24 (+inf%)</font>
-| [Content writing](/hiring-content-writers/) | $0      | -$3,845 | <font color="red">+$3,845 (+inf%)</font>
-| Social media management                     | $0      | -$314   | <font color="red">+$314 (+inf%)</font>
-| Graphic design                              | -$211   | -$163   | <font color="green">-$48 (-23%)</font>
-| Development                                 | -$1,660 | $0      | <font color="green">-$1,660 (-100%)</font>
-| Hosting                                     | $0      | -$103   | <font color="red">+$103 (+inf%)</font>
-| Domain                                      | -$12    | -$12    | -
-| **Net profit**                              | **<font color="red">-$1,882 </font>**  | **<font color="red">-$2,158</font>** | <font color="red">-$276 (-15%)</font>
+| Income/Expense                              | 2018                                  | 2019                                 | Change                                         |
+| ------------------------------------------- | ------------------------------------- | ------------------------------------ | ---------------------------------------------- |
+| Pageviews                                   | 16,208                                | 521,913                              | <font color="green">+505,705 (+3,120%)</font>  |
+| Food corpus size                            | 53                                    | 202                                  | <font color="green">+149 (+281%)</font>        |
+| Amazon Affiliate revenue                    | $1                                    | $1,315                               | <font color="green">+$1,314 (+131,400%)</font> |
+| Google AdSense revenue                      | N/A                                   | $940                                 | <font color="green">+$940 (+inf%)</font>       |
+| Meal plan sales                             | N/A                                   | $24                                  | <font color="green">+$24 (+inf%)</font>        |
+| [Content writing](/hiring-content-writers/) | $0                                    | -$3,845                              | <font color="red">+$3,845 (+inf%)</font>       |
+| Social media management                     | $0                                    | -$314                                | <font color="red">+$314 (+inf%)</font>         |
+| Graphic design                              | -$211                                 | -$163                                | <font color="green">-$48 (-23%)</font>         |
+| Development                                 | -$1,660                               | $0                                   | <font color="green">-$1,660 (-100%)</font>     |
+| Hosting                                     | $0                                    | -$103                                | <font color="red">+$103 (+inf%)</font>         |
+| Domain                                      | -$12                                  | -$12                                 | -                                              |
+| **Net profit**                              | **<font color="red">-$1,882 </font>** | **<font color="red">-$2,158</font>** | <font color="red">-$276 (-15%)</font>          |
 
 At $2.3k of revenue, Is It Keto was my second-highest-grossing product for 2019. I [abandoned the site in April](/retrospectives/2019/04/) but [came back four months later](/retrospectives/2019/09/) after realizing that it had grown by itself without me.
 
@@ -188,19 +188,19 @@ At $2.3k of revenue, Is It Keto was my second-highest-grossing product for 2019.
 
 Is It Keto was also my biggest expense, as I outsourced much of the writing. That cost me more than it should have because I knew nothing about hiring and managing writers, but the experience taught me a lot and led to my widely ignored [guide to hiring content writers](/hiring-content-writers/).
 
-### mtlynch.io *(this blog)*
+### mtlynch.io _(this blog)_
 
-| Metric                                      | 2018    | 2019    | Change |
-|---------------------------------------------|---------|---------|--------|
-| Pageviews                                   | 981,587 | 273,817 | <font color="red">-707,770 (-72%)</font>
-| Affiliate revenue                           | $1,244  | $374    | <font color="red">-$870 (-70%)</font>
-| Development                                 | -$3,896 | -$460   | <font color="green">-$3,436 (-88%)</font>
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$599    | -$769   | <font color="red">+$170 (+28%)</font>
-| Hosting                                     | -$309    | -$150   | <font color="green">-$159 (-51%)</font>
-| [Grammarly](https://grammarly.com) (Grammar and style checking service) | -$140 | -$140 | - |
-| [Editing](/editor/)                         | -$75    | -$60 | <font color="green">-$15 (-20%)</font>
-| Domain                                      | -$60    | -$60 | - |
-| **Net profit**                              | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | <font color="green">+$2,570 (+67%)</font> |
+| Metric                                                                  | 2018                                 | 2019                                 | Change                                    |
+| ----------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ | ----------------------------------------- |
+| Pageviews                                                               | 981,587                              | 273,817                              | <font color="red">-707,770 (-72%)</font>  |
+| Affiliate revenue                                                       | $1,244                               | $374                                 | <font color="red">-$870 (-70%)</font>     |
+| Development                                                             | -$3,896                              | -$460                                | <font color="green">-$3,436 (-88%)</font> |
+| [Illustrations](/how-to-hire-a-cartoonist/)                             | -$599                                | -$769                                | <font color="red">+$170 (+28%)</font>     |
+| Hosting                                                                 | -$309                                | -$150                                | <font color="green">-$159 (-51%)</font>   |
+| [Grammarly](https://grammarly.com) (Grammar and style checking service) | -$140                                | -$140                                | -                                         |
+| [Editing](/editor/)                                                     | -$75                                 | -$60                                 | <font color="green">-$15 (-20%)</font>    |
+| Domain                                                                  | -$60                                 | -$60                                 | -                                         |
+| **Net profit**                                                          | **<font color="red">-$3,835</font>** | **<font color="red">-$1,265</font>** | <font color="green">+$2,570 (+67%)</font> |
 
 Pageviews are down substantially, which is unsurprising. My [quitting Google post](/why-i-quit-google/) received 500k pageviews in 2018, so I didn't expect to land another smash hit like that.
 
@@ -216,11 +216,11 @@ Blog revenue is also down, which is fine because I don't go out of my way to ear
 
 What Got Done is a tool for recording and sharing weekly work accomplishments. It's [a technique that I learned](/status-updates-to-nobody/) while working at Google, and I've been using it to record [my progress](https://whatgotdone.com/michael) every week for the last 10 months.
 
-| Income/Expense                              | Amount |
-|---------------------------------------------|---------|
-| Customer interviews                         | -$31 |
-| Domain                                      | -$12 |
-| **Net profit**                              | **-$43** |
+| Income/Expense      | Amount   |
+| ------------------- | -------- |
+| Customer interviews | -$31     |
+| Domain              | -$12     |
+| **Net profit**      | **-$43** |
 
 I never thought What Got Done was a brilliant business idea, but [months of failing to turn a profit on Is It Keto](/keep-growing-never-profit/) left me feeling frustrated. What Got Done seemed like a fun project to cheer me up and an opportunity to teach myself [Vue.js](https://vuejs.org/), a popular web framework.
 
@@ -230,13 +230,13 @@ As long as I was building What Got Done, I figured that it was worth exploring w
 
 ### Everything Else
 
-| Expense                   | Purpose   | Amount    |
-|---------------------------|-----------|-----------|
-| Conferences               | Networking and training | -$2,182 |
-| [Xero](https://xero.com/) | Bookkeeping | -$151 |
-| Bench to Xero migration (freelance accountant)   | Bookkeeping | -$232 |
-| [Circle CI](https://circleci.com) | Continuous integration | -$350 |
-| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 |
+| Expense                                        | Purpose                 | Amount  |
+| ---------------------------------------------- | ----------------------- | ------- |
+| Conferences                                    | Networking and training | -$2,182 |
+| [Xero](https://xero.com/)                      | Bookkeeping             | -$151   |
+| Bench to Xero migration (freelance accountant) | Bookkeeping             | -$232   |
+| [Circle CI](https://circleci.com)              | Continuous integration  | -$350   |
+| [Coveralls](https://coveralls.io)              | Test coverage tracking  | -$270   |
 
 Conferences were a hefty expense because travel and lodging are expensive, and the conferences that accepted my speaking proposals were regional events with minimal travel assistance budgets.
 
@@ -250,7 +250,7 @@ I also switched from managed bookkeeping with [Bench](https://bench.co) to self-
 
 One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](http://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paid users. How could my prices be too low if nobody was buying?
 
-Though Zestful had few real customers, it had many *prospective* customers. Every few weeks, a new company contacted me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big client, I'd work feverishly to implement the functionality they wanted. A week later, I'd proudly deliver it to them.
+Though Zestful had few real customers, it had many _prospective_ customers. Every few weeks, a new company contacted me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big client, I'd work feverishly to implement the functionality they wanted. A week later, I'd proudly deliver it to them.
 
 "Oh, yeah," they'd reply sheepishly. "That was for a project we decided not to pursue."
 
@@ -258,7 +258,7 @@ It cost these companies nothing to ask for features, but it was extremely time-c
 
 When I took Cory's advice and raised prices, it changed the conversation in an unexpected way. At $0.003 per request, nobody tried to negotiate with me on price. When my rates jumped by 6.5x to $0.02 per request, everyone started asking about volume discounts. Then, when they claimed they'd buy after Zestful had their pet feature, I gave them this line:
 
->Great! You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
+> Great! You can pre-pay for three months of service, and your billing cycle won't start until that feature is available.
 
 I've never been burned on a feature request since.
 
@@ -270,7 +270,7 @@ My first year as a founder, I was a puppy chasing any ball that happened to roll
 
 My friend [David Toth](https://twitter.com/jupiterunknown) taught me the value of idea screening. He pointed out that whatever idea I pursue determines large parts of my life for several months at the minimum, so it's worth choosing carefully. Instead of bounding off after the first good idea he has, David generates ideas until he has a list of at least 10. He then evaluates that list carefully to choose which has the highest chance of success.
 
-Reading [*Start Small, Stay Small*](https://smile.amazon.com/Start-Small-Stay-Developers-Launching/dp/0615373968/) ([notes](/book-reports/start-small-stay-small/)) and [*The Mom Test*](https://smile.amazon.com/Mom-Test-customers-business-everyone/dp/1492180742/) ([notes](/book-reports/the-mom-test/)) also influenced how I approach new businesses. Both books encourage founders to start with market research and build the product later. As a result, I was conservative about building anything and gave myself permission to bail if my investigation indicated an idea was no longer my best chance of success.
+Reading [_Start Small, Stay Small_](https://smile.amazon.com/Start-Small-Stay-Developers-Launching/dp/0615373968/) ([notes](/book-reports/start-small-stay-small/)) and [_The Mom Test_](https://smile.amazon.com/Mom-Test-customers-business-everyone/dp/1492180742/) ([notes](/book-reports/the-mom-test/)) also influenced how I approach new businesses. Both books encourage founders to start with market research and build the product later. As a result, I was conservative about building anything and gave myself permission to bail if my investigation indicated an idea was no longer my best chance of success.
 
 ### Take bigger swings
 
@@ -308,11 +308,11 @@ I did hit this goal in that my revenue was $604/month for the year and $1,657/mo
 
 Three conferences accepted my speaking proposals, and I'm proud of my presentations at all of them:
 
-| Conference                                  | My notes | Presentation |
-|---------------------------------------------|----------|-------|
-| [NERD Summit](https://2019.nerdsummit.org/) | -                                           | ["Modernize any Codebase through Tooling and Technique"](https://youtu.be/GfkVhr6SPz4)
-| [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)
-| [PyGotham 2019](https://2019.pygotham.org/) | [Notes](/retrospectives/pygotham-2019-notes/) | ["Why Good Developers Write Bad Tests"](https://youtu.be/ElzBGwyDzCc) |
+| Conference                                  | My notes                                      | Presentation                                                                           |
+| ------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [NERD Summit](https://2019.nerdsummit.org/) | -                                             | ["Modernize any Codebase through Tooling and Technique"](https://youtu.be/GfkVhr6SPz4) |
+| [PyTexas 2019](https://2019.pytexas.org/)   | [Notes](/retrospectives/pytexas-2019-notes/)  | ["Why Good Developers Write Bad Tests"](https://youtu.be/hM_ex4-xu4E)                  |
+| [PyGotham 2019](https://2019.pygotham.org/) | [Notes](/retrospectives/pygotham-2019-notes/) | ["Why Good Developers Write Bad Tests"](https://youtu.be/ElzBGwyDzCc)                  |
 
 I enjoy conferences and pick up useful information by attending, but if I'm being honest, they don't materially improve my professional or personal life. Between travel, preparing my talks, and attending the event itself, I spent six to eight weeks of full-time work on conference presentations.
 
@@ -346,18 +346,18 @@ I'm piloting it in my home area of Western Massachusetts, but I'll soon expand i
 
 Here's what I hope to accomplish in my third year as a solo developer:
 
-* Earn $20,000 in revenue across my businesses.
-  * I tripled revenues in 2019, so $20k means tripling again.
-* Publish 10 blog posts.
-  * This gives me time for about one article per month with enough slack for longer posts and time off to prepare a conference presentation.
-* Learn one new technology.
-  * Learning a totally new language or framework tends to improve my overall thinking about software, and I've been looking for an excuse to learn [Rust](https://www.rust-lang.org).
+- Earn $20,000 in revenue across my businesses.
+  - I tripled revenues in 2019, so $20k means tripling again.
+- Publish 10 blog posts.
+  - This gives me time for about one article per month with enough slack for longer posts and time off to prepare a conference presentation.
+- Learn one new technology.
+  - Learning a totally new language or framework tends to improve my overall thinking about software, and I've been looking for an excuse to learn [Rust](https://www.rust-lang.org).
 
 ## Updates
 
-* **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
-* **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
+- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 
 ---
 
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/). Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/).*
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/). Go gopher adapted from a design by [Renee French](http://reneefrench.blogspot.com/)._

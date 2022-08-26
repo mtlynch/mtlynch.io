@@ -1,14 +1,14 @@
 ---
 title: Building a Homelab VM Server
 tags:
-- virtualization
-- homelab
-- kimchi
-- kvm
+  - virtualization
+  - homelab
+  - kimchi
+  - kvm
 description: Taking my development VMs to the next level
-date: '2017-05-07'
+date: "2017-05-07"
 images:
-- building-a-vm-homelab-2017/vm-server-parts.jpg
+  - building-a-vm-homelab-2017/vm-server-parts.jpg
 ---
 
 {{<notice type="info">}}
@@ -39,8 +39,8 @@ Malware running in a VM is much more limited in the damage it can cause. If I in
 
 I've been running virtual machines within my main Windows desktop with VirtualBox, there a few issues:
 
-* When I restart my main PC, I also have to laboriously shut down or suspend every VM I'm running, then start each up again after the reboot.
-* My main PC crashes about once a month and VirtualBox is really bad at recovering from crashes. On reboot, thinks that the VM image files are locked and I have to futz around with the filesystem to fix it.
+- When I restart my main PC, I also have to laboriously shut down or suspend every VM I'm running, then start each up again after the reboot.
+- My main PC crashes about once a month and VirtualBox is really bad at recovering from crashes. On reboot, thinks that the VM image files are locked and I have to futz around with the filesystem to fix it.
 
 With a dedicated VM server, I can run a barebones Linux server OS on it. The less software running on a machine, the less frequently it requires reboots and the less likely it is to crash.
 
@@ -88,7 +88,7 @@ For the case, I was primarily looking for something very small. I plan to tuck t
 
 ### Graphics
 
-I'm mainly going to run this system headless and just manage it over SSH/Ansible, but I need a display occasionally (e.g. during initial install or when I accidentally break the network configuration). I initially *thought* I could use the motherboard's integrated graphics support, but I could not (see the [parts review](#review-motherboard) below).
+I'm mainly going to run this system headless and just manage it over SSH/Ansible, but I need a display occasionally (e.g. during initial install or when I accidentally break the network configuration). I initially _thought_ I could use the motherboard's integrated graphics support, but I could not (see the [parts review](#review-motherboard) below).
 
 Because my requirements for the GPU were flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/).
 
@@ -100,21 +100,21 @@ I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a
 
 At this point, I was tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
 
-Also of note: the onboard NIC was *not* compatible with ESXi 6.5, but the Broadcom NIC *was* compatible.
+Also of note: the onboard NIC was _not_ compatible with ESXi 6.5, but the Broadcom NIC _was_ compatible.
 
 ### Final parts list
 
-| Category | Component |
-|------|-------|
-| CPU | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/) |
-| Motherboard | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/) |
-| Disk | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/) |
-| Memory | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) |
-| Power | [EVGA 430 W1, 80+ WHITE 430W  100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/) |
-| Graphics | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/) |
-| Network | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/) |
-| Case | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/) |
-| **Total Cost** | **$823.55** |
+| Category       | Component                                                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CPU            | [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5YCX6/)                                                                                         |
+| Motherboard    | [ASRock AB350M-HDV](https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/)                                          |
+| Disk           | [Samsung 850 EVO - 250GB](https://smile.amazon.com/gp/product/B00TGIVZTW/)                                                                          |
+| Memory         | [G.SKILL Flare X Series 32GB (2 x 16GB) F4-2400C15D-32GFXR](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) |
+| Power          | [EVGA 430 W1, 80+ WHITE 430W 100-W1-0430-KR](https://smile.amazon.com/gp/product/B00H33SDR4/)                                                       |
+| Graphics       | [EVGA 512-P3-1300-LR GeForce 8400 GS](https://smile.amazon.com/gp/product/B004BQKQ8A/)                                                              |
+| Network        | [Broadcom BCM5751 Netxtreme](https://smile.amazon.com/gp/product/B005NX1DAK/)                                                                       |
+| Case           | [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/)                                       |
+| **Total Cost** | **$823.55**                                                                                                                                         |
 
 ## Build
 
@@ -131,8 +131,8 @@ This is the server with all the parts assembled. There's not much to it because 
 Because of my apartment's limited space, I wanted a server I could hide out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view:
 
 {{< gallery caption="Completed build" >}}
-  {{< img src="vm-server-front.jpg" alt="Assembled server - front view" >}}
-  {{< img src="vm-server-above.jpg" alt="Assembled server - overhead view" >}}
+{{< img src="vm-server-front.jpg" alt="Assembled server - front view" >}}
+{{< img src="vm-server-above.jpg" alt="Assembled server - overhead view" >}}
 {{</ gallery >}}
 
 ## Installing a host OS
@@ -156,8 +156,8 @@ I enjoy being able to manage my infrastructure through a web UI, so I installed 
 I'd describe Kimchi as "okay." Some of the dashboards are pretty slick:
 
 {{< gallery caption="Kimchi web UI screenshots" >}}
-  {{< img src="kimchi-host-utilization.png" alt="Kimchi host utilization dashboard" >}}
-  {{< img src="kimchi-guests.png" alt="Kimchi guest view" >}}
+{{< img src="kimchi-host-utilization.png" alt="Kimchi host utilization dashboard" >}}
+{{< img src="kimchi-guests.png" alt="Kimchi guest view" >}}
 {{</ gallery >}}
 
 It also does certain things really well, like creating a bridged network adapter (which is kind of a pain to figure out on the command line).
@@ -174,11 +174,11 @@ The dealbreaker for me was that on login, vSphere prominently displayed a warnin
 
 ## Automating server provisioning
 
-I'm a big fan of Ansible, so I wrote an  [Ansible playbook](provision-vm-host.yml) to automatically provision my VM server. It does the following:
+I'm a big fan of Ansible, so I wrote an [Ansible playbook](provision-vm-host.yml) to automatically provision my VM server. It does the following:
 
-* Updates the kernel to a version compatible with Ryzen's SMT functionality
-* Installs KVM and Kimchi
-* Mounts an NFS share for storing VM images
+- Updates the kernel to a version compatible with Ryzen's SMT functionality
+- Installs KVM and Kimchi
+- Mounts an NFS share for storing VM images
 
 You can use the same playbook to provision your server by [installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html) and running the commands below:
 
@@ -198,7 +198,7 @@ ansible-playbook provision-vm-host.yml \
 
 ### Review: CPU
 
-My most questionable choice is the CPU. It does run very fast, but it may have also been overkill, as I haven't seen total CPU usage rise above 35%, even when I've got five VMs running with  CPU-intensive jobs running on several of them.
+My most questionable choice is the CPU. It does run very fast, but it may have also been overkill, as I haven't seen total CPU usage rise above 35%, even when I've got five VMs running with CPU-intensive jobs running on several of them.
 
 The downside to the Ryzen is that it's very bleeding edge right now and compatibility is shaky. I tried installing Fedora 25 server, Debian 8.7, Centos 7, and ESXi 6.5 and they all died during the installation because they weren't compatible with the Ryzen. I was able to install some of these successfully if I disabled SMT (multithreading) for the CPU in BIOS, but that reduces it to an from a 16-core to an 8-core CPU, which felt sad. The only OS that installed successfully was Ubuntu (successfully installed both 16.04 and 17.04).
 
@@ -206,14 +206,14 @@ The Ryzen also limited what RAM sticks I could buy. The motherboard supports DDR
 
 ### Review: Motherboard
 
-I'm *mostly* happy with my motherboard choice. It's nice and compact without sacrificing adequate space for all the components.
+I'm _mostly_ happy with my motherboard choice. It's nice and compact without sacrificing adequate space for all the components.
 
 My one regret is that I didn't read the onboard video support carefully enough. Its specs under "Onboard Video Chipset" read:
 
->Integrated AMD Radeon R7/R5 Series Graphics in A-series APU
->Supports HDMI with max. resolution up to 4K x 2K (4096x2160) @ 24Hz / (3840x2160) @ 30Hz
+> Integrated AMD Radeon R7/R5 Series Graphics in A-series APU
+> Supports HDMI with max. resolution up to 4K x 2K (4096x2160) @ 24Hz / (3840x2160) @ 30Hz
 
-So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics *only if* you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them, so no onboard graphics for me.
+So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics _only if_ you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them, so no onboard graphics for me.
 
 If I did this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](https://smile.amazon.com/GIGABYTE-GA-AB350-Gaming-Fusion-HDMI1-4-Motherboard/dp/B06VWHXK94/) just for the simplicity of having an onboard GPU.
 

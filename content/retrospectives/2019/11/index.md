@@ -2,15 +2,15 @@
 title: Is It Keto - Month 10
 description: Quickly made my first sale, then struggled to make more.
 images:
-- /retrospectives/2019/11/first-payment.jpg
-date: '2019-11-08'
+  - /retrospectives/2019/11/first-payment.jpg
+date: "2019-11-08"
 ---
 
 ## Highlights
 
-* I sold my first meal plan on [Is It Keto](https://isitketo.org).
-* I then tried five different experiments for increasing sales.
-* Is It Keto's revenue dropped for the month as I redirected resources toward its failing meal plans.
+- I sold my first meal plan on [Is It Keto](https://isitketo.org).
+- I then tried five different experiments for increasing sales.
+- Is It Keto's revenue dropped for the month as I redirected resources toward its failing meal plans.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 
 ### Earn $100 in revenue from sales of keto meal plans
 
-* **Result**: Earned only $23.87 from keto meal plan sales.
-* **Grade**: D+
+- **Result**: Earned only $23.87 from keto meal plan sales.
+- **Grade**: D+
 
 It turns out it's really hard to get people to spend money on things that other sites offer for free. Despite my best efforts, I only managed to sell two meal plans, far lower than the volume I expected.
 
 ### Add five new articles to Is It Keto
 
-* **Result**: Added four new articles to Is It Keto.
-* **Grade**: B-
+- **Result**: Added four new articles to Is It Keto.
+- **Grade**: B-
 
 I was a bit overambitious in how quickly I could ramp up the site's new writer, but we came close to the target.
 
 ### Appear on a podcast aimed at freelancers or entrepreneurs to talk about my writing guide
 
-* **Result**: Reached out to four podcasts, got rejections or non-responses from all of them.
-* **Grade**: F
+- **Result**: Reached out to four podcasts, got rejections or non-responses from all of them.
+- **Grade**: F
 
 It still feels unfortunate that I can't connect my [guide to hiring writers](/hiring-content-writers/) with an audience. Even fairly small, niche podcasts for freelance writers weren't interested in talking to me about my article.
 
@@ -52,12 +52,12 @@ It still feels unfortunate that I can't connect my [guide to hiring writers](/hi
 | AdSense Earnings          | $178.79        | $75.65       | <font color="red">-$103.14 (-58%)</font>    |
 | Amazon Affiliate Earnings | $150.06        | $159.02      | <font color="green">+$8.96 (+6%)</font>     |
 | Meal Plan Sales           | N/A            | $23.87       | N/A                                         |
-| **Total Revenue**        | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
+| **Total Revenue**         | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
 
 Revenues are way down from my [August peak](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg) of $389. The loss comes from reductions in AdSense earnings, which I believe have two causes:
 
-* I reduced the sizes of my ads, as the previous sizes were overwhelming the page ([before](https://imgur.com/oAeqEDB) vs. [after](https://imgur.com/O3VPlM1)).
-* I replaced some of my AdSense ads with [self-ads](#i-added-self-ads) for Is It Keto paid meal plans.
+- I reduced the sizes of my ads, as the previous sizes were overwhelming the page ([before](https://imgur.com/oAeqEDB) vs. [after](https://imgur.com/O3VPlM1)).
+- I replaced some of my AdSense ads with [self-ads](#i-added-self-ads) for Is It Keto paid meal plans.
 
 I knew I'd lose AdSense revenue by dialing down its ads, but I hoped to make up the loss in increased revenues from selling meal plans. Unfortunately, meal plan sales failed to offset those losses.
 
@@ -67,9 +67,9 @@ Traffic stats are slumping, too. I think this is partially due to waning interes
 
 {{<revenue-graph project="zestful">}}
 
-| Metric                 | September 2019 | October 2019   | Change |
-|------------------------|----------------|----------------|--------|
-| Total Earnings         | $4.51          | $4.86          | <font color="green">+$0.35 (+8%)</font> |
+| Metric         | September 2019 | October 2019 | Change                                  |
+| -------------- | -------------- | ------------ | --------------------------------------- |
+| Total Earnings | $4.51          | $4.86        | <font color="green">+$0.35 (+8%)</font> |
 
 Zestful is quietly chugging along in the background. The server costs me $7.50/month, so I'm actually running at a small loss.
 
@@ -142,8 +142,8 @@ I couldn't discount the $4.99 price in a meaningful way, so I raised prices back
 It felt like a great idea. I'd get feedback from my users, and they'd feel invested in the meal plans and more likely to make a purchase.
 
 {{<gallery caption="Incentivizing users to provide feedback on the meal plans">}}
-  {{<img src="survey1.jpg" alt="Meal plan discount link" maxWidth="400px">}}
-  {{<img src="survey2.jpg" alt="Meal plan discount explanation" maxWidth="400px">}}
+{{<img src="survey1.jpg" alt="Meal plan discount link" maxWidth="400px">}}
+{{<img src="survey2.jpg" alt="Meal plan discount explanation" maxWidth="400px">}}
 {{</gallery>}}
 
 The link led to this [SurveyMonkey survey](https://www.surveymonkey.com/r/633GTSD).
@@ -166,7 +166,7 @@ After a few days, I gave up on this channel. I wasn't gaining traction, and chec
 
 ### I went back to square one
 
-At this point, I was mystified. How could 4% of users click the "Buy now" button during my smoke test, but now that they actually *could* buy, they weren't purchasing anything?
+At this point, I was mystified. How could 4% of users click the "Buy now" button during my smoke test, but now that they actually _could_ buy, they weren't purchasing anything?
 
 I could think of two possibilities:
 
@@ -194,8 +194,8 @@ I made this change on October 31st, but there have still been no new sales after
 ### Experiment summary
 
 | Experiment                        | Unique visitors | Clicked "buy" button | Completed checkout |
-|-----------------------------------|-----------------|----------------------|--------------------|
-| Smoke test                        | 340             | 14 (4.1%)            | 1* (0.3%)          |
+| --------------------------------- | --------------- | -------------------- | ------------------ |
+| Smoke test                        | 340             | 14 (4.1%)            | 1\* (0.3%)         |
 | List the first meal plan for sale | 218             | 1 (0.5%)             | -                  |
 | Drop prices to $4.99              | 26              | 1 (3.8%)             | -                  |
 | Offer discounts via a survey      | 112             | 1 (0.9%)             | -                  |
@@ -210,26 +210,26 @@ At this point, I'm wondering whether users are willing to pay for meal plans at 
 
 Here are some additional ideas I have to encourage users to purchase:
 
-* Cook the recipes myself, take photos of the results, and add food photos to the sales pages.
-* Let readers view more sample pages in the meal plans to see what they're buying.
-* Improve the sales copy and page layouts.
+- Cook the recipes myself, take photos of the results, and add food photos to the sales pages.
+- Let readers view more sample pages in the meal plans to see what they're buying.
+- Improve the sales copy and page layouts.
 
 ## Wrap up
 
 ### What got done?
 
-* Made my first sale of Is It Keto's meal plan product.
-  * Drafted a licensing agreement with a third-party meal plan provider.
-  * Tried several experiments to increase sales.
-* Simplified the build process on What Got Done so that anyone can spin up a local instance with [a single command](https://twitter.com/deliberatecoder/status/1189529617947869184).
-* Presented ["Why Good Developers Write Bad Tests" at PyGotham](/retrospectives/pygotham-2019-notes/).
+- Made my first sale of Is It Keto's meal plan product.
+  - Drafted a licensing agreement with a third-party meal plan provider.
+  - Tried several experiments to increase sales.
+- Simplified the build process on What Got Done so that anyone can spin up a local instance with [a single command](https://twitter.com/deliberatecoder/status/1189529617947869184).
+- Presented ["Why Good Developers Write Bad Tests" at PyGotham](/retrospectives/pygotham-2019-notes/).
 
 ### Lessons learned
 
-* View smoke test results with a healthy dose of skepticism.
-  * Even if 4% of users click the "buy" button, the percentage who will actually purchase can be significantly lower.
+- View smoke test results with a healthy dose of skepticism.
+  - Even if 4% of users click the "buy" button, the percentage who will actually purchase can be significantly lower.
 
 ### Goals for next month
 
-* Publish a new blog post about eliminating distractions from email and social media.
-* Interview five customers for a potential new business.
+- Publish a new blog post about eliminating distractions from email and social media.
+- Interview five customers for a potential new business.

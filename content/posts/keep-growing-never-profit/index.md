@@ -2,15 +2,15 @@
 title: How to Grow Quickly and Never Turn a Profit
 description: A eulogy for my failed online business.
 tags:
-- is it keto
-- startups
+  - is it keto
+  - startups
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=20062264
   indie_hackers: https://www.indiehackers.com/post/37ea42382d
   reddit: https://redd.it/bvap1u
-date: '2019-05-31'
+date: "2019-05-31"
 images:
-- keep-growing-never-profit/cover.jpg
+  - keep-growing-never-profit/cover.jpg
 ---
 
 {{< img src="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" maxWidth="1000px" >}}
@@ -71,15 +71,15 @@ My virtual assistant saved me time, but Twitter generated less than a penny for 
 
 Declaring my goals publicly also protected me from wandering off into the weeds. Here's a conversation I had with myself about a feature I was excited to build:
 
->**Me (Feature-happy)**: I should integrate with the USDA's public database! That way, every Is It Keto page can display the food's nutritional information.
+> **Me (Feature-happy)**: I should integrate with the USDA's public database! That way, every Is It Keto page can display the food's nutritional information.
 >
->**Me (Goal-oriented)**: This month's top goal is to earn $50 in revenue. Would integrating with the USDA database help achieve that?
+> **Me (Goal-oriented)**: This month's top goal is to earn $50 in revenue. Would integrating with the USDA database help achieve that?
 >
->**Me (Feature-happy)**: Maybe! It would improve the site experience and attract more users.
+> **Me (Feature-happy)**: Maybe! It would improve the site experience and attract more users.
 >
->**Me (Goal-oriented)**: But it would take three weeks of development time. Given the same timeframe, are there other tasks that have a higher probability of yielding $50 in revenue?
+> **Me (Goal-oriented)**: But it would take three weeks of development time. Given the same timeframe, are there other tasks that have a higher probability of yielding $50 in revenue?
 >
->**Me (Feature-happy)**: (deflated) Yes...
+> **Me (Feature-happy)**: (deflated) Yes...
 
 Without explicit goals, the feature-happy version of me would have run rampant, building features that were fun but irrelevant to the bottom line.
 
@@ -87,9 +87,9 @@ Without explicit goals, the feature-happy version of me would have run rampant, 
 
 ### I obsessed over metrics
 
-It was easy for me to rationalize the many daily visits I paid to my traffic and revenue dashboards. "Of *course* I have to check my metrics. They're critical to understanding the health of my site." Many founders fall into the same trap.
+It was easy for me to rationalize the many daily visits I paid to my traffic and revenue dashboards. "Of _course_ I have to check my metrics. They're critical to understanding the health of my site." Many founders fall into the same trap.
 
-Checking metrics is ["shallow work"](/book-reports/deep-work/#key-takeaways): it doesn't require deep focus or critical thinking, but it *feels* productive. It is, of course, useful for a site owner to know their traffic and revenue numbers, but not at the frequency that I was checking.
+Checking metrics is ["shallow work"](/book-reports/deep-work/#key-takeaways): it doesn't require deep focus or critical thinking, but it _feels_ productive. It is, of course, useful for a site owner to know their traffic and revenue numbers, but not at the frequency that I was checking.
 
 {{< img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="Is It Keto page views - March 2018 through April 2019" maxWidth="800px" hasBorder="True" >}}
 
@@ -118,6 +118,7 @@ Is It Keto linked to food products. One of the top affiliate clicks is [Propel F
 To help prioritize future articles, Is It Keto tracks the most commonly-requested foods that lack a dedicated page. Here are the top five:
 
 >
+
 1. Mushrooms
 1. Beef
 1. Sausages
@@ -136,7 +137,7 @@ In evaluating business ideas now, I think about revenue from start to finish. Fo
 
 ### Search engines have a substantial lag
 
-Today, if you ask Google ["are cheese whisps keto?"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)  it responds with a list of results that all fail to answer the question.
+Today, if you ask Google ["are cheese whisps keto?"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F) it responds with a list of results that all fail to answer the question.
 
 {{< img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" maxWidth="450px" hasBorder="True" >}}
 
@@ -146,7 +147,7 @@ For new sites, Google ranks you low in results and then bumps you up or down dep
 
 Having this knowledge up front would have made me more cautious about pursuing a content site. Most online businesses flop, so I pursue projects that let me fail fast and avoid sinking years into a dud. The sluggish settling pace of search engine rankings stretches out this feedback loop inconveniently far.
 
-One way to accelerate this process is to earn links from other highly-ranked pages. If [*Men's Health Magazine*](https://www.menshealth.com/) linked to Is It Keto, search engines would consider my site more relevant and deserving of higher search rankings. In a strategic misstep on my part, I never created content that incentivized other sites to link to Is It Keto, save for a few desperate blog posts near the end that failed to win any attention.
+One way to accelerate this process is to earn links from other highly-ranked pages. If [_Men's Health Magazine_](https://www.menshealth.com/) linked to Is It Keto, search engines would consider my site more relevant and deserving of higher search rankings. In a strategic misstep on my part, I never created content that incentivized other sites to link to Is It Keto, save for a few desperate blog posts near the end that failed to win any attention.
 
 ### Good writing is expensive
 
@@ -158,7 +159,7 @@ Boy, was I off.
 
 I received applications from over 30 writers, did paid trials with about 10 of them, and never managed to bring costs [below $46 per article](/retrospectives/2019/03/#diving-into-my-content-costs). There certainly are writers who work for $15 per article, but they churned out barely-intelligible garbage. There's a hefty premium for people who produce the kind of clear, concise writing I wanted for the site.
 
-There was a *ton* I didn't know about hiring writers. Expect a full-length post in the next few months that goes into more detail about what I learned.
+There was a _ton_ I didn't know about hiring writers. Expect a full-length post in the next few months that goes into more detail about what I learned.
 
 ## Going forward
 
@@ -170,4 +171,4 @@ While I'm disappointed that Is It Keto never produced positive returns, it was a
 
 ---
 
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/).*
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/)._

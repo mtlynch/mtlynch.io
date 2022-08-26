@@ -2,15 +2,15 @@
 title: Recovery Month
 description: How I doubled revenues by doing absolutely nothing.
 images:
-- retrospectives/2019/05/amazon-earnings.jpg
-date: '2019-05-08'
+  - retrospectives/2019/05/amazon-earnings.jpg
+date: "2019-05-08"
 ---
 
 ## Highlights
 
-* Is It Keto's revenue doubled to $82.44 with zero effort on my part.
-* My task journaling app is almost ready for publication.
-* I've begun setting up meetings with potential customers about my next project ideas.
+- Is It Keto's revenue doubled to $82.44 with zero effort on my part.
+- My task journaling app is almost ready for publication.
+- I've begun setting up meetings with potential customers about my next project ideas.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of the month, I [gave up on Is It Keto](/retrospectives/2019/04/#ca
 
 **Learn Vue.js**
 
-* **Result**: Went through the [Vue guide](https://vuejs.org/v2/guide/) and used Vue to implement a basic site.
-* **Grade**: A
+- **Result**: Went through the [Vue guide](https://vuejs.org/v2/guide/) and used Vue to implement a basic site.
+- **Grade**: A
 
 I'm not fluent in Vue, but I'm "conversational." I can create a website with the features that I want without getting tripped up by the language itself, which is more than I could say about Angular after 6 months banging my head against the wall trying to use it.
 
 **Explore ideas for a new project**
 
-* **Result**: Reached out to a few different potential customers to schedule meetings
-* **Grade**: B-
+- **Result**: Reached out to a few different potential customers to schedule meetings
+- **Grade**: B-
 
 I reached out to eight publishers and writers. Most ignored me but some of those cold emails turned into meetings scheduled for May. I also called several local stone quarries who have no idea what I'm talking about when I say I want to write custom software for them, so I need to find another angle to pitch to them.
 
 **Get back to posting full-length blog articles**
 
-* **Result**: I published a new [blog post](/painless-web-app-testing/) about end-to-end testing.
-* **Grade**: A
+- **Result**: I published a new [blog post](/painless-web-app-testing/) about end-to-end testing.
+- **Grade**: A
 
 I generally try to publish a new blog post each month, but I hadn't published anything since February because I got busy preparing talks for software conferences. My new blog post described a testing technique that works with almost any web app. It reached ~14,000 readers in its first two days, which is on the medium-high side for me.
 
@@ -51,7 +51,7 @@ Now that Is It Keto is on the backburner, I'm not going to dive as deeply into i
 | Total Pageviews        | 11,431     | 19,732     | <font color="green">+8,301 (+73%)</font>       |
 | Domain Authority (Moz) | 9          | 9          | 0                                              |
 | Ranking Keywords (Moz) | 448        | 548        | <font color="green">+100 (+22%)</font>         |
-| **Total Revenue**     | **$40.84** | **$82.44** | **<font color="green">+$41.60 (+102%)</font>** |
+| **Total Revenue**      | **$40.84** | **$82.44** | **<font color="green">+$41.60 (+102%)</font>** |
 
 ## Money for nothing
 
@@ -79,7 +79,7 @@ If you know a writer or copy editor who might be interested, please ask them to 
 
 ## An app for rocks
 
-One idea I liked from the book [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) was the "market-first approach." Instead of picking a product and trying to sell it to a particular market, you pick an underserved market, find out what they need, then build that.
+One idea I liked from the book [_Start Small, Stay Small_](/book-reports/start-small-stay-small/) was the "market-first approach." Instead of picking a product and trying to sell it to a particular market, you pick an underserved market, find out what they need, then build that.
 
 I [live in Western Massachusetts](/solo-developer-year-1/#so-i-bought-a-house), so I've been thinking about businesses that are exclusive to this area. One such business is quarries that mine Goshen stone, a popular stone for home landscaping. These businesses have millions in revenue but seem to do most of their business through paper orders and phone calls, so I suspect there's opportunity for automation.
 
@@ -101,7 +101,7 @@ My April goal was to learn Vue.js, and there's no better way to learn a new tech
 
 Here's my entry for last week:
 
-* [What Got Done - May 3rd, 2019](https://whatgotdone.com/michael/2019-05-03)
+- [What Got Done - May 3rd, 2019](https://whatgotdone.com/michael/2019-05-03)
 
 User registration isn't ready yet, but keep an eye out for a Twitter announcement in the next couple weeks about a working minimum viable product.
 
@@ -113,22 +113,22 @@ If you'd like to be a beta tester for What Got Done, [email me](/about/).
 
 ### What got done?
 
-* [Presented a talk](/retrospectives/pytexas-2019-notes/) at PyTexas
-* Published a new [blog post](/painless-web-app-testing/) about end-to-end testing
-* Created a [fake podcast](https://twitter.com/deliberatecoder/status/1112688989306318850) for April Fool's Day
-* Got a prototype of [What Got Done app](https://whatgotdone.com) almost working
-* Reached out to 11 potential customers for future projects
+- [Presented a talk](/retrospectives/pytexas-2019-notes/) at PyTexas
+- Published a new [blog post](/painless-web-app-testing/) about end-to-end testing
+- Created a [fake podcast](https://twitter.com/deliberatecoder/status/1112688989306318850) for April Fool's Day
+- Got a prototype of [What Got Done app](https://whatgotdone.com) almost working
+- Reached out to 11 potential customers for future projects
 
 ### Lessons learned
 
-* Vue.js is a better match for me than Angular
-  * Angular has complex features that probably benefit large development teams but which impede solo developers and small teams.
-* If your project relies on traffic from organic search, it takes months/years for search engines to bubble up your pages to their appropriate place in search results.
-* Even if you're offering someone a no-risk custom solution for their business, you still need to sell them on it.
-  * Business owners are busy and don't have time to take pitches from anyone who wants to sell them something, even if you promise something tailor-made for that business. You still need to give them a compelling reason to take a 30-minute meeting with you.
+- Vue.js is a better match for me than Angular
+  - Angular has complex features that probably benefit large development teams but which impede solo developers and small teams.
+- If your project relies on traffic from organic search, it takes months/years for search engines to bubble up your pages to their appropriate place in search results.
+- Even if you're offering someone a no-risk custom solution for their business, you still need to sell them on it.
+  - Business owners are busy and don't have time to take pitches from anyone who wants to sell them something, even if you promise something tailor-made for that business. You still need to give them a compelling reason to take a 30-minute meeting with you.
 
 ### Goals for next month
 
-* Publish a minimum viable product version of What Got Done and see if anyone wants to buy premium features.
-* Meet with 10 potential customers for my next product.
-* Publish a new blog post.
+- Publish a minimum viable product version of What Got Done and see if anyone wants to buy premium features.
+- Meet with 10 potential customers for my next product.
+- Publish a new blog post.

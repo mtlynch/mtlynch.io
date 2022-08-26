@@ -1,25 +1,26 @@
 ---
 title: How to Hire a Cartoonist to Make Your Blog Less Boring
-description: With no idea what I was doing, I hired a cartoonist to illustrate my
+description:
+  With no idea what I was doing, I hired a cartoonist to illustrate my
   blog. The results were surprisingly positive.
 tags:
-- cartoons
-- blogging
-- outsourcing
+  - cartoons
+  - blogging
+  - outsourcing
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=16186049
-date: '2018-01-19'
+date: "2018-01-19"
 images:
-- how-to-hire-a-cartoonist/mma-sketch.png
+  - how-to-hire-a-cartoonist/mma-sketch.png
 ---
 
 I had just completed a passionate blog post.
 
-Too passionate, maybe, as I had written over 8,000 words. That's 1000x longer than the average *Buzzfeed* article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
+Too passionate, maybe, as I had written over 8,000 words. That's 1000x longer than the average _Buzzfeed_ article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
 
 {{< img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[*An Illustrated Book of Bad Arguments*](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/) by Ali Almossawi" maxWidth="270px" align="right" linkUrl="https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/" >}}
 
-I had recently read [*An Illustrated Book of Bad Arguments*](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/). It explained the various classes of logical fallacies in a beautiful children's book style. I was impressed at how well it used illustrations to make dry academic ideas fun and easy to consume.
+I had recently read [_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/). It explained the various classes of logical fallacies in a beautiful children's book style. I was impressed at how well it used illustrations to make dry academic ideas fun and easy to consume.
 
 Maybe cartoons could have the same effect on my massive tome of a blog article.
 
@@ -37,18 +38,18 @@ Within two days, I received 13 submissions.
 
 Some of the applicants' portfolios were clearly bad, like doodles you'd see in the margins of a high schooler's Calculus textbook. Others were good but had the style of a graphic novel or political cartoon, which wasn't what I wanted.
 
-Four of the portfolios had the lighthearted, playful style reminiscent of *An Illustrated Book of Bad Arguments*, so I selected those artists for my shortlist:
+Four of the portfolios had the lighthearted, playful style reminiscent of _An Illustrated Book of Bad Arguments_, so I selected those artists for my shortlist:
 
-* [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
-* [Loraine Yow](https://www.lolo-ology.com/)
-* [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
-* Sofia (she preferred I not link to her profile for this article)
+- [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)
+- [Loraine Yow](https://www.lolo-ology.com/)
+- [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)
+- Sofia (she preferred I not link to her profile for this article)
 
 ## Choosing the final cartoonist
 
 I commissioned each shortlisted artist to draw a cartoon based on the same description:
 
->I would like an illustration of two animals. One of the characters is straining to move a couch, carrying it on their back. The other is watching the first character and not helping, but the character says, "We should really move this couch."
+> I would like an illustration of two animals. One of the characters is straining to move a couch, carrying it on their back. The other is watching the first character and not helping, but the character says, "We should really move this couch."
 
 For additional context, I linked to the [section](/human-code-reviews-1/#never-say-you) of my blog post where the cartoon would appear.
 
@@ -56,13 +57,13 @@ For additional context, I linked to the [section](/human-code-reviews-1/#never-s
 
 {{< img src="sample-sofia.jpg" alt="Sample submission from Sofia" caption="Cartoon submission from Sofia" maxWidth="500px" >}}
 
-Sofia was the first artist to submit her sample. I liked it. The animals were *just* human enough to be funny, while still being cute and whimsical. She nailed the expressions. The cat looked kind of snobby, which was fitting because it represented me.
+Sofia was the first artist to submit her sample. I liked it. The animals were _just_ human enough to be funny, while still being cute and whimsical. She nailed the expressions. The cat looked kind of snobby, which was fitting because it represented me.
 
 ### Manel's submission
 
 {{< img src="sample-manel.jpg" alt="Sample submission from Manel" caption="Cartoon submission from [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)" maxWidth="500px" >}}
 
-Manel's submission was impressive in how *closely* it matched the style of *An Illustrated Book of Bad Arguments*. Her first sketch was even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were blatantly ripping off the book.
+Manel's submission was impressive in how _closely_ it matched the style of _An Illustrated Book of Bad Arguments_. Her first sketch was even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were blatantly ripping off the book.
 
 {{< img src="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" caption="\"Appeal to Ignorance,\" from [*An Illustrated Book of Bad Arguments*](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/)" maxWidth="400px" >}}
 
@@ -70,7 +71,7 @@ Manel's submission was impressive in how *closely* it matched the style of *An I
 
 {{< img src="sample-christine.jpg" alt="Sample submission from Christine" caption="Cartoon submission from [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)" maxWidth="500px" >}}
 
-Christine's was the most elaborate. We learn a great deal about the two characters and their relationship just from the little details of how they're dressed, their expressions, and the items around them. It felt like a *New Yorker* cartoon.
+Christine's was the most elaborate. We learn a great deal about the two characters and their relationship just from the little details of how they're dressed, their expressions, and the items around them. It felt like a _New Yorker_ cartoon.
 
 ### Winner: Loraine's submission
 
@@ -78,7 +79,7 @@ Christine's was the most elaborate. We learn a great deal about the two characte
 
 Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time.
 
-I had led the artists astray by referencing *An Illustrated Book of Bad Arguments*. In that book, the cartoons are the star of the show. In my blog post, I wanted the cartoons to support the text, not the other way around.
+I had led the artists astray by referencing _An Illustrated Book of Bad Arguments_. In that book, the cartoons are the star of the show. In my blog post, I wanted the cartoons to support the text, not the other way around.
 
 Loraine's cartoon was by far the simplest, but it was also the most efficient. Like elegant code, it communicated the essential idea and eliminated everything else.
 
@@ -104,13 +105,13 @@ That excellent illustration began with my horrendous stick figure drawing:
 
 I accompanied the sketch with this text description to Loraine:
 
->The dog has just finished fighting a shoe in a UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg)).
+> The dog has just finished fighting a shoe in a UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg)).
 >
->A human referee is holding the dog's paw up in victory. UFC referees wear black pants, black polo shirts, and gloves ([example](http://media.ufc.tv/200/UFC200feature_johnmccarthy/GettyImages-115727257.jpg)).
+> A human referee is holding the dog's paw up in victory. UFC referees wear black pants, black polo shirts, and gloves ([example](http://media.ufc.tv/200/UFC200feature_johnmccarthy/GettyImages-115727257.jpg)).
 >
->So the dog has won, but he has a black eye and some welts as if the shoe hit him back. The shoe is lying on its side on the ground, torn up.
+> So the dog has won, but he has a black eye and some welts as if the shoe hit him back. The shoe is lying on its side on the ground, torn up.
 >
->The cat is in the audience, cheering, "Beautiful grappling! You soundly defeated that shoe." The audience is full but it's just a faceless crowd aside from the cat
+> The cat is in the audience, cheering, "Beautiful grappling! You soundly defeated that shoe." The audience is full but it's just a faceless crowd aside from the cat
 
 And Loraine sent me this initial draft:
 
@@ -119,9 +120,9 @@ And Loraine sent me this initial draft:
 Right off the bat, it was pretty close to what I wanted. I asked her to proceed with that sketch, and she sent me a more detailed version. We went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
 
 {{< gallery caption="Evolution of \"Offer sincere praise\" cartoon from [How to do Code Reviews Like a Human](/human-code-reviews-2/#offer-sincere-praise)" >}}
-  {{< img src="mma-v1.png" alt="MMA cartoon v1" >}}
-  {{< img src="mma-v2.png" alt="MMA cartoon v2" >}}
-  {{< img src="mma-v3.png" alt="Final version of MMA cartoon" >}}
+{{< img src="mma-v1.png" alt="MMA cartoon v1" >}}
+{{< img src="mma-v2.png" alt="MMA cartoon v2" >}}
+{{< img src="mma-v3.png" alt="Final version of MMA cartoon" >}}
 {{< /gallery >}}
 
 ## Results
@@ -138,16 +139,16 @@ On reddit, one of the [top comments](https://www.reddit.com/r/programming/commen
 
 You're probably wondering how much this all cost.
 
-| Expense | Cost |
-|------------|-------|
-| Four samples @ $30 | $120 |
-| Block of 10 cartoons from Loraine | $280 |
-| Four additional cartoons from Loraine | $125 |
-| **Total** | **$525** |
+| Expense                               | Cost     |
+| ------------------------------------- | -------- |
+| Four samples @ $30                    | $120     |
+| Block of 10 cartoons from Loraine     | $280     |
+| Four additional cartoons from Loraine | $125     |
+| **Total**                             | **$525** |
 
 I know! It's a lot. Especially for a blog like mine that doesn't really make money.
 
-But I had to break up the text somehow. It was either this, pay for stock photos, or spend hours trawling through free stock photos that *kind of* fit.
+But I had to break up the text somehow. It was either this, pay for stock photos, or spend hours trawling through free stock photos that _kind of_ fit.
 
 I did briefly attempt to use stock photos, but it felt a bit like this:
 
@@ -171,12 +172,12 @@ The cartoonists all described similar qualities they look for in a client when d
 
 A good client:
 
-* Has a clear vision of what they want and can articulate it clearly
-  * Alternatively, recognizes the project as open-ended, and grants creative freedom to their cartoonist
-* Respects the freelancer's craft
-  * Understands that the work takes time and skill
-* Provides constructive feedback
-  * Doesn't simply bash the artist's work
+- Has a clear vision of what they want and can articulate it clearly
+  - Alternatively, recognizes the project as open-ended, and grants creative freedom to their cartoonist
+- Respects the freelancer's craft
+  - Understands that the work takes time and skill
+- Provides constructive feedback
+  - Doesn't simply bash the artist's work
 
 ### 1. Start with a small job
 
@@ -188,8 +189,8 @@ Resist the temptation to ask freelancers to draw you a free, custom sample carto
 
 ### 3. Choose the right contract type for the job
 
-* Hire on a **fixed-cost basis** if you have a clear vision of what you want.
-* Hire on an **hourly basis** if you don't quite know what you want and you'd like the artist to help you explore different ideas.
+- Hire on a **fixed-cost basis** if you have a clear vision of what you want.
+- Hire on an **hourly basis** if you don't quite know what you want and you'd like the artist to help you explore different ideas.
 
 ### 4. Write a clear, thorough job description
 
@@ -197,15 +198,15 @@ If your listing is basically, "Looking for cartoonist who draws good," it sends 
 
 Even if you don't know the style that you want, you can specify the technical details of the artwork, such as:
 
-* Purpose
-  * Will it appear in a blog article? Is it your new website logo?
-* Image dimensions (in pixels)
-* Color or black and white
-* Usage rights
-  * Do you need the full copyright or just the right to use it once?
-  * If you're using a freelancer site, check the standard contract terms, as they may automatically give the client full intellectual property rights (Upwork does).
-* Image format
-  * Do you just want the finished images (jpeg/png) or the raw files as well?
+- Purpose
+  - Will it appear in a blog article? Is it your new website logo?
+- Image dimensions (in pixels)
+- Color or black and white
+- Usage rights
+  - Do you need the full copyright or just the right to use it once?
+  - If you're using a freelancer site, check the standard contract terms, as they may automatically give the client full intellectual property rights (Upwork does).
+- Image format
+  - Do you just want the finished images (jpeg/png) or the raw files as well?
 
 ### 5. Write personalized interview invitations
 
@@ -226,8 +227,8 @@ A low-quality applicant may tempt you with a cheap bid. Before you're taken in b
 
 Pay attention to red flags in the early stages of hiring:
 
-* Improper or incomplete answers to your screening questions
-* Vague questions they ask you that you can't answer without clarification
+- Improper or incomplete answers to your screening questions
+- Vague questions they ask you that you can't answer without clarification
 
 ### 7. Sketch your ideas first
 
@@ -251,4 +252,4 @@ While none of the artists I spoke with said they strictly require it, they all a
 
 ---
 
-*Thanks to all the artists who spoke with me for this article and to Nicole Michaelis for volunteering her time to edit this piece.*
+_Thanks to all the artists who spoke with me for this article and to Nicole Michaelis for volunteering her time to edit this piece._

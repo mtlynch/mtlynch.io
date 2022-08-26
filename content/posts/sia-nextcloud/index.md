@@ -1,20 +1,22 @@
 ---
 title: Create Your Own Low-Cost Cloud Storage App with Sia and Nextcloud
 tags:
-- sia
-- nextcloud
-- docker
+  - sia
+  - nextcloud
+  - docker
 discuss_urls:
   reddit: https://www.reddit.com/r/siacoin/comments/6s02z5/tutorial_setting_up_sia_with_nextcloud/
   hacker_news: https://news.ycombinator.com/item?id=15243866
-lastmod: '2018-03-15T17:44:00-05:00'
-description: "In today\u2019s post, I\u2019m going to show you how to set up your\
+lastmod: "2018-03-15T17:44:00-05:00"
+description:
+  "In today\u2019s post, I\u2019m going to show you how to set up your\
   \ own cloud storage web app, similar to Dropbox or Google Drive, but with substantially\
   \ lower costs."
-date: '2017-08-06'
+date: "2017-08-06"
 images:
-- sia-nextcloud/nextcloud-complete.png
+  - sia-nextcloud/nextcloud-complete.png
 ---
+
 <!-- markdownlint-disable blanks-around-fences blanks-around-lists -->
 
 In today's post, I'm going to show you how to set up your own cloud storage web app, similar to Dropbox or Google Drive, but with substantially lower costs. This solution provides cloud storage at ~$0.60 per TB/month. By comparison, the same storage would cost $8.25 per month on Dropbox or $10 per month on Google Drive.
@@ -39,18 +41,18 @@ I used Windows 10 in the video demo, but this tutorial is completely system-agno
 
 To complete this guide, you will need:
 
-* At least 500 Siacoin (SC)
-  * You can either [buy it](https://siasetup.info/guides/buying_siacoins) or [mine it](/windows-sia-mining/).
-* 6 GB of free disk space, preferably on a solid-state drive (SSD)
-* [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
+- At least 500 Siacoin (SC)
+  - You can either [buy it](https://siasetup.info/guides/buying_siacoins) or [mine it](/windows-sia-mining/).
+- 6 GB of free disk space, preferably on a solid-state drive (SSD)
+- [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) (free) installed on your system
 
 ## Time required
 
 The steps in this guide require about **20 minutes** of active time. However, there are several points in the installation process where you must wait minutes to hours for Sia to complete processing, so the total time is 3-4 hours.
 
-* **Create Docker containers**: 5 minutes
-* **Configure Sia**: 10 minutes active time, 3-4 hours total time
-* **Configure Nextcloud**: 5 minutes
+- **Create Docker containers**: 5 minutes
+- **Configure Sia**: 10 minutes active time, 3-4 hours total time
+- **Configure Nextcloud**: 5 minutes
 
 ## Components of this solution
 
@@ -86,9 +88,9 @@ To begin, you'll create a directory for this solution and download all the neces
 
 1. Create a directory called `sia-nextcloud`. You'll be downloading the full blockchain within this folder, so make sure it's on a drive with at least 6 GB of free space.
 1. Download the three files below into the `sia-nextcloud` directory:
-    * [`docker-compose.yml`](docker-compose.yml)
-    * [`Dockerfile.nextcloud`](Dockerfile.nextcloud)
-    * [`Dockerfile.sia`](Dockerfile.sia)
+   - [`docker-compose.yml`](docker-compose.yml)
+   - [`Dockerfile.nextcloud`](Dockerfile.nextcloud)
+   - [`Dockerfile.sia`](Dockerfile.sia)
 1. Within `sia-nextcloud` create two directories: `sia-data` and `sia-uploads`.
 
 After downloading these files and creating the appropriate folders, your directory should look like this:
@@ -146,7 +148,7 @@ To check the status of your containers, use the `logs` command:
 docker-compose logs
 ```
 
-When Sia has finished loading, you will see  a sequence in the logs that looks like this:
+When Sia has finished loading, you will see a sequence in the logs that looks like this:
 
 ```text
 sia_1        | Loading...
@@ -184,28 +186,35 @@ Sia needs to download its full blockchain before you can begin using it, but thi
 To apply the blockchain sync workaround:
 
 1. Shut down the Docker containers.
-  ```bash
-  # Tell Sia to shut down gracefully.
-  docker exec -it sianextcloud_sia_1 ./siac stop
-  # Give Sia a few seconds to shut down gracefully.
-  sleep 5
-  # Stop the Docker containers.
-  docker-compose down
-  ```
+
+```bash
+# Tell Sia to shut down gracefully.
+docker exec -it sianextcloud_sia_1 ./siac stop
+# Give Sia a few seconds to shut down gracefully.
+sleep 5
+# Stop the Docker containers.
+docker-compose down
+```
+
 1. Download the Sia [consensus.db file](https://siastats.info/consensus) from the latest [SiaStats](https://siastats.info) snapshot.
 1. Copy the `consensus.db` file to `sia-nextcloud/sia-data/consensus/consensus.db` (overwriting the existing file).
 1. Restart the Docker containers.
-  ```bash
-  docker-compose up -d
-  ```
+
+```bash
+docker-compose up -d
+```
+
 1. Check the container logs periodically until Sia has processed the new blockchain and finished loading:
-  ```bash
-  docker-compose logs
-  ```
-  When Sia finishes loading, you'll see a message in the logs similar to the following:
-  ```text
-  sia_1        | Finished loading in 0.7577895 seconds
-  ```
+
+```bash
+docker-compose logs
+```
+
+When Sia finishes loading, you'll see a message in the logs similar to the following:
+
+```text
+sia_1        | Finished loading in 0.7577895 seconds
+```
 
 In my tests, this process took 50 minutes on an SSD. If you're running Sia on a hard-disk drive (HDD), it will take several hours.
 
@@ -334,13 +343,13 @@ It's time to install Nextcloud's Sia app. Unfortunately, it is not possible to i
 
 1. Open [http://localhost:8080](http://localhost:8080) in your browser to access the NextCloud web app.
 1. Enter the Nextcloud web app credentials you selected in the ["Install Nextcloud'](#install-nextcloud) step above. If you used the default credentials, this will be `admin`/`admin`.
-  {{< img src="nextcloud-login.png" alt="Nextcloud login" >}}
+   {{< img src="nextcloud-login.png" alt="Nextcloud login" >}}
 1. At the Nextcloud home screen, click the gear icon in the upper right, then click "Apps".
-  {{< img src="nextcloud-apps.png" alt="Nextcloud apps button" >}}
+   {{< img src="nextcloud-apps.png" alt="Nextcloud apps button" >}}
 1. Click the "Tools" category in the left-hand menu.
-  {{< img src="nextcloud-tools.png" alt="Nextcloud apps button" >}}
+   {{< img src="nextcloud-tools.png" alt="Nextcloud apps button" >}}
 1. Scroll down to the "Sia storage report" app and click the "Enable" button below it.
-  {{< img src="nextcloud-enable-sia.png" alt="Nextcloud apps button" >}}
+   {{< img src="nextcloud-enable-sia.png" alt="Nextcloud apps button" >}}
 
 ### Configure Sia support
 
@@ -402,7 +411,7 @@ While Sia natively allows users to create folders to organize their uploads, the
 
 #### No in-app text editing
 
-The Nextcloud app includes a barebones text editor for editing plaintext files within your cloud storage folder. Unfortunately, this does not work on files within the Sia folder.  If you try to edit a text file in your Sia folder, Nextcloud presents you with a barrage of angry error messages and does not save any of your attempted edits.
+The Nextcloud app includes a barebones text editor for editing plaintext files within your cloud storage folder. Unfortunately, this does not work on files within the Sia folder. If you try to edit a text file in your Sia folder, Nextcloud presents you with a barrage of angry error messages and does not save any of your attempted edits.
 
 ## Conclusion
 
@@ -410,4 +419,4 @@ This tutorial showed you how to deploy your own instance of Nextcloud and add lo
 
 I expect more and more apps to integrate with Sia in the coming months. A few days ago, [Sia announced](https://blog.sia.tech/introducing-s3-style-file-sharing-for-sia-through-the-new-minio-integration-bb880af2366a) a new integration with [Minio](https://www.minio.io/), a distributed object storage server. The techniques you used in this tutorial will help you deploy other apps and integrate them with Sia.
 
-* **Update** (2017-09-13): The Minio integration is [almost complete](https://github.com/minio/minio/pull/4802).
+- **Update** (2017-09-13): The Minio integration is [almost complete](https://github.com/minio/minio/pull/4802).

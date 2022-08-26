@@ -1,15 +1,16 @@
 ---
 title: Staying Motivated by Sending Status Updates to Nobody
 tags:
-- what got done
-- startups
-description: Writing short entries in a plain textbox bolstered my motivation and
+  - what got done
+  - startups
+description:
+  Writing short entries in a plain textbox bolstered my motivation and
   miraculously made status meetings interesting.
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=20274079
-date: '2019-06-25'
+date: "2019-06-25"
 images:
-- status-updates-to-nobody/cover.jpg
+  - status-updates-to-nobody/cover.jpg
 ---
 
 {{< img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" maxWidth="1000px" >}}
@@ -24,7 +25,7 @@ Snippets is the name of an internal tool at Google for sharing status with your 
 
 At first, it seemed like a pointless idol in Google's cult of internal openness, but it soon became clear to me that a surprising amount of value came from something that was basically just a textbox.
 
-## I don't hate meetings &mdash; I hate *bad* meetings
+## I don't hate meetings &mdash; I hate _bad_ meetings
 
 Like most developers, I had always hated team sync meetings. Even if the meeting was only an hour, the interruption ruined my productivity for several more. I understood why they were necessary, but they were always painful to endure.
 
@@ -36,7 +37,7 @@ Snippets also provided a friendly medium for small wins. If you squeezed a 3% pe
 
 After two years at Google, I switched teams. Tragically, my meetings regressed to the stale "let's all recite facts" format I suffered through at previous companies. It turned out that my new manager didn't believe in Snippets. Instead, he preferred to hear status updates the traditional way: in person.
 
-This preference baffled me. How could anyone experience the beauty and efficiency of Snippets, then insist on going back to the stone age of tedious, inefficient meetings? It would be like hearing someone say, "Yes, I'm aware of emails, but I prefer to do things the *traditional* way. Send me a fax."
+This preference baffled me. How could anyone experience the beauty and efficiency of Snippets, then insist on going back to the stone age of tedious, inefficient meetings? It would be like hearing someone say, "Yes, I'm aware of emails, but I prefer to do things the _traditional_ way. Send me a fax."
 
 Few people on the new team bothered to write Snippets. If we had to re-explain everything at the team meeting anyway, there was little incentive to prepare a written version that our manager would ignore. I gave up on them as well, bitterly hoping that some status-update-related disaster would disintegrate our team and my manager would recognize his folly and hubris in rejecting Snippets.
 
@@ -50,19 +51,19 @@ Writing status updates forced me to see my week objectively. I'd review my code 
 
 Sometimes, I completely forgot about a cool feature I launched on Tuesday because of an unrelated issue that popped up on Wednesday. Even when a single bug truly did absorb my week, my investigation always produced useful artifacts like better documentation or new automated tests.
 
-Without Snippets, I forgot all that and remembered only what I *hadn't* accomplished.
+Without Snippets, I forgot all that and remembered only what I _hadn't_ accomplished.
 
 ## Other tools don't get it
 
 In early 2018, [I left Google](/why-i-quit-google/). Without access to my beloved Google-internal tools, I searched for an external replacement for Snippets to no avail.
 
-There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for *managers*. They promise pretty graphs and dashboards so that the manager feels like they have their finger on the pulse of the team.
+There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for _managers_. They promise pretty graphs and dashboards so that the manager feels like they have their finger on the pulse of the team.
 
 {{< img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." maxWidth="475px" hasBorder="True" >}}
 
 Everyone enjoys cool visualizations, but generating them requires the employees to enter information in whatever rigid format the tool expects. Team members have to do bookkeeping for the sake of bookkeeping and concoct numbers to represent how "complete" each task is.
 
-Snippets was *just* a textbox. Employees had full autonomy over how they described their work without any overhead.
+Snippets was _just_ a textbox. Employees had full autonomy over how they described their work without any overhead.
 
 ## I'm blocked because I don't have a textbox?
 
@@ -90,4 +91,4 @@ If you'd like to experience the joy of reviewing your accomplishments each week,
 
 ---
 
-*Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by [Loraine Yow](https://www.lolo-ology.com/).*
+_Edited by [Samantha Mason](https://www.samanthamasonfreelancer.com). Cover art by [Loraine Yow](https://www.lolo-ology.com/)._

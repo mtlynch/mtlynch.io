@@ -1,16 +1,17 @@
 ---
 title: Why Good Developers Write Bad Unit Tests
 tags:
-- testing
-description: The standard techniques of good development can lead you astray if you
+  - testing
+description:
+  The standard techniques of good development can lead you astray if you
   don't adjust them for unit tests.
 discuss_urls:
   reddit: https://redd.it/9vkri2
   hacker_news: https://news.ycombinator.com/item?id=18427812
-lastmod: '2019-10-01T19:00:00-04:00'
-date: '2018-11-09'
+lastmod: "2019-10-01T19:00:00-04:00"
+date: "2018-11-09"
 images:
-- good-developers-bad-tests/cover.jpg
+  - good-developers-bad-tests/cover.jpg
 ---
 
 Congratulations! You've finally written so many lines of code that you can afford a beach house. You hire Peter Keating, an architect world-famous for his skyscrapers, who assures you that he has brilliant plans for your beachfront property.
@@ -19,7 +20,7 @@ Months later, you arrive at the grand unveiling. Your new home is an imposing fi
 
 {{< img src="cover.jpg" alt="Architect presenting skyscraper on the beach" maxWidth="800px" >}}
 
-Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because structural integrity is vital. Therefore, your home is *better* than the breezy, light-filled homes neighboring it. You may not have large, oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
+Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because structural integrity is vital. Therefore, your home is _better_ than the breezy, light-filled homes neighboring it. You may not have large, oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
 
 Too often, software developers approach unit testing with the same flawed thinking. They mechanically apply all the "rules" they learned in production code without examining whether they're appropriate for tests. As a result, they build skyscrapers at the beach.
 
@@ -32,7 +33,7 @@ Good production code achieves encapsulation. It allows the reader to navigate la
 Test code is a different beast. A good unit test is often small enough that a developer can conceptualize all the logic at once. Adding layers of abstraction to test code increases its complexity. Tests are a diagnostic tool, so they should be as simple and obvious as possible.
 
 {{<notice type="info">}}
-**Good production code is well-factored; good test code is *obvious*.**
+**Good production code is well-factored; good test code is _obvious_.**
 {{< /notice >}}
 
 {{< img src="dane-deaner-272363-unsplash-cropped.jpg" alt="Image of a ruler" maxWidth="325px" align="right" linkUrl="https://unsplash.com/photos/JNpmCYZID68" >}}
@@ -124,7 +125,7 @@ def test_increase_score(self):
              account_manager.get_score(username='joe123'))
 ```
 
-For strict adherents to the [principle of DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself; I copied six lines from the previous test verbatim. Worse, I'm arguing that my DRY-violating tests are *better* than tests that are free of repeated code. How can this be?
+For strict adherents to the [principle of DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ("don't repeat yourself"), the above code is horrifying. I'm blatantly repeating myself; I copied six lines from the previous test verbatim. Worse, I'm arguing that my DRY-violating tests are _better_ than tests that are free of repeated code. How can this be?
 
 If you can achieve clear tests without duplicating code, that's ideal, but remember that nonredundant code is the means, not the ends. The end goal is clear, simple tests.
 
@@ -193,8 +194,8 @@ An effective helper method supports the principle of "keep the reader in your te
 
 Specifically, helper methods should **not**:
 
-* bury critical values
-* interact with the object under test
+- bury critical values
+- interact with the object under test
 
 Here's an example of a helper method that violates these guidelines:
 
@@ -253,12 +254,12 @@ It still buries values in the helper method, but they're irrelevant to the test.
 
 Which of the following function names would you prefer to see in production code?
 
-* `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
-* `isAccountActive`
+- `userExistsAndTheirAccountIsInGoodStandingWithAllBillsPaid`
+- `isAccountActive`
 
 The first conveys more information but imposes the burden of a 57-character name. Most developers are willing to sacrifice a bit of precision in favor of for a concise, almost-as-good name like `isAccountActive` (except for Java developers, for whom both names are offensively terse).
 
-For test functions, there's a crucial factor that changes the equation: you never write *calls* to test functions. A developer types out a test name exactly once &ndash; in the function signature. Given this, brevity still matters, but it matters less than in production code.
+For test functions, there's a crucial factor that changes the equation: you never write _calls_ to test functions. A developer types out a test name exactly once &ndash; in the function signature. Given this, brevity still matters, but it matters less than in production code.
 
 Whenever a test breaks, the test name is the first thing you see, so it should communicate as much as possible. For example, consider this production class:
 
@@ -280,7 +281,7 @@ Suppose you ran your test suite and this line appeared in the output:
 
 Would you know what caused the test to fail? Probably not.
 
-A failure in `TestNextToken` tells you that you screwed up the `NextToken()` method, but that's meaningless in a class with a single public method. To diagnose the failure, you'd  have to read the test's implementation.
+A failure in `TestNextToken` tells you that you screwed up the `NextToken()` method, but that's meaningless in a class with a single public method. To diagnose the failure, you'd have to read the test's implementation.
 
 Instead, what if you saw this:
 
@@ -314,7 +315,7 @@ WEEKS_PER_PAY_PERIOD = 2
 calculate_pay(hours=HOURS_PER_WEEK * WEEKS_PER_PAY_PERIOD)
 ```
 
-Unfortunately, there's a misconception that magic numbers also weaken *test* code, but the opposite is true.
+Unfortunately, there's a misconception that magic numbers also weaken _test_ code, but the opposite is true.
 
 Consider the following test:
 
@@ -348,7 +349,7 @@ When I see developers define constants in test code, it's usually due to a misgu
 {{< /notice >}}
 
 {{<notice type="warning">}}
-**Note**: It's okay for unit tests to *reference* constants that the production code exposes. They just shouldn't define their own.
+**Note**: It's okay for unit tests to _reference_ constants that the production code exposes. They just shouldn't define their own.
 {{< /notice >}}
 
 ## Conclusion
@@ -357,4 +358,4 @@ To write excellent tests, a developer must align their engineering decisions wit
 
 ---
 
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/)*
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/)_

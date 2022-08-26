@@ -1,16 +1,17 @@
 ---
 title: The Dumbest Task I Ever Outsourced
 tags:
-- outsourcing
-- taskrabbit
-description: I derive immense satisfaction from outsourcing my chores, even when it
+  - outsourcing
+  - taskrabbit
+description:
+  I derive immense satisfaction from outsourcing my chores, even when it
   causes me to pay $96 to clean a $39 keyboard.
 discuss_urls:
   reddit: https://redd.it/cpthai
   hacker_news: https://news.ycombinator.com/item?id=20685783
-date: '2019-08-13'
+date: "2019-08-13"
 images:
-- dumbest-task-i-ever-outsourced/cover.jpg
+  - dumbest-task-i-ever-outsourced/cover.jpg
 ---
 
 {{< img src="cover.jpg" alt="The Dumbest Task I Ever Outsourced (cover image)" maxWidth="1000px" >}}
@@ -83,11 +84,11 @@ Okay, she's been on the keyboard for half an hour. She'll probably be done any m
 
 ### 10:00pm, 1.5 hours elapsed
 
-*Any* minute now.
+_Any_ minute now.
 
 ### 10:15pm: 1.75 hours elapsed
 
-The sounds coming from the kitchen sound panicked, like someone who screwed up and didn't want to ask for help.  Is she having trouble putting the keys back in? Has something broken, and she's scrambling to fix it? Maybe I'm just projecting.
+The sounds coming from the kitchen sound panicked, like someone who screwed up and didn't want to ask for help. Is she having trouble putting the keys back in? Has something broken, and she's scrambling to fix it? Maybe I'm just projecting.
 
 ### 10:30pm, 2 hours elapsed
 
@@ -101,7 +102,7 @@ This has to end eventually, so I'll see what happens.
 
 ### 11:30pm: 3 hours elapsed
 
-What if this *never* ends?
+What if this _never_ ends?
 
 What if I have to go to sleep with Jaclyn S. still cleaning my keyboard? What if years go by? I'll get married and have children, then have to explain why there's a woman who lives in my kitchen, eternally cleaning my precious Microsoft Natural Ergonomic Keyboard 4000.
 
@@ -121,9 +122,9 @@ Out of curiosity, I checked what I paid for that keyboard brand new: $38.89.
 
 I spent $96 to clean a $39 keyboard.
 
-## It's not *that* dumb
+## It's not _that_ dumb
 
-When I told friends about it, many of them smugly remarked, "Oh, I'd *never* waste $100 to clean a keyboard. I'd just clean it myself." In fact, they would waste $100 cleaning it themselves. They just don't realize it.
+When I told friends about it, many of them smugly remarked, "Oh, I'd _never_ waste $100 to clean a keyboard. I'd just clean it myself." In fact, they would waste $100 cleaning it themselves. They just don't realize it.
 
 There's an implicit cost to everything that you do. You probably can't calculate the value of your time down to the penny, but you can estimate it by asking yourself how much you'd demand to do the same task for someone else. If you're unwilling to clean keyboards to earn $30/hr, then it's irrational to clean a keyboard to save $30/hr.
 
@@ -141,7 +142,7 @@ For any outsourced task, there are frictional costs of defining the job, finding
 
 ### Invest more in training
 
-The keyboard needed a good cleaning, but not *three hours* of cleaning. Three hours would be like if I asked her to clean it after dipping it in a vat of molasses.
+The keyboard needed a good cleaning, but not _three hours_ of cleaning. Three hours would be like if I asked her to clean it after dipping it in a vat of molasses.
 
 My cleaner may have washed each key more thoroughly than was necessary. Perhaps she got stuck trying to put the keyboard back together and was afraid to ask for help. I could have prevented either pitfall by giving her more instructions upfront and letting her know it's okay to watch YouTube videos or ask me for guidance.
 
@@ -157,4 +158,4 @@ A less wasteful solution would be to buy a new keyboard and offer the old one fo
 
 ---
 
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/).*
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/)._

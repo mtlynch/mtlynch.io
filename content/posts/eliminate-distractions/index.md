@@ -1,20 +1,22 @@
 ---
 title: Eliminating Distractions from Social Media, Email, and StackOverflow
-description: Simple techniques for managing your apps instead of allowing them to
+description:
+  Simple techniques for managing your apps instead of allowing them to
   manage you.
 tags:
-- deep work
-- email
-- stackoverflow
-- twitter
-- facebook
+  - deep work
+  - email
+  - stackoverflow
+  - twitter
+  - facebook
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21506107
   reddit: https://redd.it/dva6b3
-date: '2019-11-11'
+date: "2019-11-11"
 images:
-- eliminate-distractions/ideal-facebook.jpg
+  - eliminate-distractions/ideal-facebook.jpg
 ---
+
 You open Gmail to write a note to your friend. Before you begin, you notice that you've received six new messages. It pains you to leave emails unopened, so you read them immediately. Two hours later, you realize that you never wrote that note to your friend.
 
 This happened to me constantly, and it wasn't just Gmail. I'd look at my phone to check the time and find myself mindlessly checking 10 notifications. I'd open Facebook to look up someone's birthday and fall into a zombie state scrolling through my News Feed.
@@ -27,15 +29,15 @@ This article is a collection of techniques that have helped me use email, social
 
 If you asked me to list Facebook's positive effects on my life, it would include things like:
 
-* Hearing about my friends' major life events, such as marriages or job changes
-* Seeing pictures of my friends as they raise their children
-* Remembering people's birthdays
+- Hearing about my friends' major life events, such as marriages or job changes
+- Seeing pictures of my friends as they raise their children
+- Remembering people's birthdays
 
-If you observed my *actual* use of Facebook, you'd notice me spending time on decidedly non-positive activities, such as:
+If you observed my _actual_ use of Facebook, you'd notice me spending time on decidedly non-positive activities, such as:
 
-* Engaging in heated political arguments
-* Reading glamourized, envy-baiting updates from distant acquaintances
-* Escaping the experience of sitting alone with my thoughts for more than three seconds at a time
+- Engaging in heated political arguments
+- Reading glamourized, envy-baiting updates from distant acquaintances
+- Escaping the experience of sitting alone with my thoughts for more than three seconds at a time
 
 {{< img src="ideal-facebook.jpg" alt="Ideal Facebook vs. Actual Facebook" maxWidth="900px" >}}
 
@@ -113,15 +115,15 @@ If you use a desktop mail client like Outlook or Thunderbird, disabling automati
 
 At this point, "don't use your inbox as a to-do list" is cliché advice, but I'll say it anyway:
 
-* **Don't use your inbox as a to-do list**
+- **Don't use your inbox as a to-do list**
 
-It's tempting to manage tasks with your email inbox because it *seems* so convenient. In reality, it's a horrendous solution:
+It's tempting to manage tasks with your email inbox because it _seems_ so convenient. In reality, it's a horrendous solution:
 
-* It grants power over your time to anyone who writes you an email.
-* It makes it impossible to order your tasks by priority.
-* It couples the act of reviewing your to-do list with the act of checking for new emails.
+- It grants power over your time to anyone who writes you an email.
+- It makes it impossible to order your tasks by priority.
+- It couples the act of reviewing your to-do list with the act of checking for new emails.
 
-Instead, I process each email using the workflow that David Allen popularized in [*Getting Things Done*](https://smile.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563/):
+Instead, I process each email using the workflow that David Allen popularized in [_Getting Things Done_](https://smile.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563/):
 
 1. If the email doesn't require a response, I archive it.
 1. If the email requires a response I can write in under two minutes, I reply immediately.
@@ -134,7 +136,7 @@ Before extracting my to-do list from my inbox, I never realized the power those 
 {{< img src="nirvana-tasks.jpg" alt="Chat settings in Gmail" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)"  hasBorder="True" >}}
 
 {{<notice type="info">}}
-My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's *okay*, not great. People tell me good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
+My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's _okay_, not great. People tell me good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
 {{< /notice >}}
 
 ### Unbundle Hangouts from Gmail
@@ -170,8 +172,8 @@ This is sufficient for sites like Facebook or Twitter that are near useless when
 Here's how to set that up:
 
 {{< gallery caption="Using [uBlock Origin](https://github.com/gorhill/uBlock) rules to block Google News." >}}
-  {{< img src="block-news1.jpg" alt="Open uBlock Origin settings" >}}
-  {{< img src="block-news2.jpg" alt="Adding Google News as a blocked site in uBlock Origin" >}}
+{{< img src="block-news1.jpg" alt="Open uBlock Origin settings" >}}
+{{< img src="block-news2.jpg" alt="Adding Google News as a blocked site in uBlock Origin" >}}
 {{< /gallery >}}
 
 ## Phone
@@ -214,11 +216,11 @@ This practice forces me to decide ahead of time how much real estate in my day I
 
 ## "What's the harm in checking email and social media during idle times?"
 
-For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time I got a Facebook like. *Buuuut...* if a webpage was loading slowly or a two-minute automated test was running, why not check my email or Twitter instead of sitting there being, bored?
+For a long time, I thought I was managing my email and social media well. I wasn't one of those people who kept their inbox open all day or let notifications pop up on my screen every time I got a Facebook like. _Buuuut..._ if a webpage was loading slowly or a two-minute automated test was running, why not check my email or Twitter instead of sitting there being, bored?
 
 The first problem is that the scenario is a fantasy. If I check Twitter while waiting for a two-minute process to finish, it takes me at least 10 minutes to return to my original task.
 
-The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [*Deep Work*](https://smile.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
+The second problem is something I'd never heard of until last year: [attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399). I learned about it from the book [_Deep Work_](https://smile.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/) by Cal Newport ([my notes](/book-reports/deep-work/)). When you shift focus, there's a "residue" from the previous task that occupies your mind and decreases performance on your new activity. When you check email and then go back to your job, your mind is still processing the new emails, and it distracts you even if you're not conscious of it.
 
 The last problem is that if you check social media any time you feel a twinge of boredom, you train your brain to expect constant stimulation. **It's okay to feel bored!** Boredom is a skill. The more you can tolerate boredom when you're doing nothing, the easier it is to rest in deep thought when you're facing a difficult challenge.
 
@@ -248,4 +250,4 @@ Apps will continue to evolve and find new ways to grab your attention. Nobody wi
 
 ---
 
-*"Ideal Facebook" cartoon by [Loraine Yow](https://www.lolo-ology.com/).*
+_"Ideal Facebook" cartoon by [Loraine Yow](https://www.lolo-ology.com/)._

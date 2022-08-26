@@ -2,14 +2,15 @@
 title: My Eight-Year Quest to Digitize 45 Videotapes (Part One)
 date: "2020-05-26T00:00:00Z"
 tags:
-- pyscenedetect
-- digitizing
+  - pyscenedetect
+  - digitizing
 hero_image: cover.jpg
 description: My journey to create a YouTube of memories from my family's old home videos.
 discuss_urls:
   reddit: https://redd.it/gqxvxb
   hacker_news: https://news.ycombinator.com/item?id=24839848
 ---
+
 For the last eight years, I've carried around this box of videotapes through four different apartments and one house. They're family home videos from my childhood.
 
 {{< img src="videotapes.jpg" alt="All of my family's old home videos" maxWidth="500px" >}}
@@ -17,8 +18,8 @@ For the last eight years, I've carried around this box of videotapes through fou
 After 600+ hours of work, I finally digitized and organized them well enough to throw away the original tapes. Here's what the footage looks like now:
 
 {{< gallery caption="All of my home videos, digitized and watchable from a private media sharing server" >}}
-  {{< img src="mediagoblin-home.png" alt="MediaGoblin browse screen" maxWidth="440px" >}}
-  {{< img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" maxWidth="413px" >}}
+{{< img src="mediagoblin-home.png" alt="MediaGoblin browse screen" maxWidth="440px" >}}
+{{< img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" maxWidth="413px" >}}
 {{< /gallery >}}
 
 There are 513 separate clips, each with a title, description, a recording date, tags for everyone in the video, and everyone's ages at the time of the recording. I host everything on a private media-sharing website that only my family can access, and it costs less than $1 per month to keep it running.
@@ -39,7 +40,7 @@ In 2012, my sister gave me the DVDs. I ripped them to video files and threw them
 
 A few weeks later, I asked if anyone had watched the tapes. Nobody had. I hadn't either. In the age of YouTube, it seemed so boring to download a 3-hour mystery file in search of interesting footage.
 
-The only one excited was my mom. "Okay, great," she said, "Now, can I *finally* throw out all these tapes?"
+The only one excited was my mom. "Okay, great," she said, "Now, can I _finally_ throw out all these tapes?"
 
 Uh oh. That was a scary question. What if there were tapes that we missed? What if we could digitize at a higher quality? What if there was interesting information on the VHS tape labels?
 
@@ -79,7 +80,7 @@ The old family VCR was still in my dad's basement, so I asked him to dig it out 
 
 {{< img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://smile.amazon.com/gp/product/B00M7T8T1E/), the first of many A/V devices I purchased throughout this process." maxWidth="400px" hasBorder="true" >}}
 
-To process the video from the USB capture device, I used VirtualDub, which was a bit dated in 2012, but not *that* dated.
+To process the video from the USB capture device, I used VirtualDub, which was a bit dated in 2012, but not _that_ dated.
 
 {{< img src="virtualdub-capture.jpg" alt="Capturing video in [VirtualDub](http://www.virtualdub.org)" caption="Using VirtualDub to capture raw footage of me reading to my dad at age 4" maxWidth="650px" hasBorder="true" >}}
 
@@ -119,7 +120,7 @@ Even with the new device, there was still audio skew.
 
 Maybe it was the VCR. [Digitization forums](http://www.digitalfaq.com/guides/video/capture-playback-hardware.htm) said audio skew wouldn't happen with a VCR that had a "time-based corrector" (TBC), a common feature on Super VHS (S-VHS) VCRs.
 
-Of course! What was I doing messing around with my dumb *regular* VCR when there was a **super** VCR that could solve my problem?
+Of course! What was I doing messing around with my dumb _regular_ VCR when there was a **super** VCR that could solve my problem?
 
 Nobody makes S-VHS VCRs anymore, but they're still available on eBay. I spent $179 on a JVC SR-V10U, a VCR model that's supposedly well-suited to VHS digitization:
 
@@ -145,9 +146,7 @@ Fast forward to 2018. I had dragged these videotapes and tons of equipment to fo
 
 I asked my family if they'd be comfortable with me sending the tapes to a digitization company. Fortunately, nobody minded &mdash; they were all much more interested in seeing the footage again.
 
->**Me**: But it means some company has access to all of our home videos. You're okay with that?<br>
->**My sister**: Yeah, I don't care. You're the only one who worries about that. Wait, you could have just paid someone to do that from the start?<br>
->**Me**: Uh...
+> **Me**: But it means some company has access to all of our home videos. You're okay with that?<br> >**My sister**: Yeah, I don't care. You're the only one who worries about that. Wait, you could have just paid someone to do that from the start?<br> >**Me**: Uh...
 
 It cost $750 to digitize all 45 tapes. That may sound expensive, but by that point, I would have paid anything to avoid another minute of troubleshooting video equipment.
 
@@ -251,10 +250,10 @@ Capturing and editing the clips was only half the battle. I still needed a way t
 
 In [part two](/digitizing-2/) of this post, I describe the open source media server I used to share these clips with my family for only $0.77/month.
 
-* [My Eight Year Quest to Digitize 45 Videotapes (Part Two)](/digitizing-2)
+- [My Eight Year Quest to Digitize 45 Videotapes (Part Two)](/digitizing-2)
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.lolo-ology.com/).*
+_Illustrations by [Loraine Yow](https://www.lolo-ology.com/)._
 
-*Special thanks to my family for allowing me to share a selection of these clips and stills, for recording everything in the first place, and for being so supportive throughout this process.*
+_Special thanks to my family for allowing me to share a selection of these clips and stills, for recording everything in the first place, and for being so supportive throughout this process._

@@ -1,15 +1,16 @@
 ---
-title: 'KetoHub Update: Month 3'
+title: "KetoHub Update: Month 3"
 tags:
-- ketohub
-- keto
-- retention
-- growth
-description: "I'm building a website. Here\u2019s what was good, bad, and learnable\
+  - ketohub
+  - keto
+  - retention
+  - growth
+description:
+  "I'm building a website. Here\u2019s what was good, bad, and learnable\
   \ about it last month."
-date: '2018-01-09'
+date: "2018-01-09"
 images:
-- ketohub-month-3/ketohub-ga-dec.png
+  - ketohub-month-3/ketohub-ga-dec.png
 ---
 
 In early October, I launched a new website, KetoHub, a recipe aggregator for keto meals. Each month, I've evaluated the site's progress to decide how it's doing and what areas need improvement.
@@ -40,20 +41,20 @@ I'm not a web developer, and I don't have a good eye for design. When I built th
 
 {{< img src="hwd-books.jpg" alt="Stack of Hello Web Design books" maxWidth="300px" linkUrl="https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/" >}}
 
-In December, I read the book [*Hello Web Design*](https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/) by Tracy Osborn. It's a quick read, written for people in exactly my situation. It doesn't get bogged down in design theory but instead provides simple, practical tips for achieving a successful web design.
+In December, I read the book [_Hello Web Design_](https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/) by Tracy Osborn. It's a quick read, written for people in exactly my situation. It doesn't get bogged down in design theory but instead provides simple, practical tips for achieving a successful web design.
 
 The book gave me good ideas for improving KetoHub's look. Here's the before and after on desktop:
 
 {{< gallery caption="KetoHub redesign on desktop: before (left) and after (right)" >}}
-  {{< img src="ketohub-screenshot-before.png" alt="KetoHub before redesign (desktop)" >}}
-  {{< img src="ketohub-screenshot-after.png" alt="KetoHub after redesign (desktop)" >}}
+{{< img src="ketohub-screenshot-before.png" alt="KetoHub before redesign (desktop)" >}}
+{{< img src="ketohub-screenshot-after.png" alt="KetoHub after redesign (desktop)" >}}
 {{</ gallery >}}
 
 And here's comparison on mobile:
 
 {{< gallery caption="KetoHub redesign on mobile: before (left) and after (right)" >}}
-  {{< img src="ketohub-screenshot-mobile-before.png" alt="KetoHub before redesign (mobile)" >}}
-  {{< img src="ketohub-screenshot-mobile-after.png" alt="KetoHub after redesign (mobile)" >}}
+{{< img src="ketohub-screenshot-mobile-before.png" alt="KetoHub before redesign (mobile)" >}}
+{{< img src="ketohub-screenshot-mobile-after.png" alt="KetoHub after redesign (mobile)" >}}
 {{</ gallery >}}
 
 Actually, as I write this and look at the mobile screenshot, the "after" shot looks worse. The logo and category buttons take up more than half of the screen's vertical space to the point where you can't even see even one recipe card.
@@ -62,7 +63,7 @@ Looks like I've got a bit more work to do...
 
 ### 50% increase in recipes
 
-I added the popular recipe site [Low Carb Yum]( https://lowcarbyum.com/) to KetoHub's recipe index. This added over 500 new recipes to the site, bringing the total to 1,500. This was the largest increase in KetoHub recipes from any single keto site.
+I added the popular recipe site [Low Carb Yum](https://lowcarbyum.com/) to KetoHub's recipe index. This added over 500 new recipes to the site, bringing the total to 1,500. This was the largest increase in KetoHub recipes from any single keto site.
 
 ## Visitor growth
 
@@ -102,7 +103,7 @@ For each post I responded to like this, only 10-20 people clicked the link. Howe
 
 If the cost of 100 new users is an hour of ~~shilling~~ promoting on Facebook, that's a great deal. Well, at least to someone like me who has yet to break 200 daily visitors. I'd gladly do that every day except for one problem: I'm losing users as quickly as I gain them.
 
-The chart below is a cohort analysis from Google Analytics. Each row is a group of users that first visited the site in a particular week. Each column  shows the percentage that returned to KetoHub in the subsequent week.
+The chart below is a cohort analysis from Google Analytics. Each row is a group of users that first visited the site in a particular week. Each column shows the percentage that returned to KetoHub in the subsequent week.
 
 {{< img src="cohort-analysis-dec.png" alt="KetoHub cohort analysis" maxWidth="700px" >}}
 
@@ -114,14 +115,15 @@ From what I've heard, a good website will bring back at least 10% of its users t
 
 ## Next steps
 
-* Conduct more user interviews
-  * When I initially launched, I had keto-dieting friends speak to me on the phone as they tried the site for the first time. I used their feedback to improve the site, but now I want to focus less on first impressions and more on sustained usage.
-  * I'll be conducting interviews with strangers who follow keto, then doing a follow-up interview a week later to find out why they did or did not continue using KetoHub after the first day.
-* Read [*Hooked: How to Build Habit-Forming Products*](https://smile.amazon.com/gp/product/1591847788/) by Nir Eyal
-  * I listened to [his interview](https://www.indiehackers.com/podcast/023-nir-eyal-of-hooked) on the Indie Hackers podcast last year and found him insightful. I'm hoping the book will give me ideas for incentivizing my users to return to KetoHub regularly.
-* Set up better event tracking analytics
-  * I'd like to build a better understanding of how visitors use KetoHub. I'm currently using Google Analytics, which is nice, but not very powerful. I'd like to ask questions such as, "Of users who return every week, how often do they filter by category? How often do they search?"
-  * I've heard good things about [Amplitude](https://amplitude.com/), and I fit in their free tier, so I'll check them out.
+- Conduct more user interviews
+  - When I initially launched, I had keto-dieting friends speak to me on the phone as they tried the site for the first time. I used their feedback to improve the site, but now I want to focus less on first impressions and more on sustained usage.
+  - I'll be conducting interviews with strangers who follow keto, then doing a follow-up interview a week later to find out why they did or did not continue using KetoHub after the first day.
+- Read [_Hooked: How to Build Habit-Forming Products_](https://smile.amazon.com/gp/product/1591847788/) by Nir Eyal
+  - I listened to [his interview](https://www.indiehackers.com/podcast/023-nir-eyal-of-hooked) on the Indie Hackers podcast last year and found him insightful. I'm hoping the book will give me ideas for incentivizing my users to return to KetoHub regularly.
+- Set up better event tracking analytics
+  - I'd like to build a better understanding of how visitors use KetoHub. I'm currently using Google Analytics, which is nice, but not very powerful. I'd like to ask questions such as, "Of users who return every week, how often do they filter by category? How often do they search?"
+  - I've heard good things about [Amplitude](https://amplitude.com/), and I fit in their free tier, so I'll check them out.
 
 ---
-*If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article.*
+
+_If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article._

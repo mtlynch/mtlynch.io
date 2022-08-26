@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* I published my [fourth annual retrospective](/solo-developer-year-4/) about being a bootstrapped founder.
-* TinyPilot sales continue running strong despite a delay in launching our next product.
-* I analyze how I'm spending my time and figure out ways to allocate my hours better.
+- I published my [fourth annual retrospective](/solo-developer-year-4/) about being a bootstrapped founder.
+- TinyPilot sales continue running strong despite a delay in launching our next product.
+- I analyze how I'm spending my time and figure out ways to allocate my hours better.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Launch Voyager 2: PoE Edition
 
-* **Result**: Delayed the launch a few weeks due to a manufacturing issue
-* **Grade**: D
+- **Result**: Delayed the launch a few weeks due to a manufacturing issue
+- **Grade**: D
 
 I had to delay the launch because we discovered that the first manufactured batch of PoE hardware is behaving differently than our prototypes. We should be able to fix the boards, but it's going to take a few weeks.
 
 ### Write a job description for TinyPilot support engineer and begin interviewing candidates
 
-* **Result**: I wrote a job description, but I haven't posted it to any job boards.
-* **Grade**: C+
+- **Result**: I wrote a job description, but I haven't posted it to any job boards.
+- **Grade**: C+
 
 This is one of those things that I keep deprioritizing because it's [important but not urgent](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix). If TinyPilot had a support engineer, it would get me out of frequent time crunches, so I need to prioritize it better.
 
 ### Publish my fourth [annual retrospective](/tags/annual-review/)
 
-* **Result**: Published my [annual retrospective](/solo-developer-year-4/)
-* **Grade**: A
+- **Result**: Published my [annual retrospective](/solo-developer-year-4/)
+- **Grade**: A
 
 I was glad to publish this retrospective, as I'd been working on it for several weeks. It's one of the few things I do that has a strict deadline, as I like the tradition of posting on my quit-iversary.
 
@@ -43,14 +43,14 @@ I was surprised the post didn't get more traction on Hacker News and reddit. Usu
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | December 2021   | January 2022   | Change                                            |
-| ------------------------ | --------------- | -------------- | ------------------------------------------------- |
-| Unique Visitors          | 6,156           | 7,282          | <font color="green">+1,126 (+18%)</font>          |
-| Total Pageviews          | 12,840          | 15,477         | <font color="green">+2,637 (+21%)</font>          |
-| Sales Revenue            | $52,224.65      | $51,066.78     | <font color="red">-$1,157.87 (-2%)</font>         |
-| Enterprise Subscriptions | $47.75          | $47.75         | 0                                                 |
-| Royalties                | $1,100.47       | $5,075.00      | <font color="green">+$3,974.53 (+361%)</font>     |
-| Total Revenue            | $53,372.87      | $56,189.53     | <font color="green">+$2,816.66 (+5%)</font>       |
+| Metric                   | December 2021                            | January 2022                             | Change                                         |
+| ------------------------ | ---------------------------------------- | ---------------------------------------- | ---------------------------------------------- |
+| Unique Visitors          | 6,156                                    | 7,282                                    | <font color="green">+1,126 (+18%)</font>       |
+| Total Pageviews          | 12,840                                   | 15,477                                   | <font color="green">+2,637 (+21%)</font>       |
+| Sales Revenue            | $52,224.65                               | $51,066.78                               | <font color="red">-$1,157.87 (-2%)</font>      |
+| Enterprise Subscriptions | $47.75                                   | $47.75                                   | 0                                              |
+| Royalties                | $1,100.47                                | $5,075.00                                | <font color="green">+$3,974.53 (+361%)</font>  |
+| Total Revenue            | $53,372.87                               | $56,189.53                               | <font color="green">+$2,816.66 (+5%)</font>    |
 | **Profit**               | <font color="red">**$-15,207.05**</font> | <font color="red">**$-21,316.65**</font> | **<font color="red">-$6,109.60 (-40%)</font>** |
 
 Sales were down slightly relative to December, but only slightly. Considering we had to pause sales for four days because we were sold out of Voyager 2, this feels like a stronger month than December.
@@ -61,19 +61,19 @@ I'm still cash flow negative and probably will be for the next month or two. Now
 
 One of my goals for this year is to [manage TinyPilot with only 20 hours per week](/solo-developer-year-4/#manage-tinypilot-on-20-hours-per-week). I'm currently spending about 45 hours per week on TinyPilot. I don't have a good way of measuring my time rigorously, but here's how I think the hours break down vs how I want to spend those hours:
 
-| Task                                                 | Hours per week   | Ideal hours/wk |
-|------------------------------------------------------|------------------|----------------|
-| Coordinating changes                                 | 12               | 2              |
-| Answering technical support questions                | 8                | 2              |
-| Overseeing dev work                                  | 5                | 2              |
-| Preparing TinyPilot releases                         | 5                | 2              |
-| Making software architecture decisions               | 4                | 2              |
-| Communicating with employees                         | 3                | 3              |
-| Communicating with major vendors / distributors      | 4                | 1              |
-| Administration/payroll/taxes                         | 2                | 0.5            |
-| Answering sales questions                            | 1                | 0.5            |
-| Answering non-technical support questions            | 1                | 0.5            |
-| **Total**                                            | **45**           | **15.5**       |
+| Task                                            | Hours per week | Ideal hours/wk |
+| ----------------------------------------------- | -------------- | -------------- |
+| Coordinating changes                            | 12             | 2              |
+| Answering technical support questions           | 8              | 2              |
+| Overseeing dev work                             | 5              | 2              |
+| Preparing TinyPilot releases                    | 5              | 2              |
+| Making software architecture decisions          | 4              | 2              |
+| Communicating with employees                    | 3              | 3              |
+| Communicating with major vendors / distributors | 4              | 1              |
+| Administration/payroll/taxes                    | 2              | 0.5            |
+| Answering sales questions                       | 1              | 0.5            |
+| Answering non-technical support questions       | 1              | 0.5            |
+| **Total**                                       | **45**         | **15.5**       |
 
 {{<notice type="info">}}
 
@@ -186,23 +186,23 @@ Zestful dipped a bit, slumping back under its $1k/month revenue, but clients are
 
 ### What got done?
 
-* Published my [fourth-year retrospective](/solo-developer-year-4/)
-* Released [TinyPilot 2.3.2](https://tinypilotkvm.com/blog/whats-new-in-2022-01)
-* Began transition process to my new electrical engineering vendor
-* Worked with an external consultant to create a [proof-of-concept WebRTC implementation](https://github.com/tiny-pilot/tinypilot/tree/experimental/h264) of TinyPilot's video streaming
+- Published my [fourth-year retrospective](/solo-developer-year-4/)
+- Released [TinyPilot 2.3.2](https://tinypilotkvm.com/blog/whats-new-in-2022-01)
+- Began transition process to my new electrical engineering vendor
+- Worked with an external consultant to create a [proof-of-concept WebRTC implementation](https://github.com/tiny-pilot/tinypilot/tree/experimental/h264) of TinyPilot's video streaming
 
 ### Lessons learned
 
-* Change fewer things at once.
-  * I need to keep track of how many ongoing changes are happening and resist the urge to start any new projects until previous projects wrap up.
-  * It's easy to feel like I have spare capacity because projects vary in how much attention they need each week.
-  * Each new project increases the risk of an unlucky week where too many changes demand my attention at once.
-* Treat vendor bandwidth as a first-class concern.
-  * If you hire a vendor for a one-off project, and they have only a few hours of availability each week, it stretches out the project and costs more of your time in context-switching.
+- Change fewer things at once.
+  - I need to keep track of how many ongoing changes are happening and resist the urge to start any new projects until previous projects wrap up.
+  - It's easy to feel like I have spare capacity because projects vary in how much attention they need each week.
+  - Each new project increases the risk of an unlucky week where too many changes demand my attention at once.
+- Treat vendor bandwidth as a first-class concern.
+  - If you hire a vendor for a one-off project, and they have only a few hours of availability each week, it stretches out the project and costs more of your time in context-switching.
 
 ### Goals for next month
 
-* Launch Voyager 2: PoE Edition
-  * For real this time.
-* Hire a TinyPilot support engineer
-* Complete design work on TinyPilot website overhaul
+- Launch Voyager 2: PoE Edition
+  - For real this time.
+- Hire a TinyPilot support engineer
+- Complete design work on TinyPilot website overhaul

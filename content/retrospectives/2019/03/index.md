@@ -1,14 +1,14 @@
 ---
-title: 'Is It Keto: Month 6'
+title: "Is It Keto: Month 6"
 description: Do or die time
-date: '2019-03-05'
+date: "2019-03-05"
 ---
 
 ## Highlights
 
-* [Is It Keto](https://isitketo.org)'s user visits plateaued in February, but that still represents progress.
-* Revenues fell substantially and missed targets for the month.
-* I'm going to shelve the project unless I achieve my targets for March.
+- [Is It Keto](https://isitketo.org)'s user visits plateaued in February, but that still represents progress.
+- Revenues fell substantially and missed targets for the month.
+- I'm going to shelve the project unless I achieve my targets for March.
 
 ## Goal Grades
 
@@ -16,22 +16,22 @@ At the start of the month, I laid out some high-level goals. Here's how I did ag
 
 **Achieve $60 in revenue**
 
-* **Result**: Earned ~$11 in revenue (<font color="red">82% below target</font>)
-* **Grade**: D
+- **Result**: Earned ~$11 in revenue (<font color="red">82% below target</font>)
+- **Grade**: D
 
 Amazon Affiliate revenue continues to be bursty. A single purchase through one of my affiliate links can yield anywhere from $0.50 to $20. Revenues did not grow the way I hoped, and so I finished the month with a meager $11.
 
 **Add 30 new food pages**
 
-* **Result**: Added 30 new food pages (<font color="green">on target</font>)
-* **Grade**: B+
+- **Result**: Added 30 new food pages (<font color="green">on target</font>)
+- **Grade**: B+
 
 I hit the target, but just barely, and I didn't keep quality as high as I wanted. I expected to ramp up a second writer, but they didn't work out, so I had to scramble in the last few days of the month to fill the gap.
 
 **Reduce average cost per article**
 
-* **Result**: Still working on it.
-* **Grade**: B-
+- **Result**: Still working on it.
+- **Grade**: B-
 
 It's hard to say because I wasn't collecting fine-grained metrics in January, but I estimated that I was spending about $65/article. In February, I got costs down to $46/article for one of my writers but spent $300 trying to train another writer who only produced one article.
 
@@ -41,15 +41,15 @@ It's hard to say because I wasn't collecting fine-grained metrics in January, bu
 
 {{< img src="amazon-earnings-2019-02.jpg" alt="Amazon Earnings - Feb. 2019" caption="Amazon affiliate earnings - February 2019" maxWidth="800px" >}}
 
-| Metric         | January 2019| February 2019 |  Change |
-|----------------|---------------|--------------|--------|
-| Total Earnings| $23.37  | ~$11               | <font color="red">-$12.37 (-47%)</font> |
-| Clicks         | 73 | 371                      | <font color="green">+298 (+408%)</font>        |
-| Conversion              | 23.29% | ???      | ???    |
+| Metric         | January 2019 | February 2019 | Change                                  |
+| -------------- | ------------ | ------------- | --------------------------------------- |
+| Total Earnings | $23.37       | ~$11          | <font color="red">-$12.37 (-47%)</font> |
+| Clicks         | 73           | 371           | <font color="green">+298 (+408%)</font> |
+| Conversion     | 23.29%       | ???           | ???                                     |
 
 Things looked good at the start of the month. I mentioned Is It Keto in [an article on my personal blog](/solo-developer-year-1/), and that post [reached the front page of Hacker News](https://news.ycombinator.com/item?id=19054150). It was a one-time bump, but it was a nice boost for affiliate revenue for the week. Then, I realized I mixed up my tracking IDs.
 
-I use a single Amazon account for all of my projects, but each of my websites has its own unique tracking ID so that I can see revenue on a per-site basis. When you create an Amazon Affiliate link, it auto-populates the tracking ID with whatever you used last. I had been generating lots of links for Is It Keto, so I didn't notice that when I generated a link for [*Four Hour Work Week*](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) on my blog, I forgot to change the tracking ID.
+I use a single Amazon account for all of my projects, but each of my websites has its own unique tracking ID so that I can see revenue on a per-site basis. When you create an Amazon Affiliate link, it auto-populates the tracking ID with whatever you used last. I had been generating lots of links for Is It Keto, so I didn't notice that when I generated a link for [_Four Hour Work Week_](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) on my blog, I forgot to change the tracking ID.
 
 {{< img src="amazon-affiliate-screwup.jpg" alt="Generating an Amazon Affiliate link" caption="I forgot to change my tracking ID, leading to accounting confusion for Is It Keto" maxWidth="800px" hasBorder="True" >}}
 
@@ -63,13 +63,13 @@ In any case, even an optimistic revenue of $30 is still far below my target of $
 
 {{< img src="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - March 2018 through February 2019" maxWidth="800px" >}}
 
-| Metric         | January 2019 | February 2019 | Change |
-|----------------|---------------|--------------|--------|
-| Unique Visitors               | 2,608 | 2,687          | <font color="green">+79 (+3%)</font> |
-| Total Pageviews               | 7,614  | 8,500         | <font color="green">+886 (+12%)</font> |
-| Referrals from organic search | 2,054 | 1,998             | <font color="red">-56 (-3%)</font> |
-| Referrals from Facebook       | 210    | 18            | <font color="red">-192 (-91%)</font> |
-| Referrals from Twitter       | 374 | 307                | <font color="red">-67 (-18%)</font>   |
+| Metric                        | January 2019 | February 2019 | Change                                 |
+| ----------------------------- | ------------ | ------------- | -------------------------------------- |
+| Unique Visitors               | 2,608        | 2,687         | <font color="green">+79 (+3%)</font>   |
+| Total Pageviews               | 7,614        | 8,500         | <font color="green">+886 (+12%)</font> |
+| Referrals from organic search | 2,054        | 1,998         | <font color="red">-56 (-3%)</font>     |
+| Referrals from Facebook       | 210          | 18            | <font color="red">-192 (-91%)</font>   |
+| Referrals from Twitter        | 374          | 307           | <font color="red">-67 (-18%)</font>    |
 
 Visitor growth flattened out in February, although it's not as flat as it seems.
 
@@ -87,24 +87,24 @@ Referrals from Facebook shrank to almost nothing, as I stopped promoting the sit
 
 {{< img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - Dec. 2018 to Feb. 2019" maxWidth="800px" >}}
 
-| Metric         | January 2019 | February 2019 | Change |
-|----------------|---------------|--------------|--------|
-| Google-indexed pages               | 49 | 93          | <font color="green">+44 (+90%)</font> |
-| Google indexed vs. excluded pages               | 72.1% | 65.0%          | <font color="red">-7.1 (-9.8%)</font>|
-| Domain Authority (Moz)               | 9         | 10  | <font color="green">+1</font> |
-| Linking Domains (Moz)               | 10         | 10  | 0 |
-| Ranking Keywords (Moz)               | 17         | 99  | <font color="green">+82 (+482%)</font>  |
+| Metric                            | January 2019 | February 2019 | Change                                 |
+| --------------------------------- | ------------ | ------------- | -------------------------------------- |
+| Google-indexed pages              | 49           | 93            | <font color="green">+44 (+90%)</font>  |
+| Google indexed vs. excluded pages | 72.1%        | 65.0%         | <font color="red">-7.1 (-9.8%)</font>  |
+| Domain Authority (Moz)            | 9            | 10            | <font color="green">+1</font>          |
+| Linking Domains (Moz)             | 10           | 10            | 0                                      |
+| Ranking Keywords (Moz)            | 17           | 99            | <font color="green">+82 (+482%)</font> |
 
 The growth in indexed pages and ranking keywords are encouraging. The big problems are in my domain authority and linking domains. 10 is a pathetically low domain authority, which means that Google will deprioritize me in search results until I can get other sites to link to me.
 
 ### Finances
 
-| Income/Expense | January 2019 | February 2019 |
-|----------|----------|--------------|
-| Amazon Affiliate revenue | $23 | $11 |
-| Content writers | <font color="red">-$1,072</font> | <font color="red">-$893</font> |
-| Twitter manager | <font color="red">-$65</font> | <font color="red">-$144</font> |
-| **Net Profit** | **<font color="red">-$1,114</font>** | **<font color="red">-$1,026</font>** |
+| Income/Expense           | January 2019                         | February 2019                        |
+| ------------------------ | ------------------------------------ | ------------------------------------ |
+| Amazon Affiliate revenue | $23                                  | $11                                  |
+| Content writers          | <font color="red">-$1,072</font>     | <font color="red">-$893</font>       |
+| Twitter manager          | <font color="red">-$65</font>        | <font color="red">-$144</font>       |
+| **Net Profit**           | **<font color="red">-$1,114</font>** | **<font color="red">-$1,026</font>** |
 
 I'm still losing a lot of money, but I'm losing slightly less than I did in January, so... yay?
 
@@ -112,15 +112,15 @@ I'm still losing a lot of money, but I'm losing slightly less than I did in Janu
 
 Content is still my biggest cost. I recognized the same thing in January, so in February, I put more effort into tracking costs at a more granular level:
 
-|         | Writer A| Writer B |
-|-----|------------|------------|
-| Rate | $20/hr | $60/hr |
-| Hours worked | 27.5 | 5 |
-| Total cost | $550 | $300 |
-| Articles produced | 12 | 1 |
-| $/article | $46 | $300 |
-| Total amount of my time spent editing/communicating | 7.5 hours | *didn't track* |
-| My time per article | 37.5 minutes/article | *didn't track* |
+|                                                     | Writer A             | Writer B       |
+| --------------------------------------------------- | -------------------- | -------------- |
+| Rate                                                | $20/hr               | $60/hr         |
+| Hours worked                                        | 27.5                 | 5              |
+| Total cost                                          | $550                 | $300           |
+| Articles produced                                   | 12                   | 1              |
+| $/article                                           | $46                  | $300           |
+| Total amount of my time spent editing/communicating | 7.5 hours            | _didn't track_ |
+| My time per article                                 | 37.5 minutes/article | _didn't track_ |
 
 I've been working with Writer A since January. They produce good work, but I still spend a few hours per week editing their writing to get quality to the level I want.
 
@@ -173,19 +173,20 @@ It's a longshot because keto websites don't often link to other keto sites, but 
 
 ### What got done?
 
-* Added an "Other Foods" section to the article pages so that users can easily discover new articles
-* Added an admin tool that lets me add redirects for alternative spellings of foods (e.g., `mayo` -> [`mayonnaise`](https://isitketo.org/mayonnaise))
-  * Previously I was doing this in a hacky way that required me to change the source code and re-deploy the entire site
-* Wrote tools to collect keto recipe data for upcoming data visualization blog posts
-* Published 30 new food pages
+- Added an "Other Foods" section to the article pages so that users can easily discover new articles
+- Added an admin tool that lets me add redirects for alternative spellings of foods (e.g., `mayo` -> [`mayonnaise`](https://isitketo.org/mayonnaise))
+  - Previously I was doing this in a hacky way that required me to change the source code and re-deploy the entire site
+- Wrote tools to collect keto recipe data for upcoming data visualization blog posts
+- Published 30 new food pages
 
 ### Lessons learned
 
-* After taking into account the time I spend editing and communicating with writers, I'm not saving time by outsourcing content writing.
-  * I likely still am saving mental energy, which is always a precious resource.
+- After taking into account the time I spend editing and communicating with writers, I'm not saving time by outsourcing content writing.
 
-* I can outsource Twitter promotion tasks cleanly and efficiently.
-  * Still, Twitter's not earning me a return on investment, so I'm going to scale down.
+  - I likely still am saving mental energy, which is always a precious resource.
+
+- I can outsource Twitter promotion tasks cleanly and efficiently.
+  - Still, Twitter's not earning me a return on investment, so I'm going to scale down.
 
 ### Goals for next month
 
@@ -193,6 +194,6 @@ February was my third month of monetizing Is It Keto and giving it my full-time 
 
 My goals for March are **critical goals**. If I don't achieve them, I'll put the project on the backburner:
 
-* Achieve $100 in revenue
-* Receive links from two websites with a Moz Domain Authority of at least 40
-* Add 10 new pages for different foods
+- Achieve $100 in revenue
+- Receive links from two websites with a Moz Domain Authority of at least 40
+- Add 10 new pages for different foods

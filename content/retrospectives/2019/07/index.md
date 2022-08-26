@@ -2,22 +2,22 @@
 title: What Got Done - Month 2
 description: The conversation should be about thousands of dollars not, tens of dollars.
 images:
-- /retrospectives/2019/07/whatgotdone-metrics.jpg
-date: '2019-07-03'
+  - /retrospectives/2019/07/whatgotdone-metrics.jpg
+date: "2019-07-03"
 ---
 
 ## Highlights
 
-* [What Got Done](https://whatgotdone.com) received 32 new user sign-ups (growth of about 5x since May)
-* [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
-* [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
+- [What Got Done](https://whatgotdone.com) received 32 new user sign-ups (growth of about 5x since May)
+- [Zestful](https://zestfuldata.com) may be rising from the dead, with four new inbound customer inquiries.
+- [Is It Keto](https://isitketo.org) earned $184, and [Zestful](https://zestfuldata.com) earned $26, making it my highest revenue month since quitting my job.
 
 ## Goal Grades
 
 ### Publish a new blog post that explains why I built What Got Done
 
-* **Result**: I published ["Staying Motivated by Sending Status Updates to Nobody"](/status-updates-to-nobody/)
-* **Grade**: A
+- **Result**: I published ["Staying Motivated by Sending Status Updates to Nobody"](/status-updates-to-nobody/)
+- **Grade**: A
 
 Last month, it felt like I was scrambling to get a new blog post out the door by the end of the month. I questioned whether I was sacrificing quality for the sake of hitting a self-imposed deadline. This time, I didn't feel rushed and was happy with the quality of the writing.
 
@@ -25,15 +25,15 @@ The post didn't attract a large number of readers, but it did seem to jumpstart 
 
 ### Interview six email copywriters about their workflow and pain points
 
-* **Result**: Interviewed 0 copywriters because I was distracted by Zestful
-* **Grade**: F
+- **Result**: Interviewed 0 copywriters because I was distracted by Zestful
+- **Grade**: F
 
 I got some unexpected customer interest in Zestful, so I put the email copy project on hold and tried to pursue Zestful business.
 
 ### Create a landing page to begin collecting customer emails for my next product
 
-* **Result**: Cut this, as I was distracted by Zestful
-* **Grade**: F
+- **Result**: Cut this, as I was distracted by Zestful
+- **Grade**: F
 
 Same as above.
 
@@ -49,7 +49,7 @@ Now that Is It Keto is on the back burner, I'm not going to dive as deeply into 
 | Total Pageviews        | 28,751      | 39,405      | <font color="green">+10,654 (+37%)</font>     |
 | Domain Authority (Moz) | 6           | 6           | 0                                             |
 | Ranking Keywords (Moz) | 949         | 862         | <font color="red">-87 (-9%)</font>            |
-| **Total Revenue**     | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
+| **Total Revenue**      | **$107.25** | **$138.76** | **<font color="green">+$31.51 (+29%)</font>** |
 
 After my [blog post about Is It Keto](/keep-growing-never-profit/) last month, I received some good suggestions for small tweaks to the site and spent a few days implementing those. Notably, I added a [browse by category](https://isitketo.org/category/) feature and made my food cards [a little prettier](https://imgur.com/w11ZWEK).
 
@@ -65,14 +65,15 @@ I'll start with [Zestful](https://zestfuldata.com). It's the ingredient parsing 
 
 This month, I had calls with four different customers considering Zestful for large projects. Some are more serious than others, but most of them said that they want to use it, but it's missing a few small features to match the workflows they want. I could probably implement all of these features in six to eight weeks of work, but I have no guarantee that it will yield real sales.
 
-* **Pros**
-  * Service is already built and has paying customers
-  * Gaps between existing service and what the potential customers want seem small
-    * I could probably complete them all in six weeks
+- **Pros**
 
-* **Cons**
-  * If I invest in adding the requested features, I have no guarantee that any of the new customers will actually purchase
-  * I can't tell if the lifetime value of the new customers is closer to $100 (not worth a month of work) or $10,000 (I'd be glad to put in a month of work)
+  - Service is already built and has paying customers
+  - Gaps between existing service and what the potential customers want seem small
+    - I could probably complete them all in six weeks
+
+- **Cons**
+  - If I invest in adding the requested features, I have no guarantee that any of the new customers will actually purchase
+  - I can't tell if the lifetime value of the new customers is closer to $100 (not worth a month of work) or $10,000 (I'd be glad to put in a month of work)
 
 I received good advice from [Cory Zue](http://coryzue.com), which was to raise prices. I frequently hear that advice in general, but until Cory said it to me, I didn't think it applied to Zestful. The service didn't have any significant customers at the current low price, so it seemed irrational to raise prices and limit sales further. But I realized that raising prices addresses the last item on my Cons list (uncertainty of customer lifetime value).
 
@@ -94,15 +95,16 @@ The downside is that these users are all on the free plan. I've had three inquir
 
 Right now, I'm not sure whether to keep trying to encourage organic growth from free users in hopes that it will eventually lead to paid users or if I should focus on other projects that bring more immediate revenue.
 
-* **Pros**
-  * Users are consistently signing up, and some are posting regularly.
-  * The service lends itself to viral growth.
-    * People want to share their updates with their friends/teammates, and this encourages their friends to join.
-  * If it is successful, the potential market is enormous.
+- **Pros**
 
-* **Cons**
-  * The current growth could be a temporary bump that will be gone in a month regardless of what I do.
-  * I have no evidence that a large number of free users will ever lead to any paying users.
+  - Users are consistently signing up, and some are posting regularly.
+  - The service lends itself to viral growth.
+    - People want to share their updates with their friends/teammates, and this encourages their friends to join.
+  - If it is successful, the potential market is enormous.
+
+- **Cons**
+  - The current growth could be a temporary bump that will be gone in a month regardless of what I do.
+  - I have no evidence that a large number of free users will ever lead to any paying users.
 
 ### Slowing down on the email tool for copywriters
 
@@ -112,15 +114,16 @@ It's [just a concept](/retrospectives/2019/06/#taking-on-google-docs) at this po
 
 I had several exploratory calls with copywriters in May, but progress froze entirely in June as I focused on What Got Done and Zestful. It's my most freezable project because I haven't created anything for it yet, but I do worry that pausing it will kill progress with the prospective customers I've already contacted.
 
-* **Pros**
-  * It's a market too small to attract large competitors but involves high-value transactions.
-    * It's a small customer base to support, but they're paying a lot because it brings them significant value.
-  * Most writers I've interviewed with are unsatisfied with their existing tools and desperate for something better.
+- **Pros**
 
-* **Cons**
-  * The market might be too niche.
-    * The email copywriters I've spoken with all know each other, so I'm not sure if it's just a consequence of the network where I found them or if there really are only a few dozen people who have this job.
-  * The amount of work to create an MVP is higher than for other ideas I've had.
+  - It's a market too small to attract large competitors but involves high-value transactions.
+    - It's a small customer base to support, but they're paying a lot because it brings them significant value.
+  - Most writers I've interviewed with are unsatisfied with their existing tools and desperate for something better.
+
+- **Cons**
+  - The market might be too niche.
+    - The email copywriters I've spoken with all know each other, so I'm not sure if it's just a consequence of the network where I found them or if there really are only a few dozen people who have this job.
+  - The amount of work to create an MVP is higher than for other ideas I've had.
 
 ## A brief experiment with display ads on Is It Keto
 
@@ -148,22 +151,22 @@ For the 11 days it ran, Ezoic generated $45.49 in revenue from 5,452 unique visi
 
 ### What got done?
 
-* Published a new blog post: ["Staying Motivated by Sending Status Updates to Nobody"](/status-updates-to-nobody/)
-* Increased pricing on Zestful by 566%
-* Created an [internal web app](https://i.imgur.com/a5KKab5.png) that lets me quickly generate training data for Zestful (and fix the legacy data from my starting dataset)
-* Added a ["Save Draft" feature](https://i.imgur.com/s2lChnk.gif) to What Got Done
+- Published a new blog post: ["Staying Motivated by Sending Status Updates to Nobody"](/status-updates-to-nobody/)
+- Increased pricing on Zestful by 566%
+- Created an [internal web app](https://i.imgur.com/a5KKab5.png) that lets me quickly generate training data for Zestful (and fix the legacy data from my starting dataset)
+- Added a ["Save Draft" feature](https://i.imgur.com/s2lChnk.gif) to What Got Done
 
 ### Lessons learned
 
-* Even when your sales are negligible, there are benefits to raising prices.
-  * Raising prices eliminates distractions from customers who can't spend enough to make the service viable.
-* Ezoic pays pretty well, but they make sites look like garbage and screw up SEO.
+- Even when your sales are negligible, there are benefits to raising prices.
+  - Raising prices eliminates distractions from customers who can't spend enough to make the service viable.
+- Ezoic pays pretty well, but they make sites look like garbage and screw up SEO.
 
 ### Goals for next month
 
-* Conduct five calls with new customers (either for What Got Done, Zestful, or the email tool)
-* Implement two commonly-requested Zestful features (matching ingredients to USDA entries and support for multi-ingredient strings)
-  * And then **stop working on Zestful** (unless a customer spends or pre-pays $100+)
-* Add two engagement-encouraging features to What Got Done:
-  * Email reminder on Friday if you haven't submitted an entry
-  * Support for "reactions" to entries (e.g., thumbs up, happy face)
+- Conduct five calls with new customers (either for What Got Done, Zestful, or the email tool)
+- Implement two commonly-requested Zestful features (matching ingredients to USDA entries and support for multi-ingredient strings)
+  - And then **stop working on Zestful** (unless a customer spends or pre-pays $100+)
+- Add two engagement-encouraging features to What Got Done:
+  - Email reminder on Friday if you haven't submitted an entry
+  - Support for "reactions" to entries (e.g., thumbs up, happy face)

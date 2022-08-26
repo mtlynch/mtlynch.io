@@ -1,13 +1,13 @@
 ---
-title: 'Adventures in Outsourcing: Cooking with TaskRabbit'
+title: "Adventures in Outsourcing: Cooking with TaskRabbit"
 tags:
-- outsourcing
-- cooking
-- taskrabbit
+  - outsourcing
+  - cooking
+  - taskrabbit
 description: Hiring a personal chef on the cheap
-date: '2017-01-11'
+date: "2017-01-11"
 images:
-- taskrabbit-cooking/IMG_20161115_212108.jpg
+  - taskrabbit-cooking/IMG_20161115_212108.jpg
 ---
 
 ## Overview
@@ -30,7 +30,7 @@ I've used TaskRabbit to find apartment cleaners and a handyman to wall-mount my 
 
 ## Finding a TaskRabbit to do it all
 
-Since I was approaching this as a way to save time, I figured the way to save the *most* time would be if the TaskRabbit not only did the cooking, but the shopping as well. Shopping is a common task on TaskRabbit, and the workers can invoice clients for reimbursement.
+Since I was approaching this as a way to save time, I figured the way to save the _most_ time would be if the TaskRabbit not only did the cooking, but the shopping as well. Shopping is a common task on TaskRabbit, and the workers can invoice clients for reimbursement.
 
 My trial recipes were [Bacon Wrapped Stuffed Pork Tenderloin](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) and [Neapolitan Fat Bombs](http://www.ruled.me/neapolitan-fat-bombs/). I didn't have many of the ingredients on hand, so it seemed like it would be simple to just say, "buy everything except for salt, olive oil, and pepper."
 
@@ -54,7 +54,7 @@ My new problem was that TaskRabbit doesn't allow you to re-offer the job to peop
 
 The best remaining option was a young woman named Leah. She charged $26/hr with a 73% rating, which is a worryingly low score by TaskRabbit standards. She only had one cooking review, which was a thumbs-down with no explanation from the reviewer.
 
-Leah seemed like a risky bet, but I had an ace up my sleeve: I don't care that much about food. Or rather, I don't have very discriminating taste in food. My standards for a satisfying meal are probably  much more lenient than those of the majority of people that would hire and review a TaskRabbit chef.
+Leah seemed like a risky bet, but I had an ace up my sleeve: I don't care that much about food. Or rather, I don't have very discriminating taste in food. My standards for a satisfying meal are probably much more lenient than those of the majority of people that would hire and review a TaskRabbit chef.
 
 I offered Leah the job, and she accepted. Within a few minutes, we had scheduled an appointment for two days later.
 
@@ -67,8 +67,8 @@ The process went very smoothly. She cooked for a little over two hours. I took a
 When she was done, she told me I could take the pork tenderloin out of the oven in ten minutes, the pepper and broccoli were finished on the stove, and that the neapolitan fat bombs were in the freezer. She had wiped down my countertops and cleaned my dishes. When the tenderloin was ready, I took it out and was delighted. It looked great and tasted fantastic.
 
 {{< gallery caption="Bacon Wrapped Stuffed Pork Tenderloin: finished product." >}}
-  {{< img src="IMG_20161115_212108.jpg" alt="Finished pork tenderloin and side" >}}
-  {{< img src="IMG_20161115_212144.jpg" alt="Finished pork tenderloin on baking sheet" >}}
+{{< img src="IMG_20161115_212108.jpg" alt="Finished pork tenderloin and side" >}}
+{{< img src="IMG_20161115_212144.jpg" alt="Finished pork tenderloin on baking sheet" >}}
 {{</ gallery >}}
 
 The experience went pretty much exactly as I had wanted it to. I've hired Leah to cook three more times since then, and I've been pleased with the results every time.
@@ -81,7 +81,7 @@ It's easy to calculate the cost of hiring a TaskRabbit because I get a bill at t
 
 ### Figuring out ingredient costs
 
-The most straightforward way to account for ingredient costs is to amortize by the amount that the recipe requires. For example, if a recipe calls for 3 oz of cream cheese, and an 8 oz package costs $3.49, the amortized cost of that ingredient is $1.31 (&#8540; * $3.49).
+The most straightforward way to account for ingredient costs is to amortize by the amount that the recipe requires. For example, if a recipe calls for 3 oz of cream cheese, and an 8 oz package costs $3.49, the amortized cost of that ingredient is $1.31 (&#8540; \* $3.49).
 
 This is a very conservative estimate because many of my of recipes call for ingredients that spoil, so I end up having to throw ingredients away when I can't use them in other meals. There are also ingredients that don't spoil quickly, but will be difficult to use completely, like powdered Ranch dressing. The smallest amount I could buy was $14.03 for a 16 oz container, but the recipe only called for 2 tsp, or $0.29 worth. It has a shelf life of about 5 months, but it's going to be tough finding more recipes that call for powdered Ranch dressing. Overall, I probably lose about $3-6 per cooking session to suboptimal ingredient purchasing.
 
@@ -91,43 +91,43 @@ The tables below show my full costs for each cooking session. I bought all the i
 
 #### Session 1
 
-| Item                                               | Cost   |
-| -------------------------------------------------- | ------ |
-| [Bacon Wrapped Stuffed Pork Tenderloin (4 servings)](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) | $26.69 |
-| [Neapolitan Fat Bombs (24 servings)](http://www.ruled.me/neapolitan-fat-bombs/)                 | $19.30 |
-| Labor (2 hrs, 15 mins)                             | $62.88 |
-| **Total**                                          | **$108.87** |
+| Item                                                                                                             | Cost        |
+| ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Bacon Wrapped Stuffed Pork Tenderloin (4 servings)](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) | $26.69      |
+| [Neapolitan Fat Bombs (24 servings)](http://www.ruled.me/neapolitan-fat-bombs/)                                  | $19.30      |
+| Labor (2 hrs, 15 mins)                                                                                           | $62.88      |
+| **Total**                                                                                                        | **$108.87** |
 
 #### Session 2
 
-| Item                                               | Cost   |
-| -------------------------------------------------- | ------ |
-| [Applewood Seared Pork Chops (4 servings)](http://www.ruled.me/applewood-seared-pork-chops/)           | $13.39 |
-| [Garlic and Bacon Brussels Sprouts (4 servings)](http://www.ruled.me/garlic-and-bacon-brussels-sprouts/)     | $10.11 |
-| [Ultimate Keto Chocolate Brownies (16 servings)](http://ketodietapp.com/Blog/post/2015/12/21/ultimate-keto-chocolate-brownies)     | $24.14 |
-| Labor (2 hrs, 15 mins)                             | $62.88 |
-| **Total**                                          | **$110.51** |
+| Item                                                                                                                           | Cost        |
+| ------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| [Applewood Seared Pork Chops (4 servings)](http://www.ruled.me/applewood-seared-pork-chops/)                                   | $13.39      |
+| [Garlic and Bacon Brussels Sprouts (4 servings)](http://www.ruled.me/garlic-and-bacon-brussels-sprouts/)                       | $10.11      |
+| [Ultimate Keto Chocolate Brownies (16 servings)](http://ketodietapp.com/Blog/post/2015/12/21/ultimate-keto-chocolate-brownies) | $24.14      |
+| Labor (2 hrs, 15 mins)                                                                                                         | $62.88      |
+| **Total**                                                                                                                      | **$110.51** |
 
 #### Session 3
 
-| Item                                               | Cost   |
-| -------------------------------------------------- | ------ |
-| [Creamy Spinach Pork Tenderloin Roulade (4 servings)](http://www.ruled.me/creamy-spinach-pork-tenderloin-roulade/) | $15.02 |
-| [Green Beans with Olive Oil (4 servings)](http://www.epicurious.com/recipes/food/views/green-beans-with-olive-oil-233987) | $4.08 |
-| [Delicious Chocolate Keto Brownies (16 servings)](http://www.ruled.me/chocolate-keto-brownies/) | $9.08 |
-| [Neapolitan Fat Bombs (24 servings)](http://www.ruled.me/neapolitan-fat-bombs/)                 | $19.30 |
-| Labor (3 hours) | $83.85 |
-| **Total**                                          | **$131.33** |
+| Item                                                                                                                      | Cost        |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Creamy Spinach Pork Tenderloin Roulade (4 servings)](http://www.ruled.me/creamy-spinach-pork-tenderloin-roulade/)        | $15.02      |
+| [Green Beans with Olive Oil (4 servings)](http://www.epicurious.com/recipes/food/views/green-beans-with-olive-oil-233987) | $4.08       |
+| [Delicious Chocolate Keto Brownies (16 servings)](http://www.ruled.me/chocolate-keto-brownies/)                           | $9.08       |
+| [Neapolitan Fat Bombs (24 servings)](http://www.ruled.me/neapolitan-fat-bombs/)                                           | $19.30      |
+| Labor (3 hours)                                                                                                           | $83.85      |
+| **Total**                                                                                                                 | **$131.33** |
 
 #### Session 4
 
-| Item                                               | Cost   |
-| -------------------------------------------------- | ------ |
-| [Simple Chicken Parmesan (4 servings)](http://www.ruled.me/simple-chicken-parmesan/) | $30.11 |
-| [Cheesy Creamed Spinach (4 servings)](http://www.ruled.me/cheesy-creamed-spinach/) | $8.86 |
-| [Raspberry Cheesecake Cupcakes (12 servings)](http://www.ruled.me/raspberry-cheesecake-cupcakes/) | $15.03 |
-| Labor (2 hours) | $55.90 |
-| **Total**                                          | **$109.89** |
+| Item                                                                                              | Cost        |
+| ------------------------------------------------------------------------------------------------- | ----------- |
+| [Simple Chicken Parmesan (4 servings)](http://www.ruled.me/simple-chicken-parmesan/)              | $30.11      |
+| [Cheesy Creamed Spinach (4 servings)](http://www.ruled.me/cheesy-creamed-spinach/)                | $8.86       |
+| [Raspberry Cheesecake Cupcakes (12 servings)](http://www.ruled.me/raspberry-cheesecake-cupcakes/) | $15.03      |
+| Labor (2 hours)                                                                                   | $55.90      |
+| **Total**                                                                                         | **$109.89** |
 
 {{< img src="cooking-costs.png" alt="ProsperBot screenshot" maxWidth="750px" hasBorder="True" >}}
 
@@ -139,7 +139,7 @@ TaskRabbit cooking has taken the place of restaurant delivery for me. I still co
 
 In my case, the cost for TaskRabbit home cooking is roughly equal to the cost of ordering delivery.
 
-In Session 4, for example, the cost works out to around $20 for each entr&eacute;e and $2.50 for each dessert (the [cheesecake cupcakes](http://www.ruled.me/raspberry-cheesecake-cupcakes/) were *amazing*, by the way). That cost assumes optimal use of ingredients, so in practice, it's probably $1-2 higher per meal.
+In Session 4, for example, the cost works out to around $20 for each entr&eacute;e and $2.50 for each dessert (the [cheesecake cupcakes](http://www.ruled.me/raspberry-cheesecake-cupcakes/) were _amazing_, by the way). That cost assumes optimal use of ingredients, so in practice, it's probably $1-2 higher per meal.
 
 With restaurant delivery, I tend to spend around $10-20 on lunches and $15-30 on dinners, including tax, tip, and fees. Overall, I'd say it's a wash between the two.
 
@@ -151,7 +151,7 @@ With a TaskRabbit chef, I get several meals that I can freeze for the week. When
 
 #### Nutritional choices: TaskRabbit wins
 
-As discussed in the introduction, there are not many restaurant delivery options that match my preferred diet. Even among restaurants that have options that *seem* low carb, it's rare for the restaurant to provide exact nutritional information. With TaskRabbit cooking, I know exactly what's in my food, which allows me to make more informed choices about what I eat.
+As discussed in the introduction, there are not many restaurant delivery options that match my preferred diet. Even among restaurants that have options that _seem_ low carb, it's rare for the restaurant to provide exact nutritional information. With TaskRabbit cooking, I know exactly what's in my food, which allows me to make more informed choices about what I eat.
 
 ## What I learned
 
@@ -185,7 +185,7 @@ After that, I organized my kitchen so that all of my cooking tools were in more 
 
 Related to the above, I realized that Leah was probably uncomfortable telling me that I was missing kitchen equipment that she needed. If I wanted to find out about problems, I'd need to ask her. Aside from that, she's in my home working for me, so I wanted to make sure I was treating her with respect and fostering a good work environment.
 
-After the first session, I reached out to Leah to ask if there were any changes I could make to the process or to my kitchen setup to improve the work experience for her. Interestingly, she brought up my [Magic Bullet](https://smile.amazon.com/dp/B017IATJ6U/), a small blender I use for its ease of cleaning.  She told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a basic one](https://smile.amazon.com/dp/B00AN9UJ68/) from Amazon for $50. Easy peasy.
+After the first session, I reached out to Leah to ask if there were any changes I could make to the process or to my kitchen setup to improve the work experience for her. Interestingly, she brought up my [Magic Bullet](https://smile.amazon.com/dp/B017IATJ6U/), a small blender I use for its ease of cleaning. She told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a basic one](https://smile.amazon.com/dp/B00AN9UJ68/) from Amazon for $50. Easy peasy.
 
 I've made this feedback check a regular practice, and it continues to bring forth useful suggestions from Leah. Many of her recommendations have come in handy even when I'm just cooking for myself.
 

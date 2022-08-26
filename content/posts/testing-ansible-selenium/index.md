@@ -1,13 +1,13 @@
 ---
 title: Testing Ansible Web App Roles with Selenium
 tags:
-- ansible
-- clipbucket
-- docker
+  - ansible
+  - clipbucket
+  - docker
 description: A way to perform strong tests on Ansible web app roles
-date: '2016-09-25'
+date: "2016-09-25"
 images:
-- testing-ansible-selenium/bunny-film-error.png
+  - testing-ansible-selenium/bunny-film-error.png
 ---
 
 ## Overview
@@ -31,9 +31,9 @@ curl -s "${container_ip}"  \
 
 This is a useful test, as it verifies a few important properties of our web app, namely:
 
-* Web server is listening on port 80
-* Web server is responding to user requests
-* Web server is serving the ClipBucket landing page
+- Web server is listening on port 80
+- Web server is responding to user requests
+- Web server is serving the ClipBucket landing page
 
 ## Why We Need Better Tests
 
@@ -83,9 +83,9 @@ Fortunately, we can use [Selenium](http://docs.seleniumhq.org/). Selenium is a w
 
 We'll need to install a few components on our Ansible control machine to get started with Selenium:
 
-* [**Selenium Python Package**](https://pypi.python.org/pypi/selenium) - We'll be using the Python API, and this package gets us the Selenium framework and Python bindings.
-* **Firefox** - We need a browser for Selenium to drive. While Selenium works with most major browsers, it supports Firefox natively.
-* **xvfb** - Because we'll be running this test on a VM without a real display, we'll use xvfb as a virtual display, so that Firefox thinks it's running on a monitor.
+- [**Selenium Python Package**](https://pypi.python.org/pypi/selenium) - We'll be using the Python API, and this package gets us the Selenium framework and Python bindings.
+- **Firefox** - We need a browser for Selenium to drive. While Selenium works with most major browsers, it supports Firefox natively.
+- **xvfb** - Because we'll be running this test on a VM without a real display, we'll use xvfb as a virtual display, so that Firefox thinks it's running on a monitor.
 
 We can create a fairly [simple playbook](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tests/install_selenium.yml) for this. The only part that was a bit difficult was that xvfb requires an init script that's non-obvious. Fortunately, blogger Cory Klein wrote [a post](http://coryklein.com/ansible/2015/10/09/using-ansible-to-install-google-chrome.html) last year that gives an example of an xvfb init script and using his example, we are able to [create one](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tests/templates/xvfb-init.d.j2) for our needs.
 
@@ -93,10 +93,10 @@ We can create a fairly [simple playbook](https://github.com/mtlynch/ansible-role
 
 Now that we have Selenium installed, it's time to create a Selenium script to exercise our web app. There are many possibilities for web flows we might like to verify, such as:
 
-* Logging in
-* Uploading a video and playing it back
-* Making a comment on a video and checking that it displays
-* Creating a new user account
+- Logging in
+- Uploading a video and playing it back
+- Making a comment on a video and checking that it displays
+- Creating a new user account
 
 For ClipBucket, I'm particularly interested in making sure videos upload correctly, so we'll need to test login and video upload. Unfortunately, ClipBucket uses a heavyweight JavaScript package for managing uploads, so the normal Selenium APIs for uploading files don't work.
 
@@ -115,8 +115,8 @@ Now that we know what functionality we want to exercise, we can sketch out the w
 
 This will give us automated verification of some additional functionality that we were not exercising in our basic tests:
 
-* User login is working (which means that ClipBucket can successfully access the database)
-* ClipBucket can access its tool dependencies
+- User login is working (which means that ClipBucket can successfully access the database)
+- ClipBucket can access its tool dependencies
 
 ## Automating Web Flow
 
