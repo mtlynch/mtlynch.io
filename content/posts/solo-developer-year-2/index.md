@@ -322,7 +322,7 @@ I'll continue applying to and attending conferences in 2020, but I'll be more se
 
 **Grade**: B
 
-Depending on how you count, I either published 9 or 13 blog posts in 2019. There were nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/). Overall, I'm pleased with my writing for the year, though I did [wish more of my posts had gained traction](#mtlynchio-this-blog).
+Depending on how you count, I either published 9 or 13 blog posts in 2019. There were nine separate updates to my blog, but one of them was [a five-part series on hiring content writers](/hiring-content-writers/). Overall, I'm pleased with my writing for the year, though I did [wish more of my posts had gained traction](#mtlynchio-_this-blog_).
 
 ### Gain comfort with a JavaScript framework
 

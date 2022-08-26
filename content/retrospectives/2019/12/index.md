@@ -87,7 +87,7 @@ I'm sure there's a way to sell them successfully, but I spent 6+ weeks on it, an
 
 ## Rewriting the Zestful website out of spite
 
-I wrote the Zestful website last year, and it was [two weeks of misery](/shipping-too-late/#its-okay-because-its-sales-coding). Mostly because I wrote it in Angular, the only frontend framework I knew at the time (...that I ["knew"](/retrospectives/2019/12/dr-evil-air-quotes.gif)). Since then, I've learned [Vue.js](https://vuejs.org/), which I strongly prefer, and I have much more web design under my belt.
+I wrote the Zestful website last year, and it was [two weeks of misery](/shipping-too-late/#its-okay-because-its-_sales_-coding). Mostly because I wrote it in Angular, the only frontend framework I knew at the time (...that I ["knew"](/retrospectives/2019/12/dr-evil-air-quotes.gif)). Since then, I've learned [Vue.js](https://vuejs.org/), which I strongly prefer, and I have much more web design under my belt.
 
 Still, the Zestful website has dragged along as an Angular site. I desperately wanted to rewrite it in Vue, but I couldn't justify a from-scratch rewrite of a website I rarely touch.
 
