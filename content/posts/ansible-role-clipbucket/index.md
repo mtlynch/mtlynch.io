@@ -66,7 +66,7 @@ I found [this excellent and very thorough guide](http://linoxide.com/linux-how-t
 
 Even after installing ClipBucket and all of its dependencies, a new deployment of ClipBucket requires the user to manually click through a web UI and enter information about their installation.
 
-{{< img src="clipbucket-install-steps.png" alt="Complete ClipBucket installation steps" >}}
+{{<img src="clipbucket-install-steps.png" alt="Complete ClipBucket installation steps">}}
 
 A web UI is probably nice for new users, but it's not the kind of thing you'd want to go through over and over every time you have to deploy a new server.
 
@@ -106,7 +106,7 @@ PLAY RECAP *********************************************************************
 clipbucket                : ok=77   changed=48   unreachable=0    failed=0
 ```
 
-{{< img src="clipbucket-install-complete.png" alt="Complete ClipBucket installation" >}}
+{{<img src="clipbucket-install-complete.png" alt="Complete ClipBucket installation">}}
 
 ## Automating Playbook Testing
 

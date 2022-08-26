@@ -320,7 +320,7 @@ The hardest part for me about running a business with thousands of real customer
 
 Overall, I'm still happy to be working for myself, and I hope to sustain it for the rest of my working life.
 
-{{<tweet user="deliberatecoder" id="1488517727002284039" >}}
+{{<tweet user="deliberatecoder" id="1488517727002284039">}}
 
 ---
 

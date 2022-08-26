@@ -13,7 +13,7 @@ images:
   - human-code-reviews-2/cover-part-two.png
 ---
 
-{{< img src="cover-part-two.png" >}}
+{{<img src="cover-part-two.png">}}
 
 This is the second half of my article about how to communicate well and avoid pitfalls in code reviews. Here, I focus on techniques to bring your code review to a successful close while avoiding ugly conflict.
 
@@ -33,7 +33,7 @@ A few days later, Mallory sent me the updated changelist and her responses to my
 
 Angry and frustrated, I sent a new round of notes. My tone was professional but meandering into the realm of passive-aggressive. "Can you explain _why_ we want undefined behavior for malformed input?" As you might guess, Mallory's replies became even more obstinate.
 
-{{< img src="boulder.png" alt="Pushing the code review boulder back and forth" >}}
+{{<img src="boulder.png" alt="Pushing the code review boulder back and forth">}}
 
 ### A bitter cycle
 
@@ -81,7 +81,7 @@ I privately think of the code in terms of letter grades, from A to F. When I rec
 
 It's possible, in theory, to bring a D up to an A+, but it will probably take upwards of eight rounds of review. By the end, the author will hate you and never want to send you code again.
 
-{{< img src="letter-grade.png" alt="Reviewer helping author bring paper up by a letter grade" >}}
+{{<img src="letter-grade.png" alt="Reviewer helping author bring paper up by a letter grade">}}
 
 You might be thinking, "If I accept C-grade code, won't I end up with a C-grade codebase?" Fortunately, no. I find that when I help a teammate go from a D to a C, the next changelist they send me will _start_ at a C. Within a few months, they're sending me reviews that begin as Bs, which become As by the end of the review.
 
@@ -93,13 +93,13 @@ When you notice that several of the author's mistakes fit the same pattern, don'
 
 It's fine to call out two or three separate instances of a pattern. For anything more than that, just ask the author to fix the pattern rather than each particular occurrence.
 
-{{< img src="instance-variables.png" alt="Example of pointing out repeated pattern" maxWidth="787px" >}}
+{{<img src="instance-variables.png" alt="Example of pointing out repeated pattern" maxWidth="787px">}}
 
 ### Respect the scope of the review
 
 There's an anti-pattern I see frequently where the reviewer identifies something _near_ code in the changelist and asks the author to fix it. Once the author complies, the reviewer usually realizes that the code is better but inconsistent, so it needs a few more minor changes. And then a few more. And on and on until a narrowly-scoped changelist has expanded to include lots of unrelated churn.
 
-{{< img src="if-you-give-a-mouse-a-cookie.jpg" alt="If You Give a Mouse a Cookie" maxWidth="240px" align="right" >}}
+{{<img src="if-you-give-a-mouse-a-cookie.jpg" alt="If You Give a Mouse a Cookie" maxWidth="240px" align="right">}}
 
 > If a hungry little mouse shows up on your doorstep, you might want to give him a cookie. And if you give him a cookie, he'll ask for a glass of milk. He'll want to look in a mirror to make sure he doesn't have a milk mustache, and then he'll ask for a pair of scissors to give himself a trim...
 >
@@ -109,25 +109,25 @@ The rule of thumb is: if the changelist doesn't touch the line, it's out of scop
 
 Here's an example:
 
-{{< img src="out-of-scope-1.png" alt="Example out of scope line" maxWidth="611px" >}}
+{{<img src="out-of-scope-1.png" alt="Example out of scope line" maxWidth="611px">}}
 
 Even if you'll be kept awake all night, haunted by the [magic number](<https://en.wikipedia.org/wiki/Magic_number_(programming)>) and ridiculous variable name in your codebase, it's out of scope. Even if the author is the same person who wrote the nearby lines, it's still out of scope. If it's egregiously bad, file a bug or submit your own fix, but don't force it onto the author's plate in this review.
 
 The exception is when the changelist affects the surrounding code without actually touching it, for example:
 
-{{< img src="in-scope.png" alt="Example of in-scope line" maxWidth="637px" >}}
+{{<img src="in-scope.png" alt="Example of in-scope line" maxWidth="637px">}}
 
 In this case, point out that the author needs to rename the function from `ValidateAndSerialize` to just `Serialize`. They haven't touched the line containing the function signature, but they still caused it to become incorrect.
 
 I softly break this rule if I don't have many notes but notice an easy fix just out of scope. In these cases, I make it clear that the author can ignore the note if they please.
 
-{{< img src="out-of-scope-note.png" alt="Pointing out an issue that's out of scope" maxWidth="790px" >}}
+{{<img src="out-of-scope-note.png" alt="Pointing out an issue that's out of scope" maxWidth="790px">}}
 
 ### Look for opportunities to split up large reviews
 
 If you receive a changelist that's more than ~400 lines of code, encourage the author to split it into smaller pieces. Push back proportionally harder the more they go over this limit. I personally refuse to review any changelists that exceed 1,000 lines.
 
-{{< img src="magician.png" alt="Magician splits large reviews" maxWidth="800px" >}}
+{{<img src="magician.png" alt="Magician splits large reviews" maxWidth="800px">}}
 
 The author may gripe about splitting the changelist because it's a tedious task. Ease their burden by identifying logical boundaries for the split. The easiest case is when the changelist touches multiple files independently. In that case, they can just split the changelist into smaller sets of files. In harder cases, find the functions or classes at the lowest layer of abstraction. Ask the author to move these to a separate changelist, then circle back to the rest of the code after the first changelist is merged in.
 
@@ -139,7 +139,7 @@ Most reviewers focus only on what's _wrong_ with the code, but reviews are a val
 
 For example, imagine you're reviewing for an author who struggles to write documentation, and you come across a clear, concise function comment. Let them know they nailed it. They'll improve faster if you tell them when they got it right instead of just waiting to ding them when they screw up.
 
-{{< img src="mma.png" alt="Sincere praise at an MMA match" maxWidth="650px" >}}
+{{<img src="mma.png" alt="Sincere praise at an MMA match" maxWidth="650px">}}
 
 You don't need to have a specific goal in mind to offer praise. Any time I see something in the changelist that delights me, I tell the author about it:
 
@@ -175,7 +175,7 @@ Here are some indicators that you're headed for a stalemate:
 - Your notes per review round are not trending downward.
 - You're getting pushback on an unusually high number of your notes.
 
-{{< img src="pilots.png" alt="Tension during code review" maxWidth="850px" >}}
+{{<img src="pilots.png" alt="Tension during code review" maxWidth="850px">}}
 
 ### Talk it out
 

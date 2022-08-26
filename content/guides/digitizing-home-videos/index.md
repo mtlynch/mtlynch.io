@@ -28,7 +28,7 @@ I used this workflow to edit and share my family's home videos at a cost of only
 
 As an example, the video I use throughout this tutorial is a [public domain home video](https://archive.org/details/TexasFar1952) from a Texas family in the 1950s:
 
-{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" maxWidth="600px" >}}
+{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" maxWidth="600px">}}
 
 To download this video, run the commands below:
 
@@ -56,7 +56,7 @@ ffmpeg \
 
 That creates a copy of the video that looks like this:
 
-{{< img src="frame-annotation.jpg" alt="Public domain video with added frame count overlay" >}}
+{{<img src="frame-annotation.jpg" alt="Public domain video with added frame count overlay">}}
 
 ## Cataloging
 
@@ -66,7 +66,7 @@ Open up your favorite video player. I think [Adobe Premiere Elements](https://ww
 
 Next, create a spreadsheet. You can start with [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing). I'll explain the fields below:
 
-{{< img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." hasBorder="true" >}}
+{{<img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." hasBorder="true">}}
 
 - `tape_id`: This is the filename (without extension) of the video file.
 - `tape_shortname`: This is a shortname you want to identify files that came from this raw file. It can be the same as `tape_id`.
@@ -287,11 +287,11 @@ app/publish_to_mediagoblin.py \
 
 When the script completes, you should see all the clips appear in MediaGoblin's web interface at [http://localhost:6543](http://localhost:6543).
 
-{{< img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." maxWidth="600px" >}}
+{{<img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." maxWidth="600px">}}
 
 If you click a video, you won't be able to view it in the normal video player because MediaGoblin uses a web player that's too old for modern streaming-optimized video formats. You can still watch it if you click the "Original file" link.
 
-{{< img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" maxWidth="600px" >}}
+{{<img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" maxWidth="600px">}}
 
 Don't worry; we'll fix this in the next step so that you'll be able to watch all videos normally in the embedded player.
 

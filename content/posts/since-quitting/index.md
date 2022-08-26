@@ -34,11 +34,11 @@ The best part of quitting has been how much control I have over my time. I struc
 
 With so much time that's my own, I find myself more willing to experiment and pursue opportunities that wouldn't have appealed to me when I was an employee.
 
-{{< img src="nerd-summit.jpg" alt="NERD Summit logo" maxWidth="230px" align="left" linkUrl="https://nerdsummit.org/" >}}
+{{<img src="nerd-summit.jpg" alt="NERD Summit logo" maxWidth="230px" align="left" linkUrl="https://nerdsummit.org/">}}
 
 In March, I gave my first ever conference presentation. I adapted my post, ["How to Do Code Reviews Like a Human,"](/human-code-reviews-1/) and presented it at [NERD Summit](https://nerdsummit.org/), a newcomer-friendly conference in Western Massachusetts.
 
-{{< img src="talking_drupal_logo.png" alt="Talking Drupal logo" maxWidth="230px" align="right" linkUrl="http://talkingdrupal.com" >}}
+{{<img src="talking_drupal_logo.png" alt="Talking Drupal logo" maxWidth="230px" align="right" linkUrl="http://talkingdrupal.com">}}
 
 A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
 
@@ -52,7 +52,7 @@ The next day, I continued responding to messages. It didn't bring quite the same
 
 By the third day, I started to feel overwhelmed. I realized that I could spend the next two weeks doing nothing but responding to feedback about my post. Many of my readers were asking what I was working on post-Google. What was I going to say? "Well, I've primarily been focused on the quick dopamine hits I get when I see notifications about that post."
 
-{{< img src="more-messages.jpg" alt="Me, responding to feedback" maxWidth="800px" >}}
+{{<img src="more-messages.jpg" alt="Me, responding to feedback" maxWidth="800px">}}
 
 ## Managing feedback
 
@@ -78,7 +78,7 @@ Stephanie also pointed out that it's not realistic to respond to every single me
 
 Before quitting, I kept hearing stories about how starting even a small business causes severe stress. I thought, "I'm sure that's true for _them_, but I'm going to be spending every day in my pajamas. How stressed will I really be?"
 
-{{< img src="so-stressed.jpg" alt="The stresses of my daily life after quitting my job" maxWidth="800px" >}}
+{{<img src="so-stressed.jpg" alt="The stresses of my daily life after quitting my job" maxWidth="800px">}}
 
 But they were right. I did feel stress. Not about the things they warned me about like money or customers. I was stressing about self-imposed deadlines that nobody else cared about. They gave me more anxiety than any external deadline I ever had at Google.
 
@@ -98,7 +98,7 @@ I was one of only a few dozen people who understood Sia at a deep enough level t
 
 I didn't know exactly what I wanted to build, but I knew a unique way I could attract users. Few people were discussing Sia, and nobody was writing about it from a developer's perspective. I knew there was a market for technical content because the Sia articles I had written on my personal blog had attracted thousands of readers. I created a blog called [Space Duck](https://blog.spaceduck.io/) and started writing about my exploratory tests on the platform.
 
-{{< img src="space-duck-logo.png" alt="Space Duck logo" maxWidth="750px" linkUrl="https://blog.spaceduck.io" >}}
+{{<img src="space-duck-logo.png" alt="Space Duck logo" maxWidth="750px" linkUrl="https://blog.spaceduck.io">}}
 
 Unfortunately, these tests revealed that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). At Sia's true price point, there were providers with more stable, feature-rich offerings. Without any practical advantages over other storage providers, Sia was a dead end.
 
@@ -108,7 +108,7 @@ I turned my attention back to [KetoHub](/outsourcing-mvp/), a website I created 
 
 One of KetoHub's main features is finding recipes based on ingredients you have. For example, you can search for ["ground beef"](https://ketohub.io/?q=%22ground%20beef%22) and see 50 different keto-friendly recipes that use it.
 
-{{< img src="1-lb-ground-beef.png" alt="Screenshot of KetoHub results for ground beef" maxWidth="800px" >}}
+{{<img src="1-lb-ground-beef.png" alt="Screenshot of KetoHub results for ground beef" maxWidth="800px">}}
 
 This type of search is difficult because it requires KetoHub to determine what part of an ingredient's text is relevant. In the screenshot above, the original ingredient was "1 pound of ground beef," but KetoHub reduced the search result snippet to "Ground beef."
 
@@ -118,7 +118,7 @@ But what about "dash?" It's an informal unit of measurement ("a dash of cinnamon
 
 That rule doesn't always work either. One recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "_Ms._ Dash."
 
-{{< img src="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash." maxWidth="726px" linkUrl="https://www.ruled.me/low-carb-corndogs/" >}}
+{{<img src="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash." maxWidth="726px" linkUrl="https://www.ruled.me/low-carb-corndogs/">}}
 
 This is the nature of applying strict rules to random web data. They start out simple, but after enough variations and edge cases, the rules increase in complexity and conflict with each other.
 
@@ -130,7 +130,7 @@ I needed a more flexible way for KetoHub to process ingredients.
 
 Early in KetoHub's life, a commenter on Indie Hackers [showed me](https://www.indiehackers.com/forum/ketohub-month-2-report-1229ddb803?commentId=-L-clmWeoqUnFcAzTi5t) a blog post describing how _The New York Times_ [used machine learning](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) to parse ingredients from the _Times'_ historical archive of recipes.
 
-{{< img src="nyt-parser.png" alt="Visualization of New York Times results" caption="Visualization of *The New York Times*' ingredient parser results" maxWidth="509px" >}}
+{{<img src="nyt-parser.png" alt="Visualization of New York Times results" caption="Visualization of _The New York Times_&apos; ingredient parser results" maxWidth="509px">}}
 
 That sounded neat but felt like overkill for my little recipe aggregator site. It would be like launching a home cleaning startup because your bathroom was dirty. It might solve the problem, but the solution was bigger than the issue it addressed.
 
@@ -142,7 +142,7 @@ I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer
 
 We now have a [working demo](https://zestfuldata.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break it down into structured components:
 
-{{< img src="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" maxWidth="800px" linkUrl="https://zestfuldata.com/" >}}
+{{<img src="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" maxWidth="800px" linkUrl="https://zestfuldata.com/">}}
 
 For the next few weeks, I'm going to focus on reaching out to different app developers about how the Ingredient Parser API can be useful for them. By June, I hope to refine the API based on their feedback and publish it to marketplaces like [Mashape](https://market.mashape.com/) and [RapidAPI](https://rapidapi.com/). **Update: (7/15)**: It's [now available](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis).
 

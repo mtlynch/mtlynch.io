@@ -13,7 +13,7 @@ images:
   - keep-growing-never-profit/cover.jpg
 ---
 
-{{< img src="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" maxWidth="1000px" >}}
+{{<img src="cover.jpg" alt="How to Keep Growing and Never Turn a Profit (cover image)" maxWidth="1000px">}}
 
 Early last year, I launched a nutrition site called [Is It Keto](https://isitketo.org). From November 2018 until March 2019, the site was my full-time focus. Every month, visitors increased by 50% to 150%, an exhilarating growth rate that far outpaced any of my previous projects.
 
@@ -25,9 +25,9 @@ This is my postmortem for Is It Keto. I'll talk about where I succeeded, how I c
 
 Is It Keto had a simple business model. Every article explained why a food did or did not fit [the keto diet](https://www.ruled.me/guide-keto-diet/). If a food was keto-friendly, the site displayed an affiliate link for the reader to purchase it from Amazon. I received a commission on every order.
 
-{{< img src="isitketo-affiliate-links.jpg" alt="Is It Keto screenshot showing affiliate links" caption="Amazon Affiliate links on Is It Keto" maxWidth="500px" >}}
+{{<img src="isitketo-affiliate-links.jpg" alt="Is It Keto screenshot showing affiliate links" caption="Amazon Affiliate links on Is It Keto" maxWidth="500px">}}
 
-{{< img src="revenues.jpg" alt="Google Analytics screenshot" caption="Is It Keto monthly revenue" maxWidth="763px" hasBorder="True" >}}
+{{<img src="revenues.jpg" alt="Google Analytics screenshot" caption="Is It Keto monthly revenue" maxWidth="763px" hasBorder="True">}}
 
 ## How I lost money
 
@@ -35,7 +35,7 @@ My most significant ongoing cost was content. Early on, I wrote every article my
 
 The only other cost worth mentioning is development. I wrote almost all the code, but a friend briefly freelanced for me while she had time between projects.
 
-{{< img src="costs.jpg" alt="Donut chart of expenses" caption="Is It Keto expenses" maxWidth="600px" >}}
+{{<img src="costs.jpg" alt="Donut chart of expenses" caption="Is It Keto expenses" maxWidth="600px">}}
 
 ## What went well
 
@@ -91,13 +91,13 @@ It was easy for me to rationalize the many daily visits I paid to my traffic and
 
 Checking metrics is ["shallow work"](/book-reports/deep-work/#key-takeaways): it doesn't require deep focus or critical thinking, but it _feels_ productive. It is, of course, useful for a site owner to know their traffic and revenue numbers, but not at the frequency that I was checking.
 
-{{< img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="Is It Keto page views - March 2018 through April 2019" maxWidth="800px" hasBorder="True" >}}
+{{<img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="Is It Keto page views - March 2018 through April 2019" maxWidth="800px" hasBorder="True">}}
 
 There's something enticing about these dashboards beyond the graphs and stats. They hold the promise of little mental reward pellets.
 
 As I toiled away on the site in solitude, a spike in visitors or a jump in revenue made my day. The problem was that for every "good" day where I made $3-4 in revenue, there were five days where I earned nothing and felt miserable.
 
-{{< img src="amazon-affiliate.jpg" alt="Screenshot of Amazon Affiliate Dashboard" caption="Amazon Affiliate earnings - March 2019" maxWidth="800px" >}}
+{{<img src="amazon-affiliate.jpg" alt="Screenshot of Amazon Affiliate Dashboard" caption="Amazon Affiliate earnings - March 2019" maxWidth="800px">}}
 
 Starting in February, I limited my metric checking to one thirty-minute session per week. I do it Friday afternoons as something to look forward to before the weekend.
 
@@ -131,7 +131,7 @@ People don't order any of those things from Amazon. The issue extends far beyond
 
 In evaluating business ideas now, I think about revenue from start to finish. For me to receive a dollar of revenue, what sequence of events must occur? Had this been part of my evaluation process for Is It Keto, hopefully I would have spotted the red flag when I got to, "And then the customer asks Amazon to mail them [a head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/) so that I can collect my affiliate fee."
 
-{{< img src="amazon-lettuce.jpg" alt="Google Analytics screenshot" caption="For only about 10x what you'd pay at the supermarket, Amazon will mail you [a single head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/)." maxWidth="800px" hasBorder="True" >}}
+{{<img src="amazon-lettuce.jpg" alt="Google Analytics screenshot" caption="For only about 10x what you'd pay at the supermarket, Amazon will mail you [a single head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/)." maxWidth="800px" hasBorder="True">}}
 
 ## What I wish I had known
 
@@ -139,7 +139,7 @@ In evaluating business ideas now, I think about revenue from start to finish. Fo
 
 Today, if you ask Google ["are cheese whisps keto?"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F) it responds with a list of results that all fail to answer the question.
 
-{{< img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" maxWidth="450px" hasBorder="True" >}}
+{{<img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" maxWidth="450px" hasBorder="True">}}
 
 Is It Keto [has the answer](https://isitketo.org/whisps), but Google ignores it. For products like [Metamucil](http://www.google.com/search?q=is%20Metamucil%20keto%3F) or [Lily's Chocolate](http://www.google.com/search?q=is%20Lily%27s%20Chocolate%20keto%3F), Google places Is It Keto among the top results, so why no love for the Whisps page?
 

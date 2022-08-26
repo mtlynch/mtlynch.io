@@ -83,7 +83,7 @@ Just a week ago, on August 27th, I asked TinyPilot's electrical engineering part
 
 Simultaneously, I'm working with a 3D printing design shop on an enclosure for the circuit board. The 3D printing firm completed their designs in two days, and they're in the process of printing the first three prototypes. Once they get going, they have the capacity to 3D print 50 enclosures per day.
 
-{{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast" >}}
+{{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast">}}
 {{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true" maxWidth="340px">}}
 {{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true" maxWidth="420px">}}
 {{</gallery>}}
@@ -171,7 +171,7 @@ These dumb tools helped me in two ways. First, they gave me a sense of accomplis
 
 It turned out that most of my problems weren't even HID descriptors but rather the shell commands I was using to create them. Once I cleared other tedious tasks from my mind, I realized that I should verify that the files on disk match my expectations. They didn't. Once I realized that, a working mouse descriptor soon followed.
 
-{{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop" >}}
+{{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop">}}
 
 ## Legacy projects
 

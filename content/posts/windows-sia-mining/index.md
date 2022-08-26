@@ -56,12 +56,12 @@ Different GPUs require different software, so follow the steps below to determin
 
 1. Hit Win+R to open the run dialog.
 1. Type `devmgmt.msc` and hit Enter.
-   {{< img src="run-window-devicemgr.png" alt="Run devicemgr" maxWidth="399px" >}}
+   {{<img src="run-window-devicemgr.png" alt="Run devicemgr" maxWidth="399px">}}
 1. Expand the "Display adapters" entry
 
 You should see something like the following:
 
-{{< img src="device-manager.png" alt="Device Manager&#58; Display adapters" >}}
+{{<img src="device-manager.png" alt="Device Manager&#58; Display adapters">}}
 
 Note whether your GPU begins with "NVIDIA" or "AMD."
 
@@ -102,10 +102,10 @@ To install Marlin, follow the steps below:
 1. Go to the [Marlin miner](https://github.com/SiaMining/marlin/releases/latest) download page.
 1. Click the link for "Windows (64-bit)" to download the Marlin package.
 1. When the download completes, open it and unzip to `C:\marlin`
-   {{< img src="extract-to.png" alt="Extract Marlin" maxWidth="614px" >}}
+   {{<img src="extract-to.png" alt="Extract Marlin" maxWidth="614px">}}
 1. Hit Win+R to open the Windows run dialog.
 1. Type `cmd` and hit Enter.
-   {{< img src="cmd.png" alt="Run cmd" maxWidth="399px" >}}
+   {{<img src="cmd.png" alt="Run cmd" maxWidth="399px">}}
 1. In the Command Prompt, type the following:
 
    ```text
@@ -158,13 +158,13 @@ To create a wallet with Bittrex, follow the steps below:
 1. Go to [Bittrex](https://www.bittrex.com/).
 1. Create a new account and log in.
 1. From the upper right menu, click Wallets.
-   {{< img src="bittrex-wallet-button.png" alt="Bittrex wallet button" maxWidth="800px" >}}
+   {{<img src="bittrex-wallet-button.png" alt="Bittrex wallet button" maxWidth="800px">}}
 1. Type `siacoin` in the search bar.
-   {{< img src="bittrex-search.png" alt="Bittrex search bar" maxWidth="800px" >}}
+   {{<img src="bittrex-search.png" alt="Bittrex search bar" maxWidth="800px">}}
 1. In the "Siacoin" row that appears, click the + sign.
-   {{< img src="siacoin-deposit.png" alt="Bittrex deposit button" maxWidth="800px" >}}
+   {{<img src="siacoin-deposit.png" alt="Bittrex deposit button" maxWidth="800px">}}
 1. You will see a pop-up window showing a long series of letters and numbers. This is your Siacoin wallet address.
-   {{< img src="bittrex-address.png" alt="Bittrex deposit address" maxWidth="500px" >}}
+   {{<img src="bittrex-address.png" alt="Bittrex deposit address" maxWidth="500px">}}
 1. Save this address and proceed to the [Start mining](#start-mining) step.
 
 ### Sia-UI - The better, but slower way
@@ -178,20 +178,20 @@ Sia-UI is Sia's official Windows app. Developed and maintained by the Sia develo
 1. Go to the [Sia-UI download page](https://github.com/NebulousLabs/Sia-UI/releases/latest)
 1. Click the link ending in `-win32-x64.zip` (e.g. `Sia-UI-vXX.YY.ZZ-win32-x64.zip`)
 1. Extract the downloaded file to `C:\Sia-UI`
-   {{< img src="extract-sia-ui.png" alt="Extract Sia-UI" maxWidth="616px" >}}
+   {{<img src="extract-sia-ui.png" alt="Extract Sia-UI" maxWidth="616px">}}
 1. Click "Sia-UI" in the extracted files.
-   {{< img src="explorer-sia-ui.png" alt="image" >}}
+   {{<img src="explorer-sia-ui.png" alt="image">}}
 1. A Windows Firewall dialog will appear asking if you want to give Sia access. Click "Allow".
-   {{< img src="sia-allow-access.png" alt="image" maxWidth="531px" >}}
+   {{<img src="sia-allow-access.png" alt="image" maxWidth="531px">}}
 
 #### Set up Sia-UI wallet
 
 You'll see a progress bar in the upper right corner that represents Sia-UI's progress synchronizing your app with the rest of the Sia network. While you wait for synchronization to reach 100%, create your Siacoin wallet with the steps below:
 
 1. In the lefthand sidebar, click the "Wallet" button.
-   {{< img src="sia-ui-wallet.png" alt="image" >}}
+   {{<img src="sia-ui-wallet.png" alt="image">}}
 1. Click "Create a new wallet."
-   {{< img src="sia-ui-create-wallet.png" alt="Sia-UI create wallet" >}}
+   {{<img src="sia-ui-create-wallet.png" alt="Sia-UI create wallet">}}
 1. Sia-UI then displays your wallet seed. This is a series of words that gives you access to your Siacoin wallet.
    - **Save your wallet seed**. Either write it down on paper or save it to a text file.
    - Sia offers to let you choose a wallet _password_ that is distinct from your wallet _seed_. For simplicity, leave the password as is so that it will match your seed.
@@ -200,9 +200,9 @@ You'll see a progress bar in the upper right corner that represents Sia-UI's pro
      {{<img src="sia-seed.png" alt="Sia-UI seed">}}
 1. Click the button that says "I have written these down in a safe place."
 1. Because Sia-UI maintains a healthy skepticism of its users, the next screen challenges you to enter the wallet seed you just saved. Type in the seed you saved in step 3 and click "Confirm."
-   {{< img src="sia-password-and-seed.png" alt="Sia-UI enter seed and password" >}}
+   {{<img src="sia-password-and-seed.png" alt="Sia-UI enter seed and password">}}
 1. [Bizzarely](https://github.com/NebulousLabs/Sia/issues/2592), Sia-UI then asks you to confirm the seed _again_, so paste it one final time and click "Unlock."
-   {{< img src="sia-unlock.png" alt="Sia-UI enter seed" >}}
+   {{<img src="sia-unlock.png" alt="Sia-UI enter seed">}}
 
 At this point, Sia-UI will likely still be synchronizing with the rest of the network. Unfortunately, you can't use your wallet until this process completes.
 
@@ -210,15 +210,15 @@ First-time synchronization is _sloooooow_. It can take hours to days to get sync
 
 When you're finally synchronized, click the "Receive Siacoin" button in the wallet screen:
 
-{{< img src="sia-ui-receive-siacoin.png" alt="Sia-UI save address" >}}
+{{<img src="sia-ui-receive-siacoin.png" alt="Sia-UI save address">}}
 
 You will see a "Receiving Address" field and a "Description" field. In the Description, type `Mining revenues` (or whatever label you prefer):
 
-{{< img src="sia-ui-address.png" alt="Sia-UI receive siacoin" >}}
+{{<img src="sia-ui-address.png" alt="Sia-UI receive siacoin">}}
 
 Sia will now show your Siacoin receiving address labeled `Mining revenues`. You can access it at any time by hitting the "Receive Siacoin" button.
 
-{{< img src="sia-ui-address2.png" alt="Sia-UI address" >}}
+{{<img src="sia-ui-address2.png" alt="Sia-UI address">}}
 
 ## Start mining
 
@@ -237,13 +237,13 @@ marlin.exe --user %payout_address% --intensity %intensity% --host %pool_server%
 ```
 
 1. Change `YOUR SIACOIN WALLET ADDRESS` to your own wallet address. The file should look like the following:
-   {{< img src="marlin-bat.png" alt="Marlin batch file" >}}
+   {{<img src="marlin-bat.png" alt="Marlin batch file">}}
 1. Go to File > Save and close Notepad.
 1. Go to `C:\marlin` in Windows Explorer.
 1. Double-click on `marlin.bat`.
-   {{< img src="explorer-marlin.png" alt="Marlin in Explorer" maxWidth="604px" >}}
+   {{<img src="explorer-marlin.png" alt="Marlin in Explorer" maxWidth="604px">}}
 1. If you get a security warning, click "Run."
-   {{< img src="marlin-warning.png" alt="Marlin warning" maxWidth="466px" >}}
+   {{<img src="marlin-warning.png" alt="Marlin warning" maxWidth="466px">}}
 
 You're mining! You should see output like the following:
 
@@ -288,7 +288,7 @@ Configuring a scheduled task is a bit tedious. To save you the trouble, I've cre
 1. Download my Sia Mining Task configuration file: [SiaMiningTask.xml](SiaMiningTask.xml) (right-click and hit "Save link as...").
 1. Hit Win+R to open the Windows run dialog.
 1. Type `control schedtasks` and hit Enter.
-   {{< img src="run-schedtasks.png" alt="Run Task Scheduler" maxWidth="399px" >}}
+   {{<img src="run-schedtasks.png" alt="Run Task Scheduler" maxWidth="399px">}}
 1. Task Scheduler will appear. From the right hand menu, click "Import Task..."
 1. Specify the `SiaMiningTask.xml` file you downloaded in step 1.
 
@@ -306,7 +306,7 @@ The Luxor mining pool provides a dashboard that allows you to monitor your miner
 
 - `https://sia.luxor.tech/miners/your siacoin address`
 
-{{< img src="luxor-mining-pool.png" alt="Luxor screenshot" >}}
+{{<img src="luxor-mining-pool.png" alt="Luxor screenshot">}}
 
 When the unpaid balance for your wallet address reaches 500 Siacoin, the pool pays out your rewards. Within six hours, you will see a deposit in your wallet for a little over 500 Siacoin.
 
@@ -404,7 +404,7 @@ This usually happens because the mining settings are too intense for your GPU. T
 1. Open Notepad
 1. Go to File > Open and enter `C:\marlin\marlin.bat`
 1. Change the `intensity` value to `1`.
-   {{< img src="lower-intensity.png" alt="Marlin batch file" >}}
+   {{<img src="lower-intensity.png" alt="Marlin batch file">}}
 1. Go to File > Save and close Notepad.
 1. Try running `marlin.bat` again.
 
@@ -414,7 +414,7 @@ If it fails after you've lowered the intensity, try the following:
 
 1. Hit Win+R to open the Windows run dialog.
 1. Type `cmd` and hit Enter.
-   {{< img src="cmd.png" alt="Run cmd" maxWidth="399px" >}}
+   {{<img src="cmd.png" alt="Run cmd" maxWidth="399px">}}
 1. In the Command Prompt, type the following:
    ```text
    cd C:\marlin

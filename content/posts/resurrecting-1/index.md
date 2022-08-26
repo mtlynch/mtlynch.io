@@ -29,7 +29,7 @@ In this three-part series, I'll show you how I resurrected it and built a busine
 - [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
 - [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
 
-{{< img src="cover.jpg" alt="Bear doctors resuscitating python" maxWidth="800px" >}}
+{{<img src="cover.jpg" alt="Bear doctors resuscitating python" maxWidth="800px">}}
 
 ## The library
 
@@ -49,9 +49,9 @@ After six years of adding to this database, they realized that they had enough d
 
 I had the same problem as the _Times_. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
 
-{{< img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" maxWidth="400px" hasBorder="True" >}}
+{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" maxWidth="400px" hasBorder="True">}}
 
-{{< img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" maxWidth="300px" hasBorder="True" align="right" >}}
+{{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" maxWidth="300px" hasBorder="True" align="right">}}
 
 At the time I stumbled upon ingredient-phrase-tagger, I was parsing ingredients in an ugly, hacky way: with [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
 
@@ -65,11 +65,11 @@ But first, I had to figure out how to make their code run.
 
 The _Times_ built this library for a hack week event, so it lacked many features one expects of a professional software project, such as automated tests or thorough documentation. The README included instructions for installing the application, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
 
-{{< img src="osx-install.png" alt="OS X install instructions" caption="[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" maxWidth="756px" hasBorder="True" >}}
+{{<img src="osx-install.png" alt="OS X install instructions" caption="[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" maxWidth="756px" hasBorder="True">}}
 
 Of course, I wasn't the only one to notice these issues. At the time they published, the _Times_ received tough criticism from famed Python developer D. John Trump:
 
-{{< img src="trump-tweet.png" alt="Trump tweet about code" maxWidth="628px" hasBorder="True" >}}
+{{<img src="trump-tweet.png" alt="Trump tweet about code" maxWidth="628px" hasBorder="True">}}
 
 ## Building it in Docker
 
@@ -86,7 +86,7 @@ DISTRIB_RELEASE=16.04
 
 The ingredient parsing library's first dependency was its machine learning engine: a C++ application called [CRF++](https://taku910.github.io/crfpp/).
 
-{{< img src="crfpp-installation.png" alt="CRF++ installation instructions" caption="CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" maxWidth="426px" hasBorder="True" >}}
+{{<img src="crfpp-installation.png" alt="CRF++ installation instructions" caption="CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" maxWidth="426px" hasBorder="True">}}
 
 The CRF++ build instructions looked simple enough, so I ran the commands within my Ubuntu container:
 
@@ -108,7 +108,7 @@ Whoops, `make` failed with an error about a missing Windows header file.
 
 Was that code still maintained?
 
-{{< img src="crfpp-commits.png" alt="CRF++ change history" caption="CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" maxWidth="800px" hasBorder="True" >}}
+{{<img src="crfpp-commits.png" alt="CRF++ change history" caption="CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" maxWidth="800px" hasBorder="True">}}
 
 Oh no! Another dead repository? I was already resurrecting one library. I didn't want to take on another.
 
@@ -118,7 +118,7 @@ The CRF++ error message about `winmain.h` was a bad sign, but if the _Times_ dev
 
 Maybe someone had already fixed it, but the maintainers never merged in the change. I checked the repo's outstanding pull requests. [One, in particular](https://github.com/taku910/crfpp/pull/15), seemed promising:
 
-{{< img src="winmain-pr.png" alt="CRF++ pull requests" caption="[Pending pull requests](https://github.com/taku910/crfpp/pulls) into CRF++" maxWidth="800px" >}}
+{{<img src="winmain-pr.png" alt="CRF++ pull requests" caption="[Pending pull requests](https://github.com/taku910/crfpp/pulls) into CRF++" maxWidth="800px">}}
 
 The pull request might as well have been titled, "Hey look, Michael! I solved the exact problem you're struggling with," so I applied [@humem](http://github.com/humem)'s patch:
 
@@ -280,7 +280,7 @@ It worked!
 
 Well, it mostly worked. The model failed to identify "Cup" as the unit of measurement in "1 Cup Mozzarella, shredded." The machine learning model apparently thought there was a product called, "Cup Mozzarella," and the recipe needed one of those.
 
-{{< img src="cup-mozzarella.jpg" alt="Picture of Cup Mozzarella product" caption="A product invented by the machine learning model" maxWidth="300px" >}}
+{{<img src="cup-mozzarella.jpg" alt="Picture of Cup Mozzarella product" caption="A product invented by the machine learning model" maxWidth="300px">}}
 
 {{<zestful-ad>}}
 
@@ -290,7 +290,7 @@ I didn't want to go through all of those steps every time I ran the library, so 
 
 First, I made [my own fork](https://github.com/mtlynch/crfpp) of the CRF++ repository that included @humem's fix. That provided a convenient copy of CRF++'s source that built cleanly on Linux. Then, I collected all of the shell commands I ran into a `Dockerfile`:
 
-{{< inline-file filename="Dockerfile" language="bash" >}}
+{{< inline-file filename="Dockerfile" language="bash">}}
 
 If I want an environment with this library in the future, all I need to do is run these two commands in the directory with the `Dockerfile`:
 

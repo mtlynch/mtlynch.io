@@ -35,7 +35,7 @@ If you prefer video tutorials, I recommend you download the files in the ["Creat
 
 This guide is aimed at **intermediate users**. If you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command line, it will be difficult for you to follow this guide.
 
-{{< img src="bad-time.png" alt="You're gonna have a bad time" maxWidth="597px" >}}
+{{<img src="bad-time.png" alt="You're gonna have a bad time" maxWidth="597px">}}
 
 I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any 64-bit operating system that supports Docker, which includes Windows, Mac OS X, Linux, and even some [network storage devices](/sia-via-docker).
 
@@ -58,7 +58,7 @@ The steps in this guide require about **20 minutes** of active time. However, th
 
 ### Sia
 
-{{< img src="sia-logo.png" alt="Sia logo" maxWidth="260px" align="left" >}}
+{{<img src="sia-logo.png" alt="Sia logo" maxWidth="260px" align="left">}}
 
 I use **Sia** in this solution to provide backend storage for the web app. I've written [a few posts](/tags/sia) about Sia previously, as it's one of my favorite new technologies. [Sia](https://sia.tech) is a decentralized file storage network. Users can connect to Sia and [rent out their unused disk space](/sia-via-docker/) to earn money. Prices on the Sia network are very low right now, which is how you can build a cloud storage solution and pay so little for disk space.
 
@@ -66,7 +66,7 @@ I use **Sia** in this solution to provide backend storage for the web app. I've 
 
 If you're familiar with Sia, you might be aware that Sia has its own graphical user interface, called [Sia-UI](https://github.com/NebulousLabs/Sia-UI). This UI is limited in functionality. Its main weakness is that it's a desktop app, so you can only access your files from a single computer. It doesn't support any media viewing, so if you want to view photos or video within your cloud storage, you have to copy the file to a folder on your local machine and open the copy.
 
-{{< img src="nextcloud-logo.png" alt="Nextcloud logo" maxWidth="260px" align="right" >}}
+{{<img src="nextcloud-logo.png" alt="Nextcloud logo" maxWidth="260px" align="right">}}
 
 To overcome Sia-UI's limitations, I use **Nextcloud** in this tutorial. [Nextcloud](https://www.nextcloud.com) is an open-source cloud storage web app. It offers a web interface similar to Dropbox or Google Drive. Nextcloud is designed for compatibility with many different storage providers, including Amazon S3, Dropbox, and OpenStack. In February 2017, the Sia team wrote [a custom plugin](https://github.com/NebulousLabs/Sia-Nextcloud) for Nextcloud, which I will use to connect Nextcloud with Sia.
 
@@ -74,7 +74,7 @@ If you're interested in testing out Nextcloud before you proceed further you can
 
 ### Docker
 
-{{< img src="docker-logo.png" alt="Docker logo" maxWidth="260px" align="right" >}}
+{{<img src="docker-logo.png" alt="Docker logo" maxWidth="260px" align="right">}}
 
 Nextcloud is tricky to install because it requires a database, a web server, and several third-party software libraries. Rather than go through the tedium of Nextcloud's installation process, I use **Docker** to handle the entire setup.
 
@@ -108,7 +108,7 @@ Below, I've included the full text of each file and a brief discussion of what e
 
 #### docker-compose.yml
 
-{{< inline-file filename="docker-compose.yml" language="yml" >}}
+{{< inline-file filename="docker-compose.yml" language="yml">}}
 
 This file defines the high-level architecture of the web app. It tells Docker how to load the Sia and Nextcloud containers and specifies the configuration options the containers need to communicate with each other.
 
@@ -122,7 +122,7 @@ Finally, `nextcloud-data:/var/www/html` allows Nextcloud to persist its configur
 
 #### Dockerfile.sia
 
-{{< inline-file filename="Dockerfile.sia" language="bash" >}}
+{{< inline-file filename="Dockerfile.sia" language="bash">}}
 
 This is the Dockerfile for Sia. It creates a Docker container starting from the barebones Debian Jessie build of Linux. It then downloads the latest release of Sia (which is 1.3.2 as of this writing), unzips it, and runs `siad`, the Sia server daemon. The `--modules gctwr` flag loads only the Sia modules you need for renting Sia storage. The `--sia-directory /mnt/sia-data` flag ensures that Sia uses the persistent volume specified in `docker-compose.yml`.
 
@@ -130,7 +130,7 @@ The confusing part of this Dockerfile is the presence of `socat` and the `--api-
 
 #### Dockerfile.nextcloud
 
-{{< inline-file filename="Dockerfile.nextcloud" language="bash" >}}
+{{< inline-file filename="Dockerfile.nextcloud" language="bash">}}
 
 This file is straightforward because Nextcloud publishes its own Dockerfile. The only thing I added was a line to listen on port 80.
 
@@ -343,13 +343,13 @@ It's time to install Nextcloud's Sia app. Unfortunately, it is not possible to i
 
 1. Open [http://localhost:8080](http://localhost:8080) in your browser to access the NextCloud web app.
 1. Enter the Nextcloud web app credentials you selected in the ["Install Nextcloud'](#install-nextcloud) step above. If you used the default credentials, this will be `admin`/`admin`.
-   {{< img src="nextcloud-login.png" alt="Nextcloud login" >}}
+   {{<img src="nextcloud-login.png" alt="Nextcloud login">}}
 1. At the Nextcloud home screen, click the gear icon in the upper right, then click "Apps".
-   {{< img src="nextcloud-apps.png" alt="Nextcloud apps button" >}}
+   {{<img src="nextcloud-apps.png" alt="Nextcloud apps button">}}
 1. Click the "Tools" category in the left-hand menu.
-   {{< img src="nextcloud-tools.png" alt="Nextcloud apps button" >}}
+   {{<img src="nextcloud-tools.png" alt="Nextcloud apps button">}}
 1. Scroll down to the "Sia storage report" app and click the "Enable" button below it.
-   {{< img src="nextcloud-enable-sia.png" alt="Nextcloud apps button" >}}
+   {{<img src="nextcloud-enable-sia.png" alt="Nextcloud apps button">}}
 
 ### Configure Sia support
 
@@ -365,7 +365,7 @@ Your Sia Nextcloud integration is complete!
 
 If you open the Files tab of Nextcloud in your browser, you will see a Sia folder. Nextcloud will automatically back up all files in this folder to the Sia network.
 
-{{< img src="nextcloud-sia-folder.png" alt="Nextcloud Sia folder" >}}
+{{<img src="nextcloud-sia-folder.png" alt="Nextcloud Sia folder">}}
 
 ## Using Sia with Nextcloud
 

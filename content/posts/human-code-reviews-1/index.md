@@ -20,7 +20,7 @@ Lately, I've been reading articles about best practices for code reviews. I noti
 
 So I had a revelation: if this works for code, why not romance? With that, I'm announcing my new ebook to help developers with their love lives:
 
-{{< img src="book-cover.png" alt="ebook cover" maxWidth="400px" >}}
+{{<img src="book-cover.png" alt="ebook cover" maxWidth="400px">}}
 
 My revolutionary ebook teaches you **proven techniques** for maximizing the number of deficiencies you find in your partner. The ebook does **not** cover:
 
@@ -43,7 +43,7 @@ In this article, I discuss techniques that treat the code review as not only a t
 
 The term "code review" can refer to a range of activities, from simply reading some code over your teammate's shoulder to a 20-person meeting where you dissect code line by line. I use the term to refer to a process that's formal and written, but not so heavyweight as a series of in-person code inspection meetings.
 
-{{< img src="flowchart.png" alt="Code review flow" maxWidth="600px" >}}
+{{<img src="flowchart.png" alt="Code review flow" maxWidth="600px">}}
 
 The participants in a code review are the **author**, who writes the code and sends it for review, and the **reviewer**, who reads the code and decides when it's ready to be merged in to the team's codebase. A review can have multiple reviewers, but I assume for simplicity that you are the sole reviewer.
 
@@ -127,7 +127,7 @@ Work with your team to build these automated checks directly into the code revie
 
 Arguments about style are a waste of time in reviews. Consistent style is certainly important, but a code review is not the time to bicker about where to put the curly braces. The best way to excise style debates from your reviews is by keeping a style guide.
 
-{{< img src="style-argument.png" alt="A typical style argument" maxWidth="800px" >}}
+{{<img src="style-argument.png" alt="A typical style argument" maxWidth="800px">}}
 
 A good style guide defines not only superficial elements like naming conventions or whitespace rules but also how to use the features of the given programming language. JavaScript and Perl, for example, are packed with functionality — they offer many ways to implement the same logic. A style guide defines The One True Way of doing things so that you don't end up with half your team using one set of language features while the other half uses a totally different set of features.
 
@@ -153,7 +153,7 @@ By combining options 1 and 2, you can adopt an existing style guide as your base
 
 Treat code reviews as a high priority. When you're actually reading the code and giving feedback, take your time, but _start_ your review immediately — ideally, within minutes.
 
-{{< img src="relay.png" alt="A code review relay race" maxWidth="600px" >}}
+{{<img src="relay.png" alt="A code review relay race" maxWidth="600px">}}
 
 If a teammate sends you a changelist, it likely means that they are blocked on other work until your review is complete. In theory, source control systems allow the author to branch, continue working, and then forward-merge changes from the review into their new branch. In reality, there are about four developers total who can do that efficiently. It takes everyone else so long to untangle three-way diffs that it can cancel out any progress made waiting for the review to come back.
 
@@ -177,7 +177,7 @@ In an ideal world, the code author would be thankful for every review they recei
 
 A great way to make an author feel good about the review process is to find opportunities to give them gifts during the review. And what's the gift all developers love to receive? Code examples, of course.
 
-{{< img src="code-gift.png" alt="Receiving the gift of code" maxWidth="600px" >}}
+{{<img src="code-gift.png" alt="Receiving the gift of code" maxWidth="600px">}}
 
 If you lighten the author's load by writing out some of the changes you're suggesting, you demonstrate that you are generous with your time as a reviewer.
 
@@ -247,7 +247,7 @@ becomes:
 
 "We" reinforces the team's collective responsibility for the code. The author may move on to a different company and so might you, but the team who owns this code will remain in one form or another. It can sound silly to say "we" when it's clearly something you expect the author to do themselves, but silly is better than accusatory.
 
-{{< img src="move-couch.png" alt="Moving couch cartoon" maxWidth="600px" >}}
+{{<img src="move-couch.png" alt="Moving couch cartoon" maxWidth="600px">}}
 
 **_Option 2: Remove the subject from the sentence_**
 

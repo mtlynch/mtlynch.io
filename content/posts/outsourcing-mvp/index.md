@@ -33,11 +33,11 @@ You may be surprised to learn that this plan did _not_ work. I'm not writing thi
 
 I follow the [keto diet](https://www.dietdoctor.com/low-carb/keto) and like trying new recipes. There are plenty of good ones online, but they're spread across dozens of blogs, each with a different structure. These blogs tend to be slow and hard to navigate because keto bloggers rarely have experience with web development.
 
-{{< img src="keto-sites.png" alt="Existing keto sites" maxWidth="700px" >}}
+{{<img src="keto-sites.png" alt="Existing keto sites" maxWidth="700px">}}
 
 My idea was KetoHub, a keto recipe directory. It would aggregate recipes from across the web into one easy-to-use website.
 
-{{< img src="wireframe-v1.jpg" alt="Mockup of KetoHub v1" caption="Initial sketch of KetoHub" maxWidth="600px" >}}
+{{<img src="wireframe-v1.jpg" alt="Mockup of KetoHub v1" caption="Initial sketch of KetoHub" maxWidth="600px">}}
 
 ## Finding a freelancer
 
@@ -49,7 +49,7 @@ I reached out to her, and she was immediately on board. She knew from our past w
 
 I wrote a [design document](ketohub-v1-design-doc.pdf) that laid out the components of the website at a high level. Ferngully would handle the backend scraping tasks, while I would build a simple web frontend to display the recipes.
 
-{{< img src="ketohub-architecture.png" alt="KetoHub architecture diagram" caption="KetoHub architecture diagram" maxWidth="800px" >}}
+{{<img src="ketohub-architecture.png" alt="KetoHub architecture diagram" caption="KetoHub architecture diagram" maxWidth="800px">}}
 
 ## Why aren't we live?
 
@@ -61,7 +61,7 @@ At the time, I was in a busy period with my day job. It could be months before I
 
 After I finished the design document, I thought about how anticlimactic it would be if Ferngully delivered the scraping code only to have it sit in a drawer for months. I spent a few evenings putting together a basic frontend. It displayed some sample recipes I scraped by hand. We'd be ready to add in the full recipe data and launch as soon as Ferngully completed her work.
 
-{{< img src="ketohub-mvp.png" alt="Basic KetoHub site with dummy data" caption="Screenshot of KetoHub&rsquo;s MVP, populated with data scraped by hand" maxWidth="700px" >}}
+{{<img src="ketohub-mvp.png" alt="Basic KetoHub site with dummy data" caption="Screenshot of KetoHub&rsquo;s MVP, populated with data scraped by hand" maxWidth="700px">}}
 
 That's when I started getting anxious.
 
@@ -109,7 +109,7 @@ We talked it over and decided it no longer made sense for Ferngully to work on K
 
 The Saturday night after I wrapped up with Ferngully, I continued where she left off and resolved to keep going until the MVP was live. By 2 AM, the first version was complete. I was embarrassed by how plain it looked, but it was done.
 
-{{< img src="ketohub-v1-done.png" alt="Completed first version of KetoHub" caption="KetoHub, when the MVP was finally complete" maxWidth="800px" >}}
+{{<img src="ketohub-v1-done.png" alt="Completed first version of KetoHub" caption="KetoHub, when the MVP was finally complete" maxWidth="800px">}}
 
 I quickly realized that I should have done the project solo from the start.
 

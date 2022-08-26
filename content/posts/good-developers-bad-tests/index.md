@@ -18,7 +18,7 @@ Congratulations! You've finally written so many lines of code that you can affor
 
 Months later, you arrive at the grand unveiling. Your new home is an imposing five-story behemoth of steel, concrete, and reflective glass. As you pass through the revolving doors, you track sand onto the opulent marble floor. Inside, you find a reception desk backed by an elevator bank. Upstairs, your master bedroom and three guest rooms are just four adjoining office cubicles.
 
-{{< img src="cover.jpg" alt="Architect presenting skyscraper on the beach" maxWidth="800px" >}}
+{{<img src="cover.jpg" alt="Architect presenting skyscraper on the beach" maxWidth="800px">}}
 
 Peter Keating, expert architect, can't understand why you're disappointed. "I followed **all** the best practices," he tells you, defensively. The walls are three feet thick because structural integrity is vital. Therefore, your home is _better_ than the breezy, light-filled homes neighboring it. You may not have large, oceanside windows, but Keating tells you that such windows are not best practice &mdash; they reduce energy efficiency and distract office workers.
 
@@ -36,7 +36,7 @@ Test code is a different beast. A good unit test is often small enough that a de
 **Good production code is well-factored; good test code is _obvious_.**
 {{< /notice >}}
 
-{{< img src="dane-deaner-272363-unsplash-cropped.jpg" alt="Image of a ruler" maxWidth="325px" align="right" linkUrl="https://unsplash.com/photos/JNpmCYZID68" >}}
+{{<img src="dane-deaner-272363-unsplash-cropped.jpg" alt="Image of a ruler" maxWidth="325px" align="right" linkUrl="https://unsplash.com/photos/JNpmCYZID68">}}
 
 Think of a ruler. It has existed in the same form for hundreds of years because it's uncomplicated and easy to interpret. Suppose I invented a new ruler that measured in "abstract ruler units." To convert from "ruler units" to inches or centimeters, you'd use a separate conversion chart.
 

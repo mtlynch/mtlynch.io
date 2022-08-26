@@ -76,7 +76,7 @@ I'm still excited for the power over Ethernet (PoE) version, which is due to lau
 
 Back in July of 2020, I commissioned TinyPilot's first logo. I found an illustrator on Upwork and paid her $600 to create the mascot and text.
 
-{{<img src="old-tinypilot-logo.png" alt="TinyPilot's new logo" maxWidth="500px" caption="TinyPilot's original logo" >}}
+{{<img src="old-tinypilot-logo.png" alt="TinyPilot's new logo" maxWidth="500px" caption="TinyPilot's original logo">}}
 
 After a year, it felt like TinyPilot had outgrown the logo. Now that we were targeting business users in addition to hobbyists, the chipmunk mascot came across as too cutesy and not professional enough.
 

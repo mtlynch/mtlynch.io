@@ -34,7 +34,7 @@ I discovered this by accident while adding paid plans to my [portfolio rebalance
 
 After successfully implementing my app's payment flow with Stripe, I noticed that every page navigation generated a new HTTP POST request to a Stripe URL:
 
-{{< video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app" >}}
+{{< video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app">}}
 
 This was strange because none of the pages I visited contained any calls to Stripe's library. In fact, my app doesn't collect payment information from users until they create an account, but Stripe was making HTTP requests when I landed on my app's homepage as a brand new user with no cookies or stored credentials.
 
@@ -127,11 +127,11 @@ https://m.stripe.com/4
 
 Instead of finding a bug in my code, I discovered dozens of posts from other developers surprised to see this behavior in their apps. The reports go [all the way back to 2017](https://stackoverflow.com/q/45718026/90388).
 
-{{< img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" maxWidth="800px" hasBorder="true" caption="Developers have been posting on StackOverflow and Github about Stripe's tracking behavior for years" >}}
+{{<img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" maxWidth="800px" hasBorder="true" caption="Developers have been posting on StackOverflow and Github about Stripe's tracking behavior for years">}}
 
 In one of the issue threads on Github, a Stripe employee [suggested that this behavior was unintentional](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443) and Stripe would look for a fix:
 
-{{< img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" maxWidth="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), a Stripe employee suggests that Stripe.js should only send data when the app calls the library and only on pages where the user submits payment information." >}}
+{{<img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" maxWidth="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), a Stripe employee suggests that Stripe.js should only send data when the app calls the library and only on pages where the user submits payment information.">}}
 
 That was 7 months ago, and there has been no follow up from Stripe on that thread or anywhere else I could find.
 
@@ -230,7 +230,7 @@ beforeRouteLeave(to) {
 
 ### (New) Disable user tracking
 
-{{< notice type="info" >}}
+{{< notice type="info">}}
 **Added**: April 30, 2020
 {{</ notice >}}
 
@@ -251,7 +251,7 @@ The previous two steps are sufficient to prevent Stripe's tracking. For addition
 
 Here's what it looks like for my app:
 
-{{< img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" maxWidth="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page." >}}
+{{<img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" maxWidth="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page.">}}
 
 It's a bit tricky to implement per-page CSP in a single-page app because the browser, by default, won't query the server for new policies when the user navigates to a new page. To force a policy refresh, I use Vue's [`beforeRouteEnter`](https://router.vuejs.org/guide/advanced/navigation-guards.html#in-component-guards) guard on my payment page to force a new HTTP request when the page loads.
 
@@ -299,7 +299,7 @@ There are several actions Stripe can take to rectify this situation:
 - Grant client applications control over what data to share via opt-in.
   - Stripe clients bear the cost of chargebacks against their application, so they should decide how much information to share with Stripe to reduce those chargebacks.
 
-{{< notice type="info" >}}
+{{< notice type="info">}}
 **Update: April 21, 2020 - 2:47pm ET**
 
 Stripe co-founder Patrick Collison [responded to this article](https://news.ycombinator.com/item?id=22937303) reasserting Stripe's commitment to use the data collected exclusively for fraud detection. He added that Stripe will soon clarify language in its terms of service around their data collection practices.
@@ -307,7 +307,7 @@ Stripe co-founder Patrick Collison [responded to this article](https://news.ycom
 **Correction**: The article originally said, "Websites that use Stripe to collect payment **must** include Stripe's JavaScript library," but Collison points out that this is inaccurate, as it is possible for websites to integrate with Stripe without using the Stripe JS library.
 {{</ notice >}}
 
-{{< notice type="info" >}}
+{{< notice type="info">}}
 **Update: April 30, 2020**
 
 Stripe has [revised their privacy policy and developer documentation](https://stripe.com/blog/advanced-fraud-detection-updates) and added functionality to their JavaScript library that empowers integrators to limit tracking behavior.

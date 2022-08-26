@@ -88,7 +88,7 @@ For example, I realized that Zestful was incorrectly parsing the ingredient "gro
 
 It seemed like a quick fix, but I probably spent an hour hunting down all the bad "ground cinnamon" examples. I finally finished, proud to have eliminated an error case, but I didn't really improve anything meaningful. Only 0.3% of Zestful's requests include "ground cinnamon." What's more, the previous behavior of returning "cinnamon" was adequate because everyone assumes "cinnamon" means "ground cinnamon" anyway.
 
-{{< img src="ground-cinnamon.jpg" alt="Screenshot of parsing ground cinnamon on Zestful" caption="Boy, did it take way too long to make this work" maxWidth="796px" hasBorder="True" >}}
+{{<img src="ground-cinnamon.jpg" alt="Screenshot of parsing ground cinnamon on Zestful" caption="Boy, did it take way too long to make this work" maxWidth="796px" hasBorder="True">}}
 
 Fixing these things is satisfying in the moment because it's fun to make my parser more accurate. But it's too easy to disappear down the rabbit hole, chasing lots of minor error cases, only to wake up days later realizing that overall accuracy has barely changed. The parser will never be 100% accurate, and I could spend an eternity pursuing ever-decreasing gains in accuracy.
 
@@ -111,7 +111,7 @@ So, I signed up for Google AdSense and have had a positive experience so far. Th
   - The review dashboard helps me ensure that users never see ads that are spammy or masquerade as features of my site.
   - e.g., ads that [insert a fake "Print" button](/retrospectives/2019/07/isitketo-ads.png)
 
-{{< img src="adsense-ads.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" caption="Is It Keto with ads from Google AdSense and Amazon Affiliate Program" maxWidth="600px" hasBorder="True" >}}
+{{<img src="adsense-ads.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" caption="Is It Keto with ads from Google AdSense and Amazon Affiliate Program" maxWidth="600px" hasBorder="True">}}
 
 So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured in terms of unique visitors, so in those terms, I'm earning about ~$5 per 1,000 sessions. It's slightly less than the ~$8 I made from the previous ad partner, but I'm happy with the current tradeoff of ad intrusiveness vs. revenue generation.
 

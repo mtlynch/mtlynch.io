@@ -20,7 +20,7 @@ I started this blog in May of last year. I don't mean to brag, but by last April
 
 The size of my audience changed a bit in May 2017. The sharp-eyed reader may be able to spot the subtle shift in my traffic graph:
 
-{{< img src="full-traffic-graph.png" alt="Blog traffic graphs" caption="Number of unique readers visiting [mtlynch.io](/) per week" >}}
+{{<img src="full-traffic-graph.png" alt="Blog traffic graphs" caption="Number of unique readers visiting [mtlynch.io](/) per week">}}
 
 As you notice from the chart above, my numbers went from "too insignificant to appear in a graph" for most of the first year of the blog's existence to over 9,000 readers per week starting last May. From that point on, when I published a new post, the blog received up to 40,000 visitors per week.
 
@@ -34,7 +34,7 @@ If I compare by month, the blog grew by more than 20x month over month, and by m
 
 ## What changed?
 
-{{< img src="editing-job-post.png" alt="Job posting for editing position" maxWidth="398px" align="right" >}}
+{{<img src="editing-job-post.png" alt="Job posting for editing position" maxWidth="398px" align="right">}}
 
 Just before I went to bed on May 13, 2017, I posted a job for a blog editor on Upwork, a site I use regularly for hiring freelancers. Not a permanent position, just a one-time gig to read through my already posted articles, identify weak patterns in my writing, and suggest improvements.
 
@@ -42,7 +42,7 @@ When I woke up the next morning, I had already received applications from 10 dif
 
 Some of the matches were... not so strong. The lowest bidder, at $8/hr, told me she was, "well-equipped with knowledge how to teach writing." Another freelancer mentioned in her cover letter that, "editing and writing are [her] forte's [sic]."
 
-{{< img src="samantha-profile.png" alt="Job posting for editing position" maxWidth="260px" align="left" >}}
+{{<img src="samantha-profile.png" alt="Job posting for editing position" maxWidth="260px" align="left">}}
 
 The strongest applicant was an editor named [Samantha Mason](https://www.samanthamasonfreelancer.com). At $55/hr, she was almost twice as expensive as the next highest bidder. But her response was the only one that showed that she had actually read any of my writing. In her cover letter, she pointed out that I had a habit of diluting my sentences with helper verbs. "As you **can see** in the graph below," instead of simply, "As you **see** in the graph below."
 
@@ -62,7 +62,7 @@ I felt that my writing was pretty good but definitely had room for improvement. 
 
 Beyond my blog, investing in my writing would pay dividends in many aspects of my life. Writing is a highly transferable skill, much like public speaking, time management, or knife juggling. Techniques I learned to better my blog writing would likely carry over into design documents I write at work or even emails I send to friends.
 
-{{< img src="colbert-eyebrow-raise.jpg" alt="Colbert with eyebrow raised" caption="\"Your *editor*, you say?\"" maxWidth="230px" align="right" >}}
+{{<img src="colbert-eyebrow-raise.jpg" alt="Colbert with eyebrow raised" caption="&ldquo;Your _editor_, you say?&rdquo;" maxWidth="230px" align="right">}}
 
 My other reason for hiring an editor was the most important: to give my friends, family, and co-workers a misleadingly grandiose perception of my blog. Before, when I told someone that I wrote a new blog post about [using Selenium to test Ansible roles](/testing-ansible-selenium/), they nodded politely and changed the subject. But when I started saying things like, "I'm rewriting my new post because my editor thinks that the introduction is too weak," people became intrigued. "Your _editor_?"
 
@@ -92,11 +92,11 @@ I wrote the article on a Thursday night in a non-stop, four-hour writing session
 
 The next morning, I published the article, ["How I Stole Your Siacoin,"](/stole-siacoins/) and posted the link to [reddit](https://reddit.com) and [Hacker News](https://news.ycombinator.com/), two popular link-sharing sites. By the end of the day, it was the most upvoted story of all-time on two of reddit's subforums, [/r/siacoin](https://www.reddit.com/r/Siacoin/top/) and [/r/cryptocurrency](https://www.reddit.com/r/CryptoCurrency/top/) (though a few days later, I was shamefully bumped from the #1 spot on /r/CryptoCurrency by [a picture of a sign](https://www.reddit.com/r/CryptoCurrency/comments/6i5ibl/its_happening/)). It had also gained enough traction on Hacker News to make it to their front page, an enviable accomplishment for tech bloggers.
 
-{{< img src="stole-siacoin-stats.png" alt="Visitor stats for How I Stole Your Siacoin post" caption="Blog visitor statistics on the day that [\"How I Stole Your Siacoin\"](/stole-siacoins/) was published." >}}
+{{<img src="stole-siacoin-stats.png" alt="Visitor stats for How I Stole Your Siacoin post" caption="Blog visitor statistics on the day that [\"How I Stole Your Siacoin\"](/stole-siacoins/) was published.">}}
 
 I also noticed something interesting about the comments on the article. Many of them specifically praised the _style_ of my writing:
 
-{{< img src="reddit-comments.png" alt="Reddit comments" caption="Positive comments on the writing style of “How I Stole Your Siacoin.” Creating this collage does not count as narcissism because I'm doing it for a blog post." >}}
+{{<img src="reddit-comments.png" alt="Reddit comments" caption="Positive comments on the writing style of “How I Stole Your Siacoin.” Creating this collage does not count as narcissism because I'm doing it for a blog post.">}}
 
 I browse reddit frequently, and I don't recall seeing many users compliment submissions on their writing — though it should be noted that I don't recognize praise unless it's directed at me. The feedback seemed like such clear validation of my decision to hire an editor that I almost had to wonder if Samantha was surreptitiously posting these comments herself. _[**Editor's note**: There is no evidence to support this allegation.]_
 

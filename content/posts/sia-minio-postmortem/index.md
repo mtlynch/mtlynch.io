@@ -18,4 +18,4 @@ I saw a good opportunity for a postmortem last week. Work officially completed o
 
 This integration is a Big Deal, and I'm planning to write a lot more about once the software stablizes following Sia's December release. In the meantime, I saw a valuable opportunity to lead a postmortem on the integration process. I approached the Nebulous Labs team, and they liked the idea. I contacted the author of the Sia-Minio integration code, who was supportive as well and agreed to contribute to the report with me. The Nebulous Labs and Minio teams reviewed it and approved it for publication, so you can find our full report below:
 
-{{< img src="minio-postmortem.png" alt="Minio postmortem" maxWidth="600px" linkUrl="https://docs.google.com/document/d/1Bupw6vQQCfiv6r28BARsa4kjDWOhowWvDzAQmwLWrY8/edit?usp=sharing" >}}
+{{<img src="minio-postmortem.png" alt="Minio postmortem" maxWidth="600px" linkUrl="https://docs.google.com/document/d/1Bupw6vQQCfiv6r28BARsa4kjDWOhowWvDzAQmwLWrY8/edit?usp=sharing">}}

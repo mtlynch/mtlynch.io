@@ -26,7 +26,7 @@ In this guide, I'll show you how to set up a Sia server on a NAS device using [D
 
 Many newcomers to Sia ask, "Will I make a lot of money hosting on Sia?" The honest answer is that **hosting storage on Sia is NOT lucrative**.... yet.
 
-{{< img src="siahub-2percent.png" alt="SiaHub screenshot" maxWidth="380px" align="right" >}}
+{{<img src="siahub-2percent.png" alt="SiaHub screenshot" maxWidth="380px" align="right">}}
 
 The storage rental market has not yet reached critical mass. SiaHub, my favorite Sia host explorer, shows that the total storage capacity of Sia's network (as of 2017-05-25) is a whopping 1.1 petabytes. Only 2% of that capacity has been rented. With such a surplus of space, hosts can't sell their storage space unless they price it at almost zero.
 
@@ -46,7 +46,7 @@ I personally host just to experiment with something new. I find it fun to tweak 
 
 This guide uses the latest version of each software component at the time of writing:
 
-{{< img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" maxWidth="300px" >}}
+{{<img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" maxWidth="300px">}}
 
 - DiskStation Manager (DSM) 6.1.2-15132
 - Sia v.1.3.4
@@ -64,7 +64,7 @@ First, install Docker.
 
 Docker is one of the few Synology-published, official packages available for DSM. Find it in Package Center by searching for `docker` and clicking "Install."
 
-{{< img src="package-docker.png" alt="Install Docker package" >}}
+{{<img src="package-docker.png" alt="Install Docker package">}}
 
 ### Create Sia directory
 
@@ -72,7 +72,7 @@ Next, create a dedicated Shared Folder for Sia. This is the folder where Sia wil
 
 From File Station, create a new Shared Folder and name it "sia":
 
-{{< img src="new-shared-folder.png" alt="Create new shared folder" maxWidth="547px" >}}
+{{<img src="new-shared-folder.png" alt="Create new shared folder" maxWidth="547px">}}
 
 ### Enable SSH access to DiskStation
 
@@ -80,7 +80,7 @@ There are no pre-packaged Docker images for Sia, so you'll create a `Dockerfile`
 
 To enable this functionality, open Control Panel > Terminal & SNMP and check the box next to "Enable SSH service."
 
-{{< img src="enable-ssh.png" alt="Install Docker package" >}}
+{{<img src="enable-ssh.png" alt="Install Docker package">}}
 
 ## Creating the Docker container
 
@@ -122,11 +122,11 @@ The previous commands do the following:
 
 From DSM, open the Docker app and view the "Container" panel. You should see something similar to the following:
 
-{{< img src="sia-running.png" alt="Sia container running" >}}
+{{<img src="sia-running.png" alt="Sia container running">}}
 
 If you open the "sia" Shared Folder we created earlier, you'll see that `siad` has created several folders:
 
-{{< img src="sia-folder-populated.png" alt="Sia generated folders" >}}
+{{<img src="sia-folder-populated.png" alt="Sia generated folders">}}
 
 ## Configuring Sia
 
@@ -153,7 +153,7 @@ Target: [0 0 0 0 12 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 
 
 To create storage space to sell to other Sia users, create a dedicated subdirectory called `host-storage` in your "sia" shared folder:
 
-{{< img src="create-storage-folder.png" alt="Sia storage folder" >}}
+{{<img src="create-storage-folder.png" alt="Sia storage folder">}}
 
 Then, use `siac` to add that folder as a new Sia host storage folder:
 
@@ -169,7 +169,7 @@ Sia needs to communicate with remote peers over ports `9981` and `9982`. When us
 
 _Note: Replace `10.0.0.101` with the IP address of your Synology NAS._
 
-{{< img src="firewall.png" alt="Firewall settings" >}}
+{{<img src="firewall.png" alt="Firewall settings">}}
 
 You should **not** expose port `9980` because that is Sia's port for API communications. Exposing it to the public Internet would leave your Sia host vulnerable to compromise.
 

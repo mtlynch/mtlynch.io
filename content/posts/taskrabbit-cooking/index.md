@@ -24,7 +24,7 @@ I thought this would be a good opportunity to experiment with outsourcing &mdash
 
 [TaskRabbit](https://www.taskrabbit.com) is a service that allows you to hire people for small tasks. They specialize in handyman type tasks, like home repair or furniture assembly, but the range of possible tasks is pretty broad. You can hire someone to stand in line for you, run your errands, or [attend birthday parties on your behalf](http://abcnews.go.com/Lifestyle/woman-hires-impersonator-attend-friends-birthday-party/story?id=29277677).
 
-{{< img src="taskrabbit-homepage.png" alt="TaskRabbit homepage" >}}
+{{<img src="taskrabbit-homepage.png" alt="TaskRabbit homepage">}}
 
 I've used TaskRabbit to find apartment cleaners and a handyman to wall-mount my TV. These were generally positive experiences, so TaskRabbit seemed like a good fit for outsourcing my home cooking.
 
@@ -66,9 +66,9 @@ The process went very smoothly. She cooked for a little over two hours. I took a
 
 When she was done, she told me I could take the pork tenderloin out of the oven in ten minutes, the pepper and broccoli were finished on the stove, and that the neapolitan fat bombs were in the freezer. She had wiped down my countertops and cleaned my dishes. When the tenderloin was ready, I took it out and was delighted. It looked great and tasted fantastic.
 
-{{< gallery caption="Bacon Wrapped Stuffed Pork Tenderloin: finished product." >}}
-{{< img src="IMG_20161115_212108.jpg" alt="Finished pork tenderloin and side" >}}
-{{< img src="IMG_20161115_212144.jpg" alt="Finished pork tenderloin on baking sheet" >}}
+{{< gallery caption="Bacon Wrapped Stuffed Pork Tenderloin: finished product.">}}
+{{<img src="IMG_20161115_212108.jpg" alt="Finished pork tenderloin and side">}}
+{{<img src="IMG_20161115_212144.jpg" alt="Finished pork tenderloin on baking sheet">}}
 {{</ gallery >}}
 
 The experience went pretty much exactly as I had wanted it to. I've hired Leah to cook three more times since then, and I've been pleased with the results every time.
@@ -129,7 +129,7 @@ The tables below show my full costs for each cooking session. I bought all the i
 | Labor (2 hours)                                                                                   | $55.90      |
 | **Total**                                                                                         | **$109.89** |
 
-{{< img src="cooking-costs.png" alt="ProsperBot screenshot" maxWidth="750px" hasBorder="True" >}}
+{{<img src="cooking-costs.png" alt="ProsperBot screenshot" maxWidth="750px" hasBorder="True">}}
 
 ### How does this compare to restaurant delivery?
 

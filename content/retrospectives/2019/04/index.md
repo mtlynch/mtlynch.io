@@ -41,7 +41,7 @@ In January and February, I set more aggressive goals for publishing new food art
 
 ### Amazon Affiliate Stats
 
-{{< img src="amazon-earnings-2019-03.jpg" alt="Amazon Earnings - March 2019" caption="Amazon affiliate earnings - March 2019" maxWidth="800px" >}}
+{{<img src="amazon-earnings-2019-03.jpg" alt="Amazon Earnings - March 2019" caption="Amazon affiliate earnings - March 2019" maxWidth="800px">}}
 
 | Metric         | February 2019 | March 2019 | Change                                     |
 | -------------- | ------------- | ---------- | ------------------------------------------ |
@@ -55,7 +55,7 @@ There was a precipitous drop in affiliate link clicks relative to February, but 
 
 ### Visitor Stats
 
-{{< img src="ga-2019-03-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - April 2018 through March 2019" maxWidth="800px" >}}
+{{<img src="ga-2019-03-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - April 2018 through March 2019" maxWidth="800px">}}
 
 | Metric                        | February 2019 | March 2019 | Change                                   |
 | ----------------------------- | ------------- | ---------- | ---------------------------------------- |
@@ -71,7 +71,7 @@ So much of Is It Keto's success depends on how Google ranks me for a query like 
 
 ### SEO Stats
 
-{{< img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - March 2019" maxWidth="800px" >}}
+{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - March 2019" maxWidth="800px">}}
 
 | Metric                            | February 2019 | March 2019 | Change                                    |
 | --------------------------------- | ------------- | ---------- | ----------------------------------------- |
@@ -108,7 +108,7 @@ This presented a difficult challenge. Every page on Is It Keto is just an explan
 
 I tried to think of what unique advantages I had over other keto sites. My one secret weapon was [KetoHub](https://ketohub.io), a keto recipe search tool I built in 2017. It scrapes keto recipes from the web into structured data:
 
-{{< img src="ketohub-data.jpg" caption="Structured keto recipe data from KetoHub" maxWidth="800px" >}}
+{{<img src="ketohub-data.jpg" caption="Structured keto recipe data from KetoHub" maxWidth="800px">}}
 
 ## My failed attempt at link building
 
@@ -116,7 +116,7 @@ My idea was to create compelling visualizations from my KeotHub data. And then o
 
 To start out, I made a bubble cloud of how frequently different ingredients appear in keto recipes:
 
-{{< img src="ing-freq.jpg" alt="Bubble cloud of ingredient frequency in keto recipes" maxWidth="750px" >}}
+{{<img src="ing-freq.jpg" alt="Bubble cloud of ingredient frequency in keto recipes" maxWidth="750px">}}
 
 This was harder than I anticipated. I used [D3.js](https://d3js.org/), which is a powerful visualization library, but it's also incredibly complex. I spent a week cobbling together bits of various tutorials in order to get that bubble cloud working.
 
@@ -124,7 +124,7 @@ I reached out to a few keto sites that I had spoken to in the past through KetoH
 
 My subsequent blog post was about artificial sweeteners, as they're a contentious topic in the keto community. I showed how different sweeteners rise and fall in popularity over time:
 
-{{< img src="sweetener-usage.jpg" alt="Stacked area chart of artificial sweetener usage over time" maxWidth="675px" >}}
+{{<img src="sweetener-usage.jpg" alt="Stacked area chart of artificial sweetener usage over time" maxWidth="675px">}}
 
 This time, I used [NVD3](https://github.com/nvd3/nvd3), a more user-friendly interface to D3 that [my friend](https://oky.moe/) suggested. It was still a clunky process, but substantially easier than raw D3. I also decided to stick with more traditional visualizations like pie charts and line graphs. This sped up the process because staying within common scenarios meant there were plenty of examples.
 

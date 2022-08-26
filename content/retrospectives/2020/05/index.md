@@ -58,7 +58,7 @@ Unfortunately, it ended the month with a revenue of $0 and no signs of increasin
 
 ### Is It Keto
 
-{{< img src="isitketo-ga.png" alt="Is It Keto traffic in Google Analytics" maxWidth="800px" hasBorder="true" >}}
+{{<img src="isitketo-ga.png" alt="Is It Keto traffic in Google Analytics" maxWidth="800px" hasBorder="true">}}
 
 | Metric                    | March 2020  | April 2020  | Change                                       |
 | ------------------------- | ----------- | ----------- | -------------------------------------------- |
@@ -85,7 +85,7 @@ I knew $1.99 was far too low to be viable, but I recognized that $20/month didn'
 
 I also tried placing Google Ads, but I've gotten 99 paid clicks (totaling $240), and nearly 100% of them bounced immediately:
 
-{{< img src="rebalancer-bounce-rate.png" alt="High bounce rate for paid traffic in Google Analytics" maxWidth="800px" hasBorder="true" caption="Nearly 100% of users who visit after clicking a paid ad leave the site immediately." >}}
+{{<img src="rebalancer-bounce-rate.png" alt="High bounce rate for paid traffic in Google Analytics" maxWidth="800px" hasBorder="true" caption="Nearly 100% of users who visit after clicking a paid ad leave the site immediately.">}}
 
 I haven't given up on Portfolio Rebalancer entirely, but I've placed it on the backburner to free up time for Is It Keto. It was meant to be a two- or three-week prototype, but creating the payment flow took longer than I expected.
 
@@ -93,7 +93,7 @@ I haven't given up on Portfolio Rebalancer entirely, but I've placed it on the b
 
 [Is It Keto](https://isitketo.org) is a site I created in 2018 that answers simple questions around the keto diet. The site and I have an on-again, off-again relationship. My pattern has been to work on the site every few months, get bored, then return again when another project doesn't work out, so here we are again.
 
-{{< img src="isitketo-landing.png" alt="Is It Keto homepage" maxWidth="600px" hasBorder="true" caption="[Is It Keto](https://isitketo.org) is my content site about the keto diet." >}}
+{{<img src="isitketo-landing.png" alt="Is It Keto homepage" maxWidth="600px" hasBorder="true" caption="[Is It Keto](https://isitketo.org) is my content site about the keto diet.">}}
 
 One of the most common questions people ask me about Is It Keto is, "Why don't you simply pull in a nutrition database and auto-generate pages for every possible food?" I've always feared the wrath of Google lest I run afoul of their [rules against auto-generated content](https://support.google.com/webmasters/answer/2721306?hl=en). Google drives almost all of Is It Keto's traffic, so if they brought the hammer down on me, the business would vanish overnight.
 
@@ -107,9 +107,9 @@ My discovery about auto-generated content got me excited about Is It Keto again.
 
 Page generation would be a gamechanger because it substantially lowers my costs. The cost would be _so_ low that I could produce articles in the "long tail" of Google queries that nobody else would bother creating. For example, if you Google "are pringles keto?" none of the results directly address the question.
 
-{{< gallery caption="Nobody has written articles about whether pringles are keto because the search volume is too low." >}}
-{{< img src="pringles-search.png" alt="Google search result for 'are pringles keto?'" maxWidth="375px" hasBorder="true" >}}
-{{< img src="pringles-planner.png" alt="Google keywords planner results for pringles and keto related searches" maxWidth="450px" hasBorder="true" >}}
+{{< gallery caption="Nobody has written articles about whether pringles are keto because the search volume is too low.">}}
+{{<img src="pringles-search.png" alt="Google search result for 'are pringles keto?'" maxWidth="375px" hasBorder="true">}}
+{{<img src="pringles-planner.png" alt="Google keywords planner results for pringles and keto related searches" maxWidth="450px" hasBorder="true">}}
 {{</ gallery >}}
 
 According to Google's [keyword planner](https://ads.google.com/home/tools/keyword-planner/), there are only ~70 searches per month for searches like "are pringles keto?" Whoever took the #1 spot would only get ~50 clicks per month. Is It Keto earns ~$0.01 per visitor, meaning the Pringles article would bring in about $6 per year. It's hard to justify the time or cost of crafting a dedicated article for so few readers.
@@ -122,7 +122,7 @@ Zapier is a successful product that provides plumbing to connect different apps 
 
 Zapier generates a dedicated page for every possible combination of their partner apps, so if you search "the gift goose + connectwise manage," the top result is Zapier's auto-generated page:
 
-{{< img src="gift-goose-connectwise.png" alt="Screenshot of Zapier's page for The Gift Goose + ConnectWise" maxWidth="500px" hasBorder="true" caption="Zapier ranks highly for thousands of search queries because they auto-generate pages for every pair of applications they support." >}}
+{{<img src="gift-goose-connectwise.png" alt="Screenshot of Zapier's page for The Gift Goose + ConnectWise" maxWidth="500px" hasBorder="true" caption="Zapier ranks highly for thousands of search queries because they auto-generate pages for every pair of applications they support.">}}
 
 According to [Ahrefs' backlink checker](https://ahrefs.com/backlink-checker), there are zero links to that page, yet it's the #1 search result. Why? Because search volume is so low that nobody else would bother to create a page. But Zapier has templates set up so that it costs them next to nothing to generate a page that perfectly matches the query.
 
@@ -142,13 +142,13 @@ Another advantage is that I already have a database of nutritional information. 
 
 I've already begun auto-generating content for Is It Keto. I've created 13 new articles about fruits I had never covered. Fruits are the easiest articles because they require no analysis of artificial ingredients, so the article is usually a straightforward, "No, it's not keto-friendly."
 
-{{< img src="apricots-dates.png" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="800px" caption="I've begun auto-generating pages based on each food's nutritional information." hasBorder="true" >}}
+{{<img src="apricots-dates.png" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="800px" caption="I've begun auto-generating pages based on each food's nutritional information." hasBorder="true">}}
 
 I've set it up so that I can improve my templates over time, then simply re-run my pipeline to update all previously-generated articles.
 
 One of the most popular pages on Is It Keto is ["Is Russell Stover Sugar-Free Chocolate Candy Keto?"](https://isitketo.org/russell-stover-sugar-free-chocolate-candy) I wrote that article by hand, but re-reading it today, I could largely re-use the content to build a template for other chocolates and candies:
 
-{{< img src="templatizing-articles.png" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="850px" caption="How I could recycle content from my [Russell Stover Sugar-Free Chocolate](https://isitketo.org/russell-stover-sugar-free-chocolate-candy) page into dozens of articles about similar foods" hasBorder="true" >}}
+{{<img src="templatizing-articles.png" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="850px" caption="How I could recycle content from my [Russell Stover Sugar-Free Chocolate](https://isitketo.org/russell-stover-sugar-free-chocolate-candy) page into dozens of articles about similar foods" hasBorder="true">}}
 
 ## Legacy projects
 
@@ -173,11 +173,11 @@ Month-over-month sales increased, but Zestful is historically bursty. Anything f
 
 What Got Done is my weekly work journaling app. I tried to build it into a business last year but relegated it to "hobby project" status after it [failed to gain traction](/retrospectives/2019/08/). I still use it regularly myself, and I sometimes add features on weekends or evenings.
 
-{{< img src="recent-wgt.png" alt="Screenshot of What Got Done recent updates" maxWidth="500px" caption="What Got Done is my weekly task journaling site." hasBorder="true" >}}
+{{<img src="recent-wgt.png" alt="Screenshot of What Got Done recent updates" maxWidth="500px" caption="What Got Done is my weekly task journaling site." hasBorder="true">}}
 
 Recently, I was looking at my [user dashboard](https://userkit.io/) and noticed that the site had 370 registered users. On average, the site gets one new user every day:
 
-{{< img src="whatgotdone-april-signups.png" alt="Graph of 2-3 signups per day throughout April" maxWidth="600px" caption="What Got Done averages about one new user signup per day." hasBorder="true" >}}
+{{<img src="whatgotdone-april-signups.png" alt="Graph of 2-3 signups per day throughout April" maxWidth="600px" caption="What Got Done averages about one new user signup per day." hasBorder="true">}}
 
 The problem is that, of these 370 registered users, the total number who actually use the site is about... five.
 
@@ -198,7 +198,7 @@ The other problem is that What Got Done generates the most value for people who 
 
 In response to COVID-19, Ahrefs released their $800 course on content marketing [for free](https://twitter.com/timsoulo/status/1240151594328621056). I generally prefer to learn by reading rather than watching online videos, but I've been impressed with this series.
 
-{{< img src="blogging-for-business.jpg" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="600px" caption="In March, Ahrefs released [their premium content marketing course](https://ahrefs.com/academy/blogging-for-business/) for free." linkUrl="https://ahrefs.com/academy/blogging-for-business/" >}}
+{{<img src="blogging-for-business.jpg" alt="Cover image for Ahrefs' Blogging for Business Course" maxWidth="600px" caption="In March, Ahrefs released [their premium content marketing course](https://ahrefs.com/academy/blogging-for-business/) for free." linkUrl="https://ahrefs.com/academy/blogging-for-business/">}}
 
 One lesson from the video that hit home for me is that [traffic is a vanity metric](https://youtu.be/y5kQXogrLN0?t=53). If you're blogging as part of your business, the number of visitors you attract is only an intermediate goal to something else, like selling products or acquiring new customers. I experienced exactly this [with Portfolio Rebalancer](#portfolio-rebalancer-has-lots-of-visitors-but-no-sales); it was great to attract 1,000 visitors in its first month, but the volume itself isn't much to celebrate without accompanying revenue or signups.
 

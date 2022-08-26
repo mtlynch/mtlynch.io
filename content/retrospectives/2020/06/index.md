@@ -65,7 +65,7 @@ Top keto recipe blogs get ~3M unique visitors per month, so my 40-50k felt like 
 
 > **Justin**: When you look at existing keto communities, what do you notice people struggling with? What issues come up a lot?<br> >**Me**: I don't know. I feel like most of the discussion revolves around people sharing progress and other members congratulating them.<br> >**Justin**: Congratulating each other... That's interesting. Have you seen [wip.chat](https://wip.chat/)?
 
-{{< img src="wip.chat.png" alt="Screenshot of wip.chat" hasBorder="true" maxWidth="650px" caption="[wip.chat](https://wip.chat/), a popular social network for independent software developers" >}}
+{{<img src="wip.chat.png" alt="Screenshot of wip.chat" hasBorder="true" maxWidth="650px" caption="[wip.chat](https://wip.chat/), a popular social network for independent software developers">}}
 
 [wip.chat](https://wip.chat/) is a popular social network for indie developers. Non-members can view some of the content, but you need to be a member to post anything, and that costs $20/month. Their pitch is that the wip.chat community helps you build your product by holding you accountable to your project's milestones.
 
@@ -79,7 +79,7 @@ Another great insight that came out of the conversation was around partnerships:
 
 This is why it's valuable to have an outsider's perspective. I tried approaching other keto companies for affiliate deals early in Is It Keto's life, but I was too small, so most of them ignored me. With 100k monthly pageviews, Is It Keto is significant enough that partnerships are viable. I just forgot to revisit the idea because it had been infeasible for so long. But what's stopping me from contacting keto businesses advertising on my site via AdSense to ask if they want to set up a deal with me directly?
 
-{{< img src="keto-advertiser.png" alt="Screenshot of wip.chat" hasBorder="true" maxWidth="400px" caption="Maybe I can just make a direct deal with this advertiser instead of working through Google AdSense." >}}
+{{<img src="keto-advertiser.png" alt="Screenshot of wip.chat" hasBorder="true" maxWidth="400px" caption="Maybe I can just make a direct deal with this advertiser instead of working through Google AdSense.">}}
 
 ## Improving Is It Keto's browser performance
 
@@ -119,9 +119,9 @@ It seemed like I'd get the best of both worlds: the performance of a pre-rendere
 
 I _thought_ that the browser would just render all the pre-generated HTML and then evaluate the JavaScript in the background. It turns out that browsers _really_ want to evaluate JavaScript before doing anything else. Even though on Is It Keto, my `<script>` tags are at the very bottom of my HTML and they have the `defer` attribute, they still tank my performance metrics:
 
-{{< gallery caption="If I delete the `<script>` tags on Is It Keto, its [Lighthouse score](https://developers.google.com/web/tools/lighthouse) jumps 40 points, but then the site becomes non-functional." >}}
-{{< img src="with-scripts.png" alt="Lighthouse score of 47 with scripts enabled" hasBorder="true" >}}
-{{< img src="without-scripts.png" alt="Lighthouse score of 87 with scripts deleted" hasBorder="true" >}}
+{{< gallery caption="If I delete the `<script>` tags on Is It Keto, its [Lighthouse score](https://developers.google.com/web/tools/lighthouse) jumps 40 points, but then the site becomes non-functional.">}}
+{{<img src="with-scripts.png" alt="Lighthouse score of 47 with scripts enabled" hasBorder="true">}}
+{{<img src="without-scripts.png" alt="Lighthouse score of 87 with scripts deleted" hasBorder="true">}}
 {{</ gallery >}}
 
 Vue 3, due out in the next few months, is supposed to improve performance due to [tree shaking](https://vueschool.io/articles/vuejs-tutorials/faster-web-applications-with-vue-3/). That means it will be able to reduce the size of your JavaScript payload by eliminating unused framework code. Gridsome claims that [their 1.0 release will be Vue 3 compatible](https://twitter.com/gridsome/status/1265742280805285896), but they seem so constrained by developer resources that I'm worried that it could be years before they ever get there.
@@ -136,11 +136,11 @@ For my next server, I've dreamed about getting some sort of virtual console. The
 
 For the past few weeks, I've been trying to build the poor-man's remote console with a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/). The keyboard part works great over the network:
 
-{{< video src="keyboard-demo_2020-05-28.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard" >}}
+{{< video src="keyboard-demo_2020-05-28.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
 
 Displaying video from the target machine is trickier, but I have it working now with about 1 second of latency. Here's what that looks like:
 
-{{< video src="kvmpi-demo.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard" >}}
+{{< video src="kvmpi-demo.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
 
 Right now, the video appears in a separate window, but I'm working on embedding it directly in the webpage.
 

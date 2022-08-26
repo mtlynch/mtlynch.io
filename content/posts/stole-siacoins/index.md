@@ -21,7 +21,7 @@ The night was June 9th, 2017. It was a typical Friday night for me. I was ~~watc
 
 Suddenly, I saw this post on the "New" tab of the [/r/siacoin](https://www.reddit.com/r/siacoin/) subreddit:
 
-{{< img src="posted-seed.png" alt="Reddit screenshot" hasBorder="True" >}}
+{{<img src="posted-seed.png" alt="Reddit screenshot" hasBorder="True">}}
 
 If you're not familiar with Siacoin, it's a cryptocurrency that allows you to rent out your spare hard disk space or buy space from others. I've written about this technology a couple times previously ([mining guide](/windows-sia-mining/), [NAS guide](/sia-via-docker/)).
 
@@ -209,7 +209,7 @@ Now that the coins were secured, it was time to figure out just what was going o
       109002   2304da26d61bd2cb7fcac5c7b38a553d788d8dfc386ae4eb47772e36e4a9269d        -594.55 SC             0 SF
 ```
 
-{{< img src="hardy-boys.jpg" alt="Hardy Boys cover" maxWidth="225px" align="right" >}}
+{{<img src="hardy-boys.jpg" alt="Hardy Boys cover" maxWidth="225px" align="right">}}
 
 The last transaction in the list is the withdrawal. That's just me stealing the money. Don't worry about that. The transaction of 0.00 SC is just noise, as Sia wallets generate these 0.0 transactions when moving money between their own addresses.
 
@@ -243,7 +243,7 @@ There was no real penalty for guessing too low except that I'd pay more in trans
 
 I admit that I did entertain quite a few fantasies about what I could spend the €10 on if I kept it for myself: private jets, Rolexes, a mansion with one of those Scrooge McDuck swimming pools of money. But in the end, I decided I had to do the right thing and return the Siacoin to the user who posted their seed.
 
-{{< img src="american-psycho.jpg" alt="American Psycho" caption="Me, if I had kept the money." >}}
+{{<img src="american-psycho.jpg" alt="American Psycho" caption="Me, if I had kept the money.">}}
 
 Still, the discrepancy between the amount I found and the amount they lost could potentially make things awkward. It would be like calling someone up and saying, "Hey, are you the guy who put up those posters about the lost wallet with €2,000 cash inside? I found it, but it only had- uh... _€10_ inside..." (shifts eyes).
 

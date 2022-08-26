@@ -14,12 +14,12 @@ A few years ago, I learned a handy technique for resolving disputes with uncoope
 
 The conversation began with a merchant telling me in no uncertain terms that they refused to pay the money they owed me:
 
-{{< img src="not-paying.png" alt="Kimchi host utilization dashboard" hasBorder="true" >}}
+{{<img src="not-paying.png" alt="Kimchi host utilization dashboard" hasBorder="true">}}
 
 Two email exchanges later, we landed here:
 
-{{<img src="seems-fair.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" hasBorder="true" >}}
-{{<img src="paypal-receipt.png" alt="PayPal receipt showing $88.00 payment" hasBorder="true" maxWidth="400px" >}}
+{{<img src="seems-fair.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" hasBorder="true">}}
+{{<img src="paypal-receipt.png" alt="PayPal receipt showing $88.00 payment" hasBorder="true" maxWidth="400px">}}
 
 This post explains the dispute and how The Organized Professional Method solved my problem.
 
@@ -55,7 +55,7 @@ Eager to see my earnings skyrocket, I checked my affiliate stats the day after I
 
 After a week, it was the same thing. 26 users had visited, but none of them purchased anything.
 
-{{<img src="zero-sales.png" alt="Affiliate stats showing 95 referrals and zero sales" hasBorder="true" caption="Kiss My Keto's stats claimed that I had sent them 95 visitors, all of whom supposedly left without making a purchase." >}}
+{{<img src="zero-sales.png" alt="Affiliate stats showing 95 referrals and zero sales" hasBorder="true" caption="Kiss My Keto's stats claimed that I had sent them 95 visitors, all of whom supposedly left without making a purchase.">}}
 
 By the one month mark, I became suspicious. 95 readers from Is It Keto had visited Kiss My Keto, and the affiliate stats still claimed I had earned zero commissions.
 
@@ -81,7 +81,7 @@ Not qualified for a discount? Why should that matter?
 
 After a few back and forths, I finally got a straight answer that explained my missing commissions:
 
-{{<img src="exceptions.png" alt="Nini reports that Kiss My Keto pays no commission on sales of bread or during sitewide discounts" hasBorder="true" caption="Kiss My Keto's affiliate manager reveals that they exclude certain purchases from commissions." >}}
+{{<img src="exceptions.png" alt="Nini reports that Kiss My Keto pays no commission on sales of bread or during sitewide discounts" hasBorder="true" caption="Kiss My Keto's affiliate manager reveals that they exclude certain purchases from commissions.">}}
 
 This was a shocking revelation for a few reasons.
 
@@ -198,7 +198,7 @@ I sent this response:
 
 He responded a few days later, agreeing to pay me the $88:
 
-{{<img src="seems-fair.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" hasBorder="true" >}}
+{{<img src="seems-fair.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" hasBorder="true">}}
 
 ## Calculating the debt
 

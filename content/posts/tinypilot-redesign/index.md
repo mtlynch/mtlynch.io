@@ -278,8 +278,8 @@ Many of the issues with scope bloat resulted from the slow feedback loop in WebA
 WebAgency's process is to report hours twice per month. On the 15th, they share the total number of hours they've used with no details about which tasks contributed to the total. At the end of the month, they send a per-task breakdown.
 
 {{<gallery caption="WebAgency reports a simple total of hours on the 15th of the month and then a detailed breakdown at the end of the month.">}}
-{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="400px"  hasBorder="true" >}}
-{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="600px" hasBorder="true" >}}
+{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="400px"  hasBorder="true">}}
+{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="600px" hasBorder="true">}}
 {{</gallery>}}
 
 In contrast, TinyPilot's in-house developers report their hours at the end of each working session, so I have a better sense of their progress. If a 10-hour task starts looking more like a 25-hour task, we re-evaluate whether to eliminate or downscope the task.
@@ -341,7 +341,7 @@ It's too early to tell, but I'm optimistic about earning a positive return on th
 
 {{<img src="sales-timeline.png" alt="Graph of TinyPilot sales showing a permanent increase in November when we discontinued our low-cost product, a temporary spike in March for a new product, and an increase for the last two months of having the new website." hasBorder="true" caption="Sales through the TinyPilot website over the last year">}}
 
-{{<tweet user="deliberatecoder" id="1550124485331734528" >}}
+{{<tweet user="deliberatecoder" id="1550124485331734528">}}
 
 ---
 

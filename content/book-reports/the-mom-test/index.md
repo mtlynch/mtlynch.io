@@ -50,9 +50,9 @@ I expected basic advice about how you shouldn't ask customers leading questions,
   - Rules for asking constructive questions during customer interviews so that potential customers give you useful information instead of trying to please you.
   - Named "The Mom Test" because these questions elicit useful information even from an overprotective mother who wants to shield her child from hurt feelings.
   - Rules for passing The Mom Test:
-    > 1.  Talk about their life instead of your idea.
-    > 1.  Ask about specifics in the past instead of generics or opinions about the future.
-    > 1.  Talk less and listen more.
+    > 1. Talk about their life instead of your idea.
+    > 1. Ask about specifics in the past instead of generics or opinions about the future.
+    > 1. Talk less and listen more.
 
 <!-- markdownlint-enable blanks-around-lists -->
 

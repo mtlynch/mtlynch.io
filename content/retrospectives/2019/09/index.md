@@ -82,17 +82,17 @@ I [posted a thread](https://redd.it/cmslmx) about Is It Keto, and here were my k
 - Is It Keto's page titles should better match common search terms.
   - **Result**: I changed my page titles from the format of "\[Food\] - Is It Keto" to "Is \[Food\] Keto? - Is It Keto"
 
-{{< img src="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" caption="Changing Is It Keto page titles to better match search queries" maxWidth="800px" hasBorder="True" >}}
+{{<img src="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" caption="Changing Is It Keto page titles to better match search queries" maxWidth="800px" hasBorder="True">}}
 
 - Is It Keto should have dropdowns navigation menus so that it's easier for users to browse different food categories.
   - **Result**: I added dropdown menus to the navigation bar.
 
-{{< img src="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" caption="Redesigned navbar on Is It Keto" maxWidth="600px" hasBorder="True" >}}
+{{<img src="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" caption="Redesigned navbar on Is It Keto" maxWidth="600px" hasBorder="True">}}
 
 - I should promote Is It Keto on Pinterest.
   - **Result**: I created a [Pinterest page](https://pinterest.com/isitketo/) and added 14 pins, but it's time-consuming to create the graphics, and my referrals from Pinterest remain at nearly zero. I need help from someone who understands Pinterest, but I can't afford a Pinterest consultant at the moment.
 
-{{< img src="pinterest.jpg" alt="Screenshot of Is It Keto's Pinterest page" caption="Is It Keto's unsuccessful Pinterest page" maxWidth="500px" >}}
+{{<img src="pinterest.jpg" alt="Screenshot of Is It Keto's Pinterest page" caption="Is It Keto's unsuccessful Pinterest page" maxWidth="500px">}}
 
 ## Finally a backlink for Is It Keto
 
@@ -102,7 +102,7 @@ This seemed sensible, but I had a tough time approaching it. The well-known site
 
 With the assumption that local fitness bloggers might be more friendly to a nearby blogger, I used search terms like "fitness western massachusetts." One of the sites I found was the local blog for a gym chain called [Fitness Together](https://fitnesstogether.com), with a 55/100 score from [Ahrefs](https://ahrefs.com/backlink-checker). Coincidentally, my sister had a contact there, so I reached out about writing a guest post for them. They agreed to the idea, I wrote a new article for them, and they published it a couple weeks later: ["Five Benefits of Strength Training."](https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training)
 
-{{< img src="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" caption="My guest post on the Fitness Together Northampton blog" maxWidth="600px" linkUrl="https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training" >}}
+{{<img src="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" caption="My guest post on the Fitness Together Northampton blog" maxWidth="600px" linkUrl="https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training">}}
 
 It's unclear if that new link makes any difference. The Fitness Together root domain is valuable, but Google may recognize that the [blog for a city-specific location](https://fitnesstogether.com/northampton/blog) is not as significant as Fitness Together's [main blog](https://fitnesstogether.com/blog).
 
@@ -130,13 +130,13 @@ Victor Zhou is a Facebook engineer who only began blogging in 2019 and already w
 
 My favorite of his posts is ["Minify Your SVGs"](https://victorzhou.com/blog/minify-svgs/). It does a great job of explaining the context of the problem and the tradeoffs of different solutions he considered.
 
-{{< img src="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" caption="Victor is a talented software blogger with an emphasis on machine learning" maxWidth="450px" linkUrl="https://victorzhou.com/blog/minify-svgs/" >}}
+{{<img src="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" caption="Victor is a talented software blogger with an emphasis on machine learning" maxWidth="450px" linkUrl="https://victorzhou.com/blog/minify-svgs/">}}
 
 ### [Cory Zue's Solopreneur Side Project Dashboard](http://www.coryzue.com/open/)
 
 Cory Zue is a solo developer who writes publicly and transparently about his business projects. In August, he unveiled a dashboard that shows earnings and time investment for his different projects.
 
-{{< img src="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" maxWidth="450px" linkUrl="http://www.coryzue.com/open/" >}}
+{{<img src="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" maxWidth="450px" linkUrl="http://www.coryzue.com/open/">}}
 
 Particularly interesting is his effective wage for each project. It shows how his businesses required substantial up-front investment but, over time, generated increasing amounts of revenue and demanded decreasing levels of maintenance.
 
