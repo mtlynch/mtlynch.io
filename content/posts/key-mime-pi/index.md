@@ -46,8 +46,8 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
 {{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the Micro-USB data port.">}}
-{{< img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px" >}}
-{{< img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px" >}}
+{{<img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px">}}
+{{<img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px">}}
 {{</gallery>}}
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.

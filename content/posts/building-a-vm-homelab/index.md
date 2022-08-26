@@ -1,19 +1,20 @@
 ---
 title: Building a Homelab VM Server (2020 Edition)
 tags:
-- virtualization
-- homelab
-- proxmox
-- esxi
+  - virtualization
+  - homelab
+  - proxmox
+  - esxi
 description: I built a home server to host my development VMs and went a bit overboard.
-date: '2020-10-06'
-lastmod: '2021-12-04'
+date: "2020-10-06"
+lastmod: "2021-12-04"
 images:
-- building-a-vm-homelab/build-components.jpg
+  - building-a-vm-homelab/build-components.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/homelab/comments/j64za2/building_a_homelab_vm_server/
   hacker_news: https://news.ycombinator.com/item?id=25061823
 ---
+
 For the past five years, I've done all of my software development in virtual machines (VMs). Each of my projects gets a dedicated VM, sparing me the headache of dependency conflicts and TCP port collisions.
 
 Three years ago, I took things to the next level by [building my own homelab server](/building-a-vm-homelab-2017) to host all of my VMs. It's been a fantastic investment, as it sped up numerous dev tasks and improved reliability.
@@ -94,7 +95,7 @@ For my next build, I wanted a virtual console with physical-level access to the 
 
 ### CPU
 
-My first VM server's CPU was a [Ryzen 7 1700](https://www.amd.com/en/products/cpu/amd-ryzen-7-1700). At eight cores and 16 threads, it was [the hot new CPU at the time](https://www.tomshardware.com/reviews/amd-ryzen-7-1700-cpu-review,5009.html). But when I showed off my build on [/r/homelab](https://www.reddit.com/r/homelab/), reddit's homelab subcommunity, they mocked me as a filthy casual because I used *consumer* parts. The cool kids used enterprise gear.
+My first VM server's CPU was a [Ryzen 7 1700](https://www.amd.com/en/products/cpu/amd-ryzen-7-1700). At eight cores and 16 threads, it was [the hot new CPU at the time](https://www.tomshardware.com/reviews/amd-ryzen-7-1700-cpu-review,5009.html). But when I showed off my build on [/r/homelab](https://www.reddit.com/r/homelab/), reddit's homelab subcommunity, they mocked me as a filthy casual because I used _consumer_ parts. The cool kids used enterprise gear.
 
 {{<img src="do-u-even.png" alt="redditor /u/pylori asks 'Bro, do you even homelab? Seriously you're worried about hardware failure on enterprise gear that's built to outlast newer consumer stuff?'" caption="[/r/homelab was unimpressed](https://www.reddit.com/r/homelab/comments/69sk2v/building_a_homelab_vm_server/dh93sur/) with my first build.">}}
 
@@ -105,11 +106,11 @@ To get the best performance for my dollar, I restricted my search to used CPUs, 
 The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https://ark.intel.com/content/www/us/en/ark/products/series/78583/intel-xeon-processor-e5-v3-family.html) family, especially the 2600 models. I settled on the [E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html). It had an average benchmark of 15,618 and cost ~$130 used on eBay.
 
 {{<gallery  caption="The Intel Xeon E5-2680 v3 [scores 15,618 on cpubenchmark.net](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3+%40+2.50GHz&id=2390).">}}
-  {{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" maxWidth="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
-  {{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" maxWidth="490px" hasBorder="true">}}
+{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" maxWidth="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" maxWidth="490px" hasBorder="true">}}
 {{</gallery>}}
 
- For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual-E5-2680s, I'd more than double the processing power from my old server.
+For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual-E5-2680s, I'd more than double the processing power from my old server.
 
 ### Motherboard
 
@@ -174,9 +175,9 @@ I looked into remote administration solutions and was blown away by how expensiv
 To achieve remote administration, I took the unusual approach of [building my own KVM over IP device](/tinypilot) out of a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io).
 
 {{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) to install an OS on my server">}}
-  {{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" maxWidth="260px">}}
+{{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" maxWidth="260px">}}
 
-  <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="width: 500px; max-width: 100%; object-fit: contain;"></a>
+<a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="width: 500px; max-width: 100%; object-fit: contain;"></a>
 
 {{</gallery>}}
 
@@ -186,31 +187,31 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 
 ## My 2020 server build
 
-| Category    | Component                               | I paid        |
-|-------------|-----------------------------------------|---------------|
-| CPU         | [Intel Xeon E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html) (x2, used)        | $264.82       |
-| Motherboard | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)               | $319.99       |
-| Disk        | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                   | $149.99       |
-| Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $285.99       |
-| Power       | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)      | $79.99        |
-| Graphics    | [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931)                      | $44.99        |
-| Case        | [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085)          | $84.99        |
-| CPU Fans    | [Cooler Master Hyper 212](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) (x2)            | $72.98        |
-| Remote administration | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP) | $65.00 |
-| **Total**   |                                         | **$1,368.74** |
+| Category              | Component                                                                                                                                              | I paid        |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| CPU                   | [Intel Xeon E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html) (x2, used) | $264.82       |
+| Motherboard           | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)              | $319.99       |
+| Disk                  | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                                      | $149.99       |
+| Memory                | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397)                | $285.99       |
+| Power                 | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)                      | $79.99        |
+| Graphics              | [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931)                                 | $44.99        |
+| Case                  | [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085)           | $84.99        |
+| CPU Fans              | [Cooler Master Hyper 212](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) (x2)    | $72.98        |
+| Remote administration | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP)                                                                                    | $65.00        |
+| **Total**             |                                                                                                                                                        | **$1,368.74** |
 
 &nbsp;
 
 {{<gallery caption="The Meshify C has been my all-time favorite case for cable management. Its built-in velcro straps organize the cables, and little rubber dividers hide them in the far side of the case.">}}
-  {{<img src="cable-management-1.jpg" alt="Photo of outer side of empty case">}}
-  {{<img src="cable-management-2.jpg" alt="Photo of empty case interior">}}
+{{<img src="cable-management-1.jpg" alt="Photo of outer side of empty case">}}
+{{<img src="cable-management-2.jpg" alt="Photo of empty case interior">}}
 {{</gallery>}}
 
 &nbsp;
 
 {{<gallery caption="Installing the motherboard, CPU, RAM, and fans">}}
-  {{<img src="installing-cpu.jpg" alt="Photo of motherboard with CPUs installed">}}
-  {{<img src="install-everything.jpg" alt="Photo of motherboard with all components installed">}}
+{{<img src="installing-cpu.jpg" alt="Photo of motherboard with CPUs installed">}}
+{{<img src="install-everything.jpg" alt="Photo of motherboard with all components installed">}}
 {{</gallery>}}
 
 {{<img src="build-completed.jpg" alt="My completed homelab VM server build" maxWidth="600px" caption="My completed build in its new home">}}
@@ -233,9 +234,9 @@ Before I decommissioned my old VM server, I collected simple benchmarks of my co
 
 Most of my old VMs ran on network storage because its local SSD only had room for a couple of VMs. In the benchmarks below, I compare performance in three different scenarios:
 
-* 2017 Server (NAS): The typical VM I kept on network storage
-* 2017 Server (SSD): For the few VMs I kept on local storage
-* 2020 Server: All VMs run on local SSD, so there's no NAS vs. SSD
+- 2017 Server (NAS): The typical VM I kept on network storage
+- 2017 Server (SSD): For the few VMs I kept on local storage
+- 2020 Server: All VMs run on local SSD, so there's no NAS vs. SSD
 
 {{<notice type="info">}}
 
@@ -361,24 +362,24 @@ Annoyingly, the licenses are priced per CPU, so in addition the shame of buying 
 
 ### Parts list (as of 2021-12-05)
 
-| Category    | Component                               | I paid        |
-|-------------|-----------------------------------------|---------------|
-| CPU         | [Intel Xeon E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html) (x2, used)        | $264.82       |
-| Motherboard | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)               | $319.99       |
-| Disk        | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                   | $149.99       |
-| Disk        | [Samsung 870 EVO (2TB)](https://www.newegg.com/samsung-2tb-870-evo-series/p/N82E16820147794?Item=N82E16820147794)                   | $239.99\*       |
-| Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $285.99       |
-| Memory      | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397) | $164.11\*       |
-| Power       | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)      | $79.99        |
-| Graphics    | [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931)                      | $44.99        |
-| Case        | [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085)          | $84.99        |
-| CPU Fans    | [Cooler Master Hyper 212](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) (x2)            | $72.98        |
-| Remote administration | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP) | $65.00 |
-| **Total**   |                                         | **$1,772.84** |
+| Category              | Component                                                                                                                                              | I paid        |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| CPU                   | [Intel Xeon E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html) (x2, used) | $264.82       |
+| Motherboard           | [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967)              | $319.99       |
+| Disk                  | [Samsung 860 EVO (1TB)](https://www.newegg.com/samsung-860-evo-series-1tb/p/N82E16820147673?Item=N82E16820147673)                                      | $149.99       |
+| Disk                  | [Samsung 870 EVO (2TB)](https://www.newegg.com/samsung-2tb-870-evo-series/p/N82E16820147794?Item=N82E16820147794)                                      | $239.99\*     |
+| Memory                | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397)                | $285.99       |
+| Memory                | [Crucial CT4K16G4RFD4213 64GB (4 x 16GB)](https://www.newegg.com/crucial-64gb-288-pin-ddr4-sdram/p/N82E16820148843?Item=9SIAHZUB514397)                | $164.11\*     |
+| Power                 | [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147)                      | $79.99        |
+| Graphics              | [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931)                                 | $44.99        |
+| Case                  | [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085)           | $84.99        |
+| CPU Fans              | [Cooler Master Hyper 212](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) (x2)    | $72.98        |
+| Remote administration | [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) (KVM over IP)                                                                                    | $65.00        |
+| **Total**             |                                                                                                                                                        | **$1,772.84** |
 
 \* Purchased a year after the original build.
 
 ## Related posts
 
-* [TinyPilot: Build a KVM Over IP for Under $100](/tinypilot) - The open-source tool I created to provision my server.
-* [Building a Homelab VM Server (2017 Edition)](/building-a-vm-homelab-2017) - My first homelab server build.
+- [TinyPilot: Build a KVM Over IP for Under $100](/tinypilot) - The open-source tool I created to provision my server.
+- [Building a Homelab VM Server (2017 Edition)](/building-a-vm-homelab-2017) - My first homelab server build.

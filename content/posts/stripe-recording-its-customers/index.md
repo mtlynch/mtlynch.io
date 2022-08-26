@@ -1,12 +1,12 @@
 ---
 title: Stripe is Silently Recording Your Movements On its Customers' Websites
 tags:
-- stripe
-- privacy
-- portfolio rebalancer
-date: '2020-04-21'
+  - stripe
+  - privacy
+  - portfolio rebalancer
+date: "2020-04-21"
 images:
-- stripe-recording-its-customers/og-image.jpg
+  - stripe-recording-its-customers/og-image.jpg
 description: An investigation into how Stripe tracks your users and what you can do to prevent it
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=22936818
@@ -24,9 +24,9 @@ This post shares what I found, who else it affects, and how you can limit Stripe
 
 Stripe collects this data on your website if either of the following is true:
 
-* Your base page template includes the Stripe script tag:
-  * `<script src="https://js.stripe.com/v3">`
-* Your website is a single-page app, such as one created with React, Vue, or Angular, and you use Stripe to process payments.
+- Your base page template includes the Stripe script tag:
+  - `<script src="https://js.stripe.com/v3">`
+- Your website is a single-page app, such as one created with React, Vue, or Angular, and you use Stripe to process payments.
 
 ## The discovery
 
@@ -34,7 +34,7 @@ I discovered this by accident while adding paid plans to my [portfolio rebalance
 
 After successfully implementing my app's payment flow with Stripe, I noticed that every page navigation generated a new HTTP POST request to a Stripe URL:
 
-{{< video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app" >}}
+{{< video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app">}}
 
 This was strange because none of the pages I visited contained any calls to Stripe's library. In fact, my app doesn't collect payment information from users until they create an account, but Stripe was making HTTP requests when I landed on my app's homepage as a brand new user with no cookies or stored credentials.
 
@@ -79,9 +79,7 @@ $ echo "JTdCJTIydjIlMjIlM0ExJTJDJTIyaWQlMjIlM0ElMjI4MTBiOWIxY2E3ODU5YzNlYzExYTY0
     "f": false,
     "g": true,
     "h": true,
-    "i": [
-      "location"
-    ],
+    "i": ["location"],
     "j": [],
     "n": 193
   },
@@ -99,18 +97,7 @@ You may have noticed from the video that when I initially loaded the app, the fi
 
 ```json
 {
-  "data": [
-    4669,
-    20,
-    26,
-    13,
-    21,
-    20,
-    40,
-    21,
-    25,
-    14
-  ],
+  "data": [4669, 20, 26, 13, 21, 20, 40, 21, 25, 14],
   "muid": "1b5a0719-c11c-4091-afbb-44a524a036de",
   "sid": "1ba9609c-2246-4b60-95ee-c84a4e48f993",
   "source": "mouse-timings-10",
@@ -140,11 +127,11 @@ https://m.stripe.com/4
 
 Instead of finding a bug in my code, I discovered dozens of posts from other developers surprised to see this behavior in their apps. The reports go [all the way back to 2017](https://stackoverflow.com/q/45718026/90388).
 
-{{< img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" maxWidth="800px" hasBorder="true" caption="Developers have been posting on StackOverflow and Github about Stripe's tracking behavior for years" >}}
+{{<img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" maxWidth="800px" hasBorder="true" caption="Developers have been posting on StackOverflow and Github about Stripe's tracking behavior for years">}}
 
 In one of the issue threads on Github, a Stripe employee [suggested that this behavior was unintentional](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443) and Stripe would look for a fix:
 
-{{< img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" maxWidth="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), a Stripe employee suggests that Stripe.js should only send data when the app calls the library and only on pages where the user submits payment information." >}}
+{{<img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" maxWidth="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), a Stripe employee suggests that Stripe.js should only send data when the app calls the library and only on pages where the user submits payment information.">}}
 
 That was 7 months ago, and there has been no follow up from Stripe on that thread or anywhere else I could find.
 
@@ -155,10 +142,10 @@ To be sure that nothing else in my app was triggering this behavior, I [created 
 My experiments confirmed that the following line causes the Stripe library to load and initiate user tracking:
 
 ```javascript
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe } from "@stripe/stripe-js";
 ```
 
-Note that my app never even *calls* the `loadStripe` function. Stripe.js begins tracking user behavior as soon as the client app imports the library. For a single-page app, this occurs the moment the end-user loads any page of the website.
+Note that my app never even _calls_ the `loadStripe` function. Stripe.js begins tracking user behavior as soon as the client app imports the library. For a single-page app, this occurs the moment the end-user loads any page of the website.
 
 {{< notice type="info">}}
 **Note**: `loadStripe` is a misleading name because Stripe loads before the client application ever calls that function. A more appropriate name would be `ensureStripeIsLoaded` because the function's real job is to queue any of the app's API calls until the Stripe library has finished loading.
@@ -170,18 +157,18 @@ I [reported this issue to Stripe support](email-to-stripe-support.txt) to see wh
 
 Stripe responded promptly to tell me that user tracking was by design, and I should, in fact, welcome this functionality:
 
->Hi Michael,
+> Hi Michael,
 >
->Thanks for getting in touch. Faith here from Stripe support.
+> Thanks for getting in touch. Faith here from Stripe support.
 >
->Jumping right in, the calls being seen are by design in order to detect fraud and is in the best interests of the user. According to the docs: "To best leverage Stripe’s advanced fraud functionality, include this script on every page, not just the checkout page. This allows Stripe to detect anomalous behavior that may be indicative of fraud as customers browse your website."
+> Jumping right in, the calls being seen are by design in order to detect fraud and is in the best interests of the user. According to the docs: "To best leverage Stripe’s advanced fraud functionality, include this script on every page, not just the checkout page. This allows Stripe to detect anomalous behavior that may be indicative of fraud as customers browse your website."
 >
->[https://stripe.com/docs/js/including](https://stripe.com/docs/js/including)
+> [https://stripe.com/docs/js/including](https://stripe.com/docs/js/including)
 >
->Please let us know should you run into any other issues or have any other concerns.
+> Please let us know should you run into any other issues or have any other concerns.
 >
->All the best,<br>
-Faith
+> All the best,<br>
+> Faith
 
 The "in the best interests of the user" line felt particularly patronizing. The party benefiting most from this data collection is clearly Stripe and not the user. Stripe is getting free data to train its fraud-detection models and potentially selling that information to advertisers.
 
@@ -191,20 +178,20 @@ For the user, Stripe.js degrades their experience by forcing them to download an
 
 I looked around for an official disclosure from Stripe about this behavior, but I couldn't find anything. The closest I found is this vague paragraph on [their npm package description](https://www.npmjs.com/package/@stripe/stripe-js), which the Stripe support rep quoted to me:
 
->To best leverage Stripe’s advanced fraud functionality, ensure that Stripe.js is loaded on every page, not just your checkout page. This allows Stripe to detect anomalous behavior that may be indicative of fraud as customers browse your website.
+> To best leverage Stripe’s advanced fraud functionality, ensure that Stripe.js is loaded on every page, not just your checkout page. This allows Stripe to detect anomalous behavior that may be indicative of fraud as customers browse your website.
 
 The [privacy policy](https://stripe.com/privacy) is a bit more specific about the data they collect, but it implies that they're collecting this data on stripe.com rather than on customer sites:
 
->Our Sites use cookies and other technologies to function effectively. These technologies record information about your use of our Sites, including:
+> Our Sites use cookies and other technologies to function effectively. These technologies record information about your use of our Sites, including:
 >
-> * Browser and device data, such as IP address, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons and the language version of the Sites you are visiting;
-> * Usage data, such as time spent on the Sites, pages visited, links clicked, language preferences, and the pages that led or referred you to our Sites.
+> - Browser and device data, such as IP address, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons and the language version of the Sites you are visiting;
+> - Usage data, such as time spent on the Sites, pages visited, links clicked, language preferences, and the pages that led or referred you to our Sites.
 >
->We also may collect information about your online activities on websites and connected devices over time and across third-party websites, devices, apps and other online features and services.
+> We also may collect information about your online activities on websites and connected devices over time and across third-party websites, devices, apps and other online features and services.
 
 Worryingly, the privacy policy also includes loose wording that allows Stripe to sell this data to advertisers:
 
->When you visit our Sites or online services, both we and certain third parties collect information about your online activities over time and across different sites to provide you with advertising about products and services tailored to your individual interests (this type of advertising is called “interest-based advertising”).
+> When you visit our Sites or online services, both we and certain third parties collect information about your online activities over time and across different sites to provide you with advertising about products and services tailored to your individual interests (this type of advertising is called “interest-based advertising”).
 
 ## Mitigation
 
@@ -220,7 +207,7 @@ As mentioned [above](#confirming-the-issue), Stripe begins executing as soon as 
 Fortunately, the stripe-js v.1.4.0 release, published last week [offers a cleaner solution](https://github.com/stripe/stripe-js/issues/43#issuecomment-614864800). The update introduced the `@stripe/stripe-js/pure` import path, which allows clients to import Stripe without side-effects:
 
 ```javascript
-import { loadStripe } from '@stripe/stripe-js/pure';
+import { loadStripe } from "@stripe/stripe-js/pure";
 ```
 
 This delays Stripe's library execution until the app explicitly calls the `loadStripe` function. If you limit calls to the `loadStripe` function only to pages or components that involve Stripe payments, Stripe will only load on those pages, thus preventing user tracking earlier in the browsing session.
@@ -243,17 +230,17 @@ beforeRouteLeave(to) {
 
 ### (New) Disable user tracking
 
-{{< notice type="info" >}}
+{{< notice type="info">}}
 **Added**: April 30, 2020
 {{</ notice >}}
 
 After the initial publication of my article, Stripe updated its JavaScript library to include [a new parameter to disable tracking entirely](https://github.com/stripe/stripe-js/blob/ef32028d0e1f8381b3b4ecca8bc74bf659e7153e/README.md#disabling-advanced-fraud-detection-signals). This option is available as of `@stripe/stripe-js` v1.5.0:
 
 ```javascript
-import {loadStripe} from '@stripe/stripe-js/pure';
+import { loadStripe } from "@stripe/stripe-js/pure";
 
-loadStripe.setLoadParameters({advancedFraudSignals: false})
-const stripe = await loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+loadStripe.setLoadParameters({ advancedFraudSignals: false });
+const stripe = await loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 ```
 
 This is a welcome option, though the downside is that the functionality is all-or-nothing. If you enable fraud detection, you can't turn it off after a Stripe transaction is complete unless you force a page reload (see [above](#solving-problem-two-unloading-stripe-after-payment)).
@@ -264,7 +251,7 @@ The previous two steps are sufficient to prevent Stripe's tracking. For addition
 
 Here's what it looks like for my app:
 
-{{< img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" maxWidth="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page." >}}
+{{<img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" maxWidth="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page.">}}
 
 It's a bit tricky to implement per-page CSP in a single-page app because the browser, by default, won't query the server for new policies when the user navigates to a new page. To force a policy refresh, I use Vue's [`beforeRouteEnter`](https://router.vuejs.org/guide/advanced/navigation-guards.html#in-component-guards) guard on my payment page to force a new HTTP request when the page loads.
 
@@ -284,16 +271,16 @@ It's probably not worth implementing CSP solely to hobble Stripe, but if you hav
 
 To see Stripe's behavior on a live site, I created a minimal Vue app that demonstrates this behavior:
 
-* [Vulnerable site](https://frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example)
-* [Site with mitigations](https://5e9db0c5ea0e3200062c02ea--frosty-banach-185455.netlify.app/)  [(source)](https://github.com/mtlynch/stripe-snooping-example/pull/1/files#diff-6d8c4c1f8080f58cb36a900829a76f43)
+- [Vulnerable site](https://frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example)
+- [Site with mitigations](https://5e9db0c5ea0e3200062c02ea--frosty-banach-185455.netlify.app/) [(source)](https://github.com/mtlynch/stripe-snooping-example/pull/1/files#diff-6d8c4c1f8080f58cb36a900829a76f43)
 
 ## Summary
 
 Websites that use Stripe to collect payment usually include Stripe's JavaScript library within their application. Integrating it according to Stripe's documentation causes the library to share user tracking data with Stripe throughout the user's browsing session, even on pages that do not interact with Stripe or display payment forms. This data includes:
 
-* Full URLs of each page the user visits, including query parameters and URL fragments
-* Timings of how quickly the user moves their mouse during browsing
-* A cookie that allows Stripe to track the same user across the web
+- Full URLs of each page the user visits, including query parameters and URL fragments
+- Timings of how quickly the user moves their mouse during browsing
+- A cookie that allows Stripe to track the same user across the web
 
 Stripe does not clearly disclose their collection of this data, and they make it difficult for client applications to limit the library's tracking behavior.
 
@@ -305,14 +292,14 @@ Given how seriously Stripe seems to take security and privacy, it's surprising t
 
 There are several actions Stripe can take to rectify this situation:
 
-* Clearly disclose data sharing.
-  * The npm package pages and the Stripe.js documentation should clearly define what browsing and telemetry data the library transmits to Stripe when a client application integrates it.
-* Support library unloading.
-  * Give client applications a supported mechanism to unload Stripe after the app has collected a user's payment.
-* Grant client applications control over what data to share via opt-in.
-  * Stripe clients bear the cost of chargebacks against their application, so they should decide how much information to share with Stripe to reduce those chargebacks.
+- Clearly disclose data sharing.
+  - The npm package pages and the Stripe.js documentation should clearly define what browsing and telemetry data the library transmits to Stripe when a client application integrates it.
+- Support library unloading.
+  - Give client applications a supported mechanism to unload Stripe after the app has collected a user's payment.
+- Grant client applications control over what data to share via opt-in.
+  - Stripe clients bear the cost of chargebacks against their application, so they should decide how much information to share with Stripe to reduce those chargebacks.
 
-{{< notice type="info" >}}
+{{< notice type="info">}}
 **Update: April 21, 2020 - 2:47pm ET**
 
 Stripe co-founder Patrick Collison [responded to this article](https://news.ycombinator.com/item?id=22937303) reasserting Stripe's commitment to use the data collected exclusively for fraud detection. He added that Stripe will soon clarify language in its terms of service around their data collection practices.
@@ -320,12 +307,12 @@ Stripe co-founder Patrick Collison [responded to this article](https://news.ycom
 **Correction**: The article originally said, "Websites that use Stripe to collect payment **must** include Stripe's JavaScript library," but Collison points out that this is inaccurate, as it is possible for websites to integrate with Stripe without using the Stripe JS library.
 {{</ notice >}}
 
-{{< notice type="info" >}}
+{{< notice type="info">}}
 **Update: April 30, 2020**
 
 Stripe has [revised their privacy policy and developer documentation](https://stripe.com/blog/advanced-fraud-detection-updates) and added functionality to their JavaScript library that empowers integrators to limit tracking behavior.
 
 I published a follow-up post that discusses how Stripe's changes address the concerns I raised:
 
-* [Update: Stripe's Response Regarding User Tracking](/stripe-update/)
-{{</ notice >}}
+- [Update: Stripe's Response Regarding User Tracking](/stripe-update/)
+  {{</ notice >}}

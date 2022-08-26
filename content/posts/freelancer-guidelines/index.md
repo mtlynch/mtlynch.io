@@ -381,4 +381,4 @@ _Cover art by [Loraine Yow](https://www.lolo-ology.com/)._
 
 Are you a client or freelancer? I'd love to see similar documents or hear how others approach this problem, so feel free to share in the comments.
 
-{{<tweet user="deliberatecoder" id="1370392431049474048" >}}
+{{<tweet user="deliberatecoder" id="1370392431049474048">}}

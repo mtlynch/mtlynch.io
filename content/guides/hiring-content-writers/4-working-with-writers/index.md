@@ -1,15 +1,15 @@
 ---
-title: 'Hiring Content Writers: Part Four - Working with Writers'
+title: "Hiring Content Writers: Part Four - Working with Writers"
 url: /hiring-content-writers/4-working-with-writers/
-date: '2019-09-30'
+date: "2019-09-30"
 ---
 
-* [Overview: Hiring Content Writers](/hiring-content-writers/)
-* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
-* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
-* **Part Four - Working with Writers** (this section)
-* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+- [Overview: Hiring Content Writers](/hiring-content-writers/)
+- [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+- [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+- [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+- **Part Four - Working with Writers** (this section)
+- [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
@@ -19,39 +19,39 @@ You can't judge a writer's skill accurately until they produce content for you. 
 
 Once I decide to hire a writer, I send them a kickoff email. Below, I've included an actual kickoff email I sent to one of my writers:
 
->I’ve just sent over the contract for you to sign. Let me know if you have any questions.
+> I’ve just sent over the contract for you to sign. Let me know if you have any questions.
 >
->Once you sign, you can begin working. The first article I’d like you to write is **Green Beans**. You can put the text in this shared document:
+> Once you sign, you can begin working. The first article I’d like you to write is **Green Beans**. You can put the text in this shared document:
 >
->[https://docs.google.com/document/d/1C3uLqvOhqPDuLftkgSad8ZT6PdFBTDWk3hGn4c0c1vw/edit?usp=sharing](https://docs.google.com/document/d/1C3uLqvOhqPDuLftkgSad8ZT6PdFBTDWk3hGn4c0c1vw/edit?usp=sharing)
+> [https://docs.google.com/document/d/1C3uLqvOhqPDuLftkgSad8ZT6PdFBTDWk3hGn4c0c1vw/edit?usp=sharing](https://docs.google.com/document/d/1C3uLqvOhqPDuLftkgSad8ZT6PdFBTDWk3hGn4c0c1vw/edit?usp=sharing)
 >
->Here is the site style guide:
+> Here is the site style guide:
 >
->[https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing)
+> [https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit?usp=sharing)
 >
->Please bill for the time that it takes you to learn the style guide and research the basics of the keto diet. I know there’s a lot in the style guide, so I’m not expecting you to get it perfect on your first try, but do your best to adhere to it.
+> Please bill for the time that it takes you to learn the style guide and research the basics of the keto diet. I know there’s a lot in the style guide, so I’m not expecting you to get it perfect on your first try, but do your best to adhere to it.
 >
->You can enter your hours in this spreadsheet:
+> You can enter your hours in this spreadsheet:
 >
->[https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)
+> [https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)
 >
->Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours, and you’re not finished, take the last half hour to organize the work you have so far, and share your progress with me. There’s not a ton of urgency on this, but if you could let me know what day to expect the work, that would be helpful.
+> Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours, and you’re not finished, take the last half hour to organize the work you have so far, and share your progress with me. There’s not a ton of urgency on this, but if you could let me know what day to expect the work, that would be helpful.
 >
->Can you also send me a mailing address where I should send your checks? I'll mail the first one on Saturday, September 7th for any hours you've worked through 9/6.
+> Can you also send me a mailing address where I should send your checks? I'll mail the first one on Saturday, September 7th for any hours you've worked through 9/6.
 
 Several critical things are happening in this email:
 
-* It clarifies that the writer's work must be **under contract**.
-* It provides a **style guide** and lays out my expectations around it.
-* It **timeboxes** the assignment to prevent billing surprises.
-* It instructs **how to bill me** for their hours.
-* It explains **how I will pay them**.
+- It clarifies that the writer's work must be **under contract**.
+- It provides a **style guide** and lays out my expectations around it.
+- It **timeboxes** the assignment to prevent billing surprises.
+- It instructs **how to bill me** for their hours.
+- It explains **how I will pay them**.
 
 I describe each of these elements in detail below.
 
 ## Create a contract
 
-When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites, or do you require full rights to their work?  A clear contract minimizes misunderstandings and legal disputes later on.
+When you hire a writer, you need a contract to eliminate any ambiguity about the relationship. Can the writer resell their content to other sites, or do you require full rights to their work? A clear contract minimizes misunderstandings and legal disputes later on.
 
 Creating a contract is easier than it sounds. There are plenty of free, example contracts online for freelance writing. Obviously, the best contract is one that your lawyer creates for you, but if you can't afford a lawyer, an online template is infinitely better than no contract at all.
 
@@ -73,7 +73,7 @@ If you're paying by the hour, it's critical to timebox your freelancer's work. O
 
 Here's the instruction I give to my new writers:
 
->Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours, and you’re not finished, take the last half hour to organize the work you have so far, and share your progress with me.
+> Limit your time on this first assignment to 5 hours. If you’re approaching 4.5 hours, and you’re not finished, take the last half hour to organize the work you have so far, and share your progress with me.
 
 As you work together more, give the writer more autonomy by increasing these hours caps or eliminating them entirely.
 
@@ -83,7 +83,7 @@ Do you want the content on your site to be formal and serious? Or do you want it
 
 Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the [style guide for Is It Keto](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky):
 
-{{< img src="style-guide.jpg" alt="Screenshot of Is It Keto's style guide" caption="Is It Keto's [style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky)" maxWidth="825px" hasBorder="True" linkUrl="https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky" >}}
+{{<img src="style-guide.jpg" alt="Screenshot of Is It Keto's style guide" caption="Is It Keto's [style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky)" maxWidth="825px" hasBorder="True" linkUrl="https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky">}}
 
 Resist the temptation to create rules for every imaginable scenario. Limit the style guide to issues that come up frequently for your site. For example, Is It Keto focuses on the keto diet, so its style guide explains how to format food measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
 
@@ -116,17 +116,17 @@ Good freelancers take pride in their work, so keep that in mind as you provide f
 
 When you give feedback:
 
-* Be specific
-* Focus on the writing, not the writer
-* Consider whether your instructions are the problem
+- Be specific
+- Focus on the writing, not the writer
+- Consider whether your instructions are the problem
 
 Freelancers consistently tell me that clear, empathetic feedback is the key factor that separates the good clients from the bad. Surprisingly, rude feedback seems to be the norm rather than the exception. This means that you stand out as an exceptionally pleasant client merely by providing a basic level of courtesy on par with a face to face interaction.
 
->**<font color="red">Bad</font>**: You did a terrible job on the first paragraph. Rewrite it.
+> **<font color="red">Bad</font>**: You did a terrible job on the first paragraph. Rewrite it.
 
 This is poor feedback because it's vague and pushy. It also frames the criticism as a personal attack instead of focusing on the work itself.
 
->**<font color="green">Good</font>**: I had difficulty following the first paragraph. The sentence structure is repetitive, and it uses the passive voice too heavily.
+> **<font color="green">Good</font>**: I had difficulty following the first paragraph. The sentence structure is repetitive, and it uses the passive voice too heavily.
 
 This is a more tactful rewrite of the feedback above. It calls out specific problems with the writing, and it avoids the word "you" so that the writer doesn't feel that this is a personal attack.
 
@@ -134,10 +134,10 @@ This is a more tactful rewrite of the feedback above. It calls out specific prob
 
 As you review the writer's first few drafts, look out for signs that you should terminate the relationship:
 
-* Their writing includes careless errors such as grammar or spelling mistakes.
-* They repeatedly violate your style guide.
-* They miss deadlines.
-* They bill a higher number of hours than you can afford long-term (if you're paying hourly).
+- Their writing includes careless errors such as grammar or spelling mistakes.
+- They repeatedly violate your style guide.
+- They miss deadlines.
+- They bill a higher number of hours than you can afford long-term (if you're paying hourly).
 
 It's a bit of an art to decide when to bail on a writer. My own process is to be fairly accepting on a first draft &mdash; it's okay if they're still struggling to learn my style guide, but I'll end the relationship over egregious spelling or grammatical errors. By draft two or three, I expect the writing to be close to publication-quality, but they're usually still learning the nuances of my desired style.
 
@@ -153,9 +153,9 @@ To maintain a healthy relationship with your freelancers, define when they shoul
 
 When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
 
-{{< gallery caption="Simple timesheets and invoicing with [Google Sheets](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)" >}}
-  {{< img src="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet" >}}
-  {{< img src="spreadsheet-2.jpg" alt="Freelancer payment spreadsheet" >}}
+{{< gallery caption="Simple timesheets and invoicing with [Google Sheets](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)">}}
+{{<img src="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet">}}
+{{<img src="spreadsheet-2.jpg" alt="Freelancer payment spreadsheet">}}
 {{< /gallery >}}
 
 On alternating Mondays, I mail them a check for the hours they've accrued in the pay period.
@@ -184,7 +184,7 @@ It probably took a long time to find a writer that matches your needs. Now, it's
 
 Allow them to share in your mission. If the business is growing thanks to their writing, share those victories with your writer. It's motivating for them to see the impact of their work instead of feeling like they're cranking out thousands of words for a paycheck every few weeks.
 
-With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [*The Elements of Style*](https://smile.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X/) (aka [*Strunk and White*](https://smile.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X/)). I asked her if it would be okay if I sent her a copy, and she happily agreed. Later on, she specifically mentioned that gift as something that made her value the job &mdash; it demonstrated that I was interested in and supportive of her long-term growth as a writer.
+With one of my freelancers, I found that many of my suggestions parroted lessons I learned from [_The Elements of Style_](https://smile.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X/) (aka [_Strunk and White_](https://smile.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X/)). I asked her if it would be okay if I sent her a copy, and she happily agreed. Later on, she specifically mentioned that gift as something that made her value the job &mdash; it demonstrated that I was interested in and supportive of her long-term growth as a writer.
 
 ## Terminating writers
 
@@ -194,13 +194,13 @@ More commonly with writers you've hired on a trial basis, you have to face the u
 
 ---
 
-* [Overview: Hiring Content Writers](/hiring-content-writers/)
-* [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
-* [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
-* [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
-* **Part Four - Working with Writers** (this section)
-* [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
+- [Overview: Hiring Content Writers](/hiring-content-writers/)
+- [Part One: Finding Writers](/hiring-content-writers/1-finding-writers/)
+- [Part Two - Creating a Detailed Job Description](/hiring-content-writers/2-creating-a-job-description/)
+- [Part Three: Screening Candidates](/hiring-content-writers/3-screening-candidates/)
+- **Part Four - Working with Writers** (this section)
+- [Part Five - Terminating Writers](/hiring-content-writers/5-terminating-writers/)
 
 ---
 
-*Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*
+_Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._

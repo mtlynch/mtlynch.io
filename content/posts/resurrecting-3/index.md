@@ -1,18 +1,19 @@
 ---
-title: 'Resurrecting a Dead Library: Part Three - Rehabilitation'
+title: "Resurrecting a Dead Library: Part Three - Rehabilitation"
 tags:
-- zestful
-- refactoring
-- ingredient-phrase-tagger
-- ingredient parsing
-- docker
-- coveralls
-- coverage
-description: How I used safe techniques to refactor a legacy codebase and minimize
+  - zestful
+  - refactoring
+  - ingredient-phrase-tagger
+  - ingredient parsing
+  - docker
+  - coveralls
+  - coverage
+description:
+  How I used safe techniques to refactor a legacy codebase and minimize
   the risk of regressions
-date: '2018-08-20'
+date: "2018-08-20"
 images:
-- resurrecting-3/cover.jpg
+  - resurrecting-3/cover.jpg
 ---
 
 I love refactoring. Nothing satisfies me more than untangling spaghetti code to reveal its underlying logic in a clear, intuitive way.
@@ -23,11 +24,11 @@ In this post, I'll show how to refactor with care. I'll explain the techniques I
 
 This is the final post in a three-part series about how I resurrected [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), a library that uses machine learning to parse cooking ingredients (e.g., "2 cups milk") into structured data. Read [part one](/resurrecting-1/) for the full context, but the short version is that I discovered an abandoned library and brought it back to life so that it could power my SaaS business:
 
-* [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
-* [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
-* **Part Three: Rehabilitation (this post)** - In which I begin refactoring the code
+- [Part One: Resuscitation](/resurrecting-1/) - In which I nurse the code back to health so that it runs on any modern system
+- [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
+- **Part Three: Rehabilitation (this post)** - In which I begin refactoring the code
 
-{{< img src="cover.jpg" alt="Hermit crab being pulled from shell" maxWidth="800px" >}}
+{{<img src="cover.jpg" alt="Hermit crab being pulled from shell" maxWidth="800px">}}
 
 ## Where are we?
 
@@ -53,9 +54,9 @@ yapf \
 
 This introduced significant code churn, but I was confident that this was a safe change because YAPF is a mature tool and my end-to-end test still passed.
 
-I was careful to limit [my pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/11) to *only* whitespace changes so as not to bury anything else in the noise and make the pull request difficult for other developers to review.
+I was careful to limit [my pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/11) to _only_ whitespace changes so as not to bury anything else in the noise and make the pull request difficult for other developers to review.
 
-{{< img src="yapf-diff.png" alt="Diff from YAPF changes" caption="Diff after fixing whitespace with YAPF" maxWidth="700px" hasBorder="True" >}}
+{{<img src="yapf-diff.png" alt="Diff from YAPF changes" caption="Diff after fixing whitespace with YAPF" maxWidth="700px" hasBorder="True">}}
 
 To ensure that future changes would adhere to the same style conventions, I added a new check to the build script:
 
@@ -69,7 +70,7 @@ yapf \
   --exclude="build/*"
 ```
 
-It's the same as the earlier command, but with a `--diff` flag instead of the `--in-place` flag.  If YAPF detects whitespace violations, it will print them out, then emit a failing exit code, causing the build script to terminate in failure.
+It's the same as the earlier command, but with a `--diff` flag instead of the `--in-place` flag. If YAPF detects whitespace violations, it will print them out, then emit a failing exit code, causing the build script to terminate in failure.
 
 ## Adding static analysis
 
@@ -90,9 +91,9 @@ You may have noticed that throughout this process, I've avoided any attempts to 
 
 The best way I've found for reading code is to refactor and test as I go. Famed software expert [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler) describes this process best:
 
->When I look at unfamiliar code, I have to try to understand what it does. I look at a couple of lines and say to myself, oh yes, that’s what this bit of code is doing. With refactoring I don’t stop at the mental note. I actually change the code to better reflect my understanding, and then I test that understanding by rerunning the code to see if it still works.
+> When I look at unfamiliar code, I have to try to understand what it does. I look at a couple of lines and say to myself, oh yes, that’s what this bit of code is doing. With refactoring I don’t stop at the mental note. I actually change the code to better reflect my understanding, and then I test that understanding by rerunning the code to see if it still works.
 >
->-Martin Fowler, [*Refactoring: Improving the Design of Existing Code*](https://smile.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672/)
+> -Martin Fowler, [_Refactoring: Improving the Design of Existing Code_](https://smile.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672/)
 
 ## Addressing poor code organization
 
@@ -100,13 +101,13 @@ The best way I've found for reading code is to refactor and test as I go. Famed 
 
 Very little of the code in `cli.py` related to reading or writing from the command line. It consisted of a single class called `Cli` with the following methods:
 
-* `run`
-* `generate_data`
-* `parseNumbers`
-* `matchUp`
-* `addPrefixes`
-* `bestTag`
-* `_parse_args`
+- `run`
+- `generate_data`
+- `parseNumbers`
+- `matchUp`
+- `addPrefixes`
+- `bestTag`
+- `_parse_args`
 
 My first order of business was to slim down the `Cli` class so that it formed a more logical abstraction of a command-line interface.
 
@@ -138,15 +139,15 @@ Once I discovered that most of `Cli`'s methods could live in another module, I h
 
 I realized that `Cli` called all of the other functions within the loop body of `generate_data`. If I extracted that code to a new function, `Cli` would need access only to the new function and none of its previous methods.
 
-{{< img src="function-diff.png" alt="Diff from YAPF changes" caption="Extracting loop body from `generate_data` into a new function called `translate_row`" maxWidth="614px" hasBorder="True" >}}
+{{<img src="function-diff.png" alt="Diff from YAPF changes" caption="Extracting loop body from `generate_data` into a new function called `translate_row`" maxWidth="614px" hasBorder="True">}}
 
 This change made the `Cli` class slimmer and more logically cohesive. It now consisted of just two public methods and one private one:
 
-* `run`
-* `generate_data`
-* `_parse_args`
+- `run`
+- `generate_data`
+- `_parse_args`
 
-It still wasn't perfect, but it was better than the previous, bloated interface. There were certainly many more changes that I *wanted* to make, but those would have to wait.
+It still wasn't perfect, but it was better than the previous, bloated interface. There were certainly many more changes that I _wanted_ to make, but those would have to wait.
 
 To minimize the probability of mistakes, I kept tight scope for each pull request in the refactoring. When moving code between files, it's especially important to minimize change because the move itself makes it hard to notice line-level modifications.
 
@@ -179,9 +180,9 @@ flour\tI3\tL4\tNoCAP\tNoPAREN\tB-NAME
 
 I still didn't fully understand what this function did, but the unit test brought me closer. I saw that it processed the library's training data, which was in a CSV file that looked like this:
 
-| index | input | name | qty | range_end | unit | comment|
-|--------|--------|--------|-----|--------------|------|-------------|
-| 162 | 2 cups flour | flour | 2.0 | 0.0 | cup |
+| index | input        | name  | qty | range_end | unit | comment |
+| ----- | ------------ | ----- | --- | --------- | ---- | ------- |
+| 162   | 2 cups flour | flour | 2.0 | 0.0       | cup  |
 
 It returned a set of tab-separated values that the library's machine learning engine understood.
 
@@ -191,11 +192,11 @@ I [added a few more unit tests](https://github.com/mtlynch/ingredient-phrase-tag
 
 Unit tests aren't much fun unless they're integrated into the build process, so I [updated my build script](https://github.com/mtlynch/ingredient-phrase-tagger/pull/50) to include them:
 
-{{< img src="unittest-build.png" alt="Screenshot of diff to add unit test command to build" caption="Adding unit test execution to build script" maxWidth="525px" hasBorder="True" >}}
+{{<img src="unittest-build.png" alt="Screenshot of diff to add unit test command to build" caption="Adding unit test execution to build script" maxWidth="525px" hasBorder="True">}}
 
 Because Travis continuous integration was already running my build script on every code change, I saw the unit test output on [the next Travis build](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390):
 
-{{< img src="travis-unit-tests.png" alt="Unit test logging output" caption="Unit test logging in [Travis' build output](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390)" maxWidth="715px" >}}
+{{<img src="travis-unit-tests.png" alt="Unit test logging output" caption="Unit test logging in [Travis' build output](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390)" maxWidth="715px">}}
 
 ## Adding code coverage
 
@@ -218,7 +219,7 @@ after_success:
 
 I checked Coveralls, eager to see my code coverage stats, and...
 
-{{< img src="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" caption="Coveralls shows no code coverage information" maxWidth="697px" hasBorder="True" >}}
+{{<img src="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" caption="Coveralls shows no code coverage information" maxWidth="697px" hasBorder="True">}}
 
 Nothing.
 
@@ -239,7 +240,7 @@ after_success:
 
 Still, the Coveralls dashboard showed nothing:
 
-{{< img src="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" caption="Coveralls *still* shows no code coverage information" maxWidth="697px" hasBorder="True" >}}
+{{<img src="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" caption="Coveralls _still_ shows no code coverage information" maxWidth="697px" hasBorder="True">}}
 
 However, [the Travis build](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/415474978) printed output that didn't appear in previous builds:
 
@@ -260,10 +261,10 @@ That's when I realized there was another problem.
 
 Travis and Docker had conflicting views of the filesystem. For example, here is how they each saw the `cli.py` file:
 
-| Environment | File path |
-|----|----|
-| Docker container | `/app/ingredient_phrase_tagger/training/cli.py` |
-| Travis | `/home/travis/ingredient_phrase_tagger/training/cli.py` |
+| Environment      | File path                                               |
+| ---------------- | ------------------------------------------------------- |
+| Docker container | `/app/ingredient_phrase_tagger/training/cli.py`         |
+| Travis           | `/home/travis/ingredient_phrase_tagger/training/cli.py` |
 
 Given that, the error message that `coveralls` printed in Travis made more sense:
 
@@ -279,11 +280,11 @@ How could I bridge the gap between these two different environments with incompa
 
 In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) that discussed combining paths from multiple filesystems:
 
-{{< img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) of `coverage` command" maxWidth="712px" hasBorder="True" linkUrl="https://coverage.readthedocs.io/en/latest/config.html#paths" >}}
+{{<img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) of `coverage` command" maxWidth="712px" hasBorder="True" linkUrl="https://coverage.readthedocs.io/en/latest/config.html#paths">}}
 
 To use these options, I created the following `.coveragerc` file:
 
-{{< inline-file filename="coveragerc" language="ini" >}}
+{{< inline-file filename="coveragerc" language="ini">}}
 
 My new solution ran the `coverage` command within the Docker container, then executed the [`coverage combine` feature](https://coverage.readthedocs.io/en/latest/cmd.html#cmd-combining) in the Travis environment, which canonicalized all of the paths to the Travis filesystem.
 
@@ -304,7 +305,7 @@ after_success:
 
 I put [my full solution](https://github.com/mtlynch/ingredient-phrase-tagger/pull/51) to the test. Finally, Coveralls received the results and [displayed my code coverage numbers](https://coveralls.io/jobs/39262596):
 
-{{< img src="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" caption="Coveralls finally shows code coverage information." maxWidth="697px" hasBorder="True" linkUrl="https://coveralls.io/jobs/39262596" >}}
+{{<img src="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" caption="Coveralls finally shows code coverage information." maxWidth="697px" hasBorder="True" linkUrl="https://coveralls.io/jobs/39262596">}}
 
 ## I pronounce this library resurrected
 
@@ -312,23 +313,23 @@ After integrating code coverage tracking, I felt like this library was alive aga
 
 Throughout this series of blog posts, I described how I improved the library in small, discrete steps. This minimized the potential for bugs but perhaps obscured the bigger picture. For a bit of perspective, allow me to review the high-level improvements I made to the library in the process of resurrecting it:
 
-| Before | After |
-|----------|--------|
-| Builds only on OS X | [Builds in any environment that supports Docker](/resurrecting-1/#making-it-easier) |
-| No end-to-end tests | Has a thorough [end-to-end test](/resurrecting-2/#adding-an-end-to-end-test) |
-| No unit tests | Has a small number of [unit tests](/resurrecting-3/#my-first-unit-test) and an easy mechanism for adding more |
-| No code coverage information | Measures [code coverage](/resurrecting-3/#code-coverage-at-last) on every commit and maintains coverage history over time |
-| No automated builds | [Builds and tests code automatically](/resurrecting-2/#running-it-in-continuous-integration) on every commit |
-| Inconsistent code style | [Enforces style conventions](/resurrecting-3/#enforcing-whitespace-conventions) via automated tools |
-| Developers must identify unused imports and uninitialized variables manually | [Applies static analysis](/resurrecting-3/#adding-static-analysis) to catch careless errors automatically |
+| Before                                                                       | After                                                                                                                     |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Builds only on OS X                                                          | [Builds in any environment that supports Docker](/resurrecting-1/#making-it-easier)                                       |
+| No end-to-end tests                                                          | Has a thorough [end-to-end test](/resurrecting-2/#adding-an-end-to-end-test)                                              |
+| No unit tests                                                                | Has a small number of [unit tests](/resurrecting-3/#my-first-unit-test) and an easy mechanism for adding more             |
+| No code coverage information                                                 | Measures [code coverage](/resurrecting-3/#code-coverage-at-last) on every commit and maintains coverage history over time |
+| No automated builds                                                          | [Builds and tests code automatically](/resurrecting-2/#running-it-in-continuous-integration) on every commit              |
+| Inconsistent code style                                                      | [Enforces style conventions](/resurrecting-3/#enforcing-whitespace-conventions) via automated tools                       |
+| Developers must identify unused imports and uninitialized variables manually | [Applies static analysis](/resurrecting-3/#adding-static-analysis) to catch careless errors automatically                 |
 
 ## Refactor one to throw away
 
 Given how proud I was of these changes, it may surprise you to learn that after a few more weeks of improving the code, I abandoned it in favor of a total rewrite.
 
->...plan to throw one away; you will, anyhow.
+> ...plan to throw one away; you will, anyhow.
 >
->-Fred Brooks, [*The Mythical Man-Month: Essays on Software Engineering*](https://smile.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/)
+> -Fred Brooks, [_The Mythical Man-Month: Essays on Software Engineering_](https://smile.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/)
 
 The more I refactored the code, the more I recognized problems with its fundamental architectural. That doesn't mean that I wasted effort in improving the code &mdash; I needed to get my hands dirty to develop a deep understanding. Once I understood everything, I felt comfortable rewriting it from scratch for better maintainability and performance.
 
@@ -336,7 +337,7 @@ The result was a service called [Zestful](https://zestfuldata.com). It offers fu
 
 If you'd like to see Zestful in action, check out the [live demo](https://zestfuldata.com/demo):
 
-{{< img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" maxWidth="800px" hasBorder="True" linkUrl="https://zestfuldata.com/demo" >}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" maxWidth="800px" hasBorder="True" linkUrl="https://zestfuldata.com/demo">}}
 
 If you're a developer and you work on software that handles recipe ingredients, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
 
@@ -344,4 +345,4 @@ If you're a developer and you work on software that handles recipe ingredients, 
 
 ---
 
-*Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com).*
+_Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

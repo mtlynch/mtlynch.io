@@ -8,10 +8,10 @@ images:
 
 ## Highlights
 
-* TinyPilots revenues dropped for the first time in six months.
-* TinyPilot finished the month with $33k in revenue, a 21% drop from January.
-* One of the critical TinyPilot parts I need suddenly disappeared from vendors.
-* Delegating work to others is paradoxically leaving me with less free time.
+- TinyPilots revenues dropped for the first time in six months.
+- TinyPilot finished the month with $33k in revenue, a 21% drop from January.
+- One of the critical TinyPilot parts I need suddenly disappeared from vendors.
+- Delegating work to others is paradoxically leaving me with less free time.
 
 ## Goal Grades
 
@@ -19,8 +19,8 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Attract five bloggers or YouTubers to a TinyPilot affiliate program
 
-* **Result**: Failed to even launch an affiliate program
-* **Grade**: D
+- **Result**: Failed to even launch an affiliate program
+- **Grade**: D
 
 I thought this would be easy. I use Shopify as my payments backend, and there are tons of Shopify apps that let you create affiliate programs. I only realized after trying to create an affiliate program that every option requires you to [hand over all of your customers' personal information](https://twitter.com/deliberatecoder/status/1360284765149085699) to the affiliate app.
 
@@ -28,21 +28,21 @@ Instead, I'm rolling my own, which I'm hoping is [as simple as it seems](https:/
 
 ### Add two features to TinyPilot that reduce support or manufacturing costs
 
-* **Result**: I added three features to the app and two features to the website that reduce support costs
-* **Grade**: B
+- **Result**: I added three features to the app and two features to the website that reduce support costs
+- **Grade**: B
 
 I added three new convenience features to TinyPilot, but I haven't yet cut an official release that includes them:
 
-* Update TinyPilot through the web UI
-* Change hostname through the web UI
-* View debug logs from the web UI
+- Update TinyPilot through the web UI
+- Change hostname through the web UI
+- View debug logs from the web UI
 
 I also added a [support forum](https://forum.tinypilotkvm.com) and [frequently asked questions pages](https://tinypilotkvm.com/faq?ref=mtlynch.io), both of which I should have added a long time ago. They both help users answer their own questions instead of relying on me for private email support.
 
 ### Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot
 
-* **Result**: Collected feedback from zero customers
-* **Grade**: D
+- **Result**: Collected feedback from zero customers
+- **Grade**: D
 
 Sketching out a rack-mounted TinyPilot took longer than I expected. I'm days away from a preview document I can show customers to solicit feedback.
 
@@ -121,13 +121,13 @@ On the other hand, I may be managing time optimally. I've been focusing on deleg
 
 I haven't tried to delegate customer service, as I think a significant part of TinyPilot's appeal is that customers identify me as personally responsible for the business. With an enterprise KVM vendor, you'd never get in touch with an engineer, much less the CEO.
 
-That said, I don't want to be *so* accessible that I spend all my time responding to customer emails. I'm trying to find ways to stay accessible but provide easier ways for customers to solve their problems than by emailing me.
+That said, I don't want to be _so_ accessible that I spend all my time responding to customer emails. I'm trying to find ways to stay accessible but provide easier ways for customers to solve their problems than by emailing me.
 
 Here are my plans for reducing my customer support workload:
 
-* Adjust language around support documentation to tell users that I prioritize support forum posts over requests to my direct email.
-* Add FAQ articles for repeated support questions.
-* Allocate more development toward bugfixes and usability features.
+- Adjust language around support documentation to tell users that I prioritize support forum posts over requests to my direct email.
+- Add FAQ articles for repeated support questions.
+- Allocate more development toward bugfixes and usability features.
 
 ## Legacy projects
 
@@ -196,29 +196,29 @@ All the tools have [a steep learning curve](https://twitter.com/deliberatecoder/
 
 ### What got done?
 
-* Hired three freelance developers for TinyPilot
-  * Two work 10-15 hours/week on the product, and one works 3-5 hours/week on the website
-* Created a TinyPilot support forum and FAQ
-* Reached feature complete on TinyPilot's next release
-* Published ["My Third Year as a Solo Developer,"](/solo-developer-year-3/) which reached #1 on [/r/programming](https://www.reddit.com/r/programming/comments/la4hfq/my_third_year_as_a_solo_developer/) and [#7 on Hacker News](https://news.ycombinator.com/item?id=25989010)
-* Appeared as a guest on two podcasts:
-  * [The Hexdevs Podcast](https://www.hexdevs.com/posts/why-michael-lynch-left-his-job-at-google-to-become-a-solo-founder/), where I talked about financial independence
-  * [The Entrepreneurial Coder Podcast](https://www.ecpodcast.io/episodes/42-michael-lynch-how-to-hit-the-front-page-of-hacker-news), where I talked about blogging and Hacker News
+- Hired three freelance developers for TinyPilot
+  - Two work 10-15 hours/week on the product, and one works 3-5 hours/week on the website
+- Created a TinyPilot support forum and FAQ
+- Reached feature complete on TinyPilot's next release
+- Published ["My Third Year as a Solo Developer,"](/solo-developer-year-3/) which reached #1 on [/r/programming](https://www.reddit.com/r/programming/comments/la4hfq/my_third_year_as_a_solo_developer/) and [#7 on Hacker News](https://news.ycombinator.com/item?id=25989010)
+- Appeared as a guest on two podcasts:
+  - [The Hexdevs Podcast](https://www.hexdevs.com/posts/why-michael-lynch-left-his-job-at-google-to-become-a-solo-founder/), where I talked about financial independence
+  - [The Entrepreneurial Coder Podcast](https://www.ecpodcast.io/episodes/42-michael-lynch-how-to-hit-the-front-page-of-hacker-news), where I talked about blogging and Hacker News
 
 ### Lessons learned
 
-* Even commodity parts can disappear overnight.
-  * I was conscious of the risk I carried by depending on one specific type of HDMI capture chip.
-  * I felt the risk was low given that there were dozens of vendors selling the chip, many of whom reported 1000+ in stock at any given time.
-  * Worse comes to worst, I could switch to an alternative board with the same chipset, of which there were several.
-  * When the shortage happened, it broke both my assumptions. All vendors ran out at the same time of all board variants, which exposed that vendors are less independent than they seem.
-* Prepare more for Chinese New Year
-  * I expected slow responses for a week or so, but most vendors were shut down for the majority of February.
-  * In the future, I'll plan for Chinese vendors to be totally unavailable and unable to ship new parts from the start of February until the end of March.
+- Even commodity parts can disappear overnight.
+  - I was conscious of the risk I carried by depending on one specific type of HDMI capture chip.
+  - I felt the risk was low given that there were dozens of vendors selling the chip, many of whom reported 1000+ in stock at any given time.
+  - Worse comes to worst, I could switch to an alternative board with the same chipset, of which there were several.
+  - When the shortage happened, it broke both my assumptions. All vendors ran out at the same time of all board variants, which exposed that vendors are less independent than they seem.
+- Prepare more for Chinese New Year
+  - I expected slow responses for a week or so, but most vendors were shut down for the majority of February.
+  - In the future, I'll plan for Chinese vendors to be totally unavailable and unable to ship new parts from the start of February until the end of March.
 
 ### Goals for next month
 
-* Hire two local part-time employees to begin taking over order fulfillment.
-  * TinyPilot's current fulfillment manager goes back to grad school in June.
-* Attract five bloggers or YouTubers to a TinyPilot affiliate program.
-* Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot.
+- Hire two local part-time employees to begin taking over order fulfillment.
+  - TinyPilot's current fulfillment manager goes back to grad school in June.
+- Attract five bloggers or YouTubers to a TinyPilot affiliate program.
+- Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot.

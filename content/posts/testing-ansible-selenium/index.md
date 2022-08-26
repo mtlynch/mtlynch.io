@@ -1,13 +1,13 @@
 ---
 title: Testing Ansible Web App Roles with Selenium
 tags:
-- ansible
-- clipbucket
-- docker
+  - ansible
+  - clipbucket
+  - docker
 description: A way to perform strong tests on Ansible web app roles
-date: '2016-09-25'
+date: "2016-09-25"
 images:
-- testing-ansible-selenium/bunny-film-error.png
+  - testing-ansible-selenium/bunny-film-error.png
 ---
 
 ## Overview
@@ -31,9 +31,9 @@ curl -s "${container_ip}"  \
 
 This is a useful test, as it verifies a few important properties of our web app, namely:
 
-* Web server is listening on port 80
-* Web server is responding to user requests
-* Web server is serving the ClipBucket landing page
+- Web server is listening on port 80
+- Web server is responding to user requests
+- Web server is serving the ClipBucket landing page
 
 ## Why We Need Better Tests
 
@@ -65,13 +65,13 @@ index 8542ffc..e9d42c0 100644
 
 If we deploy using this modified playbook, then browse to the target server, everything appears to be normal:
 
-{{< img src="clipbucket-no-error.png" alt="ClipBucket no error" >}}
+{{<img src="clipbucket-no-error.png" alt="ClipBucket no error">}}
 
 All installation tasks succeed and we see the ClipBucket landing page. What's the problem?
 
 Let's try uploading a video. Everything works until we try to view it:
 
-{{< img src="bunny-film-error.png" alt="Video error screenshot" >}}
+{{<img src="bunny-film-error.png" alt="Video error screenshot">}}
 
 Because we deleted the task in our playbook that creates a symlink to ffmpeg, ClipBucket fails to transcode videos into a streamable format.
 
@@ -83,9 +83,9 @@ Fortunately, we can use [Selenium](http://docs.seleniumhq.org/). Selenium is a w
 
 We'll need to install a few components on our Ansible control machine to get started with Selenium:
 
-* [**Selenium Python Package**](https://pypi.python.org/pypi/selenium) - We'll be using the Python API, and this package gets us the Selenium framework and Python bindings.
-* **Firefox** - We need a browser for Selenium to drive. While Selenium works with most major browsers, it supports Firefox natively.
-* **xvfb** - Because we'll be running this test on a VM without a real display, we'll use xvfb as a virtual display, so that Firefox thinks it's running on a monitor.
+- [**Selenium Python Package**](https://pypi.python.org/pypi/selenium) - We'll be using the Python API, and this package gets us the Selenium framework and Python bindings.
+- **Firefox** - We need a browser for Selenium to drive. While Selenium works with most major browsers, it supports Firefox natively.
+- **xvfb** - Because we'll be running this test on a VM without a real display, we'll use xvfb as a virtual display, so that Firefox thinks it's running on a monitor.
 
 We can create a fairly [simple playbook](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tests/install_selenium.yml) for this. The only part that was a bit difficult was that xvfb requires an init script that's non-obvious. Fortunately, blogger Cory Klein wrote [a post](http://coryklein.com/ansible/2015/10/09/using-ansible-to-install-google-chrome.html) last year that gives an example of an xvfb init script and using his example, we are able to [create one](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tests/templates/xvfb-init.d.j2) for our needs.
 
@@ -93,16 +93,16 @@ We can create a fairly [simple playbook](https://github.com/mtlynch/ansible-role
 
 Now that we have Selenium installed, it's time to create a Selenium script to exercise our web app. There are many possibilities for web flows we might like to verify, such as:
 
-* Logging in
-* Uploading a video and playing it back
-* Making a comment on a video and checking that it displays
-* Creating a new user account
+- Logging in
+- Uploading a video and playing it back
+- Making a comment on a video and checking that it displays
+- Creating a new user account
 
 For ClipBucket, I'm particularly interested in making sure videos upload correctly, so we'll need to test login and video upload. Unfortunately, ClipBucket uses a heavyweight JavaScript package for managing uploads, so the normal Selenium APIs for uploading files don't work.
 
 As an alternative, we'll use the ClipBucket modules diagnostic page. It displays ClipBucket's installed modules and displays an error message when any of the modules are not installed properly:
 
-{{< img src="clipbucket-module-view.png" alt="ClipBucket modules view" >}}
+{{<img src="clipbucket-module-view.png" alt="ClipBucket modules view">}}
 
 We can use this page in lieu of a video upload flow to verify that all modules are installed properly.
 
@@ -115,8 +115,8 @@ Now that we know what functionality we want to exercise, we can sketch out the w
 
 This will give us automated verification of some additional functionality that we were not exercising in our basic tests:
 
-* User login is working (which means that ClipBucket can successfully access the database)
-* ClipBucket can access its tool dependencies
+- User login is working (which means that ClipBucket can successfully access the database)
+- ClipBucket can access its tool dependencies
 
 ## Automating Web Flow
 
@@ -126,7 +126,7 @@ To automate browser actions in Selenium, we need to tell Selenium which URL to l
 
 To log in, we need to find the credential fields on the login page, enter our username and password, then push the "Login" button. Fortunately, the username and password fields have an `id` attribute, making it very easy to identify them on the page. The "Login" button does not have an `id` attribute, but it does have a `name` attribute of `login` which is unique on the page, allowing us to use that as a unique identifier:
 
-{{< img src="clipbucket-login-fields.png" alt="ClipBucket login fields" >}}
+{{<img src="clipbucket-login-fields.png" alt="ClipBucket login fields">}}
 
 We locate these fields and enter the login credentials in the following [code snippet](https://github.com/mtlynch/ansible-role-clipbucket/blob/3afec13b7b68eb38d4ffe930f73116278fdcf455/tests/clipbucket_driver/clipbucket_driver.py#L40...L53):
 
@@ -152,7 +152,7 @@ This is tricky because none of the elements we're interested in (or their parent
 
 After we find the boxes, we need to determine whether the box indicates a successful module install or a problem. We can do this by either looking for indicators of success or verifying that the elements lack indicators of failure. The former is a bit more rigorous, but the latter is simpler to code. Boxes with error messages always contain an element with `class="alert"` attribute, so we can identify successful boxes if they do not have any child elements with this class.
 
-{{< img src="clipbucket-module-error.png" alt="ClipBucket module error" >}}
+{{<img src="clipbucket-module-error.png" alt="ClipBucket module error">}}
 
 We can do this with the following [code snippet](https://github.com/mtlynch/ansible-role-clipbucket/blob/3afec13b7b68eb38d4ffe930f73116278fdcf455/tests/clipbucket_driver/clipbucket_driver.py#L55...L71).
 

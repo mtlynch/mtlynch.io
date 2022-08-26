@@ -1,19 +1,19 @@
 ---
 title: Pursuing a Business I'll Love
 description: Two of my businesses had record-setting months, and I'm finally building the app I've always wanted.
-date: '2020-01-06'
+date: "2020-01-06"
 images:
-- /retrospectives/2020/01/wanderjest.png
+  - /retrospectives/2020/01/wanderjest.png
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=21990409
 ---
 
 ## Highlights
 
-* Zestful had its biggest month ever, with $3,936 in revenue.
-* Is It Keto also had its best month ever, at $393 in revenue.
-* After lots of research and customer interviews, I gave up on my idea for creating sheet metal software.
-* I published my first version of an app for finding live comedy.
+- Zestful had its biggest month ever, with $3,936 in revenue.
+- Is It Keto also had its best month ever, at $393 in revenue.
+- After lots of research and customer interviews, I gave up on my idea for creating sheet metal software.
+- I published my first version of an app for finding live comedy.
 
 ## Goal Grades
 
@@ -21,22 +21,22 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 
 ### Conduct five customer interviews
 
-* **Result**: Conducted four customer interviews.
-* **Grade**: B+
+- **Result**: Conducted four customer interviews.
+- **Grade**: B+
 
 I researched and visited several sheet metal shops in my area. Of the seven I visited, four agreed to speak with me.
 
 ### Publish a new blog post explaining the details of my [Hello World using Vue pre-rendering](https://github.com/mtlynch/hello-world-vue-pre-rendered)
 
-* **Result**: I published "[A Simple Pre-Rendered Web App Using Vue + Nuxt](/simple-vue-pre-rendered/)."
-* **Grade**: A
+- **Result**: I published "[A Simple Pre-Rendered Web App Using Vue + Nuxt](/simple-vue-pre-rendered/)."
+- **Grade**: A
 
 I was pleased with this blog post in that it explained the problem and solution clearly, but it didn't gain much of an audience. I'm holding out hope that this is a "slow-burn" kind of post. It's never going to trend on Hacker News or Reddit, but it's what you'd hope to find if you Google "vue pre-rendering."
 
 ### Publish two new Is It Keto articles
 
-* **Result**: Published eight new Is It Keto articles.
-* **Grade**: A+
+- **Result**: Published eight new Is It Keto articles.
+- **Grade**: A+
 
 In anticipation of a surge in traffic in January, I offered my writer additional December hours, so we ended up producing many more articles than usual.
 
@@ -55,7 +55,7 @@ In anticipation of a surge in traffic in January, I offered my writer additional
 | Ranking Keywords (Moz)    | 1,654         | 2,979         | <font color="green">+1,325 (+80%)</font>       |
 | AdSense Earnings          | $151.07       | $235.71       | <font color="green">+$84.64 (+56%)</font>      |
 | Amazon Affiliate Earnings | $118.00       | $157.08       | <font color="green">+$39.08 (+33%)</font>      |
-| **Total Revenue**        | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
+| **Total Revenue**         | **$269.07**   | **$392.79**   | **<font color="green">+$123.72 (+46%)</font>** |
 
 This was a record month for Is It Keto, beating out the previous record of [$379.80 in August 2019](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg).
 
@@ -71,13 +71,13 @@ The revenue was a bit of a surprise given that traffic has been waning for the p
 | Total Pageviews          | 320           | 594           | <font color="green">+274 (+86%)</font>            |
 | RapidAPI Earnings        | $65.33        | $52.24        | <font color="red">-$13.09 (-20%)</font>           |
 | Enterprise Plan Earnings | $0.00         | $3883.70      | <font color="green">+$3883.70 (+inf%)</font>      |
-| **Total Revenue**       | **$65.33**    | **$3935.94**  | **<font color="green">+$3870.61 (+5925%)</font>** |
+| **Total Revenue**        | **$65.33**    | **$3935.94**  | **<font color="green">+$3870.61 (+5925%)</font>** |
 
 December was a huge month for Zestful. A fast-moving startup told me that Zestful was exactly what they needed. We hopped on a call that same day, they tested it out using the standard plan, and then purchased an enterprise plan two days later. It was Zestful's biggest sale ever, and it more than doubled my total business revenue for the year. They've been satisfied with the service so far, so I hope they continue working with Zestful on a recurring basis.
 
 Last month, I [got all excited](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite) because I thought that rewriting the Zestful website as a static site would improve its SEO. Sadly, Google Search Console suggests that it had a negligible impact:
 
-{{< img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." maxWidth="704px" hasBorder="True" >}}
+{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." maxWidth="704px" hasBorder="True">}}
 
 Still, the enterprise customer approached me only a few days after I rewrote the site, so I can pretend to myself that the rewrite was responsible for ~$3.9k in additional revenue.
 
@@ -85,13 +85,13 @@ Still, the enterprise customer approached me only a few days after I rewrote the
 
 At the end of November, I met the owner of a [sheet metal shop](/retrospectives/2019/12/#interviewing-machine-shops) who was interested in talking with me about creating software specifically for sheet metal producers.
 
-{{< img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" maxWidth="600px" >}}
+{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" maxWidth="600px">}}
 
 Software for sheet metal shops ticked a lot of my boxes:
 
-* It's an industry that earns a lot of money, but it's un-sexy and not very tech-connected, so it could be a hidden gem.
-* It seems to be more common in my area than in big cities, so I'd have an advantage over more mainstream software companies.
-* I had at least one customer who was engaged and interested in teaching me about the space and open to piloting new software.
+- It's an industry that earns a lot of money, but it's un-sexy and not very tech-connected, so it could be a hidden gem.
+- It seems to be more common in my area than in big cities, so I'd have an advantage over more mainstream software companies.
+- I had at least one customer who was engaged and interested in teaching me about the space and open to piloting new software.
 
 I spent most of December researching existing solutions and visiting sheet metal shops to request interviews.
 
@@ -99,18 +99,15 @@ I spent most of December researching existing solutions and visiting sheet metal
 
 One of my most interesting interviews was with a shop owner who described himself as technically illiterate. He told me that he was currently paying thousands of dollars per year for <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>, a general-purpose enterprise planning application for mid-sized machine shops.
 
-{{< img src="shoptech.png" alt="Screenshot of E2 ShopTech software" maxWidth="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops." hasBorder="true" >}}
+{{<img src="shoptech.png" alt="Screenshot of E2 ShopTech software" maxWidth="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops." hasBorder="true">}}
 
-The owner seemed satisfied with his software but said that he only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [*Start Small, Stay Small*](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
+The owner seemed satisfied with his software but said that he only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [_Start Small, Stay Small_](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
 
 The owner had repeatedly said he didn't like dealing with software, so I thought offering a simpler solution would be a slam dunk:
 
->**Me**: What if I made something that just focused on the 2% that you use, so that there's less complexity?<br>
-**Owner**: Wouldn't be interested.<br>
-**Me**: Really? Why not?<br>
-**Owner**: Because ShopTech already has everything we could ever need built-in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch, and we have all the ISO 9001 features we need. If you made something that's only what we use **now**, we'd be stuck.
+> **Me**: What if I made something that just focused on the 2% that you use, so that there's less complexity?<br> > **Owner**: Wouldn't be interested.<br> > **Me**: Really? Why not?<br> > **Owner**: Because ShopTech already has everything we could ever need built-in. Suppose we get ISO 9001 certified. With ShopTech, we just flip a switch, and we have all the ISO 9001 features we need. If you made something that's only what we use **now**, we'd be stuck.
 
-It made me realize that there's some nuance to the idea that people want software that perfectly matches their use case. The example in *Start Small, Stay Small* is that if you design accounting software specifically for web designers, your target audience will choose you over general-purpose accounting software like Xero or QuickBooks, even if you're more expensive. But that works because web designers' accounting needs stay relatively static. Even if they drastically change the jobs they take on, they likely don't need to change much about their accounting software.
+It made me realize that there's some nuance to the idea that people want software that perfectly matches their use case. The example in _Start Small, Stay Small_ is that if you design accounting software specifically for web designers, your target audience will choose you over general-purpose accounting software like Xero or QuickBooks, even if you're more expensive. But that works because web designers' accounting needs stay relatively static. Even if they drastically change the jobs they take on, they likely don't need to change much about their accounting software.
 
 When software is more core to a business, they're more likely to want room to grow. I do the same thing in my own work. There are niche platforms like [Heroku](https://heroku.com/) and [Netlify](https://www.netlify.com/) that cater to developers with simple use cases, but I build almost everything on Google Cloud Platform. It's often frustratingly complex, but I'm unlikely to find features gaps because it has so many services built-in, even if I currently only use 1% of them.
 
@@ -126,9 +123,9 @@ Given that some of these businesses have been operating for 70+ years, I see why
 
 I had hoped that the software industry had ignored sheet metal shops so completely that they'd be doing everything on paper or in Excel spreadsheets. And while there is indeed a dearth of software specifically for sheet metal shops, there's plenty of software for machine shops, and sheet metal shops are a type of machine shop:
 
-* <a href="https://jobboss.com/" rel="nofollow">JobBoss</a>: Entry-level, general-purpose machine shop software
-* <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>: Mid-range, general-purpose machine shop software
-* <a href="https://www.paperlessparts.com/" rel="nofollow">Paperless Parts</a>: Specifically for job estimation
+- <a href="https://jobboss.com/" rel="nofollow">JobBoss</a>: Entry-level, general-purpose machine shop software
+- <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>: Mid-range, general-purpose machine shop software
+- <a href="https://www.paperlessparts.com/" rel="nofollow">Paperless Parts</a>: Specifically for job estimation
 
 The existing competitors weren't dealbreakers because:
 
@@ -147,7 +144,7 @@ Before I officially closed the door on the sheet metal app, I attended a [startu
 
 They were skeptical about the sheet metal app. Heather worried that it would be hard for me to remain passionate about sheet metal since it's so outside of my interests. Brian asked me if I was considering any other ideas.
 
->Well, there's one I've always wanted to build, but I can't figure out a way for it to make money...
+> Well, there's one I've always wanted to build, but I can't figure out a way for it to make money...
 
 They were intrigued.
 
@@ -160,16 +157,16 @@ Finding shows was always a challenge for two reasons:
 
 I wished for an app like <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 
-{{< img src="bandsintown.png" alt="Screenshot of Bandsintown website" maxWidth="700px" hasBorder="True" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby." >}}
+{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" maxWidth="700px" hasBorder="True" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
 
-Brian and Heather found this idea exciting.  What's more, they saw that it energized *me*. "Look at the way you light up when you talk about that idea!" Heather said. "You're so much more excited about that than the sheet metal idea." Still, I was apprehensive. Most comedians earn very little, so how could a new business in this space earn enough to survive?
+Brian and Heather found this idea exciting. What's more, they saw that it energized _me_. "Look at the way you light up when you talk about that idea!" Heather said. "You're so much more excited about that than the sheet metal idea." Still, I was apprehensive. Most comedians earn very little, so how could a new business in this space earn enough to survive?
 
-Brian pointed out that *someone* has to be making money in comedy. Maybe it's not local comedians, but there are larger comedians, venues, promoters, etc. What convinced me was the number of different possible revenue streams he saw:
+Brian pointed out that _someone_ has to be making money in comedy. Maybe it's not local comedians, but there are larger comedians, venues, promoters, etc. What convinced me was the number of different possible revenue streams he saw:
 
-* The app could be like SquareSpace but specialized for comedians who want a simple way to manage their web presence.
-* I could sell event data to larger providers who want information about entertainment options in a particular city.
-* Venues could pay me a referral fee for tickets sold through my site.
-* Venues or performers could pay for a featured position in my listings (similar to sponsored results in Google or Yelp).
+- The app could be like SquareSpace but specialized for comedians who want a simple way to manage their web presence.
+- I could sell event data to larger providers who want information about entertainment options in a particular city.
+- Venues could pay me a referral fee for tickets sold through my site.
+- Venues or performers could pay for a featured position in my listings (similar to sponsored results in Google or Yelp).
 
 These options would make it easy for me to pivot to different strategies if one idea didn't work.
 
@@ -177,15 +174,15 @@ These options would make it easy for me to pivot to different strategies if one 
 
 After only five days of development, I had a minimum viable product (MVP) for my app, WanderJest:
 
-{{< img src="wanderjest.png" alt="Screenshot of WanderJest website" hasBorder="True" caption="My initial version of [WanderJest](https://wanderjest.com), an app for discovering local live comedy." >}}
+{{<img src="wanderjest.png" alt="Screenshot of WanderJest website" hasBorder="True" caption="My initial version of [WanderJest](https://wanderjest.com), an app for discovering local live comedy.">}}
 
 It's currently just a directory of shows and comedians performing in the Western Massachusetts area, but it's enough that people understand the idea and are excited about it.
 
 It's the fastest I've ever produced an MVP, and the speed is due to my experience over the last couple of years:
 
-* After [What Got Done](/tags/what-got-done/), I gained comfort in the [Vue web framework](https://vuejs.org/), so it's easy for me to put together a prototype website quickly.
-* After [KetoHub](/tags/ketohub/), I learned not to get hung up on automating the data scraping step of building an aggregator. Instead, I added all the shows to WanderJest manually.
-  * There's no database; everything is hardcoded right in the source code (gross!).
+- After [What Got Done](/tags/what-got-done/), I gained comfort in the [Vue web framework](https://vuejs.org/), so it's easy for me to put together a prototype website quickly.
+- After [KetoHub](/tags/ketohub/), I learned not to get hung up on automating the data scraping step of building an aggregator. Instead, I added all the shows to WanderJest manually.
+  - There's no database; everything is hardcoded right in the source code (gross!).
 
 Of any business I've created, WanderJest has had the most traction out of the gate. So far, I've reached out to seven people (comedians, promoters, and venue owners), and everyone has agreed to speak with me. I already have one verbal agreement to run ads for a local comedy workshop in exchange for a percentage of any sales I generate.
 
@@ -201,24 +198,24 @@ I'm also going to be attending as many local shows as I can. Partly because it's
 
 ### What got done?
 
-* I created a minimum viable product for WanderJest.
-* I sold my biggest enterprise plan ever for Zestful.
-* I [ported](https://github.com/mtlynch/mtlynch.io/pull/500) this blog from Jekyll to Hugo
-  * It was a lot of [tedious work](https://github.com/mtlynch/migrate-mtlynch-to-hugo), but editing posts is [*so* much easier](https://twitter.com/deliberatecoder/status/1213966412793991168) now.
+- I created a minimum viable product for WanderJest.
+- I sold my biggest enterprise plan ever for Zestful.
+- I [ported](https://github.com/mtlynch/mtlynch.io/pull/500) this blog from Jekyll to Hugo
+  - It was a lot of [tedious work](https://github.com/mtlynch/migrate-mtlynch-to-hugo), but editing posts is [_so_ much easier](https://twitter.com/deliberatecoder/status/1213966412793991168) now.
 
 ### Lessons learned
 
-* Businesses don't always want apps that perfectly match their use cases.
-  * If it's a business that could easily grow in different directions, a small, simple feature set becomes a constraint.
-* Older businesses seem to value independence more highly and take fewer risks on SaaS providers.
-* There's value in a business idea that offers many directions to pivot.
+- Businesses don't always want apps that perfectly match their use cases.
+  - If it's a business that could easily grow in different directions, a small, simple feature set becomes a constraint.
+- Older businesses seem to value independence more highly and take fewer risks on SaaS providers.
+- There's value in a business idea that offers many directions to pivot.
 
 ### Goals for next month
 
-* Earn my first dollar of revenue from WanderJest.
-* Conduct eight interviews for WanderJest with comedians, bookers, promoters, and venue owners.
-* Publish a follow up to ["My First Year as a Solo Developer,"](/solo-developer-year-1/) about year two.
+- Earn my first dollar of revenue from WanderJest.
+- Conduct eight interviews for WanderJest with comedians, bookers, promoters, and venue owners.
+- Publish a follow up to ["My First Year as a Solo Developer,"](/solo-developer-year-1/) about year two.
 
 ---
 
-*Metal cutting photo by [Russ Ward](https://unsplash.com/@rssemfam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/metal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).*
+_Metal cutting photo by [Russ Ward](https://unsplash.com/@rssemfam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/metal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._

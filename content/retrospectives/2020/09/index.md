@@ -3,14 +3,14 @@ title: "TinyPilot: Month 2"
 date: 2020-09-02T14:00:00-04:00
 description: TinyPilot threw me a huge curveball, but things continue moving forward.
 images:
-- /retrospectives/2020/09/tinypilot-mouse-support.png
+  - /retrospectives/2020/09/tinypilot-mouse-support.png
 ---
 
 ## Highlights
 
-* I paused TinyPilot sales to address a design problem.
-* I'm manufacturing a custom USB power connector for TinyPilot.
-* Revenue across all my projects was among my strongest ever, at $3.6k total.
+- I paused TinyPilot sales to address a design problem.
+- I'm manufacturing a custom USB power connector for TinyPilot.
+- Revenue across all my projects was among my strongest ever, at $3.6k total.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Sell 30 TinyPilot kits
 
-* **Result**: Sold 16 TinyPilot kits
-* **Grade**: C
+- **Result**: Sold 16 TinyPilot kits
+- **Grade**: C
 
 I was on track to beat my goal, but then a [wrench got caught in the gears](#why-oh-y-cables), and I had to pause sales.
 
 ### Test three new marketing channels
 
-* **Result**: Didn't test any marketing channels
-* **Grade**: F
+- **Result**: Didn't test any marketing channels
+- **Grade**: F
 
 For the same reasons as above, I postponed marketing efforts until I had a product for sale again.
 
 ### Implement TinyPilot support for mouse integration
 
-* **Result**: [Added mouse support](https://github.com/tiny-pilot/tinypilot/pull/125) for TinyPilot
-* **Grade**: A
+- **Result**: [Added mouse support](https://github.com/tiny-pilot/tinypilot/pull/125) for TinyPilot
+- **Grade**: A
 
 This ended up being more difficult than I expected, but I completed the feature right at the end of the month. Integrating the mouse improved the user experience more than I anticipated.
 
@@ -41,12 +41,12 @@ This ended up being more difficult than I expected, but I completed the feature 
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric             | July 2020     | August 2020   | Change                                         |
-| ------------------ | ------------- | ------------- | ---------------------------------------------- |
-| Unique Visitors    | 4,930         | 2,284         | <font color="red">-2,646 (-54%)</font>         |
-| Total Pageviews    | 10,427        | 6,136         | <font color="red">-4,291 (-41%)</font>         |
-| Sales Revenue      | $8,741.37     | $3,030.74     | <font color="red">-$5,710.63 (-65%)</font>     |
-| Donations          | N/A           | $94.06        | <font color="green">+$94.06 (+inf%)</font>     |
+| Metric            | July 2020     | August 2020   | Change                                         |
+| ----------------- | ------------- | ------------- | ---------------------------------------------- |
+| Unique Visitors   | 4,930         | 2,284         | <font color="red">-2,646 (-54%)</font>         |
+| Total Pageviews   | 10,427        | 6,136         | <font color="red">-4,291 (-41%)</font>         |
+| Sales Revenue     | $8,741.37     | $3,030.74     | <font color="red">-$5,710.63 (-65%)</font>     |
+| Donations         | N/A           | $94.06        | <font color="green">+$94.06 (+inf%)</font>     |
 | **Total Revenue** | **$8,741.37** | **$3,124.80** | **<font color="red">-$5,616.57 (-64%)</font>** |
 
 Visits stats aren't as strong as when I had [a big surge](/retrospectives/2020/08/#aligning-my-blog-with-my-business-finally) from Hacker News last month, but I'm still pleased with the steady flow of potential customers.
@@ -71,7 +71,7 @@ I bought one, and it worked! It split the connection to the Raspberry Pi so that
 
 Power backflow? I wasn't even aware that could be an issue.
 
-It turned out that the Y-cable wasn't meant to connect to distinct power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. In practice, there's no guarantee that both will produce *exactly* 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the external power supply *backwards* into the computer's USB port, potentially overloading the port and damaging it permanently.
+It turned out that the Y-cable wasn't meant to connect to distinct power sources. In theory, both an external power source and a computer's USB port output 5 volts of power. In practice, there's no guarantee that both will produce _exactly_ 5 V. The USB power specification allows a range between 4.4 - 5.25 V, so if the computer's output dropped to 4.5 V, then current would flow from the external power supply _backwards_ into the computer's USB port, potentially overloading the port and damaging it permanently.
 
 As soon as the reader suggested this danger, I paused sales and hired an electrical engineering firm to investigate. They confirmed the risk existed, so I reached out to my customers and advised them to disconnect from external power until I found a solution. Fortunately, TinyPilot functions without external power, though it's less convenient.
 
@@ -83,9 +83,9 @@ Just a week ago, on August 27th, I asked TinyPilot's electrical engineering part
 
 Simultaneously, I'm working with a 3D printing design shop on an enclosure for the circuit board. The 3D printing firm completed their designs in two days, and they're in the process of printing the first three prototypes. Once they get going, they have the capacity to 3D print 50 enclosures per day.
 
-{{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast" >}}
-  {{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true" maxWidth="340px">}}
-  {{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true" maxWidth="420px">}}
+{{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast">}}
+{{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true" maxWidth="340px">}}
+{{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true" maxWidth="420px">}}
 {{</gallery>}}
 
 If everything goes well, the case and boards could be ready for customers as early as next week. That would mean that we went from zero to a completed physical product in just two weeks.
@@ -167,11 +167,11 @@ set -x
 sudo journalctl -u init-usb-gadget
 ```
 
-These dumb tools helped me in two ways. First, they gave me a sense of accomplishment when I felt like I was banging my head against the wall for days. Even though the HID descriptors weren't working, I was at least producing *some* code that did what I wanted. Next, they reduced my cognitive load and freed up more mental capacity to focus on the problem at hand. Instead of recalling the syntax for viewing the systemd logs, I could just type `~/show-systemd-log`.
+These dumb tools helped me in two ways. First, they gave me a sense of accomplishment when I felt like I was banging my head against the wall for days. Even though the HID descriptors weren't working, I was at least producing _some_ code that did what I wanted. Next, they reduced my cognitive load and freed up more mental capacity to focus on the problem at hand. Instead of recalling the syntax for viewing the systemd logs, I could just type `~/show-systemd-log`.
 
 It turned out that most of my problems weren't even HID descriptors but rather the shell commands I was using to create them. Once I cleared other tedious tasks from my mind, I realized that I should verify that the files on disk match my expectations. They didn't. Once I realized that, a working mouse descriptor soon followed.
 
-{{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop" >}}
+{{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop">}}
 
 ## Legacy projects
 
@@ -190,7 +190,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdThrive Earnings         | N/A         | $35.00      | N/A                                            |
 | Amazon Affiliate Earnings | $134.45     | $129.88     | <font color="red">-$4.57 (-3%)</font>          |
 | Other Affiliate Earnings  | $26.60      | $118.88     | <font color="green">+$92.28 (+347%)</font>     |
-| **Total Revenue**        | **$369.91** | **$486.22** | **<font color="green">+$116.31 (+31%)</font>** |
+| **Total Revenue**         | **$369.91** | **$486.22** | **<font color="green">+$116.31 (+31%)</font>** |
 
 Is It Keto grew a small amount this month, though I've been trying to focus all of my attention on TinyPilot, as the ROI is much higher there.
 
@@ -206,11 +206,11 @@ Finally, I convinced them to host the code on their side and cut me out of the d
 
 {{<revenue-graph project="zestful">}}
 
-| Metric             | July 2020  | August 2020 | Change                                     |
-| ------------------ | ---------- | ----------- | ------------------------------------------ |
-| Unique Visitors    | 440        | 324         | <font color="red">-116 (-26%)</font>       |
-| Total Pageviews    | 1,247      | 841         | <font color="red">-406 (-33%)</font>       |
-| RapidAPI Earnings  | $18.05     | $9.36       | <font color="red">-$8.69 (-48%)</font>     |
+| Metric            | July 2020  | August 2020 | Change                                     |
+| ----------------- | ---------- | ----------- | ------------------------------------------ |
+| Unique Visitors   | 440        | 324         | <font color="red">-116 (-26%)</font>       |
+| Total Pageviews   | 1,247      | 841         | <font color="red">-406 (-33%)</font>       |
+| RapidAPI Earnings | $18.05     | $9.36       | <font color="red">-$8.69 (-48%)</font>     |
 | **Total Revenue** | **$18.05** | **$9.36**   | **<font color="red">-$8.69 (-48%)</font>** |
 
 Things are still quiet at Zestful, though I'm evaluating a new API marketplace. I've always been desperate for an alternative to my current platform, RapidAPI. A new company called [Servernope](https://servernope.com/) invited me to their API platform. I told them that I didn't have time to set it up, but they were welcome to create a Zestful entry on my behalf. So, they [did](https://www.servernope.com/store/service/ZestfulData/Zestful).
@@ -221,23 +221,23 @@ I'm not quite sold yet. One of my biggest issues with RapidAPI is that their ana
 
 ### What got done?
 
-* Investigated a power issue on TinyPilot and began manufacturing a component to fix it.
-* Added mouse support to TinyPilot.
-* Hired a freelancer to [take over inventory management](/retrospectives/2020/08/#managing-inventory-is-hard) and some research tasks.
-* Set up eBay listings to sell TinyPilot internationally.
-  * I'm in the process of figuring out how to do it all through Shopify, but eBay is an easy interim solution.
-* Published a new blog post: ["How I Collected a Debt from an Unscrupulous Merchant"](https://mtlynch.io/collect-debt/)
-  * And two new [book reports](/book-reports).
+- Investigated a power issue on TinyPilot and began manufacturing a component to fix it.
+- Added mouse support to TinyPilot.
+- Hired a freelancer to [take over inventory management](/retrospectives/2020/08/#managing-inventory-is-hard) and some research tasks.
+- Set up eBay listings to sell TinyPilot internationally.
+  - I'm in the process of figuring out how to do it all through Shopify, but eBay is an easy interim solution.
+- Published a new blog post: ["How I Collected a Debt from an Unscrupulous Merchant"](https://mtlynch.io/collect-debt/)
+  - And two new [book reports](/book-reports).
 
 ### Lessons learned
 
-* Work with electrical engineering experts earlier.
-  * Looking back, I was veering far enough out of mainstream Raspberry Pi usage that I should have consulted professional electrical engineers to review my plans.
-* When you're stuck on a hard problem, create tools that eliminate debugging work.
-  * Creating tools gives you a feeling of forward momentum and frees your mind to focus on the essentials of a problem.
+- Work with electrical engineering experts earlier.
+  - Looking back, I was veering far enough out of mainstream Raspberry Pi usage that I should have consulted professional electrical engineers to review my plans.
+- When you're stuck on a hard problem, create tools that eliminate debugging work.
+  - Creating tools gives you a feeling of forward momentum and frees your mind to focus on the essentials of a problem.
 
 ### Goals for next month
 
-* Sell 60 TinyPilot kits and power connectors.
-* Test three new marketing channels.
-* Interview seven IT professionals about whether they'd use TinyPilot in their work.
+- Sell 60 TinyPilot kits and power connectors.
+- Test three new marketing channels.
+- Interview seven IT professionals about whether they'd use TinyPilot in their work.

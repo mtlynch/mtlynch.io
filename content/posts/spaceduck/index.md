@@ -2,8 +2,8 @@
 title: A Follow-Up and Space Duck
 description: A thank you and a follow-up about my plans.
 tags:
-- space duck
-date: '2018-03-01'
+  - space duck
+date: "2018-03-01"
 ---
 
 The response to [yesterday's post](/why-i-quit-google/) about leaving Google has been unexpected and overwhelming.

@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* TinyPilot's EU distributor is on track to begin sales by the end of August.
-* I've freed up time by delegating responsibilities to my teammates.
-* I miraculously became unstuck on two tasks that have been blocking work for months.
+- TinyPilot's EU distributor is on track to begin sales by the end of August.
+- I've freed up time by delegating responsibilities to my teammates.
+- I miraculously became unstuck on two tasks that have been blocking work for months.
 
 ## Goal Grades
 
@@ -18,29 +18,29 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Get my EU partner ready to begin sales by the end of August
 
-* **Result**: We're on track to begin sales by the end of the month.
-* **Grade**: A
+- **Result**: We're on track to begin sales by the end of the month.
+- **Grade**: A
 
 This went well. By next week, my distributor should have all the parts and instructions he needs to begin assembling his own TinyPilot Voyager devices. He's on track to begin sales by the end of this month.
 
 ### Define processes that allow TinyPilot's local staff to share and alternate on all tasks
 
-* **Result**: We created a shared to-do list that lets staff alternate tasks.
-* **Grade**: A
+- **Result**: We created a shared to-do list that lets staff alternate tasks.
+- **Grade**: A
 
 TinyPilot has never had more than one person at a time managing inventory and fulfillment tasks. It was harder than I expected to create systems that allow two people to share responsibilities equally, but we now have a working system that allows both employees to alternate tasks and coordinate schedules. In addition, I documented the gaps I was filling in so that local staff can handle them.
 
 ### Find a designer for the TinyPilot sales site
 
-* **Result**: A new developer is in the process of a redesign.
-* **Grade**: A
+- **Result**: A new developer is in the process of a redesign.
+- **Grade**: A
 
 After months of searching, I finally found a web developer to work on the TinyPilot website, and he's in the process of redesigning it.
 
 ### Find an electrical engineering firm that can create a PoE adaptor for TinyPilot Voyager
 
-* **Result**: My original firm found components that allow them to create a PoE adaptor.
-* **Grade**: A+
+- **Result**: My original firm found components that allow them to create a PoE adaptor.
+- **Grade**: A+
 
 This was another lucky breakthrough. The global chip shortage stymied my electrical engineering firm for months, so I started reaching out to bigger vendors who might have better connections to electronics supply chains. It was going to be a slow process, and they'd likely want to start from scratch.
 
@@ -50,14 +50,14 @@ Fortunately, TinyPilot's existing electrical engineering partner managed to find
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric          | June 2021  | July 2021  | Change                                     |
-| --------------- | ---------- | ---------- | ------------------------------------------ |
-| Unique Visitors | 6,339      | 5,234      | <font color="red">-1,105 (-17%)</font>     |
-| Total Pageviews | 11,514     | 9,730      | <font color="red">-1,784 (-15%)</font>     |
-| Sales Revenue   | $29,446.46 | $23,954.64 | <font color="red">-$5,491.82 (-19%)</font> |
-| Enterprise Subscriptions | $48.00 | $48.00 | $0 (0%) |
-| Total Revenue   | $29,494.46 | $24,002.64 | <font color="red">-$5,491.82 (-19%)</font> |
-| **Profit**      | **<font color="red">-$9,452.32</font>**    | **<font color="red">-$9,713.34</font>**    | **N/A**                                    |
+| Metric                   | June 2021                               | July 2021                               | Change                                     |
+| ------------------------ | --------------------------------------- | --------------------------------------- | ------------------------------------------ |
+| Unique Visitors          | 6,339                                   | 5,234                                   | <font color="red">-1,105 (-17%)</font>     |
+| Total Pageviews          | 11,514                                  | 9,730                                   | <font color="red">-1,784 (-15%)</font>     |
+| Sales Revenue            | $29,446.46                              | $23,954.64                              | <font color="red">-$5,491.82 (-19%)</font> |
+| Enterprise Subscriptions | $48.00                                  | $48.00                                  | $0 (0%)                                    |
+| Total Revenue            | $29,494.46                              | $24,002.64                              | <font color="red">-$5,491.82 (-19%)</font> |
+| **Profit**               | **<font color="red">-$9,452.32</font>** | **<font color="red">-$9,713.34</font>** | **N/A**                                    |
 
 Sales continue to slump, as I've been focusing on setting up EU distribution and transitioning TinyPilot's fulfillment processes to local staff. I'm lucky that TinyPilot can continue to hit $24k in revenue two months without any marketing or advertising, but I need to increase my investments in sales and marketing over the next few months.
 
@@ -65,7 +65,7 @@ Sales continue to slump, as I've been focusing on setting up EU distribution and
 
 From the first few months of TinyPilot, I've been looking for a managed service to track inventory. The cheap solutions were too simple and only worked for products that required no assembly or manufacturing. The high-end solutions were overly complicated, designed for Enterprise-grade customers with thousands of products and multiple warehouses.
 
-By chance, I stumbled across [Craftybase](https://craftybase.com), which finally seemed like a solution that matched TinyPilot. And it *sort of* does, but it's been a rough transition.
+By chance, I stumbled across [Craftybase](https://craftybase.com), which finally seemed like a solution that matched TinyPilot. And it _sort of_ does, but it's been a rough transition.
 
 Some things about Craftybase are well-designed and fit our workflows perfectly. My favorite feature is "recipes," which define the raw materials that make up a product. For example, I can tell Craftybase that a TinyPilot Power Connector consists of one case and one circuit board. When I record a "build" in Craftybase of 10 Power Connectors, it knows to deduct 10 cases and 10 circuit boards from my inventory.
 
@@ -79,7 +79,7 @@ Unfortunately, most of our workflows in Craftybase are fairly bumpy. The most eg
 
 The problem is that it continues flagging the item even after you've ordered more, as the flag ignores pending shipments. In the example above, I recorded in Craftybase that I have an order of HDMI capture chips arriving at the end of the month. Craftybase still flags this item as low in stock even though there's nothing left for me to do.
 
-That means that when TinyPilot staff want to figure out which items to reorder, they have to go through every flagged item individually and check whether it's *actually* low in stock after taking into account pending orders.
+That means that when TinyPilot staff want to figure out which items to reorder, they have to go through every flagged item individually and check whether it's _actually_ low in stock after taking into account pending orders.
 
 At first, I thought there was a simple workaround. I assumed Craftybase's "purchased" column represented pending shipments. It turns out that "purchased" is actually the total quantity I've purchased since the beginning of time, an irrelevant metric that Craftybase gives bizarrely prominent real estate.
 
@@ -88,8 +88,8 @@ At first, I thought there was a simple workaround. I assumed Craftybase's "purch
 The workaround is that for each item flagged as low in stock, we have to dive into the details, check the total in stock, add pending orders, then check whether that number falls below our low stock limit. Checking for low stock should be a two-second workflow, but Craftybase has turned it into a tedious and complex process requiring several minutes of work.
 
 {{<gallery caption="To check whether an item is low in stock in Craftybase, you have to correlate numbers across multiple screens.">}}
-  {{<img src="low-stock-limit.png" maxWidth="500px" alt="Screenshot of Craftybase flagging HDMI capture chips as low in stock" hasBorder="true">}}
-  {{<img src="total-pending.png" maxWidth="800px" alt="Screenshot of Craftybase flagging HDMI capture chips as low in stock" hasBorder="true">}}
+{{<img src="low-stock-limit.png" maxWidth="500px" alt="Screenshot of Craftybase flagging HDMI capture chips as low in stock" hasBorder="true">}}
+{{<img src="total-pending.png" maxWidth="800px" alt="Screenshot of Craftybase flagging HDMI capture chips as low in stock" hasBorder="true">}}
 {{</gallery>}}
 
 ## Freeing up more time with delegation
@@ -218,18 +218,18 @@ There was a big jump in Zestful usage this month, but I'm pretty sure it's fraud
 
 ### What got done?
 
-* Published a [new TinyPilot release](https://tinypilotkvm.com/blog/whats-new-in-2021-07)
-* Found a developer to manage the TinyPilot website
-* Resumed progress on the TinyPilot PoE HAT and rack mount
-* Migrated to a managed inventory service
+- Published a [new TinyPilot release](https://tinypilotkvm.com/blog/whats-new-in-2021-07)
+- Found a developer to manage the TinyPilot website
+- Resumed progress on the TinyPilot PoE HAT and rack mount
+- Migrated to a managed inventory service
 
 ### Lessons learned
 
-* An imperfect workflow is better than one that depends on the CEO.
-  * As much as Craftybase's user interface and limitations frustrate me, it's better than me being stuck maintaining formulas in a complicated spreadsheet.
+- An imperfect workflow is better than one that depends on the CEO.
+  - As much as Craftybase's user interface and limitations frustrate me, it's better than me being stuck maintaining formulas in a complicated spreadsheet.
 
 ### Goals for next month
 
-* Help my EU distributor achieve his first sale.
-* Finalize the design of the Voyager 2.
-* Publish a sample chapter of [*Refactoring English*](https://refactoringenglish.com).
+- Help my EU distributor achieve his first sale.
+- Finalize the design of the Voyager 2.
+- Publish a sample chapter of [_Refactoring English_](https://refactoringenglish.com).

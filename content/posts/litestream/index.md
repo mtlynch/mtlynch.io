@@ -2,14 +2,14 @@
 title: "How Litestream Eliminated My Database Server for $0.03/month"
 date: "2021-04-29T00:00:00Z"
 tags:
-- tinypilot
-- litestream
-- docker
-- logpaste
+  - tinypilot
+  - litestream
+  - docker
+  - logpaste
 description: I've always hated maintaining database servers. Litestream offers a simple alternative without sacrificing reliability or security.
 custom_css: true
 images:
-- litestream/og-cover.jpg
+  - litestream/og-cover.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/golang/comments/n15ikk/how_litestream_eliminated_my_database_server_for/
   hacker_news: https://news.ycombinator.com/item?id=26981239
@@ -19,15 +19,15 @@ Here's a riddle. My web app keeps all of its data in a SQL database. I can spont
 
 How is this possible?
 
->That's easy. You have a separate database server running somewhere that stores all of your app's state.
+> That's easy. You have a separate database server running somewhere that stores all of your app's state.
 
 No, my app never talks to a remote database server.
 
->Oh, then you're using a proprietary, managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
+> Oh, then you're using a proprietary, managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
 
 Nope, my entire stack is open-source and platform-agnostic.
 
->Then what?
+> Then what?
 
 I combined [SQLite](https://sqlite.org/index.html), [Litestream](https://litestream.io/), and [Docker](https://www.docker.com/).
 
@@ -257,24 +257,24 @@ The client-side code is less than 30 lines of HTML and JavaScript:
 
 <script src="https://logpaste.com/js/logpaste.js"></script>
 <script>
-const baseUrl = 'https://logpaste.com';
-document.getElementById("upload").addEventListener("click", (evt) => {
-  const resultElement = document.getElementById("result");
-  const errorElement = document.getElementById("error");
-  resultElement.innerText = "";
-  errorElement.innerText = "";
-  const textToUpload = document.getElementById("upload-textarea").value;
-  logpaste
-    .uploadText(textToUpload, baseUrl)
-    .then((id) => {
-      const url = `${baseUrl}/${id}`;
-      resultElement.innerText = url;
-      resultElement.href = url;
-    })
-    .catch((error) => {
-      errorElement.innerText = error;
-    });
-});
+  const baseUrl = "https://logpaste.com";
+  document.getElementById("upload").addEventListener("click", (evt) => {
+    const resultElement = document.getElementById("result");
+    const errorElement = document.getElementById("error");
+    resultElement.innerText = "";
+    errorElement.innerText = "";
+    const textToUpload = document.getElementById("upload-textarea").value;
+    logpaste
+      .uploadText(textToUpload, baseUrl)
+      .then((id) => {
+        const url = `${baseUrl}/${id}`;
+        resultElement.innerText = url;
+        resultElement.href = url;
+      })
+      .catch((error) => {
+        errorElement.innerText = error;
+      });
+  });
 </script>
 ```
 
@@ -304,22 +304,22 @@ For example, here's TinyPilot's version:
 
 I've written deployment instructions for a few different platforms:
 
-| Platform | Notes |
-|----------|-------|
-| [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md) | Free tier allows up to three always-on instances and includes SSL certificates |
-| [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md) | $7/month per instance, includes SSL certificates |
-| [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md) | Free tier allows unlimited on-demand instances, $7/month for SSL certificates on custom domains |
+| Platform                                                                                         | Notes                                                                                           |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md)              | Free tier allows up to three always-on instances and includes SSL certificates                  |
+| [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md) | $7/month per instance, includes SSL certificates                                                |
+| [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md)              | Free tier allows unlimited on-demand instances, $7/month for SSL certificates on custom domains |
 
 ## Further reading
 
-* [Litestream](https://litestream.io/): Litestream's official documentation.
-* [mtlynch/logpaste](https://github.com/mtlynch/logpaste): MIT-licensed source code and documentation for LogPaste.
-* [litestream-s6-example](https://github.com/benbjohnson/litestream-s6-example): A more advanced and robust method for running Litestream alongside your app in a Docker container. It uses [s6-overlay](https://github.com/just-containers/s6-overlay) to restart the Litestream instance on failure.
+- [Litestream](https://litestream.io/): Litestream's official documentation.
+- [mtlynch/logpaste](https://github.com/mtlynch/logpaste): MIT-licensed source code and documentation for LogPaste.
+- [litestream-s6-example](https://github.com/benbjohnson/litestream-s6-example): A more advanced and robust method for running Litestream alongside your app in a Docker container. It uses [s6-overlay](https://github.com/just-containers/s6-overlay) to restart the Litestream instance on failure.
 
-{{<tweet user="deliberatecoder" id="1387768253854986247" >}}
+{{<tweet user="deliberatecoder" id="1387768253854986247">}}
 
 ---
 
-*Architecture diagram by [Loraine Yow](https://www.lolo-ology.com/).*
+_Architecture diagram by [Loraine Yow](https://www.lolo-ology.com/)._
 
-*Thanks to [Ben Johnson](https://twitter.com/benbjohnson) for his work on Litestream and his early review of this article. Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post.*
+_Thanks to [Ben Johnson](https://twitter.com/benbjohnson) for his work on Litestream and his early review of this article. Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post._

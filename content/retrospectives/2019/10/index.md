@@ -2,15 +2,15 @@
 title: Is It Keto - Month 9
 description: I'm ready to take bigger bets.
 images:
-- /retrospectives/2019/10/adsense.jpg
-date: '2019-10-05'
+  - /retrospectives/2019/10/adsense.jpg
+date: "2019-10-05"
 ---
 
 ## Highlights
 
-* After six months of consistent gains of ~30% in revenue and traffic, Is It Keto's growth finally flattened out.
-* I'm preparing to sell premium meal plans on Is It Keto.
-* I'm ready to make bigger bets on my businesses.
+- After six months of consistent gains of ~30% in revenue and traffic, Is It Keto's growth finally flattened out.
+- I'm preparing to sell premium meal plans on Is It Keto.
+- I'm ready to make bigger bets on my businesses.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 
 ### Hire a writer for Is It Keto
 
-* **Result**: I hired a writer who's able to write well in the style I want.
-* **Grade**: A
+- **Result**: I hired a writer who's able to write well in the style I want.
+- **Grade**: A
 
 In September, I received 25 new applications from freelance writers. I did paid trials with two of them and made one permanent hire.
 
 ### Earn revenue through a new channel for Is It Keto
 
-* **Result**: It hasn't happened yet, but I'm pretty close.
-* **Grade**: C+
+- **Result**: It hasn't happened yet, but I'm pretty close.
+- **Grade**: C+
 
 In September, I explored several affiliate partnerships but wasn't excited about them. I paused on affiliate deals to focus on a different type of collaboration that I hope to launch in early October.
 
 ### Publish a guide to hiring freelance content writers
 
-* **Result**: I published "[Hiring Content Writers: A Guide for Small Businesses](/hiring-content-writers/)"
-* **Grade**: A
+- **Result**: I published "[Hiring Content Writers: A Guide for Small Businesses](/hiring-content-writers/)"
+- **Grade**: A
 
 This was my longest article ever, at around 7,200 words. I've been writing it on and off since March, so it felt good to publish it finally.
 
@@ -41,8 +41,8 @@ One thing I'm struggling with is finding an audience for my less technical posts
 
 ### Finish open sourcing What Got Done
 
-* **Result**: What Got Done is now [open-source](https://github.com/mtlynch/whatgotdone).
-* **Grade**: A
+- **Result**: What Got Done is now [open-source](https://github.com/mtlynch/whatgotdone).
+- **Grade**: A
 
 I published What Got Done's source on Github and released it under the [Apache 2 license](https://choosealicense.com/licenses/apache-2.0/). The project has already received contributions from [three external developers](https://github.com/mtlynch/whatgotdone/graphs/contributors), and it's entirely because I added the label `hacktoberfest` [to a few bugs](https://github.com/mtlynch/whatgotdone/issues?q=is%3Aissue+label%3AHacktoberfest). It's a program that Digital Ocean is [running in October](https://hacktoberfest.digitalocean.com) to encourage contributions to open source projects.
 
@@ -60,7 +60,7 @@ I published What Got Done's source on Github and released it under the [Apache 2
 | Ranking Keywords (Moz)    | 2,205       | 2,330          | <font color="green">+125 (+6%)</font>       |
 | AdSense Earnings          | $227.25     | $178.79        | <font color="red">-$48.46 (-21%)</font>     |
 | Amazon Affiliate Earnings | $152.55     | $150.06        | <font color="red">-$2.49 (-2%)</font>       |
-| **Total Revenue**        | **$379.80** | **$328.85**    | **<font color="red">-$50.95 (-13%)</font>** |
+| **Total Revenue**         | **$379.80** | **$328.85**    | **<font color="red">-$50.95 (-13%)</font>** |
 
 So, it finally happened. Is It Keto has grown by about 30% in revenue and traffic every month this year. I knew that growth couldn't continue forever, and I was waiting for the time when it would level off. It finally did.
 
@@ -70,9 +70,9 @@ Everything stayed relatively flat except for AdSense earnings. I'm not sure if t
 
 {{<revenue-graph project="zestful">}}
 
-| Metric                 | August 2019 | September 2019 | Change |
-|------------------------|-------------|----------------|--------|
-| Total Earnings         | $728.49     | $4.51          | <font color="red">-$723.98 (-99%)</font> |
+| Metric         | August 2019 | September 2019 | Change                                   |
+| -------------- | ----------- | -------------- | ---------------------------------------- |
+| Total Earnings | $728.49     | $4.51          | <font color="red">-$723.98 (-99%)</font> |
 
 No surprises here. I knew my spike in revenue [last month](/retrospectives/2019/09/#zestfulhttpszestfuldatacom) was an anomaly, and now it's settled back into the normal territory of $3-$40 per month.
 
@@ -83,8 +83,8 @@ In September, I tested an affiliate partnership with a company that claimed to o
 I tried testing the service myself, and I quickly realized why nobody wanted to use it: it was terrible.
 
 {{<gallery caption="My former affiliate partner expects users to buy 102 different grocery store items and spend 12 hours per day cooking.">}}
-  {{<img src="meal-planner.jpg" alt="Meal planner screenshot">}}
-  {{<img src="grocery-list.jpg" alt="Grocery list screenshot">}}
+{{<img src="meal-planner.jpg" alt="Meal planner screenshot">}}
+{{<img src="grocery-list.jpg" alt="Grocery list screenshot">}}
 {{</gallery>}}
 
 Their service didn't create meal "plans." It randomly threw together a bunch of breakfast, lunch, and dinner meals. To cook all the meals would take you hours. Ridiculously, the plan called for the user to purchase **102 different items** from the grocery store. This is to feed a single person for a single week. The items include things like 1/8th of a cucumber and 1/2 of a jicama, which is clearly impractical.
@@ -93,7 +93,7 @@ I took down the referral link and thought of a better solution: sell my own meal
 
 I put up a crude landing page with a "Buy" button. The button currently just brings you to a message saying that the meal plans are coming, but the page has had 254 unique visitors and 10 unique clicks on the Buy button, which implies a conversion rate of ~4%. That's an optimistic estimate because some of those users probably would not have completed the checkout process, but it's promising nonetheless that such a basic page would convince anyone to click at all.
 
-{{< img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" maxWidth="823px" hasBorder="True" >}}
+{{<img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" maxWidth="823px" hasBorder="True">}}
 
 I'm excited to start selling these plans. It feels much better to sell a product where you're in direct contact with the creator as opposed to just throwing users to a faceless affiliate partner and hoping for the best. The meal plans will focus on optimizing for our readers' time and budget, so instead of a grocery list of 102 items, it will be more like 20. And the recipes make multiple servings that you can refrigerate and eat later instead of expecting the reader to cook entire meals from scratch 21 times per week.
 
@@ -129,19 +129,19 @@ Now that I've had that experience, I'm gravitating more toward ideas that have b
 
 ### What got done?
 
-* I arranged a partnership with a meal planning business to produce premium meal plans for Is It Keto.
-* I hired a permanent writer for Is It Keto.
-* I published ["Hiring Content Writers: A Guide for Small Businesses."](/hiring-content-writers/)
-* I [open sourced](https://github.com/mtlynch/whatgotdone) What Got Done.
+- I arranged a partnership with a meal planning business to produce premium meal plans for Is It Keto.
+- I hired a permanent writer for Is It Keto.
+- I published ["Hiring Content Writers: A Guide for Small Businesses."](/hiring-content-writers/)
+- I [open sourced](https://github.com/mtlynch/whatgotdone) What Got Done.
 
 ### Lessons learned
 
-* I'm ready to think bigger and approach projects that are higher risk for higher revenue.
-* Hiring becomes cheaper over time as you learn to spot red flags earlier.
+- I'm ready to think bigger and approach projects that are higher risk for higher revenue.
+- Hiring becomes cheaper over time as you learn to spot red flags earlier.
 
 ### Goals for next month
 
-* Earn $100 in revenue from sales of keto meal plans.
-* Add five new articles to Is It Keto.
-* Appear on a podcast aimed at freelancers or entrepreneurs to talk about my writing guide.
-  * If you know of a good one, I happily welcome recommendations and introductions.
+- Earn $100 in revenue from sales of keto meal plans.
+- Add five new articles to Is It Keto.
+- Appear on a podcast aimed at freelancers or entrepreneurs to talk about my writing guide.
+  - If you know of a good one, I happily welcome recommendations and introductions.

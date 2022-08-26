@@ -2,15 +2,15 @@
 title: Is It Keto - Month 10
 description: Quickly made my first sale, then struggled to make more.
 images:
-- /retrospectives/2019/11/first-payment.jpg
-date: '2019-11-08'
+  - /retrospectives/2019/11/first-payment.jpg
+date: "2019-11-08"
 ---
 
 ## Highlights
 
-* I sold my first meal plan on [Is It Keto](https://isitketo.org).
-* I then tried five different experiments for increasing sales.
-* Is It Keto's revenue dropped for the month as I redirected resources toward its failing meal plans.
+- I sold my first meal plan on [Is It Keto](https://isitketo.org).
+- I then tried five different experiments for increasing sales.
+- Is It Keto's revenue dropped for the month as I redirected resources toward its failing meal plans.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I [declare what I'd like to accomplish](/retrospecti
 
 ### Earn $100 in revenue from sales of keto meal plans
 
-* **Result**: Earned only $23.87 from keto meal plan sales.
-* **Grade**: D+
+- **Result**: Earned only $23.87 from keto meal plan sales.
+- **Grade**: D+
 
 It turns out it's really hard to get people to spend money on things that other sites offer for free. Despite my best efforts, I only managed to sell two meal plans, far lower than the volume I expected.
 
 ### Add five new articles to Is It Keto
 
-* **Result**: Added four new articles to Is It Keto.
-* **Grade**: B-
+- **Result**: Added four new articles to Is It Keto.
+- **Grade**: B-
 
 I was a bit overambitious in how quickly I could ramp up the site's new writer, but we came close to the target.
 
 ### Appear on a podcast aimed at freelancers or entrepreneurs to talk about my writing guide
 
-* **Result**: Reached out to four podcasts, got rejections or non-responses from all of them.
-* **Grade**: F
+- **Result**: Reached out to four podcasts, got rejections or non-responses from all of them.
+- **Grade**: F
 
 It still feels unfortunate that I can't connect my [guide to hiring writers](/hiring-content-writers/) with an audience. Even fairly small, niche podcasts for freelance writers weren't interested in talking to me about my article.
 
@@ -52,12 +52,12 @@ It still feels unfortunate that I can't connect my [guide to hiring writers](/hi
 | AdSense Earnings          | $178.79        | $75.65       | <font color="red">-$103.14 (-58%)</font>    |
 | Amazon Affiliate Earnings | $150.06        | $159.02      | <font color="green">+$8.96 (+6%)</font>     |
 | Meal Plan Sales           | N/A            | $23.87       | N/A                                         |
-| **Total Revenue**        | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
+| **Total Revenue**         | **$328.85**    | **$258.54**  | **<font color="red">-$70.31 (-21%)</font>** |
 
 Revenues are way down from my [August peak](/retrospectives/2019/09/#is-it-ketohttpsisitketoorg) of $389. The loss comes from reductions in AdSense earnings, which I believe have two causes:
 
-* I reduced the sizes of my ads, as the previous sizes were overwhelming the page ([before](https://imgur.com/oAeqEDB) vs. [after](https://imgur.com/O3VPlM1)).
-* I replaced some of my AdSense ads with [self-ads](#i-added-self-ads) for Is It Keto paid meal plans.
+- I reduced the sizes of my ads, as the previous sizes were overwhelming the page ([before](https://imgur.com/oAeqEDB) vs. [after](https://imgur.com/O3VPlM1)).
+- I replaced some of my AdSense ads with [self-ads](#i-added-self-ads) for Is It Keto paid meal plans.
 
 I knew I'd lose AdSense revenue by dialing down its ads, but I hoped to make up the loss in increased revenues from selling meal plans. Unfortunately, meal plan sales failed to offset those losses.
 
@@ -67,9 +67,9 @@ Traffic stats are slumping, too. I think this is partially due to waning interes
 
 {{<revenue-graph project="zestful">}}
 
-| Metric                 | September 2019 | October 2019   | Change |
-|------------------------|----------------|----------------|--------|
-| Total Earnings         | $4.51          | $4.86          | <font color="green">+$0.35 (+8%)</font> |
+| Metric         | September 2019 | October 2019 | Change                                  |
+| -------------- | -------------- | ------------ | --------------------------------------- |
+| Total Earnings | $4.51          | $4.86        | <font color="green">+$0.35 (+8%)</font> |
 
 Zestful is quietly chugging along in the background. The server costs me $7.50/month, so I'm actually running at a small loss.
 
@@ -89,7 +89,7 @@ I managed to make a couple of sales, but it proved to be far harder than I antic
 
 Before I had any meal plans to sell, I ran a "smoke test." I put up a page that advertised original keto meal plans and put a "Buy Now" button at the bottom of the page:
 
-{{< img src="smoke-test.jpg" alt="Screenshot of Is It Keto smoke test" caption="Meal plan smoke test" maxWidth="600px" hasBorder="True" >}}
+{{<img src="smoke-test.jpg" alt="Screenshot of Is It Keto smoke test" caption="Meal plan smoke test" maxWidth="600px" hasBorder="True">}}
 
 It was a very basic page, and it had many obvious weaknesses, but I wanted to put something up quickly to see if readers had any interest in it.
 
@@ -99,11 +99,11 @@ During the smoke test, ~4% of users clicked the button that said "Buy Now $14.99
 
 The meal plan author sent me the first plan on the afternoon of Friday, October 4th. The following Monday, I got the easiest possible Stripe payment flow working and listed the meal plan for sale on my site:
 
-{{< img src="tex-mex-v1.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Putting my first meal plan up for sale" maxWidth="416px" hasBorder="True" >}}
+{{<img src="tex-mex-v1.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Putting my first meal plan up for sale" maxWidth="416px" hasBorder="True">}}
 
 Only one customer had signed up for my mailing list, but she purchased a plan within two hours of launch:
 
-{{< img src="first-payment.jpg" alt="Screenshot of Stripe payment receipt" caption="My first Is It Keto meal plan sale" maxWidth="601px" hasBorder="True" >}}
+{{<img src="first-payment.jpg" alt="Screenshot of Stripe payment receipt" caption="My first Is It Keto meal plan sale" maxWidth="601px" hasBorder="True">}}
 
 I made my first sale within hours of going live! I felt great. At this rate, I'd be earning hundreds of dollars per week.
 
@@ -115,11 +115,11 @@ Maybe the problem was that too few users realized I was selling meal plans. Ther
 
 To drive more users to the sales page, I created self-ads to replace the ads I'd been running for Google AdSense:
 
-{{< img src="self-ads.jpg" alt="Screenshot of self-ad on Gatorade Zero page" caption="I added self-ads for my meal plans to [other Is It Keto pages](https://isitketo.org/gatorade-zero)" maxWidth="800px" hasBorder="True" >}}
+{{<img src="self-ads.jpg" alt="Screenshot of self-ad on Gatorade Zero page" caption="I added self-ads for my meal plans to [other Is It Keto pages](https://isitketo.org/gatorade-zero)" maxWidth="800px" hasBorder="True">}}
 
 I tuned these ads to show 60% of the time at first and increased them to 100% some weeks to maximize visitors. I couldn't tell if it had any because there was so much variance in the traffic:
 
-{{< img src="self-ads-chart.jpg" alt="Chart showing indeterminate effect of self-ads" caption="Self-ads may have brought more visitors to the page, but it's too little data to say for sure" maxWidth="800px" hasBorder="True" >}}
+{{<img src="self-ads-chart.jpg" alt="Chart showing indeterminate effect of self-ads" caption="Self-ads may have brought more visitors to the page, but it's too little data to say for sure" maxWidth="800px" hasBorder="True">}}
 
 ### I slashed prices
 
@@ -127,7 +127,7 @@ After a week, still no sales. I initally listed the meal plan for $14.99, which 
 
 I decided to reduce my price drastically, from $14.99 to $4.99. This felt too low, but I'd rather get too many sales for too low a price than zero sales and zero information.
 
-{{< img src="tex-mex-v2.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Slashing the price on my meal plan" maxWidth="416px" hasBorder="True" >}}
+{{<img src="tex-mex-v2.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Slashing the price on my meal plan" maxWidth="416px" hasBorder="True">}}
 
 ### I offered discounts for feedback
 
@@ -142,8 +142,8 @@ I couldn't discount the $4.99 price in a meaningful way, so I raised prices back
 It felt like a great idea. I'd get feedback from my users, and they'd feel invested in the meal plans and more likely to make a purchase.
 
 {{<gallery caption="Incentivizing users to provide feedback on the meal plans">}}
-  {{<img src="survey1.jpg" alt="Meal plan discount link" maxWidth="400px">}}
-  {{<img src="survey2.jpg" alt="Meal plan discount explanation" maxWidth="400px">}}
+{{<img src="survey1.jpg" alt="Meal plan discount link" maxWidth="400px">}}
+{{<img src="survey2.jpg" alt="Meal plan discount explanation" maxWidth="400px">}}
 {{</gallery>}}
 
 The link led to this [SurveyMonkey survey](https://www.surveymonkey.com/r/633GTSD).
@@ -156,9 +156,9 @@ It seemed like a good time to, ["do things that don't scale."](http://paulgraham
 
 To these users, I sent private messages letting them know I offered meal plans on my site and was available for questions:
 
-{{< img src="reddit-post.jpg" alt="reddit post asking for meal plan advice" caption="reddit user asking where to find keto meal plans" maxWidth="636px" hasBorder="True" >}}
+{{<img src="reddit-post.jpg" alt="reddit post asking for meal plan advice" caption="reddit user asking where to find keto meal plans" maxWidth="636px" hasBorder="True">}}
 
-{{< img src="reddit-invitation.jpg" alt="reddit post asking for meal plan advice" caption="My outreach message to a reddit user seeking meal plans" maxWidth="702px" hasBorder="True" >}}
+{{<img src="reddit-invitation.jpg" alt="reddit post asking for meal plan advice" caption="My outreach message to a reddit user seeking meal plans" maxWidth="702px" hasBorder="True">}}
 
 I tried this with several users. Some responded to say that it "looked perfect" for them, but then they didn't follow through with a purchase.
 
@@ -166,7 +166,7 @@ After a few days, I gave up on this channel. I wasn't gaining traction, and chec
 
 ### I went back to square one
 
-At this point, I was mystified. How could 4% of users click the "Buy now" button during my smoke test, but now that they actually *could* buy, they weren't purchasing anything?
+At this point, I was mystified. How could 4% of users click the "Buy now" button during my smoke test, but now that they actually _could_ buy, they weren't purchasing anything?
 
 I could think of two possibilities:
 
@@ -175,7 +175,7 @@ I could think of two possibilities:
 
 If it was scenario (1), then rolling back to the sales copy I used in my smoke test should result in real sales. I tried doing exactly that:
 
-{{< img src="smoke-test2.jpg" alt="Screenshot of Is It Keto smoke test" caption="Testing the original smoke test to see if 4% of users will still click Buy Now" maxWidth="600px" hasBorder="True" >}}
+{{<img src="smoke-test2.jpg" alt="Screenshot of Is It Keto smoke test" caption="Testing the original smoke test to see if 4% of users will still click Buy Now" maxWidth="600px" hasBorder="True">}}
 
 Less than 24 hours later, I made a second sale! Maybe this sales copy really was much better than my revised version.
 
@@ -187,15 +187,15 @@ According to my logging, 3.7% of users clicked the "Buy now" button when I broug
 
 After concluding that there was nothing magical about my smoke test page, I continued polishing my sales page. My most recent change has been to split up each meal plan into its own page so that I can include more details:
 
-{{< img src="tex-mex-v3.jpg" alt="Screenshot of latest Tex-Mex sales page" caption="Putting each meal plan into its own individual, more detailed page" maxWidth="800px" hasBorder="True" >}}
+{{<img src="tex-mex-v3.jpg" alt="Screenshot of latest Tex-Mex sales page" caption="Putting each meal plan into its own individual, more detailed page" maxWidth="800px" hasBorder="True">}}
 
 I made this change on October 31st, but there have still been no new sales after the first two.
 
 ### Experiment summary
 
 | Experiment                        | Unique visitors | Clicked "buy" button | Completed checkout |
-|-----------------------------------|-----------------|----------------------|--------------------|
-| Smoke test                        | 340             | 14 (4.1%)            | 1* (0.3%)          |
+| --------------------------------- | --------------- | -------------------- | ------------------ |
+| Smoke test                        | 340             | 14 (4.1%)            | 1\* (0.3%)         |
 | List the first meal plan for sale | 218             | 1 (0.5%)             | -                  |
 | Drop prices to $4.99              | 26              | 1 (3.8%)             | -                  |
 | Offer discounts via a survey      | 112             | 1 (0.9%)             | -                  |
@@ -210,26 +210,26 @@ At this point, I'm wondering whether users are willing to pay for meal plans at 
 
 Here are some additional ideas I have to encourage users to purchase:
 
-* Cook the recipes myself, take photos of the results, and add food photos to the sales pages.
-* Let readers view more sample pages in the meal plans to see what they're buying.
-* Improve the sales copy and page layouts.
+- Cook the recipes myself, take photos of the results, and add food photos to the sales pages.
+- Let readers view more sample pages in the meal plans to see what they're buying.
+- Improve the sales copy and page layouts.
 
 ## Wrap up
 
 ### What got done?
 
-* Made my first sale of Is It Keto's meal plan product.
-  * Drafted a licensing agreement with a third-party meal plan provider.
-  * Tried several experiments to increase sales.
-* Simplified the build process on What Got Done so that anyone can spin up a local instance with [a single command](https://twitter.com/deliberatecoder/status/1189529617947869184).
-* Presented ["Why Good Developers Write Bad Tests" at PyGotham](/retrospectives/pygotham-2019-notes/).
+- Made my first sale of Is It Keto's meal plan product.
+  - Drafted a licensing agreement with a third-party meal plan provider.
+  - Tried several experiments to increase sales.
+- Simplified the build process on What Got Done so that anyone can spin up a local instance with [a single command](https://twitter.com/deliberatecoder/status/1189529617947869184).
+- Presented ["Why Good Developers Write Bad Tests" at PyGotham](/retrospectives/pygotham-2019-notes/).
 
 ### Lessons learned
 
-* View smoke test results with a healthy dose of skepticism.
-  * Even if 4% of users click the "buy" button, the percentage who will actually purchase can be significantly lower.
+- View smoke test results with a healthy dose of skepticism.
+  - Even if 4% of users click the "buy" button, the percentage who will actually purchase can be significantly lower.
 
 ### Goals for next month
 
-* Publish a new blog post about eliminating distractions from email and social media.
-* Interview five customers for a potential new business.
+- Publish a new blog post about eliminating distractions from email and social media.
+- Interview five customers for a potential new business.

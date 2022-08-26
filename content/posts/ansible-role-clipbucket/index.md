@@ -1,13 +1,13 @@
 ---
 title: Automatically Deploying ClipBucket with Ansible
 tags:
-- ansible
-- clipbucket
-- docker
+  - ansible
+  - clipbucket
+  - docker
 description: An Ansible role love story
-date: '2016-09-06'
+date: "2016-09-06"
 images:
-- ansible-role-clipbucket/clipbucket-install-complete.png
+  - ansible-role-clipbucket/clipbucket-install-complete.png
 ---
 
 ## Overview
@@ -17,7 +17,7 @@ images:
 ## tl; dr - Just Install ClipBucket<a id="just-install-clipbucket"></a>
 
 > I don't care about Ansible or any of your thoughts and feelings about using
-it to install ClipBucket. Just tell me how to install ClipBucket!
+> it to install ClipBucket. Just tell me how to install ClipBucket!
 
 If you came here just looking for an easy way to deploy ClipBucket to a server,
 the series of commands below will install ClipBucket on a bare Ubuntu 14.04
@@ -55,8 +55,8 @@ At the end of the above commands, you will find ClipBucket running on your
 server at [http://localhost/](http://localhost/). You can log in with the
 Admin credentials of:
 
-* **Username**: `admin`
-* **Password**: `admin` (*change this password after logging in*)
+- **Username**: `admin`
+- **Password**: `admin` (_change this password after logging in_)
 
 ## Why Automate ClipBucket Deployment?
 
@@ -66,7 +66,7 @@ I found [this excellent and very thorough guide](http://linoxide.com/linux-how-t
 
 Even after installing ClipBucket and all of its dependencies, a new deployment of ClipBucket requires the user to manually click through a web UI and enter information about their installation.
 
-{{< img src="clipbucket-install-steps.png" alt="Complete ClipBucket installation steps" >}}
+{{<img src="clipbucket-install-steps.png" alt="Complete ClipBucket installation steps">}}
 
 A web UI is probably nice for new users, but it's not the kind of thing you'd want to go through over and over every time you have to deploy a new server.
 
@@ -76,9 +76,9 @@ ClipBucket's major dependencies are Linux, Apache, MySQL, and PHP (a "LAMP stack
 
 We can avoid duplicating effort with [Ansible Galaxy](https://galaxy.ansible.com/list#/roles), which allows us to search for existing roles for the software we want. A quick search of Ansible Galaxy yielded the following roles:
 
-* Apache - [geerlingguy.apache](https://galaxy.ansible.com/geerlingguy/apache/)
-* MySQL - [pcextreme.mariadb](https://galaxy.ansible.com/detail#/role/2462) (actually installs MariaDB, a community-maintained drop-in replacement for MySQL)
-* PHP - [geerlingguy.php](https://galaxy.ansible.com/geerlingguy/php/)
+- Apache - [geerlingguy.apache](https://galaxy.ansible.com/geerlingguy/apache/)
+- MySQL - [pcextreme.mariadb](https://galaxy.ansible.com/detail#/role/2462) (actually installs MariaDB, a community-maintained drop-in replacement for MySQL)
+- PHP - [geerlingguy.php](https://galaxy.ansible.com/geerlingguy/php/)
 
 ClipBucket has some smaller dependencies, such as ImageMagick and FFMpeg, which are straightforward to install with a a command or two within our Ansible playbook (see all installation steps [here](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/tasks/main.yml)).
 
@@ -106,13 +106,13 @@ PLAY RECAP *********************************************************************
 clipbucket                : ok=77   changed=48   unreachable=0    failed=0
 ```
 
-{{< img src="clipbucket-install-complete.png" alt="Complete ClipBucket installation" >}}
+{{<img src="clipbucket-install-complete.png" alt="Complete ClipBucket installation">}}
 
 ## Automating Playbook Testing
 
 Once I created a working playbook, I still had some work to do in refactoring my Ansible role to make the logic cleaner and more reusable. I quickly realized that it was easy to accidentally break my role this way (e.g. by accidentally deleting a necessary command). I tested for this by repeatedly running my role against a bare VM and then testing that the installation was successful, but this became a very manual and tedious process. Given that the goal of this whole endeavor is automation, I sought a way to automate the process of verifying that my Ansible role still created a working ClipBucket server.
 
-Jeff Geerling, author of [*Ansible for DevOps*](https://leanpub.com/ansible-for-devops), has a very helpful [blog post](http://www.jeffgeerling.com/blog/testing-ansible-roles-travis-ci-github) that describes how to test Ansible playbooks automatically. Using Geerling's examples, I created a [build script](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/build) that does the following:
+Jeff Geerling, author of [_Ansible for DevOps_](https://leanpub.com/ansible-for-devops), has a very helpful [blog post](http://www.jeffgeerling.com/blog/testing-ansible-roles-travis-ci-github) that describes how to test Ansible playbooks automatically. Using Geerling's examples, I created a [build script](https://github.com/mtlynch/ansible-role-clipbucket/blob/master/build) that does the following:
 
 1. Creates a bare Ubuntu 14.04 Docker container
 1. Copies the ClipBucket role into the Docker container under the role name `role_under_test` (the naming is to facilitate re-use of test scripts on other roles)
@@ -129,12 +129,12 @@ I'm considering expanding the testing by writing more sophisticated web flows, s
 
 My ClipBucket Ansible Role is available:
 
-* [On Github](https://github.com/mtlynch/ansible-role-clipbucket)
-* [On Ansible Galaxy](https://galaxy.ansible.com/mtlynch/clipbucket)
+- [On Github](https://github.com/mtlynch/ansible-role-clipbucket)
+- [On Ansible Galaxy](https://galaxy.ansible.com/mtlynch/clipbucket)
 
 ## Using the ClipBucket Ansible Role
 
-*Note: If you're not familiar with Ansible and not interested in learning, see the ["Just Install Clipbucket"](#just-install-clipbucket) section at the top of this post.*
+_Note: If you're not familiar with Ansible and not interested in learning, see the ["Just Install Clipbucket"](#just-install-clipbucket) section at the top of this post._
 
 It's easy to use the ClipBucket Ansible role. To get started, you'll need to [install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html). Then create the following files:
 

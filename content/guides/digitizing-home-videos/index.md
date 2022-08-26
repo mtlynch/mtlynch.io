@@ -1,7 +1,7 @@
 ---
-title: 'Editing and Sharing Home Videos with MediaGoblin'
+title: "Editing and Sharing Home Videos with MediaGoblin"
 url: /digitizing-home-videos-walkthrough/
-date: '2020-05-26'
+date: "2020-05-26"
 ---
 
 ## Goal
@@ -12,23 +12,23 @@ I used this workflow to edit and share my family's home videos at a cost of only
 
 ## Pre-requisites
 
-* Python 3
-* virtualenv
-* Git
-* Docker
-* ffmpeg
-* A video player
-  * Ideally one with an edit timeline like [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html) or [OpenShot](https://www.openshot.org/).
-* A free Heroku account
-  * And the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-* A Google Cloud Platform account (with billing enabled)
-  * And the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts)
+- Python 3
+- virtualenv
+- Git
+- Docker
+- ffmpeg
+- A video player
+  - Ideally one with an edit timeline like [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html) or [OpenShot](https://www.openshot.org/).
+- A free Heroku account
+  - And the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- A Google Cloud Platform account (with billing enabled)
+  - And the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts)
 
 ## Demo video
 
 As an example, the video I use throughout this tutorial is a [public domain home video](https://archive.org/details/TexasFar1952) from a Texas family in the 1950s:
 
-{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" maxWidth="600px" >}}
+{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" maxWidth="600px">}}
 
 To download this video, run the commands below:
 
@@ -43,7 +43,7 @@ wget "$VIDEO_URL" -O "$RAW_VIDEO"
 
 ## Annotating
 
-Video files are made up of a series of frames. To identify the start and ends of clips in your video files, you need a way of identifying the frame number that corresponds to a position in playback. To do that, you can use ffmpeg to  make a scratch copy of the original video with frame annotations:
+Video files are made up of a series of frames. To identify the start and ends of clips in your video files, you need a way of identifying the frame number that corresponds to a position in playback. To do that, you can use ffmpeg to make a scratch copy of the original video with frame annotations:
 
 ```bash
 ANNOTATED_VIDEO=TexasFar1952-annotated.mp4
@@ -56,7 +56,7 @@ ffmpeg \
 
 That creates a copy of the video that looks like this:
 
-{{< img src="frame-annotation.jpg" alt="Public domain video with added frame count overlay" >}}
+{{<img src="frame-annotation.jpg" alt="Public domain video with added frame count overlay">}}
 
 ## Cataloging
 
@@ -66,33 +66,33 @@ Open up your favorite video player. I think [Adobe Premiere Elements](https://ww
 
 Next, create a spreadsheet. You can start with [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing). I'll explain the fields below:
 
-{{< img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." hasBorder="true" >}}
+{{<img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." hasBorder="true">}}
 
-* `tape_id`: This is the filename (without extension) of the video file.
-* `tape_shortname`: This is a shortname you want to identify files that came from this raw file. It can be the same as `tape_id`.
-* `tape_friendly_name`: When MediaGoblin displays which tape this clip came from, it will use this field. If there's a more descriptive name than the tape's filename, use it here.
-* `scene_start_frame`: The number of the first frame where the clip begins.
-  * In the example Texas Farm footage, the first few frames are blank, so the first clip starts at frame 28.
-* `title`: A title for this scene. This will be the title used in output filenames and in MediaGoblin's thumbnails.
-  * To tell `render_scenes` to ignore a segment of footage, title it `junk`.
-* `description`: (optional) A description of what's happening in the scene. This will appear under the clip in MediaGoblin's watch video view.
-* hashtags: After the `description` column, you can create tags prefixed by a hash mark. Any clip with a `y` (or any value) in a hashtag column will have that tag added to the clip in MediaGoblin.
-  * For example: Row 9 in my spreadsheet has `y` under columns `#adam` and `#archie`. When `publish_to_mediagoblin` adds the clip to MediaGoblin, it will add the tags `adam` and `archie` to the clip.
-  * The purpose of these columns is if you have family members or pets that you want to tag in videos, you can add columns with their hashtag and put a `y` in this column for each clip they appear in.
-* `date`: The date the clip was recorded.
-  * This can be in one of the following formats:
-    * `YYYY-MM-DD`
-    * `YYYY-MM`
-    * `YYYY`
-* `other_tags`: Add any additional tags you want to apply to the clip in a comma-separated list.
+- `tape_id`: This is the filename (without extension) of the video file.
+- `tape_shortname`: This is a shortname you want to identify files that came from this raw file. It can be the same as `tape_id`.
+- `tape_friendly_name`: When MediaGoblin displays which tape this clip came from, it will use this field. If there's a more descriptive name than the tape's filename, use it here.
+- `scene_start_frame`: The number of the first frame where the clip begins.
+  - In the example Texas Farm footage, the first few frames are blank, so the first clip starts at frame 28.
+- `title`: A title for this scene. This will be the title used in output filenames and in MediaGoblin's thumbnails.
+  - To tell `render_scenes` to ignore a segment of footage, title it `junk`.
+- `description`: (optional) A description of what's happening in the scene. This will appear under the clip in MediaGoblin's watch video view.
+- hashtags: After the `description` column, you can create tags prefixed by a hash mark. Any clip with a `y` (or any value) in a hashtag column will have that tag added to the clip in MediaGoblin.
+  - For example: Row 9 in my spreadsheet has `y` under columns `#adam` and `#archie`. When `publish_to_mediagoblin` adds the clip to MediaGoblin, it will add the tags `adam` and `archie` to the clip.
+  - The purpose of these columns is if you have family members or pets that you want to tag in videos, you can add columns with their hashtag and put a `y` in this column for each clip they appear in.
+- `date`: The date the clip was recorded.
+  - This can be in one of the following formats:
+    - `YYYY-MM-DD`
+    - `YYYY-MM`
+    - `YYYY`
+- `other_tags`: Add any additional tags you want to apply to the clip in a comma-separated list.
 
 When you run `render_scenes` (below), it will chop the video into shorter clips using this naming scheme:
 
-* `[tape_shortname] - [clip index] - [title].mp4`
+- `[tape_shortname] - [clip index] - [title].mp4`
 
 For example:
 
-* `Texas Family - 1952 - 05 - Archie in the Corn Fields.mp4`
+- `Texas Family - 1952 - 05 - Archie in the Corn Fields.mp4`
 
 ## Create a scenes YAML file
 
@@ -205,7 +205,7 @@ With your clips processed, you're ready to upload files to MediaGoblin. You'll f
 To begin, populate your environment information into `mediagoblin.ini`, MediaGoblin's configuration file.
 
 {{<notice type="info">}}
-**Note**: To help distinguish between paths on your host machine and paths *within* your MediaGoblin Docker container, I've followed the naming convention that the `MG_` prefix refers to your host machine and `MGC_` refers to paths within your Docker container.
+**Note**: To help distinguish between paths on your host machine and paths _within_ your MediaGoblin Docker container, I've followed the naming convention that the `MG_` prefix refers to your host machine and `MGC_` refers to paths within your Docker container.
 {{</notice>}}
 
 ```bash
@@ -251,9 +251,9 @@ docker run \
 
 The command above mounts several paths on your host machine into the MediaGoblin container, allowing you to share files between your host and MediaGoblin:
 
-* `PROCESSED_CLIPS_DIR` allows MediaGoblin to read the clips you created above.
-* `MG_CONFIG` specifies the configuration file for MediaGoblin to use.
-* `MG_SERVING_DIR` receives the video and thumbnail files when MediaGoblin places them on its local filesystem.
+- `PROCESSED_CLIPS_DIR` allows MediaGoblin to read the clips you created above.
+- `MG_CONFIG` specifies the configuration file for MediaGoblin to use.
+- `MG_SERVING_DIR` receives the video and thumbnail files when MediaGoblin places them on its local filesystem.
 
 When you run the container, MediaGoblin will take a few seconds to start up. You can monitor progress by running
 
@@ -287,11 +287,11 @@ app/publish_to_mediagoblin.py \
 
 When the script completes, you should see all the clips appear in MediaGoblin's web interface at [http://localhost:6543](http://localhost:6543).
 
-{{< img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." maxWidth="600px" >}}
+{{<img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." maxWidth="600px">}}
 
 If you click a video, you won't be able to view it in the normal video player because MediaGoblin uses a web player that's too old for modern streaming-optimized video formats. You can still watch it if you click the "Original file" link.
 
-{{< img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" maxWidth="600px" >}}
+{{<img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" maxWidth="600px">}}
 
 Don't worry; we'll fix this in the next step so that you'll be able to watch all videos normally in the embedded player.
 
@@ -475,9 +475,9 @@ Your app is live at https://mediagoblin-v5lmqis51k.herokuapp.com/
 
 I've published mine, though in the interest of limiting shenanigans, I've disabled the ability to log in as MediaGoblin's admin user:
 
-* **URL**: [https://mediagoblin-v5lmqis51k.herokuapp.com](https://mediagoblin-v5lmqis51k.herokuapp.com)
-* **Username**: `mediagoblin`
-* **Password**: `goblinmedia`
+- **URL**: [https://mediagoblin-v5lmqis51k.herokuapp.com](https://mediagoblin-v5lmqis51k.herokuapp.com)
+- **Username**: `mediagoblin`
+- **Password**: `goblinmedia`
 
 ### Bonus: Share individual videos
 
@@ -491,7 +491,7 @@ This will give the guest access to that individual file, but because of the way 
 
 The "original file" link gives you a URL that looks like this:
 
-* <https://storage.googleapis.com/mediagoblin-39dpduhfz1wstbprmyk5ak29/media_entries/4/Texas_Family_-_1952_-_04_-_Trudy_Working_at_the_Loom.mp4>
+- <https://storage.googleapis.com/mediagoblin-39dpduhfz1wstbprmyk5ak29/media_entries/4/Texas_Family_-_1952_-_04_-_Trudy_Working_at_the_Loom.mp4>
 
 As you can see, given the above URL, you can watch that single video, but it's not possible to explore the bucket to find other videos.
 
@@ -499,8 +499,8 @@ As you can see, given the above URL, you can watch that single video, but it's n
 
 ## Source code
 
-| Repository  | Description |
-|-------------|-------------|
-| [MediaGoblin](https://github.com/mtlynch/mediagoblin) | Mirror of the MediaGoblin core repo + Circle CI configuration.<br><br>The branch [mtlynch-custom](https://github.com/mtlynch/mediagoblin/tree/mtlynch-custom) has custom fixes for my instance (replaces their old video player and trims some parts of their UI that I don't need). |
-| [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker) | Builds a Docker image for MediaGoblin.<br><br>The branch [mtlynch-custom](https://github.com/mtlynch/mediagoblin-docker/tree/mtlynch-custom) builds with my customizations, which include pointing to a Google Cloud Storage bucket and adding [HTTP Basic Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme). |
-| [process-home-videos](https://github.com/mtlynch/process-home-videos) | Python scripts for chopping up raw video files into clips and then publishing those clips to MediaGoblin. |
+| Repository                                                            | Description                                                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [MediaGoblin](https://github.com/mtlynch/mediagoblin)                 | Mirror of the MediaGoblin core repo + Circle CI configuration.<br><br>The branch [mtlynch-custom](https://github.com/mtlynch/mediagoblin/tree/mtlynch-custom) has custom fixes for my instance (replaces their old video player and trims some parts of their UI that I don't need).                                                                                      |
+| [mediagoblin-docker](https://github.com/mtlynch/mediagoblin-docker)   | Builds a Docker image for MediaGoblin.<br><br>The branch [mtlynch-custom](https://github.com/mtlynch/mediagoblin-docker/tree/mtlynch-custom) builds with my customizations, which include pointing to a Google Cloud Storage bucket and adding [HTTP Basic Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme). |
+| [process-home-videos](https://github.com/mtlynch/process-home-videos) | Python scripts for chopping up raw video files into clips and then publishing those clips to MediaGoblin.                                                                                                                                                                                                                                                                 |

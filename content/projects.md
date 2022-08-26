@@ -8,7 +8,7 @@ TinyPilot is a small, inexpensive device that gives you remote access to servers
 
 ## [Refactoring English](https://refactoringenglish.com) (2021)
 
-*Refactoring English: Effective Writing for Software Developers* is my upcoming book that teaches developers practical tips to improve their writing.
+_Refactoring English: Effective Writing for Software Developers_ is my upcoming book that teaches developers practical tips to improve their writing.
 
 ## [Hit the Front Page of Hacker News](https://hitthefrontpage.com/) (2021)
 

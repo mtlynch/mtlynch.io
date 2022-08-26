@@ -1,15 +1,15 @@
 ---
 title: Automated Prosper Investing with ProsperBot
 tags:
-- prosper
-- lending
-- p2p
-- go
-- golang
+  - prosper
+  - lending
+  - p2p
+  - go
+  - golang
 description: An automated peer to peer lending bot
-date: '2016-11-26'
+date: "2016-11-26"
 images:
-- prosperbot/prosperbot-frontend.png
+  - prosperbot/prosperbot-frontend.png
 ---
 
 ## Overview
@@ -34,7 +34,7 @@ To invest in peer to peer loans with Prosper, investors can use Prosper's web si
 
 I chose the API route and developed ProsperBot, a lending bot that continuously searches for new loans on Prosper and invests in them when they meet certain criteria. It also includes a web dashboard, which shows ProsperBot's current status and my Prosper account activity over time:
 
-{{< img src="prosperbot-frontend.png" alt="ProsperBot screenshot" maxWidth="700px" hasBorder="True" >}}
+{{<img src="prosperbot-frontend.png" alt="ProsperBot screenshot" maxWidth="700px" hasBorder="True">}}
 
 As you can see in the graph, my account has been steadily increasing in value since April, as ProsperBot receives repayments on loans and reinvests the cash in new loans. My total account value begins to decline in October, as I have begun withdrawing money from my Prosper account.
 
@@ -42,7 +42,7 @@ As you can see in the graph, my account has been steadily increasing in value si
 
 There are several different pieces to ProsperBot, which I've diagrammed below:
 
-![ProsperBot Architecture](https://docs.google.com/drawings/d/1QMUzdufLQ5Ks3TOvmNd0ScuRk0U4QfxewHvXcQtSfnI/pub?w=1056&amp;h=784)
+![ProsperBot Architecture](https://docs.google.com/drawings/d/1QMUzdufLQ5Ks3TOvmNd0ScuRk0U4QfxewHvXcQtSfnI/pub?w=1056&h=784)
 
 ### gofn-prosper (Go Forth 'n Prosper)
 
@@ -61,10 +61,10 @@ This is probably the most interesting part of the project for others, as it is c
 
 **[ProsperBot](https://github.com/mtlynch/prosperbot)** is the application built on top of gofn-prosper to actually perform actions on Prosper. ProsperBot continually polls Prosper servers to:
 
-* Query for newly available loans
-* Invest in loans that meet investment criteria
-* Detect changes in Prosper account status (e.g. change in cash balance, change in total account value)
-* Detect updates to notes (received a repayment, note changed status)
+- Query for newly available loans
+- Invest in loans that meet investment criteria
+- Detect changes in Prosper account status (e.g. change in cash balance, change in total account value)
+- Detect updates to notes (received a repayment, note changed status)
 
 ProsperBot stores all of its state in a **Redis** database.
 
@@ -78,8 +78,8 @@ The **[ProsperBot Frontend](https://github.com/mtlynch/prosperbot-frontend)** is
 
 ProsperBot includes several different pieces and imposes some dependencies on the host system (Go, nginx, etc.). To simplify the process of deploying ProsperBot, I've written a couple of [Ansible roles](https://www.ansible.com/):
 
-* **[mtlynch.prosperbot](https://galaxy.ansible.com/mtlynch/prosperbot/)** is the role that installs the core (headless) ProsperBot application.
-* **[mtlynch.prosperbot-frontend](https://galaxy.ansible.com/mtlynch/prosperbot-frontend/)** deploys the frontend.
+- **[mtlynch.prosperbot](https://galaxy.ansible.com/mtlynch/prosperbot/)** is the role that installs the core (headless) ProsperBot application.
+- **[mtlynch.prosperbot-frontend](https://galaxy.ansible.com/mtlynch/prosperbot-frontend/)** deploys the frontend.
 
 Splitting it this way makes it possible for someone to deploy ProsperBot, ProsperBot Frontend, and Redis each on a separate machine. I personally install all the components on a single server (example Ansible playbook for this is shown in the Github [README example](https://github.com/mtlynch/ansible-role-prosperbot-frontend#example-playbook)).
 
@@ -87,9 +87,9 @@ Splitting it this way makes it possible for someone to deploy ProsperBot, Prospe
 
 Overall, ProsperBot was a good learning experience for me, but I don't recommend Prosper as an investment strategy. A few reasons:
 
-* **Unprofitable at small scales**: I get about 9% XIRR-based ROI from Prosper, which sounds decent at first *but* income from peer-to-peer lending is taxed as ordinary income, which eats a much larger portion of your returns than a more traditional investment like stocks. It also means it complicates my taxes enough that I need to hire a tax accountant instead of using off-the-shelf tax software, so that's $600 out of my earnings each year (almost 4% of a $16,000 investment).
-* **Klunky API**: The Prosper API itself is not designed very well. For example, it uses token-based authentication (good) and assigns application developers a client ID and secret instead of username/password, but then requires the username and password for all authentication, rendering the client ID and secret meaningless (bad). I've also noticed the API serving nonsense data like notes receiving negative repayments, which shouldn't be happening for a production investment API.
-* **Poor developer support**: In 2015, Prosper overhauled their API (their previous API was even worse), but told developers they had just a month to switch to the completely new API before they shut down the old system. It was pretty brazen move to expect all Prosper client developers to just drop everything they're doing and rewrite all their code within a month. To make matters worse, the new API was so buggy that Prosper had to extend the lifetime of the legacy API for another three months after forcing all the clients to scramble to meet the one-month deadline.
-* **Decreased interest in retail investors**: Prosper seems to be focusing more on institutional investors such as banks and less on individual, retail investors. The biggest move in this regard was in September 2016, [Prosper announced](https://web.archive.org/web/20190719043039/http://forum.lendacademy.com/index.php/topic,4104.0.html) that users could no longer sell loans on the secondary market. This was a drastic change in terms, as this made it impossible for investors to liquidate their Prosper holdings, so now I'm stuck with Prosper (and the associated tax headaches) for the next 5 years.
+- **Unprofitable at small scales**: I get about 9% XIRR-based ROI from Prosper, which sounds decent at first _but_ income from peer-to-peer lending is taxed as ordinary income, which eats a much larger portion of your returns than a more traditional investment like stocks. It also means it complicates my taxes enough that I need to hire a tax accountant instead of using off-the-shelf tax software, so that's $600 out of my earnings each year (almost 4% of a $16,000 investment).
+- **Klunky API**: The Prosper API itself is not designed very well. For example, it uses token-based authentication (good) and assigns application developers a client ID and secret instead of username/password, but then requires the username and password for all authentication, rendering the client ID and secret meaningless (bad). I've also noticed the API serving nonsense data like notes receiving negative repayments, which shouldn't be happening for a production investment API.
+- **Poor developer support**: In 2015, Prosper overhauled their API (their previous API was even worse), but told developers they had just a month to switch to the completely new API before they shut down the old system. It was pretty brazen move to expect all Prosper client developers to just drop everything they're doing and rewrite all their code within a month. To make matters worse, the new API was so buggy that Prosper had to extend the lifetime of the legacy API for another three months after forcing all the clients to scramble to meet the one-month deadline.
+- **Decreased interest in retail investors**: Prosper seems to be focusing more on institutional investors such as banks and less on individual, retail investors. The biggest move in this regard was in September 2016, [Prosper announced](https://web.archive.org/web/20190719043039/http://forum.lendacademy.com/index.php/topic,4104.0.html) that users could no longer sell loans on the secondary market. This was a drastic change in terms, as this made it impossible for investors to liquidate their Prosper holdings, so now I'm stuck with Prosper (and the associated tax headaches) for the next 5 years.
 
 Prosper's diminished interest in retail investors has convinced me to begin taking my money out (which you can see in the graphs above). I've heard good things about Prosper's only major US competitor, Lending Club, so I'm planning to start moving my money there and writing a new lending bot for that site.

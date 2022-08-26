@@ -1,16 +1,17 @@
 ---
-title: 'Hiring Content Writers: A Guide for Small Businesses'
+title: "Hiring Content Writers: A Guide for Small Businesses"
 tags:
-- is it keto
-- outsourcing
-description: A complete walkthrough of how I find freelance writers, screen them,
+  - is it keto
+  - outsourcing
+description:
+  A complete walkthrough of how I find freelance writers, screen them,
   and train them to work with me.
-date: '2019-09-30'
+date: "2019-09-30"
 images:
-- hiring-content-writers/cover.jpg
+  - hiring-content-writers/cover.jpg
 ---
 
-{{< img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" maxWidth="1000px" >}}
+{{<img src="cover.jpg" alt="Hiring Content Writers A Guide for Small Businesses (cover image)" maxWidth="1000px">}}
 
 If you write original content for your business, you know how quickly it drains your time and mental energy. It's extremely challenging to write articles or blog posts that readers find engaging, clear, and eloquent.
 
@@ -30,19 +31,19 @@ If you need a dirt-cheap writer to churn out content for your spam blog, this gu
 
 There are three main types of freelance writers. Before hiring a content writer, you should understand how they differ from others:
 
-| Type of writer | What they write | Examples |
-|----------------|-----------------|----------|
-| Content writer | Content that informs or entertains your audience | Magazine articles, blog posts, ebooks, newsletters |
-| Copywriter     | Text that compels the reader to perform some action, such as buy a product or subscribe to a mailing list | Product descriptions, landing pages |
-| Technical writer | Highly technical content for an audience with specialized knowledge | Software documentation, whitepapers |
+| Type of writer   | What they write                                                                                           | Examples                                           |
+| ---------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Content writer   | Content that informs or entertains your audience                                                          | Magazine articles, blog posts, ebooks, newsletters |
+| Copywriter       | Text that compels the reader to perform some action, such as buy a product or subscribe to a mailing list | Product descriptions, landing pages                |
+| Technical writer | Highly technical content for an audience with specialized knowledge                                       | Software documentation, whitepapers                |
 
 ## The fundamental principle of hiring talented people
 
 There's one underlying maxim that governs my hiring philosophy for any skilled position:
 
-* **Talented people choose their employers selectively**
+- **Talented people choose their employers selectively**
 
-Other guides recommend forcing writers through tedious and time-consuming hoops without pay. They assume that writers are so desperate for work that you can demand anything you want from them by dangling the mere *potential* for a job.
+Other guides recommend forcing writers through tedious and time-consuming hoops without pay. They assume that writers are so desperate for work that you can demand anything you want from them by dangling the mere _potential_ for a job.
 
 There certainly are desperate writers who will jump through all of your hoops, but they're not the writers you want. Exceptional writers run for the hills as soon as they hear "unpaid trial job."
 
@@ -52,7 +53,7 @@ If you want talented writers, create work conditions that are fair, pleasant, an
 
 Everything in this guide is based on my real experiences of hiring and working with writers over several months. My business is a website called [Is It Keto](https://isitketo.org), which explains whether or not popular foods fit the keto diet.
 
-{{< img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" caption="Is It Keto article on [broccoli](https://isitketo.org/broccoli)" maxWidth="800px" hasBorder="True" >}}
+{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" caption="Is It Keto article on [broccoli](https://isitketo.org/broccoli)" maxWidth="800px" hasBorder="True">}}
 
 At [~73,000 pageviews per month](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe its success results from its succinct, clear writing.
 
@@ -90,4 +91,4 @@ If a writer consistently fails to meet your expectations, you need to cut your l
 
 ---
 
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback.*
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my writer, [Morgan Province](https://www.morganprovince.com/), for offering insight to help me create this guide. Special thanks to [Alexis Grant of The Write Life](http://thewritelife.com) for volunteering her time to provide me with feedback._

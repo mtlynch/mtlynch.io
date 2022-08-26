@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* TinyPilot achieved astonishing growth in revenue, jumping from $15k in December to $42k in January.
-* Most of TinyPilot's sales came from a single positive YouTube review.
-* TinyPilot is experiencing growing pains as I scramble to meet demand.
+- TinyPilot achieved astonishing growth in revenue, jumping from $15k in December to $42k in January.
+- Most of TinyPilot's sales came from a single positive YouTube review.
+- TinyPilot is experiencing growing pains as I scramble to meet demand.
 
 ## Goal Grades
 
@@ -18,24 +18,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Hire a freelance developer to help with TinyPilot development
 
-* **Result**: I ran one trial hire that didn't work out, but I'm currently trying with another.
-* **Grade**: A
+- **Result**: I ran one trial hire that didn't work out, but I'm currently trying with another.
+- **Grade**: A
 
 Hiring a new developer is a slow process, but it's going according to plan. With each trial hire, I'm finding ways to help them ramp up faster. It also helps me recognize what qualities I should look for in future hires.
 
 ### Receive TinyPilot reviews from two bloggers or YouTubers with a relevant audience
 
-* **Result**: Received one YouTube review, and two others are in progress
-* **Grade**: A-
+- **Result**: Received one YouTube review, and two others are in progress
+- **Grade**: A-
 
 I underestimated how long it takes for YouTubers to make new videos. One new review came out, but it's based on outreach I did in November. Two other YouTubers agreed to review, but they're still working on their videos.
 
 That said, one review turned out to be almost too much to handle. More on that [below](#tinypilots-first-youtube-review).
 
-### Earn $4k in revenue from *Hit the Front Page of Hacker News*
+### Earn $4k in revenue from _Hit the Front Page of Hacker News_
 
-* **Result**: Earned $2.6k in revenue
-* **Grade**: C
+- **Result**: Earned $2.6k in revenue
+- **Grade**: C
 
 The course hasn't quite played out the way I'd hoped. I'm proud of the material, but far fewer people are purchasing it than I anticipated.
 
@@ -45,17 +45,17 @@ I tried [several different techniques](https://twitter.com/deliberatecoder/statu
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric             | December 2020  | January 2021   | Change                                             |
-| ------------------ | -------------- | -------------- | -------------------------------------------------- |
-| Unique Visitors    | 3,486          | 11,249         | <font color="green">+7,763 (+223%)</font>          |
-| Total Pageviews    | 5,785          | 17,737         | <font color="green">+11,952 (+207%)</font>         |
-| Sales Revenue      | $15,358.31     | $41,992.92     | <font color="green">+$26,634.61 (+173%)</font>     |
-| Donations          | $9.00          | $0.00          | <font color="red">-$9.00 (-100%)</font>            |
+| Metric            | December 2020  | January 2021   | Change                                             |
+| ----------------- | -------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors   | 3,486          | 11,249         | <font color="green">+7,763 (+223%)</font>          |
+| Total Pageviews   | 5,785          | 17,737         | <font color="green">+11,952 (+207%)</font>         |
+| Sales Revenue     | $15,358.31     | $41,992.92     | <font color="green">+$26,634.61 (+173%)</font>     |
+| Donations         | $9.00          | $0.00          | <font color="red">-$9.00 (-100%)</font>            |
 | **Total Revenue** | **$15,367.05** | **$41,992.92** | **<font color="green">+$26,625.87 (+173%)</font>** |
 
 This was a enormous month for [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io). Sales jumped from $15k to $42k.
 
-Every month, I think, "Wow, that was a lucky month! I won't be able to do *that* again." And then there's even more growth the following month, so here's hoping that luck continues.
+Every month, I think, "Wow, that was a lucky month! I won't be able to do _that_ again." And then there's even more growth the following month, so here's hoping that luck continues.
 
 ## TinyPilot's first YouTube review
 
@@ -73,7 +73,7 @@ Just as I was getting ready for bed on January 12th, Jeff emailed me to say the 
 
 </div>
 
-It was surreal. My girlfriend and I watched it on the big TV in our living room, so I was seeing a YouTube personality I'd watched for a year *holding my product and speaking directly to me from a huge screen!*
+It was surreal. My girlfriend and I watched it on the big TV in our living room, so I was seeing a YouTube personality I'd watched for a year _holding my product and speaking directly to me from a huge screen!_
 
 Jeff loved TinyPilot and shared the many ways it impressed him. I was anxious the whole way through that he would suddenly stop and say, "Actually... I changed my mind. This product sucks. Tell everyone you know not to buy one." But fortunately, the review was positive throughout, and his critiques were minor.
 
@@ -92,7 +92,7 @@ TinyPilot's fulfillment manager and I kept up with orders for the first week, bu
 
 [Blameless postmortems](https://landing.google.com/sre/book/chapters/postmortem-culture.html) are one of the most valuable practices I learned while working at Google. When something goes majorly wrong, you get back to steady-state and then write a report analyzing what happened.
 
-As the name implies, the document is *blameless*. It's never, "We had an outage because Michael's an idiot, and he deleted the wrong file."
+As the name implies, the document is _blameless_. It's never, "We had an outage because Michael's an idiot, and he deleted the wrong file."
 
 The underlying assumption of a postmortem is that everyone on the team is smart and diligent, so if something went wrong, the systems failed, not the people. When a failure looks like someone being stupid, the root cause is that processes failed to protect against expected human error.
 
@@ -106,9 +106,9 @@ We manage inventory with a spreadsheet. For each part we carry, we define a mini
 
 The problem was that we only adjusted these targets until we run out and realize we planned poorly. Then, when we're in a shortage, we're so panicked that it's hard to think rationally about what the new targets should be.
 
-* **Fix**: Schedule a monthly adjustment of inventory targets based on recent order volume.
-* **Fix**: Assume the next surge in orders will be more intense than any that have occurred previously.
-* **Fix**: If we ever run out of a part or experience a close call, double its inventory targets.
+- **Fix**: Schedule a monthly adjustment of inventory targets based on recent order volume.
+- **Fix**: Assume the next surge in orders will be more intense than any that have occurred previously.
+- **Fix**: If we ever run out of a part or experience a close call, double its inventory targets.
 
 ### Urgency was not obvious
 
@@ -116,9 +116,9 @@ Our standard workflow with the inventory spreadsheet is to "top up" any item tha
 
 We didn't notice that customers were purchasing so quickly that we were on track to reach zero before the new shipment would arrive. The next day, we placed an additional order with overnight shipping to bridge us to the later shipment.
 
-* **Fix**: Highlight numbers in the "in stock" column when they reach dangerously low levels.
-* **Fix**: Upgrade to Amazon Business Prime to make two-day shipping a no-brainer.
-* **Fix**: Look for inventory management software that includes alerting based on trends.
+- **Fix**: Highlight numbers in the "in stock" column when they reach dangerously low levels.
+- **Fix**: Upgrade to Amazon Business Prime to make two-day shipping a no-brainer.
+- **Fix**: Look for inventory management software that includes alerting based on trends.
 
 ### Handling time is too short
 
@@ -128,11 +128,11 @@ After the YouTube review, we had to list items as backordered after a week of sc
 
 The two-day window was creating too much stress. We ship most orders out next-day anyway, and customers probably don't care much about an advertised turnaround of two vs. three days.
 
-* **Fix**: Increase advertised handling time to three days.
+- **Fix**: Increase advertised handling time to three days.
 
 ### Reordering packs of parts creates unnecessary cognitive load
 
-We purchase some of our parts individually and some in packs of two or three per package. For example, we purchase our power adapters in packs of three. Our inventory spreadsheet lists *absolute* quantity of power adapters, not *packs* of power adapters.
+We purchase some of our parts individually and some in packs of two or three per package. For example, we purchase our power adapters in packs of three. Our inventory spreadsheet lists _absolute_ quantity of power adapters, not _packs_ of power adapters.
 
 During the rush, we meant to order 150 power adapters, but we accidentally ordered 150 3-packs, so 450 total.
 
@@ -170,8 +170,8 @@ My girlfriend slash inventory manager handles the final manufacturing steps, suc
 
 With all the other parts of running TinyPilot, I've sadly had scarce time to work on the software. In December, I began looking for part-time developers to pick up the slack. I prepared these two documents to describe the job and shared them in a few small channels:
 
-* [Job description](https://docs.google.com/document/d/1DPvwbEqCJjJ2f6GklQ0lQnVvfgFNsAAahgzLRjox1-g/edit?usp=sharing)
-* [Guidelines for working with me](https://docs.google.com/document/d/1wbXw6G7c6T-PnqIZzFzzzx8Iy3NKTHqcb6SDEPgdKxc/edit?usp=sharing)
+- [Job description](https://docs.google.com/document/d/1DPvwbEqCJjJ2f6GklQ0lQnVvfgFNsAAahgzLRjox1-g/edit?usp=sharing)
+- [Guidelines for working with me](https://docs.google.com/document/d/1wbXw6G7c6T-PnqIZzFzzzx8Iy3NKTHqcb6SDEPgdKxc/edit?usp=sharing)
 
 Out of all the freelance positions I hire for, software development is always the biggest challenge. I have high standards for software, so it's difficult to find developers who have a similar passion for quality and maintainability.
 
@@ -185,12 +185,12 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 {{<revenue-graph project="htfp">}}
 
-| Metric             | December 2020 | January 2021  | Change                                           |
-| ------------------ | ------------- | ------------- | ------------------------------------------------ |
-| Unique Visitors    | 2,595         | 1,042         | <font color="red">-1,553 (-60%)</font>           |
+| Metric            | December 2020 | January 2021  | Change                                           |
+| ----------------- | ------------- | ------------- | ------------------------------------------------ |
+| Unique Visitors   | 2,595         | 1,042         | <font color="red">-1,553 (-60%)</font>           |
 | **Total Revenue** | **$1,431.00** | **$2,565.22** | **<font color="green">+$1,134.22 (+79%)</font>** |
 
-*Hit the Front Page of Hacker News*, my course about blogging for developer audiences, finally launched in January. There was a jump in sales around the launch, but it was significantly less than I expected. My goal for the course was to earn $20k by the end of the year. That's looking unlikely.
+_Hit the Front Page of Hacker News_, my course about blogging for developer audiences, finally launched in January. There was a jump in sales around the launch, but it was significantly less than I expected. My goal for the course was to earn $20k by the end of the year. That's looking unlikely.
 
 When I told [Cory Zue](https://www.coryzue.com/) that I was disappointed in sales so far, he teased me about how much TinyPilot's earnings have jaded me. The course earned more in January alone than I earned [my whole first year](/solo-developer-year-1/#how-i-made-and-spent-money) as an indie developer.
 
@@ -200,12 +200,12 @@ I'm planning to write a retrospective later this month that's focused entirely o
 
 {{<revenue-graph project="isitketo">}}
 
-| Metric                    | December 2020 | January 2021 | Change                                         |
-| ------------------------- | ------------- | ------------ | ---------------------------------------------- |
-| Unique Visitors           | 49,373        | 80,177       | <font color="green">+30,804 (+62%)</font>      |
-| Total Pageviews           | 93,242        | 182,367      | <font color="green">+89,125 (+96%)</font>      |
-| Domain Rating (Ahrefs)    | 10.0          | 11.0         | <font color="green">+1.0 (+10%)</font>         |
-| AdSense Revenue           | $334.72       | $677.36      | <font color="green">+$342.64 (+102%)</font>    |
+| Metric                   | December 2020 | January 2021 | Change                                         |
+| ------------------------ | ------------- | ------------ | ---------------------------------------------- |
+| Unique Visitors          | 49,373        | 80,177       | <font color="green">+30,804 (+62%)</font>      |
+| Total Pageviews          | 93,242        | 182,367      | <font color="green">+89,125 (+96%)</font>      |
+| Domain Rating (Ahrefs)   | 10.0          | 11.0         | <font color="green">+1.0 (+10%)</font>         |
+| AdSense Revenue          | $334.72       | $677.36      | <font color="green">+$342.64 (+102%)</font>    |
 | Amazon Affiliate Revenue | $149.99       | $238.02      | <font color="green">+$88.03 (+59%)</font>      |
 | **Total Revenue**        | **$484.71**   | **$915.38**  | **<font color="green">+$430.67 (+89%)</font>** |
 
@@ -215,10 +215,10 @@ Is It Keto had a record month even though I didn't touch the site at all. Becaus
 
 {{<revenue-graph project="zestful">}}
 
-| Metric             | December 2020 | January 2021 | Change                                        |
-| ------------------ | ------------- | ------------ | --------------------------------------------- |
-| Unique Visitors    | 507           | 419          | <font color="red">-88 (-17%)</font>           |
-| Total Pageviews    | 1,511         | 1,194        | <font color="red">-317 (-21%)</font>          |
+| Metric            | December 2020 | January 2021 | Change                                        |
+| ----------------- | ------------- | ------------ | --------------------------------------------- |
+| Unique Visitors   | 507           | 419          | <font color="red">-88 (-17%)</font>           |
+| Total Pageviews   | 1,511         | 1,194        | <font color="red">-317 (-21%)</font>          |
 | RapidAPI Revenue  | $103.33       | $155.50      | <font color="green">+$52.17 (+50%)</font>     |
 | **Total Revenue** | **$103.33**   | **$155.50**  | **<font color="green">+$52.17 (+50%)</font>** |
 
@@ -228,21 +228,21 @@ Zestful is growing slightly, even though it's in maintenance mode. The growth se
 
 ### What got done?
 
-* [*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/) launched.
-* [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) graduated from beta to a real relase.
-* Conducted TinyPilot's first postmortem.
-* Hired two freelance developers on a trial basis.
+- [_Hit the Front Page of Hacker News_](https://hitthefrontpage.com/) launched.
+- [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) graduated from beta to a real relase.
+- Conducted TinyPilot's first postmortem.
+- Hired two freelance developers on a trial basis.
 
 ### Lessons learned
 
-* YouTube reviews can be incredibly powerful, but they take time.
-  * Seeing the results from the first review, this is definitely a source I want to explore further, but it will take a few months to line up new reviews.
-* As you grow, review the assumptions behind your processes.
-  * This is a lesson I have to learn over and over. I often establish a process for some task, and it becomes a habit. But then I stop thinking critically about the process and fail to recognize that I designed it for conditions that might no longer be true.
-  * It's important to take a step back regularly and review whether the process is still optimal.
+- YouTube reviews can be incredibly powerful, but they take time.
+  - Seeing the results from the first review, this is definitely a source I want to explore further, but it will take a few months to line up new reviews.
+- As you grow, review the assumptions behind your processes.
+  - This is a lesson I have to learn over and over. I often establish a process for some task, and it becomes a habit. But then I stop thinking critically about the process and fail to recognize that I designed it for conditions that might no longer be true.
+  - It's important to take a step back regularly and review whether the process is still optimal.
 
 ### Goals for next month
 
-* Attract five bloggers or YouTubers to a TinyPilot affiliate program.
-* Add two features to TinyPilot that reduce support or manufacturing costs.
-* Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot.
+- Attract five bloggers or YouTubers to a TinyPilot affiliate program.
+- Add two features to TinyPilot that reduce support or manufacturing costs.
+- Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot.
