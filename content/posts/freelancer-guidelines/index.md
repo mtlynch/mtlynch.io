@@ -125,7 +125,7 @@ It's okay for response time to run longer than one day occasionally, but it shou
 
 Meetings are useful for topics that are inefficient or impossible to communicate in writing. They come at a significant cost &mdash; meetings interrupt focus and constrain schedules, so I keep them to a minimum.
 
-I use emails to communicate facts and meetings to discuss opinions. For example, if we review a design document, we don't need to read it together live. Instead, we can read the document beforehand and reserve the meeting time for interactive discussion.
+I use emails to communicate facts and meetings to discuss topics interactively. For example, if we review a design document, we don't need to read it together live. Instead, we can read the document beforehand and reserve the meeting time for live discussion.
 
 I'll also schedule meetings once or twice a month for casual face-time together. Email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out).
 
