@@ -4,6 +4,15 @@ date: 2022-09-07T10:34:15-04:00
 description: I'm firing on all cylinders.
 ---
 
+{{<notice type="info">}}
+
+**New here?**
+
+Hi, I'm Michael. I'm a software developer, and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue.
+
+Every month, I publish a retrospective like this one to share how things are going with my business and my professional life, overall.
+{{</notice>}}
+
 ## Highlights
 
 - TinyPilot had its all-time best month, reaching nearly $80k in revenue and exceeding its previous record by 15%.
@@ -65,7 +74,7 @@ Given how much value I got from having a support engineer, I felt the pain more 
 
 The dev team has two people, the fulfillment team has two people, and both of those teams work well. When one person is sick or on vacation, there's enough capacity that their counterpart can keep things moving forward. I decided it was time to add a second support engineer.
 
-## Handling 8x the applicant pool
+## Handling 8x the applicant rate
 
 Last time I posted the support engineer job, I got 221 applicants in 30 days. This time, there were 802 applications in only two weeks. There were so many applicants that I had to do things to actively reduce the number of applicants, and I eventually closed applications entirely after two weeks.
 
@@ -97,13 +106,13 @@ For the purposes of this evaluation, I consider everyone who passed the resume s
 
 | Channel                                                      | Cost     | Total Candidates | Passed Initial Screen | Cost per Qualified Candidate | Trial Hires |
 | ------------------------------------------------------------ | -------- | ---------------- | --------------------- | ---------------------------- | ----------- |
-| We Work Remotely                                             | $398     | 560              | XX (XX%)              | $XX                          | 0           |
-| Remote OK                                                    | $448     | 127              | XX (XX%)              | $XX                          | 0           |
-| Craigslist                                                   | $25      | 5                | XX (XX%)              | $XX                          | 0           |
-| [Hacker News](https://news.ycombinator.com/item?id=32418196) | $0       | 5                | XX (XX%)              | $0                           | 0           |
-| Other aggregators                                            | $0       | 53               | XX (XX%)              | $0                           | 0           |
-| Unknown / applied directly\*                                 | $0       | 52               | XX (XX%)              | $0                           | 1           |
-| **Total**                                                    | **$871** | **XX**           | **XX (XX%)**          | **$XX**                      | **1**       |
+| We Work Remotely                                             | $398     | 359              | 20 (6%)               | $20                          | 0           |
+| Remote OK                                                    | $448     | 67               | 0 (0%)                | N/A                          | 0           |
+| Craigslist                                                   | $25      | 3                | 1 (33%)               | $25                          | 0           |
+| [Hacker News](https://news.ycombinator.com/item?id=32418196) | $0       | 2                | 0 (0%)                | N/A                          | 0           |
+| Other aggregators                                            | $0       | 53               | 1 (8%)                | $0                           | 0           |
+| Unknown / applied directly\*                                 | $0       | 52               | 3 (15%)               | $0                           | 1           |
+| **Total**                                                    | **$871** | **464**          | **25 (5%)**           | **$35**                      | **1**       |
 
 \* The "Unknown" category includes candidates who applied through the link on the TinyPilot website, so it includes people who saw me post about it on Twitter or other places. My final hire found the job from [my tweet](https://twitter.com/deliberatecoder/status/1557385358576418817).
 
