@@ -8,7 +8,7 @@ description: I'm firing on all cylinders.
 
 **New here?**
 
-Hi, I'm Michael. I'm a software developer, and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue.
+Hi, I'm Michael. I'm a software developer, and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue and employs six other people.
 
 Every month, I publish a retrospective like this one to share how things are going with my business and my professional life, overall.
 {{</notice>}}
@@ -66,7 +66,7 @@ One factor that I think increased sales was lowering prices. I [reduced prices b
 
 ## Hiring a second support engineer
 
-In February, I hired [TinyPilot's first Support Engineer](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). Before that, TinyPilot's fulfillment staff were already handling customer support, but I was still the only person responsible for technical questions.
+In February, I [hired TinyPilot's first Support Engineer](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). Before that, TinyPilot's fulfillment staff were already handling customer support, but I was still the only person responsible for technical questions.
 
 Bringing on a support engineer was a huge help and made a big difference in freeing up my time and getting faster responses to customers. But it was also the hardest role I've had to hire for. There's so much institutional knowledge about TinyPilot that I didn't realize was siloed in my head, so it was a lot of work to transfer it to someone else.
 
@@ -88,17 +88,17 @@ Adding a location requirement did slow down the rate of new applications by abou
 
 I closed applications after two weeks, as I'd received 802 applications, and I knew I wouldn't be able to process all of them fast enough to give candidates timely responses.
 
-There were a few factors that might explain the increase.
+Why so many more applicants? Here are my guesses:
 
 ### Structured web forms are less intimidating than email
 
 I think the biggest factor was that this time, candidates applied through a web form, whereas last time, I told people to just email me a resume and cover letter. I suspect people feel more comfortable filling out a structured form, so it encourages more people to apply.
 
-I was curious whether the web form attracts more low-effort applications. Last time, 18% of candidates from We Work Remotely passed the resume screen, whereas this time it was XX%.
+The downside is that the ease of the web form seems to attract more low-effort applicants than unstructured email. When candidates applied via an open-ended email 18% of candidates from We Work Remotely passed the resume screen. With a structured form, only 6% did.
 
 ### More hiring channels means more candidates
 
-Another factor was that I posted the job to two additional channels: RemoteOK and Craigslist. Craigslist didn't seem to add many applicants, but RemoteOK added 127.
+I posted the job to two additional channels: RemoteOK and Craigslist. Craigslist didn't seem to add many applicants, but RemoteOK added 127.
 
 ### A declining economy means more job-seekers
 
@@ -106,7 +106,9 @@ Lastly, the global economy is worse today than it was when I hired six months ag
 
 ## Comparing channels for advertising remote jobs
 
-The two metrics I care about are absolute number of qualified candidates and percentage of qualified candidates. I want a platform that can deliver me about 10-20 qualified candidates per role, but if their signal-to-noise is so bad that I have to screen 3,000 people to find the ones who are qualified, it's not very valuable.
+Through this process, I found that different hiring channels had drastically different returns on investment.
+
+The two metrics I care about are absolute number of qualified candidates and percentage of qualified candidates. I want a platform that can deliver me about 10-20 qualified candidates per role so that I have a decent pool of options to choose from. If the platform's signal-to-noise is so bad that I have to screen 3,000 people to find a handful who are qualified, it's not very valuable.
 
 For the purposes of this evaluation, I consider everyone who passed the resume screening to be a qualified candidate. I'm also only considering the applications for the five days when the job was open worldwide. This is partly because changing the location requirement biases the responses, and partly because I haven't finished processing all the applications from after that date.
 
@@ -128,17 +130,17 @@ RemoteOK had no qualified candidates in this time range, and my experience using
 
 ## RemoteOK is hugely disappointing
 
-I've been a fan of Pieter Levels for a long time from interviews he's given. If you've never heard [his interview on Indie Hackers](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), it's one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle freeing and exciting.
+I've been a fan of [Pieter Levels](https://levels.io/) for a long time. If you've never heard [his interview on Indie Hackers](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), it's one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle freeing and exciting.
 
-Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't recall the last time I've used a product where I feel like it's working against me quite so hard as RemoteOK.
+Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't recall the last time I've used a product that feels like it's fighting so stubbornly against me.
 
 Right off the bat, when you create the job post, RemoteOK pushes all these little upsells on you. We Work Remotely does something similar, but it doesn't feel as gross. Maybe it's because We Work Remotely isn't charging $134 to create a QR code for you.
 
 {{<img src="remoteok-upsells.png" hasBorder="true" alt="Screenshot of upsells on Remote OK" maxWidth="700px" caption="RemoteOK pushes employers to choose among nine different upsells, including $134 to generate a QR code.">}}
 
-RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development`. I erased RemoteOK's tags, but a few hours later they were back. The only way I could get rid of them permanently is by adding more tags myself.
+RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development` even though those have nothing to do with my job. I erased RemoteOK's tags, but a few hours later they were back. The only way I could get rid of them permanently is by adding more tags myself.
 
-The most egregious example of RemoteOK going rogue is the magic keywords feature. RemoteOK adds instructions to your job posting informing applicants that they have to add a special keyword to their application to be considered for the role. RemoteOK doesn't tell you that it's adding this text, and you can't turn it off.
+The most egregious example of RemoteOK taking control away from the user is the magic keywords feature. RemoteOK adds instructions to your job posting informing applicants that they have to add a special keyword to their application to be considered for the role. RemoteOK doesn't tell you that it's adding this text, and you can't turn it off.
 
 {{<gallery caption="RemoteOK injects additional instructions to your candidates that are not visible to you. You [can't disable this behavior](https://twitter.com/deliberatecoder/status/1557394573189595137).">}}
 {{<img src="employer-view.png" hasBorder="true" alt="Employer view contains instructions I wrote">}}
@@ -147,24 +149,26 @@ The most egregious example of RemoteOK going rogue is the magic keywords feature
 
 I hate, hate, HATE this feature. I wouldn't have listed my job on RemoteOK at all if I'd known about this. I find these "magic keyword" requirements insulting to applicants, and I deliberately avoid anything like that when advertising my job. The fact that RemoteOK surreptitiously injects it into my ad is incredibly irritating.
 
-Most damning of all, RemoteOK failed entirely in the main thing it's supposed to do: deliver qualified candidates. None of RemoteOK's candidates passed my initial application screen, while We Work Remotely matched me with 20 qualified applicants.
+Most damning of all, RemoteOK failed entirely in the main thing it's supposed to do: deliver qualified candidates. None of RemoteOK's candidates passed my initial application screen, while We Work Remotely matched me with 20 qualified applicants during the same time period.
 
 ## Homerun is good, not great
 
-Overall, I liked Homerun. They had a nice UI, and it did everything I needed. It was a huge step up from my previous system of just having candidates email me, and then I tried to organize everything with inbox labels.
+Last time I hired, I directed candidates to just email me, and then I organized everything by inbox labels. That ended up being a hassle, so this time around, I [tried several applicant tracking systems](/notes/bootstrapper-ats/), eventually settling on [Homerun](https://homerun.co).
+
+Overall, I liked Homerun. The UI is pretty, and it did everything I needed. Everything felt pretty intuititive, so it was easy to process applications in an organized way.
 
 {{<gallery caption="Homerun's Kanban view of applications (right) was a big step up from my previous system of just labeling emails in my inbox (left).">}}
 {{<img src="email-labels.png" hasBorder="true" alt="Screenshot of inbox labels in Fastmail">}}
 {{<img src="homerun-kanban.png" hasBorder="true" alt="Homerun sorts applications in a kanban view of hiring stages" maxWidth="600px">}}
 {{</gallery>}}
 
-Homeruns's UX is overall very intuititive. It made it easy to process applications in an organized way.
-
 I really liked their email template feature. I didn't send candidates form letters, but it was helpful having a skeleton structure in place for common responses like:
 
 - You don't have enough Linux experience
 - Your English isn't at the level the role requires
 - You're a great candidate, let's move to the sample questions
+
+{{<img src="poor-english-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at [company_name] and for taking the time to learn more about the company. Unfortunately, I don't think this position would be a good match for your skills. This position requires someone more with more experience writing customer-facing content. Your English is pretty strong, but there were several syntax errors in your application, so I don't think this role would be a good fit. I'm sorry it didn't work out, but I wish you the best of luck in your search." maxWidth="700px">}}
 
 The price is $71/mo, which I feel like is well within the affordable range for most small businesses. And billing is fair in that you don't have to pay for months when you're not hiring. Most [other applicant tracking platforms](/notes/bootstrapper-ats/) require you to keep paying a monthly fee or they delete all of your data. Homerun allows you to downgrade to the free plan when you're not actively hiring, and they hold all of your data for you. The only restriction is that you can't accept new applicants until you begin paying again.
 
@@ -181,12 +185,6 @@ Email is a little wonky. The email view takes up the whole screen, so you can't 
 Poor email deliverability. I had several candidates tell me that they didn't receive emails I sent through Homerun when the emails included links.
 
 It's very slow. Every page takes 2-10 seconds to load on my modern desktop with fiber Internet.
-
-## Pausing hiring on various platforms
-
-One thing I disliked about We Work Remotely is that you can't suspend a job posting. XX weeks in, I tried to suspend my listing, so I clicked "Remove ad." I was expecting a prompt that would give me options to restore it during the time period I paid for, but nope. The ad disappeared immediately. No confirmation prompt, no undo button: gone. I emailed support and they restored it for me within a few hours, but it's still a pain.
-
-Instead, I decided to just limit the applications to the United States. I can hire outside the US, but hiring within the US means that payments are a little easier, and the candidates are more likely to write well in English. But candidates can simply ignore the requirement, so many of the applicants I got after requiring US location were still outside the US.
 
 ## Trying to make the hiring ecosystem less adversarial
 
