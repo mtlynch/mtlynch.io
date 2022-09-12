@@ -28,21 +28,21 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: We migrated TinyPilot Community, but TinyPilot Pro is not yet ready.
 - **Grade**: C+
 
-We've been working on overhauling TinyPilot's update system since May, and it's taking way longer than any of us expected. I had let a lot of technical debt accrue in our update system, and we're reducing that debt by untangling it, but it also means that we keep encountering surprises that eat up a week or more of dev time. I am pretty confident that we're down to the last few weeks now.
+We've been working on overhauling TinyPilot's update system since May, and it's taking way longer than any of us expected. I accrued a lot of technical debt in our update system, and we're paying it down now, but it also means that we keep encountering surprises that eat up a week or more of dev time. I'm pretty confident that we're down to the last few weeks now.
 
 ### Finalize plans for managing TinyPilot licenses
 
 - **Result**: Plans are finalized.
 - **Grade**: A
 
-We've finalized a plan for managing TinyPilot licenses, and I think everyone involved is happy with the balance of making it a good user experience while not overinvesting engineering effort into a complex system.
+We've finalized a plan for managing TinyPilot licenses, and I think everyone involved is happy with the plan. It offers a smooth user experience while not overinvesting engineering effort into a complex system.
 
 ### Send TinyPilot Voyager to two YouTube creators or bloggers for review
 
 - **Result**: I was too busy with hiring to get to this.
 - **Grade**: F
 
-I really should have made hiring a new Support Engineer one of my goals instead because that's what I spent most of the month doing.
+I didn't make any progress here. I really should have made hiring a new Support Engineer one of my goals instead because that's what I spent most of the month doing.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -90,13 +90,19 @@ I closed applications after two weeks, as I'd received 802 applications, and I k
 
 There were a few factors that might explain the increase.
 
-I think the biggest factor was that this time, candidates applied through **a structured web form**, whereas last time, I told people to just email me a resume and cover letter. I suspect people feel more comfortable filling out a structured form, so it encourages more people to apply.
+### Structured web forms are less intimidating than email
+
+I think the biggest factor was that this time, candidates applied through a web form, whereas last time, I told people to just email me a resume and cover letter. I suspect people feel more comfortable filling out a structured form, so it encourages more people to apply.
 
 I was curious whether the web form attracts more low-effort applications. Last time, 18% of candidates from We Work Remotely passed the resume screen, whereas this time it was XX%.
 
-Another factor was that I posted the job to **two additional channels**: RemoteOK and Craigslist. Craigslist didn't seem to add many applicants, but RemoteOK added 127.
+### More hiring channels means more candidates
 
-Lastly, **the global economy is worse** today than it was when I hired six months ago. There are more fears of a recession, and fewer companies are hiring, so I'd assume it's more of an employer's market than it was earlier in the year.
+Another factor was that I posted the job to two additional channels: RemoteOK and Craigslist. Craigslist didn't seem to add many applicants, but RemoteOK added 127.
+
+### A declining economy means more job-seekers
+
+Lastly, the global economy is worse today than it was when I hired six months ago. There are more fears of a recession, and fewer companies are hiring, so I'd assume it's more of an employer's market than it was earlier in the year.
 
 ## Comparing channels for advertising remote jobs
 
@@ -116,34 +122,43 @@ For the purposes of this evaluation, I consider everyone who passed the resume s
 
 \* The "Unknown" category includes candidates who applied through the link on the TinyPilot website, so it includes people who saw me post about it on Twitter or other places. My final hire found the job from [my tweet](https://twitter.com/deliberatecoder/status/1557385358576418817).
 
+We Work Remotely performed pretty well. It has its share of low-effort and spammy applicants, but finding 20 candidates out of 359 is a pretty good ratio.
+
+RemoteOK had no qualified candidates in this time range, and my experience using it was so bad that it deserves its own section.
+
 ## RemoteOK is hugely disappointing
 
-RemoteOK is a business started by Pieter Levels. I've been a fan of Pieter's for a long time from interviews he's given. If you've never heard [his interview on Indie Hackers](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), it's one of the best episodes of the series and offers a fantastic insights into the SaaS bootstrapper lifestyle.
+I've been a fan of Pieter Levels for a long time from interviews he's given. If you've never heard [his interview on Indie Hackers](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), it's one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle freeing and exciting.
 
-Unfortunately, RemoteOK was a huge letdown.
+Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't recall the last time I've used a product where I feel like it's working against me quite so hard as RemoteOK.
 
-Right off the bat, when you create the job post, RemoteOK pushes all these little upsells onto you. We Work Remotely does something similar, but it doesn't feel as gross. Maybe it's because We Work Remotely isn't charging you $134 to create a QR code for you.
+Right off the bat, when you create the job post, RemoteOK pushes all these little upsells on you. We Work Remotely does something similar, but it doesn't feel as gross. Maybe it's because We Work Remotely isn't charging $134 to create a QR code for you.
 
-but I'd never tried any of his products.
+{{<img src="remoteok-upsells.png" hasBorder="true" alt="Screenshot of upsells on Remote OK" maxWidth="700px" caption="RemoteOK pushes employers to choose among nine different upsells, including $134 to generate a QR code.">}}
 
-RemoteOK was, sadly, a huge letdown.
+RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development`. I erased RemoteOK's tags, but a few hours later they were back. The only way I could get rid of them permanently is by adding more tags myself.
 
-I can't recall the last time I've used a product where I feel like it's working against me. The most egregious example is that it adds text to your job listing without notifying you, and you can't turn it off.
+The most egregious example of RemoteOK going rogue is the magic keywords feature. RemoteOK adds instructions to your job posting informing applicants that they have to add a special keyword to their application to be considered for the role. RemoteOK doesn't tell you that it's adding this text, and you can't turn it off.
 
 {{<gallery caption="RemoteOK injects additional instructions to your candidates that are not visible to you. You [can't disable this behavior](https://twitter.com/deliberatecoder/status/1557394573189595137).">}}
 {{<img src="employer-view.png" hasBorder="true" alt="Employer view contains instructions I wrote">}}
 {{<img src="candidate-view.png" hasBorder="true" alt="Applicant view contains extra text: Please mention the word EMINENCE when applying to show you read the job post completely.">}}
 {{</gallery>}}
 
-I hate, hate, HATE this feature. I wouldn't have listed my job on RemoteOK at all if I'd known about this. I hate seeing this kind of thing in job postings, and I definitely don't want it in mine. The fact that RemoteOK surreptitiously injects it into my ad is incredibly irritating.
+I hate, hate, HATE this feature. I wouldn't have listed my job on RemoteOK at all if I'd known about this. I find these "magic keyword" requirements insulting to applicants, and I deliberately avoid anything like that when advertising my job. The fact that RemoteOK surreptitiously injects it into my ad is incredibly irritating.
 
-Including the key word didn't correlate with quality, and the most noticeable effect was just that I kept getting duplicate applications from people who said they forgot to include the key word.
+Most damning of all, RemoteOK failed entirely in the main thing it's supposed to do: deliver qualified candidates. None of RemoteOK's candidates passed my initial application screen, while We Work Remotely matched me with 20 qualified applicants.
 
 ## Homerun is good, not great
 
 Overall, I liked Homerun. They had a nice UI, and it did everything I needed. It was a huge step up from my previous system of just having candidates email me, and then I tried to organize everything with inbox labels.
 
-The UX is overall very intuititive. It made it easy to process applications in an organized way.
+{{<gallery caption="Homerun's Kanban view of applications (right) was a big step up from my previous system of just labeling emails in my inbox (left).">}}
+{{<img src="email-labels.png" hasBorder="true" alt="Screenshot of inbox labels in Fastmail">}}
+{{<img src="homerun-kanban.png" hasBorder="true" alt="Homerun sorts applications in a kanban view of hiring stages" maxWidth="600px">}}
+{{</gallery>}}
+
+Homeruns's UX is overall very intuititive. It made it easy to process applications in an organized way.
 
 I really liked their email template feature. I didn't send candidates form letters, but it was helpful having a skeleton structure in place for common responses like:
 
@@ -199,26 +214,42 @@ The platform I use for internaional payments changed out from under me, so I cou
 
 ## Improvements for my next hire
 
-### Hire someone to help me do the initial screening
-
-Processing the applications takes dozens of hours, but it's a task I could train an intelligent person to do in about an hour. I don't want to use dumb automated filters or AI, as I still want to be able to tell candidates a real human is reading their application, but it doesn't strictly have to be me.
-
-### Convert the application to a waitlist once I reach some limit
-
-(e.g., 400 candidates)
-
-### Remember how time-consuming it is
-
 ### Be more conservative in sending responses
 
-I'll respond if:
+When I first started processing applications with Homerun, I got overeager about its email templates. My last hiring round, if a candidate sent a low-effort application, I just ignored them.
+
+With Homerun, the email templates made it easy to respond even to people who put in low effort. I made a template that basically said, "Thanks for applying, but I'm declining because there's nothing specific to TinyPilot in your answers." I figured it was good to at least give feedback that copy/pasting applications is losing them jobs.
+
+This didn't work. Of the candidates who responded, about 50% were gracious and appreciated the feedback. Another 30% decided to research the company after seeing a human engaging, but that put me in a weird position. If I reconsidered their application, it felt unfair to candidates who wrote thoughtful answers up front instead of copy/pasting the same thing to everyone. And then the last 20% were rude and hostile. After a day or two of that, I realized I was burning a lot of time trying to help applicants that had invested very little in me, so I just stopped responding to low-effort applications.
+
+I changed my strategy so that I only respond if:
 
 - The candidate is qualified for the role at a basic level
   - e.g., if one of the requirements is comfort with Linux and the candidate says they've never used Linux, no response
 - The candidate has invested at least a few minutes into their application
   - e.g., if the responses are clearly copy/pasted or just dashed off: no response
 
-At the beginning of the process, I was responding to candidates to tell them that . Some were appreciative of the feedback, but some of the candidates got rude or snippy. Some candidates saw that a human is actually engaging and then decided to invest time into their application, which left me in an awkward position.
+This had the pleasant side effect of completely eliminating hostile responses. When I rejected candidates and gave my reasons, they didn't always respond, but when they did, they were professional and appreciative of the feedback.
+
+### Hire someone to help me do the initial screening
+
+Processing the applications takes dozens of hours, but it's a task I could train an intelligent person to do in about an hour.
+
+I don't want to use dumb automated filters or AI, as I still want to be able to tell candidates a real human is reading their application, but it doesn't strictly have to be me.
+
+### Build redundancy into customer support
+
+One of the factors that delayed my responses to the applicants was that the TinyPilot employee who usually handles customer support was out sick for a week. Customer support _feels_ like it has redundancy because we have me and our support engineer available to step in, but this experience made me realize how fragile it is.
+
+The employee who handles customer support has taken it over so well that I forgot how much work it is when I do it. On top of that, I was on vacation for a few days, which meant that TinyPilot's support engineer was the only one offering support. But that was rocky because he doesn't have access to Shopify or our local fulfillment office, so he was limited in what kind of support he could offer.
+
+Once things are settled with the support engineering team, I'm going to add a second person to handle customer support to make sure that things stay smooth on customer support when there are normal, expected absences.
+
+### Convert the job application form to a waitlist once I reach some limit
+
+Even if I get other people to help me with hiring, there are limits to how many applications we can review in a reasonable time frame. Once we exceed this limit (say, 400 candidates), I should use convert the application to a waitlist so I'm not wasting candidates' time. Homerun supports this natively.
+
+### Remember how time-consuming it is
 
 ## Wrap up
 
