@@ -39,14 +39,14 @@ Over the first two years, I accrued a lot of technical debt in TinyPilot's updat
 - **Result**: Plans are finalized.
 - **Grade**: A
 
-We've finalized a plan for managing TinyPilot licenses, and I think everyone involved is happy with the plan. It offers a smooth user experience while not overinvesting engineering effort into a complex system.
+We've finalized a plan for managing TinyPilot licenses, and I think everyone involved is happy. It offers a smooth user experience and minimizes engineering complexity.
 
 ### Send TinyPilot Voyager to two YouTube creators or bloggers for review
 
 - **Result**: I was too busy with hiring to get to this.
 - **Grade**: F
 
-I didn't make any progress here. I really should have made hiring a new Support Engineer one of my goals instead because that's what I spent most of the month doing.
+I didn't make any progress here. I really should have made hiring one of my goals instead because that's what I spent most of the month doing.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -64,31 +64,31 @@ I didn't make any progress here. I really should have made hiring a new Support 
 
 \* Profit is just a naive estimate based on the delta of my cash holdings. I'll update this when I do real bookkeeping mid-month.
 
-August was a record month in TinyPilot's revenue and profit. I [reduced prices by 11%](/retrospectives/2022/08/#experimenting-more-with-tinypilot-pricing) at the end of August, and it looks like that increased sales by 34%. And again, it was another "boring" month in that no external events drove these numbers, so I'm optimistic about sustaining this level of sales.
+August was a record month in TinyPilot's revenue and profit. I [reduced prices by 11%](/retrospectives/2022/08/#experimenting-more-with-tinypilot-pricing) at the end of July, and it looks like that increased sales by 34%. And again, it was another "boring" month in that no external events drove these numbers, so I'm optimistic about sustaining this.
 
-The reason I was able to reduce prices was that I finally have a healthy supply of circuit boards. The chip shortage forced us into an eight-month redesign to replace a component that was no longer available, so I had to keep prices higher to avoid selling out our limited stock. Now that we can continue making new chips, I have more flexibility in price and control over how quickly we sell.
+The reason I was able to reduce prices was that I finally have a healthy supply of circuit boards. The chip shortage forced us into an eight-month redesign to replace a component that became unavailable. I had to keep prices high to avoid selling out our limited stock. Now that we can continue making new chips, I have more flexibility in price and sales velocity.
 
 ## Hiring a second support engineer
 
-In February, I [hired TinyPilot's first Support Engineer](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). Before that, TinyPilot's fulfillment staff were already handling customer support, but I was still the only person responsible for technical questions.
+In February, I [hired TinyPilot's first support engineer](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). Before that, TinyPilot's fulfillment staff were handling customer support, but I was still the only person responsible for answering technical questions.
 
-Bringing on a support engineer freed up a lot of my time and resulted in faster responses to customers. But it was also the hardest role I've had to hire for. There's so much institutional knowledge about TinyPilot that I didn't realize was siloed in my head, so it was a lot of work to transfer it to someone else.
+Bringing on a support engineer freed up a lot of my time and resulted in faster responses to customers. That meant I felt the pain acutely when he wasn't available.
 
-Given how much value I got from having a support engineer, I felt the pain acutely when he wasn't available. We also found ourselves with so much short-term work in answering support tickets that TinyPilot's support engineer didn't have time to do proactive work in adding documentation or experimenting with new use cases for TinyPilot.
+We also found ourselves with so much short-term work in answering support tickets that we weren't adding new documentation or experimenting with new use cases for TinyPilot.
 
 The dev team has two people, the fulfillment team has two people, and both of those teams work well. When one person is sick or on vacation, there's enough capacity that their counterpart can keep things moving forward. I decided it was time to add a second support engineer.
 
 ## Handling 8x the applicant rate
 
-Last time I posted the support engineer job, I [received 221 applicants in 30 days](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). This time, there were 802 applications in only two weeks. There were so many applicants that I had to do things to actively reduce the number of applicants, and I eventually closed applications entirely after two weeks.
+Last time I posted the support engineer job, I [received 221 applicants in 30 days](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). This time, there were 802 applications in only two weeks. There were so many applicants that I had to actively slow things down, and I ultimately closed applications entirely after two weeks.
 
-I wanted to pause the listings while I caught up, but We Work Remotely, annoyingly, doesn't let you pause posts. You either delete them permanently and forfeit all the time you've paid for, or you leave them running and attract more candidates than you can handle.
+I wanted to pause my job listing while I caught up with responses. We Work Remotely, annoyingly, doesn't let you temporarily hide job posts. You either delete them permanently and forfeit all the time you've paid for, or you leave them running and attract more candidates than you can handle.
 
 As a workaround, I left the job listings up, but I changed the location requirement from "Worldwide" to "US only." There's nothing about the role that strictly requires candidates to live in the US, but it was the best way I could think of to slow the flow of applications without totally taking down the post.
 
 {{<img src="support-engineer-applicants.png" alt="Graph of applications per day" hasBorder="true" maxWidth="700px">}}
 
-Adding a location requirement did slow down the rate of new applications by about half. Still, many applicants ignored the requirement. Before I added a location requirement, 82% of candidates were from outside the US. After I required US residency, only 58% of the candidates said they actually lived in the US.
+Adding a location requirement did slow down the rate of new applications by about half. Still, many applicants ignored the requirement. Only 42% of the candidates said they actually lived in the US. Before I added a location requirement, it was 18%.
 
 I closed applications after two weeks, as I'd received 802 applications, and I knew I wouldn't be able to process all of them fast enough to give candidates timely responses.
 
@@ -96,9 +96,9 @@ Why so many more applicants this time? Here are my guesses:
 
 ### Structured web forms are less intimidating than email
 
-I think the biggest factor was that candidates applied through a web form. Last time, I told people to just email me a resume and cover letter. I suspect people feel more comfortable filling out a structured form, so it encourages more people to apply.
+I think the biggest factor was that candidates applied through a web form this time. Last time, I told people to just email me a resume and cover letter. I suspect people feel more comfortable filling out a structured form, so it encourages more people to apply.
 
-The downside is that the ease of the web form seems to attract more low-effort applicants. Last time, 18% of We Work Remotely applicants were strong enough to pass the initial resume screen. This time, only 6% passed.
+The downside is that the web form seems to attract more low-effort applicants. Last time, 18% of We Work Remotely applicants were strong enough to pass the initial resume screen. This time, only 6% passed.
 
 ### More hiring channels means more candidates
 
@@ -112,9 +112,9 @@ Lastly, the global economy is worse today than it was when I hired six months ag
 
 Through this process, I found that different hiring channels had drastically different returns on investment.
 
-The two metrics I care about are absolute number of qualified candidates and percentage of qualified candidates. I want a platform that can deliver me about 10-20 qualified candidates per role so that I have a decent pool of options to choose from. If the platform's signal-to-noise is so bad that I have to screen 3,000 people to find a handful who are qualified, it's not very valuable.
+The two metrics I care about are absolute number of qualified candidates and percentage of qualified candidates. I want a platform that can deliver me about 10-20 qualified candidates per role so that I have a decent pool of options to choose from. If the platform's signal-to-noise is so bad that I have to screen 3,000 people to find a handful who are qualified, it's not valuable.
 
-For the purposes of this evaluation, I consider everyone who passed the resume screening to be a qualified candidate. I'm also only considering the applications for the five days when the job was open worldwide. This is partly because changing the location requirement biases the responses, and partly because I haven't finished processing all the applications from after that date.
+For the purposes of this evaluation, I consider everyone who passed my resume screening to be a qualified candidate. I'm also only considering the applications for the five days when the job was open worldwide. This is partly because changing the location requirement biases the responses, and partly because I haven't finished processing all the other applications.
 
 | Channel                                                      | Cost     | Total Candidates | Passed Initial Screen | Cost per Qualified Candidate | Trial Hires |
 | ------------------------------------------------------------ | -------- | ---------------- | --------------------- | ---------------------------- | ----------- |
@@ -134,69 +134,75 @@ RemoteOK had no qualified candidates in this time range, and my experience using
 
 ## RemoteOK is hugely disappointing
 
-I've been a fan of [Pieter Levels](https://levels.io/) for a long time. [His interview on Indie Hackers](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), is one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle freeing and exciting.
+I've been a fan of [Pieter Levels](https://levels.io/) for a long time. [His interview on Indie Hackers](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), is one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle exciting and liberating.
 
-Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't recall the last time I've used a product that feels like it's fighting so stubbornly against me.
+Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't remember the last time I've used a product that feels like it's fighting so stubbornly against me, its paying user.
 
 Right off the bat, when you create the job post, RemoteOK pushes all these little upsells on you. We Work Remotely does something similar, but it doesn't feel as gross. Maybe it's because We Work Remotely isn't charging $134 to create a QR code for you.
 
 {{<img src="remoteok-upsells.png" hasBorder="true" alt="Screenshot of upsells on Remote OK" maxWidth="700px" caption="RemoteOK pushes employers to choose among nine different upsells, including $134 to generate a QR code.">}}
 
-RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development` even though those have nothing to do with my job. I erased RemoteOK's tags, but a few hours later, they were back. The only way I could get rid of them permanently is by adding more tags myself.
+RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development` even though those have nothing to do with my job. I erased RemoteOK's tags, but a few hours later, they were back. The only way I could get rid of them permanently was by adding more tags myself.
 
-The most egregious example of RemoteOK taking control away from the user is the magic keywords feature. RemoteOK adds the instruction, "Please mention the word \[_some random word_\] when applying to show you read the job post completely." RemoteOK doesn't tell you that it's adding these instructions, and you can't remove them.
+The most egregious example of RemoteOK taking control away from the user is its magic keywords. RemoteOK adds the instruction, "Please mention the word \[_some random word_\] when applying to show you read the job post completely." RemoteOK doesn't tell you that it's adding these instructions, and you can't remove them.
 
 {{<gallery caption="RemoteOK injects additional instructions to your candidates that are not visible to you. You [can't disable this behavior](https://twitter.com/deliberatecoder/status/1557394573189595137).">}}
 {{<img src="employer-view.png" hasBorder="true" alt="Employer view contains instructions I wrote">}}
 {{<img src="candidate-view.png" hasBorder="true" alt="Applicant view contains extra text: Please mention the word EMINENCE when applying to show you read the job post completely.">}}
 {{</gallery>}}
 
-I hate, hate, HATE this feature. I wouldn't have listed my job on RemoteOK at all if I'd known about this. I find these "magic keyword" requirements insulting to applicants, and I deliberately avoid anything like that when advertising my job. The fact that RemoteOK surreptitiously injects it into my ad is incredibly irritating.
+I hate, hate, HATE this feature. I wouldn't have listed my job on RemoteOK at all had I known about it.
 
-Most damning of all, RemoteOK failed entirely in the main thing it's supposed to do: deliver qualified candidates. None of RemoteOK's candidates passed my initial application screen, while We Work Remotely matched me with 20 qualified applicants during the same time period.
+I find these "magic keyword" requirements insulting to applicants, and I deliberately exclude things like that when advertising my job. It's incredibly irritating that RemoteOK surreptitiously injects it into the job posting I purchased.
+
+Most damning of all, RemoteOK failed entirely at its only job: deliver qualified candidates. None of RemoteOK's candidates passed my initial application screen, while We Work Remotely matched me with 20 qualified applicants during the same time period.
 
 ## Homerun is good, not great
 
-Last time I hired, I directed candidates to just email me, and then I organized everything by inbox labels. That ended up being a hassle, so this time around, I [tried several applicant tracking systems](/notes/bootstrapper-ats/), eventually settling on [Homerun](https://homerun.co).
+Last time I hired, I directed candidates to just email me, and then I organized applications using inbox labels. That ended up being messy and confusing.
 
-Overall, I liked Homerun. The UI is pretty, and it did everything I needed. Everything felt fairly intuititive, so it was easy to process applications in an organized way.
+This time around, I [tested several applicant tracking systems](/notes/bootstrapper-ats/), eventually settling on [Homerun](https://homerun.co).
+
+After using Homerun for the full hiring pipeline, I'm pretty satisfied. The UI looks nice, and it did everything I needed. Everything felt fairly intuititive, so it was easy to process applications in an organized way.
 
 {{<gallery caption="Last time I organized applicants in my email using inbox labels (left). This time, I used Homerun, which has better organization with a Kanban view of applications (right).">}}
 {{<img src="email-labels.png" hasBorder="true" alt="Screenshot of inbox labels in Fastmail">}}
 {{<img src="homerun-kanban.png" hasBorder="true" alt="Homerun sorts applications in a kanban view of hiring stages" maxWidth="600px">}}
 {{</gallery>}}
 
-I really liked Homerun's templated email feature. I didn't send candidates form letters, but it was helpful having a skeleton structure in place for common responses like:
+I really liked Homerun's templated email feature. I rarely sent candidates pure form letters, but it was helpful having a skeleton structure in place for common responses like:
 
 - You don't have enough Linux experience
 - Your English isn't at the level the role requires
-- You're a great candidate, let's move to the sample questions
+- You're a great candidate, so let's move on to the sample questions
 
 {{<img src="poor-english-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at [company_name] and for taking the time to learn more about the company. Unfortunately, I don't think this position would be a good match for your skills. This position requires someone more with more experience writing customer-facing content. Your English is pretty strong, but there were several syntax errors in your application, so I don't think this role would be a good fit. I'm sorry it didn't work out, but I wish you the best of luck in your search." maxWidth="700px">}}
 
 Homerun costs $71/mo, which is within the affordable range for most small businesses. And billing is fair in that you don't have to pay for months when you're not hiring. Most [other applicant tracking platforms](/notes/bootstrapper-ats/) delete all of your data if you stop paying the full monthly fee. Homerun allows you to downgrade to the free plan when you're not actively hiring, which preserves all of your data. The only restriction under the free tier is that you can't accept new applicants until you begin paying again.
 
+I did encounter a few big weaknesses in Homerun:
+
 ### Can't filter candidates
 
-With such a high volume of candidates, I wanted a way to reach out early to the most promising candidates. I'd love to filter down to candidates who live in an English-speaking country and rate themselves highly in Linux. Homerun has this information as structured data, but they don't offer a way of filtering the applicant view by any criteria like this. The only way to find these applicants is by scanning each person one-by-one.
+With such a high volume of candidates, I wanted a way to reach out early to the most promising ones. I'd love to filter down to candidates who live in an English-speaking country and rate themselves proficient in Linux. Homerun has this data, but they don't offer any way of filtering candidates on these criteria. The only way to find these applicants in my queue is by reviewing each application one-by-one.
 
 ### Bad email UX
 
-One of the Homerun's worst UI decisions is how their email works. Like all applicant tracking systems, Homerun lets you email candidates from within the web app. But it does this by popping up a modal window:
+One of the Homerun's worst UI decisions is how their email works. Like all applicant tracking systems, Homerun lets you email candidates from within their web app. But it does this by popping up a modal window:
 
 {{<img src="modal-email.png" hasBorder="true" alt="Screenshot of modal window in Homerun blocking all relevant information about the candidate" maxWidth="800px" caption="Homerun's in-app email creates a modal window that prevents you from referring to the candidate's application while you email them.">}}
 
-The modal window completely blocks everything the candidate wrote in the application, so you can't refer to any of your notes or their answers. This is a terrible choice, as employers obviously need to refer to information about the candidate to write the email.
+The modal window completely blocks everything the candidate wrote in their application, so you can't refer to any of your notes, their resume, or their answers to questions on the application form. This is a terrible choice, as employers obviously need this information when writing back to the candidate.
 
 I worked around this by keeping Homerun open in two side-by-side windows. This worked okay, but Homerun doesn't sync well across browser windows. If I marked a candidate as rejected in one window, the other window would get confused and reload from the top of the applicant list.
 
 ### Poor email deliverability
 
-I sent candidates my sample assignment as a link to a PDF, but several candidates told me they didn't receive it. I suspect that Homerun uses email servers with weak sender reputations, so spam filters are blocking Homerun emails that include links.
+I sent candidates my sample assignment as a link to a PDF, but several candidates told me they didn't receive it. I suspect that Homerun uses email servers with weak sender reputations, so spam filters block Homerun emails that include links.
 
 ### Slow web app
 
-The Homerun web app is very slow. I have a modern desktop with fiber internet, but most Homerun pages take 2-5 seconds to load. Some take as long as 10 seconds.
+The Homerun web app is annoyingly slow. I have a modern desktop with fiber internet, but most Homerun pages take 2-5 seconds to load. Some take as long as 10 seconds.
 
 ## Improvements for my next hire
 
@@ -208,7 +214,7 @@ Here are some changes I plan to make next time to improve the hiring experience 
 
 When I first started processing applications with Homerun, I got overeager about its email templates. My last hiring round, if a candidate sent a low-effort application, I just ignored them. With Homerun, the email templates made it easy to respond even to people who put in low effort.
 
-I made an template that basically said, "Thanks for applying, but I'm declining because there's nothing specific to TinyPilot in your answers." I figured it was good to at least give feedback that copy/pasting applications is losing them jobs.
+I made a template that basically said I'm rejecting them because their application looked copy/pasted. I figured it was good to at least give feedback that copy/pasting applications is losing them jobs.
 
 {{<img src="low-effort-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at TinyPilot. Unfortunately, I've decided not to move forward with your application. I read the answers to the questions you submitted, and it didn't seem like there was anything specific about the company or work that appealed to you, so I don't think this would be a good match. Sorry that it didn't work out, but I wish you luck in your job search." maxWidth="800px" caption="My form-letter response for candidates who applied with copy/pasted application answers.">}}
 
@@ -216,48 +222,50 @@ This strategy worked poorly.
 
 Of the candidates who responded, about 50% were gracious and appreciated the feedback, so that was good. About 20% were rude or hostile, so that was bad.
 
-The last 30% realized an actual human was engaging and their application wasn't going into the void like they'd assumed. At that point, they started researching the company and said they, in fact, were interested in TinyPilot specifically. That put me in a weird position. If I reconsidered their application, it felt unfair to candidates who wrote thoughtful answers up front instead of copy/pasting the same thing to everyone.
+The last 30% realized an actual human was finally engaging with them, and their application hadn't disappeared into the void like they'd assumed. At that point, they started researching the company and said they, in fact, were interested in TinyPilot specifically. That put me in a weird position. If I reconsidered their application, it felt unfair to candidates who wrote thoughtful answers up front instead of copy/pasting the same thing to everyone.
 
-After a day or two of burning time on low-effort applications, I just stopped responding to that category of applicants. I changed my strategy to respond if:
+After a day or two of burning time on low-effort applications, I just stopped responding to that category of applicants. I changed my strategy to respond only if the following were true:
 
 - The candidate is qualified for the role at a basic level
   - e.g., if one of the job requirements is "comfort with Linux" and the candidate says they've never used Linux: no response.
 - The candidate has invested at least a few minutes into their application
-  - e.g., if the responses are clearly copy/pasted or just dashed off: no response.
+  - e.g., if the responses are clearly copy/pasted or dashed off: no response.
 
-This had the pleasant side effect of completely eliminating hostile responses. When I rejected the thoughtful-answer candidates and gave my reasons, they didn't always respond, but when they did, they were professional and appreciative of the feedback.
+This new strategy had the pleasant side effect of eliminating hostile responses. When I rejected the thoughtful-answer candidates and gave my reasons, they didn't always respond, but when they did, they were professional and appreciative of the feedback.
 
 ### Hire someone to help me do the initial screening
 
 Screening resumes and applications takes dozens of hours, but it's a task I could easily train an intelligent person to do for me.
 
-I don't want to use dumb automated filters or AI, as I still want to be able to tell candidates a real human is reading their application, but it doesn't strictly have to be me.
+I don't want to use dumb automated filters or machine learning, as I still want to be able to tell candidates a real human is reading their application, but it doesn't strictly have to be me.
 
 ### Build redundancy into customer support
 
 One of the factors that delayed my responses to the applicants was that the TinyPilot employee who usually handles customer support was out sick for a week. Customer support _feels_ like it has redundancy because our support engineer can fill in, and I'm the last line of defense. This experience made me realize how fragile our customer support process is.
 
-I forgot how much work customer support is when I'm doing it. On top of that, I was on vacation for a few days, which meant that TinyPilot's support engineer was the only one offering support. But that was rocky because he doesn't have access to Shopify or our local fulfillment office, so he was limited in what kind of support he could offer. And this was all happening on top of the extra load of trying to communicate with 800 job applicants.
+I forgot how much work customer support is when I'm doing it, especially with the extra burden of communicating with 800 job applicants. On top of that, I was on vacation for a few days, which meant that TinyPilot's support engineer was the only one offering support. But that was rocky because he doesn't have access to Shopify or our local fulfillment office, so he was limited in what kind of support he could offer.
 
-Once things are settled with the support engineering team, I'm going to add a second person to handle customer support, too. That will help keep things when one person is sick or on vacation.
+Once things are settled with the support engineering team, I'm going to add a second person to handle customer support, too. That will help keep things smooth when one person is sick or on vacation.
 
 ### Convert the job application form to a waitlist once I reach some limit
 
-Even if I get other people to help me with hiring, there are limits to how many applications we can review in a reasonable time frame. Once we exceed this limit (say, 400 candidates), I should convert the application to a waitlist so I'm not wasting candidates' time.
+Even if I get other people to help me with hiring, there are limits to how many applications we can review in a reasonable timeframe. Once we exceed some limit like 400 candidates, I should convert the application to a waitlist so I'm not wasting candidates' time by asking to explain why they want to work with me.
 
 ### Remember how time-consuming it is
 
-Even though I've hired through a job posting before, I forgot how time-consuming the process is until I was doing it again. In my head, the time commitment looks like this:
+I've hired through a job posting before, but I forgot how time-consuming the process was until I started doing it again.
 
-So there's a big influx of candidates who all apply on day one. I sort through the candidates until I've narrowed it down to a single person. Finally, I hire that person, they start doing tasks I used to do, and everything is great.
+In my head, the time commitment looks like this:
 
-{{<img src="imagined-commitment.png" hasBorder="true" maxWidth="600px">}}
+{{<img src="imagined-commitment.png" hasBorder="true" maxWidth="600px" caption="How hiring works in my imagination">}}
+
+There's a big influx of candidates who all apply on day one. I sort through the candidates until I've narrowed it down to a single person. Finally, I hire that person, they start doing tasks I used to do, and everything is great.
 
 In reality, the time commitment is more like this:
 
-{{<img src="real-commitment.png" hasBorder="true" maxWidth="600px">}}
+{{<img src="real-commitment.png" hasBorder="true" maxWidth="600px" caption="How hiring works in reality">}}
 
-There's a big burst of applicants, and then while I'm processing them, more applicants keep applying. And then when I finally hire someone, I still have to follow up with everyone I didn't choose while simultaneously onboarding and training the new hire.
+There's a big burst of applicants, and then while I'm processing them, people keep applying. And then when I finally hire someone, I still have to follow up with everyone I didn't choose while simultaneously onboarding and training the new hire.
 
 So, next time I hire, I just have to revisit these beautiful and informative graphs.
 
