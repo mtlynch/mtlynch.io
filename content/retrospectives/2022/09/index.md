@@ -10,7 +10,7 @@ description: The surprising difficulty of hiring.
 
 Hi, I'm Michael. I'm a software developer, and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue and employs six other people.
 
-Every month, I publish a retrospective like this one to share how things are going with my business and my professional life, overall.
+Every month, I publish a retrospective like this one to share how things are going with my business and in my professional life overall.
 {{</notice>}}
 
 ## Highlights
@@ -72,7 +72,7 @@ In February, I [hired TinyPilot's first Support Engineer](/retrospectives/2022/0
 
 Bringing on a support engineer freed up a lot of my time and resulted in faster responses to customers. But it was also the hardest role I've had to hire for. There's so much institutional knowledge about TinyPilot that I didn't realize was siloed in my head, so it was a lot of work to transfer it to someone else.
 
-Given how much value I got from having a support engineer, I felt the pain acutely when he wasn't available. We also found ourselves with so much short-term work in answering support tickets that TinyPilot's support engineer didn't have time to do proactive work in adding documentation or experimenting with new use-cases for TinyPilot.
+Given how much value I got from having a support engineer, I felt the pain acutely when he wasn't available. We also found ourselves with so much short-term work in answering support tickets that TinyPilot's support engineer didn't have time to do proactive work in adding documentation or experimenting with new use cases for TinyPilot.
 
 The dev team has two people, the fulfillment team has two people, and both of those teams work well. When one person is sick or on vacation, there's enough capacity that their counterpart can keep things moving forward. I decided it was time to add a second support engineer.
 
@@ -80,7 +80,7 @@ The dev team has two people, the fulfillment team has two people, and both of th
 
 Last time I posted the support engineer job, I [received 221 applicants in 30 days](/retrospectives/2022/03/#hiring-a-support-engineer-the-job-posting). This time, there were 802 applications in only two weeks. There were so many applicants that I had to do things to actively reduce the number of applicants, and I eventually closed applications entirely after two weeks.
 
-I wanted to pause the listings while I caught up, but We Work Remotely, annoyingly, doesn't let you pause posts. You either delete them permanently and forfeit all the time you've paid for or you leave them running and attract more candidates than you can handle.
+I wanted to pause the listings while I caught up, but We Work Remotely, annoyingly, doesn't let you pause posts. You either delete them permanently and forfeit all the time you've paid for, or you leave them running and attract more candidates than you can handle.
 
 As a workaround, I left the job listings up, but I changed the location requirement from "Worldwide" to "US only." There's nothing about the role that strictly requires candidates to live in the US, but it was the best way I could think of to slow the flow of applications without totally taking down the post.
 
@@ -140,7 +140,7 @@ Right off the bat, when you create the job post, RemoteOK pushes all these littl
 
 {{<img src="remoteok-upsells.png" hasBorder="true" alt="Screenshot of upsells on Remote OK" maxWidth="700px" caption="RemoteOK pushes employers to choose among nine different upsells, including $134 to generate a QR code.">}}
 
-RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development` even though those have nothing to do with my job. I erased RemoteOK's tags, but a few hours later they were back. The only way I could get rid of them permanently is by adding more tags myself.
+RemoteOK jobs have tags to help applicants search, so I added tags like `linux`, `customer support`, `flexible schedule`. When I came back to the job a few hours later, I saw that RemoteOK had automatically added several inaccurate tags like `microsoft` `windows` `webdev` `development` even though those have nothing to do with my job. I erased RemoteOK's tags, but a few hours later, they were back. The only way I could get rid of them permanently is by adding more tags myself.
 
 The most egregious example of RemoteOK taking control away from the user is the magic keywords feature. RemoteOK adds the instruction, "Please mention the word \[_some random word_\] when applying to show you read the job post completely." RemoteOK doesn't tell you that it's adding these instructions, and you can't remove them.
 
@@ -194,7 +194,7 @@ I sent candidates my sample assignment as a link to a PDF, but several candidate
 
 ### Slow web app
 
-The Homerun web app is very slow. Most pages take 2-5 seconds to load on my modern desktop with 800 Mbps download speeds. Some pages take as long as 10 seconds to load.
+The Homerun web app is very slow. I have a modern desktop with fiber internet, but most Homerun pages take 2-5 seconds to load. Some take as long as 10 seconds.
 
 ## Improvements for my next hire
 
@@ -214,47 +214,66 @@ This strategy worked poorly.
 
 Of the candidates who responded, about 50% were gracious and appreciated the feedback, so that was good. About 20% were rude or hostile, so that was bad.
 
-The last 30% decided to research the company after seeing a human engaging. That put me in a weird position. If I reconsidered their application, it felt unfair to candidates who wrote thoughtful answers up front instead of copy/pasting the same thing to everyone.
+The last 30% realized an actual human was engaging and their application wasn't going into the void like they'd assumed. At that point, they started researching the company and said they, in fact, were interested in TinyPilot specifically. That put me in a weird position. If I reconsidered their application, it felt unfair to candidates who wrote thoughtful answers up front instead of copy/pasting the same thing to everyone.
 
-After a day or two of burning time on low-effort applications, so I just stopped responding to that category of applicants. I changed my strategy so that I only respond if:
+After a day or two of burning time on low-effort applications, I just stopped responding to that category of applicants. I changed my strategy to respond if:
 
 - The candidate is qualified for the role at a basic level
   - e.g., if one of the job requirements is "comfort with Linux" and the candidate says they've never used Linux: no response.
 - The candidate has invested at least a few minutes into their application
   - e.g., if the responses are clearly copy/pasted or just dashed off: no response.
 
-This had the pleasant side effect of completely eliminating hostile responses. When I rejected candidates and gave my reasons, they didn't always respond, but when they did, they were professional and appreciative of the feedback.
+This had the pleasant side effect of completely eliminating hostile responses. When I rejected the thoughtful-answer candidates and gave my reasons, they didn't always respond, but when they did, they were professional and appreciative of the feedback.
 
 ### Hire someone to help me do the initial screening
 
-Processing the applications takes dozens of hours, but it's a task I could easily train an intelligent person to do for me.
+Screening resumes and applications takes dozens of hours, but it's a task I could easily train an intelligent person to do for me.
 
 I don't want to use dumb automated filters or AI, as I still want to be able to tell candidates a real human is reading their application, but it doesn't strictly have to be me.
 
 ### Build redundancy into customer support
 
-One of the factors that delayed my responses to the applicants was that the TinyPilot employee who usually handles customer support was out sick for a week. Customer support _feels_ like it has redundancy because our support engineer can fill in, and I'm the last line of defence. This experience made me realize how fragile our customer support process is.
+One of the factors that delayed my responses to the applicants was that the TinyPilot employee who usually handles customer support was out sick for a week. Customer support _feels_ like it has redundancy because our support engineer can fill in, and I'm the last line of defense. This experience made me realize how fragile our customer support process is.
 
-The employee who handles customer support was out sick for a week. On top of that, I was on vacation for a few days, which meant that TinyPilot's support engineer was the only one offering support. But that was rocky because he doesn't have access to Shopify or our local fulfillment office, so he was limited in what kind of support he could offer. And this was all happening on top of the extra load of trying to communicate with 800 job applicants.
+I forgot how much work customer support is when I'm doing it. On top of that, I was on vacation for a few days, which meant that TinyPilot's support engineer was the only one offering support. But that was rocky because he doesn't have access to Shopify or our local fulfillment office, so he was limited in what kind of support he could offer. And this was all happening on top of the extra load of trying to communicate with 800 job applicants.
 
 Once things are settled with the support engineering team, I'm going to add a second person to handle customer support, too. That will help keep things when one person is sick or on vacation.
 
 ### Convert the job application form to a waitlist once I reach some limit
 
-Even if I get other people to help me with hiring, there are limits to how many applications we can review in a reasonable time frame. Once we exceed this limit (say, 400 candidates), I should use convert the application to a waitlist so I'm not wasting candidates' time. Homerun supports this natively.
+Even if I get other people to help me with hiring, there are limits to how many applications we can review in a reasonable time frame. Once we exceed this limit (say, 400 candidates), I should convert the application to a waitlist so I'm not wasting candidates' time.
 
 ### Remember how time-consuming it is
+
+Even though I've hired through a job posting before, I forgot how time-consuming the process is until I was doing it again. In my head, the time commitment looks like this:
+
+So there's a big influx of candidates who all apply on day one. I sort through the candidates until I've narrowed it down to a single person. Finally, I hire that person, they start doing tasks I used to do, and everything is great.
+
+{{<img src="imagined-commitment.png" hasBorder="true" maxWidth="600px">}}
+
+In reality, the time commitment is more like this:
+
+{{<img src="real-commitment.png" hasBorder="true" maxWidth="600px">}}
+
+There's a big burst of applicants, and then while I'm processing them, more applicants keep applying. And then when I finally hire someone, I still have to follow up with everyone I didn't choose while simultaneously onboarding and training the new hire.
+
+So, next time I hire, I just have to revisit these beautiful and informative graphs.
 
 ## Wrap up
 
 ### What got done?
 
--
+- Hired a second TinyPilot support engineer
+- Deployed the next-generation update system to the Community version of TinyPilot
+- Published my notes on [applicant tracking systems for bootstrappers](/notes/bootstrapper-ats/)
+- Published my notes on [debugging memory issues in PicoShare](/notes/picoshare-perf/)
 
 ### Lessons learned
 
--
+- Hiring is always harder than I expect
 
 ### Goals for next month
 
 - Migrate TinyPilot Pro to the next-generation update system.
+- Send TinyPilot Voyager to two YouTube creators or bloggers for review
+- Explore new case manufacturing options
