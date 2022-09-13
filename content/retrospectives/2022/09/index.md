@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 26"
 date: 2022-09-13T00:00:00-04:00
 description: The surprising difficulty of hiring.
+images:
+  - /retrospectives/2022/09/support-engineer-applicants.png
 ---
 
 {{<notice type="info">}}
