@@ -96,6 +96,8 @@ I'm a few days into the hiring process with Homerun, and it's been a great exper
 - Cons
   - Creepy mascot
 
+**Update (2022-09-14)**: See [my notes on using Homerun](/retrospectives/2022/09/#homerun-is-good-not-great) for the full hiring process.
+
 ## Runner up: [Polymer](https://www.polymer.co/)
 
 {{<notice type="info">}}

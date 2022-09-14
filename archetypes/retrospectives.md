@@ -4,6 +4,15 @@ date: {{ .Date }}
 description: TODO - One-line summary
 ---
 
+{{<notice type="info">}}
+
+**New here?**
+
+Hi, I'm Michael. I'm a software developer, and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue and employs six other people.
+
+Every month, I publish a retrospective like this one to share how things are going with my business and in my professional life overall.
+{{</notice>}}
+
 ## Highlights
 
 -
