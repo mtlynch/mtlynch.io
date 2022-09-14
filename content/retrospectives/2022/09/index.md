@@ -106,8 +106,8 @@ Through this process, I found that different hiring channels had drastically dif
 
 The two metrics I care about are:
 
-* Number of qualified candidates
-* Percentage of qualified candidates out of total applicants
+- Number of qualified candidates
+- Percentage of qualified candidates out of total applicants
 
 I want a platform that can deliver me about 10-20 qualified candidates per role so that I have a decent pool of options to choose from. If the platform's signal-to-noise is so bad that I have to screen 3,000 people to find a handful who are qualified, it's not valuable.
 
