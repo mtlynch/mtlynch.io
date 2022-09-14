@@ -131,7 +131,7 @@ RemoteOK had no qualified candidates in this time range, and my experience using
 
 ## RemoteOK is hugely disappointing
 
-I've been a fan of [Pieter Levels](https://levels.io/) for a long time. [His interview on the *Indie Hackers* podcast](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), is one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle exciting and liberating.
+I've been a fan of [Pieter Levels](https://levels.io/) for a long time. [His interview on the _Indie Hackers_ podcast](https://www.indiehackers.com/podcast/043-pieter-levels-of-nomad-list), is one of the best episodes of the series. Pieter does a great job of highlighting what makes the bootstrapper lifestyle exciting and liberating.
 
 Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't remember the last time I've used a product that feels like it's fighting so stubbornly against me, its paying user.
 
