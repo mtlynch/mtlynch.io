@@ -52,14 +52,14 @@ I didn't make any progress here. I really should have made hiring one of my goal
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | July 2022       | August 2022    | Change                                              |
-| ------------------------ | --------------- | -------------- | --------------------------------------------------- |
-| Unique Visitors          | 21,242          | 11,903         | <font color="red">-9,339 (-44%)</font>              |
-| Total Pageviews          | 33,578          | 23,214         | <font color="red">-10,364 (-31%)</font>             |
-| Sales Revenue            | $56,954.66      | $76,082.06     | <font color="green">+$19,127.40 (+34%)</font>       |
-| Enterprise Subscriptions | $290.70         | $290.70        | 0                                                   |
-| Royalties                | $2,513.71       | $3,264.23      | <font color="green">+$750.52 (+30%)</font>          |
-| Total Revenue            | $59,759.07      | $79,636.99     | <font color="green">+$19,877.92 (+33%)</font>       |
+| Metric                   | July 2022       | August 2022    | Change                                             |
+| ------------------------ | --------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 21,242          | 11,903         | <font color="red">-9,339 (-44%)</font>             |
+| Total Pageviews          | 33,578          | 23,214         | <font color="red">-10,364 (-31%)</font>            |
+| Sales Revenue            | $56,954.66      | $76,082.06     | <font color="green">+$19,127.40 (+34%)</font>      |
+| Enterprise Subscriptions | $290.70         | $290.70        | 0                                                  |
+| Royalties                | $2,513.71       | $3,264.23      | <font color="green">+$750.52 (+30%)</font>         |
+| Total Revenue            | $59,759.07      | $79,636.99     | <font color="green">+$19,877.92 (+33%)</font>      |
 | **Profit**               | **$-12,349.21** | **$21,580.82** | **<font color="green">+$33,930.03 (+inf%)</font>** |
 
 August was a record month in TinyPilot's revenue and profit. I [reduced prices by 11%](/retrospectives/2022/08/#experimenting-more-with-tinypilot-pricing) at the end of July, and it looks like that increased sales by 34%. And again, it was another "boring" month in that no external events drove these numbers, so I'm optimistic about sustaining this.
