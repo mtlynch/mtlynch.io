@@ -154,6 +154,10 @@ I find these "magic keyword" requirements insulting to applicants, and I deliber
 
 Most damning of all, RemoteOK failed entirely at its one job: delivering qualified candidates. None of RemoteOK's candidates passed my initial application screen, while We Work Remotely matched me with 20 qualified applicants during the same time period.
 
+{{<notice type="info">}}
+**Update (2022-09-25)**: In response to this post, Pieter Levels [pledged](https://twitter.com/levelsio/status/1574135843505467392) to work on the issues I mentioned and graciously refunded my payment.
+{{</notice>}}
+
 ## Homerun is good, not great
 
 Last time I hired, I directed candidates to just email me, and then I organized applications using inbox labels. That ended up being messy and confusing.
