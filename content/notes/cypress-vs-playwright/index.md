@@ -77,6 +77,12 @@ cy.get("#upload-result upload-links")
   .should("be.visible");
 ```
 
+```javascript
+await expect(
+  page.locator("#upload-result upload-links #verbose-link-box #link")
+).toBeVisible();
+```
+
 ## Playwright starts your app for you
 
 Cypress assumes that your app is already running and lets you figure out how to
