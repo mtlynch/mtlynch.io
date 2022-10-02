@@ -113,7 +113,7 @@ And then if you open `report.html`, you'll see the visualization everyone's talk
 
 ## Web performance is harder than I thought
 
-Is It Keto originally ran on App Engine under Python 2. Given my renewed focus on the site, coupled with Google's plans to [end support for Python 2](https://cloud.google.com/appengine/docs/standard/python/migrate-to-python3/), Back in April, I decided to rewrite the site. I chose [Gridsome](https://gridsome.org), a Vue-based static site generator.
+Is It Keto originally ran on App Engine under Python 2. Given my renewed focus on the site, coupled with Google's plans to [end support for Python 2](https://cloud.google.com/appengine/docs/standard/python3/python-differences), Back in April, I decided to rewrite the site. I chose [Gridsome](https://gridsome.org), a Vue-based static site generator.
 
 It seemed like I'd get the best of both worlds: the performance of a pre-rendered website and the flexible developer experience of Vue. It turns out that web performance is a bit more complicated than I realized.
 
