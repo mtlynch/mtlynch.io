@@ -1,7 +1,6 @@
 ---
 title: "Cypress vs Playwright"
 date: 2022-10-02T10:21:05-04:00
-draft: true
 ---
 
 # Revisiting Playwright
@@ -11,6 +10,10 @@ I tried it last year, and I
 > 2022 one should not start a new project with Cypress. Playwright is simply so much better.
 
 https://news.ycombinator.com/item?id=33049047
+
+As an experiment, I tried porting PicoShare's 10 end-to-end tests from Cypress to Playwright, and I'm sorry to say that I agree with the Hacker News thread. From my experience with it so far, Playwright is better than Cypress in almost every dimension.
+
+After trying it out for a day, I must say I agree. And it pains me to say it, as I have a soft spot for Cypress.
 
 # What I like about Playwright
 
@@ -24,6 +27,11 @@ In development
 | ---------------------------------- | ------- | ---------- | ---------- |
 | Run tests on CircleCI              | 127s    | 84s        | XX         |
 | Run tests from development machine | 40s     | 7s         | XX         |
+
+For local development, it's not a big deal because you download it once and you're done. But when I run it in CI, I have to wait for CircleCI to download and decompress the full almost 1 GB image each time.
+
+playwright:v1.26.0-focal-amd64 is 651 MB
+cypress/included:10.9.0 is 940 MB
 
 ## Playwright has fewer gotchas
 
@@ -98,18 +106,12 @@ Cypress assumes that your app is already running and lets you figure out how to
 
 https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
 
-## Playwright has a slimmer Docker image
-
-For local development, it's not a big deal because you download it once and you're done. But when I run it in CI, I have to wait for CircleCI to download and decompress the full almost 1 GB image each time.
-
-playwright:v1.26.0-focal-amd64 is 651 MB
-cypress/included:10.9.0 is 940 MB
-
 ## Playwright natively supports Promises
 
 [The bug](https://github.com/cypress-io/cypress/issues/1417) has been open for four years, and Cypress recently stated that they currently have no plans to support it.
 
 ```javascript
+// Find the link to the guest upload URL.
 const guestLinkElement = page.locator(
   '.table td[test-data-id="guest-link-label"] a',
   {
@@ -123,16 +125,33 @@ const guestLinkRouteValue = await guestLinkElement.getAttribute("href");
 expect(guestLinkRouteValue).not.toBeNull();
 const guestLinkRoute = String(guestLinkRouteValue);
 
+// Log out.
 await page.locator(".navbar-end .navbar-item.is-hoverable").hover();
 await page.locator("#navbar-log-out").click();
+await expect(page).toHaveURL("/");
 
+// Make sure we can still access the guest link after logging out.
 await page.goto(guestLinkRoute);
+
+// Continue with the test.
 ```
 
-Here's how I would have to do the same thing in Cypress:
+Here's how I would have to do [the same thing in Cypress](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Closures):
 
 ```javascript
-//TODO
+// Save the route to the guest link URL so that we can return to it later.
+cy.get('.table td[test-data-id="guest-link-label"] a')
+  .invoke("attr", "href")
+  .then(($href) => {
+    // Log out.
+    cy.get("#navbar-log-out").click();
+    cy.location("pathname").should("eq", "/");
+
+    // Make sure we can still access the guest link after logging out.
+    cy.visit($href);
+
+    // Continue with the test
+  });
 ```
 
 In other words, every time I want to store a value, I have to add a layer of nesting. Being able to just `await` the function and store a normal variable is so much easier.
