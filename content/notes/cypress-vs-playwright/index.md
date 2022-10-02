@@ -96,6 +96,42 @@ For local development, it's not a big deal because you download it once and you'
 playwright:v1.26.0-focal-amd64 is 651 MB
 cypress/included:10.9.0 is 940 MB
 
+## Playwright natively supports Promises
+
+[The bug](https://github.com/cypress-io/cypress/issues/1417) has been open for four years, and Cypress recently stated that they currently have no plans to support it.
+
+```javascript
+const guestLinkElement = page.locator(
+  '.table td[test-data-id="guest-link-label"] a',
+  {
+    hasText: "For e2e testing",
+  }
+);
+expect(guestLinkElement).toBeVisible();
+
+// Save the route to the guest link URL so that we can return to it later.
+const guestLinkRouteValue = await guestLinkElement.getAttribute("href");
+expect(guestLinkRouteValue).not.toBeNull();
+const guestLinkRoute = String(guestLinkRouteValue);
+
+await page.locator(".navbar-end .navbar-item.is-hoverable").hover();
+await page.locator("#navbar-log-out").click();
+
+await page.goto(guestLinkRoute);
+```
+
+Here's how I would have to do the same thing in Cypress:
+
+```javascript
+//TODO
+```
+
+In other words, every time I want to store a value, I have to add a layer of nesting. Being able to just `await` the function and store a normal variable is so much easier.
+
+## Playwright lets you write like regular JavaScript
+
+In addition to supporting `await`, it's nice to be able to use `console.log` instead of a [Cypress-specific `cy.log`](https://docs.cypress.io/api/commands/log). And when I needed to write a reusable helper method to automate the login sequence, Playwright let me write it in normal JavaScript, whereas Cypress requires it to be a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands) that must adhere to specific naming conventions and has its own API.
+
 # What I miss about Cypress
 
 ## Small, indepdentent team
