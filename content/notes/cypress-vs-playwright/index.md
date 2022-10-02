@@ -18,6 +18,13 @@ https://news.ycombinator.com/item?id=33049047
 
 This is just a single data point and not a rigorous one, but I rewrote my Cypress tests in Playwright, and the same tests run in XX the time.
 
+In development
+
+|                                    | Cypress | Playwright | Difference |
+| ---------------------------------- | ------- | ---------- | ---------- |
+| Run tests on CircleCI              | 127s    | 84s        | XX         |
+| Run tests from development machine | 40s     | 7s         | XX         |
+
 ## Playwright has fewer gotchas
 
 Cypress still after XX years of development doesn't support file uploads. You can do it, but you need to find a third-party plugin. Playwright's file upload functionality worked out of the box.
@@ -27,6 +34,8 @@ There's been [a bug to support mouse hovering](https://github.com/cypress-io/cyp
 Cypress [didn't support uploading files](https://github.com/cypress-io/cypress/issues/170) as part of your tests until this year.
 
 I didn't even realize until writing this that Cypress [now supports uploading files](https://www.cypress.io/blog/2022/01/19/uploading-files-with-selectfile/) as part of end-to-end tests, but it's another one that's a bit of a headscratcher that they didn't support it for 7 years.
+
+With Cypress, I'll often run into issues where Cypress claims that elements are not visible when screenshots show they, in fact, are visible. I didn't run into that with Playwright.
 
 ## VS Code Integration
 
