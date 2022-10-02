@@ -13,6 +13,8 @@ https://news.ycombinator.com/item?id=33049047
 
 As an experiment, I tried porting PicoShare's 10 end-to-end tests from Cypress to Playwright, and I'm sorry to say that I agree with the Hacker News thread. From my experience with it so far, Playwright is better than Cypress in almost every dimension.
 
+Using Playwright, I'm seeing all these things that were always an obstacle with Cypress but I either hadn't noticed or had gotten used to.
+
 After trying it out for a day, I must say I agree. And it pains me to say it, as I have a soft spot for Cypress.
 
 # What I like about Playwright
@@ -45,10 +47,6 @@ I didn't even realize until writing this that Cypress [now supports uploading fi
 
 With Cypress, I'll often run into issues where Cypress claims that elements are not visible when screenshots show they, in fact, are visible. I didn't run into that with Playwright.
 
-## VS Code Integration
-
-There's an official VS Code plugin, which gives you auto-complete, which is something I've been missing.
-
 ## Single, consistent set of assertions
 
 Cypress allows both XX and YY style assertions, which always confuses me.
@@ -68,6 +66,8 @@ The whole reason I wrote a tutorial was that it's complex enough to run Cypress 
 ## GUI-agnosticism
 
 Cypress also assumes that you run it locally.
+
+Playwright works fine on a headless server.
 
 ## Everything's free
 
@@ -106,7 +106,9 @@ Cypress assumes that your app is already running and lets you figure out how to
 
 https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
 
-## Playwright natively supports Promises
+## Playwright requires less domain-specific knowledge
+
+A perfect example is grabbing a URL.
 
 [The bug](https://github.com/cypress-io/cypress/issues/1417) has been open for four years, and Cypress recently stated that they currently have no plans to support it.
 
@@ -156,9 +158,11 @@ cy.get('.table td[test-data-id="guest-link-label"] a')
 
 In other words, every time I want to store a value, I have to add a layer of nesting. Being able to just `await` the function and store a normal variable is so much easier.
 
-## Playwright lets you write like regular JavaScript
-
 In addition to supporting `await`, it's nice to be able to use `console.log` instead of a [Cypress-specific `cy.log`](https://docs.cypress.io/api/commands/log). And when I needed to write a reusable helper method to automate the login sequence, Playwright let me write it in normal JavaScript, whereas Cypress requires it to be a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands) that must adhere to specific naming conventions and has its own API.
+
+## VS Code Integration
+
+There's an official VS Code plugin, which gives you auto-complete, which is something I've been missing.
 
 # What I miss about Cypress
 
