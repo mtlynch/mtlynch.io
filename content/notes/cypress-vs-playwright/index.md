@@ -4,6 +4,14 @@ date: 2022-10-02T10:21:05-04:00
 draft: true
 ---
 
+# Revisiting Playwright
+
+I tried it last year, and I
+
+> 2022 one should not start a new project with Cypress. Playwright is simply so much better.
+
+https://news.ycombinator.com/item?id=33049047
+
 # What I like about Playwright
 
 ## Playwright is XX faster than Cypress
@@ -75,6 +83,13 @@ Cypress assumes that your app is already running and lets you figure out how to
 
 https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
 
+## Playwright has a slimmer Docker image
+
+For local development, it's not a big deal because you download it once and you're done. But when I run it in CI, I have to wait for CircleCI to download and decompress the full almost 1 GB image each time.
+
+playwright:v1.26.0-focal-amd64 is 651 MB
+cypress/included:10.9.0 is 940 MB
+
 # What I miss about Cypress
 
 ## Small, indepdentent team
@@ -86,3 +101,9 @@ I like Gleb Bahmutov, and I liked supporting his product. He was very gracious i
 I'm still not used to the `await`s everywhere. The Cypress syntax feels much more intuitive to me.
 
 ## Test artifacts work in CI
+
+## The Docker image actually contains the software
+
+There must be some good reason for this since both Cypress and Playwright do this, but the Docker images don't actually contain the software. That is, the Playwright Docker image does not contain Playwright and the Cypress Docker image doesn't contain Cypress. Instead, the Docker images contain the _dependencies_ you need to install Playwright or Docker respectively. So the first step after launching the Playwright Docker image is to install Playwright.
+
+When I complained about this for Cypress, they added a special cypress/included image that actually does contain Cypress.
