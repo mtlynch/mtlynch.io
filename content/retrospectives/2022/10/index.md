@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 27"
 date: 2022-10-03T10:46:10-04:00
-description: TODO - One-line summary
+description: What would a fully remote TinyPilot look like?
 ---
 
 {{<notice type="info">}}
@@ -37,10 +37,10 @@ TODO
 
 ### Explore new case manufacturing options
 
-- **Result**: XX
+- **Result**: A
 - **Grade**: XX
 
-TODO
+This is kind of a squishy goal.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -56,11 +56,58 @@ TODO
 | Total Revenue            | $79,636.99     | $72,324.35                              | <font color="red">-$7,312.64 (-9%)</font>        |
 | **Profit**               | **$21,580.82** | **<font color="red">-$8,764.28</font>** | **<font color="red">-$30,345.10 (-inf%)</font>** |
 
+Profit is down because I had a surprise expense of $XXk that in hardware that hadn't been invoiced for six months.
+
 ## What do metal cases mean for TinyPilot?
 
-## Topic 2
+1. Storing inventory
+1. Assembling devices
+1. Flashing microSDs
+1. Testing assembled devices (QA)
+1. Packing and shipping customer orders
+1. Processing returned orders
 
-## Topic 3
+## Storing inventory and assembling devices
+
+It means we have to do less management of inventory. My understanding is that I can delegate that to the manufacturer and they take responsibility for
+
+They can lose parts, and I can't really do anything about it. I can hire third-party auditors.
+
+Long delay between finding out about issues.
+
+## Flashing microSDs
+
+This one I'm not sure how to solve. The naive answer is to just let the company that supplies my microSDs flash the image. I'm not crazy about that because a microSD company is an attractive target for malware, so I don't want to be in the same boat. In theory, I could randomly spot check their output and make sure it matches the image I gave them, but even that doesn't give me complete confidence.
+
+## Testing assembled devices
+
+This would be something that the manufacturer could do.
+
+Pretty hard because currently it's not hard, but it's hard to set up. You need a client computer, the TinyPilot device under test, and a target computer.
+
+I think in theory we could build a device that automates this. It could feed input into TinyPilot's HDMI port and verify that the TinyPilot is getting video input. It could receive USB output from the TinyPilot and verify that it receives output. The problem is that hardware engineering time is currently our scarcest resource, and that seems like it would require a lot of hardware engineering.
+
+## Packing and shipping customer orders
+
+This is actually almost trivial. We probably have everything we need to do this today. The only obstacle is that I could imagine that 3PL vendors want individual boxes for each of our products, whereas we're currently just wrapping them in a bubble sleeve.
+
+The other thing that I image
+
+The benefit is that our already flexible hours become more flexible. Currently, somebody has to go into the office every day. If we have a 3PL vendor, the 20 hours can happen in whatever time works. We can assemble devices for 20 hours.
+
+## Processing returns
+
+I'm not sure how we solve this problem.
+
+In theory we could just have a PO box so that staff can pick them up
+
+## What happens when everything is outsourced?
+
+No office
+No worker's comp
+No renter's insurance
+
+Part-time employees become contractors: I know this one sounds like, "I can't wait to cut pay for my employees!" but my goal isn't to reduce compensation as much as reduce paperwork. Contractors require much less paperwork. We can adjust pay so that staff gets equivalent or better compensation relative to what they had as employees.
 
 ## Side projects
 
