@@ -3,6 +3,10 @@ title: "Cypress vs Playwright"
 date: 2022-10-02T10:21:05-04:00
 ---
 
+When I saw Gleb Bahmutov [demo Cypress at a 2018 meetup](https://youtu.be/wApmbgPGmqQ) in New York, I was blown away. I had begrudgingly used Selenium in the past, and Cypress was such a leap forward.
+
+When I heard about Playwright, I wasn't that interested. I much preferred the scrappy open-source team to a big corporate product churned out by Microsoft. I took a look at Playwright a year ago and wasn't impressed. I found the documentation confusing and it didn't seem to offer many advantages over Cypress, so I went back to using Cypress.
+
 # Revisiting Playwright
 
 I tried it last year, and I
