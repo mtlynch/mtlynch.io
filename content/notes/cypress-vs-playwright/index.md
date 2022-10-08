@@ -41,19 +41,23 @@ cypress/included:10.9.0 is 940 MB
 
 ## Playwright has fewer gotchas
 
-Cypress still after XX years of development doesn't support file uploads. You can do it, but you need to find a third-party plugin. Playwright's file upload functionality worked out of the box.
+I didn't even realize until writing this that Cypress [now supports uploading files](https://www.cypress.io/blog/2022/01/19/uploading-files-with-selectfile/) as part of end-to-end tests, but it's another one that's a bit of a headscratcher that they [didn't support it for 7 years](https://github.com/cypress-io/cypress/issues/170).
 
-There's been [a bug to support mouse hovering](https://github.com/cypress-io/cypress/issues/10) that's been open for 7.5 years.
-
-Cypress [didn't support uploading files](https://github.com/cypress-io/cypress/issues/170) as part of your tests until this year.
-
-I didn't even realize until writing this that Cypress [now supports uploading files](https://www.cypress.io/blog/2022/01/19/uploading-files-with-selectfile/) as part of end-to-end tests, but it's another one that's a bit of a headscratcher that they didn't support it for 7 years.
-
-With Cypress, I'll often run into issues where Cypress claims that elements are not visible when screenshots show they, in fact, are visible. I didn't run into that with Playwright.
+There's been [a bug to support mouse hovering](https://github.com/cypress-io/cypress/issues/10) that's been open for almost eight years.
 
 ## Single, consistent set of assertions
 
-Cypress allows both XX and YY style assertions, which always confuses me.
+Cypress has several different styles of assertions, which always confused me. There's `should`, `expect`, and `assert`
+
+```javascript
+cy.get("#error-message").should("be.visible");
+```
+
+```javascript
+cy.get("#error-message").should(($el) => expect($el).to.be.visible);
+```
+
+With Playwright, the assertions are more consistent. There's just `expect` like `expect(locator).toBeVisible()`. The fact that they're proper TypeScript functions as opposed to string arguments you have to memorize means that auto-complete can help you remember syntax.
 
 ## Not resource constrained
 
