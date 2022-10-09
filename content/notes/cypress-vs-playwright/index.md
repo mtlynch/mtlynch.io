@@ -147,11 +147,29 @@ But what if you don't develop without a GUI? I do all of my development on headl
 
 The GUI problem also pops up when you try to run Cypress on a CI provider. Most CI providers are headless servers, so you can't run the Cypres app there either. But Cypress doesn't really want you to run Cypress sells their own CI provider, and that's how they make their money.
 
-Playwright doesn't have any desktop GUI, so running it under a headless VM works great. All of Playwright's UI is browser based, so it gets a little confused if it can't spawn a browser, but you can just access the URL from another system on the same network:
+Playwright doesn't have any desktop GUI, so running it under a headless VM works great. All of Playwright's UI is browser based, so it gets a little confused if it can't spawn a browser, but you can just access the URL from another system with SSH port forwarding:
 
-## Not resource constrained
+```text
+  1 failed
+    [chromium] › auth.spec.ts:3:1 › logs in and logs out ===========================================
+
+  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.
+Failed to open browser on http://localhost:9323#?testId=d748ac400d08b85935ef-c357f3797072e53b109f
+```
+
+Playwright has the same time-travel feature as Cypress, but they implement it in a web UI instead of a desktop GUI, so it's far more portable. And time traveling is pretty nice! And Playwright isn't even just static screenshots of your app. You can interact with the browser in each stage of the test, which feels a bit like magic.
+
+{{<video src="playwright-web-ui.mp4" caption="The Playwright web UI lets you time travel to different states of your app's execution and interact with any element on the page.">}}
+
+## Playwright doesn't feel resource-constrained
 
 How few things they've done. I submitted what I think is a pretty uncontroversial PR a year ago that they still haven't acknowledged, and I suspect they just don't have the resources to review external pull requests.
+
+They have bugs that have been open for years. There are features that should obviously be part of app itself, and people have written plugins for them (sometimes their own developers), but they don't have resources to support these features.
+
+Granted, I haven't been using Playwright as long and I've never tried contributing code to them, but they just don't seem at all constrained. Microsoft is probably pouring 10x the resources into Playwright as Cypress gets from customer fees, plus they have backchannels to the Edge and TypeScript teams, which Microsoft runs as well.
+
+Microsoft certainly has a number of unfair advantages here, so I hate to count this against Cypress, but it's hard to ignore the impact that Microsoft's resources have on Playwright's developer experience.
 
 ## Stack-agnositicism
 
@@ -161,19 +179,11 @@ Playwright has built-in support for
 
 The whole reason I wrote a tutorial was that it's complex enough to run Cypress outside of their
 
-## Everything's free
+## Everything's free in Playwright
 
 Cypress is funded by their hosted SaaS. But Cypress is one of the few open-source SaaS products where the paid version would actually make my experience worse. The paid version gives you access to the Cypress web dashboard, but that creates a whole new external dependency for me. And I like the setup I have in CircleCI. I don't want to learn another vendor-specific CI.
 
 I'm sad to list this because I know Playwright only does this because Microsoft has unlimited resources to throw at Playwright, so they don't care about making money from it directly, but it makes it much easier to
-
-## Test recordings actually work
-
-For some reason, the tests recordings would 90% of the time get stuck and not record what I want.
-
-## Test ID shortcuts
-
-await page.locator("data-test-id=log-in").click();
 
 ## Playwright makes it easier to navigate the shadow DOM
 
@@ -250,9 +260,42 @@ cy.get('.table td[test-data-id="guest-link-label"] a')
 
 In other words, every time I want to store a value, I have to add a layer of nesting. Being able to just `await` the function and store a normal variable is so much easier.
 
-In addition to supporting `await`, it's nice to be able to use `console.log` instead of a [Cypress-specific `cy.log`](https://docs.cypress.io/api/commands/log). And when I needed to write a reusable helper method to automate the login sequence, Playwright let me write it in normal JavaScript, whereas Cypress requires it to be a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands) that must adhere to specific naming conventions and has its own API.
+And when I needed to write a reusable helper method to automate the login sequence, Playwright let me write it in normal JavaScript, whereas Cypress requires it to be a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands) that must adhere to specific naming conventions and has its own API.
 
-## VS Code Integration
+## Playwright's logging actually works
+
+One of the big pain points of Cypress is that you have to learn to live without debug logging. When I'm debugging a test in Cypress, [there are no tools for printing messages to stdout](https://github.com/cypress-io/cypress/issues/448) to help me understand what's happening in the test.
+
+If I stick in a call to console.log, nothing happens:
+
+```javascript
+console.log("hello from Cypress");
+```
+
+Cypress has its own [`cy.log` API](https://docs.cypress.io/api/commands/log), so what if I try that instead?
+
+```javascript
+cy.log("hello from Cypress");
+```
+
+Nope, that doesn't work either. That only prints output within the Cypress desktop GUI or Cypress' proprietary SaaS dashboard.
+
+Cypress developer Zach Bloomquist published [an unofficial plugin](https://github.com/flotwig/cypress-log-to-output) for printing browser console output to the terminal, but it's a third-party plugin and not something Cypress officially supports.
+
+In Playwright, `console.log` just works: no fuss, no muss:
+
+```javascript
+console.log("hello from Playwright");
+```
+
+When I run the test, I see the log message in the terminal output:
+
+```text
+[chromium] › auth.spec.ts:3:1 › logs in and logs out
+hello from Playwright
+```
+
+## Playwright offers smooth VS Code integration
 
 There's an official VS Code plugin, which gives you auto-complete, which is something I've been missing.
 
@@ -297,3 +340,7 @@ await page
 There must be some good reason for this since both Cypress and Playwright do this, but the Docker images don't actually contain the software. That is, the Playwright Docker image does not contain Playwright and the Cypress Docker image doesn't contain Cypress. Instead, the Docker images contain the _dependencies_ you need to install Playwright or Docker respectively. So the first step after launching the Playwright Docker image is to install Playwright.
 
 When I complained about this for Cypress, they added a special cypress/included image that actually does contain Cypress.
+
+## In summary
+
+In Playwright, more things seem to work the way I expect. I don't have to find complicated workarounds for regular tasks, and Playwright is easier to get up and running.
