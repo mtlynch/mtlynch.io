@@ -1,25 +1,21 @@
 ---
-title: "Cypress vs Playwright"
+title: "On Migrating from Cypress to Playwright"
 date: 2022-10-02T10:21:05-04:00
 ---
 
-When I saw Gleb Bahmutov [demo Cypress at a 2018 meetup](https://youtu.be/wApmbgPGmqQ) in New York, I was blown away. I had begrudgingly used Selenium in the past, and Cypress was such a leap forward.
+Cypress is an open-source tool for performing automated end-to-end tests on web applications. I saw Gleb Bahmutov [demo Cypress at a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ) in New York, and I was blown away. I had begrudgingly used [Selenium](https://www.selenium.dev/) in the past, and Cypress was a refreshing leap forward. Cypress had found solutions to tons of pain points that made Selenium impractical to use.
 
-When I heard about Playwright, I wasn't that interested. I much preferred the scrappy open-source team to a big corporate product churned out by Microsoft. I took a look at Playwright a year ago and wasn't impressed. I found the documentation confusing and it didn't seem to offer many advantages over Cypress, so I went back to using Cypress.
+I recently tried Playwright, and after experimenting with it for a day, I'm ready to completely switch over from Cypress. Playwright presents a similar leap forward from Cypress that I felt when I switched from Selenium four years ago.
 
-# Revisiting Playwright
+It pains me to say it because I have a soft spot for Cypress' small, scrappy team. I'd much rather depend on a team whose entire company is built around end-to-end testing than use an additional tool from Microsoft, but Playwright is just so much better that I can't justify sticking with Cypress.
 
-I tried it last year, and I
+What follows are the notes on my switch from Cypress to Selenium while they're still fresh in my head.
 
-> 2022 one should not start a new project with Cypress. Playwright is simply so much better.
+# My experience with Cypress and Playwright
 
-https://news.ycombinator.com/item?id=33049047
+I've written Cypress end-to-end tests for almost every web app I've built in the last four years. I'd rate myself as an intermediate Cypress user. Most of my Cypress needs are straightforward and use the basic Cypress APIs. I've never written my own custom plugin, but I've used a few third-party ones.
 
-As an experiment, I tried porting PicoShare's 10 end-to-end tests from Cypress to Playwright, and I'm sorry to say that I agree with the Hacker News thread. From my experience with it so far, Playwright is better than Cypress in almost every dimension.
-
-Using Playwright, I'm seeing all these things that were always an obstacle with Cypress but I either hadn't noticed or had gotten used to.
-
-After trying it out for a day, I must say I agree. And it pains me to say it, as I have a soft spot for Cypress.
+I've used Playwright for only one day. To get my hands dirty with Playwright, I tried porting one of my app's end-to-end test suite from Cypress to Playwright. I chose [PicoShare](https://github.com/mtlynch/picoshare), my minimalist file sharing tool. It has just 10 end-to-end tests. I was able to [port all of them from Cypress to Playwright](https://github.com/mtlynch/picoshare/pull/340) with about five hours of dev time.
 
 # What I like about Playwright
 
@@ -29,15 +25,16 @@ This is just a single data point and not a rigorous one, but I rewrote my Cypres
 
 In development
 
-|                                    | Cypress | Playwright | Difference |
+| Task                               | Cypress | Playwright | Difference |
 | ---------------------------------- | ------- | ---------- | ---------- |
 | Run tests on CircleCI              | 127s    | 84s        | XX         |
 | Run tests from development machine | 40s     | 7s         | XX         |
 
 For local development, it's not a big deal because you download it once and you're done. But when I run it in CI, I have to wait for CircleCI to download and decompress the full almost 1 GB image each time.
 
-playwright:v1.26.0-focal-amd64 is 651 MB
-cypress/included:10.9.0 is 940 MB
+|      | cypress/included:10.9.0 | playwright:v1.26.0-focal-amd64 |
+| ---- | ----------------------- | ------------------------------ |
+| Size | 940 MB                  | 651 MB                         |
 
 ## Playwright has fewer gotchas
 
@@ -47,7 +44,9 @@ There's been [a bug to support mouse hovering](https://github.com/cypress-io/cyp
 
 ## Single, consistent set of assertions
 
-Cypress has several different styles of assertions, which always confused me. There's `should`, `expect`, and `assert`
+Cypress bundles [nine different third-party libraries](https://docs.cypress.io/guides/references/bundled-libraries) into a standard install, which creates a mishmash of inconsistent APIs. There's `should`, `expect`, and `assert`, and you use different assertion keywords depending on the context you're in.
+
+For example, the following two code snippets perform identical assertions:
 
 ```javascript
 cy.get("#error-message").should("be.visible");
@@ -57,7 +56,98 @@ cy.get("#error-message").should("be.visible");
 cy.get("#error-message").should(($el) => expect($el).to.be.visible);
 ```
 
-With Playwright, the assertions are more consistent. There's just `expect` like `expect(locator).toBeVisible()`. The fact that they're proper TypeScript functions as opposed to string arguments you have to memorize means that auto-complete can help you remember syntax.
+With Playwright, there's a single, consistent API. There's just `expect` like `expect(locator).toBeVisible()`. The fact that they're proper TypeScript functions as opposed to string arguments you have to memorize means that auto-complete can help you remember syntax.
+
+## Text comparisons are easier in Playwright
+
+One aspect of Cypress that's always frustrated me is how difficult it is to assert that an element contains text.
+
+Here's an example `<p>` element from PicoShare:
+
+```html
+<p data-test-id="github-instructions">
+  Visit our
+  <a href="https://github.com/mtlynch/picoshare">Github repo</a> to create your
+  own PicoShare server.
+</p>
+```
+
+### Text assertions in Cypress
+
+Here's the naïve approach to asserting the correct text in Cypress:
+
+```javascript
+cy.get("[data-test-id='github-instructions']").should(
+  "have.text",
+  "Visit our Github repo to create your own PicoShare server."
+);
+```
+
+Unfortunately, this test will fail:
+
+```text
+Timed out retrying after 10000ms
++ expected - actual
+
+-'\n      Visit our\n      Github repo to create\n      your own PicoShare server.\n    '
++'Visit our Github repo to create your own PicoShare server.'
+```
+
+Cypress is grabbing the [textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent), which includes all the whitespace around the text as it appears in the raw HTML instead of how the text appears in the browser.
+
+You can work around this by grabbing the element's `innerText`, but the syntax is convoluted and difficult to remember because it uses a totally different set of assertion APIs:
+
+```javascript
+cy.get("[data-test-id='github-instructions']").should(($el) => {
+  expect($el.get(0).innerText).to.eq(
+    "Visit our Github repo to create your own PicoShare server."
+  );
+});
+```
+
+### Text assertions in Playwright
+
+In Playwright, the naïve assertion yields the correct behavior:
+
+```javascript
+await expect(page.locator("data-test-id=github-instructions")).toHaveText(
+  "Visit our Github repo to create your own PicoShare server."
+);
+```
+
+Playwright also looks at the `textContent` of the element, but it automatically trims and collapses whitespace like a web browser does.
+
+You can force Playwright to look at `innerText` instead with a much simpler syntax than what's available in Cypress:
+
+```javascript
+await expect(page.locator("data-test-id=github-instructions")).toHaveText(
+  "Visit our Github repo to create your own PicoShare server.",
+  { useInnerText: true }
+);
+```
+
+Playwright loses a few points for having two seemingly identical APIs with similar names:
+
+- [`toHaveText`](https://playwright.dev/docs/test-assertions#locator-assertions-to-have-text): Ensures the Locator points to an element with the given text. You can use regular expressions for the value as well.
+- [`toContainText`](https://playwright.dev/docs/test-assertions#locator-assertions-to-contain-text`): Ensures the Locator points to an element that contains the given text. You can use regular expressions for the value as well.
+
+One API is for asserting that an element exists "with the given text" whereas the other asserts an element exists "that contains the given text."
+
+What's the difference between "having" text and "containing" text? It seems like it comes down to if you want to make assertions about an element's child elements, but the documentation could definitely be improved.
+
+## Playwright does not depend on a GUI environment
+
+One of Cypress' most touted features is their desktop GUI app:
+
+{{<img src="cypress-gui.png" alt="Screenshot of Cypress Desktop app" caption="Cypress uses a desktop app to show test execution">}}
+
+The Cypress desktop app lets you "time travel" through your tests, so you can see what the browser window looked like at each point in your test.
+
+But what if you don't develop without a GUI? I do all of my development on headless server VMs. In four years of using Cypress, I've never used the Cypress desktop app. Instead, I run Cypress [within a Docker container](https://mtlynch.io/painless-web-app-testing/).
+
+The GUI problem also pops up when you try to run Cypress on a CI provider. Most CI providers are headless servers, so you can't run the Cypres app there either. But Cypress doesn't really want you to run Cypress sells their own CI provider, and that's how they make their money.
+
+Playwright doesn't have any desktop GUI, so running it under a headless VM works great. All of Playwright's UI is browser based, so it gets a little confused if it can't spawn a browser, but you can just access the URL from another system on the same network:
 
 ## Not resource constrained
 
@@ -70,12 +160,6 @@ One of the things that's always bothered me about Cypress is that it's designed 
 Playwright has built-in support for
 
 The whole reason I wrote a tutorial was that it's complex enough to run Cypress outside of their
-
-## GUI-agnosticism
-
-Cypress also assumes that you run it locally.
-
-Playwright works fine on a headless server.
 
 ## Everything's free
 
@@ -178,9 +262,33 @@ There's an official VS Code plugin, which gives you auto-complete, which is some
 
 I like Gleb Bahmutov, and I liked supporting his product. He was very gracious in giving me feedback about my Cypress tutorial, and when I published it, he generously promoted it in Cypress' channels.
 
-## Cypress' syntax feels more intuitive
+## Cypress' syntax is more consistently fluent
 
-I'm still not used to the `await`s everywhere. The Cypress syntax feels much more intuitive to me.
+Both Cypress and Playwright offer [fluent-style APIs](https://en.wikipedia.org/wiki/Fluent_interface) where you chain together a series of actions into a single statement. Cypress is a bit better about adhering to this style and allowing the developer to read the line left-to-right.
+
+```javascript
+cy.get(".navbar-item [data-test-id='log-in']").should("be.visible");
+```
+
+With Cypress, the order I write the code matches the order I think about the test. First, I locate the element, then I think about what assertions I want to make about it.
+
+In Playwright, the ordering is a little muddled. Before I start locating the element I want to test, I have to wrap the code in an `expect` call:
+
+```javascript
+await expect(
+  page.locator(".navbar-item [data-test-id='log-in']")
+).toBeVisible();
+```
+
+Playwright's syntax interrupts the left-to-right ordering I'm used to from Cypress. I wish Playwright's syntax looked more like this:
+
+```javascript
+// INVALID - not how Playwright actually behaves
+await page
+  .locator(".navbar-item [data-test-id='log-in']")
+  .expect()
+  .toBeVisible();
+```
 
 ## Test artifacts work in CI
 
