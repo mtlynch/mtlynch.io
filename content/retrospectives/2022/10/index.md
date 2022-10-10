@@ -77,7 +77,11 @@ Long delay between finding out about issues.
 
 ## Flashing microSDs
 
-This one I'm not sure how to solve. The naive answer is to just let the company that supplies my microSDs flash the image. I'm not crazy about that because a microSD company is an attractive target for malware, so I don't want to be in the same boat. In theory, I could randomly spot check their output and make sure it matches the image I gave them, but even that doesn't give me complete confidence.
+Each TinyPilot requires a microSD that we flash with the OS and TinyPilot software. I currently have high confidence that nobody has tampered with the microSDs because they never leave our possession after we flash them. The only person who can tamper with the microSDs between us and the customer is the courier, and if the USPS wanted to be evil, they probably have more interesting targets than us.
+
+I'm not sure how to outsource the process of flashing microSDs. We use custom branded microSDs, and the company who makes them is perfectly happy to flash a software image onto them. I'm reluctant to do that, as I feel like there's too high a risk that a microSD flashing company is the victim of malware that compromises microSDs that they flash. In theory, I could randomly spot check their output and make sure it matches the image I gave them, but even that doesn't give me complete confidence.
+
+We could potentially keep flashing microSDs ourselves and send them to the manufacturer. That assumes the manufacturer is honest, but it's probably the same risk every company is taking by having computer products manufactured overseas.
 
 ## Testing assembled devices
 
@@ -87,27 +91,49 @@ Pretty hard because currently it's not hard, but it's hard to set up. You need a
 
 I think in theory we could build a device that automates this. It could feed input into TinyPilot's HDMI port and verify that the TinyPilot is getting video input. It could receive USB output from the TinyPilot and verify that it receives output. The problem is that hardware engineering time is currently our scarcest resource, and that seems like it would require a lot of hardware engineering.
 
+This is one of those tasks where thinking about how to outsource it also creates benefits
+
 ## Packing and shipping customer orders
 
-This is actually almost trivial. We probably have everything we need to do this today. The only obstacle is that I could imagine that 3PL vendors want individual boxes for each of our products, whereas we're currently just wrapping them in a bubble sleeve.
+Of all the potential outsourcing options, order fulfillment is the one we're closest to achieving. We probably have everything we need to do this today. We always have a queue of ready-to-ship boxes, so we could hand those to a 3PL vendor instead of keeping them at our office.
 
-The other thing that I image
+The benefit is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week. If we have a 3PL vendor, nobody needs to be at the office in any particular window as long as we're assembling enough devices to keep orders flowing.
 
-The benefit is that our already flexible hours become more flexible. Currently, somebody has to go into the office every day. If we have a 3PL vendor, the 20 hours can happen in whatever time works. We can assemble devices for 20 hours.
+We'd free up physical space in our office, as boxes and packing material eat up a lot of real estate in our small office.
+
+Another benefit is that customers will have more choice in shipping options. We currently only offer USPS and DHL because there's added complexity in coordinating with each courier. A 3PL provider will already have daily pickups from all the major providers, so it's easy for them to support any major courier.
+
+Shipping speed might increase slightly, although this is less significant as TinyPilot already ships like 90% of orders within one business day.
+
+The downside is that a 3PL will inevitably increase complexity. Right now, our customer service experience is excellent because when a customer emails us, they're speaking directly to a knowledgeable employee who probably assembled, packed, and shipped their particular device. The same employee has the power to check shipping status, cancel orders, and arrange returns.
+
+If there's a problem with an order that a 3PL vendor fulfilled, a TinyPilot customer support rep will have to check with our point of contact at the 3PL vendor. They'll probably have to talk to someone else, who probably has to talk to someone else, etc.
 
 ## Processing returns
 
-I'm not sure how we solve this problem.
+I don't know how we'd solve the problem of handling returns. Our return rate is currently very low, so we've just been collecting them in a box until we figure out what to do with them.
 
-In theory we could just have a PO box so that staff can pick them up
+I wouldn't trust a 3PL vendor to refurbish a TinyPilot device, but I wouldn't want them just destroying returns either. Perhaps we could have a separate return address that's just a PO box, and employees could go there to pick up returns, refurbish them, and then give them to the 3PL vendor to sell as a refurbished item.
+
+I haven't talked to 3PL vendors yet, so it's possible they have some better solution for this.
 
 ## What happens when everything is outsourced?
 
-No office
-No worker's comp
-No renter's insurance
+### We become location-indepdent
 
-Part-time employees become contractors: I know this one sounds like, "I can't wait to cut pay for my employees!" but my goal isn't to reduce compensation as much as reduce paperwork. Contractors require much less paperwork. We can adjust pay so that staff gets equivalent or better compensation relative to what they had as employees.
+Right now, we're tied to our physical office. If we got rid of the office, everyone can theoretically do their jobs from anywhere.
+
+### We reduce red tape
+
+Part-time employees become contractors: I know this one sounds like, "I can't wait to cut pay for my employees!" but my goal isn't to reduce compensation as much as reduce paperwork. Having employees requires a lot of paperwork. There are services that help with compliance and paying the right taxes, but I've never found one that does an especially good job. There are all these little issues, and when I call my "HR as a service," they just tell me that I have to call the government and figure it out myself.
+
+Contractors require much less paperwork. We can adjust pay so that staff gets equivalent or better compensation relative to what they had as employees.
+
+### We reduce costs
+
+We no longer have to pay rent ($550/month), Gusto payroll service ($80/month), worker's comp ($30/month), or renter's insurance ($10/month).
+
+The cost of assembling and testing each device theoretically goes down by a few dollars per unit.
 
 ## Side projects
 
