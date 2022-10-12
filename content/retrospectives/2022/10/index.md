@@ -161,5 +161,7 @@ We also forfeit our ability to satisfy special requests. This is less of a sacri
 
 ### Goals for next month
 
-- Ramp up new support engineers
-  - Aiming for the first one to be able to answer 80% of questions unassisted and the second 50%
+- Ramp up new support engineers.
+  - I'm aiming for the first one to be able to answer 80% of questions unassisted and the second 50%.
+- Finalize design for a new sheet metal case.
+- Reach out to three 3PL vendors to talk about the process of transitioning our fulfillment to them.
