@@ -149,15 +149,29 @@ We also forfeit our ability to satisfy special requests. This is less of a sacri
 
 ## Side projects
 
+### Hello, Playwright - goodbye, Cypress
+
+I've been [a fan of the Cypress end-to-end testing tool](https://mtlynch.io/painless-web-app-testing/) ever since I saw Gleb Bahmutov demo it at [a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ). I've been hearing more chatter over the years about [Playwright](https://playwright.dev/), Microsoft's competitor to Cypress.
+
+I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06), but I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seemed to agreem that Playwright had surpassed Cypress.
+
+I gave Playwright another try, and I reluctantly agreed with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
+
+I'm working on a longer post about the process of porting from Cypress to Playwright, but the summary is that I'd now recommend Playwright over Cypress.
+
+### Switching to dynamic responses in Stan
+
 ## Wrap up
 
 ### What got done?
 
+- Published TinyPilot Pro 2.5.0
+- Gave personal responses to everyone who applied for the Support Engineer job in August.
 - Hired a second TinyPilot Support Engineer.
 
 ### Lessons learned
 
--
+- Just thinking about how to outsource tasks can uncover opportunities in your existing workflows.
 
 ### Goals for next month
 
