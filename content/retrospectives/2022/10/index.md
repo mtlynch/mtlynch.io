@@ -109,13 +109,15 @@ Each TinyPilot requires a microSD that we flash with TinyPilot software. I curre
 
 I'm not sure how to outsource the process of flashing microSDs. We use custom, branded microSDs, and the company who makes them is perfectly happy to flash a software image onto them. I'm reluctant to do that, as I feel like there's too high a risk of malware. In theory, I could randomly spot check their output and make sure it matches the image I gave them, but even that wouldn't give me complete confidence.
 
+{{<img src="tinypilot-microsds.jpg" maxWidth="400px" alt="Photo of TinyPilot branded microSDs" caption="We currently use a vendor that can flash images onto microSDs for us, but I have reservations.">}}
+
 We could potentially keep flashing microSDs ourselves and send them to the manufacturer. That assumes the manufacturer is honest, but it's probably the same risk every company is taking by having computer products manufactured overseas.
 
 ## Testing assembled devices
 
 After we build devices, we currently test them by hand to make sure that all the functionality works. Our test setup is pretty slow and complicated. It requires the tester to plug the newly built TinyPilot into a target computer, then control the TinyPilot from the web browser of a second computer. The tester then has to wait for the TinyPilot to boot up, then verify that it's capturing the target computer's display and accurately forwarding keyboard and mouse input.
 
-{{<img src="current-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections.">}}
+{{<img src="current-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections." hasBorder="true">}}
 
 It's been on our list to automate this process, but automating it requires hardware engineering resources, and that's currently our scarcest resource.
 
@@ -123,13 +125,15 @@ Writing this out, I'm realizing we could solve this with commodity hardware. We 
 
 A Raspberry Pi has HDMI output and USB input. Test runner can make sure the TinyPilot is capturing video from the test Raspberry Pi and verify that when it tells the TinyPilot to send a keystroke, the Pi receives the same keystroke through its USB input from the TinyPilot. This test would give us confidence that everything is connected and working correctly in the newly-built Voyager 2.
 
-{{<img src="proposed-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of a potential simplified test setup" caption="We could run boot scripts on a Raspberry Pi to automate the QA process.">}}
+{{<img src="proposed-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of a potential simplified test setup" caption="We could likely automate our Voyager 2 QA process by connecting it to a Raspberry Pi with some custom scripts." hasBorder="true">}}
 
 This is a good example of a task where thinking about how to outsource it creates benefits even if we end up not outsourcing it.
 
 ## Packing and shipping customer orders
 
 Of all the parts of our workflow, order fulfillment is the one that would be easiest to outsource at this point. We always have a queue of ready-to-ship boxes, so we could hand those to a 3PL vendor instead of keeping them at our office.
+
+{{<img src="ready-to-ship.jpg" caption="We keep pre-assembled Voyager 2 devices in ready-to-ship boxes at our office." alt="Photo of Voyager 2 in cardboard shipping box" maxWidth="500px">}}
 
 The benefit is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week. If we have a 3PL vendor, nobody needs to be at the office in any particular time window as long as we're assembling enough devices to keep orders flowing.
 
@@ -139,15 +143,17 @@ Another benefit is that customers will have more choice in shipping options. We 
 
 Shipping speed might increase slightly, although this is less significant as TinyPilot already ships 90% of orders within one business day.
 
-The downside is that a 3PL will inevitably increase complexity. Right now, our customer service experience is excellent because when a customer emails us, they're speaking directly to a TinyPilot employee. Chances are, the same employee assembled, packed, or shipped their particular device. The employee is highly knowledgeable about the product and has the power to check shipping status, cancel orders, and arrange returns.
+The downside is that a 3PL vendor increases complexity. Right now, our customer service experience is excellent because when a customer emails us, they're speaking directly to a knoweldgeable TinyPilot employee. Chances are, the same employee assembled, packed, or shipped their particular device. They also have the power to check shipping status, cancel orders, and arrange returns.
 
-If there's a problem with an order that a 3PL vendor fulfilled, a TinyPilot customer support rep will have to check with our point of contact at the 3PL vendor. They'll probably have to talk to someone else, who probably has to talk to someone else, etc.
+If there's a problem with an order that a 3PL vendor fulfilled, a TinyPilot customer support rep will sometimes have to check with our point of contact at the 3PL vendor, who might have to check with someone else, etc.
 
 ## Processing returns
 
 I don't know how we'd process returns without an office.
 
-I wouldn't trust a 3PL vendor to refurbish a TinyPilot device, but I wouldn't want them just destroying returns either. Perhaps we could have a separate return address that's just a PO box, and employees could go there to pick up returns, refurbish them, and then ship them to the 3PL vendor to sell as a refurbished item.
+I wouldn't trust a 3PL vendor to refurbish a TinyPilot device, but I wouldn't want them just destroying returns either.
+
+Perhaps we could have a separate return address that's just a PO box. Employees could pick up returns from the post office, refurbish them, and then ship them to the 3PL vendor to sell as a refurbished item.
 
 I haven't talked to 3PL vendors yet, so it's possible they have some better solution for this.
 
@@ -161,21 +167,21 @@ Right now, we're tied to our physical office. If we got rid of the office, every
 
 ### We become less time-dependent
 
-Without fulfillment or manufacturing, the only thing.
-
-Customer support requests are still time-sensitive
+Without fulfillment or manufacturing, the only time-sensitive responsibility we have is customer support.
 
 ### We become more robust to employee absence
 
-A few times in the last few months, a member of TinyPilot's local staff has been out of work for several days at a time. Once was a planned vacation, and that was easy to prepare for, but twice were due to illness. TinyPilot has enough redundancy that we were able to keep going without affecting customers, but it did [strain other parts of our systems](/retrospectives/2022/09/#build-redundancy-into-customer-support).
+A few times in the last few months, a member of TinyPilot's local staff has been out of work for several days at a time. Some were planned vacations; others were due to illness. TinyPilot has enough redundancy that we were able to keep going without affecting customers, but it did [strain other parts of our systems](/retrospectives/2022/09/#build-redundancy-into-customer-support).
 
-If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence.
+If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence. We wouldn't have to scramble to keep orders shipping, as we're out of that critical path.
 
-### We change our local staff's jobs
+### We'd redefine our local staff's jobs
 
-One challenge of outsourcing is the impact it has on our existing local staff's jobs. If we were to get rid of the TinyPilot office and outsource manufacturing and fulfillment, that eliminates about 75% of their work. They'll continue to have customer service work
+One challenge of outsourcing is the impact it has on our existing local staff's jobs. If we were to get rid of the TinyPilot office and outsource manufacturing and fulfillment, that eliminates about 75% of work our local team currently does.
 
-The local team does great work, and I want to retain them.
+The local team does great work, and I want to make sure they still have roles within the company if we get rid of our office.
+
+They'll continue to have customer service work
 
 Proactive outreach to customers.
 
