@@ -62,12 +62,38 @@ Profit is down because I had a surprise expense of $11k in raw materials that ha
 
 ## What do metal cases mean for TinyPilot?
 
+One of our remaining bottlenecks for production is our cases. We 3D print our cases, and we use a premium material that's slow to print, so we're limited to manufacturing about 160 cases per month. We've been selling 200+ devices per month. We can keep up our sales for a few more months because we stockpiled cases when we were selling below our manufacturing capacity. Adding another 3D printing vendor isn't feasible, because we're receiving a government subsidy on 3D printing that's available exclusively through our current vendor.
+
+Our hardware partner suggested metal cases, similar to what you'd find on consumer networking hardware:
+
+{{<img src="tp-link-switch.png" maxWidth="500px" alt="Photo of metal TP-Link TL-SG1005P 5-port switch" caption="What if we switched TinyPilot to use a metal case like this?">}}
+
+A metal case would reduce costs and eliminate the 160/month production constraint, as we could manufacture thousands of metal cases each month.
+
+Our hardware partner also offhandedly mentioned something that set off a sequence of thoughts that's been on my mind for months: if we manufactured the cases in China, we could also assemble the devices in China.
+
+At first, assembling in China didn't appeal to me. We have an assembly process that works, so why mess with it?
+
+Assuming that each device costs $10 to assemble in the US, maybe a Chinese vendor can do it for $1-2. $9/unit doesn't justify all the risks associated with changing a process that works smoothly.
+
+But then thinking about manufacturing in China got me thinking about how that would change TinyPilot's office. Our shelves wouldn't be stocked with hundreds of cases, USB cables, and tiny rubber feet because those would all live at the manufacturer. And if our raw materials lived at the manufacturer, the manufacturer could also take care of periodically reordering our raw materials to keep up with production.
+
+Then I wondered if we even need a TinyPilot office at all.
+
+## What happens in the TinyPilot office?
+
+I moved into the TinyPilot office in May 2021. Before that, my fiancé and I were running TinyPilot entirely out of our house. Moving to the office was a big step forward because it meant that we could
+
+Today, we use the TinyPilot office for six main functions:
+
 1. Storing inventory
 1. Assembling devices
 1. Flashing microSDs
 1. Testing assembled devices (QA)
 1. Packing and shipping customer orders
 1. Processing returned orders
+
+Can TinyPilot still perform these functions without its own office? Let's find out!
 
 ## Storing inventory and assembling devices
 
@@ -79,17 +105,25 @@ Long delay between finding out about issues.
 
 ## Flashing microSDs
 
-Each TinyPilot requires a microSD that we flash with the OS and TinyPilot software. I currently have high confidence that nobody has tampered with the microSDs because they never leave our possession after we flash them. The only person who can tamper with the microSDs between us and the customer is the courier, and if the USPS wanted to be evil, they probably have more interesting targets than us.
+Each TinyPilot requires a microSD that we flash with TinyPilot software. I currently have high confidence that nobody has tampered with the microSDs because they never leave our possession after we flash them. The only person who can tamper with the microSDs between us and the customer is the courier, and if the USPS wanted to be evil, they probably have more interesting targets than us.
 
-I'm not sure how to outsource the process of flashing microSDs. We use custom branded microSDs, and the company who makes them is perfectly happy to flash a software image onto them. I'm reluctant to do that, as I feel like there's too high a risk that a microSD flashing company is the victim of malware that compromises microSDs that they flash. In theory, I could randomly spot check their output and make sure it matches the image I gave them, but even that doesn't give me complete confidence.
+I'm not sure how to outsource the process of flashing microSDs. We use custom, branded microSDs, and the company who makes them is perfectly happy to flash a software image onto them. I'm reluctant to do that, as I feel like there's too high a risk of malware. In theory, I could randomly spot check their output and make sure it matches the image I gave them, but even that wouldn't give me complete confidence.
 
 We could potentially keep flashing microSDs ourselves and send them to the manufacturer. That assumes the manufacturer is honest, but it's probably the same risk every company is taking by having computer products manufactured overseas.
 
 ## Testing assembled devices
 
-After we build devices, we currently test them by hand to make sure that all the functionality works. Our test setup is pretty slow and complicated. It requires the tester to plug the newly built TinyPilot into a target computer, then control the TinyPilot from the web browser of a second computer. The tester then has to wait for the TinyPilot to boot up, then verify that it successfully
+After we build devices, we currently test them by hand to make sure that all the functionality works. Our test setup is pretty slow and complicated. It requires the tester to plug the newly built TinyPilot into a target computer, then control the TinyPilot from the web browser of a second computer. The tester then has to wait for the TinyPilot to boot up, then verify that it's capturing the target computer's display and accurately forwarding keyboard and mouse input.
 
-It's been on our list to automate this process, but we're waiting on hardware engineering resources, and that's currently our scarcest resource. Although, writing this out, I'm realizing we could solve this with commodity hardware. We should be able to make a TinyPilot testing machine with a Raspberry Pi. A Raspberry Pi has an HDMI output and USB inputs, so the test runner can make sure the TinyPilot is capturing video and capable of emulating keyboard input, and that will give us confidence that everything is connected and working correctly.
+{{<img src="current-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections.">}}
+
+It's been on our list to automate this process, but automating it requires hardware engineering resources, and that's currently our scarcest resource.
+
+Writing this out, I'm realizing we could solve this with commodity hardware. We should be able to make a TinyPilot testing machine with a Raspberry Pi.
+
+A Raspberry Pi has HDMI output and USB input. Test runner can make sure the TinyPilot is capturing video from the test Raspberry Pi and verify that when it tells the TinyPilot to send a keystroke, the Pi receives the same keystroke through its USB input from the TinyPilot. This test would give us confidence that everything is connected and working correctly in the newly-built Voyager 2.
+
+{{<img src="proposed-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of a potential simplified test setup" caption="We could run boot scripts on a Raspberry Pi to automate the QA process.">}}
 
 This is a good example of a task where thinking about how to outsource it creates benefits even if we end up not outsourcing it.
 
@@ -103,7 +137,7 @@ We'd free up physical space in our office, as boxes and packing material eat up 
 
 Another benefit is that customers will have more choice in shipping options. We currently only offer USPS and DHL because there's added complexity in coordinating with each courier. A 3PL provider will already have daily pickups from all the major providers, so it's easy for them to support any major courier.
 
-Shipping speed might increase slightly, although this is less significant as TinyPilot already ships like 90% of orders within one business day.
+Shipping speed might increase slightly, although this is less significant as TinyPilot already ships 90% of orders within one business day.
 
 The downside is that a 3PL will inevitably increase complexity. Right now, our customer service experience is excellent because when a customer emails us, they're speaking directly to a TinyPilot employee who probably assembled, packed, and shipped their particular device. The same employee has the power to check shipping status, cancel orders, and arrange returns.
 
@@ -113,7 +147,7 @@ If there's a problem with an order that a 3PL vendor fulfilled, a TinyPilot cust
 
 I don't know how we'd process returns without an office.
 
-I wouldn't trust a 3PL vendor to refurbish a TinyPilot device, but I wouldn't want them just destroying returns either. Perhaps we could have a separate return address that's just a PO box, and employees could go there to pick up returns, refurbish them, and then give them to the 3PL vendor to sell as a refurbished item.
+I wouldn't trust a 3PL vendor to refurbish a TinyPilot device, but I wouldn't want them just destroying returns either. Perhaps we could have a separate return address that's just a PO box, and employees could go there to pick up returns, refurbish them, and then ship them to the 3PL vendor to sell as a refurbished item.
 
 I haven't talked to 3PL vendors yet, so it's possible they have some better solution for this.
 
@@ -125,7 +159,11 @@ Right now, we're tied to our physical office. If we got rid of the office, every
 
 ### We reduce red tape
 
-Part-time employees become contractors: I know this one sounds like, "I can't wait to cut pay for my employees!" but my goal isn't to reduce compensation as much as reduce paperwork. Having employees requires a lot of paperwork. There are services that help with compliance and paying the right taxes, but I've never found one that does an especially good job. There are all these little issues, and when I call my "HR as a service" provider, they just tell me that I have to call the government and figure it out myself.
+Part-time employees become contractors: I know this one sounds like, "I can't wait to cut pay for my employees!" but my goal isn't to reduce compensation as much as reduce stress and paperwork.
+
+On an almost monthly basis, some Massachusetts government office sends me an inscrutable letter telling me something about withholdings or compliance requirements, but it's never clear what action is required on my part, if any.
+
+There are services that help with compliance and paying the right taxes, but I've never found one that does an especially good job. When I forward the notices to Gusto, my "HR as a service" provider, they just tell me that I have to call the government and figure it out myself. And then when I call the state agency, I get routed around a phone tree to people who don't know anything about the notice I received, so I'm left to just ignore it and hope that's the right thing to do.
 
 Contractors require much less paperwork. We can adjust pay so that staff gets equivalent or better compensation relative to what they had as employees.
 
@@ -133,9 +171,9 @@ Contractors require much less paperwork. We can adjust pay so that staff gets eq
 
 Outsourcing will also reduce costs, though this is the least interesting benefit for me.
 
-We no longer have to pay rent ($550/month), Gusto payroll service ($80/month), worker's comp ($30/month), or renter's insurance ($10/month).
+We no longer have to pay rent ($550/month), Gusto payroll service ($80/month), inventory tracking ($59/month), worker's comp ($30/month), or renter's insurance ($10/month).
 
-The cost of assembling and testing each device theoretically goes down by a few dollars per unit.
+The labor costs theoretically go down by a few dollars per unit because Chinese manufacturers can build devices at a fraction of our labor costs, and 3PL vendors have economies of scale that allow them to fulfill orders at lower costs.
 
 ### We reduce flexibility and agility
 
@@ -143,9 +181,13 @@ Outsourcing everything optimizes our "happy path" but it makes it harder to mana
 
 In the past, we've identified small problems with our process that result in customer confusion or visual blemishes with the product. Because we control most of our own manufacturing and fulfillment pipeline, we've caught and fixed those issues quickly.
 
-With everything outsourced, the feedback loop is slower. We might not identify issues until several customers report it, and by that point, it's expensive to unwind the process and apply the same fix to devices that are still at the manufacturer or 3PL vendor.
+With everything outsourced, the feedback loop is slower. We might not identify issues until several customers report it. By that point, we might have hundreds of devices that have passed the problem point in our pipeline and are on the way to customers or warehouses.
 
 We also forfeit our ability to satisfy special requests. This is less of a sacrifice, as we don't really do special requests often now. The most common is that a customer will ask for a customization with their case (e.g., their own logo or a custom modification). We tell them that we can do it, but it will cost 20% more than our retail price, and then they back out of the deal.
+
+### We increase our error rate
+
+We would almost certainly increase our error rate.
 
 ## Side projects
 
@@ -158,8 +200,6 @@ I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.co
 I gave Playwright another try, and I reluctantly agreed with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
 
 I'm working on a longer post about the process of porting from Cypress to Playwright, but the summary is that I'd now recommend Playwright over Cypress.
-
-### Switching to dynamic responses in Stan
 
 ## Wrap up
 
@@ -177,5 +217,5 @@ I'm working on a longer post about the process of porting from Cypress to Playwr
 
 - Ramp up new support engineers.
   - I'm aiming for the first one to be able to answer 80% of questions unassisted and the second 50%.
-- Finalize design for a new sheet metal case.
+- Start production on a second metal case prototype.
 - Reach out to three 3PL vendors to talk about the process of transitioning our fulfillment to them.
