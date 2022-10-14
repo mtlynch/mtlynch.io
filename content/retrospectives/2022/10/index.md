@@ -139,7 +139,7 @@ Another benefit is that customers will have more choice in shipping options. We 
 
 Shipping speed might increase slightly, although this is less significant as TinyPilot already ships 90% of orders within one business day.
 
-The downside is that a 3PL will inevitably increase complexity. Right now, our customer service experience is excellent because when a customer emails us, they're speaking directly to a TinyPilot employee who probably assembled, packed, and shipped their particular device. The same employee has the power to check shipping status, cancel orders, and arrange returns.
+The downside is that a 3PL will inevitably increase complexity. Right now, our customer service experience is excellent because when a customer emails us, they're speaking directly to a TinyPilot employee. Chances are, the same employee assembled, packed, or shipped their particular device. The employee is highly knowledgeable about the product and has the power to check shipping status, cancel orders, and arrange returns.
 
 If there's a problem with an order that a 3PL vendor fulfilled, a TinyPilot customer support rep will have to check with our point of contact at the 3PL vendor. They'll probably have to talk to someone else, who probably has to talk to someone else, etc.
 
@@ -153,9 +153,33 @@ I haven't talked to 3PL vendors yet, so it's possible they have some better solu
 
 ## What happens when everything is outsourced?
 
+Assuming that we can successfully extract all of the office functions to third-party vendors or location-independent alternatives, what does that mean for me and the company?
+
 ### We become location-indepdent
 
 Right now, we're tied to our physical office. If we got rid of the office, every TinyPilot employee can theoretically do their jobs from anywhere.
+
+### We become less time-dependent
+
+Without fulfillment or manufacturing, the only thing.
+
+Customer support requests are still time-sensitive
+
+### We become more robust to employee absence
+
+A few times in the last few months, a member of TinyPilot's local staff has been out of work for several days at a time. Once was a planned vacation, and that was easy to prepare for, but twice were due to illness. TinyPilot has enough redundancy that we were able to keep going without affecting customers, but it did [strain other parts of our systems](/retrospectives/2022/09/#build-redundancy-into-customer-support).
+
+If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence.
+
+### We change our local staff's jobs
+
+One challenge of outsourcing is the impact it has on our existing local staff's jobs. If we were to get rid of the TinyPilot office and outsource manufacturing and fulfillment, that eliminates about 75% of their work. They'll continue to have customer service work
+
+The local team does great work, and I want to retain them.
+
+Proactive outreach to customers.
+
+Outreach to reviewers
 
 ### We reduce red tape
 
