@@ -58,11 +58,15 @@ This is kind of a squishy goal.
 
 \* This profit figure is just a naive calculation of my change in cash holdings until I do real bookkeeping mid-month.
 
-Profit is down because I had a surprise expense of $11k in raw materials that hadn't been invoiced for six months. Still, I'm a bit surprised that I finished so far in the red. I'm
+The numbers are all scary red, but I think it's was actually a strong month. I'm thrilled to see another month where we exceed $70k in revenue.
+
+Profit is down because I had a surprise expense of $11k in raw materials that hadn't been invoiced for six months. Still, I'm a bit surprised that I finished so far in the red. I suspect that it's mainly just a function of how invoices were timed, and it will average out positively over the next few months.
 
 ## What do metal cases mean for TinyPilot?
 
-One of our remaining bottlenecks for production is our cases. We 3D print our cases, and we use a premium material that's slow to print, so we're limited to manufacturing about 160 cases per month. We've been selling 200+ devices per month. We can keep up our sales for a few more months because we stockpiled cases when we were selling below our manufacturing capacity. Adding another 3D printing vendor isn't feasible, because we're receiving a government subsidy on 3D printing that's available exclusively through our current vendor.
+One of our remaining bottlenecks for production is our cases. We 3D print our cases, and we use a premium material that's slow to print, so we're limited to manufacturing about 160 cases per month.
+
+We've been selling 200+ devices per month, so the cases will soon become the limiting factor. We can keep shipping at our current rates for a few more months because we stockpiled cases when we were selling below our manufacturing capacity. Adding another 3D printing vendor isn't feasible, because we're receiving a government subsidy on 3D printing that's available exclusively through our current vendor.
 
 Our hardware partner suggested metal cases, similar to what you'd find on consumer networking hardware:
 
@@ -72,24 +76,22 @@ A metal case would reduce costs and eliminate the 160/month production constrain
 
 Our hardware partner also offhandedly mentioned something that set off a sequence of thoughts that's been on my mind for months: if we manufactured the cases in China, we could also assemble the devices in China.
 
-At first, assembling in China didn't appeal to me. We have an assembly process that works, so why mess with it?
+At first, assembling in China didn't appeal to me. We have an assembly process in Massachusetts that works, so why mess with it?
 
-Assuming that each device costs $10 to assemble in the US, maybe a Chinese vendor can do it for $1-2. $9/unit doesn't justify all the risks associated with changing a process that works smoothly.
+Assuming that each device costs $10 to assemble in the US, maybe a Chinese vendor can do it for $1-2. A $9/unit savings doesn't justify all the risks associated with changing a process that works smoothly.
 
-But then thinking about manufacturing in China got me thinking about how that would change TinyPilot's office. Our shelves wouldn't be stocked with hundreds of cases, USB cables, and tiny rubber feet because those would all live at the manufacturer. And if our raw materials lived at the manufacturer, the manufacturer could also take care of periodically reordering our raw materials to keep up with production.
+But then thinking about manufacturing in China got me wondering about how that would change TinyPilot's office. Our shelves wouldn't be stocked with hundreds of cases, USB cables, and tiny rubber feet because those would all live at the manufacturer. And if our raw materials lived at the manufacturer, the manufacturer could also managing our inventory and reordering supplies to keep up with production.
 
-Then I wondered if we even need a TinyPilot office at all.
+Then, I began to ask myself whether we need a TinyPilot office at all.
 
 ## What happens in the TinyPilot office?
-
-I moved into the TinyPilot office in May 2021. Before that, my fiancé and I were running TinyPilot entirely out of our house. Moving to the office was a big step forward because it meant that we could
 
 Today, we use the TinyPilot office for six main functions:
 
 1. Storing inventory
 1. Assembling devices
 1. Flashing microSDs
-1. Testing assembled devices (QA)
+1. Testing assembled devices (quality assurance)
 1. Packing and shipping customer orders
 1. Processing returned orders
 
@@ -175,7 +177,7 @@ A few times in the last few months, a member of TinyPilot's local staff has been
 
 If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence. We wouldn't have to scramble to keep orders shipping, as we're out of that critical path.
 
-### We'd redefine our local staff's jobs
+### Our local staff's jobs would change
 
 One challenge of outsourcing is the impact it has on our existing local staff's jobs. If we were to get rid of the TinyPilot office and outsource manufacturing and fulfillment, that eliminates about 75% of work our local team currently does.
 
@@ -227,9 +229,9 @@ I've been [a fan of the Cypress end-to-end testing tool](https://mtlynch.io/pain
 
 I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06), but I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seemed to agreem that Playwright had surpassed Cypress.
 
-I gave Playwright another try, and I reluctantly agreed with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
+I gave Playwright another try, and I now must admit I agree with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
 
-I'm working on a longer post about the process of porting from Cypress to Playwright, but the summary is that I'd now recommend Playwright over Cypress.
+I'm working on a longer post about the process of porting from Cypress to Playwright, but the summary is that I'd now recommend Playwright over Cypress for end-to-end testing web apps.
 
 ## Wrap up
 
