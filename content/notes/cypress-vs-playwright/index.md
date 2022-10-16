@@ -297,7 +297,9 @@ hello from Playwright
 
 ## Playwright integrates better with VS Code
 
-There's an official VS Code plugin, which gives you auto-complete, which is something I didn't realize I'd been missing from Cypress.
+Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realize I'd been missing from Cypress until.
+
+{{<img src="playwright-auto-complete.png" maxWidth="600px">}}
 
 It's also much nicer to work with an API that's a proper set of TypeScript functions. It's helpful to let auto-complete. And because it's TypeScript, you'll catch simple mistakes at compile time rather than in the middle of your tests.
 
