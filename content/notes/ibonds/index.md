@@ -9,7 +9,7 @@ In a recent [Hacker News thread](https://news.ycombinator.com/item?id=33040211) 
 
 iBonds are one of those investments I've seen in passing every time I read a personal finance book, but I've never paid much attention to them.
 
-When I saw that iBonds are currently paying 9.62% interest, I decided to give them a closer look
+When I saw that iBonds are currently paying 9.62% interest, I decided to give them a closer look.
 
 {{<img src="ibond-returns.png" alt="Series I Savings Bonds - 9.62%">}}
 
@@ -102,15 +102,15 @@ I've never used Treasury Direct. From what I've read, it's a bit clunkier than m
 
 With most bonds, you have the right to sell the bond to another investor before the bond matures. With iBonds, you can't transfer or sell them to another investor. You can either hold an iBond until its 30-year maturity and continue receiving interest payments or cash it in for the amount you paid.
 
-The lack of secondary market is a shame, as an investor who purchased $10k of iBonds in 2000 (when the fixed rate was 3.6%) is currently earning interest payments of 13.22% per year. If they were allowed to sell the bond to another investor, the market price would be far higher than $10k. Instead, their only options are to cash it in for $10k or continue receiving interest payments. Earning 13.2% every year is an enviable position to be in, but it might be frustrating for an investor who'd prefer to cash out their investment at market value.
+The lack of a secondary market is a shame, as an investor who purchased $10k of iBonds in 2000 (when the fixed rate was 3.6%) is currently earning interest payments of 13.22% per year. If they were allowed to sell the bond to another investor, the market price would be far higher than $10k. Instead, their only options are to cash it in for $10k or continue receiving interest payments. Earning 13.2% every year is an enviable position to be in, but it might be frustrating for an investor who'd prefer to cash out their investment at market value.
 
 ### The interest rate changes every six months
 
 It's an advantage that iBonds adjust to meet inflation, but this is also a downside, as the interest rate may go down after you've purchased an iBond.
 
-Most other bonds have only a fixed rate, so you can more accurately predict your earnings over time. With iBonds, interest rate is only guaranteed for six months at a time. In theory, the interest rate could drop to the fixed rate six months after your purchase.
+Most other bonds have only a fixed rate, so you can more accurately predict your earnings over time. With iBonds, the interest rate is only guaranteed for six months at a time. In theory, the interest rate could drop to the fixed rate six months after your purchase.
 
-For example, if you purchase an iBond today, the total interest rate can drop to 0% in May 2023, as the fixed rate on iBonds is 0%. That scenario assumes that inflation also drops to zero or becomes negative within the next six months, either of which seem fairly unlikely.
+For example, if you purchase an iBond today, the total interest rate can drop to 0% in May 2023, as the fixed rate on iBonds is 0%. That scenario assumes that inflation also drops to zero or becomes negative within the next six months, either of which seems fairly unlikely.
 
 ## iBond purchase considerations
 
