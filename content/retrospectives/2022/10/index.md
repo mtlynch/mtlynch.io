@@ -84,7 +84,7 @@ At first, assembling in China didn't appeal to me. We have an assembly process i
 
 Assuming that each device costs $10 to assemble in the US, maybe a Chinese vendor can do it for $1-2. A $9/unit savings doesn't justify all the risks associated with changing a process that works smoothly.
 
-But then thinking about manufacturing in China got me wondering about how that would change TinyPilot's office. Our shelves wouldn't be stocked with hundreds of cases, USB cables, and tiny rubber feet because those would all live at the manufacturer. And if our raw materials lived at the manufacturer, the manufacturer could also managing our inventory and reordering supplies to keep up with production.
+But then thinking about manufacturing in China got me wondering about how that would change TinyPilot's office. Our shelves wouldn't be stocked with hundreds of cases, USB cables, and tiny rubber feet because those would all live at the manufacturer. And if our raw materials lived at the manufacturer, the manufacturer could also track inventory and reorder supplies to keep up with production.
 
 Then, I began to ask myself whether we need a TinyPilot office at all.
 
@@ -145,7 +145,7 @@ Of all the parts of our workflow, order fulfillment is the one that would be eas
 
 {{<img src="ready-to-ship.jpg" caption="We keep pre-assembled Voyager 2 devices in ready-to-ship boxes at our office." alt="Photo of Voyager 2 in cardboard shipping box" maxWidth="500px">}}
 
-The benefit is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week. If we have a 3PL vendor, nobody needs to be at the office in any particular time window as long as we're assembling enough devices to keep orders flowing.
+The benefit is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week. If we have a 3PL vendor, nobody needs to be at the office on any particular day as long as we're assembling enough devices to keep orders flowing.
 
 We'd free up physical space in our office, as boxes and packing material eat up a lot of real estate in our small office.
 
@@ -240,6 +240,8 @@ My worry is that manufacturing and fulfillment are the parts of TinyPilot that r
 The times when I need to be involved in manufacturing and fulfillment are events like part shortages or customers having issues with delivery that are unique enough to be escalated to me. I'd still be involved in those issues if we moved to external vendors, and it would be harder to manage through additional organizational layers.
 
 At the same time, it feels like it just _has_ to be easier to work with external vendors than to keep maintaining our own home-grown solutions.
+
+I'm hoping that we're at a local maximum. The friction of switching processes will increase complexity, but I think we'll end up in a state of lower complexity.
 
 Fortunately, we can do the outsourcing in baby steps. We can try a 3PL vendor for a while, potentially for just a single product. If it doesn't work, we can bring fulfillment back in-house. Similarly, we can move manufacturing overseas gradually, and we'll likely have to for practical reasons anyway. Instead of having the manufacturer completely assemble the complete product, they could start by mounting the fan and rubber feet to the case. And then they begin taking over more of the assembly process until they're assembling finished products.
 
