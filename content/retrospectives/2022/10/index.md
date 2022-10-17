@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 27"
-date: 2022-10-03T10:46:10-04:00
+date: 2022-10-17T00:00:00-04:00
 description: What would a fully remote TinyPilot look like?
 ---
 
@@ -15,7 +15,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm doing a thought exercise about whether TinyPilot could function without a physical office.
+- Thinking about what to outsource forces me to recognize inefficiencies in our current workflows.
+- The [Playwright](https://playwright.dev) end-to-end testing tool has won me over.
 
 ## Goal Grades
 
@@ -23,24 +25,26 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Migrate TinyPilot Pro to the next-generation update system
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Published TinyPilot Pro 2.5.0, which includes
+- **Grade**: A
 
-TODO
+The big change in this release is in how updates work. TinyPilot used to query a git server for updates and always attempted to update to the latest available version. Now we have a custom update web service that TinyPilot [queries for the next version](https://github.com/tiny-pilot/tinypilot/blob/bf3c39302ecf643f288ec0e5da50c49e61a61944/bundler/README.md). The new update system gives us [more control](https://tinypilotkvm.com/blog/whats-new-in-2022-10) over the update process and makes it easier for us to test new versions.
+
+This release took longer than any of us expected. It took five months, whereas our usual release cadence is around two months, but I expect the new version to help us iterate and test more quickly in the future.
 
 ### Send TinyPilot Voyager to two YouTube creators or bloggers for review
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Canceled this goal in favor of hiring again.
+- **Grade**: N/A
 
-TODO
+I ended up letting go the support engineer I [hired in February](/retrospectives/2022/03/), so I instead focused on hiring his replacement. This was successful, and I hired a new engineer at the beginning of October.
 
 ### Explore new case manufacturing options
 
-- **Result**: A
-- **Grade**: XX
+- **Result**: Ordered a prototype metal case.
+- **Grade**: A
 
-This is kind of a squishy goal.
+This is a vague goal, as I'm still exploring options at this point. In the past, I'd explored injection molded cases, which have a low per-unit cost but require an expensive up-front price. I'm now exploring metal cases, which don't require as much up front cost and scale up efficiently.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -98,6 +102,10 @@ Today, we use the TinyPilot office for six main functions:
 Can TinyPilot still perform these functions without its own office? Let's find out!
 
 ## Storing inventory and assembling devices
+
+If we move manufacturing to China, then we also move inventory to China.
+
+If it worked well, outsourced manufacturing and
 
 It means we have to do less management of inventory. My understanding is that I can delegate that to the manufacturer and they take responsibility for
 
@@ -177,7 +185,7 @@ A few times in the last few months, a member of TinyPilot's local staff has been
 
 If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence. We wouldn't have to scramble to keep orders shipping, as we're out of that critical path.
 
-### Our local staff's jobs would change
+### Roles change for local staff
 
 One challenge of outsourcing is the impact it has on our existing local staff's jobs. If we were to get rid of the TinyPilot office and outsource manufacturing and fulfillment, that eliminates about 75% of work our local team currently does.
 
@@ -219,19 +227,33 @@ We also forfeit our ability to satisfy special requests. This is less of a sacri
 
 ### We increase our error rate
 
-We would almost certainly increase our error rate.
+Outsourcing would almost certainly increase our error rate. Our current error rate is about as near to zero as you can get. There have only been two or three instances in the last year where a customer tells us that we shipped them the wrong item or that it arrives with manufacturing errors.
+
+I imagine that even experienced vendors for manufacturing and fulfillment can match the error rate we've achieved in-house. Still, I think our current error rate is much lower than it needs to be to keep customers happy. We can afford an error rate of something like 0.3% without significantly impacting customer experience.
+
+## Does outsourcing increase or decrease complexity?
+
+My main goal in outsourcing is to reduce complexity. I'm still trying to [reduce my management time to 20 hours per week](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week).
+
+My worry is that manufacturing and fulfillment are the parts of TinyPilot that require the least amount of management. It took a lot of work up front to build repeatable workflows for everything, but it's been pretty much smooth sailing since then.
+
+The times when I need to be involved in manufacturing and fulfillment are events like part shortages or customers having issues with delivery that are unique enough to be escalated to me. I'd still be involved in those issues if we moved to external vendors, and it would be harder to manage through additional organizational layers.
+
+At the same time, it feels like it just _has_ to be easier to work with external vendors than to keep maintaining our own home-grown solutions.
+
+Fortunately, we can do the outsourcing in baby steps. We can try a 3PL vendor for a while, potentially for just a single product. If it doesn't work, we can bring fulfillment back in-house. Similarly, we can move manufacturing overseas gradually, and we'll likely have to for practical reasons anyway. Instead of having the manufacturer completely assemble the complete product, they could start by mounting the fan and rubber feet to the case. And then they begin taking over more of the assembly process until they're assembling finished products.
 
 ## Side projects
 
-### Hello, Playwright - goodbye, Cypress
+### Hello, Playwright; goodbye, Cypress
 
 I've been [a fan of the Cypress end-to-end testing tool](https://mtlynch.io/painless-web-app-testing/) ever since I saw Gleb Bahmutov demo it at [a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ). I've been hearing more chatter over the years about [Playwright](https://playwright.dev/), Microsoft's competitor to Cypress.
 
-I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06), but I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seemed to agreem that Playwright had surpassed Cypress.
+I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06). I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seeme to agreem that Playwright had surpassed Cypress, so I gave Playwright another try.
 
-I gave Playwright another try, and I now must admit I agree with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
+I now must admit that I agree with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
 
-I'm working on a longer post about the process of porting from Cypress to Playwright, but the summary is that I'd now recommend Playwright over Cypress for end-to-end testing web apps.
+I'm working on a longer post about the process of porting from Cypress to Playwright, but the short version is that I'd now recommend Playwright over Cypress for end-to-end testing web apps.
 
 ## Wrap up
 
@@ -250,4 +272,4 @@ I'm working on a longer post about the process of porting from Cypress to Playwr
 - Ramp up new support engineers.
   - I'm aiming for the first one to be able to answer 80% of questions unassisted and the second 50%.
 - Start production on a second metal case prototype.
-- Reach out to three 3PL vendors to talk about the process of transitioning our fulfillment to them.
+- Reach out to three 3PL vendors to talk about the process of transitioning our fulfillment.
