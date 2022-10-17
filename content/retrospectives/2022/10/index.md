@@ -103,19 +103,19 @@ Can TinyPilot still perform these functions without its own office? Let's find o
 
 ## Storing inventory and assembling devices
 
-If we move manufacturing to China, then we also move inventory to China.
+If we move manufacturing to China, then inventory management also effectively moves to China.
 
-If it works well, outsourcing inventory and manufacturing would simplify a lot of TinyPilot's workflows. The problem is that it also increases the penalty significantly when things go awry.
+If it works well, outsourcing inventory and manufacturing would simplify a lot of TinyPilot's workflows. If there are problems, they're significantly worse when the manufacturer is thousands of miles away.
 
-If an overseas manufacturer takes over manufacturing devices, a lot of our work suddenly disappears. Most of the storage space in our office suddenly becomes free because we only need to store finished products. Our inventory tracking becomes much simpler because we're only tracking finished products, not raw materials or partially-assembled components. That means we can finally cancel my subscription to our inventory tracking tool, the most frustrating and low-quality piece of software in our stack.
+If an overseas manufacturer takes over manufacturing devices, a lot of our work in the TinyPilot office suddenly disappears. Most of the storage space in our office would become free because we only need to store finished products. Our inventory tracking becomes much simpler because we're only tracking finished products, not raw materials or partially-assembled components. We could finally cancel our subscription to our inventory tracking tool, the most frustrating and low-quality piece of software in our stack.
 
-There will be fewer complexities with importing materials. Importing shipments from overseas is a bizarrely messy process. Even though
+Importing goods should take less time. Most of our raw materials come from China, so if we receive them all at once as finished products, that's much easier to manage than handling them piecemeal when they come as raw materials.
 
-It means we have to do less management of inventory. My understanding is that I can delegate that to the manufacturer and they take responsibility for
+I often get trapped in the critical path of imports because DHL prefers to call the number on the package instead of emailing our support mailbox. We don't have an office phone number, so they end up just calling my cell phone. If we get down to a couple of deliveries per month, it should be few enough that TinyPilot's staff can proactively track them and pay import duties before they try to call us. And if we combine outsourced manufacturing with a 3PL vendor, we can be out of loop entirely because the manufacturer can ship directly to a third-party fulfillment center.
 
-They can lose parts, and I can't really do anything about it. I can hire third-party auditors.
+The downside is that it requires us to place a lot of trust in our manufacturer. With the chip shortage, we have to stockpile electronic components for months or years at a time. If our manufacturer loses a year's supply of one component, that places us in a terrible position. We can apparently request periodic stock counts and send in third-party auditors, but I'm not sure what recourse I have if the manufacturer just says, "Whoops, we lost $20k of your inventory."
 
-Long delay between finding out about issues.
+The product goes through many small adjustments as we upgrade components or discover issues in the design. With in-house manufacturing, we discover quickly when pieces don't fit together quite right or when there's stress on a component that shouldn't receive force. With an overseas manufacturer, there's a slower feedback cycle. By the time we discover an issue, the manufacturer might have already produced several hundred with the same flaw.
 
 ## Flashing microSDs
 
@@ -131,7 +131,7 @@ We could potentially keep flashing microSDs ourselves and send them to the manuf
 
 After we build devices, we currently test them by hand to make sure that all the functionality works.
 
-Our current test setup is slow, complicated, and would be difficult to hand over to a manufacturer. It requires the tester to plug the newly built TinyPilot into a target computer, then control the TinyPilot from the web browser of a second computer. The tester then has to wait for the TinyPilot to boot up, then verify that it's capturing the target computer's display and accurately forwarding keyboard and mouse input.
+Our current test setup is slow, complicated, and would be difficult to hand over to a manufacturer. It requires the tester to plug the newly built TinyPilot into a target computer, then use the web browser from a second computer to visit the TinyPilot web interface. The tester then has to wait for the TinyPilot to boot up, then verify that it's capturing the target computer's display and accurately forwarding keyboard and mouse input.
 
 {{<img src="current-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections." hasBorder="true">}}
 
@@ -249,7 +249,7 @@ The times when I need to be involved in manufacturing and fulfillment are events
 
 At the same time, it feels like it just _has_ to be easier to work with external vendors than to keep maintaining our own home-grown solutions for manufacturing and fulfillment. Even though our office runs smoothly, there's significant mental overhead in just maintaining an office and all the processes that go with it.
 
-I'm hoping that we're currently at a local maximum. The friction of switching processes will increase complexity, but I think we'll end up in a state of lower complexity.
+I'm hoping that we're currently at a local minimum in terms of complexity. The friction of switching processes will increase complexity, but I think outsourcing will ultimately bring us a state of lower complexity.
 
 ## Side projects
 
