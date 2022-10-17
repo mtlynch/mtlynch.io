@@ -251,6 +251,8 @@ At the same time, it feels like it just _has_ to be easier to work with external
 
 I'm hoping that we're currently at a local minimum in terms of complexity. The friction of switching processes will increase complexity, but I think outsourcing will ultimately bring us a state of lower complexity.
 
+{{<img src="outsourced-complexity.png" alt="Graph showing complexity going down as we smooth out our processes, then increasing drastically as we outsource, then reducing to below our current state once outsourcing has smoothed out." hasBorder="true" maxWidth="500px">}}
+
 ## Side projects
 
 ### Hello, Playwright; goodbye, Cypress
