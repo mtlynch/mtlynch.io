@@ -105,7 +105,11 @@ Can TinyPilot still perform these functions without its own office? Let's find o
 
 If we move manufacturing to China, then we also move inventory to China.
 
-If it worked well, outsourced manufacturing and
+If it works well, outsourcing inventory and manufacturing would simplify a lot of TinyPilot's workflows. The problem is that it also increases the penalty significantly when things go awry.
+
+If an overseas manufacturer takes over manufacturing devices, a lot of our work suddenly disappears. Most of the storage space in our office suddenly becomes free because we only need to store finished products. Our inventory tracking becomes much simpler because we're only tracking finished products, not raw materials or partially-assembled components. That means we can finally cancel my subscription to our inventory tracking tool, the most frustrating and low-quality piece of software in our stack.
+
+There will be fewer complexities with importing materials. Importing shipments from overseas is a bizarrely messy process. Even though
 
 It means we have to do less management of inventory. My understanding is that I can delegate that to the manufacturer and they take responsibility for
 
@@ -125,27 +129,33 @@ We could potentially keep flashing microSDs ourselves and send them to the manuf
 
 ## Testing assembled devices
 
-After we build devices, we currently test them by hand to make sure that all the functionality works. Our test setup is pretty slow and complicated. It requires the tester to plug the newly built TinyPilot into a target computer, then control the TinyPilot from the web browser of a second computer. The tester then has to wait for the TinyPilot to boot up, then verify that it's capturing the target computer's display and accurately forwarding keyboard and mouse input.
+After we build devices, we currently test them by hand to make sure that all the functionality works.
+
+Our current test setup is slow, complicated, and would be difficult to hand over to a manufacturer. It requires the tester to plug the newly built TinyPilot into a target computer, then control the TinyPilot from the web browser of a second computer. The tester then has to wait for the TinyPilot to boot up, then verify that it's capturing the target computer's display and accurately forwarding keyboard and mouse input.
 
 {{<img src="current-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections." hasBorder="true">}}
 
 It's been on our list to automate this process, but automating it requires hardware engineering resources, and that's currently our scarcest resource.
 
-Writing this out, I'm realizing we could solve this with commodity hardware. We should be able to make a TinyPilot testing machine with a Raspberry Pi.
+Writing this out, I'm realizing we could solve this with commodity hardware and only software engineering resources. We should be able to make a TinyPilot testing machine with a Raspberry Pi.
 
-A Raspberry Pi has HDMI output and USB input. Test runner can make sure the TinyPilot is capturing video from the test Raspberry Pi and verify that when it tells the TinyPilot to send a keystroke, the Pi receives the same keystroke through its USB input from the TinyPilot. This test would give us confidence that everything is connected and working correctly in the newly-built Voyager 2.
+A Raspberry Pi has HDMI output and USB input. We can program a Raspberry Pi to act as a test runner, making sure the TinyPilot is capturing video from the Pi's HDMI output. The Pi could verify that when it tells the TinyPilot to send a keystroke, the Pi receives the same keystroke through its USB input from the TinyPilot. This test would give us confidence that everything is connected and working correctly in the newly-built Voyager 2.
 
 {{<img src="proposed-test-setup.png" maxWidth="600px" alt="Hand-drawn sketch of a potential simplified test setup" caption="We could likely automate our Voyager 2 QA process by connecting it to a Raspberry Pi with some custom scripts." hasBorder="true">}}
+
+At that point, we'd just need an external indicator on the test device that declares whether the TinyPilot Voyager 2 passed verification. That should be a simple enough test setup that we could hand the Pi and network switch to the manufacturer and teach them how to do testing on their end.
 
 This is a good example of a task where thinking about how to outsource it creates benefits even if we end up not outsourcing it.
 
 ## Packing and shipping customer orders
 
-Of all the parts of our workflow, order fulfillment is the one that would be easiest to outsource at this point. We always have a queue of ready-to-ship boxes, so we could hand those to a 3PL vendor instead of keeping them at our office.
+Of all the parts of our workflow, order fulfillment is the one that would be easiest to outsource at this point.
+
+We always have a queue of ready-to-ship boxes, so we could hand those to a 3PL vendor instead of keeping them at our office.
 
 {{<img src="ready-to-ship.jpg" caption="We keep pre-assembled Voyager 2 devices in ready-to-ship boxes at our office." alt="Photo of Voyager 2 in cardboard shipping box" maxWidth="500px">}}
 
-The benefit is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week. If we have a 3PL vendor, nobody needs to be at the office on any particular day as long as we're assembling enough devices to keep orders flowing.
+The benefit of outsourcing fulfillment is that our already flexible hours become more flexible. Currently, we staff the TinyPilot office six days per week for a few hours per day. If we have a 3PL vendor, nobody needs to be at the office on any particular day as long as we're assembling enough devices to keep orders flowing.
 
 We'd free up physical space in our office, as boxes and packing material eat up a lot of real estate in our small office.
 
@@ -181,9 +191,11 @@ Without fulfillment or manufacturing, the only time-sensitive responsibility we 
 
 ### We become more robust to employee absence
 
-A few times in the last few months, a member of TinyPilot's local staff has been out of work for several days at a time. Some were planned vacations; others were due to illness. TinyPilot has enough redundancy that we were able to keep going without affecting customers, but it did [strain other parts of our systems](/retrospectives/2022/09/#build-redundancy-into-customer-support).
+A few times in the last few months, members of TinyPilot's local staff has been out of work for several days at a time. Some were planned vacations; others were due to illness.
 
-If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence. We wouldn't have to scramble to keep orders shipping, as we're out of that critical path.
+TinyPilot has enough redundancy that we were able to keep going without affecting customers, but it did [strain other parts of our systems](/retrospectives/2022/09/#build-redundancy-into-customer-support).
+
+If we outsourced manufacturing and fulfillment, it will become far easier for TinyPilot to handle employee absence. We wouldn't have to scramble to keep orders shipping, as we would no longer be in the critical path for fulfillment.
 
 ### Roles change for local staff
 
@@ -191,59 +203,53 @@ One challenge of outsourcing is the impact it has on our existing local staff's 
 
 The local team does great work, and I want to make sure they still have roles within the company if we get rid of our office.
 
-They'll continue to have customer service work
+The local team will continue to have customer service work. It's likely that outsourcing will allow us to scale up sales, so more customers will mean more demand for customer service.
 
-Proactive outreach to customers.
-
-Outreach to reviewers
+The local staff can also take on more outreach work. We've had positive results from proactively reaching out to large customers to ask them about their experience with out product. We don't do it much because of time constraints, but if we freed up time, we could invest more in that area. Similarly, local staff could work with more reviewers and YouTube creators, which would help with marketing.
 
 ### We reduce red tape
 
-Part-time employees become contractors: I know this one sounds like, "I can't wait to cut pay for my employees!" but my goal isn't to reduce compensation as much as reduce stress and paperwork.
+Right now, TinyPilot's local staff are the only people in the company legally classified as employees. Everyone else is an independent contractor. Because local staff members work on-premises, US employment law requires them to be employees and not contractors.
 
-On an almost monthly basis, some Massachusetts government office sends me an inscrutable letter telling me something about withholdings or compliance requirements, but it's never clear what action is required on my part, if any.
+If we got rid of the TinyPilot office, employees could become contractors. I know this one sounds like, "I can't wait to cut benefits!" but I think we could do the transition in a way that benefits everyone. My goal isn't to reduce compensation as much as reduce stress and paperwork.
 
-There are services that help with compliance and paying the right taxes, but I've never found one that does an especially good job. When I forward the notices to Gusto, my "HR as a service" provider, they just tell me that I have to call the government and figure it out myself. And then when I call the state agency, I get routed around a phone tree to people who don't know anything about the notice I received, so I'm left to just ignore it and hope that's the right thing to do.
+There's a huge difference in complexity between paying employees vs. contractors. On an almost monthly basis, some Massachusetts government office sends me an inscrutable letter telling me something about withholdings or compliance requirements, but it's never clear what action is required on my part, if any.
 
-Contractors require much less paperwork. We can adjust pay so that staff gets equivalent or better compensation relative to what they had as employees.
+There are services that help with compliance and paying the right taxes, but I've never found one that does an especially good job. When I forward government notices to Gusto, my "HR as a service" provider, they just tell me that I have to call the government and figure it out myself. And then when I call the state agency, I get routed around a phone tree to people who don't know anything about the notice I received, so I'm left to just ignore it and hope that's the right thing to do.
+
+Contractors require much less paperwork. We can adjust pay so that staff gets equivalent or better compensation relative to what they had as employees, and it's less red tape for everyone.
 
 ### We reduce costs
 
 Outsourcing will also reduce costs, though this is the least interesting benefit for me.
 
-We no longer have to pay rent ($550/month), Gusto payroll service ($80/month), inventory tracking ($59/month), worker's comp ($30/month), or renter's insurance ($10/month).
+Without an office, we no longer have to pay rent ($550/month), Gusto payroll service ($80/month), inventory tracking ($59/month), worker's comp ($30/month), or renter's insurance ($10/month).
 
 The labor costs theoretically go down by a few dollars per unit because Chinese manufacturers can build devices at a fraction of our labor costs, and 3PL vendors have economies of scale that allow them to fulfill orders at lower costs.
 
 ### We reduce flexibility and agility
 
-Outsourcing everything optimizes our "happy path" but it makes it harder to manage exceptions or fix mistakes.
+Outsourcing everything optimizes our "happy path," but it makes it harder to manage exceptions or fix mistakes.
 
-In the past, we've identified small problems with our process that result in customer confusion or visual blemishes with the product. Because we control most of our own manufacturing and fulfillment pipeline, we've caught and fixed those issues quickly.
-
-With everything outsourced, the feedback loop is slower. We might not identify issues until several customers report it. By that point, we might have hundreds of devices that have passed the problem point in our pipeline and are on the way to customers or warehouses.
-
-We also forfeit our ability to satisfy special requests. This is less of a sacrifice, as we don't really do special requests often now. The most common is that a customer will ask for a customization with their case (e.g., their own logo or a custom modification). We tell them that we can do it, but it will cost 20% more than our retail price, and then they back out of the deal.
+In the past, we've been able to iterate rapidly on the product to reduce visual blemishes and make it easier to use. With everything outsourced, the feedback loop will be slower. We might not identify issues until several customers report it. By that point, we might have hundreds of devices that have passed the problem point in our pipeline and are on the way to customers or warehouses.
 
 ### We increase our error rate
 
-Outsourcing would almost certainly increase our error rate. Our current error rate is about as near to zero as you can get. There have only been two or three instances in the last year where a customer tells us that we shipped them the wrong item or that it arrives with manufacturing errors.
+Outsourcing would almost certainly increase our error rate. Our current error rate is about as near to zero as you can get. We've had about 2,500 orders in the past 18 months, and there have only been two or three instances where a customer tells us that we shipped them the wrong item or that it arrives with manufacturing errors.
 
-I imagine that even experienced vendors for manufacturing and fulfillment can match the error rate we've achieved in-house. Still, I think our current error rate is much lower than it needs to be to keep customers happy. We can afford an error rate of something like 0.3% without significantly impacting customer experience.
+I imagine that even experienced vendors for manufacturing and fulfillment can't match the error rate we've achieved in-house. Still, I think our current error rate is much lower than it needs to be to keep customers happy. We can afford an error rate of something like 0.3% without significantly impacting customer experience.
 
 ## Does outsourcing increase or decrease complexity?
 
 My main goal in outsourcing is to reduce complexity. I'm still trying to [reduce my management time to 20 hours per week](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week).
 
-My worry is that manufacturing and fulfillment are the parts of TinyPilot that require the least amount of management. It took a lot of work up front to build repeatable workflows for everything, but it's been pretty much smooth sailing since then.
+My biggest worry is that manufacturing and fulfillment are the parts of TinyPilot that require the least amount of management, so there's no time to gain back from outsourcing. It took a lot of work up front to build repeatable workflows for everything, but it's been pretty much smooth sailing since then.
 
 The times when I need to be involved in manufacturing and fulfillment are events like part shortages or customers having issues with delivery that are unique enough to be escalated to me. I'd still be involved in those issues if we moved to external vendors, and it would be harder to manage through additional organizational layers.
 
-At the same time, it feels like it just _has_ to be easier to work with external vendors than to keep maintaining our own home-grown solutions.
+At the same time, it feels like it just _has_ to be easier to work with external vendors than to keep maintaining our own home-grown solutions for manufacturing and fulfillment. Even though our office runs smoothly, there's significant mental overhead in just maintaining an office and all the processes that go with it.
 
-I'm hoping that we're at a local maximum. The friction of switching processes will increase complexity, but I think we'll end up in a state of lower complexity.
-
-Fortunately, we can do the outsourcing in baby steps. We can try a 3PL vendor for a while, potentially for just a single product. If it doesn't work, we can bring fulfillment back in-house. Similarly, we can move manufacturing overseas gradually, and we'll likely have to for practical reasons anyway. Instead of having the manufacturer completely assemble the complete product, they could start by mounting the fan and rubber feet to the case. And then they begin taking over more of the assembly process until they're assembling finished products.
+I'm hoping that we're currently at a local maximum. The friction of switching processes will increase complexity, but I think we'll end up in a state of lower complexity.
 
 ## Side projects
 
@@ -251,9 +257,9 @@ Fortunately, we can do the outsourcing in baby steps. We can try a 3PL vendor fo
 
 I've been [a fan of the Cypress end-to-end testing tool](https://mtlynch.io/painless-web-app-testing/) ever since I saw Gleb Bahmutov demo it at [a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ). I've been hearing more chatter over the years about [Playwright](https://playwright.dev/), Microsoft's competitor to Cypress.
 
-I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06). I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seeme to agreem that Playwright had surpassed Cypress, so I gave Playwright another try.
+I tried Playwright a year ago and [wasn't that impressed](https://whatgotdone.com/michael/2021-08-06). I was recently reading [a Hacker News thread](https://news.ycombinator.com/item?id=33047136) where everyone seemed to agree that Playwright had surpassed Cypress, so I gave Playwright another try.
 
-I now must admit that I agree with Hacker News. I ended up [rewriting PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
+I now must admit that I agree with Hacker News. As an experiment, I [rewrote all of PicoShare's end-to-end tests in Playwright](https://github.com/mtlynch/picoshare/pull/340). I found Playwright easier to work with than Cypress in almost every dimension.
 
 I'm working on a longer post about the process of porting from Cypress to Playwright, but the short version is that I'd now recommend Playwright over Cypress for end-to-end testing web apps.
 
