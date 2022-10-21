@@ -52,17 +52,15 @@ This is a vague goal, as I'm still exploring options at this point. In the past,
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | August 2022    | September 2022                            | Change                                           |
-| ------------------------ | -------------- | ----------------------------------------- | ------------------------------------------------ |
-| Unique Visitors          | 11,903         | 9,040                                     | <font color="red">-2,863 (-24%)</font>           |
-| Total Pageviews          | 23,214         | 17,608                                    | <font color="red">-5,606 (-24%)</font>           |
-| Sales Revenue            | $76,082.06     | $68,640.50                                | <font color="red">-$7,441.56 (-10%)</font>       |
-| Enterprise Subscriptions | $290.70        | $242.95                                   | <font color="red">-$47.75 (-16%)</font>          |
-| Royalties                | $3,264.23      | $3,440.90                                 | <font color="green">+$176.67 (+5%)</font>        |
-| Total Revenue            | $79,636.99     | $72,324.35                                | <font color="red">-$7,312.64 (-9%)</font>        |
-| **Profit**               | **$21,580.82** | **<font color="red">-$8,764.28</font>**\* | **<font color="red">-$30,345.10 (-inf%)</font>** |
-
-\* This profit figure is just a naive calculation of my change in cash holdings until I do real bookkeeping mid-month.
+| Metric                   | August 2022    | September 2022                          | Change                                           |
+| ------------------------ | -------------- | --------------------------------------- | ------------------------------------------------ |
+| Unique Visitors          | 11,903         | 9,040                                   | <font color="red">-2,863 (-24%)</font>           |
+| Total Pageviews          | 23,214         | 17,608                                  | <font color="red">-5,606 (-24%)</font>           |
+| Sales Revenue            | $76,082.06     | $68,640.50                              | <font color="red">-$7,441.56 (-10%)</font>       |
+| Enterprise Subscriptions | $290.70        | $242.95                                 | <font color="red">-$47.75 (-16%)</font>          |
+| Royalties                | $3,264.23      | $3,440.90                               | <font color="green">+$176.67 (+5%)</font>        |
+| Total Revenue            | $79,636.99     | $72,324.35                              | <font color="red">-$7,312.64 (-9%)</font>        |
+| **Profit**               | **$21,580.82** | **<font color="red">-$5,337.82</font>** | **<font color="red">-$26,918.64 (-inf%)</font>** |
 
 The numbers are all scary red, but I think it was actually a strong month. I'm thrilled to see another month where we exceed $70k in revenue.
 
