@@ -5,15 +5,13 @@ date: 2022-10-15T00:00:00-04:00
 
 Cypress is an open-source tool for performing automated end-to-end tests on web applications. I saw Gleb Bahmutov [demo Cypress at a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ) in New York, and I was blown away.
 
-I had begrudgingly used [Selenium](https://www.selenium.dev/) in the past, and Cypress was a refreshing leap forward. Cypress had found solutions to tons of pain points that made Selenium impractical to use.
+I had begrudgingly used [Selenium](https://www.selenium.dev/) in the past, and Cypress was a refreshing leap forward. Cypress had solved tons of pain points that made Selenium impractical to use.
 
 {{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" maxWidth="600px">}}
 
-I recently tried Playwright, and after experimenting with it for a day, I'm ready to completely switch over from Cypress.
+I recently tried Playwright, Microsoft's answer to Cypress. After experimenting with it for a day, I'm ready to completely switch over from Cypress to Playwright.
 
-Playwright presents a similar leap forward from Cypress that I felt when I switched from Selenium four years ago.
-
-It pains me to say it because I have a soft spot for Cypress' small, scrappy team. I'd much rather depend on a tool whose entire company is built around end-to-end testing. I'm certainly not enthusiastic to add a dependency on a huge megacorp like Microsoft, but Playwright is just so much better that I can't justify sticking with Cypress.
+It pains me to say it because I have a soft spot for Cypress' small, scrappy team. I'm certainly not enthusiastic to add a dependency on a huge megacorp like Microsoft, but Playwright is just so much better that I can't justify sticking with Cypress.
 
 What follows are my notes on switching from Cypress to Playwright while they're still fresh in my head.
 
@@ -27,14 +25,14 @@ I've used Playwright for only one day. To get my hands dirty with Playwright, I 
 
 ## Playwright is significantly faster than Cypress
 
-This is just a single data point and not a rigorous one, but I rewrote my Cypress tests in Playwright, and the same tests run about 30% faster in CI and almost 5 times as fast on my local dev machine.
+This is just a single data point and not a rigorous one, but I rewrote my Cypress tests in Playwright, and the same tests run about 30% faster on CircleCI and almost 5 times as fast on my local dev machine.
 
 | Task                               | Cypress | Playwright | Difference                      |
 | ---------------------------------- | ------- | ---------- | ------------------------------- |
 | Run tests on CircleCI              | 127s    | 84s        | <font color="green">-34%</font> |
 | Run tests from development machine | 40s     | 7s         | <font color="green">-83%</font> |
 
-For local development, it's not a big deal because you download it once and you're done. But when I run it in CI, I have to wait for CircleCI to download and decompress the full almost 1 GB image each time.
+Part of this is that the Playwright Docker container is significantly smaller than Cypress'. For local development, it's not a big deal because you download it once and you're done. But when I run it in CI, I have to wait for CircleCI to download and decompress the full almost 1 GB image each time.
 
 |      | cypress/included:10.9.0 | playwright:v1.26.0-focal-amd64 |
 | ---- | ----------------------- | ------------------------------ |
@@ -42,7 +40,7 @@ For local development, it's not a big deal because you download it once and you'
 
 ## Playwright exposes a consistent set of assertions
 
-Cypress bundles [nine different third-party libraries](https://docs.cypress.io/guides/references/bundled-libraries) into a standard install, which creates a mishmash of inconsistent APIs. There's `should`, `expect`, and `assert`, and you use different assertion keywords depending on the context you're in.
+Cypress bundles [nine different third-party libraries](https://docs.cypress.io/guides/references/bundled-libraries) into a standard install, which creates a mishmash of inconsistent APIs. There's `should`, `expect`, and `assert`, and you use a different keyword depending on the context you're in.
 
 For example, the following two code snippets perform identical assertions:
 
@@ -54,7 +52,7 @@ cy.get("#error-message").should("be.visible");
 cy.get("#error-message").should(($el) => expect($el).to.be.visible);
 ```
 
-With Playwright, there's a single, consistent API. There's just `expect` like `expect(locator).toBeVisible()`.
+With Playwright, there's a single, consistent API. To assert that an element is visible on the screen, you just call `expect(locator).toBeVisible()`.
 
 ## Playwright does not depend on a GUI environment
 
@@ -64,25 +62,15 @@ One of Cypress' most touted features is their desktop GUI app:
 
 The Cypress desktop app lets you "time travel" through your tests, so you can see what the browser window looked like at each point in your test.
 
-But what if you don't develop without a GUI? I do all of my development on headless server VMs. In four years of using Cypress, I've never used the Cypress desktop app. Instead, I run Cypress [within a Docker container](https://mtlynch.io/painless-web-app-testing/).
+But what if you develop without a GUI? I do all of my development on headless server VMs. In four years of using Cypress, I've never used the Cypress desktop app. Instead, I run Cypress [within a Docker container](https://mtlynch.io/painless-web-app-testing/).
 
-What if you want to run your Cypress tests in a CI environment? There's generally not a desktop GUI there either. Cypress' answer is to use their paid CI service, which is the primary way they fun development of their testing tool.
+The same problem pops up when you try to run your Cypress tests in a CI environment. There's generally not a desktop GUI there either. Cypress' answer is to use their paid CI service, which is the primary way they fund the company.
 
-I support companies monetizing their open-source product however they want, but Cypress' CI product has never appealed to me. I want to be able to reproduce my CI environment locally with Docker containers. CircleCI lets me do that, but Cypress' CI service doesn't.
+I support companies monetizing their open-source product however they want, but Cypress' CI product has never appealed to me. I want to be able to reproduce my CI environment locally with Docker containers. Playwright lets me do that, but Cypress' CI service doesn't.
 
-To run Cypress on CircleCI, I had to do a bit of [juggling with Docker Compose.](https://mtlynch.io/painless-web-app-testing/). It's not an egregious amount of overhead, but it's makes the testing stack a little more complicated than I'd like.
+To run Cypress on CircleCI, I had to do a bit of [juggling with Docker Compose](https://mtlynch.io/painless-web-app-testing/). It's not an egregious amount of overhead, but it makes the testing stack a little more complicated than I'd like.
 
 When I tried Playwright, it was such a breath of fresh air to use a tool that's designed to run headless. I don't have to do anything tricky to run Playwright in CI because it just works out of the box in a headless environment.
-
-If you're running tests locally, Playwright gets a little confused if it can't spawn a browser, but you can just access the URL from another system with SSH port forwarding:
-
-```text
-  1 failed
-    [chromium] › auth.spec.ts:3:1 › logs in and logs out ===========================================
-
-  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.
-Failed to open browser on http://localhost:9323#?testId=d748ac400d08b85935ef-c357f3797072e53b109f
-```
 
 Playwright has the same time-travel feature as Cypress, but they implement it in a web UI instead of a desktop GUI, so it's far more portable.
 
@@ -92,19 +80,41 @@ Time traveling is pretty nice! Playwright's snapshots aren't even just static sc
 
 ## Playwright has fewer gotchas
 
-Cypress has always made it easy to get up and running with basic end-to-end tests. I've found that as my apps grow, I frequently run into feature gaps in Cypress.
+Cypress has always made it easy to get up and running with basic end-to-end tests, but I've found that as my apps grow, I frequently run into feature gaps in Cypress that make it hard to test my app's functionality.
 
-For example, I'd add a feature to my app like simple file uploads. Then, I'd go to write an end-to-end test in Cypress, only to find that Cypress doesn't support file uploads, so I need to go find a third-party plugin to test file uploads.
+For example, I'd add a file upload feature and then realize that Cypress can't simulate file uploads, so I need to go find a third-party Cypress plugin. As I was writing this, I discovered that Cypress [added native support for file uploads](https://www.cypress.io/blog/2022/01/19/uploading-files-with-selectfile/) earlier this year, but it's a bit of a headscratcher that [it took them seven years](https://github.com/cypress-io/cypress/issues/170) to support an extremely common scenario.
 
-As I was writing this, I discovered that Cypress [added native support for file uploads](https://www.cypress.io/blog/2022/01/19/uploading-files-with-selectfile/) earlier this year, but it's a bit of a headscratcher that [it took them seven years](https://github.com/cypress-io/cypress/issues/170) to support an extremely common scenario.
-
-Similarly, if you want to test behavior with mouse hovering, a feature present in almost every web UI framework, [Cypress can't do it](https://github.com/cypress-io/cypress/issues/10). That bug has been open for almost eight years.
+Similarly, if you want to simulate mouse hovering, a feature present in almost every web UI framework, [Cypress can't do it](https://github.com/cypress-io/cypress/issues/10). That bug has been open for almost eight years.
 
 ## Playwright requires less domain-specific knowledge
 
-A perfect example is grabbing a URL.
+Back when I discovered Cypress, one of the the things that appealed to me was that it was designed for JavaScript, whereas Selenium was Java-first. For the basics, Cypress' semantics feel natural and familiar to someone who understands JavaScript. But when you get a little bit off the beaten path, Cypress suddenly stops feeling like JavaScript and feels like its own weird framework.
 
-[The bug](https://github.com/cypress-io/cypress/issues/1417) has been open for four years, and Cypress recently stated that they currently have no plans to support it.
+As an example, there's functionality in PicoShare that allows the user to generate URLs that are accessible to guests. To test the functionality, I needed to navigate through PicoShare's sharing URL feature, log out of the user session, and then verify that the browser can still access the URL it generated a few steps earlier.
+
+Here's how I would have to do [the same thing in Cypress](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Closures):
+
+```javascript
+// Save the route to the guest link URL so that we can return to it later.
+cy.get('.table td[test-data-id="guest-link-label"] a')
+  .invoke("attr", "href")
+  .then(($href) => {
+    // Log out.
+    cy.get("#navbar-log-out").click();
+    cy.location("pathname").should("eq", "/");
+
+    // Make sure we can still access the guest link after logging out.
+    cy.visit($href);
+
+    // Continue with the test
+  });
+```
+
+You see `then`, so you might assume that `invoke` returned a `Promise`. If you try to call `const url = await cy.get('foo).invoke(...);`, it returns `undefined` because Cypress actually returned something [only pretending to be a `Promise`](https://github.com/cypress-io/cypress/issues/1417#issuecomment-370860080).
+
+This doesn't seem like a big deal, but if you ever need to refer to a value in your app dynamically, Cypress forces you into a new nested closure level for every value you need. [The bug](https://github.com/cypress-io/cypress/issues/1417) has been open for four years, and Cypress recently stated that they currently [have no plans to support it](https://github.com/cypress-io/cypress/issues/1417#issuecomment-1133112085).
+
+Here's what the same test looks like in Playwright:
 
 ```javascript
 // Find the link to the guest upload URL.
@@ -132,25 +142,7 @@ await page.goto(guestLinkRoute);
 // Continue with the test.
 ```
 
-Here's how I would have to do [the same thing in Cypress](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Closures):
-
-```javascript
-// Save the route to the guest link URL so that we can return to it later.
-cy.get('.table td[test-data-id="guest-link-label"] a')
-  .invoke("attr", "href")
-  .then(($href) => {
-    // Log out.
-    cy.get("#navbar-log-out").click();
-    cy.location("pathname").should("eq", "/");
-
-    // Make sure we can still access the guest link after logging out.
-    cy.visit($href);
-
-    // Continue with the test
-  });
-```
-
-In other words, every time I want to store a value, I have to add a layer of nesting. Being able to just `await` the function and store a normal variable is so much easier.
+In Playwright, when we have a reference to a DOM element, we can call normal APIs on it like `getAttribute`, and we get back simple values we expect.
 
 And when I needed to write a reusable helper method to automate the login sequence, Playwright let me write it in normal JavaScript, whereas Cypress requires it to be a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands) that must adhere to specific naming conventions and has its own API.
 
@@ -159,6 +151,10 @@ And when I needed to write a reusable helper method to automate the login sequen
 How few things they've done. I submitted what I think is a pretty uncontroversial PR a year ago that they still haven't acknowledged, and I suspect they just don't have the resources to review external pull requests.
 
 They have bugs that have been open for years. There are features that should obviously be part of app itself, and people have written plugins for them (sometimes their own developers), but the company doesn't have resources to support these features.
+
+When I [filed a bug](https://github.com/microsoft/playwright/issues/18108) with Playwright, they triaged and gave me a meaningful response in less than one business day day.
+
+If you look at Playwright's bug list, you'd be hard pressed to find a bug older than two days that doesn't have a response from the Playwright team.
 
 Microsoft certainly has a number of unfair advantages here, so I hate to count this against Cypress, but it's hard to ignore the impact that Microsoft's resources have on Playwright's developer experience.
 
