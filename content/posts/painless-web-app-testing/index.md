@@ -13,11 +13,10 @@ discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=19797185
 lastmod: "2020-04-16T00:00:00-04:00"
 date: "2019-05-01"
+hero_image: cover.jpg
 images:
   - painless-web-app-testing/cover.jpg
 ---
-
-{{<img src="cover.jpg" alt="A reusable template for testing web apps (cover image)" maxWidth="1000px">}}
 
 Okay, I know you're skeptical. Other guides have promised you painless web app tests only to reveal that their solution requires some hyper-specific tech stack or a paid third-party service. I won't do that to you.
 
@@ -28,6 +27,10 @@ That's really the only requirement! You can test a Ruby app, a React app, an Ent
 This tutorial uses free, open-source tools, and you can run them without registering an account anywhere. When it comes time to run your tests in a continuous integration environment like Circle or Travis, you don't need to do anything special &mdash; you'll run your tests with the same one-line command you use on your development machine.
 
 ## Cypress, the star of the show
+
+{{<notice type="info">}}
+**Update (2022-10-25)**: I no longer recommend Cypress for end-to-end testing web applications. For new projects, I recommend [using Playwright instead](/notes/cypress-vs-playwright/#what-i-miss-about-cypress).
+{{</notice>}}
 
 The tool that makes this testing possible is [Cypress](https://cypress.io/), a recent entrant to the field of browser automation. It's an [open-source](https://github.com/cypress-io/cypress) end-to-end testing framework with a [full-time team](https://www.cypress.io/about/#our-team) actively developing it. Their business model is similar to [Docker's](https://www.docker.com/) in that both companies publish free-open source tools and fund development by selling managed services for those tools.
 
