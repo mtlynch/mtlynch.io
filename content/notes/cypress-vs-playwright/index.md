@@ -1,6 +1,6 @@
 ---
 title: "On Migrating from Cypress to Playwright"
-date: 2022-10-15T00:00:00-04:00
+date: 2022-10-25T00:00:00-04:00
 ---
 
 [Cypress](https://cypress.io) is an open-source tool for testing web applications end-to-end. I first saw Gleb Bahmutov [demo Cypress at a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ) in New York, and I was blown away.
