@@ -147,7 +147,7 @@ cy.get('.table td[test-data-id="guest-link-label"] a')
 
 You see `then`, so you might assume that `invoke` returned a `Promise`. But if you try to `await` that promise, it returns `undefined` because Cypress actually returned something [only pretending to be a `Promise`](https://github.com/cypress-io/cypress/issues/1417#issuecomment-370860080).
 
-This may not seem like a big deal, but if you ever need to refer to a value in your app dynamically, Cypress forces you into [a new nested closure level](<](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Closures)>) for every value you need. There's a widely supported [feature request](https://github.com/cypress-io/cypress/issues/1417) to support `await`, but there's been no progress in four years, and Cypress recently stated that they currently [have no plans to implement it](https://github.com/cypress-io/cypress/issues/1417#issuecomment-1133112085).
+This may not seem like a big deal, but if you ever need to refer to a value in your app dynamically, Cypress forces you into [a new nested closure level](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Closures) for every value you need. There's a widely supported [feature request](https://github.com/cypress-io/cypress/issues/1417) to support `await`, but there's been no progress in four years, and Cypress recently stated that they currently [have no plans to implement it](https://github.com/cypress-io/cypress/issues/1417#issuecomment-1133112085).
 
 Here's what the same test looks like in Playwright:
 
