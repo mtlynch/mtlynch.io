@@ -401,10 +401,8 @@ There must be some good reason for this, but I've never understood it. When I [c
 
 # Summary
 
-Even though I'm only a few hours into using Playwright, I found it to be a substantially better experience than Cypress. Between the better APIs, simpler testing setup, and speed, I'm likely 50-100% more productive in Playwright than I was in Cypress.
+Even though I'm only a few hours into using Playwright, I found it to be a substantially better experience than Cypress. Between the clearer APIs, simpler testing setup, and speed, I'm likely 50-100% more productive in Playwright than I was in Cypress.
 
-I'll be writing all of my new end-to-end tests in Playwright going forward. I'll likely even port some of my old Cypress tests to Playwright for apps [where my tests have crept above the five-minute mark](https://github.com/mtlynch/whatgotdone).
+Going forward, I'll be testing all of my new apps with Playwright. I'll likely even port some of my old Cypress tests to Playwright for apps [where my tests have crept above the five-minute mark](https://github.com/mtlynch/whatgotdone).
 
-If you're a Cypress user, I strongly suggest giving Playwright a look. And if you
-
-In Playwright, more things seem to work the way I expect. I don't have to find complicated workarounds for regular tasks, and Playwright is easier to get up and running.
+If you're a Cypress user, I strongly suggest giving Playwright a look. To me, the jump from Cypress to Playwright is as substantial as the jump was from Selenium to Cypress.
