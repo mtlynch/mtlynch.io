@@ -33,7 +33,7 @@ What follows are my notes on switching from Cypress to Playwright while they're 
   1. [Parallel tests are free in Playwright](#parallel-tests-are-free-in-playwright)
 - [What I miss about Cypress](#what-i-miss-about-cypress)
   1. [Cypress' syntax is more consistently fluent](#cypress-syntax-is-more-consistently-fluent)
-  1. [Cypress has a small, indepdentent team](#cypress-has-a-small-indepdentent-team)
+  1. [Cypress has a small, independent team](#cypress-has-a-small-independent-team)
   1. [Cypress test artifacts work in CI](#cypress-test-artifacts-work-in-ci)
   1. [Cypress' Docker image actually contains the software](#cypress-docker-image-actually-contains-the-software)
 - [Summary](#summary)
@@ -93,7 +93,7 @@ The Cypress desktop app lets you "time travel" through your tests, so you can se
 
 But what if you develop without a GUI? I do all of my development [on headless server VMs](/building-a-vm-homelab/). In four years of Cypress, I've never used their desktop app. Instead, I run Cypress [within a Docker container](https://mtlynch.io/painless-web-app-testing/), which is sometimes an obstacle for a tool that expects you to work in their desktop GUI.
 
-The GUI problem crops up again when you try to run your Cypress tests in a CI environment. There's generally not a desktop GUI there either. Cypress' answer is to use their paid CI service, which is the primary way they fund the company.
+The GUI problem crops up again when you try to run your Cypress tests in a CI environment. There's generally not a desktop GUI there, either. Cypress' answer is to use their paid CI service, which is the primary way they fund the company.
 
 I support companies monetizing their open-source product however they want, but Cypress' CI product has never appealed to me. I want to be able to reproduce my CI environment locally with Docker containers. Playwright lets me do that, but Cypress' CI service doesn't.
 
@@ -127,7 +127,7 @@ For basic testing, Cypress' semantics feel natural and familiar to someone who u
 
 As an example, there's functionality in my app PicoShare to generate URLs for files that you want to share with unauthenticated users. To test the functionality, I needed to navigate through PicoShare's sharing feature, log out of the user session, and then verify that the browser can still access the URL it generated a few steps earlier.
 
-Here's how I originally implemeted that test in Cypress:
+Here's how I originally implemented that test in Cypress:
 
 ```javascript
 // Save the route to the guest link URL so that we can return to it later.
@@ -327,7 +327,7 @@ In contrast, Playwright has just [603 open bugs](https://github.com/microsoft/pl
 
 ### Playwright integrates better with VS Code
 
-Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realize I'd been missing from Cypress until I saw it in Playwright:
+Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realized I'd been missing from Cypress until I saw it in Playwright:
 
 {{<img src="playwright-auto-complete.png" maxWidth="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete.">}}
 
@@ -335,7 +335,7 @@ In Cypress, there are a small number of functions, and you exercise different fu
 
 ### Parallel tests are free in Playwright
 
-In theory, you can run parallel tests for free in Cypress, but they deliberately make it inconvient. I can't blame them, as parallel tests are one of the flagship features in Cypress' paid SaaS tool, so they lose money by making the free version more useful.
+In theory, you can run parallel tests for free in Cypress, but they deliberately make it inconvenient. I can't blame them, as parallel tests are one of the flagship features in Cypress' paid SaaS tool, so they lose money by making the free version more useful.
 
 Microsoft has vastly deeper pockets than Cypress, so they can afford to give away all of Playwright's features for free. As such, Playwright supports parallel tests out of the box.
 
@@ -345,7 +345,7 @@ Microsoft has vastly deeper pockets than Cypress, so they can afford to give awa
 
 Both Cypress and Playwright offer [fluent-style APIs](https://en.wikipedia.org/wiki/Fluent_interface), where you chain together a series of actions into a single statement.
 
-Cypress more strictly adheres to the fluent style, allowing the developer to read testing logic left-to-right.
+Cypress more strictly adheres to the fluent style, allowing the developer to read testing logic left to right.
 
 ```javascript
 cy.get(".navbar-item [data-test-id='log-in']").should("be.visible");
@@ -371,7 +371,7 @@ await page
   .toBeVisible();
 ```
 
-### Cypress has a small, indepdentent team
+### Cypress has a small, independent team
 
 I have a personal appreciation for Cypress as an open-source company, and in particular, Gleb Bahmutov, their VP of Engineering. Gleb publishes high-quality [blog posts](https://glebbahmutov.com/blog/), and he's an excellent conference speaker.
 
@@ -379,7 +379,7 @@ When I wrote [a blog post about Cypress](https://mtlynch.io/painless-web-app-tes
 
 Microsoft, on the other hand, has historically has been hostile to open-source. They're in a period of friendliness now, but if the winds change, and they realize they can make more money by crushing open-source, they probably will.
 
-If this were a movie, Cypress would be the scrappy underdog you can't help but root for, and Microsoft would be the reformed villain who who's probably going to betray the hero in the third act.
+If this were a movie, Cypress would be the scrappy underdog you can't help but root for, and Microsoft would be the reformed villain who's probably going to betray the hero in the third act.
 
 ### Cypress test artifacts work in CI
 
@@ -393,7 +393,7 @@ Unfortunately, Playwright's report viewer [doesn't work on CircleCI](https://git
 
 ### Cypress' Docker image actually contains the software
 
-In a pattern I've only ever seen in end-to-end testing tools, the official Docker images for Cypress and Playwright don't actually contain the tools themselves. That is, the Cypress Docker image does not contain Cypress and the Playwright Docker image doesn't contain Playwright.
+In a pattern I've only ever seen in end-to-end testing tools, the official Docker images for Cypress and Playwright don't actually contain the tools themselves. That is, the Cypress Docker image does not contain Cypress, and the Playwright Docker image doesn't contain Playwright.
 
 Instead, the Docker images contain the _dependencies_ you need to install Playwright or Docker respectively. So when you're running the Playwright Docker image, you still have to install Playwright as part of your environment setup.
 
@@ -405,4 +405,4 @@ Even though I'm only a few hours into using Playwright, I found it to be a subst
 
 Going forward, I'll be testing all of my new apps with Playwright. I'll likely even port some of my old Cypress tests to Playwright for apps [where my tests have crept above the five-minute mark](https://github.com/mtlynch/whatgotdone).
 
-If you're a Cypress user, I strongly suggest giving Playwright a look. To me, the jump from Cypress to Playwright is as substantial as the jump was from Selenium to Cypress.
+If you're a Cypress user, I strongly suggest giving Playwright a look. To me, the jump from Cypress to Playwright is as substantial as from Selenium to Cypress.
