@@ -11,46 +11,46 @@ Before discovering Cypress, I had begrudgingly used [Selenium](https://www.selen
 
 I recently tried [Playwright](https://playwright.dev), Microsoft's answer to Cypress. After experimenting with it for a day, I'm ready to completely switch over from Cypress to Playwright.
 
-It pains me to say it because I have a soft spot for Cypress' small, scrappy team. I'm certainly not enthusiastic to add a dependency on a huge megacorp like Microsoft, but Playwright is just so much better that I can't justify sticking with Cypress.
+It pains me to say it because I have a soft spot for Cypress' small, scrappy team. I'm certainly not enthusiastic about adding a dependency on a huge megacorp like Microsoft, but Playwright is just so much better that I can't justify sticking with Cypress.
 
 What follows are my notes on switching from Cypress to Playwright while they're still fresh in my head.
 
-# Contents
+## Contents
 
 - [My prior experience with Cypress and Playwright](#my-prior-experience-with-cypress-and-playwright)
 - [What I like about Playwright](#what-i-like-about-playwright)
   1. [Playwright is significantly faster than Cypress](#playwright-is-significantly-faster-than-cypress)
-  1. Playwright exposes a consistent set of assertions
-  1. Playwright does not depend on a GUI environment
+  1. [Playwright exposes a consistent set of assertions](#playwright-exposes-a-consistent-set-of-assertions)
+  1. [Playwright does not depend on a GUI environment](#playwright-does-not-depend-on-a-gui-environment)
   1. [Playwright has fewer feature gaps](#playwright-has-fewer-feature-gaps)
-  1. Playwright requires less domain-specific knowledge
-  1. Text comparisons are easier in Playwright
-  1. Playwright makes it easier to navigate the shadow DOM
-  1. Playwright launches your app for you
-  1. Playwright's logging actually works
-  1. Playwright's team doesn't feel resource-constrained
-  1. Playwright integrates better with VS Code
-  1. Parallel tests are free in Playwright
+  1. [Playwright requires less domain-specific knowledge](#playwright-requires-less-domain-specific-knowledge)
+  1. [Text comparisons are easier in Playwright](#text-comparisons-are-easier-in-playwright)
+  1. [Playwright makes it easier to navigate the shadow DOM](#playwright-makes-it-easier-to-navigate-the-shadow-dom)
+  1. [Playwright launches your app for you](#playwright-launches-your-app-for-you)
+  1. [Playwright's logging actually works](#playwrights-logging-actually-works)
+  1. [Playwright's team doesn't feel resource-constrained](#playwrights-team-doesnt-feel-resource-constrained)
+  1. [Playwright integrates better with VS Code](#playwright-integrates-better-with-vs-code)
+  1. [Parallel tests are free in Playwright](#parallel-tests-are-free-in-playwright)
 - [What I miss about Cypress](#what-i-miss-about-cypress)
-  1. Cypress' syntax is more consistently fluent
-  1. Cypress has a small, indepdentent team
-  1. Cypress test artifacts work in CI
-  1. Cypress' Docker image actually contains the software
+  1. [Cypress' syntax is more consistently fluent](#cypress-syntax-is-more-consistently-fluent)
+  1. [Cypress has a small, indepdentent team](#cypress-has-a-small-indepdentent-team)
+  1. [Cypress test artifacts work in CI](#cypress-test-artifacts-work-in-ci)
+  1. [Cypress' Docker image actually contains the software](#cypress-docker-image-actually-contains-the-software)
 - [Summary](#summary)
 
-# My prior experience with Cypress and Playwright
+## My prior experience with Cypress and Playwright
 
 I've written Cypress end-to-end tests for almost every web app I've built in the last four years. I'd rate myself as an intermediate Cypress user. Most of my Cypress needs are straightforward and only exercise the basic APIs. I've never written any custom plugins, but I've used a few third-party ones.
 
-I've used Playwright for only one day. To get my hands dirty, I tried porting one of my app's end-to-end test suite from Cypress to Playwright. I chose [PicoShare](https://github.com/mtlynch/picoshare), my minimalist file sharing tool, which has just 10 end-to-end tests. I was able to [port them all from Cypress to Playwright](https://github.com/mtlynch/picoshare/pull/340) in about five dev hours, including the time it took to learn Playwright's APIs.
+I've used Playwright for only one day. To get my hands dirty, I tried porting a test suite of one of my apps from Cypress to Playwright. I chose [PicoShare](https://github.com/mtlynch/picoshare), my minimalist file-sharing tool, which has just 10 end-to-end tests. I was able to [port them all from Cypress to Playwright](https://github.com/mtlynch/picoshare/pull/340) in about five dev hours, including the time it took to learn Playwright's APIs.
 
 I've never paid money for Cypress or Playwright, so I'm entitled to anything from either tool. Cypress has a paid SaaS component, but I've never purchased it, as it doesn't fit into my workflow. I would have happily sponsored Cypress, as I do other open-source projects I use, but Cypress doesn't offer any sponsorship options.
 
-# What I like about Playwright
+## What I like about Playwright
 
-## Playwright is significantly faster than Cypress
+### Playwright is significantly faster than Cypress
 
-My Plawright test suite runs 34% faster than the equivalent Cypress tests on CircleCI. On my local dev machine, Playwright gives a 5x speedup over Cypress. This is not a rigorous measurement, but it's clear there's a substantial speed difference between the two.
+My Playwright test suite runs 34% faster than the equivalent Cypress tests on CircleCI. On my local dev machine, Playwright gives a 5x speedup over Cypress. This is not a rigorous measurement, but it's clear there's a substantial speed difference between the two.
 
 | Task                               | Cypress | Playwright | Difference                      |
 | ---------------------------------- | ------- | ---------- | ------------------------------- |
@@ -63,7 +63,7 @@ Part of the performance difference on CI is that the Playwright Docker container
 | ---- | ----------------------- | ------------------------------ |
 | Size | 940 MB                  | 651 MB                         |
 
-## Playwright exposes a consistent set of assertions
+### Playwright exposes a consistent set of assertions
 
 Cypress bundles [nine different third-party libraries](https://docs.cypress.io/guides/references/bundled-libraries) into its tool, which creates a mishmash of inconsistent APIs. There's `should`, `expect`, and `assert`, and you use a different keyword depending on the context you're in.
 
@@ -83,7 +83,7 @@ With Playwright, there's a single, consistent API. Asserting that the element wi
 expect(page.locator("#error-message")).toBeVisible();
 ```
 
-## Playwright does not depend on a GUI environment
+### Playwright does not depend on a GUI environment
 
 One of Cypress' most touted features is their desktop GUI app:
 
@@ -107,7 +107,7 @@ Time traveling is pretty nice! Playwright's snapshots aren't even just static sc
 
 {{<video src="playwright-web-ui.mp4" caption="The Playwright web UI lets you time travel to different states of your app's execution and interact with any element on the page.">}}
 
-## Playwright has fewer feature gaps
+### Playwright has fewer feature gaps
 
 Cypress makes it easy to get up and running with basic end-to-end tests, but I've found that as my apps grow, I frequently run into feature gaps in my testing tool.
 
@@ -119,9 +119,9 @@ Similarly, if you want to simulate mouse hovering, a feature present in almost e
 
 I'm sure Playwright has its own feature gaps, but I didn't hit any in my day of porting tests from Cypress to Playwright. All of the workarounds in my test suite for Cypress gaps had native solutions in Playwright.
 
-## Playwright requires less domain-specific knowledge
+### Playwright requires less domain-specific knowledge
 
-Back when I discovered Cypress, one of the the things that appealed to me was that it was designed for JavaScript, whereas Selenium was Java-first.
+Back when I discovered Cypress, one of the things that appealed to me was that it was designed for JavaScript, whereas Selenium was Java-first.
 
 For basic testing, Cypress' semantics feel natural and familiar to someone who understands JavaScript. But when you stray off the beaten path, Cypress suddenly feels less like JavaScript and more like its own domain-specific framework.
 
@@ -171,7 +171,7 @@ await page.goto(guestLinkRoute);
 
 In Playwright, when we have a reference to a DOM element, we can call normal APIs on it like `getAttribute`, and we get back simple values we expect without bothering with the complexity of closures. And the promise-looking values that Playwright returns really are `Promise`s that you can `await`, so the code is tidier.
 
-## Text comparisons are easier in Playwright
+### Text comparisons are easier in Playwright
 
 One aspect of Cypress that's always frustrated me is how difficult it is to assert that an element contains a particular text value.
 
@@ -185,7 +185,7 @@ Here's an example `<p>` element from PicoShare:
 </p>
 ```
 
-### Unexpected text comparison results in Cypress
+#### Unexpected text comparison results in Cypress
 
 Here's the naïve approach to asserting the text value in Cypress:
 
@@ -218,7 +218,7 @@ cy.get("[data-test-id='github-instructions']").should(($el) => {
 });
 ```
 
-### Unsurprising text comparisons in Playwright
+#### Unsurprising text comparisons in Playwright
 
 In Playwright, the naïve assertion yields the correct behavior:
 
@@ -248,7 +248,7 @@ One API is for asserting that an element exists "with the given text" whereas th
 
 Reading more of the documentation, the difference seems to comes down to subtle differences in what you expect about an element's child elements, but the documentation could definitely be improved.
 
-## Playwright makes it easier to navigate the shadow DOM
+### Playwright makes it easier to navigate the shadow DOM
 
 I write a lot of web apps using [HTML custom elements](https://css-tricks.com/creating-a-custom-element-from-scratch/), so my code often contains nested [shadow DOMs](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
@@ -271,7 +271,7 @@ await expect(
 ).toBeVisible();
 ```
 
-## Playwright launches your app for you
+### Playwright launches your app for you
 
 One of Cypress' odd design decisions is that they refuse to launch your app for you. You have to figure out how to launch your app yourself and then [orchestrate your Cypress tests](https://docs.cypress.io/guides/continuous-integration/introduction#Basics) to start after your app is serving.
 
@@ -284,7 +284,7 @@ webServer: {
 },
 ```
 
-## Playwright's logging actually works
+### Playwright's logging actually works
 
 One of the big pain points of Cypress is that you have to learn to live without debug logging to the terminal. Cypress has [no official way to print to stdout or stderr](https://github.com/cypress-io/cypress/issues/448).
 
@@ -317,7 +317,7 @@ When I run the test, I see the log message in the terminal output:
 hello from Playwright
 ```
 
-## Playwright's team doesn't feel resource-constrained
+### Playwright's team doesn't feel resource-constrained
 
 The core Cypress repo has [2,782 open bugs](https://github.com/cypress-io/cypress/issues), some for important feature requests that have been neglected for years. Sometimes people fill the gap with plugins, but it often feels like Cypress core just doesn't have the resources to keep pace with modern web development.
 
@@ -325,7 +325,7 @@ I submitted [an uncontroversial PR](https://github.com/cypress-io/cypress-docker
 
 In contrast, Playwright has just [603 open bugs](https://github.com/microsoft/playwright/issues) despite receiving roughly the same volume of bug reports. When I [filed a bug](https://github.com/microsoft/playwright/issues/18108) with Playwright, they triaged it and gave me a meaningful response in less than one business day.
 
-## Playwright integrates better with VS Code
+### Playwright integrates better with VS Code
 
 Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realize I'd been missing from Cypress until I saw it in Playwright:
 
@@ -333,15 +333,15 @@ Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.
 
 In Cypress, there are a small number of functions, and you exercise different functionality by passing special string values. It's hard for IDEs to help with those semantics, but Playwright's list of explicit TypeScript functions make it easier for the IDE to help you out. There are third-party VS Code plugins for Cypress but nothing the Cypress team officially supports.
 
-## Parallel tests are free in Playwright
+### Parallel tests are free in Playwright
 
 In theory, you can run parallel tests for free in Cypress, but they deliberately make it inconvient. I can't blame them, as parallel tests are one of the flagship features in Cypress' paid SaaS tool, so they lose money by making the free version more useful.
 
 Microsoft has vastly deeper pockets than Cypress, so they can afford to give away all of Playwright's features for free. As such, Playwright supports parallel tests out of the box.
 
-# What I miss about Cypress
+## What I miss about Cypress
 
-## Cypress' syntax is more consistently fluent
+### Cypress' syntax is more consistently fluent
 
 Both Cypress and Playwright offer [fluent-style APIs](https://en.wikipedia.org/wiki/Fluent_interface), where you chain together a series of actions into a single statement.
 
@@ -371,7 +371,7 @@ await page
   .toBeVisible();
 ```
 
-## Cypress has a small, indepdentent team
+### Cypress has a small, indepdentent team
 
 I have a personal appreciation for Cypress as an open-source company, and in particular, Gleb Bahmutov, their VP of Engineering. Gleb publishes high-quality [blog posts](https://glebbahmutov.com/blog/), and he's an excellent conference speaker.
 
@@ -381,7 +381,7 @@ Microsoft, on the other hand, has historically has been hostile to open-source. 
 
 If this were a movie, Cypress would be the scrappy underdog you can't help but root for, and Microsoft would be the reformed villain who who's probably going to betray the hero in the third act.
 
-## Cypress test artifacts work in CI
+### Cypress test artifacts work in CI
 
 When a Cypress test fails, it screenshots your app at the point of failure and saves the image to disk. It's easy to configure your CI platform to keep these images as test artifacts for easy debugging. Similarly, Cypress lets you save videos of each of your tests that you can also publish as CI test artifacts.
 
@@ -391,7 +391,7 @@ Playwright produces a more complicated set of test artifacts. Instead of simple 
 
 Unfortunately, Playwright's report viewer [doesn't work on CircleCI](https://github.com/microsoft/playwright/issues/18108), so I have to download assets and run a Playwright server locally instead of just viewing them from my CircleCI dashboard.
 
-## Cypress' Docker image actually contains the software
+### Cypress' Docker image actually contains the software
 
 In a pattern I've only ever seen in end-to-end testing tools, the official Docker images for Cypress and Playwright don't actually contain the tools themselves. That is, the Cypress Docker image does not contain Cypress and the Playwright Docker image doesn't contain Playwright.
 
@@ -399,7 +399,7 @@ Instead, the Docker images contain the _dependencies_ you need to install Playwr
 
 There must be some good reason for this, but I've never understood it. When I [complained about this to the Cypress team](/painless-web-app-testing/#further-reading), they added a special [cypress/included](https://hub.docker.com/r/cypress/included) image that contains the Cypress tool itself. There doesn't seem to be an equivalent Docker image for Playwright.
 
-# Summary
+## Summary
 
 Even though I'm only a few hours into using Playwright, I found it to be a substantially better experience than Cypress. Between the clearer APIs, simpler testing setup, and speed, I'm likely 50-100% more productive in Playwright than I was in Cypress.
 
