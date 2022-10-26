@@ -29,7 +29,7 @@ Surprisingly, I found this to be untrue. In my experience, a writer's asking rat
 
 If the writer has a profile on a freelancing site or, better yet, their own website, they'll have a bio that explains a little about themselves and the work that they do.
 
-{{<img src="morgan-province-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" caption="[Morgan Province](https://www.morganprovince.com)'s [profile on Upwork](https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/) is simple, clear, and to the point." hasBorder="True" href="https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/">}}
+{{<img src="morgan-province-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" caption="[Morgan Province](https://www.morganprovince.com)'s [profile on Upwork](https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/) is simple, clear, and to the point." has-border="true" href="https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/">}}
 
 The bio tends to be the best glimpse you have into a candidate's writing ability. Articles from their portfolio often go through a layer of editing that the writer can't control. On their bio, the writer has ultimate authority, so it's the purest sample of their writing you can find.
 
@@ -47,7 +47,7 @@ Sites like Upwork publish reviews for freelancers. In my experience, reviews hav
 
 Negative reviews are a stronger signal. It's not a big deal if the candidate has a couple blemishes on an otherwise solid track record. Many clients are just jerks and have unreasonable expectations of freelancers. But if you see consistent patterns in their bad reviews, pay attention.
 
-{{<img src="upwork-reviews.jpg" alt="Screenshot of Morgan Province's Upwork profile" caption="Example reviews on Upwork" hasBorder="True">}}
+{{<img src="upwork-reviews.jpg" alt="Screenshot of Morgan Province's Upwork profile" caption="Example reviews on Upwork" has-border="true">}}
 
 ### Publication credits
 
@@ -84,7 +84,7 @@ Good writers tend to focus exclusively on their craft. People who are "amazing" 
 
 If you were searching for someone to perform brain surgery, you'd probably avoid the doctor who says, "I'm an expert neurosurgeon **and** an accomplished auto mechanic." Apply the same logic when hiring writers.
 
-{{<img src="many-skills-profile.jpg" alt="Screenshot of writer who lists many unrelated skills" caption="Upwork freelancer with a suspiciously high number of non-writing skills" hasBorder="True">}}
+{{<img src="many-skills-profile.jpg" alt="Screenshot of writer who lists many unrelated skills" caption="Upwork freelancer with a suspiciously high number of non-writing skills" has-border="true">}}
 
 ### Resist the temptation to "fix" bad writers
 

@@ -89,7 +89,7 @@ Next is [What Got Done](https://whatgotdone.com), the weekly team status app I l
 
 What Got Done had almost zero sign-ups for a month, but ever since publishing the blog post, there have been three to eight sign-ups per day:
 
-{{<img src="whatgotdone-metrics.jpg" alt="What Got Done signup graph" caption="Sign-ups to What Got Done - June 2019" max-width="800px" hasBorder="True">}}
+{{<img src="whatgotdone-metrics.jpg" alt="What Got Done signup graph" caption="Sign-ups to What Got Done - June 2019" max-width="800px" has-border="true">}}
 
 The downside is that these users are all on the free plan. I've had three inquiries about a Pro plan, but only one of them seems like a strong possibility.
 
@@ -133,15 +133,15 @@ They promised that I wouldn't have to do any work &mdash; just point my DNS reco
 
 As soon as I saw the results, I hated it. I've never considered Is It Keto to be the most beautiful site on the web, but Ezoic's ads made it look like cheap, spammy garbage.
 
-{{<img src="isitketo-ads.png" alt="Before and after screenshots of Is It Keto" caption="Is It Keto - Before and after Ezoic ads" max-width="800px" hasBorder="True">}}
+{{<img src="isitketo-ads.png" alt="Before and after screenshots of Is It Keto" caption="Is It Keto - Before and after Ezoic ads" max-width="800px" has-border="true">}}
 
 The final straw was when Ezoic inserted ads that screwed up my site layout on mobile devices.
 
-{{<img src="ads-too-wide.png" alt="Screenshot of bad ad on Is It Keto" caption="Ezoic ad screws up Is It Keto's layout on mobile devices" max-width="413px" hasBorder="True">}}
+{{<img src="ads-too-wide.png" alt="Screenshot of bad ad on Is It Keto" caption="Ezoic ad screws up Is It Keto's layout on mobile devices" max-width="413px" has-border="true">}}
 
 I reported this to Ezoic, and they claimed that it should never happen. They asked how I observed it, and I told them I used dev tools on Chrome desktop to emulate a Pixel 2 device. Ezoic said it was just a bug in Chrome's mobile emulation but wouldn't happen on real devices. A few days later, I saw that Google Search was downranking me because they detected that my layout was broken on mobile:
 
-{{<img src="ezoic-errors.jpg" alt="Graph of errors in Google Search Console" caption="Google Search Mobile Usability Dashboard - before and after Ezoic ads" max-width="800px" hasBorder="True">}}
+{{<img src="ezoic-errors.jpg" alt="Graph of errors in Google Search Console" caption="Google Search Mobile Usability Dashboard - before and after Ezoic ads" max-width="800px" has-border="true">}}
 
 I immediately turned off Ezoic and have no plans to return.
 

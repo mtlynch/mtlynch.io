@@ -82,12 +82,12 @@ I [posted a thread](https://redd.it/cmslmx) about Is It Keto, and here were my k
 - Is It Keto's page titles should better match common search terms.
   - **Result**: I changed my page titles from the format of "\[Food\] - Is It Keto" to "Is \[Food\] Keto? - Is It Keto"
 
-{{<img src="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" caption="Changing Is It Keto page titles to better match search queries" max-width="800px" hasBorder="True">}}
+{{<img src="page-titles.jpg" alt="Before and after comparison of Is It Keto in Google search results" caption="Changing Is It Keto page titles to better match search queries" max-width="800px" has-border="true">}}
 
 - Is It Keto should have dropdowns navigation menus so that it's easier for users to browse different food categories.
   - **Result**: I added dropdown menus to the navigation bar.
 
-{{<img src="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" caption="Redesigned navbar on Is It Keto" max-width="600px" hasBorder="True">}}
+{{<img src="navbar.jpg" alt="Before and after screenshots of Is It Keto navbar" caption="Redesigned navbar on Is It Keto" max-width="600px" has-border="true">}}
 
 - I should promote Is It Keto on Pinterest.
   - **Result**: I created a [Pinterest page](https://pinterest.com/isitketo/) and added 14 pins, but it's time-consuming to create the graphics, and my referrals from Pinterest remain at nearly zero. I need help from someone who understands Pinterest, but I can't afford a Pinterest consultant at the moment.

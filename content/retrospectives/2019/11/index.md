@@ -89,7 +89,7 @@ I managed to make a couple of sales, but it proved to be far harder than I antic
 
 Before I had any meal plans to sell, I ran a "smoke test." I put up a page that advertised original keto meal plans and put a "Buy Now" button at the bottom of the page:
 
-{{<img src="smoke-test.jpg" alt="Screenshot of Is It Keto smoke test" caption="Meal plan smoke test" max-width="600px" hasBorder="True">}}
+{{<img src="smoke-test.jpg" alt="Screenshot of Is It Keto smoke test" caption="Meal plan smoke test" max-width="600px" has-border="true">}}
 
 It was a very basic page, and it had many obvious weaknesses, but I wanted to put something up quickly to see if readers had any interest in it.
 
@@ -99,11 +99,11 @@ During the smoke test, ~4% of users clicked the button that said "Buy Now $14.99
 
 The meal plan author sent me the first plan on the afternoon of Friday, October 4th. The following Monday, I got the easiest possible Stripe payment flow working and listed the meal plan for sale on my site:
 
-{{<img src="tex-mex-v1.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Putting my first meal plan up for sale" max-width="416px" hasBorder="True">}}
+{{<img src="tex-mex-v1.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Putting my first meal plan up for sale" max-width="416px" has-border="true">}}
 
 Only one customer had signed up for my mailing list, but she purchased a plan within two hours of launch:
 
-{{<img src="first-payment.jpg" alt="Screenshot of Stripe payment receipt" caption="My first Is It Keto meal plan sale" max-width="601px" hasBorder="True">}}
+{{<img src="first-payment.jpg" alt="Screenshot of Stripe payment receipt" caption="My first Is It Keto meal plan sale" max-width="601px" has-border="true">}}
 
 I made my first sale within hours of going live! I felt great. At this rate, I'd be earning hundreds of dollars per week.
 
@@ -115,11 +115,11 @@ Maybe the problem was that too few users realized I was selling meal plans. Ther
 
 To drive more users to the sales page, I created self-ads to replace the ads I'd been running for Google AdSense:
 
-{{<img src="self-ads.jpg" alt="Screenshot of self-ad on Gatorade Zero page" caption="I added self-ads for my meal plans to [other Is It Keto pages](https://isitketo.org/gatorade-zero)" max-width="800px" hasBorder="True">}}
+{{<img src="self-ads.jpg" alt="Screenshot of self-ad on Gatorade Zero page" caption="I added self-ads for my meal plans to [other Is It Keto pages](https://isitketo.org/gatorade-zero)" max-width="800px" has-border="true">}}
 
 I tuned these ads to show 60% of the time at first and increased them to 100% some weeks to maximize visitors. I couldn't tell if it had any because there was so much variance in the traffic:
 
-{{<img src="self-ads-chart.jpg" alt="Chart showing indeterminate effect of self-ads" caption="Self-ads may have brought more visitors to the page, but it's too little data to say for sure" max-width="800px" hasBorder="True">}}
+{{<img src="self-ads-chart.jpg" alt="Chart showing indeterminate effect of self-ads" caption="Self-ads may have brought more visitors to the page, but it's too little data to say for sure" max-width="800px" has-border="true">}}
 
 ### I slashed prices
 
@@ -127,7 +127,7 @@ After a week, still no sales. I initally listed the meal plan for $14.99, which 
 
 I decided to reduce my price drastically, from $14.99 to $4.99. This felt too low, but I'd rather get too many sales for too low a price than zero sales and zero information.
 
-{{<img src="tex-mex-v2.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Slashing the price on my meal plan" max-width="416px" hasBorder="True">}}
+{{<img src="tex-mex-v2.jpg" alt="Screenshot of first Tex-Mex sales page" caption="Slashing the price on my meal plan" max-width="416px" has-border="true">}}
 
 ### I offered discounts for feedback
 
@@ -156,9 +156,9 @@ It seemed like a good time to, ["do things that don't scale."](http://paulgraham
 
 To these users, I sent private messages letting them know I offered meal plans on my site and was available for questions:
 
-{{<img src="reddit-post.jpg" alt="reddit post asking for meal plan advice" caption="reddit user asking where to find keto meal plans" max-width="636px" hasBorder="True">}}
+{{<img src="reddit-post.jpg" alt="reddit post asking for meal plan advice" caption="reddit user asking where to find keto meal plans" max-width="636px" has-border="true">}}
 
-{{<img src="reddit-invitation.jpg" alt="reddit post asking for meal plan advice" caption="My outreach message to a reddit user seeking meal plans" max-width="702px" hasBorder="True">}}
+{{<img src="reddit-invitation.jpg" alt="reddit post asking for meal plan advice" caption="My outreach message to a reddit user seeking meal plans" max-width="702px" has-border="true">}}
 
 I tried this with several users. Some responded to say that it "looked perfect" for them, but then they didn't follow through with a purchase.
 
@@ -175,7 +175,7 @@ I could think of two possibilities:
 
 If it was scenario (1), then rolling back to the sales copy I used in my smoke test should result in real sales. I tried doing exactly that:
 
-{{<img src="smoke-test2.jpg" alt="Screenshot of Is It Keto smoke test" caption="Testing the original smoke test to see if 4% of users will still click Buy Now" max-width="600px" hasBorder="True">}}
+{{<img src="smoke-test2.jpg" alt="Screenshot of Is It Keto smoke test" caption="Testing the original smoke test to see if 4% of users will still click Buy Now" max-width="600px" has-border="true">}}
 
 Less than 24 hours later, I made a second sale! Maybe this sales copy really was much better than my revised version.
 
@@ -187,7 +187,7 @@ According to my logging, 3.7% of users clicked the "Buy now" button when I broug
 
 After concluding that there was nothing magical about my smoke test page, I continued polishing my sales page. My most recent change has been to split up each meal plan into its own page so that I can include more details:
 
-{{<img src="tex-mex-v3.jpg" alt="Screenshot of latest Tex-Mex sales page" caption="Putting each meal plan into its own individual, more detailed page" max-width="800px" hasBorder="True">}}
+{{<img src="tex-mex-v3.jpg" alt="Screenshot of latest Tex-Mex sales page" caption="Putting each meal plan into its own individual, more detailed page" max-width="800px" has-border="true">}}
 
 I made this change on October 31st, but there have still been no new sales after the first two.
 

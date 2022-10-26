@@ -27,11 +27,11 @@ On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software enginee
 
 ## How I made and spent money
 
-{{<img src="bench-2018.jpg" alt="Profit and loss for 2018" caption="Profit and loss chart via [Bench](https://bench.co/)." max-width="793px" hasBorder="True">}}
+{{<img src="bench-2018.jpg" alt="Profit and loss for 2018" caption="Profit and loss chart via [Bench](https://bench.co/)." max-width="793px" has-border="true">}}
 
 One way of looking at the chart is that I lost $21k in a single year. Alternate interpretation: I _grew profits_ by almost $1k each month! If this trend continues, I should be fabulously wealthy quite soon.
 
-{{<img src="2019-projected.jpg" alt="Projected earnings for 2019" caption="Profit and loss through 2019, projected" max-width="793px" hasBorder="True">}}
+{{<img src="2019-projected.jpg" alt="Projected earnings for 2019" caption="Profit and loss through 2019, projected" max-width="793px" has-border="true">}}
 
 Okay, that's a bit of a fanciful interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending.
 
@@ -52,7 +52,7 @@ To address this, I reduced my outsourcing and handled more work myself. This cha
 
 ## Project by project
 
-{{<img src="project-finances-2018.png" alt="Graph of income and expenses on a per-project basis" caption="Income and expenses for each of my projects in 2018" max-width="800px" hasBorder="True">}}
+{{<img src="project-finances-2018.png" alt="Graph of income and expenses on a per-project basis" caption="Income and expenses for each of my projects in 2018" max-width="800px" has-border="true">}}
 
 ### mtlynch.io _(this blog)_
 
@@ -75,7 +75,7 @@ Despite my best efforts, the blog earned more than all of my other projects comb
 
 ### [Is It Keto](https://isitketo.org)
 
-{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto website" max-width="600px" hasBorder="True">}}
+{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto website" max-width="600px" has-border="true">}}
 
 Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). If the food is keto-friendly, the site displays a purchase link and receives commission from any sales.
 
@@ -94,7 +94,7 @@ Revenues are small because I just added monetization at the end of November, but
 
 ### [Zestful](https://zestfuldata.com)
 
-{{<img src="zestful-screenshot.jpg" alt="Screenshot of Zestful website" max-width="800px" hasBorder="True">}}
+{{<img src="zestful-screenshot.jpg" alt="Screenshot of Zestful website" max-width="800px" has-border="true">}}
 
 Zestful was my first attempt at software-as-a-service (SaaS). It allows developers to infer structure from recipe ingredients programmatically. Given an ingredient like `"1.5 cups finely chopped red onions"`, Zestful tells the application that `1.5` is the quantity, `cups` is the unit of measure, `red onions` are the product, and `finely chopped` is a preparation step.
 
@@ -113,7 +113,7 @@ I put the project in maintenance mode in September after several months of [unsu
 
 ### [Space Duck](https://spaceduck.io)
 
-{{<img src="spaceduck-screenshot.jpg" alt="Screenshot of Space Duck website" max-width="600px" hasBorder="True">}}
+{{<img src="spaceduck-screenshot.jpg" alt="Screenshot of Space Duck website" max-width="600px" has-border="true">}}
 
 Space Duck was my exploratory quest to build something on top of Sia, [a decentralized storage technology](/tags/sia).
 
@@ -129,7 +129,7 @@ After running a [series of experiments](https://blog.spaceduck.io/load-test-wrap
 
 ### [KetoHub](https://ketohub.io)
 
-{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub website" max-width="700px" hasBorder="True">}}
+{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub website" max-width="700px" has-border="true">}}
 
 KetoHub is a project I [started last year](/tags/ketohub). It aggregates keto recipes from popular blogs and makes them searchable by ingredient.
 

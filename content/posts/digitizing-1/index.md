@@ -36,7 +36,7 @@ The problem was that there was only one set of DVDs. Everyone in my family lived
 
 In 2012, my sister gave me the DVDs. I ripped them to video files and threw them all up on cloud storage. Problem solved!
 
-{{<img src="gcs-files.jpg" alt="Screenshot of my converted DVD files on Google Cloud Storage" caption="Sharing DVD rips of my family's home videos on Google Cloud Storage" max-width="900px" hasBorder="true">}}
+{{<img src="gcs-files.jpg" alt="Screenshot of my converted DVD files on Google Cloud Storage" caption="Sharing DVD rips of my family's home videos on Google Cloud Storage" max-width="900px" has-border="true">}}
 
 A few weeks later, I asked if anyone had watched the tapes. Nobody had. I hadn't either. In the age of YouTube, it seemed so boring to download a 3-hour mystery file in search of interesting footage.
 
@@ -54,11 +54,11 @@ If you're wondering why this took me eight years and hundreds of hours, I don't 
 
 Here's what the digitization process looks like from start to finish:
 
-{{<img src="digitizing-process.jpg" alt="TODO" max-width="800px" hasBorder="true">}}
+{{<img src="digitizing-process.jpg" alt="TODO" max-width="800px" has-border="true">}}
 
 Or rather, that's what the digitization process looks like in theory. Here's what it looked like in practice:
 
-{{<img src="digitizing-process-reality.jpg" alt="TODO" max-width="800px" hasBorder="true">}}
+{{<img src="digitizing-process-reality.jpg" alt="TODO" max-width="800px" has-border="true">}}
 
 Most of the time I spent was in re-work. I'd complete a stage only to discover a flaw in my technique one or two steps later. For example, I captured video from 20 tapes before realizing that the audio was slightly out of sync. Or I discovered after weeks of editing that I'd been exporting video in a format that doesn't support online streaming.
 
@@ -78,11 +78,11 @@ Spoiler alert: really hard.
 
 The old family VCR was still in my dad's basement, so I asked him to dig it out next time we met for lunch. I bought a [cheap RCA to USB adaptor](https://smile.amazon.com/gp/product/B00M7T8T1E/) from Amazon, and I was off to the races.
 
-{{<img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://smile.amazon.com/gp/product/B00M7T8T1E/), the first of many A/V devices I purchased throughout this process." max-width="400px" hasBorder="true">}}
+{{<img src="totmc-adaptor.jpg" alt="Picture of TOTMC RCA to USB adaptor" caption="The [TOTMC video capture device](https://smile.amazon.com/gp/product/B00M7T8T1E/), the first of many A/V devices I purchased throughout this process." max-width="400px" has-border="true">}}
 
 To process the video from the USB capture device, I used VirtualDub, which was a bit dated in 2012, but not _that_ dated.
 
-{{<img src="virtualdub-capture.jpg" alt="Capturing video in [VirtualDub](http://www.virtualdub.org)" caption="Using VirtualDub to capture raw footage of me reading to my dad at age 4" max-width="650px" hasBorder="true">}}
+{{<img src="virtualdub-capture.jpg" alt="Capturing video in [VirtualDub](http://www.virtualdub.org)" caption="Using VirtualDub to capture raw footage of me reading to my dad at age 4" max-width="650px" has-border="true">}}
 
 ### The pernicious plague of audio skew
 
@@ -92,7 +92,7 @@ Ten minutes later, it was out of sync again. Did I not shift it enough the first
 
 It slowly dawned on me that the audio and video weren't simply offset &mdash; they captured at different rates. They diverged more and more throughout the tape. To keep them in sync, I'd repeatedly have to adjust the audio manually every few minutes of tape.
 
-{{<img src="audio-skew.jpg" alt="Diagram of audio skew with and without correction" max-width="800px" hasBorder="true" caption="If your video setup captures audio and video at different rates, the only solution is to correct the audio by hand every few minutes.">}}
+{{<img src="audio-skew.jpg" alt="Diagram of audio skew with and without correction" max-width="800px" has-border="true" caption="If your video setup captures audio and video at different rates, the only solution is to correct the audio by hand every few minutes.">}}
 
 Do you know how difficult it is to distinguish between a sound that occurs 10 milliseconds too early or 10 milliseconds too late? It's tough! Judge for yourself.
 
@@ -166,7 +166,7 @@ VHS tapes contain a long stream of video clips mixed with dead air. To edit a ta
 
 For my editing, I used [Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html), which costs less than $100 for a lifetime license. Its crucial feature for editing VHS tapes is the zoomable timeline. It allows you to find rough scene boundaries quickly and then zoom in to find the exact video frame where a clip starts or ends.
 
-{{<img src="premiere-elements-timeline.jpg" alt="Screenshot of Adobe Premiere Elements' zoomable edit feature" caption="The invaluable zoomable edit timeline in Adobe Premiere Elements" max-width="1000px" hasBorder="true">}}
+{{<img src="premiere-elements-timeline.jpg" alt="Screenshot of Adobe Premiere Elements' zoomable edit feature" caption="The invaluable zoomable edit timeline in Adobe Premiere Elements" max-width="1000px" has-border="true">}}
 
 The problem with Premiere is that it requires frequent starting and stopping. My process was:
 
@@ -226,7 +226,7 @@ The reason that editing was so tedious and time-consuming was that I had to keep
 
 What's more, spreadsheets dramatically expanded the type of information I captured. Initially, I stuffed metadata into the filename, but that's limiting and inflexible. Having an entire spreadsheet allowed me to catalog so much more about the clip like who's in it, when it was recorded, and any other data I want to present alongside the video when people watch it.
 
-{{<img src="spreadsheet.png" alt="Spreadsheet of home video metadata" caption="Capturing metadata about my home videos in a giant spreadsheet" max-width="750px" hasBorder="true">}}
+{{<img src="spreadsheet.png" alt="Spreadsheet of home video metadata" caption="Capturing metadata about my home videos in a giant spreadsheet" max-width="750px" has-border="true">}}
 
 Later, I was able to use that metadata to add information to the clips like how old we all were and a detailed description of what's going on in the clip.
 

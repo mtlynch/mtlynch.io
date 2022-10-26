@@ -182,7 +182,7 @@ When I built my last VM server, I [used a Fractal Design case](/building-a-vm-ho
 
 I went with the [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027), a compact mini-ITX case. I liked the design because it's closer to a cube than a tower. It has six drive bays, which allows me to start with enough drives and still have room to grow in the future.
 
-{{<img src="fractal-design-304.jpg" alt="Fractal Design Node 304 Black case" max-width="500px" hasBorder="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
+{{<img src="fractal-design-304.jpg" alt="Fractal Design Node 304 Black case" max-width="500px" has-border="true" caption="The [Fractal Design Node 304 Black](https://www.newegg.com/black-fractal-design-node-304-mini-itx-tower/p/N82E16811352027) is a mini-ITX case with space for six disks.">}}
 
 ### Disk (Data)
 
@@ -197,8 +197,8 @@ The last pitfall to avoid is shingled magnetic recording (SMR) technology. ZFS [
 I chose the [Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) and the [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796). I saw positive reviews of both on the TrueNAS forums and reddit. Both models sold for $180-190, which was a good value for the storage space.
 
 {{<gallery caption="[Toshiba N300](https://www.newegg.com/toshiba-n300-hdwg480xzsta-8tb/p/N82E16822149793) (left) and [Seagate IronWolf](https://www.newegg.com/seagate-ironwolf-st8000vn004-8tb/p/N82E16822184796) (right)">}}
-{{<img src="toshiba-n300.jpg" alt="Toshiba N300" max-width="250px" hasBorder="true">}}
-{{<img src="seagate-ironwolf.jpg" alt="Seagate IronWolf" max-width="260px" hasBorder="true">}}
+{{<img src="toshiba-n300.jpg" alt="Toshiba N300" max-width="250px" has-border="true">}}
+{{<img src="seagate-ironwolf.jpg" alt="Seagate IronWolf" max-width="260px" has-border="true">}}
 {{</gallery>}}
 
 ### Disk (OS)
@@ -326,7 +326,7 @@ Longtime readers of this blog may recall that I used the Raspberry Pi to create 
 
 I'm obviously biased, but building this server with the Voyager 2 was a lot of fun! I never had to connect a keyboard or monitor to the server. I could see video output, boot to BIOS, and mount the TrueNAS installer image all from my web browser.
 
-{{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without plugging in a flash drive, keyboard, or monitor." max-width="800px" hasBorder="true">}}
+{{<img src="tinypilot-install-truenas.png" alt="Photo of motherboard with everything connected" caption="TinyPilot allows me to mount the TrueNAS installer ISO without plugging in a flash drive, keyboard, or monitor." max-width="800px" has-border="true">}}
 
 The one gap I ran into was in upgrading the BIOS. TinyPilot can mount disk images like `.img` and `.iso` files, but it doesn't yet know how to share raw files with the target computer. When I needed to load the `.CAP` file for the ASUS BIOS upgrade, I shamefully put them on a USB thumb drive instead of keeping it a pure TinyPilot build. I hope to add support for that scenario soon so that TinyPilot can handle my next BIOS upgrade.
 
@@ -342,11 +342,11 @@ I didn't consider how I'd upgrade my BIOS _without a CPU_.
 
 Luckily, the Ryzen 7 CPU from my [2017 homelab VM server](/building-a-vm-homelab-2017/) was [compatible](https://www.asus.com/us/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) with the ASUS Prime A320. I borrowed the CPU and GPU from that server, and I got my new NAS server to boot!
 
-{{<img src="boot-2203.jpg" alt="Screenshot of ASUS BIOS at version 2203" caption="I was able to use parts from my old [2017 homelab VM server](/building-a-vm-homelab-2017/) to upgrade the BIOS." max-width="800px" hasBorder="true">}}
+{{<img src="boot-2203.jpg" alt="Screenshot of ASUS BIOS at version 2203" caption="I was able to use parts from my old [2017 homelab VM server](/building-a-vm-homelab-2017/) to upgrade the BIOS." max-width="800px" has-border="true">}}
 
 Strangely, even after I got the system to boot with borrowed parts, the motherboard reported that it was running BIOS version 2203, which ASUS claims _is_ compatible with the AMD Athlon 3000G CPU. But I updated to the latest BIOS, which was 5862.
 
-{{<img src="a320i-k-compat.png" alt="Screenshot of ASUS support page saying ASUS Prime A320I-K supports Athlon 3000G at version 2203" caption="The ASUS Prime A320I-K [CPU compatibility page](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) claims it's compatible with the Athlon 3000G starting at BIOS version 2203." hasBorder="true">}}
+{{<img src="a320i-k-compat.png" alt="Screenshot of ASUS support page saying ASUS Prime A320I-K supports Athlon 3000G at version 2203" caption="The ASUS Prime A320I-K [CPU compatibility page](https://www.asus.com/Motherboards-Components/Motherboards/PRIME/PRIME-A320I-K/HelpDesk_CPU/) claims it's compatible with the Athlon 3000G starting at BIOS version 2203." has-border="true">}}
 
 After upgrading to 5862, I _still_ couldn't get a boot. Then, I realized that I was plugging my HDMI cable into the server's DisplayPort output.
 
@@ -359,7 +359,7 @@ Was this whole parts-borrowing rigamarole even necessary? There are two possibil
 
 Normally, I'd accept the blame, but the ASUS BIOS was so flaky that the problem might have been on the ASUS side. In any case, I was relieved to finally boot the NAS without any borrowed parts.
 
-{{<img src="3000g-boot.png" alt="Screenshot of point in video when I get first boot" caption="The moment I finally got a boot screen with the Athlon 3000G installed" max-width="800px" hasBorder="true">}}
+{{<img src="3000g-boot.png" alt="Screenshot of point in video when I get first boot" caption="The moment I finally got a boot screen with the Athlon 3000G installed" max-width="800px" has-border="true">}}
 
 ## Performance benchmarks
 
@@ -373,21 +373,21 @@ Performance topped out at 111 MiB/s (931 Mbps), which is suspiciously close to 1
 
 ### Read performance
 
-{{<img src="read-perf-unencrypted.png" hasBorder="true">}}
+{{<img src="read-perf-unencrypted.png" has-border="true">}}
 
 For unencrypted volumes, I was surprised to see my rusty, 7-year-old Synology outperform my shiny, new TrueNAS build. Synology was 31% faster at reading small files and 10% faster on large files.
 
-{{<img src="read-perf-encrypted.png" hasBorder="true">}}
+{{<img src="read-perf-encrypted.png" has-border="true">}}
 
 Synology's glory was short-lived, as it completely choked on encryption. Synology's read speeds dropped by 67-75% on encrypted volumes, whereas encryption had no effect on TrueNAS. That allowed TrueNAS to outperform Synology by 2.3x for small files and 3x for large files on an encrypted volume. I keep most of my data on encrypted volumes, so this test more accurately represents my typical usage.
 
 ### Write performance
 
-{{<img src="write-perf-unencrypted.png" hasBorder="true">}}
+{{<img src="write-perf-unencrypted.png" has-border="true">}}
 
 Although my old Synology managed to outshine TrueNAS on reads, this was not the case for writes. Even on an unencrypted volume, TrueNAS was 77% faster on small files, and the two systems performed similarly on 1 GiB files.
 
-{{<img src="write-perf-encrypted.png" hasBorder="true">}}
+{{<img src="write-perf-encrypted.png" has-border="true">}}
 
 Again, bringing encryption into the mix obliterates Synology's write performance. With encryption enabled, TrueNAS was 5.2x faster on small files and 3.2x faster on large files.
 

@@ -48,11 +48,11 @@ Every few months, I'll screw something up and prevent the server from booting or
 
 Friends have raved to me about their experience with iDRAC. It's a chip in Dell servers that provides a virtual console from the moment the system powers on. I briefly considered an iDRAC for my next home server, but its hefty price tag quickly put an end to that. The license alone costs $300, and it requires expensive custom hardware.
 
-{{<img src="idrac-price.png" alt="Screenshot of $300 price for iDRAC 9 Enterprise license" caption="A license for Dell's iDRAC technology costs $300 per machine plus the cost of hardware" max-width="700px" hasBorder="true">}}
+{{<img src="idrac-price.png" alt="Screenshot of $300 price for iDRAC 9 Enterprise license" caption="A license for Dell's iDRAC technology costs $300 per machine plus the cost of hardware" max-width="700px" has-border="true">}}
 
 Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell's iDRAC, but they're external devices that connect to a computer's keyboard, video, and mouse ports (hence the name KVM). Sadly, they're even more expensive, ranging in price from $500 to $1000 per unit.
 
-{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." max-width="800px" hasBorder="true">}}
+{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." max-width="800px" has-border="true">}}
 
 As lazy as I am about dragging servers around, I couldn't justify spending $500 to save myself the trouble of swapping cables around a few times per year.
 
@@ -68,7 +68,7 @@ Recent versions of the Pi [support USB on-the-go (USB OTG)](https://www.raspberr
 
 As a proof of concept of my Pi-as-KVM idea, I created a simple web app called [Key Mime Pi](/key-mime-pi).
 
-{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="[Key Mime Pi](/key-mime-pi), my early precursor to TinyPilot that only supported keyboard forwarding." max-width="700px" hasBorder="true">}}
+{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="[Key Mime Pi](/key-mime-pi), my early precursor to TinyPilot that only supported keyboard forwarding." max-width="700px" has-border="true">}}
 
 Key Mime Pi connects to another computer via USB and registers as a USB keyboard. It also presents a web page and listens for JavaScript key events. As the user types, Key Mime Pi captures the key events and translates them into keystrokes through its fake USB keyboard. This causes the keystrokes to appear on the target computer. I described this behavior in depth in [my previous post](/key-mime-pi#how-it-works).
 
@@ -106,7 +106,7 @@ While mindlessly scrolling through Twitter, I happened to see [a tweet by Arseni
 
 Capturing video at 1080p resolution and 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle." There are several variants, but they're all just different housing over the same [MacroSilicon MS2109 chip](https://twitter.com/Ascii211/status/1268641527531741186).
 
-{{<img src="hdmi-ebay.png" alt="Screenshot of HDMI for sale on eBay for $11.20" caption="HDMI to USB dongle available on eBay for $11.20 with free shipping" max-width="750px" hasBorder="true">}}
+{{<img src="hdmi-ebay.png" alt="Screenshot of HDMI for sale on eBay for $11.20" caption="HDMI to USB dongle available on eBay for $11.20 with free shipping" max-width="750px" has-border="true">}}
 
 When the device arrived a few days later, it blew me away. Without any tinkering, it showed up as a UVC video capture device as soon as I plugged it in to the Raspberry Pi.
 
@@ -153,7 +153,7 @@ Another stroke of luck spared me from that miserable task.
 
 When I published [my previous blog post](/key-mime-pi/) about Key Mime Pi, I received a comment from Max Devaev, who encouraged me to check out his project, [Pi-KVM](https://github.com/pikvm/pikvm).
 
-{{<img src="maxim-comment.png" alt="Max's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" hasBorder="true" caption="Max Devaev pointed me to his existing [Pi-KVM](https://github.com/pikvm/pikvm) project.">}}
+{{<img src="maxim-comment.png" alt="Max's comment: Hi:) Take a look at this project: https://github.com/pikvm/pikvm We have already done and debugged many things" has-border="true" caption="Max Devaev pointed me to his existing [Pi-KVM](https://github.com/pikvm/pikvm) project.">}}
 
 {{<img src="melty-breadboard.jpg" align="right" alt="GPIO pins" max-width="500px" caption="My previous experience with breadboards involved [accidentally melting them](/greenpithumb/#why-make-another-raspberry-pi-gardening-bot).">}}
 

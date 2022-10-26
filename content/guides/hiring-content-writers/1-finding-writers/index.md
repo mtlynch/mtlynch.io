@@ -19,7 +19,7 @@ There are thousands of working freelance writers in the world, but if you've nev
 
 [Upwork](https://www.upwork.com/) is a marketplace for freelancers. I don't love it, but it's the best platform I've found for hiring contractors. It's probably your safest bet if you're hiring writers for the first time.
 
-{{<img src="upwork-posting.jpg" alt="Screenshot of Is It Keto posting on Upwork" caption="Is It Keto's [job listing on Upwork](https://www.upwork.com/jobs/~01be2860be57096ab2)" max-width="450px" hasBorder="True">}}
+{{<img src="upwork-posting.jpg" alt="Screenshot of Is It Keto posting on Upwork" caption="Is It Keto's [job listing on Upwork](https://www.upwork.com/jobs/~01be2860be57096ab2)" max-width="450px" has-border="true">}}
 
 ### Advantages
 
@@ -51,7 +51,7 @@ The quality of candidates is on par with Upwork, but the wages are far lower. On
 
 I offered $13/hr, which is competitive, given the job's flexibility. Students can write articles for me whenever they want from wherever they want. Most student employment is babysitting or administrative work, which requires the employee to appear in a specific place on a rigid schedule. The freedom of a writing gig makes a substantial difference.
 
-{{<img src="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" caption="Is It Keto's job listing on a local college job board" max-width="600px" hasBorder="True">}}
+{{<img src="college-job-board-posting.jpg" alt="Is It Keto posting on a college job board" caption="Is It Keto's job listing on a local college job board" max-width="600px" has-border="true">}}
 
 The best candidates had experience writing for college publications. In the future, I may try reviewing college newspapers and reaching out to student journalists whose writing I like.
 
@@ -65,7 +65,7 @@ Oddly, they were also the writers that created the most logistical problems. Wit
 
 I live in South Hadley, MA, close to many liberal arts colleges. Before I discovered [college job boards](#college-job-boards), I tried putting up flyers on a college campus and around my town.
 
-{{<img src="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" caption="Job flyer I made for Is It Keto using a template from Canva" max-width="400px" hasBorder="True">}}
+{{<img src="isitketo-flyer.jpg" alt="Is It Keto Job Flyer" caption="Job flyer I made for Is It Keto using a template from Canva" max-width="400px" has-border="true">}}
 
 I received only one serious applicant, and their writing samples were just poorly-written school assignments, so we never started a [paid trial](/hiring-content-writers/3-screening-candidates/#start-a-paid-trial).
 
@@ -75,13 +75,13 @@ In December, I published an article about [encountering a phony writer on Upwork
 
 This strategy generated two applications, but neither one was strong enough to initiate a paid trial.
 
-{{<img src="blog-job-listing.jpg" alt="Screenshot of job posting in previous article" caption="Mini job announcement in my [blog post about a phony freelance writer](/upwork-scammer/)" max-width="600px" hasBorder="True">}}
+{{<img src="blog-job-listing.jpg" alt="Screenshot of job posting in previous article" caption="Mini job announcement in my [blog post about a phony freelance writer](/upwork-scammer/)" max-width="600px" has-border="true">}}
 
 ## /r/HireaWriter
 
 A few times throughout my project, I checked [/r/HireaWriter](https://www.reddit.com/r/HireaWriter/). It's a community on the social networking site, Reddit, for freelancers seeking writing work.
 
-{{<img src="hireawriter.jpg" alt="Screenshot of the HireaWriter subreddit" caption="[/r/HireaWriter](https://www.reddit.com/r/HireaWriter/), a Reddit community for hiring freelance writers" max-width="600px" hasBorder="True">}}
+{{<img src="hireawriter.jpg" alt="Screenshot of the HireaWriter subreddit" caption="[/r/HireaWriter](https://www.reddit.com/r/HireaWriter/), a Reddit community for hiring freelance writers" max-width="600px" has-border="true">}}
 
 None of the writers seemed promising enough to merit an interview. The posts seemed geared toward cheap spam blog owners who are looking to pay bottom-of-the-barrel rates for barely-intelligible content.
 

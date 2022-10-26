@@ -19,7 +19,7 @@ A clear, concise job description shows candidates that you're an organized profe
 
 Below, I've included the job description I use to hire writers for Is It Keto. It's a Google Doc, and I always link candidates directly to it to ensure a single, authoritative version. When I fix mistakes or clarify the wording, I never worry about who has which draft of my document.
 
-{{<img src="job-description.jpg" alt="Screenshot of Is It Keto's job description" caption="Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" max-width="825px" hasBorder="True" href="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#">}}
+{{<img src="job-description.jpg" alt="Screenshot of Is It Keto's job description" caption="Is It Keto's [job description Google Doc](https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#)" max-width="825px" has-border="true" href="https://docs.google.com/document/d/1sPkmViKqOc9GXhkiL7UUcR315H68YYWGDgKn-r4BKJE/edit#">}}
 
 ## Elements of a good job description
 

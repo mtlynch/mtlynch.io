@@ -385,7 +385,7 @@ If this were a movie, Cypress would be the scrappy underdog you can't help but r
 
 When a Cypress test fails, it screenshots your app at the point of failure and saves the image to disk. It's easy to configure your CI platform to keep these images as test artifacts for easy debugging. Similarly, Cypress lets you save videos of each of your tests that you can also publish as CI test artifacts.
 
-{{<img src="circleci-resources.png" max-width="600px" alt="Screenshot of Cypress video files in CircleCI dashboard's artifacts tab" hasBorder="true" caption="Cypress produces test artifacts that are easy to view as CI artifacts">}}
+{{<img src="circleci-resources.png" max-width="600px" alt="Screenshot of Cypress video files in CircleCI dashboard's artifacts tab" has-border="true" caption="Cypress produces test artifacts that are easy to view as CI artifacts">}}
 
 Playwright produces a more complicated set of test artifacts. Instead of simple images and videos, Playwright generates a static web app for viewing all the test artifacts.
 

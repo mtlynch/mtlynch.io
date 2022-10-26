@@ -43,7 +43,7 @@ Again, I expected the scavenger hunt to drive more visits, but the contest so fa
 
 ## WanderJest stats
 
-{{<img src="google-analytics.jpg" alt="Screenshot of Google Analytics traffic for WanderJest" caption="WanderJest visit statistics - February 2020" max-width="833px" hasBorder="true">}}
+{{<img src="google-analytics.jpg" alt="Screenshot of Google Analytics traffic for WanderJest" caption="WanderJest visit statistics - February 2020" max-width="833px" has-border="true">}}
 
 <div style="height: 1.5em"><!-- hack to add whitespace between graph and table --></div>
 

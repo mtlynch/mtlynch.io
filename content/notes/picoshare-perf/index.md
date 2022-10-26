@@ -82,13 +82,13 @@ go tool pprof \
 
 That popped up a web interface and rendered this graph:
 
-{{<img src="pprof1.png" alt="Graph showing all memory allocations" max-width="700px" hasBorder="true">}}
+{{<img src="pprof1.png" alt="Graph showing all memory allocations" max-width="700px" has-border="true">}}
 
 At the bottom, you can see a large red block labeled `bytes makeSlice 63.99 MB`, meaning that 64 MB of PicoShare's allocated RAM came from Go's `makeSlice` function.
 
 `makeSlice` is in the Go standard library, not my code. To find what code in PicoShare caused this memory allocation, I traced up the graph until I found a PicoShare function:
 
-{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" max-width="300px" hasBorder="true">}}
+{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" max-width="300px" has-border="true">}}
 
 The last PicoShare function in this chain is [`handlers.fileFromRequest`](https://github.com/mtlynch/picoshare/blob/1.1.7/handlers/upload.go#L242), which calls the Go standard library function [`*Request.ParseMultipartForm`](https://pkg.go.dev/net/http@go1.18.4#Request.ParseMultipartForm). That function is responsible for parsing multipart HTTP data, which is how PicoShare accepts file uploads.
 
@@ -106,7 +106,7 @@ Even though we were specifying a limit of 32 MB, Go was allocating 64 MB of RAM.
 
 Ben tried reducing the `maxMemory` parameter to `1 << 20` (1 MB), and the RAM usage from `ParseMultipartForm` dropped to only 2.5 MB:
 
-{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" max-width="400px" hasBorder="true">}}
+{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" max-width="400px" has-border="true">}}
 
 This was a huge reduction in memory, so I thought for sure Ben had solved it.
 
@@ -141,7 +141,7 @@ defer func() {
 
 This fix looked promising, as I saw huge reductions in RAM usage on Fly after freeing resources explicitly:
 
-{{<img src="free-ram.png" alt="Fly graph showing memory increase when I call ParseMultipartForm and decrease when I call r.MultipartForm.RemoveAll" hasBorder="true">}}
+{{<img src="free-ram.png" alt="Fly graph showing memory increase when I call ParseMultipartForm and decrease when I call r.MultipartForm.RemoveAll" has-border="true">}}
 
 Sadly, even with this fix, the crashes continued.
 
@@ -250,7 +250,7 @@ The game-changing insight came from Andrew Ayer, who pointed out that RAM bloat 
 
 Kurt Mackey, Fly's CEO, popped into the thread to confirm Andrew's hypothesis:
 
-{{<img src="mrkurt-cache.png" alt="This is the page cache usage for your -dbg app over the last 3 hours. Page cache shows as usage in our UI, but it's almost the same as free memory. It should be evicted when there's memory pressure." hasBorder="true" href="https://twitter.com/mrkurt/status/1553768082354601985">}}
+{{<img src="mrkurt-cache.png" alt="This is the page cache usage for your -dbg app over the last 3 hours. Page cache shows as usage in our UI, but it's almost the same as free memory. It should be evicted when there's memory pressure." has-border="true" href="https://twitter.com/mrkurt/status/1553768082354601985">}}
 
 So, Fly's memory metrics included the page cache, but the VM should reclaim that RAM if running applications needed it.
 
@@ -306,7 +306,7 @@ With `VACUUM` disabled by default and my other performance fixes in place, PicoS
 
 I ran PicoShare for 24 hours without any crashes on a Fly VM with just 256 MB of RAM.
 
-{{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" max-width="700px" hasBorder="true">}}
+{{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" max-width="700px" has-border="true">}}
 
 {{<img src="cronitor-checks.png" alt="Uptime checks showing 100% availability" caption="100% uptime over the last 24 hours">}}
 
@@ -358,7 +358,7 @@ It still wasn't super fast because there's about 30 seconds of latency before Fl
 
 One useful technique I discovered during this investigation was to test each hypothesis in its own git branch and then record the results with a commit message:
 
-{{<img src="named-branches.png" alt="Branch repro-no-tx has commit name 'Working - no OOM crashes with 3x parallel 600 MB uploads'" hasBorder="true">}}
+{{<img src="named-branches.png" alt="Branch repro-no-tx has commit name 'Working - no OOM crashes with 3x parallel 600 MB uploads'" has-border="true">}}
 
 With so many different hypotheses flying around, it was difficult to remember what state the code was in when I tested each idea. For example, at one point, I was seeing crashes due to a new bug I had introduced while debugging:
 
@@ -370,7 +370,7 @@ Having a record of what state the code was in and what I did to test it helped m
 
 One of my earliest debugging steps was adding a page to PicoShare that showed some of the RAM metrics from `runtime.ReadMemStats` (I later realized that `net/http/pprof` [did this better](#using-profiling-tools-to-identify-ram-bloat)).
 
-{{<img src="debug-page.png" alt="PicoShare debug page showing Alloc: 96.47 MB, TotalAlloc: 395.47 MB" hasBorder="true">}}
+{{<img src="debug-page.png" alt="PicoShare debug page showing Alloc: 96.47 MB, TotalAlloc: 395.47 MB" has-border="true">}}
 
 James Tucker pointed out that this measurement would exclude any resources I allocated through cgo:
 

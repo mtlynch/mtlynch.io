@@ -53,7 +53,7 @@ If you want talented writers, create work conditions that are fair, pleasant, an
 
 Everything in this guide is based on my real experiences of hiring and working with writers over several months. My business is a website called [Is It Keto](https://isitketo.org), which explains whether or not popular foods fit the keto diet.
 
-{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" caption="Is It Keto article on [broccoli](https://isitketo.org/broccoli)" max-width="800px" hasBorder="True">}}
+{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto broccoli article" caption="Is It Keto article on [broccoli](https://isitketo.org/broccoli)" max-width="800px" has-border="true">}}
 
 At [~73,000 pageviews per month](/retrospectives/2019/09/#stats), Is It Keto is still relatively small, but its audience has grown by 30-50% every month this year. I believe its success results from its succinct, clear writing.
 

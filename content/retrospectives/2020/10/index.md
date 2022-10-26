@@ -184,13 +184,13 @@ So far, maintaining inventory has been the biggest challenge of selling TinyPilo
 
 When my inventory is healthy, the relationship between my order backlog and stress levels look like this:
 
-{{<img src="manageable-inventory.png" alt="Photo of Y-cable" hasBorder="true" caption="When inventory is well-stocked, I can fulfill orders at a steady, relaxed pace.">}}
+{{<img src="manageable-inventory.png" alt="Photo of Y-cable" has-border="true" caption="When inventory is well-stocked, I can fulfill orders at a steady, relaxed pace.">}}
 
 I get a few orders a day, my assistant packs them up and schedules a pickup from USPS or DHL. Life is easy!
 
 When I'm backordered, it's a different picture:
 
-{{<img src="backlogged-inventory.png" alt="Graph showing large order backlogs and consequent spikes in stress" hasBorder="true" caption="When there are inventory shortages, orders pile up and need to be cleared quickly, increasing overall stress.">}}
+{{<img src="backlogged-inventory.png" alt="Graph showing large order backlogs and consequent spikes in stress" has-border="true" caption="When there are inventory shortages, orders pile up and need to be cleared quickly, increasing overall stress.">}}
 
 With a backlog, everything gets harder. Instead of a nice, predictable stream of work, there's nothing to ship for days or weeks. There are other tasks my assistant can do, but it's more time-consuming for both of us to learn lots of new one-off tasks as opposed to a smaller set of consistent jobs.
 

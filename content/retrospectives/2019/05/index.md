@@ -69,7 +69,7 @@ I worked with freelance writers to create several articles for Is It Keto, but w
 
 If you're a professional developer, you're probably familiar with code review tools like [Github reviews](https://github.com/features/code-review/), [Reviewable](https://reviewable.io/), or [Phabricator](https://www.phacility.com/). I suspect that content writers could benefit from similar tools, so I've been reaching out to writers and editors to ask them what kind of tool I could create for them to solve this problem.
 
-{{<img src="reviewable.jpg" alt="Screenshot of a code review on Reviewable.io" caption="I want to make this but for content instead of code" max-width="950px" hasBorder="True">}}
+{{<img src="reviewable.jpg" alt="Screenshot of a code review on Reviewable.io" caption="I want to make this but for content instead of code" max-width="950px" has-border="true">}}
 
 I started by emailing software publications because I thought they'd have financial incentive to smooth out this process, and they'd be familiar with code review tools. None of them were interested, so I started reaching out to individual writers. They seem much more excited, so I have meetings lined up for May.
 

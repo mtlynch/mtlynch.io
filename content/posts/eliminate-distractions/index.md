@@ -53,7 +53,7 @@ The first step toward a healthy relationship with your apps is deciding what you
 
 Whenever you sign in to Twitter, it shows you a list of hashtags designed to attract your interest and send you down a rabbit hole.
 
-{{<img src="twitter-trending.jpg" alt="Twitter settings for Trends panel" caption="Twitter shows you trending topics to seduce you into spending more time in the app." max-width="800px" hasBorder="True">}}
+{{<img src="twitter-trending.jpg" alt="Twitter settings for Trends panel" caption="Twitter shows you trending topics to seduce you into spending more time in the app." max-width="800px" has-border="true">}}
 
 The Trending Topics play on your natural desire to feel involved, but they're almost always garbage. The majority are some outrage that everyone will forget in a month. Otherwise, it's a stream of low-quality, reactionary responses to a newsworthy event.
 
@@ -95,7 +95,7 @@ This technique works on many sites, though it does occasionally break after rede
 
 StackOverflow offers a native setting to disable "Hot Questions," though there's no option to hide the other distracting sidebar panels. To suppress "Hot Questions" through app settings, go to [Site Settings > Preferences](https://stackoverflow.com/users/preferences/) and check the box for "Hide Hot Network Questions":
 
-{{<img src="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" caption="Click \"Hide Hot Network Questions\" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions." max-width="700px" hasBorder="True">}}
+{{<img src="stackoverflow-settings.jpg" alt="Screenshot of StackOverflow's settings page" caption="Click \"Hide Hot Network Questions\" in [StackOverflow settings](https://stackoverflow.com/users/preferences/) to eliminate distracting questions." max-width="700px" has-border="true">}}
 
 ## Email
 
@@ -105,7 +105,7 @@ Gmail forces you to see new messages in your inbox before you do anything else i
 
 Fortunately, there's a tool that solves this problem: [Inbox When Ready](https://inboxwhenready.org/). It allows you to access Gmail's standard functionality but hides new messages until you explicitly choose to see them. You can still allow messages to show up in your inbox immediately when they match certain rules (e.g., mail from a particular sender or with specific keywords).
 
-{{<img src="inbox-when-ready.jpg" alt="Gmail screenshot with Inbox When Ready enabled" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" max-width="800px" hasBorder="True">}}
+{{<img src="inbox-when-ready.jpg" alt="Gmail screenshot with Inbox When Ready enabled" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)" max-width="800px" has-border="true">}}
 
 {{<notice type="info">}}
 If you use a desktop mail client like Outlook or Thunderbird, disabling automatic email checking achieves the same effect as Inbox When Ready. Unfortunately, I haven't discovered an equivalent solution for mobile devices.
@@ -133,7 +133,7 @@ If you currently manage tasks through your inbox, the prospect of maintaining a 
 
 Before extracting my to-do list from my inbox, I never realized the power those emails held over me. Any time I checked my inbox, every message was sitting there, begging for my attention. Now, when an email requires a non-urgent response, I create a task and schedule my reply for an appropriate time. It gives me the freedom to forget about the email because I know my to-do list will remind me when the time is right.
 
-{{<img src="nirvana-tasks.jpg" alt="Chat settings in Gmail" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)"  hasBorder="True">}}
+{{<img src="nirvana-tasks.jpg" alt="Chat settings in Gmail" caption="When an email merits a thoughtful response, I create a task for it in my [to-do list app](https://nirvanahq.com/)"  has-border="true">}}
 
 {{<notice type="info">}}
 My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's _okay_, not great. People tell me good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
@@ -143,11 +143,11 @@ My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's _okay_, n
 
 I send all of my texts through Hangouts because it allows me to type on my desktop keyboard instead of the tiny virtual keyboard on my phone. Unfortunately, Google integrates Hangouts into my Gmail by default, creating intrusive bundling. Checking my email means seeing my texts and vice-versa.
 
-{{<img src="hangouts-in-gmail.jpg" alt="Hangouts embedded in Gmail" caption="By default, Gmail embeds Hangouts into your inbox." max-width="800px" hasBorder="True">}}
+{{<img src="hangouts-in-gmail.jpg" alt="Hangouts embedded in Gmail" caption="By default, Gmail embeds Hangouts into your inbox." max-width="800px" has-border="true">}}
 
 This is an easy problem to solve. Go to the [chat settings in Gmail](https://mail.google.com/mail/u/0/#settings/chat) and select "Chat off."
 
-{{<img src="gmail-disable-chat.jpg" alt="Chat settings in Gmail" caption="Disabling chat in [Gmail settings](https://mail.google.com/mail/u/0/#settings/chat)" hasBorder="True">}}
+{{<img src="gmail-disable-chat.jpg" alt="Chat settings in Gmail" caption="Disabling chat in [Gmail settings](https://mail.google.com/mail/u/0/#settings/chat)" has-border="true">}}
 
 Now, Hangouts messages will not appear in your Gmail, but you can still access Hangouts through its dedicated URL: [https://hangouts.google.com](https://hangouts.google.com).
 
@@ -182,7 +182,7 @@ Here's how to set that up:
 
 My phone has been on "Do Not Disturb" mode continuously for the last 18 months. Incoming phone calls will set off my ringer, but other than that, my phone can't interrupt my focus. I don't see notifications for emails, texts, or any other apps.
 
-{{<img src="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" caption="I permanently set my phone to Do Not Disturb." max-width="350px" hasBorder="True">}}
+{{<img src="do-not-disturb.jpg" alt="Do Not Disturb settings in Android" caption="I permanently set my phone to Do Not Disturb." max-width="350px" has-border="true">}}
 
 I discovered this solution by mistake. Intending to use "Do Not Disturb" only during periods of deep focus, I'd often forget to re-enable notifications afterward. It turned out that there was no need.
 

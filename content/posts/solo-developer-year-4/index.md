@@ -53,7 +53,7 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 ## TinyPilot's second year
 
-{{<img src="tinypilot-screenshot.png" max-width="650px" caption="[TinyPilot](https://tinypilotkvm.com) is an open-source KVM over IP device built on the Raspberry Pi" hasBorder="true">}}
+{{<img src="tinypilot-screenshot.png" max-width="650px" caption="[TinyPilot](https://tinypilotkvm.com) is an open-source KVM over IP device built on the Raspberry Pi" has-border="true">}}
 
 TinyPilot is an open-source KVM over IP device [built on the Raspberry Pi](/tinypilot). It allows you to control another computer from your browser without installing any software, even if the computer has no operating system or network connectivity.
 
@@ -63,7 +63,7 @@ At the start of 2021, I was TinyPilot's sole developer, customer support agent, 
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and a [distributor in Europe](https://kvm-ip.de).
 
-{{<img src="tinypilot-office.jpg" max-width="600px" caption="TinyPilot now has a real office where we assemble products and ship out orders." hasBorder="true">}}
+{{<img src="tinypilot-office.jpg" max-width="600px" caption="TinyPilot now has a real office where we assemble products and ship out orders." has-border="true">}}
 
 ### TinyPilot finances
 
@@ -168,7 +168,7 @@ The course earned $7.5k in sales, which fell disappointingly short of my $20k go
 
 ### Is It Keto
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" max-width="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" has-border="true" max-width="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet. It earns money from Amazon Affiliate links and Google AdSense.
 
@@ -189,7 +189,7 @@ I considered selling the site but, I suspect it's only worth $5-10k. It would pr
 
 ### Zestful
 
-{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" max-width="550px" caption="[Zestful](https://zestfuldata.com) is an API that parses recipe ingredients into structured data.">}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" has-border="true" max-width="550px" caption="[Zestful](https://zestfuldata.com) is an API that parses recipe ingredients into structured data.">}}
 
 Zestful is a paid service that parses recipe ingredients into structured data. For example, if you give it the string `"2 1/2 tablespoons finely chopped parsley"`, it tells you that the quantity is `2.5`, the product is `parsley`, the preparation step is `finely chopped`, etc.
 
@@ -215,11 +215,11 @@ Starting in October, revenues doubled to $40-60k/month, but TinyPilot didn't rec
 
 So, what doubled sales? I got rid of our product page.
 
-{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" max-width="600px" caption="TinyPilot used to offer a variety of products." hasBorder="true">}}
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" max-width="600px" caption="TinyPilot used to offer a variety of products." has-border="true">}}
 
 Instead, I focused the website exclusively on our flagship product, the TinyPilot Voyager.
 
-{{<img src="no-catalog.png" alt="Screenshot of TinyPilot website with product catalog removed" hasBorder="True" max-width="550px" caption="In October, I removed the product catalog page from TinyPilot and focused on my flagship product.">}}
+{{<img src="no-catalog.png" alt="Screenshot of TinyPilot website with product catalog removed" has-border="true" max-width="550px" caption="In October, I removed the product catalog page from TinyPilot and focused on my flagship product.">}}
 
 Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 

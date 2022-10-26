@@ -245,7 +245,7 @@ Cypress creates a video recording of every test run. This is my favorite feature
 
 Above, I showed you a test that passed. What happens when a Cypress test fails? It still generates a video of the test run, but it also outputs a screenshot showing the assertion that failed:
 
-{{<img src="detects angry sentiment (failed).png" alt="Cypress screenshot output on failure" caption="Screenshot that Cypress generated when my test failed (Cypress expected the word \"Furious\" but instead found \"Angry\")" max-width="800px" hasBorder="True">}}
+{{<img src="detects angry sentiment (failed).png" alt="Cypress screenshot output on failure" caption="Screenshot that Cypress generated when my test failed (Cypress expected the word \"Furious\" but instead found \"Angry\")" max-width="800px" has-border="true">}}
 
 This solves a major pain point I experienced with other tools. Selenium supports screenshots but only before or after an assertion. That limitation led to frustrating scenarios where Selenium claimed the test failed, but the screenshot showed correct behavior because the browser state changed after the test failed.
 

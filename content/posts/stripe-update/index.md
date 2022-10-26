@@ -22,7 +22,7 @@ Several commenters responded that they appreciated his assurances but wanted to 
 
 Less than a week after my article came out, Stripe [published a blog post](https://stripe.com/blog/advanced-fraud-detection-updates) outlining the changes they had made to better disclose their data collection practices and guarantees around user privacy.
 
-{{<img src="stripe-blog.png" alt="Screenshot of Stripe's blog post" max-width="729px" hasBorder="true" href="https://stripe.com/blog/advanced-fraud-detection-updates">}}
+{{<img src="stripe-blog.png" alt="Screenshot of Stripe's blog post" max-width="729px" has-border="true" href="https://stripe.com/blog/advanced-fraud-detection-updates">}}
 
 I've reviewed their new documentation, and I'll discuss how well Stripe's changes address the issues I raised.
 
@@ -38,7 +38,7 @@ This omitted critical information and failed to communicate what information the
 
 In Stripe's current documentation, the library includes a section called ["Disabling advanced fraud detection signals,"](https://github.com/stripe/stripe-js#disabling-advanced-fraud-detection-signals) which links to a webpage that [defines explicitly](https://stripe.com/docs/disputes/prevention/advanced-fraud-detection) the types of information Stripe collects for fraud prevention.
 
-{{<img src="stripe-signals-docs.png" alt="Screenshot of Stripe's fraud detection documentation" max-width="650px" hasBorder="true" caption="Stripe's new [fraud detection documentation](https://stripe.com/docs/disputes/prevention/advanced-fraud-detection) is more explicit about how Stripe collects user data.">}}
+{{<img src="stripe-signals-docs.png" alt="Screenshot of Stripe's fraud detection documentation" max-width="650px" has-border="true" caption="Stripe's new [fraud detection documentation](https://stripe.com/docs/disputes/prevention/advanced-fraud-detection) is more explicit about how Stripe collects user data.">}}
 
 ### Stripe clients have the option to disable tracking
 
@@ -123,7 +123,7 @@ Perhaps you have no sympathy for web applications that store sensitive data in q
 
 [Firefox Send](https://github.com/mozilla/send/blob/7a9a75794e7aa7048dcef6a161ef11fa19cfe906/docs/encryption.md) and [Mega.nz](https://mega.nz/help/s/57672896886688a70c8b45ad) are both examples of popular web apps that use the URL fragment to store client-side encryption keys so that users can save end-to-end encrypted files to the cloud without the server ever having access to the underlying data. If Stripe's JS library ran on a site that used a similar scheme, their library would leak sensitive encryption keys to Stripe's servers.
 
-{{<img src="mega-encryption-key.png" alt="Screenshot of Mega.nz displaying encryption key in URL fragment" max-width="600px" hasBorder="true" caption="Popular file-sharing application Mega.nz stores sensitive encryption keys in the URL fragment field">}}
+{{<img src="mega-encryption-key.png" alt="Screenshot of Mega.nz displaying encryption key in URL fragment" max-width="600px" has-border="true" caption="Popular file-sharing application Mega.nz stores sensitive encryption keys in the URL fragment field">}}
 
 ### Support library unloading
 

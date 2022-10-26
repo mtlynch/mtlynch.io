@@ -85,7 +85,7 @@ My dream was to find some sort of "warehouse as a service" business, where I shi
 
 And then there's Fulfillment by Amazon, a service that lets me ship big batches of finished products to Amazon for fulfillment. That would sort of work, except that creating TinyPilots still requires a lot of physical labor. Parts are continuously arriving that need to be processed and assembled into working devices. Amazon wouldn't do any of that. Plus, I'm not quite ready to insert an enormous corporate machine between me and my customers.
 
-{{<img src="amazon-fba.png" hasBorder="true" max-width="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
+{{<img src="amazon-fba.png" has-border="true" max-width="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
 
 All signs were pointing to hiring local employees, which scared me. Based on the IRS' definition, a local worker who uses equipment I provide and follows instructions I give is unambiguously an "employee" rather than an "independent contractor." I've only ever hired contractors, and the process there is fairly lightweight. With real employees, there's _so_ much more paperwork. I have to give them a bunch of forms and notices and make sure I'm withholding all the right taxes.
 

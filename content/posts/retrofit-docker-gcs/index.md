@@ -252,13 +252,13 @@ Next, use the GCP web console to [create a service account](https://console.clou
 **Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io (see the following section) fails if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`.
 {{< /notice >}}
 
-{{<img src="service-account-1.png" alt="Screenshot of service account creation screen" caption="Creating a new service account from the GCP web console" max-width="799px" hasBorder="True">}}
+{{<img src="service-account-1.png" alt="Screenshot of service account creation screen" caption="Creating a new service account from the GCP web console" max-width="799px" has-border="true">}}
 
-{{<img src="service-account-2.png" alt="Screenshot of service account role selection screen" caption="Assigning a role to the service account" max-width="799px" hasBorder="True">}}
+{{<img src="service-account-2.png" alt="Screenshot of service account role selection screen" caption="Assigning a role to the service account" max-width="799px" has-border="true">}}
 
 Download the private key as `key.json`:
 
-{{<img src="service-account-3.png" alt="Screenshot of service account private key download" caption="Downloading private keys for the service account" max-width="799px" hasBorder="True">}}
+{{<img src="service-account-3.png" alt="Screenshot of service account private key download" caption="Downloading private keys for the service account" max-width="799px" has-border="true">}}
 
 Finally, use gcloud to authenticate as the service account you just created:
 
@@ -394,7 +394,7 @@ To address this, you need to configure the Docker container to store all persist
 
 Here is the goal architecture that solves this problem:
 
-{{<img src="full-architecture.jpg" alt="flask-demo-app architecture diagram" caption="Architecture for deploying a Flask app to Google Cloud Platform" max-width="800px" hasBorder="True">}}
+{{<img src="full-architecture.jpg" alt="flask-demo-app architecture diagram" caption="Architecture for deploying a Flask app to Google Cloud Platform" max-width="800px" has-border="true">}}
 
 - The web browser only talks to the web server, Nginx, which acts as the orchestrator for all front-end requests.
 - If the web browser requests a file, Nginx fetches it from GCS via a utility called [gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse), which mounts GCS buckets as folders on the filesystem.
@@ -627,11 +627,11 @@ You finally have a Docker container that persists its state to GCS. You can test
 
 If you check your GCS bucket, you will see the file you just uploaded:
 
-{{<img src="gcsfuse-2.png" alt="Screenshot GCS bucket showing uploaded file" caption="Image file in GCS bucket" max-width="800px" hasBorder="True">}}
+{{<img src="gcsfuse-2.png" alt="Screenshot GCS bucket showing uploaded file" caption="Image file in GCS bucket" max-width="800px" has-border="true">}}
 
 The real test is whether this state persists across different VMs. You can verify this by killing your VM entirely and redeploying it. The image URL from your previous VM will be accessible on your new server:
 
-{{<img src="gcsfuse-3.png" alt="Screenshot of flask-upload-demo serving file from different IP" caption="flask-upload-demo continues serving file even after the VM has been destroyed and rebuilt" max-width="667px" hasBorder="True">}}
+{{<img src="gcsfuse-3.png" alt="Screenshot of flask-upload-demo serving file from different IP" caption="flask-upload-demo continues serving file even after the VM has been destroyed and rebuilt" max-width="667px" has-border="true">}}
 
 ## Bonus: Logging interface
 
@@ -651,7 +651,7 @@ $ docker logs klt-flask-demo-app-vm-gcsfuse-qnnf
 
 The easier way is to open GCP's [StackDriver logging interface](https://console.cloud.google.com/logs/viewer). There, you will find all of your logs in a feature-rich web interface:
 
-{{<img src="gcsfuse-logs.png" alt="App logs in GCP's StackDriver interface" caption="GCP's StackDriver interface shows log output from the app." max-width="800px" hasBorder="True">}}
+{{<img src="gcsfuse-logs.png" alt="App logs in GCP's StackDriver interface" caption="GCP's StackDriver interface shows log output from the app." max-width="800px" has-border="true">}}
 
 ## Pushing new releases
 

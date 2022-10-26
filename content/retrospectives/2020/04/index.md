@@ -44,7 +44,7 @@ Because of the contest's pitiful engagement, only one person had taken a photo d
 
 A week later, performances were still happening, but I didn't want WanderJest to tacitly endorse them by listing upcoming shows. I replaced the WanderJest show listings page with a notice saying that the site was going on a temporary hiatus until the COVID-19 pandemic was over. Looking back, March 18th feels like too late a reaction, and I wish I'd shuttered the site earlier.
 
-{{<img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" max-width="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control." hasBorder="true">}}
+{{<img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" max-width="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control." has-border="true">}}
 
 ## Takeaways from the scavenger hunt
 
@@ -64,7 +64,7 @@ The results? Two visitors.
 
 I paid ~$200 for the design, printing, and distribution, and **two people** visited the URL. It's possible that other people saw the flyer and just Googled "wanderjest," but I didn't see any measurable uptick in search traffic.
 
-{{<img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn." hasBorder="true">}}
+{{<img src="flyer-litter.png" alt="Text conversation of my sister showing me a flyer that showed up on her lawn" caption="The only real engagement from my flyers was my sister texting me to complain sarcastically about one that blew onto her lawn." has-border="true">}}
 
 **WanderJest isn't working**
 
@@ -96,8 +96,8 @@ And because of the recent market volatility, interest in portfolio rebalancing i
 I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://assetrebalancer.com), a web app that shows you the trades you need to make in your [Vanguard](https://vanguard.com) account to achieve your desired asset allocation strategy:
 
 {{< gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy">}}
-{{<img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" hasBorder="true">}}
-{{<img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets" hasBorder="true">}}
+{{<img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" has-border="true">}}
+{{<img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets" has-border="true">}}
 {{</ gallery >}}
 
 I'm still trying to figure out how to market it. I sent cold emails to several local financial advisors offering to pay them their hourly rate to talk with me about what sort of tool would be useful to them or their clients, but none of them responded. I tried sharing it on [reddit](https://redd.it/fpyqmc) and got a small positive response, but nobody was banging down my door to get a paid version. My next idea is to write about the technical lessons I'm learning as I build the site and hope that it draws attention from programmers in my audience who invest their money similarly.
@@ -127,8 +127,8 @@ I created a new conference talk for [NERD Summit](https://nerdsummit.org/) this 
 I used [reveal-hugo](https://reveal-hugo.dzello.com/) because I already knew how to use the [Hugo static site generator](https://gohugo.io) (which powers this site).
 
 {{< gallery caption="[reveal-hugo](https://reveal-hugo.dzello.com/) lets you create slide decks in Markdown.">}}
-{{<img src="reveal-code.png" alt="Source code for my presentation" hasBorder="true">}}
-{{<img src="reveal-rendered.png" alt="HTML rendering of the presentation" hasBorder="true">}}
+{{<img src="reveal-code.png" alt="Source code for my presentation" has-border="true">}}
+{{<img src="reveal-rendered.png" alt="HTML rendering of the presentation" has-border="true">}}
 {{</ gallery >}}
 
 The biggest advantage is that writing in Markdown allows me to focus on the content first and worry about the layout later. Google Slides requires me to choose the placement for any text before writing it, so I get distracted thinking about the aesthetics. reveal-hugo is also nice for formatting code snippets, which can be a challenge in Google Slides. The other neat feature is that it lends itself to more automation, so I now have [an index for all of my talks](https://decks.mtlynch.io), which is cool. And the source is all [public](https://github.com/mtlynch/slide-decks).
@@ -141,7 +141,7 @@ The other big missing piece is drag and drop layouts. In Google Slides, it's tri
 
 I always felt like other indie projects had such slick stock imagery, but I wasn't sure if they were buying it or if it came from some template I didn't know about. It turns out that most of what I was seeing came from [unDraw](https://undraw.co), a collection of openly-licensed illustrations by [Katerina Limpitsouni](https://twitter.com/ninaLimpi). If you need free illustrations for a new product, I recommend checking out unDraw.
 
-{{<img src="undraw.png" alt="Screenshot of unDraw website" max-width="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project." hasBorder="true">}}
+{{<img src="undraw.png" alt="Screenshot of unDraw website" max-width="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project." has-border="true">}}
 
 ## Legacy project stats
 
