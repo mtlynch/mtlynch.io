@@ -34,11 +34,11 @@ This tutorial uses free, open-source tools, and you can run them without registe
 
 The tool that makes this testing possible is [Cypress](https://cypress.io/), a recent entrant to the field of browser automation. It's an [open-source](https://github.com/cypress-io/cypress) end-to-end testing framework with a [full-time team](https://www.cypress.io/about/#our-team) actively developing it. Their business model is similar to [Docker's](https://www.docker.com/) in that both companies publish free-open source tools and fund development by selling managed services for those tools.
 
-{{<img src="cypress-logo-dark.png" alt="Cypress logo" caption="[Cypress](https://cypress.io) is an open-source tool for automated web app testing." max-width="403px" linkUrl="https://cypress.io">}}
+{{<img src="cypress-logo-dark.png" alt="Cypress logo" caption="[Cypress](https://cypress.io) is an open-source tool for automated web app testing." max-width="403px" href="https://cypress.io">}}
 
 I first discovered Cypress last year after seeing [Gleb Bahmutov](https://glebbahmutov.com/) demonstrate it at a regional software conference. When he mentioned that Cypress had no dependencies on [Selenium](https://www.seleniumhq.org/), I was intrigued. All my previous experience with end-to-end testing was awful, and Selenium was always at the root of my pain.
 
-{{<img src="selenium-logo.png" alt="Selenium logo" caption="Selenium is the oldest and most prevalent browser automation tool, but it's clunky and outdated." max-width="200px" linkUrl="https://www.seleniumhq.org">}}
+{{<img src="selenium-logo.png" alt="Selenium logo" caption="Selenium is the oldest and most prevalent browser automation tool, but it's clunky and outdated." max-width="200px" href="https://www.seleniumhq.org">}}
 
 Selenium is, by far, the most popular browser automation framework, but it also has all of the problems you'd expect of a Java-based tool designed 15 years ago. It's a pain to install, its syntax is awkward, and it offers scant insights when your tests fail. In Gleb's slick demos of Cypress, it promised to address all of these headaches.
 

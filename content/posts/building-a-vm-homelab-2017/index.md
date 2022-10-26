@@ -50,7 +50,7 @@ There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](ht
 
 ### CPU
 
-{{<img src="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" max-width="390px" align="right" linkUrl="https://smile.amazon.com/dp/B06WP5YCX6/">}}
+{{<img src="amd-ryzen.jpg" alt="AMD Ryzen 7 1700" max-width="390px" align="right" href="https://smile.amazon.com/dp/B06WP5YCX6/">}}
 
 In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new, retail CPU.
 
@@ -60,7 +60,7 @@ I ended up going with the [AMD Ryzen 7 1700](https://smile.amazon.com/dp/B06WP5Y
 
 ### Motherboard
 
-{{<img src="motherboard.png" alt="ASRock AB350M-HDV" max-width="250px" align="left" linkUrl="https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/">}}
+{{<img src="motherboard.png" alt="ASRock AB350M-HDV" max-width="250px" align="left" href="https://smile.amazon.com/ASRock-AB350M-HDV-Socket-MicroATX-Motherboard/dp/B06WWC7BTJ/">}}
 
 I live in a pretty small 1 BR apartment in Manhattan, so physical space is at a premium. My requirements also obviated a lot of components that typically requires a lot of physical space in a PC, such as disk drives, GPUs, or premium CPU fans.
 
@@ -70,19 +70,19 @@ In retrospect, I wish I'd gotten a motherboard with integrated graphics (see the
 
 ### Memory
 
-{{<img src="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max-width="250px" align="right" linkUrl="https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/">}}
+{{<img src="gskill-ram.png" alt="G.SKILL Flare X Series 32GB" max-width="250px" align="right" href="https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/">}}
 
 My main PC has 32 GB of RAM and tends to use around 15 GB during daily usage (even with Windows 10 and multiple VMs running). I figured I could probably get by with 16 GB, but 32 GB will probably be a safe upper limit for the next 2-3 years. I chose the [G.SKILL Flare X Series 32GB (2 x 16GB)](https://smile.amazon.com/G-SKILL-Flare-288-Pin-Memory-F4-3200C14D-16GFX/dp/B06XFT7DF9/) because these were the fastest RAM sticks tested compatible with my motherboard.
 
 ### Disk
 
-{{<img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" max-width="590px" align="left" linkUrl="https://smile.amazon.com/gp/product/B00TGIVZTW/">}}
+{{<img src="samsung-850-evo.jpg" alt="Samsung 850 EVO" max-width="590px" align="left" href="https://smile.amazon.com/gp/product/B00TGIVZTW/">}}
 
 Like Brian, [I have a NAS](/sia-via-docker/) with plenty of space available, so all I needed as far as local storage was a small disk to hold the host / hypervisor OS. I went with a 250 GB [Samsung 850 EVO](https://smile.amazon.com/gp/product/B00TGIVZTW/) mainly because I find the M.2 interface very clean. It's just a chip you screw into your motherboard and you're done. No need to deal with mounts or SATA cables. 250 GB is way more than I need, but for an M.2 SSD, that seems to be about the entry level.
 
 ### Case
 
-{{<img src="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max-width="180px" align="right" linkUrl="https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/">}}
+{{<img src="micro-atx.jpg" alt="Rosewill Micro ATX SRM-01" max-width="180px" align="right" href="https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/">}}
 
 For the case, I was primarily looking for something very small. I plan to tuck the server out of sight, so it didn't need to be pretty or have fancy aesthetics. The [Rosewill Micro ATX SRM-01](https://smile.amazon.com/ROSEWILL-Micro-Computer-plastic-computer/dp/B00ZPWOA6I/) is a nice, small, inexpensive, and functional.
 

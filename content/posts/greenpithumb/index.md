@@ -208,7 +208,7 @@ It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/not
 
 ### Electronics: start with the basics
 
-{{<img src="arduino-starter-kit.jpg" alt="Arduino starter kit" max-width="300px" align="left" linkUrl="https://smile.amazon.com/gp/product/B009UKZV0A/">}}
+{{<img src="arduino-starter-kit.jpg" alt="Arduino starter kit" max-width="300px" align="left" href="https://smile.amazon.com/gp/product/B009UKZV0A/">}}
 
 At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](https://smile.amazon.com/gp/product/B009UKZV0A/) and went through the tutorials to build a foundation in electronics.
 

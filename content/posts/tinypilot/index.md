@@ -102,7 +102,7 @@ Fortunately, I found a better solution by complete coincidence.
 
 While mindlessly scrolling through Twitter, I happened to see [a tweet by Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) about a low-cost HDMI to USB dongle he had just purchased:
 
-{{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." linkUrl="https://twitter.com/Ascii211/status/1268631069051453448">}}
+{{<img src="arsenio-dev-tweet.jpg" alt="Screenshot of Rufus" caption="A [tweet from Arsenio Dev](https://twitter.com/Ascii211/status/1268631069051453448) tipped me off to a better video capture solution." href="https://twitter.com/Ascii211/status/1268631069051453448">}}
 
 Capturing video at 1080p resolution and 30 frames per second seemed a little too good to be true, so I ordered one from eBay. It was only $11, including shipping. I don't even know what you call it &mdash; it has no brand name, so I'll just call it "the HDMI dongle." There are several variants, but they're all just different housing over the same [MacroSilicon MS2109 chip](https://twitter.com/Ascii211/status/1268641527531741186).
 

@@ -61,7 +61,7 @@ Many websites use JavaScript to continuously update a page's contents while the 
 
 On the modern web, social networks and SEO are fairly important, so it would be a huge bummer if using Vue meant that your app couldn't fully integrate with those services.
 
-{{<img src="NuxtJS_Logo.png" alt="Nuxt.js logo" max-width="250px" linkUrl="https://nuxtjs.org/">}}
+{{<img src="NuxtJS_Logo.png" alt="Nuxt.js logo" max-width="250px" href="https://nuxtjs.org/">}}
 
 [Nuxt](https://nuxtjs.org/) is the framework that addresses this issue. It adds a layer on top of Vue to move some of the browser's work back to the server. Instead of sending down a bare HTML stub and waiting for client-side JavaScript to render everything, Nuxt pre-processes the page server-side to generate more fully-rendered HTML.
 

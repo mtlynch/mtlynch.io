@@ -198,7 +198,7 @@ The other problem is that What Got Done generates the most value for people who 
 
 In response to COVID-19, Ahrefs released their $800 course on content marketing [for free](https://twitter.com/timsoulo/status/1240151594328621056). I generally prefer to learn by reading rather than watching online videos, but I've been impressed with this series.
 
-{{<img src="blogging-for-business.jpg" alt="Cover image for Ahrefs' Blogging for Business Course" max-width="600px" caption="In March, Ahrefs released [their premium content marketing course](https://ahrefs.com/academy/blogging-for-business/) for free." linkUrl="https://ahrefs.com/academy/blogging-for-business/">}}
+{{<img src="blogging-for-business.jpg" alt="Cover image for Ahrefs' Blogging for Business Course" max-width="600px" caption="In March, Ahrefs released [their premium content marketing course](https://ahrefs.com/academy/blogging-for-business/) for free." href="https://ahrefs.com/academy/blogging-for-business/">}}
 
 One lesson from the video that hit home for me is that [traffic is a vanity metric](https://youtu.be/y5kQXogrLN0?t=53). If you're blogging as part of your business, the number of visitors you attract is only an intermediate goal to something else, like selling products or acquiring new customers. I experienced exactly this [with Portfolio Rebalancer](#portfolio-rebalancer-has-lots-of-visitors-but-no-sales); it was great to attract 1,000 visitors in its first month, but the volume itself isn't much to celebrate without accompanying revenue or signups.
 

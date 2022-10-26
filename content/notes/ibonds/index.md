@@ -36,7 +36,7 @@ Currently, inflation is very high, so the fixed rate is 0%. If you buy iBonds no
 
 The Treasury publishes [an (enormous) table](https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf) of historical fixed + inflation rates for all iBonds ever sold. It's helpful in understanding how the fixed rate and inflation rate combine and how iBonds have performed historically.
 
-{{<img src="ibond-historical-rates.png" max-width="800px" linkUrl="https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf" caption="The US Treasury publishes [historical rates of iBond returns](https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf)." hasBorder="true">}}
+{{<img src="ibond-historical-rates.png" max-width="800px" href="https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf" caption="The US Treasury publishes [historical rates of iBond returns](https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf)." hasBorder="true">}}
 
 ## Pros
 

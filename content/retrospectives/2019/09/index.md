@@ -102,7 +102,7 @@ This seemed sensible, but I had a tough time approaching it. The well-known site
 
 With the assumption that local fitness bloggers might be more friendly to a nearby blogger, I used search terms like "fitness western massachusetts." One of the sites I found was the local blog for a gym chain called [Fitness Together](https://fitnesstogether.com), with a 55/100 score from [Ahrefs](https://ahrefs.com/backlink-checker). Coincidentally, my sister had a contact there, so I reached out about writing a guest post for them. They agreed to the idea, I wrote a new article for them, and they published it a couple weeks later: ["Five Benefits of Strength Training."](https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training)
 
-{{<img src="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" caption="My guest post on the Fitness Together Northampton blog" max-width="600px" linkUrl="https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training">}}
+{{<img src="guest-post.jpg" alt="Screenshot of my blog post on Fitness Together's blog" caption="My guest post on the Fitness Together Northampton blog" max-width="600px" href="https://fitnesstogether.com/northampton/blog/five-benefits-of-health-training">}}
 
 It's unclear if that new link makes any difference. The Fitness Together root domain is valuable, but Google may recognize that the [blog for a city-specific location](https://fitnesstogether.com/northampton/blog) is not as significant as Fitness Together's [main blog](https://fitnesstogether.com/blog).
 
@@ -130,13 +130,13 @@ Victor Zhou is a Facebook engineer who only began blogging in 2019 and already w
 
 My favorite of his posts is ["Minify Your SVGs"](https://victorzhou.com/blog/minify-svgs/). It does a great job of explaining the context of the problem and the tradeoffs of different solutions he considered.
 
-{{<img src="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" caption="Victor is a talented software blogger with an emphasis on machine learning" max-width="450px" linkUrl="https://victorzhou.com/blog/minify-svgs/">}}
+{{<img src="victor-zhou.jpg" alt="Screenshot of Victor Zhou's blog" caption="Victor is a talented software blogger with an emphasis on machine learning" max-width="450px" href="https://victorzhou.com/blog/minify-svgs/">}}
 
 ### [Cory Zue's Solopreneur Side Project Dashboard](http://www.coryzue.com/open/)
 
 Cory Zue is a solo developer who writes publicly and transparently about his business projects. In August, he unveiled a dashboard that shows earnings and time investment for his different projects.
 
-{{<img src="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" max-width="450px" linkUrl="http://www.coryzue.com/open/">}}
+{{<img src="solopreneur-dashboard.jpg" alt="Screenshot of Solopreneur Dashboard" caption="Cory Zue created a public dashboard to track his time investment and financial returns for each of his side businesses" max-width="450px" href="http://www.coryzue.com/open/">}}
 
 Particularly interesting is his effective wage for each project. It shows how his businesses required substantial up-front investment but, over time, generated increasing amounts of revenue and demanded decreasing levels of maintenance.
 

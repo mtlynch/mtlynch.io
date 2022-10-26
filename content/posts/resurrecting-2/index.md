@@ -29,7 +29,7 @@ This is part two of a three-part series about how I resurrected [ingredient-phra
 
 At the end of part one, I created a Docker image that allowed the library to run on any system. The next step was to run the library in continuous integration.
 
-{{<img src="travis-ci-logo.png" alt="Travis CI logo" max-width="300px" align="right" linkUrl="https://travis-ci.org/">}}
+{{<img src="travis-ci-logo.png" alt="Travis CI logo" max-width="300px" align="right" href="https://travis-ci.org/">}}
 
 Continuous integration is the practice of using an indepedent, controlled environment to test software on each change to the code. My preferred continuous integration solution is [Travis](https://travis-ci.org). Their configuration files are intuitive, and they offer unlimited free builds for open-source projects.
 

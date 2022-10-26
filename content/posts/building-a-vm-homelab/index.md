@@ -106,7 +106,7 @@ To get the best performance for my dollar, I restricted my search to used CPUs, 
 The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https://ark.intel.com/content/www/us/en/ark/products/series/78583/intel-xeon-processor-e5-v3-family.html) family, especially the 2600 models. I settled on the [E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html). It had an average benchmark of 15,618 and cost ~$130 used on eBay.
 
 {{<gallery  caption="The Intel Xeon E5-2680 v3 [scores 15,618 on cpubenchmark.net](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3+%40+2.50GHz&id=2390).">}}
-{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" max-width="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" max-width="420px" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
 {{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" max-width="490px" hasBorder="true">}}
 {{</gallery>}}
 
@@ -114,7 +114,7 @@ For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual
 
 ### Motherboard
 
-{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" max-width="280px" align="left" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" max-width="280px" align="left" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
 
 The downside of a dual-CPU system was that it limited my options for motherboards. Only a handful of motherboards support dual Intel 2011-v3 CPUs. Their prices ranged from $300 to $850, which was far more than I expected to spend on a motherboard.
 
@@ -122,7 +122,7 @@ I chose the [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x1
 
 ### Memory
 
-{{<img src="crucial-ct4k16g4rfd4213.jpg" alt="Photo of Crucial RAM sticks" max-width="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="crucial-ct4k16g4rfd4213.jpg" alt="Photo of Crucial RAM sticks" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 There seems to be a lot less informed choice for server memory. With consumer hardware, plenty of websites publish reviews and benchmarks of different RAM sticks, but I didn't see anything like that for server RAM.
 
@@ -130,7 +130,7 @@ I went with [Crucial CT4K16G4RFD4213 64 GB (4 x 16 GB)](https://www.newegg.com/c
 
 ### Storage
 
-{{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" max-width="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 I love M.2 SSDs, as they're small, perform outstandingly, and neatly tuck away in the motherboard without any cabling. Sadly, the MBD-X10DAL doesn't support the M.2 interface.
 
@@ -138,7 +138,7 @@ Instead, I stuck with traditional old SATA. I bought a [1 TB Samsung 860 EVO](ht
 
 ### Power
 
-{{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" max-width="200px" align="left" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" max-width="200px" align="left" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 Choosing a power supply unit (PSU) isn't that interesting, so I again chose mainly by trusted brand, the [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147).
 
@@ -148,13 +148,13 @@ The only other important feature to me was semi-modular cabling. In my last buil
 
 ### Fans
 
-{{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" max-width="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" max-width="200px" align="right" href="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 The dual-CPU build made cooling an unexpected challenge. The MBD-X10DAL doesn't leave much space between the two CPU sockets, so I looked carefully for fans thin enough to work side-by-side. A pair of [Cooler Master Hyper 212s](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) fit the bill.
 
 ### Case
 
-{{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" max-width="200px" align="left" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" max-width="200px" align="left" href="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
 My server sits inconspicuously in the corner of my office, so I didn't want a case with clear panels or flashy lights.
 
@@ -162,7 +162,7 @@ The [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design
 
 ### Graphics
 
-{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" max-width="200px" align="right" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" max-width="200px" align="right" href="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
 For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931) as a cheap, easy option.
 

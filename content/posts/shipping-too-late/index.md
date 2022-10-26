@@ -44,7 +44,7 @@ It was tempting to scrap everything in favor of a machine learning solution, but
 
 Then, it struck me: what if ingredient parsing _was_ the business? If this was a problem for me, then surely other developers struggled with it as well. Hopefully, some of them made money and would give some of said money to me if I solved their problem. Thus, the idea was born for [Zestful](https://zestfuldata.com/), my ingredient-parsing service.
 
-{{<img src="zestful-logo.png" alt="Zestful logo" caption="[Zestful](https://zestfuldata.com/), a recipe ingredient parsing service" hasBorder="True" linkUrl="https://zestfuldata.com/">}}
+{{<img src="zestful-logo.png" alt="Zestful logo" caption="[Zestful](https://zestfuldata.com/), a recipe ingredient parsing service" hasBorder="True" href="https://zestfuldata.com/">}}
 
 ## The MVP that wasn't
 

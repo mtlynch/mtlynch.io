@@ -280,7 +280,7 @@ How could I bridge the gap between these two different environments with incompa
 
 In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) that discussed combining paths from multiple filesystems:
 
-{{<img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) of `coverage` command" max-width="712px" hasBorder="True" linkUrl="https://coverage.readthedocs.io/en/latest/config.html#paths">}}
+{{<img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) of `coverage` command" max-width="712px" hasBorder="True" href="https://coverage.readthedocs.io/en/latest/config.html#paths">}}
 
 To use these options, I created the following `.coveragerc` file:
 
@@ -305,7 +305,7 @@ after_success:
 
 I put [my full solution](https://github.com/mtlynch/ingredient-phrase-tagger/pull/51) to the test. Finally, Coveralls received the results and [displayed my code coverage numbers](https://coveralls.io/jobs/39262596):
 
-{{<img src="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" caption="Coveralls finally shows code coverage information." max-width="697px" hasBorder="True" linkUrl="https://coveralls.io/jobs/39262596">}}
+{{<img src="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" caption="Coveralls finally shows code coverage information." max-width="697px" hasBorder="True" href="https://coveralls.io/jobs/39262596">}}
 
 ## I pronounce this library resurrected
 
@@ -337,7 +337,7 @@ The result was a service called [Zestful](https://zestfuldata.com). It offers fu
 
 If you'd like to see Zestful in action, check out the [live demo](https://zestfuldata.com/demo):
 
-{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max-width="800px" hasBorder="True" linkUrl="https://zestfuldata.com/demo">}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max-width="800px" hasBorder="True" href="https://zestfuldata.com/demo">}}
 
 If you're a developer and you work on software that handles recipe ingredients, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
 

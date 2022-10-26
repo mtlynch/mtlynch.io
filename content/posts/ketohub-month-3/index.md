@@ -39,7 +39,7 @@ Oh well! Now I have a logo, and I like it. I probably would have preferred havin
 
 I'm not a web developer, and I don't have a good eye for design. When I built the first version of KetoHub, the design was utilitarian with little attention to aesthetics.
 
-{{<img src="hwd-books.jpg" alt="Stack of Hello Web Design books" max-width="300px" linkUrl="https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/">}}
+{{<img src="hwd-books.jpg" alt="Stack of Hello Web Design books" max-width="300px" href="https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/">}}
 
 In December, I read the book [_Hello Web Design_](https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/) by Tracy Osborn. It's a quick read, written for people in exactly my situation. It doesn't get bogged down in design theory but instead provides simple, practical tips for achieving a successful web design.
 
