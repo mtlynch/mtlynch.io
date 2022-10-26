@@ -144,7 +144,7 @@ One of the most important lessons I learned last year was that pursuing the righ
 
 ### [Is It Keto](https://isitketo.org)
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" has-border="True" max-width="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" has-border="true" max-width="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet.
 
@@ -176,7 +176,7 @@ I tested a few landing pages for keto communities and apps, but only 0.1% of vis
 
 ### [WanderJest](https://wanderjest.com)
 
-{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot WanderJest website" has-border="True" max-width="600px" caption="[WanderJest](https://wanderjest.com) helps comedy fans find live comedy shows nearby.">}}
+{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot WanderJest website" has-border="true" max-width="600px" caption="[WanderJest](https://wanderjest.com) helps comedy fans find live comedy shows nearby.">}}
 
 WanderJest was a short-lived project I started at the beginning of 2020. I described it as "Bandsintown, but for comedy."
 
@@ -186,7 +186,7 @@ My plan was to make money through affiliate deals with theaters, but nobody ever
 
 ### [Portfolio Rebalancer](https://assetrebalancer.com/)
 
-{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" has-border="True" max-width="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
+{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" has-border="true" max-width="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
 
 My investment portfolio is a mix of stocks and bonds of different categories with a target percentage for each asset type. As prices fluctuate, the balance of my investments changes, so I have to move money around to get back to my target ratios. I do this a few times per year by tediously plugging numbers into a spreadsheet until everything looks right.
 

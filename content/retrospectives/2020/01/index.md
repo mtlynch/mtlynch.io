@@ -77,7 +77,7 @@ December was a huge month for Zestful. A fast-moving startup told me that Zestfu
 
 Last month, I [got all excited](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite) because I thought that rewriting the Zestful website as a static site would improve its SEO. Sadly, Google Search Console suggests that it had a negligible impact:
 
-{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." max-width="704px" has-border="True">}}
+{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." max-width="704px" has-border="true">}}
 
 Still, the enterprise customer approached me only a few days after I rewrote the site, so I can pretend to myself that the rewrite was responsible for ~$3.9k in additional revenue.
 
@@ -157,7 +157,7 @@ Finding shows was always a challenge for two reasons:
 
 I wished for an app like <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 
-{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" max-width="700px" has-border="True" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
+{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" max-width="700px" has-border="true" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
 
 Brian and Heather found this idea exciting. What's more, they saw that it energized _me_. "Look at the way you light up when you talk about that idea!" Heather said. "You're so much more excited about that than the sheet metal idea." Still, I was apprehensive. Most comedians earn very little, so how could a new business in this space earn enough to survive?
 
@@ -174,7 +174,7 @@ These options would make it easy for me to pivot to different strategies if one 
 
 After only five days of development, I had a minimum viable product (MVP) for my app, WanderJest:
 
-{{<img src="wanderjest.png" alt="Screenshot of WanderJest website" has-border="True" caption="My initial version of [WanderJest](https://wanderjest.com), an app for discovering local live comedy.">}}
+{{<img src="wanderjest.png" alt="Screenshot of WanderJest website" has-border="true" caption="My initial version of [WanderJest](https://wanderjest.com), an app for discovering local live comedy.">}}
 
 It's currently just a directory of shows and comedians performing in the Western Massachusetts area, but it's enough that people understand the idea and are excited about it.
 

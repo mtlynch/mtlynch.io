@@ -81,7 +81,7 @@ None of those changes made any difference.
 
 It was particularly discouraging when clicks remained low even after I changed the text on the purchase button to "Download PDF." At that point, a user might assume that it's a free download, and they _still_ weren't clicking.
 
-{{<img src="strip-price.jpg" alt="Before and after screenshots of removing price" caption="Removing price from download button" max-width="600px" has-border="True">}}
+{{<img src="strip-price.jpg" alt="Before and after screenshots of removing price" caption="Removing price from download button" max-width="600px" has-border="true">}}
 
 I'm sure there's a way to sell them successfully, but I spent 6+ weeks on it, and it felt like way too long. I had replaced a portion of AdSense ads with my own ads for the meal plans, but I would have made far more money from AdSense, so I got rid of my self-ads. I also took "Meal Plans" out of the site's main navigation bar and removed it from the homepage except for a mention in the site's blog.
 
@@ -93,7 +93,7 @@ Still, the Zestful website has dragged along as an Angular site. I desperately w
 
 Then, I looked at Google search results. For the query `parse ingredients`, Zestful came up on page three, which is basically invisible. Even more frustrating, page one featured a Zestful competitor, the only other company that exclusively offers ingredient parsing as a service.
 
-{{<img src="zestful-competitor.jpg" alt="Screenshot of Zestful competitor" caption="Competitor to Zestful that was outperforming it in search results" max-width="600px" has-border="True">}}
+{{<img src="zestful-competitor.jpg" alt="Screenshot of Zestful competitor" caption="Competitor to Zestful that was outperforming it in search results" max-width="600px" has-border="true">}}
 
 From testing the competing service, I could tell that they created it the same way that I created Zestful. They [wrapped an old open-source library in a Web UI](/resurrecting-1/). Except they didn't develop it further, fix any of the bugs, or add any of the features that I did.
 
@@ -107,11 +107,11 @@ I couldn't find any good examples of simple static page generation with Nuxt, bu
 
 Redesigning the UI was not the goal, but I had to reimplement a lot of the CSS from scratch since I also switched CSS frameworks from [Material Design](https://material.io/design/) to [Bootstrap](https://getbootstrap.com/). I've had a lot more experience with CSS since designing Zestful, so I took the opportunity to fix up a few small things that bothered me in the previous design:
 
-{{<img src="zestful-rewrite.jpg" alt="Screenshot of Zestful competitor" caption="Competitor to Zestful that outperformed it in search results" max-width="600px" has-border="True">}}
+{{<img src="zestful-rewrite.jpg" alt="Screenshot of Zestful competitor" caption="Competitor to Zestful that outperformed it in search results" max-width="600px" has-border="true">}}
 
 A few days later, I searched "parse ingredients" in Google and saw this:
 
-{{<img src="first-page.jpg" alt="Zestful on first page of Google results" caption="Zestful climbs to first page in Google results" max-width="500px" has-border="True">}}
+{{<img src="first-page.jpg" alt="Zestful on first page of Google results" caption="Zestful climbs to first page in Google results" max-width="500px" has-border="true">}}
 
 Whoo, first page! And I'm one position ahead of the competitor that inspired the rewrite.
 
@@ -169,7 +169,7 @@ In prospecting local businesses, I noticed that all of the small companies aroun
 
 I attended a Valley Venture Mentors event and met the owner of a machine shop. We talked about the available software options for machine shops, and they seem pretty bad. Apparently, one of the most popular products is an application called JobBOSS, which looks like an app that time traveled here from 1994. From watching their [product demos](https://www.youtube.com/watch?v=KlNFb2APQ60), the entire application seems to be just a thin UI over a SQL database.
 
-{{<img src="job-boss-quote.jpg" alt="Screenshot from JobBOSS" caption="Do machine shop workers really like maintaining databases?" max-width="800px" has-border="True">}}
+{{<img src="job-boss-quote.jpg" alt="Screenshot from JobBOSS" caption="Do machine shop workers really like maintaining databases?" max-width="800px" has-border="true">}}
 
 It seems fairly bloated and complex, so my hope is that I can find machine shops who would pay for a simpler version of JobBOSS that caters to a more narrow use case.
 
@@ -183,11 +183,11 @@ To close out, here are a couple of neat things I discovered this month:
 
 I often take screenshots of websites, but I struggle to capture all of the relevant information into a single screen. This is especially difficult when taking screenshots of mobile websites, where the viewport is tiny. Then, I noticed that Firefox's context menu has a "Take a Screenshot" item.
 
-{{<img src="ff-screenshot.jpg" alt="Take a screenshot feature in Firefox" caption="Firefox's amazing, built-in screenshot feature" max-width="600px" has-border="True">}}
+{{<img src="ff-screenshot.jpg" alt="Take a screenshot feature in Firefox" caption="Firefox's amazing, built-in screenshot feature" max-width="600px" has-border="true">}}
 
 It lets you save the entire page in two clicks:
 
-{{<img src="ff-screenshot-select.jpg" alt="Take a screenshot feature in Firefox" caption="Firefox allows you to screenshot an entire page, not just the visible portion" max-width="600px" has-border="True">}}
+{{<img src="ff-screenshot-select.jpg" alt="Take a screenshot feature in Firefox" caption="Firefox allows you to screenshot an entire page, not just the visible portion" max-width="600px" has-border="true">}}
 
 I can take a screenshot of the [entire Is It Keto homepage](/retrospectives/2019/12/isitketo-mobile.jpg) on mobile without stitching together a bunch of separate screenshots. Really handy feature!
 

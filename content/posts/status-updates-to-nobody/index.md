@@ -59,7 +59,7 @@ In early 2018, [I left Google](/why-i-quit-google/). Without access to my belove
 
 There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for _managers_. They promise pretty graphs and dashboards so that the manager feels like they have their finger on the pulse of the team.
 
-{{<img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." max-width="475px" has-border="True">}}
+{{<img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." max-width="475px" has-border="true">}}
 
 Everyone enjoys cool visualizations, but generating them requires the employees to enter information in whatever rigid format the tool expects. Team members have to do bookkeeping for the sake of bookkeeping and concoct numbers to represent how "complete" each task is.
 
@@ -73,7 +73,7 @@ One day, a profound and obvious realization struck me &mdash; Snippets is just a
 
 I immediately created a new Google Doc and wrote my update for the week:
 
-{{<img src="docs-snippets.jpg" alt="Screenshot of my first Snippet in Google Docs" caption="Recording weekly status updates in Google Docs" max-width="500px" has-border="True">}}
+{{<img src="docs-snippets.jpg" alt="Screenshot of my first Snippet in Google Docs" caption="Recording weekly status updates in Google Docs" max-width="500px" has-border="true">}}
 
 I recorded my status updates in that private Google Doc every week for a year. Nobody else saw it, but that was fine. It gave me back the habit I was missing. Each week ended with a reminder of how much I accomplished, and it felt great.
 

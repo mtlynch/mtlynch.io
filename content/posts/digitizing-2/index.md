@@ -77,7 +77,7 @@ When I was using ClipBucket, I solved this problem using [gcsfuse](https://githu
 
 The difference was that ClipBucket ran in a full virtual machine, whereas MediaGoblin ran in a Docker container. Mounting cloud storage files under Docker turned out to be far more complicated. I spent dozens of hours solving all the gotchas and wrote a [whole blog post](/retrofit-docker-gcs/) about it.
 
-{{<img src="mg-gcs-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + gcsfuse" caption="Initial architecture for integrating MediaGoblin with Google Cloud Storage, documented in my [2018 blog post](/retrofit-docker-gcs/)" max-width="500px" has-border="True">}}
+{{<img src="mg-gcs-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + gcsfuse" caption="Initial architecture for integrating MediaGoblin with Google Cloud Storage, documented in my [2018 blog post](/retrofit-docker-gcs/)" max-width="500px" has-border="true">}}
 
 After weeks of coercing all the components to play nicely together, it worked. Without making any changes to MediaGoblin's code, I was able to trick it into reading and writing its media files to Google Cloud Storage.
 
@@ -85,7 +85,7 @@ The only problem was that it made MediaGoblin unusably slow. Loading the video t
 
 The underlying issue was that video and image files followed a long, circuitous route to the user. They had to go from Google Cloud Storage through gcsfuse to MediaGoblin to Nginx and then finally to the user's browser. gcsfuse was a major bottleneck, as it's not optimized for speed. It warns about its poor latency right [on the project homepage](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync):
 
-{{<img src="gcsfuse-latency.png" alt="Latency warning from gcsfuse Github repository" caption="Warnings in gcsfuse documentation [about slow performance](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync)" max-width="700px" has-border="True">}}
+{{<img src="gcsfuse-latency.png" alt="Latency warning from gcsfuse Github repository" caption="Warnings in gcsfuse documentation [about slow performance](https://github.com/GoogleCloudPlatform/gcsfuse#latency-and-rsync)" max-width="700px" has-border="true">}}
 
 Ideally, the browser would fetch files directly from Google Cloud Storage, bypassing all the intermediate layers. How could I do that without delving into MediaGoblin's codebase and adding complicated integration logic for Google Cloud Storage?
 
@@ -124,7 +124,7 @@ Nginx modifies the response to look like this:
 
 Here's how it all fits together:
 
-{{<img src="final-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + nginx rewriting responses to GCS" caption="Nginx rewrites responses from MediaGoblin so that clients can retrieve media files directly from Google Cloud Storage." max-width="600px" has-border="True">}}
+{{<img src="final-architecture.jpg" alt="Architecture diagram of MediaGoblin + Docker + nginx rewriting responses to GCS" caption="Nginx rewrites responses from MediaGoblin so that clients can retrieve media files directly from Google Cloud Storage." max-width="600px" has-border="true">}}
 
 The neat part of my solution was that it required no modification to MediaGoblin's code. A two-line Nginx directive seamlessly integrated MediaGoblin and Google Cloud Storage even though the two services had zero awareness of one another.
 
@@ -158,7 +158,7 @@ For reasons I no longer remember, Cloud Run didn't work with my MediaGoblin imag
 
 With a free app server, my only cost is data storage. Google's standard regional storage is 2.3 cents/GB, and the video collection takes up 33 GB, so I only pay $0.77/month.
 
-{{<img src="gcs-bill.png" alt="Bill for $0.77 from Google Cloud Platform" caption="The cost of this entire solution is only $0.77 per month." has-border="True">}}
+{{<img src="gcs-bill.png" alt="Bill for $0.77 from Google Cloud Platform" caption="The cost of this entire solution is only $0.77 per month." has-border="true">}}
 
 ## Tips for anyone about to try this
 
