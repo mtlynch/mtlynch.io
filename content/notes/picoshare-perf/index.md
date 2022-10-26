@@ -50,7 +50,7 @@ I only saw PicoShare crash every few days, so my first step was to find a way to
 
 I managed to reproduce the error by deploying PicoShare on a [Fly](https://fly.io) instance with only 256 MB of RAM and then uploading large files. I used [high-resolution versions](https://mirror.clarkson.edu/blender/demo/movies/BBB/) of the short film [_Big Buck Bunny_](https://peach.blender.org/) with sizes ranging from 269 MB to 618 MB.
 
-{{<img src="bbb.jpg" alt="Still from Big Buck Bunny short film" maxWidth="600px" caption="I used the short film [_Big Buck Bunny_](https://peach.blender.org/) as my test file as it was large enough to test big uploads.">}}
+{{<img src="bbb.jpg" alt="Still from Big Buck Bunny short film" max-width="600px" caption="I used the short film [_Big Buck Bunny_](https://peach.blender.org/) as my test file as it was large enough to test big uploads.">}}
 
 Uploading two copies of the 618 MB version in parallel consistently caused PicoShare to die with an out of memory error within a minute or so.
 
@@ -68,7 +68,7 @@ _ "net/http/pprof"
 
 Now, when you run your app, there will be a `/debug/pprof/` route with lots of useful debugging information.
 
-{{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" maxWidth="700px">}}
+{{<img src="debug-pprof.png" alt="Debug interface at http://ps:4001/debug/pprof" max-width="700px">}}
 
 I was surprised at how easy this was to add. There's a lot of interesting data in this web interface, but the one that I used was `heap`. To use it, I uploaded a large file to PicoShare and then ran this the following command:
 
@@ -82,13 +82,13 @@ go tool pprof \
 
 That popped up a web interface and rendered this graph:
 
-{{<img src="pprof1.png" alt="Graph showing all memory allocations" maxWidth="700px" hasBorder="true">}}
+{{<img src="pprof1.png" alt="Graph showing all memory allocations" max-width="700px" hasBorder="true">}}
 
 At the bottom, you can see a large red block labeled `bytes makeSlice 63.99 MB`, meaning that 64 MB of PicoShare's allocated RAM came from Go's `makeSlice` function.
 
 `makeSlice` is in the Go standard library, not my code. To find what code in PicoShare caused this memory allocation, I traced up the graph until I found a PicoShare function:
 
-{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" maxWidth="300px" hasBorder="true">}}
+{{<img src="pprof2.png" alt="Zoom in on graph showing call from fileFromRequest to ParseMultipartForm" max-width="300px" hasBorder="true">}}
 
 The last PicoShare function in this chain is [`handlers.fileFromRequest`](https://github.com/mtlynch/picoshare/blob/1.1.7/handlers/upload.go#L242), which calls the Go standard library function [`*Request.ParseMultipartForm`](https://pkg.go.dev/net/http@go1.18.4#Request.ParseMultipartForm). That function is responsible for parsing multipart HTTP data, which is how PicoShare accepts file uploads.
 
@@ -106,7 +106,7 @@ Even though we were specifying a limit of 32 MB, Go was allocating 64 MB of RAM.
 
 Ben tried reducing the `maxMemory` parameter to `1 << 20` (1 MB), and the RAM usage from `ParseMultipartForm` dropped to only 2.5 MB:
 
-{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" maxWidth="400px" hasBorder="true">}}
+{{<img src="pprof3.png" alt="Graph showing 2572.91kB in makeSlice after the fix" max-width="400px" hasBorder="true">}}
 
 This was a huge reduction in memory, so I thought for sure Ben had solved it.
 
@@ -238,7 +238,7 @@ At this point, I was measuring RAM usage from three different angles that all di
 - Fly's RAM metrics from the VM host
 
 {{<gallery caption="My different tools for measuring RAM usage disagreed with one another">}}
-{{<img src="htop-ram.png" maxWidth="600px" alt="Screenshot showing htop reporting 154 MB of RAM usage and Go reporting 148.62 MB of RAM">}}
+{{<img src="htop-ram.png" max-width="600px" alt="Screenshot showing htop reporting 154 MB of RAM usage and Go reporting 148.62 MB of RAM">}}
 {{<img src="fly-ram-count.png" alt="Screenshot of Fly reporting 217.4 of RAM usage">}}
 {{</gallery>}}
 
@@ -264,7 +264,7 @@ Given what Andrew Ayer said about RAM bloat, I revisited PicoShare's SQLite tran
 
 I tried running the transactionless implementation again. Sure enough, RAM bloated but PicoShare kept running. I uploaded three 618 MB files in parallel, and every upload succeeded with PicoShare continuing to serve HTTP requests.
 
-{{<img src="success.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" maxWidth="700px">}}
+{{<img src="success.png" alt="Screenshot of three parallel PicoShare uploads succeeding without crashes" max-width="700px">}}
 
 It worked! I'd finally gotten to the bottom of the performance issues.
 
@@ -272,7 +272,7 @@ Or so I thought...
 
 I left my server running overnight, and when I checked it the next morning, it had failed with the same out of memory crash.
 
-{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" maxWidth="700px">}}
+{{<img src="oom-kill-overnight.png" alt="Screenshot of log showing 'Process appears to have been OOM killed!'" max-width="700px">}}
 
 ### Eliminating SQLite vacuuming
 
@@ -282,7 +282,7 @@ Nobody was using the PicoShare server when it crashed, but it did line up with P
 
 I tested running the `VACUUM` command on my server and saw that it did indeed reduce the size of my main `.db` file, but it was increasing the size of the [SQLite write-ahead log](https://sqlite.org/wal.html).
 
-{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" maxWidth="250px">}}
+{{<img src="vacuum-bloat.png" alt="store.db-wal increasing in size by 310 MB after each call to sqlite3 /data/store.db 'VACUUM'" max-width="250px">}}
 
 At this point, Ben asked me why I need to `VACUUM` at all:
 
@@ -306,7 +306,7 @@ With `VACUUM` disabled by default and my other performance fixes in place, PicoS
 
 I ran PicoShare for 24 hours without any crashes on a Fly VM with just 256 MB of RAM.
 
-{{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" maxWidth="700px" hasBorder="true">}}
+{{<img src="256-mb-ram.png" alt="Fly dashboard showing PicoShare has 256 RAM" max-width="700px" hasBorder="true">}}
 
 {{<img src="cronitor-checks.png" alt="Uptime checks showing 100% availability" caption="100% uptime over the last 24 hours">}}
 

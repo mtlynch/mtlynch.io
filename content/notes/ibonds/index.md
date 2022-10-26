@@ -36,7 +36,7 @@ Currently, inflation is very high, so the fixed rate is 0%. If you buy iBonds no
 
 The Treasury publishes [an (enormous) table](https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf) of historical fixed + inflation rates for all iBonds ever sold. It's helpful in understanding how the fixed rate and inflation rate combine and how iBonds have performed historically.
 
-{{<img src="ibond-historical-rates.png" maxWidth="800px" linkUrl="https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf" caption="The US Treasury publishes [historical rates of iBond returns](https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf)." hasBorder="true">}}
+{{<img src="ibond-historical-rates.png" max-width="800px" linkUrl="https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf" caption="The US Treasury publishes [historical rates of iBond returns](https://www.treasurydirect.gov/files/savings-bonds/i-bond-rate-chart.pdf)." hasBorder="true">}}
 
 ## Pros
 
@@ -52,7 +52,7 @@ Vanguard's total bond market index is [down 16%](https://finance.yahoo.com/quote
 
 Like other Treasury bonds, iBonds are backed by "the full faith and credit" of the US treasury. In other words, the US Treasury would have to default on its debt in order for you to lose the principal you invested in the bond. Historically, the US has never defaulted on its debt.
 
-{{<img src="pays-his-debts.jpg" maxWidth="700px" alt="Screenshot from season 1, episode 5 of Game of Thrones with closed caption of 'Everyone knows a \[US Treasury\] always pays his debts.">}}
+{{<img src="pays-his-debts.jpg" max-width="700px" alt="Screenshot from season 1, episode 5 of Game of Thrones with closed caption of 'Everyone knows a \[US Treasury\] always pays his debts.">}}
 
 If you were to buy a corporate bond, one of the risks you weigh is whether that corporation goes bankrupt and can't pay back the principal you invested in the bond. When you buy a bond from the US Treasury, the risk of default is extremely low.
 

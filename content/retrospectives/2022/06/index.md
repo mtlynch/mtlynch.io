@@ -81,18 +81,18 @@ I'm going to write a longer blog post about the experience, but the main mistake
 But let's take a look at the results. The project involved redesigning the three pages in the checkout flow: the landing page, the product page, and the shopping cart page:
 
 {{<gallery caption="Before and after landing page redesign">}}
-{{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
-{{<img src="landing-after.png" alt="Screenshot of new landing page" maxWidth="260px" hasBorder="true">}}
+{{<img src="landing-before.png" alt="Screenshot of old landing page" max-width="300px" hasBorder="true">}}
+{{<img src="landing-after.png" alt="Screenshot of new landing page" max-width="260px" hasBorder="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after product page redesign">}}
-{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" maxWidth="300px" hasBorder="true">}}
-{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" maxWidth="220px" hasBorder="true">}}
+{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" max-width="300px" hasBorder="true">}}
+{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" max-width="220px" hasBorder="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after shopping cart page redesign">}}
-{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" maxWidth="400px" hasBorder="true">}}
-{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" maxWidth="340px" hasBorder="true">}}
+{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" max-width="400px" hasBorder="true">}}
+{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" max-width="340px" hasBorder="true">}}
 {{</gallery>}}
 
 Money aside, I'm happy with the results. I think the new design is inarguably better than what I had before. The new logo and images make the project look more professional and distinctive.
@@ -184,8 +184,8 @@ Firestore slows me down because of how hard it is to make schema changes. The on
 I'm now working on reimplementing WanderJest to replace Vue with Go templates and Firestore with SQLite.
 
 {{<gallery caption="Current Vue-based WanderJest site (left) vs. in-progress reimplementation of WanderJest with Go HTML templates (right)">}}
-{{<img src="wanderjest-before.png" alt="Screnshot of WanderJest live site" maxWidth="450px" hasBorder="true">}}
-{{<img src="wanderjest-after.png" alt="Screenshot of new Go-based WanderJest site" maxWidth="467px" hasBorder="true">}}
+{{<img src="wanderjest-before.png" alt="Screnshot of WanderJest live site" max-width="450px" hasBorder="true">}}
+{{<img src="wanderjest-after.png" alt="Screenshot of new Go-based WanderJest site" max-width="467px" hasBorder="true">}}
 {{</gallery>}}
 
 Writing a frontend in Go is easier than I expected. The up-front experience isn't as nice as Vue. I'd love conditional rendering or reactive properties, and you don't get that in vanilla JS. But overall, rendering a page is so much simpler with Go.

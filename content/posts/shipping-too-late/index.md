@@ -34,11 +34,11 @@ The idea came to me while I was staring at the ugliest code I had ever written. 
 
 Given a string such as `"2 cups finely chopped red onions"`, the app had to figure out that `2` was the quantity, `cups` was the unit of measure, and so on:
 
-{{<img src="parse-example.png" alt="Visualization of ingredient parse result" caption="Breaking an ingredient into its component parts" maxWidth="600px" hasBorder="True">}}
+{{<img src="parse-example.png" alt="Visualization of ingredient parse result" caption="Breaking an ingredient into its component parts" max-width="600px" hasBorder="True">}}
 
 Parsing was simple at first but grew more fragile and complex as new edge cases arose. Over time, the logic eroded into a maddening labyrinth of regular expressions &mdash; instructions for processing text that are both powerful and famously difficult to read.
 
-{{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my regular expression code" maxWidth="450px" hasBorder="True">}}
+{{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my regular expression code" max-width="450px" hasBorder="True">}}
 
 It was tempting to scrap everything in favor of a machine learning solution, but that would be an enormous undertaking. I couldn't invest months of development into a minor feature on a website that made no money.
 
@@ -54,7 +54,7 @@ One of the most familiar stories of failure is of the founder so confident in th
 
 With Zestful, I _did_ build an MVP. I even defined the acceptance criteria up-front to prevent myself from disappearing down a rabbit hole of endless tweaks and improvements.
 
-{{<img src="acceptance-criteria.png" alt="Acceptance criteria document" caption="Ingredient parser acceptance criteria" maxWidth="300px" hasBorder="True">}}
+{{<img src="acceptance-criteria.png" alt="Acceptance criteria document" caption="Ingredient parser acceptance criteria" max-width="300px" hasBorder="True">}}
 
 After about 120 hours of development work, my working prototype satisfied the acceptance criteria.
 
@@ -104,7 +104,7 @@ One example was my [Terms of Use](https://zestfuldata.com/terms-of-service). Wha
 
 For each item on my task list, I asked myself, "What happens if I launch without this?" After treating each task with the same ruthless skepticism as my Terms of Use, my true launch checklist emerged. Less than 24 hours later, I [published Zestful to RapidAPI](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis), an API marketplace. My service was live!
 
-{{<img src="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" caption="[Zestful listing](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis) on the RapidAPI marketplace" maxWidth="800px" hasBorder="True">}}
+{{<img src="rapidapi-listing.png" alt="Screenshot of RapidAPI listing" caption="[Zestful listing](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis) on the RapidAPI marketplace" max-width="800px" hasBorder="True">}}
 
 Now was the moment of truth. My service was ready to accept payment from real customers. I just needed to convince them to buy it.
 
@@ -132,7 +132,7 @@ This wasn't at all like working in sales. That job required me to sell fiber Int
 
 Now, I was selling something I created. What's more, it was _software_ I created. Writing software is such a strong part of my identity. There's nothing else I do better or take more pride in. If I showed my product to a customer, they might think, “This isn’t very good. You’re trying to sell it, so you must think it’s good. Therefore, **you** are not very good.”
 
-{{<img src="rejection.jpg" alt="Fear of rejection cartoon" maxWidth="800px">}}
+{{<img src="rejection.jpg" alt="Fear of rejection cartoon" max-width="800px">}}
 
 ## The harsh reality
 

@@ -39,7 +39,7 @@ It's hard to say because I wasn't collecting fine-grained metrics in January, bu
 
 ### Amazon Affiliate Stats
 
-{{<img src="amazon-earnings-2019-02.jpg" alt="Amazon Earnings - Feb. 2019" caption="Amazon affiliate earnings - February 2019" maxWidth="800px">}}
+{{<img src="amazon-earnings-2019-02.jpg" alt="Amazon Earnings - Feb. 2019" caption="Amazon affiliate earnings - February 2019" max-width="800px">}}
 
 | Metric         | January 2019 | February 2019 | Change                                  |
 | -------------- | ------------ | ------------- | --------------------------------------- |
@@ -51,7 +51,7 @@ Things looked good at the start of the month. I mentioned Is It Keto in [an arti
 
 I use a single Amazon account for all of my projects, but each of my websites has its own unique tracking ID so that I can see revenue on a per-site basis. When you create an Amazon Affiliate link, it auto-populates the tracking ID with whatever you used last. I had been generating lots of links for Is It Keto, so I didn't notice that when I generated a link for [_Four Hour Work Week_](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) on my blog, I forgot to change the tracking ID.
 
-{{<img src="amazon-affiliate-screwup.jpg" alt="Generating an Amazon Affiliate link" caption="I forgot to change my tracking ID, leading to accounting confusion for Is It Keto" maxWidth="800px" hasBorder="True">}}
+{{<img src="amazon-affiliate-screwup.jpg" alt="Generating an Amazon Affiliate link" caption="I forgot to change my tracking ID, leading to accounting confusion for Is It Keto" max-width="800px" hasBorder="True">}}
 
 This meant that ~50 affiliate clicks through my blog were accidentally mixed in with Is It Keto before I [fixed the issue](https://github.com/mtlynch/mtlynch.io/pull/362) on Feb. 6th. I can't track which link generated what revenue, but I know $28.68 in revenue for the month came from that one-week period. My true revenue might be as little as $2.78 or as high as $31.46. I'm going to take an educated guess and say that the mistake bumped Is It Keto's earnings by about $20, so the real revenue was probably about $11.
 
@@ -61,7 +61,7 @@ In any case, even an optimistic revenue of $30 is still far below my target of $
 
 ### Visitor Stats
 
-{{<img src="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - March 2018 through February 2019" maxWidth="800px">}}
+{{<img src="ga-2019-02-trailing-12.jpg" alt="Google Analytics screenshot" caption="User sessions - March 2018 through February 2019" max-width="800px">}}
 
 | Metric                        | January 2019 | February 2019 | Change                                 |
 | ----------------------------- | ------------ | ------------- | -------------------------------------- |
@@ -75,7 +75,7 @@ Visitor growth flattened out in February, although it's not as flat as it seems.
 
 Many people begin diets as part of their new year's resolution but then lose interest a few weeks later. According to Google Trends, search interest for "keto" dropped by 25% between January and February:
 
-{{<img src="gtrends-keto.jpg" alt="Google Analytics screenshot" caption="Search interest over for keyword 'keto' between January and February 2018" maxWidth="563px">}}
+{{<img src="gtrends-keto.jpg" alt="Google Analytics screenshot" caption="Search interest over for keyword 'keto' between January and February 2018" max-width="563px">}}
 
 In addition, February is just a shorter month than January by about 10%.
 
@@ -85,7 +85,7 @@ Referrals from Facebook shrank to almost nothing, as I stopped promoting the sit
 
 ### SEO Stats
 
-{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - Dec. 2018 to Feb. 2019" maxWidth="800px">}}
+{{<img src="google-search-console.jpg" alt="Google Search Console screenshot" caption="Google Search Console - Dec. 2018 to Feb. 2019" max-width="800px">}}
 
 | Metric                            | January 2019 | February 2019 | Change                                 |
 | --------------------------------- | ------------ | ------------- | -------------------------------------- |
@@ -151,13 +151,13 @@ Is It Keto doesn't make it easy for users to browse around the full list of arti
 
 Now that the site has over 160 foods, I'm thinking about how to make the pages more discoverable. The obvious option is to allow users to browse by category (e.g., "vegetables," "desserts"). But it would take a week or more of dev time to implement a category system and associated pages for displaying them. As a quicker solution, I added a small box at the end of each article labeled "Other Keto Foods You May Enjoy":
 
-{{<img src="other-foods.jpg" alt="Screenshot of Other Foods widget on Is It Keto" caption="Other Foods section of Is It Keto" maxWidth="800px" hasBorder="True">}}
+{{<img src="other-foods.jpg" alt="Screenshot of Other Foods widget on Is It Keto" caption="Other Foods section of Is It Keto" max-width="800px" hasBorder="True">}}
 
 The box displays three random keto foods. Well, not completely random. It randomly samples the foods from among the keto foods where I have a link to buy the product on Amazon.
 
 I can't tell if this made any real difference. I implemented the change on Feb. 11th, but any change that occurred is still within the noise of my metrics:
 
-{{<img src="pages-per-session.jpg" alt="Google Analytics pages per session" caption="Pages per session before and after 'Other Foods' section" maxWidth="783px">}}
+{{<img src="pages-per-session.jpg" alt="Google Analytics pages per session" caption="Pages per session before and after 'Other Foods' section" max-width="783px">}}
 
 ### My hail mary: data visualizations
 
@@ -165,7 +165,7 @@ Is It Keto's biggest limiting factor is its domain authority, which continues to
 
 My plan is to write blog posts on Is It Keto using recipe data from [KetoHub](https://ketohub.io) to make interesting visualizations about trends in keto. For example, here's a rough draft of a bubble cloud I made showing the most popular ingredients in over 4,500 different keto recipes:
 
-{{<img src="ingredients-rough.jpg" alt="Bubble cloud  of ingredient frequency" caption="Ingredient frequency in 4,500 keto recipes from the most popular keto websites" maxWidth="600px">}}
+{{<img src="ingredients-rough.jpg" alt="Bubble cloud  of ingredient frequency" caption="Ingredient frequency in 4,500 keto recipes from the most popular keto websites" max-width="600px">}}
 
 It's a longshot because keto websites don't often link to other keto sites, but it's the best idea I can come up with that I can complete in under one month. If I can produce interesting visualizations and get other high-ranking sites to link to my blog posts, then I'll increase the site's domain authority and drastically increase site traffic.
 

@@ -34,7 +34,7 @@ If I compare by month, the blog grew by more than 20x month over month, and by m
 
 ## What changed?
 
-{{<img src="editing-job-post.png" alt="Job posting for editing position" maxWidth="398px" align="right">}}
+{{<img src="editing-job-post.png" alt="Job posting for editing position" max-width="398px" align="right">}}
 
 Just before I went to bed on May 13, 2017, I posted a job for a blog editor on Upwork, a site I use regularly for hiring freelancers. Not a permanent position, just a one-time gig to read through my already posted articles, identify weak patterns in my writing, and suggest improvements.
 
@@ -42,7 +42,7 @@ When I woke up the next morning, I had already received applications from 10 dif
 
 Some of the matches were... not so strong. The lowest bidder, at $8/hr, told me she was, "well-equipped with knowledge how to teach writing." Another freelancer mentioned in her cover letter that, "editing and writing are [her] forte's [sic]."
 
-{{<img src="samantha-profile.png" alt="Job posting for editing position" maxWidth="260px" align="left">}}
+{{<img src="samantha-profile.png" alt="Job posting for editing position" max-width="260px" align="left">}}
 
 The strongest applicant was an editor named [Samantha Mason](https://www.samanthamasonfreelancer.com). At $55/hr, she was almost twice as expensive as the next highest bidder. But her response was the only one that showed that she had actually read any of my writing. In her cover letter, she pointed out that I had a habit of diluting my sentences with helper verbs. "As you **can see** in the graph below," instead of simply, "As you **see** in the graph below."
 
@@ -62,7 +62,7 @@ I felt that my writing was pretty good but definitely had room for improvement. 
 
 Beyond my blog, investing in my writing would pay dividends in many aspects of my life. Writing is a highly transferable skill, much like public speaking, time management, or knife juggling. Techniques I learned to better my blog writing would likely carry over into design documents I write at work or even emails I send to friends.
 
-{{<img src="colbert-eyebrow-raise.jpg" alt="Colbert with eyebrow raised" caption="&ldquo;Your _editor_, you say?&rdquo;" maxWidth="230px" align="right">}}
+{{<img src="colbert-eyebrow-raise.jpg" alt="Colbert with eyebrow raised" caption="&ldquo;Your _editor_, you say?&rdquo;" max-width="230px" align="right">}}
 
 My other reason for hiring an editor was the most important: to give my friends, family, and co-workers a misleadingly grandiose perception of my blog. Before, when I told someone that I wrote a new blog post about [using Selenium to test Ansible roles](/testing-ansible-selenium/), they nodded politely and changed the subject. But when I started saying things like, "I'm rewriting my new post because my editor thinks that the introduction is too weak," people became intrigued. "Your _editor_?"
 

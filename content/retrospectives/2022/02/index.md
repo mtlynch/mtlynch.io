@@ -95,7 +95,7 @@ Coordinating changes is one of the biggest places where I spend my time, and it'
 
 A recent example of change coordination involved making an adjustment to the Voyager 2's cases. TinyPilot's EU distributor emailed me to say that on about 10% of his Voyager 2 builds, the USB-C ports came out misaligned so badly that he couldn't plug in USB-C cables.
 
-{{<img src="port-skew.jpg" maxWidth="600px" alt="Photo of USB-C ports on Voyager 2 skewing right" caption="TinyPilot's EU distributor reported that he saw the USB-C ports skewing within the case on some builds.">}}
+{{<img src="port-skew.jpg" max-width="600px" alt="Photo of USB-C ports on Voyager 2 skewing right" caption="TinyPilot's EU distributor reported that he saw the USB-C ports skewing within the case on some builds.">}}
 
 This was the sequence to get it sorted out:
 

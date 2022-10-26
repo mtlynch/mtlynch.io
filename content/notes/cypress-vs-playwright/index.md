@@ -5,7 +5,7 @@ date: 2022-10-25T00:00:00-04:00
 
 [Cypress](https://cypress.io) is an open-source tool for testing web applications end-to-end. I first saw Gleb Bahmutov [demo Cypress at a 2018 web dev meetup](https://youtu.be/wApmbgPGmqQ) in New York, and I was blown away.
 
-{{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" maxWidth="600px">}}
+{{<img src="gleb-demo.jpg" caption="I've been using Cypress since I saw it [demoed at a dev meetup](https://youtu.be/wApmbgPGmqQ) in 2018." alt="Screenshot of Cypress live demo" max-width="600px">}}
 
 Before discovering Cypress, I had begrudgingly used [Selenium](https://www.selenium.dev/). Cypress was a refreshing leap forward, as it offered elegant solutions to tons of pain points that made Selenium impractical to use.
 
@@ -329,7 +329,7 @@ In contrast, Playwright has just [603 open bugs](https://github.com/microsoft/pl
 
 Playwright offers [an official VS Code plugin](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which gives you context-aware auto-complete. It's something I never realized I'd been missing from Cypress until I saw it in Playwright:
 
-{{<img src="playwright-auto-complete.png" maxWidth="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete.">}}
+{{<img src="playwright-auto-complete.png" max-width="800px" alt="Autocomplete options in VS Code for Playwright APIs" caption="Playwright's VS Code plugin offers context-aware auto-complete.">}}
 
 In Cypress, there are a small number of functions, and you exercise different functionality by passing special string values. It's hard for IDEs to help with those semantics, but Playwright's list of explicit TypeScript functions make it easier for the IDE to help you out. There are third-party VS Code plugins for Cypress but nothing the Cypress team officially supports.
 
@@ -385,7 +385,7 @@ If this were a movie, Cypress would be the scrappy underdog you can't help but r
 
 When a Cypress test fails, it screenshots your app at the point of failure and saves the image to disk. It's easy to configure your CI platform to keep these images as test artifacts for easy debugging. Similarly, Cypress lets you save videos of each of your tests that you can also publish as CI test artifacts.
 
-{{<img src="circleci-resources.png" maxWidth="600px" alt="Screenshot of Cypress video files in CircleCI dashboard's artifacts tab" hasBorder="true" caption="Cypress produces test artifacts that are easy to view as CI artifacts">}}
+{{<img src="circleci-resources.png" max-width="600px" alt="Screenshot of Cypress video files in CircleCI dashboard's artifacts tab" hasBorder="true" caption="Cypress produces test artifacts that are easy to view as CI artifacts">}}
 
 Playwright produces a more complicated set of test artifacts. Instead of simple images and videos, Playwright generates a static web app for viewing all the test artifacts.
 

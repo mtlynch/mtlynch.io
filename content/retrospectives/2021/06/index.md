@@ -100,7 +100,7 @@ That was a helpful wake-up call. I knew my profits were low, but it still felt l
 
 Based on Mike's advice, I took a closer look at my expenses. I haven't done my bookkeeping for May yet, so I'm using April as an example.
 
-{{<img src="pie-chart.png" maxWidth="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
+{{<img src="pie-chart.png" max-width="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
 
 | Category                          | Total      |
 | --------------------------------- | ---------- |

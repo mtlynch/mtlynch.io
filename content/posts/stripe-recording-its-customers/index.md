@@ -127,11 +127,11 @@ https://m.stripe.com/4
 
 Instead of finding a bug in my code, I discovered dozens of posts from other developers surprised to see this behavior in their apps. The reports go [all the way back to 2017](https://stackoverflow.com/q/45718026/90388).
 
-{{<img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" maxWidth="800px" hasBorder="true" caption="Developers have been posting on StackOverflow and Github about Stripe's tracking behavior for years">}}
+{{<img src="stripe-reports.png" alt="Collage of previous users reports about this behavior" max-width="800px" hasBorder="true" caption="Developers have been posting on StackOverflow and Github about Stripe's tracking behavior for years">}}
 
 In one of the issue threads on Github, a Stripe employee [suggested that this behavior was unintentional](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443) and Stripe would look for a fix:
 
-{{<img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" maxWidth="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), a Stripe employee suggests that Stripe.js should only send data when the app calls the library and only on pages where the user submits payment information.">}}
+{{<img src="asolove-comment.png" alt="Screenshot of Adam Solove's comment on Github" hasBorder="True" max-width="754px" caption="In a [Github comment](https://github.com/stripe/react-stripe-elements/issues/99#issuecomment-528987443), a Stripe employee suggests that Stripe.js should only send data when the app calls the library and only on pages where the user submits payment information.">}}
 
 That was 7 months ago, and there has been no follow up from Stripe on that thread or anywhere else I could find.
 
@@ -251,7 +251,7 @@ The previous two steps are sufficient to prevent Stripe's tracking. For addition
 
 Here's what it looks like for my app:
 
-{{<img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" maxWidth="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page.">}}
+{{<img src="stripe-csp.png" alt="Screenshot of CSP headers on my payment page vs. a normla page" max-width="815px" caption="[Portfolio Rebalancer](https://assetrebalancer.com) uses per-page [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to prevent Stripe from loading anywhere in the app except the payment page.">}}
 
 It's a bit tricky to implement per-page CSP in a single-page app because the browser, by default, won't query the server for new policies when the user navigates to a new page. To force a policy refresh, I use Vue's [`beforeRouteEnter`](https://router.vuejs.org/guide/advanced/navigation-guards.html#in-component-guards) guard on my payment page to force a new HTTP request when the page loads.
 

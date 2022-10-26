@@ -56,7 +56,7 @@ I wrote an outline that feels right to me, but I haven't yet collected feedback 
 
 TinyPilot has its first official office space! It's a 15-minute walk from my house, so it's a great location. The lease started on May 1st, and I'm in the process of moving operations there.
 
-{{<img src="move-in-day.jpg" maxWidth="700px" alt="Photo of TinyPilot's office on move-in day" caption="Day one at the new office (it's much tidier now)">}}
+{{<img src="move-in-day.jpg" max-width="700px" alt="Photo of TinyPilot's office on move-in day" caption="Day one at the new office (it's much tidier now)">}}
 
 While I still primarily work from home, I'm finding it more fun than I expected to have a real office. My house was increasingly becoming a TinyPilot warehouse, so it was a relief to move everything into the office and gain back two full cabinets and a large closet.
 
@@ -64,7 +64,7 @@ Another part of the new office that I didn't expect to enjoy so much was choosin
 
 ### Door lock: Yale Assure Lever
 
-{{<img src="smart-lock.jpg" maxWidth="600px" alt="Photo of smart lock on office door">}}
+{{<img src="smart-lock.jpg" max-width="600px" alt="Photo of smart lock on office door">}}
 
 The office came with a normal lockable door handle, but I wanted a better way of handling temporary access. Also, if an employee relationship goes south and we have to part ways, I don't want to worry that they potentially have a copy of the office keys lying around somewhere.
 
@@ -76,7 +76,7 @@ Now that it's all set up, it's nice to open the door without digging in my pocke
 
 ### Printers: Zebra LP2844 (shipping labels) and Brother HL-2300D (paper)
 
-{{<img src="printers.jpg" maxWidth="600px" alt="Photo of printers on my desk">}}
+{{<img src="printers.jpg" max-width="600px" alt="Photo of printers on my desk">}}
 
 I have terrible luck with network-enabled printers, especially over WiFi. The Brother printer is just a dumb USB printer, and I use a dedicated print server (below) that serves it to the local network. I use the same printer at home, and it's been reliable, so it seemed like a good pick for the office.
 
@@ -89,8 +89,8 @@ We were already using the Zebra printer at home, so we just moved it to the offi
 {{</notice>}}
 
 {{<gallery>}}
-{{<img src="router.jpg" maxWidth="350px" alt="Photo of Qotom Q355G4 mini PC">}}
-{{<img src="opnsense.png" maxWidth="500px" alt="OPNsense screenshot">}}
+{{<img src="router.jpg" max-width="350px" alt="Photo of Qotom Q355G4 mini PC">}}
+{{<img src="opnsense.png" max-width="500px" alt="OPNsense screenshot">}}
 {{</gallery>}}
 
 At home, I have a Ubiquiti EdgeRouter 4, but Ubiquiti's been [going](https://krebsonsecurity.com/2021/03/whistleblower-ubiquiti-breach-catastrophic/) [downhill](https://www.reddit.com/r/sysadmin/comments/mgd2k5/ubiquity_starts_to_serve_selfpromotion_ads_in/) fast this year. pfSense is a popular alternative, but they seem to be [lying about being open-source](https://github.com/rapi3/pfsense-is-closed-source). I've heard from several sources that [OPNsense](https://opnsense.org/) is the "good citizen" fork of pfSense.
@@ -101,13 +101,13 @@ I'm enjoying OPNsense so far. The complexity is higher than Ubiquiti, but it's m
 
 ### Switch: TP-Link 8-Port PoE Switch
 
-{{<img src="tp-link-switch.jpg" maxWidth="400px" alt="Photo of TP-Link 8-Port Switch">}}
+{{<img src="tp-link-switch.jpg" max-width="400px" alt="Photo of TP-Link 8-Port Switch">}}
 
 It's the same switch I use at home, and I've liked it. I'm quickly running out of PoE ports, though, so I've already ordered a Netgear 16-Port GS116LP, which I plan to rack mount.
 
 ### Wireless Access Point: Ruckus R310
 
-{{<img src="ruckus-r310.jpg" maxWidth="400px" alt="Ruckus wireless access point, not mounted">}}
+{{<img src="ruckus-r310.jpg" max-width="400px" alt="Ruckus wireless access point, not mounted">}}
 
 Again, it's the same one I use at home. Probably a bit too fancy for a single 125-square-foot office.
 
@@ -115,7 +115,7 @@ I love that it's PoE, so it only needs a single cable. With my home Ruckus, I co
 
 ### Print server: CUPS on a Pi 4B
 
-{{<img src="print-server.jpg" maxWidth="400px" alt="Photo of Raspberry Pi print server">}}
+{{<img src="print-server.jpg" max-width="400px" alt="Photo of Raspberry Pi print server">}}
 
 My print server was surprisingly easy to set up. I stuck a PoE HAT on a Pi 4B (I happen to have many available) and installed `cups` and `printer-driver-brlaser`.
 
@@ -123,7 +123,7 @@ I'm running into some printer hiccups, but I'm not sure whether to blame the Lin
 
 ### Jumpbox / bastion server: Tailscale on an old Pi 3
 
-{{<img src="bastion.jpg" maxWidth="500px" alt="Photo of old Raspberry Pi 3">}}
+{{<img src="bastion.jpg" max-width="500px" alt="Photo of old Raspberry Pi 3">}}
 
 To access my machines remotely, I installed [Tailscale](https://tailscale.com/) on an old Raspberry Pi 3. Then, I installed Tailscale on my home desktop, so the two are joined over Tailscale's virtual network whenever both machines have Internet.
 
@@ -143,7 +143,7 @@ ssh -J bastion franklin -L 631:localhost:631
 
 And voila, I can access `franklin`'s CUPS web interface.
 
-{{<img src="cups.png" maxWidth="800px" alt="Screenshot of CUPS interface" caption="Using [Tailscale](https://tailscale.com/) to manage my office print server from my home dev machine" hasBorder="true">}}
+{{<img src="cups.png" max-width="800px" alt="Screenshot of CUPS interface" caption="Using [Tailscale](https://tailscale.com/) to manage my office print server from my home dev machine" hasBorder="true">}}
 
 ### Still to come
 

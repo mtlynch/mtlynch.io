@@ -85,7 +85,7 @@ Finding a developer for the sales website has been a different story. Since Octo
 
 The design of the website has always been a placeholder until I can find someone to come in and make it look more professional. Without a stable developer, the website has limped along with the same design it had when I first launched. To me, it looks like a hobby project, and I want to make it look like A Real Product.
 
-{{<img src="tinypilot-home.png" maxWidth="800px" alt="Screenshot of TinyPilot website" caption="The TinyPilot website design was meant to be a placeholder, but it's still the same as it was a year ago." hasBorder="true">}}
+{{<img src="tinypilot-home.png" max-width="800px" alt="Screenshot of TinyPilot website" caption="The TinyPilot website design was meant to be a placeholder, but it's still the same as it was a year ago." hasBorder="true">}}
 
 My biggest mistake in hiring for the web development role was limiting its scope too much. For the first six months, I advertised it as a freelance job that required three to five hours per week. It's a simple sales site, so I just wanted someone to fix small bugs and add non-urgent features. But I think capping the hours so low made the job unappealing to most freelance developers and instead attracted people whose schedule was mostly booked.
 
@@ -113,7 +113,7 @@ To try to get unstuck, I'm reaching out to larger electrical engineering firms. 
 
 By chance, I stumbled upon Raspberry Pi's [list of approved design partners](https://www.raspberrypi.org/for-industry/design-partners/), which turned out to be an excellent resource. The vendors all have experience with Raspberry Pi and cater to clients at my scale.
 
-{{<img src="pi-partners.png" maxWidth="800px" alt="Screenshot of Raspberry Pi vendor partner website" caption="Raspberry Pi maintains [a list of electrical engineering design firms](https://www.raspberrypi.org/for-industry/design-partners/) that specialize in Raspberry Pi projects." hasBorder="true">}}
+{{<img src="pi-partners.png" max-width="800px" alt="Screenshot of Raspberry Pi vendor partner website" caption="Raspberry Pi maintains [a list of electrical engineering design firms](https://www.raspberrypi.org/for-industry/design-partners/) that specialize in Raspberry Pi projects." hasBorder="true">}}
 
 I reached out to the three US-based firms on that list. Of the firms I contacted, Vendor A never responded, Vendor B declined my project after three weeks of back and forth, and Vendor C sent me a proposal.
 

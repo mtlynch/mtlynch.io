@@ -28,7 +28,7 @@ When the annual employee survey asked me whether I expected to be at Google in f
 
 Of _course_ I'd still be at Google in five years. I was surrounded by the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
 
-{{<img src="spoiled-coder.png" alt="My typical day at Google" maxWidth="750px">}}
+{{<img src="spoiled-coder.png" alt="My typical day at Google" max-width="750px">}}
 
 My most recent performance rating was "Strongly Exceeds Expectations." If I just kept going, I'd soon be promoted to the next level, Senior Software Engineer. What a great title! Forever after in my career, I'd be able to say, "Yes, I was a _Senior_ Software Engineer. At _Google_." People would be so impressed.
 
@@ -70,7 +70,7 @@ My other work didn't look so good on paper either. On several occasions, I put m
 
 I submitted my first promo packet, and the results were what I feared: the promotion committee said that I hadn't proven I could handle technical complexity, and they couldn't see the impact I had on Google.
 
-{{<img src="promo-committee.png" alt="Arguing my case to the promotion committee" maxWidth="800px">}}
+{{<img src="promo-committee.png" alt="Arguing my case to the promotion committee" max-width="800px">}}
 
 ## Learning from rejection
 
@@ -126,7 +126,7 @@ Well, Google kept telling me that it couldn't judge my work until it saw me comp
 
 The dynamic felt absurd.
 
-{{<img src="book-publisher.png" alt="The Google promotion committee approach to book publishing" maxWidth="750px">}}
+{{<img src="book-publisher.png" alt="The Google promotion committee approach to book publishing" max-width="750px">}}
 
 My career was being dictated by a shifting, anonymous committee who thought about me for an hour of their lives. Management decisions that I had no input into were erasing months of my career progress.
 
@@ -138,7 +138,7 @@ Even if I got the promotion, what then? Popular wisdom said that each promotion 
 
 Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
 
-{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" maxWidth="750px">}}
+{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="750px">}}
 
 It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that pay their bills.
 

@@ -100,7 +100,7 @@ The author helped me understand the function, but what about the next person who
 
 When your reviewer expresses confusion about how the code works, the solution isn't to explain it to that one person. You need to explain it to _everyone_.
 
-{{<img src="late-night-question.jpg" maxWidth="600px" alt="Dog: Hello? Cat: When you wrote bill.py six years ago, why'd you make t=6? Dog: I'm glad you called! It's because sales tax is 6%. Cat: Of course! Dog: This is a good way to communicate implementation choices. Cat: smiles">}}
+{{<img src="late-night-question.jpg" max-width="600px" alt="Dog: Hello? Cat: When you wrote bill.py six years ago, why'd you make t=6? Dog: I'm glad you called! It's because sales tax is 6%. Cat: Of course! Dog: This is a good way to communicate implementation choices. Cat: smiles">}}
 
 The best way to answer someone's question is to refactor the code and eliminate the confusion. Can you rename things or restructure logic to make it more clear? Code comments are an acceptable solution, but they're strictly inferior to code that documents itself naturally.
 
@@ -122,7 +122,7 @@ Jumbled changelists are a massive insult to your reviewer. Whitespace-only chang
 
 Developers also tend to mix changes inappropriately while refactoring. I love it when my teammates refactor code, but I hate it when they refactor while changing the code's behavior.
 
-{{<img src="mixed-refactoring.png" maxWidth="550px" hasBorder="true" alt="Changelist where logic changes are obscured by refactoring changes" caption="This changelist makes a single change to behavior, but the refactoring changes obscure it.">}}
+{{<img src="mixed-refactoring.png" max-width="550px" hasBorder="true" alt="Changelist where logic changes are obscured by refactoring changes" caption="This changelist makes a single change to behavior, but the refactoring changes obscure it.">}}
 
 If a piece of code requires refactoring _and_ behavioral changes, it should happen in two to three changelists:
 

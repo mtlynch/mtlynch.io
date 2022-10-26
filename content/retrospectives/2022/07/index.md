@@ -159,7 +159,7 @@ Then, Amazon froze my account for a day because they couldn't verify my credit c
 
 Then, Amazon froze my account so they could verify I'm entitled to use the "TinyPilot" brand name. I showed them proof that I'm the owner of TinyPilot, LLC, and I sent them photos of my product with "TinyPilot" written on the side.
 
-{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" maxWidth="500px">}}
+{{<img src="first-proof.jpg" alt="Photo of TinyPilot Voyager from the side with TinyPilot brand name showing" caption="Photo I sent to Amazon as proof that the brand name &ldquo;TinyPilot&rdquo; appears on my product" max-width="500px">}}
 
 They said they'd review within three days, but it actually took 10. Their conclusion was that my photos didn't sufficiently prove that "TinyPilot" was permanently affixed to my product...
 
@@ -167,21 +167,21 @@ They said they'd review within three days, but it actually took 10. Their conclu
 
 So, I sent new photos much more focused on the brand name, and only then did they finally approve the product.
 
-{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" maxWidth="600px">}}
+{{<img src="new-affixed-proof.jpg" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" caption="Is this affixed enough for you, Amazon?" max-width="600px">}}
 
 The new problem was that TinyPilot didn't show up in search results if you search for "tinypilot":
 
-{{<img src="tinypilot-results.png" alt="Screenshot of Amazon search results for term 'tinypilot'" hasBorder="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" maxWidth="700px">}}
+{{<img src="tinypilot-results.png" alt="Screenshot of Amazon search results for term 'tinypilot'" hasBorder="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" max-width="700px">}}
 
 This is especially weird given that Amazon's own autocomplete suggestions were all clearly about my product:
 
-{{<img src="autocomplete.png" alt="Screenshot of Amazon autocomplete suggestions for tinypilot as 'tinypilot kvm over ip' 'tinypilot ip kvm' 'tinypilotkvm' 'tinypilot voyager 2 kvm over ip poe'" hasBorder="true" caption="Amazon's search suggestions for 'tinypilot' are all clearly about my product, but it still doesn't appear in search results." maxWidth="700px">}}
+{{<img src="autocomplete.png" alt="Screenshot of Amazon autocomplete suggestions for tinypilot as 'tinypilot kvm over ip' 'tinypilot ip kvm' 'tinypilotkvm' 'tinypilot voyager 2 kvm over ip poe'" hasBorder="true" caption="Amazon's search suggestions for 'tinypilot' are all clearly about my product, but it still doesn't appear in search results." max-width="700px">}}
 
 Even "tinypilot kvm over ip" didn't show my product until page two or three of search results.
 
 I ended up just purchasing ads on Amazon, which finally led to my first few sales.
 
-{{<img src="tinypilot-sponsored.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" hasBorder="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" maxWidth="700px">}}
+{{<img src="tinypilot-sponsored.png" alt="Photo of me holding a TinyPilot Voyager 2 with a dated note to Amazon" hasBorder="true" caption="TinyPilot doesn't appear in search results for 'tinypilot'" max-width="700px">}}
 
 I'm hoping the hard parts are over for getting up and running, so I'll stick with it and see if Amazon grows our sales as we accrue ratings there.
 
@@ -199,7 +199,7 @@ We sometimes get these types of complaints from customers who order directly, bu
 
 As I mentioned in [my last update](/retrospectives/2022/06/#wanderjesthttpswanderjestcom), I'm rebuilding [WanderJest](https://wanderjest.com), a tool for finding live comedy that I put on hold [at the start of the pandemic](/retrospectives/2020/04/#putting-wanderjest-on-hold).
 
-{{<img src="wanderjest-wip.png" alt="Screenshot of new WanderJest website" hasBorder="true" caption="My work-in-progress reimplementation of the WanderJest website using Go, VanillaJS, and SQLite." maxWidth="700px">}}
+{{<img src="wanderjest-wip.png" alt="Screenshot of new WanderJest website" hasBorder="true" caption="My work-in-progress reimplementation of the WanderJest website using Go, VanillaJS, and SQLite." max-width="700px">}}
 
 I'm rewriting WanderJest in Go + VanillaJS + SQLite as a "back to basics" tech stack after years of trying to work with SPA frameworks like Angular and Vue. Chris Ferdinandi articulates some of my frustrations in his article, ["SPAs were a mistake."](https://gomakethings.com/spas-were-a-mistake/)
 

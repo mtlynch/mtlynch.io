@@ -15,7 +15,7 @@ tags:
 
 Two years ago, I created a website for my business. By combining my terrible design skills with a decent-looking template, I created a site that looked okay. I told myself that if the business took off, I'd hire a real designer to make it look professional.
 
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), before design changes">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), before design changes">}}
 
 A year later, the business was generating $45k/month in revenue, but my website still looked like a college student's hobby project. It was time for that professional redesign I'd promised myself.
 
@@ -23,7 +23,7 @@ There were only three pages I cared about, so I expected the redesign would be s
 
 Here's how the site looked after the redesign:
 
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" maxWidth="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" hasBorder="true" caption="[TinyPilot website](https://tinypilotkvm.com), after design changes">}}
 
 Except it didn't take a few months and $15k. It took eight months, $46k, and a lot of headache.
 
@@ -74,11 +74,11 @@ Within six weeks, we narrowed in on a concept we all liked.
 
 In our first few meetings, WebAgency showed me mockups of my site with different color options.
 
-{{<img src="design-sketches1.png" alt="Basic designs of TinyPilot website with different colors and logos" maxWidth="800px" hasBorder="true" caption="At first, the design agency showed me how different color options would look on different basic website designs.">}}
+{{<img src="design-sketches1.png" alt="Basic designs of TinyPilot website with different colors and logos" max-width="800px" hasBorder="true" caption="At first, the design agency showed me how different color options would look on different basic website designs.">}}
 
 As the project progressed, the mockups became more elaborate. WebAgency started showing me custom images and icons for the site.
 
-{{<img src="design-sketches2.png" alt="Basic designs of TinyPilot website with different colors and logos" maxWidth="800px" hasBorder="true" caption="The design agency became less interested in branding and started focusing on the overall website design.">}}
+{{<img src="design-sketches2.png" alt="Basic designs of TinyPilot website with different colors and logos" max-width="800px" hasBorder="true" caption="The design agency became less interested in branding and started focusing on the overall website design.">}}
 
 We'd never discussed custom illustrations, but it seemed like a small amount of work, so I let it go.
 
@@ -96,13 +96,13 @@ I was eager to finalize the logo because it would be the first completed asset W
 
 All I needed was a couple more hours of work. But I didn't get them.
 
-{{<img src="new-logo-places.jpg" alt="Photos of TinyPilot website, app interface, and case showing the old logo" maxWidth="500px" hasBorder="true" caption="All the locations I could place the new TinyPilot logo once WebAgency delivered the final result.">}}
+{{<img src="new-logo-places.jpg" alt="Photos of TinyPilot website, app interface, and case showing the old logo" max-width="500px" hasBorder="true" caption="All the locations I could place the new TinyPilot logo once WebAgency delivered the final result.">}}
 
 Instead, WebAgency kept redesigning the website. Their lead designer didn't have availability to work on the logo, but what did I think about this new design idea for the landing page?
 
 The breaking point came when WebAgency started showing me new designs for my site's blog. From the beginning, I had said that I only cared about three pages: the landing page, the product page, and the shopping cart page. All other pages were explicitly out of scope.
 
-{{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." maxWidth="550px" hasBorder="true" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
+{{<img src="design-non-goals.png" alt="Non-Goals: Redesign pages outside the checkout flow. The flow I care about is landing page > product page > checkout. We don’t want to completely break pages outside that flow, but we don’t need to improve their design as part of this effort." max-width="550px" hasBorder="true" caption="Excerpt from [project specification](tinypilot-redesign-spec.pdf) listing the blog as explicitly out of scope.">}}
 
 I pointed this out to WebAgency, and Isaac called me, embarrassed. He admitted that the designers went beyond mere sketching. They were so excited about the project and got carried away, but he was going to remove the hours they'd spent redesigning the blog.
 
@@ -134,7 +134,7 @@ The real issue, Isaac said, was that I was their only hourly client. I would alw
 
 I felt duped and manipulated. WebAgency structured the work so that everything was 80% done, but nothing was usable. If I took the work to a new vendor, there'd be a massive amount of rework. And now they were holding the last 20% hostage until I signed an expensive retainer agreement?
 
-{{<img src="not-sure-what-would-help.png" maxWidth="700px" alt="Cartoon of a cat building a mostly complete doghouse for a dog. The cat is holding open an empty bag for money, saying 'I&rsquo;m not sure what would help me finish...'">}}
+{{<img src="not-sure-what-would-help.png" max-width="700px" alt="Cartoon of a cat building a mostly complete doghouse for a dog. The cat is holding open an empty bag for money, saying 'I&rsquo;m not sure what would help me finish...'">}}
 
 As diplomatically as possible, I told Isaac that I felt like the situation was WebAgency's fault. If a retainer agreement was better for everyone, why didn't they propose it months ago? The project could have been done by now.
 
@@ -204,18 +204,18 @@ And then it was finally done! This project had spiraled so far beyond what I ini
 Here's what the site looked like after the redesign:
 
 {{<gallery caption="Before and after landing page redesign">}}
-{{<img src="landing-before.png" alt="Screenshot of old landing page" maxWidth="300px" hasBorder="true">}}
-{{<img src="landing-after.png" alt="Screenshot of new landing page" maxWidth="260px" hasBorder="true">}}
+{{<img src="landing-before.png" alt="Screenshot of old landing page" max-width="300px" hasBorder="true">}}
+{{<img src="landing-after.png" alt="Screenshot of new landing page" max-width="260px" hasBorder="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after product page redesign">}}
-{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" maxWidth="300px" hasBorder="true">}}
-{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" maxWidth="220px" hasBorder="true">}}
+{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" max-width="300px" hasBorder="true">}}
+{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" max-width="220px" hasBorder="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after shopping cart page redesign">}}
-{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" maxWidth="400px" hasBorder="true">}}
-{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" maxWidth="340px" hasBorder="true">}}
+{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" max-width="400px" hasBorder="true">}}
+{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" max-width="340px" hasBorder="true">}}
 {{</gallery>}}
 
 ## The postmortem
@@ -278,8 +278,8 @@ Many of the issues with scope bloat resulted from the slow feedback loop in WebA
 WebAgency's process is to report hours twice per month. On the 15th, they share the total number of hours they've used with no details about which tasks contributed to the total. At the end of the month, they send a per-task breakdown.
 
 {{<gallery caption="WebAgency reports a simple total of hours on the 15th of the month and then a detailed breakdown at the end of the month.">}}
-{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="400px"  hasBorder="true">}}
-{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" maxWidth="600px" hasBorder="true">}}
+{{<img src="mid-month-report.png" alt="Screenshot of WebAgency's billing breakdown by task" max-width="400px"  hasBorder="true">}}
+{{<img src="hours-summary.png" alt="Screenshot of WebAgency's billing breakdown by task" max-width="600px" hasBorder="true">}}
 {{</gallery>}}
 
 In contrast, TinyPilot's in-house developers report their hours at the end of each working session, so I have a better sense of their progress. If a 10-hour task starts looking more like a 25-hour task, we re-evaluate whether to eliminate or downscope the task.
@@ -292,7 +292,7 @@ If I work with a design agency in the future, I'll insist on a tool that lets us
 
 When we started the project, WebAgency told me that most of their clients were larger than I was, but they wanted to help me grow. It sounded like a great deal &mdash; I'd enjoy service normally reserved for large companies despite my limited budget.
 
-{{<img src="big-airline.jpg" maxWidth="400px" caption="My initial conversation with WebAgency, as I remember it." alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
+{{<img src="big-airline.jpg" max-width="400px" caption="My initial conversation with WebAgency, as I remember it." alt="Scene from Mad Men where Mohawk Airlines tells Don Draper, 'You said Sterling Cooper Didn&rsquo;t need a big airline... you were going to make *us* a big airline.'">}}
 
 In reality, I didn't get the same service as their larger clients. When I was an hourly client, WebAgency kept deprioritizing me in favor of their retainer clients. When I upgraded to a retainer plan, they struggled to work effectively within my budget.
 

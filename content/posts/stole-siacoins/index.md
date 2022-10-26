@@ -209,7 +209,7 @@ Now that the coins were secured, it was time to figure out just what was going o
       109002   2304da26d61bd2cb7fcac5c7b38a553d788d8dfc386ae4eb47772e36e4a9269d        -594.55 SC             0 SF
 ```
 
-{{<img src="hardy-boys.jpg" alt="Hardy Boys cover" maxWidth="225px" align="right">}}
+{{<img src="hardy-boys.jpg" alt="Hardy Boys cover" max-width="225px" align="right">}}
 
 The last transaction in the list is the withdrawal. That's just me stealing the money. Don't worry about that. The transaction of 0.00 SC is just noise, as Sia wallets generate these 0.0 transactions when moving money between their own addresses.
 

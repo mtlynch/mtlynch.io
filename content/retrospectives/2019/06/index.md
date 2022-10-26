@@ -59,7 +59,7 @@ Almost the full amount comes from a single customer who needed Zestful for a one
 
 ## What Got Done: business or hobby?
 
-{{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="My [What Got Done entry](https://whatgotdone.com/michael/2019-06-07) for last week" maxWidth="800px">}}
+{{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="My [What Got Done entry](https://whatgotdone.com/michael/2019-06-07) for last week" max-width="800px">}}
 
 I'm not sure what to do with What Got Done. I built it primarily to get practical experience with [Vue.js](https://vuejs.org/), as learning a web framework was one of my [goals for 2019](/solo-developer-year-1/#goals-for-year-two). As a tool, it's useful for me because I like logging my tasks to close out the week. I never thought it was my most promising business idea, but I figured it wouldn't be that much more work to see if it had potential as a paid product.
 
@@ -109,7 +109,7 @@ Most of them either use Google Docs or the editing interface of the client's ema
 Based on these conversations, I made [some sketches](https://www.dropbox.com/sh/b7df1s5z40lqd47/AADgcLG5ZmSPM9HRFwb0llPTa?dl=0) of a possible tool specifically aimed at addressing their pain points.
 
 {{<gallery caption="Possible interfaces for email campaign authoring tool">}}
-{{<img src="email-comments.png" alt="Wireframe of feedback view" maxWidth="81%">}}
+{{<img src="email-comments.png" alt="Wireframe of feedback view" max-width="81%">}}
 {{<img src="email-diff.png" alt="Wireframe of diff view">}}
 {{</gallery>}}
 

@@ -21,7 +21,7 @@ Three years ago, I took things to the next level by [building my own homelab ser
 
 In the past few months, I began hitting the limits of my VM server. My projects have become more resource-hungry, and mistakes I'd made in my first build were coming back to bite me. I decided to build a brand new homelab VM server for 2020.
 
-{{<img src="build-components.jpg" alt="Photo of my server build components" maxWidth="600px" caption="Components of my new VM server build (most of them, anyway)">}}
+{{<img src="build-components.jpg" alt="Photo of my server build components" max-width="600px" caption="Components of my new VM server build (most of them, anyway)">}}
 
 ## I don't care about the backstory; show me your build!
 
@@ -45,7 +45,7 @@ Homelab is just a colloquial term that's grown in popularity in the last few yea
 
 Cloud servers could serve the same function and save me the trouble (fun!) of maintaining my own hardware, but it's prohibitively expensive. For VM resources similar to my homelab server, AWS EC2 instances [would cost over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c):
 
-{{<img src="aws-pricing.png" alt="Screenshot showing AWS EC2 instances would cost $6,112.68 per year" maxWidth="600px" hasBorder="true" caption="Using AWS instead of my homelab server would [cost me over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c).">}}
+{{<img src="aws-pricing.png" alt="Screenshot showing AWS EC2 instances would cost $6,112.68 per year" max-width="600px" hasBorder="true" caption="Using AWS instead of my homelab server would [cost me over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c).">}}
 
 I could substantially reduce costs by turning cloud instances on and off as needed, but that would introduce friction into my workflows. With a local VM server, I can keep 10-20 VMs available and ready at all times without worrying about micromanaging my costs.
 
@@ -57,13 +57,13 @@ My 2017 build served me well, but in three years of using it, I've come to recog
 
 My Synology NAS has 10.9 TB of storage capacity. With all that network storage space, I thought, "why put more disk space on the server than the bare minimum to boot the host OS?"
 
-{{<img src="synology-pool.png" alt="Screenshot showing 10.9 TB" maxWidth="600px" hasBorder="true" caption="On my first build, I relied on my 10.9 TB of network storage.">}}
+{{<img src="synology-pool.png" alt="Screenshot showing 10.9 TB" max-width="600px" hasBorder="true" caption="On my first build, I relied on my 10.9 TB of network storage.">}}
 
 That turned out to be a dumb idea.
 
 First, running VMs on network storage creates a strict dependency on the disk server. Synology publishes OS upgrades every couple of months, and their patches always require reboots. With my VMs running on top of Synology's storage, I had to shut down my entire VM fleet before applying any update from Synology. It was the same reboot problem I had when I ran VMs on my Windows desktop.
 
-{{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" maxWidth="550px" hasBorder="true" caption="The OS on my storage server requires frequent upgrades.">}}
+{{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" max-width="550px" hasBorder="true" caption="The OS on my storage server requires frequent upgrades.">}}
 
 Second, random disk access over the network is **slow**. At the time of my first build, most of my development work was on backend Python and Go applications, and they didn't perform significant disk I/O. Since then, I've expanded into frontend web development. Modern web frameworks all use Node.js, so every project has anywhere from 10k-200k random JavaScript files in its dependency tree. Node.js builds involve tons of random disk access, a worst-case scenario for network storage.
 
@@ -71,17 +71,17 @@ Second, random disk access over the network is **slow**. At the time of my first
 
 For my first server, I evaluated two options for VM management: [Kimchi](https://github.com/kimchi-project/kimchi) and [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html). VMWare was far more polished and mature, but Kimchi charmed me with its scrappy spirit and open-source nature.
 
-{{<img src="kimchi-guests.png" alt="Screenshot of Kimchi" maxWidth="600px" hasBorder="true" caption="Early listing of my VMs through Kimchi's web UI">}}
+{{<img src="kimchi-guests.png" alt="Screenshot of Kimchi" max-width="600px" hasBorder="true" caption="Early listing of my VMs through Kimchi's web UI">}}
 
 Almost immediately after I installed it, development on Kimchi stopped.
 
-{{<img src="i-use-kimchi.png" alt="Graph of commits to Kimchi repository showing commits ending right after I started using it" maxWidth="600px" hasBorder="true" caption="Code commits to Kimchi, which stop almost immediately after I started using it">}}
+{{<img src="i-use-kimchi.png" alt="Graph of commits to Kimchi repository showing commits ending right after I started using it" max-width="600px" hasBorder="true" caption="Code commits to Kimchi, which stop almost immediately after I started using it">}}
 
 Over time, Kimchi's shortcomings became more and more apparent. I often had to click a VM's "clone" or "shutdown" button multiple times before it cooperated. And there were infuriating UI bugs where buttons disappeared or shifted position right before I clicked on them.
 
 ### 3. Plan for remote administration
 
-{{<img src="vm-server-front.jpg" alt="Photo of my old VM server" maxWidth="250px" align="right" caption="My VM server is tucked away in the corner, which is convenient except for the occasional instance where I need physical access.">}}
+{{<img src="vm-server-front.jpg" alt="Photo of my old VM server" max-width="250px" align="right" caption="My VM server is tucked away in the corner, which is convenient except for the occasional instance where I need physical access.">}}
 
 If you read the above and thought, "Kimchi is just software. Why did Michael have to build a whole new server just to install a different VM manager?" It's because I failed to anticipate the importance of remote administration.
 
@@ -89,7 +89,7 @@ My VM server is just a PC that sits in the corner of my office with no monitor o
 
 For my next build, I wanted a virtual console with physical-level access to the machine as soon as it powered on. I was thinking something like [Dell's iDRAC](https://en.wikipedia.org/wiki/Dell_DRAC) or [HP's iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out).
 
-{{<img src="idrac.png" alt="Screenshot of Dell iDRAC interface" maxWidth="600px" caption="Dell iDRAC was one option I considered for remote server management.">}}
+{{<img src="idrac.png" alt="Screenshot of Dell iDRAC interface" max-width="600px" caption="Dell iDRAC was one option I considered for remote server management.">}}
 
 ## Choosing components
 
@@ -106,15 +106,15 @@ To get the best performance for my dollar, I restricted my search to used CPUs, 
 The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https://ark.intel.com/content/www/us/en/ark/products/series/78583/intel-xeon-processor-e5-v3-family.html) family, especially the 2600 models. I settled on the [E5-2680 v3](https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e5-2680-v3-30m-cache-2-50-ghz.html). It had an average benchmark of 15,618 and cost ~$130 used on eBay.
 
 {{<gallery  caption="The Intel Xeon E5-2680 v3 [scores 15,618 on cpubenchmark.net](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3+%40+2.50GHz&id=2390).">}}
-{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" maxWidth="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
-{{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" maxWidth="490px" hasBorder="true">}}
+{{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" max-width="420px" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" max-width="490px" hasBorder="true">}}
 {{</gallery>}}
 
 For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual-E5-2680s, I'd more than double the processing power from my old server.
 
 ### Motherboard
 
-{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" maxWidth="280px" align="left" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
+{{<img src="supermicro-mbd-x10dal.jpg" alt="Photo of SuperMicro MBD-X10DAL-I-O motherboard" max-width="280px" align="left" linkUrl="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
 
 The downside of a dual-CPU system was that it limited my options for motherboards. Only a handful of motherboards support dual Intel 2011-v3 CPUs. Their prices ranged from $300 to $850, which was far more than I expected to spend on a motherboard.
 
@@ -122,7 +122,7 @@ I chose the [SuperMicro MBD-X10DAL-I-O](https://www.newegg.com/supermicro-mbd-x1
 
 ### Memory
 
-{{<img src="crucial-ct4k16g4rfd4213.jpg" alt="Photo of Crucial RAM sticks" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="crucial-ct4k16g4rfd4213.jpg" alt="Photo of Crucial RAM sticks" max-width="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 There seems to be a lot less informed choice for server memory. With consumer hardware, plenty of websites publish reviews and benchmarks of different RAM sticks, but I didn't see anything like that for server RAM.
 
@@ -130,7 +130,7 @@ I went with [Crucial CT4K16G4RFD4213 64 GB (4 x 16 GB)](https://www.newegg.com/c
 
 ### Storage
 
-{{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="ssd.jpg" alt="Photo of Samsung 860 EVO" max-width="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 I love M.2 SSDs, as they're small, perform outstandingly, and neatly tuck away in the motherboard without any cabling. Sadly, the MBD-X10DAL doesn't support the M.2 interface.
 
@@ -138,7 +138,7 @@ Instead, I stuck with traditional old SATA. I bought a [1 TB Samsung 860 EVO](ht
 
 ### Power
 
-{{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" maxWidth="200px" align="left" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="psu.jpg" alt="Photo of Corsair CX550M 550W 80 Plus Bronze" max-width="200px" align="left" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 Choosing a power supply unit (PSU) isn't that interesting, so I again chose mainly by trusted brand, the [Corsair CX550M 550W 80 Plus Bronze](https://www.newegg.com/corsair-cx-series-cx550m-550w/p/N82E16817139147?Item=N82E16817139147).
 
@@ -148,13 +148,13 @@ The only other important feature to me was semi-modular cabling. In my last buil
 
 ### Fans
 
-{{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
+{{<img src="hyper-212.jpg" alt="Photo of Hyper 212 CPU fan" max-width="200px" align="right" linkUrl="https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278">}}
 
 The dual-CPU build made cooling an unexpected challenge. The MBD-X10DAL doesn't leave much space between the two CPU sockets, so I looked carefully for fans thin enough to work side-by-side. A pair of [Cooler Master Hyper 212s](https://www.newegg.com/cooler-master-hyper-212-black-edition-rr-212s-20pk-r1/p/N82E16835103278?Item=N82E16835103278) fit the bill.
 
 ### Case
 
-{{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" maxWidth="200px" align="left" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="fractal-meshify.jpg" alt="Photo of Fractal Meshify C case" max-width="200px" align="left" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
 My server sits inconspicuously in the corner of my office, so I didn't want a case with clear panels or flashy lights.
 
@@ -162,7 +162,7 @@ The [Fractal Design Meshify C Black](https://www.newegg.com/black-fractal-design
 
 ### Graphics
 
-{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" maxWidth="200px" align="right" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
+{{<img src="msi-geforce-gt-710.jpg" alt="Photo of MSI GeForce GT170 GPU" max-width="200px" align="right" linkUrl="https://www.newegg.com/black-fractal-design-meshify-c-atx-mid-tower/p/N82E16811352085?Item=N82E16811352085">}}
 
 For a headless server, the graphics card doesn't matter much. It's still necessary so I can see the screen during the initial install and the occasional debugging session, so I went with the [MSI GeForce GT 710](https://www.newegg.com/msi-geforce-gt-710-gt-710-1gd3h-lp/p/N82E16814127931?Item=N82E16814127931) as a cheap, easy option.
 
@@ -170,12 +170,12 @@ For a headless server, the graphics card doesn't matter much. It's still necessa
 
 I looked into remote administration solutions and was blown away by how expensive they were. At first, I thought I'd use a Dell iDRAC, but the remote console requires a [$300 enterprise license](/tinypilot/idrac-price.png) and constrains my build to Dell components. I looked at KVM over IP solutions, but those were even more expensive, ranging from $600 to $1,000.
 
-{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." maxWidth="600px" hasBorder="true">}}
+{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." max-width="600px" hasBorder="true">}}
 
 To achieve remote administration, I took the unusual approach of [building my own KVM over IP device](/tinypilot) out of a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io).
 
 {{<gallery caption="Using [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) to install an OS on my server">}}
-{{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" maxWidth="260px">}}
+{{<img src="tinypilot-server.jpg" alt="Photo of TinyPilot plugged into server" max-width="260px">}}
 
 <a href="bios-mouse.gif"><img src="bios-mouse.gif" alt="Screen capture of Proxmox install through TinyPilot" class="img" style="width: 500px; max-width: 100%; object-fit: contain;"></a>
 
@@ -214,13 +214,13 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 {{<img src="install-everything.jpg" alt="Photo of motherboard with all components installed">}}
 {{</gallery>}}
 
-{{<img src="build-completed.jpg" alt="My completed homelab VM server build" maxWidth="600px" caption="My completed build in its new home">}}
+{{<img src="build-completed.jpg" alt="My completed homelab VM server build" max-width="600px" caption="My completed build in its new home">}}
 
 ## VM Management: Proxmox
 
 To manage my VMs, I'm using [Proxmox VE](https://www.proxmox.com/en/).
 
-{{<img src="proxmox-summary.png" maxWidth="600px" hasBorder="true" alt="Screenshot of Proxmox dashboard" caption="Proxmox's dashboard of all my VMs">}}
+{{<img src="proxmox-summary.png" max-width="600px" hasBorder="true" alt="Screenshot of Proxmox dashboard" caption="Proxmox's dashboard of all my VMs">}}
 
 After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another free solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it lags behind ESXi in slickness.
 
@@ -272,7 +272,7 @@ My old VMs booted in 48 seconds. The few SSD VMs on my old system did a little b
 
 My weekly journaling app, [What Got Done](https://whatgotdone.com), has automated tests that exercise its functionality end-to-end. This is one of my most diverse workflows &mdash; it involves compiling a Go backend, compiling a Vue frontend, building a series of Docker containers, and automating Chrome to exercise my app. This was one of the workflows that exhausted resources on my old VM, so I expected substantial gains here.
 
-{{<video src="wgt-test.mp4" maxWidth="600px">}}
+{{<video src="wgt-test.mp4" max-width="600px">}}
 
 {{<img src="build-wgt.png" alt="Graph showing 2017 SSD server completed in 5.4 minutes vs. 2020 server completed in 5.6 minutes">}}
 
@@ -344,7 +344,7 @@ In a year of usage, I've never reached 100% CPU usage, and I've only ever exceed
 
 My 1 TB Samsung SSD is just about full, so I just purchased another a [2 TB Samsung 870 Evo](https://www.newegg.com/samsung-2tb-870-evo-series/p/N82E16820147794?Item=N82E16820147794) for a total of 3 TB of SSD. There's plenty of space in the case for more SSDs.
 
-{{<img src="disk-usage.png" alt="Screenshot showing my disk is 85% full" maxWidth="800px" hasBorder="true" caption="My server has only 15% of disk still free.">}}
+{{<img src="disk-usage.png" alt="Screenshot showing my disk is 85% full" max-width="800px" hasBorder="true" caption="My server has only 15% of disk still free.">}}
 
 By default, I provision each VM with 40 GB of disk, which is sometimes limiting. When I'm doing work with Docker, container images can eat up disk quickly. Every few weeks, I find that I've filled up my VM's disk, and I have to run `docker system prune --all`, so the additional disk will spare me those interruptions.
 

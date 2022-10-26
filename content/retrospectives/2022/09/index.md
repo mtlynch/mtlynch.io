@@ -76,7 +76,7 @@ I wanted to pause my job listing while I caught up with responses. We Work Remot
 
 As a workaround, I left the job listings up, but I changed the location requirement from "Worldwide" to "US only." There's nothing about the role that strictly requires candidates to live in the US, but it was the best way I could think of to slow the flow of applications without totally taking down the post.
 
-{{<img src="support-engineer-applicants.png" alt="Graph of applications per day" hasBorder="true" maxWidth="700px">}}
+{{<img src="support-engineer-applicants.png" alt="Graph of applications per day" hasBorder="true" max-width="700px">}}
 
 Adding a location requirement did slow down the rate of new applications by about half. Still, many applicants ignored the requirement. Only 42% of the candidates said they actually lived in the US after the requirement compared with 18% before.
 
@@ -135,7 +135,7 @@ Unfortunately, RemoteOK, Pieter's flagship business, was a huge letdown. I can't
 
 Right off the bat, when you create the job post, RemoteOK pushes all these little upsells on you.
 
-{{<img src="remoteok-upsells.png" hasBorder="true" alt="Screenshot of upsells on Remote OK" maxWidth="700px" caption="RemoteOK pushes employers to choose among nine different upsells, including $134 to generate a QR code.">}}
+{{<img src="remoteok-upsells.png" hasBorder="true" alt="Screenshot of upsells on Remote OK" max-width="700px" caption="RemoteOK pushes employers to choose among nine different upsells, including $134 to generate a QR code.">}}
 
 We Work Remotely tries similar upsells, but theirs don't feel as gross. Maybe it's because We Work Remotely isn't charging $134 to create a QR code for you.
 
@@ -168,7 +168,7 @@ After using Homerun for the full hiring pipeline, I'm pretty satisfied. The UI l
 
 {{<gallery caption="Last time I organized applicants in my email using inbox labels (left). This time, I used Homerun, which has better organization with a Kanban view of applications (right).">}}
 {{<img src="email-labels.png" hasBorder="true" alt="Screenshot of inbox labels in Fastmail">}}
-{{<img src="homerun-kanban.png" hasBorder="true" alt="Homerun sorts applications in a kanban view of hiring stages" maxWidth="600px">}}
+{{<img src="homerun-kanban.png" hasBorder="true" alt="Homerun sorts applications in a kanban view of hiring stages" max-width="600px">}}
 {{</gallery>}}
 
 I really liked Homerun's templated email feature. I rarely sent candidates pure form letters, but it was helpful having a skeleton structure in place for common responses like:
@@ -177,7 +177,7 @@ I really liked Homerun's templated email feature. I rarely sent candidates pure 
 - Your English isn't at the level the role requires
 - You're a great candidate, so let's move on to the sample questions
 
-{{<img src="poor-english-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at [company_name] and for taking the time to learn more about the company. Unfortunately, I don't think this position would be a good match for your skills. This position requires someone more with more experience writing customer-facing content. Your English is pretty strong, but there were several syntax errors in your application, so I don't think this role would be a good fit. I'm sorry it didn't work out, but I wish you the best of luck in your search." maxWidth="700px" caption="I created email templates as a starting point for emails of different common categories.">}}
+{{<img src="poor-english-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at [company_name] and for taking the time to learn more about the company. Unfortunately, I don't think this position would be a good match for your skills. This position requires someone more with more experience writing customer-facing content. Your English is pretty strong, but there were several syntax errors in your application, so I don't think this role would be a good fit. I'm sorry it didn't work out, but I wish you the best of luck in your search." max-width="700px" caption="I created email templates as a starting point for emails of different common categories.">}}
 
 Homerun costs $71/mo, which is within the affordable range for most small businesses. And billing is fair in that you don't have to pay for months when you're not hiring. Most [other applicant tracking platforms](/notes/bootstrapper-ats/) delete all of your data if you stop paying the full monthly fee. Homerun allows you to downgrade to the free plan when you're not actively hiring, which preserves all of your data. The only restriction under the free tier is that you can't accept new applicants until you begin paying again.
 
@@ -191,7 +191,7 @@ With such a high volume of candidates, I wanted a way to reach out early to the 
 
 One of the Homerun's worst UI decisions is how their email works. Like all applicant tracking systems, Homerun lets you email candidates from within their web app. But it does this by popping up a modal window:
 
-{{<img src="modal-email.png" hasBorder="true" alt="Screenshot of modal window in Homerun blocking all relevant information about the candidate" maxWidth="800px" caption="Homerun's in-app email creates a modal window that prevents you from referring to the candidate's application while you email them.">}}
+{{<img src="modal-email.png" hasBorder="true" alt="Screenshot of modal window in Homerun blocking all relevant information about the candidate" max-width="800px" caption="Homerun's in-app email creates a modal window that prevents you from referring to the candidate's application while you email them.">}}
 
 The modal window completely blocks everything the candidate wrote in their application, so you can't refer to any of your notes, their resume, or their answers to questions on the application form. This is a terrible choice, as employers obviously need this information when writing back to the candidate.
 
@@ -217,7 +217,7 @@ When I first started processing applications with Homerun, I got overeager about
 
 I made a template that basically said I'm rejecting them because their application looked copy/pasted. I figured it was good to at least give feedback that copy/pasting applications is losing them jobs.
 
-{{<img src="low-effort-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at TinyPilot. Unfortunately, I've decided not to move forward with your application. I read the answers to the questions you submitted, and it didn't seem like there was anything specific about the company or work that appealed to you, so I don't think this would be a good match. Sorry that it didn't work out, but I wish you luck in your job search." maxWidth="800px" caption="My form-letter response for candidates who applied with copy/pasted application answers.">}}
+{{<img src="low-effort-rejection.png" hasBorder="true" alt="Hi [first_name], Thanks for applying for the [job_title] opening at TinyPilot. Unfortunately, I've decided not to move forward with your application. I read the answers to the questions you submitted, and it didn't seem like there was anything specific about the company or work that appealed to you, so I don't think this would be a good match. Sorry that it didn't work out, but I wish you luck in your job search." max-width="800px" caption="My form-letter response for candidates who applied with copy/pasted application answers.">}}
 
 This strategy worked poorly.
 
@@ -258,13 +258,13 @@ I've hired through a job posting before, but I forgot how time-consuming the pro
 
 In my head, the time commitment looks like this:
 
-{{<img src="imagined-commitment.png" hasBorder="true" maxWidth="600px" caption="How hiring works in my imagination">}}
+{{<img src="imagined-commitment.png" hasBorder="true" max-width="600px" caption="How hiring works in my imagination">}}
 
 There's a big influx of candidates who all apply on day one. I sort through the candidates until I've narrowed it down to a single person. Finally, I hire that person, they start doing tasks I used to do, and everything is great.
 
 In reality, the time commitment is more like this:
 
-{{<img src="real-commitment.png" hasBorder="true" maxWidth="600px" caption="How hiring works in reality">}}
+{{<img src="real-commitment.png" hasBorder="true" max-width="600px" caption="How hiring works in reality">}}
 
 There's a big burst of applicants, and then while I'm processing them, people keep applying. And then when I finally hire someone, I still have to follow up with everyone I didn't choose while simultaneously onboarding and training the new hire.
 

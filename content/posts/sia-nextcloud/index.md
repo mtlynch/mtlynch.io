@@ -35,7 +35,7 @@ If you prefer video tutorials, I recommend you download the files in the ["Creat
 
 This guide is aimed at **intermediate users**. If you don't have any experience with Docker containers or virtual machines or you're not comfortable using the command line, it will be difficult for you to follow this guide.
 
-{{<img src="bad-time.png" alt="You're gonna have a bad time" maxWidth="597px">}}
+{{<img src="bad-time.png" alt="You're gonna have a bad time" max-width="597px">}}
 
 I used Windows 10 in the video demo, but this tutorial is completely system-agnostic. The steps I provide will work on any 64-bit operating system that supports Docker, which includes Windows, Mac OS X, Linux, and even some [network storage devices](/sia-via-docker).
 
@@ -58,7 +58,7 @@ The steps in this guide require about **20 minutes** of active time. However, th
 
 ### Sia
 
-{{<img src="sia-logo.png" alt="Sia logo" maxWidth="260px" align="left">}}
+{{<img src="sia-logo.png" alt="Sia logo" max-width="260px" align="left">}}
 
 I use **Sia** in this solution to provide backend storage for the web app. I've written [a few posts](/tags/sia) about Sia previously, as it's one of my favorite new technologies. [Sia](https://sia.tech) is a decentralized file storage network. Users can connect to Sia and [rent out their unused disk space](/sia-via-docker/) to earn money. Prices on the Sia network are very low right now, which is how you can build a cloud storage solution and pay so little for disk space.
 
@@ -66,7 +66,7 @@ I use **Sia** in this solution to provide backend storage for the web app. I've 
 
 If you're familiar with Sia, you might be aware that Sia has its own graphical user interface, called [Sia-UI](https://github.com/NebulousLabs/Sia-UI). This UI is limited in functionality. Its main weakness is that it's a desktop app, so you can only access your files from a single computer. It doesn't support any media viewing, so if you want to view photos or video within your cloud storage, you have to copy the file to a folder on your local machine and open the copy.
 
-{{<img src="nextcloud-logo.png" alt="Nextcloud logo" maxWidth="260px" align="right">}}
+{{<img src="nextcloud-logo.png" alt="Nextcloud logo" max-width="260px" align="right">}}
 
 To overcome Sia-UI's limitations, I use **Nextcloud** in this tutorial. [Nextcloud](https://www.nextcloud.com) is an open-source cloud storage web app. It offers a web interface similar to Dropbox or Google Drive. Nextcloud is designed for compatibility with many different storage providers, including Amazon S3, Dropbox, and OpenStack. In February 2017, the Sia team wrote [a custom plugin](https://github.com/NebulousLabs/Sia-Nextcloud) for Nextcloud, which I will use to connect Nextcloud with Sia.
 
@@ -74,7 +74,7 @@ If you're interested in testing out Nextcloud before you proceed further you can
 
 ### Docker
 
-{{<img src="docker-logo.png" alt="Docker logo" maxWidth="260px" align="right">}}
+{{<img src="docker-logo.png" alt="Docker logo" max-width="260px" align="right">}}
 
 Nextcloud is tricky to install because it requires a database, a web server, and several third-party software libraries. Rather than go through the tedium of Nextcloud's installation process, I use **Docker** to handle the entire setup.
 

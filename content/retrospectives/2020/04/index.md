@@ -24,7 +24,7 @@ In February, I found myself [backsliding into social media addiction](/retrospec
 
 In my last retrospective, I had [invested $600 into publicity for a comedy scavenger hunt](/retrospectives/2020/03/#100-in-revenue-but-at-what-cost), and I was worried that it would flop. It did indeed flop, and not even due to COVID-19.
 
-{{<img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="500px" caption="I canceled the WanderJest Scavenger Hunt on March 11th.">}}
+{{<img src="canceled-contest.png" alt="Banner for scavenger hunt with canceled stamp over it" max-width="500px" caption="I canceled the WanderJest Scavenger Hunt on March 11th.">}}
 
 In the first week of March, people were still attending local comedy shows as usual. I'd go to these shows and hand out promotional cards about the scavenger hunt and explain to people that if they took a picture during the show and tagged it @WanderJest on social media, they'd enter a grand prize drawing for $200. People generally seemed receptive. "$200? Wow, cool!"
 
@@ -44,7 +44,7 @@ Because of the contest's pitiful engagement, only one person had taken a photo d
 
 A week later, performances were still happening, but I didn't want WanderJest to tacitly endorse them by listing upcoming shows. I replaced the WanderJest show listings page with a notice saying that the site was going on a temporary hiatus until the COVID-19 pandemic was over. Looking back, March 18th feels like too late a reaction, and I wish I'd shuttered the site earlier.
 
-{{<img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" maxWidth="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control." hasBorder="true">}}
+{{<img src="wanderjest.png" alt="Screenshot of WanderJest website with hiatus notice" max-width="600px" caption="WanderJest is on indefinite hiatus until the US gets COVID-19 under control." hasBorder="true">}}
 
 ## Takeaways from the scavenger hunt
 
@@ -52,7 +52,7 @@ A week later, performances were still happening, but I didn't want WanderJest to
 
 The contest cost $600 for marketing another $100 in prizes, but it failed miserably at [my goal of spurring 40 new user signups](/retrospectives/2020/03/#goals-for-next-month). At first, I felt stupid for spending so much money without any evidence that people would participate. I could have limited the cost had I started slower and left myself room to cancel the contest if it failed to gain traction early on.
 
-{{<img src="promo-cards.jpg" alt="Banner for scavenger hunt with canceled stamp over it" maxWidth="600px" caption="These 500 unused promotional cards will come in handy the next time I launch a contest happening in March 2020.">}}
+{{<img src="promo-cards.jpg" alt="Banner for scavenger hunt with canceled stamp over it" max-width="600px" caption="These 500 unused promotional cards will come in handy the next time I launch a contest happening in March 2020.">}}
 
 In retrospect, I'm glad I rushed into the contest and spent the money. I certainly could have set a later start date and given myself more time to evaluate people's interest, but my top priority was finding ways to attract users to WanderJest. If $700 got me the results of my experiment a few weeks earlier than a more measured approach, that's an acceptable tradeoff.
 
@@ -141,7 +141,7 @@ The other big missing piece is drag and drop layouts. In Google Slides, it's tri
 
 I always felt like other indie projects had such slick stock imagery, but I wasn't sure if they were buying it or if it came from some template I didn't know about. It turns out that most of what I was seeing came from [unDraw](https://undraw.co), a collection of openly-licensed illustrations by [Katerina Limpitsouni](https://twitter.com/ninaLimpi). If you need free illustrations for a new product, I recommend checking out unDraw.
 
-{{<img src="undraw.png" alt="Screenshot of unDraw website" maxWidth="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project." hasBorder="true">}}
+{{<img src="undraw.png" alt="Screenshot of unDraw website" max-width="600px" caption="[unDraw](https://undraw.co) is an open collection of illustrations that you can use in any project." hasBorder="true">}}
 
 ## Legacy project stats
 

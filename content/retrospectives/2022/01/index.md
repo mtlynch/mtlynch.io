@@ -62,8 +62,8 @@ I've been working on the Voyager 2 since March 2021. I originally expected it to
 The Voyager 2 brings a tidier form factor. The Voyager 1 had an external power connector that sat outside the main device and required three different cables. The Voyager 2 eliminates that component so that everything is in a single unit.
 
 {{<gallery caption="The TinyPilot Voyager 1 (left) had an external component to expose the power and data ports. The TinyPilot Voyager 2 (right) eliminates the external component so that everything fits in a single unit.">}}
-{{<img src="voyager-1-power-connector.jpg" alt="TinyPilot's new logo" maxWidth="400px">}}
-{{<img src="voyager2-angled.jpg" alt="TinyPilot's new logo" maxWidth="400px">}}
+{{<img src="voyager-1-power-connector.jpg" alt="TinyPilot's new logo" max-width="400px">}}
+{{<img src="voyager2-angled.jpg" alt="TinyPilot's new logo" max-width="400px">}}
 {{</gallery>}}
 
 Honestly, the launch felt a little anticlimactic. While it's more convenient to eliminate the external power connector, I struggled to write [the announcement](https://tinypilotkvm.com/blog/introducing-voyager-2) in a way that sounded exciting. It felt silly to say, "Brand new version! It's exactly the same except without a separate box!"
@@ -76,13 +76,13 @@ I'm still excited for the power over Ethernet (PoE) version, which is due to lau
 
 Back in July of 2020, I commissioned TinyPilot's first logo. I found an illustrator on Upwork and paid her $600 to create the mascot and text.
 
-{{<img src="old-tinypilot-logo.png" alt="TinyPilot's new logo" maxWidth="500px" caption="TinyPilot's original logo">}}
+{{<img src="old-tinypilot-logo.png" alt="TinyPilot's new logo" max-width="500px" caption="TinyPilot's original logo">}}
 
 After a year, it felt like TinyPilot had outgrown the logo. Now that we were targeting business users in addition to hobbyists, the chipmunk mascot came across as too cutesy and not professional enough.
 
 In September, I [hired a firm](/retrospectives/2021/10/#investing-more-into-design) to redesign TinyPilot's website and create a new company logo. After lots of discussion, we finalized the logo in December:
 
-{{<img src="tinypilot-logo.png" alt="TinyPilot's new logo" maxWidth="500px" caption="TinyPilot's new logo">}}
+{{<img src="tinypilot-logo.png" alt="TinyPilot's new logo" max-width="500px" caption="TinyPilot's new logo">}}
 
 I like the logo a lot, and I've heard positive feedback about it.
 

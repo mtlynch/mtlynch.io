@@ -58,13 +58,13 @@ Due to supply shortages, I retired TinyPilot's lower-cost product in October to 
 I basically just removed a link from the site's navigation bar.
 
 {{<gallery caption="The highest impact change I ever made on the TinyPilot website was removing a navigation bar link to a product catalog page.">}}
-{{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" maxWidth="600px" hasBorder="true">}}
-{{<img src="no-product-page.png" alt="Screenshot of old product catalog page" maxWidth="250px" hasBorder="true">}}
+{{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" max-width="600px" hasBorder="true">}}
+{{<img src="no-product-page.png" alt="Screenshot of old product catalog page" max-width="250px" hasBorder="true">}}
 {{</gallery>}}
 
 In last month's retrospective, I mentioned that I was [starting to see sales trending upwards](/retrospectives/2021/11/#simplifying-to-just-one-product) and wondered whether it was related to simplifying the product offering. After a month of extra data, I'm pretty convinced that it made a huge difference:
 
-{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" maxWidth="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product">}}
+{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" max-width="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product">}}
 
 We've had spikes in sales before, but they always followed some obvious event like a mention on YouTube or a review on a popular website. Sales would spike and then slowly subside.
 
@@ -82,7 +82,7 @@ The latest sales increase has brought back some growing pains. We have contingen
 
 First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of circuit boards, which would prevent us from selling Voyagers.
 
-{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" maxWidth="500px" caption="We came within days of running out of TinyPilot Power Connectors.">}}
+{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" max-width="500px" caption="We came within days of running out of TinyPilot Power Connectors.">}}
 
 I listed them out of stock for individual sale, and that slowed down the pace _just_ enough to last us until the new shipment arrived.
 
@@ -92,7 +92,7 @@ _\[Sidenote: If you're wondering why I was still selling power connectors even t
 
 Next, we started running low on ribbon cables. We typically buy them in bulk, and we have so many on hand that it's not even worth tracking them in our inventory system. But because we're not tracking them, we didn't notice that our last order was running late. We were down to just 30 cables, enough to make only a few days' worth of Voyagers.
 
-{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" maxWidth="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
+{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" max-width="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
 
 We use a non-standard ribbon cable size, so we get them special-ordered. Was I going to have to halt sales for weeks because of something as stupid as ribbon cables?
 
@@ -120,11 +120,11 @@ Because I used GCP for so long, many of my side projects are still running on Go
 
 Here are what my GCP costs looked like before the great migration:
 
-{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" maxWidth="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
+{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" max-width="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
 
 And here's what costs looked like when I was finished:
 
-{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" maxWidth="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
+{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" max-width="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
 
 ### HTTP Load Balancing - $37/mo
 
@@ -136,7 +136,7 @@ This simple [80-step process](https://cloud.google.com/storage/docs/hosting-stat
 
 I dramatically reduced that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after discovering BunnyCDN as a service, it was serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell Bunny the GCS bucket URL and the subdomain I wanted, then add a DNS entry.
 
-{{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" maxWidth="800px" hasBorder="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
+{{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" max-width="800px" hasBorder="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
 
 BunnyCDN's minimum charge is $1/mo total, whereas Google's is ~$18/mo per site. I'm _way_ below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed BunnyCDN's minimum, their bandwidth prices are less than 1/10th of Google's.
 
@@ -160,7 +160,7 @@ To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting w
 
 My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 2-20x speedups after I migrated to SQLite and fly.io.
 
-{{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" maxWidth="800px">}}
+{{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" max-width="800px">}}
 
 | Request                             | AppEngine Latency (ms) | fly.io Latency (ms) | Latency Reduction |
 | ----------------------------------- | ---------------------- | ------------------- | ----------------- |

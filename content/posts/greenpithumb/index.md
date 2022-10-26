@@ -159,7 +159,7 @@ We originally used Dickson Chow's [Plant Friends soil probe](http://dickson.bigc
 
 #### I think my dirt is broken
 
-{{<img src="miracle-gro.png" alt="Miracle-Gro soil" maxWidth="300px" align="right">}}
+{{<img src="miracle-gro.png" alt="Miracle-Gro soil" max-width="300px" align="right">}}
 
 Maybe it was the dirt's fault. Our potting soil was this [pre-packaged mix](https://smile.amazon.com/gp/product/B01JIRJK8S/) from Miracle-Gro that featured an "easy to water formula." A bit suspicious, no? Clearly, this was evil, genetically engineered dirt that never dries. That's why our poor soil sensors were so confused.
 
@@ -208,7 +208,7 @@ It's a lesson I learned [long ago](https://www.joelonsoftware.com/2002/03/04/not
 
 ### Electronics: start with the basics
 
-{{<img src="arduino-starter-kit.jpg" alt="Arduino starter kit" maxWidth="300px" align="left" linkUrl="https://smile.amazon.com/gp/product/B009UKZV0A/">}}
+{{<img src="arduino-starter-kit.jpg" alt="Arduino starter kit" max-width="300px" align="left" linkUrl="https://smile.amazon.com/gp/product/B009UKZV0A/">}}
 
 At the start of GreenPiThumb, my only knowledge of electronics was based on faint memories of high school physics. I bought the [Arduino starter kit](https://smile.amazon.com/gp/product/B009UKZV0A/) and went through the tutorials to build a foundation in electronics.
 

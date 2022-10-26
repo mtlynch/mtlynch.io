@@ -119,7 +119,7 @@ This closely mirrors the idea of ["choicelessness language" in _Nonviolent Commu
 - Circle of concern: the set of all things in the world that occupy your thoughts, whether or not you can change them.
 - Circle of influence: the subset of items in your circle of your concern over which you can have an actual impact.
 
-{{<img src="circles.png" maxWidth="600px" caption="Circle of Concern contains everything you think about. Circle of Influence contains the subset of those things that you can impact.">}}
+{{<img src="circles.png" max-width="600px" caption="Circle of Concern contains everything you think about. Circle of Influence contains the subset of those things that you can impact.">}}
 
 - Proactive people focus their energy on their circle of influence.
   - They care most about things they can change, and doing so expands the set of things they influence.
