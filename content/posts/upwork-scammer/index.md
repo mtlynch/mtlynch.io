@@ -41,7 +41,7 @@ Checking Lizzie's timesheet, I realized she had logged her hours using Work Diar
 
 Work Diary creeps me out. I never require freelancers to run it, but Lizzie chose to run it instead of simply invoicing me for her hours. This meant that I didn't have any results, but I did have screenshots showing how she spent the five hours she billed to me.
 
-{{<img src="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" caption="Overview of Lizzie's activities in Work Diary" max-width="800px" hasBorder="True">}}
+{{<img src="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" caption="Overview of Lizzie's activities in Work Diary" max-width="800px" has-border="True">}}
 
 In early screenshots, she was writing a document about mantras in Hinduism. It definitely had nothing to do with my project, but she was charging me for it.
 
@@ -65,13 +65,13 @@ A quick search on Upwork turned up [Abi's profile](https://www.upwork.com/o/prof
 
 That explained why she had four different web browsers pinned to her taskbar. She probably used a separate browser for each Upwork identity.
 
-{{<img src="many-browsers.jpg" alt="Screenshot of Lizzie's desktop showing Firefox, Chrome, IE, and Opera" caption="Screenshot of Lizzie's desktop showing four different web browsers installed" max-width="800px" hasBorder="True">}}
+{{<img src="many-browsers.jpg" alt="Screenshot of Lizzie's desktop showing Firefox, Chrome, IE, and Opera" caption="Screenshot of Lizzie's desktop showing four different web browsers installed" max-width="800px" has-border="True">}}
 
 ## Who is Grace?
 
 One of the screenshots showed Lizzie's Documents folder:
 
-{{<img src="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" caption="Work Diary screenshot shows Lizzie's Documents folder" max-width="800px" hasBorder="True">}}
+{{<img src="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" caption="Work Diary screenshot shows Lizzie's Documents folder" max-width="800px" has-border="True">}}
 
 It revealed several files with the name "Grace" in the title:
 
@@ -101,7 +101,7 @@ Not to sound like a [birther](https://en.wikipedia.org/wiki/Barack_Obama_citizen
 
 I took another look at the Upwork profile that led me to hire Lizzie in the first place. A few Google searches showed that Lizzie had plagiarized the whole thing &mdash; it was a mashup of a [LinkedIn profile](https://www.linkedin.com/in/laraflanagan/) and another [profile right from Upwork](https://www.upwork.com/o/profiles/users/_~017434da88fc78860a/).
 
-{{<img src="profile-stitching.png" alt="Sources from which Lizzie stole her profile" caption="Lizzie created her profile by stitching together two others" max-width="800px" hasBorder="True">}}
+{{<img src="profile-stitching.png" alt="Sources from which Lizzie stole her profile" caption="Lizzie created her profile by stitching together two others" max-width="800px" has-border="True">}}
 
 ## Is this a trick?
 

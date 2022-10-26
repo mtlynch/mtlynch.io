@@ -51,7 +51,7 @@ Things looked good at the start of the month. I mentioned Is It Keto in [an arti
 
 I use a single Amazon account for all of my projects, but each of my websites has its own unique tracking ID so that I can see revenue on a per-site basis. When you create an Amazon Affiliate link, it auto-populates the tracking ID with whatever you used last. I had been generating lots of links for Is It Keto, so I didn't notice that when I generated a link for [_Four Hour Work Week_](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) on my blog, I forgot to change the tracking ID.
 
-{{<img src="amazon-affiliate-screwup.jpg" alt="Generating an Amazon Affiliate link" caption="I forgot to change my tracking ID, leading to accounting confusion for Is It Keto" max-width="800px" hasBorder="True">}}
+{{<img src="amazon-affiliate-screwup.jpg" alt="Generating an Amazon Affiliate link" caption="I forgot to change my tracking ID, leading to accounting confusion for Is It Keto" max-width="800px" has-border="True">}}
 
 This meant that ~50 affiliate clicks through my blog were accidentally mixed in with Is It Keto before I [fixed the issue](https://github.com/mtlynch/mtlynch.io/pull/362) on Feb. 6th. I can't track which link generated what revenue, but I know $28.68 in revenue for the month came from that one-week period. My true revenue might be as little as $2.78 or as high as $31.46. I'm going to take an educated guess and say that the mistake bumped Is It Keto's earnings by about $20, so the real revenue was probably about $11.
 
@@ -151,7 +151,7 @@ Is It Keto doesn't make it easy for users to browse around the full list of arti
 
 Now that the site has over 160 foods, I'm thinking about how to make the pages more discoverable. The obvious option is to allow users to browse by category (e.g., "vegetables," "desserts"). But it would take a week or more of dev time to implement a category system and associated pages for displaying them. As a quicker solution, I added a small box at the end of each article labeled "Other Keto Foods You May Enjoy":
 
-{{<img src="other-foods.jpg" alt="Screenshot of Other Foods widget on Is It Keto" caption="Other Foods section of Is It Keto" max-width="800px" hasBorder="True">}}
+{{<img src="other-foods.jpg" alt="Screenshot of Other Foods widget on Is It Keto" caption="Other Foods section of Is It Keto" max-width="800px" has-border="True">}}
 
 The box displays three random keto foods. Well, not completely random. It randomly samples the foods from among the keto foods where I have a link to buy the product on Amazon.
 

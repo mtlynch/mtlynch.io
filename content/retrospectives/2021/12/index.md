@@ -58,8 +58,8 @@ Due to supply shortages, I retired TinyPilot's lower-cost product in October to 
 I basically just removed a link from the site's navigation bar.
 
 {{<gallery caption="The highest impact change I ever made on the TinyPilot website was removing a navigation bar link to a product catalog page.">}}
-{{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" max-width="600px" hasBorder="true">}}
-{{<img src="no-product-page.png" alt="Screenshot of old product catalog page" max-width="250px" hasBorder="true">}}
+{{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" max-width="600px" has-border="true">}}
+{{<img src="no-product-page.png" alt="Screenshot of old product catalog page" max-width="250px" has-border="true">}}
 {{</gallery>}}
 
 In last month's retrospective, I mentioned that I was [starting to see sales trending upwards](/retrospectives/2021/11/#simplifying-to-just-one-product) and wondered whether it was related to simplifying the product offering. After a month of extra data, I'm pretty convinced that it made a huge difference:
@@ -120,11 +120,11 @@ Because I used GCP for so long, many of my side projects are still running on Go
 
 Here are what my GCP costs looked like before the great migration:
 
-{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" max-width="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
+{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" max-width="800px" has-border="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
 
 And here's what costs looked like when I was finished:
 
-{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" max-width="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
+{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" max-width="800px" has-border="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
 
 ### HTTP Load Balancing - $37/mo
 
@@ -136,7 +136,7 @@ This simple [80-step process](https://cloud.google.com/storage/docs/hosting-stat
 
 I dramatically reduced that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after discovering BunnyCDN as a service, it was serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell Bunny the GCS bucket URL and the subdomain I wanted, then add a DNS entry.
 
-{{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" max-width="800px" hasBorder="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
+{{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" max-width="800px" has-border="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
 
 BunnyCDN's minimum charge is $1/mo total, whereas Google's is ~$18/mo per site. I'm _way_ below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed BunnyCDN's minimum, their bandwidth prices are less than 1/10th of Google's.
 

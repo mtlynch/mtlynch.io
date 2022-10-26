@@ -49,13 +49,13 @@ I've been building my own software products and services for the past eight year
 
 Instead, I've always used Google-managed datastores like Cloud Datastore, Firebase, and Firestore. But every few years, Google builds a totally new datastore solution, deprecates its old one, and [dumps all the migration work onto its customers](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc). I didn't want to create another service on top of a tech stack that Google would probably kill off soon.
 
-{{<img src="gcp-deprecations.png" alt="Screenshot of AppEngine library documentation featuring several deprecation notices" caption="Google deprecated its Python DB Client library, forcing users to migrate to NDB. They then deprecated NDB in favor of Cloud NDB. Now, they're ominously directing developers to build new apps against yet another API." max-width="640px" hasBorder="true">}}
+{{<img src="gcp-deprecations.png" alt="Screenshot of AppEngine library documentation featuring several deprecation notices" caption="Google deprecated its Python DB Client library, forcing users to migrate to NDB. They then deprecated NDB in favor of Cloud NDB. Now, they're ominously directing developers to build new apps against yet another API." max-width="640px" has-border="true">}}
 
 ## Litestream: the serverless database server
 
 A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular [Bolt database](https://github.com/boltdb/bolt), had taken on a new project: [Litestream](http://litestream.io). It's a simple, open-source tool that replicates a SQLite database to Amazon's S3 cloud storage.
 
-{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." max-width="700px" hasBorder="true">}}
+{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." max-width="700px" has-border="true">}}
 
 It seemed neat, but I wasn't particularly excited about it. I never use SQLite, so what did I care?
 
@@ -208,7 +208,7 @@ docker run \
 
 Here's how it all fits together in production:
 
-{{<img src="diagram.jpg" caption="How LogPaste, Litestream, Docker, and S3 all fit together" max-width="750px" hasBorder="true">}}
+{{<img src="diagram.jpg" caption="How LogPaste, Litestream, Docker, and S3 all fit together" max-width="750px" has-border="true">}}
 
 ## LogPaste demo
 
@@ -286,7 +286,7 @@ I'm using LogPaste in production for [TinyPilot](https://tinypilotkvm.com), my o
 
 LogPaste has handled all of TinyPilot's debug logs for the past few months, and it's worked well. The cost for data replication truly is just $0.03 per month:
 
-{{<img src="aws-bill.png" alt="Screenshot of AWS bill showing $0.03 in S3 charges and $0.00 in data transfer fees" max-width="600px" hasBorder="true">}}
+{{<img src="aws-bill.png" alt="Screenshot of AWS bill showing $0.03 in S3 charges and $0.00 in data transfer fees" max-width="600px" has-border="true">}}
 
 My use case is, admittedly, fairly gentle. Only a handful of users upload their logs each day, so there may be pain points with this setup under heavier workloads.
 
@@ -300,7 +300,7 @@ If you want to host your own instance of my LogPaste app, it's easy to deploy. Y
 
 For example, here's TinyPilot's version:
 
-{{<img src="tinypilot-branding.png" alt="Screenshot of TinyPilot's LogPaste instance" caption="TinyPilot's instance of LogPaste includes custom branding without any code changes" max-width="680px" hasBorder="true">}}
+{{<img src="tinypilot-branding.png" alt="Screenshot of TinyPilot's LogPaste instance" caption="TinyPilot's instance of LogPaste includes custom branding without any code changes" max-width="680px" has-border="true">}}
 
 I've written deployment instructions for a few different platforms:
 

@@ -21,7 +21,7 @@ The night was June 9th, 2017. It was a typical Friday night for me. I was ~~watc
 
 Suddenly, I saw this post on the "New" tab of the [/r/siacoin](https://www.reddit.com/r/siacoin/) subreddit:
 
-{{<img src="posted-seed.png" alt="Reddit screenshot" hasBorder="True">}}
+{{<img src="posted-seed.png" alt="Reddit screenshot" has-border="True">}}
 
 If you're not familiar with Siacoin, it's a cryptocurrency that allows you to rent out your spare hard disk space or buy space from others. I've written about this technology a couple times previously ([mining guide](/windows-sia-mining/), [NAS guide](/sia-via-docker/)).
 

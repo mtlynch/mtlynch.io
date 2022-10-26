@@ -71,7 +71,7 @@ PiKVM gives all of its software away for free and doesn't offer a paid version. 
 
 When I heard about PiKVM's Kickstarter, I estimated that it would earn $15-20k, enough to manufacture a few hundred units. It ended up **far** exceeding my expectations. The final total was $789k from 3,572 backers. That's twice as much as TinyPilot's total sales revenue since launch.
 
-{{<img src="pikvm-kickstarter.png" alt="Screenshot of PiKVM Kickstarter, showing $789,191 in funds raised" max-width="800px" hasBorder="true" caption="PiKVM's Kickstarter raised $789,191.">}}
+{{<img src="pikvm-kickstarter.png" alt="Screenshot of PiKVM Kickstarter, showing $789,191 in funds raised" max-width="800px" has-border="true" caption="PiKVM's Kickstarter raised $789,191.">}}
 
 I'm happy for Maxim, and he certainly deserves the success for all the work he's put into PiKVM. That said, it's a bit scary to see a competitor suddenly raise close to a million dollars. Scarier still, he's expressed interest in a plug 'n play version of PiKVM to compete directly with TinyPilot.
 
@@ -97,7 +97,7 @@ I interviewed six different designers and firms and ended up picking the most ex
 
 I might be a rube who got hornswoggled into an expensive project, but I felt like they made a compelling case. The brand forms the foundation of everything else, so it makes sense to invest more in that now.
 
-{{<img src="tinypilot-logo.jpg" alt="TinyPilot's logo, a chipmunk in an airplane" max-width="600px" hasBorder="true" caption="TinyPilot's chipmunk mascot may not be long for this world.">}}
+{{<img src="tinypilot-logo.jpg" alt="TinyPilot's logo, a chipmunk in an airplane" max-width="600px" has-border="true" caption="TinyPilot's chipmunk mascot may not be long for this world.">}}
 
 As much as I love the TinyPilot chipmunk, I think the company has outgrown the mascot. The cartoonishness worked in the beginning when we were catering mainly to hobbyists, but now that more of our customers are businesses, I want a logo that's a bit more serious &mdash; not IBM-level serious, but maybe like a notch or two more playful than [Ubiquiti](https://ui.com) or [Proxmox](https://www.proxmox.com/en/).
 

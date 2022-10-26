@@ -66,7 +66,7 @@ Open up your favorite video player. I think [Adobe Premiere Elements](https://ww
 
 Next, create a spreadsheet. You can start with [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing). I'll explain the fields below:
 
-{{<img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." hasBorder="true">}}
+{{<img src="spreadsheet.png" alt="Screenshot of my Google Sheets spreadsheet" caption="Catalog all the metadata in a spreadsheet that has the same format as [mine](https://docs.google.com/spreadsheets/d/1kuamVFEYBrOI097IWBQ8sB0q37ZRACYe2o389Ag92zI/edit?usp=sharing)." has-border="true">}}
 
 - `tape_id`: This is the filename (without extension) of the video file.
 - `tape_shortname`: This is a shortname you want to identify files that came from this raw file. It can be the same as `tape_id`.

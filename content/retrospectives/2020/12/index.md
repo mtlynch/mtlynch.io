@@ -90,7 +90,7 @@ After the third inquiry about VGA support, I purchased a VGA to HDMI adapter fro
 
 As I continued receiving questions about VGA, I started thinking about ways to answer the customer's question before they have to email me. So I did this:
 
-{{<img src="vga-add-on.png" alt="Screenshot of TinyPilot's order page showing an 'Add VGA to HDMI adapter' checkbox" hasBorder="true" caption="Adding a VGA add-on option eliminated my customers' most common pre-sales question.">}}
+{{<img src="vga-add-on.png" alt="Screenshot of TinyPilot's order page showing an 'Add VGA to HDMI adapter' checkbox" has-border="true" caption="Adding a VGA add-on option eliminated my customers' most common pre-sales question.">}}
 
 About one-third of my customers now choose the VGA add-on, so the experiment was a success. I sell the adapter at cost, but it creates convenience for my customers who don't have to go elsewhere to purchase it separately.
 
@@ -114,7 +114,7 @@ In the last year, I've realized that one of my unique skills is writing articles
 
 I announced the course two days ago, and sales have been... slow.
 
-{{<img src="htfp-sales.png" max-width="740px" hasBorder="true" alt="Screenshot from Gumroad showing 478 visits to my sales page and 5 sales for $300 total.">}}
+{{<img src="htfp-sales.png" max-width="740px" has-border="true" alt="Screenshot from Gumroad showing 478 visits to my sales page and 5 sales for $300 total.">}}
 
 As of this writing, I've sold five pre-orders for $300 total. I'm happy to have sales, but I'm a bit worried that I overestimated the market for this course. One of the authors who gave me advice about self-publishing a course told me that she made more in pre-sales than she did post-launch, so the current sales numbers don't bode well.
 

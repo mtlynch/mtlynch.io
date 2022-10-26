@@ -36,7 +36,7 @@ No, I couldn't do that or I'd never finish my story. I recognized my newfound cl
 
 At the time, I was making good money working for Google, but I constantly felt short on time. A friend in Seattle told me that she used an app called [TaskRabbit](https://www.taskrabbit.com) to book workers for short, one-off tasks like mounting a TV or picking something up from the store.
 
-{{<img src="taskrabbit.jpg" alt="TaskRabbit homepage" caption="TaskRabbit, a service that allows you to hire freelancers for short jobs and chores" max-width="600px" hasBorder="True">}}
+{{<img src="taskrabbit.jpg" alt="TaskRabbit homepage" caption="TaskRabbit, a service that allows you to hire freelancers for short jobs and chores" max-width="600px" has-border="True">}}
 
 I signed up and browsed the app. To my surprise, TaskRabbit had no job template for "deep cleaning an old keyboard," so I booked the job as "Small cleaning" and explained the nature of my task in the description. Unsure if the keyboard would fill up TaskRabbit's one-hour minimum, I requested that the cleaner also take care of some dishes that had piled up in my sink.
 
@@ -50,13 +50,13 @@ Another candidate was pregnant and needed to know whether the job required heavy
 
 Finally, Jaclyn S sent me an offer. She approached the job with supreme confidence and had no questions except for what supplies to bring. Within 20 minutes, we booked the job for 3pm the following day.
 
-{{<img src="jaclyn-s-1.jpg" alt="Screenshot of conversation with Jaclyn S" caption="Jaclyn S is ready to clean some keyboards" max-width="500px" hasBorder="True">}}
+{{<img src="jaclyn-s-1.jpg" alt="Screenshot of conversation with Jaclyn S" caption="Jaclyn S is ready to clean some keyboards" max-width="500px" has-border="True">}}
 
 ## The first hiccup
 
 Jaclyn S. messaged me a few hours before the appointment saying that her morning job exploded into a 10-hour task. She wouldn't be able to make it to my place by 3pm. We could either reschedule for 9pm that evening or 3pm the following day.
 
-{{<img src="jaclyn-s-2.jpg" alt="Screenshot of conversation with Jaclyn S" caption="Jaclyn S explains why she can't make it to the appointment" max-width="500px" hasBorder="True">}}
+{{<img src="jaclyn-s-2.jpg" alt="Screenshot of conversation with Jaclyn S" caption="Jaclyn S explains why she can't make it to the appointment" max-width="500px" has-border="True">}}
 
 This offended me. Was Jaclyn S. implying that I, a young man in one of Manhattan's trendiest neighborhoods, had nothing better to do on a Saturday night than sit and watch somebody clean my keyboard?
 
@@ -118,7 +118,7 @@ The final cost for Jaclyn's three and a half hours of keyboard cleaning: $95.55.
 
 Out of curiosity, I checked what I paid for that keyboard brand new: $38.89.
 
-{{<img src="keyboard-order.jpg" alt="$38.89 receipt for purchasing my keyboard brand new" caption="Amazon receipt for my keyboard" max-width="500px" hasBorder="True">}}
+{{<img src="keyboard-order.jpg" alt="$38.89 receipt for purchasing my keyboard brand new" caption="Amazon receipt for my keyboard" max-width="500px" has-border="True">}}
 
 I spent $96 to clean a $39 keyboard.
 

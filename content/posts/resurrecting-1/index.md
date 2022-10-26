@@ -49,9 +49,9 @@ After six years of adding to this database, they realized that they had enough d
 
 I had the same problem as the _Times_. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
 
-{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" max-width="400px" hasBorder="True">}}
+{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" max-width="400px" has-border="True">}}
 
-{{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" max-width="300px" hasBorder="True" align="right">}}
+{{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" max-width="300px" has-border="True" align="right">}}
 
 At the time I stumbled upon ingredient-phrase-tagger, I was parsing ingredients in an ugly, hacky way: with [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
 
@@ -65,11 +65,11 @@ But first, I had to figure out how to make their code run.
 
 The _Times_ built this library for a hack week event, so it lacked many features one expects of a professional software project, such as automated tests or thorough documentation. The README included instructions for installing the application, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
 
-{{<img src="osx-install.png" alt="OS X install instructions" caption="[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" max-width="756px" hasBorder="True">}}
+{{<img src="osx-install.png" alt="OS X install instructions" caption="[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" max-width="756px" has-border="True">}}
 
 Of course, I wasn't the only one to notice these issues. At the time they published, the _Times_ received tough criticism from famed Python developer D. John Trump:
 
-{{<img src="trump-tweet.png" alt="Trump tweet about code" max-width="628px" hasBorder="True">}}
+{{<img src="trump-tweet.png" alt="Trump tweet about code" max-width="628px" has-border="True">}}
 
 ## Building it in Docker
 
@@ -86,7 +86,7 @@ DISTRIB_RELEASE=16.04
 
 The ingredient parsing library's first dependency was its machine learning engine: a C++ application called [CRF++](https://taku910.github.io/crfpp/).
 
-{{<img src="crfpp-installation.png" alt="CRF++ installation instructions" caption="CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" max-width="426px" hasBorder="True">}}
+{{<img src="crfpp-installation.png" alt="CRF++ installation instructions" caption="CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" max-width="426px" has-border="True">}}
 
 The CRF++ build instructions looked simple enough, so I ran the commands within my Ubuntu container:
 
@@ -108,7 +108,7 @@ Whoops, `make` failed with an error about a missing Windows header file.
 
 Was that code still maintained?
 
-{{<img src="crfpp-commits.png" alt="CRF++ change history" caption="CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" max-width="800px" hasBorder="True">}}
+{{<img src="crfpp-commits.png" alt="CRF++ change history" caption="CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" max-width="800px" has-border="True">}}
 
 Oh no! Another dead repository? I was already resurrecting one library. I didn't want to take on another.
 

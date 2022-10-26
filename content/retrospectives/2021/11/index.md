@@ -69,13 +69,13 @@ Now that we had a basic prototype, I wrote a requirements document and asked Tin
 
 As part of the design work, TinyPilot's senior developer created screenshots to mock up the user flow. I included them in a [teaser blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) that invited readers to sign up for TinyPilot Cloud early access.
 
-{{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" max-width="600px" caption="A teaser [blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) I published about TinyPilot Cloud." hasBorder="true">}}
+{{<img src="cloud-preview-post.png" alt="Screenshot of TinyPilot blog post about TinyPilot Cloud" max-width="600px" caption="A teaser [blog post](https://tinypilotkvm.com/blog/tinypilot-cloud-waitlist) I published about TinyPilot Cloud." has-border="true">}}
 
 I sent the announcement to TinyPilot's 450 mailing list subscribers. 94 of them clicked the link, which was a promising conversion rate.
 
 After two days, only two users had signed up for the TinyPilot Cloud waitlist, and that was after sharing the post on Twitter, Reddit, and the TinyPilot user forums.
 
-{{<img src="cloud-waitlist.png" alt="Screenshot of EmailOctopus showing only two signups" max-width="700px" caption="Two days after the teaser blog post, only two users had signed up for early access to TinyPilot Cloud." hasBorder="true">}}
+{{<img src="cloud-waitlist.png" alt="Screenshot of EmailOctopus showing only two signups" max-width="700px" caption="Two days after the teaser blog post, only two users had signed up for early access to TinyPilot Cloud." has-border="true">}}
 
 Two signups were _way_ less than I was hoping. I expected maybe 50 signups, of which 25 could turn into actual customers, so we'd be starting out with ~$750/month. If only two people total were interested out of a population that actively follows TinyPilot, something was seriously wrong.
 
@@ -99,13 +99,13 @@ I began working with a design firm in September on a rebrand for TinyPilot. When
 
 After that conversation, I began to wonder whether the Hobbyist Kit was hindering that goal. Seeing the TinyPilot Voyager next to a cheap DIY device might send the message that the Voyager is only a small step up from something you could build yourself.
 
-{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" max-width="800px" caption="Does the TinyPilot Voyager look cheap sitting alongside the Hobbyist Kit?" hasBorder="true">}}
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" max-width="800px" caption="Does the TinyPilot Voyager look cheap sitting alongside the Hobbyist Kit?" has-border="true">}}
 
 Further complicating matters, there's been a shortage of Raspberry Pi devices. The wait time on new orders is six months or more. It's possible that I'll run out of Raspberry Pis before the chip shortage eases up, so it seems foolish to waste a scarce resource on my $190 product instead of my $350 product.
 
 Halfway through the month, I retired the Hobbyist Kit from the website to focus on the Voyager:
 
-{{<img src="no-hobbyist-kit.png" alt="Screenshot of website without Hobbyist kit" max-width="300px" caption="Removing the TinyPilot Hobbyist kit from the products page" hasBorder="true">}}
+{{<img src="no-hobbyist-kit.png" alt="Screenshot of website without Hobbyist kit" max-width="300px" caption="Removing the TinyPilot Hobbyist kit from the products page" has-border="true">}}
 
 That felt nicer. If a customer wanted a KVM over IP device, the choice was unambiguous. They didn't have to research the Hobbyist kit and Voyager and evaluate whether they were willing to pay more for a plug 'n play device and higher quality video.
 
@@ -113,7 +113,7 @@ Then, I thought, "Why stop there?" Did all the other products need to be there? 
 
 Trimming out the accessory products allowed me to focus the TinyPilot website around my flagship product: the Voyager.
 
-{{<img src="one-product.png" alt="Screenshot of TinyPilot website, offering only one product" max-width="600px" caption="The TinyPilot website now offers a single product: the Voyager" hasBorder="true">}}
+{{<img src="one-product.png" alt="Screenshot of TinyPilot website, offering only one product" max-width="600px" caption="The TinyPilot website now offers a single product: the Voyager" has-border="true">}}
 
 Reducing to a single product offers a lot of benefits. There's less complexity for customer support, it gives us more room to store inventory, and it simplifies our order fulfillment process.
 

@@ -81,18 +81,18 @@ I'm going to write a longer blog post about the experience, but the main mistake
 But let's take a look at the results. The project involved redesigning the three pages in the checkout flow: the landing page, the product page, and the shopping cart page:
 
 {{<gallery caption="Before and after landing page redesign">}}
-{{<img src="landing-before.png" alt="Screenshot of old landing page" max-width="300px" hasBorder="true">}}
-{{<img src="landing-after.png" alt="Screenshot of new landing page" max-width="260px" hasBorder="true">}}
+{{<img src="landing-before.png" alt="Screenshot of old landing page" max-width="300px" has-border="true">}}
+{{<img src="landing-after.png" alt="Screenshot of new landing page" max-width="260px" has-border="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after product page redesign">}}
-{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" max-width="300px" hasBorder="true">}}
-{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" max-width="220px" hasBorder="true">}}
+{{<img src="product-before.png" alt="Screenshot of old Voyager 2 product page" max-width="300px" has-border="true">}}
+{{<img src="product-after.png" alt="Screenshot of new Voyager 2 product page" max-width="220px" has-border="true">}}
 {{</gallery>}}
 
 {{<gallery caption="Before and after shopping cart page redesign">}}
-{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" max-width="400px" hasBorder="true">}}
-{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" max-width="340px" hasBorder="true">}}
+{{<img src="cart-before.png" alt="Screenshot of old shopping cart page" max-width="400px" has-border="true">}}
+{{<img src="cart-after.png" alt="Screenshot of new shopping cart page" max-width="340px" has-border="true">}}
 {{</gallery>}}
 
 Money aside, I'm happy with the results. I think the new design is inarguably better than what I had before. The new logo and images make the project look more professional and distinctive.
@@ -159,13 +159,13 @@ PicoShare is the open-source tool I [released in March](/retrospectives/2022/04/
 
 In May, I added support for editing a file's metadata after you upload it:
 
-{{<img src="ps-edit-file.png" alt="Screenshot of metadata edit screen in PicoShare" hasBorder="true" caption="In May, I added support in PicoShare for editing file metadata.">}}
+{{<img src="ps-edit-file.png" alt="Screenshot of metadata edit screen in PicoShare" has-border="true" caption="In May, I added support in PicoShare for editing file metadata.">}}
 
 Originally, you had a chance to add a note and choose an expiration time for a file at the time you uploaded it, and those decisions were final. Now, PicoShare is more flexible, allowing you to change a file's metadata and expiration date at any time.
 
 After I added the edit screen, I realized it was a good opportunity to make the process of deleting files more error-proof. Before, if you clicked the delete button in the file listing, the file was gone &mdash; no confirmation, no undo. Now, deleting a file requires you to first visit the edit screen, click delete, then confirm the deletion:
 
-{{<img src="ps-confirm-delete.png" alt="Screenshot of delete confirmation dialog in PicoShare" hasBorder="true" caption="I added a confirmation dialog to reduce accidental file deletes.">}}
+{{<img src="ps-confirm-delete.png" alt="Screenshot of delete confirmation dialog in PicoShare" has-border="true" caption="I added a confirmation dialog to reduce accidental file deletes.">}}
 
 ### [WanderJest](https://wanderjest.com)
 
@@ -184,8 +184,8 @@ Firestore slows me down because of how hard it is to make schema changes. The on
 I'm now working on reimplementing WanderJest to replace Vue with Go templates and Firestore with SQLite.
 
 {{<gallery caption="Current Vue-based WanderJest site (left) vs. in-progress reimplementation of WanderJest with Go HTML templates (right)">}}
-{{<img src="wanderjest-before.png" alt="Screnshot of WanderJest live site" max-width="450px" hasBorder="true">}}
-{{<img src="wanderjest-after.png" alt="Screenshot of new Go-based WanderJest site" max-width="467px" hasBorder="true">}}
+{{<img src="wanderjest-before.png" alt="Screnshot of WanderJest live site" max-width="450px" has-border="true">}}
+{{<img src="wanderjest-after.png" alt="Screenshot of new Go-based WanderJest site" max-width="467px" has-border="true">}}
 {{</gallery>}}
 
 Writing a frontend in Go is easier than I expected. The up-front experience isn't as nice as Vue. I'd love conditional rendering or reactive properties, and you don't get that in vanilla JS. But overall, rendering a page is so much simpler with Go.

@@ -60,8 +60,8 @@ I knew the [TinyPilot blog post](/tinypilot/) would be different before I publis
 Fortunately, the blog post got a positive response. It reached the #1 spot on Hacker News and stayed there for most of the day. It attracted 22k readers on its first day and 52k total since then.
 
 {{< gallery caption="My TinyPilot blog post received a positive reception on Hacker News and several popular subreddits.">}}
-{{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true">}}
-{{<img src="reddit-submissions.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true">}}
+{{<img src="hn-no-1.png" alt="Screenshot of TinyPilot blog post at #1 slot" has-border="true">}}
+{{<img src="reddit-submissions.png" alt="Screenshot of TinyPilot submissions on reddit" has-border="true">}}
 {{</gallery>}}
 
 The downside of this response was that I underestimated demand. I only had enough inventory on hand to ship nine kits, so I was sold out midday through my blog post launch.
@@ -87,7 +87,7 @@ I've searched for inventory management software to match my use case but come up
 
 My current solution is a dopey spreadsheet where I track all the parts I need along with what I have in stock and what's in transit. It's an inelegant solution, but it's mostly working in the short term.
 
-{{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" hasBorder="true" caption="My TinyPilot inventory spreadsheet" max-width="800px">}}
+{{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" has-border="true" caption="My TinyPilot inventory spreadsheet" max-width="800px">}}
 
 I'm hoping that once I get through this backlog, inventory won't be so complicated. For each part, I can set a range of units I want to keep in stock and resupply when I fall below the lower threshold. Hopefully, I can pick numbers high enough to absorb spikes in purchases and have enough left to sustain me until a delivery of new parts arrives.
 

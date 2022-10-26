@@ -494,7 +494,7 @@ Fortunately, there are a variety of services that alert you when a scheduled tas
 
 From Cronitor, I created a new monitor with a `0 0 3 * *` schedule that matches the schedule for full backups on my TrueNAS server:
 
-{{<img src="cronitor-setup.png" hasBorder="true" alt="New Cronitor Monitor with name truenas-full-backups and schedule 0 0 3 * *">}}
+{{<img src="cronitor-setup.png" has-border="true" alt="New Cronitor Monitor with name truenas-full-backups and schedule 0 0 3 * *">}}
 
 Cronitor generates a unique URL for this monitor that looks like this:
 

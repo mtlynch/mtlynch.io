@@ -69,13 +69,13 @@ Homerun was the very last ATS I evaluated, but it ended up being my favorite. I 
 
 Homerun has a clean UI that simplified the process of creating a job application. They have flexible options for creating application questions with standard UI controls like short answer, long answer, multiple choice:
 
-{{<img src="homerun-3.jpg" max-width="800px" hasBorder="true" alt="UX for creating job applications in Homerun">}}
+{{<img src="homerun-3.jpg" max-width="800px" has-border="true" alt="UX for creating job applications in Homerun">}}
 
 Homerun has a nice Kanban-style view of candidates at various stages of the hiring pipeline, and they make it easy to manage communications with each applicant:
 
 {{<gallery>}}
-{{<img src="homerun-1.jpg" max-width="400px" hasBorder="true" alt="Kanban overview of job applicants">}}
-{{<img src="homerun-2.jpg" max-width="400px" hasBorder="true" alt="Detailed view of applicant">}}
+{{<img src="homerun-1.jpg" max-width="400px" has-border="true" alt="Kanban overview of job applicants">}}
+{{<img src="homerun-2.jpg" max-width="400px" has-border="true" alt="Detailed view of applicant">}}
 {{</gallery>}}
 
 At first, I was overwhelmed by Homerun's job posting UI. By default, they drop you into a full-blown landing page builder with complicated layouts, when all I really wanted was a job description and initial questions.
@@ -114,7 +114,7 @@ I liked that Polymer focuses on job applications and applicant tracking, whereas
 
 Polymer's UX is okay. It's simpler than a lot of the other platforms, but I found the organization confusing. They have multiple call-to-action buttons on each page, and they use up a huge amount of screen real estate showing me menu options unrelated to my current task:
 
-{{<img src="polymer-ux.png" max-width="600px" hasBorder="true" alt="Polymer's UI with many nested options" caption="Polymer's UX was a little crowded with nested menu options for unrelated tasks">}}
+{{<img src="polymer-ux.png" max-width="600px" has-border="true" alt="Polymer's UI with many nested options" caption="Polymer's UX was a little crowded with nested menu options for unrelated tasks">}}
 
 - Pros
   - Small, focused company
@@ -134,8 +134,8 @@ Polymer's UX is okay. It's simpler than a lot of the other platforms, but I foun
 The main problem with Recruitee from a bootstrapper's perspective is that it's designed for collaborative hiring decisions. If you're an indie founder who makes hiring decisions alone or with one other co-founder, the collaboration features are overkill and get in the way.
 
 {{<gallery>}}
-{{<img src="recruitee-1.png" max-width="400px" hasBorder="true" alt="Kanban overview of job applicants">}}
-{{<img src="recruitee-2.png" max-width="400px" hasBorder="true" alt="Detailed view of applicant">}}
+{{<img src="recruitee-1.png" max-width="400px" has-border="true" alt="Kanban overview of job applicants">}}
+{{<img src="recruitee-2.png" max-width="400px" has-border="true" alt="Detailed view of applicant">}}
 {{</gallery>}}
 
 Visually, Recruitee's UI is attractive. The style is nice, but Recruitee has so much functionality that I found myself getting lost while trying to find the tools or views that I wanted.
@@ -159,8 +159,8 @@ Visually, Recruitee's UI is attractive. The style is nice, but Recruitee has so 
 Breezy didn't impress me. I didn't experiment with it much because other platforms strictly dominate it, but it seems like it covers the basics: it lets you manage candidates in a kanban view and helps you manage communication with them.
 
 {{<gallery>}}
-{{<img src="breezy-1.png" max-width="400px" hasBorder="true" alt="Kanban overview of job applicants">}}
-{{<img src="breezy-2.png" max-width="400px" hasBorder="true" alt="Detailed view of applicant">}}
+{{<img src="breezy-1.png" max-width="400px" has-border="true" alt="Kanban overview of job applicants">}}
+{{<img src="breezy-2.png" max-width="400px" has-border="true" alt="Detailed view of applicant">}}
 {{</gallery>}}
 
 The UI is disappointingly plain. It's mostly stock [Bootstrap CSS](https://getbootstrap.com/) without much customization.
@@ -187,15 +187,15 @@ I was suspicious of JOIN from the get-go because the main feature they advertise
 Bizarrely, JOIN is set up so that you can't try it out until you publish a real job listing and begin accepting candidate applications. Most platforms have a demo mode where they populate your account with synthetic data or they let you add applicants manually to see how the interface works, but not JOIN.
 
 {{<gallery>}}
-{{<img src="join-1.jpg" max-width="400px" hasBorder="true" alt="Kanban overview of job applicants - empty because JOIN doesn't allow me to enter candidates without manual approval">}}
-{{<img src="join-2.jpg" max-width="400px" hasBorder="true" alt="Applicant view of job listing with a banner saying that JOIN is currently reviewing my account">}}
+{{<img src="join-1.jpg" max-width="400px" has-border="true" alt="Kanban overview of job applicants - empty because JOIN doesn't allow me to enter candidates without manual approval">}}
+{{<img src="join-2.jpg" max-width="400px" has-border="true" alt="Applicant view of job listing with a banner saying that JOIN is currently reviewing my account">}}
 {{</gallery>}}
 
 I tried creating a test job so that I could apply myself and see what the application experience is like for candidates and how JOIN manages applicants on the hiring side, but no luck. Creating a job requires manual review by the JOIN team, so I gave up.
 
 I tried to log in again today and found that JOIN had disabled my account with an invitation to beg forgiveness from their chatbot. I tried contacting support, and the chat didn't even work:
 
-{{<img src="join-locked.png" max-width="800px" hasBorder="true" alt="JOIN login screen says 'Your account is currently unavailable. Talk to us' which pops up a live chat interface">}}
+{{<img src="join-locked.png" max-width="800px" has-border="true" alt="JOIN login screen says 'Your account is currently unavailable. Talk to us' which pops up a live chat interface">}}
 
 - Pros
 
@@ -218,13 +218,13 @@ Someone recommended Hireproof to me on Twitter, and I'm not quite sure it even i
 
 The next day, I received an email inviting me to try the actual product. And after using it, I'm not sure what the app is, exactly. I think it's less about managing candidates and more about training many people in your company to perform interviews consistently.
 
-{{<img src="hireproof-1.png" max-width="700px" hasBorder="true" alt="Hireproof screen showing instructions about interviewing a candidate and recording their responses">}}
+{{<img src="hireproof-1.png" max-width="700px" has-border="true" alt="Hireproof screen showing instructions about interviewing a candidate and recording their responses">}}
 
 If you're the founder of a small company, that's not necessary, as you don't need a tool to help you be consistent with yourself.
 
 I don't want to be too critical since they're still in closed beta, but I had a lot of trouble navigating the platform. They show me tons of UI controls with no indication of what I have to do next.
 
-{{<img src="hireproof-2.png" max-width="700px" hasBorder="true" alt="Hireproof screen showing a wall of UI controls with no clear call to action">}}
+{{<img src="hireproof-2.png" max-width="700px" has-border="true" alt="Hireproof screen showing a wall of UI controls with no clear call to action">}}
 
 I gave up after ten minutes.
 

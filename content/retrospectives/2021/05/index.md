@@ -143,7 +143,7 @@ ssh -J bastion franklin -L 631:localhost:631
 
 And voila, I can access `franklin`'s CUPS web interface.
 
-{{<img src="cups.png" max-width="800px" alt="Screenshot of CUPS interface" caption="Using [Tailscale](https://tailscale.com/) to manage my office print server from my home dev machine" hasBorder="true">}}
+{{<img src="cups.png" max-width="800px" alt="Screenshot of CUPS interface" caption="Using [Tailscale](https://tailscale.com/) to manage my office print server from my home dev machine" has-border="true">}}
 
 ### Still to come
 

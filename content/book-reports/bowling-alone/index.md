@@ -150,7 +150,7 @@ I find [the idea of social capital](/book-reports/bowling-alone/#social-capital)
 - Putnam's index correlates closely with many measures of a healthy society.
   - Unexpected bit of trivia: South Dakota scores well on almost all of these metrics.
 
-{{<img src="murder-rate.png" hasBorder="true" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
-{{<img src="equality.png" hasBorder="true" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
-{{<img src="public-health.png" hasBorder="true" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
-{{<img src="child-welfare.png" hasBorder="true" alt="Scatter chart showing positive correlation between child welfare and social capital">}}
+{{<img src="murder-rate.png" has-border="true" alt="Scatter chart showing negative correlation between murder rate and social capital">}}
+{{<img src="equality.png" has-border="true" alt="Scatter chart showing positive correlation between tolerance for gender and racial equality and social capital">}}
+{{<img src="public-health.png" has-border="true" alt="Scatter chart showing positive correlation between public health outcomes and social capital">}}
+{{<img src="child-welfare.png" has-border="true" alt="Scatter chart showing positive correlation between child welfare and social capital">}}

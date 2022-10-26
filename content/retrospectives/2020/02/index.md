@@ -39,7 +39,7 @@ This was useful to write, as it helped me re-evaluate my long term strategy. It 
 
 ## Stats
 
-{{<img src="wanderjest-google-analytics.jpg" alt="Screenshot of Google Analytics traffic" caption="WanderJest visit statistics - January 2020" max-width="701px" hasBorder="true">}}
+{{<img src="wanderjest-google-analytics.jpg" alt="Screenshot of Google Analytics traffic" caption="WanderJest visit statistics - January 2020" max-width="701px" has-border="true">}}
 
 ### [WanderJest](https://wanderjest.com)
 
@@ -100,13 +100,13 @@ With previous businesses, I've focused too much on growth and failed to consider
 
 My first arrangement was with an experienced comedian in Connecticut. He was posting on Facebook inviting students to sign up for his comedy classes. I offered to create an ad for his course on WanderJest in exchange for 10% of the tuition for students I referred. His class only had three open slots, and tuition was $200, so it wouldn't be a sustainable source of income, but I just wanted to see if I could make _any_ money with affiliate deals.
 
-{{<img src="wanderjest-sponsored.jpg" alt="Screenshot of WanderJest's first affiliate ad" caption="WanderJest's first affiliate advertisement" max-width="650px" hasBorder="true">}}
+{{<img src="wanderjest-sponsored.jpg" alt="Screenshot of WanderJest's first affiliate ad" caption="WanderJest's first affiliate advertisement" max-width="650px" has-border="true">}}
 
 Unfortunately, this attempt failed. The ad was live for a few weeks, but no WanderJest users enrolled by the time classes began. It was a longshot, as my audience is still small, and the classes were in Hartford, CT, roughly an hour's drive from most of my users in Western Mass.
 
 I now have affiliate partnerships with one theater and a one-time show. Their show listings appear on WanderJest with distinctive flair and discount labels, but I plan to do a little more in February to draw users' attention to those shows.
 
-{{<img src="wanderjest-flaired-listing.jpg" alt="Screenshot of partner show listings on WanderJest" caption="Shows that partner with WanderJest get special flair for their show listings." max-width="650px" hasBorder="true">}}
+{{<img src="wanderjest-flaired-listing.jpg" alt="Screenshot of partner show listings on WanderJest" caption="Shows that partner with WanderJest get special flair for their show listings." max-width="650px" has-border="true">}}
 
 I'm hoping show tickets will be easier to sell than comedy classes. The cost to the consumer is lower, my users receive a discount, and they're geographically close to the towns where I advertise WanderJest.
 
@@ -144,7 +144,7 @@ I've posted on my town's local Facebook group and two local subreddits: [/r/nort
 
 {{< gallery caption="Response to WanderJest social media posts">}}
 {{<img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook">}}
-{{<img src="reddit-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Reddit" hasBorder="true">}}
+{{<img src="reddit-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Reddit" has-border="true">}}
 {{</ gallery >}}
 
 This is one of my value propositions to show organizers. Many of these social networks have rules against promoting individual events, but people view WanderJest as a helpful resource rather than an attempt to promote a particular show.

@@ -135,7 +135,7 @@ After we build devices, we currently test them by hand to make sure that all the
 
 Our current test setup is slow, complicated, and would be difficult to hand over to a manufacturer. It requires a TinyPilot employee to plug the newly built TinyPilot into a target computer, then use the web browser from a second computer to visit the TinyPilot web interface. The employee then has to wait for the TinyPilot to boot up, and then they verify that the TinyPilot is capturing the target computer's display and accurately forwarding keyboard and mouse input.
 
-{{<img src="current-test-setup.png" max-width="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections." hasBorder="true">}}
+{{<img src="current-test-setup.png" max-width="600px" alt="Hand-drawn sketch of our current test setup" caption="TinyPilot's current QA process requires two laptops and nontrivial cable connections." has-border="true">}}
 
 It's been on our list to automate this process, but automating it requires hardware engineering resources, and that's currently our scarcest resource.
 
@@ -143,7 +143,7 @@ Writing this out, I'm realizing we could solve this with commodity hardware and 
 
 A Raspberry Pi has HDMI output and USB input. We can program a Raspberry Pi to act as a test runner, making sure the TinyPilot is capturing video from the Pi's HDMI output. The Pi could verify that when it tells the TinyPilot to send a keystroke, the Pi receives the same keystroke through its USB input from the TinyPilot. This test would give us confidence that everything is connected and working correctly in the newly-built Voyager 2.
 
-{{<img src="proposed-test-setup.png" max-width="600px" alt="Hand-drawn sketch of a potential simplified test setup" caption="We could likely automate our Voyager 2 QA process by connecting it to a Raspberry Pi with some custom scripts." hasBorder="true">}}
+{{<img src="proposed-test-setup.png" max-width="600px" alt="Hand-drawn sketch of a potential simplified test setup" caption="We could likely automate our Voyager 2 QA process by connecting it to a Raspberry Pi with some custom scripts." has-border="true">}}
 
 At that point, we'd just need an external indicator on the test device that declares whether the TinyPilot Voyager 2 passed verification. That should be a simple enough test setup that we could hand the Pi and network switch to the manufacturer and teach them how to do testing on their end.
 
@@ -253,7 +253,7 @@ At the same time, it feels like it just _has_ to be easier to work with external
 
 I'm hoping that we're currently at a local minimum in terms of complexity. The friction of switching processes will increase complexity, but I think outsourcing will ultimately bring us to a state of lower complexity.
 
-{{<img src="outsourced-complexity.png" alt="Graph showing complexity going down as we smooth out our processes, then increasing drastically as we outsource, then reducing to below our current state once outsourcing has smoothed out." hasBorder="true" max-width="500px">}}
+{{<img src="outsourced-complexity.png" alt="Graph showing complexity going down as we smooth out our processes, then increasing drastically as we outsource, then reducing to below our current state once outsourcing has smoothed out." has-border="true" max-width="500px">}}
 
 ## Side projects
 

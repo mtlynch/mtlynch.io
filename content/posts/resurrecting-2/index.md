@@ -35,7 +35,7 @@ Continuous integration is the practice of using an indepedent, controlled enviro
 
 To integrate with Travis, I added [my fork of ingredient-phrase-tagger](https://github.com/mtlynch/ingredient-phrase-tagger) on Travis' configuration page and then enabled builds:
 
-{{<img src="enable-travis.png" alt="Screenshot of enabling Travis" caption="Enabling Travis builds for ingredient-phrase-tagger library" max-width="677px" hasBorder="True">}}
+{{<img src="enable-travis.png" alt="Screenshot of enabling Travis" caption="Enabling Travis builds for ingredient-phrase-tagger library" max-width="677px" has-border="True">}}
 
 Then, I created a file called `.travis.yml`, which told Travis how to build the library:
 
@@ -43,7 +43,7 @@ Then, I created a file called `.travis.yml`, which told Travis how to build the 
 
 I pushed my commit to Github, created a [pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/4), and Travis [built it](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/362818282) successfully:
 
-{{<img src="first-travis-build.png" alt="Screenshot of first successful build on Travis CI" caption="First successful build on Travis" max-width="792px" hasBorder="True">}}
+{{<img src="first-travis-build.png" alt="Screenshot of first successful build on Travis CI" caption="First successful build on Travis" max-width="792px" has-border="True">}}
 
 ## Adding an end-to-end test
 
@@ -188,7 +188,7 @@ services: docker
 
 I [pushed my changes](https://github.com/mtlynch/ingredient-phrase-tagger/pull/47/commits/5876e039a6e5dd36373c94bd793c83d7457034a6), ready to witness the splendor of my brilliant test that could run consistently anywhere. Instead, it failed:
 
-{{<img src="e2e-failing.png" alt="End-to-end test failing on Travis" caption="End-to-end test fails on Travis after passing on my local machine" max-width="800px" hasBorder="True">}}
+{{<img src="e2e-failing.png" alt="End-to-end test failing on Travis" caption="End-to-end test fails on Travis after passing on my local machine" max-width="800px" has-border="True">}}
 
 I wasn't happy to see a build break, but I was glad that my end-to-end test caught something. I just had to figure out what it was.
 
@@ -274,7 +274,7 @@ I tweaked my `build.sh` script to set the thread count explicitly:
 
 Then, I saved the newly generated output files as my golden copies. I pushed [the changes](https://github.com/mtlynch/ingredient-phrase-tagger/commit/c1cad53a4d661d86dc4842aff6e5bac36723d4e7) to Github and was greeted with a pleasant sight: [my end-to-end tests passed](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/408786692):
 
-{{<img src="e2e-fix.png" alt="Success after fixing end-to-end test" caption="End-to-end test passing on Travis" max-width="800px" hasBorder="True">}}
+{{<img src="e2e-fix.png" alt="Success after fixing end-to-end test" caption="End-to-end test passing on Travis" max-width="800px" has-border="True">}}
 
 ## The value of good tests
 

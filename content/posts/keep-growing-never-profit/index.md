@@ -27,7 +27,7 @@ Is It Keto had a simple business model. Every article explained why a food did o
 
 {{<img src="isitketo-affiliate-links.jpg" alt="Is It Keto screenshot showing affiliate links" caption="Amazon Affiliate links on Is It Keto" max-width="500px">}}
 
-{{<img src="revenues.jpg" alt="Google Analytics screenshot" caption="Is It Keto monthly revenue" max-width="763px" hasBorder="True">}}
+{{<img src="revenues.jpg" alt="Google Analytics screenshot" caption="Is It Keto monthly revenue" max-width="763px" has-border="True">}}
 
 ## How I lost money
 
@@ -91,7 +91,7 @@ It was easy for me to rationalize the many daily visits I paid to my traffic and
 
 Checking metrics is ["shallow work"](/book-reports/deep-work/#key-takeaways): it doesn't require deep focus or critical thinking, but it _feels_ productive. It is, of course, useful for a site owner to know their traffic and revenue numbers, but not at the frequency that I was checking.
 
-{{<img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="Is It Keto page views - March 2018 through April 2019" max-width="800px" hasBorder="True">}}
+{{<img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="Is It Keto page views - March 2018 through April 2019" max-width="800px" has-border="True">}}
 
 There's something enticing about these dashboards beyond the graphs and stats. They hold the promise of little mental reward pellets.
 
@@ -131,7 +131,7 @@ People don't order any of those things from Amazon. The issue extends far beyond
 
 In evaluating business ideas now, I think about revenue from start to finish. For me to receive a dollar of revenue, what sequence of events must occur? Had this been part of my evaluation process for Is It Keto, hopefully I would have spotted the red flag when I got to, "And then the customer asks Amazon to mail them [a head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/) so that I can collect my affiliate fee."
 
-{{<img src="amazon-lettuce.jpg" alt="Google Analytics screenshot" caption="For only about 10x what you'd pay at the supermarket, Amazon will mail you [a single head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/)." max-width="800px" hasBorder="True">}}
+{{<img src="amazon-lettuce.jpg" alt="Google Analytics screenshot" caption="For only about 10x what you'd pay at the supermarket, Amazon will mail you [a single head of lettuce](https://smile.amazon.com/ICEBERG-LETTUCE-Neighborhood-Corner-Store/dp/B008CQOYX8/)." max-width="800px" has-border="True">}}
 
 ## What I wish I had known
 
@@ -139,7 +139,7 @@ In evaluating business ideas now, I think about revenue from start to finish. Fo
 
 Today, if you ask Google ["are cheese whisps keto?"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F) it responds with a list of results that all fail to answer the question.
 
-{{<img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" max-width="450px" hasBorder="True">}}
+{{<img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" max-width="450px" has-border="True">}}
 
 Is It Keto [has the answer](https://isitketo.org/whisps), but Google ignores it. For products like [Metamucil](http://www.google.com/search?q=is%20Metamucil%20keto%3F) or [Lily's Chocolate](http://www.google.com/search?q=is%20Lily%27s%20Chocolate%20keto%3F), Google places Is It Keto among the top results, so why no love for the Whisps page?
 

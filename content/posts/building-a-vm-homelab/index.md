@@ -45,7 +45,7 @@ Homelab is just a colloquial term that's grown in popularity in the last few yea
 
 Cloud servers could serve the same function and save me the trouble (fun!) of maintaining my own hardware, but it's prohibitively expensive. For VM resources similar to my homelab server, AWS EC2 instances [would cost over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c):
 
-{{<img src="aws-pricing.png" alt="Screenshot showing AWS EC2 instances would cost $6,112.68 per year" max-width="600px" hasBorder="true" caption="Using AWS instead of my homelab server would [cost me over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c).">}}
+{{<img src="aws-pricing.png" alt="Screenshot showing AWS EC2 instances would cost $6,112.68 per year" max-width="600px" has-border="true" caption="Using AWS instead of my homelab server would [cost me over $6k per year](https://calculator.aws/#/estimate?id=d61c9cdebdd3b7eac861f4351cdabcbc1c5ac97c).">}}
 
 I could substantially reduce costs by turning cloud instances on and off as needed, but that would introduce friction into my workflows. With a local VM server, I can keep 10-20 VMs available and ready at all times without worrying about micromanaging my costs.
 
@@ -57,13 +57,13 @@ My 2017 build served me well, but in three years of using it, I've come to recog
 
 My Synology NAS has 10.9 TB of storage capacity. With all that network storage space, I thought, "why put more disk space on the server than the bare minimum to boot the host OS?"
 
-{{<img src="synology-pool.png" alt="Screenshot showing 10.9 TB" max-width="600px" hasBorder="true" caption="On my first build, I relied on my 10.9 TB of network storage.">}}
+{{<img src="synology-pool.png" alt="Screenshot showing 10.9 TB" max-width="600px" has-border="true" caption="On my first build, I relied on my 10.9 TB of network storage.">}}
 
 That turned out to be a dumb idea.
 
 First, running VMs on network storage creates a strict dependency on the disk server. Synology publishes OS upgrades every couple of months, and their patches always require reboots. With my VMs running on top of Synology's storage, I had to shut down my entire VM fleet before applying any update from Synology. It was the same reboot problem I had when I ran VMs on my Windows desktop.
 
-{{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" max-width="550px" hasBorder="true" caption="The OS on my storage server requires frequent upgrades.">}}
+{{<img src="dsm-upgrade.png" alt="Screenshot of Synology upgrade screen" max-width="550px" has-border="true" caption="The OS on my storage server requires frequent upgrades.">}}
 
 Second, random disk access over the network is **slow**. At the time of my first build, most of my development work was on backend Python and Go applications, and they didn't perform significant disk I/O. Since then, I've expanded into frontend web development. Modern web frameworks all use Node.js, so every project has anywhere from 10k-200k random JavaScript files in its dependency tree. Node.js builds involve tons of random disk access, a worst-case scenario for network storage.
 
@@ -71,11 +71,11 @@ Second, random disk access over the network is **slow**. At the time of my first
 
 For my first server, I evaluated two options for VM management: [Kimchi](https://github.com/kimchi-project/kimchi) and [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html). VMWare was far more polished and mature, but Kimchi charmed me with its scrappy spirit and open-source nature.
 
-{{<img src="kimchi-guests.png" alt="Screenshot of Kimchi" max-width="600px" hasBorder="true" caption="Early listing of my VMs through Kimchi's web UI">}}
+{{<img src="kimchi-guests.png" alt="Screenshot of Kimchi" max-width="600px" has-border="true" caption="Early listing of my VMs through Kimchi's web UI">}}
 
 Almost immediately after I installed it, development on Kimchi stopped.
 
-{{<img src="i-use-kimchi.png" alt="Graph of commits to Kimchi repository showing commits ending right after I started using it" max-width="600px" hasBorder="true" caption="Code commits to Kimchi, which stop almost immediately after I started using it">}}
+{{<img src="i-use-kimchi.png" alt="Graph of commits to Kimchi repository showing commits ending right after I started using it" max-width="600px" has-border="true" caption="Code commits to Kimchi, which stop almost immediately after I started using it">}}
 
 Over time, Kimchi's shortcomings became more and more apparent. I often had to click a VM's "clone" or "shutdown" button multiple times before it cooperated. And there were infuriating UI bugs where buttons disappeared or shifted position right before I clicked on them.
 
@@ -107,7 +107,7 @@ The most cost-efficient performance seemed to be in the [Intel Xeon E5 v3](https
 
 {{<gallery  caption="The Intel Xeon E5-2680 v3 [scores 15,618 on cpubenchmark.net](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3+%40+2.50GHz&id=2390).">}}
 {{<img src="xeon-e5-2680v3.jpg" alt="Photo of Intel Xeon E5-2680 v3 CPU" max-width="420px" href="https://www.newegg.com/supermicro-mbd-x10dal-i-o-intel-xeon-processor-e5-2600-v4-v3-family/p/N82E16813182967">}}
-{{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" max-width="490px" hasBorder="true">}}
+{{<img src="xeon-benchmark.png" alt="Screenshot of Xeon E5-2680 v3's 15618 score on cpubenchmark.net" max-width="490px" has-border="true">}}
 {{</gallery>}}
 
 For context, my previous build's Ryzen 7 had a benchmark of 14,611. So with dual-E5-2680s, I'd more than double the processing power from my old server.
@@ -170,7 +170,7 @@ For a headless server, the graphics card doesn't matter much. It's still necessa
 
 I looked into remote administration solutions and was blown away by how expensive they were. At first, I thought I'd use a Dell iDRAC, but the remote console requires a [$300 enterprise license](/tinypilot/idrac-price.png) and constrains my build to Dell components. I looked at KVM over IP solutions, but those were even more expensive, ranging from $600 to $1,000.
 
-{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." max-width="600px" hasBorder="true">}}
+{{<img src="raritan-kvm.png" alt="Screenshot of purchsase page for Raritan Dominion KVM over IP" caption="Commercial KVM over IP devices cost between $500 and $1,000." max-width="600px" has-border="true">}}
 
 To achieve remote administration, I took the unusual approach of [building my own KVM over IP device](/tinypilot) out of a Raspberry Pi. I call it [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io).
 
@@ -220,7 +220,7 @@ TinyPilot captures HDMI output and forwards keyboard and mouse input from the br
 
 To manage my VMs, I'm using [Proxmox VE](https://www.proxmox.com/en/).
 
-{{<img src="proxmox-summary.png" max-width="600px" hasBorder="true" alt="Screenshot of Proxmox dashboard" caption="Proxmox's dashboard of all my VMs">}}
+{{<img src="proxmox-summary.png" max-width="600px" has-border="true" alt="Screenshot of Proxmox dashboard" caption="Proxmox's dashboard of all my VMs">}}
 
 After [Kimchi burned me](#2-pick-better-vm-management-software) on my last build, I was reluctant to try another free solution. [Proxmox](https://www.proxmox.com/en/) has been around for 12 years, so I felt like they were a safe enough bet. Graphics-wise, it's a huge step up from Kimchi, but it lags behind ESXi in slickness.
 
@@ -312,7 +312,7 @@ This was the first time I'd ever built a dual-CPU computer. It was an interestin
 
 Based on my benchmarks, the CPU was so rarely the limiting factor in my workflows. The most damning evidence is Proxmox's graph of my CPU usage over time. In the past few months, I've never pushed CPU load above 11%, so I'm crazy overprovisioned.
 
-{{<img src="max-cpu.png" alt="Graph of showing I never used more than 11% of my CPU" hasBorder="true" caption="My max CPU usage in the last few months never went above 11% of my server's capacity.">}}
+{{<img src="max-cpu.png" alt="Graph of showing I never used more than 11% of my CPU" has-border="true" caption="My max CPU usage in the last few months never went above 11% of my server's capacity.">}}
 
 The requirement for dual CPUs drove up the cost of a motherboard substantially and limited my options. Only a scant few mobos support dual Intel 2011-v3 CPUs, so I didn't have many choices in terms of other motherboard features.
 
@@ -336,7 +336,7 @@ A reader asked me if there's anything I'd change about this build in retrospect,
 
 I definitely went overboard on the dual E5-2680 v3 CPUs.
 
-{{<img src="cpu-usage.png" alt="Graph showing I rarely used more than 50% of my CPU" hasBorder="true" caption="In a year of usage, I've rarely exceeded 50% CPU usage, meaning one CPU would have been sufficient.">}}
+{{<img src="cpu-usage.png" alt="Graph showing I rarely used more than 50% of my CPU" has-border="true" caption="In a year of usage, I've rarely exceeded 50% CPU usage, meaning one CPU would have been sufficient.">}}
 
 In a year of usage, I've never reached 100% CPU usage, and I've only ever exceeded 50% capacity a handful of times, so I would have been fine with just a single CPU.
 
@@ -344,7 +344,7 @@ In a year of usage, I've never reached 100% CPU usage, and I've only ever exceed
 
 My 1 TB Samsung SSD is just about full, so I just purchased another a [2 TB Samsung 870 Evo](https://www.newegg.com/samsung-2tb-870-evo-series/p/N82E16820147794?Item=N82E16820147794) for a total of 3 TB of SSD. There's plenty of space in the case for more SSDs.
 
-{{<img src="disk-usage.png" alt="Screenshot showing my disk is 85% full" max-width="800px" hasBorder="true" caption="My server has only 15% of disk still free.">}}
+{{<img src="disk-usage.png" alt="Screenshot showing my disk is 85% full" max-width="800px" has-border="true" caption="My server has only 15% of disk still free.">}}
 
 By default, I provision each VM with 40 GB of disk, which is sometimes limiting. When I'm doing work with Docker, container images can eat up disk quickly. Every few weeks, I find that I've filled up my VM's disk, and I have to run `docker system prune --all`, so the additional disk will spare me those interruptions.
 
@@ -352,7 +352,7 @@ By default, I provision each VM with 40 GB of disk, which is sometimes limiting.
 
 The 64 GB of RAM has mostly been sufficient, but there have been a few instances where I have to turn off VMs to give myself more memory. I prefer not to interrupt my workflow managing resources, so I just ordered another 64 GB of the same RAM sticks.
 
-{{<img src="ram-usage.png" alt="Graph showing RAM frequently reaching 64 GB of capacity" hasBorder="true" caption="I'm reaching the limits of 64 GB of RAM.">}}
+{{<img src="ram-usage.png" alt="Graph showing RAM frequently reaching 64 GB of capacity" has-border="true" caption="I'm reaching the limits of 64 GB of RAM.">}}
 
 ### Proxmox - Still great
 

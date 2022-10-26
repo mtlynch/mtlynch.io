@@ -59,7 +59,7 @@ But oof on that negative profit. Every month, I feel like I've seen the last of 
 
 ["I Regret My $46k Website Redesign"](/tinypilot-redesign/) is now my second most popular blog post of all time, attracting 157k unique readers in its first week. It was the second most upvoted post [on Hacker News](https://news.ycombinator.com/item?id=32179563) for all of July, and it reached the top spot of the [/r/web_design](https://www.reddit.com/r/web_design/comments/w4ir7r/i_regret_my_46k_website_redesign/) and [/r/programming](https://www.reddit.com/r/programming/comments/w5egi7/i_regret_my_46k_website_redesign/) subreddits. The only article I've ever written that's attracted more attention was, ["Why I Quit Google to Work for Myself,"](/why-i-quit-google/) which had 389k readers.
 
-{{<img src="redesign-analytics.png" alt="Graph of visitors to blog post on Plausible showing 157k unique visitors, 197k total pageviews, 87% bounce rate, 34m19s time on page" hasBorder="true" max-width="600px" caption="[&rdquo;I Regret My $46k Website Redesign&ldquo;](/tinypilot-redesign/) became my second most popular blog post of all time, with 157k unique readers in its first week.">}}
+{{<img src="redesign-analytics.png" alt="Graph of visitors to blog post on Plausible showing 157k unique visitors, 197k total pageviews, 87% bounce rate, 34m19s time on page" has-border="true" max-width="600px" caption="[&rdquo;I Regret My $46k Website Redesign&ldquo;](/tinypilot-redesign/) became my second most popular blog post of all time, with 157k unique readers in its first week.">}}
 
 The day after I published it, Jonathan Stark invited me to [be a guest on his podcast, _Ditching Hourly_](https://podcast.ditchinghourly.com/episodes/michael-lynch-i-regret-my-46k-website-redesign). Jonathan felt like the whole debacle was due to hourly billing creating poor incentives. I respectfully disagreed, and I think we had an interesting discussion.
 
@@ -110,13 +110,13 @@ Back in March, I [found enough free time](/retrospectives/2022/04/#i-have-free-t
 
 The new blog posts have been successful at bringing people to the TinyPilot website. Looking at visitor analytics for 2022, there are clear spikes around when I published blog posts related to TinyPilot:
 
-{{<img src="2022-analytics.png" alt="Screenshot of Google Analytics for 2022, showing visit spikes correlating with my last two blog posts" hasBorder="true" max-width="800px">}}
+{{<img src="2022-analytics.png" alt="Screenshot of Google Analytics for 2022, showing visit spikes correlating with my last two blog posts" has-border="true" max-width="800px">}}
 
 But visitors aren't all paying customers. Especially with an article like the one about redesigning the website, a large proportion of visitors are just curious about the site and have no interest in the product.
 
 Looking at sales data, the blog posts don't correlate as strongly with increases in purchases:
 
-{{<img src="2022-sales.png" alt="Screenshot of Google Analytics for 2022, showing visit spikes correlating with my last two blog posts" hasBorder="true" max-width="800px">}}
+{{<img src="2022-sales.png" alt="Screenshot of Google Analytics for 2022, showing visit spikes correlating with my last two blog posts" has-border="true" max-width="800px">}}
 
 {{<notice type="info">}}
 **Note**: The sales spike after my first blog post is a bit exaggerated because it includes a large order from a customer who ended up canceling. Due to a bug in Shopify's analytics, this order is counted twice in the graph. So, the spike should be $8,400 shorter than it is.
@@ -146,7 +146,7 @@ My change in style has helped me write more popular articles, but I'm once again
 
 My first attempt to return to a "capture knowledge" style of article was a post I published last week called, ["Back Up Encrypted ZFS Data without Unlocking It."](/zfs-encrypted-backups/) It didn't get much traction anywhere, but it's now the top result on Google for the (admittedly specific) search query of "back up encrypted zfs data":
 
-{{<img src="back-up-zfs.png" alt="Screenshot of my article at #1 for Google search of 'back up encrypted zfs data'" hasBorder="true" max-width="600px">}}
+{{<img src="back-up-zfs.png" alt="Screenshot of my article at #1 for Google search of 'back up encrypted zfs data'" has-border="true" max-width="600px">}}
 
 My logs say I spent just under 6 hours writing it, so I feel like it was a good return on investment. Writing it clarified my understanding of how ZFS worked, and I feel like it will be a useful reference for me even if nobody else reads it.
 

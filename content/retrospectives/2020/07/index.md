@@ -85,7 +85,7 @@ Of people who reached the landing page, 4.6% signed up, but only 20-30 users per
 
 Upon joining the mailing list, subscribers received an email that looked like this:
 
-{{<img src="cornerstone-welcome.png" alt="Screenshot of automatic email response" max-width="600px" hasBorder="true" caption="Automatic welcome email to people who signed up at the Cornerstone landing page">}}
+{{<img src="cornerstone-welcome.png" alt="Screenshot of automatic email response" max-width="600px" has-border="true" caption="Automatic welcome email to people who signed up at the Cornerstone landing page">}}
 
 Nobody replied or joined the Slack. I tried writing direct emails to people, but it's hard to convince people that you, a human, are writing a personalized letter to them when all you know is their email address. Nobody I reached out to replied, and I certainly didn't want to rush into building anything before I could talk to any users.
 
@@ -107,7 +107,7 @@ But it didn't go as planned.
 
 The first problem was that my messages had a terrible response rate. I reached out to 16 redditors and only got interviews with two of them. I tried to make the interview as convenient as possible, so I offered the choice of a scheduled timeslot or "just pop into Slack whenever." But this meant that _I_ had to constantly monitor my Slack channel all the time, which was a big focus-killer.
 
-{{<img src="cornerstone-cold-msg.jpg" alt="Screenshot of cold message to a redditor" hasBorder="true" caption="Example message I sent to a reddit user that yielded no response">}}
+{{<img src="cornerstone-cold-msg.jpg" alt="Screenshot of cold message to a redditor" has-border="true" caption="Example message I sent to a reddit user that yielded no response">}}
 
 The other issue was that if I spent the entire interview asking about product ideas, they'd sense that the interview was a farse, and I was just exploiting their time for market research. I did still ask them about how online communities influenced their experience with keto and what tools they used, but I only got to talk about it for a few minutes per interview. In an online chat, that's basically four or five sentences of feedback.
 
@@ -169,7 +169,7 @@ I'm not sure if I just have unreasonable expectations or if the affiliate progra
 
 Okay, I feel like this retrospective has been mostly negative, so now for some good news. I've been working on software to turn a Raspberry Pi into [a server administration device](https://tinypilotkvm.com/?ref=mtlynch.io). At the end of June, I received my first pre-order!
 
-{{<img src="kvmpi-first-sale.jpg" alt="Screenshot of Stripe receipt for my first sale" hasBorder="true" caption="My first KVM Pi sale">}}
+{{<img src="kvmpi-first-sale.jpg" alt="Screenshot of Stripe receipt for my first sale" has-border="true" caption="My first KVM Pi sale">}}
 
 It's the first time I've ever sold a pre-order of anything, so it was pretty fun.
 

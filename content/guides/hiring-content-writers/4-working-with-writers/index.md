@@ -83,7 +83,7 @@ Do you want the content on your site to be formal and serious? Or do you want it
 
 Your style guide tells your writers what kind of writing you want and what conventions to follow. Here's the [style guide for Is It Keto](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky):
 
-{{<img src="style-guide.jpg" alt="Screenshot of Is It Keto's style guide" caption="Is It Keto's [style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky)" max-width="825px" hasBorder="True" href="https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky">}}
+{{<img src="style-guide.jpg" alt="Screenshot of Is It Keto's style guide" caption="Is It Keto's [style guide](https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky)" max-width="825px" has-border="True" href="https://docs.google.com/document/d/1Uy19xtf_PFW0LJ2Zj6cSkH2dhHED8PCjHCtup1_IQ_4/edit#heading=h.ir7foaxm26ky">}}
 
 Resist the temptation to create rules for every imaginable scenario. Limit the style guide to issues that come up frequently for your site. For example, Is It Keto focuses on the keto diet, so its style guide explains how to format food measurements and how to abbreviate words like "carbohydrates" and "ketogenic."
 

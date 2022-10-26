@@ -70,7 +70,7 @@ I placed an order on February 4th with my usual supplier for the HDMI capture ch
 
 Two weeks later, I got this message:
 
-{{<img src="hdmi-wait.png" alt="hello This product is currently out of stock Need to arrive in March Could you wait, please?" hasBorder="true" caption="Bad news from my HDMI chip vendor">}}
+{{<img src="hdmi-wait.png" alt="hello This product is currently out of stock Need to arrive in March Could you wait, please?" has-border="true" caption="Bad news from my HDMI chip vendor">}}
 
 At first, it didn't seem like a big deal. I'd just order from another vendor.
 
@@ -80,7 +80,7 @@ I found several other suppliers, but I was nervous about placing huge orders wit
 
 To hedge my risk, I split my orders across several vendors on eBay and AliExpress. The problem is that I think most of these sellers are actually the same company. One eBay seller flat-out told me so:
 
-{{<img src="all-same-company.png" alt="hi friend, ar eyou sure for this order? since we see that you also order with my other store of my workmate. the other two store you order also in my company" caption="I tried to split my risk by ordering from multiple vendors, but they're all the same vendor operating under different names." hasBorder="true" max-width="600px">}}
+{{<img src="all-same-company.png" alt="hi friend, ar eyou sure for this order? since we see that you also order with my other store of my workmate. the other two store you order also in my company" caption="I tried to split my risk by ordering from multiple vendors, but they're all the same vendor operating under different names." has-border="true" max-width="600px">}}
 
 Two sequences that have happened every time I've placed an order:
 

@@ -65,7 +65,7 @@ The problem is that the only port capable of impersonating a keyboard is also th
 
 Finally, I found this USB OTG Y-cable, which seemed like what I needed:
 
-{{<img src="y-cable.jpg" alt="Photo of Y-cable" hasBorder="true" caption="A USB OTG Y-cable that seemed like what I needed" max-width="400px">}}
+{{<img src="y-cable.jpg" alt="Photo of Y-cable" has-border="true" caption="A USB OTG Y-cable that seemed like what I needed" max-width="400px">}}
 
 I bought one, and it worked! It split the connection to the Raspberry Pi so that I could connect to both power and the target computer. I transitioned my entire supply to make a TinyPilot v2 that integrated this cable. After I sold six kits and started promoting the new version, someone reached out to me asking if the cable prevented power backflow.
 
@@ -84,8 +84,8 @@ Just a week ago, on August 27th, I asked TinyPilot's electrical engineering part
 Simultaneously, I'm working with a 3D printing design shop on an enclosure for the circuit board. The 3D printing firm completed their designs in two days, and they're in the process of printing the first three prototypes. Once they get going, they have the capacity to 3D print 50 enclosures per day.
 
 {{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast">}}
-{{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" hasBorder="true" max-width="340px">}}
-{{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" hasBorder="true" max-width="420px">}}
+{{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" has-border="true" max-width="340px">}}
+{{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" has-border="true" max-width="420px">}}
 {{</gallery>}}
 
 If everything goes well, the case and boards could be ready for customers as early as next week. That would mean that we went from zero to a completed physical product in just two weeks.
@@ -155,7 +155,7 @@ echo -ne \\x05\\x01\\x09\\x02\\xA1\\x01\\x05\\x09\\x19\\x01\\x29\\x08\\x15\\x00\
 
 That made it difficult to think about the descriptor because I couldn't modify anything without starting over. I wrote a quick JavaScript app that allowed me to take example HID descriptors in different formats and convert them to equivalent shell commands to generate the file:
 
-{{<img src="hid-formatter.png" alt="Screenshot of my HID formatter tool" hasBorder="true" caption="A rudimentary JavaScript app I created to format HID descriptors for me" max-width="500px">}}
+{{<img src="hid-formatter.png" alt="Screenshot of my HID formatter tool" has-border="true" caption="A rudimentary JavaScript app I created to format HID descriptors for me" max-width="500px">}}
 
 Next, I wrote little utility scripts in my home directory. They were dead-simple scripts that normally wouldn't be worth their own files:
 

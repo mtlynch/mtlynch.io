@@ -56,7 +56,7 @@ This introduced significant code churn, but I was confident that this was a safe
 
 I was careful to limit [my pull request](https://github.com/mtlynch/ingredient-phrase-tagger/pull/11) to _only_ whitespace changes so as not to bury anything else in the noise and make the pull request difficult for other developers to review.
 
-{{<img src="yapf-diff.png" alt="Diff from YAPF changes" caption="Diff after fixing whitespace with YAPF" max-width="700px" hasBorder="True">}}
+{{<img src="yapf-diff.png" alt="Diff from YAPF changes" caption="Diff after fixing whitespace with YAPF" max-width="700px" has-border="True">}}
 
 To ensure that future changes would adhere to the same style conventions, I added a new check to the build script:
 
@@ -139,7 +139,7 @@ Once I discovered that most of `Cli`'s methods could live in another module, I h
 
 I realized that `Cli` called all of the other functions within the loop body of `generate_data`. If I extracted that code to a new function, `Cli` would need access only to the new function and none of its previous methods.
 
-{{<img src="function-diff.png" alt="Diff from YAPF changes" caption="Extracting loop body from `generate_data` into a new function called `translate_row`" max-width="614px" hasBorder="True">}}
+{{<img src="function-diff.png" alt="Diff from YAPF changes" caption="Extracting loop body from `generate_data` into a new function called `translate_row`" max-width="614px" has-border="True">}}
 
 This change made the `Cli` class slimmer and more logically cohesive. It now consisted of just two public methods and one private one:
 
@@ -192,7 +192,7 @@ I [added a few more unit tests](https://github.com/mtlynch/ingredient-phrase-tag
 
 Unit tests aren't much fun unless they're integrated into the build process, so I [updated my build script](https://github.com/mtlynch/ingredient-phrase-tagger/pull/50) to include them:
 
-{{<img src="unittest-build.png" alt="Screenshot of diff to add unit test command to build" caption="Adding unit test execution to build script" max-width="525px" hasBorder="True">}}
+{{<img src="unittest-build.png" alt="Screenshot of diff to add unit test command to build" caption="Adding unit test execution to build script" max-width="525px" has-border="True">}}
 
 Because Travis continuous integration was already running my build script on every code change, I saw the unit test output on [the next Travis build](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/416406390):
 
@@ -219,7 +219,7 @@ after_success:
 
 I checked Coveralls, eager to see my code coverage stats, and...
 
-{{<img src="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" caption="Coveralls shows no code coverage information" max-width="697px" hasBorder="True">}}
+{{<img src="no-coverage-data-1.png" alt="Screenshot of Coveralls showing no results" caption="Coveralls shows no code coverage information" max-width="697px" has-border="True">}}
 
 Nothing.
 
@@ -240,7 +240,7 @@ after_success:
 
 Still, the Coveralls dashboard showed nothing:
 
-{{<img src="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" caption="Coveralls _still_ shows no code coverage information" max-width="697px" hasBorder="True">}}
+{{<img src="no-coverage-data-2.png" alt="Screenshot of Coveralls showing no results (again)" caption="Coveralls _still_ shows no code coverage information" max-width="697px" has-border="True">}}
 
 However, [the Travis build](https://travis-ci.org/mtlynch/ingredient-phrase-tagger/builds/415474978) printed output that didn't appear in previous builds:
 
@@ -280,7 +280,7 @@ How could I bridge the gap between these two different environments with incompa
 
 In the documentation for `coverage`, I noticed that it supported a [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) that discussed combining paths from multiple filesystems:
 
-{{<img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) of `coverage` command" max-width="712px" hasBorder="True" href="https://coverage.readthedocs.io/en/latest/config.html#paths">}}
+{{<img src="paths-param.png" alt="Screenshot of paths documentation" caption="Documentation for [`paths` option](https://coverage.readthedocs.io/en/latest/config.html#paths) of `coverage` command" max-width="712px" has-border="True" href="https://coverage.readthedocs.io/en/latest/config.html#paths">}}
 
 To use these options, I created the following `.coveragerc` file:
 
@@ -305,7 +305,7 @@ after_success:
 
 I put [my full solution](https://github.com/mtlynch/ingredient-phrase-tagger/pull/51) to the test. Finally, Coveralls received the results and [displayed my code coverage numbers](https://coveralls.io/jobs/39262596):
 
-{{<img src="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" caption="Coveralls finally shows code coverage information." max-width="697px" hasBorder="True" href="https://coveralls.io/jobs/39262596">}}
+{{<img src="coverage-data.png" alt="Screenshot of Coveralls showing code coverage statistics" caption="Coveralls finally shows code coverage information." max-width="697px" has-border="True" href="https://coveralls.io/jobs/39262596">}}
 
 ## I pronounce this library resurrected
 
@@ -337,7 +337,7 @@ The result was a service called [Zestful](https://zestfuldata.com). It offers fu
 
 If you'd like to see Zestful in action, check out the [live demo](https://zestfuldata.com/demo):
 
-{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max-width="800px" hasBorder="True" href="https://zestfuldata.com/demo">}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max-width="800px" has-border="True" href="https://zestfuldata.com/demo">}}
 
 If you're a developer and you work on software that handles recipe ingredients, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
 
