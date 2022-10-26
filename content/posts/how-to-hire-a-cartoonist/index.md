@@ -18,7 +18,7 @@ I had just completed a passionate blog post.
 
 Too passionate, maybe, as I had written over 8,000 words. That's 1000x longer than the average _Buzzfeed_ article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
 
-{{<img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/) by Ali Almossawi" max-width="270px" align="right" linkUrl="https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/">}}
+{{<img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/) by Ali Almossawi" max-width="270px" align="right" href="https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/">}}
 
 I had recently read [_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/). It explained the various classes of logical fallacies in a beautiful children's book style. I was impressed at how well it used illustrations to make dry academic ideas fun and easy to consume.
 
@@ -129,11 +129,11 @@ Right off the bat, it was pretty close to what I wanted. I asked her to proceed 
 
 My articles are generally not very popular on Twitter, but this one received hundreds of likes and retweets. [@java](https://twitter.com/java/) shared it with their 371,000 followers, using one of the cartoons as the photo.
 
-{{<img src="java-tweet.png" alt="Java tweeting my article" max-width="500px" linkUrl="https://twitter.com/java/status/918934115558313984">}}
+{{<img src="java-tweet.png" alt="Java tweeting my article" max-width="500px" href="https://twitter.com/java/status/918934115558313984">}}
 
 On reddit, one of the [top comments](https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/) specifically cited the cartoons.
 
-{{<img src="reddit-comment.png" alt="Reddit comment about cartoons" max-width="520px" linkUrl="https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/">}}
+{{<img src="reddit-comment.png" alt="Reddit comment about cartoons" max-width="520px" href="https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/">}}
 
 ## Cost
 

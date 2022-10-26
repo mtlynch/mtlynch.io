@@ -250,7 +250,7 @@ The game-changing insight came from Andrew Ayer, who pointed out that RAM bloat 
 
 Kurt Mackey, Fly's CEO, popped into the thread to confirm Andrew's hypothesis:
 
-{{<img src="mrkurt-cache.png" alt="This is the page cache usage for your -dbg app over the last 3 hours. Page cache shows as usage in our UI, but it's almost the same as free memory. It should be evicted when there's memory pressure." hasBorder="true" linkUrl="https://twitter.com/mrkurt/status/1553768082354601985">}}
+{{<img src="mrkurt-cache.png" alt="This is the page cache usage for your -dbg app over the last 3 hours. Page cache shows as usage in our UI, but it's almost the same as free memory. It should be evicted when there's memory pressure." hasBorder="true" href="https://twitter.com/mrkurt/status/1553768082354601985">}}
 
 So, Fly's memory metrics included the page cache, but the VM should reclaim that RAM if running applications needed it.
 

@@ -22,7 +22,7 @@ Several commenters responded that they appreciated his assurances but wanted to 
 
 Less than a week after my article came out, Stripe [published a blog post](https://stripe.com/blog/advanced-fraud-detection-updates) outlining the changes they had made to better disclose their data collection practices and guarantees around user privacy.
 
-{{<img src="stripe-blog.png" alt="Screenshot of Stripe's blog post" max-width="729px" hasBorder="true" linkUrl="https://stripe.com/blog/advanced-fraud-detection-updates">}}
+{{<img src="stripe-blog.png" alt="Screenshot of Stripe's blog post" max-width="729px" hasBorder="true" href="https://stripe.com/blog/advanced-fraud-detection-updates">}}
 
 I've reviewed their new documentation, and I'll discuss how well Stripe's changes address the issues I raised.
 

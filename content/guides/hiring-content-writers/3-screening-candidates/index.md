@@ -29,7 +29,7 @@ Surprisingly, I found this to be untrue. In my experience, a writer's asking rat
 
 If the writer has a profile on a freelancing site or, better yet, their own website, they'll have a bio that explains a little about themselves and the work that they do.
 
-{{<img src="morgan-province-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" caption="[Morgan Province](https://www.morganprovince.com)'s [profile on Upwork](https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/) is simple, clear, and to the point." hasBorder="True" linkUrl="https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/">}}
+{{<img src="morgan-province-profile.jpg" alt="Screenshot of Morgan Province's Upwork profile" caption="[Morgan Province](https://www.morganprovince.com)'s [profile on Upwork](https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/) is simple, clear, and to the point." hasBorder="True" href="https://www.upwork.com/o/profiles/users/_~013cb8db368fbf76f2/">}}
 
 The bio tends to be the best glimpse you have into a candidate's writing ability. Articles from their portfolio often go through a layer of editing that the writer can't control. On their bio, the writer has ultimate authority, so it's the purest sample of their writing you can find.
 

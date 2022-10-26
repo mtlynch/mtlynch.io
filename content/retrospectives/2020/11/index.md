@@ -198,7 +198,7 @@ Only one customer purchased with the coupon, so I guess there wasn't really a ba
 
 [NetworkProfile](https://blog.networkprofile.org) is a cool blog I found through self-hosting and homelab communities on reddit. I asked the author if he'd be interested in reviewing a TinyPilot device, and he needed a new KVM over IP for his security camera server. He published [a thorough review](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/) within days of receiving the device that covered both the good and the bad of TinyPilot:
 
-{{<img src="networkprofile-review.png" alt="Screenshot of NetworkProfile review header" hasBorder="true" max-width="600px" linkUrl="https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/" caption="TinyPilot received its first public review [in the NetworkProfile blog](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/).">}}
+{{<img src="networkprofile-review.png" alt="Screenshot of NetworkProfile review header" hasBorder="true" max-width="600px" href="https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/" caption="TinyPilot received its first public review [in the NetworkProfile blog](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/).">}}
 
 I also reached out to a large hardware blog that's interested in featuring TinyPilot in November, so I hope to share a positive update about that next month.
 

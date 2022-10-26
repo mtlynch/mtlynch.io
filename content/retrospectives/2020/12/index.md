@@ -102,7 +102,7 @@ The first was TinyPilot. In the back of my mind, I felt embarrassed to sell a co
 
 The other factor was [Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo). I've been following Daniel's progress ever since he [left Amazon](https://danielvassallo.com/only-intrinsic-motivation-lasts/) in an exit similar to [my departure from Google](https://mtlynch.io/why-i-quit-google/). In the year after he started working for himself, he released an [ebook about AWS](https://gumroad.com/l/aws-good-parts/dv), which earned $100k, and [a video course about Twitter](https://gumroad.com/l/twitter-audience/dv) that earned $150k. He recorded and published the Twitter course in just 16 hours to test his theory that people care more about information quality than production value.
 
-{{<img src="177-daniel-vassallo.png" alt="Video still from Indie Hackers interview with Daniel Vassallo" max-width="650px" linkUrl="https://www.indiehackers.com/podcast/177-daniel-vassallo" caption="[Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo) made me realize how accessible and profitable it is to make a paid video course.">}}
+{{<img src="177-daniel-vassallo.png" alt="Video still from Indie Hackers interview with Daniel Vassallo" max-width="650px" href="https://www.indiehackers.com/podcast/177-daniel-vassallo" caption="[Daniel Vasallo's interview on the Indie Hackers podcast](https://www.indiehackers.com/podcast/177-daniel-vassallo) made me realize how accessible and profitable it is to make a paid video course.">}}
 
 $150k for 16 hours of work? That sounded like a great deal to me!
 

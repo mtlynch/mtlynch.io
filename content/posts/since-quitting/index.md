@@ -34,11 +34,11 @@ The best part of quitting has been how much control I have over my time. I struc
 
 With so much time that's my own, I find myself more willing to experiment and pursue opportunities that wouldn't have appealed to me when I was an employee.
 
-{{<img src="nerd-summit.jpg" alt="NERD Summit logo" max-width="230px" align="left" linkUrl="https://nerdsummit.org/">}}
+{{<img src="nerd-summit.jpg" alt="NERD Summit logo" max-width="230px" align="left" href="https://nerdsummit.org/">}}
 
 In March, I gave my first ever conference presentation. I adapted my post, ["How to Do Code Reviews Like a Human,"](/human-code-reviews-1/) and presented it at [NERD Summit](https://nerdsummit.org/), a newcomer-friendly conference in Western Massachusetts.
 
-{{<img src="talking_drupal_logo.png" alt="Talking Drupal logo" max-width="230px" align="right" linkUrl="http://talkingdrupal.com">}}
+{{<img src="talking_drupal_logo.png" alt="Talking Drupal logo" max-width="230px" align="right" href="http://talkingdrupal.com">}}
 
 A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
 
@@ -98,7 +98,7 @@ I was one of only a few dozen people who understood Sia at a deep enough level t
 
 I didn't know exactly what I wanted to build, but I knew a unique way I could attract users. Few people were discussing Sia, and nobody was writing about it from a developer's perspective. I knew there was a market for technical content because the Sia articles I had written on my personal blog had attracted thousands of readers. I created a blog called [Space Duck](https://blog.spaceduck.io/) and started writing about my exploratory tests on the platform.
 
-{{<img src="space-duck-logo.png" alt="Space Duck logo" max-width="750px" linkUrl="https://blog.spaceduck.io">}}
+{{<img src="space-duck-logo.png" alt="Space Duck logo" max-width="750px" href="https://blog.spaceduck.io">}}
 
 Unfortunately, these tests revealed that Sia was [not as cheap as everyone thought](https://blog.spaceduck.io/load-test-wrapup/#storage-isnt-that-cheap). At Sia's true price point, there were providers with more stable, feature-rich offerings. Without any practical advantages over other storage providers, Sia was a dead end.
 
@@ -118,7 +118,7 @@ But what about "dash?" It's an informal unit of measurement ("a dash of cinnamon
 
 That rule doesn't always work either. One recipe author apparently felt that Mrs. Dash's marital status was nobody else's business, so he referred to the seasoning as "_Ms._ Dash."
 
-{{<img src="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash." max-width="726px" linkUrl="https://www.ruled.me/low-carb-corndogs/">}}
+{{<img src="ms-dash.png" alt="Recipe mistakenly uses name Ms. Dash." max-width="726px" href="https://www.ruled.me/low-carb-corndogs/">}}
 
 This is the nature of applying strict rules to random web data. They start out simple, but after enough variations and edge cases, the rules increase in complexity and conflict with each other.
 
@@ -142,7 +142,7 @@ I asked my freelancer friend, [Ferngully](/outsourcing-mvp/#finding-a-freelancer
 
 We now have a [working demo](https://zestfuldata.com). If you give it a recipe ingredient like `1 1/2 cups chopped red onions` or `2 tablespoons minced parsley`, and it will break it down into structured components:
 
-{{<img src="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" max-width="800px" linkUrl="https://zestfuldata.com/">}}
+{{<img src="parser-screenshot.png" alt="Screenshot of Ingredient Parser demo" max-width="800px" href="https://zestfuldata.com/">}}
 
 For the next few weeks, I'm going to focus on reaching out to different app developers about how the Ingredient Parser API can be useful for them. By June, I hope to refine the API based on their feedback and publish it to marketplaces like [Mashape](https://market.mashape.com/) and [RapidAPI](https://rapidapi.com/). **Update: (7/15)**: It's [now available](https://rapidapi.com/zestfuldata/api/recipe-and-ingredient-analysis).
 

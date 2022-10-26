@@ -4,7 +4,7 @@
 {{ $maxWidth := .Get "max-width" }}
 {{ $hasBorder := .Get "hasBorder" }}
 {{ $align := .Get "align" }}
-{{ $linkUrl := .Get "linkUrl" }}
+{{ $href := .Get "href" }}
 
 {{ $image := .Page.Resources.GetMatch $srcRaw }}
 {{ $src := $image.RelPermalink }}
@@ -35,7 +35,7 @@
 {{ end }}
 
 {{ if $src }}
-  <a href="{{ if $linkUrl }}{{ $linkUrl }}{{ else }}{{ $src }}{{ end }}">
+  <a href="{{ if $href }}{{ $href }}{{ else }}{{ $src }}{{ end }}">
     <img
       {{ if $hasBorder }}class="img-border"{{ end }}
       sizes="(min-width: 768px) {{ if $maxWidth }}{{ $maxWidth }}{{ else }}{{ index (last 1 $.Site.Params.photoWidths) 0 }}px{{ end }}, 98vw"
