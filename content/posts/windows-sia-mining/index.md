@@ -56,7 +56,7 @@ Different GPUs require different software, so follow the steps below to determin
 
 1. Hit Win+R to open the run dialog.
 1. Type `devmgmt.msc` and hit Enter.
-   {{<img src="run-window-devicemgr.png" alt="Run devicemgr" maxWidth="399px">}}
+   {{<img src="run-window-devicemgr.png" alt="Run devicemgr" max-width="399px">}}
 1. Expand the "Display adapters" entry
 
 You should see something like the following:
@@ -102,10 +102,10 @@ To install Marlin, follow the steps below:
 1. Go to the [Marlin miner](https://github.com/SiaMining/marlin/releases/latest) download page.
 1. Click the link for "Windows (64-bit)" to download the Marlin package.
 1. When the download completes, open it and unzip to `C:\marlin`
-   {{<img src="extract-to.png" alt="Extract Marlin" maxWidth="614px">}}
+   {{<img src="extract-to.png" alt="Extract Marlin" max-width="614px">}}
 1. Hit Win+R to open the Windows run dialog.
 1. Type `cmd` and hit Enter.
-   {{<img src="cmd.png" alt="Run cmd" maxWidth="399px">}}
+   {{<img src="cmd.png" alt="Run cmd" max-width="399px">}}
 1. In the Command Prompt, type the following:
 
    ```text
@@ -158,13 +158,13 @@ To create a wallet with Bittrex, follow the steps below:
 1. Go to [Bittrex](https://www.bittrex.com/).
 1. Create a new account and log in.
 1. From the upper right menu, click Wallets.
-   {{<img src="bittrex-wallet-button.png" alt="Bittrex wallet button" maxWidth="800px">}}
+   {{<img src="bittrex-wallet-button.png" alt="Bittrex wallet button" max-width="800px">}}
 1. Type `siacoin` in the search bar.
-   {{<img src="bittrex-search.png" alt="Bittrex search bar" maxWidth="800px">}}
+   {{<img src="bittrex-search.png" alt="Bittrex search bar" max-width="800px">}}
 1. In the "Siacoin" row that appears, click the + sign.
-   {{<img src="siacoin-deposit.png" alt="Bittrex deposit button" maxWidth="800px">}}
+   {{<img src="siacoin-deposit.png" alt="Bittrex deposit button" max-width="800px">}}
 1. You will see a pop-up window showing a long series of letters and numbers. This is your Siacoin wallet address.
-   {{<img src="bittrex-address.png" alt="Bittrex deposit address" maxWidth="500px">}}
+   {{<img src="bittrex-address.png" alt="Bittrex deposit address" max-width="500px">}}
 1. Save this address and proceed to the [Start mining](#start-mining) step.
 
 ### Sia-UI - The better, but slower way
@@ -178,11 +178,11 @@ Sia-UI is Sia's official Windows app. Developed and maintained by the Sia develo
 1. Go to the [Sia-UI download page](https://github.com/NebulousLabs/Sia-UI/releases/latest)
 1. Click the link ending in `-win32-x64.zip` (e.g. `Sia-UI-vXX.YY.ZZ-win32-x64.zip`)
 1. Extract the downloaded file to `C:\Sia-UI`
-   {{<img src="extract-sia-ui.png" alt="Extract Sia-UI" maxWidth="616px">}}
+   {{<img src="extract-sia-ui.png" alt="Extract Sia-UI" max-width="616px">}}
 1. Click "Sia-UI" in the extracted files.
    {{<img src="explorer-sia-ui.png" alt="image">}}
 1. A Windows Firewall dialog will appear asking if you want to give Sia access. Click "Allow".
-   {{<img src="sia-allow-access.png" alt="image" maxWidth="531px">}}
+   {{<img src="sia-allow-access.png" alt="image" max-width="531px">}}
 
 #### Set up Sia-UI wallet
 
@@ -241,9 +241,9 @@ marlin.exe --user %payout_address% --intensity %intensity% --host %pool_server%
 1. Go to File > Save and close Notepad.
 1. Go to `C:\marlin` in Windows Explorer.
 1. Double-click on `marlin.bat`.
-   {{<img src="explorer-marlin.png" alt="Marlin in Explorer" maxWidth="604px">}}
+   {{<img src="explorer-marlin.png" alt="Marlin in Explorer" max-width="604px">}}
 1. If you get a security warning, click "Run."
-   {{<img src="marlin-warning.png" alt="Marlin warning" maxWidth="466px">}}
+   {{<img src="marlin-warning.png" alt="Marlin warning" max-width="466px">}}
 
 You're mining! You should see output like the following:
 
@@ -288,7 +288,7 @@ Configuring a scheduled task is a bit tedious. To save you the trouble, I've cre
 1. Download my Sia Mining Task configuration file: [SiaMiningTask.xml](SiaMiningTask.xml) (right-click and hit "Save link as...").
 1. Hit Win+R to open the Windows run dialog.
 1. Type `control schedtasks` and hit Enter.
-   {{<img src="run-schedtasks.png" alt="Run Task Scheduler" maxWidth="399px">}}
+   {{<img src="run-schedtasks.png" alt="Run Task Scheduler" max-width="399px">}}
 1. Task Scheduler will appear. From the right hand menu, click "Import Task..."
 1. Specify the `SiaMiningTask.xml` file you downloaded in step 1.
 
@@ -414,7 +414,7 @@ If it fails after you've lowered the intensity, try the following:
 
 1. Hit Win+R to open the Windows run dialog.
 1. Type `cmd` and hit Enter.
-   {{<img src="cmd.png" alt="Run cmd" maxWidth="399px">}}
+   {{<img src="cmd.png" alt="Run cmd" max-width="399px">}}
 1. In the Command Prompt, type the following:
    ```text
    cd C:\marlin

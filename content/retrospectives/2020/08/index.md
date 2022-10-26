@@ -87,7 +87,7 @@ I've searched for inventory management software to match my use case but come up
 
 My current solution is a dopey spreadsheet where I track all the parts I need along with what I have in stock and what's in transit. It's an inelegant solution, but it's mostly working in the short term.
 
-{{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" hasBorder="true" caption="My TinyPilot inventory spreadsheet" maxWidth="800px">}}
+{{<img src="tinypilot-inventory.png" alt="Screenshot of a spreadsheet tracking all of my in transit orders" hasBorder="true" caption="My TinyPilot inventory spreadsheet" max-width="800px">}}
 
 I'm hoping that once I get through this backlog, inventory won't be so complicated. For each part, I can set a range of units I want to keep in stock and resupply when I fall below the lower threshold. Hopefully, I can pick numbers high enough to absorb spikes in purchases and have enough left to sustain me until a delivery of new parts arrives.
 

@@ -53,7 +53,7 @@ I went into more detail [in my year two retrospective](/solo-developer-year-2/#h
 
 ## TinyPilot's second year
 
-{{<img src="tinypilot-screenshot.png" maxWidth="650px" caption="[TinyPilot](https://tinypilotkvm.com) is an open-source KVM over IP device built on the Raspberry Pi" hasBorder="true">}}
+{{<img src="tinypilot-screenshot.png" max-width="650px" caption="[TinyPilot](https://tinypilotkvm.com) is an open-source KVM over IP device built on the Raspberry Pi" hasBorder="true">}}
 
 TinyPilot is an open-source KVM over IP device [built on the Raspberry Pi](/tinypilot). It allows you to control another computer from your browser without installing any software, even if the computer has no operating system or network connectivity.
 
@@ -63,7 +63,7 @@ At the start of 2021, I was TinyPilot's sole developer, customer support agent, 
 
 Today, TinyPilot has a real office, a two-person fulfillment staff, a team of three developers, and a [distributor in Europe](https://kvm-ip.de).
 
-{{<img src="tinypilot-office.jpg" maxWidth="600px" caption="TinyPilot now has a real office where we assemble products and ship out orders." hasBorder="true">}}
+{{<img src="tinypilot-office.jpg" max-width="600px" caption="TinyPilot now has a real office where we assemble products and ship out orders." hasBorder="true">}}
 
 ### TinyPilot finances
 
@@ -149,7 +149,7 @@ I kept my habit of writing [monthly retrospectives](/retrospectives/). I budget 
 
 ### Hit the Front Page of Hacker News
 
-{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about blogging for technically sophisticated readers.">}}
+{{<img src="htfp-cover.png" max-width="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about blogging for technically sophisticated readers.">}}
 
 At the beginning of the year, I released my first-ever [paid course](https://hitthefrontpage.com). It explained my approach to writing blog posts that gain traction on tech-oriented sites like Hacker News and reddit.
 
@@ -168,7 +168,7 @@ The course earned $7.5k in sales, which fell disappointingly short of my $20k go
 
 ### Is It Keto
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" max-width="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet. It earns money from Amazon Affiliate links and Google AdSense.
 
@@ -189,7 +189,7 @@ I considered selling the site but, I suspect it's only worth $5-10k. It would pr
 
 ### Zestful
 
-{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" caption="[Zestful](https://zestfuldata.com) is an API that parses recipe ingredients into structured data.">}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" max-width="550px" caption="[Zestful](https://zestfuldata.com) is an API that parses recipe ingredients into structured data.">}}
 
 Zestful is a paid service that parses recipe ingredients into structured data. For example, if you give it the string `"2 1/2 tablespoons finely chopped parsley"`, it tells you that the quantity is `2.5`, the product is `parsley`, the preparation step is `finely chopped`, etc.
 
@@ -215,15 +215,15 @@ Starting in October, revenues doubled to $40-60k/month, but TinyPilot didn't rec
 
 So, what doubled sales? I got rid of our product page.
 
-{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" maxWidth="600px" caption="TinyPilot used to offer a variety of products." hasBorder="true">}}
+{{<img src="old-product-page.png" alt="Screenshot of old TinyPilot product page, listing Voyager and Hobbyist kit side-by-side" max-width="600px" caption="TinyPilot used to offer a variety of products." hasBorder="true">}}
 
 Instead, I focused the website exclusively on our flagship product, the TinyPilot Voyager.
 
-{{<img src="no-catalog.png" alt="Screenshot of TinyPilot website with product catalog removed" hasBorder="True" maxWidth="550px" caption="In October, I removed the product catalog page from TinyPilot and focused on my flagship product.">}}
+{{<img src="no-catalog.png" alt="Screenshot of TinyPilot website with product catalog removed" hasBorder="True" max-width="550px" caption="In October, I removed the product catalog page from TinyPilot and focused on my flagship product.">}}
 
 Sales jumped immediately. At first, I thought it might be a coincidence, but they've stayed in their new range for several months now.
 
-{{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" maxWidth="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
+{{<img src="weekly-revenue.png" alt="Graph of TinyPilot weekly revenue, where an increase in revenue immediately follows consolidation to one product" max-width="700px" caption="TinyPilot’s weekly sales before and after simplifying the website to sell a single product">}}
 
 I think the change eliminated friction and decision-making from the buying process. Customers didn't always understand the difference between our products or whether they needed to buy accessories separately. Now that there's only a single option, the purchase decision reduces to a straightforward question: do you want this product?
 
@@ -233,7 +233,7 @@ I think the change eliminated friction and decision-making from the buying proce
 
 ### Good leadership means helping teammates grow
 
-{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" maxWidth="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
+{{<img src="jason-cohen-usual-saaspects.jpg" alt="Screenshot of Jason Cohen being interviewed on The Usual Saaspects podcast" max-width="800px" caption="Jason Cohen (left) speaking to Ch Daniel (right) on [*The Usual Saaspects* podcast](https://youtu.be/Sjs5gEUlZyU?t=3605)">}}
 
 In a [recent interview](https://youtu.be/Sjs5gEUlZyU?t=3605), [WPEngine](https://wpengine.com) founder Jason Cohen described leadership in a way that stuck with me:
 

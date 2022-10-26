@@ -138,7 +138,7 @@ My long-term unprofitability often perplexes people. They assume I fund my money
 
 ### [Zestful](https://zestfuldata.com)
 
-{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" maxWidth="550px" caption="Zestful is a SaaS for parsing recipe ingredients.">}}
+{{<img src="zestful-screenshot.png" alt="Screenshot of Zestful website" hasBorder="True" max-width="550px" caption="Zestful is a SaaS for parsing recipe ingredients.">}}
 
 Zestful launched in mid-2018 as my first attempt at a software-as-a-service (SaaS) business. It allows food apps to recognize the structure of recipe ingredients. Given an ingredient like, "2 1/2 tablespoons finely chopped parsley," Zestful infers that `2.5` is the quantity, `tablespoons` is the unit of measure, `parsley` is the product, and `finely chopped` is a preparation step.
 
@@ -153,7 +153,7 @@ After earning [a big fat zero](/solo-developer-year-1/#zestfulhttpszestfuldataco
 | Development    | -$7,440     | $0          | <font color="green">-$7,440 (-100%)</font>  |
 | **Net profit** | **-$7,854** | **$4,930‬** | <font color="green">+$12,784 (+162%)</font> |
 
-{{<img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" maxWidth="400px" align="right" caption="My efforts to keep Zestful relevant in search results">}}
+{{<img src="zestful-seo.jpg" alt="Screenshot of Zestful's appearances in Google search results" hasBorder="True" max-width="400px" align="right" caption="My efforts to keep Zestful relevant in search results">}}
 
 Zestful is in a strange position because companies who parse ingredients [never want to switch to Zestful](/shipping-too-late/#the-harsh-reality). The cost of migrating to a new API outweighs potential price and performance improvements. Instead, all of Zestful's customers are companies building a brand new product.
 
@@ -161,7 +161,7 @@ How do you sell to companies if they don't even exist yet? My strategy has been 
 
 ### [Is It Keto](https://isitketo.org)
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="Is It Keto is a reference site for followers of the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" max-width="550px" caption="Is It Keto is a reference site for followers of the keto diet.">}}
 
 Is It Keto gives readers clear, straightforward answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). It generates revenue through Google AdSense display ads and receives commission for every Amazon purchase through the site.
 
@@ -182,7 +182,7 @@ Is It Keto gives readers clear, straightforward answers about which foods are co
 
 At $2.3k of revenue, Is It Keto was my second-highest-grossing product for 2019. I [abandoned the site in April](/retrospectives/2019/04/) but [came back four months later](/retrospectives/2019/09/) after realizing that it had grown by itself without me.
 
-{{<img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" hasBorder="True" maxWidth="650px" caption="Is It Keto traffic by month">}}
+{{<img src="isitketo-pageviews.jpg" alt="Graph of Is It Keto pageviews increasing each month until flattening out in August" hasBorder="True" max-width="650px" caption="Is It Keto traffic by month">}}
 
 88% of Is It Keto's visitors come from search engines, but I've never been able to connect improvements in search traffic to any change I made to the site. There were months when I added lots of content, [optimized page titles](/retrospectives/2019/09/#taking-affiliate-revenue-advice-from-reddit), and [earned high-ranking backlinks](/retrospectives/2019/09/#finally-a-backlink-for-is-it-keto), yet traffic remained flat. Other times, I ignored the site for months, and Google traffic grew the entire time.
 
@@ -212,7 +212,7 @@ Blog revenue is also down, which is fine because I don't go out of my way to ear
 
 ### What Got Done
 
-{{<img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" maxWidth="550px" caption="What Got Done is a task journaling app.">}}
+{{<img src="whatgotdone-screenshot.png" alt="Screenshot of What Got Done website" max-width="550px" caption="What Got Done is a task journaling app.">}}
 
 What Got Done is a tool for recording and sharing weekly work accomplishments. It's [a technique that I learned](/status-updates-to-nobody/) while working at Google, and I've been using it to record [my progress](https://whatgotdone.com/michael) every week for the last 10 months.
 
@@ -336,7 +336,7 @@ After years of banging my head against the wall with [Angular](https://angular.i
 
 The project that I hope to focus on for a large portion of the coming year is [WanderJest](https://wanderjest.com), a website I created a few weeks ago.
 
-{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot of WanderJest website" maxWidth="600px" caption="[WanderJest](https://wanderjest.com) is a resource for finding live comedy shows." hasBorder="true">}}
+{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot of WanderJest website" max-width="600px" caption="[WanderJest](https://wanderjest.com) is a resource for finding live comedy shows." hasBorder="true">}}
 
 It's difficult to find local comedy shows, as listings are scattered amongst Facebook groups, comedy club websites, and ticket sellers like TicketMaster and Eventbrite. My hope is for WanderJest to unify these disparate sources, making it easier for audiences to find shows. Basically, the idea is <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 

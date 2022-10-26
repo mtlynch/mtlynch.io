@@ -13,7 +13,7 @@ images:
   - status-updates-to-nobody/cover.jpg
 ---
 
-{{<img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" maxWidth="1000px">}}
+{{<img src="cover.jpg" alt="Staying Motivated by Sending Status Updates to Nobody (cover image)" max-width="1000px">}}
 
 At my last job, status meetings with my manager were outstandingly efficient. He never ran me through the typical drill of listing list off everything I did since our last meeting. Instead, we jumped right to the meaty topics of career growth, team development, and challenging technical problems.
 
@@ -59,7 +59,7 @@ In early 2018, [I left Google](/why-i-quit-google/). Without access to my belove
 
 There are dozens of "share status with your team" services, but they're all top-down rather than bottom-up. That is, they're designed for _managers_. They promise pretty graphs and dashboards so that the manager feels like they have their finger on the pulse of the team.
 
-{{<img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." maxWidth="475px" hasBorder="True">}}
+{{<img src="monday-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="Monday.com promises managers slick dashboards to track their employees' work but forces the employees to enter their status in a rigid format." max-width="475px" hasBorder="True">}}
 
 Everyone enjoys cool visualizations, but generating them requires the employees to enter information in whatever rigid format the tool expects. Team members have to do bookkeeping for the sake of bookkeeping and concoct numbers to represent how "complete" each task is.
 
@@ -73,7 +73,7 @@ One day, a profound and obvious realization struck me &mdash; Snippets is just a
 
 I immediately created a new Google Doc and wrote my update for the week:
 
-{{<img src="docs-snippets.jpg" alt="Screenshot of my first Snippet in Google Docs" caption="Recording weekly status updates in Google Docs" maxWidth="500px" hasBorder="True">}}
+{{<img src="docs-snippets.jpg" alt="Screenshot of my first Snippet in Google Docs" caption="Recording weekly status updates in Google Docs" max-width="500px" hasBorder="True">}}
 
 I recorded my status updates in that private Google Doc every week for a year. Nobody else saw it, but that was fine. It gave me back the habit I was missing. Each week ended with a reminder of how much I accomplished, and it felt great.
 
@@ -83,7 +83,7 @@ After writing private updates for a year, it still gave me satisfaction, but I m
 
 One of [my 2019 goals](/solo-developer-year-1/#goals-for-year-two) was to gain expertise in a JavaScript framework, so that felt like a convenient excuse to create my own status sharing web app. It's called [What Got Done](https://whatgotdone.com):
 
-{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" maxWidth="800px">}}
+{{<img src="whatgotdone-screenshot.jpg" alt="Screenshot of Monday.com feature page" caption="My [most recent update](https://whatgotdone.com/michael/2019-06-21) on What Got Done" max-width="800px">}}
 
 I record my status updates in it every week. In the last month, the site has attracted **three** other users. Hear that, investors? 300% month-over-month growth!
 

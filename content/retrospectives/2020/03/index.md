@@ -43,7 +43,7 @@ Again, I expected the scavenger hunt to drive more visits, but the contest so fa
 
 ## WanderJest stats
 
-{{<img src="google-analytics.jpg" alt="Screenshot of Google Analytics traffic for WanderJest" caption="WanderJest visit statistics - February 2020" maxWidth="833px" hasBorder="true">}}
+{{<img src="google-analytics.jpg" alt="Screenshot of Google Analytics traffic for WanderJest" caption="WanderJest visit statistics - February 2020" max-width="833px" hasBorder="true">}}
 
 <div style="height: 1.5em"><!-- hack to add whitespace between graph and table --></div>
 
@@ -66,7 +66,7 @@ When I shared WanderJest in local social media groups, people responded positive
 
 So, I came up with the Comedy Scavenger Hunt:
 
-{{<img src="banner.png" alt="WanderJest Comedy Scavenger Hunt banner" caption="The Scavenger Hunt is a contest I launched to market WanderJest to local residents." maxWidth="650px">}}
+{{<img src="banner.png" alt="WanderJest Comedy Scavenger Hunt banner" caption="The Scavenger Hunt is a contest I launched to market WanderJest to local residents." max-width="650px">}}
 
 Fans can win prizes by attending shows and posting photos to social media. Comedians win prizes based on how many photos fans take of them. Show organizers can contribute money to the contest to give their shows special status.
 
@@ -110,7 +110,7 @@ My plan for revenue was to have show organizers contribute money to the contest.
 
 By February 29th, I was still at $0 in revenue. Thank goodness for [Leap Day](https://www.youtube.com/watch?v=uK0KTH0ezgc), because in the final 24 hours before the deadline, five separate show producers contributed a total of $100 to the contest.
 
-{{<img src="scavenger-cards.jpg" alt="Photo of WanderJest promotional cards" caption="Promotional cards I printed and will distribute at local shows to encourage contest participation." maxWidth="500px">}}
+{{<img src="scavenger-cards.jpg" alt="Photo of WanderJest promotional cards" caption="Promotional cards I printed and will distribute at local shows to encourage contest participation." max-width="500px">}}
 
 I'm trying as hard as I can to ensure that each partner earns a return on their investment, even if it means I lose a lot more money. I had hoped the contest would market itself on social media, but since that's not happening, I ordered business cards and flyers and am hiring someone to distribute them in the area.
 
@@ -201,7 +201,7 @@ Long ago, I experimented with tools like [RescueTime](https://www.rescuetime.com
 
 This is the first post I've written since installing WakaTime, and I can see that it took me 7 hours and 12 minutes to write (including updating [the script I use](https://github.com/mtlynch/make-mtlynch-stats) to spit out my stats tables). That's pretty close to what I expected. I generally dedicate half of the first two days of the month to writing my retrospective post, so that feels like the right amount of time.
 
-{{<img src="wakatime.jpg" alt="Screenshot of WakaTime dashboard" caption="[WakaTime](https://wakatime.com) dashboard showing the time I spent authoring this post." maxWidth="700px">}}
+{{<img src="wakatime.jpg" alt="Screenshot of WakaTime dashboard" caption="[WakaTime](https://wakatime.com) dashboard showing the time I spent authoring this post." max-width="700px">}}
 
 I'm liking WakaTime more than expected, and I'm even considering it for my non-blog projects.
 

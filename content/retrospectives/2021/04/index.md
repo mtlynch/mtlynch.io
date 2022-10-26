@@ -69,11 +69,11 @@ Only two items need to wait until the order actually comes in. The first is the 
 
 So we couldn't completely pre-pack boxes, but we could do 95% of the work and leave the last 5% until shipping time.
 
-{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." maxWidth="620px">}}
+{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." max-width="620px">}}
 
 When discussing other bottlenecks, I was surprised to learn that _folding paper_ is a significant time-suck. The boxes we use for TinyPilot are 6x6x2", which means we have to fold normal 8.5x11" paper into quarters to fit into the box. My girlfriend realized that A6 paper is 4.1x5.9", which is the perfect size for our boxes, so we bought a ream:
 
-{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." maxWidth="500px">}}
+{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." max-width="500px">}}
 
 ## How can TinyPilot run while I'm on vacation?
 
@@ -85,7 +85,7 @@ My dream was to find some sort of "warehouse as a service" business, where I shi
 
 And then there's Fulfillment by Amazon, a service that lets me ship big batches of finished products to Amazon for fulfillment. That would sort of work, except that creating TinyPilots still requires a lot of physical labor. Parts are continuously arriving that need to be processed and assembled into working devices. Amazon wouldn't do any of that. Plus, I'm not quite ready to insert an enormous corporate machine between me and my customers.
 
-{{<img src="amazon-fba.png" hasBorder="true" maxWidth="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
+{{<img src="amazon-fba.png" hasBorder="true" max-width="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
 
 All signs were pointing to hiring local employees, which scared me. Based on the IRS' definition, a local worker who uses equipment I provide and follows instructions I give is unambiguously an "employee" rather than an "independent contractor." I've only ever hired contractors, and the process there is fairly lightweight. With real employees, there's _so_ much more paperwork. I have to give them a bunch of forms and notices and make sure I'm withholding all the right taxes.
 

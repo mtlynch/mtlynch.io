@@ -34,15 +34,15 @@ This tutorial uses free, open-source tools, and you can run them without registe
 
 The tool that makes this testing possible is [Cypress](https://cypress.io/), a recent entrant to the field of browser automation. It's an [open-source](https://github.com/cypress-io/cypress) end-to-end testing framework with a [full-time team](https://www.cypress.io/about/#our-team) actively developing it. Their business model is similar to [Docker's](https://www.docker.com/) in that both companies publish free-open source tools and fund development by selling managed services for those tools.
 
-{{<img src="cypress-logo-dark.png" alt="Cypress logo" caption="[Cypress](https://cypress.io) is an open-source tool for automated web app testing." maxWidth="403px" linkUrl="https://cypress.io">}}
+{{<img src="cypress-logo-dark.png" alt="Cypress logo" caption="[Cypress](https://cypress.io) is an open-source tool for automated web app testing." max-width="403px" linkUrl="https://cypress.io">}}
 
 I first discovered Cypress last year after seeing [Gleb Bahmutov](https://glebbahmutov.com/) demonstrate it at a regional software conference. When he mentioned that Cypress had no dependencies on [Selenium](https://www.seleniumhq.org/), I was intrigued. All my previous experience with end-to-end testing was awful, and Selenium was always at the root of my pain.
 
-{{<img src="selenium-logo.png" alt="Selenium logo" caption="Selenium is the oldest and most prevalent browser automation tool, but it's clunky and outdated." maxWidth="200px" linkUrl="https://www.seleniumhq.org">}}
+{{<img src="selenium-logo.png" alt="Selenium logo" caption="Selenium is the oldest and most prevalent browser automation tool, but it's clunky and outdated." max-width="200px" linkUrl="https://www.seleniumhq.org">}}
 
 Selenium is, by far, the most popular browser automation framework, but it also has all of the problems you'd expect of a Java-based tool designed 15 years ago. It's a pain to install, its syntax is awkward, and it offers scant insights when your tests fail. In Gleb's slick demos of Cypress, it promised to address all of these headaches.
 
-{{<img src="cypress-screenshot.png" alt="Cypress logo" caption="One slick feature of Cypress is that it records the browser at every step of your test to help you diagnose failures." maxWidth="650px">}}
+{{<img src="cypress-screenshot.png" alt="Cypress logo" caption="One slick feature of Cypress is that it records the browser at every step of your test to help you diagnose failures." max-width="650px">}}
 
 I eagerly read [the Cypress docs](https://docs.cypress.io/guides/getting-started/installing-cypress.html) but was disappointed to learn that virtually all of Cypress' documentation assumed that the user had a [Node.js](https://nodejs.org/en/) stack and developed in a graphical environment rather than a headless console.
 
@@ -52,7 +52,7 @@ Still, Cypress seemed to have a promising future. A year later, I checked in on 
 
 Combining Cypress with Docker Compose yields a test pattern that's flexible enough to apply to almost any web app. Unlike other testing tools that make assumptions about your app's implementation, this solution wholly decouples your test framework from the app you're testing.
 
-{{<img src="architecture-diagram.jpg" alt="Diagram of Docker container architecture" caption="How Docker Compose, Cypress, and the web app fit together" maxWidth="800px">}}
+{{<img src="architecture-diagram.jpg" alt="Diagram of Docker container architecture" caption="How Docker Compose, Cypress, and the web app fit together" max-width="800px">}}
 
 Docker Compose allows you to run Cypress in one container and your app in another. Your app doesn't need to know anything about Cypress, and the only thing Cypress needs to know about your app is the network port to send HTTP requests.
 
@@ -198,7 +198,7 @@ cy.get("#feelings").type("I REALLY need some COFFEE");
 
 Next, I tell Cypress to find the text field. This is easy because the text field has a unique ID, `feelings`, so I specify the element using CSS selector syntax: `#feelings`.
 
-{{<img src="feelings-element.png" alt="Finding HTML id of feelings element" maxWidth="710px">}}
+{{<img src="feelings-element.png" alt="Finding HTML id of feelings element" max-width="710px">}}
 
 The [`type()` function](https://docs.cypress.io/api/commands/type.html), tells Cypress to type some text into the field I specified.
 
@@ -210,7 +210,7 @@ cy.get("form").submit();
 
 Submitting the form should bring Cypress to Sentimentalyzer's results page. Cypress needs to check for the text `"You are feeling: Angry"` but it's a bit trickier since the `<p>` tag that contains it lacks an ID attribute:
 
-{{<img src="results-element.png" alt="Finding CSS selector for result <p> tag" maxWidth="704px">}}
+{{<img src="results-element.png" alt="Finding CSS selector for result <p> tag" max-width="704px">}}
 
 I again use CSS selector syntax to locate the relevant text by specifying a `<p>` element under a DOM node whose class is `"results"`:
 
@@ -245,7 +245,7 @@ Cypress creates a video recording of every test run. This is my favorite feature
 
 Above, I showed you a test that passed. What happens when a Cypress test fails? It still generates a video of the test run, but it also outputs a screenshot showing the assertion that failed:
 
-{{<img src="detects angry sentiment (failed).png" alt="Cypress screenshot output on failure" caption="Screenshot that Cypress generated when my test failed (Cypress expected the word \"Furious\" but instead found \"Angry\")" maxWidth="800px" hasBorder="True">}}
+{{<img src="detects angry sentiment (failed).png" alt="Cypress screenshot output on failure" caption="Screenshot that Cypress generated when my test failed (Cypress expected the word \"Furious\" but instead found \"Angry\")" max-width="800px" hasBorder="True">}}
 
 This solves a major pain point I experienced with other tools. Selenium supports screenshots but only before or after an assertion. That limitation led to frustrating scenarios where Selenium claimed the test failed, but the screenshot showed correct behavior because the browser state changed after the test failed.
 

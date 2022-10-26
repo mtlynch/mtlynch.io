@@ -23,11 +23,11 @@ I'm doing my evaluation of December publicly. Here's what was good, bad, and lea
 
 The most visible change is that KetoHub now has a logo. Behold!
 
-{{<img src="ketohub-logo.png" alt="KetoHub logo" caption="KetoHub logo" maxWidth="400px">}}
+{{<img src="ketohub-logo.png" alt="KetoHub logo" caption="KetoHub logo" max-width="400px">}}
 
 I primarily market KetoHub via Facebook groups (more on that [below](#finding-users-on-facebook)). I was embarrassed by how ugly the sharing link looked without a site logo:
 
-{{<img src="ugly-fb-links.png" alt="Facebook sharing with no logo" caption="Sharing KetoHub on Facebook with no site logo" maxWidth="493px">}}
+{{<img src="ugly-fb-links.png" alt="Facebook sharing with no logo" caption="Sharing KetoHub on Facebook with no site logo" max-width="493px">}}
 
 I'd need a logo eventually, so I decided to try [99designs](https://ninetyninedesigns.7eer.net/c/1189252/185967/3172) for the first time. It's a "design contest" site, so you describe a design you want, assign a prize value, then dozens or hundreds of designers submit options. The full prize money goes to the designer whose logo you select.
 
@@ -39,7 +39,7 @@ Oh well! Now I have a logo, and I like it. I probably would have preferred havin
 
 I'm not a web developer, and I don't have a good eye for design. When I built the first version of KetoHub, the design was utilitarian with little attention to aesthetics.
 
-{{<img src="hwd-books.jpg" alt="Stack of Hello Web Design books" maxWidth="300px" linkUrl="https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/">}}
+{{<img src="hwd-books.jpg" alt="Stack of Hello Web Design books" max-width="300px" linkUrl="https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/">}}
 
 In December, I read the book [_Hello Web Design_](https://smile.amazon.com/Hello-Web-Design-Tracy-Osborn/dp/0986365947/) by Tracy Osborn. It's a quick read, written for people in exactly my situation. It doesn't get bogged down in design theory but instead provides simple, practical tips for achieving a successful web design.
 
@@ -71,7 +71,7 @@ KetoHub's visit stats are still small, but it saw exciting growth in December.
 
 Compared to November, it received almost 8x as many unique users and 4.5x as many pageviews:
 
-{{<img src="ketohub-ga-dec.png" alt="Existing keto sites" maxWidth="700px">}}
+{{<img src="ketohub-ga-dec.png" alt="Existing keto sites" max-width="700px">}}
 
 ### Finding users on Facebook
 
@@ -83,7 +83,7 @@ Facebook has hundreds of different keto groups. Some have close to a million mem
 
 I saw the most efficient results in groups of between 200 and 1,000 members. I made posts like the following, being up front that it was my website and I'm looking for feedback:
 
-{{<img src="ketohub-fb-response.png" alt="Existing keto sites" maxWidth="442px">}}
+{{<img src="ketohub-fb-response.png" alt="Existing keto sites" max-width="442px">}}
 
 The post above brought over 100 new users to KetoHub the day it was posted and continued to receive positive responses for days after.
 
@@ -95,7 +95,7 @@ I also found success in using KetoHub as the answer to people's questions.
 
 People frequently posted in these groups searching for recipes that met particular criteria. For example, when someone asked for keto breakfasts that exclude egg, I shared a link to [a KetoHub search](https://ketohub.io/?category=breakfast&q=-egg) for all breakfasts that don't include egg as an ingredient:
 
-{{<img src="ketohub-fb-response2.png" alt="Existing keto sites" maxWidth="415px">}}
+{{<img src="ketohub-fb-response2.png" alt="Existing keto sites" max-width="415px">}}
 
 For each post I responded to like this, only 10-20 people clicked the link. However, it's easier to find these types of posts than to constantly find new medium-sized keto groups to join. When I spent an hour scrolling through posts from different keto groups, I usually found between two and six opportunities to answer someone's question by linking to KetoHub. This translated to a total of 60-100 new clicks.
 
@@ -105,7 +105,7 @@ If the cost of 100 new users is an hour of ~~shilling~~ promoting on Facebook, t
 
 The chart below is a cohort analysis from Google Analytics. Each row is a group of users that first visited the site in a particular week. Each column shows the percentage that returned to KetoHub in the subsequent week.
 
-{{<img src="cohort-analysis-dec.png" alt="KetoHub cohort analysis" maxWidth="700px">}}
+{{<img src="cohort-analysis-dec.png" alt="KetoHub cohort analysis" max-width="700px">}}
 
 The numbers are abysmal.
 

@@ -81,7 +81,7 @@ In the first few months of TinyPilot, I struggled to keep up with inventory and 
 
 A shipment of HDMI capture chips was running late, and I needed them to build more [Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), my high-end TinyPilots.
 
-{{<img src="voyager-connected.jpg" maxWidth="500px" caption="To build more [TinyPilot Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), I needed a delivery of HDMI capture chips that was stuck in transit from China.">}}
+{{<img src="voyager-connected.jpg" max-width="500px" caption="To build more [TinyPilot Voyagers](https://tinypilotkvm.com/product/tinypilot-voyager?ref=mtlynch.io), I needed a delivery of HDMI capture chips that was stuck in transit from China.">}}
 
 It was Monday, and the chips were supposed to arrive that Saturday. I had six Voyagers left. I generally sell about one every day or two, so I thought I might skate by. Then two customers purchased that day.
 
@@ -105,7 +105,7 @@ TinyPilot Pro would be more complicated. If I published the source, customers mi
 
 I started designing a licensing system. It didn't sound so hard. Generate a hash or something based on the customer's device ID, and check that it matches on the server. Oh, but what about license expiration? Okay, so I'll keep a database of licenses with their expiration dates. But what if I lose that database? Hmm...
 
-{{<img src="license-key-spec.png" hasBorder="true" caption="I got about 60% through designing a license key server for TinyPilot before deciding that I was overengineering a solution." maxWidth="550px">}}
+{{<img src="license-key-spec.png" hasBorder="true" caption="I got about 60% through designing a license key server for TinyPilot before deciding that I was overengineering a solution." max-width="550px">}}
 
 It felt like overengineering. I looked into Shopify plugins that provide digital licenses, but they all seemed low-quality and didn't offer the functionality I needed. It would take longer to integrate with those solutions than to roll my own.
 
@@ -117,7 +117,7 @@ A few months into selling Pegasus, Cory was relieved to see his customers re-pur
 
 Cory realized he could offer a better solution: an unlimited license. Customers regularly purchase the unlimited option even though an unscrupulous customer could cheat Cory by paying the single-site price and reusing the code.
 
-{{<img src="pegasus-unlimited.png" hasBorder="true" caption="Customers purchase the [unlimited license](https://www.saaspegasus.com/) from Cory even though they could cheat by re-using the single-site option." maxWidth="700px">}}
+{{<img src="pegasus-unlimited.png" hasBorder="true" caption="Customers purchase the [unlimited license](https://www.saaspegasus.com/) from Cory even though they could cheat by re-using the single-site option." max-width="700px">}}
 
 If the honor system worked well enough for Cory, it would probably work well enough for me. I shelved my plans for a licensing server and just put TinyPilot Pro at an undiscoverable URL.
 
@@ -129,11 +129,11 @@ I definitely over-committed in December.
 
 I generally avoid promising customers a product by a certain deadline. TinyPilot is still so young, and things change quickly. At the same time, I was growing increasingly embarrassed about my promises to release TinyPilot Pro "soon" for the last six months, despite the fact that I had made zero progress. Finally, I started telling customers that I'd release the first version by end of the year.
 
-{{<img src="tp-pro-listing.png" hasBorder="true" caption="I released [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) in beta for customers anxious to use the new premium features." maxWidth="600px">}}
+{{<img src="tp-pro-listing.png" hasBorder="true" caption="I released [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro?ref=mtlynch.io) in beta for customers anxious to use the new premium features." max-width="600px">}}
 
 At the same time, I started working on [my first-ever video course](https://hitthefrontpage.com/). I estimated that it would take ~40 hours to write, record, edit, and publish. That's roughly how long it takes me to write a new blog post, so I figured I'd just do that instead of my next blog post. I picked a release date of January 13th, which seemed like an incredibly relaxed schedule to produce a couple hours of video.
 
-{{<img src="htfp-still.jpg" hasBorder="true" caption="A still from my blogging course, [*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/)" maxWidth="700px">}}
+{{<img src="htfp-still.jpg" hasBorder="true" caption="A still from my blogging course, [*Hit the Front Page of Hacker News*](https://hitthefrontpage.com/)" max-width="700px">}}
 
 I _vastly_ underestimated the work required to complete the course. It's probably going to take 150-200 hours to create this course, and it's been draining tons of time from TinyPilot.
 

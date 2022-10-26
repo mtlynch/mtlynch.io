@@ -18,7 +18,7 @@ I had just completed a passionate blog post.
 
 Too passionate, maybe, as I had written over 8,000 words. That's 1000x longer than the average _Buzzfeed_ article. Worse, it was a giant wall of text with nary a visual element to break it up aside from some screenshots and a few tables. Ooh, exciting tables!
 
-{{<img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/) by Ali Almossawi" maxWidth="270px" align="right" linkUrl="https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/">}}
+{{<img src="bad-arguments-cover.jpg" alt="An Illustrated Book of Bad Arguments book cover" caption="[_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/) by Ali Almossawi" max-width="270px" align="right" linkUrl="https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/">}}
 
 I had recently read [_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/). It explained the various classes of logical fallacies in a beautiful children's book style. I was impressed at how well it used illustrations to make dry academic ideas fun and easy to consume.
 
@@ -32,7 +32,7 @@ Having never hired a cartoonist before or even worked with one, I didn't know wh
 
 But how was I supposed to choose an artist when I had no idea what I even wanted? I created a [job listing](https://www.upwork.com/jobs/~01069b65ac37524889) explaining that I'd hire multiple cartoonists to submit one cartoon each as a trial job for 8-10 more.
 
-{{<img src="upwork-posting.png" alt="Screenshot of job posting on Upwork" caption="Job posting on Upwork" maxWidth="400px">}}
+{{<img src="upwork-posting.png" alt="Screenshot of job posting on Upwork" caption="Job posting on Upwork" max-width="400px">}}
 
 Within two days, I received 13 submissions.
 
@@ -55,27 +55,27 @@ For additional context, I linked to the [section](/human-code-reviews-1/#never-s
 
 ### Sofia's submission
 
-{{<img src="sample-sofia.jpg" alt="Sample submission from Sofia" caption="Cartoon submission from Sofia" maxWidth="500px">}}
+{{<img src="sample-sofia.jpg" alt="Sample submission from Sofia" caption="Cartoon submission from Sofia" max-width="500px">}}
 
 Sofia was the first artist to submit her sample. I liked it. The animals were _just_ human enough to be funny, while still being cute and whimsical. She nailed the expressions. The cat looked kind of snobby, which was fitting because it represented me.
 
 ### Manel's submission
 
-{{<img src="sample-manel.jpg" alt="Sample submission from Manel" caption="Cartoon submission from [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)" maxWidth="500px">}}
+{{<img src="sample-manel.jpg" alt="Sample submission from Manel" caption="Cartoon submission from [Manel Sto Nino](https://www.upwork.com/freelancers/~0146ddb5612a5aaaca)" max-width="500px">}}
 
 Manel's submission was impressive in how _closely_ it matched the style of _An Illustrated Book of Bad Arguments_. Her first sketch was even more on the nose, but I asked her to tone it down a bit so that it didn't look like we were blatantly ripping off the book.
 
-{{<img src="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" caption="&ldquo;Appeal to Ignorance,&rdquo; from [_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/)" maxWidth="400px">}}
+{{<img src="boba-appeal-to-ignorance.png" alt="Appeal to Ignorance image" caption="&ldquo;Appeal to Ignorance,&rdquo; from [_An Illustrated Book of Bad Arguments_](https://smile.amazon.com/Illustrated-Book-Bad-Arguments/dp/1615192255/)" max-width="400px">}}
 
 ### Christine's submission
 
-{{<img src="sample-christine.jpg" alt="Sample submission from Christine" caption="Cartoon submission from [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)" maxWidth="500px">}}
+{{<img src="sample-christine.jpg" alt="Sample submission from Christine" caption="Cartoon submission from [Christine Elefsiniotis](https://www.facebook.com/christinaillustration/)" max-width="500px">}}
 
 Christine's was the most elaborate. We learn a great deal about the two characters and their relationship just from the little details of how they're dressed, their expressions, and the items around them. It felt like a _New Yorker_ cartoon.
 
 ### Winner: Loraine's submission
 
-{{<img src="sample-loraine.png" alt="Sample submission from Loraine" caption="Cartoon submission from [Loraine Yow](https://www.lolo-ology.com/)" maxWidth="500px">}}
+{{<img src="sample-loraine.png" alt="Sample submission from Loraine" caption="Cartoon submission from [Loraine Yow](https://www.lolo-ology.com/)" max-width="500px">}}
 
 Loraine's submission was the clear winner as soon as I saw it. It was everything I didn't realize I had been looking for the whole time.
 
@@ -97,11 +97,11 @@ I realized I had a misguided notion about separation of duties. Loraine's job wa
 
 My favorite of Loraine's cartoons for the article was this one [about giving compliments](/human-code-reviews-2/#offer-sincere-praise):
 
-{{<img src="mma-v3.png" alt="Final version of MMA cartoon" maxWidth="600px">}}
+{{<img src="mma-v3.png" alt="Final version of MMA cartoon" max-width="600px">}}
 
 That excellent illustration began with my horrendous stick figure drawing:
 
-{{<img src="mma-stick-figures.jpg" alt="My initial stick figure cartoon" maxWidth="600px">}}
+{{<img src="mma-stick-figures.jpg" alt="My initial stick figure cartoon" max-width="600px">}}
 
 I accompanied the sketch with this text description to Loraine:
 
@@ -115,7 +115,7 @@ I accompanied the sketch with this text description to Loraine:
 
 And Loraine sent me this initial draft:
 
-{{<img src="mma-sketch.png" alt="Sketch of MMA cartoon" maxWidth="600px">}}
+{{<img src="mma-sketch.png" alt="Sketch of MMA cartoon" max-width="600px">}}
 
 Right off the bat, it was pretty close to what I wanted. I asked her to proceed with that sketch, and she sent me a more detailed version. We went a few rounds on minor fixes, but you can see the changes get smaller and smaller as we converge on the final design.
 
@@ -129,11 +129,11 @@ Right off the bat, it was pretty close to what I wanted. I asked her to proceed 
 
 My articles are generally not very popular on Twitter, but this one received hundreds of likes and retweets. [@java](https://twitter.com/java/) shared it with their 371,000 followers, using one of the cartoons as the photo.
 
-{{<img src="java-tweet.png" alt="Java tweeting my article" maxWidth="500px" linkUrl="https://twitter.com/java/status/918934115558313984">}}
+{{<img src="java-tweet.png" alt="Java tweeting my article" max-width="500px" linkUrl="https://twitter.com/java/status/918934115558313984">}}
 
 On reddit, one of the [top comments](https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/) specifically cited the cartoons.
 
-{{<img src="reddit-comment.png" alt="Reddit comment about cartoons" maxWidth="520px" linkUrl="https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/">}}
+{{<img src="reddit-comment.png" alt="Reddit comment about cartoons" max-width="520px" linkUrl="https://www.reddit.com/r/programming/comments/75wmuw/how_to_do_code_reviews_like_a_human/do9kdx9/">}}
 
 ## Cost
 
@@ -152,7 +152,7 @@ But I had to break up the text somehow. It was either this, pay for stock photos
 
 I did briefly attempt to use stock photos, but it felt a bit like this:
 
-{{<img src="pawel-janiak-114499.jpg" alt="Person searching" caption="Photo by [Pawel Janiak](https://unsplash.com/photos/dxFi8Ea670E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)" maxWidth="750px">}}
+{{<img src="pawel-janiak-114499.jpg" alt="Person searching" caption="Photo by [Pawel Janiak](https://unsplash.com/photos/dxFi8Ea670E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)" max-width="750px">}}
 
 See? It's something to look at, but it's not quite right.
 

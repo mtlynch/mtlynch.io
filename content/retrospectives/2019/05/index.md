@@ -41,9 +41,9 @@ I generally try to publish a new blog post each month, but I hadn't published an
 
 Now that Is It Keto is on the backburner, I'm not going to dive as deeply into its metrics, but here's a summary of the most interesting ones:
 
-{{<img src="amazon-earnings.jpg" alt="Amazon Earnings - April 2019" caption="Amazon affiliate earnings - April 2019" maxWidth="800px">}}
+{{<img src="amazon-earnings.jpg" alt="Amazon Earnings - April 2019" caption="Amazon affiliate earnings - April 2019" max-width="800px">}}
 
-{{<img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="User sessions - May 2018 through April 2019" maxWidth="860px">}}
+{{<img src="google-analytics.jpg" alt="Google Analytics screenshot" caption="User sessions - May 2018 through April 2019" max-width="860px">}}
 
 | Metric                 | March 2019 | April 2019 | Change                                         |
 | ---------------------- | ---------- | ---------- | ---------------------------------------------- |
@@ -69,7 +69,7 @@ I worked with freelance writers to create several articles for Is It Keto, but w
 
 If you're a professional developer, you're probably familiar with code review tools like [Github reviews](https://github.com/features/code-review/), [Reviewable](https://reviewable.io/), or [Phabricator](https://www.phacility.com/). I suspect that content writers could benefit from similar tools, so I've been reaching out to writers and editors to ask them what kind of tool I could create for them to solve this problem.
 
-{{<img src="reviewable.jpg" alt="Screenshot of a code review on Reviewable.io" caption="I want to make this but for content instead of code" maxWidth="950px" hasBorder="True">}}
+{{<img src="reviewable.jpg" alt="Screenshot of a code review on Reviewable.io" caption="I want to make this but for content instead of code" max-width="950px" hasBorder="True">}}
 
 I started by emailing software publications because I thought they'd have financial incentive to smooth out this process, and they'd be familiar with code review tools. None of them were interested, so I started reaching out to individual writers. They seem much more excited, so I have meetings lined up for May.
 
@@ -83,7 +83,7 @@ One idea I liked from the book [_Start Small, Stay Small_](/book-reports/start-s
 
 I [live in Western Massachusetts](/solo-developer-year-1/#so-i-bought-a-house), so I've been thinking about businesses that are exclusive to this area. One such business is quarries that mine Goshen stone, a popular stone for home landscaping. These businesses have millions in revenue but seem to do most of their business through paper orders and phone calls, so I suspect there's opportunity for automation.
 
-{{<img src="quarry.jpg" alt="Photo by Mariana Proença on Unsplash" caption="Maybe what this quarry really needs is a good SaaS app" maxWidth="800px">}}
+{{<img src="quarry.jpg" alt="Photo by Mariana Proença on Unsplash" caption="Maybe what this quarry really needs is a good SaaS app" max-width="800px">}}
 
 The challenge is getting quarry owners to talk to me. They're used to their current way of doing business, so they're reluctant to talk to some guy who seems like he's trying to sell something they're not familiar with. But I don't know what value I can offer them until they agree to talk to me and tell me about their business. I placed calls in April and got some "We're not sure" responses, so I'll continue trying to set up discussions with them in May.
 
@@ -97,7 +97,7 @@ I have a ritual to end each week where I write down short-form notes on everythi
 
 My April goal was to learn Vue.js, and there's no better way to learn a new technology than to build a real product with it. So, I did! It's called [What Got Done](https://whatgotdone.com):
 
-{{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="A first look at my new task journaling app, What Got Done" maxWidth="800px">}}
+{{<img src="whatgotdone.jpg" alt="What Got Done screenshot" caption="A first look at my new task journaling app, What Got Done" max-width="800px">}}
 
 Here's my entry for last week:
 

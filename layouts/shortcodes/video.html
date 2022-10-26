@@ -1,6 +1,6 @@
 {{ $src := .Get "src" }}
 {{ $caption := .Get "caption" }}
-{{ $maxWidth := .Get "maxWidth" }}
+{{ $maxWidth := .Get "max-width" }}
 
 <figure class="video" {{- if $maxWidth }} style="max-width: {{ $maxWidth }}"{{ end -}}>
   <div class="video-inner">

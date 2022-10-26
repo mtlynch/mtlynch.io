@@ -44,7 +44,7 @@ I went into more detail about this [in last year's retrospective](/solo-develope
 
 ### [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io)
 
-{{<img src="voyager.jpg" maxWidth="550px" caption="[TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) is an inexpensive device I created to manage servers remotely.">}}
+{{<img src="voyager.jpg" max-width="550px" caption="[TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) is an inexpensive device I created to manage servers remotely.">}}
 
 For the past few years, I've done all my software development on a [home server](/building-a-vm-homelab/). It works great, except for when I screw up the network configuration or want to install a new operating system. My server has no monitor or keyboard attached, so I have to drag it over to my desk, swap all the cables with my workstation, and then swap everything back when I'm done.
 
@@ -54,7 +54,7 @@ After a few months of tinkering, I had a working prototype.
 
 {{<gallery caption="Prototype of TinyPilot, my open-source KVM over IP device">}}
 
-{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" maxWidth="600px">}}
+{{<img src="win-ubuntu.jpg" alt="Photo of TinyPilot connecting two computers" max-width="600px">}}
 
 <a href="tinypilot-bios.gif" style="max-width: 445px"><img src="tinypilot-bios.gif" style="object-fit: contain;"></a>
 
@@ -97,7 +97,7 @@ TinyPilot ended the year with almost $54k in revenue. My net income is still neg
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com)
 
-{{<img src="htfp-cover.png" maxWidth="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging.">}}
+{{<img src="htfp-cover.png" max-width="550px" caption="[*Hit the Front Page of Hacker News*](https://hitthefrontpage.com) is my course about my blogging.">}}
 
 In May, I gave an informal presentation to my peer mentorship group called ["How to be a Sort of Successful Software Blogger."](https://decks.mtlynch.io/show-and-tell-2020-05/) I tried to deconstruct the techniques that make my writing succeed on sites like Hacker News and reddit. It was fun to share my process, but I didn't know what more to do with the material.
 
@@ -144,7 +144,7 @@ One of the most important lessons I learned last year was that pursuing the righ
 
 ### [Is It Keto](https://isitketo.org)
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" max-width="550px" caption="[Is It Keto](https://isitketo.org) tells readers which foods fit the keto diet.">}}
 
 I started [Is It Keto](https://isitketo.org) in 2018. It's a simple site that tells you whether or not particular foods fit the keto diet.
 
@@ -154,7 +154,7 @@ I gave up on the site in 2019 but [came crawling back](/retrospectives/2020/05/)
 
 To scale growth, I tried to automate article-writing. For all of Is It Keto's life, each article was 100% original and custom-written by me or [writers I hired](/hiring-content-writers/). In reviewing my existing content, I noticed consistent patterns that I could abstract into templates. Plugging in the right food name, photos, and nutritional information would allow me to generate new pages rapidly.
 
-{{<img src="isitketo-template.png" caption="Creating Is It Keto articles programmatically from templates" maxWidth="800px" alt="Is It Keto article next to source code that generated it">}}
+{{<img src="isitketo-template.png" caption="Creating Is It Keto articles programmatically from templates" max-width="800px" alt="Is It Keto article next to source code that generated it">}}
 
 At first, it seemed like templatizing content would add hundreds of articles per week, but it proved challenging to scale that fast without sacrificing quality. In two months, I only managed to add 118 articles. The more templates I added, the faster I could go, but the additional content drew too few users to make it worthwhile.
 
@@ -176,7 +176,7 @@ I tested a few landing pages for keto communities and apps, but only 0.1% of vis
 
 ### [WanderJest](https://wanderjest.com)
 
-{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot WanderJest website" hasBorder="True" maxWidth="600px" caption="[WanderJest](https://wanderjest.com) helps comedy fans find live comedy shows nearby.">}}
+{{<img src="wanderjest-feb-2020.jpg" alt="Screenshot WanderJest website" hasBorder="True" max-width="600px" caption="[WanderJest](https://wanderjest.com) helps comedy fans find live comedy shows nearby.">}}
 
 WanderJest was a short-lived project I started at the beginning of 2020. I described it as "Bandsintown, but for comedy."
 
@@ -186,7 +186,7 @@ My plan was to make money through affiliate deals with theaters, but nobody ever
 
 ### [Portfolio Rebalancer](https://assetrebalancer.com/)
 
-{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" maxWidth="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
+{{<img src="rebalancer-screenshot.png" alt="Screenshot of Is It Keto website" hasBorder="True" max-width="550px" caption="[Portfolio Rebalancer](https://assetrebalancer.com/) helps passive investors manage their investments.">}}
 
 My investment portfolio is a mix of stocks and bonds of different categories with a target percentage for each asset type. As prices fluctuate, the balance of my investments changes, so I have to move money around to get back to my target ratios. I do this a few times per year by tediously plugging numbers into a spreadsheet until everything looks right.
 
@@ -230,7 +230,7 @@ Even though TinyPilot doesn't require constant availability, my brain often forg
 
 After my big launch, I couldn't sleep for two days. I mailed out all nine kits to my customers and then agonized over what would happen next. What if everyone got their devices, and none of them worked? What if my customers expected TinyPilot to do something totally different? What if there was some horrible bug that destroyed everyone's servers?
 
-{{<img src="first-9.jpg" maxWidth="400px" caption="The first nine TinyPilot orders I packed">}}
+{{<img src="first-9.jpg" max-width="400px" caption="The first nine TinyPilot orders I packed">}}
 
 Fortunately, initial customers loved their TinyPilots, so I finally exhaled. But every few weeks, something new would pop up and worry me for days. The post office lost a shipment of critical parts. A positive review drove a surge of orders and exhausted my inventory. I messed up a customs form and braced myself for imprisonment in export jail.
 

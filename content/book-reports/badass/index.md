@@ -74,7 +74,7 @@ Answer: Secret option D &mdash; "**I'm** awesome."
 - Companies often market their product in terms of the greater context but stop thinking that way after the purchase.
   - After the customer buys the product, all the company's messaging around the product treats it as a simple tool instead of helping the customer use it to achieve the greater context.
 
-{{<img src="before-vs-after.png" alt="Diagram showing exciting marketing brochures for a camera juxtaposed with a plain, boring instruction manual for the same camera" maxWidth="600px">}}
+{{<img src="before-vs-after.png" alt="Diagram showing exciting marketing brochures for a camera juxtaposed with a plain, boring instruction manual for the same camera" max-width="600px">}}
 
 ### The value of expert users
 
@@ -93,7 +93,7 @@ Answer: Secret option D &mdash; "**I'm** awesome."
 
 - When building expertise in any domain, you can think of your skills in that domain as being in one of three possible states:
 
-{{<img src="mastery-boards.png" alt="a) Can't do b) Can do with effort c) Mastered (reliable, automatic)" maxWidth="600px">}}
+{{<img src="mastery-boards.png" alt="a) Can't do b) Can do with effort c) Mastered (reliable, automatic)" max-width="600px">}}
 
 - It's not as simple as moving each skill from A -> B -> C.
 - Experts move skills from C back to B in order to keep growing and refine their skills.

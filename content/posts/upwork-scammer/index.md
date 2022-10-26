@@ -17,7 +17,7 @@ For years, I've hired freelancers through a site called Upwork. The site attract
 
 That is, until I met Lizzie.
 
-{{<img src="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" caption="Lizzie's freelancer profile on Upwork" maxWidth="450px">}}
+{{<img src="lizzie-r-profile.png" alt="Screenshot of Lizzie R's Upwork profile page" caption="Lizzie's freelancer profile on Upwork" max-width="450px">}}
 
 I needed writers for a [keto diet website](https://isitketo.org) I'm building. As a native English speaker living in the US, Lizzie seemed like a potential match. [Her profile](https://www.upwork.com/o/profiles/users/_~019b8bbe4e49ebe61c/) was free of loud grammatical errors, an alarmingly rare quality among writers for hire. And best of all, she only charged $10/hr.
 
@@ -41,37 +41,37 @@ Checking Lizzie's timesheet, I realized she had logged her hours using Work Diar
 
 Work Diary creeps me out. I never require freelancers to run it, but Lizzie chose to run it instead of simply invoicing me for her hours. This meant that I didn't have any results, but I did have screenshots showing how she spent the five hours she billed to me.
 
-{{<img src="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" caption="Overview of Lizzie's activities in Work Diary" maxWidth="800px" hasBorder="True">}}
+{{<img src="workdiary-dashboard.png" alt="Screenshot of Work Diary dashboard" caption="Overview of Lizzie's activities in Work Diary" max-width="800px" hasBorder="True">}}
 
 In early screenshots, she was writing a document about mantras in Hinduism. It definitely had nothing to do with my project, but she was charging me for it.
 
-{{<img src="workdiary-2.jpg" alt="Screenshot of Lizzie R's WorkDiary history" caption="Lizzie bills me for time writing an article on mantras for another client" maxWidth="800px">}}
+{{<img src="workdiary-2.jpg" alt="Screenshot of Lizzie R's WorkDiary history" caption="Lizzie bills me for time writing an article on mantras for another client" max-width="800px">}}
 
 Later, she switched gears and started writing an article about tarot cards. Unless there's a new trend in the keto world that integrates tarot readings into food selection, this didn't seem like it related to my project either.
 
-{{<img src="workdiary-4.jpg" alt="Screenshot of Lizzie R's WorkDiary history" caption="Lizzie bills me for another client's article about tarot cards" maxWidth="800px">}}
+{{<img src="workdiary-4.jpg" alt="Screenshot of Lizzie R's WorkDiary history" caption="Lizzie bills me for another client's article about tarot cards" max-width="800px">}}
 
 ## What's going on here?
 
 Then, things got a bit more interesting. A screenshot showed Lizzie using Upwork's messaging interface to talk to her other clients:
 
-{{<img src="workdiary-5.jpg" alt="Screenshot of Lizzie R's WorkDiary history" caption="A screenshot showing Lizzie messaging her other clients" maxWidth="800px">}}
+{{<img src="workdiary-5.jpg" alt="Screenshot of Lizzie R's WorkDiary history" caption="A screenshot showing Lizzie messaging her other clients" max-width="800px">}}
 
 It confused me at first because it showed two people talking, but neither of them was Lizzie. Oh! She was logged in as a different Upwork user under the name, "Abi Hensley."
 
 A quick search on Upwork turned up [Abi's profile](https://www.upwork.com/o/profiles/users/_~012951f3927669080e). Sure enough, it had the exact same text and hourly rate as Lizzie:
 
-{{<img src="abi-h-profile.png" alt="Screenshot of Abi H's Upwork profile" caption="Upwork profile for &quot;Abi H.&quot; with identical text to &quot;Lizzie R.&quot;" maxWidth="715px">}}
+{{<img src="abi-h-profile.png" alt="Screenshot of Abi H's Upwork profile" caption="Upwork profile for &quot;Abi H.&quot; with identical text to &quot;Lizzie R.&quot;" max-width="715px">}}
 
 That explained why she had four different web browsers pinned to her taskbar. She probably used a separate browser for each Upwork identity.
 
-{{<img src="many-browsers.jpg" alt="Screenshot of Lizzie's desktop showing Firefox, Chrome, IE, and Opera" caption="Screenshot of Lizzie's desktop showing four different web browsers installed" maxWidth="800px" hasBorder="True">}}
+{{<img src="many-browsers.jpg" alt="Screenshot of Lizzie's desktop showing Firefox, Chrome, IE, and Opera" caption="Screenshot of Lizzie's desktop showing four different web browsers installed" max-width="800px" hasBorder="True">}}
 
 ## Who is Grace?
 
 One of the screenshots showed Lizzie's Documents folder:
 
-{{<img src="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" caption="Work Diary screenshot shows Lizzie's Documents folder" maxWidth="800px" hasBorder="True">}}
+{{<img src="workdiary-6.jpg" alt="Screenshot of Lizzi's documents folder" caption="Work Diary screenshot shows Lizzie's Documents folder" max-width="800px" hasBorder="True">}}
 
 It revealed several files with the name "Grace" in the title:
 
@@ -81,7 +81,7 @@ It revealed several files with the name "Grace" in the title:
 
 Finally, there was a PDF whose filename was "Grace" followed by what looked like a last name. The full name was unique enough that Google had only a single matching result: a Facebook profile of a schoolteacher in Kenya:
 
-{{<img src="grace-facebook.png" alt="Screenshot of Lizzie R's WorkDiary history" caption="Lizzie's true identity, potentially" maxWidth="504px">}}
+{{<img src="grace-facebook.png" alt="Screenshot of Lizzie R's WorkDiary history" caption="Lizzie's true identity, potentially" max-width="504px">}}
 
 ## It's 9 PM. Do you know where you are?
 
@@ -89,11 +89,11 @@ There was another subtle clue buried in the screenshots: the time zone.
 
 Upwork captured this image at 6:15 PM Greenwich Mean Time, but the freelancer's clock showed 9:17 PM.
 
-{{<img src="time-comparison.jpg" alt="Screenshot of Lizzie's desktop" caption="Lizzie's clock is three hours ahead of Greenwich Mean Time" maxWidth="715px">}}
+{{<img src="time-comparison.jpg" alt="Screenshot of Lizzie's desktop" caption="Lizzie's clock is three hours ahead of Greenwich Mean Time" max-width="715px">}}
 
 What time zone could that be? Sure enough, it was the time zone for Nairobi, Kenya:
 
-{{<img src="utc-to-nairobi.png" alt="6:15 PM UTC matching 9:15 PM in Nairobi, Kenya" maxWidth="758px">}}
+{{<img src="utc-to-nairobi.png" alt="6:15 PM UTC matching 9:15 PM in Nairobi, Kenya" max-width="758px">}}
 
 Not to sound like a [birther](https://en.wikipedia.org/wiki/Barack_Obama_citizenship_conspiracy_theories), but between the Kenyan name and the Kenyan time zone, it seemed like "Lizzie" might, in fact, be Kenyan.
 
@@ -101,7 +101,7 @@ Not to sound like a [birther](https://en.wikipedia.org/wiki/Barack_Obama_citizen
 
 I took another look at the Upwork profile that led me to hire Lizzie in the first place. A few Google searches showed that Lizzie had plagiarized the whole thing &mdash; it was a mashup of a [LinkedIn profile](https://www.linkedin.com/in/laraflanagan/) and another [profile right from Upwork](https://www.upwork.com/o/profiles/users/_~017434da88fc78860a/).
 
-{{<img src="profile-stitching.png" alt="Sources from which Lizzie stole her profile" caption="Lizzie created her profile by stitching together two others" maxWidth="800px" hasBorder="True">}}
+{{<img src="profile-stitching.png" alt="Sources from which Lizzie stole her profile" caption="Lizzie created her profile by stitching together two others" max-width="800px" hasBorder="True">}}
 
 ## Is this a trick?
 
@@ -109,7 +109,7 @@ The scam seemed so clumsy and obvious that I feared it was step one of a more el
 
 In movies, the con-man always lets their victim _think_ that they've uncovered the scam, but allowing the victim to expose the dummy fraud is all part of the _actual_ fraud. Then, just as they believe they've gained the upper hand, the victim falls face-first into the real scam. Was there another layer of deceit here?
 
-{{<img src="oceans-eleven.jpg" alt="Still of George Clooney in Ocean's Eleven" caption="&ldquo;I&apos;ve locked Danny Ocean in a room next to my vault and paid his friend to guard him. Now he can _never_ heist me!&rdquo;" maxWidth="800px">}}
+{{<img src="oceans-eleven.jpg" alt="Still of George Clooney in Ocean's Eleven" caption="&ldquo;I&apos;ve locked Danny Ocean in a room next to my vault and paid his friend to guard him. Now he can _never_ heist me!&rdquo;" max-width="800px">}}
 
 ## How did Upwork miss this?
 
@@ -142,7 +142,7 @@ This was her report on whether Coca-Cola is compatible with the keto diet:
 
 The grammar was decent, but it further confirmed Lizzie was not a native speaker. The loudest giveaway was the definite article before "Diet Coke." Americans never say, "I'd love a refreshing glass of **the** Diet Coke."
 
-{{<img src="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" caption="\"Three glasses of the Diet Coke, please.\"" maxWidth="270px">}}
+{{<img src="three-glasses.jpg" alt="Still of Inglorious Basterds bar shootout scene" caption="\"Three glasses of the Diet Coke, please.\"" max-width="270px">}}
 
 ## How Upwork handles fraud
 
@@ -165,7 +165,7 @@ In my post-job feedback for Lizzie, I called out her profile as fraudulent. I wa
 
 Curiously, Upwork translated this into, "No feedback given":
 
-{{<img src="lizzie-feedback.jpg" alt="Upwork shows I left no feedback for Lizzie" caption="Upwork hides my comments about Lizzie's fraudulent account in her Upwork profile." maxWidth="697px">}}
+{{<img src="lizzie-feedback.jpg" alt="Upwork shows I left no feedback for Lizzie" caption="Upwork hides my comments about Lizzie's fraudulent account in her Upwork profile." max-width="697px">}}
 
 **Update**: [Commenters on reddit](https://www.reddit.com/r/Upwork/comments/a9zsj6/what_i_learned_about_upwork_from_a_bumbling/eco5p6y/?st=jq7drkdw&sh=85d5b50b) pointed out that Upwork always hides client feedback after approving a refund for the job.
 

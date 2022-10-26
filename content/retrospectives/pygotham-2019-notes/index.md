@@ -10,7 +10,7 @@ date: "2019-10-31"
 
 This past weekend, [PyGotham](https://2019.pygotham.org/) invited me to speak at their annual conference in Manhattan. In an effort to maximize the benefit I get from the event, I've prepared notes that capture what I learned by attending. I'm sharing them in hopes that it might be interesting or useful to others.
 
-{{<img src="pygotham-logo.png" alt="PyGotham 2019 logo" maxWidth="450px">}}
+{{<img src="pygotham-logo.png" alt="PyGotham 2019 logo" max-width="450px">}}
 
 ## Ratings and reviews
 

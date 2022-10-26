@@ -26,7 +26,7 @@ In this guide, I'll show you how to set up a Sia server on a NAS device using [D
 
 Many newcomers to Sia ask, "Will I make a lot of money hosting on Sia?" The honest answer is that **hosting storage on Sia is NOT lucrative**.... yet.
 
-{{<img src="siahub-2percent.png" alt="SiaHub screenshot" maxWidth="380px" align="right">}}
+{{<img src="siahub-2percent.png" alt="SiaHub screenshot" max-width="380px" align="right">}}
 
 The storage rental market has not yet reached critical mass. SiaHub, my favorite Sia host explorer, shows that the total storage capacity of Sia's network (as of 2017-05-25) is a whopping 1.1 petabytes. Only 2% of that capacity has been rented. With such a surplus of space, hosts can't sell their storage space unless they price it at almost zero.
 
@@ -46,7 +46,7 @@ I personally host just to experiment with something new. I find it fun to tweak 
 
 This guide uses the latest version of each software component at the time of writing:
 
-{{<img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" maxWidth="300px">}}
+{{<img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" max-width="300px">}}
 
 - DiskStation Manager (DSM) 6.1.2-15132
 - Sia v.1.3.4
@@ -72,7 +72,7 @@ Next, create a dedicated Shared Folder for Sia. This is the folder where Sia wil
 
 From File Station, create a new Shared Folder and name it "sia":
 
-{{<img src="new-shared-folder.png" alt="Create new shared folder" maxWidth="547px">}}
+{{<img src="new-shared-folder.png" alt="Create new shared folder" max-width="547px">}}
 
 ### Enable SSH access to DiskStation
 

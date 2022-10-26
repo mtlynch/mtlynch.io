@@ -77,7 +77,7 @@ December was a huge month for Zestful. A fast-moving startup told me that Zestfu
 
 Last month, I [got all excited](/retrospectives/2019/12/#rewriting-the-zestful-website-out-of-spite) because I thought that rewriting the Zestful website as a static site would improve its SEO. Sadly, Google Search Console suggests that it had a negligible impact:
 
-{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." maxWidth="704px" hasBorder="True">}}
+{{<img src="zestful-search-console.jpg" alt="Screenshot from Zestful's Google Search Console performance" caption="Rewriting the Zestful website as a static site seems not to have affected Google search performance." max-width="704px" hasBorder="True">}}
 
 Still, the enterprise customer approached me only a few days after I rewrote the site, so I can pretend to myself that the rewrite was responsible for ~$3.9k in additional revenue.
 
@@ -85,7 +85,7 @@ Still, the enterprise customer approached me only a few days after I rewrote the
 
 At the end of November, I met the owner of a [sheet metal shop](/retrospectives/2019/12/#interviewing-machine-shops) who was interested in talking with me about creating software specifically for sheet metal producers.
 
-{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" maxWidth="600px">}}
+{{<img src="russ-ward-aMlbxs8SYig-unsplash.jpg" alt="Photograph of a person cutting metal" max-width="600px">}}
 
 Software for sheet metal shops ticked a lot of my boxes:
 
@@ -99,7 +99,7 @@ I spent most of December researching existing solutions and visiting sheet metal
 
 One of my most interesting interviews was with a shop owner who described himself as technically illiterate. He told me that he was currently paying thousands of dollars per year for <a href="https://www.shoptech.com/" rel="nofollow">E2 ShopTech</a>, a general-purpose enterprise planning application for mid-sized machine shops.
 
-{{<img src="shoptech.png" alt="Screenshot of E2 ShopTech software" maxWidth="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops." hasBorder="true">}}
+{{<img src="shoptech.png" alt="Screenshot of E2 ShopTech software" max-width="600px" caption="E2 ShopTech is a enterprise planning application for mid-sized machine shops." hasBorder="true">}}
 
 The owner seemed satisfied with his software but said that he only used 2% of its features. My ears perked right up when I heard that. This is the exact scenario that books like [_Start Small, Stay Small_](/book-reports/start-small-stay-small/) describe. If a business uses bloated software because nobody caters to their specific niche, you can outcompete a larger vendor if you focus on the 2% of features that matter to your customer niche.
 
@@ -157,7 +157,7 @@ Finding shows was always a challenge for two reasons:
 
 I wished for an app like <a href="https://bandsintown.com" rel="nofollow">Bandsintown</a>, but for comedy.
 
-{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" maxWidth="700px" hasBorder="True" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
+{{<img src="bandsintown.png" alt="Screenshot of Bandsintown website" max-width="700px" hasBorder="True" caption="Bandsintown is an app that helps you discover when your favorite musical performers are nearby.">}}
 
 Brian and Heather found this idea exciting. What's more, they saw that it energized _me_. "Look at the way you light up when you talk about that idea!" Heather said. "You're so much more excited about that than the sheet metal idea." Still, I was apprehensive. Most comedians earn very little, so how could a new business in this space earn enough to survive?
 

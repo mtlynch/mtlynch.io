@@ -19,7 +19,7 @@ The conversation began with a merchant telling me in no uncertain terms that the
 Two email exchanges later, we landed here:
 
 {{<img src="seems-fair.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" hasBorder="true">}}
-{{<img src="paypal-receipt.png" alt="PayPal receipt showing $88.00 payment" hasBorder="true" maxWidth="400px">}}
+{{<img src="paypal-receipt.png" alt="PayPal receipt showing $88.00 payment" hasBorder="true" max-width="400px">}}
 
 This post explains the dispute and how The Organized Professional Method solved my problem.
 
@@ -41,7 +41,7 @@ Patrick's recommendation resonated with me because I generally don't see value i
 
 For the past two years, I've run a site called [Is It Keto](https://isitketo.org) that helps beginners navigate the keto diet.
 
-{{<img src="isitketo-screenshot.png" alt="Screenshot of Beyond Burger page on Is It Keto" hasBorder="true" maxWidth="500px" caption="[Is It Keto](https://isitketo.org) is a site I created in 2018 to help beginners learn about the keto diet.">}}
+{{<img src="isitketo-screenshot.png" alt="Screenshot of Beyond Burger page on Is It Keto" hasBorder="true" max-width="500px" caption="[Is It Keto](https://isitketo.org) is a site I created in 2018 to help beginners learn about the keto diet.">}}
 
 The site has grown steadily over time, to the point where it now has over 100,000 pageviews per month. Those numbers are high enough to attract direct partnerships with other keto companies.
 
@@ -87,19 +87,19 @@ This was a shocking revelation for a few reasons.
 
 First, Kiss My Keto's published policies say explicitly that their commissions apply to **all** products and make no mention of exceptions. Or at least they did at the time. They removed that page sometime in the last month, but I [archived a copy](https://archive.is/iyoxj).
 
-{{<img src="20pct-on-all.png" alt="Kiss My Keto's published guidelines say they pay 20% commission on all products" hasBorder="true" caption="Kiss My Keto's published rates claimed a 20% commission on all products with no mention of exceptions." maxWidth="650px">}}
+{{<img src="20pct-on-all.png" alt="Kiss My Keto's published guidelines say they pay 20% commission on all products" hasBorder="true" caption="Kiss My Keto's published rates claimed a 20% commission on all products with no mention of exceptions." max-width="650px">}}
 
 Secondly, bread is Kiss My Keto's flagship product. If you visit their website, they showcase bread so prominently that you'd think they're a bread store. A hidden exception for bread would be like if [Zappos](https://www.zappos.com) advertised a commission on all their products and then later said, "Oh, but we didn't mean _shoes_."
 
-{{<img src="kmk-homepage.png" alt="Nini reports that Kiss My Keto pays no commission on sales of bread or during sitewide discounts" hasBorder="true" caption="Kiss My Keto's homepage features bread prominently." maxWidth="600px">}}
+{{<img src="kmk-homepage.png" alt="Nini reports that Kiss My Keto pays no commission on sales of bread or during sitewide discounts" hasBorder="true" caption="Kiss My Keto's homepage features bread prominently." max-width="600px">}}
 
 And that's not even getting into the "sale event" part of Nini's email. Days earlier, Kiss My Keto sent their affiliates an email encouraging them to "boost \[their\] earnings" by sharing Kiss My Keto's sitewide 4th of July discount codes.
 
-{{<img src="4th-of-july-codes.png" alt="Kiss My Keto encourages affiliates to share sitewide discount codes" hasBorder="true" caption="Kiss My Keto encouraged affiliates to share coupon codes but later told me that this disqualified them from earning commissions" maxWidth="500px">}}
+{{<img src="4th-of-july-codes.png" alt="Kiss My Keto encourages affiliates to share sitewide discount codes" hasBorder="true" caption="Kiss My Keto encouraged affiliates to share coupon codes but later told me that this disqualified them from earning commissions" max-width="500px">}}
 
 According to Nini, Kiss My Keto withheld commissions on any transaction that used that coupon, even if the customer purchased through an affiliate link. Even outside of special sales, when you visit Kiss My Keto, their site bombards you with offers for different discounts:
 
-{{<img src="kmk-discount-offers.png" alt="Screenshot of two separate discount offers on Kiss My Keto's homepage" hasBorder="true" caption="Within seconds of visiting the site, Kiss My Keto offers new discounts to compete with their own affiliate partners." maxWidth="600px">}}
+{{<img src="kmk-discount-offers.png" alt="Screenshot of two separate discount offers on Kiss My Keto's homepage" hasBorder="true" caption="Within seconds of visiting the site, Kiss My Keto offers new discounts to compete with their own affiliate partners." max-width="600px">}}
 
 Based on what Nini said, these special offers compete against the affiliate's referral credit. If the customer chooses a new discount, Kiss My Keto pays zilch to the affiliate who brought the customer to the site in the first place.
 
@@ -206,7 +206,7 @@ You may have noticed a logical inconsistency in my demand to Kiss My Keto. My or
 
 Something changed on July 16th that was very much in my favor. Suddenly, Kiss My Keto started crediting me for sales of bread, the thing they privately had claimed was ineligible for commission. Interestingly, my first commission occurred less than 24 hours after I emailed their CEO, Alex Bird:
 
-{{<img src="kmk-bread-purchase.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" maxWidth="600px">}}
+{{<img src="kmk-bread-purchase.png" alt="Herscu responds: 'No worries Michael. $88 seems fair to me.'" max-width="600px">}}
 
 That was great news for me because it gave me hard numbers to extrapolate my missing sales. When I had zero commissions, Kiss My Keto could simply claim that none of the customers who came from my site completed purchases. Without access to their internal receipts, I'd have no evidence to argue. By flipping on commissions for bread, they gave me a view into what my commissions _should_ have looked like the entire time.
 

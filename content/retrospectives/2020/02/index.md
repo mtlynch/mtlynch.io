@@ -39,7 +39,7 @@ This was useful to write, as it helped me re-evaluate my long term strategy. It 
 
 ## Stats
 
-{{<img src="wanderjest-google-analytics.jpg" alt="Screenshot of Google Analytics traffic" caption="WanderJest visit statistics - January 2020" maxWidth="701px" hasBorder="true">}}
+{{<img src="wanderjest-google-analytics.jpg" alt="Screenshot of Google Analytics traffic" caption="WanderJest visit statistics - January 2020" max-width="701px" hasBorder="true">}}
 
 ### [WanderJest](https://wanderjest.com)
 
@@ -100,13 +100,13 @@ With previous businesses, I've focused too much on growth and failed to consider
 
 My first arrangement was with an experienced comedian in Connecticut. He was posting on Facebook inviting students to sign up for his comedy classes. I offered to create an ad for his course on WanderJest in exchange for 10% of the tuition for students I referred. His class only had three open slots, and tuition was $200, so it wouldn't be a sustainable source of income, but I just wanted to see if I could make _any_ money with affiliate deals.
 
-{{<img src="wanderjest-sponsored.jpg" alt="Screenshot of WanderJest's first affiliate ad" caption="WanderJest's first affiliate advertisement" maxWidth="650px" hasBorder="true">}}
+{{<img src="wanderjest-sponsored.jpg" alt="Screenshot of WanderJest's first affiliate ad" caption="WanderJest's first affiliate advertisement" max-width="650px" hasBorder="true">}}
 
 Unfortunately, this attempt failed. The ad was live for a few weeks, but no WanderJest users enrolled by the time classes began. It was a longshot, as my audience is still small, and the classes were in Hartford, CT, roughly an hour's drive from most of my users in Western Mass.
 
 I now have affiliate partnerships with one theater and a one-time show. Their show listings appear on WanderJest with distinctive flair and discount labels, but I plan to do a little more in February to draw users' attention to those shows.
 
-{{<img src="wanderjest-flaired-listing.jpg" alt="Screenshot of partner show listings on WanderJest" caption="Shows that partner with WanderJest get special flair for their show listings." maxWidth="650px" hasBorder="true">}}
+{{<img src="wanderjest-flaired-listing.jpg" alt="Screenshot of partner show listings on WanderJest" caption="Shows that partner with WanderJest get special flair for their show listings." max-width="650px" hasBorder="true">}}
 
 I'm hoping show tickets will be easier to sell than comedy classes. The cost to the consumer is lower, my users receive a discount, and they're geographically close to the towns where I advertise WanderJest.
 
@@ -165,7 +165,7 @@ One of the most important lessons I've learned in launching new businesses is th
 
 Instead, with each project, I look for new ways to cut corners and launch faster. With WanderJest, I skipped the database &mdash; I just hardcoded all of my data right into the source code.
 
-{{<img src="wanderjest-data-in-code.jpg" alt="Screenshot of WanderJest source code with hardcoded data" caption="Hardcoding data into source code is ugly but effective for launching your first version quickly." maxWidth="650px">}}
+{{<img src="wanderjest-data-in-code.jpg" alt="Screenshot of WanderJest source code with hardcoded data" caption="Hardcoding data into source code is ugly but effective for launching your first version quickly." max-width="650px">}}
 
 I told myself that I'd migrate to a database when hardcoded data got too annoying, but I found that working with hardcoded data was, in fact, far easier. It meant that all the data in my dev environment stayed perfectly in sync with my prod environment. There were never issues where I only noticed after deploying that something didn't work (e.g., "Whoops, this looks horrendous when a title is longer than 80 characters!"). And because my code is under source control, my data is too, so I could jump back to any version of my site and know that I'm seeing both the code and data as it existed at that point in time.
 

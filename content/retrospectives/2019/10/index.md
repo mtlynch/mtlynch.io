@@ -93,7 +93,7 @@ I took down the referral link and thought of a better solution: sell my own meal
 
 I put up a crude landing page with a "Buy" button. The button currently just brings you to a message saying that the meal plans are coming, but the page has had 254 unique visitors and 10 unique clicks on the Buy button, which implies a conversion rate of ~4%. That's an optimistic estimate because some of those users probably would not have completed the checkout process, but it's promising nonetheless that such a basic page would convince anyone to click at all.
 
-{{<img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" maxWidth="823px" hasBorder="True">}}
+{{<img src="buy-button.jpg" alt="Screenshot of Buy button on sales page" caption="Testing sales for Is It Keto's meal plans" max-width="823px" hasBorder="True">}}
 
 I'm excited to start selling these plans. It feels much better to sell a product where you're in direct contact with the creator as opposed to just throwing users to a faceless affiliate partner and hoping for the best. The meal plans will focus on optimizing for our readers' time and budget, so instead of a grocery list of 102 items, it will be more like 20. And the recipes make multiple servings that you can refrigerate and eat later instead of expecting the reader to cook entire meals from scratch 21 times per week.
 

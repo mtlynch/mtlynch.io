@@ -17,8 +17,8 @@ I recently [built my first home TrueNAS server](/budget-nas/). I use it to store
 Today, I want to tell you about backing up encrypted data.
 
 {{<gallery caption="My [homelab TrueNAS server](/budget-nas/)">}}
-{{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" maxWidth="450px">}}
-{{<img src="completed-build.jpg" alt="Photo of completed server build" maxWidth="450px">}}
+{{<img src="all-parts.jpg" alt="Photo of NAS server parts in retail packaging" max-width="450px">}}
+{{<img src="completed-build.jpg" alt="Photo of completed server build" max-width="450px">}}
 {{</gallery>}}
 
 One of the neat features of ZFS is that you can make backups of encrypted data while it's still encrypted. The tricky part is that TrueNAS assumes you'll only ever back up to other TrueNAS systems. If you're like me and want to back up your encrypted data to a generic cloud storage provider, you need to do a bit more work. In today's blog post, I'll show you how to do it.

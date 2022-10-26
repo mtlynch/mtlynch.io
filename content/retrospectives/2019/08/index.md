@@ -74,8 +74,8 @@ Except for the person who reached out to me, the consistent feedback I heard was
 One other path I thought might make What Got Done viable was organic growth. There was a steady stream of [new user signups at the end of June](/retrospectives/2019/07/#a-jumpstart-for-what-got-done). If people continued using the free plan, maybe What Got Done would gain momentum, and people would push for their employers to adopt a paid plan. Unfortunately, organic growth tapered off in early July:
 
 {{<gallery caption="Daily signups and user actives for What Got Done - July 2019">}}
-{{<img src="whatgotdone-new-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" maxWidth="600px" hasBorder="True">}}
-{{<img src="whatgotdone-active-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" maxWidth="600px" hasBorder="True">}}
+{{<img src="whatgotdone-new-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" max-width="600px" hasBorder="True">}}
+{{<img src="whatgotdone-active-users-2019-07.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" max-width="600px" hasBorder="True">}}
 {{</gallery>}}
 
 I'm going to shelve What Got Done as a business idea and keep it as a personal tool. My primary motivation in building it was [to teach myself Vue.js](/retrospectives/2019/05/#the-what-got-done-app), and I was successful in that regard. It wasn't my strongest business idea, but I figured I'd try selling it if I was going to build the app either way. It turned out to be too weak as a business product, so I'm going to focus on other ideas that have greater potential.
@@ -88,7 +88,7 @@ For example, I realized that Zestful was incorrectly parsing the ingredient "gro
 
 It seemed like a quick fix, but I probably spent an hour hunting down all the bad "ground cinnamon" examples. I finally finished, proud to have eliminated an error case, but I didn't really improve anything meaningful. Only 0.3% of Zestful's requests include "ground cinnamon." What's more, the previous behavior of returning "cinnamon" was adequate because everyone assumes "cinnamon" means "ground cinnamon" anyway.
 
-{{<img src="ground-cinnamon.jpg" alt="Screenshot of parsing ground cinnamon on Zestful" caption="Boy, did it take way too long to make this work" maxWidth="796px" hasBorder="True">}}
+{{<img src="ground-cinnamon.jpg" alt="Screenshot of parsing ground cinnamon on Zestful" caption="Boy, did it take way too long to make this work" max-width="796px" hasBorder="True">}}
 
 Fixing these things is satisfying in the moment because it's fun to make my parser more accurate. But it's too easy to disappear down the rabbit hole, chasing lots of minor error cases, only to wake up days later realizing that overall accuracy has barely changed. The parser will never be 100% accurate, and I could spend an eternity pursuing ever-decreasing gains in accuracy.
 
@@ -111,7 +111,7 @@ So, I signed up for Google AdSense and have had a positive experience so far. Th
   - The review dashboard helps me ensure that users never see ads that are spammy or masquerade as features of my site.
   - e.g., ads that [insert a fake "Print" button](/retrospectives/2019/07/isitketo-ads.png)
 
-{{<img src="adsense-ads.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" caption="Is It Keto with ads from Google AdSense and Amazon Affiliate Program" maxWidth="600px" hasBorder="True">}}
+{{<img src="adsense-ads.jpg" alt="Screenshot of Is It Keto after adding AdSense ads" caption="Is It Keto with ads from Google AdSense and Amazon Affiliate Program" max-width="600px" hasBorder="True">}}
 
 So far, I'm earning $2.29 per 1,000 pageviews. My previous ad network measured in terms of unique visitors, so in those terms, I'm earning about ~$5 per 1,000 sessions. It's slightly less than the ~$8 I made from the previous ad partner, but I'm happy with the current tradeoff of ad intrusiveness vs. revenue generation.
 

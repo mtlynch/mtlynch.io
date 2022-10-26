@@ -28,7 +28,7 @@ I used this workflow to edit and share my family's home videos at a cost of only
 
 As an example, the video I use throughout this tutorial is a [public domain home video](https://archive.org/details/TexasFar1952) from a Texas family in the 1950s:
 
-{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" maxWidth="600px">}}
+{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" max-width="600px">}}
 
 To download this video, run the commands below:
 
@@ -287,11 +287,11 @@ app/publish_to_mediagoblin.py \
 
 When the script completes, you should see all the clips appear in MediaGoblin's web interface at [http://localhost:6543](http://localhost:6543).
 
-{{<img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." maxWidth="600px">}}
+{{<img src="mediagoblin-local-populated.png" alt="All clips appear in MediaGoblin" caption="You should see thumbnails for all eight clips on MediaGoblin's web interface." max-width="600px">}}
 
 If you click a video, you won't be able to view it in the normal video player because MediaGoblin uses a web player that's too old for modern streaming-optimized video formats. You can still watch it if you click the "Original file" link.
 
-{{<img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" maxWidth="600px">}}
+{{<img src="mediagoblin-single-local.png" alt="Screenshot of single video view" caption="View of a single video in the local MediaGoblin instance" max-width="600px">}}
 
 Don't worry; we'll fix this in the next step so that you'll be able to watch all videos normally in the embedded player.
 
@@ -485,7 +485,7 @@ If you're using this process to store family videos, you probably want your fami
 
 If you want to do that, click the "Original file" link in the MediaGoblin interface:
 
-{{<img src="share-single-file.png" alt="Screenshot with pointer to 'Original file' link" maxWidth="700px">}}
+{{<img src="share-single-file.png" alt="Screenshot with pointer to 'Original file' link" max-width="700px">}}
 
 This will give the guest access to that individual file, but because of the way you [configured Google Cloud Storage bucket permissions](#create-a-storage-bucket), they won't be able to explore the library and access other videos.
 
