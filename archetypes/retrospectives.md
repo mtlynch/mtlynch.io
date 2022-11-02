@@ -46,6 +46,8 @@ TODO
 
 {{<revenue-graph project="tinypilot">}}
 
+\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+
 ## Topic 1
 
 ## Topic 2
