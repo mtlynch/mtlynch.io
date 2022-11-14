@@ -44,7 +44,7 @@ I'm not sure if it's just greater difficulties of designing with metal or if the
 - **Result**: Reached out to six 3PL vendors
 - **Grade**: A
 
-Of the six vendors I approached, two ignored me entirely, one declined explicitly, and one expressed interest and then stopped responding. The last two quickly scheduled meetings with me
+Of the six vendors I approached, two ended up being a good match for what I want for TinyPilot. I'm hoping to transition fulfillment to one of these 3PL vendors in December.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -62,68 +62,74 @@ Of the six vendors I approached, two ignored me entirely, one declined explicitl
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-October marked another all-time record for TinyPilot's sales. TinyPilot had $86k in sales, beating its previous record by almost $10k. Our profit is way up, but that's a bit noisy month-to-month, so I'll focus on the $14k trailing average profit from the last three months. October put TinyPilot in the black for the year, and I'm optimistic that we'll end the year in the $20-40k range of profit.
+October marked another all-time record for TinyPilot's sales. TinyPilot had $86k in sales, beating its previous record by almost $10k. Our profit is way up, but that's a bit noisy month-to-month, so I'll focus on the $14k trailing average profit from the last three months. October put TinyPilot in the black for the year, and I'm optimistic that we'll end the year in the neighborhood of $20-40k in profit, on track to earn $15-20k per month in 2023.
 
-For better or for worse, this is all happening while I put zero effort in marketing. I've been spending all of my time ramping up new hires and scaling production to meet our growing demand. Google Ads are on auto-pilot and are adding about $15k of revenue per month at a cost of $5k.
+For better or for worse, this is all happening while I put zero effort in marketing. I've been spending all of my time ramping up new hires and scaling production to meet our growing demand. Google Ads are on auto-pilot and are adding about $15k of revenue per month at a cost of $5k, but TinyPilot is otherwise not advertising.
 
 ## Exploring the world of 3PL vendors
 
-"3PL" is the shorthand term for a third-party logistics provider. They act as a warehouse and fulfillment center for other businesses. Basically, they store my products, and when an order comes in, we forward it to our 3PL vendor, they pick it off the shelves, pack it, and send it to the customer.
+"3PL" is the shorthand term for a third-party logistics provider. A 3PL vendor serves as a warehouse and fulfillment center for other businesses. Basically, they store my products, and when an order comes in, we forward it to our 3PL vendor, they pick it off the shelves, pack it, and send it to the customer.
 
 ### My ideal 3PL vendor
 
-There's a wide spectrum of options for 3PL vendors. At one end is the giant corporate machine vendors like Amazon FBA. Those vendors are probably good if you have thousands of products and hundreds of daily orders. They're also faceless and highly automated, so you have to adapt exactly to their process.
+There's a wide spectrum of options for 3PL vendors. At one end is the giant corporate machine vendors like Amazon FBA. Those vendors are probably good if you have thousands of products and hundreds of daily orders. They're also faceless and highly automated, so you have to adapt exactly to their processes.
 
-I've heard horror stories from other founders who used Amazon FBA and saw Amazon discard huge amounts of their inventory for opaque reasons or freeze $100k+ in funds for months. So, Amazon is the exact opposite of what I want in a 3PL vendor.
+I've heard horror stories from other founders who used Amazon FBA and saw Amazon discard huge amounts of their inventory without justification or freeze $100k+ in funds for months. So, Amazon is the exact opposite of what I want in a 3PL vendor.
 
-At the other end of the spectrum are the "mom and pop" 3PL vendors who have dozens to hundreds of customers and only one or two warehouses. These were the vendors I wanted to find when I started my search, and I'm
+At the other end of the spectrum are the "mom and pop" 3PL vendors who have dozens to hundreds of customers and only one or two warehouses. I was hoping to find a vendor like this, where they These were the vendors I wanted to find when I started my search, and I'm
 
 ### How I found 3PL vendors
 
-I found three vendors by just searching "3PL" on Google Maps near where I live. Of those, one responded, and two ignored me. The one who responded is the one I'll likely work with.
+I found three vendors by just searching "3PL" on Google Maps near where I live. Of the three I found through Google Maps, one vendor responded, and two ignored me. The one who responded ended up being the best match I found, and their warehouse is only a two hour drive from TinyPilot's office.
 
-I found another small 3PL vendor in North Carolina by searching "3PL site:reddit.com," which yielded a two-year-old comment from the founder. I reached out, and we had a video call a few days later.
+I found another small 3PL vendor in North Carolina by searching "3PL site:reddit.com," which yielded a two-year-old comment from the founder. I reached out, and we had a video call a few days later. They seem like another good option, though I prefer having a vendor within driving distance.
 
-I found the last two vendors on recommendations from a nonprofit that advises manufacturing firms, but both ended up being dead ends. Notably, both the leads advertised themselves as "packaging" companies rather than 3PLs, so I think they're more targeted at businesses that produce in bulk like cereal or candy.
+I found the last two vendors on recommendations from a nonprofit that advises manufacturing firms, but they were both dead ends. Notably, both the leads advertised themselves as "packaging" companies rather than 3PLs, so I think they're more targeted at businesses that produce things like cereal or candy.
 
 ### Working with "mom and pop" 3PLs
 
-Both of the 3PL vendors I met with ended up being very close to what I had in mind at the beginning of the search. The businesses felt personal, where the vendor can work with each client individually by forcing everyone to follow arcane, rigid processes like Amazon FBA.
+Both of the 3PL vendors I met with ended up being very close to what I had in mind at the beginning of the search. Both vendors emphasized their flexibility in adapting to whatever processes their clients needed. TinyPilot can give the 3PL vendors special packing instructions if items need to be combined in a certain way (e.g., orders that include at least one product X always include a free product Y).
 
-TinyPilot can give the 3PL vendors special packing instructions if items need to be combined in a certain way (e.g., orders that include at least one product X always include a free product Y).
+Both 3PL vendors had 100-200 customers, so it's . I asked whether I'd be their biggest or smallest customer, and both said I'd fall around the middle in terms of order volume.
+
+In terms of product value, I'm on the high end relative to their other customers. It seems like 3PL vendors work with a lot of products in the $20-50 range. TinyPilot's high price should be to my advantage because the vendors charge a flat fee per order rather than a percentage of revenue, so fulfillment costs will eat a relatively small share of revenue. 3PL vendors also charge by warehouse real estate, and TinyPilot shouldn't need much since the product is so small.
 
 Both 3PL vendors offer light manufacturing services, so we could theoretically send them our raw materials and have them build TinyPilot devices. I probably won't do this because it's easier to have the Chinese factory that makes TinyPilot's custom hardware also assemble the devices. On the other hand, in case of a disastrous dispute between TinyPilot and its manufacturer, it would be better if we're both in the US as opposed to trying to go to court with a company located in China.
 
-## With metal cases, manufacturing quality makes a difference
+## With metal cases, manufacturing quality makes a huge difference
+
+When the designers were ready to produce their first case, they requested bids from Chinese sheet metal vendors. As luck would have it, I had researched and interviewed several local sheet metal shops [back in 2019](/retrospectives/2020/01/#sheet-metal-research). I thought we should get bids from them as well, as it would be faster to iterate on designs with a local vendor than if we had to go back and forth with a vendor in China.
+
+We reached out to four different local sheet metal vendors. Only one of them actually responded to us. They said that the others wouldn't be interested in such a small job, but they specialized in prototyping, so they'd be able to help us.
+
+Longtime readers will remember that I We reached out to four different sheet metal vendors in the US. and three of them ignored us, and this was the last one.
 
 I got the first prototype and felt immediately deflated. This looked like something I'd find if I smashed a hole in my wall. It definitely didn't look like something I'd hand to a customer. The spots where metal bent stuck out egregiously because there were visible gaps.
 
-We reached out to four different sheet metal vendors in the US, and three of them ignored us, and this was the last one.
-
 Want to hear the kicker? Guess how much each one cost.
 
-The American prototype cost $XX, while the Chinese prototype was only $XX, a XXx difference.
+The American prototype cost $857, while the Chinese prototype was only $139, a 6x difference.
 
-| Vendor location | Price | Turnaround Time | Quality |
+| Vendor location | Price | Turnaround time | Quality |
 | --------------- | ----- | --------------- | ------- |
-| US              | $XX   | XX              | D       |
-| China           | $XX   | XX              | A       |
+| US              | $857  | 20 days         | D       |
+| China           | $139  | 31 days         | A       |
 
 ## The race for more cases
 
-I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot since month XX (TODO: link). TinyPilot's 3D printing vendor has bought us more time by adding capacity to meet our demand. At this point, they're not willing to buy more printers, especially given that TinyPilot will stop ordering prints as soon as the metal cases are ready.
+I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). TinyPilot's 3D printing vendor has bought us more time by purchasing more printers specifically for TinyPilot's cases. At this point, they're not willing to buy more printers, especially given that TinyPilot will reduce orders to zero as soon as the metal cases are ready.
 
 At the end of October, we had 190 Voyager 2 cases in stock. TinyPilot's 3D printing vendor typically manufactures 140-160 cases per month, but we sell about ~210 devices per month. Based on this, I expect us to run out of cases by January 2023, which will mean we can only sell 140-160 devices per month:
 
-| Month    | Manufactured | Sold | Cases at end of month |
-| -------- | ------------ | ---- | --------------------- |
-| October  | 150          | 207  | 190                   |
-| November | 150          | 210  | 130                   |
-| December | 130\*        | 220  | 30                    |
+| Month    | Manufactured | Sold / Projected to Sell | Cases at end of month |
+| -------- | ------------ | ------------------------ | --------------------- |
+| October  | 150          | 207                      | 190                   |
+| November | 150          | 210                      | 130                   |
+| December | 130\*        | 220                      | 30                    |
 
 \* Anticipating lower capacity due to holidays.
 
-If TinyPilot's sales volume drops to 150 devices when the demand exists for 230 devices, we're essentially forfeiting 80 x $250/device = $20k of profit per month. When we switch to metal cases, manufacturing capacity is a non-issue because it's relatively cheap and easy to mass-produce metal.
+If TinyPilot's sales volume drops to 150 devices when the demand exists for 230 devices, we're essentially forfeiting 80 x $375/device = $30k in revenue or $20k of profit per month. When we switch to metal cases, manufacturing capacity is a non-issue because Chinese sheet metal vendors can crank out thousands of cases per month.
 
 The case shortage is only a problem until the metal cases are ready, but there's a lot of uncertainty in when the metal cases will arrive. It largely depends on how many design revisions it takes until I'm comfortable going to mass production:
 
