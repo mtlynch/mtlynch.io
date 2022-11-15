@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 28"
-date: 2022-11-02T11:17:13-04:00
-description: TODO - One-line summary
+date: 2022-11-15T00:00:00-04:00
+description: Scrambling to meet demand
 ---
 
 {{<notice type="info">}}
@@ -15,7 +15,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- TinyPilot had a new all-time best in sales, reaching $92k in revenue for October.
+- TinyPilot had a new record month in sales, reaching $92k in revenue for October.
 - I think I've found a third-party logistics vendor that's a good match for TinyPilot.
 - I'm scrambling to produce more cases before they become a sales bottleneck.
 
@@ -25,12 +25,12 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Ramp up new support engineers
 
-- **Result**: XX
+- **Result**: Ramp up feels ahead of my expectations
 - **Grade**: A
 
-I was aiming for the first engineer to answer 80% of questions unassisted and the second 50%. I haven't measured precisely but we're roughly there.
+I was aiming for the first engineer to answer 80% of questions unassisted and the second 50%. I haven't measured precisely, but we're roughly there.
 
-We had a one-week period of record support requests, and the team managed to answer almost all of them within our target response times. The team also published two new tutorials on the TinyPilot website.
+We had a one-week period of record support requests, and the team managed to answer almost all of them within our target response times. The team also published three new tutorials on the TinyPilot website and wiki.
 
 ### Start production on a second metal case prototype
 
@@ -46,7 +46,7 @@ I'm not sure if it's just greater difficulties of designing with metal or if the
 - **Result**: Reached out to six 3PL vendors
 - **Grade**: A
 
-Of the six vendors I approached, two ended up being a good match for what I want for TinyPilot. I'm hoping to transition fulfillment to one of these 3PL vendors in December.
+Of the six vendors I approached, two ended up being a good match for what I want. I'm hoping to transition fulfillment to one of these 3PL vendors in December.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -64,7 +64,9 @@ Of the six vendors I approached, two ended up being a good match for what I want
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-October marked another all-time record for TinyPilot's sales. TinyPilot had $86k in sales, beating its previous record by almost $10k. Our profit is way up, but that's a bit noisy month-to-month, so I'll focus on the $14k trailing average profit from the last three months. October put TinyPilot in the black for the year, and I'm optimistic that we'll end the year in the neighborhood of $20-40k in profit, on track to earn $15-20k per month in 2023.
+October marked another all-time record for TinyPilot's sales. TinyPilot had $86k in sales, beating its previous record by almost $10k. Our profit is way up, but that's a bit noisy month-to-month, so I'll focus on the $14k trailing average profit from the last three months.
+
+October put TinyPilot in the black for the year, and I'm optimistic that we'll end the year in the neighborhood of $20-40k in profit, on track to earn $15-20k per month in 2023.
 
 For better or for worse, this is all happening while I put zero effort in marketing. I've been spending all of my time ramping up new hires and scaling production to meet our growing demand. Google Ads are on auto-pilot and are adding about $15k of revenue per month at a cost of $5k, but TinyPilot is otherwise not advertising.
 
@@ -72,13 +74,15 @@ For better or for worse, this is all happening while I put zero effort in market
 
 "3PL" is the shorthand term for a third-party logistics provider. A 3PL vendor serves as a warehouse and fulfillment center for other businesses. Basically, they store my products, and when an order comes in, we forward it to our 3PL vendor, they pick it off the shelves, pack it, and send it to the customer.
 
+TinyPilot has always done fulfillment in-house, but we're reaching the point where that no longer makes sense, and I'm evaluating 3PL vendors to take over the fulfillment end.
+
 ### My ideal 3PL vendor
 
-There's a wide spectrum of options for 3PL vendors. At one end is the giant corporate machine vendors like Amazon FBA. Those vendors are probably good if you have thousands of products and hundreds of daily orders. They're also faceless and highly automated, so you have to adapt exactly to their processes.
+There's a wide spectrum of options for 3PL vendors. At one end is the giant corporate machine vendors like Amazon FBA. Those vendors are probably good if you have thousands of products and hundreds of daily orders. But they're impersonal and highly automated, so you have to adapt exactly to their processes.
 
 I've heard horror stories from other founders who used Amazon FBA and saw Amazon discard huge amounts of their inventory without justification or freeze $100k+ in funds for months. So, Amazon is the exact opposite of what I want in a 3PL vendor.
 
-At the other end of the spectrum are the "mom and pop" 3PL vendors who have dozens to hundreds of customers and only one or two warehouses. I was hoping to find a vendor like this, where they These were the vendors I wanted to find when I started my search, and I'm
+At the other end of the spectrum are the "mom and pop" 3PL vendors who have dozens to hundreds of customers and only one or two warehouses. I was hoping to find a vendor like this, where they can offer some flexibility as things evolve at TinyPilot.
 
 ### How I found 3PL vendors
 
@@ -92,33 +96,46 @@ I found the last two vendors on recommendations from a nonprofit that advises ma
 
 Both of the 3PL vendors I met with ended up being very close to what I had in mind at the beginning of the search. Both vendors emphasized their flexibility in adapting to whatever processes their clients needed. TinyPilot can give the 3PL vendors special packing instructions if items need to be combined in a certain way (e.g., orders that include at least one product X always include a free product Y).
 
-Both 3PL vendors had 100-200 customers, so which felt comfortably within [Dunbar's number](https://en.wikipedia.org/wiki/Dunbar%27s_number). After being burned as [my design agency's smallest client](/tinypilot-redesign/#avoid-hiring-a-vendor-as-their-smallest-client), I asked both vendors how I compare to their other customers, and both said I'd fall around the middle in terms of order volume.
+Both 3PL vendors had 100-200 customers, which felt comfortably within [Dunbar's number](https://en.wikipedia.org/wiki/Dunbar%27s_number). After being burned as [my design agency's smallest client](/tinypilot-redesign/#avoid-hiring-a-vendor-as-their-smallest-client), I asked how I'd compare to their other customers, and both said I'd fall around the middle in terms of order volume.
 
-In terms of product value, I'm on the high end relative to their other customers. It seems like 3PL vendors work with a lot of products in the $20-50 range. TinyPilot's high price should be to my advantage because the vendors charge a flat fee per order rather than a percentage of revenue, so fulfillment costs will eat a relatively small share of revenue. 3PL vendors also charge by warehouse real estate, and TinyPilot shouldn't need much since the product is so small.
+In terms of product value, I'm on the high end relative to their other customers. It seems like 3PL vendors work with a lot of products in the $20-50 range. TinyPilot's high price should be advantageous because the vendors charge a flat fee per order rather than a percentage of revenue. 3PL vendors also charge by warehouse storage space, which should be low in TinyPilot's case, since the product is small.
 
-Both 3PL vendors offer light manufacturing services, so we could theoretically send them our raw materials and have them build TinyPilot devices. I probably won't do this because it's easier to have the Chinese factory that makes TinyPilot's custom hardware also assemble the devices. On the other hand, in case of a disastrous dispute between TinyPilot and its manufacturer, it would be better if we're both in the US as opposed to trying to go to court with a company located in China.
+Both 3PL vendors offer light manufacturing services, so we could theoretically send them our raw materials and have them build TinyPilot devices. I probably won't do this because if we're going to outsource manufacturing, it's easier to have the Chinese factory that makes TinyPilot's custom hardware also assemble the devices. On the other hand, in case of a disastrous dispute between TinyPilot and its manufacturer, it would be better if we're both in the US as opposed to trying to go to court with a company located in China.
 
 ## With metal cases, manufacturing quality makes a huge difference
 
-When the designers were ready to produce their first case, they requested bids from Chinese sheet metal vendors. As luck would have it, I had researched and interviewed several local sheet metal shops [back in 2019](/retrospectives/2020/01/#sheet-metal-research). I thought we should get bids from them as well, as it would be faster to iterate on designs with a local vendor than if we had to go back and forth with a vendor in China.
+TinyPilot is in the process of transitioning from 3D-printed cases to metal cases. TinyPilot's hardware partners reached out to a Chinese vendor to manufacture the first prototype, but I had researched and interviewed several local sheet metal shops [back in 2019](/retrospectives/2020/01/#sheet-metal-research). I thought we should get bids from them as well, as it would be faster to iterate on designs with a local vendor than if we had to go back and forth with a vendor in China.
 
 We reached out to four different local sheet metal vendors. Only one of the local vendors responded. They said that the others wouldn't be interested in such a small job, but they specialized in prototyping, so they'd be able to help us.
 
-I got the first prototype and immediately felt deflated.
+A few weeks later, I received the US vendor's prototype and immediately felt deflated.
 
-TODO: Photos
+{{<img src="us-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from US manufacturer" alt="Photo of metal case that looks similar to the steel box behind an electrical outlet">}}
 
-The case looked like something I'd find if I smashed a hole in my wall and pulled out some wiring. It definitely didn't look like something I'd hand to a customer. The spots where metal bent stuck out egregiously because there were visible gaps in the seams. The edges didn't feel sharp enough to cut skin, but definitely too sharp for comfort. And most of the screws were visible from the outside, which looked sloppy.
+The case looked like something I'd find if I smashed a hole in my wall and pulled out some wiring. It definitely didn't look like something I'd hand to a customer. The bends had large, visible gaps along the seams. The edges didn't feel sharp enough to cut skin, but definitely too sharp for comfort. And most of the screws were visible from the outside, which looked sloppy.
 
-When I shared my disappointment with TinyPilot's hardware partner, they said that most of that most of what I was seeing was incompetent manufacturing rather than poor design. The surface would look better with powder coating, and the sharp edges meant that the sheet metal shop didn't tumble it for long enough to smooth them out. I was skeptical, but we set to work on designing the second revision.
+When I shared my disappointment with TinyPilot's hardware partner, they said that most of that most of what I was seeing was incompetent manufacturing rather than poor design. The surface would look better with powder coating, and the sharp edges meant that the sheet metal shop didn't tumble it for long enough to smooth them out.
 
-We had ordered the same design from a Chinese vendor, and I received that one a few weeks later. It was a night and day difference.
+I was skeptical, but I awaited the prototype we ordered from a Chinese vendor. I received that one a few weeks later, and it was a night and day difference.
 
-TODO: Photos
+{{<img src="cn-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from Chinese manufacturer" alt="Photo of black metal case that looks more like a consumer product">}}
 
-The powder coating made the surface feel completely different, much more like a user-friendly product. There were no sharp edges or debris in the gaps. The seams were barely visible &mdash; they made the gaps in the American prototype look massive by comparison.
+The powder coating made the surface feel completely different, much more like a user-friendly product. There were no sharp edges or debris in the gaps. The seams were barely visible. The gaps in the American prototype looked massive by comparison.
 
-TODO: Comparison photos
+{{<gallery caption="The US vendor's case (left) had relatively large gaps along the seams, whereas the Chinese vendor's (left) seams were cleaner, leaving almost no empty space.">}}
+{{<img src="us-gap.jpg" max-width="400px" alt="Photo of wide gap hole in seam on US vendor case">}}
+{{<img src="cn-gap.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case">}}
+{{</gallery>}}
+
+{{<gallery caption="The holes for corners were around three times as large on the US vendor's case (left) than the Chinese vendor's (right).">}}
+{{<img src="us-corner.jpg" max-width="400px" alt="Photo of large hole in corner on US vendor case">}}
+{{<img src="cn-corner.jpg" max-width="400px" alt="Photo of small hole in corner on Chinese vendor case">}}
+{{</gallery>}}
+
+{{<gallery caption="The US vendor's case (left) left jagged edges in some of the cuts, whereas the Chinese vendor's (right) had fewer instances of this.">}}
+{{<img src="us-debris.jpg" max-width="400px" alt="Photo of wide gap hole in seam on US vendor case">}}
+{{<img src="cn-debris.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case">}}
+{{</gallery>}}
 
 The most shocking part was the difference in cost between the two. The Chinese prototype cost $139, while the American cost $857, more than six times the cost of the Chinese version.
 
@@ -127,11 +144,13 @@ The most shocking part was the difference in cost between the two. The Chinese p
 | US              | $857  | 20 days         | D       |
 | China           | $139  | 31 days         | A       |
 
+A big chunk of the turnaround time was negotiating logistics, so we expect future iterations to come down to the 10-20 day range.
+
 ## The race for more cases
 
-I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). TinyPilot's 3D printing vendor has afforded us more time by purchasing printers specifically to accomodate TinyPilot's orders. At this point, it doesn't make sense for the vendor to keep increasing capacity since TinyPilot's orders will rapidly shrink to zero as soon as our metal cases are ready.
+I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). Since then, TinyPilot's 3D printing vendor has afforded us more time by purchasing printers specifically to accomodate TinyPilot's orders. But at this point, it doesn't make sense for the vendor to keep increasing capacity since TinyPilot's orders will rapidly shrink to zero as soon as our metal cases are ready.
 
-At the end of October, we had 190 cases in stock. TinyPilot's 3D printing vendor typically manufactures 140-160 cases per month, but we sell about ~210 devices per month. Based on this, I expect us to run out of cases by January 2023:
+At the end of October, we had 190 cases in stock. TinyPilot's 3D printing vendor typically manufactures 140-160 cases per month, but we sell about 210 devices per month. Based on this, I expect us to run out of cases by January 2023:
 
 | Month    | Manufactured | Sold / Projected to Sell | Cases at end of month |
 | -------- | ------------ | ------------------------ | --------------------- |
@@ -155,10 +174,10 @@ In other words, if we get lucky, I can do nothing, and the first few hundred met
 
 My options to handle the coming 3D-printed case shortage were:
 
-1. Do nothing and hope to have metal cases ready before we run out of 3D-printed cases
-1. Supplement capacity by ordering from additional 3D printing vendors
-1. Pay our vendor a one-time fee to offset the costs of purchasing a new printer, which the vendor will own
-1. Purchase a 3D printer outright, but the vendor will run it and dedicate it to TinyPilot prints
+1. Do nothing and hope to have metal cases ready before we run out of 3D-printed cases.
+1. Supplement capacity by ordering prints from additional 3D printing vendors.
+1. Pay our vendor a one-time fee to offset the costs of purchasing a new printer, which the vendor will own.
+1. Purchase a 3D printer outright, but the vendor will run it and dedicate it to TinyPilot prints.
 
 I went with option (4).
 
@@ -170,12 +189,20 @@ I requested printing quotes from other 3D printing vendors, but they were all su
 
 ### What got done?
 
--
+- Produced the first TinyPilot metal case prototype
+- Applied for a US Trademark for the term "TinyPilot"
+- Published ["On Migrating from Cypress to Playwright"](https://mtlynch.io/notes/cypress-vs-playwright/)
+- Published ["Should I Iinvest in iBonds?"](https://mtlynch.io/notes/ibonds/)
 
 ### Lessons learned
 
--
+- It's possible to find 3PL vendors that are friendly to small, unique businesses.
+  - Within the eCommerce ecosystem, most vendors (e.g., Shopify, Amazon) force business owners into rigid workflows that are a pain if there's anything unusual about your business.
+  - From my experience so far, there are 3PL vendors that serve smaller niches and can adapt to uniqueness in a company's fulfillment workflows.
+- Designing with sheet metal is an order of magnitude more time-consuming and expensive than 3D printing.
 
 ### Goals for next month
 
--
+- Prepare to transition TinyPilot's fulfillment to a 3PL vendor.
+- Continue onboarding new support engineers.
+- Start production on a second metal case prototype.
