@@ -205,4 +205,4 @@ I requested printing quotes from other 3D printing vendors, but they were all su
 
 - Prepare to transition TinyPilot's fulfillment to a 3PL vendor.
 - Continue onboarding new support engineers.
-- Start production on a second metal case prototype.
+- Reduce projects where I'm in the critical path.
