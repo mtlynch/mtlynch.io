@@ -46,7 +46,7 @@ I've written Cypress end-to-end tests for almost every web app I've built in the
 
 I've used Playwright for only one day. To get my hands dirty, I tried porting a test suite of one of my apps from Cypress to Playwright. I chose [PicoShare](https://github.com/mtlynch/picoshare), my minimalist file-sharing tool, which has just 10 end-to-end tests. I was able to [port them all from Cypress to Playwright](https://github.com/mtlynch/picoshare/pull/340) in about five dev hours, including the time it took to learn Playwright's APIs.
 
-I've never paid money for Cypress or Playwright, so I'm entitled to anything from either tool. Cypress has a paid SaaS component, but I've never purchased it, as it doesn't fit into my workflow. I would have happily sponsored Cypress, as I do other open-source projects I use, but Cypress doesn't offer any sponsorship options.
+I've never paid money for Cypress or Playwright, so I'm not entitled to anything from either tool. Cypress has a paid SaaS component, but I've never purchased it, as it doesn't fit into my workflow. I would have happily sponsored Cypress, as I do other open-source projects I use, but Cypress doesn't offer any sponsorship options.
 
 ## What I like about Playwright
 
