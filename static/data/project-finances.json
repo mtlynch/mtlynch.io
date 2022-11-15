@@ -102,8 +102,12 @@
       "totalRevenue": 79636.99
     },
     "2022-09": {
-      "profit": -8764.28,
+      "profit": -5337.82,
       "totalRevenue": 72324.35
+    },
+    "2022-10": {
+      "profit": 26997.39,
+      "totalRevenue": 91669.02
     }
   },
   "htfp": {
@@ -172,6 +176,9 @@
     },
     "2022-09": {
       "totalRevenue": 99.4
+    },
+    "2022-10": {
+      "totalRevenue": 148.49
     }
   },
   "isitketo": {
@@ -309,6 +316,9 @@
     },
     "2022-09": {
       "totalRevenue": 153.54
+    },
+    "2022-10": {
+      "totalRevenue": 166.87
     }
   },
   "zestful": {
@@ -464,6 +474,9 @@
     },
     "2022-09": {
       "totalRevenue": 83.66
+    },
+    "2022-10": {
+      "totalRevenue": 108
     }
   }
 }
