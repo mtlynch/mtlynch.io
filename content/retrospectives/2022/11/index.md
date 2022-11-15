@@ -15,7 +15,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- TinyPilot had a new all-time best in sales, reaching $92k in revenue for October.
+- I think I've found a third-party logistics vendor that's a good match for TinyPilot.
+- I'm scrambling to produce more cases before they become a sales bottleneck.
 
 ## Goal Grades
 
@@ -90,7 +92,7 @@ I found the last two vendors on recommendations from a nonprofit that advises ma
 
 Both of the 3PL vendors I met with ended up being very close to what I had in mind at the beginning of the search. Both vendors emphasized their flexibility in adapting to whatever processes their clients needed. TinyPilot can give the 3PL vendors special packing instructions if items need to be combined in a certain way (e.g., orders that include at least one product X always include a free product Y).
 
-Both 3PL vendors had 100-200 customers, so it's . I asked whether I'd be their biggest or smallest customer, and both said I'd fall around the middle in terms of order volume.
+Both 3PL vendors had 100-200 customers, so which felt comfortably within [Dunbar's number](https://en.wikipedia.org/wiki/Dunbar%27s_number). After being burned as [my design agency's smallest client](/tinypilot-redesign/#avoid-hiring-a-vendor-as-their-smallest-client), I asked both vendors how I compare to their other customers, and both said I'd fall around the middle in terms of order volume.
 
 In terms of product value, I'm on the high end relative to their other customers. It seems like 3PL vendors work with a lot of products in the $20-50 range. TinyPilot's high price should be to my advantage because the vendors charge a flat fee per order rather than a percentage of revenue, so fulfillment costs will eat a relatively small share of revenue. 3PL vendors also charge by warehouse real estate, and TinyPilot shouldn't need much since the product is so small.
 
@@ -100,15 +102,25 @@ Both 3PL vendors offer light manufacturing services, so we could theoretically s
 
 When the designers were ready to produce their first case, they requested bids from Chinese sheet metal vendors. As luck would have it, I had researched and interviewed several local sheet metal shops [back in 2019](/retrospectives/2020/01/#sheet-metal-research). I thought we should get bids from them as well, as it would be faster to iterate on designs with a local vendor than if we had to go back and forth with a vendor in China.
 
-We reached out to four different local sheet metal vendors. Only one of them actually responded to us. They said that the others wouldn't be interested in such a small job, but they specialized in prototyping, so they'd be able to help us.
+We reached out to four different local sheet metal vendors. Only one of the local vendors responded. They said that the others wouldn't be interested in such a small job, but they specialized in prototyping, so they'd be able to help us.
 
-Longtime readers will remember that I We reached out to four different sheet metal vendors in the US. and three of them ignored us, and this was the last one.
+I got the first prototype and immediately felt deflated.
 
-I got the first prototype and felt immediately deflated. This looked like something I'd find if I smashed a hole in my wall. It definitely didn't look like something I'd hand to a customer. The spots where metal bent stuck out egregiously because there were visible gaps.
+TODO: Photos
 
-Want to hear the kicker? Guess how much each one cost.
+The case looked like something I'd find if I smashed a hole in my wall and pulled out some wiring. It definitely didn't look like something I'd hand to a customer. The spots where metal bent stuck out egregiously because there were visible gaps in the seams. The edges didn't feel sharp enough to cut skin, but definitely too sharp for comfort. And most of the screws were visible from the outside, which looked sloppy.
 
-The American prototype cost $857, while the Chinese prototype was only $139, a 6x difference.
+When I shared my disappointment with TinyPilot's hardware partner, they said that most of that most of what I was seeing was incompetent manufacturing rather than poor design. The surface would look better with powder coating, and the sharp edges meant that the sheet metal shop didn't tumble it for long enough to smooth them out. I was skeptical, but we set to work on designing the second revision.
+
+We had ordered the same design from a Chinese vendor, and I received that one a few weeks later. It was a night and day difference.
+
+TODO: Photos
+
+The powder coating made the surface feel completely different, much more like a user-friendly product. There were no sharp edges or debris in the gaps. The seams were barely visible &mdash; they made the gaps in the American prototype look massive by comparison.
+
+TODO: Comparison photos
+
+The most shocking part was the difference in cost between the two. The Chinese prototype cost $139, while the American cost $857, more than six times the cost of the Chinese version.
 
 | Vendor location | Price | Turnaround time | Quality |
 | --------------- | ----- | --------------- | ------- |
@@ -117,9 +129,9 @@ The American prototype cost $857, while the Chinese prototype was only $139, a 6
 
 ## The race for more cases
 
-I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). TinyPilot's 3D printing vendor has bought us more time by purchasing more printers specifically for TinyPilot's cases. At this point, they're not willing to buy more printers, especially given that TinyPilot will reduce orders to zero as soon as the metal cases are ready.
+I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). TinyPilot's 3D printing vendor has afforded us more time by purchasing printers specifically to accomodate TinyPilot's orders. At this point, it doesn't make sense for the vendor to keep increasing capacity since TinyPilot's orders will rapidly shrink to zero as soon as our metal cases are ready.
 
-At the end of October, we had 190 Voyager 2 cases in stock. TinyPilot's 3D printing vendor typically manufactures 140-160 cases per month, but we sell about ~210 devices per month. Based on this, I expect us to run out of cases by January 2023, which will mean we can only sell 140-160 devices per month:
+At the end of October, we had 190 cases in stock. TinyPilot's 3D printing vendor typically manufactures 140-160 cases per month, but we sell about ~210 devices per month. Based on this, I expect us to run out of cases by January 2023:
 
 | Month    | Manufactured | Sold / Projected to Sell | Cases at end of month |
 | -------- | ------------ | ------------------------ | --------------------- |
@@ -127,11 +139,11 @@ At the end of October, we had 190 Voyager 2 cases in stock. TinyPilot's 3D print
 | November | 150          | 210                      | 130                   |
 | December | 130\*        | 220                      | 30                    |
 
-\* Anticipating lower capacity due to holidays.
+\* Anticipating lower production capacity due to holidays.
 
-If TinyPilot's sales volume drops to 150 devices when the demand exists for 230 devices, we're essentially forfeiting 80 x $375/device = $30k in revenue or $20k of profit per month. When we switch to metal cases, manufacturing capacity is a non-issue because Chinese sheet metal vendors can crank out thousands of cases per month.
+If TinyPilot's sales volume drops to 150 devices when the demand exists for 230 devices, we're essentially forfeiting 80 x $375/device = $30k in revenue or $20k of profit per month.
 
-The case shortage is only a problem until the metal cases are ready, but there's a lot of uncertainty in when the metal cases will arrive. It largely depends on how many design revisions it takes until I'm comfortable going to mass production:
+When we switch to metal cases, manufacturing capacity is a non-issue &mdash; Chinese sheet metal vendors can crank out thousands of cases per month. The hard part is predicting when the metal cases will be ready. It largely depends on how many design revisions we need:
 
 | Scenario                                | ETA for first production batch | Probability |
 | --------------------------------------- | ------------------------------ | ----------- |
@@ -141,16 +153,18 @@ The case shortage is only a problem until the metal cases are ready, but there's
 
 In other words, if we get lucky, I can do nothing, and the first few hundred metal cases will arrive just as we're about to run out of 3D-printed cases. If we get unlucky and it takes three revisions to design the metal case, TinyPilot misses out on ~$20k of profit in January. If we get _very_ unlucky, TinyPilot misses out on ~$60-70k of profit throughout the first quarter of 2023.
 
-My options are:
+My options to handle the coming 3D-printed case shortage were:
 
-1. Do nothing
+1. Do nothing and hope to have metal cases ready before we run out of 3D-printed cases
 1. Supplement capacity by ordering from additional 3D printing vendors
-1. Pay our vendor a one-time fee to offset the costs of purchasing a new printer (vendor owns new printer)
-1. Purchase a 3D printer outright, but the vendor will run it and dedicate it to TinyPilot prints (TinyPilot owns new printer)
+1. Pay our vendor a one-time fee to offset the costs of purchasing a new printer, which the vendor will own
+1. Purchase a 3D printer outright, but the vendor will run it and dedicate it to TinyPilot prints
 
-I went with option (4). A new Markforged printer costs $5,200 after taxes and shipping. I'm hoping I can sell it for $3-4k once we switch to metal cases in a few months, so I'm paying $2k to proect myself from a potential $20k downside.
+I went with option (4).
 
-I requested quotes from other vendors, but they were all surprisingly expensive. TinyPilot gets an especially good deal from our vendor, at $12.50/case. I was expecting quotes of $75-100/case, but the rates I got were in the $100-180/case range, even for cheaper material. I had quoted backup vendors in early 2021 to prepare for this, but the prices have increased by ~80% since then. A couple of Chinese vendors quoted in the $20-50/case range for a cheaper material, so I requested samples in case I need a plan B.
+A new Markforged printer costs $5,500 after taxes and shipping. I'm hoping I can sell it for $3-4k once we switch to metal cases in a few months. In effect, I'm paying $2k to proect myself from a potential $20k downside.
+
+I requested printing quotes from other 3D printing vendors, but they were all surprisingly expensive. I had quoted backup vendors in early 2021 to prepare for a production shortage, but the prices have increased by ~80% since then to $100-180/case. A couple of Chinese vendors quoted in the $20-50/case range for a cheaper material, so I requested samples in case I need a plan B.
 
 ## Wrap up
 
