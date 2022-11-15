@@ -80,7 +80,7 @@ TinyPilot has always done fulfillment in-house, but we're reaching the point whe
 
 ### My ideal 3PL vendor
 
-There's a wide spectrum of options for 3PL vendors. At one end is the giant corporate machine vendors like Amazon FBA. Those vendors are probably good if you have thousands of products and hundreds of daily orders. but they're impersonal and highly automated, so you have to adapt to their rigid processes.
+There's a wide spectrum of options for 3PL vendors. At one end are the giant corporate machine vendors like Amazon FBA. Those vendors are probably good if you have thousands of products and hundreds of daily orders, but they're impersonal and highly automated, so you have to adapt to their rigid processes.
 
 I've heard horror stories from other founders who used Amazon FBA and saw Amazon discard huge amounts of their inventory without justification or freeze $100k+ in funds for months. So, Amazon is the exact opposite of what I want in a 3PL vendor.
 
@@ -100,7 +100,7 @@ Both of the 3PL vendors I met with ended up being very close to what I had in mi
 
 Both 3PL vendors had 100-200 customers, which felt comfortably within [Dunbar's number](https://en.wikipedia.org/wiki/Dunbar%27s_number). After being burned as [my design agency's smallest client](/tinypilot-redesign/#avoid-hiring-a-vendor-as-their-smallest-client), I asked how I'd compare to their other customers, and both said I'd fall around the middle in terms of order volume.
 
-In terms of product value, I'm on the high end relative to their other customers. It seems like 3PL vendors work with a lot of products in the $20-50 range. TinyPilot's high price should be advantageous because the vendors charge a flat fee per order rather than a percentage of revenue. 3PL vendors also charge by warehouse storage space, which should be low in TinyPilot's case, since the product is small.
+In terms of product value, I'm on the high end relative to their other customers. It seems like 3PL vendors work with a lot of products in the $20-50 range. TinyPilot's high price should be advantageous because the vendors charge a flat fee per order rather than a percentage of revenue. 3PL vendors also charge by warehouse storage space, which should be low in TinyPilot's case since the product is small.
 
 Both 3PL vendors offer light manufacturing services, so we could theoretically send them our raw materials and have them build TinyPilot devices. I probably won't do this because if we're going to outsource manufacturing, it's easier to have the Chinese factory that makes TinyPilot's custom hardware also assemble the devices. On the other hand, in case of a disastrous dispute between TinyPilot and its manufacturer, it would be better if we're both in the US as opposed to trying to go to court with a company located in China.
 
@@ -114,7 +114,7 @@ A few weeks later, I received the US vendor's prototype and immediately felt def
 
 {{<img src="us-prototype-1.jpg" max-width="600px" caption="First TinyPilot metal case prototype from US manufacturer" alt="Photo of metal case that looks similar to the steel box behind an electrical outlet">}}
 
-The case looked like something I'd find if I smashed a hole in my wall and pulled out some wiring. It definitely didn't look like something I'd hand to a customer. The bends had large, visible gaps along the seams. The edges didn't feel sharp enough to cut skin but definitely too sharp for comfort. And most of the screws were visible from the outside, which looked sloppy.
+The case looked like something I'd find if I smashed a hole in my wall and pulled out some wiring. It definitely didn't look like something I'd hand to a customer. The bends had large, visible gaps along the seams. The edges didn't feel sharp enough to cut skin but were definitely too sharp for comfort. And most of the screws were visible from the outside, which looked sloppy.
 
 When I shared my disappointment with TinyPilot's hardware partner, they said that most of what I was seeing was incompetent manufacturing rather than poor design. The surface would look better with powder coating, and the sharp edges meant that the sheet metal shop didn't tumble it for long enough to smooth them out.
 
@@ -139,7 +139,7 @@ The powder coating made the surface feel completely different, much more like a 
 {{<img src="cn-debris.jpg" max-width="400px" alt="Photo of nearly flush seam Chinese vendor case">}}
 {{</gallery>}}
 
-The most shocking part was the difference in price. The Chinese prototype cost $139, while the American cost $857, more than six times as expensive for far worse quality.
+The most shocking part was the difference in price. The Chinese prototype cost $139, while the American one cost $857, more than six times as expensive for far worse quality.
 
 | Vendor location | Price | Turnaround time | Quality |
 | --------------- | ----- | --------------- | ------- |
@@ -150,7 +150,7 @@ A big chunk of the turnaround time was negotiating logistics, so we expect futur
 
 ## The race for more cases
 
-I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). Since then, TinyPilot's 3D printing vendor has afforded us more time by purchasing more printers specifically to accomodate TinyPilot's orders. But at this point, it doesn't make sense for the vendor to keep increasing capacity since TinyPilot's orders will rapidly shrink to zero as soon as our metal cases are ready.
+I've been worried about 3D-printed cases becoming the bottleneck for TinyPilot [since month 7](/retrospectives/2021/02/#scaling-manufacturing). Since then, TinyPilot's 3D printing vendor has afforded us more time by purchasing more printers to accommodate TinyPilot's orders. But at this point, it doesn't make sense for the vendor to keep increasing capacity since TinyPilot's orders will rapidly shrink to zero as soon as our metal cases are ready.
 
 At the end of October, we had 190 cases in stock. TinyPilot's 3D printing vendor typically manufactures 140-160 cases per month, but we sell about 210 devices per month. Based on this, I expect us to run out of cases by January 2023:
 
@@ -194,7 +194,7 @@ I requested 3D printing quotes from other vendors, but they were all surprisingl
 - Produced the first TinyPilot metal case prototype
 - Applied for a US Trademark on the term "TinyPilot"
 - Published ["On Migrating from Cypress to Playwright"](https://mtlynch.io/notes/cypress-vs-playwright/)
-- Published ["Should I Iinvest in iBonds?"](https://mtlynch.io/notes/ibonds/)
+- Published ["Should I invest in iBonds?"](https://mtlynch.io/notes/ibonds/)
 
 ### Lessons learned
 
