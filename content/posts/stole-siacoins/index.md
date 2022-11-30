@@ -193,7 +193,11 @@ Was _I_ the one being fleeced somehow? Did the user know they only had €10 but
 
 While I would have loved to sit and ponder the strange balance I was seeing, time was of the essence. I didn't know who else saw that post and was about to unlock the wallet like I just had. It was time to steal the Siacoin.
 
-> **Ben Gates**: Someone else is after the treasure.<br> >**Riley Poole**: Of course someone else is after it. It's the axiom of treasure hunting.<br> -_National Treasure: Book of Secrets_
+> **Ben Gates**: Someone else is after the treasure.
+>
+> **Riley Poole**: Of course someone else is after it. It's the axiom of treasure hunting.
+>
+> -_National Treasure: Book of Secrets_
 
 I quickly [sent the full balance](https://siastats.info/navigator?search=2304da26d61bd2cb7fcac5c7b38a553d788d8dfc386ae4eb47772e36e4a9269d) to my own Sia wallet. That way, even if someone else discovered the correct seed after I had, they couldn't recover the money.
 
