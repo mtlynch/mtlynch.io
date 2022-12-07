@@ -105,7 +105,7 @@ Here are the things I wish I'd known about Debian when I started work on TinyPil
 
 - You can create and distribute standalone Debian packages without running your own apt repository.
 - Creating a simple Debian package takes five minutes if you're following the right tutorial.
-- Debian keeps track of which files are associated with which
+- You can [use Docker QEMU](https://github.com/tiny-pilot/janus-debian/blob/e29efc6ee3585cc01a22d1263863ed4f57325080/.circleci/config.yml#L15L63) to build ARM Debian packages from AMD systems.
 - If your package needs to configure another package, the typical way to do it is by adding a file to a configuration directory rather than tinkering with another package's existing file.
   - For example, a TinyPilot Debian package could configure nginx by adding a file to `/etc/nginx/sites-enabled`.
 
@@ -118,9 +118,23 @@ The guides I found most helpful were:
 
 Vincent was even kind enough to [hop on a video call with me](https://m.mtlynch.io/@vbernat@hachyderm.io/109369842244090259) to answer some of my remaining questions about Debian packages.
 
-I think TinyPilot is now a pretty nice [example of building a simple Debian package](https://github.com/tiny-pilot/tinypilot/tree/2b8cc1e0bee2740292d02b1fa41a3711b9bffedb/debian-pkg).
-
 ## Side projects
+
+### [ScreenJournal](https://github.com/mtlynch/screenjournal)
+
+I watch a lot of TV shows and movies, and I enjoy recommending what I like to friends. I often find myself struggling to remember what I watched and who I recommended it to.
+
+I've checked around for apps that let you track movies and TV the same way you'd track reading with Goodreads, but nothing matched what I had in mind. I feel like my friends are exhausted with social apps that default to public, so I wanted something that lets you create a micro-community of friends who want to share recommendations. Less like Twitter, more like Discord.
+
+I've started working on an app for sharing movie reviews with friends. It's called [ScreenJournal](https://github.com/mtlynch/screenjournal):
+
+{{<img src="screenjournal.png" max-width="800px" has-border="true" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is like Goodreads but for couch potatoes." alt="Screenshot of my movie reviews on ScreenJournal">}}
+
+It's not quite ready for prime time yet, as the reviews are private, but it only supports a single admin user. Right now, it's only effective as a private movie journal for one person, but the next featue on my list is support for multiple users.
+
+User management is notoriously hard to get right, so I've always avoided rolling my own implementation. For the past few years, I've used my friend [David Toth](https://twitter.com/jupiterunknown)'s [UserKit](https://userkit.io) service to manage users, but that service isn't yet open to the public, so it limits who can use my code. I looked for an open-source user management framework for Go, but the majority relied on OAuth from external services, which I didn't want. The rest were so heavyweight and complicated that I didn't want to bother.
+
+Instead, I'm living dangerously and rolling my own user management. For session management, I'm using [jeff](https://github.com/abraithwaite/jeff), and for authentication, I'm going to use [bcrypt](https://pkg.go.dev/golang.org/x/crypto/bcrypt) and hope for the best.
 
 ## Wrap up
 
