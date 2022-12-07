@@ -68,11 +68,11 @@ The next time I met with the member of the fulfillment staff, I asked how much s
 
 When short-term tasks take up all your time, it's too late to fix the problem. Often, there are obvious ways to reduce your load, but switching processes, automating, or delegating require an upfront investment. If you're already at capacity, you reach an unpleasant state where you don't have enough time to save yourself time.
 
-## Using long-term tasks as an early warning sign
+## Using long-term tasks as an early warning for exhaustion
 
 The support engineers have the clearest split between short- and long-term tasks. The support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and write [help articles](https://tinypilotkvm.com/faq) explaining how to address the issues.
 
-I asked them to. I realized I should have noticed that . The problem is that it's not really sharpening the saw. It's not time-sensitive but it's not sharpening the saw.
+Everyone at TinyPilot has a mix of short-term tasks and long-term tasks:
 
 | Team                | Short-term tasks                                                                           | Long-term tasks                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -81,7 +81,11 @@ I asked them to. I realized I should have noticed that . The problem is that it'
 | Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Investigating difficult bugs                                                      |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 
-## When delegation folds back on you
+The surprise with fulfillment staff has made me realize I should use long-term tasks as the canary in the coal mine. When a team stops making progress on long-term tasks, they're likely approaching their maximum capacity. It's best to reshuffle things early until they're at full capacity and have no time to make changes.
+
+There are two problems with this. The first is that the team who's most frequently ignoring their long-term tasks is the founder team, by which I mean me. So when I'm at capacity, it's easy for me to overlook other teams slowing down on long-term tasks or be unable to react. I suppose the solution to that is to increase the priority for me to keep some spare capacity so that I can do that.
+
+The other problem is that the fulfillment team has the least obvious set of long-term tasks. With the support engineers, there's a natural virtuous cycle. Nobody likes answering the same question over and over, so the sooner they write an FAQ, the sooner they can stop answering the same question. With the fulfillment staff, there's not really an equivalent. They can do things to optimize the fulfillment process, but I don't think there's much room for improvement there, and it's not the kind of thing you can improve every week.
 
 ## Getting out of the Ansible hole
 
@@ -89,11 +93,32 @@ I asked them to. I realized I should have noticed that . The problem is that it'
 
 When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi device and configure the OS functionality TinyPilot needed. Ansible was the natural choice. And when I decided to release TinyPilot as a real product, the easiest way to let users install it was to just replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
 
-At the time, I definitely knew that Ansible was not the standard way of installing software on Linux. The Raspberry Pi OS is based on Debian, so the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about Debian packages, and they seemed like a lot of work.
+At the time, I definitely knew that Ansible was not the standard way of installing software on Linux. Raspberry Pi OS is based on Debian, so the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about Debian packages, and they seemed like a lot of work.
 
 Would I have to set up my own apt repository? Do I have to manage repo keys? What if TinyPilot both depends on another package and needs to configure that package? TinyPilot depended on nginx, so how was I supposed to configure nginx from my own package?
 
-At the time, I knew how to solve these problems with Ansible, and I didn't know anything about Debian packages, so I just stuck with what I knew.
+Two and a half years later, the dev team is paying the price for my choice of Ansible. As TinyPilot has grown and become more complex, our Ansible configuration has become complex as well. The TinyPilot installation process should take a few seconds, but instead it takes up to six minutes with all the Ansible overhead.
+
+Beyond the impact on the end-user, Ansible has a tendency to swallow up development resources.
+
+Here are the things I wish I'd known about Debian when I started work on TinyPilot:
+
+- You can create and distribute standalone Debian packages without running your own apt repository.
+- Creating a simple Debian package takes five minutes if you're following the right tutorial.
+- Debian keeps track of which files are associated with which
+- If your package needs to configure another package, the typical way to do it is by adding a file to a configuration directory rather than tinkering with another package's existing file.
+  - For example, a TinyPilot Debian package could configure nginx by adding a file to `/etc/nginx/sites-enabled`.
+
+The hardest part of learning Debian was finding useful information amid all the noise. A lot of the resources basically say, "Just read [the 9,000 page Debian maintainer's guide](https://www.debian.org/doc/manuals/debmake-doc/), but ignore the parts that are out of date."
+
+The guides I found most helpful were:
+
+- ["Creating and hosting your own deb packages and apt repo"](https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/) by Alex Couture-Beil
+- ["Pragmatic Debian packaging"](https://vincent.bernat.ch/en/blog/2019-pragmatic-debian-packaging) by Vincent Bernat
+
+Vincent was even kind enough to [hop on a video call with me](https://m.mtlynch.io/@vbernat@hachyderm.io/109369842244090259) to answer some of my remaining questions about Debian packages.
+
+I think TinyPilot is now a pretty nice [example of building a simple Debian package](https://github.com/tiny-pilot/tinypilot/tree/2b8cc1e0bee2740292d02b1fa41a3711b9bffedb/debian-pkg).
 
 ## Side projects
 
