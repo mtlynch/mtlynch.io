@@ -54,7 +54,7 @@ TODO
 | Enterprise Subscriptions | $290.70        | $290.70          | 0                                              |
 | Royalties                | $5,544.12      | $4,402.50        | <font color="red">-$1,141.62 (-21%)</font>     |
 | Total Revenue            | $91,669.02     | $111,916.30      | <font color="green">+$20,247.28 (+22%)</font>  |
-| **Profit**               | **$26,997.39** | **$21,508.21**\* | **<font color="red">-$5,489.18 (-20%)</font>** |
+| **Profit**               | **$26,042.39** | **$21,508.21**\* | **<font color="red">-$4,534.18 (-17%)</font>** |
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 

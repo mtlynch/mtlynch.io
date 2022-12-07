@@ -54,17 +54,15 @@ Of the six vendors I approached, two ended up being a good match for what I want
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | September 2022                          | October 2022                                | Change                                             |
-| ------------------------ | --------------------------------------- | ------------------------------------------- | -------------------------------------------------- |
-| Unique Visitors          | 9,040                                   | 7,994                                       | <font color="red">-1,046 (-12%)</font>             |
-| Total Pageviews          | 17,608                                  | 17,862                                      | <font color="green">+254 (+1%)</font>              |
-| Sales Revenue            | $68,640.50                              | $85,834.20                                  | <font color="green">+$17,193.70 (+25%)</font>      |
-| Enterprise Subscriptions | $242.95                                 | $290.70                                     | <font color="green">+$47.75 (+20%)</font>          |
-| Royalties                | $3,440.90                               | $5,544.12                                   | <font color="green">+$2,103.22 (+61%)</font>       |
-| Total Revenue            | $72,324.35                              | $91,669.02                                  | <font color="green">+$19,344.67 (+27%)</font>      |
-| **Profit**               | **<font color="red">-$5,337.82</font>** | **<font color="green">$26,997.39</font>**\* | **<font color="green">+$32,335.21 (+inf%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | September 2022                          | October 2022                              | Change                                             |
+| ------------------------ | --------------------------------------- | ----------------------------------------- | -------------------------------------------------- |
+| Unique Visitors          | 9,040                                   | 7,994                                     | <font color="red">-1,046 (-12%)</font>             |
+| Total Pageviews          | 17,608                                  | 17,862                                    | <font color="green">+254 (+1%)</font>              |
+| Sales Revenue            | $68,640.50                              | $85,834.20                                | <font color="green">+$17,193.70 (+25%)</font>      |
+| Enterprise Subscriptions | $242.95                                 | $290.70                                   | <font color="green">+$47.75 (+20%)</font>          |
+| Royalties                | $3,440.90                               | $5,544.12                                 | <font color="green">+$2,103.22 (+61%)</font>       |
+| Total Revenue            | $72,324.35                              | $91,669.02                                | <font color="green">+$19,344.67 (+27%)</font>      |
+| **Profit**               | **<font color="red">-$5,337.82</font>** | **<font color="green">$26,042.39</font>** | **<font color="green">+$31,380.21 (+inf%)</font>** |
 
 October marked another all-time record for TinyPilot's sales. TinyPilot had $86k in sales, beating its previous record by almost $10k. Our profit is way up, but that's a bit noisy month-to-month, so I'll focus on the $14k trailing average profit from the last three months.
 
