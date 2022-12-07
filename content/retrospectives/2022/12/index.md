@@ -85,13 +85,15 @@ I asked them to. I realized I should have noticed that . The problem is that it'
 
 ## Getting out of the Ansible hole
 
-[Ansible](https://github.com/ansible/ansible) is a tool for configuring servers automatically. I've been using it for seven years at this point, and it's how I manage all the [virtual machines in my homelab](/building-a-vm-homelab/).
+[Ansible](https://github.com/ansible/ansible) is a tool for configuring servers automatically. I've been using it for seven years, and it's how I manage all the [virtual machines in my homelab](/building-a-vm-homelab/).
 
-When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi device and configure the OS functionality TinyPilot needed. Ansible was the natural choice. And when I decided to release TinyPilot as a real product, I figured the easiest way
+When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi device and configure the OS functionality TinyPilot needed. Ansible was the natural choice. And when I decided to release TinyPilot as a real product, the easiest way to let users install it was to just replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
 
 At the time, I definitely knew that Ansible was not the standard way of installing software on Linux. The Raspberry Pi OS is based on Debian, so the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about Debian packages, and they seemed like a lot of work.
 
-Would I have to set up my own apt repository? TinyPilot depended on nginx. I knew that Debian packages could declare dependencies on other packages, but was there a way of
+Would I have to set up my own apt repository? Do I have to manage repo keys? What if TinyPilot both depends on another package and needs to configure that package? TinyPilot depended on nginx, so how was I supposed to configure nginx from my own package?
+
+At the time, I knew how to solve these problems with Ansible, and I didn't know anything about Debian packages, so I just stuck with what I knew.
 
 ## Side projects
 
