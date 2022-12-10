@@ -146,7 +146,7 @@ It felt like a great idea. I'd get feedback from my users, and they'd feel inves
 {{<img src="survey2.jpg" alt="Meal plan discount explanation" max-width="400px">}}
 {{</gallery>}}
 
-The link led to this [SurveyMonkey survey](https://www.surveymonkey.com/r/633GTSD).
+The link led to a short survey.
 
 After about 10 days, only one user filled out a survey. I reached out to them a few hours later to offer discounted meal plans, but they never responded or made a purchase.
 
