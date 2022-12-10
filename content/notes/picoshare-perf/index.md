@@ -374,7 +374,7 @@ One of my earliest debugging steps was adding a page to PicoShare that showed so
 
 James Tucker pointed out that this measurement would exclude any resources I allocated through cgo:
 
-{{<tweet user="raggi" id="1552445846238531584">}}
+{{<img src="raggi-cgo.png" alt="are you using sqlite via cgo, or a pure go implementation? a cgo version would allocate memory unknown to the go heap statistics." has-border="true">}}
 
 I was indeed using SQLite via cgo. PicoShare uses [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3), the most popular SQLite library for Go.
 
