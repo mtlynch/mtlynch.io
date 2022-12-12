@@ -15,7 +15,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- TinyPilot generated over $100k of monthly revenue for the first time ever.
+- TinyPilot generated $112k of monthly revenue, breaking the six-figure mark for the first time ever.
+-
 
 ## Goal Grades
 
@@ -30,8 +31,8 @@ I underestimated how much spare capacity the local staff would have to work on t
 
 ### Continue onboarding new support engineers
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Both support engineers are answering around 80% of support tickets unassisted.
+- **Grade**: A
 
 TODO
 
@@ -68,9 +69,11 @@ I'm happy to see three-month trailing profit staying comfortably in the positive
 
 One of the goals for November was to begin transitioning fulfillment to a third-party logistics (3PL) vendor. I asked a member of the fulfillment team to review our workflows and prepare for how we hand that over to a 3PL vendor.
 
-The next week, we saw a spike in orders, so there was no progress on researching the transition to 3PL. And then two weeks later, we were still catching up from the sales spike, so there still wasn't progress.
+The next week, we saw a spike in orders from the Linus Tech Tips video, so there was no progress on researching the transition to 3PL. And then two weeks later, we were still catching up from the sales spike, so there still wasn't progress.
 
 The next time I met with the member of the fulfillment staff, I asked how much spare capacity we usually have for atypical tasks like this, and I was surprised to learn that it was roughly zero. The fulfillment team's short-term tasks of assembling devices, shipping out orders, and responding to suppport requests was enough to occupy all of their hours for the week.
+
+Usually, when a process is taking too much time, there are ways of freeing up resources. You could invest in automation, hire additional people, move to a managed service, etc. With any change in workflow, there's a frictional cost
 
 When short-term tasks take up all your time, it's too late to fix the problem. Often, there are obvious ways to reduce your load, but switching processes, automating, or delegating require an upfront investment. If you're already at capacity, you reach an unpleasant state where you don't have enough time to save yourself time.
 
@@ -153,9 +156,12 @@ Instead, I'm living dangerously and rolling my own user management. For session 
 
 ### Lessons learned
 
--
+- Long-term tasks are a good leading indicator of resource exhaustion.
+  - If a team stops making progress on long-term tasks, it's important.
+  - It's especially important for a founder to keep time for long-term tasks because they otherwise can't respond effectively to resource exhaustion on other teams.
 - Debian packaging isn't as intimidating as it first seems
 
 ### Goals for next month
 
--
+- Manufacture the first production batch of metal TinyPilot Voyager cases.
+- Reach code complete on the next TinyPilot Pro release.
