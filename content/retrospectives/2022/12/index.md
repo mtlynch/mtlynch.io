@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 29"
 date: 2022-12-06T09:16:53-05:00
-description: TinyPilot's first $100k month
+description: Worry when long term tasks stop.
 ---
 
 {{<notice type="info">}}
@@ -23,10 +23,10 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Prepare to transition TinyPilot's fulfillment to a 3PL vendor
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Started the onboarding process with a single, low-volume product
+- **Grade**: B
 
-TODO
+I underestimated how much spare capacity the local staff would have to work on this. Combined with the unexpected spike in sales, we didn't make progress adapting our in-house fulfillment workflow to a 3PL vendor. Still, we can move forward with an imperfect process and improve it as the 3PL vendor frees up our time.
 
 ### Continue onboarding new support engineers
 
@@ -37,10 +37,10 @@ TODO
 
 ### Reduce projects where I'm in the critical path
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: I've resisted the urge to initiate any new projects.
+- **Grade**: B
 
-TODO
+I know that launching a new TinyPilot model always requires a lot of my time. Even though there are days where I feel like I have some spare bandwidth, I'm trying to keep as much of my time free as possible.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -57,6 +57,12 @@ TODO
 | **Profit**               | **$26,042.39** | **$21,508.21**\* | **<font color="red">-$4,534.18 (-17%)</font>** |
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+
+TinyPilot hit another all-time high in sales, reaching $112k in total revenue. This is the first month we ever crossed the six-figure mark.
+
+The jump was largely due to TinyPilot receiving a positive mention on [Linus Tech Tips](https://youtu.be/232opnNPGNo), one of the most popular YouTube channels for homelab enthusiasts. Even though the review was primarily about our competitor's product, the channel has so many subscribers that TinyPilot saw a sizable surge in orders for the following two weeks.
+
+I'm happy to see three-month trailing profit staying comfortably in the positive, even amid atypically high costs. TinyPilot's is paying a premium to produce 3D-printed cases [beyond our normal capacity](/retrospectives/2022/11/#the-race-for-more-cases), but our costs should drop significantly in January as we switch to metal cases.
 
 ## We don't have enough time to save ourselves time
 
@@ -78,12 +84,12 @@ Everyone at TinyPilot has a mix of short-term tasks and long-term tasks:
 | ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Public writing<br>Re-evaluating strategy<br>Hiring and training                               |
 | Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
-| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Investigating difficult bugs                                                      |
+| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 
-The surprise with fulfillment staff has made me realize I should use long-term tasks as the canary in the coal mine. When a team stops making progress on long-term tasks, they're likely approaching their maximum capacity. It's best to reshuffle things early until they're at full capacity and have no time to make changes.
+The surprise with fulfillment staff has made me realize I should use long-term tasks as the canary in the coal mine. When a team stops making progress on long-term tasks, they're likely approaching their maximum capacity. At that point, I should find ways to reduce load by decreasing responsibilities or add capacity by hiring, outsourcing, or purchasing better tools. There's always a switching cost to any new process, so if I wait until a team is spending all their time on urgent, short-term tasks, they'll have no time to make changes.
 
-There are two problems with this. The first is that the team who's most frequently ignoring their long-term tasks is the founder team, by which I mean me. So when I'm at capacity, it's easy for me to overlook other teams slowing down on long-term tasks or be unable to react. I suppose the solution to that is to increase the priority for me to keep some spare capacity so that I can do that.
+There are two problems with this. The first is that the team who's most frequently ignoring their long-term tasks is the founder team, by which I mean me. So when I'm overloaded, I won't notice a slowdown on long-term tasks. Even if I do, I don't have time to do anything about it. I suppose the solution to that is to increase the priority for me to keep some spare capacity so that I can do that.
 
 The other problem is that the fulfillment team has the least obvious set of long-term tasks. With the support engineers, there's a natural virtuous cycle. Nobody likes answering the same question over and over, so the sooner they write an FAQ, the sooner they can stop answering the same question. With the fulfillment staff, there's not really an equivalent. They can do things to optimize the fulfillment process, but I don't think there's much room for improvement there, and it's not the kind of thing you can improve every week.
 
@@ -91,13 +97,13 @@ The other problem is that the fulfillment team has the least obvious set of long
 
 [Ansible](https://github.com/ansible/ansible) is a tool for configuring servers automatically. I've been using it for seven years, and it's how I manage all the [virtual machines in my homelab](/building-a-vm-homelab/).
 
-When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi device and configure the OS functionality TinyPilot needed. Ansible was the natural choice. And when I decided to release TinyPilot as a real product, the easiest way to let users install it was to just replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
+When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi device and configure the OS functionality TinyPilot needed. Ansible was the natural choice because it's designed for that use-case.
 
-At the time, I definitely knew that Ansible was not the standard way of installing software on Linux. Raspberry Pi OS is based on Debian, so the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about Debian packages, and they seemed like a lot of work.
+When I decided to release TinyPilot as a real product, the easiest way to let users install it was to just replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
 
-Would I have to set up my own apt repository? Do I have to manage repo keys? What if TinyPilot both depends on another package and needs to configure that package? TinyPilot depended on nginx, so how was I supposed to configure nginx from my own package?
+At the time, I knew that the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about Debian packages, and they seemed like a lot of work. Would I have to set up my own apt repository? Do I have to manage repo keys? TinyPilot depended on nginx, so how was I supposed to configure nginx from my own package?
 
-Two and a half years later, the dev team is paying the price for my choice of Ansible. As TinyPilot has grown and become more complex, our Ansible configuration has become complex as well. The TinyPilot installation process should take a few seconds, but instead it takes up to six minutes with all the Ansible overhead.
+Two and a half years later, the dev team is paying the price for my choice of Ansible. As TinyPilot has developed more features, our Ansible configuration has become complex. The TinyPilot installation process should take a few seconds, but instead it takes up to six minutes with all the overhead of Ansible.
 
 Beyond the impact on the end-user, Ansible has a tendency to swallow up development resources.
 
@@ -105,7 +111,7 @@ Here are the things I wish I'd known about Debian when I started work on TinyPil
 
 - You can create and distribute standalone Debian packages without running your own apt repository.
 - Creating a simple Debian package takes five minutes if you're following the right tutorial.
-- You can [use Docker QEMU](https://github.com/tiny-pilot/janus-debian/blob/e29efc6ee3585cc01a22d1263863ed4f57325080/.circleci/config.yml#L15L63) to build ARM Debian packages from AMD systems.
+- You can [use Docker QEMU](https://github.com/tiny-pilot/janus-debian/blob/e29efc6ee3585cc01a22d1263863ed4f57325080/.circleci/config.yml#L15L63) to build ARM Debian packages from x64 systems.
 - If your package needs to configure another package, the typical way to do it is by adding a file to a configuration directory rather than tinkering with another package's existing file.
   - For example, a TinyPilot Debian package could configure nginx by adding a file to `/etc/nginx/sites-enabled`.
 
@@ -140,11 +146,15 @@ Instead, I'm living dangerously and rolling my own user management. For session 
 
 ### What got done?
 
--
+- Started the onboarding process with a 3PL vendor.
+- Improved TinyPilot's Debian package in several important ways.
+- Found a better payment platform for international contractors.
+  - Deel has been a poor experience, and I wasn't crazy about Remote.com, so we're going with [Pilot](https://pilot.co).
 
 ### Lessons learned
 
 -
+- Debian packaging isn't as intimidating as it first seems
 
 ### Goals for next month
 
