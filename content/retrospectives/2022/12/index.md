@@ -64,7 +64,7 @@ TinyPilot hit another all-time high in sales, reaching $112k in total revenue. T
 
 The jump was largely due to TinyPilot receiving a positive mention on [Linus Tech Tips](https://youtu.be/232opnNPGNo), one of the most popular YouTube channels for homelab enthusiasts. Even though the review was primarily about our competitor's product, the channel has so many subscribers that TinyPilot saw a sizable surge in orders for the following two weeks.
 
-I'm happy to see three-month trailing profit staying comfortably in the positive, even amid atypically high costs. TinyPilot's is paying a premium to 3D-print cases [beyond our normal capacity](/retrospectives/2022/11/#the-race-for-more-cases), but our costs should drop significantly in January when we switch to metal cases.
+I'm happy to see three-month trailing profit staying comfortably in the positive, even amid atypically high costs. TinyPilot is paying a premium to 3D-print cases [beyond our normal capacity](/retrospectives/2022/11/#the-race-for-more-cases), but our costs should drop significantly in January when we switch to metal cases.
 
 ## We don't have enough time to save ourselves time
 
@@ -74,11 +74,11 @@ The next week, we saw a spike in orders from the Linus Tech Tips video, so there
 
 The next time I met with the member of the fulfillment staff, I asked how much spare capacity we usually have for atypical tasks like this, and I was surprised to learn that it was roughly zero. The fulfillment team's short-term tasks of assembling devices, shipping out orders, and responding to suppport requests was enough to occupy all of their hours for the week.
 
-This is a familiar situation I've experienced in running TinyPilot, though usually the person with no short-term capacity is me.
+This is a familiar situation, though usually the person with no short-term capacity is me.
 
 For any workflow, there are usually some obvious ways to free up time. It could be automation, hiring additional people, moving to a managed service, etc. The catch is that there's a frictional cost to changing a workflow.
 
-For the past few months, I've been drawing [beautiful](/retrospectives/2022/10/#does-outsourcing-increase-or-decrease-complexity) [graphs](/retrospectives/2022/09/#remember-how-time-consuming-it-is) of time commitment for outsourcing and delegation. In that spirit, here's the amount of time I spend on a task before and after I hire somoene to take it over:
+For the past few months, I've been drawing [beautiful](/retrospectives/2022/10/#does-outsourcing-increase-or-decrease-complexity) [graphs](/retrospectives/2022/09/#remember-how-time-consuming-it-is) of time commitment for outsourcing and delegation. In that spirit, here's the amount of time I spend on a task before and after I hire someone to take it over:
 
 {{<img src="outsourcing-1.png" max-width="500px" has-border="true" alt="Graph showing time commitment increasing as I interview and onboard someone, then slowly decrease as they take over the task.">}}
 
@@ -88,7 +88,7 @@ In practice, there are only so many hours in the day. What happens if I take int
 
 {{<img src="outsourcing-2.png" max-width="500px" has-border="true" alt="Graph showing time commitment taking into account a ceiling on hours per day, where I'm unable to hire someone because I don't have enough spare capacity.">}}
 
-Whoops, now I can't reach the lower time state because I can't pay the frictional costs of hiring and training someone. I don't have enough time to save myself time.
+Whoops, now I can't reach the post-hiring state because I don't have available short-term capacity to hire and train someone. I don't have enough time to save myself time.
 
 ## Using long-term tasks as an early warning for exhaustion
 
@@ -107,9 +107,9 @@ Everyone at TinyPilot has a mix of short- and long-term tasks:
 
 Long-term tasks can act as the canary in the coal mine. When a team's progress on long-term tasks slows over time, they're likely approaching their maximum capacity. At that point, I should find ways to reduce load by decreasing responsibilities or adding capacity.
 
-There are two challenges with using long-term tasks as a warning sign. The first is that the team who's most frequently ignoring their long-term tasks is the founder team, by which I mean me. So when I'm overloaded, I won't notice a slowdown on other teams' long-term tasks. Even if I do, I don't have time to do anything about it. I suppose the solution is to be more vigilant about the number of projects I take on so I can leave spare capacity for switching costs.
+There are two challenges with using long-term tasks as a warning sign. The first is that the team who's most frequently ignoring their long-term tasks is the founder team, by which I mean me. When I'm overloaded, I won't notice a slowdown on other teams' long-term tasks. Even if I do, I don't have time to do anything about it. I suppose the solution is to be more vigilant about the number of projects I take on so I can leave spare capacity for switching costs.
 
-The other problem is that the fulfillment team has the least obvious set of long-term tasks. Our manufacturing and fulfillment processes aren't the kind of workflows you can improve every week. But as we shift fulfillment and manufacturing to third-party vendors, the fulfillment team's responsibilities will shift to customer support. Customer support has a more natural balance between the short-term work of answering support requests and the long-term tasks of refining our internal playbooks for common requests.
+The other problem is that the fulfillment team has the least obvious set of long-term tasks. Our manufacturing and fulfillment processes aren't the kind of workflows you can improve every week. But as we shift fulfillment and manufacturing to third-party vendors, the fulfillment team's responsibilities will shift to customer support. Customer support has a more natural balance between the short-term work of answering support requests and the long-term work of refining our internal playbooks.
 
 ## Getting out of the Ansible hole
 
@@ -117,13 +117,13 @@ The other problem is that the fulfillment team has the least obvious set of long
 
 When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi and configure the OS functionality TinyPilot needed. Ansible was a good fit since remote system configuration is Ansible's bread and butter.
 
-When I published TinyPilot, the easiest way for me to let users install it was to just replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
+When I published TinyPilot, the easiest way for me to let users install it was to replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
 
 At the time, I knew that the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about creating Debian packages, and they seemed like a lot of work. Would I have to set up my own apt repository? Do I have to manage repo keys? TinyPilot depended on nginx, so how was I supposed to configure nginx from my own package?
 
 Two and a half years later, the dev team is paying the price for my choice of Ansible. As TinyPilot has developed more features, our Ansible configuration has become painfully complex. If the installer was a pure shell script or Debian package, installation would probably take 10-20 seconds. Instead, all the overhead from Ansible drives the install and update time to six minutes or more.
 
-Beyond the impact on the end-user, Ansible has a tendency to swallow up development resources. Ansible code is slow and tedious to debug, especially when dealing with operating systems and architectures that aren't available in our continuous integration environment. Minor changes frequently balloon to a week of dev time due to Ansible.
+Beyond the impact on the end-user, Ansible has a tendency to swallow up development resources. Ansible code is slow and tedious to debug, especially when dealing with operating systems and architectures that aren't available in our continuous integration environment. Minor changes frequently balloon to a week of dev time.
 
 In the last few months, the dev team has been exploring how we can port our Ansible code to a Debian package for TinyPilot. I'm happy to report that we now have [a foothold](https://github.com/tiny-pilot/tinypilot/tree/437adc28e4a956be13bc994d23d278b4ca7fd31b/debian-pkg). We've created a hybrid solution where TinyPilot's Ansible role installs the latest TinyPilot Debian package. This makes it easier for us to chip away incrementally at our Ansible code and move it to our Debian package.
 
@@ -149,9 +149,9 @@ Vincent was even kind enough to [hop on a video call with me](https://m.mtlynch.
 
 ### [ScreenJournal](https://github.com/mtlynch/screenjournal)
 
-I watch a lot of TV shows and movies, and I enjoy making recommendations to friends. But I often forget what show or movie I wanted to recommend to someone.
+I watch a lot of TV shows and movies, and I enjoy making recommendations to friends, but I often forget what show or movie I wanted to recommend.
 
-I've checked around for apps that let you track movies and TV the same way you'd track reading with Goodreads, but nothing matched what I had in mind. I feel like my friends are exhausted with social apps that default to public, so I wanted something that lets you create a micro-community of friends who want to share recommendations. Less like Twitter, more like Discord.
+I've checked around for apps that let you track movies and TV the same way you'd track reading with Goodreads, but nothing matched what I had in mind. I feel like my friends are exhausted from social apps that default to public, so I wanted something that lets you create a small community of friends who want to share recommendations. Less like Twitter, more like Discord.
 
 I've started working on an app for sharing movie reviews with friends. It's called [ScreenJournal](https://github.com/mtlynch/screenjournal):
 
@@ -159,7 +159,7 @@ I've started working on an app for sharing movie reviews with friends. It's call
 
 It's not quite ready for prime time yet, as the reviews are private, and it only supports a single user. Right now, it's only effective as a private movie journal for one person, but the next featue on my list is support for multiple users.
 
-User management is notoriously hard to get right, so I've always avoided rolling my own implementation. For the past few years, I've used my friend [David Toth](https://twitter.com/jupiterunknown)'s [UserKit](https://userkit.io) service to manage users. UserKit has been a great experience, but it's not open to the public yet, which makes it impractical for other developers who want to run ScreenJournal on their own systems.
+User management is notoriously hard to get right, so I've always avoided rolling my own implementation. For the past few years, I've used my friend [David Toth](https://twitter.com/jupiterunknown)'s [UserKit](https://userkit.io) service to manage users. UserKit has been great, but it's not open to the public yet, which makes it impractical for other developers who want to run ScreenJournal on their servers.
 
 I looked for an open-source user management framework for Go, but the majority relied on OAuth from external services, which I didn't want. The rest were so heavyweight and complicated that I didn't want to bother.
 
@@ -179,10 +179,10 @@ Instead, I'm living dangerously and rolling my own user management. For session 
 - Long-term tasks are a good leading indicator of resource exhaustion.
   - If a team's progress on long-term tasks slows consistently, it's important to address it before you're out of breathing room to switch processes.
   - It's especially important for a founder to keep time for long-term tasks because they otherwise can't respond effectively to resource exhaustion on other teams.
-- Debian packaging isn't as intimidating as it first seems
+- Debian packaging isn't as intimidating as it first seems.
 
 ### Goals for next month
 
 - Fulfill the first order from our 3PL vendor.
 - Reach code complete on the next TinyPilot Pro release.
-- Prepare for a January release of TinyPilot Voyager 2a.
+- Prepare for a January launch of TinyPilot Voyager 2a.
