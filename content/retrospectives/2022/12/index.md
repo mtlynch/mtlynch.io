@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 29"
-date: 2022-12-06T09:16:53-05:00
+date: 2022-12-14T00:00:00-05:00
 description: Worry when long-term tasks stop.
 ---
 
@@ -42,7 +42,7 @@ The support engineering team is becoming more effective than I expected. In addi
 - **Result**: I've resisted the urge to initiate any new projects.
 - **Grade**: B
 
-Launching a new TinyPilot model always requires a lot of my time. I've been through this process enough to anticipate a lot of the work, but I also know that no matter how much planning I do, there will always be work I fail to anticipate. Even though there are days where I feel like I have some spare bandwidth, I'm trying to keep as much of my time free as possible.
+Launching a new TinyPilot model always requires a lot of my time. I've been through this process enough to anticipate a lot of the work, but I also know that no matter how much planning I do, there will always be work I fail to anticipate. Even though there are days I feel like I have some spare bandwidth, I'm trying to keep as much of my time free as possible.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -72,17 +72,17 @@ One of the goals for November was to begin transitioning fulfillment to a third-
 
 The next week, we saw a spike in orders from the Linus Tech Tips video, so there was no progress on researching the transition to 3PL. And then two weeks later, we were still catching up from the sales spike, so there was no additional progress.
 
-The next time I met with the member of the fulfillment staff, I asked how much spare capacity we usually have for atypical tasks like this, and I was surprised to learn that it was roughly zero. The fulfillment team's short-term tasks of assembling devices, shipping out orders, and responding to suppport requests was enough to occupy all of their hours for the week.
+The next time I met with the member of the fulfillment staff, I asked how much spare capacity we normally have for atypical tasks like this, and I was surprised to learn that it was roughly zero. The fulfillment team's short-term tasks of assembling devices, shipping out orders, and responding to support requests was enough to occupy all of their hours for the week.
 
-This is a familiar situation, though usually the person with no short-term capacity is me.
+This is a familiar situation, though usually, the person with no short-term capacity is me.
 
-For any workflow, there are usually some obvious ways to free up time. It could be automation, hiring additional people, moving to a managed service, etc. The catch is that there's a frictional cost to changing a workflow.
+For any workflow, there are generally obvious ways to free up time. It could be automation, hiring additional people, moving to a managed service, etc. The catch is that there's a frictional cost to changing a workflow.
 
 For the past few months, I've been drawing [beautiful](/retrospectives/2022/10/#does-outsourcing-increase-or-decrease-complexity) [graphs](/retrospectives/2022/09/#remember-how-time-consuming-it-is) of time commitment for outsourcing and delegation. In that spirit, here's the amount of time I spend on a task before and after I hire someone to take it over:
 
 {{<img src="outsourcing-1.png" max-width="500px" has-border="true" alt="Graph showing time commitment increasing as I interview and onboard someone, then slowly decrease as they take over the task.">}}
 
-At the beginning, the task is time-consuming because I'm doing all the work myself. When I hire someone, I'm doing even more work because I still have to do the task myself in addition to the work of hiring and training a new person. I eventually reach a net savings when the new hire is fully trained, but that can take weeks or months depending on the task's complexity.
+At the beginning, the task is time-consuming because I'm doing all the work myself. When I hire someone, I'm doing even more work because I still have to do the task myself in addition to the work of hiring and training a new person. I eventually reach net savings when the new hire is fully trained, but that can take weeks or months, depending on the task's complexity.
 
 In practice, there are only so many hours in the day. What happens if I take into account the limits of my working hours?
 
@@ -94,7 +94,7 @@ Whoops, now I can't reach the post-hiring state because I don't have available s
 
 The delay in switching to a 3PL vendor made me realize I need a better early warning system for running out of spare capacity.
 
-My best idea is to be more conscientious about balacing everyone's short- and long-term tasks. For example, the support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and publish [help articles](https://tinypilotkvm.com/faq) or investigate deeper bugfixes.
+My best idea is to be more conscientious about balancing everyone's short- and long-term tasks. For example, the support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and publish [help articles](https://tinypilotkvm.com/faq) or investigate deeper bugfixes.
 
 Everyone at TinyPilot has a mix of short- and long-term tasks:
 
@@ -136,7 +136,7 @@ Here are the things I wish I'd known about Debian when I started work on TinyPil
 - If your package needs to configure another package, the typical way to do it is by adding a file to a configuration directory rather than tinkering with files the other package owns.
   - For example, a TinyPilot Debian package could configure nginx by adding a file to the `/etc/nginx/sites-enabled/` directory.
 
-The hardest part of learning Debian was finding useful information amid all the noise. A lot of the resources basically say, "Just read [the 9,000 page Debian maintainer's guide](https://www.debian.org/doc/manuals/debmake-doc/), but ignore the parts that are out of date."
+The hardest part of learning Debian was finding useful information amid all the noise. A lot of the resources basically say, "Just read [the 9,000-page Debian maintainer's guide](https://www.debian.org/doc/manuals/debmake-doc/), but ignore the parts that are out of date."
 
 The guides I found most helpful were:
 
@@ -149,7 +149,7 @@ Vincent was even kind enough to [hop on a video call with me](https://m.mtlynch.
 
 ### [ScreenJournal](https://github.com/mtlynch/screenjournal)
 
-I watch a lot of TV shows and movies, and I enjoy making recommendations to friends, but I often forget what show or movie I wanted to recommend.
+I watch a lot of TV shows and movies, and I enjoy making recommendations to friends, but I often forget what show or movie I want to recommend.
 
 I've checked around for apps that let you track movies and TV the same way you'd track reading with Goodreads, but nothing matched what I had in mind. I feel like my friends are exhausted from social apps that default to public, so I wanted something that lets you create a small community of friends who want to share recommendations. Less like Twitter, more like Discord.
 
@@ -157,7 +157,7 @@ I've started working on an app for sharing movie reviews with friends. It's call
 
 {{<img src="screenjournal.png" max-width="800px" has-border="true" caption="[ScreenJournal](https://github.com/mtlynch/screenjournal) is like Goodreads but for couch potatoes." alt="Screenshot of my movie reviews on ScreenJournal">}}
 
-It's not quite ready for prime time yet, as the reviews are private, and it only supports a single user. Right now, it's only effective as a private movie journal for one person, but the next featue on my list is support for multiple users.
+It's not quite ready for prime time yet, as the reviews are private, and it only supports a single user. Right now, it's only effective as a private movie journal for one person, but the next feature on my list is support for multiple users.
 
 User management is notoriously hard to get right, so I've always avoided rolling my own implementation. For the past few years, I've used my friend [David Toth](https://twitter.com/jupiterunknown)'s [UserKit](https://userkit.io) service to manage users. UserKit has been great, but it's not open to the public yet, which makes it impractical for other developers who want to run ScreenJournal on their servers.
 
