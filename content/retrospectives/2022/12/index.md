@@ -74,21 +74,27 @@ The next week, we saw a spike in orders from the Linus Tech Tips video, so there
 
 The next time I met with the member of the fulfillment staff, I asked how much spare capacity we usually have for atypical tasks like this, and I was surprised to learn that it was roughly zero. The fulfillment team's short-term tasks of assembling devices, shipping out orders, and responding to suppport requests was enough to occupy all of their hours for the week.
 
-This is a familiar situation I've experienced in running TinyPilot, though usually the person with no time is me.
+This is a familiar situation I've experienced in running TinyPilot, though usually I'm the person with no short-term availability.
 
 For any workflow, there are usually some obvious ways to free up time. It could be automation, hiring additional people, moving to a managed service, etc. The catch is that workflow changes have a frictional cost themselves.
 
-Here's a graph I've drawn before. This is the amount of time I spend on a task before and after I hire somoene to take it over:
+For the past few months, I've been drawing [beautiful](/retrospectives/2022/10/#does-outsourcing-increase-or-decrease-complexity) [graphs](/retrospectives/2022/09/#remember-how-time-consuming-it-is) of time commitment for outsourcing and delegation. In that spirit, here's the amount of time I spend on a task before and after I hire somoene to take it over:
 
-At the beginning, the task is time-consuming because I'm doing all the work myself. But then when I hire someone, I'm doing even more work because I still have to do the task myself in addition to the work of hiring and training a new person. I eventually reach a net time-savings when the new person is fully trained, but it takes weeks or months depending on the task's complexity.
+{{<img src="outsourcing-1.png" max-width="500px" has-border="true" alt="Graph showing time commitment increasing as I interview and onboard someone, then slowly decrease as they take over the task.">}}
 
-The problem is that there are only so many hours in the day. When your day-to-day tasks leave you with no spare capacity, then you're stuck. You can't switch worflows because you can't afford the frictional costs &mdash; you don't have enough time to save yourself time.
+At the beginning, the task is time-consuming because I'm doing all the work myself. But then when I hire someone, I'm doing even more work because I still have to do the task myself in addition to the work of hiring and training a new person. I eventually reach a net savings when the new person is fully trained, but that can take weeks or months depending on the task's complexity.
+
+In practice, there are only so many hours in the day. What happens if I take into account the limits of my working hours?
+
+{{<img src="outsourcing-2.png" max-width="500px" has-border="true" alt="Graph showing time commitment taking into account a ceiling on hours per day, where I'm unable to hire someone because I don't have enough spare capacity.">}}
+
+When your day-to-day tasks leave you with no spare capacity, then you're stuck. You can't switch worflows because you can't afford the frictional costs &mdash; you don't have enough time to save yourself time.
 
 ## Using long-term tasks as an early warning for exhaustion
 
 The delay in switching to a 3PL vendor made me realize I need a better early warning system for running out of spare capacity.
 
-My best idea is to be more conscientious about making sure everyone has a mix of short-term tasks and long-term tasks. For example, the support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and publish [help articles](https://tinypilotkvm.com/faq) or investigate deeper fixes.
+My best idea is to be more conscientious about making sure everyone has a mix of short-term tasks and long-term tasks. For example, the support engineers' urgent responsibility is responding to customer support requests on the TinyPilot help forum and on our CRM platform. Support volume ebbs and flows, so when the support engineers have spare time, they look for recurring patterns in support requests and publish [help articles](https://tinypilotkvm.com/faq) or investigate deeper bugfixes.
 
 Everyone at TinyPilot has a mix of short-term tasks and long-term tasks:
 
@@ -99,38 +105,40 @@ Everyone at TinyPilot has a mix of short-term tasks and long-term tasks:
 | Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 
-Long-term tasks can act as the canary in the coal mine. When a team stops making progress on long-term tasks, they're likely approaching their maximum capacity. At that point, I should find ways to reduce load by decreasing responsibilities or adding capacity by hiring, outsourcing, or purchasing better tools.
+Long-term tasks can act as the canary in the coal mine. When a team's progress on long-term tasks slows over time, they're likely approaching their maximum capacity. At that point, I should find ways to reduce load by decreasing responsibilities or adding capacity by hiring, outsourcing, or purchasing better tools.
 
 There are two problems with this. The first is that the team who's most frequently ignoring their long-term tasks is the founder team, by which I mean me. So when I'm overloaded, I won't notice a slowdown on long-term tasks. Even if I do, I don't have time to do anything about it. I suppose the solution is to be more vigilant about the number of projects I take on so I can leave spare capacity for switching costs.
 
-The other problem is that the fulfillment team has the least obvious set of long-term tasks. With the support engineers, there's a natural virtuous cycle. Nobody likes answering the same question over and over, so the sooner they write a support article, the sooner they can stop answering the same question.
+The other problem is that the fulfillment team has the least obvious set of long-term tasks.
 
-With the fulfillment staff, there's not as clear pairing between short- and long-term tasks. The fulfillment process isn't the kind of thing you can improve every week. But as we shift fulfillment and manufacturing to third-party vendors, the fulfillment team's responsibilities will shift to customer support. Customer support has a more natural balance between the short-term work of answering support requests and the long-term tasks of refining our internal playbooks for handling common requests.
+The support engineers, on the other hand, have the clearest balance between short- and long-term work. Nobody likes answering the same question over and over, so the sooner the support engineers write a support article, the sooner they can stop answering the same question. It's a virtuous cycle.
+
+Oru manufacturing and fulfillment processes aren't the kind of workflows you can improve every week. But as we shift fulfillment and manufacturing to third-party vendors, the fulfillment team's responsibilities will shift to customer support. Customer support has a more natural balance between the short-term work of answering support requests and the long-term tasks of refining our internal playbooks for handling common requests.
 
 ## Getting out of the Ansible hole
 
 [Ansible](https://github.com/ansible/ansible) is a tool for configuring servers automatically. I've been using it for seven years, and it's how I manage all the [virtual machines in my homelab](/building-a-vm-homelab/).
 
-When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi and configure the OS functionality TinyPilot needed. Ansible was a good fit since remote system configuration is Ansible's job.
+When I started work on TinyPilot back in 2020, I needed a way to deploy code onto my Raspberry Pi and configure the OS functionality TinyPilot needed. Ansible was a good fit since remote system configuration is Ansible's bread and butter.
 
 When I published TinyPilot, the easiest way to let users install it was to just replicate the workflow I used during development. I created [a simple install script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) that bootstrapped an Ansible environment and then installed TinyPilot via Ansible.
 
 At the time, I knew that the more conventional installation would have been to use Debian packages. The problem was that I didn't know anything about Debian packages, and they seemed like a lot of work. Would I have to set up my own apt repository? Do I have to manage repo keys? TinyPilot depended on nginx, so how was I supposed to configure nginx from my own package?
 
-Two and a half years later, the dev team is paying the price for my choice of Ansible. As TinyPilot has developed more features, our Ansible configuration has become complex. If the installer was a pure shell script or Debian package, installation would probably take 10-20 seconds. Instead, all the overhead from Ansible drives the install and update time to six minutes or more.
+Two and a half years later, the dev team is paying the price for my choice of Ansible. As TinyPilot has developed more features, our Ansible configuration has become painfully complex. If the installer was a pure shell script or Debian package, installation would probably take 10-20 seconds. Instead, all the overhead from Ansible drives the install and update time to six minutes or more.
 
-Beyond the impact on the end-user, Ansible has a tendency to swallow up development resources. Ansible code is slow to test or debug, especially because we can't replicate a realistic Raspberry Pi device environment in our continuous integration environment.
+Beyond the impact on the end-user, Ansible has a tendency to swallow up development resources. Ansible code is slow to test or debug, especially because we can't replicate a realistic Raspberry Pi device environment in our continuous integration environment. We frequently run into minor changes that balloon to a week of dev time due to Ansible.
 
 In the last few months, the dev team has been exploring how we can port our Ansible code to a Debian package for TinyPilot. I'm happy to report that we now have [a foothold](https://github.com/tiny-pilot/tinypilot/tree/437adc28e4a956be13bc994d23d278b4ca7fd31b/debian-pkg). We've created a hybrid solution where TinyPilot's Ansible role installs the latest TinyPilot Debian package. This makes it easier for us to chip away incrementally at our Ansible code and move it to our Debian package.
 
 Here are the things I wish I'd known about Debian when I started work on TinyPilot:
 
 - You can create and distribute standalone Debian packages without running your own apt repository.
-- Creating a simple Debian package takes five minutes if you're following the right tutorial.
+- Creating a simple Debian package takes five minutes if you're following [the right tutorial](https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/).
 - You can [use Docker QEMU](https://github.com/tiny-pilot/janus-debian/blob/e29efc6ee3585cc01a22d1263863ed4f57325080/.circleci/config.yml#L15L63) to build ARM Debian packages from x64 systems.
 - If your code is in a portable language like Python, you can skip QEMU and build an architecture-independent Debian package.
-- If your package needs to configure another package, the typical way to do it is by adding a file to a configuration directory rather than tinkering with another package's existing file.
-  - For example, a TinyPilot Debian package could configure nginx by adding a file to `/etc/nginx/sites-enabled`.
+- If your package needs to configure another package, the typical way to do it is by adding a file to a configuration directory rather than tinkering with files the other package owns.
+  - For example, a TinyPilot Debian package could configure nginx by adding a file to the `/etc/nginx/sites-enabled/` directory.
 
 The hardest part of learning Debian was finding useful information amid all the noise. A lot of the resources basically say, "Just read [the 9,000 page Debian maintainer's guide](https://www.debian.org/doc/manuals/debmake-doc/), but ignore the parts that are out of date."
 
@@ -155,7 +163,7 @@ I've started working on an app for sharing movie reviews with friends. It's call
 
 It's not quite ready for prime time yet, as the reviews are private, but it only supports a single admin user. Right now, it's only effective as a private movie journal for one person, but the next featue on my list is support for multiple users.
 
-User management is notoriously hard to get right, so I've always avoided rolling my own implementation. For the past few years, I've used my friend [David Toth](https://twitter.com/jupiterunknown)'s [UserKit](https://userkit.io) service to manage users. UserKit isn't yet open to the public, so depending on UserKit prevents others from self-hosting my tool.
+User management is notoriously hard to get right, so I've always avoided rolling my own implementation. For the past few years, I've used my friend [David Toth](https://twitter.com/jupiterunknown)'s [UserKit](https://userkit.io) service to manage users. UserKit has been a great experience, but it's not open to the public yet, which makes it impractical for other developers who want to run ScreenJournal on their own systems.
 
 I looked for an open-source user management framework for Go, but the majority relied on OAuth from external services, which I didn't want. The rest were so heavyweight and complicated that I didn't want to bother.
 
@@ -173,11 +181,12 @@ Instead, I'm living dangerously and rolling my own user management. For session 
 ### Lessons learned
 
 - Long-term tasks are a good leading indicator of resource exhaustion.
-  - If a team stops making progress on long-term tasks, it's important.
+  - If a team's progress on long-term tasks slows consistently, it's important to address it before you're out of breathing room to switch processes.
   - It's especially important for a founder to keep time for long-term tasks because they otherwise can't respond effectively to resource exhaustion on other teams.
 - Debian packaging isn't as intimidating as it first seems
 
 ### Goals for next month
 
-- Manufacture the first production batch of metal TinyPilot Voyager cases.
+- Fulfill the first order from our 3PL vendor.
 - Reach code complete on the next TinyPilot Pro release.
+- Prepare for a January release of TinyPilot Voyager 2a.
