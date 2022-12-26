@@ -39,52 +39,23 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 
 ## Key Takeaways
 
-### Chat app
+### [Signal channels](https://medium.com/@matryer/golang-advent-calendar-day-two-starting-and-stopping-things-with-a-signal-channel-f5048161018)
 
-- Cool demo of goroutnes and Weh sockets
+- Signal channels are an idiomatic way of implementing thread-safe events in Go.
+- Signal channels are just a `chan` of of type `struct{}`
 
-### Tracer
-
-- Kind of boring.
-- It's meant to teach TDD, but I don't think it's a great intro to TDD
-
-### Auth
-
-- Good demo, explanation of chaining HTTP Handlers
-
-### Avatar Upload
-
-- Has a searity vulnerability
-- Allows arbitrary file overwrites
-- Gives [egregiously bad advice](https://github.com/matryer/goblueprints/issues/78) about Linux file permissions.
-
-### Twitter votes
-
-- This chapter alone is worth the price of the best book.
-- Cool example of combining horizontally scalable services.
-  - Uses NSQ to publish messages.
-  - Uses the Twitter streaming API to read input from Twitter.
-  - Uses MongoDB to store data.
-- Horizontally scaling: Scaling a system by adding nodes to improve reliability or performance
-- Vertically scaling: Scaling a system by increasing the resources of individual nodes (e.g., adding RAM or CPU)
-- Very cool to see a system that's highly scalable, yet made of simple parts.
-- Interesting exp example of using a custom transport function in an HTTP connection to customize low-level behavior of the underlying TCP connection.
-
-- Signal channels
-  - `chan` of of type `struct{}`
   - Signal channels don't pass any data &mdash; they just signal that an event has occurred.
   - `startTwitterStream` is a good example of a function that uses signal channels to (1) allow clients to interrupt and (2) to indicate when its work is complete.
-- Gracefully terminating
 
-  - This app shows how to override the default signal handler to do custom cleanup when your app receives `SIGINT` or `SIGKILL` signals from the operating system.
+### Horizontal vs. vertical scaling
 
-- `time.Ticker`
-  - Good for periodic tasks
+- Horizontally scaling: Scaling a system by adding nodes to improve reliability or performance
+- Vertically scaling: Scaling a system by increasing the resources of individual nodes (e.g., adding RAM or CPU)
 
-Ch. 7
+### Using `time.Ticker`
 
-- Wrapping handler function with API Key
-- Good example of getting data about an HTTP request and making it available to subsequent handler functions.
+- Good for periodic tasks
+
 - It's useful to write HTTP helper functions for common HTTP handler parts (e.g. "respond with an error", "respond with data encoded as JSON")
 
 - Protecting internal details
@@ -115,3 +86,27 @@ Ch. 7
 ### Response patterns
 
 - "Response helpers"
+
+### Chat app
+
+- Cool demo of goroutnes and websockets
+
+### Auth
+
+- Good demo, explanation of chaining HTTP Handlers
+
+### Twitter votes
+
+- This chapter alone is worth the price of the best book.
+- Cool example of combining horizontally scalable services.
+  - Uses NSQ to publish messages.
+  - Uses the Twitter streaming API to read input from Twitter.
+  - Uses MongoDB to store data.
+- Very cool to see a system that's highly scalable, yet made of simple parts.
+- Interesting exp example of using a custom transport function in an HTTP connection to customize low-level behavior of the underlying TCP connection.
+- Good example of how to override the default signal handler to do custom cleanup [when your app receives `SIGINT` or `SIGTERM` signals](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter5/counter/main.go#L76L89) from the operating system.
+
+### Ch. 7
+
+- Wrapping handler function with API Key
+- Good example of getting data about an HTTP request and making it available to subsequent handler functions.
