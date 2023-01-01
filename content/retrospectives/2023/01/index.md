@@ -48,7 +48,7 @@ TODO
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-## Losing $XXk in a single email
+## Losing $250k in a single email
 
 TinyPilot runs on top of the Raspberry Pi 4B, a small, inexpensive single-board computer. There's been a massive shortage of Raspberry Pis for the past year. It's been nearly impossible for consumers to buy them.
 
@@ -64,9 +64,17 @@ That sounded great! Even in mid-2020, I was able to buy 50+ Raspberry Pis at a t
 
 Uh oh. I'm a commercial customer. If they're deprioritizing commercial customers, that means less for TinyPilot. But still, I figured we'd be happy with a smaller slice of a larger pie.
 
-I had emailed TinyPilot's sales rep at Raspberry Pi in mid-November asking to increase our allocation. She told me that they'd be deciding 2023 allocation in mid-December, so she'd let me know whether they'd take my new orders then. By December 20th, I still hadn't heard anything
+I had emailed TinyPilot's sales rep at Raspberry Pi in mid-November asking to increase our allocation. She told me that they'd be deciding 2023 allocation in mid-December, so she'd let me know whether they'd take my new orders then. By December 20th, I still hadn't heard anything, so I followed up. The sales rep apologized for the delay but said the earliest they can offer a new order is August 28, 2023.
 
-In November, I asked the Raspberry Pi Foundation if we could increase
+Actually, she said "28.08.2023." I re-read it several times desperately hoping for some interpretation of the date that made it less than eight months of waiting for a new order.
+
+We still have standing orders through May 2023, but I was hoping to increase them. And we'll have to last three months with no new Pi shipments.
+
+For the past three months, we'd been selling an average of 220 Voyager 2s per month. I expected to grow sales by about 35% over the next eight months, which would mean selling about 250 Voyager 2s per month. Given our current supply of Pis, we're limited to selling about 140 Voyager 2s per month. What would have been about $875k in revenue is now limited to about $425k. So when I got that email, I realized I'd just lost about $450k.
+
+To be fair, it's silly to whine about how much money I could have made had I received more allocation from Raspberry Pi. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece.
+
+{{<img src="pi-amazon.png" has-border="true" max-width="600px">}}
 
 ## Topic 2
 
