@@ -16,6 +16,7 @@ I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the w
 - The variety of example apps did a good job of demonstrating features of Go in realistic scenarios.
 - Features wonderfully elegant Go code that taught me several new idiomatic language patterns.
 - Uses the Go standard library in interesting ways.
+- Finally made HTTP contexts click for me when I'd never understood them in the past.
 
 ## What I Disliked
 
@@ -40,7 +41,14 @@ I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the w
 
 ## Key Takeaways
 
-### [Signal channels](https://medium.com/@matryer/golang-advent-calendar-day-two-starting-and-stopping-things-with-a-signal-channel-f5048161018)
+### Horizontal vs. vertical scaling
+
+- Horizontally scaling: Scaling a system by adding nodes to improve reliability or performance
+- Vertically scaling: Scaling a system by increasing the resources of individual nodes (e.g., adding RAM or CPU)
+
+### Go language and standard library tips
+
+#### [Signal channels](https://medium.com/@matryer/golang-advent-calendar-day-two-starting-and-stopping-things-with-a-signal-channel-f5048161018)
 
 - Signal channels are an idiomatic way of implementing thread-safe events in Go.
 - Signal channels are just a `chan` of of type `struct{}`
@@ -49,20 +57,37 @@ I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the w
     1. Allow clients to interrupt the server.
     1. Indicate when the background process has completed its work.
 
-### Horizontal vs. vertical scaling
+#### [`time.Ticker`](https://pkg.go.dev/time#Ticker)
 
-- Horizontally scaling: Scaling a system by adding nodes to improve reliability or performance
-- Vertically scaling: Scaling a system by increasing the resources of individual nodes (e.g., adding RAM or CPU)
+I'd never seen the `time.Ticker` type before, and I had accidentally reimplemented [my own version](https://github.com/mtlynch/picoshare/pull/186/files).
 
-### Using `time.Ticker`
+`time.Ticker` is a simple way of executing code at timed intervals:
 
-- Good for periodic tasks
+```golang
+for range time.NewTicker(5 * time.Minute).C {
+  // Execute this code every five minutes.
+}
+```
+
+I use `time.Ticker` in [PicoShare](https://github.com/mtlynch/picoshare) to schedule [periodic database maintenance](https://github.com/mtlynch/picoshare/blob/3c10b89208912930d820cdfbd983ad99e8f9224b/garbagecollect/schedule.go#L22L27).
+
+#### [`flags.Duration`](https://pkg.go.dev/flag#Duration) is impressively flexible
+
+- `flags.Duration` natively supports different time units like `55s` or `10m`.
+
+### Separating test packages from production
+
+- Writing tests in a separate package from your production code yields better tests.
+  - e.g., write tests for package `foo` in a package called `foo_test`
+  - Normally, Go's tools prohibit you from having multiple packages in the same folder, but they make an exception for tests.
+- The separate `_test` package ensures that tests only access the production package's public members.
+  - This encourages the tests to verify client-facing behavior rather than internal implementation details.
 
 ### HTTP helper functions
 
 #### Mat Ryer's HTTP encoding helper pattern
 
-Ryer advocates abstracting away the encoding format so that the HTTP handler is agnostic to whether the exchange format is JSON, protobuf, etc. He proposes `decode` and `respond` helper functions like this so that your route handlers look like this:
+Ryer advocates abstracting away the encoding format so that HTTP handlers are agnostic to whether the exchange format is JSON, protobuf, etc. He proposes `decode` and `respond` helper functions so that your route handlers look like this:
 
 ```golang
 func handleFooPost(w http.ResponseWriter, r *http.Request) {
@@ -125,9 +150,13 @@ func respond(ctx context.Context, w http.ResponseWriter, r *http.Request, v inte
 
 #### How I've adapted Ryer's encoding helper pattern
 
-I like the helper method idea, but I think it's a little too abstract. How often do you rewrite your interface to use a different encoding scheme? Plus, you're leaking abstraction anyway because the client has to specify JSON tags in the struct even though they're not supposed to know anything about JSON.
+I like Ryer's helper method idea, but I think it pays too high a cost of abstraction without much benefit. How often do you rewrite your web app to use a different encoding scheme?
 
-Instead, I just use a function called `respondJSON` like this:
+Plus, you're leaking abstraction anyway because the route handler has to specify JSON tags in the struct even though they're not supposed to know anything about JSON.
+
+I also don't like writing error messages in JSON because most components in the Go HTTP stack fail with a plaintext error, so JSON errors mean the client has to look for an error as both well-formed JSON and as plaintext. It's easier to just always send error messages as plaintext.
+
+For successful JSON responses, I use a function called `respondJSON` like this:
 
 ```golang
 func respondJSON(w http.ResponseWriter, data interface{}) {
@@ -162,21 +191,149 @@ func handleFooPost(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-- It's useful to write HTTP helper functions for common HTTP handler parts (e.g. "respond with an error", "respond with data encoded as JSON")
-- Protecting internal details
+I end up repeating that `json.NewDecoder(r.Body).Decode(&payload)` snippet, but it's just one line, so it's not a big deal.
 
-  - "Public views of Go struct"
-  - Interesting technique to prevent you from accidentally exposing internal fields of a struct.
-    - I do explicit conversion instead, too easy to accidenelly publish wrong thing.
+### Hiding internal struct details from clients
 
-- Separating test packages
-- It's good to test go packages from a separate package.
-  - e.g., write tests for package `foo` in a package called `foo_test`
-- Testing from an external package ensures that the test package only accesses the production package's public members.
+One web development pitfall that affects all languages is accidental data exposure. Suppose you have an internal struct for representing data about users:
 
-  - Prevents you from testing implementation details.
+```golang
+type User struct {
+  Username string `json:"username"`
+  DisplayName string `json:"displayName"`
+}
+```
 
-- `flags.Duration` natively supports different time units like `55s` or `10m`.
+Now, you realize you want to expose a JSON API like `/user?id=1234`, so you write something like this:
+
+```golang
+func handleUserGet(w http.ResponseWriter, r *http.Request) {
+  user, err := loadUser(r.URL.Query().Get("id"))
+  if err != nil {
+    http.Error(w, "Failed to load user", http.StatusInternalServerError)
+    return
+  }
+
+  respondJSON(w, user)
+}
+```
+
+When users query the `/user` route, they'll get back public information about a user:
+
+```bash
+$ curl https://example.com/user?id=1234
+```
+
+```json
+{
+  "username": "alice123",
+  "displayName": "Alice"
+}
+```
+
+So far, so good. Except a month later, you realize that you want to adjust your internal struct to pass around some more data, like the user's email address and password hash:
+
+```golang
+type User struct {
+  Username string `json:"username"`
+  DisplayName string `json:"displayName"`
+  Email string `json:"email"`               // Add these for
+  PasswordHash string `json:"passwordHash"` // internal operations.
+}
+```
+
+Even though you haven't touched `handleUserGet`, now when users call the `/user` route, they get a lot of new information:
+
+```bash
+$ curl https://example.com/users?id=1234
+```
+
+```json
+{
+  "username": "alice123",
+  "displayName": "Alice",
+  "email": "alice.albertson@contoso.com",
+  "passwordHash": "$2a$10$J5zqqeQgH80ScyOSeCNCD.1V3ApJ1ULYMwMEhOjG6j4SM1mqL84YO"
+}
+```
+
+Whoops! You just leaked everyone's email addresses and password hashes.
+
+When I used to do penetration testing, I found several teams making this mistake in the real world. It's a subtle bug because from the developer's perspective, everything worked as intended when they implemented `handlerUserGet`. When they add fields to the `User` struct, they're not touching `handleUsersGet`, so they won't notice the exposure unless they routinely check their applicaiton's raw HTTP traffic.
+
+I'm paranoid about making this class of mistake in my apps, so I'm always curious how other people handle this.
+
+#### Ryer's `Public` method pattern
+
+Ryer proposes solving the above problem by [adding a `Public` method](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter7/meander/public_test.go) to structs that have both an internal and external representation:
+
+```golang
+type obj struct {
+  value1 string
+  value2 string
+  value3 string
+}
+
+func (o *obj) Public() interface{} {
+  return map[string]interface{}{"one": o.value1, "three": o.value3}
+}
+
+func TestPublic(t *testing.T) {
+  is := is.New(t)
+
+  o := &obj{
+    value1: "value1",
+    value2: "value2",
+    value3: "value3",
+  }
+
+  v, ok := meander.Public(o).(map[string]interface{})
+  is.Equal(true, ok)
+  is.Equal(v["one"], "value1")
+  is.Nil(v["two"])
+  is.Equal(v["three"], "value3")
+}
+```
+
+I like Mat Ryer's technique, and I think it works well if you establish that convention in your codebase, but it's not my favorite solution to this problem.
+
+My main issue with Ryer's technique is that it violates encapsulation. I prefer my internal types to be as simple as possible and minimize assumptions about how clients will use them. Adding a `Public` method means that the type is anticipating how clients will use the data.
+
+#### My preferred detail-hiding method
+
+In my Go code, I prefer distinct structs for externally-facing data. Usually, I use anonymous structs that I declare inline so I don't even need another named type:
+
+```golang
+// my internal data
+type User struct {
+  Username string
+  DisplayName string
+  Email string
+  PasswordHash string
+}
+
+func handleUserGet(w http.ResponseWriter, r *http.Request) {
+  user, err := loadUser(r.URL.Query().Get("id"))
+  if err != nil {
+    http.Error(w, "Failed to load user", http.StatusInternalServerError)
+    return
+  }
+
+  respondJSON(w, struct {
+    Username string `json:"username"`
+    DisplayName string `json:"displayName"`
+  }{
+    Username: user.Username,
+    DisplayName: user.DisplayName,
+  })
+}
+```
+
+I prefer this method for a few reasons:
+
+- There's an additional layer of protection from accidental disclosure. Even if someone accidentally included an internal struct in an external type, nothing would print out because the internal struct fields have no JSON tags.
+- It makes the data you're returning more explicit.
+- It gives you tighter control over the data. With the `Public` pattern, all endpoints including the type have to return data in the same format, whereas with the above method, each endpoint decides which fields to expose and in what format.
 
 ### API Tip
 
