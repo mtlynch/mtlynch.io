@@ -5,7 +5,7 @@ rating: 8
 purchase_url: https://www.packtpub.com/product/go-programming-blueprints-second-edition/9781786468949
 ---
 
-The reading experience was hit or miss. Some chapters were fascinating and taught me valuable Go lessons, while others felt boring and got too bogged down in particular third-party libraries. Overall, I'd still recommend it to anyone who considers themselves a beginner or intermediate Go programmer.
+I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the way I program in Go. I found the book hit or miss. Some chapters were fascinating and taught me valuable Go lessons, while others felt boring and got too bogged down in particular third-party libraries. Overall, I'd still recommend it to anyone who considers themselves a beginner or intermediate Go programmer.
 
 <!--more-->
 
@@ -45,7 +45,9 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 - Signal channels are an idiomatic way of implementing thread-safe events in Go.
 - Signal channels are just a `chan` of of type `struct{}`
   - Signal channels don't pass any data &mdash; they just signal that an event has occurred.
-  - The [Twitter votes app](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter6/twittervotes/main.go) is a good example of using signal channels to (1) allow clients to interrupt the server and (2) to indicate when the background process has completed its work.
+  - The [Twitter votes app](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter6/twittervotes/main.go) is a good example of using signal channels to:
+    1. Allow clients to interrupt the server.
+    1. Indicate when the background process has completed its work.
 
 ### Horizontal vs. vertical scaling
 
@@ -56,8 +58,111 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 
 - Good for periodic tasks
 
-- It's useful to write HTTP helper functions for common HTTP handler parts (e.g. "respond with an error", "respond with data encoded as JSON")
+### HTTP helper functions
 
+#### Mat Ryer's HTTP encoding helper pattern
+
+Ryer advocates abstracting away the encoding format so that the HTTP handler is agnostic to whether the exchange format is JSON, protobuf, etc. He proposes `decode` and `respond` helper functions like this so that your route handlers look like this:
+
+```golang
+func handleFooPost(w http.ResponseWriter, r *http.Request) {
+  var payload struct {
+    Username string `json:"username"`
+    DisplayName string `json:"displayName"`
+  }
+  if err := decode(r, &payload); err != nil {
+    respondErr(ctx, w, r, err, http.StatusBadRequest)
+    return
+  }
+
+  // Do something with the request.
+
+  response := struct {
+      ID string `json:"id"`
+    }{
+      ID: "1234",
+    }
+  respond(ctx, w, r, response, http.StatusOK)
+}
+```
+
+And then `decode` and `respond` handle the JSON deserialization and serialization, respectively:
+
+```golang
+// decode parses JSON from an HTTP request body.
+func decode(r *http.Request, v interface{}) error {
+  err := json.NewDecoder(r.Body).Decode(v)
+  if err != nil {
+    return err
+  }
+  if valid, ok := v.(interface {
+    OK() error
+  }); ok {
+    err = valid.OK()
+    if err != nil {
+      return err
+    }
+  }
+  return nil
+}
+
+// respond serializes response data to JSON in the body of an HTTP request.
+func respond(ctx context.Context, w http.ResponseWriter, r *http.Request, v interface{}, code int) {
+  var buf bytes.Buffer
+  err := json.NewEncoder(&buf).Encode(v)
+  if err != nil {
+    respondErr(ctx, w, r, err, http.StatusInternalServerError)
+    return
+  }
+  w.Header().Set("Content-Type", "application/json; charset=utf-8")
+  w.WriteHeader(code)
+  _, err = buf.WriteTo(w)
+  if err != nil {
+    log.Errorf(ctx, "respond: %s", err)
+  }
+}
+```
+
+#### How I've adapted Ryer's encoding helper pattern
+
+I like the helper method idea, but I think it's a little too abstract. How often do you rewrite your interface to use a different encoding scheme? Plus, you're leaking abstraction anyway because the client has to specify JSON tags in the struct even though they're not supposed to know anything about JSON.
+
+Instead, I just use a function called `respondJSON` like this:
+
+```golang
+func respondJSON(w http.ResponseWriter, data interface{}) {
+  w.WriteHeader(http.StatusOK)
+  w.Header().Set("Content-Type", "application/json")
+  if err := json.NewEncoder(w).Encode(data); err != nil {
+    log.Fatalf("failed to encode JSON response: %v", err)
+  }
+}
+```
+
+And I just do the JSON decoding inline, so my `handleFooPost` would look like this:
+
+```golang
+func handleFooPost(w http.ResponseWriter, r *http.Request) {
+  var payload struct {
+    Username string `json:"username"`
+    DisplayName string `json:"displayName"`
+  }
+  if err := json.NewDecoder(r.Body).Decode(&payload); err != nil {
+    http.Error(w, "JSON is invalid", http.StatusBadRequest)
+    return
+  }
+
+  // Do something with the request.
+
+  respondJSON(w, struct {
+      ID string `json:"id"`
+    }{
+      ID: "1234",
+    })
+}
+```
+
+- It's useful to write HTTP helper functions for common HTTP handler parts (e.g. "respond with an error", "respond with data encoded as JSON")
 - Protecting internal details
 
   - "Public views of Go struct"
