@@ -20,8 +20,8 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 ## What I Disliked
 
 - Most of the examples focus on highly scalable applications rather than single-server Go applications that I typically write.
-- Overly dependent on heavy Google libraries (e.g., Maps, OAuth, gRPC, AppEngine).
-  - Often got bogged down in minutiae of a particular library rather than the Go-relevant parts of the solution.
+- The book felt overly dependent on heavy Google libraries (e.g., Google Maps, OAuth, gRPC, AppEngine).
+  - Many of the examples went deeply into the minutiae of a particular library rather than the Go-relevant parts of the solution.
 - Recommends several horribly insecure software practices:
   - Advises developers to [use `0777` as the default bitmask](https://github.com/matryer/goblueprints/issues/78) when they don't know what permissions to assign.
   - Fails to protect against directory traversal, leading to an arbitrary write vulnerability in an example application that can [gain remote code execution](https://github.com/matryer/goblueprints/issues/79)
@@ -29,13 +29,14 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 - Poor editing in the prose and error checking in the code.
   - There were a high number of careless grammar and code mistakes.
   - Users have [submitted fixes](https://github.com/matryer/goblueprints/pulls?q=is%3Aopen+is%3Apr), but they've been ignored for years.
-- Uses an extra JavaScript library (jQuery) in places where vanilla JavaScript would be work just as well or better.
-- Uses bash scripting poorly.
-- Code quality is inconsistent
+- Complicates examples with jQuery in places where vanilla JavaScript would be work just as well or better.
+- The bash script examples felt sloppy.
+- Code quality was inconsistent throughout the book.
   - Some examples are elegant and intuitive, while others feel like a first draft
 - There are two independent Github repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
-  - The author's seems to be the correct one.
+  - [The author's repo](https://github.com/matryer/goblueprints) seems to be the correct one.
 - There are instructions for running the examples on Windows, but they seem to be untested and feel like an afterthought.
+- Some of the examples no longer compile due to third-party dependencies that have disappeared.
 
 ## Key Takeaways
 
@@ -43,9 +44,8 @@ The reading experience was hit or miss. Some chapters were fascinating and taugh
 
 - Signal channels are an idiomatic way of implementing thread-safe events in Go.
 - Signal channels are just a `chan` of of type `struct{}`
-
   - Signal channels don't pass any data &mdash; they just signal that an event has occurred.
-  - `startTwitterStream` is a good example of a function that uses signal channels to (1) allow clients to interrupt and (2) to indicate when its work is complete.
+  - The [Twitter votes app](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter6/twittervotes/main.go) is a good example of using signal channels to (1) allow clients to interrupt the server and (2) to indicate when the background process has completed its work.
 
 ### Horizontal vs. vertical scaling
 
