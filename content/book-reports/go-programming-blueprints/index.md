@@ -5,7 +5,7 @@ rating: 8
 purchase_url: https://www.packtpub.com/product/go-programming-blueprints-second-edition/9781786468949
 ---
 
-I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the way I program in Go. I found the book hit or miss. Some chapters were fascinating and taught me valuable Go lessons, while others felt boring and got too bogged down in the minutiae of third-party libraries. Overall, I'd still recommend it to anyone who considers themselves a beginner or intermediate Go programmer.
+I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts have had a significant impact on the way I program in Go. I found the book hit or miss. Some chapters were fascinating and taught me valuable Go lessons, while others felt boring and got too bogged down in the minutiae of third-party libraries. Overall, I'd still recommend it to anyone who considers themselves a beginner or intermediate Go programmer.
 
 <!--more-->
 
