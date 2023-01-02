@@ -1,11 +1,11 @@
 ---
-title: "Go Programming Blueprints"
+title: "Go Programming Blueprints by Mat Ryer"
 date: 2022-12-26T00:00:00-04:00
 rating: 8
 purchase_url: https://www.packtpub.com/product/go-programming-blueprints-second-edition/9781786468949
 ---
 
-I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the way I program in Go. I found the book hit or miss. Some chapters were fascinating and taught me valuable Go lessons, while others felt boring and got too bogged down in particular third-party libraries. Overall, I'd still recommend it to anyone who considers themselves a beginner or intermediate Go programmer.
+I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the way I program in Go. I found the book hit or miss. Some chapters were fascinating and taught me valuable Go lessons, while others felt boring and got too bogged down in the minutiae of third-party libraries. Overall, I'd still recommend it to anyone who considers themselves a beginner or intermediate Go programmer.
 
 <!--more-->
 
@@ -17,6 +17,7 @@ I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the w
 - Features wonderfully elegant Go code that taught me several new idiomatic language patterns.
 - Uses the Go standard library in interesting ways.
 - Finally made HTTP contexts click for me when I'd never understood them in the past.
+- Available in DRM-free formats.
 
 ## What I Disliked
 
@@ -30,21 +31,16 @@ I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the w
 - Poor editing in the prose and error checking in the code.
   - There were a high number of careless grammar and code mistakes.
   - Users have [submitted fixes](https://github.com/matryer/goblueprints/pulls?q=is%3Aopen+is%3Apr), but they've been ignored for years.
-- Complicates examples with jQuery in places where vanilla JavaScript would be work just as well or better.
+- Complicates examples with jQuery in places where vanilla JavaScript would work just as well or better.
 - The bash script examples felt sloppy.
 - Code quality was inconsistent throughout the book.
   - Some examples are elegant and intuitive, while others feel like a first draft
 - There are two independent Github repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
   - [The author's repo](https://github.com/matryer/goblueprints) seems to be the correct one.
-- There are instructions for running the examples on Windows, but they seem to be untested and feel like an afterthought.
+- There are instructions for running the examples on Windows, but they feel like an untested afterthought.
 - Some of the examples no longer compile due to third-party dependencies that have disappeared.
 
 ## Key Takeaways
-
-### Horizontal vs. vertical scaling
-
-- Horizontally scaling: Scaling a system by adding nodes to improve reliability or performance
-- Vertically scaling: Scaling a system by increasing the resources of individual nodes (e.g., adding RAM or CPU)
 
 ### Go language and standard library tips
 
@@ -59,9 +55,7 @@ I'm a fan of Mat Ryer, and his blog posts have had a significant impact on the w
 
 #### [`time.Ticker`](https://pkg.go.dev/time#Ticker)
 
-I'd never seen the `time.Ticker` type before, and I had accidentally reimplemented [my own version](https://github.com/mtlynch/picoshare/pull/186/files).
-
-`time.Ticker` is a simple way of executing code at timed intervals:
+I'd never seen the `time.Ticker` type before, and I had accidentally reimplemented [my own version](https://github.com/mtlynch/picoshare/pull/186/files). It's a simple way of executing code at timed intervals:
 
 ```golang
 for range time.NewTicker(5 * time.Minute).C {
@@ -84,19 +78,190 @@ I use `time.Ticker` in [PicoShare](https://github.com/mtlynch/picoshare) to sche
 - The separate `_test` package ensures that tests only access the production package's public members.
   - This encourages the tests to verify client-facing behavior rather than internal implementation details.
 
-### Ordering function arguments
+### Put function args at the end of the paramter list
 
-- If you, API takes function arguments, put them at the end of the args list.
-  - It's difficult to read arguments that appear after function arguments.
-  - "When it comes to writing your own..."
+If your function takes function parameters, put them at the end of the parameter list. Otherwise, it's difficult for readers to track which argument is associated with the inner function and which is for the outer function.
+
+#### Bad argument ordering
+
+Suppose that you have a function `updateValue` that polls for changes to a value and updates the local copy periodically, so it needs to accept a `SetValFn`:
+
+```golang
+type SetValFn func(key, value string) bool
+```
+
+If the `SetValFn` parameter is the first argument, everything will look fine in the function definition:
+
+```golang
+func updateValue(setFn SetValFn, interval time.Duration) {
+	for range time.NewTicker(interval).C {
+		value := fetchValue()
+		setFn("somekey", value)
+	}
+}
+```
+
+But when it comes time to call `updateValue`, the callsite will be hard to read:
+
+```golang
+updateValue(func(key, value string) bool {
+  if err := DB.SetKey(key, value); err != nil {
+    return false
+  }
+  return true
+}, 5*time.Minute) // Which function call is this for?
+```
+
+The subtlety is that `5*time.Minute` is an argument to `updateValue` but it occurs after the whole inline function defintion of the `SetValFn`, so it's hard to notice the connection to `updateValue`.
+
+#### Better argument ordering
+
+A better rewrite of the example above is to just make sure the function argument is last in the list:
+
+```golang
+// Reorder arguments so that SetValFn is last
+func updateValue(interval time.Duration, setFn SetValFn) {
+```
+
+That way, at the callsite, it's more obvious that both arguments are for `updateValue`:
+
+```golang
+updateValue(5*time.Minute, func(key, value string) bool {
+  if err := DB.SetKey(key, value); err != nil {
+    return false
+  }
+  return true
+})
+```
+
+### Prioritize line of sight in code
+
+The book touches on the idea of "line of sight," but I think Ryer explains the concept better [on his blog](https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88).
+
+Code becomes hard to read if there's deep nesting of context and conditionals, and it's difficult to maintain context when branches of a conditional are far apart. Ryer advocates structuring code so that logic stays near the left edge of the screen.
+
+#### Poor line of sight
+
+When there's poor line of sight, logic is deeply nested and conditional blocks are large:
+
+```golang
+if something.OK() {
+  something.Lock()
+  defer something.Unlock()
+  err := something.Do()
+  if err == nil {
+    stop := StartTimer()
+    defer stop()
+    log.Println("working...")
+    doWork(something)
+    <-something.Done()
+    log.Println("finished")
+    return nil
+  } else {
+    return err
+  }
+} else {
+  return errors.New("something not ok")
+}
+```
+
+#### Good line of sight
+
+To improve line of sight, you can invert logic of conditionals to exit early on error and then keep the rest of the logic outside of a conditional:
+
+```golang
+if !something.OK() {  // flipped
+  return errors.New("something not ok")
+}
+something.Lock()
+defer something.Unlock()
+err := something.Do()
+if err != nil {       // flipped
+  return err
+}
+stop := StartTimer()
+defer stop()
+
+log.Println("working...")
+doWork(something)
+<-something.Done()
+log.Println("finished")
+return nil
+```
+
+### Using context in HTTP handlers
+
+I've been doing hobby Go web programming for five years, and I never understood the point of [`context.Context`](https://pkg.go.dev/context) in HTTP handlers until I read this book. [Chapter 6](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter6/api/main.go) provides a good explanation, but I'll try to summarize here.
+
+Suppose your web app requires users to supply an API key with every HTTP request. It can be a header or a URL query parameter or a cookie, but for simplicity, let's just say it's a query parameter. You expect users to call your API with a key like `/foo?key=abc123`. And you want to protect all of your endpoints by ensuring that requests have a correct API key.
+
+To accomplish this, you can create an HTTP middleware function. Middleware functions act in a chain, so many middleware functions can process the same HTTP request in series. Middleware functions pass along data to subsequent HTTP handlers by using `context.Context`.
+
+To enforce an API key, we first need to create a key for storing the API key in the `Context` object. For reasons I still can't totally grok, the key needs to be a struct containing a string rather than a simple string:
+
+```golang
+type contextKey struct {
+  name string
+}
+
+var contextKeyAPIKey = &contextKey{"api-key"}
+```
+
+Then, create a middleware function like this:
+
+```golang
+func withAPIKey(fn http.HandlerFunc) http.HandlerFunc {
+  return func(w http.ResponseWriter, r *http.Request) {
+    key := r.URL.Query().Get("key")
+    if key != "abc123" {
+      http.Error(w, "Invalid API key", http.StatusUnauthorized)
+      return
+    }
+    // Add the API key to the request context.
+    ctx := context.WithValue(r.Context(), contextKeyAPIKey, key)
+    fn(w, r.WithContext(ctx))
+  }
+}
+```
+
+When defining routes, wrap the request handler with the `withAPIKey` middleware:
+
+```golang
+mux := http.NewServeMux()
+mux.HandleFunc("/foo", withAPIKey(s.handleFoo))
+```
+
+The `withAPIKey` middleware guarantees that the API key in the request is valid and present. If any request handlers downstream of `withAPIKey` need to access the API key, they can call this helper function:
+
+```golang
+func APIKey(ctx context.Context) string {
+  k := ctx.Value(contextKeyAPIKey)
+  if k == nil {
+    panic("no API key in request")
+  }
+  key, ok := k.(string)
+  if !ok {
+    panic("API key in request is not a string")
+  }
+  return key
+}
+```
+
+The `handleFoo` handler sits downstream of the `withAPIKey` middleware, so it can access the API key from the request context:
+
+```golang
+func (s *Server) handleFoo(w http.ResponseWriter, r *http.Request) {
+  log.Printf("handling /foo, API key=%v", APIKey(r.Context()))
+}
+```
 
 ### HTTP helper functions
 
 #### Mat Ryer's HTTP encoding helper pattern
 
-Ryer advocates abstracting away the encoding format so that HTTP handlers are agnostic to the exchange format. That way, if your interface speaks JSON, you can change it to protobuf and only have to change one file.
+Ryer advocates abstracting away the encoding format so that HTTP handlers are agnostic to the exchange format. That way, if your interface speaks JSON, you can change it to [protobuf](https://developers.google.com/protocol-buffers/) and only have to change one file.
 
-He uses the helper functions `decode` and `respond` to hide the encoding details so that your route handlers look like this:
+Ryer uses the helper functions `decode` and `respond` to hide the encoding details so that your route handlers look like this:
 
 ```golang
 func handleFooPost(w http.ResponseWriter, r *http.Request) {
@@ -159,7 +324,7 @@ func respond(ctx context.Context, w http.ResponseWriter, r *http.Request, v inte
 
 #### How I've adapted Ryer's encoding helper pattern
 
-I like Ryer's helper method idea, but I think it pays too high a cost of abstraction without much benefit. How often do you rewrite your web app to use a different encoding scheme?
+I like Ryer's helper method idea, but I think it pays too high a cost of abstraction for too little benefit. How often do you rewrite your web app to use a different encoding scheme?
 
 Plus, you're leaking abstraction anyway because the route handler has to specify JSON tags in the struct even though they're not supposed to know anything about the format.
 
@@ -350,32 +515,25 @@ I prefer this method for a few reasons:
 - It gives you more fine-grained control over the data.
   - With the `Public` pattern, all endpoints including the type have to return data in the same format, whereas with the above method, each endpoint decides which fields to expose and in what format.
 
-### Line of sight
+### Honorable mentions for interesting chapters
 
-- Blog post
+#### [Chat Application with Web Sockets](https://github.com/matryer/goblueprints/tree/master/chapter1)
 
-### Honorable mentions for chapters
+- Cool demo of using goroutines and WebSockets.
 
-#### Chat app
+#### [Adding User Accounts](https://github.com/matryer/goblueprints/tree/master/chapter2/chat)
 
-- Cool demo of goroutnes and websockets
+- Good example of how to chain HTTP handlers.
 
-#### Auth
+#### [Building Distributed Systems and Working with Flexible Data](https://github.com/matryer/goblueprints/tree/master/chapter6)
 
-- Good demo, explanation of chaining HTTP Handlers
-
-#### Twitter votes
-
-- This chapter alone is worth the price of the best book.
+- This chapter alone would have been worth the price of the book.
+- Horizontally scaling: Scaling a system by adding nodes to improve reliability or performance
+- Vertically scaling: Scaling a system by increasing the resources of individual nodes (e.g., adding RAM or CPU)
 - Cool example of combining horizontally scalable services.
-  - Uses NSQ to publish messages.
-  - Uses the Twitter streaming API to read input from Twitter.
-  - Uses MongoDB to store data.
-- Very cool to see a system that's highly scalable, yet made of simple parts.
-- Interesting exp example of using a custom transport function in an HTTP connection to customize low-level behavior of the underlying TCP connection.
+  - Uses [NSQ](https://nsq.io/) to publish messages.
+  - Uses the [Twitter streaming API](https://developer.twitter.com/en/docs/twitter-api) to read live data from Twitter.
+  - Uses [MongoDB](https://www.mongodb.com/) to store data.
+- Very cool to see a system that's highly scalable yet made of simple parts.
+- Uses a [custom transport function in an HTTP connection](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter5/twittervotes/main.go#L58L73) to customize low-level behavior of the underlying TCP connection.
 - Good example of how to override the default signal handler to do custom cleanup [when your app receives `SIGINT` or `SIGTERM` signals](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter5/counter/main.go#L76L89) from the operating system.
-
-#### Ch. 7
-
-- Wrapping handler function with API Key
-- Good example of getting data about an HTTP request and making it available to subsequent handler functions.
