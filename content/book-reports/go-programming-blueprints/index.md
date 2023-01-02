@@ -1,6 +1,6 @@
 ---
 title: "Go Programming Blueprints by Mat Ryer"
-date: 2022-12-26T00:00:00-04:00
+date: 2023-01-02T00:00:00-04:00
 rating: 8
 purchase_url: https://www.packtpub.com/product/go-programming-blueprints-second-edition/9781786468949
 ---
