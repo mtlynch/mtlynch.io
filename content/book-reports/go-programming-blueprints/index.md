@@ -34,7 +34,7 @@ I'm a fan of [Mat Ryer](https://twitter.com/matryer)'s work, and his blog posts 
 - Complicates examples with jQuery in places where vanilla JavaScript would work just as well or better.
 - The bash script examples felt sloppy.
 - Code quality was inconsistent throughout the book.
-  - Some examples are elegant and intuitive, while others feel like a first draft
+  - Some examples are elegant and intuitive, while others feel like a first draft.
 - There are two independent Github repos: one [from the author](https://github.com/matryer/goblueprints) and one [from the publisher](https://github.com/PacktPublishing/Go-Programming-Blueprints).
   - [The author's repo](https://github.com/matryer/goblueprints) seems to be the correct one.
 - There are instructions for running the examples on Windows, but they feel like an untested afterthought.
