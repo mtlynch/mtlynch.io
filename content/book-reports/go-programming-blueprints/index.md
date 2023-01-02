@@ -74,20 +74,29 @@ I use `time.Ticker` in [PicoShare](https://github.com/mtlynch/picoshare) to sche
 #### [`flags.Duration`](https://pkg.go.dev/flag#Duration) is impressively flexible
 
 - `flags.Duration` natively supports different time units like `55s` or `10m`.
+  - i.e., when you use `flags.Duration` as a command-line flag, your comman-line interface can take a flag like `--interval 10m`, and the flags package will natively parse it into a `time.Duration` for you.
 
 ### Separating test packages from production
 
 - Writing tests in a separate package from your production code yields better tests.
-  - e.g., write tests for package `foo` in a package called `foo_test`
+  - e.g., write tests for package `foo` in a package called `foo_test` in the same directory.
   - Normally, Go's tools prohibit you from having multiple packages in the same folder, but they make an exception for tests.
 - The separate `_test` package ensures that tests only access the production package's public members.
   - This encourages the tests to verify client-facing behavior rather than internal implementation details.
+
+### Ordering function arguments
+
+- If you, API takes function arguments, put them at the end of the args list.
+  - It's difficult to read arguments that appear after function arguments.
+  - "When it comes to writing your own..."
 
 ### HTTP helper functions
 
 #### Mat Ryer's HTTP encoding helper pattern
 
-Ryer advocates abstracting away the encoding format so that HTTP handlers are agnostic to whether the exchange format is JSON, protobuf, etc. He proposes `decode` and `respond` helper functions so that your route handlers look like this:
+Ryer advocates abstracting away the encoding format so that HTTP handlers are agnostic to the exchange format. That way, if your interface speaks JSON, you can change it to protobuf and only have to change one file.
+
+He uses the helper functions `decode` and `respond` to hide the encoding details so that your route handlers look like this:
 
 ```golang
 func handleFooPost(w http.ResponseWriter, r *http.Request) {
@@ -152,9 +161,9 @@ func respond(ctx context.Context, w http.ResponseWriter, r *http.Request, v inte
 
 I like Ryer's helper method idea, but I think it pays too high a cost of abstraction without much benefit. How often do you rewrite your web app to use a different encoding scheme?
 
-Plus, you're leaking abstraction anyway because the route handler has to specify JSON tags in the struct even though they're not supposed to know anything about JSON.
+Plus, you're leaking abstraction anyway because the route handler has to specify JSON tags in the struct even though they're not supposed to know anything about the format.
 
-I also don't like writing error messages in JSON because most components in the Go HTTP stack fail with a plaintext error, so JSON errors mean the client has to look for an error as both well-formed JSON and as plaintext. It's easier to just always send error messages as plaintext.
+I also don't like writing error messages in JSON because most components in the Go HTTP stack fail with a plaintext error, so JSON-formatted errors mean the client has to look for an error as both well-formed JSON and as plaintext. It's easier to just always send error messages as plaintext.
 
 For successful JSON responses, I use a function called `respondJSON` like this:
 
@@ -204,7 +213,7 @@ type User struct {
 }
 ```
 
-Now, you realize you want to expose a JSON API like `/user?id=1234`, so you write something like this:
+You want to expose a JSON API like `/user?id=1234`, so you write something like this:
 
 ```golang
 func handleUserGet(w http.ResponseWriter, r *http.Request) {
@@ -259,7 +268,7 @@ $ curl https://example.com/users?id=1234
 
 Whoops! You just leaked everyone's email addresses and password hashes.
 
-When I used to do penetration testing, I found several teams making this mistake in the real world. It's a subtle bug because from the developer's perspective, everything worked as intended when they implemented `handlerUserGet`. When they add fields to the `User` struct, they're not touching `handleUsersGet`, so they won't notice the exposure unless they routinely check their applicaiton's raw HTTP traffic.
+When I used to do penetration testing, I found several companies making this mistake in the real world. It's a subtle bug because, from the developer's perspective, everything worked as intended when they implemented `handlerUserGet`. When they add fields to the `User` struct, they're not touching `handleUsersGet`, so they won't notice the exposure unless they routinely check their applicaiton's raw HTTP traffic.
 
 I'm paranoid about making this class of mistake in my apps, so I'm always curious how other people handle this.
 
@@ -295,13 +304,15 @@ func TestPublic(t *testing.T) {
 }
 ```
 
-I like Mat Ryer's technique, and I think it works well if you establish that convention in your codebase, but it's not my favorite solution to this problem.
+I like Mat Ryer's technique, and I think it works well if you establish that convention in your codebase, but it's not my favorite solution to this problem in Go.
 
-My main issue with Ryer's technique is that it violates encapsulation. I prefer my internal types to be as simple as possible and minimize assumptions about how clients will use them. Adding a `Public` method means that the type is anticipating how clients will use the data.
+My main issue with Ryer's technique is that it violates encapsulation. I prefer my internal types to be as simple as possible and minimize assumptions about how clients will use them. Adding a `Public` method means that the type is anticipating how clients will use the data and it forces all endpoints to expose the same fields.
 
 #### My preferred detail-hiding method
 
-In my Go code, I prefer distinct structs for externally-facing data. Usually, I use anonymous structs that I declare inline so I don't even need another named type:
+In my Go code, I prefer distinct structs for externally-facing data. When I need to publish data to an external client, I copy data from the internal struct into my external struct.
+
+Usually, I use anonymous structs that I declare inline so I don't even need another named type:
 
 ```golang
 // my internal data
@@ -319,6 +330,8 @@ func handleUserGet(w http.ResponseWriter, r *http.Request) {
     return
   }
 
+  // Copy the fields from User that I want to publish into a new anonymous
+  // struct.
   respondJSON(w, struct {
     Username string `json:"username"`
     DisplayName string `json:"displayName"`
@@ -331,33 +344,27 @@ func handleUserGet(w http.ResponseWriter, r *http.Request) {
 
 I prefer this method for a few reasons:
 
-- There's an additional layer of protection from accidental disclosure. Even if someone accidentally included an internal struct in an external type, nothing would print out because the internal struct fields have no JSON tags.
+- There's an additional layer of protection from accidental disclosure.
+  - Even if someone accidentally included an internal struct in an external type, nothing would print out because the internal struct fields have no JSON tags.
 - It makes the data you're returning more explicit.
-- It gives you tighter control over the data. With the `Public` pattern, all endpoints including the type have to return data in the same format, whereas with the above method, each endpoint decides which fields to expose and in what format.
-
-### API Tip
-
-- If you, API takes function arguments, put them at the end of the orgs list.
-  - It's difficult to read arguments that appear after function arguments.
-  - "When it comes to writing your own..."
+- It gives you more fine-grained control over the data.
+  - With the `Public` pattern, all endpoints including the type have to return data in the same format, whereas with the above method, each endpoint decides which fields to expose and in what format.
 
 ### Line of sight
 
 - Blog post
 
-### Response patterns
+### Honorable mentions for chapters
 
-- "Response helpers"
-
-### Chat app
+#### Chat app
 
 - Cool demo of goroutnes and websockets
 
-### Auth
+#### Auth
 
 - Good demo, explanation of chaining HTTP Handlers
 
-### Twitter votes
+#### Twitter votes
 
 - This chapter alone is worth the price of the best book.
 - Cool example of combining horizontally scalable services.
@@ -368,7 +375,7 @@ I prefer this method for a few reasons:
 - Interesting exp example of using a custom transport function in an HTTP connection to customize low-level behavior of the underlying TCP connection.
 - Good example of how to override the default signal handler to do custom cleanup [when your app receives `SIGINT` or `SIGTERM` signals](https://github.com/matryer/goblueprints/blob/aae50b4b30fa6dfd73e3c411b3bfe1972294be61/chapter5/counter/main.go#L76L89) from the operating system.
 
-### Ch. 7
+#### Ch. 7
 
 - Wrapping handler function with API Key
 - Good example of getting data about an HTTP request and making it available to subsequent handler functions.
