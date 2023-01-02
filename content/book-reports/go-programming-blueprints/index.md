@@ -197,7 +197,7 @@ Suppose your web app requires users to supply an API key with every HTTP request
 
 To accomplish this, you can create an HTTP middleware function. Middleware functions act in a chain, so many middleware functions can process the same HTTP request in series. Middleware functions pass along data to subsequent HTTP handlers by using `context.Context`.
 
-To enforce an API key, we first need to create a key for storing the API key in the `Context` object. For reasons I still can't totally grok, the key needs to be a struct containing a string rather than a simple string:
+To enforce an API key, we first need to create a key for storing the API key in the `Context` object:
 
 ```golang
 type contextKey struct {
@@ -207,7 +207,13 @@ type contextKey struct {
 var contextKeyAPIKey = &contextKey{"api-key"}
 ```
 
-Then, create a middleware function like this:
+~~For reasons I still can't totally grok, the key needs to be a struct containing a string rather than a simple string.~~
+
+**Update (2023-01-02)**: I was confused at first why they `contextKey` is a struct containing a string rather than just a string. In the book, Ryer explains that this decision is prevents collisions with other keys that have the same value, but I didn't understand why the developer wouldn't just avoid re-using the same key for different purposes. Matthew Riley [clarified this behavior](https://twitter.com/mdriley25519/status/1609988055989116928) for me and helped me realize that the local type prevents collisions across packages, whereas a simple string wouldn't.
+
+If you used a context key like `const contextKeyToken := "token"` and another package processed the same request and also used the key `"token"`, then you'd scribble over each other's context values. By defining a custom type local to your package, you're guaranteed that `Context` won't evaluate tokens from any other package as equal to yours because they'll have different types.
+
+Now that you've defined your context key, create a middleware function like this:
 
 ```golang
 func withAPIKey(fn http.HandlerFunc) http.HandlerFunc {
