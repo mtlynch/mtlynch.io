@@ -94,10 +94,10 @@ If the `SetValFn` parameter is the first argument, everything will look fine in 
 
 ```golang
 func updateValue(setFn SetValFn, interval time.Duration) {
-	for range time.NewTicker(interval).C {
-		value := fetchValue()
-		setFn("somekey", value)
-	}
+  for range time.NewTicker(interval).C {
+    value := fetchValue()
+    setFn("somekey", value)
+  }
 }
 ```
 
@@ -395,7 +395,7 @@ func handleUserGet(w http.ResponseWriter, r *http.Request) {
 When users query the `/user` route, they'll get back public information about a user:
 
 ```bash
-$ curl https://example.com/user?id=1234
+curl https://example.com/user?id=1234
 ```
 
 ```json
@@ -419,7 +419,7 @@ type User struct {
 Even though you haven't touched `handleUserGet`, now when users call the `/user` route, they get a lot of new information:
 
 ```bash
-$ curl https://example.com/users?id=1234
+curl https://example.com/users?id=1234
 ```
 
 ```json
