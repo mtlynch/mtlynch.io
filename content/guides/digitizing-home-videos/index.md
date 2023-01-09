@@ -473,12 +473,6 @@ Your app is live at https://mediagoblin-v5lmqis51k.herokuapp.com/
 **Note**: Because you're using Heroku's free tier, Heroku launches your MediaGoblin instance on-demand when you request it in the browser. This means that your first page load will take 30-60 seconds and you my see an HTTP 502 Gateway timeout error. This is normal. After the app is serving, it will be quick and responsive until you let it sit idle for a few hours.
 {{</notice>}}
 
-I've published mine, though in the interest of limiting shenanigans, I've disabled the ability to log in as MediaGoblin's admin user:
-
-- **URL**: [https://mediagoblin-v5lmqis51k.herokuapp.com](https://mediagoblin-v5lmqis51k.herokuapp.com)
-- **Username**: `mediagoblin`
-- **Password**: `goblinmedia`
-
 ### Bonus: Share individual videos
 
 If you're using this process to store family videos, you probably want your family to have the ability to browse and access all videos, but sometimes you want to share individual videos with others without giving them access to your entire collection.
