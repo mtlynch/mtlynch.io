@@ -48,13 +48,15 @@ TODO
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-## Losing $250k in a single email
+## The Pi supply
 
-TinyPilot runs on top of the Raspberry Pi 4B, a small, inexpensive single-board computer. There's been a massive shortage of Raspberry Pis for the past year. It's been nearly impossible for consumers to buy them.
+TinyPilot runs on top of the Raspberry Pi 4B, a small, inexpensive single-board computer. There's been such a massive shortage of Raspberry Pis for the past year that it's been near-impossible for consumers to buy them.
 
-TinyPilot has lucked out in that we placed a year of orders in early 2021 directly from the manufacturer, The Raspberry Pi Foundation, and they've been consistently filling our orders every month.
+TinyPilot has lucked out in that we placed a year of orders in early 2021 directly from the manufacturer, and they've consistently filled our orders every month.
 
-As our sales have been been increasing, I've been nervous about whether Raspberry Pi would allocate more units to TinyPilot. In mid-December, I saw some good news about the Raspberry Pi supply. In fact, the blog post was literally titled ["it's good news!"](https://www.raspberrypi.com/news/supply-chain-update-its-good-news/) The most important part was this sentence:
+As our sales have been been increasing, I've been nervous about whether Raspberry Pi would allocate more units to TinyPilot. In mid-December, I saw some good news from Raspberry Pi's CEO, Eben Upton. In fact, the blog post was literally titled ["it's good news!"](https://www.raspberrypi.com/news/supply-chain-update-its-good-news/)
+
+The most important part of the blog post was this sentence:
 
 > As a result, we can say with confidence that, after a lean first quarter, we expect supply to recover to pre-pandemic levels in the second quarter of 2023, and to be unlimited in the second half of the year.
 
@@ -64,23 +66,59 @@ That sounded great! Even in mid-2020, I was able to buy 50+ Raspberry Pis at a t
 
 Uh oh. I'm a commercial customer. If they're deprioritizing commercial customers, that means less for TinyPilot. But still, I figured we'd be happy with a smaller slice of a larger pie.
 
-I had emailed TinyPilot's sales rep at Raspberry Pi in mid-November asking to increase our allocation. She told me that they'd be deciding 2023 allocation in mid-December, so she'd let me know whether they'd take my new orders then. By December 20th, I still hadn't heard anything, so I followed up. The sales rep apologized for the delay but said the earliest they can offer a new order is August 28, 2023.
+## Losing $450k in a single email
 
-Actually, she said "28.08.2023." I re-read it several times desperately hoping for some interpretation of the date that made it less than eight months of waiting for a new order.
+I had emailed TinyPilot's sales rep at Raspberry Pi in mid-November asking to increase our allocation. She told me that they'd be deciding 2023 allocation in mid-December, so she'd let me know whether they'd take my new orders then.
 
-We still have standing orders through May 2023, but I was hoping to increase them. And we'll have to last three months with no new Pi shipments.
+Finally, on December 20th, I received this email:
 
-For the past three months, we'd been selling an average of 220 Voyager 2s per month. I expected to grow sales by about 35% over the next eight months, which would mean selling about 250 Voyager 2s per month. Given our current supply of Pis, we're limited to selling about 140 Voyager 2s per month. What would have been about $875k in revenue is now limited to about $425k. So when I got that email, I realized I'd just lost about $450k.
+> Hi Michael
+>
+> apologies for the delay, the Best we can offer at the moment is \[...\] for delivery 28.08.2023 in the PI4/2GB
 
-To be fair, it's silly to whine about how much money I could have made had I received more allocation from Raspberry Pi. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece.
+I re-read it several times desperately hoping to find some date format for "28.08.2023" that didn't mean I'd be waiting eight months for my next Raspberry Pi order. Unfortunately, that's exactly what it meant.
 
-{{<img src="pi-amazon.png" has-border="true" max-width="600px">}}
+We still have standing orders through May 2023, so this isn't a death blow. And we'll have to last three months with no Pi shipments at all.
 
-## Topic 2
+For the past three months, we'd been selling an average of 220 Voyager 2s per month. I expected to grow sales by about 35% over the next eight months, which would mean selling about 250 Voyager 2s per month.
+
+Given the new supply constraint, TinyPilot is limited to selling about 140 Voyager 2s per month. What could have been about $875k in revenue is now limited to $425k.
+
+In other words, that email was letting me know I'd be losing $450k in revenue over the next eight months.
+
+Okay, I'm not really "losing" $450k if my business required me to have an unlimited supply of low-cost Raspberry Pis. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece. But still, I was hoping TinyPilot would get enough allocation to keep up with its growth.
+
+{{<img src="pi-amazon.png" has-border="true" max-width="600px" caption="Scalpers sell Raspberry Pis on Amazon and eBay for 3x the manufacturer's price.">}}
+
+It's still possible for TinyPilot to receive more allocation before August, but it's also possible the supply chain could worsen. China has been seeing increasing COVID rates recently, and shutdowns there would impact Raspberry Pi production.
+
+## Can TinyPilot survive on 140 sales per month?
+
+I looked back to June 2022. TinyPilot sold 151 Voyager 2 devices for $68k in revenue. That month, we had a net loss of $3.6k. That doesn't sound promising.
+
+Looking closer at the books for that month, there were several significant expenses that won't recur in 2023:
+
+- $10k - Hardware engineering
+- $8.2k - Late invoices for hardware purchased in 2021
+- $5k - Three-month digital marketing contract
+
+The only repeating expense will be hardware engineering, but I expect that to be in the $3-4k/month range, as the work will be limited to manufacturing support rather than designing circuits.
+
+If we had a repeat of April 2022's sales numbers in 2023, I'd expect TinyPilot to have a profit of -$3.6k + $10k + $8.2k + $5k - $4k = $15.6k.
+
+A profit of $15.6k/month is still good! If we can pull of $15k/month for most of the year, I'll be quite happy.
 
 ## Upsides to running lean
 
+When I realized TinyPilot would be limited to 140 devices per month, I felt discouraged.
+
+I'd worked so hard to scale up the business over the past two years. Now, it sounded like I'd not only be unwinding the last six months of progress but that I'd be frozen there for eight months.
+
 ## Side projects
+
+## New discovery: Kagi
+
+I used it for a weekend and was impressed enough to purchase a subscription.
 
 ## Wrap up
 
