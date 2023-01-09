@@ -78,15 +78,15 @@ Finally, on December 20th, I received this email:
 
 I re-read it several times desperately hoping to find some date format for "28.08.2023" that didn't mean I'd be waiting eight months for my next Raspberry Pi order. Unfortunately, that's exactly what it meant.
 
-We still have standing orders through May 2023, so this isn't a death blow. And we'll have to last three months with no Pi shipments at all.
+We still have standing Raspberry Pi orders through May 2023, so this isn't a death blow, but we'll have to survive the final three months with no Pi shipments at all.
 
-For the past three months, we'd been selling an average of 220 Voyager 2s per month. I expected to grow sales by about 35% over the next eight months, which would mean selling about 250 Voyager 2s per month.
+For the past few months, TinyPilot's been selling an average of 220 Voyager 2s per month. I expected to grow sales by about 35% over the next eight months, which would mean selling about 250 Voyager 2s per month.
 
-Given the new supply constraint, TinyPilot is limited to selling about 140 Voyager 2s per month. What could have been about $875k in revenue is now limited to $425k.
+Given the new supply constraint, TinyPilot is now limited to selling about 140 Voyager 2s per month if we want to stretch our supply out to September. What could have been about $875k in revenue is now limited to $425k.
 
 In other words, that email was letting me know I'd be losing $450k in revenue over the next eight months.
 
-Okay, I'm not really "losing" $450k if my business required me to have an unlimited supply of low-cost Raspberry Pis. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece. But still, I was hoping TinyPilot would get enough allocation to keep up with its growth.
+Okay, I'm not really "losing" $450k if my business required me to have an unlimited supply of low-cost Raspberry Pis. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece. Still, I was hoping TinyPilot would get enough allocation to keep up with its growth.
 
 {{<img src="pi-amazon.png" has-border="true" max-width="600px" caption="Scalpers sell Raspberry Pis on Amazon and eBay for 3x the manufacturer's price.">}}
 
@@ -94,7 +94,7 @@ It's still possible for TinyPilot to receive more allocation before August, but 
 
 ## Can TinyPilot survive on 140 sales per month?
 
-I looked back to June 2022. TinyPilot sold 151 Voyager 2 devices for $68k in revenue. That month, we had a net loss of $3.6k. That doesn't sound promising.
+To get a sense of what 140 sales per month looks financially, I looked back to June 2022. TinyPilot sold 151 Voyager 2 devices for $68k in revenue. That month, we had a net loss of $3.6k. That doesn't sound promising.
 
 Looking closer at the books for that month, there were several significant expenses that won't recur in 2023:
 
@@ -102,7 +102,7 @@ Looking closer at the books for that month, there were several significant expen
 - $8.2k - Late invoices for hardware purchased in 2021
 - $5k - Three-month digital marketing contract
 
-The only repeating expense will be hardware engineering, but I expect that to be in the $3-4k/month range, as the work will be limited to manufacturing support rather than designing circuits.
+The only repeating expense will be hardware engineering, but I expect that to be in the $2-4k/month range, as the work will be limited to manufacturing support rather than designing circuits.
 
 If we had a repeat of April 2022's sales numbers in 2023, I'd expect TinyPilot to have a profit of -$3.6k + $10k + $8.2k + $5k - $4k = $15.6k.
 
@@ -114,7 +114,9 @@ When I realized TinyPilot would be limited to 140 devices per month, I felt disc
 
 I'd worked so hard to scale up the business over the past two years. Now, it sounded like I'd not only be unwinding the last six months of progress but that I'd be frozen there for eight months.
 
-## Side projects
+## Side project: ScreenJournal
+
+My fiance used it for three minutes. But it was still useful to watch another person use the app to see where she got stuck and what she expected the app to do.
 
 ## New discovery: Kagi
 
@@ -135,4 +137,6 @@ I used it for a weekend and was impressed enough to purchase a subscription.
 
 ### Goals for next month
 
--
+- Ship the first Voyager 2a device.
+- Prepare to transition fulfillment to our 3PL vendor in February.
+- Write my annual retrospective.
