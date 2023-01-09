@@ -491,7 +491,7 @@ This will give the guest access to that individual file, but because of the way 
 
 The "original file" link gives you a URL that looks like this:
 
-- <https://storage.googleapis.com/mediagoblin-39dpduhfz1wstbprmyk5ak29/media_entries/4/Texas_Family_-_1952_-_04_-_Trudy_Working_at_the_Loom.mp4>
+- `https://storage.googleapis.com/mediagoblin-39dpduhfz1wstbprmyk5ak29/media_entries/4/Texas_Family_-_1952_-_04_-_Trudy_Working_at_the_Loom.mp4`
 
 As you can see, given the above URL, you can watch that single video, but it's not possible to explore the bucket to find other videos.
 
