@@ -33,7 +33,7 @@ jobs:
           command: tests/lint-markdown
   build:
     docker:
-      - image: peaceiris/hugo:v0.101.0
+      - image: peaceiris/hugo:v0.109.0
     steps:
       - checkout
       - attach_workspace:
