@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 30"
 date: 2024-01-10T00:00:00-05:00
-description: TODO - One-line summary
+description: Handling an eight-month supply shortage
 ---
 
 {{<notice type="info">}}
@@ -10,12 +10,13 @@ description: TODO - One-line summary
 
 Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue and employs six other people.
 
-Every month, I publish a retrospective like this one to share how things are going with my business and in my professional life overall.
+Every month, I publish a retrospective like this one to share how things are going with my business and my professional life overall.
 {{</notice>}}
 
 ## Highlights
 
--
+- TinyPilot is facing a supply shortage that will drastically limit its sales for 2023.
+- Running leaner might not be such a bad thing for TinyPilot in the end.
 
 ## Goal Grades
 
@@ -46,7 +47,21 @@ We're on track for this so far. It's always hard with a new release to anticipat
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric                   | November 2022 | December 2022   | Change                                      |
+| ------------------------ | ------------- | --------------- | ------------------------------------------- |
+| Unique Visitors          | 9,512         | 7,308           | <font color="red">-2,204 (-23%)</font>      |
+| Total Pageviews          | 20,387        | 15,549          | <font color="red">-4,838 (-24%)</font>      |
+| Sales Revenue            | $107,223.10   | $66,092.24      | <font color="red">-$41,130.86 (-38%)</font> |
+| Enterprise Subscriptions | $290.70       | $290.70         | 0                                           |
+| Royalties                | $4,402.50     | $2,798.97       | <font color="red">-$1,603.53 (-36%)</font>  |
+| Total Revenue            | $111,916.30   | $69,181.91      | <font color="red">-$42,734.39 (-38%)</font> |
+| **Profit**               | **$7,407.30** | **$7,088.68**\* | **<font color="red">-$318.62 (-4%)</font>** |
+
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+
+Part of it is seasonal. At the end of the year, fewer businesses are buying new hardware.
+
+The other part was that I intentionally [reduced TinyPilot's sales volume](#adapting-to-the-shortage) in response to a supply shortage I learned about mid-month.
 
 ## The Pi supply
 
@@ -56,11 +71,15 @@ TinyPilot has lucked out in that we placed a year of orders in early 2021 direct
 
 As our sales have been been increasing, I've been nervous about whether Raspberry Pi would allocate more units to TinyPilot. In mid-December, I saw some good news from Raspberry Pi's CEO, Eben Upton. In fact, the blog post was literally titled ["it's good news!"](https://www.raspberrypi.com/news/supply-chain-update-its-good-news/)
 
+{{<img src="good-news.png" has-border="true" max-width="600px" alt="'Supply chain update - it's good news!' by Eben Upton">}}
+
 The most important part of the blog post was this sentence:
 
 > As a result, we can say with confidence that, after a lean first quarter, we expect supply to recover to pre-pandemic levels in the second quarter of 2023, and to be unlimited in the second half of the year.
 
-That sounded great! Even in mid-2020, I was able to buy 50+ Raspberry Pis at a time from local retailers, so if we were going back to that level, TinyPilot would be in wonderful position. But there was this ominous sentence later on:
+That sounded great! Even in mid-2020, I was able to buy 50+ Raspberry Pis at a time from local retailers, so if we were going back to that level, TinyPilot would be in wonderful position.
+
+Deeper into the post, there was this ominous sentence:
 
 > Although we are sitting on substantial order backlogs from commercial customers, we expect to gradually increase the fraction of our output which we dedicate to single-unit sales next year until we’re back in our pre-pandemic situation.
 
@@ -68,7 +87,7 @@ Uh oh. I'm a commercial customer. If they're deprioritizing commercial customers
 
 ## Losing $450k in a single email
 
-I had emailed TinyPilot's sales rep at Raspberry Pi in mid-November asking to increase our allocation. She told me that they'd be deciding 2023 allocation in mid-December, so she'd let me know whether they'd take my new orders then.
+I had emailed TinyPilot's sales rep at Raspberry Pi in mid-November asking to increase our allocation for the following year. She told me that they'd be deciding 2023 allocation in mid-December, so she'd let me know whether they'd take my new orders then.
 
 Finally, on December 20th, I received this email:
 
@@ -104,9 +123,27 @@ Looking closer at the books for that month, there were several significant expen
 
 The only repeating expense will be hardware engineering, but I expect that to be in the $2-4k/month range, as the work will be limited to manufacturing support rather than designing circuits.
 
-If we had a repeat of April 2022's sales numbers in 2023, I'd expect TinyPilot to have a profit of -$3.6k + $10k + $8.2k + $5k - $4k = $15.6k.
+If we had a repeat of April 2022's sales numbers in 2023, I'd expect TinyPilot to have a profit of \~$15k (-$3.6k + $10k + $8.2k + $5k - $4k = $15.6k).
 
-A profit of $15.6k/month is still good! If we can pull of $15k/month for most of the year, I'll be quite happy.
+A profit of $15.6k/month is still good! If we can pull off $15k/month for most of the year, I'll be quite happy.
+
+## Adapting to the shortage
+
+My goal for January is to sell between 150 and 180 TinyPilot devices. I'm aiming for higher than the 140/month average because there's still a possibility that we'll receive more allocation earlier than I expect.
+
+To reduce sales from 220/month to 150/month, I made the following changes:
+
+- Cut ad spending by 80%
+- Increased pricing on the TinyPilot Voyager 2 PoE by $60
+- Raised prices on Amazon by 20%
+
+So far, we seem to be on track. The ratio of customers choosing the PoE version hasn't changed, which suggests that I previously priced it too low.
+
+Amazon is penalizing me for having lower prices on the TinyPilot website by hiding the buy button on our Amazon listings:
+
+{{<img src="amazon-buy-button.png" has-border="true" max-width="800px" caption="Amazon has hidden the buy button from my TinyPilot listings to punish me for offering lower prices on TinyPilot's website.">}}
+
+It's still possible for customers to buy from Amazon, but they have to click the more subtle "See All Buying Options" button. And customers still do purchase that way, despite the higher price. Not as many as before the price hike, but not zero either.
 
 ## Upsides to running lean
 
@@ -114,15 +151,50 @@ When I realized TinyPilot would be limited to 140 devices per month, I felt disc
 
 I'd worked so hard to scale up the business over the past two years. Now, it sounded like I'd not only be unwinding the last six months of progress but that I'd be frozen there for eight months.
 
-As I thought more about it, I realized that there were several upsides to the 140/month cap. Scaling constantly is hard! As TinyPilot's founder, I spend most of my time [coordinating changes](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). The faster we scale, the faster our processes change. But redefining processes and filling in gaps during transitions is stressful and not particularly fun. I'd much rather be in the position of h
+As I thought more about it, I realized that there were several upsides to the 140/month cap. Scaling constantly is hard! As TinyPilot's founder, I spend most of my time [coordinating changes](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). The faster we scale, the faster our processes change. Redefining processes and filling in gaps during transitions is stressful and not particularly fun. I'd much rather be in the position of optimizing the pain points of a working system rather than scrambling to relieve new bottlenecks.
+
+So why didn't I just do that earlier? I control how many devices I sell, so I could have scaled more slowly.
+
+I have too much fear of leaving money on the table.
+
+If I sold only 150 devices in a month where there was demand for 200, then I was basically forfeitng $10-15k in profit. TinyPilot doesn't have a lot of profit to spare, so I worried that taking it slow would be financially unsustainable. If the company failed, I'd blame myself for not capitalizing on the demand and earning the profit that was available.
+
+With the Pi shortage, it's much easier to just say, "Oh, well. Nothing I can do." I can't make more Raspberry Pis appear, so I'm just going to make lemonade out of lemons.
+
+The other nice upside to running lean is that I have to put up with less bullshit. A month ago, Amazon taking away the buy button would have been a big deal. I'd have to bend to their demands to get it back. But now, I know I can sell 140 devices/month without them, so they can pound sand.
+
+Similarly, when large customers send me pushy emails demanding discounts or unreasonable terms, I can stand firm. I tell them that there's currently a supply shortage, so I'm not open to negotiating beyond what I've offered.
 
 ## Side project: ScreenJournal
 
-My fiance used it for three minutes. But it was still useful to watch another person use the app to see where she got stuck and what she expected the app to do.
+[ScreenJournal](https://thescreenjournal.com) is a hobby project I've been working on for sharing movie recommendations with friends. It's like Goodreads but for couch potatoes.
+
+I didn't have much time to work on it with the holdiays, but I still made some progress by adding multi-user support. Previously, only a hardcoded admin user could log in, but in December, I added support for user signups and invite codes.
+
+{{<img src="sj-invites.png" has-border="true"  caption="ScreenJournal now supports signups and invite codes.">}}
+
+I also got my first beta tester! My fiancé used ScreenJournal for three minutes. It was only a short test, but it was still useful to observe what she expected the app to do and where she got stuck.
 
 ## New discovery: Kagi
 
-I used it for a weekend and was impressed enough to purchase a subscription.
+Over the past few months, I've seen a lot of chatter on Hacker News about [Kagi](https://kagi.com/), an ad-free, privacy-friendly search engine. I've tried Google alternatives in the past, but I always find the quality too low to switch away.
+
+I tried Kagi for a weekend, and I was impressed enough after two days to sign up as a paying user ($10/month). The result quality is on par with Google, which is an astounding feat considering it's a bootstrapped company with a team of [under 20 people](https://blog.kagi.com/status-update-first-three-months).
+
+{{<img src="kagi.png" has-border="true" max-width="450px" caption="ScreenJournal now supports signups and invite codes.">}}
+
+Kagi lets you see google results if you prefix your query with `!g`, but in my two weeks using it, I probably only do that in 5% of my searches.
+
+An ad-free search engine that's as good as Google 95% of the time would be enough for me to switch, but Kagi also has cool power features that let you personalize your results.
+
+For example, in the search results for `raspberry pi shortage`, the site Make Use Of appeared as Kagi's sixth result and Google's seventh result. The article seems to be AI-generated garbage. Kagi lets me block that domain from future search results. Conversely, [Jeff Geerling](https://jeffgeerling.com) puts out a lot content that I consider high-quality, so Kagi lets me weight results from his site higher in my results.
+
+{{<gallery caption="One of my search results was Make Use Of, which churns out low-quality, factually incorrect articles. Kagi lets me block that domain from future search results.">}}
+{{<img src="dumb-recommendations.png" has-border="true" max-width="450px" alt="Screenshot of article by Make Use Of with bad recommendations">}}
+{{<img src="rank-adjust.png" has-border="true" max-width="300px" alt="Screenshot of Kagi interface with Make Use Of domain blocked">}}
+{{</gallery>}}
+
+I've really only scratched the surface of Kagi's power features, but I'm just happy to have cut another Google dependency from my life.
 
 ## Wrap up
 
@@ -135,7 +207,8 @@ I used it for a weekend and was impressed enough to purchase a subscription.
 
 ### Lessons learned
 
--
+- There's a silver lining to the supply shortage.
+- Less need for growth means you have to put up with less bullshit for the sake of growth.
 
 ### Goals for next month
 
