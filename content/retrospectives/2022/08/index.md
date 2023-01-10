@@ -130,7 +130,7 @@ I enjoy blogging, and I strongly dislike the feeling that I'm too busy to write.
 
 Last month on Twitter, Josh Pitzalis asked me about something I'd written about programmatic SEO:
 
-{{<tweet user="joshpitzalis" id="1543083914071519232">}}
+{{<img src="josh-pitzalis-tweet.png" has-border="true">}}
 
 I knew I'd used programmatic SEO to generate pages for [my local comedy site](https://wanderjest.com), but I couldn't figure out what he was talking about. I vaguely remembered writing something, but I couldn't find anything in my blog.
 
