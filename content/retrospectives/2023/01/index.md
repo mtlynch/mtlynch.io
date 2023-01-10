@@ -31,7 +31,7 @@ Our 3PL vendor is now up and running. They're fulfilling orders for one of our l
 
 ### Reach code complete on the next TinyPilot Pro release
 
-- **Result**: We reached code complete in first week of January
+- **Result**: We reached code complete in the first week of January.
 - **Grade**: C
 
 We were close to hitting this deadline, but there was one final bug that took longer than I expected, and we had fewer dev hours due to the holidays. As of this writing, we're at code complete and planning to publish the release next week.
@@ -63,11 +63,11 @@ December saw a large dropoff for TinyPilot across the board. Part of the downtur
 
 ## The Pi supply
 
-TinyPilot runs on top of the Raspberry Pi 4B, a small, inexpensive single-board computer. There's been such a massive shortage of Raspberry Pis for the past year that it's been near-impossible for consumers to buy them.
+TinyPilot runs on top of the Raspberry Pi 4B, a small, inexpensive single-board computer. There's been such a massive shortage of Raspberry Pis for the past year that it's been near impossible for consumers to buy them.
 
 TinyPilot has lucked out in that we placed a year of orders in early 2021 directly from the manufacturer, and they've consistently filled our orders every month.
 
-As our sales have been been increasing, I've been nervous about whether Raspberry Pi would allocate more units to TinyPilot. In mid-December, I saw some good news from Raspberry Pi's CEO, Eben Upton. In fact, the blog post was literally titled ["it's good news!"](https://www.raspberrypi.com/news/supply-chain-update-its-good-news/)
+As our sales have grown, I've been nervous about whether Raspberry Pi would allocate more units to TinyPilot. In mid-December, I saw some good news from Raspberry Pi's CEO, Eben Upton. In fact, the blog post was literally titled, ["it's good news!"](https://www.raspberrypi.com/news/supply-chain-update-its-good-news/)
 
 {{<img src="good-news.png" has-border="true" max-width="600px" alt="'Supply chain update - it's good news!' by Eben Upton">}}
 
@@ -75,7 +75,7 @@ The most important part of the blog post was this sentence:
 
 > As a result, we can say with confidence that, after a lean first quarter, we expect supply to recover to pre-pandemic levels in the second quarter of 2023, and to be unlimited in the second half of the year.
 
-That sounded great! Even in mid-2020, I was able to buy 50+ Raspberry Pis at a time from local retailers, so if we were going back to that level, TinyPilot would be in wonderful position.
+That sounded great! Even in mid-2020, I was able to buy 50+ Raspberry Pis at a time from local retailers, so if we were going back to that level, TinyPilot would be in a wonderful position.
 
 Deeper into the post, there was this ominous sentence:
 
@@ -93,7 +93,7 @@ Finally, on December 20th, I received this email:
 >
 > apologies for the delay, the Best we can offer at the moment is \[...\] for delivery 28.08.2023 in the PI4/2GB
 
-I re-read it several times hoping desperately to identify some date format for "28.08.2023" that didn't mean I'd be waiting eight months for my next Raspberry Pi order. Unfortunately, that's exactly what it meant.
+I re-read it several times, hoping desperately to identify some date format for "28.08.2023" that didn't mean I'd be waiting eight months for my next Raspberry Pi order. Unfortunately, that's exactly what it meant.
 
 We still have standing Raspberry Pi orders through May 2023, so this isn't a death blow, but we'll have to survive the final three months with no Pi shipments at all.
 
@@ -103,7 +103,7 @@ Given the new supply constraint, TinyPilot is now limited to selling about 140 V
 
 In other words, that email was letting me know I'd be losing $450k in revenue over the next eight months.
 
-Okay, I'm not really "losing" $450k if my business required me to have an unlimited supply of low-cost Raspberry Pis. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece. Still, I was hoping TinyPilot would get enough allocation to keep up with its growth.
+Okay, I'm not really "losing" $450k if that money is dependent on an unlimited supply of low-cost Raspberry Pis. A monkey could get rich buying Raspberry Pis at the $45 manufacturer price. There's a huge unmet demand for Raspberry Pis, so scalpers sell them on eBay and Amazon for $125 apiece. Still, I was hoping TinyPilot would get enough allocation to keep up with its growth.
 
 {{<img src="pi-amazon.png" has-border="true" max-width="600px" caption="Scalpers sell Raspberry Pis on Amazon and eBay for 3x the manufacturer's price.">}}
 
@@ -113,7 +113,7 @@ It's still possible for TinyPilot to receive more allocation before August, but 
 
 To get a sense of what 140 sales per month looks financially, I looked back to June 2022. TinyPilot sold 151 Voyager 2 devices for $68k in revenue. That month, we had a net loss of $3.6k. That doesn't sound promising.
 
-Looking closer at the books for that month, there were several significant expenses that won't recur in 2023:
+Looking closer at the books for that month, I saw several significant expenses that won't recur in 2023:
 
 - $10k - Hardware engineering
 - $8.2k - Late invoices for hardware purchased in 2021
@@ -141,13 +141,13 @@ Amazon is penalizing me for having lower prices on the TinyPilot website by hidi
 
 {{<img src="amazon-buy-button.png" has-border="true" max-width="800px" caption="Amazon has hidden the buy button from my TinyPilot listings to punish me for offering lower prices on TinyPilot's website.">}}
 
-It's still possible for customers to buy through Amazon, but they have to click the more subtle "See All Buying Options" button. And customers still do purchase that way, despite the higher price. Not as many as before, but not zero either.
+It's still possible for customers to buy through Amazon, but they have to click the more subtle "See All Buying Options" button. And customers still purchase that way, despite the higher price. Not as many as before, but not zero either.
 
 ## Upsides to running lean
 
 When I realized TinyPilot would be limited to 140 devices per month, I felt discouraged.
 
-I'd worked so hard to scale up the business over the past two years. Now, it sounded like I'd not only be unwinding the last six months of progress but that I'd be frozen there for eight months.
+I'd worked so hard to scale up the business over the past two years. Now, it sounded like I'd not only be unwinding the last six months of progress but I'd be frozen there for eight months.
 
 As I thought more about it, I realized that there were several upsides to the 140/month cap. Scaling constantly is hard! As TinyPilot's founder, I spend most of my time [coordinating changes](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). The faster we scale, the faster our processes change. Redefining processes and filling in gaps during transitions is stressful and not particularly fun. I'd much rather be in the position of optimizing the pain points of a working system rather than scrambling to relieve new bottlenecks.
 
@@ -155,7 +155,7 @@ So why didn't I just do that earlier? I control how many devices TinyPilot sells
 
 I have too much fear of leaving money on the table.
 
-If I sold only 150 devices in a month where there was demand for 200, then I was basically forfeitng $10-15k in profit. TinyPilot doesn't have a ton of profit to spare, so I worried that taking it slow would be financially unsustainable. If the company failed, I'd blame myself for not capitalizing on the demand and earning the profit that was available.
+If I sold only 150 devices in a month where there was demand for 200, then I was basically forfeiting $10-15k in profit. TinyPilot doesn't have a ton of profit to spare, so I worried that taking it slow would be financially unsustainable. If the company failed, I'd blame myself for not capitalizing on the demand and earning the profit that was available.
 
 With the Raspberry Pi shortage, I'm stuck scaling slowly, but there's relief in it not being my choice. I can't make more Raspberry Pis appear, so I'm just going to make lemonade out of lemons.
 
@@ -167,7 +167,7 @@ Similarly, when large customers send me pushy emails demanding discounts or unre
 
 [ScreenJournal](https://thescreenjournal.com) is a hobby project I've been working on for sharing movie recommendations with friends. It's like Goodreads but for couch potatoes.
 
-I didn't have much time to work on it over the holdiays, but I still made some progress by adding multi-user support. Previously, only a hardcoded admin user could log in, but in December, I added support for user signups and invite codes.
+I didn't have much time to work on it over the holidays, but I still made some progress by adding multi-user support. Previously, only a hardcoded admin user could log in, but in December, I added support for user signups and invite codes.
 
 {{<img src="sj-invites.png" has-border="true"  caption="ScreenJournal now supports signups and invite codes.">}}
 
@@ -181,7 +181,7 @@ I tried Kagi for a weekend, and I was impressed enough after two days that I sig
 
 {{<img src="kagi.png" has-border="true" max-width="450px" caption="ScreenJournal now supports signups and invite codes.">}}
 
-Kagi lets you see Google results if you prefix your query with `!g`, but in my two weeks using it, I've probably only done that in 5% of my searches.
+Kagi lets you see Google results if you prefix your query with `!g`, but in my two weeks of using it, I've probably only done that in 5% of my searches.
 
 An ad-free search engine that's as good as Google 95% of the time would be enough for me to switch, but Kagi also has cool power features that let you personalize your results.
 
@@ -200,8 +200,9 @@ I've only scratched the surface of Kagi's power features, but I'm happy to cut a
 
 - Started shipping orders through our 3PL vendor.
 - Transitioned all remote contractors from TopTracker and Deel to Toggl and Pilot.
-  - TopTracker is fine, but it's free and you get what you pay for.
-  - Deel was a poor experience, and Pilot is not spectacular, but it's better.
+  - TopTracker is fine, but it's free, and you get what you pay for.
+  - Deel was a poor experience
+  - Pilot is not spectacular, but it's better.
 - Mapped out and delegated tasks needed to release Voyager 2a in January.
 
 ### Lessons learned
