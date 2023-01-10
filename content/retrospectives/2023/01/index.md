@@ -1,6 +1,6 @@
 ---
-title: "01"
-date: 2022-12-29T10:19:59-05:00
+title: "TinyPilot: Month 30"
+date: 2024-01-10T00:00:00-05:00
 description: TODO - One-line summary
 ---
 
@@ -23,24 +23,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Fulfill the first order from our 3PL vendor
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Our 3PL vendor shipped three orders
+- **Grade**: A
 
-TODO
+Our 3PL vendor is now up and running, shipping one of our low-volume products. Things have been fairly smooth so far, and we're on track to transition the remainder of the products over in February.
 
 ### Reach code complete on the next TinyPilot Pro release
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We reached code complete in first week of January
+- **Grade**: C
 
-TODO
+We were close to hitting this deadline, but there was one final bug that took longer than I expected. As of this writing, we're at code complete and planning to publish the release next week.
 
 ### Prepare for a January launch of TinyPilot Voyager 2a
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We're on track for a January release.
+- **Grade**: A
 
-TODO
+We're on track for this so far. It's always hard with a new release to anticipate all the changes that will be necessary, but we've completed almost all of the predictable tasks, so we have spare capacity to fix unanticipated issues.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -76,7 +76,7 @@ Finally, on December 20th, I received this email:
 >
 > apologies for the delay, the Best we can offer at the moment is \[...\] for delivery 28.08.2023 in the PI4/2GB
 
-I re-read it several times desperately hoping to find some date format for "28.08.2023" that didn't mean I'd be waiting eight months for my next Raspberry Pi order. Unfortunately, that's exactly what it meant.
+I re-read it several times hoping desperately to identify some date format for "28.08.2023" that didn't mean I'd be waiting eight months for my next Raspberry Pi order. Unfortunately, that's exactly what it meant.
 
 We still have standing Raspberry Pi orders through May 2023, so this isn't a death blow, but we'll have to survive the final three months with no Pi shipments at all.
 
@@ -114,6 +114,8 @@ When I realized TinyPilot would be limited to 140 devices per month, I felt disc
 
 I'd worked so hard to scale up the business over the past two years. Now, it sounded like I'd not only be unwinding the last six months of progress but that I'd be frozen there for eight months.
 
+As I thought more about it, I realized that there were several upsides to the 140/month cap. Scaling constantly is hard! As TinyPilot's founder, I spend most of my time [coordinating changes](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). The faster we scale, the faster our processes change. But redefining processes and filling in gaps during transitions is stressful and not particularly fun. I'd much rather be in the position of h
+
 ## Side project: ScreenJournal
 
 My fiance used it for three minutes. But it was still useful to watch another person use the app to see where she got stuck and what she expected the app to do.
@@ -139,4 +141,4 @@ I used it for a weekend and was impressed enough to purchase a subscription.
 
 - Ship the first Voyager 2a device.
 - Prepare to transition fulfillment to our 3PL vendor in February.
-- Write my annual retrospective.
+- Write my fifth [annual retrospective](/tags/annual-review/).
