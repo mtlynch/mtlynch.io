@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 30"
-date: 2024-01-10T00:00:00-05:00
+date: 2023-01-10T00:00:00-05:00
 description: Handling an eight-month supply shortage
 ---
 
