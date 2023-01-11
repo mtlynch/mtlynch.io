@@ -1,5 +1,8 @@
 ---
 title: "My Fifth Year as a Bootstrapped Founder"
+tags:
+  - annual review
+  - tinypilot
 date: 2023-02-01T00:00:00-05:00
 description: Five years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 ---
