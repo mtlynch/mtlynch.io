@@ -26,7 +26,9 @@ In this post, I'll share what I've learned from TinyPilot about being a bootstra
 
 ## What happened this year?
 
-### I bet big on a large customer and lost
+### Launched a new products
+
+In retrospect, PoE was a mistake. I didn't understand at the time how much complexity there is to PoE. Hardware engineering time has been our most scarce resource, and I'd estimate that about 80% of the hardware engineering time in the last year has been related to PoE.
 
 ### I overspent on a website redesign, but the results paid for themselves
 
@@ -34,7 +36,7 @@ In this post, I'll share what I've learned from TinyPilot about being a bootstra
 
 Last year, one of my lessons was that I had to stop protecting my team from doing work outside their role and instead let my teammates expand their roles as the company grew. It started with having one member of the fulfillment team take over customer service from me.
 
-In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between Eric and I
+In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between Eric and I.
 
 In August, I went out of town for a wedding, but Eric was sick. I realized that the customer service team can't just be a single person.
 
@@ -53,6 +55,24 @@ If a popular YouTube channel mentions you, your sales can double overnight. If y
 Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For the technical support team, they spend around half of their time responding to support requests and half of their time proactively preventing support requests. That includes things like writing tutorials and troubleshooting guides, adding diagnostics to the product to make troubleshooting easier, or making fixes to the code to prevent issues in the first place.
 
 ### Worry when proactive work stops
+
+### Demand skin in the game
+
+Late in 2021, I received an email from a large company that was excited about TinyPilot and wanted to buy 200 units per year and probably more in the future. At the time, I was selling XX units per month, so 200 units from a single customer would be huge.
+
+Finally, in XX, they placed their first order. Except they had some special requests there, too. The India office had a smaller budget, so they wanted to know if I could ship with the free, open source version of the software instead of the normally bundled Pro version. Okay, fine.
+
+Then, they wanted to know if we could print their logo on the case. Okay, fine.
+
+And then they had lots of other requests, but where we finally ended up was that they _only_ wanted TinyPilot's proprietary PCB, and they'd buy the other components themselves. This went from a $XX deal to a $XX deal.
+
+They assured me that this was just the first step, and that the higher-budget US office would be purchasing my full devices at a much higher price.
+
+The day after I shipped their order, they told me they decided to cancel the order and use different hardware. I told them that I'd refund them minus a 15% restocking fee, and they moaned and moaned about how it was unfair.
+
+That was a painful lesson in demanding skin in the game. I had spent tens of thousands of dollars in dev time to prioritize the features they wanted, and they'd spent $700 on two devices.
+
+Every step of the way, they wanted to have a meeting that fit India's business hours. If they wanted to know what shipping options were available, they wouldn't ask me in an email &mdash; they'd schedule a meeting to discuss it.
 
 ## Finances
 
