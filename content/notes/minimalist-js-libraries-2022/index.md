@@ -130,6 +130,7 @@ Doesn't take over the whole app and decide how to route pages.
 | [htmx](https://htmx.org)                          | ✔️                   | ✔️                  | ✔️               | Technically yes, practically no\* |
 | [Stimulus](https://stimulus.hotwired.dev)         | ❌                   | ❌                  | ✔️               | ✔️                                |
 | [Mavo](https://mavo.io/)                          |                      |                     |                  |                                   |
+| [Mikado](https://github.com/nextapps-de/mikado)   |                      |                     |                  |                                   |
 | [petite-vue](https://github.com/vuejs/petite-vue) | ✔️                   | ✔️                  | ✔️               | ❌                                |
 | [Knockout](https://knockoutjs.com/)               | ✔️                   | ✔️                  | ✔️               | ❌                                |
 | [TKO](https://github.com/knockout/tko)            | ✔️                   | ✔️                  | ✔️               | ❌                                |
@@ -227,6 +228,10 @@ Supposedly, it's [CSP-compatible](https://github.com/knockout/knockout/issues/90
 #### [Mavo](https://mavo.io/)
 
 Seems like maybe is an academic research project?
+
+### [Mikado](https://github.com/nextapps-de/mikado)
+
+Found from this [heavily downvoted HN comment](https://news.ycombinator.com/item?id=34366942)
 
 ### [petite-vue](https://github.com/vuejs/petite-vue)
 
