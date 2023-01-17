@@ -28,6 +28,10 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ### Launched a new product
 
+TinyPilot is the only KVM over IP device I'm aware of that supports PoE.
+
+I also found out _why_ TinyPilot is the only one to do it. PoE is hard! I'm glad to have PoE now, but in retrospect
+
 In retrospect, PoE was a mistake. I didn't understand at the time how much complexity there is to PoE. Hardware engineering time has been our most scarce resource, and I'd estimate that about 80% of the hardware engineering time in the last year has been related to PoE.
 
 ### I overspent on a website redesign, but the results paid for themselves
@@ -77,17 +81,21 @@ Shipping two orders is only about 20% more time-consuming than shipping a single
 | Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 
-### Be more conservative in promising feature timelines
+### Be skeptical of customers who have no skin in the game
 
-Late in 2021, I received an email from a large company that was excited about TinyPilot and wanted to buy 200 units per year and probably more in the future. At the time, I was selling XX units per month, so 200 units from a single customer would be huge.
+Late in 2021, I received an email from a large company that was excited about TinyPilot and wanted to buy 200 units per year and probably more in the future. At the time, I was selling XX units per month, so 200 units from a single customer would be an enormous boost in our sales.
 
-They said that one important feature to them was H264 video encoding. TinyPilot had been streaming video using MJPEG, a protocol that's old but simple. The video streaming tools we were using supported already supported H264, so it didn't seem that hard to switch over. Plus, it was top of our list anyway. H264 uses about 1/10th of the bandwidth as MJPEG, so many other customers had been asking for this feature.
+They said that one important feature to them was H264 video encoding. The video streaming tools we were using supported already supported H264, so it didn't seem that hard to switch over. Plus, it was top of our list anyway. H264 uses about 1/10th of the bandwidth as MJPEG, so many other customers had been asking for this feature.
 
-I estimated that we'd have H264 ready in January, so I gave myself some padding and told the customer that we expected to expect it by early March.
+I estimated that we'd have H264 ready in January, and I gave myself some padding and told the customer that we expected to expect it by early March.
 
-Then, two things happened. The first was that one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse) that we prioritized. The fix required an architecture change, so it swallowed all of our development resources for two months.
+Then, two things happened. The first was that one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse). We suspended work on everything else to prioritize that fix. The fix required an architecture change, so it swallowed all of our development resources for two months.
 
-Then, it turned out that supporting H264 video actually wasn't so easy.
+Then, I discovered that supporting H264 video was much more difficult than I anticipated. You can't just slap some JavaScript in your app and call it a day. To consume H.264 video, you also need to run a WebRTC server. And the WebRTC server that our tools supported didn't have an official build for our architecture, so we had to build our own. And compiling it from source on a Raspberry Pi takes 20 minutes, so fixing errors was quite tedious and time-consuming.
+
+I also discovered that H.264 is patented, so I had to go through a multi-month process to license the format from the patent-holder.
+
+In the end, the customer backed out of the deal the day after they placed their first large order. I was exasperated and didn't have time to work with them anymore.
 
 The second issue was that H264 is harder to integrate than I expected. For all of its faults, MJPEG is dead simple to integrate with. You just create an `img` tag, point the `src` attribute at the MJPEG stream, and boom! Streaming video. To consume H264 video, you need to stand up a separate WebRTC server and use JavaScript to orchestrate the connection in unintuitive ways.
 
@@ -117,34 +125,51 @@ Every step of the way, they wanted to have a meeting that fit India's business h
 
 ### Grow TinyPilot to $1M in annual revenue
 
-- **Result**:
-- **Grade**: B-
+- **Result**: Grew TinyPilot's revenue by XX% to $XXk
+- **Grade**: B
+
+I knew that $1M was an aggressive goal, and I'm still impressed how close we came. I think revenue is kind of a vanity metric, especially given that profit was negative, but to suspend rigor for a moment, not a lot of bootstrapped businesses reach $XXk in annual revenue.
 
 ### Manage TinyPilot on 20 hours per week
 
-- **Result**:
+- **Result**: I spent more time managing TinyPilot in 2022 than in 2021.
 - **Grade**: F
+
+I'd estimate that I work 40-50 hours per week.
+
+I wrote fewer blog posts and participated less in TinyPilot's software development.
 
 ### Ship a new TinyPilot hardware product
 
-- **Result**:
+- **Result**: I never even started work on the Voyager 3
 - **Grade**: D
+
+TinyPilot has always used the Raspberry Pi 4B as the core hardware. My plan for 2022 was to get rid of the Pi 4B and all the other third-party boards and consolidate all the functionality into a custom TinyPilot board.
+
+Instead, all of our hardware engineering time went to chasing down manufacturing issues and supply shortages, so we made no progress on this.
 
 ## Goals for year six
 
 ### Manage TinyPilot on 20 hours per week
 
-I failed miserably at this last year, but it's now my top priority.
+I failed miserably at this last year, but it's now my top priority. I'm hopeful that this is more achievable this year. In 2022, TinyPilot expanded customer support from one person to two and created a new support engineering team. Those steps required a lot of management between hiring, training, and defining new workflows. But all of that is done now, so I expect management time to continue trending downward.
 
 ### Earn $100k in profit
 
 In previous years, I've focused on growth. For a hardware business to work, you need to be at a certain scale. At this point, I'm at the scale where I'd feel happy maintaining this indefinitely.
 
+For most of 2023, TinyPilot's production will be constrained by supply, so I'm going to focus on profit rather than growth.
+
 ### Eliminate the need for a physical office
 
-For TinyPilot's first few years, we 3D printed all of TinyPilot's cases through the ADDFAB lab at the University of Massachusetts. We qualified for a state grant for small businesses, so we got great rates. The problem was that 3D printing scales poorly. Each 3D printer costs $5,000, and it can only print 40-60 cases per month.
+Until a few days ago, TinyPilot had been working with a local vendor to 3D print all of TinyPilot's cases. In the last few days, we completed the transition from 3D printed cases to metal cases. The main goal of the transition was to increase our scale. 3D printing limited us to about 140 cases per month, and then we'd have to purchase a new $5k for every 40 case/month beyond that.
 
-We switched to metal cases, as sheet metal manufacturers can crank out thousands of cases per month. But now that we're making cases in China, it opened an opportunity I hadn't thought of. We always manufactured the devices in-house because I couldn't find a vendor willing to do this at my scale. But now almost all of our parts were coming from China, so we could outsource manufacturing to China.
+One unexpected side effect is that it makes it easier to move assembly to China. And if we don't need our office for assembling devices, we can outsource other things and get rid of the office. We can outsource fulfillment to a third-party logistics provider.
+
+It eliminates a lot of complexity we've been dealing with in-house. We don't have to manage inventory or make sure the office is staffed.
+
+One unexpected consequence
+But now that we're making cases in China, it opened an opportunity I hadn't thought of. We always manufactured the devices in-house because I couldn't find a vendor willing to do this at my scale. But now almost all of our parts were coming from China, so we could outsource manufacturing to China.
 
 The main reason TinyPilot has a physical office is to manufacture devices. We fulfill from the office too because it's easy enough to do both together, but if we stopped manufacturing, we could eliminate the office and eliminate a lot of complexity in terms of making sure the office is staffed, doing regular inventory counts, reordering parts, etc.
 
@@ -152,10 +177,12 @@ The main reason TinyPilot has a physical office is to manufacture devices. We fu
 
 Every year, when I write these blog posts, I ask myself whether I still love what I'm doing.
 
-2022 was a hard year &mdash; certainly my hardest since going off on my own. I wasn't miserable, but I didn't love it either.
+2022 was a hard year &mdash; certainly my hardest since going off on my own. I wasn't miserable, but I can't say I _loved_ it.
 
 The things I enjoy doing most are programming and writing, and the past year gave me little time for either. I spent most of my time on TinyPilot scrambling to keep up with demand, filling in gaps as we grew, and putting out small fires.
 
-I spent most of my time putting out small fires
+I grew as a manager. I learned more about hiring.
 
-Hardest year. No time for writing, little time for writing software.
+I'm hopeful that this year was hard because I was doing a lot of things that will pay dividends over the next few years.
+
+I still prefer working for myself to working for an employer, and I plan to do it indefinitely.
