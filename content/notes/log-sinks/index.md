@@ -7,18 +7,6 @@ My apps generate &lt;10MB of logs per month. Want a log solution that provides h
 
 Mainly want it for searching web app logs, viewing logs. Don't care about graphs, alerts.
 
-## Papertrail
-
-Lets you customize volume and search duration. Doesn't let you customize retention, but a year is decent. I think you can also archite to S3.
-
-Aimed at large companies. Owned by Solarwinds, who was subject of famous hack.
-
-Insecure by default. Accepts logs from any host. Hard to tighten this up on Fly.io since the VMs are ephemeral, and Fly doesn't have support for authenticating to Papertrail. Would probably be straightforward to add, though, since fly-log-shipper is open-source.
-
-Bad at integrating with fly.io's vector format.
-
-{{<img src="papertrail-logs.png">}}
-
 ## Axiom
 
 90-day retention (lowest-cost plan) costs $99/month.
@@ -94,6 +82,18 @@ Hosted version is $8/mo for max of 30-day log retention
 ## New Relic
 
 "Data Plus" plan has 90+ day retention, but no published pricing for it.
+
+## Papertrail
+
+Lets you customize volume and search duration. Doesn't let you customize retention, but a year is decent. I think you can also archite to S3.
+
+Aimed at large companies. Owned by Solarwinds, who was subject of famous hack.
+
+Insecure by default. Accepts logs from any host with no authentication as long as they guess the easily-guessable endpoint. Hard to tighten this up on Fly.io since the VMs are ephemeral, and Fly doesn't have support for authenticating to Papertrail. Would probably be straightforward to add, though, since fly-log-shipper is open-source.
+
+Bad at integrating with fly.io's vector format.
+
+{{<img src="papertrail-logs.png">}}
 
 ## Sematext
 
