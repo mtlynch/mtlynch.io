@@ -4,6 +4,7 @@ tags:
   - annual review
   - tinypilot
 date: 2023-02-01T00:00:00-05:00
+hero_image: cover.jpg
 description: Five years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 ---
 
@@ -30,58 +31,21 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 TinyPilot is the only KVM over IP device I'm aware of that supports PoE.
 
-I also found out _why_ TinyPilot is the only one to do it. PoE is hard! I'm glad to have PoE now, but in retrospect
+I also found out _why_ TinyPilot is the only one to do it. PoE is hard! I'm glad to have PoE now, but in retrospect it was a mistake.
 
-In retrospect, PoE was a mistake. I didn't understand at the time how much complexity there is to PoE. Hardware engineering time has been our most scarce resource, and I'd estimate that about 80% of the hardware engineering time in the last year has been related to PoE.
+I didn't understand at the time how much complexity there is to PoE. Hardware engineering time has been our most scarce resource, and I'd estimate that about 80% of the hardware engineering time in the last year has been related to PoE.
 
-### I overspent on a website redesign, but the results paid for themselves
+### I let a website redesign go awry
 
-### TinyPilot's teams matured
+Late last year, I started the process of a rebrand for TinyPilot. I wrote a lot more about it in a previous blog post.
 
-Last year, one of my lessons was that I had to stop protecting my team from doing work outside their role and instead let my teammates expand their roles as the company grew. It started with having one member of the fulfillment team take over customer service from me.
+The post about the fiasco ended up becoming popular in a way I didn't expect. It attracted XX readers in the first week and XX by the end of the year, making it my XXnd most popular blog post of all time. I didn't have a lot of time to write this year, so it was nice to see one of the three blog posts I published reach such a wide audience.
 
-In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between Eric and I.
+When I say the results were unexpected, it's really not false humility. Spending $46k on a website redesign didn't seem like something most people would relate to. What I found afterwards was that people related to the experience of feeling mistreated by a business and struggling with how to fix the situation. That was also a good lesson in my writing that even with experiences that aren't widely shared, the emotions are what resonate with people.
 
-In August, I went out of town for a wedding, but Eric was sick. I realized that the customer service team can't just be a single person.
+Even though I spent more than I meant to, I believe the results paid for themselves. After we switched to the new design, website sales went from $XX-$XXk/month to $XX-$XXk/month, and I wasn't making other changes that would explain the increase. It could be that our product spreads through word of mouth, so those customers would have purchased anyway, but I feel a little better about blowing the $46k if I feel like I got a positive return.
 
-Similar to the lesson I learned about customer support, I hired an additional technical support engineer. A month later, I unfortunately had to let the first support engineer go due to issues with their work, but I hired a second new support engineer. At this point, they're
-
-### I wrestled with manufacturing issues
-
-TinyPilot's electrical engineering partner likes to tell me that I'm in the "valley of despair." They say that the problems I'm dealing with shipping 200 units per month are similar to problems I'd have if I were shipping 1000, but I don't get the benefit of scale.
-
-TinyPilot has been using custom PCBs
-
-It took me a long time to untangle what issues were because of the global supply chain crisis, what issues came from mistakes my original hardware design partner made, and what were just normal issues you run into manufacturing PCBs.
-
-## Lessons learned
-
-### Run at 50% capacity
-
-If a popular YouTube channel mentions you, your sales can double overnight. If you were already running at near-capacity, you'll fold when demand doubles.
-
-Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For the technical support team, they spend around half of their time responding to support requests and half of their time proactively preventing support requests. That includes things like writing tutorials and troubleshooting guides, adding diagnostics to the product to make troubleshooting easier, or making fixes to the code to prevent issues in the first place.
-
-For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
-
-### Worry when proactive work stops
-
-A lot of the work batches efficiently. If you're shipping one order, maybe it takes five minutes, but if you're shipping three orders, it maybe only takes eight minutes. You can print all the order slips at once and just drop them into three boxes, then tape them all up.
-
-So when orders went from 130/month to 200/month, I thought we were fine. It turned out that we had been running at near 100% capacity, and I never realized.
-
-I had recently started thinking about transitioning fulfillment to a third-party logistics (3PL) vendor, and I was hoping the fulfillment team would do a lot of the legwork in figuring out how to translate our workflows to a 3PL. It turned out that
-
-Shipping two orders is only about 20% more time-consuming than shipping a single order.
-
-| Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Public writing<br>Re-evaluating strategy<br>Hiring and training                               |
-| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
-| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
-| Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
-
-### Be skeptical of customers who have no skin in the game
+### I derailed development to chase a large customer
 
 Late in 2021, I received an email from a large company that was excited about TinyPilot and wanted to buy 200 units per year and probably more in the future. At the time, I was selling XX units per month, so 200 units from a single customer would be an enormous boost in our sales.
 
@@ -118,6 +82,59 @@ The day after I shipped their order, they told me they decided to cancel the ord
 That was a painful lesson in demanding skin in the game. I had spent tens of thousands of dollars in dev time to prioritize the features they wanted, and they'd spent $700 on two devices.
 
 Every step of the way, they wanted to have a meeting that fit India's business hours. If they wanted to know what shipping options were available, they wouldn't ask me in an email &mdash; they'd schedule a meeting to discuss it.
+
+### TinyPilot's teams matured
+
+One of the most important lessons I learned in 2021 was to allow my teammates expand their roles and grow with the company. Originally, I thought my duty as a manager was to protect employees' jobs from changing at all. As the company grew, I filled in the gaps.
+
+In 2022, I focused on cultivating growth and self-directed teams instead of having everyone report directly to me. I tried to
+
+that I had to stop protecting my team from doing work outside their role and instead let my teammates expand their roles as the company grew. It started with having one member of the fulfillment team take over customer service from me.
+
+In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between me and Eric.
+
+In August, I traveled to Ohio for a week to attend a wedding. Unfortunately, Eric got sick the same week. Fortunately, support volume was low that week, and nothing required an urgent response, but it was a wakeup call that the customer service team can't just be a single person.
+
+Similar to the lesson I learned about customer support, I hired an additional technical support engineer. A month later, I unfortunately had to let the first support engineer go due to issues with their work, but I hired a second new support engineer. At this point, they're
+
+### I wrestled with manufacturing issues
+
+TinyPilot's electrical engineering partner likes to tell me that I'm in the "valley of despair." They say that the problems I'm dealing with shipping 200 units per month are similar to problems I'd have if I were shipping 1000, but I don't get the benefit of scale.
+
+TinyPilot has been using custom PCBs
+
+It took me a long time to untangle what issues were because of the global supply chain crisis, what issues came from mistakes my original hardware design partner made, and what were just normal issues you run into manufacturing PCBs.
+
+## Lessons learned
+
+### Run at 50% capacity
+
+If a popular YouTube channel mentions you, your sales can double overnight. If you were already running at near-capacity, you'll fold when demand doubles.
+
+Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For the technical support team, they spend around half of their time responding to support requests and half of their time proactively preventing support requests. That includes things like writing tutorials and troubleshooting guides, adding diagnostics to the product to make troubleshooting easier, or making fixes to the code to prevent issues in the first place.
+
+If one person is sick or takes vacation for a week, the other person can pause their proactive work and still do all the time-sensitive tasks their counterpart was doing without it being a strain.
+
+For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
+
+### Worry when proactive work stops
+
+A lot of the work batches efficiently. If you're shipping one order, maybe it takes five minutes, but if you're shipping three orders, it maybe only takes eight minutes. You can print all the order slips at once and just drop them into three boxes, then tape them all up.
+
+So when orders went from 130/month to 200/month, I thought we were fine. It turned out that we had been running at near 100% capacity, and I never realized.
+
+I had recently started thinking about transitioning fulfillment to a third-party logistics (3PL) vendor, and I was hoping the fulfillment team would do a lot of the legwork in figuring out how to translate our workflows to a 3PL. It turned out that
+
+Shipping two orders is only about 20% more time-consuming than shipping a single order.
+
+| Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Public writing<br>Re-evaluating strategy<br>Hiring and training                               |
+| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
+| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
+| Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
+
+### Be skeptical of customers who have no skin in the game
 
 ## Finances
 
