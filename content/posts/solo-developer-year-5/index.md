@@ -25,9 +25,9 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 - [My Third Year as a Solo Developer](/solo-developer-year-3/)
 - [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 
-## What happened this year?
+## What went well this year?
 
-### Launched a new product
+### TinyPilot's manufacturing scaled up
 
 TinyPilot is the only KVM over IP device I'm aware of that supports PoE.
 
@@ -35,15 +35,21 @@ I also found out _why_ TinyPilot is the only one to do it. PoE is hard! I'm glad
 
 I didn't understand at the time how much complexity there is to PoE. Hardware engineering time has been our most scarce resource, and I'd estimate that about 80% of the hardware engineering time in the last year has been related to PoE.
 
-### I let a website redesign go awry
+### TinyPilot's teams matured
 
-Late last year, I started the process of a rebrand for TinyPilot. I wrote a lot more about it in a previous blog post.
+One of the most important lessons I learned in 2021 was to allow my teammates expand their roles and grow with the company. Originally, I thought my duty as a manager was to protect employees' jobs from changing at all. As the company grew, I filled in the gaps.
 
-The post about the fiasco ended up becoming popular in a way I didn't expect. It attracted XX readers in the first week and XX by the end of the year, making it my XXnd most popular blog post of all time. I didn't have a lot of time to write this year, so it was nice to see one of the three blog posts I published reach such a wide audience.
+In 2022, I focused on cultivating growth and self-directed teams instead of having everyone report directly to me. I tried to
 
-When I say the results were unexpected, it's really not false humility. Spending $46k on a website redesign didn't seem like something most people would relate to. What I found afterwards was that people related to the experience of feeling mistreated by a business and struggling with how to fix the situation. That was also a good lesson in my writing that even with experiences that aren't widely shared, the emotions are what resonate with people.
+that I had to stop protecting my team from doing work outside their role and instead let my teammates expand their roles as the company grew. It started with having one member of the fulfillment team take over customer service from me.
 
-Even though I spent more than I meant to, I believe the results paid for themselves. After we switched to the new design, website sales went from $XX-$XXk/month to $XX-$XXk/month, and I wasn't making other changes that would explain the increase. It could be that our product spreads through word of mouth, so those customers would have purchased anyway, but I feel a little better about blowing the $46k if I feel like I got a positive return.
+In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between me and Eric.
+
+In August, I traveled to Ohio for a week to attend a wedding. Unfortunately, Eric got sick the same week. Fortunately, support volume was low that week, and nothing required an urgent response, but it was a wakeup call that the customer service team can't just be a single person.
+
+Similar to the lesson I learned about customer support, I hired an additional technical support engineer. A month later, I unfortunately had to let the first support engineer go due to issues with their work, but I hired a second new support engineer. At this point, they're
+
+## What went poorly this year?
 
 ### I derailed development to chase a large customer
 
@@ -83,27 +89,17 @@ That was a painful lesson in demanding skin in the game. I had spent tens of tho
 
 Every step of the way, they wanted to have a meeting that fit India's business hours. If they wanted to know what shipping options were available, they wouldn't ask me in an email &mdash; they'd schedule a meeting to discuss it.
 
-### TinyPilot's teams matured
+### I let a website redesign go awry
 
-One of the most important lessons I learned in 2021 was to allow my teammates expand their roles and grow with the company. Originally, I thought my duty as a manager was to protect employees' jobs from changing at all. As the company grew, I filled in the gaps.
+Late last year, I started the process of a rebrand for TinyPilot.
 
-In 2022, I focused on cultivating growth and self-directed teams instead of having everyone report directly to me. I tried to
+I wrote a longer blog post about the experience, and it became popular in a way I didn't expect. It attracted XX readers in the first week and XX by the end of the year, making it my XXnd most popular blog post of all time.
 
-that I had to stop protecting my team from doing work outside their role and instead let my teammates expand their roles as the company grew. It started with having one member of the fulfillment team take over customer service from me.
+When I say the results were unexpected, it's not false humility. I didn't think many people would find the story relatable. How many people have spent $46k on a website redesign?
 
-In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between me and Eric.
+I found afterwards was that people related to the experience of feeling mistreated by a business and struggling with how to fix the situation. That was also a good lesson in my writing that even with experiences that aren't widely shared, the emotions are what resonate with people.
 
-In August, I traveled to Ohio for a week to attend a wedding. Unfortunately, Eric got sick the same week. Fortunately, support volume was low that week, and nothing required an urgent response, but it was a wakeup call that the customer service team can't just be a single person.
-
-Similar to the lesson I learned about customer support, I hired an additional technical support engineer. A month later, I unfortunately had to let the first support engineer go due to issues with their work, but I hired a second new support engineer. At this point, they're
-
-### I wrestled with manufacturing issues
-
-TinyPilot's electrical engineering partner likes to tell me that I'm in the "valley of despair." They say that the problems I'm dealing with shipping 200 units per month are similar to problems I'd have if I were shipping 1000, but I don't get the benefit of scale.
-
-TinyPilot has been using custom PCBs
-
-It took me a long time to untangle what issues were because of the global supply chain crisis, what issues came from mistakes my original hardware design partner made, and what were just normal issues you run into manufacturing PCBs.
+Even though I spent more than I meant to, I believe the results paid for themselves. After we switched to the new design, website sales went from $XX-$XXk/month to $XX-$XXk/month, and I wasn't making other changes that would explain the increase. It could be that our product spreads through word of mouth, so those customers would have purchased anyway, but I feel a little better about blowing the $46k if I feel like I got a positive return.
 
 ## Lessons learned
 
@@ -111,21 +107,9 @@ It took me a long time to untangle what issues were because of the global supply
 
 If a popular YouTube channel mentions you, your sales can double overnight. If you were already running at near-capacity, you'll fold when demand doubles.
 
-Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For the technical support team, they spend around half of their time responding to support requests and half of their time proactively preventing support requests. That includes things like writing tutorials and troubleshooting guides, adding diagnostics to the product to make troubleshooting easier, or making fixes to the code to prevent issues in the first place.
+Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work.
 
-If one person is sick or takes vacation for a week, the other person can pause their proactive work and still do all the time-sensitive tasks their counterpart was doing without it being a strain.
-
-For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
-
-### Worry when proactive work stops
-
-A lot of the work batches efficiently. If you're shipping one order, maybe it takes five minutes, but if you're shipping three orders, it maybe only takes eight minutes. You can print all the order slips at once and just drop them into three boxes, then tape them all up.
-
-So when orders went from 130/month to 200/month, I thought we were fine. It turned out that we had been running at near 100% capacity, and I never realized.
-
-I had recently started thinking about transitioning fulfillment to a third-party logistics (3PL) vendor, and I was hoping the fulfillment team would do a lot of the legwork in figuring out how to translate our workflows to a 3PL. It turned out that
-
-Shipping two orders is only about 20% more time-consuming than shipping a single order.
+The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time proactively reducing support workload. Proactive measures include things like writing tutorials, adding diagnostics to the product to make troubleshooting easier, and improving the product to prevent issues in the first place.
 
 | Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -133,6 +117,24 @@ Shipping two orders is only about 20% more time-consuming than shipping a single
 | Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
 | Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
+
+If one person is sick or takes vacation for a week, the other person can pause their proactive work and still do all the time-sensitive tasks their counterpart was doing without it being a strain.
+
+For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
+
+### Worry when proactive work stops
+
+One of the more subtle downsides
+
+A lot of the work batches efficiently. If you're shipping one order, maybe it takes five minutes, but if you're shipping three orders, it maybe only takes eight minutes. You can print all the order slips at once and just drop them into three boxes, then tape them all up.
+
+So when orders went from 130/month to 200/month, I thought we were fine. It turned out that we had been running at near 100% capacity, and I never realized.
+
+If you're running at near-capacity, get stuck in an undesirable position of focusing only on short-term problems. As TinyPilot's sales grew, we realized it was time to switch to an external vendor to handle our order fulfillment. Except that by the time I realized it, we [didn't have time to make the switch](/retrospectives/2022/12/#we-dont-have-enough-time-to-save-ourselves-time). Researching improvements and implementing them takes time, so if you only have a small amount of spare capacity, you'll get stuck doing what you're doing.
+
+I had recently started thinking about transitioning fulfillment to a third-party logistics (3PL) vendor, and I was hoping the fulfillment team would do a lot of the legwork in figuring out how to translate our workflows to a 3PL. It turned out that
+
+Shipping two orders is only about 20% more time-consuming than shipping a single order.
 
 ### Be skeptical of customers who have no skin in the game
 
@@ -150,11 +152,11 @@ I knew that $1M was an aggressive goal, and I'm still impressed how close we cam
 ### Manage TinyPilot on 20 hours per week
 
 - **Result**: I spent more time managing TinyPilot in 2022 than in 2021.
-- **Grade**: F
+- **Grade**: D
 
 I'd estimate that I work 40-50 hours per week.
 
-I wrote fewer blog posts and participated less in TinyPilot's software development.
+I wrote a little more on my blog and participated slightly more in TinyPilot's software development.
 
 ### Ship a new TinyPilot hardware product
 
