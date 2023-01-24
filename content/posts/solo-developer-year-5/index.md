@@ -91,9 +91,9 @@ Every step of the way, they wanted to have a meeting that fit India's business h
 
 I've been trying to think of the takeaway from this story, and I've struggled to find the lesson.
 
-At first, I thought it was a lesson in limiting how much I promise customers. But I never committed to a date, and the estimate I gave them was twice as long as I thought it would take us. We just caught bad luck twice. It's reasonable for customers to know our roadmap, so I can't just refuse to give dates for anything.
+At first, I thought it was a lesson in limiting how much I promise customers, but I already knew that. I always gave them caveats that we're a small team so our estimates are approximate. And I even padded my estimate to give us two extra months of buffer. But I never committed to a date, and the estimate I gave them was twice as long as I thought it would take us. We just caught bad luck twice. It's reasonable for customers to know our roadmap, so I can't just refuse to give dates for anything.
 
-Then I thought this was a lesson not to invest too much in customers with no skin in the game. This customer had only purchased two devices for a total of around $700. But theyd did have skin in the game. They were working on their own custom frontend for TinyPilot. So it theoretically cost them something to drop TinyPilot.
+Then I thought this was a lesson not to invest too much in customers with no skin in the game. This customer had only purchased two devices for a total of around $700, but they'd asked for us to prioritize a lot of features for them before they bought more. But they did have skin in the game. They were working on their own custom frontend for TinyPilot. So it theoretically cost them something to drop TinyPilot. And it's not like they were asking for niche, oddball features. The things that they wanted were the same features that most of our customers wanted.
 
 I'm not really sure if there is a lesson. If I had to go back with the same information, I'd do the same thing. So maybe the lesson is just that sometimes you make a big bet and accept when it doesn't pay off.
 
