@@ -4,7 +4,9 @@ tags:
   - annual review
   - tinypilot
 date: 2023-02-01T00:00:00-05:00
-hero_image: cover.jpg
+hero_image: cover.webp
+images:
+  - solo-developer-year-5/og-cover.webp
 description: Five years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 ---
 
