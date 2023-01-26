@@ -12,7 +12,7 @@ description: Five years ago today, I quit my job as a developer at Google to cre
 
 Five years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-For the first few years, all of my businesses flopped. They all operated at a loss, and none of them earned more than a few hundred dollars per month in revenue.
+For the first few years, all of my businesses flopped. None of them earned more than a few hundred dollars per month in revenue, and they all had negative profit.
 
 Halfway through my third year, I created a network administration device called [TinyPilot](https://tinypilotkvm.com). It quickly caught on, and it's been my main focus ever since.
 
@@ -55,35 +55,39 @@ Similar to the lesson I learned about customer support, I hired an additional te
 
 ### I derailed development to chase a large customer
 
-Late in 2021, I received an email from a large company that was excited about TinyPilot and wanted to buy 200 units per year and probably more in the future. At the time, I was selling XX units per month, so 200 units from a single customer would be an enormous boost in our sales.
+Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices per year and probably more in the future. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales.
 
-They said that one important feature to them was H264 video encoding. The video streaming tools we were using supported already supported H264, so it didn't seem that hard to switch over. Plus, it was top of our list anyway. H264 uses about 1/10th of the bandwidth as MJPEG, so many other customers had been asking for this feature.
+They said that one important feature to them was H264 video encoding. The video streaming tools we were using supported already supported H264, so it didn't seem that hard to switch over. Plus, it was one of our most commonly requested features anyway.
 
-I estimated that we'd have H264 ready in January, and I gave myself some padding and told the customer that we expected to expect it by early March.
+I estimated that we'd have H264 ready in January, and I gave myself some padding and told the customer that we expected to launch it by early March.
 
-Then, two things happened. The first was that one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse). We suspended work on everything else to prioritize that fix. The fix required an architecture change, so it swallowed all of our development resources for two months.
+Then, two things happened. The first was that one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse). We paused work on everything else to prioritize a fix. The fix required an architecture change, so it swallowed all of our development resources for two months.
 
-Then, I discovered that supporting H264 video was much more difficult than I anticipated. You can't just slap some JavaScript in your app and call it a day. To consume H.264 video, you also need to run a WebRTC server. And the WebRTC server that our tools supported didn't have an official build for our architecture, so we had to build our own. And compiling it from source on a Raspberry Pi takes 20 minutes, so fixing errors was quite tedious and time-consuming.
+Then, I discovered that offering H264 video was an order of magnitude more difficult than I anticipated. Our previous format, MJPEG, was dead simple to integrate. You pop an `<img>` tag into your page, point the `src` attribute at an MJPEG stream, and you're done! But to stream H264, you need to stand up a WebRTC server, then you need to configure your WebRTC server to talk to your H264 streaming server, then you need to invoke a special JavaScript incantation to attach the video stream to the `<video>` element. And then I found out that H264 is patented, so I had to go through a multi-month process to license the format.
 
-I also discovered that H.264 is patented, so I had to go through a multi-month process to license the format from the patent-holder.
+I realized in XX that we weren't going to meet the March timeline. I told the customer that we were running late, and that we could potentially scope down the work to the essentials they care about. They were building their own frontend, so they said we could skip implementing a web UI and just show them how to enable H264 from the command-line.
 
-In the end, the customer backed out of the deal the day after they placed their first large order. I was exasperated and didn't have time to work with them anymore.
+So, we did that. It led to a weird release announcement that was a big departure from TinyPilot. I've tried to keep TinyPilot so that everything's intuitive and user-friendly. If we advertise a feature, you can use it from the web interface. This was a big departure because it was not web-friendly. You had to SSH in and run commands for 20 minutes. But the customer was satisfied.
 
-The second issue was that H264 is harder to integrate than I expected. For all of its faults, MJPEG is dead simple to integrate with. You just create an `img` tag, point the `src` attribute at the MJPEG stream, and boom! Streaming video. To consume H264 video, you need to stand up a separate WebRTC server and use JavaScript to orchestrate the connection in unintuitive ways.
+Finally, it was time for them to place their first order. They wanted XX TinyPilot devices. Except they had some special requests there, too. The India office had a smaller budget, so they wanted to know if I could ship offer a discount. They assured me that this was just the first step, and that the higher-budget US office would be purchasing my full devices at a much higher price. if I gave them the free, open source version of the software instead of the normally bundled Pro version. Okay, fine. I'll take $XX off.
 
-By the time I realized all the work we'd have to put in, H264 was no longer the best choice for our next feature. There were other things we could have done that would have gotten us a bigger bang for our buck. And even though I was careful never to promise this feature to the customer, I didn't want to lose this very large customer.
+Whoa, whoa, whoa, they said. $XX off? You sell the Pro version standalone for $80, so shouldn't it be a discount of $80 per device?
+
+I told them no because .
+
+Okay, in that case, they said. What if you take out the Raspberry Pi and they buy their own? And then what if
+
+Then, they wanted to know if we could print their logo on the case. Okay, fine.
+
+And then they had lots of other requests, but where we finally ended up was that they _only_ wanted TinyPilot's proprietary circuit boards, and they'd buy the other components themselves. This went from a $XX deal to a $XX deal.
+
+The day after I shipped their first box, they asked for 3D models of our circuit boards. This wasn't part of the agreement, but I just wanted to wrap this up, so I sent them. They were confused and asked why the models didn't include a video capture port. I explained that our devices use a third-party chip for that, which they would have received if they ordered a pre-made device, but that was one of the things they agreed to buy on their own.
+
+They said our circuit boards were of no use to them without built-in video capture, and they wanted a full refund. I told them that we'd already shipped the first box to India and had no way of recalling it, so they'd have to
 
 In the end, it just became a mess where nobody was happy. We put in months of dev time to satisfy the big customer, and we delivered what they wanted a month late. I'm not sure if it was because of our lateness or that they were never that serious in the first place, but they ultimately only ordered two devices from us, for a total of $700 in revenue.
 
 We're a small company, and we only have about 35 hours of dev time per week between the two part-time developers and me.
-
-Finally, in XX, they placed their first order. Except they had some special requests there, too. The India office had a smaller budget, so they wanted to know if I could ship with the free, open source version of the software instead of the normally bundled Pro version. Okay, fine.
-
-Then, they wanted to know if we could print their logo on the case. Okay, fine.
-
-And then they had lots of other requests, but where we finally ended up was that they _only_ wanted TinyPilot's proprietary PCB, and they'd buy the other components themselves. This went from a $XX deal to a $XX deal.
-
-They assured me that this was just the first step, and that the higher-budget US office would be purchasing my full devices at a much higher price.
 
 The day after I shipped their order, they told me they decided to cancel the order and use different hardware. I told them that I'd refund them minus a 15% restocking fee, and they moaned and moaned about how it was unfair.
 
@@ -146,7 +150,19 @@ I had recently started thinking about transitioning fulfillment to a third-party
 
 Shipping two orders is only about 20% more time-consuming than shipping a single order.
 
-### Be skeptical of customers who have no skin in the game
+### Accept that some bets fail
+
+In writing this post, I struggled to come up with a meaningful lesson from my unsuccessful pursuit of the large customer.
+
+Certainly, it was a negative outcome, and I'd like to avoid it in the future, but I couldn't pinpoint what, exactly, I got wrong.
+
+At first, I thought it was a lesson in making unreasonable promises to customers. But I didn't really. I told the customer that our timeline was an estimate, and the estimate I gave them was 40% longer than I thought it would take us. I did that specifically to avoid feeling rushed to account for unknown unknowns. We ran into unexpected delays, and even though I budgeted for them, they were more severe than I guessed.
+
+Then, perhaps because I'm reading a lot of Nassim Taleb lately, I thought the experience was a lesson in avoiding business relationships where I have much more skin in the game than my counterparty. At the end, I felt like I invested thousands into development and dozens of hours of time personally, and the customer had invested almost nothing.
+
+Re-reading my correspondence, I remembered that the customer had been writing custom software to integrate with TinyPilot. As a percentage of overall resources, I was certainly investing a lot more of TinyPilot's resources, but that's the nature of
+
+In the end, I think the lesson might be kind of boring and obvious: some bets don't pay off. As the founder, I have to roll with the punches. If I'd do the same thing with the same information, it's not a mistake.
 
 ## Finances
 
@@ -164,9 +180,9 @@ I knew that $1M was an aggressive goal, and I'm still impressed how close we cam
 - **Result**: I spent more time managing TinyPilot in 2022 than in 2021.
 - **Grade**: D
 
-I'd estimate that I work 40-50 hours per week.
+I'd estimate that I work 40-50 hours per week. I wrote a little more on my blog and participated slightly more in TinyPilot's software development.
 
-I wrote a little more on my blog and participated slightly more in TinyPilot's software development.
+I added a new team, and people expanded their roles. It's not just the work of training a new person, it's defining how they fit into other processes. And the more people you have, the more complexity there is in designing workflows that involve multiple people and multiple teams.
 
 ### Ship a new TinyPilot hardware product
 
@@ -191,11 +207,11 @@ For most of 2023, TinyPilot's production will be constrained by supply, so I'm g
 
 ### Eliminate the need for a physical office
 
-Until a few days ago, TinyPilot had been working with a local vendor to 3D print all of TinyPilot's cases. In the last few days, we completed the transition from 3D printed cases to metal cases. The main goal of the transition was to increase our scale. 3D printing limited us to about 140 cases per month, and then we'd have to purchase a new $5k for every 40 case/month beyond that.
+Until a few weeks ago, TinyPilot had been working with a local vendor to 3D print all of TinyPilot's cases. In the last few days, we completed the transition from 3D printed cases to metal cases. The main goal of the transition was to increase our scale. 3D printing limited us to about 140 cases per month, and then we'd have to purchase a new $5k for every 40 case/month beyond that.
 
 One unexpected side effect is that it makes it easier to move assembly to China. And if we don't need our office for assembling devices, we can outsource other things and get rid of the office. We can outsource fulfillment to a third-party logistics provider.
 
-It eliminates a lot of complexity we've been dealing with in-house. We don't have to manage inventory or make sure the office is staffed.
+It eliminates a lot of complexity we've been dealing with in-house. We don't have to manage inventory or staff the office every weekday.
 
 One unexpected consequence
 But now that we're making cases in China, it opened an opportunity I hadn't thought of. We always manufactured the devices in-house because I couldn't find a vendor willing to do this at my scale. But now almost all of our parts were coming from China, so we could outsource manufacturing to China.
@@ -210,7 +226,7 @@ Every year, when I write these blog posts, I ask myself whether I still love wha
 
 The things I enjoy doing most are programming and writing, and the past year gave me little time for either. I spent most of my time on TinyPilot scrambling to keep up with demand, filling in gaps as we grew, and putting out small fires.
 
-I grew as a manager. I learned more about hiring.
+I grew as a manager. I learned more about hiring and coordinating in an organization with more complexity.
 
 I'm hopeful that this year was hard because I was doing a lot of things that will pay dividends over the next few years.
 
