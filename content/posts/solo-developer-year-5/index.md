@@ -231,3 +231,7 @@ I grew as a manager. I learned more about hiring and coordinating in an organiza
 I'm hopeful that this year was hard because I was doing a lot of things that will pay dividends over the next few years.
 
 I still prefer working for myself to working for an employer, and I plan to do it indefinitely.
+
+---
+
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/)._
