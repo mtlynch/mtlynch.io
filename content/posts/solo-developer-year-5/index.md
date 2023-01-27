@@ -31,11 +31,9 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ### TinyPilot's manufacturing scaled up
 
-TinyPilot is the only KVM over IP device I'm aware of that supports PoE.
+We added power over Ethernet (PoE) support to the TinyPilot. It means that users went from needing XX cables for the Voyager 1 to just three cables for the Voyager 2.
 
-I also found out _why_ TinyPilot is the only one to do it. PoE is hard! I'm glad to have PoE now, but in retrospect it was a mistake.
-
-I didn't understand at the time how much complexity there is to PoE. Hardware engineering time has been our most scarce resource, and I'd estimate that about 80% of the hardware engineering time in the last year has been related to PoE.
+Very few KVM over IP devices support PoE, and I also found out why. PoE is hard! Hardware engineering time has been TinyPilot's most scarce and expensive resource, and I'd estimate that about 80% of the hardware engineering hours in 2022 were designing PoE or fixing unforeseen issues that were a consequence of PoE.
 
 ### TinyPilot's teams matured
 
@@ -57,9 +55,9 @@ Similar to the lesson I learned about customer support, I hired an additional te
 
 Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices per year and probably more in the future. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales.
 
-They said that one important feature to them was H264 video encoding. The video streaming tools we were using supported already supported H264, so it didn't seem that hard to switch over. Plus, it was one of our most commonly requested features anyway.
+They said that before we moved forward, they wanted TinyPilot to support H264 video encoding. The video streaming tools we were using already supported H264, so it didn't seem that hard to switch over. Plus, it was one of our most commonly requested features.
 
-I estimated that we'd have H264 ready in January, and I gave myself some padding and told the customer that we expected to launch it by early March.
+I estimated that we'd have H264 ready in January. To give myself some padding, I told the customer that we expected to launch it by early March.
 
 Then, two things happened. The first was that one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse). We paused work on everything else to prioritize a fix. The fix required an architecture change, so it swallowed all of our development resources for two months.
 
@@ -86,22 +84,6 @@ The day after I shipped their first box, they asked for 3D models of our circuit
 They said our circuit boards were of no use to them without built-in video capture, and they wanted a full refund. I told them that we'd already shipped the first box to India and had no way of recalling it, so they'd have to
 
 In the end, it just became a mess where nobody was happy. We put in months of dev time to satisfy the big customer, and we delivered what they wanted a month late. I'm not sure if it was because of our lateness or that they were never that serious in the first place, but they ultimately only ordered two devices from us, for a total of $700 in revenue.
-
-We're a small company, and we only have about 35 hours of dev time per week between the two part-time developers and me.
-
-The day after I shipped their order, they told me they decided to cancel the order and use different hardware. I told them that I'd refund them minus a 15% restocking fee, and they moaned and moaned about how it was unfair.
-
-That was a painful lesson in demanding skin in the game. I had spent tens of thousands of dollars in dev time to prioritize the features they wanted, and they'd spent $700 on two devices.
-
-Every step of the way, they wanted to have a meeting that fit India's business hours. If they wanted to know what shipping options were available, they wouldn't ask me in an email &mdash; they'd schedule a meeting to discuss it.
-
-I've been trying to think of the takeaway from this story, and I've struggled to find the lesson.
-
-At first, I thought it was a lesson in limiting how much I promise customers, but I already knew that. I always gave them caveats that we're a small team so our estimates are approximate. And I even padded my estimate to give us two extra months of buffer. But I never committed to a date, and the estimate I gave them was twice as long as I thought it would take us. We just caught bad luck twice. It's reasonable for customers to know our roadmap, so I can't just refuse to give dates for anything.
-
-Then I thought this was a lesson not to invest too much in customers with no skin in the game. This customer had only purchased two devices for a total of around $700, but they'd asked for us to prioritize a lot of features for them before they bought more. But they did have skin in the game. They were working on their own custom frontend for TinyPilot. So it theoretically cost them something to drop TinyPilot. And it's not like they were asking for niche, oddball features. The things that they wanted were the same features that most of our customers wanted.
-
-I'm not really sure if there is a lesson. If I had to go back with the same information, I'd do the same thing. So maybe the lesson is just that sometimes you make a big bet and accept when it doesn't pay off.
 
 ### I let a website redesign go awry
 
@@ -156,11 +138,11 @@ In writing this post, I struggled to come up with a meaningful lesson from my un
 
 Certainly, it was a negative outcome, and I'd like to avoid it in the future, but I couldn't pinpoint what, exactly, I got wrong.
 
-At first, I thought it was a lesson in making unreasonable promises to customers. But I didn't really. I told the customer that our timeline was an estimate, and the estimate I gave them was 40% longer than I thought it would take us. I did that specifically to avoid feeling rushed to account for unknown unknowns. We ran into unexpected delays, and even though I budgeted for them, they were more severe than I guessed.
+At first, I thought it was a lesson in making unreasonable promises to customers. But I didn't really make any. I told the customer that our timeline was an estimate, and I padded the estimate by 40% to account for unknown unknowns. We ultimately ran into unexpected delays, and even though I budgeted for them, they were more severe than I guessed.
 
-Then, perhaps because I'm reading a lot of Nassim Taleb lately, I thought the experience was a lesson in avoiding business relationships where I have much more skin in the game than my counterparty. At the end, I felt like I invested thousands into development and dozens of hours of time personally, and the customer had invested almost nothing.
+Then, perhaps because I'm reading a lot of Nassim Taleb lately, I thought the experience was a lesson in avoiding customers that demand a lot of skin in the game from without offering much of their own. At the end, I felt like I invested thousands into development and dozens of hours answering their requests, and the customer had invested almost nothing.
 
-Re-reading my correspondence, I remembered that the customer had been writing custom software to integrate with TinyPilot. As a percentage of overall resources, I was certainly investing a lot more of TinyPilot's resources, but that's the nature of
+Or had they? They were writing their own custom frontend for TinyPilot, so that's a serious investment. As a percentage of overall resources, I was certainly investing a lot more of TinyPilot's resources, but that's the nature of
 
 In the end, I think the lesson might be kind of boring and obvious: some bets don't pay off. As the founder, I have to roll with the punches. If I'd do the same thing with the same information, it's not a mistake.
 
@@ -197,7 +179,9 @@ Instead, all of our hardware engineering time went to chasing down manufacturing
 
 ### Manage TinyPilot on 20 hours per week
 
-I failed miserably at this last year, but it's now my top priority. I'm hopeful that this is more achievable this year. In 2022, TinyPilot expanded customer support from one person to two and created a new support engineering team. Those steps required a lot of management between hiring, training, and defining new workflows. But all of that is done now, so I expect management time to continue trending downward.
+I failed miserably at reducing my hours last year, but it's now my top priority.
+
+I'm hopeful that I'll be more successful at reducing my management time this year. Most of my management work in 2022 was growing teams that can independently manage TinyPilot's day-to-day operations. It required a lot of up front investment in hiring, training, and defining processes, but I expect that investment to pay off in 2023.
 
 ### Earn $100k in profit
 
@@ -207,16 +191,9 @@ For most of 2023, TinyPilot's production will be constrained by supply, so I'm g
 
 ### Eliminate the need for a physical office
 
-Until a few weeks ago, TinyPilot had been working with a local vendor to 3D print all of TinyPilot's cases. In the last few days, we completed the transition from 3D printed cases to metal cases. The main goal of the transition was to increase our scale. 3D printing limited us to about 140 cases per month, and then we'd have to purchase a new $5k for every 40 case/month beyond that.
+Until a few weeks ago, TinyPilot had been working with a local vendor to 3D print all of TinyPilot's cases. In the last few days, we completed the transition from 3D-printed cases to metal cases. The main goal of the transition was to scale up manufacturing, but a side benefit is that it will be easier to outsource manufacturing, as almost all of our raw materials originate in China.
 
-One unexpected side effect is that it makes it easier to move assembly to China. And if we don't need our office for assembling devices, we can outsource other things and get rid of the office. We can outsource fulfillment to a third-party logistics provider.
-
-It eliminates a lot of complexity we've been dealing with in-house. We don't have to manage inventory or staff the office every weekday.
-
-One unexpected consequence
-But now that we're making cases in China, it opened an opportunity I hadn't thought of. We always manufactured the devices in-house because I couldn't find a vendor willing to do this at my scale. But now almost all of our parts were coming from China, so we could outsource manufacturing to China.
-
-The main reason TinyPilot has a physical office is to manufacture devices. We fulfill from the office too because it's easy enough to do both together, but if we stopped manufacturing, we could eliminate the office and eliminate a lot of complexity in terms of making sure the office is staffed, doing regular inventory counts, reordering parts, etc.
+The main reason TinyPilot has a physical office is to manufacture devices. We fulfill from the office too because it's easy enough to do both together. If we stopped manufacturing in-house, we could move out of the office and eliminate a lot of complexity in terms of making sure the office is staffed, doing regular inventory counts, reordering parts, etc.
 
 ## Do I still love it?
 
