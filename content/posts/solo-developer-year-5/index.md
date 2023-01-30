@@ -16,7 +16,7 @@ For the first few years, all of my businesses flopped. None of them earned more 
 
 Halfway through my third year, I created a network administration device called [TinyPilot](https://tinypilotkvm.com). It quickly caught on, and it's been my main focus ever since.
 
-In 2022, TinyPilot generated $XXk in revenue, a XX% increase from 2021.
+In 2022, TinyPilot generated $812k in revenue, a XX% increase from 2021.
 
 In this post, I'll share what I've learned in my fifth year about being a bootstrapped founder.
 
@@ -152,10 +152,10 @@ In the end, I think the lesson might be kind of boring and obvious: some bets do
 
 ### Grow TinyPilot to $1M in annual revenue
 
-- **Result**: Grew TinyPilot's revenue by XX% to $XXk
+- **Result**: Grew TinyPilot's revenue by XX% to $812k
 - **Grade**: B
 
-I knew that $1M was an aggressive goal, and I'm still impressed how close we came. I think revenue is kind of a vanity metric, especially given that profit was negative, but to suspend rigor for a moment, not a lot of bootstrapped businesses reach $XXk in annual revenue.
+I knew that $1M was an aggressive goal, and I'm still impressed how close we came. Revenue is a vanity metric, especially given that profit was negative, but to suspend rigor for a moment, not a lot of bootstrapped businesses reach $812k in annual revenue.
 
 ### Manage TinyPilot on 20 hours per week
 
@@ -166,14 +166,14 @@ I'd estimate that I work 40-50 hours per week. I wrote a little more on my blog 
 
 I added a new team, and people expanded their roles. It's not just the work of training a new person, it's defining how they fit into other processes. And the more people you have, the more complexity there is in designing workflows that involve multiple people and multiple teams.
 
-### Ship a new TinyPilot hardware product
+### Ship the TinyPilot Voyager 3
 
-- **Result**: I never even started work on the Voyager 3
+- **Result**: We never even completed the design phase
 - **Grade**: D
 
-TinyPilot has always used the Raspberry Pi 4B as the core hardware. My plan for 2022 was to get rid of the Pi 4B and all the other third-party boards and consolidate all the functionality into a custom TinyPilot board.
+TinyPilot has always used the Raspberry Pi 4B as the core hardware. My plan for 2022 was to consolidate all the functionality into a custom TinyPilot board, eliminating many of the expensive third-party components we currently use.
 
-Instead, all of our hardware engineering time went to chasing down manufacturing issues and supply shortages, so we made no progress on this.
+Instead, all of our hardware engineering time went to chasing down manufacturing issues and supply shortages, so we made no progress on a new product.
 
 ## Goals for year six
 
@@ -189,11 +189,13 @@ In previous years, I've focused on growth. For a hardware business to work, you 
 
 For most of 2023, TinyPilot's production will be constrained by supply, so I'm going to focus on profit rather than growth.
 
-### Eliminate the need for a physical office
+### Close the TinyPilot office
 
-Until a few weeks ago, TinyPilot had been working with a local vendor to 3D print all of TinyPilot's cases. In the last few days, we completed the transition from 3D-printed cases to metal cases. The main goal of the transition was to scale up manufacturing, but a side benefit is that it will be easier to outsource manufacturing, as almost all of our raw materials originate in China.
+For most of the company's existence, TinyPilot's cases came from a local vendor who designed and 3D printed them. In the last few weeks, we completed the transition to metal cases.
 
-The main reason TinyPilot has a physical office is to manufacture devices. We fulfill from the office too because it's easy enough to do both together. If we stopped manufacturing in-house, we could move out of the office and eliminate a lot of complexity in terms of making sure the office is staffed, doing regular inventory counts, reordering parts, etc.
+We switched to metal cases primarily to speed up manufacturing, but the side-effects is that most of our raw materials now originate in China. That means it should be possible to have our devices arrive to the US pre-built rather than assembling and testing each device by hand in TinyPilot's office.
+
+If we don't need to build devices in our office, we don't strictly need to maintain an office. We can move fulfillment to a third-party logistics provider, and then TinyPilot's employees become more time-independent and location-independent since we'll be out of the critical path for manufacturing and fulfillment.
 
 ## Do I still love it?
 
