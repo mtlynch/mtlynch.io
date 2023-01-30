@@ -29,61 +29,65 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ## What went well this year?
 
+### TinyPilot's teams matured
+
+One of the most important lessons I learned in 2021 was to allow TinyPilot's employees to expand their roles as the company grew. Originally, I thought my duty as a manager was to protect employees' jobs from changing at all. An interview with WPEngine founder Jason Cohen was a good wakeup call, as he described good leadership as the opposite of what I was doing:
+
+> The only way for the organization to succeed is if the team is getting better. And that's [the founder's] job: to build great teams.
+
+I had started this process in 2021 by encouraging employees to expand their roles. A member of the fulfillment team started helping out with customer service, and it made a huge difference.
+
+In 2022, I continued this process with a focus on teams rather than individuals.
+
+In August, I traveled to Ohio for a week to attend a wedding. Eric, who handles fulfillment and customer support, got sick the same week. Fortunately, support volume was low that week, and nothing required an urgent response. Still, it was a wakeup call that the customer service team can't just be a single person. The other member of the fulfillment team agreed to expand into customer support, so now it's a team instead of a single person.
+
+I also hired TinyPilot's first support engineer in early 2022. They acted as a second level of support if the customer had technical issues that the customer service team didn't know how to handle. Similar to the experience I had with customer support, I found that one person wasn't enough. When they'd get sick or take vacation, I was spending up to three hours per day on customer support, which was difficult to fit in.
+
+I expanded the support engineering team to two people in XX, and
+
+This process has definitely been difficult. There's a large time investment in training a new person, but there's an even bigger time investment in creating teams and figuring out how they interact with the rest of the organization. The teams are still relatively new, but I'm seeing them take on an increasing share of work that used to be work I did.
+
 ### TinyPilot's manufacturing scaled up
 
 We added power over Ethernet (PoE) support to the TinyPilot. It means that users went from needing XX cables for the Voyager 1 to just three cables for the Voyager 2.
 
 Very few KVM over IP devices support PoE, and I also found out why. PoE is hard! Hardware engineering time has been TinyPilot's most scarce and expensive resource, and I'd estimate that about 80% of the hardware engineering hours in 2022 were designing PoE or fixing unforeseen issues that were a consequence of PoE.
 
-### TinyPilot's teams matured
-
-One of the most important lessons I learned in 2021 was to allow my teammates expand their roles and grow with the company. Originally, I thought my duty as a manager was to protect employees' jobs from changing at all. As the company grew, I filled in the gaps.
-
-In 2022, I focused on cultivating growth and self-directed teams instead of having everyone report directly to me. I tried to
-
-that I had to stop protecting my team from doing work outside their role and instead let my teammates expand their roles as the company grew. It started with having one member of the fulfillment team take over customer service from me.
-
-In 2022, we continued by adding more teams. Eric doesn't have a background in software, so he had to escalate technical issues to me. In April, I hired TinyPilot's support engineer. They filled most of the gaps between me and Eric.
-
-In August, I traveled to Ohio for a week to attend a wedding. Unfortunately, Eric got sick the same week. Fortunately, support volume was low that week, and nothing required an urgent response, but it was a wakeup call that the customer service team can't just be a single person.
-
-Similar to the lesson I learned about customer support, I hired an additional technical support engineer. A month later, I unfortunately had to let the first support engineer go due to issues with their work, but I hired a second new support engineer. At this point, they're
-
 ## What went poorly this year?
 
 ### I derailed development to chase a large customer
 
-Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices per year and probably more in the future. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales.
+Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices over the course of 2022, and they planned to increase that number in 2023. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales.
 
-They said that before we moved forward, they wanted TinyPilot to support H264 video encoding. The video streaming tools we were using already supported H264, so it didn't seem that hard to switch over. Plus, it was one of our most commonly requested features.
+They said that before we moved forward, they wanted TinyPilot to support H264 video encoding. The video streaming tools we were using already supported H264, so it didn't seem that hard to switch over. Plus, H264 was one of our most commonly-requested features.
 
-I estimated that we'd have H264 ready in January. To give myself some padding, I told the customer that we expected to launch it by early March.
+I had some other work planned, but I estimated if we prioritized H264, it would be ready by January 2022. To give myself some padding, I told the customer that we expected to launch the feature by early March.
 
-Then, two things happened. The first was that one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse). We paused work on everything else to prioritize a fix. The fix required an architecture change, so it swallowed all of our development resources for two months.
+A few weeks later, one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse) in our code, so we paused new work to prioritize a fix.
 
-Then, I discovered that offering H264 video was an order of magnitude more difficult than I anticipated. Our previous format, MJPEG, was dead simple to integrate. You pop an `<img>` tag into your page, point the `src` attribute at an MJPEG stream, and you're done! But to stream H264, you need to stand up a WebRTC server, then you need to configure your WebRTC server to talk to your H264 streaming server, then you need to invoke a special JavaScript incantation to attach the video stream to the `<video>` element. And then I found out that H264 is patented, so I had to go through a multi-month process to license the format.
+Then, I discovered that offering H264 video was an order of magnitude more difficult than I anticipated. Streaming H264 in a web browser is more complicated than simply adding some HTML to the page and pointing it to a video stream. You also need a WebRTC server, so you need to configure your WebRTC server to talk to your H264 streaming server. And then you need to invoke an undocumented JavaScript incantation to attach the video stream to the `<video>` element. And it turns out that H264 is patented, so I had to go through a multi-month process with lawyers to license the format.
 
-I realized in XX that we weren't going to meet the March timeline. I told the customer that we were running late, and that we could potentially scope down the work to the essentials they care about. They were building their own frontend, so they said we could skip implementing a web UI and just show them how to enable H264 from the command-line.
+Between the delays due to the security fix and the complexity of H264, it was clear we weren't going to meet the March timeline. I reached out to the customer in XX to say that we were running late. I asked if they'd prefer a later delivery date or a reduced feature set. They were building their own frontend, so they said we could skip implementing a web UI and just show them how to enable H264 from the command-line.
 
 So, we did that. It led to a weird release announcement that was a big departure from TinyPilot. I've tried to keep TinyPilot so that everything's intuitive and user-friendly. If we advertise a feature, you can use it from the web interface. This was a big departure because it was not web-friendly. You had to SSH in and run commands for 20 minutes. But the customer was satisfied.
 
-Finally, it was time for them to place their first order. They wanted XX TinyPilot devices. Except they had some special requests there, too. The India office had a smaller budget, so they wanted to know if I could ship offer a discount. They assured me that this was just the first step, and that the higher-budget US office would be purchasing my full devices at a much higher price. if I gave them the free, open source version of the software instead of the normally bundled Pro version. Okay, fine. I'll take $XX off.
+At this point, we've dedicated several months of development to H264 and other smaller feature they requested. They haven't spent any money with us, but they promised they'd place a large order once we delivered H264. It was a slog to get H264 out the door, but it was finally going to pay off.
 
-Whoa, whoa, whoa, they said. $XX off? You sell the Pro version standalone for $80, so shouldn't it be a discount of $80 per device?
+They asked for a quote for 25 devices. I told them we could give it to them for $8.3k, a 5% discount from our retail price.
 
-I told them no because .
+They said that this was for their India office, who had a smaller budget, so could we cut things out of the product to reduce the price? They didn't need any of the Pro software features, so could we cut that? And what if I just gave them the source files for my 3D-printed case so they could print the cases themselves with their own logo?
 
-Okay, in that case, they said. What if you take out the Raspberry Pi and they buy their own? And then what if
+I wasn't willing to hand over the design files, so I told them that printing cases with their logo would increase the cost to $11k.
 
-Then, they wanted to know if we could print their logo on the case. Okay, fine.
+I finally agreed to sell them TinyPilot's custom circuit board and they'd source the rest of the parts themselves and build their own case. The total was $4.4k. Not nothing, but it's about a day's worth of sales on a good day. At this point, I'd spent at least $10k in developer hours on the H264 feature.
 
-And then they had lots of other requests, but where we finally ended up was that they _only_ wanted TinyPilot's proprietary circuit boards, and they'd buy the other components themselves. This went from a $XX deal to a $XX deal.
+The day after they placed the order, they requested 3D models for the circuit board. This wasn't part of the agreement, but I just wanted to wrap this up, so I sent them. They were confused and asked why the models didn't include a video capture port. I explained that our devices use a third-party chip for that, which they would have received if they ordered a pre-made device, but that was one of the things they decided to buy on their own.
 
-The day after I shipped their first box, they asked for 3D models of our circuit boards. This wasn't part of the agreement, but I just wanted to wrap this up, so I sent them. They were confused and asked why the models didn't include a video capture port. I explained that our devices use a third-party chip for that, which they would have received if they ordered a pre-made device, but that was one of the things they agreed to buy on their own.
+They said our circuit boards were of no use to them without built-in video capture. They wanted a full refund. We'd already shipped their order to India and couldn't re-route it, so they'd have to send it back to us. They were upset that I charged them a restocking fee of 15% ($665), which barely covered our costs of shipping and tariffs.
 
-They said our circuit boards were of no use to them without built-in video capture, and they wanted a full refund. I told them that we'd already shipped the first box to India and had no way of recalling it, so they'd have to
+In the end, it just became a mess where nobody was happy. I felt exhausted that after so much custom work, they simply backed out of the deal. They were upset that I charged them a restocking fee and felt that it suggested I didn't trust them for a longer-term partnership. I felt like they were taking advantage of a much smaller company, and I was exhausted from doing so much high-touch sales with them. TinyPilot's dev team had two months of high-priority work to fix a security issue, and then another three months of high-priority work to deliver. Customers saw five months with essentially no new features except for this half-feature they had to manage from the command-line.
 
-In the end, it just became a mess where nobody was happy. We put in months of dev time to satisfy the big customer, and we delivered what they wanted a month late. I'm not sure if it was because of our lateness or that they were never that serious in the first place, but they ultimately only ordered two devices from us, for a total of $700 in revenue.
+The customer said they'd order from us for their US orders, but they never did.
 
 ### I let a website redesign go awry
 
