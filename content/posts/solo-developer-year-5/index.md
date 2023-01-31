@@ -47,11 +47,35 @@ I expanded the support engineering team to two people in XX, and
 
 This process has definitely been difficult. There's a large time investment in training a new person, but there's an even bigger time investment in creating teams and figuring out how they interact with the rest of the organization. The teams are still relatively new, but I'm seeing them take on an increasing share of work that used to be work I did.
 
-### TinyPilot's manufacturing scaled up
+### We untangled TinyPilot's update process
 
-We added power over Ethernet (PoE) support to the TinyPilot. It means that users went from needing XX cables for the Voyager 1 to just three cables for the Voyager 2.
+When I started working on TinyPilot, I didn't know the right way to install software on Linux. I had installed software from package managers like `apt` and `rpm`, but I'd never created my own packages. When I published the first prototype of TinyPilot, I let users install the software using the tools I was familiar with: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment, then ran Ansible. The Ansible role installed dependencies and cloned the TinyPilot git repository.
 
-Very few KVM over IP devices support PoE, and I also found out why. PoE is hard! Hardware engineering time has been TinyPilot's most scarce and expensive resource, and I'd estimate that about 80% of the hardware engineering hours in 2022 were designing PoE or fixing unforeseen issues that were a consequence of PoE.
+The original install method worked well in the early days. It took about three minutes to install, but it was dead simple. Users could run a single command, and my script would install TinyPilot on their device. To update to the latest version, users could re-run the same script, and it would pull down the latest code.
+
+Two years later, TinyPilot's update process was a mess. It still relied on the same foundations as my prototype, which made me realize why nobody installs software that way. We had a complicated tree of Ansible roles depending on other Ansible roles, which depended on command-line parameters and file contents in distant locations. Small changes to our installation process would take weeks because it was so slow and complicated to test changes.
+
+Every update, it was getting worse. Things were getting slower, we were seeing more bugs. Security changes in Git were breaking our installation process (TODO: link), and we had it coming because Git is not meant to be part of an install process.
+
+In May, we launched what we called "the update overhaul." We focused on how to reverse the course we were on and what a more maintainable method would be.
+
+The first major change was that we eliminated Git from our update process. Our old installer would fetch every Git tag from our repo and then install the latest one, but that was limiting. Instead, we built a web service that the installer can query to find out which version it should install next given the version that's currently installed.
+
+The other major change was that we created a TinyPilot Debian package. We still rely on Ansible, but having a Debian package means that we can incrementally trim logic out of Ansible and move it to our Debian package, where it executes faster.
+
+- We can test updates end-to-end without pushing the new version to production.
+- We can provision a device with any TinyPilot development version during development with a single command, when it used to
+- We can inspect a TinyPilot package to see everything it will install instead of having to trace complicated paths in the installer
+
+We made two major changes. The first was that updates went through a custom TinyPilot update server. The TinyPilot software queries the update server to find out what updates are available and where to find the code. That let us do things like actually enforce license checks and special case certain cases if the user's on a very old version.
+
+The other major change was that we eliminated Git from our update process.
+
+Our legacy update process also gave us very little control over what the user installed. There wasn't a good place to gate access based on whether the user had a valid license and what version they were upgrading from. So even though users were supposed to stop receiving free upgrades to our paid version after a year, they continued receiving updates, even with an expired license. And because we couldn't see
+
+Things aren't perfect. We still depend on Ansible, and it's still complicated, but we're working our way out. Our Ansible role installs a TinyPilot Debian package, and we're incrementally pulling logic out of Ansible and into the Debian package.
+
+Once the user has access to the repo, they have access forever. It also forced us into maintaining backwards compatibility forever because it was possible for a version from any point in the past to upgrade to the latest version.
 
 ## What went poorly this year?
 
@@ -59,35 +83,37 @@ Very few KVM over IP devices support PoE, and I also found out why. PoE is hard!
 
 Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices over the course of 2022, and they planned to increase that number in 2023. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales.
 
-They said that before we moved forward, they wanted TinyPilot to support H264 video encoding. The video streaming tools we were using already supported H264, so it didn't seem that hard to switch over. Plus, H264 was one of our most commonly-requested features.
+They said that before we moved forward, they wanted TinyPilot to support H264 video encoding. No problem! The third-party package we used for video streaming already supported H264, so it didn't seem that hard to switch over. Plus, H264 was one of our most commonly-requested features.
 
-I had some other work planned, but I estimated if we prioritized H264, it would be ready by January 2022. To give myself some padding, I told the customer that we expected to launch the feature by early March.
+I estimated that if we prioritized H264, the feature would be ready by January 2022. To give myself some padding, I told the customer that we expected to launch the feature by early March.
 
-A few weeks later, one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse) in our code, so we paused new work to prioritize a fix.
+Then, we caught a bit of bad luck. A few weeks later, one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse) in our code, so we paused new work to prioritize a fix. The fix required significant architectural changes, so I estimated it would take several months. Still, I felt comfortable with the March estimate. I added in padding for unexpected events like that.
 
-Then, I discovered that offering H264 video was an order of magnitude more difficult than I anticipated. Streaming H264 in a web browser is more complicated than simply adding some HTML to the page and pointing it to a video stream. You also need a WebRTC server, so you need to configure your WebRTC server to talk to your H264 streaming server. And then you need to invoke an undocumented JavaScript incantation to attach the video stream to the `<video>` element. And it turns out that H264 is patented, so I had to go through a multi-month process with lawyers to license the format.
+Except it turned out that integrating H264 video was an order of magnitude more difficult than I anticipated. Also, it turns out that H264 is patented, so I had to go through a multi-month process with lawyers to license the format.
 
-Between the delays due to the security fix and the complexity of H264, it was clear we weren't going to meet the March timeline. I reached out to the customer in XX to say that we were running late. I asked if they'd prefer a later delivery date or a reduced feature set. They were building their own frontend, so they said we could skip implementing a web UI and just show them how to enable H264 from the command-line.
+Between the delays due to the security fix and the complexity of H264, it was clear we weren't going to meet the March timeline. I reached out to the customer in XX to say that we wouldn't have it ready by March. I asked if it would work if we got it to the point where there was no UI, but they could enable and manage the feature through the command-line. I estimated that we'd have that ready by end of April. They said that was fine. They were implementing their own web interface anyway, so they didn't care that much about our UI.
 
-So, we did that. It led to a weird release announcement that was a big departure from TinyPilot. I've tried to keep TinyPilot so that everything's intuitive and user-friendly. If we advertise a feature, you can use it from the web interface. This was a big departure because it was not web-friendly. You had to SSH in and run commands for 20 minutes. But the customer was satisfied.
+We put out a weird release with this H264 feature half-done, but the customer was happy. I'd been giving them early builds, so they were unblocked on building their UI.
 
-At this point, we've dedicated several months of development to H264 and other smaller feature they requested. They haven't spent any money with us, but they promised they'd place a large order once we delivered H264. It was a slog to get H264 out the door, but it was finally going to pay off.
+Finally, it was time for the fruits of my labor to pay off. With H264 shipped, they were ready to place their first large order. They wanted 25 devices, which would represent about XX% of that month's sales.
 
 They asked for a quote for 25 devices. I told them we could give it to them for $8.3k, a 5% discount from our retail price.
 
-They said that this was for their India office, who had a smaller budget, so could we cut things out of the product to reduce the price? They didn't need any of the Pro software features, so could we cut that? And what if I just gave them the source files for my 3D-printed case so they could print the cases themselves with their own logo?
+They said that this was for their India office, who had a smaller budget, so could we cut things out of the product to reduce the price? They didn't need any of the Pro software features, so could we cut that? After lots of back and forth, they decided that they only wanted our proprietary circuit board. Everything else, they'd source on their own. But they promised that this was just for the India office. When it came time to buy for the US offices, they'd buy my normal devices without asking to strip parts. I agreed to sell them 25 circuit boards for $4.4k.
 
-I wasn't willing to hand over the design files, so I told them that printing cases with their logo would increase the cost to $11k.
-
-I finally agreed to sell them TinyPilot's custom circuit board and they'd source the rest of the parts themselves and build their own case. The total was $4.4k. Not nothing, but it's about a day's worth of sales on a good day. At this point, I'd spent at least $10k in developer hours on the H264 feature.
+At this point, I'd spent at least $10k in developer hours on the H264 feature, so them shrinking the deal to just $4.4k felt fairly chintzy. But it at least showed they were willing to pay real money when they had so far spent only $700 on two initial devices for testing.
 
 The day after they placed the order, they requested 3D models for the circuit board. This wasn't part of the agreement, but I just wanted to wrap this up, so I sent them. They were confused and asked why the models didn't include a video capture port. I explained that our devices use a third-party chip for that, which they would have received if they ordered a pre-made device, but that was one of the things they decided to buy on their own.
 
-They said our circuit boards were of no use to them without built-in video capture. They wanted a full refund. We'd already shipped their order to India and couldn't re-route it, so they'd have to send it back to us. They were upset that I charged them a restocking fee of 15% ($665), which barely covered our costs of shipping and tariffs.
+They said our circuit boards were of no use to them without built-in video capture and asked for a full refund. We'd already shipped their order to India and couldn't re-route it, so they'd have to send it back to us. They were upset that I charged them a restocking fee of 15% ($665), which barely covered our costs of shipping and tariffs.
 
-In the end, it just became a mess where nobody was happy. I felt exhausted that after so much custom work, they simply backed out of the deal. They were upset that I charged them a restocking fee and felt that it suggested I didn't trust them for a longer-term partnership. I felt like they were taking advantage of a much smaller company, and I was exhausted from doing so much high-touch sales with them. TinyPilot's dev team had two months of high-priority work to fix a security issue, and then another three months of high-priority work to deliver. Customers saw five months with essentially no new features except for this half-feature they had to manage from the command-line.
+In the end, it just became a mess where nobody was happy.
 
-The customer said they'd order from us for their US orders, but they never did.
+They balked at having to pay the restocking fee, and I got pretty upset with them. I kept it professional, but I gave them a laundry list of ways I felt like they were abusing the relationship. They said they still wanted to work together and would place orders for their US offices, but they never followed up, and I wasn't particularly eager to work with them again.
+
+{{<img src="break-up-email.webp" has-border="true" caption="My tantrum email to the customer after the objected to a 15% restocking fee">}}
+
+TinyPilot's dev team had two months of high-priority work to fix a security issue, and then another three months of high-priority work to deliver H264. And then when we started our update overhaul, it was more complicated because we had to work that in while also supporting this H264 feature we half-completed.
 
 ### I let a website redesign go awry
 
