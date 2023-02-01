@@ -4,6 +4,7 @@ tags:
   - annual review
   - tinypilot
 date: 2023-02-01T00:00:00-05:00
+custom_css: true
 hero_image: cover.webp
 images:
   - solo-developer-year-5/og-cover.webp
@@ -146,6 +147,8 @@ Even though I spent more than I meant to, I believe the results paid for themsel
 
 ## Lessons learned
 
+### Let people grow, then let teams grow
+
 ### Run at 50% capacity
 
 If a popular YouTube channel mentions you, your sales can double overnight. If you were already running at near-capacity, you'll fold when demand doubles.
@@ -165,21 +168,11 @@ For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 | Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
 
-### Worry when proactive work stops
-
-One of the more subtle downsides
-
-A lot of the work batches efficiently. If you're shipping one order, maybe it takes five minutes, but if you're shipping three orders, it maybe only takes eight minutes. You can print all the order slips at once and just drop them into three boxes, then tape them all up.
-
-So when orders went from 130/month to 200/month, I thought we were fine. It turned out that we had been running at near 100% capacity, and I never realized.
-
-If you're running at near-capacity, get stuck in an undesirable position of focusing only on short-term problems. As TinyPilot's sales grew, we realized it was time to switch to an external vendor to handle our order fulfillment. Except that by the time I realized it, we [didn't have time to make the switch](/retrospectives/2022/12/#we-dont-have-enough-time-to-save-ourselves-time). Researching improvements and implementing them takes time, so if you only have a small amount of spare capacity, you'll get stuck doing what you're doing.
-
-I had recently started thinking about transitioning fulfillment to a third-party logistics (3PL) vendor, and I was hoping the fulfillment team would do a lot of the legwork in figuring out how to translate our workflows to a 3PL. It turned out that
-
-Shipping two orders is only about 20% more time-consuming than shipping a single order.
-
 ### Accept that some bets fail
+
+Late in 2021, a large customer reached out to me and said they wanted to buy 200 TinyPilot devices in 2022. That was great news!
+
+The day after I shipped their first order, they said they'd changed their mind and wanted a full refund. It ended up being a big mess where nobody was happy.
 
 In writing this post, I struggled to come up with a meaningful lesson from my unsuccessful pursuit of the large customer.
 
@@ -194,6 +187,24 @@ Or had they? They were writing their own custom frontend for TinyPilot, so that'
 In the end, I think the lesson might be kind of boring and obvious: some bets don't pay off. As the founder, I have to roll with the punches. If I'd do the same thing with the same information, it's not a mistake.
 
 ## Finances
+
+{{<revenue-graph project="tinypilot">}}
+
+| Income/Expense                    | 2020                                 | 2021                                  | Change               |
+| --------------------------------- | ------------------------------------ | ------------------------------------- | -------------------- |
+| Sales                             | $53,742                              | $459,529                              | {{<delta-cell>}}     |
+| Credit card rewards               | $0                                   | $1,139                                | {{<delta-cell>}}     |
+| Raw materials                     | -$46,143                             | -$248,273                             | {{<delta-cell>}}     |
+| Software development              | -$1,321                              | -$119,015                             | {{<delta-cell>}}     |
+| Electrical engineering consulting | -$7,130                              | -$28,662                              | {{<delta-cell>}}     |
+| Fulfillment staff                 | -$2,570                              | -$25,893                              | {{<delta-cell>}}     |
+| Web design / branding             | -$250                                | -$15,931                              | {{<delta-cell>}}     |
+| Cloud services                    | -$64                                 | -$5,554                               | {{<delta-cell>}}     |
+| Office space                      | $0                                   | -$4,400                               | {{<delta-cell>}}     |
+| Advertising                       | -$675                                | -$3,633                               | {{<delta-cell>}}     |
+| Office equipment                  | $0                                   | -$2,083                               | {{<delta-cell>}}     |
+| Everything else                   | $0                                   | -$2,738                               | {{<delta-cell>}}     |
+| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
 
 ## Grading last year's goals
 
@@ -263,3 +274,6 @@ I still prefer working for myself to working for an employer, and I plan to do i
 ---
 
 _Cover image by [Loraine Yow](https://www.lolo-ology.com/)._
+
+<script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
+<script src="script.js"></script>
