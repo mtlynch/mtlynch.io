@@ -81,39 +81,56 @@ Once the user has access to the repo, they have access forever. It also forced u
 
 ### I derailed development to chase a large customer
 
-Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices over the course of 2022, and they planned to increase that number in 2023. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales.
+Late in 2021, I received an email from a large company that was excited about TinyPilot. They wanted to buy 200 devices over the course of 2022, and they planned to increase that number in 2023. At the time, I was selling XX devices per month, so 200 devices from a single customer would be an enormous boost in our sales. It represented $XXk in additional revenue.
 
-They said that before we moved forward, they wanted TinyPilot to support H264 video encoding. No problem! The third-party package we used for video streaming already supported H264, so it didn't seem that hard to switch over. Plus, H264 was one of our most commonly-requested features.
+Before we moved forward, the customer wanted TinyPilot to support H264 video encoding, a more modern form of compression than our current solution. No problem! The third-party package we used for video streaming already supported H264, so it didn't seem that hard to switch over. Plus, H264 was one of our most commonly-requested features.
 
-I estimated that if we prioritized H264, the feature would be ready by January 2022. To give myself some padding, I told the customer that we expected to launch the feature by early March.
+I estimated that if we prioritized H264, the feature would be ready by January 2022. To give ourselves some wiggle room, I told the customer that we expected to launch the feature by early March.
 
-Then, we caught a bit of bad luck. A few weeks later, one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse) in our code, so we paused new work to prioritize a fix. The fix required significant architectural changes, so I estimated it would take several months. Still, I felt comfortable with the March estimate. I added in padding for unexpected events like that.
+Then, we caught a bit of bad luck. A few weeks later, one of TinyPilot's developers discovered [a security vulnerability](https://tinypilotkvm.com/advisories/2022/03/token-reuse) in our code, so we paused new work to prioritize a fix. The fix required significant architectural changes, but I felt like we could dip into our "wiggle room" budget and still hit the March estimate.
 
-Except it turned out that integrating H264 video was an order of magnitude more difficult than I anticipated. Also, it turns out that H264 is patented, so I had to go through a multi-month process with lawyers to license the format.
+Except it also turned out that integrating H264 video was an order of magnitude more difficult than I anticipated. We also had to integrate a WebRTC server, but it wasn't available for our platform, so we also had to figure out how to compile it and all of its dependencies from source. Also, it turns out that H264 is patented, so I had to go through a multi-month process with lawyers to license the format.
 
-Between the delays due to the security fix and the complexity of H264, it was clear we weren't going to meet the March timeline. I reached out to the customer in XX to say that we wouldn't have it ready by March. I asked if it would work if we got it to the point where there was no UI, but they could enable and manage the feature through the command-line. I estimated that we'd have that ready by end of April. They said that was fine. They were implementing their own web interface anyway, so they didn't care that much about our UI.
+I reached out to the customer in XX to say that we wouldn’t have it ready by March. What we could do instead is get it to the point where the feature wasn’t part of the web UI, but they could enable and manage the feature through the command-line. I estimated that we’d have that ready by end of April. I'd been giving them early builds, so they were unblocked on building their UI.
 
-We put out a weird release with this H264 feature half-done, but the customer was happy. I'd been giving them early builds, so they were unblocked on building their UI.
+The customer said that was fine. They were implementing their own web interface anyway, so they didn’t care that much about our UI.
 
-Finally, it was time for the fruits of my labor to pay off. With H264 shipped, they were ready to place their first large order. They wanted 25 devices, which would represent about XX% of that month's sales.
+#### Finally, we get paid
+
+It was difficult to get the H264 feature out the door, but we finally shipped it in an official release in May. And it was finally time for all that hard work to pay off.
+
+With H264 shipped, the customer was ready to place their first large order. They wanted 25 TinyPilot Voyager 2 devices, which represented about XX% of that month's sales.
 
 They asked for a quote for 25 devices. I told them we could give it to them for $8.3k, a 5% discount from our retail price.
 
-They said that this was for their India office, who had a smaller budget, so could we cut things out of the product to reduce the price? They didn't need any of the Pro software features, so could we cut that? After lots of back and forth, they decided that they only wanted our proprietary circuit board. Everything else, they'd source on their own. But they promised that this was just for the India office. When it came time to buy for the US offices, they'd buy my normal devices without asking to strip parts. I agreed to sell them 25 circuit boards for $4.4k.
+They said that this was for their India office, who had a smaller budget, so could we cut things out of the product to reduce the price? They didn't need any of the Pro software features, so could we cut that? After lots of back and forth, they decided that they only wanted our proprietary circuit board. Everything else, they'd source on their own. But they promised that this was just for the India office. When it came time to buy for the US offices, they'd buy our normal retail devices.
 
-At this point, I'd spent at least $10k in developer hours on the H264 feature, so them shrinking the deal to just $4.4k felt fairly chintzy. But it at least showed they were willing to pay real money when they had so far spent only $700 on two initial devices for testing.
+Their requests shrunk the sale from $8.3k to just $4.4k. It also required a lot of extra administrative work for me because we didn't have a process in place for selling our circuit boards as a standalone product. We had to figure out how to pack them, how to code them for international export, etc.
 
-The day after they placed the order, they requested 3D models for the circuit board. This wasn't part of the agreement, but I just wanted to wrap this up, so I sent them. They were confused and asked why the models didn't include a video capture port. I explained that our devices use a third-party chip for that, which they would have received if they ordered a pre-made device, but that was one of the things they decided to buy on their own.
+The day after they we shipped their order, they requested 3D models for our circuit board. This wasn't part of the agreement, but I just wanted to wrap this up, so I shared them.
 
-They said our circuit boards were of no use to them without built-in video capture and asked for a full refund. We'd already shipped their order to India and couldn't re-route it, so they'd have to send it back to us. They were upset that I charged them a restocking fee of 15% ($665), which barely covered our costs of shipping and tariffs.
+The customer asked why our models didn't show a video capture port. I explained that our devices use a third-party chip for video capture. We would have included the video capture component if they ordered a pre-made device, but that was one of the things they decided to buy on their own.
 
-In the end, it just became a mess where nobody was happy.
+They said our circuit boards were of no use to them without built-in video capture and asked for a full refund.
 
-They balked at having to pay the restocking fee, and I got pretty upset with them. I kept it professional, but I gave them a laundry list of ways I felt like they were abusing the relationship. They said they still wanted to work together and would place orders for their US offices, but they never followed up, and I wasn't particularly eager to work with them again.
+#### It all blows up
 
-{{<img src="break-up-email.webp" has-border="true" caption="My tantrum email to the customer after the objected to a 15% restocking fee">}}
+We had already shipped the customer's order to India and couldn't re-route it. I told them they'd have to get the package back to us, and then we'd charge them a 15% ($660) restocking fee to cover the costs of preparing this order and paying return tariffs.
 
-TinyPilot's dev team had two months of high-priority work to fix a security issue, and then another three months of high-priority work to deliver H264. And then when we started our update overhaul, it was more complicated because we had to work that in while also supporting this H264 feature we half-completed.
+The customer balked at having to pay the restocking fee, and that's when my patience ran out.
+
+I kept it professional, but I emailed them a laundry list of ways I felt like they were abusing the relationship.
+
+{{<img src="break-up-email.webp" has-border="true" caption="My tantrum email to the customer after they objected to a 15% restocking fee">}}
+
+They said they still wanted to work together and would place orders for their US offices, but they never followed up. I wasn't particularly eager to work with them again, so I never reached out, either.
+
+In the end, it felt like a big mess where nobody was happy:
+
+- I was frustrated that I spent so much time pursuing this sale that involved so many special requests and preconditions, and it ultimately led nowhere.
+- The customer was upset that we didn't deliver what they expected at the price they wanted.
+- TinyPilot's dev team had five back-to-back months of rushed development: two months for the security fix and three for H264.
+- TinyPilot's other customers had five months where feature development slowed substantially because we were focused on just one customer.
 
 ### I let a website redesign go awry
 
@@ -135,18 +152,18 @@ If a popular YouTube channel mentions you, your sales can double overnight. If y
 
 Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work.
 
-The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time proactively reducing support workload. Proactive measures include things like writing tutorials, adding diagnostics to the product to make troubleshooting easier, and improving the product to prevent issues in the first place.
-
-| Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Public writing<br>Re-evaluating strategy<br>Hiring and training                               |
-| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
-| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
-| Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
+The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to improve the product and documentation so that customers require less support.
 
 If one person is sick or takes vacation for a week, the other person can pause their proactive work and still do all the time-sensitive tasks their counterpart was doing without it being a strain.
 
 For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
+
+| Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Public writing<br>Re-evaluating strategy<br>Hiring and training                               |
+| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
+| Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
+| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
 
 ### Worry when proactive work stops
 
@@ -185,7 +202,7 @@ In the end, I think the lesson might be kind of boring and obvious: some bets do
 - **Result**: Grew TinyPilot's revenue by XX% to $812k
 - **Grade**: B
 
-I knew that $1M was an aggressive goal, and I'm still impressed how close we came. Revenue is a vanity metric, especially given that profit was negative, but to suspend rigor for a moment, not a lot of bootstrapped businesses reach $812k in annual revenue.
+I always knew that $1M was an aggressive goal. We fell short, but I'm still impressed how close we came.
 
 ### Manage TinyPilot on 20 hours per week
 
@@ -201,7 +218,9 @@ I added a new team, and people expanded their roles. It's not just the work of t
 - **Result**: We never even completed the design phase
 - **Grade**: D
 
-TinyPilot has always used the Raspberry Pi 4B as the core hardware. My plan for 2022 was to consolidate all the functionality into a custom TinyPilot board, eliminating many of the expensive third-party components we currently use.
+TinyPilot has always used the Raspberry Pi 4B as the core hardware. The 4B is relatively expensive, and it's difficult to engineer extra hardware functionality on top of it.
+
+My plan for 2022 was to create a custom circuit board built around the minimalist Raspberry Pi Compute Module 4. That would reduce our manufacturing costs by 60% and simplify our hardware design.
 
 Instead, all of our hardware engineering time went to chasing down manufacturing issues and supply shortages, so we made no progress on a new product.
 
@@ -225,7 +244,7 @@ For most of the company's existence, TinyPilot's cases came from a local vendor 
 
 We switched to metal cases primarily to speed up manufacturing, but the side-effects is that most of our raw materials now originate in China. That means it should be possible to have our devices arrive to the US pre-built rather than assembling and testing each device by hand in TinyPilot's office.
 
-If we don't need to build devices in our office, we don't strictly need to maintain an office. We can move fulfillment to a third-party logistics provider, and then TinyPilot's employees become more time-independent and location-independent since we'll be out of the critical path for manufacturing and fulfillment.
+If we don't need to build devices in our office, that eliminates our primary reason for maintaining an office. We can move fulfillment to a third-party logistics provider, and then TinyPilot's staff will no longer be in the critical path for manufacturing and fulfillment. That makes TinyPilot and its employees more time-independent and location-independent.
 
 ## Do I still love it?
 
