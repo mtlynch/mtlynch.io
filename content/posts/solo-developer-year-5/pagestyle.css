@@ -5,3 +5,25 @@
 .bad-delta {
   color: red;
 }
+
+.picoshare-demo {
+  max-width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .picoshare-demo {
+    max-width: 650px;
+  }
+}
+
+.picoshare-demo img {
+  border: 1px solid gray;
+}
+
+.picoshare-demo figcaption {
+  text-align: center;
+  font-size: 0.8em;
+}

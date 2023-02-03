@@ -3,7 +3,7 @@ title: "My Fifth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-date: 2023-02-01T00:00:00-05:00
+date: 2023-02-08T00:00:00-05:00
 custom_css: true
 hero_image: cover.webp
 images:
@@ -36,9 +36,12 @@ When I launched TinyPilot in 2020, I told myself the website and logo were just 
 
 In 2022, I finally hired a design agency to develop a new logo and redesign the website.
 
-TODO: Before and after
+{{<gallery caption="Before and after the [TinyPilot website redesign](/tinypilot-redesign)">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="450px" has-border="true">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="393px" has-border="true">}}
+{{</gallery>}}
 
-The process of working with the agency was an extremely frustrating and expensive process that I wrote about previously, but the results have been great. I never tested it rigorously, but my gut feeling is that the website is responsible for the steady increase in sales we saw in 2022.
+The process of working with the agency was an extremely frustrating and expensive process that I [wrote about previously](/tinypilot-redesign), but the results have been great. I never tested it rigorously, but my gut feeling is that the website is responsible for the steady increase in sales we saw in 2022.
 
 ### The TinyPilot team grew from five people to seven
 
@@ -67,11 +70,20 @@ One of the annoying situations I ran into running TinyPilot and in my personal l
 
 I didn't like any of the existing solutions. Google Drive would insist on making you wait for 15 minutes so they can re-encode the video. And they don't give you a direct link to a file. Your recipients have to go through the Google Drive UI. And sometimes Google refuses to serve the file unless the recipient has a Google Drive account. Dropbox is a little better, but it has similar issues.
 
-So, I made a minimalist file sharing app called PicoShare. You just upload a file, and it gives you a direct link that you can share. Simple!
+So, I made a minimalist file sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. If the file is a video, you can stream it immediately. If it's a file download, recipients can download it immediately.
 
-The other neat/bizarre thing about PicoShare is that it uses SQLite for storage, including the upload data. It's an unusual choice, but it means that I can integrate with [Litestream](https://litestream.io), a tool that replicates SQLite databases in real time. You can blow away a server without warning, and then the next time you run it, it will simply restore itself from the replicated data in cloud storage. I first explored this technique with LogPaste, which I [wrote about more in 2021](/litestream/).
+<figure class="picoshare-demo">
+<img src="demo-full.gif" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
+<figcaption>Demo of PicoShare</figcaption>
+</figure>
 
-PicoShare become the fastest growing project I ever published. It reached XX stars on Github in its first XX months. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/). It became popular among users who like to run their own servers because PicoShare is simpler and easier to install than open-source tools like Nextcloud.
+The other neat/bizarre thing about PicoShare is that it uses SQLite for storage, including all file uploads. It's an unusual choice, but it means that I can integrate with [Litestream](https://litestream.io), a tool that replicates SQLite databases in real time. You can blow away a server without warning, and then the next time you run it, it will simply restore itself from the replicated data in cloud storage. I first explored this technique with LogPaste, which I [wrote about more in 2021](/litestream/).
+
+PicoShare become the fastest growing project I ever published. It received 600 Github stars within its first two weeks of release.
+
+{{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
+
+As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/). It became popular among users who like to run their own servers because PicoShare is simpler and easier to install than open-source tools like Nextcloud.
 
 ## Lessons learned
 
@@ -116,7 +128,7 @@ Small changes to our installation process would take weeks to develop because te
 
 All this because I never bothered to learn standard Linux packaging technologies.
 
-This year, the TinyPilot team and I learned to use Debian packages. It was much less painful than I expected. I thought we'd have to deploy a package server and a key server, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found the right guides (TODO: link).
+This year, the TinyPilot team and I learned to use Debian packages. It was much less painful than I expected. I thought we'd have to deploy a package server and a key server, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
 
 And things really are much better with Debian packages. There's better tooling, so we have to write less custom code, and we catch mistakes earlier. And because our installation process is now faster and simpler, it makes it easier to deploy code to real devices during development, which was previously a complex and error-prone process.
 
@@ -147,21 +159,25 @@ This is my framework-free life:
 
 {{<revenue-graph project="tinypilot">}}
 
-| Income/Expense                    | 2020                                 | 2021                                  | Change               |
-| --------------------------------- | ------------------------------------ | ------------------------------------- | -------------------- |
-| Sales                             | $53,742                              | $459,529                              | {{<delta-cell>}}     |
-| Credit card rewards               | $0                                   | $1,139                                | {{<delta-cell>}}     |
-| Raw materials                     | -$46,143                             | -$248,273                             | {{<delta-cell>}}     |
-| Software development              | -$1,321                              | -$119,015                             | {{<delta-cell>}}     |
-| Electrical engineering consulting | -$7,130                              | -$28,662                              | {{<delta-cell>}}     |
-| Fulfillment staff                 | -$2,570                              | -$25,893                              | {{<delta-cell>}}     |
-| Web design / branding             | -$250                                | -$15,931                              | {{<delta-cell>}}     |
-| Cloud services                    | -$64                                 | -$5,554                               | {{<delta-cell>}}     |
-| Office space                      | $0                                   | -$4,400                               | {{<delta-cell>}}     |
-| Advertising                       | -$675                                | -$3,633                               | {{<delta-cell>}}     |
-| Office equipment                  | $0                                   | -$2,083                               | {{<delta-cell>}}     |
-| Everything else                   | $0                                   | -$2,738                               | {{<delta-cell>}}     |
-| **Net profit**                    | <font color="red">**-$5,681**</font> | <font color="green">**$4,247**</font> | **{{<delta-cell>}}** |
+| Income/Expense                    | 2021      | 2022      | Change           |
+| --------------------------------- | --------- | --------- | ---------------- |
+| Sales                             | $459,529  | $807,459  | {{<delta-cell>}} |
+| Credit card rewards               | $2,241    | $4,327    | {{<delta-cell>}} |
+| Raw materials                     | -$224,046 | -$333,656 | {{<delta-cell>}} |
+| Payroll                           | -$142,744 | -$206,187 | {{<delta-cell>}} |
+| Electrical engineering consulting | -$28,662  | -$124,643 | {{<delta-cell>}} |
+| Advertising                       | -$3,873   | -$51,764  | {{<delta-cell>}} |
+| Web design / branding             | -$15,931  | -$30,215  | {{<delta-cell>}} |
+| Postage                           | -$24,227  | -$30,779  | {{<delta-cell>}} |
+| Cloud services                    | -$5,553   | -$7,865   | {{<delta-cell>}} |
+| Office space                      | -$4,400   | -$6,600   | {{<delta-cell>}} |
+| Equipment                         | -$2,083   | -$5,915   | {{<delta-cell>}} |
+| Legal counsel                     | -$270     | -$3,406   | {{<delta-cell>}} |
+| Insurance                         | -$1,753   | -$1,017   | {{<delta-cell>}} |
+| Everything else                   | -$2,879   | -$3,759   | {{<delta-cell>}} |
+| **Net profit**                    | $5,349    | $5,979    | {{<delta-cell>}} |
+
+TODO: Discuss this more
 
 ## Grading last year's goals
 
