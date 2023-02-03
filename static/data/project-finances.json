@@ -114,7 +114,7 @@
       "totalRevenue": 111916.3
     },
     "2022-12": {
-      "profit": 7088.68,
+      "profit": -4806.26,
       "totalRevenue": 69181.91
     }
   },
@@ -502,7 +502,7 @@
       "totalRevenue": 83.89
     },
     "2022-12": {
-      "totalRevenue": -0.3
+      "totalRevenue": 115.35
     }
   }
 }

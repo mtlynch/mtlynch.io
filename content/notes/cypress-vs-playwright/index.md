@@ -403,7 +403,7 @@ Unfortunately, Playwright's report viewer [doesn't work on CircleCI](https://git
 
 In a pattern I've only ever seen in end-to-end testing tools, the official Docker images for Cypress and Playwright don't actually contain the tools themselves. That is, the Cypress Docker image does not contain Cypress, and the Playwright Docker image doesn't contain Playwright.
 
-Instead, the Docker images contain the _dependencies_ you need to install Playwright or Docker respectively. So when you're running the Playwright Docker image, you still have to install Playwright as part of your environment setup.
+Instead, the Docker images contain the _dependencies_ you need to install Cypress or Playwright, respectively. So when you're running the Playwright Docker image, you still have to install Playwright as part of your environment setup.
 
 There must be some good reason for this, but I've never understood it. When I [complained about this to the Cypress team](/painless-web-app-testing/#further-reading), they added a special [cypress/included](https://hub.docker.com/r/cypress/included) image that contains the Cypress tool itself. There doesn't seem to be an equivalent Docker image for Playwright.
 

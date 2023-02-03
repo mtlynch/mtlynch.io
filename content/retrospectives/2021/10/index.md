@@ -41,15 +41,15 @@ We're running a little late on this, but we're still on track to ship the first 
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | August 2021                              | September 2021   | Change                                             |
-| ------------------------ | ---------------------------------------- | ---------------- | -------------------------------------------------- |
-| Unique Visitors          | 4,194                                    | 9,960            | <font color="green">+5,766 (+137%)</font>          |
-| Total Pageviews          | 8,864                                    | 15,744           | <font color="green">+6,880 (+78%)</font>           |
-| Sales Revenue            | $30,191.04                               | $42,234.17       | <font color="green">+$12,043.13 (+40%)</font>      |
-| Enterprise Subscriptions | $48.00                                   | $48.00           | 0                                                  |
-| Royalties                | N/A                                      | $3,431.35        | N/A                                                |
-| Total Revenue            | $30,239.04                               | $45,713.52       | <font color="green">+$15,474.48 (+51%)</font>      |
-| **Profit**               | <font color="red">**$-10,140.95**</font> | **$11,713.04**\* | **<font color="green">+$21,853.99 (+inf%)</font>** |
+| Metric                   | August 2021                              | September 2021 | Change                                             |
+| ------------------------ | ---------------------------------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 4,194                                    | 9,960          | <font color="green">+5,766 (+137%)</font>          |
+| Total Pageviews          | 8,864                                    | 15,744         | <font color="green">+6,880 (+78%)</font>           |
+| Sales Revenue            | $30,191.04                               | $42,234.17     | <font color="green">+$12,043.13 (+40%)</font>      |
+| Enterprise Subscriptions | $48.00                                   | $48.00         | 0                                                  |
+| Royalties                | N/A                                      | $3,431.35      | N/A                                                |
+| Total Revenue            | $30,239.04                               | $45,713.52     | <font color="green">+$15,474.48 (+51%)</font>      |
+| **Profit**               | <font color="red">**$-10,140.95**</font> | **$11,713.04** | **<font color="green">+$21,853.99 (+inf%)</font>** |
 
 After an unremarkable first half of the month, I got a surprise [review from Jeff Geerling](https://www.youtube.com/watch?v=TIrkEr2AeDY), a beloved blogger and YouTube creator in the Raspberry Pi world.
 

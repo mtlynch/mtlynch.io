@@ -49,17 +49,15 @@ We're on track for this so far. It's always hard with a new release to anticipat
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | November 2022 | December 2022   | Change                                      |
-| ------------------------ | ------------- | --------------- | ------------------------------------------- |
-| Unique Visitors          | 9,512         | 7,308           | <font color="red">-2,204 (-23%)</font>      |
-| Total Pageviews          | 20,387        | 15,549          | <font color="red">-4,838 (-24%)</font>      |
-| Sales Revenue            | $107,223.10   | $66,092.24      | <font color="red">-$41,130.86 (-38%)</font> |
-| Enterprise Subscriptions | $290.70       | $290.70         | 0                                           |
-| Royalties                | $4,402.50     | $2,798.97       | <font color="red">-$1,603.53 (-36%)</font>  |
-| Total Revenue            | $111,916.30   | $69,181.91      | <font color="red">-$42,734.39 (-38%)</font> |
-| **Profit**               | **$7,407.30** | **$7,088.68**\* | **<font color="red">-$318.62 (-4%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | November 2022 | December 2022                           | Change                                           |
+| ------------------------ | ------------- | --------------------------------------- | ------------------------------------------------ |
+| Unique Visitors          | 9,512         | 7,308                                   | <font color="red">-2,204 (-23%)</font>           |
+| Total Pageviews          | 20,387        | 15,549                                  | <font color="red">-4,838 (-24%)</font>           |
+| Sales Revenue            | $107,223.10   | $66,092.24                              | <font color="red">-$41,130.86 (-38%)</font>      |
+| Enterprise Subscriptions | $290.70       | $290.70                                 | 0                                                |
+| Royalties                | $4,402.50     | $2,798.97                               | <font color="red">-$1,603.53 (-36%)</font>       |
+| Total Revenue            | $111,916.30   | $69,181.91                              | <font color="red">-$42,734.39 (-38%)</font>      |
+| **Profit**               | **$7,407.30** | **<font color="red">-$4,806.26</font>** | **<font color="red">-$12,213.56 (-inf%)</font>** |
 
 December saw a large dropoff for TinyPilot across the board. Part of the downturn is seasonal, as businesses seem less interested in purchasing new hardware at the end of the year. The other part was that I intentionally [reduced TinyPilot's sales volume](#adapting-to-the-shortage) in response to a supply shortage I learned about mid-month.
 
