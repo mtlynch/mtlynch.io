@@ -17,7 +17,7 @@ For the first few years, all of my businesses flopped. None of them earned more 
 
 Halfway through my third year, I created a network administration device called [TinyPilot](https://tinypilotkvm.com). It quickly caught on, and it's been my main focus ever since.
 
-In 2022, TinyPilot generated $812k in revenue, a XX% increase from 2021.
+In 2022, TinyPilot generated $812k in revenue, a 76% increase from 2021.
 
 In this post, I'll share what I've learned in my fifth year about being a bootstrapped founder.
 
@@ -32,7 +32,7 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ### TinyPilot got a new website
 
-When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. But then things took off so quickly that I got so busy.
+When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. But then things took off so quickly that I could never find time to replace it.
 
 In 2022, I finally hired a design agency to develop a new logo and redesign the website.
 
@@ -43,6 +43,8 @@ In 2022, I finally hired a design agency to develop a new logo and redesign the 
 
 The process of working with the agency was an extremely frustrating and expensive process that I [wrote about previously](/tinypilot-redesign), but the results have been great. I never tested it rigorously, but my gut feeling is that the website is responsible for the steady increase in sales we saw in 2022.
 
+TODO: Add sales graph
+
 ### The TinyPilot team grew from five people to seven
 
 At the end of 2021, the TinyPilot team was:
@@ -50,7 +52,7 @@ At the end of 2021, the TinyPilot team was:
 - Me, the sole founder
 - Two software developers
 - Two local staff who handle assembling devices and fulfilling orders
-  - One of the two was also doing customer service
+  - One of whom also handled customer service
 
 At the end of 2022, we added two support engineers and adjusted responsibilities:
 
@@ -60,30 +62,32 @@ At the end of 2022, we added two support engineers and adjusted responsibilities
   - **Both now work on customer service**
 - **Two support engineers**
 
-Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support, and I was spending [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) on support requests. Now, I spend less than 5% of my time on support requests, and customers receive faster support. The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
+Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support, and I was spending [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) on support requests.
 
-The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single person unit and either hand the result to a customer or to me. Adding support engineers meant figuring out how different teams work together. How does the customer service team escalate an issue to the support engineering team? How does the support engineering team coordinate product changes with the software development team?
+Now, I spend less than 5% of my time on support requests, and customers receive faster support. The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
+
+The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single-person unit. The results either went directly to a customer or to me.
+
+Adding support engineers meant figuring out how different teams work together. How does the customer service team escalate an issue to the support engineering team? How does the support engineering team coordinate product changes with the software development team? What's the minimum access each team needs to production systems and customer data?
 
 ### PicoShare became my fastest-growing project
 
-One of the annoying situations I ran into running TinyPilot and in my personal life was sharing files that are too large for email. I'd often want to share a 15 MB screen capture demonstrating some workflow or bug, but that's a little bit obnoxious to send by email.
+One of the annoying situations I encounter in TinyPilot and my personal life is sharing files that are too large for email. I'd often want to share a 15 MB screen capture demonstrating some workflow or bug, but emailing it would eat a discourteous amount of my recipients' email storage.
 
-I didn't like any of the existing solutions. Google Drive would insist on making you wait for 15 minutes so they can re-encode the video. And they don't give you a direct link to a file. Your recipients have to go through the Google Drive UI. And sometimes Google refuses to serve the file unless the recipient has a Google Drive account. Dropbox is a little better, but it has similar issues.
+I thought all the existing cloud storage providers handled this scenario poorly. Google Drive would insist on making you wait for 15 minutes so they can re-encode the video. And your recipients can't download or watch the video without going through Google Drive's web UI. And sometimes Google refuses to serve the file unless the recipient has a Google account. Dropbox is a little better, but it similarly forces viewers into the Dropbox UI.
 
-So, I made a minimalist file sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. If the file is a video, you can stream it immediately. If it's a file download, recipients can download it immediately.
+So, I made a minimalist file sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. If you're sending a video that's already web-optimized, viewers can stream it immediately without waiting for a re-encode. If it's a file download, recipients can download it without being prompted to sign up for some other service.
 
 <figure class="picoshare-demo">
 <img src="demo-full.gif" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
 <figcaption>Demo of PicoShare</figcaption>
 </figure>
 
-The other neat/bizarre thing about PicoShare is that it uses SQLite for storage, including all file uploads. It's an unusual choice, but it means that I can integrate with [Litestream](https://litestream.io), a tool that replicates SQLite databases in real time. You can blow away a server without warning, and then the next time you run it, it will simply restore itself from the replicated data in cloud storage. I first explored this technique with LogPaste, which I [wrote about more in 2021](/litestream/).
-
 PicoShare become the fastest growing project I ever published. It received 600 Github stars within its first two weeks of release.
 
 {{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
 
-As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/). It became popular among users who like to run their own servers because PicoShare is simpler and easier to install than open-source tools like Nextcloud.
+As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/). It became popular among users who like to run their own servers because PicoShare runs in a single Docker container, making it easy to deploy than most file sharing tools.
 
 ## Lessons learned
 
@@ -91,25 +95,27 @@ As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/
 
 I made many mistakes throughout the whole TinyPilot website redesign fiasco (TODO: link), but the core problem was a mismatch between the agency and TinyPilot as a client.
 
-All of the design agency's other clients were spending 10-100x as much as I was. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like TinyPilot. The reality turned out to be that TinyPilot was the agency's lowest priority, so they ran the project poorly and drove up costs and stretched out timelines much more than I wanted.
+All of the design agency's other clients were spending 10-100x as much as I was. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like TinyPilot.
+
+The reality was that TinyPilot was the agency's lowest priority. They ran the project poorly, which drove up costs and stretched out timelines painfully.
 
 When I work with new vendors now, I ask them how my company compares to their clients. If I'm an outlier in any important dimension like size, revenue, or industry, I look elsewhere.
 
 ### Run at 50% capacity
 
-If a popular YouTube channel mentions you, your sales can double overnight. If you were already running at near-capacity, you'll fold when demand doubles.
+Naively, you might think that the best way to run a business is if everyone is 100% utilized. You don't want anyone sitting idle, but you don't want to be overwhelmed, so wouldn't it be great if everyone worked their normal hours and that was the exact number of hours to fulfill sales and support requests?
 
-Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work.
+In practice, that's obviously not a good system. Running at 100% utilization means you have 0 margin for error, so if someone gets sick, goes on vacation, or you see a sales spike, you're underwater.
 
-The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to save users from needing support. That includes things like fixing bugs in the product, writing documentation, and improving our diagnostic tools.
+Instead, I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
-Every TinyPilot team is two people, so if one person is unavailable, the other person can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed.
+The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to save users from needing support. The proactive tasks include things like fixing bugs in the product, writing documentation, and improving our diagnostic tools.
 
-For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
+Every TinyPilot team is comprised of two people, so if one person is unavailable, the other person can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush because a popular YouTube channel mentions us (TODO: link), we have spare capacity to absorb the bump.
 
 | Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Public writing<br>Re-evaluating strategy<br>Hiring and training                               |
+| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Sales<br>Re-evaluating strategy<br>Hiring and training                                        |
 | Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 | Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
@@ -118,9 +124,9 @@ For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
 When I started working on TinyPilot, I didn't know how to distribute Linux software.
 
-When it came time to publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
+To publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
 
-It worked okay, not great. Installation took about three minutes, which is a little long to install a few dependencies and place a few files. But it worked and users didn't have to configure anything manually.
+It worked okay, not great. Installation took about three minutes, which is a little long to install a handful of third-party dependencies and place a few files. But it worked and users didn't have to configure anything manually.
 
 Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations I used to ship the prototype, except now there was complex web of interdependncies. Ansible roles depended on Git repositories, which depended on Ansible roles, which depended on parameters in a bunch of YAML files.
 
@@ -134,21 +140,21 @@ And things really are much better with Debian packages. There's better tooling, 
 
 ### My life is better without JavaScript frameworks
 
-When I started learning web development in 2017, the new modern framework I'd been hearing about for years was AngularJS. It was one of the early frameworks for building single-page apps, and the idea of a self-updating was an elegance to the theory of SPAs that appealed to me.
+When I started learning web development in 2017, the new modern framework I'd been hearing about for years was AngularJS. It was one of the early frameworks for building single-page apps, and there was an elegance to that style of web development that appealed to me.
 
-I found it incredibly hard to be productive in AngularJS. It took me a week just to get a navigation bar to work on both desktop and mobile. And then I found out AngularJS was already obsolete in 2017, so I re-learned everything in Angular2. And then a few months later, Angular2 was deprecated, and there were a bunch of breaking changes.
+I found it incredibly hard to be productive in AngularJS. It took me a week just to get a navigation bar to work on both desktop and mobile. And then I found out AngularJS was already obsolete in 2017, so I re-learned everything to develop with Angular2. And then a few months later, Angular2 was deprecated, and I had to rewrite a bunch of my code for Angular-version-whatever.
 
-Vue was a big improvement, but it had its own deprecation treadmill. And I still always felt like I had to work through too many abstraction layers that I didn't understand.
+I developed in Vue for a year, which was a welcome change, but I still had to deal with frequent and painful deprecations. And I still always felt like I had to work through too many abstraction layers that I didn't understand.
 
-As I started working on TinyPilot, Julia Evans published, ["A little bit of plain Javascript can do a lot."](https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/) Inspired, I intentionally deferred choosing a JavaScript framework for TinyPilot until I felt the pain of missing one.
+When I started working on TinyPilot, Julia Evans had just published, ["A little bit of plain Javascript can do a lot."](https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/) Inspired, I tried to see how far I could get with regular, framework-free JavaScript.
 
 And then I just never felt like I was missing anything by skipping the frameworks. In fact, I found development so much easier. A lot of the things I thought annoyed me about web development turned out to just be things that annoyed me about frontend frameworks.
 
 I've written four web apps since starting TinyPilot, and none of them use a JavaScript framework. Vanilla JavaScript is great! WebComponents are woefully underrated.
 
-This is my framework-free life:
+These are the blessings of my framework-free life:
 
-- When my code throws a runtime exception, the code I see in the debugger is code I wrote and not some framework or library code I don't understand.
+- When my code throws a runtime exception, the debugger shows me code I wrote and not some framework or library code I don't understand.
 - I don't have to compile JavaScript to run my application.
 - I don't have to configure bundlers or transpilers.
 - I don't have to keep Node, npm, or a million transitive dependencies up to date.
@@ -156,6 +162,8 @@ This is my framework-free life:
 - I'm not marrying myself to an ecosystem that will be obsolete in two years.
 
 ## Finances
+
+### TinyPilot
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -178,6 +186,20 @@ This is my framework-free life:
 | **Net profit**                    | $5,349    | $5,979    | {{<delta-cell>}} |
 
 TODO: Discuss this more
+
+Profit in Q4 was $28.6k
+
+### Legacy projects
+
+| Project            | Business Type                                    | 2022 revenue |
+| ------------------ | ------------------------------------------------ | ------------ |
+| Zestful            | API for parsing recipe ingredients               | $3,391       |
+| Is It Keto         | Content website about the keto diet              | $2,293       |
+| Hit the Front Page | My course about blogging for technical audiences | $1,143       |
+
+It's mostly profit because they all cost below $30/month in hosting and a domain name.
+
+TODO: Discuss this more.
 
 ## Grading last year's goals
 
