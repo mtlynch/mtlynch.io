@@ -32,26 +32,32 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ### TinyPilot got a new website
 
-The process of working with the agency was an extremely frustrating and expensive process that I wrote about previously, but the results have been great. I never tested it rigorously, but my gut is that the website is responsible for the steady increase in sales we saw in 2022.
+When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. But then things took off so quickly that I got so busy.
 
-### The TinyPilot team grew from five to seven
+In 2022, I finally hired a design agency to develop a new logo and redesign the website.
+
+TODO: Before and after
+
+The process of working with the agency was an extremely frustrating and expensive process that I wrote about previously, but the results have been great. I never tested it rigorously, but my gut feeling is that the website is responsible for the steady increase in sales we saw in 2022.
+
+### The TinyPilot team grew from five people to seven
 
 At the end of 2021, the TinyPilot team was:
 
-- Me, the founder
+- Me, the sole founder
 - Two software developers
 - Two local staff who handle assembling devices and fulfilling orders
   - One of the two was also doing customer service
 
 At the end of 2022, we added two support engineers and adjusted responsibilities:
 
-- Me, the founder
-- Two support engineers
+- Me, the sole founder
 - Two software developers
 - Two local staff who handle assembling devices and fulfilling orders
-  - Both now work on customer service
+  - **Both now work on customer service**
+- **Two support engineers**
 
-Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support. Now, I only get involved in 10% of tech support issues. They can also do things I didn't have time to do like investigate complex bugs, write tutorials, and improve the product's diagnostic data.
+Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support, and I was spending [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) on support requests. Now, I spend less than 5% of my time on support requests, and customers receive faster support. The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
 
 The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single person unit and either hand the result to a customer or to me. Adding support engineers meant figuring out how different teams work together. How does the customer service team escalate an issue to the support engineering team? How does the support engineering team coordinate product changes with the software development team?
 
@@ -65,9 +71,9 @@ So, I made a minimalist file sharing app called PicoShare. You just upload a fil
 
 The other neat/bizarre thing about PicoShare is that it uses SQLite for storage, including the upload data. It's an unusual choice, but it means that I can integrate with [Litestream](https://litestream.io), a tool that replicates SQLite databases in real time. You can blow away a server without warning, and then the next time you run it, it will simply restore itself from the replicated data in cloud storage. I first explored this technique with LogPaste, which I [wrote about more in 2021](/litestream/).
 
-## Lessons learned
+PicoShare become the fastest growing project I ever published. It reached XX stars on Github in its first XX months. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/). It became popular among users who like to run their own servers because PicoShare is simpler and easier to install than open-source tools like Nextcloud.
 
-### Let people grow, then let teams grow
+## Lessons learned
 
 ### Don't become anyone's smallest client
 
@@ -83,9 +89,9 @@ If a popular YouTube channel mentions you, your sales can double overnight. If y
 
 Instead, what I aim for with TinyPilot is to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work.
 
-The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to improve the product and documentation so that customers require less support.
+The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to save users from needing support. That includes things like fixing bugs in the product, writing documentation, and improving our diagnostic tools.
 
-If one person is sick or takes vacation for a week, the other person can pause their proactive work and still do all the time-sensitive tasks their counterpart was doing without it being a strain.
+Every TinyPilot team is two people, so if one person is unavailable, the other person can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed.
 
 For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
@@ -98,15 +104,21 @@ For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
 ### Ansible and git are not software distribution tools
 
-When I started working on TinyPilot, I didn't know the right way to install software on Linux. I had installed software from package managers like `apt` and `rpm`, but I'd never created my own packages.
+When I started working on TinyPilot, I didn't know how to distribute Linux software.
 
-When it came time to distribute the first prototype of TinyPilot, I just used the tools I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies and cloned the TinyPilot git repository.
+When it came time to publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
 
-It worked okay, not great. Installation took about three minutes, which is a little long to install a few dependencies and place a few files, but it worked and users didn't have to configure anything manually.
+It worked okay, not great. Installation took about three minutes, which is a little long to install a few dependencies and place a few files. But it worked and users didn't have to configure anything manually.
 
-Two years later, TinyPilot's update process was a mess. It still relied on the same foundations as my prototype, except now there was complicated web interdependncies where Ansible roles depended on other Ansible roles, which depended on command-line parameters and file contents in distant locations. Small changes to our installation process would take weeks to develop because testing changes was so complex and time-consuming. Security fixes in Git were breaking our installation process, which made sense because Git never promised to be a software distribution tool.
+Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations I used to ship the prototype, except now there was complex web of interdependncies. Ansible roles depended on Git repositories, which depended on Ansible roles, which depended on parameters in a bunch of YAML files.
 
-In May, we finally got on the path to untangle ourselves from Ansible and git. We did a major rearchitecting of our update process centered around Debian packages. They turned out to be easier than I expected once I found the right guides (TODO: link). We still depend on Ansible, but we're on the path to incrementally unravel it and port the logic to our Debian package.
+Small changes to our installation process would take weeks to develop because testing changes was so complex and time-consuming. Security fixes in Git were breaking our installation process between releases.
+
+All this because I never bothered to learn standard Linux packaging technologies.
+
+This year, the TinyPilot team and I learned to use Debian packages. It was much less painful than I expected. I thought we'd have to deploy a package server and a key server, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found the right guides (TODO: link).
+
+And things really are much better with Debian packages. There's better tooling, so we have to write less custom code, and we catch mistakes earlier. And because our installation process is now faster and simpler, it makes it easier to deploy code to real devices during development, which was previously a complex and error-prone process.
 
 ### My life is better without JavaScript frameworks
 
@@ -198,7 +210,7 @@ For most of 2023, TinyPilot's production will be constrained by supply, so I'm g
 
 For most of the company's existence, TinyPilot's cases came from a local vendor who designed and 3D printed them. In the last few weeks, we completed the transition to metal cases.
 
-We switched to metal cases primarily to speed up manufacturing, but the side-effects is that most of our raw materials now originate in China. That means it should be possible to have our devices arrive to the US pre-built rather than assembling and testing each device by hand in TinyPilot's office.
+The main reason we switched was to increase our scale &mdash; we had exhausted the print capacity of our local 3D printing partner. The side-effect I didn't anticipate is that most of our raw materials now originate in China. That means it should be possible to manufacture our entire devices at the factory in China rather than assembling and testing each device by hand in TinyPilot's office in the US.
 
 If we don't need to build devices in our office, that eliminates our primary reason for maintaining an office. We can move fulfillment to a third-party logistics provider, and then TinyPilot's staff will no longer be in the critical path for manufacturing and fulfillment. That makes TinyPilot and its employees more time-independent and location-independent.
 
