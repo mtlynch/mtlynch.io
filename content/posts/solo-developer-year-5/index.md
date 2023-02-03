@@ -51,15 +51,19 @@ At the end of 2022, we added two support engineers and adjusted responsibilities
 - Two local staff who handle assembling devices and fulfilling orders
   - Both now work on customer service
 
-And fortunately, it's the same people. The same team that joined our scrappy project in early 2021 when we were selling only XX devices per month are still with the company and growing their roles as the company evolves.
+Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support. Now, I only get involved in 10% of tech support issues. They can also do things I didn't have time to do like investigate complex bugs, write tutorials, and improve the product's diagnostic data.
 
-The two support engineers have been a major improvement. The customer service staff doesn't have a background in web development or Linux, so before we introduced the support engineer role, I was handling all support requests that required technical knowledge. Now,
-
-But there's also complexity in adding roles. Before, when the team was just me and two developers and two local staff, I didn't think much about interdependencies. The local staff and software developers never do work that . With the support engineer, I had to think more about workflows that cross team boundaries and how to keep communication clear.
+The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single person unit and either hand the result to a customer or to me. Adding support engineers meant figuring out how different teams work together. How does the customer service team escalate an issue to the support engineering team? How does the support engineering team coordinate product changes with the software development team?
 
 ### PicoShare became my fastest-growing project
 
-## What went well this year?
+One of the annoying situations I ran into running TinyPilot and in my personal life was sharing files that are too large for email. I'd often want to share a 15 MB screen capture demonstrating some workflow or bug, but that's a little bit obnoxious to send by email.
+
+I didn't like any of the existing solutions. Google Drive would insist on making you wait for 15 minutes so they can re-encode the video. And they don't give you a direct link to a file. Your recipients have to go through the Google Drive UI. And sometimes Google refuses to serve the file unless the recipient has a Google Drive account. Dropbox is a little better, but it has similar issues.
+
+So, I made a minimalist file sharing app called PicoShare. You just upload a file, and it gives you a direct link that you can share. Simple!
+
+The other neat/bizarre thing about PicoShare is that it uses SQLite for storage, including the upload data. It's an unusual choice, but it means that I can integrate with [Litestream](https://litestream.io), a tool that replicates SQLite databases in real time. You can blow away a server without warning, and then the next time you run it, it will simply restore itself from the replicated data in cloud storage. I first explored this technique with LogPaste, which I [wrote about more in 2021](/litestream/).
 
 ## Lessons learned
 
@@ -67,11 +71,11 @@ But there's also complexity in adding roles. Before, when the team was just me a
 
 ### Don't become anyone's smallest client
 
-I thought it sounded great! This agency that normally works for big clients was going to work with me!
+I made many mistakes throughout the whole TinyPilot website redesign fiasco (TODO: link), but the core problem was a mismatch between the agency and TinyPilot as a client.
 
-I learned many lessons from the whole saga, but I think the core of it was a client-vendor mismatch. Most of the vendor's clients had orders of more money to blow than TinyPilot, and so the agency's processes optimized for those clients. As a result, TinyPilot got dragged into spending much more than I wanted on a slower timeline than I expected.
+All of the design agency's other clients were spending 10-100x as much as I was. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like TinyPilot. The reality turned out to be that TinyPilot was the agency's lowest priority, so they ran the project poorly and drove up costs and stretched out timelines much more than I wanted.
 
-When I work with new vendors now, I ask them where I fall in the spectrum of their clients. If I'm an oddball client for them in any important dimension, that's a strong sign for me to look elsewhere.
+When I work with new vendors now, I ask them how my company compares to their clients. If I'm an outlier in any important dimension like size, revenue, or industry, I look elsewhere.
 
 ### Run at 50% capacity
 
@@ -94,19 +98,38 @@ For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
 ### Ansible and git are not software distribution tools
 
-### My life is better without frontend frameworks
+When I started working on TinyPilot, I didn't know the right way to install software on Linux. I had installed software from package managers like `apt` and `rpm`, but I'd never created my own packages.
 
-TinyPilot has no frontend framework, and it's never been a problem.
+When it came time to distribute the first prototype of TinyPilot, I just used the tools I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies and cloned the TinyPilot git repository.
 
-PicoShare has no frontend framework. No webpack, no chain of dependencies I have
+It worked okay, not great. Installation took about three minutes, which is a little long to install a few dependencies and place a few files, but it worked and users didn't have to configure anything manually.
 
-Whenever I tread back into a project I created before I switched to pure vanilla JavaScript, it's so miserable. Some library eight transitive dependencies away from me had a security bug, so I have to upgrade, but I can't upgrade it without upgrading 30 other libraries, and then upgrading those libraries breaks my code, and I have to chase down what changed in those libraries.
+Two years later, TinyPilot's update process was a mess. It still relied on the same foundations as my prototype, except now there was complicated web interdependncies where Ansible roles depended on other Ansible roles, which depended on command-line parameters and file contents in distant locations. Small changes to our installation process would take weeks to develop because testing changes was so complex and time-consuming. Security fixes in Git were breaking our installation process, which made sense because Git never promised to be a software distribution tool.
 
-No, no. No more of that. Just vanilla JavaScript. PicoShare has a single third-party JavaScript dependency, and it only loads on certain pages. It's fine.
+In May, we finally got on the path to untangle ourselves from Ansible and git. We did a major rearchitecting of our update process centered around Debian packages. They turned out to be easier than I expected once I found the right guides (TODO: link). We still depend on Ansible, but we're on the path to incrementally unravel it and port the logic to our Debian package.
 
-I understand the value of frontend frameworks, and I think there are many contexts where they make sense. I think too many developers have accepted them as reality without realizing the high cost they impose.
+### My life is better without JavaScript frameworks
 
-I understand that it might get more complicated for larger projects, but for personal projects, plain JavaScript is nice and relaxing.
+When I started learning web development in 2017, the new modern framework I'd been hearing about for years was AngularJS. It was one of the early frameworks for building single-page apps, and the idea of a self-updating was an elegance to the theory of SPAs that appealed to me.
+
+I found it incredibly hard to be productive in AngularJS. It took me a week just to get a navigation bar to work on both desktop and mobile. And then I found out AngularJS was already obsolete in 2017, so I re-learned everything in Angular2. And then a few months later, Angular2 was deprecated, and there were a bunch of breaking changes.
+
+Vue was a big improvement, but it had its own deprecation treadmill. And I still always felt like I had to work through too many abstraction layers that I didn't understand.
+
+As I started working on TinyPilot, Julia Evans published, ["A little bit of plain Javascript can do a lot."](https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/) Inspired, I intentionally deferred choosing a JavaScript framework for TinyPilot until I felt the pain of missing one.
+
+And then I just never felt like I was missing anything by skipping the frameworks. In fact, I found development so much easier. A lot of the things I thought annoyed me about web development turned out to just be things that annoyed me about frontend frameworks.
+
+I've written four web apps since starting TinyPilot, and none of them use a JavaScript framework. Vanilla JavaScript is great! WebComponents are woefully underrated.
+
+This is my framework-free life:
+
+- When my code throws a runtime exception, the code I see in the debugger is code I wrote and not some framework or library code I don't understand.
+- I don't have to compile JavaScript to run my application.
+- I don't have to configure bundlers or transpilers.
+- I don't have to keep Node, npm, or a million transitive dependencies up to date.
+- I almost never have to rewrite my code due to version changes upstream.
+- I'm not marrying myself to an ecosystem that will be obsolete in two years.
 
 ## Finances
 
