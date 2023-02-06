@@ -30,6 +30,32 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ## Highlights from the year
 
+### TinyPilot grew annual revenue by 76% to $812k
+
+{{<revenue-graph project="tinypilot">}}
+
+| Income/Expense                    | 2021      | 2022      | Change           |
+| --------------------------------- | --------- | --------- | ---------------- |
+| Sales                             | $459,529  | $807,459  | {{<delta-cell>}} |
+| Credit card rewards               | $2,241    | $4,327    | {{<delta-cell>}} |
+| Raw materials                     | -$224,046 | -$333,656 | {{<delta-cell>}} |
+| Payroll                           | -$142,744 | -$206,187 | {{<delta-cell>}} |
+| Electrical engineering consulting | -$28,662  | -$124,643 | {{<delta-cell>}} |
+| Advertising                       | -$3,873   | -$51,764  | {{<delta-cell>}} |
+| Web design / branding             | -$15,931  | -$30,215  | {{<delta-cell>}} |
+| Postage                           | -$24,227  | -$30,779  | {{<delta-cell>}} |
+| Cloud services                    | -$5,553   | -$7,865   | {{<delta-cell>}} |
+| Office space                      | -$4,400   | -$6,600   | {{<delta-cell>}} |
+| Equipment                         | -$2,083   | -$5,915   | {{<delta-cell>}} |
+| Legal counsel                     | -$270     | -$3,406   | {{<delta-cell>}} |
+| Insurance                         | -$1,753   | -$1,017   | {{<delta-cell>}} |
+| Everything else                   | -$2,879   | -$3,759   | {{<delta-cell>}} |
+| **Net profit**                    | $5,349    | $5,979    | {{<delta-cell>}} |
+
+TODO: Discuss this more
+
+Profit in Q4 was $28.6k
+
 ### TinyPilot got a new website
 
 When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. But then things took off so quickly that I could never find time to replace it.
@@ -66,9 +92,7 @@ Adding the support engineers felt like finding the missing piece of the puzzle. 
 
 Now, I spend less than 5% of my time on support requests, and customers receive faster support. The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
 
-The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single-person unit. The results either went directly to a customer or to me.
-
-Adding support engineers meant figuring out how different teams work together. How does the customer service team escalate an issue to the support engineering team? How does the support engineering team coordinate product changes with the software development team? What's the minimum access each team needs to production systems and customer data?
+The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single-person unit. The results either went directly to a customer or to me. Adding support engineers meant figuring out how different teams work together.
 
 ### PicoShare became my fastest-growing project
 
@@ -116,7 +140,7 @@ Every TinyPilot team is comprised of two people, so if one person is unavailable
 | Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Sales<br>Re-evaluating strategy<br>Hiring and training                                        |
-| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing blog posts<br>Investigating difficult bugs                                |
+| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing tutorials<br>Investigating difficult bugs                                |
 | Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
 | Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
 
@@ -152,42 +176,7 @@ And then I just never felt like I was missing anything by skipping the framework
 
 I've written four web apps since starting TinyPilot, and none of them use a JavaScript framework. Vanilla JavaScript is great! WebComponents are woefully underrated.
 
-These are the blessings of my framework-free life:
-
-- When my code throws a runtime exception, the debugger shows me code I wrote and not some framework or library code I don't understand.
-- I don't have to compile JavaScript to run my application.
-- I don't have to configure bundlers or transpilers.
-- I don't have to keep Node, npm, or a million transitive dependencies up to date.
-- I almost never have to rewrite my code due to version changes upstream.
-- I'm not marrying myself to an ecosystem that will be obsolete in two years.
-
 ## Finances
-
-### TinyPilot
-
-{{<revenue-graph project="tinypilot">}}
-
-| Income/Expense                    | 2021      | 2022      | Change           |
-| --------------------------------- | --------- | --------- | ---------------- |
-| Sales                             | $459,529  | $807,459  | {{<delta-cell>}} |
-| Credit card rewards               | $2,241    | $4,327    | {{<delta-cell>}} |
-| Raw materials                     | -$224,046 | -$333,656 | {{<delta-cell>}} |
-| Payroll                           | -$142,744 | -$206,187 | {{<delta-cell>}} |
-| Electrical engineering consulting | -$28,662  | -$124,643 | {{<delta-cell>}} |
-| Advertising                       | -$3,873   | -$51,764  | {{<delta-cell>}} |
-| Web design / branding             | -$15,931  | -$30,215  | {{<delta-cell>}} |
-| Postage                           | -$24,227  | -$30,779  | {{<delta-cell>}} |
-| Cloud services                    | -$5,553   | -$7,865   | {{<delta-cell>}} |
-| Office space                      | -$4,400   | -$6,600   | {{<delta-cell>}} |
-| Equipment                         | -$2,083   | -$5,915   | {{<delta-cell>}} |
-| Legal counsel                     | -$270     | -$3,406   | {{<delta-cell>}} |
-| Insurance                         | -$1,753   | -$1,017   | {{<delta-cell>}} |
-| Everything else                   | -$2,879   | -$3,759   | {{<delta-cell>}} |
-| **Net profit**                    | $5,349    | $5,979    | {{<delta-cell>}} |
-
-TODO: Discuss this more
-
-Profit in Q4 was $28.6k
 
 ### Legacy projects
 
@@ -243,6 +232,8 @@ I'm hopeful that I'll be more successful at reducing my management time this yea
 In previous years, I've focused on growth. For a hardware business to work, you need to be at a certain scale. At this point, I'm at the scale where I'd feel happy maintaining this indefinitely.
 
 For most of 2023, TinyPilot's production will be constrained by supply, so I'm going to focus on profit rather than growth.
+
+TODO: Expand on this.
 
 ### Close the TinyPilot office
 
