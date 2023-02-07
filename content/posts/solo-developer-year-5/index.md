@@ -30,7 +30,7 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 
 ## Highlights from the year
 
-### TinyPilot grew annual revenue by 76% to $812k
+### TinyPilot grew annual revenue to $812k
 
 {{<revenue-graph project="tinypilot">}}
 
@@ -47,18 +47,20 @@ In this post, I'll share what I've learned in my fifth year about being a bootst
 | Cloud services                    | -$5,553   | -$7,865   | {{<delta-cell>}} |
 | Office space                      | -$4,400   | -$6,600   | {{<delta-cell>}} |
 | Equipment                         | -$2,083   | -$5,915   | {{<delta-cell>}} |
-| Legal counsel                     | -$270     | -$3,406   | {{<delta-cell>}} |
-| Insurance                         | -$1,753   | -$1,017   | {{<delta-cell>}} |
-| Everything else                   | -$2,879   | -$3,759   | {{<delta-cell>}} |
+| Everything else                   | -$4,902   | -$8,183   | {{<delta-cell>}} |
 | **Net profit**                    | $5,349    | $5,979    | {{<delta-cell>}} |
 
-TODO: Discuss this more
+While it sounds impressive to grow revenue by $350k, it's a little less exciting that I'm only walking away with $6k in profit. I don't pay myself a salary, so $6k is what I earned from the business. Still, I'm excited about these numbers and what they mean for 2023.
 
-Profit in Q4 was $28.6k
+One of the major cost increases was in electrical engineering. In late 2021, I switched electrical engineering vendors, as the previous vendor was struggling to keep up with TinyPilot's workload. The new vendor is a larger agency with significantly more capacity, but they also charge three times the hourly rate as the previous vendor.
+
+The ongoing chip shortage forced us into costly redesigns, which ballooned both our cost of electrical engineering hours and raw materials. We'd have to redesign a circuit board before we exhausted our existing supply, and that meant paying a premium to expedite everything and wasting components.
+
+TinyPilot's profit in the fourth quarter of the year was $28.6k, which is $9.5k per month. That's a healthy profit, and I expect that to be representative of the upcoming year. The investments we made in 2022 will allow us to increase scale and reduce costs in 2023. Our electrical engineering and materials cost should drop drastically now that our manufacturing process has matured and we have a healthy inventory.
 
 ### TinyPilot got a new website
 
-When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. But then things took off so quickly that I could never find time to replace it.
+When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. Then, things took off so quickly that I never had time to replace it.
 
 In 2022, I finally hired a design agency to develop a new logo and redesign the website.
 
@@ -67,9 +69,7 @@ In 2022, I finally hired a design agency to develop a new logo and redesign the 
 {{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" has-border="true">}}
 {{</gallery>}}
 
-The process of working with the agency was an extremely frustrating and expensive process that I [wrote about previously](/tinypilot-redesign), but the results have been great. I never tested it rigorously, but my gut feeling is that the website is responsible for the steady increase in sales we saw in 2022.
-
-TODO: Add sales graph
+I wrote previously about how [frustrating and expensive](/tinypilot-redesign) it was working with the design agency, but I'm pleased with the end result. My old website looked like a hobby project, and the new design looks like a real company.
 
 ### The TinyPilot team grew from five people to seven
 
@@ -88,38 +88,40 @@ At the end of 2022, we added two support engineers and adjusted responsibilities
   - **Both now work on customer service**
 - **Two support engineers**
 
-Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support, and I was spending [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) on support requests.
+Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support, and I was spending [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) on support requests. Now, I spend less than 5% of my time on support requests, and customers receive faster support.
 
-Now, I spend less than 5% of my time on support requests, and customers receive faster support. The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
+The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
 
-The team changes also stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple, organizationally speaking. Everyone could do their work as a single-person unit. The results either went directly to a customer or to me. Adding support engineers meant figuring out how different teams work together.
+Growing the team stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple. Almost everyone did their work as a single-person unit. The results either went directly to a customer or to me. When employees needed to coordinate with each other, it was always among people who had the same role.
+
+Integrating support engineers meant figuring out how different teams work together. How do support requests work when they require coordination between fulfillment staff and support engineers? What's the feedback loop between the support engineers and the dev team?
 
 ### PicoShare became my fastest-growing project
 
-One of the annoying situations I encounter in TinyPilot and my personal life is sharing files that are too large for email. I'd often want to share a 15 MB screen capture demonstrating some workflow or bug, but emailing it would eat a discourteous amount of my recipients' email storage.
+One of the annoying situations I encounter in TinyPilot and my personal life is sharing files that are too large for email. I'd often want to share a 15 MB screen capture demonstrating some workflow or bug, but emailing it would eat a discourteous amount of my recipient's email storage.
 
-I thought all the existing cloud storage providers handled this scenario poorly. Google Drive would insist on making you wait for 15 minutes so they can re-encode the video. And your recipients can't download or watch the video without going through Google Drive's web UI. And sometimes Google refuses to serve the file unless the recipient has a Google account. Dropbox is a little better, but it similarly forces viewers into the Dropbox UI.
+All of the existing cloud storage providers like Google or Dropbox make sharing a single file needlessly complicated. They won't give you a direct link to your file &mdash; just a link to *their* web interface, where they pressure your recipient to sign up for an account. If you upload a video, Google Drive makes you wait 15+ minutes while they re-encode it, even if it was already optimized to play in the browser.
 
-So, I made a minimalist file sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. If you're sending a video that's already web-optimized, viewers can stream it immediately without waiting for a re-encode. If it's a file download, recipients can download it without being prompted to sign up for some other service.
+So, I made a minimalist file sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. Easy! No re-encoding, no prompts to sign up for anything.
 
 <figure class="picoshare-demo">
 <img src="demo-full.gif" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
 <figcaption>Demo of PicoShare</figcaption>
 </figure>
 
-PicoShare become the fastest growing project I ever published. It received 600 Github stars within its first two weeks of release.
+PicoShare become the fastest growing project I ever published. It received 600 Github stars within two weeks of release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
 
 {{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
 
-As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/). It became popular among users who like to run their own servers because PicoShare runs in a single Docker container, making it easy to deploy than most file sharing tools.
+There are a few open-source tools that offer [similar functionality](https://github.com/awesome-selfhosted/awesome-selfhosted#file-transfer---single-click--drag-n-drop-upload), but PicoShare is unique in not requiring a database server. That means it runs in a single Docker container, whereas other solutions require more complicated orchestration. PicoShare's simple deployment has made it popular with [self-hosters](https://reddit.com/r/selfhosted/) &mdash; users who prefer accessing services on servers they maintain.
 
 ## Lessons learned
 
 ### Don't become anyone's smallest client
 
-I made many mistakes throughout the whole TinyPilot website redesign fiasco (TODO: link), but the core problem was a mismatch between the agency and TinyPilot as a client.
+I made many mistakes throughout the whole [TinyPilot website redesign fiasco](/tinypilot-redesign), but the core problem was that the design agency was a fundamental mismatch for a company of TinyPilot's size.
 
-All of the design agency's other clients were spending 10-100x as much as I was. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like TinyPilot.
+All of the design agency's other clients were spending 5-20x as much as I was. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like TinyPilot.
 
 The reality was that TinyPilot was the agency's lowest priority. They ran the project poorly, which drove up costs and stretched out timelines painfully.
 
@@ -127,7 +129,9 @@ When I work with new vendors now, I ask them how my company compares to their cl
 
 ### Run at 50% capacity
 
-Naively, you might think that the best way to run a business is if everyone is 100% utilized. You don't want anyone sitting idle, but you don't want to be overwhelmed, so wouldn't it be great if everyone worked their normal hours and that was the exact number of hours to fulfill sales and support requests?
+Naively, you might think that an ideal business runs so that staff perfectly matches demand. At the end of the week, every support ticket is answered, and every order is shipped, and everyone worked exactly 40 hours.
+
+if every person is is 100% utilized. You don't want anyone sitting idle, but you don't want to be overwhelmed, so wouldn't it be great if everyone worked their normal hours and that was the exact number of hours to fulfill sales and support requests?
 
 In practice, that's obviously not a good system. Running at 100% utilization means you have 0 margin for error, so if someone gets sick, goes on vacation, or you see a sales spike, you're underwater.
 
@@ -150,51 +154,33 @@ When I started working on TinyPilot, I didn't know how to distribute Linux softw
 
 To publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
 
-It worked okay, not great. Installation took about three minutes, which is a little long to install a handful of third-party dependencies and place a few files. But it worked and users didn't have to configure anything manually.
+The installation was slow but reliable, and users didn't have to configure anything manually.
 
-Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations I used to ship the prototype, except now there was complex web of interdependncies. Ansible roles depended on Git repositories, which depended on Ansible roles, which depended on parameters in a bunch of YAML files.
-
-Small changes to our installation process would take weeks to develop because testing changes was so complex and time-consuming. Security fixes in Git were breaking our installation process between releases.
+Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations I used to ship the prototype, except now there was complex web of interdependncies. Ansible roles depended on Git repositories, which depended on Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes could swallow a week of development time.
 
 All this because I never bothered to learn standard Linux packaging technologies.
 
-This year, the TinyPilot team and I learned to use Debian packages. It was much less painful than I expected. I thought we'd have to deploy a package server and a key server, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
+This year, the TinyPilot team and I learned to use Debian packages. It was much less painful than I expected. I thought we'd have to deploy all sorts of package servers and key servers, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
 
-And things really are much better with Debian packages. There's better tooling, so we have to write less custom code, and we catch mistakes earlier. And because our installation process is now faster and simpler, it makes it easier to deploy code to real devices during development, which was previously a complex and error-prone process.
+Debian packages have helped us catch expensive mistakes earlier. And we can easily deploy code to real devices during development, whereas our previous installation system made that process prohibitively complex.
 
 ### My life is better without JavaScript frameworks
 
-When I started learning web development in 2017, the new modern framework I'd been hearing about for years was AngularJS. It was one of the early frameworks for building single-page apps, and there was an elegance to that style of web development that appealed to me.
+For most of my career, I've developed software for Windows desktops or Linux servers. In 2017, I accepted that my life as a bootstrapper would be easier if I was a competent web developer.
 
-I found it incredibly hard to be productive in AngularJS. It took me a week just to get a navigation bar to work on both desktop and mobile. And then I found out AngularJS was already obsolete in 2017, so I re-learned everything to develop with Angular2. And then a few months later, Angular2 was deprecated, and I had to rewrite a bunch of my code for Angular-version-whatever.
+I learned AngularJS, and I hated it. I couldn't understand how everyone was using something that made the basics of creating a website so difficult. I picked up Vue a couple years later. Vue was a welcome respite from Angular, but I still spent the majority of my time dealing the framework and dependencices rather than building a web app.
 
-I developed in Vue for a year, which was a welcome change, but I still had to deal with frequent and painful deprecations. And I still always felt like I had to work through too many abstraction layers that I didn't understand.
+When I started working on TinyPilot, Julia Evans had just published, ["A little bit of plain Javascript can do a lot."](https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/) Inspired, I tried to see how long I could go without needing a JavaScript framework. And the answer turned out to be: forever.
 
-When I started working on TinyPilot, Julia Evans had just published, ["A little bit of plain Javascript can do a lot."](https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/) Inspired, I tried to see how far I could get with regular, framework-free JavaScript.
-
-And then I just never felt like I was missing anything by skipping the frameworks. In fact, I found development so much easier. A lot of the things I thought annoyed me about web development turned out to just be things that annoyed me about frontend frameworks.
+I expected to reach a point where we were consistently hitting problems a framework would have solved for us, but that never happened. Development was so much easier without the frameworks. A lot of the things I thought annoyed me about web development turned out to just be things that annoyed me about frontend frameworks.
 
 I've written four web apps since starting TinyPilot, and none of them use a JavaScript framework. Vanilla JavaScript is great! WebComponents are woefully underrated.
-
-## Finances
-
-### Legacy projects
-
-| Project            | Business Type                                    | 2022 revenue |
-| ------------------ | ------------------------------------------------ | ------------ |
-| Zestful            | API for parsing recipe ingredients               | $3,391       |
-| Is It Keto         | Content website about the keto diet              | $2,293       |
-| Hit the Front Page | My course about blogging for technical audiences | $1,143       |
-
-It's mostly profit because they all cost below $30/month in hosting and a domain name.
-
-TODO: Discuss this more.
 
 ## Grading last year's goals
 
 ### Grow TinyPilot to $1M in annual revenue
 
-- **Result**: Grew TinyPilot's revenue by XX% to $812k
+- **Result**: Grew TinyPilot's revenue by 76% to $812k
 - **Grade**: B
 
 I always knew that $1M was an aggressive goal. We fell short, but I'm still impressed how close we came.
