@@ -63,8 +63,8 @@ When I launched TinyPilot in 2020, I told myself the website and logo were just 
 In 2022, I finally hired a design agency to develop a new logo and redesign the website.
 
 {{<gallery caption="Before and after the [TinyPilot website redesign](/tinypilot-redesign)">}}
-{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="450px" has-border="true">}}
-{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="393px" has-border="true">}}
+{{<img src="landing-before-cropped.png" alt="Screenshot of old landing page" max-width="400px" has-border="true">}}
+{{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" has-border="true">}}
 {{</gallery>}}
 
 The process of working with the agency was an extremely frustrating and expensive process that I [wrote about previously](/tinypilot-redesign), but the results have been great. I never tested it rigorously, but my gut feeling is that the website is responsible for the steady increase in sales we saw in 2022.
