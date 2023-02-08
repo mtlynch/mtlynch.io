@@ -164,18 +164,6 @@ This year, the TinyPilot team and I learned to use Debian packages. It was much 
 
 Debian packages have helped us catch expensive mistakes earlier. And we can easily deploy code to real devices during development, whereas our previous installation system made that process prohibitively complex.
 
-### My life is better without JavaScript frameworks
-
-For most of my career, I've developed software for Windows desktops or Linux servers. In 2017, I accepted that my life as a bootstrapper would be easier if I was a competent web developer.
-
-I learned AngularJS, and I hated it. I couldn't understand how everyone was using something that made the basics of creating a website so difficult. I picked up Vue a couple years later. Vue was a welcome respite from Angular, but I still spent the majority of my time dealing the framework and dependencices rather than building a web app.
-
-When I started working on TinyPilot, Julia Evans had just published, ["A little bit of plain Javascript can do a lot."](https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/) Inspired, I tried to see how long I could go without needing a JavaScript framework. And the answer turned out to be: forever.
-
-I expected to reach a point where we were consistently hitting problems a framework would have solved for us, but that never happened. Development was so much easier without the frameworks. A lot of the things I thought annoyed me about web development turned out to just be things that annoyed me about frontend frameworks.
-
-I've written four web apps since starting TinyPilot, and none of them use a JavaScript framework. Vanilla JavaScript is great! WebComponents are woefully underrated.
-
 ## Grading last year's goals
 
 ### Grow TinyPilot to $1M in annual revenue
