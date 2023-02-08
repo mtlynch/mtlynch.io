@@ -233,7 +233,7 @@ I still prefer working for myself to working for an employer, and I plan to do i
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/)._
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
