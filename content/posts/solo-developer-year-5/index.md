@@ -54,13 +54,13 @@ While it sounds impressive to grow revenue by $350k, it's a little less exciting
 
 One of the major cost increases was in electrical engineering. In late 2021, I switched electrical engineering vendors, as the previous vendor was struggling to keep up with TinyPilot's workload. The new vendor is a larger agency with significantly more capacity, but they also charge three times the hourly rate as the previous vendor.
 
-The ongoing chip shortage forced us into costly redesigns, which ballooned both our cost of electrical engineering hours and raw materials. We'd have to redesign a circuit board before we exhausted our existing supply, and that meant paying a premium to expedite everything and wasting components.
+The ongoing chip shortage forced us into costly redesigns, which bloated costs for both engineering hours and raw materials. We were frequently in a race to redesign a circuit board before we ran out of our existing version, so we paid a premium to expedite everything and wasted leftover components.
 
-TinyPilot's profit in the fourth quarter of the year was $28.6k, which is $9.5k per month. That's a healthy profit, and I expect that to be representative of the upcoming year. The investments we made in 2022 will allow us to increase scale and reduce costs in 2023. Our electrical engineering and materials cost should drop drastically now that our manufacturing process has matured and we have a healthy inventory.
+We finally escaped the redesign treadmill in September, so I'm hopeful that our fourth quarter results will be reflective of the coming year. Our profit was $28.6k for the quarter, which is $9.5k per month. If I can sustain that for 2023, I'll be happy.
 
 ### TinyPilot got a new website
 
-When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders until I found out if there was any demand for the product. Then, things took off so quickly that I never had time to replace it.
+When I launched TinyPilot in 2020, I told myself the website and logo were just placeholders. Then, things took off so quickly that I never had time to replace them.
 
 In 2022, I finally hired a design agency to develop a new logo and redesign the website.
 
@@ -69,21 +69,22 @@ In 2022, I finally hired a design agency to develop a new logo and redesign the 
 {{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" has-border="true">}}
 {{</gallery>}}
 
-I wrote previously about how [frustrating and expensive](/tinypilot-redesign) it was working with the design agency, but I'm pleased with the end result. My old website looked like a hobby project, and the new design looks like a real company.
+I wrote previously about how [frustrating and expensive](/tinypilot-redesign) it was working with the design agency, but I'm pleased with the result. My old website looked like a hobby project, and the new design looks like a real company.
 
-### The TinyPilot team grew from five people to seven
+### The TinyPilot team grew from six people to seven
 
 At the end of 2021, the TinyPilot team was:
 
 - Me, the sole founder
-- Two software developers
+- Three software developers
 - Two local staff who handle assembling devices and fulfilling orders
   - One of whom also handled customer service
 
 At the end of 2022, we added two support engineers and adjusted responsibilities:
 
 - Me, the sole founder
-- Two software developers
+- **Two** software developers
+  - I let one go after a few months due to poor fit
 - Two local staff who handle assembling devices and fulfilling orders
   - **Both now work on customer service**
 - **Two support engineers**
@@ -119,50 +120,48 @@ There are a few open-source tools that offer [similar functionality](https://git
 
 ### Don't become anyone's smallest client
 
-I made many mistakes throughout the whole [TinyPilot website redesign fiasco](/tinypilot-redesign), but the core problem was that the design agency was a fundamental mismatch for a company of TinyPilot's size.
+I made many mistakes throughout the whole [TinyPilot website redesign fiasco](/tinypilot-redesign), but the core problem was that the design agency was a fundamental mismatch for TinyPilot.
 
-All of the design agency's other clients were spending 5-20x as much as I was. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like TinyPilot.
+All of the agency's other clients had projects 5-20x the size of TinyPilot's. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like mine.
 
-The reality was that TinyPilot was the agency's lowest priority. They ran the project poorly, which drove up costs and stretched out timelines painfully.
+The reality was that TinyPilot was the agency's lowest priority. They managed the project poorly, which drove up costs and stretched out timelines painfully.
 
-When I work with new vendors now, I ask them how my company compares to their clients. If I'm an outlier in any important dimension like size, revenue, or industry, I look elsewhere.
+When I work with new vendors now, I ask them how my company compares to their other clients. If I'm an outlier in any important dimension like size, revenue, or industry, I look elsewhere.
 
 ### Run at 50% capacity
 
-Naively, you might think that an ideal business runs so that staff perfectly matches demand. At the end of the week, every support ticket is answered, and every order is shipped, and everyone worked exactly 40 hours.
+Wouldn't it be wonderful if your business' capacity perfectly matched market demand? Your employees fulfill every order and satisfy every support request while working working exactly 40 hours per week. They never feel overworked or underworked.
 
-if every person is is 100% utilized. You don't want anyone sitting idle, but you don't want to be overwhelmed, so wouldn't it be great if everyone worked their normal hours and that was the exact number of hours to fulfill sales and support requests?
+In practice, that would be a terrible system. Running at 100% utilization means you have no margin for error. You'd go into crisis over typical events like employees taking vacation or sales experiencing a spike.
 
-In practice, that's obviously not a good system. Running at 100% utilization means you have 0 margin for error, so if someone gets sick, goes on vacation, or you see a sales spike, you're underwater.
+I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
-Instead, I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
+The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to save users from needing support. The proactive tasks include fixing bugs in the product, writing documentation, and improving our diagnostic tools.
 
-The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to save users from needing support. The proactive tasks include things like fixing bugs in the product, writing documentation, and improving our diagnostic tools.
-
-Every TinyPilot team is comprised of two people, so if one person is unavailable, the other person can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush because a popular YouTube channel mentions us (TODO: link), we have spare capacity to absorb the bump.
+Every TinyPilot team is comprised of two people. When one person is unavailable, the other person can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats), we have spare capacity to absorb the bump.
 
 | Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Sales<br>Re-evaluating strategy<br>Hiring and training                                        |
 | Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing tutorials<br>Investigating difficult bugs                                |
-| Software developers | Releasing new features<br>Fixing urgent bugs                                               | Refactoring code<br>Improving development experience<br>Creating automated tests<br>Fixing non-urgent bugs |
-| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating customer support playbooks<br>Assisting in marketing                                              |
+| Software developers | Fixing urgent bugs<br>Releasing new features                                               | Improving dev experience<br>Creating automated tests<br>Fixing non-urgent bugs |
+| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating support playbooks<br>Assisting in marketing                                              |
 
 ### Ansible and git are not software distribution tools
 
 When I started working on TinyPilot, I didn't know how to distribute Linux software.
 
-To publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The bash script bootstrapped an Ansible environment and executed an Ansible playbook. Then Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
+To publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The [bash script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) bootstrapped an Ansible environment and executed an Ansible playbook. Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
 
-The installation was slow but reliable, and users didn't have to configure anything manually.
+The installation process was okay, not great. It was slow but reliable, and users didn't have to configure anything manually.
 
-Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations I used to ship the prototype, except now there was complex web of interdependncies. Ansible roles depended on Git repositories, which depended on Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes could swallow a week of development time.
+Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations from the prototype, except now there was complex web of interdependencies. Ansible roles depended on Git repositories, which depended on other Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes could swallow a week of development time.
 
 All this because I never bothered to learn standard Linux packaging technologies.
 
-This year, the TinyPilot team and I learned to use Debian packages. It was much less painful than I expected. I thought we'd have to deploy all sorts of package servers and key servers, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
+This year, the TinyPilot learned to use Debian packages, and it was far less painful than I'd feared. I thought we'd have to deploy all sorts of package servers and key servers, but it turns out we didn't need any of that. The process turned out to be relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
 
-Debian packages have helped us catch expensive mistakes earlier. And we can easily deploy code to real devices during development, whereas our previous installation system made that process prohibitively complex.
+Debian packages have drastically sped up our development. The tooling catches expensive mistakes earlier, and we can deploy code to real devices during development, whereas our previous installation system made that process prohibitively complex.
 
 ## Grading last year's goals
 
@@ -171,14 +170,14 @@ Debian packages have helped us catch expensive mistakes earlier. And we can easi
 - **Result**: Grew TinyPilot's revenue by 76% to $812k
 - **Grade**: B
 
-I always knew that $1M was an aggressive goal. We fell short, but I'm still impressed how close we came.
+I always knew that $1M was an aggressive goal. We fell short, but I'm still impressed at how close we came.
 
 ### Manage TinyPilot on 20 hours per week
 
 - **Result**: I spent more time managing TinyPilot in 2022 than in 2021.
 - **Grade**: D
 
-I'd estimate that I work 40-50 hours per week. I wrote a little more on my blog and participated slightly more in TinyPilot's software development.
+I worked about 40-50 hours per week. I wrote a little more on my blog and participated slightly more in TinyPilot's software development.
 
 I added a new team, and people expanded their roles. It's not just the work of training a new person, it's defining how they fit into other processes. And the more people you have, the more complexity there is in designing workflows that involve multiple people and multiple teams.
 
@@ -203,19 +202,18 @@ I'm hopeful that I'll be more successful at reducing my management time this yea
 
 ### Earn $100k in profit
 
+For most of 2023, TinyPilot's production will be [constrained by supply](/retrospectives/2023/01/#losing-450k-in-a-single-email), so I'm going to focus on profit rather than growth.
+
 In previous years, I've focused on growth. For a hardware business to work, you need to be at a certain scale. At this point, I'm at the scale where I'd feel happy maintaining this indefinitely.
 
-For most of 2023, TinyPilot's production will be constrained by supply, so I'm going to focus on profit rather than growth.
 
 TODO: Expand on this.
 
 ### Close the TinyPilot office
 
-For most of the company's existence, TinyPilot's cases came from a local vendor who designed and 3D printed them. In the last few weeks, we completed the transition to metal cases.
+I leased a physical office space for TinyPilot [in early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
 
-The main reason we switched was to increase our scale &mdash; we had exhausted the print capacity of our local 3D printing partner. The side-effect I didn't anticipate is that most of our raw materials now originate in China. That means it should be possible to manufacture our entire devices at the factory in China rather than assembling and testing each device by hand in TinyPilot's office in the US.
-
-If we don't need to build devices in our office, that eliminates our primary reason for maintaining an office. We can move fulfillment to a third-party logistics provider, and then TinyPilot's staff will no longer be in the critical path for manufacturing and fulfillment. That makes TinyPilot and its employees more time-independent and location-independent.
+Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to move the assembly process to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics vendor. If we can pull this off, TinyPilot and its employees will have more flexibility in time and location, since
 
 ## Do I still love it?
 
