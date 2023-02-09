@@ -3,7 +3,7 @@ title: "My Fifth Year as a Bootstrapped Founder"
 tags:
   - annual review
   - tinypilot
-date: 2023-02-08T00:00:00-05:00
+date: 2023-02-10T00:00:00-05:00
 custom_css: true
 hero_image: cover.webp
 images:
@@ -174,9 +174,7 @@ I always knew that $1M was an aggressive goal. We fell short, but I'm still impr
 - **Result**: I spent more time managing TinyPilot in 2022 than in 2021.
 - **Grade**: D
 
-I worked about 40-50 hours per week. I wrote a little more on my blog and participated slightly more in TinyPilot's software development.
-
-I added a new team, and people expanded their roles. It's not just the work of training a new person, it's defining how they fit into other processes. And the more people you have, the more complexity there is in designing workflows that involve multiple people and multiple teams.
+I was hoping to automate and delegate away enough of my job to bring down my management time to 20 hours per week, but it didn't happen. Between growing sales, adding a new team, and putting out fires due to the chip shortage, my management time increased.
 
 ### Ship the TinyPilot Voyager 3
 
@@ -193,24 +191,23 @@ Instead, all of our hardware engineering time went to chasing down manufacturing
 
 ### Manage TinyPilot on 20 hours per week
 
-I failed miserably at reducing my hours last year, but it's now my top priority.
-
-I'm hopeful that I'll be more successful at reducing my management time this year. Most of my management work in 2022 was growing teams that can independently manage TinyPilot's day-to-day operations. It required a lot of up front investment in hiring, training, and defining processes, but I expect that investment to pay off in 2023.
+I failed miserably at reducing my hours last year, but it's now my top priority. I'm hopeful about my chances this year, my 2022 work represented significant investments into delegation and new processes that take me out of the critical path.
 
 ### Earn $100k in profit
 
-For most of 2023, TinyPilot's production will be [constrained by supply](/retrospectives/2023/01/#losing-450k-in-a-single-email), so I'm going to focus on profit rather than growth.
+For TinyPilot's first two and a half years, I focused on growth. My hardware and software engineering costs are roughly the same whether I'm selling 20 devices per month or 2,000, so I needed to reach a certain scale to make the business viable.
 
-In previous years, I've focused on growth. For a hardware business to work, you need to be at a certain scale. At this point, I'm at the scale where I'd feel happy maintaining this indefinitely.
+For most of 2023, TinyPilot's production will be [constrained by supply](/retrospectives/2023/01/#losing-450k-in-a-single-email), so I can't grow the way I have for the past two years.
 
-
-TODO: Expand on this.
+A $100k profit is achievable if we can avoid further hardware redesigns. Without the hardware redesigns in 2022, I would have saved around $100k on engineering and $20k on materials. If I keep sales steady and run leaner on the hardware side, 2023 should be a profitable year.
 
 ### Close the TinyPilot office
 
 I leased a physical office space for TinyPilot [in early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
 
-Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to move the assembly process to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics vendor. If we can pull this off, TinyPilot and its employees will have more flexibility in time and location, since
+Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to shift  assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics vendor.
+
+Eliminating the TinyPilot office spared us the complexity of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more time and location flexibility in our work.
 
 ## Do I still love it?
 
@@ -218,13 +215,11 @@ Every year, when I write these blog posts, I ask myself whether I still love wha
 
 2022 was a hard year &mdash; certainly my hardest since going off on my own. I wasn't miserable, but I can't say I _loved_ it.
 
-The things I enjoy doing most are programming and writing, and the past year gave me little time for either. I spent most of my time on TinyPilot scrambling to keep up with demand, filling in gaps as we grew, and putting out small fires.
+The biggest stressor was never feeling like I was on solid ground. We were always racing to locate a component or complete a manufacture before we ran out of our existing stock. In scaling up, we hit lots of new manufacturing issues we'd never experienced before, and fixing them was often complex and expensive. We got through it, and there were only a handful of days that I had to mark any product as sold out, but it was stressful.
 
-I grew as a manager. I learned more about hiring and coordinating in an organization with more complexity.
+That said, there were certainly many things to appreciate about the year. I had a relatively small amount of time for writing and software development, but I'm proud of the small amount I produced. Expanding the TinyPilot organization and figuring out how teams work together grew my skills as a manager. It's been gratifying to see the team grow in their roles and expand their skills as the company evolves.
 
-I'm hopeful that this year was hard because I was doing a lot of things that will pay dividends over the next few years.
-
-I still prefer working for myself to working for an employer, and I plan to do it indefinitely.
+I still prefer working for myself to having an employer. I still feel grateful for the freedom to have my own company. And I still want to do it forever.
 
 ---
 
