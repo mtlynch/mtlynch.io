@@ -56,7 +56,7 @@ One of the major cost increases was electrical engineering. Throughout 2021, Tin
 
 The ongoing chip shortage forced us into costly redesigns, which bloated costs in engineering hours and raw materials. We were frequently in a race to redesign a circuit board before we ran out of our existing version, so we paid a premium to expedite everything and often ended up with unusable leftover components.
 
-We finally escaped the redesign treadmill in September. I'm hopeful that TinyPilot's fourth quarter 2022 results will reflect the coming year. Our profit was $28.6k for the quarter, which is $9.5k per month. If I can sustain that for 2023, I'll be happy.
+We finally escaped the redesign treadmill in September. I'm hopeful that TinyPilot's fourth quarter 2022 results will reflect the coming year. Our profit was $28.6k for the quarter, which is $9.5k per month. If I sustain that for 2023, I'll be happy.
 
 ### TinyPilot got a new website
 
@@ -152,7 +152,7 @@ To publish the prototype of TinyPilot, I used the tools I knew: bash scripts, An
 
 The installation process was okay, not great. It was slow but reliable and didn't require users to configure anything manually.
 
-Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations from the prototype, except now there was a complex web of interdependencies. Ansible roles depended on Git repositories, which depended on other Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes could swallow weeks of development time.
+Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations from the prototype, except now there was a complex web of interdependencies. Ansible roles depended on Git repositories, which depended on other Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes swallowed weeks of development time.
 
 All this because I never bothered to learn standard Linux packaging tools.
 
@@ -199,7 +199,7 @@ For TinyPilot's first two and a half years, I focused on growth. My hardware and
 
 For most of 2023, TinyPilot's production will be [constrained by supply](/retrospectives/2023/01/#losing-450k-in-a-single-email), so I can't grow the way I have for the past two years.
 
-A $100k profit is achievable if we can avoid further hardware redesigns. Without the hardware redesigns in 2022, I would have saved around $100k on engineering and $20k on materials. If I keep sales steady and run leaner on the hardware side, 2023 should be a profitable year.
+A $100k profit is achievable if we avoid further hardware redesigns. Without the hardware redesigns in 2022, I would have saved around $100k on engineering and $20k on materials. If I keep sales steady and run leaner on the hardware side, 2023 should be a profitable year.
 
 ### Close the TinyPilot office
 
