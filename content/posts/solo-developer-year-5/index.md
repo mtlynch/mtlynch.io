@@ -13,7 +13,7 @@ description: Five years ago today, I quit my job as a developer at Google to cre
 
 Five years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
-For the first few years, all of my businesses flopped. None of them earned more than a few hundred dollars per month in revenue, and they all had negative profit.
+For the first few years, all of my businesses flopped. None of them earned more than a few hundred dollars per month in revenue, and they all had negative profits.
 
 Halfway through my third year, I created a device called [TinyPilot](https://tinypilotkvm.com). It allows users to control their computers remotely without installing any software. The product quickly caught on, and it's been my main focus ever since.
 
@@ -50,13 +50,13 @@ In this post, I'll share what I've learned about being a bootstrapped founder fr
 | Everything else                   | -$4,902   | -$8,183   | {{<delta-cell>}} |
 | **Net profit**                    | $5,349    | $5,979    | {{<delta-cell>}} |
 
-While it sounds impressive to grow revenue by $350k, it's a little less exciting that I'm only walking away with $6k in profit. I don't pay myself a salary, so $6k is what I earned from the business. Still, I'm excited about these numbers and what they mean for 2023.
+While it sounds impressive to grow revenue by $350k, it's less exciting that I'm only walking away with $6k in profit. I don't pay myself a salary, so $6k is what I earned from the business. Still, I'm excited about these numbers and what they mean for 2023.
 
 One of the major cost increases was electrical engineering. Throughout 2021, TinyPilot's electrical engineering vendor was struggling to keep up with TinyPilot's needs. In late 2021, I switched to a new vendor that fits our needs better, but they cost three times as much.
 
-The ongoing chip shortage forced us into costly redesigns, which bloated costs for both engineering hours and raw materials. We were frequently in a race to redesign a circuit board before we ran out of our existing version, so we paid a premium to expedite everything and often ended up with unusable leftover components.
+The ongoing chip shortage forced us into costly redesigns, which bloated costs in engineering hours and raw materials. We were frequently in a race to redesign a circuit board before we ran out of our existing version, so we paid a premium to expedite everything and often ended up with unusable leftover components.
 
-We finally escaped the redesign treadmill in September. I'm hopeful that TinyPilot's fourth quarter 2022 results will be reflective of the coming year. Our profit was $28.6k for the quarter, which is $9.5k per month. If I can sustain that for 2023, I'll be happy.
+We finally escaped the redesign treadmill in September. I'm hopeful that TinyPilot's fourth quarter 2022 results will reflect the coming year. Our profit was $28.6k for the quarter, which is $9.5k per month. If I can sustain that for 2023, I'll be happy.
 
 ### TinyPilot got a new website
 
@@ -90,7 +90,7 @@ By the end of 2022, we had added two support engineers and adjusted responsibili
 
 Adding the support engineers felt like the final piece of the puzzle. Before they joined, I was the only person handling technical support, and I was spending [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) on support requests. Now, I spend less than 5% of my time on support requests, and customers receive faster support.
 
-The support engineers also do things I didn't have time for like investigating complex bugs, writing documentation, and improving our diagnostic tools.
+The support engineers also do things I didn't have time for, like investigating complex bugs, writing documentation, and improving our diagnostic tools.
 
 Growing the team stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple. Almost everyone did their work as a single-person unit. The results either went directly to a customer or to me. When employees needed to coordinate with each other, it was always among teammates of the same role.
 
@@ -100,14 +100,14 @@ Integrating support engineers meant figuring out how different teams work togeth
 
 One of my pet peeves in the last few years is how difficult it is to share a single file with cloud storage providers like Google or Dropbox. They won't give you a direct link to your file &mdash; just a link to *their* web interface, where they pressure your recipient to sign up for an account. If you upload a video, Google Drive makes you wait 15+ minutes while they re-encode it, even if it was optimized to play in the browser in the first place.
 
-So, I made a minimalist file sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. Easy! No re-encoding, no prompts to sign up for anything.
+So, I made a minimalist file-sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. Easy! No re-encoding, no prompts to sign up for anything.
 
 <figure class="picoshare-demo">
 <img src="demo-full.gif" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
 <figcaption>Demo of PicoShare</figcaption>
 </figure>
 
-PicoShare become the fastest growing open-source project I ever published. It received 600 Github stars within two weeks of release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
+PicoShare became the fastest-growing open-source project I ever published. It received 600 Github stars within two weeks of release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
 
 {{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
 
@@ -119,7 +119,7 @@ There are a few open-source tools that offer [similar functionality](https://git
 
 I made many mistakes throughout the whole [TinyPilot website redesign fiasco](/tinypilot-redesign), but the core problem was that the design agency was a fundamental mismatch for TinyPilot.
 
-All of the agency's other clients had projects 5-20x the size of TinyPilot's. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like mine.
+The agency's other clients had projects 5-20x the size of TinyPilot's. At first, I thought that was such a gift &mdash; this fancy agency with expensive clients was betting on a little company like mine.
 
 The reality was that TinyPilot was the agency's lowest priority. They managed the project poorly, which drove up costs, bloated scope, and stretched out timelines.
 
@@ -127,13 +127,13 @@ Now, when I work with new vendors, I ask them how my company compares to their o
 
 ### Run at 50% capacity
 
-Wouldn't it be wonderful if your business' capacity perfectly matched your customers' needs? Your employees would fulfill every order and satisfy every support request while working working exactly 40 hours per week. They'd never feel overworked nor underworked, and there'd be no wasted time.
+Wouldn't it be wonderful if your business' capacity perfectly matched your customers' needs? Your employees would fulfill every order and satisfy every support request while working exactly 40 hours per week. They'd never feel overworked nor underworked, and there'd be no wasted time.
 
-In practice, that would be a terrible system. Running at 100% utilization means you have no margin for error. You'd spiral into a crisis over typical events like employees taking vacation or sales experiencing a spike.
+In practice, that would be a terrible system. Running at 100% utilization means you have no margin for error. You'd spiral into a crisis over typical events like employees taking vacations or sales experiencing a spike.
 
 I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
-The clearest example of a 50/50 split is the the technical support team: they spend around half of their time responding to support requests and half of their time finding ways to save users from needing support. The proactive tasks include fixing bugs in the product, writing documentation, and improving our diagnostic tools.
+The technical support team is the clearest example of a 50/50 split: they spend half of their time responding to support requests and the other half finding ways to save users from needing support. The proactive tasks include fixing bugs in the product, writing documentation, and improving our diagnostic tools.
 
 Every TinyPilot team comprises two people. When one person is unavailable, the other can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats), we have spare capacity to absorb the bump.
 
@@ -148,15 +148,15 @@ Every TinyPilot team comprises two people. When one person is unavailable, the o
 
 When I started working on TinyPilot, I didn't know how to distribute Linux software.
 
-To publish the first prototype of TinyPilot, I used the tools that I knew: bash scripts, Ansible, and git. The [bash script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) bootstrapped an Ansible environment and executed an Ansible playbook. Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
+To publish the prototype of TinyPilot, I used the tools I knew: bash scripts, Ansible, and git. The [bash script](https://github.com/tiny-pilot/tinypilot/blob/2a97cf02bd6e032a2fc60846d7d2c60be92c7c74/quick-install) bootstrapped an Ansible environment and executed an Ansible playbook. Ansible installed dependencies, made necessary changes to the operating system, and cloned the TinyPilot git repository.
 
 The installation process was okay, not great. It was slow but reliable and didn't require users to configure anything manually.
 
-Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations from the prototype, except now there was complex web of interdependencies. Ansible roles depended on Git repositories, which depended on other Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes could swallow weeks of development time.
+Two years later, TinyPilot's update process was a mess. It still relied on the same shaky foundations from the prototype, except now there was a complex web of interdependencies. Ansible roles depended on Git repositories, which depended on other Ansible roles, which depended on parameters in a bunch of YAML files. Minor changes could swallow weeks of development time.
 
 All this because I never bothered to learn standard Linux packaging tools.
 
-This year, the TinyPilot learned to use Debian packages. It was far less painful than I'd feared. I thought we'd have to deploy all sorts of package servers and key servers, but it turns out we didn't need any of that. The process was relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
+This year, the TinyPilot team learned to use Debian packages. It was far less painful than I'd feared. I thought we'd have to deploy all sorts of package servers and key servers, but it turns out we didn't need any of that. The process was relatively easy once we found [the right guides](/retrospectives/2022/12/#getting-out-of-the-ansible-hole).
 
 Debian packages have accelerated our development. The tooling catches expensive mistakes earlier, and we can deploy pre-release versions to physical test devices easily, whereas our previous installation system made that process prohibitively complex.
 
@@ -174,7 +174,7 @@ I always knew that $1M was an aggressive goal. We fell short, but I'm still impr
 - **Result**: I spent more time managing TinyPilot in 2022 than in 2021.
 - **Grade**: D
 
-I was hoping to automate and delegate away enough of my job to bring down my management time to 20 hours per week, but it didn't happen. Between growing sales, adding a new team, and putting out fires due to the chip shortage, my management time increased.
+I was hoping to automate and delegate away enough of my job to reduce my management time to 20 hours per week, but it didn't happen. Between growing sales, adding a new team, and putting out fires due to the chip shortage, my management time increased.
 
 ### Ship the TinyPilot Voyager 3
 
@@ -191,7 +191,7 @@ Instead, all of our hardware engineering time went to chasing down manufacturing
 
 ### Manage TinyPilot on 20 hours per week
 
-I failed miserably at reducing my hours last year, but it's now my top priority. I'm hopeful about my chances this year, my 2022 work represented significant investments into delegation and new processes that take me out of the critical path.
+I failed miserably at reducing my hours last year, but it's now my top priority. I'm hopeful about my chances this year. My 2022 work represented significant investments into delegation and new processes that will remove me from the critical path.
 
 ### Earn $100k in profit
 
@@ -203,11 +203,11 @@ A $100k profit is achievable if we can avoid further hardware redesigns. Without
 
 ### Close the TinyPilot office
 
-I leased a physical office space for TinyPilot [in early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
+I've leased an office for TinyPilot [since early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
 
 Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to shift  assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics vendor.
 
-Eliminating the TinyPilot office spared us the complexity of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more time and location flexibility in our work.
+Eliminating the TinyPilot office would spare us the work of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more time and location flexibility in our work.
 
 ## Do I still love it?
 
@@ -215,7 +215,7 @@ Every year, when I write these blog posts, I ask myself whether I still love wha
 
 2022 was a hard year &mdash; certainly my hardest since going off on my own. I wasn't miserable, but I can't say I _loved_ it.
 
-The biggest stressor was never feeling like I was on solid ground. We were always racing to locate a component or complete a manufacture before we ran out of our existing stock. In scaling up, we hit lots of new manufacturing issues we'd never experienced before, and fixing them was often complex and expensive. We got through it, and there were only a handful of days that I had to mark any product as sold out, but it was stressful.
+The biggest stressor was never feeling like I was on solid ground. We were always racing to locate a component or complete a manufacture before we ran out of our existing stock. In scaling up, we hit lots of new manufacturing issues we'd never experienced before, and fixing them was often complicated and expensive. We got through it, and there were only a handful of days that I had to mark any product as sold out, but it was stressful.
 
 That said, there were certainly many things to appreciate about the year. I had a relatively small amount of time for writing and software development, but I'm proud of the small amount I produced. Expanding the TinyPilot organization and figuring out how teams work together grew my skills as a manager. It's been gratifying to see the team grow in their roles and expand their skills as the company evolves.
 
