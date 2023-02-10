@@ -54,7 +54,7 @@ While it sounds impressive to grow revenue by $350k, it's a little less exciting
 
 One of the major cost increases was electrical engineering. Throughout 2021, TinyPilot's electrical engineering vendor was struggling to keep up with TinyPilot's growth. In late 2021, I switched to a new vendor that fits our needs better, but they cost three times as much.
 
-The ongoing chip shortage forced us into frequent redesigns, which bloated costs in engineering hours and raw materials. We were often in a race to redesign a circuit board before we ran out of our existing version, so we paid a premium to expedite the process.
+The ongoing chip shortage forced us into frequent redesigns, which bloated costs in engineering hours and raw materials. We were often in a race to redesign a circuit board before we ran out of our existing version, so we repeatedly paid a premium to expedite the process.
 
 We finally escaped the redesign treadmill in September. I'm hopeful that our fourth quarter results will reflect the coming year. Our profit was $28.6k for the quarter, so if we average $9.5k per month in 2023, I'll be happy.
 
@@ -69,7 +69,7 @@ In 2022, I finally hired a design agency to create a new logo and redesign the w
 {{<img src="landing-after-cropped.png" alt="Screenshot of new landing page" max-width="400px" has-border="true">}}
 {{</gallery>}}
 
-I wrote previously about how [frustrating and expensive](/tinypilot-redesign) it was working with the design agency, but I'm pleased with the result. My old website looked like a hobby project, and the new design looks like a real company. I suspect that at least a portion of my increased sales came from the new website.
+I wrote previously about how [frustrating and expensive](/tinypilot-redesign) it was working with the design agency, but I'm pleased with the result. My old website looked like a hobby project, and the new design looks like a real company. I suspect that at least a portion of my increased sales resulted from the new design.
 
 ### The TinyPilot team grew from six people to seven
 
@@ -88,30 +88,30 @@ By the end of 2022, we had added two support engineers and adjusted responsibili
   - **Both now work on customer service**
 - **Two part-time support engineers**
 
-Adding the support engineers felt like finding the last piece of the puzzle. Before they joined, I was the only person handling technical support, and it occupied [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). Now, I spend less than 5% of my time on support requests, and customers receive faster support.
+Adding the support engineers felt like finding the missing piece of the puzzle. Before they joined, I was the only person handling technical support, and it occupied [about 20% of my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week). Now, I spend less than 5% of my time on support requests, and customers receive faster support.
 
 The support engineers also do things I didn't have time for, like investigating complex bugs, writing documentation, and improving our diagnostic tools.
 
-Growing the team stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple. Almost everyone did their work as a single-person unit. The results either went directly to me or a customer. When employees needed to coordinate with each other, it was always among teammates of the same role.
+Growing the team stretched my skills as a manager. In 2021, TinyPilot's workflows were fairly simple. Almost everyone did their work as a single-person unit. The results either went directly to me or to a customer. When employees needed to coordinate with each other, it was always among teammates of the same role.
 
-Integrating support engineers meant figuring out how different teams work together. How do support requests work when they require coordination between fulfillment staff and support engineers? What's the feedback loop between the support engineers and the dev team?
+Integrating support engineers meant figuring out how different teams work together. How do support requests work when they require cooperation between fulfillment staff and support engineers? What's the feedback loop between the support engineers and the dev team?
 
 ### PicoShare became my fastest-growing project
 
-One of my pet peeves in the last few years is how difficult it is to share a single file with cloud storage providers like Google Drive or Dropbox. They won't give you a direct link to your file &mdash; just a link to their web interface, where they pressure your recipient to sign up for an account. If you upload a video, Google Drive makes you wait 15+ minutes while they re-encode it, even if it was already optimized to play in the browser.
+One of my pet peeves in the last few years is how difficult it is to share a single file with cloud storage providers like Google Drive or Dropbox. They won't give you a direct link to your file &mdash; just a link to their web interface, where they pressure your recipient to sign up for an account. If you upload a video to Google Drive, they make you wait 15+ minutes while they re-encode it, even if it was already optimized to play in the browser.
 
-To escape the existing cloud storage options, I made a minimalist file-sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. Easy! No re-encoding, no prompts to sign up for anything.
+As an alternative to the existing cloud storage options, I made a minimalist file-sharing app called [PicoShare](https://github.com/mtlynch/picoshare). You just upload a file, and it gives you a direct link that you can share. Easy! No re-encoding, no prompts to sign up for anything.
 
 <figure class="picoshare-demo">
 <img src="demo-full.gif" alt="Animated demo of uploading a video file to PicoShare and streaming it in another browser window">
 <figcaption>Demo of PicoShare</figcaption>
 </figure>
 
-PicoShare became the fastest-growing open-source project I ever published. It received 600 Github stars within two weeks of release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
+There are a few open-source tools that offer [similar functionality](https://github.com/awesome-selfhosted/awesome-selfhosted#file-transfer---single-click--drag-n-drop-upload), but PicoShare is unique in not requiring a database server. That means you can run it in a single Docker container, whereas other solutions require more complicated orchestration.
+
+PicoShare became the fastest-growing open-source project I ever published. It received 600 Github stars within two weeks of its release. As of this writing, PicoShare has [over 100k installs](https://hub.docker.com/r/mtlynch/picoshare/).
 
 {{<img src="picoshare-growth.png" max-width="600px" has-border="true">}}
-
-There are a few open-source tools that offer [similar functionality](https://github.com/awesome-selfhosted/awesome-selfhosted#file-transfer---single-click--drag-n-drop-upload), but PicoShare is unique in not requiring a database server. That means you can run it in a single Docker container, whereas other solutions require more complicated orchestration.
 
 ## Lessons learned
 
@@ -129,7 +129,7 @@ Now, when I work with new vendors, I ask them how my company compares to their o
 
 Wouldn't it be wonderful if your business' capacity perfectly matched your customers' needs? Your employees would fulfill every order and satisfy every support request while working exactly 40 hours per week. They'd never feel overworked nor underworked, and there'd be no idle time.
 
-In practice, that would be a terrible system. Running at 100% utilization means you have no margin for error. Ordinary occurences like a bump in sales or an employee taking a vacation would immediately overwhelm you.
+In practice, that would be a terrible system. Running at 100% utilization would mean you have no margin for error. Ordinary occurences like a bump in sales or an employee taking a vacation would immediately overwhelm you.
 
 I aim for everyone at TinyPilot to run at around 50% capacity. That is, a balance of 50% reactive work and 50% proactive work. For some roles, the balance isn't quite 50/50, but it's a good rule of thumb.
 
@@ -178,12 +178,12 @@ I always knew that $1M was an aggressive goal. We fell short, but I'm still impr
 
 I was hoping to automate and delegate away enough of my job to reduce my management time to 20 hours per week, but it didn't happen. Between growing sales, spinning up the support engineering team, and putting out fires due to the chip shortage, my management time increased.
 
-### Ship the TinyPilot Voyager 3
+### Ship TinyPilot Voyager 3
 
 - **Result**: We never even completed the design phase
-- **Grade**: D
+- **Grade**: F
 
-TinyPilot has always used the Raspberry Pi 4B as the core hardware. There's a wonderful ecosystem around the Pi 4B, but it's relatively expensive and difficult to integrate with custom hardware.
+TinyPilot has always used the Raspberry Pi 4B as the core hardware. There's a wonderful ecosystem around the Pi 4B, but the hardware is relatively expensive and difficult to integrate with custom chips.
 
 My plan for 2022 was to create a custom circuit board for the slimmer, less expensive Raspberry Pi Compute Module 4. That could cut our manufacturing costs by up to 60% and simplify our hardware design.
 
@@ -207,9 +207,9 @@ TinyPilot has always roughly broken even, but I think I can reach $100k in profi
 
 I've leased an office for TinyPilot [since early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
 
-Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to transition  assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics vendor.
+Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to transition  assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics warehouse.
 
-Eliminating the TinyPilot office would spare us the work of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more time and location flexibility in our work.
+Eliminating the TinyPilot office would spare us the work of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more flexibility in time and location.
 
 ## Do I still love it?
 
@@ -217,9 +217,7 @@ Every year, when I write these blog posts, I ask myself whether I still love wha
 
 2022 was a hard year &mdash; certainly my hardest since going off on my own. I wasn't miserable, but I can't say I _loved_ it.
 
-The biggest stressor was the constant feeling that the floor was about to fall out from under us. We were always racing to locate a component or complete a manufacture before we ran out of our existing stock.
-
-In scaling up, we hit lots of new manufacturing issues we'd never experienced before, and fixing them was often complicated and expensive. We got through it, and there were only a handful of days that I had to mark any product as sold out, but it was stressful.
+The global chip shortage meant we could never manufacture a batch of products the same way twice. There was always some missing component or manufacturing issue, so we were constantly racing to fix issues and adapt our processes before we ran out of stock. We got through it, and there were only a handful of days that I had to mark any product as sold out, but it was stressful.
 
 That said, there were certainly many things to appreciate about the year. I had a relatively small amount of time for writing and software development, but I'm proud of what I produced. Expanding the TinyPilot organization and figuring out how teams work together grew my skills as a manager. It's been gratifying to see the team grow in their roles and expand their skills as the company evolves.
 
@@ -227,7 +225,7 @@ I still prefer working for myself to having an employer. I still feel grateful f
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post._
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my lovely fiancé and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback on this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
