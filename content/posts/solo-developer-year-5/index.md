@@ -56,7 +56,7 @@ One of the major cost increases was electrical engineering. Throughout 2021, Tin
 
 The ongoing chip shortage forced us into frequent redesigns, which bloated costs in engineering hours and raw materials. We were often in a race to redesign a circuit board before we ran out of our existing version, so we paid a premium to expedite the process.
 
-We finally escaped the redesign treadmill in September. I'm hopeful that our fourth quarter results will reflect the coming year. Our profit was $28.6k for the quarter, so if I sustain $9.5k per month in 2023, I'll be happy.
+We finally escaped the redesign treadmill in September. I'm hopeful that our fourth quarter results will reflect the coming year. Our profit was $28.6k for the quarter, so if we average $9.5k per month in 2023, I'll be happy.
 
 ### TinyPilot got a new website
 
