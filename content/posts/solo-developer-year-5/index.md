@@ -137,12 +137,12 @@ The technical support team is the clearest example of a 50/50 split: they spend 
 
 Every TinyPilot team comprises two people. When one person is unavailable, the other can suspend their proactive work and handle time-sensitive tasks without feeling overwhelmed. If we get a rush of orders because a popular YouTube channel [mentions us](/retrospectives/2022/12/#tinypilothttpstinypilotkvmcomrefmtlynchio-stats), we have spare capacity to absorb it.
 
-| Team                | Reactive tasks                                                                             | Proactive tasks                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Sales<br>Re-evaluating strategy<br>Hiring and training                                        |
-| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing tutorials<br>Investigating difficult bugs                                |
+| Team                | Reactive tasks                                                                             | Proactive tasks                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| Founder             | Team management<br>Vendor management<br>Reviewing work<br>Filling gaps in responsibilities | Marketing<br>Sales<br>Re-evaluating strategy<br>Hiring and training            |
+| Support engineers   | Answering technical support questions                                                      | Writing documentation<br>Writing tutorials<br>Investigating difficult bugs     |
 | Software developers | Fixing urgent bugs<br>Releasing new features                                               | Improving dev experience<br>Creating automated tests<br>Fixing non-urgent bugs |
-| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating support playbooks<br>Assisting in marketing                                              |
+| Fulfillment staff   | Assembling devices<br>Fulfilling orders<br>Customer service                                | Creating support playbooks<br>Assisting in marketing                           |
 
 ### Ansible and git are not software distribution tools
 
@@ -207,7 +207,7 @@ TinyPilot has always roughly broken even, but I think I can reach $100k in profi
 
 I've leased an office for TinyPilot [since early 2021](/retrospectives/2021/05/#tinypilots-new-office-the-fun-stuff). We use it for assembling devices, fulfilling orders, and storing inventory.
 
-Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to transition  assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics warehouse.
+Having our own local office has helped us adapt quickly to changes in our hardware and processes, but it's a lot of extra overhead. This year, I hope to transition assembly to China, where all of our parts originate. I'm also in the process of moving our fulfillment to a third-party logistics warehouse.
 
 Eliminating the TinyPilot office would spare us the work of maintaining a physical space, managing inventory, and tracking in-person shifts. Outsourcing manufacturing and fulfillment will also give the team more flexibility in time and location.
 
