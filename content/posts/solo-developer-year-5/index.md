@@ -11,6 +11,9 @@ images:
 description: Five years ago today, I quit my job as a developer at Google to create my own self-funded software business. This is a review of my last year and what I've learned so far about bootstrapping software businesses.
 ---
 
+<!-- Disable linter complaints about duplicate headers -->
+<!-- markdownlint-disable MD024 -->
+
 Five years ago, I [quit my job as a developer at Google](/why-i-quit-google/) to create my own bootstrapped software company.
 
 For the first few years, all of my businesses flopped. None of them earned more than a few hundred dollars per month in revenue, and they all had negative profits.
