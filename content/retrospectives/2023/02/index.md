@@ -70,7 +70,25 @@ And for the most part, everything worked out fine. The defect rate was about 5% 
 
 ## The difficult scenarios for transitioning to a 3PL vendor
 
-### Scenario 1: Customer emails after their order to make changes
+When we started working with our 3PL vendor, things seemed like they were off to a good start. They were a small business, all of their customers were small businesses. The contract was straightforward. It seemed like we were well-matched.
+
+Then, they gave me the instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 15 years.
+
+But I was willing to overlook Veracore. It was their system, not mine. We'd continue working in Shopify, and Veracore would just sync with us.
+
+And then we received our first order. It was XX, so maybe they were closed for the holidays. Then the next day by XX pm, the order was still in our system as unfulfilled. I emailed our 3PL to verify that the order was showing up on their end. They said that everything was working. It's just that Veracore only syncs its order status back to Shopify once per day, so we'd see Shopify update with fulfillment status and tracking numbers by around 7pm ET.
+
+Sync once per day? Why wouldn't it just immediately mark orders as shipped so that we have the information in real-time?
+
+I thought we could still work with it, and then we got to a few scenarios that wouldn't work.
+
+### Customer emails us with changes
+
+Once every 30 orders or so, the customer emails us a few minutes after purchasing to make a change. Sometimes they realize they mistyped their shipping address. Sometimes they've changed their mind entirely and want to cancel the order.
+
+In TinyPilot's current system, these requests are easy to handle. As long as we haven't shipped out the order by the time we receive the customer's request, we always honor the customer's request by making the necessary changes in Shopify.
+
+When we started working with our first 3PL vendor, it turned out to be harder than I expected to handle this scenario.
 
 **Desired outcome**: If the order hasn't been fulfilled, make changes in Shopify, and the 3PL receives the changes.
 
@@ -78,13 +96,13 @@ And for the most part, everything worked out fine. The defect rate was about 5% 
 
 Most of our customers purchase through the TinyPilot website without any manual work on our side, but cusotmers occasionally need to customize their order with something the website doesn't support. Maybe they want to order in quantities the website doesn't offer, or maybe we're offering them a special discount.
 
-**Desired outcome**: Fulfill the order when the customer pays.
+**Desired outcome**: Fulfill the order when the customer pays (Shopify marks the order as "paid").
 
 ### Scenario 3: Customer pays with purchase order
 
 Purchase orders are basically IOUs for big businesses. They're not willing to give us cash up front, but they're agreeing to pay us after they receive their order, usually within 30 days.
 
-**Desired outcome**: Fulfill the order when we receive the purchase order.
+**Desired outcome**: Fulfill the order when we receive the purchase order (order remains "unpaid" in Shopify).
 
 ### Discussion
 
