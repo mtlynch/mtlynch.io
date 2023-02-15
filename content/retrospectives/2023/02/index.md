@@ -58,7 +58,9 @@ TODO
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-I'm finishing the month with a net $8k negative in cash, but I'm not too worried about that. A lot of
+Sales are down from our peak at the end of last year, but that's intentional. I'm deliberately throttling sales to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
+
+I'm finishing the month with a net $8k negative in cash, but I'm not too worried about that. That's mainly carryover from expenses I had in 2022 before I found out about the supply shortage, so it represents somewhat excessive inventory, but it means my costs will be lower for the next three months.
 
 ## Getting metal cases in the nick of time
 
@@ -68,11 +70,15 @@ We placed an order in December, so it put us right up against Chinese New Year. 
 
 And for the most part, everything worked out fine. The defect rate was about 5% for me and about 20% for cases shipped to my EU distributor, but at least we got them. They've also agreed to replace the damaged ones for free, which is unusual.
 
-## The difficult scenarios for transitioning to a 3PL vendor
+We usually have a buffer of pre-built devices, but switching over meant we had to start from zero. The new model takes longer to assemble.
+
+## Hiccups in transitioning to a 3PL vendor
 
 When we started working with our 3PL vendor, things seemed like they were off to a good start. They were a small business, all of their customers were small businesses. The contract was straightforward. It seemed like we were well-matched.
 
 Then, they gave me the instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 15 years.
+
+TODO: Photo of PDF
 
 But I was willing to overlook Veracore. It was their system, not mine. We'd continue working in Shopify, and Veracore would just sync with us.
 
@@ -82,45 +88,46 @@ Sync once per day? Why wouldn't it just immediately mark orders as shipped so th
 
 I thought we could still work with it, and then we got to a few scenarios that wouldn't work.
 
-### Customer emails us with changes
+### What if a customer changes their order?
 
-Once every 30 orders or so, the customer emails us a few minutes after purchasing to make a change. Sometimes they realize they mistyped their shipping address. Sometimes they've changed their mind entirely and want to cancel the order.
+Every 30 orders or so, the customer emails us a few minutes after to make a change. Sometimes they realize they mistyped their shipping address. Sometimes they've changed their mind entirely and want to cancel the order.
 
-In TinyPilot's current system, these requests are easy to handle. As long as we haven't shipped out the order by the time we receive the customer's request, we always honor the customer's request by making the necessary changes in Shopify.
+In TinyPilot's current system, these requests are easy to handle. As long as we haven't shipped out their order already, we always honor the customer's request by making the necessary changes in Shopify, our eCommerce platform.
 
-When we started working with our first 3PL vendor, it turned out to be harder than I expected to handle this scenario.
+When we transitioned to the 3PL, this is where that "sync once per day" issue came back to bite us. If a customer emailed us requesting changes, now we don't know if the order has been fulfilled or not. The information we're seeing in Shopify is up to 24 hours out of date.
 
-**Desired outcome**: If the order hasn't been fulfilled, make changes in Shopify, and the 3PL receives the changes.
+The 3PL's solution was that we email the employee at the 3PL who handles our orders and let them know about any order changes. That felt like a terrible system.
 
-### Scenario 3: Customer needs a custom invoice
+Currently, Shopify is our "source of truth." We can rely on Shopify being the authoritative location where everyone related to an order shares information. The 3PL's solution would mean that we no longer have a single, shared source of truth because there could be extra information hiding in someone's email.
 
-Most of our customers purchase through the TinyPilot website without any manual work on our side, but cusotmers occasionally need to customize their order with something the website doesn't support. Maybe they want to order in quantities the website doesn't offer, or maybe we're offering them a special discount.
+I also wasn't crazy about emailing an individual rather than a team. I asked what happens if that person was out sick or on vacation, and they said that usually someone else checks their email. Usually?
 
-**Desired outcome**: Fulfill the order when the customer pays (Shopify marks the order as "paid").
+### What if the customer pays in a non-standard way?
 
-### Scenario 3: Customer pays with purchase order
+There are two common ways that customers can purchase from us outside of the normal checkout process on our website:
 
-Purchase orders are basically IOUs for big businesses. They're not willing to give us cash up front, but they're agreeing to pay us after they receive their order, usually within 30 days.
+1. They need a custom order that our website doesn't support (e.g., volume discount)
+1. They want to pay with a purchase order (basically, how big companies write IOUs)
 
-**Desired outcome**: Fulfill the order when we receive the purchase order (order remains "unpaid" in Shopify).
+For (1), we create a custom order for them and then give them a link to pay with a credit card. When the customer pays, Shopify automatically marks the order as "paid" and we ship it out.
 
-### Discussion
+For (2), we create a custom order for the customer and then wait for them to send us a signed purchase order. When we receive the purchase order, Shopify still sees the order as "unpaid" because we don't have the actual cash yet, but we ship it out based on the purchase order.
 
-Scenario 1 should be easy. If we have a shared view of the orders, TinyPilot's customer service can tell when an order has been fulfilled or not. If it's not fulfilled, we make the change, and the 3PL vendor fulfills it using the new information.
+As you can see, these two situations are at odds with each other. If we told the 3PL to wait to ship out orders until they're marked as "paid," then they can't ship out orders paid by purchase order (2). If we tell them to ship out orders even if they're unpaid, they'd ship out orders for (1) immediately even though the customer might not end up paying.
 
-There's a bit of a race condition because if the 3PL prints the shipping label, then we change the address, then the 3PL marks it as fulfilled, the order is going to the wrong address, but everyone thinks things are fine. So we need to verify with the 3PL that printing the order label marks the order as fulfilled.
+Before the 3PL, we added notes to an order to make the intent explicit in the case of purchase orders. But the 3PL can't see our note because they only import each order once, so if we add notes later, they don't receive them.
 
-Scenarios 2 and 3 clash with each other. If you make a rule that says, "Don't fulfill any order until they're marked as paid," then the purchase order one will never go out because we don't mark it paid until we receive actual payment. If the rule is, "Fulfill any order as soon as you see it," we'd send out orders before the customer paid in scenario 2.
+The 3PL's solution was, again, to email the person who handles our order and explain the special case orders.
 
-Writing this out now, maybe the easiest thing is to just mark the order as "paid" when we receive the purchase order. We still need a way to track when we receive actual payment for the order, because customer service needs to know whether to ~~send goons~~ keep politely asking for payment. but we could do that with some kind of TinyPilot-internal
+Writing this out now, I'm realizing I missed an obvious solution. We could have just made the rule, "Ship out orders when they're marked as paid." And then for (2), we just manually mark the order as "paid" when we receive the purchase order. We'd need a separate system to track unpaid purchase orders, but that's easier than complicating our interface with the 3PL.
 
-### How our first 3PL handled these scenarios
+### Switching 3PLs
 
-They couldn't handle scenario 1. Their order management system (Veracore) didn't sync continuously with our eCommerce platform (Shopify). Instead, they polled our orders every 15 minutes. At the end of the day, they'd mark which orders they fullfilled. If we added a note to the order like, "Actually, hold on. The customer says they entered the wrong shipping address," the 3PL probably wouldn't see that because they only pull in order information once per order. And we have no way of telling if the order has gone out already because they don't tell us until the end of the day.
+Overall, it felt like our first 3PL's system for managing changes was brittle and pushed a lot of work onto us in order to prevent expensive errors.
 
-The 3PL's process for handling scenario 1 was that we email the woman who handles our orders and tell her what's going on. I disliked this solution for a few reasons. First, I want to manage as much as possible through Shopify so we have a single source of truth for the order. Second, if there are exceptions, I should be emailing a team not an individual. I don't want my staff to email someone saying that we need to change an address before an order goes out, and it turns out our point of contact is out sick or on vacation.
+We moved on, and it was amicable. Our contract required two months notice, so they technically could have demanded two more payments of their monthly minimum ($350/month), but they didn't.
 
-## Side projects
+Before going with my chosen 3PL, I had interviewed another one farther away. I liked them about equal, but I went with the one that was within driving distance. When I started running into issues with my first 3PL, the backup explained how their system (Shipstation) would handle my special-case scenarios and it sounded significantly smoother than Veracore. Shipstation syncs continuously with Shopify, so we shouldn't run into these weird problems that come from having information on a 24-hour delay.
 
 ## Wrap up
 
@@ -130,8 +137,10 @@ The 3PL's process for handling scenario 1 was that we email the woman who handle
 
 ### Lessons learned
 
--
+- Figure out how your 3PL will handle non-standard orders.
+- Keep interfaces between your eCommerce platform and your 3PL's order management system.
+  - In my case, there were easy changes to TinyPilot's internal process I overlooked, but they would have simplified our 3PL integration.
 
 ### Goals for next month
 
--
+- Build up a buffer of pre-assembled Voyager 2a devices.
