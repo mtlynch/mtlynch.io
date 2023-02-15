@@ -68,18 +68,6 @@ We placed an order in December, so it put us right up against Chinese New Year. 
 
 And for the most part, everything worked out fine. The defect rate was about 5% for me and about 20% for cases shipped to my EU distributor, but at least we got them. They've also agreed to replace the damaged ones for free, which is unusual.
 
-## When proactive work generates reactive work
-
-Over the last few months, I've been thinking a lot about the balance between proactive work and reactive work.
-
-I didn't realize until recently that proactive work that TinyPilot employees do usually results in reactive work for me. For example, when a support engineer writes a new FAQ article, that's useful proactive work. It will reduce our support burden because users can find that article instead of contacting us, or we can refer users to that article instead of re-explaining a solution.
-
-But before we can publish the article, I have to review the article, which is reactive work. And not only that, it's difficult and time-sensitive. I try to get teammates feedback on most things within one business day. But it's difficult to review and give thoughtful feedback about writing because if something feels wrong, I can't just fix it. I have to break down my thought process to articulate my feeling to the author so that they understand why I'm requesting the change.
-
-In January, I asked the support engineers to brainstorm ideas for creating feedback loops in our support process. For example, if the user reports to us that they're not getting a video signal, there are a lot of possible explanations. It might be that the video source has an unsupported resolution, it could be a bad HDMI cable, it could be that the video source isn't sending anything to the cable at all. Usually we're able to resolve those situations, but we don't formally keep track of which resolution worked. I wanted to somehow keep track of how frequently each step fixes the issue and then use that to inform the order that we go through troubleshooting steps. If 90% of the time the user reports no video, it turns out to be a bad cable, then our first suggestion to the user should be to try a known-working cable.
-
-The support engineers had two good ideas: using decision trees and tracking problems in a "problem bank." Normally, my process is to take those ideas and build a process around it. But I realized that what I'm doing is unsustainable, so instead, I wrote a document explaining how I create internal processes. A process for creating processes, if you will.
-
 ## The difficult scenarios for transitioning to a 3PL vendor
 
 ### Scenario 1: Customer emails after their order to make changes
