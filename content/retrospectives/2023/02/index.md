@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 31"
 date: 2023-02-12T08:40:09-05:00
 description: Tricky transitions.
+images:
+  - /retrospectives/2023/02/og-cover.png
 ---
 
 {{<notice type="info">}}
@@ -154,9 +156,11 @@ Writing this out now, I'm realizing I missed an obvious solution. We could have 
 
 Overall, it felt like our first 3PL's system for managing changes was brittle and pushed a lot of work onto us in order to prevent expensive errors.
 
-We moved on, and it was amicable. Our contract required two months notice, so they technically could have demanded two more payments of their monthly minimum ($350/month), but they didn't.
+We told the 3PL it wasn't working, and they handled it nicely. Our contract required two months notice, so they could have demanded two more payments of their $350 monthly minimum, but they didn't.
 
-Before going with my chosen 3PL, I had interviewed another one farther away. I liked them about equal, but I went with the one that was within driving distance. When I started running into issues with my first 3PL, the backup explained how their system (Shipstation) would handle my special-case scenarios and it sounded significantly smoother than Veracore. Shipstation syncs continuously with Shopify, so we shouldn't run into these weird problems that come from having information on a 24-hour delay.
+When I was interviewing 3PLs, there were [two I liked about equally](retrospectives/2022/11/#exploring-the-world-of-3pl-vendors). I chose the one that was within driving distance but the other said I was welcome to reach out any time.
+
+When I was struggling to find a solution to edge case scenarios in Veracore with my first 3PL, I followed up with my second choice to see how they'd handle it. The owner told me he found Veracore dated and explained how his warehouse's software would handle my scenarios. It sounded a lot smoother and would allow us to continue managing things in Shopify, so we're now in the process of switching to that 3PL vendor.
 
 ## Wrap up
 
@@ -164,13 +168,14 @@ Before going with my chosen 3PL, I had interviewed another one farther away. I l
 
 - Launched [TinyPilot Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a)
 - Published my [fifth annual retrospective](/solo-developer-year-5/)
+- Canceled my 3PL vendor contract
 
 ### Lessons learned
 
 - Figure out how your 3PL will handle non-standard orders.
 - Keep interfaces between your eCommerce platform and your 3PL's order management system.
   - In my case, there were easy changes to TinyPilot's internal process I overlooked, but they would have simplified our 3PL integration.
-- Don't transition to a 3PL all at once.
+- Don't transition to a new 3PL all at once.
   - Start with a low-volume or low-cost product so you can work out the kinks before moving onto something higher risk.
 
 ### Goals for next month
