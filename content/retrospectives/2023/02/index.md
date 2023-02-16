@@ -17,8 +17,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- TinyPilot began shipping a new product, the [Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a).
-- We had to cancel our contract with our new 3PL vendor a few weeks into the relationship.
+- TinyPilot began shipping a new product: the [Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a).
+- I canceled our contract with a new 3PL vendor a few weeks into the relationship.
 
 ## Goal Grades
 
@@ -160,7 +160,7 @@ We told the 3PL it wasn't working, and they handled it nicely. Our contract requ
 
 When I was interviewing 3PLs, there were [two I liked about equally](retrospectives/2022/11/#exploring-the-world-of-3pl-vendors). I chose the one that was within driving distance but the other said I was welcome to reach out any time.
 
-When I was struggling to find a solution to edge case scenarios in Veracore with my first 3PL, I followed up with my second choice to see how they'd handle it. The owner told me he found Veracore dated and explained how his warehouse's software would handle my scenarios. It sounded a lot smoother and would allow us to continue managing things in Shopify, so we're now in the process of switching to that 3PL vendor.
+When I ran into the edge case scenarios with my first 3PL, I followed up with my second-choice 3PL to see how they'd handle it. The owner told me he found Veracore dated and explained how his warehouse's software would handle my scenarios. It sounded a lot smoother and would allow us to continue managing things in Shopify. We're now in the process of switching to that 3PL vendor.
 
 ## Wrap up
 
