@@ -51,21 +51,19 @@ I felt like the version I published did a good job of covering the major areas I
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | December 2022                           | January 2023                            | Change                                         |
-| ------------------------ | --------------------------------------- | --------------------------------------- | ---------------------------------------------- |
-| Unique Visitors          | 7,308                                   | 8,092                                   | <font color="green">+784 (+11%)</font>         |
-| Total Pageviews          | 15,549                                  | 16,665                                  | <font color="green">+1,116 (+7%)</font>        |
-| Sales Revenue            | $66,092.24                              | $68,619.55                              | <font color="green">+$2,527.31 (+4%)</font>    |
-| Enterprise Subscriptions | $290.70                                 | $290.70                                 | 0                                              |
-| Royalties                | $2,798.97                               | $5,689.93                               | <font color="green">+$2,890.96 (+103%)</font>  |
-| Total Revenue            | $69,181.91                              | $74,600.18                              | <font color="green">+$5,418.27 (+8%)</font>    |
-| **Profit**               | **<font color="red">-$4,806.26</font>** | **<font color="red">-$8,122.10</font>** | **<font color="red">-$3,315.84 (-69%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | December 2022                           | January 2023  | Change                                             |
+| ------------------------ | --------------------------------------- | ------------- | -------------------------------------------------- |
+| Unique Visitors          | 7,308                                   | 8,092         | <font color="green">+784 (+11%)</font>             |
+| Total Pageviews          | 15,549                                  | 16,665        | <font color="green">+1,116 (+7%)</font>            |
+| Sales Revenue            | $66,092.24                              | $68,619.55    | <font color="green">+$2,527.31 (+4%)</font>        |
+| Enterprise Subscriptions | $290.70                                 | $290.70       | 0                                                  |
+| Royalties                | $2,798.97                               | $5,689.93     | <font color="green">+$2,890.96 (+103%)</font>      |
+| Total Revenue            | $69,181.91                              | $74,600.18    | <font color="green">+$5,418.27 (+8%)</font>        |
+| **Profit**               | **<font color="red">-$4,806.26</font>** | **$8,552.79** | **<font color="green">+$13,359.05 (+inf%)</font>** |
 
 Sales are down from our peak at the end of last year, but that's intentional. I'm scaling back advertising and keeping prices high on Amazon to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
 
-I'm finishing the month with a net $8k loss in cash, but I'm not too worried about that. That's largely due to disproportionate spending on materials in December to prepare for suppliers closing during Chinese New Year. It will balance out in the next few months.
+Three-month trailing profit is still positive, continuing a five-month streak. And that's still with me paying an inflated amount on raw materials at the start of the year, so I'm looking forward to increasing profits throughout the year.
 
 ## Increasing production from 140 to 200 devices per month
 
