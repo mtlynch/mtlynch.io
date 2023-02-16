@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 31"
 date: 2023-02-12T08:40:09-05:00
-description: TODO - One-line summary
+description: Tricky transitions.
 ---
 
 {{<notice type="info">}}
@@ -15,7 +15,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- TinyPilot began shipping a new product, the [Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a).
+- We had to cancel our contract with our new 3PL vendor a few weeks into the relationship.
 
 ## Goal Grades
 
@@ -23,24 +24,26 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Ship the first Voyager 2a device
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We began shipping the [Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a)
+- **Grade**: A
 
-TODO
+The Voyager 2a ended up being TinyPilot's smoothest release ever. For previous releases, we've always forgotten a few small things and had to scramble to complete them days before launch. For the 2a, we'd been preparing since December for everything that needed to happen, and they all happened.
 
 ### Prepare to transition fulfillment to our 3PL vendor in February
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We canceled our contract with the 3PL vendor
+- **Grade**: N/A
 
-TODO
+Sadly, once we started working with our new 3PL on real orders, we realized that their workflows wouldn't work for us. More details on that [below](##hiccups-in-transitioning-to-a-3pl-vendor).
 
 ### Write my fifth [annual retrospective](/tags/annual-review/)
 
-- **Result**: Published it late
+- **Result**: [Published it](/solo-developer-year-5/) 10 days late, but I'm happy with the result
 - **Grade**: A-
 
-TODO
+I had a tough time writing my annual review this year. The final post was 2.5k words, but I probably threw out 5-8k words in rejected drafts. I kept finding myself writing long sections about some project that was a big part of what I thought about in 2022 but was nevertheless boring to read about.
+
+I felt like the version I published did a good job of covering the major areas I worked on for the year without boring readers by going too far down the rabbit hole on anything.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -58,19 +61,39 @@ TODO
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-Sales are down from our peak at the end of last year, but that's intentional. I'm deliberately throttling sales to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
+Sales are down from our peak at the end of last year, but that's intentional. I'm scaling back advertising and keeping prices high on Amazon to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
 
-I'm finishing the month with a net $8k negative in cash, but I'm not too worried about that. That's mainly carryover from expenses I had in 2022 before I found out about the supply shortage, so it represents somewhat excessive inventory, but it means my costs will be lower for the next three months.
+I'm finishing the month with a net $8k loss in cash, but I'm not too worried about that. That's largely due to disproportionate spending on materials in December to prepare for suppliers closing during Chinese New Year. It will balance out in the next few months.
+
+## Increasing production from 140 to 200 devices per month
+
+At the end of last year, I was told that TinyPilot [would not receive any new allocation](/retrospectives/2023/01/#losing-450k-in-a-single-email) of Raspberry Pis until September 2023. This limited our production capacity to about 140 devices per month from January to August.
+
+Fortunately, we received word in January that we'd receive a small amount of new allocation, which increases our production capacity to 200/month. We have to purchase 8 GB Pis for nearly double the price, but I'll happily pay a premium there so we can continue selling devices.
+
+I'm happy with 200/month. I think we can comfortably sell at that rate while also having enough time and profit left over to invest in processes that will allow us to scale faster when supply is less limited.
 
 ## Getting metal cases in the nick of time
 
-In late January or early February, China celebrates Chinese New Year. Chinese vendors completely shut down for anywhere between one and four weeks to celebrate Chinese New Year. If you rely on Chinese vendors, you need to plan carefully around.
+Every year, in late January or early February, China celebrates Chinese New Year. China takes its new year celebration seriously, so Chinese vendors shut down entirely for weeks. Some close for just a couple of weeks, but others are unavailable for up to four weeks.
 
-We placed an order in December, so it put us right up against Chinese New Year. They weren't communicating much with us except to say they thought they'd make it on time. And fortunately they did. It seems like in one of the last few days before everyone left for Chinese New Year, they shipped out the order.
+TinyPilot purchases most of its raw materials from China, so I have to plan carefully around Chinese New Year. I have to place orders early enough that they'll complete before things begin shutting down. I also need to order higher quantities so that I can survive the four weeks they'll be closed to new orders.
 
-And for the most part, everything worked out fine. The defect rate was about 5% for me and about 20% for cases shipped to my EU distributor, but at least we got them. They've also agreed to replace the damaged ones for free, which is unusual.
+In December, we were still finalizing the design for TinyPilot's new metal cases. The manufacturer estimated that it would take 30 business days to complete the order, so we were bumping right up against the Chinese New Year danger zone.
 
-We usually have a buffer of pre-built devices, but switching over meant we had to start from zero. The new model takes longer to assemble.
+TinyPilot has ordered several custom products before, so I have a standard process I follow. The first order is always as small as possible, because there's a high risk something will be wrong with it. I try to order just enough to tide me over until the second batch. And then the second batch, I order a little larger, and then a little more after that.
+
+For the metal cases, I couldn't follow my usual plan because Chinese New Year meant there'd be a gap of about three months between the first and second batches. If I ran out, I was dead in the water because I didn't want to roll back to my previous model.
+
+So, I bet big and ordered 1000 cases in the first run.
+
+The manufacturer said they could get it done by Chinese New Year, and then there weren't many updates about timeline. They sent us samples of the first batch, and they looked great. Whenever we'd ask about timelines, they'd just say that they expected to get it out the door by Chinese New Year.
+
+One aspect that made me anxious was that they told me they'd bill me for shipping before they shipped, but they weren't sending me the bill. I would be crushed if we did all that work and then the thing that prevented the order from shipping was that they were waiting on my shipping payment.
+
+Finally, the Saturday after I thought they closed for the new year, I got an email asking me to send payment immediately. I did, and then a few days later, I received tracking numbers for the cases.
+
+And they arrived! It was so many boxes of cases, they didn't fit in our office. But we got the cases, which meant we were able to ship the Voyager 2a as planned, which was an enormous relief.
 
 ## Hiccups in transitioning to a 3PL vendor
 
@@ -78,11 +101,17 @@ When we started working with our 3PL vendor, things seemed like they were off to
 
 Then, they gave me the instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 15 years.
 
-TODO: Photo of PDF
+{{<img src="veracore-instructions.png" caption="Veracore's onboarding instructions PDF with screenshots of its web interface" max-width="600px" has-border="true">}}
 
-But I was willing to overlook Veracore. It was their system, not mine. We'd continue working in Shopify, and Veracore would just sync with us.
+I was willing to overlook Veracore. It was the system they'd be using, while we'd continue working in Shopify.
 
-And then we received our first order. It was XX, so maybe they were closed for the holidays. Then the next day by XX pm, the order was still in our system as unfulfilled. I emailed our 3PL to verify that the order was showing up on their end. They said that everything was working. It's just that Veracore only syncs its order status back to Shopify once per day, so we'd see Shopify update with fulfillment status and tracking numbers by around 7pm ET.
+We decided to start by shifting only our low-volume product over to the 3PL: the TinyPilot Power Connector. It's for hobbyists who build their own devices, so we only sell 30-40 per month. It felt like a low-cost, low-risk product to work through the process end-to-end.
+
+our main product to shift that over to the 3PL, so we started by having them process orders for our
+
+And then we received our first order. It came in at 5pm on Christmas, so I knew it wouldn't go out that day. I checked the order the following afternoon, and it still hadn't gone out. Okay, maybe they were closed the day after Christmas too?
+
+By the 27th, the order still hadn't shipped, so I emailed the 3PL to verify it was showing up on their end. They said that everything was working. It's just that Veracore only syncs its order status back to Shopify once per day, so we'd see Shopify update with fulfillment status and tracking numbers by 8pm.
 
 Sync once per day? Why wouldn't it just immediately mark orders as shipped so that we have the information in real-time?
 
@@ -92,7 +121,7 @@ I thought we could still work with it, and then we got to a few scenarios that w
 
 Every 30 orders or so, the customer emails us a few minutes after to make a change. Sometimes they realize they mistyped their shipping address. Sometimes they've changed their mind entirely and want to cancel the order.
 
-In TinyPilot's current system, these requests are easy to handle. As long as we haven't shipped out their order already, we always honor the customer's request by making the necessary changes in Shopify, our eCommerce platform.
+In TinyPilot's current system, these requests are easy to handle. As long as we haven't shipped out their order already, we just make the change in Shopify, our eCommerce platform. When it's time to fulfill the order
 
 When we transitioned to the 3PL, this is where that "sync once per day" issue came back to bite us. If a customer emailed us requesting changes, now we don't know if the order has been fulfilled or not. The information we're seeing in Shopify is up to 24 hours out of date.
 
@@ -117,7 +146,7 @@ As you can see, these two situations are at odds with each other. If we told the
 
 Before the 3PL, we added notes to an order to make the intent explicit in the case of purchase orders. But the 3PL can't see our note because they only import each order once, so if we add notes later, they don't receive them.
 
-The 3PL's solution was, again, to email the person who handles our order and explain the special case orders.
+The 3PL's solution was, again, that we email the person who handles our order and explain the special case orders.
 
 Writing this out now, I'm realizing I missed an obvious solution. We could have just made the rule, "Ship out orders when they're marked as paid." And then for (2), we just manually mark the order as "paid" when we receive the purchase order. We'd need a separate system to track unpaid purchase orders, but that's easier than complicating our interface with the 3PL.
 
@@ -133,14 +162,19 @@ Before going with my chosen 3PL, I had interviewed another one farther away. I l
 
 ### What got done?
 
--
+- Launched [TinyPilot Voyager 2a](https://tinypilotkvm.com/product/tinypilot-voyager2a)
+- Published my [fifth annual retrospective](/solo-developer-year-5/)
 
 ### Lessons learned
 
 - Figure out how your 3PL will handle non-standard orders.
 - Keep interfaces between your eCommerce platform and your 3PL's order management system.
   - In my case, there were easy changes to TinyPilot's internal process I overlooked, but they would have simplified our 3PL integration.
+- Don't transition to a 3PL all at once.
+  - Start with a low-volume or low-cost product so you can work out the kinks before moving onto something higher risk.
 
 ### Goals for next month
 
-- Build up a buffer of pre-assembled Voyager 2a devices.
+- Get back to our normal level of ready-to-ship TinyPilot devices.
+- Start the process of transitioning to a new 3PL vendor.
+- Begin direct cross-team collaboration between the developers and support engineers.
