@@ -36,7 +36,7 @@ The Voyager 2a ended up being TinyPilot's smoothest release ever. For previous l
 - **Result**: We canceled our contract with the 3PL vendor.
 - **Grade**: N/A
 
-Sadly, once we started working with the 3PL, we found serious gaps in their workflows. More details on that [below](##hiccups-in-transitioning-to-a-3pl-vendor).
+Sadly, once we started working with the 3PL, we found serious gaps in their workflows. More details on that [below](#hiccups-in-transitioning-to-a-3pl-vendor).
 
 ### Write my fifth [annual retrospective](/tags/annual-review/)
 
