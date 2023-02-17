@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 31"
 date: 2023-02-12T08:40:09-05:00
-description: Tricky transitions.
+description: Some transitions are smoother than others.
 images:
   - /retrospectives/2023/02/og-cover.png
 ---
@@ -63,15 +63,15 @@ I felt like the version I published did a good job of covering the major topics 
 
 Sales are down from our peak at the end of last year, but that's intentional. I'm scaling back advertising and keeping prices high on Amazon to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
 
-Three-month average trailing profit is still positive, continuing a five-month streak. I'm especially excited about January's profit because it's despite several major one-time costs and slower sales than I anticipate the rest of the year. $8.5k/month puts me almost perfectly on track for [my 2023 goal of $100k/yr in profit](/solo-developer-year-5/#earn-100k-in-profit).
+TinyPilot's three-month average trailing profit has been positive for five straight months, its longest streak ever. I'm especially excited about January's profit because we had a healthy profit despite several major one-time costs and slower sales than I anticipate the rest of the year. $8.5k/month puts me almost perfectly on track for [my 2023 goal of $100k/yr in profit](/solo-developer-year-5/#earn-100k-in-profit).
 
 ## Increasing production from 140 to 200 devices per month
 
-At the end of last year, I was told that TinyPilot [would not receive any new allocation](/retrospectives/2023/01/#losing-450k-in-a-single-email) of Raspberry Pis until September 2023. This limited our production capacity to about 140 devices per month from January to August. It was tough news, but I had a plan to work around it.
+At the end of last year, I was told that TinyPilot [would not receive any new allocation](/retrospectives/2023/01/#losing-450k-in-a-single-email) of Raspberry Pis until September 2023. This limited our production capacity to about 140 devices per month until then. It was tough news, but I had a plan to work around it.
 
-Fortunately, we received word in January that we'd receive a small amount of new allocation, which increases our production capacity to 200/month. We have to purchase 8 GB Pis for nearly double the price, but I'll happily pay a premium to can continue selling new devices.
+Fortunately, we received word in January that we'd receive a small amount of new allocation, which increases our production capacity to 200/month. We have to purchase 8 GB Pis for nearly double the price, but I'll happily pay a premium to continue selling new devices.
 
-I'm pleased with 200/month as a target. We can comfortably sell at that rate while also having enough time and profit left over to invest in processes that will allow us to scale faster when the supply shortage eases in September.
+I'm pleased with 200 devices/month as a target. We can comfortably sell at that rate while also having enough time and profit left over to invest in scaling faster when the supply shortage eases in September.
 
 ## Getting metal cases in the nick of time
 
@@ -91,7 +91,7 @@ Finally, the Saturday after I thought they closed for the new year, I got an ema
 
 A week later, the cases arrived! And to my great relief, the quality on all of them was just as good as the prototypes.
 
-TODO: Photo of box
+{{<img src="new-cases.webp" alt="Photo of a TinyPilot metal case in a cardboard box full of other cases" caption="One of our 16 boxes of new cases" max-width="500px">}}
 
 We were able to ship the Voyager 2a as planned, and we have enough cases to last us through a second manufacturing run.
 
@@ -103,7 +103,7 @@ In December, we started shifting our fulfillment to a 3PL vendor, and things got
 
 Then, they gave me the instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 20 years.
 
-{{<img src="veracore-instructions.png" caption="Veracore's onboarding instructions PDF with screenshots of its web interface" max-width="600px" has-border="true">}}
+{{<img src="veracore-instructions.png" alt="A page from Veracore's PDF instructions showing horrible ASP app screenshots" caption="Veracore's onboarding instructions PDF with screenshots of its web interface" max-width="600px" has-border="true">}}
 
 Seeing horribly outdated software certainly gave me pause, but I told myself it would be fine. The TinyPilot team would continue managing orders in Shopify. Veracore was how the 3PL would synchronize with our system, but I didn't expect to use it much myself.
 
