@@ -43,9 +43,9 @@ Sadly, once we started working with our new 3PL on real orders, we realized that
 - **Result**: [Published it](/solo-developer-year-5/) 10 days late, but I'm happy with the result
 - **Grade**: A-
 
-I had a tough time writing my annual review this year. The final post was 2.5k words, but I probably threw out 5-8k words in rejected drafts. I kept finding myself writing long sections about some project that was a big part of what I thought about in 2022 but was nevertheless boring to read about.
+I had a tough time writing my annual review this year. The final post was 2.5k words, but I probably threw out 5-8k words in rejected drafts. I kept finding myself writing long sections only to realize the story required 1,500 words of boring background information to get to 200 words of interesting reflection.
 
-I felt like the version I published did a good job of covering the major areas I worked on for the year without boring readers by going too far down the rabbit hole on anything.
+I felt like the version I published did a good job of covering the major topics of the year without boring readers by going too far down the rabbit hole on more complex issues.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -63,86 +63,86 @@ I felt like the version I published did a good job of covering the major areas I
 
 Sales are down from our peak at the end of last year, but that's intentional. I'm scaling back advertising and keeping prices high on Amazon to compensate for our supply shortage and to reduce load on TinyPilot's fulfillment staff while we transition to our new product.
 
-Three-month trailing profit is still positive, continuing a five-month streak. And that's still with me paying an inflated amount on raw materials at the start of the year, so I'm looking forward to increasing profits throughout the year.
+Three-month average trailing profit is still positive, continuing a five-month streak. I'm especially excited about January's profit because it's despite several major one-time costs and slower sales than I anticipate the rest of the year. $8.5k/month puts me almost perfectly on track for [my 2023 goal of $100k/yr in profit](/solo-developer-year-5/#earn-100k-in-profit).
 
 ## Increasing production from 140 to 200 devices per month
 
-At the end of last year, I was told that TinyPilot [would not receive any new allocation](/retrospectives/2023/01/#losing-450k-in-a-single-email) of Raspberry Pis until September 2023. This limited our production capacity to about 140 devices per month from January to August.
+At the end of last year, I was told that TinyPilot [would not receive any new allocation](/retrospectives/2023/01/#losing-450k-in-a-single-email) of Raspberry Pis until September 2023. This limited our production capacity to about 140 devices per month from January to August. It was tough news, but I had a plan to work around it.
 
-Fortunately, we received word in January that we'd receive a small amount of new allocation, which increases our production capacity to 200/month. We have to purchase 8 GB Pis for nearly double the price, but I'll happily pay a premium there so we can continue selling devices.
+Fortunately, we received word in January that we'd receive a small amount of new allocation, which increases our production capacity to 200/month. We have to purchase 8 GB Pis for nearly double the price, but I'll happily pay a premium to can continue selling new devices.
 
-I'm happy with 200/month. I think we can comfortably sell at that rate while also having enough time and profit left over to invest in processes that will allow us to scale faster when supply is less limited.
+I'm pleased with 200/month as a target. We can comfortably sell at that rate while also having enough time and profit left over to invest in processes that will allow us to scale faster when the supply shortage eases in September.
 
 ## Getting metal cases in the nick of time
 
-Every year, in late January or early February, China celebrates Chinese New Year. China takes its new year celebration seriously, so Chinese vendors shut down entirely for weeks. Some close for just a couple of weeks, but others are unavailable for up to four weeks.
+Every year, in late January or early February, China celebrates Chinese New Year. China takes its new year celebration seriously, so Chinese vendors shut down entirely. Some close for a couple of weeks, but others are unavailable for up to four weeks.
 
-TinyPilot purchases most of its raw materials from China, so I have to plan carefully around Chinese New Year. I have to place orders early enough that they'll complete before things begin shutting down. I also need to order higher quantities so that I can survive the four weeks they'll be closed to new orders.
+TinyPilot purchases most of its raw materials from China, so I plan carefully around Chinese New Year. I have to place orders early enough that they'll complete before things begin shutting down. I also need to order higher quantities so that I can survive the four weeks without placing new orders.
 
 In December, we were still finalizing the design for TinyPilot's new metal cases. The manufacturer estimated that it would take 30 business days to complete the order, so we were bumping right up against the Chinese New Year danger zone.
 
-TinyPilot has ordered several custom products before, so I have a standard process I follow. The first order is always as small as possible, because there's a high risk something will be wrong with it. I try to order just enough to tide me over until the second batch. And then the second batch, I order a little larger, and then a little more after that.
+Whenever I'm ordering the first run of a custom product, I order the smallest quantity possible. Usually, about a four-week supply. In this case, the smallest quantity possible was four months' worth &mdash; I needed enough to last me through Chinese New Year and another manufacturing run.
 
-For the metal cases, I couldn't follow my usual plan because Chinese New Year meant there'd be a gap of about three months between the first and second batches. If I ran out, I was dead in the water because I didn't want to roll back to my previous model.
+So, already, this is a stressful order. Even though we'd seen prototypes, many things can go wrong with a first production run, and I could end up with 1,000 unusably defective cases. That would also mean another four-month stretch on 3D printed cases, where we were paying a steep premium at a backup vendor to meet our excess demand.
 
-So, I bet big and ordered 1000 cases in the first run.
-
-The manufacturer said they could get it done by Chinese New Year, and then there weren't many updates about timeline. They sent us samples of the first batch, and they looked great. Whenever we'd ask about timelines, they'd just say that they expected to get it out the door by Chinese New Year.
-
-One aspect that made me anxious was that they told me they'd bill me for shipping before they shipped, but they weren't sending me the bill. I would be crushed if we did all that work and then the thing that prevented the order from shipping was that they were waiting on my shipping payment.
+The other major risk was that the manufacturer would run late and they wouldn't ship anything before Chinese New Year. In the weeks leading up to the ship date, they weren't giving any progress updates except to say that they still thought they'd meet the deadline. I requested that they ship a partial order if necessary, but they didn't tell me whether that would make a difference.
 
 Finally, the Saturday after I thought they closed for the new year, I got an email asking me to send payment immediately. I did, and then a few days later, I received tracking numbers for the cases.
 
-And they arrived! It was so many boxes of cases, they didn't fit in our office. But we got the cases, which meant we were able to ship the Voyager 2a as planned, which was an enormous relief.
+A week later, the cases arrived! And to my great relief, the quality on all of them was just as good as the prototypes.
+
+TODO: Photo of box
+
+We were able to ship the Voyager 2a as planned, and we have enough cases to last us through a second manufacturing run.
 
 ## Hiccups in transitioning to a 3PL vendor
 
-When we started working with our 3PL vendor, things seemed like they were off to a good start. They were a small business, all of their customers were small businesses. The contract was straightforward. It seemed like we were well-matched.
+One of my goals for the year is to move TinyPilot's in-house fulfillment process [to an external fulfillment vendor](/retrospectives/2022/11/#exploring-the-world-of-3pl-vendors). These businesses are known as "3PLs," which is short for third-party logistics providers.
 
-Then, they gave me the instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 15 years.
+In December, we started shifting our fulfillment to a 3PL vendor, and things got off to a great start. They were a small business, all of their customers were small businesses. It seemed like we were well-matched, and they understood our needs.
+
+Then, they gave me the instructions for integrating with their warehouse management software, Veracore. The instructions were a PDF, which was the first red flag. When I logged into the system, I found an ASP app that looked like it hadn't been updated in 20 years.
 
 {{<img src="veracore-instructions.png" caption="Veracore's onboarding instructions PDF with screenshots of its web interface" max-width="600px" has-border="true">}}
 
-I was willing to overlook Veracore. It was the system they'd be using, while we'd continue working in Shopify.
+Seeing horribly outdated software certainly gave me pause, but I told myself it would be fine. The TinyPilot team would continue managing orders in Shopify. Veracore was how the 3PL would synchronize with our system, but I didn't expect to use it much myself.
 
-We decided to start by shifting only our low-volume product over to the 3PL: the TinyPilot Power Connector. It's for hobbyists who build their own devices, so we only sell 30-40 per month. It felt like a low-cost, low-risk product to work through the process end-to-end.
+We decided to start by shifting only our low-volume product over to the 3PL: the [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector). It's 1/10th the cost of our main product, and we only sell 30-40 per month. It was a low-cost, low-risk way to test out the 3PL's workflows end-to-end.
 
-our main product to shift that over to the 3PL, so we started by having them process orders for our
+After flipping on order processing at the 3PL, our first Power Connector order came in at 5pm on Christmas. Obviously, it wouldn't go out that day due to the holiday, so I checked the order the following afternoon. It still showed as unfulfilled in Shopify, but that was fine. Maybe they were closed the day after Christmas too.
 
-And then we received our first order. It came in at 5pm on Christmas, so I knew it wouldn't go out that day. I checked the order the following afternoon, and it still hadn't gone out. Okay, maybe they were closed the day after Christmas too?
+By 3pm on the 27th, the order still hadn't shipped. I emailed the 3PL to verify the order was coming through on their end. They assured me that everything was working fine, but Veracore only syncs its order status back to Shopify once per day. We'd see Shopify update with fulfillment status and tracking numbers by 8pm.
 
-By the 27th, the order still hadn't shipped, so I emailed the 3PL to verify it was showing up on their end. They said that everything was working. It's just that Veracore only syncs its order status back to Shopify once per day, so we'd see Shopify update with fulfillment status and tracking numbers by 8pm.
+Once per day? Why wouldn't Veracore just mark orders as fulfilled as soon as they print the shipping label the way that Shopify does? That would give us the information in real-time.
 
-Sync once per day? Why wouldn't it just immediately mark orders as shipped so that we have the information in real-time?
-
-I thought we could still work with it, and then we got to a few scenarios that wouldn't work.
+Still, I thought it should be fine. They have a hundred customers who are happy with this system. What did I _really_ need real-time fulfillment information for, anyway?
 
 ### What if a customer changes their order?
 
-Every 30 orders or so, the customer emails us a few minutes after to make a change. Sometimes they realize they mistyped their shipping address. Sometimes they've changed their mind entirely and want to cancel the order.
+Every 30 orders or so, a customer emails us to make a change to their information. Sometimes, they realize they mistyped their shipping address. Sometimes, they've changed their mind entirely and want to cancel the order.
 
-In TinyPilot's current system, these requests are easy to handle. As long as we haven't shipped out their order already, we just make the change in Shopify, our eCommerce platform. When it's time to fulfill the order
+In TinyPilot's current system, these requests are easy to handle. The two TinyPilot employees who handle customer support requests are the same people who who fulfill orders. As long as we haven't shipped out their order already, we just make the change in Shopify and continue our normal process.
 
 When we transitioned to the 3PL, this is where that "sync once per day" issue came back to bite us. If a customer emailed us requesting changes, now we don't know if the order has been fulfilled or not. The information we're seeing in Shopify is up to 24 hours out of date.
 
 The 3PL's solution was that we email the employee at the 3PL who handles our orders and let them know about any order changes. That felt like a terrible system.
 
-Currently, Shopify is our "source of truth." We can rely on Shopify being the authoritative location where everyone related to an order shares information. The 3PL's solution would mean that we no longer have a single, shared source of truth because there could be extra information hiding in someone's email.
+Currently, Shopify is our "source of truth." We can rely on Shopify being the authoritative location where everyone related to an order shares information. Starting a parallel discussion over email would spread information about an order into multiple silos that are hard to sync.
 
-I also wasn't crazy about emailing an individual rather than a team. I asked what happens if that person was out sick or on vacation, and they said that usually someone else checks their email. Usually?
+I also wasn't crazy about emailing an individual rather than a team. What happens if that person is sick or on vacation? The 3PL said that usually someone else checks that person's email. Usually?
 
 ### What if the customer pays in a non-standard way?
 
-There are two common ways that customers can purchase from us outside of the normal checkout process on our website:
+There are two common ways that customers purchase from TinyPilot outside of our website's standard checkout flow:
 
-1. They need a custom order that our website doesn't support (e.g., volume discount)
-1. They want to pay with a purchase order (basically, how big companies write IOUs)
+1. They need a custom order that our website doesn't support (e.g., volume discount).
+1. They want to pay with a purchase order (basically, how big companies write IOUs).
 
-For (1), we create a custom order for them and then give them a link to pay with a credit card. When the customer pays, Shopify automatically marks the order as "paid" and we ship it out.
+For (1), we create a custom order and then give the customer a link to pay with a credit card. When the customer pays, Shopify automatically marks the order as "paid" and we ship it out.
 
-For (2), we create a custom order for the customer and then wait for them to send us a signed purchase order. When we receive the purchase order, Shopify still sees the order as "unpaid" because we don't have the actual cash yet, but we ship it out based on the purchase order.
+For (2), we create a custom order and then wait for the customer to send us a signed purchase order. When we receive the purchase order, Shopify still sees the order as "unpaid" because we don't have the actual cash yet, but we ship it out based on the purchase order.
 
-As you can see, these two situations are at odds with each other. If we told the 3PL to wait to ship out orders until they're marked as "paid," then they can't ship out orders paid by purchase order (2). If we tell them to ship out orders even if they're unpaid, they'd ship out orders for (1) immediately even though the customer might not end up paying.
+As you can see, scenarios (1) and (2) are at odds with each other. If we told the 3PL to wait to ship out orders until they're marked as "paid," it wouldn't work for customers paying by purchase order (2). If we tell the 3PL to ship out orders even if they're unpaid, they'd ship out orders for (1) immediately even though the customer might not ever pay.
 
 Before the 3PL, we added notes to an order to make the intent explicit in the case of purchase orders. But the 3PL can't see our note because they only import each order once, so if we add notes later, they don't receive them.
 
@@ -154,9 +154,9 @@ Writing this out now, I'm realizing I missed an obvious solution. We could have 
 
 Overall, it felt like our first 3PL's system for managing changes was brittle and pushed a lot of work onto us in order to prevent expensive errors.
 
-We told the 3PL it wasn't working, and they handled it nicely. Our contract required two months notice, so they could have demanded two more payments of their $350 monthly minimum, but they didn't.
+We told the 3PL it wasn't working, and they took it graciously. Our contract required two months notice, so they could have demanded two more payments of their $350 monthly minimum, but they didn't.
 
-When I was interviewing 3PLs, there were [two I liked about equally](retrospectives/2022/11/#exploring-the-world-of-3pl-vendors). I chose the one that was within driving distance but the other said I was welcome to reach out any time.
+When I was interviewing 3PLs, there were [two I liked about equally](/retrospectives/2022/11/#working-with-mom-and-pop-3pls). I chose the one that was within driving distance but the other said I was welcome to reach out any time.
 
 When I ran into the edge case scenarios with my first 3PL, I followed up with my second-choice 3PL to see how they'd handle it. The owner told me he found Veracore dated and explained how his warehouse's software would handle my scenarios. It sounded a lot smoother and would allow us to continue managing things in Shopify. We're now in the process of switching to that 3PL vendor.
 
