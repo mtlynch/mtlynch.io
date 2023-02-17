@@ -129,6 +129,7 @@ Doesn't take over the whole app and decide how to route pages.
 | [Alpine.js](https://alpinejs.dev)                 | ✔️                   | ✔️                  | ✔️               | ❌                                |
 | [htmx](https://htmx.org)                          | ✔️                   | ✔️                  | ✔️               | Technically yes, practically no\* |
 | [Stimulus](https://stimulus.hotwired.dev)         | ❌                   | ❌                  | ✔️               | ✔️                                |
+| [Lit](https://lit.dev)                            |                      |                     |                  |                                   |
 | [Mavo](https://mavo.io/)                          |                      |                     |                  |                                   |
 | [Mikado](https://github.com/nextapps-de/mikado)   |                      |                     |                  |                                   |
 | [petite-vue](https://github.com/vuejs/petite-vue) | ✔️                   | ✔️                  | ✔️               | ❌                                |
@@ -224,6 +225,10 @@ If SPAs are where I feel it all went wrong, maybe the popular thing just before 
 I'm not sure exactly what the state of TKO is. It's either a spiritual successor to Knockout, or it's just the next major version.
 
 Supposedly, it's [CSP-compatible](https://github.com/knockout/knockout/issues/903#issuecomment-301468183), but it doesn't have a production release. Its [first alpha](https://github.com/knockout/tko/releases/tag/v4.0.0-alpha1) was almost six years ago. Still, there's activity. They just had a [beta release](https://github.com/knockout/tko/releases/tag/v4.0.0-beta1.3) in May 2022, so maybe it's due for a rebirth.
+
+#### [Lit](https://lit.dev)
+
+https://news.ycombinator.com/item?id=34825676#34828992
 
 #### [Mavo](https://mavo.io/)
 
