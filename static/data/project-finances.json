@@ -115,11 +115,15 @@
     },
     "2022-12": {
       "profit": -4806.26,
-      "totalRevenue": 69181.91
+      "totalRevenue": 67366.11
     },
     "2023-01": {
       "profit": 8552.79,
-      "totalRevenue": 74600.18
+      "totalRevenue": 72401.15
+    },
+    "2023-02": {
+      "profit": 26594.6,
+      "totalRevenue": 76811.58
     }
   },
   "htfp": {
@@ -200,6 +204,9 @@
     },
     "2023-01": {
       "totalRevenue": 150.3
+    },
+    "2023-02": {
+      "totalRevenue": 107.7
     }
   },
   "isitketo": {
@@ -349,6 +356,9 @@
     },
     "2023-01": {
       "totalRevenue": 219.58
+    },
+    "2023-02": {
+      "totalRevenue": 228.55
     }
   },
   "zestful": {
@@ -516,6 +526,9 @@
     },
     "2023-01": {
       "totalRevenue": 174.98
+    },
+    "2023-02": {
+      "totalRevenue": 142.58
     }
   }
 }

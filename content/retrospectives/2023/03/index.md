@@ -46,11 +46,21 @@ TODO
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric                   | January 2023  | February 2023    | Change                                             |
+| ------------------------ | ------------- | ---------------- | -------------------------------------------------- |
+| Unique Visitors          | 8,092         | 12,141           | <font color="green">+4,049 (+50%)</font>           |
+| Total Pageviews          | 16,665        | 23,117           | <font color="green">+6,452 (+39%)</font>           |
+| Sales Revenue            | $66,420.52    | $72,585.15       | <font color="green">+$6,164.63 (+9%)</font>        |
+| Enterprise Subscriptions | $290.70       | $290.70          | 0                                                  |
+| Royalties                | $5,689.93     | $3,935.73        | <font color="red">-$1,754.20 (-31%)</font>         |
+| Total Revenue            | $72,401.15    | $76,811.58       | <font color="green">+$4,410.43 (+6%)</font>        |
+| **Profit**               | **$8,552.79** | **$26,594.60**\* | **<font color="green">+$18,041.81 (+211%)</font>** |
+
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
 We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team simply doesn't have enough hours to fulfill more orders on top of their other responsibilities. is near capacity, so I've shut down sales on Amazon and advertising, but sales are continuing to grow. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added to the product in the last couple of months.
 
-We're also on our XXthe consecutive month of profit. So even with us limiting our sales, we're still growing. I expect we could hit $90k in monthly revenue once we can shift fulfillment to a 3PL vendor, as that will eliminate fulfillment hours as one of our sales bottlenecks.
+We're also on our seventh consecutive month of positive three-month average trailing. So even with us limiting our sales, we're still growing. I expect we could hit $90k in monthly revenue once we can shift fulfillment to a 3PL vendor, as that will eliminate fulfillment hours as one of our sales bottlenecks.
 
 ## "Are you the TinyPilot guy?"
 
@@ -86,13 +96,13 @@ In February, I took my longest vacation since starting TinyPilot. It was one wee
 
 I attended a wedding in Tubingen, Germany for a week. Since there are a lot of TinyPilot-related people in Europe, I stayed for another week for what I called "my TinyPilot tour of Europe." It consisted of:
 
-* Two nights in Karlsruhe, Germany to visit punkt.de, TinyPilot's European distributor
-* Two nights in Berlin, Germany to visit one of TinyPilot's developers
-* Two nights in London, England to visit both of TinyPilot's support engineers
+- Two nights in Karlsruhe, Germany to visit punkt.de, TinyPilot's European distributor
+- Two nights in Berlin, Germany to visit one of TinyPilot's developers
+- Two nights in London, England to visit both of TinyPilot's support engineers
 
 The trip went well, but it was certainly a test for how TinyPilot functions without me. My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) has been three days, and this was five. And then another week of infrequent Internet access working on my laptop.
 
-One of the support engineers had planned vacation during two days of my vacation, leaving only one person handling technical support. And he got sick during those two days, so 
+One of the support engineers had planned vacation during two days of my vacation, leaving only one person handling technical support. And he got sick during those two days, so
 
 On the fulfillment team, we were in a precarious position, but things ended up being fine. We're still getting our bearings, but the office move,. It's a good reminder of how valuable it will be to switch to a 3PL vendor. If we can queue our 3PL vendor with six to eight weeks of inventory, we can continue fulfilling orders no matter what happens at our local office, and we'll ease a lot of pressure on our fulfillment team.
 
