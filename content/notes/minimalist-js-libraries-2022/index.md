@@ -124,18 +124,19 @@ Doesn't take over the whole app and decide how to route pages.
 
 ## Summary
 
-| Library                                           | Two-way data binding | Conditional Display | Compilation-free | CSP-friendly                      |
-| ------------------------------------------------- | -------------------- | ------------------- | ---------------- | --------------------------------- |
-| [Alpine.js](https://alpinejs.dev)                 | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| [htmx](https://htmx.org)                          | ✔️                   | ✔️                  | ✔️               | Technically yes, practically no\* |
-| [Stimulus](https://stimulus.hotwired.dev)         | ❌                   | ❌                  | ✔️               | ✔️                                |
-| [Lit](https://lit.dev)                            |                      |                     |                  |                                   |
-| [Mavo](https://mavo.io/)                          |                      |                     |                  |                                   |
-| [Mikado](https://github.com/nextapps-de/mikado)   |                      |                     |                  |                                   |
-| [petite-vue](https://github.com/vuejs/petite-vue) | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| [Knockout](https://knockoutjs.com/)               | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| [TKO](https://github.com/knockout/tko)            | ✔️                   | ✔️                  | ✔️               | ❌                                |
-| [MobX](https://mobx.js.org)                       | ❌                   | ❌                  | ✔️               | ✔️                                |
+| Library                                              | Two-way data binding | Conditional Display | Compilation-free | CSP-friendly                      |
+| ---------------------------------------------------- | -------------------- | ------------------- | ---------------- | --------------------------------- |
+| [Alpine.js](https://alpinejs.dev)                    | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [htmx](https://htmx.org)                             | ✔️                   | ✔️                  | ✔️               | Technically yes, practically no\* |
+| [Stimulus](https://stimulus.hotwired.dev)            | ❌                   | ❌                  | ✔️               | ✔️                                |
+| [Lit](https://lit.dev)                               |                      |                     |                  |                                   |
+| [Hyperapp](https://github.com/jorgebucaran/hyperapp) |                      |                     |                  |                                   |
+| [Mavo](https://mavo.io/)                             |                      |                     |                  |                                   |
+| [Mikado](https://github.com/nextapps-de/mikado)      |                      |                     |                  |                                   |
+| [petite-vue](https://github.com/vuejs/petite-vue)    | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [Knockout](https://knockoutjs.com/)                  | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [TKO](https://github.com/knockout/tko)               | ✔️                   | ✔️                  | ✔️               | ❌                                |
+| [MobX](https://mobx.js.org)                          | ❌                   | ❌                  | ✔️               | ✔️                                |
 
 \* HTMX can run under CSP but effectively neuters it. If an attacker can control HTML on the page, [they can achieve XSS through HTMX directives](https://htmx.org/docs/#security). You can disable this with `hx-disable`, but the nature of XSS makes it hard for the developer to anticipate which elements are at high risk of attacker-controlled HTML. The more secure way is secure by default while giving the developer the power to give certain elements more permissions to execute JS.
 
@@ -229,6 +230,10 @@ Supposedly, it's [CSP-compatible](https://github.com/knockout/knockout/issues/90
 #### [Lit](https://lit.dev)
 
 https://news.ycombinator.com/item?id=34825676#34828992
+
+#### [Hyperapp](https://github.com/jorgebucaran/hyperapp)
+
+https://www.digitalocean.com/community/tutorials/js-hyperapp
 
 #### [Mavo](https://mavo.io/)
 
