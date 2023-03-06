@@ -69,3 +69,9 @@ TODO
 ### Goals for next month
 
 -
+
+### Requests for help
+
+*If you're a reader of this blog, here are ways you can help me this month.*
+
+TODO
