@@ -90,7 +90,9 @@ Because of water damage, the builders might have to tear down one of our walls a
 
 For the next few days, the landlord was fairly blase about whether we'd have to completely relocate on a couple days' notice. And that was tricky because I was about to go to Europe for two weeks, so I wouldn't be available to set up the IT infrastructure in a new office.
 
-Ultimately, the builders told him that the wall could stay up, so we wouldn't need to move. We only lost the one day of work, but the uncertainty was stressful.
+I called every day the week before I left to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part of the move that required me.
+
+A week later we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work and I lost another in planning, but the uncertainty was stressful.
 
 It was also a strong motivation to migrate to our 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running would become someone else's problem.
 
@@ -108,27 +110,45 @@ Many of the people I work with for TinyPilot live in Europe, so I stayed for ano
 - Two nights in Berlin, Germany to visit one of TinyPilot's developers
 - Two nights in London, England to visit both of TinyPilot's support engineers
 
-The trip went well, but it was certainly a test for how TinyPilot functions without me. My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) has been five days, and this was 11. And I was following it up with another week on the road with inconsistent Internet access.
+The trip was a test for how TinyPilot functions without me, and it went _mostly_ well. My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) has been five days, and this was 11. And I was following it up with another week on the road with inconsistent Internet access.
 
-One of the support engineers had planned vacation during two days of my vacation, leaving only one person handling technical support. And he got sick during those two days, so
+Overall, TinyPilot functioned fine without me. Orders went out on time and users received timely support.
 
-On the fulfillment team, we were in a precarious position, but things ended up being fine. We're still getting our bearings, but the office move,. It's a good reminder of how valuable it will be to switch to a 3PL vendor. If we can queue our 3PL vendor with six to eight weeks of inventory, we can continue fulfilling orders no matter what happens at our local office, and we'll ease a lot of pressure on our fulfillment team.
+### For the local staff
 
-It was tricky because we still haven't quite gotten our bearings since the transition to our new product. Adding audio introduces major new functionality, so there's been added load on support as customers ask new questions about the product. We're also offering trade-ins, which puts extra load on the fulfillment team.
+The fulfillment team stayed on top of orders, but they were working at nearly their capacity. We're still catching up on the [switch to a new product](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade-in old devices for a discount, which adds load to the fulfillment team. Lastly, [our office situation](#are-you-the-tinypilot-guy) didn't help.
 
-The move also complicated things. At the time I was preparing to leave, my landlord still didn't have an answer as to whether we'd have to move. And if we did have to move, that would be a big problem because the fulfillment staff might not be able to reconnect our routers, printers, and workstations in the new office, which would block them from fulfilling orders.
+So, fulfillment was fine, but we had less breathng room than I'd like. If someone had gotten sick for a few days, we'd have struggled.
+
+Again, this experience was strong motivation to migrate fulfillment to a 3PL. A third-party vendor will have a much larger pool of capacity, so TinyPilot will be more robust against short-term stresses.
+
+### For the support engineering team
+
+The support engineering side functioned well without me. In normal operation, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users received high-quality support.
+
+The support engineering team did experience an "outage" in that there was a window when nobody was available to answer technical questions. One of the support engineers had planned time off during two days of my vacation, and then the last engineer got sick in that same window.
+
+I don't think there's much I can do to prevent outages like this at our scale. It's rare, but it's possible for three people to independently need time off at the same time.
+
+The team felt bad about the outage, so if anything, so the lesson for me was more to clarify expectations with the team that ensuring coverage is my problem, not theirs. I don't want to leave customers without support, but it's more important to me to respect team members' time off so they don't feel pressured to work during vacation or sick time.
+
+### For the dev team
+
+The dev team worked smoothly while I was traveling. There were a few minor tasks blocked on a decision from me, but the team knew enough about the roadmap that they could proceed forward without me.
+
+I've been working the past few years to give the dev team more autonomy and responsibility, so I was happy to see that my absence doesn't slow them down much.
 
 ## Proactive work from the team generates reactive work for the founder
 
-Over the last few months, I've been thinking a lot about the balance between reactive work and proactive work at TinyPilot. Reactive work includes things like answering support tickets. A support request is time-sensitive but it's low-impact as it only affects the one user with the issue. A proactive task is fixing the product or writing better public documentation so that the user doesn't need to file a support ticket to solve their problem.
+Over the last few months, I've been thinking a lot about the balance between [reactive and proactive work](/solo-developer-year-5/#run-at-50-capacity) at TinyPilot.
 
-I didn't realize until recently that proactive work that TinyPilot employees do usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work. It will reduce our support burden because users can find that article instead of contacting us. Before we publish the article, I need to review it. So now I have a reactive, time-sensitive task because I want to review the work while it's still fresh in the author's mind.
+Reactive work includes things like answering support tickets. A support request is time-sensitive but it's low-impact as it only helps one user who sent the email. A proactive task would be fixing the product or improving documentation so that users don't need to file a support ticket to solve their problem.
 
-But it's difficult to review and give thoughtful feedback about writing because if something feels wrong, I can't just fix it. I have to break down my thought process to articulate my feeling to the author so that they understand why I'm requesting the change.
+I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work. Before we publish the article, I need to review it. So now I have a reactive task, and it's time-sensitive because I want to review the work while it's still fresh in the author's mind.
 
-In the past few months, I'm increasingly the bottleneck on proactive tasks.
+It's harder for me to to give feedback about writing than to write content myself. When I'm writing, I can go by intuition, but if I see a subtle problem in someone else's writing, it's usually challenging to identify and articulate what the problem is.
 
-I'm debating whether I should get out of the way and just, but I keep deciding against it. I think writing documentation and designing workflows is something I do well, and I'd like to ensure my team is doing it consistently before I take myself out of the critical path.
+In the past few months, I'm increasingly the bottleneck on proactive tasks. I keep asking whether I should get out of the way and let my team write the way they write, but I keep deciding on "no." I value documentation highly, and I'd like to preserve consistency in TinyPilot's documentation.
 
 We went through a similar process with the dev team. In the beginning, I was reviewing every code change. After several months, we switched to peer reviews, so the dev team can review code changes without me.
 
@@ -146,14 +166,14 @@ I need to consider my own bandwidth when choosing tasks. I know certain tasks wi
 
 ### Lessons learned
 
-- Consider founder bandwidth when assigning
-  - Even if the initial work can happen without the founder, make sure you're scheduling the work for a time when the founder will
+- Consider founder bandwidth when assigning tasks.
+  - Even if the initial work can happen without the founder, consider how much bandwidth I'll need to review the work when it's done.
 
 ### Goals for next month
 
 - Transition fulfillment of a low-volume product to our new 3PL.
-- Present at NERD Summit 2023.
-- Reduce load on fulfillment team so that they're below 80% on reactive tasks.
+- Present at [NERD Summit 2023](https://nerdsummit.org/).
+- Reduce load on fulfillment team so that reactive tasks occupy less than 80% of their time.
 
 ### Requests for help
 
