@@ -15,7 +15,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I left the country for two weeks, and TinyPilot ran smoothly without me.
+- A pipe burst in the TinyPilot office, leading to near-disaster.
+- I'm continuing to try to balance the team's reactive and proactive work.
 
 ## Goal Grades
 
@@ -40,7 +42,7 @@ I'm hopeful about this new 3PL. Once we hand over fulfillment to an external ven
 - **Result**: TinyPilot its first dev and support engineering crossover meeting.
 - **Grade**: A
 
-TODO
+There's work that the developers and support engineers can collaborate on, but I felt like it would go better if they met face-to-face first. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -116,7 +118,7 @@ Overall, TinyPilot functioned fine without me. Orders went out on time and users
 
 ### For the local staff
 
-The fulfillment team stayed on top of orders, but they were working at nearly their capacity. We're still catching up on the [switch to a new product](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade-in old devices for a discount, which adds load to the fulfillment team. Lastly, [our office situation](#are-you-the-tinypilot-guy) didn't help.
+The fulfillment team stayed on top of orders, but they were working at nearly their capacity. We're still catching up on the [switch to a new product](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade-in old devices for a discount, which adds load to the fulfillment team. [Our office situation](#are-you-the-tinypilot-guy) certainly didn't help matters.
 
 So, fulfillment was fine, but we had less breathng room than I'd like. If someone had gotten sick for a few days, we'd have struggled.
 
@@ -124,13 +126,13 @@ Again, this experience was strong motivation to migrate fulfillment to a 3PL. A 
 
 ### For the support engineering team
 
-The support engineering side functioned well without me. In normal operation, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users received high-quality support.
+TinyPilot's technical support team functioned well without me. In normal operation, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users still received high-quality support.
 
 The support engineering team did experience an "outage" in that there was a window when nobody was available to answer technical questions. One of the support engineers had planned time off during two days of my vacation, and then the last engineer got sick in that same window.
 
-I don't think there's much I can do to prevent outages like this at our scale. It's rare, but it's possible for three people to independently need time off at the same time.
+I don't think there's much I can do to prevent outages like this with a team of our size. It's rare, but it's possible for three people to independently need time off at the same time.
 
-The team felt bad about the outage, so if anything, so the lesson for me was more to clarify expectations with the team that ensuring coverage is my problem, not theirs. I don't want to leave customers without support, but it's more important to me to respect team members' time off so they don't feel pressured to work during vacation or sick time.
+The team felt bad about the outage, so the most actionable lesson was clarifying expectations to the team that outages like this are my problem and not theirs. I don't want to leave customers without technical support, but it's more important to me to respect team members' time off so they don't feel pressured to work during vacation or sick time.
 
 ### For the dev team
 
@@ -142,19 +144,19 @@ I've been working the past few years to give the dev team more autonomy and resp
 
 Over the last few months, I've been thinking a lot about the balance between [reactive and proactive work](/solo-developer-year-5/#run-at-50-capacity) at TinyPilot.
 
-Reactive work includes things like answering support tickets. A support request is time-sensitive but it's low-impact as it only helps one user who sent the email. A proactive task would be fixing the product or improving documentation so that users don't need to file a support ticket to solve their problem.
+Answering a support ticket is a good example of reactive work. It's time-sensitive, but it's low-impact as it only helps one user who sent the email. A proactive task would be fixing the product or improving documentation so that users don't need to file a support ticket to solve their problem.
 
-I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work. Before we publish the article, I need to review it. So now I have a reactive task, and it's time-sensitive because I want to review the work while it's still fresh in the author's mind.
+I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work. Before we publish the article, I need to review it, which is a reactive task for me. Reviewing is usually time-sensitive because I want to provide feedback on the work while it's still fresh in the author's mind.
 
-It's harder for me to to give feedback about writing than to write content myself. When I'm writing, I can go by intuition, but if I see a subtle problem in someone else's writing, it's usually challenging to identify and articulate what the problem is.
+Giving writing feedback is hard! It's harder for me to give notes on writing than it is for me to write my own content. When I see a subtle problem in someone else's writing, I have a hard time identifying and articulating the problem.
 
-In the past few months, I'm increasingly the bottleneck on proactive tasks. I keep asking whether I should get out of the way and let my team write the way they write, but I keep deciding on "no." I value documentation highly, and I'd like to preserve consistency in TinyPilot's documentation.
+In the past few months, I'm increasingly the bottleneck on the team's proactive tasks. I keep asking myself whether I should get out of the way and let my team write the way they write, but I keep deciding on "no." I place a premium on our documentation, and it's important that we keep it consistent.
 
-We went through a similar process with the dev team. In the beginning, I was reviewing every code change. After several months, we switched to peer reviews, so the dev team can review code changes without me.
+We went through a similar process with the dev team. In the beginning, I was reviewing every code change. About five months in, we switched to [peer reviews](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests) for code changes, and now I'm out of the critical path on most code changes.
 
-I think this is the right path. As I give feedback on things like writing, the support engineers continue to learn the TinyPilot style of writing documentation.
+I'm hopeful that we'll go through a similar progression with tasks like writing documentation. There's a steep learning curve to writing in the style I want, but if we keep investing in learning it, my teammates will be able to write in the style I want.
 
-I need to consider my own bandwidth when choosing tasks. I know certain tasks will result in work that's difficult for me to review, so I need to budget for that.
+My takeaway is that I need to consider my bandwidth even when delegating tasks. Certain tasks generate work that's difficult for me to review, so I need to take into account whether I'll have time to give it a quality review when the work is complete.
 
 ## Wrap up
 
@@ -166,8 +168,8 @@ I need to consider my own bandwidth when choosing tasks. I know certain tasks wi
 
 ### Lessons learned
 
-- Consider founder bandwidth when assigning tasks.
-  - Even if the initial work can happen without the founder, consider how much bandwidth I'll need to review the work when it's done.
+- When assigning tasks, consider how much bandwidth I'll need to review.
+  - Even if the initial work can happen without me, some tasks require a lot of effort to review.
 
 ### Goals for next month
 
