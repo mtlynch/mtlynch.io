@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 32"
-date: 2023-03-04T09:33:54-05:00
-description: TODO - One-line summary
+date: 2023-03-08T00:00:00-05:00
+description: My longest vacation from TinyPilot
 ---
 
 {{<notice type="info">}}
@@ -23,22 +23,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Get back to our normal level of ready-to-ship TinyPilot devices.
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We still don't have as comfortable an inventory buffer as we'd like.
+- **Grade**: C
 
-TODO
+We're still behind on inventory, as there were a number of surprises that affected the fulfillment team this month. I've bumped prices and turned off ads until we get back on our feet.
 
 ### Start the process of transitioning to a new 3PL vendor.
 
 - **Result**: We've signed with a new 3PL vendor and are preparing our first shipment to them.
 - **Grade**: A
 
-TODO
+I'm hopeful about this new 3PL. Once we hand over fulfillment to an external vendor, it should relieve pressure on the team and give us breathing room to invest in other areas that allow us to scale up faster.
 
 ### Begin cross-team collaboration between the developers and support engineers.
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: TinyPilot its first dev and support engineering crossover meeting.
+- **Grade**: A
 
 TODO
 
@@ -76,31 +76,39 @@ Before answering, I tried to recall any recent interactions with customers that 
 
 That didn't sound good. I got in the car to follow him to the TinyPilot office, mentally calculating whether the company could survive if 100% of our inventory was soaked in water. Even if we got an insurance payout, we'd be dead in the water for months before we could replace some of the electronics.
 
-When I arrived on our floor, I saw that the sprinklers had gone off in the conference room adjacent to TinyPilot. I unlocked the TinyPilot office and breathed a sigh of relief. No water had gotten into our suit at all.
+When I arrived on our floor, I saw that the sprinklers had gone off in the conference room adjacent to TinyPilot. I unlocked the TinyPilot office and breathed a sigh of relief. No water had gotten into our suite at all.
+
+{{<img src="office-damage.webp" max-width="450px" caption="A pipe exploded in the office adjacent to TinyPilot's destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
 
 I notified the team that we wouldn't be able to use the office since they had to get approval from the fire department. On Monday, I called the landlord, and he said we could resume our normal use of the office.
 
 I thought that was the end of it, but a few days later, in my 1:1 meeting with Eric on the fulfillment team, he asked if we were moving offices. "No, why?" I asked. "Oh, the handyman said offhandedly that we might have to move."
 
-Uh oh. I called the landlord to find out what was going on. My landlord told me nonchalantly that yes, we might have to move to a new office by Tuesday. And this was Friday. Because of water damage, they might have to tear down one of our walls and replace it. But not to worry, he had a spare office we could use, though it was 40% smaller than the office we currently had filled to about 80% capacity. I asked how long we'd be in the smaller office, and he didn't know.
+Uh oh. I called the landlord to find out what was going on. He explained &mdash; very nonchalantly, mind you &mdash; that yes, we might have to move to a new office by Tuesday. And this was Friday.
 
-For the next few days, the landlord was fairly blase about whether we'd have to completely relocate with a day's notice. But ultimately, the builders told him that the wall could stay up, so we wouldn't need to move.
+Because of water damage, the builders might have to tear down one of our walls and replace it. But not to worry, he had a spare office we could use. The new office was 40% smaller than our current office, and our current office was at about 80% capacity. I asked how long we'd be in the smaller office, and he didn't know.
 
-Overall, we only lost the one day of work, but the uncertainty was stressful, especially given that I was about to be out of the country for two weeks.
+For the next few days, the landlord was fairly blase about whether we'd have to completely relocate on a couple days' notice. And that was tricky because I was about to go to Europe for two weeks, so I wouldn't be available to set up the IT infrastructure in a new office.
 
-It was also a strong motivation to migrate to our 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running is someone else's problem.
+Ultimately, the builders told him that the wall could stay up, so we wouldn't need to move. We only lost the one day of work, but the uncertainty was stressful.
+
+It was also a strong motivation to migrate to our 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running would become someone else's problem.
 
 ## My longest TinyPilot vacation
 
-In February, I took my longest vacation since starting TinyPilot. It was one week of being completely on vacation, as in not checking emails. And then another week of checking email infrequently due to travel.
+In February, I took my longest vacation since starting TinyPilot, which was either one or two weeks depending on how you measure it.
 
-I attended a wedding in Tubingen, Germany for a week. Since there are a lot of TinyPilot-related people in Europe, I stayed for another week for what I called "my TinyPilot tour of Europe." It consisted of:
+The trip began with a wedding I attended in Tübingen, Germany. During this time, I didn't check work emails at all.
 
-- Two nights in Karlsruhe, Germany to visit punkt.de, TinyPilot's European distributor
+{{<img src="tubingen.webp" max-width="450px" caption="Attending a wedding at town hall in Tubingen, Germany" alt="Photo of me in a Germany town square">}}
+
+Many of the people I work with for TinyPilot live in Europe, so I stayed for another week for what I called "my TinyPilot tour of Europe." It consisted of:
+
+- Two nights in Karlsruhe, Germany to visit [punkt.de](https://kvm-ip.de), TinyPilot's European distributor
 - Two nights in Berlin, Germany to visit one of TinyPilot's developers
 - Two nights in London, England to visit both of TinyPilot's support engineers
 
-The trip went well, but it was certainly a test for how TinyPilot functions without me. My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) has been three days, and this was five. And then another week of infrequent Internet access working on my laptop.
+The trip went well, but it was certainly a test for how TinyPilot functions without me. My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) has been five days, and this was 11. And I was following it up with another week on the road with inconsistent Internet access.
 
 One of the support engineers had planned vacation during two days of my vacation, leaving only one person handling technical support. And he got sick during those two days, so
 
@@ -110,25 +118,23 @@ It was tricky because we still haven't quite gotten our bearings since the trans
 
 The move also complicated things. At the time I was preparing to leave, my landlord still didn't have an answer as to whether we'd have to move. And if we did have to move, that would be a big problem because the fulfillment staff might not be able to reconnect our routers, printers, and workstations in the new office, which would block them from fulfilling orders.
 
-## How do I support proactive work without getting buried in reactive work?
+## Proactive work from the team generates reactive work for the founder
 
-A topic I keep coming back to the past few months is the balance between proactive and reactive work at TinyPilot. Ideally, I'd like to automate or outsource all of the routine tasks at TinyPilot. In practice, that's not possible, as certain jobs are difficult to outsource, and most of our workflows change as the company evolves.
+Over the last few months, I've been thinking a lot about the balance between reactive work and proactive work at TinyPilot. Reactive work includes things like answering support tickets. A support request is time-sensitive but it's low-impact as it only affects the one user with the issue. A proactive task is fixing the product or writing better public documentation so that the user doesn't need to file a support ticket to solve their problem.
 
-Instead, what I aim for is a balance where everyone on the TinyPilot team is doing about 50% proactive work and 50% reactive work. The reactive tasks are things like answering support tickets or building devices, and the proactive tasks are investing in things that reduce our load, like improving documentation or finding managed services to take over our work.
+I didn't realize until recently that proactive work that TinyPilot employees do usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work. It will reduce our support burden because users can find that article instead of contacting us. Before we publish the article, I need to review it. So now I have a reactive, time-sensitive task because I want to review the work while it's still fresh in the author's mind.
 
-Everyone on the team is interested in taking on proactive work, but the problem is that I frequently become the bottleneck. For example, at a recent meeting with the support engineering team, I asked whether we could create more feedback cycles in our support. Currently, we document how to solve common support problems, but we don't track how often each type of request comes up or how frequently a particular resolution fixes the issue. If we tracked problem frequency, it would help us prioritize changes to the product or improvements to public documentation. If we tracked which resolution usually fixes it, it would inform which troubleshooting steps we recommend first.
+But it's difficult to review and give thoughtful feedback about writing because if something feels wrong, I can't just fix it. I have to break down my thought process to articulate my feeling to the author so that they understand why I'm requesting the change.
 
-The support engineers had good ideas for tracking these. One idea was to create a "problem bank" that detailed common problems, their symptoms, and possible resolutions. As we encountered issues, we could track frequencies in the problem bank. The other idea was to create formal decision trees that we could use to troubleshoot issues, and we could update the decision trees over time based on frequencies in the problem bank.
+In the past few months, I'm increasingly the bottleneck on proactive tasks.
 
-My normal next steps in a situation like that would be to write out workflows around these two ideas. But I knew if it was on me, it could be months before I'd have a few hours to invest in thinking it through. Instead, I wrote a meta document explaining how I define TinyPilot workflows. I shared that with the support engineers and assigned each of them to flesh out workflows for the ideas they'd proposed.
+I'm debating whether I should get out of the way and just, but I keep deciding against it. I think writing documentation and designing workflows is something I do well, and I'd like to ensure my team is doing it consistently before I take myself out of the critical path.
 
-This was better than me doing it myself, and it allowed the support engineers to take on proactive work, but as soon as they had drafts ready, it turns into reactive work for me, because I need to review their proposals. And this is particularly difficult reactive work because defining workflows is hard. And it's somewhat time-sensitive because I know if you put a lot of work into a proposal, but then you have to wait weeks to hear feedback, you kind of forget the mindset of it, and it really drags. So, I struggle to find time to give feedback.
+We went through a similar process with the dev team. In the beginning, I was reviewing every code change. After several months, we switched to peer reviews, so the dev team can review code changes without me.
 
-Part of me felt like I should just get out of the way and let the support engineers design their own workflows and adjust them as needed. And I considered doing it, but the first draft I read called for overhauling workflows outside the scope of the new idea, and it specified things that I felt like wouldn't happen in practice, so we'd end up with documentation that says one thing, but we actually do another in practice. And the more documentation you have like that, the less seriously people take any of the documentation.
+I think this is the right path. As I give feedback on things like writing, the support engineers continue to learn the TinyPilot style of writing documentation.
 
-The counter-example is the dev team, which is easier for a few reasons. First, I have much more experience as a developer, so I defined most of our critical workflows early. And the dev team has been around for two years, whereas the support engineering team formed six months ago.
-
-It might simply be a matter of time. The dev team can operate mostly without me, even when their work involves large projects. The dev team has existed for two years, whereas the support engineering team has only existed for six months, so I think a large part of it is just giving people time to learn to operate more independently. I think as they get more experience, we'll converge on similar practices and shared styles of developing new workflows.
+I need to consider my own bandwidth when choosing tasks. I know certain tasks will result in work that's difficult for me to review, so I need to budget for that.
 
 ## Wrap up
 
@@ -136,11 +142,12 @@ It might simply be a matter of time. The dev team can operate mostly without me,
 
 - Took a two-week personal/work trip.
 - Signed a contract with our new 3PL vendor.
-- Shipped TinyPilot Pro 2.5.3, which adds audio streaming.
+- Shipped [TinyPilot Pro 2.5.3](https://tinypilotkvm.com/pro/changes#253), which adds audio streaming.
 
 ### Lessons learned
 
--
+- Consider founder bandwidth when assigning
+  - Even if the initial work can happen without the founder, make sure you're scheduling the work for a time when the founder will
 
 ### Goals for next month
 
@@ -152,8 +159,10 @@ It might simply be a matter of time. The dev team can operate mostly without me,
 
 {{<notice type="info">}}
 
-I'm trying a new idea for a few months where I'm announcing ways readers can help me. If you're a fan of this blog and you think you might be able to help with one of these.
+I'm trying a new idea for a few months where I'm announcing ways readers can help me. If you're a fan of this blog and you think you might be able to help with one of these, [email me](/about/).
 
 {{</notice>}}
 
-I'd like to speak with someone who has experience manufacturing electronics. As I start the process of shifting assembly to China, I'm interested in what pitfalls to avoid.
+I'm interested in [scaling TinyPilot's manufacturing](/retrospectives/2022/10/#what-happens-in-the-tinypilot-office) and finding that there's a lot I don't know about shifting manufacturing and assembly to China.
+
+If you know someone with experience manufacturing electronics at the scale of 500 to 5,000 units per month, I'd love to speak with them. I'm open to taking on a co-founder, hiring a consultant, or just having a casual chat with someone who wants to share their expertise.
