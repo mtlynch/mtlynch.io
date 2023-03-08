@@ -1,7 +1,9 @@
 ---
 title: "TinyPilot: Month 32"
-date: 2023-03-08T00:00:00-05:00
+date: 2023-03-09T00:00:00-05:00
 description: My longest vacation from TinyPilot
+images:
+  - /retrospectives/2023/03/og-cover.png
 ---
 
 {{<notice type="info">}}
@@ -17,7 +19,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 - I left the country for two weeks, and TinyPilot ran smoothly without me.
 - A pipe burst in the TinyPilot office, leading to near-disaster.
-- I'm continuing to try to balance the team's reactive and proactive work.
+- I'm searching for the right balance between reactive and proactive work.
 
 ## Goal Grades
 
@@ -28,7 +30,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: We still don't have as comfortable an inventory buffer as we'd like.
 - **Grade**: C
 
-We're still behind on inventory, as there were a number of surprises that affected the fulfillment team this month. I've bumped prices and turned off ads until we get back on our feet.
+We're still behind on inventory, as there were a number of surprises that affected the fulfillment team. I've increased prices and slashed ad spending until we get back on our feet.
 
 ### Start the process of transitioning to a new 3PL vendor.
 
@@ -39,10 +41,10 @@ I'm hopeful about this new 3PL. Once we hand over fulfillment to an external ven
 
 ### Begin cross-team collaboration between the developers and support engineers.
 
-- **Result**: TinyPilot its first dev and support engineering crossover meeting.
+- **Result**: TinyPilot had its first dev and support engineering crossover meeting.
 - **Grade**: A
 
-There's work that the developers and support engineers can collaborate on, but I felt like it would go better if they met face-to-face first. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
+There's work that the developers and support engineers can collaborate on, but I was delaying it until the two teams could meet face-to-face first. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -60,47 +62,49 @@ There's work that the developers and support engineers can collaborate on, but I
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team simply doesn't have enough hours to fulfill more orders on top of their other responsibilities. is near capacity, so I've shut down sales on Amazon and advertising, but sales are continuing to grow. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added to the product in the last couple of months.
+We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team simply doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added to the product in the last couple of months.
 
-We're also on our seventh consecutive month of positive three-month average trailing. So even with us limiting our sales, we're still growing. I expect we could hit $90k in monthly revenue once we can shift fulfillment to a 3PL vendor, as that will eliminate fulfillment hours as one of our sales bottlenecks.
+I expect we could reach $90k in monthly revenue once we can shift fulfillment to a 3PL vendor. We're currently limited by fulfillment capacity, but once we transition to a 3PL, that bottleneck disappears.
+
+We're in our seventh consecutive month of positive three-month average trailing profit. At this rate, we'll comfortably exceed [my 2023 goal for $100k in profit](/solo-developer-year-5/#earn-100k-in-profit).
 
 ## "Are you the TinyPilot guy?"
 
-On a Saturday afternoon last month, I received a knock on my door at home. I answered it in my pajamas to find a guy in his mid-forties. "Are you the TinyPilot guy?" he asked.
+On a Saturday afternoon last month, I received a knock on my door at home. I answered it in my pajamas to find a guy in his mid-forties on my doorstep. "Are you the TinyPilot guy?" he asked.
 
-Uh oh. Who's showing up at my doorstep asking about TinyPilot?
+Uh oh. Who's knocking on my door at home to ask about TinyPilot?
 
 Before answering, I tried to recall any recent interactions with customers that might have led them to show up to my house and beat me up. I didn't remember anything.
 
-"Yes..." I said, cautiously. He explained that he was the handyman at TinyPilot's office building, and he didn't have my phone number but he was able to find my home address.
+"Yes..." I said, cautiously. He explained that he was the handyman at TinyPilot's office building. He didn't have my phone number but he was able to find my home address.
 
 "A pipe burst at the office, and we can't get into your suite. Can you come down?"
 
-That didn't sound good. I got in the car to follow him to the TinyPilot office, mentally calculating whether the company could survive if 100% of our inventory was soaked in water. Even if we got an insurance payout, we'd be dead in the water for months before we could replace some of the electronics.
+That didn't sound good. I got in the car to follow him to the TinyPilot office, mentally calculating whether the company could survive if 100% of our inventory was soaked in water. Even if we got an insurance payout, we'd be out of commission for months before we could replace some of the electronics.
 
 When I arrived on our floor, I saw that the sprinklers had gone off in the conference room adjacent to TinyPilot. I unlocked the TinyPilot office and breathed a sigh of relief. No water had gotten into our suite at all.
 
 {{<img src="office-damage.webp" max-width="450px" caption="A pipe exploded in the office adjacent to TinyPilot's destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
 
-I notified the team that we wouldn't be able to use the office since they had to get approval from the fire department. On Monday, I called the landlord, and he said we could resume our normal use of the office.
+They said we couldn't enter our suite for a few days until the fire department signed off on it, as the building no longer had sprinklers. On Monday, I called the landlord, and he said we could resume our normal use of the office.
 
-I thought that was the end of it, but a few days later, in my 1:1 meeting with Eric on the fulfillment team, he asked if we were moving offices. "No, why?" I asked. "Oh, the handyman said offhandedly that we might have to move."
+I thought that was the end of it, but a few days later, a member of the fulfillment team asked me if we were moving offices. "No, why?" I asked. "Oh, the handyman said offhandedly that we might have to move."
 
-Uh oh. I called the landlord to find out what was going on. He explained &mdash; very nonchalantly, mind you &mdash; that yes, we might have to move to a new office by Tuesday. And this was Friday.
+Uh oh. I called the landlord to find out what was going on. He explained &mdash; very nonchalantly, mind you &mdash; that yes, we might have to move to a new office before Tuesday. And this was Friday.
 
-Because of water damage, the builders might have to tear down one of our walls and replace it. But not to worry, he had a spare office we could use. The new office was 40% smaller than our current office, and our current office was at about 80% capacity. I asked how long we'd be in the smaller office, and he didn't know.
+Because of water damage, the builders might have to tear down one of our walls and replace it. But not to worry, he had a spare office we could use. The new office was 40% smaller than our current office, and our current office was at about 80% capacity. I asked how long we'd be in the smaller office. He had no idea.
 
-For the next few days, the landlord was fairly blase about whether we'd have to completely relocate on a couple days' notice. And that was tricky because I was about to go to Europe for two weeks, so I wouldn't be available to set up the IT infrastructure in a new office.
+For the next few days, the landlord was fairly blasé about whether we'd have to completely relocate on a couple days' notice. And that was tricky because I was about to [go to Europe for two weeks](#my-longest-tinypilot-vacation), so I wouldn't be available to set up the IT infrastructure in a new office.
 
 I called every day the week before I left to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part of the move that required me.
 
 A week later we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work and I lost another in planning, but the uncertainty was stressful.
 
-It was also a strong motivation to migrate to our 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running would become someone else's problem.
+The situation was also a strong motivation to migrate fulfillment to our new 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running would become someone else's problem.
 
 ## My longest TinyPilot vacation
 
-In February, I took my longest vacation since starting TinyPilot, which was either one or two weeks depending on how you measure it.
+In February, I took my longest vacation since starting TinyPilot. I was traveling for just over two weeks.
 
 The trip began with a wedding I attended in Tübingen, Germany. During this time, I didn't check work emails at all.
 
@@ -112,9 +116,9 @@ Many of the people I work with for TinyPilot live in Europe, so I stayed for ano
 - Two nights in Berlin, Germany to visit one of TinyPilot's developers
 - Two nights in London, England to visit both of TinyPilot's support engineers
 
-The trip was a test for how TinyPilot functions without me, and it went _mostly_ well. My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) has been five days, and this was 11. And I was following it up with another week on the road with inconsistent Internet access.
+The trip was a test for how TinyPilot functions without me, and it went _mostly_ well. Orders went out on time and users received normal support.
 
-Overall, TinyPilot functioned fine without me. Orders went out on time and users received timely support.
+My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) was previously five days, and this was 11. And I was following it up with another week on the road with inconsistent Internet access.
 
 ### For the local staff
 
@@ -132,7 +136,7 @@ The support engineering team did experience an "outage" in that there was a wind
 
 I don't think there's much I can do to prevent outages like this with a team of our size. It's rare, but it's possible for three people to independently need time off at the same time.
 
-The team felt bad about the outage, so the most actionable lesson was clarifying expectations to the team that outages like this are my problem and not theirs. I don't want to leave customers without technical support, but it's more important to me to respect team members' time off so they don't feel pressured to work during vacation or sick time.
+The team felt bad about the outage, so the most actionable lesson was clarifying expectations that outages like this are my problem and not theirs. I don't want to leave customers without technical support, but it's more important to me to respect team members' time off so they don't feel pressured to work during vacation time or when they're ill.
 
 ### For the dev team
 
