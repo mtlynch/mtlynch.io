@@ -102,13 +102,13 @@ For the next few days, the landlord was fairly blasé about whether we'd have to
 
 I called every day leading up to my trip to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part of the move that required me.
 
-A week later, we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work and I lost another two in planning, but the uncertainty was stressful.
+A week later, we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work, and I lost another two in contingency planning, but the uncertainty was stressful.
 
 The situation was also a strong motivation to migrate fulfillment to our new 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running would become someone else's problem.
 
 ## My longest TinyPilot vacation
 
-In February, I took my longest vacation since starting TinyPilot. I was traveling for just over two weeks.
+In February, I took my longest vacation since starting TinyPilot. I was traveling in Europe for just over two weeks.
 
 The trip began with a wedding I attended in Tübingen, Germany. During this time, I didn't check work emails at all.
 
@@ -122,11 +122,11 @@ Many of the people I work with for TinyPilot live in Europe, so I stayed for ano
 
 The trip was a test for how TinyPilot functions without me, and it went _mostly_ well. Orders went out on time and users received normal support.
 
-My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) was previously five days, and this was 11. And I was following it up with another week on the road with inconsistent Internet access.
+My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) was previously five days, and this was 11, followed by another week on the road with inconsistent Internet access.
 
 ### For the local staff
 
-The fulfillment team stayed on top of orders, but they were working at nearly their capacity. We're still catching up on the [switch to a new product](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade-in old devices for a discount, which adds load to the fulfillment team. [Our office situation](#are-you-the-tinypilot-guy) certainly didn't help matters.
+The fulfillment team stayed on top of orders, but they were working nearly at capacity. We're still catching up on the [switch to the Voyager 2a](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade-in old devices for a discount, which adds load to the fulfillment team. [Our office situation](#are-you-the-tinypilot-guy) certainly didn't help matters.
 
 So, fulfillment was fine, but we had less breathng room than I'd like. If someone had gotten sick for a few days, we'd have struggled.
 
@@ -136,7 +136,7 @@ Again, this experience was strong motivation to migrate fulfillment to a 3PL. A 
 
 TinyPilot's technical support team functioned well without me. In normal operation, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users still received high-quality support.
 
-The support engineering team did experience an "outage" in that there was a window when nobody was available to answer technical questions. One of the support engineers had planned time off during two days of my vacation, and then the last engineer got sick in that same window.
+The support engineering team did experience an "outage" in that there was a period when nobody was available to answer technical questions. One of the support engineers had planned time off during two days of my vacation, and then the last engineer got sick in that same window.
 
 I don't think there's much I can do to prevent outages like this with a team of our size. It's rare, but it's possible for three people to independently need time off at the same time.
 
@@ -154,15 +154,15 @@ Over the last few months, I've been thinking a lot about the balance between [re
 
 Answering a support ticket is a good example of reactive work. It's time-sensitive, but it's low-impact as it only helps one user who sent the email. A proactive task would be fixing the product or improving documentation so that users don't need to file a support ticket to solve their problem.
 
-I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work. Before we publish the article, I need to review it, which is a reactive task for me. Reviewing is usually time-sensitive because I want to provide feedback on the work while it's still fresh in the author's mind.
+I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work, but I need to review it, which is a reactive task for me. Reviewing is time-sensitive because I want to provide feedback on the work while it's still fresh in the author's mind.
 
-Giving writing feedback is hard! It's harder for me to give notes on writing than it is for me to write my own content. When I see a subtle problem in someone else's writing, I have a hard time identifying and articulating the problem.
+It's more challenging for me to give notes on writing than it is to write my own content. When I see a subtle problem in someone else's writing, I have a hard time identifying and articulating what bothers me about it.
 
 In the past few months, I'm increasingly the bottleneck on the team's proactive tasks. I keep asking myself whether I should get out of the way and let my team write the way they write, but I keep deciding on "no." I place a premium on our documentation, and it's important that we keep it consistent.
 
-We went through a similar process with the dev team. In the beginning, I was reviewing every code change. About five months in, we switched to [peer reviews](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests) for code changes, and now I'm out of the critical path on most code changes.
+We went through a similar process with the dev team. In the beginning, I was reviewing every code change. About five months in, we switched to [peer reviews](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests) for code changes, and now I'm out of the critical path on most software development work.
 
-I'm hopeful that we'll go through a similar progression with tasks like writing documentation. There's a steep learning curve to writing in the style I want, but if we keep investing in learning it, my teammates will be able to write in the style I want.
+I'm hopeful that we'll go through a similar progression on the support engineering team. There's a steep learning curve to writing in the style I want, but if we keep investing in learning it, my teammates will be able to write in the style I want and peer review internally.
 
 My takeaway is that I need to consider my bandwidth even when delegating tasks. Certain tasks generate work that's difficult for me to review, so I need to take into account whether I'll have time to give it a quality review when the work is complete.
 
