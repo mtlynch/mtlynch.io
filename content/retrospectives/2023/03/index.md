@@ -62,7 +62,7 @@ There's work that the developers and support engineers can collaborate on, but I
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added to the product in the last couple of months.
+We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added in the last couple of months.
 
 I expect we could reach $90k in monthly revenue once we shift fulfillment to a 3PL vendor. We're currently limited by fulfillment capacity, but once we transition to a 3PL, that bottleneck disappears.
 
@@ -70,13 +70,13 @@ We're in our seventh consecutive month of positive profit (well, the trailing th
 
 ## "Are you the TinyPilot guy?"
 
-On a Saturday afternoon last month, I received a knock on my door at home. I answered it in my pajamas to find a guy in his mid-forties on my doorstep. "Are you the TinyPilot guy?" he asked.
+On a Saturday afternoon last month, I was in my home office when I heard a knock on my front door. I answered it in my pajamas to find a guy in his mid-forties on my doorstep. "Are you the TinyPilot guy?" he asked.
 
-Uh oh. Who's knocking on my door at home to ask about TinyPilot?
+Uh oh. Who's showing up unannounced at my house to ask about TinyPilot?
 
-I tried to recall any recent customer interactions that might have led someone to show up to my house and beat me up. I didn't remember anything.
+I tried to recall any recent customer interactions that might have led someone to track me down and beat me up. I didn't remember anything.
 
-"Yes..." I said, cautiously. He explained that he was the handyman at TinyPilot's office building. He didn't have my phone number, but he was able to find my home address.
+"Yes..." I said, cautiously. The mysterious visitor explained that he was the handyman at TinyPilot's office building. He didn't have my phone number, but he was able to find my home address.
 
 "A pipe burst at the office, and we can't get into your suite. Can you come down?"
 
@@ -90,7 +90,7 @@ When I arrived on our floor, I saw that the sprinklers had gone off in the confe
 
 They said we couldn't enter our suite for a few days until the fire department signed off on it, as the building no longer had sprinklers. On Monday, I called the landlord, and he said we could resume our normal use of the office.
 
-I thought that was the end of it, but a few days later, a member of the fulfillment team asked me if we were moving offices. "No... why?" I asked. "Oh, the handyman said in passing that we might have to move."
+I thought that was the end of it, but a few days later, a member of the fulfillment team asked me if we were moving. "No... why?" I asked. "Oh, the handyman said in passing that we might have to move."
 
 Uh oh.
 
@@ -100,7 +100,7 @@ Because of water damage, my landlord explained, the builders might have to repla
 
 For the next few days, the landlord was fairly blasé about whether we'd have to completely relocate on a couple days' notice. And that was tricky because I was about to [go to Europe for two weeks](#my-longest-tinypilot-vacation), so I wouldn't be available to set up the IT infrastructure in a new office.
 
-I called every day leading up to my trip to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part of the move that required me.
+I called every day leading up to my trip to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part that would be risky without me there.
 
 A week later, we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work, and I lost another two in contingency planning, but the uncertainty was stressful.
 
@@ -114,7 +114,7 @@ The trip began with a wedding I attended in Tübingen, Germany. During this time
 
 {{<img src="tubingen.webp" max-width="450px" caption="Attending a wedding at town hall in Tubingen, Germany" alt="Photo of me in a Germany town square">}}
 
-Many of the people I work with for TinyPilot live in Europe, so I stayed for another week for what I called "my TinyPilot tour of Europe." It consisted of:
+Many of the people I work with for TinyPilot live in Europe, so I stayed for another week for what I called my "TinyPilot tour of Europe." It consisted of:
 
 - Two nights in Karlsruhe, Germany to visit [punkt.de](https://kvm-ip.de), TinyPilot's European distributor
 - Two nights in Berlin, Germany to visit one of TinyPilot's developers
@@ -130,11 +130,11 @@ The fulfillment team stayed on top of orders, but they were working nearly at ca
 
 So, fulfillment was fine, but we had less breathing room than I'd like. If someone had gotten sick for a few days, we'd have struggled.
 
-Again, this experience was strong motivation to migrate fulfillment to a 3PL. A third-party vendor will have a much larger pool of capacity, so TinyPilot will be more robust against short-term stresses.
+Again, this experience was strong motivation to migrate fulfillment to a 3PL. With a third-party vendor handling fulfillment, there are much fewer time-sensitive tasks we have to handle ourselves, so we'll be more robust against short-term stresses or absences.
 
 ### For the support engineering team
 
-TinyPilot's technical support team functioned well without me. During normal operations, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users still received high-quality support.
+TinyPilot's technical support team functioned well without me. During normal operations, the support engineers have the option to escalate issues to me. Without me available, they handled issues independently, and users still received high-quality support.
 
 The support engineering team did experience an "outage" in that there was a period when nobody was available to answer technical questions. One of the support engineers had planned time off during two days of my vacation, and then the last engineer got sick in that same window.
 
@@ -144,9 +144,9 @@ The team felt bad about the outage, so the most actionable lesson was clarifying
 
 ### For the dev team
 
-The dev team worked smoothly while I was traveling. There were a few minor tasks blocked on a decision from me, but the team knew enough about the roadmap that they could proceed forward without me.
+The dev team worked smoothly while I was traveling. There were a few minor tasks blocked on a decision from me, but the team knew enough about the product roadmap that they could proceed forward without me.
 
-I've been working for the past few years to give the dev team more autonomy and responsibility, so I was happy to see that my absence doesn't slow them down much.
+I've been working for the past few years to give the dev team more autonomy and responsibility, so I was happy to see that my absence didn't slow them down much.
 
 ## Proactive work from the team generates reactive work for the founder
 
@@ -154,15 +154,15 @@ Over the last few months, I've been thinking a lot about the balance between [re
 
 Answering a support ticket is a good example of reactive work. It's time-sensitive, but it's low-impact as it only helps one user who sent the email. A proactive task would be fixing the product or improving documentation so that users don't need to file a support ticket to solve their problem.
 
-I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work, but I need to review it, which is a reactive task for me. Reviewing is time-sensitive because I want to provide feedback on the work while it's still fresh in the author's mind.
+I didn't realize until recently that employees' proactive work usually results in reactive work for me. For example, when a support engineer writes a new tutorial, that's useful proactive work, but I need to review it, which is a reactive task for me.
 
-It's more challenging for me to give notes on writing than it is to write my own content. When I see a subtle problem in someone else's writing, I have a hard time identifying and articulating what bothers me about it.
+Reviewing documentation is time-sensitive because I want to provide feedback on the work while it's still fresh in the author's mind. I also find it more mentally taxing to give notes on writing than to write the same thing myself. When I see a subtle problem in someone else's writing, I have a hard time identifying and articulating the issues I see.
 
-In the past few months, I'm increasingly the bottleneck on the team's proactive tasks. I keep asking myself whether I should get out of the way and let my team write the way they write, but I keep deciding on "no." I place a premium on our documentation, and it's important that we keep it consistent.
+In the past few months, I've increasingly become the bottleneck on the team's proactive tasks. I keep asking myself whether I should get out of the way and let the team write the way they write, but I keep deciding on "no." I place a premium on our documentation, and it's important that we keep it consistent.
 
 We went through a similar process with the dev team. In the beginning, I was reviewing every code change. About five months in, we switched to [peer reviews](/retrospectives/2021/08/#allow-developers-to-review-each-others-pull-requests) for code changes, and now I'm out of the critical path on most software development work.
 
-I'm hopeful that we'll go through a similar progression on the support engineering team. There's a steep learning curve to writing in the style I want, but if we keep investing in learning it, my teammates will be able to write in the style I want and peer review internally.
+I'm hopeful that we'll go through a similar progression on the support engineering team. There's a steep learning curve to writing in the style I want, but if we keep investing in it, my teammates will learn the style I want and peer review each other's writing internally.
 
 My takeaway is that I need to consider my bandwidth even when delegating tasks. Certain tasks generate work that's difficult for me to review, so I need to take into account whether I'll have time to give it a quality review when the work is complete.
 
@@ -189,10 +189,10 @@ My takeaway is that I need to consider my bandwidth even when delegating tasks. 
 
 {{<notice type="info">}}
 
-I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and you think you might be able to help with one of these, [email me](/about/).
+I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
 
 {{</notice>}}
 
-I'm interested in [scaling TinyPilot's manufacturing](/retrospectives/2022/10/#what-happens-in-the-tinypilot-office) and finding that there's a lot I don't know about shifting manufacturing and assembly to China.
+As I explore the process of [shifting manufacturing to China](/retrospectives/2022/10/#what-happens-in-the-tinypilot-office), I'm discovering that it's a larger undertaking than I expected, involving many areas where I have no experience.
 
 If you know someone with experience manufacturing electronics at the scale of 500 to 5,000 units per month, I'd love to speak with them. I'm open to taking on a co-founder, hiring a consultant, or just having a casual chat with someone who wants to share their expertise.
