@@ -27,7 +27,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Get back to our normal level of ready-to-ship TinyPilot devices.
 
-- **Result**: We still don't have as comfortable an inventory buffer as we'd like.
+- **Result**: We still don't have as much inventory as I'd like.
 - **Grade**: C
 
 We're still behind on inventory, as there were a number of surprises that affected the fulfillment team. I've increased prices and slashed ad spending until we get back on our feet.
@@ -41,10 +41,10 @@ I'm hopeful about this new 3PL. Once we hand over fulfillment to an external ven
 
 ### Begin cross-team collaboration between the developers and support engineers.
 
-- **Result**: TinyPilot had its first dev and support engineering crossover meeting.
+- **Result**: TinyPilot had its first dev-support engineering crossover meeting.
 - **Grade**: A
 
-There's work that the developers and support engineers can collaborate on, but I was delaying it until the two teams could meet face-to-face first. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
+There's work that the developers and support engineers can collaborate on, but I was deferring it until the two teams could meet face-to-face. We had our first dev and support engineering crossover meeting, and now we're ready for the two teams to begin working together directly.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -62,11 +62,11 @@ There's work that the developers and support engineers can collaborate on, but I
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team simply doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added to the product in the last couple of months.
+We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added to the product in the last couple of months.
 
-I expect we could reach $90k in monthly revenue once we can shift fulfillment to a 3PL vendor. We're currently limited by fulfillment capacity, but once we transition to a 3PL, that bottleneck disappears.
+I expect we could reach $90k in monthly revenue once we shift fulfillment to a 3PL vendor. We're currently limited by fulfillment capacity, but once we transition to a 3PL, that bottleneck disappears.
 
-We're in our seventh consecutive month of positive three-month average trailing profit. At this rate, we'll comfortably exceed [my 2023 goal for $100k in profit](/solo-developer-year-5/#earn-100k-in-profit).
+We're in our seventh consecutive month of positive profit (well, the trailing three-month average, since our profits are bursty). At this rate, we'll comfortably exceed [my 2023 goal for $100k in profit](/solo-developer-year-5/#earn-100k-in-profit).
 
 ## "Are you the TinyPilot guy?"
 
@@ -74,13 +74,15 @@ On a Saturday afternoon last month, I received a knock on my door at home. I ans
 
 Uh oh. Who's knocking on my door at home to ask about TinyPilot?
 
-Before answering, I tried to recall any recent interactions with customers that might have led them to show up to my house and beat me up. I didn't remember anything.
+I tried to recall any recent customer interactions that might have led someone to show up to my house and beat me up. I didn't remember anything.
 
 "Yes..." I said, cautiously. He explained that he was the handyman at TinyPilot's office building. He didn't have my phone number but he was able to find my home address.
 
 "A pipe burst at the office, and we can't get into your suite. Can you come down?"
 
-That didn't sound good. I got in the car to follow him to the TinyPilot office, mentally calculating whether the company could survive if 100% of our inventory was soaked in water. Even if we got an insurance payout, we'd be out of commission for months before we could replace some of the electronics.
+That didn't sound good.
+
+I got in the car to follow him to the TinyPilot office, mentally calculating whether the company could survive if 100% of our inventory was soaked in water. Even if we got an insurance payout, the turnaround time on manufacturing would leave us out of commission for months.
 
 When I arrived on our floor, I saw that the sprinklers had gone off in the conference room adjacent to TinyPilot. I unlocked the TinyPilot office and breathed a sigh of relief. No water had gotten into our suite at all.
 
@@ -88,17 +90,19 @@ When I arrived on our floor, I saw that the sprinklers had gone off in the confe
 
 They said we couldn't enter our suite for a few days until the fire department signed off on it, as the building no longer had sprinklers. On Monday, I called the landlord, and he said we could resume our normal use of the office.
 
-I thought that was the end of it, but a few days later, a member of the fulfillment team asked me if we were moving offices. "No, why?" I asked. "Oh, the handyman said offhandedly that we might have to move."
+I thought that was the end of it, but a few days later, a member of the fulfillment team asked me if we were moving offices. "No... why?" I asked. "Oh, the handyman said in passing that we might have to move."
 
-Uh oh. I called the landlord to find out what was going on. He explained &mdash; very nonchalantly, mind you &mdash; that yes, we might have to move to a new office before Tuesday. And this was Friday.
+Uh oh.
 
-Because of water damage, the builders might have to tear down one of our walls and replace it. But not to worry, he had a spare office we could use. The new office was 40% smaller than our current office, and our current office was at about 80% capacity. I asked how long we'd be in the smaller office. He had no idea.
+I called the landlord to find out what was going on. He said &mdash; very nonchalantly, mind you &mdash; that yes, we might have to move into a new office before Tuesday. And this conversation was happening on Friday.
+
+Because of water damage, my landlord explained, the builders might have to replace one of our walls. But not to worry &mdash; he had a spare office we could use. The new office was 40% smaller than our current office, and our current office was at 80% capacity, so that wouldn't be fun. I asked how long we'd be in the smaller office. He had no idea.
 
 For the next few days, the landlord was fairly blasé about whether we'd have to completely relocate on a couple days' notice. And that was tricky because I was about to [go to Europe for two weeks](#my-longest-tinypilot-vacation), so I wouldn't be available to set up the IT infrastructure in a new office.
 
-I called every day the week before I left to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part of the move that required me.
+I called every day leading up to my trip to ask what the plan was with the wall, and my landlord never had an answer for me. I decided to move just the computers, printers, and networking equipment to the spare office because that was the only part of the move that required me.
 
-A week later we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work and I lost another in planning, but the uncertainty was stressful.
+A week later, we got word that our wall could stay up, so we wouldn't need to move. The fulfillment team lost about a day of work and I lost another two in planning, but the uncertainty was stressful.
 
 The situation was also a strong motivation to migrate fulfillment to our new 3PL. I'd love to be out of the position of fulfillment grinding to a halt because something goes wrong at our office. A pipe could still burst at our 3PL, but then moving things around to get back up and running would become someone else's problem.
 
