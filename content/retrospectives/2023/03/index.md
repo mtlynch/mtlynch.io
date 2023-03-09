@@ -18,7 +18,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 ## Highlights
 
 - I left the country for two weeks, and TinyPilot ran smoothly without me.
-- A pipe burst in the TinyPilot office, leading to near-disaster.
+- A pipe burst in the TinyPilot office, leading to a near-disaster.
 - I'm searching for the right balance between reactive and proactive work.
 
 ## Goal Grades
@@ -76,7 +76,7 @@ Uh oh. Who's knocking on my door at home to ask about TinyPilot?
 
 I tried to recall any recent customer interactions that might have led someone to show up to my house and beat me up. I didn't remember anything.
 
-"Yes..." I said, cautiously. He explained that he was the handyman at TinyPilot's office building. He didn't have my phone number but he was able to find my home address.
+"Yes..." I said, cautiously. He explained that he was the handyman at TinyPilot's office building. He didn't have my phone number, but he was able to find my home address.
 
 "A pipe burst at the office, and we can't get into your suite. Can you come down?"
 
@@ -86,7 +86,7 @@ I got in the car to follow him to the TinyPilot office, mentally calculating whe
 
 When I arrived on our floor, I saw that the sprinklers had gone off in the conference room adjacent to TinyPilot. I unlocked the TinyPilot office and breathed a sigh of relief. No water had gotten into our suite at all.
 
-{{<img src="office-damage.webp" max-width="450px" caption="A pipe exploded in the office adjacent to TinyPilot's destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
+{{<img src="office-damage.webp" max-width="450px" caption="A pipe exploded in the office adjacent to TinyPilot's, destroying everything inside." alt="Photo of a room with ceiling, carpets, and furniture all removed">}}
 
 They said we couldn't enter our suite for a few days until the fire department signed off on it, as the building no longer had sprinklers. On Monday, I called the landlord, and he said we could resume our normal use of the office.
 
@@ -120,25 +120,25 @@ Many of the people I work with for TinyPilot live in Europe, so I stayed for ano
 - Two nights in Berlin, Germany to visit one of TinyPilot's developers
 - Two nights in London, England to visit both of TinyPilot's support engineers
 
-The trip was a test for how TinyPilot functions without me, and it went _mostly_ well. Orders went out on time and users received normal support.
+The trip was a test of how TinyPilot functions without me, and it went _mostly_ well. Orders went out on time, and users received normal support.
 
 My longest vacation from TinyPilot (as in not checking TinyPilot emails at all) was previously five days, and this was 11, followed by another week on the road with inconsistent Internet access.
 
 ### For the local staff
 
-The fulfillment team stayed on top of orders, but they were working nearly at capacity. We're still catching up on the [switch to the Voyager 2a](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade-in old devices for a discount, which adds load to the fulfillment team. [Our office situation](#are-you-the-tinypilot-guy) certainly didn't help matters.
+The fulfillment team stayed on top of orders, but they were working nearly at capacity. We're still catching up on the [switch to the Voyager 2a](/retrospectives/2023/02/#getting-metal-cases-in-the-nick-of-time), which takes 30% longer to assemble. For the first time, we're allowing users to trade in old devices for a discount, which adds load to the fulfillment team. [Our office situation](#are-you-the-tinypilot-guy) certainly didn't help matters.
 
-So, fulfillment was fine, but we had less breathng room than I'd like. If someone had gotten sick for a few days, we'd have struggled.
+So, fulfillment was fine, but we had less breathing room than I'd like. If someone had gotten sick for a few days, we'd have struggled.
 
 Again, this experience was strong motivation to migrate fulfillment to a 3PL. A third-party vendor will have a much larger pool of capacity, so TinyPilot will be more robust against short-term stresses.
 
 ### For the support engineering team
 
-TinyPilot's technical support team functioned well without me. In normal operation, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users still received high-quality support.
+TinyPilot's technical support team functioned well without me. During normal operations, the support engineers have the option to escalate issues to me. Without this available, they handled issues independently, and users still received high-quality support.
 
 The support engineering team did experience an "outage" in that there was a period when nobody was available to answer technical questions. One of the support engineers had planned time off during two days of my vacation, and then the last engineer got sick in that same window.
 
-I don't think there's much I can do to prevent outages like this with a team of our size. It's rare, but it's possible for three people to independently need time off at the same time.
+I don't think there's much I can do to prevent outages like this with a team of our size. It's rare, but it's possible for three people to need time off at the same time.
 
 The team felt bad about the outage, so the most actionable lesson was clarifying expectations that outages like this are my problem and not theirs. I don't want to leave customers without technical support, but it's more important to me to respect team members' time off so they don't feel pressured to work during vacation time or when they're ill.
 
@@ -146,7 +146,7 @@ The team felt bad about the outage, so the most actionable lesson was clarifying
 
 The dev team worked smoothly while I was traveling. There were a few minor tasks blocked on a decision from me, but the team knew enough about the roadmap that they could proceed forward without me.
 
-I've been working the past few years to give the dev team more autonomy and responsibility, so I was happy to see that my absence doesn't slow them down much.
+I've been working for the past few years to give the dev team more autonomy and responsibility, so I was happy to see that my absence doesn't slow them down much.
 
 ## Proactive work from the team generates reactive work for the founder
 
@@ -189,7 +189,7 @@ My takeaway is that I need to consider my bandwidth even when delegating tasks. 
 
 {{<notice type="info">}}
 
-I'm trying a new idea for a few months where I'm announcing ways readers can help me. If you're a fan of this blog and you think you might be able to help with one of these, [email me](/about/).
+I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and you think you might be able to help with one of these, [email me](/about/).
 
 {{</notice>}}
 
