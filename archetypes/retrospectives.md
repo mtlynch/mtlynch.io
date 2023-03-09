@@ -72,6 +72,10 @@ TODO
 
 ### Requests for help
 
-*If you're a reader of this blog, here are ways you can help me this month.*
+{{<notice type="info">}}
+
+I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
+
+{{</notice>}}
 
 TODO
