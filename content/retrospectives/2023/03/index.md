@@ -50,17 +50,15 @@ There's work that the developers and support engineers can collaborate on, but I
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | January 2023  | February 2023    | Change                                             |
-| ------------------------ | ------------- | ---------------- | -------------------------------------------------- |
-| Unique Visitors          | 8,092         | 12,141           | <font color="green">+4,049 (+50%)</font>           |
-| Total Pageviews          | 16,665        | 23,117           | <font color="green">+6,452 (+39%)</font>           |
-| Sales Revenue            | $66,420.52    | $72,585.15       | <font color="green">+$6,164.63 (+9%)</font>        |
-| Enterprise Subscriptions | $290.70       | $290.70          | 0                                                  |
-| Royalties                | $5,689.93     | $3,935.73        | <font color="red">-$1,754.20 (-31%)</font>         |
-| Total Revenue            | $72,401.15    | $76,811.58       | <font color="green">+$4,410.43 (+6%)</font>        |
-| **Profit**               | **$8,552.79** | **$26,594.60**\* | **<font color="green">+$18,041.81 (+211%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | January 2023  | February 2023  | Change                                             |
+| ------------------------ | ------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 8,092         | 12,141         | <font color="green">+4,049 (+50%)</font>           |
+| Total Pageviews          | 16,665        | 23,117         | <font color="green">+6,452 (+39%)</font>           |
+| Sales Revenue            | $66,420.52    | $72,585.15     | <font color="green">+$6,164.63 (+9%)</font>        |
+| Enterprise Subscriptions | $290.70       | $290.70        | 0                                                  |
+| Royalties                | $5,689.93     | $3,935.73      | <font color="red">-$1,754.20 (-31%)</font>         |
+| Total Revenue            | $72,401.15    | $76,811.58     | <font color="green">+$4,410.43 (+6%)</font>        |
+| **Profit**               | **$8,552.79** | **$33,537.97** | **<font color="green">+$24,985.18 (+292%)</font>** |
 
 We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added in the last couple of months.
 
