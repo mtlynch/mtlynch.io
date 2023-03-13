@@ -152,6 +152,8 @@ Alpine.js documentation mentions [a CSP-compatible build](https://alpinejs.dev/a
 
 TODO
 
+https://news.ycombinator.com/item?id=32158352
+
 ### [Stimulus](https://stimulus.hotwired.dev)
 
 I got really excited about Stimulus because it initially seemed like exactly what I wanted. Its tagline is "A modest JavaScript framework for the HTML you already have." Great! It doesn't require compilation, and it plays nicely with CSP.
