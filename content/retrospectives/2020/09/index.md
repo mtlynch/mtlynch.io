@@ -145,7 +145,7 @@ static struct hidg_func_descriptor my_hid_data = {
 
 Creating an HID descriptor for keyboards was a walk in the park. Lots of people had implemented fake keyboards in Python, and the process was well-documented.
 
-Implementing a fake mouse was much harder and required me to [learn more about how HID descriptors work](https://eleccelerator.com/tutorial-about-usb-hid-report-descriptors/). Mice have lots more variations like number of buttons, number of scrollwheels, and type of positioning (absolute vs. relative). Debugging is a pain because the descriptor either works or it doesn't. If you generate an invalid descriptor, there's no way to get feedback about what's wrong with it. Worst of all, every time you try a descriptor, you have to reboot the Raspberry Pi.
+Implementing a fake mouse was much harder and required me to [learn more about how HID descriptors work](https://web.archive.org/web/20221229134157/https://eleccelerator.com/tutorial-about-usb-hid-report-descriptors/). Mice have lots more variations like number of buttons, number of scrollwheels, and type of positioning (absolute vs. relative). Debugging is a pain because the descriptor either works or it doesn't. If you generate an invalid descriptor, there's no way to get feedback about what's wrong with it. Worst of all, every time you try a descriptor, you have to reboot the Raspberry Pi.
 
 It took me five days of tedious work before I got basic mouse functionality working. The key for me was focusing on tooling. At first, I was working with descriptors as giant unstructured blobs, like this:
 
