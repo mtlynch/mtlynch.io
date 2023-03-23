@@ -218,4 +218,4 @@ I'm also going to be attending as many local shows as I can. Partly because it's
 
 ---
 
-_Metal cutting photo by [Russ Ward](https://unsplash.com/@rssemfam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/metal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._
+_Metal cutting photo by [Russ Ward](https://web.archive.org/web/20230127224200/https://unsplash.com/@rssemfam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/metal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._
