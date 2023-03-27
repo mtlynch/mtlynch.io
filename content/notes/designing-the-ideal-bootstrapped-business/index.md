@@ -110,7 +110,7 @@ Below, I've included my notes.
   - Example marketing scenario
     - Spending $300 on Google Ads gets you $50/mo in recurring revenue.
     - Therefore, spending $60k gets you $10k/mo in recurring revenue.
-      - _\[**Ed**: This is pretty far off because Google Ads have quickly diminishing returns\]_
+      - _\[**Ed**: I disagree with this point, as Google Ads don't scale linearly like this. Scaling your spending from $300 to $60k means you have to bid higher for each click to capture a greater share of the results. I think a more realistic scenario is that if you scale your Google Ad spend by 20x, you'd see 10-15x the conversions.\]_
     - You could reach your target monthly revenue right now if you had $60k in cash to spend.
     - Tell customers they get two months free with an annual plan.
     - You'd get $100k in cash immediately as opposed to $120k over the course of a year.
