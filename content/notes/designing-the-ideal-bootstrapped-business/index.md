@@ -240,7 +240,7 @@ Below, I've included my notes.
       - They're committed not to compete with aftermarket vendors.
       - They limit the features they implement themselves in order to foster an ecosystem of third-party tools.
 - Vendors are often interested in supporting aftermarket vendors.
-  - Aftermarket vendors make their product more valuable.
+  - Aftermarket vendors make the first party vendor's product more valuable.
 
 ### [Good Market: Big market](https://youtu.be/otbnC2zE2rw?t=40m10s)
 
