@@ -355,7 +355,7 @@ For each GPU chip, I've provided an example GPU product that contains that chip,
 | GTX 660           | 300                | [EVGA GeForce GTX 660](https://smile.amazon.com/EVGA-GeForce-SUPERCLOCKED-Graphics-02G-P4-2662-KR/dp/B00966IREK/)              |
 | GTX 670           | 400                | [ASUS GeForce GTX 670](https://smile.amazon.com/ASUS-GeForce-GTX-670-DC2-2GD5-GTX670-DC2-2GD5/dp/B0081IFO2C/)                  |
 | GTX 970           | 895                | [EVGA GeForce GTX 970](https://smile.amazon.com/EVGA-GeForce-Quieter-Graphics-04G-P4-2974-KR/dp/B00NVODXR4/)                   |
-| GTX 980           | 1,290              | [GIGABYTE GeForce GTX 980](https://smile.amazon.com/GIGABYTE-GeForce-GTX-980-WINDFORCE/dp/B00Q7PNNIS/)                         |
+| GTX 980           | 1,290              | [GIGABYTE GeForce GTX 980](https://www.newegg.com/gigabyte-geforce-gtx-980-gv-n980wf3oc-4gd/p/N82E16814125696)                 |
 | GTX Titan X       | 1,300              | [EVGA GeForce GTX TITAN X](https://smile.amazon.com/EVGA-GeForce-GAMING-Graphics-12G-P4-2992-KR/dp/B00UXTN5P0/)                |
 | GTX 980 Ti        | 1,540              | [GIGABYTE GeForce GTX 980Ti](https://smile.amazon.com/GIGABYTE-GeForce-GTX-980Ti-GAMING/dp/B00ZJP9DMC/)                        |
 | GTX 980 Ti Hybrid | 1,725              | [EVGA GeForce GTX 980 Ti](https://smile.amazon.com/EVGA-GeForce-Whisper-Graphics-06G-P4-4991-KR/dp/B00YDAYOF0/)                |
