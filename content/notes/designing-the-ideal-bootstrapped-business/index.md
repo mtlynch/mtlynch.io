@@ -33,7 +33,7 @@ Below, I've included my notes.
 - The ideal self-funded business is a "cash machine."
   - The business has a predictable way to make profit every month.
 - 20% of people in the conference audience would make $10k the following month if they invested zero work into their business.
-- Goal of self-funded business should earn at least $10k/month in revenue per founder.
+- Goal of self-funded business: earn at least $10k/month in revenue per founder.
   - _\[**Ed**: He says "revenue" but I suspect he means "profit"\]_
 
 ## [Revenue model](https://youtu.be/otbnC2zE2rw?t=202)
@@ -240,7 +240,7 @@ Below, I've included my notes.
       - They're committed not to compete with aftermarket vendors.
       - They limit the features they implement themselves in order to foster an ecosystem of third-party tools.
 - Vendors are often interested in supporting aftermarket vendors.
-  - Aftermarks make their product more valuable.
+  - Aftermarket vendors make the first party vendor's product more valuable.
 
 ### [Good Market: Big market](https://youtu.be/otbnC2zE2rw?t=40m10s)
 
