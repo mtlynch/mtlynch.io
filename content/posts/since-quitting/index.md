@@ -40,7 +40,7 @@ In March, I gave my first ever conference presentation. I adapted my post, ["How
 
 {{<img src="talking_drupal_logo.png" alt="Talking Drupal logo" max-width="230px" align="right" href="http://talkingdrupal.com">}}
 
-A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](http://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](http://www.talkingdrupal.com/166). We had a fun conversation and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
+A few days later, I received an email from [Stephen Cross](https://twitter.com/stephencross), one of the co-hosts of the [Talking Drupal podcast](https://www.talkingdrupal.com/). He enjoyed my talk and invited me to [discuss it further on his podcast](https://www.talkingdrupal.com/166). We had a fun conversation and explored code reviews from angles I had never considered before. I didn't tell Stephen until we stopped recording, but that podcast episode was another significant first for me: my first ever podcast appearance.
 
 ## My quitting blog post
 
@@ -56,7 +56,7 @@ By the third day, I started to feel overwhelmed. I realized that I could spend t
 
 ## Managing feedback
 
-One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics software company](http://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](https://web.archive.org/web/20200708151056/http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
+One of the people who reached out to me was Stephanie Hurlburt. She's the co-founder of a [successful graphics software company](https://www.binomial.info/) and is well-known in the startup community for her insightful [blog posts](https://web.archive.org/web/20200708151056/http://stephaniehurlburt.com/blog-archive/) and [Twitter threads](https://twitter.com/sehurlburt).
 
 She sent me a kind message about the post and offered her availability if I ever wanted advice. I had been following Stephanie for months before she reached out to me, and I knew that she received a high volume of messages. I asked her how she managed them, and she shared this helpful suggestion:
 

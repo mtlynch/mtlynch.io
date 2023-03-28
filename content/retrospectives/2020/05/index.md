@@ -37,7 +37,7 @@ I successfully implemented a subscription payment workflow for the first time ev
 
 While integrating with Stripe, I noticed that their JavaScript library [collected user data from my site](/stripe-recording-its-customers/). My blog post about the issue [reached #1 on Hacker News](https://news.ycombinator.com/item?id=22936818) and prompted [a response from Stripe's CEO](https://news.ycombinator.com/item?id=22937303). _The Register_ also [interviewed me](https://www.theregister.co.uk/2020/04/22/stripe_defends_mouse_measuring_javascript/) about the story.
 
-Stripe made several changes the week following my post, and I published [a follow-up](/stripe-update/) with my thoughts. That post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more muted response](http://hnrankings.info/23034924/).
+Stripe made several changes the week following my post, and I published [a follow-up](/stripe-update/) with my thoughts. That post also reached [the front page of Hacker News](https://news.ycombinator.com/item?id=23034924), though it generated [a more muted response](https://hnrankings.info/23034924/).
 
 ## Stats
 

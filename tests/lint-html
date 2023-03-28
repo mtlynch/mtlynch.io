@@ -62,5 +62,6 @@ htmlproofer \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
   `# requests, so ignore those.` \
   --ignore-status-codes "400,429" \
+  --no-enforce-https \
   "$htmlproofer_args_extra" \
   "${BUILD_DIR}"

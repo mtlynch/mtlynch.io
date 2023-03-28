@@ -307,7 +307,7 @@ Once again, I feel incredibly fortunate to be working for myself, and I hope to 
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Monica Lent](https://monicalent.com/) and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback for this post._
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to [Monica Lent](https://monicalent.com/) and the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback for this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script>
