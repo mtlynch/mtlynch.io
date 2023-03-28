@@ -53,7 +53,7 @@ htmlproofer "$BUILD_DIR" \
   --check-sri \
   --allow-hash-href \
   --ignore-empty-alt \
-  --file-ignore "public/collect-debt/full-emails/index.html" \
+  --ignore-files "public/collect-debt/full-emails/index.html" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
