@@ -7,7 +7,7 @@ set -e
 # Exit on unset variable.
 set -u
 
-BUILD_DIR=public
+readonly BUILD_DIR="public"
 
 # Skips validation checks that take a long time.
 htmlproofer_args_extra=""
@@ -64,4 +64,4 @@ htmlproofer \
   `# requests, so ignore those.` \
   --ignore-status-codes "400,429" \
   "$htmlproofer_args_extra" \
-  "$BUILD_DIR"
+  "${BUILD_DIR}"
