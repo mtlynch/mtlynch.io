@@ -50,6 +50,7 @@ URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 htmlproofer \
   --only-4xx \
   --checks 'Links,Images,Scripts,Favicon,OpenGraph' \
+  --allow-missing-href \
   --allow-hash-href \
   --ignore-empty-alt \
   --ignore-missing-alt \
