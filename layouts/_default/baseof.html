@@ -61,10 +61,10 @@
 
     {{ if not .Site.IsServer }}
       <script
-          defer
-          data-domain="mtlynch.io"
-          src="https://plausible.io/js/plausible.js">
-      </script>
+        defer
+        data-domain="mtlynch.io"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
     {{ end }}
 
     {{ range .Site.Params.custom_css }}
