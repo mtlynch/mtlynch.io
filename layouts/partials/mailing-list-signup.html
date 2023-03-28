@@ -25,38 +25,33 @@
 
       <input name="email" type="email" placeholder="Email address" required />
 
-
       {{ if (eq $currentPageType "notes") }}
-        <input
-          name="topic"
-          type="hidden"
-          value="all"
-        />
+        <input name="topic" type="hidden" value="all" />
       {{ else }}
-      <div class="subscribe-topic">
-        <div>
-          <input
-            id="blogposts"
-            name="topic"
-            type="radio"
-            value="{{ $currentPageType }}"
-          />
-          <label for="blogposts">Only {{ $currentPageTypeFriendly }}</label>
-        </div>
+        <div class="subscribe-topic">
+          <div>
+            <input
+              id="blogposts"
+              name="topic"
+              type="radio"
+              value="{{ $currentPageType }}"
+            />
+            <label for="blogposts">Only {{ $currentPageTypeFriendly }}</label>
+          </div>
 
-        <div>
-          <input
-            id="all-updates"
-            name="topic"
-            type="radio"
-            value="all"
-            checked
-          />
-          <label for="all-updates"
-            >All posts (monthly retrospectives, book reports, etc.)</label
-          >
+          <div>
+            <input
+              id="all-updates"
+              name="topic"
+              type="radio"
+              value="all"
+              checked
+            />
+            <label for="all-updates"
+              >All posts (monthly retrospectives, book reports, etc.)</label
+            >
+          </div>
         </div>
-      </div>
       {{ end }}
 
 
