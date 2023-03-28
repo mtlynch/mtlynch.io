@@ -105,9 +105,9 @@ That excellent illustration began with my horrendous stick figure drawing:
 
 I accompanied the sketch with this text description to Loraine:
 
-> The dog has just finished fighting a shoe in a UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](http://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg)).
+> The dog has just finished fighting a shoe in a UFC match. I'm not sure how familiar you are with UFC, but the fights happen in an octagonal ring ([example](https://l7.alamy.com/zooms/0e446803915f4de18486c3f16e1f3b93/3d-rendered-illustration-of-an-mma-mixed-martial-arts-fighting-cage-hmfggb.jpg)).
 >
-> A human referee is holding the dog's paw up in victory. UFC referees wear black pants, black polo shirts, and gloves ([example](http://media.ufc.tv/200/UFC200feature_johnmccarthy/GettyImages-115727257.jpg)).
+> A human referee is holding the dog's paw up in victory. UFC referees wear black pants, black polo shirts, and gloves ([example](https://media.ufc.tv/200/UFC200feature_johnmccarthy/GettyImages-115727257.jpg)).
 >
 > So the dog has won, but he has a black eye and some welts as if the shoe hit him back. The shoe is lying on its side on the ground, torn up.
 >

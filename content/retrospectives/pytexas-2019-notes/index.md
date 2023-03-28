@@ -39,7 +39,7 @@ Other things I liked:
 
 I've always had an aversion to object-relational mapping (ORM) frameworks. They allow developers to move application objects in and out of data stores without having to implement a lot of serialization and deserialization logic by hand. Thomas articulated the problem I've always had with ORM systems but could never put into words: they bind your object model to your ORM framework.
 
-I've also seen [mypy](http://mypy-lang.org/) and understood the appeal, but I tried it about a year ago and had a hard time getting it to work on my projects (most of which are Python 2.7), so I just gave up. If you haven't seen it, it's a static type checker for Python. It reads [PEP 484](https://www.python.org/dev/peps/pep-0484/) type hints in your code and tells you when you're violating them.
+I've also seen [mypy](https://mypy-lang.org/) and understood the appeal, but I tried it about a year ago and had a hard time getting it to work on my projects (most of which are Python 2.7), so I just gave up. If you haven't seen it, it's a static type checker for Python. It reads [PEP 484](https://www.python.org/dev/peps/pep-0484/) type hints in your code and tells you when you're violating them.
 
 This talk provided a gentle introduction to mypy and highlighted a far-reaching benefit of using it. Namely, implementing your own data serialization and deserialization without too much hassle and leaning. Thomas demonstrated how you can lean on the type checker heavily to prevent common serialization errors.
 

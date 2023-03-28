@@ -20,7 +20,7 @@ Freelancers work well if you manage the relationship properly, but there are hun
 
 The document below explains what it's like to work with me as a freelance developer. I include it in every dev job listing I publish, and I pay contractors to read it closely after we begin working together. It attracts candidates with compatible working styles and reduces ramp-up time after I hire them.
 
-I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
+I'm publishing my guidelines under the [Creative Commons BY-4.0 license](https://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
 
 ---
 

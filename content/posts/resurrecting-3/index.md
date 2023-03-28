@@ -200,7 +200,7 @@ Because Travis continuous integration was already running my build script on eve
 
 ## Adding code coverage
 
-While refactoring, I love watching the code coverage percentages climb as I bring more code under test. In Python projects, I use the [`coverage` module](https://pypi.org/project/coverage/) to collect coverage information and [Coveralls](http://coveralls.io) to make the results available in a web dashboard.
+While refactoring, I love watching the code coverage percentages climb as I bring more code under test. In Python projects, I use the [`coverage` module](https://pypi.org/project/coverage/) to collect coverage information and [Coveralls](https://coveralls.io) to make the results available in a web dashboard.
 
 Switching from Python's native unit test runner to `coverage` required only a trivial change to my build script:
 

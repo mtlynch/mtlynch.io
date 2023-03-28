@@ -233,7 +233,7 @@ I still prefer working for myself to having an employer. I still feel grateful f
 
 ---
 
-_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my lovely fiancé and the [Blogging for Devs community](http://bloggingfordevs.com/) for providing early feedback on this post._
+_Cover image by [Loraine Yow](https://www.lolo-ology.com/). Thanks to my lovely fiancé and the [Blogging for Devs community](https://bloggingfordevs.com/) for providing early feedback on this post._
 
 <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>

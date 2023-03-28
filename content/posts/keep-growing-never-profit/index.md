@@ -137,11 +137,11 @@ In evaluating business ideas now, I think about revenue from start to finish. Fo
 
 ### Search engines have a substantial lag
 
-Today, if you ask Google ["are cheese whisps keto?"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F) it responds with a list of results that all fail to answer the question.
+Today, if you ask Google ["are cheese whisps keto?"](https://www.google.com/search?q=are%20cheese%20whisps%20keto%3F) it responds with a list of results that all fail to answer the question.
 
-{{<img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](http://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" max-width="450px" has-border="true">}}
+{{<img src="cheese-whisps.jpg" alt="Google Analytics screenshot" caption="Google results for [\"are cheese whisps keto?\"](https://www.google.com/search?q=are%20cheese%20whisps%20keto%3F)" max-width="450px" has-border="true">}}
 
-Is It Keto [has the answer](https://isitketo.org/whisps), but Google ignores it. For products like [Metamucil](http://www.google.com/search?q=is%20Metamucil%20keto%3F) or [Lily's Chocolate](http://www.google.com/search?q=is%20Lily%27s%20Chocolate%20keto%3F), Google places Is It Keto among the top results, so why no love for the Whisps page?
+Is It Keto [has the answer](https://isitketo.org/whisps), but Google ignores it. For products like [Metamucil](https://www.google.com/search?q=is%20Metamucil%20keto%3F) or [Lily's Chocolate](https://www.google.com/search?q=is%20Lily%27s%20Chocolate%20keto%3F), Google places Is It Keto among the top results, so why no love for the Whisps page?
 
 For new sites, Google ranks you low in results and then bumps you up or down depending on how often users click through to your page. That process is painfully slow. The pages on Is It Keto that currently enjoy top placement took months to get there, and 90% of my articles remain buried too far in Google results for anyone to see.
 
