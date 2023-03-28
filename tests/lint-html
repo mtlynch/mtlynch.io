@@ -47,7 +47,7 @@ IGNORE_PATTERNS+=("/calculator.aws/")
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
 # Run HTMLProofer
-htmlproofer "$BUILD_DIR" \
+htmlproofer \
   --only-4xx \
   --checks '["Links", "Images", "Scripts", "Favicon", "OpenGraph"]' \
   --check-sri \
@@ -63,4 +63,5 @@ htmlproofer "$BUILD_DIR" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
   `# requests, so ignore those.` \
   --ignore-status-codes "400,429" \
-  "$htmlproofer_args_extra"
+  "$htmlproofer_args_extra" \
+  "$BUILD_DIR"
