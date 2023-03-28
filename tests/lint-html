@@ -46,24 +46,21 @@ IGNORE_PATTERNS+=("/calculator.aws/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
-htmlproofer --help
-
 # Run HTMLProofer
 htmlproofer "$BUILD_DIR" \
   --only-4xx \
+  --checks []"Links", "Images", "Scripts", "Favicon", "OpenGraph"]
   --check-sri \
-  --check-html \
-  --check-opengraph \
   --allow-hash-href \
-  --empty-alt-ignore \
+  --ignore-empty-alt \
   --file-ignore "public/collect-debt/full-emails/index.html" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
   `# mtlynch.io server to verify that URLs are present.` \
-  --url-swap "https\://mtlynch.io/:/" \
-  --url-ignore "${URL_IGNORE}" \
+  --swap-urls "https\://mtlynch.io/:/" \
+  --ignore-urls "${URL_IGNORE}" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
   `# requests, so ignore those.` \
-  --http-status-ignore "400,429" \
+  --ignore-status-codes "400,429" \
   "$htmlproofer_args_extra"
