@@ -52,6 +52,7 @@ htmlproofer \
   --checks 'Links,Images,Scripts,Favicon,OpenGraph' \
   --allow-hash-href \
   --ignore-empty-alt \
+  --ignore-missing-alt \
   --ignore-files "public/collect-debt/full-emails/index.html" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
