@@ -25,6 +25,14 @@
 
       <input name="email" type="email" placeholder="Email address" required />
 
+
+      {{ if (eq $currentPageType "notes") }}
+        <input
+          name="topic"
+          type="hidden"
+          value="all"
+        />
+      {{ else }}
       <div class="subscribe-topic">
         <div>
           <input
@@ -49,6 +57,8 @@
           >
         </div>
       </div>
+      {{ end }}
+
 
       <div class="clear">
         <input type="submit" value="Subscribe" class="subscribe-btn" />
