@@ -46,10 +46,12 @@ IGNORE_PATTERNS+=("/calculator.aws/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
+htmlproofer --help
+
 # Run HTMLProofer
 htmlproofer "$BUILD_DIR" \
   --only-4xx \
-  --check-favicon \
+  --check-sri \
   --check-html \
   --check-opengraph \
   --allow-hash-href \
