@@ -49,7 +49,7 @@ URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 # Run HTMLProofer
 htmlproofer "$BUILD_DIR" \
   --only-4xx \
-  --checks []"Links", "Images", "Scripts", "Favicon", "OpenGraph"]
+  --checks ["Links", "Images", "Scripts", "Favicon", "OpenGraph"]
   --check-sri \
   --allow-hash-href \
   --ignore-empty-alt \
