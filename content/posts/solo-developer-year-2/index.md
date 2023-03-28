@@ -248,7 +248,7 @@ I also switched from managed bookkeeping with [Bench](https://bench.co) to self-
 
 ### Raise prices, even if nobody's buying
 
-One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](http://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paid users. How could my prices be too low if nobody was buying?
+One of the best pieces of [advice I received](/retrospectives/2019/07/#suddenly-everyone-wants-to-parse-ingredients) this year was from [Cory Zue](https://coryzue.com). He suggested that at $0.003 per request, my prices for Zestful were too low. At the time, Zestful had almost zero paid users. How could my prices be too low if nobody was buying?
 
 Though Zestful had few real customers, it had many _prospective_ customers. Every few weeks, a new company contacted me saying that they were interested in Zestful, but it was missing one tiny feature they absolutely needed. Desperate to win my first big client, I'd work feverishly to implement the functionality they wanted. A week later, I'd proudly deliver it to them.
 
