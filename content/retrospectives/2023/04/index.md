@@ -1,6 +1,6 @@
 ---
-title: "04"
-date: 2023-03-27T16:04:07-04:00
+title: "TinyPilot: Month 33"
+date: 2023-04-03T00:00:00-04:00
 description: TODO - One-line summary
 ---
 
@@ -37,10 +37,10 @@ TODO
 
 ### Reduce load on fulfillment team so that reactive tasks occupy less than 80% of their time
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: This was mostly successful
+- **Grade**: B
 
-TODO
+I took on as many customer support tickets as I could for a week to free up their time.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -48,9 +48,13 @@ TODO
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-## "Everyone just gives us their admin password"
+## Getting over the 3PL hump
 
 My top priority right now is to transition TinyPilot's fulfillment to a third-party logistics (3PL) vendor. The 3PL's job is to keep finished products in a warehouse and then, pick, pack, and ship products when orders arrive.
+
+Transitioning to a 3PL is a challenge because TinyPilot's fulfillment staff is working at nearly 100% capacity to build devices and fulfill orders as quickly as they come in.
+
+## "Everyone just gives us their admin password"
 
 It's turning out to be harder than I thought to integrate with 3PLs. Our eCommerce platform is Shopify, one of the most popular platforms in the US. I thought surely that every 3PL would have an easy
 
@@ -89,13 +93,44 @@ For the integration, I was surprised it was so complicated. I asked why they did
 
 Another issue we ran into was real-time shipping costs. Currently, if you purchase a TinyPilot product, the Shopify checkout flow shows you
 
+## How elastic is the demand for TinyPilot?
+
+One of the things I did to free up time for the push to 3PL was to increase prices.
+
+| Time Period        | Voyager 2a USB-C Price | Voyager 2a USB-C Sales Per Day | Voyager 2a PoE Price | Voyager 2a PoE Sales Per Day |
+| ------------------ | ---------------------- | ------------------------------ | -------------------- | ---------------------------- |
+| March 1 - March 10 | $XX                    | X.Y                            | $XX                  | X.Y                          |
+
+## Were trade-ins a dumb idea?
+
+Every time we release a new hardware version, I get requests from customers asking if they can trade in their old devices for the new one. In the past, I've told them we don't have a process for that, but I can offer them a big discount on the new version.
+
+This year, TinyPilot's primary constraint is the availibility of Raspberry Pis (TODO: link). Because of that, I'm trying to maximize the amount we can earn from our scarce supply of Raspberry Pis.
+
+Instead of offering customers a discount on new devices, I had the brilliant idea of offering trade-ins.
+
+I thought they'd be pretty easy. In some cases, customers had up to four TinyPilots, and they didn't want any of them offline, so we had to send a refurbished device to them, get one of their devices back in exchange, swap in parts needed to make it a Voyager 2a, and repeat this back-and-forth three times.
+
+At a certain point, I asked the support team to defer all trade-in requests until after we completed the transition to the 3PL vendor. Of course, we haven't received a single trade-in request since I said that, so it didn't win us anything.
+
+If I had to do it over, I would:
+
+- Offer trade-ins to customers who asked but don't advertise it broadly.
+- Use a separate support queue for trade-in requests, and set expectations that there might be a wait of a few weeks before we start the process with each customer.
+
+Don't advertise trade-ins, but offer them to users who inquire.
+
 ## Side projects
+
+### Reimplementing a Zestful microservice in Go
 
 ## Wrap up
 
 ### What got done?
 
--
+- Presented at [NERD Summit](https://nerdsummit.org/).
+- Found a new accountant.
+- Did most of the legwork for 2022 tax prep.
 
 ### Lessons learned
 
