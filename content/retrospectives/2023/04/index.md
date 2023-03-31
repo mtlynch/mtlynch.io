@@ -97,12 +97,12 @@ Another issue we ran into was real-time shipping costs. Currently, if you purcha
 
 One of the things I did to free up time for the push to 3PL was to increase prices.
 
-| Time Period       | Voyager 2a USB-C Price | Voyager 2a USB-C Sales Per Day | Voyager 2a PoE Price | Voyager 2a PoE Sales Per Day |
-| ----------------- | ---------------------- | ------------------------------ | -------------------- | ---------------------------- | --- |
-| Feb. 13 - Mar. 6  | $379                   | 110 /                          | $478                 | 30 /                         | 22  |
-| Mar. 7 - Mar. 12  | $399                   | 34 /                           | $498                 | 15 /                         | 6   |
-| Mar. 13 - Mar. 19 | $429                   | 16 /                           | $528                 | 9 /                          | 7   |
-| Mar. 20 - Mar. 30 | $429                   | 49 /                           | $558                 | 13                           | 11  |
+| Time Period       | Voyager 2a USB-C Price | Voyager 2a USB-C Sales | Voyager 2a PoE Price | Voyager 2a PoE Sales |
+| ----------------- | ---------------------- | ---------------------- | -------------------- | -------------------- |
+| Feb. 13 - Mar. 6  | $379                   | 110 (5.0/day)          | $478                 | 29 (1.3/day)         |
+| Mar. 7 - Mar. 12  | $399                   | 34 (5.7/day)           | $498                 | 15 (2.5/day)         |
+| Mar. 13 - Mar. 19 | $429                   | 16 (2.3/day)           | $528                 | 9 (1.3/day)          |
+| Mar. 20 - Mar. 30 | $429                   | 49 (4.5/day)           | $558                 | 13 (1.2/day)         |
 
 ## Were trade-ins a dumb idea?
 
