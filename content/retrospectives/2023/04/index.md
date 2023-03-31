@@ -97,9 +97,12 @@ Another issue we ran into was real-time shipping costs. Currently, if you purcha
 
 One of the things I did to free up time for the push to 3PL was to increase prices.
 
-| Time Period        | Voyager 2a USB-C Price | Voyager 2a USB-C Sales Per Day | Voyager 2a PoE Price | Voyager 2a PoE Sales Per Day |
-| ------------------ | ---------------------- | ------------------------------ | -------------------- | ---------------------------- |
-| March 1 - March 10 | $XX                    | X.Y                            | $XX                  | X.Y                          |
+| Time Period       | Voyager 2a USB-C Price | Voyager 2a USB-C Sales Per Day | Voyager 2a PoE Price | Voyager 2a PoE Sales Per Day |
+| ----------------- | ---------------------- | ------------------------------ | -------------------- | ---------------------------- | --- |
+| Feb. 13 - Mar. 6  | $379                   | 110 /                          | $478                 | 30 /                         | 22  |
+| Mar. 7 - Mar. 12  | $399                   | 34 /                           | $498                 | 15 /                         | 6   |
+| Mar. 13 - Mar. 19 | $429                   | 16 /                           | $528                 | 9 /                          | 7   |
+| Mar. 20 - Mar. 30 | $429                   | 49 /                           | $558                 | 13                           | 11  |
 
 ## Were trade-ins a dumb idea?
 
@@ -107,18 +110,20 @@ Every time we release a new hardware version, I get requests from customers aski
 
 This year, TinyPilot's primary constraint is the availibility of Raspberry Pis (TODO: link). Because of that, I'm trying to maximize the amount we can earn from our scarce supply of Raspberry Pis.
 
-Instead of offering customers a discount on new devices, I had the brilliant idea of offering trade-ins.
+Instead of offering customers a discount on new devices, I had the brilliant idea of offering trade-ins. Discounting a new device would mean we're failing to maximize the value of our limited Raspberry Pis. Every device we've ever sold has used the same model Raspberry Pi 4B, so if I let customers trade in their old devices, I could upgrade them and just re-use their existing Pi.
 
-I thought they'd be pretty easy. In some cases, customers had up to four TinyPilots, and they didn't want any of them offline, so we had to send a refurbished device to them, get one of their devices back in exchange, swap in parts needed to make it a Voyager 2a, and repeat this back-and-forth three times.
+I thought trade-ins would be easy, and about half of them were. The customer purchased a trade-in from us, they sent in their device, we recycled as many parts as possible to convert it to a Voyager 2a, and we sent it back. The more complicated cases were customers who needed a TinyPilot on-hand, so we'd build a Voyager 2a using refurbished parts, send that to the customer first, and then take their old device in exchange. And in some cases, customers were trading in up to four devices one-by-one, so it got labor-intensive.
 
 At a certain point, I asked the support team to defer all trade-in requests until after we completed the transition to the 3PL vendor. Of course, we haven't received a single trade-in request since I said that, so it didn't win us anything.
 
+It's hard to weigh the tradeoffs of this decision because the upside is intangible. We're rewarding customers who stick with us and want to support the product, but I can't quantify that as a benefit. The downside of the trade-ins are very tangible, however. Trade-ins took, on average, 2-3x longer to process than normal sales, and we did them basically at-cost.
+
+If TinyPilot makdes a profit of $300-400 on each standard sale and each trade-in prevented us from making \~2.5 sales, each trade-in cost us $600-700. We did 22 trade-ins in total, so the trade-in program cost around $13k.
+
 If I had to do it over, I would:
 
-- Offer trade-ins to customers who asked but don't advertise it broadly.
+- Offer trade-ins to customers who asked but not advertise the offer broadly.
 - Use a separate support queue for trade-in requests, and set expectations that there might be a wait of a few weeks before we start the process with each customer.
-
-Don't advertise trade-ins, but offer them to users who inquire.
 
 ## Side projects
 
