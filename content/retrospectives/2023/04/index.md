@@ -37,7 +37,7 @@ TODO
 
 ### Reduce load on fulfillment team so that reactive tasks occupy less than 80% of their time
 
-- **Result**: This was mostly successful
+- **Result**: This was mostly successful but hard to measure.
 - **Grade**: B
 
 I took on as many customer support tickets as I could for a week to free up their time.
@@ -46,21 +46,40 @@ I took on as many customer support tickets as I could for a week to free up thei
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric                   | February 2023  | March 2023       | Change                                        |
+| ------------------------ | -------------- | ---------------- | --------------------------------------------- |
+| Unique Visitors          | 12,141         | 7,443            | <font color="red">-4,698 (-39%)</font>        |
+| Total Pageviews          | 23,117         | 17,904           | <font color="red">-5,213 (-23%)</font>        |
+| Sales Revenue            | $72,585.15     | $86,803.78       | <font color="green">+$14,218.63 (+20%)</font> |
+| Enterprise Subscriptions | $290.70        | $290.70          | 0                                             |
+| Royalties                | $3,935.73      | $0.00            | <font color="red">-$3,935.73 (-100%)</font>   |
+| Total Revenue            | $76,811.58     | $87,094.48       | <font color="green">+$10,282.90 (+13%)</font> |
+| **Profit**               | **$33,537.97** | **$32,493.36**\* | **<font color="red">-$1,044.61 (-3%)</font>** |
+
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+
+Sales have been strong the past few months. I think switching from a 3D-printed case to a metal case has
+
+My goal for the year was to reach $100k in profit, but it looks like I could exceed that goal by the end of April.
 
 ## Getting over the 3PL hump
 
 My top priority right now is to transition TinyPilot's fulfillment to a third-party logistics (3PL) vendor. The 3PL's job is to keep finished products in a warehouse and then, pick, pack, and ship products when orders arrive.
 
+It takes about a week for our products to move from TinyPilot's office to the 3PL warehouse and get processed into their inventory. To transition to the 3PL, we need to send a first batch of inventory that covers about a week of sales.
+
 Transitioning to a 3PL is a challenge because TinyPilot's fulfillment staff is working at nearly 100% capacity to build devices and fulfill orders as quickly as they come in.
 
-## "Everyone just gives us their admin password"
+In order to transition to a 3PL, we need to build about 50 _extra_ devices that we can ship to them. The options I considered were:
 
-It's turning out to be harder than I thought to integrate with 3PLs. Our eCommerce platform is Shopify, one of the most popular platforms in the US. I thought surely that every 3PL would have an easy
+1. Decrease spending on ads so that fewer customers discover TinyPilot
+1. Increase prices so that fewer customers purchase
+1. Reduce time that the fulfillment staff spends on customer support
+1. Mark products as temporarily out of stock
 
-Shipstation seems like the more modern solution.
+(1) was easy. It didn't make sense to keep speding money on ads if we couldn't keep up with our existing demand.
 
-The person who does it has to have special privileges on both the Shipstation account and the Shopify account. I couldn't link the accounts because I didn't have credentials to the 3PL's Shipstation account. They couldn't do it because they didn't have admin rights on my Shopify account.
+(2) was technically easy, but I'm reluctant to turn TinyPilot into something customers perceive as expensive.
 
 ## Interesting edge cases for fulfillment
 
@@ -77,7 +96,15 @@ I try to avoid manual steps as much as possible in TinyPilot's workflows. Any ti
 
 (2) was a little trickier. Currently, we just add a comment in Shopify on the order, like, "Hold while I work through an issue with this customer." The extra note stands out and. The problem was that Shipstation doesn't import comments from Shopify. I first tried adding a tag to the order called `paused` and asked if Shipstation could see that. It could, but our 3PL partner couldn't build an automation around it. And then, poking around Shopify, I noticed a "hold fulfillment" button.
 
-## Should we pay $150 to ship this $50 order?
+### "Everyone just gives us their admin password"
+
+It's turning out to be harder than I thought to integrate with 3PLs. Our eCommerce platform is Shopify, one of the most popular platforms in the US. I thought surely that every 3PL would have an easy
+
+Shipstation seems like the more modern solution.
+
+The person who does it has to have special privileges on both the Shipstation account and the Shopify account. I couldn't link the accounts because I didn't have credentials to the 3PL's Shipstation account. They couldn't do it because they didn't have admin rights on my Shopify account.
+
+### Should we pay $150 to ship this $50 order?
 
 The customer was in Australia, where shipping is very expensive. TinyPilot receives DHL shipping discounts through Shopify that reduced the postage to $50. But our 3PL has a separate deal with DHL, so DHL was charging them $150 for the same shipment. The customer only paid $50 in postage and $50 for the product, so our profit on the sale would be -$50 without even considering parts and labor.
 
@@ -87,7 +114,7 @@ They said their other customers either offer free shipping or set flat pricing p
 
 They said I had to upgrade my account. I had to go from my $105/month Shopify plan to a whopping $399/month plan, making Shopify TinyPilot's most expensive cloud service. I make some of my money back because the high-tier plan reduces credit card fees by 0.2%. Using TinyPilot's revenue from last year, the fee discounts would have translated to about $2k less in credit card processing fees, so I'm at least getting back some of the $4,800/year I'm spending on this ridiculous plan.
 
-## Why do I feel like the first Shopify client?
+### Why do I feel like the first Shopify client?
 
 For the integration, I was surprised it was so complicated. I asked why they didn't have a process for integrating Shipstation, and they said that everyone else just hands over their admin password. She said most of their clients don't consider themselves highly technical, so they're not as concerned with password sharing.
 
