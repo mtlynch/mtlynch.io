@@ -66,20 +66,19 @@ My goal for the year was to reach $100k in profit, but it looks like I could exc
 
 My top priority right now is to transition TinyPilot's fulfillment to a third-party logistics (3PL) vendor. The 3PL's job is to keep finished products in a warehouse and then, pick, pack, and ship products when orders arrive.
 
-It takes about a week for our products to move from TinyPilot's office to the 3PL warehouse and get processed into their inventory. To transition to the 3PL, we need to send a first batch of inventory that covers about a week of sales.
+It takes about a week to move products from our products to the 3PL vendor's warehouse into their systems. That means the first batch we send has to cover at least a week's worth of sales.
 
-Transitioning to a 3PL is a challenge because TinyPilot's fulfillment staff is working at nearly 100% capacity to build devices and fulfill orders as quickly as they come in.
+The problem is that the Voyager 2a takes longer than our previous products to build. We were barely keeping up with existing demand, so doubling our output to get a week ahead would be near-impossible.
 
-In order to transition to a 3PL, we need to build about 50 _extra_ devices that we can ship to them. The options I considered were:
+I could have closed up shop for a week while we transitioned, but that's essentially forfeiting $10-20k in lost sales.
 
-1. Decrease spending on ads so that fewer customers discover TinyPilot
-1. Increase prices so that fewer customers purchase
-1. Reduce time that the fulfillment staff spends on customer support
-1. Mark products as temporarily out of stock
+Instead, I took a few measures to reduce sales volume and reduce load for the team responsible for fulfillment.
 
-(1) was easy. It didn't make sense to keep speding money on ads if we couldn't keep up with our existing demand.
+First, I **decreased ad spending**. That was a no-brainer. There's no use spending money to attract new customers when we already have more demand than we can accomodate.
 
-(2) was technically easy, but I'm reluctant to turn TinyPilot into something customers perceive as expensive.
+Second, I **increased prices**. I did the price bumps in several rounds to see when sales would slow down, but they never really did. More on that [below](#how-elastic-is-the-demand-for-tinypilot).
+
+Third, I **pitched in on customer support**. The local staff covers assembly, fulfillment, and customer support. Time they spent on customer support was limiting how many devices they could build, so I took on customer support tickets as they arrived. Usually, I wait for staff to escalate exceptional cases to me.
 
 ## Interesting edge cases for fulfillment
 
@@ -124,6 +123,10 @@ Another issue we ran into was real-time shipping costs. Currently, if you purcha
 
 One of the things I did to free up time for the push to 3PL was to increase prices.
 
+In economics, the "elasticity" of a product is how sensitive consumers are to its price. Uber rides are a good example of an elastic product. If rides are cheap, you'll pay for the convenience, but if prices go up 10x, you'll probably take public transportation instead.
+
+When I increased TinyPilot's price to slow down sales volume, it accidentally yielded interesting data about the elasticity of TinyPilot's demand:
+
 | Time Period       | Voyager 2a USB-C Price | Voyager 2a USB-C Sales | Voyager 2a PoE Price | Voyager 2a PoE Sales |
 | ----------------- | ---------------------- | ---------------------- | -------------------- | -------------------- |
 | Feb. 13 - Mar. 6  | $379                   | 110 (5.0/day)          | $478                 | 29 (1.3/day)         |
@@ -131,23 +134,37 @@ One of the things I did to free up time for the push to 3PL was to increase pric
 | Mar. 13 - Mar. 19 | $429                   | 16 (2.3/day)           | $528                 | 9 (1.3/day)          |
 | Mar. 20 - Mar. 30 | $429                   | 49 (4.5/day)           | $558                 | 13 (1.2/day)         |
 
+It's too small a sample to make any big claims, but it suggests that TinyPilot's customers are less sensitive to price than I expected. Especially for the PoE model, customers bought at roughly the same rate even when I raised the price by $80 (17%).
+
+The capitalist in me wants to keep raising prices to maximize profits, but another part of me has this irrational feeling that the "correct" price should be $350 for the base model.
+
+I was recently re-reading the blog post I wrote about [creating the first TinyPilot prototype](/tinypilot/#commercial-solutions) and I balked at the $500 price tag for existing KVM over IP products:
+
+> Next, I looked at commercial KVM over IP solutions. They provide similar functionality to Dell’s iDRAC, but they’re external devices that connect to a computer’s keyboard, video, and mouse ports (hence the name KVM). Sadly, they’re even more expensive, ranging in price from $500 to $1000 per unit.
+
+I still would like to have a TinyPilot offering that would appeal to the version of me from 2020 who just wants an easy way to manage his home VM server without spending a fortune.
+
+I think the higher price makes sense now while TinyPilot is constrained in both [supply](/retrospectives/2023/01/#losing-450k-in-a-single-email) and [production speed](#getting-over-the-3pl-hump), but I'm hoping I can eventually reduce prices again and make it up in volume.
+
 ## Were trade-ins a dumb idea?
 
-Every time we release a new hardware version, I get requests from customers asking if they can trade in their old devices for the new one. In the past, I've told them we don't have a process for that, but I can offer them a big discount on the new version.
+Every time TinyPilot releases a new hardware version, I get requests from customers asking if they can trade in their old devices for the new one. In the past, I've told them we don't have a process for that, but I can offer them a big discount on the new version.
 
-This year, TinyPilot's primary constraint is the availibility of Raspberry Pis (TODO: link). Because of that, I'm trying to maximize the amount we can earn from our scarce supply of Raspberry Pis.
+This year, TinyPilot's primary constraint is the [availibility of Raspberry Pis](/retrospectives/2023/01/#losing-450k-in-a-single-email). Because of that, I'm trying to maximize the amount we can earn from our scarce supply of Raspberry Pis.
 
-Instead of offering customers a discount on new devices, I had the brilliant idea of offering trade-ins. Discounting a new device would mean we're failing to maximize the value of our limited Raspberry Pis. Every device we've ever sold has used the same model Raspberry Pi 4B, so if I let customers trade in their old devices, I could upgrade them and just re-use their existing Pi.
+Instead of offering customers a discount on new devices, I had the brilliant idea of offering trade-ins. I thought trade-ins would be easy: the customer would send ther device to us, we'd recycled as many parts as possible to convert it to a Voyager 2a, then send it back.
 
-I thought trade-ins would be easy, and about half of them were. The customer purchased a trade-in from us, they sent in their device, we recycled as many parts as possible to convert it to a Voyager 2a, and we sent it back. The more complicated cases were customers who needed a TinyPilot on-hand, so we'd build a Voyager 2a using refurbished parts, send that to the customer first, and then take their old device in exchange. And in some cases, customers were trading in up to four devices one-by-one, so it got labor-intensive.
+In reality, the process was more complicated and labor-intensive. A lot of customers rely on their TinyPilots for day-to-day work, so they didn't want to be without it while we upgraded it. In those cases, we sold them a Voyager 2a made from refurbished parts, then gave them a partial refund when we received their trade-in.
 
-At a certain point, I asked the support team to defer all trade-in requests until after we completed the transition to the 3PL vendor. Of course, we haven't received a single trade-in request since I said that, so it didn't win us anything.
+And then there were customers who had multiple TinyPilot devices and needed all of them online. So we did the refurbished device thing, but one or two at a time for up to four devices.
 
-It's hard to weigh the tradeoffs of this decision because the upside is intangible. We're rewarding customers who stick with us and want to support the product, but I can't quantify that as a benefit. The downside of the trade-ins are very tangible, however. Trade-ins took, on average, 2-3x longer to process than normal sales, and we did them basically at-cost.
+All the trade-ins went smoothly, but they were a lot more work than I expected.
+
+It's hard to weigh the tradeoffs of this decision because the upside is intangible &mdash; we're rewarding customers who stick with us and want to support the product. The downside of the trade-ins are very tangible, however. Trade-ins took, on average, 2-3x longer to process than normal sales, and we did them basically at-cost.
 
 If TinyPilot makdes a profit of $300-400 on each standard sale and each trade-in prevented us from making \~2.5 sales, each trade-in cost us $600-700. We did 22 trade-ins in total, so the trade-in program cost around $13k.
 
-If I had to do it over, I would:
+If I had to do it over, I would have still offered the trade-ins but with these adjustments:
 
 - Offer trade-ins to customers who asked but not advertise the offer broadly.
 - Use a separate support queue for trade-in requests, and set expectations that there might be a wait of a few weeks before we start the process with each customer.
@@ -155,6 +172,14 @@ If I had to do it over, I would:
 ## Side projects
 
 ### Reimplementing a Zestful microservice in Go
+
+Back in 2018, when I was launching Zestful, my ingredient parsing service, I had a way for users to pay for access, but I wanted a low-friction way for them to try out the service.
+
+At the time, I liked AppEngine and hated the idea of maintaining my own database. I've since fallen out of love with AppEngine and GCP in general, so now I design things in a platform-agnostic way.
+
+Because AppEngine doesn't have a persistent in-memory state, the proxy stored quota data in Google Cloud Datastore.
+
+I realized I don't need a persistent store at all. I can just store everything in memory. I can run it in a small virtual on Fly.io for free. The downside is that every time I deploy a new version or the server restarts, the quota resets and everyone gets another 30 free requests for the day. But that's not a big deal, so it's not worth the dev effort.
 
 ## Wrap up
 
@@ -180,4 +205,4 @@ I'm trying a new idea this month where I announce ways readers can help me. If y
 
 {{</notice>}}
 
-TODO
+If you or someone you can convince to talk to me has worked with contract manufacturers on a hardware product, I'd love to talk about the experience. I'm especially interested in people who have worked on an electronics product at low volumes, like 2,000-5,000 units per year.
