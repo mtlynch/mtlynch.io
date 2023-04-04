@@ -62,24 +62,6 @@ Sales have been strong the past few months. I think switching from a 3D-printed 
 
 My goal for the year was to reach $100k in profit, but it looks like I could exceed that goal by the end of April.
 
-## Getting over the 3PL hump
-
-My top priority right now is to transition TinyPilot's fulfillment to a third-party logistics (3PL) vendor. The 3PL's job is to keep finished products in a warehouse and then, pick, pack, and ship products when orders arrive.
-
-It takes about a week to move products from our products to the 3PL vendor's warehouse into their systems. That means the first batch we send has to cover at least a week's worth of sales.
-
-The problem is that the Voyager 2a takes longer than our previous products to build. We were barely keeping up with existing demand, so doubling our output to get a week ahead would be near-impossible.
-
-I could have closed up shop for a week while we transitioned, but that's essentially forfeiting $10-20k in lost sales.
-
-Instead, I took a few measures to reduce sales volume and reduce load for the team responsible for fulfillment.
-
-First, I **decreased ad spending**. That was a no-brainer. There's no use spending money to attract new customers when we already have more demand than we can accomodate.
-
-Second, I **increased prices**. I did the price bumps in several rounds to see when sales would slow down, but they never really did. More on that [below](#how-elastic-is-the-demand-for-tinypilot).
-
-Third, I **pitched in on customer support**. The local staff covers assembly, fulfillment, and customer support. Time they spent on customer support was limiting how many devices they could build, so I took on customer support tickets as they arrived. Usually, I wait for staff to escalate exceptional cases to me.
-
 ## Interesting edge cases for fulfillment
 
 1. Customer emails us to say they mistyped their shipping address
