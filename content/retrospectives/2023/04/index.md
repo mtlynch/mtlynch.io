@@ -23,17 +23,17 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Transition fulfillment of a low-volume product to our new 3PL
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Our 3PL vendor has been fulfilling Power Connector orders for three weeks.
+- **Grade**: A
 
-TODO
+There were a few hiccups to work through, but the transition process went about how I expected.
 
 ### Present at [NERD Summit 2023](https://nerdsummit.org/)
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Presented my talk.
+- **Grade**: A
 
-TODO
+It was fun to be back at NERD Summit in person for the first time since 2019. There were a lot of cool talks and fun hallway conversations.
 
 ### Reduce load on fulfillment team so that reactive tasks occupy less than 80% of their time
 
@@ -52,17 +52,37 @@ I took on as many customer support tickets as I could for a week to free up thei
 | Total Pageviews          | 23,117         | 17,904           | <font color="red">-5,213 (-23%)</font>        |
 | Sales Revenue            | $72,585.15     | $86,803.78       | <font color="green">+$14,218.63 (+20%)</font> |
 | Enterprise Subscriptions | $290.70        | $290.70          | 0                                             |
-| Royalties                | $3,935.73      | $0.00            | <font color="red">-$3,935.73 (-100%)</font>   |
-| Total Revenue            | $76,811.58     | $87,094.48       | <font color="green">+$10,282.90 (+13%)</font> |
+| Royalties                | $3,935.73      | $4,820.75        | <font color="green">+$885.02 (+22%)</font>    |
+| Total Revenue            | $76,811.58     | $91,915.23       | <font color="green">+$15,103.65 (+20%)</font> |
 | **Profit**               | **$33,537.97** | **$32,493.36**\* | **<font color="red">-$1,044.61 (-3%)</font>** |
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
 Sales have been strong the past few months. I think switching from a 3D-printed case to a metal case has
 
-My goal for the year was to reach $100k in profit, but it looks like I could exceed that goal by the end of April.
+My goal for the year was to [reach $100k in profit](/solo-developer-year-5/#earn-100k-in-profit), but it looks like I could exceed that goal by the end of April.
 
 ## The hiccups in transitioning to a 3PL vendor
+
+### "Everyone just gives us their admin password"
+
+It's turning out to be harder than I thought to integrate with 3PLs. Our eCommerce platform is Shopify, one of the most popular platforms in the US. I thought surely that every 3PL would have an easy
+
+Shipstation seems like the more modern solution.
+
+The person who does it has to have special privileges on both the Shipstation account and the Shopify account. I couldn't link the accounts because I didn't have credentials to the 3PL's Shipstation account. They couldn't do it because they didn't have admin rights on my Shopify account.
+
+For the integration, I was surprised it was so complicated. I asked why they didn't have a process for integrating Shipstation, and they said that everyone else just hands over their admin password. She said most of their clients don't consider themselves highly technical, so they're not as concerned with password sharing.
+
+### Should we pay $150 to ship this $50 order?
+
+The customer was in Australia, where shipping is very expensive. TinyPilot receives DHL shipping discounts through Shopify that reduced the postage to $50. But our 3PL has a separate deal with DHL, so DHL was charging them $150 for the same shipment. The customer only paid $50 in postage and $50 for the product, so our profit on the sale would be -$50 without even considering parts and labor.
+
+Taking a $100 hit on shipping obviously wasn't something I want to do regularly, so we had to figure out a solution. Again, I asked, "What do your other customers do?"
+
+They said their other customers either offer free shipping or set flat pricing per country that's independent of the size of the order. I was open to that, but I wasn't looking forward to going country by country figuring out. With flat pricing, we also lose out if someone orders 10 items because they'd still be paying the shipping fee for a single item, but if they're spending $3-4k on an order, I'm fine losing $100 on postage.
+
+They said I had to upgrade my account. I had to go from my $105/month Shopify plan to a whopping $399/month plan, making Shopify TinyPilot's most expensive cloud service. I make some of my money back because the high-tier plan reduces credit card fees by 0.2%. Using TinyPilot's revenue from last year, the fee discounts would have translated to about $2k less in credit card processing fees, so I'm at least getting back some of the $4,800/year I'm spending on this ridiculous plan.
 
 ### Interesting edge cases for fulfillment
 
@@ -78,30 +98,6 @@ I try to avoid manual steps as much as possible in TinyPilot's workflows. Any ti
 (1) was trivial with the new vendor. We can see in real-time whether they've fulfilled the order already, so that part was easy. And when we update the shipping address, it updates on their end within seconds.
 
 (2) was a little trickier. Currently, we just add a comment in Shopify on the order, like, "Hold while I work through an issue with this customer." The extra note stands out and. The problem was that Shipstation doesn't import comments from Shopify. I first tried adding a tag to the order called `paused` and asked if Shipstation could see that. It could, but our 3PL partner couldn't build an automation around it. And then, poking around Shopify, I noticed a "hold fulfillment" button.
-
-### "Everyone just gives us their admin password"
-
-It's turning out to be harder than I thought to integrate with 3PLs. Our eCommerce platform is Shopify, one of the most popular platforms in the US. I thought surely that every 3PL would have an easy
-
-Shipstation seems like the more modern solution.
-
-The person who does it has to have special privileges on both the Shipstation account and the Shopify account. I couldn't link the accounts because I didn't have credentials to the 3PL's Shipstation account. They couldn't do it because they didn't have admin rights on my Shopify account.
-
-### Should we pay $150 to ship this $50 order?
-
-The customer was in Australia, where shipping is very expensive. TinyPilot receives DHL shipping discounts through Shopify that reduced the postage to $50. But our 3PL has a separate deal with DHL, so DHL was charging them $150 for the same shipment. The customer only paid $50 in postage and $50 for the product, so our profit on the sale would be -$50 without even considering parts and labor.
-
-Taking a $100 hit on shipping obviously wasn't something I want to do regularly, so we had to figure out a solution. Again, I asked, "What do your other customers do?"
-
-They said their other customers either offer free shipping or set flat pricing per country that's independent of the size of the order. I was open to that, but I wasn't looking forward to going country by country figuring out. With flat pricing, we also lose out if someone orders 10 items because they'd still be paying the shipping fee for a single item, but if they're spending $3-4k on an order, I'm fine losing $100 on postage.
-
-They said I had to upgrade my account. I had to go from my $105/month Shopify plan to a whopping $399/month plan, making Shopify TinyPilot's most expensive cloud service. I make some of my money back because the high-tier plan reduces credit card fees by 0.2%. Using TinyPilot's revenue from last year, the fee discounts would have translated to about $2k less in credit card processing fees, so I'm at least getting back some of the $4,800/year I'm spending on this ridiculous plan.
-
-### Why do I feel like the first Shopify client?
-
-For the integration, I was surprised it was so complicated. I asked why they didn't have a process for integrating Shipstation, and they said that everyone else just hands over their admin password. She said most of their clients don't consider themselves highly technical, so they're not as concerned with password sharing.
-
-Another issue we ran into was real-time shipping costs. Currently, if you purchase a TinyPilot product, the Shopify checkout flow shows you
 
 ## How elastic is the demand for TinyPilot?
 
