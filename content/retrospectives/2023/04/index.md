@@ -62,7 +62,9 @@ Sales have been strong the past few months. I think switching from a 3D-printed 
 
 My goal for the year was to reach $100k in profit, but it looks like I could exceed that goal by the end of April.
 
-## Interesting edge cases for fulfillment
+## The hiccups in transitioning to a 3PL vendor
+
+### Interesting edge cases for fulfillment
 
 1. Customer emails us to say they mistyped their shipping address
 1. Customer emails us to say they ordered but they're having second thoughts
@@ -115,6 +117,11 @@ When I increased TinyPilot's price to slow down sales volume, it accidentally yi
 | Mar. 7 - Mar. 12  | $399                   | 34 (5.7/day)           | $498                 | 15 (2.5/day)         |
 | Mar. 13 - Mar. 19 | $429                   | 16 (2.3/day)           | $528                 | 9 (1.3/day)          |
 | Mar. 20 - Mar. 30 | $429                   | 49 (4.5/day)           | $558                 | 13 (1.2/day)         |
+
+{{<gallery caption="TinyPilot's sales volume didn't change significantly as I increased prices.">}}
+{{<img src="elasticity-usbc.png" has-border="true" max-width="450px" alt="Graph of price elasticity for TinyPilot Voyager 2a (USB-C)">}}
+{{<img src="elasticity-poe.png" has-border="true" max-width="450px" alt="Graph of price elasticity for TinyPilot Voyager 2a (PoE)">}}
+{{</gallery>}}
 
 It's too small a sample to make any big claims, but it suggests that TinyPilot's customers are less sensitive to price than I expected. Especially for the PoE model, customers bought at roughly the same rate even when I raised the price by $80 (17%).
 
