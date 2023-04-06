@@ -253,6 +253,8 @@ Sun Apr 29 11:20:11 2018 -0400  Initial commit
 
 Granted, from the commits, it looks like a marathon coding session where I worked from Sunday morning until 1 AM Monday, so the original probably took around 14 dev hours. That makes the speedup more like 2.3x.
 
+So, I'm not _that_ much faster than I was five years ago, but I'm proud of being able to recognize a new opportunity to simplify by skipping the database. I'm also glad that I'm continuing to learn new technologies so that I have more solutions available to me than I did in the past.
+
 ## Wrap up
 
 ### What got done?
