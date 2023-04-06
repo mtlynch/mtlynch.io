@@ -569,3 +569,7 @@ h4:hover .hanchor {
   color: black;
   text-decoration: none;
 }
+
+table + .img {
+  margin-top: 3rem;
+}
