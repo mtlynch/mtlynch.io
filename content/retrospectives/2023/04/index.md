@@ -28,7 +28,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Our 3PL vendor has been fulfilling Power Connector orders for three weeks.
 - **Grade**: A
 
-There were a few hiccups to work through, but the transition process went about how I expected.
+There were a rough edges to smooth out, but we successfully transitioned our first product.
 
 ### Present at [NERD Summit 2023](https://nerdsummit.org/)
 
@@ -42,7 +42,7 @@ It was fun to be back at NERD Summit in person for the first time since 2019. Th
 - **Result**: This was mostly successful but hard to measure.
 - **Grade**: B
 
-I took on as many customer support tickets as I could for a week to free up their time.
+In order to transition to the 3PL, we needed to free up the local team's workload enough that they could build an extra week's worth of devices for the 3PL. We took several measures to reduce their load, though they also worked more hours than usual.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -247,11 +247,5 @@ So, I'm not _that_ much faster than I was five years ago, but I'm proud of being
 - Publish a new release of TinyPilot Pro.
 
 ### Requests for help
-
-{{<notice type="info">}}
-
-I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
-
-{{</notice>}}
 
 If you or someone you can convince to talk to me has worked with contract manufacturers on a hardware product, I'd love to talk about the experience. I'm especially interested in people who have worked on an electronics product at low volumes, like 2,000-5,000 units per year.
