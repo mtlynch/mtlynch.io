@@ -26,6 +26,7 @@ function join_by {
 # Ignore the following URLs because they get 403 errors from CI intermittently.
 IGNORE_PATTERNS=()
 IGNORE_PATTERNS+=("/ark.intel.com/")
+IGNORE_PATTERNS+=("/help.shipstation.com/")
 IGNORE_PATTERNS+=("/indiebound.org/")
 IGNORE_PATTERNS+=("/vimeo.com/")
 IGNORE_PATTERNS+=("/upwork.com/")
