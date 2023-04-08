@@ -25,8 +25,6 @@ TODO: Short summary
 
 liked
 
-• • •
-
 Disliked
 
 - Careless grammar and spelling errors,
@@ -37,7 +35,6 @@ Disliked
 - Fairly theoretical - would have liked to see more evidence that his policies work in practice
 - Conclusions from using value per acre seen to be measuring the wrong thing.
 - If poor neighborhoods outperform rich neighborhoods in finance' productivity, why do poor towns struggle to pay for services and rich towns don't?
-  • • •
 
 Takeaways
 
@@ -48,7 +45,6 @@ Pompeii as model city
 - The restaurant had many characteristics that made it adaptive to different conditions. Living quarters mean that parents can attend to children while working
 - One parent can work. elsewhere while the other mind, the shop,
 - Restaurant is on the edge of town, so the restaurant owners (and all shopkeepers) have incentive
-  • • •
 
 to help the town as a whole grow because an expanded city increase value of their business
 
@@ -60,7 +56,6 @@ to help the town as a whole grow because an expanded city increase value of thei
 - e. g. , a mechanical watch is complicated, but predictable
 - Cities are both complicated and complex
 - they contain interrelated systems that are difficult to predict
-  • • •
 
 - Complex systems are fragile and need flexibility to adapt in order to survive.
 - people traditionally manage cities with zoning for ease of legislation, but zoning is too simple and limits tap the city from adapting naturally
@@ -69,7 +64,6 @@ to help the town as a whole grow because an expanded city increase value of thei
   Evolution of Brainerd, MN
 
 - Author found a photo of Brainerd, MN this hometown) in its early days. "There are a set of makeshift ads stores but no real road.
-  • • •
 
 - 30 years later, there were roads, and the makeshift stores were replaced by well-constructed to 2-3 strey buildings,
 - 30 years after that, the wood buddy would be replaced by store buildings.
@@ -79,7 +73,6 @@ to help the town as a whole grow because an expanded city increase value of thei
 - The private sector bears the risk
 - Modern city planning makes big bets on the public side
 - The public makes huge investments in infrastructure before private
-  • • •
 
 M.
 
@@ -93,7 +86,6 @@ move
 - Several factors prevent houses from evolving
 - Zoning laws often forbid turning a single family house into a multi-family house or a business. + land covenants, building regulations, property associations
 - Building regulations increase
-  • • •
 
 the cost, time, and difficulty of modifying a house
 
@@ -107,7 +99,6 @@ Property value -Building value + Land value
 - The amount you'd invest in a building is a function of the value of the land underneath.
 - e. g. the value of a 410m building in downtown Manhattan is far more than Som ble Manhattan has such valuable land.
 - the value of a $10 M building placed in outer Detroit is colon. Sugg which indicates the land has negative value.
-  • • •
 
 - Yo,'d never buy land in Manhattan to park a mobile home because there are much more lucrative structures to put on such valuable land.
 - When building value is high relative to the land, it drives up the value of the surrounding land
@@ -115,7 +106,6 @@ Property value -Building value + Land value
 - When building value is low relative to land value, there's redevelopment pressure
 - e. g. , if a small home is in an expensive neighborhood , it's profitable to tear it down or expand the building. .
 - This guides natural growth of cities. I. A few people build shacks
-  • • •
 
 together in a new area. 2- . More people join then and build
 
@@ -131,7 +121,6 @@ owners to renovate their shacks into better structures.
 - The flaw in this pattern is that it limits social mobility.
 - As a town is growing, poorer residents can grow with it.
 - Once a city reaches maturity, land is only affordable to the entrenched
-  • • •
 
 elites.
 
@@ -143,7 +132,6 @@ Enter Cars
 - Tons of new land opened up for housing.
 - Cars upended the traditional pattern for growing and sustaining cities.
 - As land values in city centers dropped, there was insufficient try revenue to pay for maintenance.
-  • • •
 
 Public & Private investment
 
@@ -160,7 +148,6 @@ Case study: Brainerd
 - Public investment precedes private investment
 - Government takes on most of the risk
 - When private developers make initial investment, government still often
-  • • •
 
 finances the deal, making them
 
@@ -173,7 +160,6 @@ take on the risk if development fails.
 
 - A city must earn a profit in the long term to continue existing
 - A city that has at a defeat long-term will begin to far.) in the services it's supposed to provide
-  • • •
 
 - Cities make investments that must earn a return.
 - If a city invests 5) IM in repairing a street , the street must generate> slim ove its lifetime for the investment to be worthwhile
@@ -181,7 +167,6 @@ take on the risk if development fails.
 - Traditional cities invested heavily in government buildings like city halls.
 - Current strategy is to build city hall in a cheap office building with lots of parking,
 - An opulent city hall increased the value of the surrounding land and earned a return on investment From greater tax revenue from the neighborhood,
-  • • •
 
 - Infrastructure does not cover costs.
 - In the author's role as engineer, he began calculating return on investment for various projects his firm was involved in.
@@ -193,7 +178,6 @@ take on the risk if development fails.
 - The city does not benefit financially from job creation because in-meter go to the state, not local government
 - Job City us House City
 - 1,000 people live is House City, but every day they all commute to Job city to
-  • • •
 
 work in small tents.
 
@@ -205,7 +189,6 @@ work in small tents.
 
 - Cash flow will be positive for first 15- 20 years as city collects tax revenue from new residents.
 - As soon as development requires maintenance (e.g. road repair, sewage repair), cash flow goes severely negative because infrastructure built around the same time will require repair around the same time,
-  • • •
 
 - Cities try to solve the cash flow problem by soliciting ne - development, but that just delays & intensifies the problem. study: Detroit
 - Case
@@ -215,7 +198,6 @@ work in small tents.
 - Detroit spread residents out to the suburbs and ran roadways through cities,
 - This created more infrastructure maintenance costs then the city could afford..
 - When wealthy people saw the city start to collapse under growing maintenance costs, they fled
-  • • •
 
 to cities that were still in the growth part of their lifecycle.
 
@@ -227,7 +209,6 @@ to cities that were still in the growth part of their lifecycle.
 - Failure to Act
 - In their 2011 report, failure to Act, the ASCE made illogical Claims about America's need to invest in infrastructure.
 - Report claimed that weaknesses is infrastructure would cost SIT over the next 10 yrs.
-  • • •
 
 - Recommended that US spend an extra $220 Blye to prevent infrastructure from deteriorating,
 - i. e., US should spend $2.25 to avoid a loss of $ IT.
@@ -242,7 +223,6 @@ overstated.
 - Median
 - Road generates $XX per day . $xX per year
 - Flaws
-  • • •
 
 - Ignores time lost due to construction and maintenance.
 - People don't necessarily use an e-ta 30s to work more.
@@ -253,7 +233,6 @@ overstated.
 - According to generally accepted accounting principles, infrastructure is considered an asset,
 - This makes no sense because a city can't sell a road and it doesn't directly earn revenue from it.
 - Even though the city earns reverse from properties in its city, the tax base does not count as an asset.
-  • • •
 
 - Cities are incentivized to add infrastructure because it will make their balance sheets look stronger, even though, in reality, infrastructure drains money.
   Post WWII
@@ -264,7 +243,6 @@ overstated.
   Funding growth through debt
 
 - After the economy slowed down following the 50's, cities took on debt as a way to find
-  • • •
 
 growth,
 
@@ -277,7 +255,6 @@ growth,
 - 160% increase in average inflation adjusted income
 - Old & blighted us. new & shiny
 - In author's hometown, there are two similar blocks close to each
-  • • •
 
 other.
 
@@ -289,7 +266,6 @@ other.
 - old generates 77% more revenue.
 - Impact on community
 - Businesses in the old block hire employees locally and use local vendors for things like accounting, sign making, legal services.
-  • • •
 
 - New block's franchise would,'t give author information, but they likely created fewer full-time jobs and use out-of-state vendors for most services.
 - Tap incentives
@@ -300,15 +276,12 @@ other.
 
 would ever generate, and thy can't even start collecting taxes from the new block for Zot years.
 
-• • •
-
 - Big box stores us, downtown businesses
 - In author's town , a big box tore along the highway is the largest single taxpayer in the city.
 - They have a large influence over politics.
 - City built the infrastructure f. the big box store using large federal grants, but maintenance will be expensive,
 - IF the big box store vacates the location, the replacement will likely be something that generates less tax revenue (e.g, warehouse, church), but the city stil bears the high mainbrace cost.
 - Comparing the big boy location to downtown businesses, the
-  • • •
 
 businesses collectively generate similar revenue but require less infrastructure to mashtsin.
 
@@ -318,7 +291,6 @@ businesses collectively generate similar revenue but require less infrastructure
 - Author advocates using value per acre as an approximation for return on investment.
 - He claims it's lox faster to calculate and usually correlates with the result of a more rigorous ROI analysis.
 - Comparing a Walmart in Asheville to a downtown building, the downtown building generates look more property day per acre
-  • • •
 
 and 76% more sales tax.
 
@@ -330,7 +302,6 @@ and 76% more sales tax.
 - Plan for budgeting maintenance
 - Most cities prioritize maintenance based on age of infrastructure and how severely it needs maintenance.
 - Most cities run at a deficit, so they can't really maintain all of their infrastructure.
-  • • •
 
 - Author proposes that cities spend all of their maintenance budget obsessively maintaining area, with highest value per ace.
 - Obsessive like Disney world maintains their parks,
@@ -338,7 +309,6 @@ and 76% more sales tax.
 - Residents will respond to public investment with private investment because they have more confidence the city will continue investing in them,
 - Infrastructure will fail is low value per acre areas, causing these neighborhoods to contract.
 - This is a calculated loss, as the cities have to forfeit some land to return to the point
-  • • •
 
 where the tax base is enough to sustainably fund ongoing maintenance.
 
@@ -352,7 +322,6 @@ where the tax base is enough to sustainably fund ongoing maintenance.
 - 3.  20 - story building worth $10 M
 - What is the make of (2) 7.
 - A slum property implies the
-  • • •
 
 underlying property is worth around $1. 5M.
 
@@ -362,7 +331,6 @@ underlying property is worth around $1. 5M.
 - In reality, slum buildings exist next to $ wok homes, so how can that be?.
 - Development is artificially limited by regulation.
 - It's roughly the same regulatory difficulty to build a Z- story building as a 5-story building, so development is pushed to the extremes.
-  • • •
 
 - Development can't follow -free market forces, so expensive build, appear seemingly at random, often due to corrypt connections between developers and regulators.
 - Subsidiarity
@@ -371,7 +339,6 @@ underlying property is worth around $1. 5M.
 - Absurd for the federal government to make this decision,
 - Decision only affects a few immediate neighbors around the house.
 - Ideal is if the neighbors talk and make a decision amongst themselves, without a formal law,
-  • • •
 
 - Next step up would be local government helps the neighbors reach a decision, but without a law.
 - Next step up would be the lot.) town passing a law about backyard chickens,
