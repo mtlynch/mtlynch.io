@@ -7,7 +7,7 @@ set -e
 # Exit on unset variable.
 set -u
 
-BUILD_DIR=public
+readonly BUILD_DIR="public"
 
 # Skips validation checks that take a long time.
 htmlproofer_args_extra=""
@@ -26,6 +26,8 @@ function join_by {
 # Ignore the following URLs because they get 403 errors from CI intermittently.
 IGNORE_PATTERNS=()
 IGNORE_PATTERNS+=("/ark.intel.com/")
+IGNORE_PATTERNS+=("/help.shipstation.com/")
+IGNORE_PATTERNS+=("/indiebound.org/")
 IGNORE_PATTERNS+=("/vimeo.com/")
 IGNORE_PATTERNS+=("/upwork.com/")
 IGNORE_PATTERNS+=("/www.amd.com/")
@@ -35,31 +37,34 @@ IGNORE_PATTERNS+=("/servernope.com/")
 IGNORE_PATTERNS+=("/gusto.com/")
 IGNORE_PATTERNS+=("/vmware.com/")
 IGNORE_PATTERNS+=("/medium.com/")
+IGNORE_PATTERNS+=("/opensource.org/")
 IGNORE_PATTERNS+=("/pcpartpicker.com/")
 IGNORE_PATTERNS+=("/typeform.com/")
 IGNORE_PATTERNS+=("/www.sciencedirect.com/")
-IGNORE_PATTERNS+=("/developer.github.com/")
+IGNORE_PATTERNS+=("/github.com/")
 IGNORE_PATTERNS+=("/docs.github.com/")
 IGNORE_PATTERNS+=("/calculator.aws/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
 # Run HTMLProofer
-htmlproofer "$BUILD_DIR" \
+htmlproofer \
   --only-4xx \
-  --check-favicon \
-  --check-html \
-  --check-opengraph \
+  --checks 'Links,Images,Scripts,Favicon,OpenGraph' \
+  --allow-missing-href \
   --allow-hash-href \
-  --empty-alt-ignore \
-  --file-ignore "public/collect-debt/full-emails/index.html" \
+  --ignore-empty-alt \
+  --ignore-missing-alt \
+  --ignore-files "public/collect-debt/full-emails/index.html" \
   `# Swap URLs https://mtlynch.io/ for / so that htmlproofer checks the local` \
   `# build rather than the production URLs. At the time this check runs, the` \
   `# site has not yet deployed, so htmlproofer shouldn't try to hit the real` \
   `# mtlynch.io server to verify that URLs are present.` \
-  --url-swap "https\://mtlynch.io/:/" \
-  --url-ignore "${URL_IGNORE}" \
+  --swap-urls "https\://mtlynch.io/:/" \
+  --ignore-urls "${URL_IGNORE}" \
   `# Some sites return HTTP 400/429 - No Error when HTMLProofer sends ` \
   `# requests, so ignore those.` \
-  --http-status-ignore "400,429" \
-  "$htmlproofer_args_extra"
+  --ignore-status-codes "400,429" \
+  --no-enforce-https \
+  "$htmlproofer_args_extra" \
+  "${BUILD_DIR}"

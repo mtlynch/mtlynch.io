@@ -239,4 +239,4 @@ Zestful saw a big bump this month from a new customer who made around $700 in re
 
 ---
 
-**\*Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees.\*
+_**Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees._

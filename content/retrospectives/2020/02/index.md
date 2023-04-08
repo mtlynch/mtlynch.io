@@ -182,7 +182,7 @@ This obviously doesn't scale, but it's fine up to ~10k records. Similarly, if an
 - Commissioned a logo for WanderJest.
 - Included ~80% of the local comedy shows on WanderJest, but probably only ~20% of the active performers.
 - Added support for user-generated show recommendations on WanderJest (basically, user reviews).
-- Published my blog post ["My Second Year as a Solo Developer,"](/solo-developer-year-2/) which [reached #1 on Hacker News](http://hnrankings.info/22201337).
+- Published my blog post ["My Second Year as a Solo Developer,"](/solo-developer-year-2/) which [reached #1 on Hacker News](https://hnrankings.info/22201337).
   - I've had unusually good luck with Hacker News recently, reaching the front page three times in six weeks.
 - What Got Done got a huge surge in new users because of the Hacker News attention.
 - I [migrated this blog from Jekyll to Hugo](https://twitter.com/deliberatecoder/status/1213965436095803392), making it 10x easier for me to use.

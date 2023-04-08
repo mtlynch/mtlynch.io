@@ -172,14 +172,9 @@ One day in June, I jokingly texted my sister that I should cut my spending by mo
 
 The more I thought about it, the more sense it made. It was close to my family, I enjoyed spending time there, and the cost of living was tiny compared to New York.
 
-So in August, I bought a modest two-bedroom home in South Hadley, Massachusetts. Population: 17,500.
+In August, I bought a modest two-bedroom home in Western Massachusetts. My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium.
 
-{{< gallery caption="If you're worried about money, just buy a house.">}}
-{{<img src="house-front.jpg" alt="My house, front view">}}
-{{<img src="house-angle.jpg" alt="My house, side view">}}
-{{</ gallery >}}
-
-My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium. I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
+I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
 
 ## I want to do this forever
 
@@ -188,7 +183,7 @@ People have asked me if I'm still happy with my decision to quit and start my ow
 As someone who has always valued independence, I love being a solo developer. It makes a world of difference to wake up whenever I want and make my own choices about how to spend my entire day. This is how I want to live the rest of my life.
 
 {{<notice type="info">}}
-**\*Sidenote**: My friends with children tell me that kids won't complicate this at all.\*
+_**Sidenote**: My friends with children tell me that kids won't complicate this at all._
 {{< /notice >}}
 
 ## Doubts
@@ -215,7 +210,7 @@ At the end of each week, I spend 30-60 minutes writing down everything I accompl
 
 This works on a monthly level as well. At the beginning of each month, I publish retrospectives in which I reassess my strategy and set objectives for the coming month (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)).
 
-Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (**\*Note**: wild popularity still pending\*).
+Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (_**Note**: wild popularity still pending_).
 
 ### Set goals
 

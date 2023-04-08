@@ -53,9 +53,9 @@ Instead, I've always used Google-managed datastores like Cloud Datastore, Fireba
 
 ## Litestream: the serverless database server
 
-A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular [Bolt database](https://github.com/boltdb/bolt), had taken on a new project: [Litestream](http://litestream.io). It's a simple, open-source tool that replicates a SQLite database to Amazon's S3 cloud storage.
+A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular [Bolt database](https://github.com/boltdb/bolt), had taken on a new project: [Litestream](https://litestream.io). It's a simple, open-source tool that replicates a SQLite database to Amazon's S3 cloud storage.
 
-{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." max-width="700px" has-border="true">}}
+{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](https://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." max-width="700px" has-border="true">}}
 
 It seemed neat, but I wasn't particularly excited about it. I never use SQLite, so what did I care?
 

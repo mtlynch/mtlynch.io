@@ -5,5 +5,4 @@ resources/
 static/third-party/
 
 # TODO: Make these play nicely with prettier
-layouts/partials/
 layouts/shortcodes/

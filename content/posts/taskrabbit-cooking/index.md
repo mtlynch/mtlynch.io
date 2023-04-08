@@ -32,7 +32,7 @@ I've used TaskRabbit to find apartment cleaners and a handyman to wall-mount my 
 
 Since I was approaching this as a way to save time, I figured the way to save the _most_ time would be if the TaskRabbit not only did the cooking, but the shopping as well. Shopping is a common task on TaskRabbit, and the workers can invoice clients for reimbursement.
 
-My trial recipes were [Bacon Wrapped Stuffed Pork Tenderloin](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) and [Neapolitan Fat Bombs](http://www.ruled.me/neapolitan-fat-bombs/). I didn't have many of the ingredients on hand, so it seemed like it would be simple to just say, "buy everything except for salt, olive oil, and pepper."
+My trial recipes were [Bacon Wrapped Stuffed Pork Tenderloin](https://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) and [Neapolitan Fat Bombs](https://www.ruled.me/neapolitan-fat-bombs/). I didn't have many of the ingredients on hand, so it seemed like it would be simple to just say, "buy everything except for salt, olive oil, and pepper."
 
 ## Not so much...
 
@@ -91,43 +91,43 @@ The tables below show my full costs for each cooking session. I bought all the i
 
 #### Session 1
 
-| Item                                                                                                             | Cost        |
-| ---------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Bacon Wrapped Stuffed Pork Tenderloin (4 servings)](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) | $26.69      |
-| [Neapolitan Fat Bombs (24 servings)](http://www.ruled.me/neapolitan-fat-bombs/)                                  | $19.30      |
-| Labor (2 hrs, 15 mins)                                                                                           | $62.88      |
-| **Total**                                                                                                        | **$108.87** |
+| Item                                                                                                              | Cost        |
+| ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Bacon Wrapped Stuffed Pork Tenderloin (4 servings)](https://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) | $26.69      |
+| [Neapolitan Fat Bombs (24 servings)](https://www.ruled.me/neapolitan-fat-bombs/)                                  | $19.30      |
+| Labor (2 hrs, 15 mins)                                                                                            | $62.88      |
+| **Total**                                                                                                         | **$108.87** |
 
 #### Session 2
 
-| Item                                                                                                                           | Cost        |
-| ------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| [Applewood Seared Pork Chops (4 servings)](http://www.ruled.me/applewood-seared-pork-chops/)                                   | $13.39      |
-| [Garlic and Bacon Brussels Sprouts (4 servings)](http://www.ruled.me/garlic-and-bacon-brussels-sprouts/)                       | $10.11      |
-| [Ultimate Keto Chocolate Brownies (16 servings)](http://ketodietapp.com/Blog/post/2015/12/21/ultimate-keto-chocolate-brownies) | $24.14      |
-| Labor (2 hrs, 15 mins)                                                                                                         | $62.88      |
-| **Total**                                                                                                                      | **$110.51** |
+| Item                                                                                                                            | Cost        |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Applewood Seared Pork Chops (4 servings)](https://www.ruled.me/applewood-seared-pork-chops/)                                   | $13.39      |
+| [Garlic and Bacon Brussels Sprouts (4 servings)](https://www.ruled.me/garlic-and-bacon-brussels-sprouts/)                       | $10.11      |
+| [Ultimate Keto Chocolate Brownies (16 servings)](https://ketodietapp.com/Blog/post/2015/12/21/ultimate-keto-chocolate-brownies) | $24.14      |
+| Labor (2 hrs, 15 mins)                                                                                                          | $62.88      |
+| **Total**                                                                                                                       | **$110.51** |
 
 #### Session 3
 
 | Item                                                                                                                      | Cost        |
 | ------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Creamy Spinach Pork Tenderloin Roulade (4 servings)](http://www.ruled.me/creamy-spinach-pork-tenderloin-roulade/)        | $15.02      |
+| [Creamy Spinach Pork Tenderloin Roulade (4 servings)](https://www.ruled.me/creamy-spinach-pork-tenderloin-roulade/)       | $15.02      |
 | [Green Beans with Olive Oil (4 servings)](http://www.epicurious.com/recipes/food/views/green-beans-with-olive-oil-233987) | $4.08       |
-| [Delicious Chocolate Keto Brownies (16 servings)](http://www.ruled.me/chocolate-keto-brownies/)                           | $9.08       |
-| [Neapolitan Fat Bombs (24 servings)](http://www.ruled.me/neapolitan-fat-bombs/)                                           | $19.30      |
+| [Delicious Chocolate Keto Brownies (16 servings)](https://www.ruled.me/chocolate-keto-brownies/)                          | $9.08       |
+| [Neapolitan Fat Bombs (24 servings)](https://www.ruled.me/neapolitan-fat-bombs/)                                          | $19.30      |
 | Labor (3 hours)                                                                                                           | $83.85      |
 | **Total**                                                                                                                 | **$131.33** |
 
 #### Session 4
 
-| Item                                                                                              | Cost        |
-| ------------------------------------------------------------------------------------------------- | ----------- |
-| [Simple Chicken Parmesan (4 servings)](http://www.ruled.me/simple-chicken-parmesan/)              | $30.11      |
-| [Cheesy Creamed Spinach (4 servings)](http://www.ruled.me/cheesy-creamed-spinach/)                | $8.86       |
-| [Raspberry Cheesecake Cupcakes (12 servings)](http://www.ruled.me/raspberry-cheesecake-cupcakes/) | $15.03      |
-| Labor (2 hours)                                                                                   | $55.90      |
-| **Total**                                                                                         | **$109.89** |
+| Item                                                                                               | Cost        |
+| -------------------------------------------------------------------------------------------------- | ----------- |
+| [Simple Chicken Parmesan (4 servings)](https://www.ruled.me/simple-chicken-parmesan/)              | $30.11      |
+| [Cheesy Creamed Spinach (4 servings)](https://www.ruled.me/cheesy-creamed-spinach/)                | $8.86       |
+| [Raspberry Cheesecake Cupcakes (12 servings)](https://www.ruled.me/raspberry-cheesecake-cupcakes/) | $15.03      |
+| Labor (2 hours)                                                                                    | $55.90      |
+| **Total**                                                                                          | **$109.89** |
 
 {{<img src="cooking-costs.png" alt="ProsperBot screenshot" max-width="750px" has-border="true">}}
 
@@ -139,7 +139,7 @@ TaskRabbit cooking has taken the place of restaurant delivery for me. I still co
 
 In my case, the cost for TaskRabbit home cooking is roughly equal to the cost of ordering delivery.
 
-In Session 4, for example, the cost works out to around $20 for each entr&eacute;e and $2.50 for each dessert (the [cheesecake cupcakes](http://www.ruled.me/raspberry-cheesecake-cupcakes/) were _amazing_, by the way). That cost assumes optimal use of ingredients, so in practice, it's probably $1-2 higher per meal.
+In Session 4, for example, the cost works out to around $20 for each entr&eacute;e and $2.50 for each dessert (the [cheesecake cupcakes](https://www.ruled.me/raspberry-cheesecake-cupcakes/) were _amazing_, by the way). That cost assumes optimal use of ingredients, so in practice, it's probably $1-2 higher per meal.
 
 With restaurant delivery, I tend to spend around $10-20 on lunches and $15-30 on dinners, including tax, tip, and fees. Overall, I'd say it's a wash between the two.
 

@@ -181,7 +181,7 @@ A great way to make an author feel good about the review process is to find oppo
 
 If you lighten the author's load by writing out some of the changes you're suggesting, you demonstrate that you are generous with your time as a reviewer.
 
-For example, imagine that you have a colleague who is not familiar with the [list comprehensions](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/) feature of Python. They send you a code review that includes these lines:
+For example, imagine that you have a colleague who is not familiar with the [list comprehensions](https://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/) feature of Python. They send you a code review that includes these lines:
 
 ```python
 urls = []

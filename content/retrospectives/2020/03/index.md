@@ -197,7 +197,7 @@ After the blog post about [my second anniversary as a solo developer](/solo-deve
 
 At first, WakaTime didn't sound like something I'd want, but then I realized it could answer a question I've had for a long time: how long do I spend writing this blog? I find writing to be incredibly valuable, but I also need to be mindful of its significant time cost.
 
-Long ago, I experimented with tools like [RescueTime](https://www.rescuetime.com) but promptly stopped when it dawned on me that I was basically installing a spyware tool that sent everything on my screen to an untrusted company. I like WakaTime because the client software is [open source](https://github.com/wakatime/wakatime), and they treat privacy as a first-class concern. It doesn't record any sensitive information except for filenames in your code editor, and even those you can obfuscate or exclude client-side. I do my coding in dedicated virtual machines for each project, so WakaTime only has access to specific projects where I install the tool.
+Long ago, I experimented with tools like [RescueTime](https://www.rescuetime.com) but promptly stopped when it dawned on me that I was basically installing a spyware tool that sent everything on my screen to an untrusted company. I like WakaTime because the client software is [open source](https://github.com/wakatime), and they treat privacy as a first-class concern. It doesn't record any sensitive information except for filenames in your code editor, and even those you can obfuscate or exclude client-side. I do my coding in dedicated virtual machines for each project, so WakaTime only has access to specific projects where I install the tool.
 
 This is the first post I've written since installing WakaTime, and I can see that it took me 7 hours and 12 minutes to write (including updating [the script I use](https://github.com/mtlynch/make-mtlynch-stats) to spit out my stats tables). That's pretty close to what I expected. I generally dedicate half of the first two days of the month to writing my retrospective post, so that feels like the right amount of time.
 
@@ -207,7 +207,7 @@ I'm liking WakaTime more than expected, and I'm even considering it for my non-b
 
 ### DK the Human
 
-[DK](https://www.dkthehuman.com) is an indie developer working on a Chrome extension called [Hide Feed](https://www.hidefeed.com/), which helps you control distractions on social media sites. Every day, he updates his [daily log](https://www.notion.so/ae3a709e9e2145239cec77eef5b37f2a?v=79be77df48454dc393f69902f8aa9e96) to share progress on his business or to think through a problem. If you want a peek into the day-to-day life of a solo developer, his blog is illuminating.
+[DK](https://www.dkthehuman.com) is an indie developer working on a Chrome extension called [Hide Feed](https://www.hidefeed.com/), which helps you control distractions on social media sites. Every day, he updates his [daily log](https://dkthehuman.notion.site/ae3a709e9e2145239cec77eef5b37f2a?v=79be77df48454dc393f69902f8aa9e96) to share progress on his business or to think through a problem. If you want a peek into the day-to-day life of a solo developer, his blog is illuminating.
 
 DK kindly made a "Feedback Friday" video for my tool, [What Got Done](https://whatgotdone.com), in which he recorded himself using the website for the first time and narrating his thought process aloud to identify parts of the app that are confusing or need improvement:
 

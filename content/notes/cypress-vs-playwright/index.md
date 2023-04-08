@@ -46,7 +46,7 @@ I've written Cypress end-to-end tests for almost every web app I've built in the
 
 I've used Playwright for only one day. To get my hands dirty, I tried porting a test suite of one of my apps from Cypress to Playwright. I chose [PicoShare](https://github.com/mtlynch/picoshare), my minimalist file-sharing tool, which has just 10 end-to-end tests. I was able to [port them all from Cypress to Playwright](https://github.com/mtlynch/picoshare/pull/340) in about five dev hours, including the time it took to learn Playwright's APIs.
 
-I've never paid money for Cypress or Playwright, so I'm entitled to anything from either tool. Cypress has a paid SaaS component, but I've never purchased it, as it doesn't fit into my workflow. I would have happily sponsored Cypress, as I do other open-source projects I use, but Cypress doesn't offer any sponsorship options.
+I've never paid money for Cypress or Playwright, so I'm not entitled to anything from either tool. Cypress has a paid SaaS component, but I've never purchased it, as it doesn't fit into my workflow. I would have happily sponsored Cypress, as I do other open-source projects I use, but Cypress doesn't offer any sponsorship options.
 
 ## What I like about Playwright
 
@@ -403,7 +403,7 @@ Unfortunately, Playwright's report viewer [doesn't work on CircleCI](https://git
 
 In a pattern I've only ever seen in end-to-end testing tools, the official Docker images for Cypress and Playwright don't actually contain the tools themselves. That is, the Cypress Docker image does not contain Cypress, and the Playwright Docker image doesn't contain Playwright.
 
-Instead, the Docker images contain the _dependencies_ you need to install Playwright or Docker respectively. So when you're running the Playwright Docker image, you still have to install Playwright as part of your environment setup.
+Instead, the Docker images contain the _dependencies_ you need to install Cypress or Playwright, respectively. So when you're running the Playwright Docker image, you still have to install Playwright as part of your environment setup.
 
 There must be some good reason for this, but I've never understood it. When I [complained about this to the Cypress team](/painless-web-app-testing/#further-reading), they added a special [cypress/included](https://hub.docker.com/r/cypress/included) image that contains the Cypress tool itself. There doesn't seem to be an equivalent Docker image for Playwright.
 

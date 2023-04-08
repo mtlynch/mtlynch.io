@@ -20,7 +20,7 @@ Freelancers work well if you manage the relationship properly, but there are hun
 
 The document below explains what it's like to work with me as a freelance developer. I include it in every dev job listing I publish, and I pay contractors to read it closely after we begin working together. It attracts candidates with compatible working styles and reduces ramp-up time after I hire them.
 
-I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
+I'm publishing my guidelines under the [Creative Commons BY-4.0 license](https://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
 
 ---
 
@@ -276,7 +276,7 @@ I use Git for source control. You don't need to be a Git expert as long as you u
 
 ### Github permissions
 
-I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can clone it and begin making pull requests with no additional permissions.
+I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can fork it and begin making pull requests with no additional permissions.
 
 I use two Github integrations that require annoyingly broad permissions: [CircleCI](https://circleci.com/) and [Reviewable](https://reviewable.io/). Both applications require write access to all repos in your Github account. If you don't feel comfortable with those permissions, you'll need to create a dedicated Github user account for your work with me so that you can grant those tools full access.
 
