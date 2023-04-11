@@ -18,11 +18,17 @@ My main uses are:
 
 Recent trip, Surface Pro 6 couldn't handle running two small Docker containers. Limited by 8 GB of RAM and 128 GB of SSD.
 
-## Why System76?
+## I'm tired of Windows
+
+I grew up on Windows. I've been using it since Windows 3.1. All of my personal computers have been Windows. My first job out of college was as a developer at Microsoft working on Windows.
 
 Windows is going down a dark path. I'm seeing a trend more and more the past few years to take control away from the user. I don't like seeing pre-installed apps that I can't get rid of. The start menu is getting worse. I don't like having to constantly fight to turn off telemetry.
 
+## Why System76?
+
 I like that System76 has open-source firmware. I like that they're building a profitable company around Linux for consumers. I've played around with Pop_OS and I think it's cool.
+
+I've seen other bloggers recompile their firmware, and that seems really neat.
 
 ## Options I considered
 
@@ -98,6 +104,14 @@ W: GPG error: https://download.docker.com/linux/ubuntu jammy InRelease: The foll
 E: The repository 'https://download.docker.com/linux/ubuntu jammy InRelease' is not signed.
 N: Updating from such a repository can't be done securely, and is therefore disabled by default.
 ```
+
+## Not much to the BIOS
+
+I was excited to play around with the BIOS.
+
+System76 refuses to output to its external display port during boot. I was curious to see if there was an option in BIOS to change this, but there's not. BIOS seems to expose only one option: the boot order.
+
+So, kind of underwhelming. I was hoping I could fully control my Lemur from my TinyPilot, but if it refuses to use its external HDMI port during boot, that limits the fun of the TinyPilot.
 
 ## Other nits
 
