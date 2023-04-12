@@ -24,6 +24,8 @@ I grew up on Windows. I've been using it since Windows 3.1. All of my personal c
 
 Windows is going down a dark path. I'm seeing a trend more and more the past few years to take control away from the user. I don't like seeing pre-installed apps that I can't get rid of. The start menu is getting worse. I don't like having to constantly fight to turn off telemetry.
 
+https://gizmodo.com/microsoft-windows-11-onedrive-notifications-start-menu-1850327990
+
 ## Why System76?
 
 I like that System76 has open-source firmware. I like that they're building a profitable company around Linux for consumers. I've played around with Pop_OS and I think it's cool.
