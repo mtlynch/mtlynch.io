@@ -73,7 +73,7 @@ Missed the magnetic attachment
 
 I tried to test the camera and found that there was no camera software included.
 
-The OS does natively support capturing screencasts, so that was neat.
+The OS does natively support capturing screencasts, so that was neat. But then I tried actually recording screencasts, and the files seemed to either be corrupt or incomplete. I'd record a one-minute screencast, and then it would produce a webm file with only 12 seconds of recording. OBS worked better.
 
 The first time I tried putting in headphones, I couldn't hear anything. It turned out that they need to be pushed in extra hard.
 
@@ -121,7 +121,7 @@ The fan is extremely loud. My Surface Pro 6 was fanless, and I got spoiled never
 
 Power light is on the opposite side of the power button. I frequently think I pushed the power button, and then nothing happens.
 
-At one point on my first laptop, when I booted, I found it in airplane mode, even though I'd never put it into airplane mode. I disabled airplane mode, and it still couldn't see any WiFi networks. I rebooted, and it hung on some kernel error.
+At one point on my first laptop, when I booted, I found it in airplane mode, even though I'd never put it into airplane mode. I disabled airplane mode, and it still couldn't see any WiFi networks. I rebooted, and it hung on some kernel error. This happened once more when I was doing diagnostics and running a live USB.
 
 Fingerprints show up on the case conspicuously. I don't have particularly oily fingers, but my laptop somehow always looks like detectives have been dusting it for prints.
 
