@@ -58,7 +58,7 @@ There's work that the developers and support engineers can collaborate on, but I
 | Enterprise Subscriptions | $290.70       | $290.70        | 0                                                  |
 | Royalties                | $5,689.93     | $3,935.73      | <font color="red">-$1,754.20 (-31%)</font>         |
 | Total Revenue            | $72,401.15    | $76,811.58     | <font color="green">+$4,410.43 (+6%)</font>        |
-| **Profit**               | **$8,552.79** | **$33,537.97** | **<font color="green">+$24,985.18 (+292%)</font>** |
+| **Profit**               | **$8,552.79** | **$32,905.55** | **<font color="green">+$24,352.76 (+285%)</font>** |
 
 We're in a strange position of growing revenues despite me trying to constrain sales. The fulfillment team doesn't have enough hours to fulfill more orders on top of their other responsibilities. It could just be that word of mouth always drives our sales up, or it could be that more customers are buying because of the additional features we added in the last couple of months.
 
