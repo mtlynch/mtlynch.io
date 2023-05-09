@@ -15,7 +15,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- The local team is escaping their months-long stint in "urgent mode."
 
 ## Goal Grades
 
@@ -80,7 +80,7 @@ The transition to the 3PL went pretty smoothly, but there are definitely things 
 
 ## Getting out of &ldquo;urgent mode&rdquo;
 
-Even after outsourcing fulfillment to the 3PL, we couldn't relax as much as I'd hoped. With only a few days of inventory at the warehouse, the team was still scrambling to keep building devices and replenish the 3PL vendor's stock.
+Even after outsourcing fulfillment to the 3PL, we couldn't relax as much as I'd hoped. With only a few days of inventory at the warehouse, the team was still scrambling to build new devices and replenish the 3PL vendor's stock.
 
 I felt like we'd be able to relax when we reached the point of having a month's worth of inventory at the 3PL. I did some quick spreadsheet calculations and estimated that it would take us until July to reach that point.
 
@@ -96,9 +96,11 @@ Hired a new employee at the office.
 
 ## What price maximizes profits?
 
-For the past two months, I've been increasing TinyPilot's price to reduce sales volume. We didn't have enough time to fulfill orders at the rate we were receiving them. As a side effect, I got interesting data about how
+For the past two months, I've been increasing TinyPilot's price to reduce sales volume. I intentionally priced TinyPilot high so that we'd reduce total sales and have more time to catch up on inventory.
 
-Last month, I was interested in how price affects sales volume because the limiting factor was how many TinyPilots we could produce. At this point, I feel like we have spare capacity to sell more, so now what I want is to find the price that maximizes profits.
+Now that we've caught our breath and have additional capacity to build devices, I can price our products to maximize profit rather than to accomodate production speed as a bottleneck.
+
+I had experimented with pricing last month, but now I have more data, so let's see what the numbers look like.
 
 ### Voyager 2a USB-C
 
@@ -127,6 +129,10 @@ Customers of the higher-end PoE version seem indifferent to prices between $478 
 
 ### Decision: Sell at $399 + $99
 
+Price should be a U-shaped curve. If I sell at too low a price, I'll. There's some optimal price where I'm selling not too many and not too few.
+
+For the base model, the sweet spot seems to be around $399.
+
 The week I sold the base model for $399 and the PoE version for +$99, it was a bit of a magic week. It was the top rate in terms of both revenue and profit. The sample size was small, but even based on the surrounding prices, it seems like the peak of the price-profit curve is somewhere around that $399 base price.
 
 ## Side projects
@@ -147,14 +153,5 @@ The week I sold the base model for $399 and the PoE version for +$99, it was a b
 
 ### Goals for next month
 
-- Onboard
-
-### Requests for help
-
-{{<notice type="info">}}
-
-I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
-
-{{</notice>}}
-
-TODO
+- Onboard newest TinyPilot employee.
+-
