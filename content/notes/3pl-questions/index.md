@@ -21,14 +21,14 @@ I didn't know anything about 3PLs before starting this process, so there were a 
   - Do I have to make you admin in my Shopify store?
 - How quickly does your order management system sync with my e-commerce platform?
   - i.e., when you print a shipping label, how quickly do I see that reflected in Shopify?
-- How do I present your shipping rates to our customers?
+- How do I present your shipping rates to my customers?
   - Can I present real-time shipping rates from your couriers or do we need to use flat fees?
 
 ### Recordkeeping / auditing
 
 - How often do you do stocktakes?
 - How will you share records of inventory changes with me?
-  - i.e., share when products arrived, when they went out for customer orders, when stocktakes happened
+  - i.e., When did products arrive at your warehouse? When did they go out for customer orders? When did stocktakes happen?
 
 ### Schedule
 

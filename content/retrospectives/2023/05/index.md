@@ -74,15 +74,21 @@ Second, I **increased prices**. I [bumped TinyPilot's price](/retrospectives/202
 
 Finally, I **pitched in on customer support**. The local staff covers assembly, fulfillment, and customer support. Every hour I could save the local staff on customer support meant another hour they could dedicate to building devices.
 
-After a month, we have about three weeks of inventory queued at the 3PL.
+And fortunately, those efforts succeeded. At the beginning of May, the local team had built up enough of an inventory surplus that we could ship a week's worth of inventory to the 3PL. Once the 3PL was up and running, the local team's workload dropped by about 15% because the 3PL had taken over one of their main responsibilities.
 
-I've collected a set of [questions to ask a 3PL vendor](/notes/3pl-questions/)
+The transition to the 3PL went pretty smoothly, but there are definitely things I'd plan better if I were doing it over. I've collected a set of [questions to ask a 3PL vendor](/notes/3pl-questions/) for others who are approaching 3PLs for the first time (or me, if I ever switch vendors in the future).
 
 ## Getting out of &ldquo;urgent mode&rdquo;
 
-Both members of local staff estimated that they were spending 15-20% of their time on fulfillment.
+Even after outsourcing fulfillment to the 3PL, we couldn't relax as much as I'd hoped. With only a few days of inventory at the warehouse, the team was still scrambling to keep building devices and replenish the 3PL vendor's stock.
 
-I ran the numbers, and it looked like it would take us until July to get back to
+I felt like we'd be able to relax when we reached the point of having a month's worth of inventory at the 3PL. I did some quick spreadsheet calculations and estimated that it would take us until July to reach that point.
+
+{{<img src="hypothetical-builds.webp" has-border="true" alt="Spreadsheet calculations showing inventory balance relative to our current sale and production rate" caption="By my estimates, it would take us until July to build up a healthy inventory at our 3PL.">}}
+
+I thought back to a year ago and remembered that the local team had so much spare capacity. My main problem was that I was [missing opportunities](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes) to let the local team take on more responsibility. Now the situation was flipped, and I was taking on tasks that the local team would otherwise be doing.
+
+Now, strong sales days were stressing me out because I knew it was preventing us from reaching the inventory levels we wanted.
 
 There was a constant feeling of urgency.
 
