@@ -18,11 +18,11 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 
 - What's the process of connecting to my e-commerce platform?
   - Do I install an app?
-  - Do I have to make you admin in my Shopify store?
+  - Do [I have to make you admin in my Shopify store?](/retrospectives/2023/04/#everyone-just-gives-us-their-admin-password)
 - How quickly does your order management system sync with my e-commerce platform?
   - i.e., when you print a shipping label, how quickly do I see that reflected in Shopify?
 - How do I present your shipping rates to my customers?
-  - Can I present real-time shipping rates from your couriers or do we need to use flat fees?
+  - Can I present real-time shipping rates from your couriers or do we need to use flat shipping fees?
 
 ### Recordkeeping / auditing
 
@@ -38,8 +38,9 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 
 ### Shipping
 
-- Which shipping couriers do you support?
-- Can you ship international orders [delivered duty paid (DDP)](https://www.investopedia.com/terms/d/delivery-duty-paid.asp)?
+- Which shipping couriers do you support for domestic orders?
+- Which shipping couriers do you support for international orders?
+  - Can you ship international orders [delivered duty paid (DDP)](https://www.investopedia.com/terms/d/delivery-duty-paid.asp)?
 
 ### Payment
 
@@ -54,7 +55,7 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 - Who absorbs costs of a fulfillment error?
   - What if we have to re-ship with expedited shipping to meet a customer deadline?
   - What if you sent a more expensive item and the customer has already opened it or refuses to return it?
-- How do we handle it if a customer places an order an then emails me to make a change?
+- How do we handle it if a customer [places an order and then emails me to make a change](/retrospectives/2023/02/#what-if-a-customer-changes-their-order)?
   - Will changes in my e-commerce platform immediately sync to your order management system?
 - How do we handle it when a customer asks us to hold off on fulfilling an order?
   - What's the process of pausing fulfillment on an order?
