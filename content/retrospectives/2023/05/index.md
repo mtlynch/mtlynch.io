@@ -28,21 +28,21 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Our 3PL vendor is now shipping all of our products.
 - **Grade**: A
 
-The transition went smoothly, and it's a big step forward for the company. With the 3PL handling day-to-day order fulfillment, the local team's time has become more flexible, since we don't have to staff the office six days a week. Employees still go into the office regularly, but there's no pressure to get there in time to ship out the day's orders.
+The transition went smoothly, and it's a big step forward for the company. With the 3PL handling day-to-day order fulfillment, the local team's time has become more flexible since we don't have to staff the office six days a week. Employees still go into the office regularly, but there's no pressure to get there in time to ship out the day's orders.
 
 ### Choose a contract manufacturer to take over TinyPilot's device assembly and begin the transition process
 
 - **Result**: I'm still in discussions but haven't officially picked one.
 - **Grade**: B-
 
-I've found one contract manufacturer I like, but I still haven't officially signed with them. I'm waiting for an official price quote and timeline. It looks like the optimistic estimate for a first production batch is October 2023.
+I've found one contract manufacturer I like, but I still haven't officially signed with them. I'm waiting for an official price quote and timeline. October 2023 is their optimistic, unofficial estimate for the first production batch.
 
 ### Publish a new release of TinyPilot Pro
 
 - **Result**: Published [TinyPilot Pro 2.5.4](https://tinypilotkvm.com/pro/changes#254)
 - **Grade**: A
 
-This was not an exciting release feature wise, but it created a path for users to migrate off of Debian Buster, which is now a legacy OS version. Dropping support for Buster means eliminating a lot of complexity in our codebase where we had conditional logic for that OS version.
+This was not an exciting release feature-wise, but it created a path for users to migrate off of Debian Buster, which is now a legacy OS version. Dropping support for Buster means eliminating a lot of complexity in our codebase, where we had conditional logic for that OS version.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -74,7 +74,7 @@ Once we shipped our products to the 3PL, it would take about a week before the 3
 
 I could have closed up shop for a week while we transitioned, but that would be akin to forfeiting $10-20k in lost sales. Instead, I took a few measures to reduce load for the local team so that they could focus their energy on building up our inventory.
 
-First, I **decreased ad spending**. That was a no-brainer. There's no use spending money to attract new customers when we already have more demand than we can accomodate.
+First, I **decreased ad spending**. That was a no-brainer. There's no use spending money to attract new customers when we already have more demand than we can accommodate.
 
 Second, I **increased prices**. I [bumped TinyPilot's price](#what-price-maximizes-profits) in several rounds to slow down the volume of sales while minimizing revenue loss.
 
@@ -90,7 +90,7 @@ Even after outsourcing fulfillment to the 3PL, we couldn't relax as much as I'd 
 
 I thought back to a year ago and wistfully remembered how much spare capacity the local team had. At that point, my biggest problem was [missing opportunities](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes) to let them take on more responsibility.
 
-This year, the situation had flipped. I was taking on tasks that the local team would otherwise be doing. And there was a constant feeling that we were struggling to stay on top of workload rather than just handling it calmly. We were neglecting long-term tasks like documentation or inventory planning.
+This year, the situation had flipped. I was taking on tasks that the local team would otherwise be doing. And there was a constant feeling that we were struggling to stay on top of our workload rather than just handling it calmly. We were neglecting long-term tasks like documentation or inventory planning.
 
 Worst of all, I couldn't get excited about strong sales. When I'd check Shopify and see we sold 10+ units in a single day, instead of celebrating the win, my first thought was, "Oh no! This is going to make it harder for us to build up inventory at the warehouse."
 
@@ -102,9 +102,9 @@ For the past few months, I'd considered hiring a third local employee. I was ret
 
 When I saw there was still a significant workload after our 3PL transition, I came back to the idea of a third employee. And then a lightbulb went off: if there wouldn't be enough work in six months, I could just advertise it as a temporary role.
 
-I posted the job on craigslist and in local Facebook groups. Over the course of two weeks, I received 18 applications, interviewed five people, and made one offer, which was accepted. The new employee begins work this week. To minimize ramp-up time, the new employee will focus exclusively on building devices rather than splitting his time between production and customer support.
+I posted the job on craigslist and in local Facebook groups. Over the course of two weeks, I received 18 applications, interviewed five people, and extended one offer, which the candidate accepted. The new employee begins work this week.
 
-There has definitely been a change in mood since we decided to bring in a third employee. The team doesn't feel the pressure to hurry for the short term. Everyone's more relaxed, and we're back to investing in documentation on long-term planning.
+There has definitely been a change in mood since we decided to bring in a third employee. The team doesn't feel the pressure to hurry for the short term. Everyone's more relaxed, and we're back to investing in documentation and long-term planning.
 
 ## What price maximizes profits?
 
@@ -125,9 +125,9 @@ I had experimented with pricing last month, but now I have more data, so let's s
 
 {{<img src="price-profit-usb-c.webp" has-border="true" alt="Graph of price vs. daily revenue and profit for TinyPilot Voyager 2a (USB-C)">}}
 
-Last month, I was surprised at [how inelastic](/retrospectives/2023/04/#reflections) the demand was for TinyPilot. I expected there to be more of a drop in sales as I increased price. With more data, the demand curve is a little closer to what my intuition was. An $120 price increase (32%) caused a 34% decrease in orders.
+Last month, I was surprised at [how inelastic](/retrospectives/2023/04/#reflections) the demand was for TinyPilot. I expected more of a drop in sales as I increased prices. With more data, the demand curve is a little closer to my expectations. A $120 price increase (32%) caused a 34% decrease in orders.
 
-Interestingly, profit was almost perfectly equal at the $379 and $499 price points ($1,220/day vs. $1,219/day). Overall profits would be higher at the $499 price, as we'd have lower support costs with 34% fewer customers.
+Interestingly, profit was almost perfectly equal at the $379 and $499 price points ($1,220/day vs. $1,219/day). Overall profits would be higher at the $499 price, as 34% fewer sales would mean lower long-term support costs.
 
 ### Voyager 2a PoE
 
@@ -141,7 +141,7 @@ Interestingly, profit was almost perfectly equal at the $379 and $499 price poin
 
 {{<img src="price-profit-poe.webp" has-border="true" alt="Graph of price vs. daily revenue and profit for TinyPilot Voyager 2a (PoE)">}}
 
-Customers of the higher-end PoE version seem indifferent to prices between $478 and $528. They bought at roughly the same rate at either price, though the sample size is low.
+Customers of the higher-end PoE version seem indifferent to prices between $478 and $528. They bought at roughly the same rate at either price, though the sample size is small.
 
 The most profitable price was $498, though it's also pretty likely an outlier based on how short the collection period was.
 
@@ -161,7 +161,7 @@ The main feature I added in April was enabling users to [comment on](https://git
 
 {{<video src="screenjournal-2023-05-10.mp4" caption="Demo of the commenting feature I added to ScreenJournal in April">}}
 
-The other big change I made to ScreenJournal was redesigning my end-to-end tests so that they [run in parallel rather than sequentially](https://github.com/mtlynch/screenjournal/pull/169).
+The other big change I made to ScreenJournal was redesigning my end-to-end tests to [run in parallel rather than sequentially](https://github.com/mtlynch/screenjournal/pull/169).
 
 I've always struggled with shared database state in end-to-end testing web apps, and I haven't been able to figure out how other developers work around it.
 
@@ -186,6 +186,6 @@ My current solution is to assign a cookie to each client and associate that cook
 
 ### Goals for next month
 
-- Onboard newest TinyPilot employee.
+- Onboard the newest TinyPilot employee.
 - Reach $90k in revenue.
 - Find three homelab bloggers or YouTubers interested in reviewing TinyPilot Voyager 2a.
