@@ -1,6 +1,6 @@
 ---
 title: "Questions to ask a potential 3PL vendor"
-date: 2023-05-10T00:00:00-04:00
+date: 2023-05-11T00:00:00-04:00
 ---
 
 Over the past six months, I've been transitioning the fulfillment processes at my e-commerce business to a third-party logistics (3PL) vendor.
