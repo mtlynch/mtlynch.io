@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 34"
 date: 2023-05-11T00:00:00-04:00
 description: 'Getting out of "urgent mode"'
+images:
+  - /retrospectives/2023/05/price-profit-usb-c.webp
 ---
 
 {{<notice type="info">}}
@@ -28,21 +30,21 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Our 3PL vendor is now shipping all of our products.
 - **Grade**: A
 
-The transition went smoothly, and it's a big step forward for the company. With the 3PL handling day-to-day order fulfillment, the local team's time has become more flexible since we don't have to staff the office six days a week. Employees still go into the office regularly, but there's no pressure to get there in time to ship out the day's orders.
+The transition went smoothly, and it's a big step forward for the company. With the 3PL handling day-to-day order fulfillment, we have much more flexibility, as we don't have to staff the office six days a week. Employees still go into the office regularly, but there's no pressure to get everything done before that day's mail pickup.
 
 ### Choose a contract manufacturer to take over TinyPilot's device assembly and begin the transition process
 
 - **Result**: I'm still in discussions but haven't officially picked one.
 - **Grade**: B-
 
-I've found one contract manufacturer I like, but I still haven't officially signed with them. I'm waiting for an official price quote and timeline. October 2023 is their optimistic, unofficial estimate for the first production batch.
+I found a contract manufacturer I like but still haven't signed with them officially. I'm waiting for a formal price quote and timeline. Their oprimistic, unofficial estimate for the first production batch is October 2023.
 
 ### Publish a new release of TinyPilot Pro
 
 - **Result**: Published [TinyPilot Pro 2.5.4](https://tinypilotkvm.com/pro/changes#254)
 - **Grade**: A
 
-This was not an exciting release feature-wise, but it created a path for users to migrate off of Debian Buster, which is now a legacy OS version. Dropping support for Buster means eliminating a lot of complexity in our codebase, where we had conditional logic for that OS version.
+This was not an exciting release feature-wise, but it created a path for users to migrate off of Debian Buster, which is now a legacy OS. Dropping support for Buster means eliminating a lot of complexity in our codebase, where we had conditional logic for that OS version.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -60,47 +62,47 @@ This was not an exciting release feature-wise, but it created a path for users t
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-The numbers look scary because everything is down, but the difference is actually minor. Total revenue is only down 4%. Profit is probably down a scary-looking amount, but that's just a function of how lumpy expenses are. I'm still feeling positive about monthly profits in the $20-30k range.
+The numbers look scary because everything is down, but the difference is minor. Total revenue is only down 4%. Profit is down, but that's just a function of how lumpy expenses are. I'm still feeling positive about average monthly profits in the $20-30k range.
 
 ## Getting over the 3PL hump
 
-For the past few months, TinyPilot's local team has been working near 100% capacity, so my top priority was to find ways to reduce load on them.
+For the past few months, TinyPilot's local team has been working at nearly 100% capacity, so my top priority was to find ways to reduce load on them.
 
-One of the best bang-for-buck steps I saw in reducing the local team's workload was [completing our transition to a third-party logistics (3PL) vendor](/retrospectives/2023/04/#the-hiccups-in-transitioning-to-a-3pl-vendor). Since the beginning of TinyPilot, we've been shipping orders directly from our office. With a 3PL, we'd ship our products in bulk to a warehouse, and then the 3PL would handle the day-to-day work of fulfilling customer orders as they arrived.
+One of the best bang-for-buck steps I saw in reducing workload was [completing our transition to a third-party logistics (3PL) vendor](/retrospectives/2023/04/#the-hiccups-in-transitioning-to-a-3pl-vendor). Since the beginning of TinyPilot, we've been shipping orders directly from our office. With a 3PL, we'd ship our products in bulk to a warehouse, and then the 3PL would handle the day-to-day work of fulfilling customer orders as they arrived.
 
-Outsourcing fulfillment to a 3PL would definitely save us a good chunk of work, but it was a bit of a catch-22 in that the switch itself would take extra work.
+Outsourcing fulfillment to a 3PL would definitely save us a good chunk of work, but it was a catch-22 in that the switch itself would take extra work.
 
 Once we shipped our products to the 3PL, it would take about a week before the 3PL was ready to process orders. That meant that we had to build up an extra week's worth of inventory &mdash; no small feat when we were barely keeping up with the existing order volume.
 
 I could have closed up shop for a week while we transitioned, but that would be akin to forfeiting $10-20k in lost sales. Instead, I took a few measures to reduce load for the local team so that they could focus their energy on building up our inventory.
 
-First, I **decreased ad spending**. That was a no-brainer. There's no use spending money to attract new customers when we already have more demand than we can accommodate.
+First, I decreased ad spending. That was a no-brainer. There's no use spending money to attract new customers when we already have more demand than we can handle.
 
-Second, I **increased prices**. I [bumped TinyPilot's price](#what-price-maximizes-profits) in several rounds to slow down the volume of sales while minimizing revenue loss.
+Second, I increased prices. I [bumped TinyPilot's price](#what-price-maximizes-profits) in several rounds to slow down the volume of sales while minimizing revenue loss.
 
-Finally, I **pitched in on customer support**. The local staff covers assembly, fulfillment, and customer support. Every hour I could save the local staff on customer support meant another hour they could dedicate to building devices.
+Finally, I pitched in on customer support. The local staff covers assembly, fulfillment, and customer support. Every hour I could save the local staff on support meant another hour they could dedicate to building devices.
 
-And fortunately, those efforts succeeded. At the beginning of May, the local team had built up enough of an inventory surplus to ship a week's worth of inventory to the 3PL. Once the 3PL was up and running, the local team's workload dropped by about 15% because the 3PL had taken over one of their main responsibilities.
+And fortunately, those efforts succeeded. At the beginning of May, the local team had built up enough of an inventory surplus to ship a week's worth of inventory to the 3PL. Once the 3PL was up and running, the local team's workload dropped by about 15%.
 
-The transition to the 3PL went pretty smoothly, but there are definitely things I'd plan better if I were doing it again. I've collected a set of [questions to ask a 3PL vendor](/notes/3pl-questions/) for others who are approaching 3PLs for the first time (or me, if I ever switch vendors in the future).
+The transition to the 3PL went pretty smoothly, but there are definitely things I'd plan better if I were doing it again. I've collected a set of [questions to ask a 3PL vendor](/notes/3pl-questions/) for others who are approaching 3PLs for the first time (or me, if I ever switch vendors).
 
 ## Getting out of &ldquo;urgent mode&rdquo;
 
-Even after outsourcing fulfillment to the 3PL, we couldn't relax as much as I'd hoped. With only a few days of inventory at the warehouse, the team was still scrambling to build new devices and replenish the 3PL vendor's stock.
+Even after outsourcing fulfillment to the 3PL, we couldn't relax as much as I'd hoped. With only a few days of inventory at the warehouse, the team was still scrambling to build new devices and replenish the 3PL's stock.
 
-I thought back to a year ago and wistfully remembered how much spare capacity the local team had. At that point, my biggest problem was [missing opportunities](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes) to let them take on more responsibility.
+I wistfully remembered how much spare capacity the local team had a year ago. At that point, my biggest problem was [missing opportunities](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes) to let them take on more responsibility.
 
 This year, the situation had flipped. I was taking on tasks that the local team would otherwise be doing. And there was a constant feeling that we were struggling to stay on top of our workload rather than just handling it calmly. We were neglecting long-term tasks like documentation or inventory planning.
 
-Worst of all, I couldn't get excited about strong sales. When I'd check Shopify and see we sold 10+ units in a single day, instead of celebrating the win, my first thought was, "Oh no! This is going to make it harder for us to build up inventory at the warehouse."
+Worst of all, I couldn't get excited about strong sales days. When I'd check Shopify and see we sold 10+ units in a single day, instead of celebrating the win, my first thought was, "Oh no! This is going to make it harder for us to build up inventory at the warehouse."
 
-I felt like we'd be able to relax when we built up a month's worth of inventory at the 3PL warehouse. I did some quick spreadsheet calculations and estimated that it would take us until July to reach that point. I didn't want everyone to feel this way for another two months.
+I felt like we'd be able to relax when the warehouse had a month's worth of inventory. I did some quick spreadsheet calculations and estimated that it would take us until July to reach that point, but I didn't want everyone to feel this way for another two months.
 
 {{<img src="hypothetical-builds.webp" has-border="true" alt="Spreadsheet calculations showing inventory balance relative to our current sale and production rate" caption="By my estimates, it would take us until July to build up a healthy inventory at our 3PL.">}}
 
-For the past few months, I'd considered hiring a third local employee. I was reticent because I expected load to drop a bit once we moved fulfillment to a 3PL and then drop a lot once we moved production to a contract manufacturer. At that point, the local team's job would reduce to only customer support, and I didn't expect there to be enough support work for three people.
+For the past few months, I'd considered hiring a third local employee. I was reticent because I expected load to drop once we moved fulfillment to a 3PL and then drop a lot once we moved production to a contract manufacturer. At that point, the local team's job would reduce to only customer support, and I didn't expect there to be enough support work for three people.
 
-When I saw there was still a significant workload after our 3PL transition, I came back to the idea of a third employee. And then a lightbulb went off: if there wouldn't be enough work in six months, I could just advertise it as a temporary role.
+When I saw there was still a significant workload after our 3PL transition, I came back to the idea of a third employee. And then a lightbulb went off: if there wouldn't be enough work in six months, I could just advertise it as a short-term position.
 
 I posted the job on craigslist and in local Facebook groups. Over the course of two weeks, I received 18 applications, interviewed five people, and extended one offer, which the candidate accepted. The new employee begins work this week.
 
@@ -112,7 +114,7 @@ For the past two months, I've been increasing TinyPilot's price to reduce sales 
 
 Now that we've caught our breath and have additional capacity to build devices, I can price our products to maximize profit rather than to work around a bottleneck in production speed.
 
-I had experimented with pricing last month, but now I have more data, so let's see what the numbers look like.
+I had experimented with pricing last month, but now that I have more data, let's see what the numbers look like.
 
 ### Voyager 2a USB-C
 
@@ -147,9 +149,9 @@ The most profitable price was $498, though it's also pretty likely an outlier ba
 
 ### Decision: Sell at $399 + $99
 
-The sweet spot in pricing seems to be selling the base model for $399 and charging +$99 ($498) for the PoE upgrade. TinyPilot saw the most profitable sales days when the prices were $399 for the USB-C version and $498 for the PoE model. The sample size is small for that period, but it also seems to be near the top of the curve the other prices suggest.
+The sweet spot in pricing seems to be selling the base model for $399 and charging +$99 ($498) for the PoE upgrade. TinyPilot saw the most profitable sales at those prices. The sample size is small for that period, but it also seems to be near the top of the curve the other prices suggest.
 
-The other thing I like about a $399 base price is that it's still within reason [for a person like me to buy it](/retrospectives/2023/04/#reflections). If I had seen a product like this three years ago, I'd have thought, "Sure, for $399, that's worth it for my [homelab](/tags/homelab/)."
+The other thing I like about a $399 base price is that it's still within reason [for a person like me to buy it](/retrospectives/2023/04/#reflections). If I had seen a product like TinyPilot three years ago, I'd have thought, "Sure, for $399, that's worth it for my [homelab](/tags/homelab/)."
 
 ## Side projects
 
@@ -163,7 +165,7 @@ The main feature I added in April was enabling users to [comment on](https://git
 
 The other big change I made to ScreenJournal was redesigning my end-to-end tests to [run in parallel rather than sequentially](https://github.com/mtlynch/screenjournal/pull/169).
 
-I've always struggled with shared database state in end-to-end testing web apps, and I haven't been able to figure out how other developers work around it.
+I've always struggled with shared database when I'm testing my web apps end-to-end. I haven't been able to figure out how other developers work around it.
 
 Previously, I dealt with the shared state problem by resetting the database before every end-to-end test. That was slow and meant I could only run one test at a time since they're all sharing the same database.
 
