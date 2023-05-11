@@ -7,14 +7,14 @@ Over the past six months, I've been transitioning the fulfillment processes at m
 
 I didn't know anything about 3PLs before starting this process, so there were a lot of things I didn't know to ask about. Here are the list of questions that I recommend e-commerce merchants ask a 3PL if they're considering working with them for fulfillment.
 
-### Customer profile
+## Customer profile
 
 - Do you have other clients whose order volumes are similar to mine?
   - What's the minimum and maximum order volume you can support?
 - Do you have other clients whose products are similar to mine in price?
 - Do you have other clients whose products are similar to mine in weight and volume?
 
-### Integration with e-commerce platforms
+## Integration with e-commerce platforms
 
 - What's the process of connecting to my e-commerce platform?
   - Do I install an app?
@@ -24,31 +24,31 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 - How do I present your shipping rates to my customers?
   - Can I present real-time shipping rates from your couriers or do we need to use flat shipping fees?
 
-### Recordkeeping / auditing
+## Recordkeeping / auditing
 
 - How often do you do stocktakes?
 - How will you share records of inventory changes with me?
   - i.e., When did products arrive at your warehouse? When did they go out for customer orders? When did stocktakes happen?
 
-### Schedule
+## Schedule
 
 - Which days of the week do you fulfill orders?
 - What holidays do you observe?
 - What's the typical turnaround time for fulfilling an order?
 
-### Shipping
+## Shipping
 
 - Which shipping couriers do you support for domestic orders?
 - Which shipping couriers do you support for international orders?
   - Can you ship international orders [delivered duty paid (DDP)](https://www.investopedia.com/terms/d/delivery-duty-paid.asp)?
 
-### Payment
+## Payment
 
 - What are your fees?
 - How do you accept payment?
   - Do you charge a surcharge for different payment options (e.g., surcharge for credit cards)?
 
-### Handling issues and unusual orders
+## Handling issues and unusual orders
 
 - What's your error rate?
   - i.e., how often do customers receive the wrong item or wrong quantities?
