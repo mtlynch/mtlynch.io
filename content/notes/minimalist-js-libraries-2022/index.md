@@ -265,3 +265,7 @@ Minimalist frameworks:
 - mithril
 
 They take over control over your app rather than let you layer in enhancements.
+
+### Backbone.js
+
+https://github.com/jashkenas/backbone/wiki/Backbone%2C-The-Primer
