@@ -1,0 +1,6 @@
+<h2>
+  <a href="{{ .Params.external_url }}">{{ .Title }}</a>
+  ({{ .Params.start_date }} - {{ .Params.end_date }})
+</h2>
+
+{{ .Params.blurb | markdownify }}

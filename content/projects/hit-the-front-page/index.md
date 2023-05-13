@@ -1,0 +1,7 @@
+---
+title: Hit the Front Page of Hacker News
+external_url: "https://hitthefrontpage.com"
+start_date: 2021
+end_date: present
+blurb: Hit the Front Page of Hacker News is my video course that shows how I write high-quality blog posts that succeed on tech sites like Hacker News and reddit.
+---
