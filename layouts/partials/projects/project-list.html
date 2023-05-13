@@ -2,9 +2,12 @@
   <h1 class="title">
     {{- .Title -}}
   </h1>
-  <ul>
-    {{ range .Pages.ByWeight.Reverse }}
-      {{- .Render "li" -}}
-    {{ end }}
-  </ul>
+  {{ range (sort .Site.Data.projects "weight" "desc") }}
+    <h2>
+      <a href="{{ .external_url }}">{{ .title }}</a>
+      ({{ .start_date }} - {{ .end_date }})
+    </h2>
+
+    {{ .blurb | markdownify }}
+  {{ end }}
 </section>
