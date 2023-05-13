@@ -4,4 +4,5 @@ external_url: "https://tinypilotkvm.com"
 start_date: 2020
 end_date: present
 blurb: TinyPilot is a hardware device that allows customers to control their computers remotely without installing any software.
+weight: 100
 ---

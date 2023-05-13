@@ -1,0 +1,10 @@
+<section class="container list">
+  <h1 class="title">
+    {{- .Title -}}
+  </h1>
+  <ul>
+    {{ range .Pages.ByWeight.Reverse }}
+      {{- .Render "li" -}}
+    {{ end }}
+  </ul>
+</section>

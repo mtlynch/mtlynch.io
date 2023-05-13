@@ -4,4 +4,5 @@ external_url: "https://refactoringenglish.com"
 start_date: 2021
 end_date: present
 blurb: "*Refactoring English: Effective Writing for Software Developers* is my upcoming book that teaches developers practical tips to improve their writing."
+weight: 98
 ---
