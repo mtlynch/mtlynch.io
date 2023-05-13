@@ -6,4 +6,3 @@ blurb: A minimal Python wrapper around the [restic](https://restic.readthedocs.i
 weight: 99
 technologies:
   - python
-  - restic
