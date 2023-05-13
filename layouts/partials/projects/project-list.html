@@ -34,7 +34,7 @@
 
     <p>
       {{ range .technologies }}
-        <span class="tag">{{ . }}</span>
+        <span class="tag"><a href="/tags/{{ . }}/">{{ . }}</a></span>
       {{ end }}
     </p>
 
