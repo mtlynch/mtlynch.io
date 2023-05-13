@@ -2,11 +2,41 @@
   <h1 class="title">
     {{- .Title -}}
   </h1>
-  {{ range (sort .Site.Data.projects "weight" "desc") }}
-    <h2>
+
+  <h2>Businesses</h2>
+  {{ range (sort .Site.Data.projects.businesses "weight" "desc") }}
+    <h3>
       <a href="{{ .external_url }}">{{ .title }}</a>
-      ({{ .start_date }} - {{ .end_date }})
-    </h2>
+      ({{ partial "projects/date-range.html" . }})
+    </h3>
+
+    {{ .blurb | markdownify }}
+  {{ end }}
+
+
+  <h2>Educational</h2>
+  {{ range (sort .Site.Data.projects.educational "weight" "desc") }}
+    <h3>
+      <a href="{{ .external_url }}">{{ .title }}</a>
+      ({{ partial "projects/date-range.html" . }})
+    </h3>
+
+    {{ .blurb | markdownify }}
+  {{ end }}
+
+
+  <h2>Open-Source Projects</h2>
+  {{ range (sort .Site.Data.projects.open_source "weight" "desc") }}
+    <h3>
+      <a href="{{ .external_url }}">{{ .title }}</a>
+      ({{ partial "projects/date-range.html" . }})
+    </h3>
+
+    <p>
+      {{ range .technologies }}
+        <span class="tag">{{ . }}</span>
+      {{ end }}
+    </p>
 
     {{ .blurb | markdownify }}
   {{ end }}

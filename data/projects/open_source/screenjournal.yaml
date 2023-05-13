@@ -1,0 +1,11 @@
+title: ScreenJournal
+external_url: https://github.com/mtlynch/screenjournal
+start_date: 2022
+end_date: present
+blurb: A web app for sharing movie reviews with your friends. It's basically Goodreads but for movies. Or it's like letterboxd but open-source and focused on small, private communities.
+weight: 101
+technologies:
+  - golang
+  - sqlite
+  - docker
+  - litestream
