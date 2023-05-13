@@ -573,3 +573,18 @@ h4:hover .hanchor {
 table + .img {
   margin-top: 3rem;
 }
+
+.list li.retrospectives {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .list li.retrospectives {
+    display: flex;
+  }
+}
+
+.list li.retrospectives .title {
+  font-size: 1.4em;
+  text-decoration: none;
+}
