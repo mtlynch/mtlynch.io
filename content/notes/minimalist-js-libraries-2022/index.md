@@ -269,3 +269,17 @@ They take over control over your app rather than let you layer in enhancements.
 ### Backbone.js
 
 https://github.com/jashkenas/backbone/wiki/Backbone%2C-The-Primer
+
+### Strawberry
+
+https://news.ycombinator.com/item?id=35937464
+https://18alan.space/posts/how-hard-is-it-to-build-a-frontend-framework.html
+https://18alan.space/strawberry/
+
+### el
+
+https://github.com/frameable/el
+
+## ponys
+
+https://jhuddle.github.io/ponys/
