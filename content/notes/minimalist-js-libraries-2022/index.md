@@ -122,6 +122,10 @@ Doesn't take over the whole app and decide how to route pages.
 
 ### Compatible with Content Security Policy
 
+### Lets me write HTML as HTML
+
+Doesn't force me to write it as a string.
+
 ## Summary
 
 | Library                                              | Two-way data binding | Conditional Display | Compilation-free | CSP-friendly                      |
