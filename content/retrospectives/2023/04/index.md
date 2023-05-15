@@ -58,7 +58,7 @@ In order to transition to the 3PL, we needed to free up the local team's workloa
 | Enterprise Subscriptions | $290.70        | $290.70        | 0                                                 |
 | Royalties                | $3,935.73      | $4,820.75      | <font color="green">+$885.02 (+22%)</font>        |
 | Total Revenue            | $76,811.58     | $91,915.23     | <font color="green">+$15,103.65 (+20%)</font>     |
-| **Profit**               | **$32,905.55** | **$44,814.70** | **<font color="green">+$11,909.15 (+36%)</font>** |
+| **Profit**               | **$32,905.55** | **$43,952.10** | **<font color="green">+$11,046.55 (+34%)</font>** |
 
 Switching TinyPilot's case from plastic to metal dramatically increased demand. Even as I increase prices and reduce marketing to near zero, sales volume keeps increasing.
 

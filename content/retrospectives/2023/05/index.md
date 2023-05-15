@@ -50,17 +50,15 @@ This was not an exciting release feature-wise, but it created a path for users t
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | March 2023     | April 2023       | Change                                          |
-| ------------------------ | -------------- | ---------------- | ----------------------------------------------- |
-| Unique Visitors          | 7,443          | 6,560            | <font color="red">-883 (-12%)</font>            |
-| Total Pageviews          | 17,904         | 15,034           | <font color="red">-2,870 (-16%)</font>          |
-| Sales Revenue            | $83,529.40     | $82,060.84       | <font color="red">-$1,468.56 (-2%)</font>       |
-| Enterprise Subscriptions | $290.70        | $290.70          | 0                                               |
-| Royalties                | $4,820.75      | $2,369.08        | <font color="red">-$2,451.67 (-51%)</font>      |
-| Total Revenue            | $88,640.85     | $84,720.62       | <font color="red">-$3,920.23 (-4%)</font>       |
-| **Profit**               | **$44,814.70** | **$20,109.02**\* | **<font color="red">-$24,705.68 (-55%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | March 2023     | April 2023     | Change                                          |
+| ------------------------ | -------------- | -------------- | ----------------------------------------------- |
+| Unique Visitors          | 7,443          | 6,560          | <font color="red">-883 (-12%)</font>            |
+| Total Pageviews          | 17,904         | 15,034         | <font color="red">-2,870 (-16%)</font>          |
+| Sales Revenue            | $83,529.40     | $82,060.84     | <font color="red">-$1,468.56 (-2%)</font>       |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                               |
+| Royalties                | $4,820.75      | $2,369.08      | <font color="red">-$2,451.67 (-51%)</font>      |
+| Total Revenue            | $88,640.85     | $84,720.62     | <font color="red">-$3,920.23 (-4%)</font>       |
+| **Profit**               | **$43,952.10** | **$10,295.55** | **<font color="red">-$33,656.55 (-77%)</font>** |
 
 The numbers look scary because everything is down, but the difference is minor. Total revenue is only down 4%. Profit is down, but that's just a function of how lumpy expenses are. I'm still feeling positive about average monthly profits in the $20-30k range.
 
