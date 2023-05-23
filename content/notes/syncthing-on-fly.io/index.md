@@ -87,7 +87,7 @@ Yes! My thoughts exactly.
 >
 > -[@jerome](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180/9?u=mtlynch)
 
-I'd solved a similar issue once before in my first-ever blog post. I tried using `socat` to listen on IPv6 port 8386 and proxy the connection to IPv4 port 8384.
+I'd solved a similar issue once [when I used to maintain a popular Sia Docker image](/sia-nextcloud/#dockerfilesia). The solution then was to proxy connections using a tool called `socat`. I tried using `socat` to listen on IPv6 port 8386 and proxy the connection to IPv4 port 8384.
 
 ```bash
 apk add socat && \
@@ -101,6 +101,8 @@ fly proxy 8384:8386
 ```
 
 And voila! It worked.
+
+Advantage of Andrew Katz's solution is that he can access his Fly.io server's Syncthing admin interface at any time. I have to go through the ugly dance of setting up an ad-hoc proxy, but that's actually fine for me. I expect maintenance to be infrequent.
 
 ## Limiting trust in the Fly.io Syncthing node
 
