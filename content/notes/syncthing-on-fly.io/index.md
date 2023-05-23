@@ -1,5 +1,5 @@
 ---
-title: "Deploying a Syncthing Peer on Fly.io"
+title: "Deploying Syncthing on a Fly.io Cloud Server"
 date: 2023-05-23T00:00:00-04:00
 ---
 
