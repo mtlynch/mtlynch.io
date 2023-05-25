@@ -59,13 +59,27 @@ Looking at the linuxserver Docker source, their runtime image [depends on linuxs
 
 ## The official Syncthing Docker image works on Fly.io
 
-Instead of checking more rigorously for an official Syncthing Docker image, I spent three hours [making my own](https://github.com/mtlynch/docker-syncthing). And then when I sat down to write this tutorial, I realized I had overlooked [the official image](https://hub.docker.com/r/syncthing/syncthing) that I wouldn't have to maintain, so let's skip to that.
+Instead of checking more rigorously for an official Syncthing Docker image, I spent three hours [making my own](https://github.com/mtlynch/docker-syncthing). And then when I sat down to write this tutorial, I realized I had overlooked [the official image](https://hub.docker.com/r/syncthing/syncthing) that I wouldn't have to maintain, so I'll skip to that.
+
+To start, I created a new Fly app:
 
 ```bash
 $ fly apps create --name syncthing-mtlynch
 ? Select Organization: Michael Lynch (personal)
 New app created: syncthing-mtlynch
 ```
+
+Synthing needs a place for Syncthing to store data, so I'll create a Fly persistent volume called `syncthing_data`:
+
+```bash
+SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
+
+fly volumes create syncthing_data \
+  --size "${SIZE_IN_GB}" \
+  --yes
+```
+
+Next, I'll make a minimal Fly config for Syncthing:
 
 ```toml
 app = "syncthing-mtlynch"
@@ -74,9 +88,11 @@ app = "syncthing-mtlynch"
   image = "syncthing/syncthing:1.23.4"
 
 [mounts]
-  source="syncthing"
+  source="syncthing_data"
   destination="/var/syncthing"
 ```
+
+Now, the moment of truth. I'll launch the app:
 
 ```bash
 $ fly deploy
@@ -109,35 +125,19 @@ And it works! From the logs, Fly is up and running.
 2023/05/25 12:10:12 INFO: quic://0.0.0.0:22000 resolved external address quic://66.225.222.75:22000 (2023/05/25 12:10:32 INFO: Joined relay relay://54.175.93.212:443
 ```
 
-If I add the new server's to my local Syncthing server as a remote peer by device ID (`YERKMWG-WMUKYOR-J57TFK7-LQ3NHPX-6TI5AFU-IX7SEEW-GX7QO3C-NPYATQT`), it can't connect.
+The logs showed the Syncthing server's device ID, so I can add it as a peer from my local Syncthing server:
 
-That's expected because I haven't configured Fly to allow any inbound traffic.
+{{<img src="syncthing-add-device.webp" has-border="true" max-width="700px">}}
 
-## Creating a Syncthing config file
+But once I've added the Syncthing server, my local Syncthing instance fails to connect to it.
 
-I'll start with the basics. The `fly.toml` file has my app's name and deployment region:
+{{<img src="syncthing-cant-connect.webp" has-border="true">}}
 
-```toml
-app = "syncthing-mtlynch"
-primary_region = "ewr"
-```
+That's expected because I haven't configured Fly to allow any inbound traffic to Syncthing.
 
-Next, I'll specify the Docker image to use, which is version 1.23.4, the latest stable release as of this writing:
+## Configuring firewall ports for Syncthing
 
-```toml
-[build]
-  image = "syncthing/syncthing:1.23.4"
-```
-
-Next, I have to connect Fly's persistent volume to the place in the filesystem where Fly stores its data, [which is `/var/syncthing`](https://github.com/syncthing/syncthing/blob/716b42103a7296c6a5ebcb0886c43666d2278ae4/Dockerfile#L30).
-
-```toml
-[mounts]
-  source="syncthing_data"
-  destination="/var/syncthing"
-```
-
-Next, I have to tell Fly to accept inbound traffic on a few ports that Syncthing [needs to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
+At this point, Syncthing is up and running on Fly, but it isn't much use because it can't communicate with any of my other devices. Syncthing helpfully has clear documentation that explains how to configure your firewall to allow Syncthing to get the network traffic it needs [to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
 
 > Port 22000/TCP: TCP based sync protocol traffic
 >
@@ -145,7 +145,7 @@ Next, I have to tell Fly to accept inbound traffic on a few ports that Syncthing
 >
 > Port 21027/UDP: for discovery broadcasts on IPv4 and multicasts on IPv6
 
-Here's how I tell Fly how to allow traffic to those ports. I decided to use port 22000 as a health check port. Fly will periodically poll that port, and if it can't connect, then it will know that Syncthing is not healthy.
+And here's how I translate that into Fly's configuration.
 
 ```toml
 [[services]]
@@ -175,6 +175,8 @@ Here's how I tell Fly how to allow traffic to those ports. I decided to use port
   [[services.ports]]
     port = 21027
 ```
+
+I used port 22000 as a health check port for Fly. Fly will periodically poll that port, and if it can't connect, then it will know that Syncthing is not healthy.
 
 Synthing's admin interface defaults to 0.0.0.0:8384, so it accepts connections on both private and public network interfaces. This shouldn't _really_ matter since my Fly config doesn't expose 8384, but for the sake of defense in depth, I'll configure Syncthing to listen only on the loopback interface.
 
@@ -190,7 +192,6 @@ Putting it all together, my `fly.toml` file looks like this:
 
 ```toml
 app = "syncthing-mtlynch"
-primary_region = "ewr"
 
 [build]
   image = "syncthing/syncthing:1.23.4"
@@ -229,17 +230,6 @@ primary_region = "ewr"
 
   [[services.ports]]
     port = 21027
-```
-
-My config file maps a Fly persistent volume called `syncthing_data`, so I'll create that now:
-
-```bash
-SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
-
-fly volumes create syncthing_data \
-  --region ewr \
-  --size "${SIZE_IN_GB}" \
-  --yes
 ```
 
 ## Configuring Syncthing without Tailscale
