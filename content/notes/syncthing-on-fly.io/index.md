@@ -62,17 +62,56 @@ Looking at the linuxserver Docker source, their runtime image [depends on linuxs
 Instead of checking more rigorously for an official Syncthing Docker image, I spent three hours [making my own](https://github.com/mtlynch/docker-syncthing). And then when I sat down to write this tutorial, I realized I had overlooked [the official image](https://hub.docker.com/r/syncthing/syncthing) that I wouldn't have to maintain, so let's skip to that.
 
 ```bash
-fly apps create --name syncthing-mtlynch
+$ fly apps create --name syncthing-mtlynch
+? Select Organization: Michael Lynch (personal)
+New app created: syncthing-mtlynch
+```
+
+```toml
+app = "syncthing-mtlynch"
+
+[build]
+  image = "syncthing/syncthing:1.23.4"
+
+[mounts]
+  source="syncthing"
+  destination="/var/syncthing"
 ```
 
 ```bash
-SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
+$ fly deploy
+==> Verifying app config
+Validating /tmp/tmp.mezhLZdpSv/fly.toml
+Platform: machines
+✓ Configuration is valid
+--> Verified app config
+==> Building image
+Searching for image 'syncthing/syncthing:1.23.4' remotely...
+image found: img_98dgp8mlx504xw05
 
-fly volumes create syncthing_data \
-  --region ewr \
-  --size "${SIZE_IN_GB}" \
-  --yes
+Watch your app at https://fly.io/apps/syncthing-mtlynch/monitoring
+
+Updating existing machines in 'syncthing-mtlynch' with rolling strategy
+  [1/1] Replacing 6e82ddd3ae5698 [app] by new machine
+  [1/1] Machine 918570e1f96283 [app] update finished: success
+  Finished deploying
 ```
+
+And it works! From the logs, Fly is up and running.
+
+```text
+2023/05/25 12:09:52 INFO: My ID: YERKMWG-WMUKYOR-J57TFK7-LQ3NHPX-6TI5AFU-IX7SEEW-GX7QO3C-NPYATQT
+2023/05/25 12:09:53 INFO: GUI and API listening on [::]:8384
+2023/05/25 12:09:53 INFO: Access the GUI via the following URL: http://127.0.0.1:8384/
+2023/05/25 12:09:53 INFO: My name is "918570e1f96283"
+2023/05/25 12:09:53 INFO: Completed initial scan of sendreceive folder "Default Folder" (default)
+2023/05/25 12:10:12 INFO: quic://0.0.0.0:22000 detected NAT type: Port restricted NAT
+2023/05/25 12:10:12 INFO: quic://0.0.0.0:22000 resolved external address quic://66.225.222.75:22000 (2023/05/25 12:10:32 INFO: Joined relay relay://54.175.93.212:443
+```
+
+If I add the new server's to my local Syncthing server as a remote peer by device ID (`YERKMWG-WMUKYOR-J57TFK7-LQ3NHPX-6TI5AFU-IX7SEEW-GX7QO3C-NPYATQT`), it can't connect.
+
+That's expected because I haven't configured Fly to allow any inbound traffic.
 
 ## Creating a Syncthing config file
 
@@ -94,11 +133,11 @@ Next, I have to connect Fly's persistent volume to the place in the filesystem w
 
 ```toml
 [mounts]
-source="syncthing_data"
-destination="/var/syncthing"
+  source="syncthing_data"
+  destination="/var/syncthing"
 ```
 
-Finally, Syncthing [listen on a few ports](https://docs.syncthing.net/users/firewall.html#local-firewall) to communicate with peers, so I have to tell Fly to allow traffic on those ports:
+Next, I have to tell Fly to accept inbound traffic on a few ports that Syncthing [needs to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
 
 > Port 22000/TCP: TCP based sync protocol traffic
 >
@@ -137,7 +176,17 @@ Here's how I tell Fly how to allow traffic to those ports. I decided to use port
     port = 21027
 ```
 
-Putting it all together, the file looks like this:
+Synthing's admin interface defaults to 0.0.0.0:8384, so it accepts connections on both private and public network interfaces. This shouldn't _really_ matter since my Fly config doesn't expose 8384, but for the sake of defense in depth, I'll configure Syncthing to listen only on the loopback interface.
+
+Syncthing's [documentation](https://github.com/syncthing/syncthing/blob/v1.23.4/README-Docker.md#gui-security) explains that you can restrict access to the admin UI by unsetting the `STGUIADDRESS` environment variable.
+
+```toml
+[env]
+  # Only listen for connections to admin GUI through localhost.
+  STGUIADDRESS = ""
+```
+
+Putting it all together, my `fly.toml` file looks like this:
 
 ```toml
 app = "syncthing-mtlynch"
@@ -146,9 +195,13 @@ primary_region = "ewr"
 [build]
   image = "syncthing/syncthing:1.23.4"
 
+[env]
+  # Only listen for connections to admin GUI through localhost.
+  STGUIADDRESS = ""
+
 [mounts]
-source="syncthing_data"
-destination="/var/syncthing"
+  source="syncthing_data"
+  destination="/var/syncthing"
 
 [[services]]
   internal_port = 22000
@@ -176,6 +229,17 @@ destination="/var/syncthing"
 
   [[services.ports]]
     port = 21027
+```
+
+My config file maps a Fly persistent volume called `syncthing_data`, so I'll create that now:
+
+```bash
+SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
+
+fly volumes create syncthing_data \
+  --region ewr \
+  --size "${SIZE_IN_GB}" \
+  --yes
 ```
 
 ## Configuring Syncthing without Tailscale
@@ -231,6 +295,47 @@ And voila! It worked.
 
 Advantage of Andrew Katz's solution is that he can access his Fly.io server's Syncthing admin interface at any time. I have to go through the ugly dance of setting up an ad-hoc proxy, but that's actually fine for me. I expect maintenance to be infrequent.
 
+## Can I avoid the socat hack?
+
+```toml
+[env]
+  STGUIADDRESS = "::1:8384"
+```
+
+That caused Syncthing to go into a crash loop with this error in the logs:
+
+```text
+WARNING: Starting API/GUI: listen tcp: address ::1:8384: too many colons in address
+```
+
+Wait, does Syncthing not know IPv6? That would be strange. Checking [the documentation](https://docs.syncthing.net/users/config.html#config-option-gui.address):
+
+> IPv6 address and port ([::1]:8384)
+>
+> The address and port are used as given. The address must be enclosed in square brackets.
+
+Oh, okay. I need some brackets:
+
+```toml
+[env]
+  STGUIADDRESS = "[::1]:8384"
+```
+
+Success! That let Syncthing run successfully. Now, I'll try the proxy command again:
+
+```bash
+fly proxy 8384:8384
+```
+
+```bash
+$ curl http://localhost:8384/
+curl: (56) Recv failure: Connection reset by peer
+```
+
+```text
+[UPMD6] 2023/05/25 11:41:16 INFO: Listen (BEP/tcp): TLS handshake: EOF
+```
+
 ## Limiting trust in the Fly.io Syncthing node
 
 One neat feature of Syncthing is that you can treat certain Syncthing peers as untrusted. So they can replicate your data, but they can only access encrypted versions of it.
@@ -268,7 +373,7 @@ You'll also need a persistent volume so that Syncthing doesn't lose your configu
 # https://fly.io/docs/reference/regions/
 REGION="ewr"
 
-VOLUME_NAME="syncthing"
+VOLUME_NAME="syncthing_data"
 SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
 
 fly volumes create "${VOLUME_NAME}" \
