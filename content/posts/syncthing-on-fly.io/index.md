@@ -17,11 +17,11 @@ If I had one Syncthing peer that was always online, then I'd never worry about m
 
 ## I don't want your life story &mdash; just tell me how to deploy Syncthing
 
-I'm going to talk about some approaches that failed, but if you want to skip to the solution, see the section, ["How to deploy Syncthing to Fly"](#how-to-deploy-syncthing-to-flyio).
+I'm going to talk about some approaches that failed, but if you want to skip to the solution, see the section, ["How to deploy Syncthing to Fly.io"](#how-to-deploy-syncthing-to-flyio).
 
-## Prior work: Syncthing + Tailscale on Fly
+## Prior work: Syncthing + Tailscale on Fly.io
 
-For the past two years, [Fly](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly. It turned out that [Andrew Katz had written a nice tutorial](https://akatz.org/posts/running-syncthing-on-flyio-with-tailscale/) less than a year ago.
+For the past two years, [Fly.io](https://fly.io) has been my preferred cloud hosting provider, so I checked if anyone had written about Syncthing on Fly.io. It turned out that [Andrew Katz had written a nice tutorial](https://akatz.org/posts/running-syncthing-on-flyio-with-tailscale/) less than a year ago.
 
 {{<img src="akatz-tutorial.png" has-border="true" max-width="600px">}}
 
@@ -29,13 +29,13 @@ Andrew's tutorial was great news because it proved that my idea was feasible. On
 
 Combining Syncthing with Tailscale requires building and maintaining a custom Docker image that combines the two tools. And mixing together two applications in a single container is [a bit of a Docker no-no](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#decouple-applications).
 
-All Fly servers include Wireguard VPN by default. I suspected that I could improve Andrew's solution by leaning on the Wireguard connection that was already there instead of mixing in Tailscale.
+All Fly.io servers include Wireguard VPN by default. I suspected that I could improve Andrew's solution by leaning on the Wireguard connection that was already there instead of mixing in Tailscale.
 
-## The linuxserver Docker image doesn't work on Fly
+## The linuxserver Docker image doesn't work on Fly.io
 
 When I searched for a Syncthing Docker image, I somehow overlooked the [official Docker image](https://hub.docker.com/r/syncthing/syncthing) and instead found the [unofficial LinuxServer.io version](https://hub.docker.com/r/linuxserver/syncthing).
 
-So, I tried launching with the linuxserver.io version, but the server on Fly went into a crash loop:
+So, I tried launching with the linuxserver.io version, but the server on Fly.io went into a crash loop:
 
 ```text
 2023-05-23T12:44:17.247 [info] Preparing to run: `/init` as root
@@ -43,7 +43,7 @@ So, I tried launching with the linuxserver.io version, but the server on Fly wen
 2023-05-23T12:44:17.261 [info] s6-overlay-suexec: fatal: can only run as pid 1
 ```
 
-I discovered a [Fly support thread](https://community.fly.io/t/deploying-grocy-image/6238?u=mtlynch) with the same issue:
+I discovered a [Fly.io support thread](https://community.fly.io/t/deploying-grocy-image/6238?u=mtlynch) with the same issue:
 
 > After some digging around I think I know what the issue is! Thanks to your last message with the error `s6-overlay-suexec: fatal: can only run as pid 1`
 >
@@ -55,9 +55,9 @@ Looking at the linuxserver Docker source, their runtime image [depends on linuxs
 
 Instead of checking more rigorously for an official Syncthing Docker image, I spent three hours [making my own](https://github.com/mtlynch/docker-syncthing). And then when I sat down to write this tutorial, I realized I had overlooked [the official image](https://hub.docker.com/r/syncthing/syncthing) that I wouldn't have to maintain, so I'll skip to that.
 
-## A basic Syncthing deployment on Fly
+## A basic Syncthing deployment on Fly.io
 
-With the official Syncthing Docker image in hand, I was ready to deploy to Fly. To start, I created a new Fly app:
+With the official Syncthing Docker image in hand, I was ready to deploy to Fly.io. To start, I created a new Fly.io app:
 
 ```bash
 $ fly apps create --name syncthing-mtlynch
@@ -65,7 +65,7 @@ $ fly apps create --name syncthing-mtlynch
 New app created: syncthing-mtlynch
 ```
 
-Synthing needs a place for Syncthing to store data, so I'll create a Fly persistent volume called `syncthing_data`:
+Synthing needs a place for Syncthing to store data, so I'll create a Fly.io persistent volume called `syncthing_data`:
 
 ```bash
 SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
@@ -75,7 +75,7 @@ fly volumes create syncthing_data \
   --yes
 ```
 
-Next, I'll make a minimal Fly config for Syncthing:
+Next, I'll make a minimal Fly.io config for Syncthing:
 
 ```toml
 app = "syncthing-mtlynch"
@@ -109,7 +109,7 @@ Updating existing machines in 'syncthing-mtlynch' with rolling strategy
   Finished deploying
 ```
 
-And it works! From the logs, Fly is up and running.
+And it works! From the logs, Fly.io is up and running.
 
 ```text
 2023/05/25 12:09:52 INFO: My ID: YERKMWG-WMUKYOR-J57TFK7-LQ3NHPX-6TI5AFU-IX7SEEW-GX7QO3C-NPYATQT
@@ -129,11 +129,11 @@ But once I've added the Syncthing server, my local Syncthing instance fails to c
 
 {{<img src="syncthing-cant-connect.webp" has-border="true">}}
 
-That's expected because I haven't configured Fly to allow any inbound traffic to Syncthing.
+That's expected because I haven't configured Fly.io to allow any inbound traffic to Syncthing.
 
 ## Configuring firewall ports for Syncthing
 
-At this point, Syncthing is up and running on Fly, but it isn't much use because it can't communicate with any of my other devices. Syncthing helpfully has clear documentation that explains how to configure your firewall to allow Syncthing to get the network traffic it needs [to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
+At this point, Syncthing is up and running on Fly.io, but it isn't much use because it can't communicate with any of my other devices. Syncthing helpfully has clear documentation that explains how to configure your firewall to allow Syncthing to get the network traffic it needs [to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
 
 > Port 22000/TCP: TCP based sync protocol traffic
 >
@@ -141,7 +141,7 @@ At this point, Syncthing is up and running on Fly, but it isn't much use because
 >
 > Port 21027/UDP: for discovery broadcasts on IPv4 and multicasts on IPv6
 
-And here's how I translate that into Fly's configuration.
+And here's how I translate that into Fly.io's configuration.
 
 ```toml
 [[services]]
@@ -172,9 +172,9 @@ And here's how I translate that into Fly's configuration.
     port = 21027
 ```
 
-I used port 22000 as a health check port for Fly. Fly will periodically poll that port, and if it can't connect, then it will know that Syncthing is not healthy.
+I used port 22000 as a health check port for Fly.io. Fly.io will periodically poll that port, and if it can't connect, then it will know that Syncthing is not healthy.
 
-Synthing's admin interface defaults to 0.0.0.0:8384, so it accepts connections on both private and public network interfaces. This shouldn't _really_ matter since my Fly config doesn't expose 8384, but for the sake of defense in depth, I'll configure Syncthing to listen only on the loopback interface.
+Synthing's admin interface defaults to 0.0.0.0:8384, so it accepts connections on both private and public network interfaces. This shouldn't _really_ matter since my Fly.io config doesn't expose 8384, but for the sake of defense in depth, I'll configure Syncthing to listen only on the loopback interface.
 
 Syncthing's [documentation](https://github.com/syncthing/syncthing/blob/v1.23.4/README-Docker.md#gui-security) explains that you can restrict access to the admin UI by unsetting the `STGUIADDRESS` environment variable.
 
@@ -230,7 +230,7 @@ app = "syncthing-mtlynch"
 
 ## Configuring Syncthing without Tailscale
 
-Now, I've got Syncthing running on Fly! I can grab the device ID from the logs and add my Fly Syncthing node as a peer.
+Now, I've got Syncthing running on Fly.io! I can grab the device ID from the logs and add my Fly.io Syncthing node as a peer.
 
 But, there's still one problem. The Syncthing node still has to accept the peer relationship. There's no official Syncthing CLI, so I need to access Syncthing's admin interface.
 
@@ -248,7 +248,7 @@ Unfortunately, the `fly ssh console` command doesn't have the feature of normal 
 fly proxy 8384:8384
 ```
 
-I found a Fly forum post called, ["Fly proxy seemingly doesn't work,"](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180?u=mtlynch) which described symptoms exactly like I was seeing:
+I found a Fly.io forum post called, ["Fly proxy seemingly doesn't work,"](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180?u=mtlynch) which described symptoms exactly like I was seeing:
 
 > I’m trying to connect my local computer through fly proxy 8080 and tells me the following:
 >
@@ -279,7 +279,7 @@ fly proxy 8384:8386
 
 And voila! It worked.
 
-Advantage of Andrew Katz's solution is that he can access his Fly server's Syncthing admin interface at any time. I have to go through the ugly dance of setting up an ad-hoc proxy, but that's actually fine for me. I expect maintenance to be infrequent.
+Advantage of Andrew Katz's solution is that he can access his Fly.io server's Syncthing admin interface at any time. I have to go through the ugly dance of setting up an ad-hoc proxy, but that's actually fine for me. I expect maintenance to be infrequent.
 
 ## Can I avoid the socat hack?
 
@@ -311,20 +311,20 @@ I tried
 syncthing cli --home /var/syncthing/config config devices
 ```
 
-## How to deploy Syncthing to Fly
+## How to deploy Syncthing to Fly.io
 
-If you want to deploy a Syncthing server to Fly, follow the steps below.
+If you want to deploy a Syncthing server to Fly.io, follow the steps below.
 
 ### Pre-requisites
 
 Before you begin, you'll need:
 
-- A Fly account (with billing activated)
+- A Fly.io account (with billing activated)
 - The `fly` CLI [installed](https://fly.io/docs/getting-started/installing-flyctl/) and authenticated on your machine
 
 ### Create your app
 
-First, create a new Fly app. The snippet below names your app `syncthing-` plus a random suffix, but you can choose any app name that isn't already claimed on Fly.
+First, create a new Fly.io app. The snippet below names your app `syncthing-` plus a random suffix, but you can choose any app name that isn't already claimed on Fly.io.
 
 ```bash
 RANDOM_SUFFIX="$(head /dev/urandom | tr -dc 'a-z0-9' | head -c 6 ; echo '')"
@@ -333,13 +333,13 @@ APP_NAME="syncthing-${RANDOM_SUFFIX}"
 fly apps create --name "${APP_NAME}"
 ```
 
-### Create Fly configuration file
+### Create Fly.io configuration file
 
-Next, create a Fly configuration file for your deployment.
+Next, create a Fly.io configuration file for your deployment.
 
-I prefer to know exactly what version I'm running, so I'm setting `SYNCTHING_VERSION` to the explicit `1.23.4` version image. If you want your Fly server to run the latest stable version on every new server deployment, set the version to `latest`. If you're feeling wild, you can choose `edge` or `nightly` for an unstable release with bleeding edge features.
+I prefer to know exactly what version I'm running, so I'm setting `SYNCTHING_VERSION` to the explicit `1.23.4` version image. If you want your Fly.io server to run the latest stable version on every new server deployment, set the version to `latest`. If you're feeling wild, you can choose `edge` or `nightly` for an unstable release with bleeding edge features.
 
-For `REGION`, choose [a Fly region](https://fly.io/docs/reference/regions/) near you.
+For `REGION`, choose [a Fly.io region](https://fly.io/docs/reference/regions/) near you.
 
 ```bash
 VOLUME_NAME="syncthing_data"
@@ -392,7 +392,7 @@ EOF
 
 ### Create a persistent volume
 
-You'll also need a persistent volume so that Syncthing doesn't lose your configuration and data on every server restart. You can choose any volume size, but Fly [offers 3 GB in the free tier](https://fly.io/docs/about/pricing/#free-allowances) as of this writing.
+You'll also need a persistent volume so that Syncthing doesn't lose your configuration and data on every server restart. You can choose any volume size, but Fly.io [offers 3 GB in the free tier](https://fly.io/docs/about/pricing/#free-allowances) as of this writing.
 
 ```bash
 SIZE_IN_GB="3" # This is the limit of fly.io's free tier as of 2023-05-24
@@ -426,7 +426,7 @@ $ fly logs | grep "My ID: "
 
 One neat feature of Syncthing is that you can treat certain Syncthing peers as untrusted. So they can replicate your data, but they can only access encrypted versions of it.
 
-That's a great solution here because I don't ever need the data in plaintext on the Fly server. I just need the server to let the other peers sync changes.
+That's a great solution here because I don't ever need the data in plaintext on the Fly.io server. I just need the server to let the other peers sync changes.
 
 ### Access web UI
 
