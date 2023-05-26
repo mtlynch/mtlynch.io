@@ -129,11 +129,11 @@ But once I've added the Syncthing server, my local Syncthing instance fails to c
 
 {{<img src="syncthing-cant-connect.webp" has-border="true">}}
 
-That's expected because I haven't configured Fly.io to allow any inbound traffic to Syncthing.
+That's expected because I haven't configured my Fly.io server to allow any inbound traffic. If I left the server alone long enough, it would likely connect anyway through a [relay](https://docs.syncthing.net/users/relaying.html#relaying), but Syncthing works better if you configure its incoming ports correctly.
 
 ## Configuring firewall ports for Syncthing
 
-At this point, Syncthing is up and running on Fly.io, but it isn't much use because it can't communicate with any of my other devices. Syncthing helpfully has clear documentation that explains how to configure your firewall to allow Syncthing to get the network traffic it needs [to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
+At this point, Syncthing is up and running on Fly.io, but it can't accept traffic from any of my other devices. Syncthing has helpfully clear documentation that explains how to configure your firewall to allow Syncthing to get the network traffic it needs [to communicate with peers](https://docs.syncthing.net/users/firewall.html#local-firewall):
 
 > Port 22000/TCP: TCP based sync protocol traffic
 >
@@ -141,7 +141,7 @@ At this point, Syncthing is up and running on Fly.io, but it isn't much use beca
 >
 > Port 21027/UDP: for discovery broadcasts on IPv4 and multicasts on IPv6
 
-And here's how I translate that into Fly.io's configuration.
+Here's how I translate that into Fly.io's configuration.
 
 ```toml
 [[services]]
@@ -172,9 +172,9 @@ And here's how I translate that into Fly.io's configuration.
     port = 21027
 ```
 
-I used port 22000 as a health check port for Fly.io. Fly.io will periodically poll that port, and if it can't connect, then it will know that Syncthing is not healthy.
+I used port 22000 as a health check port. That means Fly.io will periodically poll that port, and if it can't connect, then it will know that Syncthing is not healthy.
 
-Synthing's admin interface defaults to 0.0.0.0:8384, so it accepts connections on both private and public network interfaces. This shouldn't _really_ matter since my Fly.io config doesn't expose 8384, but for the sake of defense in depth, I'll configure Syncthing to listen only on the loopback interface.
+The Synthing Docker image's admin interface defaults to 0.0.0.0:8384, so it accepts connections on both private and public network interfaces. This shouldn't _really_ matter since my Fly.io config doesn't expose 8384, but for the sake of defense in depth, I'll configure Syncthing to listen only on the loopback interface.
 
 Syncthing's [documentation](https://github.com/syncthing/syncthing/blob/v1.23.4/README-Docker.md#gui-security) explains that you can restrict access to the admin UI by unsetting the `STGUIADDRESS` environment variable.
 
@@ -232,23 +232,61 @@ app = "syncthing-mtlynch"
 
 Now, I've got Syncthing running on Fly.io! I can grab the device ID from the logs and add my Fly.io Syncthing node as a peer.
 
-But, there's still one problem. The Syncthing node still has to accept the peer relationship. There's no official Syncthing CLI, so I need to access Syncthing's admin interface.
+But, there's still one problem. The Syncthing cloud server still has to accept the peer relationship from my devices.
 
-I don't want to expose the Syncthing admin interface to the public Internet. I theoretically could expose it and set a really strong password, but I'd rather prevent access to my server at the network level.
+I don't want to expose the Syncthing admin interface to the public Internet, as I don't want other people on my Syncthing network. I theoretically could expose the interface and set a really strong password, but I'd rather prevent access to my server at the network level.
 
-Andrew Katz solved this by joining
+Andrew Katz [solved this problem](#prior-work-syncthing--tailscale-on-flyio) by joining his Fly.io Syncthing server to his personal Tailscale VPN. That allowed Andrew to access the admin interface from within the VPN while denying access to anyone outside of his network.
 
-```bash
-fly ssh console
-```
+As I mentioned before every Fly.io server has Wireguard VPN built in, so could I access the admin interface that way?
 
-Unfortunately, the `fly ssh console` command doesn't have the feature of normal SSH where you can tunnel local ports to the other end of the SSH connection. But I did discover that fly has a `proxy` command, so I'll try that:
+I started by attempting to SSH into my server:
 
 ```bash
-fly proxy 8384:8384
+$ fly ssh console
+Connecting to fdaa:0:20ad:a7b:15f:92b0:4091:2... complete
+32874e1dc76685:/#
 ```
 
-I found a Fly.io forum post called, ["Fly proxy seemingly doesn't work,"](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180?u=mtlynch) which described symptoms exactly like I was seeing:
+That was easy. I now had console access to my Syncthing server and could run any command I wanted.
+
+With the standard `ssh` utility, you can tunnel local ports to the other end of the SSH connection. If I could tunnel my local port 8384 to port 8384 on my Syncthing server, then I could access the my Syncthing server's admin dashboard.
+
+Unfortunately, the `fly ssh console` command doesn't support port forwarding, but I discovered that the `fly` utility has a `proxy` command, so I tried that:
+
+```bash
+$ fly proxy 8384:8384
+Proxying local port 8384 to remote [syncthing-mtlynch.internal]:8384
+```
+
+Okay, that seemed like it was doing something. But then I tried connecting, and no dice:
+
+```bash
+$ curl http://localhost:8384
+curl: (56) Recv failure: Connection reset by peer
+```
+
+Hmm, that wasn't what I was hoping.
+
+I tried a simpler test where I launched netcat on port 8000 and then tried to proxy to that:
+
+```bash
+32874e1dc76685:/# nc -l 8000
+```
+
+```bash
+$ fly proxy 8000:8000
+Proxying local port 8000 to remote [syncthing-mtlynch.internal]:8000
+```
+
+```bash
+$ curl http://localhost:8000
+curl: (56) Recv failure: Connection reset by peer
+```
+
+On my Fly.io server, netcat didn't show any attempt at a connection. What gives?
+
+I found a Fly.io forum post titled, ["Fly proxy seemingly doesn't work,"](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180?u=mtlynch) which certainly captured my feelings in that moment:
 
 > I’m trying to connect my local computer through fly proxy 8080 and tells me the following:
 >
@@ -258,62 +296,104 @@ I found a Fly.io forum post called, ["Fly proxy seemingly doesn't work,"](https:
 >
 > -[@bram-dingelstad](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180?u=mtlynch)
 
-Yes! My thoughts exactly.
+`@jerome` from the Fly.io team explained what was going on:
 
 > only listeners bound on ipv6 are accessible via the `fly proxy` command.
 >
 > -[@jerome](https://community.fly.io/t/fly-proxy-seemingly-doesnt-work/7180/9?u=mtlynch)
 
-I'd solved a similar issue once [when I used to maintain a popular Sia Docker image](/sia-nextcloud/#dockerfilesia). The solution then was to proxy connections using a tool called `socat`. I tried using `socat` to listen on IPv6 port 8386 and proxy the connection to IPv4 port 8384.
+Ah, IPv6! That would explain it. If Syncthing was listening on an IPv4 interface, then it wouldn't receive the connection from the Fly.io proxy.
+
+I ran into a similar issue [when I was maintaining the Sia Docker image](/sia-nextcloud/#dockerfilesia). The solution then was to proxy connections using a tool called `socat`, so I tried it here to listen on IPv6 port 8386 and proxy the connection to IPv4 port 8384.
 
 ```bash
 apk add socat && \
   socat TCP6-LISTEN:8386,fork,su=nobody TCP4:localhost:8384
 ```
 
-Then I updated the `fly proxy` command to send traffic to the IPv6-friendly port:
+Then I updated the `fly proxy` command to send traffic to the IPv6 port:
 
 ```bash
 fly proxy 8384:8386
 ```
 
-And voila! It worked.
+And voila! It worked. I was able to access my my Syncthing cloud server's admin dashboard from my local device.
+
+{{<img src="cloud-dashboard.webp" has-border="true" max-width="450px">}}
 
 Advantage of Andrew Katz's solution is that he can access his Fly.io server's Syncthing admin interface at any time. I have to go through the ugly dance of setting up an ad-hoc proxy, but that's actually fine for me. I expect maintenance to be infrequent.
 
 ## Can I avoid the socat hack?
+
+Proxying IPv6 through `socat` worked, but it's kind of ugly and convoluted. Was there a cleaner way?
+
+It seemed like Syncthing natively supported IPv6, so I tried telling it to listen on the Fly.io server's IPv6 interface loopback interface, `::1`:
 
 ```toml
 [env]
   STGUIADDRESS = "[::1]:8384"
 ```
 
-Success! That let Syncthing run successfully. Now, I'll try the proxy command again:
+I redeployed with `fly deploy` and everything started up fine. The logs showed that Syncthing was now listening on `::1`:
 
-```bash
-fly proxy 8384:8384
+```text
+INFO: Access the GUI via the following URL: http://[::1]:8384/
 ```
 
-And now, I'll try connecting
+So far, so good. I'll try the proxy command again:
+
+```bash
+$ fly proxy 8384:8384
+Proxying local port 8384 to remote [syncthing-mtlynch.internal]:8384
+```
+
+And now, I'll try connecting over `8384`:
 
 ```bash
 $ curl http://localhost:8384/
 curl: (56) Recv failure: Connection reset by peer
 ```
 
+Darn! So close.
+
+In my Syncthing server logs, I saw dozens of lines with this message:
+
 ```text
 [UPMD6] 2023/05/25 11:41:16 INFO: Listen (BEP/tcp): TLS handshake: EOF
 ```
 
-I tried
+TLS? Huh? Syncthing's logs said it was listening for plaintext `http://` connections. But for fun, I tried the HTTPS protocol:
 
 ```bash
-syncthing cli --home /var/syncthing/config config devices
+$ curl https://localhost:8384/
+curl: (35) OpenSSL SSL_connect: Connection reset by peer in connection to localhost:8384
 ```
+
+Nope, no dice there either. I suspect that I'm close to a solution here, so if readers have ideas, let me know.
+
+The other route I considered was skipping the web GUI entirely and just doing everything through the CLI like a real hacker.
+
+```bash
+$ syncthing cli --home /var/syncthing/config config devices
+NAME:
+   syncthing cli config devices -
+
+USAGE:
+   syncthing cli config devices command [command options] [arguments...]
+
+COMMANDS:
+
+   ACTIONS:
+     list      List item keys in the collection
+     add       Add a new item to collection
+     add-json  Add a new item to collection deserialised from JSON
+```
+
+But Syncthing's CLI seemed pretty complex, so I decided the web GUI is good enough for me.
 
 ## How to deploy Syncthing to Fly.io
 
-If you want to deploy a Syncthing server to Fly.io, follow the steps below.
+Now that I've poked around Syncthing and Fly.io through lots of trial and error, I'm ready to present a clean way to deploy Syncthing on Fly.io. It should only take about five minutes from start to finish.
 
 ### Pre-requisites
 
@@ -324,7 +404,9 @@ Before you begin, you'll need:
 
 ### Create your app
 
-First, create a new Fly.io app. The snippet below names your app `syncthing-` plus a random suffix, but you can choose any app name that isn't already claimed on Fly.io.
+First, create a new Fly.io app.
+
+The snippet below names your app `syncthing-` plus a random suffix, but you can choose any app name that isn't already claimed on Fly.io.
 
 ```bash
 RANDOM_SUFFIX="$(head /dev/urandom | tr -dc 'a-z0-9' | head -c 6 ; echo '')"
@@ -392,7 +474,9 @@ EOF
 
 ### Create a persistent volume
 
-You'll also need a persistent volume so that Syncthing doesn't lose your configuration and data on every server restart. You can choose any volume size, but Fly.io [offers 3 GB in the free tier](https://fly.io/docs/about/pricing/#free-allowances) as of this writing.
+You'll need a persistent volume so that Syncthing doesn't lose your configuration and data on every server restart.
+
+You can choose any volume size, but Fly.io [offers 3 GB in its free tier](https://fly.io/docs/about/pricing/#free-allowances) as of this writing.
 
 ```bash
 SIZE_IN_GB="3" # This is the limit of fly.io's free tier as of 2023-05-24
@@ -409,6 +493,16 @@ Finally, it's time to deploy your app. There's no reason to purchase IPv4 addres
 
 ```bash
 fly deploy --no-public-ips
+```
+
+If everything worked, you should see a message like this:
+
+```text
+No machines in group app, launching a new machine
+  Machine e286537dbd3586 [app] update finished: success
+Finished launching new machines
+Updating existing machines in 'syncthing-ccdb2x' with rolling strategy
+  Finished deploying
 ```
 
 ### Adding your Syncthing cloud server as a peer
@@ -456,5 +550,3 @@ Open web UI:
 ###
 
 {{<img src="cloud-dashboard.webp" has-border="true" max-width="450px">}}
-
-{{<img src="add-cloud-syncthing.webp" has-border="true">}}
