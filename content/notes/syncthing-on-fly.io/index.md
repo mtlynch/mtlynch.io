@@ -285,25 +285,6 @@ Advantage of Andrew Katz's solution is that he can access his Fly server's Synct
 
 ```toml
 [env]
-  STGUIADDRESS = "::1:8384"
-```
-
-That caused Syncthing to go into a crash loop with this error in the logs:
-
-```text
-WARNING: Starting API/GUI: listen tcp: address ::1:8384: too many colons in address
-```
-
-Wait, does Syncthing not know IPv6? That would be strange. Checking [the documentation](https://docs.syncthing.net/users/config.html#config-option-gui.address):
-
-> IPv6 address and port ([::1]:8384)
->
-> The address and port are used as given. The address must be enclosed in square brackets.
-
-Oh, okay. I need some brackets:
-
-```toml
-[env]
   STGUIADDRESS = "[::1]:8384"
 ```
 
@@ -361,6 +342,7 @@ I prefer to know exactly what version I'm running, so I'm setting `SYNCTHING_VER
 For `REGION`, choose [a Fly region](https://fly.io/docs/reference/regions/) near you.
 
 ```bash
+VOLUME_NAME="syncthing_data"
 SYNCTHING_VERSION="1.23.4"
 REGION="ewr"
 
@@ -413,7 +395,6 @@ EOF
 You'll also need a persistent volume so that Syncthing doesn't lose your configuration and data on every server restart. You can choose any volume size, but Fly [offers 3 GB in the free tier](https://fly.io/docs/about/pricing/#free-allowances) as of this writing.
 
 ```bash
-VOLUME_NAME="syncthing_data"
 SIZE_IN_GB="3" # This is the limit of fly.io's free tier as of 2023-05-24
 
 fly volumes create "${VOLUME_NAME}" \
