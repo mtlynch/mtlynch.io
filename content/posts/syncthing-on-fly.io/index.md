@@ -325,7 +325,7 @@ Advantage of Andrew Katz's solution is that he can access his Fly.io server's Sy
 
 ## Can I avoid the socat hack?
 
-Proxying IPv6 through `socat` worked, but it's kind of ugly and convoluted. Was there a cleaner way?
+Proxying IPv6 through `socat` worked, but it's kind of ugly and convoluted. Is there a cleaner way?
 
 It seemed like Syncthing natively supported IPv6, so I tried telling it to listen on the Fly.io server's IPv6 interface loopback interface, `::1`:
 
