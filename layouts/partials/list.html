@@ -7,7 +7,7 @@
 
     {{- .Title -}}
   </h1>
-  <ul>
+  <ul class="blurb-list">
     {{ range .Paginator.Pages }}
       {{- .Render "li" -}}
     {{ end }}
