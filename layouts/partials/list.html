@@ -1,4 +1,4 @@
-<section class="container list">
+<section class="container">
   <h1 class="title">
     {{- if eq .Kind "taxonomy" -}}
       {{- .Data.Singular | title -}}
@@ -7,7 +7,7 @@
 
     {{- .Title -}}
   </h1>
-  <ul>
+  <ul class="list">
     {{ range .Paginator.Pages }}
       {{- .Render "li" -}}
     {{ end }}

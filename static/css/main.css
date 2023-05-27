@@ -403,7 +403,7 @@ h4:hover .hanchor {
   font-size: 0.6875em;
 }
 
-.list ul li .date {
+.list li .date {
   text-align: left;
   margin: 0;
 }
@@ -417,7 +417,6 @@ h4:hover .hanchor {
   flex-direction: column;
   margin: 0;
   padding: 3rem 0 6rem 0 !important;
-  border-bottom: 1px solid rgba(177, 177, 177, 0.623);
 }
 
 @media screen and (min-width: 768px) {
@@ -425,6 +424,33 @@ h4:hover .hanchor {
     flex-direction: row;
     padding-bottom: 2rem !important;
   }
+}
+
+.posts-list li {
+  border-bottom: 1px solid rgba(177, 177, 177, 0.623);
+}
+
+.book-reports-list li {
+  margin: 2rem 0;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .book-reports-list li {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .book-reports-list li .summary {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.book-reports-list li .title {
+  font-size: 1.1em !important;
+  text-decoration: none;
 }
 
 .list .img-wrapper {
@@ -457,30 +483,6 @@ h4:hover .hanchor {
 
 .retrospective .finances-chart {
   margin-bottom: 5rem;
-}
-
-.book-reports-list li {
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .book-reports-list li {
-    margin-bottom: 3rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .book-reports-list li .summary {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.book-reports-list li .title {
-  font-size: 1.1em !important;
-  text-decoration: none;
 }
 
 .book-reports-list .img-wrapper {
