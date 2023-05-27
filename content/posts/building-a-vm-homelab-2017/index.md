@@ -202,7 +202,7 @@ My most questionable choice is the CPU. It does run very fast, but it may have a
 
 The downside to the Ryzen is that it's very bleeding edge right now and compatibility is shaky. I tried installing Fedora 25 server, Debian 8.7, Centos 7, and ESXi 6.5 and they all died during the installation because they weren't compatible with the Ryzen. I was able to install some of these successfully if I disabled SMT (multithreading) for the CPU in BIOS, but that reduces it to an from a 16-core to an 8-core CPU, which felt sad. The only OS that installed successfully was Ubuntu (successfully installed both 16.04 and 17.04).
 
-The Ryzen also limited what RAM sticks I could buy. The motherboard supports DDR4 RAM up to 3200 MHz, but Corsair has no memory [tested compatible](http://www.corsair.com/en-us/memory-finder) with it. [G.SKILL does](https://www.gskill.com/en/configurator?manu=52&chip=2952&model=2990), but nothing faster than DDR4 2400 MHz.
+The Ryzen also limited what RAM sticks I could buy. The motherboard supports DDR4 RAM up to 3200 MHz, but Corsair has no memory [tested compatible](https://www.corsair.com/us/en/c/memory) with it. [G.SKILL does](https://www.gskill.com/en/configurator?manu=52&chip=2952&model=2990), but nothing faster than DDR4 2400 MHz.
 
 ### Review: Motherboard
 
