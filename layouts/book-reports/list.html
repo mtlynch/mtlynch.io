@@ -6,7 +6,7 @@
   <section class="container list">
     <h1 class="title">{{ .Title }}</h1>
 
-    <ul class="book-reports-list">
+    <ul class="blurb-list book-reports-list">
       {{- range .Paginator.Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
