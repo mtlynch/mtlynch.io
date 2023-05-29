@@ -74,7 +74,7 @@ New app created: syncthing-mtlynch
 Synthing needs a place to store data, so I created a Fly.io persistent volume called `syncthing_data`:
 
 ```bash
-SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-24
+SIZE_IN_GB=3 # This is the limit of fly.io's free tier as of 2023-05-29
 
 fly volumes create syncthing_data \
   --size "${SIZE_IN_GB}" \
