@@ -561,4 +561,6 @@ You should see an admin dashboard like the following:
 
 Congratulations! You've deployed your Syncthing server to the cloud, and you now have full access to it. From here, you can configure it just like you would any other device running Syncthing.
 
+When you're done configuring Syncthing settings on your Fly.io, you can terminate the `fly proxy` command with `Ctrl+C`. If you want to be especially tidy, you can run `fly deploy`, which redeploy your server without the extra `socat` package you added, but `socat` shouldn't cause any issues.
+
 You If you want to be especially tidy, you can
