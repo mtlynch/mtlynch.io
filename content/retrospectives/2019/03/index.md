@@ -163,7 +163,7 @@ I can't tell if this made any real difference. I implemented the change on Feb. 
 
 Is It Keto's biggest limiting factor is its domain authority, which continues to hover at a paltry score of 10 (out of a log scale of 100). With so much of the site's traffic depending on search engine rank, I need more high-ranking sites linking to Is It Keto. The problem now is that none of the content appeals to other sites. A popular nutrition or keto website would never link to [IsItKeto's apples](https://isitketo.org/apples) page, for example, because it's nothing sensational or surprising.
 
-My plan is to write blog posts on Is It Keto using recipe data from [KetoHub](https://ketohub.io) to make interesting visualizations about trends in keto. For example, here's a rough draft of a bubble cloud I made showing the most popular ingredients in over 4,500 different keto recipes:
+My plan is to write blog posts on Is It Keto using recipe data from [KetoHub](https://recipe-search.isitketo.org) to make interesting visualizations about trends in keto. For example, here's a rough draft of a bubble cloud I made showing the most popular ingredients in over 4,500 different keto recipes:
 
 {{<img src="ingredients-rough.jpg" alt="Bubble cloud  of ingredient frequency" caption="Ingredient frequency in 4,500 keto recipes from the most popular keto websites" max-width="600px">}}
 

@@ -47,9 +47,9 @@ After six years of adding to this database, they realized that they had enough d
 
 ## What business was it of mine?
 
-I had the same problem as the _Times_. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
+I had the same problem as the _Times_. My project [KetoHub](https://recipe-search.isitketo.org/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
 
-{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" max-width="400px" has-border="true">}}
+{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://recipe-search.isitketo.org/?q=avocado) search for recipes matching 'avocado'" max-width="400px" has-border="true">}}
 
 {{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" max-width="300px" has-border="true" align="right">}}
 

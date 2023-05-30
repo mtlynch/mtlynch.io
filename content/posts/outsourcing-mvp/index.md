@@ -134,4 +134,4 @@ If you choose to work with a freelancer:
 
 _This article was edited by [Samantha Mason](https://www.samanthamasonfreelancer.com)._
 
-_If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article._
+_If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://recipe-search.isitketo.org), the website I've been talking about this whole article._

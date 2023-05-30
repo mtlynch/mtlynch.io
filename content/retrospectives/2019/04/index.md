@@ -106,7 +106,7 @@ Over the past few months, it's become clear that Is It Keto's primary source of 
 
 This presented a difficult challenge. Every page on Is It Keto is just an explanation of why a particular food is or is not keto. The Huffington Post is never going to get excited about my article on [Lily's Chocolate](https://isitketo.org/lilys-chocolate) and do their own write-up about what how groundbreaking it is. There are big keto sites that presumably have an interest in keto content, but they don't want to link to someone else's explanations about which foods are keto.
 
-I tried to think of what unique advantages I had over other keto sites. My one secret weapon was [KetoHub](https://ketohub.io), a keto recipe search tool I built in 2017. It scrapes keto recipes from the web into structured data:
+I tried to think of what unique advantages I had over other keto sites. My one secret weapon was [KetoHub](https://recipe-search.isitketo.org), a keto recipe search tool I built in 2017. It scrapes keto recipes from the web into structured data:
 
 {{<img src="ketohub-data.jpg" caption="Structured keto recipe data from KetoHub" max-width="800px">}}
 
