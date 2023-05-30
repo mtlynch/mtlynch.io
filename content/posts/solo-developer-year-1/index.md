@@ -127,7 +127,7 @@ After running a [series of experiments](https://blog.spaceduck.io/load-test-wrap
 | Domain              | -$60        |
 | **Net profit**      | -**$1,879** |
 
-### [KetoHub](https://ketohub.io)
+### [KetoHub](https://recipe-search.isitketo.org)
 
 {{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub website" max-width="700px" has-border="true">}}
 

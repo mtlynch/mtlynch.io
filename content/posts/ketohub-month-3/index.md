@@ -93,7 +93,7 @@ Unfortunately, this doesn't seem to work in bigger groups. The larger the commun
 
 I also found success in using KetoHub as the answer to people's questions.
 
-People frequently posted in these groups searching for recipes that met particular criteria. For example, when someone asked for keto breakfasts that exclude egg, I shared a link to [a KetoHub search](https://ketohub.io/?category=breakfast&q=-egg) for all breakfasts that don't include egg as an ingredient:
+People frequently posted in these groups searching for recipes that met particular criteria. For example, when someone asked for keto breakfasts that exclude egg, I shared a link to [a KetoHub search](https://recipe-search.isitketo.org/?category=breakfast&q=-egg) for all breakfasts that don't include egg as an ingredient:
 
 {{<img src="ketohub-fb-response2.png" alt="Existing keto sites" max-width="415px">}}
 
@@ -126,4 +126,4 @@ From what I've heard, a good website will bring back at least 10% of its users t
 
 ---
 
-_If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://ketohub.io), the website I've been talking about this whole article._
+_If you're a keto dieter interested in finding new recipes, check out [KetoHub](https://recipe-search.isitketo.org), the website I've been talking about this whole article._
