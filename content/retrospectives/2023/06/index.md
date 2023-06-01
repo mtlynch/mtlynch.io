@@ -37,10 +37,10 @@ TODO
 
 ### Find three homelab bloggers or YouTubers interested in reviewing TinyPilot Voyager 2a
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Found 2.5 people interested in reviewing TinyPilot.
+- **Grade**: B+
 
-TODO
+Two are interested and plan to feature it in a video, and the third doesn't do reviews, but is open to giving TinyPilot a cameo if they can find a use for it.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
