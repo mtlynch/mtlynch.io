@@ -8,10 +8,10 @@ jobs:
       - checkout
       - run:
           name: Check for trailing whitespace
-          command: tests/check-trailing-whitespace
+          command: ./dev-scripts/check-trailing-whitespace
       - run:
           name: Check for trailing newlines
-          command: tests/check-trailing-newline
+          command: ./dev-scripts/check-trailing-newline
   check_html_format:
     docker:
       - image: cimg/node:14.18.1
@@ -30,7 +30,7 @@ jobs:
       - checkout
       - run:
           name: Lint Markdown
-          command: tests/lint-markdown
+          command: ./dev-scripts/lint-markdown
   build:
     docker:
       - image: peaceiris/hugo:v0.109.0
@@ -62,7 +62,7 @@ jobs:
           at: ./
       - run:
           name: Check HTML and external links
-          command: tests/lint-html
+          command: ./dev-scripts/lint-html
   check-seo-metadata:
     docker:
       - image: cimg/base:2020.01
@@ -72,7 +72,7 @@ jobs:
           at: ./
       - run:
           name: Check that SEO meta tags rendered properly
-          command: tests/check-seo-metadata
+          command: ./dev-scripts/check-seo-metadata
   publish_draft:
     docker:
       - image: cimg/node:14.18.1
