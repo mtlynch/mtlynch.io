@@ -3,13 +3,13 @@ title: "Takeaways from Cory Zue's May 2023 Livecoding Session"
 date: 2023-06-03T16:08:02-04:00
 ---
 
-Here are my takeaways.
+My friend [Cory Zue](https://www.coryzue.com/) has been publishing his live coding sessions, so I decided to watch one and record my notes.
 
-https://www.youtube.com/watch?v=zEDaeG6nw48
+{{<youtube zEDaeG6nw48>}}
 
 ## My background vs. Cory's
 
-I've read a lot of Cory's blog. We're both Python developers, but he specializes in Django, whereas I've always done more min. I have no experience with Django, but I'm comfortable in Python.
+I've read a lot of Cory's blog. We're both Python developers, but he specializes in Django, whereas I've always worked with thinner frameworks like Flask. I have no experience with Django, but I'm comfortable in Python.
 
 ## Dev environment
 
@@ -19,7 +19,7 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
   - I expected Cory to be an OS X guy.
 - Browser: Firefox
 - IDE: PyCharm (I think)
-  - I've never used PyCharm.
+  - I've never used PyCharm and am more used to VS Code.
 
 ## Models
 
@@ -54,35 +54,34 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 {{<img src="translations.png" max-width="800px" caption="[Timestamp 10:05](https://youtu.be/zEDaeG6nw48?t=10m5s)">}}
 
-- Something I never think about.
-
-`{% translate "Manage your chats here." %}`
-
-- I guess he's going to create translations later?
+- Cory seems like he's designing this app for localizability, which is something I haven't thought about in ~15 years.
+- The [syntax for an internationalizable string](https://docs.djangoproject.com/en/4.2/topics/i18n/translation/#translate-template-tag) seems pretty straightforward.
+  - `{% translate "Manage your chats here." %}`
+  - You must have to supply translations to other languages somewhere else, so I'm curious about how that works.
 
 ## Django control flow
 
-14:52
+{{<img src="get-object-or-404.png" max-width="800px" caption="[Timestamp 14:52](https://youtu.be/zEDaeG6nw48?t=14m52s)">}}
 
-- Django is weird! You can just do a `get_object_or_404`, which seems to exit the function and return a 404 if it can't find the object.
-  - This is quite foreign to me coming from Python Flask or Go, which force the developer to be more explicit but also create more verbosity.
+- Django is weird! You can just do a `get_object_or_404`, which seems to exit the function and return an HTTP 404 error if it can't find the object.
+  - This is quite foreign to me coming from Python Flask or Go, which both force the developer to be more explicit about returning an HTTP error (except for unhandled exceptions, which become HTTP 500 errors).
 
 ## git GUI
 
-25:08
+{{<img src="git-gui.png" max-width="800px" caption="[Timestamp 25:08](https://youtu.be/zEDaeG6nw48?t=25m08s)">}}
 
 - Cory uses a GUI for git that I've never seen before.
   - He spawns it by calling `git g`, which I think is a Cory-specific git alias.
-- Cory goes through each file one-by-one and adds it to the commit as he reviews it.
+- Cory adds each file to the commit one-by-one as he reviews it.
 - Cory has a pre-commit hook that rejects the commit if the formatting is incorrect, and then it reformats it to the desired style.
   - This is something I've always been afraid to do, as I don't trust automated tools to change my code.
   - The way Cory does it, the automated tools change his code, but then he still reviews the change before committing it.
 
 ## Sharing code between client-side and server-side rendering
 
-29:06
+{{<img src="htmx.png" max-width="800px" caption="[Timestamp 29:06](https://youtu.be/zEDaeG6nw48?t=29m06s)">}}
 
-- Cory seems to be able to use htmx to solve a problem I struggle with: how to avoid duplicating code between client-side rendering and server-side rendering.
+- Cory seems to be able to use [htmx](https://htmx.org) to solve a problem I struggle with: how to avoid duplicating code between client-side rendering and server-side rendering.
 
   - In web apps, I often run into a situation where I want to add content to the page, but I don't want to completely reload the page.
   - If the user reloads, they should see the same content that they saw when we added the content dynamically.
@@ -95,14 +94,16 @@ I've read a lot of Cory's blog. We're both Python developers, but he specializes
 
 ## ChatGPT API
 
-35:88
+{{<img src="chatgpt-api.png" max-width="800px" caption="[Timestamp 36:48](https://youtu.be/zEDaeG6nw48?t=36m48s)">}}
 
 - ChatGPT API is surprisingly easy to use.
   - The API is just a model name and a list of messages in the conversation.
-  - You keep "state" of the conversation by passing ChatGPT the full message history on every API call.
+  - You maintain state of the conversation by passing ChatGPT the full message history on every API call.
 
 ## Final thoughts
 
-I expected Django to be a heavy framework, but it's actually even heavier than I expected. Django even has its own wrappers for Python lists, dicts, and enums.
+I expected Django to be a heavy framework, but it's even heavier than I expected. Django has its own wrappers for Python lists, dicts, and enums. The space between Django and pure Python feels like the gap between React and vanilla JavaScript.
 
 I had trouble adapting lessons to my own work because a lot of what Cory was doing was Django-specific. It could just be that I got unluck with video choice, as the work Cory was doing in this video was largely gluing different elements of Django together.
+
+Still, it's interesting to see the developer experience in a stack where you're designing everything from a higher layer of abstraction.
