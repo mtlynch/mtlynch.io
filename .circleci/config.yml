@@ -47,8 +47,8 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
+            - dev-scripts
             - public
-            - tests
             - netlify.toml
       - save_cache:
           key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
