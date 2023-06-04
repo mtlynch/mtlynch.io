@@ -420,16 +420,20 @@ h4:hover .hanchor {
 @media screen and (min-width: 768px) {
   .list .blurb-list li {
     flex-direction: row;
-    padding-bottom: 2rem !important;
   }
-}
-
-.list .blurb-list li {
-  margin: 0 0 4rem 0;
 }
 
 .list .posts-list li {
   border-bottom: 1px solid rgba(177, 177, 177, 0.623);
+  margin: 0 0 4rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .list .posts-list li {
+    border-bottom: 1px solid rgba(177, 177, 177, 0.623);
+    margin: 0 0 4rem 0;
+    padding-bottom: 2rem !important;
+  }
 }
 
 .blurb-list .img-wrapper {
@@ -464,12 +468,12 @@ h4:hover .hanchor {
   margin-bottom: 5rem;
 }
 
-.blurb-list .book-reports-list li {
+.blurb-list.book-reports-list li {
   margin: 2rem 0;
 }
 
 @media screen and (min-width: 768px) {
-  .blurb-list .book-reports-list li {
+  .blurb-list.book-reports-list li {
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
@@ -477,29 +481,29 @@ h4:hover .hanchor {
 }
 
 @media screen and (min-width: 768px) {
-  .blurb-list .book-reports-list li .summary {
+  .blurb-list.book-reports-list li .summary {
     display: flex;
     flex-direction: row;
   }
 }
 
-.blurb-list .book-reports-list li .title {
+.blurb-list.book-reports-list li .title {
   font-size: 24pt !important;
   margin-bottom: 3rem !important;
 }
 
-.blurb-list .book-reports-list li .title a {
+.blurb-list.book-reports-list li .title a {
   text-decoration: none;
   font-weight: 700;
 }
 
-.blurb-list .book-reports-list .img-wrapper {
+.blurb-list.book-reports-list .img-wrapper {
   display: flex;
   justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-  .blurb-list .book-reports-list .img-wrapper {
+  .blurb-list.book-reports-list .img-wrapper {
     justify-content: flex-start;
     margin-right: 2.5rem;
     min-width: 260px;
@@ -508,12 +512,12 @@ h4:hover .hanchor {
 }
 
 @media screen and (min-width: 768px) {
-  .blurb-list .book-reports-list li img {
+  .blurb-list.book-reports-list li img {
     max-height: inherit;
   }
 }
 
-.blurb-list .book-reports-list .full-review-link {
+.blurb-list.book-reports-list .full-review-link {
   display: block;
   text-align: center;
   text-decoration: none;
@@ -525,7 +529,7 @@ h4:hover .hanchor {
 }
 
 @media screen and (min-width: 768px) {
-  .blurb-list .book-reports-list .full-review-link {
+  .blurb-list.book-reports-list .full-review-link {
     display: inline-block;
   }
 }
