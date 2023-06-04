@@ -50,17 +50,15 @@ In order to transition to the 3PL, we needed to free up the local team's workloa
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | February 2023  | March 2023       | Change                                        |
-| ------------------------ | -------------- | ---------------- | --------------------------------------------- |
-| Unique Visitors          | 12,141         | 7,443            | <font color="red">-4,698 (-39%)</font>        |
-| Total Pageviews          | 23,117         | 17,904           | <font color="red">-5,213 (-23%)</font>        |
-| Sales Revenue            | $72,585.15     | $86,803.78       | <font color="green">+$14,218.63 (+20%)</font> |
-| Enterprise Subscriptions | $290.70        | $290.70          | 0                                             |
-| Royalties                | $3,935.73      | $4,820.75        | <font color="green">+$885.02 (+22%)</font>    |
-| Total Revenue            | $76,811.58     | $91,915.23       | <font color="green">+$15,103.65 (+20%)</font> |
-| **Profit**               | **$33,537.97** | **$32,493.36**\* | **<font color="red">-$1,044.61 (-3%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | February 2023  | March 2023     | Change                                            |
+| ------------------------ | -------------- | -------------- | ------------------------------------------------- |
+| Unique Visitors          | 12,141         | 7,443          | <font color="red">-4,698 (-39%)</font>            |
+| Total Pageviews          | 23,117         | 17,904         | <font color="red">-5,213 (-23%)</font>            |
+| Sales Revenue            | $72,585.15     | $86,803.78     | <font color="green">+$14,218.63 (+20%)</font>     |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                                 |
+| Royalties                | $3,935.73      | $4,820.75      | <font color="green">+$885.02 (+22%)</font>        |
+| Total Revenue            | $76,811.58     | $91,915.23     | <font color="green">+$15,103.65 (+20%)</font>     |
+| **Profit**               | **$32,905.55** | **$43,952.10** | **<font color="green">+$11,046.55 (+34%)</font>** |
 
 Switching TinyPilot's case from plastic to metal dramatically increased demand. Even as I increase prices and reduce marketing to near zero, sales volume keeps increasing.
 

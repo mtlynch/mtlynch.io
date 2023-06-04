@@ -1,0 +1,11 @@
+<li class="retrospectives">
+  <span class="date"
+    >{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span
+  >
+  <div class="">
+    <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}"
+      >{{ .Title }}</a
+    >
+    <p style="margin: 0">{{ .Page.Params.description }}</p>
+  </div>
+</li>

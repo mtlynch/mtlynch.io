@@ -1,0 +1,9 @@
+title: Zestful
+external_url: "https://allyourtexts.com"
+start_date: 2018
+end_date: 2020
+blurb: |
+  Zestful is a paid API service that allows clients to parse recipe ingredients like `"2 cups finely chopped red onions"` into structured data like `{"quantity":2.5, "unit":"cups", "preparationNotes":"finely chopped", ... }`.
+
+  It has been in maintenance mode since 2020.
+weight: 98

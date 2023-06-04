@@ -30,7 +30,7 @@ From the title of this post, you probably figured out that my plan didn't work.
 
 ## The product idea
 
-The idea came to me while I was staring at the ugliest code I had ever written. It was in a [recipe search tool](https://ketohub.io) I created last year. That app never took off but was fun to work on occasionally. There was one corner of the codebase that always plagued me: ingredient parsing.
+The idea came to me while I was staring at the ugliest code I had ever written. It was in a [recipe search tool](https://recipe-search.isitketo.org) I created last year. That app never took off but was fun to work on occasionally. There was one corner of the codebase that always plagued me: ingredient parsing.
 
 Given a string such as `"2 cups finely chopped red onions"`, the app had to figure out that `2` was the quantity, `cups` was the unit of measure, and so on:
 

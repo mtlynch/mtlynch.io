@@ -49,7 +49,7 @@ The same logic applied to code. It pains me to ship code that's likely to create
 
 ### I worked with familiar tools
 
-My project before Is It Keto was a recipe search tool called [KetoHub](https://ketohub.io). Envious of the cool kids with their hip frontend frameworks, I built the site using [Angular](https://angular.io) and [Firebase](https://firebase.google.com). At first, this was fun because those technologies do seemingly magical things. My progress slowed to a crawl, however, when I ventured beyond basic examples. The magicalness of the tech stack prevented me from understanding how my app worked.
+My project before Is It Keto was a recipe search tool called [KetoHub](https://recipe-search.isitketo.org). Envious of the cool kids with their hip frontend frameworks, I built the site using [Angular](https://angular.io) and [Firebase](https://firebase.google.com). At first, this was fun because those technologies do seemingly magical things. My progress slowed to a crawl, however, when I ventured beyond basic examples. The magicalness of the tech stack prevented me from understanding how my app worked.
 
 Reeling from this pain, I wrote Is It Keto using Python 2.7, App Engine Standard, and Cloud Datastore. These are relatively old and unsexy technologies, but it's the same setup as a site I maintained for several years. Is It Keto keeps all of its logic on the server, which makes it uncool but trivial to reason about.
 

@@ -403,37 +403,42 @@ h4:hover .hanchor {
   font-size: 0.6875em;
 }
 
-.list ul li .date {
+.list .blurb-list li .date {
   text-align: left;
   margin: 0;
 }
 
-.list img {
+.blurb-list img {
   object-fit: contain;
 }
 
-.posts-list li {
+.list .blurb-list li {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 3rem 0 6rem 0 !important;
-  border-bottom: 1px solid rgba(177, 177, 177, 0.623);
 }
 
 @media screen and (min-width: 768px) {
-  .posts-list li {
+  .list .blurb-list li {
     flex-direction: row;
     padding-bottom: 2rem !important;
   }
 }
 
-.posts-list .img-wrapper {
+.list .blurb-list li {
+  margin: 0 0 4rem 0;
+}
+
+.list .posts-list li {
+  border-bottom: 1px solid rgba(177, 177, 177, 0.623);
+}
+
+.blurb-list .img-wrapper {
   display: flex;
   justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-  .posts-list .img-wrapper {
+  .blurb-list .img-wrapper {
     display: block;
     margin-right: 2.5rem;
     min-width: 280px;
@@ -441,55 +446,60 @@ h4:hover .hanchor {
   }
 }
 
-.posts-list li img {
+.blurb-list li img {
   max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .posts-list li img {
+  .blurb-list li img {
     max-height: 200px;
   }
 }
 
-.posts-list li h2 {
-  margin: 0rem 0 0.5rem 0 !important;
+.blurb-list li h2 {
+  margin: 0 0 0.5rem 0 !important;
 }
 
 .retrospective .finances-chart {
   margin-bottom: 5rem;
 }
 
-.book-reports-list li {
+.blurb-list .book-reports-list li {
   margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
-  .book-reports-list li {
+  .blurb-list .book-reports-list li {
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .book-reports-list li .summary {
+  .blurb-list .book-reports-list li .summary {
     display: flex;
     flex-direction: row;
   }
 }
 
-.book-reports-list li .title {
-  font-size: 1.1em !important;
-  text-decoration: none;
+.blurb-list .book-reports-list li .title {
+  font-size: 24pt !important;
+  margin-bottom: 3rem !important;
 }
 
-.book-reports-list .img-wrapper {
+.blurb-list .book-reports-list li .title a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.blurb-list .book-reports-list .img-wrapper {
   display: flex;
   justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-  .book-reports-list .img-wrapper {
+  .blurb-list .book-reports-list .img-wrapper {
     justify-content: flex-start;
     margin-right: 2.5rem;
     min-width: 260px;
@@ -497,7 +507,13 @@ h4:hover .hanchor {
   }
 }
 
-.book-reports-list .full-review-link {
+@media screen and (min-width: 768px) {
+  .blurb-list .book-reports-list li img {
+    max-height: inherit;
+  }
+}
+
+.blurb-list .book-reports-list .full-review-link {
   display: block;
   text-align: center;
   text-decoration: none;
@@ -509,7 +525,7 @@ h4:hover .hanchor {
 }
 
 @media screen and (min-width: 768px) {
-  .book-reports-list .full-review-link {
+  .blurb-list .book-reports-list .full-review-link {
     display: inline-block;
   }
 }
@@ -572,4 +588,19 @@ h4:hover .hanchor {
 
 table + .img {
   margin-top: 3rem;
+}
+
+.list li.retrospectives {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .list li.retrospectives {
+    display: flex;
+  }
+}
+
+.list li.retrospectives .title {
+  font-size: 1.4em;
+  text-decoration: none;
 }

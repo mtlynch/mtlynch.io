@@ -99,7 +99,7 @@ From testing the competing service, I could tell that they created it the same w
 
 So, it irritated me that they consistently beat me in search results. I couldn't figure out why! More sites linked to Zestful. I had more content, and I updated my site more frequently. The only explanation I could think of was that Zestful was rendered client-side, and my competitor's site was rendered server-side. That meant that they could populate SEO-relevant HTML tags that need to be populated server-side.
 
-I thought about ways I could achieve server-side rendering on the Zestful site. Angular supports it through [Angular Universal](https://angular.io/guide/universal), but I once tried to move [KetoHub](https://ketohub.io) to Angular Universal and burned over a week with nothing to show for it. Plus, I definitely didn't want to dig myself deeper into the pit of Angular.
+I thought about ways I could achieve server-side rendering on the Zestful site. Angular supports it through [Angular Universal](https://angular.io/guide/universal), but I once tried to move [KetoHub](https://recipe-search.isitketo.org) to Angular Universal and burned over a week with nothing to show for it. Plus, I definitely didn't want to dig myself deeper into the pit of Angular.
 
 Vue has a server-side rendering solution called [Nuxt](https://nuxtjs.org/), but I wasn't too crazy about the idea of running an entire Node server just to render a few pages server-side. Looking closer, I found that Nuxt supports [statically generated pages](https://nuxtjs.org/guide/#static-generated-pre-rendering-). This meant that I could pre-generate a few HTML files and host them with dumb static hosting (the way I host this blog). But I'd get the tooling of Vue and the convenience of a static site.
 

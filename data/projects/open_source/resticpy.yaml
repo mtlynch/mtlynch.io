@@ -1,0 +1,8 @@
+title: ResticPy
+external_url: https://github.com/mtlynch/resticpy
+start_date: 2021
+end_date: present
+blurb: A minimal Python wrapper around the [restic](https://restic.readthedocs.io/) backup utility.
+weight: 99
+technologies:
+  - python
