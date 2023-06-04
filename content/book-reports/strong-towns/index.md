@@ -17,30 +17,36 @@ TODO: Short summary
 
 ## What I Disliked
 
-- Careless grammar and spelling errors,
-- Non-standard format for citing made me question research
-- Would have liked to see a better representation of objection to his ideas
-- Fairly theoretical - would have liked to see more evidence that his policies work in practice
-- Conclusions from using value per acre seen to be measuring the wrong thing.
-- If poor neighborhoods outperform rich neighborhoods in finance' productivity, why do poor towns struggle to pay for services and rich towns don't?
+- There were lots of careless grammar and spelling errors.
+- Marohn uses a non-standard format for citing sources, which made me question his research methods.
+- I wish there was a better representation of objection to his ideas.
+  - The way he presents it, all of the policies he advocates for are a no-brainer, and the reason towns haven't adopted them already are inertia and stubbornness.
+  - I have to imagine that there are stronger objections that he's not presenting.
+- The book is heavy on hypotheticals and light on case studies where towns actually adopt these policies.
+- Marohn introduces a metric for evaluating a town's financial health: tax revenue per acre.
+  - He says that according to this metric, blighted towns are often healthier than affluent towns.
+  - The observation made me question the metric, as it seems like blighted towns struggle more to pay for public services, so the metric doesn't seem predictive.
 
 ## Key Takeaways
 
 ### Pompeii as a model city
 
-- Author visited ruins of Pompeii and found building that was an ancient equivalent of a fast-food restaurant
+- Author visited ruins of Pompeii and found building that was an ancient equivalent of a fast-food restaurant.
 - The restaurant was in a two-room building where the back room was a living space and the front room had a serving counter facing the street.
-- The restaurant had many characteristics that made it adaptive to different conditions. Living quarters mean that parents can attend to children while working
-- One parent can work. elsewhere while the other mind, the shop,
-- Restaurant is on the edge of town, so the restaurant owners (and all shopkeepers) have incentive to help the town as a whole grow because an expanded city increase value of their business
-- Shared walls with neighboring businesses meant lover heating costs.
-- Clea neighbors mean, better security,
-- The building is simple, which rant that it could be converted to something else if the restaurant folded or expanded if the restaurant flourished.
+- The restaurant had many characteristics that made it adaptive to different conditions.
+  - Living quarters mean that parents can attend to children while working
+  - One parent can work. elsewhere while the other mind, the shop,
+  - Restaurant is on the edge of town, so the restaurant owners (and all shopkeepers) have incentive to help the town as a whole grow because an expanded city increase value of their business
+  - Shared walls with neighboring businesses meant lover heating costs.
+  - Close neighbors means better security.
+  - The building had a simple structure.
+    - Owner could convert it to something else if the restaurant folded
+    - Owner could expand the building if the restaurant flourished.
 - Cities are complex, not just complicated
-- Complicated systems can have simple behavior.
-- e. g. , a mechanical watch is complicated, but predictable
-- Cities are both complicated and complex
-- they contain interrelated systems that are difficult to predict
+  - Complicated systems can have simple behavior.
+    - e.g., a mechanical watch is complicated but predictable.
+  - Cities are both complicated and complex.
+    - They contain interrelated systems that are difficult to predict.
 - Complex systems are fragile and need flexibility to adapt in order to survive.
 - people traditionally manage cities with zoning for ease of legislation, but zoning is too simple and limits tap the city from adapting naturally
 - Postwar WWII wealth screwed up city management.
