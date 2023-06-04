@@ -2,7 +2,7 @@
 title: "Strong Towns"
 date: 2022-10-30T13:50:39-04:00
 rating: TODO
-purchase_url: TODO
+purchase_url: https://bookshop.org/p/books/strong-towns-a-bottom-up-revolution-to-rebuild-american-prosperity-charles-l-marohn/7390111
 ---
 
 TODO: Short summary
@@ -17,37 +17,22 @@ TODO: Short summary
 
 ## What I Disliked
 
--
-
-## Key Takeaways
-
--
-
-liked
-
-Disliked
-
 - Careless grammar and spelling errors,
-- Non-standard format for citing made me question
-  research
-
+- Non-standard format for citing made me question research
 - Would have liked to see a better representation of objection to his ideas
 - Fairly theoretical - would have liked to see more evidence that his policies work in practice
 - Conclusions from using value per acre seen to be measuring the wrong thing.
 - If poor neighborhoods outperform rich neighborhoods in finance' productivity, why do poor towns struggle to pay for services and rich towns don't?
 
-Takeaways
+## Key Takeaways
 
-Pompeii as model city
+### Pompeii as a model city
 
 - Author visited ruins of Pompeii and found building that was an ancient equivalent of a fast-food restaurant
-- The restaurant was in a two -room building where the back room was a living space and the front room had a serving counter facing the street.
+- The restaurant was in a two-room building where the back room was a living space and the front room had a serving counter facing the street.
 - The restaurant had many characteristics that made it adaptive to different conditions. Living quarters mean that parents can attend to children while working
 - One parent can work. elsewhere while the other mind, the shop,
-- Restaurant is on the edge of town, so the restaurant owners (and all shopkeepers) have incentive
-
-to help the town as a whole grow because an expanded city increase value of their business
-
+- Restaurant is on the edge of town, so the restaurant owners (and all shopkeepers) have incentive to help the town as a whole grow because an expanded city increase value of their business
 - Shared walls with neighboring businesses meant lover heating costs.
 - Clea neighbors mean, better security,
 - The building is simple, which rant that it could be converted to something else if the restaurant folded or expanded if the restaurant flourished.
@@ -56,7 +41,6 @@ to help the town as a whole grow because an expanded city increase value of thei
 - e. g. , a mechanical watch is complicated, but predictable
 - Cities are both complicated and complex
 - they contain interrelated systems that are difficult to predict
-
 - Complex systems are fragile and need flexibility to adapt in order to survive.
 - people traditionally manage cities with zoning for ease of legislation, but zoning is too simple and limits tap the city from adapting naturally
 - Postwar WWII wealth screwed up city management.
