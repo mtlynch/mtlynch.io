@@ -80,14 +80,14 @@ So the CM was actually taking on more risk because they were buying the parts
 
 ## How much does a 3PL vendor cost?
 
-| Charge                          | Cost |
-| ------------------------------- | ---- |
-| Shipments from TinyPilot to 3PL | $XX  |
-| Warehouse storage               | $XX  |
-| Software license fee            | $XX  |
-| Total (without postage)         | $XX  |
-| Postage                         | $XX  |
-| Total (including postage)       | $XX  |
+| Charge                          | Cost    |
+| ------------------------------- | ------- |
+| Shipments from TinyPilot to 3PL | $XX     |
+| Warehouse storage               | $XX     |
+| Software license fee            | $XX     |
+| **Total (without postage)**     | **$XX** |
+| Postage                         | $XX     |
+| **Total (including postage)**   | **$XX** |
 
 They have a 15% margin on postage, but that's a passthrough cost to the customer. We'd be paying roughly the same amount even if we were doing our own fulfillment.
 
@@ -108,6 +108,8 @@ One idea I had for it is to automate a process I see comedians doing a lot. They
 From the looks of it, they seem to be creating these images by hand using general-purpose image editing tools.
 
 So, my idea was to automate that process. You'd put your upcoming show dates in WanderJest, and then it would automatically generate an image advertising your next few shows. As the shows happen or your schedule updates, WanderJest would automatically bump old shows from the list. And I can do easy things like auto-size the text so that everything fits on a single line, etc.
+
+{{<video src="schedule-image.mp4" caption="Demo of ">}}
 
 So far, I pitched it to one comedian, and she said it looked great, and then the next day she posted a list of shows she created using a different tool.
 
