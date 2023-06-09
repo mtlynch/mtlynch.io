@@ -1,5 +1,5 @@
 ---
-title: "06"
+title: "TinyPilot: Month 35"
 date: 2023-05-31T08:11:32-04:00
 description: TODO - One-line summary
 ---
@@ -23,17 +23,17 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Onboard the newest TinyPilot employee
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Newest employee is fully spun up.
+- **Grade**: A
 
-TODO
+Things are up and running with our newest employee, so now three people are working in the local TinyPilot office.
 
 ### Reach $90k in revenue
 
 - **Result**: Reached $92k in revenue.
 - **Grade**: A+
 
-TODO
+I'm happy with this
 
 ### Find three homelab bloggers or YouTubers interested in reviewing TinyPilot Voyager 2a
 
@@ -58,25 +58,76 @@ Two are interested and plan to feature it in a video. The third doesn't do revie
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-## How do I come up with $250k?
+## How do I come up with $250k in cash?
 
-And then Raspberry Pis are another $45/each, and I'd need to supply 750 Raspberry Pis for the first batch of Voyager 2a devices, so that's another $34k. In total, that's about $250k!
+It would cost around $110 to build each unit, including everything except the Raspberry Pi. Raspberry Pis cost $45/unit, so it would be about $155/unit total.
 
-TinyPilot has never had more than $100k in cash. And now I was going to have to more than double that. I could make up the difference from personal savings.
+My prices now are around $110/unit in materials and then another $5/unit in labor. So it would be a $40 (35%) jump in cost, but the contract manufacturer should simplify a lot about my business. We wouldn't have to maintain a physical office anymore, we wouldn't need to manage inventory for all of our raw materials, and we could easiy scale up production without hiring more people.
 
-I looked at eCommerce loans. They charge an origination fee, so if I wanted to borrow $180k, they'd take between $4k and $14k. Oof! My other costs would go down significantly because that would become my only spending on raw materials and manufacturing for the next four to eight months, so I should be able to pay off the loan quickly, but that would mean I'm paying a potentially $14k fee to bridge me for only a few months.
+So I was feeling fine with $110/unit until I did the math on the total. The contract manufacturer needed me to commit to 2,000 units at minimum. That's $220k! Including the Raspberry Pis for the first batch, I'd need to come up with about $250k in cash to pay for this order.
 
-I think I could take out a loan from a bank, but I suspect that's a pretty long, paperwork-intensive process. I suspect it would cost me a few thousand dollars there, and they're probably not designed for such short loan terms.
+To be clear, this is money I'd be spending anyway. Last year, I spent [$334k](/solo-developer-year-5/#tinypilot-grew-annual-revenue-to-812k) on raw materials, but I paid for everything in small chunks throughout the year. With the shift to the contract manufacturer, I'd be consolidating most of my materials and manufacturing costs, but I'd be paying six to eight months of it at once.
 
-I thought back to a similar situation I was in years ago. When I was growing up, land developers were planning to tear down my beloved local community center to build a shopping mall. In order to save the community center, I raised $200k by getting my breakdancing crew together and putting on a phenomenal show.
+Where was I going to get $250k in cash?
 
-I called my friend Al from the old dance crew to see if he'd participate in another breakdancing performance to raise money for TinyPilot. Irritatingly, he pointed out that neither of us know anything about breakdancing and that I seemed to be describing the plot of the 1984 film, [_Breakin' 2: Electric Boogaloo_](https://www.imdb.com/title/tt0086999/).
+Shopify, Amazon, and Mercury are always bombarding me with offers for eCommerce loans, so I finally tried exploring those. They'll loan you some multiple of your monthly revenue, charge an origination fee of 5-15%, and then they take an ongoing 10-20% of your revenue until you pay off the loan.
+
+{{<img src="shopify-loan.webp" has-border="true" max-width="600px" caption="Shopify offered me a $100k loan for a $13k origination fee.">}}
+
+If I took a $100k loan from Shopify, it would cost me $13k, and I'd pay off the loan in about 7 months. But that's longer than I'd need the loan. My monthly revenue is about $90k. If all of my materials and manufacturing bills were already paid, I'd only have about $25k/month in expenses, which would leave $65k/month in cash profits. I'd only need the loan for a month or two, so paying $14k to borrow $100k for a month is a bit steep.
+
+I think I could take out a loan from a bank, but I suspect that's a pretty long, paperwork-intensive process. I suspect it would cost me a few thousand dollars there, and they're probably not designed for such short loan terms either.
+
+The situation reminded me of an event from my adolescence. Real estate developers were trying to tear down my beloved local community center to build a shopping mall. My breakdancing crew put on such a phenomenal dance show that attendees donated a total of $200k, exactly the amount we needed to protect the community center.
+
+I called Al, a friend from my old dance crew, to see if he'd participate in another breakdancing performance for TinyPilot. Irritatingly, he pointed out that neither of us know anything about breakdancing and that I seemed to be describing the plot of the 80s movie, [_Breakin' 2: Electric Boogaloo_](https://www.imdb.com/title/tt0086999/).
+
+{{<img src="breakin2.jpg" max-width="600px" alt="Movie poster for Breakin' 2: Electric Boogaloo" caption="Could I raise the money I needed by putting on a breakdancing show?">}}
 
 So, that plan was out.
 
-When we met, I asked about payment plan and he laughed and said the risk was actually on his side. I don't have to pay for devices until they're manufactured and shipped. If I wanted to order only 500 Voyager 2a devices for my first batch, I'd owe $34k for the Raspberry Pis and $55k for a total of roughly $90k. That was much easier to swallow.
+At the next meeting with the contract manufacturer, I asked if there were other ways of structuring the order so that I'm not paying $250k up front, adding that it's almost a year of expenses for me up front.
 
-So the CM was actually taking on more risk because they were buying the parts
+The CEO of the contract manufacturing firm chuckled and clarified that he wasn't expecting me to pay the full $250k up front. He was willing to absorb the up-front costs. If I signed a purchase order agreeing to purchase the full 2,000 units over the course of the year then the deal worked for him.
+
+So, I'm likely going to start with an order of about 500 Voyager 2a units. That means I'd owe the contract manufacturer roughly $55k. I'd still owe $34k for the Raspberry Pis, but the total would be roughly $90k up front, which is much easier to swallow.
+
+## How does a contract manufacturer change finances?
+
+When I calculated the $250k, I had a bit of a panic about how such bursty costs would mess with TinyPilot's finances. Now that I understand we don't owe the full amount up front, I'm realizing this the contract manufacturer will be incredibly beneficial for our finances.
+
+### Cash flow
+
+Under TinyPilot's current system, materials and manufacturing costs are spread out over months or sometimes even years. For example, in February 2022, I spent $20k stockpiling critical electronic components, and we're still working our way through that batch. That's $20k tied up for 14 months and counting.
+
+Stockpiling electronic components is our most extreme time-intensive cost, but we have lots of expenses with a long payback period. We have to pay a 30% deposit on metal cases three months before we receive them, and then 70% when they're ready to ship to us. Once we receive them, we have to assemble them into devices, and it can be up to four months between when we receive a case and sell it to a customer in a finished device.
+
+With the contract manufacturer, payment is due 30 days after the contract manufacturer ships the order. That's a much tighter turnaround between the time I pay for materials and the time I turn a profit by selling the finished product. If the order arrives at the warehouse in a week, then I have almost three full weeks of selling the finished units before I even have to pay for them.
+
+### Cost tracking
+
+Our current system also makes it difficult to track costs associated with individual unit.
+
+For example, the $20k batch of electronic components I mentioned above had lots of additional costs along the way just to be available at our various stages of production:
+
+| Expense                                                                         | Cost (from memory) |
+| ------------------------------------------------------------------------------- | ------------------ |
+| Tariff on importing the components to the US                                    | $5,000             |
+| Shipping the components to our hardware consultants for initial production runs | $300               |
+| Inventorying the components to ship to the manufacturer                         | $750               |
+| Shipping the components to our manufacturer in China and paying tariffs again   | $1,200             |
+
+And then once it reached our manufacturer in China, we pay to have them assembled into PCBs. The manufacturer ships the PCBs to the US, we pay another tariff, then there's a labor cost on our side to assemble the PCBs and other components into a Voyager 2a device.
+
+So how much did it cost to produce that Voyager 2a device? I'm sure I could figure it out if I had a way of attributing every cost along the way to a particular batch of components, but we don't have tooling that supports anything close to that.
+
+Moving to a contract manufacturer will make our costs immensely simple. The manufacturing costs boil down to just three variables:
+
+1. The price I pay per unit to the contract manufacturer.
+1. The price I pay per unit for Raspberry Pis.
+1. The shipping cost from my manufacturer to the 3PL warehouse.
+
+The contract manufacturer's factory is in Vietnam, and from what I understand, the US has no import tariffs on electronics from Vietnam, so that cuts out another big expense and simplifies tracking further.
 
 ## How much does a 3PL vendor cost?
 
@@ -85,33 +136,39 @@ So the CM was actually taking on more risk because they were buying the parts
 | Shipments from TinyPilot to 3PL | $XX     |
 | Warehouse storage               | $XX     |
 | Software license fee            | $XX     |
+| Warehouse labor                 | $XX     |
+| Packing materials               | $XX     |
 | **Total (without postage)**     | **$XX** |
 | Postage                         | $XX     |
 | **Total (including postage)**   | **$XX** |
 
-They have a 15% margin on postage, but that's a passthrough cost to the customer. We'd be paying roughly the same amount even if we were doing our own fulfillment.
+They add a 15% margin on postage, So if we were paying our own postage, it would be about 13% cheaper. Postage is also a passthrough cost to the customer, so we don't really feel it that acutely. So let's say 13% of the postage cost is the 3PL's overhead.
 
 So it effectively works out to about $XX per order, which is lower than I expected.
-
-## Topic 3
 
 ## Side projects
 
 ### Poster generators in WanderJest
 
-Pre-pandemic, I created a site called WanderJest that was supposed to help comedy fans find live comedy. I shuttered it when COVID hit, but I've been tinkering with it on weekends.
+In early 2020, I [created a site called WanderJest](/retrospectives/2020/01/) that was supposed to help comedy fans find live comedy. I shuttered it when COVID hit, but I've been tinkering with it on weekends for the past few months.
 
-One idea I had for it is to automate a process I see comedians doing a lot. They'll make images with their upcoming show dates and post them to social media:
+The problem with listing live shows was that I had to do a lot of manual work of copying show information into WanderJest when I saw show listings elsewhere like Facebook or Eventbrite. I wanted a way of making it attractive to comedians to enter show information themselves.
+
+I frequently see comedians do this thing on social media where they'll post an image with a list of their upcoming shows:
 
 {{<img src="comedy-dates.webp">}}
 
-From the looks of it, they seem to be creating these images by hand using general-purpose image editing tools.
+From the looks of it, the comedians seem to be creating these images by hand using general-purpose image editing tools. As show details changed, the comedians would sometimes clunkily edit on top of their previous image, presumably because they didn't have a way of going back and editing the original.
 
-So, my idea was to automate that process. You'd put your upcoming show dates in WanderJest, and then it would automatically generate an image advertising your next few shows. As the shows happen or your schedule updates, WanderJest would automatically bump old shows from the list. And I can do easy things like auto-size the text so that everything fits on a single line, etc.
+My idea was to create a specialized tool for creating these images. It would save your data so you could edit it later, and it would make it easy to generate new images as dates passed.
+
+If my tool was easier to use and produces better output than general-purpose tools, comedians would use mine. It would drive people to WanderJest, and it would be a way for WanderJest to get information about shows.
+
+I spent a Saturday learning about the `<canvas>` element in browser APIs and threw together this prototype:
 
 {{<video src="schedule-image.mp4" caption="Demo of ">}}
 
-So far, I pitched it to one comedian, and she said it looked great, and then the next day she posted a list of shows she created using a different tool.
+So far, I pitched it to one comedian who I'd seen create images like this. She said it looked great! And then the next day she posted another image of her upcoming shows using a general-purpose image editing tool...
 
 ## Wrap up
 
@@ -129,3 +186,4 @@ So far, I pitched it to one comedian, and she said it looked great, and then the
 
 - Start a manufacturing batch with a new contract manufacturer.
 - Publish TinyPilot Pro 2.6.0.
+- Reach $95k in revenue.
