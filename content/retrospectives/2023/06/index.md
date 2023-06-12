@@ -1,7 +1,7 @@
 ---
 title: "TinyPilot: Month 35"
 date: 2023-05-31T08:11:32-04:00
-description: TODO - One-line summary
+description: How do I come up with $250k in cash?
 ---
 
 {{<notice type="info">}}
@@ -15,7 +15,9 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I tried to find a way to get $250k in cash to cover a large expense.
+- I evaluate how a contract manufacturer will change my finances.
+- Outsourcing to a 3PL vendor is less expensive than I expected.
 
 ## Goal Grades
 
@@ -26,21 +28,25 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Newest employee is fully spun up.
 - **Grade**: A
 
-Things are up and running with our newest employee, so now three people are working in the local TinyPilot office.
+TinyPilot's newest employee is fully trained and can build Voyager 2a devices. The additional capacity is helping us get back to feeling ahead on inventory instead of scrambling to keep up with orders.
+
+One thing I didn't consider was that the office becomes a bottleneck with three people. With two people working 20 hours per week, they can share a single office easily without overlapping. With a third person, it's not exactly a problem, but we do have to plan more to avoid shifts colliding.
 
 ### Reach $90k in revenue
 
 - **Result**: Reached $92k in revenue.
 - **Grade**: A+
 
-I'm happy with this
+Now that we're no longer constrained by manufacturing capacity. I've increased ad spending and [fixed our Amazon listing](/retrospectives/2023/01/#adapting-to-the-shortage).
+
+The problem with Amazon is that the only way to get them to show a "Buy" button on TinyPilot listings again was to lower our Amazon price to match our website price. Now, customers are much more incentivized to choose Amazon over purchasing from us, so we're seeing a greater share of Amazon purchases and losing a higher fee to Amazon.
 
 ### Find three homelab bloggers or YouTubers interested in reviewing TinyPilot Voyager 2a
 
 - **Result**: Found 2.5 people interested in reviewing TinyPilot.
 - **Grade**: B+
 
-Two are interested and plan to feature it in a video. The third doesn't do reviews but is open to giving TinyPilot a cameo if they can find a use for it.
+I reached out to three YouTubers. Two of them are interested and plan to feature TinyPilot in a video. The third doesn't do reviews but is open to giving TinyPilot a cameo if they can find a use for it.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
