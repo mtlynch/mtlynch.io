@@ -55,7 +55,7 @@ To follow along with my examples, you'll need the following:
 
 ## My example app
 
-I created an [example project](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web app based on the Flask framework's [upload documentation](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/).
+I created an [example project](https://github.com/mtlynch/flask_upload_demo) for this tutorial. It's a dead simple web app based on the Flask framework's [upload documentation](https://flask.palletsprojects.com/en/2.3.x/patterns/fileuploads/).
 
 To run it, enter the following:
 
