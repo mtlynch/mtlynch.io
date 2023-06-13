@@ -30,7 +30,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 TinyPilot's newest employee is fully trained and can build Voyager 2a devices. The additional capacity is helping us get back to feeling ahead on inventory instead of scrambling to keep up with orders.
 
-One thing I didn't consider was that the office becomes a bottleneck with three people. With two people working 20 hours per week, they can share a single office easily without overlapping. With a third person, it's not exactly a problem, but we do have to plan more to avoid shifts colliding.
+One thing I didn't consider was that office space becomes a bottleneck with three people. With two people working 20 hours per week, they can share a single office easily without overlapping. With three people, space isn't exactly a problem, but we have to plan more to avoid shifts colliding.
 
 ### Reach $90k in revenue
 
@@ -66,7 +66,7 @@ I reached out to three YouTubers. Two of them are interested and plan to feature
 
 The numbers are all up this month, so that's a good sign. They're still somewhat within the noise of TinyPilot's monthly fluctuations, but the general trend is positive.
 
-The increase in views and revenue comes largely from increased investment in advertising. I hope to increase this even more in the coming months as I send the Voyager 2a out to additional bloggers and YouTube creators.
+The increase in views and revenue comes largely from increased investment in advertising. I hope to increase this even more in the coming months as I send the Voyager 2a to additional bloggers and YouTube creators.
 
 ## How do I come up with $250k in cash?
 
@@ -92,7 +92,7 @@ If I took a $100k loan from Shopify, it would cost me $13k, and I'd pay off the 
 
 I think I could take out a loan from a bank, but I suspect that's a pretty long, paperwork-intensive process. That probably costs a few thousand dollars as well, and I doubt traditional banks offer two-month loans.
 
-The situation reminded me of an event from my adolescence. Real estate developers were trying to tear down my beloved local community center to build a shopping mall. My breakdancing crew put on such a phenomenal dance show that attendees gave us $200k in donations, exactly the amount we needed to protect the community center.
+The situation reminded me of an event from my adolescence. Real estate developers were trying to tear down my beloved community center to build a shopping mall. My breakdancing crew put on such a phenomenal dance show that attendees gave us $200k in donations, exactly the amount we needed to protect the community center.
 
 I called Al, a friend from my old dance crew, to see if he'd participate in another breakdancing performance for TinyPilot. Irritatingly, he pointed out that neither of us know anything about breakdancing and that I seemed to be describing the plot of the 80s movie, [_Breakin' 2: Electric Boogaloo_](https://www.imdb.com/title/tt0086999/).
 
@@ -100,7 +100,7 @@ I called Al, a friend from my old dance crew, to see if he'd participate in anot
 
 So, that plan was out.
 
-At the next meeting with the contract manufacturer, I asked the CEO if there were other ways of structuring the order so that I'm not paying $250k up front, adding that it's almost a year of expenses for me. He chuckled and clarified that he wasn't expecting me to pay the full $250k at once.
+At the next meeting with the contract manufacturer, I asked the CEO if there were other ways of structuring the deal so that I'm not paying $250k up front, adding that it's almost a year of expenses for me. He chuckled and clarified that he wasn't expecting the full $250k at once.
 
 It turned out that the contract manufacturer was willing to absorb the up-front costs. As long as I signed a purchase order agreeing to purchase the full 2,000 units within a year, the deal worked for him.
 
@@ -114,7 +114,7 @@ When I calculated the $250k, I had a bit of a panic about how such bursty costs 
 
 Under TinyPilot's current system, our materials and manufacturing costs are spread out over months or sometimes even years. For example, in February 2022, I spent $20k stockpiling critical electronic components, and we're still working our way through that batch. That's $20k tied up for 14 months and counting.
 
-Stockpiling electronic components has the longest payback period, but TinyPilot has several others that tie up cash for months. We pay a 30% deposit on metal cases three months before we receive them and then the last 70% when they're ready to ship. We receive the cases in batches of 1,000 at a time, so it takes us three months just to assemble them all into devices. That means that it can take four to six months for us to earn back the cost of the cases by selling devices.
+Stockpiling electronic components has the longest payback period, but TinyPilot has several expenses that tie up cash for months. We pay a 30% deposit on metal cases three months before we receive them and then the last 70% when they're ready to ship. We receive the cases in batches of 1,000 at a time, so it takes us three months just to assemble them all into devices. That means that it can take four to six months for us to earn back the cost of the cases by selling devices.
 
 With the contract manufacturer, payment is due 30 days after they ship the order. That's a much tighter turnaround between the time I pay for materials and the time I turn a profit by selling the finished product. If the order arrives at the warehouse in a week, I have almost three full weeks of selling the finished units before I even have to pay for them.
 
@@ -139,7 +139,7 @@ When we move to a contract manufacturer, our manufacturing costs boil down to ju
 
 1. The price I pay per unit to the contract manufacturer.
 1. The price I pay per unit for Raspberry Pis.
-1. The shipping cost from my manufacturer to the 3PL warehouse.
+1. The shipping cost from my manufacturer to the fulfillment warehouse.
 
 The contract manufacturer's factory is in Vietnam, and the US supposedly has no import tariffs on electronics from Vietnam. I say "supposedly" because I'm reserving confidence until I go through the actual import process. If it's true, it cuts out another big expense and further simplifies cost tracking.
 
@@ -147,9 +147,9 @@ The contract manufacturer's factory is in Vietnam, and the US supposedly has no 
 
 One of TinyPilot's major projects this year has been transitioning order fulfillment from our home-rolled solution [to a third-party logistics (3PL) vendor](/retrospectives/2023/05/#getting-over-the-3pl-hump).
 
-As the sole founder of TinyPilot, I'm mainly constrained by time, so I was eager to shift to a 3PL because it [reduces complexity of what happens within TinyPilot](/retrospectives/2022/10/#packing-and-shipping-customer-orders). Because of how much work a 3PL would cut out, I expected to pay around $20 per order to the 3PL vendor, but it ended up being much cheaper.
+As the sole founder of TinyPilot, I'm mainly constrained by time. I was eager to shift to a 3PL because it [reduces complexity of what happens within TinyPilot](/retrospectives/2022/10/#packing-and-shipping-customer-orders). Given the value, I expected to pay around $20 per order to the 3PL vendor, but it ended up being much cheaper.
 
-Here's the cost breakdown from the first month of working with the 3PL for all of our orders:
+Here's the cost breakdown from the first full month of working with the 3PL for all of our orders:
 
 | Charge                                        | Cost                          |
 | --------------------------------------------- | ----------------------------- |
@@ -157,6 +157,7 @@ Here's the cost breakdown from the first month of working with the 3PL for all o
 | Warehouse storage                             | $28                           |
 | Software license fee                          | $45                           |
 | Time receiving inventory                      | $288                          |
+| Order picking                                 | $336                          |
 | Communication                                 | $72                           |
 | Payment processing fee                        | $10                           |
 | **Total (w/o postage or shipping materials)** | **$1,585 ($8.86 per order)**  |
@@ -164,11 +165,11 @@ Here's the cost breakdown from the first month of working with the 3PL for all o
 | Postage                                       | $2277                         |
 | **Total**                                     | **$4,085 ($22.82 per order)** |
 
-I split out postage and shipping material because we'd incur those expenses even without the 3PL. We pay slightly more for those expenses because the 3PL adds a markup of 15% or about $1 per order.
+I split out postage and shipping material because we'd incur those expenses anyway. We pay slightly more because the 3PL adds a markup of 15% or about $1 per order.
 
 In total, the 3PL's costs work out to about $9 per order before postage and shipping materials, which is lower than I expected. It's more expensive than doing it in-house, but it gets us closer to not needing our office, which would cut about $750 in monthly expenses.
 
-Using a 3PL also improves cash flow a little bit. When TinyPilot was doing its own fulfillment, we had to pay for shipping materials in advance and then labor and postage as they occurred. The invoice for the 3PL is due at the end of the following month. In other words, for an order that the 3PL processed on May 1st, I pay on June 30th, so the 3PL allows TinyPilot to hold cash longer.
+Using a 3PL also improves cash flow a little bit. When TinyPilot was doing its own fulfillment, we had to pay for shipping materials in advance and then labor and postage as they occurred. With the 3PL, we get an invoice at the end of the month, and we have a month to pay it. In other words, for an order that the 3PL processed on May 1st, I pay on June 30th, so the 3PL allows TinyPilot to hold cash longer.
 
 ## Side projects
 
@@ -176,7 +177,7 @@ Using a 3PL also improves cash flow a little bit. When TinyPilot was doing its o
 
 In early 2020, [I created WanderJest](/retrospectives/2020/01/), a business that was supposed to help comedy fans find live comedy. I shuttered it when COVID hit, but I've been tinkering with it on weekends for the past few months.
 
-The problem with listing live comedy shows was that it's labor intensive. Show producers typically announce their shows on places like Facebook or Eventbrite, and both are actively hostile to automated tools consuming the data. So to get information, I'd typically have to copy details about the show by hand into WanderJest.
+The problem with listing live comedy shows was that it's labor intensive. Show producers typically announce their shows on places like Facebook or Eventbrite, and both platforms are actively hostile to automated tools consuming the data. To list show information on WanderJest, I had to look on other platforms and copy all the details by hand.
 
 I wanted to encourage comedians to enter information about their own shows. If it's extra work, they're not going to do it, so I've been looking for ways that WanderJest can improve tasks comedians are already doing and capture show information as a side effect.
 
@@ -186,9 +187,9 @@ I frequently see comedians do this thing on social media where they'll post an i
 
 From the looks of it, the comedians seem to be creating these images by hand using general-purpose image editing tools. As show details changed, the comedians would sometimes clunkily edit on top of their previous image, presumably because they didn't have a way of going back and editing the original.
 
-My idea was to create a specialized tool for creating these images. It would save your data so you could edit it later and produce updated images when you announce new shows.
+My idea was to create a specialized tool for creating these images. It would save comedians' data so they could edit it later and produce updated images as they added shows to their schedule.
 
-If my tool was easier to use and produced better output than general-purpose tools, comedians would use mine. It would drive people to WanderJest, and it would be a way for WanderJest to get information about shows.
+If my tool was easier to use and produced better output than general-purpose tools, comedians would use it. It would drive people to WanderJest, and it would be a way for WanderJest to get information about shows.
 
 I spent a Saturday learning about the `<canvas>` element in browser APIs and threw together this prototype:
 
