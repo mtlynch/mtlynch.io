@@ -13,6 +13,10 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ## Why this guide?
 
+I'm a beginner, so I don't have the curse of knowledge.
+
+This is not affiliate spam. Some are honest, but all of them are inherently biased. They have a vested interest in you purchasing more expensive gear because they make more money that way. They also have an interest in directing you to merchants
+
 ## Picking parts
 
 ### Rack
@@ -24,17 +28,25 @@ A homelab is a place in your home where you can experiment with IT hardware or s
 
 ### Network switch
 
+- What speed do you want?
+- Managed or unmanaged?
+- How many ports do you need?
+
 The more I read, the more I found people saying that 2.5 Gbps was flaky, and you might as well just go straight to 10 Gbps.
 
 10G switches don't mean everything has 10G.
 
 ### UPS (battery backup)
 
+I ended up purchasing the Tripp-Lite, but it was noisy. I didn't even realize battery backups could _be_ noisy. I've had an APC battery backup for XX years, and it's completely silent except when it loses power and fails over to battery backup.
+
 ### Power strip
 
 ### Pi rack mount
 
 ### Rack shelves
+
+Beware the bottom lip.
 
 ### Patch panel
 
@@ -47,6 +59,12 @@ Michael Stapelberg uses Mellanox
 ### Cable ties
 
 ## Planning layout
+
+### The patch panel and switches should be close together
+
+Or, more generally, components that have front-facing ports should be close together. Otherwise, you have Ethernet cables stretching all across your rack and blocking stuff.
+
+### Heavy components should be on the bottom
 
 ## Thoughts on parts
 
