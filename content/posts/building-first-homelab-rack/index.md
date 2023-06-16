@@ -42,6 +42,10 @@ The more I read, the more I found people saying that 2.5 Gbps was flaky, and you
 
 Michael Stapelberg uses Mellanox
 
+### Cage nuts
+
+### Cable ties
+
 ## Planning layout
 
 ## Thoughts on parts
