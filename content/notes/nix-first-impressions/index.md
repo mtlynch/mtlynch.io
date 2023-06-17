@@ -230,8 +230,33 @@ error: undefined variable 'gnome-system-monitor'
 
 I tried other possible names like `gnome-shell-system-monitor`, but I couldn't figure out how to install it.
 
-## Next task: VS Code on NixOS
+## Things I'd like to understand next
 
-I do all of my development in VS Code over remote SSH. When I try remoting into my NixOS system from VS Code, the install fails. I'm assuming it's because VS Code has to install a minimal server on the target system, and it doesn't know how to install.
+### Using VS Code Remote SSH on NixOS systems
 
-There's a [nixos-vscode-server](https://github.com/nix-community/nixos-vscode-server) git repo, and that's probably the solution, but I haven't figured out how to use it yet. It seems like what I want to do is install home manager, then use home manager to install VS Code Server.
+I do all of my development in VS Code over remote SSH. When I try remoting into my NixOS system from VS Code, the install fails. I'm assuming it's because for VS Code's remote SSH feature to work, VS Code has to install some type of server on the target system. VS Code probably doesn't know how to install its requirements on NixOS.
+
+There's a [nixos-vscode-server](https://github.com/nix-community/nixos-vscode-server) git repo, and that's probably the solution I need. I haven't poked around with it yet.
+
+### How Nix works
+
+I see words like "flakes" and "derivations," and I currently don't know what they mean. I don't understand Nix's language syntax, but it's enough like JavaScript and Python that I can fake my way through at this point.
+
+### When does the determinism happen?
+
+When I see discussion of Nix, one of the top features I see mentioned is the fact that Nix is deterministic. So far, I don't get how it's deterministic. When I specified packages to install, I didn't specify an integrity hash, let alone a version number. If I ran the same Nix configuration a year from now, I assume I'd get a different system because it would install different versions of the `vim` and `curl` packages I specified.
+
+I assume there is a way of specifying package versions more precisely but I haven't learned it yet.
+
+### Who am I trusting?
+
+I know that for me to be able to specify something like this:
+
+```text
+  environment.systemPackages = with pkgs; [
+    vim
+    curl
+  ];
+```
+
+For me to specify packages by name, it means that Nix is pulling packages from a default repository. Are there multiple repositories? How do I pick which repository to use?
