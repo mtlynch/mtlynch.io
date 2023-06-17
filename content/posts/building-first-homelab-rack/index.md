@@ -130,6 +130,8 @@ Disabled/re-enabled card: Same result (said network cable disconnected)
 Disconnected/reconnected patch cable: Started working again.
 Next day - would keep flashing between connected/disconnected. swapped patch cables and it fixed it. Five mins later, happened again and skipped the patch cable, directly connected to switch.
 
+https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/
+
 ## Lessons learned
 
 - Check return policy on Newegg: I'd never seen anything on Newegg before that was replacement-only, so I took it for granted that I'd be able to return it if I didn't like it.
