@@ -100,7 +100,11 @@ I tried flashing the same image using the official Raspberry Pi Imager utility, 
 
 I do most of my testing for TinyPilot against a Dell XX mini computer. It was the only bare-metal machine I had available that I could blow away, so I tried on that.
 
-Everything worked exactly like in "NixOS for the Impatient." I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
+Everything worked exactly like in "NixOS for the Impatient." The install took about 10 minutes from start to finish. Seven minutes was just copying files.
+
+{{<video src="nixos-full-install.mp4" max-width="800px" caption="Installing NixOS on a Dell XX mini PC (I sped up the file copy portion)">}}
+
+I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
 
 ## Failed attempt #3: NixOS on the Raspberry Pi 4 (again)
 
