@@ -100,8 +100,7 @@ I tried flashing the same image using the official Raspberry Pi Imager utility, 
 
 I do most of my testing for TinyPilot against a Dell XX mini computer. It was the only bare-metal machine I had available that I could blow away, so I tried on that.
 
-Everything worked exactly like in . I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
-
+Everything worked exactly like in "NixOS for the Impatient." I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
 
 ## Failed attempt #3: NixOS on the Raspberry Pi 4 (again)
 
@@ -201,7 +200,6 @@ Or you can remove each utility one-by-one:
 ```
 
 I went with the "disable everything" option and rebuilt:
-
 
 ```bash
 sudo nixos-rebuild switch
