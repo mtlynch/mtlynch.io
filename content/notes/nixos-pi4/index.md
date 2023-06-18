@@ -120,6 +120,8 @@ lsblk
 
 Wait until you see `mmcblk0`.
 
+TODO: Look into `nix-install --system`
+
 I'm not sure how to get around this step. We need to partition the disk the way NixOS expects, and I suspect there's an easier way than downloading the whole installer OS again, but this is the only way I know that works.
 
 ```bash
