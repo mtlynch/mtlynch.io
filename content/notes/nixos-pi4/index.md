@@ -115,10 +115,46 @@ Note that the Pi will only produce HDMI output from HDMI XX
 ## Mount the microSD
 
 ```bash
-sudo mkdir -p /microsd && \
-  sudo mount /dev/mmcblk0p2 /microsd && \
-  sudo mkdir -p /microsd/etc/nixos
+lsblk
 ```
+
+Wait until you see `mmcblk0`.
+
+I'm not sure how to get around this step. We need to partition the disk the way NixOS expects, and I suspect there's an easier way than downloading the whole installer OS again, but this is the only way I know that works.
+
+```bash
+nix-shell -p curl zstd
+
+# Need an older build due to this bug: https://github.com/NixOS/nixpkgs/issues/179701
+URL='https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst'
+
+IMG_FILE="${URL##https:/*/}"
+curl \
+  --proto '=https' \
+  --show-error \
+  --fail \
+  --location "${URL}" \
+  | unzstd --decompress - > "${IMG_FILE}"
+```
+
+```bash
+OUTPUT_DEVICE='/dev/mmcblk0'
+
+sudo dd \
+  if="${IMG_FILE}" \
+  of="${OUTPUT_DEVICE}" \
+  bs=4096 \
+  conv=fsync \
+  status=progress
+```
+
+```bash
+# cut?
+sudo mkdir -p /mnt && \
+  sudo mount /dev/mmcblk0p2 /mnt && \
+  sudo mkdir -p /mnt/etc/nixos
+```
+
 
 
 ## Write the NixOS configuration file
@@ -130,12 +166,12 @@ curl \
   --show-error \
   --fail \
   {{< baseurl >}}notes/nixos-pi4/configuration.nix \
-  | sudo tee /microsd/etc/nixos/configuration.nix
+  | sudo tee /mnt/etc/nixos/configuration.nix
 ```
 
 ## Mount the microSD
 
 ```bash
-sudo nixos-install --root /microsd && \
+sudo nixos-install --root / && \
   reboot
 ```
