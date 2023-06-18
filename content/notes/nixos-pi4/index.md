@@ -54,6 +54,33 @@ $ nix --version
 nix (Nix) 2.13.3
 ```
 
+## Install
+
+```bash
+nix-channel --add https://nixos.org/channels/nixos-version nixpkgs
+
+nix-env -f '<nixpkgs>' -iA nixos-install-tools
+
+# Necessary?
+sudo `which nixos-generate-config`
+```
+
+Replace `/etc/nixos/configuration.nix`
+
+```bash
+nix-env -p /nix/var/nix/profiles/system -f '<nixpkgs/nixos>' -I nixos-config=/etc/nixos/configuration.nix -iA system
+
+sudo chown -R 0:0 /nix
+```
+
+```bash
+sudo touch /etc/NIXOS
+echo etc/nixos | sudo tee /etc/NIXOS_LUSTRATE
+
+sudo mv -v /boot /boot.bak &&
+  sudo /nix/var/nix/profiles/system/bin/switch-to-configuration boot
+```
+
 ## Flashing the Nix installer to the USB drive
 
 ```bash
@@ -114,13 +141,14 @@ Note that the Pi will only produce HDMI output from HDMI XX
 
 ## Mount the microSD
 
+TODO: Cut?
+
 ```bash
 lsblk
 ```
 
 Wait until you see `mmcblk0`.
 
-TODO: Look into `nix-install --system`
 
 I'm not sure how to get around this step. We need to partition the disk the way NixOS expects, and I suspect there's an easier way than downloading the whole installer OS again, but this is the only way I know that works.
 
@@ -157,9 +185,9 @@ sudo mkdir -p /mnt && \
   sudo mkdir -p /mnt/etc/nixos
 ```
 
-
-
 ## Write the NixOS configuration file
+
+TODO: Look into `nix-install --system`
 
 {{<inline-file filename="configuration.nix" language="nix">}}
 
