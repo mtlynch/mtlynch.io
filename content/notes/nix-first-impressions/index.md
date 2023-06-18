@@ -19,7 +19,7 @@ Ansible's biggest problem is that it's painfully slow. To run the full Ansible c
 
 Suppose I want to install a new apt package `foo`. Do I just run `sudo apt install --yes foo` and have the package in 5 seconds? Or do I pull up my Ansible role, edit the configuration to add a step to install `foo`, then run the playbook, then wait 15 minutes? Obviously, I end up doing more of the former, so my environments drift from the Ansible files that are supposed to represent them.
 
-The other issue is that Ansible's changes aren't backwards-compatible. So, if I want to update a playbook to take advantage of a new feature, I have to update *all* of my playbooks to be compatible. But I never feel inspired to just rewrite and retest all of my playbooks, so I'm still on Ansible 2.9, which was released three years ago.
+The other issue is that Ansible's changes aren't backwards-compatible. So, if I want to update a playbook to take advantage of a new feature, I have to update _all_ of my playbooks to be compatible. But I never feel inspired to just rewrite and retest all of my playbooks, so I'm still on Ansible 2.9, which was released three years ago.
 
 ## The appeal of Nix
 
@@ -63,9 +63,9 @@ One of the biggest complaints I see about Nix is that it's underdocumented, inco
 
 Here are the best resources I've found so far:
 
-* [Zero to Nix](https://zero-to-nix.com/): This is the best set of introductory Nix tutorials I've found. It's written by [Determinate Systems](https://determinate.systems), who also writes beginner-friendly [blog posts](https://determinate.systems/#blog) about using Nix.
-* [NixOS for the Impatient](https://borretti.me/article/nixos-for-the-impatient): I'd tried to install NixOS a couple of times before this, but this post finally convinced me it was easier than I thought, and it gave me the final push to push through the process.
-* ["Some notes on using nix" by Julia Evans](https://jvns.ca/blog/2023/02/28/some-notes-on-using-nix/): Julia's also a newcomer to Nix, so it was helpful seeing the blockers she ran into and how she worked around them even though there's a lot about the ecosystem that's still new and unfamiliar to her.
+- [Zero to Nix](https://zero-to-nix.com/): This is the best set of introductory Nix tutorials I've found. It's written by [Determinate Systems](https://determinate.systems), who also writes beginner-friendly [blog posts](https://determinate.systems/#blog) about using Nix.
+- [NixOS for the Impatient](https://borretti.me/article/nixos-for-the-impatient): I'd tried to install NixOS a couple of times before this, but this post finally convinced me it was easier than I thought, and it gave me the final push to push through the process.
+- ["Some notes on using nix" by Julia Evans](https://jvns.ca/blog/2023/02/28/some-notes-on-using-nix/): Julia's also a newcomer to Nix, so it was helpful seeing the blockers she ran into and how she worked around them even though there's a lot about the ecosystem that's still new and unfamiliar to her.
 
 ## Failed attempt #1: NixOS in a VM
 
@@ -79,8 +79,8 @@ Since a VM didn't work, I wanted to try installing on bare metal. I had a spare 
 
 I found two different official-looking tutorials for installing NixOS on the Raspberry Pi 4:
 
-* [NixOS Wiki: NixOS on ARM/Raspberry Pi 4](https://nixos.wiki/wiki/NixOS_on_ARM/Raspberry_Pi_4)
-* [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi)
+- [NixOS Wiki: NixOS on ARM/Raspberry Pi 4](https://nixos.wiki/wiki/NixOS_on_ARM/Raspberry_Pi_4)
+- [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi)
 
 The problem with both of these tutorials was they assumed that you're already running a Nix environment. I'm trying to prepare the microSD from my main computer, which is a Win10 system, so I don't have Nix.
 
