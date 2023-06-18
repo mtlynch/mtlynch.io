@@ -1,9 +1,9 @@
 ---
 title: "My First Impressions of Nix"
-date: 2023-06-17T08:41:31-04:00
+date: 2023-06-17T00:00:00-04:00
 ---
 
-Nix is a tool for configuring software environments according to source files. I've been hearing more and more about Nix on Hacker News and Twitter. The idea of it appeals to me, so I've been tinkering with it over the past few weeks.
+[Nix](https://nix.dev/) is a tool for configuring software environments according to source files. I've been hearing more and more about Nix on Hacker News and Twitter. The idea of it appeals to me, so I've been tinkering with it over the past few weeks.
 
 ## My history with infrastructure as code
 
@@ -11,21 +11,21 @@ Ten years ago, I discovered [Salt](https://github.com/saltstack/salt), a tool th
 
 I messed around with Salt for a few years until discovering [Ansible](https://github.com/ansible/ansible), which I felt like executed the same idea better.
 
-I do all of my development on [my homelab VM server](/building-a-vm-homelab/). I have a separate VM for each of my projects. And I manage each VM with Ansible.
+I do all of my development in VMs on [my homelab server](/building-a-vm-homelab/). I have a separate VM for each projects, and I manage them all with Ansible.
 
 ## The problems with Ansible
 
-Ansible's biggest problem is that it's painfully slow. To run the full Ansible configuration on a VM takes 10-15 minutes.
+Ansible's biggest problem is that it's painfully slow. It typically takes 10-15 minutes for Ansible to run against one of my VMs.
 
 Suppose I want to install a new apt package `foo`. Do I just run `sudo apt install --yes foo` and have the package in 5 seconds? Or do I pull up my Ansible role, edit the configuration to add a step to install `foo`, then run the playbook, then wait 15 minutes? Obviously, I end up doing more of the former, so my environments drift from the Ansible files that are supposed to represent them.
 
-The other issue is that Ansible's changes aren't backwards-compatible. So, if I want to update a playbook to take advantage of a new feature, I have to update _all_ of my playbooks to be compatible. But I never feel inspired to just rewrite and retest all of my playbooks, so I'm still on Ansible 2.9, which was released three years ago.
+The other issue is that Ansible's changes aren't backwards-compatible. So, if I update a playbook to take advantage of a new Ansible feature, I have to update _all_ of my playbooks to be compatible. But I never feel inspired to rewrite and retest all of my playbooks, so I get stuck on old versions. I'm still on Ansible 2.9, which was released three years ago.
 
 ## The appeal of Nix
 
 I'm seeing more and more people talk about Nix and NixOS. A lot of the developers I find interesting are talking about their experiments with Nix.
 
-The most impactful endorsement I've seen was from Mitchell Hashimoto, co-founder of Hashicorp, the company responsible for creating a lot of widely-used open-source infrastructure tools like Vagrant, Packer, Consul, and Terraform. He called Nix, "the #1 most positively impactful technology I've learned in recent years."
+The most impactful endorsement I've seen was from [Mitchell Hashimoto](https://mitchellh.com/), co-founder of Hashicorp, the company responsible for creating a lot of widely-used open-source infrastructure tools like Vagrant, Packer, Consul, and Terraform. He called Nix, "the #1 most positively impactful technology I've learned in recent years."
 
 {{<img src="hashimoto-tweet.png" has-border="true" alt="My Nix journey so far. I still stand by that its the #1 most positively impactful technology I've learned in recent years.">}}
 
@@ -37,21 +37,21 @@ Nix differs from Ansible in a few important ways that I find interesting.
 
 ### Nix is faster than Ansible
 
-Ansible has no concept of the "state" of the system it's configuring. If it takes 15 minutes to run Ansible on one of my VMs, running the same playbook a minute later would take about 10 minutes.
+Ansible has no concept of the "state" of the system it's configuring. If it takes 15 minutes to run Ansible on one of my VMs, running the same playbook a minute later would take about 10 minutes. You save a little bit of time because there's probably no package updates between the two invocations, but it's still doing almost all the same work.
 
 Ansible never says, "Oh, I just configured that machine, so there's nothing for me to do now." Ansible has to perform every configuration again because anything could have happened since the last time it ran.
 
-Nix, on the other hand, does have a concept of state. If you make a one-line change to a 200-line Nix configuration, it doesn't have to re-execute all 200 lines. It can evaluate the state of the system against the configuration file and recognize that it just has to apply the one-line change. And that change usually happens in a few seconds.
+Nix, on the other hand, does have a concept of state. If you make a one-line change to a 200-line Nix configuration, it doesn't have to re-do all the work from the other 199 lines. It can evaluate the state of the system against the configuration file and recognize that it just has to apply the one-line change. And that change usually happens in a few seconds.
 
 ### Nix optimizes for local configuration
 
-Ansible is designed to configure remote systems. You can still specify `localhost` as the target on Ansible and configure the same system Ansible is running on, but that's not the scenario that Ansible is optimized for.
+Ansible is designed to configure systems over the network. You can still specify `localhost` as the target, but that's not the scenario that Ansible is optimized for.
 
 Nix is designed to configure the environment it's in. With Nix, you define what should be in the environment, and then Nix creates that environment for you in place. With NixOS, you defined the entire operating system, and NixOS gets the operating system into that state. You can change low-level things like the filesystem, the Linux kernel, or the bootloader.
 
-This solves the problem I had with Ansible where I can't upgrade one Ansible playbook without upgrading all of my Ansible playbooks. You can have many Nix systems running different versions of Nix, and they work fine. If I have some Ansible files that require Ansible 2.9, some that require 2.10, and some that require 2.14, then it's a big pain to juggle them all.
+This solves the problem I had with Ansible where upgrading one Ansible playbook to use a later version of Ansible requires me to upgrade all the playbooks on my system. You can have many Nix systems running different versions of Nix, and they work fine. If I have some Ansible files that require Ansible 2.9, some that require 2.10, and some that require 2.14, then it's a big pain to juggle them all.
 
-### Nix makes atomic changes
+### Nix changes are atomic
 
 With Ansible, it's easy to fail halfway through a configuration, leaving the system in an undefined state.
 
@@ -59,7 +59,13 @@ With Nix, changes are atomic. Nix either gets your system into the desired state
 
 ## Nix resources that have been helpful
 
-One of the biggest complaints I see about Nix is that it's underdocumented, incorrectly, or poorly documented. My experience is that the documentation feels like it's aimed at experienced Nix users. There's a lot of, "Add these lines to your configuration file!" Which configuration file? Where in the file do I add those lines?
+One of the biggest complaints I see about Nix is that it's underdocumented, incorrectly, or poorly documented. My experience is that the documentation feels like it's aimed at experienced Nix users.
+
+A lot of Nix documentation I've found says things like, "Simply add these lines!"
+
+Huh?
+
+Which file? And where in the file do I add those lines?
 
 Here are the best resources I've found so far:
 
@@ -75,14 +81,14 @@ I followed the "NixOS for the Impatient" tutorial on a Proxmox VM, and everythin
 
 ## Failed attempt #2: NixOS on the Raspberry Pi 4
 
-Since a VM didn't work, I wanted to try installing on bare metal. I had a spare Raspberry Pi 4 on hand, and I thought the Pi would be fun hardware to experiment on.
+Since a VM didn't work, I figured bare metal was the next logical choice. I had a spare Raspberry Pi 4 on hand, and I thought the Pi would be fun hardware to experiment on.
 
 I found two different official-looking tutorials for installing NixOS on the Raspberry Pi 4:
 
 - [NixOS Wiki: NixOS on ARM/Raspberry Pi 4](https://nixos.wiki/wiki/NixOS_on_ARM/Raspberry_Pi_4)
 - [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi)
 
-The problem with both of these tutorials was they assumed that you're already running a Nix environment. I'm trying to prepare the microSD from my main computer, which is a Win10 system, so I don't have Nix.
+The problem with both of these tutorials was they assumed that you're already running a Nix environment. I'm trying to prepare the microSD from my main computer, which is a Win10 system, so I didn't have Nix already.
 
 The [NixOS download page](https://nixos.org/download.html#nixos-iso) lists a 64-bit ARM image. The Raspberry Pi 4 supports 64-bit ARM, so I thought I'd try that.
 
@@ -100,7 +106,7 @@ I tried flashing the same image using the official Raspberry Pi Imager utility, 
 
 I do most of my testing for work against a Dell Optiplex 7040. It was the only bare-metal machine I had available that I could blow away, so I tried on that.
 
-Everything worked exactly like in "NixOS for the Impatient." The install took about 10 minutes from start to finish. Seven minutes was just copying files. I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
+Everything worked exactly like in ["NixOS for the Impatient."](https://borretti.me/article/nixos-for-the-impatient) The install took about 10 minutes from start to finish. Seven minutes was just copying files. I skipped encryption since this is just a test device, and I wanted to eliminate a password-entry step on every reboot.
 
 {{<video src="nixos-full-install.mp4" max-width="800px" caption="Installing NixOS on a Dell Optiplex 7040 (I sped up the file copy portion)">}}
 
@@ -108,7 +114,7 @@ In the end, I had a full, working NixOS install!
 
 ## Failed attempt #3: NixOS on the Raspberry Pi 4 (again)
 
-Now that I had a working NixOS machine, I could try building the microSD image from that system.
+Now that I had a working NixOS machine, I wanted to give the Raspberry Pi another shot. The blocker before was not having a Nix environment from which to prepare the microSD image, but now I had one.
 
 I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
 
@@ -242,7 +248,9 @@ I tried other possible names like `gnome-shell-system-monitor`, but I couldn't f
 
 ## Things I'd like to understand next
 
-I'm happy with my first few days with Nix and NixOS. I've just scratched the surface, so here are the things I'd like to learn about Nix next.
+I'm happy with my first few days with Nix and NixOS. It's about what I expected from what I've heard. It seems like it can be incredibly powerful when used well, but it requires a lot of upfront investment and scavenging for information.
+
+I've only scratched the surface, so here are the things I'd like to learn about Nix next.
 
 ### Using VS Code Remote SSH on NixOS systems
 
@@ -252,7 +260,7 @@ There's a [nixos-vscode-server](https://github.com/nix-community/nixos-vscode-se
 
 ### How Nix's major concepts fit together
 
-I see words like "flakes" and "derivations," and I currently don't know what they mean. I don't understand Nix's language syntax, but it's enough like JavaScript and Python that I can fake my way through at this point.
+I see words like "flakes" and "derivations," and I currently don't know what they mean. I don't understand Nix's language syntax, but it's enough like JavaScript and Python that I can fake my way through at this point. But to use Nix effectively, I'm obviously going to need to learn the language.
 
 ### When does the determinism happen?
 
