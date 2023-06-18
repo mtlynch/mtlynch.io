@@ -11,7 +11,7 @@ Ten years ago, I discovered [Salt](https://github.com/saltstack/salt), a tool th
 
 I messed around with Salt for a few years until discovering [Ansible](https://github.com/ansible/ansible), which I felt like executed the same idea better.
 
-I do all of my development on [my homelab VM server. I have a separate VM for each of my projects. And I manage each VM with Ansible.
+I do all of my development on [my homelab VM server](/building-a-vm-homelab/). I have a separate VM for each of my projects. And I manage each VM with Ansible.
 
 ## The problems with Ansible
 
@@ -98,25 +98,29 @@ I tried flashing the same image using the official Raspberry Pi Imager utility, 
 
 ## Success: NixOS on a Dell Mini computer
 
-I do most of my testing for TinyPilot against a Dell XX mini computer. It was the only bare-metal machine I had available that I could blow away, so I tried on that.
+I do most of my testing for work against a Dell Optiplex 7040. It was the only bare-metal machine I had available that I could blow away, so I tried on that.
 
-Everything worked exactly like in "NixOS for the Impatient." The install took about 10 minutes from start to finish. Seven minutes was just copying files.
+Everything worked exactly like in "NixOS for the Impatient." The install took about 10 minutes from start to finish. Seven minutes was just copying files. I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
 
-{{<video src="nixos-full-install.mp4" max-width="800px" caption="Installing NixOS on a Dell XX mini PC (I sped up the file copy portion)">}}
+{{<video src="nixos-full-install.mp4" max-width="800px" caption="Installing NixOS on a Dell Optiplex 7040 (I sped up the file copy portion)">}}
 
-I skipped encryption since this is just a test device and I wanted to eliminate a password-entry step on every reboot.
+In the end, I had a full, working NixOS install!
 
 ## Failed attempt #3: NixOS on the Raspberry Pi 4 (again)
 
-Now that I had a working NixOS machine, I could try building the microSD image from that system. I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi). This time, I got a little farther, but I couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
+Now that I had a working NixOS machine, I could try building the microSD image from that system.
+
+I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
 
 {{<video src="pi-boot-failure2.mp4" max-width="800px" caption="When I flashed the NixOS Pi aarch64 microSD image from a NixOS system and booted my Pi from it, it hung on a multicolored screen.">}}
 
 ## Task 1: Getting SSH access
 
-I needed to SSH in to the NixOS system from my main machine. To do that, I'd need to get my SSH keys on the system. But without SSH, I didn't want to type my entire SSH public key, so I needed a few tools to pull down my keys from Github.
+Okay, back to my working NixOS install on the Dell Optiplex.
 
-I opened the Console application and then typed `sudo nano /etc/nixos/configuration.nix`. Then, I went to the `environment.systemPackages` and added these lines:
+I needed to SSH in to the NixOS system from my main machine. To do that, I'd need to get my SSH keys on the system.
+
+From NixOS, I opened the Console application and then typed `sudo nano /etc/nixos/configuration.nix`. Then, I went to the `environment.systemPackages` and added these lines:
 
 ```text
   environment.systemPackages = with pkgs; [
@@ -125,11 +129,13 @@ I opened the Console application and then typed `sudo nano /etc/nixos/configurat
   ];
 ```
 
-To make the changes take effect, I ran:
+To realize the changes, I ran:
 
 ```bash
 sudo nixos-rebuild switch
 ```
+
+Now, I had `vim` and `curl`, available, so I could pull down my SSH public key from Github:
 
 ```bash
 sudo mkdir -p /etc/nixos/ssh
@@ -236,21 +242,25 @@ I tried other possible names like `gnome-shell-system-monitor`, but I couldn't f
 
 ## Things I'd like to understand next
 
+I'm happy with my first few days with Nix and NixOS. I've just scratched the surface, so here are the things I'd like to learn about Nix next.
+
 ### Using VS Code Remote SSH on NixOS systems
 
-I do all of my development in VS Code over remote SSH. When I try remoting into my NixOS system from VS Code, the install fails. I'm assuming it's because for VS Code's remote SSH feature to work, VS Code has to install some type of server on the target system. VS Code probably doesn't know how to install its requirements on NixOS.
+I do all of my development in VS Code over remote SSH. When I try remoting into my NixOS system from VS Code, the install fails. VS Code has to install some type of server on the target system, and VS Code probably doesn't know how to install on NixOS.
 
-There's a [nixos-vscode-server](https://github.com/nix-community/nixos-vscode-server) git repo, and that's probably the solution I need. I haven't poked around with it yet.
+There's a [nixos-vscode-server](https://github.com/nix-community/nixos-vscode-server) git repo, and that's probably the solution I need. I haven't tried it yet.
 
-### How Nix works
+### How Nix's major concepts fit together
 
 I see words like "flakes" and "derivations," and I currently don't know what they mean. I don't understand Nix's language syntax, but it's enough like JavaScript and Python that I can fake my way through at this point.
 
 ### When does the determinism happen?
 
-When I see discussion of Nix, one of the top features I see mentioned is the fact that Nix is deterministic. So far, I don't get how it's deterministic. When I specified packages to install, I didn't specify an integrity hash, let alone a version number. If I ran the same Nix configuration a year from now, I assume I'd get a different system because it would install different versions of the `vim` and `curl` packages I specified.
+When I see discussion of Nix, one of the top features I see mentioned is the fact that Nix is deterministic.
 
-I assume there is a way of specifying package versions more precisely but I haven't learned it yet.
+So far, I don't get how it's deterministic. When I specified packages to install, I didn't specify an integrity hash, let alone a version number. If I ran the same Nix configuration a year from now, I assume I'd get a different system because it would install different versions of the `vim` and `curl` packages I specified.
+
+I assume there is a way of specifying package versions more precisely, but I haven't learned it yet.
 
 ### Who am I trusting?
 
