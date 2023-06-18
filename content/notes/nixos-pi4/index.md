@@ -1,0 +1,141 @@
+---
+title: "Installing NixOS on Raspberry Pi 4"
+date: 2023-06-18T08:31:15-04:00
+---
+All of the instructions I've found so far are incomplete or out of date.
+
+* Raspberry Pi 4
+* A USB thumbdrive with at least 4 GB of storage
+* A microSD card with at least 8 GB of storage
+
+## Install Raspberry Pi OS (64-bit)
+
+Use whatever your favorite tool is to flash Raspberry Pi OS onto the microSD. I used the official Raspberry Pi Imager v1.74, and I installed Raspberry Pi OS Lite Bullseye (2023-05-03). The important thing is that you install the 64-bit version rather than the default 32-bit version.
+
+There are lots of tutorials about installing Raspberry Pi OS, so I'll skip the details there, but you just need to install it and get to
+
+## Upgrade to the latest bootloader
+
+Install the latest bootloader:
+
+```bash
+sudo raspi-config nonint do_boot_rom E1 && \
+  sudo reboot
+```
+
+Install the latest Raspberry Pi EEPROM:
+
+```bash
+sudo apt update && \
+  sudo apt install --yes rpi-eeprom && \
+  sudo rpi-eeprom-update -a && \
+  sudo reboot
+```
+
+## Install Nix within Raspberry Pi OS
+
+Before you can install the full NixOS, you're going to install Nix (the tool) to prepare your NixOS installer disk.
+
+Run this command on your Raspberry Pi:
+
+```bash
+curl \
+  --proto '=https' \
+  --tlsv1.2 \
+  --show-error \
+  --silent \
+  --fail \
+  --location https://install.determinate.systems/nix | sh -s -- install && \
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+```
+
+```bash
+$ nix --version
+nix (Nix) 2.13.3
+```
+
+## Flashing the Nix installer to the USB drive
+
+```bash
+# This will take a few minutes.
+nix-shell -p curl zstd
+
+# Need an older build due to this bug: https://github.com/NixOS/nixpkgs/issues/179701
+URL='https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst'
+
+IMG_FILE="${URL##https:/*/}"
+curl \
+  --proto '=https' \
+  --show-error \
+  --fail \
+  --location "${URL}" \
+  | unzstd --decompress - > "${IMG_FILE}"
+```
+
+Insert your USB drive into one of the Pi 4's two blue USB 3.0 ports. The black USB 2.0 ports will work as well, but they're slower.
+
+To find the device path of your USB key, run `lsblk`, and you'll see output like the following:
+
+```bash
+$ lsblk -o NAME,SIZE,VENDOR,MODEL,LABEL,UUID
+NAME         SIZE VENDOR   MODEL           LABEL  UUID
+sda         28.7G  USB     SanDisk_3.2Gen1
+└─sda1      28.7G                                 CC29-5059
+mmcblk0       29G
+├─mmcblk0p1  256M                          bootfs 9E81-4F92
+└─mmcblk0p2 28.8G                          rootfs cf2895ca-6dc2-4797-8040-f76ba1508f41
+```
+
+In my case, my SanDisk USB drive has the name `sda`, so the device path is `/dev/sda`.
+
+```bash
+# Change to the USB drive path you found above.
+OUTPUT_DEVICE='/dev/sda'
+
+sudo dd \
+  if="${IMG_FILE}" \
+  of="${OUTPUT_DEVICE}" \
+  bs=4096 \
+  conv=fsync \
+  status=progress
+```
+
+## Boot to Nix installer
+
+Shut down Raspberry Pi
+
+```bash
+sudo shutdown --poweroff now
+```
+
+Remove the microSD, but leave the USB drive inserted. Start the Raspberry Pi again to boot to the Nix installer.
+
+Note that the Pi will only produce HDMI output from HDMI XX
+
+## Mount the microSD
+
+```bash
+sudo mkdir -p /microsd && \
+  sudo mount /dev/mmcblk0p2 /microsd && \
+  sudo mkdir -p /microsd/etc/nixos
+```
+
+
+## Write the NixOS configuration file
+
+{{<inline-file filename="configuration.nix" language="nix">}}
+
+```bash
+curl \
+  --show-error \
+  --fail \
+  {{< baseurl >}}notes/nixos-pi4/configuration.nix \
+  | sudo tee /microsd/etc/nixos/configuration.nix
+```
+
+## Mount the microSD
+
+```bash
+sudo nixos-install --root /microsd && \
+  reboot
+```

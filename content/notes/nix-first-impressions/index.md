@@ -102,6 +102,8 @@ I continued on anyway! But when I tried booting from the microSD, the Pi agreed 
 
 I tried flashing the same image using the official Raspberry Pi Imager utility, but I got the same results.
 
+**Update**: I finally [got this working](/notes/nixos-pi4).
+
 ## Success: NixOS on a Dell Mini computer
 
 I do most of my testing for work against a Dell Optiplex 7040. It was the only bare-metal machine I had available that I could blow away, so I tried on that.
@@ -119,6 +121,8 @@ Now that I had a working NixOS machine, I wanted to give the Raspberry Pi anothe
 I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
 
 {{<video src="pi-boot-failure2.mp4" max-width="800px" caption="When I flashed the NixOS Pi aarch64 microSD image from a NixOS system and booted my Pi from it, it hung on a multicolored screen.">}}
+
+**Update**: I finally [got this working](/notes/nixos-pi4).
 
 ## Task 1: Getting SSH access
 
