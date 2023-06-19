@@ -272,7 +272,7 @@ I assume there is a way of specifying package versions more precisely, but I hav
 
 ### Who am I trusting?
 
-I know that for me to be able to specify something like this:
+When I specified packages, it was a plain list of package names:
 
 ```text
   environment.systemPackages = with pkgs; [
@@ -281,4 +281,4 @@ I know that for me to be able to specify something like this:
   ];
 ```
 
-For me to specify packages by name, it means that Nix is pulling packages from a default repository. Are there multiple repositories? How do I pick which repository to use?
+For me to be able to specify packages like the above, Nix must be pulling packages from a default repository. Are there multiple repositories? How do I pick which repository to use?
