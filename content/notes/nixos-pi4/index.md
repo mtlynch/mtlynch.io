@@ -196,7 +196,7 @@ curl \
   --show-error \
   --fail \
   {{< baseurl >}}notes/nixos-pi4/configuration.nix \
-  | sudo tee /mnt/etc/nixos/configuration.nix
+  | sudo tee /etc/nixos/configuration.nix
 ```
 
 ## Mount the microSD
