@@ -43,6 +43,14 @@ Ansible never says, "Oh, I just configured that machine, so there's nothing for 
 
 Nix, on the other hand, does have a concept of state. If you make a one-line change to a 200-line Nix configuration, it doesn't have to re-do all the work from the other 199 lines. It can evaluate the state of the system against the configuration file and recognize that it just has to apply the one-line change. And that change usually happens in a few seconds.
 
+**Edit (2023-06-19)**: A reader with more experience [clarified that Nix doesn't have state in the way I assumed](https://news.ycombinator.com/item?id=36388114):
+
+> Nix is not fast because it is stateful. It is fast because it is functional and reproducible, which allows for caching without compromising correctness.
+
+I had thought that Nix kept track of which tasks brought me to which system state. For example, imagine that performing tasks X and Y brings me to state A, and performing tasks X, Y, and Z brings me to state B. I thought that a Nix system in state A would know to only perform task Z to reach state B.
+
+My new understanding is that if you ask a Nix system in state A to go to state B, Nix will perform tasks X, Y and Z, but Nix cached the results of tasks X and Y, so they happen near-instantly.
+
 ### Nix optimizes for local configuration
 
 Ansible is designed to configure systems over the network. You can still specify `localhost` as the target, but that's not the scenario that Ansible is optimized for.
