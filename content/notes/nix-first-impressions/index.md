@@ -45,9 +45,9 @@ Nix, on the other hand, does have a concept of state. If you make a one-line cha
 
 **Edit (2023-06-19)**: A reader with more Nix experience [disagreed with my characterization here](https://news.ycombinator.com/item?id=36388114):
 
->Nix is not fast because it is stateful. It is fast because it is functional and reproducible, which allows for caching without compromising correctness.
+> Nix is not fast because it is stateful. It is fast because it is functional and reproducible, which allows for caching without compromising correctness.
 
-That makes sense to me. I had understood Nix as having a concept of what state the system is currently in and calculating which tasks would bring the system to the desired state. It sounds like the more accurate explanation is that Nix doesn't exactly track state, but it caches incremental progress so it doesn't have to re-do everything the way that Ansible does.
+That makes sense to me. I thought Nix had a concept of the latest system state, which it could use to infer which tasks would bring the system to the desired state. It sounds like the more accurate explanation is that Nix doesn't exactly track "state," but it caches incremental progress. It doesn't so it doesn't have to re-do everything the way that Ansible does.
 
 ### Nix optimizes for local configuration
 
