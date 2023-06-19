@@ -3,26 +3,28 @@ title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-06-18T08:31:15-04:00
 ---
 
-## Gotcha 1: The standard NixOS installer doesn't work
+## Gotchas
+
+### Gotcha 1: The standard NixOS installer doesn't work
 
 
-## Gotcha 4: The Pi's second HDMI port doesn't work
+### Gotcha 4: The Pi's second HDMI port doesn't work
 
 I actually
 
-## Gotcha 2: The microSD image is an installer, not the final OS
+### Gotcha 2: The microSD image is an installer, not the final OS
 
 It's an environment for installing NixOS. It's similar to if you boot from an Ubuntu live CD. While you can use it temporarily as an OS, it's meant to be the OS from which you install your real OS.
 
-## Gotcha 3: The latest NixOS microSD doesn't work on Raspberry Pi 4
+### Gotcha 3: The latest NixOS microSD doesn't work on Raspberry Pi 4
 
 Gets an error about hardware acceleration
 
 When I delete the line, it doesn't install a desktop GUI.
 
-## Gotcha 5: The latest hardware version doesn't work
+### Gotcha 5: The latest hardware version doesn't work
 
-## Gotcha 6: Gnome doesn't work out of the box
+### Gotcha 6: Gnome doesn't work out of the box
 
 
 
