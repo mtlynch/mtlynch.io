@@ -254,6 +254,10 @@ error: undefined variable 'gnome-system-monitor'
 
 I tried other possible names like `gnome-shell-system-monitor`, but I couldn't figure out how to install it.
 
+**Edit (2023-06-19)**: Thanks to readers who pointed out that the correct package name is `gnome.gnome-system-monitor`. The piece I was missing was that I can search for packages at [search.nixos.org](https://search.nixos.org/packages?channel=23.05&from=0&size=50&sort=relevance&type=packages&query=gnome+system+monitor).
+
+{{<img src="TinyPilot-2023-06-20T01 40 54.869Z.jpg">}}
+
 ## Things I'd like to understand next
 
 I'm happy with my first few days with Nix and NixOS. It's about what I expected from what I've heard. It seems like it can be incredibly powerful when used well, but it requires a lot of upfront investment and scavenging for information.
