@@ -77,7 +77,7 @@ in {
   ];
 
   # Enable GPU acceleration
-  hardware.raspberry-pi."4".fkms-3d.enable = true;
+  #hardware.raspberry-pi."4".fkms-3d.enable = true;
 
   services.xserver = {
     enable = true;
@@ -87,5 +87,5 @@ in {
 
   hardware.pulseaudio.enable = true;
 
-  system.stateVersion = "22.11";
+  system.stateVersion = "21.03";
 }

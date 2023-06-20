@@ -3,69 +3,34 @@ title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-06-18T08:31:15-04:00
 ---
 
-## Gotchas
-
-### Gotcha 1: The standard NixOS installer doesn't work
-
-
-### Gotcha 4: The Pi's second HDMI port doesn't work
-
-I actually
-
-### Gotcha 2: The microSD image is an installer, not the final OS
-
-It's an environment for installing NixOS. It's similar to if you boot from an Ubuntu live CD. While you can use it temporarily as an OS, it's meant to be the OS from which you install your real OS.
-
-### Gotcha 3: The latest NixOS microSD doesn't work on Raspberry Pi 4
-
-Gets an error about hardware acceleration
-
-When I delete the line, it doesn't install a desktop GUI.
-
-### Gotcha 5: The latest hardware version doesn't work
-
-### Gotcha 6: Gnome doesn't work out of the box
-
-
-
 All of the instructions I've found so far are incomplete or out of date.
 
+## Requirements
+
 * Raspberry Pi 4
-* A USB thumbdrive with at least 4 GB of storage
 * A microSD card with at least 8 GB of storage
+* A separate computer to prepare the microSD card.
 
-https://github.com/facebook/zstd/releases
+## Flashing the Nix installer microSD
+
+### Flashing from a Windows system
+
+Download this file:
+
+https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst
+
+The file is encrypted with Facebook's ZSTD compression tool, so you'll need to download that
 
 
-## Install Raspberry Pi OS (64-bit)
-
-Use whatever your favorite tool is to flash Raspberry Pi OS onto the microSD. I used the official Raspberry Pi Imager v1.74, and I installed Raspberry Pi OS Lite Bullseye (2023-05-03). The important thing is that you install the 64-bit version rather than the default 32-bit version.
-
-There are lots of tutorials about installing Raspberry Pi OS, so I'll skip the details there, but you just need to install it and get to
-
-## Troubleshooting: Upgrade to the latest bootloader
-
-Install the latest bootloader:
-
-```bash
-sudo raspi-config nonint do_boot_rom E1 && \
-  sudo reboot
+```ps
+zstd.exe -d "C:\tmp\nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst"
 ```
 
-Install the latest Raspberry Pi EEPROM:
+Any tool for flashing a microSD. I like Balena Etcher.
 
-```bash
-sudo apt update && \
-  sudo apt install --yes rpi-eeprom && \
-  sudo rpi-eeprom-update -a && \
-  sudo reboot
-```
+## Flashing from a Linux or OS X system
 
-## Install Nix within Raspberry Pi OS
-
-Before you can install the full NixOS, you're going to install Nix (the tool) to prepare your NixOS installer disk.
-
-Run this command on your Raspberry Pi:
+The easiest way to do is to install a Nix environment.
 
 ```bash
 curl \
@@ -82,35 +47,6 @@ curl \
 $ nix --version
 nix (Nix) 2.13.3
 ```
-
-## Install
-
-```bash
-nix-channel --add https://nixos.org/channels/nixos-version nixpkgs
-
-nix-env -f '<nixpkgs>' -iA nixos-install-tools
-
-# Necessary?
-sudo `which nixos-generate-config`
-```
-
-Replace `/etc/nixos/configuration.nix`
-
-```bash
-nix-env -p /nix/var/nix/profiles/system -f '<nixpkgs/nixos>' -I nixos-config=/etc/nixos/configuration.nix -iA system
-
-sudo chown -R 0:0 /nix
-```
-
-```bash
-sudo touch /etc/NIXOS
-echo etc/nixos | sudo tee /etc/NIXOS_LUSTRATE
-
-sudo mv -v /boot /boot.bak &&
-  sudo /nix/var/nix/profiles/system/bin/switch-to-configuration boot
-```
-
-## Flashing the Nix installer to the USB drive
 
 ```bash
 # This will take a few minutes.
@@ -156,67 +92,17 @@ sudo dd \
   status=progress
 ```
 
-## Boot to Nix installer
-
-Shut down Raspberry Pi
+## Enable SSH access (optional)
 
 ```bash
-sudo shutdown --poweroff now
-```
+# Change to your Github username.
+GITHUB_USERNAME="mtlynch"
 
-Remove the microSD, but leave the USB drive inserted. Start the Raspberry Pi again to boot to the Nix installer.
-
-Note that the Pi will only produce HDMI output from HDMI XX
-
-## Mount the microSD
-
-TODO: Cut?
-
-```bash
-lsblk
-```
-
-Wait until you see `mmcblk0`.
-
-
-I'm not sure how to get around this step. We need to partition the disk the way NixOS expects, and I suspect there's an easier way than downloading the whole installer OS again, but this is the only way I know that works.
-
-```bash
-nix-shell -p curl zstd
-
-# Need an older build due to this bug: https://github.com/NixOS/nixpkgs/issues/179701
-URL='https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst'
-
-IMG_FILE="${URL##https:/*/}"
-curl \
-  --proto '=https' \
-  --show-error \
-  --fail \
-  --location "${URL}" \
-  | unzstd --decompress - > "${IMG_FILE}"
-```
-
-```bash
-OUTPUT_DEVICE='/dev/mmcblk0'
-
-sudo dd \
-  if="${IMG_FILE}" \
-  of="${OUTPUT_DEVICE}" \
-  bs=4096 \
-  conv=fsync \
-  status=progress
-```
-
-```bash
-# cut?
-sudo mkdir -p /mnt && \
-  sudo mount /dev/mmcblk0p2 /mnt && \
-  sudo mkdir -p /mnt/etc/nixos
+sudo mkdir -p ~/.ssh && \
+  curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
 ```
 
 ## Write the NixOS configuration file
-
-TODO: Look into `nix-install --system`
 
 {{<inline-file filename="configuration.nix" language="nix">}}
 
@@ -228,9 +114,102 @@ curl \
   | sudo tee /etc/nixos/configuration.nix
 ```
 
-## Mount the microSD
-
 ```bash
 sudo nixos-install --root / && \
   reboot
+```
+
+
+## Gotchas
+
+### Gotcha 1: The standard NixOS installer doesn't work
+
+
+### Gotcha 4: The Pi's second HDMI port doesn't work
+
+I actually
+
+### Gotcha 2: The microSD image is an installer, not the final OS
+
+It's an environment for installing NixOS. It's similar to if you boot from an Ubuntu live CD. While you can use it temporarily as an OS, it's meant to be the OS from which you install your real OS.
+
+### Gotcha 3: The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
+
+Tried with `nixos-sd-image-23.05.1123.aaef163eac7-aarch64-linux.img`.
+
+Gets an error:
+
+```text
+Applying overlay rpi4-vc4-fkms-v3d-overlay to bcm2711-rpi-cm4-io.dtb...
+Failed to apply '/nix/store/22l342jmwsaazvnz1zd5qq5m3b3ppsbd-rpi4-vc4-fkms-v3d-overlay-dtbo': FDT_ERR_NOTFOUND
+error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-overlays.drv' failed with exit code 1
+error: 1 dependencies of derivation '/nix/store/w77gh3p4wzbildmmr2dh1c254qlm3nv4-nixos-system-pinix-23.05.1123.aaef163eac7.drv' failed to build
+```
+
+I can work around it by deleting this line from configuration.nix:
+
+```nix
+hardware.raspberry-pi."4".fkms-3d.enable = true;
+```
+
+The install then fails later on:
+
+```text
+installing the boot loader...
+removing user ‘nixos’
+setting up /etc...
+removing obsolete symlink ‘/etc/hostid’...
+removing obsolete symlink ‘/etc/systemd/pstore.conf’...
+removing obsolete symlink ‘/etc/zfs/zpool.d’...
+...
+umount: ???: umount failed: No such file or directory.
+```
+
+And the system is then in a broken state:
+
+```text
+[nixos@nixos:~]$ sudo reboot
+sudo: you do not exist in the passwd database
+
+[nixos@nixos:~]$ reboot
+Call to Reboot failed: Access denied
+```
+
+If I power cycle the Pi at that point, it successfully boots into the new NixOS install, but there's no XFCE desktop GUI, just a terminal:
+
+{{<video src="nixos-23.05-no-gui.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+
+When I delete the line, it doesn't install a desktop GUI.
+
+## Gotcha: The previous stable NixOS (22.11) can't boot on a Pi 4
+
+Tried with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it doesn't boot.
+
+{{<video src="nixos-22.11-boot-fail.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+
+### Gotcha 5: The latest hardware version doesn't work
+
+### Gotcha 6: Gnome doesn't work out of the box
+
+
+
+https://github.com/facebook/zstd/releases
+
+
+## Troubleshooting: Upgrade to the latest bootloader
+
+Install the latest bootloader:
+
+```bash
+sudo raspi-config nonint do_boot_rom E1 && \
+  sudo reboot
+```
+
+Install the latest Raspberry Pi EEPROM:
+
+```bash
+sudo apt update && \
+  sudo apt install --yes rpi-eeprom && \
+  sudo rpi-eeprom-update -a && \
+  sudo reboot
 ```
