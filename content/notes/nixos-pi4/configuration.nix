@@ -12,6 +12,7 @@ let
   # Versions after this commit fail.
   # https://github.com/NixOS/nixos-hardware/issues/651
   nixosHardwareVersion = "ad1114ee372a52aa0b4934f72835bd14a212a642";
+
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
 in {

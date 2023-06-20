@@ -2,11 +2,12 @@
 title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-06-18T08:31:15-04:00
 ---
-I recently started experimenting with Nix and NixOS. Nix allows you to define your software environment from code, and NixOS allows you
 
+I recently started experimenting with Nix and NixOS. Nix allows you to define your software environment from code, and NixOS allows you to define your entire operating system in code.
 
+The Raspberry Pi is a good system for experimenting with new technology, so I decided to install NixOS on my Raspberry Pi 4. I found the process a bit bumpy. Most of the guides for installing NixOS on a Raspberry Pi 4 are incomplete or out of date.
 
-All of the instructions I've found so far are incomplete or out of date.
+I wrote this tutorial so that it's easy for newcomers to NixOS.
 
 ## Requirements
 
@@ -20,7 +21,7 @@ All of the instructions I've found so far are incomplete or out of date.
 
 Download this file:
 
-https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst
+https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst
 
 The file is encrypted with Facebook's ZSTD compression tool, so you'll need to download that
 
@@ -57,8 +58,7 @@ nix (Nix) 2.13.3
 # This will take a few minutes.
 nix-shell -p curl zstd
 
-# Need an older build due to this bug: https://github.com/NixOS/nixpkgs/issues/179701
-URL='https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst'
+URL='https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst'
 
 IMG_FILE="${URL##https:/*/}"
 curl \
@@ -68,6 +68,8 @@ curl \
   --location "${URL}" \
   | unzstd --decompress - > "${IMG_FILE}"
 ```
+
+TODO: microSD instead of USB
 
 Insert your USB drive into one of the Pi 4's two blue USB 3.0 ports. The black USB 2.0 ports will work as well, but they're slower.
 
@@ -103,6 +105,8 @@ If everything went well, you should see a boot sequence like the following:
 
 ## Enable SSH access (optional)
 
+I find it helpful
+
 ### Add a password
 
 ```bash
@@ -125,6 +129,8 @@ mkdir -p ~/.ssh && \
   curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
 ```
 
+If you see an error that says `certificate is not valid yet`, it means that your Pi hasn't yet sync'ed its time to time servers. Wait 60 seconds and try the command again.
+
 ```bash
 ssh nixos@nixos.local
 ```
@@ -138,13 +144,34 @@ curl \
   --show-error \
   --fail \
   {{< baseurl >}}notes/nixos-pi4/configuration.nix \
-  | sudo tee /etc/nixos/configuration.nix && \
-  sudo nixos-rebuild boot && \
-  reboot
+  | sudo tee /etc/nixos/configuration.nix
 ```
 
-I'm intentionally choosing the `boot` option so we don't activate the changes until the next boot. Otherwise, NixOS goes into a broken state where you're still logged in as the `nixos` user, but you can't execute any commands because the `nixos` user has been deleted from the system.
+You can make changes to `/etc/nixos/configuration.nix` at this point.
 
+TODO: Are vim, nano, and emacs pre-installed?
+
+When you're happy with your `configuration.nix`, run these commands:
+
+```bash
+sudo nixos-rebuild boot && \
+  echo "install complete, rebooting..." && \
+  sudo poweroff --reboot
+```
+
+## Logging in
+
+If you used the default `configuration.nix` above, your username is `foo` and your password is `bar`:
+
+## Make changes (optional)
+
+{{<img src="no-browser.jpg">}}
+
+Add Firefox browser
+
+```bash
+sudo nixos-rebuild switch
+```
 
 ## Upgrade to latest NixOS release that's compatible with the Pi 4
 
@@ -159,6 +186,8 @@ sudo nix-channel \
   sudo nixos-rebuild --upgrade boot && \
   sudo reboot
 ```
+
+TODO: Do we have to update `configuration.nix` with `TARGET_RELEASE`? Or does Nix do that for us?
 
 Updating to 23.05 fails:
 
@@ -211,21 +240,9 @@ removing obsolete symlink ‘/etc/zfs/zpool.d’...
 umount: ???: umount failed: No such file or directory.
 ```
 
-And the system is then in a broken state:
-
-```text
-[nixos@nixos:~]$ sudo reboot
-sudo: you do not exist in the passwd database
-
-[nixos@nixos:~]$ reboot
-Call to Reboot failed: Access denied
-```
-
 If I power cycle the Pi at that point, it successfully boots into the new NixOS install, but there's no XFCE desktop GUI, just a terminal:
 
 {{<video src="nixos-23.05-no-gui.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
-
-When I delete the line, it doesn't install a desktop GUI.
 
 ## Gotcha: The previous stable NixOS (22.11) can't boot on a Pi 4
 
@@ -251,9 +268,27 @@ Failed to power off system via logind: Transport endpoint is not connected
 Failed to talk to init daemon.
 ```
 
-But if you power cycle it, the resulting system seems okay.
+But if you power cycle it, the resulting system seems okay. Thought it was due to `rebuild switch`, but I got the same results with `rebuild boot`.
 
 * `nixos-sd-image-21.05.4737.022caabb5f2-aarch64-linux.img`: Same as 21.11
+
+### Gotcha: `reboot` command doesn't work
+
+After the initial install with `sudo nixos-rebuild boot`
+
+```text
+[nixos@nixos:~]$ reboot
+Failed to set wall message, ignoring: Transport endpoint is not connected
+Failed to reboot system via logind: Transport endpoint is not connected
+Failed to talk to init daemon.
+
+[nixos@nixos:~]$ shutdown -h now
+Failed to set wall message, ignoring: Transport endpoint is not connected
+Failed to power off system via logind: Transport endpoint is not connected
+Failed to talk to init daemon.
+```
+
+Workaround was to use `sudo poweroff --reboot`.
 
 ### Gotcha 5: The latest hardware version doesn't work
 
