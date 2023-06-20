@@ -147,9 +147,11 @@ curl \
   | sudo tee /etc/nixos/configuration.nix
 ```
 
-You can make changes to `/etc/nixos/configuration.nix` at this point.
+You can make changes to `/etc/nixos/configuration.nix` at this point using `nano` or `vim`.
 
-TODO: Are vim, nano, and emacs pre-installed?
+```bash
+nano /etc/nixos/configuration.nix
+```
 
 When you're happy with your `configuration.nix`, run these commands:
 
@@ -165,9 +167,13 @@ If you used the default `configuration.nix` above, your username is `foo` and yo
 
 ## Make changes (optional)
 
+When you log in, you'll notice you don't have a web browser.
+
 {{<img src="no-browser.jpg">}}
 
-Add Firefox browser
+In 2023, we have to have a web browser!
+
+Add Firefox browser to `configuration.nix`:
 
 ```bash
 sudo nixos-rebuild switch
