@@ -2,6 +2,9 @@
 title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-06-18T08:31:15-04:00
 ---
+I recently started experimenting with Nix and NixOS. Nix allows you to define your software environment from code, and NixOS allows you
+
+
 
 All of the instructions I've found so far are incomplete or out of date.
 
@@ -11,7 +14,7 @@ All of the instructions I've found so far are incomplete or out of date.
 * A microSD card with at least 8 GB of storage
 * A separate computer to prepare the microSD card.
 
-## Flashing the Nix installer microSD
+## Flashing the NixOS microSD
 
 ### Flashing from a Windows system
 
@@ -20,6 +23,8 @@ Download this file:
 https://hydra.nixos.org/build/134720986/download/1/nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst
 
 The file is encrypted with Facebook's ZSTD compression tool, so you'll need to download that
+
+https://github.com/facebook/zstd/releases/latest
 
 
 ```ps
@@ -92,14 +97,36 @@ sudo dd \
   status=progress
 ```
 
+## Boot your NixOS system
+
+If everything went well, you should see a boot sequence like the following:
+
 ## Enable SSH access (optional)
+
+### Add a password
+
+```bash
+passwd
+```
+
+```bash
+ssh nixos@nixos.local
+```
+
+### Add an SSH key
+
+Once your Pi 4 is up and running with NixOS, you'll only have local access.
 
 ```bash
 # Change to your Github username.
 GITHUB_USERNAME="mtlynch"
 
-sudo mkdir -p ~/.ssh && \
+mkdir -p ~/.ssh && \
   curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
+```
+
+```bash
+ssh nixos@nixos.local
 ```
 
 ## Write the NixOS configuration file
@@ -111,27 +138,46 @@ curl \
   --show-error \
   --fail \
   {{< baseurl >}}notes/nixos-pi4/configuration.nix \
-  | sudo tee /etc/nixos/configuration.nix
-```
-
-```bash
-sudo nixos-install --root / && \
+  | sudo tee /etc/nixos/configuration.nix && \
+  sudo nixos-rebuild boot && \
   reboot
 ```
 
+I'm intentionally choosing the `boot` option so we don't activate the changes until the next boot. Otherwise, NixOS goes into a broken state where you're still logged in as the `nixos` user, but you can't execute any commands because the `nixos` user has been deleted from the system.
+
+
+## Upgrade to latest NixOS release that's compatible with the Pi 4
+
+The 21.11 image doesn't install cleanly on the Pi 4, but you can install 21.05 and upgrade to 21.11 cleanly. Builds after 21.11 fail to install on the Pi 4.
+
+```bash
+TARGET_RELEASE="21.11"
+
+sudo nix-channel \
+  --add "https://nixos.org/channels/nixos-${TARGET_RELEASE}" nixos && \
+  sudo nix-channel --update && \
+  sudo nixos-rebuild --upgrade boot && \
+  sudo reboot
+```
+
+Updating to 23.05 fails:
+
+```text
+Failed to apply '/nix/store/22l342jmwsaazvnz1zd5qq5m3b3ppsbd-rpi4-vc4-fkms-v3d-overlay-dtbo': FDT_ERR_NOTFOUND
+building '/nix/store/w052x98nzkbvmxcmb8wdgmfgqrf8vzv4-smb-dummy.conf.drv'...
+error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-overlays.drv' failed with exit code 1
+error: 1 dependencies of derivation '/nix/store/5hbkqaz7ldjf5565zakjqxx4xrk5dvn9-nixos-system-pinix-23.05.1156.ad157fe26e7.drv' failed to build
+```
 
 ## Gotchas
 
-### Gotcha 1: The standard NixOS installer doesn't work
+### Gotcha 1: The standard NixOS aarch64 image doesn't work
 
+Designed for UEFI systems, and Raspberry Pi doens't support UEFI.
 
 ### Gotcha 4: The Pi's second HDMI port doesn't work
 
 I actually
-
-### Gotcha 2: The microSD image is an installer, not the final OS
-
-It's an environment for installing NixOS. It's similar to if you boot from an Ubuntu live CD. While you can use it temporarily as an OS, it's meant to be the OS from which you install your real OS.
 
 ### Gotcha 3: The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
 
@@ -187,14 +233,33 @@ Tried with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it doe
 
 {{<video src="nixos-22.11-boot-fail.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
 
+* `nixos-sd-image-22.05.4694.380be19fbd2-aarch64-linux.img` same thing
+* `nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img`:
+
+```text
+[nixos@nixos:~]$ sudo reboot
+sudo: you do not exist in the passwd database
+
+[nixos@nixos:~]$ reboot
+Failed to set wall message, ignoring: Transport endpoint is not connected
+Failed to reboot system via logind: Transport endpoint is not connected
+Failed to talk to init daemon.
+
+[nixos@nixos:~]$ shutdown -h now
+Failed to set wall message, ignoring: Transport endpoint is not connected
+Failed to power off system via logind: Transport endpoint is not connected
+Failed to talk to init daemon.
+```
+
+But if you power cycle it, the resulting system seems okay.
+
+* `nixos-sd-image-21.05.4737.022caabb5f2-aarch64-linux.img`: Same as 21.11
+
 ### Gotcha 5: The latest hardware version doesn't work
 
 ### Gotcha 6: Gnome doesn't work out of the box
 
-
-
-https://github.com/facebook/zstd/releases
-
+I couldn't figure out how to enable the Gnome desktop manager.
 
 ## Troubleshooting: Upgrade to the latest bootloader
 
