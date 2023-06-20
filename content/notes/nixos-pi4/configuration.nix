@@ -87,5 +87,5 @@ in {
 
   hardware.pulseaudio.enable = true;
 
-  system.stateVersion = "21.03";
+  system.stateVersion = "22.11";
 }
