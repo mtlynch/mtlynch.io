@@ -153,8 +153,6 @@ You can make changes to `/etc/nixos/configuration.nix` at this point using `nano
 nano /etc/nixos/configuration.nix
 ```
 
-TODO: Remove wifi settings
-
 TODO: Try with gnome settings instead
 
 When you're happy with your `configuration.nix`, run these commands:
