@@ -54,17 +54,15 @@ I reached out to three YouTubers. Two of them are interested and plan to feature
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | April 2023     | May 2023         | Change                                             |
-| ------------------------ | -------------- | ---------------- | -------------------------------------------------- |
-| Unique Visitors          | 6,560          | 7,773            | <font color="green">+1,213 (+18%)</font>           |
-| Total Pageviews          | 15,034         | 17,220           | <font color="green">+2,186 (+15%)</font>           |
-| Sales Revenue            | $82,060.84     | $89,569.49       | <font color="green">+$7,508.65 (+9%)</font>        |
-| Enterprise Subscriptions | $290.70        | $290.70          | 0                                                  |
-| Royalties                | $2,369.08      | $2,597.71        | <font color="green">+$228.63 (+10%)</font>         |
-| Total Revenue            | $84,720.62     | $92,457.90       | <font color="green">+$7,737.28 (+9%)</font>        |
-| **Profit**               | **$10,295.55** | **$23,923.76**\* | **<font color="green">+$13,628.21 (+132%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | April 2023     | May 2023       | Change                                             |
+| ------------------------ | -------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 6,560          | 7,773          | <font color="green">+1,213 (+18%)</font>           |
+| Total Pageviews          | 15,034         | 17,220         | <font color="green">+2,186 (+15%)</font>           |
+| Sales Revenue            | $82,060.84     | $89,569.49     | <font color="green">+$7,508.65 (+9%)</font>        |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                                  |
+| Royalties                | $2,369.08      | $2,597.71      | <font color="green">+$228.63 (+10%)</font>         |
+| Total Revenue            | $84,720.62     | $92,457.90     | <font color="green">+$7,737.28 (+9%)</font>        |
+| **Profit**               | **$10,295.55** | **$24,034.74** | **<font color="green">+$13,739.19 (+133%)</font>** |
 
 The numbers are all up this month, so that's a good sign. They're still somewhat within the noise of TinyPilot's monthly fluctuations, but the general trend is positive.
 
