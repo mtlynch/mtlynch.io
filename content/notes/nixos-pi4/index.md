@@ -306,10 +306,6 @@ Workaround was to use `sudo poweroff --reboot`.
 
 https://github.com/NixOS/nixos-hardware/issues/651
 
-### Gotcha 6: Gnome doesn't work out of the box
-
-I couldn't figure out how to enable the Gnome desktop manager.
-
 ## Troubleshooting: Upgrade to the latest bootloader
 
 Install the latest bootloader:
