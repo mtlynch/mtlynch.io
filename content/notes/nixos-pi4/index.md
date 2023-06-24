@@ -28,8 +28,8 @@ The file is encrypted with Facebook's ZSTD compression tool, so you'll need to d
 https://github.com/facebook/zstd/releases/latest
 
 
-```ps
-zstd.exe -d "C:\tmp\nixos-sd-image-21.03pre262561.581232454fd-aarch64-linux.img.zst"
+```powershell
+zstd.exe -d "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
 ```
 
 Any tool for flashing a microSD. I like Balena Etcher.
@@ -103,6 +103,8 @@ sudo dd \
 
 If everything went well, you should see a boot sequence like the following:
 
+{{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+
 ## Enable SSH access (optional)
 
 I find it helpful
@@ -165,13 +167,15 @@ sudo nixos-rebuild boot && \
 
 ## Logging in
 
+TODO: change
+
 If you used the default `configuration.nix` above, your username is `foo` and your password is `bar`:
 
 ## Make changes (optional)
 
 When you log in, you'll notice you don't have a web browser.
 
-{{<img src="no-browser.jpg">}}
+{{<img src="no-firefox.webp">}}
 
 In 2023, we have to have a web browser!
 
@@ -298,7 +302,9 @@ Failed to talk to init daemon.
 
 Workaround was to use `sudo poweroff --reboot`.
 
-### Gotcha 5: The latest hardware version doesn't work
+### Gotcha 5: The latest Pi hardware version doesn't work
+
+https://github.com/NixOS/nixos-hardware/issues/651
 
 ### Gotcha 6: Gnome doesn't work out of the box
 
