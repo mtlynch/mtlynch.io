@@ -3,117 +3,71 @@ title: "Installing NixOS on Raspberry Pi 4"
 date: 2023-06-18T08:31:15-04:00
 ---
 
-I recently started experimenting with Nix and NixOS. Nix allows you to define your software environment from code, and NixOS allows you to define your entire operating system in code.
+I recently started experimenting with Nix and NixOS. Nix is a tool that allows you to define your software environment from code, and NixOS allows you to define your entire operating system configuration in code.
 
-The Raspberry Pi is a good system for experimenting with new technology, so I decided to install NixOS on my Raspberry Pi 4. I found the process a bit bumpy. Most of the guides for installing NixOS on a Raspberry Pi 4 are incomplete or out of date.
+The Raspberry Pi is a good system for experimenting with new technology, so I decided to install NixOS on my Raspberry Pi 4. Most of the tutorials for installing NixOS on a Raspberry Pi 4 are incomplete or out of date, so I decided to write one that works as of 2023.
 
-I wrote this tutorial so that it's easy for newcomers to NixOS.
+I'm a newcomer to NixOS, so this guide is geared toward beginners.
 
 ## Requirements
+
+To follow this tutorial, you'll need:
 
 * Raspberry Pi 4
 * A microSD card with at least 8 GB of storage
 * A separate computer to prepare the microSD card.
 
-## Flashing the NixOS microSD
+## Download the NixOS microSD image
 
-### Flashing from a Windows system
+First, you'll need to flash the NixOS disk image onto a microSD card.
 
-Download this file:
+To begin, download the latest working NixOS disk image. As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is almost two years old, unfortunately:
 
-https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst
+Download the disk image from the link below:
 
-The file is encrypted with Facebook's ZSTD compression tool, so you'll need to download that
+* [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
 
-https://github.com/facebook/zstd/releases/latest
+## Decompress the NixOS microSD image
 
+NixOS microSD images are compressed with an uncommon compression format called ZSTD, an open-source format from Facebook. To decompress the image, you'll need to download the latest ZSTD release for your platform:
 
-```powershell
-zstd -d "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
-```
+* [ZSTD releases](https://github.com/facebook/zstd/releases/latest)
 
-Any tool for flashing a microSD. I like Balena Etcher.
-
-## Flashing from a Linux or OS X system
-
-The easiest way to do is to install a Nix environment.
+Once you have both the ZSTD tool and the image, decompress the image with the following command:
 
 ```bash
-curl \
-  --proto '=https' \
-  --tlsv1.2 \
-  --show-error \
-  --silent \
-  --fail \
-  --location https://install.determinate.systems/nix | sh -s -- install && \
-  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+zstd --decompress "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
 ```
 
-```bash
-$ nix --version
-nix (Nix) 2.13.3
-```
+## Flash the NixOS microSD image
 
-```bash
-# This will take a few minutes.
-nix-shell -p curl zstd
+After you've decompressed the image, flash it to a microSD using your favorite microSD flashing utility. If you don't know what to use, I recommend [balenaEtcher ](https://etcher.balena.io/), as it's user-friendly and works on any major OS.
 
-URL='https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst'
+{{<img src="balena-etcher-nixos.webp">}}
 
-IMG_FILE="${URL##https:/*/}"
-curl \
-  --proto '=https' \
-  --show-error \
-  --fail \
-  --location "${URL}" \
-  | unzstd --decompress - > "${IMG_FILE}"
-```
+When you flash the microSD, choose the `.img` file rather than the `.img.zst` file, as most flashing tools won't understand the ZSTD format.
 
+## Insert the microSD card into your Pi
 
-To find the device path of your USB key, run `lsblk`, and you'll see output like the following:
-
-```bash
-$ lsblk -o NAME,SIZE,VENDOR,MODEL,LABEL,UUID
-NAME     SIZE VENDOR   MODEL                           LABEL   UUID
-sda    238.5G ATA      SanDisk X600 2.5 7MM SATA 256GB
-├─sda1   512M                                                  8BCC-19F0
-├─sda2 229.2G                                                  f6dfd4c3-d57b-49d7-aa50-c3b0ddc4e12a
-└─sda3   8.8G                                          swap    763a1454-8c6e-460a-af35-5cca07139fbb
-sdb        0B Generic- USB3.0 CRW -SD
-sdc     14.8G Generic- USB3.0 CRW -SD
-├─sdc1   100M                                          gokrazy F3F3-7B84
-├─sdc2   500M
-├─sdc3   500M
-└─sdc4  13.8G
-```
-
-In my case, the microSD device is `sdc`.
-
-Warning: Be sure you picked the right device name, as picking the wrong one will cause data loss.
-
-```bash
-# Change to the microSD drive path you found above.
-OUTPUT_DEVICE='/dev/sdc'
-
-sudo dd \
-  if="${IMG_FILE}" \
-  of="${OUTPUT_DEVICE}" \
-  bs=4096 \
-  conv=fsync \
-  status=progress
-```
+TODO
 
 ## Boot your NixOS system
 
 If everything went well, you should see a boot sequence like the following:
 
-{{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+{{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="A successful boot of the NixOS 21.11 microSD image on a Raspberry Pi 4.">}}
+
+The boot is complete when you see a command prompt that says:
+
+```bash
+[nixos@nixos~:]$
+```
 
 ## Enable SSH access (optional)
 
 I find it helpful
 
-### Add a password
+### SSH option 1: Add a password
 
 ```bash
 passwd
@@ -123,7 +77,7 @@ passwd
 ssh nixos@nixos.local
 ```
 
-### Add an SSH key
+### SSH option 2: Add an SSH key
 
 Once your Pi 4 is up and running with NixOS, you'll only have local access.
 
@@ -143,25 +97,33 @@ ssh nixos@nixos.local
 
 ## Write the NixOS configuration file
 
-{{<inline-file filename="configuration.nix" language="nix">}}
+You're now in NixOS!
+
+Except you're now in a bit of an unusual state. NixOS has an unusual install process for the Raspberry Pi.
+
+For most operating systems, you download a bootable ISO file, boot into that, and then that environment installs the operating system for you. That's the experience you have when you download a GUI-based installer for NixOS on UEFI systems.
+
+Installing an operating system on Raspberry Pi works a bit differently. Usually, to install an OS on the Pi, you flash a disk image onto a microSD, then boot to the microSD. There's no install process because the environment is ready to go once you boot the microSD.
+
+With NixOS, it's like a cross between both experiences. You've flashed a NixOS environment to the microSD, but you still kind of need to install NixOS.
+
+To begin, download the configuration file I've customized for the Raspberry Pi 4:
 
 ```bash
 curl \
   --show-error \
   --fail \
-  {{< baseurl >}}notes/nixos-pi4/configuration.nix \
+  {{<baseurl>}}notes/nixos-pi4/configuration.nix \
   | sudo tee /etc/nixos/configuration.nix
 ```
 
-You can make changes to `/etc/nixos/configuration.nix` at this point using `nano` or `vim`.
+You can make changes to `/etc/nixos/configuration.nix` at this point using `nano` or `vim`. You might want to change the `hostname`, `user`, or `password` values at the top, but you can also do that later.
 
 ```bash
-nano /etc/nixos/configuration.nix
+sudo nano /etc/nixos/configuration.nix
 ```
 
-TODO: Try with gnome settings instead
-
-When you're happy with your `configuration.nix`, run these commands:
+When you're happy with your `configuration.nix`, run these commands to apply the configuration to your system and reboot:
 
 ```bash
 sudo nixos-rebuild boot && \
@@ -173,7 +135,7 @@ sudo nixos-rebuild boot && \
 
 TODO: change
 
-If you used the default `configuration.nix` above, your username is `foo` and your password is `bar`:
+If you used the default `configuration.nix` above, your username is `tempuser` and your password is `somepass`:
 
 ## Make changes (optional)
 
