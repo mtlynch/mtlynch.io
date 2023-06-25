@@ -29,7 +29,7 @@ https://github.com/facebook/zstd/releases/latest
 
 
 ```powershell
-zstd.exe -d "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
+zstd -d "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
 ```
 
 Any tool for flashing a microSD. I like Balena Etcher.
@@ -69,27 +69,31 @@ curl \
   | unzstd --decompress - > "${IMG_FILE}"
 ```
 
-TODO: microSD instead of USB
-
-Insert your USB drive into one of the Pi 4's two blue USB 3.0 ports. The black USB 2.0 ports will work as well, but they're slower.
 
 To find the device path of your USB key, run `lsblk`, and you'll see output like the following:
 
 ```bash
 $ lsblk -o NAME,SIZE,VENDOR,MODEL,LABEL,UUID
-NAME         SIZE VENDOR   MODEL           LABEL  UUID
-sda         28.7G  USB     SanDisk_3.2Gen1
-└─sda1      28.7G                                 CC29-5059
-mmcblk0       29G
-├─mmcblk0p1  256M                          bootfs 9E81-4F92
-└─mmcblk0p2 28.8G                          rootfs cf2895ca-6dc2-4797-8040-f76ba1508f41
+NAME     SIZE VENDOR   MODEL                           LABEL   UUID
+sda    238.5G ATA      SanDisk X600 2.5 7MM SATA 256GB
+├─sda1   512M                                                  8BCC-19F0
+├─sda2 229.2G                                                  f6dfd4c3-d57b-49d7-aa50-c3b0ddc4e12a
+└─sda3   8.8G                                          swap    763a1454-8c6e-460a-af35-5cca07139fbb
+sdb        0B Generic- USB3.0 CRW -SD
+sdc     14.8G Generic- USB3.0 CRW -SD
+├─sdc1   100M                                          gokrazy F3F3-7B84
+├─sdc2   500M
+├─sdc3   500M
+└─sdc4  13.8G
 ```
 
-In my case, my SanDisk USB drive has the name `sda`, so the device path is `/dev/sda`.
+In my case, the microSD device is `sdc`.
+
+Warning: Be sure you picked the right device name, as picking the wrong one will cause data loss.
 
 ```bash
-# Change to the USB drive path you found above.
-OUTPUT_DEVICE='/dev/sda'
+# Change to the microSD drive path you found above.
+OUTPUT_DEVICE='/dev/sdc'
 
 sudo dd \
   if="${IMG_FILE}" \
