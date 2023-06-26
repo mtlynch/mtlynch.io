@@ -257,6 +257,10 @@ https://github.com/NixOS/nixos-hardware/issues/651
 
 ### Gotcha 6: Updating to a later NixOS version doesn't work
 
+Even though installing the 23.05 NixOS disk image doesn't work, I thought I'd try upgrading from 21.11, but it didn't work.
+
+Here's what I tried:
+
 ```bash
 TARGET_RELEASE="23.05"
 
@@ -295,4 +299,8 @@ sudo apt update && \
   sudo reboot
 ```
 
-## The future of NixOS on the Pi
+## The future of NixOS on the Raspberry Pi
+
+I suspect the reason that NixOS builds after November 2021 fail to install on a Raspberry Pi is due to this October 2021 post on the Nix forums:
+
+* [Planning for a better NixOS on ARM (and other non-x86_64 systems)](https://discourse.nixos.org/t/planning-for-a-better-nixos-on-arm-and-other-non-x86-64-systems/15346)
