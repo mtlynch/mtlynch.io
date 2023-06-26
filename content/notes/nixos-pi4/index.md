@@ -159,6 +159,8 @@ sudo nixos-rebuild switch
 
 ## Gotchas
 
+In creating this tutorial, I ran into a ton of paths that didn't work. I've collected them here for the sake of saving others time retrying the same steps.
+
 ### Gotcha 1: The standard NixOS aarch64 image doesn't work
 
 Designed for UEFI systems, and Raspberry Pi doens't support UEFI.
@@ -277,14 +279,14 @@ error: 1 dependencies of derivation '/nix/store/5hbkqaz7ldjf5565zakjqxx4xrk5dvn9
 
 ## Troubleshooting: Upgrade to the latest Pi bootloader
 
-Install the latest bootloader:
+The Pi 4 devices I tested worked out of the box, but if you're running into boot issues with NixOS, you can try installing the latest bootloader with these commands:
 
 ```bash
 sudo raspi-config nonint do_boot_rom E1 && \
   sudo reboot
 ```
 
-Install the latest Raspberry Pi EEPROM:
+You can also update to the latest Raspberry Pi EEPROM with these commands:
 
 ```bash
 sudo apt update && \
@@ -292,3 +294,5 @@ sudo apt update && \
   sudo rpi-eeprom-update -a && \
   sudo reboot
 ```
+
+## The future of NixOS on the Pi
