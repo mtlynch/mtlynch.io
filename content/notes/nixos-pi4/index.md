@@ -63,15 +63,21 @@ The boot is complete when you see a command prompt that says:
 [nixos@nixos~:]$
 ```
 
+If the boot failed, try [updating your Pi's bootloader](#troubleshooting-upgrade-to-the-latest-bootloader) to the latest available version.
+
 ## Enable SSH access (optional)
 
-I find it helpful
+When I'm working with a Raspberry Pi system, I find it helpful to set up SSH so I can access the Pi from my normal desktop rather than typing on a separate keyboard or using TinyPilot.
 
 ### SSH option 1: Add a password
+
+On the NixOS system, you can set a password on the `nixos` user account by running the following command:
 
 ```bash
 passwd
 ```
+
+Once you've set a password, you can SSH into your NixOS system like normal:
 
 ```bash
 ssh nixos@nixos.local
@@ -91,6 +97,8 @@ mkdir -p ~/.ssh && \
 
 If you see an error that says `certificate is not valid yet`, it means that your Pi hasn't yet sync'ed its time to time servers. Wait 60 seconds and try the command again.
 
+Once you've added your public SSH key to the NixOS system, you can SSH in like normal:
+
 ```bash
 ssh nixos@nixos.local
 ```
@@ -99,15 +107,9 @@ ssh nixos@nixos.local
 
 You're now in NixOS!
 
-Except you're now in a bit of an unusual state. NixOS has an unusual install process for the Raspberry Pi.
+There's not much you can do yet because it's a minimal NixOS environment with nothing installed.
 
-For most operating systems, you download a bootable ISO file, boot into that, and then that environment installs the operating system for you. That's the experience you have when you download a GUI-based installer for NixOS on UEFI systems.
-
-Installing an operating system on Raspberry Pi works a bit differently. Usually, to install an OS on the Pi, you flash a disk image onto a microSD, then boot to the microSD. There's no install process because the environment is ready to go once you boot the microSD.
-
-With NixOS, it's like a cross between both experiences. You've flashed a NixOS environment to the microSD, but you still kind of need to install NixOS.
-
-To begin, download the configuration file I've customized for the Raspberry Pi 4:
+To make this more interesting, you can install a desktop GUI and some applications. To begin, download the configuration file I've customized for the Raspberry Pi 4:
 
 ```bash
 curl \
@@ -131,6 +133,10 @@ sudo nixos-rebuild boot && \
   sudo poweroff --reboot
 ```
 
+When the reboot completes, you should see a screen that looks like this:
+
+{{<img src="tempuser-login.webp">}}
+
 ## Logging in
 
 TODO: change
@@ -151,31 +157,6 @@ Add Firefox browser to `configuration.nix`:
 sudo nixos-rebuild switch
 ```
 
-## Upgrade to latest NixOS release that's compatible with the Pi 4
-
-The 21.11 image doesn't install cleanly on the Pi 4, but you can install 21.05 and upgrade to 21.11 cleanly. Builds after 21.11 fail to install on the Pi 4.
-
-```bash
-TARGET_RELEASE="21.11"
-
-sudo nix-channel \
-  --add "https://nixos.org/channels/nixos-${TARGET_RELEASE}" nixos && \
-  sudo nix-channel --update && \
-  sudo nixos-rebuild --upgrade boot && \
-  sudo reboot
-```
-
-TODO: Do we have to update `configuration.nix` with `TARGET_RELEASE`? Or does Nix do that for us?
-
-Updating to 23.05 fails:
-
-```text
-Failed to apply '/nix/store/22l342jmwsaazvnz1zd5qq5m3b3ppsbd-rpi4-vc4-fkms-v3d-overlay-dtbo': FDT_ERR_NOTFOUND
-building '/nix/store/w052x98nzkbvmxcmb8wdgmfgqrf8vzv4-smb-dummy.conf.drv'...
-error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-overlays.drv' failed with exit code 1
-error: 1 dependencies of derivation '/nix/store/5hbkqaz7ldjf5565zakjqxx4xrk5dvn9-nixos-system-pinix-23.05.1156.ad157fe26e7.drv' failed to build
-```
-
 ## Gotchas
 
 ### Gotcha 1: The standard NixOS aarch64 image doesn't work
@@ -184,7 +165,7 @@ Designed for UEFI systems, and Raspberry Pi doens't support UEFI.
 
 ### Gotcha 4: The Pi's second HDMI port doesn't work
 
-I actually
+TODO: Figure out which HDMI port
 
 ### Gotcha 3: The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
 
@@ -272,7 +253,29 @@ Workaround was to use `sudo poweroff --reboot`.
 
 https://github.com/NixOS/nixos-hardware/issues/651
 
-## Troubleshooting: Upgrade to the latest bootloader
+### Gotcha 6: Updating to a later NixOS version doesn't work
+
+```bash
+TARGET_RELEASE="23.05"
+
+sudo nix-channel \
+  --add "https://nixos.org/channels/nixos-${TARGET_RELEASE}" nixos && \
+  sudo nix-channel --update && \
+  sudo nixos-rebuild --upgrade boot && \
+  sudo reboot
+```
+
+Updating to 23.05 fails:
+
+```text
+Failed to apply '/nix/store/22l342jmwsaazvnz1zd5qq5m3b3ppsbd-rpi4-vc4-fkms-v3d-overlay-dtbo': FDT_ERR_NOTFOUND
+building '/nix/store/w052x98nzkbvmxcmb8wdgmfgqrf8vzv4-smb-dummy.conf.drv'...
+error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-overlays.drv' failed with exit code 1
+error: 1 dependencies of derivation '/nix/store/5hbkqaz7ldjf5565zakjqxx4xrk5dvn9-nixos-system-pinix-23.05.1156.ad157fe26e7.drv' failed to build
+```
+
+
+## Troubleshooting: Upgrade to the latest Pi bootloader
 
 Install the latest bootloader:
 
