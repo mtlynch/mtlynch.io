@@ -243,31 +243,11 @@ If I power cycle the Pi at that point, it successfully boots into the new NixOS 
 
 ## Gotcha: The previous stable NixOS (22.11) can't boot on a Pi 4
 
-Tried with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it doesn't boot.
+Tried with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it doesn't boot all the way. It either drops the signal entirely or displays a green screen:
 
 {{<video src="nixos-22.11-boot-fail.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
 
-* `nixos-sd-image-22.05.4694.380be19fbd2-aarch64-linux.img` same thing
-* `nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img`:
-
-```text
-[nixos@nixos:~]$ sudo reboot
-sudo: you do not exist in the passwd database
-
-[nixos@nixos:~]$ reboot
-Failed to set wall message, ignoring: Transport endpoint is not connected
-Failed to reboot system via logind: Transport endpoint is not connected
-Failed to talk to init daemon.
-
-[nixos@nixos:~]$ shutdown -h now
-Failed to set wall message, ignoring: Transport endpoint is not connected
-Failed to power off system via logind: Transport endpoint is not connected
-Failed to talk to init daemon.
-```
-
-But if you power cycle it, the resulting system seems okay. Thought it was due to `rebuild switch`, but I got the same results with `rebuild boot`.
-
-* `nixos-sd-image-21.05.4737.022caabb5f2-aarch64-linux.img`: Same as 21.11
+I tried again with `nixos-sd-image-22.05.4694.380be19fbd2-aarch64-linux.img` and got the same result. NixOS 21.11 is the latest version I found that can run on the Raspberry Pi 4.
 
 ### Gotcha: `reboot` command doesn't work
 
