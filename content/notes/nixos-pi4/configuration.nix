@@ -23,7 +23,10 @@ in {
 
   networking.hostName = hostname;
 
-  environment.systemPackages = with pkgs; [ vim ];
+  environment.systemPackages = with pkgs; [
+    firefox
+    vim
+  ];
 
   services.openssh.enable = true;
 

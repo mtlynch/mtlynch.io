@@ -5,9 +5,9 @@ date: 2023-06-18T08:31:15-04:00
 
 I recently started experimenting with Nix and NixOS. Nix is a tool that allows you to define your software environment from code, and NixOS allows you to define your entire operating system configuration in code.
 
-The Raspberry Pi is a good system for experimenting with new technology, so I decided to install NixOS on my Raspberry Pi 4. Most of the tutorials for installing NixOS on a Raspberry Pi 4 are incomplete or out of date, so I decided to write one that works as of 2023.
+The Raspberry Pi is a good hardware for experimentation, so I decided to install NixOS on my Raspberry Pi 4. Most of the tutorials for installing NixOS on a Raspberry Pi 4 are incomplete or out of date, so I decided to write one that works as of 2023.
 
-I'm a newcomer to NixOS, so this guide is geared toward beginners.
+I'm a newcomer to NixOS, so this guide is for Nix beginners, but I assume you have basic familiarity with Raspberry Pi and Linux.
 
 ## Requirements
 
@@ -21,19 +21,19 @@ To follow this tutorial, you'll need:
 
 First, you'll need to flash the NixOS disk image onto a microSD card.
 
-To begin, download the latest working NixOS disk image. As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is almost two years old, unfortunately:
+As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is NixOS 21.11, which is almost two years old. I'll explain why that is [later in this post](#the-future-of-nixos-on-the-raspberry-pi), but for now, I'm going to show the simplest thing that gets you a working NixOS system on the Pi
 
-Download the disk image from the link below:
+Download the NixOS microSD image from the link below:
 
 * [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
 
 ## Decompress the NixOS microSD image
 
-NixOS microSD images are compressed with an uncommon compression format called ZSTD, an open-source format from Facebook. To decompress the image, you'll need to download the latest ZSTD release for your platform:
+NixOS microSD images are compressed with an uncommon compression format called ZSTD, an open-source format from Facebook. To decompress the image, download the latest ZSTD release for your platform:
 
 * [ZSTD releases](https://github.com/facebook/zstd/releases/latest)
 
-Once you have both the ZSTD tool and the image, decompress the image with the following command:
+Once you have both the ZSTD tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
 ```bash
 zstd --decompress "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
@@ -51,13 +51,23 @@ When you flash the microSD, choose the `.img` file rather than the `.img.zst` fi
 
 TODO
 
+## Connect a display and keyboard to your Pi
+
+Unlike most Pi OS images, there doesn't seem to be a way to a fully headless setup of the NixOS system, so you'll need to at least temporarily connect a keyboard and monitor to see what's happening.
+
+I'm using a [TinyPilot](https://tinypilotkvm.com) to manage my Pi, as it's a networking tool [I created for situations just like this](/tinypilot/). But you can do the set up with a regular monitor and keyboard.
+
+{{<notice type="warning">}}
+**Note**: NixOS only sends display output to the Pi's XX HDMI port. If you connect the HDMI cable to the other port, you won't see anything after the rainbow screen.
+{{</notice>}}
+
 ## Boot your NixOS system
 
 If everything went well, you should see a boot sequence like the following:
 
 {{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="A successful boot of the NixOS 21.11 microSD image on a Raspberry Pi 4.">}}
 
-The boot is complete when you see a command prompt that says:
+The boot is complete when you see the NixOS command prompt:
 
 ```bash
 [nixos@nixos~:]$
@@ -68,6 +78,8 @@ If the boot failed, try [updating your Pi's bootloader](#troubleshooting-upgrade
 ## Enable SSH access (optional)
 
 When I'm working with a Raspberry Pi system, I find it helpful to set up SSH so I can access the Pi from my normal desktop rather than typing on a separate keyboard or using TinyPilot.
+
+You have two options for enabling SSH access.
 
 ### SSH option 1: Add a password
 
@@ -85,17 +97,16 @@ ssh nixos@nixos.local
 
 ### SSH option 2: Add an SSH key
 
-Once your Pi 4 is up and running with NixOS, you'll only have local access.
+You can also add your SSH public key as an authorized key on the system. If you authenticate to Github with SSH keys, Github offers a convenient way to download your SSH key to your device:
 
 ```bash
-# Change to your Github username.
-GITHUB_USERNAME="mtlynch"
+GITHUB_USERNAME="your-github-username" # Replace this.
 
 mkdir -p ~/.ssh && \
   curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
 ```
 
-If you see an error that says `certificate is not valid yet`, it means that your Pi hasn't yet sync'ed its time to time servers. Wait 60 seconds and try the command again.
+If you see an error that says `certificate is not valid yet`, it means that your Pi is still synchronizing its clock. Wait 60 seconds and try the command again.
 
 Once you've added your public SSH key to the NixOS system, you can SSH in like normal:
 
@@ -109,7 +120,7 @@ You're now in NixOS!
 
 There's not much you can do yet because it's a minimal NixOS environment with nothing installed.
 
-To make this more interesting, you can install a desktop GUI and some applications. To begin, download the configuration file I've customized for the Raspberry Pi 4:
+To make this more interesting, you can install a desktop GUI and a few applications. To begin, download the configuration file I've customized for the Raspberry Pi 4:
 
 ```bash
 curl \
@@ -119,7 +130,7 @@ curl \
   | sudo tee /etc/nixos/configuration.nix
 ```
 
-You can make changes to `/etc/nixos/configuration.nix` at this point using `nano` or `vim`. You might want to change the `hostname`, `user`, or `password` values at the top, but you can also do that later.
+You can make changes to `/etc/nixos/configuration.nix` at this point using `nano` or `vim`. You might want to change the `hostname`, `user`, or `password` values at the top. The nice thing about Nix is that it's easy to change those values at any point in the future.
 
 ```bash
 sudo nano /etc/nixos/configuration.nix
@@ -137,6 +148,8 @@ When the reboot completes, you should see a screen that looks like this:
 
 {{<img src="tempuser-login.webp">}}
 
+Your Pi is now running a NixOS install with a Gnome desktop environment.
+
 ## Logging in
 
 TODO: change
@@ -145,17 +158,40 @@ If you used the default `configuration.nix` above, your username is `tempuser` a
 
 ## Make changes (optional)
 
-When you log in, you'll notice you don't have a web browser.
+In the `configuration.nix` I provided, I chose the Gnome desktop environment, but maybe you prefer a different one. There's another one called Plasma that you might like better.
 
-{{<img src="no-firefox.webp">}}
-
-In 2023, we have to have a web browser!
-
-Add Firefox browser to `configuration.nix`:
+To change your NixOS system to use the Plasma, open the your `configuration.nix` file in a text editor:
 
 ```bash
-sudo nixos-rebuild switch
+sudo nano /etc/nixos/configuration.nix
 ```
+
+Find these lines in the file:
+
+```nix
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+```
+
+And replace them with these lines:
+
+```nix
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
+```
+
+To apply the changes, tell NixOS to apply them on next boot, and then reboot your system.
+
+```bash
+sudo nixos-rebuild boot && sudo reboot
+```
+
+{{<gallery caption="Switching desktop managers from Gnome to Plasma is a two-line change in NixOS.">}}
+  {{<img src="plasma-desktop.webp" max-width="400px">}}
+  {{<img src="plasma-desktop2.webp" max-width="400px">}}
+{{</gallery>}}
+
+https://nixos.wiki/wiki/Category:Desktop_environment
 
 ## Gotchas
 
