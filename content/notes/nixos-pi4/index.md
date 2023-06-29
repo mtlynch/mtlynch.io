@@ -218,6 +218,8 @@ error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-over
 error: 1 dependencies of derivation '/nix/store/w77gh3p4wzbildmmr2dh1c254qlm3nv4-nixos-system-pinix-23.05.1123.aaef163eac7.drv' failed to build
 ```
 
+https://github.com/NixOS/nixos-hardware/issues/631
+
 I can work around it by deleting this line from configuration.nix:
 
 ```nix
