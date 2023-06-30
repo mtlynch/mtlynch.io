@@ -272,9 +272,13 @@ I tried this flow out, but I couldn't get it to work. Here were my steps:
 
 The Pi boots into Tow-Boot, and then it boots from Tow-Boot to the NixOS image on the microSD.
 
-I proceeded through the graphical installer, but it locked up at 44% progress. I tried again with NixOS 23.05 minimal, but it also hung partway through. I tried again with 22.11, and same thing.
+{{<video src="tow-boot-to-nixos-1.mp4" max-width="800px" caption="I used Tow-Boot to load the standard NixOS graphical installer.">}}
 
-I'm not sure if Tow-Boot 2021.10 + NixOS 23.05 is expected to work on the Raspberry Pi 4, but I couldn't figure out any way to make it happen.
+I proceeded through the graphical installer, but it locked up at 46% progress.
+
+{{<video src="installer-hang.mp4" max-width="800px" caption="When I boot NixOS under Tow-Boot on a Raspberry Pi 4, the installer locks up the system at 46% progress.">}}
+
+I tried again with NixOS 23.05 minimal, but it also hung partway through. I tried again with 22.11, and same thing. I'm not sure if Tow-Boot 2021.10 + NixOS 23.05 is expected to work on the Raspberry Pi 4, but I couldn't figure out any way to make it happen.
 
 ## Appendix: Gotchas
 
