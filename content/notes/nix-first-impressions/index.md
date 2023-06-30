@@ -1,6 +1,8 @@
 ---
 title: "My First Impressions of Nix"
 date: 2023-06-17T00:00:00-04:00
+discuss_urls:
+  hacker_news: https://news.ycombinator.com/item?id=36387874
 ---
 
 [Nix](https://nix.dev/) is a tool for configuring software environments according to source files. I've been hearing more and more about Nix on Hacker News and Twitter. The idea of it appeals to me, so I've been tinkering with it over the past few weeks.
@@ -42,6 +44,14 @@ Ansible has no concept of the "state" of the system it's configuring. If it take
 Ansible never says, "Oh, I just configured that machine, so there's nothing for me to do now." Ansible has to perform every configuration again because anything could have happened since the last time it ran.
 
 Nix, on the other hand, does have a concept of state. If you make a one-line change to a 200-line Nix configuration, it doesn't have to re-do all the work from the other 199 lines. It can evaluate the state of the system against the configuration file and recognize that it just has to apply the one-line change. And that change usually happens in a few seconds.
+
+**Edit (2023-06-19)**: A reader with more experience [clarified that Nix doesn't have state in the way I assumed](https://news.ycombinator.com/item?id=36388114):
+
+> Nix is not fast because it is stateful. It is fast because it is functional and reproducible, which allows for caching without compromising correctness.
+
+I had thought that Nix kept track of which tasks brought me to which system state. For example, imagine that performing tasks X and Y brings me to state A, and performing tasks X, Y, and Z brings me to state B. I thought that a Nix system in state A would know to only perform task Z to reach state B.
+
+My new understanding is that if you ask a Nix system in state A to go to state B, Nix will perform tasks X, Y and Z, but Nix cached the results of tasks X and Y, so they happen near-instantly.
 
 ### Nix optimizes for local configuration
 
@@ -86,7 +96,7 @@ Since a VM didn't work, I figured bare metal was the next logical choice. I had 
 I found two different official-looking tutorials for installing NixOS on the Raspberry Pi 4:
 
 - [NixOS Wiki: NixOS on ARM/Raspberry Pi 4](https://nixos.wiki/wiki/NixOS_on_ARM/Raspberry_Pi_4)
-- [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi)
+- [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi)
 
 The problem with both of these tutorials was they assumed that you're already running a Nix environment. I'm trying to prepare the microSD from my main computer, which is a Win10 system, so I didn't have Nix already.
 
@@ -118,7 +128,7 @@ In the end, I had a full, working NixOS install!
 
 Now that I had a working NixOS machine, I wanted to give the Raspberry Pi another shot. The blocker before was not having a Nix environment from which to prepare the microSD image, but now I had one.
 
-I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
+I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
 
 {{<video src="pi-boot-failure2.mp4" max-width="800px" caption="When I flashed the NixOS Pi aarch64 microSD image from a NixOS system and booted my Pi from it, it hung on a multicolored screen.">}}
 
@@ -250,6 +260,10 @@ error: undefined variable 'gnome-system-monitor'
 
 I tried other possible names like `gnome-shell-system-monitor`, but I couldn't figure out how to install it.
 
+**Edit (2023-06-19)**: Thanks to readers who pointed out that the correct package name is `gnome.gnome-system-monitor`. The piece I was missing was that I can search for packages at [search.nixos.org](https://search.nixos.org/packages?channel=23.05&from=0&size=50&sort=relevance&type=packages&query=gnome+system+monitor).
+
+{{<img src="TinyPilot-2023-06-20T01 40 54.869Z.jpg">}}
+
 ## Things I'd like to understand next
 
 I'm happy with my first few days with Nix and NixOS. It's about what I expected from what I've heard. It seems like it can be incredibly powerful when used well, but it requires a lot of upfront investment and scavenging for information.
@@ -276,7 +290,7 @@ I assume there is a way of specifying package versions more precisely, but I hav
 
 ### Who am I trusting?
 
-I know that for me to be able to specify something like this:
+When I specified packages, it was a plain list of package names:
 
 ```text
   environment.systemPackages = with pkgs; [
@@ -285,4 +299,4 @@ I know that for me to be able to specify something like this:
   ];
 ```
 
-For me to specify packages by name, it means that Nix is pulling packages from a default repository. Are there multiple repositories? How do I pick which repository to use?
+For me to be able to specify packages like the above, Nix must be pulling packages from a default repository. Are there multiple repositories? How do I pick which repository to use?
