@@ -261,18 +261,20 @@ Instead, NixOS' plan is to build generic images that can boot from any UEFI envi
 
 The problem is that Raspberry Pi does not support UEFI. To bridge the gap, NixOS is relying on third-party bootloaders like [Tow-Boot](https://tow-boot.org/), which create UEFI environments on systems that don't have UEFI.
 
-I experimented with Tow Boot, and I was able to use Tow-Boot to boot the standard NixOS 23.05 UEFI Gnome image, but the install locked up at 44% progress. I tried again with NixOS 23.05 minimal, but it also hung partway through. I tried again with 22.11, and same thing.
-
-So, I couldn't get it to work, but here's my progress:
+I tried this flow out, but I couldn't get it to work. Here were my steps:
 
 1. Download the latest [Tow-Boot release for Raspberry Pi](https://github.com/Tow-Boot/Tow-Boot/releases/download/release-2021.10-005/raspberryPi-aarch64-2021.10-005.tar.xz) (2021.10-005)
-1. Flash the image onto a USB stick.
-1. Download [NixOS 23.05 (64-bit ARM)](https://nixos.org/download.html)
+1. Flash the Tow-Boot image onto a USB stick.
+1. Download [NixOS 23.05 Gnome (64-bit ARM)](https://nixos.org/download.html).
 1. Flash the NixOS image onto a microSD.
 1. Insert both the USB stick and the microSD into a Raspberry Pi 4.
 1. Power on the Raspberry Pi 4.
 
-The Pi boots into Tow-Boot, and then it boots from Tow-Boot to the NixOS image on the microSD. But then the install itself locks up partway through.
+The Pi boots into Tow-Boot, and then it boots from Tow-Boot to the NixOS image on the microSD.
+
+I proceeded through the graphical installer, but it locked up at 44% progress. I tried again with NixOS 23.05 minimal, but it also hung partway through. I tried again with 22.11, and same thing.
+
+I'm not sure if Tow-Boot 2021.10 + NixOS 23.05 is expected to work on the Raspberry Pi 4, but I couldn't figure out any way to make it happen.
 
 ## Appendix: Gotchas
 
@@ -288,7 +290,7 @@ When I checked the NixOS download page, I saw that they offered 64-bit ARM image
 
 {{<img src="pi-noboot.png" alt="Pi boot screen that says 'Progress: Trying boot mode USB-MSD'" max-width="700px" caption="The Pi 4 fails to boot the standard NixOS ARM image">}}
 
-I learned later that the pre-built 64-bit ARM images require the system to have UEFI, which the Raspberry Pi 4 does not support.
+I learned later that the pre-built 64-bit ARM images require the system to have UEFI, which the Raspberry Pi 4 does not support. To boot one of these images, you need to first boot to [Tow-Boot](#the-future-of-nixos-on-the-raspberry-pi).
 
 ### Gotcha 4: The Pi's second HDMI port doesn't work
 
