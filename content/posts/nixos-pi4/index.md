@@ -1,0 +1,410 @@
+---
+title: "Installing NixOS on Raspberry Pi 4"
+date: 2023-06-18T08:31:15-04:00
+tags:
+  - nix
+  - raspberry pi
+description: TODO
+#images:
+#  - TODO
+---
+
+[Nix](https://nixos.org/) is a tool that allows you to define your software environment from code. I recently started experimenting with Nix after seeing a lot of developers I respect [speak glowingly of it](/notes/nix-first-impressions/#the-appeal-of-nix).
+
+The Nix project includes NixOS, which allows you to define your entire OS configuration from a set of human-editable configuration files. That means that instead of installing a program by running an install script or using a package manager like `apt`, I'd edit my Nix configuration file to say what new program I want and then Nix configures the system for me.
+
+The downside of Nix is that it has a steep learning curve. I'm not yet ready to switch to NixOS as my daily driver OS, but I'd like to experiment with it to learn more.
+
+The first bare metal system I tried to install NixOS on was a Raspberry Pi 4, but the installation failed. Every tutorial I found for installing NixOS on a Raspberry Pi 4 was either incomplete or out of date, so I decided to document what worked for me.
+
+I'm a newcomer to NixOS, so this guide is for Nix beginners, but I assume you have basic familiarity with Raspberry Pi and Linux.
+
+## Requirements
+
+To follow this tutorial, you'll need:
+
+* Raspberry Pi 4
+* A microSD card with at least 8 GB of storage
+* A separate computer to flash the microSD card.
+
+## Download the NixOS microSD image
+
+First, you'll need to flash the NixOS disk image onto a microSD card.
+
+As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is NixOS 21.11, which is almost two years old. Later releases don't work on the Raspberry Pi, and I'll explain why [later in this post](#the-future-of-nixos-on-the-raspberry-pi). For now, I'm going to run NixOS on the Pi the only way I know how.
+
+Download the NixOS microSD image from the link below:
+
+* [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
+
+## Decompress the NixOS microSD image
+
+NixOS microSD images are compressed with an uncommon compression format called [Zstandard](https://facebook.github.io/zstd/), an open-source format from Facebook. To decompress the image, download the latest Zstandard release for your platform:
+
+* [Zstandard releases](https://github.com/facebook/zstd/releases/latest)
+
+Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
+
+```bash
+zstd --decompress "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
+```
+
+Decompressing the Zstandard file should produce a file called `nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img`.
+
+## Flash the NixOS microSD image
+
+After you've decompressed the image, flash it to a microSD using your favorite microSD flashing utility.
+
+If you don't know which microSD flashing tool to use, I recommend [balenaEtcher ](https://etcher.balena.io/). It's user-friendly and works on every major OS.
+
+{{<img src="balena-etcher-nixos.webp">}}
+
+When you flash the microSD, choose the `.img` file rather than the `.img.zst` file, as most flashing tools won't understand the ZSTD format.
+
+## Insert the microSD card into your Pi
+
+TODO
+
+## Connect a display and keyboard to your Pi
+
+Unlike most Pi OS images, there doesn't seem to be a way to a fully headless setup of the NixOS system, so you'll need to at least temporarily connect a keyboard and monitor to see what's happening.
+
+I'm controlling my Pi with [TinyPilot](https://tinypilotkvm.com), a device [I created for situations just like this](/tinypilot/). You can do the same thing by plugging a keyboard and HDMI display into your Raspberry Pi.
+
+{{<notice type="warning">}}
+**Note**: NixOS only sends display output to the Pi's XX HDMI port. If you connect the HDMI cable to the other port, you won't see anything after the rainbow screen.
+{{</notice>}}
+
+## Boot your NixOS system
+
+If everything went well, you should see a boot sequence like the following:
+
+{{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="A successful boot of the NixOS 21.11 microSD image on a Raspberry Pi 4.">}}
+
+The boot is complete when you see the NixOS command prompt:
+
+```bash
+[nixos@nixos~:]$
+```
+
+If the boot failed, try [updating your Pi's bootloader](#troubleshooting-upgrade-to-the-latest-pi-bootloader) to the latest available version.
+
+## Enable SSH access (optional)
+
+When I'm working with a Raspberry Pi system, I find it helpful to set up SSH so I can access the Pi from my normal desktop rather than typing on a separate keyboard or using TinyPilot.
+
+There are two options for enabling SSH access.
+
+### Option 1: Add a password
+
+On the NixOS system, you can set a password on the `nixos` user account by running the following command:
+
+```bash
+passwd
+```
+
+Once you've set a password, you can SSH into your NixOS system normally:
+
+```bash
+ssh nixos@nixos.local
+```
+
+### Option 2: Add an SSH key
+
+You can also add your SSH public key as an authorized key on the system. If you authenticate to Github with SSH keys, Github offers a convenient way to download your SSH key to your device:
+
+```bash
+GITHUB_USERNAME="your-github-username" # Replace this.
+
+mkdir -p ~/.ssh && \
+  curl "https://github.com/${GITHUB_USERNAME}.keys" > ~/.ssh/authorized_keys
+```
+
+If you see an error that says `certificate is not valid yet`, it means that your Pi is still synchronizing its time. Wait 60 seconds, and try the command again.
+
+Once you've added your public SSH key to the NixOS system, you can SSH in like normal:
+
+```bash
+ssh nixos@nixos.local
+```
+
+## Write the NixOS configuration file
+
+You're now in NixOS!
+
+There's not much you can do yet because it's a minimal NixOS environment with nothing installed.
+
+To make this more interesting, you can install a desktop GUI and a few applications. To begin, download [the configuration file]({{<baseurl>}}nixos-pi4/configuration.nix) I've customized for the Raspberry Pi 4:
+
+```bash
+curl \
+  --show-error \
+  --fail \
+  {{<baseurl>}}nixos-pi4/configuration.nix \
+  | sudo tee /etc/nixos/configuration.nix
+```
+
+You can make changes to `/etc/nixos/configuration.nix` at this point using `nano` or `vim`. You might want to change the `hostname`, `user`, or `password` values at the top.
+
+```bash
+sudo nano /etc/nixos/configuration.nix
+```
+
+Don't worry too much about customizing the configuration file perfectly to your preferences right now. With NixOS, you can change your mind about any option, and applying it is as easy as editing the configuration file again.
+
+When you're happy with your `configuration.nix`, run these commands to apply the configuration to your system and reboot:
+
+```bash
+sudo nixos-rebuild boot && \
+  echo "install complete, rebooting..." && \
+  sudo poweroff --reboot
+```
+
+When the reboot completes, you should see a screen that looks like this:
+
+{{<img src="tempuser-login.webp">}}
+
+Your Pi is now running NixOS with a Gnome desktop environment!
+
+If you used the default `configuration.nix` above, your username is `tempuser` and your password is `somepass`.
+
+## Experimenting with NixOS
+
+At this point, your NixOS system is up and running. You're free to explore NixOS as you wish, but I've included a couple of simple experiments you can try on your new system that require no additional Nix knowledge.
+
+### Experiment 1: Change the desktop enviroment
+
+In the `configuration.nix` I provided, I chose the Gnome desktop environment, but maybe you prefer [a different one](https://nixos.wiki/wiki/Category:Desktop_environment). There's another desktop manager called [Plasma](https://nixos.wiki/wiki/KDE) that's a bit more like Windows.
+
+To change your NixOS system to use the Plasma instead of Gnome, open the your `configuration.nix` file in a text editor:
+
+```bash
+sudo nano /etc/nixos/configuration.nix
+```
+
+Find these lines in the file:
+
+```nix
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+```
+
+And replace them with these lines:
+
+```nix
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
+```
+
+To apply the changes, run these commands:
+
+```bash
+sudo nixos-rebuild boot && sudo reboot
+```
+
+{{<gallery caption="Switching desktop managers from Gnome to Plasma is a two-line change in NixOS.">}}
+  {{<img src="plasma-desktop.webp" max-width="400px">}}
+  {{<img src="plasma-desktop2.webp" max-width="400px">}}
+{{</gallery>}}
+
+### Experiment 2: Create an ad-hoc environment
+
+I'm still very new to Nix, so I don't know how to do especially clever things with it yet. One cool Nix utility I can use with limited knowledge is `nix-shell`.
+
+I sometimes run into projects I wrote a few years ago that depend on an older version of Node.js, but my system now has the later version installed. I've used tools like [`nvm`](https://nvm.sh) to install Node versions side-by-side, but I always end up spending 20 minutes just remembering how to use `nvm` and get it configured right.
+
+Instead, now I use `nix-shell` to create an ad-hoc environment with any tools I need. Here's how you can create an environment with Node.js 18.x:
+
+```bash
+$ nix-shell --packages nodejs-18_x
+these paths will be fetched (11.25 MiB download, 52.36 MiB unpacked):
+  /nix/store/87kgx3ym4kgmqwaijckqvbfrkzm8ax75-nodejs-18.2.0
+copying path '/nix/store/87kgx3ym4kgmqwaijckqvbfrkzm8ax75-nodejs-18.2.0' from 'https://cache.nixos.org'...
+
+[nix-shell:~]$ node --version
+v18.2.0
+
+[nix-shell:~]$ npm --version
+8.9.0
+```
+
+When you're done with the environment, just hit `Ctrl+D` or type `exit`.
+
+Here's how you can do the same thing to create a Node.js 16.x environment:
+
+```bash
+$ nix-shell --packages nodejs-16_x
+these paths will be fetched (10.77 MiB download, 50.24 MiB unpacked):
+  /nix/store/1ba3sqw3rkadg2ksywqc85lq2hvx9fvk-nodejs-16.15.0
+copying path '/nix/store/1ba3sqw3rkadg2ksywqc85lq2hvx9fvk-nodejs-16.15.0' from 'https://cache.nixos.org'...
+
+[nix-shell:~]$ node --version
+v16.15.0
+
+[nix-shell:~]$ npm --version
+8.5.5
+```
+
+## The future of NixOS on the Raspberry Pi
+
+I suspect the reason that NixOS builds after November 2021 fail to install on a Raspberry Pi is due to this October 2021 post on the Nix forums:
+
+* [Planning for a better NixOS on ARM (and other non-x86_64 systems)](https://discourse.nixos.org/t/planning-for-a-better-nixos-on-arm-and-other-non-x86-64-systems/15346)
+
+A lot of the explanation is beyond my knowledge of OS development and Nix, but the main takeaways seem to be that the reason NixOS 21.11 worked was because they were baking Pi-specific logic into the NixOS image. That work wasn't sustainable, so they want to ditch that strategy and instead make NixOS work on any system that supports UEFI.
+
+The NixOS author points to [Tow-Boot](https://tow-boot.org/) as a working solution for getting UEFI on Raspberry Pi, but
+They're delegating
+
+```bash
+TARGET_DEVICE="/dev/sdc"
+
+wget https://github.com/Tow-Boot/Tow-Boot/releases/download/release-2021.10-005/raspberryPi-aarch64-2021.10-005.tar.xz
+tar xvf raspberryPi-aarch64-2021.10-005.tar.xz
+sudo dd if=raspberryPi-aarch64-2021.10-005/shared.disk-image.img of="${TARGET_DEVICE}" bs=1M oflag=direct,sync status=progress
+```
+
+```bash
+sudo dd if=nixos-gnome-23.05.1375.9790f3242da-aarch64-linux.iso of="${TARGET_DEVICE}" bs=1M oflag=direct,sync status=progress
+```
+
+## Appendix: Gotchas
+
+In creating this tutorial, I ran into a ton of paths that didn't work. I've collected them here for the sake of saving others time retrying the same steps.
+
+### Gotcha 1: The standard NixOS aarch64 image doesn't work
+
+When I checked the NixOS download page, I saw that they offered 64-bit ARM images.
+
+{{<img src="nixos-arm64.webp" alt="Screenshot of 64-bit ARM download links on NixOS download page" max-width="700px" has-border="true" caption="NixOS offers bootable images for 64-bit ARM systems">}}
+
+"Wonderful!" I thought to myself, as the Pi 4 has a 64-bit ARM CPU. But then the Pi [couldn't boot the image at all](/notes/nix-first-impressions/#failed-attempt-2-nixos-on-the-raspberry-pi-4).
+
+{{<img src="pi-noboot.png" alt="Pi boot screen that says 'Progress: Trying boot mode USB-MSD'" max-width="700px" caption="The Pi 4 fails to boot the standard NixOS ARM image">}}
+
+I learned later that the pre-built 64-bit ARM images require the system to have UEFI, which the Raspberry Pi 4 does not support.
+
+### Gotcha 4: The Pi's second HDMI port doesn't work
+
+TODO: Figure out which HDMI port
+
+### Gotcha 3: The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
+
+Tried with `nixos-sd-image-23.05.1123.aaef163eac7-aarch64-linux.img`.
+
+Gets an error:
+
+```text
+Applying overlay rpi4-vc4-fkms-v3d-overlay to bcm2711-rpi-cm4-io.dtb...
+Failed to apply '/nix/store/22l342jmwsaazvnz1zd5qq5m3b3ppsbd-rpi4-vc4-fkms-v3d-overlay-dtbo': FDT_ERR_NOTFOUND
+error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-overlays.drv' failed with exit code 1
+error: 1 dependencies of derivation '/nix/store/w77gh3p4wzbildmmr2dh1c254qlm3nv4-nixos-system-pinix-23.05.1123.aaef163eac7.drv' failed to build
+```
+
+https://github.com/NixOS/nixos-hardware/issues/631
+
+I can work around it by deleting this line from configuration.nix:
+
+```nix
+hardware.raspberry-pi."4".fkms-3d.enable = true;
+```
+
+The install then fails later on:
+
+```text
+installing the boot loader...
+removing user ‘nixos’
+setting up /etc...
+removing obsolete symlink ‘/etc/hostid’...
+removing obsolete symlink ‘/etc/systemd/pstore.conf’...
+removing obsolete symlink ‘/etc/zfs/zpool.d’...
+...
+umount: ???: umount failed: No such file or directory.
+```
+
+If I power cycle the Pi at that point, it successfully boots into the new NixOS install, but there's no XFCE desktop GUI, just a terminal:
+
+{{<video src="nixos-23.05-no-gui.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+
+### Gotcha: NixOS 22.05 and 22.11 can't boot on a Pi 4
+
+After failing to configure NixOS with version 23.05, I tried again with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it failed to boot. I tried a few times, and it always either drops the signal entirely or displays a green screen:
+
+{{<video src="nixos-22.11-boot-fail.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+
+I tried again with `nixos-sd-image-22.05.4694.380be19fbd2-aarch64-linux.img` and got the same result.
+
+### Gotcha: `reboot` command doesn't work
+
+Even on NixOS 21.11, the latest version I found that works reliably on the Pi 4, I ran into a strange issue after running `sudo nixos-rebuild boot`. The `reboot` and `shutdown` commands fail:
+
+```text
+[nixos@nixos:~]$ reboot
+Failed to set wall message, ignoring: Transport endpoint is not connected
+Failed to reboot system via logind: Transport endpoint is not connected
+Failed to talk to init daemon.
+
+[nixos@nixos:~]$ shutdown -h now
+Failed to set wall message, ignoring: Transport endpoint is not connected
+Failed to power off system via logind: Transport endpoint is not connected
+Failed to talk to init daemon.
+```
+
+I was able to work around this by running `sudo poweroff --reboot`.
+
+### Gotcha 5: The latest Pi hardware version doesn't work
+
+You may have noticed that [my `configuration.nix` file]({{<baseurl>}}nixos-pi4/configuration.nix) depends on the [NixOS/nixos-hardware](https://github.com/NixOS/nixos-hardware) repository, but not the latest version:
+
+```nix
+nixosHardwareVersion = "ad1114ee372a52aa0b4934f72835bd14a212a642";
+...
+imports = ["${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/${nixosHardwareVersion}.tar.gz" }/raspberry-pi/4"];
+```
+
+In my tests, the current vresion of the `nixos-hadrware` repo no longer build successfully on the Raspberry Pi 4. I [filed a bug](https://github.com/NixOS/nixos-hardware/issues/651) to report the issue, but there hasn't been any response on it yet.
+
+### Gotcha 6: Updating to a later NixOS version doesn't work
+
+Even though [installing from the 23.05 NixOS disk image failed](#gotcha-3-the-latest-nixos-2305-microsd-doesnt-work-on-raspberry-pi-4), I thought I'd work around the issue by doing an in-place upgrade of NixOS from 21.11 to 23.05. Unfortunately, that failed, too.
+
+Here's what I tried:
+
+```bash
+TARGET_RELEASE="23.05"
+
+sudo nix-channel \
+  --add "https://nixos.org/channels/nixos-${TARGET_RELEASE}" nixos && \
+  sudo nix-channel --update && \
+  sudo nixos-rebuild --upgrade boot && \
+  sudo reboot
+```
+
+That process ultimately fails with the [same error](https://github.com/NixOS/nixos-hardware/issues/631) as installing from the 23.05 disk image:
+
+```text
+Failed to apply '/nix/store/22l342jmwsaazvnz1zd5qq5m3b3ppsbd-rpi4-vc4-fkms-v3d-overlay-dtbo': FDT_ERR_NOTFOUND
+building '/nix/store/w052x98nzkbvmxcmb8wdgmfgqrf8vzv4-smb-dummy.conf.drv'...
+error: builder for '/nix/store/cgv9mmkhwy6gc4y48pfmxnjam46404kr-device-tree-overlays.drv' failed with exit code 1
+error: 1 dependencies of derivation '/nix/store/5hbkqaz7ldjf5565zakjqxx4xrk5dvn9-nixos-system-pinix-23.05.1156.ad157fe26e7.drv' failed to build
+```
+
+## Troubleshooting: Upgrade to the latest Pi bootloader
+
+If you're running into boot issues with NixOS, you can try installing the latest bootloader with these commands:
+
+```bash
+sudo raspi-config nonint do_boot_rom E1 && \
+  sudo reboot
+```
+
+You can also update to the latest [Raspberry Pi EEPROM](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#raspberry-pi-4-boot-eeprom) with these commands:
+
+```bash
+sudo apt update && \
+  sudo apt install --yes rpi-eeprom && \
+  sudo rpi-eeprom-update -a && \
+  sudo reboot
+```
+
+The Pi 4 devices I tested booted the NixOS 21.11 disk image out of the box, so the above steps weren't necessary for me.
