@@ -96,7 +96,7 @@ Since a VM didn't work, I figured bare metal was the next logical choice. I had 
 I found two different official-looking tutorials for installing NixOS on the Raspberry Pi 4:
 
 - [NixOS Wiki: NixOS on ARM/Raspberry Pi 4](https://nixos.wiki/wiki/NixOS_on_ARM/Raspberry_Pi_4)
-- [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi)
+- [nix.dev: Installing NixOS on a Raspberry Pi](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi)
 
 The problem with both of these tutorials was they assumed that you're already running a Nix environment. I'm trying to prepare the microSD from my main computer, which is a Win10 system, so I didn't have Nix already.
 
@@ -126,7 +126,7 @@ In the end, I had a full, working NixOS install!
 
 Now that I had a working NixOS machine, I wanted to give the Raspberry Pi another shot. The blocker before was not having a Nix environment from which to prepare the microSD image, but now I had one.
 
-I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-deploy/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
+I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi), which brought me farther than my first attempt, but I still couldn't boot. The Pi would just reach a stage of showing a multicolored screen and then hang:
 
 {{<video src="pi-boot-failure2.mp4" max-width="800px" caption="When I flashed the NixOS Pi aarch64 microSD image from a NixOS system and booted my Pi from it, it hung on a multicolored screen.">}}
 
