@@ -85,6 +85,32 @@ Star-Tech shelf extends over into next level.
 TP-Link won't let you change the admin user from "admin"
 Pretty confusing interface.
 
+Took forever to get VLANs right.
+
+https://mccollester.com/2022/05/25/the-difference-between-pvid-vs-untagged-vlans/
+https://www.megajason.com/2018/04/30/what-is-pvid/
+
+Router needs to be a member of every VLAN.
+
+VLAN must contain:
+
+* Tagged ports: Router, any VLAN-aware devices
+* Untagged ports: Non-VLAN-aware devices
+
+Port config: Any port that contains a non-VLAN-aware device
+
+Port that contains tagged and untagged traffic from a VLAN aware device (e.g., wireless AP, another managed switch)
+
+Untagged ports
+Tagged ports
+PVID
+
+Used Wireshark
+
+On NixOS and Debian, had to reboot sometimes for changes to take effect.
+
+TP-Link requires "Save" to save settings or blows everything away on next reboot.
+
 ### Raspberry Pi Rack
 
 Uctronics - draw the fucking owl instructions
