@@ -98,11 +98,11 @@ I loaded up Balena Etcher, my preferred tool for flashing microSDs. The first re
 
 I continued on anyway! But when I tried booting from the microSD, the Pi agreed that this was not a bootable image, so it just got stuck.
 
-{{<img src="pi-noboot.png">}}
+{{<img src="pi-noboot.png" alt="Pi boot screen that says 'Progress: Trying boot mode USB-MSD'">}}
 
 I tried flashing the same image using the official Raspberry Pi Imager utility, but I got the same results.
 
-**Update**: I finally [got this working](/notes/nixos-pi4).
+**Update**: I finally [got this working](/nixos-pi4).
 
 ## Success: NixOS on a Dell Mini computer
 
@@ -122,7 +122,7 @@ I followed the [nix.dev tutorial](https://nix.dev/tutorials/nixos/build-and-depl
 
 {{<video src="pi-boot-failure2.mp4" max-width="800px" caption="When I flashed the NixOS Pi aarch64 microSD image from a NixOS system and booted my Pi from it, it hung on a multicolored screen.">}}
 
-**Update**: I finally [got this working](/notes/nixos-pi4).
+**Update**: I finally [got this working](/nixos-pi4).
 
 ## Task 1: Getting SSH access
 
