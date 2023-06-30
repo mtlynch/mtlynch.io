@@ -401,13 +401,13 @@ But Syncthing's CLI seemed pretty complex, so I decided the web GUI is good enou
 
 **Update (2023-06-29)**: We have a solution!
 
-Thanks to readers who let me know about using the `fly-local-6pn` address:
+Thanks to readers who let me know about using the `fly-local-6pn` address. I can update my `fly.toml` with this environment variable:
 
 ```toml
 STGUIADDRESS = "fly-local-6pn:8384"
 ```
 
-From there, you can use `flyctl proxy 8384:8384`, and connect like normal. I've updated the tutorial to take advantage of this improvement.
+From there, I can use `flyctl proxy 8384:8384`, and connect like normal. I've updated the tutorial below to take advantage of this improvement.
 
 ## How to deploy Syncthing to Fly.io
 
