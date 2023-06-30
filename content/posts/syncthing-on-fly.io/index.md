@@ -399,6 +399,16 @@ COMMANDS:
 
 But Syncthing's CLI seemed pretty complex, so I decided the web GUI is good enough for me.
 
+**Update (2023-06-29)**: We have a solution!
+
+Thanks to readers who let me know about using the `fly-local-6pn` address:
+
+```toml
+STGUIADDRESS = "fly-local-6pn:8384"
+```
+
+From there, you can use `flyctl proxy 8384:8384`, and connect like normal. I've updated the tutorial to take advantage of this improvement.
+
 ## How to deploy Syncthing to Fly.io
 
 Now that I've poked around Syncthing and Fly.io through lots of trial and error, I'm ready to present a clean way to deploy Syncthing on Fly.io. It should only take about five minutes from start to finish.
@@ -446,8 +456,9 @@ primary_region = "${REGION}"
   image = "syncthing/syncthing:${SYNCTHING_VERSION}"
 
 [env]
-  # Only listen for connections to admin GUI through localhost.
-  STGUIADDRESS = ""
+  # Only listen for connections to admin GUI through fly.io's private Wireguard
+  # network.
+  STGUIADDRESS = "fly-local-6pn:8384"
 
 [mounts]
   source="${VOLUME_NAME}"
@@ -538,23 +549,10 @@ Finally, share one of your folders with your new Syncthing server. Go to Edit Fo
 
 ### Access web UI
 
-To access your Fly.io server's Syncthing admin dashboard, you need to take a roundabout path. First, open an SSH console from your local machine:
+To access your Fly.io server's Syncthing admin dashboard, open a proxy to connect your local port 8384 to your Fly.io server's port 8384:
 
 ```bash
-fly ssh console
-```
-
-On the Syncthing server, use `socat` to proxy IPv4 to IPv6:
-
-```bash
-apk add socat && \
-  socat TCP6-LISTEN:8386,fork,su=nobody TCP4:localhost:8384
-```
-
-Open a new terminal on your local machine, and open a proxy to connect your local port 8384 to your Fly.io server's port 8386:
-
-```bash
-fly proxy 8384:8386
+fly proxy 8384:8384
 ```
 
 With the proxy in place, you should be able to access your cloud server's Syncthing dashboard from your local device via a `localhost` URL:
@@ -567,4 +565,4 @@ You should see an admin dashboard like the following:
 
 Congratulations! You've deployed your Syncthing server to the cloud, and you now have full access to it. From here, you can configure it just like you would any other device running Syncthing.
 
-When you're done configuring Syncthing settings on your Fly.io server, terminate the `fly proxy` command with `Ctrl+C`. To be especially tidy, you can run `fly deploy` to redeploy your server without the extra `socat` package you added, but `socat` shouldn't cause any issues.
+When you're done configuring Syncthing settings on your Fly.io server, terminate the `fly proxy` command with `Ctrl+C`.
