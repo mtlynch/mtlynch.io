@@ -70,6 +70,8 @@ When you add a port to a VLAN as an **untagged port**, it tells the switch to fo
 
 On TP-Link switches and some others, each port also has a **PVID**, or port VLAN identifier. When packets enter the switch through the given port, the switch adds the specified PVID to the packet as a VLAN tag.
 
+Other systems use the terms "trunk port," which TP-Link no longer uses. My understanding is that a "trunk port" is equivalent to a tagged port. Except it's not because you have to declare which VLANs it's part of?
+
 ### Examples
 
 * I connect a desktop PC to port 1 on on a managed switch, and port 1 is in VLAN 10 as an untagged port and specifies a PVID of 10.
