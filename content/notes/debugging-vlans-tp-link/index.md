@@ -64,17 +64,18 @@ For devices in category (1)
 
 ## Tagged ports, untagged ports, and PVIDs
 
-When you add a port to a VLAN as a **tagged port**, it tells the switch to allow packets into that port if the packet's VLAN tag matches the VLAN.
+When you add a port to a VLAN as a **tagged port**, it tells the switch to allow packets into that port if the packet's VLAN tag matches the VLAN. It leaves the VLAN tag on the packets because the devices connected understand the tags.
 
-When you add a port to a VLAN as an **untagged port**, it tells the switch to **add** a
+When you add a port to a VLAN as an **untagged port**, it tells the switch to forward those packets to the port but strip the VLAN tag. You use untagged ports for non-VLAN aware devices, so the switch strips the VLAN tags because the device attached to the port doesn't know anything about VLANs. Each port can only have a single untagged VLAN port.
 
-**PVID** means port VLAN identifier. The PVID is the VLAN tag that the switch adds to packets coming into the switch from that port..
+On TP-Link switches and some others, each port also has a **PVID**, or port VLAN identifier. When packets enter the switch through the given port, the switch adds the specified PVID to the packet as a VLAN tag.
 
 ### Examples
 
-* Port 1 is in VLAN 10 as a tagged port.
-  * The switch allows packets with a VLAN tag of 10 into port 1.
-  * The switch does not deliver any packets with a VLAN tag of 10 are allowed into port 1.
+* I connect a desktop PC to port 1 on on a managed switch, and port 1 is in VLAN 10 as an untagged port and specifies a PVID of 10.
+  * The switch will send network packets tagged with VLAN 10 to port 1 but will strip the tag before forwarding the packets.
+  * The switch will receive untagged packets from the desktop PC on port 1 and will add a tag for VLAN 10.
+  * The desktop PC can only communicate with other hosts that are members of VLAN 10.
 * Port 2 is in VLAN 10 as an untagged port.
   * The switch allows packets with a VLAN tag of 10 into port 2.
   * The switch does not deliver any packets with a VLAN tag of 10 are allowed into port 2.
