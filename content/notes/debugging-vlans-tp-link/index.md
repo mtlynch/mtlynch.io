@@ -32,6 +32,10 @@ I only realized days later what the problem was. My managed switch was dropping 
 
 When I first began configuring the VLANs on my TP-Link switch, I thought I was stupid for not understanding how VLANs work. I've since decided that TP-Link's GUI is terrible and overly complicated.
 
+It's in terms of VLANs rather than ports. QNAP gives you a view of each port and you specify which VLANs the port is a member of. TP-Link shows you all your VLANs, and then you decide which ports should be a member of each VLAN.
+
+To add confusion, there's also a "Port Config" tab that defines settings per port, but I'll get to that later.
+
 ## My desired setup
 
 ### VLANs
@@ -45,6 +49,46 @@ When I first began configuring the VLANs on my TP-Link switch, I thought I was s
 
 * Guests can access the print server.
 * Purgatory can access the Internet but can't access any other internal networks outside of Purgatory.
+
+## How to apply VLAN settings on a TP-Link managed switch
+
+There are two types of devices on your network, and you configure them for your VLAN differently.
+
+1. VLAN-aware: Devices that send traffic with VLAN tags attached
+    * Examples: Managed switches, high-end WiFi access points, VM servers
+1. Non-VLAN-aware: Devices that just use basic networking and don't attach VLAN tags
+    * Examples: Desktop computers, phones, printers
+
+For devices in category (1)
+
+
+## Tagged ports, untagged ports, and PVIDs
+
+When you add a port to a VLAN as a **tagged port**, it tells the switch to allow packets into that port if the packet's VLAN tag matches the VLAN.
+
+When you add a port to a VLAN as an **untagged port**, it tells the switch to **add** a
+
+**PVID** means port VLAN identifier. The PVID is the VLAN tag that the switch adds to packets coming into the switch from that port..
+
+### Examples
+
+* Port 1 is in VLAN 10 as a tagged port.
+  * The switch allows packets with a VLAN tag of 10 into port 1.
+  * The switch does not deliver any packets with a VLAN tag of 10 are allowed into port 1.
+* Port 2 is in VLAN 10 as an untagged port.
+  * The switch allows packets with a VLAN tag of 10 into port 2.
+  * The switch does not deliver any packets with a VLAN tag of 10 are allowed into port 2.
+
+## What are PVIDs?
+
+
+
+Annoyingly, TP-Link makes the untagged port and the PVID separate values, even though you'd 99% of the time want them to be equal. It makes no sense for
+
+The PVID is the VLAN tag that the switch adds to incoming
+
+https://mccollester.com/2022/05/25/the-difference-between-pvid-vs-untagged-vlans/
+https://www.megajason.com/2018/04/30/what-is-pvid/
 
 ## Tips for debugging VLAN issues
 
@@ -75,3 +119,25 @@ dhclient
 ```
 
 These commands never worked for me
+
+## Gotchas
+
+* You specified an untagged port for a VLAN, but you forgot to also set the PVID for that port.
+
+---
+
+
+Router needs to be a member of every VLAN.
+
+VLAN must contain:
+
+* Tagged ports: Router, any VLAN-aware devices
+* Untagged ports: Non-VLAN-aware devices
+
+Port config: Any port that contains a non-VLAN-aware device
+
+Port that contains tagged and untagged traffic from a VLAN aware device (e.g., wireless AP, another managed switch)
+
+Untagged ports
+Tagged ports
+PVID
