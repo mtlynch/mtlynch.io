@@ -5,93 +5,102 @@ date: 2023-07-01T11:35:06-04:00
 
 I recently bought a TP-Link TL-SG3428X JetStream managed switch. It's my first time owning a managed switch, and I spent several hours figuring out how to configure its VLAN settings for my network.
 
-I didn't found [TP-Link's VLAN documentation](https://www.tp-link.com/us/support/faq/2149/) lacking, so I'm writing my notes in case it helps others.
+I found [TP-Link's VLAN documentation](https://www.tp-link.com/us/support/faq/2149/) lacking, so I'm sharing my notes in case they're helpful to others.
 
-## My home network, before my managed switch
+## Scope
 
-Before I got the managed switch, I was already using VLANs, but I connected them through an unmanaged switch, so it worked without having to configure anything.
+I'm not going to go into detail on what a VLAN is. My favorite resource for understanding VLANs is [Raid Owl's video on the subject](https://www.youtube.com/watch?v=XdqP14NclZ0).
 
-The relevant network devices in this story are:
-
-* My desktop PC, which should have full access to all VLANs
-* My Proxmox server (TODO: link), which can tag certain VMs with VLAN tags
-* My Ruckus WiFI access point, which hosts three WLAN networks with distinct VLANs
-* A solar panel monitoring device, which required Internet access
-
-## Why did the managed switch kill Internet only on WiFi?
-
-A few minutes after installing the new managed switch, my fiance told me she lost Internet access. I checked my phone and saw the same thing.
-
-The WiFi devices could all join the WiFi network, but the network didn't have Internet access. How could that be? I hadn't changed any of my firewall settings. I just added a new switch into my setup.
-
-As a workaround, I reconfigured my network so that the WiFi AP didn't pass through the managed switch.
-
-I only realized days later what the problem was. My managed switch was dropping all tagged packets. So traffic could get from WiFi devices to the AP, but the switch was dropping everything after that point.
-
-## TP-Link's unfortunate VLAN web UI
-
-When I first began configuring the VLANs on my TP-Link switch, I thought I was stupid for not understanding how VLANs work. I've since decided that TP-Link's GUI is terrible and overly complicated.
-
-It's in terms of VLANs rather than ports. QNAP gives you a view of each port and you specify which VLANs the port is a member of. TP-Link shows you all your VLANs, and then you decide which ports should be a member of each VLAN.
-
-To add confusion, there's also a "Port Config" tab that defines settings per port, but I'll get to that later.
-
-## My desired setup
-
-### VLANs
-
-* System: Default, no VLAN.
-* VMs: For development virtual machines on my Proxmox network.
-* Guests: For guests
-* Purgatory: For IoT devices that require Internet access, but I don't want them to have anything else on my network.
-
-### Rules
-
-* Guests can access the print server.
-* Purgatory can access the Internet but can't access any other internal networks outside of Purgatory.
-
-## How to apply VLAN settings on a TP-Link managed switch
-
-There are two types of devices on your network, and you configure them for your VLAN differently.
-
-1. VLAN-aware: Devices that send traffic with VLAN tags attached
-    * Examples: Managed switches, high-end WiFi access points, VM servers
-1. Non-VLAN-aware: Devices that just use basic networking and don't attach VLAN tags
-    * Examples: Desktop computers, phones, printers
-
-For devices in category (1)
-
+In this post, I'm focusing specifically on how to use the TP-Link interface for setting up VLANs.
 
 ## Tagged ports, untagged ports, and PVIDs
 
+Different devices use different terminology to describe VLAN features. On TP-Link switches, the relevant settings to know are tagged ports, untagged ports, and PVIDs.
+
+### Tagged ports
+
 When you add a port to a VLAN as a **tagged port**, it tells the switch to allow packets into that port if the packet's VLAN tag matches the VLAN. It leaves the VLAN tag on the packets because the devices connected understand the tags.
 
-When you add a port to a VLAN as an **untagged port**, it tells the switch to forward those packets to the port but strip the VLAN tag. You use untagged ports for non-VLAN aware devices, so the switch strips the VLAN tags because the device attached to the port doesn't know anything about VLANs. Each port can only have a single untagged VLAN port.
+For example, if you add port 5 to VLANs 10 and 20 as a tagged port, then the switch will send packets to that port with VLAN tags 10 and 20. It won't strip off the tags, so the device on port 5 will receive packets with the VLAN tag still set. The device won't receive packets with any other VLAN tag, as only 10 and 20 are allowed.
 
-On TP-Link switches and some others, each port also has a **PVID**, or port VLAN identifier. When packets enter the switch through the given port, the switch adds the specified PVID to the packet as a VLAN tag.
+{{<img src="tagged-port.webp" has-border="true">}}
 
-Other systems use the terms "trunk port," which TP-Link no longer uses. My understanding is that a "trunk port" is equivalent to a tagged port. Except it's not because you have to declare which VLANs it's part of?
+Tagged ports are for devices that are VLAN-aware, like routers, other managed switches, and wireless access points that support VLANs.
 
-### Examples
+### Untagged ports
 
-* I connect a desktop PC to port 1 on on a managed switch, and port 1 is in VLAN 10 as an untagged port and specifies a PVID of 10.
-  * The switch will send network packets tagged with VLAN 10 to port 1 but will strip the tag before forwarding the packets.
-  * The switch will receive untagged packets from the desktop PC on port 1 and will add a tag for VLAN 10.
-  * The desktop PC can only communicate with other hosts that are members of VLAN 10.
-* Port 2 is in VLAN 10 as an untagged port.
-  * The switch allows packets with a VLAN tag of 10 into port 2.
-  * The switch does not deliver any packets with a VLAN tag of 10 are allowed into port 2.
+When you add a port to a VLAN as an **untagged port**, it tells the switch to forward those packets to the port but strip the VLAN tag.
 
-## What are PVIDs?
+Untagged ports are for non-VLAN aware devices. The switch strips the VLAN tags because the device attached to the port doesn't know anything about VLANs.
 
+For example, if you add port 6 to VLAN 10 as an untagged port, then the switch will send packets with VLAN tags 10 to that port, but it will strip off the tag before passing the packet along. The device on port 6 will receive packets without any VLAN tag. The device won't receive packets with any other VLAN tag, as only VLAN 10 is allowed.
 
+{{<img src="untagged-port.webp" has-border="true">}}
 
-Annoyingly, TP-Link makes the untagged port and the PVID separate values, even though you'd 99% of the time want them to be equal. It makes no sense for
+Untagged ports are for devices that are not VLAN-aware, like regular desktop PCs, scanners, or printers.
 
-The PVID is the VLAN tag that the switch adds to incoming
+### PVIDs
 
-https://mccollester.com/2022/05/25/the-difference-between-pvid-vs-untagged-vlans/
-https://www.megajason.com/2018/04/30/what-is-pvid/
+On TP-Link switches, each port also has a **PVID**, or [port VLAN identifier](https://www.megajason.com/2018/04/30/what-is-pvid/). When packets enter the switch through the given port, the switch adds the specified PVID to the packet as a VLAN tag.
+
+While tagged and untagged ports define how packets go from the switch to the port, the PVID affects packets that come from the port into the switch.
+
+{{<img src="pvid.webp" has-border="true">}}
+
+You don't need to set a PVID for ports that are connected to VLAN-aware devices because those devices are adding their own VLAN tags.
+
+You do need to set a PVID for ports connected to non-VLAN-aware devices, as the switch needs to know which VLAN tag to add to those packets.
+
+## TP-Link makes VLAN settings confusing
+
+On other managed switches I've seen, the switch does not expose the PVID in the settings. There's just tagged ports, untagged ports, and that's it. On these switches, adding a port to VLAN 20 as an untagged port implicitly also sets the PVID to 20.
+
+{{<img src="qnap-vlan.webp" caption="A screenshot of the VLAN admin interface on a QNAP managed switch. QNAP's interface is vastly more intuitive than TP-Link's.">}}
+
+A non-VLAN-aware device should only be a member of a single VLAN. You should add the device's port to the VLAN as an untagged port, and you should set the port's PVID to the VLAN's ID.
+
+For example, if you connected a printer to port 16 on your switch and wanted it to be in VLAN 20, you'd add port 16 to VLAN 20 as an untagged port, and you'd set port 16's PVID to 20.
+
+TP-Link _technically_ allows you to add a port to multiple VLANs as untagged, but I don't think there's ever a reason to do this in practice. It would mean that the device can _receive_ packets from devices on other VLANs, but it can only _send_ packets to devices on the single VLAN that matches the port's PVID.
+
+Other switch vendors limit ports from being untagged members of more than one VLAN, and I wish TP-Link had chosen this approach.
+
+## My home network, before the managed switch
+
+Before I got the managed switch, I was already using VLANs, but I connected them through an unmanaged switch.
+
+The relevant network devices in this story are:
+
+- My desktop PC, which should have full access to all VLANs
+- My Proxmox server (TODO: link), which can tag certain VMs with VLAN tags
+- My Ruckus WiFI access point, which hosts three WLAN networks with distinct VLANs
+- My OPNSense firewall, which enforces firewall rules on packets crossing VLANs or to the Internet
+
+TODO: Diagram
+
+Note that in this diagram, I have no VLAN-aware devices connected in series. This simplified configuration a lot, which I didn't realize until I upgraded to a managed switch.
+
+## Mistake 1: Replacing unmanaged switch with managed switch kills Internet on WiFi
+
+When I purchased my TP-Link TL-SG3428X, I just dropped it in as a replacement for my previous unmanaged switch. Not much changed about my network diagram:
+
+TODO: Diagram
+
+A few minutes after installing the new managed switch, my fiance told me she lost Internet access. I checked my phone and saw the same thing.
+
+The WiFi devices could all join the WiFi network, but the network didn't have Internet access. How could that be? I hadn't changed any of my firewall settings. I just replaced an unmanaged switch with a managed one.
+
+I only realized days later what the problem was. My managed switch was dropping all tagged packets. So traffic could get from WiFi devices to the AP, but the switch was dropping everything after that point.
+
+The solution was to configure my VLANs on my managed switch. Otherwise, it would just continue dropping all VLAN-tagged packets. Here was my configuration after the fix.
+
+## Mistake 2: Forgetting to add my router to the VLAN
+
+TODO: Diagram
+
+## My home network, after the managed switch
+
+TODO: Diagram
 
 ## Tips for debugging VLAN issues
 
@@ -111,7 +120,6 @@ I'm sure there are better ways, but I didn't find them.
 
 ### `ifconfig`
 
-
 ### Other CLI tools
 
 This command sequence is supposed to force the host to release its DHCP lease and request a new one:
@@ -125,22 +133,5 @@ These commands never worked for me
 
 ## Gotchas
 
-* You specified an untagged port for a VLAN, but you forgot to also set the PVID for that port.
-
----
-
-
-Router needs to be a member of every VLAN.
-
-VLAN must contain:
-
-* Tagged ports: Router, any VLAN-aware devices
-* Untagged ports: Non-VLAN-aware devices
-
-Port config: Any port that contains a non-VLAN-aware device
-
-Port that contains tagged and untagged traffic from a VLAN aware device (e.g., wireless AP, another managed switch)
-
-Untagged ports
-Tagged ports
-PVID
+- You specified an untagged port for a VLAN, but you forgot to also set the PVID for that port.
+- You added a port to a VLAN, but you forgot to add your router to the VLAN.
