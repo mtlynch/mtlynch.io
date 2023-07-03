@@ -3,45 +3,47 @@ title: "Debugging VLANs on my TP-Link Managed Switch"
 date: 2023-07-01T11:35:06-04:00
 ---
 
-I recently bought a TP-Link TL-SG3428X JetStream managed switch. It's my first time owning a managed switch, and I spent several hours figuring out how to configure its VLAN settings for my network.
+I recently bought my first-ever managed networking switch, a TP-Link JetStream TL-SG3428X.
+
+{{<img src="tp-link-exterior.webp" alt="Photo of my TP-Link managed switch">}}
+
+The main feature of a managed switch is that it lets you segment your network into VLANs. I was excited about this functionality, but it took me over six hours of trial and error to get VLANs working correctly on my network.
 
 I found [TP-Link's VLAN documentation](https://www.tp-link.com/us/support/faq/2149/) lacking, so I'm sharing my notes in case they're helpful to others.
 
-## Scope
+## Background
 
-I'm not going to go into detail on what a VLAN is. My favorite resource for understanding VLANs is [Raid Owl's video on the subject](https://www.youtube.com/watch?v=XdqP14NclZ0).
-
-In this post, I'm focusing specifically on how to use the TP-Link interface for setting up VLANs.
+If you're not familiar with VLANs, my favorite explainer is [Raid Owl's video on the subject](https://www.youtube.com/watch?v=XdqP14NclZ0).
 
 ## Tagged ports, untagged ports, and PVIDs
 
-Different devices use different terminology to describe VLAN features. On TP-Link switches, the relevant settings to know are tagged ports, untagged ports, and PVIDs.
+Different devices use different terminology to describe VLAN features.
+
+On TP-Link switches, the relevant settings to know are tagged ports, untagged ports, and PVIDs.
 
 ### Tagged ports
 
-When you add a port to a VLAN as a **tagged port**, it tells the switch to allow packets into that port if the packet's VLAN tag matches the VLAN. It leaves the VLAN tag on the packets because the devices connected understand the tags.
+When you add a port to a VLAN as a **tagged port**, the switch allows packets it to send and receive traffic to that VLAN.
+
+On tagged ports, the switch preserves any VLAN tags on the packets, so you should only connect VLAN-aware devices to tagged ports of a VLAN. VLAN-aware devices are things like firewalls, other managed switches, and wireless access points that support VLANs.
 
 For example, if you add port 5 to VLANs 10 and 20 as a tagged port, then the switch will send packets to that port with VLAN tags 10 and 20. It won't strip off the tags, so the device on port 5 will receive packets with the VLAN tag still set. The device won't receive packets with any other VLAN tag, as only 10 and 20 are allowed.
 
-{{<img src="tagged-port.webp" has-border="true">}}
-
-Tagged ports are for devices that are VLAN-aware, like routers, other managed switches, and wireless access points that support VLANs.
+{{<img src="tagged-port.webp" has-border="true" caption="Example: Adding a port to VLANs 10 and 20 as a tagged port. The switch will allow traffic tagged with VLANs 10 and 20 but reject other traffic, such as packets tagged with VLAN 30.">}}
 
 ### Untagged ports
 
-When you add a port to a VLAN as an **untagged port**, it tells the switch to forward those packets to the port but strip the VLAN tag.
+When you add a port to a VLAN as a **untagged port**, the switch allows packets it to send and receive traffic to that VLAN, just like for tagged ports. The difference with an untagged port is that, before passing along packets to the port, the switch will strip the VLAN tag from network packets.
 
-Untagged ports are for non-VLAN aware devices. The switch strips the VLAN tags because the device attached to the port doesn't know anything about VLANs.
+Untagged ports are for non-VLAN-aware devices, like regular desktop PCs, scanners, or printers. The switch strips the VLAN tags because the device attached to the port doesn't know anything about VLANs.
 
 For example, if you add port 6 to VLAN 10 as an untagged port, then the switch will send packets with VLAN tags 10 to that port, but it will strip off the tag before passing the packet along. The device on port 6 will receive packets without any VLAN tag. The device won't receive packets with any other VLAN tag, as only VLAN 10 is allowed.
 
 {{<img src="untagged-port.webp" has-border="true">}}
 
-Untagged ports are for devices that are not VLAN-aware, like regular desktop PCs, scanners, or printers.
-
 ### PVIDs
 
-On TP-Link switches, each port also has a **PVID**, or [port VLAN identifier](https://www.megajason.com/2018/04/30/what-is-pvid/). When packets enter the switch through the given port, the switch adds the specified PVID to the packet as a VLAN tag.
+On TP-Link switches, each port has a **PVID**, or [port VLAN identifier](https://www.megajason.com/2018/04/30/what-is-pvid/). When a packet goes from the attached device into the switch through the given port, the switch adds the port's PVID to the packet as a VLAN tag.
 
 While tagged and untagged ports define how packets go from the switch to the port, the PVID affects packets that come from the port into the switch.
 
@@ -49,41 +51,47 @@ While tagged and untagged ports define how packets go from the switch to the por
 
 You don't need to set a PVID for ports that are connected to VLAN-aware devices because those devices are adding their own VLAN tags.
 
-You do need to set a PVID for ports connected to non-VLAN-aware devices, as the switch needs to know which VLAN tag to add to those packets.
+You do need to set a PVID for ports connected to non-VLAN-aware devices, as the switch needs to add the correct VLAN tag on the non-VLAN-aware device's behalf.
 
 ## How to reach VLAN settings on a TP-Link managed switch
 
-TP-Link buries the VLAN settings amid a cluster of similar-sounding options. I wasn't even sure if I was configuring the right settings at first, so if you have a similar TP-Link interface, you can find your VLAN settings by doing the following:
+TP-Link buries the VLAN settings amid a cluster of similar-sounding options. I wasn't even sure if I was configuring the right settings at first.
+
+If you have a similar TP-Link switch with a similar interface to mine, you can find your VLAN settings by doing the following:
 
 1. From the navbar, click "L2 Features"
 1. From the left sidebar, click "VLAN"
-1. Click "802.1Q VLAN"
+1. From the submenu, click "802.1Q VLAN"
 
 {{<img src="tplink-vlan-settings.webp" has-border="true" caption="How to find VLAN settings on a TP-Link managed switch">}}
 
-From the "VLAN Config" tab, you add VLANs and configure which ports are members of the VLAN.
+From the "VLAN Config" tab, you add VLANs to the switch and configure which ports are members of the VLAN.
 
 From the "Port Config" tab, you configure the PVID for any ports. Again, you'd only set a PVID for ports that are attached directly to non-VLAN-aware devices that need to be on a VLAN. If you're setting a PVID for a port, it should be a member of a single VLAN as an untagged port.
 
-## TP-Link makes VLAN settings confusing
+## Why does TP-Link make us manage PVIDs manually?
 
-On other managed switches I've seen, the switch does not expose the PVID in the settings. There's just tagged ports, untagged ports, and that's it. On these switches, adding a port to VLAN 20 as an untagged port implicitly also sets the PVID to 20.
+On other managed switches I've seen, the switch does not expose the PVID in the settings. There's just tagged ports and untagged ports. That's it. The switch automatically sets the PVID for you.
 
 {{<img src="qnap-vlan.webp" caption="A screenshot of the VLAN admin interface on a QNAP managed switch. QNAP's interface is vastly more intuitive than TP-Link's.">}}
 
-A non-VLAN-aware device should only be a member of a single VLAN. You should add the device's port to the VLAN as an untagged port, and you should set the port's PVID to the VLAN's ID.
+On switches that don't expose a PVID setting, adding a port to VLAN 20 as an untagged port implicitly also sets the port's PVID to 20. I wish TP-Link had taken this approach, because their implementation is needlessly complicated.
+
+Here's my rule of thumb for managing untagged ports and and PVIDs on a TP-Link switch:
+
+- If you connect a non-VLAN-aware device to the switch, it should only be a member of a single VLAN.
+  - Add the device's port to the VLAN as an untagged port.
+  - Set the port's PVID to the VLAN's ID.
 
 For example, if you connected a printer to port 16 on your switch and wanted it to be in VLAN 20, you'd add port 16 to VLAN 20 as an untagged port, and you'd set port 16's PVID to 20.
 
 TP-Link _technically_ allows you to add a port to multiple VLANs as untagged, but I don't think there's ever a reason to do this in practice. It would mean that the device can _receive_ packets from devices on other VLANs, but it can only _send_ packets to devices on the single VLAN that matches the port's PVID.
 
-Other switch vendors limit ports from being untagged members of more than one VLAN, and I wish TP-Link had chosen this approach.
-
 ## My home network, before the managed switch
 
 Before I got the managed switch, I was already using VLANs, but I connected them through an unmanaged switch.
 
-The relevant network devices in this story are:
+The relevant network devices in my setup were:
 
 - My desktop PC, which has full access to all VLANs
 - My Ruckus WiFI access point, which hosts two WLAN networks with distinct VLANs
@@ -100,11 +108,11 @@ When I purchased my TP-Link TL-SG3428X, I just dropped it in as a replacement fo
 
 {{<img src="managed-network.webp" has-border="true" caption="My home network before I added a managed switch">}}
 
-A few minutes after installing the new managed switch, my fiance told me she lost Internet access. I checked my phone and saw the same thing.
+A few minutes after installing the new managed switch, my fiance told me she lost Internet access on her laptop. I checked my phone and saw the same thing.
 
 The WiFi devices could all join the WiFi network, but the network didn't have Internet access. How could that be? I hadn't changed any of my firewall settings. I just replaced an unmanaged switch with a managed one.
 
-I only realized days later what the problem was. My managed switch was dropping all tagged packets. So traffic could get from WiFi devices to the AP, but the switch was rejecting VLAN-tagged packets because it didn't know anything about my VLANs.
+After several hours, I realized what the problem was. My managed switch was dropping all tagged packets. So traffic could get from WiFi devices to the AP, but the switch was rejecting VLAN-tagged packets because it didn't know anything about my VLANs.
 
 {{<img src="unrecognized-vlan.webp" has-border="true" caption="When I replaced my unmanaged switch with a managed switch, the managed switch began dropping VLAN-tagged traffic from my wireless access point.">}}
 
@@ -126,13 +134,15 @@ I ran into another issue when I tried to add an untrusted device to my network. 
 
 {{<img src="iot-device.webp" caption="An untrusted IoT device on my network that tracks status of my outdoor solar panels" max-width="500px">}}
 
-The IoT device needs Internet access to upload status to the vendor's cloud dashboard. I have no idea what the little box is doing, so I don't want it to have access to anything on my home network.
+The IoT device needs Internet access to upload metrics to the vendor's cloud dashboard. I have no idea what other mischief this little box might be doing, so I don't want it to have access to anything on my home network.
 
 I created [a new VLAN from my OPNsense firewall](https://homenetworkguy.com/how-to/configure-vlans-opnsense/) called "Purgatory," for devices I trust even less than guests. Devices in Purgatory can access DNS servers and public Internet IPs, but they can't access any other VLAN.
 
 {{<img src="purgatory-firewall.png" has-border="true" caption="Firewall rules for Purgatory VLAN">}}
 
-I then added the solar monitoring IoT device's port on the TP-Link switch to the Purgatory VLAN. The IoT device is a non-VLAN-aware device, so I set it as an untagged port for Purgatory and assigned the Purgatory VLAN ID (80) as the port's PVID. Setting it as an untagged port strips the VLAN tag from packets before they reach the IoT device, and assigning the PVID adds the VLAN tag to packets that the IoT device sends.
+I then added the solar monitoring IoT device's port on the TP-Link switch to the Purgatory VLAN. The IoT device is a non-VLAN-aware device, so I set it as an untagged port for Purgatory and assigned the Purgatory VLAN ID (80) as the port's PVID.
+
+Assigning the port to the VLAN as an untagged port strips the VLAN tag from packets before they reach the IoT device. Assigning the PVID adds the VLAN tag to packets that the IoT device sends into the switch.
 
 {{<gallery caption="I added the untrusted IoT device to the Purgatory VLAN as an untagged port.">}}
 {{<img src="purgatory-ports.png">}}
@@ -145,7 +155,7 @@ I can't run any kind of diagnostics from the IoT device, so I needed a different
 
 I was banging my head against the wall trying to figure out what was wrong. I tried adding it as a tagged port, as an untagged port, with PVID 1, with PVID 80. Nothing worked. I couldn't get the device to join the network
 
-I tried monitoring traffic from my OPNsense firewall, and it didn't show any traffic on the Purgatory VLAN at all. I checked DHCP settings to verify I had a DHCP server running for the Purgatory VLAN, and I did.
+I checked my OPNsense firewall, and it didn't show any traffic on the Purgatory VLAN at all. I checked DHCP settings to verify I had a DHCP server running for the Purgatory VLAN, and I did.
 
 After three nights of pulling my hair out trying to understand the behavior, it finally dawned on me: I never added my OPNsense firewall to the Purgatory VLAN!
 
@@ -171,15 +181,17 @@ Once I made these changes, the IoT device was able to connect to its cloud dashb
 
 ### Open up Wireshark
 
-I tried a
+I tried several different command-line tools to diagnose my device's network status, but the most useful one ended up being Wireshark.
 
-The most useful tool I used was Wireshark. I'm normally reluctant to pull in Wireshark because it feels so heavyweight. It's dumping so much information, and I always hate having to re-learn the filter query language to get to something sensible.
+I'm normally reluctant to pull in Wireshark. It's a fantastic tool, but I always get lost trying to find the information relevant to my problem. I expect that if I open Wireshark, I'm going to have to re-learn its filter query language, and I'm never excited to do that.
 
-For debugging VLANs, Wireshark ended up being incredibly helpful.
+In this case, I didn't have to do anything clever with Wireshark at all. As soon as I pulled it up and saw traffic trying to exit my device and nothing coming back, I realized what was wrong.
 
 {{<img src="wireshark.webp" max-width="800px" caption="Wireshark's output made me realize when my switch was dropping all traffic from my test device">}}
 
 ### Rebooting
+
+One of the major headaches of debugging VLAN issues is that I was never sure when my test computer "reacted" to the new VLAN settings.
 
 I wish this wasn't the most reliable technique I found for resetting network state, but it was. It's a pain because it takes 30-90 seconds depending on what kind of system the host is running, so it's a slow test cycle. But it did, more than any other method, ensure that the system reset its network state in response to changes I made in VLAN configuration.
 
@@ -193,18 +205,39 @@ I initially tried testing with a VM in my Proxmox server. That was tricky becaus
 
 I wanted a way to test changes so that I didn't
 
-### `ifconfig`
+### ping
 
-### Other CLI tools
+Ping was useful here to tell when I had a connection to the local network and
 
-This command sequence is supposed to force the host to release its DHCP lease and request a new one:
+```bash
+ping 10.0.80.1    # Test connection to router
+ping google.com   # Test connection to Internet
+```
+
+### Other networking utilities
+
+I was surprised at how unhelpful the `ifconfig` command was. I thought that the following commands would force network settings to reset:
+
+```bash
+IFACE="eth0"
+
+sudo ifconfig "${IFACE}" down && \
+  sudo ifconfig "${IFACE}" up && \
+  sudo ifconfig "${IFACE}"
+```
+
+Often, running those commands did not reset network state. It would take a reboot for any VLAN changes to take effect.
+
+I've also seen others recommend `dhclient`. This command sequence is supposed to force the host to release its DHCP lease and request a new one:
 
 ```bash
 dhclient -r
 dhclient
 ```
 
-nslookup
+I couldn't get that to work on my test systems. The first command just hung and didn't release the DHCP lease.
+
+I tried `nslookup`, which I hadn't used much before
 
 These commands never worked for me
 
