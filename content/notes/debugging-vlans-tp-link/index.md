@@ -51,6 +51,20 @@ You don't need to set a PVID for ports that are connected to VLAN-aware devices 
 
 You do need to set a PVID for ports connected to non-VLAN-aware devices, as the switch needs to know which VLAN tag to add to those packets.
 
+## How to reach VLAN settings on a TP-Link managed switch
+
+TP-Link buries the VLAN settings amid a cluster of similar-sounding options. I wasn't even sure if I was configuring the right settings at first, so if you have a similar TP-Link interface, you can find your VLAN settings by doing the following:
+
+1. From the navbar, click "L2 Features"
+1. From the left sidebar, click "VLAN"
+1. Click "802.1Q VLAN"
+
+{{<img src="tplink-vlan-settings.webp" has-border="true" caption="How to find VLAN settings on a TP-Link managed switch">}}
+
+From the "VLAN Config" tab, you add VLANs and configure which ports are members of the VLAN.
+
+From the "Port Config" tab, you configure the PVID for any ports. Again, you'd only set a PVID for ports that are attached directly to non-VLAN-aware devices that need to be on a VLAN. If you're setting a PVID for a port, it should be a member of a single VLAN as an untagged port.
+
 ## TP-Link makes VLAN settings confusing
 
 On other managed switches I've seen, the switch does not expose the PVID in the settings. There's just tagged ports, untagged ports, and that's it. On these switches, adding a port to VLAN 20 as an untagged port implicitly also sets the PVID to 20.
@@ -96,7 +110,7 @@ I only realized days later what the problem was. My managed switch was dropping 
 
 The solution was to configure my VLANs on my managed switch. Otherwise, it would just continue dropping all VLAN-tagged packets.
 
-Here was my configuration after the fix:
+Here was my managed switch configuration after the fix:
 
 | VLAN ID | VLAN Name | Ports (Tagged)                           |
 | ------- | --------- | ---------------------------------------- |
@@ -108,13 +122,17 @@ After that configuration change, my WiFi devices got Internet again. The switch 
 
 ## Mistake 2: Forgetting to add my router to the VLAN
 
-I ran into another issue when I tried to add an untrusted device to my network. I have solar panels on my house, and to monitor their status, I have to use this proprietary IoT device. It needs network access to upload status to the vendor's cloud dashboard, but I don't trust this device, so I want it segregated onto its own network.
+I ran into another issue when I tried to add an untrusted device to my network. I have solar panels on my house, and to monitor their status, I have to use this proprietary IoT device.
 
-I created [a new VLAN from my OPNsense firewall](https://homenetworkguy.com/how-to/configure-vlans-opnsense/) called "Purgatory," for devices I trust even less than guests I allow to access my guest network. Devices in Purgatory could access DNS, but they couldn't access any other non-Internet IP address.
+{{<img src="iot-device.webp" caption="An untrusted IoT device on my network that tracks status of my outdoor solar panels" max-width="500px">}}
+
+The IoT device needs Internet access to upload status to the vendor's cloud dashboard. I have no idea what the little box is doing, so I don't want it to have access to anything on my home network.
+
+I created [a new VLAN from my OPNsense firewall](https://homenetworkguy.com/how-to/configure-vlans-opnsense/) called "Purgatory," for devices I trust even less than guests. Devices in Purgatory can access DNS servers and public Internet IPs, but they can't access any other VLAN.
 
 {{<img src="purgatory-firewall.png" has-border="true" caption="Firewall rules for Purgatory VLAN">}}
 
-I then added the solar monitoring IoT device's port on the TP-Link switch to the Purgatory VLAN. The IoT device is a non-VLAN-aware device, so I set it as an untagged port for Purgatory and assigned the port Purgatory's PVID.
+I then added the solar monitoring IoT device's port on the TP-Link switch to the Purgatory VLAN. The IoT device is a non-VLAN-aware device, so I set it as an untagged port for Purgatory and assigned the Purgatory VLAN ID (80) as the port's PVID. Setting it as an untagged port strips the VLAN tag from packets before they reach the IoT device, and assigning the PVID adds the VLAN tag to packets that the IoT device sends.
 
 {{<gallery caption="I added the untrusted IoT device to the Purgatory VLAN as an untagged port.">}}
 {{<img src="purgatory-ports.png">}}
@@ -123,7 +141,7 @@ I then added the solar monitoring IoT device's port on the TP-Link switch to the
 
 But, it didn't work. The cloud dashboard immediately reported the IoT device as offline.
 
-To debug the issue, I added my [Dell Optiplex NixOS system](/notes/nix-first-impressions/#success-nixos-on-a-dell-mini-computer) to the Purgatory VLAN, and it lost network access too. It couldn't ping anything on the network as long as it was part of the Purgatory VLAN.
+I can't run any kind of diagnostics from the IoT device, so I needed a different system to debug this. I added my [Dell Optiplex NixOS system](/notes/nix-first-impressions/#success-nixos-on-a-dell-mini-computer) to the Purgatory VLAN, and it lost network access too. It couldn't ping anything on the network as long as it was part of the Purgatory VLAN.
 
 I was banging my head against the wall trying to figure out what was wrong. I tried adding it as a tagged port, as an untagged port, with PVID 1, with PVID 80. Nothing worked. I couldn't get the device to join the network
 
@@ -131,17 +149,23 @@ I tried monitoring traffic from my OPNsense firewall, and it didn't show any tra
 
 After three nights of pulling my hair out trying to understand the behavior, it finally dawned on me: I never added my OPNsense firewall to the Purgatory VLAN!
 
-The IoT device was sending traffic to the TP-Link managed switch, the switch was adding the VLAN tag for Purgatory, and then the packets had nowhere to go because there weren't any other hosts on the Purgatory.
+Here's what was happening:
+
+1. IoT device sends traffic to the TP-Link managed switch.
+1. Switch adds the VLAN tag for Purgatory.
+1. Puragatory packets have nowhere to go because there weren't any other hosts on the Purgatory VLAN.
 
 The solution was simple: add the OPNsense firewall to the Purgatory VLAN. Because the firewall is VLAN-aware, I added it as a tagged port:
 
-{{<img src="purgatory-ports-corrected.png" max-width="600px" has-border="true" caption="My corrected TP-Link VLAN configuration for the Purgatory VLAN, which allows the IoT device to reach the Internet through my OPNsense firewall">}}
+{{<img src="purgatory-ports-corrected.webp" max-width="600px" has-border="true" caption="My corrected TP-Link VLAN configuration for the Purgatory VLAN, which allows the IoT device to reach the Internet through my OPNsense firewall">}}
 
 | VLAN ID | VLAN Name | Ports (Tagged) | Ports (Untagged) |
 | ------- | --------- | -------------- | ---------------- |
 | 80      | Purgatory | 1 (firewall)   | 24 (IoT device)  |
 
 My original PVID for port 24 was correct. It had to have a PVID of 80 because the switch needs to tag packets the IoT device sends to the switch with the VLAN tag 80 for Purgatory.
+
+Once I made these changes, the IoT device was able to connect to its cloud dashboard, but it didn't have access to anything on my home network.
 
 ## Tips for debugging VLAN issues
 
@@ -153,11 +177,21 @@ The most useful tool I used was Wireshark. I'm normally reluctant to pull in Wir
 
 For debugging VLANs, Wireshark ended up being incredibly helpful.
 
+{{<img src="wireshark.webp" max-width="800px" caption="Wireshark's output made me realize when my switch was dropping all traffic from my test device">}}
+
 ### Rebooting
 
 I wish this wasn't the most reliable technique I found for resetting network state, but it was. It's a pain because it takes 30-90 seconds depending on what kind of system the host is running, so it's a slow test cycle. But it did, more than any other method, ensure that the system reset its network state in response to changes I made in VLAN configuration.
 
 I'm sure there are better ways, but I didn't find them.
+
+### Use a remote management tool
+
+I used a TinyPilot because it's the tool I created for this type of work.
+
+I initially tried testing with a VM in my Proxmox server. That was tricky because when I'd make networking changes, I'd lose access to not just the VM but the entire Proxmox server.
+
+I wanted a way to test changes so that I didn't
 
 ### `ifconfig`
 
@@ -170,9 +204,15 @@ dhclient -r
 dhclient
 ```
 
+nslookup
+
 These commands never worked for me
 
 ## Gotchas
 
-- You specified an untagged port for a VLAN, but you forgot to also set the PVID for that port.
-- You added a port to a VLAN, but you forgot to add your router to the VLAN.
+These were the gotchas I ran into when configuring VLANs on my TP-Link switch.
+
+- I specified an untagged port for a VLAN, but I forgot to also set the PVID for that port.
+- I added a port to a VLAN, but I forgot to add your router to the VLAN.
+- I forgot that if VLAN-aware device A connnects to the firewall through VLAN-aware device B, then device B must know about all of A's VLANs. Otherwise, device B will simply drop all packets for unrecognized VLANs before they can reach the firewall.
+- If you don't hit the "Save" button in the TP-Link navbar, the switch will wipe out your changes the next time the switch reboots.
