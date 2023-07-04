@@ -3,6 +3,10 @@ title: "Debugging VLANs on my TP-Link Managed Switch"
 date: 2023-07-04T00:00:00-04:00
 images:
   - /notes/debugging-vlans-tp-link/managed-network.webp
+tags:
+  - vlans
+  - networking
+  - tinypilot
 ---
 
 I recently bought my first-ever managed networking switch, a [TP-Link JetStream TL-SG3428X](https://www.tp-link.com/us/business-networking/omada-sdn-switch/tl-sg3428x/).
