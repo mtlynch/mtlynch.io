@@ -19,9 +19,9 @@ So, I present to you my complete and working guide to installing NixOS on a Rasp
 
 To follow this tutorial, you'll need:
 
-* Raspberry Pi 4
-* A microSD card with at least 8 GB of storage
-* A separate computer to flash the microSD card.
+- Raspberry Pi 4
+- A microSD card with at least 8 GB of storage
+- A separate computer to flash the microSD card.
 
 ## Download the NixOS microSD image
 
@@ -29,13 +29,13 @@ As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is N
 
 Download the NixOS microSD image from the link below:
 
-* [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
+- [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
 
 ## Decompress the NixOS microSD image
 
 The NixOS team compresses its microSD images with an uncommon compression format called [Zstandard](https://facebook.github.io/zstd/), an open-source format from Facebook. To decompress the image, download the latest Zstandard release for your platform:
 
-* [Zstandard releases](https://github.com/facebook/zstd/releases/latest)
+- [Zstandard releases](https://github.com/facebook/zstd/releases/latest)
 
 Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
@@ -178,14 +178,14 @@ sudo nano /etc/nixos/configuration.nix
 
 Find these lines in the file:
 
-```nix
+```text
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
 ```
 
 And replace them with these lines:
 
-```nix
+```text
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
 ```
@@ -199,8 +199,8 @@ sudo nixos-rebuild boot && sudo reboot
 When you reboot, you should see a desktop like the following:
 
 {{<gallery caption="Switching desktop managers from Gnome to Plasma is a two-line change in NixOS.">}}
-  {{<img src="plasma-desktop.webp" max-width="400px">}}
-  {{<img src="plasma-desktop2.webp" max-width="400px">}}
+{{<img src="plasma-desktop.webp" max-width="400px">}}
+{{<img src="plasma-desktop2.webp" max-width="400px">}}
 {{</gallery>}}
 
 All it took to change your whole desktop environment was just a two-line change.
@@ -253,7 +253,7 @@ There are better Nix tools for managing development environments, such as [diren
 
 I suspect the reason that NixOS builds after November 2021 fail to install on a Raspberry Pi is due to this October 2021 post on the Nix forums:
 
-* [Planning for a better NixOS on ARM (and other non-x86_64 systems)](https://discourse.nixos.org/t/planning-for-a-better-nixos-on-arm-and-other-non-x86-64-systems/15346)
+- [Planning for a better NixOS on ARM (and other non-x86_64 systems)](https://discourse.nixos.org/t/planning-for-a-better-nixos-on-arm-and-other-non-x86-64-systems/15346)
 
 A lot of the explanation is beyond my knowledge of OS development and Nix, but the basic idea is that prior to 2021, NixOS worked on the Raspberry Pi, but the work required was unsustainable. NixOS doesn't have the resources to maintain an OS and to have special code specifically for the Raspberry Pi.
 
@@ -317,7 +317,7 @@ https://github.com/NixOS/nixos-hardware/issues/631
 
 I can work around it by deleting this line from configuration.nix:
 
-```nix
+```text
 hardware.raspberry-pi."4".fkms-3d.enable = true;
 ```
 
