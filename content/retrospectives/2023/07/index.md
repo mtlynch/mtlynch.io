@@ -40,7 +40,7 @@ TODO
 - **Result**: Reached $93k in revenue.
 - **Grade**: C
 
-TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtube.com/watch?v=tx724dhxGxc) but it got a tepid response, so we saw fewer sales than I hoped.
+TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtube.com/watch?v=tx724dhxGxc) but it got a tepid response, so we saw fewer sales than I hoped. Our ads decreased in effectiveness. In May, we made $3.64 in revenue for every $1 in ad spend, but in June, the ratio dropped to 2.62:1.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -79,14 +79,4 @@ TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtu
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-{{<notice type="info">}}
-
-I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
-
-{{</notice>}}
-
-TODO
+- Reach $98k in sales revenue
