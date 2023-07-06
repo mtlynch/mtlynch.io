@@ -59,13 +59,81 @@ TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtu
 
 ## Where does my time go?
 
-[where does my time go](/retrospectives/2022/02/)
+Last year, I evaluated [how I was spending my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) in one of my retrospectives.
 
-## Topic 2
+### Coordinating changes
 
-## Topic 3
+With the complexity of TinyPilot, so many changes have ripple effects.
+
+For example, one of the big projects this year was transitioning our fulfillment to a 3PL. It sounds like the kind of thing that
+
+One of the things we didn't anticipate was tracking inventory. We send them dozens of devices at a time, and each device has a retail value of $400-500, so if a shipment goes missing, that's a huge loss. So we need to make sure there's positive handoff. If we think we shipped them 25 units, we want to verify that they recorded 25 units on their side.
+
+But then we got to the end of the month and I realized, wait, what if the warehouse lost a pallet of devices after they confirmed receipt? So then we needed to develop a system to make sure that
+
+And that's just keeping track of inventory. There are other processes we had to develop around what to do when the warehouse sends the wrong item, what to do when a customer requests same-day fulfillment, etc.
+
+We'll eventually get to the point where we have defined processes for every regular occurrence with our 3PL, and then it will be less time, but for the time being, I'm overseeing how these changes happen. I'm either defining processes or asking my team to propose processes and reviewing them.
+
+#### How I can reduce my time here?
+
+This is a place where it's pretty hard to reduce time. For example, processes around the 3PL do rise to my level because they involve company-level tradeoffs. Do we trust the information that the 3PL gives us, or is it worth our time to verify it? Do we try to push work onto the 3PL that we view as their responsibility or do we take it on ourselves? Do we invest in tooling to make the process on our side easier?
+
+### Overseeing dev work
+
+I spend a lot of time overseeing dev work because it's the part of TinyPilot I enjoy the most. I'm still a developer at heart even though I don't get to spend much time
+
+I can make high-value contributions because I'm in touch with customers. I can often cut cruft because I know very few customers depend on it or that it exists for scenarios that I no longer consider important.
+
+#### How I can reduce my time here?
+
+Limit my time
+
+### Overseeing support work
+
+The support engineering team does things like write new tutorials and documentation.
+
+### Management
+
+Currently, I manage seven teammates within TinyPilot, all of whom work 10-20 hours per week. In addition, I'm the sole point of contact with a lot of our major vendors and partners, including our EU distributor, our hardware manufacturer, and
+
+The 3PL is delicate because we're often letting them know about errors or pointing out discrepancies in the information they tell us.
+
+### Why can't I just hire a manager?
+
+When I was at the meetup, one of the questions was why don't I just delegate to a manager? If I want to spend less time managing and more time developing software or writing, why don't I just hire a manager?
+
+The issue is that a lot of the management is distinct
+
+The good news is that I expect a lot of management work to simplify by the end of the year. If we successfully transition to a contract manufacturer and close our local office, that's a
+
+To hire someone who's as capable as me to run
+
+### Email addiction
+
+Because so much of my job has become talking to people rather than doing things, I find myself much more addicted to email.
+
+It often is helpful if I can get people unblocked by answering an email, but it puts me into a state where I have the compulsion to check my email every few minutes. And then if my inbox is empty, I crave a dopamine hit from something, so then I check social media, which is a useless timesink.
+
+## Resolutions
+
+- Create a daily schedule and stick to it
+
+- In the past, one of the things I've found helpful for focus is mapping out my day. I split my workday into 30-minute blocks, and I decide in the morning how to spend each block. To avoid checking email compulsively, I schedule in explicit blocks of time for reading and responding to email instead of letting emails be a constant interruption throughout the day.
+
+I've gone in and out of this habit. It's hard to stick to it when most of my work is just and some days, my work is legitimately, "make lots of little decisions via email." In the long-term, I can usually avoid that, but with seven direct reports and four major third-party vendors, there are times where I need to respond to lots of people in a day.
 
 ## Side projects
+
+### Learning Nix
+
+Nix has been at the top of my list of interesting-looking technologies for the past year. I've paused my programming side projects to tinker a bit with Nix and NixOS.
+
+I wrote up notes about my first experiences with Nix, and the post. My notes on Nix unexpectedly got a lot of attention on Twitter and Hacker News (TODO: link). That encouraged me to try to capture more of my notes about trying things. My main blog feed is for polished posts, but I've been investing more in a "notes" subsection for things that aren't as polished but I just want to capture what I've learned while it's fresh in my head.
+
+### Building my first home server rack
+
+TODO: Was that June?
 
 ## Wrap up
 
@@ -79,4 +147,6 @@ TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtu
 
 ### Goals for next month
 
-- Reach $98k in sales revenue
+- Reach $98k in sales revenue.
+- Stay on schedule for shift to contract manufacturer.
+- Spend less than 40% of my time on email.
