@@ -15,7 +15,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I'm trying to figure out where I'm spending unnecessary time on TinyPilot.
+- I realized I've once again become addicted to email.
 
 ## Goal Grades
 
@@ -59,7 +60,13 @@ TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtu
 
 ## Where does my time go?
 
+At a recent indie founder meetup, I mentioned that my biggest constraint was still finding time for proactive tasks. Some of the other meetup attendees were surprised to hear this. I've been running TinyPilot for three years. The process sounds simple: the team manufactures devices, sends them to a warehouse, and the warehouse ships the devices to customers.
+
+Why couldn't I just automate or delegate everything? What required my attention specifically?
+
 Last year, I evaluated [how I was spending my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week) in one of my retrospectives.
+
+Here are the tasks that occupy most of my time as TinyPilot's founder.
 
 ### Task 1: Coordinating changes
 
@@ -71,20 +78,24 @@ With the complexity of TinyPilot, so many changes have ripple effects.
 
 #### How I can reduce my time here?
 
-This is the same problem I had last year, and I haven't found a good solution.
+One of the suggestions at the meetup was that I should just hire a manager, but that's harder than it sounds. TinyPilot has three teams composed of two to three people each: software development, support engineering, and customer service / local operations. The three teams have mostly disjoint responsibilities.
 
-The best I can do is continue looking for opportunities to delegate while recognizing that it will be hard.
+If I hired someone to manage just one team, that wouldn't save me much time. If I hired someone to manage all three teams, they'd need to be someone who has experience managing a software team, so they'd probably need a salary of $125k/yr or more. That means the cost to hire that person would be at least $200k/yr, which would soak up all of TinyPilot's current profits.
 
-This is a place where it's pretty hard to reduce time. For example, processes around the 3PL do rise to my level because they involve company-level tradeoffs. Do we trust the information that the 3PL gives us, or is it worth our time to verify it? Do we try to push work onto the 3PL that we view as their responsibility or do we take it on ourselves? Do we invest in tooling to make the process on our side easier?
+The best solution I can think of is the underwhelming solution I reached last year: look for more opportunities to delegate.
 
-Look for more opportunities to delegate.
+There are some tasks that I feel like I have to take on because I notice parts that I can't delegate. Often, these tasks have subtasks that I can delegate effectively, but I miss those opportunities because I don't think to look.
+
+The other solution is to pushing more work to vendors instead of doing it in-house. This year, we stopped doing our own fulfillment and transitioned the work a third-party logistics (3PL) vendor. That introduced some new challenges, but it also eliminated a lot of work and other risks. I expect the upcoming transition from in-house product assembly to a contract manufacturer to reduce TinyPilot's complexity even further.
 
 ### Task 2: Managing the relationship with our 3PL partner
 
-One of the big projects this year was transitioning our fulfillment to a third-party logistics (3PL) vendor. I expected the hard work to be picking a vendor and then having them start shipping out our orders. I'm finding that there's a long tail of little processes workflows we still need to figure out:
+I expected the hard work to be picking a vendor and then flipping the switch so that orders ship from their warehouse instead of our office.
 
-- How do we verify that we're not losing track of inventory when we send it from our office to the 3PL warehouse?
-- How do we verify that the 3PL is not losing inventory within their warehouse?
+I'm finding that there's still a long tail of little workflows we still need to figure out with the 3PL vendor:
+
+- How do we keep track of inventory as it travels from our office to the 3PL warehouse?
+- How do we verify that the 3PL isn't losing inventory within their warehouse?
 - How do we resolve issues when the 3PL ships the wrong items in an order?
 - How do we handle customers who want same-day shipping?
 
@@ -92,11 +103,11 @@ One of the big projects this year was transitioning our fulfillment to a third-p
 
 Delegate more to my team.
 
-I've started delegating more of this work to my team, and it's going well. Instead of getting into the nitty gritty of the process, I give them a high-level goal and they take care of implementation. Like, "We need a system for matching our sales numbers with their inventory numbers."
+I've started delegating more of this work to my team, and it's going well. Instead of getting into the nitty gritty of the process, I give them a high-level goal and they take care of implementation. Like, "We need a system for verifying that our sales receipts match the counts in their inventory system."
 
 ### Task 3: Overseeing dev work
 
-I spend a lot of time overseeing dev work because it's the part of TinyPilot I enjoy the most. I'm still a developer at heart even though I don't get to spend much time
+I spend a lot of time overseeing dev work because it's the part of TinyPilot I enjoy the most. I'm still a developer at heart even though I don't get to spend much time writing code.
 
 I can make high-value contributions because I'm in touch with customers. I can often cut cruft because I know very few customers depend on it or that it exists for scenarios that I no longer consider important.
 
@@ -110,37 +121,37 @@ The support engineering team does things like write new tutorials and documentat
 
 I still skim
 
+One thing I _could_ do but I'm kind of afraid to do is stop reading support tickets until my team escalates them to me.
+
 #### How can I reduce my time here?
 
-### Management
+## Getting out of email addiction
 
-Currently, I manage seven teammates within TinyPilot, all of whom work 10-20 hours per week. In addition, I'm the sole point of contact with a lot of our major vendors and partners, including our EU distributor, our hardware manufacturer, and
+Over the last few years, I've oscillated between having a healthy relationship with email and having an unproductive addiction to email.
 
-The 3PL is delicate because we're often letting them know about errors or pointing out discrepancies in the information they tell us.
+### How did I lose my good email habits?
 
-### Why can't I just hire a manager?
+Once I have healthy email habits, it's generally easy to keep them up. What typically knocks me out of my healthy habit is when something happens where I have a legitimate need to watch my email aggressively.
 
-When I was at the meetup, one of the questions was why don't I just delegate to a manager? If I want to spend less time managing and more time developing software or writing, why don't I just hire a manager?
+Recently, the vendor we use to manufacture TinyPilot's metal cases ran late, and we were running out of the cases we had in stock. If we run out of cases, it's a huge pain &mdash; it blocks a lot of work for the team responsible for assembling devices. When that team has nothing to do, I need to scramble to reassign them. And their new tasks have to be things that they can drop on the floor again in a few days when we (hopefully) get cases again.
 
-The issue is that a lot of the management is distinct
+In situations like a case shortage, I feel like there's a legitimate need to check email obsessively. Suppose the vendor in China emails me on a Friday evening asking for a decision. If I let the email sit until Monday morning, they won't see my response until Tuesday morning in China. That's a three-day delay, which possibly translates into three days when TinyPilot can't assemble any new devices.
 
-The good news is that I expect a lot of management work to simplify by the end of the year. If we successfully transition to a contract manufacturer and close our local office, that's a
+The problem is that after the emergency situation is over, I retain the habit of checking my email constantly. And when I check my email and there's nothing for me to respond to, I still crave the dopamine hit, so I check social media, which is never productive. Now instead of taking a 30-second break to check email, I've taken a 10-30-minute break to check social media.
 
-To hire someone who's as capable as me to run
+### Solution 1: Only check email during scheduled email time
 
-### Email addiction
+Historically, the way I break out of a bad email habit is by mapping out my day explicitly.
 
-Because so much of my job has become talking to people rather than doing things, I find myself much more addicted to email.
+Each morning, I split my workday [into 30-minute blocks](/eliminate-distractions/#schedule-time-for-email-texts-and-social-media) and decide how to spend each block. To avoid checking email compulsively, I schedule time for reading and responding to email instead of letting emails be a background hum throughout the day.
 
-It often is helpful if I can get people unblocked by answering an email, but it puts me into a state where I have the compulsion to check my email every few minutes. And then if my inbox is empty, I crave a dopamine hit from something, so then I check social media, which is a useless timesink.
+I need to force myself to get back in this habit. It's easy to keep up once I'm in the rhythm, but .
 
-## Resolutions
+### Solution 2: Empower my teammates to use peer review more
 
-- Create a daily schedule and stick to it
+As I write this, it's 10 AM, and I've resisted checking my email so far today. But I have the burning feeling that I'm blocking work. I had given feedback on several tasks last week
 
-- In the past, one of the things I've found helpful for focus is mapping out my day. I [split my workday into 30-minute blocks](/eliminate-distractions/#schedule-time-for-email-texts-and-social-media). Each morning, I decide in the morning how to spend each block. To avoid checking email compulsively, I schedule in explicit blocks of time for reading and responding to email instead of letting emails be a constant interruption throughout the day.
-
-I've gone in and out of this habit. It's hard to stick to it when most of my work is just and some days, my work is legitimately, "make lots of little decisions via email." In the long-term, I can usually avoid that, but with seven direct reports and four major third-party vendors, there are times where I need to respond to lots of people in a day.
+We use peer reviews, and it goes well, but I'm still doing a lot of review. The two things that I've found hard to delegate to peer review are writing customer-facing documentation and defining internal workflows.
 
 ## Side projects
 
@@ -148,17 +159,39 @@ I've gone in and out of this habit. It's hard to stick to it when most of my wor
 
 Nix has been at the top of my list of interesting-looking technologies for the past year. I've paused my programming side projects to tinker a bit with Nix and NixOS.
 
-I wrote up notes about my first experiences with Nix, and the post. My notes on Nix unexpectedly got a lot of attention on Twitter and Hacker News (TODO: link). That encouraged me to try to capture more of my notes about trying things. My main blog feed is for polished posts, but I've been investing more in a "notes" subsection for things that aren't as polished but I just want to capture what I've learned while it's fresh in my head.
+I wrote up notes about my first experiences with Nix, and the post. My notes on Nix unexpectedly got a lot of attention on [Twitter](https://twitter.com/deliberatecoder/status/1670241507486441473) and [Hacker News](https://news.ycombinator.com/item?id=36387874). That encouraged me to try to capture more of my notes about trying things. My main blog feed is for polished posts, but I've been investing more in a ["notes"](/notes/) subsection for things that aren't as polished but I just want to capture what I've learned while it's fresh in my head.
 
 ### Building my first home server rack
 
+My fiance has pointed out that my office gets dirty because I have wires everywhere that make it hard to clean. I realized I could build a server rack, and we'd both be happy. I'd enjoy a fun project of building a rack, and she'd appreciate the reduction in messiness.
+
+I'm using a managed switch and VLANs for the first time. At first, I found VLANs too cumbersome and hard to debug, but now that I've got the basics, I enjoy them. I want to make VLANs for everything.
+
 ### Implementing an authentication library for Go
+
+When I started making web apps in 2018, I was too aware of the risks of managing authentication, so I always outsourced authentication to third-party services. That worked fine, but it created two other problems. The first was that it limited my products' adoption. Others could only deploy my apps on their servers if they also used the same authentication service I used. The other was test complexity. When I wrote end-to-end tests, they were slow and brittle because they depended on a third-party authentication service.
+
+For my most recent project, [ScreenJournal](https://thescreenjournal.com/), I surveyed [what authentication libraries were available](https://github.com/avelino/awesome-go#authentication-and-oauth). My requirements were:
+
+1. It had to be open-source.
+1. It had to use Go, my current language of choice for web apps.
+1. It had to be a library I build into my app rather than a separate service that runs alongside my app.
+1. It had to support SQLite as a datastore.
+
+[goth](https://github.com/markbates/goth) (formerly gomniauth) is popular, but it breaks requirement (3), as it only works with external third-party services.
+
+The other popular Go authentication solution is [authboss](https://github.com/volatiletech/authboss). The documentation is pretty sparse, which I later discovered was [an intentional choice the author made](authboss-support.png) to limit support requests (I sympathize).
+
+I spent an afternoon trying to implement a simple web app with authboss, but I [couldn't even get the basics working](https://github.com/mtlynch/authboss-minimal/pull/6/files). The more I learned about authboss, the less it seemed to match what I wanted from an authentication library.
+
+Now, I'm trying to create my own reusable authentication library. I'm not trying to make it a popular open-source package, just something that saves me the trouble of copy/pasting a bunch of auth code across all of my hobby projects.
 
 ## Wrap up
 
 ### What got done?
 
 - Built my first home server rack.
+- Learned the basics of Nix and NixOS.
 
 ### Lessons learned
 
@@ -167,5 +200,5 @@ I wrote up notes about my first experiences with Nix, and the post. My notes on 
 ### Goals for next month
 
 - Reach $98k in sales revenue.
-- Stay on schedule for shift to contract manufacturer.
+- Stay on schedule for TinyPilot's shift to our contract manufacturer.
 - Spend less than 40% of my time on email.
