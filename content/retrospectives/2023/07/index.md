@@ -163,11 +163,15 @@ I need to force myself to get back in this habit. It's easy to keep up once I'm 
 
 ### Solution 2: Encourage retroactive feedback
 
-As I write this, it's 10 AM, and I've resisted checking my email so far today. But I have the burning feeling that I'm blocking work. I had given feedback on several tasks last week
+As I write this, it's 10 AM, and I've resisted checking my email so far today. But I have the burning feeling that I'm blocking work.
+
+I think the reason I feel that way is that it's common for my teammates to ask me for feedback on support tickets, which is something I've encouraged. I'm realizing that the downside is that it makes my inbox more time-sensitive than it needs to be. Instead of the ticket being blocked on when either of the two support engineers have time, it's now blocked on me and the specific support engineer who escalated to me. I then feel like I have to respond quickly to avoid making the customer wait for days.
+
+One option we've never tried is retroactive escalation. Instead of pausing a support ticket to wait for my feedback, if the person is somewhat confident, they respond with what they think is best and then in parallel ask me for feedback.
 
 ### Solution 3: Empower my teammates to use peer review more
 
-We use peer reviews, and it goes well, but I'm still doing a lot of review. The two things that I've found hard to delegate to peer review are writing customer-facing documentation and defining internal workflows.
+I mentioned peer reviews when discussing [documentation review](#how-can-i-reduce-my-time-here), but I should be looking for more opportunities for peer review across all types of work. It makes sure people develop skills alongside their teammates and it reduces tasks that are blocked on me specifically.
 
 ## Side projects
 
@@ -184,38 +188,44 @@ I realized I could build a server rack, and we'd both be happy. I'd enjoy a fun 
 
 So, I built my first server rack. It was fun to build, and it does make everything a lot tidier. With everything stacked vertically, there are fewer wires on the floor, and the whole thing moves on wheels for easy cleaning.
 
-TODO: Photo
+{{<img src="server-rack.webp" max-width="400px" alt="Photo of server rack with patch panel, TP-Link switch, Tripp-Lite surge protector, CyberPower UPS, and shelves">}}
 
-I'm using a managed switch and VLANs for the first time. At first, I found VLANs too cumbersome and hard to debug, but now that I've got the basics, I enjoy them. I want to make VLANs for everything.
+I'm using a [managed switch and VLANs](/notes/debugging-vlans-tp-link/) for the first time. At first, I found VLANs too cumbersome and hard to debug. Now that I've got the basics, I enjoy them and want to make VLANs for everything.
 
-I'm working on a longer writeup about how I chose all the components and what mistakes I made.
+I'm working on a longer writeup about how I chose all the components and what mistakes I made, so stay tuned.
 
 ### Learning Nix
 
-Nix has been at the top of my list of interesting-looking technologies for the past year. I've paused my programming side projects to tinker a bit with Nix and NixOS.
+[Nix](https://nixos.org/) has been at the top of my list of interesting-looking technologies for the past year. I've paused my programming side projects to tinker a bit with Nix and NixOS.
 
-I wrote up notes about my first experiences with Nix, and the post. My notes on Nix unexpectedly got a lot of attention on [Twitter](https://twitter.com/deliberatecoder/status/1670241507486441473) and [Hacker News](https://news.ycombinator.com/item?id=36387874). People in the Nix community have been reaching out to me and offering guidance.
+I wrote up notes about my first experiences with Nix, and the post. My notes on Nix unexpectedly got a lot of attention on [Twitter](https://twitter.com/deliberatecoder/status/1670241507486441473) and [Hacker News](https://news.ycombinator.com/item?id=36387874). People in the Nix community have been reaching out to me and offering to help me with the parts where I got stuck.
 
 The results have encouraged me to capture more of my notes from just trying things that I don't fully understand.
 
-My main blog feed is for polished posts, but I've been investing more in a ["notes"](/notes/) subsection for things that aren't as polished but I just want to capture what I've learned while it's fresh in my head. That's why I
+My main blog feed is for polished posts, but I've been investing more in a ["notes"](/notes/) subsection for things that aren't as polished but I just want to capture what I've learned while it's fresh in my head.
 
 ### Implementing an authentication library for Go
 
-When I started making web apps in 2018, I was too aware of the risks of managing authentication, so I always outsourced authentication to third-party services. That worked fine, but it created two other problems. The first was that it limited my products' adoption. Others could only deploy my apps on their servers if they also used the same authentication service I used. The other was test complexity. When I wrote end-to-end tests, they were slow and brittle because they depended on a third-party authentication service.
+When I started making web apps in 2018, I didn't want to roll my own authentication, so I always used third-party services.
 
-For my most recent project, [ScreenJournal](https://thescreenjournal.com/), I surveyed [what authentication libraries were available](https://github.com/avelino/awesome-go#authentication-and-oauth). My requirements were:
+Third-party authentication services worked okay, but it limited my products' adoption. Other developers could only deploy my apps if they also used the same authentication service I used.
+
+The other problem with third-party authentication is that it makes end-to-end tests slower, less reliable, and more complex.
+
+For my most recent project, [ScreenJournal](https://thescreenjournal.com/), I re-evaluated the prospect of bundling authentication into my app rather than relying on a third-party service.
+
+I began by surveying [what authentication libraries were available](https://github.com/avelino/awesome-go#authentication-and-oauth). My requirements were:
 
 1. It had to be open-source.
 1. It had to use Go, my current language of choice for web apps.
 1. It had to be a library I build into my app rather than a separate service that runs alongside my app.
 1. It had to support SQLite as a datastore.
 
-[goth](https://github.com/markbates/goth) (formerly gomniauth) is popular, but it breaks requirement (3), as it only works with external third-party services.
+[goth](https://github.com/markbates/goth) (formerly gomniauth) seems to be the most popular authentication library, but it breaks requirement (3), as it depends on external third-party services.
 
 The other popular Go authentication solution is [authboss](https://github.com/volatiletech/authboss). The documentation is pretty sparse, which I later discovered was [an intentional choice the author made](authboss-support.png) to limit support requests.
 
-I spent an afternoon trying to implement a simple web app with authboss, but I [couldn't even get the basics working](https://github.com/mtlynch/authboss-minimal/pull/6/files). The more I learned about authboss, the less it seemed to match what I wanted from an authentication library.
+I spent an afternoon trying to implement a simple web app with authboss, but I [couldn't even get the basics working](https://github.com/mtlynch/authboss-minimal/pull/6/files). The more I learned about authboss, the less it seemed to match what I wanted from an authentication library. It seems to expect clients to use authboss not only for authentication but also for page rendering and URL path routing, which is more than I want an auth library to handle.
 
 Now, I'm trying to create my own reusable authentication library. I'm not trying to make it a popular open-source package, just something that saves me the trouble of copy/pasting a bunch of auth code across all of my hobby projects.
 
