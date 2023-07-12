@@ -25,6 +25,8 @@ To follow this tutorial, you'll need:
 
 ## Download the NixOS microSD image
 
+TODO: Rewrite for 23.11
+
 As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is NixOS 21.11, which is almost two years old. Later releases don't work on the Raspberry Pi, and I'll explain why [later in this post](#the-future-of-nixos-on-the-raspberry-pi). For now, I'm going to run NixOS on the Pi the only way I know how.
 
 Download the NixOS microSD image from the link below:
@@ -72,6 +74,8 @@ I'm controlling my Pi with [TinyPilot](https://tinypilotkvm.com), a device [I cr
 ## Boot your NixOS system
 
 Power on your Raspberry Pi. If everything went well, you should see a boot sequence like the following:
+
+TODO: Re-do for 23.11
 
 {{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="A successful boot of the NixOS 21.11 microSD image on a Raspberry Pi 4.">}}
 
@@ -348,6 +352,8 @@ I tried again with `nixos-sd-image-22.05.4694.380be19fbd2-aarch64-linux.img` and
 
 ### Gotcha: `reboot` command doesn't work
 
+TODO: Re-do
+
 Even on NixOS 21.11, the latest version I found that works reliably on the Pi 4, I ran into a strange issue after running `sudo nixos-rebuild boot`. The `reboot` and `shutdown` commands fail:
 
 ```text
@@ -421,4 +427,4 @@ sudo apt update && \
   sudo reboot
 ```
 
-The Pi 4 devices I tested booted the NixOS 21.11 disk image out of the box, so the above steps weren't necessary for me.
+The Pi 4 devices I tested booted the NixOS 23.11 disk image out of the box, so the above steps weren't necessary for me.
