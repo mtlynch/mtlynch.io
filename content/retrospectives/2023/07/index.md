@@ -62,13 +62,13 @@ This was a flat month across most metrics. One of my marketing pushes fell flat,
 
 TinyPilot's ad effectiveness decreased substantially. In May, we made $3.64 in revenue for every $1 in ad spend. In June, each dollar of ad spend only got us $2.62 in revenue. Considering that each $2.62 of revenue costs about $0.90 in materials, our ads are still profitable but the margins are slimmer.
 
-I'll give it another month, but if we continue seeing numbers like this, I'll book some time with TinyPilot's marketing consultant to see if there are opportunities to improve.
+I'll give the ads another month. If performance doesn't improve, I'll book some time with TinyPilot's marketing consultant to see what we can fix.
 
 ## Where does my time go?
 
 At a recent indie founder meetup, I mentioned that my biggest challenge was finding time for [tasks that are important but non-urgent](/book-reports/7-habits-of-highly-effective-people/#habit-3-put-first-things-first).
 
-The other meetup attendees were surprised to hear this. I've been running TinyPilot for three years, and the business sounds like it should be easy to manage: we make the same product every day, and we ship it out when customers order it. Why couldn't I just automate or delegate everything? What required my attention specifically?
+The other meetup attendees were surprised. I've been running TinyPilot for three years, and the business sounds like it should be easy to manage: we make the same product every day, and we ship it out when customers order it. Why couldn't I just automate or delegate everything? What required my attention specifically?
 
 Last year, I found it useful to [evaluate how I was spending my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week), so now is a good time to revisit this.
 
@@ -78,9 +78,7 @@ Here are the tasks that occupy most of my time as TinyPilot's founder.
 
 When TinyPilot's team grew past two people, I realized that one of my main responsibilities was to coordinate changes.
 
-We're always iterating on all aspects of the business. We're improving the software, improving the hardware, integrating new vendors, adding more team members, etc. Most changes within one area of the buisness have ripple effects that affect other parts of the business. As TinyPilot has grown in headcount and complexity, the ripple effects have become more frequent and significant.
-
-For example, when I [hired a third employee](/retrospectives/2023/05/#getting-out-of-ldquourgent-moderdquo) at the local office in April, that was a new role within the company. I had to define what the new team member would do and how their work would integrate with the existing staff.
+TinyPilot grows in multiple dimensions in parallel: we improve the software, we improve the hardware, we integrate new vendors, we addi more team members, etc. Changes to one area of the buisness typically have ripple effects that impact other parts. As TinyPilot has grown in headcount and complexity, the ripple effects have become more frequent and significant.
 
 #### How I can reduce my time here?
 
@@ -92,13 +90,13 @@ If I hired someone to manage just one team, that wouldn't save me much time. If 
 
 The best solution I can think of is the same as last year: [juggle fewer projects, and look for more opportunities to delegate](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes).
 
-There are some tasks that I feel like I have to take on because I notice parts that I can't delegate. Often, these tasks have subtasks that I can delegate effectively, but I miss those opportunities because I see one part requires me and fail to consider the possibility of dividing the work.
+There are some tasks that I take on because I notice parts that I can't delegate. For example, if a task consists of subtasks A, B, and C, and part B involves signing a contract on behalf of TinyPilot, I think, "Oh, I'm the only one who can do that." But sometimes I can delegate out tasks A and C, but I forget to consider the possibility.
 
-The other solution is pushing more work to vendors instead of doing it in-house. This year, we stopped doing our own fulfillment and transitioned the work a third-party logistics (3PL) vendor. That's made it harder to handle edge cases, but it eliminated entire categories of work we were managing internally before.
+The other solution is pushing more work to vendors instead and reducing the set of things TinyPilot does in-house. This year, we stopped doing our own fulfillment and transitioned the work a third-party logistics (3PL) vendor. That's made it harder to handle edge cases, but it eliminated entire categories of work we were managing internally before.
 
 ### Task 2: Managing the relationship with our 3PL partner
 
-I expected that the work of transitioning to a 3PL vendor would be heavily front-loaded. It would be hard to pick a vendor and then overhaul all of our normal processes, but then once they got going, it would be pretty much set it and forget it.
+I expected that the work of transitioning to a 3PL vendor would be heavily front-loaded. I knew it would be hard to pick a vendor and make the switch. I though that once they got going, it would be mostly smooth sailing with small adjustments.
 
 I'm finding that there's still a long tail of little workflows we still need to figure out with the 3PL vendor:
 
@@ -107,13 +105,13 @@ I'm finding that there's still a long tail of little workflows we still need to 
 - How do we resolve issues when the 3PL ships the wrong items in an order?
 - How do we handle customers who want same-day shipping?
 
-These are solvable problems, but we continue to hit new issues, so I spend a lot of my time thinking about our 3PL.
+These are solvable problems, but we continue to hit new issues, so I spend a lot of time thinking about our 3PL.
 
 #### How I can reduce my time here?
 
-This is an area where I shoudl be delegating more to my team.
+This is an area where I shoudl be delegating more to the rest of the team.
 
-I've started asking TinyPilot's local staff to become more active in managing the 3PL relationship, and it's going well.
+I've started asking TinyPilot's local staff to become more active in managing the 3PL relationship, and that's working.
 
 Previously, for something like the problem of preventing the 3PL from losing inventory, I'd define a process for auditing their inventory reports and reconciling the numbers with our sales records. Instead, I asked a member of the local staff to do that, and I gave high-level feedback on the process rather than defining everything myself.
 
@@ -129,17 +127,17 @@ The obvious answer here is that I should do less dev work.
 
 Limit my time
 
-### Task 4: Overseeing support work
+### Task 4: Reviewing documentation
 
-The support engineering team does things like write new tutorials and documentation.
+In addition to providing day-to-day customer support, the support engineering team also writes documentation and tutorials. I'm particular about public-facing documentation, so I spend a lot of time reviewing the team's writing and giving feedback about style, clarity, and level of technical ability to target.
 
-I still skim
+This doesn't take a lot of wall clock time, but it requires a lot of my focus. I find it difficult to write clearly, so it's even harder for me to read someone else's writing and articulate what I think is missing or unclear. I often end up the bottleneck on these tasks because even if I have a free hour to review a new tutorial, I often don't have the mental focus to give useful feedback.
 
 #### How can I reduce my time here?
 
-One thing I _could_ do but I'm kind of afraid to do is stop reading support tickets until my team escalates them to me.
+The easiest change I can make here is to make more use of peer reviews. On the dev team, the software engineers review 90% of each other's code without me having to be involved. It's harder to coordinate a consistent style for written English than it is for a programming language, but I think we can get to 80% of the work happening in peer review.
 
-I think there's still value in me at least skimming support threads. It helps me understand what customers are experiencing, and I use that in setting priorities for software development.
+The other change I should make is taking my own bandwidth into account when assigning documentation tasks. I previously would put three tutorials in a row in the support engineering team's task queue, but then I wouldn't have capacity to review everything at once. Until most of the review work is happening in peer review, I should space out documentation tasks more so I have time to review.
 
 ## Getting out of email addiction
 
@@ -149,11 +147,11 @@ Over the last few years, I've oscillated between having a healthy relationship w
 
 Once I have healthy email habits, it's generally easy to keep them up. What typically knocks me out of my healthy habit is when something happens where I have a legitimate need to watch my email aggressively.
 
-Recently, the vendor we use to manufacture TinyPilot's metal cases ran late, and we were running out of the cases we had in stock. If we run out of cases, it's a huge pain &mdash; it blocks a lot of work for the team responsible for assembling devices. When that team has nothing to do, I need to scramble to reassign them. And their new tasks have to be things that they can drop on the floor again in a few days when we (hopefully) get cases again.
+Recently, the vendor that manufactures TinyPilot's metal cases ran late, and we ran out of cases. Running out of cases is a huge pain, as it prevents us from assembling new devices. Then, I need to scramble to reassign tasks, and their new tasks have to be things that they can drop on the floor again in a few days when we (hopefully) get cases again.
 
-In situations like a case shortage, I feel like there's a legitimate need to check email obsessively. Suppose the vendor in China emails me on a Friday evening asking for a decision. If I let the email sit until Monday morning, they won't see my response until Tuesday morning in China. That's a three-day delay, which possibly translates into three days when TinyPilot can't assemble any new devices.
+In situations like a case shortage, I feel like there's a legitimate need to check email obsessively. If the vendor in China emails me on a Friday evening, and I let the email sit until Monday morning, they won't see my response until Tuesday morning in China. That's a three-day delay, which translates into three more days that the local team can't build new devices.
 
-The problem is that after the emergency situation is over, I retain the habit of checking my email constantly. And when I check my email and there's nothing for me to respond to, I still crave the dopamine hit, so I check social media, which is never productive. Now instead of taking a 30-second break to check email, I've taken a 10-30-minute break to check social media.
+The problem is that after the emergency situation is over, I retain the habit of checking my email constantly. And when I check my email and there's nothing for me to respond to, I still crave the dopamine hit, so I check social media. That's never productive. Instead of taking a 30-second break to check email, I've taken a 10-30-minute break to check social media.
 
 ### Solution 1: Only check email during scheduled email time
 
@@ -161,11 +159,13 @@ Historically, the way I break out of a bad email habit is by mapping out my day 
 
 Each morning, I split my workday [into 30-minute blocks](/eliminate-distractions/#schedule-time-for-email-texts-and-social-media) and decide how to spend each block. To avoid checking email compulsively, I schedule time for reading and responding to email instead of letting emails be a background hum throughout the day.
 
-I need to force myself to get back in this habit. It's easy to keep up once I'm in the rhythm, but .
+I need to force myself to get back in this habit. It's easy to keep up once I'm in the rhythm but hard to get into that rhythm. In the past, I grind out the first few days and then it becomes easier and rewarding enough that I don't have to rely on willpower.
 
-### Solution 2: Empower my teammates to use peer review more
+### Solution 2: Encourage retroactive feedback
 
 As I write this, it's 10 AM, and I've resisted checking my email so far today. But I have the burning feeling that I'm blocking work. I had given feedback on several tasks last week
+
+### Solution 3: Empower my teammates to use peer review more
 
 We use peer reviews, and it goes well, but I'm still doing a lot of review. The two things that I've found hard to delegate to peer review are writing customer-facing documentation and defining internal workflows.
 
@@ -176,8 +176,8 @@ We use peer reviews, and it goes well, but I'm still doing a lot of review. The 
 My fiance has pointed out that my office gets dirty because I have wires everywhere that make it hard to clean. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
-{{<img src="office-wires-1.webp" max-width="400px">}}
-{{<img src="office-wires-2.webp" max-width="400px">}}
+{{<img src="office-wires-1.webp" max-width="400px" alt="Photo of lots of wires in my office">}}
+{{<img src="office-wires-2.webp" max-width="400px" alt="Photo of lots of wires in my office">}}
 {{</gallery>}}
 
 I realized I could build a server rack, and we'd both be happy. I'd enjoy a fun project of building the rack, and she'd appreciate the tidiness of having all the wires in a self-contained unit.
