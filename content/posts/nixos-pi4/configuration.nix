@@ -81,5 +81,5 @@ in {
 
   hardware.enableRedistributableFirmware = true;
 
-  system.stateVersion = "21.11";
+  system.stateVersion = "23.11";
 }
