@@ -235,12 +235,14 @@ Developing a resuable authentication library is an interesting challenge because
 
 ### What got done?
 
+- Started the first production batch with a contract manufacturer.
 - Built my first home server rack.
 - Learned the basics of Nix and NixOS.
 
 ### Lessons learned
 
 -
+- Server racks are fun for nerds and their significant others.
 
 ### Goals for next month
 
