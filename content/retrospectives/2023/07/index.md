@@ -17,6 +17,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 - I'm trying to figure out where I'm spending unnecessary time on TinyPilot.
 - I realized I've once again become addicted to email.
+- I built my first server rack.
 
 ## Goal Grades
 
@@ -34,7 +35,7 @@ I signed the purchase order with our contract manufacturer, so the wheels are no
 - **Result**: Published TinyPilot Pro 2.6.0 on schedule.
 - **Grade**: A
 
-Our June release went smoothly but felt underwhelming. A lot of our dev effort the two releases has focused on making updates simpler and less error-prone. The changes have made big differences in how maintainable the software is, but that doesn't sound exciting in a release announcement.
+Our June release went smoothly but felt underwhelming. A lot of our dev effort the last two releases has focused on making updates simpler and less error-prone. The changes have made the software significantly more maintainable, but that doesn't sound exciting in a release announcement.
 
 ### Reach $95k in revenue
 
@@ -58,9 +59,9 @@ TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtu
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-This was a flat month across most metrics. One of my marketing pushes fell flat, but I'm still optimistic about others I have cooking.
+Almost every metric was flat this month. One of my marketing pushes fell flat, but I'm still optimistic about others I have cooking.
 
-TinyPilot's ad effectiveness decreased substantially. In May, we made $3.64 in revenue for every $1 in ad spend. In June, each dollar of ad spend only got us $2.62 in revenue. Considering that each $2.62 of revenue costs about $0.90 in materials, our ads are still profitable but the margins are slimmer.
+TinyPilot's ad effectiveness decreased substantially. In May, we made $3.64 in revenue for every $1 in ad spend. In June, each dollar of ad spend only got us $2.62 in revenue. Considering that $2.62 of revenue costs about $0.90 in materials, our ads are still profitable but the margins are slimmer.
 
 I'll give the ads another month. If performance doesn't improve, I'll book some time with TinyPilot's marketing consultant to see what we can fix.
 
@@ -68,9 +69,9 @@ I'll give the ads another month. If performance doesn't improve, I'll book some 
 
 At a recent indie founder meetup, I mentioned that my biggest challenge was finding time for [tasks that are important but non-urgent](/book-reports/7-habits-of-highly-effective-people/#habit-3-put-first-things-first).
 
-The other meetup attendees were surprised. I've been running TinyPilot for three years, and the business sounds like it should be easy to manage: we make the same product every day, and we ship it out when customers order it. Why couldn't I just automate or delegate everything? What required my attention specifically?
+The other meetup attendees were surprised. I've been running TinyPilot for three years, and the business sounds like it should be easy to manage: we make the same product every day &mdash; when customers place an order, we ship it out. Why couldn't I just automate or delegate everything? What required my attention specifically?
 
-Last year, I found it useful to [evaluate how I was spending my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week), so now is a good time to revisit this.
+Last year, I found it useful to [evaluate how I was spending my time](/retrospectives/2022/02/#how-can-i-manage-tinypilot-with-only-20-hours-per-week), so I'm repeating the exercise.
 
 Here are the tasks that occupy most of my time as TinyPilot's founder.
 
@@ -82,26 +83,26 @@ TinyPilot grows in multiple dimensions in parallel: we improve the software, we 
 
 #### How I can reduce my time here?
 
-One of the suggestions at the meetup was that I should just hire a manager. That's harder than it sounds.
+Some of the other attendees at the meetup suggested that I should just hire a manager. That's harder than it sounds.
 
 TinyPilot has three teams composed of two to three people each: software development, support engineering, and customer service / local operations. The three teams have mostly disjoint responsibilities.
 
-If I hired someone to manage just one team, that wouldn't save me much time. If I hired someone to manage all three teams, they'd need experience managing a software team, so they'd probably need a salary of $125k/yr or more. That means the cost to hire that person would be at least $200k/yr, which would consume all of TinyPilot's current profits.
+If I hired someone to manage only one of TinyPilot's team, that wouldn't save much time. If I hired someone to manage all three teams, they'd need experience managing a software team, so they'd probably need a salary of $125k/yr or more. That means the cost to hire that person would be at least $200k/yr, which would consume all of TinyPilot's current profits.
 
 The best solution I can think of is the same as last year: [juggle fewer projects, and look for more opportunities to delegate](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes).
 
-There are some tasks that I take on because I notice parts that I can't delegate. For example, if a task consists of subtasks A, B, and C, and part B involves signing a contract on behalf of TinyPilot, I think, "Oh, I'm the only one who can do that." But sometimes I can delegate out tasks A and C, but I forget to consider the possibility.
+There are some tasks that I take on because I notice parts that I can't delegate. For example, if a task consists of subtasks A, B, and C, and part B involves signing a contract on behalf of TinyPilot, I think, "Oh, I'm the only one who can do that." In some of those cases, I can delegate out tasks A and C, but I forget to consider the possibility.
 
-The other solution is pushing more work to vendors instead and reducing the set of things TinyPilot does in-house. This year, we stopped doing our own fulfillment and transitioned the work a third-party logistics (3PL) vendor. That's made it harder to handle edge cases, but it eliminated entire categories of work we were managing internally before.
+The other solution is pushing more work to vendors and reducing the set of things TinyPilot does in-house. This year, we stopped doing our own fulfillment and transitioned the work a third-party logistics (3PL) vendor. That's made it harder to handle edge cases, but it eliminated entire categories of work we were managing before.
 
 ### Task 2: Managing the relationship with our 3PL partner
 
-I expected that the work of transitioning to a 3PL vendor would be heavily front-loaded. I knew it would be hard to pick a vendor and make the switch. I though that once they got going, it would be mostly smooth sailing with small adjustments.
+I expected that the work of transitioning to a 3PL vendor would be heavily front-loaded. I knew it would be hard to pick a vendor and make the switch, but I thought after that would mostly be smooth sailing.
 
 I'm finding that there's still a long tail of little workflows we still need to figure out with the 3PL vendor:
 
 - How do we keep track of inventory as it travels from our office to the 3PL warehouse?
-- How do we verify that the 3PL isn't losing inventory within their warehouse?
+- How do we verify that the 3PL isn't losing inventory at their warehouse?
 - How do we resolve issues when the 3PL ships the wrong items in an order?
 - How do we handle customers who want same-day shipping?
 
@@ -109,7 +110,7 @@ These are solvable problems, but we continue to hit new issues, so I spend a lot
 
 #### How I can reduce my time here?
 
-This is an area where I shoudl be delegating more to the rest of the team.
+This is an area where I should be delegating more to the rest of the team.
 
 I've started asking TinyPilot's local staff to become more active in managing the 3PL relationship, and that's working.
 
@@ -117,27 +118,35 @@ Previously, for something like the problem of preventing the 3PL from losing inv
 
 ### Task 3: Overseeing dev work
 
-I spend a lot of time overseeing dev work because it's the part of TinyPilot I enjoy the most. I'm still a developer at heart even though I don't get to spend much time writing code.
+I spend a lot of time overseeing dev work because the software is the part of TinyPilot I enjoy most. I'm still a developer at heart even though I don't get to spend much time writing code.
 
-There are certain tasks I can do efficiently because I have more context than the dev team. contributions because I'm in touch with customers. I can often cut cruft because I know very few customers depend on it or that it exists for scenarios that I no longer consider important.
+When I have a few hours free, I often spend them fixing a small bug or tidying up the code in some way. But sometimes seemingly small changes [balloon into days of work](https://github.com/tiny-pilot/tinypilot/pull/1352).
 
 #### How I can reduce my time here?
 
-The obvious answer here is that I should do less dev work.
+This one's hard because the obvious solution is, "Michael should stop writing code."
 
-Limit my time
+But I _like_ writing code...
+
+The more practical solution is that I should be more conservative in what tasks I take on. I should limit my dev work to:
+
+- Improvements to developer experience like better documentation, improved tests, or new convenience scripts
+- Changes where my historical knowledge or context within the company makes it easier for me to make the change directly than to define the change for someone else
+- Experimental changes that are beneficial if they work but I can throw them away if they don't
 
 ### Task 4: Reviewing documentation
 
 In addition to providing day-to-day customer support, the support engineering team also writes documentation and tutorials. I'm particular about public-facing documentation, so I spend a lot of time reviewing the team's writing and giving feedback about style, clarity, and level of technical ability to target.
 
-This doesn't take a lot of wall clock time, but it requires a lot of my focus. I find it difficult to write clearly, so it's even harder for me to read someone else's writing and articulate what I think is missing or unclear. I often end up the bottleneck on these tasks because even if I have a free hour to review a new tutorial, I often don't have the mental focus to give useful feedback.
+Reviewing documentation doesn't take a lot of wall clock time, but it requires a lot of my focus. I find it mentally draining to be clear in my own writing &mdash; it's even harder for me to read someone else's writing and articulate what I think is missing or unclear.
+
+I often end up the bottleneck on documentation tasks because even if I have a free hour to review a new tutorial, I often don't have the mental focus to give useful feedback.
 
 #### How can I reduce my time here?
 
-The easiest change I can make here is to make more use of peer reviews. On the dev team, the software engineers review 90% of each other's code without me having to be involved. It's harder to coordinate a consistent style for written English than it is for a programming language, but I think we can get to 80% of the work happening in peer review.
+The easiest change I can make here is to make more use of peer reviews. On the dev team, the software engineers review 90% of each other's code without me having to be involved. It's harder to coordinate a consistent style for written English than it is for code, but I think we can get to 80% of the work happening in peer review.
 
-The other change I should make is taking my own bandwidth into account when assigning documentation tasks. I previously would put three tutorials in a row in the support engineering team's task queue, but then I wouldn't have capacity to review everything at once. Until most of the review work is happening in peer review, I should space out documentation tasks more so I have time to review.
+The other change I should make is taking my own bandwidth into account when assigning documentation tasks. I previously would add three tutorials in a row to the support engineering team's task queue, but then I wouldn't have capacity to review everything at once. I should space out documentation tasks more so I have time to review.
 
 ## Getting out of email addiction
 
@@ -145,13 +154,13 @@ Over the last few years, I've oscillated between having a healthy relationship w
 
 ### How did I lose my good email habits?
 
-Once I have healthy email habits, it's generally easy to keep them up. What typically knocks me out of my healthy habit is when something happens where I have a legitimate need to watch my email aggressively.
+Once I have healthy email habits, it's generally easy to keep them up. What typically knocks me out of my healthy habit is an event that gives me a legitimate reason to watch my email aggressively.
 
-Recently, the vendor that manufactures TinyPilot's metal cases ran late, and we ran out of cases. Running out of cases is a huge pain, as it prevents us from assembling new devices. Then, I need to scramble to reassign tasks, and their new tasks have to be things that they can drop on the floor again in a few days when we (hopefully) get cases again.
+Recently, the vendor that manufactures TinyPilot's metal cases ran late, and we ran out of cases. Running out of cases is a huge pain, as it prevents us from assembling new devices. That means I need to scramble to reassign tasks to the local team, and their new tasks have to be things that they can drop on the floor again in a few days when we (hopefully) get cases.
 
-In situations like a case shortage, I feel like there's a legitimate need to check email obsessively. If the vendor in China emails me on a Friday evening, and I let the email sit until Monday morning, they won't see my response until Tuesday morning in China. That's a three-day delay, which translates into three more days that the local team can't build new devices.
+In situations like a case shortage, there's a legitimate need to check email obsessively. If the vendor in China emails me on a Friday evening, and I let the email sit until Monday morning, they won't see my response until Tuesday morning in China. That's a three-day delay, which translates into three more days that the local team can't build new devices.
 
-The problem is that after the emergency situation is over, I retain the habit of checking my email constantly. And when I check my email and there's nothing for me to respond to, I still crave the dopamine hit, so I check social media. That's never productive. Instead of taking a 30-second break to check email, I've taken a 10-30-minute break to check social media.
+The problem is that after the emergency situation is over, I retain the habit of checking my email constantly. And when I check my email and find nothing urgent, I still crave the dopamine hit, so I check social media. That's never productive. Instead of taking a 30-second break to check email, I've taken a 10-30-minute break to check social media.
 
 ### Solution 1: Only check email during scheduled email time
 
@@ -167,28 +176,30 @@ As I write this, it's 10 AM, and I've resisted checking my email so far today. B
 
 I think the reason I feel that way is that it's common for my teammates to ask me for feedback on support tickets, which is something I've encouraged. I'm realizing that the downside is that it makes my inbox more time-sensitive than it needs to be. Instead of the ticket being blocked on when either of the two support engineers have time, it's now blocked on me and the specific support engineer who escalated to me. I then feel like I have to respond quickly to avoid making the customer wait for days.
 
-One option we've never tried is retroactive escalation. Instead of pausing a support ticket to wait for my feedback, if the person is somewhat confident, they respond with what they think is best and then in parallel ask me for feedback.
+One option we've never tried is "parallel escalation." Instead of pausing a support ticket to wait for my feedback, I want to encourage people to continue working with the customer and asking me in parallel if I have feedback.
 
 ### Solution 3: Empower my teammates to use peer review more
 
-I mentioned peer reviews when discussing [documentation review](#how-can-i-reduce-my-time-here), but I should be looking for more opportunities for peer review across all types of work. It makes sure people develop skills alongside their teammates and it reduces tasks that are blocked on me specifically.
+I mentioned peer reviews when discussing [documentation review](#how-can-i-reduce-my-time-here), but I should be looking for more opportunities for peer review across all types of work. It makes sure people develop skills alongside their teammates, and it reduces tasks that are blocked on me specifically.
 
 ## Side projects
 
 ### Building my first home server rack
 
-My fiance has pointed out that my office gets dirty because I have wires everywhere that make it hard to clean. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
+Ever since building [my first homelab server](/building-a-vm-homelab-2017/), my office has accumulated a collection of servers and networking equipment.
+
+My fiancé has pointed out that my office gets dirty because I have wires everywhere that discourage vacuuming. I thought, "What? No, this is a normal amount of wires." But then I started looking at them and realized it was kind of a lot of wires...
 
 {{<gallery caption="My office, upon closer inspection, kind of had a lot of wires">}}
 {{<img src="office-wires-1.webp" max-width="400px" alt="Photo of lots of wires in my office">}}
 {{<img src="office-wires-2.webp" max-width="400px" alt="Photo of lots of wires in my office">}}
 {{</gallery>}}
 
-I realized I could build a server rack, and we'd both be happy. I'd enjoy a fun project of building the rack, and she'd appreciate the tidiness of having all the wires in a self-contained unit.
+It occurred to us that I could make both of us happy by building a server rack. I'd enjoy a fun homelab project, and she'd appreciate the tidiness of having all the wires in a self-contained unit.
 
 So, I built my first server rack. It was fun to build, and it does make everything a lot tidier. With everything stacked vertically, there are fewer wires on the floor, and the whole thing moves on wheels for easy cleaning.
 
-{{<img src="server-rack.webp" max-width="400px" alt="Photo of server rack with patch panel, TP-Link switch, Tripp-Lite surge protector, CyberPower UPS, and shelves">}}
+{{<img src="server-rack.webp" max-width="400px" alt="Photo of server rack with patch panel, TP-Link switch, Tripp-Lite surge protector, CyberPower UPS, and shelves" caption="My first home server rack">}}
 
 I'm using a [managed switch and VLANs](/notes/debugging-vlans-tp-link/) for the first time. At first, I found VLANs too cumbersome and hard to debug. Now that I've got the basics, I enjoy them and want to make VLANs for everything.
 
@@ -196,25 +207,21 @@ I'm working on a longer writeup about how I chose all the components and what mi
 
 ### Learning Nix
 
-[Nix](https://nixos.org/) has been at the top of my list of interesting-looking technologies for the past year. I've paused my programming side projects to tinker a bit with Nix and NixOS.
+[Nix](https://nixos.org/) has been at the top of my list of interesting-looking technologies for the past year, so I recently invested some time into learning more about it.
 
-I wrote up notes about my first experiences with Nix, and the post. My notes on Nix unexpectedly got a lot of attention on [Twitter](https://twitter.com/deliberatecoder/status/1670241507486441473) and [Hacker News](https://news.ycombinator.com/item?id=36387874). People in the Nix community have been reaching out to me and offering to help me with the parts where I got stuck.
+I wrote up [notes about my first experiences with Nix](/notes/nix-first-impressions/), and they unexpectedly got a lot of attention on [Hacker News](https://news.ycombinator.com/item?id=36387874) and [Twitter](https://twitter.com/deliberatecoder/status/1670241507486441473). People in the Nix community have been reaching out to me and offering to help me with the parts where I got stuck.
 
-The results have encouraged me to capture more of my notes from just trying things that I don't fully understand.
-
-My main blog feed is for polished posts, but I've been investing more in a ["notes"](/notes/) subsection for things that aren't as polished but I just want to capture what I've learned while it's fresh in my head.
+The results have encouraged me to capture more of my [notes](/notes/) when I'm experimenting with technologies that I don't fully understand.
 
 ### Implementing an authentication library for Go
 
 When I started making web apps in 2018, I didn't want to roll my own authentication, so I always used third-party services.
 
-Third-party authentication services worked okay, but it limited my products' adoption. Other developers could only deploy my apps if they also used the same authentication service I used.
+Third-party authentication services worked okay, but it limited my adoption of my open-source projects. Other developers could only deploy my apps if they also used the same authentication service I used.
 
 The other problem with third-party authentication is that it makes end-to-end tests slower, less reliable, and more complex.
 
-For my most recent project, [ScreenJournal](https://thescreenjournal.com/), I re-evaluated the prospect of bundling authentication into my app rather than relying on a third-party service.
-
-I began by surveying [what authentication libraries were available](https://github.com/avelino/awesome-go#authentication-and-oauth). My requirements were:
+For my most recent project, [ScreenJournal](https://thescreenjournal.com/), I looked for a way to avoid a third-party service for authentication. I began by surveying [what authentication libraries were available](https://github.com/avelino/awesome-go#authentication-and-oauth). My requirements were:
 
 1. It had to be open-source.
 1. It had to use Go, my current language of choice for web apps.
@@ -223,11 +230,13 @@ I began by surveying [what authentication libraries were available](https://gith
 
 [goth](https://github.com/markbates/goth) (formerly gomniauth) seems to be the most popular authentication library, but it breaks requirement (3), as it depends on external third-party services.
 
-The other popular Go authentication solution is [authboss](https://github.com/volatiletech/authboss). The documentation is pretty sparse, which I later discovered was [an intentional choice the author made](authboss-support.png) to limit support requests.
+The other popular Go authentication solution is [authboss](https://github.com/volatiletech/authboss). It meets all my requirements, but the documentation is pretty sparse. That turned out to be [an intentional choice the author made](authboss-support.png) to limit support requests.
 
 I spent an afternoon trying to implement a simple web app with authboss, but I [couldn't even get the basics working](https://github.com/mtlynch/authboss-minimal/pull/6/files). The more I learned about authboss, the less it seemed to match what I wanted from an authentication library. It seems to expect clients to use authboss not only for authentication but also for page rendering and URL path routing, which is more than I want an auth library to handle.
 
-Now, I'm trying to create my own reusable authentication library. I'm not trying to make it a popular open-source package, just something that saves me the trouble of copy/pasting a bunch of auth code across all of my hobby projects.
+Now, I'm trying to create my own reusable authentication library. I'm not trying to make it a popular open-source package, just something that saves me from copy/pasting a bunch of auth code across all of my hobby projects.
+
+So far, all it can do is [check if a user's password is correct](https://github.com/mtlynch/screenjournal/blob/02b1c3cdce132380f3f219c924481d88dc198b3b/auth/simple/authenticator.go). It's not reusable yet because the client still [has to create the password hash](https://github.com/mtlynch/screenjournal/blob/02b1c3cdce132380f3f219c924481d88dc198b3b/auth/auth.go), and I want that to be the auth library's job.
 
 Developing a resuable authentication library is an interesting challenge because it forces me to use Go features I don't normally use. It also stretches my architecture skills because I have to weigh tradeoffs between the library simplifying things vs. being more flexible to different forms of authentication.
 
@@ -235,14 +244,14 @@ Developing a resuable authentication library is an interesting challenge because
 
 ### What got done?
 
-- Started the first production batch with a contract manufacturer.
+- Started working with a contract manufacturer on their first production batch of TinyPilot Voyager 2a devices.
 - Built my first home server rack.
 - Learned the basics of Nix and NixOS.
 
 ### Lessons learned
 
 -
-- Server racks are fun for nerds and their significant others.
+- Server racks are fun for homelab nerds and their significant others.
 
 ### Goals for next month
 
