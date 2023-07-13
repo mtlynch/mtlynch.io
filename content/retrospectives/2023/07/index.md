@@ -1,7 +1,9 @@
 ---
 title: "TinyPilot: Month 36"
-date: 2023-07-05T10:24:53-04:00
+date: 2023-07-13T00:00:00-04:00
 description: Where is my time going? (2023 edition)
+images:
+  - /retrospectives/2023/07/server-rack.webp
 ---
 
 {{<notice type="info">}}
