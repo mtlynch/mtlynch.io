@@ -37,14 +37,14 @@ I signed the purchase order with our contract manufacturer, so the wheels are in
 - **Result**: Published TinyPilot Pro 2.6.0 on schedule.
 - **Grade**: A
 
-Our June release went smoothly but felt underwhelming. A lot of our dev effort the last two releases has been making updates simpler and less error-prone. The changes have made the software significantly more maintainable, but that doesn't sound exciting in a release announcement.
+Our June release went smoothly but felt underwhelming. A lot of our dev effort in the last two releases has been making updates simpler and less error-prone. The changes have made the software significantly more maintainable, but that doesn't sound exciting in a release announcement.
 
 ### Reach $95k in revenue
 
 - **Result**: Reached $93k in revenue.
 - **Grade**: C
 
-TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtube.com/watch?v=tx724dhxGxc) but it got a tepid response, so we saw fewer sales than I hoped.
+TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtube.com/watch?v=tx724dhxGxc) but got a tepid response, so we saw fewer sales than I hoped.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -83,9 +83,9 @@ When TinyPilot's team grew past two people, I realized that one of my main respo
 
 TinyPilot grows in multiple dimensions in parallel: we improve the software, we improve the hardware, we integrate new vendors, we add more team members, etc.
 
-Changes to one area of the buisness typically have ripple effects that impact other parts. As TinyPilot has grown in headcount and complexity, the ripple effects have become more frequent and significant.
+Changes to one area of the business typically have ripple effects that impact other parts. As TinyPilot has grown in headcount and complexity, the ripple effects have become more frequent and significant.
 
-#### How I can reduce my time here?
+#### How can I reduce my time here?
 
 Some of the meetup attendees suggested that I should just hire a manager. That's harder than it sounds.
 
@@ -95,7 +95,7 @@ If I hired someone to manage only one of TinyPilot's team, that wouldn't save mu
 
 The best solution I can think of is the same as last year: [juggle fewer projects, and look for more opportunities to delegate](/retrospectives/2022/02/#how-can-i-spend-less-time-coordinating-changes).
 
-There are some tasks that I take on because I notice parts that I can't delegate. For example, if a task consists of subtasks A, B, and C, and part B involves signing a contract on behalf of TinyPilot, I think, "Oh, I'm the only one who can do that." In some of those cases, I can delegate out tasks A and C, but I forget to consider the possibility.
+There are some tasks that I take on because I notice parts that I can't delegate. For example, if a task consists of subtasks A, B, and C, and part B involves signing a contract on behalf of TinyPilot, I think, "Oh, I'm the only one who can do that." In some of those cases, I can delegate tasks A and C, but I forget to consider the possibility.
 
 The other solution is pushing more work to vendors and reducing the set of things TinyPilot does in-house. This year, we stopped doing our own fulfillment and transitioned the work to a third-party logistics (3PL) vendor. That's made it harder to handle edge cases, but it eliminated entire categories of work we were managing before.
 
@@ -112,7 +112,7 @@ I'm finding that there's still a long tail of little workflows we still need to 
 
 These are solvable problems, but we continue to hit new issues, so I spend a lot of time thinking about our 3PL.
 
-#### How I can reduce my time here?
+#### How can I reduce my time here?
 
 This is an area where I should be delegating more to the rest of the team.
 
@@ -122,11 +122,11 @@ Previously, for something like the problem of preventing the 3PL from losing inv
 
 ### Task 3: Contributing to software development
 
-I spend a lot of time involved in TinyPilot's software development because that's the part of TinyPilot I enjoy most. I'm still a developer at heart even though I don't get to spend much time writing code.
+I spend a lot of time involved in TinyPilot's software development because that's the part of TinyPilot I enjoy most. I'm still a developer at heart, even though I don't get to spend much time writing code.
 
 When I have a few hours free, I often spend them fixing a small bug or tidying up the code in some way. But sometimes seemingly small changes [balloon into days of work](https://github.com/tiny-pilot/tinypilot/pull/1352).
 
-#### How I can reduce my time here?
+#### How can I reduce my time here?
 
 This one's hard because the obvious solution is, "Michael should stop writing code."
 
@@ -136,7 +136,7 @@ The more practical solution is that I should be more conservative in the tasks I
 
 - improvements to developer experience like better documentation, improved tests, or new convenience scripts
 - changes where my historical knowledge or context within the company make it easier for me to make the change than to define the change for someone else
-- experimental changes that are beneficial if they work but I can throw them away if they don't
+- experimental changes that are beneficial if they work, but I can throw them away if they don't
 
 ### Task 4: Reviewing documentation
 
@@ -150,7 +150,7 @@ I often end up becoming the bottleneck on documentation tasks because even if I 
 
 The easiest change I can make is to rely more on peer reviews. On the dev team, the software engineers review 90% of each other's code without me. It's harder to coordinate a consistent style for written English than it is for code, but I think we can do about 80% of documentation editing in peer review.
 
-The other change I should make is taking my own bandwidth into account when assigning documentation tasks. I previously would add three tutorials in a row to the support engineering team's task queue, but then I wouldn't have capacity to review everything at once. I should space out documentation tasks more so I have time to review.
+The other change I should make is taking my own bandwidth into account when assigning documentation tasks. I previously would add three tutorials in a row to the support engineering team's task queue, but then I wouldn't have the capacity to review everything at once. I should space out documentation tasks more so I have time to review.
 
 ## Getting out of email addiction
 
@@ -172,7 +172,7 @@ Historically, the way I break out of a bad email habit is by mapping out my day 
 
 Each morning, I split my workday [into 30-minute blocks](/eliminate-distractions/#schedule-time-for-email-texts-and-social-media) and decide how to spend each block. To avoid checking email compulsively, I schedule time for reading and responding to email instead of letting emails be a background hum throughout the day.
 
-I need to force myself to get back into this habit. It's easy to keep up once I'm in the rhythm but hard to get into that rhythm. In the past, I grind out the first few days and then it becomes easier and rewarding enough that I don't have to rely on willpower.
+I need to force myself to get back into this habit. It's easy to keep up once I'm in the rhythm but hard to get into that rhythm. In the past, I grind out the first few days, and then it becomes easier and rewarding enough that I don't have to rely on willpower.
 
 ### Solution 2: Encourage retroactive feedback
 
@@ -180,7 +180,7 @@ As I write this, it's 10 AM, and I've resisted checking my email so far today. B
 
 I feel that way because it's common for my teammates to ask me for feedback on support tickets, which is something I've encouraged.
 
-I'm realizing that teammates exalating support tickets to me makes my inbox more time-sensitive. Instead of the ticket being blocked on when either of the two support engineers have time, it's now blocked on me and the specific support engineer who escalated to me. I then feel like I have to respond quickly to avoid making the customer wait for days.
+I'm realizing that teammates escalating support tickets to me makes my inbox more time-sensitive. Instead of the ticket being blocked on when either of the two support engineers have time, it's now blocked on me and the specific support engineer who escalated to me. I then feel like I have to respond quickly to avoid making the customer wait for days.
 
 One option we've never tried is "parallel escalation." Instead of pausing a support ticket to wait for my feedback, I should encourage teammates to continue working with the customer and ask me for feedback in parallel.
 
@@ -209,7 +209,7 @@ So, I built my first server rack. It was fun to build, and it does make everythi
 
 I'm using a [managed switch and VLANs](/notes/debugging-vlans-tp-link/) for the first time. At first, I found VLANs too cumbersome and hard to debug. Now that I've got the basics, I enjoy them and want to make VLANs for everything.
 
-I'm working on a longer writeup about how I chose all the components and what mistakes I made, so stay tuned.
+I'm working on a longer write-up about how I chose all the components and what mistakes I made, so stay tuned.
 
 ### Learning Nix
 
@@ -223,7 +223,7 @@ The results have encouraged me to capture more of my [notes](/notes/) when I'm e
 
 When I started making web apps in 2018, I didn't want to roll my own authentication, so I always used third-party services.
 
-Third-party authentication services worked okay, but it limited adoption of my open-source projects. Other developers could only deploy my apps if they used the same authentication service as I did.
+Third-party authentication services worked okay, but they limited adoption of my open-source projects. Other developers could only deploy my apps if they used the same authentication service as I did.
 
 The other problem with third-party authentication is that it makes end-to-end tests slower, less reliable, and more complex.
 
@@ -238,13 +238,13 @@ For my most recent project, [ScreenJournal](https://thescreenjournal.com/), I lo
 
 The other popular Go authentication solution is [authboss](https://github.com/volatiletech/authboss). It meets all my requirements, but the documentation is pretty sparse. I discovered that was [an intentional choice the author made](authboss-support.png) to limit support requests.
 
-I spent an afternoon trying to implement a simple web app with authboss, but I [couldn't even get the basics working](https://github.com/mtlynch/authboss-minimal/pull/6/files). The more I learned about authboss, the less matched what I wanted. It seems to expect integrators to use authboss not only for authentication but also for page rendering and URL path routing, which is more than I want an auth library to handle.
+I spent an afternoon trying to implement a simple web app with authboss, but I [couldn't even get the basics working](https://github.com/mtlynch/authboss-minimal/pull/6/files). The more I learned about authboss, the less it matched what I wanted. It seems to expect integrators to use authboss not only for authentication but also for page rendering and URL path routing, which is more than I want an auth library to handle.
 
 Now, I'm trying to create my own reusable authentication library. I'm not trying to make it a popular open-source package, just something that saves me from copy/pasting a bunch of auth code across all of my hobby projects.
 
 So far, all it can do is [check if a user's password is correct](https://github.com/mtlynch/screenjournal/blob/02b1c3cdce132380f3f219c924481d88dc198b3b/auth/simple/authenticator.go). It's not reusable yet because the client still [has to create the password hash](https://github.com/mtlynch/screenjournal/blob/02b1c3cdce132380f3f219c924481d88dc198b3b/auth/auth.go) &mdash; and I want that to be the auth library's job.
 
-Developing a resuable authentication library is an interesting challenge because it forces me to use Go features I don't normally use. It also stretches my architecture skills because I have to weigh tradeoffs between the library simplifying things vs. being more flexible to different forms of authentication.
+Developing a reusable authentication library is an interesting challenge because it forces me to use Go features I don't normally use. It also stretches my architecture skills because I have to weigh tradeoffs between the library simplifying things vs. being more flexible to different forms of authentication.
 
 ## Wrap up
 
