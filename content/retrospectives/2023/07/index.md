@@ -250,7 +250,11 @@ Developing a resuable authentication library is an interesting challenge because
 
 ### Lessons learned
 
--
+- There are several opportunities for me to use my time as founder more effectively:
+  - Look for more opportunities to delegate tasks and break up larger tasks for easier delegation.
+  - Be more conservative in which dev tasks I take on.
+  - Schedule my email checking times more deliberately.
+  - Encourage my teammates to make more use of peer review.
 - Server racks are fun for homelab nerds and their significant others.
 
 ### Goals for next month
