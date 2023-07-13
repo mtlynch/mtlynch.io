@@ -124,6 +124,8 @@ Fiber keys don't stay in place well
 
 ### Incorrect length Ethernet cables
 
+### Mixing SFP+ multimode with single mode
+
 ### 10G
 
 Mellanox - No flashing lights when I connected my main pc
