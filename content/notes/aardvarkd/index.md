@@ -3,12 +3,6 @@ title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
 date: 2023-07-17T07:19:27-04:00
 ---
 
-- Dan Bricklin
-- Dislike
-  - Way too much time on dumb stuff
-  - Audio is bad
-  - People are overexposed and shot from weirdly close
-
 ## What was going on in 2005?
 
 The most enjoyable part is that it's an interesting time capsule
@@ -24,17 +18,15 @@ Joel is presenting at a "trade show" which turns out to be a ColdFusion conferen
 
 ### Y Combinator
 
-Paul Graham is XX years old. He had sold Viaweb to XX XX years prior.
+Paul Graham is 41 years old. He had sold his startup, Viaweb, to Yahoo for $50M in 1998, then he became popular for the essays he published on his blog.
 
-Jessica Livingston is XX years old.
+Jessica Livingston is 34 years old.
 
 Paul and Jessica lived together but had not yet married.
 
-At the time of the documentary,
+They had co-founded Y Combinator together a few months before, and they were in the middle of YC's first batch of companies, which included a then-unknown project called reddit.
 
-Jessica Livingston captures why it was interesting - seeing founders when they're vulnerable.
-
-### Reddit
+### reddit
 
 spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build. But in 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he slept in bed with his laptop.
 
@@ -61,6 +53,12 @@ One of the interns says very seriously how he has to stay grounded because one d
 ## Capture vulnerability
 
 TODO: Jessica Livingston's quote
+
+Jessica Livingston captures why it was interesting - seeing founders when they're vulnerable.
+
+## Other takeaways
+
+Dan Bricklin, creator of VisiCalc, didn't really grab me.
 
 ## Joel liked it, apparently
 
