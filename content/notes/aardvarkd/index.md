@@ -93,10 +93,9 @@ https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helpe
 
 ## Where are they now?
 
-### Tyler Griffin Hicks-Wright
+### The interns
 
-took it over but then shut it down in 2022
-https://tghw.com
+### Tyler Griffin Hicks-Wright
 
 In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator, but Tyler was rejected by his _Aardvark'd_ co-star, Paul Graham and [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
@@ -105,6 +104,8 @@ In 2014, Fog Creek restructured to spin out Trello in 2014, Tyler [acquired the 
 At the time of the shutdown notice, people assumed Tyler was shutting down the company to sell the copilot.com domain Github, who had recently launched a well-known product called Copilot. Surprisingly, the buyer wasn't Github but rather a company that makes CRM software for service businesses.
 
 {{<img src="new-copilot.png" caption="The new owner of the copilot.com domain is a company that makes CRM software for service businesses." max-width="600px">}}
+
+- [Tyler's website](https://tghw.com)
 
 ### Michael Lehenbauer
 
@@ -131,7 +132,18 @@ https://www.yaronguez.com/
 Co founder of a very buzzwordy consulting firm
 https://www.trestian.com/#about
 
-### Liz Gordon
+### Other Fog Creek employees
+
+#### Joel Spolsky
+
+#### Michael Pryor
+
+became CEO of trello
+https://www.joelonsoftware.com/2014/07/24/trello-inc/
+
+Joel Spolsky surprisingly stingy with praise.
+
+#### Liz Gordon
 
 was the office manager and became head of people at Fog Creek, is now chief people officer of Splash.
 
@@ -139,18 +151,19 @@ https://splashthat.com/about-us
 
 They shush Liz on her birthday
 
-### Michael Pryor
+### Y Combinator people
 
-became CEO of trello
-https://www.joelonsoftware.com/2014/07/24/trello-inc/
+#### Paul Graham
 
-Joel Spolsky surprisingly stingy with praise.
+#### Jessica Livingston
 
-### Alexis Ohanian
+### Reddit founders
 
-### Steve Huffman
+#### Alexis Ohanian
 
-### Aaron Swartz
+#### Steve Huffman
+
+#### Aaron Swartz
 
 He continued working on reddit after Conde Nast acquired it, but he [complained publicly](http://www.aaronsw.com/weblog/officespace) about working within a larger corporation and was fired from the company [in 2007](http://blogoscoped.com/archive/2007-05-07-n78.html).
 
