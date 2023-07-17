@@ -145,3 +145,17 @@ became CEO of trello
 https://www.joelonsoftware.com/2014/07/24/trello-inc/
 
 Joel Spolsky surprisingly stingy with praise.
+
+### Alexis Ohanian
+
+### Steve Huffman
+
+### Aaron Swartz
+
+He continued working on reddit after Conde Nast acquired it, but he [complained publicly](http://www.aaronsw.com/weblog/officespace) about working within a larger corporation and was fired from the company [in 2007](http://blogoscoped.com/archive/2007-05-07-n78.html).
+
+Aaron died by suicide at 2016. This [followed extreme pressure](https://en.wikipedia.org/wiki/Aaron_Swartz) from the FBI.
+
+Died by suicide in 2013 when he was 26.
+
+His [blog](http://www.aaronsw.com/weblog/) is still available online, and there's a separate documentary about his life called [_The Internet's Own Boy_](https://archive.org/details/TheInternetsOwnBoyTheStoryOfAaronSwartz).
