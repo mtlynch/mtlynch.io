@@ -13,10 +13,6 @@ date: 2023-07-17T07:19:27-04:00
 
 The most enjoyable part is that it's an interesting time capsule
 
-Michael Pryor long speech about cockroaches
-
-Never reveal when the first sale happened
-
 ### Fog Creek Software
 
 https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/
@@ -45,6 +41,10 @@ spez is now the widespread target of ire for greedily cutting third party client
 The fundamental problem seemed like the documentary couldn't decide what it was. Is it a story about the intern project or the interns themselves? Or is it a story about Fog Creek in general? Or is it about tech culture in the mid-2000s?
 
 The documentary tries to be lots of different things, so The total runtime with credits is only 78 minutes, and there's a lot of dead air. They keep interviewing a programmer at the Fog Creek office about his tomato plant, and it has no relevance to anything. They also do bizarre reenactments of things that didn't matter in the first place, like two of the interns finding a cockroach and getting scared.
+
+One of the most exciting moments of the film is when they finally launch the product. It captures the feeling of vulnerability and failure when you think your product is going to be a sensation, and instead it just flops. They seem to just forget about it. They never explain when the first sale happened or talk to anyone about how they felt about the launch.
+
+Michael Pryor long speech about cockroaches
 
 From just a technical level, it seemed like it was made by someone who didn't have much experience filming anything. The interviews are uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
 
@@ -95,7 +95,7 @@ https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helpe
 
 ### The interns
 
-### Tyler Griffin Hicks-Wright
+#### Tyler Griffin Hicks-Wright
 
 In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator, but Tyler was rejected by his _Aardvark'd_ co-star, Paul Graham and [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
@@ -107,7 +107,7 @@ At the time of the shutdown notice, people assumed Tyler was shutting down the c
 
 - [Tyler's website](https://tghw.com)
 
-### Michael Lehenbauer
+#### Michael Lehenbauer
 
 https://twitter.com/mikelehen
 
@@ -115,7 +115,7 @@ According to his LinkedIn, after completing his undergrad at Rose Hulman, he sta
 
 We have a mutual friend, and I'm surprised it's just one given so much employer overlap.
 
-### Ben Pollack
+#### Ben Pollack
 
 Ben acknowledges the _Aardvark'd_ documentary [on his website](https://www.bitquabit.com/meta/about/), saying:
 
@@ -125,14 +125,14 @@ Worked at Fog Creek for several years
 
 Sometimes had public debates with Tyler.
 
-### Yaron Guez
+#### Yaron Guez
 
 https://www.yaronguez.com/
 
 Co founder of a very buzzwordy consulting firm
 https://www.trestian.com/#about
 
-### Other Fog Creek employees
+### Other Fog Creek people
 
 #### Joel Spolsky
 
