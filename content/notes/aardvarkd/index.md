@@ -28,6 +28,8 @@ Paul Graham is XX years old. He had sold Viaweb to XX XX years prior.
 
 Jessica Livingston is XX years old.
 
+Paul and Jessica lived together but had not yet married.
+
 At the time of the documentary,
 
 Jessica Livingston captures why it was interesting - seeing founders when they're vulnerable.
@@ -154,6 +156,8 @@ They shush Liz on her birthday
 ### Y Combinator people
 
 #### Paul Graham
+
+[Married Jessica Livingston in 2008](https://news.ycombinator.com/item?id=205918).
 
 #### Jessica Livingston
 
