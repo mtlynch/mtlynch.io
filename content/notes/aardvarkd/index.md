@@ -98,10 +98,9 @@ https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helpe
 took it over but then shut it down in 2022
 https://tghw.com
 
-He launched another app called Snaposit, failed for the reasons Rob Fitzpatrick would later make obvious in The Mom Test. Rejected from YC from his Aardvark'd co-star Paul Graham.
-https://tghw.com/blog/well-that-sucks-what-else-you-got
+In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator, but Tyler was rejected by his _Aardvark'd_ co-star, Paul Graham and [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
-When Fog Creek restructured to spin out Trello in 2014, Tyler [acquired the Copilot product for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran it on the side for eight years before [shutting it down in April, 2022](https://news.ycombinator.com/item?id=31192812).
+In 2014, Fog Creek restructured to spin out Trello in 2014, Tyler [acquired the Copilot product for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran it on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
 At the time of the shutdown notice, people assumed Tyler was shutting down the company to sell the copilot.com domain Github, who had recently launched a well-known product called Copilot. Surprisingly, the buyer wasn't Github but rather a company that makes CRM software for service businesses.
 
