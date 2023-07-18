@@ -31,7 +31,7 @@ As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is N
 
 Download the NixOS microSD image from the link below:
 
-- [nixos-sd-image-23.11pre500597.0fbe93c5a7c-aarch64-linux](https://hydra.nixos.org/build/226381178/download/1/nixos-sd-image-23.11pre500597.0fbe93c5a7c-aarch64-linux.img.zst)
+- [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
 
 ## Decompress the NixOS microSD image
 
@@ -42,10 +42,10 @@ The NixOS team compresses its microSD images with an uncommon compression format
 Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
 ```bash
-zstd --decompress "nixos-sd-image-23.11pre500597.0fbe93c5a7c-aarch64-linux.img.zst"
+zstd --decompress "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
 ```
 
-Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre500597.0fbe93c5a7c-aarch64-linux.img`.
+Decompressing the Zstandard file should produce a file called `nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img`.
 
 ## Flash the NixOS microSD image
 
