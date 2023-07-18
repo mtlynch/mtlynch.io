@@ -3,6 +3,10 @@ title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
 date: 2023-07-17T07:19:27-04:00
 ---
 
+https://www.youtube.com/watch?v=YbrkZ07LKbk
+
+{{<img src="41-views.webp" has-border="true" caption="*Aardvark'd*currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)">}}
+
 ## What was going on in 2005?
 
 The most enjoyable part is that it's an interesting time capsule
