@@ -7,7 +7,7 @@ In creating the tutorial, ["Installing NixOS on Raspberry Pi 4,"](/nixos-pi4/) I
 
 I've collected them here for the sake of saving others time retrying the same steps.
 
-### The standard NixOS aarch64 image doesn't work
+## The standard NixOS aarch64 image doesn't work
 
 When I checked the NixOS download page, I saw that they offered 64-bit ARM images.
 
@@ -19,7 +19,7 @@ When I checked the NixOS download page, I saw that they offered 64-bit ARM image
 
 I learned later that NixOS's main pre-built 64-bit ARM images [require the system to have UEFI](/nixos-pi4/#the-future-of-nixos-on-the-raspberry-pi), which the Raspberry Pi 4 does not support. To boot one of these images, you need to first boot to Tow-Boot.
 
-### The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
+## The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
 
 NixOS still publishes microSD images for single-board computers like the Raspberry Pi. I tried flashing `nixos-sd-image-23.05.1123.aaef163eac7-aarch64-linux.img` to a microSD, but I got this error when I tried to apply my `configuration.nix`:
 
@@ -55,7 +55,7 @@ If I power cycle the Pi at that point, it successfully boots into the new NixOS 
 
 {{<video src="nixos-23.05-no-gui.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
 
-### NixOS 22.05 and 22.11 can't boot on a Pi 4
+## NixOS 22.05 and 22.11 can't boot on a Pi 4
 
 After failing to configure NixOS's microSD image using version 23.05, I tried again with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it failed to boot. I tried a few times, and it always either drops the signal entirely or displays a green screen:
 
@@ -63,7 +63,7 @@ After failing to configure NixOS's microSD image using version 23.05, I tried ag
 
 I tried again with `nixos-sd-image-22.05.4694.380be19fbd2-aarch64-linux.img` and got the same result.
 
-### `reboot` command doesn't work
+## `reboot` command doesn't work
 
 I found that after applying my initial `configuration.nix` file with `sudo nixos-rebuild boot`, the `reboot` and `shutdown` commands fail:
 
@@ -81,7 +81,7 @@ Failed to talk to init daemon.
 
 I was able to work around this by running `sudo poweroff --reboot`.
 
-### The latest Pi hardware version doesn't work
+## The latest Pi hardware version doesn't work
 
 You may have noticed that [my `configuration.nix` file]({{<baseurl>}}nixos-pi4/configuration.nix) depends on the [NixOS/nixos-hardware](https://github.com/NixOS/nixos-hardware) repository, but not the latest version:
 
@@ -93,7 +93,7 @@ imports = ["${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/${ni
 
 I [reported this bug](https://github.com/NixOS/nixos-hardware/issues/651), and Alex Groleau from the NixOS docs team [let me know](https://github.com/NixOS/nixos-hardware/issues/651#issuecomment-1630066858) that on current versions of NixOS, the `nixos-hardware` repo isn't necessary at all. I haven't tested whether NixOS 21.11 can install without it, so I've left it in for now.
 
-### Updating to a later NixOS version doesn't work
+## Updating to a later NixOS version doesn't work
 
 Even though [installing from the 23.05 NixOS disk image failed](#the-latest-nixos-2305-microsd-doesnt-work-on-raspberry-pi-4), I thought I'd work around the issue by doing an in-place upgrade of NixOS from 21.11 to 23.05. Unfortunately, that failed, too.
 
