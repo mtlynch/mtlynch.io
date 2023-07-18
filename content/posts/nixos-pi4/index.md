@@ -97,7 +97,7 @@ The boot is complete when you see the NixOS command prompt:
 [nixos@nixos~:]$
 ```
 
-If the boot failed, try [updating your Pi's bootloader](#troubleshooting-upgrade-to-the-latest-pi-bootloader) to the latest available version and then trying again.
+If the boot failed, try [updating your Pi's bootloader](#upgrade-to-the-latest-pi-bootloader) to the latest available version and then trying again.
 
 ## Enable SSH access (optional)
 

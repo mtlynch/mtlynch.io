@@ -95,7 +95,7 @@ I [reported this bug](https://github.com/NixOS/nixos-hardware/issues/651), and A
 
 ### Updating to a later NixOS version doesn't work
 
-Even though [installing from the 23.05 NixOS disk image failed](#gotcha-3-the-latest-nixos-2305-microsd-doesnt-work-on-raspberry-pi-4), I thought I'd work around the issue by doing an in-place upgrade of NixOS from 21.11 to 23.05. Unfortunately, that failed, too.
+Even though [installing from the 23.05 NixOS disk image failed](#the-latest-nixos-2305-microsd-doesnt-work-on-raspberry-pi-4), I thought I'd work around the issue by doing an in-place upgrade of NixOS from 21.11 to 23.05. Unfortunately, that failed, too.
 
 I tried installing 21.11 through my process above then rebuilding for 23.05 with the following commands:
 
