@@ -4,20 +4,14 @@ let
   hostname = "pinix";
   user = "tempuser";
   password = "somepass";
+  # Versions after this commit fail.
+  # https://github.com/NixOS/nixos-hardware/issues/651
+  nixosHardwareVersion = "ad1114ee372a52aa0b4934f72835bd14a212a642";
 
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
 in {
-
-
-  boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
-    initrd.availableKernelModules = [ "xhci_pci" "usbhid" "usb_storage" ];
-    loader = {
-      grub.enable = false;
-      generic-extlinux-compatible.enable = true;
-    };
-  };
+  imports = ["${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/${nixosHardwareVersion}.tar.gz" }/raspberry-pi/4"];
 
   fileSystems = {
     "/" = {
@@ -73,13 +67,16 @@ in {
     }
   ];
 
+  # Enable GPU acceleration
+  hardware.raspberry-pi."4".fkms-3d.enable = true;
+
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
 
-  hardware.enableRedistributableFirmware = true;
+  hardware.pulseaudio.enable = true;
 
   system.stateVersion = "21.11";
 }
