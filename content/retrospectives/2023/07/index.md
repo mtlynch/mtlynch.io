@@ -50,16 +50,14 @@ TinyPilot's earnings were fairly flat. A new review [came out](https://www.youtu
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | May 2023       | June 2023        | Change                                           |
-| ------------------------ | -------------- | ---------------- | ------------------------------------------------ |
-| Unique Visitors          | 7,773          | 8,300            | <font color="green">+527 (+7%)</font>            |
-| Sales Revenue            | $89,569.49     | $88,378.45       | <font color="red">-$1,191.04 (-1%)</font>        |
-| Enterprise Subscriptions | $290.70        | $290.70          | 0                                                |
-| Royalties                | $2,597.71      | $4,399.66        | <font color="green">+$1,801.95 (+69%)</font>     |
-| Total Revenue            | $92,457.90     | $93,068.81       | <font color="green">+$610.91 (+1%)</font>        |
-| **Profit**               | **$24,034.74** | **$27,553.68**\* | **<font color="green">+$3,518.94 (+15%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | May 2023       | June 2023      | Change                                           |
+| ------------------------ | -------------- | -------------- | ------------------------------------------------ |
+| Unique Visitors          | 7,773          | 8,300          | <font color="green">+527 (+7%)</font>            |
+| Sales Revenue            | $89,569.49     | $88,378.45     | <font color="red">-$1,191.04 (-1%)</font>        |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                                |
+| Royalties                | $2,597.71      | $4,399.66      | <font color="green">+$1,801.95 (+69%)</font>     |
+| Total Revenue            | $92,457.90     | $93,068.81     | <font color="green">+$610.91 (+1%)</font>        |
+| **Profit**               | **$24,034.74** | **$30,907.55** | **<font color="green">+$6,872.81 (+29%)</font>** |
 
 Almost every metric was flat this month. One of my marketing pushes fell flat, but I'm still optimistic about others I have cooking.
 
