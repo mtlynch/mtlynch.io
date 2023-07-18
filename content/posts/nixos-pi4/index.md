@@ -152,7 +152,7 @@ To make your NixOS experience more interesting, install a desktop GUI and a few 
 curl \
   --show-error \
   --fail \
-  {{<baseurl>}}nixos-pi4/configuration.nix \
+  {{<baseurl>}}/nixos-pi4/configuration.nix \
   | sudo tee /etc/nixos/configuration.nix
 ```
 
