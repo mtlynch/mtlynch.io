@@ -4,9 +4,7 @@ let
   hostname = "pinix";
   user = "tempuser";
   password = "somepass";
-  # Versions after this commit fail.
-  # https://github.com/NixOS/nixos-hardware/issues/651
-  nixosHardwareVersion = "ad1114ee372a52aa0b4934f72835bd14a212a642";
+  nixosHardwareVersion = "master";
 
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
@@ -70,6 +68,8 @@ in {
   # Enable GPU acceleration
   hardware.raspberry-pi."4".fkms-3d.enable = true;
 
+  hardware.raspberry-pi."4".apply-overlays-dtmerge.enable = true;
+
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
@@ -78,5 +78,5 @@ in {
 
   hardware.pulseaudio.enable = true;
 
-  system.stateVersion = "21.11";
+  system.stateVersion = "23.11";
 }
