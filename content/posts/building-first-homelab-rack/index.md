@@ -3,6 +3,8 @@ title: "Building My First Homelab Server Rack"
 date: 2023-06-16T09:20:48-04:00
 ---
 
+TODO: Table of contents
+
 ## Why build a server rack at home?
 
 ### What's a homelab?
@@ -17,16 +19,34 @@ I'm a beginner, so I don't have the curse of knowledge.
 
 This is not affiliate spam. Some are honest, but all of them are inherently biased. They have a vested interest in you purchasing more expensive gear because they make more money that way. They also have an interest in directing you to merchants
 
-## Picking parts
+## Choosing components
 
 ### Rack
 
-- How tall does it need to be?
-- Does it need wheels?
-- Does it need four posts or would two suffice?
+The rack was the first thing I decided, but it was also iterative. There's a bit of a circular dependency. You don't know what kind of rack to buy until you know what components it needs to house, but you'll make different decisions about
+
+#### Considerations
+
+- ## How tall does it need to be?
+- ## Does it need wheels?
+- ## Does it need four posts or would two suffice?
 - How deep does it need to be?
 
+#### My choice: StarTech XX 18U rack
+
+I have a StarTech rack at my office, and I haven't had any issues with it.
+
+No labels on parts of startech rack
+Comes with screwdriver and wrenches
+Not sure how to use grounding cables
+Smallest setting prevents you from using all screws
+Smallest setting blocks screws for casters
+
 ### Network switch
+
+The next big decision
+
+#### Considerations
 
 - What speed do you want?
 - Managed or unmanaged?
@@ -36,7 +56,24 @@ The more I read, the more I found people saying that 2.5 Gbps was flaky, and you
 
 10G switches don't mean everything has 10G.
 
+#### My choice: TP-Link
+
+TP-Link won't let you change the admin user from "admin"
+Pretty confusing interface.
+
+Took forever to get VLANs right. (TODO: Link to VLAN notes)
+
 ### UPS (battery backup)
+
+#### Considerations
+
+- How much time do you need?
+
+#### My choice: CyberPower XX
+
+#### Also ran: Tripp-Lite XX
+
+I originally purchased the Tripp-Lite XX.
 
 I ended up purchasing the Tripp-Lite, but it was noisy. I didn't even realize battery backups could _be_ noisy. I've had an APC battery backup for XX years, and it's completely silent except when it loses power and fails over to battery backup.
 
@@ -44,55 +81,50 @@ I ended up purchasing the Tripp-Lite, but it was noisy. I didn't even realize ba
 
 ### Pi rack mount
 
+Uctronics - draw the fucking owl instructions
+don't fit together great
+PoE fan is super loud, but you can turn it off
+HDMI ports need to be secured better
+
 ### Rack shelves
 
 Beware the bottom lip.
 
+#### Also ran: Star-Tech shelves
+
+I originally purchasd
+
+Star-Tech shelf extends over into next level.
+
 ### Patch panel
-
-### 10G networking gear
-
-Michael Stapelberg uses Mellanox
 
 ### Cage nuts
 
 ### Cable ties
 
+## Network bandwidth: 1G, 2.5G, or 10G?
+
+Michael Stapelberg uses Mellanox
+
 ## Planning layout
 
-### The patch panel and switches should be close together
+I tried to find
+
+### Heavier components go on the bottom
+
+The rack has a lot of expensive equipment. You don't want it to fall over and damage things or injure someone.
+
+Things with
+
+### Components with front-facing connections should be close together
+
+An obvious example is your patch panel and your network switch. They should be in adjacent rack slots
 
 Or, more generally, components that have front-facing ports should be close together. Otherwise, you have Ethernet cables stretching all across your rack and blocking stuff.
 
-### Heavy components should be on the bottom
+### Rear cables don't matter so much
 
-## Thoughts on parts
-
-### Rack
-
-No labels on parts of startech rack
-Comes with screwdriver and wrenches
-Not sure how to use grounding cables
-Smallest setting prevents you from using all screws
-Smallest setting blocks screws for casters
-
-### Shelves
-
-Star-Tech shelf extends over into next level.
-
-### Switch
-
-TP-Link won't let you change the admin user from "admin"
-Pretty confusing interface.
-
-Took forever to get VLANs right. (TODO: Link to VLAN notes)
-
-### Raspberry Pi Rack
-
-Uctronics - draw the fucking owl instructions
-don't fit together great
-PoE fan is super loud, but you can turn it off
-HDMI ports need to be secured better
+Some of the guidance I read said to minimize power cable length. Maybe this matters in a data center where you're replicating the setup 100x. In a home environment, I don't see the point. If I connect a server to the UPS with a 2 ft. power cable instead of a 6 ft. power cable, there's no real difference.
 
 ### Ethernet cables
 
@@ -123,6 +155,8 @@ Didn't flash Mellanox card before installing it in TrueNAS.
 Fiber keys don't stay in place well
 
 ### Incorrect length Ethernet cables
+
+Patch cables
 
 ### Mixing SFP+ multimode with single mode
 
