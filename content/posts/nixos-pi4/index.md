@@ -32,7 +32,7 @@ To begin, download the NixOS microSD image from the link below:
 
 {{<notice type="info">}}
 
-**Note**: As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is NixOS 21.11, which is almost two years old. I'll explain why [later in this post](#the-future-of-nixos-on-the-raspberry-pi) why later releases don't work. For now, I'm going to run NixOS on the Pi the only way I know how.
+**Note**: As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is NixOS 21.11, which is almost two years old. I'll explain [later in this post](#the-future-of-nixos-on-the-raspberry-pi) why subsequent releases don't work. For now, I'm going to run NixOS on the Pi the only way I know how.
 
 {{</notice>}}
 
