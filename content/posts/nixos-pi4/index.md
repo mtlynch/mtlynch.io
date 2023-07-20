@@ -227,7 +227,7 @@ All it took to change your whole desktop environment was just a two-line change.
 
 ### Experiment 2: Create an ad-hoc software environment
 
-One of the most approachable tools I've found for Nix is `nix-shell`. It lets you create software environments on the fly with any software packages you specify.
+One of the most approachable Nix tools I've found is `nix-shell`. It lets you create software environments on the fly with any software packages you specify.
 
 `nix-shell` doesn't affect any other configuration on your system, so you're free to try new tools without the risk of breaking anything else.
 
