@@ -146,7 +146,7 @@ You're now in NixOS!
 
 There's not much you can do yet because it's a minimal NixOS environment with nothing installed.
 
-To make your NixOS experience more interesting, install a desktop GUI and a few applications. To begin, download [my example NixOS configuration file]({{<baseurl>}}nixos-pi4/configuration.nix):
+To make your NixOS experience more interesting, install a desktop GUI and a few applications. To begin, download [my example NixOS configuration file]({{<baseurl>}}/nixos-pi4/configuration.nix):
 
 ```bash
 curl \
