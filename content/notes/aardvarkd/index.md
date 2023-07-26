@@ -22,17 +22,21 @@ Joel is presenting at a "trade show" which turns out to be a ColdFusion conferen
 
 ### Y Combinator
 
-Paul Graham is 41 years old. He had sold his startup, Viaweb, to Yahoo for $50M in 1998, then he became popular for the essays he published on his blog.
+Paul Graham is 41 years old. He had sold his startup, Viaweb, to Yahoo for $50M in 1998, then he became popular for the essays he published on his blog. Jessica Livingston is 34 years old. She was not active in the startup community at the time, having come from a career in marketing.
 
-Jessica Livingston is 34 years old.
+{{<img src="paul-jessica.webp" max-width="600px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005">}}
 
-{{<img src="jessica.webp" max-width="600px">}}
-
-Paul and Jessica lived together but had not yet married.
-
-They had co-founded Y Combinator together a few months before, and they were in the middle of YC's first batch of companies, which included a then-unknown project called reddit.
+Paul and Jessica [had been dating for two years](http://paulgraham.com/worked.html) but weren't married yet. They had co-founded Y Combinator together with two others a few months before. They were in the middle of YC's first batch of companies, which included a then-unknown project called reddit.
 
 ### reddit
+
+reddit had launched a few months before the documentary began filming, and it was not at all on anyone's radar. At the time, you could only post links. There was no commenting feature. Digg was the dominant player in this domain.
+
+{{<img src="reddit-2005.webp" max-width="600px" has-border="true" caption="The reddit homepage [in 2005](https://web.archive.org/web/20050804002153/http://www.reddit.com/)">}}
+
+College roommates Steve Huffman and Alexis Ohanian drove to Boston to attend one of Paul Graham's lectures in 2005. After graduating a few months later, they applied to Y Combinator and got accepted with reddit.
+
+not at all relevant yet as a social networking platform. Digg was still the dominant
 
 ## As a documentary, it's not very good
 
