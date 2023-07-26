@@ -80,9 +80,17 @@ It reminded me a lot of a guy in my computer science program who told me how muc
 
 ## "Back when they were getting started, they were terrified"
 
+There's a voice over from Jessica Livingston that summarizes my favorite part of the documentary.
+
 > A lot of these tech startup founders who are extremely successful, back when they were getting started, they were terrified. And they were very unsure of what they were doing. They questioned things, and I'm sure doubted themselves... And so to see these people as vulnerable people at one point in time is interesting.
 
-spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build. But in 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he slept in bed with his laptop.
+spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build.
+
+{{<img src="steve-huffman-2017.webp" max-width="600px" caption="Steve Huffman in 2017 (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/) )">}}
+
+In 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he had to sleep with his laptop in bed with him.
+
+{{<img src="steve-huffman-2005.webp" max-width="500px" caption="Steve Huffman in 2005">}}
 
 ## Other takeaways
 
