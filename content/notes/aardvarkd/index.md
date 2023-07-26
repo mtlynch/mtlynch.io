@@ -26,13 +26,13 @@ Paul Graham is 41 years old. He had sold his startup, Viaweb, to Yahoo for $50M 
 
 Jessica Livingston is 34 years old.
 
+{{<img src="jessica.webp" max-width="600px">}}
+
 Paul and Jessica lived together but had not yet married.
 
 They had co-founded Y Combinator together a few months before, and they were in the middle of YC's first batch of companies, which included a then-unknown project called reddit.
 
 ### reddit
-
-spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build. But in 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he slept in bed with his laptop.
 
 ## As a documentary, it's not very good
 
@@ -48,21 +48,47 @@ From just a technical level, it seemed like it was made by someone who didn't ha
 
 {{<img src="joel-lighting.webp" caption="I don't think Joel Spolsky is this luminsecent in real life">}}
 
+## The moment of truth
+
+There's one scene in particular that drove me crazy.
+
+It's the end of the internship, and Fog Creek is finally launching Copilot. They have a betting pool with predictions about when they'll make their first sale. Some guessed it would happen within XX minutes of launch, others thought it might take up to XX hours.
+
+But the sale doesn't come. One by one, you see them cross off people's predictions. You see the team worried that this thing they expected to be a big hit maybe will be a complete flop.
+
+As a founder, this moment is extremely relatable. There have been so many times where I put weeks or months of work into something with the expectation that people will love it, and then I discover after I launching that it was a complete miss.
+
+I think the documentary does a great job of capturing that tension, that moment where you haven't definitely failed, but it's looking more likely that you failed.
+
+The problem is that in _Aardvark'd_, they build excellent tension in that scene, and then seemingly forget what they were doing and move on. Copilot made a first sale at some point, but you never see anyone's reaction. You just see them celebrating later, and it's unclear if they've even made a first sale or they're just celebrating the launch.
+
+I'm just baffled at the filmmaker's choice. Because at first, I thought maybe it's just something you don't get if you've never launched something, but it's not. This is basic storytelling.
+
+It would be like if you ended the story of Little Red Riding Hood by saying, "And then Little Red Riding Hood realized her grandmother was a wolf! Suddenly, the wolf threw her to the floor and bared his razor-sharp teeth inches from her neck. Anyway, she ended up being fine. The End."
+
 ## What the documentary did well
 
-At my college, it was the kids who had internships in finance. In 2007, he proudly told me that Lehman Brothers would take care of him
+I think it was relatable, especially because I was a college student at the same time. I felt like it was an accurate picture of culture at young tech firms of that era.
 
-One of the interns says very seriously how he has to stay grounded because one day, Fog Creek is going to be so big, and he so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
+One thing I thought it captured really well was the self-important intern. In _Aardvark'd_, one of the Fog Creek interns speaks very seriously to the camera about how he has to stay grounded because one day, Fog Creek is going to be so big, and he so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
 
-## Capture vulnerability
+It reminded me a lot of a guy in my computer science program who told me how much responsibility he was given at his fancy finance internship. He said he was so because once you're in, they'd always take care of you. This was in 2007, and the finance firm he was talking about was [Lehman Brothers](https://en.wikipedia.org/w/index.php?title=Lehman_Brothers&oldid=1165023032#Bankruptcy).
 
-TODO: Jessica Livingston's quote
+## "Back when they were getting started, they were terrified"
 
-Jessica Livingston captures why it was interesting - seeing founders when they're vulnerable.
+> A lot of these tech startup founders who are extremely successful, back when they were getting started, they were terrified. And they were very unsure of what they were doing. They questioned things, and I'm sure doubted themselves... And so to see these people as vulnerable people at one point in time is interesting.
+
+spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build. But in 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he slept in bed with his laptop.
 
 ## Other takeaways
 
-Dan Bricklin, creator of VisiCalc, didn't really grab me.
+Dan Bricklin, creator of VisiCalc, didn't really grab me. I'm too young to have used VisiCalc, so maybe that's why.
+
+Joel Spolsky surprisingly stingy with praise. Joel Spolsky continues focusing on his computer and just says, "Cool," and doesn't even turn from his computer screen.
+
+The final line of the documentary is:
+
+> We hire these incredible engineers. We hire people who are really, really brilliant individually and do incredible work. But that's sort of what we expect of them, so I don't really feel like it's necessary to puff up their ego too much by saying, "Wow, you did an unbelievable, great thing! Nobody else could have done this." What I really want to say is, "That's what we expected."
 
 ## Joel liked it, apparently
 
@@ -75,6 +101,7 @@ But five years later, Fog Creek collaborated once again with Boondoggle Media on
 ## Aardvark artifacts
 
 https://www.joelonsoftware.com/2005/08/17/the-project-aardvark-spec/
+
 https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf
 
 On using GPL code:
@@ -145,8 +172,6 @@ https://www.trestian.com/#about
 became CEO of trello
 https://www.joelonsoftware.com/2014/07/24/trello-inc/
 
-Joel Spolsky surprisingly stingy with praise.
-
 #### Liz Gordon
 
 was the office manager and became head of people at Fog Creek, is now chief people officer of Splash.
@@ -163,6 +188,8 @@ They shush Liz on her birthday
 
 #### Jessica Livingston
 
+In 2007, Jessica Livingston published the well-received book _Founders at Work: Stories of Startups' Early Days_, a collection of interviews with successful startup founders. She continued in her leadership role with Y Combinator.
+
 ### Reddit founders
 
 #### Alexis Ohanian
@@ -173,8 +200,6 @@ They shush Liz on her birthday
 
 He continued working on reddit after Conde Nast acquired it, but he [complained publicly](http://www.aaronsw.com/weblog/officespace) about working within a larger corporation and was fired from the company [in 2007](http://blogoscoped.com/archive/2007-05-07-n78.html).
 
-Aaron died by suicide at 2016. This [followed extreme pressure](https://en.wikipedia.org/wiki/Aaron_Swartz) from the FBI.
-
-Died by suicide in 2013 when he was 26.
+Aaron died by suicide at 2013 when he was 26 years old. This [followed extreme pressure](https://en.wikipedia.org/wiki/Aaron_Swartz) from the FBI.
 
 His [blog](http://www.aaronsw.com/weblog/) is still available online, and there's a separate documentary about his life called [_The Internet's Own Boy_](https://archive.org/details/TheInternetsOwnBoyTheStoryOfAaronSwartz).
