@@ -8,4 +8,4 @@ Michael Lynch is a developer and blogger. He graduated from Columbia University 
 
 Michael is available for weddings, bar/bat mitzvahs, and other events that are likely to include chocolate covered strawberries.
 
-You can follow him on Twitter [@deliberatecoder](https://twitter.com/deliberatecoder) or reach him by email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
+You can follow him on Twitter [@michael@m.mtlynch.io](https://m.mtlynch.io/@michael), Twitter [@deliberatecoder](https://twitter.com/deliberatecoder), or reach him by email at [hello@mtlynch.io](mailto:hello@mtlynch.io).
