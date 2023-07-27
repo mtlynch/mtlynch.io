@@ -224,11 +224,12 @@ https://www.joelonsoftware.com/2014/07/24/trello-inc/
 
 #### Liz Gordon
 
+In the film, Liz Gordon is Fog Creek's recently hired office manager. She's
+They shush Liz on her birthday
+
 was the office manager and became head of people at Fog Creek, is now chief people officer of Splash.
 
 https://splashthat.com/about-us
-
-They shush Liz on her birthday
 
 ### Y Combinator people
 
