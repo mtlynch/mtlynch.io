@@ -3,9 +3,27 @@ title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
 date: 2023-07-17T07:19:27-04:00
 ---
 
-https://www.youtube.com/watch?v=YbrkZ07LKbk
+I recently discovered that _Aardvark'd: 12 Weeks with Geeks_, the 2005 documentary about Fog Creek's internship program is [now available for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk).
 
-{{<img src="41-views.webp" has-border="true" caption="*Aardvark'd*currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)">}}
+At the time of this writing, it has 41 views, which is surprisingly low for a movie that features early interviews with many people who would go on to much greater fame and success, such as:
+
+- Joel Spolsky and Michael Pryor (StackOverflow, Trello, Glitch founders)
+- Paul Graham and Jessica Livingston (Y Combinator founders)
+- Aaron Swartz, Steve Huffman, and Alexis Ohanian (reddit founders)
+
+{{<img src="41-views.webp" max-width="650px" has-border="true" caption="*Aardvark'd*currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)">}}
+
+## My history with this movie
+
+I discovered Joel Spolsky's blog in college. I would grow to appreciate Joel's writing even more throughout my career, but in college, I already liked it.
+
+I remember when Joel would advertise internships for college interns, and I felt like I wasn't good enough, so I was too scared to apply.
+
+I remember reading about Joel making a documentary about his 2005 summer internship class, and I was always curious about it, but never watched it. In college, I wasn't that excited to feel inferior watching a bunch of people my age work my dream internship. About 10 years later, I remembered it again, but I couldn't find copies anywhere. Every few years, I check eBay to see if there are DVD copies floating around, but I've never found one for a reasonable price.
+
+And then one day, I searched and found that it's on YouTube. Not some bootleg copy either. The original production studio published it in HD. I was curious enough and finally watched it.
+
+As a documentary, it's mediocre, but as a time capsule of independent tech industry in 2005, it's great!
 
 ## What was going on in 2005?
 
@@ -13,10 +31,7 @@ The most enjoyable part is that it's an interesting time capsule
 
 ### Fog Creek Software
 
-https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/
-not actually financed by Fog Creek
-
-At the time of the documentary, Joel was 40 years old. He had co-founded Fog Creek XX years prior. Fog Creek was profitable and Joel was one of the most popular software bloggers in the world, but Fog Creek wasn't making crazy money. Joel hadn't yet co-created StackOverflow or Trello.
+At the time of the documentary, Joel was 40 years old. He had co-founded Fog Creek XX years prior. Fog Creek only had XX employees. Fog Creek was profitable and Joel was one of the most popular software bloggers in the world, but Fog Creek wasn't making crazy money. This was still before Joel's mega-hit products like StackOverflow (year XX) or Trello (year XX).
 
 Joel is presenting at a "trade show" which turns out to be a ColdFusion conference. The interns admit they don't know what ColdFusion is.
 
@@ -82,7 +97,11 @@ It reminded me a lot of a guy in my computer science program who told me how muc
 
 There's a voice over from Jessica Livingston that summarizes my favorite part of the documentary.
 
-> A lot of these tech startup founders who are extremely successful, back when they were getting started, they were terrified. And they were very unsure of what they were doing. They questioned things, and I'm sure doubted themselves... And so to see these people as vulnerable people at one point in time is interesting.
+> A lot of these tech startup founders who are extremely successful, back when they were getting started, they were terrified.
+>
+> They were very unsure of what they were doing. They questioned things, and I'm sure doubted themselves...
+>
+> And so to see these people as vulnerable people at one point in time is interesting to me.
 
 spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build.
 
@@ -96,11 +115,20 @@ In 2005, he was a lovably doofy-looking kid who had such bad nightmares about re
 
 Dan Bricklin, creator of VisiCalc, didn't really grab me. I'm too young to have used VisiCalc, so maybe that's why.
 
+### Joel is stingy with praise
+
 Joel Spolsky surprisingly stingy with praise. Joel Spolsky continues focusing on his computer and just says, "Cool," and doesn't even turn from his computer screen.
 
 The final line of the documentary is:
 
 > We hire these incredible engineers. We hire people who are really, really brilliant individually and do incredible work. But that's sort of what we expect of them, so I don't really feel like it's necessary to puff up their ego too much by saying, "Wow, you did an unbelievable, great thing! Nobody else could have done this." What I really want to say is, "That's what we expected."
+
+### Fog Creek didn't finance it
+
+I had always thought that Fog Creek fully funded this documentary, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized they specifically didn't fund it. They wanted
+not actually financed by Fog Creek
+
+> We’re looking for a filmmaker who will finance and make the film themselves and own the rights. We want someone who can promote the film to typical documentary outlets...
 
 ## Joel liked it, apparently
 
@@ -204,10 +232,6 @@ In 2007, Jessica Livingston published the well-received book _Founders at Work: 
 
 ### Reddit founders
 
-#### Alexis Ohanian
-
-#### Steve Huffman
-
 #### Aaron Swartz
 
 He continued working on reddit after Conde Nast acquired it, but he [complained publicly](http://www.aaronsw.com/weblog/officespace) about working within a larger corporation and was fired from the company [in 2007](http://blogoscoped.com/archive/2007-05-07-n78.html).
@@ -215,3 +239,13 @@ He continued working on reddit after Conde Nast acquired it, but he [complained 
 Aaron died by suicide at 2013 when he was 26 years old. This [followed extreme pressure](https://en.wikipedia.org/wiki/Aaron_Swartz) from the FBI.
 
 His [blog](http://www.aaronsw.com/weblog/) is still available online, and there's a separate documentary about his life called [_The Internet's Own Boy_](https://archive.org/details/TheInternetsOwnBoyTheStoryOfAaronSwartz).
+
+#### Steve Huffman
+
+Steve Huffman left reddit in 2006 .
+
+He co-founded Hipmunk in 2010, again receiving funding from Y Combinator, but he left in 2015, to re-join reddit as CEO.
+
+#### Alexis Ohanian
+
+Alexis stepped down as CEO. He hasn't founded any major companies, but he serves in an advisory role in many companies. In 2017, he married tennis star [Serena Williams](https://en.wikipedia.org/wiki/Serena_Williams).
