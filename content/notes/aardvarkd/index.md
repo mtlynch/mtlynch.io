@@ -53,35 +53,40 @@ College roommates Steve Huffman and Alexis Ohanian drove to Boston to attend one
 
 not at all relevant yet as a social networking platform. Digg was still the dominant
 
-## As a documentary, it's not very good
+## Amateurish documentary filmmaking
 
-The fundamental problem seemed like the documentary couldn't decide what it was. Is it a story about the intern project or the interns themselves? Or is it a story about Fog Creek in general? Or is it about tech culture in the mid-2000s?
+On a technical level, _Aardvark'd_ seemed like it was made by someone who didn't have much experience filming anything. The interviews are uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
 
-The documentary tries to be lots of different things, so The total runtime with credits is only 78 minutes, and there's a lot of dead air. They keep interviewing a programmer at the Fog Creek office about his tomato plant, and it has no relevance to anything. They also do bizarre reenactments of things that didn't matter in the first place, like two of the interns finding a cockroach and getting scared.
+{{<img src="joel-lighting.webp" max-width="600px" caption="I don't think Joel Spolsky is this luminsecent in real life">}}
 
-One of the most exciting moments of the film is when they finally launch the product. It captures the feeling of vulnerability and failure when you think your product is going to be a sensation, and instead it just flops. They seem to just forget about it. They never explain when the first sale happened or talk to anyone about how they felt about the launch.
+Beyond the technical weaknesses, the documentary feels unfocused. Is it a story about the intern project or the interns themselves? Or is it a story about Fog Creek in general? Or is it about tech culture in the mid-2000s?
 
-Michael Pryor long speech about cockroaches
+The film flits from topic to topic, but it never feels like it quite tells a cohesive story.
 
-From just a technical level, it seemed like it was made by someone who didn't have much experience filming anything. The interviews are uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
+The total runtime is a short 78 minutes, but there still manages to be a lot of dead air. They keep interviewing a programmer at the Fog Creek office about his tomato plant, and it has no relevance to anything. They also do bizarre reenactments of things that didn't matter in the first place, like two of the interns finding a cockroach and getting scared.
 
-{{<img src="joel-lighting.webp" caption="I don't think Joel Spolsky is this luminsecent in real life">}}
+{{<img src="cockroach-reenactment.webp" max-width="600px" caption="The movie features several strange re-enactments of events that are totally irrelevant">}}
 
-## The moment of truth
+## The launch day scene
 
 There's one scene in particular that drove me crazy.
 
 It's the end of the internship, and Fog Creek is finally launching Copilot. They have a betting pool with predictions about when they'll make their first sale. Some guessed it would happen within XX minutes of launch, others thought it might take up to XX hours.
 
-But the sale doesn't come. One by one, you see them cross off people's predictions. You see the team worried that this thing they expected to be a big hit maybe will be a complete flop.
+{{<img src="sale-predictions.webp" max-width="600px">}}
 
-As a founder, this moment is extremely relatable. There have been so many times where I put weeks or months of work into something with the expectation that people will love it, and then I discover after I launching that it was a complete miss.
+But the sale doesn't come. One by one, you see them cross off people's predictions about when they'd get that first sale. You see the team worried that this thing they expected to be a big hit maybe will be a complete flop.
 
-I think the documentary does a great job of capturing that tension, that moment where you haven't definitely failed, but it's looking more likely that you failed.
+{{<gallery caption="Fog Creek interns forlornly waiting for the first customer to purchase Copilot">}}
+{{<img src="cross-off.webp" max-width="600px">}}
+{{<img src="waiting.webp" max-width="600px">}}
+{{</gallery>}}
 
-The problem is that in _Aardvark'd_, they build excellent tension in that scene, and then seemingly forget what they were doing and move on. Copilot made a first sale at some point, but you never see anyone's reaction. You just see them celebrating later, and it's unclear if they've even made a first sale or they're just celebrating the launch.
+As a founder, I found this moment extremely relatable. There have been so many times where I put weeks or months of work into something with the expectation that people will love it, and then I discover after I launching that it was a complete miss.
 
-I'm just baffled at the filmmaker's choice. Because at first, I thought maybe it's just something you don't get if you've never launched something, but it's not. This is basic storytelling.
+I think the documentary does a great job of capturing that anxiety &mdash; that moment where you haven't definitely failed, but every minute that ticks by without a sale makes it more likely that you've made a big mistake. I've talked about it with other founders, but I've never seen it captured in real time.
+
+The problem is that _Aardvark'd_ builds excellent tension in that scene and then seemingly forgets what it was doing and just moves on. The next scene is Joel popping champagne later that day, but it's not even clear if there's been a sale or if they're just celebrating the launch. You never see anyone's sighing in relief or admitting defeat.
 
 It would be like if you ended the story of Little Red Riding Hood by saying, "And then Little Red Riding Hood realized her grandmother was a wolf! Suddenly, the wolf threw her to the floor and bared his razor-sharp teeth inches from her neck. Anyway, she ended up being fine. The End."
 
@@ -92,6 +97,8 @@ I think it was relatable, especially because I was a college student at the same
 One thing I thought it captured really well was the self-important intern. In _Aardvark'd_, one of the Fog Creek interns speaks very seriously to the camera about how he has to stay grounded because one day, Fog Creek is going to be so big, and he so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
 
 It reminded me a lot of a guy in my computer science program who told me how much responsibility he was given at his fancy finance internship. He said he was so because once you're in, they'd always take care of you. This was in 2007, and the finance firm he was talking about was [Lehman Brothers](https://en.wikipedia.org/w/index.php?title=Lehman_Brothers&oldid=1165023032#Bankruptcy).
+
+There's a funny moment later on, when that same intern, after spending most of the film thinking he's the smartest guy in the room, realizes a showstopper bug was his fault.
 
 ## "Back when they were getting started, they were terrified"
 
@@ -105,7 +112,7 @@ There's a voice over from Jessica Livingston that summarizes my favorite part of
 
 spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build.
 
-{{<img src="steve-huffman-2017.webp" max-width="600px" caption="Steve Huffman in 2017 (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/) )">}}
+{{<img src="steve-huffman-2017.webp" max-width="600px" caption="Steve Huffman in 2017 (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
 
 In 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he had to sleep with his laptop in bed with him.
 
