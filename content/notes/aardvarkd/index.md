@@ -118,32 +118,29 @@ In 2005, he was a lovably doofy-looking kid who had such bad nightmares about re
 
 {{<img src="steve-huffman-2005.webp" max-width="500px" caption="Steve Huffman in 2005">}}
 
-## Other takeaways
+## Joel is not big on praise
 
-Dan Bricklin, creator of VisiCalc, didn't really grab me. I'm too young to have used VisiCalc, so maybe that's why.
-
-### Joel is stingy with praise
-
-Joel Spolsky surprisingly stingy with praise. Joel Spolsky continues focusing on his computer and just says, "Cool," and doesn't even turn from his computer screen.
+Joel Spolsky surprisingly stingy with praise. In the penultimate scene, XX comes to Joel's office to announce he successfully got an article about Fog Creek scheduled for publication in _Crain's_. Joel Spolsky simply says, "Cool," without even turning from his computer screen.
 
 The final line of the documentary is:
 
-> We hire these incredible engineers. We hire people who are really, really brilliant individually and do incredible work. But that's sort of what we expect of them, so I don't really feel like it's necessary to puff up their ego too much by saying, "Wow, you did an unbelievable, great thing! Nobody else could have done this." What I really want to say is, "That's what we expected."
+> We hire people who are really, really brilliant individually and do incredible work. But that's sort of what we expect of them
+>
+> I don't really feel like it's necessary to puff up their ego too much by saying, "Wow, you did an unbelievable, great thing! Nobody else could have done this."
+>
+> What I really want to say is, "That's what we expected."
 
-### Fog Creek didn't finance it
+## Fog Creek didn't finance it
 
-I had always thought that Fog Creek fully funded this documentary, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized they specifically didn't fund it. They wanted
-not actually financed by Fog Creek
+I had always thought that Fog Creek fully funded this documentary, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized they specifically didn't fund it.
+
+It was more of an angel investor model:
 
 > We’re looking for a filmmaker who will finance and make the film themselves and own the rights. We want someone who can promote the film to typical documentary outlets...
 
-## Joel liked it, apparently
+He said in his blog that he paid the filmmaker $5k stipend and $5k for expenses, but a later column he wrote for _Inc_ says, "We ended up paying the filmmaker about $30,000."
 
-One of the most surprising parts of the documentary is that Joel Spolsky, someone who cares a lot about product quality, thinks _Aardvark'd_ was a good documentary. TODO: Link to part where he says it was good.
-
-And maybe you think, he's of course going to say that. He's financially tied to the movie, so he wants to spin it positively regardless of how he feels.
-
-But five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
+It's an interesting choice, and I guess it worked. Fog Creek has let a lot of the original links around Copilot die, but the filmmaker still cared enough to upload a high-def copy to YouTube 18 years later.
 
 ## Aardvark artifacts
 
@@ -168,6 +165,12 @@ Uses apps simonyl style, a style Joel strongly supported. Joel admits that codin
 They did release the code, but I unfortunately couldn't find the original version the interns wrote. The earliest version I could find was from 2011, at which point the code had been rewritten from C# to C++. I suspect that was part of the [Copilot 2.0](https://www.joelonsoftware.com/2007/01/26/copilot-20-ships/), as that's when they added Mac support, and they probably didn't feel like running .NET on Mac.
 
 https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helper_src.zip/
+
+## _Make Better Software: The Training Series_
+
+Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
+
+I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's most famous blog posts, and they show how they put those ideas into practice at Fog Creek.
 
 ## Where are they now?
 
