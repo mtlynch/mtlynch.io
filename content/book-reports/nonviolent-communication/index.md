@@ -127,7 +127,7 @@ Words like "always," "never," "frequently," and "seldom" often accompany evaluat
 - Impersonal language like "it or "that"
   - "It really infuriates me when spelling mistakes appear in our brochures."
   - "That bugs me a lot."
-- "I feel **\_** because **\_\_\_**"
+- "I feel \_\_\_ because \_\_\_"
   - "I feel hurt because you said you don't love me."
 - Mentioning only the actions of others
   - "When you don't call me on my birthday, I feel hurt."
