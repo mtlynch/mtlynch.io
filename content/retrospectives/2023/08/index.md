@@ -134,9 +134,7 @@ The downside of Shopify subscriptions is that I've had a terrible time with Shop
 
 For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. At $80/yr per renewal, that means that 375 customers per year renew. Actually, I did say profit, so let's assume I lose 3% in fees, so let's say I need at least 387 subscribers.
 
-TinyPilot has sold around 5,000 devices total, and we sell around 2,700 new devices per year. Reaching 387 subscribers means convincing just 7.5% of our existing users to pay for continued updates, which seems very doable.
-
-I can still only sell 30 license renewals per year, that would be a bad deal. It's way too much work to earn $2,400 in additional revenue per year.
+Since we launched in 2020, TinyPilot has sold around 5,000 devices total. We sell around 2,700 new devices per year. Reaching 387 subscribers means convincing just 7.5% of our existing users to pay for continued updates, which seems doable.
 
 ## How can I test customers' willingness to renew their licenses?
 
