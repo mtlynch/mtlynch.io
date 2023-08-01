@@ -138,9 +138,15 @@ Since we launched in 2020, TinyPilot has sold around 5,000 devices total. We sel
 
 ## How can I test customers' willingness to renew their licenses?
 
-All the work in creating license renewals doens't make sense if nobody is willing to renew their license. If it turns out that even in the most perfect execution of license renewals, it only yields an extra $2k/yr in profit, I shouldn't do it. Any work on licensing is likely to cost me more than $2k/yr in implementation and maintenance.
+How do we do low-cost tests?
 
-How many would I need for it to be worth it?
+### Forced factory resets
+
+TODO
+
+### Manual expiration notices
+
+TODO: Show emails I've sent.
 
 ## Side projects
 
