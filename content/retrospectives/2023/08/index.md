@@ -21,21 +21,21 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Goal 1
+### Start a manufacturing batch with a new contract manufacturer
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 2
+### Publish TinyPilot Pro 2.6.0
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 3
+### Reach $95k in revenue
 
 - **Result**: XX
 - **Grade**: XX
@@ -56,29 +56,73 @@ I keep waiting for the day that everyone who wants a TinyPilot has one, and then
 
 ## How TinyPilot Pro licenses work today
 
-In 2020, I was working on a licensing scheme for TinyPilot, and I realized that if TinyPilot licenses lasted for a year, I didn't really need to figure it out for a year.
+I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020. I was a few days into working on a system for checking license keys when I remembered the famous DHH post about billing. (TODO: link) I was working on a licensing scheme for TinyPilot, and I realized that if TinyPilot licenses lasted for a year, I didn't really need to figure it out for a year.
 
-But now it's three years later, and I still haven't figured it out. The secret of TinyPilot Pro is that once you have a TinyPilot Pro installation, you can keep upgrading forever. There are users who purchased in August 2020 that got free upgrades for two years after their licenses expired. The vast majority of users probably don't even realize that their license expired at all because they (reasonably) assume that if TinyPilot continues delivering them updates, they still have a valid license.
+But now it's three years later, and I still haven't figured out license enforcement for TinyPilot Pro.
 
-The main reason customers discover that their license is expired is when their device's filesystem becomes corrupted and they need to reflash their microSD storage disk. In those cases, they go to our factory reset flow, but when they enter their order information, they find
+We advertise to customers that TinyPilot devices come with 12 months of free updates, but our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating forever. The device doesn't have any way of tracking whether it's associated with a valid license. There are users who purchased in August 2020 that got free upgrades for two years after their licenses expired.
 
-When this happens, customers are mad. Not only did we sell them a device whose filesystem went bad, but now we're leaving them with a dead device until they pay us $80 to renew their license?
+The vast majority of users probably don't even realize that their license expired at all. They assume, understandably so, that if TinyPilot continues delivering updates to their device, their license is still valid.
 
-## What would ideal TinyPilot Pro subscriptions look like?
+The main way that customers currently discover an expired license is when they try to factory reset their device, usually after their TinyPilot's disk goes bad from filesystem corruption. To download a TinyPilot Pro image they can flash to their microSD disk, the customer needs to enter their order details. If they ordered more than a year prior, we tell them that their license expired.
 
-When I started TinyPilot, I thought the value would be in the software. I thought I'd provide instructions for DIY builds, and then people would purchase the software from me.
+From the customer's perspective, this is a terrible way to find out that their license expired. Their filesystem got corrupted, so now their work is interrupted as they have to physically remove the TinyPilot's microSD and reflash it, and now we're shaking them down for more money?
 
-## What's the ideal version of TinyPilot Pro's paid licenses work?
+The "license is expired" notice tells the customer that they can contact support, and we'll give them a copy of the latest version of TinyPilot Pro they qualify for under their license. But that's not great for the customer because they have to wait up to one business day for a response from us, and it's not great for us because now that the customer is back on the "free updates forever" train because they have a valid TinyPilot Pro image.
+
+## What's the ideal version of TinyPilot Pro's licenses?
+
+When I think about TinyPilot Pro licenses, I often get stuck thinking about all the challenges of changing parts of the system. As an exercise, I'm going to just pretend we have no constraints on implementation time or integrating different systems together.
+
+If I had a magic wand, what would the ideal customer experience be for managing paid TinyPilot Pro licenses so that customers are happy and TinyPilot makes enough money to sustain continued support and development.
+
+### Purchase experience
 
 When the customer checks out, there's a little checkbox that says, "Auto-renew my TinyPilot Pro license annually." It's off by default, but if the user checks it, they get $50 off their purchase.
 
-At any time, the user can manage their license and buy another year.
+At any time, the customer can manage their license from a web dashboard. They can cancel their subscription, purchase an auto-renewing subscription, or purchase a one-time 12-month license.
 
-Would I do a monthly price? It seems like a bad idea because users can just subscribe for one month every six months and then they're getting all the same software for 1/5 the price.
+### Updates
+
+When the user receives their device, they can use it normally without being prompted for a license key. They only get prompted to enter a license key after a year of usage.
+
+### Renewing
+
+When the user's license expires, they can continue using TinyPilot Pro software. If they
+
+We send them a friendly email saying that their license is expiring. Depending on how they're set up, we either tell them that they're enrolled in auto-renew or that their access to updates will stop in two weeks.
+
+If they choose not to renew, they can continue using all of TinyPilot Pro's features, but they won't be able to download updates, and they won't be eligible for private customer support.
 
 ## Challenges of the ideal flow
 
-### Subscriptions are a new system
+### Notifications
+
+Don't have the user's email address. Either bought through a distributor like Amazon, sometimes through a procurement company, sometimes a buyer at a large organization who's not the same as the end-user.
+
+### Associating devices with purchases
+
+One obvious flaw is that it's hard to associate a device with a purchase without prompting the user to manually input their order information. Each device has unique hardware identifiers, but it would be extremely difficult to
+
+A simpler approximation is that we could keep track of hardware identifiers on our update server. If we get a request from a hardware identifier we've never seen before, we assume it's a new purchase and auto-provision a one-year key. The downside is that it's trivial to crack. A user can patch the file that requests updates.
+
+Or we could just have the user enter their license key on their first update. It's kind of annoying, but it's what basically all other software like this does.
+
+### Time measurement
+
+One challenge of the 12 months of updates is that when does the 12 months begin? Currently, we're measuring from the time of the order, but that's not really fair. If it takes six weeks to ship a device internationally, the user just lost 11% of their license lifetime.
+
+The naive approach to measuring a year of use is to record a timestamp of TinyPilot's first boot. And then we know exactly when the customer's license should expire.
+
+But TinyPilot doesn't have a real-time clock. It doesn't know the time until it contacts an NTP server.
+
+We make a request to our own server on first boot, but I don't want to add in a phone-home that exists only to work against the user.
+
+But really, this is kind of overengineering. If users care that the clock started ticking as soon as they placed the order, maybe we silently make the license last an extra six weeks for everyone to cover the 99th percentile of shipping time.
+
+### Integrating recurring subscriptions into license checking
+
+### Integrating recurring subscriptions into support workflows
 
 My first instinct is to use a tool for software subscriptions like Stripe or Paddle. But then that's a whole new system to integrate. Our license checking system would have to also integrate with Stripe/Paddle APIs to see if users have active licenses. Our support staff would need to
 
@@ -86,9 +130,17 @@ There's also Shopify subscriptions. Those have the benefit of being integrated w
 
 The downside of Shopify subscriptions is that I've had a terrible time with Shopify add-on apps. They're typically low quality. The way that Shopify is designed means that Shopify apps all have excessive permissions, so to plug an app into my Shopify store and allow it to manage recurring subscriptions, I have to give that app access to _all_ orders in my system. So there's a risk that a nefarious or insecure app leaks customer data.
 
+## What would make recurring subscriptions worth the effort?
+
+For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. At $80/yr per renewal, that means that 375 customers per year renew. Actually, I did say profit, so let's assume I lose 3% in fees, so let's say I need at least 387 subscribers.
+
+TinyPilot has sold around 5,000 devices total, and we sell around 2,700 new devices per year. Reaching 387 subscribers means convincing just 7.5% of our existing users to pay for continued updates, which seems very doable.
+
+I can still only sell 30 license renewals per year, that would be a bad deal. It's way too much work to earn $2,400 in additional revenue per year.
+
 ## How can I test customers' willingness to renew their licenses?
 
-All the work in creating license renewals doens't make sense if nobody is willing to renew their license. If it turns out that even in the most perfect execution of license renewals, I can still only sell 30 license renewals per year, that would be a bad deal. It's way too much work to earn $2,400 in additional revenue per year.
+All the work in creating license renewals doens't make sense if nobody is willing to renew their license. If it turns out that even in the most perfect execution of license renewals, it only yields an extra $2k/yr in profit, I shouldn't do it. Any work on licensing is likely to cost me more than $2k/yr in implementation and maintenance.
 
 How many would I need for it to be worth it?
 
@@ -117,4 +169,4 @@ I'm trying a new idea this month where I announce ways readers can help me. If y
 
 {{</notice>}}
 
-TODO
+If you have experience with any
