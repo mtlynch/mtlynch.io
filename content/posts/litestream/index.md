@@ -63,7 +63,7 @@ I didn't have anything against SQLite, but the design seemed impractical. Unlike
 
 Thinking about it more, I realized I'd dismissed Litestream because I didn't use SQLite. But Litestream solved the very obstacle keeping me from adopting SQLite... Maybe this was worth a try.
 
-Even better, Litestream could be my ticket out of Google Cloud Platform. SQLite runs anywhere, so I'd have freedom in choosing server hosting platforms. Litestream provides vendor flexibility on the storage side, as it supports any S3-compatible service, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
+Even better, Litestream could be my ticket out of Google Cloud Platform. SQLite runs anywhere, so I'd have freedom in choosing server hosting platforms. Litestream provides vendor flexibility on the storage side, as it supports any S3-compatible service, including [BackBlaze B2](https://www.backblaze.com/cloud-storage), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
 
 Litestream sounded rosy in theory, but you can't judge a technology until you test it in production. I needed a log upload service, and it seemed like the perfect project to test Litestream.
 
