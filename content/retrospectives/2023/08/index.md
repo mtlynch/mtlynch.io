@@ -1,7 +1,7 @@
 ---
-title: "08"
-date: 2023-07-31T09:04:46-04:00
-description: TODO - One-line summary
+title: "TinyPilot: Month 37"
+date: 2023-08-15T00:00:00-04:00
+description: How can TinyPilot increase recurring revenue?
 ---
 
 {{<notice type="info">}}
@@ -37,8 +37,8 @@ TODO
 
 ### Reach $95k in revenue
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: Revenue dropped 10% to $84k
+- **Grade**: C
 
 TODO
 
