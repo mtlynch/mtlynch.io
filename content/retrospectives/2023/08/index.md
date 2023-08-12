@@ -129,15 +129,27 @@ We currently only offer
 
 ### [What Got Done](https://whatgotdone.com)
 
-I've been [experimenting with Nix](/tags/nix/) recently, and one of the features that interests me is `nix develop`. It lets you create a self-contained shell environment with exactly the dev tools you need to build and test a particular software project.
+I've been [experimenting with Nix](/tags/nix/) recently, and one of the features that interests me is `nix develop`. It lets you create a self-contained shell environment with exactly the dev tools you need to build and test your project.
 
 One of the annoyances I run into with my various software projects is the difficulty of maintaining dependencies. My projects' dependencies are tied to specific versions like Go 1.19 or Node.js 16. Whenever I have to upgrade to the next version, it's a pain to figure out how to install it in my dev environment, then update the version numbers in my continuous integration (CI) configuration.
 
-The promise of `nix develop` is that I could define the dependencies in one place: a Nix flake file. If I needed to upgrade to the next version of Go, for example, I'd just update one file, re-run `nix develop`, and I'd have a local shell with the right version of Go, and my CI environment would run the same version.
+Worse, if I have multiple projects on the same system, updating Node.js for one project means that the other projects now have unexpected versions of Node.js and npm.
 
-Here's what it looks like now:
+The promise of `nix develop` is that I could define the dependencies in one place: a [Nix flake](https://nixos.wiki/wiki/Flakes). If I needed to upgrade to the next version of Go, for example, I'd just update one file, re-run `nix develop`, and I'd have a local shell with the right version of Go, and my CI environment would run the same version. The environment is local to the directory, so changing package versions wouldn't affect any other projects on the same system.
 
-https://github.com/mtlynch/whatgotdone/compare/b74b8d225bc45c94e1222ac46f9d516de39b6687
+I started experimenting with `nix develop` in [What Got Done](https://github.com/mtlynch/whatgotdone/blob/dd3ea38885b04280bcea07f5294440e9a3521301/flake.nix) because it depends on particular versions of Go and Node.js.
+
+It's been interesting playing with Nix for What Got Done's development environments, but here are the roadblocks I've run into so far:
+
+- I [couldn't figure out how to make Go static binary builds work](https://www.reddit.com/r/NixOS/comments/15d874l/trying_to_create_a_nix_flake_for_go_with_static/), and [the solution](https://github.com/mtlynch/whatgotdone/pull/884/files) feels kind of like, "You should just know this magic incantation."
+- There's no easy way to specify an exact version of a dependency.
+  - I expected to be able to declare versions similar to Docker like `go:1.19.3`, but [Nix doesn't support this](https://github.com/NixOS/nixpkgs/issues/9682).
+  - For a tool that focuses so much on reproducibility, this really surprised me.
+  - The closest solution I've found is to [use a third-party tool](https://gist.github.com/toraritte/62e53be9e6d88d8b6b97391eb3c6558b#22-pin-nixpkgs-in-a-nix-expression) to find the nixpkgs hash associated with a package version, then pin your package to that nixpkgs hash. Here's what that looks like for [one of What Got Done's dependencies](https://github.com/mtlynch/whatgotdone/blob/67f098bace4c7d6302c193dc20e85d4e6a6761a2/flake.nix#L14-L18).
+- Populating the Nix store is prohibitively slow.
+  - There's a [`nixos/nix` Docker image](https://hub.docker.com/r/nixos/nix) that I can spin up pretty quickly in CircleCI, but building the Nix environment for my Nix+Go flake takes about two minutes.
+  - This means that any CI step I run has to burn two minutes just initializing Nix.
+  - I tried caching the Nix store, but it's about 3 GB, which CircleCI takes about two minutes to download and decompress.
 
 ## Wrap up
 
