@@ -46,6 +46,15 @@ TODO
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric                   | June 2023      | July 2023        | Change                                         |
+| ------------------------ | -------------- | ---------------- | ---------------------------------------------- |
+| Unique Visitors          | 8,300          | 7,800            | <font color="red">-500 (-6%)</font>            |
+| Sales Revenue            | $88,378.45     | $79,635.02       | <font color="red">-$8,743.43 (-10%)</font>     |
+| Enterprise Subscriptions | $290.70        | $290.70          | 0                                              |
+| Royalties                | $4,399.66      | $3,777.52        | <font color="red">-$622.14 (-14%)</font>       |
+| Total Revenue            | $93,068.81     | $83,703.24       | <font color="red">-$9,365.57 (-10%)</font>     |
+| **Profit**               | **$30,907.55** | **$25,357.82**\* | **<font color="red">-$5,549.73 (-18%)</font>** |
+
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
 ## How can TinyPilot increase recurring revenue?
