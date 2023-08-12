@@ -21,24 +21,24 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Start a manufacturing batch with a new contract manufacturer
-
-- **Result**: XX
-- **Grade**: XX
-
-TODO
-
-### Publish TinyPilot Pro 2.6.0
-
-- **Result**: XX
-- **Grade**: XX
-
-TODO
-
-### Reach $95k in revenue
+### Reach $98k in sales revenue
 
 - **Result**: Revenue dropped 10% to $84k
 - **Grade**: C
+
+TODO
+
+### Stay on schedule for TinyPilot's shift to our contract manufacturer
+
+- **Result**: XX
+- **Grade**: XX
+
+TODO
+
+### Spend less than 40% of my time on email
+
+- **Result**: Published
+- **Grade**: XX
 
 TODO
 
@@ -103,42 +103,6 @@ We send them a friendly email saying that their license is expiring. Depending o
 
 If they choose not to renew, they can continue using all of TinyPilot Pro's features, but they won't be able to download updates, and they won't be eligible for private customer support.
 
-## Challenges of the ideal flow
-
-### Notifications
-
-Don't have the user's email address. Either bought through a distributor like Amazon, sometimes through a procurement company, sometimes a buyer at a large organization who's not the same as the end-user.
-
-### Associating devices with purchases
-
-One obvious flaw is that it's hard to associate a device with a purchase without prompting the user to manually input their order information. Each device has unique hardware identifiers, but it would be extremely difficult to
-
-A simpler approximation is that we could keep track of hardware identifiers on our update server. If we get a request from a hardware identifier we've never seen before, we assume it's a new purchase and auto-provision a one-year key. The downside is that it's trivial to crack. A user can patch the file that requests updates.
-
-Or we could just have the user enter their license key on their first update. It's kind of annoying, but it's what basically all other software like this does.
-
-### Time measurement
-
-One challenge of the 12 months of updates is that when does the 12 months begin? Currently, we're measuring from the time of the order, but that's not really fair. If it takes six weeks to ship a device internationally, the user just lost 11% of their license lifetime.
-
-The naive approach to measuring a year of use is to record a timestamp of TinyPilot's first boot. And then we know exactly when the customer's license should expire.
-
-But TinyPilot doesn't have a real-time clock. It doesn't know the time until it contacts an NTP server.
-
-We make a request to our own server on first boot, but I don't want to add in a phone-home that exists only to work against the user.
-
-But really, this is kind of overengineering. If users care that the clock started ticking as soon as they placed the order, maybe we silently make the license last an extra six weeks for everyone to cover the 99th percentile of shipping time.
-
-### Integrating recurring subscriptions into license checking
-
-### Integrating recurring subscriptions into support workflows
-
-My first instinct is to use a tool for software subscriptions like Stripe or Paddle. But then that's a whole new system to integrate. Our license checking system would have to also integrate with Stripe/Paddle APIs to see if users have active licenses. Our support staff would need to
-
-There's also Shopify subscriptions. Those have the benefit of being integrated with our existing systems. Our support staff already knows how to use Shopify. Our license checking system is already integrated into Shopify.
-
-The downside of Shopify subscriptions is that I've had a terrible time with Shopify add-on apps. They're typically low quality. The way that Shopify is designed means that Shopify apps all have excessive permissions, so to plug an app into my Shopify store and allow it to manage recurring subscriptions, I have to give that app access to _all_ orders in my system. So there's a risk that a nefarious or insecure app leaks customer data.
-
 ## What would make recurring subscriptions worth the effort?
 
 For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. At $80/yr per renewal, that means that 375 customers per year renew. Actually, I did say profit, so let's assume I lose 3% in fees, so let's say I need at least 387 subscribers.
@@ -156,6 +120,10 @@ TODO
 ### Manual expiration notices
 
 TODO: Show emails I've sent.
+
+### Add an auto-renew option
+
+We currently only offer
 
 ## Side projects
 
