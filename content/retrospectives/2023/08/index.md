@@ -127,6 +127,18 @@ We currently only offer
 
 ## Side projects
 
+### [What Got Done](https://whatgotdone.com)
+
+I've been [experimenting with Nix](/tags/nix/) recently, and one of the features that interests me is `nix develop`. It lets you create a self-contained shell environment with exactly the dev tools you need to build and test a particular software project.
+
+One of the annoyances I run into with my various software projects is the difficulty of maintaining dependencies. My projects' dependencies are tied to specific versions like Go 1.19 or Node.js 16. Whenever I have to upgrade to the next version, it's a pain to figure out how to install it in my dev environment, then update the version numbers in my continuous integration (CI) configuration.
+
+The promise of `nix develop` is that I could define the dependencies in one place: a Nix flake file. If I needed to upgrade to the next version of Go, for example, I'd just update one file, re-run `nix develop`, and I'd have a local shell with the right version of Go, and my CI environment would run the same version.
+
+Here's what it looks like now:
+
+https://github.com/mtlynch/whatgotdone/compare/b74b8d225bc45c94e1222ac46f9d516de39b6687
+
 ## Wrap up
 
 ### What got done?
