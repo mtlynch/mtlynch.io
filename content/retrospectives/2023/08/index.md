@@ -105,7 +105,9 @@ If they choose not to renew, they can continue using all of TinyPilot Pro's feat
 
 ## What would make recurring subscriptions worth the effort?
 
-For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. At $80/yr per renewal, that means that 375 customers per year renew. Actually, I did say profit, so let's assume I lose 3% in fees, so let's say I need at least 387 subscribers.
+For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. I estimate payment processing for licenses will cost about 3%, so each license renewal nets TinyPilot about $77.
+
+To hit my target number of $30k/yr in additional profit from licenses, a minimum of 387 customers per year would have to renew their licenses each year.
 
 Since we launched in 2020, TinyPilot has sold around 5,000 devices total. We sell around 2,700 new devices per year. Reaching 387 subscribers means convincing just 7.5% of our existing users to pay for continued updates, which seems doable.
 
@@ -168,10 +170,4 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 ### Requests for help
 
-{{<notice type="info">}}
-
-I'm trying a new idea this month where I announce ways readers can help me. If you're a fan of this blog and can connect me with people that are a match for what I'm looking for, [email me](/about/).
-
-{{</notice>}}
-
-If you have experience with any
+If you have experience with setting up recurring subscription for a digital product on Shopify, please [email me](/about/).
