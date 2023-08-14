@@ -30,10 +30,10 @@ TODO
 
 ### Stay on schedule for TinyPilot's shift to our contract manufacturer
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: The schedule has now slipped three weeks.
+- **Grade**: D
 
-TODO
+This wasn't a well-designed goal.
 
 ### Spend less than 40% of my time on email
 
@@ -148,6 +148,7 @@ It's been interesting playing with Nix for What Got Done's development environme
   - I expected to be able to declare versions similar to Docker like `go:1.19.3`, but [Nix doesn't support this](https://github.com/NixOS/nixpkgs/issues/9682).
   - For a tool that focuses so much on reproducibility, this really surprised me.
   - The closest solution I've found is to [use a third-party tool](https://gist.github.com/toraritte/62e53be9e6d88d8b6b97391eb3c6558b#22-pin-nixpkgs-in-a-nix-expression) to find the nixpkgs hash associated with a package version, then pin your package to that nixpkgs hash. Here's what that looks like for [one of What Got Done's dependencies](https://github.com/mtlynch/whatgotdone/blob/67f098bace4c7d6302c193dc20e85d4e6a6761a2/flake.nix#L14-L18).
+  - [Devbox](https://github.com/jetpack-io/devbox) solves this problem, but then you're only indirectly using Nix, and you have to learn to use Devbox's abstraction on top of Nix.
 - Populating the Nix store is prohibitively slow.
   - There's a [`nixos/nix` Docker image](https://hub.docker.com/r/nixos/nix) that I can spin up pretty quickly in CircleCI, but building the Nix environment for my Nix+Go flake takes about two minutes.
   - This means that any CI step I run has to burn two minutes just initializing Nix.
@@ -166,7 +167,8 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 ### Goals for next month
 
--
+- Shift manufacturing to our contract manufacturer as quickly as possible.
+- Create a detailed plan for moving out of TinyPilot's local office.
 
 ### Requests for help
 
