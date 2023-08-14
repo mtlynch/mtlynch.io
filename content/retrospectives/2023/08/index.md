@@ -146,13 +146,26 @@ TODO: count TinyPilot Pro renewals after the announcement of people who had prev
 
 ### Manual expiration notices
 
-TODO: Show emails I've sent.
-
 {{<img src="license-expired-note.png" has-border="true">}}
+
+I sent seven emails, but none of them renewed. I need a larger sample to draw any meaningful conclusions. If I need 7.5% of customers to renew, then that's only one customer out of 13 or 14.
+
+Not a great experiment because:
+
+- A lot of our work recently has focused on making the update experience faster and less error-prone. This is useful, but it's not compelling to tell users that they can update to the latest version so that the update experiene is better.
+- Not catching them at a time when they care about updates
+- It's possible that users are ignoring these emails because they see that they can still update their devices without renewing.
+- Some seem to have signed up with low-attention email addresses like `junk1234@gmail.com`, so they might not even be seeing my note.
 
 ### Add an auto-renew option
 
-We currently only offer
+We currently only offer license renewals as one-time purchases. I haven't explored a recurring subscription option because Shopify only has native support for one-time purchases.
+
+To collect recurring payments on Shopify, I'd need to use a third-party Shopify app, and I hate doing that. In my experience, Shopify apps are low quality and they require me to share broad access to my customers' information, including customers whose purchase never touches the third-party integration.
+
+Still, compared to other options, an auto-renew option has a pretty good bang for its buck in terms of testing customers' willingness to subscribe. If I just added another option on the license purchase page like "Or purchase a yearly subscription for 10% off," it would tell me whether any customers are willing to subscribe.
+
+It would be relatively easy to add a subscription button, and we likely wouldn't have to change any of our other processes or systems because the subscriptions would just show up as regular Shopify orders.
 
 ## Side projects
 
@@ -190,13 +203,14 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 ### Lessons learned
 
-- TinyPilot seems to have saturated
-  - I'm seeing greatly diminished returns for new reviews relative to the effect that new reviews had two years ago.
+- TinyPilot seems to have exhausted the marketing value we were getting from blog and YouTube reviews.
+  - I'm seeing diminished returns for new reviews relative to the effect that new reviews had a year ago. It's definitely not the effect we saw [two years ago, when a single review nearly tripled sales](/retrospectives/2021/02/#tinypilots-first-youtube-review).
 
 ### Goals for next month
 
 - Shift manufacturing to our contract manufacturer as quickly as possible.
 - Create a detailed plan for moving out of TinyPilot's local office.
+- Test an option for auto-renewing TinyPilot licenses.
 
 ### Requests for help
 
