@@ -26,21 +26,32 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: Revenue dropped 10% to $84k
 - **Grade**: C
 
-TODO
+Our revenue dropped even though we had several new positive reviews:
+
+- [RaidOwl](https://www.youtube.com/watch?v=ceWNyZno7FI)
+- [Home Network Guy](https://youtu.be/QsTAKeK0M4s) (and accompanying [blog post](https://homenetworkguy.com/review/remote-control-a-pc-or-server-with-tinypilot-voyager-2a/))
+- [Network Profile](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/)
+- [Botio Studio](https://youtu.be/E94A6EasaSs) (Chinese)
+
+I think a big part of this is due to Amazon downranking our listings through their Kafkaesque account health policies. We're now back in their good graces, and sales have picked up again.
+
+I've also heard from other founders that they see a regular summer slump around this time. And TinyPilot indeed had an [11% revenue drop in July 2022](/retrospectives/2022/08/).
 
 ### Stay on schedule for TinyPilot's shift to our contract manufacturer
 
 - **Result**: The schedule has now slipped three weeks.
 - **Grade**: D
 
-This wasn't a well-designed goal.
+The schedule manufacturing has been pushed back, as downstream vendors of the contract manufacturer need more time to produce components like power adapters and USB cables. We still have about three weeks of buffer before we
+
+This wasn't a well-designed goal, as I didn't choose the deadline, and I have limited control over keeping the deadline aside from preventing things from being blocked on TinyPilot's side.
 
 ### Spend less than 40% of my time on email
 
-- **Result**: Published
-- **Grade**: XX
+- **Result**: Spent most of my time on email.
+- **Grade**: D
 
-TODO
+I ended up spending way more of my time on email than I expected. I had some vacation travel in July, and I didn't take into account how much the days off would cause email backlogs I'd have to catch up when I returned to work.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -63,13 +74,21 @@ When TinyPilot's sales slump, I start to think more about recurring revenue. In 
 
 I keep waiting for the day that everyone who wants a TinyPilot has one, and then what am I going to do?
 
-## How TinyPilot Pro licenses work today
+## How TinyPilot Pro's licenses, three years in
 
-I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020. I was a few days into working on a system for checking license keys when I remembered the famous DHH post about billing. (TODO: link) I was working on a licensing scheme for TinyPilot, and I realized that if TinyPilot licenses lasted for a year, I didn't really need to figure it out for a year.
+I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020. I was a few days into working on it when I realized it would take me months to write license management code while juggling all of my other responsibilities as a founder. After months of work, I'd have a version of TinyPilot Pro whose only additional feature over the free version is that it can check whether you paid for the Pro version. It wouldn't be a very compelling version to offer users.
 
-But now it's three years later, and I still haven't figured out license enforcement for TinyPilot Pro.
+There's a Basecamp post that I can't find anymore where they talk about how they decided to start selling their SaaS product before they'd even written billing software. They reasoned that invoices for their software were due at the end of each month of service, so they had a month after their first sale to figure out how to actually collect the money.
 
-We advertise to customers that TinyPilot devices come with 12 months of free updates, but our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating forever. The device doesn't have any way of tracking whether it's associated with a valid license. There are users who purchased in August 2020 that got free upgrades for two years after their licenses expired.
+I decided to follow a similar path with TiyPilot Pro. I settled on [the honor system](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-systemdhh) as a way of enforcing licenses with the expectation that I had a year to implement something more real.
+
+Now, it's three years later, and I still haven't made any progress on license enforcement for TinyPilot Pro.
+
+## License enforcement at the worst possible time
+
+We advertise to customers that TinyPilot devices come with 12 months of free updates, but our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating forever.
+
+TinyPilot Pro's software doesn't track whether it's associated with a valid license. There are users who purchased in August 2020 that are now in year three of their one-year license.
 
 The vast majority of users probably don't even realize that their license expired at all. They assume, understandably so, that if TinyPilot continues delivering updates to their device, their license is still valid.
 
