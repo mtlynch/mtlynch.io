@@ -118,28 +118,6 @@ When the license check on the website comes back as "expired," the message does 
 
 This system isn't great for us either because support requests for old TinyPilot Pro versions drain support resources. And once the customer gets a new image, they're back on the "free updates forever" train because they can just keep updating the software from the device's web interface.
 
-## What's the ideal version of TinyPilot Pro's licenses?
-
-When I think about TinyPilot Pro licenses, I often get stuck thinking about all the challenges of changing parts of the system. As an exercise, I'm going to just pretend we have no constraints on implementation time or integrating different systems together.
-
-If I had a magic wand, what would the ideal customer experience be for managing paid TinyPilot Pro licenses? It should result in customers being happy to pay and TinyPilot making enough money to sustain continued support and development.
-
-### Purchase experience
-
-When the customer checks out, there's a little checkbox that says, "Auto-renew my TinyPilot Pro license annually." It's off by default, but if the user checks it, they get $50 off their purchase.
-
-At any time, the customer can manage their license from a web dashboard. They can cancel their subscription, purchase an auto-renewing subscription, or purchase a one-time 12-month license.
-
-### Updates
-
-When the user receives their device, they can use it normally without being prompted for a license key. They only get prompted to enter a license key when they try to update.
-
-### Renewing
-
-When the user's license expires, we send them a friendly email saying that their license is expiring. Depending on how they're set up, we either tell them that they're enrolled in auto-renew or that their access to updates will stop in two weeks.
-
-If they choose not to renew, they can continue using all of TinyPilot Pro's features, but they won't be able to download updates, and they won't be eligible for private customer support.
-
 ## What would make recurring subscriptions worth the effort?
 
 For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. I estimate payment processing for licenses will cost about 3%, so each license renewal nets TinyPilot about $77.
@@ -150,15 +128,27 @@ Since we launched in 2020, TinyPilot has sold around 5,000 devices total. We sel
 
 ## How can I test customers' willingness to renew their licenses?
 
-How do we do low-cost tests?
+Any kind of license enforcement is going to be expensive. At minimum, we'd have to add something to TinyPilot's web interface that allows customers to enter their license information, and then we need a server on the Internet that can decide whether the user qualifies for updates based on their license.
+
+That's expensive to implement because it's several weeks of dev work, and it increases support load when users inevitably email us saying they can't access updates because they deleted the TinyPilot email with their order information.
+
+What if I go through all that effort and trouble and find that fewer than 7.5% of customers are willing to pay for license renewals? That would be a huge waste of money and misuse of limited dev resources, so is there a better way to test willingness without spending so much money?
 
 ### Forced factory resets
 
-TODO
+Earlier this year, we had to switch TinyPilot's base OS from Debian Buster to Debian Bullseye. The Raspberry Pi OS doesn't have a supported way to do major version upgrades, so we unfortunately had to force every user to manually reflash their microSD to make the migration.
+
+I hated pushing that cost onto users, but we weren't able to find any other option. But the positive side effect was that it ended the "free forever" update train. For users to get access to the Debian Bullseye-based TinyPilot Pro image, they had to prove they had an active license.
+
+How many customers seem to have renewed based on that?
+
+TODO: count TinyPilot Pro renewals after the announcement of people who had previous hardware purchases
 
 ### Manual expiration notices
 
 TODO: Show emails I've sent.
+
+{{<img src="license-expired-note.png" has-border="true">}}
 
 ### Add an auto-renew option
 
