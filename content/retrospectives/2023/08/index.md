@@ -68,41 +68,61 @@ I ended up spending way more of my time on email than I expected. I had some vac
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
+Despite revenue dropping, profit is still in the $20-30k range. The number is somewhat inflated because my expenses are artificially low. With the transition to the contract manufacturer, I'm winding down my own production, so I've stopped buying new materials.
+
+I'm surprised to see website visitors down despite all the new reviews that came out. It looks like TinyPilot has probably saturated homelab reviews as a marketing channel for a while, so I should focus on other types of sales and marketing.
+
 ## How can TinyPilot increase recurring revenue?
 
-When TinyPilot's sales slump, I start to think more about recurring revenue. In the bootstrapper community, most successful businesses have recurring revenue. TinyPilot is an oddity in that
+When TinyPilot's sales slump, I start to think more about recurring revenue. In the bootstrapper community, most successful businesses have recurring revenue.
 
-I keep waiting for the day that everyone who wants a TinyPilot has one, and then what am I going to do?
+I keep waiting for the day to come when everyone who wants a TinyPilot already has one. Then what am I going to do?
 
-## How TinyPilot Pro's licenses, three years in
+My plan from the beginning was that TinyPilot _would_ have recurring revenue. Customers would buy the hardware once, and then they'd fund ongoing software development by renewing their software license every year.
 
-I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020. I was a few days into working on it when I realized it would take me months to write license management code while juggling all of my other responsibilities as a founder. After months of work, I'd have a version of TinyPilot Pro whose only additional feature over the free version is that it can check whether you paid for the Pro version. It wouldn't be a very compelling version to offer users.
+The problem is that I've never set up TinyPilot to collect recurring revenue from customers. Three years in, we barely have any recurring revenue outside of a few Enterprise clients.
+
+In this retrospective, I want to focus on the challenges around recurring revenue for TinyPilot and explore possible paths to increasing it.
+
+## How TinyPilot Pro's licenses work currently
+
+I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020. I was a few days into working on it when I realized it would take me months to write license management code while juggling all of my other responsibilities as a founder.
+
+If it took me three months to implement license management, I'd still have to spend two months implementing other premium features so customers would have a compelling reason to purchase TinyPilot Pro. With the company only a few months old, I didn't want to slow down momentum so much by making users wait five months until the next release.
 
 There's a Basecamp post that I can't find anymore where they talk about how they decided to start selling their SaaS product before they'd even written billing software. They reasoned that invoices for their software were due at the end of each month of service, so they had a month after their first sale to figure out how to actually collect the money.
 
-I decided to follow a similar path with TiyPilot Pro. I settled on [the honor system](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-systemdhh) as a way of enforcing licenses with the expectation that I had a year to implement something more real.
+I decided to follow a similar path with TiyPilot Pro. I settled on [the honor system](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-systemdhh) as a way of enforcing licenses with the expectation that I had a year to implement a real license management solution.
 
 Now, it's three years later, and I still haven't made any progress on license enforcement for TinyPilot Pro.
 
 ## License enforcement at the worst possible time
 
-We advertise to customers that TinyPilot devices come with 12 months of free updates, but our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating forever.
+We advertise to customers that TinyPilot devices come with 12 months of free updates, but our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating the software forever through the device's web interface.
+
+{{<img src="update-dialog.png" caption="TinyPilot's web app allows any device to retrieve the latest version of TinyPilot Pro" has-border="true" alt="Screenshot of update dialog in TinyPilot web app" max-width="700px">}}
 
 TinyPilot Pro's software doesn't track whether it's associated with a valid license. There are users who purchased in August 2020 that are now in year three of their one-year license.
 
-The vast majority of users probably don't even realize that their license expired at all. They assume, understandably so, that if TinyPilot continues delivering updates to their device, their license is still valid.
+The vast majority of users don't realize that their license expired at all. They assume, understandably so, that if TinyPilot continues delivering updates to their device, their license is still valid.
 
-The main way that customers currently discover an expired license is when they try to factory reset their device, usually after their TinyPilot's disk goes bad from filesystem corruption. To download a TinyPilot Pro image they can flash to their microSD disk, the customer needs to enter their order details. If they ordered more than a year prior, we tell them that their license expired.
+But customers do sometimes discover that their license expired, and it's at an especially inconvenient time. TinyPilot uses microSD cards for storage. microSDs are especially vulnerable to filesystem corruption, and the only solution is to reflash the microSD from a TinyPilot Pro disk image.
 
-From the customer's perspective, this is a terrible way to find out that their license expired. Their filesystem got corrupted, so now their work is interrupted as they have to physically remove the TinyPilot's microSD and reflash it, and now we're shaking them down for more money?
+In order to download a TinyPilot Pro microSD image, customers enter their order details, and we figure out if they still have a valid license before offering the microSD image.
 
-The "license is expired" notice tells the customer that they can contact support, and we'll give them a copy of the latest version of TinyPilot Pro they qualify for under their license. But that's not great for the customer because they have to wait up to one business day for a response from us, and it's not great for us because now that the customer is back on the "free updates forever" train because they have a valid TinyPilot Pro image.
+{{<img src="license-check.png" caption="License check on [page to download TinyPilot Pro microSD image](https://tinypilotkvm.com/pro/license-check)" has-border="true" alt="Screenshot of form asking the user to input their order number and email address to download TinyPilot Pro image">}}
+
+From the customer's perspective, this is a terrible way to find out that their license expired. Their filesystem got corrupted, so TinyPilot has interrupted their work. To fix the issue, they have to physically walk over to the device, remove the TinyPilot's microSD, and reflash it. And now we're shaking them down for more money?
+
+When the license check on the website comes back as "expired," the message does tell customers that they can contact support to get an old version of TinyPilot Pro, but it's still a poor customer experience. They still have to wait up to one business day for a response from us, which is bad if we're blocking their work.
+
+This system isn't great for us either because support requests for old TinyPilot Pro versions drain support resources. And once the customer gets a new image, they're back on the "free updates forever" train because they can just keep updating the software from the device's web interface.
 
 ## What's the ideal version of TinyPilot Pro's licenses?
 
 When I think about TinyPilot Pro licenses, I often get stuck thinking about all the challenges of changing parts of the system. As an exercise, I'm going to just pretend we have no constraints on implementation time or integrating different systems together.
 
-If I had a magic wand, what would the ideal customer experience be for managing paid TinyPilot Pro licenses so that customers are happy and TinyPilot makes enough money to sustain continued support and development.
+If I had a magic wand, what would the ideal customer experience be for managing paid TinyPilot Pro licenses? It should result in customers being happy to pay and TinyPilot making enough money to sustain continued support and development.
 
 ### Purchase experience
 
@@ -112,13 +132,11 @@ At any time, the customer can manage their license from a web dashboard. They ca
 
 ### Updates
 
-When the user receives their device, they can use it normally without being prompted for a license key. They only get prompted to enter a license key after a year of usage.
+When the user receives their device, they can use it normally without being prompted for a license key. They only get prompted to enter a license key when they try to update.
 
 ### Renewing
 
-When the user's license expires, they can continue using TinyPilot Pro software. If they
-
-We send them a friendly email saying that their license is expiring. Depending on how they're set up, we either tell them that they're enrolled in auto-renew or that their access to updates will stop in two weeks.
+When the user's license expires, we send them a friendly email saying that their license is expiring. Depending on how they're set up, we either tell them that they're enrolled in auto-renew or that their access to updates will stop in two weeks.
 
 If they choose not to renew, they can continue using all of TinyPilot Pro's features, but they won't be able to download updates, and they won't be eligible for private customer support.
 
@@ -182,7 +200,8 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 ### Lessons learned
 
--
+- TinyPilot seems to have saturated
+  - I'm seeing greatly diminished returns for new reviews relative to the effect that new reviews had two years ago.
 
 ### Goals for next month
 
