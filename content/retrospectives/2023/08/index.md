@@ -2,6 +2,8 @@
 title: "TinyPilot: Month 37"
 date: 2023-08-15T00:00:00-04:00
 description: How can TinyPilot increase recurring revenue?
+images:
+  - /retrospectives/2023/08/og-cover.png
 ---
 
 {{<notice type="info">}}
