@@ -140,6 +140,10 @@
     "2023-06": {
       "profit": 30907.55,
       "totalRevenue": 93068.81
+    },
+    "2023-07": {
+      "profit": 25357.82,
+      "totalRevenue": 83703.24
     }
   },
   "htfp": {
@@ -235,6 +239,9 @@
     },
     "2023-06": {
       "totalRevenue": 88.2
+    },
+    "2023-07": {
+      "totalRevenue": 35.1
     }
   },
   "isitketo": {
@@ -398,6 +405,9 @@
       "totalRevenue": 41.54
     },
     "2023-06": {
+      "totalRevenue": 41.54
+    },
+    "2023-07": {
       "totalRevenue": 41.54
     }
   },
@@ -581,6 +591,9 @@
     },
     "2023-06": {
       "totalRevenue": 118.99
+    },
+    "2023-07": {
+      "totalRevenue": 234.67
     }
   }
 }
