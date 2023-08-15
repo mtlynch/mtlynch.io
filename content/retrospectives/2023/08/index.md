@@ -15,7 +15,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
--
+- I think through what it would take to add recurring subscriptions for TinyPilot Pro.
+- I've explored a little more with Nix.
 
 ## Goal Grades
 
@@ -42,16 +43,18 @@ I've also heard from other founders that they see a regular summer slump around 
 - **Result**: The schedule has now slipped three weeks.
 - **Grade**: D
 
-The schedule manufacturing has been pushed back, as downstream vendors of the contract manufacturer need more time to produce components like power adapters and USB cables. We still have about three weeks of buffer before we
+The schedule manufacturing has been pushed back, as downstream vendors of the contract manufacturer need more time to produce components like power adapters and USB cables. We still have about three weeks of buffer before we reach zero inventory during the transition.
 
 This wasn't a well-designed goal, as I didn't choose the deadline, and I have limited control over keeping the deadline aside from preventing things from being blocked on TinyPilot's side.
 
 ### Spend less than 40% of my time on email
 
 - **Result**: Spent most of my time on email.
-- **Grade**: D
+- **Grade**: F
 
 I ended up spending way more of my time on email than I expected. I had some vacation travel in July, and I didn't take into account how much the days off would cause email backlogs I'd have to catch up when I returned to work.
+
+Ultimately, I spent most of my time this month responding to emails and reviewing work.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -74,11 +77,11 @@ I'm surprised to see website visitors down despite all the new reviews that came
 
 ## How can TinyPilot increase recurring revenue?
 
-When TinyPilot's sales slump, I start to think more about recurring revenue. In the bootstrapper community, most successful businesses have recurring revenue.
+Whenever TinyPilot's sales slump, I start to think more about recurring revenue. It would sure be nice to have stable income without relying on constantly finding new customers.
 
-I keep waiting for the day to come when everyone who wants a TinyPilot already has one. Then what am I going to do?
+I dread the day when everyone who wants a TinyPilot already has one. Then what am I going to do?
 
-My plan from the beginning was that TinyPilot _would_ have recurring revenue. Customers would buy the hardware once, and then they'd fund ongoing software development by renewing their software license every year.
+My plan from the beginning was that TinyPilot _would_ have recurring revenue. Customers would buy the hardware once, and then they'd fund ongoing software development and support by renewing their software license once a year.
 
 The problem is that I've never set up TinyPilot to collect recurring revenue from customers. Three years in, we barely have any recurring revenue outside of a few Enterprise clients.
 
@@ -86,9 +89,13 @@ In this retrospective, I want to focus on the challenges around recurring revenu
 
 ## How TinyPilot Pro's licenses work currently
 
-I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020. I was a few days into working on it when I realized it would take me months to write license management code while juggling all of my other responsibilities as a founder.
+I first began work work on a premium version of TinyPilot's software a few weeks after I released the original DIY TinyPilot kits in 2020.
 
-If it took me three months to implement license management, I'd still have to spend two months implementing other premium features so customers would have a compelling reason to purchase TinyPilot Pro. With the company only a few months old, I didn't want to slow down momentum so much by making users wait five months until the next release.
+One of the first features I started building for TinyPilot Pro was license checking. If I was going to sell a paid version of the software, I needed a way to limit functionality to users with active licenses.
+
+As I began designing the license checking system, I realized it would take me months to write just that component while juggling all of my other responsibilities as a founder. If it took me three months to implement license management, I'd still have to spend two months implementing other premium features so customers would have a compelling reason to purchase TinyPilot Pro.
+
+With the company only a few months old, I didn't want to slow down momentum so much by making users wait five months until the next release.
 
 There's a Basecamp post that I can't find anymore where they talk about how they decided to start selling their SaaS product before they'd even written billing software. They reasoned that invoices for their software were due at the end of each month of service, so they had a month after their first sale to figure out how to actually collect the money.
 
@@ -98,13 +105,13 @@ Now, it's three years later, and I still haven't made any progress on license en
 
 ## License enforcement at the worst possible time
 
-We advertise to customers that TinyPilot devices come with 12 months of free updates, but our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating the software forever through the device's web interface.
+We advertise to customers that TinyPilot devices come with 12 months of free updates. Our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating the software forever through the device's web interface.
 
 {{<img src="update-dialog.png" caption="TinyPilot's web app allows any device to retrieve the latest version of TinyPilot Pro" has-border="true" alt="Screenshot of update dialog in TinyPilot web app" max-width="700px">}}
 
 TinyPilot Pro's software doesn't track whether it's associated with a valid license. There are users who purchased in August 2020 that are now in year three of their one-year license.
 
-The vast majority of users don't realize that their license expired at all. They assume, understandably so, that if TinyPilot continues delivering updates to their device, their license is still valid.
+The vast majority of customers don't realize that their license expired at all. They assume, understandably so, that if TinyPilot continues delivering updates to their device, their license is still valid.
 
 But customers do sometimes discover that their license expired, and it's at an especially inconvenient time. TinyPilot uses microSD cards for storage. microSDs are especially vulnerable to filesystem corruption, and the only solution is to reflash the microSD from a TinyPilot Pro disk image.
 
@@ -122,9 +129,9 @@ This system isn't great for us either because support requests for old TinyPilot
 
 For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. I estimate payment processing for licenses will cost about 3%, so each license renewal nets TinyPilot about $77.
 
-To hit my target number of $30k/yr in additional profit from licenses, a minimum of 387 customers per year would have to renew their licenses each year.
+To hit my target number of $30k/yr in additional profit from licenses, a minimum of 390 customers per year would have to renew their licenses each year (390 x $77 = $30k).
 
-Since we launched in 2020, TinyPilot has sold around 5,000 devices total. We sell around 2,700 new devices per year. Reaching 387 subscribers means convincing just 7.5% of our existing users to pay for continued updates, which seems doable.
+Since we launched in 2020, TinyPilot has sold around 5,000 devices total. We currently sell around 2,700 new devices per year. Reaching 390 subscribers means convincing just 7.8% of our existing users to pay for continued updates, which seems doable.
 
 ## How can I test customers' willingness to renew their licenses?
 
@@ -132,7 +139,7 @@ Any kind of license enforcement is going to be expensive. At minimum, we'd have 
 
 That's expensive to implement because it's several weeks of dev work, and it increases support load when users inevitably email us saying they can't access updates because they deleted the TinyPilot email with their order information.
 
-What if I go through all that effort and trouble and find that fewer than 7.5% of customers are willing to pay for license renewals? That would be a huge waste of money and misuse of limited dev resources, so is there a better way to test willingness without spending so much money?
+What if I go through all that effort and trouble and find that fewer than 7.8% of customers are willing to pay for license renewals? That would be a huge waste of money and misuse of limited dev resources, so is there a better way to test willingness without spending so much money?
 
 ### Forced factory resets
 
@@ -148,11 +155,13 @@ TODO: count TinyPilot Pro renewals after the announcement of people who had prev
 
 {{<img src="license-expired-note.png" has-border="true">}}
 
-I sent seven emails, but none of them renewed. I need a larger sample to draw any meaningful conclusions. If I need 7.5% of customers to renew, then that's only one customer out of 13 or 14.
+I sent seven emails in order to define the process for one of my teammates to take over.
+
+Of the seven customers I emailed, none renewed or responded to the email. Currently, it's too small a sample to draw conclusions. If I need 7.8% of customers to renew, then that's only one customer out of 12 or 13.
 
 Not a great experiment because:
 
-- A lot of our work recently has focused on making the update experience faster and less error-prone. This is useful, but it's not compelling to tell users that they can update to the latest version so that the update experiene is better.
+- A lot of our work recently has focused on making the update experience faster and less error-prone. This is useful, but nobody wants to update for the sake of future updates being smoother.
 - Not catching them at a time when they care about updates
 - It's possible that users are ignoring these emails because they see that they can still update their devices without renewing.
 - Some seem to have signed up with low-attention email addresses like `junk1234@gmail.com`, so they might not even be seeing my note.
@@ -179,18 +188,18 @@ Worse, if I have multiple projects on the same system, updating Node.js for one 
 
 The promise of `nix develop` is that I could define the dependencies in one place: a [Nix flake](https://nixos.wiki/wiki/Flakes). If I needed to upgrade to the next version of Go, for example, I'd just update one file, re-run `nix develop`, and I'd have a local shell with the right version of Go, and my CI environment would run the same version. The environment is local to the directory, so changing package versions wouldn't affect any other projects on the same system.
 
-I started experimenting with `nix develop` in [What Got Done](https://github.com/mtlynch/whatgotdone/blob/dd3ea38885b04280bcea07f5294440e9a3521301/flake.nix) because it depends on particular versions of Go and Node.js.
+I started experimenting with `nix develop` in [What Got Done](https://github.com/mtlynch/whatgotdone/blob/dd3ea38885b04280bcea07f5294440e9a3521301/flake.nix) because it depends on Go and Node.js, and managing versions has been a pain point.
 
 It's been interesting playing with Nix for What Got Done's development environments, but here are the roadblocks I've run into so far:
 
 - I [couldn't figure out how to make Go static binary builds work](https://www.reddit.com/r/NixOS/comments/15d874l/trying_to_create_a_nix_flake_for_go_with_static/), and [the solution](https://github.com/mtlynch/whatgotdone/pull/884/files) feels kind of like, "You should just know this magic incantation."
 - There's no easy way to specify an exact version of a dependency.
   - I expected to be able to declare versions similar to Docker like `go:1.19.3`, but [Nix doesn't support this](https://github.com/NixOS/nixpkgs/issues/9682).
-  - For a tool that focuses so much on reproducibility, this really surprised me.
+  - For a tool that focuses so much on reproducibility, this surprised me.
   - The closest solution I've found is to [use a third-party tool](https://gist.github.com/toraritte/62e53be9e6d88d8b6b97391eb3c6558b#22-pin-nixpkgs-in-a-nix-expression) to find the nixpkgs hash associated with a package version, then pin your package to that nixpkgs hash. Here's what that looks like for [one of What Got Done's dependencies](https://github.com/mtlynch/whatgotdone/blob/67f098bace4c7d6302c193dc20e85d4e6a6761a2/flake.nix#L14-L18).
   - [Devbox](https://github.com/jetpack-io/devbox) solves this problem, but then you're only indirectly using Nix, and you have to learn to use Devbox's abstraction on top of Nix.
 - Populating the Nix store is prohibitively slow.
-  - There's a [`nixos/nix` Docker image](https://hub.docker.com/r/nixos/nix) that I can spin up pretty quickly in CircleCI, but building the Nix environment for my Nix+Go flake takes about two minutes.
+  - There's a [`nixos/nix` Docker image](https://hub.docker.com/r/nixos/nix) that I can spin up pretty quickly in CircleCI, but building the Nix environment for my Nix+Go flake takes about two minutes. I believe CircleCI stores its cache files on Amazon S3, which makes performance terrible on caches at the scale of 1+ GB.
   - This means that any CI step I run has to burn two minutes just initializing Nix.
   - I tried caching the Nix store, but it's about 3 GB, which CircleCI takes about two minutes to download and decompress.
 
@@ -200,11 +209,13 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 - Published ["Installing NixOS on Raspberry Pi 4"](https://mtlynch.io/nixos-pi4/)
 - Learned to use [hurl](https://hurl.dev/) to replace curl-based integration tests for HTTP APIs.
+- Visited Charlotte, NC and Montreal, Canada.
 
 ### Lessons learned
 
 - TinyPilot seems to have exhausted the marketing value we were getting from blog and YouTube reviews.
   - I'm seeing diminished returns for new reviews relative to the effect that new reviews had a year ago. It's definitely not the effect we saw [two years ago, when a single review nearly tripled sales](/retrospectives/2021/02/#tinypilots-first-youtube-review).
+- An auto-renewing TinyPilot license option is the best bang-for-buck way to test the market for recurring revenue.
 
 ### Goals for next month
 
@@ -214,4 +225,5 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 ### Requests for help
 
-If you have experience with setting up recurring subscription for a digital product on Shopify, please [email me](/about/).
+- If you have experience setting up recurring subscriptions for a digital product on Shopify, please [email me](/about/).
+- If you can find [that Basecamp story](#how-tinypilot-pros-licenses-work-currently) that I partially remember, shoot me an [email me](/about/) or a [pull request](https://github.com/mtlynch/mtlynch.io).
