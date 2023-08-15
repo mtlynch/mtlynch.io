@@ -101,7 +101,7 @@ With the company only a few months old, I didn't want to slow down momentum so m
 
 There's a [Basecamp](https://basecamp.com/) blog post that I can't find anymore where they talk about how they decided to start selling their SaaS product before they'd even written billing software. They reasoned that invoices for their software were due at the end of each month of service, so they had a month after their first sale to figure out how to collect the money.
 
-I adopted a similar strategy for TinyPilot. I settled on [the honor system](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-systemdhh) as a way of enforcing licenses with the expectation that I had a year to implement a real license management solution.
+I adopted a similar strategy for TinyPilot. I settled on [the honor system](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-system) as a way of enforcing licenses with the expectation that I had a year to implement a real license management solution.
 
 Now, it's three years later, and I still haven't made any progress on license enforcement for TinyPilot Pro.
 
@@ -242,4 +242,4 @@ It's been interesting playing with Nix for What Got Done's development environme
 ### Requests for help
 
 - If you have experience (good or bad) with a third-party recurring subscription app for Shopify, especially for digital producs, shoot me an [email](/about/).
-- If you can find [that Basecamp story](#how-tinypilot-pros-licenses-work-currently) that I partially remember, let me know in the comments.
+- If you can find [that Basecamp story](#how-tinypilot-pros-licenses-currently-work) that I partially remember, let me know in the comments.
