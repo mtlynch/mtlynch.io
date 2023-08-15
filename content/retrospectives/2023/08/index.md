@@ -34,7 +34,7 @@ Our revenue dropped even though we had several new positive reviews:
 - [Network Profile](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/)
 - [Botio Studio](https://youtu.be/E94A6EasaSs) (Chinese)
 
-Amazon downranking our listings through their Kafkaesque account health policies, so we lost a chunk of sales through that channel. We're now back in Amazon's good graces, and sales have picked up again.
+We lost a chunk of sales because Amazon downranked our listings through their Kafkaesque account health policies. We're now back in their good graces, and sales have picked up again.
 
 I've also heard from other founders that they see a regular summer slump around this time. And TinyPilot indeed had an [11% revenue drop in July 2022](/retrospectives/2022/08/).
 
@@ -77,7 +77,7 @@ I'm surprised to see website visitors down despite all the new reviews that came
 
 ## How can TinyPilot increase recurring revenue?
 
-Whenever TinyPilot's sales slump, I start to think more about recurring revenue. It would sure be nice to have a stable income without relying on constantly finding new customers.
+Whenever TinyPilot's sales slump, I start to think more about recurring revenue. It sure would be nice to have a stable income without relying on constantly finding new customers.
 
 I dread the day when everyone who wants a TinyPilot already has one. What will I do then?
 
@@ -105,7 +105,7 @@ Now, it's three years later, and I still haven't made any progress on license en
 
 ## License enforcement at the worst possible time
 
-We advertise to customers that TinyPilot devices come with 12 months of free updates. Our dirty secret is that once you have a TinyPilot Pro installation, you can keep updating the software forever through the device's web interface.
+We advertise to customers that TinyPilot devices come with 12 months of free updates. Our dirty secret is that once you have TinyPilot Pro installed on your device, you can keep updating the software forever through the device's web interface.
 
 {{<img src="update-dialog.png" caption="TinyPilot's web app allows any device to retrieve the latest version of TinyPilot Pro" has-border="true" alt="Screenshot of update dialog in TinyPilot web app" max-width="700px">}}
 
@@ -133,7 +133,7 @@ Any kind of license enforcement is going to be expensive. At a minimum, we'd hav
 
 That's expensive to implement because it's several weeks of dev work, and it increases support load when users inevitably email us saying they can't access updates because they deleted the TinyPilot email with their order information.
 
-What if I go through all that effort and trouble and find that it has no impact on the renewal rate?
+What if I go through all that effort and find that it has no impact on the renewal rate?
 
 For license renewals to be worthwhile, they'd need to generate at least $30k/yr in additional profit. I estimate payment processing for licenses will cost about 3%, so each license renewal nets TinyPilot about $77.
 
@@ -172,9 +172,7 @@ I had an idea this month to try sending email notifications when customers' lice
 
 {{<img src="license-expired-note.png" has-border="true" alt="I'm Michael Lynch, the founder of TinyPilot. I'm reaching out because I saw that your one-year TinyPilot Pro license recently expired. Renewing your license is optional, but it gives you continued access to new features and bugfixes in TinyPilot's software. We publish updates every two to three months, and you can see some of our recent work in the public changelog. Renewing your TinyPilot Pro license also gives you access to private email support as well as priority support in our public help forums. As a small company, we rely on license renewals to help fund improvements to the software, so thank you in advance if you choose to renew! If you'd rather not renew, I recommend downloading a copy of the latest version of TinyPilot Pro you qualify for (TinyPilot Pro 2.6.0). The image will allow you to factory reset your device if you ever need to.">}}
 
-I sent seven emails in order to define the process for one of my teammates to take over.
-
-Of the seven customers I emailed, none renewed or responded to the email. Currently, it's too small a sample to draw conclusions. If I need 7.8% of customers to renew, then that's only one customer out of 12 or 13.
+I sent seven emails in order to test out the idea, but none of the recipients renewed or responded to the email. It's too small a sample to draw conclusions. If I need 7.8% of customers to renew, then that's only one customer out of 12 or 13.
 
 I'm reluctant to continue this experiment because there are a lot of factors working against it:
 
@@ -188,7 +186,7 @@ We currently only offer license renewals as one-time purchases. I haven't explor
 
 To collect recurring payments on Shopify, I'd need to use a third-party Shopify app, and I hate doing that. In my experience, Shopify apps are low-quality, and they require me to share broad access to my customers' information, including customers whose purchase never touches the third-party integration.
 
-Still, compared to other options, an auto-renew option has a pretty good bang for its buck in terms of testing customers' willingness to subscribe. If I just added another option on the license purchase page, like "Or purchase a yearly subscription for 10% off," it would tell me whether any customers are willing to subscribe.
+Still, compared to other experiments, an auto-renew option has a pretty good bang for its buck in terms of testing customers' willingness to subscribe. If I just added another option on the license purchase page, like "Or purchase a yearly subscription for 10% off," it would tell me whether any customers are willing to subscribe.
 
 It would be relatively easy to add a subscription button, and we likely wouldn't have to change any of our other processes or systems because the subscriptions would just show up as regular Shopify orders.
 
@@ -202,7 +200,7 @@ One of the annoyances I run into with my various software projects is the diffic
 
 Worse, if I have multiple projects on the same system, updating Node.js for one project means that the other projects now have unexpected versions of Node.js and npm.
 
-The promise of `nix develop` is that I could define the dependencies in one place: a [Nix flake](https://nixos.wiki/wiki/Flakes). If I needed to upgrade to the next version of Go, for example, I'd just update one file, re-run `nix develop`, and I'd have a local shell with the right version of Go, and my CI environment would run the same version. The environment is local to the directory, so changing package versions wouldn't affect any other projects on the same system.
+The promise of `nix develop` is that I could define the dependencies in one place: a [Nix flake](https://nixos.wiki/wiki/Flakes). If I needed to upgrade to the next version of Go, for example, I'd just update one file, re-run `nix develop`, and I'd have a local shell with the right version of Go. My CI environment would run the same version. The environment is local to the directory, so changing package versions wouldn't affect any other projects on the same system.
 
 I started experimenting with `nix develop` in [What Got Done](https://github.com/mtlynch/whatgotdone/blob/dd3ea38885b04280bcea07f5294440e9a3521301/flake.nix) because it depends on Go and Node.js, and managing versions has been a pain point.
 
@@ -215,9 +213,9 @@ It's been interesting playing with Nix for What Got Done's development environme
   - The closest solution I've found is to [use a third-party tool](https://gist.github.com/toraritte/62e53be9e6d88d8b6b97391eb3c6558b#22-pin-nixpkgs-in-a-nix-expression) to find the nixpkgs hash associated with a package version, then pin your package to that nixpkgs hash. Here's what that looks like for [one of What Got Done's dependencies](https://github.com/mtlynch/whatgotdone/blob/67f098bace4c7d6302c193dc20e85d4e6a6761a2/flake.nix#L14-L18).
   - [Devbox](https://github.com/jetpack-io/devbox) solves this problem, but then you're only indirectly using Nix, and you have to learn to use Devbox's abstraction on top of Nix.
 - Populating the Nix store is prohibitively slow.
-  - There's a [`nixos/nix` Docker image](https://hub.docker.com/r/nixos/nix) that I can spin up pretty quickly in CircleCI, but building the Nix environment for my Nix+Go flake takes about two minutes. I believe CircleCI stores its cache files on Amazon S3, which makes performance terrible on caches at the scale of 1+ GB.
+  - There's a [`nixos/nix` Docker image](https://hub.docker.com/r/nixos/nix) that I can spin up pretty quickly in CircleCI, but building the Nix environment for my Nix+Go flake takes about two minutes.
   - This means that any CI step I run has to burn two minutes just initializing Nix.
-  - I tried caching the Nix store, but it's about 3 GB, which CircleCI takes about two minutes to download and decompress.
+  - I tried caching the Nix store, but it's about 3 GB, which CircleCI takes about two minutes to download and decompress. I believe CircleCI stores its cache files on Amazon S3, so performance is terrible unless the cache size is &lt;1 GB.
 
 ## Wrap up
 
@@ -241,5 +239,5 @@ It's been interesting playing with Nix for What Got Done's development environme
 
 ### Requests for help
 
-- If you have experience setting up recurring subscriptions for a digital product on Shopify, please [email me](/about/).
-- If you can find [that Basecamp story](#how-tinypilot-pros-licenses-work-currently) that I partially remember, shoot me an [email me](/about/) or a [pull request](https://github.com/mtlynch/mtlynch.io).
+- If you have experience (good or bad) with a third-party recurring subscription app for Shopify, especially for digital producs, shoot me an [email](/about/).
+- If you can find [that Basecamp story](#how-tinypilot-pros-licenses-work-currently) that I partially remember, let me know in the comments.
