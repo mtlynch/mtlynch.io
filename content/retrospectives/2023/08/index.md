@@ -33,7 +33,7 @@ Our revenue dropped even though we had several new positive reviews:
 
 - [RaidOwl](https://www.youtube.com/watch?v=ceWNyZno7FI)
 - [Home Network Guy](https://youtu.be/QsTAKeK0M4s) (and accompanying [blog post](https://homenetworkguy.com/review/remote-control-a-pc-or-server-with-tinypilot-voyager-2a/))
-- [Network Profile](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/)
+- [Network Profile](https://blog.networkprofile.org/tinypilot-2a/)
 - [Botio Studio](https://youtu.be/E94A6EasaSs) (Chinese)
 
 We lost a chunk of sales because Amazon downranked our listings through their Kafkaesque account health policies. We're now back in their good graces, and sales have picked up again.
