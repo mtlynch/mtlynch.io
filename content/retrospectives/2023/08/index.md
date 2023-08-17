@@ -99,7 +99,7 @@ As I began designing the license-checking system, I realized it would take me mo
 
 With the company only a few months old, I didn't want to slow down momentum so much by making users wait five months until the next release.
 
-There's a [Basecamp](https://basecamp.com/) blog post that I can't find anymore where they talk about how they decided to start selling their SaaS product before they'd even written billing software. They reasoned that invoices for their software were due at the end of each month of service, so they had a month after their first sale to figure out how to collect the money.
+There's a [Basecamp](https://basecamp.com/) blog post that I can't find anymore where they talk about how they decided to start selling their SaaS product before they'd even written billing software. (**Edit**: Nathan Coleman found it. It's [from Basecamp's book, _Getting Real_](https://basecamp.com/gettingreal/04.3-its-a-problem-when-its-a-problem#just-wing-it).) They reasoned that invoices for their software were due at the end of each month of service, so they had a month after their first sale to figure out how to collect the money.
 
 I adopted a similar strategy for TinyPilot. I settled on [the honor system](/retrospectives/2021/01/#enforcing-software-licenses-via-the-honor-system) as a way of enforcing licenses with the expectation that I had a year to implement a real license management solution.
 
