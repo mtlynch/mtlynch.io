@@ -28,13 +28,7 @@ To follow this tutorial, you'll need:
 
 To begin, download the NixOS microSD image from the link below:
 
-- [nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux](https://hydra.nixos.org/build/213143754/download/1/nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst)
-
-{{<notice type="info">}}
-
-**Note**: As of this writing, the latest NixOS image that works on the Raspberry Pi 4 is NixOS 21.11, which is almost two years old. I'll explain [later in this post](#the-future-of-nixos-on-the-raspberry-pi) why subsequent releases don't work. For now, I'm going to run NixOS on the Pi the only way I know how.
-
-{{</notice>}}
+- [nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux](https://hydra.nixos.org/build/231913696/download/1/nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst)
 
 ## Decompress the NixOS microSD image
 
@@ -47,10 +41,10 @@ To decompress the NixOS image, download the latest Zstandard release for your pl
 Once you have both the Zstandard tool and the NixOS microSD image, decompress the `.img.zst` file with the following command:
 
 ```bash
-zstd --decompress "nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img.zst"
+zstd --decompress "nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img.zst"
 ```
 
-Decompressing the Zstandard file should produce a file called `nixos-sd-image-21.11.337977.2766f77c32e-aarch64-linux.img`.
+Decompressing the Zstandard file should produce a file called `nixos-sd-image-23.11pre515819.8ecc900b2f69-aarch64-linux.img`.
 
 ## Flash the NixOS microSD image
 
@@ -89,7 +83,7 @@ It's time for the moment of truth. Power on your Raspberry Pi.
 
 If everything went well, you should see a boot sequence like the following:
 
-{{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="A successful boot of the NixOS 21.11 microSD image on a Raspberry Pi 4.">}}
+{{<video src="nixos-21.11-successful-boot.mp4" max-width="800px" caption="A successful boot of the NixOS microSD image on a Raspberry Pi 4.">}}
 
 The boot is complete when you see the NixOS command prompt:
 
@@ -267,41 +261,6 @@ v16.15.0
 8.5.5
 ```
 
-[nix-develop](https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-develop.html) is the better tool for managing development environments, but it unfortunately is not available in NixOS 21.11.
-
-## The future of NixOS on the Raspberry Pi
-
-I suspect the reason that NixOS builds after November 2021 fail to install on a Raspberry Pi is due to this October 2021 post on the Nix forums:
-
-- [Planning for a better NixOS on ARM (and other non-x86_64 systems)](https://discourse.nixos.org/t/planning-for-a-better-nixos-on-arm-and-other-non-x86-64-systems/15346)
-
-Most of the explanation is over my head, but the basic idea is that prior to 2021, NixOS worked on the Raspberry Pi, but maintenance was unsustainable. The NixOS dev team didn't have the resources to maintain an OS and to have special code specifically for the Raspberry Pi.
-
-Instead, the dev team's plan was to build generic images that can boot from any UEFI environment. The NixOS images you see on NixOS' [download page](https://nixos.org/download.html) are the UEFI-based images.
-
-The problem is that Raspberry Pi does not support UEFI. To bridge the gap, the NixOS maintainers were planning to rely on third-party bootloaders like [Tow-Boot](https://tow-boot.org/), which create UEFI environments on systems that don't have UEFI.
-
-I tried this flow out, but I couldn't get it to work. Here were my steps:
-
-1. Download the latest [Tow-Boot release for Raspberry Pi](https://github.com/Tow-Boot/Tow-Boot/releases/download/release-2021.10-005/raspberryPi-aarch64-2021.10-005.tar.xz) (2021.10-005)
-1. Flash the Tow-Boot image onto a USB stick.
-1. Download the [NixOS 23.05 Gnome (64-bit ARM)](https://nixos.org/download.html) image.
-1. Flash the NixOS image onto a microSD.
-1. Insert both the USB stick and the microSD into a Raspberry Pi 4.
-1. Power on the Raspberry Pi 4.
-
-The Pi boots into Tow-Boot, and then it boots from Tow-Boot to the NixOS image on the microSD.
-
-{{<video src="tow-boot-to-nixos-1.mp4" max-width="800px" caption="I used Tow-Boot to load the standard NixOS graphical installer.">}}
-
-The install looked promising, and I proceeded through the graphical installer, but it locked up at 46% progress.
-
-{{<video src="installer-hang.mp4" max-width="800px" caption="When I boot NixOS under Tow-Boot on a Raspberry Pi 4, the installer locks up the system at 46% progress.">}}
-
-I tried again with the NixOS 23.05 minimal image, but it also hung partway through. I tried again with 22.11, and same thing. I'm not sure if Tow-Boot 2021.10 + NixOS 23.05 is expected to work on the Raspberry Pi 4, but I couldn't figure out any way to make it happen.
-
-Interestingly, after talking to a member of the NixOS documentation team, I found out that [the preview image of NixOS 23.11](https://hydra.nixos.org/build/226381178/download/1/nixos-sd-image-23.11pre500597.0fbe93c5a7c-aarch64-linux.img.zst) installs successfully on the Raspberry Pi 4 without Tow-Boot. Given that, I'm not sure if Tow-Boot is still the plan. I would have used the 23.11 preview in this tutorial, except I couldn't get the desktop GUI to work.
-
 ## Troubleshooting
 
 ### Upgrade to the latest Pi bootloader
@@ -324,7 +283,7 @@ sudo apt update && \
   sudo reboot
 ```
 
-The Pi 4 devices I tested booted the NixOS 21.11 disk image out of the box, so the above steps weren't necessary for me.
+The Pi 4 devices I tested booted the NixOS 23.11 disk image out of the box, so the above steps weren't necessary for me.
 
 ## Appendix: Failed attempts
 

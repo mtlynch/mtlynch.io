@@ -17,7 +17,7 @@ When I checked the NixOS download page, I saw that they offered 64-bit ARM image
 
 {{<img src="pi-noboot.png" alt="Pi boot screen that says 'Progress: Trying boot mode USB-MSD'" max-width="700px" caption="The Pi 4 fails to boot the standard NixOS ARM image">}}
 
-I learned later that NixOS's main pre-built 64-bit ARM images [require the system to have UEFI](/nixos-pi4/#the-future-of-nixos-on-the-raspberry-pi), which the Raspberry Pi 4 does not support. To boot one of these images, you need to first boot to Tow-Boot.
+I learned later that NixOS's main pre-built 64-bit ARM images require the system to have UEFI, which the Raspberry Pi 4 does not support.
 
 ## The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
 
@@ -54,6 +54,8 @@ umount: ???: umount failed: No such file or directory.
 If I power cycle the Pi at that point, it successfully boots into the new NixOS install, but there's no desktop GUI, just a terminal:
 
 {{<video src="nixos-23.05-no-gui.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
+
+**Update (2023-08-18)**: This is [now fixed](https://github.com/nixos/nixos-hardware/issues/631).
 
 ## NixOS 22.05 and 22.11 can't boot on a Pi 4
 
