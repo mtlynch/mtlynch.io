@@ -55,6 +55,8 @@ If I power cycle the Pi at that point, it successfully boots into the new NixOS 
 
 {{<video src="nixos-23.05-no-gui.mp4" max-width="800px" caption="The NixOS 22.11 microSD image fails to boot on a Raspberry Pi 4.">}}
 
+**Update (2023-08-18)**: This is [now fixed](https://github.com/nixos/nixos-hardware/issues/631).
+
 ## NixOS 22.05 and 22.11 can't boot on a Pi 4
 
 After failing to configure NixOS's microSD image using version 23.05, I tried again with `nixos-sd-image-22.11.4604.fc95eb4fc3c-aarch64-linux.img`, but it failed to boot. I tried a few times, and it always either drops the signal entirely or displays a green screen:
