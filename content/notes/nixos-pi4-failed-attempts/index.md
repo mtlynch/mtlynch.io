@@ -17,7 +17,7 @@ When I checked the NixOS download page, I saw that they offered 64-bit ARM image
 
 {{<img src="pi-noboot.png" alt="Pi boot screen that says 'Progress: Trying boot mode USB-MSD'" max-width="700px" caption="The Pi 4 fails to boot the standard NixOS ARM image">}}
 
-I learned later that NixOS's main pre-built 64-bit ARM images [require the system to have UEFI](/nixos-pi4/#the-future-of-nixos-on-the-raspberry-pi), which the Raspberry Pi 4 does not support. To boot one of these images, you need to first boot to Tow-Boot.
+I learned later that NixOS's main pre-built 64-bit ARM images require the system to have UEFI, which the Raspberry Pi 4 does not support.
 
 ## The latest NixOS (23.05) microSD doesn't work on Raspberry Pi 4
 
