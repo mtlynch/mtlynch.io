@@ -1,9 +1,9 @@
 ---
 title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
-date: 2023-07-17T07:19:27-04:00
+date: 2023-08-25T00:00:00-04:00
 ---
 
-I recently discovered that _Aardvark'd: 12 Weeks with Geeks_, the 2005 documentary about Fog Creek's internship program is [now available for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk).
+_Aardvark'd: 12 Weeks with Geeks_, the 2005 documentary about Fog Creek's internship program was recently [published for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk).
 
 At the time of this writing, it has 41 views, which is surprisingly low for a movie that features early interviews with many people who would go on to much greater fame and success, such as:
 
@@ -13,80 +13,86 @@ At the time of this writing, it has 41 views, which is surprisingly low for a mo
 
 {{<img src="41-views.webp" max-width="650px" has-border="true" caption="*Aardvark'd*currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)">}}
 
-## My history with this movie
+_Aardvark'd_ follows four college interns at Fog Creek as they design, implement, and launch a completely new software product. As a documentary, it's mediocre, but as a time capsule of independent tech industry in 2005, it's great!
 
-I discovered Joel Spolsky's blog in college. I would grow to appreciate Joel's writing even more throughout my career, but in college, I already liked it.
-
-I remember when Joel would advertise internships for college interns, and I felt like I wasn't good enough, so I was too scared to apply.
-
-I remember reading about Joel making a documentary about his 2005 summer internship class, and I was always curious about it, but never watched it. In college, I wasn't that excited to feel inferior watching a bunch of people my age work my dream internship. About 10 years later, I remembered it again, but I couldn't find copies anywhere. Every few years, I check eBay to see if there are DVD copies floating around, but I've never found one for a reasonable price.
-
-And then one day, I searched and found that it's on YouTube. Not some bootleg copy either. The original production studio published it in HD. I was curious enough and finally watched it.
-
-As a documentary, it's mediocre, but as a time capsule of independent tech industry in 2005, it's great!
+I watched the documentary for the first time, and I went down a bit of a rabbit hole researching what happened to all the subjects of the documentary 18 years later.
 
 ## What was going on in 2005?
 
-The most enjoyable part is that it's an interesting time capsule
+To understand what makes _Aardvark'd_ a fun watch, you have to understand what was going on at the time.
 
 ### Fog Creek Software
 
-At the time of the documentary, Joel was 40 years old. He had co-founded Fog Creek XX years prior. Fog Creek only had XX employees. Fog Creek was profitable and Joel was one of the most popular software bloggers in the world, but Fog Creek wasn't making crazy money. This was still before Joel's mega-hit products like StackOverflow (year XX) or Trello (year XX).
+In 2005, Joel Spolsky was 40 years old. He had co-founded Fog Creek XX years prior. Fog Creek only had XX employees.
 
-Joel is presenting at a "trade show" which turns out to be a ColdFusion conference. The interns admit they don't know what ColdFusion is.
+Fog Creek was profitable and Joel was one of the most popular software bloggers in the world, but Fog Creek wasn't making crazy money. It would still be years before Joel's mega-hit products like StackOverflow (year XX) or Trello (year XX).
+
+At one point in the documentary, Joel Spolsky brings Fog Creek to present at a "software trade show" which the viewer soon learns is a conference for [ColdFusion developers](https://en.wikipedia.org/wiki/Adobe_ColdFusion).
+
+TODO: Photo of Joel Spolsky
 
 ### Y Combinator
 
-Paul Graham is 41 years old. He had sold his startup, Viaweb, to Yahoo for $50M in 1998, then he became popular for the essays he published on his blog. Jessica Livingston is 34 years old. She was not active in the startup community at the time, having come from a career in marketing.
+[Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) and [Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) appear in the documentary because they had just co-founded [Y Combinator](https://en.wikipedia.org/wiki/Y_Combinator), which would go on to become one of the most successful startup accelerators in the software industry.
+
+At the time of the documentary, [Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) was 41 years old. Ten years prior, Graham had co-founded [Viaweb](https://en.wikipedia.org/wiki/Viaweb), which is now considered the first software as a service (SaaS) business. Yahoo acquired the company in 1998 for $50M, after which Paul became popular online for [the essays](http://paulgraham.com/articles.html) he publishing on his blog.
+
+[Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) was 34 years old. She was not active in the startup community at the time, having come from a career in marketing.
 
 {{<img src="paul-jessica.webp" max-width="600px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005">}}
 
-Paul and Jessica [had been dating for two years](http://paulgraham.com/worked.html) but weren't married yet. They had co-founded Y Combinator together with two others a few months before. They were in the middle of YC's first batch of companies, which included a then-unknown project called reddit.
+Graham and Livingston [had been dating for two years](http://paulgraham.com/worked.html) but weren't married yet. The documentary interviews them in the middle of Y Combinator's first batch of startups, which included a then-unknown project called [reddit](https://en.wikipedia.org/wiki/Reddit).
 
 ### reddit
 
-reddit had launched a few months before the documentary began filming, and it was not at all on anyone's radar. At the time, you could only post links. There was no commenting feature. Digg was the dominant player in this domain.
+reddit had launched a few months before the documentary began filming, and it was not at all on anyone's radar.
+
+At the time, reddit only allowed users to post links, as there was no support for commenting. [Fark](https://en.wikipedia.org/wiki/Fark), [digg](https://en.wikipedia.org/wiki/Digg), and [slashdot](https://en.wikipedia.org/wiki/Slashdot) were still the dominant platforms for social link sharing.
 
 {{<img src="reddit-2005.webp" max-width="600px" has-border="true" caption="The reddit homepage [in 2005](https://web.archive.org/web/20050804002153/http://www.reddit.com/)">}}
 
 College roommates Steve Huffman and Alexis Ohanian drove to Boston to attend one of Paul Graham's lectures in 2005. After graduating a few months later, they applied to Y Combinator and got accepted with reddit.
 
-not at all relevant yet as a social networking platform. Digg was still the dominant
+TODO: Photos of reddit co-founders
 
 ## Amateurish documentary filmmaking
 
 On a technical level, _Aardvark'd_ seemed like it was made by someone who didn't have much experience filming anything. The interviews are uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
 
-{{<img src="joel-lighting.webp" max-width="600px" caption="I don't think Joel Spolsky is this luminsecent in real life">}}
+{{<img src="joel-lighting.webp" max-width="600px" caption="I don't think Joel Spolsky is this luminsecent in real life.">}}
 
-Beyond the technical weaknesses, the documentary feels unfocused. Is it a story about the intern project or the interns themselves? Or is it a story about Fog Creek in general? Or is it about tech culture in the mid-2000s?
+Beyond the technical weaknesses, the documentary feels unfocused. Is it a story about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company? Or tech culture in the mid-2000s?
 
 The film flits from topic to topic, but it never feels like it quite tells a cohesive story.
 
 The total runtime is a short 78 minutes, but there still manages to be a lot of dead air. They keep interviewing a programmer at the Fog Creek office about his tomato plant, and it has no relevance to anything. They also do bizarre reenactments of things that didn't matter in the first place, like two of the interns finding a cockroach and getting scared.
 
-{{<img src="cockroach-reenactment.webp" max-width="600px" caption="The movie features several strange re-enactments of events that are totally irrelevant">}}
+{{<img src="cockroach-reenactment.webp" max-width="600px" caption="*Aardvarkd'd* movie features several strange re-enactments of irrelevant events.">}}
 
 ## The launch day scene
 
-There's one scene in particular that drove me crazy.
+There's one _Aardvark'd_ scene in particular that drove me crazy.
 
-It's the end of the internship, and Fog Creek is finally launching Copilot. They have a betting pool with predictions about when they'll make their first sale. Some guessed it would happen within XX minutes of launch, others thought it might take up to XX hours.
+It's the end of the internship, and Fog Creek is finally launching Copilot. Fog Creek's employees start a betting pool with predictions about when they'll make their first sale. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
 
 {{<img src="sale-predictions.webp" max-width="600px">}}
 
-But the sale doesn't come. One by one, you see them cross off people's predictions about when they'd get that first sale. You see the team worried that this thing they expected to be a big hit maybe will be a complete flop.
+But the sale doesn't come. One by one, you see the interns cross out predictions that turned out to be too optimistic. You're watching the team grow increasingly worried that this thing they expected to be a hit might end up a total flop.
 
 {{<gallery caption="Fog Creek interns forlornly waiting for the first customer to purchase Copilot">}}
 {{<img src="cross-off.webp" max-width="600px">}}
 {{<img src="waiting.webp" max-width="600px">}}
 {{</gallery>}}
 
-As a founder, I found this moment extremely relatable. There have been so many times where I put weeks or months of work into something with the expectation that people will love it, and then I discover after I launching that it was a complete miss.
+As a founder, I found this moment extremely relatable. There have been so many times where I put weeks or months of work into something that I was sure people would love. Then, after I launch it, I discover that I was completely wrong and nobody's interested in what I built.
 
-I think the documentary does a great job of capturing that anxiety &mdash; that moment where you haven't definitely failed, but every minute that ticks by without a sale makes it more likely that you've made a big mistake. I've talked about it with other founders, but I've never seen it captured in real time.
+The documentary does a great job of capturing that anxiety &mdash; that moment where you haven't definitely failed, but every minute that ticks by without a sale makes it more likely that you've made a big mistake. I've talked about it with other founders, but I've never seen it captured on video.
 
-The problem is that _Aardvark'd_ builds excellent tension in that scene and then seemingly forgets what it was doing and just moves on. The next scene is Joel popping champagne later that day, but it's not even clear if there's been a sale or if they're just celebrating the launch. You never see anyone's sighing in relief or admitting defeat.
+The problem is that _Aardvark'd_ builds excellent tension in that scene and then seemingly... forgets what it was doing.
+
+The story just moves on to the next thing. The next scene is Joel popping champagne later that day, but it's not even clear if there's been a sale or if they're just celebrating the launch. You never see anyone's sighing in relief or admitting defeat.
+
+TODO: Photo of Joel popping champagne
 
 It would be like if you ended the story of Little Red Riding Hood by saying, "And then Little Red Riding Hood realized her grandmother was a wolf! Suddenly, the wolf threw her to the floor and bared his razor-sharp teeth inches from her neck. Anyway, she ended up being fine. The End."
 
@@ -94,15 +100,15 @@ It would be like if you ended the story of Little Red Riding Hood by saying, "An
 
 I think it was relatable, especially because I was a college student at the same time. I felt like it was an accurate picture of culture at young tech firms of that era.
 
-One thing I thought it captured really well was the self-important intern. In _Aardvark'd_, one of the Fog Creek interns speaks very seriously to the camera about how he has to stay grounded because one day, Fog Creek is going to be so big, and he so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
+One thing I thought it captured really well was the self-important intern. In _Aardvark'd_, one of the Fog Creek interns speaks very seriously to the camera about how he has to stay grounded because one day, Fog Creek is going to be so big, and he'll be so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
 
-It reminded me a lot of a guy in my computer science program who told me how much responsibility he was given at his fancy finance internship. He said he was so because once you're in, they'd always take care of you. This was in 2007, and the finance firm he was talking about was [Lehman Brothers](https://en.wikipedia.org/w/index.php?title=Lehman_Brothers&oldid=1165023032#Bankruptcy).
+It reminded me a lot of a guy in my computer science program who told me how much responsibility he was given at his enviable finance internship. He spoke confidently of his future career with the company, telling me, "the brothers" would take care of him. This was in 2007, and he was describing his internship with [Lehman Brothers](https://en.wikipedia.org/w/index.php?title=Lehman_Brothers&oldid=1165023032#Bankruptcy).
 
 There's a funny moment later on, when that same intern, after spending most of the film thinking he's the smartest guy in the room, realizes a showstopper bug was his fault.
 
 ## "Back when they were getting started, they were terrified"
 
-There's a voice over from Jessica Livingston that summarizes my favorite part of the documentary.
+There's a voiceover from Jessica Livingston that summarizes my favorite part of the documentary.
 
 > A lot of these tech startup founders who are extremely successful, back when they were getting started, they were terrified.
 >
@@ -110,19 +116,24 @@ There's a voice over from Jessica Livingston that summarizes my favorite part of
 >
 > And so to see these people as vulnerable people at one point in time is interesting to me.
 
-spez is now the widespread target of ire for greedily cutting third party clients out of the platform they helped build.
+And it really rang true for me when I think about Steve Huffman, reddit's co-founder and current CEO.
 
-{{<img src="steve-huffman-2017.webp" max-width="600px" caption="Steve Huffman in 2017 (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
+Huffman is currently the widespread target of ire for greedily cutting third party clients out of the platform they helped build. In 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he had to sleep with his laptop in bed with him.
 
-In 2005, he was a lovably doofy-looking kid who had such bad nightmares about reddit having an outage that he had to sleep with his laptop in bed with him.
-
-{{<img src="steve-huffman-2005.webp" max-width="500px" caption="Steve Huffman in 2005">}}
+{{<gallery caption="Steve Huffman in 2005 (left) and in 2017 (right) (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
+{{<img src="steve-huffman-2005.webp" max-width="500px" >}}
+{{<img src="steve-huffman-2017.webp" max-width="487px">}}
+{{</gallery>}}
 
 ## Joel is not big on praise
 
-Joel Spolsky surprisingly stingy with praise. In the penultimate scene, XX comes to Joel's office to announce he successfully got an article about Fog Creek scheduled for publication in _Crain's_. Joel Spolsky simply says, "Cool," without even turning from his computer screen.
+Joel Spolsky surprisingly stingy with praise. In the penultimate scene, the marketing intern excitedly announces to Joel that he got an article about Fog Creek into the popular business magazine, _Crain's_.
 
-The final line of the documentary is:
+Without turning from his computer screen, Joel Spolsky simply says, "Cool."
+
+The intern stands in Joel's doorway, waiting hopefully for more praise or further acknowledgment. When it doesn't come, he slowly walks back to his desk.
+
+Joel has the final line in the documentary, and it explains a bit more about this interaction:
 
 > We hire people who are really, really brilliant individually and do incredible work. But that's sort of what we expect of them
 >
@@ -130,17 +141,15 @@ The final line of the documentary is:
 >
 > What I really want to say is, "That's what we expected."
 
-## Fog Creek didn't finance it
+## Fog Creek didn't finance the documentary
 
-I had always thought that Fog Creek fully funded this documentary, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized they specifically didn't fund it.
-
-It was more of an angel investor model:
+In researching the documentary, one of the big surprises was that Fog Creek didn't actually finance it. I had remembered it as essentially a vanity project that Fog Creek funded as advertising, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized it was more of an angel investor model:
 
 > We’re looking for a filmmaker who will finance and make the film themselves and own the rights. We want someone who can promote the film to typical documentary outlets...
 
-He said in his blog that he paid the filmmaker $5k stipend and $5k for expenses, but a later column he wrote for _Inc_ says, "We ended up paying the filmmaker about $30,000."
+Spolsky said in his blog that he paid the filmmaker $5k stipend and $5k for expenses, but [a later column](https://web.archive.org/web/20230712203549/https://www.inc.com/magazine/20080101/how-hard-could-it-be-the-four-pillars-of-organic-growth.html) he wrote for _Inc._ magazine says, "We ended up paying the filmmaker about $30,000."
 
-It's an interesting choice, and I guess it worked. Fog Creek has let a lot of the original links around Copilot die, but the filmmaker still cared enough to upload a high-def copy to YouTube 18 years later.
+It's an interesting choice, and I guess it worked. Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken the intern's development blog offline, and Joel has deleted many of the artifacts related to Copilot. But the filmmaker still cared enough about _Aardvark'd_ that he uploaded a high-def copy to YouTube 18 years later.
 
 ## Aardvark artifacts
 
@@ -178,15 +187,15 @@ I'm watching it, and it's pretty good. It's kind of like a video version of Joel
 
 #### Tyler Griffin Hicks-Wright
 
-In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator, but Tyler was rejected by his _Aardvark'd_ co-star, Paul Graham and [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
+- [Tyler's website](https://tghw.com)
 
-In 2014, Fog Creek restructured to spin out Trello in 2014, Tyler [acquired the Copilot product for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran it on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
+In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator. Tyler's _Aardvark'd_ co-star, Paul Graham, rejected his pitch, and Tyler [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
-At the time of the shutdown notice, people assumed Tyler was shutting down the company to sell the copilot.com domain Github, who had recently launched a well-known product called Copilot. Surprisingly, the buyer wasn't Github but rather a company that makes CRM software for service businesses.
+In 2014, Fog Creek restructured to spin out Trello, its ultra-successful product. As part of the restructuring, Fog Creek sold Copilot to Tyler, who was one of the original implementers and maintained the product for several years as a Fog Creek employee. [acquired the Copilot product from Fog Creek for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
+
+At the time of the shutdown notice, people assumed Tyler was shutting down the company to sell the copilot.com domain Github, who had recently launched a well-known AI product called Copilot. Surprisingly, the buyer wasn't Github but rather a company that makes CRM software for service businesses.
 
 {{<img src="new-copilot.png" caption="The new owner of the copilot.com domain is a company that makes CRM software for service businesses." max-width="600px">}}
-
-- [Tyler's website](https://tghw.com)
 
 #### Michael Lehenbauer
 
@@ -227,7 +236,9 @@ https://www.joelonsoftware.com/2014/07/24/trello-inc/
 In the film, Liz Gordon is Fog Creek's recently hired office manager. She's
 They shush Liz on her birthday
 
-was the office manager and became head of people at Fog Creek, is now chief people officer of Splash.
+{{<img src="liz-gordon-shush.webp" max-width="600px">}}
+
+was the office manager and became head of people at Fog Creek, She's now [Elizabeth Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is chief people officer of [Splash](https://splashthat.com).
 
 https://splashthat.com/about-us
 
@@ -249,7 +260,7 @@ He continued working on reddit after Conde Nast acquired it, but he [complained 
 
 Aaron died by suicide at 2013 when he was 26 years old. This [followed extreme pressure](https://en.wikipedia.org/wiki/Aaron_Swartz) from the FBI.
 
-His [blog](http://www.aaronsw.com/weblog/) is still available online, and there's a separate documentary about his life called [_The Internet's Own Boy_](https://archive.org/details/TheInternetsOwnBoyTheStoryOfAaronSwartz).
+Swartz's [blog](http://www.aaronsw.com/weblog/) is still available online, and there's a separate documentary about his life called [_The Internet's Own Boy_](https://archive.org/details/TheInternetsOwnBoyTheStoryOfAaronSwartz).
 
 #### Steve Huffman
 
