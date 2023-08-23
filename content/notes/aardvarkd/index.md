@@ -3,19 +3,19 @@ title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
 date: 2023-08-25T00:00:00-04:00
 ---
 
-In 2005, a Boondoggle Media released _Aardvark'd: 12 Weeks with Geeks_, a documentary about Fog Creek's internship program. It was available on DVD for a few years, but Fog Creek stopped selling a long time ago.
+In 2005, Joel Spolsky's software company, Fog Creek, filmed a documentary about their summer internship program. _Aardvark'd: 12 Weeks with Geeks_ follows four college interns as they design, implement, and launch a completely new software product, but that's not the interesting part.
 
-I've always been curious to watch _Aardvark'd_, so I was delighted that Boondoggle recently published the film [for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk) at full 1080p.
+The movie features early interviews with many people who would go on to much greater fame and success, such as:
 
-At the time of this writing, the movie has only 41 views, which is surprisingly low for a movie that features early interviews with many people who would go on to much greater fame and success, such as:
+- Paul Graham and Jessica Livingston months after they co-founded Y Combinator
+- Aaron Swartz, Steve Huffman, and Alexis Ohanian months after they launched reddit
+- Joel Spolsky and Michael Pryor before their mega-hits like StackOverflow, Trello, and Glitch
 
-- Joel Spolsky and Michael Pryor (StackOverflow, Trello, Glitch founders)
-- Paul Graham and Jessica Livingston (Y Combinator founders)
-- Aaron Swartz, Steve Huffman, and Alexis Ohanian (reddit founders)
+_Aardvark'd_ sold about 5,000 copies on DVD, mostly to fans of Joel's blog, but it quickly faded from popular consciousness. I've always been curious to watch _Aardvark'd_, so I was delighted that the filmmaker recently published it [for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk) at full 1080p.
 
-{{<img src="41-views.webp" max-width="650px" has-border="true" caption="*Aardvark'd*currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)">}}
+At the time of this writing, _Aardvark'd_ has only 41 views on YouTube, which is shamefully low given the people it interviews.
 
-_Aardvark'd_ follows four college interns at Fog Creek as they design, implement, and launch a completely new software product. As a documentary, it's disappointing, but as a time capsule of the indie software industry in 2005, it's great!
+{{<img src="41-views.webp" max-width="650px" has-border="true" caption="*Aardvark'd*currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)" href="https://www.youtube.com/watch?v=YbrkZ07LKbk">}}
 
 ## What was going on in 2005?
 
@@ -23,21 +23,19 @@ To understand what makes _Aardvark'd_ a fun watch, you have to understand what w
 
 ### Fog Creek Software
 
-In 2005, Joel Spolsky was 40 years old. He had co-founded Fog Creek five years prior with Michael Pryor. Aside from the founders, Fog Creek only had three employees.
+In 2005, [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky) was 40 years old. He had co-founded Fog Creek in 2000 with Michael Pryor. Aside from the founders, Fog Creek had six employees.
 
-Joel was already one of the most popular software bloggers in the world. Fog Creek was profitable enough to get by selling bug tracking software, but it would still be years before their mega-hit products like StackOverflow (2008) or Trello (2011).
+{{<img src="joel.webp" max-width="400px" caption="Joel Spolsky, Fog Creek co-founder, in 2005">}}
 
-TODO: Photo of Joel Spolsky
+At the time, Fog Creek sold two products: FogBugz, a bug tracking application, and CityDesk, a web publishing tool. The company was bootstrapped and profitable enough to get by, but they weren't experiencing any kind of exponential hypergrowth.
 
 ### Y Combinator
 
 [Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) and [Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) appear in the documentary because they had just co-founded [Y Combinator](https://en.wikipedia.org/wiki/Y_Combinator), which would go on to become one of the most successful startup accelerators in the software industry.
 
-At the time of the documentary, [Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) was 41 years old. Ten years prior, Graham had co-founded [Viaweb](https://en.wikipedia.org/wiki/Viaweb), which is now considered the first software as a service (SaaS) business. Yahoo acquired Viaweb in 1998 for $50M, after which Paul became popular online for [his essays about startups and software](http://paulgraham.com/articles.html).
-
-[Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) was 34 years old. She was not active in the startup community at the time, having come from a career in marketing.
-
 {{<img src="paul-jessica.webp" max-width="600px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005">}}
+
+At the time of the documentary, [Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) was 41 years old. Seven years prior, he had sold his startup [Viaweb](https://en.wikipedia.org/wiki/Viaweb) to Yahoo for $50M. He then became popular online for [his essays about startups and software](http://paulgraham.com/articles.html). [Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) was 34 years old. She was not active in the startup community at the time, having come from a career in marketing.
 
 Graham and Livingston [had been dating for two years](http://paulgraham.com/worked.html) but weren't married yet. The documentary interviews them in the middle of Y Combinator's first batch of startups, which included a then-unknown project called [reddit](https://en.wikipedia.org/wiki/Reddit).
 
@@ -45,19 +43,25 @@ Graham and Livingston [had been dating for two years](http://paulgraham.com/work
 
 reddit had launched a few months before the documentary began filming, and it was not at all on anyone's radar.
 
-At the time, reddit only allowed users to post links, as there was no support for commenting. [Fark](https://en.wikipedia.org/wiki/Fark), [digg](https://en.wikipedia.org/wiki/Digg), and [slashdot](https://en.wikipedia.org/wiki/Slashdot) were still the dominant platforms for social link sharing.
+At the time, reddit only allowed users to post links &mdash; there was no commenting. [Fark](https://en.wikipedia.org/wiki/Fark), [digg](https://en.wikipedia.org/wiki/Digg), and [slashdot](https://en.wikipedia.org/wiki/Slashdot) were still the dominant platforms for social link sharing.
 
-{{<img src="reddit-2005.webp" max-width="600px" has-border="true" caption="The reddit homepage [in 2005](https://web.archive.org/web/20050804002153/http://www.reddit.com/)">}}
+{{<img src="reddit-2005.webp" max-width="650px" has-border="true" caption="The reddit homepage [in 2005](https://web.archive.org/web/20050804002153/http://www.reddit.com/)">}}
 
-Steve Huffman and Alexis Ohanian, who were college roommates at the time, drove to Boston to attend one of Paul Graham's lectures about startups. Graham had dinner with them after the talk, which After graduating a few months later, they applied to Y Combinator and got accepted with reddit.
+In 2005, Steve Huffman and Alexis Ohanian were college roommates. Earlier in the year, they had driven to Boston to attend one of Paul Graham's lectures about startups. Graham had dinner with them after the talk, which inspired him to create Y Combinator. reddit was in Y Combinator's first batch of investments.
 
-Aaron Swartz was 19 at the time of filming. He had already had significant impact on the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and an early contributor to the [Creative Commons](https://creativecommons.org/) organization.
+{{<img src="ohanian-swartz-huffman.webp" max-width="700px" caption="reddit co-founders (right to left) Alexis Ohanian, Aaron Swartz, Steve Huffman in 2005">}}
 
-Swartz was also in Y Combinator's first batch of investments with a company called Infogami. That company stalled, so Graham suggested Swartz [merge his company with reddit](https://qz.com/594715/when-aaron-swartz-met-paul-graham-his-life-and-the-entire-internet-changed-forever).
+Aaron Swartz was 19 at the time of filming. He had already had significant impact on the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and an early contributor to [Creative Commons](https://creativecommons.org/), an organization that fought for ethical mechanisms for sharing intellectual property.
 
-TODO: Photos of reddit co-founders
+An undergrad at Stanford in 2005, Swartz was also accepted into Y Combinator's first batch. His company stalled, so Graham suggested he [merge with reddit](https://qz.com/594715/when-aaron-swartz-met-paul-graham-his-life-and-the-entire-internet-changed-forever).
 
 ## "Back when they were getting started, they were terrified"
+
+As a documentary, _Aardvark’d_ is not very good. It seemed like the filmmaker didn't have much experience filming anything. The interviews are uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
+
+The film flits from topic to topic, but it never feels like it quite tells a cohesive story. Is it a story about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company? Or tech culture in the mid-2000s?
+
+Still, I found it compelling.
 
 There's a voiceover from Jessica Livingston that summarizes my favorite part of the documentary.
 
@@ -69,38 +73,12 @@ There's a voiceover from Jessica Livingston that summarizes my favorite part of 
 
 And it really rang true for me when I think about Steve Huffman, reddit's co-founder and current CEO.
 
-Huffman is currently the target of widespread ire for [cutting third party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/).
-
-In 2005, Huffman was just a lovably doofy-looking kid. He had such bad nightmares about reddit having an outage that he had to sleep with his laptop in bed with him.
+Huffman is currently the target of widespread ire for [cutting third party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/). In 2005, Huffman was just a lovably doofy-looking kid. In his interview, he admits that he had such intense nightmares about reddit having an outage that he slept with his laptop in bed with him.
 
 {{<gallery caption="Steve Huffman in 2005 (left) and in 2017 (right) (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
 {{<img src="steve-huffman-2005.webp" max-width="500px" >}}
 {{<img src="steve-huffman-2017.webp" max-width="487px">}}
 {{</gallery>}}
-
-## What the documentary did well
-
-I think it was relatable, especially because I was a college student at the same time. I felt like it was an accurate picture of culture at young tech firms of that era.
-
-One thing I thought it captured really well was the self-important intern. In _Aardvark'd_, one of the Fog Creek interns speaks very seriously to the camera about how he has to stay grounded because one day, Fog Creek is going to be so big, and he'll be so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
-
-It reminded me a lot of a guy in my computer science program who told me how much responsibility he was given at his enviable finance internship. He spoke confidently of his future career with the company, telling me, "the brothers" would take care of him. This was in 2007, and he was describing his internship with [Lehman Brothers](https://en.wikipedia.org/w/index.php?title=Lehman_Brothers&oldid=1165023032#Bankruptcy).
-
-There's a funny moment later on, when that same intern, after spending most of the film thinking he's the smartest guy in the room, realizes a showstopper bug was his fault.
-
-## As a documentary, it's mediocre
-
-On a technical level, _Aardvark'd_ seemed like it was made by someone who didn't have much experience filming anything. The interviews are uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
-
-{{<img src="joel-lighting.webp" max-width="600px" caption="I don't think Joel Spolsky is this luminsecent in real life.">}}
-
-Beyond the technical weaknesses, the documentary feels unfocused. Is it a story about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company? Or tech culture in the mid-2000s?
-
-The film flits from topic to topic, but it never feels like it quite tells a cohesive story.
-
-The total runtime is a short 78 minutes, but there still manages to be a lot of dead air. They keep interviewing a programmer at the Fog Creek office about his tomato plant, and it has no relevance to anything. They also do bizarre reenactments of things that didn't matter in the first place, like two of the interns finding a cockroach and getting scared.
-
-{{<img src="cockroach-reenactment.webp" max-width="600px" caption="*Aardvarkd'd* movie features several strange re-enactments of irrelevant events.">}}
 
 ## The launch day scene
 
@@ -108,11 +86,11 @@ There's one _Aardvark'd_ scene in particular that drove me crazy.
 
 It's the end of the internship, and Fog Creek is finally launching Copilot. Fog Creek's employees start a betting pool with predictions about when they'll make their first sale. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
 
-{{<img src="sale-predictions.webp" max-width="600px">}}
+{{<img src="sale-predictions.webp" max-width="600px" caption="Fog Creek employees and interns make optimistic predictions about the first sale of Copilot">}}
 
-But the sale doesn't come. One by one, you see the interns cross out predictions that turned out to be too optimistic. You're watching the team grow increasingly worried that this thing they expected to be a hit might end up a total flop.
+But the sale doesn't come. One by one, you see the interns cross out predictions that turned out to be too optimistic. You're watching the team grow increasingly worried that their product might be a complete flop.
 
-{{<gallery caption="Fog Creek interns forlornly waiting for the first customer to purchase Copilot">}}
+{{<gallery caption="Fog Creek interns anxiously awaiting their first customer">}}
 {{<img src="cross-off.webp" max-width="600px">}}
 {{<img src="waiting.webp" max-width="600px">}}
 {{</gallery>}}
@@ -128,6 +106,16 @@ The story just moves on to the next thing. The next scene is Joel popping champa
 TODO: Photo of Joel popping champagne
 
 It would be like if you ended the story of Little Red Riding Hood by saying, "And then Little Red Riding Hood realized her grandmother was a wolf! Suddenly, the wolf threw her to the floor and bared his razor-sharp teeth inches from her neck. Anyway, she ended up being fine. The End."
+
+## What the documentary did well
+
+I think it was relatable, especially because I was a college student at the same time. I felt like it was an accurate picture of culture at young tech firms of that era.
+
+One thing I thought it captured really well was the self-important intern. In _Aardvark'd_, one of the Fog Creek interns speaks very seriously to the camera about how he has to stay grounded because one day, Fog Creek is going to be so big, and he'll be so important within Fog Creek, that people will pass him in the hallway and greet him by name, but he won't know who they are.
+
+It reminded me a lot of a guy in my computer science program who told me how much responsibility he was given at his enviable finance internship. He spoke confidently of his future career with the company, telling me, "the brothers" would take care of him. This was in 2007, and he was describing his internship with [Lehman Brothers](https://en.wikipedia.org/w/index.php?title=Lehman_Brothers&oldid=1165023032#Bankruptcy).
+
+There's a funny moment later on, when that same intern, after spending most of the film thinking he's the smartest guy in the room, realizes a showstopper bug was his fault.
 
 ## Joel is not big on praise
 
@@ -207,15 +195,9 @@ Five years later, Fog Creek collaborated once again with Boondoggle Media on a v
 
 I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's most famous blog posts, and they show how they put those ideas into practice at Fog Creek.
 
-## Where are they now?
+## What happened to the interns?
 
-### The interns
-
-#### Tyler Griffin Hicks-Wright
-
-- [Tyler's website](https://tghw.com)
-
-Of all the interns who built Copilot, Tyler seems to be the one who most followed in Joel Spolsky's footsteps.
+[Tyler Griffin Hicks-Wright](https://tghw.com) and [Ben Pollack](https://www.bitquabit.com/meta/about/) accepted full-time positions at Fog Creek after their internships and worked there for several years. They both blogged, sometimes having public squabbles about programming languages (TODO: link).
 
 In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator. Tyler's _Aardvark'd_ co-star, Paul Graham, rejected his pitch, and Tyler [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
@@ -225,41 +207,11 @@ At the time of the shutdown notice, people assumed Tyler was shutting down the c
 
 {{<img src="new-copilot.png" caption="The new owner of the copilot.com domain is a company that makes CRM software for service businesses." max-width="600px">}}
 
-#### Michael Lehenbauer
+[Michael Lehenbauer](https://twitter.com/mikelehen) According to his LinkedIn, after completing his undergrad at Rose Hulman, he started at Microsoft in 2006. I started a year later. He left in 2011 to join Firebase as employee #2. When Google acquired Firebase in 2014, Michael and I both worked at Google at the same time, though I don't recall ever crossing paths.
 
-- [Michael's twitter](https://twitter.com/mikelehen)
+[Yaron Guez](https://www.yaronguez.com/) co-founder of a very buzzwordy consulting firm https://www.trestian.com/#about
 
-According to his LinkedIn, after completing his undergrad at Rose Hulman, he started at Microsoft in 2006. I started a year later. He left in 2011 to join Firebase as employee #2. When Google acquired Firebase in 2014, Michael and I both worked at Google at the same time, though I don't recall ever crossing paths.
-
-We have a mutual friend, and I'm surprised it's just one given so much employer overlap.
-
-#### Ben Pollack
-
-Ben acknowledges the _Aardvark'd_ documentary [on his website](https://www.bitquabit.com/meta/about/), saying:
-
-> Oh, and at one point in my life, I was in a movie, which is available on YouTube if you’re feeling masochistic.
-
-Worked at Fog Creek for several years
-
-Sometimes had public debates with Tyler.
-
-#### Yaron Guez
-
-- [Yaron's website](https://www.yaronguez.com/)
-
-Co founder of a very buzzwordy consulting firm
-https://www.trestian.com/#about
-
-### Other Fog Creek people
-
-#### Joel Spolsky
-
-#### Michael Pryor
-
-became CEO of trello
-https://www.joelonsoftware.com/2014/07/24/trello-inc/
-
-#### Liz Gordon
+## Liz Gordon's fun arc
 
 In the film, Liz Gordon is Fog Creek's recently hired office manager. She's
 They shush Liz on her birthday
@@ -269,16 +221,6 @@ They shush Liz on her birthday
 was the office manager and became head of people at Fog Creek, She's now [Elizabeth Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is chief people officer of [Splash](https://splashthat.com).
 
 https://splashthat.com/about-us
-
-### Y Combinator people
-
-#### Paul Graham
-
-[Married Jessica Livingston in 2008](https://news.ycombinator.com/item?id=205918).
-
-#### Jessica Livingston
-
-In 2007, Jessica Livingston published the well-received book _Founders at Work: Stories of Startups' Early Days_, a collection of interviews with successful startup founders. She continued in her leadership role with Y Combinator.
 
 ### Reddit founders
 
