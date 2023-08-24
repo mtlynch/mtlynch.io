@@ -143,9 +143,9 @@ I was surprised to see how much Joel tried to predict what Copilot would do in v
 
 Before Fog Creek, Joel spent most of his career at Microsoft. At Microsoft, if you go to the trouble to launch a new product, of course there's going to be a v2. As a bootstrapped founder,
 
-### A one-way relationship with open-source code
-
 v2 I wonder if it would happen today. Conventional wisdom is not to even think about a v2. One of the habits I've had to unlearn from years at working at Microsoft and Google is, "How do I design this to be flexible for the v2." When you're bootstrapping, often, there isn't a v2. Or the features you think will be in v2 end up being totally different after hearing from customers. So telling interns to design with v2 in mind means they design for more flexibility than is warranted. Because as [Fred Brooks predicted](https://wiki.c2.com/?PlanToThrowOneAway), they threw away all their original C# code for v2 and rewrote everything in C++.
+
+### A one-way relationship with open-source code
 
 Joel declares a fairly cynical plan to use open-source code in an openly parasitic way. Fog Creek enjoys the benefits of open-source VNC code while preventing anyone else from benefitting from Fog Creek's work:
 
@@ -163,14 +163,16 @@ In 2005, Joel was still distrustful of CSS and deliberately limited it as a depe
 
 ## Some good quotes
 
-{{<img src="graham-no-business-guys.webp" max-width="600px">}}
-
+> {{<img src="graham-no-business-guys.webp" max-width="600px">}}
+>
 > I think the relationship between hackers and business guys &mdash; at least in the beginning &mdash; is that you need hackers, and you don't need business guys.
 >
 > -Paul Graham
 
-{{<img src="aaron-swartz.webp" max-width="600px">}}
+&nbsp;
 
+> {{<img src="aaron-swartz.webp" max-width="600px">}}
+>
 > You don't have to be in this fake world of school doing some silly assignment that has no real purpose. You can build something that's actually useful. You can go put it up on your website, and people can really use it. If you can build something real, why spend your life doing stuff that's fake?
 >
 > -Aaron Swartz
