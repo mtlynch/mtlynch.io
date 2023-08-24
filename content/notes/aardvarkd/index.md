@@ -227,17 +227,9 @@ In one scene, she's being interviewed on her birthday. Nobody remembered, so she
 
 It turns out, she stuck with Fog Creek and rose along with the company, eventually taking on the role of Head of People.
 
-When Fog Creek spun Trello out into its own company, Liz became VP of People and retained the role through Trello's acquisition by Atlassian. She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is a C-suite executive at [Splash](https://splashthat.com), where I presume nobody tries to shush her on her birthday.
+When Fog Creek spun Trello out into its own company, Liz became Trello's VP of People and retained the role through Trello's acquisition by Atlassian. She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is a C-suite executive at [Splash](https://splashthat.com), where I presume nobody tries to shush her on her birthday.
 
 {{<img src="liz-hall.webp" max-width="450px" has-border="true" caption="Liz Hall is now Chief People Officer at Splash.">}}
-
-## Aaron Swartz's tragic end
-
-He continued working on reddit after Conde Nast acquired it, but he [complained publicly](http://www.aaronsw.com/weblog/officespace) about working within a larger corporation and was fired from the company [in 2007](http://blogoscoped.com/archive/2007-05-07-n78.html).
-
-Aaron died by suicide at 2013 when he was 26 years old. This [followed extreme pressure](https://en.wikipedia.org/wiki/Aaron_Swartz) from the FBI.
-
-Swartz's [blog](http://www.aaronsw.com/weblog/) is still available online, and there's a separate documentary about his life called [_The Internet's Own Boy_](https://archive.org/details/TheInternetsOwnBoyTheStoryOfAaronSwartz).
 
 ## _Make Better Software: The Training Series_
 
