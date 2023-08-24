@@ -221,9 +221,9 @@ At the time of the shutdown notice, people assumed Tyler was shutting down the c
 
 One of the most affable people in _Aardvark'd_ is Liz Gordon, Fog Creek's recently-hired office manager.
 
-She's presented in the film as the non-nerd outsider at Fog Creek. She ends up having to coddle and indulge a bunch of college interns a few years her junior who have somewhat inflated egos as subjects of a documentary.
+Liz is presented in the film as the non-nerd outsider at Fog Creek. She ends up having to coddle and indulge a bunch of college interns a few years her junior who have somewhat inflated egos as subjects of a documentary.
 
-{{<img src="liz-gordon-laughing.webp" max-width="700px" caption="&ldquo;There's always a better way to do something, and that's what \[the interns\] are always trying to figure out... what star trooper is going to kick some other superhero's butt, and how they're going to do it. Or what's the best way to use a lightsaber.&rdquo;">}}
+{{<img src="liz-gordon-laughing.webp" max-width="700px" caption="&ldquo;There's always a better way to do something, and that's what \[the interns\] are always trying to figure out... what star trooper is going to kick some other superhero's butt, and how they're going to do it. Or what's the best way to use a lightsaber.&rdquo; -Liz Gordon">}}
 
 In one scene, she's being interviewed on her birthday. Nobody remembered, so she has to buy herself a birthday hat. While she's explaining this to the camera, one of her co-workers _shushes_ her. On her birthday!
 
@@ -247,4 +247,4 @@ Swartz's [blog](http://www.aaronsw.com/weblog/) is still available online, and t
 
 Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
 
-I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's most famous blog posts, and they show how they put those ideas into practice at Fog Creek.
+I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's most famous blog posts, and they show how they put those ideas into practice at Fog Creek. Most of the Fog Creek employees and interns are still there in the training series with the exception of interns Michael and Yaron.
