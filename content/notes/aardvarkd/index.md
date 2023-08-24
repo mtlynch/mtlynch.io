@@ -115,6 +115,8 @@ It would be like if you ended the story of Little Red Riding Hood by saying, "An
 
 After Fog Creek released Copilot, Joel Spolsky published the original design spec [on his blog](https://www.joelonsoftware.com/2005/08/17/the-project-aardvark-spec/). The link to the actual PDF is now dead, but the Internet Archive [has a copy](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf).
 
+### An emphasis on simplicity
+
 The tone is informal and conversational. After watching the documentary, I can hear Joel's voice in my head as I read the spec.
 
 > All design and engineering decisions will be taken with the following principle in mind:
@@ -127,15 +129,21 @@ It echoes Joel's still-excellent online book, [_User Interface Design For Progra
 
 The entire thing is clearly made in Microsoft Word. There are a couple of flow charts from Microsoft Visio. But the UI mockups are all just
 
+### The Copilot architecture
+
 Seeing 2005 architecture. Similar to StackOverflow
 
 > The initial rollout will go onto our existing web servers -- high end, well-endowed Dell 2850s – each of which can handle the entire Aardvark load by itself if necessary. The system will be highly scalable so we can add additional servers progressively to handle more load. Our web servers are named web1 and web2. We will move rapidly to add servers if the service is popular.
+
+### Designing into the future
 
 I was surprised to see how much Joel tried to predict what Copilot would do in v2:
 
 > Our primary goal is to rollout a fully-functional version of Aardvark in only one summer. That means that the initial version will almost certainly not be optimal in every way and will not contain every feature. Throughout this spec, the notation (v2) will be used to indicate features which will not be a part of the initial product but which will be added later.
 
 Before Fog Creek, Joel spent most of his career at Microsoft. At Microsoft, if you go to the trouble to launch a new product, of course there's going to be a v2. As a bootstrapped founder,
+
+### A one-way relationship with open-source code
 
 v2 I wonder if it would happen today. Conventional wisdom is not to even think about a v2. One of the habits I've had to unlearn from years at working at Microsoft and Google is, "How do I design this to be flexible for the v2." When you're bootstrapping, often, there isn't a v2. Or the features you think will be in v2 end up being totally different after hearing from customers. So telling interns to design with v2 in mind means they design for more flexibility than is warranted. Because as [Fred Brooks predicted](https://wiki.c2.com/?PlanToThrowOneAway), they threw away all their original C# code for v2 and rewrote everything in C++.
 
@@ -147,25 +155,25 @@ Joel declares a fairly cynical plan to use open-source code in an openly parasit
 
 Fog Creek did publish their GPL-derived code, but I unfortunately couldn't find the original version the interns wrote. The [earliest version I could find](https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helper_src.zip/) was from 2011. By that point, they had rewritten the C# codebase in C++. I suspect this rewrite happened when they added Mac support in [Copilot 2.0](https://www.joelonsoftware.com/2007/01/26/copilot-20-ships/). They probably didn't feel like trying to run .NET code on Mac in 2007.
 
+### A healthy distrust of CSS
+
 In 2005, Joel was still distrustful of CSS and deliberately limited it as a dependency:
 
 > We will use CSS for formatting but not positioning since CSS positioning is too buggy on modern browsers: we’ll just use tables for most positioning.
 
-Uses "Apps Hungarian" (also known as "Simonyi notation"), which Joel was a big proponent of.
-
-Uses apps simonyl style, a style Joel strongly supported. Joel admits that coding conventions "doesn't belong in a functional specification, and it should really have been a separate document."
-
 ## Some good quotes
 
-> You need hackers, and you don't need the business guys. (TODO: Get quote)
+{{<img src="graham-no-business-guys.webp" max-width="600px">}}
+
+> I think the relationship between hackers and business guys &mdash; at least in the beginning &mdash; is that you need hackers, and you don't need business guys.
 >
 > -Paul Graham
 
-> Why build something fake when you can build something real? (TODO: Get quote)
+{{<img src="aaron-swartz.webp" max-width="600px">}}
+
+> You don't have to be in this fake world of school doing some silly assignment that has no real purpose. You can build something that's actually useful. You can go put it up on your website, and people can really use it. If you can build something real, why spend your life doing stuff that's fake?
 >
 > -Aaron Swartz
-
-One of the interviews was with Dan Bricklin, creator of VisiCalc. I'm perhaps biased because I'm too young to have ever experienced VisiCalc, but Bricklin's interview didn't really grab me.
 
 ## Joel is not big on praise
 
