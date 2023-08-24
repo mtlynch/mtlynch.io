@@ -203,7 +203,7 @@ It's an interesting choice, and I guess it worked. Fog Creek no longer cares abo
 
 ## What happened to the interns?
 
-[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after their internships and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. The company applied for funding from Y Combinator. Tyler's _Aardvark'd_ co-star, Paul Graham, rejected his pitch, and Tyler [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
+[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but Y Combinator rejected his pitch, and Tyler [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
 In 2014, Fog Creek restructured to spin out Trello, its ultra-successful product. As part of the restructuring, Fog Creek sold their Copilot product to Tyler [for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
@@ -213,7 +213,7 @@ In 2014, Fog Creek restructured to spin out Trello, its ultra-successful product
 
 [Yaron Guez](https://www.yaronguez.com/) co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about)
 
-## Liz Gordon's fun arc
+## Liz Gordon's satisfying career path
 
 One of the most affable people in _Aardvark'd_ is Liz Gordon, Fog Creek's recently-hired office manager.
 
