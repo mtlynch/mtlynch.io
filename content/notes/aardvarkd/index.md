@@ -203,17 +203,13 @@ It's an interesting choice, and I guess it worked. Fog Creek no longer cares abo
 
 ## What happened to the interns?
 
-[Tyler Griffin Hicks-Wright](https://tghw.com) and [Ben Pollack](https://www.bitquabit.com/meta/about/) accepted full-time positions at Fog Creek after their internships and worked there for several years. They both blogged, sometimes having public squabbles about programming languages (TODO: link).
+[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after their internships and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. The company applied for funding from Y Combinator. Tyler's _Aardvark'd_ co-star, Paul Graham, rejected his pitch, and Tyler [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
 
-In 2012, Tyler left Fog Creek and launched a photo backup business called Snaposit. The company applied for funding from Y Combinator. Tyler's _Aardvark'd_ co-star, Paul Graham, rejected his pitch, and Tyler [shuttered the business a year later](https://tghw.com/blog/well-that-sucks-what-else-you-got).
-
-In 2014, Fog Creek restructured to spin out Trello, its ultra-successful product. As part of the restructuring, Fog Creek sold Copilot to Tyler, who was one of the original implementers and maintained the product for several years as a Fog Creek employee. [acquired the Copilot product from Fog Creek for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
-
-At the time of the shutdown notice, people assumed Tyler was shutting down the company to sell the copilot.com domain Github, who had recently launched a well-known AI product called Copilot. Surprisingly, the buyer wasn't Github but rather a company that makes CRM software for service businesses.
-
-{{<img src="new-copilot.png" caption="The new owner of the copilot.com domain is a company that makes CRM software for service businesses." max-width="600px">}}
+In 2014, Fog Creek restructured to spin out Trello, its ultra-successful product. As part of the restructuring, Fog Creek sold their Copilot product to Tyler [for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
 [Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere. Michael and I worked seven overlapping years at Microsoft and Google, though I don't recall us ever crossing paths.
+
+[Ben Pollack](https://www.bitquabit.com/meta/about/)
 
 [Yaron Guez](https://www.yaronguez.com/) co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about)
 
