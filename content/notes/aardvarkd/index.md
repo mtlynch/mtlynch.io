@@ -177,22 +177,6 @@ In 2005, Joel was still distrustful of CSS and deliberately limited it as a depe
 >
 > -Aaron Swartz
 
-## Joel is not big on praise
-
-Joel Spolsky surprisingly stingy with praise. In the penultimate scene, the marketing intern excitedly announces to Joel that he got an article about Fog Creek into the popular business magazine, _Crain's_.
-
-Without turning from his computer screen, Joel Spolsky simply says, "Cool."
-
-The intern stands in Joel's doorway, waiting hopefully for more praise or further acknowledgment. When it doesn't come, he slowly walks back to his desk.
-
-Joel has the final line in the documentary, and it explains a bit more about this interaction:
-
-> We hire people who are really, really brilliant individually and do incredible work. But that's sort of what we expect of them
->
-> I don't really feel like it's necessary to puff up their ego too much by saying, "Wow, you did an unbelievable, great thing! Nobody else could have done this."
->
-> What I really want to say is, "That's what we expected."
-
 ## Fog Creek didn't finance the documentary
 
 In researching the documentary, one of the big surprises was that Fog Creek didn't actually finance it. I had remembered it as essentially a vanity project that Fog Creek funded as advertising, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized it was more of an angel investor model:
@@ -215,7 +199,7 @@ In 2014, Fog Creek restructured to spin out Trello, its ultra-successful product
 
 [Yaron Guez](https://www.yaronguez.com/) co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about)
 
-## Liz Gordon's satisfying career path
+## Liz Gordon's satisfying career trajectory
 
 One of the most affable people in _Aardvark'd_ is Liz Gordon, Fog Creek's recently-hired office manager.
 
