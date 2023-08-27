@@ -1,7 +1,7 @@
 ---
 title: "Strong Towns"
-date: 2022-10-30T13:50:39-04:00
-rating: TODO
+date: 2023-09-01T00:00:00-04:00
+rating: 8
 purchase_url: https://bookshop.org/p/books/strong-towns-a-bottom-up-revolution-to-rebuild-american-prosperity-charles-l-marohn/7390111
 ---
 
@@ -25,7 +25,7 @@ TODO: Short summary
 - The book is heavy on hypotheticals and light on case studies where towns actually adopt these policies.
 - Marohn introduces a metric for evaluating a town's financial health: tax revenue per acre.
   - He says that according to this metric, blighted towns are often healthier than affluent towns.
-  - The observation made me question the metric, as it seems like blighted towns struggle more to pay for public services, so the metric doesn't seem predictive.
+  - The observation made me question the metric, as blighted towns struggle more to pay for public services, so the metric doesn't seem predictive.
 
 ## Key Takeaways
 
@@ -37,145 +37,141 @@ TODO: Short summary
   - Living quarters mean that parents can attend to children while working
   - One parent can work. elsewhere while the other mind, the shop,
   - Restaurant is on the edge of town, so the restaurant owners (and all shopkeepers) have incentive to help the town as a whole grow because an expanded city increase value of their business
-  - Shared walls with neighboring businesses meant lover heating costs.
+  - Shared walls with neighboring businesses meant lower heating costs.
   - Close neighbors means better security.
   - The building had a simple structure.
     - Owner could convert it to something else if the restaurant folded
     - Owner could expand the building if the restaurant flourished.
-- Cities are complex, not just complicated
-  - Complicated systems can have simple behavior.
-    - e.g., a mechanical watch is complicated but predictable.
-  - Cities are both complicated and complex.
-    - They contain interrelated systems that are difficult to predict.
+
+### Complex vs. complicated
+
+- Cities are complex, not just complicated.
+- Complicated systems can have simple behavior.
+  - e.g., a mechanical watch is complicated but predictable.
+- Cities are both complicated and complex.
+  - They contain interrelated systems that are difficult to predict.
 - Complex systems are fragile and need flexibility to adapt in order to survive.
-- people traditionally manage cities with zoning for ease of legislation, but zoning is too simple and limits tap the city from adapting naturally
+
+### Zoning manages complexity poorly
+
+- People traditionally manage cities with zoning for ease of legislation.
+- Zoning is too simple and limits tap the city from adapting naturally.
+
+### Postwar period corrupted city management
+
 - Postwar WWII wealth screwed up city management.
-- Us had an abundance of wealth and so stopped designing cities with financial constraints in mind.
-  Evolution of Brainerd, MN
+- The US had an abundance of wealth, so we stopped designing cities with financial constraints in mind.
 
-- Author found a photo of Brainerd, MN this hometown) in its early days. "There are a set of makeshift ads stores but no real road.
+### Evolution of Brainerd, MN
 
-- 30 years later, there were roads, and the makeshift stores were replaced by well-constructed to 2-3 strey buildings,
-- 30 years after that, the wood buddy would be replaced by store buildings.
-- Through most of history, this is the way that cities normally developed.
-- Businesses would make small bets on a new area, then incrementally build more as the area succeeded
-- Importantly, private investment came first, then public investment (e.g., roads, police) follows.
-- The private sector bears the risk
-- Modern city planning makes big bets on the public side
-- The public makes huge investments in infrastructure before private
-
-M.
-
-business
-
-move
-
-- We build everything to a finished state instead of fostering adaptation and incremental improvement
-- Houses are also built to finished state due to the friction involved in modifying a house .
-- Prior to 1920s, houses were mostly simple boxes, and they were built to make it easy to add on to them if conditions in your life changed
-- Several factors prevent houses from evolving
-- Zoning laws often forbid turning a single family house into a multi-family house or a business. + land covenants, building regulations, property associations
-- Building regulations increase
-
-the cost, time, and difficulty of modifying a house
-
-- Building everything at once that everything needs
-  means
-
-maintenance or replacement in bi waves, whereas incremental growth means maintenance requirements are smoothed out over time.
-
-Property value -Building value + Land value
-
-- The amount you'd invest in a building is a function of the value of the land underneath.
-- e. g. the value of a 410m building in downtown Manhattan is far more than Som ble Manhattan has such valuable land.
-- the value of a $10 M building placed in outer Detroit is colon. Sugg which indicates the land has negative value.
-
-- Yo,'d never buy land in Manhattan to park a mobile home because there are much more lucrative structures to put on such valuable land.
-- When building value is high relative to the land, it drives up the value of the surrounding land
-- e.g., a fancy hotel makes the area more valuable
-- When building value is low relative to land value, there's redevelopment pressure
-- e. g. , if a small home is in an expensive neighborhood , it's profitable to tear it down or expand the building. .
-- This guides natural growth of cities. I. A few people build shacks
-
-together in a new area. 2- . More people join then and build
-
-more shacks nearby.
-
-- 3.  The land becomes more valuable because it has more buildings clustered together, redevelop-
-      Y. Redevelopment pressure pushes some
-
-owners to renovate their shacks into better structures.
-
-- 5.  The nice- buildings have incentive to invest in shared infrastructure like reads and fire protection.
-- 6.  The info structure increases land value, incentivizing more redevelopment.
-- The flaw in this pattern is that it limits social mobility.
-- As a town is growing, poorer residents can grow with it.
-- Once a city reaches maturity, land is only affordable to the entrenched
-
-elites.
-
-Enter Cars
-
-- Cars influenced urban design in the 50s under the idea that connecting two places w/ roads / highways would increase the value of both.
-- A more connected city is more valuable.
-- Instead, it drove down land prices because suburbanization meant people could live much farther from city centers.
-- Tons of new land opened up for housing.
-- Cars upended the traditional pattern for growing and sustaining cities.
-- As land values in city centers dropped, there was insufficient try revenue to pay for maintenance.
-
-Public & Private investment
-
-Case study: Brainerd
-
+- The author found photos of Brainerd, MN (his hometown) in its early days.
+  - In the earliest photos, there are a set of makeshift stores but no real road.
+  - 30 years later, there were roads, and the makeshift stores were replaced by well-constructed to buildings two or three stories high.
+  - 30 years after that, they replaced wood structures with buildings made of stone.
 - First generation: pop-up shacks, no sewage or sidewalks
 - Second generation'. Two-and three- story wood buildings, sidewalks, gravel streets
 - Third generation: Brick and granite buildings, concrete sidewalks, asphalt streets.
-- Takeaway: private investment precedes public investment,
-- More private wealth creates incentive
-  to invest in shared infrastructure
 
-- Current development strategy
-- Public investment precedes private investment
-- Government takes on most of the risk
-- When private developers make initial investment, government still often
+### Private investment should precede public infrastructure
 
-finances the deal, making them
+- Through most of history, most cities developed like Brainerd, MN did.
+  - Businesses would make small bets on a new area, then incrementally build more as the area succeeded.
+  - Importantly, private investment came first, then public investment (e.g., roads, police) followed.
+- When private investment starts a city, the private sector bears the risk of the city folding.
 
-take on the risk if development fails.
+### Modern city planning invests backwards
 
-- Government also assumes longterm Maintenance responsibilities.
-- When development is built to a finished state instead of growing organically and incrementally, early residents are dis incentivized to let the town grow.
-- Every additional resident means more people using limited resources like roads, ports, libraries
-  Profit
+- Modern city planning makes big bets on the public side.
+  - The public makes huge investments in infrastructure before private businesses move in.
+- We build public infrastructure to a finished state instead of fostering adaptation and incremental improvement.
 
-- A city must earn a profit in the long term to continue existing
-- A city that has at a defeat long-term will begin to far.) in the services it's supposed to provide
+### Stagnation of residential homes
 
-- Cities make investments that must earn a return.
-- If a city invests 5) IM in repairing a street , the street must generate> slim ove its lifetime for the investment to be worthwhile
-- Government buildings as an investment
+- Houses are also built to finished state due to the friction involved in modifying a house.
+  - Prior to the 1920s, houses were mostly simple boxes, and they were built to make it easy to add on to them if conditions in your life changed.
+- Several factors prevent houses from evolving:
+  - There are legal obstacles to converting a single family house into a multi-family house or a business: zoning laws, land covenants, building regulations, property associations.
+  - Building regulations increase the cost, time, and difficulty of modifying a house.
+- Building everything in a home all at once means that important components all need replacement or maintenance around the same time.
+- Developing a house incrementally means maintenance requirements are smoothed out.
+
+### Property value = Building value + Land value
+
+- The amount you'd invest in a building is a function of the value of its underlying land.
+  - If a building in Manhattan costs $10m to build, the result is worth far more than $10m because land in Manhattan is so valuable.
+  - If you spent $10m to build a building in outer detroit, the result would be worth less than $10m, which indicates the land has negative value.
+  - You'd never buy land in Manhattan to park a mobile home because there are much more lucrative structures to put on such valuable land.
+- When building value is high relative to the land, it drives up the value of the surrounding land.
+  - e.g., a fancy hotel makes the surrounding area more valuable.
+- When building value is low relative to land value, there's redevelopment pressure.
+  - e.g., if a small home is in an expensive neighborhood , it's profitable to tear it down or expand the building.
+
+### Natural evolution of cities
+
+- The property value equation guides the natural growth of cities:
+  1. A few people build shacks together in a new area.
+  1. More people join then and build more shacks nearby.
+  1. The land becomes more valuable because it has more buildings clustered together.
+  1. Redevelopment pressure pushes some owners to renovate their shacks into better structures.
+  1. The nicer buildings have incentive to invest in shared infrastructure like reads and fire protection.
+  1. The info structure increases land value, incentivizing more redevelopment.
+- The flaw in this pattern is that it limits social mobility.
+  - As a town is growing, poorer residents can grow with it.
+  - Once a city reaches maturity, land is only affordable to the entrenched elites.
+
+### Automobiles' impact on cities
+
+- Cars influenced urban design in the 50s with the idea that connecting two places with roads and highways would increase the value of both.
+  - A more connected city is more valuable.
+- Instead, it drove down land prices because suburbanization meant people could live much farther from city centers.
+  - Tons of new land opened up for housing.
+- Cars upended the traditional pattern for growing and sustaining cities.
+  - As land values in city centers dropped, there was insufficient tax revenue to pay for maintenance.
+
+### Public and private investment
+
+- Today in the US, public investment precedes private investment.
+- The government takes on most of the risk in developing cities.
+  - When private developers make initial investment, the government still often finances the deal and assumes the risk if development fails.
+- The government also assumes long-term maintenance responsibilities in cities.
+- When development is built to a finished state instead of growing organically and incrementally, early residents have incentive to constrain growth.
+  - Every additional resident means more people using limited resources like roads, parks, and libraries.
+
+### Cities must profit
+
+- A city must earn a profit in the long term to continue existing.
+  - A city that runs a long-term deficit will eventually fail to provide its expected services.
+- Cities must make investments that earn a positive return.
+  - e.g., if a city invests $1m in repairing a street, the street must generate at least $1m over its lifetime for the investment to be worthwhile.
+
+### Government buildings as an investment
+
 - Traditional cities invested heavily in government buildings like city halls.
-- Current strategy is to build city hall in a cheap office building with lots of parking,
-- An opulent city hall increased the value of the surrounding land and earned a return on investment From greater tax revenue from the neighborhood,
+  - An opulent city hall increased the value of the surrounding land.
+  - This created a positive return on investment, as a prosperous neighborhood increased the tax revenue the town could collect.
+- Current strategy in the US is to build city hall in a cheap office building with lots of parking.
 
-- Infrastructure does not cover costs.
+### Infrastructure does not cover costs
+
 - In the author's role as engineer, he began calculating return on investment for various projects his firm was involved in.
-- In almost every project, the city planned to spend more on the project than it would recoup in taxes for the 20-40
-  next years.
+- In almost every project, the city planned to spend more on the project than it would recoup in taxes for the next 20-40 years.
 
-- Jobs don't benefit a city.
+### Jobs don't benefit a city
+
 - Infrastructure proponents often cite job creation as a reason to take on infrastructure projects.
-- The city does not benefit financially from job creation because in-meter go to the state, not local government
-- Job City us House City
-- 1,000 people live is House City, but every day they all commute to Job city to
+- Cities generally don't benefit financially for creating jobs around infrastructure projects.
+  - Income taxes go to the state, not local government.
+- Thought experiment: Job City vs. House City
+  - Imagine two cities: Job City and House City.
+  - 1,000 people live in House City, and nobody lives in Job City.
+  - Every day, every resident of House City commutes to Job city to work in small tents.
+  - Even though Job city has all the jobs, it would have nearly zero tax revenue because only House City collects taxes from the homeowners.
 
-work in small tents.
+### Growth-driven city financing
 
-- Even though Job city has all the jobs, it would have nearly Zero tax revenue because only House city collects taxes from the homeowners,
-- Growth - dependent city finance
 - Suppose a city accepted a land development from a private investor.
-- Investor puts up all the money, but the city is responsible for maintenance.
-  infrastructure
+
+  - An investor puts up all the money, but the city is responsible for infrastructure maintenance.
 
 - Cash flow will be positive for first 15- 20 years as city collects tax revenue from new residents.
 - As soon as development requires maintenance (e.g. road repair, sewage repair), cash flow goes severely negative because infrastructure built around the same time will require repair around the same time,
