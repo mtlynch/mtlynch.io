@@ -59,7 +59,7 @@ An undergrad at Stanford in 2005, Swartz was also accepted into Y Combinator's f
 
 As a documentary, _Aardvark’d_ is not very good. The filmmaker didn't have much experience, so the shots are always uncomfortably close to people's faces, often with harsh lighting and mediocre sound quality.
 
-{{<img src="joel-lighting.webp" max-width="500px" caption="I don't think Joel Spolsky is this luminsecent in real life">}}
+{{<img src="joel-lighting.webp" max-width="500px" caption="Joel Spolsky isn't this luminsecent in real life.">}}
 
 The film flits from topic to topic without ever landing on a cohesive story. Is it a story about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company? Or tech culture in the mid-2000s?
 
@@ -75,7 +75,7 @@ There's a voiceover from Jessica Livingston that summarizes what makes the film 
 
 The allure of vulnerability is most obvious in the film's interviews with Steve Huffman, reddit's co-founder and current CEO.
 
-Huffman is currently the target of widespread ire for [cutting third party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/). But in 2005, Huffman was just a lovably doofy-looking kid. In his interview, he admits that he had such intense nightmares about reddit having an outage that he slept with his laptop in bed with him.
+Huffman is currently the target of widespread ire for [cutting third party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/). But in 2005, Huffman was just a lovably doofy kid. In his interview, he admits that he had such intense nightmares about reddit having an outage that he slept with his laptop in bed with him.
 
 {{<gallery caption="Steve Huffman in 2005 (left) and in 2017 (right) (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
 {{<img src="steve-huffman-2005.webp" max-width="500px" >}}
@@ -92,7 +92,7 @@ The main storyline of the documentary is the interns' summer project. Originally
 
 So, it's the end of the internship, and Fog Creek is finally launching Copilot. This feels like the climax of the film &mdash; the result of all the work we've watched the interns do throughout the movie.
 
-The interns and employees start a betting pool to predict when they'll make their first sale. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
+The interns and employees start competing to predict when they'll make their first sale. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
 
 {{<img src="sale-predictions.webp" max-width="600px" caption="Fog Creek employees and interns make optimistic predictions about the first sale of Copilot">}}
 
@@ -149,23 +149,27 @@ I unfortunately couldn't find the source code for the original version of Copilo
 
 ## Fog Creek didn't finance the documentary
 
-In researching the documentary, one of the big surprises was that Fog Creek didn't actually finance it. I had remembered it as essentially a vanity project that Fog Creek funded as advertising, but reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized it was more of an angel investor model:
+In researching the documentary, one of the big surprises was that Fog Creek didn't finance it.
+
+I had remembered _Aardvark'd_ as essentially a vanity project that Fog Creek funded as advertising. Re-reading the [job posting](https://www.joelonsoftware.com/2005/03/23/documentary-filmmaker-wanted/), I realized it was more of an angel investor model:
 
 > We’re looking for a filmmaker who will finance and make the film themselves and own the rights. We want someone who can promote the film to typical documentary outlets.
 
-Spolsky said in his blog that he paid the filmmaker $5k stipend and $5k for expenses. In [a later column](https://web.archive.org/web/20230712203549/https://www.inc.com/magazine/20080101/how-hard-could-it-be-the-four-pillars-of-organic-growth.html) he wrote for _Inc._ magazine says, "We ended up paying the filmmaker about $30,000."
+Spolsky said in his blog that he paid the filmmaker a $5k stipend and $5k for expenses. In [a later column](https://web.archive.org/web/20230712203549/https://www.inc.com/magazine/20080101/how-hard-could-it-be-the-four-pillars-of-organic-growth.html) he wrote for _Inc._ magazine says, "We ended up paying the filmmaker about $30,000."
 
-Letting an external filmmaker assume ownership worked. Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken [the interns' development blog](https://web.archive.org/web/20060208042202/http://www.projectaardvark.com/) offline, and Joel has deleted many of the web resources related to Copilot, but the filmmaker still cared enough about _Aardvark'd_ to upload a high-def copy to YouTube 18 years later.
+Letting an external filmmaker assume ownership worked, apparently.
+
+Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken [the interns' development blog](https://web.archive.org/web/20060208042202/http://www.projectaardvark.com/) offline, and Joel has deleted many of the web resources related to Copilot, but the filmmaker still cared enough about _Aardvark'd_ to upload a high-def copy to YouTube 18 years later.
 
 ## What happened to the interns?
 
-[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected his pitch](https://tghw.com/blog/well-that-sucks-what-else-you-got), and Tyler shuttered the business a year later.
+[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected his pitch](https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
 
 In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wiki/Trello), its ultra-successful project management product. As part of the restructuring, Fog Creek sold the Copilot product to Tyler [for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
 [Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere. Michael and I worked seven overlapping years at Microsoft and Google, though I don't recall us ever crossing paths.
 
-[Ben Pollack](https://www.bitquabit.com/meta/about/) worked at Fog Crek for several years. He seems to have never caught the startup bug, mainly working at larger, more established companies. He has followed in Joel's footsteps in blogging, as he actively blogs about software, technology, and his passion for functional programming.
+[Ben Pollack](https://www.bitquabit.com/meta/about/) worked at Fog Crek for several years. He seems to have never caught the startup bug, mainly working at larger, more established companies. He has followed in Joel's footsteps in blogging, as he writes regularly about software, technology, and his passion for functional programming.
 
 [Yaron Guez](https://www.yaronguez.com/) co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about)
 
@@ -181,15 +185,17 @@ In one scene, she's being interviewed on her birthday. Nobody remembered, so she
 
 {{<img src="liz-gordon-shush.webp" max-width="700px" caption="Liz Gordon being shushed on her birthday at the Fog Creek office">}}
 
-It turns out, she stuck with Fog Creek and rose along with the company, eventually taking on the role of Head of People.
+It turns out Liz stuck with Fog Creek and rose along with the company, eventually taking on the role of Head of People.
 
-When Fog Creek spun Trello out into its own company, Liz became Trello's VP of People and retained the role through Trello's acquisition by Atlassian. She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is a C-suite executive at [Splash](https://splashthat.com), where I presume nobody tries to shush her on her birthday.
+When Fog Creek spun Trello out into its own company, Liz became Trello's VP of People and retained the role when Atlassian acquired Trello.
+
+She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is a C-suite executive at [Splash](https://splashthat.com), where I presume nobody tries to shush her on her birthday.
 
 {{<img src="liz-hall.webp" max-width="450px" has-border="true" caption="Liz Hall is now Chief People Officer at Splash.">}}
 
 ## _Make Better Software: The Training Series_
 
-Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
+Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2,000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
 
 I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's most famous blog posts, and they show how they put those ideas into practice at Fog Creek. Most of the Fog Creek characters are still there, and you get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
 
