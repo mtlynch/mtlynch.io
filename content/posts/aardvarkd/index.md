@@ -197,7 +197,14 @@ She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and i
 
 Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2,000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
 
-I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's most famous blog posts, and they show how they put those ideas into practice at Fog Creek. Most of the Fog Creek characters are still there, and you get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
+I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's best blog posts, and they show how they put those ideas into practice at Fog Creek.
+
+Most of the Fog Creek characters are still there, and you get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
+
+{{<gallery caption="Tyler (left) and Ben (right) appear as full-time Fog Creek employees in *Make Better Software*, five years after the filming of *Aardvark'd*.">}}
+{{<img src="tyler-later.webp" max-width="400px" >}}
+{{<img src="ben-later.webp" max-width="441px">}}
+{{</gallery>}}
 
 ## Watch the films
 
