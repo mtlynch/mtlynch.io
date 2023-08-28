@@ -1,6 +1,12 @@
 ---
 title: "Aardvark'd: The Fog Creek Documentary, 18 Years Later"
 date: 2023-08-25T00:00:00-04:00
+images:
+  - aardvarkd/aardvarkd-cover.webp
+tags:
+  - software development
+  - entrepreneurship
+  - mvp
 ---
 
 In 2005, Joel Spolsky's software company, Fog Creek, filmed a documentary about their summer internship program. _Aardvark'd: 12 Weeks with Geeks_ follows four college interns as they design, implement, and launch a completely new software product. That's not the interesting part.
@@ -88,7 +94,7 @@ There's one _Aardvark'd_ scene that drives me crazy.
 
 The main storyline of the documentary is the interns' summer project. Originally codenamed Aardvark, it would eventually take the name of Copilot. No, not the AI coding tool. Fog Creek Copilot was a tool that let people provide remote computer assistance to friends, family, and co-workers.
 
-{{<img src="fog-creek-copilot.webp" has-border="true" max-width="500px" caption="[Fog Creek Copilot](https://web.archive.org/web/20080829161613/https://www.copilot.com/) let people provide remote computer assistance to friends, family, and co-workers.">}}
+{{<img src="fog-creek-copilot.webp" has-border="true" max-width="600px" caption="[Fog Creek Copilot](https://web.archive.org/web/20080829161613/https://www.copilot.com/) let people provide remote computer assistance to friends, family, and co-workers.">}}
 
 So, it's the end of the internship, and Fog Creek is finally launching Copilot. This feels like the climax of the film &mdash; the result of all the work we've watched the interns do throughout the movie.
 
@@ -165,19 +171,27 @@ Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken [the inte
 
 [Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected his pitch](https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
 
+{{<img src="tyler-2005.webp" max-width="500px" caption="Tyler Griffin Hicks-Wright, software development intern on Aardvark">}}
+
 In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wiki/Trello), its ultra-successful project management product. As part of the restructuring, Fog Creek sold the Copilot product to Tyler [for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
 [Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere. Michael and I worked seven overlapping years at Microsoft and Google, though I don't recall us ever crossing paths.
 
+{{<img src="michael-2005.webp" max-width="500px" caption="Michael Lehenbauer, software development intern on Aardvark">}}
+
 [Ben Pollack](https://www.bitquabit.com/meta/about/) worked at Fog Crek for several years. He seems to have never caught the startup bug, mainly working at larger, more established companies. He has followed in Joel's footsteps in blogging, as he writes regularly about software, technology, and his passion for functional programming.
 
-[Yaron Guez](https://www.yaronguez.com/) co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about)
+{{<img src="ben-2005.webp" max-width="500px" caption="Ben Pollack, software development intern on Aardvark">}}
+
+[Yaron Guez](https://www.yaronguez.com/) worked for a few medtech and enterprise-y SaaS businesses. He's the co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about) and a dev manager at [ServiceNow](https://www.servicenow.com).
+
+{{<img src="yaron-2005.webp" max-width="500px" caption="Yaron Guez, project management intern on Aardvark">}}
 
 ## Liz Gordon's satisfying career trajectory
 
 One of the most affable people in _Aardvark'd_ is Liz Gordon, Fog Creek's recently-hired office manager.
 
-Liz is presented in the film as the non-nerd outsider at Fog Creek. She ends up having to coddle and indulge a bunch of college interns a few years her junior who have somewhat inflated egos as subjects of a documentary.
+Liz is presented in the film as the non-nerd outsider at Fog Creek. She ends up having to coddle and indulge a bunch of college interns, most of whom have somewhat inflated egos as subjects of a documentary.
 
 {{<img src="liz-gordon-laughing.webp" max-width="700px" caption="&ldquo;There's always a better way to do something, and that's what \[the interns\] are always trying to figure out... what star trooper is going to kick some other superhero's butt, and how they're going to do it. Or what's the best way to use a lightsaber.&rdquo; -Liz Gordon">}}
 
@@ -197,9 +211,9 @@ She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and i
 
 Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2,000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
 
-I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's best blog posts, and they show how they put those ideas into practice at Fog Creek.
+I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's best blog posts, and they show how they put Joel's philosphy into practice at Fog Creek.
 
-Most of the Fog Creek characters are still there, and you get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
+Most of the Fog Creek characters are still there. You get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
 
 {{<gallery caption="Tyler (left) and Ben (right) appear as full-time Fog Creek employees in *Make Better Software*, five years after the filming of *Aardvark'd*.">}}
 {{<img src="tyler-later.webp" max-width="400px" >}}
