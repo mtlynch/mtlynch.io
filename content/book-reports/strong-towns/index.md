@@ -170,76 +170,74 @@ TODO: Short summary
 ### Growth-driven city financing
 
 - Suppose a city accepted a land development from a private investor.
-
   - An investor puts up all the money, but the city is responsible for infrastructure maintenance.
+  - Cash flow will be positive for first 15-20 years as city collects tax revenue from new residents.
+  - As soon as the development requires maintenance (e.g., road repair, sewage repair), cash flow goes severely negative because infrastructure built around the same time will require repair around the same time.
+  - Cities try to solve the cash flow problem by soliciting ne - development, but that just delays & intensifies the problem.
+- Case study: Detroit
+  - Many see the downfall of Detroit as result of government corruption.
+  - Author sees Detroit's failure as the same that will befall most US cities.
+  - Detroit was the first city designed around cars.
+  - Detroit spread residents out to the suburbs and ran roadways through cities,
+    - This created more infrastructure maintenance costs than the city could afford.
+  - When wealthy people saw the city start to collapse under growing maintenance costs, they fled to cities that were still in the growth part of their lifecycle.
+  - The loss of tax revenue from residents leaving accelerated the collapse.
 
-- Cash flow will be positive for first 15- 20 years as city collects tax revenue from new residents.
-- As soon as development requires maintenance (e.g. road repair, sewage repair), cash flow goes severely negative because infrastructure built around the same time will require repair around the same time,
+### The infrastructure cult
 
-- Cities try to solve the cash flow problem by soliciting ne - development, but that just delays & intensifies the problem. study: Detroit
-- Case
-- Many see the downfall of Detroit as result of government corruption.
-- Author sees Detroit's failure as the same that will befall most US cities,
-- Detroit was the first city designed around cars.
-- Detroit spread residents out to the suburbs and ran roadways through cities,
-- This created more infrastructure maintenance costs then the city could afford..
-- When wealthy people saw the city start to collapse under growing maintenance costs, they fled
-
-to cities that were still in the growth part of their lifecycle.
-
-- The loss of tax revenue from residents leaving accelerated the collapse.
-  The Infrastructure Cult
-
-- Investing in infrastructure is popular politically, but it's often irrational.
+- Investing in public infrastructure is popular politically, but it's often irrational.
 - Cities spend millions on new roads while they're struggling to maintain their existing roads.
 - Failure to Act
-- In their 2011 report, failure to Act, the ASCE made illogical Claims about America's need to invest in infrastructure.
-- Report claimed that weaknesses is infrastructure would cost SIT over the next 10 yrs.
+  - In their 2011 report, [Failure to Act](https://www.asce.org/advocacy/infrastructure/failure-to-act-reports/), the American Society of Civil Engineers (ASCE) made illogical claims about America's need to invest in infrastructure.
+  - The report claimed that weaknesses is infrastructure would cost $1T over the next 10 yrs.
+  - The report recommended that the US spend an extra $220B/re to prevent infrastructure from deteriorating,
+  - i.e., the US should spend $2.2T to avoid a loss of $1T.
 
-- Recommended that US spend an extra $220 Blye to prevent infrastructure from deteriorating,
-- i. e., US should spend $2.25 to avoid a loss of $ IT.
-  Returns from infrastructure projects are
+### Infrastructure projects exaggerate their returns
 
-overstated.
+- When planners estimate that a new road will generate $X of value, they calculate something like:
+  - Road will save drivers an average of 30s per day.
+  - 100k people drive on the road per day.
+  - Road will save 30 x 100k = 3M seconds per day (833 hours).
+  - Median wage in the area is $25/hr.
+  - Therefore, road generates 833 x 25 = $20,825 per day or $7.6M per year.
+- Flaws in this logic.
+  - Ignores time it costs drivers due to construction and maintenance.
+  - People don't necessarily use an extra 30s to work more.
+    - They might sleep in longer.
+    - They might move farther for their job.
 
-- When planners estimate that a new road will generate $ X of value, they calculate something like:
-- Road will save drivers an average of 30s per day.
-- look people drive on the road per day
-- Road will save 3M seconds per day (XX hours) wage in the area is $25) m
-- Median
-- Road generates $XX per day . $xX per year
-- Flaws
+### Irrational municipal accounting
 
-- Ignores time lost due to construction and maintenance.
-- People don't necessarily use an e-ta 30s to work more.
-- They might sleep in longer.
-- They might move farther for their job.
-- Irrational municipal accounting,
-- Cities have balance sheets listing assets and liabilities
-- According to generally accepted accounting principles, infrastructure is considered an asset,
-- This makes no sense because a city can't sell a road and it doesn't directly earn revenue from it.
+- Cities have balance sheets listing assets and liabilities.
+- According to generally accepted accounting principles, infrastructure is considered an asset.
+  - This makes no sense because a city can't sell a road and it doesn't directly earn revenue from it.
 - Even though the city earns reverse from properties in its city, the tax base does not count as an asset.
+- Cities add infrastructure because it makes their balance sheets look stronger.
+  - In reality, infrastructure drains money.
 
-- Cities are incentivized to add infrastructure because it will make their balance sheets look stronger, even though, in reality, infrastructure drains money.
-  Post WWII
+### Post WWII
 
-- Us experienced unprecedented prosperity after WWII
-- Led to lots of infrastructure projects and suburban expansion around cities,
-- This changed urban planning because cities could expand and grow without caring about costs because so much money was flowing into the economy.
-  Funding growth through debt
+- US experienced unprecedented prosperity after WWII.
+- It was a period of rapid suburban expansion.
+- Prosperity changed urban planning.
+  - Cities could expand without caring about costs because so much money was flowing into the economy.
 
-- After the economy slowed down following the 50's, cities took on debt as a way to find
+### Funding growth through debt
 
-growth,
+TODO: Finish
 
-- This only works if the economy grows in the future, as infrastructure investments rarely earn a positive return.
+- After the economy slowed down in the 60s, cities took on debt as a way to fund growth,
+  - This only works if the economy grows in the future, as infrastructure investments rarely earn a positive return.
 - Cities get stuck in a cycle of relying on debt to pay for infrastruct. then needing even more debt to keep going.
 - Lafayette, LA
 - Between 1949 and 2015, infrastructure. growth far outstripped income.
 - 1,000% increase in pipes per capita
 - 2,140% increase in fire hydrants per capita
 - 160% increase in average inflation adjusted income
-- Old & blighted us. new & shiny
+
+### Old & blighted us. new & shiny
+
 - In author's hometown, there are two similar blocks close to each
 
 other.
