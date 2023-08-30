@@ -10,19 +10,21 @@ tags:
   - mvp
 ---
 
-In 2005, Joel Spolsky's software company, Fog Creek, filmed a documentary about their summer internship program. _Aardvark'd: 12 Weeks with Geeks_ follows four college interns as they design, implement, and launch a completely new software product. That's not the interesting part.
+In 2005, Joel Spolsky's software company, Fog Creek, filmed a documentary about their summer internship program. The film is called _Aardvark'd: 12 Weeks with Geeks_, and it follows four college interns as they design, implement, and launch a completely new software product.
+
+That's not the interesting part.
 
 Looking back on this documentary 18 years later, it's striking how many interviews it captured with people who would go on to greater fame and success:
 
 - Paul Graham and Jessica Livingston months after they co-founded Y Combinator
 - Aaron Swartz, Steve Huffman, and Alexis Ohanian months after they launched reddit
-- Joel Spolsky and Michael Pryor before their mega-hits like StackOverflow, Trello, and Glitch
+- Joel Spolsky and Michael Pryor before their mega-hits like StackOverflow and Trello
 
 _Aardvark'd_ sold about 5,000 copies on DVD, mostly to fans of Joel's blog, but it quickly faded from popular consciousness.
 
-As a longtime Joel Spolsky fanboy, I've always been curious to watch _Aardvark'd_. I was delighted that the filmmaker recently published it [for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk) at full 1080p.
+As a longtime Joel Spolsky fanboy, I've always been curious to watch _Aardvark'd_. I was delighted that the film's producer recently published it [for free on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk) at full 1080p.
 
-At the time of this writing, _Aardvark'd_ has only 41 views on YouTube, which is surprisingly low given the caliber of people it features.
+At the time of this writing, _Aardvark'd_ has only 41 views on YouTube, which is surprisingly low given the rarity of its interviews.
 
 {{<img src="41-views.webp" max-width="650px" has-border="true" caption="*Aardvark'd* currently has only 41 views [on YouTube](https://www.youtube.com/watch?v=YbrkZ07LKbk)." href="https://www.youtube.com/watch?v=YbrkZ07LKbk">}}
 
@@ -38,9 +40,9 @@ In 2005, [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky) was 40 years
 
 ### Y Combinator
 
-[Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) and [Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) had just co-founded [Y Combinator](https://en.wikipedia.org/wiki/Y_Combinator), which would go on to become one of the most successful startup accelerators in the software industry.
+[Paul Graham](<https://en.wikipedia.org/wiki/Paul_Graham_(programmer)>) and [Jessica Livingston](https://en.wikipedia.org/wiki/Jessica_Livingston) had just co-founded [Y Combinator](https://en.wikipedia.org/wiki/Y_Combinator), which would go on to become one of the most successful startup accelerators in the tech world.
 
-{{<img src="paul-jessica.webp" max-width="600px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005">}}
+{{<img src="paul-jessica.webp" max-width="700px" caption="Y Combinator co-cofounders Paul Graham and Jessica Livingston in 2005">}}
 
 Graham was 41 years old, and Livingston was 34. Seven years prior, Graham had sold his startup [Viaweb](https://en.wikipedia.org/wiki/Viaweb) to Yahoo for $50M. He then became popular online for [his essays about startups and software](http://paulgraham.com/articles.html). Livingston was not active in the startup community at the time, having come from a career in marketing.
 
@@ -58,7 +60,7 @@ Early in 2005, college roommates Steve Huffman and Alexis Ohanian drove to Bosto
 
 {{<img src="ohanian-swartz-huffman.webp" max-width="700px" caption="reddit co-founders (right to left) Alexis Ohanian, Aaron Swartz, Steve Huffman in 2005">}}
 
-Aaron Swartz was 19 at the time of filming. He already impacted the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and a founding contributor to [Creative Commons](https://creativecommons.org/), an organization that fought for ethical mechanisms for sharing intellectual property.
+Aaron Swartz was 19 at the time of filming. He already impacted the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and a founding contributor to [Creative Commons](https://creativecommons.org/).
 
 An undergrad at Stanford in 2005, Swartz was also accepted into Y Combinator's first batch. When his company stalled, Graham suggested he [merge with reddit](https://qz.com/594715/when-aaron-swartz-met-paul-graham-his-life-and-the-entire-internet-changed-forever).
 
@@ -68,11 +70,11 @@ As a documentary, _Aardvark’d_ is not very good. The filmmaker didn't have muc
 
 {{<img src="joel-lighting.webp" max-width="500px" caption="Joel Spolsky isn't this luminsecent in real life.">}}
 
-The film flits from topic to topic without ever landing on a cohesive story. Is it a story about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company? Or tech culture in the mid-2000s?
+The film flits from topic to topic without ever landing on a cohesive story. Is it a story about the interns' project? Or is it about the interns themselves? Or is it a story about Fog Creek as a company?
 
 Still, I found it compelling.
 
-There's a voiceover from Jessica Livingston that summarizes what makes the film engaging despite its flaws:
+Towards the end of the movie, Jessica Livingston gives a voiceover that captures so crisply what makes the film engaging:
 
 > A lot of these tech startup founders who are extremely successful, back when they were getting started, they were terrified.
 >
@@ -80,7 +82,7 @@ There's a voiceover from Jessica Livingston that summarizes what makes the film 
 >
 > And so to see these people as vulnerable people at one point in time is interesting to me.
 
-The allure of vulnerability is most obvious in the film's interviews with Steve Huffman, reddit's co-founder and current CEO.
+The vulnerability is most conspicuous in the film's interviews with Steve Huffman, reddit's co-founder and current CEO.
 
 Huffman is currently the target of widespread ire for [cutting third party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/). But in 2005, Huffman was just a lovably doofy kid. In his interview, he admits that he had such intense nightmares about reddit having an outage that he slept with his laptop in bed with him.
 
@@ -99,7 +101,7 @@ The main storyline of the documentary is the interns' summer project. Originally
 
 So, it's the end of the internship, and Fog Creek is finally launching Copilot. This feels like the climax of the film &mdash; the result of all the work we've watched the interns do throughout the movie.
 
-The interns and employees start competing to predict when they'll make their first sale. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
+The interns and employees compete to predict when they'll make their first sale. Some guessed it would happen within a minute of launch, while others thought it might take up to an hour.
 
 {{<img src="sale-predictions.webp" max-width="600px" caption="Fog Creek employees and interns make optimistic predictions about the first sale of Copilot">}}
 
@@ -112,11 +114,9 @@ But the sale doesn't come. As each minute rolls by, the interns glumly cross out
 
 As a founder, I found this moment extremely relatable. There have been so many times where I put weeks or months of work into something that I was sure people would love. Then, I launch it only to discover that I was completely wrong and nobody's interested.
 
-But the thing about failed software launches is that failure isn't a particular moment. It's the hours after launch when your hope rapidly fades. Even if you don't get the results you want immediately, there's a desperate possibility that it could land on the front page of Hacker News or fall into the lap of someone with a huge audience.
+But the thing about failed software launches is that failure isn't a moment &mdash; it's the minutes then hours after launch as hope drains away. Even if you don't get the results you want immediately, there's a desperate possibility that it could land on the front page of Hacker News or fall into the lap of someone with a huge audience. Every minute that ticks by without a sale brings your chances of success closer to 0.
 
-The documentary does a great job of capturing that anxiously ambiguous time &mdash; you haven't failed for sure, but every minute that ticks by without a sale brings your chances of success closer to 0. I've talked about it with other founders, but I've never seen it captured on video.
-
-And then the film just... forgets what it was doing.
+The documentary does a great job of capturing that anxiously ambiguous time for the Fog Creek interns. And then it just... forgets what it was doing.
 
 There's no resolution whatsoever! The next scene, Joel is popping champagne, but it's not even clear if there's been a sale or if they're just celebrating the launch. You never see anyone's sighing in relief or admitting defeat.
 
@@ -144,16 +144,6 @@ The documentary's interviews are fun overall, but there were a couple of delight
 >
 > -Aaron Swartz
 
-## The artifacts of Aardvark
-
-After Fog Creek released Copilot, Joel Spolsky [published the original functional spec](https://www.joelonsoftware.com/2005/08/17/the-project-aardvark-spec/). The link to the actual PDF is now dead, but the Internet Archive [has a copy](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf).
-
-{{<img src="aardvark-spec.webp" has-border="true" max-width="300px" caption="Joel Spolsky's [original functional spec](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf) for Fog Creek Copilot (codename Aardvark)">}}
-
-Fog Creek adapted open-source VNC code for the Copilot client, so they were required under the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License) to publish their source code.
-
-I unfortunately couldn't find the source code for the original version of Copilot that the interns wrote. The [earliest version I could find](https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helper_src.zip/) was from 2011. By that point, they had rewritten the C# codebase in C++. I suspect this rewrite happened when they added Mac support in [Copilot 2.0](https://www.joelonsoftware.com/2007/01/26/copilot-20-ships/), as they probably didn't feel like trying to run .NET code on Mac in 2007.
-
 ## Fog Creek didn't finance the documentary
 
 In researching the documentary, one of the big surprises was that Fog Creek didn't finance it.
@@ -166,17 +156,27 @@ Spolsky said in his blog that he paid the filmmaker a $5k stipend and $5k for ex
 
 Letting an external filmmaker assume ownership worked, apparently.
 
-Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken [the interns' development blog](https://web.archive.org/web/20060208042202/http://www.projectaardvark.com/) offline, and Joel has deleted many of the web resources related to Copilot, but the filmmaker still cared enough about _Aardvark'd_ to upload a high-def copy to YouTube 18 years later.
+Fog Creek no longer cares about Copilot or _Aardvark'd_. They've taken [the interns' development blog](https://web.archive.org/web/20060208042202/http://www.projectaardvark.com/) offline, and Joel has let many of the Copilot links on his blog die, but the filmmaker still cared enough about _Aardvark'd_ to upload a high-def copy to YouTube 18 years later.
+
+## The artifacts of Aardvark
+
+After Fog Creek released Copilot, Joel Spolsky [published the original functional spec](https://www.joelonsoftware.com/2005/08/17/the-project-aardvark-spec/). The link to the actual PDF is now dead, but the Internet Archive [has a copy](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf).
+
+{{<img src="aardvark-spec.webp" has-border="true" max-width="300px" caption="Joel Spolsky's [original functional spec](https://web.archive.org/web/20051028171624/https://www.joelonsoftware.com/RandomStuff/copilot_spec.pdf) for Fog Creek Copilot (codename Aardvark)">}}
+
+Fog Creek adapted open-source VNC code for the Copilot client, so they were required under the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License) to publish their source code.
+
+I unfortunately couldn't find the source code for the original version of Copilot that the interns wrote. The [earliest version I could find](https://web.archive.org/web/20150911071232/https://www.copilot.com/copilot_helper_src.zip/) was from 2011. By that point, they had rewritten the C# codebase in C++. I suspect this rewrite happened when they added Mac support in [Copilot 2.0](https://www.joelonsoftware.com/2007/01/26/copilot-20-ships/), as they probably didn't feel like trying to run .NET code on Mac in 2007.
 
 ## What happened to the interns?
 
-[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012, to start a photo backup business called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected his pitch](https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
+[Tyler Griffin Hicks-Wright](https://tghw.com) accepted a full-time position at Fog Creek after his internship and worked there for several years. He left in 2012, to start a photo backup startup called Snaposit. He sought funding from his _Aardvark'd_ co-star, Paul Graham, but [Y Combinator rejected his pitch](https://tghw.com/blog/well-that-sucks-what-else-you-got). Tyler shuttered the business a year later.
 
 {{<img src="tyler-2005.webp" max-width="500px" caption="Tyler Griffin Hicks-Wright, software development intern on Aardvark">}}
 
 In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wiki/Trello), its ultra-successful project management product. As part of the restructuring, Fog Creek sold the Copilot product to Tyler [for an undisclosed sum](https://tghw.com/blog/copilot-coming-full-circle). He ran Copilot on the side for eight years before [shutting it down in April 2022](https://news.ycombinator.com/item?id=31192812).
 
-[Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere. Michael and I worked seven overlapping years at Microsoft and Google, though I don't recall us ever crossing paths.
+[Michael Lehenbauer](https://twitter.com/mikelehen) took a job at Microsoft after his _Aardvark'd_ internship. He left in 2011 to join Firebase as employee #2, which I can only assume means he's now relaxing on a superyacht somewhere.
 
 {{<img src="michael-2005.webp" max-width="500px" caption="Michael Lehenbauer, software development intern on Aardvark">}}
 
@@ -184,19 +184,19 @@ In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wi
 
 {{<img src="ben-2005.webp" max-width="500px" caption="Ben Pollack, software development intern on Aardvark">}}
 
-[Yaron Guez](https://www.yaronguez.com/) worked for a few medtech and enterprise-y SaaS businesses. He's the co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about) and a dev manager at [ServiceNow](https://www.servicenow.com).
+[Yaron Guez](https://www.yaronguez.com/) worked for several medtech and enterprise-y SaaS businesses. He's the co-founder of [a buzzwordy consulting firm](https://www.trestian.com/#about) and a dev manager at [ServiceNow](https://www.servicenow.com).
 
 {{<img src="yaron-2005.webp" max-width="500px" caption="Yaron Guez, project management intern on Aardvark">}}
 
 ## Liz Gordon's satisfying career trajectory
 
-One of the most affable people in _Aardvark'd_ is Liz Gordon, Fog Creek's recently-hired office manager.
+One of the most affable characters in _Aardvark'd_ is Liz Gordon, Fog Creek's then recently-hired office manager.
 
 Liz is presented in the film as the non-nerd outsider at Fog Creek. She ends up having to coddle and indulge a bunch of college interns, most of whom have somewhat inflated egos as subjects of a documentary.
 
 {{<img src="liz-gordon-laughing.webp" max-width="700px" caption="&ldquo;There's always a better way to do something, and that's what \[the interns\] are always trying to figure out... what star trooper is going to kick some other superhero's butt, and how they're going to do it. Or what's the best way to use a lightsaber.&rdquo; -Liz Gordon">}}
 
-In one scene, she's being interviewed on her birthday. Nobody remembered, so she has to buy herself a birthday hat. While she's explaining this to the camera, one of her co-workers _shushes_ her. On her birthday!
+In one scene, she's being interviewed on her birthday. Nobody remembered, so she has to buy herself a birthday hat. While she's explaining this to the camera, one of her co-workers _shushes_ her for making too much noise. On her birthday!
 
 {{<img src="liz-gordon-shush.webp" max-width="700px" caption="Liz Gordon being shushed on her birthday at the Fog Creek office">}}
 
@@ -210,11 +210,11 @@ She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and i
 
 ## _Make Better Software: The Training Series_
 
-Five years later, Fog Creek collaborated once again with Boondoggle Media on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2,000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn).
+Five years later, Fog Creek collaborated once again with _Aardvark's_ producer, Boondoggle Media, on a video course called [_Make Better Software: The Training Series_](https://boondogglemedia.com/project/make-better-software/). Fog Creek [used to sell this course](https://web.archive.org/web/20110711014829/http://training.fogcreek.com/order.html) for $2,000, but now Boondoggle Media has released it [free on YouTube](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn) as well.
 
-I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's best blog posts, and they show how they put Joel's philosphy into practice at Fog Creek.
+I'm watching it, and it's pretty good. It's kind of like a video version of Joel Spolsky's best blog posts. The series shows how Joel puts his many software philosphies into practice at Fog Creek.
 
-Most of the Fog Creek characters are still there. You get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
+Most of Fog Creek characters from _Aardvark'd_ are still there. You get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several real-world years of developer experience at Fog Creek.
 
 {{<gallery caption="Tyler (left) and Ben (right) appear as full-time Fog Creek employees in *Make Better Software*, five years after the filming of *Aardvark'd*.">}}
 {{<img src="tyler-later.webp" max-width="400px" >}}
