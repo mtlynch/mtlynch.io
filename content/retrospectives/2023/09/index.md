@@ -59,8 +59,6 @@ My options at this point are:
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-## Making TinyPilot less configurable
-
 ## Essential vs. accidental dev work for TinyPilot
 
 In Fred Brooks' famous essay, "No Silver Bullet" (TODO: link), he points out that you can divide software work into "essential" and "accidental" work. Essential work includes things like defining requirements. Even if you have unlimited tooling and resources, you can't create a useful application if you don't take the time to figure out what the software should do.
@@ -72,6 +70,12 @@ I've been thinking about that essay a lot lately in terms of TinyPilot's dev wor
 And that's not even taking into account the cost of these tasks. The essential complexity tasks generally were less costly.
 
 We have to install an application and test it on real Raspberry Pi hardware. We're also responsible for . I'd love it if we updated TinyPilot by just updating servers we control. What we do is closer to the way people ship desktop software.
+
+## Making TinyPilot less configurable
+
+One of the biggest sources of technical debt for TinyPilot is our use of Ansible. When I created TinyPilot, I didn't know how to distribute software on Linux systems, but I did know how to use Ansible. So I just created Ansible roles.
+
+One of the realizations I wish I'd had earlier was that what made my Ansible mistake worse was how configurable I had made it.
 
 ## The return of free time
 
