@@ -59,13 +59,37 @@ My options at this point are:
 
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
 
-## Topic 1
+## Making TinyPilot less configurable
 
-## Topic 2
+## Essential vs. accidental dev work for TinyPilot
 
-## Topic 3
+In Fred Brooks' famous essay, "No Silver Bullet" (TODO: link), he points out that you can divide software work into "essential" and "accidental" work. Essential work includes things like defining requirements. Even if you have unlimited tooling and resources, you can't create a useful application if you don't take the time to figure out what the software should do.
+
+Accidental work includes things that we only have to do because of the limitations of our tools. For example, managing memory in C is something we wouldn't have to care about if we had unlimited resources.
+
+I've been thinking about that essay a lot lately in terms of TinyPilot's dev work. A lot of what we're doing feels like accidental complexity. I took a look at
+
+And that's not even taking into account the cost of these tasks. The essential complexity tasks generally were less costly.
+
+We have to install an application and test it on real Raspberry Pi hardware. We're also responsible for . I'd love it if we updated TinyPilot by just updating servers we control. What we do is closer to the way people ship desktop software.
+
+## The return of free time
+
+I have time to write for an hour every day. Before TinyPilot, I published ten full-length blog posts per year. I'm still not back to that, but I'm getting closer. I'm publishing a blog post or a briefer note every month.
+
+What's worked?
+
+Mature teams that can work independently. Can peer review each other's work.
+
+I've been conservative about taking on new projects. I have a major project right now of moving from in-house manufacturing to the third-party contract manufacturer, and that's the only project I'm taking on. There are days where that project balloons up and I need to spend the day focusing on that to prevent a delay. If I had multiple projects, I run the risk that days like that would overlap or pile up.
+
+What still needs work
+
+Steering everyone away from writing documentation.
 
 ## Side projects
+
+### Development environments in Nix
 
 ## Wrap up
 
