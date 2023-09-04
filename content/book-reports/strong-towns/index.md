@@ -225,106 +225,91 @@ TODO: Short summary
 
 ### Funding growth through debt
 
-TODO: Finish
-
-- After the economy slowed down in the 60s, cities took on debt as a way to fund growth,
+- After the economy slowed down in the 60s, cities took on debt as a way to fund growth.
   - This only works if the economy grows in the future, as infrastructure investments rarely earn a positive return.
-- Cities get stuck in a cycle of relying on debt to pay for infrastruct. then needing even more debt to keep going.
-- Lafayette, LA
-- Between 1949 and 2015, infrastructure. growth far outstripped income.
-- 1,000% increase in pipes per capita
-- 2,140% increase in fire hydrants per capita
-- 160% increase in average inflation adjusted income
+  - Cities get stuck in a cycle of relying on debt to pay for infrastruct. then needing even more debt to keep going.
+- Case study: Lafayette, LA
+  - Between 1949 and 2015, infrastructure. growth far outstripped income.
+  - 1,000% increase in pipes per capita.
+  - 2,140% increase in fire hydrants per capita.
+  - 160% increase in average inflation-adjusted income.
 
-### Old & blighted us. new & shiny
+### Old and blighted vs. new and shiny
 
-- In author's hometown, there are two similar blocks close to each
+- In author's hometown, there are two similar blocks close to each other.
+  - Old and blighted: a series of pop-up shacks built in early 1900s that include a pawn shop, a bankruptcy attorney, and a local restaurant.
+  - New and shiny: a franchise restaurant that moved in and added its own parking lot, allowing the city to eliminate street parking in favor of supporting more traffic.
+- Comparing the two blocks by taxable revenue:
+  - Old and blighted: total taxable value of businesses: $1.1M
+  - New and shiny: $620k
+  - Old and blighted generates 77% more revenue for the city.
+- Comparing impact on community:
+  - Businesses in the old and blighted block hire employees locally and use local vendors for things like accounting, sign making, legal services.
+  - New block's franchise wouldn't give author information, but they likely created fewer full-time jobs and use out-of-state vendors for most services.
+- Tax incentives
 
-other.
+  - The franchise restaurant at read had a location in town 3 blocks from the new location,
+  - The franchise built the additional location because the city offered them a tax rebate to redevelop a blighted block.
+  - In effect, the city paid the franchise t tear down a block that likely generated more revenue than the franchise would ever generate.
+    - The city can't even start collecting taxes from the new block for 20+ years due to the rebate.
 
-- Old and blighted: a series of pop up shacks built in early 19005 that include pawn shop, bankruptcy attorney, and local restaurant.
-- New and shiny: a franchise restaurant that moved in and added its own parking lot, allowing the city to eliminate street parking in fan of supporting more traffic.
-- Comparing by taxable revenue
-- Old and blighted! total taxable value of businesses ' . $1. I M
-- Ner and shiny: $ 620k
-- old generates 77% more revenue.
-- Impact on community
-- Businesses in the old block hire employees locally and use local vendors for things like accounting, sign making, legal services.
+### Big box stores vs. downtown businesses
 
-- New block's franchise would,'t give author information, but they likely created fewer full-time jobs and use out-of-state vendors for most services.
-- Tap incentives
-- The franchise restaurant at read had a location in town 3 blocks from the new location,
-- They moved because the city offered them a tax rebate to redevelop a blighted block
-- In effect, the city paid the franchise t tear down a block that likely generated more revenue than the franchise
-  tax
+- In author's town, a big box store along the highway is the largest single taxpayer in the city.
+  - The store consequently wields significant political influence.
+- The city built the infrastructure to attract the big box store using large federal grants, but the city is still responsible for long-term maintenance of that infrastructure.
+  - If the big box store vacates the location, the replacement will likely be something that generates lower tax revenue (e.g, warehouse, church), but the city stil bears the high maintenance cost.
+- Comparing the big box location to downtown businesses, the businesses collectively generate similar revenue but require less infrastructure to mantain.
+  - If one business closes, it's easy to replace it with a similar business.
 
-would ever generate, and thy can't even start collecting taxes from the new block for Zot years.
+### Value per acre
 
-- Big box stores us, downtown businesses
-- In author's town , a big box tore along the highway is the largest single taxpayer in the city.
-- They have a large influence over politics.
-- City built the infrastructure f. the big box store using large federal grants, but maintenance will be expensive,
-- IF the big box store vacates the location, the replacement will likely be something that generates less tax revenue (e.g, warehouse, church), but the city stil bears the high mainbrace cost.
-- Comparing the big boy location to downtown businesses, the
-
-businesses collectively generate similar revenue but require less infrastructure to mashtsin.
-
-- If one business closes, it's easy to replace it with a similar business.
-- Value per acre
-- The common way to evaluate a municipal project is to calculate return on investment
+- The common way to evaluate a municipal project is to calculate return on investment.
 - Author advocates using value per acre as an approximation for return on investment.
-- He claims it's lox faster to calculate and usually correlates with the result of a more rigorous ROI analysis.
-- Comparing a Walmart in Asheville to a downtown building, the downtown building generates look more property day per acre
+  - He claims it's a lot faster to calculate and usually correlates with the result of a more rigorous ROI analysis.
+- Comparing a Walmart in Asheville to a downtown building, the downtown building generates 100x more property tax per acre and 76% more sales tax.
+- [Urban3](https://www.urbanthree.com/) did a large study of value per acre in different cities across the US and found several trends.
+  - Older neighborhoods outperform newer neighborhoods (especially neighborhoods that formed before 1930 vs. after 1950).
+  - Poorer neighborhoods generate more value per acre than wealthy neighborhoods.
+  - Areas close to the "core" of a neighborhood generate more value.
 
-and 76% more sales tax.
+### Budget for maintenance
 
-- Urban} did a large study of value per acre in different cities across the US and found several trends
-- Older neighborhoods outperform never neighborhoods (esp neighborhoods that formed pre - 1930 us. after
-- 19501.
-- Poorer neighborhoods generate more value per acre than wealthy neighborhoods.
-- Arias' close to the ' 'are" of a neighborhood generate more value.
-- Plan for budgeting maintenance
 - Most cities prioritize maintenance based on age of infrastructure and how severely it needs maintenance.
 - Most cities run at a deficit, so they can't really maintain all of their infrastructure.
+- Author argues that cities should spend all of their maintenance budget obsessively maintaining areas with highest value per ace.
+  - "Obsessive" like how Disney World maintains their parks.
+- Rationale: Invest in areas that are profitable so that maintenance is sustainable.
+  - Residents will respond to public investment with private investment because they have more confidence the city will continue investing in them.
+- Infrastructure will fail in low value per acre areas, causing those neighborhoods to contract.
+  - This is a calculated loss, as most cities sprawl unsustainably. They have to shed some infrastructure and concentrate the population into an area that generates enough tax revenue to sustainably fund infrastructure maintenance.
 
-- Author proposes that cities spend all of their maintenance budget obsessively maintaining area, with highest value per ace.
-- Obsessive like Disney world maintains their parks,
-- Rationale: Invest in areas that are profitable so that maintenance 13 sustainable,
-- Residents will respond to public investment with private investment because they have more confidence the city will continue investing in them,
-- Infrastructure will fail is low value per acre areas, causing these neighborhoods to contract.
-- This is a calculated loss, as the cities have to forfeit some land to return to the point
+### Why is a 20-story building next to a one-story building?
 
-where the tax base is enough to sustainably fund ongoing maintenance.
+- US cities often have wildly different building types next to each other in ways that seem irrational.
+  - e.g., a 20-story building will be next to a one-story building.
+- Thought experiment: three lots are in a row and are the same size.
+  1.  A single-family home worth $200k
+  2.  A vacant lot
+  3.  A 20-story building worth $10M
+  - What is the value of lot (2)?
+  - A $10M property implies the underlying property is worth around $1.5M.
+  - The owner of the vacant lot would want to sell to another 20-story developer for $1.5M.
+  - Actually, it's a trick question because if a vacant lot is worth $1.5M, then the single-family home's lot must also be worth \~$1.5M.
+    - A developer can purchase the house, demolish it, then build a $10M building for a profit.
+- In reality, $10M buildings exist next to $200k homes, so how can that be?
+- Regulation artifically limits development.
+  - It's roughly the same regulatory difficulty to build a 5-story building as a 20-story building, so development is pushed to the extremes.
+    - Development can't follow free market forces, so expensive buildings appear, seemingly at random, often due to corrupt connections between developers and regulators.
 
-- Intensity jumps
-- us cities often have jumps of "intensity"' for no apparent reason.
-- e.g., a 20-story building will be next to a one-story building
-- Thought experiment
-- Three lots are in a row and are the same size
-- 1.  Single family home worth $ rook.
-- 2.  Vacant lot
-- 3.  20 - story building worth $10 M
-- What is the make of (2) 7.
-- A slum property implies the
+### Subsidiarity
 
-underlying property is worth around $1. 5M.
-
-- The owner of the vacant lot would want to sell to another W-story developer for $1.5 M
-- Trick question because it means the single family home must also be worth -$1, SM
-- A developer can purchase the house, demolish it, then build a $10 M building for a profit.
-- In reality, slum buildings exist next to $ wok homes, so how can that be?.
-- Development is artificially limited by regulation.
-- It's roughly the same regulatory difficulty to build a Z- story building as a 5-story building, so development is pushed to the extremes.
-
-- Development can't follow -free market forces, so expensive build, appear seemingly at random, often due to corrypt connections between developers and regulators.
-- Subsidiarity
-- Subsidiarity is the idea that rules should be made by the lowest level of government capable of making the decision intelligently
-- Ligi, should resident, be allowed to keep chickens in their backyard?
-- Absurd for the federal government to make this decision,
-- Decision only affects a few immediate neighbors around the house.
-- Ideal is if the neighbors talk and make a decision amongst themselves, without a formal law,
-
-- Next step up would be local government helps the neighbors reach a decision, but without a law.
-- Next step up would be the lot.) town passing a law about backyard chickens,
+- Subsidiarity is the idea that rules should be made by the lowest level of government capable of making the decision intelligently.
+- Who should decide whether residents should be allowed to keep chickens in their backyard?
+  - It would be absurd for the federal government to make this decision.
+  - The decision only affects a few immediate neighbors around the house.
+  - The ideal outcome would be if the neighbors talk and make a decision amongst themselves without a formal law.
+  - The next step up would be local government helps the neighbors reach a decision, but without a law.
+  - The next step up would be the town passing a law about backyard chickens.
 - Who should decide if a regional transit line is built?
-- Requires more context than a few neighbors, so this should happen at the city or state level
+  - This decision requires more context than a few neighbors, so this should happen at the city or state level.
