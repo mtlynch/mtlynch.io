@@ -247,7 +247,6 @@ TODO: Short summary
   - Businesses in the old and blighted block hire employees locally and use local vendors for things like accounting, sign making, legal services.
   - New block's franchise wouldn't give author information, but they likely created fewer full-time jobs and use out-of-state vendors for most services.
 - Tax incentives
-
   - The franchise restaurant at read had a location in town 3 blocks from the new location,
   - The franchise built the additional location because the city offered them a tax rebate to redevelop a blighted block.
   - In effect, the city paid the franchise t tear down a block that likely generated more revenue than the franchise would ever generate.
