@@ -57,7 +57,14 @@ My options at this point are:
 
 {{<revenue-graph project="tinypilot">}}
 
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | July 2023      | August 2023    | Change                                          |
+| ------------------------ | -------------- | -------------- | ----------------------------------------------- |
+| Unique Visitors          | 7,800          | 6,900          | <font color="red">-900 (-12%)</font>            |
+| Sales Revenue            | $79,635.02     | $91,670.46     | <font color="green">+$12,035.44 (+15%)</font>   |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                               |
+| Royalties                | $3,777.52      | $2,969.62      | <font color="red">-$807.90 (-21%)</font>        |
+| Total Revenue            | $83,703.24     | $94,930.78     | <font color="green">+$11,227.54 (+13%)</font>   |
+| **Profit**               | **$26,359.62** | **$28,454.42** | **<font color="green">+$2,094.80 (+8%)</font>** |
 
 ## Essential vs. accidental dev work for TinyPilot
 
