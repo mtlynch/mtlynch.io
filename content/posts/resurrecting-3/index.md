@@ -339,8 +339,6 @@ If you'd like to see Zestful in action, check out the [live demo](https://zestfu
 
 {{<img src="zestful-screenshot.png" alt="Screenshot of Zestful ingredient parsing demo" max-width="800px" has-border="true" href="https://zestfuldata.com/demo">}}
 
-If you're a developer and you work on software that handles recipe ingredients, let's talk. Shoot me an email at [michael@mtlynch.io](mailto:michael@mtlynch.io).
-
 {{<zestful-ad>}}
 
 ---

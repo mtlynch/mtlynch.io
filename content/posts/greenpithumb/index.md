@@ -66,7 +66,7 @@ The code for GreenPiThumb is open-source and features:
 
 {{< figure src="https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" caption="GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))">}}
 
-The Raspberry Pi reads _digital_ signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and [light sensor](https://smile.amazon.com/gp/product/B0157PFTS0/).
+The Raspberry Pi reads _digital_ signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and light sensor.
 
 The [DHT11 sensor](https://smile.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/) detects temperature and humidity in the air. It produces a digital signal, so it can plug right into the Raspberry Pi.
 
@@ -251,7 +251,7 @@ The tables below show the equipment we used to build GreenPiThumb. We're sharing
 - [Soil moisture sensor](https://www.sparkfun.com/products/13322)
 - [Rubber glove](https://smile.amazon.com/gp/product/B0002XJZME/)
 - [Molex to SATA power cable adapter](https://smile.amazon.com/Cable-Matters-Molex-Power-Adapter/dp/B00STNUB04/)
-- [Light-dependent photoresistor](https://smile.amazon.com/gp/product/B0157PFTS0/)
+- Light-dependent photoresistor
 - 1-gallon plastic water jug (for reservoir)
 - Safety pin
 - Rubber bands

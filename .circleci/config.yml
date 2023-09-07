@@ -22,7 +22,7 @@ jobs:
           command: npm install
       - run:
           name: Check formatting
-          command: npm run check-format
+          command: ./dev-scripts/check-formatting
   lint-markdown:
     docker:
       - image: davidanson/markdownlint-cli2:v0.5.0
@@ -33,7 +33,7 @@ jobs:
           command: ./dev-scripts/lint-markdown
   build:
     docker:
-      - image: peaceiris/hugo:v0.109.0
+      - image: peaceiris/hugo:v0.117.0
     steps:
       - checkout
       - attach_workspace:
