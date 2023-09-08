@@ -8,6 +8,9 @@ tags:
   - software development
   - entrepreneurship
   - mvp
+discuss_urls:
+  reddit: https://news.ycombinator.com/item?id=37433186#37434929
+  hacker_news: https://news.ycombinator.com/item?id=37433186
 ---
 
 In 2005, Joel Spolsky's software company, Fog Creek, filmed a documentary about their summer internship program. The film is called _Aardvark'd: 12 Weeks with Geeks_, and it follows four college interns as they design, implement, and launch a completely new software product.
@@ -234,3 +237,5 @@ Both movies are available for free on YouTube. If you're a fan of Joel Spolsky, 
 And if you're a superfan of Joel Spolsky's blog, [Joel on Software](https://www.joelonsoftware.com/), you'll enjoy _Make Better Software_.
 
 - [_Make Better Software: The Training Series_](https://www.youtube.com/playlist?list=PLcIkt5s7w8D0ywp0CBmNFWRTFZic3pWNn)
+
+{{<tweet user="deliberatecoder" id="1700140534126244021">}}
