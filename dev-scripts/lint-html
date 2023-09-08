@@ -46,6 +46,7 @@ IGNORE_PATTERNS+=("/www.amd.com/")
 IGNORE_PATTERNS+=("/www.bls.gov/")
 IGNORE_PATTERNS+=("/www.digitalfaq.com/")
 IGNORE_PATTERNS+=("/www.sciencedirect.com/")
+IGNORE_PATTERNS+=("/www.servicenow.com/")
 # Temporarily ignore reddit.com URLs during 2023-06-12 blackout.
 IGNORE_PATTERNS+=("/reddit.com/")
 
