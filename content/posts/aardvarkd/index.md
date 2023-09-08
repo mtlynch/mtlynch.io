@@ -62,7 +62,7 @@ At the time, reddit only allowed users to post links &mdash; there was no commen
 
 Early in 2005, college roommates Steve Huffman and Alexis Ohanian drove to Boston to attend one of Paul Graham's lectures about startups. After the talk, Graham had dinner with Huffman, Ohanian, and a few other attendees. The conversations inspired Graham to create Y Combinator, and reddit was in the first batch of investments.
 
-{{<img src="ohanian-swartz-huffman.webp" max-width="700px" caption="reddit co-founders (right to left) Alexis Ohanian, Aaron Swartz, and Steve Huffman in 2005">}}
+{{<img src="ohanian-swartz-huffman.webp" max-width="700px" caption="reddit co-founders (left to right) Alexis Ohanian, Aaron Swartz, and Steve Huffman in 2005">}}
 
 Aaron Swartz was 19 at the time of filming. He already impacted the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and a founding contributor to [Creative Commons](https://creativecommons.org/).
 
