@@ -187,7 +187,7 @@ In 2014, Fog Creek restructured to spin out [Trello](https://en.wikipedia.org/wi
 
 {{<img src="michael-2005.webp" max-width="500px" caption="Michael Lehenbauer, software development intern on Aardvark">}}
 
-[Ben Pollack](https://www.bitquabit.com/meta/about/) worked at Fog Creek for several years. He seems to have never caught the startup bug, mainly working at larger, more established companies. He has followed in Joel's footsteps in blogging, as he writes regularly about software, technology, and his passion for functional programming, sometimes engaging in [geeky online arguments with Tyler](https://web.archive.org/web/20090523175306/http://hicks-wright.net/blog/my-language-features-are-your-libraries/).
+[Ben Pollack](https://www.bitquabit.com/meta/about/) worked at Fog Creek for several years. He seems to have ~~never caught the startup bug~~ (**Edit**: Ben [responded](https://news.ycombinator.com/item?id=37435723) to say that he has worked mainly at startups, though not as early-stage as Fog Creek), mainly working at larger, more established companies. He has followed in Joel's footsteps in blogging, as he writes regularly about software, technology, and his passion for functional programming, sometimes engaging in [geeky online arguments with Tyler](https://web.archive.org/web/20090523175306/http://hicks-wright.net/blog/my-language-features-are-your-libraries/).
 
 {{<img src="ben-2005.webp" max-width="500px" caption="Ben Pollack, software development intern on Aardvark">}}
 
@@ -214,6 +214,10 @@ When Fog Creek spun out Trello into its own company, Liz became Trello's VP of P
 She's now [Liz Hall](https://www.linkedin.com/in/elizabeth-hall-8939551b/) and is a C-suite executive at [Splash](https://splashthat.com), where I presume nobody tries to shush her on her birthday.
 
 {{<img src="liz-hall.webp" max-width="450px" has-border="true" caption="Liz Hall is now Chief People Officer at Splash.">}}
+
+**Edit**: According to [a comment from Ben Pollack](https://news.ycombinator.com/item?id=37435723) in response to this post, the sound was not actually a "shush":
+
+> this coworker right here was starting to say "shit fuck shit dammit" on camera as he discovered that a stale precompiled header was getting picked up on the build box and then realized Lerone was rolling, so you're hearing me halt myself before saying a pile of profanity on camera.
 
 ## _Make Better Software: The Training Series_
 
