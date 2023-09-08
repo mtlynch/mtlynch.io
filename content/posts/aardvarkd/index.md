@@ -20,7 +20,8 @@ That's not the interesting part.
 Looking back on this documentary 18 years later, it's striking how many interviews it captured with people who would go on to greater fame and success:
 
 - Paul Graham and Jessica Livingston, months after they co-founded Y Combinator
-- Aaron Swartz, Steve Huffman, and Alexis Ohanian, months after they launched reddit
+- Steve Huffman, and Alexis Ohanian, months after they launched reddit
+- Aaron Swartz, months before he joined reddit and years before he founded Demand Progress
 - Joel Spolsky and Michael Pryor before their mega-hits like StackOverflow and Trello
 
 _Aardvark'd_ sold about 5,000 copies on DVD, mostly to fans of Joel's blog, but it quickly faded from popular consciousness.
