@@ -38,6 +38,7 @@ IGNORE_PATTERNS+=("/opensource.org/")
 IGNORE_PATTERNS+=("/pcpartpicker.com/")
 IGNORE_PATTERNS+=("/playwright.dev/")
 IGNORE_PATTERNS+=("/servernope.com/")
+IGNORE_PATTERNS+=("/splashthat.com")
 IGNORE_PATTERNS+=("/typeform.com/")
 IGNORE_PATTERNS+=("/upwork.com/")
 IGNORE_PATTERNS+=("/vimeo.com/")
@@ -46,8 +47,7 @@ IGNORE_PATTERNS+=("/www.amd.com/")
 IGNORE_PATTERNS+=("/www.bls.gov/")
 IGNORE_PATTERNS+=("/www.digitalfaq.com/")
 IGNORE_PATTERNS+=("/www.sciencedirect.com/")
-# Temporarily ignore reddit.com URLs during 2023-06-12 blackout.
-IGNORE_PATTERNS+=("/reddit.com/")
+IGNORE_PATTERNS+=("/www.servicenow.com/")
 
 URL_IGNORE="$(join_by , "${IGNORE_PATTERNS[@]}")"
 
