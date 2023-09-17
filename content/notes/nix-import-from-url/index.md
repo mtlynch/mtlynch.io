@@ -69,9 +69,13 @@ in {
 }
 ```
 
-## Using `fetchGit`
+Once again, if I save these changes to `configuration.nix`, run `sudo nixos-rebuild switch`, and restart my shell, Nix has imported my bash aliases from the URL.
 
-To achieve that, I took the `shell.nix` file I created earlier and commit it to a public Github repo. And then I adjust my `configuration.nix` file as follows:
+## Using `fetchGit` (optional)
+
+Another option for fetching remote Nix files is to store them in a public Git repository and then use `fetchGit` to retrieve the files.
+
+Here's an example of a `configuration.nix` file that fetches my `shell.nix` from a public Github repo:
 
 ```nix
 let
@@ -90,6 +94,63 @@ The `url` is the public URL of my Github repo, and `rev` is the Git commit hash 
 
 After I make those changes to `configuration.nix`, I can re-run `sudo nixos-rebuild switch`, and Nix imports my `shell.nix` file from my Github repo.
 
+## More advanced shell configuration
+
+Most of my bash aliases are simple one-liners, but a few are more complicated. For those, I define bash functions, and then I create short bash aliases for those functions.
+
+One example is my `gcbm` bash alias. I use it like this `gcbm some-branch`, which does the following:
+
+1. Check out the main branch.
+1. Pull down the latest changes from the remote repo.
+1. Check out a new branch called `some-branch`.
+
+I implement the heavy lifting for the alias in a bash function called `git_sync_and_branch`. Here's how I implement that in my `shell.nix`:
+
+```nix
+{
+  programs.bash = {
+    shellInit = ''
+      function git_sync_and_branch {
+        local readonly TARGET_BRANCH="''$1"
+        local readonly MAIN_BRANCH='master'
+
+        git checkout "''${MAIN_BRANCH}" && \
+          git pull origin "''${MAIN_BRANCH}" && \
+          if [[ -n "''${TARGET_BRANCH}" ]]; then
+            git checkout -b "''${TARGET_BRANCH}"
+          fi
+      }
+      '';
+    shellAliases = {
+      gc = "git commit --message";
+      gcbm = "git_sync_and_branch";
+      gs = "git status";
+      td = "pushd $(mktemp -d)";
+    };
+  };
+}
+```
+
+### Gotcha: Escaping dollar signs
+
+One of the gotchas that caught me when trying to move my bash functions to Nix is that I need to escape the `$` signs. Otherwise, Nix will try to interpolate them as local variables, but they're bash variables, not Nix variables.
+
+If I'm trying to write the following line in bash:
+
+```bash
+git checkout "${MAIN_BRANCH}"
+```
+
+```text
+ error: undefined variable 'MAIN_BRANCH'
+```
+
+I need to escape the `$` by prepending it with two single quotes (`''`) like this:
+
+```bash
+git checkout "''${MAIN_BRANCH}"
+```
+
 ## Why not Home Manager?
 
 I think the more popular way to modularize your Nix configuration is with [Home Manager](https://github.com/nix-community/home-manager).
@@ -101,3 +162,5 @@ But honestly, I still don't understand the purpose of Home Manager. According to
 That confuses me because it sounds like what Nix already does.
 
 I've peeked at Home Manager a few times, but every time, it feels like I have to invest a lot to learn this new tool for gains that aren't clear to me.
+
+Maybe I'll eventually realize a benefit from managing my Nix configuration with Home Manager, but for now, I've found a fairly straightforward way to manage remote Nix files with standard Nix.
