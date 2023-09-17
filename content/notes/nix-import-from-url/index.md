@@ -11,7 +11,7 @@ I'm still a Nix beginner, and one thing I couldn't figure out until recently was
 
 I'd like for my Nix configuration files to be modular and reusable, so depending on the system or flake, I can pull in only the configuration files I need. I'd like all my Nix configuration files to be under source control so that different systems can depend on different versions of any file so I don't have to upgrade every system to the latest version of each configuration file at the same time.
 
-## Creating reusable bash aliases with local files
+## Creating reusable bash aliases with a local file
 
 One of the reusable Nix configurations I want is my bash aliases. On my existing system, I have these lines in my `.bashrc`:
 
@@ -36,9 +36,11 @@ To achieve the equivalent in bash, I can create a file on my NixOS system with t
 If I store this file under `/tmp/shell.nix`, then I can import it into my `/etc/nixos/configuration.nix` by adding the path to my `imports`:
 
 ```nix
+{
   imports = [
     "/tmp/shell.nix"
   ];
+}
 ```
 
 If I run `sudo nixos-rebuild switch` and then restart my shell, I can see that my bash aliases are now active:
@@ -53,9 +55,11 @@ $ td
 
 ## Moving the Nix file to a URL
 
-The solution above works, but it requires me to populate the file on each of my systems.
+The solution above works, but it requires me to copy the same file on each of my Nix systems.
 
-I'd rather host the file at some URL, and then I can have a standard `configuration.nix` file that references the URL.
+I'd rather host the file at a publicly accessible URL, and then I can have a standard `configuration.nix` file that references the URL.
+
+Here's how I adjust my `configuration.nix` to pull in [my `shell.nix` file]({{<baseurl>}}/notes/nix-import-from-url/shell.nix) from a remote URL:
 
 ```nix
 let
@@ -69,7 +73,7 @@ in {
 }
 ```
 
-Once again, if I save these changes to `configuration.nix`, run `sudo nixos-rebuild switch`, and restart my shell, Nix has imported my bash aliases from the URL.
+Once again, if I save these changes to `configuration.nix`, run `sudo nixos-rebuild switch`, and restart my shell, Nix imports my bash aliases from the URL.
 
 ## Using `fetchGit` (optional)
 
@@ -81,7 +85,7 @@ Here's an example of a `configuration.nix` file that fetches my `shell.nix` from
 let
   repo = builtins.fetchGit {
     url = "https://github.com/mtlynch/nix-files";
-    rev = "b92d2758b000ed0309027846daa002871abf4e1c";
+    rev = "f98500a995cb5838e40be139a8327867faaff2d5";
   };
 in {
   imports = [
@@ -135,17 +139,19 @@ I implement the heavy lifting for the alias in a bash function called `git_sync_
 
 One of the gotchas that caught me when trying to move my bash functions to Nix is that I need to escape the `$` signs. Otherwise, Nix will try to interpolate them as local variables, but they're bash variables, not Nix variables.
 
-If I'm trying to write the following line in bash:
+Here's how I originally tried to write one of the lines in my `git_sync_and_branch` bash function:
 
 ```bash
 git checkout "${MAIN_BRANCH}"
 ```
 
+Nix failed with this error:
+
 ```text
  error: undefined variable 'MAIN_BRANCH'
 ```
 
-I need to escape the `$` by prepending it with two single quotes (`''`) like this:
+I need to [escape the `$`](https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
 
 ```bash
 git checkout "''${MAIN_BRANCH}"
