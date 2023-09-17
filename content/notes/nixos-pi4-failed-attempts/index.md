@@ -1,6 +1,8 @@
 ---
 title: "Failed Attempts to Install NixOS on the Raspberry Pi 4"
 date: 2023-07-18T00:00:00-04:00
+tags:
+  - nix
 ---
 
 In creating the tutorial, ["Installing NixOS on Raspberry Pi 4,"](/nixos-pi4/) I ran into a ton of paths that didn't work.
