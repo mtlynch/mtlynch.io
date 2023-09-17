@@ -4,7 +4,6 @@ let
   hostname = "n1";
   user = "tempuser";
   password = "somepass";
-  nixosHardwareVersion = "7f1836531b126cfcf584e7d7d71bf8758bb58969";
 
   timeZone = "America/New_York";
   defaultLocale = "en_US.UTF-8";
