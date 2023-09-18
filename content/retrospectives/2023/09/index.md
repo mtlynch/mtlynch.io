@@ -106,6 +106,7 @@ Steering everyone away from writing documentation.
 
 ### What got done?
 
+- TinyPilot [removed Ansible from our install process](https://github.com/tiny-pilot/tinypilot/issues/1596), yielding a huge performance increase and reduction of complexity
 -
 
 ### Lessons learned
