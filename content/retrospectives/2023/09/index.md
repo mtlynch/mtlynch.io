@@ -130,7 +130,7 @@ Thinking about this more, maybe I should be sticking to [my 50% rule](/solo-deve
 
 - Published [TinyPilot Pro 2.6.1](https://tinypilotkvm.com/blog/whats-new-in-2023-09)
 - TinyPilot [removed Ansible from our install process](https://github.com/tiny-pilot/tinypilot/issues/1596), yielding a huge performance increase and reduction of complexity
-- Published ["_Aardvark'd_: The Fog Creek Documentary, 18 Years Later"](https://mtlynch.io/aardvarkd/)
+- Published ["_Aardvark'd_: The Fog Creek Documentary, 18 Years Later"](/aardvarkd/)
 
 ### Lessons learned
 
@@ -138,8 +138,5 @@ Thinking about this more, maybe I should be sticking to [my 50% rule](/solo-deve
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-TODO
+- Shift manufacturing to our contract manufacturer as quickly as possible
+- Delegate tasks for clearing the TinyPilot office
