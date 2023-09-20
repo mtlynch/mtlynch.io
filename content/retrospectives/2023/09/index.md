@@ -150,9 +150,9 @@ Viewing it through the three-category system, I feel like I am making dev invest
 
 ### What got done?
 
-- Published [TinyPilot Pro 2.6.1](https://tinypilotkvm.com/blog/whats-new-in-2023-09)
-- Removed [Ansible from TinyPilot's install process](https://github.com/tiny-pilot/tinypilot/issues/1596), yielding a huge performance increase and reduction of complexity
-- Published ["_Aardvark'd_: The Fog Creek Documentary, 18 Years Later"](/aardvarkd/)
+- Published [TinyPilot Pro 2.6.1](https://tinypilotkvm.com/blog/whats-new-in-2023-09).
+- Removed [Ansible from TinyPilot's install process](https://github.com/tiny-pilot/tinypilot/issues/1596), yielding a huge performance increase and reduction of complexity.
+- Published ["_Aardvark'd_: The Fog Creek Documentary, 18 Years Later"](/aardvarkd/).
 
 ### Lessons learned
 
