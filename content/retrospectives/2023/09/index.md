@@ -88,11 +88,11 @@ In the [latest TinyPilot release](https://tinypilotkvm.com/pro/changes#261), we'
 
 ## Essential vs. accidental dev work for TinyPilot
 
-In the famous essay, ["No Silver Bullet,"](https://www.cgl.ucsf.edu/Outreach/pc204/NoSilverBullet.html) Fred Brooks points out that you can divide software work into "essential" and "accidental" work.
+In his famous essay, ["No Silver Bullet,"](https://www.cgl.ucsf.edu/Outreach/pc204/NoSilverBullet.html) Fred Brooks points out that you can divide software work into "essential difficulties" and "accidental difficulties."
 
-Essential difficulties includes things like defining requirements and designing the UI. Even if you have unlimited tooling and resources, you can't create a useful application if you don't take the time to figure out what the software should do or how the user interacts with it.
+Essential difficulties include things like defining requirements and designing the UI. Even if you have unlimited tooling and resources, you can't create a useful application if you don't take the time to figure out what the software should do or how the user interacts with it.
 
-Accidental difficulties includes things that we only have to do because of the limitations of our tools. For example, managing memory in C is something we wouldn't have to care about if we had perfect tooling or unlimited RAM.
+Accidental difficulties include things that we only have to do because of the limitations of our tools. For example, managing memory in C is something we wouldn't have to care about if we had perfect tooling or unlimited RAM.
 
 I've been thinking about that essay a lot lately in terms of TinyPilot's dev work. A lot of what we're doing feels like accidental difficulties.
 
@@ -100,25 +100,35 @@ I took a look at the tasks on TinyPilot's last sprint divided them into "essenti
 
 {{<img src="essential-vs-accidental-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to essential difficulty (green) vs. accidental difficulty (red)">}}
 
-Nine tasks dealt with essential difficulty like adding or refining features, while 31 (78%) dealt with accidental difficulty like regressions, package updates, or refactoring.
+Nine tasks dealt with essential difficulty like adding or refining features, while 28 (76%) dealt with accidental difficulty like regressions, package updates, or refactoring.
 
-I don't have a good way to scale by dev hours, but I suspect we accidental difficulty tasks took longer, on average, than essential difficulty tasks. We could be spending as much as 90% of our time on accidental complexity.
+I don't have a good way to scale effort by dev hours, but I suspect our accidental difficulty tasks took longer, on average, than essential difficulty tasks. We could be spending as much as 90% of our time on accidental difficulty.
 
-## How do we reduce accidental complexity?
+## How do we reduce accidental difficulty?
 
-Thinking about this more, essential vs. accidental is too broad. I think the categories I care about are:
+As I thought about this breakdown more, I realized it doesn't quite match the way I think about TinyPilot's dev work. There are three categories I care about and roughly how much time I'd like to dedicate to each:
 
-- Improving the product
-- Automation and reducing complexity
-- Regular maintenance
+| Category                           | % of Effort |
+| ---------------------------------- | ----------- |
+| Improving the product              | 70%         |
+| Automation and reducing complexity | 20%         |
+| Regular maintenance                | 10%         |
 
-My first thought is that I'd want to spend 70% of our time improving the product, 20% of our time reducing complexity, and 10% of our time on regular maintenance.
+The problem is that these numbers are hard to balance. Every new line of code increases maintenance cost.
 
-The problem is that these numbers are hard to balance. Every new line of code costs incurs some maintenance cost.
-
-Ideally, the 20% investments in reducing complexity offsets the increase in maintenance costs, but that's not always possible. Last year we added support for H.264 video, but we had to integrate Janus, a third-party WebRTC server. WebRTC is extremely complicated, so that single feature increased our maintenance burden by 20-30% overnight.
+Granted, the 20% investment in complexity should reduce maintenance costs, but it won't always offset the load from new features. Last year we added support for H.264 video, but we had to integrate [Janus](https://janus.conf.meetecho.com/), a third-party WebRTC server. WebRTC is extremely complicated, so that single feature increased our maintenance burden by 20-30% overnight.
 
 Thinking about this more, maybe I should be sticking to [my 50% rule](/solo-developer-year-5/#run-at-50-capacity). We should spend 50% of our time improving the product, then spend time on necessary maintenance, and spend whatever's left over on automation and reducing complexity.
+
+{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to improving the product (green), automation and redcing complexity (blue), and regular maintenance (red)">}}
+
+Revisiting the last release through that lens, we had:
+
+| Category                           | # of tasks | % of tasks |
+| ---------------------------------- | ---------- | ---------- |
+| Improving the product              | 8          | 22%        |
+| Automation and reducing complexity | 26         | 70%        |
+| Regular maintenance                | 3          | 8%         |
 
 ## Side projects
 
