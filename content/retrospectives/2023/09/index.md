@@ -32,7 +32,7 @@ I prioritized giving quick, complete responses to the contract manufacturer anyt
 
 I realized too late that I should have also been managing the project more proactively. The manufacturer has a project manager, so I assumed they were on top of things, but ultimately, I'm the one who has the most to lose if they run late.
 
-When they'd ask for feedback about things like the box design or the instruction manual, I'd give feedback but then I'd forget about it until they followed up. I didn't realize until they were due to ship the final sample that I'd never seen a final draft of the box or instruction manual since giving feedback. The designs turned out to need more revisions, which delayed things unnecessarily, as we could have been working on that while we were waiting for other blocking tasks to complete.
+When they'd ask for feedback about things like the box design or the instruction manual, I'd give feedback and then forget about it until they followed up. I didn't realize until they were due to ship the final sample that I'd never seen a final draft of the box or instruction manual since giving feedback. The designs turned out to need more revisions, which delayed things unnecessarily, as we could have been working on that while we were waiting for other blocking tasks to complete.
 
 ### Create a detailed plan for moving out of TinyPilot's local office
 
@@ -71,16 +71,16 @@ Shopify has no native support for recurring subscriptions, so I had to search th
 
 Most of the Shopify subscription apps didn't support digital products. The few that did would only work on a native Shopify store, which I [don't have](/tinypilot-redesign/#why-didnt-you-just-use-a-shopify-template).
 
-Sidenote: I _hate_ shopping for Shopify add-ons. Very few of them offer open demos, so the only way to see what they do is by actually installing them into your store and giving them full access to all of your products and customer data. I'm not willing to do this, so I used my dummy store with no actual customer data, but a lot of the functionality doesn't work without a fully-populated store. And then, because the add-on has my real Shopify email address, I now get a ton of spam from apps I installed to a dummy store for an hour and then deleted.
+Sidenote: I _hate_ shopping for Shopify add-ons. Very few of them offer open demos, so the only way to see what they do is by actually installing them into your store and giving them full access to all of your products and customer data. I'm not willing to do this, so I used my dummy store with no actual customer data, but a lot of the functionality doesn't work without a fully populated store. And then, because the add-on has my real Shopify email address, I now get a ton of spam from apps I installed to a dummy store for an hour and then deleted.
 
 My options at this point are:
 
 1. Sell renewing subscriptions outside of Shopify entirely (e.g., with Paddle, LemonSqueezy, Stripe).
 1. Convert TinyPilot's purchase flow to a native Shopify store and then revisit Shopify's third-party subscription apps.
 
-(1) requires the dev team to build a lot of infrastructure to support an off-Shopify checkout and to make sure our support teams still can access customer information outside of Shopify.
+(1) requires the dev team to build a lot of infrastructure to support an off-Shopify checkout and to make sure our support teams can still access customer information outside of Shopify.
 
-(2) keeps everything consolidated in Shopify, but it's also a major project. The last time I asked someone for an estimate, they quoted me $20k for the conversion. It's something I'd like to do eventually because a native Shopify store would have lots of other benefits, but I don't have bandwidth to take it on right now.
+(2) keeps everything consolidated in Shopify, but it's also a major project. The last time I asked someone for an estimate, they quoted me $20k for the conversion. It's something I'd like to do eventually because a native Shopify store would have lots of other benefits, but I don't have the bandwidth to take it on right now.
 
 ## Making TinyPilot less configurable
 
@@ -108,7 +108,7 @@ Accidental difficulties include things that we only have to do because of the li
 
 I've been thinking about that essay a lot lately in terms of TinyPilot's dev work. A lot of what we're doing feels like accidental difficulties.
 
-I took a look at the tasks on TinyPilot's last sprint divided them into "essential difficulties" (green) and "accidental difficulties" (red):
+I divided the tasks from TinyPilot's last sprint into "essential difficulties" (green) and "accidental difficulties" (red):
 
 {{<img src="essential-vs-accidental-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to essential difficulty (green) vs. accidental difficulty (red)">}}
 
@@ -126,7 +126,7 @@ As I thought about this breakdown more, I realized it doesn't quite match the wa
 | Automation and reducing complexity | 20%               |
 | Regular maintenance                | 10%               |
 
-The problem is that these numbers are hard to balance. Every new line of code increases maintenance cost. A 50,000-line codebase is going to require at least an order of magnitude more maintenance than a 3,000 line codebase.
+The problem is that these numbers are hard to balance. Every new line of code increases maintenance cost. A 50,000-line codebase is going to require at least an order of magnitude more maintenance than a 3,000-line codebase.
 
 Granted, the 20% investment in complexity should reduce maintenance costs, but it won't always offset the load from new features. Last year we added support for H.264 video, but we had to integrate [Janus](https://janus.conf.meetecho.com/), a third-party WebRTC server. WebRTC is extremely complicated, so that single feature increased our maintenance burden by 20-30% overnight.
 
@@ -140,7 +140,7 @@ Revisiting the last release through that lens, we had:
 | Automation and reducing complexity | 26         | 70%        |
 | Regular maintenance                | 3          | 8%         |
 
-{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to improving the product (green), automation and redcing complexity (blue), and regular maintenance (red)">}}
+{{<img src="three-category-2.6.1.webp" max-width="350px" has-border="true" caption="The tasks in TinyPilot's 2.6.1, colored according to improving the product (green), automation and reducing complexity (blue), and regular maintenance (red)">}}
 
 We were skewed toward automation because we made a big push to eliminate Ansible, but we were closer to my ideal split than I realized.
 
