@@ -3,7 +3,7 @@ title: "TinyPilot: Month 38"
 date: 2023-09-21T00:00:00-04:00
 description: Am I making the right investments in software?
 images:
-  - /retrospectives/2023/09/og-cover.png
+  - /retrospectives/2023/09/og-cover.webp
 ---
 
 {{<notice type="info">}}
