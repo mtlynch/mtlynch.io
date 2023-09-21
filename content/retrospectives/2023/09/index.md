@@ -17,7 +17,7 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 ## Highlights
 
-- I failed to find a way to sell recurring license subscriptions.
+- I failed to sell recurring TinyPilot license subscriptions.
 - I realized I made TinyPilot way too configurable.
 - I thought I'd been investing poorly into TinyPilot's development, but writing this retrospective made me realize I'm mostly on track.
 
@@ -28,20 +28,20 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 ### Shift manufacturing to our contract manufacturer as quickly as possible
 
 - **Result**: I got the manufacturer unblocked quickly but missed opportunities to speed things up.
-- **Grade**: B
+- **Grade**: B-
 
-I prioritized giving quick, complete responses to the contract manufacturer anytime they were blocked on feedback from me, and I felt I did well in that regard.
+I prioritized giving quick, complete responses to the contract manufacturer anytime they were blocked on feedback from me, and I feel I did well in that regard.
 
 I realized too late that I should have also been managing the project more proactively. The manufacturer has a project manager, so I assumed they were on top of things, but ultimately, I'm the one who has the most to lose if they run late.
 
-When they'd ask for feedback about things like the box design or the instruction manual, I'd give feedback and then forget about it until they followed up. I didn't realize until they were due to ship the final sample that I'd never seen a final draft of the box or instruction manual since giving feedback. The designs turned out to need more revisions, which delayed things unnecessarily, as we could have been working on that while we were waiting for other blocking tasks to complete.
+When they'd ask for feedback about things like the box design or the instruction manual, I'd respond promptly and then forget about it until they followed up. I didn't realize until they were due to ship the final sample that I'd never seen a final draft of the box or instruction manual since giving feedback. The designs turned out to need more revisions, which delayed things unnecessarily.
 
 ### Create a detailed plan for moving out of TinyPilot's local office
 
 - **Result**: We now have a month-by-month moveout plan with target dates and milestones.
 - **Grade**: A
 
-We have a plan, and everyone seems to be on the same page regarding the schedule.
+We have a plan, and everyone's on the same page regarding the schedule.
 
 There's still a chicken-and-egg problem with some of the equipment I want to sell. Like if we sell the printer, how do we print shipping labels to sell anything else? But worse comes to worst, I just store the leftovers at my house and sell from here.
 
@@ -65,15 +65,15 @@ I hoped to find a Shopify app that allowed me to sell [recurring subscriptions f
 | Total Revenue            | $83,703.24     | $94,930.78     | <font color="green">+$11,227.54 (+13%)</font>   |
 | **Profit**               | **$26,359.62** | **$28,454.42** | **<font color="green">+$2,094.80 (+8%)</font>** |
 
+Things continue to be about steady in terms of revenue and profit. Revenue is up slightly over July, but I think that's primarily due to our Amazon listings being downranked for most of July.
+
 ## My failed attempts at recurring subscriptions
 
 Last month, I tried to figure out ways to evaluate whether it was worth [enforcing TinyPilot's license restrictions more strictly](/retrospectives/2023/08/#how-can-i-test-customers-willingness-to-renew-their-licenses). I decided that the best bang-for-buck solution was to [offer an auto-renewal option](/retrospectives/2023/08/#add-an-auto-renew-option) for purchasing licenses.
 
-Shopify has no native support for recurring subscriptions, so I had to search through the 50+ third-party Shopify apps that add this functionality. The problem is that almost all of them are designed for subscription box services where the customer wants to receive physical goods on a recurring basis.
+Shopify has no native support for recurring subscriptions, so I had to search through the 50+ third-party Shopify apps that add this functionality. The problem is that almost all of them are designed for physical goods. The few that support digital products only work on a native Shopify store, which I [don't have](/tinypilot-redesign/#why-didnt-you-just-use-a-shopify-template).
 
-Most of the Shopify subscription apps didn't support digital products. The few that did would only work on a native Shopify store, which I [don't have](/tinypilot-redesign/#why-didnt-you-just-use-a-shopify-template).
-
-Sidenote: I _hate_ shopping for Shopify add-ons. Very few of them offer open demos, so the only way to see what they do is by actually installing them into your store and giving them full access to all of your products and customer data. I'm not willing to do this, so I used my dummy store with no actual customer data, but a lot of the functionality doesn't work without a fully populated store. And then, because the add-on has my real Shopify email address, I now get a ton of spam from apps I installed to a dummy store for an hour and then deleted.
+Sidenote: Shopping for Shopify add-ons is _the worst_. Very few of them offer open demos, so the only way to see what they do is by actually installing them into your store and giving them full access to all of your products and customer data. I'm not willing to do this, so I used my dummy store with no actual customer data, but a lot of the functionality doesn't work without a fully populated store. And then, because the add-on has my real Shopify email address, I now get a ton of spam from apps I installed to a dummy store for an hour and then deleted.
 
 My options at this point are:
 
@@ -86,25 +86,25 @@ My options at this point are:
 
 ## Making TinyPilot less configurable
 
-One of the biggest sources of technical debt for TinyPilot is [our use of Ansible](/solo-developer-year-5/#ansible-and-git-are-not-software-distribution-tools). When I created TinyPilot, I didn't know how to distribute software on Linux systems. I knew how to use Ansible, so TinyPilot's installer was a minimal shell script that started Ansible and then used Ansible to do the heavy lifting of the installation.
+One of the biggest sources of technical debt for TinyPilot is [our use of Ansible](/solo-developer-year-5/#ansible-and-git-are-not-software-distribution-tools). When I created TinyPilot, I didn't know how to distribute software on Linux. I knew how to use Ansible, so TinyPilot's installer was a minimal shell script that started Ansible and then used Ansible to do the heavy lifting of the installation.
 
-Over time, it became clearer that Ansible was the wrong tool for the job, but the more subtle mistake I overlooked was that I'd made the installer too _configurable_.
+Over time, it became clear that Ansible was the wrong tool for the job. The more subtle mistake was that I'd made the installer too _configurable_.
 
 When you're publishing Ansible roles, it's good practice to abstract away differences between operating systems and hardware architectures. For example, to copy a set of files to a directory, you don't just say, "Install everything to `/opt/whatever`." You say, "Install everything to `{{ my_target_dir }}`," and then in your `defaults.yml` file, you'd define `my_target_dir: /opt/whatever`. That way, if FreeBSD systems wanted you to install to a different location, you could override `my_target_dir` only on FreeBSD systems to point to something like `/usr/local/whatever`.
 
-But TinyPilot supports just one OS and one hardware platform: Raspberry Pi OS on the Raspberry Pi 4.
+But TinyPilot supports just one OS and one hardware platform: Debian on the Raspberry Pi 4.
 
 Out of habit, I'd abstracted away paths, names, and values into separate files, but it made our code much harder to reason about. To understand how Ansible would populate the variables in a real install, you often had to jump between three or more files.
 
-Granted, there were users who appreciated this flexibility so that they could use TinyPilot [on systems that we don't officially support](https://github.com/tiny-pilot/tinypilot/discussions/755). Almost none of these users were paying customers, so we were paying a significant cost to support flexibility when it wasn't serving the customers who fund TinyPilot's development.
+Granted, there were users who appreciated this flexibility so that they could use TinyPilot [on systems that we don't officially support](https://github.com/tiny-pilot/tinypilot/discussions/755). Almost none of these users were paying customers, so we were incurring a significant cost to support flexibility when it wasn't serving the customers who fund TinyPilot's development.
 
 In the [latest TinyPilot release](https://tinypilotkvm.com/pro/changes#261), we got rid of Ansible, but we also eliminated most configuration options outside of the web UI. There have been no reports of upgrade issues, which strongly suggests that none of our customers needed this configurability at all.
 
 ## Essential vs. accidental dev work for TinyPilot
 
-In his famous essay, ["No Silver Bullet,"](https://www.cgl.ucsf.edu/Outreach/pc204/NoSilverBullet.html) Fred Brooks points out that you can divide software work into "essential difficulties" and "accidental difficulties."
+In his famous essay, ["No Silver Bullet,"](https://www.cgl.ucsf.edu/Outreach/pc204/NoSilverBullet.html) Fred Brooks divides software work into "essential difficulties" and "accidental difficulties."
 
-Essential difficulties include things like defining requirements and designing the UI. Even if you have perfect tooling and limitless resources, you can't create a useful application if you don't take the time to figure out what the software does or how the user interacts with it.
+Essential difficulties include things like defining requirements and designing the UI. Even if you have perfect tooling and limitless resources, you can't create a useful application if you don't figure out what the software does or how the user interacts with it.
 
 Accidental difficulties include things that we only have to do because of the limitations of our tools. For example, managing memory in C is something we wouldn't care about if we had automatic reference tracking or unlimited RAM.
 
@@ -130,7 +130,7 @@ As I thought about this breakdown more, I realized it doesn't quite match the wa
 
 The problem is that these numbers are hard to balance. Every new line of code increases maintenance cost. A 50,000-line codebase is going to require at least an order of magnitude more maintenance than a 3,000-line codebase.
 
-Granted, the 20% investment in complexity should reduce maintenance costs, but it won't always offset the load from new features. Last year we added support for H.264 video, but we had to integrate [Janus](https://janus.conf.meetecho.com/), a third-party WebRTC server. WebRTC is extremely complicated, so that single feature increased our maintenance burden by 20-30% overnight.
+Granted, the 20% investment in eliminating complexity should reduce maintenance costs, but it won't always offset the load from new features. Last year we added support for H.264 video, but we had to integrate [Janus](https://janus.conf.meetecho.com/), a third-party WebRTC server. WebRTC is extremely complicated, so that single feature increased our maintenance burden by 20-30% overnight.
 
 Thinking about this more, maybe this is a good opportunity for [my 50% rule](/solo-developer-year-5/#run-at-50-capacity). We should spend 50% of our time improving the product, then perform necessary maintenance, then spend whatever's left over on automation and reducing complexity.
 
@@ -146,7 +146,7 @@ Revisiting the last release through that lens, we had:
 
 We were skewed toward automation because we made a big push to eliminate Ansible, but we were closer to my ideal split than I realized.
 
-Viewing it through the three-category system, I feel like I am making dev investments in the right areas, as we can't infinitely expand features while keeping team size the same.
+Viewing it through the three-category system, I feel like I am making dev investments in the right areas, as we can't infinitely expand features while keeping team size constant.
 
 ## Wrap up
 
@@ -162,7 +162,7 @@ Viewing it through the three-category system, I feel like I am making dev invest
   - As a software project matures, you either have to add developers to handle the extra maintenance or shift focus more toward simplicity.
 - Configurability creates subtle maintenance costs.
   - Every configuration option in a project makes behavior harder to understand and increases the cost of changes. Limit configurability to options that really need it.
-- Don't assume a project manager is managing a project.
+- Don't assume a project manager is managing a project optimally.
   - I stopped thinking about project management for the shift to the contract manufacturer because they had their own project manager. In retrospect, I should have stayed on top of outstanding tasks more aggressively.
 
 ### Goals for next month
