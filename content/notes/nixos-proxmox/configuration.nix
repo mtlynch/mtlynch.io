@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  hostname = "n1";
+  hostname = "n3";
   user = "tempuser";
   password = "somepass";
 
@@ -42,9 +42,6 @@ in {
       isNormalUser = true;
       password = password;
       extraGroups = [ "wheel" ];
-      openssh.authorizedKeys.keyFiles = [
-        /etc/nixos/ssh/authorized_keys
-      ];
     };
   };
 
@@ -59,7 +56,8 @@ in {
     }
   ];
 
-  # Supress systemd units that don't work because of LXC
+  # Supress systemd units that don't work because of LXC.
+  # https://blog.xirion.net/posts/nixos-proxmox-lxc/#configurationnix-tweak
   systemd.suppressedSystemUnits = [
     "dev-mqueue.mount"
     "sys-kernel-debug.mount"
