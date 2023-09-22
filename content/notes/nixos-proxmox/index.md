@@ -1,6 +1,6 @@
 ---
-title: "Nixos Proxmox"
-date: 2023-09-16T15:59:30-04:00
+title: "Running NixOS on Proxmox"
+date: 2023-09-21T15:59:30-04:00
 ---
 
 - https://nixos.wiki/wiki/Proxmox_Linux_Container (not so good)
