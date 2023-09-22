@@ -28,7 +28,7 @@ in {
 
   services.openssh.enable = true;
 
-  time.timeZone = "America/New_York";
+  time.timeZone = timeZone;
 
   i18n = {
     defaultLocale = defaultLocale;
