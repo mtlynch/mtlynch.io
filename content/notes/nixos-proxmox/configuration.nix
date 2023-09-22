@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  hostname = "n3";
+  hostname = "nixos1";
   user = "tempuser";
   password = "somepass";
 
