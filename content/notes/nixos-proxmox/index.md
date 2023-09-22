@@ -84,7 +84,9 @@ unknown ID 'nixos' in /etc/os-release file, trying fallback detection
 
 ## Enable nesting
 
-For NixOS to work properly under Proxmox, you need to enable the "Nesting" feature of the container. Navigate to the NixOS container you just created, then click the Options tab, and click "Features."
+For NixOS to work properly under Proxmox, you need to enable the "Nesting" feature of the container.
+
+Navigate to the NixOS container you just created, then click the Options tab, and click "Features."
 
 {{<img src="click-features.webp" has-border="true">}}
 
@@ -100,9 +102,11 @@ You can start your container normally. At the Console, you should see a standard
 
 {{<img src="nixos-prompt.webp" has-border="true">}}
 
-## Configure system
+As the prompt says, you can log in with username `root` and no password.
 
-I've created a basic configuration for a NixOS server system as a Proxmox container. You can apply this configuration by running the following command:
+## Configure NixOS system
+
+I've created a basic configuration for a NixOS server system as a Proxmox container. You can download this configuration by running the following command:
 
 ```bash
 curl \
@@ -112,7 +116,7 @@ curl \
   | sudo tee /etc/nixos/configuration.nix
 ```
 
-Then, apply the new configuration by running the following commands:
+Apply the new configuration by running the following commands:
 
 ```bash
 sudo nixos-rebuild boot && \
