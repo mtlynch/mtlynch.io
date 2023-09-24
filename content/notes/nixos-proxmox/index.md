@@ -1,6 +1,6 @@
 ---
 title: "Running NixOS on Proxmox"
-date: 2023-09-22T00:00:00-04:00
+date: 2023-09-24T00:00:00-04:00
 tags:
   - nix
 ---
@@ -11,39 +11,39 @@ Through some trial and error, I figured out how to install NixOS as a Proxmox co
 
 ## Download the NixOS container image
 
-First, download the latest [NixOS container image](https://hydra.nixos.org/job/nixos/trunk-combined/nixos.lxdContainerImage.x86_64-linux) (for other hardware architectures, see [this Github comment](https://github.com/NixOS/nixpkgs/issues/43781#issuecomment-1707132209)).
+First, download the latest [NixOS x86_x64 container image](https://hydra.nixos.org/job/nixos/trunk-combined/nixos.lxdContainerImage.x86_64-linux). For other hardware architectures, see [this Github comment](https://github.com/NixOS/nixpkgs/issues/43781#issuecomment-1707132209).
 
-At the time of this writing, the latest is build [235933548](https://hydra.nixos.org/build/235933548).
+At the time of this writing, the latest NixOS container build is [235933548](https://hydra.nixos.org/build/235933548), but you can just click whatever is the latest build as you read this.
 
-{{<img src="download-build.webp" has-border="true" max-width="800px">}}
+{{<img src="download-build.webp" alt="Screenshot of latest builds page, showing a NixOS container image build each day." has-border="true" max-width="800px">}}
 
 From the build result page, click the link labeled `nixos-system-x86_64-linux.tar.xz` to download the image:
 
-{{<img src="build-result.webp" has-border="true" max-width="700px">}}
+{{<img src="build-result.webp" alt="Screenshot of metadata page for a NixOS build from 2023-09-21" has-border="true" max-width="700px">}}
 
 ## Rename the NixOS container image (optional)
 
-For some reason, the NixOS container image download doesn't include any version or date information. I renamed my image file to:
+The NixOS container image download doesn't include any version or date information. For organization, I renamed my image file to:
 
 - `nixos-2023-09-21-lxdContainerImage.x86_64-linux.tar.xz`
 
-The benefit of renaming the file is that it will help you identify which version of NixOS this is when you see it later in Proxmox.
+Renaming will help you identify which version of NixOS this is when you see it later in Proxmox, though this step is optional.
 
 ## Upload the image to Proxmox
 
-Now it's time to upload the image to Proxmox. Scroll down to one of your Proxmox storage nodes.
+Now, it's time to upload the image to Proxmox. Scroll down to one of your Proxmox storage nodes.
 
 Click the storage node you'd like to use. The default is called `local`, but you may have others.
 
-{{<img src="click-local.webp" has-border="true">}}
+{{<img src="click-local.webp" alt="Screenshot of local storage node menu item in the Server View of Proxmox" has-border="true">}}
 
 From the storage node, click "CT Templates," and then click "Upload."
 
-{{<img src="ct-templates.webp" has-border="true">}}
+{{<img src="ct-templates.webp" alt="Screenshot of settings pages for storage node, showing the CT Templates tab is selected and an arrow pointing to the Upload button" has-border="true">}}
 
-In the upload dialog, click "Select File..." and select the NixOS container image you downloaded above, and click "Upload."
+In the upload dialog, click "Select File..." and select the NixOS container image you downloaded [above](#download-the-nixos-container-image), and click "Upload."
 
-{{<img src="upload-template.webp" has-border="true">}}
+{{<img src="upload-template.webp" alt="Screenshot of template upload dialog with content set to 'Container template'" has-border="true">}}
 
 ## Create a NixOS container
 
@@ -51,25 +51,25 @@ Now that your Proxmox server has the NixOS image available, you can create your 
 
 Scroll up to your Proxmox node, right click it, and select "Create CT":
 
-{{<img src="create-ct.webp" has-border="true">}}
+{{<img src="create-ct.webp" alt="Screenshot of Proxmox context menu for pve node with an arrow pointing to 'Create CT' menu option" has-border="true">}}
 
 In the "Hostname" field, select any hostname you'd like, such as `nixos1`.
 
-{{<img src="nixos-hostname.webp" has-border="true">}}
+{{<img src="nixos-hostname.webp" alt="Screenshot of first page of Create LXC Container wizard. Hostname is set to nixos1, Node is set to pve. CT ID is set to 151. Other fields are not populated."  has-border="true">}}
 
-The password fields are required, but they have no effect in NixOS, so you can put in any value you want.
+The Proxmox dialog requires you to fill out the password fields, but they have no effect in NixOS. Put in any value you want.
 
 Ignore the SSH public key field, as it has no effect within NixOS.
 
 On the Template tab, choose the NixOS image you uploaded above:
 
-{{<img src="choose-template.webp" has-border="true">}}
+{{<img src="choose-template.webp" alt="Screenshot of Template tab of Create LXC Container wizard showing that nixos-2023-09-21-lxdContainerImage.x86_64-linux.tar.xz is the template being selected" has-border="true">}}
 
 Proceed through the container creation wizard normally, choosing your preferred values for disk, CPU, memory, and network.
 
 On the last page, leave "Start after created" unchecked and click "Finish."
 
-{{<img src="dont-start.webp" has-border="true">}}
+{{<img src="dont-start.webp" alt="Screenshot of summary screen of Create LXC Container wizard showing that 'Start after created' is unchecked" has-border="true">}}
 
 The output will contain these warnings, which are safe to ignore:
 
@@ -88,11 +88,11 @@ For NixOS to work properly under Proxmox, you need to enable the "Nesting" featu
 
 Navigate to the NixOS container you just created, then click the Options tab, and click "Features."
 
-{{<img src="click-features.webp" has-border="true">}}
+{{<img src="click-features.webp" alt="Screenshot of settings tab for new Proxmox container. The Options tab is selected and there's an arrow pointing to the 'Features' row" has-border="true">}}
 
 Click the box next to "Nesting" and then hit "OK."
 
-{{<img src="enable-nesting.webp" has-border="true">}}
+{{<img src="enable-nesting.webp" alt="Screenshot of the Proxmox Edit Features dialog showing that Nesting is now checked" has-border="true">}}
 
 ## Start NixOS
 
@@ -100,7 +100,7 @@ Your NixOS container is now configured!
 
 You can start your container normally. At the Console, you should see a standard NixOS prompt:
 
-{{<img src="nixos-prompt.webp" has-border="true">}}
+{{<img src="nixos-prompt.webp" alt="Screenshot of nixos default login prompt in a Proxmox container on the Console tab" has-border="true">}}
 
 As the prompt says, you can log in with username `root` and no password.
 
