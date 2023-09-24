@@ -126,5 +126,5 @@ sudo nixos-rebuild boot && \
 
 ## References
 
-- https://nixos.wiki/wiki/Proxmox_Linux_Container
-- https://blog.xirion.net/posts/nixos-proxmox-lxc/
+- <https://nixos.wiki/wiki/Proxmox_Linux_Container>
+- <https://blog.xirion.net/posts/nixos-proxmox-lxc/>
