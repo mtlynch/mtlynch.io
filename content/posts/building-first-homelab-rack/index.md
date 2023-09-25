@@ -1,9 +1,27 @@
 ---
 title: "Building My First Homelab Server Rack"
 date: 2023-10-12T09:20:48-04:00
+tags:
+  - homelab
 ---
 
 TODO: Table of contents
+
+Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). I often had several programming projects running at once, and I was tired of
+
+Over the years, I've gotten more into the homelab scene and added custom NAS, firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
+
+My wife has expressed frustration at how we never clean certain parts of my office because of all the wires. I felt like, "It's not that many wires." And then I really looked and realized, it's kind of a lot of wires.
+
+TODO: Photo of wires
+
+## I'm not a server rack guy
+
+I had never considered buying a rack. I didn't think I was that seriously into homelab. I had some components, but there was just a VM server here, a data server there. A few switches scattered around.
+
+People with server racks just felt way more intense than I was. They were building 50 TB backup servers, and I was just a mild homelab person.
+
+But then I realized that if I bought a rack, it would consolidate a lot of the equipment I had around my office into one space. My wife was also happy about the idea of almost all the wires living in one self-contained unit.
 
 ## Why build a server rack at home?
 
@@ -23,20 +41,29 @@ This is not affiliate spam. Some are honest, but all of them are inherently bias
 
 ### Rack
 
+Obviously, if you're going to buy a server rack, one of the important decisions is which rack to buy. So, that seems like the first thing you'd decide, but it's not that simple.
+
+Choosing a rack is an iterative process. First, you need to understand what the options are, then you need to figure out what you'd like to put in the rack now and in the future, then you need to buy.
+
 The rack was the first thing I decided, but it was also iterative.
 
 There's a bit of a circular dependency. You don't know what kind of rack to buy until you know what components it needs to house, but you'll make different decisions about
 
 #### Considerations
 
-- How tall does it need to be?
-- Does it need wheels?
-- Does it need four posts or would two suffice?
+- How many units does it need to support?
 - How deep does it need to be?
+- How much space can I afford to give up?
+- Does it need wheels?
+- Does it need four posts or two?
+
+#### Candidates
+
+I have a StarTech rack at my office. It's nothing exciting, but it does what it's supposed to do. It was striaghtforward to assemble, it feels sturdy, and the wheels make it easy to move around. StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
+
+- **StarTech XX 18U rack**
 
 #### My choice: StarTech XX 18U rack
-
-I have a StarTech rack at my office, and I haven't had any issues with it.
 
 No labels on parts of startech rack
 Comes with screwdriver and wrenches
@@ -46,13 +73,23 @@ Smallest setting blocks screws for casters
 
 ### Network switch
 
-The next big decision
+The hardest choice for me in building my server rack was picking a network switch. Network switches get fairly pricey, so I didn't want to spend $300 on something only to have to supplement it with another component or replace it later on. And rack space is precious, so I don't want to buy a switch and then have to buy another one in a year or two and totally rearrange my rack.
 
 #### Considerations
 
 - What speed do you want?
 - Managed or unmanaged?
 - How many ports do you need?
+
+For as long as I can remember, I've just had 1 Gbps Ethernet speed, and that's been fine. I do most of my work online, so the bottleneck is almost always my ISP rather than my home network.
+
+But lately, I've been pushing the limits on my home storage server, and I've thought it would be nice to bump up the speeds.
+
+The next steps up are either 2.5 Gbps or 10 Gbps. Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
+
+But the more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to make the switch to 10 Gbps, but you'll have fewer headaches later. So, I thought, fine! I'll do 10 Gbps.
+
+I did run into headaches, but I'll cover that more below (TOOD: link)
 
 The more I read, the more I found people saying that 2.5 Gbps was flaky, and you might as well just go straight to 10 Gbps.
 
@@ -63,7 +100,7 @@ The more I read, the more I found people saying that 2.5 Gbps was flaky, and you
 TP-Link won't let you change the admin user from "admin"
 Pretty confusing interface.
 
-Took forever to get VLANs right. (TODO: Link to VLAN notes)
+Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). (TODO: Link to VLAN notes)
 
 ### UPS (battery backup)
 
@@ -100,19 +137,51 @@ Star-Tech shelf extends over into next level.
 
 ### Patch panel
 
+#### What the heck is a patch panel?
+
+My first question was, "What the hell is a patch panel?"
+
+In homelab and IT forums, I constantly see pictures of people posting beautifully organized cables. And I thought one day, I'd understand what leads to that.
+
+And then I looked into patch panels and I was even more confused. It's just a row of empty spaces? Huh? What's the point of that?
+
+From continued reading, it seems like the point of patch panels is just to keep things tidy. If you just allowed every node in your server rack to connect its network cable to the networking switch, then it would be a mess of wires from all different directions. The patch panel hides this mayhem in the back of your rack, and then the front side looks neat and tidy. And then you label everything.
+
 ### Cage nuts
 
+You need cage nuts to secure rack components to your rack. Most rack-mountable components come with their own cage nuts, but enough don't that you'll need some extras.
+
+Fortunately, they're small and cheap.
+
 ### Cable ties
+
+Cable ties are optional, but if you want to keep everything clean, you either need to cut your own cables or wrap up the excess with cable ties. You can also join groups of wires together with cable ties.
+
+I've tried two styles of cable ties: velcro and rubber.
+
+The velcro ones are secure, but they're a bit too secure. They take me about 5 seconds to attach or detach, whereas the rubber ones I can detach almost instantly, and I can attach them in a second or two.
+
+### Ethernet cables
+
+If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables.
+
+I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
+
+Some people are creative and buy different colors to represent different functionality. I'm boring and just stuck with blue and black Ethernet cables because they look standard and proper to me.
 
 ## Network bandwidth: 1G, 2.5G, or 10G?
 
 Michael Stapelberg uses Mellanox
 
-## Planning layout
+## How do I arrange components in a rack?
 
-I tried to find
+Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance.
+
+I just used a Google Sheets document and color coded it.
 
 ### Heavier components go on the bottom
+
+The one piece of guidance around server rack layouts that everyone seemed to agree on is that heavier components should go on the bottom.
 
 The rack has a lot of expensive equipment. You don't want it to fall over and damage things or injure someone.
 
@@ -161,6 +230,14 @@ Fiber keys don't stay in place well
 Patch cables
 
 ### Mixing SFP+ multimode with single mode
+
+### Test the UPS before mounting it
+
+The UPS was, by far, the hardest component to mount in the rack. I don't understand how people do it. It's a XX lb device, and you need at least one hand holding it in place and one hand securing the screws. I eventually decided it was a two-person job and called my wife in for reinforcement.
+
+But you don't want to go through all that work and find out, like I did, that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
+
+So before you mount your UPS, remember to test it for functionality and noise before you go to the trouble of mounting it.
 
 ### 10G
 
@@ -225,6 +302,4 @@ Overheating?
 ## Lessons learned
 
 - Check return policy on Newegg: I'd never seen anything on Newegg before that was replacement-only, so I took it for granted that I'd be able to return it if I didn't like it.
-- Test UPS before mounting it.
 - Look for notes about noise on all parts.
-- Get lots of 6", 12", and 3' Ethernet cables 5:2:1.
