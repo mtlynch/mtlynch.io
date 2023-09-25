@@ -14,7 +14,7 @@ jobs:
           command: ./dev-scripts/check-trailing-newline
   check_html_format:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:18.14.1
     steps:
       - checkout
       - run:
@@ -22,7 +22,7 @@ jobs:
           command: npm install
       - run:
           name: Check formatting
-          command: npm run check-format
+          command: ./dev-scripts/check-formatting
   lint-markdown:
     docker:
       - image: davidanson/markdownlint-cli2:v0.5.0
@@ -33,7 +33,7 @@ jobs:
           command: ./dev-scripts/lint-markdown
   build:
     docker:
-      - image: peaceiris/hugo:v0.109.0
+      - image: peaceiris/hugo:v0.117.0
     steps:
       - checkout
       - attach_workspace:
@@ -75,7 +75,7 @@ jobs:
           command: ./dev-scripts/check-seo-metadata
   publish_draft:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:18.14.1
     resource_class: small
     steps:
       - attach_workspace:
@@ -93,7 +93,7 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
   deploy:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:18.14.1
     resource_class: small
     steps:
       - attach_workspace:

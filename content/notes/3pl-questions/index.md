@@ -38,9 +38,10 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 
 ## Shipping
 
-- Which shipping couriers do you support for domestic orders?
-- Which shipping couriers do you support for international orders?
+- Which shipping couriers and services do you support for domestic orders?
+- Which shipping couriers and services do you support for international orders?
   - Can you ship international orders [delivered duty paid (DDP)](https://www.investopedia.com/terms/d/delivery-duty-paid.asp)?
+- What's the cutoff for same-day shipping?
 
 ## Payment
 
