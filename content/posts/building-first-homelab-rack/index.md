@@ -1,6 +1,6 @@
 ---
 title: "Building My First Homelab Server Rack"
-date: 2023-06-16T09:20:48-04:00
+date: 2023-10-12T09:20:48-04:00
 ---
 
 TODO: Table of contents
@@ -23,13 +23,15 @@ This is not affiliate spam. Some are honest, but all of them are inherently bias
 
 ### Rack
 
-The rack was the first thing I decided, but it was also iterative. There's a bit of a circular dependency. You don't know what kind of rack to buy until you know what components it needs to house, but you'll make different decisions about
+The rack was the first thing I decided, but it was also iterative.
+
+There's a bit of a circular dependency. You don't know what kind of rack to buy until you know what components it needs to house, but you'll make different decisions about
 
 #### Considerations
 
-- ## How tall does it need to be?
-- ## Does it need wheels?
-- ## Does it need four posts or would two suffice?
+- How tall does it need to be?
+- Does it need wheels?
+- Does it need four posts or would two suffice?
 - How deep does it need to be?
 
 #### My choice: StarTech XX 18U rack
