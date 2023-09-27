@@ -51,27 +51,47 @@ It's not that simple.
 
 Choosing a rack is an iterative process. First, you need to understand what the options are, then you need to figure out what you'd like to put in the rack now and in the future, then you need to buy.
 
-### Considerations
+### How many rack units?
 
-- How many units does it need to support?
-- How deep does it need to be?
-- How much space can I afford to give up?
-- Does it need wheels?
-- Does it need four posts or two?
+Racks have capacity measured in rack units (RUs). A rack unit is XX ".
 
-#### Candidates
+The taller the rack, the more vertical space it takes up.
 
-I have a StarTech rack at my office. It's nothing exciting, but it does what it's supposed to do. It was striaghtforward to assemble, it feels sturdy, and the wheels make it easy to move around. StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
+### How deep does it need to be?
+
+Depth also has a huge impact on how much space it takes up. I have a relatively small office. I didn't want the rack server to dominate the space.
+
+I looked at small rack-mountable chassis for servers, and the smallest ones were about XX" in depth, so I set that as my minimum.
+
+### Does it need four posts or two?
+
+Some racks are smaller
+
+If you buy data center style servers, they're XX" to XX" long, so you definitely need to secure them from the front and back.
+
+I have one of those servers at my office, and it's a huge hassle. It's very heavy and hard to move around. I decided that all the components in this rack would be small and require only front mounts.
+
+Still, four posts feels sturdier, so I figured why not.
+
+### Does it need wheels?
+
+For me, wheels were a critical feature. I wanted to be able to clean behind the rack, so having wheels made it easy to move around for cleaning.
+
+### Candidates
 
 - **StarTech XX 18U rack**
 
-#### My choice: StarTech XX 18U rack
+I have a StarTech rack at my office. It's nothing exciting, but it does what it's supposed to do. It was striaghtforward to assemble, it feels sturdy, and the wheels make it easy to move around. StarTech also has a good reputation and a decent website, so I just chose between different StarTech racks.
 
-No labels on parts of startech rack
-Comes with screwdriver and wrenches
-Not sure how to use grounding cables
-Smallest setting prevents you from using all screws
-Smallest setting blocks screws for casters
+### Review: StarTech XX 18U rack
+
+I'm happy with the choice.
+
+Assembling the rack was pretty straightforward. From start to finish, it took me about two and a half hours. One minor complaint is that none of the parts are labeled. The parts are distinctively shaped enough that you can match the part in the instructions to the part sitting in front of you.
+
+The rack is depth-adjustable, and I chose the shallowest depth. But one design flaw is that when the rack is adjusted to that depth, the adjustable bridge between the back and front blocks some screw holes for the casters and other parts of the rack. The workaround was that I expanded the depth, finished screwing the casters and the base, then adjusted the depth back down. Not a huge deal, but it was an annoying design flaw.
+
+The rack came with a grounding cable, but I can't figure out how to use it.
 
 ## Choosing a network switch
 
@@ -109,6 +129,12 @@ Personally, I wanted a plain old unmanaged switch. I've never used a managed swi
 
 But I actually couldn't find any unmanaged network switches that met my criteria, so I went with a managed switch. I planned to just leave all the basic options and not configure VLANs, but once I got it, I found that it's pretty fun to configure VLANs, and now I want to configure VLANs for everything.
 
+### PoE or standard Ethernet?
+
+Consume more power.
+
+Make more noise with PoE.
+
 ### How many ports do you need?
 
 Obviously, you need at least as many ports as you have wired networking devices.
@@ -123,12 +149,6 @@ I set my minimum to be 2x my current networking hosts. I currently have eight wi
 
 If you're just getting 1 Gbps speeds, you can just move forward
 
-{{<notice type="info">}}
-
-**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You can't mix single-mode fiber with multimode fiber.
-
-{{</notice>}}
-
 ### Candidates
 
 - **TP-Link XX**
@@ -139,6 +159,8 @@ TP-Link won't let you change the admin user from "admin"
 Pretty confusing interface.
 
 Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). (TODO: Link to VLAN notes)
+
+I wish I had chosen PoE support.
 
 ## Choosing 10G NICs
 
@@ -197,44 +219,76 @@ The first thing I did was turn it on and listen for noise. Nothing! It was compl
 
 I really like the CyberPower UPS. It has a nice display, user-friendly.
 
-### Power strip
+## Choosing a power strip
 
-### Pi rack mount
+TODO: Why power strip? Need it for components that don't need battery backup.
+
+### Review: XX
+
+More important to have more rear outlets. I occasionally use the front outlets, but I've only ever used two at a time at maximum. If I were doing it again, I'd choose a strip that has more rear outlets and fewer
+
+## Choosing a Raspberry Pi rack mount
+
+I do a lot of professional and hobby projects with Raspberry Pis. I thought it would be fun to have a Raspberry Pi rack in my server. I didn't choose a PoE switch, but I had a 5-port PoE switch from my previous setup that I could chain together.
 
 Uctronics - draw the fucking owl instructions
 don't fit together great
 PoE fan is super loud, but you can turn it off
 HDMI ports need to be secured better
 
-### Rack shelves
+## Choosing Rack shelves
 
 Beware the bottom lip.
 
-#### Also ran: Star-Tech shelves
+### Review: Star-Tech shelves
 
 I originally purchasd
 
 Star-Tech shelf extends over into next level.
 
-### Patch panel
+### Review: XX shelves
 
-#### What the heck is a patch panel?
+## Choosing a patch panel
 
-My first question was, "What the hell is a patch panel?"
+### What the hell is a patch panel?
 
-In homelab and IT forums, I constantly see pictures of people posting beautifully organized cables. And I thought one day, I'd understand what leads to that.
+From reading a lot of homelab blog posts, I noticed a lot of other homelabbers building a patch panel.
 
-And then I looked into patch panels and I was even more confused. It's just a row of empty spaces? Huh? What's the point of that?
+When it came time to finally build my server rack, I finally had to ask the question, "What the hell is a patch panel?"
+
+Shopping around for patch panels made me even more confused. It's just a row of empty spaces? Huh? What's the point of that?
 
 From continued reading, it seems like the point of patch panels is just to keep things tidy. If you just allowed every node in your server rack to connect its network cable to the networking switch, then it would be a mess of wires from all different directions. The patch panel hides this mayhem in the back of your rack, and then the front side looks neat and tidy. And then you label everything.
 
-### Cage nuts
+## Choosing cage nuts
 
 You need cage nuts to secure rack components to your rack. Most rack-mountable components come with their own cage nuts, but enough don't that you'll need some extras.
 
 Fortunately, they're small and cheap.
 
-### Cable ties
+### Review: XX Cage nuts
+
+Cage nuts, not so good
+Can't twist with your fingers like the ones that came with the startech rack
+Screw heads strip easily
+
+## Choosing Ethernet and fiber cables
+
+If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables. If you're including a patch panel, remember to buy short (6-12") cables (sometimes called "patch cables") to connect the patch panel to your switch.
+
+Depending on your patch panel and switch layout, you may need a mix of different cable lengths. For example, on my rack, port 16 on my switch is just XX" from port 16 on my patchpanel, but port 1 on my switch is XX" from its corresponding patch panel port.
+
+I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
+
+Some people are creative and buy different colors to represent different functionality. I'm boring and just stuck with blue and black Ethernet cables because they look standard and proper to me.
+
+{{<notice type="info">}}
+
+**Gotcha**: If you use fiber, make sure that all your SFP+ cables match in "mode." You can't mix single-mode fiber with multimode fiber.
+
+{{</notice>}}
+
+## Choosing cable ties
 
 Cable ties are optional, but if you want to keep everything clean, you either need to cut your own cables or wrap up the excess with cable ties. You can also join groups of wires together with cable ties.
 
@@ -242,29 +296,23 @@ I've tried two styles of cable ties: velcro and rubber.
 
 The velcro ones are secure, but they're a bit too secure. They take me about 5 seconds to attach or detach, whereas the rubber ones I can detach almost instantly, and I can attach them in a second or two.
 
-### Ethernet cables
-
-If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables.
-
-I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
-
-Some people are creative and buy different colors to represent different functionality. I'm boring and just stuck with blue and black Ethernet cables because they look standard and proper to me.
-
 ## How do I arrange components in a rack?
 
 Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance.
 
 I just used a Google Sheets document and color coded it.
 
-### Heavier components go on the bottom
+### Heavy components go on the bottom
 
 The one piece of guidance around server rack layouts that everyone seemed to agree on is that heavier components should go on the bottom.
 
-The rack has a lot of expensive equipment. You don't want it to fall over and damage things or injure someone.
+The rack has a lot of expensive equipment. You don't want it to fall over and damage things or, worse, injure someone. So, you want it to have a low center of gravity to maximize stability.
+
+The heaviest component in my rack by far is the UPS.
 
 Things with
 
-### Components with front-facing connections should be close together
+### Keep components with front-facing connections close together
 
 An obvious example is your patch panel and your network switch. They should be in adjacent rack slots
 
@@ -274,39 +322,26 @@ Or, more generally, components that have front-facing ports should be close toge
 
 Some of the guidance I read said to minimize power cable length. Maybe this matters in a data center where you're replicating the setup 100x. In a home environment, I don't see the point. If I connect a server to the UPS with a 2 ft. power cable instead of a 6 ft. power cable, there's no real difference.
 
-### Ethernet cables
+## My final rack setup
 
-Needed more Ethernet cables because of patchpanel
+TODO: List of components and prices
 
-### Patchpanel
+| Component      | Choice        | Price | Satisfaction |
+| -------------- | ------------- | ----- | ------------ |
+| Server rack    | XX            | XX    | B+           |
+| Network switch | XX            | XX    | C+           |
+| UPS            | CyberPower XX | XX    | A+           |
+| Power strip    | XX            | XX    | A            |
 
-certain keys hard to fit through. Actually, they're fine
+TODO: Photos
 
-### Cage nuts
+## Next steps in my rack
 
-Cage nuts, not so good
-Can't twist with your fingers like the ones that came with the startech rack
-Screw heads strip easily
+You may have noticed that my server rack is missing one common feature: servers.
+
+I still have my VM server and storage server that I rebuilty in the last few years. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
 
 ## Mistakes I made
-
-### Cage nuts aren't supposed to hurt
-
-Didn't understand
-
-### Flash Mellanox cards to latest firmware on a Windows system
-
-Didn't flash Mellanox card before installing it in TrueNAS.
-
-### Why do these fiber keys keep popping out?
-
-Fiber keys don't stay in place well
-
-### Incorrect length Ethernet cables
-
-Patch cables
-
-### Mixing SFP+ multimode with single mode
 
 ### Test the UPS before mounting it
 
@@ -324,66 +359,30 @@ on Newegg: I'd never seen anything on Newegg before that was replacement-only, s
 
 Some UPS devices are totally silent and some produce constant noise. If it's anywhere near you, take noise into consideration.
 
-## 10G NIC attempts
+### Cage nuts aren't supposed to hurt
 
-TODO: Move this
+Didn't understand
 
-### 10G
+If something requires a lot of physical force or pain, you're probably doing something wrong. In building computers or homelab components, every time I've thought, "Wow, this design requires so much force!" I've quickly realized that I misunderstood the design and I'm applying force to something that shouldn't have to be forced.
 
-Mellanox - No flashing lights when I connected my main pc
-tried installing drivers
+### Some PCI slots don't like 10G NICs
+
+When I installed the first 10G NIC into my desktop, Windows didn't detect the card installed. I tried re-seating it, and I saw the same results. I tried downloading drivers, but Windows wasn't seeing the device at all in Device Manager.
+
+Finally, I stumbled across a forum post where someone reported that their XX card worked when they switched it to a different PCI slot. I tried a different PCI slot on my motherboard, and voila! It worked perfectly.
+
+### Flash Mellanox cards to latest firmware on a Windows system
+
+Didn't flash Mellanox card before installing it in TrueNAS.
+
 https://network.nvidia.com/products/adapter-software/ethernet/windows/winof-2/
-Switched PCI slots and it worked
 
-Fiber connection suddenly dropped on day 2
-Disconnected+reconnected cable: Same result. Activity light stopped flashing on card after I reconnected.
-Disabled/re-enabled card: Same result (said network cable disconnected)
-Disconnected/reconnected patch cable: Started working again.
-Next day - would keep flashing between connected/disconnected. swapped patch cables and it fixed it. Five mins later, happened again and skipped the patch cable, directly connected to switch.
+### Why do these fiber keys keep popping out?
 
-#### TrueNas Mellanox
+Fiber keys don't stay in place well
 
-```text
-mlx4_core0: Unable to determine PCI device chain minimum BW
-mlx4_en mlx4_core0: Activating port:1
-mlxen0: Ethernet address: 24:8a:07:ea:22:10
-mlx4_en: mlx4_core0: Port 1: Using 4 TX rings
-mlx4_en: mlx4_core0: Port 1: Using 4 RX rings
-mlxen0: link state changed to DOWN
-mlx4_en: mlxen0: Using 4 TX rings
-mlx4_en: mlxen0: Using 4 RX rings
-mlx4_en: mlxen0: Initializing port
-```
+### Incorrect length Ethernet cables
 
-#### TrueNAS Chelsio 520 1
+Patch cables
 
-https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/
-
-Upgraded BIOS, no change.
-
-Added to `/boot/loader.conf`
-
-https://man.freebsd.org/cgi/man.cgi?query=cxgbe&sektion=4
-
-```text
-t4fw_cfg_load="YES"
-t5fw_cfg_load="YES"
-t6fw_cfg_load="YES"
-if_cxgbe_load="YES"
-```
-
-Tried setting them as tunables. No dice.
-
-```text
-# pciconf -lv | grep -i Chelsio
-
-```
-
-```text
-# dmesg | grep -i Chelsio
-
-```
-
-https://www.reddit.com/r/truenas/comments/vzbial/chelsio_nic_not_appearing/
-
-Overheating?
+### Mixing SFP+ multimode with single mode
