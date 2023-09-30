@@ -18,7 +18,7 @@
       nodejs_dep = inputs.nodejs_dep.legacyPackages.${system};
     in
     {
-      devShells.default = nodejs_dep.mkShell {
+      devShells.default = hugo_dep.mkShell {
         packages = [
           hugo_dep.hugo
           nodejs_dep.nodejs-18_x
