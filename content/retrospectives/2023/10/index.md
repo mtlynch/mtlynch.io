@@ -111,7 +111,7 @@ Second, I can reduce marketing spend. There's no use paying for ads if I'm going
 
 Before we make the full 400-ish unit batch, I want to get a smaller batch that we can inspect by hand.
 
-Next is cases. We have about 80 lying around in our
+We want enough that it creates enough buffer for a subsequent batch to arrive. Let's say it will take 10 days for a second batch to ship from Vietnam to our warehouse in North Carolina and be ready for fulfillment. 10 days means we need about 66 devices. The devices ship in boxes of 18, so let's say we need 72 devices.
 
 ### Option 1: Small sample + small production batch
 
