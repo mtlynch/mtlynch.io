@@ -67,7 +67,7 @@ unset GOROOT
 
 And then figure out what was setting that variable in my shell.
 
-### Go:
+### Go: Failure to link to libc
 
 https://github.com/golang/go/issues/44695
 
@@ -79,3 +79,7 @@ runtime/cgo(.text): relocation target stderr not defined
 runtime/cgo(.text): relocation target fwrite not defined
 runtime/cgo(.text): relocation target vfprintf not defined
 ```
+
+### Go: VS Code extension breaks
+
+TODO:
