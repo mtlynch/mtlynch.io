@@ -80,6 +80,6 @@ runtime/cgo(.text): relocation target fwrite not defined
 runtime/cgo(.text): relocation target vfprintf not defined
 ```
 
-### Go: VS Code extension breaks
+### Playwright doesn't run on NixOS
 
-TODO:
+TODO: Can't figure this out.
