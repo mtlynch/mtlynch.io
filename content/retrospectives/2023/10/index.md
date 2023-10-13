@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 39"
-date: 2023-09-30T14:51:42-04:00
+date: 2023-10-17T00:00:00-04:00
 description: Working around manufacturing delays
 ---
 
@@ -45,6 +45,15 @@ TODO
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
 {{<revenue-graph project="tinypilot">}}
+
+| Metric                   | August 2023    | September 2023 | Change                                          |
+| ------------------------ | -------------- | -------------- | ----------------------------------------------- |
+| Unique Visitors          | 6,900          | 6,200          | <font color="red">-700 (-10%)</font>            |
+| Sales Revenue            | $91,670.46     | $83,380.02     | <font color="red">-$8,290.44 (-9%)</font>       |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                               |
+| Royalties                | $2,969.62      | $2,056.30      | <font color="red">-$913.32 (-31%)</font>        |
+| Total Revenue            | $94,930.78     | $85,727.02     | <font color="red">-$9,203.76 (-10%)</font>      |
+| **Profit**               | **$28,454.42** | **$8,163.88**  | **<font color="red">-$20,290.54 (-71%)</font>** |
 
 ## Correcting issues in the first article sample
 
@@ -163,6 +172,8 @@ We want enough that it creates enough buffer for a subsequent batch to arrive. L
 ## Topic 3
 
 ## Side projects
+
+### I need to migrate away from RapidAPI for mainly spite reasons
 
 ## Wrap up
 
