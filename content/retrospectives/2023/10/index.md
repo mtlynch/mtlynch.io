@@ -21,21 +21,21 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Goal 1
+### Shift manufacturing to our contract manufacturer as quickly as possible
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 2
+### Delegate tasks for clearing the TinyPilot office
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 3
+### Use up all remaining Raspberry Pis to build TinyPilot devices
 
 - **Result**: XX
 - **Grade**: XX
