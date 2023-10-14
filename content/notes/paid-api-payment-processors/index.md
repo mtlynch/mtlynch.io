@@ -63,6 +63,12 @@ Not seeing usage thresholds, but you can manually invoice a customer midway thro
 
 No dev support in the web dashboard. Stripe is very dev-oriented and shows API identifiers for customers and subscriptions, but LemonSqueezy doesn't show that anywhere in the UI, so I'd have to write custom code to find these identifiers.
 
+JSONAPI is ugly
+
+Was able to make usage based API calls okay.
+
+Currently trying to figure out if user can see their usage anywhere or if I'm responsible for showing that.
+
 ## Paddle
 
 Several indie services I use use Paddle.

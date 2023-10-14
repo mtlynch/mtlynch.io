@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -eux
+
+curl "https://api.lemonsqueezy.com/v1/subscriptions" \
+     -H 'Accept: application/vnd.api+json' \
+     -H 'Content-Type: application/vnd.api+json' \
+     -H "Authorization: Bearer ${LS_API_KEY}" | python3 -m json.tool
+
+curl "https://api.lemonsqueezy.com/v1/usage-records" \
+     -H 'Accept: application/vnd.api+json' \
+     -H 'Content-Type: application/vnd.api+json' \
+     -H "Authorization: Bearer ${LS_API_KEY}" \
+     -d '{
+  "data": {
+    "type": "usage-records",
+    "attributes": {
+      "quantity": 253,
+      "action": "increment"
+    },
+    "relationships": {
+      "subscription-item": {
+        "data": {
+          "type": "subscription-items",
+          "id": "124727"
+        }
+      }
+    }
+  }
+}'| python3 -m json.tool
