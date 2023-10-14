@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -eux
+
+PADDLE_VENDOR_ID='15062' # Sandbox
+PADDLE_SUBSCRIPTION_ID='sub_01hcq7a0e33vs9ct0thy0nrjg0' # Sandbox
+
+curl \
+  --request POST \
+  --url https://sandbox-vendors.paddle.com/api/2.0/subscription/users \
+  --header 'Accept: application/json' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data "vendor_id=${PADDLE_VENDOR_ID}" \
+  --data "vendor_auth_code=${PADDLE_AUTH_CODE}"
+
+echo ""
+
+curl \
+  --request POST \
+  --url https://sandbox-vendors.paddle.com/api/2.0/subscription/plans \
+  --header 'Accept: application/json' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data "vendor_id=${PADDLE_VENDOR_ID}" \
+  --data "vendor_auth_code=${PADDLE_AUTH_CODE}"
+
+echo ""
+
+curl \
+  --request POST \
+  --url https://sandbox-vendors.paddle.com/api/2.0/subscription/modifiers/create \
+  --header 'Accept: application/json' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data "vendor_id=${PADDLE_VENDOR_ID}" \
+  --data "vendor_auth_code=${PADDLE_AUTH_CODE}" \
+  --data "subscription_id=${PADDLE_SUBSCRIPTION_ID}" \
+  --data 'modifier_recurring=false' \
+  --data 'modifier_amount=0.02' \
+  --data 'modifier_description=Ingredient parse - 1 ingredient'
