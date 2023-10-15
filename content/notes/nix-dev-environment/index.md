@@ -9,16 +9,6 @@ I've been learning Nix recently. Nix is a broad product with a steep learning cu
 
 I've discovered that one thing Nix does well with a gentle learning curve is managing development environments. Nix lets me have multiple projects on the same system that each have their own, independent view of what dependencies are available. I can have one legacy project running Python 2.7 and Node.js 4.x alongside a modern project running Python 3.11 and Node.js 20, and they won't interfere with each other.
 
-## Why do I need per-project development environments?
-
-Imagine that you have two software projects on the same machine: Project A and Project B. You built both projects with [Go 1.9](https://go.dev/doc/devel/release#go1.9).
-
-You just read about a cool new feature in [Go 1.21](https://go.dev/doc/devel/release#go1.21.0) that would be useful to Project A. So you upgrade your system to Go 1.21, update Project A to use the new features, and everything's great!
-
-But then you switch to Project B, and you're suddenly seeing tons of deprecation warnings or errors about things that have changed since Go 1.9. That wasn't what you wanted. Taking advantage of a newer Go feature in one project shouldn't require you to upgrade _all_ of your Go projects to that version.
-
-Nix offers an attractive solution. Instead of installing Go system-wide, you can create a `flake.nix` file at the root of your project that specifies the version of Go you want for that particular project. Regardless of what version of Go you have installed globally, when you're in your Nix development shell,
-
 ## Like Python virtualenv or Node.js `package.json`, but for everything
 
 Many modern programming languages have tools for creating an isolated development environment on a per-project basis. Python has virtualenv and Node.js has `package.json`. But those tools are limited in that they only control dependencies within that ecosystem.
