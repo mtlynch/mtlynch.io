@@ -7,33 +7,13 @@ Supports usage based billing / metered billing
 
 Acts as merchant of record
 
-## Stripe
+## Overview
 
-Not merchant of record.
-
-## Lago
-
-Not self-serve, need to book a demo with them. No published pricing for hosted version.
-
-Not merchant of record, not even a payment gateway. They can integrate with Paddle and have Paddle act as merchant of record.
-
-## FastSpring
-
-Doesn't suport usage-based billing.
-
-They kind of do in that you're allowed to bill the customer every time they use a service, but my service is $0.02 per parse, so they'd be charged thousands of times for smaller than the minimum probably.
-
-## Chargebee
-
-Doesn't say whether they're merchant of record, so they're probably not.
-
-Docs say you have to figure out your own tax rate: https://www.chargebee.com/docs/2.0/us-sales-tax.html
-
-## Reach
-
-https://www.withreach.com/
-
-Doesn't support metered billing.
+| Provider     | Fees | Support for metered billing | Onboarding experience | Overall experience |
+| ------------ | ---- | --------------------------- | --------------------- | ------------------ |
+| RapidAPI     | 23%  | C                           | A-                    | D                  |
+| LemonSqueezy | 5%   | B                           | C                     | XX                 |
+| Paddle       | 5%   | B-                          | C+                    | XX                 |
 
 ## LemonSqueezy
 
@@ -67,7 +47,7 @@ JSONAPI is ugly
 
 Was able to make usage based API calls okay.
 
-Currently trying to figure out if user can see their usage anywhere or if I'm responsible for showing that.
+Currently trying to figure out if user can see their usage anywhere or if I'm responsible for showing that. Would be no worse than RapidAPI.
 
 ## Paddle
 
@@ -129,3 +109,33 @@ content-length: 100
 ```
 
 New API docs but they don't seem to cover subscription modifiers.
+
+## Other providers that don't meet my criteria
+
+### Stripe
+
+They seem to have very nice support for metered billing, including a customer dashboard that shows metered usage and allowing you to set billing thresholds, but they're not a merchant of record.
+
+### Lago
+
+Not self-serve, need to book a demo with them. No published pricing for hosted version.
+
+Not merchant of record, not even a payment gateway. They can integrate with Paddle and have Paddle act as merchant of record.
+
+### FastSpring
+
+Doesn't suport usage-based billing.
+
+They kind of do in that you're allowed to bill the customer every time they use a service, but my service is $0.02 per parse, so they'd be charged thousands of times for smaller than the minimum probably.
+
+### Chargebee
+
+Doesn't say whether they're merchant of record, so they're probably not.
+
+Docs say you have to figure out your own tax rate: https://www.chargebee.com/docs/2.0/us-sales-tax.html
+
+### Reach
+
+https://www.withreach.com/
+
+Doesn't support metered billing.
