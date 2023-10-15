@@ -5,7 +5,9 @@ tags:
   - nix
 ---
 
-One of the useful things you can do as a Nix beginner is create isolated, per-project development environments.
+I've been learning Nix recently. Nix is a broad product with a steep learning curve as it's, capable of everything from installing a single package to managing every file and application on your OS.
+
+I've discovered that one thing Nix does well with a gentle learning curve is managing development environments. Nix lets me have multiple projects on the same system that each have their own, independent view of what dependencies are available. I can have one legacy project running Python 2.7 and Node.js 4.x alongside a modern project running Python 3.11 and Node.js 20, and they won't interfere with each other.
 
 ## Why do I need per-project development environments?
 
@@ -19,9 +21,9 @@ Nix offers an attractive solution. Instead of installing Go system-wide, you can
 
 ## Like Python virtualenv or Node.js `package.json`, but for everything
 
-Many modern programming languages have tools for creating an isolated development environment on a per-project basis. Python has virtualenv and Node.js has `package.json`. But those tools are limited in that they only control.
+Many modern programming languages have tools for creating an isolated development environment on a per-project basis. Python has virtualenv and Node.js has `package.json`. But those tools are limited in that they only control dependencies within that ecosystem.
 
-The limitation of Python's virtualenv or Node.js's has `package.json` is that most of the packages available are specific to that ecosystem. If you wanted to specify that your Python project depends on a specific version of `gcc`, you couldn't do that with virtualenv because there's no pip package for fine-grained gcc versions.
+If you wanted to specify that your Python project depends on a specific version of `gcc`, you couldn't do that with virtualenv because there's no pip package for fine-grained gcc versions.
 
 ## Creating a simple Nix development environment
 
@@ -79,7 +81,3 @@ runtime/cgo(.text): relocation target stderr not defined
 runtime/cgo(.text): relocation target fwrite not defined
 runtime/cgo(.text): relocation target vfprintf not defined
 ```
-
-### Playwright doesn't run on NixOS
-
-TODO: Can't figure this out.
