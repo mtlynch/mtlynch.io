@@ -23,24 +23,24 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Shift manufacturing to our contract manufacturer as quickly as possible
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: I'm continuing to get the manufacturer unblocked wherever possible.
+- **Grade**: A
 
-TODO
+Honestly, there hasn't been much to do from this front on my end, as the limiting factor has been shipments to the manufacturer from their upstream vendors.
 
 ### Delegate tasks for clearing the TinyPilot office
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: I've assigned tasks for inventorying and clearing the office.
+- **Grade**: B-
 
-TODO
+I ended up deciding to [stay in the office](#slowing-down-the-transition-to-fully-remote) for another two months for other reasons, but we're still on track to clear most inventory by the end of October.
 
 ### Use up all remaining Raspberry Pis to build TinyPilot devices
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We've used up all the Raspberry Pis to build new or refurbished devices.
+- **Grade**: A
 
-TODO
+Our assembly went according to plan, and now all of our new devices are at the warehouse, and we're on track to sell out our refurbished devices in the next few weeks.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -55,72 +55,88 @@ TODO
 | Total Revenue            | $94,930.78     | $85,727.02     | <font color="red">-$9,203.76 (-10%)</font>      |
 | **Profit**               | **$28,454.42** | **$8,163.88**  | **<font color="red">-$20,290.54 (-71%)</font>** |
 
+Our short-term profit is down because we paid for three months' worth of Raspberry Pis this month, but our three-month average profit is still healthily above $20k/month.
+
 ## Correcting issues in the first article sample
 
-Unfortunately, the first article sample didn't go so well. Paint was chipping on two out of the four samples, and the rubber feet had fallen off three out of the four samples. One of the devices couldn't stream audio because all four audio cables were disconnected. When I held the device sideways, the fan started scraping the case.
+In September, we received the first article sample from our manufacturer. It was the first end-to-end production sample of the Voyager 2a made in their facility.
 
-The sample worried me.
+Unfortunately, the first article sample didn't go so well.
 
-First, it was worrying that on a sample of four where they're supposed to focus a lot of attention on getting everything right, so many things went wrong.
+Paint was chipping on two out of the four samples, and the rubber feet had fallen off three out of the four samples. The cabling was disconnected on one of the devices, which prevented it from capturing audio. When I held the device sideways, the fan started scraping the case.
 
-Second, it suggested not only a problem with the assembly process but with the QA process as well, which is supposed to be separate. What was going on with the QA process that things like chipped paint and non-functional audio passed inspection?
+{{<gallery caption="The first article samples had issues with paint chipping and rubber feet detaching in transit.">}}
+{{<img src="chipping-paint.jpg" max-width="500px" alt="Photo of paint chipping on TinyPilot logo on case">}}
+{{<img src="no-feet.webp" max-width="200px" alt="Photo of case bottom with feet detached">}}
+{{</gallery>}}
 
-The manager overseeing the work wiped the cases with alcohol swabs to remove the fingerprints.
+The issues in the sample worried me.
 
-The sent us videos of how they do the QA process, and it matched ours.
+First, it was worrying that so many things went wrong on a small sample that was supposed to show the process end-to-end.
 
-- No opening the device after functional testing.
-- No wiping the device with alcohol swabs.
-- Manufacturing team will handle the device with gloves to avoid leaving fingerprints.
+Second, it suggested not only a problem with the assembly process but with QA process as well. What was going on with the QA process that things like chipped paint and non-functional audio passed inspection?
 
-The day after I saw the sample, I called our building manager and asked to extend our lease. We were on track to be out of the office by the end of October, but seeing the issues with these samples, I wanted the security of continuing to have an office where we can inspect inventory and make repairs if necessary.
+After talking with the CEO, it turned out that the manufacturer did "extra" QA on the batch, but the additional checks actually introduced new issues.
+
+The CEO discovered that the manager overseeing the work wiped the devices with alcohol swabs to get rid of fingerprints on the metal, but the alcohol caused the paint to chip. So, they adjusted their process to prohibit alcohol wipes on the cases and to assemble the devices with gloves to prevent fingerprint smudges.
+
+The CEO believed that the manager may have opened the devices after QA and accidentally disconnected a wire, so now the QA process forbids opening the devices after the QA test is complete.
+
+The manufacturer believed that the feet detaching issue was due to the packaging. The box stressed the weakest part of the adhesive to the case and pulled off the feet, so they updated the packaging.
+
+I was still a bit worried that something was lost in translation about our QA process, so I requested videos of how the manufacturer was performing QA, and it fortunately matched our process, so I'm hopeful that we've caught the major issues.
 
 ## How do I handle the manufacturing schedule slip?
 
-The last time we stopped sales was for four days in Jan. 2022. Before that, it was one day in Jan. 2021.
+In the original schedule with the manufacture, we expected to receive the first production batch by September 15th. I planned to have six to eight weeks of inventory overlapping that point, as I thought it was likely we'd see some sort of delay.
+
+The problem is that now we've exhausted my safety buffer and are at risk of running out of inventory before the first production batch is available from the manufacturer.
+
+If we run out of inventory, we have to pause sales, which is not the end of the world, but it definitely costs us money, so I try to avoid it as much as possible. The last time we ran out of inventory was for four days in January 2022. Before that, it was one day in Jan. 2021. I _really_ dislike running out of inventory.
+
+Given the slips in the manufacturing timeline, I'm evaluating what my options are to reduce the risk of running out of stock.
 
 ### Assumptions
 
 - TinyPilot sells 200 devices per month or about 50 devices per week.
-- Every day that TinyPilot is out of stock costs about $3k in revenue and $650 in profit.
-  - Being sold out for a week is a sacrifice of about $4.5k in profit.
+- Every day that TinyPilot is out of stock costs about $3k in revenue and $2k in profit.
 
 ### What does the current schedule look like?
 
-As of October 2nd, we have 243 devices on-hand, so we're due to run out of inventory by about November 8th. We also have 25 refurbished devices, so that maybe buys us a few extra days, so let's call November 10th the day we sell out completely.
+As of October 16th, we have 164 devices on-hand, so we're due to run out of inventory by about November 8th. We also have eight refurbished devices, so that maybe buys us an extra couple of days, so let's call November 10th the day we sell out completely.
 
 Here's a schedule of how our supply looks based on our manufacturer's current estimates:
 
 | Date    | Activity                                                                     | Duration |
 | ------- | ---------------------------------------------------------------------------- | -------- |
-| Oct. 14 | Ship second sample from Vietnam to Massachusetts                             | 7 days   |
-| Oct. 21 | Inspect second sample                                                        | 1 day    |
-| Oct. 22 | Manufacture small production batch                                           | 4 days   |
-| Oct. 26 | Ship small production batch from Vietnam to Massachusetts (TinyPilot office) | 7 days   |
-| Nov. 2  | Inspect small production batch                                               | 2 days   |
-| Nov. 4  | Manufacture large production batch                                           | 4 days   |
-| Nov. 8  | Ship large production batch from Vietnam to North Carolina (warehouse)       | 7 days   |
-| Nov. 15 | Large production batch is ready for fulfillment                              | 1 day    |
+| Oct. 19 | Ship second sample from Vietnam to Massachusetts                             | 7 days   |
+| Oct. 26 | Inspect second sample                                                        | 1 day    |
+| Oct. 27 | Manufacture small production batch                                           | 4 days   |
+| Oct. 31 | Ship small production batch from Vietnam to Massachusetts (TinyPilot office) | 7 days   |
+| Nov. 7  | Inspect small production batch                                               | 2 days   |
+| Nov. 9  | Manufacture large production batch                                           | 4 days   |
+| Nov. 13 | Ship large production batch from Vietnam to North Carolina (warehouse)       | 7 days   |
+| Nov. 20 | Large production batch is ready for fulfillment                              | 1 day    |
 
-Based on these estimates, we'd avoid running out of inventory but just barely.
-
-We'd run out of the inventory we manufactured in-house, but if the small production batch is good quality, we can ship that to our warehouse to keep our inventory above zero until November 17th. By that point, the large production batch should arrive to the warehouse, putting us back on solid footing.
+Based on these estimates, we'd avoid running out of inventory but just barely. The large production batch wouldn't be ready until Nov. 20th, but the small production batch would tide us over until then.
 
 ### Do we skip the second sample?
 
-In the first sample, two of the devices had quality issues on the case that would prevent us from shipping them to customers. One of them was all fine, and one of them required us to make repairs but was fine after the repairs.
-
-The manufacturer was confident in the cause of the case issues, and the fix was simple: use gloves to avoid leaving fingerprints, and don't wipe them with alcohol. If that gets rid of the issue, then all four of the devices would have been shippable.
+The first question is whether to do a minimal sample for the next batch or to do a batch big enough to ship to customers.
 
 If we cut out the second sample, the schedule looks like this:
 
 | Date    | Activity                                                                     | Duration |
 | ------- | ---------------------------------------------------------------------------- | -------- |
-| Oct. 14 | Ship small production batch from Vietnam to Massachusetts (TinyPilot office) | 7 days   |
-| Oct. 21 | Inspect production batch                                                     | 1 day    |
-| Oct. 22 | Manufacture large production batch                                           | 4 days   |
-| Oct. 26 | Ship large production batch from Vietnam to North Carolina (warehouse)       | 7 days   |
-| Nov. 2  | Large production batch is ready for fulfillment                              | 1 day    |
+| Oct. 19 | Ship small production batch from Vietnam to Massachusetts (TinyPilot office) | 7 days   |
+| Oct. 26 | Inspect production batch                                                     | 1 day    |
+| Oct. 27 | Manufacture large production batch                                           | 4 days   |
+| Oct. 31 | Ship large production batch from Vietnam to North Carolina (warehouse)       | 7 days   |
+| Nov. 7  | Large production batch is ready for fulfillment                              | 1 day    |
+
+The only issue that was a real showstopper in the first batch was the chipped paint on the cases. Outside of that, the issues we caught were things we could repair at our office.
+
+The possibilities look like:
 
 - Optimistic case (85% likely): Sample wouldn't have revealed any issues, so we're ready with a production batch two weeks sooner.
 - Pessimistic case (15% likely): 50+ devices need to be shipped back to Vietnam.
@@ -129,17 +145,21 @@ If we cut out the second sample, the schedule looks like this:
 
 ### Do we make more devices in-house?
 
-A few things we need to build devices are things that we can't buy quickly.
+We could stretch out our inventory longer if we manufactured more devices in-house rather than waiting to transition to our manufacturing vendor. It's definitely something we could do, as we've been manufacturing TinyPilots in-house for years, but there are complications with starting up our manufacturing pipeline again.
 
-The hardest one is Raspberry Pi devices. We're down to zero because we've built every Raspberry Pi we have into a device and shipped it to the warehouse for fulfillment.
+The hardest problem is that there's still a shortage of Raspberry Pis, and all the Pis that TinyPilot owns are with our manufacturer.
 
-We have an upcoming delivery schedules, so we could re-route a shipment from Raspberry Pi to our US address. That's not very appealing because it was a lot of work to get the Raspberry Pi Foundation set up to ship to Vietnam and have all the customs forms in place, so asking them to change an order has the potential to create other issues. It also means we have to order in multiples of 150 Pis, as that's the box that Raspberry Pi ships.
+We have an upcoming delivery scheduled, so we could re-route a shipment from Raspberry Pi to our US address. That's not very appealing because it was a lot of work to get the Raspberry Pi Foundation update our shipping address to Vietnam and have all the customs forms in place, so asking them to change an order has the potential to create other issues. It also means we have to order in multiples of 150 Pis, as that's size of the box that Raspberry Pi ships in.
 
 We own the Raspberry Pi devices waiting to be built into Voyager 2a devices at the factory in Vietnam. We could ask our manufacturer to send us some of those. That allows us to request an arbitrary number, but there are likely also customs headaches in getting a UK-built product from Vietnam to the US.
 
 And even if we got our Pis, we're still missing other components. We'd have to get some of our custom PCBs manufactured from our old PCB vendor in China. That should be okay, as they can usually turn around delivery in about a month. And the PCBs we need are about $2/unit, so that's not so expensive.
 
 Cases are the next hardest item. Our old case vendor always claimed that their turnaround time was six weeks, but their _actual_ turnaround time was generally about three months. So, it's possible that even if we asked for new cases, they wouldn't be ready in time anyway. We still have 80 cases sitting at the factory in China that are ready to ship, but I'd asked them to hold off, as it didn't make sense for us to have more cases than we had Raspberry Pis.
+
+So we probably can't get more cases in a timeline that's useful, so we'd be limited to making 80 more devices, maximum.
+
+That means the possibilities look like:
 
 - Best case: There are more manufacturing delays, so making our own devices allows us to sell for 10 more days than we otherwise could have.
 - Worst case: We waste a lot of time and money building devices that the new factory could have made for us.
@@ -148,14 +168,16 @@ Cases are the next hardest item. Our old case vendor always claimed that their t
 
 ### Should I slow down sales?
 
-- Best case: There are more manufacturing delays, so reducing sales gives
+In addition to stretching out our buffer by making more devices in-house, I have a couple of levers that slow down the rate we sell TinyPilot devices.
+
+First, I could increase prices. We sell fewer TinyPilot devices [when prices are higher](/retrospectives/2023/05/#what-price-maximizes-profits), but it probably reduces our overall profits.
+
+Second, I can reduce marketing spend. There's no use paying for ads if we're going to receive more orders than we can fill.
+
+So, the possibilities here look like:
+
+- Best case: There are more manufacturing delays, so reducing sales preserves profits we'd forfeit with needless ad spending or selling for too low a price.
 - Worst case: There's no manufacturing delay, and I forfeit $3-5k in profit for no reason.
-
-In addition to stretching out our buffer by making more devices in-house, I have a couple of levers.
-
-First, I could increase prices. We sell fewer TinyPilot devices when prices are higher, but customers still buy when our prices are $100 higher than they currently are.
-
-Second, I can reduce marketing spend. There's no use paying for ads if I'm going to receive more orders than I can fill without ads.
 
 **Decision**: Don't slow down yet, but revisit the decision if there are more delays or there are issues with the next inspection.
 
@@ -163,17 +185,63 @@ Second, I can reduce marketing spend. There's no use paying for ads if I'm going
 
 Before we make the full 400-ish unit batch, I want to get a smaller batch that we can inspect by hand.
 
-We want enough that it creates enough buffer for a subsequent batch to arrive. Let's say it will take 10 days for a second batch to ship from Vietnam to our warehouse in North Carolina and be ready for fulfillment. 10 days means we need about 66 devices. The devices ship in boxes of 18, so let's say we need 72 devices.
+We want a large enough batch that it creates enough buffer for a subsequent batch to arrive.
+
+Let's say it will take 10 days for a second batch to ship from Vietnam to our warehouse in North Carolina and be ready for fulfillment. 10 days means we need about 66 devices. The devices ship in boxes of 18, so let's say we need 72 devices.
 
 **Decision**: Order 72 devices for the small sample batch.
 
-## Topic 2
+## Slowing down the transition to fully remote
 
-## Topic 3
+With the schedule slip from the manufacturer, I became worried about my plan to move out of TinyPilot's local office by the end of October.
+
+Without an office, it would be much harder for us to do things like inspect samples from the manufacturer or perform repairs as needed.
+
+The day after I saw the first article sample, I called our building manager and asked to extend our lease. Fortunately, he hadn't put the office on the market yet, so we were able to stay until the end of the year.
+
+I'm happy with this decision, as it allows us to slow down the number of major changes happening at once. I'd like to be all set with our new manufacturing pipeline before we start redesigning our remaining in-person activities to happen without an office.
 
 ## Side projects
 
 ### I need to migrate away from RapidAPI for mainly spite reasons
+
+> **Jerry**: I'd like to return this jacket.
+>
+> **Salesperson**: Certainly, may I ask why?
+>
+> **Jerry**: For spite.
+>
+> **Salesperson**: Spite?
+>
+> **Jerry**: That's right. I don't care for the salesman who sold it to me.
+>
+> _Seinfeld_, "The Wig Master"
+
+One of the first projects I took on when I started out as a founder was [Zestful](https://zestfuldata.com), my ingredient parsing API. It's been in maintenance mode for years, but it still makes $100-200/month in passive income.
+
+The problem is that Zestful's paying customers access the service through RapidAPI, one of the worst platforms I've ever used. I originally published Zestful on a platform called Mashape, which worked pretty well, but then RapidAPI acquired Mashape and turned the platform into a bag of garbage.
+
+I've had too many issues with RapidAPI over the years to explain here, but the biggest issue is how terribly they handle metered billing. RapidAPI costs $0.02 per ingredient the client parses in their API request. So, you'd think that within milliseconds of the user making the request, RapidAPI would be able to show them the total for their upcoming bill.
+
+No, they don't. Instead, RapidAPI shows the user a bill of $0. When the month ends, only then does RapidAPI total up their requests, multiply it by the cost per request, and show the user their total owed.
+
+Naturally, RapidAPI's billing system confuses customers. They make a bunch of requests through Zestful, see that their bill is $0, think that their usage still fits in the free tier, keep making requests, then they get a surprise bill of hundreds or thousands of dollars and refuse to pay.
+
+I got a particularly egregious case of this two months ago. I saw that a user was racking up thousands of dollars in charges, so I messaged them through the platform letting them know and offered a custom plan that would save them money. They ignored me, and their final bill was $14.5k. RapidAPI tried billing their credit card a month later, and the payment was declined.
+
+{{<img src="rapidapi-billing.png" max-width="800px" alt="Screenshot of RapidAPI showing failed payment of $14,512.23" caption="RapidAPI allowed a customer to rack up $14k in charges before trying to bill them weeks later" has-border="true">}}
+
+And then RapidAPI did nothing! They didn't follow up with the user, and they didn't even deactivate their account. The user can just happily keep running up charges against my service and never pay.
+
+You might assume that because RapidAPI is fairly hands-off, they have fees that are commensurate with their minimal involvement. For context, similar providers like [Paddle](https://www.paddle.com/) and [LemonSqueezy](https://www.lemonsqueezy.com/) charge fees of 5% of seller revenue.
+
+RapidAPI charges a whopping **20% of revenue**!
+
+Effectively, it's even higher than that because RapidAPI only pays through PayPal, who charges their own fee of 3% + $0.30 per transaction. And absurdly, RapidAPI makes separate transactions for each of your customers. So if you have five customers on RapidAPI, RapidAPI makes five separate payments and makes you pay PayPal's transaction fee five separate times. I've received payments from RapidAPI where I lose as much as 80% to fees.
+
+I've tolerated RapidAPI this long because I've relegated Zestful to a weekend hobby project, and migrating to a new payment provider never feels like a fun hobby. Now, I'm motivated enough by spite that I've begun experimenting on Paddle and LemonSqueezy to see if I can free myself from RapidAPI.
+
+{{<img src="reasons.png" max-width="600px" caption="&ldquo;What are your reasons for switching SaaS payment gateways?&rdquo;" alt="Screenshot from The Simpsons Season 4 Episode 14 of list of reasosn to adobe a little brother, including spite, malice, revenge, and profit">}}
 
 ## Wrap up
 
@@ -187,8 +255,5 @@ We want enough that it creates enough buffer for a subsequent batch to arrive. L
 
 ### Goals for next month
 
--
-
-### Requests for help
-
-TODO
+- Shift manufacturing to our contract manufacturer as quickly as possible.
+- Reduce manual effort from TinyPilot's software release process.
