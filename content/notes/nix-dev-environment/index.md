@@ -5,23 +5,17 @@ tags:
   - nix
 ---
 
-Nix is a broad product with a steep learning curve as it's, capable of everything from installing a single package to managing every file and application on your OS.
+Nix is a broad product with a steep learning curve. It's capable of everything from installing a single package to managing every file and application on your OS.
 
 I've discovered that one thing Nix does well with a gentle learning curve is managing development environments.
 
 Nix lets me have multiple projects on the same system that each have their own, independent view of what dependencies are available. I can have one legacy project running Python 2.7 and Node.js 4.x alongside a modern project running Python 3.11 and Node.js 20, and they won't interfere with each other.
 
-## Nix dev environments are like Python virtualenv or Node.js `package.json`, but more powerful
-
-Many modern programming languages have tools for creating an isolated development environment on a per-project basis. Python has virtualenv, and Node.js has `package.json`. Those tools are limited in that they only control dependencies within that ecosystem.
-
-If you wanted to specify that your Python project depends on a specific version of `gcc`, you couldn't do that with virtualenv or `package.json` because there's no package in those managers for fine-grained gcc versions.
-
-With Nix, you can create a project-specific development environment that lets you control lower-level depenedencies like which version of `gcc` is available and which version of Python to use.
+Even if you have no experience with Nix, you can use Nix-managed dev environments with about 10 minutes of work.
 
 ## Why not manage development environments with Docker?
 
-I like Docker, and I use it for deployment and certain DevOps tasks, but I haven't found it a great solution for my development environment.
+I like Docker, and I use it for deployment and certain DevOps tasks, but I haven't found it a great solution for creating development environments.
 
 I do my development in VS Code over SSH, and Docker makes that a pain. I know there are workarounds, but I've never found them appealing.
 
@@ -33,7 +27,7 @@ For every software project I have, I create a dedicated virtual machine and asso
 
 The problem is that when I want to experiment with something for a few minutes, I'm not that excited to spin up a whole VM, write a playbook, and then wait 10-20 minutes for Ansible to provision the server.
 
-I'm slowly migrating all of my projects to use Nix rather than Ansible, as Nix is much lighter weight and makes it easier to upgrade my dependencies.
+I'm slowly migrating all of my projects to use Nix rather than Ansible, as Nix is much lighter weight. Upgrading my dependencies through Ansible usually takes me about 20 minutes per dependency, whereas I can do the same thing in Nix in about two minutes.
 
 ## Creating a simple Nix development environment
 
