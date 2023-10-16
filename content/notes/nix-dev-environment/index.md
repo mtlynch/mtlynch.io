@@ -31,7 +31,7 @@ I'm slowly migrating all of my projects to use Nix rather than Ansible, as Nix i
 
 ## Creating a simple Nix development environment
 
-I'm going to use Debian 11 for this tutorial, but anything should work.
+To demonstrate how Nix development environments work, I'm going to start with a Debian 11 system with nothing installed.
 
 ### Install Nix
 
@@ -55,7 +55,7 @@ To begin, create a new directory for the project.
 mkdir example && cd example
 ```
 
-Next, download the Nix flake, the file that defines the Nix development environment:
+Next, download or copy this Nix flake, the file that defines the Nix development environment:
 
 {{<inline-file filename="flake.nix" language="nix">}}
 
@@ -67,7 +67,7 @@ curl \
   > flake.nix
 ```
 
-If you're not familiar with Nix, the `flake.nix` file looks like a lot of confusing syntax, but a lot of it is simple boilerplate. I'll explain it in more detail below. (TODO: link)
+If you're not familiar with Nix, the `flake.nix` file looks like a lot of confusing syntax, but a lot of it is simple boilerplate. I'll explain it in more detail [below](#finding-version-strings).
 
 Finally, it's time to spin up my Nix development environment. Note that the first time you run the command, it will take a few minutes to initialize everything, but subsequent initializations will only be a few seconds.
 
