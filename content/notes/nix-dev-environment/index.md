@@ -7,15 +7,19 @@ tags:
 
 Nix is a broad product with a steep learning curve. It's capable of everything from installing a single package to managing every file and application on your OS.
 
-I've discovered that one thing Nix does well with a gentle learning curve is managing development environments.
+One useful thing you can do with Nix even as a complete beginner is manage your dev environments.
 
 Nix lets me have multiple projects on the same system that each have their own, independent view of what dependencies are available. I can have one legacy project running Python 2.7 and Node.js 4.x alongside a modern project running Python 3.11 and Node.js 20, and they won't interfere with each other.
 
-Even if you have no experience with Nix, you can use Nix-managed dev environments with about 10 minutes of work.
+Even if you have no experience with Nix, you can use Nix-managed dev environments with about 20 minutes of work.
+
+{{<notice type="info">}}
+**Note**: I'm still a Nix beginner, so I'm not sure if what I'm doing is the optimal solution. If more experienced Nix readers have suggestions for improvements, let me know, and I'll update the post.
+{{</notice>}}
 
 ## Why not manage development environments with Docker?
 
-I like Docker, and I use it for deployment and certain DevOps tasks, but I haven't found it a great solution for creating development environments.
+I like Docker, and I use it for deployment and certain DevOps tasks, but I haven't found it helpful for managing development environments.
 
 I do my development in VS Code over SSH, and Docker makes that a pain. I know there are workarounds, but I've never found them appealing.
 
@@ -23,7 +27,7 @@ I do my development in VS Code over SSH, and Docker makes that a pain. I know th
 
 For the past six years, [I've managed my development environments with Ansible](/notes/nix-first-impressions/#the-problems-with-ansible), and that's worked okay.
 
-For every software project I have, I create a dedicated virtual machine and associated Ansible playbook for configuring the server with all of my dependencies.
+For every software project I have, I create a dedicated virtual machine and associated Ansible playbook for configuring the VM with all of my dependencies.
 
 The problem is that when I want to experiment with something for a few minutes, I'm not that excited to spin up a whole VM, write a playbook, and then wait 10-20 minutes for Ansible to provision the server.
 
@@ -49,7 +53,7 @@ curl \
 
 To show Nix development environments in action, I'm going to create a simple application that runs under Python 2.7, the legacy version of Python that was officially deprecated in 2020.
 
-To begin, create a new directory for the project.
+To begin, I create a new directory for the project.
 
 ```bash
 mkdir example && cd example
@@ -67,9 +71,9 @@ curl \
   > flake.nix
 ```
 
-If you're not familiar with Nix, the `flake.nix` file looks like a lot of confusing syntax, but a lot of it is simple boilerplate. I'll explain it in more detail [below](#finding-version-strings).
+If you're not familiar with Nix, the `flake.nix` file looks like a lot of confusing syntax, but it's mostly simple boilerplate. I'll explain it in more detail [below](#finding-version-strings).
 
-Finally, it's time to spin up my Nix development environment. Note that the first time you run the command, it will take a few minutes to initialize everything, but subsequent initializations will only be a few seconds.
+Finally, it's time to spin up my Nix development environment. Note that the first time you run the command, it will take a few minutes to initialize everything, but subsequent initializations will complet in a few seconds.
 
 ```bash
 # We need NIXPKGS_ALLOW_INSECURE and --impure because Python 2.7 is past end of
@@ -124,7 +128,8 @@ So, to find the version string for Python 2.7.18.7, I [searched Nixhub for `pyth
 
 {{<img src="nixhub-info.webp" max-width="600px" has-border="true" alt="Screenshot of NixHub results showing that the human-readable version string appears first, followed by the nixpkgs version string, followed by the package name" caption="NixHub allows me to translate the human-friendly version string to a nixpkgs reference and package name.">}}
 
-Pinning exact package versions is, honestly, a huge pain. I hope that Nix tooling evolves to the point where you can just specify that you want version `2.7.18.7` rather than go through this roundabout dance of looking up the git commit hash that corresponds to the version you want. But for now, this is the best way I know how to pin versions.
+Pinning exact package versions is, honestly, a huge pain. I hope that Nix tooling evolves to the point where you can just specify that you want version `2.7.18.7` rather than go through this roundabout dance of looking up the git commit hash that corresponds to the version you want. But for now, this is the best way I know of for
+pinning versions.
 
 ## Understanding the `flake.nix` file
 
@@ -143,7 +148,7 @@ The `inputs` section is where you put the versions of different Nix sources you 
   };
 ```
 
-`devshells.default` defines the development environment you're creating for your shell. `packages` includes a list of all the packages I want available in my environment.
+`devshells.default` defines the development environment for the Nix shell. `packages` includes a list of all the packages I want available in my environment.
 
 ```nix
 devShells.default = python_dep.mkShell {
@@ -152,7 +157,7 @@ devShells.default = python_dep.mkShell {
         ];
 ```
 
-For most packages, the package name doesn't have a version. Like for `htop` or `vim`, the package name is always the same but certain packages, like Python, have multiple versions available within the same Nixpkgs version, so you have to specify `python2` as opposed to `python`, to avoid confusion with Python 3.
+For most packages, the package name doesn't have a version. For packages like `htop` or `vim`, the package name is always the same but certain packages, like Python, have multiple versions available within the same Nixpkgs version, so you have to specify `python2` as opposed to `python`, to avoid confusion with Python 3.
 
 The last relevant bit is the `shellHook` section.
 
@@ -162,7 +167,7 @@ shellHook = ''
 '';
 ```
 
-Nix runs the commands in `shellHook` just before dumping you into the shell. You can put any shell commands there.
+Nix runs the commands in `shellHook` just before dumping you into your shell. You can put any shell commands there.
 
 I like to put commands that print the versions of my dependencies so that I can see easily whether my Nix flake is working correctly.
 
@@ -275,9 +280,9 @@ You should see the following output:
 hello, world!
 ```
 
-But I'm not good at writing bash code, so my `run.sh` script could probably be improved.
+I'm a weak bash developer, so static analysis tools could probably improve my `run.sh` script.
 
-I want to pull `shellcheck` into my dev environment and get its advice about potential bash gotchas, so I update my Nix flake:
+[`shellcheck`](https://www.shellcheck.net/) is an excellent linter for bash scripts, and I use it anywhere I write bash code. I want to pull `shellcheck` into my dev environment and get its advice about potential bash gotchas, so I update my Nix flake:
 
 ```nix
 {
@@ -347,7 +352,7 @@ For more information:
 
 Hey, it worked!
 
-This feels small, but it solves a major problem I've had in the past. I like running `shellcheck` as a git pre-commit hook in all of my projects, but in the past I've had to depend on a single, system-wide version of `shellcheck`. If I see that `shellcheck` has new rules I want to apply to one of my projects, my pre-commit hooks will potentially start failing for _all_ of my projects.
+This feels small, but it solves a major problem I've had in the past. I like running `shellcheck` as a git pre-commit hook in all of my projects, but I've always had to depend on a single, system-wide version of `shellcheck`. If I see that `shellcheck` has new rules I want to apply to one of my projects, my pre-commit hooks will potentially start failing for _all_ of my projects.
 
 Nix allows me to bind each project to the version of the linter I want to run. That means I can upgrade to new linters on a per-project basis rather than sharing a single version globally.
 
@@ -361,7 +366,7 @@ Can I automate this? It turns out I can by using [`direnv`](https://direnv.net/)
 
 `direnv` is available as a normal `apt` package, but, annoyingly, on Debian Bullseye and earlier, the latest available package is 2.25.0.
 
-Since I'm using Nix flakes, I need `direnv` [2.29.0](https://github.com/direnv/direnv/releases/tag/v2.29.0) or later, so I'll use the official `direnv` installer:
+Since I'm using Nix flakes, I need `direnv` [2.29.0](https://github.com/direnv/direnv/releases/tag/v2.29.0) or later, so I'll use the official `direnv` installer instead:
 
 ```bash
 curl -sfL https://direnv.net/install.sh \
@@ -370,21 +375,21 @@ curl -sfL https://direnv.net/install.sh \
   . ~/.bashrc
 ```
 
-If that worked, you should see output like the following:
+Running `direnv` with the `--version` flag indicates I'm using the latest version available:
 
 ```bash
 $ direnv --version
 2.32.3
 ```
 
-To enable `direnv` for my directory, I need go to the directory where I have my Nix flake, and run the following commands:
+To enable `direnv` for my project, I need go to the directory where I have my Nix flake, and run the following commands:
 
 ```bash
 echo 'use flake .' > .envrc && \
   direnv allow
 ```
 
-Now, `direnv` will automatically load my Nix environment anytime I `cd` into your project directory and unload it when I exit the directory.
+Now, `direnv` will automatically load my Nix environment anytime I `cd` into my project directory and unload it when I exit the directory.
 
 ## Every new dependency makes initialization slower
 
@@ -392,21 +397,23 @@ The biggest downside I've found with Nix dev environments is that the environmen
 
 Worse, the more dependencies you have, the slower the load time becomes. Nix has to maintain [a separate instance of `nixpkgs`](https://zimbatm.com/notes/1000-instances-of-nixpkgs) for each dependency, so every new dev tool I want available means I have to pay a penalty in directory load time.
 
+Unfortunately, I haven't found a workaround for this issue.
+
 ## I don't have a good solution for Nix in CI
 
 Since I'm doing all this work to create an independent, reproducible development environment for my project, I naturally want to reuse this environment when I run my code in continuous integration (CI). Unfortunately, I haven't found a practical way of integrating Nix into my CI workflows.
 
 The problem with Nix in CI is that Nix has to do a lot of work up front to create its own environment. On my local development systems, Nix takes 60-180 seconds to initialize its environment for the first time, usually downloading multiple gigs of data from package servers.
 
-The slow initialization is annoying but tolerable on my local system because the initialization only has to happen once. On CI, it's a bigger problem because it means that simple CI steps that used to run in 10 seconds now ballon to 2 minutes of initializing Nix plus 10 seconds of doing the thing I care about.
+The slow initialization is annoying but tolerable on my local system because the initialization only has to happen once. On CI, it's a bigger problem because it means that simple CI steps that used to run in 10 seconds now balloon to 2 minutes of initializing Nix plus 10 seconds of doing the thing I care about.
 
-I tried using [Cachix](https://www.cachix.org/), a Nix-specific cloud cache. It [maybe helped](https://github.com/cachix/cachix/issues/579#issuecomment-1737809187), but I never found a way to reduce the initial load time below 90 seconds.
+I tried using [Cachix](https://www.cachix.org/), a Nix-specific cloud cache. It [maybe helped](https://github.com/cachix/cachix/issues/579#issuecomment-1737809187), but I never found a way to reduce the initial load time below 90 seconds per CI step.
 
 There are a few CI solutions built specifically around Nix ([Garnix](https://garnix.io/), [Hercules](https://hercules-ci.com/), and [smithy](https://smithy.build/)), but I haven't tried them. I'm hoping to use Nix in the CircleCI environment I already know well rather than have to learn a whole new CI system.
 
 ## My dream feature: Nix manages language-specific dependencies
 
-One thing that Nix _seems_ capable of doing, but I haven't figured out how, is managing language-specific dependencies.
+One thing that Nix _seems_ capable of doing but I haven't figured out how, is managing language-specific dependencies.
 
 For example, if I use Nix to create a Python 3 project with a list of pip dependencies in a `requirements.txt` file, I'd love for Nix to say, "Hey, your `requirements.txt` changed! I'll update your environment to match." Ditto for Node.js and my `package.json` file. But so far, I don't see a way to make Nix monitor files like that.
 
@@ -428,7 +435,7 @@ If this happens, you can fix it with `git add flake.nix`. You don't even have to
 
 ### Go: Failure to link to libc
 
-In my Go projects that depend on CGO, I've encountered this error when I try to compile my code:
+In my Go projects that depend on CGO, I've encountered this error when I try to compile my code from a Nix dev environment:
 
 ```text
 runtime.gcdata: missing Go type information for global symbol .dynsym: size 72
@@ -441,9 +448,9 @@ It looks like Go is failing to link my binary against libc. It's similar to [thi
 
 I tried adding `libc` and `musl` to my Nix environment's list of packages, but they have no effect.
 
-The only thing that fixes the linking issue is compiling my Go app with `-tags=netgo,osusergo`. I have no idea why.
+The only thing that fixes the linking issue is compiling my Go app with `-tags=netgo,osusergo`. I have no idea why that works.
 
-See my [PicoShare](https://github.com/mtlynch/picoshare/blob/1.4.0/flake.nix) flake and [build script](https://github.com/mtlynch/picoshare/blob/1.4.0/dev-scripts/build-backend) for a complete example of building a Go binary in a Nix environment.
+See my [PicoShare](https://github.com/mtlynch/picoshare/blob/1.4.0/flake.nix) flake and [build script](https://github.com/mtlynch/picoshare/blob/1.4.0/dev-scripts/build-backend) for a complete example of building multiplatform Go binaries in a Nix environment.
 
 ### Golang: version X does not match go tool version Y
 
@@ -453,7 +460,7 @@ On some of my systems, I started seeing these errors when I ran my build scripts
 compile: version "go1.18.4" does not match go tool version "go1.19.6"
 ```
 
-It turned out that my `GOROOT` environment variable was pointing to a different version of Go installed on my system.
+It turned out that my `GOROOT` environment variable pointed to a version of the Go compiler outside of my Nix environment.
 
 The quick fix was to run this command:
 
