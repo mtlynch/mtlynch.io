@@ -8,14 +8,16 @@ description: Working around manufacturing delays
 
 **New here?**
 
-Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $60-80k/month in revenue and employs seven other people.
+Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $80-100k/month in revenue and employs six other people.
 
 Every month, I publish a retrospective like this one to share how things are going with my business and my professional life overall.
 {{</notice>}}
 
 ## Highlights
 
--
+- I'm trying to work around manufacturer delays.
+- I've decided to hang onto TinyPilot's office for two more months.
+- I'm planning my escape from a miserable seller experience on RapidAPI.
 
 ## Goal Grades
 
@@ -55,6 +57,8 @@ Our assembly went according to plan, and now all of our new devices are at the w
 | Total Revenue            | $94,930.78     | $85,727.02     | <font color="red">-$9,203.76 (-10%)</font>      |
 | **Profit**               | **$28,454.42** | **$8,163.88**  | **<font color="red">-$20,290.54 (-71%)</font>** |
 
+Revenue is down a bit, but $80k +/- $10k is about our norm, so I'm not too concerned. My priority right now is sticking the landing on our manufacturing transition.
+
 Our short-term profit is down because we paid for three months' worth of Raspberry Pis this month, but our three-month average profit is still healthily above $20k/month.
 
 ## Correcting issues in the first article sample
@@ -66,21 +70,21 @@ Unfortunately, the first article sample didn't go so well.
 Paint was chipping on two out of the four samples, and the rubber feet had fallen off three out of the four samples. The cabling was disconnected on one of the devices, which prevented it from capturing audio. When I held the device sideways, the fan started scraping the case.
 
 {{<gallery caption="The first article samples had issues with paint chipping and rubber feet detaching in transit.">}}
-{{<img src="chipping-paint.jpg" max-width="500px" alt="Photo of paint chipping on TinyPilot logo on case">}}
-{{<img src="no-feet.webp" max-width="200px" alt="Photo of case bottom with feet detached">}}
+{{<img src="chipping-paint.webp" max-width="400px" alt="Photo of paint chipping on TinyPilot logo on case">}}
+{{<img src="no-feet.webp" max-width="250px" alt="Photo of case bottom with feet detached">}}
 {{</gallery>}}
 
 The issues in the sample worried me.
 
 First, it was worrying that so many things went wrong on a small sample that was supposed to show the process end-to-end.
 
-Second, it suggested not only a problem with the assembly process but with QA process as well. What was going on with the QA process that things like chipped paint and non-functional audio passed inspection?
+Second, it suggested not only a problem with the assembly process but with QA process as well. How did an independent QA process miss things like chipped paint and non-functional audio?
 
 After talking with the CEO, it turned out that the manufacturer did "extra" QA on the batch, but the additional checks actually introduced new issues.
 
 The CEO discovered that the manager overseeing the work wiped the devices with alcohol swabs to get rid of fingerprints on the metal, but the alcohol caused the paint to chip. So, they adjusted their process to prohibit alcohol wipes on the cases and to assemble the devices with gloves to prevent fingerprint smudges.
 
-The CEO believed that the manager may have opened the devices after QA and accidentally disconnected a wire, so now the QA process forbids opening the devices after the QA test is complete.
+The CEO believed that the manager may have opened the devices after QA and accidentally disconnected a wire, so now the QA process forbids opening the devices after the functional test is complete.
 
 The manufacturer believed that the feet detaching issue was due to the packaging. The box stressed the weakest part of the adhesive to the case and pulled off the feet, so they updated the packaging.
 
@@ -88,11 +92,11 @@ I was still a bit worried that something was lost in translation about our QA pr
 
 ## How do I handle the manufacturing schedule slip?
 
-In the original schedule with the manufacture, we expected to receive the first production batch by September 15th. I planned to have six to eight weeks of inventory overlapping that point, as I thought it was likely we'd see some sort of delay.
+In the original manufacturing schedule, we expected to receive the first production batch by September 15th. I estimated at the time that my in-house inventory would last until the end of October, giving me six weeks of buffer for delays.
 
 The problem is that now we've exhausted my safety buffer and are at risk of running out of inventory before the first production batch is available from the manufacturer.
 
-If we run out of inventory, we have to pause sales, which is not the end of the world, but it definitely costs us money, so I try to avoid it as much as possible. The last time we ran out of inventory was for four days in January 2022. Before that, it was one day in Jan. 2021. I _really_ dislike running out of inventory.
+If we run out of inventory, we have to pause sales. The last time we ran out of inventory was for four days in January 2022. Before that, it was one day in Jan. 2021. I _really_ dislike running out of inventory.
 
 Given the slips in the manufacturing timeline, I'm evaluating what my options are to reduce the risk of running out of stock.
 
@@ -161,8 +165,8 @@ So we probably can't get more cases in a timeline that's useful, so we'd be limi
 
 That means the possibilities look like:
 
-- Best case: There are more manufacturing delays, so making our own devices allows us to sell for 10 more days than we otherwise could have.
-- Worst case: We waste a lot of time and money building devices that the new factory could have made for us.
+- Optimistic case: There are no more delays, so we waste a lot of time and money building devices that the new factory could have made for us.
+- Pessimistic case: There are more manufacturing delays, so making our own devices allows us to sell for 10 more days than we otherwise could have.
 
 **Decision**: Don't build more devices in-house. It's a lot of time and money for something that, at best, gets us only 10 more days of having inventory.
 
@@ -176,10 +180,10 @@ Second, I can reduce marketing spend. There's no use paying for ads if we're goi
 
 So, the possibilities here look like:
 
-- Best case: There are more manufacturing delays, so reducing sales preserves profits we'd forfeit with needless ad spending or selling for too low a price.
-- Worst case: There's no manufacturing delay, and I forfeit $3-5k in profit for no reason.
+- Optimistic case: There's no manufacturing delay, so deliberately reducing our sales volume forfeits $3-5k in profit.
+- Pessimistic case: There are more manufacturing delays, so reducing sales preserves profits we'd forfeit with needless ad spending or selling for too low a price.
 
-**Decision**: Don't slow down yet, but revisit the decision if there are more delays or there are issues with the next inspection.
+**Decision**: Don't slow down yet, but revisit the decision if there are more delays or issues with the next inspection.
 
 ### How big a first batch do we order?
 
@@ -197,13 +201,13 @@ With the schedule slip from the manufacturer, I became worried about my plan to 
 
 Without an office, it would be much harder for us to do things like inspect samples from the manufacturer or perform repairs as needed.
 
-The day after I saw the first article sample, I called our building manager and asked to extend our lease. Fortunately, he hadn't put the office on the market yet, so we were able to stay until the end of the year.
+The day after I saw the first article sample, I called our landlord and asked to extend our lease. Fortunately, he hadn't put the office on the market yet, so we were able to stay until the end of the year.
 
 I'm happy with this decision, as it allows us to slow down the number of major changes happening at once. I'd like to be all set with our new manufacturing pipeline before we start redesigning our remaining in-person activities to happen without an office.
 
 ## Side projects
 
-### I need to migrate away from RapidAPI for mainly spite reasons
+### I need to migrate away from RapidAPI... for spite
 
 > **Jerry**: I'd like to return this jacket.
 >
@@ -219,11 +223,9 @@ I'm happy with this decision, as it allows us to slow down the number of major c
 
 One of the first projects I took on when I started out as a founder was [Zestful](https://zestfuldata.com), my ingredient parsing API. It's been in maintenance mode for years, but it still makes $100-200/month in passive income.
 
-The problem is that Zestful's paying customers access the service through RapidAPI, one of the worst platforms I've ever used. I originally published Zestful on a platform called Mashape, which worked pretty well, but then RapidAPI acquired Mashape and turned the platform into a bag of garbage.
+The problem is that Zestful's paying customers access the service through RapidAPI, one of the worst platforms I've ever used for anything. I originally published Zestful on a platform called Mashape, which worked pretty well, but then RapidAPI acquired Mashape and quickly tanked the experience.
 
-I've had too many issues with RapidAPI over the years to explain here, but the biggest issue is how terribly they handle metered billing. RapidAPI costs $0.02 per ingredient the client parses in their API request. So, you'd think that within milliseconds of the user making the request, RapidAPI would be able to show them the total for their upcoming bill.
-
-No, they don't. Instead, RapidAPI shows the user a bill of $0. When the month ends, only then does RapidAPI total up their requests, multiply it by the cost per request, and show the user their total owed.
+I've had too many issues with RapidAPI to explain here, but the biggest issue is how terribly they handle metered billing. I charge Zestful customers $0.02 for each ingredient they parse. For inexplicable reasons, RapidAPI doesn't report charges that users have accrued until the end of their billing cycle.
 
 Naturally, RapidAPI's billing system confuses customers. They make a bunch of requests through Zestful, see that their bill is $0, think that their usage still fits in the free tier, keep making requests, then they get a surprise bill of hundreds or thousands of dollars and refuse to pay.
 
@@ -231,15 +233,17 @@ I got a particularly egregious case of this two months ago. I saw that a user wa
 
 {{<img src="rapidapi-billing.png" max-width="800px" alt="Screenshot of RapidAPI showing failed payment of $14,512.23" caption="RapidAPI allowed a customer to rack up $14k in charges before trying to bill them weeks later" has-border="true">}}
 
-And then RapidAPI did nothing! They didn't follow up with the user, and they didn't even deactivate their account. The user can just happily keep running up charges against my service and never pay.
+RapidAPI does nothing to resolve this situation. They don't attempt to charge the customer again, and they don't even deactivate the customer's account. The user can just happily keep running up charges against my service and never pay.
 
-You might assume that because RapidAPI is fairly hands-off, they have fees that are commensurate with their minimal involvement. For context, similar providers like [Paddle](https://www.paddle.com/) and [LemonSqueezy](https://www.lemonsqueezy.com/) charge fees of 5% of seller revenue.
+You might assume that because RapidAPI is fairly hands-off, they have bargain basement prices. They'd, of course, charge less than similar providers like [Paddle](https://www.paddle.com/) and [LemonSqueezy](https://www.lemonsqueezy.com/), who charge 5% of seller revenue.
 
 RapidAPI charges a whopping **20% of revenue**!
 
-Effectively, it's even higher than that because RapidAPI only pays through PayPal, who charges their own fee of 3% + $0.30 per transaction. And absurdly, RapidAPI makes separate transactions for each of your customers. So if you have five customers on RapidAPI, RapidAPI makes five separate payments and makes you pay PayPal's transaction fee five separate times. I've received payments from RapidAPI where I lose as much as 80% to fees.
+Effectively, it's even higher than that because RapidAPI only pays through PayPal, who charges their own fee of 3% + $0.30 per transaction. And absurdly, RapidAPI makes separate payments for every customer. So, if you have five customers on RapidAPI, RapidAPI makes five separate payments and makes you pay PayPal's transaction fee five separate times. I've received payments from RapidAPI where I lose as much as 80% to fees.
 
-I've tolerated RapidAPI this long because I've relegated Zestful to a weekend hobby project, and migrating to a new payment provider never feels like a fun hobby. Now, I'm motivated enough by spite that I've begun experimenting on Paddle and LemonSqueezy to see if I can free myself from RapidAPI.
+I've tolerated RapidAPI this long because I've relegated Zestful to a weekend hobby project, and migrating to a new payment provider never feels like a fun hobby.
+
+Now, I'm motivated enough by spite for RapidAPI that I've begun experimenting on Paddle and LemonSqueezy to see if I can free myself from RapidAPI. It's not _really_ worth the dev time to save $15/month, but I'd like to stop giving money to RapidAPI, and it's handy to become familiar with a SaaS payment gateway that I'll like.
 
 {{<img src="reasons.png" max-width="600px" caption="&ldquo;What are your reasons for switching SaaS payment gateways?&rdquo;" alt="Screenshot from The Simpsons Season 4 Episode 14 of list of reasosn to adobe a little brother, including spite, malice, revenge, and profit">}}
 
@@ -247,13 +251,17 @@ I've tolerated RapidAPI this long because I've relegated Zestful to a weekend ho
 
 ### What got done?
 
--
+- Evaluated first article samples from the contract manufacturer.
+- Adapted to surprises in the manufacturing process.
+- Made use of all the remaining new and used Raspberry Pis at our office.
 
 ### Lessons learned
 
--
+- Write out complicated decisions.
+  - At the start of writing this retrospective, I didn't have a good sense of how I should adapt to manufacturing delays. Describing the situation in writing made me realize that there were several questions I needed to answer, and writing down the considerations and risks made the decisions easier.
 
 ### Goals for next month
 
 - Shift manufacturing to our contract manufacturer as quickly as possible.
 - Reduce manual effort from TinyPilot's software release process.
+- Create a plan for better enforcement of TinyPilot Pro licenses.
