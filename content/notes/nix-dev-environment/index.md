@@ -5,11 +5,11 @@ tags:
   - nix
 ---
 
-Nix is a broad product with a steep learning curve. It's capable of everything from installing a single package to managing every file and application on your OS.
+[Nix](https://nixos.org/) is a broad product with a steep learning curve. It's capable of everything from installing a single package to managing every file and application on your OS.
 
-One useful thing you can do with Nix even as a complete beginner is manage your dev environments.
+One useful thing you can do with Nix, even as a complete beginner, is manage your dev environments.
 
-Nix lets me have multiple projects on the same system that each have their own, independent view of what dependencies are available. I can have one legacy project running Python 2.7 and Node.js 4.x alongside a modern project running Python 3.11 and Node.js 20, and they won't interfere with each other.
+Nix lets me have multiple projects on the same system that each have their own independent view of what dependencies are available. I can have one legacy project running Python 2.7 and Node.js 4.x alongside a modern project running Python 3.11 and Node.js 20, and they won't interfere with each other.
 
 Even if you have no experience with Nix, you can use Nix-managed dev environments with about 20 minutes of work.
 
@@ -73,7 +73,7 @@ curl \
 
 If you're not familiar with Nix, the `flake.nix` file looks like a lot of confusing syntax, but it's mostly simple boilerplate. I'll explain it in more detail [below](#finding-version-strings).
 
-Finally, it's time to spin up my Nix development environment. Note that the first time you run the command, it will take a few minutes to initialize everything, but subsequent initializations will complet in a few seconds.
+Finally, it's time to spin up my Nix development environment. Note that the first time you run the command, it will take a few minutes to initialize everything, but subsequent initializations will complete in a few seconds.
 
 ```bash
 # We need NIXPKGS_ALLOW_INSECURE and --impure because Python 2.7 is past end of
@@ -124,7 +124,7 @@ Nixhub is a free package search service created by [Jetpack](https://www.jetpack
 
 Nixhub was only released [three months ago](https://www.jetpack.io/blog/introducing-nixhub/), and it's made my life in Nix so much easier. If I want to find the version hash for a particular version of a package, I search it in Nixhub and find the commit ID.
 
-So, to find the version string for Python 2.7.18.7, I [searched Nixhub for `python`](https://www.nixhub.io/packages/python) then scrolled down the list of results for the latest available Python 2.7.x version:
+So, to find the version string for Python 2.7.18.7, I [searched Nixhub for `python`](https://www.nixhub.io/packages/python) and then scrolled down the list of results for the latest available Python 2.7.x version:
 
 {{<img src="nixhub-info.webp" max-width="600px" has-border="true" alt="Screenshot of NixHub results showing that the human-readable version string appears first, followed by the nixpkgs version string, followed by the package name" caption="NixHub allows me to translate the human-friendly version string to a nixpkgs reference and package name.">}}
 
@@ -157,7 +157,7 @@ devShells.default = python_dep.mkShell {
         ];
 ```
 
-For most packages, the package name doesn't have a version. For packages like `htop` or `vim`, the package name is always the same but certain packages, like Python, have multiple versions available within the same Nixpkgs version, so you have to specify `python2` as opposed to `python`, to avoid confusion with Python 3.
+For most packages, the package name doesn't have a version. For packages like `htop` or `vim`, the package name is always the same, but certain packages, like Python, have multiple versions available within the same Nixpkgs version, so you have to specify `python2` as opposed to `python` to avoid confusion with Python 3.
 
 The last relevant bit is the `shellHook` section.
 
@@ -169,7 +169,7 @@ shellHook = ''
 
 Nix runs the commands in `shellHook` just before dumping you into your shell. You can put any shell commands there.
 
-I like to put commands that print the versions of my dependencies so that I can see easily whether my Nix flake is working correctly.
+I like to put commands that print the versions of my dependencies so that I can easily see whether my Nix flake is working correctly.
 
 ## Upgrading to Python 3
 
@@ -249,7 +249,7 @@ $ echo 'print("hello, world!")' > main.py && \
 hello, world!
 ```
 
-Everything is good again. I just updated by environment from Python 2.7 to Python 3.12 by changing a few lines of my Nix flake!
+Everything is good again. I just updated my environment from Python 2.7 to Python 3.12 by changing a few lines of my Nix flake!
 
 ## Adding a new dependency
 
@@ -472,7 +472,7 @@ The permanent fix was to search [all the files on my system that set environment
 
 ### Old package versions don't work
 
-I've tried certain older versions of packages, and they flat out don't work.
+I've tried certain older versions of packages, and they flat-out don't work.
 
 For example, if I choose nixpkgs version `b4e193a23a1c5d8794794e65cabf1f1135d07fd9` for `python39`, it not only breaks Python, but it breaks `shellcheck` as well:
 
