@@ -30,7 +30,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: I'm continuing to get the manufacturer unblocked wherever possible.
 - **Grade**: A
 
-Honestly, there hasn't been much to do from on my end. The limiting factor has been shipments from the manufacturer's upstream vendors.
+Honestly, there hasn't been much to do from my end. The limiting factor has been shipments from the manufacturer's upstream vendors.
 
 ### Delegate tasks for clearing the TinyPilot office
 
@@ -41,7 +41,7 @@ I ended up deciding to [stay in the office](#slowing-down-the-transition-to-full
 
 ### Use up all remaining Raspberry Pis to build TinyPilot devices
 
-- **Result**: We've used up all the Raspberry Pis to build new or refurbished devices.
+- **Result**: We've used all the Raspberry Pis to build new or refurbished devices.
 - **Grade**: A
 
 Our assembly went according to plan, and now all of our new devices are at the warehouse. We're on track to sell off our refurbished devices in the next few weeks.
@@ -69,7 +69,7 @@ In September, we received the first article sample from our manufacturer. It was
 
 Unfortunately, the first article sample didn't go so well.
 
-Paint was chipping on two out of the four samples, and the rubber feet had fallen off three them. The cabling was disconnected on one of the devices, which prevented it from capturing audio. When I held the device sideways, the fan started scraping the case.
+Paint was chipping on two out of the four samples, and the rubber feet had fallen off three of them. The cabling was disconnected on one of the devices, which prevented it from capturing audio. When I held the device sideways, the fan started scraping the case.
 
 {{<gallery caption="The first article samples had issues with paint chipping and rubber feet detaching in transit.">}}
 {{<img src="chipping-paint.webp" max-width="400px" alt="Photo of paint chipping on TinyPilot logo on case">}}
@@ -109,7 +109,7 @@ Given the slips in the manufacturing timeline, I'm evaluating what my options ar
 
 ### What does the current schedule look like?
 
-As of October 16th, we have 164 devices on-hand, so we're due to run out of inventory by about November 8th. We also have eight refurbished devices, so that maybe buys us an extra couple of days, so let's call November 10th the day we sell out completely.
+As of October 16th, we have 164 devices on hand, so we're due to run out of inventory by about November 8th. We also have eight refurbished devices, so that maybe buys us an extra couple of days, so let's call November 10th the day we sell out completely.
 
 Here's a schedule of how our supply looks based on our manufacturer's current estimates:
 
@@ -231,9 +231,9 @@ I've had too many issues with RapidAPI to explain here, but the biggest issue is
 
 Naturally, RapidAPI's billing system confuses customers. They make a bunch of requests through Zestful, see that their bill is $0, think that their usage still fits in the free tier, keep making requests, then they get a surprise bill of hundreds or thousands of dollars and refuse to pay.
 
-I got a particularly egregious case of this two months ago. I saw that a user was racking up thousands of dollars in charges, so I messaged them through the platform letting them know and offered a custom plan that would save them money. They ignored me, and their final bill was $14.5k. RapidAPI tried billing their credit card a month later, and the payment was declined.
+I got a particularly egregious case of this two months ago. I saw that a user was racking up thousands of dollars in charges, so I messaged them through the platform, letting them know, and offered a custom plan that would save them money. They ignored me, and their final bill was $14.5k. RapidAPI tried billing their credit card a month later, and the payment was declined.
 
-{{<img src="rapidapi-billing.png" max-width="800px" alt="Screenshot of RapidAPI showing failed payment of $14,512.23" caption="RapidAPI allowed a customer to rack up $14k in charges before trying to bill them weeks later" has-border="true">}}
+{{<img src="rapidapi-billing.png" max-width="800px" alt="Screenshot of RapidAPI showing failed payment of $14,512.23" caption="RapidAPI allowed a customer to rack up $14k in charges before trying to bill them weeks later." has-border="true">}}
 
 RapidAPI does nothing to resolve this situation. They don't attempt to charge the customer again, and they don't even deactivate the customer's account. The user can just happily keep running up charges against my service and never pay.
 
