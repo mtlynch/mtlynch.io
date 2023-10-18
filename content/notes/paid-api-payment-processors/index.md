@@ -114,6 +114,8 @@ No response from support after four days.
 
 Had to do weird ID verification where I have to upload my ID and a video of me saying numbers and turning my head.
 
+Sent a second email, got a response from a bot who couldn't answer any questions.
+
 ## Other providers that don't meet my criteria
 
 ### Stripe
