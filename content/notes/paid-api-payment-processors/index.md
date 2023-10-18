@@ -110,6 +110,10 @@ content-length: 100
 
 New API docs but they don't seem to cover subscription modifiers.
 
+No response from support after four days.
+
+Had to do weird ID verification where I have to upload my ID and a video of me saying numbers and turning my head.
+
 ## Other providers that don't meet my criteria
 
 ### Stripe
