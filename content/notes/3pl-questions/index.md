@@ -27,6 +27,8 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 ## Recordkeeping / auditing
 
 - How often do you do stocktakes?
+- Do I have access to your inventory tracking system?
+  - If not, how frequently do you share reports of inventory counts and changes?
 - How will you share records of inventory changes with me?
   - i.e., When did products arrive at your warehouse? When did they go out for customer orders? When did stocktakes happen?
 
@@ -38,6 +40,7 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 
 ## Shipping
 
+- Do you pass through postage costs directly from couriers or do you add a surcharge?
 - Which shipping couriers and services do you support for domestic orders?
 - Which shipping couriers and services do you support for international orders?
   - Can you ship international orders [delivered duty paid (DDP)](https://www.investopedia.com/terms/d/delivery-duty-paid.asp)?
