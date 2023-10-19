@@ -202,32 +202,43 @@ The UPS I ended up buying has a XX battery, and it reports 30 minutes of battery
 
 ### Candidates
 
-- Tripp-Lite XX
-- CyberPower XX
+| Brand          | Model                                                                                                                               | Power   | Outlets | Price   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- | ------- |
+| **CyberPower** | [**CP1500PFCRM2U**](https://www.bhphotovideo.com/c/product/1709939-REG/cyberpower_cp1500pfcrm2u_cp15_1500va_100w_2u_rackmount.html) | 1500 VA | 8       | $334.95 |
+| Tripp Lite     | [SMART1500LCD](https://www.newegg.com/tripp-lite-smart1500lcd-5-15r/p/N82E16842111052)                                              | 1500 VA | 8       | $298.00 |
+| CyberPower     | [CPS1500AVR](https://www.newegg.com/cyberpower-cps1500avr/p/N82E16842102006)                                                        | 1500 VA | 8       | $459.95 |
+| CyberPower     | [OR700LCDRM1U](https://www.newegg.com/cyberpower-or700lcdrm1u/p/N82E16842102088)                                                    | 700 VA  | 4       | $299.00 |
 
-### Review: Tripp-Lite XX
+### Review: Tripp Lite SMART1500LCD
 
-I originally purchased the Tripp-Lite XX, but it was incredibly noisy.
+I originally purchased the Tripp Lite SMART1500LCD, but it was incredibly noisy.
 
 I didn't even realize battery backups could _be_ noisy. I had my previous APC battery backup for XX years, and it's completely silent except when it loses power and fails over to battery backup.
 
-The Tripp-Lite UPS was instantly the loudest thing in my rack, maybe the loudest thing in my whole house. It was like a hair dryer running on low. My wife could hear it in my office from our bedroom upstairs.
+The Tripp Lite UPS was instantly the loudest thing in my rack, maybe the loudest thing in my whole house. It was like a hair dryer running on low. My wife could hear it in my office from our bedroom upstairs.
 
-I thought maybe it was defective, so I reached out to Tripp-Lite and sent them a video, and they said that it was working as intended.
+I thought maybe it was defective, so I reached out to Tripp Lite and sent them a video, and they said that it was working as intended.
 
 I considered just dealing with it, but it was so painfully loud that I decided I couldn't keep it.
 
 To my surprise, I realized Newegg's return policy was "replacement only." I'd always had an easy return policy with Newegg so I didn't even think to check. Fortunately, I begged them, and they refunded me.
 
-### Review: CyberPower XX
+### Review: CyberPower CP1500PFCRM2U
 
-When I realized the Tripp-Lite UPS was a no-go, I ordered the other UPS I considered: the CyberPower XX.
+When I realized the Tripp Lite UPS was a no-go, I ordered the other UPS I considered: the CyberPower CP1500PFCRM2U.
 
 The first thing I did was turn it on and listen for noise. Nothing! It was completely silent. It makes a noise when there's a power outage and it cuts over to battery, but that's fine.
 
 I really like the CyberPower UPS. It has a nice display, user-friendly.
 
 ## Choosing a power strip
+
+### Candidates
+
+| Brand      | Model                                                                                                              | Outlets | Price  |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ | ------- | ------ |
+| Tripp Lite | [RS-1215-RA](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | 12      | $78.11 |
+| CyberPower | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                 | 12      | $59.84 |
 
 TODO: Why power strip? Need it for components that don't need battery backup.
 
@@ -238,6 +249,8 @@ More important to have more rear outlets. I occasionally use the front outlets, 
 ## Choosing a Raspberry Pi rack mount
 
 I do a lot of professional and hobby projects with Raspberry Pis. I thought it would be fun to have a Raspberry Pi rack in my server. I didn't choose a PoE switch, but I had a 5-port PoE switch from my previous setup that I could chain together.
+
+[UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) - $189.99
 
 Uctronics - draw the fucking owl instructions
 don't fit together great
