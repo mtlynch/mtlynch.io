@@ -116,7 +116,7 @@ Had to do weird ID verification where I have to upload my ID and a video of me s
 
 Sent a second email, got a response from a bot who couldn't answer any questions.
 
-Had to send to different email address.
+Had to send to different email address specifically for sellers.
 
 Paddle required a utility bill after I did verification. Accidentally verified my bank early.
 
