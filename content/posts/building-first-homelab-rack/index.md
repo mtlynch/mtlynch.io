@@ -15,6 +15,10 @@ My wife has expressed frustration at how we never clean certain parts of my offi
 
 TODO: Photo of wires
 
+## I don't want your life story &mdash; just show me the rack
+
+If you want to skip the explanations and jump to my rack, click below.
+
 ## But I'm not a server rack guy
 
 I had never considered buying a rack. I didn't think I was that seriously into homelab. I had some components, but there was just a VM server here, a data server there. A few switches scattered around.
@@ -164,7 +168,11 @@ I wish I had chosen PoE support.
 
 ## Choosing 10G NICs
 
-Michael Stapelberg uses Mellanox (TODO: link)
+If you choose to get a 10G switch, your work isn't over. Because now you have to buy 10G networking adapters for all the systems you want to enjoy 10G speeds.
+
+Michael Stapelberg is an excellent blogger, and he's my idol in terms of maximizing network speed in his house. He was homelab blogger I saw who explained how he upgraded his entire house to 10G and got a 10G link to the Internet too.
+
+Michael Stapelberg uses Mellanox (TODO: link), so I figured that it would be good enough for me.
 
 ## Choosing a UPS (battery backup)
 
@@ -236,7 +244,7 @@ don't fit together great
 PoE fan is super loud, but you can turn it off
 HDMI ports need to be secured better
 
-## Choosing Rack shelves
+## Choosing rack shelves
 
 Beware the bottom lip.
 
