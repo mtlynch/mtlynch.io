@@ -98,11 +98,11 @@ Do you know how difficult it is to distinguish between a sound that occurs 10 mi
 
 Here's a video of me playing with my poor, patient kitten Black Magic. The audio is slightly out of sync with the video. Is the audio ahead of the video or behind it?
 
-{{< video src="magicjump.mp4" caption="Example of a video clip with audio and video out of sync">}}
+{{<video src="magicjump.mp4" caption="Example of a video clip with audio and video out of sync">}}
 
 Here's the part where Magic jumps, slowed to 1/5th speed:
 
-{{< video src="magicjump-slowmo.mp4" caption="Audio and video out of sync, slowed to 1/5th speed">}}
+{{<video src="magicjump-slowmo.mp4" caption="Audio and video out of sync, slowed to 1/5th speed">}}
 
 {{<notice type="info">}}
 **Answer**: The audio is coming in a few milliseconds late.
@@ -154,7 +154,7 @@ When the files came back, the quality was undisputably better. My captures alway
 
 Here's a video that compares the digitization company's capture with one of my own:
 
-{{< video src="programming-pro-vs-mine.mp4" caption="A comparison of professional video capture vs. my own on a tape of my mom recording my first experience writing code" max-width="640px">}}
+{{<video src="programming-pro-vs-mine.mp4" caption="A comparison of professional video capture vs. my own on a tape of my mom recording my first experience writing code" max-width="640px">}}
 
 ## Step 2: Editing
 

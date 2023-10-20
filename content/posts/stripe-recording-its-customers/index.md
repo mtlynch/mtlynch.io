@@ -34,7 +34,7 @@ I discovered this by accident while adding paid plans to my [portfolio rebalance
 
 After successfully implementing my app's payment flow with Stripe, I noticed that every page navigation generated a new HTTP POST request to a Stripe URL:
 
-{{< video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app">}}
+{{<video src="stripe-phone-home.mp4" caption="The Stripe.js library reports back to Stripe every time I visit a new page in my app">}}
 
 This was strange because none of the pages I visited contained any calls to Stripe's library. In fact, my app doesn't collect payment information from users until they create an account, but Stripe was making HTTP requests when I landed on my app's homepage as a brand new user with no cookies or stored credentials.
 

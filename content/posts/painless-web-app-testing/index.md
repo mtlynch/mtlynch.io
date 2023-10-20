@@ -239,7 +239,7 @@ Here's what the whole process looks like from the console:
 
 Cypress creates a video recording of every test run. This is my favorite feature, as it's a tremendous help in diagnosing test failures:
 
-{{< video src="spec.js.mp4" caption="Cypress recording of end-to-end tests (slowed down to 1/4 speed)">}}
+{{<video src="spec.js.mp4" caption="Cypress recording of end-to-end tests (slowed down to 1/4 speed)">}}
 
 ## Test failure screenshots
 

@@ -108,15 +108,15 @@ To choose their asset allocation on Portfolio Rebalancer, the user adjusts a ser
 
 My initial implementation was that +1% in one slider should mean -0.5% in the other two sliders. It quickly became apparent that wouldn't work, because if you set your first slider to 60%, then change your next slider to 10%, it auto-adjusted the last slider you set:
 
-{{< video src="sliders-naive.mp4" caption="First implementation: can't ever specify the set of percentages you want">}}
+{{<video src="sliders-naive.mp4" caption="First implementation: can't ever specify the set of percentages you want">}}
 
 Next, I tried adding a checkbox to "lock" a particular slider into place, but that felt convoluted and allowed the user to get into states where the percentage totals exceeded 100%:
 
-{{< video src="sliders-locking.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing">}}
+{{<video src="sliders-locking.mp4" caption="Second implementation: extra \"lock\" controls are ugly and confusing">}}
 
 Finally, I realized the more intuitive behavior is to just auto-adjust the slider you touched least recently:
 
-{{< video src="sliders-final.mp4" caption="Final implementation: balance changes against the least recently changed slider">}}
+{{<video src="sliders-final.mp4" caption="Final implementation: balance changes against the least recently changed slider">}}
 
 ## Interesting discoveries
 
