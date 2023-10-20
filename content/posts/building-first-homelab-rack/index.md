@@ -7,11 +7,11 @@ tags:
 
 TODO: Table of contents
 
-Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). I often had several programming projects running at once, and I was tired of
+Six years ago, I built my [first home server](/building-a-vm-homelab-2017/). In a given week, I generally worked on four or five programming projects, and I was tired of restarting a bunch of services whenever I had to restart my main Windows desktop. I built a second PC running Linux, and I designated that as my home server. Whenever I wanted to do software development, I created a virtual machine on that server and accessed it remotely over SSH.
 
-Over the years, I've gotten more into the homelab scene and added custom NAS, firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
+That first server served me well, so over the years, I've gotten more into the homelab scene and added custom NAS, firewall, and more advanced switches. And I work with Raspberry Pis so I had several Raspberry Pis everywhere.
 
-My wife has expressed frustration at how we never clean certain parts of my office because of all the wires. I felt like, "It's not that many wires." And then I really looked and realized, it's kind of a lot of wires.
+My wife has expressed frustration at how I never clean certain parts of my office because of all the wires. I felt like, "It's not that many wires." And then I really looked and realized, it's kind of a lot of wires.
 
 TODO: Photo of wires
 
@@ -233,41 +233,80 @@ I really like the CyberPower UPS. It has a nice display, user-friendly.
 
 ## Choosing a power strip
 
-### Candidates
-
-| Brand      | Model                                                                                                              | Outlets | Price  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ | ------- | ------ |
-| Tripp Lite | [RS-1215-RA](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | 12      | $78.11 |
-| CyberPower | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                 | 12      | $59.84 |
-
 TODO: Why power strip? Need it for components that don't need battery backup.
 
-### Review: XX
+For example, I keep a little IoT device in my rack that [monitors performance of my solar panels](/notes/debugging-vlans-tp-link/#mistake-2-forgetting-to-add-my-router-to-the-vlan). That device is not at all critical, so I'm fine if it goes offline during a power failure. In fact, I prefer it to go offline because I don't want it eating up my scarce battery life in an outage.
 
-More important to have more rear outlets. I occasionally use the front outlets, but I've only ever used two at a time at maximum. If I were doing it again, I'd choose a strip that has more rear outlets and fewer
+### Candidates
+
+| Brand          | Model                                                                                                                  | Outlets | Price      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | ---------- |
+| **Tripp Lite** | [**RS-1215-RA**](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | **12**  | **$78.11** |
+| CyberPower     | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                     | 12      | $59.84     |
+
+Power strips are, frankly, not so exciting, so I didn't shop around very much. I just looked at two.
+
+### Review: Tripp Lite RS-1215-RA
+
+More important to have more rear outlets. I occasionally use the front outlets, but I've only ever used two at a time at maximum. If I were doing it again, I'd choose a strip that has more rear outlets and fewer front outlets.
+
+### Review: CyberPower CPS1215RMS
+
+I bought this strip a few years ago for the TinyPilot office (TODO: link). I decided not to buy it again because the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
 
 ## Choosing a Raspberry Pi rack mount
 
 I do a lot of professional and hobby projects with Raspberry Pis. I thought it would be fun to have a Raspberry Pi rack in my server. I didn't choose a PoE switch, but I had a 5-port PoE switch from my previous setup that I could chain together.
 
+### Review: UCTRONICS Ultimate Rack with PoE Functionality
+
 [UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) - $189.99
 
-Uctronics - draw the fucking owl instructions
-don't fit together great
+It's fine. PoE HATs for a Raspberry Pi 4 are generally around $XX, so the fact that you're getting four included means there's not a ton of money left over.
+
+The pieces don't fit together that well. There are gaps around the HDMI ports. The HDMI ports are also secured poorly, so they strain and bend when you actually plug in an HDMI cable, so I worry they're going to snap off.
+
 PoE fan is super loud, but you can turn it off
-HDMI ports need to be secured better
+
+The instructions were pretty bad. Step one is to screw in the OLED. Okay, that's fine.
+
+Step two is to screw in the power button. Sure, easy peasy.
+
+TODO: Photo
+
+Step three is: okay, put together five other things!
+
+TODO: Photo
 
 ## Choosing rack shelves
 
-Beware the bottom lip.
+I have a few components in my rack that are small and don't have rack-mounting options:
+
+- My OPNsense firewall server (running on a XX mini PC)
+- My TinyPilot
+- Dell XX mini PC (I use it for testing)
+
+It's about two 2U shelves of stuff, though I could theoretically cram it into one shelf if I really wanted.
+
+### Candidates
 
 ### Review: Star-Tech shelves
 
-I originally purchasd
+I originally purchased the Star-Tech shelves because Star-Tech has such a good reputation in the server world.
 
-Star-Tech shelf extends over into next level.
+When I installed them into my rack, I thought I was making a mistake. They have a bottom lip that bends downward into the next rack slot. So it either means that you have to allocate 3U to each of your 2U shelves or you have to shift everything down by 0.5U. Or maybe you conveniently have something in your rack that takes up 0.8 U, but that would be weird.
+
+It was so bizarre that I thought I must be doing something wrong.
+
+I couldn't even figure out a purpose for the lip. It would make sense if it curved up because that would protect items on the shelf from slipping off, but why bend down? It didn't look like it provided any structural support to the shelf either.
+
+I scoured reviews of this shelf to see if anyone mentioned it, and people did, but nobody seemed to mind that much. They were just like, "Oh, yeah, it extends to the bottom a bit." Huh? Why would anyone accept that?
 
 ### Review: XX shelves
+
+I found these no-name shelves on Amazon, and they worked great. They have a lip, but it bends _upward_ to be _useful_.
+
+I like these shelves. They were easy to install, they're low in price, and they keep themselves within the 2U space they promise.
 
 ## Choosing a patch panel
 
@@ -321,27 +360,31 @@ The velcro ones are secure, but they're a bit too secure. They take me about 5 s
 
 Once I selected my rack components, the next step was figuring out how to lay everything out. I tried to find guides for how you're supposed to do it, and I didn't find much guidance.
 
-I just used a Google Sheets document and color coded it.
+Surprisingly, I couldn't find reliable guidance on how to arrange the components in a server rack, so I just reasoned out what made sense to me.
 
-### Heavy components go on the bottom
+To plan the layout, I used a Google Sheets document and color coded it. This was also helpful in thinking about what size rack to purchase. I wanted the rack to contain everything I wanted now plus a little room to grow.
+
+### Place heavy components on the bottom of your rack
 
 The one piece of guidance around server rack layouts that everyone seemed to agree on is that heavier components should go on the bottom.
 
 The rack has a lot of expensive equipment. You don't want it to fall over and damage things or, worse, injure someone. So, you want it to have a low center of gravity to maximize stability.
 
-The heaviest component in my rack by far is the UPS.
+The heaviest component in my rack by far is the UPS, weighing in at a whopping XX lbs (XX kg).
 
-Things with
+The rest of the components are relatively light. I don't yet have a rack-mount chassis for my TrueNAS server, but that will be the next heaviest thing, as hard disk drives are heavy.
+
+Patch panels weigh almost nothing, and networking switches are fairly light as well. For this reason, most server racks keep these components in the top two slots of the rack.
 
 ### Keep components with front-facing connections close together
 
-An obvious example is your patch panel and your network switch. They should be in adjacent rack slots
-
-Or, more generally, components that have front-facing ports should be close together. Otherwise, you have Ethernet cables stretching all across your rack and blocking stuff.
+It wasn't obvious to me until I built my server, but it's important to closely arrange components that connect through front-facing ports. For example, my patch panel and networking switch go in adjacent rack slots because I'd otherwise have Ethernet cables stretched over other components in the rack.
 
 ### Rear cables don't matter so much
 
-Some of the guidance I read said to minimize power cable length. Maybe this matters in a data center where you're replicating the setup 100x. In a home environment, I don't see the point. If I connect a server to the UPS with a 2 ft. power cable instead of a 6 ft. power cable, there's no real difference.
+Some of the guidance I read said to arrange components so that you can minimize the length of your power cables. I didn't see the point of this guidance.
+
+It might be important to minimize the length of power cables in a data center where you're replicating the same setup hundreds of times. In a home environment, I don't see the difference between connect connecting my server to my UPS with a 2 ft. power cable instead of a 6 ft. power cable.
 
 ## My final rack setup
 
@@ -355,6 +398,16 @@ TODO: List of components and prices
 | Power strip    | XX            | XX    | A            |
 
 TODO: Photos
+
+## Thoughts on my life with a rack
+
+Nice to have everything close together.
+
+I'm very happy with my new rack. No regrets. It definitely beats my old setup of having bits and pieces of infrastructure scattered around my office. Now everything is in in one location that's organized decently.
+
+I underestimated how nice it would be to have my TinyPilot physically close to all of my devices. Before the rack, I used to keep my TinyPilot on the floor next to my desk. If I ever needed to debug something on a server or a Raspberry Pi on the other side of my office, I avoided it because it involved shutting down the TinyPilot, disconnecting a lot of wires, then reconnecting them on the other side of the room.
+
+With everything now physically adjacent, it's easy for me to quickly plug TinyPilot in to any misbehaving device for low-level access. It came in handy for things like exploring NixOS and figuring out how to install NixOS on a Raspberry Pi.
 
 ## Next steps in my rack
 
