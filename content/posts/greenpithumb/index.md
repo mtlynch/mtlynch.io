@@ -64,7 +64,7 @@ The code for GreenPiThumb is open-source and features:
 
 ## Hardware architecture
 
-{{< figure src="https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" caption="GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))">}}
+{{<figure src="https://raw.githubusercontent.com/JeetShetty/GreenPiThumb/master/doc/greenpithumb_wiring.png" alt="GreenPiThumb wiring diagram" caption="GreenPiThumb wiring diagram ([downloadable file](https://github.com/JeetShetty/GreenPiThumb/tree/master/doc))">}}
 
 The Raspberry Pi reads _digital_ signals, so it's not capable of reading analog sensors directly. We use the [MCP3008 analog-to-digital converter](https://smile.amazon.com/dp/B00EU1PY06/) to produce digital readings from the analog [soil moisture sensor](https://www.sparkfun.com/products/13322) and light sensor.
 
@@ -74,7 +74,7 @@ Lastly, we have a [12V water pump](https://smile.amazon.com/gp/product/B00PRM9UZ
 
 ## Software architecture
 
-{{< figure src="https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png" alt="GreenPiThumb software architecture" caption="GreenPiThumb software architecture">}}
+{{<figure src="https://docs.google.com/drawings/d/1vY9YU9fFoyrKUh8pRe6gN0bLD1JFDq5ngkTh7yOQrOA/export/png" alt="GreenPiThumb software architecture" caption="GreenPiThumb software architecture">}}
 
 ### GreenPiThumb back end
 
@@ -192,7 +192,7 @@ Below are some images of our completed GreenPiThumb build:
 
 The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](https://smile.amazon.com/gp/product/B00FZAY86C/), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
-{{< video src="timelapse.mp4">}}
+{{<video src="timelapse.mp4">}}
 
 For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 

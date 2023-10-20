@@ -136,11 +136,11 @@ For my next server, I've dreamed about getting some sort of virtual console. The
 
 For the past few weeks, I've been trying to build the poor-man's remote console with a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/). The keyboard part works great over the network:
 
-{{< video src="keyboard-demo_2020-05-28.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
+{{<video src="keyboard-demo_2020-05-28.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
 
 Displaying video from the target machine is trickier, but I have it working now with about 1 second of latency. Here's what that looks like:
 
-{{< video src="kvmpi-demo.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
+{{<video src="kvmpi-demo.mp4" caption="I got a Raspberry Pi to work as a browser-controlled keyboard">}}
 
 Right now, the video appears in a separate window, but I'm working on embedding it directly in the webpage.
 

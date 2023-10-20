@@ -28,7 +28,7 @@ I used this workflow to edit and share my family's home videos at a cost of only
 
 As an example, the video I use throughout this tutorial is a [public domain home video](https://archive.org/details/TexasFar1952) from a Texas family in the 1950s:
 
-{{< video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" max-width="600px">}}
+{{<video src="https://github.com/mtlynch/free-usage-videos/blob/master/texas-farm-family-1952/TexasFar1952.mp4?raw=true" caption="Public domain video that this tutorial uses as the raw video to edit and share (note that this video contains no audio)" max-width="600px">}}
 
 To download this video, run the commands below:
 

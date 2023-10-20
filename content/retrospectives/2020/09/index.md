@@ -171,7 +171,7 @@ These dumb tools helped me in two ways. First, they gave me a sense of accomplis
 
 It turned out that most of my problems weren't even HID descriptors but rather the shell commands I was using to create them. Once I cleared other tedious tasks from my mind, I realized that I should verify that the files on disk match my expectations. They didn't. Once I realized that, a working mouse descriptor soon followed.
 
-{{< video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop">}}
+{{<video src="tinypilot-mouse.mp4" caption="Using TinyPilot to simulate mouse and keyboard movements on a remote laptop">}}
 
 ## Legacy projects
 
