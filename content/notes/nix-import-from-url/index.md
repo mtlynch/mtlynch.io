@@ -137,7 +137,7 @@ I implement the heavy lifting for the alias in a bash function called `git_sync_
 
 ### Gotcha: Escaping dollar signs
 
-One of the gotchas that caught me when trying to move my bash functions to Nix is that I need to escape the `$` signs. Otherwise, Nix will try to interpolate them as local variables, but they're bash variables, not Nix variables.
+One of the gotchas that caught me when trying to move my bash functions to Nix is that I need to escape the `${` sequences. Otherwise, Nix will try to interpolate them as local variables, but they're bash variables, not Nix variables.
 
 Here's how I originally tried to write one of the lines in my `git_sync_and_branch` bash function:
 
@@ -151,7 +151,7 @@ Nix failed with this error:
  error: undefined variable 'MAIN_BRANCH'
 ```
 
-I need to [escape the `$`](https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
+I need to [escape the `${`](https://nixos.org/manual/nix/stable/language/values.html?highlight=escape#primitives) by prepending it with two single quotes (`''`) like this:
 
 ```bash
 git checkout "''${MAIN_BRANCH}"

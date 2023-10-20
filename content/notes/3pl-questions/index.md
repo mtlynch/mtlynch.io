@@ -61,3 +61,8 @@ I didn't know anything about 3PLs before starting this process, so there were a 
 - How do we handle it when a customer asks us to hold off on fulfilling an order?
   - What's the process of pausing fulfillment on an order?
   - Will your order management system recognize Shopify's "pause fulfillment" feature?
+
+## Location
+
+- Where are your warehouses located?
+  - Note: Depending on your tax situation, fulfilling your orders from a warehouse in a state outside of your headquarters means you're responsible for collecting and paying sales tax in the warehouse's state. Keep this in mind, as filing taxes in a new state is a significant administrative burden.
