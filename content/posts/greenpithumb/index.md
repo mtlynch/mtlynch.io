@@ -120,14 +120,14 @@ We ultimately settled on "spray and pray." It was a solution borne out of lookin
 
 We turned on the pump, and the severed finger of the glove immediately shot off the tubing, spraying water all over my apartment's wall. We reattached everything, but this time, stuck a safety pin just in front of the rubber bands so that they couldn't slide forward.
 
-{{< gallery caption="Kitchen glove turned water distributor">}}
+{{<gallery caption="Kitchen glove turned water distributor">}}
 {{<img src="sprayer-front.jpg" alt="Water sprayer (front)">}}
 {{<img src="sprayer-side.jpg" alt="Water sprayer (side)">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 It's not the most _elegant_ solution, but it mostly works.
 
-{{< youtube bI6UaJjYZ00 >}}
+{{<youtube bI6UaJjYZ00>}}
 
 ### The gardening part wasn't supposed to be hard
 
@@ -135,7 +135,7 @@ Electronics were supposed to be the big challenge of GreenPiThumb. Gardening did
 
 It turned out that we didn't have basic gardening skills. GreenPiThumb is intended to automate the human part of tending an indoor garden, but to automate anything, a human has to know what "correct" looks like. It was hard to decide whether GreenPiThumb was watering too much or too little because we ourselves had no idea how much water to use. That's how we ended up accidentally making this horticultural snuff film:
 
-{{< youtube TYAdw6BwYyQ >}}
+{{<youtube TYAdw6BwYyQ>}}
 
 ### How hard can it be to measure moisture?
 
@@ -179,16 +179,16 @@ We ultimately decided to switch to a hybrid system. GreenPiThumb now waters the 
 
 Below are some images of our completed GreenPiThumb build:
 
-{{< gallery >}}
+{{<gallery>}}
 {{<img src="greenpithumb-side-full.jpg" alt="GreenPiThumb full system">}}
 {{<img src="greenpithumb-front.jpg" alt="GreenPiThumb full system">}}
-{{</ gallery >}}
+{{</gallery>}}
 
-{{< gallery >}}
+{{<gallery>}}
 {{<img src="greenpithumb-just-electronics.jpg" alt="GreenPiThumb electronics">}}
 {{<img src="greenpithumb-pump.jpg" alt="GreenPiThumb pump">}}
 {{<img src="greenpithumb-reservoir.jpg" alt="GreenPiThumb reservoir">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 The timelapses have been the most fun part of this process. This one is from our first batch of green beans (R.I.P.). We didn't realize how quickly the plants would outgrow the [close overhead angle](/greenpithumb/greenpithumb-overhead-mount.jpg). We eventually switched to a [larger bendy mount](https://smile.amazon.com/gp/product/B00FZAY86C/), which gets a better angle on the plant's full lifecycle, but our original setup caught a great timelapse of the first few days of growth:
 
@@ -196,7 +196,7 @@ The timelapses have been the most fun part of this process. This one is from our
 
 For the second batch, we kept the camera in the exact same position throughout growth. This is the progress of batch two so far:
 
-{{< youtube 6bvb2EvKQ58 >}}
+{{<youtube 6bvb2EvKQ58>}}
 
 ## Lessons learned
 

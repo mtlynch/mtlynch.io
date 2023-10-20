@@ -154,7 +154,7 @@ A less wasteful solution would be to buy a new keyboard and offer the old one fo
 
 {{<notice type="info">}}
 **Sidenote**: Friends suggested donating the keyboard to [The Salvation Army](https://www.salvationarmyusa.org), but I don't think it makes sense. For higher-value items, I happily donate. Below a certain price threshold, I suspect that sending it through The Salvation Army's whole receiving, processing, displaying, and selling process is a net negative.
-{{< /notice >}}
+{{</notice>}}
 
 ---
 

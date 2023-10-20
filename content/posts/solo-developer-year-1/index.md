@@ -184,7 +184,7 @@ As someone who has always valued independence, I love being a solo developer. It
 
 {{<notice type="info">}}
 _**Sidenote**: My friends with children tell me that kids won't complicate this at all._
-{{< /notice >}}
+{{</notice>}}
 
 ## Doubts
 

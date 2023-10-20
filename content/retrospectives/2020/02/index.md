@@ -114,10 +114,10 @@ I'm hoping show tickets will be easier to sell than comedy classes. The cost to 
 
 I've been attending two comedy shows per week to meet new comedians and ask them how WanderJest can be useful to them. In person, performers seem enthusiastic about WanderJest, but when I follow up later asking for their photo and bio to list on the site, only about half respond. A small minority are vocal enough champions that they promote the site without me even asking:
 
-{{< gallery caption="Comedians promoting WanderJest on Facebook">}}
+{{<gallery caption="Comedians promoting WanderJest on Facebook">}}
 {{<img src="todd-therrien-share.jpg" alt="Screenshot of Todd Therrien sharing WanderJest on Facebook">}}
 {{<img src="matt-woodland-share.jpg" alt="Screenshot of Matt Woodland sharing WanderJest on Facebook">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 That said, WanderJest is still far from being part of any performer's or show organizer's workflow. Even the most passionate WanderJest supporters still use Facebook events as their primary channel for promotion. I don't blame them, as event creation on WanderJest is still clunky &mdash; they have to fill out a [Typeform](https://typeform.com/), and then I add their show manually. I want to add enough features to the site that using WanderJest makes show organizers' lives easier than promoting a show without it.
 
@@ -142,10 +142,10 @@ Fancy features and promotions mean nothing unless I can demonstrate to show orga
 
 I've posted on my town's local Facebook group and two local subreddits: [/r/northampton](https://redd.it/evoo77) and [/r/springfield](https://redd.it/ey90il). The response to every post has been uniformly positive, with the /r/springfield subreddit even adding WanderJest to their permanent sidebar.
 
-{{< gallery caption="Response to WanderJest social media posts">}}
+{{<gallery caption="Response to WanderJest social media posts">}}
 {{<img src="fb-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Facebook">}}
 {{<img src="reddit-wanderjest-share.jpg" alt="Screenshot of WanderJest share on Reddit" has-border="true">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 This is one of my value propositions to show organizers. Many of these social networks have rules against promoting individual events, but people view WanderJest as a helpful resource rather than an attempt to promote a particular show.
 
