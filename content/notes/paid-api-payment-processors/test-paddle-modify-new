@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -eux
+
+PADDLE_VENDOR_ID='15062' # Sandbox
+#PADDLE_SUBSCRIPTION_ID='sub_01hcq7a0e33vs9ct0thy0nrjg0' # Sandbox
+PADDLE_SUBSCRIPTION_ID='sub_01hd7yjjsfebpxegg5ddp7csnn' # Sandbox
+
+
+curl \
+  --request POST \
+  --url "https://sandbox-api.paddle.com/subscriptions/${PADDLE_SUBSCRIPTION_ID}/charge" \
+  --header "Authorization: Bearer ${PADDLE_AUTH_CODE}" \
+  --header 'Content-Type: application/json' \
+  --header 'Accept: application/json' \
+  --data '{
+  "items": [
+    {
+      "price_id": "pri_01hd7srv3h2gfccs19c7dy92f0",
+      "quantity": 100
+    }
+  ],
+  "effective_from": "next_billing_period"
+}' | python3 -m json.tool
+
+#curl \
+#  --request GET \
+#  --url "https://sandbox-api.paddle.com/subscriptions/${PADDLE_SUBSCRIPTION_ID}?include=next_transaction" \
+#  --header "Authorization: Bearer ${PADDLE_AUTH_CODE}" \
+#  --header 'Content-Type: application/json' \
+#  --header 'Accept: application/json' | python3 -m json.tool
