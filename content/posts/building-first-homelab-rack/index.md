@@ -1,6 +1,6 @@
 ---
 title: "Building My First Homelab Server Rack"
-date: 2023-10-12T09:20:48-04:00
+date: 2023-11-12T09:20:48-04:00
 tags:
   - homelab
 ---
@@ -135,11 +135,19 @@ But I actually couldn't find any unmanaged network switches that met my criteria
 
 ### PoE or standard Ethernet?
 
-Consume more power.
+The other major choice in networking switchies is whether you want power over Ethernet (PoE) or just plain old Ethernet.
 
-Make more noise with PoE.
+Certain low-power devices can run entirely from power they draw from the Ethernet cable. For example, my home WiFi access point, the Ruckus RXX (TODO: link) supports PoE, so my access point conveniently needs only a single cable for both power and network connectivity. And I have PoE HATs for my Raspberry Pis, which enables them to run without a dedicated USB-C power cable.
+
+So if you have PoE devices or you may purchase some in the future, you may want a PoE switch. And then the other question is how many PoE devices do you need to support? Most PoE switches only support PoE on a subset of their ports (TODO: is this true), so make sure your switch has enough PoE ports for your devices now and in to the future.
+
+The downside of PoE switches is that they consume more power and they're more expensive (TODO: check). If you buy a PoE switch but have no PoE devices, you're wasting money and power on features you can't use.
+
+I've also seen reviews that claim PoE switches are noisier. I haven't experienced this, but it's something to look out for, as all my switches have been silent and fanless.
 
 ### How many ports do you need?
+
+The next question in selecting a networking switch is how many Ethernet ports you need.
 
 Obviously, you need at least as many ports as you have wired networking devices.
 
@@ -155,14 +163,24 @@ If you're just getting 1 Gbps speeds, you can just move forward
 
 ### Candidates
 
-- **TP-Link XX**
+| Brand       | Model                                                                                                                             | Ports  | Speed                        | Managed | Rackmount | PoE    | Price       | Notes                       |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | ------- | --------- | ------ | ----------- | --------------------------- |
+| **TP-Link** | [**TL-SG3428X**](https://www.newegg.com/tp-link-tl-sg3428x-24-x-rj45-4-x-sfp/p/0XP-0054-00091?Item=0XP-0054-00091&SoldByNewegg=1) | **24** | **4x10Gbps 24x1Gbps**        | **Yes** | **Yes**   | **No** | **$299.00** |                             |
+| Netgear     | [GS108LP](https://www.amazon.com/gp/product/B07G5XBM3V/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&th=1)                           | 8      | 1 Gbps                       | No      | Yes       | Yes    | $91.72      |                             |
+| Qnap        | [QSW-1105-5T-US](https://www.newegg.com/qnap-qsw-1105-5t-us-5-x-rj45/p/N82E16833831027)                                           | 5      | 2.5 Gbps                     | No      | Yes       | No     | $138.27     |                             |
+| TP-Link     | [no model name](https://www.aliexpress.us/item/3256804686136282.html)                                                             | 16     | 2x10 Gbps SFP+ 16 x 2.5 Gbps | No      | Yes       | No     | $499.90     | Chinese, no warranty for US |
+| Microtik    | [CRS305](https://www.amazon.com/MikroTik-CRS305-1G-4S-Gigabit-Ethernet-RouterOS/dp/B07LFKGP1L)                                    | 5      | 4x10 Gbps SFP+               | Yes     | No        | No     | $157.72     |                             |
+| Microtik    | [CRS328-24P-4S+RM](https://mikrotik.com/product/crs328_24p_4s_rm#fndtn-gallery)                                                   | 28     | 4x10 Gbps SFP+ 24x1Gbps      | Yes     | Yes       | Yes    | $490.50     | Hate Microtik UI            |
+| TP-Link     | [T1600G-28TS](https://www.amazon.com/TP-Link-Jetstream-24-Port-T1600G-28TS-TL-SG2424/dp/B016M1QTS2)                               | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | No     | $299.00     | Old?                        |
+| TP-Link     | [T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50)                                 | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | Yes    | $295.99     | Reviews say fans are loud   |
+| TP-Link     | [T1700G-28TQ](https://www.amazon.com/TP-Link-JetStream-24-Port-Ethernet-T1700G-28TQ/dp/B01CHP5IAC)                                | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | No     | $958.40     |                             |
 
 ### Review: TP-Link
 
 TP-Link won't let you change the admin user from "admin"
 Pretty confusing interface.
 
-Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). (TODO: Link to VLAN notes)
+Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/).
 
 I wish I had chosen PoE support.
 
