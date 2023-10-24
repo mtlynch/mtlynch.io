@@ -111,7 +111,7 @@ But lately, I've been pushing the limits on my home storage server, and I've tho
 
 The next steps up are either 2.5 Gbps or 10 Gbps. Given that I've been fairly satisfied with 1 Gbps, I thought 10 Gbps would probably be too big a jump, so I might as well take a smaller step to 2.5 Gbps.
 
-But the more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's just as hard to make the switch to 10 Gbps, but you'll have fewer headaches later. So, I thought, fine! I'll do 10 Gbps.
+But the more I read about 2.5 Gbps gear, the more complaints I saw that it's flaky and unreliable. The consensus seemed to be that it's about equally difficult to move to 2.5 Gbps or 10 Gbps, so you might as well go for 10 Gbps. So, I thought, fine! I'll do 10 Gbps.
 
 I did run into headaches, but I'll cover that more below (TOOD: link)
 
@@ -157,10 +157,6 @@ You can buy additional switches later, but if you're buying an expensive switch,
 
 I set my minimum to be 2x my current networking hosts. I currently have eight wired networking devices, so I looked for switches with at least 16 ports.
 
-### Ethernet, DAC, or fiber?
-
-If you're just getting 1 Gbps speeds, you can just move forward
-
 ### Candidates
 
 | Brand       | Model                                                                                                                             | Ports  | Speed                        | Managed | Rackmount | PoE    | Price       | Notes                       |
@@ -175,22 +171,48 @@ If you're just getting 1 Gbps speeds, you can just move forward
 | TP-Link     | [T1600G-28PS](https://www.amazon.com/TP-Link-JetStream-T1600G-28PS-24-Port-Gigabit/dp/B0196RGV50)                                 | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | Yes    | $295.99     | Reviews say fans are loud   |
 | TP-Link     | [T1700G-28TQ](https://www.amazon.com/TP-Link-JetStream-24-Port-Ethernet-T1700G-28TQ/dp/B01CHP5IAC)                                | 24     | 4x10 Gbps SFP 24x1Gbps       | Yes     | Yes       | No     | $958.40     |                             |
 
+I've tried Microtik in the past, and I want to like them. They're open-source (TODO: check this), and they're a small, independent hardware company. And there are people who love their weird 90s style UI, but I found it confusing and difficult to navigate.
+
+I've had great experience with unmanaged TP-Link switches, so I felt good about the brand. There was one in particular that had 10 2.5 Gbps ports, but it's only available in China. I could have imported it, but the device isn't tested to meet US regulations, so I didn't want the safety risk of running it in my home.
+
+I considered the T1600G-28PS, which was like everything good about the TL-SG3428X, except it _also_ had PoE. But I read several reviews that said the fans are loud, and I didn't want a noisy switch. I went with the TL-SG3428X and figured I could get a cheaper, silent unmanaged PoE switch, as I didn't actually need 24 PoE ports.
+
 ### Review: TP-Link
 
-TP-Link won't let you change the admin user from "admin"
-Pretty confusing interface.
+Overall, I like the TP-Link XX switch pretty well. It's silent, which is a big plus. I haven't had any issues with reliability.
 
-Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/).
+The TP-Link UI is not very user-friendly. I concede that some networking concepts are hard to represent in a web UI, but TP-Link has done a particularly bad job of it.
+Took forever to [get VLANs right](/notes/debugging-vlans-tp-link/). I've seen how other brands like QNAP represent VLAN controls, and I think they did a much better job than TP-Link.
 
-I wish I had chosen PoE support.
+I regret not looking around more for a managed switch that supported PoE without a noise problem. My ideal would be to have a managed switch where at least eight of the ports have PoE without sacrificing fanless operation.
 
 ## Choosing 10G NICs
 
-If you choose to get a 10G switch, your work isn't over. Because now you have to buy 10G networking adapters for all the systems you want to enjoy 10G speeds.
+If you choose a 10G switch, your work isn't over. Because now you have to buy 10G networking adapters for all the systems you want to enjoy 10G speeds.
 
 Michael Stapelberg is an excellent blogger, and he's my idol in terms of maximizing network speed in his house. He was homelab blogger I saw who explained how he upgraded his entire house to 10G and got a 10G link to the Internet too.
 
 Michael Stapelberg uses Mellanox (TODO: link), so I figured that it would be good enough for me.
+
+### Installing a 10G NIC on my Windows Desktop
+
+I wasn't able to get the NIC working in Windows. The activity lights didn't flash at all, and Windows didn't recognize anything in the PCI slot at all. In searching for solutions, I found someone mention that switching the Mellanox NIC to another PCI slot on their motherboard solved the problem. Dubious, I tried it, and to my surprise, that fixed the issue. Windows immediately recognized the NIC and got a network connection.
+
+The downside is that it now adds about five seconds to my boot because my BIOS hands control over to my Mellanox NIC as a boot device. I've tried tinkering with BIOS settings, but I can't find a way to skip it.
+
+### Installing a 10G NIC on my TrueNAS server
+
+I tried installing the same Mellanox NIC on my TrueNAS storage server, and it didn't work. TrueNAS could see the Mellanox NIC, but I couldn't get a network connection.
+
+I tried swapping it back to my Windows desktop, updating the firmware from there, and swapping it back, but no luck.
+
+I bought another 10G NIC from eBay, the Chelsio 520. The Chelsio brand is one of the most common for TrueNAS servers, and Serve the Home's buyer's guide listed it as a recommended option, so I knew from the software side that TrueNAS should support it.
+
+https://www.servethehome.com/buyers-guides/top-hardware-components-for-truenas-freenas-nas-servers/top-picks-freenas-nics-networking/
+
+No dice, unfortunately. I couldn't find "Chelsio" in the dmesg output. I did notice it was incredibly hot to the touch, so I thought maybe I got a defective NIC that was overheating. I bought yet another Chelsio NIC, but I got the same results, and it was similarly hot within a few seconds of my server booting.
+
+TODO: Link to TrueNAS forums
 
 ## Choosing a UPS (battery backup)
 
@@ -251,26 +273,30 @@ I really like the CyberPower UPS. It has a nice display, user-friendly.
 
 ## Choosing a power strip
 
-TODO: Why power strip? Need it for components that don't need battery backup.
+Even though my rack has a UPS, I find it useful to have a simple power strip as well. Some of the components in my rack are non-essential and don't need to stay online during a power outage.
 
 For example, I keep a little IoT device in my rack that [monitors performance of my solar panels](/notes/debugging-vlans-tp-link/#mistake-2-forgetting-to-add-my-router-to-the-vlan). That device is not at all critical, so I'm fine if it goes offline during a power failure. In fact, I prefer it to go offline because I don't want it eating up my scarce battery life in an outage.
 
 ### Candidates
+
+Power strips are, frankly, not so exciting, so I didn't shop around very much. I just looked at two.
 
 | Brand          | Model                                                                                                                  | Outlets | Price      |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | ---------- |
 | **Tripp Lite** | [**RS-1215-RA**](https://www.newegg.com/black-tripp-lite-12-outlets-power-strip/p/N82E16812120265?Item=9SIAFVF75F0869) | **12**  | **$78.11** |
 | CyberPower     | [CPS1215RMS](https://www.newegg.com/cyberpower-cps1215rms-12-outlets-nema-5-15r/p/N82E16842102076)                     | 12      | $59.84     |
 
-Power strips are, frankly, not so exciting, so I didn't shop around very much. I just looked at two.
+### Review: CyberPower CPS1215RMS
+
+- Grade: C
+
+I bought this strip a few years ago for the TinyPilot office (TODO: link). I decided not to buy it again because the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
 
 ### Review: Tripp Lite RS-1215-RA
 
+- Grade: B+
+
 More important to have more rear outlets. I occasionally use the front outlets, but I've only ever used two at a time at maximum. If I were doing it again, I'd choose a strip that has more rear outlets and fewer front outlets.
-
-### Review: CyberPower CPS1215RMS
-
-I bought this strip a few years ago for the TinyPilot office (TODO: link). I decided not to buy it again because the outlets are too close together. A lot of the things I plug in at the office are bricks, so they cover two outlets.
 
 ## Choosing a Raspberry Pi rack mount
 
@@ -279,6 +305,8 @@ I do a lot of professional and hobby projects with Raspberry Pis. I thought it w
 ### Review: UCTRONICS Ultimate Rack with PoE Functionality
 
 [UCTRONICS Ultimate Rack with PoE Functionality](https://www.uctronics.com/raspberry-pi/1u-rack-mount/raspberry-pi-4b-rack-mount-19-inch-1u-with-poe-and-oled-screen.html) - $189.99
+
+- Grade: C+
 
 It's fine. PoE HATs for a Raspberry Pi 4 are generally around $XX, so the fact that you're getting four included means there's not a ton of money left over.
 
@@ -298,7 +326,7 @@ TODO: Photo
 
 ## Choosing rack shelves
 
-I have a few components in my rack that are small and don't have rack-mounting options:
+Some of my existing office infrastructure has no rack mounting option, so I needed a shelf:
 
 - My OPNsense firewall server (running on a XX mini PC)
 - My TinyPilot
@@ -309,6 +337,8 @@ It's about two 2U shelves of stuff, though I could theoretically cram it into on
 ### Candidates
 
 ### Review: Star-Tech shelves
+
+- Grade: D
 
 I originally purchased the Star-Tech shelves because Star-Tech has such a good reputation in the server world.
 
@@ -322,21 +352,27 @@ I scoured reviews of this shelf to see if anyone mentioned it, and people did, b
 
 ### Review: XX shelves
 
+- Grade: A
+
 I found these no-name shelves on Amazon, and they worked great. They have a lip, but it bends _upward_ to be _useful_.
 
 I like these shelves. They were easy to install, they're low in price, and they keep themselves within the 2U space they promise.
 
 ## Choosing a patch panel
 
-### What the hell is a patch panel?
+### What the heck is a patch panel?
 
 From reading a lot of homelab blog posts, I noticed a lot of other homelabbers building a patch panel.
 
-When it came time to finally build my server rack, I finally had to ask the question, "What the hell is a patch panel?"
+When it came time to finally build my server rack, I finally had to ask the question, "What the heck is a patch panel?"
 
 Shopping around for patch panels made me even more confused. It's just a row of empty spaces? Huh? What's the point of that?
 
 From continued reading, it seems like the point of patch panels is just to keep things tidy. If you just allowed every node in your server rack to connect its network cable to the networking switch, then it would be a mess of wires from all different directions. The patch panel hides this mayhem in the back of your rack, and then the front side looks neat and tidy. And then you label everything.
+
+### Candidates
+
+###
 
 ## Choosing cage nuts
 
@@ -346,11 +382,15 @@ Fortunately, they're small and cheap.
 
 ### Review: XX Cage nuts
 
-Cage nuts, not so good
-Can't twist with your fingers like the ones that came with the startech rack
-Screw heads strip easily
+- Grade: D
 
-## Choosing Ethernet and fiber cables
+These were the only ones I tried, but I don't recommend them. They were worse quality than the cage nuts that came free with other components.
+
+Other cage nuts I've tried are shaped so that you can screw them in most of the way just using your fingers. These ones, you couldn't. I also found that the screw heads were made of a weak metal, so tightening the screws quickly began stripping the heads.
+
+I read recommendations online to buy a special tool for inserting and removing cage nuts. It might make sense if you work in a data center, but to just mess with cage nuts a few times a year, I don't think a dedicated tool makes sense. I got by just fine with a small flathead screwdriver.
+
+## Choosing Ethernet cables
 
 If you're converting an existing setup to a server rack, you'll likely need new Ethernet cables. If you're including a patch panel, remember to buy short (6-12") cables (sometimes called "patch cables") to connect the patch panel to your switch.
 
@@ -359,6 +399,22 @@ Depending on your patch panel and switch layout, you may need a mix of different
 I bought 6", 12", and 3' Ethernet cables at a ratio of about 5:2:1.
 
 Some people are creative and buy different colors to represent different functionality. I'm boring and just stuck with blue and black Ethernet cables because they look standard and proper to me.
+
+## Choosing fiber cables
+
+### Ethernet, DAC, or fiber?
+
+If you're just getting 1 Gbps speeds, you don't have to choose anything.
+
+Once you go above that, you have to choose between Ethernet or fiber cables.
+
+With Ethernet, it's pretty simple. Your Ethernet adapter has an Ethernet port, so you plug in an Ethernet cable. Easy peasy!
+
+With fiber, it gets more complicated. You have an SFP or SFP+ port, and you have to decide what adapter you want to conver it to something else. You can convert it to DAC or fiber. But then there's a few types of fiber.
+
+I chose fiber over DAC because I couldn't figure out how to get DAC through a patch panel. There are Ethernet keys and Fiber keys, but no DAC keys.
+
+The other surprise with fiber is how expensive the cabling is. SFP+ to fiber adapters cost $XX, and you need them at either end of the connection. I bought a box of XX" fiber patch cables not really paying attention to the price, and then I realized I spent $XX. On little cables!
 
 {{<notice type="info">}}
 
@@ -369,6 +425,8 @@ Some people are creative and buy different colors to represent different functio
 ## Choosing cable ties
 
 Cable ties are optional, but if you want to keep everything clean, you either need to cut your own cables or wrap up the excess with cable ties. You can also join groups of wires together with cable ties.
+
+### Velcro vs. rubber cable ties
 
 I've tried two styles of cable ties: velcro and rubber.
 
@@ -414,6 +472,7 @@ TODO: List of components and prices
 | Network switch | XX            | XX    | C+           |
 | UPS            | CyberPower XX | XX    | A+           |
 | Power strip    | XX            | XX    | A            |
+| Patch keys     | XX            | XX    | ??           |
 
 TODO: Photos
 
@@ -433,11 +492,11 @@ You may have noticed that my server rack is missing one common feature: servers.
 
 I still have my VM server and storage server that I rebuilty in the last few years. I'm planning to migrate them to rack-mounted chassis the next time I do some upgrades, but I've punted that task since building the rack was a significant enough project on its own.
 
-## Mistakes I made
+## Avoiding mistakes I made
 
 ### Test the UPS before mounting it
 
-The UPS was, by far, the hardest component to mount in the rack. I don't understand how people do it. It's a XX lb device, and you need at least one hand holding it in place and one hand securing the screws. I eventually decided it was a two-person job and called my wife in for reinforcement.
+The UPS was, by far, the hardest component to mount in the rack. I don't understand how people do it. It's a XX lb device, and you need at least one hand holding it in place and one hand securing the screws. I eventually decided it was a two-person job and called my wife in for reinforcements.
 
 But you don't want to go through all that work and find out, like I did, that the UPS is too loud to earn a permanent place in your rack. Or it could just be a dead device, and you don't want to find that out after you mount it.
 
@@ -469,12 +528,35 @@ Didn't flash Mellanox card before installing it in TrueNAS.
 
 https://network.nvidia.com/products/adapter-software/ethernet/windows/winof-2/
 
-### Why do these fiber keys keep popping out?
-
-Fiber keys don't stay in place well
-
 ### Incorrect length Ethernet cables
 
 Patch cables
 
-### Mixing SFP+ multimode with single mode
+### Don't mix SFP+ multimode and single mode fiber cables
+
+The first day that I installed my Mellanox NIC on my Windows desktop, everything worked fine.
+
+After around 24 hours of use, I noticed my Ethernet connection suddenly disconnecting and reconnecting every few seconds. I rebooted, and the problem went away.
+
+24 hours later, I saw the same issue. This time, I tried disconnecting and reconnecting the fiber cable from the switch, and the problem persisted. I tried instead skipping the patch panel and connecting the cable from my desktop directly to the switch.
+
+That worked, and the connection stayed stable for several days. That suggested the problem was either in the patch cable or the patch panel key. I tried a different set of patch keys and patch cables, and the problem came back within a day.
+
+Then I went back and looked at whether there was some sort of incompatibility between my patch cables or patch keys. And then I spotted it: my patch cables were SFP+ single mode, whereas my long fiber cables were SFP+ multimode. I didn't even know there was a difference in fiber cables, but apparently there is, and they don't get along.
+
+I bought a new set of SFP+ multimode fiber cables, and the problem went away. Unfortunately, I discovered the problem three days after the return window for my $XX box of SFP+ single mode fiber cables had closed, so if anyone wants some single mode SFP+ patch cables, let me know.
+
+### Don't install fiber keys backwards
+
+One of the first surprises I got of the patch panel was that the keys kept popping out of the frame. It was easy to insert an Ethernet cable, but whenever I removed one, it would wiggle the key out of the frame with it.
+
+From some experimentation, I realized I installed the keys backwards. I installed them from the front, like this:
+
+{{<img src="key-wrong.webp" max-width="500px">}}
+
+Actually, the correct way is from the back, like this:
+
+{{<gallery caption="Correct way">}}
+{{<img src="key-right.webp" max-width="400px">}}
+{{<img src="key-back-right.webp" max-width="400px">}}
+{{</gallery>}}
