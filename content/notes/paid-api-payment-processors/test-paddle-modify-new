@@ -2,7 +2,6 @@
 
 set -eux
 
-PADDLE_VENDOR_ID='15062' # Sandbox
 #PADDLE_SUBSCRIPTION_ID='sub_01hcq7a0e33vs9ct0thy0nrjg0' # Sandbox
 PADDLE_SUBSCRIPTION_ID='sub_01hd7yjjsfebpxegg5ddp7csnn' # Sandbox
 
