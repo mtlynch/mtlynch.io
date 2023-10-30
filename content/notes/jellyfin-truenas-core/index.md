@@ -9,7 +9,7 @@ I always run into issues installing Jellyfin on TrueNAS core. I fix them, and th
 
 Install based on these instructions:
 
-https://github.com/Thefrank/jellyfin-server-freebsd/blob/main/Installation_TrueNAS_GUI.md#the-advanced-way
+- <https://github.com/Thefrank/jellyfin-server-freebsd/blob/main/Installation_TrueNAS_GUI.md#the-advanced-way>
 
 We need to follow the advanced instructions because [TrueNAS plugins are deprecated](https://www.truenas.com/community/threads/ffmpeg-error-in-fresh-nextcloud-jail.112033/#post-780590).
 
