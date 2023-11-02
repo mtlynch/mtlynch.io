@@ -10,8 +10,8 @@
     # 0.9.0
     markdown_lint_dep.url = "github:NixOS/nixpkgs/12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d";
 
-    # 0.117.0 release
-    hugo_dep.url = "github:NixOS/nixpkgs/a63a64b593dcf2fe05f7c5d666eb395950f36bc9";
+    # 0.119.0 release
+    hugo_dep.url = "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c";
   };
 
   outputs = { self, nixpkgs, flake-utils, nodejs_dep, markdown_lint_dep, hugo_dep }@inputs :
