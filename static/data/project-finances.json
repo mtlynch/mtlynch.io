@@ -152,6 +152,10 @@
     "2023-09": {
       "profit": 8163.88,
       "totalRevenue": 85727.02
+    },
+    "2023-10": {
+      "profit": 40835.41,
+      "totalRevenue": 101797.35
     }
   },
   "htfp": {
@@ -256,6 +260,9 @@
     },
     "2023-09": {
       "totalRevenue": 53.1
+    },
+    "2023-10": {
+      "totalRevenue": 0
     }
   },
   "isitketo": {
@@ -429,6 +436,9 @@
     },
     "2023-09": {
       "totalRevenue": 116.08
+    },
+    "2023-10": {
+      "totalRevenue": 141.58
     }
   },
   "zestful": {
@@ -472,7 +482,7 @@
       "totalRevenue": 45.97
     },
     "2019-08": {
-      "totalRevenue": 728.07
+      "totalRevenue": 1478.07
     },
     "2019-09": {
       "totalRevenue": 3.2
@@ -484,7 +494,7 @@
       "totalRevenue": 63.13
     },
     "2019-12": {
-      "totalRevenue": 3934.13
+      "totalRevenue": 7934.13
     },
     "2020-01": {
       "totalRevenue": 79.67
@@ -502,7 +512,7 @@
       "totalRevenue": 6.48
     },
     "2020-06": {
-      "totalRevenue": 685.26
+      "totalRevenue": 1385.26
     },
     "2020-07": {
       "totalRevenue": 18.05
@@ -517,7 +527,7 @@
       "totalRevenue": 35.05
     },
     "2020-11": {
-      "totalRevenue": 901
+      "totalRevenue": 1800
     },
     "2020-12": {
       "totalRevenue": 103.33
@@ -620,6 +630,9 @@
     },
     "2023-09": {
       "totalRevenue": 191.24
+    },
+    "2023-10": {
+      "totalRevenue": 120.8
     }
   }
 }
