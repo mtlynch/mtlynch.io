@@ -16,6 +16,8 @@ Every month, I publish a retrospective like this one to share how things are goi
 ## Highlights
 
 - TinyPilot had its second-strongest month of revenue of all time.
+- TinyPilot has almost finished transitioning manufacturing to a third-party vendor.
+- I may have crossed into the dark side of mechanical keyboards.
 
 ## Goal Grades
 
@@ -67,35 +69,45 @@ This was TinyPilot's second-strongest month in history, and I have no idea why. 
 
 ### The missing disks
 
-TinyPilot devices store data on tiny disks called microSDs. A few days before our manufacturer was supposed to send the first sample of the TinyPilots they'll be manufacturing for us, they noticed that reference devices I sent them had microSDs in them, but the devices they were producing had no microSDs. Did I want microSDs?
+TinyPilot devices store data on tiny disks called microSDs. A few days before our manufacturer was supposed to send the first sample of the TinyPilot devices, they noticed that reference devices I sent them had microSDs in them, but the devices they were producing had no microSDs. Did I want microSDs?
 
-It turned out that they never included microSDs in the bill of materials for what I was purchasing, and I didn't notice that they were missing.
+It turned out that they never included microSDs in the bill of materials (BOM). I never noticed that they were missing either.
 
-But flashing microSDs is relatively straightforward and low-risk. We had an existing vendor that made microSDs with the TinyPilot logo on them. We could just point our manufacturer to that vendor, and our manufacturer could flash the microSDs with TinyPilot's software.
+Fortunately, buying and flashing microSDs is a fast and straightforward process. We already had vendor that made microSDs with the TinyPilot logo on them. We could just point our manufacturer to that vendor, and our manufacturer could flash the microSDs with TinyPilot's software.
 
-It was much more likely that if there were issues with the first sample, they'd be in things outside of the microSD. So, we agreed that they'd send the samples with everything except the microSDs, and then they'd send the microSDs a week or two later.
+The manufacturer and I agreed that it wasn't worth delaying the first samples for the microSDs. We decided that they'd ship the devices without microSDs, and then they'd send the microSDs a week or two later.
 
-There ended up being so many issues with the first sample that I forgot about the microSDs entirely, and the manufacturer never sent them.
+There ended up being [so many issues](/retrospectives/2023/10/#correcting-issues-in-the-first-article-sample) with the first sample that I forgot about the microSDs entirely, and the manufacturer never sent them.
 
 ### Checking correct microSD flashing
 
-I knew that when the first production batch arrived, I'd need to verify that the microSD matched the image we gave them. If the machine they use to generate microSDs was compromised and was tampering with our software or if there was an error in how they were flashing microSDs, then we'd detect that their microSDs don't match our disk images.
+By mid-October, the manufacturer said they'd fixed all the issues I'd raised with the first sample. The manufacturer was going to send [a small production batch](/retrospectives/2023/10/#do-we-skip-the-second-sample) that should be totally complete and ready to ship to customers.
 
-On a Friday afternoon, I realized I hadn't thought through _how_ I'd check the microSDs. I needed a short script to load our disk image, compare it to what the manufacturer wrote to the disk, and print out any differences. I reached out to TinyPilot's support engineering team, and they were able to put together a script to do what I needed in two days.
+We were still going to perform additional QA on the first batch to make sure they matched our in-house standards. Part of our verification would be to check that the manufacturer flashed the microSDs correctly.
 
-When the first batch arrived, the local team did a full functional test on four of the devices, and they reported that everything looked good. I wanted to check a device as well, but I first had to check that the microSD was correct. I loaded the microSD, ran the script, and it reported that everything matched. Great!
+It wasn't until two days before the batch was scheduled to arrive that I thought - _how_ am I going to check that the manufacturer flashed the microSDs correctly?
 
-I ran my functional test, and everything worked as it should. But right as I was wrapping up the test, I noticed that my TinyPilot's video settings weren't the standard defaults. Uh oh.
+I could boot up a TinyPilot using the manufacturer's microSD, but that's not enough. What if there's something wrong with their flashing process, and some of the files are missing or corrupt? What if their flashing system has malware on it, and it's infecting our microSDs?
 
-I shut down the device I was testing and re-ran the microSD checking script. This time, it should definitely report changes because I had changed a lot of the settings during my test. Instead, the script reported that this microSD perfectly matched our clean image. That was bad.
+I reached out to TinyPilot's support engineering team and asked them to write a shell script to compare a microSD from the manufacturer with our "golden" disk image and report any differences. They were able to create the script just in time for my testing.
 
-From tinkering with the script, I discovered that it had a bug. Even though it worked correctly on the support engineer's machine, my environment was behaving differently and causing the script to always report success.
+When the first batch arrived, the local team did a full functional test on four of the devices, and they reported that everything looked good. I wanted to check a device as well, but I first had to check that the microSD was correct. I loaded the microSD, ran our integrity checking script, and it reported that everything matched. Great!
 
-The problem was that we expected it to be just a quick script, so we didn't put it through the same level of review or testing as our other code. But even if we had wanted to, there wasn't time because I realized too late that we needed the script.
+I ran my functional test, and everything worked as it should. I was delighted! This meant that the manufacturer had gotten this batch totally correct, so we could declare victory on our transition to an external manufacturer.
 
-From more inspection, it became clear that the manufacturer had misunderstood our instructions. We wanted them to have a testing microSD that they used for functional tests, and then once it passed functional testing, they were supposed to take out the test microSD and put in a fresh one for the customer. That way, the customer receives a device that has essentially never been booted or used before. The manufacturer was doing QA testing and then just .
+Right as I was preparing to shut down the TinyPilot and re-box it, I noticed something. The video settings weren't the defaults we set. It looked like someone had used this device before me.
 
-Fortunately, that was relatively easy to repair at our office. And that matched our plan. I willingly risked issues like this with the expectations that the things that were likely to go wrong at this point would be things we could fix locally rather than shipping everything back to Vietnam.
+I shut down the device I was testing and re-ran the microSD checking script. This time, it should definitely report changes because I had changed a lot of the settings during my test. Instead, the script reported that this microSD perfectly matched our golden image. That was bad.
+
+From tinkering with the script, I discovered that it had a bug. Even though it worked correctly on the support engineer's machine, there was a bug that caused it to always report success in my testing environment.
+
+From more inspection of the microSD, it became clear that the manufacturer had misunderstood our instructions. We wanted them to have microSDs specifically for testing. They were supposed to use the test microSDs for their functional tests, but once the device passed the functional tests, they were supposed to replace the microSD with one that was freshly flashed and had never been booted. The manufacturer was performing QA and then leaving that microSD in the device that they packaged for customers.
+
+Fortunately, this mistake was relatively easy for us to correct at our office. Our local team opened each box, re-flashed the microSDs back to the correct state, re-packed them, and sent them to our warehouse.
+
+In a way, this went according to plan. We could have prevented this by asking for a second sample instead of jumping to a production batch, but we're running low on inventory, and I reasoned that [we could likely fix small issues at our office](/retrospectives/2023/10/#do-we-skip-the-second-sample).
+
+Long-term, we obviously don't want to re-flash every microSD in our office. When we reported this to our manufacturer, they told us that they had indeed misunderstood our instructions and revised their process to ensure that every microSD that reaches customers is freshly flashed with our image.
 
 ### How could I have prevented this?
 
@@ -144,7 +156,7 @@ I had been trying to make the switch from Debian + Ansible to NixOS, but I was h
 
 ### I'm a weird mechanical keyboard person now
 
-In Lex Fridman's interview with Guido von Rossum, Fridman has an extended aside about how much he loves his Kinesis keyboard. So much so that he brings it with him on places to work rather than use his laptop's built in keyboard.
+In Lex Fridman's interview with Guido von Rossum, Fridman has an extended aside about how much he loves [his Kinesis keyboard](https://twitter.com/lexfridman/status/1206238129180549120?lang=en). He loves it so much so that he brings it with him on flights because he'd rather lug around a giant keyboard than use his laptop's built-in keyboard.
 
 I've been using a Microsoft Natural Keyboard Pro of some variation since I was 14 years old. I'd never tried a mechanical keyboard, and I've never tried a physically split keyboard.
 
