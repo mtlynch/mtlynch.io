@@ -122,25 +122,38 @@ When I reviewed the BOM, I just went by memory and thought everything was there.
 
 This is the second time we've run into a problem around [dropped commitments from the manufacturer](/retrospectives/2023/09/#shift-manufacturing-to-our-contract-manufacturer-as-quickly-as-possible), and I still don't have a great solution. Overall, they stay on top of 90% of tasks, but they forget about 10% of tasks unless I follow up. I've been raising issues when I'm waiting on something, but that makes it easy for things like microSDs or instruction manuals to fall through the cracks. They're the parts of the product that seem unimportant until they're preventing us from shipping.
 
-I also underestimated the quality that was required for our microSD checking script. At the time, it felt like a one-off script, so we didn't have to dedicate the time and care we would for customer-facing code. But when we hit the false positive, I realized how important it was for the script to work as expected during our QA process and how expensive a mistake it could have been. So, we're revising the script to make it more robust against false positives and treating it as production-grade code.
+I also underinvested in our microSD checking script. At the time, it felt like a one-off script, so we didn't have to dedicate the time and care we would for customer-facing code. But when we hit the false positive, I realized how important it was for the script to work as expected during our QA process and how expensive a mistake it could have been. So, we're rewriting the script based on our standard process for creating production-grade code.
 
-I'm not sure what the solution is for verifying the manufacturer's process end-to-end. When we were doing this in-house, we had a set of instructions in Notion, and our whole team would just follow those. We can't share a Notion workspace with the manufacturer because their workers don't all read English. So, we give them our English instructions, then they translate them to Vietnamese.
+I'm not sure what the solution is for verifying the manufacturer's process end-to-end. When we were doing this in-house, we had a set of instructions in Notion, and our whole team would just follow those. We can't share a Notion workspace with the manufacturer because their workers don't all read English. So, we give them our English instructions, the manufacturer translates them to Vietnamese, and the workers read the Vietnamese version. I can't verify that the Vietnamese process matches the English process.
 
-One thing that was helpful was requesting videos of the QA process. That showed, in a language-independent way, how they're performing QA. But it's hard to get a video of the entire process end-to-end. The QA process didn't make it obvious that the microSD they were using for testing ended up staying in the final product, and I'm not sure how I'd prevent that.
+Requesting videos of the QA process was helpful. They showed, in a language-independent way, how the manufacturer performs QA. But it's hard to get a video of the entire process end-to-end. The QA process didn't make it obvious that the microSD they were using for testing ended up staying in the final product, and I'm not sure how I'd prevent that.
 
-The manufacturer did invite me to go to Vietnam to visit the factory. I didn't want to go, but looking back, maybe that would have prevented some expensive errors. It probably would have cost about $5k to pay for one of the local team members to visit Vietnam for a week. That's probably more expensive than the errors we'd be trying to prevent, and it's not even guaranteed to catch everything that could go wrong.
+The manufacturer did invite me to go to Vietnam to visit the factory. I declined, as I'm traveled-out this year, but looking back, maybe that would have prevented some expensive errors.
+
+It probably would have cost about $5k to pay for one of the local team members to visit Vietnam for a week. That's probably more expensive than the errors we'd be trying to prevent, and it's not even guaranteed to catch everything that could go wrong.
 
 ## Creating a customer success process
 
-My main focus for TinyPilot in 2023 has been shifting our manufacturing and fulfillment to third-party vendors. So what happens to our local team who used to do all of our assembly and fulfillment in-house?
+My main focus for TinyPilot in 2023 has been shifting our manufacturing and fulfillment to third-party vendors.
 
-At the start of the year, the local team's job was about 20% customer service and 80% assembly and fulfillment. That balance has shifted significantly this year, and by the start of 2024, assembly and fulfillment should be 0% of their work.
+At the start of the year, the local TinyPilot team's job was about 20% customer service and 80% assembly and fulfillment. That balance has shifted significantly this year, as we've moved to external vendors. By the start of 2024, assembly and fulfillment should be 0% of the local team's work.
 
-The problem is that there's not suddenly five times as many customer service requests to occupy their time. And nobody on the team wants to work for only thirty minutes per day. And we have a strong local team who's been with TinyPilot since almost the beginning, so I don't want to lose them.
+The problem is that customer service still takes less than 50% of the local team's weekly hours, so how do we use their additional availability?
 
-As we've shifted to third-party vendors for manufacturing and fulfillment, we've also been discussing how to transition the local team's role to other tasks that fit into TinyPilot. The most natural fit seems to be shifting from reactively responding to support requests to proactively reaching out to existing customers. Some companies call this role "customer success."
+The team has been discussing this problem since the beginning of the year. The most natural transition seems to be shifting from reactively responding to support requests to proactively reaching out to existing customers. Some companies call this role "customer success."
 
-The embarrassing truth is that I rarely reach out to customers. It's one of the [important but non-urgent tasks](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) that I always neglect. But if I can teach the local staff to do it, I think it will help us tune our roadmap to features that our customers want, and it will help us find out about new opportunities for TinyPilot that we otherwise wouldn't discover.
+The embarrassing truth is that I rarely reach out to customers. It's one of the [important but non-urgent tasks](/book-reports/7-habits-of-highly-effective-people/#time-management-matrix) that I always neglect. But if I can teach the local staff to do it, it's no longer limited by my available bandwidth.
+
+We're piloting a new customer success process that looks like this:
+
+1. Customer service team researches customers that spend a lot with TinyPilot (especially repeat buyers).
+1. Customer service team sends the customer a human-written email mentioning specifics about their company and their order (so it doesn't seem automated) and an invitation to meet to discuss feature requests or pain points.
+1. We meet with the customer and learn about how they use TinyPilot.
+1. We integrate the customer's feedback into our feature roadmap.
+
+One of my pet peeves in outreach I receive from other businesses is that it's baldly selfish. They'll say something like, "we want to help you understand all of our offerings," but they're really just trying to get me to buy stuff.
+
+I want TinyPilot's customer outreach to feel collaborative rather than parasitic. I think it will help us tune our roadmap to features that our customers want, and it will help us find out about new opportunities for TinyPilot that we otherwise wouldn't discover.
 
 ## Side projects
 
