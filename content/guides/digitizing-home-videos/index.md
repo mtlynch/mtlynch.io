@@ -210,7 +210,7 @@ To begin, populate your environment information into `mediagoblin.ini`, MediaGob
 
 ```bash
 MG_CONFIG=$(mktemp)
-wget {{< baseurl >}}digitizing-home-videos-walkthrough/mediagoblin.ini \
+wget {{<baseurl>}}digitizing-home-videos-walkthrough/mediagoblin.ini \
   -O "$MG_CONFIG"
 
 # Path to MediaGoblin's home directory within the container.

@@ -59,7 +59,7 @@ I used [this template](https://www.docracy.com/0vc0u7keb75/work-for-hire-freelan
 
 {{<notice type="info">}}
 **Sidenote**: I find the Docracy interface buggy and unintuitive. I only mention it because it's the service I used, but if you find a better service, choose that (and tell me about it).
-{{< /notice >}}
+{{</notice>}}
 
 If you hire through a freelancing marketplace, they likely have a default contract that does what you want. For example, Upwork's [default contract](https://www.upwork.com/legal#optional-service-contract-terms) assigns all intellectual property rights to the client, so you probably don't need an additional contract.
 
@@ -153,16 +153,16 @@ To maintain a healthy relationship with your freelancers, define when they shoul
 
 When I pay writers directly (rather than through a freelancing platform), I ask them to enter their hours in a shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing).
 
-{{< gallery caption="Simple timesheets and invoicing with [Google Sheets](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)">}}
+{{<gallery caption="Simple timesheets and invoicing with [Google Sheets](https://docs.google.com/spreadsheets/d/1LDMdzBiNDkiL3EdsOhP9yxDETjcXaRlAXV03Cd6gViI/edit?usp=sharing)">}}
 {{<img src="spreadsheet-1.jpg" alt="Freelancer hours spreadsheet">}}
 {{<img src="spreadsheet-2.jpg" alt="Freelancer payment spreadsheet">}}
-{{< /gallery >}}
+{{</gallery>}}
 
 On alternating Mondays, I mail them a check for the hours they've accrued in the pay period.
 
 {{<notice type="info">}}
 **Tip**: See if your bank offers check mailing as a free service. I use Chase Business Checking, which allows me to use their Bill Payment service to send anyone a physical check for free.
-{{< /notice >}}
+{{</notice>}}
 
 ## Meet regularly in person or on video chat
 

@@ -75,7 +75,7 @@ I started by emailing software publications because I thought they'd have financ
 
 {{<notice type="info">}}
 If you know a writer or copy editor who might be interested, please ask them to [email me](/about/). I'd love to speak with them.
-{{< /notice >}}
+{{</notice>}}
 
 ## An app for rocks
 
@@ -89,7 +89,7 @@ The challenge is getting quarry owners to talk to me. They're used to their curr
 
 {{<notice type="info">}}
 If you know a stone quarry operator, please [email me](/about/) because I'd love an introduction.
-{{< /notice >}}
+{{</notice>}}
 
 ## The What Got Done app
 
@@ -107,7 +107,7 @@ User registration isn't ready yet, but keep an eye out for a Twitter announcemen
 
 {{<notice type="info">}}
 If you'd like to be a beta tester for What Got Done, [email me](/about/).
-{{< /notice >}}
+{{</notice>}}
 
 ## Wrap up
 

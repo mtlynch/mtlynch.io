@@ -29,7 +29,7 @@ I created a screencast that walks through the steps of this guide and demonstrat
 
 If you prefer video tutorials, I recommend you download the files in the ["Create files and folders for Docker"](#create-files-and-folders-for-docker) section below and then follow along with the video.
 
-{{< youtube i3G5RIXJCLk >}}
+{{<youtube i3G5RIXJCLk>}}
 
 ## Requirements
 
@@ -108,7 +108,7 @@ Below, I've included the full text of each file and a brief discussion of what e
 
 #### docker-compose.yml
 
-{{< inline-file filename="docker-compose.yml" language="yml">}}
+{{<inline-file filename="docker-compose.yml" language="yml">}}
 
 This file defines the high-level architecture of the web app. It tells Docker how to load the Sia and Nextcloud containers and specifies the configuration options the containers need to communicate with each other.
 
@@ -122,7 +122,7 @@ Finally, `nextcloud-data:/var/www/html` allows Nextcloud to persist its configur
 
 #### Dockerfile.sia
 
-{{< inline-file filename="Dockerfile.sia" language="bash">}}
+{{<inline-file filename="Dockerfile.sia" language="bash">}}
 
 This is the Dockerfile for Sia. It creates a Docker container starting from the barebones Debian Jessie build of Linux. It then downloads the latest release of Sia (which is 1.3.2 as of this writing), unzips it, and runs `siad`, the Sia server daemon. The `--modules gctwr` flag loads only the Sia modules you need for renting Sia storage. The `--sia-directory /mnt/sia-data` flag ensures that Sia uses the persistent volume specified in `docker-compose.yml`.
 
@@ -130,7 +130,7 @@ The confusing part of this Dockerfile is the presence of `socat` and the `--api-
 
 #### Dockerfile.nextcloud
 
-{{< inline-file filename="Dockerfile.nextcloud" language="bash">}}
+{{<inline-file filename="Dockerfile.nextcloud" language="bash">}}
 
 This file is straightforward because Nextcloud publishes its own Dockerfile. The only thing I added was a line to listen on port 80.
 
@@ -175,7 +175,7 @@ Progress (estimated): 0.6%
 
 {{<notice type="info">}}
 **Optional**: At this point, you can run [Sia-UI](https://github.com/NebulousLabs/Sia-UI/releases/latest) on your local machine to show a graphical display of what your Docker container's Sia server is doing. Sia-UI normally runs its own Sia server instance, but if it detects an existing instance of Sia listening on port 9980, it will connect to the existing server instead. Sia-UI gives you a more visual representation of Sia's activity, but it is purely optional in this tutorial.
-{{< /notice >}}
+{{</notice>}}
 
 ## Configure Sia
 
@@ -242,7 +242,7 @@ Next, you need to create a Siacoin wallet within the Docker container and send i
 
 {{<notice type="danger">}}
 **Warning**: If you have an existing Sia wallet seed, do not re-use it within your Docker container while your other wallet is running. Sia has undefined behavior if you run two wallets simultaneously with the same seed.
-{{< /notice >}}
+{{</notice>}}
 
 To create a new Sia wallet, enter the command below:
 
@@ -291,7 +291,7 @@ At the time of this writing, 500 SC purchases ~2 TB of storage, so you can incre
 
 {{<notice type="info">}}
 **Note**: There is a fixed cost to creating rental contracts, so for small rental contracts, the costs don't scale linearly with the amount of storage you purchase. In other words, you can't simply divide the cost of 2 TB by 10 to purchase 200 GB for 50 SC because the cost of creating the contracts themselves is ~130 SC.
-{{< /notice >}}
+{{</notice>}}
 
 After you create an allowance, Sia will begin forming storage contracts. This process takes 20-30 minutes to complete. You can check the number of contracts Sia has formed by running the following command:
 
@@ -339,7 +339,7 @@ It's time to install Nextcloud's Sia app. Unfortunately, it is not possible to i
 
 {{<notice type="info">}}
 **Note**: Nextcloud [recently added support](https://github.com/nextcloud/server/pull/5644) for performing app installs on the command line, but it looks like the feature won't be included in a Nextcloud release until version 13.0.
-{{< /notice >}}
+{{</notice>}}
 
 1. Open [http://localhost:8080](http://localhost:8080) in your browser to access the NextCloud web app.
 1. Enter the Nextcloud web app credentials you selected in the ["Install Nextcloud'](#install-nextcloud) step above. If you used the default credentials, this will be `admin`/`admin`.

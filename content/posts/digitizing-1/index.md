@@ -17,10 +17,10 @@ For the last eight years, I've carried around this box of videotapes through fou
 
 After 600+ hours of work, I finally digitized and organized them well enough to throw away the original tapes. Here's what the footage looks like now:
 
-{{< gallery caption="All of my home videos, digitized and watchable from a private media sharing server">}}
+{{<gallery caption="All of my home videos, digitized and watchable from a private media sharing server">}}
 {{<img src="mediagoblin-home.png" alt="MediaGoblin browse screen" max-width="440px">}}
 {{<img src="mediagoblin-single-video.jpg" alt="Screenshot of MediaGoblin displaying a video" max-width="413px">}}
-{{< /gallery >}}
+{{</gallery>}}
 
 There are 513 separate clips, each with a title, description, a recording date, tags for everyone in the video, and everyone's ages at the time of the recording. I host everything on a private media-sharing website that only my family can access, and it costs less than $1 per month to keep it running.
 

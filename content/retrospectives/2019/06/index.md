@@ -123,7 +123,7 @@ I plan to pursue this idea further this month. The reasons I like it are:
 
 {{<notice type="info">}}
 If you know an email copywriter who might be interested, please ask them to [email me](/about/). I'd love to speak with them.
-{{< /notice >}}
+{{</notice>}}
 
 ## Wrap up
 
