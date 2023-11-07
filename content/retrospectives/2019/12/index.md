@@ -161,7 +161,7 @@ So, that's a bit of what I'm running into right now. There are probably plenty o
 
 {{<notice type="info">}}
 **Sidenote:** Maybe that auto shop example I made up is actually a good idea!<br><br>**Note to self**: _Research custom auto shops._
-{{< /notice >}}
+{{</notice>}}
 
 ## Interviewing machine shops
 

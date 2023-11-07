@@ -91,7 +91,7 @@ This vulnerability is what makes the film's interviews with Steve Huffman so fas
 Huffman is currently the target of widespread ire for [cutting third-party clients out of the platform they helped build](https://techcrunch.com/2023/06/16/reddit-ceo-lashes-out-on-protests-moderators-and-third-party-apps/). But in 2005, Huffman was just a lovably doofy kid. In his interview, he admits that he had such intense nightmares about reddit having an outage that he slept with his laptop in bed with him.
 
 {{<gallery caption="Steve Huffman in 2005 (left) and in 2017 (right) (photo [by Cody Glenn/Web Summit](https://www.flickr.com/photos/websummit/26487734439/in/photostream/), used under [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/))">}}
-{{<img src="steve-huffman-2005.webp" max-width="500px" >}}
+{{<img src="steve-huffman-2005.webp" max-width="500px">}}
 {{<img src="steve-huffman-2017.webp" max-width="487px">}}
 {{</gallery>}}
 
@@ -229,7 +229,7 @@ I'm watching it, and it's pretty good. It's kind of like a video version of Joel
 Most of the Fog Creek characters from _Aardvark'd_ are still there. You get to see slightly more grown-up versions of Tyler and Ben, who had at that point had several years of real-world experience.
 
 {{<gallery caption="Tyler (left) and Ben (right) appear as full-time Fog Creek employees in *Make Better Software* five years after the filming of *Aardvark'd*.">}}
-{{<img src="tyler-later.webp" max-width="400px" >}}
+{{<img src="tyler-later.webp" max-width="400px">}}
 {{<img src="ben-later.webp" max-width="441px">}}
 {{</gallery>}}
 

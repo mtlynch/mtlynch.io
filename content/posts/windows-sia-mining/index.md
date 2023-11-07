@@ -16,7 +16,7 @@ images:
 **This guide is out of date.**
 
 This post describes mining Sia with a desktop graphics card (GPU), but [custom mining hardware](https://obelisk.tech) is now available for Sia. The custom hardware has made Sia GPU mining non-viable. This guide will still work, but you may never reach payout, even with a high-end GPU.
-{{< /notice >}}
+{{</notice>}}
 
 ## Overview
 

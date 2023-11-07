@@ -250,7 +250,7 @@ Next, use the GCP web console to [create a service account](https://console.clou
 
 {{<notice type="warning">}}
 **Gotcha Warning**: Due to [an apparent bug in GCP](https://stackoverflow.com/q/53410165/90388), the Docker image push to gcr.io (see the following section) fails if you use your root GCP account (e.g., your @gmail.com account) or a service account you create through `gcloud`.
-{{< /notice >}}
+{{</notice>}}
 
 {{<img src="service-account-1.png" alt="Screenshot of service account creation screen" caption="Creating a new service account from the GCP web console" max-width="799px" has-border="true">}}
 
@@ -454,7 +454,7 @@ The above line makes it possible to use `gcsfuse`'s `-o allow_other` option. Thi
 
 {{<notice type="warning">}}
 **Gotcha Warning**: If more than one system account needs access to the GCS bucket, the `/etc/fuse.conf` file must include the line `user_allow_other`.
-{{< /notice >}}
+{{</notice>}}
 
 ```bash
 mkdir --parents "$GCS_MOUNT_ROOT" && \
@@ -504,13 +504,13 @@ As with the `user_allow_other` option above, the `-o allow_other` makes it possi
 
 {{<notice type="warning">}}
 **Gotcha Warning**: gcsfuse needs the `-o allow_other` flag if multiple user accounts access files in the GCS mount.
-{{< /notice >}}
+{{</notice>}}
 
 Without the [`--implicit-dirs` flag](https://github.com/GoogleCloudPlatform/gcsfuse/blob/6ab0a79f97b7481b23c3724cd0c4b323f0627d69/docs/semantics.md#implicit-directories), gcsfuse cannot access files in subfolders of the GCS bucket.
 
 {{<notice type="warning">}}
 **Gotcha Warning**: gcsfuse needs the `--implicit-dirs` flag if the GCS bucket contains subfolders.
-{{< /notice >}}
+{{</notice>}}
 
 ```bash
 if [ ! -d "$APP_UPLOADS_DIR" ]; then \
@@ -531,7 +531,7 @@ To address this, create a custom service account with the following two roles:
 
 {{<notice type="warning">}}
 **Gotcha Warning**: GCE instances can't write to GCS buckets unless you launch them under a custom service account.
-{{< /notice >}}
+{{</notice>}}
 
 The following commands create a service account with the necessary privileges:
 
@@ -571,7 +571,7 @@ docker push "$GCR_IMAGE_PATH"
 
 {{<notice type="info">}}
 **Note**: This image will fail if you attempt to run it locally. The `gcsfuse` version of the `Dockerfile` assumes that its execution environment has already authenticated to gcloud (which is true of containers running on GCE). It's possible to adjust the `Dockerfile` so that it mounts a GCS bucket while running outside of GCE, but this is an exercise for the reader.
-{{< /notice >}}
+{{</notice>}}
 
 With your new, custom GCE service account, you're ready to deploy the GCS-aware container:
 
@@ -611,7 +611,7 @@ The `--container-privileged` flag is necessary to allow the Docker container to 
 
 {{<notice type="warning">}}
 **Gotcha Warning**: `gcsfuse` can't mount the GCS bucket on GCE unless you deploy the VM with the `--container-privileged` flag.
-{{< /notice >}}
+{{</notice>}}
 
 ```bash
   --container-env="GCS_BUCKET=$GCS_BUCKET"
@@ -674,7 +674,7 @@ gcloud compute \
 
 {{<notice type="warning">}}
 **Gotcha Warning**: The VM's external IP address will change after this command completes unless you assigned a static IP.
-{{< /notice >}}
+{{</notice>}}
 
 If you ever push a bad release, the `update-container` command allows you to roll back to a previous, known-good image.
 

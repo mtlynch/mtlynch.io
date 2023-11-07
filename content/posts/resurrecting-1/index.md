@@ -290,7 +290,7 @@ I didn't want to go through all of those steps every time I ran the library, so 
 
 First, I made [my own fork](https://github.com/mtlynch/crfpp) of the CRF++ repository that included @humem's fix. That provided a convenient copy of CRF++'s source that built cleanly on Linux. Then, I collected all of the shell commands I ran into a `Dockerfile`:
 
-{{< inline-file filename="Dockerfile" language="bash">}}
+{{<inline-file filename="Dockerfile" language="bash">}}
 
 If I want an environment with this library in the future, all I need to do is run these two commands in the directory with the `Dockerfile`:
 

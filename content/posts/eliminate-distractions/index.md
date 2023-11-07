@@ -109,7 +109,7 @@ Fortunately, there's a tool that solves this problem: [Inbox When Ready](https:/
 
 {{<notice type="info">}}
 If you use a desktop mail client like Outlook or Thunderbird, disabling automatic email checking achieves the same effect as Inbox When Ready. Unfortunately, I haven't discovered an equivalent solution for mobile devices.
-{{< /notice >}}
+{{</notice>}}
 
 ### Move your to-do list out of your inbox
 
@@ -137,7 +137,7 @@ Before extracting my to-do list from my inbox, I never realized the power those 
 
 {{<notice type="info">}}
 My to-do list app of choice is [Nirvana](https://nirvanahq.com/). It's _okay_, not great. People tell me good things about [Todoist](https://todoist.com), but I'm too accustomed to my Nirvana workflow to switch.
-{{< /notice >}}
+{{</notice>}}
 
 ### Unbundle Hangouts from Gmail
 
@@ -171,10 +171,10 @@ This is sufficient for sites like Facebook or Twitter that are near useless when
 
 Here's how to set that up:
 
-{{< gallery caption="Using [uBlock Origin](https://github.com/gorhill/uBlock) rules to block Google News.">}}
+{{<gallery caption="Using [uBlock Origin](https://github.com/gorhill/uBlock) rules to block Google News.">}}
 {{<img src="block-news1.jpg" alt="Open uBlock Origin settings">}}
 {{<img src="block-news2.jpg" alt="Adding Google News as a blocked site in uBlock Origin">}}
-{{< /gallery >}}
+{{</gallery>}}
 
 ## Phone
 

@@ -18,7 +18,7 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 
 ## Demo
 
-{{< youtube EYMGQxiu-kI >}}
+{{<youtube EYMGQxiu-kI>}}
 
 ## What you'll need
 

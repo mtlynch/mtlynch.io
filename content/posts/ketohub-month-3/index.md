@@ -45,17 +45,17 @@ In December, I read the book [_Hello Web Design_](https://smile.amazon.com/Hello
 
 The book gave me good ideas for improving KetoHub's look. Here's the before and after on desktop:
 
-{{< gallery caption="KetoHub redesign on desktop: before (left) and after (right)">}}
+{{<gallery caption="KetoHub redesign on desktop: before (left) and after (right)">}}
 {{<img src="ketohub-screenshot-before.png" alt="KetoHub before redesign (desktop)">}}
 {{<img src="ketohub-screenshot-after.png" alt="KetoHub after redesign (desktop)">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 And here's comparison on mobile:
 
-{{< gallery caption="KetoHub redesign on mobile: before (left) and after (right)">}}
+{{<gallery caption="KetoHub redesign on mobile: before (left) and after (right)">}}
 {{<img src="ketohub-screenshot-mobile-before.png" alt="KetoHub before redesign (mobile)">}}
 {{<img src="ketohub-screenshot-mobile-after.png" alt="KetoHub after redesign (mobile)">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 Actually, as I write this and look at the mobile screenshot, the "after" shot looks worse. The logo and category buttons take up more than half of the screen's vertical space to the point where you can't even see even one recipe card.
 

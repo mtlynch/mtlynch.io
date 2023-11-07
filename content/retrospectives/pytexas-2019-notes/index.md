@@ -14,7 +14,7 @@ It was a fun trip, and I learned a lot. It was also expensive, both financially 
 
 ### Intentional Deployment: Best Practices for Feature Flag Management
 
-{{< youtube AD8LSdy7b2s >}}
+{{<youtube AD8LSdy7b2s>}}
 
 **Speaker**: [Caitlin Rubin](https://www.linkedin.com/in/caitlin-rubin-a3b1a2103/) from Optimizely
 
@@ -33,7 +33,7 @@ Other things I liked:
 
 ### Free yourself from your ORM with mypy!
 
-{{< youtube oLvEXiV0L-Q >}}
+{{<youtube oLvEXiV0L-Q>}}
 
 **Speaker**: Thomas Stephens from uStudio
 
@@ -51,7 +51,7 @@ Other things I liked:
 
 ### When Booleans Are Not Enough... State Machines?
 
-{{< youtube I1Mzx_tSpew >}}
+{{<youtube I1Mzx_tSpew>}}
 
 **Speaker**: [Harrington Joseph](https://twitter.com/harph) from Netflix
 
@@ -148,7 +148,7 @@ Several people spoke glowingly of PyCon. PyTexas is a small, regional conference
 
 ## Critiquing my own talk
 
-{{< youtube hM_ex4-xu4E >}}
+{{<youtube hM_ex4-xu4E>}}
 
 **Speaker**: Michael Lynch (me)
 

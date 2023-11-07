@@ -83,7 +83,7 @@ Just a week ago, on August 27th, I asked TinyPilot's electrical engineering part
 
 Simultaneously, I'm working with a 3D printing design shop on an enclosure for the circuit board. The 3D printing firm completed their designs in two days, and they're in the process of printing the first three prototypes. Once they get going, they have the capacity to 3D print 50 enclosures per day.
 
-{{< gallery caption="The TinyPilot power connector that's coming together astonishingly fast">}}
+{{<gallery caption="The TinyPilot power connector that's coming together astonishingly fast">}}
 {{<img src="power-connector-top.png" alt="Screenshot of TinyPilot blog post at #1 slot" has-border="true" max-width="340px">}}
 {{<img src="power-connector-side.png" alt="Screenshot of TinyPilot submissions on reddit" has-border="true" max-width="420px">}}
 {{</gallery>}}

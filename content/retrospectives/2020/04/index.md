@@ -95,10 +95,10 @@ And because of the recent market volatility, interest in portfolio rebalancing i
 
 I spent the last two weeks making a minimum viable product of [Portfolio Rebalancer](https://assetrebalancer.com), a web app that shows you the trades you need to make in your [Vanguard](https://vanguard.com) account to achieve your desired asset allocation strategy:
 
-{{< gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy">}}
+{{<gallery caption="Prototype of my [portfolio rebalancer](https://assetrebalancer.com), which helps investors adjust their holdings based on their investment strategy">}}
 {{<img src="rebalancer-current-holdings.png" alt="Screenshot of Portfolio Rebalancer showing current holdings" has-border="true">}}
 {{<img src="rebalancer-rebalanced.png" alt="Screenshot of Portfolio Rebalancer showing rebalanced assets" has-border="true">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 I'm still trying to figure out how to market it. I sent cold emails to several local financial advisors offering to pay them their hourly rate to talk with me about what sort of tool would be useful to them or their clients, but none of them responded. I tried sharing it on [reddit](https://redd.it/fpyqmc) and got a small positive response, but nobody was banging down my door to get a paid version. My next idea is to write about the technical lessons I'm learning as I build the site and hope that it draws attention from programmers in my audience who invest their money similarly.
 
@@ -126,10 +126,10 @@ I created a new conference talk for [NERD Summit](https://nerdsummit.org/) this 
 
 I used [reveal-hugo](https://reveal-hugo.dzello.com/) because I already knew how to use the [Hugo static site generator](https://gohugo.io) (which powers this site).
 
-{{< gallery caption="[reveal-hugo](https://reveal-hugo.dzello.com/) lets you create slide decks in Markdown.">}}
+{{<gallery caption="[reveal-hugo](https://reveal-hugo.dzello.com/) lets you create slide decks in Markdown.">}}
 {{<img src="reveal-code.png" alt="Source code for my presentation" has-border="true">}}
 {{<img src="reveal-rendered.png" alt="HTML rendering of the presentation" has-border="true">}}
-{{</ gallery >}}
+{{</gallery>}}
 
 The biggest advantage is that writing in Markdown allows me to focus on the content first and worry about the layout later. Google Slides requires me to choose the placement for any text before writing it, so I get distracted thinking about the aesthetics. reveal-hugo is also nice for formatting code snippets, which can be a challenge in Google Slides. The other neat feature is that it lends itself to more automation, so I now have [an index for all of my talks](https://decks.mtlynch.io), which is cool. And the source is all [public](https://github.com/mtlynch/slide-decks).
 
