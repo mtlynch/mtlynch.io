@@ -28,7 +28,7 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 - **Result**: We had a minor issue with the first batch, but we should be completing the shift soon.
 - **Grade**: B
 
-We received our first production batch of devices from our contract manufacturer, and they're shipping to real customers in November.
+We received our first production batch of devices from our contract manufacturer, and we're shipping them to customers in November.
 
 I was hoping the batch would be perfect and we could declare the shift complete. Sadly, there was [a minor error](#trying-to-get-microsds-right-with-the-new-manufacturer) in the assembly process that we had to fix at our office, so we're still not yet at the point where we have a smooth pipeline from manufacturer to warehouse to customer.
 
@@ -37,7 +37,7 @@ I was hoping the batch would be perfect and we could declare the shift complete.
 - **Result**: We eliminated a manual release task that was bound to me.
 - **Grade**: A
 
-I'm always looking for ways to automate and simplify TinyPilot's software release process. I'm especially interested in ways to eliminate myself from the critical path of TinyPilot's routine workflows. In October, we made progress on both by automating how the TinyPilot website gets updated when a new version of TinyPilot Pro was available.
+I'm always looking for ways to automate and simplify TinyPilot's software release process. I'm especially interested in ways to eliminate myself from the critical path of TinyPilot's routine workflows. In October, we made progress on both by automating how we update the TinyPilot website when a new version of TinyPilot Pro is available.
 
 It used to be that I'd cut the release and then manually update the website to point to the new download URLs. Now, the website is sync'ed to our update service, so it discovers new releases automatically.
 
@@ -65,7 +65,7 @@ The dev team has had less availability than I was expecting for October, so we e
 
 This was TinyPilot's second-strongest month in history, and I have no idea why. Nothing stands out in our analytics, and I'm not aware of any new reviews or mentions. We saw [strong sales in October 2022](/retrospectives/2022/11/) as well, so it could just be seasonal.
 
-I was expecting numbers to drop a bit because I've been focused primarily on our manufacturing shift and haven't invested in marketing. I'm glad to see that we can survive on momentum, but I'm also beginning to invest more into growth in the last few months of 2023.
+I was expecting numbers to drop a bit because I've been focused on our manufacturing shift and haven't invested in marketing. I'm glad to see that we can survive on momentum, but I'm also beginning to invest more into growth in the last few months of 2023.
 
 ## Trying to get microSDs right with the new manufacturer
 
@@ -87,7 +87,7 @@ There ended up being [so many issues](/retrospectives/2023/10/#correcting-issues
 
 By mid-October, the manufacturer said they'd fixed all the issues I'd raised with the first sample. They were going to send [a small production batch](/retrospectives/2023/10/#do-we-skip-the-second-sample) that should be totally complete and ready to ship to customers.
 
-We were still going to perform additional QA on the first batch to make sure they matched our in-house standards. Part of our verification would be to check that the manufacturer flashed the microSDs correctly.
+We were still going to perform additional QA on the first batch to make sure they matched our in-house standards. Part of our verification involved checking that the manufacturer flashed the microSDs correctly.
 
 It wasn't until two days before the batch was scheduled to arrive that I thought - _how_ am I going to check that the manufacturer flashed the microSDs correctly? I wanted to make sure every last byte on the disk was correct.
 
@@ -103,13 +103,13 @@ I shut down the device I was testing and re-ran the microSD checking script. Thi
 
 Uh oh.
 
-From tinkering with the script, I discovered that it had a bug. Even though it worked correctly on the support engineer's machine, it always reported success in my testing environment.
+Even though the script worked correctly on the support engineer's machine, it always returned a false positive in my testing environment.
 
 From further inspection of the microSD, it was clear that the manufacturer had misunderstood our instructions. We wanted them to perform QA with a test microSD and replace it with a fresh one before it was packaged for the customer. The manufacturer wasn't doing the swap, so they were shipping units to customers with used microSDs.
 
 Fortunately, this mistake was relatively easy for us to correct at our office. Our local team opened each box, re-flashed the microSDs back to clean state, re-packed them, and sent them to our warehouse.
 
-Long-term, we obviously don't want to re-flash every microSD in our office. When we reported this to our manufacturer, they told us that they had indeed misunderstood our instructions and revised their process to ensure that every microSD that reaches customers is freshly flashed with our image. We'll verify the next batch again, but I'm hopeful that we're approaching the end of this issue.
+Long-term, we obviously don't want to re-flash every microSD in our office. When we reported the issue to our manufacturer, they told us that they had indeed misunderstood our instructions and revised their process to ensure that every microSD that reaches customers is freshly flashed with our image. We'll verify the next batch again, but I'm hopeful that we're approaching the end of this issue.
 
 ### How could I have prevented the microSD issue?
 
@@ -128,13 +128,11 @@ I also underinvested in our microSD checking script. At the time, it felt like a
 
 I'm not sure what the solution is for verifying the manufacturer's process end-to-end. When we were doing this in-house, we had a set of instructions in Notion, and our whole team would just follow those. We can't share a Notion workspace with the manufacturer because their workers don't all read English. So, we give them our English instructions, the manufacturer translates them into Vietnamese, and the workers read the Vietnamese version. I can't verify that the Vietnamese process matches the English process.
 
-Requesting videos of the QA process was helpful. They showed, in a language-independent way, how the manufacturer performs QA. But it's hard to get a video of the entire process end-to-end. The QA process didn't make it obvious that the microSD they were using for testing ended up staying in the final product, and I'm not sure how I'd prevent that.
+Requesting videos of the QA process was helpful. They showed, in a language-independent way, how the manufacturer performs QA. But it's hard to get a video of the entire process end-to-end. The QA process video didn't make it obvious that the microSD they were using for testing ended up staying in the final product, and I'm not sure how I'd prevent that.
 
-The manufacturer did invite me to go to Vietnam to visit the factory. I declined, as I'm traveled-out this year, but looking back, maybe that would have prevented some expensive errors. I could have also offered the trip to one of the local team members, but that's something I never considered at the time.
+The manufacturer did invite me to go to Vietnam to visit the factory. I declined, as I'm traveled-out this year, but looking back, maybe that would have prevented some expensive errors. I also could have also offered the trip to one of the local team members.
 
 ## Creating a customer success process
-
-My main focus for TinyPilot in 2023 has been shifting our manufacturing and fulfillment to third-party vendors.
 
 At the start of the year, the local TinyPilot team's job was about 20% customer service and 80% assembly and fulfillment. That balance has shifted significantly this year as we've moved manufacturing and fulfillment to external vendors. By the start of 2024, assembly and fulfillment should be 0% of the local team's work.
 
@@ -151,7 +149,7 @@ We're piloting a new customer success process that looks like this:
 1. We meet with the customer and learn about how they use TinyPilot.
 1. We integrate the customer's feedback into our feature roadmap.
 
-When I receive outreach as a customer from other businesses, it's usually baldly selfish. They'll say something like, "We want to help you understand all of our offerings," but they're really just trying to get me to buy stuff.
+When I receive outreach as a customer from other businesses, it's usually baldly selfish. They'll say something like, "We want to help you understand all of our offerings," but they're really just trying to get me to buy more stuff.
 
 I want TinyPilot's customer outreach to feel collaborative rather than parasitic or greedy. I think it will help us tune our roadmap to features that our customers want, and it will help us find out about new opportunities for TinyPilot that we otherwise wouldn't discover.
 
@@ -178,21 +176,21 @@ I had been trying to make the switch to NixOS, but I was having trouble because 
 
 ### I'm a weird mechanical keyboard person now
 
-In Lex Fridman's interview with Guido von Rossum, Lex has [an extended aside](https://www.youtube.com/watch?v=OLyu899ixL8) about how much he loves his Kinesis Advantage 2.
+In Lex Fridman's interview with Python creator Guido von Rossum, Lex has [an extended aside](https://www.youtube.com/watch?v=OLyu899ixL8) about how much he loves his Kinesis Advantage 2 keyboard.
 
 Kinesis is a popular vendor for mechanical keyboards. Their keyboards are unique in that the keys are in a concave well, and the two halves of the keyboard are several inches apart.
 
 {{<img src="fridman-tweet.png" max-width="500px" has-border="true" caption="Lex Fridman [loves his Kinesis Advantage 2](https://twitter.com/lexfridman/status/1206238129180549120) mechanical keyboard.">}}
 
-Lex loves his Kinesis keyboard so much so that he brings it with him on flights because he'd rather lug around a giant keyboard than use his laptop's built-in keyboard.
+Lex loves his Kinesis keyboard so much so that he brings it with him on flights because he'd rather lug around a giant keyboard than use his laptop's built-in keys.
 
 I've been using a Microsoft Ergonomic Keyboard of some variation since I was 14 years old. I like it, but I don't love it the way Lex talks about Kinesis, so I've been curious about mechanical keyboards for the past few months.
 
 {{<img src="microsoft-ergo-keyboard.jpg" max-width="600px" caption="Microsoft Natural Ergonomic Keyboard 4000, my main keyboard until recently" has-border="true">}}
 
-I'd never tried a mechanical keyboard, and I've never tried a physically split keyboard. I only know a couple of people who use mechanical keyboards, and it's never really appealed to me. It was fine if they wanted to nerd out about something, but I felt like the maximum enjoyment I'd ever get from a keyboard was pretty limited, so why bother?
+I only know a couple of people who use mechanical keyboards, but I never understood the appeal. It was fine if they wanted to nerd out about something, but I felt like the maximum enjoyment I'd ever get from a keyboard was pretty limited, so why bother?
 
-Then, I got curious and started reading more about high-end keyboards. I spend most of my waking hours at my keyboard, so maybe I _should_ invest in making the experience the best it can possibly be.
+Then, I got curious and started reading more about high-end keyboards. I spend most of my waking hours at my keyboard, so maybe I _should_ invest in optimizing the experience.
 
 After checking out a few of the options like Kinesis, Ergodox, and ZSA, I ended up going with the [Kinesis Advantage 360](https://kinesis-ergo.com/keyboards/advantage360/).
 
@@ -200,7 +198,7 @@ After checking out a few of the options like Kinesis, Ergodox, and ZSA, I ended 
 
 The first day with the keyboard was a real struggle. I was going about 5% of my usual typing speed. I had a lot of paperwork to get through, so I put aside the keyboard for the next morning.
 
-Day two was easier, but it was still a challenge. But I kept at it, and I'm now faster on this keyboard when typing English prose, but I'm slower at programming. I haven't gotten used to characters like `[`, `{`, and `=` on this keyboard. I've even remapped keys to make them easier, but I'm still trying to build the muscle memory.
+Day two was easier, but it was still a challenge. I kept at it, and I'm now faster on this keyboard when typing English prose, but I'm slower at programming. I haven't gotten used to characters like `[`, `{`, and `=` on this keyboard. I've even remapped keys to make them easier, but I'm still trying to build the muscle memory.
 
 I've read reviews from other people who say they have no trouble switching back to a regular keyboard once they got used to Kinesis, and that hasn't been my experience so far. When I switch to the cramped laptop keyboard on my Surface Pro 6, I make tons of typos. Maybe I'll eventually get back to being comfortable on both.
 
@@ -218,8 +216,8 @@ There's a 60-day return window, but at this point, I'm pretty sure I'm going to 
 
 - Track manufacturer commitments more actively.
   - This is a mistake I made before and didn't address it correctly.
-  - The microSDs repeat a pattern where the manufacturer commits to doing something, I assume that they're handling it, and then we both forget, and it causes issues down the line.
-  - I need to start recording their commitments and review them each week what the status is in case they forget.
+  - The microSDs repeat a pattern where the manufacturer commits to doing something, I assume that they're handling it, we both forget, and it causes issues down the line.
+  - I need to start recording their commitments review the status each week in case they forget.
 - Match BOMs component by component.
   - When the manufacturer sent the bill of materials months ago, I just mentally checked what I expected to see, but I missed that the microSD was missing.
   - When I go through a BOM agreement process in the future, I'll take our existing product apart, inventory all the components, and then verify that it matches the manufacturer's BOM.
