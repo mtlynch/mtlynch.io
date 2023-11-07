@@ -66,7 +66,7 @@ Early in 2005, college roommates Steve Huffman and Alexis Ohanian drove to Bosto
 
 Aaron Swartz was 19 at the time of filming. He already impacted the early web as one of the authors of the [RSS specification](https://www.rssboard.org/rss-validator/docs/rss1.html) and a founding contributor to [Creative Commons](https://creativecommons.org/).
 
-An undergrad at Stanford in 2005, Swartz was also accepted into Y Combinator's first batch. When his company stalled, Graham suggested he [merge with reddit](https://qz.com/594715/when-aaron-swartz-met-paul-graham-his-life-and-the-entire-internet-changed-forever).
+An undergrad at Stanford in 2005, Swartz was also accepted into Y Combinator's first batch. When his company stalled, Graham suggested he [merge with reddit](https://web.archive.org/web/20230326133436/https://qz.com/594715/when-aaron-swartz-met-paul-graham-his-life-and-the-entire-internet-changed-forever).
 
 ## "Back when they were getting started, they were terrified"
 
