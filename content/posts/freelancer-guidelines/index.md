@@ -1,14 +1,14 @@
 ---
 title: Guidelines for Freelance Developers Working with Me
 description: I provide this document when advertising dev jobs, and I pay freelancers to read it when they begin working with me.
-date: '2021-03-12'
+date: "2021-03-12"
 hero_image: cover.jpg
 custom_css: true
 images:
-- freelancer-guidelines/og-cover.jpg
+  - freelancer-guidelines/og-cover.jpg
 tags:
-- culture
-- outsourcing
+  - culture
+  - outsourcing
 discuss_urls:
   reddit: https://www.reddit.com/r/programming/comments/m3j6x9/guidelines_for_freelance_developers_working_with/
   hacker_news: https://news.ycombinator.com/item?id=26436379
@@ -20,7 +20,7 @@ Freelancers work well if you manage the relationship properly, but there are hun
 
 The document below explains what it's like to work with me as a freelance developer. I include it in every dev job listing I publish, and I pay contractors to read it closely after we begin working together. It attracts candidates with compatible working styles and reduces ramp-up time after I hire them.
 
-I'm publishing my guidelines under the [Creative Commons BY-4.0 license](http://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
+I'm publishing my guidelines under the [Creative Commons BY-4.0 license](https://creativecommons.org/licenses/by/4.0/), so you're welcome to reuse or adapt them.
 
 ---
 
@@ -100,9 +100,9 @@ In contrast, this email sequence answers the same questions as above, but in a p
 
 **Freelancer**: I'd love your input on the image. Can you let me know your preferences on the following?
 
-* Format (PNG or JPEG)?
-* Size (in pixels)?
-* Should it rescale on smaller devices?
+- Format (PNG or JPEG)?
+- Size (in pixels)?
+- Should it rescale on smaller devices?
 
 </div>
 
@@ -110,8 +110,8 @@ In contrast, this email sequence answers the same questions as above, but in a p
 
 **Me**: Thanks for the well-thought-out questions!
 
-* The format should be PNG.
-* On viewports smaller than 768px, the size should be 400x300px. Otherwise, the size should be 800x600px.
+- The format should be PNG.
+- On viewports smaller than 768px, the size should be 400x300px. Otherwise, the size should be 800x600px.
 
 </div>
 
@@ -125,17 +125,17 @@ It's okay for response time to run longer than one day occasionally, but it shou
 
 Meetings are useful for topics that are inefficient or impossible to communicate in writing. They come at a significant cost &mdash; meetings interrupt focus and constrain schedules, so I keep them to a minimum.
 
-I use emails to communicate facts and meetings to discuss opinions. For example, if we review a design document, we don't need to read it together live. Instead, we can read the document beforehand and reserve the meeting time for interactive discussion.
+I use emails to communicate facts and meetings to discuss topics interactively. For example, if we review a design document, we don't need to read it together live. Instead, we can read the document beforehand and reserve the meeting time for live discussion.
 
 I'll also schedule meetings once or twice a month for casual face-time together. Email-only communication can make things feel [impersonal and tense](/human-code-reviews-2/#talk-it-out).
 
-| Discussion Topic | Notes |
-|------------------|-------|
-| "Can we schedule a meeting to discuss the deadline for this project?" | <span class="bad-prefix">BAD</span>: This is a simple question that doesn't require a meeting. |
-| "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?" | <span class="bad-prefix">BAD</span>: If the code is too complicated to understand, a [meeting is not the answer](/code-review-love/#4-answer-questions-with-the-code-itself). |
-| "I have an idea for a new architecture. Can we hop on a call to go over it?" | <span class="bad-prefix">BAD</span>: I'd rather start with a written explanation and then discuss after I've read it. |
+| Discussion Topic                                                                                                                                             | Notes                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Can we schedule a meeting to discuss the deadline for this project?"                                                                                        | <span class="bad-prefix">BAD</span>: This is a simple question that doesn't require a meeting.                                                                                  |
+| "It's going to be hard for you to review my next pull request. Can we meet so I can explain it to you?"                                                      | <span class="bad-prefix">BAD</span>: If the code is too complicated to understand, a [meeting is not the answer](/code-review-love/#4-answer-questions-with-the-code-itself).   |
+| "I have an idea for a new architecture. Can we hop on a call to go over it?"                                                                                 | <span class="bad-prefix">BAD</span>: I'd rather start with a written explanation and then discuss after I've read it.                                                           |
 | "Your design document calls for us to use [Postgres](https://www.postgresql.org/), but I'd like to understand the constraints and talk about other options." | <span class="good-prefix">GOOD</span>: This is a complicated decision that likely requires many little back-and-forths, so a live discussion will be more efficient than email. |
-| "You've given me feedback in code reviews about 'cohesion,' but I feel like we're still not quite on the same page. Can we meet to discuss it?." | <span class="good-prefix">GOOD</span>: If we've tried to communicate something in writing, and it's not working, a meeting is an excellent way to hash it out. |
+| "You've given me feedback in code reviews about 'cohesion,' but I feel like we're still not quite on the same page. Can we meet to discuss it?."             | <span class="good-prefix">GOOD</span>: If we've tried to communicate something in writing, and it's not working, a meeting is an excellent way to hash it out.                  |
 
 ## Interviews
 
@@ -155,9 +155,9 @@ You should feel comfortable asking for help, but I expect you to answer question
 
 **Bad Questions**
 
-* How do I install Flask on my computer?
-* How do I link to specific sections of a Google Doc?
-* What significance does the number 443 have in our server configuration?
+- How do I install Flask on my computer?
+- How do I link to specific sections of a Google Doc?
+- What significance does the number 443 have in our server configuration?
 
 </div>
 
@@ -165,8 +165,8 @@ You should feel comfortable asking for help, but I expect you to answer question
 
 **Good Questions**
 
-* I'm having trouble understanding section 3 of the spec. Does "client" refer to the end-user or a client of the API?
-* When I try to install your software, I get the error message <code>FooBarBaz</code>. I've re-read the installation guide and searched the open issues, but I can't figure out what's going wrong. Do you know what the problem is?
+- I'm having trouble understanding section 3 of the spec. Does "client" refer to the end-user or a client of the API?
+- When I try to install your software, I get the error message <code>FooBarBaz</code>. I've re-read the installation guide and searched the open issues, but I can't figure out what's going wrong. Do you know what the problem is?
 
 </div>
 
@@ -186,8 +186,8 @@ It's common for me to ask for feedback during or after a project. Freelancers ha
 
 My questions are generally:
 
-* Are there changes that would make the work smoother or more enjoyable?
-* Are there types of work you want to do more of? Less of?
+- Are there changes that would make the work smoother or more enjoyable?
+- Are there types of work you want to do more of? Less of?
 
 ## Deadlines
 
@@ -201,12 +201,12 @@ In general, delays are not a big deal as long as I can plan around them. If a de
 
 When specifying deadlines, use precise, unambiguous time conventions:
 
-* <span class="good-prefix">Pretty Good</span>: I'll send it to you by EOD Friday
-* <span class="good-prefix">Better</span>: I'll send it to you by 5pm ET on Dec. 8th.
-* <span class="bad-prefix">Bad</span>: I'll have it ready in the next few days.
-  * Too vague.
-* <span class="bad-prefix">Terrible</span>: I'll let you know when it's ready.
-  * Extremely vague
+- <span class="good-prefix">Pretty Good</span>: I'll send it to you by EOD Friday
+- <span class="good-prefix">Better</span>: I'll send it to you by 5pm ET on Dec. 8th.
+- <span class="bad-prefix">Bad</span>: I'll have it ready in the next few days.
+  - Too vague.
+- <span class="bad-prefix">Terrible</span>: I'll let you know when it's ready.
+  - Extremely vague
 
 ## Timeboxing
 
@@ -251,16 +251,16 @@ My comments are not meant to criticize you or make you feel bad. I review rigoro
 
 These articles explain my code review process:
 
-* [How I review code](https://mtlynch.io/human-code-reviews-1/)
-* [How you should submit code for review](https://mtlynch.io/code-review-love/)
+- [How I review code](https://mtlynch.io/human-code-reviews-1/)
+- [How you should submit code for review](https://mtlynch.io/code-review-love/)
 
 ## Code style
 
 My projects adhere to Google's code style guidelines:
 
-* [Python](https://google.github.io/styleguide/pyguide.html)
-* [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
-* [Shell](https://google.github.io/styleguide/shellguide.html)
+- [Python](https://google.github.io/styleguide/pyguide.html)
+- [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
+- [Shell](https://google.github.io/styleguide/shellguide.html)
 
 As much as possible, I [use automated tools to enforce style conventions](https://mtlynch.io/human-code-reviews-1/#let-computers-do-the-boring-parts).
 
@@ -268,15 +268,15 @@ As much as possible, I [use automated tools to enforce style conventions](https:
 
 I use Git for source control. You don't need to be a Git expert as long as you understand basic functionality:
 
-* Clone a repo
-* Create a branch
-* Make a commit
-* Push and pull changes
-* Rebase a commit (occasionally)
+- Clone a repo
+- Create a branch
+- Make a commit
+- Push and pull changes
+- Rebase a commit (occasionally)
 
 ### Github permissions
 
-I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can clone it and begin making pull requests with no additional permissions.
+I assign access on a [least-privilege basis](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're working on one of my public repositories, you can fork it and begin making pull requests with no additional permissions.
 
 I use two Github integrations that require annoyingly broad permissions: [CircleCI](https://circleci.com/) and [Reviewable](https://reviewable.io/). Both applications require write access to all repos in your Github account. If you don't feel comfortable with those permissions, you'll need to create a dedicated Github user account for your work with me so that you can grant those tools full access.
 
@@ -284,7 +284,7 @@ I use two Github integrations that require annoyingly broad permissions: [Circle
 
 Some developers believe that every commit is beautiful and sacred. I'm not one of them.
 
-It's important to me that the *main* branch has a sane commit history. In all other branches, commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
+It's important to me that the _main_ branch has a sane commit history. In all other branches, commit however you like. You can make one commit per code review note or address all notes in a single commit. Whatever workflow you prefer is fine with me. I use Github's [squash and merge functionality](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits), so every pull request collapses down to a single commit.
 
 If you submit a pull request with many commits, I'll read the pull request title, description, and comments. I don't dig through the individual commits, as I assume they represent your intermediate work. The article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) describes my preferred style of documenting contributions, except applied to the pull request, not the individual commits.
 
@@ -304,10 +304,10 @@ I consider almost everything you do in service of working with me to be billable
 
 **Examples of billable work**
 
-* Communicating with me (including emails, video calls, and in-person meetings)
-* Reading documents that I ask you to read (including this one)
-* Researching a technique or technology relevant to your work
-* Going for a walk to think about a complex problem
+- Communicating with me (including emails, video calls, and in-person meetings)
+- Reading documents that I ask you to read (including this one)
+- Researching a technique or technology relevant to your work
+- Going for a walk to think about a complex problem
 
 </div>
 
@@ -315,10 +315,10 @@ I consider almost everything you do in service of working with me to be billable
 
 **Examples of non-billable work**
 
-* Reading a book cover-to-cover because it's related to your work
-  * Reading a chapter is fine.
-* Fixing your work computer because your hard drive died
-* Shopping for a new desk chair
+- Reading a book cover-to-cover because it's related to your work
+  - Reading a chapter is fine.
+- Fixing your work computer because your hard drive died
+- Shopping for a new desk chair
 
 </div>
 
@@ -364,10 +364,10 @@ If I discover an issue in your work after I send you payment, I'm responsible fo
 
 If I pay you more than $600 per calendar year, I need some forms for tax purposes.
 
-* US citizens and residents
-  * You'll need to provide a [W-9 form](https://www.irs.gov/pub/irs-pdf/fw9.pdf). At the end of the year, I'll send you a [1099-MISC](https://www.irs.gov/forms-pubs/about-form-1099-misc).
-* Non-US freelancers
-  * I'll need a [W-8BEN](https://www.irs.gov/pub/irs-pdf/fw8ben.pdf) form that declares you don't owe US taxes.
+- US citizens and residents
+  - You'll need to provide a [W-9 form](https://www.irs.gov/pub/irs-pdf/fw9.pdf). At the end of the year, I'll send you a [1099-MISC](https://www.irs.gov/forms-pubs/about-form-1099-misc).
+- Non-US freelancers
+  - I'll need a [W-8BEN](https://www.irs.gov/pub/irs-pdf/fw8ben.pdf) form that declares you don't owe US taxes.
 
 ## Intellectual property
 
@@ -376,8 +376,9 @@ If we're working together on a project where I want to retain intellectual prope
 The contract relates specifically to work I pay you to produce, not anything you create outside of your paid hours for me.
 
 ---
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/).*
+
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/)._
 
 Are you a client or freelancer? I'd love to see similar documents or hear how others approach this problem, so feel free to share in the comments.
 
-{{<tweet user="deliberatecoder" id="1370392431049474048" >}}
+{{<tweet user="deliberatecoder" id="1370392431049474048">}}

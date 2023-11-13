@@ -1,7 +1,7 @@
 ---
 title: Notes from PyTexas 2019
 description: My notes and self-critiques from speaking at PyTexas.
-date: '2019-04-18'
+date: "2019-04-18"
 ---
 
 ## Overview
@@ -14,7 +14,7 @@ It was a fun trip, and I learned a lot. It was also expensive, both financially 
 
 ### Intentional Deployment: Best Practices for Feature Flag Management
 
-{{< youtube AD8LSdy7b2s >}}
+{{<youtube AD8LSdy7b2s>}}
 
 **Speaker**: [Caitlin Rubin](https://www.linkedin.com/in/caitlin-rubin-a3b1a2103/) from Optimizely
 
@@ -26,32 +26,32 @@ This talk succinctly explained feature flags, why they can cause problems, and s
 
 Other things I liked:
 
-* Slide deck was clean, never overwhelming the audience with text
-* Slides advanced or updated every few seconds to keep things moving
-* Caitlin telegraphed comfort on stage, spoke clearly and calmly
-* Good mix of humor sprinkled throughout the presentation
+- Slide deck was clean, never overwhelming the audience with text
+- Slides advanced or updated every few seconds to keep things moving
+- Caitlin telegraphed comfort on stage, spoke clearly and calmly
+- Good mix of humor sprinkled throughout the presentation
 
 ### Free yourself from your ORM with mypy!
 
-{{< youtube oLvEXiV0L-Q >}}
+{{<youtube oLvEXiV0L-Q>}}
 
 **Speaker**: Thomas Stephens from uStudio
 
 I've always had an aversion to object-relational mapping (ORM) frameworks. They allow developers to move application objects in and out of data stores without having to implement a lot of serialization and deserialization logic by hand. Thomas articulated the problem I've always had with ORM systems but could never put into words: they bind your object model to your ORM framework.
 
-I've also seen [mypy](http://mypy-lang.org/) and understood the appeal, but I tried it about a year ago and had a hard time getting it to work on my projects (most of which are Python 2.7), so I just gave up. If you haven't seen it, it's a static type checker for Python. It reads [PEP 484](https://www.python.org/dev/peps/pep-0484/) type hints in your code and tells you when you're violating them.
+I've also seen [mypy](https://mypy-lang.org/) and understood the appeal, but I tried it about a year ago and had a hard time getting it to work on my projects (most of which are Python 2.7), so I just gave up. If you haven't seen it, it's a static type checker for Python. It reads [PEP 484](https://www.python.org/dev/peps/pep-0484/) type hints in your code and tells you when you're violating them.
 
 This talk provided a gentle introduction to mypy and highlighted a far-reaching benefit of using it. Namely, implementing your own data serialization and deserialization without too much hassle and leaning. Thomas demonstrated how you can lean on the type checker heavily to prevent common serialization errors.
 
 Other things I liked:
 
-* Clear articulation of the problem he's trying to solve
-* Simple live-coding that was easy to follow
-* Code was elegant and clear
+- Clear articulation of the problem he's trying to solve
+- Simple live-coding that was easy to follow
+- Code was elegant and clear
 
 ### When Booleans Are Not Enough... State Machines?
 
-{{< youtube I1Mzx_tSpew >}}
+{{<youtube I1Mzx_tSpew>}}
 
 **Speaker**: [Harrington Joseph](https://twitter.com/harph) from Netflix
 
@@ -65,12 +65,12 @@ Harrington demonstrated how the [pytransitions library](https://github.com/pytra
 
 Other things I liked:
 
-* Beautiful slides
-  * The dark theme worked well
-  * The full-screen code snippets with syntax highlighting made it easy to read
-  * Great diagrams of state machines that were easy to understand
-* Clear code examples
-  * Elided out code that wasn't relevant to his core point, making everything easy to think about
+- Beautiful slides
+  - The dark theme worked well
+  - The full-screen code snippets with syntax highlighting made it easy to read
+  - Great diagrams of state machines that were easy to understand
+- Clear code examples
+  - Elided out code that wasn't relevant to his core point, making everything easy to think about
 
 ## Other notable takeaways
 
@@ -84,10 +84,10 @@ The first day I tried visiting Penflip, I got a 502 gateway error even after man
 
 Still, having one product name gave me a toehold to search for others. Apparently, there's a whole mess of "code review, but for content" products out there that have failed:
 
-* <a href="https://draftin.com/" rel="nofollow">Draft</a>: One of the few still-functional editing apps but doesn't seem to support reviews well.
-* [Editorially](http://stet.editorially.com/articles/goodbye/): This was a free tool that people reputedly loved, but it shut down in 2014. I found many articles mourning its closure.
-* <a href="https://typewrite.io" rel="nofollow">Typewrite</a>: Site is still up, but functionality is broken to the point that I can't even sign up. Last Twitter post was in 2014, so I think it's dead.
-* Poetica: I've seen this mentioned, but it's now dead. Didn't seem especially popular.
+- <a href="https://draftin.com/" rel="nofollow">Draft</a>: One of the few still-functional editing apps but doesn't seem to support reviews well.
+- [Editorially](http://stet.editorially.com/articles/goodbye/): This was a free tool that people reputedly loved, but it shut down in 2014. I found many articles mourning its closure.
+- <a href="https://typewrite.io" rel="nofollow">Typewrite</a>: Site is still up, but functionality is broken to the point that I can't even sign up. Last Twitter post was in 2014, so I think it's dead.
+- Poetica: I've seen this mentioned, but it's now dead. Didn't seem especially popular.
 
 ### The Zen of Python
 
@@ -124,46 +124,47 @@ Several people spoke glowingly of PyCon. PyTexas is a small, regional conference
 
 ## What made presentations effective
 
-* Speaker comfort
-  * The talks that were the best were ones where the speaker felt comfortable and took their time.
-  * The best example of this was Adrienne Lowe's keynote, ["The Zen of Python Teams."](https://www.youtube.com/watch?v=OmvUbHtSAaM)
-* Personalization
-  * I found talks more engaging when the speaker was part of the story. What problem were you trying to solve? What were the challenges you faced? What did you learn? Answering these questions was far more engaging than just a dry summary of "did you know tool X exists to solve problem Y?"
+- Speaker comfort
+  - The talks that were the best were ones where the speaker felt comfortable and took their time.
+  - The best example of this was Adrienne Lowe's keynote, ["The Zen of Python Teams."](https://www.youtube.com/watch?v=OmvUbHtSAaM)
+- Personalization
+  - I found talks more engaging when the speaker was part of the story. What problem were you trying to solve? What were the challenges you faced? What did you learn? Answering these questions was far more engaging than just a dry summary of "did you know tool X exists to solve problem Y?"
 
 ## What weakened presentations
 
-* Mic issues
-  * It's unfortunate that one of the most common things to take me out of presentations was something so basic and boring as audio quality.
-  * The conference used the [Tony Robbins-style over the ear mic](https://upload.wikimedia.org/wikipedia/commons/5/5e/Tony_Robbins.jpg), which many speakers had trouble positioning correctly, so audio would often drift in and out.
-  * Other speakers chose a handheld mic but had trouble holding it close enough to their mouth and speaking loudly enough for the mic to pick it up.
-* Slide lethargy
-  * The best presenters kept their slides moving briskly. They either advanced a slide or made a new bullet appear at least once every 30 seconds. I remember a feeling of "stuckness" when presenters kept the same slide up without changing anything for 60 seconds or more.
-* Script-reading
-  * Part of the fun of attending a live conference is that you, as the attendee, are part of the talk. The speaker is responding to your energy and adapting their presentation accordingly. When the speaker has long sections that they're reading verbatim from a script (or worse, when the entire presentation is a static script), you lose the fun of a live presentation.
-* Animated gifs
-  * I found these distracting, especially if they sat on the screen looping for more than a few seconds.
-  * I often felt the cheap joke undermined the speaker's point.
-* "This is an old slide."
-  * A few presentations included information that was a year or two out of date because they were recycled from previous conferences. The speaker excused it by saying the slide was old, but it always made me feel disappointed that the speaker didn't care enough about their talk to do a run-through beforehand to catch these issues.
+- Mic issues
+  - It's unfortunate that one of the most common things to take me out of presentations was something so basic and boring as audio quality.
+  - The conference used the [Tony Robbins-style over the ear mic](https://upload.wikimedia.org/wikipedia/commons/5/5e/Tony_Robbins.jpg), which many speakers had trouble positioning correctly, so audio would often drift in and out.
+  - Other speakers chose a handheld mic but had trouble holding it close enough to their mouth and speaking loudly enough for the mic to pick it up.
+- Slide lethargy
+  - The best presenters kept their slides moving briskly. They either advanced a slide or made a new bullet appear at least once every 30 seconds. I remember a feeling of "stuckness" when presenters kept the same slide up without changing anything for 60 seconds or more.
+- Script-reading
+  - Part of the fun of attending a live conference is that you, as the attendee, are part of the talk. The speaker is responding to your energy and adapting their presentation accordingly. When the speaker has long sections that they're reading verbatim from a script (or worse, when the entire presentation is a static script), you lose the fun of a live presentation.
+- Animated gifs
+  - I found these distracting, especially if they sat on the screen looping for more than a few seconds.
+  - I often felt the cheap joke undermined the speaker's point.
+- "This is an old slide."
+  - A few presentations included information that was a year or two out of date because they were recycled from previous conferences. The speaker excused it by saying the slide was old, but it always made me feel disappointed that the speaker didn't care enough about their talk to do a run-through beforehand to catch these issues.
 
 ## Critiquing my own talk
 
-{{< youtube hM_ex4-xu4E >}}
+{{<youtube hM_ex4-xu4E>}}
 
 **Speaker**: Michael Lynch (me)
 
 **[Slides](https://mtlynch.page.link/gdbt)**
 
-* What went well
-  * Preparedness: I did 5-8 run-throughs in the weeks leading up to the talk, so I felt comfortable with the material.
-  * Slide pacing: Reviewing the video, it feels like I'm avoiding slide lethargy and moving the presentation forward at a good pace.
-  * My dig at Java (see [16:15](https://youtu.be/hM_ex4-xu4E?t=975)) got a good laugh.
+- What went well
 
-* What needs improvement
-  * Slow down: I was talking way too fast. I forgot to keep a timer up, so I was in kind of a rushed panic to finish on time. My rehearsals were running about 27 minutes, but at the real event, I went so fast that I only used 22 minutes of my half-hour slot.
-  * Look up more: I spent too much time looking down at my screen to read the content instead of engaging the audience.
-  * "Magic numbers are fine in test code" (at [19:58](https://youtu.be/hM_ex4-xu4E?t=1198))
-    * This line needed more justification. Fortunately, someone asked about this in the Q & A, so I was able to cover it, but it should have been part of the presentation proper.
+  - Preparedness: I did 5-8 run-throughs in the weeks leading up to the talk, so I felt comfortable with the material.
+  - Slide pacing: Reviewing the video, it feels like I'm avoiding slide lethargy and moving the presentation forward at a good pace.
+  - My dig at Java (see [16:15](https://youtu.be/hM_ex4-xu4E?t=975)) got a good laugh.
+
+- What needs improvement
+  - Slow down: I was talking way too fast. I forgot to keep a timer up, so I was in kind of a rushed panic to finish on time. My rehearsals were running about 27 minutes, but at the real event, I went so fast that I only used 22 minutes of my half-hour slot.
+  - Look up more: I spent too much time looking down at my screen to read the content instead of engaging the audience.
+  - "Magic numbers are fine in test code" (at [19:58](https://youtu.be/hM_ex4-xu4E?t=1198))
+    - This line needed more justification. Fortunately, someone asked about this in the Q & A, so I was able to cover it, but it should have been part of the presentation proper.
 
 ## Other thoughts
 
@@ -193,16 +194,16 @@ The downside is that single-track events lack the shuffling that multi-track con
 
 I ended up spending more to attend this conference than I expected:
 
-| Expense | Amount |
-|---------|--------|
-| Airfare | $699.96 |
-| Airbnb (2 nights) | $253.26 |
-| Airport parking | $89.79 |
-| Uber rides | $81.93 |
-| Gas | $33.01 |
-| Food | $26.29 |
-| PyTexas ticket | ~~$85~~ (free through PyTexas grant) |
-| **Total** | **$1,184.24** |
+| Expense           | Amount                               |
+| ----------------- | ------------------------------------ |
+| Airfare           | $699.96                              |
+| Airbnb (2 nights) | $253.26                              |
+| Airport parking   | $89.79                               |
+| Uber rides        | $81.93                               |
+| Gas               | $33.01                               |
+| Food              | $26.29                               |
+| PyTexas ticket    | ~~$85~~ (free through PyTexas grant) |
+| **Total**         | **$1,184.24**                        |
 
 Beyond the monetary cost, it was expensive in terms of time. It's a two-day conference, but it wiped me out for about five days. I lost roughly a day in transit each way, and then it took me about a day to catch up on non-work errands that I'd missed while I was away. Outside that, I spent 20-30 hours preparing my slide deck and rehearsing it.
 

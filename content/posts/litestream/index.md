@@ -2,14 +2,14 @@
 title: "How Litestream Eliminated My Database Server for $0.03/month"
 date: "2021-04-29T00:00:00Z"
 tags:
-- tinypilot
-- litestream
-- docker
-- logpaste
+  - tinypilot
+  - litestream
+  - docker
+  - logpaste
 description: I've always hated maintaining database servers. Litestream offers a simple alternative without sacrificing reliability or security.
 custom_css: true
 images:
-- litestream/og-cover.jpg
+  - litestream/og-cover.jpg
 discuss_urls:
   reddit: https://www.reddit.com/r/golang/comments/n15ikk/how_litestream_eliminated_my_database_server_for/
   hacker_news: https://news.ycombinator.com/item?id=26981239
@@ -19,15 +19,15 @@ Here's a riddle. My web app keeps all of its data in a SQL database. I can spont
 
 How is this possible?
 
->That's easy. You have a separate database server running somewhere that stores all of your app's state.
+> That's easy. You have a separate database server running somewhere that stores all of your app's state.
 
 No, my app never talks to a remote database server.
 
->Oh, then you're using a proprietary, managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
+> Oh, then you're using a proprietary, managed datastore like [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) or [Google Cloud Firestore](https://cloud.google.com/firestore).
 
 Nope, my entire stack is open-source and platform-agnostic.
 
->Then what?
+> Then what?
 
 I combined [SQLite](https://sqlite.org/index.html), [Litestream](https://litestream.io/), and [Docker](https://www.docker.com/).
 
@@ -49,13 +49,13 @@ I've been building my own software products and services for the past eight year
 
 Instead, I've always used Google-managed datastores like Cloud Datastore, Firebase, and Firestore. But every few years, Google builds a totally new datastore solution, deprecates its old one, and [dumps all the migration work onto its customers](https://medium.com/@steve.yegge/dear-google-cloud-your-deprecation-policy-is-killing-you-ee7525dc05dc). I didn't want to create another service on top of a tech stack that Google would probably kill off soon.
 
-{{<img src="gcp-deprecations.png" alt="Screenshot of AppEngine library documentation featuring several deprecation notices" caption="Google deprecated its Python DB Client library, forcing users to migrate to NDB. They then deprecated NDB in favor of Cloud NDB. Now, they're ominously directing developers to build new apps against yet another API." maxWidth="640px" hasBorder="true">}}
+{{<img src="gcp-deprecations.png" alt="Screenshot of AppEngine library documentation featuring several deprecation notices" caption="Google deprecated its Python DB Client library, forcing users to migrate to NDB. They then deprecated NDB in favor of Cloud NDB. Now, they're ominously directing developers to build new apps against yet another API." max-width="640px" has-border="true">}}
 
 ## Litestream: the serverless database server
 
-A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular [Bolt database](https://github.com/boltdb/bolt), had taken on a new project: [Litestream](http://litestream.io). It's a simple, open-source tool that replicates a SQLite database to Amazon's S3 cloud storage.
+A few months ago, I saw that [Ben Johnson](https://twitter.com/benbjohnson), author of the popular [Bolt database](https://github.com/boltdb/bolt), had taken on a new project: [Litestream](https://litestream.io). It's a simple, open-source tool that replicates a SQLite database to Amazon's S3 cloud storage.
 
-{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](http://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." maxWidth="700px" hasBorder="true">}}
+{{<img src="litestream.png" alt="Screenshot of Litestream homepage" caption="[Litestream](https://litestream.io) is an open-source tool that replicates a SQLite database to Amazon's S3 cloud storage." max-width="700px" has-border="true">}}
 
 It seemed neat, but I wasn't particularly excited about it. I never use SQLite, so what did I care?
 
@@ -63,7 +63,7 @@ I didn't have anything against SQLite, but the design seemed impractical. Unlike
 
 Thinking about it more, I realized I'd dismissed Litestream because I didn't use SQLite. But Litestream solved the very obstacle keeping me from adopting SQLite... Maybe this was worth a try.
 
-Even better, Litestream could be my ticket out of Google Cloud Platform. SQLite runs anywhere, so I'd have freedom in choosing server hosting platforms. Litestream provides vendor flexibility on the storage side, as it supports any S3-compatible service, including [BackBlaze B2](https://www.backblaze.com/b2/cloud-storage.html), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
+Even better, Litestream could be my ticket out of Google Cloud Platform. SQLite runs anywhere, so I'd have freedom in choosing server hosting platforms. Litestream provides vendor flexibility on the storage side, as it supports any S3-compatible service, including [BackBlaze B2](https://www.backblaze.com/cloud-storage), [Wasabi](https://wasabi.com/), and [Minio](https://min.io/).
 
 Litestream sounded rosy in theory, but you can't judge a technology until you test it in production. I needed a log upload service, and it seemed like the perfect project to test Litestream.
 
@@ -208,7 +208,7 @@ docker run \
 
 Here's how it all fits together in production:
 
-{{<img src="diagram.jpg" caption="How LogPaste, Litestream, Docker, and S3 all fit together" maxWidth="750px" hasBorder="true">}}
+{{<img src="diagram.jpg" caption="How LogPaste, Litestream, Docker, and S3 all fit together" max-width="750px" has-border="true">}}
 
 ## LogPaste demo
 
@@ -257,24 +257,24 @@ The client-side code is less than 30 lines of HTML and JavaScript:
 
 <script src="https://logpaste.com/js/logpaste.js"></script>
 <script>
-const baseUrl = 'https://logpaste.com';
-document.getElementById("upload").addEventListener("click", (evt) => {
-  const resultElement = document.getElementById("result");
-  const errorElement = document.getElementById("error");
-  resultElement.innerText = "";
-  errorElement.innerText = "";
-  const textToUpload = document.getElementById("upload-textarea").value;
-  logpaste
-    .uploadText(textToUpload, baseUrl)
-    .then((id) => {
-      const url = `${baseUrl}/${id}`;
-      resultElement.innerText = url;
-      resultElement.href = url;
-    })
-    .catch((error) => {
-      errorElement.innerText = error;
-    });
-});
+  const baseUrl = "https://logpaste.com";
+  document.getElementById("upload").addEventListener("click", (evt) => {
+    const resultElement = document.getElementById("result");
+    const errorElement = document.getElementById("error");
+    resultElement.innerText = "";
+    errorElement.innerText = "";
+    const textToUpload = document.getElementById("upload-textarea").value;
+    logpaste
+      .uploadText(textToUpload, baseUrl)
+      .then((id) => {
+        const url = `${baseUrl}/${id}`;
+        resultElement.innerText = url;
+        resultElement.href = url;
+      })
+      .catch((error) => {
+        errorElement.innerText = error;
+      });
+  });
 </script>
 ```
 
@@ -286,7 +286,7 @@ I'm using LogPaste in production for [TinyPilot](https://tinypilotkvm.com), my o
 
 LogPaste has handled all of TinyPilot's debug logs for the past few months, and it's worked well. The cost for data replication truly is just $0.03 per month:
 
-{{<img src="aws-bill.png" alt="Screenshot of AWS bill showing $0.03 in S3 charges and $0.00 in data transfer fees" maxWidth="600px" hasBorder="true">}}
+{{<img src="aws-bill.png" alt="Screenshot of AWS bill showing $0.03 in S3 charges and $0.00 in data transfer fees" max-width="600px" has-border="true">}}
 
 My use case is, admittedly, fairly gentle. Only a handful of users upload their logs each day, so there may be pain points with this setup under heavier workloads.
 
@@ -300,26 +300,26 @@ If you want to host your own instance of my LogPaste app, it's easy to deploy. Y
 
 For example, here's TinyPilot's version:
 
-{{<img src="tinypilot-branding.png" alt="Screenshot of TinyPilot's LogPaste instance" caption="TinyPilot's instance of LogPaste includes custom branding without any code changes" maxWidth="680px" hasBorder="true">}}
+{{<img src="tinypilot-branding.png" alt="Screenshot of TinyPilot's LogPaste instance" caption="TinyPilot's instance of LogPaste includes custom branding without any code changes" max-width="680px" has-border="true">}}
 
 I've written deployment instructions for a few different platforms:
 
-| Platform | Notes |
-|----------|-------|
-| [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md) | Free tier allows up to three always-on instances and includes SSL certificates |
-| [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md) | $7/month per instance, includes SSL certificates |
-| [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md) | Free tier allows unlimited on-demand instances, $7/month for SSL certificates on custom domains |
+| Platform                                                                                         | Notes                                                                                           |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| [fly.io](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/fly.io.md)              | Free tier allows up to three always-on instances and includes SSL certificates                  |
+| [Amazon LightSail](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/lightsail.md) | $7/month per instance, includes SSL certificates                                                |
+| [Heroku](https://github.com/mtlynch/logpaste/blob/master/docs/deployment/heroku.md)              | Free tier allows unlimited on-demand instances, $7/month for SSL certificates on custom domains |
 
 ## Further reading
 
-* [Litestream](https://litestream.io/): Litestream's official documentation.
-* [mtlynch/logpaste](https://github.com/mtlynch/logpaste): MIT-licensed source code and documentation for LogPaste.
-* [litestream-s6-example](https://github.com/benbjohnson/litestream-s6-example): A more advanced and robust method for running Litestream alongside your app in a Docker container. It uses [s6-overlay](https://github.com/just-containers/s6-overlay) to restart the Litestream instance on failure.
+- [Litestream](https://litestream.io/): Litestream's official documentation.
+- [mtlynch/logpaste](https://github.com/mtlynch/logpaste): MIT-licensed source code and documentation for LogPaste.
+- [litestream-s6-example](https://github.com/benbjohnson/litestream-s6-example): A more advanced and robust method for running Litestream alongside your app in a Docker container. It uses [s6-overlay](https://github.com/just-containers/s6-overlay) to restart the Litestream instance on failure.
 
-{{<tweet user="deliberatecoder" id="1387768253854986247" >}}
+{{<tweet user="deliberatecoder" id="1387768253854986247">}}
 
 ---
 
-*Architecture diagram by [Loraine Yow](https://www.lolo-ology.com/).*
+_Architecture diagram by [Loraine Yow](https://www.lolo-ology.com/)._
 
-*Thanks to [Ben Johnson](https://twitter.com/benbjohnson) for his work on Litestream and his early review of this article. Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post.*
+_Thanks to [Ben Johnson](https://twitter.com/benbjohnson) for his work on Litestream and his early review of this article. Thanks to the members of the [Blogging for Devs Community](https://bloggingfordevs.com) for providing feedback on this post._

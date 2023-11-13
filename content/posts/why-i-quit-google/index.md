@@ -1,18 +1,19 @@
 ---
 title: Why I Quit Google to Work for Myself
-description: For the past four years, I've worked as a software developer at Google.
+description:
+  For the past four years, I've worked as a software developer at Google.
   On February 1st, I quit. It was because they refused to buy me a Christmas present.
 discuss_urls:
   reddit: https://redd.it/80whkc
   hacker_news: https://news.ycombinator.com/item?id=16483241
   indie_hackers: https://www.indiehackers.com/forum/why-i-quit-google-to-work-for-myself-284c36ec48
 tags:
-- entrepreneurship
-- google
-- sia
-date: '2018-02-28'
+  - entrepreneurship
+  - google
+  - sia
+date: "2018-02-28"
 images:
-- why-i-quit-google/spoiled-coder.png
+  - why-i-quit-google/spoiled-coder.png
 ---
 
 For the past four years, I've worked as a software developer at Google. On February 1st, I quit. It was because they refused to buy me a Christmas present.
@@ -25,11 +26,11 @@ Two years in, I loved Google.
 
 When the annual employee survey asked me whether I expected to be at Google in five years, it was a no-brainer.
 
-Of *course* I'd still be at Google in five years. I was surrounded by the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
+Of _course_ I'd still be at Google in five years. I was surrounded by the best engineers in the world, using the most advanced development tools in the world, and eating the free-est food in the world.
 
-{{< img src="spoiled-coder.png" alt="My typical day at Google" maxWidth="750px" >}}
+{{<img src="spoiled-coder.png" alt="My typical day at Google" max-width="750px">}}
 
-My most recent performance rating was "Strongly Exceeds Expectations." If I just kept going, I'd soon be promoted to the next level, Senior Software Engineer. What a great title! Forever after in my career, I'd be able to say, "Yes, I was a *Senior* Software Engineer. At *Google*." People would be so impressed.
+My most recent performance rating was "Strongly Exceeds Expectations." If I just kept going, I'd soon be promoted to the next level, Senior Software Engineer. What a great title! Forever after in my career, I'd be able to say, "Yes, I was a _Senior_ Software Engineer. At _Google_." People would be so impressed.
 
 My manager assured me that my promotion was close. He felt that I was already capable of senior-level work. I just needed the right project to prove it to the promotion committee.
 
@@ -43,7 +44,7 @@ You apply for promotion by assembling a "promo packet": a collection of written 
 
 A promotion committee then reviews your packet with a handful of others, and they spend the day deciding who gets promoted and who doesn't.
 
-During my two-year honeymoon phase, this system sounded great to me. Of *course* my fate should be in the hands of a mysterious committee who's never met me. They wouldn't be tainted by any sort of favoritism or politics. They'd see past all that and recognize me for my high-quality code and shrewd engineering decisions.
+During my two-year honeymoon phase, this system sounded great to me. Of _course_ my fate should be in the hands of a mysterious committee who's never met me. They wouldn't be tainted by any sort of favoritism or politics. They'd see past all that and recognize me for my high-quality code and shrewd engineering decisions.
 
 ## That's not really how it works
 
@@ -69,7 +70,7 @@ My other work didn't look so good on paper either. On several occasions, I put m
 
 I submitted my first promo packet, and the results were what I feared: the promotion committee said that I hadn't proven I could handle technical complexity, and they couldn't see the impact I had on Google.
 
-{{< img src="promo-committee.png" alt="Arguing my case to the promotion committee" maxWidth="800px" >}}
+{{<img src="promo-committee.png" alt="Arguing my case to the promotion committee" max-width="800px">}}
 
 ## Learning from rejection
 
@@ -87,17 +88,17 @@ A few months later, Google [made headlines](http://fortune.com/2016/12/09/alphab
 
 Shortly after this, I witnessed the following conversation between two employees:
 
->**Employee A**: You effectively **are** still getting the gift. Cuts like these increase the value of Google's stock. You can sell your stock grants and buy any present you choose.
+> **Employee A**: You effectively **are** still getting the gift. Cuts like these increase the value of Google's stock. You can sell your stock grants and buy any present you choose.
 >
->**Employee B**: What if I told my wife that I wasn't buying her a Christmas gift, but she could use the money in our bank account to buy any present she wants?
+> **Employee B**: What if I told my wife that I wasn't buying her a Christmas gift, but she could use the money in our bank account to buy any present she wants?
 >
->**Employee A**: You're in a **business** relationship with Google. If you're disappointed that Google isn't "romancing" you with gifts like you do for your wife, you have a misguided notion of the relationship.
+> **Employee A**: You're in a **business** relationship with Google. If you're disappointed that Google isn't "romancing" you with gifts like you do for your wife, you have a misguided notion of the relationship.
 
-Wait a second. *I* was in a business relationship with Google.
+Wait a second. _I_ was in a business relationship with Google.
 
-It may sound strange that it took me two and a half years to realize it, but Google does a good job of building a sense of community within the organization. To make us feel that we're not just employees, but that we *are* Google.
+It may sound strange that it took me two and a half years to realize it, but Google does a good job of building a sense of community within the organization. To make us feel that we're not just employees, but that we _are_ Google.
 
-That conversation made me realize that I'm *not* Google. I provide a service to Google in exchange for money.
+That conversation made me realize that I'm _not_ Google. I provide a service to Google in exchange for money.
 
 So if Google and I have a business relationship that exists to serve each side's interests, why was I spending time on all these tasks that served Google's interests instead of my own? If the promotion committee doesn't reward bugfixing or team support work, why was I doing that?
 
@@ -117,19 +118,19 @@ As far as my promotion was concerned, this was a setback of several months. Beca
 
 ## What am I even doing?
 
-It  was the third time in six months that my manager had reassigned me midway through a project. Each time, he assured me that it had nothing to do with the quality of my work, but rather some shift in upper management strategy or team headcount.
+It was the third time in six months that my manager had reassigned me midway through a project. Each time, he assured me that it had nothing to do with the quality of my work, but rather some shift in upper management strategy or team headcount.
 
-At this point, I took a step back to assess what was happening from a high level.  Forget my manager, forget his managers, forget the promotion committee. What if I boiled it down to just me and just Google? What was happening in our "business relationship?"
+At this point, I took a step back to assess what was happening from a high level. Forget my manager, forget his managers, forget the promotion committee. What if I boiled it down to just me and just Google? What was happening in our "business relationship?"
 
 Well, Google kept telling me that it couldn't judge my work until it saw me complete a project. Meanwhile, I couldn't complete any projects because Google kept interrupting them midway through and assigning me new ones.
 
 The dynamic felt absurd.
 
-{{< img src="book-publisher.png" alt="The Google promotion committee approach to book publishing" maxWidth="750px" >}}
+{{<img src="book-publisher.png" alt="The Google promotion committee approach to book publishing" max-width="750px">}}
 
 My career was being dictated by a shifting, anonymous committee who thought about me for an hour of their lives. Management decisions that I had no input into were erasing months of my career progress.
 
-Worst of all, I wasn't proud of my work. Instead of asking myself, "How can I solve this challenging problem?" I was asking, "How can I make this problem *look* challenging for promotion?" I hated that.
+Worst of all, I wasn't proud of my work. Instead of asking myself, "How can I solve this challenging problem?" I was asking, "How can I make this problem _look_ challenging for promotion?" I hated that.
 
 Even if I got the promotion, what then? Popular wisdom said that each promotion was exponentially harder than the last. To continue advancing my career, I'd need projects that were even larger in scope and involved collaboration with more partner teams. But that just meant the project could fail due to even more factors outside my control, wasting months or years of my life.
 
@@ -137,7 +138,7 @@ Even if I got the promotion, what then? Popular wisdom said that each promotion 
 
 Around this time, I discovered [Indie Hackers](https://www.indiehackers.com/).
 
-{{< img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" maxWidth="750px" >}}
+{{<img src="indie-hackers.png" alt="Screenshot of Indie Hackers website" max-width="750px">}}
 
 It's an online community for founders of small software businesses. Emphasis on small. These weren't Zuckerberg hopefuls, but rather people who wanted to build modest, profitable businesses that pay their bills.
 
@@ -161,7 +162,7 @@ Actually, my whole team was canceled. This was a common enough occurrence at Goo
 
 I applied for the promotion anyway. Weeks later, my manager read me the results. My performance rating was "Superb," the highest possible score, given to around 5% of employees each cycle. The promotion committee noted that in the past six months, I clearly demonstrated senior-level work. These were, uncoincidentally, the months when I was optimizing for promotion.
 
-*But* they felt that six months wasn't a long enough track record, so... better luck next time.
+_But_ they felt that six months wasn't a long enough track record, so... better luck next time.
 
 My manager told me I had a strong chance at promotion if I did the same quality work for another six months. I can't say I wasn't tempted, but by that point, I'd been hearing, "great shot at promotion in six months," for the past two years.
 
@@ -169,25 +170,25 @@ It was time to go.
 
 ## What's next?
 
-When I tell people I left Google, they assume I must have some brilliant startup idea. Only an *idiot* would leave a job as cushy as Google Software Engineer.
+When I tell people I left Google, they assume I must have some brilliant startup idea. Only an _idiot_ would leave a job as cushy as Google Software Engineer.
 
 But I am indeed an idiot with no idea.
 
 My plan is to try different projects for a few months each to see if any of them catch on, for example:
 
-* Continue working on [KetoHub](/tags/ketohub) to see if I can make it profitable
-* Build a business on top of Sia, a distributed storage technology I've [written about frequently](/tags/sia)
-* Spend more time writing, and look for ways to earn money from it
+- Continue working on [KetoHub](/tags/ketohub) to see if I can make it profitable
+- Build a business on top of Sia, a distributed storage technology I've [written about frequently](/tags/sia)
+- Spend more time writing, and look for ways to earn money from it
 
 Google was a great place to work, and I learned valuable skills during my time there. Leaving was difficult because I had more to learn, but there will always be employers like Google. I won't always have the freedom to start my own company, so I look forward to seeing where this takes me.
 
 ## Updates
 
-* **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/solo-developer-year-1/)
-* **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
-* **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
-* **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Feb. 1, 2019)**: [My First Year as a Solo Developer](/solo-developer-year-1/)
+- **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
+- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
+- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 
 ---
 
-*Illustrations by [Loraine Yow](https://www.lolo-ology.com/).*
+_Illustrations by [Loraine Yow](https://www.lolo-ology.com/)._

@@ -38,6 +38,8 @@
 
       {{ partial "social-share.html" . }}
 
+      {{ partial "social-discuss.html" . }}
+
       {{ if not .Site.IsServer }}
         {{ partial "talkyard.html" . }}
       {{ end }}

@@ -3,8 +3,8 @@ title = "mtlynch.io"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 10
-timeout = 120000
+paginate = 15
+timeout = 300000
 
 # We don't want to canonify URLs because it prevents us from
 # deploying drafts of the site to alternate hosts.

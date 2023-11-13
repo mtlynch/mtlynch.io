@@ -1,15 +1,15 @@
 ---
 title: Running Sia on a Synology NAS via Docker
 tags:
-- docker
-- sia
-- synology
-- nas
+  - docker
+  - sia
+  - synology
+  - nas
 description: A walkthrough for setting up Sia in Docker in Synology DSM
-lastmod: '2018-09-24T19:08:00-04:00'
-date: '2016-05-30'
+lastmod: "2018-09-24T19:08:00-04:00"
+date: "2016-05-30"
 images:
-- sia-via-docker/sia-running.png
+  - sia-via-docker/sia-running.png
 ---
 
 ## Overview
@@ -26,7 +26,7 @@ In this guide, I'll show you how to set up a Sia server on a NAS device using [D
 
 Many newcomers to Sia ask, "Will I make a lot of money hosting on Sia?" The honest answer is that **hosting storage on Sia is NOT lucrative**.... yet.
 
-{{< img src="siahub-2percent.png" alt="SiaHub screenshot" maxWidth="380px" align="right" >}}
+{{<img src="siahub-2percent.png" alt="SiaHub screenshot" max-width="380px" align="right">}}
 
 The storage rental market has not yet reached critical mass. SiaHub, my favorite Sia host explorer, shows that the total storage capacity of Sia's network (as of 2017-05-25) is a whopping 1.1 petabytes. Only 2% of that capacity has been rented. With such a surplus of space, hosts can't sell their storage space unless they price it at almost zero.
 
@@ -40,17 +40,17 @@ When users purchase storage on Sia, the host selection algorithm gives strong pr
 
 ### It's fun
 
-I personally host just to experiment with something new. I find it fun to tweak my host pricing and see how it affects the number of storage contracts I receive.  Sia has also connected me with an [enthusiastic community](https://reddit.com/r/siacoin) of other Sia users.
+I personally host just to experiment with something new. I find it fun to tweak my host pricing and see how it affects the number of storage contracts I receive. Sia has also connected me with an [enthusiastic community](https://reddit.com/r/siacoin) of other Sia users.
 
 ## Software versions
 
 This guide uses the latest version of each software component at the time of writing:
 
-{{< img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" maxWidth="300px" >}}
+{{<img src="ds412.jpg" caption="Synology DS412+ NAS device" align="right" max-width="300px">}}
 
-* DiskStation Manager (DSM) 6.1.2-15132
-* Sia v.1.3.4
-* Docker v.1.11.2
+- DiskStation Manager (DSM) 6.1.2-15132
+- Sia v.1.3.4
+- Docker v.1.11.2
 
 Though this guide is written specifically for the Synology DSM system, the steps relating to Docker should be applicable on any platform that supports Docker.
 
@@ -64,7 +64,7 @@ First, install Docker.
 
 Docker is one of the few Synology-published, official packages available for DSM. Find it in Package Center by searching for `docker` and clicking "Install."
 
-{{< img src="package-docker.png" alt="Install Docker package" >}}
+{{<img src="package-docker.png" alt="Install Docker package">}}
 
 ### Create Sia directory
 
@@ -72,7 +72,7 @@ Next, create a dedicated Shared Folder for Sia. This is the folder where Sia wil
 
 From File Station, create a new Shared Folder and name it "sia":
 
-{{< img src="new-shared-folder.png" alt="Create new shared folder" maxWidth="547px" >}}
+{{<img src="new-shared-folder.png" alt="Create new shared folder" max-width="547px">}}
 
 ### Enable SSH access to DiskStation
 
@@ -80,7 +80,7 @@ There are no pre-packaged Docker images for Sia, so you'll create a `Dockerfile`
 
 To enable this functionality, open Control Panel > Terminal & SNMP and check the box next to "Enable SSH service."
 
-{{< img src="enable-ssh.png" alt="Install Docker package" >}}
+{{<img src="enable-ssh.png" alt="Install Docker package">}}
 
 ## Creating the Docker container
 
@@ -112,21 +112,21 @@ admin@DiskStation:$ sudo docker run \
 
 The previous commands do the following:
 
-* Downloads my [unofficial Sia Docker image](https://github.com/mtlynch/docker-sia).
-* Creates a Docker container from the image and starts running the container in the background.
-* Forwards traffic to ports `9980`-`9982` on the NAS (the Docker host) to those same port numbers within the Sia container.
-  * **Important**: Notice that for port `9980` you bind *only to the local network interface*, whereas for other ports you implicitly bind to all interfaces. This is a security measure. Anyone who communicates with `siad` on port `9980` has full control of our host and can, for example, empty our wallet. This measure is not strictly necessary if our network does not expose this port externally, but it is a useful precaution regardless.
-  * My NAS has the IP address `10.0.0.101`. You can find your NAS's IP address with the command `dig diskstation +short` from another machine on your local network.
+- Downloads my [unofficial Sia Docker image](https://github.com/mtlynch/docker-sia).
+- Creates a Docker container from the image and starts running the container in the background.
+- Forwards traffic to ports `9980`-`9982` on the NAS (the Docker host) to those same port numbers within the Sia container.
+  - **Important**: Notice that for port `9980` you bind _only to the local network interface_, whereas for other ports you implicitly bind to all interfaces. This is a security measure. Anyone who communicates with `siad` on port `9980` has full control of our host and can, for example, empty our wallet. This measure is not strictly necessary if our network does not expose this port externally, but it is a useful precaution regardless.
+  - My NAS has the IP address `10.0.0.101`. You can find your NAS's IP address with the command `dig diskstation +short` from another machine on your local network.
 
 ### Checking for success
 
 From DSM, open the Docker app and view the "Container" panel. You should see something similar to the following:
 
-{{< img src="sia-running.png" alt="Sia container running" >}}
+{{<img src="sia-running.png" alt="Sia container running">}}
 
 If you open the "sia" Shared Folder we created earlier, you'll see that `siad` has created several folders:
 
-{{< img src="sia-folder-populated.png" alt="Sia generated folders" >}}
+{{<img src="sia-folder-populated.png" alt="Sia generated folders">}}
 
 ## Configuring Sia
 
@@ -153,7 +153,7 @@ Target: [0 0 0 0 12 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 
 
 To create storage space to sell to other Sia users, create a dedicated subdirectory called `host-storage` in your "sia" shared folder:
 
-{{< img src="create-storage-folder.png" alt="Sia storage folder" >}}
+{{<img src="create-storage-folder.png" alt="Sia storage folder">}}
 
 Then, use `siac` to add that folder as a new Sia host storage folder:
 
@@ -161,15 +161,15 @@ Then, use `siac` to add that folder as a new Sia host storage folder:
 ./siac --addr DISKSTATION:9980 host folder add /sia-data/host-storage 500GB
 ```
 
-Note that `/sia-data/host-storage` is the path from the *daemon's* perspective from within the Docker container, not the perspective of `siac`.
+Note that `/sia-data/host-storage` is the path from the _daemon's_ perspective from within the Docker container, not the perspective of `siac`.
 
 ## Allow Sia through firewall
 
-Sia needs to communicate with remote peers over ports `9981` and `9982`. When using a  home router, configure it to forward these ports to the Synology NAS. The exact process will vary by router, but it should look something like the following:
+Sia needs to communicate with remote peers over ports `9981` and `9982`. When using a home router, configure it to forward these ports to the Synology NAS. The exact process will vary by router, but it should look something like the following:
 
-*Note: Replace `10.0.0.101` with the IP address of your Synology NAS.*
+_Note: Replace `10.0.0.101` with the IP address of your Synology NAS._
 
-{{< img src="firewall.png" alt="Firewall settings" >}}
+{{<img src="firewall.png" alt="Firewall settings">}}
 
 You should **not** expose port `9980` because that is Sia's port for API communications. Exposing it to the public Internet would leave your Sia host vulnerable to compromise.
 
@@ -181,40 +181,40 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
 
 1. SSH into your NAS as `admin`.
 
-    ```bash
-    ssh admin@diskstation
-    ```
+   ```bash
+   ssh admin@diskstation
+   ```
 
 1. Run the following commands:
 
-    ```bash
-    # Gracefully shut down Sia
-    admin@Diskstation:/$ sudo docker exec -it sia-container ./siac stop
+   ```bash
+   # Gracefully shut down Sia
+   admin@Diskstation:/$ sudo docker exec -it sia-container ./siac stop
 
-    # Remove the old container.
-    # NOTE: If Docker says the container is still running, wait a few minutes to
-    # allow siad to finish shutting down gracefully and re-try this command.
-    # It may take up to 10 minutes.
-    admin@Diskstation:/$ sudo docker rm sia-container
+   # Remove the old container.
+   # NOTE: If Docker says the container is still running, wait a few minutes to
+   # allow siad to finish shutting down gracefully and re-try this command.
+   # It may take up to 10 minutes.
+   admin@Diskstation:/$ sudo docker rm sia-container
 
-    # Upgrade to the latest Sia Docker image
-    admin@Diskstation:/$ sudo docker pull nebulouslabs/sia
+   # Upgrade to the latest Sia Docker image
+   admin@Diskstation:/$ sudo docker pull nebulouslabs/sia
 
-    # NOTE: Replace 10.0.0.101 with the IP address of the Synology NAS on your
-    # local network.
-    admin@DiskStation:/$ LOCAL_IP=10.0.0.101
+   # NOTE: Replace 10.0.0.101 with the IP address of the Synology NAS on your
+   # local network.
+   admin@DiskStation:/$ LOCAL_IP=10.0.0.101
 
-    # Re-create the Docker container.
-    admin@DiskStation:/$ sudo docker run \
-      --detach \
-      --volume /volume1/sia:/sia-data \
-      --publish "${LOCAL_IP}:9980:9980" \
-      --publish 9981:9981 \
-      --publish 9982:9982 \
-      --restart always \
-      --name sia-container \
-      nebulouslabs/sia
-    ```
+   # Re-create the Docker container.
+   admin@DiskStation:/$ sudo docker run \
+     --detach \
+     --volume /volume1/sia:/sia-data \
+     --publish "${LOCAL_IP}:9980:9980" \
+     --publish 9981:9981 \
+     --publish 9982:9982 \
+     --restart always \
+     --name sia-container \
+     nebulouslabs/sia
+   ```
 
 When you complete this process, you'll have a new Sia Docker container running the latest version of Sia.
 
@@ -228,4 +228,4 @@ Because this configuration keeps all of Sia's persistent state outside of the co
 
 This guide showed you how to get your host up and running, but there's more you need do to configure your host and optimize it to maximize your profits. Sia community member RBZL has written an excellent guide:
 
-* [Sia Hosting Guide](https://siasetup.info/guides/hosting_on_sia)
+- [Sia Hosting Guide](https://siasetup.info/guides/hosting_on_sia)

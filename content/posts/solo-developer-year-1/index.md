@@ -1,49 +1,50 @@
 ---
 title: My First Year as a Solo Developer
 tags:
-- annual review
-- blogging
-- google
-- zestful
-- space duck
-- sia
-- is it keto
-- ketohub
-description: Exactly one year ago, I quit my job at Google, so it's time to reflect
+  - annual review
+  - blogging
+  - google
+  - zestful
+  - space duck
+  - sia
+  - is it keto
+  - ketohub
+description:
+  Exactly one year ago, I quit my job at Google, so it's time to reflect
   on how the decision has affected my finances, lifestyle, and happiness.
 discuss_urls:
   reddit: https://redd.it/am2i0o
   hacker_news: https://news.ycombinator.com/item?id=19054150
   indie_hackers: https://www.indiehackers.com/mtlynch/post/c514bf6b33
-date: '2019-02-01'
+date: "2019-02-01"
 images:
-- solo-developer-year-1/cover.jpg
+  - solo-developer-year-1/cover.jpg
 ---
 
-{{< img src="cover.jpg" alt="My first year as a solo developer (cover image)" maxWidth="1000px" >}}
+{{<img src="cover.jpg" alt="My first year as a solo developer (cover image)" max-width="1000px">}}
 
 On February 1st, 2018, I [quit my job](/why-i-quit-google) as a software engineer at Google to start my own single-person software company. It's exactly one year later, so it feels like an apt time to reflect on how that decision affected my finances, lifestyle, and happiness.
 
 ## How I made and spent money
 
-{{< img src="bench-2018.jpg" alt="Profit and loss for 2018" caption="Profit and loss chart via [Bench](https://bench.co/)." maxWidth="793px" hasBorder="True" >}}
+{{<img src="bench-2018.jpg" alt="Profit and loss for 2018" caption="Profit and loss chart via [Bench](https://bench.co/)." max-width="793px" has-border="true">}}
 
-One way of looking at the chart is that I lost $21k in a single year. Alternate interpretation: I *grew profits* by almost $1k each month!  If this trend continues, I should be fabulously wealthy quite soon.
+One way of looking at the chart is that I lost $21k in a single year. Alternate interpretation: I _grew profits_ by almost $1k each month! If this trend continues, I should be fabulously wealthy quite soon.
 
-{{< img src="2019-projected.jpg" alt="Projected earnings for 2019" caption="Profit and loss through 2019, projected" maxWidth="793px" hasBorder="True" >}}
+{{<img src="2019-projected.jpg" alt="Projected earnings for 2019" caption="Profit and loss through 2019, projected" max-width="793px" has-border="true">}}
 
 Okay, that's a bit of a fanciful interpretation. The reason that my profits increased (i.e., remained negative, but decreased in magnitude) was that I reduced spending.
 
 ## Costly lessons in outsourcing
 
-At first, I had a very [*Four Hour Work Week*](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) mentality:  my job was not to *do* work but rather to *manage* work, so I hired freelancers to do everything.
+At first, I had a very [_Four Hour Work Week_](https://smile.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/) mentality: my job was not to _do_ work but rather to _manage_ work, so I hired freelancers to do everything.
 
 Two problems quickly arose:
 
-* It takes weeks or months until outsourcing saves time.
-  * There are upfront costs to specify a task, hire a freelancer, train them, etc.
-* Outsourcing requires careful coordination.
-  * If managing work requires only 20% as much time as doing it directly, I should be able to manage five freelancers in a full work week, right? But, what if all of them submit their work on the same day? It's impossible to review everything at the same time, and the freelancers don't want to sit idle for a week until I catch up.
+- It takes weeks or months until outsourcing saves time.
+  - There are upfront costs to specify a task, hire a freelancer, train them, etc.
+- Outsourcing requires careful coordination.
+  - If managing work requires only 20% as much time as doing it directly, I should be able to manage five freelancers in a full work week, right? But, what if all of them submit their work on the same day? It's impossible to review everything at the same time, and the freelancers don't want to sit idle for a week until I catch up.
 
 In my struggle to give everything proper attention, there was a decline in the quality of work I accepted, and sometimes I had to throw things out entirely because of my poor planning.
 
@@ -51,109 +52,109 @@ To address this, I reduced my outsourcing and handled more work myself. This cha
 
 ## Project by project
 
-{{< img src="project-finances-2018.png" alt="Graph of income and expenses on a per-project basis" caption="Income and expenses for each of my projects in 2018" maxWidth="800px" hasBorder="True" >}}
+{{<img src="project-finances-2018.png" alt="Graph of income and expenses on a per-project basis" caption="Income and expenses for each of my projects in 2018" max-width="800px" has-border="true">}}
 
-### mtlynch.io *(this blog)*
+### mtlynch.io _(this blog)_
 
 My most significant source of revenue in 2018 was this blog. I deliberately avoid monetizing it because I don't want ad money to influence my writing. The sole exception is that if the blog links to a product, I use an affiliate link so that the site earns referral money.
 
 Despite my best efforts, the blog earned more than all of my other projects combined. It had its biggest revenue year, realizing $1.2k in affiliate payments. That was the result of 981k pageviews, which most professional bloggers probably consider laughably under-monetized.
 
-| Income/Expense | Amount |
-|---------|----------------------|
-| Affiliate revenue | $1,244 |
-| Development\* | -$3,896 |
-| [Illustrations](/how-to-hire-a-cartoonist/) | -$599 |
-| [Editing](/editor/) | -$75 |
-| [Grammarly](https://grammarly.com) (Grammar and style checking service) | -$140 |
-| Hosting | -$309 |
-| Domain | -$60 |
-| **Net profit** | **-$3,835** |
+| Income/Expense                                                          | Amount      |
+| ----------------------------------------------------------------------- | ----------- |
+| Affiliate revenue                                                       | $1,244      |
+| Development\*                                                           | -$3,896     |
+| [Illustrations](/how-to-hire-a-cartoonist/)                             | -$599       |
+| [Editing](/editor/)                                                     | -$75        |
+| [Grammarly](https://grammarly.com) (Grammar and style checking service) | -$140       |
+| Hosting                                                                 | -$309       |
+| Domain                                                                  | -$60        |
+| **Net profit**                                                          | **-$3,835** |
 
 \* I work with an [excellent developer](https://www.andrewwnewhouse.com/) who handles all the coding and web design so that I can just write.
 
 ### [Is It Keto](https://isitketo.org)
 
-{{< img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto website" maxWidth="600px" hasBorder="True" >}}
+{{<img src="isitketo-screenshot.jpg" alt="Screenshot of Is It Keto website" max-width="600px" has-border="true">}}
 
 Is It Keto is my current focus. It gives readers clear, simple answers about which foods are compatible with [the keto diet](https://en.wikipedia.org/wiki/Ketogenic_diet). If the food is keto-friendly, the site displays a purchase link and receives commission from any sales.
 
 Revenues are small because I just added monetization at the end of November, but I'm hopeful that they will increase rapidly.
 
-| Income/Expense | Amount |
-|---------|----------------------|
-| Affiliate revenue | $1.20 |
-| Development | -$1,660 |
-| Logo Design | -$211 |
-| Hosting | -$0\* |
-| Domain | -$12 |
-| **Net profit** | **-$1,882** |
+| Income/Expense    | Amount      |
+| ----------------- | ----------- |
+| Affiliate revenue | $1.20       |
+| Development       | -$1,660     |
+| Logo Design       | -$211       |
+| Hosting           | -$0\*       |
+| Domain            | -$12        |
+| **Net profit**    | **-$1,882** |
 
 \* Is It Keto runs on AppEngine, and traffic is currently low enough to fit into their free tier.
 
 ### [Zestful](https://zestfuldata.com)
 
-{{< img src="zestful-screenshot.jpg" alt="Screenshot of Zestful website" maxWidth="800px" hasBorder="True" >}}
+{{<img src="zestful-screenshot.jpg" alt="Screenshot of Zestful website" max-width="800px" has-border="true">}}
 
 Zestful was my first attempt at software-as-a-service (SaaS). It allows developers to infer structure from recipe ingredients programmatically. Given an ingredient like `"1.5 cups finely chopped red onions"`, Zestful tells the application that `1.5` is the quantity, `cups` is the unit of measure, `red onions` are the product, and `finely chopped` is a preparation step.
 
 I put the project in maintenance mode in September after several months of [unsuccessful sales attempts](/shipping-too-late/). Interestingly, several people have reached out to me in the past few months with plans to use it on their side projects, so maybe it will come back to life in 2019.
 
-| Income/Expense | Amount |
-|---------|----------------------|
-| Client payments | $0\* |
-| Development | -$7,440 |
-| Logo design | -$200 |
-| Hosting | -$164 |
-| Domains | -$50 |
-| **Net profit** | **-$7,854** |
+| Income/Expense  | Amount      |
+| --------------- | ----------- |
+| Client payments | $0\*        |
+| Development     | -$7,440     |
+| Logo design     | -$200       |
+| Hosting         | -$164       |
+| Domains         | -$50        |
+| **Net profit**  | **-$7,854** |
 
-\* It *technically* earned about $1, but my payment processor won't pay out balances under $2.
+\* It _technically_ earned about $1, but my payment processor won't pay out balances under $2.
 
 ### [Space Duck](https://spaceduck.io)
 
-{{< img src="spaceduck-screenshot.jpg" alt="Screenshot of Space Duck website" maxWidth="600px" hasBorder="True" >}}
+{{<img src="spaceduck-screenshot.jpg" alt="Screenshot of Space Duck website" max-width="600px" has-border="true">}}
 
 Space Duck was my exploratory quest to build something on top of Sia, [a decentralized storage technology](/tags/sia).
 
 After running a [series of experiments](https://blog.spaceduck.io/load-test-wrapup/), I realized Sia [was not yet ready](/since-quitting/#failed-project-space-duck) to support any of my business ideas, so I shelved Space Duck in April.
 
-| Income/Expense | Amount |
-|---------|----------------------|
-| Logo design | -$250 |
-| Website development | -$1,373 |
-| Hosting | -$196 |
-| Domain | -$60 |
-| **Net profit** | -**$1,879** |
+| Income/Expense      | Amount      |
+| ------------------- | ----------- |
+| Logo design         | -$250       |
+| Website development | -$1,373     |
+| Hosting             | -$196       |
+| Domain              | -$60        |
+| **Net profit**      | -**$1,879** |
 
-### [KetoHub](https://ketohub.io)
+### [KetoHub](https://recipe-search.isitketo.org)
 
-{{< img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub website" maxWidth="700px" hasBorder="True" >}}
+{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub website" max-width="700px" has-border="true">}}
 
 KetoHub is a project I [started last year](/tags/ketohub). It aggregates keto recipes from popular blogs and makes them searchable by ingredient.
 
 I developed it on and off at the beginning of the year but put it in maintenance mode when I realized I was managing too many projects. I still have ideas for monetizing it, but each requires a considerable time investment and has a low probability of success. Now, it's mainly a complement to Is It Keto.
 
-| Income/Expense | Amount |
-|---------|----------------------|
-| Development | -$1,502 |
-| User interviews | -$220 |
-| Logo Design | -$211 |
-| Hosting | -$46 |
-| Domain | -$60 |
-| **Net profit** | **-$2,039** |
+| Income/Expense  | Amount      |
+| --------------- | ----------- |
+| Development     | -$1,502     |
+| User interviews | -$220       |
+| Logo Design     | -$211       |
+| Hosting         | -$46        |
+| Domain          | -$60        |
+| **Net profit**  | **-$2,039** |
 
 ### Everything Else
 
-| Expense | Purpose | Amount | Note |
-|------------|-----------|-----------|-------|
-| [Bench](https://bench.co/) | Bookkeeping | -$1,610 | Pricey, but it's one of the few services I've used that just solves a problem so thoroughly that I only have to think about it for a few hours per year. |
+| Expense                            | Purpose                | Amount  | Note                                                                                                                                                                                                                     |
+| ---------------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Bench](https://bench.co/)         | Bookkeeping            | -$1,610 | Pricey, but it's one of the few services I've used that just solves a problem so thoroughly that I only have to think about it for a few hours per year.                                                                 |
 | [Travis CI](https://travis-ci.com) | Continuous integration | -$1,419 | I wish this were cheaper, but I absolutely need continuous integration. I've heard that [CircleCI](https://circleci.com/) is now the better offering and costs less, so I'll likely switch when my subscription expires. |
-| [Coveralls](https://coveralls.io) | Test coverage tracking | -$270 | Another one I wish was cheaper, but I love testing, so I'm willing to pay for anything that improves my tests. |
-| [GitHub Pro](https://github.com/) | Source code storage | -$91 | I bought this just for the private repositories, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I'll stop paying this in 2019. |
-| Dev tooling | Misc | -$1,400 | I paid freelance developers to add general-purpose tooling during development. |
-| Travel, conferences, events, books | | -$634 | |
-| Banking and credit card rewards | | ~$1,000 | Embarrassingly, my second largest source of income for the year was in cash rewards for opening business checking and credit accounts. |
+| [Coveralls](https://coveralls.io)  | Test coverage tracking | -$270   | Another one I wish was cheaper, but I love testing, so I'm willing to pay for anything that improves my tests.                                                                                                           |
+| [GitHub Pro](https://github.com/)  | Source code storage    | -$91    | I bought this just for the private repositories, but [now they're free](https://techcrunch.com/2019/01/07/github-free-users-now-get-unlimited-private-repositories/), so I'll stop paying this in 2019.                  |
+| Dev tooling                        | Misc                   | -$1,400 | I paid freelance developers to add general-purpose tooling during development.                                                                                                                                           |
+| Travel, conferences, events, books |                        | -$634   |                                                                                                                                                                                                                          |
+| Banking and credit card rewards    |                        | ~$1,000 | Embarrassingly, my second largest source of income for the year was in cash rewards for opening business checking and credit accounts.                                                                                   |
 
 ## Bleeding dry from personal expenses
 
@@ -171,14 +172,9 @@ One day in June, I jokingly texted my sister that I should cut my spending by mo
 
 The more I thought about it, the more sense it made. It was close to my family, I enjoyed spending time there, and the cost of living was tiny compared to New York.
 
-So in August, I bought a modest two-bedroom home in South Hadley, Massachusetts. Population: 17,500.
+In August, I bought a modest two-bedroom home in Western Massachusetts. My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium.
 
-{{< gallery caption="If you're worried about money, just buy a house." >}}
-  {{< img src="house-front.jpg" alt="My house, front view" >}}
-  {{< img src="house-angle.jpg" alt="My house, side view" >}}
-{{</ gallery >}}
-
-My living expenses here are ~$2k per month, which is close enough to the rate of return on my personal investments that I'm kind of at equilibrium. I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
+I no longer feel a sense of panic that my money is burning up and everything has to happen NOW NOW NOW. The low costs give me the freedom to experiment with projects like Is It Keto, where even a $50 growth in profits is a meaningful victory.
 
 ## I want to do this forever
 
@@ -187,16 +183,16 @@ People have asked me if I'm still happy with my decision to quit and start my ow
 As someone who has always valued independence, I love being a solo developer. It makes a world of difference to wake up whenever I want and make my own choices about how to spend my entire day. This is how I want to live the rest of my life.
 
 {{<notice type="info">}}
-***Sidenote**: My friends with children tell me that kids won't complicate this at all.*
-{{< /notice >}}
+_**Sidenote**: My friends with children tell me that kids won't complicate this at all._
+{{</notice>}}
 
 ## Doubts
 
 Despite this, I do still experience doubts about my work. Here are the questions I frequently ask myself:
 
-* The things you're best at are [code reviews](/human-code-reviews-1/), [unit tests](/good-developers-bad-tests/), and refining processes for a team of developers. Aren't you wasting your best skills working by yourself?
-* One of your fatal flaws with Zestful was that you were [too afraid of sales](/shipping-too-late/#a-different-type-of-rejection). Does your new business *really* have potential? Or did you just pick a project where you didn't have to do sales?
-* Your job at Google used to impress people. Now, when people ask about your work, you awkwardly tell them, "Um, it's a website where you type a food, and it tells you whether it's keto..." Shouldn't you do something that sounds more impressive?
+- The things you're best at are [code reviews](/human-code-reviews-1/), [unit tests](/good-developers-bad-tests/), and refining processes for a team of developers. Aren't you wasting your best skills working by yourself?
+- One of your fatal flaws with Zestful was that you were [too afraid of sales](/shipping-too-late/#a-different-type-of-rejection). Does your new business _really_ have potential? Or did you just pick a project where you didn't have to do sales?
+- Your job at Google used to impress people. Now, when people ask about your work, you awkwardly tell them, "Um, it's a website where you type a food, and it tells you whether it's keto..." Shouldn't you do something that sounds more impressive?
 
 At the root of these doubts is the fact that my businesses haven't yet succeeded. However, it's comforting to remember that most successful entrepreneurs [spent years flailing around before they found something that worked](https://twitter.com/shpigford/status/1033032915175858176?lang=en).
 
@@ -214,7 +210,7 @@ At the end of each week, I spend 30-60 minutes writing down everything I accompl
 
 This works on a monthly level as well. At the beginning of each month, I publish retrospectives in which I reassess my strategy and set objectives for the coming month (e.g., Is It Keto [Month 3](https://www.indiehackers.com/forum/isitketo-returning-to-a-site-that-grew-without-me-0a0fe3ef52) and [Month 4](https://www.indiehackers.com/forum/isitketo-month-4-my-first-dollar-of-revenue-03e572f661)).
 
-Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (***Note**: wild popularity still pending*).
+Finally, every February, I write a riveting, wildly popular blog post reflecting on the past year (_**Note**: wild popularity still pending_).
 
 ### Set goals
 
@@ -226,17 +222,17 @@ A clear objective like, "Achieve $50 in revenue for the month," forces me to pri
 
 Speaking of goals, here's what I hope to accomplish in my second year as a solo developer:
 
-* Achieve $500/month in revenue across my businesses.
-* Present talks at three software conferences.
-* Publish 12 blog posts.
-* Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
+- Achieve $500/month in revenue across my businesses.
+- Present talks at three software conferences.
+- Publish 12 blog posts.
+- Gain comfort with a JavaScript framework (e.g., [Vue](https://vuejs.org/), [Angular](https://angular.io/), [React](https://reactjs.org/)).
 
 ## Updates
 
-* **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
-* **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
-* **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
+- **Update (Jan. 31, 2020)**: [My Second Year as a Solo Developer](/solo-developer-year-2/)
+- **Update (Feb. 1, 2021)**: [My Third Year as a Solo Developer](/solo-developer-year-3/)
+- **Update (Feb. 1, 2022)**: [My Fourth Year as a Bootstrapped Founder](/solo-developer-year-4/)
 
 ---
 
-*Cover art by [Loraine Yow](https://www.lolo-ology.com/)*
+_Cover art by [Loraine Yow](https://www.lolo-ology.com/)_

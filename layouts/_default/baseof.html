@@ -26,15 +26,10 @@
     {{ end }}
 
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700|Rubik:300,700|Source+Code+Pro:400,700"
-      rel="stylesheet"
-    />
+    <link href="/third-party/google-fonts/css/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
-      crossorigin="anonymous"
+      href="/third-party/font-awesome/v5.11.2/css/all.css"
     />
     {{ if .HasShortcode "zestful-ad" }}
       <link rel="stylesheet" href="/css/zestful.css" media="screen" />
@@ -44,7 +39,7 @@
     {{ end }}
 
     {{- if and .IsPage (eq .Type "retrospectives") (not (hasPrefix .Title "Notes from")) }}
-      <script src="/js/chart.js/2.9.4/Chart.min.js"></script>
+      <script src="/third-party/chart.js/2.9.4/Chart.min.js"></script>
       <script src="/js/retrospectives.js"></script>
     {{ end }}
 
@@ -66,10 +61,10 @@
 
     {{ if not .Site.IsServer }}
       <script
-          defer
-          data-domain="mtlynch.io"
-          src="https://plausible.io/js/plausible.js">
-      </script>
+        defer
+        data-domain="mtlynch.io"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
     {{ end }}
 
     {{ range .Site.Params.custom_css }}

@@ -2,12 +2,12 @@
 title: A Simple Pre-Rendered Web App Using Vue + Nuxt
 description: The easiest way to improve social sharing and SEO for a single-page app.
 tags:
-- vue
-- nuxt
-- SPAs
-date: '2019-12-19'
+  - vue
+  - nuxt
+  - SPAs
+date: "2019-12-19"
 images:
-- simple-vue-pre-rendered/og-cover.jpg
+  - simple-vue-pre-rendered/og-cover.jpg
 ---
 
 In this post, I'll show you how to pre-render pages using Vue and Nuxt. This method combines the convenient development experience of Vue without forfeiting critical features like social sharing or search engine optimization.
@@ -41,7 +41,7 @@ Dynamic page rendering is a neat innovation that makes site navigation faster, b
 
 When I share my blog posts on Twitter, they look like this:
 
-{{< img src="twitter-card.jpg" alt="Example of a rich Twitter card" caption="Using Open Graph tags so that Twitter generates rich cards for my posts." maxWidth="590px" hasBorder="True" >}}
+{{<img src="twitter-card.jpg" alt="Example of a rich Twitter card" caption="Using Open Graph tags so that Twitter generates rich cards for my posts." max-width="590px" has-border="true">}}
 
 Twitter generates that card based on HTML tags in my page that follow the [Open Graph](https://ogp.me/) standard. For example, to specify the image in the card, I add a tag that looks like this:
 
@@ -61,7 +61,7 @@ Many websites use JavaScript to continuously update a page's contents while the 
 
 On the modern web, social networks and SEO are fairly important, so it would be a huge bummer if using Vue meant that your app couldn't fully integrate with those services.
 
-{{< img src="NuxtJS_Logo.png" alt="Nuxt.js logo" maxWidth="250px" linkUrl="https://nuxtjs.org/" >}}
+{{<img src="NuxtJS_Logo.png" alt="Nuxt.js logo" max-width="250px" href="https://nuxtjs.org/">}}
 
 [Nuxt](https://nuxtjs.org/) is the framework that addresses this issue. It adds a layer on top of Vue to move some of the browser's work back to the server. Instead of sending down a bare HTML stub and waiting for client-side JavaScript to render everything, Nuxt pre-processes the page server-side to generate more fully-rendered HTML.
 
@@ -112,15 +112,13 @@ The first file defines a page in the web app. The `pages/` folder has special me
   <div>
     <h1>Hello, world!</h1>
     <p>I'm an example of a pre-rendered Vue webpage.</p>
-    <button v-on:click="count++">
-      I have been clicked {{ count }} times
-    </button>
+    <button v-on:click="count++">I have been clicked {{ count }} times</button>
   </div>
 </template>
 
 <script>
   export default {
-    data: function() {
+    data: function () {
       return {
         count: 0,
       };
@@ -227,8 +225,7 @@ This page uses Vue hooks to display information about how the page was rendered.
     <h1>About this Build</h1>
     <p v-if="buildTime">
       Nuxt pre-rendered this page at
-      <b>{{ buildTime }}</b> (before the browser ever saw
-      it).
+      <b>{{ buildTime }}</b> (before the browser ever saw it).
     </p>
     <template v-else>
       <p>
@@ -260,7 +257,7 @@ This page uses Vue hooks to display information about how the page was rendered.
     },
     // Vue evaluates data variables at page render time and again every time the
     // browser loads this page.
-    data: function() {
+    data: function () {
       return {
         loadTime: new Date().toUTCString(),
       };
@@ -282,7 +279,7 @@ Here's a [live version](https://hello-world-vue-pre-rendered.web.app) of the Abo
 
 The About page demonstrates how Nuxt and Vue work together to create a pre-rendered page. You should see two versions of the page depending on how you navigate the site.
 
-{{< img src="about-versions.jpg" alt="Screenshot of different versions of About page" caption="The About page displays different information depending on how you arrived to the page." maxWidth="850px" hasBorder="True" >}}
+{{<img src="about-versions.jpg" alt="Screenshot of different versions of About page" caption="The About page displays different information depending on how you arrived to the page." max-width="850px" has-border="true">}}
 
 If you start on the [`/about` page](https://hello-world-vue-pre-rendered.web.app/about), you should see the version on the left. If you start on the [root page](https://hello-world-vue-pre-rendered.web.app), then click the "about page" link, you should see the version on the right.
 
@@ -310,9 +307,7 @@ When Nuxt pre-renders the site, the server executes the `asyncData` method. In t
 When you navigate to the `/about` path from a different page on the site, the browser executes the `asyncData` method on page load. `process.client` is now non-null because the code is running client-side, so the method never defines `buildTime` and Vue renders the page template for when `buildTime` is undefined:
 
 ```html
-<p v-if="buildTime">
-  ...
-</p>
+<p v-if="buildTime">...</p>
 <template v-else>
   <p>
     Vue generated this page client-side because you navigated here from another
@@ -340,7 +335,7 @@ npm run dev
 
 You'll notice that when you navigate to [https://localhost:3600/about](https://localhost:3600/about), the build time and the load time roughly match one another. That's because when you run `npm run dev`, Nuxt uses server-side rendering to create the page just in time.
 
-{{< img src="about-ssr.jpg" alt="Screenshot of About page rendered with server-side rendering" caption="`npm run dev` renders pages as the user requests them, so build times and load times match." maxWidth="650px" hasBorder="True" >}}
+{{<img src="about-ssr.jpg" alt="Screenshot of About page rendered with server-side rendering" caption="`npm run dev` renders pages as the user requests them, so build times and load times match." max-width="650px" has-border="true">}}
 
 Unlike pre-rendering, which generates the page once and keeps serving that same page, server-side rendering generates a fresh version of the page each time the user visits.
 

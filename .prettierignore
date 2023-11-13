@@ -2,4 +2,7 @@
 node_modules/
 public/
 resources/
-static/js/chart.js/
+static/third-party/
+
+# TODO: Make these play nicely with prettier
+layouts/shortcodes/

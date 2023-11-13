@@ -1,19 +1,20 @@
 ---
-title: 'Resurrecting a Dead Library: Part One - Resuscitation'
+title: "Resurrecting a Dead Library: Part One - Resuscitation"
 tags:
-- zestful
-- refactoring
-- docker
-- ingredient-phrase-tagger
-- ingredient parsing
-description: The story of how I got an old library up and running again and used it
+  - zestful
+  - refactoring
+  - docker
+  - ingredient-phrase-tagger
+  - ingredient parsing
+description:
+  The story of how I got an old library up and running again and used it
   to build a new business
 discuss_urls:
   hacker_news: https://news.ycombinator.com/item?id=17600798
   reddit: https://www.reddit.com/r/programming/comments/91heln/resurrecting_a_dead_library_resuscitation/
-date: '2018-07-24'
+date: "2018-07-24"
 images:
-- resurrecting-1/cover.jpg
+  - resurrecting-1/cover.jpg
 ---
 
 When I arrived on the scene, it wasn't a pretty sight.
@@ -24,51 +25,51 @@ The code was dead.
 
 In this three-part series, I'll show you how I resurrected it and built a business with the result:
 
-* **Part One: Resuscitation (this post)** - In which I nurse the code back to health so that it runs on any modern system
-* [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
-* [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
+- **Part One: Resuscitation (this post)** - In which I nurse the code back to health so that it runs on any modern system
+- [Part Two: Stabilization](/resurrecting-2/) - In which I prevent functionality from regressing while I restore the code
+- [Part Three: Rehabilitation](/resurrecting-3/) - In which I begin refactoring the code
 
-{{< img src="cover.jpg" alt="Bear doctors resuscitating python" maxWidth="800px" >}}
+{{<img src="cover.jpg" alt="Bear doctors resuscitating python" max-width="800px">}}
 
 ## The library
 
-The library was [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), an open-source library that *The New York Times* published. It allowed users to parse recipe ingredients into structured data.
+The library was [ingredient-phrase-tagger](https://github.com/NYTimes/ingredient-phrase-tagger), an open-source library that _The New York Times_ published. It allowed users to parse recipe ingredients into structured data.
 
-A few years ago, the *Times* decided to digitize their extensive historical archive of cooking recipes. They hired data entry workers to look at raw ingredients from these recipes and tease apart the data they represented. The result was a database that looked like this:
+A few years ago, the _Times_ decided to digitize their extensive historical archive of cooking recipes. They hired data entry workers to look at raw ingredients from these recipes and tease apart the data they represented. The result was a database that looked like this:
 
-| raw ingredient | quantity | unit | name | comment |
-|--------|------------|------|--------|-------------|
-| 3 tablespoons flour | 3.0 | tablespoon |  flour | |
-| 2 1/2 cups of finely chopped red onions | 2.5 | cup | red onions | finely chopped |
-| 2 dried pasilla chilies | 2.0 | | pasilla chilies | dried |
+| raw ingredient                          | quantity | unit       | name            | comment        |
+| --------------------------------------- | -------- | ---------- | --------------- | -------------- |
+| 3 tablespoons flour                     | 3.0      | tablespoon | flour           |                |
+| 2 1/2 cups of finely chopped red onions | 2.5      | cup        | red onions      | finely chopped |
+| 2 dried pasilla chilies                 | 2.0      |            | pasilla chilies | dried          |
 
 After six years of adding to this database, they realized that they had enough data to [train a machine learning model](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) that could simulate the human workers' data entry decisions. The project was a success, so they published all of their source code and data.
 
 ## What business was it of mine?
 
-I had the same problem as the *Times*. My project [KetoHub](https://ketohub.io/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
+I had the same problem as the _Times_. My project [KetoHub](https://recipe-search.isitketo.org/) aggregates recipes from around the web and makes them searchable by ingredient. Recipe websites typically don't publish their ingredient lists in a structured format, I had to tease apart the structure myself.
 
-{{< img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://ketohub.io/?q=avocado) search for recipes matching 'avocado'" maxWidth="400px" hasBorder="True" >}}
+{{<img src="ketohub-screenshot.jpg" alt="Screenshot of KetoHub" caption="Results of a for a [KetoHub](https://recipe-search.isitketo.org/?q=avocado) search for recipes matching 'avocado'" max-width="400px" has-border="true">}}
 
-{{< img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" maxWidth="300px" hasBorder="True" align="right" >}}
+{{<img src="regex.png" alt="Screenshot of regex implementation" caption="Excerpt from my disgusting regex parsing implementation" max-width="300px" has-border="true" align="right">}}
 
 At the time I stumbled upon ingredient-phrase-tagger, I was parsing ingredients in an ugly, hacky way: with [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
 
 It wasn't sustainable. Every time I added a new recipe site to KetoHub's index, I had to modify my long sequence of regular expressions to handle new edge cases. Over time, the ingredient parsing code grew hellishly convoluted and began breaking in confusing ways.
 
-My regular expressions were tedious to maintain and debug. I felt like I was chopping away at ingredients with a chainsaw, blindfolded. The *Times'* library looked like it dissected ingredients with clean, surgical precision. I desperately wanted it.
+My regular expressions were tedious to maintain and debug. I felt like I was chopping away at ingredients with a chainsaw, blindfolded. The _Times'_ library looked like it dissected ingredients with clean, surgical precision. I desperately wanted it.
 
 But first, I had to figure out how to make their code run.
 
 ## Why was this hard?
 
-The *Times* built this library for a hack week event, so it lacked many features one expects of a professional software project, such as  automated tests or thorough documentation.  The README included instructions for installing the application, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
+The _Times_ built this library for a hack week event, so it lacked many features one expects of a professional software project, such as automated tests or thorough documentation. The README included instructions for installing the application, but they only worked on Mac OS X. Without tests or a continuous integration configuration, it was unclear how to make the code run at all.
 
-{{< img src="osx-install.png" alt="OS X install instructions" caption="[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" maxWidth="756px" hasBorder="True" >}}
+{{<img src="osx-install.png" alt="OS X install instructions" caption="[Installation instructions](https://github.com/NYTimes/ingredient-phrase-tagger#development) for ingredient-phrase-tagger library" max-width="756px" has-border="true">}}
 
-Of course, I wasn't the only one to notice these issues. At the time they published, the *Times* received tough criticism from famed Python developer D. John Trump:
+Of course, I wasn't the only one to notice these issues. At the time they published, the _Times_ received tough criticism from famed Python developer D. John Trump:
 
-{{< img src="trump-tweet.png" alt="Trump tweet about code" maxWidth="628px" hasBorder="True" >}}
+{{<img src="trump-tweet.png" alt="Trump tweet about code" max-width="628px" has-border="true">}}
 
 ## Building it in Docker
 
@@ -85,7 +86,7 @@ DISTRIB_RELEASE=16.04
 
 The ingredient parsing library's first dependency was its machine learning engine: a C++ application called [CRF++](https://taku910.github.io/crfpp/).
 
-{{< img src="crfpp-installation.png" alt="CRF++ installation instructions" caption="CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" maxWidth="426px" hasBorder="True" >}}
+{{<img src="crfpp-installation.png" alt="CRF++ installation instructions" caption="CRF++ [installation instructions](https://taku910.github.io/crfpp/#install)" max-width="426px" has-border="true">}}
 
 The CRF++ build instructions looked simple enough, so I ran the commands within my Ubuntu container:
 
@@ -107,17 +108,17 @@ Whoops, `make` failed with an error about a missing Windows header file.
 
 Was that code still maintained?
 
-{{< img src="crfpp-commits.png" alt="CRF++ change history" caption="CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" maxWidth="800px" hasBorder="True" >}}
+{{<img src="crfpp-commits.png" alt="CRF++ change history" caption="CRF++ [change history](https://github.com/taku910/crfpp/commits/master), showing the last commit in 2015" max-width="800px" has-border="true">}}
 
 Oh no! Another dead repository? I was already resurrecting one library. I didn't want to take on another.
 
 ## Taking a small detour
 
-The CRF++ error message about `winmain.h` was a bad sign, but if the *Times* developers ran CRF++ on OS X, I knew it was possible to run it in a non-Windows environment.
+The CRF++ error message about `winmain.h` was a bad sign, but if the _Times_ developers ran CRF++ on OS X, I knew it was possible to run it in a non-Windows environment.
 
 Maybe someone had already fixed it, but the maintainers never merged in the change. I checked the repo's outstanding pull requests. [One, in particular](https://github.com/taku910/crfpp/pull/15), seemed promising:
 
-{{< img src="winmain-pr.png" alt="CRF++ pull requests" caption="[Pending pull requests](https://github.com/taku910/crfpp/pulls) into CRF++" maxWidth="800px" >}}
+{{<img src="winmain-pr.png" alt="CRF++ pull requests" caption="[Pending pull requests](https://github.com/taku910/crfpp/pulls) into CRF++" max-width="800px">}}
 
 The pull request might as well have been titled, "Hey look, Michael! I solved the exact problem you're struggling with," so I applied [@humem](http://github.com/humem)'s patch:
 
@@ -179,7 +180,7 @@ Woohoo! It worked!
 
 {{<zestful-ad>}}
 
-## *Actually* building it in Docker
+## _Actually_ building it in Docker
 
 Oh, wait. That wasn't really what I was trying to do.
 
@@ -239,7 +240,7 @@ Oh, wait. What did it do?
 
 ## Testing with my ingredients
 
-The library was doing *something*, but it didn't give me insight into what was going on. The documentation mentioned two scripts for parsing arbitrary ingredients, [`parse-ingredients.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/parse-ingredients.py) and [`convert-to-json.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/convert-to-json.py), so I tried those:
+The library was doing _something_, but it didn't give me insight into what was going on. The documentation mentioned two scripts for parsing arbitrary ingredients, [`parse-ingredients.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/parse-ingredients.py) and [`convert-to-json.py`](https://github.com/NYTimes/ingredient-phrase-tagger/blob/e414c2ca279f23c99c8338ceba00653d88d40dfe/bin/convert-to-json.py), so I tried those:
 
 ```bash
 $ echo "1 pinch Garlic Powder" >> input.txt
@@ -279,7 +280,7 @@ It worked!
 
 Well, it mostly worked. The model failed to identify "Cup" as the unit of measurement in "1 Cup Mozzarella, shredded." The machine learning model apparently thought there was a product called, "Cup Mozzarella," and the recipe needed one of those.
 
-{{< img src="cup-mozzarella.jpg" alt="Picture of Cup Mozzarella product" caption="A product invented by the machine learning model" maxWidth="300px" >}}
+{{<img src="cup-mozzarella.jpg" alt="Picture of Cup Mozzarella product" caption="A product invented by the machine learning model" max-width="300px">}}
 
 {{<zestful-ad>}}
 
@@ -289,7 +290,7 @@ I didn't want to go through all of those steps every time I ran the library, so 
 
 First, I made [my own fork](https://github.com/mtlynch/crfpp) of the CRF++ repository that included @humem's fix. That provided a convenient copy of CRF++'s source that built cleanly on Linux. Then, I collected all of the shell commands I ran into a `Dockerfile`:
 
-{{< inline-file filename="Dockerfile" language="bash" >}}
+{{<inline-file filename="Dockerfile" language="bash">}}
 
 If I want an environment with this library in the future, all I need to do is run these two commands in the directory with the `Dockerfile`:
 
@@ -342,18 +343,18 @@ Also, did you catch this in the parsed output?
 "display": "<span class='qty'>2</span><span class='unit'>tablespoons</span><span class='name'>lemon juice</span>",
 ```
 
-Why is a machine learning model responsible for structuring ingredient data *and* generating HTML? That would be like putting a neurosurgeon in charge of brain surgery *and* assembling hospital furniture.
+Why is a machine learning model responsible for structuring ingredient data _and_ generating HTML? That would be like putting a neurosurgeon in charge of brain surgery _and_ assembling hospital furniture.
 
 I would have loved to dive right into the code to make sweeping functional changes, but first I had to perform a critical step: stabilization. I needed to lock in the library's existing behavior so that any changes I made to its functionality were explicit and deliberate.
 
 I cover that in [part two of this series](/resurrecting-2/), which describes:
 
-* How I added end-to-end tests so that I wouldn't accidentally break anything
-* How I configured the tests to run automatically before applying any change to the code
-* How I added my standard toolset to the codebase to facilitate maintenance
+- How I added end-to-end tests so that I wouldn't accidentally break anything
+- How I configured the tests to run automatically before applying any change to the code
+- How I added my standard toolset to the codebase to facilitate maintenance
 
 {{<zestful-ad>}}
 
 ---
 
-*Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com).*
+_Cover illustration by [Loraine Yow](https://www.lolo-ology.com/). My fork of the ingredient-phrase-tagger library is available on [Github](https://github.com/mtlynch/ingredient-phrase-tagger). I offer a managed service based on this library called [Zestful](https://zestfuldata.com)._

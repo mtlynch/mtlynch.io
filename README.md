@@ -1,6 +1,6 @@
 # mtlynch.io
 
-[![CircleCI](https://circleci.com/gh/mtlynch/mtlynch.io.svg?style=svg)](https://circleci.com/gh/mtlynch/mtlynch.io) [![Creative Commons License CC-BY 4.0](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
+[![CircleCI](https://circleci.com/gh/mtlynch/mtlynch.io.svg?style=svg)](https://circleci.com/gh/mtlynch/mtlynch.io) [![Creative Commons License CC-BY 4.0](https://i.creativecommons.org/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Overview
 
@@ -10,8 +10,8 @@ This is the source for https://mtlynch.io/.
 
 New code should adhere to the appropriate Google Style guide for the given language:
 
-* [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
-* [JavaScript](https://google.github.io/styleguide/jsguide.html)
+- [HTML/CSS](https://google.github.io/styleguide/htmlcssguide.html)
+- [JavaScript](https://google.github.io/styleguide/jsguide.html)
 
 ## Pull requests
 
@@ -39,17 +39,17 @@ If the link is just permanently broken and does not load, even in a browser, eit
 
 The site should render properly on all of the following operating systems (latest stable releases):
 
-* Android
-* iOS
-* Windows
-* OS X
-* Linux (any flavor)
+- Android
+- iOS
+- Windows
+- OS X
+- Linux (any flavor)
 
 The site should render properly on all the following browsers:
 
-* Chrome
-* Firefox
-* Safari
+- Chrome
+- Firefox
+- Safari
 
 ### Compatibility testing
 
@@ -59,51 +59,51 @@ Developers need not verify every change on every possible OS/browser combination
 
 ### Headings
 
-* Content headings start at `##` (`<h2>` in HTML).
-* Headings use sentence-style capitalization (only first word is capitalized).
-* Headings do not have trailing punctuation.
+- Content headings start at `##` (`<h2>` in HTML).
+- Headings use sentence-style capitalization (only first word is capitalized).
+- Headings do not have trailing punctuation.
 
 ### Point of view
 
-* Author is first-person singular (I).
-* Reader is second-person singular (you).
+- Author is first-person singular (I).
+- Reader is second-person singular (you).
 
 ### Readers
 
-* Readers of the blog are collectively referred to as "readers" or "visitors."
-  * Readers are not referred to as "users" and should never be described as "traffic."
+- Readers of the blog are collectively referred to as "readers" or "visitors."
+  - Readers are not referred to as "users" and should never be described as "traffic."
 
 ### Numbers
 
-* For 1-9, spell out the number.
-  * *Except*: When the number is a multiplier (2x, 9x).
-* For all other numbers, use numerals.
-* For numbers 1,000 or over, write commas to separate thousands.
-* For number ranges, use a regular hyphen and no space (200-300).
+- For 1-9, spell out the number.
+  - _Except_: When the number is a multiplier (2x, 9x).
+- For all other numbers, use numerals.
+- For numbers 1,000 or over, write commas to separate thousands.
+- For number ranges, use a regular hyphen and no space (200-300).
 
 ### Time of day
 
-* Use AM/PM, separated by a space (2 AM, 4:30 PM).
+- Use AM/PM, separated by a space (2 AM, 4:30 PM).
 
 ### Pronouns
 
-* When referring to non-specific people (e.g. "the user", "the client"), use "they."
+- When referring to non-specific people (e.g. "the user", "the client"), use "they."
 
 ### Names
 
-* reddit is written all lowercase.
+- reddit is written all lowercase.
 
 ### e.g. / i.e.
 
-* Put e.g. or i.e. within parentheses (e.g., like this).
+- Put e.g. or i.e. within parentheses (e.g., like this).
 
 ### Oxford comma
 
-* Always use an Oxford comma.
+- Always use an Oxford comma.
 
 ### Spelling conventions
 
-* ebook (not e-book)
+- ebook (not e-book)
 
 ## Encoding video for posts
 

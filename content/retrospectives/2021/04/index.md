@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* I plan to open TinyPilot's first real office next month.
-* TinyPilot's revenues continue to plummet, but I'm learning to accept it.
-* I'm inching ever closer to the freedom to take short vacations.
+- I plan to open TinyPilot's first real office next month.
+- TinyPilot's revenues continue to plummet, but I'm learning to accept it.
+- I'm inching ever closer to the freedom to take short vacations.
 
 ## Goal Grades
 
@@ -18,15 +18,15 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Hire two local part-time employees to begin taking over order fulfillment
 
-* **Result**: Received applications from two promising candidates.
-* **Grade**: D
+- **Result**: Received applications from two promising candidates.
+- **Grade**: D
 
 I slacked a bit here and didn't get the ball rolling until late into the month. I've got interviews scheduled, but I haven't hired anyone yet.
 
 ### Attract five bloggers or YouTubers to a TinyPilot affiliate program
 
-* **Result**: Two affiliates signed up, and a third is considering it
-* **Grade**: C
+- **Result**: Two affiliates signed up, and a third is considering it
+- **Grade**: C
 
 This has been harder than I expected. I wanted to start with mid-tier bloggers, but they're hard to find. Everyone seems to be a massive site like Tom's Hardware or a tiny personal blog that nobody reads. I'm not having much luck finding the in-between.
 
@@ -34,8 +34,8 @@ Two YouTubers signed on as affiliates, and one more is interested but hasn't yet
 
 ### Collect feedback from 10 customers about a potential rack-mounted version of TinyPilot
 
-* **Result**: Received feedback from 14 customers
-* **Grade**: A
+- **Result**: Received feedback from 14 customers
+- **Grade**: A
 
 I published a [preview](https://tinypilotkvm.com/blog/rackmount) of the rack mount and solicited feedback from readers and customers. The feedback was positive in that people seem excited about it. It was also valuable in identifying some incorrect assumptions.
 
@@ -63,17 +63,17 @@ Most of the reason order surges are so painful is that we do just-in-time order 
 
 One of the biggest bottlenecks in the process was imaging the disk with TinyPilot software. We could have done it in advance, but I stubbornly refused. I couldn't bear the thought of shipping devices with bugfixes I'd already published. But in March, I released [TinyPilot 1.4.0](https://tinypilotkvm.com/blog/whats-new-in-1-4), which allows users to update their TinyPilots from the web UI. With updates easy and discoverable, I let go of my unreasonable restriction on flashing images the day of the order.
 
-That got us thinking: flashing the microSDs in advance allows us to *shift time* productively. We moved a process that previously created a bottleneck at crunch time to a time where it wasn't a bottleneck. What else can we time-shift with microSDs no longer a blocker? It turned out that we could do a lot.
+That got us thinking: flashing the microSDs in advance allows us to _shift time_ productively. We moved a process that previously created a bottleneck at crunch time to a time where it wasn't a bottleneck. What else can we time-shift with microSDs no longer a blocker? It turned out that we could do a lot.
 
 Only two items need to wait until the order actually comes in. The first is the commercial invoice. We can't very well print an invoice until we know who the customer is. The second is the VGA to HDMI adaptor. It's an optional add-on, and only ~30% of customers purchase one.
 
 So we couldn't completely pre-pack boxes, but we could do 95% of the work and leave the last 5% until shipping time.
 
-{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." maxWidth="620px">}}
+{{<img src="pre-packed-voyagers.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="We now pre-pack our orders and add the commercial invoice and any add-ons at fulfillment time." max-width="620px">}}
 
-When discussing other bottlenecks, I was surprised to learn that *folding paper* is a significant time-suck. The boxes we use for TinyPilot are 6x6x2", which means we have to fold normal 8.5x11" paper into quarters to fit into the box. My girlfriend realized that A6 paper is 4.1x5.9", which is the perfect size for our boxes, so we bought a ream:
+When discussing other bottlenecks, I was surprised to learn that _folding paper_ is a significant time-suck. The boxes we use for TinyPilot are 6x6x2", which means we have to fold normal 8.5x11" paper into quarters to fit into the box. My girlfriend realized that A6 paper is 4.1x5.9", which is the perfect size for our boxes, so we bought a ream:
 
-{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." maxWidth="500px">}}
+{{<img src="a6-paper.jpg" alt="Photo of me holding A6-sized paper in my hand" caption="Printing order documents on A6-sized paper means we don't have to waste time folding paper before placing it in the box." max-width="500px">}}
 
 ## How can TinyPilot run while I'm on vacation?
 
@@ -81,13 +81,13 @@ One of my goals for 2021 is to reach the point where my girlfriend and I can [ta
 
 My girlfriend will return to grad school in June, at which point, she won't have time to work with me on TinyPilot. I definitely need to prepare for that. She once left for a week to visit her family, and I barely got anything done that week outside of packing orders.
 
-My dream was to find some sort of "warehouse as a service" business, where I ship them all my parts, and they handle assembly and fulfillment. I found services *kind of* like that, but they're for business about 50x bigger than mine.
+My dream was to find some sort of "warehouse as a service" business, where I ship them all my parts, and they handle assembly and fulfillment. I found services _kind of_ like that, but they're for business about 50x bigger than mine.
 
 And then there's Fulfillment by Amazon, a service that lets me ship big batches of finished products to Amazon for fulfillment. That would sort of work, except that creating TinyPilots still requires a lot of physical labor. Parts are continuously arriving that need to be processed and assembled into working devices. Amazon wouldn't do any of that. Plus, I'm not quite ready to insert an enormous corporate machine between me and my customers.
 
-{{<img src="amazon-fba.png" hasBorder="true" maxWidth="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
+{{<img src="amazon-fba.png" has-border="true" max-width="600px" alt="Screenshot of Fulfillment by Amazon page" caption="Fulfillment by Amazon allows merchants to ship their products to Amazon warehouses for fulfillment.">}}
 
-All signs were pointing to hiring local employees, which scared me. Based on the IRS' definition, a local worker who uses equipment I provide and follows instructions I give is unambiguously an "employee" rather than an "independent contractor." I've only ever hired contractors, and the process there is fairly lightweight.  With real employees, there's *so* much more paperwork. I have to give them a bunch of forms and notices and make sure I'm withholding all the right taxes.
+All signs were pointing to hiring local employees, which scared me. Based on the IRS' definition, a local worker who uses equipment I provide and follows instructions I give is unambiguously an "employee" rather than an "independent contractor." I've only ever hired contractors, and the process there is fairly lightweight. With real employees, there's _so_ much more paperwork. I have to give them a bunch of forms and notices and make sure I'm withholding all the right taxes.
 
 After asking some friends and Twitter, I found out that there are services for small businesses that help you manage taxes and legalities of part-time employees. I heard recommendations for [JustWorks](https://justworks.com/) and [OnPay](https://onpay.com/), both of which seem like they'll address my worries around hiring.
 
@@ -102,8 +102,8 @@ I was planning to continue using my house as TinyPilot's central warehouse, but 
 I wasn't planning to begin searching yet, but I saw a "for lease" sign on an office park that's only a 15-minute walk from my house. I called for pricing, expecting something in the range of $1,200-$1,500/month plus utilities. It turns out it's $550/month, including utilities and Internet. And the last tenants didn't want their furniture anymore, so it comes furnished with decent desks.
 
 {{<gallery caption="TinyPilot's new official headquarters, potentially">}}
-  {{<img src="office1.jpg" alt="Freelancer hours spreadsheet">}}
-  {{<img src="office2.jpg" alt="Freelancer payment spreadsheet">}}
+{{<img src="office1.jpg" alt="Freelancer hours spreadsheet">}}
+{{<img src="office2.jpg" alt="Freelancer payment spreadsheet">}}
 {{</gallery>}}
 
 I'm going to try to get a 1-year lease and establish the first official TinyPilot headquarters.
@@ -140,7 +140,7 @@ Is It Keto is funny because I haven't touched it in months. The January bump fro
 | Blogging for Devs Earnings | $0.00         | $655.20     | <font color="green">+$655.20 (+inf%)</font>     |
 | **Total Earnings**         | **$359.95**   | **$968.83** | **<font color="green">+$608.88 (+169%)</font>** |
 
-*Hit the Front Page of Hacker News* had a surprising comeback due to a lucrative partnership with Monica Lent's [Blogging for Devs](https://bloggingfordevs.com/). I piloted the course in that community, and it was popular with members, so Monica offered me a generous royalty deal.
+_Hit the Front Page of Hacker News_ had a surprising comeback due to a lucrative partnership with Monica Lent's [Blogging for Devs](https://bloggingfordevs.com/). I piloted the course in that community, and it was popular with members, so Monica offered me a generous royalty deal.
 
 Blogging for Devs members get a special link that allows them to download the course for free. In exchange, Monica pays me a royalty for each download at a discounted price from the retail cost.
 
@@ -163,21 +163,21 @@ Zestful's still chugging along in the background, bringing in slightly more than
 
 ### What got done?
 
-* Created a TinyPilot [affiliate program](https://tinypilotkvm.com/affiliate-policy)
-* Published a blog post [explaining how I work with freelance developers](/freelancer-guidelines/)
-* Published two new releases of TinyPilot
-  * [TinyPilot 1.4.0](https://tinypilotkvm.com/blog/whats-new-in-1-4) adds easy updates, support for device renaming, and accessible logs.
-  * [TinyPilot 1.4.1](https://github.com/tiny-pilot/tinypilot/releases/tag/1.4.1) substantially improves UI
+- Created a TinyPilot [affiliate program](https://tinypilotkvm.com/affiliate-policy)
+- Published a blog post [explaining how I work with freelance developers](/freelancer-guidelines/)
+- Published two new releases of TinyPilot
+  - [TinyPilot 1.4.0](https://tinypilotkvm.com/blog/whats-new-in-1-4) adds easy updates, support for device renaming, and accessible logs.
+  - [TinyPilot 1.4.1](https://github.com/tiny-pilot/tinypilot/releases/tag/1.4.1) substantially improves UI
 
 ### Lessons learned
 
-* There are some positives to a drop in revenue.
-  * The slower pace gave me time to invest more in improving processes.
-* Pre-pack as much as possible.
-  * I should have done this sooner, as it's so much more practical to control when the bulk of fulfillment work happens until waiting to do it just in time when the order comes in.
+- There are some positives to a drop in revenue.
+  - The slower pace gave me time to invest more in improving processes.
+- Pre-pack as much as possible.
+  - I should have done this sooner, as it's so much more practical to control when the bulk of fulfillment work happens until waiting to do it just in time when the order comes in.
 
 ### Goals for next month
 
-* Increase TinyPilot revenue to $30k
-* Produce a prototype for a custom TinyPilot PoE HAT
-* Create an outline for my book, [*Refactoring English*](https://refactoringenglish.com)
+- Increase TinyPilot revenue to $30k
+- Produce a prototype for a custom TinyPilot PoE HAT
+- Create an outline for my book, [_Refactoring English_](https://refactoringenglish.com)

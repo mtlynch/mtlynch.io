@@ -8,8 +8,8 @@ images:
 
 ## Highlights
 
-* I'm struggling to get unstuck in two areas that have stalled for months: hardware development and hiring.
-* I'm partnering with a distributor in Germany to begin selling TinyPilot within the EU.
+- I'm struggling to get unstuck in two areas that have stalled for months: hardware development and hiring.
+- I'm partnering with a distributor in Germany to begin selling TinyPilot within the EU.
 
 ## Goal Grades
 
@@ -17,22 +17,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Publish a new release of TinyPilot
 
-* **Result**: Published [TinyPilot 1.5.1](https://tinypilotkvm.com/blog/whats-new-in-1-5-1)
-* **Grade**: A
+- **Result**: Published [TinyPilot 1.5.1](https://tinypilotkvm.com/blog/whats-new-in-1-5-1)
+- **Grade**: A
 
 This release went well and came out on schedule. It didn't have any especially exciting new features, but we polished existing features and paid down technical debt.
 
 ### Earn $35k in TinyPilot revenue
 
-* **Result**: Earned $29k in revenue
-* **Grade**: B-
+- **Result**: Earned $29k in revenue
+- **Grade**: B-
 
 Revenue slipped this month, as I haven't been investing as much into marketing. It's a relief that revenue stays this stable without a major marketing push in the last two months, but I need to step it up in July.
 
 ### Create a prototype of the TinyPilot Voyager 2, with built-in Power over Ethernet
 
-* **Result**: Scoped the project down to a more compact Voyager without Power over Ethernet
-* **Grade**: D
+- **Result**: Scoped the project down to a more compact Voyager without Power over Ethernet
+- **Grade**: D
 
 There wasn't as much progress here as I'd hoped. Even with me drastically increasing the price I'm willing to pay for PoE components, my electrical engineering partners couldn't find any in stock.
 
@@ -42,13 +42,13 @@ We ultimately decided to drop PoE as a Voyager 2 feature and instead reduced the
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric          | May 2021      | June 2021  | Change                                     |
-| --------------- | ------------- | ---------- | ------------------------------------------ |
-| Unique Visitors | 7,283         | 6,339      | <font color="red">-944 (-13%)</font>       |
-| Total Pageviews | 13,267        | 11,514     | <font color="red">-1,753 (-13%)</font>     |
-| Sales Revenue   | $38,767.77    | $29,446.46 | <font color="red">-$9,321.31 (-24%)</font> |
-| Total Revenue   | $38,767.77    | $29,446.46 | <font color="red">-$9,321.31 (-24%)</font> |
-| **Profit**      | **$6,858.72** | <font color="red">**-$-9452.32**</font>    | **N/A**                                    |
+| Metric          | May 2021      | June 2021                               | Change                                     |
+| --------------- | ------------- | --------------------------------------- | ------------------------------------------ |
+| Unique Visitors | 7,283         | 6,339                                   | <font color="red">-944 (-13%)</font>       |
+| Total Pageviews | 13,267        | 11,514                                  | <font color="red">-1,753 (-13%)</font>     |
+| Sales Revenue   | $38,767.77    | $29,446.46                              | <font color="red">-$9,321.31 (-24%)</font> |
+| Total Revenue   | $38,767.77    | $29,446.46                              | <font color="red">-$9,321.31 (-24%)</font> |
+| **Profit**      | **$6,858.72** | <font color="red">**-$-9452.32**</font> | **N/A**                                    |
 
 All of my numbers are down, which I attribute mostly to neglecting marketing.
 
@@ -56,7 +56,7 @@ My profits are down but not as drastically as it appears. The Raspberry Pi is Ti
 
 ## Finding ways to free up time
 
-I recently read the book [*The Goal*](/book-reports/the-goal/), which is all about the "bottlenecks" of a business. The bottleneck is the limiting factor of a system. As an example, suppose you have a product that needs to go through two machines: machine A and machine B. If machine A can process 100 units per week, and machine B can process 500 units per week, machine A is the bottleneck. Even if you had more of machine B or increased its output, it would have no effect on your business because you can still only produce 100 units per week until you get more of machine A.
+I recently read the book [_The Goal_](/book-reports/the-goal/), which is all about the "bottlenecks" of a business. The bottleneck is the limiting factor of a system. As an example, suppose you have a product that needs to go through two machines: machine A and machine B. If machine A can process 100 units per week, and machine B can process 500 units per week, machine A is the bottleneck. Even if you had more of machine B or increased its output, it would have no effect on your business because you can still only produce 100 units per week until you get more of machine A.
 
 Early in TinyPilot's life, I systematized the fulfillment process so that I wasn't the bottleneck. I hired an inventory manager who ensured that customer orders shipped out on a daily basis without me being involved.
 
@@ -68,14 +68,14 @@ As I realized last month, my [management responsibilities have ballooned up](/re
 
 I'm continuing to look for ways to delegate more of my work to the people that work with me. Here's what I did last month:
 
-* Avoid doing tasks that someone is already trained to do (e.g., report bugs instead of investigating or fixing them myself)
-* Give more responsibilities to local staffers (e.g., contacting vendors to order new parts and arrange pickups)
+- Avoid doing tasks that someone is already trained to do (e.g., report bugs instead of investigating or fixing them myself)
+- Give more responsibilities to local staffers (e.g., contacting vendors to order new parts and arrange pickups)
 
 And here's what I'm planning to do in July:
 
-* Show local staff how I research marketing opportunities so that they can do more of the legwork in that process.
-* Define playbooks for technical support so that local staffers can take on easy cases and escalate to me when it's beyond their technical knowledge.
-* Revise software workflows so that developers review each other's code instead of me reviewing all changes personally.
+- Show local staff how I research marketing opportunities so that they can do more of the legwork in that process.
+- Define playbooks for technical support so that local staffers can take on easy cases and escalate to me when it's beyond their technical knowledge.
+- Revise software workflows so that developers review each other's code instead of me reviewing all changes personally.
 
 ## Getting unstuck on the TinyPilot website
 
@@ -85,7 +85,7 @@ Finding a developer for the sales website has been a different story. Since Octo
 
 The design of the website has always been a placeholder until I can find someone to come in and make it look more professional. Without a stable developer, the website has limped along with the same design it had when I first launched. To me, it looks like a hobby project, and I want to make it look like A Real Product.
 
-{{<img src="tinypilot-home.png" maxWidth="800px" alt="Screenshot of TinyPilot website" caption="The TinyPilot website design was meant to be a placeholder, but it's still the same as it was a year ago." hasBorder="true">}}
+{{<img src="tinypilot-home.png" max-width="800px" alt="Screenshot of TinyPilot website" caption="The TinyPilot website design was meant to be a placeholder, but it's still the same as it was a year ago." has-border="true">}}
 
 My biggest mistake in hiring for the web development role was limiting its scope too much. For the first six months, I advertised it as a freelance job that required three to five hours per week. It's a simple sales site, so I just wanted someone to fix small bugs and add non-urgent features. But I think capping the hours so low made the job unappealing to most freelance developers and instead attracted people whose schedule was mostly booked.
 
@@ -101,7 +101,7 @@ The other dimension where I've felt perpetually stuck is in TinyPilot's hardware
 
 There haven't been any significant improvements to TinyPilot's hardware or physical design since then. I feel like I've been spinning my wheels for seven months.
 
-The first factor is design work. The early work we did on TinyPilot was simple as far as electrical engineering projects go. As I progressed forward, I invested more into up-front design and customer research to verify that we were building the right thing. So, even though it *feels* like we have nothing to show for that time, we wrote design documents that advanced the project.
+The first factor is design work. The early work we did on TinyPilot was simple as far as electrical engineering projects go. As I progressed forward, I invested more into up-front design and customer research to verify that we were building the right thing. So, even though it _feels_ like we have nothing to show for that time, we wrote design documents that advanced the project.
 
 Based on our design work, I felt like the best next step for TinyPilot would be to support power over Ethernet (PoE). There are off-the-shelf PoE adaptors for TinyPilot, but they lack the voltage protection features that TinyPilot needs. A year ago, building a custom PoE HAT would require a few days of PCB design work, $4/unit for PoE components, and a final PCB cost of $15-20.
 
@@ -113,7 +113,7 @@ To try to get unstuck, I'm reaching out to larger electrical engineering firms. 
 
 By chance, I stumbled upon Raspberry Pi's [list of approved design partners](https://www.raspberrypi.org/for-industry/design-partners/), which turned out to be an excellent resource. The vendors all have experience with Raspberry Pi and cater to clients at my scale.
 
-{{<img src="pi-partners.png" maxWidth="800px" alt="Screenshot of Raspberry Pi vendor partner website" caption="Raspberry Pi maintains [a list of electrical engineering design firms](https://www.raspberrypi.org/for-industry/design-partners/) that specialize in Raspberry Pi projects." hasBorder="true">}}
+{{<img src="pi-partners.png" max-width="800px" alt="Screenshot of Raspberry Pi vendor partner website" caption="Raspberry Pi maintains [a list of electrical engineering design firms](https://www.raspberrypi.org/for-industry/design-partners/) that specialize in Raspberry Pi projects." has-border="true">}}
 
 I reached out to the three US-based firms on that list. Of the firms I contacted, Vendor A never responded, Vendor B declined my project after three weeks of back and forth, and Vendor C sent me a proposal.
 
@@ -170,13 +170,13 @@ I did a small bit of work on the site this month to update Amazon affiliate link
 
 {{<revenue-graph project="htfp">}}
 
-| Metric                    | May 2021    | June 2021   | Change                                       |
-| ------------------------- | ----------- | ----------- | -------------------------------------------- |
-| Unique Visitors           | 191         | 248         | <font color="green">+57 (+30%)</font>        |
-| Gumroad Revenue           | $417.85     | $123.52     | <font color="red">-$294.33 (-70%)</font>     |
-| **Total Revenue**         | **$417.85** | **$123.52** | **<font color="red">-$294.33 (-70%)</font>** |
+| Metric            | May 2021    | June 2021   | Change                                       |
+| ----------------- | ----------- | ----------- | -------------------------------------------- |
+| Unique Visitors   | 191         | 248         | <font color="green">+57 (+30%)</font>        |
+| Gumroad Revenue   | $417.85     | $123.52     | <font color="red">-$294.33 (-70%)</font>     |
+| **Total Revenue** | **$417.85** | **$123.52** | **<font color="red">-$294.33 (-70%)</font>** |
 
-Sales are dwindling for Hit the Front Page of Hacker news. There was a noticeable jump in visitors because my last retrospective *did* [hit the front page of Hacker News](https://news.ycombinator.com/item?id=27387978), but it didn't translate to many customers.
+Sales are dwindling for Hit the Front Page of Hacker news. There was a noticeable jump in visitors because my last retrospective _did_ [hit the front page of Hacker News](https://news.ycombinator.com/item?id=27387978), but it didn't translate to many customers.
 
 ### [Zestful](https://zestfuldata.com)
 
@@ -195,24 +195,24 @@ Zestful continues on in maintenance mode. No news on that front.
 
 ### What got done?
 
-* Pre-sold my first TinyPilot Enterprise subscription
-  * A customer from a large company requested a REST API for TinyPilot. I asked if they'd be willing to pay a monthly fee for a version that included it, and they were happy to do so.
-  * I'm hoping to attract more Enterprise customers with features that cater to large-company scenarios.
-* Published a new version of TinyPilot
-* Trained a new local employee on the TinyPilot fulfillment process
-* Created a proof-of-concept of TinyPilot Cloud, a web app that allows you to access your TinyPilot over the Internet
-  * It's still TBD how this will play out. I'm in talks with a cloud provider who's considering 24/7 operational support, but there are still many unknowns.
+- Pre-sold my first TinyPilot Enterprise subscription
+  - A customer from a large company requested a REST API for TinyPilot. I asked if they'd be willing to pay a monthly fee for a version that included it, and they were happy to do so.
+  - I'm hoping to attract more Enterprise customers with features that cater to large-company scenarios.
+- Published a new version of TinyPilot
+- Trained a new local employee on the TinyPilot fulfillment process
+- Created a proof-of-concept of TinyPilot Cloud, a web app that allows you to access your TinyPilot over the Internet
+  - It's still TBD how this will play out. I'm in talks with a cloud provider who's considering 24/7 operational support, but there are still many unknowns.
 
 ### Lessons learned
 
-* If you're having trouble hiring, revise the role.
-  * I couldn't find a developer for the TinyPilot website because I offered too few hours and required too many skills. I've had better luck since expanding the hours and narrowing the requirements.
-* When a task can't be outsourced, look for subtasks that can be.
-  * I've been the sole person handling marketing and customer support because they require knowledge and skills that cross domains of the business, but I can outsource some of the legwork.
+- If you're having trouble hiring, revise the role.
+  - I couldn't find a developer for the TinyPilot website because I offered too few hours and required too many skills. I've had better luck since expanding the hours and narrowing the requirements.
+- When a task can't be outsourced, look for subtasks that can be.
+  - I've been the sole person handling marketing and customer support because they require knowledge and skills that cross domains of the business, but I can outsource some of the legwork.
 
 ### Goals for next month
 
-* Get my EU partner ready to begin sales by the end of August.
-* Define processes that allow TinyPilot's local staff to share and alternate on all tasks.
-* Find a designer for the TinyPilot sales site.
-* Find an electrical engineering firm that can create a PoE adaptor for TinyPilot Voyager.
+- Get my EU partner ready to begin sales by the end of August.
+- Define processes that allow TinyPilot's local staff to share and alternate on all tasks.
+- Find a designer for the TinyPilot sales site.
+- Find an electrical engineering firm that can create a PoE adaptor for TinyPilot Voyager.

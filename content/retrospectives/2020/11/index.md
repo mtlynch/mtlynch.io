@@ -3,14 +3,14 @@ title: "TinyPilot: Month 4"
 date: 2020-11-03T08:18:10-05:00
 description: My first $10k month.
 images:
-- /retrospectives/2020/11/shopify-dashboard.png
+  - /retrospectives/2020/11/shopify-dashboard.png
 ---
 
 ## Highlights
 
-* TinyPilot hit $10k in revenue. That's a record high for me and [exceeds my total revenue for all of 2019](/solo-developer-year-2/#how-i-made-and-spent-money).
-* I interviewed several IT consultants and business owners about what TinyPilot features would be useful to them.
-* I tested several new marketing channels and realized I'm failing to measure results accurately.
+- TinyPilot hit $10k in revenue. That's a record high for me and [exceeds my total revenue for all of 2019](/solo-developer-year-2/#how-i-made-and-spent-money).
+- I interviewed several IT consultants and business owners about what TinyPilot features would be useful to them.
+- I tested several new marketing channels and realized I'm failing to measure results accurately.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Sell 60 TinyPilot kits and power connectors
 
-* **Result**: Sold 47 kits and 35 connectors (82 total)
-* **Grade**: A+
+- **Result**: Sold 47 kits and 35 connectors (82 total)
+- **Grade**: A+
 
 I beat my target by 33%, so I'm happy with the results here. I think this is mostly due to [staying ahead on inventory](#what-a-difference-a-well-stocked-inventory-makes).
 
 ### Test three new marketing channels
 
-* **Result**: Shared TinyPilot on reddit, blogs, a podcast, and a newsletter
-* **Grade**: B
+- **Result**: Shared TinyPilot on reddit, blogs, a podcast, and a newsletter
+- **Grade**: B
 
 I explored several new channels to attract users to TinyPilot, but I did a [poor job of measuring their effectiveness](/retrospectives/2020/11/#tracking-acquisition). I can see which channels attracted new website visitors, but I have no numbers showing which of them led to purchases.
 
 ### Interview seven IT professionals about whether they'd use TinyPilot in their work
 
-* **Result**: Had four phone/video calls and several more email exchanges
-* **Grade**: B+
+- **Result**: Had four phone/video calls and several more email exchanges
+- **Grade**: B+
 
 I didn't arrange as many interviews as I had hoped, but I think I got enough information to return my focus to development for the next few weeks.
 
@@ -43,16 +43,15 @@ I didn't arrange as many interviews as I had hoped, but I think I got enough inf
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric             | September 2020 | October 2020   | Change                                            |
-| ------------------ | -------------- | -------------- | ------------------------------------------------- |
-| Unique Visitors    | 1,741          | 2,604          | <font color="green">+863 (+50%)</font>            |
-| Total Pageviews    | 7,057          | 8,780          | <font color="green">+1,723 (+24%)</font>          |
-| Sales Revenue      | $3,636.03      | $10,176.23\*   | <font color="green">+$6,540.20 (+180%)</font>     |
-| Donations          | $187.40        | $90.00         | <font color="red">-$97.40 (-52%)</font>           |
+| Metric            | September 2020 | October 2020   | Change                                            |
+| ----------------- | -------------- | -------------- | ------------------------------------------------- |
+| Unique Visitors   | 1,741          | 2,604          | <font color="green">+863 (+50%)</font>            |
+| Total Pageviews   | 7,057          | 8,780          | <font color="green">+1,723 (+24%)</font>          |
+| Sales Revenue     | $3,636.03      | $10,176.23\*   | <font color="green">+$6,540.20 (+180%)</font>     |
+| Donations         | $187.40        | $90.00         | <font color="red">-$97.40 (-52%)</font>           |
 | **Total Revenue** | **$3,817.99**  | **$10,263.62** | **<font color="green">+$6,445.63 (+169%)</font>** |
 
-{{<notice type="info">}}
-\* Excludes revenue from shipping fees and taxes, because those are just pass-through costs.
+{{<notice type="info">}} \* Excludes revenue from shipping fees and taxes, because those are just pass-through costs.
 {{</notice>}}
 
 TinyPilot had a great month across basically all metrics. I'm glad to see visits to the site grow organically and sales continue to increase.
@@ -72,11 +71,11 @@ The two main changes that allowed me to stay ahead of inventory were:
 
 When I first started, I made an ugly spreadsheet that looked like this:
 
-{{<img src="inventory-old.png" alt="Screenshot of old, cluttered inventory spreadsheet" hasBorder="true">}}
+{{<img src="inventory-old.png" alt="Screenshot of old, cluttered inventory spreadsheet" has-border="true">}}
 
 The new spreadsheet looks like this:
 
-{{<img src="inventory-overview.png" alt="New spreadsheet shows totals of what's in stock and when to reorder" hasBorder="true">}}
+{{<img src="inventory-overview.png" alt="New spreadsheet shows totals of what's in stock and when to reorder" has-border="true">}}
 
 The key difference is that it quickly answers questions like, "How many of this part do we have?" and "What parts are due for a reorder?"
 
@@ -94,8 +93,8 @@ At the other end of the spectrum, the $55/unit 4 GB Raspberry Pi is TinyPilot's 
 When we place orders for new inventory or fulfill customer orders, we update two child spreadsheets that automatically update the counts in the main inventory overview:
 
 {{<gallery caption="Outgoing customer orders (left) and incoming inventory shipments (right) automatically update the counts in our inventory overview spreadsheet.">}}
-  {{<img src="inventory-orders.png" alt="Google Sheet screenshot of order count by day." hasBorder="true">}}
-  {{<img src="inventory-incoming.png" alt="Google Sheet screenshot of incoming inventory orders." hasBorder="true">}}
+{{<img src="inventory-orders.png" alt="Google Sheet screenshot of order count by day." has-border="true">}}
+{{<img src="inventory-incoming.png" alt="Google Sheet screenshot of incoming inventory orders." has-border="true">}}
 {{</gallery>}}
 
 ## Customer research
@@ -106,7 +105,7 @@ I tend to overinvest in research because I go down the rabbit hole when research
 
 ### My interview strategy
 
-One of the lessons I took to heart after reading [*The Mom Test*](/book-reports/the-mom-test/) was that people have a bias to tell you they like your idea. For that reason, I never mentioned TinyPilot until the end of the interview. I set up the interviews from my @mtlynch.io email address and told interviewees that I was interested in remote access in scenarios where tools like SSH and Remote Desktop don't work.
+One of the lessons I took to heart after reading [_The Mom Test_](/book-reports/the-mom-test/) was that people have a bias to tell you they like your idea. For that reason, I never mentioned TinyPilot until the end of the interview. I set up the interviews from my @mtlynch.io email address and told interviewees that I was interested in remote access in scenarios where tools like SSH and Remote Desktop don't work.
 
 ### What are people's remote access pain points?
 
@@ -136,11 +135,11 @@ Ads can't run until they receive manual approval, which is fine and expected. Bu
 
 I started with ads that ran exclusively in the [/r/homelab subreddit](https://www.reddit.com/r/homelab/). Here were my top-performing ads:
 
-| Ad Copy | Impressions | Clicks | CPC | CTR | Conversions |
-|---------|-------------|--------|-----|-----|--------------|
-| [Tired of swapping your monitor cables?](tired-of-swapping.png) | 2,929 | 67 | $1.53 | 2.287% | 0 |
-| [Stop paying $600 for KVM over IP devices](hey-stop-paying.png) | 836 | 14 | $1.91 | 1.675% | 0 |
-| [I got tired of bloat-laden enterprise KVMs](i-got-tired.png) | 2,498 | 41 | $1.69 | 1.641% | 0 |
+| Ad Copy                                                         | Impressions | Clicks | CPC   | CTR    | Conversions |
+| --------------------------------------------------------------- | ----------- | ------ | ----- | ------ | ----------- |
+| [Tired of swapping your monitor cables?](tired-of-swapping.png) | 2,929       | 67     | $1.53 | 2.287% | 0           |
+| [Stop paying $600 for KVM over IP devices](hey-stop-paying.png) | 836         | 14     | $1.91 | 1.675% | 0           |
+| [I got tired of bloat-laden enterprise KVMs](i-got-tired.png)   | 2,498       | 41     | $1.69 | 1.641% | 0           |
 
 The click-through-rate is pretty good, but nobody purchased anything through those ads. I even added an event for "Add item to cart," and nobody even got that far.
 
@@ -149,8 +148,8 @@ The click-through-rate is pretty good, but nobody purchased anything through tho
 It seems like mentioning the subreddit by name makes a difference. I ran ads that were identical except that one started with "Hey /r/homelab," and its click-through-rate was 3x higher than the one that skipped the salutation:
 
 {{<gallery caption="Two ads that I posted to reddit, identical except for the opening salutation. The version that begins with 'Hey /r/homelab' had a click-through-rate of 1.675%, while the version without had a click-through rate of 0.479%.">}}
-  {{<img src="hey-stop-paying.png" alt="Hey /r/homelab, stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99." hasBorder="true">}}
-  {{<img src="stop-paying.png" alt="Stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99." hasBorder="true">}}
+{{<img src="hey-stop-paying.png" alt="Hey /r/homelab, stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99." has-border="true">}}
+{{<img src="stop-paying.png" alt="Stop paying $600+ for KVM over IP devices. TinyPilot is an open source KVM over IP starting at just $169.99." has-border="true">}}
 {{</gallery>}}
 
 ### Going broader
@@ -165,9 +164,9 @@ As I look back on these numbers, I'm questioning their accuracy. I paid $360 for
 
 Looking at Google Analytics, that seems questionable:
 
-{{<img src="reddit-ga.png" hasBorder="true">}}
+{{<img src="reddit-ga.png" has-border="true">}}
 
-Paid reddit visitors perform worse on most metrics than my typical user, but not *that* much worse.
+Paid reddit visitors perform worse on most metrics than my typical user, but not _that_ much worse.
 
 There were four orders during the three days I ran my first campaign, which means that overall my conversion rate was 1.429%. If I trust these numbers, my conversion rate from reddit was 0%, and from other sources, it was 1.786%. The numbers aren't significant enough to say for sure, so it's plausible the conversion counts are accurate. Still, I'm a bit skeptical that zero reddit visitors ever added an item to their cart.
 
@@ -179,7 +178,7 @@ What I should have done (and what I'll do in the coming weeks) is click the ads 
 
 Organic search is TinyPilot's largest source of customers. When I started the business, I was hoping to reach the first page of Google results for searches like "raspberry pi kvm over ip." [My TinyPilot blog post](/tinypilot/) performed better than I expected, so TinyPilot is now on the front page for broader terms like "kvm over ip."
 
-{{<img src="tinypilot-google.png" alt="Screenshot of Google search results showing TinyPilot at the bottom of the first page of results" maxWidth="350px" hasBorder="true" caption="TinyPilot appears on the front page of Google search result for the query `kvm over ip`">}}
+{{<img src="tinypilot-google.png" alt="Screenshot of Google search results showing TinyPilot at the bottom of the first page of results" max-width="350px" has-border="true" caption="TinyPilot appears on the front page of Google search result for the query `kvm over ip`">}}
 
 ### Writing more blog posts
 
@@ -187,7 +186,7 @@ This month, I published a new post about building my [homelab VM server](/buildi
 
 I submitted the new post to several subreddits, including one I wasn't aware of before, [/r/HomeServer](https://www.reddit.com/r/HomeServer/). When my VM server post [did well](https://www.reddit.com/r/HomeServer/comments/j7eiuo/my_home_vm_server_for_software_development/), I also submitted my original TinyPilot article, which [got a positive reception as well](https://www.reddit.com/r/HomeServer/comments/jeoc74/tinypilot_build_a_kvm_over_ip_for_under_100/).
 
-{{<img src="homeserver.png" alt="96 upvotes for VM server post, 119 for TinyPilot post" hasBorder="true">}}
+{{<img src="homeserver.png" alt="96 upvotes for VM server post, 119 for TinyPilot post" has-border="true">}}
 
 ### The TinyPilot mailing list
 
@@ -199,7 +198,7 @@ Only one customer purchased with the coupon, so I guess there wasn't really a ba
 
 [NetworkProfile](https://blog.networkprofile.org) is a cool blog I found through self-hosting and homelab communities on reddit. I asked the author if he'd be interested in reviewing a TinyPilot device, and he needed a new KVM over IP for his security camera server. He published [a thorough review](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/) within days of receiving the device that covered both the good and the bad of TinyPilot:
 
-{{<img src="networkprofile-review.png" alt="Screenshot of NetworkProfile review header" hasBorder="true" maxWidth="600px" linkUrl="https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/" caption="TinyPilot received its first public review [in the NetworkProfile blog](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/).">}}
+{{<img src="networkprofile-review.png" alt="Screenshot of NetworkProfile review header" has-border="true" max-width="600px" href="https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/" caption="TinyPilot received its first public review [in the NetworkProfile blog](https://blog.networkprofile.org/tinypilot-open-sourve-ipkvm/).">}}
 
 I also reached out to a large hardware blog that's interested in featuring TinyPilot in November, so I hope to share a positive update about that next month.
 
@@ -230,7 +229,7 @@ The challenge is that I have sort of an unusual payment flow:
 
 So, Shopify can't track where purchases came from because they see 100% of customers arrive from the TinyPilot website. I run Google Analytics on the TinyPilot website, but it loses the flow of the session because users leave the TinyPilot domain to check out on Shopify and then come back after they complete their order. Google Analytics records those as two separate sessions and doesn't link them.
 
-I'm sure this is solvable, as my flow isn't *that* crazy. I just need to spend some time figuring out how to keep track of where customers originate from as they complete the payment flow.
+I'm sure this is solvable, as my flow isn't _that_ crazy. I just need to spend some time figuring out how to keep track of where customers originate from as they complete the payment flow.
 
 {{<notice type="info">}}
 The problem of tracking sessions across Shopify checkouts feels like one of those problems that's easy to solve once you've done it, so if any of my readers know the solution, [get in touch](/about/).
@@ -254,7 +253,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 | AdSense Earnings          | $161.06        | $322.58      | <font color="green">+$161.52 (+100%)</font>    |
 | AdThrive Earnings         | $135.00        | N/A          | N/A                                            |
 | Amazon Affiliate Earnings | $83.03         | $188.28      | <font color="green">+$105.25 (+127%)</font>    |
-| **Total Revenue**        | **$379.09**    | **$510.86**  | **<font color="green">+$131.77 (+35%)</font>** |
+| **Total Revenue**         | **$379.09**    | **$510.86**  | **<font color="green">+$131.77 (+35%)</font>** |
 
 Is It Keto had nice growth this month, and I'm not sure why. I haven't touched it at all since September.
 
@@ -264,11 +263,11 @@ These numbers further confirm what I've always liked about Is It Keto as a busin
 
 {{<revenue-graph project="zestful">}}
 
-| Metric             | September 2020 | October 2020 | Change                                         |
-| ------------------ | -------------- | ------------ | ---------------------------------------------- |
-| Unique Visitors    | 333            | 436          | <font color="green">+103 (+31%)</font>         |
-| Total Pageviews    | 849            | 1,149        | <font color="green">+300 (+35%)</font>         |
-| RapidAPI Earnings  | $12.27         | $35.05       | <font color="green">+$22.78 (+186%)</font>     |
+| Metric            | September 2020 | October 2020 | Change                                         |
+| ----------------- | -------------- | ------------ | ---------------------------------------------- |
+| Unique Visitors   | 333            | 436          | <font color="green">+103 (+31%)</font>         |
+| Total Pageviews   | 849            | 1,149        | <font color="green">+300 (+35%)</font>         |
+| RapidAPI Earnings | $12.27         | $35.05       | <font color="green">+$22.78 (+186%)</font>     |
 | **Total Revenue** | **$12.27**     | **$35.05**   | **<font color="green">+$22.78 (+186%)</font>** |
 
 Zestful continues its multi-month streak of sub-$100 revenue from low-volume clients.
@@ -279,21 +278,21 @@ I received an inquiry from a large customer about an enterprise package for Zest
 
 ### What got done?
 
-* Set a new personal record for revenue, at $10,263 in TinyPilot sales.
-* Interviewed several businesses about their pain points in remote administration.
-* Published a new blog post about [using TinyPilot to build my new home VM server](/building-a-vm-homelab/).
-* My article on digitizing home videos [hit #3 on Hacker News](https://news.ycombinator.com/item?id=24839848).
+- Set a new personal record for revenue, at $10,263 in TinyPilot sales.
+- Interviewed several businesses about their pain points in remote administration.
+- Published a new blog post about [using TinyPilot to build my new home VM server](/building-a-vm-homelab/).
+- My article on digitizing home videos [hit #3 on Hacker News](https://news.ycombinator.com/item?id=24839848).
 
 ### Lessons learned
 
-* Inventory management makes a huge difference
-  * Customers are understandably more interested in purchasing TinyPilot when there isn't a multi-week backlog.
-  * At the same time, it [requires a lot of cash](https://twitter.com/deliberatecoder/status/1322547428999024641) to pre-pay for inventory in advance.
-* I need better conversion tracking before investing more into marketing
-  * I tested several marketing channels, but I'm limited in what I can learn from the results because I'm not tracking the full flow from arrival to purchase.
+- Inventory management makes a huge difference
+  - Customers are understandably more interested in purchasing TinyPilot when there isn't a multi-week backlog.
+  - At the same time, it [requires a lot of cash](https://twitter.com/deliberatecoder/status/1322547428999024641) to pre-pay for inventory in advance.
+- I need better conversion tracking before investing more into marketing
+  - I tested several marketing channels, but I'm limited in what I can learn from the results because I'm not tracking the full flow from arrival to purchase.
 
 ### Goals for next month
 
-* Release a high-end version of TinyPilot that arrives pre-assembled in a custom case.
-* Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io).
-* Figure out how to properly track the source of customers who end up completing purchases.
+- Release a high-end version of TinyPilot that arrives pre-assembled in a custom case.
+- Release the first version of [TinyPilot Pro](https://tinypilotkvm.com/pro?ref=mtlynch.io).
+- Figure out how to properly track the source of customers who end up completing purchases.

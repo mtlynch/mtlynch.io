@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* Despite $30k in monthly revenue, TinyPilot barely covers costs.
-* I'm exploring options to get big companies to pay more for TinyPilot.
-* I need to come to terms with the fact that managing people is a real job.
+- Despite $30k in monthly revenue, TinyPilot barely covers costs.
+- I'm exploring options to get big companies to pay more for TinyPilot.
+- I need to come to terms with the fact that managing people is a real job.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Increase TinyPilot's revenue to $33k
 
-* **Result**: Increased TinyPilot's revenue to $39k
-* **Grade**: A
+- **Result**: Increased TinyPilot's revenue to $39k
+- **Grade**: A
 
 TinyPilot had a huge spike in sales following a [big review from ServeTheHome](https://www.servethehome.com/tinypilot-voyager-kvm-raspberry-pi-remote/), one of the top blogs / YouTube channels for IT hardware.
 
 ### Fully migrate TinyPilot's operations to our new office
 
-* **Result**: TinyPilot operates completely at the new office
-* **Grade**: A
+- **Result**: TinyPilot operates completely at the new office
+- **Grade**: A
 
 We finally moved TinyPilot operations out of my house and into a real office. There were some stressful days, like when I wasn't sure if I could get printing to work on Linux at all, but overall the transition was smooth. Incoming parts ship to the office, employees build and test products at the office, and outgoing orders ship out from the office.
 
-### Gather feedback on the table of contents for [*Refactoring English*](https://refactoringenglish.com) and iterate on it
+### Gather feedback on the table of contents for [_Refactoring English_](https://refactoringenglish.com) and iterate on it
 
-* **Result**: I gathered feedback, but I'm not yet sure how to integrate it
-* **Grade**: B
+- **Result**: I gathered feedback, but I'm not yet sure how to integrate it
+- **Grade**: B
 
 I got feedback from the [Write Useful Books community](https://writeusefulbooks.com) and from my mailing list. Six people responded out of 202 subscribers, which was a bit lower than I hoped, but it provided [helpful feedback](https://twitter.com/deliberatecoder/status/1396595066316148742).
 
@@ -45,12 +45,12 @@ Exciting outcomes are naturally more attractive than fundamentals. If I wrote a 
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric          | April 2021  | May 2021   | Change                                       |
-| --------------- | ----------- | ---------- | -------------------------------------------- |
-| Unique Visitors | 5,880       | 7,283      | <font color="green">+1,403 (+24%)</font>     |
-| Total Pageviews | 10,483      | 13,267     | <font color="green">+2,784 (+27%)</font>     |
-| Sales Revenue   | $28,880.65  | $38,767.77 | <font color="green">+$9,887.12 (+34%)</font> |
-| **Profit**      | **$843.56** | **$6,858.72**    | **<font color="green">+$6,015.16 (+713%)</font>**                                      |
+| Metric          | April 2021  | May 2021      | Change                                            |
+| --------------- | ----------- | ------------- | ------------------------------------------------- |
+| Unique Visitors | 5,880       | 7,283         | <font color="green">+1,403 (+24%)</font>          |
+| Total Pageviews | 10,483      | 13,267        | <font color="green">+2,784 (+27%)</font>          |
+| Sales Revenue   | $28,880.65  | $38,767.77    | <font color="green">+$9,887.12 (+34%)</font>      |
+| **Profit**      | **$843.56** | **$6,858.72** | **<font color="green">+$6,015.16 (+713%)</font>** |
 
 TinyPilot had its second-best month ever. It was exciting how everything worked smoothly at this level of sales. When a similar rush hit in January, it [overwhelmed us](/retrospectives/2021/02/#tinypilots-first-postmortem). Fortunately, we've improved our order fulfillment workflow, so all of our systems worked as normal.
 
@@ -62,9 +62,9 @@ But Peter was an exceptionally good manager, and everyone knew it. I think he jo
 
 I now relate to Peter's sentiment. I'll often get to the end of the day and feel like all I did was write emails. But taking a step back, I can understand why I have those days. At this point, I work with a lot of people on TinyPilot:
 
-* three remote software developers
-* three local staffers who handle inventory, assembly, and order fulfillment
-* two vendors with whom I work closely on 3D printing and electrical engineering
+- three remote software developers
+- three local staffers who handle inventory, assembly, and order fulfillment
+- two vendors with whom I work closely on 3D printing and electrical engineering
 
 So, eight people in total that I communicate with at least once per week. And on top of that, there are other people and services I work with, like the office's landlord, my HR/payroll service, our knowledge base, and tools for tracking inventory. And I'm the only one handling customer support and sales.
 
@@ -72,7 +72,7 @@ Taking that into consideration, it feels more reasonable that I spend most of my
 
 ### Avoid doing work that my teammates can do
 
-One of the dumbest things I do now is take on tasks that someone else on the team is perfectly capable of doing instead. Last month, I talked about how [I only have an hour per day to write code](/retrospectives/2021/05/#my-wrongheaded-promotional-experiment). Thinking about it more, I shouldn't even be doing that because my teammates can write code, and I'm falling behind on tasks that *only* I can do.
+One of the dumbest things I do now is take on tasks that someone else on the team is perfectly capable of doing instead. Last month, I talked about how [I only have an hour per day to write code](/retrospectives/2021/05/#my-wrongheaded-promotional-experiment). Thinking about it more, I shouldn't even be doing that because my teammates can write code, and I'm falling behind on tasks that _only_ I can do.
 
 ### Unhoard Michael-only tasks
 
@@ -80,11 +80,11 @@ There are a few tasks that other people theoretically could do, but they can't i
 
 These tasks primarily cross domains or roles, like managing tools that only my local staff uses. Here are some things I should delegate (in ascending difficulty of unbinding them from me):
 
-* Manage glue code that connects Shopify to our inventory spreadsheet.
-* Manage scripts that build TinyPilot production images.
-* Manage formulas in our inventory spreadsheet.
-* Answer customer support questions.
-* Perform final QA testing on TinyPilot releases.
+- Manage glue code that connects Shopify to our inventory spreadsheet.
+- Manage scripts that build TinyPilot production images.
+- Manage formulas in our inventory spreadsheet.
+- Answer customer support questions.
+- Perform final QA testing on TinyPilot releases.
 
 ## How is $30k/month not profitable?
 
@@ -94,29 +94,29 @@ The first person who came to mind was [Mike Perham](https://www.mikeperham.com/)
 
 I don't know Mike, so I sent him an email introducing myself and asked if he had any advice about TinyPilot. He responded the next day with several generous suggestions. The part that most stuck out to me was his reaction to my finances:
 
->Get those profits up. A 5% profit margin is not a healthy business to be in. Either get your costs down, massage your prices a bit or find a software-only addon that can be closer to pure profit.
+> Get those profits up. A 5% profit margin is not a healthy business to be in. Either get your costs down, massage your prices a bit or find a software-only addon that can be closer to pure profit.
 
 That was a helpful wake-up call. I knew my profits were low, but it still felt like $30k/month meant that I was in a good position. But thinking about it in terms of 5% profit margin really puts it into perspective.
 
 Based on Mike's advice, I took a closer look at my expenses. I haven't done my bookkeeping for May yet, so I'm using April as an example.
 
-{{<img src="pie-chart.png" maxWidth="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
+{{<img src="pie-chart.png" max-width="700px" alt="Pie chart of TinyPilot expenses" caption="TinyPilot expenses by category" hasLink="false">}}
 
-|                 Category          | Total        |
-|-----------------------------------|--------------|
-| Raw Materials                     | $15,637.68   |
-| Software Contractors              |  $9,331.79   |
-| Local Fulfillment Staff           |  $1,460.12   |
-| Postage                           |  $1,262.53   |
-| Electrical Engineering Consulting |   $901.25    |
-| Office Rent                       |   $550.00    |
-| Advertising                       |   $370.00    |
-| Lawyer                            |   $270.00    |
-| Office Equipment                  |   $233.72    |
-| Graphic Design                    |   $169.00    |
-| Stickers                          |   $163.63    |
-| Cloud Services                    |   $176.33    |
-| Misc                              |    $161.21   |
+| Category                          | Total      |
+| --------------------------------- | ---------- |
+| Raw Materials                     | $15,637.68 |
+| Software Contractors              | $9,331.79  |
+| Local Fulfillment Staff           | $1,460.12  |
+| Postage                           | $1,262.53  |
+| Electrical Engineering Consulting | $901.25    |
+| Office Rent                       | $550.00    |
+| Advertising                       | $370.00    |
+| Lawyer                            | $270.00    |
+| Office Equipment                  | $233.72    |
+| Graphic Design                    | $169.00    |
+| Stickers                          | $163.63    |
+| Cloud Services                    | $176.33    |
+| Misc                              | $161.21    |
 
 My cost for raw materials isn't so surprising. My profit margin on physical products is generally around 50-60%, so $15k matches what I'd expect on about $30k of sales. There's not much wiggle room there, as there aren't cheaper alternatives to the materials I buy. There are a few items like cables where I pay a premium for quality, but that's a difference of $1-2/unit on a product I sell for $300. The expensive parts are things that have no cheaper alternatives, like the Raspberry Pis or the HDMI capture chips.
 
@@ -142,11 +142,11 @@ This is an extremely common problem in open-source. An open license helps people
 
 I asked Mike Perham about this as well. Here was his response:
 
->Sounds like your license is allowing large customers to walk all over you. This is YOUR code, right? Change your license, e.g. allow hobbyists to use it with one instance for personal use only. The MIT or BSD license is great for giving away code; it's not good to base a business on.
+> Sounds like your license is allowing large customers to walk all over you. This is YOUR code, right? Change your license, e.g. allow hobbyists to use it with one instance for personal use only. The MIT or BSD license is great for giving away code; it's not good to base a business on.
 
 It is my code... sort of. The freelancers who work on TinyPilot sign a contract saying that I own the intellectual property of code they contribute, but I also have accepted a handful of contributions from volunteer developers. My understanding is that developers who contributed free code technically co-own the copyright to TinyPilot's code with me.
 
-I released TinyPilot under the [MIT license](https://choosealicense.com/licenses/mit/) because it gives me flexibility as well. I *think* I can "fork" the code myself into a different license and just say that it also uses MIT-licensed code, but I'm not totally sure how that works.
+I released TinyPilot under the [MIT license](https://choosealicense.com/licenses/mit/) because it gives me flexibility as well. I _think_ I can "fork" the code myself into a different license and just say that it also uses MIT-licensed code, but I'm not totally sure how that works.
 
 I've thought about ways to capture more value from large, Enterprise customers, and here's what I've come up with:
 
@@ -187,7 +187,7 @@ Here are some brief updates on projects that I still maintain but are not the pr
 
 Is It Keto continues to run in the background, but I put in a rare bit of work this month. Many of my Amazon Affiliate links had gone out of date and were pointing to products that no longer existed, so I spent a couple of hours fixing those.
 
-Dusting off the code after months away, it's *so* tempting to go down a rabbit hole of tinkering with the site. I have to restrain myself because it's better for me to focus on TinyPilot as much as possible.
+Dusting off the code after months away, it's _so_ tempting to go down a rabbit hole of tinkering with the site. I have to restrain myself because it's better for me to focus on TinyPilot as much as possible.
 
 ### [Hit the Front Page of Hacker News](https://hitthefrontpage.com/)
 
@@ -256,25 +256,25 @@ And you'll see JSON output like this:
 
 ### What got done?
 
-* Moved TinyPilot's operations from my house to a real office
-* Worked with my inventory manager to document all of our processes in Notion.
-  * Notion definitely has some warts and gotchas, but it's a big step up from Google Docs, which was where we previously documented our internal processes.
-* Successfully transitioned responsitibilites from TinyPilot's original inventory manager (my girlfriend) to our new local employee.
-  * My girlfriend's grad school classes resume next week, so she won't have time to work on TinyPilot.
+- Moved TinyPilot's operations from my house to a real office
+- Worked with my inventory manager to document all of our processes in Notion.
+  - Notion definitely has some warts and gotchas, but it's a big step up from Google Docs, which was where we previously documented our internal processes.
+- Successfully transitioned responsitibilites from TinyPilot's original inventory manager (my girlfriend) to our new local employee.
+  - My girlfriend's grad school classes resume next week, so she won't have time to work on TinyPilot.
 
 ### Lessons learned
 
-* When it comes to new employee training, "tell, don't show."
-  * We trained our first local employee almost entirely through written instructions rather than live discussions.
-  * We were all happy with how easily the ramp-up went, and it led to a smooth transition of responsibilities to the new employee.
-  * A second local employee started in mid-May, and we're expecting the ramp-up to be even easier because everything is already documented.
-* Management requires time, too.
-  * If I want to manage well, I need to let go of tasks that my teammates can do instead.
-* TinyPilot needs higher profit margins.
-  * Increasing revenue will be easier than cutting expenses.
+- When it comes to new employee training, "tell, don't show."
+  - We trained our first local employee almost entirely through written instructions rather than live discussions.
+  - We were all happy with how easily the ramp-up went, and it led to a smooth transition of responsibilities to the new employee.
+  - A second local employee started in mid-May, and we're expecting the ramp-up to be even easier because everything is already documented.
+- Management requires time, too.
+  - If I want to manage well, I need to let go of tasks that my teammates can do instead.
+- TinyPilot needs higher profit margins.
+  - Increasing revenue will be easier than cutting expenses.
 
 ### Goals for next month
 
-* Publish a new release of TinyPilot.
-* Earn $35k in TinyPilot revenue.
-* Create a prototype of the TinyPilot Voyager 2, with built-in Power over Ethernet.
+- Publish a new release of TinyPilot.
+- Earn $35k in TinyPilot revenue.
+- Create a prototype of the TinyPilot Voyager 2, with built-in Power over Ethernet.

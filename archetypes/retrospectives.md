@@ -4,6 +4,15 @@ date: {{ .Date }}
 description: TODO - One-line summary
 ---
 
+{{<notice type="info">}}
+
+**New here?**
+
+Hi, I'm Michael. I'm a software developer and the founder of [TinyPilot](https://tinypilotkvm.com), an independent computer hardware company. I started the company in 2020, and it now earns $80-100k/month in revenue and employs six other people.
+
+Every month, I publish a retrospective like this one to share how things are going with my business and my professional life overall.
+{{</notice>}}
+
 ## Highlights
 
 -
@@ -37,6 +46,8 @@ TODO
 
 {{<revenue-graph project="tinypilot">}}
 
+\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+
 ## Topic 1
 
 ## Topic 2
@@ -58,3 +69,7 @@ TODO
 ### Goals for next month
 
 -
+
+### Requests for help
+
+TODO

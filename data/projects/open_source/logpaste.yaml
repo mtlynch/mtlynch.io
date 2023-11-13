@@ -1,0 +1,11 @@
+title: LogPaste
+external_url: https://github.com/mtlynch/logpaste
+start_date: 2021
+end_date: 2021
+blurb: A minimalist web app for receiving text log files. Kind of a precursor to PicoShare.
+weight: 97
+technologies:
+  - golang
+  - sqlite
+  - docker
+  - litestream

@@ -18,7 +18,7 @@ This post demonstrates how Key Mime Pi works and how you can build one for yours
 
 ## Demo
 
-{{< youtube EYMGQxiu-kI >}}
+{{<youtube EYMGQxiu-kI>}}
 
 ## What you'll need
 
@@ -46,8 +46,8 @@ Enable SSH access by placing a file called `ssh` on the microSD's boot partition
 Connect the USB cable to your Pi's USB OTG port. On the Pi 4, this is the USB-C port. For the Pi Zero, it's the Micro-USB port labeled "USB."
 
 {{<gallery caption="For the Raspberry Pi 4 (left), connect to the USB-C port. For the Raspberry Pi Zero W (right), connect to the Micro-USB data port.">}}
-{{< img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" maxWidth="400px" >}}
-{{< img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" maxWidth="445px" >}}
+{{<img src="pi4-connection.jpg" alt="Pi 4 with cable inserted into USB-C port" max-width="400px">}}
+{{<img src="pi-zero-connection.jpg" alt="Pi Zero W with cable inserted into USB micro-USB data port" max-width="445px">}}
 {{</gallery>}}
 
 Connect the other end of the USB cable to the computer that you want to connect to as a keyboard. USB 3.0 ports work better because they output more power, but all the USB 2.0 ports I tested worked fine as well.
@@ -139,7 +139,7 @@ After you run the install script, Key Mime Pi will be available at:
 
 Its interface looks like this:
 
-{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" maxWidth="650px">}}
+{{<img src="key-mime-pi-interface.png" alt="Screenshot of Key Mime Pi web interface" caption="Key Mime Pi web interface awaiting input" max-width="650px">}}
 
 And like, magic, when you type into your browser, the keys will appear on the machine connected to the Pi.
 

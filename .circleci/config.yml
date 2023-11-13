@@ -8,13 +8,13 @@ jobs:
       - checkout
       - run:
           name: Check for trailing whitespace
-          command: tests/check-trailing-whitespace
+          command: ./dev-scripts/check-trailing-whitespace
       - run:
           name: Check for trailing newlines
-          command: tests/check-trailing-newline
+          command: ./dev-scripts/check-trailing-newline
   check_html_format:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:18.14.1
     steps:
       - checkout
       - run:
@@ -22,52 +22,47 @@ jobs:
           command: npm install
       - run:
           name: Check formatting
-          command: npm run check-format
+          command: ./dev-scripts/check-formatting
   lint-markdown:
     docker:
-      - image: davidanson/markdownlint-cli2:0.3.0
+      - image: davidanson/markdownlint-cli2:v0.9.0
     steps:
       - checkout
       - run:
           name: Lint Markdown
-          command: tests/lint-markdown
+          command: ./dev-scripts/lint-markdown
   build:
     docker:
-      - image: peaceiris/hugo:v0.89.4
+      - image: peaceiris/hugo:v0.119.0
     steps:
       - checkout
-      - run:
-          name: Get submodules
-          command: |
-            git submodule init
-            git submodule update --remote
       - attach_workspace:
           at: ./
       - restore_cache:
           keys:
-            - resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+            - resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
       - run:
           name: Build prod site
           command: hugo version && hugo --minify
       - persist_to_workspace:
           root: ./
           paths:
+            - dev-scripts
             - public
-            - tests
             - netlify.toml
       - save_cache:
-          key: resources-gen-v-{{ .Environment.RESOURCES_CACHE_VERSION }}
+          key: resources-gen-v{{ .Environment.RESOURCES_CACHE_VERSION }}
           paths:
             - resources
   lint-html:
     docker:
-      - image: mtlynch/htmlproofer:3.15.0
+      - image: mtlynch/htmlproofer:5.0.6
     steps:
       - attach_workspace:
           at: ./
       - run:
           name: Check HTML and external links
-          command: tests/lint-html
+          command: ./dev-scripts/lint-html
   check-seo-metadata:
     docker:
       - image: cimg/base:2020.01
@@ -77,10 +72,10 @@ jobs:
           at: ./
       - run:
           name: Check that SEO meta tags rendered properly
-          command: tests/check-seo-metadata
+          command: ./dev-scripts/check-seo-metadata
   publish_draft:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:18.14.1
     resource_class: small
     steps:
       - attach_workspace:
@@ -98,7 +93,7 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --dir=public --site="${NETLIFY_SITE_ID}"
   deploy:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:18.14.1
     resource_class: small
     steps:
       - attach_workspace:

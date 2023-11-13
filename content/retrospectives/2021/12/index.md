@@ -8,9 +8,9 @@ images:
 
 ## Highlights
 
-* TinyPilot's sales jumped to $57k, and it might be sustainable.
-* I'm just about to launch TinyPilot's new product and branding.
-* I reduced Google Cloud Platform fees by 90% on my side projects.
+- TinyPilot's sales jumped to $57k, and it might be sustainable.
+- I'm just about to launch TinyPilot's new product and branding.
+- I reduced Google Cloud Platform fees by 90% on my side projects.
 
 ## Goal Grades
 
@@ -18,22 +18,22 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Complete TinyPilot’s website rebrand
 
-* **Result**: The rebrand is 95% done, but we haven't published it yet.
-* **Grade**: B
+- **Result**: The rebrand is 95% done, but we haven't published it yet.
+- **Grade**: B
 
 I've finalized a logo concept and color scheme with the design firm, but we're still working out some fine details before we pull the trigger on the new branding.
 
 ### Prepare for Voyager 2 launch as soon as the hardware is ready
 
-* **Result**: Everything is in place to launch within a week of receiving the hardware
-* **Grade**: A-
+- **Result**: Everything is in place to launch within a week of receiving the hardware
+- **Grade**: A-
 
 It's been a long slog to get the custom hardware we need for the Voyager 2, but we completed manufacturing and received the first batch of hardware last week, so we should be ready to launch this week. We're a little behind where I hoped to be because we've had trouble keeping up with demand for Voyager 1, but it should only delay us by a day or two.
 
 ### Hire a marketing firm or freelancer to help TinyPilot explore paid marketing channels
 
-* **Result**: Punted on this due to changing priorities
-* **Grade**: N/A
+- **Result**: Punted on this due to changing priorities
+- **Grade**: N/A
 
 I spoke to a few marketing firms, but I wasn't ready to hire anyone yet. We're struggling to keep up with TinyPilot's growing sales as it is, so I'm pausing on marketing and focusing on scaling production to meet our current demand.
 
@@ -58,13 +58,13 @@ Due to supply shortages, I retired TinyPilot's lower-cost product in October to 
 I basically just removed a link from the site's navigation bar.
 
 {{<gallery caption="The highest impact change I ever made on the TinyPilot website was removing a navigation bar link to a product catalog page.">}}
-  {{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" maxWidth="600px" hasBorder="true">}}
-  {{<img src="no-product-page.png" alt="Screenshot of old product catalog page" maxWidth="250px" hasBorder="true">}}
+{{<img src="navbar-remove.png" alt="Screenshot of old product catalog page" max-width="600px" has-border="true">}}
+{{<img src="no-product-page.png" alt="Screenshot of old product catalog page" max-width="250px" has-border="true">}}
 {{</gallery>}}
 
 In last month's retrospective, I mentioned that I was [starting to see sales trending upwards](/retrospectives/2021/11/#simplifying-to-just-one-product) and wondered whether it was related to simplifying the product offering. After a month of extra data, I'm pretty convinced that it made a huge difference:
 
-{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" maxWidth="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product">}}
+{{<img src="tp-sales-consolidated.png" alt="Graph of TinyPilot sales over time, trending upwards after the consolidation to one product" max-width="800px" caption="TinyPilot's weekly sales before and after consolidating the website to a single product">}}
 
 We've had spikes in sales before, but they always followed some obvious event like a mention on YouTube or a review on a popular website. Sales would spike and then slowly subside.
 
@@ -82,17 +82,17 @@ The latest sales increase has brought back some growing pains. We have contingen
 
 First, we noticed that we were using [power connectors](https://tinypilotkvm.com/product/tinypilot-power-connector) at a fast enough rate that we'd run out before our next delivery of circuit boards, which would prevent us from selling Voyagers.
 
-{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" maxWidth="500px" caption="We came within days of running out of TinyPilot Power Connectors.">}}
+{{<img src="power-connector-connected.jpg" alt="Photo of TinyPilot Power Connector" max-width="500px" caption="We came within days of running out of TinyPilot Power Connectors.">}}
 
-I listed them out of stock for individual sale, and that slowed down the pace *just* enough to last us until the new shipment arrived.
+I listed them out of stock for individual sale, and that slowed down the pace _just_ enough to last us until the new shipment arrived.
 
-*\[Sidenote: If you're wondering why I was still selling power connectors even though I [just made a huge deal](#reducing-to-a-single-product-nearly-doubled-sales) about not selling anything but Voyagers, I can explain. There are still working links to some of TinyPilot's secondary products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but users can't easily discover those pages by visiting the TinyPilot website.\]*
+_\[Sidenote: If you're wondering why I was still selling power connectors even though I [just made a huge deal](#reducing-to-a-single-product-nearly-doubled-sales) about not selling anything but Voyagers, I can explain. There are still working links to some of TinyPilot's secondary products through my [DIY TinyPilot guide](/tinypilot/#how-to-build-your-own-tinypilot), but users can't easily discover those pages by visiting the TinyPilot website.\]_
 
 ### Running our of ribbon cables
 
 Next, we started running low on ribbon cables. We typically buy them in bulk, and we have so many on hand that it's not even worth tracking them in our inventory system. But because we're not tracking them, we didn't notice that our last order was running late. We were down to just 30 cables, enough to make only a few days' worth of Voyagers.
 
-{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" maxWidth="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
+{{<img src="ribbon-cables.jpg" alt="Photo of ribbon cable we use for TinyPilot" max-width="400px" caption="TinyPilot's sales almost ground to a halt because we ran out of 70mm ribbon cables.">}}
 
 We use a non-standard ribbon cable size, so we get them special-ordered. Was I going to have to halt sales for weeks because of something as stupid as ribbon cables?
 
@@ -114,17 +114,17 @@ I mainly focus on my main business in these retrospectives, but I had some fun t
 
 I started using GCP about eight years ago. At the time, most cloud providers charged $10-20/mo to host a web app. Google services like AppEngine and Firebase could scale down to $0/mo for small projects, which made experimentation attractive. I'm much more likely to publish a new project if I know I'm not committing myself to pay $20/mo indefinitely.
 
-Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new, basic web app. Fortunately, there are great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean *any* customer support).
+Today, GCP is usually a poor solution for small projects. The services are so bloated and complex that it takes me about an hour of fiddling with settings and permissions to create and deploy a new, basic web app. Fortunately, there are great alternatives to GCP that offer lower costs, better development experience, and superior customer support (by which I mean _any_ customer support).
 
 Because I used GCP for so long, many of my side projects are still running on Google Cloud Platform, and they've been accruing more and more service fees. I spent evenings and weekends last month migrating my most expensive services away from GCP.
 
 Here are what my GCP costs looked like before the great migration:
 
-{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" maxWidth="800px" hasBorder="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
+{{<img src="gcp-before.png" alt="Graph of costs on GCP, totaling $252.71 from August to October" max-width="800px" has-border="true" caption="Fees for hosting my side projects on GCP from August to October 2021">}}
 
 And here's what costs looked like when I was finished:
 
-{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" maxWidth="800px" hasBorder="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
+{{<img src="gcp-after.png" alt="Graph of GCP service fees trending toward zero" max-width="800px" has-border="true" caption="Fees for Google Cloud services after migrating to Google Cloud alternatives in November">}}
 
 ### HTTP Load Balancing - $37/mo
 
@@ -136,9 +136,9 @@ This simple [80-step process](https://cloud.google.com/storage/docs/hosting-stat
 
 I dramatically reduced that cost by switching to [BunnyCDN](https://bunny.net/). I worried that setting up a whole CDN would be a pain, but it was incredibly simple. Less than 30 minutes after discovering BunnyCDN as a service, it was serving my Google Cloud Storage bucket through the `media.whatgotdone.com` domain. All I had to do was tell Bunny the GCS bucket URL and the subdomain I wanted, then add a DNS entry.
 
-{{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" maxWidth="800px" hasBorder="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
+{{<img src="bunnycdn-setup.png" alt="Screenshot of BunnyCDN pull zone setup page" max-width="800px" has-border="true" caption="BunnyCDN allowed me to customize the domain name for my GCS bucket in just three steps.">}}
 
-BunnyCDN's minimum charge is $1/mo total, whereas Google's is ~$18/mo per site. I'm *way* below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed BunnyCDN's minimum, their bandwidth prices are less than 1/10th of Google's.
+BunnyCDN's minimum charge is $1/mo total, whereas Google's is ~$18/mo per site. I'm _way_ below the minimum charge. I've used 78.55 MB of bandwidth so far, so that would be about $0.0008 in fees. And even if I exceed BunnyCDN's minimum, their bandwidth prices are less than 1/10th of Google's.
 
 ### Bandwidth - $21/mo
 
@@ -160,16 +160,16 @@ To replace AppEngine, I used [fly.io](https://fly.io). I've been experimenting w
 
 My move to fly.io was mainly about reducing costs and gaining vendor independence, but the changes ended up improving performance tremendously. Most of What Got Done's API requests had 2-20x speedups after I migrated to SQLite and fly.io.
 
-{{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" maxWidth="800px">}}
+{{<img src="appengine-vs-fly.png" alt="Graph of AppEngine performance vs fly.io" max-width="800px">}}
 
-| Request | AppEngine Latency (ms) | fly.io Latency (ms) | Latency Reduction |
-|---------|------------------------|---------------------|-------------------|
-| Fetch recent entries | 745.3 | 27.3 | 96.3% |
-|Fetch user profile | 300.0 | 29.3 | 90.2% |
-|Fetch personalized feed | 572.0 | 68.7 | 88.0% |
-|Fetch user's complete entry history | 215.7 | 62.0 | 71.3% |
-|Fetch impression count | 349.7 | 20.0 | 94.3% |
-|Publish entry | 183.3 | 72.7 | 60.4% |
+| Request                             | AppEngine Latency (ms) | fly.io Latency (ms) | Latency Reduction |
+| ----------------------------------- | ---------------------- | ------------------- | ----------------- |
+| Fetch recent entries                | 745.3                  | 27.3                | 96.3%             |
+| Fetch user profile                  | 300.0                  | 29.3                | 90.2%             |
+| Fetch personalized feed             | 572.0                  | 68.7                | 88.0%             |
+| Fetch user's complete entry history | 215.7                  | 62.0                | 71.3%             |
+| Fetch impression count              | 349.7                  | 20.0                | 94.3%             |
+| Publish entry                       | 183.3                  | 72.7                | 60.4%             |
 
 ## Legacy projects
 
@@ -220,23 +220,23 @@ Zestful saw a big bump this month from a new customer who made around $700 in re
 
 ### What got done?
 
-* Published the [TinyPilot 2.3.1 release](https://tinypilotkvm.com/blog/whats-new-in-2021-11)
-* Prepared for the launch of Voyager 2
-* [Migrated What Got Done](https://github.com/mtlynch/whatgotdone/pull/639) from GCP and Firestore to fly.io, SQLite, and Litestream
-* Migrated this blog, Is It Keto, and a few other static sites from Google Firebase to Netlify
+- Published the [TinyPilot 2.3.1 release](https://tinypilotkvm.com/blog/whats-new-in-2021-11)
+- Prepared for the launch of Voyager 2
+- [Migrated What Got Done](https://github.com/mtlynch/whatgotdone/pull/639) from GCP and Firestore to fly.io, SQLite, and Litestream
+- Migrated this blog, Is It Keto, and a few other static sites from Google Firebase to Netlify
 
 ### Lessons learned
 
-* When sales begin trending upwards, think early about scaling.
-* Google Cloud Platform is usually the wrong choice for small projects.
+- When sales begin trending upwards, think early about scaling.
+- Google Cloud Platform is usually the wrong choice for small projects.
 
 ### Goals for next month
 
-* Launch the Voyager 2.
-* Launch TinyPilot's rebrand.
-  * For real this time.
-* Build up enough inventory that TinyPilot isn't scrambling to meet demand.
+- Launch the Voyager 2.
+- Launch TinyPilot's rebrand.
+  - For real this time.
+- Build up enough inventory that TinyPilot isn't scrambling to meet demand.
 
 ---
 
-***Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees.*
+_**Note**: I mentioned some services in this post, but I have no business relationship with any of them except as a customer. I hate reading seemingly genuine product recommendations on blogs only to discover that the author is profiting from referrals, so I'm deliberately not using any links that generate referral bonuses or affiliate fees._
