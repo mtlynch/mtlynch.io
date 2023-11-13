@@ -142,6 +142,8 @@ Doesn't force me to write it as a string.
 | [TKO](https://github.com/knockout/tko)               | ✔️                   | ✔️                  | ✔️               | ❌                                |
 | [MobX](https://mobx.js.org)                          | ❌                   | ❌                  | ✔️               | ✔️                                |
 
+https://github.com/kennyfrc/cami.js
+
 \* HTMX can run under CSP but effectively neuters it. If an attacker can control HTML on the page, [they can achieve XSS through HTMX directives](https://htmx.org/docs/#security). You can disable this with `hx-disable`, but the nature of XSS makes it hard for the developer to anticipate which elements are at high risk of attacker-controlled HTML. The more secure way is secure by default while giving the developer the power to give certain elements more permissions to execute JS.
 
 ### [Alpine.js](https://alpinejs.dev/)
