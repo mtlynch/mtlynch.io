@@ -1,23 +1,24 @@
 ---
 title: "A Simple Example of Calling a C Library from Zig"
-date: 2023-11-18T13:52:14-05:00
+date: 2023-11-19T00:00:00-05:00
+tags:
+  - nix
+  - zig
 ---
 
-I've been interested in Zig for the past year or so. It's like a modern reimagining of C with all the performance benefits, but the benefit of hindsight and better design to fit modern workflows.
+[Zig](https://ziglang.org/) is a new, independently developed low-level programming language. It's a modern reimagining of C that attempts to retain all of C's performance benefits while also taking advantage of improvements in tooling and language design from the last 30 years.
 
-Because Zig is designed to replace C, one of the first-class features is that you can call into C libraries from a Zig application. Or you can replace parts of an existing C application with Zig, and everything should still keep working.
+Because Zig is designed to replace C, one of the first-class features is that you can call into C libraries from a Zig application. I couldn't find any simple examples demonstrating Zig's C interop functionality, so I decided to write my own.
 
-I've been interested in Zig, and I thought a potential way to learn the language would be to take an existing C application and rewrite it in Zig. But I want to rewrite it incrementally rather than trying to replace it in one shot.
+## Existing resources about calling C from Zig
 
-## Where's the simple example of calling C from Zig?
+I found a few articles that described how to call C code from Zig. They all had useful information, but they were either too abstract or described scenarios that were more complex than what I was trying to accomplish:
 
-In approaching this problem, I found a few articles that described how to call C code from Zig, but I couldn't find any resoure that just showed a simple example of Zig-to-C interop:
-
-- ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j)
+- ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j) by Loris Cro
   - This is a great tutorial, but it's complex. It's not just calling into a C library &mdash; it's figuring out how to build a huge C application with Zig and then writing a new function that both calls the original C code and receives calls from the C code.
   - I learned a lot from the tutorial, but I had a hard time figuring out from this series how to call C from Zig in a simpler scenario.
   - This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.11.0.
-- [Extending a C Project with Zig (2023)](https://zig.news/krowemoh/extending-a-c-project-with-zig-2023-18ej)
+- ["Extending a C Project with Zig" (2023)](https://nivethan.dev/devlog/extending-a-c-project-with-zig.html)
   - This is a recent article, so it still compiles with the current version of Zig.
   - Similar to the above tutorial, this article tackles how to compile a large, complex C application, so I had a hard time understanding how to apply the lessons to a simpler scenario.
 - [ziglearn Chapter 4 - Working with C](https://ziglearn.org/chapter-4/)
@@ -31,7 +32,7 @@ As a complete Zig novice, I didn't want to learn how to convert large Makefiles 
 
 The thing that tripped me up in other Zig + C examples was that the C code was so complicated that it obscured the basic mechanics of calling into C code from Zig.
 
-To make Zig's C interop functionality simpler, I'll create a simple C application and library.
+To make Zig's C interop functionality simpler, I decided to create a simple C application and library.
 
 Here's my first C header file:
 
@@ -88,9 +89,9 @@ The complete example at this stage [is on Github](https://github.com/mtlynch/zig
 
 So far, this is a pure C project, and I haven't used Zig at all.
 
-Now, I'll install Zig. There are a few ways to install Zig, but I'm using [Nix](https://nixos.org/), as it's my new favorite package manager. I only use Nix for the installation, so feel free to install Zig 0.11.0 another way if you're not yet [in the cult of Nix](https://zero-to-nix.com/).
+Now, I'll install Zig. There are a few ways to install Zig, but I'm using [Nix](https://nixos.org/), as it's [my new favorite package manager](/tags/nix/). I only use Nix for the installation, so feel free to install Zig 0.11.0 another way if you're not yet [in the cult of Nix](https://zero-to-nix.com/).
 
-I'm going to add a `flake.nix` file to my project, which pulls Zig 0.11.0 into my environment:
+I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 into my environment:
 
 ```nix
 {
@@ -143,7 +144,7 @@ The complete example at this stage [is on Github](https://github.com/mtlynch/zig
 
 ## Creating an equivalent Zig app
 
-I haven't written any Zig code yet, so I'll create a boilerplate Zig executable with the following command:
+To create my Zig application, I'll use `zig init-exe`, which creates a boilerplate Zig executable:
 
 ```bash
 $ zig init-exe
@@ -240,7 +241,7 @@ Then, further down in my `build.zig` file, I tell my Zig executable to link agai
     exe.addIncludePath(.{ .path = "c-src" }); // Look for C header files
 ```
 
-And then I do the same think for Zig's unit test build target:
+And I do the same thing for Zig's unit test build target:
 
 ```zig
     const unit_tests = b.addTest(.{
@@ -254,7 +255,7 @@ And then I do the same think for Zig's unit test build target:
 
 ## Calling into a C library from Zig
 
-I've now adjusted my Zig build so that it links against my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following small changes to my `src/main.zig` file:
+I've now adjusted my Zig build so that it links against my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following change to my `src/main.zig` file:
 
 ```zig
 // src/main.zig
@@ -268,7 +269,7 @@ fn add(x: i32, y: i32) i32 {
 }
 ```
 
-The above change replaces my Zig-native implementation of the `add` function and converts it to a wrapper to call the native C `add` function in my `arithmetic.c` file.
+The above change replaces my Zig-native implementation of the `add` function with a wrapper to call the native C `add` function in my `arithmetic.c` file.
 
 Now is the moment of truth. Does everything compile and run as expected?
 
