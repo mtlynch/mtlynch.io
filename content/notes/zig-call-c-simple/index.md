@@ -9,28 +9,31 @@ Because Zig is designed to replace C, one of the first-class features is that yo
 
 I've been interested in Zig, and I thought a potential way to learn the language would be to take an existing C application and rewrite it in Zig. But I want to rewrite it incrementally rather than trying to replace it in one shot.
 
-## How to do it the simple way?
+## Where's the simple example of calling C from Zig?
 
-I wasn't able to find any simple examples of calling
+In approaching this problem, I found a few articles that described how to call C code from Zig, but I couldn't find any resoure that just showed a simple example of Zig-to-C interop:
 
-- [ziglearn Chapter 4 - Working with C](https://ziglearn.org/chapter-4/)
-  - Describes low-level mechanisms for Zig-C interop, but doesn't show any complete examples.
 - ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j)
-  - This is a great tutorial, but it's complex. It's not just calling into a C library. It's figuring out how to rebuild a huge C application with Zig, and then writing a new function that both calls the original C code and receives calls from the C code.
+  - This is a great tutorial, but it's complex. It's not just calling into a C library &mdash; it's figuring out how to build a huge C application with Zig and then writing a new function that both calls the original C code and receives calls from the C code.
+  - I learned a lot from the tutorial, but I had a hard time figuring out from this series how to call C from Zig in a simpler scenario.
   - This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.11.0.
 - [Extending a C Project with Zig (2023)](https://zig.news/krowemoh/extending-a-c-project-with-zig-2023-18ej)
+  - This is a recent article, so it still compiles with the current version of Zig.
+  - Similar to the above tutorial, this article tackles how to compile a large, complex C application, so I had a hard time understanding how to apply the lessons to a simpler scenario.
+- [ziglearn Chapter 4 - Working with C](https://ziglearn.org/chapter-4/)
+  - This article describes low-level mechanisms for Zig-C interop, but doesn't show any complete examples.
 
-There are two good tutorials about calling into a C application from Zig.
+One of the major limitations of the two "extend a C project" tutorials above is that they assume you know how to port complex Makefiles into the Zig build system. Both of them say, "Hey, look at this confusing 100-line `Makefile`. Voila, now it's a confusing 100-line `build.zig` file!" and they don't really explain how (unless you watch this [90-minute video](https://vimeo.com/524007646)).
 
-Loris Cro published , which shows how to switch a C project to the Zig compiler and then extend it using Zig.
+As a complete Zig novice, I didn't want to learn how to convert large Makefiles to the Zig build system. Instead, I wanted to try a simple example where I only used Zig to build a portion of a C application rather than porting the entire application to Zig's native build system.
 
 ## Create a simple C application
 
-I haven't written pure C code in 10 years, and I haven't written any C++ in five years, so go easy on me.
+The thing that tripped me up in other Zig + C examples was that the C code was so complicated that it obscured the basic mechanics of calling into C code from Zig.
 
-We're going to create a simple C application.
+To make Zig's C interop functionality simpler, I'll create a simple C application and library.
 
-First, we'll create a library. Here's the header:
+Here's my first C header file:
 
 ```c
 // arithmetic.h
@@ -48,7 +51,7 @@ int add(int x, int y) {
 }
 ```
 
-Nothing fancy. The goal is to keep things as simple as possible.
+I'm not doing anything fancy. The goal is to keep things as simple as possible.
 
 Finally, I'll create a test application to exercise the `add` function:
 
@@ -85,9 +88,9 @@ The complete example at this stage [is on Github](https://github.com/mtlynch/zig
 
 So far, this is a pure C project, and I haven't used Zig at all.
 
-Now, I'll install Zig. There are a few ways to install Zig, but I'm using Nix, as it's my new favorite package manager. I only use Nix for the installation, so feel free to install Zig 0.11.0 another way if you prefer not to use Nix.
+Now, I'll install Zig. There are a few ways to install Zig, but I'm using [Nix](https://nixos.org/), as it's my new favorite package manager. I only use Nix for the installation, so feel free to install Zig 0.11.0 another way if you're not yet [in the cult of Nix](https://zero-to-nix.com/).
 
-I'm going to add a `flake.nix` file to my project, which pulls Zig into my environment. I'm using Nix
+I'm going to add a `flake.nix` file to my project, which pulls Zig 0.11.0 into my environment:
 
 ```nix
 {
@@ -134,13 +137,13 @@ $ ./bin/example
 5 + 16 = 21
 ```
 
-Cool, everything is working, and now I'm using Zig for compilation. I'm still not using any Zig code, so that's next.
+Cool, everything is still working, and now I'm using Zig for compilation. I'm not using any Zig code yet, so that's next.
 
 The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile).
 
 ## Creating an equivalent Zig app
 
-I haven't written any Zig code yet, so I'll create a boilerplate Zig app with the following command:
+I haven't written any Zig code yet, so I'll create a boilerplate Zig executable with the following command:
 
 ```bash
 $ zig init-exe
@@ -195,7 +198,7 @@ The complete example at this stage [is on Github](https://github.com/mtlynch/zig
 
 Okay, everything so far has been basic "hello, world!" kind of stuff. Now, we're at the part that has been my stumbling block previously: calling into native C code from Zig.
 
-First, I reorganized my files to separate my Zig code from my C code. I organized my source directory like this:
+First, I'll reorganize my files to separate my Zig code from my C code. Here's my new folder layout:
 
 ```text
 c-src/
@@ -207,7 +210,7 @@ src/
 build.zig
 ```
 
-Next, I created a static library based on the C arithemtic code in my `build.zig` file:
+Next, I create a static library based on the C arithemtic code in my `build.zig` file:
 
 ```zig
     const arithmetic = b.addStaticLibrary(.{
@@ -254,6 +257,8 @@ And then I do the same think for Zig's unit test build target:
 I've now adjusted my Zig build so that it links against my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following small changes to my `src/main.zig` file:
 
 ```zig
+// src/main.zig
+
 const arithmetic = @cImport({
     @cInclude("arithmetic.h");
 });
@@ -285,11 +290,11 @@ test success
       └─ zig build-lib arithmetic Debug native success 28ms MaxRSS:75M
 ```
 
-Great!
+Unit tests are passing as well. Everything looks great!
 
 ## Is Zig really calling C?
 
-But even at this stage, I wasn't totally sure everything was working, so I tried intentionally breaking my C `add` function by adding a rogue `- 1` to the arithmetic:
+I've tried calling C code from other programming languages, and it's never been this easy. I worried that I was somehow tricking myself, and Zig wasn't _really_ calling my C code, so I deliberately introduced a bug into my C code:
 
 ```c
 // arithemtic.c
@@ -299,7 +304,9 @@ int add(int x, int y) {
 }
 ```
 
-If my Zig application is really calling into C, then my Zig unit test should fail because the underlying C code is now incorrect:
+If my Zig application is really calling into C, then my Zig unit test should fail because the underlying C code is now incorrect.
+
+I ran my unit tests to see what would happen:
 
 ```bash
 $ zig build test --summary all
@@ -318,7 +325,15 @@ Great! That test failed as expected with the error `expected 21, found 20`. The 
 
 ## Summary
 
+This article showed the simplest example I could think of for showing how to call C code from Zig.
+
+Using this technique, it's possible to port a piece of a C library to the Zig build system and then use Zig to call into that library.
+
 ## Source code
 
-- Stage 1: The Pure C Implementation
-- Stage 2: Compiling C with Zig
+The full source code is available on Github. I split it up into the different stages of the project:
+
+- [Stage 1: The Pure C Implementation](https://github.com/mtlynch/zig-c-simple/tree/10-pure-c)
+- [Stage 2: Compiling C with Zig](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile)
+- [Stage 3: Create an Equivalent Zig Implementation](https://github.com/mtlynch/zig-c-simple/tree/30-zig-main)
+- [Stage 4: Call into the C Library from the Zig Application](https://github.com/mtlynch/zig-c-simple/tree/40-zig-call-c)
