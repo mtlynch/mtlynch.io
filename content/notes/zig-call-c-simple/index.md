@@ -79,6 +79,8 @@ $ ./bin/example
 
 Great, everything works!
 
+The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/10-pure-c).
+
 ## Switching the compiler to Zig
 
 So far, this is a pure C project, and I haven't used Zig at all.
@@ -134,9 +136,47 @@ $ ./bin/example
 
 Cool, everything is working, and now I'm using Zig for compilation. I'm still not using any Zig code, so that's next.
 
+The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile).
+
 ## Creating an equivalent Zig app
 
+I haven't written any Zig code yet, so I'll create a boilerplate Zig app with the following command:
 
+```bash
+$ zig init-exe
+info: Created build.zig
+info: Created src/main.zig
+```
+
+```zig
+// src/main.zig
+
+const std = @import("std");
+
+fn add(x: i32, y: i32) i32 {
+    // TODO: Instead of reimplementing this in Zig, call the C version.
+    return x + y;
+}
+
+pub fn main() !void {
+    const x: i32 = 5;
+    const y: i32 = 16;
+    var z: i32 = add(x, y);
+
+    const stdout_file = std.io.getStdOut().writer();
+    var bw = std.io.bufferedWriter(stdout_file);
+    const stdout = bw.writer();
+
+    try stdout.print("{d} + {d} = {d}.\n", .{ x, y, z });
+    try bw.flush();
+}
+
+test "simple test" {
+    const x: i32 = 5;
+    const y: i32 = 16;
+    try std.testing.expectEqual(@as(i32, 21), add(x, y));
+}
+```
 
 # How to see the .h file?
 
