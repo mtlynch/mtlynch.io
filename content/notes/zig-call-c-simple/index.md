@@ -13,12 +13,12 @@ I've been interested in Zig, and I thought a potential way to learn the language
 
 I wasn't able to find any simple examples of calling
 
-* [ziglearn Chapter 4 - Working with C](https://ziglearn.org/chapter-4/)
-  * Describes low-level mechanisms for Zig-C interop, but doesn't show any complete examples.
-* ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j)
-  * This is a great tutorial, but it's complex. It's not just calling into a C library. It's figuring out how to rebuild a huge C application with Zig, and then writing a new function that both calls the original C code and receives calls from the C code.
-  * This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.11.0.
-* [Extending a C Project with Zig (2023)](https://zig.news/krowemoh/extending-a-c-project-with-zig-2023-18ej)
+- [ziglearn Chapter 4 - Working with C](https://ziglearn.org/chapter-4/)
+  - Describes low-level mechanisms for Zig-C interop, but doesn't show any complete examples.
+- ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j)
+  - This is a great tutorial, but it's complex. It's not just calling into a C library. It's figuring out how to rebuild a huge C application with Zig, and then writing a new function that both calls the original C code and receives calls from the C code.
+  - This tutorial was also written for Zig 0.8.1, and the code no longer compiles with Zig 0.11.0.
+- [Extending a C Project with Zig (2023)](https://zig.news/krowemoh/extending-a-c-project-with-zig-2023-18ej)
 
 There are two good tutorials about calling into a C application from Zig.
 
@@ -148,6 +148,8 @@ info: Created build.zig
 info: Created src/main.zig
 ```
 
+I replace `src/main.zig` with the following contents, which creates a Zig application that's equivalent to [my `main.c` above](#create-a-simple-c-application).
+
 ```zig
 // src/main.zig
 
@@ -167,7 +169,7 @@ pub fn main() !void {
     var bw = std.io.bufferedWriter(stdout_file);
     const stdout = bw.writer();
 
-    try stdout.print("{d} + {d} = {d}.\n", .{ x, y, z });
+    try stdout.print("{d} + {d} = {d}\n", .{ x, y, z });
     try bw.flush();
 }
 
@@ -178,20 +180,145 @@ test "simple test" {
 }
 ```
 
-# How to see the .h file?
+And if I run it, I get the same output as the C version:
 
-https://github.com/kristoff-it/redis/blob/75ec423acefa885b92f1cf58094f0e51822b1a2c/build.zig
+```bash
+$ zig build run
+5 + 16 = 21
+```
 
-shows `addIncludeDir` but I get
+Cool, but my goal is to call into C code from Zig, not just rewrite everything in Zig. Next, I'll figure out how to replace my Zig implementation of `add` with the native C implementation.
+
+The complete example at this stage [is on Github](https://github.com/mtlynch/zig-c-simple/tree/30-zig-main).
+
+## Linking a Zig application against a native C library
+
+Okay, everything so far has been basic "hello, world!" kind of stuff. Now, we're at the part that has been my stumbling block previously: calling into native C code from Zig.
+
+First, I reorganized my files to separate my Zig code from my C code. I organized my source directory like this:
 
 ```text
-/home/mike/zig-c-simple/build.zig:33:15: error: no field or member function named 'addIncludeDir' in 'Build.Step.Compile'
-    arithmetic.addIncludeDir(".");
-    ~~~~~~~~~~^~~~~~~~~~~~~~
+c-src/
+  arithmetic.c
+  arithmetic.h
+  main.c
+src/
+  main.zig
+build.zig
 ```
 
-Got past it:
+Next, I created a static library based on the C arithemtic code in my `build.zig` file:
 
 ```zig
-    arithmetic.addIncludePath(.{ .path = "." });
+    const arithmetic = b.addStaticLibrary(.{
+        .name = "arithmetic",
+        .target = target,
+        .optimize = optimize,
+    });
+    arithmetic.addCSourceFiles(&.{
+        "c-src/arithmetic.c",
+    }, &.{});
 ```
+
+{{<notice type="info">}}
+**Note**: Usually, when building a static library from C sources, you'd also call `<library name>.linkLibC()`. My `add` function is so simple that it doesn't call into libc, so I skipped this function call.
+{{</notice>}}
+
+Then, further down in my `build.zig` file, I tell my Zig executable to link against my C library and look in my `c-src` directory for headers:
+
+```zig
+    const exe = b.addExecutable(.{
+        .name = "zig-c-simple",
+        .root_source_file = .{ .path = "src/main.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
+    exe.linkLibrary(arithmetic);              // Link against C library
+    exe.addIncludePath(.{ .path = "c-src" }); // Look for C header files
+```
+
+And then I do the same think for Zig's unit test build target:
+
+```zig
+    const unit_tests = b.addTest(.{
+        .root_source_file = .{ .path = "src/main.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
+    unit_tests.linkLibrary(arithmetic);              // Link against C library
+    unit_tests.addIncludePath(.{ .path = "c-src" }); // Look for C header files
+```
+
+## Calling into a C library from Zig
+
+I've now adjusted my Zig build so that it links against my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following small changes to my `src/main.zig` file:
+
+```zig
+const arithmetic = @cImport({
+    @cInclude("arithmetic.h");
+});
+
+fn add(x: i32, y: i32) i32 {
+    return arithmetic.add(x, y);
+}
+```
+
+The above change replaces my Zig-native implementation of the `add` function and converts it to a wrapper to call the native C `add` function in my `arithmetic.c` file.
+
+Now is the moment of truth. Does everything compile and run as expected?
+
+```bash
+$ zig build run
+5 + 16 = 21
+```
+
+Cool, it works!
+
+And I'll try my unit test as well:
+
+```bash
+$ zig build test --summary all
+Build Summary: 4/4 steps succeeded; 1/1 tests passed
+test success
+└─ run test 1 passed 850us MaxRSS:1M
+   └─ zig test Debug native success 1s MaxRSS:197M
+      └─ zig build-lib arithmetic Debug native success 28ms MaxRSS:75M
+```
+
+Great!
+
+## Is Zig really calling C?
+
+But even at this stage, I wasn't totally sure everything was working, so I tried intentionally breaking my C `add` function by adding a rogue `- 1` to the arithmetic:
+
+```c
+// arithemtic.c
+
+int add(int x, int y) {
+  return x + y - 1; // Intentionally return incorrect results.
+}
+```
+
+If my Zig application is really calling into C, then my Zig unit test should fail because the underlying C code is now incorrect:
+
+```bash
+$ zig build test --summary all
+run test: error: 'test.simple test' failed: expected 21, found 20
+/nix/store/bg6hyfzr1wzk795ii48mc1v15bswcvp3-zig-0.11.0/lib/zig/std/testing.zig:84:17: 0x2244b3 in expectEqual__anon_1014 (test)
+                return error.TestExpectedEqual;
+                ^
+/home/mike/zig-c-simple/src/main.zig:27:5: 0x2245fb in test.simple test (test)
+    try std.testing.expectEqual(@as(i32, 21), add(x, y));
+    ^
+run test: error: while executing test 'test.simple test', the following test command failed:
+/home/mike/zig-c-simple/zig-cache/o/60df9dade81f9ba62609a6cbf833478c/test --listen=-
+```
+
+Great! That test failed as expected with the error `expected 21, found 20`. The unit test correctly identified the bug I introduced into my C `add` function.
+
+## Summary
+
+## Source code
+
+- Stage 1: The Pure C Implementation
+- Stage 2: Compiling C with Zig
