@@ -47,6 +47,8 @@ And here's the implementation:
 ```c
 // arithmetic.c
 
+#include "arithmetic.h"
+
 int add(int x, int y) {
   return x + y;
 }
@@ -133,7 +135,7 @@ zig 0.11.0
 Zig has a built-in C compiler that can act as a drop-in replacement for `gcc`. I'll retry the previous compilation, but instead of calling `gcc`, I call `zig cc`:
 
 ```bash
-$ zig cc ./c-src/arithmetic.c ./c-src/main.c -o ./bin/example
+$ zig cc arithmetic.c main.c -o ./bin/example
 $ ./bin/example
 5 + 16 = 21
 ```
@@ -177,10 +179,8 @@ pub fn main() !void {
     try bw.flush();
 }
 
-test "simple test" {
-    const x: i32 = 5;
-    const y: i32 = 16;
-    try std.testing.expectEqual(@as(i32, 21), add(x, y));
+test "test add" {
+    try std.testing.expectEqual(@as(i32, 21), add(5, 16));
 }
 ```
 
@@ -211,24 +211,7 @@ src/
 build.zig
 ```
 
-Next, I create a static library based on the C arithemtic code in my `build.zig` file:
-
-```zig
-    const arithmetic = b.addStaticLibrary(.{
-        .name = "arithmetic",
-        .target = target,
-        .optimize = optimize,
-    });
-    arithmetic.addCSourceFiles(&.{
-        "c-src/arithmetic.c",
-    }, &.{});
-```
-
-{{<notice type="info">}}
-**Note**: Usually, when building a static library from C sources, you'd also call `<library name>.linkLibC()`. My `add` function is so simple that it doesn't call into libc, so I skipped this function call.
-{{</notice>}}
-
-Then, further down in my `build.zig` file, I tell my Zig executable to link against my C library and look in my `c-src` directory for headers:
+Next, I adjust my `build.zig` so that my Zig application has access to my C source files:
 
 ```zig
     const exe = b.addExecutable(.{
@@ -237,8 +220,7 @@ Then, further down in my `build.zig` file, I tell my Zig executable to link agai
         .target = target,
         .optimize = optimize,
     });
-    exe.linkLibrary(arithmetic);              // Link against C library
-    exe.addIncludePath(.{ .path = "c-src" }); // Look for C header files
+    exe.addIncludePath(.{ .path = "c-src" });   // Look for C source files
 ```
 
 And I do the same thing for Zig's unit test build target:
@@ -249,19 +231,16 @@ And I do the same thing for Zig's unit test build target:
         .target = target,
         .optimize = optimize,
     });
-    unit_tests.linkLibrary(arithmetic);              // Link against C library
-    unit_tests.addIncludePath(.{ .path = "c-src" }); // Look for C header files
+    unit_tests.addIncludePath(.{ .path = "c-src" }); // Look for C source files
 ```
 
-## Calling into a C library from Zig
-
-I've now adjusted my Zig build so that it links against my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following change to my `src/main.zig` file:
+I've now adjusted my Zig build so that it has access to my C arithmetic library, but I haven't called the library yet. To complete this example, I need to make the following change to my `src/main.zig` file:
 
 ```zig
 // src/main.zig
 
 const arithmetic = @cImport({
-    @cInclude("arithmetic.h");
+    @cInclude("arithmetic.c");
 });
 
 fn add(x: i32, y: i32) i32 {
@@ -284,11 +263,10 @@ And I'll try my unit test as well:
 
 ```bash
 $ zig build test --summary all
-Build Summary: 4/4 steps succeeded; 1/1 tests passed
+Build Summary: 3/3 steps succeeded; 1/1 tests passed
 test success
-└─ run test 1 passed 850us MaxRSS:1M
-   └─ zig test Debug native success 1s MaxRSS:197M
-      └─ zig build-lib arithmetic Debug native success 28ms MaxRSS:75M
+└─ run test 1 passed 1ms MaxRSS:1M
+   └─ zig test Debug native success 2s MaxRSS:201M
 ```
 
 Unit tests are passing as well. Everything looks great!
@@ -324,6 +302,49 @@ run test: error: while executing test 'test.simple test', the following test com
 
 Great! That test failed as expected with the error `expected 21, found 20`. The unit test correctly identified the bug I introduced into my C `add` function.
 
+## Is Zig following header references?
+
+The other piece of this solution that works surprisingly well is that I can reference the function through the `.h` file. I haven't done C/C++ programming in a long time, but my memory is that importing by a `.c` file isn't possible, so it's surprising how easy it is in Zig.
+
+To test whether Zig is cheating somehow, I added a new function and preprocessor macro to my `arithmetic.h` header:
+
+```c
+// arithmetic.h
+
+#define INCREMENT_AMOUNT 1
+int increment(int x);
+```
+
+And I add this new function definition to `arithmetic.c`:
+
+```c
+// arithemtic.c
+
+int increment(int x) {
+  return x + INCREMENT_AMOUNT;
+}
+```
+
+Finally, I add a quick unit test for this new function in my `src/main.zig` file:
+
+```zig
+test "test increment" {
+    try std.testing.expectEqual(@as(i32, 6), arithmetic.increment(5));
+}
+```
+
+If Zig is ignoring the C header `#include` directives, this should either cause a compilation error or my tests should stop passing. Time to run the new test:
+
+```bash
+$ zig build test --summary all
+Build Summary: 3/3 steps succeeded; 2/2 tests passed
+test success
+└─ run test 2 passed 830us MaxRSS:1M
+   └─ zig test Debug native success 2s MaxRSS:201M
+```
+
+It passed! This shows that Zig has a convenient feature of following `#include` references in my C sources, which makes calling into C code easier than any other language I've used.
+
 ## Summary
 
 This article showed the simplest example I could think of for showing how to call C code from Zig.
@@ -338,3 +359,8 @@ The full source code is available on Github. I split it up into the different st
 - [Stage 2: Compiling C with Zig](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile)
 - [Stage 3: Create an Equivalent Zig Implementation](https://github.com/mtlynch/zig-c-simple/tree/30-zig-main)
 - [Stage 4: Call into the C Library from the Zig Application](https://github.com/mtlynch/zig-c-simple/tree/40-zig-call-c)
+- [Stage 5: Verify that Zig is Following `#include` References](https://github.com/mtlynch/zig-c-simple/tree/50-test-include-references)
+
+---
+
+_Thanks to [Stéphane Bortzmeyer](https://www.bortzmeyer.org) and [IntegratedQuantum](https://github.com/IntegratedQuantum) for [offering suggestions](https://ziggit.dev/t/a-simple-example-of-calling-a-c-library-from-zig/2225/3?u=mtlynch) that helped me simplify this solution._
