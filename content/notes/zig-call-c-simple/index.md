@@ -47,6 +47,8 @@ And here's the implementation:
 ```c
 // arithmetic.c
 
+#include "arithmetic.h"
+
 int add(int x, int y) {
   return x + y;
 }
@@ -177,10 +179,8 @@ pub fn main() !void {
     try bw.flush();
 }
 
-test "simple test" {
-    const x: i32 = 5;
-    const y: i32 = 16;
-    try std.testing.expectEqual(@as(i32, 21), add(x, y));
+test "test add" {
+    try std.testing.expectEqual(@as(i32, 21), add(5, 16));
 }
 ```
 
@@ -338,3 +338,7 @@ The full source code is available on Github. I split it up into the different st
 - [Stage 2: Compiling C with Zig](https://github.com/mtlynch/zig-c-simple/tree/20-zig-compile)
 - [Stage 3: Create an Equivalent Zig Implementation](https://github.com/mtlynch/zig-c-simple/tree/30-zig-main)
 - [Stage 4: Call into the C Library from the Zig Application](https://github.com/mtlynch/zig-c-simple/tree/40-zig-call-c)
+
+---
+
+_Thanks to [Stéphane Bortzmeyer](https://www.bortzmeyer.org) and [IntegratedQuantum](https://github.com/IntegratedQuantum) for [offering suggestions](https://ziggit.dev/t/a-simple-example-of-calling-a-c-library-from-zig/2225/3?u=mtlynch) that helped me learn more about this solution._
