@@ -1,5 +1,5 @@
 ---
-title: "Use Zig to Unit Test a C Application"
+title: "Using Zig to Add Unit Tests to a C Application"
 date: 2023-11-26T00:00:00-05:00
 tags:
   - zig
@@ -22,8 +22,8 @@ I've been working with uStreamer for several years, but I've had trouble getting
 ```bash
 USTREAMER_VERSION='v5.45'
 git clone \
-  --branch "${USTREAMER_VERSION}" \
   --single-branch \
+  --branch "${USTREAMER_VERSION}" \
   https://github.com/pikvm/ustreamer.git
 ```
 
@@ -92,18 +92,7 @@ All your codebase are belong to us.
 Run `zig build test` to run the tests.
 ```
 
-## Calling uStreamer code from Zig
-
-```c
-// src/libs/base64.h
-
-void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
-```
-
-- `data` is input data for the function to encode with base64.
-- `size` is the length of the data (in bytes).
-- `encoded` is a pointer to a buffer in which to store the base64-encoded string.
-- `allocated` is a pointer to the number of bytes the function allocated into `encoded`.
+## Configure Zig to import C code
 
 First, I need to adjust my `build.zig` file so that my `src/main.zig` can build against uStreamer's sources:
 
@@ -117,6 +106,95 @@ First, I need to adjust my `build.zig` file so that my `src/main.zig` can build 
     exe.linkLibC();               // Link against C standard library.
     exe.addIncludePath(.{ .path = "src" });
 ```
+
+## Calling uStreamer code from Zig
+
+Now, I want to call the `us_base64_encode` C function from C. Here's the function signature.
+
+```c
+// src/libs/base64.h
+
+void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
+```
+
+From inspecting the `.c` file implementation, here's what I deduce about the semantics of `us_base64_encode`:
+
+- `data` is input data to encode with base64.
+- `size` is the length of the data (in bytes).
+- `encoded` is a pointer to an output buffer in which `us_base64_encode` stores the base64-encoded string. `us_base64_encode` allocates memory for the output, and the caller is responsible for freeing the memory when they're done with it.
+  - Technically, `us_base64_encode` allows the caller to allocate the buffer for `encoded`, but, for simplicity, I'm ignoring that functionality.
+- `allocated` is a pointer to the number of bytes the function allocated into `encoded`.
+
+Now that I understand `us_base64_encode`, the next step is to call the function from Zig code. This turned out to be the hardest part of this process. I'm still a Zig novice, so I had trouble with the basics of creating the right Zig types to match the parameters that the C function required.
+
+Here was my first attempt:
+
+```zig
+const ustreamer = @cImport({
+    @cInclude("libs/base64.c");
+});
+
+pub fn main() !void {
+    // WRONG: This doesn't compile.
+    const input = "hello, world!";
+    var cEncoded: *u8 = undefined;
+    var allocatedSize: usize = 0;
+    ustreamer.us_base64_encode(&input, input.len, &cEncoded, &allocatedSize);
+}
+```
+
+That yielded this compiler error:
+
+```bash
+$ zig build run
+zig build-exe b64 Debug native: error: the following command failed with 1 compilation errors:
+...
+src/main.zig:17:32: error: expected type '[*c]const u8', found '*const *const [13:0]u8'
+    ustreamer.us_base64_encode(&input, input.len, &cEncoded, &allocatedSize);
+                               ^~~~~~
+src/main.zig:17:32: note: pointer type child '*const [13:0]u8' cannot cast into pointer type child 'u8'
+/home/mike/ustreamer/zig-cache/o/9599bf4c636d23e50eddd1a55dd088ff/cimport.zig:1796:43: note: parameter type declared here
+pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_encoded: [*c][*c]u8, arg_allocated: [*c]usize) void {
+```
+
+I had trouble understanding this error at first because so much of it was unfamiliar.
+
+The important bit is `error: expected type '[*c]const u8', found '*const *const [13:0]u8'`. Okay, so I tried to pass in a `*const *const [13:0]u8`, but Zig needs me to pass in `[*c]const u8`. What does that mean?
+
+The easiest thing for me to figure out was the `13`. That's the length of the string `hello, world!`.
+
+```bash
+$ printf "hello, world!" | wc --chars
+13
+```
+
+But what does `[13:0]` mean? That's [a sentinel-terminated pointer](https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Pointers). In C, the language doesn't keep track of the length of strings. Instead, it places a byte with the value of `0` at the end of a string to indicate where the string ends. In Zig, the compiler keeps track of strings' lengths, but it also terminates them with a `0` byte, a decision I'm assuming was made specifically to facilitate calling C libraries from Zig.
+
+So, that's half of understanding the type of the `input` parameter in our Zig compiler error. The full type was `*const *const [13:0]u8`. So, strings in Zig are immutable, so that explains why a 13-character, null-terminated string would have a type of `*const [13:0]u8`. And I passed `input` with the `&` operator to get its pointer, so that explains why it's a constant pointer to a constant pointer.
+
+Okay, now I understand what I passed. What did Zig _want_ me to pass as the `input` type?
+
+```text
+expected type '[*c]const u8'
+```
+
+What the heck does `[*c]` mean? This was surprisingly hard to figure out, but I eventually pieced it together from a few different sources.
+
+Here's the official Zig documentation:
+
+> ### C Pointers
+>
+> This type is to be avoided whenever possible. The only valid reason for using a C pointer is in auto-generated code from translating C code.
+>
+> When importing C header files, it is ambiguous whether pointers should be translated as single-item pointers (_T) or many-item pointers ([_]T). C pointers are a compromise so that Zig code can utilize translated header files directly.
+>
+> https://ziglang.org/documentation/0.11.0/#C-Pointers
+
+That was a little too compiler nerdy for me to parse. I found a more beginner-friendly explanation on reddit:
+
+> `[*c]T` is just a C pointer to type T, it says that it doesn't know whether there are multiple elements in that pointer or not. There could be, there could not be. We also don't know the length of it (it's not a slice which has pointer+length, it's just a pointer). And if there are multiple elements, we don't know if it is say null-terminated or not.
+>
+> [-/u/slimsag on reddit](https://www.reddit.com/r/Zig/comments/11uqo84/comment/jcplxiz/)
 
 Next, I rewrite `src/main.zig` as follows:
 
