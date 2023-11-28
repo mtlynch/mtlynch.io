@@ -54,16 +54,14 @@ The dev team has had less availability than I was expecting for October, so we e
 
 {{<revenue-graph project="tinypilot">}}
 
-| Metric                   | September 2023 | October 2023     | Change                                             |
-| ------------------------ | -------------- | ---------------- | -------------------------------------------------- |
-| Unique Visitors          | 6,200          | 8,700            | <font color="green">+2,500 (+40%)</font>           |
-| Sales Revenue            | $83,380.02     | $98,896.81       | <font color="green">+$15,516.79 (+19%)</font>      |
-| Enterprise Subscriptions | $290.70        | $290.70          | 0                                                  |
-| Royalties                | $2,056.30      | $2,609.84        | <font color="green">+$553.54 (+27%)</font>         |
-| Total Revenue            | $85,727.02     | $101,797.35      | <font color="green">+$16,070.33 (+19%)</font>      |
-| **Profit**               | **$8,163.88**  | **$40,835.41**\* | **<font color="green">+$32,671.53 (+400%)</font>** |
-
-\* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+| Metric                   | September 2023 | October 2023   | Change                                             |
+| ------------------------ | -------------- | -------------- | -------------------------------------------------- |
+| Unique Visitors          | 6,200          | 8,700          | <font color="green">+2,500 (+40%)</font>           |
+| Sales Revenue            | $83,380.02     | $98,896.81     | <font color="green">+$15,516.79 (+19%)</font>      |
+| Enterprise Subscriptions | $290.70        | $290.70        | 0                                                  |
+| Royalties                | $2,056.30      | $2,609.84      | <font color="green">+$553.54 (+27%)</font>         |
+| Total Revenue            | $85,727.02     | $101,797.35    | <font color="green">+$16,070.33 (+19%)</font>      |
+| **Profit**               | **$8,644.82**  | **$69,280.58** | **<font color="green">+$60,635.76 (+701%)</font>** |
 
 This was TinyPilot's second-strongest month in history, and I have no idea why. Nothing stands out in our analytics, and I'm not aware of any new reviews or mentions. We saw [strong sales in October 2022](/retrospectives/2022/11/) as well, so it could just be seasonal.
 
