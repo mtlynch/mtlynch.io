@@ -27,11 +27,28 @@ git clone \
   https://github.com/pikvm/ustreamer.git
 ```
 
-## Finding the simplest C function in uStreamer
+## What's the simplest C function in uStreamer?
 
 I wanted to find something self-contained. I pass it in some input, and it gives me some output that I can inspect easily.
 
 I found the [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c). That sounded like a good match. I understand the basics
+
+Here's the function signature.
+
+```c
+// src/libs/base64.h
+
+void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
+```
+
+From inspecting the `.c` file implementation, here's what I deduce about the semantics of `us_base64_encode`:
+
+- `data` is input data to encode with the base64 encoding scheme.
+- `size` is the length of the `data` buffer (in bytes).
+- `encoded` is a pointer to an output buffer in which `us_base64_encode` stores the base64-encoded string.
+  - `us_base64_encode` allocates memory for the output, and the caller is responsible for freeing the memory when they're done with it.
+  - Technically, `us_base64_encode` allows the caller to allocate the buffer for `encoded`, but, for simplicity, I'm ignoring that functionality.
+- `allocated` is a pointer that `us_base64_encode` populates with the number of bytes it allocated into `encoded`.
 
 ## Adding Zig to my uStreamer project environment
 
@@ -72,6 +89,8 @@ I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 int
 From here, I can run `nix develop`, and I see that Nix 0.11.0 is available in my project environment:
 
 ```bash
+# There's a weird quirk of Nix flakes that they have to be added to your git
+# repo.
 $ git add flake.nix
 $ nix develop
 zig 0.11.0
@@ -147,23 +166,17 @@ With the pesky `tools.h` function removed, I'll try the build again:
 
 ## Calling uStreamer code from Zig
 
-Now, I want to call the `us_base64_encode` C function from C. Here's the function signature.
+Now, I want to call the `us_base64_encode` C function from C. I explained the C function signature [above](http://blog.local:1313/notes/zig-unit-test-c/#whats-the-simplest-c-function-in-ustreamer), but now I need to figure out how those semantics translate into Zig.
+
+Figuring out how to translate between C types and Zig types turned out to be the hardest part of this process, as I'm still a Zig novice.
+
+As a reminder, here's the C function I'm trying to call from Zig:
 
 ```c
 // src/libs/base64.h
 
 void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
 ```
-
-From inspecting the `.c` file implementation, here's what I deduce about the semantics of `us_base64_encode`:
-
-- `data` is input data to encode with base64.
-- `size` is the length of the data (in bytes).
-- `encoded` is a pointer to an output buffer in which `us_base64_encode` stores the base64-encoded string. `us_base64_encode` allocates memory for the output, and the caller is responsible for freeing the memory when they're done with it.
-  - Technically, `us_base64_encode` allows the caller to allocate the buffer for `encoded`, but, for simplicity, I'm ignoring that functionality.
-- `allocated` is a pointer to the number of bytes the function allocated into `encoded`.
-
-Now that I understand `us_base64_encode`, the next step is to call the function from Zig code. This turned out to be the hardest part of this process. I'm still a Zig novice, so I had trouble with the basics of creating the right Zig types to match the parameters that the C function required.
 
 Here was my first attempt:
 
@@ -196,6 +209,8 @@ pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_enco
 ```
 
 I had trouble understanding this error at first because so much of it was unfamiliar.
+
+### Translating the input parameters into Zig
 
 The important bit is `error: expected type '[*c]const u8', found '*const *const [13:0]u8'`. Okay, so I tried to pass in a `*const *const [13:0]u8`, but Zig needs me to pass in `[*c]const u8`. What does that mean?
 
@@ -234,27 +249,19 @@ I didn't understand this explanation, but more [Kagi](https://kagi.com)'ing led 
 >
 > [-/u/slimsag on reddit](https://www.reddit.com/r/Zig/comments/11uqo84/comment/jcplxiz/)
 
-Okay, that makes more sense. It sounds like in Zig, the compiler "knows" more about pointer types, whereas C pointers have more ambiguity, so the `[*c]` represents a pointer that Zig got from C, so it has less context into what the pointer represents than Zig-native pointers.
+Okay, that makes more sense. It sounds like in Zig, the compiler "knows" more about pointer types, whereas C pointers carry less context. The `[*c]` type represents a pointer that Zig got from C, so Zig knows less about this pointer than it normally would for Zig-native pointers.
 
-It's confusing to me that Zig can't coerce a type it knows more about into a type that's more ambiguous, but there's probably an explanation about why it can't do that.
-
-Jumping back to the error message, it contains a helpful bit of information for calling into the C implementation of `us_base64_encode`:
-
-```bash
-pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_encoded: [*c][*c]u8, arg_allocated: [*c]usize) void {
-```
-
-That's the signature of the C function translated into Zig, so Zig is telling me exactly the types I need to pass in to call the function.
+Through trial and error, I figured out that Zig wanted me to get a pointer to `input` by referencing `input.ptr` rather than using the address of operator `&`. This Zig snippet shows the difference between the two:
 
 ```zig
 const input = "hello, world!";
 std.debug.print("input.ptr is type {s}\n", .{@typeName(@TypeOf(input.ptr))});
-std.debug.print("&input is type    {s}\n", .{@typeName(@TypeOf(&input))});
+std.debug.print("&input    is type {s}\n", .{@typeName(@TypeOf(&input))});
 ```
 
 ```text
 input.ptr is type [*]const u8
-&input is type    *const *const [13:0]u8
+&input    is type *const *const [13:0]u8
 ```
 
 Okay, let's try it again:
@@ -269,7 +276,7 @@ ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
 That gives me:
 
 ```bash
- zig build run
+$ zig build run
 zig build-exe b64 Debug native: error: the following command failed with 1 compilation errors:
 ...
 src/main.zig:12:54: error: expected type '[*c][*c]u8', found '**u8'
@@ -277,7 +284,27 @@ src/main.zig:12:54: error: expected type '[*c][*c]u8', found '**u8'
                                                      ^~~~~~~~~
 ```
 
-From some further trial and error, I get this:
+Great! The code still doesn't compile, but Zig is now complaining about the third parameter instead of the first. That at least tells me that I've supplied the expected types for the first two parameters, which are the inputs to this particular C function.
+
+### Translating the output parameters into Zig
+
+Jumping back to the error message, it contains a helpful bit of information for calling into the C implementation of `us_base64_encode`:
+
+```bash
+pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_encoded: [*c][*c]u8, arg_allocated: [*c]usize) void {
+```
+
+That's the signature of the C function translated into Zig, so Zig is telling me exactly the types I need to pass in to call the function.
+
+Another thing you can do is use the `zig translate-c` utility to ask Zig to translate this C function signature into Zig. This effectively gives the same results as the compiler error above, but it preserves the original parameter names, whereas the compiler error prefixes them with `arg_`.
+
+```bash
+# We add --needed-library c to let Zig know the code depends on libc.
+$ zig translate-c src/libs/base64.h --needed-library c | grep us_base64
+pub extern fn us_base64_encode(data: [*c]const u8, size: usize, encoded: [*c][*c]u8, allocated: [*c]usize) void;
+```
+
+From more trial and error, I eventually guessed my way to this:
 
 ```zig
 const input = "hello, world!";
@@ -286,7 +313,7 @@ var allocatedSize: usize = 0;
 ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
 ```
 
-And it compiles successfully! Here's the full file:
+And it compiles successfully! Here's the full `src/main.zig` file:
 
 ```zig
 // src/main.zig
@@ -308,6 +335,8 @@ pub fn main() !void {
 
     // Call the uStreamer C function from Zig.
     ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+
+    // Free the memory that the C function allocated when this function exits.
     defer std.c.free(cEncoded);
 
     // Print the input and output of the base64 encode operation.
@@ -324,7 +353,7 @@ output: aGVsbG8sIHdvcmxkIQ==
 
 Great! That worked.
 
-If I compare the output to my system's built-in `base64` utility, I can verify that it's producing the correct result:
+If I compare the output to my system's built-in `base64` utility, I can verify that my Zig application is producing the correct result:
 
 ```bash
 $ printf 'hello, world!' | base64
@@ -369,11 +398,6 @@ So, `us_base64_encode` takes a pointer to a pointer to a string buffer. From ins
 
 `us_base64_encode` does the same thing with the `allocated` parameter, and that's simpler to reason about. The caller provides `us_base64_encode` with the memory address of an unsigned integer, and `us_base64_encode` populates that address with the number of bytes it allocated for `encoded`.
 
-```bash
-$ zig translate-c src/libs/base64.h --needed-library c | grep us_base64
-pub extern fn us_base64_encode(data: [*c]const u8, size: usize, encoded: [*c][*c]u8, allocated: [*c]usize) void;
-```
+---
 
---
-
-Excerpts from uStreamer are licensed under the GPLv3.
+_Excerpts from uStreamer are used under the GPLv3 license._
