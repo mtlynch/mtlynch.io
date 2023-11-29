@@ -107,6 +107,44 @@ First, I need to adjust my `build.zig` file so that my `src/main.zig` can build 
     exe.addIncludePath(.{ .path = "src" });
 ```
 
+When I try `zig build run`, I get this error:
+
+```text
+src/main.zig:3:16: error: C import failed
+const base64 = @cImport({
+               ^~~~~~~~
+referenced by:
+    main: src/main.zig:13:5
+    callMain: /nix/store/bg6hyfzr1wzk795ii48mc1v15bswcvp3-zig-0.11.0/lib/zig/std/start.zig:574:32
+    remaining reference traces hidden; use '-freference-trace' to see all reference traces
+/home/mike/ustreamer/src/libs/tools.h:194:27: error: call to undeclared function 'sigabbrev_np'; ISO C99 and later do not support implicit function declarations
+ const char *const name = sigabbrev_np(signum);
+                          ^
+/home/mike/ustreamer/src/libs/tools.h:194:20: error: incompatible integer to pointer conversion initializing 'const char *const' with an expression of type 'int'
+ const char *const name = sigabbrev_np(signum);
+                   ^
+/home/mike/ustreamer/src/libs/tools.h:205:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
+  US_ASPRINTF(buf, "SIG%s", name);
+  ^
+/home/mike/ustreamer/src/libs/tools.h:207:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
+  US_ASPRINTF(buf, "SIG[%d]", signum);
+```
+
+If I look into `src/libs/tools.h`, I see that all the errors are around [a single function](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/tools.h#L192-L210). Let me see if I can just comment out that function to get the build working.
+
+```c
+
+/*
+DEBUG: Temporarily delete this function to get the build working again.
+INLINE char *us_signum_to_string(int signum) {
+...
+	return buf;
+}
+*/
+```
+
+With the pesky `tools.h` function removed, I'll try the build again:
+
 ## Calling uStreamer code from Zig
 
 Now, I want to call the `us_base64_encode` C function from C. Here's the function signature.
@@ -190,15 +228,69 @@ Here's the official Zig documentation:
 >
 > https://ziglang.org/documentation/0.11.0/#C-Pointers
 
-That was a little too compiler nerdy for me to parse. I found a more beginner-friendly explanation on reddit:
+I didn't understand this explanation, but more [Kagi](https://kagi.com)'ing led me to this explanation on reddit, which I found more accessible:
 
 > `[*c]T` is just a C pointer to type T, it says that it doesn't know whether there are multiple elements in that pointer or not. There could be, there could not be. We also don't know the length of it (it's not a slice which has pointer+length, it's just a pointer). And if there are multiple elements, we don't know if it is say null-terminated or not.
 >
 > [-/u/slimsag on reddit](https://www.reddit.com/r/Zig/comments/11uqo84/comment/jcplxiz/)
 
-Next, I rewrite `src/main.zig` as follows:
+Okay, that makes more sense. It sounds like in Zig, the compiler "knows" more about pointer types, whereas C pointers have more ambiguity, so the `[*c]` represents a pointer that Zig got from C, so it has less context into what the pointer represents than Zig-native pointers.
+
+It's confusing to me that Zig can't coerce a type it knows more about into a type that's more ambiguous, but there's probably an explanation about why it can't do that.
+
+Jumping back to the error message, it contains a helpful bit of information for calling into the C implementation of `us_base64_encode`:
+
+```bash
+pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_encoded: [*c][*c]u8, arg_allocated: [*c]usize) void {
+```
+
+That's the signature of the C function translated into Zig, so Zig is telling me exactly the types I need to pass in to call the function.
 
 ```zig
+const input = "hello, world!";
+std.debug.print("input.ptr is type {s}\n", .{@typeName(@TypeOf(input.ptr))});
+std.debug.print("&input is type    {s}\n", .{@typeName(@TypeOf(&input))});
+```
+
+```text
+input.ptr is type [*]const u8
+&input is type    *const *const [13:0]u8
+```
+
+Okay, let's try it again:
+
+```zig
+const input = "hello, world!";
+var cEncoded: *u8 = undefined;
+var allocatedSize: usize = 0;
+ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+```
+
+That gives me:
+
+```bash
+ zig build run
+zig build-exe b64 Debug native: error: the following command failed with 1 compilation errors:
+...
+src/main.zig:12:54: error: expected type '[*c][*c]u8', found '**u8'
+    ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+                                                     ^~~~~~~~~
+```
+
+From some further trial and error, I get this:
+
+```zig
+const input = "hello, world!";
+var cEncoded: [*c]u8 = null;
+var allocatedSize: usize = 0;
+ustreamer.us_base64_encode(input.ptr, input.len, &cEncoded, &allocatedSize);
+```
+
+And it compiles successfully! Here's the full file:
+
+```zig
+// src/main.zig
+
 const std = @import("std");
 
 // Import the base64 implementation from uStreamer's C source file.
@@ -223,44 +315,6 @@ pub fn main() !void {
     std.debug.print("output: {s}\n", .{cEncoded});
 }
 ```
-
-When I try `zig build run`, I get this error:
-
-```text
-src/main.zig:3:16: error: C import failed
-const base64 = @cImport({
-               ^~~~~~~~
-referenced by:
-    main: src/main.zig:13:5
-    callMain: /nix/store/bg6hyfzr1wzk795ii48mc1v15bswcvp3-zig-0.11.0/lib/zig/std/start.zig:574:32
-    remaining reference traces hidden; use '-freference-trace' to see all reference traces
-/home/mike/ustreamer/src/libs/tools.h:194:27: error: call to undeclared function 'sigabbrev_np'; ISO C99 and later do not support implicit function declarations
- const char *const name = sigabbrev_np(signum);
-                          ^
-/home/mike/ustreamer/src/libs/tools.h:194:20: error: incompatible integer to pointer conversion initializing 'const char *const' with an expression of type 'int'
- const char *const name = sigabbrev_np(signum);
-                   ^
-/home/mike/ustreamer/src/libs/tools.h:205:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
-  US_ASPRINTF(buf, "SIG%s", name);
-  ^
-/home/mike/ustreamer/src/libs/tools.h:207:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
-  US_ASPRINTF(buf, "SIG[%d]", signum);
-```
-
-If I look into `src/libs/tools.h`, I see that all the errors are around [a single function](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/tools.h#L192-L210). Let me see if I can just comment out that function to get the build working.
-
-```c
-
-/*
-DEBUG: Temporarily delete this function to get the build working again.
-INLINE char *us_signum_to_string(int signum) {
-...
-	return buf;
-}
-*/
-```
-
-With the pesky `tools.h` function removed, I'll try the build again:
 
 ```bash
 $ zig build run
