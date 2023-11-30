@@ -1,5 +1,5 @@
 ---
-title: "Using Zig to Add Unit Tests to a C Application"
+title: "Using Zig to Unit Test a C Application"
 date: 2023-11-26T00:00:00-05:00
 tags:
   - zig
@@ -84,7 +84,7 @@ aGVsbG8sIHdvcmxkIQ==
 
 ## Adding Zig to my uStreamer project environment
 
-My favorite way of installing Zig is [with Nix](https://zero-to-nix.com/), as it allows me to switch Zig versions easily. Feel free to install Zig any way you prefer, but the version I'm using is 0.11.0.
+My favorite way of installing Zig is [with Nix](https://zero-to-nix.com/), as it allows me to switch Zig versions easily. Feel free to [install Zig](https://ziglang.org/learn/getting-started/) any way you prefer.
 
 I added the following `flake.nix` file to my project, which pulls Zig 0.11.0 into my environment:
 
@@ -198,11 +198,9 @@ With the pesky `tools.h` function removed, I'll try the build again:
 
 ## Calling uStreamer code from Zig
 
-Now, I want to call the `us_base64_encode` C function from C. I explained the C function signature [above](http://blog.local:1313/notes/zig-unit-test-c/#whats-the-simplest-c-function-in-ustreamer), but now I need to figure out how those semantics translate into Zig.
+Now, I want to call the `us_base64_encode` C function from Zig.
 
-Figuring out how to translate between C types and Zig types turned out to be the hardest part of this process, as I'm still a Zig novice.
-
-As a reminder, here's the C function I'm trying to call from Zig:
+As a reminder, here's the C function I'm trying to call from Zig, which I explained [above](http://blog.local:1313/notes/zig-unit-test-c/#whats-the-simplest-c-function-in-ustreamer):
 
 ```c
 // src/libs/base64.h
@@ -210,18 +208,22 @@ As a reminder, here's the C function I'm trying to call from Zig:
 void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
 ```
 
+Figuring out how to translate between C types and Zig types turned out to be the hardest part of this process, as I'm still a Zig novice.
+
 Here was my first attempt:
 
 ```zig
+// src/main.zig
+
 const ustreamer = @cImport({
     @cInclude("libs/base64.c");
 });
 
 pub fn main() !void {
-    // WRONG: This doesn't compile.
     const input = "hello, world!";
     var cEncoded: *u8 = undefined;
     var allocatedSize: usize = 0;
+    // WRONG: This doesn't compile.
     ustreamer.us_base64_encode(&input, input.len, &cEncoded, &allocatedSize);
 }
 ```
@@ -244,7 +246,7 @@ I had trouble understanding this error at first because so much of it was unfami
 
 ### Translating the input parameters into Zig
 
-The important bit is `error: expected type '[*c]const u8', found '*const *const [13:0]u8'`. Okay, so I tried to pass in a `*const *const [13:0]u8`, but Zig needs me to pass in `[*c]const u8`. What does that mean?
+The important bit of the compiler error above is `error: expected type '[*c]const u8', found '*const *const [13:0]u8'`. It's telling me that I tried to pass in a `*const *const [13:0]u8`, but Zig needs me to pass in `[*c]const u8`. What does that mean?
 
 The easiest thing for me to figure out was the `13`. That's the length of the string `hello, world!`.
 
@@ -324,13 +326,13 @@ src/main.zig:12:54: error: expected type '[*c][*c]u8', found '**u8'
                                                      ^~~~~~~~~
 ```
 
-Great!
+Progress!
 
 The code still doesn't compile, but Zig is now complaining about the third parameter instead of the first. That at least tells me that I've supplied the expected types for the first two parameters.
 
 ### Translating the output parameters into Zig
 
-Jumping back to the error message, it contains a helpful bit of information for calling into the C implementation of `us_base64_encode`:
+The compiler error also contains a helpful bit of information for calling into the C implementation of `us_base64_encode`:
 
 ```bash
 pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_encoded: [*c][*c]u8, arg_allocated: [*c]usize) void {
@@ -346,7 +348,7 @@ $ zig translate-c src/libs/base64.h --needed-library c | grep us_base64
 pub extern fn us_base64_encode(data: [*c]const u8, size: usize, encoded: [*c][*c]u8, allocated: [*c]usize) void;
 ```
 
-From more trial and error, I eventually guessed my way to these Zig calling semantics:
+From more trial and error, I eventually guessed my way to these semantics for calling `us_base64_encode` from Zig:
 
 ```zig
 const input = "hello, world!";
@@ -400,6 +402,8 @@ Great! That worked. And the results are identical to [my C implementation above]
 The code at this point is at zig-10-simple-exe.
 
 ## Creating a Zig wrapper for the native C implementation
+
+https://stackoverflow.com/a/72975237/90388
 
 ---
 
