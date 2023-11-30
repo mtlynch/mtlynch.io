@@ -22,7 +22,6 @@ I've been working with uStreamer for several years, but I've had trouble getting
 ```bash
 USTREAMER_VERSION='v5.45'
 git clone \
-  --single-branch \
   --branch "${USTREAMER_VERSION}" \
   https://github.com/pikvm/ustreamer.git
 ```
@@ -49,6 +48,39 @@ From inspecting the `.c` file implementation, here's what I deduce about the sem
   - `us_base64_encode` allocates memory for the output, and the caller is responsible for freeing the memory when they're done with it.
   - Technically, `us_base64_encode` allows the caller to allocate the buffer for `encoded`, but, for simplicity, I'm ignoring that functionality.
 - `allocated` is a pointer that `us_base64_encode` populates with the number of bytes it allocated into `encoded`.
+
+Here's a simple test program to call this function from C:
+
+```c
+// src/test.c
+
+#include <stdio.h>
+
+#include "libs/base64.h"
+
+void main(void) {
+  char *raw = "hello, world!";
+  char *encoded = NULL;
+  size_t encoded_bytes = 0;
+  us_base64_encode((uint8_t *)raw, strlen(raw), &encoded, &encoded_bytes);
+  printf("encoded=%s\n", encoded);
+  printf("encoded_bytes=%u\n", encoded_bytes);
+  free(encoded);
+}
+```
+
+```bash
+$ gcc src/test.c src/libs/base64.c -o /tmp/b64test && /tmp/b64test
+encoded=aGVsbG8sIHdvcmxkIQ==
+encoded_bytes=21
+```
+
+If I compare the output to my system's built-in `base64` utility, I can verify that my test C application is producing the correct result:
+
+```bash
+$ printf 'hello, world!' | base64
+aGVsbG8sIHdvcmxkIQ==
+```
 
 ## Adding Zig to my uStreamer project environment
 
@@ -221,9 +253,15 @@ $ printf "hello, world!" | wc --chars
 13
 ```
 
-But what does `[13:0]` mean? That's [a sentinel-terminated pointer](https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Pointers). In C, the language doesn't keep track of the length of strings. Instead, it places a byte with the value of `0` at the end of a string to indicate where the string ends. In Zig, the compiler keeps track of strings' lengths, but it also terminates them with a `0` byte, a decision I'm assuming was made specifically to facilitate calling C libraries from Zig.
+But what does `[13:0]` mean? That's [a sentinel-terminated pointer](https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Pointers).
 
-So, that's half of understanding the type of the `input` parameter in our Zig compiler error. The full type was `*const *const [13:0]u8`. So, strings in Zig are immutable, so that explains why a 13-character, null-terminated string would have a type of `*const [13:0]u8`. And I passed `input` with the `&` operator to get its pointer, so that explains why it's a constant pointer to a constant pointer.
+In C, the language doesn't keep track of the length of strings. Instead, it places a byte with the value of `0` at the end of a string to indicate where the string ends.
+
+In Zig, the compiler keeps track of strings' lengths, but it also terminates them with a `0` byte, a decision I'm assuming was made specifically to facilitate calling C libraries from Zig.
+
+So, that's half of understanding the type of the `input` parameter in our Zig compiler error. The full type was `*const *const [13:0]u8`.
+
+Strings in Zig are immutable, so that explains why a 13-character, null-terminated string would have a type of `*const [13:0]u8`. And I passed `input` with the `&` operator to get its pointer, so that explains why it's a constant pointer to a constant pointer.
 
 Okay, now I understand what I passed. What did Zig _want_ me to pass as the `input` type?
 
@@ -255,13 +293,15 @@ Through trial and error, I figured out that Zig wanted me to get a pointer to `i
 
 ```zig
 const input = "hello, world!";
-std.debug.print("input.ptr is type {s}\n", .{@typeName(@TypeOf(input.ptr))});
+std.debug.print("input     is type {s}\n", .{@typeName(@TypeOf(input))});
 std.debug.print("&input    is type {s}\n", .{@typeName(@TypeOf(&input))});
+std.debug.print("input.ptr is type {s}\n", .{@typeName(@TypeOf(input.ptr))});
 ```
 
 ```text
-input.ptr is type [*]const u8
+input     is type *const [13:0]u8
 &input    is type *const *const [13:0]u8
+input.ptr is type [*]const u8
 ```
 
 Okay, let's try it again:
@@ -284,7 +324,9 @@ src/main.zig:12:54: error: expected type '[*c][*c]u8', found '**u8'
                                                      ^~~~~~~~~
 ```
 
-Great! The code still doesn't compile, but Zig is now complaining about the third parameter instead of the first. That at least tells me that I've supplied the expected types for the first two parameters, which are the inputs to this particular C function.
+Great!
+
+The code still doesn't compile, but Zig is now complaining about the third parameter instead of the first. That at least tells me that I've supplied the expected types for the first two parameters.
 
 ### Translating the output parameters into Zig
 
@@ -296,7 +338,7 @@ pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_enco
 
 That's the signature of the C function translated into Zig, so Zig is telling me exactly the types I need to pass in to call the function.
 
-Another thing you can do is use the `zig translate-c` utility to ask Zig to translate this C function signature into Zig. This effectively gives the same results as the compiler error above, but it preserves the original parameter names, whereas the compiler error prefixes them with `arg_`.
+Alternatively, I can use the `zig translate-c` utility to translate this C function signature into Zig. This effectively gives the same results as the compiler error above, but it preserves the original parameter names, whereas the compiler error prefixes them with `arg_`.
 
 ```bash
 # We add --needed-library c to let Zig know the code depends on libc.
@@ -304,7 +346,7 @@ $ zig translate-c src/libs/base64.h --needed-library c | grep us_base64
 pub extern fn us_base64_encode(data: [*c]const u8, size: usize, encoded: [*c][*c]u8, allocated: [*c]usize) void;
 ```
 
-From more trial and error, I eventually guessed my way to this:
+From more trial and error, I eventually guessed my way to these Zig calling semantics:
 
 ```zig
 const input = "hello, world!";
@@ -340,63 +382,24 @@ pub fn main() !void {
     defer std.c.free(cEncoded);
 
     // Print the input and output of the base64 encode operation.
-    std.debug.print("input:  {s}\n", .{input});
-    std.debug.print("output: {s}\n", .{cEncoded});
+    std.debug.print("input:       {s}\n", .{input});
+    std.debug.print("output:      {s}\n", .{cEncoded});
+    std.debug.print("output size: {d}\n", .{allocatedSize});
 }
 ```
 
 ```bash
 $ zig build run
-input:  hello, world!
-output: aGVsbG8sIHdvcmxkIQ==
+input:       hello, world!
+output:      aGVsbG8sIHdvcmxkIQ==
+output size: 21
 ```
 
-Great! That worked.
+Great! That worked. And the results are identical to [my C implementation above](#whats-the-simplest-c-function-in-ustreamer).
 
-If I compare the output to my system's built-in `base64` utility, I can verify that my Zig application is producing the correct result:
+The code at this point is at zig-10-simple-exe.
 
-```bash
-$ printf 'hello, world!' | base64
-aGVsbG8sIHdvcmxkIQ==
-```
-
-## Breaking down the simple Zig program
-
-The import:
-
-```zig
-// Import the base64 implementation from uStreamer's C source file.
-const ustreamer = @cImport({
-    @cInclude("libs/base64.c");
-});
-```
-
-The import is simple. It's pulling in the `base64.c` file so that I can call it from Zig code.
-
-Next, I create a simple input string:
-
-```zig
-// Create a standard Zig string.
-const input = "hello, world!";
-```
-
-In C, strings are null-terminated, meaning that they end in a byte with a value of `0`.
-
-The [Zig documentation](https://ziglang.org/documentation/0.11.0/#String-Literals-and-Unicode-Code-Point-Literals) confirms that Zig's strings are also null-terminated
-
-> String literals are constant single-item Pointers to null-terminated byte arrays.
-
-This is convenient, as it means we can pass standard Zig strings to C functions that expect strings. In the case of `us_base64_encode`, that's not so critical, as it expects a pointer to a buffer of bytes (`uint8_t*`).
-
-This is where it gets tricky. How do I get the result of `us_base64_encode` from Zig? Let me take another look at the function signature:
-
-```c
-void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
-```
-
-So, `us_base64_encode` takes a pointer to a pointer to a string buffer. From inspecting the implementation in `base64.c`, I see that `us_base64_encode` allocates memory on the caller's behalf and stores the address of the buffer in the `encoded` parameter.
-
-`us_base64_encode` does the same thing with the `allocated` parameter, and that's simpler to reason about. The caller provides `us_base64_encode` with the memory address of an unsigned integer, and `us_base64_encode` populates that address with the number of bytes it allocated for `encoded`.
+## Creating a Zig wrapper for the native C implementation
 
 ---
 
