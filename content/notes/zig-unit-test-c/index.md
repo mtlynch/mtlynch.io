@@ -405,6 +405,38 @@ The code at this point is at zig-10-simple-exe.
 
 https://stackoverflow.com/a/72975237/90388
 
+It should accept arbitrary bytes, and it should give back a null-terminated string, so the Zig-native wrapper should look something like this:
+
+```zig
+fn base64Encode(data: []const u8) [:0]const u8 {...}
+```
+
+Okay, starting is easy because I can just refactor from my `main()` function:
+
+```zig
+fn base64Encode(data: []const u8) [:0]const u8 {
+  var cEncoded: [*c]u8 = null;
+  var allocatedSize: usize = 0;
+
+  ustreamer.us_base64_encode(data.ptr, input.len, &cEncoded, &allocatedSize);
+  ...
+```
+
+Hmm, now I've got the string as a `[*c]u8` (C-pointer, unknown length buffer), but I want to return `[:0]const u8` (null-terminated, length-counted Zig string). How do I convert a C-style string to a Zig string?
+
+### Who's responsible for freeing the buffer?
+
+There's a problem I haven't addressed yet. `us_base64_encode` allocated memory (`cEncoded`). Now, I, the caller, am responsible for either freeing that memory myself or telling all of _my_ callers that it's now their responsibility to free the memory.
+
+But the problem with telling my callers to free the memory is that it was C code that allocated the memory. They can't free the memory in the standard Zig way. Because I'm writing a wrapper that's supposed to abstract away the fact that this is a C function, I'm going to
+
+So I have two options:
+
+1. Document in my function that the caller is responsible for freeing the return value with `std.c.free`.
+1. Allocate a Zig-native buffer and move the contents of the C buffer to the Zig buffer.
+
+I'm going to choose (2). This is worse performance wise because I have to do another memory allocation and copy, but it's easier to maintain. If this were performance critical, maybe I would have chosen (1) and made my callers deal with calling `std.c.free` instead of the normal free pattern.
+
 ---
 
 _Excerpts from uStreamer are used under the GPLv3 license._
