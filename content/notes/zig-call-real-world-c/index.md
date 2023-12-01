@@ -1,27 +1,32 @@
 ---
 title: "Using Zig to Call a Real World C Function"
-date: 2023-11-26T00:00:00-05:00
+date: 2023-12-01T00:00:00-05:00
 tags:
   - zig
 ---
 
 [Zig](https://ziglang.org/) is a new, independently developed low-level programming language. It's a modern reimagining of C that attempts to retain all of C's performance benefits while also taking advantage of improvements in tooling and language design from the last 30 years.
 
-Because it's designed to replace C, Zig makes it easier than any other language I've used to call into C code from Zig. In my previous Zig post, I wrote a dummy C library in C and then called it from Zig.
+Because it's designed to replace C, Zig makes it easier than any other language I've used to call into C code from Zig. In [my previous Zig post](/notes/zig-call-c-simple/), I wrote a dummy library in C and then called it from Zig.
 
 Today, I'd like to show a more practical example of using Zig to call C. I'm going to use Zig to call a real world C application that I use daily.
 
 ## Other examples of calling C code from Zig
 
-In my previous post, they
+In my previous post, I shared a few examples of good blog posts about using Zig to extend C applications:
 
-They're not beginner-friendly because the first step in all of them is to port the entire C build system to Zig. As a Zig beginner, I have no idea how to do that. I want a shortcut that allows me to call just a piece of a C application from Zig without figuring out how to build the entire codebase in Zig.
+- ["C/C++/Zig"](https://zig.news/kristoff/compile-a-c-c-project-with-zig-368j) by Loris Cro
+- ["Extending a C Project with Zig" (2023)](https://nivethan.dev/devlog/extending-a-c-project-with-zig.html)
+
+These resources were helpful, but to reproduce the results on a new codebase, you need to know how to port the entire C build system to Zig. As a Zig beginner, I have no idea how to do that. I want a shortcut that allows me to call just a piece of a C application from Zig without figuring out how to build the entire codebase in Zig.
 
 ## The real world C application: uStreamer
 
-For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.com), an open-source KVM over IP. In short, it allows users to [plug a Raspberry Pi into any computer](/tinypilot) and then control that computer remotely.
+For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.com), an open-source KVM over IP. TinyPilot allows your to [plug a Raspberry Pi into any computer](/tinypilot) and then control that computer remotely.
 
-To stream the target computer's display, TinyPilot uses uStreamer, a video streaming app that's optimized for Raspberry Pi's hardware.
+To stream the target computer's display, TinyPilot uses [uStreamer](https://github.com/pikvm/ustreamer), a video streaming app that's optimized for Raspberry Pi's hardware.
+
+{{<img src="ustreamer-display.webp" max-width="800px" alt="Screenshot of TinyPilot in a browser window displaying a Dell boot screen" caption="TinyPilot uses the C uStreamer application to stream video">}}
 
 I've been working with uStreamer for several years, but I find the codebase difficult to approach. It's all in C, and it doesn't have much in the way of documentation or tests.
 
@@ -29,7 +34,7 @@ I learn best by tinkering with code, so exercising uStreamer's C code through Zi
 
 ## Getting the uStreamer source code
 
-To begin, I'll grab the uStreamer source code. The latest version at the time of this writing is `v5.45`, so I'll grab that version:
+To begin, I'll grab the uStreamer source code. The latest release as of this writing is `v5.45`, so I'll grab that version:
 
 ```bash
 USTREAMER_VERSION='v5.45'
@@ -49,15 +54,15 @@ Scanning through the filenames, I noticed [`base64.c`](https://github.com/pikvm/
 For example, if I read 10 bytes from `/dev/random` into my terminal, I get some unprintable bytes:
 
 ```bash
-$ head -c 10 /dev/random
-y2CZ6w�h�
+$ head -c 10 /dev/random > /tmp/output && cat /tmp/output
+V�1A�����b
 ```
 
 If I encode the data as base64, I get clean, printable charcters:
 
 ```bash
-$ head -c 10 /dev/random | base64
-hVKEdIWIfuh6Mw==
+$ base64 < /tmp/output
+Vo8xQbWmnsLQYg==
 ```
 
 Here's the signature of uStreamer's base64 function:
@@ -202,15 +207,15 @@ info: Created src/main.zig
 info: Next, try `zig build --help` or `zig build run`
 ```
 
+If I try compiling and running the boilerplate Zig application, I see that everything works:
+
 ```bash
 $ zig build run
 All your codebase are belong to us.
 Run `zig build test` to run the tests.
 ```
 
-## Configure Zig to import C code
-
-First, I need to adjust my `build.zig` file so that my `src/main.zig` can build against uStreamer's sources:
+The uStreamer C file I want to call [depends on the C standard library](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.h#L25-L27), so I need to make a small adjustment to my `build.zig` file to link against that library. While I'm adjusting, I'll also replace the boilerplate binary name with `base64-encoder`:
 
 ```zig
     const exe = b.addExecutable(.{
@@ -221,29 +226,6 @@ First, I need to adjust my `build.zig` file so that my `src/main.zig` can build 
     });
     exe.linkLibC();               // Link against C standard library.
     exe.addIncludePath(.{ .path = "src" });
-```
-
-When I try `zig build run`, I get this error:
-
-```text
-src/main.zig:3:16: error: C import failed
-const base64 = @cImport({
-               ^~~~~~~~
-referenced by:
-    main: src/main.zig:13:5
-    callMain: /nix/store/bg6hyfzr1wzk795ii48mc1v15bswcvp3-zig-0.11.0/lib/zig/std/start.zig:574:32
-    remaining reference traces hidden; use '-freference-trace' to see all reference traces
-/home/mike/ustreamer/src/libs/tools.h:194:27: error: call to undeclared function 'sigabbrev_np'; ISO C99 and later do not support implicit function declarations
- const char *const name = sigabbrev_np(signum);
-                          ^
-/home/mike/ustreamer/src/libs/tools.h:194:20: error: incompatible integer to pointer conversion initializing 'const char *const' with an expression of type 'int'
- const char *const name = sigabbrev_np(signum);
-                   ^
-/home/mike/ustreamer/src/libs/tools.h:205:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
-  US_ASPRINTF(buf, "SIG%s", name);
-  ^
-/home/mike/ustreamer/src/libs/tools.h:207:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
-  US_ASPRINTF(buf, "SIG[%d]", signum);
 ```
 
 ## Calling uStreamer code from Zig
@@ -294,11 +276,15 @@ pub export fn us_base64_encode(arg_data: [*c]const u8, arg_size: usize, arg_enco
 
 I had trouble understanding this error at first because so much of it was unfamiliar.
 
-### Translating the input parameters into Zig
+The important bit of the compiler error above is `error: expected type '[*c]const u8', found '*const *const [13:0]u8'`. It's telling me that I tried to pass in a `*const *const [13:0]u8`, but Zig needs me to pass in `[*c]const u8`.
 
-The important bit of the compiler error above is `error: expected type '[*c]const u8', found '*const *const [13:0]u8'`. It's telling me that I tried to pass in a `*const *const [13:0]u8`, but Zig needs me to pass in `[*c]const u8`. What does that mean?
+What does that mean?
 
-The easiest thing for me to figure out was the `13`. That's the length of the string `hello, world!`.
+### String handling in C vs. Zig
+
+To understand the compiler error, I had to learn a bit more about how Zig handles strings.
+
+The easiest thing for me to figure out about the error message was the `13`. That's the length of the string `hello, world!`.
 
 ```bash
 $ printf "hello, world!" | wc --chars
@@ -307,15 +293,19 @@ $ printf "hello, world!" | wc --chars
 
 But what does `[13:0]` mean? That's [a sentinel-terminated pointer](https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Pointers).
 
-In C, the language doesn't keep track of the length of strings. Instead, it places a byte with the value of `0` at the end of a string to indicate where the string ends.
+In C, the compiler doesn't help you much with strings. The compiler doesn't keep track of the length of strings, so the way you represent the end of a string is with a null terminator, a byte with a value of `0`. But even so, the compiler doesn't guarantee that a variable that's supposed to be a string ends in a `0` byte. A huge number of security vulnerabilities arise from C applications losing track of string lengths or omitting the null terminator from a string.
 
-In Zig, the compiler keeps track of strings' lengths, but it also terminates them with a `0` byte, a decision I'm assuming was made specifically to facilitate calling C libraries from Zig.
+Modern languages have learned from C's string sins, and Zig is no exception. So, the type `[13:0]u8` shows that the Zig type system is more rigorous than C's. The Zig compiler tracks that the `input` variable contains a string with 13 characters (not including null terminator) and that it ends in a null terminator.
+
+In Zig, the compiler keeps track of each string's length, but it also terminates them with a `0` byte, a decision I'm assuming was made specifically to facilitate calling C libraries from Zig.
 
 So, that's half of understanding the type of the `input` parameter in our Zig compiler error. The full type was `*const *const [13:0]u8`.
 
 Strings in Zig are immutable, so that explains why a 13-character, null-terminated string would have a type of `*const [13:0]u8`. And I passed `input` with the `&` operator to get its pointer, so that explains why it's a constant pointer to a constant pointer.
 
-Okay, now I understand what I passed. What did Zig _want_ me to pass as the `input` type?
+### Converting a Zig type to a C type
+
+Okay, now I understand how Zig views the string that I passed. What did Zig _want_ me to pass as the `input` type?
 
 ```text
 expected type '[*c]const u8'
@@ -449,7 +439,7 @@ output size: 21
 
 Great! That worked. And the results are identical to [my C implementation above](#whats-the-simplest-c-function-in-ustreamer).
 
-The code at this point is at zig-10-simple-exe.
+The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-10-simple-exe).
 
 ## Creating a Zig wrapper for the native C implementation
 
