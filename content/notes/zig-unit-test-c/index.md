@@ -1,5 +1,5 @@
 ---
-title: "Using Zig to Unit Test a C Application"
+title: "Using Zig to Call a Real World C Function"
 date: 2023-11-26T00:00:00-05:00
 tags:
   - zig
@@ -7,17 +7,29 @@ tags:
 
 [Zig](https://ziglang.org/) is a new, independently developed low-level programming language. It's a modern reimagining of C that attempts to retain all of C's performance benefits while also taking advantage of improvements in tooling and language design from the last 30 years.
 
-One of the main differences from C is that Zig treats unit testing as a first-class feature. This makes it easier to port legacy code from C to Zig. Legacy C applications rarely have unit tests, but using Zig, we can first write unit tests for the existing code to verify the existing behavior, then port the code from C to Zig and have confidence that we haven't broken behavior.
+Because it's designed to replace C, Zig makes it easier than any other language I've used to call into C code from Zig. In my previous Zig post, I wrote a dummy C library in C and then called it from Zig.
 
-## Adding unit tests to uStreamer
+Today, I'd like to show a more practical example of using Zig to call C. I'm going to use Zig to call a real world C application that I use daily.
 
-For the past three years, I've been working on TinyPilot, an open-source KVM over IP. In short, it allows users to plug a Raspberry Pi into any computer and then control that computer remotely.
+## Other examples of calling C code from Zig
+
+In my previous post, they
+
+They're not beginner-friendly because the first step in all of them is to port the entire C build system to Zig. As a Zig beginner, I have no idea how to do that. I want a shortcut that allows me to call just a piece of a C application from Zig without figuring out how to build the entire codebase in Zig.
+
+## The real world C application: uStreamer
+
+For the past three years, I've been working on [TinyPilot](https://tinypilotkvm.com), an open-source KVM over IP. In short, it allows users to [plug a Raspberry Pi into any computer](/tinypilot) and then control that computer remotely.
 
 To stream the target computer's display, TinyPilot uses uStreamer, a video streaming app that's optimized for Raspberry Pi's hardware.
 
-I've been working with uStreamer for several years, but I've had trouble getting a handle on it because it's a complex C codebase with no automated tests. As an experiment, I tried to use Zig to get uStreamer under test.
+I've been working with uStreamer for several years, but I find the codebase difficult to approach. It's all in C, and it doesn't have much in the way of documentation or tests.
+
+I learn best by tinkering with code, so exercising uStreamer's C code through Zig feels like a good way to learn more about both uStreamer and Zig.
 
 ## Getting the uStreamer source code
+
+To begin, I'll grab the uStreamer source code. The latest version at the time of this writing is `v5.45`, so I'll grab that version:
 
 ```bash
 USTREAMER_VERSION='v5.45'
@@ -28,11 +40,27 @@ git clone \
 
 ## What's the simplest C function in uStreamer?
 
-I wanted to find something self-contained. I pass it in some input, and it gives me some output that I can inspect easily.
+For this exercise, the challenge is going to be using Zig, so I want the C part to be as simple as possible.
 
-I found the [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c). That sounded like a good match. I understand the basics
+I want to find a dead simple function in uStreamer's C code &mdash; something that I can feed some input, and it gives me some output that I can inspect easily.
 
-Here's the function signature.
+Scanning through the filenames, I noticed [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c). That sounded promising. I know that [base64](https://en.wikipedia.org/wiki/Base64) is a scheme for encoding arbitrary binary data as a string with printable characters.
+
+For example, if I read 10 bytes from `/dev/random` into my terminal, I get some unprintable bytes:
+
+```bash
+$ head -c 10 /dev/random
+y2CZ6w�h�
+```
+
+If I encode the data as base64, I get clean, printable charcters:
+
+```bash
+$ head -c 10 /dev/random | base64
+hVKEdIWIfuh6Mw==
+```
+
+Here's the signature of uStreamer's base64 function:
 
 ```c
 // src/libs/base64.h
@@ -40,7 +68,7 @@ Here's the function signature.
 void us_base64_encode(const uint8_t *data, size_t size, char **encoded, size_t *allocated);
 ```
 
-From inspecting the `.c` file implementation, here's what I deduce about the semantics of `us_base64_encode`:
+From inspecting the function's implementation in [`base64.c`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/base64.c), here's what I deduce about the semantics of `us_base64_encode`:
 
 - `data` is input data to encode with the base64 encoding scheme.
 - `size` is the length of the `data` buffer (in bytes).
@@ -59,28 +87,63 @@ Here's a simple test program to call this function from C:
 #include "libs/base64.h"
 
 void main(void) {
-  char *raw = "hello, world!";
+  char *input = "hello, world!";
   char *encoded = NULL;
   size_t encoded_bytes = 0;
-  us_base64_encode((uint8_t *)raw, strlen(raw), &encoded, &encoded_bytes);
-  printf("encoded=%s\n", encoded);
-  printf("encoded_bytes=%u\n", encoded_bytes);
+  us_base64_encode((uint8_t *)input, strlen(input), &encoded, &encoded_bytes);
+  printf("input:        %s\n", input);
+  printf("output:       %s\n", encoded);
+  printf("output bytes: %lu\n", encoded_bytes);
   free(encoded);
 }
 ```
 
+I'll compile it with gcc, a popular C compiler:
+
 ```bash
-$ gcc src/test.c src/libs/base64.c -o /tmp/b64test && /tmp/b64test
-encoded=aGVsbG8sIHdvcmxkIQ==
-encoded_bytes=21
+$ gcc src/test.c src/libs/base64.c -o /tmp/b64test
+In file included from src/libs/base64.h:31,
+                 from src/test.c:3:
+src/libs/tools.h: In function ‘us_signum_to_string’:
+src/libs/tools.h:194:34: warning: implicit declaration of function ‘sigabbrev_np’ [-Wimplicit-function-declaration]
+  194 |         const char *const name = sigabbrev_np(signum);
+      |                                  ^~~~~~~~~~~~
 ```
 
-If I compare the output to my system's built-in `base64` utility, I can verify that my test C application is producing the correct result:
+Hmm, the code compiles, but I'm getting a lot of compiler warnings about a `tools.h` header that the uStreamer code includes.
+
+If I look into `src/libs/tools.h`, I see that all the errors are around a single function: [`us_signum_to_string`](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/tools.h#L192-L210). Let me see if I can just comment out that function to get the build working.
+
+```c
+
+/*
+DEBUG: Temporarily delete this function to get the build working again.
+INLINE char *us_signum_to_string(int signum) {
+...
+	return buf;
+}
+*/
+```
+
+With the pesky `us_signum_to_string` function removed, I'll try to compile build again:
+
+```bash
+$ gcc src/test.c src/libs/base64.c -o /tmp/b64test && /tmp/b64test
+input:        hello, world!
+output:       aGVsbG8sIHdvcmxkIQ==
+output bytes: 21
+```
+
+Hooray, no more compiler warnings. If I were trying to compile all of uStreamer, I'd have to figure out how to get `us_signum_to_string` to compile, but since I'm just trying to call `us_base64_encode` from Zig, I don't need `us_signum_to_string`.
+
+If I compare my `test.c` program's output to my system's built-in `base64` utility, I can verify that I'm producing the correct result:
 
 ```bash
 $ printf 'hello, world!' | base64
 aGVsbG8sIHdvcmxkIQ==
 ```
+
+The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-00-c-test).
 
 ## Adding Zig to my uStreamer project environment
 
@@ -129,6 +192,8 @@ zig 0.11.0
 ```
 
 ## Creating a Zig executable
+
+The Zig compiler's `init-exe` creates a boilerplate Zig application, so I'll use it to create a simple Zig app within the uStreamer source tree:
 
 ```bash
 $ zig init-exe
@@ -180,21 +245,6 @@ referenced by:
 /home/mike/ustreamer/src/libs/tools.h:207:3: error: call to undeclared function 'asprintf'; ISO C99 and later do not support implicit function declarations
   US_ASPRINTF(buf, "SIG[%d]", signum);
 ```
-
-If I look into `src/libs/tools.h`, I see that all the errors are around [a single function](https://github.com/pikvm/ustreamer/blob/v5.45/src/libs/tools.h#L192-L210). Let me see if I can just comment out that function to get the build working.
-
-```c
-
-/*
-DEBUG: Temporarily delete this function to get the build working again.
-INLINE char *us_signum_to_string(int signum) {
-...
-	return buf;
-}
-*/
-```
-
-With the pesky `tools.h` function removed, I'll try the build again:
 
 ## Calling uStreamer code from Zig
 
