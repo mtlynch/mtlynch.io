@@ -58,22 +58,28 @@ It took about a minute to produce this answer. Stats were listed as:
 
 > 130ms per token, 7.67 tokens per second
 
+I tried another question:
+
 > **User**:Where will this show take place?
 >
 > **Llama**:The comedy showcase will take place at Luthier's Co-op in Rathmell, Pennsylvania.
 
 Again, it's getting something, but it's only about 70% accurate.
 
-I was also curious if I could get the information in JSON format, but I had a hard time convincing LLaVA to speak JSON. I'd say "Respond in JSON to the following question," and it would ignore me. In the [research paper](https://arxiv.org/abs/2310.03744), they showed an example of convincing LLaVA to respond in JSON:
+I was also curious if I could get the information in JSON format, but I had a hard time convincing LLaVA to speak JSON. I'd say "Respond in JSON to the following question," and it would ignore the instruction and respond in regular English.
 
-{{<img src="json-example.png" max-width="400px" has-border="true" caption="Example of asking LLaVA to respond in JSON, from the [research paper](https://arxiv.org/abs/2310.03744)">}}
+In the [research paper](https://arxiv.org/abs/2310.03744), LLaVA's authors showed an example of convincing LLaVA to respond in JSON:
+
+{{<img src="json-example.png" max-width="450px" has-border="true" caption="Example of asking LLaVA to respond in JSON, from the [research paper](https://arxiv.org/abs/2310.03744)">}}
 
 I tried repeating the format from the paper, and it just gave back nothing:
 
 > **User**:Please read the text in this image and return the information in the following JSON format (note xxx is placeholder, if the information is not available in the image, put "N/A" instead).
 > {"title": xxx, "date": xxx, "time": xxx, "performers": xxx, "hosts": xxx, "location": { "address": xxx, "city": xxx, "state": xxx, "zipCode": xxx}}
 
-I could tell from the server logs that it finished processing the request, but nothing came back. I tried again, and it successfully generated JSON, though it still hallucinated a lot of the information:
+I could tell from the server logs that it finished processing the request, but nothing came back.
+
+I tried again, and it successfully generated JSON, though it still hallucinated a lot of the information:
 
 > **User**:Please read the text in this image and return the information in the following JSON format (note xxx is placeholder, if the information is not available in the image, put "N/A" instead).
 > {"title": xxx, "date": xxx, "time": xxx, "performers": xxx, "hosts": xxx, "location": { "address": xxx, "city": xxx, "state": xxx, "zipCode": xxx}}
@@ -127,9 +133,18 @@ Everything worked, and the server logs showed it was using the VM's GPU. I tried
 CUDA error 2 at /home/mike/.llamafile/ggml-cuda.cu:6006: out of memory
 ```
 
-I thought
+I tried again using Scaleway's beefier RENDER-S instance, which has double the GPU VRAM, but I got the same crash.
 
-I read somewhere that it indicates too large a batch size, so I tried re-running like this:
+One [llama.cpp Github issue](https://github.com/ggerganov/llama.cpp/issues/1230#issuecomment-1575097730) seemed similar and said the workaround was to disable "pinning" so I tried that:
+
+```bash
+export GGML_CUDA_NO_PINNED=1
+./llava-v1.5-7b-q4-server.llamafile --nobrowser
+```
+
+Still crashed.
+
+I read [a StackOverflow thread](https://stackoverflow.com/q/71498324/90388) that CUDA can run out of RAM for too large a batch size, so I tried re-running like this:
 
 ```bash
 ./llava-v1.5-7b-q4-server.llamafile --nobrowser --batch-size 1
@@ -137,8 +152,10 @@ I read somewhere that it indicates too large a batch size, so I tried re-running
 
 But I got the same result.
 
-I tried again using Scaleway's beefier RENDER-S instance, which has double the GPU VRAM, but I got the same crash.
-
 ## Wrap up
 
-That was the end of my experiment. It doesn't seem like LLaMA 1.5 with the default settings works with my problem of parsing information from show posters, but I've only experimented with it for a few hours. I'm hopeful that open-source AI models will continue improving and becoming more accessible over the next year.
+It doesn't seem like LLaMA 1.5 with the default settings works with my problem of parsing information from show posters.
+
+I've only experimented with it for a few hours, so maybe there are some settings that would make this work.
+
+I'm hopeful that open-source AI models will continue improving and becoming more accessible over the next year.
