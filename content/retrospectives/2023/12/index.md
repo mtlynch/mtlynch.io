@@ -23,17 +23,17 @@ At the start of each month, I declare what I'd like to accomplish. Here's how I 
 
 ### Shift manufacturing to our contract manufacturer as quickly as possible
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: The shift is now complete. The manufacturer is manufacturing units to the same quality as when we assembled them in-house.
+- **Grade**: A
 
 TODO
 
 ### Conduct five customer outreach calls
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: We reached out to three customers and had zero customer calls
+- **Grade**: F
 
-TODO
+In this case, I forgot to prioritize this. I lost almost two full weeks to conference and holiday travel, and the customer service team had lower bandwidth than usual. I should have followed up more with the team to prioritize this, as we need to continue investing here for the business' long-term sustainability.
 
 ### Clear the TinyPilot office of all old inventory and spare parts
 
@@ -100,31 +100,43 @@ Sometimes, something comes up with an order and it's delayed a day. 98% of the t
 
 If I wake up and start working at 7am, I stop working at 4pm, which includes breaks for breakfast, lunch, and exercise.
 
-## Topic 3
+I always jinx it because whenever I celebrate having free time, some new problem pops up or something about our process changes
 
 ## My first Handmade conference
 
 He's
 
-### This is water
+### Remembering that there are alternatives to the popular tech stacks
 
-I'm so used to the stacks that I deal with every day where it's a . I try to be pretty minimal, but TinyPilot is WebComponents on top of Flask on top of Nginx on top of Linux. And it's been a while since I thought about the fact that our model for building applications is on top of the web browser, a piece of technology that was fundamentally designed for representing documents.
+I'm so used to the stacks that I deal with every day where it's a . I try to be pretty minimal, but TinyPilot is WebComponents on top of HTML on top of Flask on top of Nginx on top of Linux. And it's been a while since I thought about the fact that our model for building applications is on top of the web browser, a piece of technology that was fundamentally designed for representing documents.
 
-There's an old joke that David Foster Wallace famously tells in his commencement speech. Two young fish are swimming together, and an old fish swims by and says, "Water's great today, eh boys?" One of the young fish turns to the other and says, "What the fuck is water?"
+There's an old joke that David Foster Wallace famously tells in his commencement speech:
+
+> There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says “Morning, boys. How’s the water?” And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes “What the hell is water?”
 
 ### Relentless indie ambition
 
-The projects that got me interested in Handmade were SerenityOS, an OS that Andreas Kling started from scratch. No third-party libraries or dependencies. Just an OS from the ground up. And Andrew Kelly started Zig, which he wants to replace all the C code in the world.
+The reason I first heard about Handmade to begin with is that I follow Andreas Kling, the creator of SerenityOS. He created the initial OS by himself with no third-party libraries or dependencies. He posted about presenting his project at Handmade in XX.
+
+And I looked into it and realized Handmade also tends to attract talks about Zig, an indie programming language I've been interested in for a while. Andrew Kelly, the creator of Zig, apeared on the CoRecursive podcast in XX and talked about how he wants to replace all the C code in the world with Zig. And I think that kind of ambition and enthusiasm for software is so cool and exciting.
+
+I liked the conference's celebration of reinventing the wheel. It's usually a putdown in software to accuse something of reinventing the wheel, but handmade embraces it. Why not reinvent the wheel? Maybe your wheel will be better than the wheel everyone else is using. And just by trying to reinvent the wheel, you'll get a better understanding of how the wheel works.
+
+And Handmade delivered on this expectation. A lot of the presenters and attendees liked the idea of reinventing the wheel. Some of them wanted to reinvent the wheel for fun, some because they thought they could build a better wheel, and some just because.
 
 I like that ambitious spirit. Cameron Riekes is an undergrad, and he presented about building a 2D RPG game. But then he "ended up" coding his own 3D game engine from scratch. And XX is YY years old and is working on Tilde, a ground up replacement for LLVM.
 
+I met Andrew Kelly, the creator of Zig, in person, which inspired me to [finally try writing some Zig code](/notes/zig-call-c-simple/).
+
 ### Extreme skepticism of big tech
 
-My biggest gripe with the conference was that I felt like the tone was critical of big tech to the point of irrationality. The idea was that big tech is basically poison. Everything they produce is buggy, bloated, unreliable, and overpriced.
+One complaint I had was that the tone was critical of big tech to a degree that I found irrational.
+
+The idea was that big tech is basically poison. Everything they produce is buggy, bloated, unreliable, and overpriced.
 
 And the reason more people aren't aware of it is that big tech controls software conferences, and they prevent presenters from speaking honestly about the problems in big tech software. I've spoken at a few mid-level conferences, and nobody's ever told me that I can't criticize big tech, so this rang false to me.
 
-I'm amenable to this viewpoint. I prefer to avoid big tech when there's an indie alternative available. But I also think that big tech does a lot of things very well and does most of the heavy lifting in driving forward technology.
+I'm sympathetic to this viewpoint. I prefer to avoid big tech when there's an indie alternative available. But I also think that big tech does a lot of things very well and does most of the heavy lifting in driving technology forward. I think it's a mistake to simply turn up our noses at it and assume the indie thing is always better than the big tech equivalent.
 
 ## Side projects
 
