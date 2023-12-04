@@ -250,7 +250,7 @@ I currently am still searching for a solution to this problem. Here are some pos
 - ~~Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port~~
 - ~~Use the Zero2Go Power Adaptor to connect an AC to microUSB adaptor.~~
 
-To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
+**Update**: To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
 
 {{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
 {{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px">}}
