@@ -21,21 +21,21 @@ Every month, I publish a retrospective like this one to share how things are goi
 
 At the start of each month, I declare what I'd like to accomplish. Here's how I did against those goals:
 
-### Goal 1
+### Shift manufacturing to our contract manufacturer as quickly as possible
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 2
+### Conduct five customer outreach calls
 
 - **Result**: XX
 - **Grade**: XX
 
 TODO
 
-### Goal 3
+### Clear the TinyPilot office of all old inventory and spare parts
 
 - **Result**: XX
 - **Grade**: XX
@@ -76,7 +76,9 @@ At step (3), there was a problem because I wasn't seeing any one-day shipping op
 
 After a few weeks, I noticed that nobody was choosing one-day shipping. I tried checking out in my store, and I saw that even though I had enabled six different shipping options from Shopify, at checkout, customers were only seeing two options: USPS Ground and USPS Priority.
 
-Again, I spent two months chasing down my 3PL and ShipStation, and I finally got an answer. ShipStation filters what they consider to be "similar" shipping options at checkout. So if USPS charges $9 for two-day shipping and UPS charges $10 for two-day shipping, ShipStation will drop the UPS quote and only show the USPS price. This is by design because they think they're being helpful. Some genius PM at ShipStation probably read about the paradox of choice and feels like they've made an amazing breakthrough in shipping speeds.
+I left out a step. There's actually step (4.5) ShipStation filters what options _they_ think customers should see at checkout.
+
+Again, I spent two months chasing down my 3PL and ShipStation, and I finally got an answer. ShipStation filters what they consider to be "similar" shipping options at checkout. So if USPS charges $9 for two-day shipping and UPS charges $10 for two-day shipping, ShipStation will drop the UPS quote and only show the USPS price. This is by design because they think they're being helpful. Some genius PM at ShipStation probably read about the [paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice) and feels like they've made an amazing breakthrough in eCommerce UX.
 
 I tried to explain to ShipStation that I don't want them to filter and that customers might choose one courier over another for reasons other than price and estimated speed, but they're not changing the behavior.
 
@@ -91,8 +93,6 @@ The conversation with them was going nowhere, so I decided to sidestep ShipStati
 The new problem is that Shopify gets much better postage rates than ShipStation. So now customers are paying $40 for overnight shipping, but when it comes time for the 3PL to purchase postage through ShipStation, they pay $90, and I'm on the hook for the difference.
 
 TinyPilot is by design not a high-urgency business. We don't have any critical servers that need to stay online, we don't offer 24/7 support. I designed as much as possible around the idea that responses would take up to three business days, even though we aim for fewer.
-
-## One-day shipping customers have higher expectations
 
 Sometimes, something comes up with an order and it's delayed a day. 98% of the time, customers who chose ground or two-day shipping don't say anything. The Monday after Black Friday, UPS had a strange issue where they
 
