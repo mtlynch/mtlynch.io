@@ -37,10 +37,14 @@ In this case, I forgot to prioritize this. I lost almost two full weeks to confe
 
 ### Clear the TinyPilot office of all old inventory and spare parts
 
-- **Result**: XX
-- **Grade**: XX
+- **Result**: I decided to pause this process
+- **Grade**: N/A
 
-TODO
+It turns out our landlord is pretty relaxed about when we move out, so there's less urgency to close the office than I thought. It's also turning out to be harder than I expected to clear the office without just throwing everything in the garbage. We have dozens of items that are worth $1-50 apiece, but we generally have only a handful of each.
+
+As an example, we have three used Arduino Uno boards. Each one retails for $28. We could maybe sell our three on eBay for a total of $30 used, but it would take about two hours to handle the process from end-to-end. So it would cost more in employee wages than we'd actually make selling the boards.
+
+My new plan is to just to wait until we're close to moving out and advertise a time when people can just come by and take what they want for free.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
