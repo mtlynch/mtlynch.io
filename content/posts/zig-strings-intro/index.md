@@ -5,32 +5,61 @@ date: 2023-12-01T10:37:03-05:00
 
 ## A brief primer on C strings
 
-In C, a string looks like this:
-
-```c
-char* s = "hello";
-```
-
-The type is `char*`. That means the variable stores the memory address where a string begins. The compiler doesn't know where the string ends.
+In C, a string has the variable type of `char*`. That means the variable stores the memory address where a string begins. The compiler doesn't know where the string ends.
 
 C strings don't contain information about the string's length. Instead, C applications indicate the end of a string with a "null terminator," a byte after the last character in a string with the value of `0`.
 
+Suppose you have the following function in C that takes a string and adds " rules!" to it:
+
 ```c
-// Create a string with five characters + one null terminator = 6 bytes.
-char *s = "hello";
-// Copy a 13-character string into a six-byte buffer.
-strcpy(s, "hello, world!");
+// INSECURE: Don't do any of this in production code.
+void print_rules(char* name) {
+  // Create a buffer for our full string that can hold 14 characters plus a null
+  // terminator.
+  char str[15] = {'\0'};
+
+  // Copy the name into the buffer.
+  strcpy(str, name);
+
+  // Copy the end of the string into the buffer.
+  strcat(str, " rules!");
+
+  // Print the contents of the full string.
+  printf("%s\n", str);
+}
 ```
 
-This code compiles just fine. Modern C compilers will throw up warnings, but it's legal C code, and the compiler will produce an executable. When you run the executable, it immediately crashes because the `strcpy` tried to write 14 bytes in a memory buffer that was only allocated to store six.
+If I call the function like this:
 
-C's lack of string checking has been an endless source of bugs and security vulnerabilities. Most languages since C have provided safeguards that make it harder for developers to corrupt memory through string operations.
+```c
+print_rules("michael");
+```
 
-## Zig strings
+Then the function will print a result like this:
+
+```text
+michael rules!
+```
+
+But if I try a longer string and exceed the limits of the 15-byte buffer, I created, things don't go so well:
+
+```c
+print_rules("rumplestiltskin");
+```
+
+```text
+*** buffer overflow detected ***: terminated
+```
+
+The program crashes because I tried to write beyond the memory region that was allocated for my application. C failed to prevent this mistake because C compilers generally can't identify this class of error, which has been a pervasive source of bugs and security vulnerabilities in C applications.
+
+## Zig strings fix C's mistakes while preserving C compatibility
 
 Zig is designed to be a modern replacement for C, so it has a difficult job. It has to both correct the mistakes of C while also making it easy to interoperate with legacy C code.
 
 In Zig, strings are both null-terminated and length-checked. Null-terminating Zig strings makes it easy to pass them into C functions, as Zig strings look to a C application just like native C strings.
+
+## A basic Zig string
 
 Here's a simple Zig application to show how Zig sees strings:
 
