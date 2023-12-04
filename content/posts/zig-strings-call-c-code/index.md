@@ -1,5 +1,5 @@
 ---
-title: "A Beginner's Introduction to Zig Strings"
+title: "Using Zig Strings to Call C Code"
 date: 2023-12-01T10:37:03-05:00
 ---
 
