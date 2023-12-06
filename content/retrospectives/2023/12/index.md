@@ -1,6 +1,6 @@
 ---
 title: "TinyPilot: Month 41"
-date: 2023-12-04T00:00:00-05:00
+date: 2023-12-07T00:00:00-05:00
 description: TODO - One-line summary
 ---
 
@@ -132,13 +132,27 @@ I always jinx it because whenever I celebrate having free time, some new problem
 
 ## My first Handmade conference
 
-### Remembering that there are alternatives to the popular tech stacks
+In November, I attended my first [Handmade conference](https://handmadecities.com/seattle/) in Seattle.
 
-I'm so used to the stacks that I deal with every day where it's a . I try to be pretty minimal, but TinyPilot is WebComponents on top of HTML on top of Flask on top of Nginx on top of Linux. And it's been a while since I thought about the fact that our model for building applications is on top of the web browser, a piece of technology that was fundamentally designed for representing documents.
+Here were my takeaways from the conference.
 
-There's an old joke that David Foster Wallace famously tells in his commencement speech:
+### There are alternatives to the popular tech stacks
+
+There's an old joke that David Foster Wallace tells in his famous [2005 Kenyon College commencement speech](https://fs.blog/david-foster-wallace-this-is-water/):
 
 > There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says “Morning, boys. How’s the water?” And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes “What the hell is water?”
+
+I'm so used to thinking about software in terms of popular architectures, I almost forget that it's still viable to do anything else.
+
+Even though I try to keep my tech stacks and dependencies pretty minimalist, my standard stack is still WebComponents on top of HTML on top of Go on top of Docker on top of Linux. It's been a while since I considered how weird it is that one of the bedrocks of most of my software is a web browser, a piece of technology that was fundamentally designed for representing documents.
+
+So, for me, the web browser is water.
+
+But at Handmade, most of the developers I met didn't deal with web browsers at all, and they didn't use any of the technologies that I'm used to.
+
+I met the creator of [MobileCode](https://mobilecodeapp.com/), an app for writing software on phones and tablets. I asked him what language he used, expecting him maybe to say Flutter or probably React Native. I was gobsmacked when he said "C."
+
+And not only that, he said that he's still pleased with the choice. He found it easier to write cross-platform code in C easier than to use the mobile frameworks that are designed for that purpose. C let him call native graphics APIs on iOS and Android directly rather than working through many layers of abstraction.
 
 ### Relentless indie ambition
 
@@ -150,7 +164,9 @@ I liked the conference's celebration of reinventing the wheel. It's usually a pu
 
 And Handmade delivered on this expectation. A lot of the presenters and attendees liked the idea of reinventing the wheel. Some of them wanted to reinvent the wheel for fun, some because they thought they could build a better wheel, and some just because.
 
-I like that ambitious spirit. Cameron Riekes is an undergrad, and he presented about building a 2D RPG game. But then he "ended up" coding his own 3D game engine from scratch. And XX is YY years old and is working on Tilde, a ground up replacement for LLVM.
+I like that ambitious spirit. Cameron Riekes is an undergrad, and he presented about building a 2D RPG game. But then he "ended up" coding his own 3D game engine from scratch.
+
+And Yasser Arguelles is 20ish years old and is working on [Tilde](https://yasserarg.com/tb.html), a from-scratch replacement for LLVM. In his presentation, he mentioned that he didn't have a background in compilers, but one of the most popular requests he saw in Handmade discussions
 
 I met Andrew Kelly, the creator of Zig, in person, which inspired me to [finally try writing some Zig code](/notes/zig-call-c-simple/).
 
@@ -163,6 +179,12 @@ The idea was that big tech is basically poison. Everything they produce is buggy
 And the reason more people aren't aware of it is that big tech controls software conferences, and they prevent presenters from speaking honestly about the problems in big tech software. I've spoken at a few mid-level conferences, and nobody's ever told me that I can't criticize big tech, so this rang false to me.
 
 I'm sympathetic to this viewpoint. I prefer to avoid big tech when there's an indie alternative available. But I also think that big tech does a lot of things very well and does most of the heavy lifting in driving technology forward. I think it's a mistake to simply turn up our noses at it and assume the indie thing is always better than the big tech equivalent.
+
+### Other writeups
+
+- [Carl Sverre](https://carlsverre.com/writing/handmade-seattle-2023/)
+
+If you know of other writeups, let me know, and I'll link to them.
 
 ## Side projects
 
@@ -180,4 +202,6 @@ I'm sympathetic to this viewpoint. I prefer to avoid big tech when there's an in
 
 ### Goals for next month
 
--
+- Conduct five customer outreach calls
+- Complete design work for TinyPilot license checking
+- Create a process for spot-checking each manufacturing batch of new devices
