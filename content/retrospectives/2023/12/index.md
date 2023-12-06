@@ -50,35 +50,55 @@ My new plan is to just to wait until we're close to moving out and advertise a t
 
 {{<revenue-graph project="tinypilot">}}
 
+| Metric                   | October 2023   | November 2023    | Change                                           |
+| ------------------------ | -------------- | ---------------- | ------------------------------------------------ |
+| Unique Visitors          | 8,700          | 6,400            | <font color="red">-2,300 (-26%)</font>           |
+| Sales Revenue            | $98,896.81     | $84,055.05       | <font color="red">-$14,841.76 (-15%)</font>      |
+| Enterprise Subscriptions | $290.70        | $290.70          | 0                                                |
+| Royalties                | $2,609.84      | $2,824.46        | <font color="green">+$214.62 (+8%)</font>        |
+| Total Revenue            | $101,797.35    | $87,170.21       | <font color="red">-$14,627.14 (-14%)</font>      |
+| **Profit**               | **$69,280.58** | **-$6,467.98**\* | **<font color="red">-$75,748.56 (-109%)</font>** |
+
 \* Profit is a naïve calculation based on my change in cash holdings over the month. I'll update it after I do real bookkeeping mid-month.
+
+Profit looks scary, but it's just because transitioning to a contract manufacturer has made my expenses more "bursty." In October, I didn't have any bills for raw materials, but in November, I had $57k in raw materials expenses. I should really start reporting these as cost of goods sold, but for now, I'm just reporting the simple cash delta.
+
+$80-100k is TinyPilot's normal, and we're safely in there. I might have tried to take advantage of Black Friday / Cyber Monday, but we were low on inventory due to the manufacturing switch, so we didn't have enough in stock to drop prices.
 
 ## One-day shipping: how hard could it be?
 
-For most of TinyPilot's life, I haven't offered overnight or one-day shipping. When we were fulfilling orders in-house, we staffed our office six days per week for processing orders, but only one person was there per day. I didn't offer one-day shipping because I knew there'd be situations where someone's out sick or on vacation, so a one-day turnaround wouldn't be possible.
+For most of TinyPilot's life, we haven't offered overnight or one-day shipping.
 
-When we switched fulfillment to a third-party logistics warehouse (3PL), it changed a lot about how we offer shipping. One of the big changes was that the 3PL has much more worker redundancy than we do, so orders should go out in one business day no matter what.
+When we were fulfilling orders in-house, we staffed our office six days per week for processing orders, but only one person was there per day. I didn't offer one-day shipping because I knew there'd be situations where someone's out sick or on vacation, so a one-day turnaround wouldn't be possible.
+
+When we switched fulfillment to a third-party logistics warehouse (3PL), our fragility around staffing went away. The 3PL has much more worker redundancy than we do, so orders should go out in one business day no matter what.
 
 ### The complicated shipping stack
 
-By September, we'd gotten most of the kinks worked out in our transition to the 3PL, so I decided it would be a good time to begin offering overnight shipping options.
+By September, we'd gotten most of the kinks worked out in our transition to the 3PL, so I decided it would be a good time to begin offering overnight shipping options. The problem was that in switching to the 3PL, the logic for showing shipping options had gotten more complicated.
 
-1. Shopify offers a list of shipping options they support
-1. I pick which shipping options I want to make available to customers
-1. Customers pick the shipping option they prefer at checkout
+The way we used to present TinyPilot customers with shipping options looked like this:
 
-With the 3PL, the process became much more convoluted. The 3PL uses a warehouse management solution called ShipStation. ShipStation integrates with Shopify, so now the stack looks like this:
+1. Shopify offers a list of shipping options they support.
+1. I pick which shipping options I want to make available to customers.
+1. Customers pick a shipping option at checkout.
+
+Our 3PL uses a (not very good) warehouse management solution called ShipStation. That tool integrates with our Shopify store, so now the stack looks like this:
 
 1. ShipStation offers the 3PL a list of shipping options they support.
 1. The 3PL chooses from this list of shipping options they want to offer their clients.
 1. Shopify queries the ShipStation to find out which shipping options ShipStation and the 3PL agree on.
 1. I pick from Shopify which shipping options I want to make available to customers.
-1. Customers pick the shipping option they prefer at checkout.
+1. At checkout, ShipStation guesses at which options are "best" for the customer and reduces the set of shipping options to just two or three.
+1. Customers pick a shipping option at checkout.
 
-At step (3), there was a problem because I wasn't seeing any one-day shipping options. And now there are so many players involved, I don't know if the problem is in ShipStation, the 3PL, Shopify, or me. But after some back and forth with my 3PL, we finally got some one-day shipping options to show up in Shopify's admin interface.
+At step (3), there was a problem: I wasn't seeing any one-day shipping options.
+
+Because there are so many players involved, I don't know if the problem is in ShipStation, the 3PL, Shopify, or me. After some digging, the 3PL worked with ShipStation and got some one-day shipping options to show up in Shopify's admin interface.
 
 ### The filtering problem
 
-After a few weeks, I noticed that nobody was choosing one-day shipping. I tried checking out in my store, and I saw that even though I had enabled six different shipping options from Shopify, at checkout, customers were only seeing two options: USPS Ground and USPS Priority.
+After a few weeks, I noticed that nobody was choosing one-day shipping. I tried checking out in my store, and I saw that even though our 3PL said they enabled six different shipping options across three different carriers, no, at checkout, customers were only seeing two options: USPS Ground and USPS Priority.
 
 I left out a step. There's actually step (4.5) ShipStation filters what options _they_ think customers should see at checkout.
 
@@ -98,7 +118,11 @@ The new problem is that Shopify gets much better postage rates than ShipStation.
 
 TinyPilot is by design not a high-urgency business. We don't have any critical servers that need to stay online, we don't offer 24/7 support. I designed as much as possible around the idea that responses would take up to three business days, even though we aim for fewer.
 
-Sometimes, something comes up with an order and it's delayed a day. 98% of the time, customers who chose ground or two-day shipping don't say anything. The Monday after Black Friday, UPS had a strange issue where they
+Sometimes, something comes up with an order and it's delayed a day. 98% of the time, customers who chose ground or two-day shipping don't say anything. The Monday after Black Friday, UPS had a strange issue where they weren't updating tracking information for any of the orders they picked up. The warehouse swore that UPS picked everything up, but UPS had no tracking updates.
+
+It affected five customers, and within 24 hours, two of the five had emailed us to complain. And I get it. When I order something with one-day shipping, I'm eager to get it.
+
+We advertise a handling time of up to three business days, but customers don't really pay attention to that. They're used to the Amazon flow where the package is on their doorstep a few seconds after they hit "Purchase."
 
 ## The return of discretionary time
 
@@ -107,8 +131,6 @@ If I wake up and start working at 7am, I stop working at 4pm, which includes bre
 I always jinx it because whenever I celebrate having free time, some new problem pops up or something about our process changes
 
 ## My first Handmade conference
-
-He's
 
 ### Remembering that there are alternatives to the popular tech stacks
 
@@ -148,7 +170,9 @@ I'm sympathetic to this viewpoint. I prefer to avoid big tech when there's an in
 
 ### What got done?
 
--
+- Published TinyPilot Pro 2.6.2
+- Attended the Handmade Seattle conference
+- Resolved a shipping export issue with one of our critical vendors
 
 ### Lessons learned
 
@@ -157,7 +181,3 @@ I'm sympathetic to this viewpoint. I prefer to avoid big tech when there's an in
 ### Goals for next month
 
 -
-
-### Requests for help
-
-TODO
