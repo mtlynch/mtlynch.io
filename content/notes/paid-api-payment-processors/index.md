@@ -126,6 +126,8 @@ Bizarre bank payout process where they need my bank's address rather than auto-p
 
 Even though calling the API seems to work, it doesn't do anything, at least in Sandbox. Only the preview announces the problem.
 
+Made me have to add a database to my app
+
 ## Other providers that don't meet my criteria
 
 ### Stripe
