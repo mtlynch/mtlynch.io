@@ -122,6 +122,10 @@ Paddle required a utility bill after I did verification. Accidentally verified m
 
 Bizarre bank payout process where they need my bank's address rather than auto-populating. Can only pay out above $100.
 
+### Gotcha: Minimum increment is 70 cents
+
+Even though calling the API seems to work, it doesn't do anything, at least in Sandbox. Only the preview announces the problem.
+
 ## Other providers that don't meet my criteria
 
 ### Stripe
