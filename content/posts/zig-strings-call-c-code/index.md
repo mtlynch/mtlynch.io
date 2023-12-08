@@ -147,7 +147,9 @@ std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
 s[5]=0
 ```
 
-Is this true, or is Zig just letting me read unallocated memory, and it happens to be zero? No, I can see if I try to read one more character, as the code refuses to even compile:
+Is this true, or is Zig just letting me read unallocated memory, and it happens to be zero?
+
+No, I can see if I try to read one more character, as the code refuses to even compile:
 
 ```zig
 var s = "hello";
@@ -173,6 +175,17 @@ src/corrupt-string.zig:5:50: error: index 5 outside array of length 5
     std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
                                                 ~^~~~
 ```
+
+## Using Zig to safely wrap C string functions
+
+Knowing this, I can use Zig's types to ensure that when I pass strings to C functions, I make sure that I use the `[:0]u8` type so that Zig makes sure I'm using null-terminated strings.
+
+There are two types:
+
+- `[:0]u8` - Length-tracked, null-terminated strings
+- `[*:0]u8` - Null-terminated string of unknown length
+
+I'm not totally sure how you end up with the second one. Maybe it's specifically for wrapping C code that gives back a string of unknown length like `strdup`. You're trusting that the function properly null terminated.
 
 But interestingly, on null-terminated
 
