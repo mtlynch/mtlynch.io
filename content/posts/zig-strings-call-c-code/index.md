@@ -176,6 +176,18 @@ src/corrupt-string.zig:5:50: error: index 5 outside array of length 5
                                                 ~^~~~
 ```
 
+Zig prevents you from overwriting the null terminator
+
+```zig
+var s = [_:0]u8{ 'h', 'e', 'l', 'l', 'o' };
+s[s.len] = 'A';
+std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
+```
+
+```text
+s[5]=0
+```
+
 ## Using Zig to safely wrap C string functions
 
 Knowing this, I can use Zig's types to ensure that when I pass strings to C functions, I make sure that I use the `[:0]u8` type so that Zig makes sure I'm using null-terminated strings.
