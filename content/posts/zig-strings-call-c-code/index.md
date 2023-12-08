@@ -9,120 +9,54 @@ One of the first challenges I encountered with Zig is understanding strings. I c
 
 ## A brief primer on C strings
 
-Before I explain how to pass Zig strings into C code, I need to give a bit of background on how strings work in native C.
+Before I explain how to pass Zig strings into C code, I'll give a bit of background on how strings work in C.
 
-In C, a string has the variable type of `char*`. That means the variable stores the memory address where a string begins. The `char*` type doesn't tell the compiler where the string ends. Instead, C applications indicate the end of a string with a "null terminator," a byte after the last character in a string with the value of `0`.
+In C, a string has the variable type of `char*`. A string is a sequence of characters, and `char*` means the variable stores the memory address of the first character in that sequence.
 
-### Exploring string length in C
+The `char*` type doesn't tell the compiler where the string ends. Instead, C applications indicate the end of a string with a "null terminator," a byte after the last character in a string with the value of `0`.
 
-In C, if I print information about a string, the
-
-```c
-void print_string_info(char* value) {
-  printf("len=%lu\n", strlen(value));
-  printf("value=[%s]\n", value);
-}
-```
-
-If I call the function with the string `"hello"`:
+If I call `strlen`, which returns the length of a string, it tells me the number of characters in the string, excluding the null terminator:
 
 ```c
-print_string_info("hello");
-```
-
-I get results like this:
-
-```text
-len=5
-value=[hello]
-```
-
-### Truncatings trings in C
-
-However, I can effectively truncate the string by replacing a character with the null byte (`\0`):
-
-```c
-char s[] = "hello";
-s[2] = '\0';
-print_string_info(s);
+printf("strlen=%lu\n", strlen("hi"));
 ```
 
 ```text
-len=2
-value=[he]
+strlen=2
 ```
 
-Because I replaced the character at index `2` with a null byte, every string function in C treats that string as if it were two characters long.
-
-This isn't a problem, but now any function that sees the string has no way of knowing the "true" length of the string.
-
-### Making strings longer in C
-
-What happens if I replace the null character in a string?
+However, if I call `sizeof` to get the size of the data in memory, I get a number that's one higher:
 
 ```c
-char s[] = "hello";
-s[5] = 'A'; // Replace the null byte with A.
-print_string_info(s);
-```
-
-The results in this case are undefined, meaning that we don't know what the program will do. `strlen` and `printf` will continue reading past the `A` character looking for the next null byte, but we don't control memory past the end of the `"hello"` string we declared. The program will just be reading whatever happens to be in RAM at that memory location.
-
-Often, this causes the program to crash because the operating system detects the application attempting to read memory outside of the address space that the program was assigned.
-
-### Buffer overflows bugs in C
-
-Suppose you have the following function in C that takes a string and adds " rules!" to it:
-
-```c
-// INSECURE: Don't do any of this in production code.
-void print_rules(char* name) {
-  // Create a buffer for our full string that can hold 14 characters plus a null
-  // terminator.
-  char str[15] = {'\0'};
-
-  // Copy the name into the buffer.
-  strcpy(str, name);
-
-  // Copy the end of the string into the buffer.
-  strcat(str, " rules!");
-
-  // Print the contents of the full string.
-  printf("%s\n", str);
-}
-```
-
-If I call the function like this:
-
-```c
-print_rules("michael");
-```
-
-Then the function will print a result like this:
-
-```text
-michael rules!
-```
-
-My buffer `str` only has enough room for 15 characters, including the null terminator. The string `"michael"` is seven characters, excluding terminator. The string `" rules"` is six characters, excluding null. The `print_rules` is able to concatenate the two into a 15-character buffer (7 + 6) and still have room for the null terminator.
-
-If I try a longer string and exceed the limits of my 15-byte buffer, things don't go so well:
-
-```c
-print_rules("rumplestiltskin");
+printf("sizeof=%lu\n", sizeof("hi"));
 ```
 
 ```text
-*** buffer overflow detected ***: terminated
+sizeof=3
 ```
 
-The program crashes because I tried to write beyond the memory region that was allocated for my application. C failed to prevent this mistake because C compilers generally can't identify this class of error, which has been a pervasive source of bugs and security vulnerabilities in C applications.
+The reason `sizeof` returns `3` for a two-character string is that C implicitly added a null terminator at the end of the string for me.
 
-## Zig strings fix C's mistakes while preserving C compatibility
+I can verify this by printing the value of the each character in the string:
+
+```c
+char s[] = "hi";
+printf("%s=[%c, %c, %d]\n", s, s[0], s[1], s[2]);
+```
+
+```text
+hi=[h, i, 0]
+```
+
+Strings in C and C++ are extremely fragile and are a frequent source of bugs and security vulnerabilities. Because the compiler knows so little about the string, there are tons of mistakes you can make:
+
+- You have to iterate the entire string character by character to determine the length of the string.
+- You accidentally overwrite the null terminator, destroying information about where the string ends.
+- You try to add to the string and accidentally write past the end of the string, corrupting other program memory.
+
+## Zig's goal: Fix C's mistakes while preserving C compatibility
 
 Zig is designed to be a modern replacement for C, so it has a difficult job. It has to both correct the mistakes of C while also making it easy to interoperate with legacy C code.
-
-In Zig, strings are both null-terminated and length-checked. Null-terminating Zig strings makes it easy to pass them into C functions, as Zig strings look to a C application just like native C strings.
 
 ## A basic Zig string
 
@@ -146,14 +80,108 @@ The string `"hello"` in Zig has a type of `*const [5:0]u8`.
 
 I'll go from right to left.
 
-`u8` is how Zig represents a byte. An unsigned value of 8 bits.
+`u8` is how Zig represents a byte, which is an unsigned value of 8 bits.
 
-`:0` means that this is a sentinel-terminated buffer. In this case, the sentinel is `0`
+`:0` means that this is a sentinel-terminated buffer. In this case, the sentinel is `0`, the null byte.
 
-Calling strlen
+`const` means that this is a constant variable, so I can't change it after I assign a value.
 
-```bash
-$ zig run src/strings.zig --needed-library c
+`*` means that this value is a pointer to a memory location.
+
+Two important takeaways here:
+
+- Zig always knows the length of a string variable.
+- Zig adds a null terminator to every string.
+
+## The null terminator is just for C
+
+In C, a null terminator effectively determins the length of the string. If you have a five-character string, and you replace character 3 with a null byte, every C string function now considers that string to be two characters long.
+
+```c
+// Truncating a string in C.
+char s[] = "hello";
+s[2] = '\0';
+printf("len=%lu\n", strlen(s));
+printf("value=[%s]\n", s);
 ```
 
-https://www.huy.rocks/everyday/01-04-2022-zig-strings-in-5-minutes
+```text
+len=2
+value=[he]
+```
+
+In Zig, a string still has a null terminator, but as far as I can tell, the null terminator doesn't have special meaning within Zig. When I print the string or check its length, a null character makes no difference. Zig knows the string's true length regardless of where it find a null character.
+
+```zig
+const s = [_:0]u8{ 'h', 'e', 0, 'l', 'o' };
+std.debug.print("s={s}\n", .{s});
+std.debug.print("s.len={d}\n", .{s.len});
+```
+
+```text
+s=helo
+s.len=5
+```
+
+## Zig's bonus character for sentinel-terminated arrays
+
+In Zig, a string is a type of sentinel-terminated array where the sentinel is 0. That means that Zig keeps a null terminator at the end of the string.
+
+```zig
+var s = "hello";
+std.debug.print("s.len={d}\n", .{s.len});
+```
+
+```text
+s.len=5
+```
+
+In most languages, if an array has size N, you're only able to read up to slot N - 1 in the array. In Zig, you're allowed to read up to slot N because Zig allocated an extra space for the null terminator:
+
+```zig
+var s = "hello";
+std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
+```
+
+```text
+s[5]=0
+```
+
+Is this true, or is Zig just letting me read unallocated memory, and it happens to be zero? No, I can see if I try to read one more character, as the code refuses to even compile:
+
+```zig
+var s = "hello";
+std.debug.print("s[{d}]={d}\n", .{ s.len + 1, s[s.len + 1] });
+```
+
+```text
+src/corrupt-string.zig:5:59: error: index 6 outside array of length 5 +1 (sentinel)
+    std.debug.print("s[{d}]={d}\n", .{ s.len + 1, s[s.len + 1] });
+```
+
+The compiler message says explicitly that the variable has length 5 + 1, so it's reserving an extra slot for the null terminator.
+
+I also see that if I manually construct a string without a null terminator, Zig refuses to read slot N:
+
+```zig
+const s = [_]u8{ 'h', 'e', 'l', 'l', 'o' };
+std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
+```
+
+```text
+src/corrupt-string.zig:5:50: error: index 5 outside array of length 5
+    std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
+                                                ~^~~~
+```
+
+But interestingly, on null-terminated
+
+If this weren't a null-terminated string, I couldn't do this. For example, if I didn't bother declaring the type was null terminated, and I just had a function that accepts arrays, Zig will tell me that I can't check past the end of the array:
+
+```zig
+
+```
+
+The compiler doesn't stop me from overwriting the null terminator if I really want to:
+
+TODO
