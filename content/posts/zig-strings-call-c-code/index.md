@@ -180,7 +180,7 @@ Zig prevents you from overwriting the null terminator. If I try, the code compil
 
 ```zig
 var s = [_:0]u8{ 'h', 'e', 'l', 'l', 'o' };
-s[s.len] = 'A';
+s[s.len] = 'A';  // This line has no effect.
 std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
 ```
 
@@ -206,7 +206,3 @@ If this weren't a null-terminated string, I couldn't do this. For example, if I 
 ```zig
 
 ```
-
-The compiler doesn't stop me from overwriting the null terminator if I really want to:
-
-TODO
