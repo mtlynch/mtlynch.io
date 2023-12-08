@@ -3,11 +3,74 @@ title: "Using Zig Strings to Call C Code"
 date: 2023-12-01T10:37:03-05:00
 ---
 
+[Zig](https://ziglang.org/) is a new, open-source programming language designed to replace C. I'm still a Zig beginner, and the way I'm trying to learn more about the language is by using Zig to rewrite parts of existing C applications.
+
+One of the first challenges I encountered with Zig is understanding strings. I couldn't find much documentation about how Zig strings work when calling C code, so I'm sharing my findings in case they're helpful to others who want to use Zig to call C.
+
 ## A brief primer on C strings
 
-In C, a string has the variable type of `char*`. That means the variable stores the memory address where a string begins. The compiler doesn't know where the string ends.
+Before I explain how to pass Zig strings into C code, I need to give a bit of background on how strings work in native C.
 
-C strings don't contain information about the string's length. Instead, C applications indicate the end of a string with a "null terminator," a byte after the last character in a string with the value of `0`.
+In C, a string has the variable type of `char*`. That means the variable stores the memory address where a string begins. The `char*` type doesn't tell the compiler where the string ends. Instead, C applications indicate the end of a string with a "null terminator," a byte after the last character in a string with the value of `0`.
+
+### Exploring string length in C
+
+In C, if I print information about a string, the
+
+```c
+void print_string_info(char* value) {
+  printf("len=%lu\n", strlen(value));
+  printf("value=[%s]\n", value);
+}
+```
+
+If I call the function with the string `"hello"`:
+
+```c
+print_string_info("hello");
+```
+
+I get results like this:
+
+```text
+len=5
+value=[hello]
+```
+
+### Truncatings trings in C
+
+However, I can effectively truncate the string by replacing a character with the null byte (`\0`):
+
+```c
+char s[] = "hello";
+s[2] = '\0';
+print_string_info(s);
+```
+
+```text
+len=2
+value=[he]
+```
+
+Because I replaced the character at index `2` with a null byte, every string function in C treats that string as if it were two characters long.
+
+This isn't a problem, but now any function that sees the string has no way of knowing the "true" length of the string.
+
+### Making strings longer in C
+
+What happens if I replace the null character in a string?
+
+```c
+char s[] = "hello";
+s[5] = 'A'; // Replace the null byte with A.
+print_string_info(s);
+```
+
+The results in this case are undefined, meaning that we don't know what the program will do. `strlen` and `printf` will continue reading past the `A` character looking for the next null byte, but we don't control memory past the end of the `"hello"` string we declared. The program will just be reading whatever happens to be in RAM at that memory location.
+
+Often, this causes the program to crash because the operating system detects the application attempting to read memory outside of the address space that the program was assigned.
+
+### Buffer overflows bugs in C
 
 Suppose you have the following function in C that takes a string and adds " rules!" to it:
 
@@ -41,7 +104,9 @@ Then the function will print a result like this:
 michael rules!
 ```
 
-But if I try a longer string and exceed the limits of the 15-byte buffer, I created, things don't go so well:
+My buffer `str` only has enough room for 15 characters, including the null terminator. The string `"michael"` is seven characters, excluding terminator. The string `" rules"` is six characters, excluding null. The `print_rules` is able to concatenate the two into a 15-character buffer (7 + 6) and still have room for the null terminator.
+
+If I try a longer string and exceed the limits of my 15-byte buffer, things don't go so well:
 
 ```c
 print_rules("rumplestiltskin");
