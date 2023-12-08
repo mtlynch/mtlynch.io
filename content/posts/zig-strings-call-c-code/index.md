@@ -176,7 +176,7 @@ src/corrupt-string.zig:5:50: error: index 5 outside array of length 5
                                                 ~^~~~
 ```
 
-Zig prevents you from overwriting the null terminator
+Zig prevents you from overwriting the null terminator. If I try, the code compiles and runs fine, but Zig casually ignored my request:
 
 ```zig
 var s = [_:0]u8{ 'h', 'e', 'l', 'l', 'o' };
