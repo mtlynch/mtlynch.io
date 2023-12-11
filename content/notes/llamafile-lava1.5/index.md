@@ -50,9 +50,9 @@ I tried uploading the show poster, and nothing happened. It turned out that I ha
 
 So, a bit of a rough start. It gets all three names incorrect, hallucinating variations on the actual names.
 
-> **User**:Who are the performers listed on this poster?
+> **User**: Who are the performers listed on this poster?
 >
-> **Llama**:The performers listed on this poster are Ayeshah Mae, Jennifer Myskowski-Szynski, and Ayisha Mae.
+> **Llama**: The performers listed on this poster are Ayeshah Mae, Jennifer Myskowski-Szynski, and Ayisha Mae.
 
 It took about a minute to produce this answer. Stats were listed as:
 
@@ -60,9 +60,9 @@ It took about a minute to produce this answer. Stats were listed as:
 
 I tried another question:
 
-> **User**:Where will this show take place?
+> **User**: Where will this show take place?
 >
-> **Llama**:The comedy showcase will take place at Luthier's Co-op in Rathmell, Pennsylvania.
+> **Llama**: The comedy showcase will take place at Luthier's Co-op in Rathmell, Pennsylvania.
 
 Again, it's getting something, but it's only about 70% accurate.
 
@@ -74,17 +74,17 @@ In the [research paper](https://arxiv.org/abs/2310.03744), LLaVA's authors showe
 
 I tried repeating the format from the paper, and it just gave back nothing:
 
-> **User**:Please read the text in this image and return the information in the following JSON format (note xxx is placeholder, if the information is not available in the image, put "N/A" instead).
+> **User**: Please read the text in this image and return the information in the following JSON format (note xxx is placeholder, if the information is not available in the image, put "N/A" instead).
 > {"title": xxx, "date": xxx, "time": xxx, "performers": xxx, "hosts": xxx, "location": { "address": xxx, "city": xxx, "state": xxx, "zipCode": xxx}}
 
 I could tell from the server logs that it finished processing the request, but nothing came back.
 
 I tried again, and it successfully generated JSON, though it still hallucinated a lot of the information:
 
-> **User**:Please read the text in this image and return the information in the following JSON format (note xxx is placeholder, if the information is not available in the image, put "N/A" instead).
+> **User**: Please read the text in this image and return the information in the following JSON format (note xxx is placeholder, if the information is not available in the image, put "N/A" instead).
 > {"title": xxx, "date": xxx, "time": xxx, "performers": xxx, "hosts": xxx, "location": { "address": xxx, "city": xxx, "state": xxx, "zipCode": xxx}}
 >
-> **Llama**:{"title": "Luther's Coop Comedy Showcase", "date": "December 2nd", "time": "7:00 PM - 9:30 PM", "performers": ["Ayisha M. Quinn", "Jennifer Myskowski-Szczykowski"], "hosts": ["Molly Hyne & Matt Woodland"], "location": { "address": "109 Court St, Framingham, MA", "city": "Framingham", "state": "MA", "zipCode": "01702"}}
+> **Llama**: {"title": "Luther's Coop Comedy Showcase", "date": "December 2nd", "time": "7:00 PM - 9:30 PM", "performers": ["Ayisha M. Quinn", "Jennifer Myskowski-Szczykowski"], "hosts": ["Molly Hyne & Matt Woodland"], "location": { "address": "109 Court St, Framingham, MA", "city": "Framingham", "state": "MA", "zipCode": "01702"}}
 
 It got a few things right:
 
@@ -151,6 +151,14 @@ I read [a StackOverflow thread](https://stackoverflow.com/q/71498324/90388) that
 ```
 
 But I got the same result.
+
+## Successfully using CUDA for GPU-based LLaVA 1.5
+
+**Update (2023-12-04)**: I finally got this working.
+
+I had to file a support ticket for access to a higher GPU from Scaleway. When I tried with Scaleway's `H100-1-80G` instance with 240 GB of RAM and 80 GB of VRAM, everything worked, and the performance was 10.6x faster when I ran it on the CPU.
+
+{{<img src="q1-gpu.png" max-width="600px" has-border="true" caption="Running LLaVA on a GPU was 10.6x faster than using the CPU">}}
 
 ## Wrap up
 
