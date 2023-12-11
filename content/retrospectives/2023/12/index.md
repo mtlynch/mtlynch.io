@@ -124,12 +124,6 @@ It affected five customers, and within 24 hours, two of the five had emailed us 
 
 We advertise a handling time of up to three business days, but customers don't really pay attention to that. They're used to the Amazon flow where the package is on their doorstep a few seconds after they hit "Purchase."
 
-## The return of discretionary time
-
-If I wake up and start working at 7am, I stop working at 4pm, which includes breaks for breakfast, lunch, and exercise.
-
-I always jinx it because whenever I celebrate having free time, some new problem pops up or something about our process changes
-
 ## My first Handmade conference
 
 In November, I attended my first [Handmade conference](https://handmadecities.com/seattle/) in Seattle.
@@ -142,17 +136,15 @@ There's an old joke that David Foster Wallace tells in his famous [2005 Kenyon C
 
 > There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says “Morning, boys. How’s the water?” And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes “What the hell is water?”
 
-I'm so used to thinking about software in terms of popular architectures, I almost forget that it's still viable to do anything else.
+For me, the web browser is water.
 
-Even though I try to keep my tech stacks and dependencies pretty minimalist, my standard stack is still WebComponents on top of HTML on top of Go on top of Docker on top of Linux. It's been a while since I considered how weird it is that one of the bedrocks of most of my software is a web browser, a piece of technology that was fundamentally designed for representing documents.
-
-So, for me, the web browser is water.
+I'm so used to thinking about software as something the user ultimately interacts with through HTML and JavaScript that I almost forget about any other way of developing software. It's been a long time since I considered how weird it is that I design everything around a web browser, a piece of technology whose primary job is representing documents.
 
 But at Handmade, most of the developers I met didn't deal with web browsers at all, and they didn't use any of the technologies that I'm used to.
 
 I met the creator of [MobileCode](https://mobilecodeapp.com/), an app for writing software on phones and tablets. I asked him what language he used, expecting him maybe to say Flutter or probably React Native. I was gobsmacked when he said "C."
 
-And not only that, he said that he's still pleased with the choice. He found it easier to write cross-platform code in C easier than to use the mobile frameworks that are designed for that purpose. C let him call native graphics APIs on iOS and Android directly rather than working through many layers of abstraction.
+And not only that, he said that he's had a positive experience doing mobile development in C. He can call native graphics APIs on iOS and Android directly rather than working through many layers of abstraction of a modern framework.
 
 ### Relentless indie ambition
 
@@ -166,7 +158,7 @@ And Handmade delivered on this expectation. A lot of the presenters and attendee
 
 I like that ambitious spirit. Cameron Riekes is an undergrad, and he presented about building a 2D RPG game. But then he "ended up" coding his own 3D game engine from scratch.
 
-And Yasser Arguelles is 20ish years old and is working on [Tilde](https://yasserarg.com/tb.html), a from-scratch replacement for LLVM. In his presentation, he mentioned that he didn't have a background in compilers, but one of the most popular requests he saw in Handmade discussions
+And Yasser Arguelles is 20ish years old and is working on [Tilde](https://yasserarg.com/tb.html), a from-scratch replacement for LLVM. In his presentation, he mentioned that he didn't have a background in compilers, but one of the most popular requests he saw in Handmade discussions was for an alternative to LLVM, so he thought, "Sure, I'll do that."
 
 I met Andrew Kelly, the creator of Zig, in person, which inspired me to [finally try writing some Zig code](/notes/zig-call-c-simple/).
 
@@ -176,7 +168,7 @@ One complaint I had was that the tone was critical of big tech to a degree that 
 
 The idea was that big tech is basically poison. Everything they produce is buggy, bloated, unreliable, and overpriced.
 
-And the reason more people aren't aware of it is that big tech controls software conferences, and they prevent presenters from speaking honestly about the problems in big tech software. I've spoken at a few mid-level conferences, and nobody's ever told me that I can't criticize big tech, so this rang false to me.
+And the reason more people aren't aware of it, according to speakers, is that big tech controls software conferences, and they prevent presenters from speaking honestly about the problems in big tech software. I've spoken at a few mid-level conferences, and nobody's ever told me that I can't criticize big tech, so this rang false to me.
 
 I'm sympathetic to this viewpoint. I prefer to avoid big tech when there's an indie alternative available. But I also think that big tech does a lot of things very well and does most of the heavy lifting in driving technology forward. I think it's a mistake to simply turn up our noses at it and assume the indie thing is always better than the big tech equivalent.
 
