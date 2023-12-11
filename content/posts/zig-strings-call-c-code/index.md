@@ -93,7 +93,7 @@ Two important takeaways here:
 - Zig always knows the length of a string variable.
 - Zig adds a null terminator to every string.
 
-## The null terminator is just for C
+## Zig's null terminator is for C compatibility
 
 In C, a null terminator effectively determins the length of the string. If you have a five-character string, and you replace character 3 with a null byte, every C string function now considers that string to be two characters long.
 
@@ -101,55 +101,81 @@ In C, a null terminator effectively determins the length of the string. If you h
 // Truncating a string in C.
 char s[] = "hello";
 s[2] = '\0';
+printf("s=[%s]\n", s);
 printf("len=%lu\n", strlen(s));
-printf("value=[%s]\n", s);
 ```
 
 ```text
+s=[he]
 len=2
-value=[he]
 ```
 
 In Zig, a string still has a null terminator, but as far as I can tell, the null terminator doesn't have special meaning within Zig. When I print the string or check its length, a null character makes no difference. Zig knows the string's true length regardless of where it find a null character.
 
 ```zig
+// Trying to null-terminate a string in the middle in Zig.
 const s = [_:0]u8{ 'h', 'e', 0, 'l', 'o' };
 std.debug.print("s={s}\n", .{s});
 std.debug.print("s.len={d}\n", .{s.len});
 ```
 
 ```text
-s=helo
+s=[helo]
 s.len=5
 ```
 
-## Zig's bonus character for sentinel-terminated arrays
+## Understanding null-termination in Zig
 
-In Zig, a string is a type of sentinel-terminated array where the sentinel is 0. That means that Zig keeps a null terminator at the end of the string.
+Just like in C, Zig strings are null-terminated.
+
+Zig has a special variable type for sentinel-terminated arrays. The syntax for a sentinel-terminated array is square brackets containing the sentinel character, so that's why a string is `[:0]`, as strings are null (zero)-terminated.
+
+Zig is the first language I've worked with that has sentinel-terminated arrays, so I was curious about how they work.
+
+### The `len` field excludes the null character
+
+When you declare a string in Zig, the it has a `len` property to report the string's length. Interestingly, the length excludes the null-termination character:
 
 ```zig
-var s = "hello";
+const s = "hi";
 std.debug.print("s.len={d}\n", .{s.len});
 ```
 
 ```text
-s.len=5
+s.len=2
 ```
 
-In most languages, if an array has size N, you're only able to read up to slot N - 1 in the array. In Zig, you're allowed to read up to slot N because Zig allocated an extra space for the null terminator:
+But I know that the length of the array is _actually_ three because it has to store the null byte as well. I can prove it by checking the size of the string in bytes:
 
 ```zig
-var s = "hello";
+const s = "hi";
+// Dereference the string s with s.*. Otherwise, Zig would report the size of
+// the pointer.
+std.debug.print("@sizeOf={d}\n", .{@sizeOf(@TypeOf(s.*))});
+```
+
+```text
+@sizeOf=3
+```
+
+### Where is the real array boundary?
+
+In most languages, if an array has size N, you're only able to read up to slot N - 1 in the array. For example, in an array of size two, you can read slot `0`, and you can read slot `1`, but reading slot `2` will either cause a runtime crash or have undefined behaviour.
+
+Zig's normal arrays behave similarly to other languages, but Zig's sentinel-terminated arrays allow you to read one slot beyond the supposed end of the array. This is because, despite what `.len` reports, there's an extra slot for the sentinel value:
+
+```zig
+var s = "hi";
 std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
 ```
 
 ```text
-s[5]=0
+s[2]=0
 ```
 
-Is this true, or is Zig just letting me read unallocated memory, and it happens to be zero?
+At first, I wasn't sure if I was understanding the behavior properly. Maybe I'm actually reading beyond the array bounds, but the next byte in memory happens to be 0.
 
-No, I can see if I try to read one more character, as the code refuses to even compile:
+I can disprove my alternate hypothesis by trying to read one more character: the code refuses to even compile:
 
 ```zig
 var s = "hello";
@@ -163,20 +189,26 @@ src/corrupt-string.zig:5:59: error: index 6 outside array of length 5 +1 (sentin
 
 The compiler message says explicitly that the variable has length 5 + 1, so it's reserving an extra slot for the null terminator.
 
-I also see that if I manually construct a string without a null terminator, Zig refuses to read slot N:
+The Zig documentation confirms my understanding:
+
+> Sentinel-terminated slices allow element access to the `len` index.
+>
+> https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Slices
+
+### You can't overwrite the null-terminator
+
+The Zig documentation claims that the `[:0]` syntax means that Zig "guarantees a sentinel value at the element indexed by the length."
+
+I decided to test this by overwriting the null character in a null-terminated buffer:
 
 ```zig
-const s = [_]u8{ 'h', 'e', 'l', 'l', 'o' };
-std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
+var s = [_:0]u8{ 'h', 'e', 'l', 'l', 'o' };
+s[s.len] = 'A';
 ```
 
-```text
-src/corrupt-string.zig:5:50: error: index 5 outside array of length 5
-    std.debug.print("s[{d}]={d}\n", .{ s.len, s[s.len] });
-                                                ~^~~~
-```
+Surprisingly, the above code compiles and runs without an error. Isn't Zig supposed to guarantee the null-termination property?
 
-Zig prevents you from overwriting the null terminator. If I try, the code compiles and runs fine, but Zig casually ignored my request:
+It turns out that, Zig guarantees the null-termination by ignoring operations to overwrite the null-terminator character. Even though Zig allows me to write code that overwrites the null-termination character, the operation is ignored, and that slot in the array preserves its original value of `0`.
 
 ```zig
 var s = [_:0]u8{ 'h', 'e', 'l', 'l', 'o' };
