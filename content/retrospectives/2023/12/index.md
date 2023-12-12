@@ -44,9 +44,9 @@ In this case, I forgot to prioritize this. I lost almost two full weeks to confe
 
 It turns out our landlord is pretty relaxed about when we move out, so there's less urgency to close the office than I thought. It's also turning out to be harder than I expected to clear the office without just throwing everything in the garbage. We have dozens of items that are worth $1-50 apiece, but we generally have only a handful of each.
 
-As an example, we have three used Arduino Uno boards. Each one retails for $28. We could maybe sell our three on eBay for a total of $30 used, but it would take about two hours to handle the process from end-to-end. So it would cost more in employee wages than we'd actually make selling the boards.
+As an example, we have three used Arduino Uno boards. Each one retails for $28. We could maybe sell our three on eBay for a total of $30 used, but it would take about two hours to handle the process from end to end. So it would cost more in employee wages than we'd actually make selling the boards.
 
-My new plan is to just to wait until we're close to moving out and advertise a time when people can just come by and take what they want for free.
+My new plan is to just wait until we're close to moving out and advertise a time when people can just come by and take what they want for free.
 
 ## [TinyPilot](https://tinypilotkvm.com/?ref=mtlynch.io) stats
 
@@ -71,9 +71,9 @@ $80-100k is TinyPilot's normal, and we're safely in there. I might have tried to
 
 For most of TinyPilot's life, we haven't offered overnight or one-day shipping.
 
-When we were fulfilling orders in-house, we staffed our office six days per week for processing orders, but only one person was there per day. I didn't offer one-day shipping because I knew there'd be situations where someone's out sick or on vacation, so a one-day turnaround wouldn't be possible.
+When we were fulfilling orders in-house, we staffed our office six days per week to process orders, but only one person was there per day. I didn't offer one-day shipping because I knew there'd be situations where someone's out sick or on vacation, so a one-day turnaround wouldn't be possible.
 
-When we switched fulfillment to a third-party logistics warehouse (3PL), our fragility around staffing went away. The 3PL has much more worker redundancy than we do, so orders should go out in one business day no matter what.
+When we switched fulfillment to a third-party logistics warehouse (3PL), our fragility around staffing went away. The 3PL has much more worker redundancy than we do, so orders should go out in one business day, no matter what.
 
 Finally, we should be able to offer one-day shipping options!
 
@@ -92,17 +92,17 @@ Our 3PL uses a (not very good) warehouse management solution called ShipStation.
 
 1. ShipStation offers the 3PL a list of shipping options they support.
 1. The 3PL chooses from this list of shipping options they want to offer their client (TinyPilot).
-1. Shopify queries the ShipStation to find out which shipping options ShipStation and the 3PL agree on.
+1. Shopify queries ShipStation to find out which shipping options ShipStation and the 3PL agree on.
 1. I pick from Shopify which shipping options I want to make available to customers.
 1. At checkout, ShipStation makes terrible guesses at which options are "best" for the customer and reduces the set of shipping options to just two or three.
 1. Customers pick a shipping option at checkout.
 1. The 3PL purchases postage from ShipStation or another vendor to match the customer's shipping choice.
 
-The problem is that with so many players involved, there are tons of ways for things to go wrong and tons of opportunities for finger pointing.
+The problem is that with so many players involved, there are tons of ways for things to go wrong and tons of opportunities for finger-pointing.
 
 I tried to enable one-day shipping, and I found that there weren't any one-day options available by the time configuration bubbled through from the 3PL to ShipStation to Shopify to me.
 
-After months of back and forth, we narrowed the problem down to ShipStation. They don't show one-day shipping options because they consider one-day and two-day shipping options to be "similar" but the two-day options are always cheaper, so they never present the one-day option.
+After months of back and forth, we narrowed the problem down to ShipStation. They don't show one-day shipping options because they consider one-day and two-day shipping options to be "similar," but the two-day options are always cheaper, so they never present the one-day option.
 
 And I repeat: ShipStation, a company whose primary job is to sell you postage for shipping packages, doesn't understand why anyone would choose one-day shipping if it's more expensive.
 
@@ -113,19 +113,19 @@ And I repeat: ShipStation, a company whose primary job is to sell you postage fo
 
 I was having so many issues with ShipStation that I decided to switch back to the old stack for presenting shipping options to customers. Now, we just show the customer the shipping options and rates through Shopify and don't even bother querying rates from ShipStation.
 
-The problem with cutting ShipStation out of the checkout process is that the 3PL is still buying postage at the higher ShipStation rate, but Shopify is collecting shipping fees from customers at the lower Shopify rate. So a customer might only pay $30 for overnight shipping, but the real price of postage is $100 through ShipStation. TinyPilot has to absorb the $70 difference.
+The problem with cutting ShipStation out of the checkout process is that the 3PL is still buying postage at the higher ShipStation rate, but Shopify is collecting shipping fees from customers at the lower Shopify rate. So, a customer might only pay $30 for overnight shipping, but the real price of postage is $100 through ShipStation. TinyPilot has to absorb the $70 difference.
 
 Still, this solution allows TinyPilot to offer the shipping options we want without ShipStation dopily overriding us. And absorbing $70 of extra shipping costs is better than not making the sale at all.
 
-### One-day shipping customers are 20x more demanding
+### One-day shipping customers are 4x more demanding
 
 Most of the time, the 3PL ships our orders within one business day. But occasionally, something comes up and it takes two business days, and sometimes (very rarely) three. We advertise on our website up to three days of handling time, but customers seem not to pay attention to that.
 
-98% of the time, customers who chose ground or two-day shipping don't say anything about a one-day handling delay
+90% of the time, customers who chose ground or two-day shipping don't say anything about a one-day handling delay
 
 The Monday after Black Friday, UPS had a strange issue where they weren't updating tracking information for any of the orders they picked up. The warehouse swore that UPS picked everything up, but UPS tracking showed nothing.
 
-The UPS tracking bug affected five customers who had requested overnight shipping. Within 24 hours, two of them had emailed us to complain about the delay. So, 40% of one-day shipping customers complained as opposed to about 2% who notice delays in ground or two-day shipping.
+The UPS tracking bug affected five customers who had requested overnight shipping. Within 24 hours, two of them had emailed us to complain about the delay. So, 40% of one-day shipping customers complained as opposed to about 10% who noticed delays in ground or two-day shipping.
 
 And I get it. When I order something with one-day shipping, I'm eager to get it, and I'm annoyed if the merchant sits on it for days.
 
@@ -135,13 +135,13 @@ These one-day shipping customers are a double-edged sword. If they're willing to
 
 In November, I attended my first [Handmade conference](https://handmadecities.com/seattle/) in Seattle. It's an indie conference for people who work on low-level software.
 
-Here were my takeaways from the conference.
+Here are my takeaways from the conference.
 
 ### There are alternatives to the popular tech stacks
 
 David Foster Wallace opened his famous [2005 Kenyon College commencement speech](https://fs.blog/david-foster-wallace-this-is-water/) with a joke about fish:
 
-> There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says “Morning, boys. How’s the water?” And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes “What the hell is water?”
+> There are these two young fish swimming along, and they happen to meet an older fish swimming the other way, who nods at them and says. "Morning, boys. How’s the water?" And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes "What the hell is water?"
 
 For me, the web browser is water.
 
@@ -151,19 +151,19 @@ But at Handmade, most of the developers I met didn't deal with web browsers at a
 
 I met the creator of [MobileCode](https://mobilecodeapp.com/), an app for writing software on phones and tablets. I asked him what language he used, expecting him maybe to say Flutter or probably React Native. I was gobsmacked when he said "C."
 
-And not only that, he said that he's had a positive experience doing mobile development in C. He can call native graphics APIs on iOS and Android directly rather than working through many layers of abstraction of a modern framework.
+Not only that, but he said that he's had a positive experience doing mobile development in C. He can call native graphics APIs on iOS and Android directly rather than working through many layers of abstraction of a modern framework.
 
 ### Relentless indie ambition
 
 The reason I first heard about Handmade to begin with is that I follow [Andreas Kling](https://awesomekling.github.io/about/), the creator of SerenityOS. He created the initial OS by himself with no third-party libraries or dependencies. He posted about presenting his project at Handmade in 2021.
 
-And I looked into it and realized Handmade also tends to attract talks about [Zig](https://ziglang.org/), an indie programming language I've been interested in for a while. Andrew Kelly, the creator of Zig, apeared [on the CoRecursive podcast in 2021](https://corecursive.com/067-zig-with-andrew-kelley/) and talked about how he wants to replace all the C code in the world with Zig.
+Handmade also attracts talks about [Zig](https://ziglang.org/), an indie programming language I've been interested in for a while. Andrew Kelly, the creator of Zig, apeared [on the CoRecursive podcast in 2021](https://corecursive.com/067-zig-with-andrew-kelley/) and talked about how he wants to replace all the C code in the world with Zig.
 
 > **Adam**: What does the world look like when you take down C?
 >
 > **Andrew**: Oh, it’s beautiful. It looks mostly the same, except all your apps just work slightly better, and they just crash less often, and they use less memory, and they just go faster.
 >
-> When professors teach operating system courses, it’ll just be like obviously assumed that you just use Zig... when textbooks try to show how operating systems work or how embedded devices work, it’ll just be assumed that you’re going to use Zig as the example code, because that’s what everyone does.
+> When professors teach operating system courses, it’ll just be like obviously assumed that you just use Zig... when textbooks try to show how operating systems work or how embedded devices work, it’ll just be assumed that you’re going to use Zig as the example code because that’s what everyone does.
 
 I think Andrew's flavor of ambition and enthusiasm for software is so cool and exciting, and that was what I came to Handmade to find.
 
@@ -175,7 +175,7 @@ Cameron Riekes is an undergrad, and he presented about building a 2D RPG game. B
 
 And Yasser Arguelles is 20ish years old and is working on [Tilde](https://yasserarg.com/tb.html), a from-scratch replacement for LLVM. For context: LLVM is a compiler backend that's been under active development for 20 years. In his presentation, Yasser mentioned that he didn't have a background in compilers, but one of the most popular requests he saw in Handmade discussions was for an alternative to LLVM, so he thought, "Sure, I'll do that."
 
-And I got to meet Andrew Kelly, who was very nice. And the conversation inspired me to [finally try writing some Zig code](/notes/zig-call-c-simple/).
+And I got to meet Andrew Kelly, who was very nice. And the conversation finally inspired me to [try writing some Zig code](/notes/zig-call-c-simple/).
 
 ### Extreme skepticism of big tech
 
