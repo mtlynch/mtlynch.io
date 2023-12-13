@@ -1,7 +1,9 @@
 ---
 title: "TinyPilot: Month 41"
-date: 2023-12-07T00:00:00-05:00
+date: 2023-12-13T00:00:00-05:00
 description: "One-day shipping: how hard could it be?"
+images:
+  - /retrospectives/2023/12/ship1.webp
 ---
 
 {{<notice type="info">}}
