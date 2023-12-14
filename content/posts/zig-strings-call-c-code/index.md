@@ -1,6 +1,6 @@
 ---
 title: "Using Zig Strings to Call C Code"
-date: 2023-12-01T10:37:03-05:00
+date: 2023-12-15T10:37:03-05:00
 ---
 
 [Zig](https://ziglang.org/) is a new, open-source programming language designed to replace C. I'm still a Zig beginner, and the way I'm trying to learn more about the language is by using Zig to rewrite parts of existing C applications.
@@ -208,7 +208,7 @@ s[s.len] = 'A';
 
 Surprisingly, the above code compiles and runs without an error. Isn't Zig supposed to guarantee the null-termination property?
 
-It turns out that, Zig guarantees the null-termination by ignoring operations to overwrite the null-terminator character. Even though Zig allows me to write code that overwrites the null-termination character, the operation is ignored, and that slot in the array preserves its original value of `0`.
+It turns out that, Zig guarantees the null-termination by ignoring operations to overwrite the null-terminator character. Even though Zig allows me to write code that overwrites the null-termination character, Zig [ignores the assignment operation](https://github.com/ziglang/zig/issues/9791#issuecomment-1854907508). The last slot in the array preserves its original value of `0`.
 
 ```zig
 var s = [_:0]u8{ 'h', 'e', 'l', 'l', 'o' };
