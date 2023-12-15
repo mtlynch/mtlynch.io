@@ -532,7 +532,7 @@ I can't figure out why the size of `sCopy` is 16. The size remains the same rega
 
 I know that `s` is an array whose size Zig knows at compile time, whereas `sCopy` is a slice whose size Zig doesn't know until runtime. Still, Zig knows the length of the slice and should therefore know how many bytes it takes up, but I can't figure out how to query that information.
 
-**Update**: [/u/paulstelian97](https://www.reddit.com/user/paulstelian97) on reddit [explains](https://www.reddit.com/r/Zig/comments/18j13tu/using_zig_to_call_c_code_strings/kdgx3df/) that slices are "fat pointers," which contain a memory address and a length. Now I understand why it's two times the size of a regular pointer, but I still don't know how to ask Zig for the size of the slice in bytes.
+**Update**: [/u/paulstelian97](https://www.reddit.com/user/paulstelian97) on reddit [explains](https://www.reddit.com/r/Zig/comments/18j13tu/using_zig_to_call_c_code_strings/kdgx3df/) that slices are ["fat pointers,"](https://ziglang.org/documentation/0.11.0/#Pointers) which contain a memory address and a length. Now I understand why it's two times the size of a regular pointer, but I still don't know how to ask Zig for the size of the slice in bytes.
 
 ## Wrap up
 
