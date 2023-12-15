@@ -175,7 +175,7 @@ No, the Zig documentation confirms that you can read slot `N` in an `N`-length s
 
 > Sentinel-terminated slices allow element access to the `len` index.
 >
-> https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Slices
+> <https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Slices>
 
 I can also try to read slot `N + 1` and see that Zig refuses to compile the code:
 
