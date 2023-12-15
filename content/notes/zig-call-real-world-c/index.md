@@ -1,6 +1,6 @@
 ---
 title: "Using Zig to Call a Real World C Function"
-date: 2023-12-01T00:00:00-05:00
+date: 2023-12-21T00:00:00-05:00
 tags:
   - zig
 ---
