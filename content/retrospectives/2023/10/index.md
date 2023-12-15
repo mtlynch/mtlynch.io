@@ -57,7 +57,7 @@ Our assembly went according to plan, and now all of our new devices are at the w
 | Enterprise Subscriptions | $290.70        | $290.70        | 0                                               |
 | Royalties                | $2,969.62      | $2,056.30      | <font color="red">-$913.32 (-31%)</font>        |
 | Total Revenue            | $94,930.78     | $85,727.02     | <font color="red">-$9,203.76 (-10%)</font>      |
-| **Profit**               | **$28,454.42** | **$8,163.88**  | **<font color="red">-$20,290.54 (-71%)</font>** |
+| **Profit**               | **$28,454.42** | **$8,644.82**  | **<font color="red">-$19,809.60 (-70%)</font>** |
 
 Revenue is down a bit, but $80k/month +/- $10k is about our norm, so I'm not too concerned. My priority right now is sticking the landing on our manufacturing transition.
 

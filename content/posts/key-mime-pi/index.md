@@ -245,10 +245,23 @@ Standard USB ports come up short:
 | USB 2.0       | 5 V / 0.5 A  |
 | USB 3.0       | 5 V / 0.9 A  |
 
-I currently am still searching for a solution tot his problem. Here are some possible solutions I have not yet tested:
+I currently am still searching for a solution to this problem. Here are some possible solutions I have not yet tested:
 
-- Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port
-- Use the [Zero2Go Power Adaptor](http://www.uugear.com/product/zero2go-omini-wide-input-range-multi-channel-power-supply-for-raspberry-pi/) to connect an [AC to microUSB adaptor](https://smile.amazon.com/Raspberry-Supply-SoulBay-Adapter-Android/dp/B07CVH21NC/).
+- ~~Use a [PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to draw power from the Ethernet port~~
+- ~~Use the Zero2Go Power Adaptor to connect an AC to microUSB adaptor.~~
+
+**Update**: To solve this problem, I worked with an engineering firm to create [a custom circuit board](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) that splits the Pi's USB-C port into two. The first port accepts USB power, so you can still deliver a full 3 Amps to the Pi. The second accepts USB data out, so the Pi can still impersonate a USB keyboard.
+
+{{<gallery caption="The [TinyPilot Power Connector](https://tinypilotkvm.com/product/tinypilot-power-connector?ref=mtlynch.io) allows the Pi to receive 3 Amps of power through its USB-C port without losing USB OTG functionality.">}}
+{{<img src="power-connector.jpg" alt="Close-up of power connector" max-width="500px">}}
+{{<img src="power-connector-cables.jpg" alt="Power connector hooked up to Raspberry Pi and microUSB cables" max-width="500px">}}
+{{</gallery>}}
+
+Importantly, the power connector's data port excludes a USB power line. This ensures that voltage differences between the computer's power source and the Pi's power source won't cause undesirable power backflows.
+
+{{<notice type="warning">}}
+**Note**: Without a proper connector, there's a risk of hardware damage if you power the Pi from an external power source while it's connected to a computer. See [the TinyPilot wiki](https://github.com/tiny-pilot/tinypilot/wiki/Powering-your-TinyPilot-safely) for additional details.
+{{</notice>}}
 
 ## Troubleshooting
 
