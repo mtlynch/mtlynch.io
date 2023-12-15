@@ -321,7 +321,7 @@ const s = a[0..2 :0];
 std.debug.print("strlen({s})={d}\n", .{ s, strlen(s) });
 ```
 
-If I compile this Zig code with default settings, Zig adds debug checks that cause a panic at runtime:
+If I compile this code with default settings, Zig adds debug checks that cause a panic at runtime:
 
 ```bash
 $ zig run src/wrap-strlen-evil.zig --library c
@@ -336,16 +336,16 @@ thread 43926 panic: sentinel mismatch: expected 0, found 108
 Unwind information for `libc.so.6:0x7ffff7dffacd` was not available, trace may be incomplete
 ```
 
-The error `sentinel mismatch: expected 0, found 108` means that at slot 2 in the slice, Zig expected to find a `0` byte, but it found the `'l'` character (represented as `108`).
+The error `sentinel mismatch: expected 0, found 108` means that at slot 2 in the slice, Zig expected to find a `0` byte (null terminator), but it found the `'l'` character (represented as `108`).
 
-If I compile the code in release mode, the program has undefined behavior:
+If I compile the code in release mode, the program has [undefined behavior](https://ziglang.org/documentation/0.11.0/#Undefined-Behavior):
 
 ```bash
 $ zig run src/wrap-strlen-evil.zig --library c -O ReleaseFast
 strlen(he)=5
 ```
 
-Zig sees the string `s` as having two characters because it knows the length of the slice. C doesn't have length information, so it searches for the first null byte, which causes the program to read beyond the memory allocated for the `a` array. Depending on the environment, this program could also crash with an access violation because it's reading memory beyond what it allocated.
+Zig sees the string `s` as having two characters (`"he"`) because it knows the length of the slice. C doesn't have length information, so it searches for the first null byte, which causes the program to read beyond the memory allocated for the `a` array. Depending on the environment, this program could crash with an access violation because it's reading memory beyond what it allocated.
 
 ## Receiving C strings in Zig
 
@@ -364,7 +364,7 @@ char* strdup(const char* str1);
 
 As the comment says, `strdup` takes a string, allocates memory for a copy of that string, then copies the contents of the string into the newly allocated buffer.
 
-A Zig wrapper for the C `strdup` function should look something like this:
+A Zig wrapper for the C `strdup` function might look like this:
 
 ```zig
 fn strdup(str: [:0]const u8) ![*:0]u8 { ... }
@@ -374,7 +374,7 @@ The function takes as input a null-terminated string. The return value is `![*:0
 
 `u8` means an unsigned byte.
 
-`[*:0]` means a null-terminated slice of unknown length. This differs from `[:0]`, as the latter means that Zig knows the slice's length and makes it accessible through the `.len` property, whereas `[*:0]`, Zig doesn't know the length, just that it terminates with a null byte.
+`[*:0]` means a null-terminated slice of unknown length. This differs from `[:0]`, as the latter means that Zig knows the slice's length and makes it accessible through the `.len` property. For a type of `[*:0]`, Zig doesn't know the length, just that it terminates with a null byte.
 
 `!` means that this function may return an error. The error is possible because the underlying C `strdup` function can fail.
 
@@ -438,13 +438,13 @@ sCopy= [hi] (type=[*:0]u8, size=8, len=2)
 
 The output is pretty straightforward. `s` and `sCopy` are different variable types even though they contain the same data. That's because `sCopy` represents memory that C allocated, whereas `s` represents memory that Zig allocated and manages.
 
-That's why I can't get a real value for `sCopy`'s size. Zig doesn't really know the size of the memory buffer because C allocated it. The size it reports is `8` because that's the size of the pointer, and I ran this code on a 64-bit system, where pointers are eight bytes.
+Zig reports that `sCopy`'s size is `8` because that's the size of a pointer on a 64-bit system. Zig can't tell me the size of the memory buffer because C allocated it and can't communicate buffer size information to Zig.
 
 ### Improving the wrapper with Zig-managed buffers
 
-I was able to call C's `strdup` function from Zig, but my solution is still a bit untidy. My Zig wrapper bleeds out its implementation details because it returns to the caller a slice of unknown length, and the caller has to free the buffer with `std.c.free` instead of using a Zig-native memory allocator.
+I was able to call C's `strdup` function from Zig, but my solution is a bit untidy. My Zig wrapper bleeds out its implementation details because it's returning a slice of unknown length, and the caller has to free the buffer with `std.c.free` instead of using a Zig-native memory allocator.
 
-What if I wanted to abstract away the C implementation details a bit better and make this look like a regular, native Zig function?
+What if I wanted to abstract away the C implementation details and make this look like a regular, native Zig function?
 
 Here's a revision of my `strdup` wrapper that allocates a Zig-native buffer and copies the resulting string into the new buffer:
 
@@ -475,11 +475,11 @@ fn strdup(allocator: std.mem.Allocator, str: [:0]const u8) ![:0]u8 {
 
 There are a few changes between the original implementation and this revision.
 
-First, this function takes a `std.mem.Allocator`, a Zig type that allocates memory. In Zig, you don't just allocate memory whenever you feel like it. To avoid hidden memory allocations, functions accept a `std.mem.Allocator` type, which makes it obvious to callers that the function might allocate memory.
+First, this function takes a `std.mem.Allocator`, a Zig object that allocates memory. In Zig, you don't just allocate memory whenever you feel like it by calling a global memory allocation function like you do in C. To avoid hidden memory allocations, functions accept a `std.mem.Allocator` type, which makes it obvious to callers that the function might allocate memory.
 
-Next, instead of returning a C memory buffer and making it the caller's responsibility to free in a non-standard way, the function returns a regular Zig slice. Callers to `strdup` are still responsible for freeing the slice, but they can do it the standard way with `allocator.free`.
+Next, instead of returning a C memory buffer and making it the caller's responsibility to free in a non-standard way, the new `strdup` implementation returns a regular Zig slice. Callers to `strdup` are still responsible for freeing the slice, but they can do it the standard way with `allocator.free`.
 
-The downside of this revision is that it's slower than the previous version. In this version, I'm allocating and copying memory twice: once in C, and another time in Zig. If this were performance-critical code, perhaps I'd take the speedup by making the caller deal with the C array, but in general, I prefer to let Zig manage my memory.
+The downside of this revision is that it's slower than the previous version. I'm allocating and copying memory twice: once in C, and another time in Zig. If this were performance-critical code, perhaps I'd take the speedup by making the caller deal with the C array, but in general, I prefer to let Zig manage my memory.
 
 Here's a complete example with the new wrapper implementation:
 
@@ -534,7 +534,9 @@ I know that `s` is an array whose size Zig knows at compile time, whereas `sCopy
 
 ## Wrap up
 
-Zig's strings make it easy to pass strings into C code as well as receiving string results from C. Zig has a stronger type system than C, which allows developers to write Zig-native wrappers for C libraries, yielding more robust checks against memory corruption than is available in C.
+Zig makes it easy to pass strings into C code and receive string outputs from C.
+
+Zig's type system is stronger than C, which allows developers to write Zig-native wrappers for C libraries, yielding more robust checks against memory corruption than is available in C.
 
 ## Further reading
 
