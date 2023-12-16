@@ -514,6 +514,138 @@ fn cStringToZigString(allocator: std.mem.Allocator, cString: [*c]const u8, cStri
 }
 ```
 
+At this point, I can complete the implementation of my wrapper function:
+
+```zig
+fn base64Encode(allocator: std.mem.Allocator, data: []const u8) ![:0]u8 {
+    var cEncoded: [*c]u8 = null;
+    var allocatedSize: usize = 0;
+
+    ustreamer.us_base64_encode(data.ptr, data.len, &cEncoded, &allocatedSize);
+    defer std.c.free(cEncoded);
+
+    // The length of the string excludes the null-terminator, so subtract 1.
+    const cEncodedLength = allocatedSize - 1;
+    return cStringToZigString(allocator, cEncoded, cEncodedLength);
+}
+```
+
+### Tying it all together
+
+```zig
+const std = @import("std");
+
+// Import the base64 implementation from uStreamer's C source file.
+const ustreamer = @cImport({
+    @cInclude("libs/base64.c");
+});
+
+fn base64Encode(allocator: std.mem.Allocator, data: []const u8) ![:0]u8 {
+    var cEncoded: [*c]u8 = null;
+    var allocatedSize: usize = 0;
+
+    ustreamer.us_base64_encode(data.ptr, data.len, &cEncoded, &allocatedSize);
+    defer std.c.free(cEncoded);
+
+    // The length of the string excludes the null-terminator, so subtract 1.
+    const cEncodedLength = allocatedSize - 1;
+    return cStringToZigString(allocator, cEncoded, cEncodedLength);
+}
+
+fn cStringToZigString(allocator: std.mem.Allocator, cString: [*c]const u8, cStringLength: usize) ![:0]u8 {
+    const zigString = try allocator.allocSentinel(u8, cStringLength, 0);
+    errdefer allocator.free(zigString);
+
+    const cStringSlice = cString[0..cStringLength :0];
+    @memcpy(zigString.ptr, cStringSlice);
+
+    return zigString;
+}
+
+pub fn main() !void {
+    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    const allocator = gpa.allocator();
+    defer _ = gpa.deinit();
+
+    const input = "hello, world!";
+    const output = try base64Encode(allocator, input);
+    defer allocator.free(output);
+
+    std.debug.print("input:       {s}\n", .{input});
+    std.debug.print("output:      {s}\n", .{output});
+    std.debug.print("output size: {d}\n", .{output.len});
+}
+```
+
+```bash
+$ zig build run
+input:       hello, world!
+output:      aGVsbG8sIHdvcmxkIQ==
+output size: 20
+```
+
+https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn
+
+## Creating the first unit test
+
+```zig
+    const unit_tests = b.addTest(.{
+        .root_source_file = .{ .path = "src/main.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
+    unit_tests.linkLibC();                          // Link against libc.
+    unit_tests.addIncludePath(.{ .path = "src" });  // Search src path for includes.
+```
+
+```zig
+test "encode simple string as base64" {
+    const allocator = std.testing.allocator;
+    const actual = try base64Encode(allocator, "hello, world!");
+    defer allocator.free(actual);
+    try std.testing.expectEqualStrings("aGVsbG8sIHdvcmxkIQ==", actual);
+}
+```
+
+```bash
+$ zig build test --summary all
+Build Summary: 3/3 steps succeeded; 1/1 tests passed
+test success
+└─ run test 1 passed 1ms MaxRSS:1M
+   └─ zig test Debug native success 2s MaxRSS:211M
+```
+
+## Adding multiple unit tests
+
+```zig
+fn testBase64Encode(
+    input: []const u8,
+    expected: [:0]const u8,
+) !void {
+    const allocator = std.testing.allocator;
+    const actual = try base64Encode(allocator, input);
+    defer allocator.free(actual);
+    try std.testing.expectEqualStrings(expected, actual);
+}
+```
+
+```zig
+test "encode simple data as base64" {
+    try testBase64Encode("", "");
+    try testBase64Encode("h", "aA==");
+    try testBase64Encode("he", "aGU=");
+    try testBase64Encode("hel", "aGVs");
+    try testBase64Encode("hell", "aGVsbA==");
+    try testBase64Encode("hello, world!", "aGVsbG8sIHdvcmxkIQ==");
+    try testBase64Encode(&[_]u8{0}, "AA==");
+    try testBase64Encode(&[_]u8{ 0, 0 }, "AAA=");
+    try testBase64Encode(&[_]u8{ 0, 0, 0 }, "AAAA");
+    try testBase64Encode(&[_]u8{255}, "/w==");
+    try testBase64Encode(&[_]u8{ 255, 255 }, "//8=");
+    try testBase64Encode(&[_]u8{ 255, 255, 255 }, "////");
+}
+```
+
 ---
 
 _Excerpts from uStreamer are used under the GPLv3 license._
