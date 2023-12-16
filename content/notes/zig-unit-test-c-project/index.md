@@ -584,7 +584,7 @@ output:      aGVsbG8sIHdvcmxkIQ==
 output size: 20
 ```
 
-https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn
+The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
 
 ## Creating the first unit test
 
@@ -614,6 +614,8 @@ test success
 └─ run test 1 passed 1ms MaxRSS:1M
    └─ zig test Debug native success 2s MaxRSS:211M
 ```
+
+The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-30-unit-test).
 
 ## Adding multiple unit tests
 
@@ -645,6 +647,20 @@ test "encode simple data as base64" {
     try testBase64Encode(&[_]u8{ 255, 255, 255 }, "////");
 }
 ```
+
+```bash
+$ zig build test --summary all
+Build Summary: 3/3 steps succeeded; 1/1 tests passed
+test success
+└─ run test 1 passed 2ms MaxRSS:2M
+   └─ zig test Debug native success 2s MaxRSS:194M
+```
+
+The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-40-multi-test).
+
+## Wrap up
+
+Zig makes it possible to add unit tests to C functions, and I didn't have to make any changes to the underlying C code. The C code doesn't have to care about Zig at all and can continue running as-is with no changes to its existing `Makefile`.
 
 ---
 
