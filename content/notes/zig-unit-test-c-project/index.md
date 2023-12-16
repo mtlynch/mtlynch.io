@@ -1,5 +1,5 @@
 ---
-title: "Using Zig to Call a Real World C Function"
+title: "Using Zig to Unit Test a C Project"
 date: 2023-12-21T00:00:00-05:00
 tags:
   - zig
@@ -139,7 +139,7 @@ output:       aGVsbG8sIHdvcmxkIQ==
 output bytes: 21
 ```
 
-Hooray, no more compiler warnings. If I were trying to compile all of uStreamer, I'd have to figure out how to get `us_signum_to_string` to compile, but since I'm just trying to call `us_base64_encode` from Zig, I don't need `us_signum_to_string`.
+Hooray, no more compiler warnings. If I were trying to compile all of uStreamer, I'd have to figure out how to get `us_signum_to_string` to compile. Since I'm just trying to call `us_base64_encode` from Zig, I don't need `us_signum_to_string`.
 
 If I compare my `test.c` program's output to my system's built-in `base64` utility, I can verify that I'm producing the correct result:
 
@@ -280,28 +280,17 @@ The important bit of the compiler error above is `error: expected type '[*c]cons
 
 What does that mean?
 
-### String handling in C vs. Zig
+### Understanding the type I used
 
-To understand the compiler error, I had to learn a bit more about how Zig handles strings.
+Going from right to left:
 
-The easiest thing for me to figure out about the error message was the `13`. That's the length of the string `hello, world!`.
+`u8` is an unsigned byte, which is how Zig represents characters in a string.
 
-```bash
-$ printf "hello, world!" | wc --chars
-13
-```
+`[13:0]` means a null-terminated array. The `13` is the length of the array, which Zig calculates at compile-time. `:0` means that the array has an extra byte with a value of `0` to indicate the end of the string. For more details about the mechanics of null-terminated string in Zig, see [my previous post](/notes/zig-strings-call-c-code/).
 
-But what does `[13:0]` mean? That's [a sentinel-terminated pointer](https://ziglang.org/documentation/0.11.0/#Sentinel-Terminated-Pointers).
+`*const` means a constant pointer. A pointer is an address in memory, and the `const` means that subsequent code may not reassign the variable.
 
-In C, the compiler doesn't help you much with strings. The compiler doesn't keep track of the length of strings, so the way you represent the end of a string is with a null terminator, a byte with a value of `0`. But even so, the compiler doesn't guarantee that a variable that's supposed to be a string ends in a `0` byte. A huge number of security vulnerabilities arise from C applications losing track of string lengths or omitting the null terminator from a string.
-
-Modern languages have learned from C's string sins, and Zig is no exception. So, the type `[13:0]u8` shows that the Zig type system is more rigorous than C's. The Zig compiler tracks that the `input` variable contains a string with 13 characters (not including null terminator) and that it ends in a null terminator.
-
-In Zig, the compiler keeps track of each string's length, but it also terminates them with a `0` byte, a decision I'm assuming was made specifically to facilitate calling C libraries from Zig.
-
-So, that's half of understanding the type of the `input` parameter in our Zig compiler error. The full type was `*const *const [13:0]u8`.
-
-Strings in Zig are immutable, so that explains why a 13-character, null-terminated string would have a type of `*const [13:0]u8`. And I passed `input` with the `&` operator to get its pointer, so that explains why it's a constant pointer to a constant pointer.
+`*const *const` means a constant pointer to a constant pointer. In other words, `input` is a constant pointer to a string, so that means `&input` is a constant pointer to a constant pointer.
 
 ### Converting a Zig type to a C type
 
@@ -311,7 +300,7 @@ Okay, now I understand how Zig views the string that I passed. What did Zig _wan
 expected type '[*c]const u8'
 ```
 
-What the heck does `[*c]` mean? This was surprisingly hard to figure out, but I eventually pieced it together from a few different sources.
+What the heck does `[*c]` mean? This was surprisingly hard to figure out. I eventually pieced it together from a few different sources.
 
 Here's the official Zig documentation:
 
@@ -329,9 +318,13 @@ I didn't understand this explanation, but more [Kagi](https://kagi.com)'ing led 
 >
 > [-/u/slimsag on reddit](https://www.reddit.com/r/Zig/comments/11uqo84/comment/jcplxiz/)
 
-Okay, that makes more sense. It sounds like in Zig, the compiler "knows" more about pointer types, whereas C pointers carry less context. The `[*c]` type represents a pointer that Zig got from C, so Zig knows less about this pointer than it normally would for Zig-native pointers.
+Okay, that makes more sense.
 
-Through trial and error, I figured out that Zig wanted me to get a pointer to `input` by referencing `input.ptr` rather than using the address of operator `&`. This Zig snippet shows the difference between the two:
+It sounds like in Zig, the compiler "knows" more about pointer types, whereas C pointers carry less context. The `[*c]` type represents a pointer that Zig got from C, so Zig knows less about this pointer than it normally would for Zig-native pointers.
+
+Through trial and error, I figured out that Zig wanted me to get a pointer to `input` by referencing `input.ptr` rather than using the address-of operator `&`.
+
+This Zig snippet shows the difference between the `.ptr` and `&`:
 
 ```zig
 const input = "hello, world!";
@@ -346,7 +339,7 @@ input     is type *const [13:0]u8
 input.ptr is type [*]const u8
 ```
 
-Okay, let's try it again:
+Okay, let me try calling `us_base64_encode` again:
 
 ```zig
 const input = "hello, world!";
@@ -383,8 +376,8 @@ That's the signature of the C function translated into Zig, so Zig is telling me
 Alternatively, I can use the `zig translate-c` utility to translate this C function signature into Zig. This effectively gives the same results as the compiler error above, but it preserves the original parameter names, whereas the compiler error prefixes them with `arg_`.
 
 ```bash
-# We add --needed-library c to let Zig know the code depends on libc.
-$ zig translate-c src/libs/base64.h --needed-library c | grep us_base64
+# We add --library c to let Zig know the code depends on libc.
+$ zig translate-c src/libs/base64.h --library c | grep us_base64
 pub extern fn us_base64_encode(data: [*c]const u8, size: usize, encoded: [*c][*c]u8, allocated: [*c]usize) void;
 ```
 
@@ -443,18 +436,20 @@ The complete example at this stage [is on Github](https://github.com/tiny-pilot/
 
 ## Creating a Zig wrapper for the native C implementation
 
-https://stackoverflow.com/a/72975237/90388
+At this point, I can successfully call the C `us_base64_encode` function from Zig, but it would be cleaner if I abstracted away the C parts with a Zig wrapper function. That way, I could encapsulate all the Zig to C interop logic to that function, and callers of my wrapper wouldn't have to even know or care that I'm calling C.
 
-It should accept arbitrary bytes, and it should give back a null-terminated string, so the Zig-native wrapper should look something like this:
+What should my wrapper function look like?
+
+It should accept arbitrary bytes, and it should give back a null-terminated string, so my Zig-native wrapper should look something like this:
 
 ```zig
-fn base64Encode(data: []const u8) [:0]const u8 {...}
+fn base64Encode(data: []const u8) [:0]u8 {...}
 ```
 
-Okay, starting is easy because I can just refactor from my `main()` function:
+I already know the start of my implementation because I did it in my `main()` function above:
 
 ```zig
-fn base64Encode(data: []const u8) [:0]const u8 {
+fn base64Encode(data: []const u8) [:0]u8 {
   var cEncoded: [*c]u8 = null;
   var allocatedSize: usize = 0;
 
@@ -462,20 +457,62 @@ fn base64Encode(data: []const u8) [:0]const u8 {
   ...
 ```
 
-Hmm, now I've got the string as a `[*c]u8` (C-pointer, unknown length buffer), but I want to return `[:0]const u8` (null-terminated, length-counted Zig string). How do I convert a C-style string to a Zig string?
+### Who's responsible for freeing the memory C allocated?
 
-### Who's responsible for freeing the buffer?
+There's a problem I haven't addressed yet. `us_base64_encode` allocated memory (`cEncoded`). Now, I, the caller, am responsible for either freeing that memory myself or telling all of _my_ callers that it's their responsibility to free the memory.
 
-There's a problem I haven't addressed yet. `us_base64_encode` allocated memory (`cEncoded`). Now, I, the caller, am responsible for either freeing that memory myself or telling all of _my_ callers that it's now their responsibility to free the memory.
+Normally, it's fine to tell a caller that they're responsible for freeing memory for a function result, but this case is a little trickier. This isn't a normal Zig-allocated memory buffer &mdash; it's a C-allocated buffer that requires a special free function (`std.c.free`).
 
-But the problem with telling my callers to free the memory is that it was C code that allocated the memory. They can't free the memory in the standard Zig way. Because I'm writing a wrapper that's supposed to abstract away the fact that this is a C function, I'm going to
+My goal is to abstract away the C implementation details, so I don't want to ask my callers to use a C-specific memory freeing function. I use `defer std.c.free` to free the C-allocated memory before returning from my wrapper:
 
-So I have two options:
+```zig
+fn base64Encode(data: []const u8) [:0]u8 {
+  var cEncoded: [*c]u8 = null;
+  var allocatedSize: usize = 0;
 
-1. Document in my function that the caller is responsible for freeing the return value with `std.c.free`.
-1. Allocate a Zig-native buffer and move the contents of the C buffer to the Zig buffer.
+  ustreamer.us_base64_encode(data.ptr, input.len, &cEncoded, &allocatedSize);
 
-I'm going to choose (2). This is worse performance wise because I have to do another memory allocation and copy, but it's easier to maintain. If this were performance critical, maybe I would have chosen (1) and made my callers deal with calling `std.c.free` instead of the normal free pattern.
+  // Free the C-allocated memory buffer before exiting the function.
+  defer std.c.free(cEncoded);
+
+  // TODO: Copy the contents of cEncoded into a [:0]u8 buffer.
+}
+```
+
+### Converting a C string to a Zig string
+
+At this point, I've got the string as a `[*c]u8` (C-pointer, unknown length buffer), but I want to return `[:0]u8` (null-terminated, length-counted Zig slice). How do I convert a C-style string to a Zig slice?
+
+In [my previous post](/notes/zig-strings-call-c-code/#improving-the-wrapper-with-zig-managed-buffers), I converted a C string to a Zig string with this process:
+
+1. Create a Zig slice of the C string using `std.mem.span`.
+1. Allocate a Zig-managed memory slice with `allocSentinel`.
+1. Use `@memcpy` to copy the contents of the C string into the Zig slice.
+
+That process would work here, but I'd be doing a useless work in step (1). `std.mem.span` has to iterate the string to find the null terminator. In this code, I already know where the null terminator is because `us_base64_encode` stores that information in the `allocated` parameter.
+
+In practice, I wouldn't worry about the extra string iteration unless this was a hot spot in my code. I still have to copy every character in the string, so it's [an `O(N)` operation](https://en.wikipedia.org/wiki/Time_complexity#Linear_time) no matter what. Still, part of the fun of Zig is fine-grained control over performance, so I'll try to do the conversion more efficiently.
+
+Here's my conversion function:
+
+```zig
+fn cStringToZigString(allocator: std.mem.Allocator, cString: [*c]const u8, cStringLength: usize) ![:0]u8 {
+    // Allocate a Zig-managed buffer to contain the contents of cString.
+    const zigString = try allocator.allocSentinel(u8, cStringLength, 0);
+
+    // If we can't return the result, free the memory we allocated.
+    errdefer allocator.free(zigString);
+
+    // Create a Zig slice of cString, and declare to Zig that the slice ends
+    // with a null terminator.
+    const cStringSlice = cString[0..cStringLength :0];
+
+    // Copy the contents of the C string into the Zig slice.
+    @memcpy(zigString.ptr, cStringSlice);
+
+    return zigString;
+}
+```
 
 ---
 
