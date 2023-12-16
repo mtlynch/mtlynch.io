@@ -436,15 +436,9 @@ fn strdup(allocator: std.mem.Allocator, str: [:0]const u8) ![:0]u8 {
     // Create a Zig slice of the C buffer that's length-aware.
     const zCopy: [:0]u8 = std.mem.span(cCopy);
 
-    // Allocate a new null-terminated slice with a Zig-native memory allocator.
-    const copy: [:0]u8 = try allocator.allocSentinel(u8, zCopy.len, 0);
-
-    // Copy the contents of the C string from the C-managed memory into the Zig-
-    // managed buffer.
-    @memcpy(copy, zCopy);
-
-    // Return the Zig-native slice to the caller.
-    return copy;
+    // Allocate a new null-terminated Zig-managed slice and copy in the contents
+    // of zCopy.
+    return allocator.dupeZ(u8, zCopy);
 }
 ```
 
@@ -469,10 +463,7 @@ fn strdup(allocator: std.mem.Allocator, str: [:0]const u8) ![:0]u8 {
     const cCopy: [*:0]u8 = cString.strdup(str) orelse return error.OutOfMemory;
     defer std.c.free(cCopy);
     const zCopy: [:0]u8 = std.mem.span(cCopy);
-    const copy: [:0]u8 = try allocator.allocSentinel(u8, zCopy.len, 0);
-    @memcpy(copy, zCopy);
-
-    return copy;
+    return allocator.dupeZ(u8, zCopy);
 }
 
 pub fn main() !void {
