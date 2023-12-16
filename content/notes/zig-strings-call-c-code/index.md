@@ -468,7 +468,6 @@ const cString = @cImport({
 fn strdup(allocator: std.mem.Allocator, str: [:0]const u8) ![:0]u8 {
     const cCopy: [*:0]u8 = cString.strdup(str) orelse return error.OutOfMemory;
     defer std.c.free(cCopy);
-
     const zCopy: [:0]u8 = std.mem.span(cCopy);
     const copy: [:0]u8 = try allocator.allocSentinel(u8, zCopy.len, 0);
     @memcpy(copy, zCopy);
