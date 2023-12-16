@@ -472,6 +472,10 @@ Some of the guidance I read said to arrange components so that you can minimize 
 
 It might be important to minimize the length of power cables in a data center where you're replicating the same setup hundreds of times. In a home environment, I don't see the difference between connect connecting my server to my UPS with a 2 ft. power cable instead of a 6 ft. power cable.
 
+### Make sure back ports aren't blocked
+
+I had to make sure shelves didn't block access to rear power strip ports.
+
 ## My final rack setup
 
 TODO: List of components and prices
