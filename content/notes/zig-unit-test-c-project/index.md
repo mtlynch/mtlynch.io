@@ -584,6 +584,8 @@ output:      aGVsbG8sIHdvcmxkIQ==
 output size: 20
 ```
 
+The output size is now `20` instead of `21` because `.len` does not include the null terminator, whereas previously the output included the null terminator.
+
 The complete example at this stage [is on Github](https://github.com/tiny-pilot/ustreamer/tree/zig-20-wrapper-fn).
 
 ## Creating the first unit test
